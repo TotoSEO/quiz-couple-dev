@@ -45,7 +45,7 @@
             <%= t('common:nav.categoryTests', 'Tests') %>
             <svg class="ml-1 h-3 w-3 transition-transform" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
-          <div class="nav-dropdown-content absolute left-0 top-full z-50 mt-1 hidden w-[280px] rounded-md border border-border bg-popover p-2 shadow-lg">
+          <div class="nav-dropdown-content absolute left-0 top-full z-50 hidden w-[280px] rounded-md border border-border bg-popover p-2 shadow-lg">
             <% for (const link of testLinks) { %>
             <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="block rounded-md p-3 text-sm font-medium leading-none transition-colors hover:bg-accent hover:text-accent-foreground"><%= t('common:' + link.labelKey, link.labelKey) %></a>
             <% } %>
@@ -58,7 +58,7 @@
             <%= t('common:nav.categoryQuizzes', 'Quiz') %>
             <svg class="ml-1 h-3 w-3 transition-transform" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
-          <div class="nav-dropdown-content absolute left-0 top-full z-50 mt-1 hidden w-[320px] rounded-md border border-border bg-popover p-2 shadow-lg">
+          <div class="nav-dropdown-content absolute left-0 top-full z-50 hidden w-[320px] rounded-md border border-border bg-popover p-2 shadow-lg">
             <% for (const link of quizLinks) { %>
             <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="block rounded-md p-3 text-sm font-medium leading-none transition-colors hover:bg-accent hover:text-accent-foreground"><%= t('common:' + link.labelKey, link.labelKey) %></a>
             <% } %>
@@ -79,7 +79,7 @@
             <%= langNames[lang] %>
             <svg class="ml-1 h-3 w-3" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
-          <div class="nav-dropdown-content absolute right-0 top-full z-50 mt-1 hidden w-[140px] rounded-md border border-border bg-popover p-1 shadow-lg">
+          <div class="nav-dropdown-content absolute right-0 top-full z-50 hidden w-[140px] rounded-md border border-border bg-popover p-1 shadow-lg">
             <% for (const l of ['fr','en','es','de','it']) { %>
             <a href="<%= getLocalizedUrl(typeof routeKey !== 'undefined' ? routeKey : 'home', l) %>" class="block rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent <%= l === lang ? 'font-bold text-primary' : '' %>" <%= l === lang ? 'aria-current="true"' : '' %>><%= langFullNames[l] %></a>
             <% } %>

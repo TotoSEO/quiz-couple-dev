@@ -259,41 +259,15 @@ async function generatePage(routeKey, lang) {
 function generateSitemaps() {
   const publicDir = path.resolve(__dirname, '../../public');
 
-  // Copy existing sitemaps from public/ to dist/ and fix trailing slashes
+  // Copy existing sitemaps from public/ to dist/ as-is
   for (const file of ['sitemap.xml', 'sitemap-fr.xml', 'sitemap-en.xml', 'sitemap-es.xml', 'sitemap-de.xml', 'sitemap-it.xml']) {
     const src = path.join(publicDir, file);
     const dest = path.join(DIST_DIR, file);
     if (fs.existsSync(src)) {
-      let content = fs.readFileSync(src, 'utf-8');
-      // Remove <url> blocks for blog articles that don't exist in BLOG_ARTICLES
-      const knownSlugs = new Set();
-      for (const art of BLOG_ARTICLES) {
-        for (const lang of LANGUAGES) {
-          knownSlugs.add(art.slugs[lang]);
-        }
-      }
-      content = content.replace(/<url>\s*<loc>[^<]*\/blog\/([^<]+)<\/loc>[\s\S]*?<\/url>/g, (block, slug) => {
-        // Strip trailing slash if present for matching
-        const cleanSlug = slug.replace(/\/$/, '');
-        if (knownSlugs.has(cleanSlug)) return block;
-        console.log(`[sitemaps] Removed phantom blog article from sitemap: /blog/${cleanSlug}`);
-        return '';
-      });
-
-      // Add trailing slash to all quiz-couple.com URLs that don't already end with /
-      // but exclude file URLs (.xml, .ico, etc.) and the sitemap index references
-      content = content.replace(
-        /(https:\/\/quiz-couple\.com\/[^<"'\s]+?)(?=[<"'\s])/g,
-        (match) => {
-          // Skip if already ends with / or has a file extension
-          if (match.endsWith('/') || /\.\w{2,4}$/.test(match)) return match;
-          return match + '/';
-        }
-      );
-      fs.writeFileSync(dest, content, 'utf-8');
+      fs.copyFileSync(src, dest);
     }
   }
-  console.log('[sitemaps] Copied sitemaps to dist/ with trailing slashes');
+  console.log('[sitemaps] Copied sitemaps to dist/');
 }
 
 // ── Static assets ───────────────────────────────────────────────────────
@@ -349,12 +323,54 @@ function copyTranslationData() {
   const dataDir = path.join(DIST_DIR, 'js', 'data');
   ensureDir(dataDir);
 
+  // Quiz JSON files that contain question data under a 'q' key
+  // Map: gd namespace → quiz JSON filename
+  const quizQuestionSources = {
+    ado: 'quiz-ado.json',
+  };
+
   for (const lang of LANGUAGES) {
     const langDir = path.resolve(__dirname, '../../', lang);
+
+    // Load base gd.json
     const gdSrc = path.join(langDir, 'gd.json');
+    let gdData = {};
     if (fs.existsSync(gdSrc)) {
-      fs.copyFileSync(gdSrc, path.join(dataDir, `gd-${lang}.json`));
+      gdData = JSON.parse(fs.readFileSync(gdSrc, 'utf-8'));
     }
+
+    // Merge quiz question data from quiz-specific JSON files
+    for (const [namespace, fileName] of Object.entries(quizQuestionSources)) {
+      const quizSrc = path.join(langDir, fileName);
+      if (fs.existsSync(quizSrc)) {
+        try {
+          const quizData = JSON.parse(fs.readFileSync(quizSrc, 'utf-8'));
+          if (quizData.q && typeof quizData.q === 'object') {
+            // Flatten q.1 → ado.q1, q.1a → ado.q1a, etc.
+            const flat = {};
+            for (const [key, value] of Object.entries(quizData.q)) {
+              flat['q' + key] = value;
+            }
+            // Map results: r1.title → r1_t, r1.text → r1_d, r1.advice → r1_a
+            if (quizData.results) {
+              for (const [key, value] of Object.entries(quizData.results)) {
+                if (typeof value === 'object' && value !== null && value.title) {
+                  flat[key + '_t'] = value.title;
+                  flat[key + '_d'] = value.text || '';
+                  flat[key + '_a'] = value.advice || '';
+                }
+              }
+            }
+            gdData[namespace] = flat;
+          }
+        } catch (e) {
+          console.warn(`[data] Failed to merge ${fileName} for ${lang}: ${e.message}`);
+        }
+      }
+    }
+
+    fs.writeFileSync(path.join(dataDir, `gd-${lang}.json`), JSON.stringify(gdData), 'utf-8');
+
     const gamesSrc = path.join(langDir, 'quizGames.json');
     if (fs.existsSync(gamesSrc)) {
       fs.copyFileSync(gamesSrc, path.join(dataDir, `games-${lang}.json`));
