@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - claude/rebuild-seo-optimization-xMQ0x
-    paths:
-      - 'static-site/dist/**'
+  workflow_dispatch:
 
 permissions:
   contents: read
