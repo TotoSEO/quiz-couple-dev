@@ -1,0 +1,13 @@
+<%
+  // Wave divider partial - pass variant ('muted'|'bg') and direction ('up'|'down')
+  const v = typeof variant !== 'undefined' ? variant : 'muted';
+  const d = typeof direction !== 'undefined' ? direction : 'down';
+  const fillColor = v === 'muted' ? 'hsl(var(--muted))' : 'hsl(var(--background))';
+  const transform = d === 'up' ? 'rotate(180deg)' : '';
+%>
+<div class="w-full overflow-hidden leading-none" aria-hidden="true" <% if (transform) { %>style="transform: <%= transform %>"<% } %>>
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="w-full h-12 md:h-16">
+    <path d="M0,40 C360,100 1080,0 1440,60 L1440,100 L0,100 Z" fill="<%= fillColor %>" opacity="0.4"></path>
+    <path d="M0,60 C480,10 960,90 1440,40 L1440,100 L0,100 Z" fill="<%= fillColor %>" opacity="0.6"></path>
+  </svg>
+</div>

@@ -1,0 +1,178 @@
+<%
+  /**
+   * Generic quiz page template.
+   * Set these variables before including:
+   * - quizType: 'toxic', 'distance', 'sain', etc.
+   * - quizRouteKey: 'testToxic', 'testDistance', etc.
+   * - ns: translation namespace like 'quiz-toxic'
+   * - totalQ: total number of questions
+   * - sectionCount: how many content sections exist
+   */
+  if (typeof quizType === 'undefined') var quizType = 'generic';
+  if (typeof ns === 'undefined') var ns = 'quiz-' + quizType;
+  if (typeof totalQ === 'undefined') var totalQ = 20;
+  if (typeof sectionCount === 'undefined') var sectionCount = 7;
+
+  const quizTitle = t('quizzes:' + routeKey + '.title', 'Quiz Couple');
+  const quizDesc = t('quizzes:' + routeKey + '.metaDescription', '');
+
+  // Build JSON-LD
+  const faqEntries = [];
+  for (let i = 1; i <= 5; i++) {
+    const q = t(ns + ':jsonLd.faq' + i + 'Q', '');
+    const a = t(ns + ':jsonLd.faq' + i + 'A', '');
+    if (q && q !== ns + ':jsonLd.faq' + i + 'Q') faqEntries.push({ q, a });
+  }
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "Quiz",
+      "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+      "isAccessibleForFree": true,
+      "learningResourceType": "Quiz", "interactivityType": "active",
+      "about": { "@type": "Thing", "name": "couple" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "totalQuestions", "value": totalQ }
+      ]
+    }
+  ];
+  if (faqEntries.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqEntries.map(function(f) {
+        return { "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } };
+      })
+    });
+  }
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl"><%= t(ns + ':hero.title', quizTitle) %></h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
+      <% const heroSub = t(ns + ':hero.subtitle', ''); if (heroSub && heroSub !== ns + ':hero.subtitle') { %>
+      <p class="text-sm text-muted-foreground mt-4"><%= heroSub %></p>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<!-- Quiz Engine -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div id="quiz-engine" data-quiz="<%= quizType %>" data-lang="<%= lang %>"></div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Article -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <% for (let s = 1; s <= sectionCount; s++) {
+      const sTitle = t(ns + ':section' + s + '.title', '');
+      if (!sTitle || sTitle === ns + ':section' + s + '.title') continue;
+    %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= sTitle %></h2>
+
+      <%/* Intro paragraph if exists */%>
+      <% const sIntro = t(ns + ':section' + s + '.intro', ''); if (sIntro && sIntro !== ns + ':section' + s + '.intro') { %>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%= sIntro %></p>
+      <% } %>
+
+      <%/* Standard paragraphs */%>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <% for (let p = 1; p <= 5; p++) {
+          const pText = t(ns + ':section' + s + '.p' + p, '');
+          if (pText && pText !== ns + ':section' + s + '.p' + p) { %>
+        <p><%- pText %></p>
+        <% } } %>
+      </div>
+
+      <%/* Subsections (h3) */%>
+      <% for (let sub = 1; sub <= 6; sub++) {
+        const subTitle = t(ns + ':section' + s + '.sub' + sub + 'Title', '');
+        if (subTitle && subTitle !== ns + ':section' + s + '.sub' + sub + 'Title') { %>
+      <div class="mt-6">
+        <h3 class="text-xl font-semibold mb-3"><%= subTitle %></h3>
+        <% for (let sp = 1; sp <= 3; sp++) {
+          const spText = t(ns + ':section' + s + '.sub' + sub + 'P' + sp, '');
+          if (spText && spText !== ns + ':section' + s + '.sub' + sub + 'P' + sp) { %>
+        <p class="text-muted-foreground leading-relaxed mb-3"><%- spText %></p>
+        <% } } %>
+      </div>
+      <% } } %>
+
+      <%/* Pillar/card items */%>
+      <% const hasCards = t(ns + ':section' + s + '.pillar1Title', '');
+        if (hasCards && hasCards !== ns + ':section' + s + '.pillar1Title') { %>
+      <div class="space-y-6 mt-6">
+        <% for (let c = 1; c <= 8; c++) {
+          const cTitle = t(ns + ':section' + s + '.pillar' + c + 'Title', '');
+          if (cTitle && cTitle !== ns + ':section' + s + '.pillar' + c + 'Title') { %>
+        <div class="bg-card border border-border rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-3 text-primary"><%= cTitle %></h3>
+          <p class="text-muted-foreground"><%- t(ns + ':section' + s + '.pillar' + c + 'Text', '') %></p>
+        </div>
+        <% } } %>
+      </div>
+      <% } %>
+
+      <%/* Table if exists */%>
+      <% const hasTable = t(ns + ':section' + s + '.headerScore', '');
+        if (hasTable && hasTable !== ns + ':section' + s + '.headerScore') { %>
+      <div class="overflow-x-auto mt-6">
+        <table class="quiz-table">
+          <thead><tr>
+            <th><%= t(ns + ':section' + s + '.headerScore', 'Score') %></th>
+            <th><%= t(ns + ':section' + s + '.headerLevel', 'Niveau') %></th>
+            <th><%= t(ns + ':section' + s + '.headerAnalysis', 'Analyse') %></th>
+          </tr></thead>
+          <tbody>
+            <% for (let r = 1; r <= 6; r++) {
+              const rScore = t(ns + ':section' + s + '.row' + r + 'Score', '');
+              if (rScore && rScore !== ns + ':section' + s + '.row' + r + 'Score') { %>
+            <tr>
+              <td class="font-medium"><%= rScore %></td>
+              <td><%= t(ns + ':section' + s + '.row' + r + 'Level', '') %></td>
+              <td class="text-sm text-muted-foreground"><%= t(ns + ':section' + s + '.row' + r + 'Analysis', '') %></td>
+            </tr>
+            <% } } %>
+          </tbody>
+        </table>
+      </div>
+      <% } %>
+
+      <%/* Blockquote if exists */%>
+      <% const quote = t(ns + ':section' + s + '.quote', '');
+        if (quote && quote !== ns + ':section' + s + '.quote') { %>
+      <blockquote class="border-l-4 border-primary pl-6 py-2 bg-muted/30 rounded-r-lg my-6">
+        <p class="text-lg italic"><%= quote %></p>
+      </blockquote>
+      <% } %>
+    </section>
+    <% } %>
+
+    <%/* FAQ section */%>
+    <% if (faqEntries.length > 0) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.faqTitle', t(ns + ':faqTitle', 'FAQ')) %></h2>
+      <div class="space-y-4">
+        <% for (const faq of faqEntries) { %>
+        <details class="border border-border rounded-lg">
+          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= faq.q %></summary>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= faq.a %></div>
+        </details>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+  </div>
+</article>
+
+<script src="/js/quiz-engine-core.js" defer></script>
+<script src="/js/quiz-loader.js" defer></script>

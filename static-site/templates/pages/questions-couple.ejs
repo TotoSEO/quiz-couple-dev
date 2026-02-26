@@ -1,0 +1,142 @@
+<%
+  const ns = 'quiz-questions-couple';
+  // FAQ items for JSON-LD
+  const faqRaw = t(ns + ':seo.faq', null);
+  const faqItems = Array.isArray(faqRaw) ? faqRaw : [];
+  const jsonLd = faqItems.length > 0 ? {
+    "@context": "https://schema.org", "@type": "FAQPage",
+    "mainEntity": faqItems.map(function(item) {
+      return { "@type": "Question", "name": item.q, "acceptedAnswer": { "@type": "Answer", "text": item.a } };
+    })
+  } : null;
+
+  // Table data
+  const tableHeaders = t(ns + ':seo.s2.tableHeaders', { category: 'Catégorie', goal: 'Objectif', example: 'Exemple', count: 'Nombre' });
+  const tableRowsRaw = t(ns + ':seo.s2.rows', null);
+  const tableRows = Array.isArray(tableRowsRaw) ? tableRowsRaw : [];
+  const whenItemsRaw = t(ns + ':seo.s3.items', null);
+  const whenItems = Array.isArray(whenItemsRaw) ? whenItemsRaw : [];
+  const tipsRaw = t(ns + ':seo.s4.tips', null);
+  const tipsList = Array.isArray(tipsRaw) ? tipsRaw : [];
+  const audiencesRaw = t(ns + ':seo.s5.audiences', null);
+  const audiences = Array.isArray(audiencesRaw) ? audiencesRaw : [];
+%>
+<% if (jsonLd) { %>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+<% } %>
+
+<section class="container mx-auto px-4 py-8 md:py-12">
+  <div class="mx-auto max-w-4xl space-y-10">
+
+    <header class="text-center space-y-4">
+      <h1 class="text-3xl font-bold md:text-4xl lg:text-5xl"><%= t(ns + ':hero.title', '120 questions pour couple') %></h1>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto"><%= t(ns + ':hero.description', '') %></p>
+    </header>
+
+    <!-- Questions loaded via JS from data file -->
+    <div id="questions-container">
+      <div class="text-center py-8">
+        <div class="spinner mx-auto mb-4"></div>
+        <p class="text-muted-foreground"><%= t(ns + ':random.button', 'Chargement...') %></p>
+      </div>
+    </div>
+
+    <!-- SEO Article -->
+    <article class="space-y-10 pt-10 border-t border-border seo-content">
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s1.title', '') %></h2>
+        <div class="space-y-4 text-muted-foreground leading-relaxed">
+          <p><%= t(ns + ':seo.s1.p1', '') %></p>
+          <p><%= t(ns + ':seo.s1.p2', '') %></p>
+          <p><%= t(ns + ':seo.s1.p3', '') %></p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s2.title', '') %></h2>
+        <p class="text-muted-foreground mb-6 leading-relaxed"><%= t(ns + ':seo.s2.intro', '') %></p>
+        <% if (tableRows.length > 0) { %>
+        <div class="overflow-x-auto">
+          <table class="quiz-table">
+            <thead><tr>
+              <th><%= typeof tableHeaders === 'object' ? tableHeaders.category || 'Catégorie' : 'Catégorie' %></th>
+              <th><%= typeof tableHeaders === 'object' ? tableHeaders.goal || 'Objectif' : 'Objectif' %></th>
+              <th><%= typeof tableHeaders === 'object' ? tableHeaders.example || 'Exemple' : 'Exemple' %></th>
+              <th><%= typeof tableHeaders === 'object' ? tableHeaders.count || 'Nombre' : 'Nombre' %></th>
+            </tr></thead>
+            <tbody>
+              <% for (const row of tableRows) { %>
+              <tr>
+                <td class="font-medium"><%= row.cat %></td>
+                <td class="text-muted-foreground"><%= row.goal %></td>
+                <td class="text-muted-foreground italic">&laquo; <%= row.example %> &raquo;</td>
+                <td class="text-center font-medium"><%= row.count %></td>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+        <% } %>
+        <p class="text-muted-foreground mt-4 leading-relaxed"><%= t(ns + ':seo.s2.outro', '') %></p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s3.title', '') %></h2>
+        <p class="text-muted-foreground mb-4 leading-relaxed"><%= t(ns + ':seo.s3.intro', '') %></p>
+        <ul class="space-y-4">
+          <% for (const item of whenItems) { %>
+          <li><h3 class="text-lg font-semibold mb-1"><%= item.title %></h3><p class="text-muted-foreground leading-relaxed"><%= item.desc %></p></li>
+          <% } %>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s4.title', '') %></h2>
+        <p class="text-muted-foreground mb-4 leading-relaxed"><%= t(ns + ':seo.s4.intro', '') %></p>
+        <ul class="space-y-4">
+          <% for (const tip of tipsList) { %>
+          <li><h3 class="text-lg font-semibold mb-1"><%= tip.emoji %> <%= tip.title %></h3><p class="text-muted-foreground leading-relaxed"><%= tip.desc %></p></li>
+          <% } %>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s5.title', '') %></h2>
+        <p class="text-muted-foreground mb-4 leading-relaxed"><%= t(ns + ':seo.s5.p1', '') %></p>
+        <ul class="space-y-3">
+          <% for (const aud of audiences) { %>
+          <li><strong><%= aud.title %></strong> &mdash; <span class="text-muted-foreground"><%= aud.desc %></span></li>
+          <% } %>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s6.title', '') %></h2>
+        <div class="space-y-4 text-muted-foreground leading-relaxed">
+          <p><%= t(ns + ':seo.s6.p1', '') %></p>
+          <p><%= t(ns + ':seo.s6.p2', '') %></p>
+          <p><%= t(ns + ':seo.s6.p3', '') %></p>
+        </div>
+      </section>
+
+      <% if (faqItems.length > 0) { %>
+      <section>
+        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.faqTitle', 'FAQ') %></h2>
+        <div class="space-y-4">
+          <% for (const item of faqItems) { %>
+          <details class="border border-border rounded-lg">
+            <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= item.q %></summary>
+            <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= item.a %></div>
+          </details>
+          <% } %>
+        </div>
+      </section>
+      <% } %>
+
+    </article>
+
+  </div>
+</section>
+
+<script src="/js/questions-couple.js" defer></script>

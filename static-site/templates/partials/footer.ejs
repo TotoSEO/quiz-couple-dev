@@ -1,0 +1,69 @@
+<%
+  const footerQuizLinks = [
+    { routeKey: 'testCouple', labelKey: 'nav.testCouple' },
+    { routeKey: 'testCommonPoints', labelKey: 'nav.testCommonPoints' },
+    { routeKey: 'testDistance', labelKey: 'nav.testDistance' },
+    { routeKey: 'testToxic', labelKey: 'nav.testToxic' },
+    { routeKey: 'testCoupleSain', labelKey: 'nav.testCoupleSain' },
+    { routeKey: 'testMariage', labelKey: 'nav.testMariage' },
+    { routeKey: 'testDivorce', labelKey: 'nav.testDivorce' },
+    { routeKey: 'quizAmoureux', labelKey: 'nav.quizAmoureux' },
+    { routeKey: 'quizCoquin', labelKey: 'nav.quizCoquin' },
+    { routeKey: 'quizMarrant', labelKey: 'nav.quizMarrant' },
+    { routeKey: 'quizKnowledge', labelKey: 'nav.quizKnowledge' },
+    { routeKey: 'quizMost', labelKey: 'nav.quizMost' },
+    { routeKey: 'quizAdo', labelKey: 'nav.quizAdo' },
+    { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple' },
+    { routeKey: 'problemResolver', labelKey: 'nav.problemResolver' },
+  ];
+  const footerLegalLinks = [
+    { routeKey: 'legalMentions', labelKey: 'footer.legalMentions' },
+    { routeKey: 'privacy', labelKey: 'footer.privacy' },
+    { routeKey: 'blog', label: 'Blog' },
+  ];
+  const homeUrl = getLocalizedUrl('home', lang);
+  const currentYear = new Date().getFullYear();
+%>
+<footer class="border-t border-border bg-muted/30">
+  <div class="container mx-auto px-4 py-12">
+    <div class="grid gap-8 md:grid-cols-3">
+      <!-- Brand -->
+      <div class="space-y-4">
+        <a href="<%= homeUrl %>" class="flex items-center gap-2 text-xl font-bold">
+          <img src="/assets/logo-quiz-couple.webp" alt="Quiz Couple" class="h-10 w-auto" width="40" height="40" loading="lazy">
+          Quiz Couple
+        </a>
+        <p class="text-sm text-muted-foreground max-w-xs"><%= t('common:footer.brandDescription', 'Des quiz gratuits pour mieux se connaître et renforcer votre couple.') %></p>
+      </div>
+
+      <!-- Quiz Links -->
+      <div>
+        <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:footer.ourQuizzes', 'Nos quiz') %></h3>
+        <ul class="space-y-2">
+          <% for (const link of footerQuizLinks) { %>
+          <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
+          <% } %>
+        </ul>
+      </div>
+
+      <!-- Legal Links -->
+      <div>
+        <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:footer.information', 'Information') %></h3>
+        <ul class="space-y-2">
+          <% for (const link of footerLegalLinks) { %>
+          <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary"><%= link.label || t('common:' + link.labelKey, link.labelKey) %></a></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="mt-12 border-t border-border pt-8">
+      <p class="text-center text-sm text-muted-foreground">
+        &copy; <%= currentYear %> Quiz Couple. <%= t('common:footer.copyright', 'Tous droits réservés. Fait avec') %>
+        <svg class="inline-block h-4 w-4 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <%= t('common:footer.inFrance', 'en France') %>.
+      </p>
+    </div>
+  </div>
+</footer>

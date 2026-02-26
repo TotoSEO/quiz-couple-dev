@@ -1,0 +1,16 @@
+{
+  "name": "quiz-couple-static",
+  "version": "1.0.0",
+  "description": "Static HTML/CSS/JS build for quiz-couple.com",
+  "type": "module",
+  "scripts": {
+    "build": "node build/generate.js",
+    "build:css": "node build/compile-css.js",
+    "build:all": "npm run build:css && npm run build",
+    "preview": "npx serve dist -l 3000"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "html-minifier-terser": "^7.2.0"
+  }
+}

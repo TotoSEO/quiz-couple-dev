@@ -1,0 +1,163 @@
+<%
+  const ns = 'quiz-ado';
+  const quizTitle = t('quizzes:quizAdo.title', 'Quiz Couple Ado');
+  const quizDesc = t('quizzes:quizAdo.metaDescription', '');
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "Quiz",
+      "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+      "dateCreated": "2026-02-24", "datePublished": "2026-02-24",
+      "isAccessibleForFree": true, "timeRequired": "PT10M",
+      "learningResourceType": "Quiz", "interactivityType": "active",
+      "educationalAlignment": {
+        "@type": "AlignmentObject",
+        "educationalFramework": "Couple relationships",
+        "targetName": "Teen relationship assessment",
+        "alignmentType": "teaches"
+      },
+      "about": { "@type": "Thing", "name": "teen couple quiz" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "totalQuestions", "value": 80 },
+        { "@type": "PropertyValue", "name": "questionsPerSession", "value": 20 },
+        { "@type": "PropertyValue", "name": "players", "value": 2 },
+        { "@type": "PropertyValue", "name": "audience", "value": "teenagers" }
+      ]
+    },
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [1,2,3,4].map(function(i) {
+        return {
+          "@type": "Question", "name": t(ns + ':seo.faq' + i + 'Q', ''),
+          "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':seo.faq' + i + 'A', '') }
+        };
+      })
+    }
+  ];
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative py-12 md:py-16 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-background"></div>
+  <div class="container mx-auto px-4 relative">
+    <div class="max-w-3xl mx-auto text-center space-y-6">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-medium">
+        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+        <%= t(ns + ':hero.badge') %>
+      </div>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+        <%= t(ns + ':hero.title') %>
+      </h1>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <%= t(ns + ':hero.description') %>
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 text-sm">
+        <span class="flex items-center gap-1 text-muted-foreground">
+          <svg class="h-4 w-4 text-emerald-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <%= t(ns + ':hero.feat1') %>
+        </span>
+        <span class="flex items-center gap-1 text-muted-foreground">
+          <svg class="h-4 w-4 text-emerald-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+          <%= t(ns + ':hero.feat2') %>
+        </span>
+        <span class="flex items-center gap-1 text-muted-foreground">
+          <svg class="h-4 w-4 text-emerald-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+          <%= t(ns + ':hero.feat3') %>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- Quiz Engine -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-2xl">
+      <div id="quiz-engine" data-quiz="ado" data-lang="<%= lang %>"></div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'up' }) %>
+
+<!-- SEO Content -->
+<section class="py-12 md:py-16 bg-muted/30">
+  <div class="container mx-auto px-4">
+    <article class="max-w-3xl mx-auto prose prose-lg dark:prose-invert">
+      <h2><%= t(ns + ':seo.s1Title') %></h2>
+      <p><%= t(ns + ':seo.s1P1') %></p>
+      <p><%= t(ns + ':seo.s1P2') %></p>
+
+      <h2><%= t(ns + ':seo.s2Title') %></h2>
+      <p><%- t(ns + ':seo.s2P1') %></p>
+      <h3><%= t(ns + ':seo.s2Sub1') %></h3>
+      <ul>
+        <li><%= t(ns + ':seo.s2L1') %></li>
+        <li><%= t(ns + ':seo.s2L2') %></li>
+        <li><%= t(ns + ':seo.s2L3') %></li>
+        <li><%= t(ns + ':seo.s2L4') %></li>
+        <li><%= t(ns + ':seo.s2L5') %></li>
+      </ul>
+      <h3><%= t(ns + ':seo.s2Sub2') %></h3>
+      <ul>
+        <li><%= t(ns + ':seo.s2W1') %></li>
+        <li><%= t(ns + ':seo.s2W2') %></li>
+        <li><%= t(ns + ':seo.s2W3') %></li>
+        <li><%= t(ns + ':seo.s2W4') %></li>
+        <li><%= t(ns + ':seo.s2W5') %></li>
+      </ul>
+
+      <h2><%= t(ns + ':seo.s3Title') %></h2>
+      <p><%= t(ns + ':seo.s3P1') %></p>
+      <p><%= t(ns + ':seo.s3P2') %></p>
+
+      <h2><%= t(ns + ':seo.s4Title') %></h2>
+      <p><%- t(ns + ':seo.s4P1') %></p>
+      <p><%= t(ns + ':seo.s4P2') %></p>
+      <div class="bg-emerald-50 dark:bg-emerald-900/20 border-l-4 border-emerald-500 p-4 rounded-r-lg not-prose">
+        <p class="text-sm"><strong><%= t(ns + ':seo.tipLabel') %></strong> <%= t(ns + ':seo.s4Tip') %></p>
+      </div>
+
+      <h2><%= t(ns + ':seo.s5Title') %></h2>
+      <p><%= t(ns + ':seo.s5P1') %></p>
+      <p><%- t(ns + ':seo.s5P2') %></p>
+      <div class="bg-emerald-50 dark:bg-emerald-900/20 border-l-4 border-emerald-500 p-4 rounded-r-lg not-prose">
+        <p class="text-sm"><strong><%= t(ns + ':seo.tipLabel') %></strong> <%= t(ns + ':seo.s5Tip') %></p>
+      </div>
+
+      <h2><%= t(ns + ':seo.s6Title') %></h2>
+      <p><%= t(ns + ':seo.s6P1') %></p>
+      <p><%= t(ns + ':seo.s6P2') %></p>
+
+      <h2><%= t(ns + ':seo.s7Title') %></h2>
+      <p><%= t(ns + ':seo.s7P1') %></p>
+      <p><%= t(ns + ':seo.s7P2') %></p>
+      <div class="bg-emerald-50 dark:bg-emerald-900/20 border-l-4 border-emerald-500 p-4 rounded-r-lg not-prose">
+        <p class="text-sm"><strong><%= t(ns + ':seo.tipLabel') %></strong> <%= t(ns + ':seo.s7Tip') %></p>
+      </div>
+
+      <h2><%= t(ns + ':seo.s8Title') %></h2>
+      <p><%- t(ns + ':seo.s8P1') %></p>
+      <p><%= t(ns + ':seo.s8P2') %></p>
+    </article>
+
+    <!-- FAQ -->
+    <div class="max-w-3xl mx-auto mt-12 bg-card rounded-xl border p-6 md:p-8 space-y-6">
+      <h2 class="text-xl font-bold"><%= t(ns + ':seo.faqTitle') %></h2>
+      <div class="space-y-4">
+        <% for (let i = 1; i <= 4; i++) { %>
+        <div>
+          <h3 class="font-semibold"><%= t(ns + ':seo.faq' + i + 'Q') %></h3>
+          <p class="text-sm text-muted-foreground mt-1"><%= t(ns + ':seo.faq' + i + 'A') %></p>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="/js/quiz-engine-core.js" defer></script>
+<script src="/js/quiz-loader.js" defer></script>

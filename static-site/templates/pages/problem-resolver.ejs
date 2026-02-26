@@ -1,0 +1,130 @@
+<%
+  const ns = 'quiz-problem-resolver';
+  const heroFeaturesRaw = t(ns + ':hero.features', null);
+  const heroFeatures = Array.isArray(heroFeaturesRaw) ? heroFeaturesRaw : [];
+  const howStepsRaw = t(ns + ':howItWorks.steps', null);
+  const howSteps = Array.isArray(howStepsRaw) ? howStepsRaw : [];
+  const tipsRaw = t(ns + ':seo.s3.tips', null);
+  const tips = Array.isArray(tipsRaw) ? tipsRaw : [];
+  const errorsRaw = t(ns + ':seo.s4.items', null);
+  const errors = Array.isArray(errorsRaw) ? errorsRaw : [];
+%>
+
+<!-- Hero -->
+<section class="relative py-12 md:py-16 overflow-hidden">
+  <div class="absolute inset-0 gradient-hero opacity-40 pointer-events-none" aria-hidden="true"></div>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-3xl mx-auto text-center space-y-6">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+        <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 3.36 2.07 6.24 5 7.42V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.58c2.93-1.18 5-4.06 5-7.42a8 8 0 0 0-8-8zM10 22h4"/></svg>
+        <span class="text-sm font-medium text-primary"><%= t(ns + ':hero.badge', 'IA') %></span>
+      </div>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+        <%= t(ns + ':hero.title1', '') %> <span class="text-gradient"><%= t(ns + ':hero.title2', '') %></span> <%= t(ns + ':hero.title3', '') %>
+      </h1>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto"><%- t(ns + ':hero.description', '') %></p>
+      <% if (heroFeatures.length > 0) { %>
+      <div class="flex flex-wrap justify-center gap-4 pt-4">
+        <% for (let i = 0; i < heroFeatures.length; i++) { %>
+        <div class="flex items-center gap-2 text-sm text-muted-foreground">
+          <svg class="h-4 w-4 <%= i === 0 ? 'text-emerald-600' : i === 1 ? 'text-primary' : 'text-secondary' %>" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><% if (i === 0) { %><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><% } else if (i === 1) { %><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/><% } else { %><path d="M12 2a8 8 0 0 0-8 8c0 3.36 2.07 6.24 5 7.42V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.58c2.93-1.18 5-4.06 5-7.42a8 8 0 0 0-8-8z"/><% } %></svg>
+          <span><%= heroFeatures[i] %></span>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Resolver Form (JS interactive) -->
+<section id="formulaire-resolution" class="py-8 md:py-12">
+  <div class="container mx-auto px-4">
+    <div class="max-w-2xl mx-auto">
+      <div id="problem-resolver-engine" data-lang="<%= lang %>"></div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<% if (howSteps.length > 0) { %>
+<section class="py-12 bg-muted/30">
+  <div class="container mx-auto px-4">
+    <div class="max-w-2xl mx-auto space-y-6">
+      <h2 class="text-2xl font-bold text-center"><%= t(ns + ':howItWorks.title', 'Comment ça marche ?') %></h2>
+      <div class="grid gap-4 md:grid-cols-3">
+        <% for (let i = 0; i < howSteps.length; i++) { %>
+        <div class="p-4 rounded-xl glass-card text-center">
+          <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-primary/20 flex items-center justify-center"><span class="font-bold text-primary"><%= i + 1 %></span></div>
+          <h3 class="font-semibold mb-1"><%= howSteps[i].title %></h3>
+          <p class="text-sm text-muted-foreground"><%= howSteps[i].desc %></p>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Article -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.s1.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%= t(ns + ':seo.s1.p1', '') %></p>
+        <p><%- t(ns + ':seo.s1.p2', '') %></p>
+        <p><%= t(ns + ':seo.s1.p3', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.s2.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%= t(ns + ':seo.s2.p1', '') %></p>
+        <p><%= t(ns + ':seo.s2.p2', '') %></p>
+      </div>
+    </section>
+
+    <% if (tips.length > 0) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.s3.title', '') %></h2>
+      <div class="space-y-6">
+        <% for (const tip of tips) { %>
+        <div class="bg-card border border-border rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-2"><%= tip.h %></h3>
+          <p class="text-muted-foreground"><%= tip.p %></p>
+        </div>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+
+    <% if (errors.length > 0) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.s4.title', '') %></h2>
+      <div class="space-y-6">
+        <% for (let i = 0; i < errors.length; i++) { %>
+        <div class="border-l-4 border-destructive pl-6">
+          <h3 class="text-xl font-semibold mb-2"><%= errors[i].h %></h3>
+          <p class="text-muted-foreground mb-2"><%= errors[i].p1 %></p>
+          <p class="text-muted-foreground"><%= errors[i].p2 %></p>
+        </div>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+
+    <section class="mb-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 border border-primary/20">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t(ns + ':seo.conclusion.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%= t(ns + ':seo.conclusion.p1', '') %></p>
+        <p><%= t(ns + ':seo.conclusion.p2', '') %></p>
+      </div>
+    </section>
+  </div>
+</article>
+
+<script src="/js/problem-resolver.js" defer></script>
