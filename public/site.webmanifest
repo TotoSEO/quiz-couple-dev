@@ -1,0 +1,21 @@
+{
+  "name": "Quiz Couple",
+  "short_name": "Quiz Couple",
+  "description": "Quiz gratuits pour tester votre relation de couple",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0015",
+  "theme_color": "#E11D74",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

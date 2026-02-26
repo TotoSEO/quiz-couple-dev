@@ -1,0 +1,19 @@
+project_id = "nbjpgecedevlmypqisng"
+
+[functions.resolve-couple-problem]
+verify_jwt = false
+
+[functions.get-client-ip]
+verify_jwt = false
+
+[functions.verify-admin]
+verify_jwt = false
+
+[functions.admin-reviews]
+verify_jwt = false
+
+[functions.admin-blog]
+verify_jwt = false
+
+[functions.blog-og]
+verify_jwt = false
