@@ -460,10 +460,15 @@ button { cursor: pointer; }
 @media (min-width: 1024px) { .section-padding { padding-top: 8rem; padding-bottom: 8rem; } }
 
 /* Card interactions */
-.card-hover { transition: all 300ms; }
-.card-hover:hover { transform: scale(1.02) translateY(-0.25rem); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+.card-hover { transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+.card-hover:hover { transform: scale(1.03) translateY(-4px); box-shadow: 0 20px 40px -10px hsl(var(--primary) / 0.2); border-color: hsl(var(--primary) / 0.3); }
 .card-interactive { cursor: pointer; }
 .card-interactive:hover { border-color: hsl(var(--primary) / 0.5); }
+
+/* Quiz cards on homepage */
+.quiz-card { position: relative; overflow: hidden; }
+.quiz-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary))); opacity: 0; transition: opacity 300ms; }
+.quiz-card:hover::before { opacity: 1; }
 
 /* Divider */
 .divider-gradient { height: 1px; width: 100%; background: linear-gradient(to right, transparent, hsl(var(--border)), transparent); }
@@ -679,7 +684,38 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
 
+/* ── Quiz Engine Animations ───────────────────────────────── */
+
+.quiz-engine { max-width: 700px; margin: 0 auto; }
+
+/* Question entry animation */
+.quiz-question-enter { animation: quizSlideIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+@keyframes quizSlideIn { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+
+/* Quiz option buttons */
+.quiz-option { display: block; width: 100%; text-align: left; padding: 1rem 1.25rem; margin-bottom: 0.5rem; border-radius: calc(var(--radius) + 4px); border: 2px solid hsl(var(--border)); background: hsl(var(--card) / 0.8); color: hsl(var(--foreground)); font-size: 0.95rem; cursor: pointer; transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+.quiz-option:hover { border-color: hsl(var(--primary) / 0.6); background: hsl(var(--primary) / 0.08); transform: translateX(4px); }
+.quiz-option:active { transform: scale(0.98); }
+.quiz-option.selected { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.12); box-shadow: 0 0 0 3px hsl(var(--primary) / 0.15); }
+
+/* Progress bar */
+.quiz-progress { height: 6px; border-radius: 3px; background: hsl(var(--muted)); overflow: hidden; margin-bottom: 1.5rem; }
+.quiz-progress-bar { height: 100%; border-radius: 3px; background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary))); transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+
+/* Result card animation */
+.quiz-result-card { animation: quizResultPop 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+@keyframes quizResultPop { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+/* Score circle */
+.quiz-score-circle { display: inline-flex; align-items: center; justify-content: center; width: 120px; height: 120px; border-radius: 50%; border: 4px solid hsl(var(--primary)); background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.1)); font-size: 2rem; font-weight: 800; color: hsl(var(--primary)); }
+
 /* ── Additional utils ─────────────────────────────────────── */
 
 .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 .tabular-nums { font-variant-numeric: tabular-nums; }
+
+/* ── Group hover utility ─────────────────────────────────── */
+.group:hover .group-hover\:scale-110 { transform: scale(1.1); }
+
+/* ── XL grid columns ─────────────────────────────────────── */
+@media (min-width: 1280px) { .xl\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
