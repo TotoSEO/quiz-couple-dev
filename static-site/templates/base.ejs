@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= rawTitle %></title>
+  <meta name="description" content="<%= rawDescription %>">
+  <link rel="canonical" href="<%= canonical %>">
+  <% for (const alt of alternates) { %>
+  <link rel="alternate" hreflang="<%= alt.hreflang %>" href="<%= alt.href %>">
+  <% } %>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Quiz Couple">
+  <meta property="og:title" content="<%= rawTitle %>">
+  <meta property="og:description" content="<%= rawDescription %>">
+  <meta property="og:url" content="<%= canonical %>">
+  <meta property="og:locale" content="<%= locale %>">
+  <meta property="og:image" content="<%= ogImage %>">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= rawTitle %>">
+  <meta name="twitter:description" content="<%= rawDescription %>">
+  <meta name="twitter:url" content="<%= canonical %>">
+  <meta name="twitter:image" content="<%= ogImage %>">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Fonts (non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Theme initialization (inline to prevent flash) -->
+  <script>
+    (function(){
+      var t=localStorage.getItem('theme');
+      if(t==='light'){document.documentElement.classList.remove('dark')}
+      else{document.documentElement.classList.add('dark')}
+    })();
+  </script>
+
+  <!-- Google Analytics with Consent Mode v2 -->
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+  </script>
+
+  <%- typeof jsonLdHtml !== 'undefined' && jsonLdHtml ? jsonLdHtml : '' %>
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+  <%- include('partials/header', { lang, t, getLocalizedUrl, routeSlugs: routeSlugs }) %>
+
+  <main>
+    <%- content %>
+  </main>
+
+  <%- include('partials/footer', { lang, t, getLocalizedUrl }) %>
+  <%- include('partials/cookie-consent', { lang }) %>
+
+  <!-- JS -->
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/mobile-menu.js" defer></script>
+  <script src="/js/cookie-consent.js" defer></script>
+
+  <!-- GA (deferred) -->
+  <script>
+    window.addEventListener('load',function(){
+      var s=document.createElement('script');
+      s.src='https://www.googletagmanager.com/gtag/js?id=<%= gaId %>';
+      s.async=true;
+      document.head.appendChild(s);
+      s.onload=function(){
+        gtag('js',new Date());
+        gtag('config','<%= gaId %>',{send_page_view:true});
+      };
+    });
+  </script>
+</body>
+</html>

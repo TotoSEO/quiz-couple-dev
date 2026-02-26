@@ -1,0 +1,193 @@
+<%
+  /**
+   * Blog article page template.
+   *
+   * Variables received:
+   * - article: { slug, title, metaTitle, metaDescription, featuredImage, featuredImageAlt,
+   *              publishedAt, author: { id, name, avatar, bio }, excerpt, introduction,
+   *              quickSummary: string[], sections: [{ id, title, content, tip? }] }
+   * - lang, t, canonical, routeKey, getLocalizedUrl, alternates, escapeHtml, JSON
+   * - articleAlternates: [{ hreflang, href }] for this specific article
+   */
+
+  // ── Computed values ──────────────────────────────────────────────────
+  const homeUrl = getLocalizedUrl('home', lang);
+  const blogUrl = getLocalizedUrl('blog', lang);
+
+  const homeLabel = lang === 'fr' ? 'Accueil' : lang === 'en' ? 'Home' : lang === 'es' ? 'Inicio' : lang === 'de' ? 'Startseite' : 'Home';
+  const blogLabel = 'Blog';
+  const publishedByLabel = lang === 'fr' ? 'Par' : lang === 'en' ? 'By' : lang === 'es' ? 'Por' : lang === 'de' ? 'Von' : 'Di';
+  const publishedOnLabel = lang === 'fr' ? 'Publié le' : lang === 'en' ? 'Published on' : lang === 'es' ? 'Publicado el' : lang === 'de' ? 'Veröffentlicht am' : 'Pubblicato il';
+  const backToBlogLabel = lang === 'fr' ? 'Retour au blog' : lang === 'en' ? 'Back to blog' : lang === 'es' ? 'Volver al blog' : lang === 'de' ? 'Zurück zum Blog' : 'Torna al blog';
+  const aboutAuthorLabel = lang === 'fr' ? 'À propos de l\'auteur' : lang === 'en' ? 'About the author' : lang === 'es' ? 'Sobre el autor' : lang === 'de' ? 'Über den Autor' : 'Sull\'autore';
+  const relatedQuizzesLabel = lang === 'fr' ? 'Quiz recommandés' : lang === 'en' ? 'Recommended quizzes' : lang === 'es' ? 'Quizzes recomendados' : lang === 'de' ? 'Empfohlene Quiz' : 'Quiz consigliati';
+  const relatedQuizzesDesc = lang === 'fr' ? 'Continuez à explorer votre relation avec nos quiz gratuits' : lang === 'en' ? 'Keep exploring your relationship with our free quizzes' : lang === 'es' ? 'Sigue explorando tu relación con nuestros quizzes gratuitos' : lang === 'de' ? 'Erkunde deine Beziehung weiter mit unseren kostenlosen Quiz' : 'Continua a esplorare la tua relazione con i nostri quiz gratuiti';
+
+  // Format published date
+  const publishedDate = new Date(article.publishedAt);
+  const dateLocale = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : lang === 'es' ? 'es-ES' : lang === 'de' ? 'de-DE' : 'it-IT';
+  const formattedDate = publishedDate.toLocaleDateString(dateLocale, { year: 'numeric', month: 'long', day: 'numeric' });
+  const isoDate = publishedDate.toISOString();
+
+  // Related quizzes for the CTA section
+  const relatedQuizzes = [
+    { routeKey: 'testCouple', key: 'testCouple' },
+    { routeKey: 'quizAmoureux', key: 'quizAmoureux' },
+    { routeKey: 'testCoupleSain', key: 'testCoupleSain' },
+  ];
+
+%>
+
+<!-- Breadcrumb navigation -->
+<nav class="container mx-auto px-4 py-4" aria-label="Breadcrumb">
+  <ol class="flex items-center gap-2 text-sm text-muted-foreground">
+    <li><a href="<%= homeUrl %>" class="hover:text-primary transition-colors"><%= homeLabel %></a></li>
+    <li aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+    <li><a href="<%= blogUrl %>" class="hover:text-primary transition-colors"><%= blogLabel %></a></li>
+    <li aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+    <li class="text-foreground font-medium truncate max-w-[200px] sm:max-w-none" aria-current="page"><%= article.title %></li>
+  </ol>
+</nav>
+
+<!-- Hero section -->
+<section class="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-12 md:py-20">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl"><%= article.title %></h1>
+
+      <!-- Author info and date -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <div class="flex items-center gap-3">
+          <% if (article.author.avatar) { %>
+          <img src="<%= article.author.avatar %>" alt="<%= escapeHtml(article.author.name) %>" class="w-12 h-12 rounded-full object-cover border-2 border-border" width="48" height="48" loading="eager">
+          <% } %>
+          <div class="text-left">
+            <p class="font-semibold text-foreground"><%= article.author.name %></p>
+            <% if (typeof authorBio !== 'undefined' && authorBio) { %>
+            <p class="text-sm text-muted-foreground line-clamp-1"><%= authorBio %></p>
+            <% } %>
+          </div>
+        </div>
+        <span class="hidden sm:block text-muted-foreground" aria-hidden="true">|</span>
+        <time datetime="<%= isoDate %>" class="text-sm text-muted-foreground">
+          <%= publishedOnLabel %> <%= formattedDate %>
+        </time>
+      </div>
+
+      <!-- Featured image -->
+      <% if (article.featuredImage) { %>
+      <div class="rounded-2xl overflow-hidden border border-border shadow-lg mx-auto max-w-4xl">
+        <img src="<%= article.featuredImage %>" alt="<%= escapeHtml(article.featuredImageAlt || article.title) %>" class="w-full h-auto object-cover" loading="eager">
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- Article content -->
+<article class="section-padding blog-article" itemscope itemtype="https://schema.org/Article">
+  <meta itemprop="headline" content="<%= escapeHtml(article.title) %>">
+  <meta itemprop="datePublished" content="<%= isoDate %>">
+  <% if (article.featuredImage) { %><meta itemprop="image" content="<%= article.featuredImage %>"><% } %>
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="<%= escapeHtml(article.author.name) %>"></span>
+
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <!-- Table of contents -->
+    <% if (article.sections && article.sections.length > 1) { %>
+    <nav class="blog-toc" aria-label="<%= t('common:blog.tableOfContents', 'Sommaire') %>">
+      <button class="blog-toc-toggle" aria-expanded="true" onclick="var c=this.nextElementSibling;var expanded=this.getAttribute('aria-expanded')==='true';c.style.display=expanded?'none':'block';this.setAttribute('aria-expanded',!expanded);this.querySelector('.blog-toc-chevron').style.transform=expanded?'rotate(-90deg)':'';">
+        <svg class="blog-toc-chevron w-4 h-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        <span class="blog-toc-title"><%= t('common:blog.tableOfContents', 'Sommaire') %></span>
+      </button>
+      <ol>
+        <% for (const section of article.sections) { %>
+        <li class="mb-1"><a href="#<%= section.id %>"><%= section.title %></a></li>
+        <% } %>
+      </ol>
+    </nav>
+    <% } %>
+
+    <!-- Quick summary box -->
+    <% if (article.quickSummary && article.quickSummary.length > 0) { %>
+    <aside class="blog-quick-summary" aria-label="<%= t('common:blog.quickSummary', 'Résumé rapide') %>">
+      <p class="blog-quick-summary-title"><%= t('common:blog.quickSummary', 'Résumé rapide') %></p>
+      <ul>
+        <% for (const point of article.quickSummary) { %>
+        <li><%= point %></li>
+        <% } %>
+      </ul>
+    </aside>
+    <% } %>
+
+    <!-- Introduction -->
+    <% if (article.introduction) { %>
+    <div class="mb-10 text-lg leading-relaxed text-muted-foreground">
+      <%- article.introduction %>
+    </div>
+    <% } %>
+
+    <!-- Sections -->
+    <% if (article.sections && article.sections.length > 0) { %>
+    <% for (const section of article.sections) { %>
+    <section id="<%= section.id %>" class="mb-12 scroll-mt-24">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= section.title %></h2>
+      <div class="text-muted-foreground leading-relaxed">
+        <%- section.content %>
+      </div>
+
+      <% if (section.tip) { %>
+      <aside class="blog-tip-box" role="note">
+        <p class="blog-tip-box-title"><%= t('common:blog.tip', 'A savoir') %></p>
+        <p class="text-sm text-muted-foreground"><%- section.tip %></p>
+      </aside>
+      <% } %>
+    </section>
+    <% } %>
+    <% } %>
+
+    <!-- Author box -->
+    <aside class="blog-author-box" aria-label="<%= aboutAuthorLabel %>">
+      <% if (article.author.avatar) { %>
+      <img src="<%= article.author.avatar %>" alt="<%= escapeHtml(article.author.name) %>" class="blog-author-avatar" width="64" height="64" loading="lazy">
+      <% } %>
+      <div>
+        <p class="text-sm text-muted-foreground mb-1"><%= aboutAuthorLabel %></p>
+        <p class="blog-author-name"><%= article.author.name %></p>
+        <% if (typeof authorBio !== 'undefined' && authorBio) { %>
+        <p class="blog-author-bio"><%= authorBio %></p>
+        <% } %>
+      </div>
+    </aside>
+
+    <!-- Back to blog link -->
+    <div class="mt-8">
+      <a href="<%= blogUrl %>" class="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline transition-colors">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        <%= backToBlogLabel %>
+      </a>
+    </div>
+  </div>
+</article>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- Related quizzes CTA section -->
+<section class="section-padding bg-muted/20">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= relatedQuizzesLabel %></h2>
+      <p class="text-muted-foreground max-w-2xl mx-auto"><%= relatedQuizzesDesc %></p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+      <% for (const quiz of relatedQuizzes) { %>
+      <a href="<%= getLocalizedUrl(quiz.routeKey, lang) %>" class="glass-card rounded-2xl p-6 card-hover no-underline block text-center">
+        <h3 class="text-lg font-semibold text-foreground mb-2"><%= t('quizzes:' + quiz.key + '.shortTitle', t('quizzes:' + quiz.key + '.title', quiz.key)) %></h3>
+        <p class="text-sm text-muted-foreground line-clamp-2"><%= t('quizzes:' + quiz.key + '.description', '') %></p>
+      </a>
+      <% } %>
+    </div>
+  </div>
+</section>
