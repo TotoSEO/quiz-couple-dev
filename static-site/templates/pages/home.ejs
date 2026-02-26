@@ -119,25 +119,25 @@
     </div>
 
     <!-- Tests -->
-    <h3 class="text-xl font-semibold mb-6"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+    <h3 class="text-xl font-semibold mb-6 text-center"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-12">
       <% for (const item of tests) { %>
-      <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="glass-card rounded-2xl p-6 card-hover no-underline block">
-        <div class="text-3xl mb-3"><%= item.icon %></div>
-        <h4 class="text-lg font-semibold mb-2 text-foreground"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
-        <p class="text-sm text-muted-foreground line-clamp-2"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
+      <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="quiz-card glass-card rounded-2xl p-5 card-hover no-underline block text-center group">
+        <div class="w-14 h-14 mx-auto mb-3 rounded-xl bg-primary/10 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"><%= item.icon %></div>
+        <h4 class="text-base font-semibold mb-1 text-foreground"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
+        <p class="text-xs text-muted-foreground line-clamp-2"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
       </a>
       <% } %>
     </div>
 
     <!-- Quizzes -->
-    <h3 class="text-xl font-semibold mb-6"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <h3 class="text-xl font-semibold mb-6 text-center"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
       <% for (const item of quizzes) { %>
-      <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="glass-card rounded-2xl p-6 card-hover no-underline block">
-        <div class="text-3xl mb-3"><%= item.icon %></div>
-        <h4 class="text-lg font-semibold mb-2 text-foreground"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
-        <p class="text-sm text-muted-foreground line-clamp-2"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
+      <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="quiz-card glass-card rounded-2xl p-5 card-hover no-underline block text-center group">
+        <div class="w-14 h-14 mx-auto mb-3 rounded-xl bg-secondary/10 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"><%= item.icon %></div>
+        <h4 class="text-base font-semibold mb-1 text-foreground"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
+        <p class="text-xs text-muted-foreground line-clamp-2"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
       </a>
       <% } %>
     </div>
@@ -163,19 +163,26 @@
 <!-- What Is Quiz Couple -->
 <section class="section-padding bg-muted/20">
   <div class="container mx-auto px-4">
-    <div class="mx-auto max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center"><%= t('home:whatIs.title', 'Qu\'est-ce qu\'un') %> <span class="text-gradient"><%= t('home:whatIs.titleHighlight', 'quiz pour couples') %></span></h2>
-      <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%= t('home:whatIs.paragraph1', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph1Highlight', '') %></strong> <%= t('home:whatIs.paragraph1End', '') %></p>
-        <p><%= t('home:whatIs.paragraph2', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph2Highlight', '') %></strong> <%= t('home:whatIs.paragraph2End', '') %></p>
+    <div class="mx-auto max-w-4xl">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center"><%= t('home:whatIs.title', 'Qu\'est-ce qu\'un') %> <span class="text-gradient"><%= t('home:whatIs.titleHighlight', 'quiz pour couples') %></span></h2>
+      <div class="flex flex-col md:flex-row gap-8 items-center">
+        <div class="md:w-2/5 flex-shrink-0">
+          <img src="/assets/quiz-couple-hero.webp" alt="Quiz Couple" class="rounded-2xl shadow-lg w-full max-w-sm mx-auto" loading="lazy">
+        </div>
+        <div class="md:w-3/5">
+          <div class="space-y-4 text-muted-foreground leading-relaxed">
+            <p><%= t('home:whatIs.paragraph1', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph1Highlight', '') %></strong> <%= t('home:whatIs.paragraph1End', '') %></p>
+            <p><%= t('home:whatIs.paragraph2', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph2Highlight', '') %></strong> <%= t('home:whatIs.paragraph2End', '') %></p>
+          </div>
+          <% const whatIsFeatures = t('home:whatIs.features', []); if (Array.isArray(whatIsFeatures) && whatIsFeatures.length > 0) { %>
+          <ul class="mt-6 space-y-2">
+            <% for (const feat of whatIsFeatures) { %>
+            <li class="flex items-center gap-2 text-muted-foreground"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><%= feat %></li>
+            <% } %>
+          </ul>
+          <% } %>
+        </div>
       </div>
-      <% const whatIsFeatures = t('home:whatIs.features', []); if (Array.isArray(whatIsFeatures) && whatIsFeatures.length > 0) { %>
-      <ul class="mt-6 space-y-2">
-        <% for (const feat of whatIsFeatures) { %>
-        <li class="flex items-center gap-2 text-muted-foreground"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><%= feat %></li>
-        <% } %>
-      </ul>
-      <% } %>
     </div>
   </div>
 </section>
