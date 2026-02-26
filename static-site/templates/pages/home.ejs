@@ -2,16 +2,16 @@
   // Home page data
   const hero = {
     badge: t('home:hero.badge', '100% Gratuit'),
-    title: t('home:hero.title', 'Le quiz pour couples qui vous rapproche'),
-    titleHighlight: t('home:hero.titleHighlight', 'qui vous rapproche'),
+    title: t('home:hero.title', 'Testez votre relation avec nos'),
+    titleHighlight: t('home:hero.titleHighlight', 'quiz spécial couples'),
     description: t('home:hero.description', ''),
     descriptionHighlight: t('home:hero.descriptionHighlight', ''),
-    cta1: t('home:hero.cta1', 'Découvrir nos quiz'),
-    cta2: t('home:hero.cta2', 'Tester son couple'),
-    stat1Value: t('home:hero.stat1Value', '1000+'),
-    stat1Label: t('home:hero.stat1Label', 'couples testés'),
-    stat2Value: t('home:hero.stat2Value', '12'),
-    stat2Label: t('home:hero.stat2Label', 'quiz disponibles'),
+    cta1: t('home:hero.cta', 'Découvrir nos quiz'),
+    cta2: t('home:hero.ctaSecondary', 'Tester son couple'),
+    stat1Value: t('home:hero.stats.couples', '1000+'),
+    stat1Label: t('home:hero.stats.couplesLabel', 'couples testés'),
+    stat2Value: t('home:hero.stats.quizzes', '12'),
+    stat2Label: t('home:hero.stats.quizzesLabel', 'quiz disponibles'),
   };
 
   // Quiz grid data
@@ -77,7 +77,7 @@
     <div class="mx-auto max-w-3xl text-center">
       <span class="badge badge-primary mb-4"><%= hero.badge %></span>
       <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-        <%- hero.title.replace(hero.titleHighlight, '<span class="text-gradient">' + hero.titleHighlight + '</span>') %>
+        <%= hero.title %> <span class="text-gradient"><%= hero.titleHighlight %></span>
       </h1>
       <p class="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
         <% if (hero.descriptionHighlight && hero.description.includes(hero.descriptionHighlight)) { %>
@@ -114,7 +114,7 @@
 <section id="quiz-section" class="section-padding bg-muted/20">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:quizSection.title', 'Nos quiz pour couples') %></h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:quizSection.title', 'Nos quiz gratuits pour') %> <span class="text-gradient"><%= t('home:quizSection.titleHighlight', 'les couples') %></span></h2>
       <p class="text-muted-foreground max-w-2xl mx-auto"><%= t('home:quizSection.description', '') %></p>
     </div>
 
@@ -125,7 +125,7 @@
       <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="glass-card rounded-2xl p-6 card-hover no-underline block">
         <div class="text-3xl mb-3"><%= item.icon %></div>
         <h4 class="text-lg font-semibold mb-2 text-foreground"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
-        <p class="text-sm text-muted-foreground line-clamp-2"><%= t('home:quizGrid.' + item.key + '.description', t('quizzes:' + item.key + '.description', '')) %></p>
+        <p class="text-sm text-muted-foreground line-clamp-2"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
       </a>
       <% } %>
     </div>
@@ -137,7 +137,7 @@
       <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="glass-card rounded-2xl p-6 card-hover no-underline block">
         <div class="text-3xl mb-3"><%= item.icon %></div>
         <h4 class="text-lg font-semibold mb-2 text-foreground"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
-        <p class="text-sm text-muted-foreground line-clamp-2"><%= t('home:quizGrid.' + item.key + '.description', t('quizzes:' + item.key + '.description', '')) %></p>
+        <p class="text-sm text-muted-foreground line-clamp-2"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
       </a>
       <% } %>
     </div>
@@ -151,8 +151,8 @@
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center">
       <span class="badge badge-secondary mb-4"><%= t('home:aiResolver.badge', 'Nouveau') %></span>
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:aiResolver.title', 'Résolvez vos problèmes de couple avec l\'IA') %></h2>
-      <p class="text-muted-foreground mb-8 max-w-2xl mx-auto"><%= t('home:aiResolver.description', '') %></p>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:aiResolver.title', 'Résolvez vos problèmes de couple') %> <span class="text-gradient"><%= t('home:aiResolver.titleHighlight', 'avec l\'I.A !') %></span></h2>
+      <p class="text-muted-foreground mb-8 max-w-2xl mx-auto"><%= t('home:aiResolver.description', '') %> <strong class="text-foreground"><%= t('home:aiResolver.descriptionHighlight', '') %></strong> <%= t('home:aiResolver.descriptionEnd', '') %></p>
       <a href="<%= getLocalizedUrl('problemResolver', lang) %>" class="btn btn-cta"><%= t('home:aiResolver.cta', 'Essayer gratuitement') %></a>
     </div>
   </div>
@@ -164,12 +164,18 @@
 <section class="section-padding bg-muted/20">
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center"><%= t('home:whatIs.title', 'Qu\'est-ce qu\'un quiz pour couples ?') %></h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center"><%= t('home:whatIs.title', 'Qu\'est-ce qu\'un') %> <span class="text-gradient"><%= t('home:whatIs.titleHighlight', 'quiz pour couples') %></span></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- t('home:whatIs.p1', '') %></p>
-        <p><%- t('home:whatIs.p2', '') %></p>
-        <p><%- t('home:whatIs.p3', '') %></p>
+        <p><%= t('home:whatIs.paragraph1', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph1Highlight', '') %></strong> <%= t('home:whatIs.paragraph1End', '') %></p>
+        <p><%= t('home:whatIs.paragraph2', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph2Highlight', '') %></strong> <%= t('home:whatIs.paragraph2End', '') %></p>
       </div>
+      <% const whatIsFeatures = t('home:whatIs.features', []); if (Array.isArray(whatIsFeatures) && whatIsFeatures.length > 0) { %>
+      <ul class="mt-6 space-y-2">
+        <% for (const feat of whatIsFeatures) { %>
+        <li class="flex items-center gap-2 text-muted-foreground"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><%= feat %></li>
+        <% } %>
+      </ul>
+      <% } %>
     </div>
   </div>
 </section>
@@ -180,15 +186,15 @@
 <section class="section-padding">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:whyDoQuiz.title', 'Pourquoi faire un quiz de couple ?') %></h2>
-      <p class="text-muted-foreground max-w-2xl mx-auto"><%= t('home:whyDoQuiz.description', '') %></p>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:whyDoQuiz.title', 'À quoi ça sert de faire') %> <span class="text-gradient"><%= t('home:whyDoQuiz.titleHighlight', 'ces quiz') %></span></h2>
+      <p class="text-muted-foreground max-w-2xl mx-auto"><%= t('home:whyDoQuiz.subtitle', '') %></p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
       <% for (let i = 0; i < reasons.length; i++) { %>
       <div class="glass-card rounded-2xl p-6 text-center">
         <div class="text-3xl mb-3"><%= reasonIcons[i] %></div>
-        <h3 class="text-lg font-semibold mb-2"><%= t('home:whyDoQuiz.' + reasons[i] + '.title', reasons[i]) %></h3>
-        <p class="text-sm text-muted-foreground"><%= t('home:whyDoQuiz.' + reasons[i] + '.description', '') %></p>
+        <h3 class="text-lg font-semibold mb-2"><%= t('home:whyDoQuiz.reasons.' + reasons[i] + '.title', reasons[i]) %></h3>
+        <p class="text-sm text-muted-foreground"><%= t('home:whyDoQuiz.reasons.' + reasons[i] + '.description', '') %></p>
       </div>
       <% } %>
     </div>
@@ -201,7 +207,8 @@
 <section class="section-padding bg-muted/20">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:howItWorks.title', 'Comment ça marche ?') %></h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:howItWorks.title', 'Comment ça') %> <span class="text-gradient"><%= t('home:howItWorks.titleHighlight', 'marche') %></span></h2>
+      <p class="text-muted-foreground max-w-2xl mx-auto"><%= t('home:howItWorks.subtitle', '') %></p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
       <% for (let i = 0; i < steps.length; i++) { %>
@@ -210,8 +217,8 @@
           <span class="text-2xl"><%= stepIcons[i] %></span>
         </div>
         <div class="text-sm font-medium text-primary mb-2"><%= t('home:howItWorks.step', 'Étape') %> <%= i + 1 %></div>
-        <h3 class="text-lg font-semibold mb-2"><%= t('home:howItWorks.' + steps[i] + '.title', steps[i]) %></h3>
-        <p class="text-sm text-muted-foreground"><%= t('home:howItWorks.' + steps[i] + '.description', '') %></p>
+        <h3 class="text-lg font-semibold mb-2"><%= t('home:howItWorks.steps.' + steps[i] + '.title', steps[i]) %></h3>
+        <p class="text-sm text-muted-foreground"><%= t('home:howItWorks.steps.' + steps[i] + '.description', '') %></p>
       </div>
       <% } %>
     </div>
@@ -224,8 +231,8 @@
 <section class="section-padding" id="latest-articles">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:latestArticles.title', 'Derniers articles') %></h2>
-      <p class="text-muted-foreground"><%= t('home:latestArticles.description', '') %></p>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:latestArticles.title', 'Les derniers articles') %> <span class="text-gradient"><%= t('home:latestArticles.titleHighlight', 'du blog') %></span></h2>
+      <p class="text-muted-foreground max-w-2xl mx-auto"><%= t('home:latestArticles.intro', '') %></p>
     </div>
     <div class="blog-grid" id="articles-grid">
       <!-- Articles loaded by JS -->
@@ -246,8 +253,8 @@
 <section class="section-padding bg-muted/20" id="avis">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('common:reviews.title', 'Avis des utilisateurs') %></h2>
-      <p class="text-muted-foreground"><%= t('common:reviews.description', '') %></p>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('common:reviews.title', 'Ce que les couples en pensent') %></h2>
+      <p class="text-muted-foreground"><%= t('common:reviews.subtitle', 'Découvrez les avis de ceux qui ont testé nos quiz') %></p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" id="reviews-grid">
       <!-- Reviews loaded by JS -->
@@ -255,14 +262,14 @@
 
     <!-- Review submission form -->
     <div class="max-w-lg mx-auto mt-12 glass-card rounded-2xl p-6" id="review-form-section">
-      <h3 class="text-lg font-bold mb-4 text-center"><%= t('common:reviews.formTitle', 'Laissez votre avis') %></h3>
+      <h3 class="text-lg font-bold mb-4 text-center"><%= t('common:reviews.leaveReview', 'Laissez votre avis') %></h3>
       <form id="review-form" class="space-y-4">
         <div>
-          <label class="block text-sm font-medium mb-1"><%= t('common:reviews.nameLabel', 'Votre prénom') %></label>
-          <input type="text" id="review-name" class="input w-full" placeholder="<%= t('common:reviews.namePlaceholder', 'Prénom') %>" required maxlength="50">
+          <label class="block text-sm font-medium mb-1"><%= t('common:reviews.yourName', 'Votre prénom') %></label>
+          <input type="text" id="review-name" class="input w-full" placeholder="<%= t('common:reviews.yourName', 'Votre prénom') %>" required maxlength="50">
         </div>
         <div>
-          <label class="block text-sm font-medium mb-1"><%= t('common:reviews.ratingLabel', 'Note') %></label>
+          <label class="block text-sm font-medium mb-1"><%= t('common:reviews.averageRating', 'Note') %></label>
           <div class="flex gap-1" id="review-stars">
             <% for (var s = 1; s <= 5; s++) { %>
             <button type="button" data-star="<%= s %>" class="star-btn p-1 transition-transform hover:scale-110" aria-label="<%= s %> étoiles">
@@ -272,11 +279,11 @@
           </div>
         </div>
         <div>
-          <label class="block text-sm font-medium mb-1"><%= t('common:reviews.commentLabel', 'Votre avis') %></label>
-          <textarea id="review-comment" class="textarea w-full" rows="3" placeholder="<%= t('common:reviews.commentPlaceholder', 'Partagez votre expérience...') %>" required minlength="10" maxlength="500"></textarea>
+          <label class="block text-sm font-medium mb-1"><%= t('common:reviews.yourReview', 'Votre avis') %></label>
+          <textarea id="review-comment" class="textarea w-full" rows="3" placeholder="<%= t('common:reviews.yourReview', 'Votre avis (optionnel)') %>" required minlength="10" maxlength="500"></textarea>
         </div>
         <button type="submit" class="btn btn-primary w-full" id="review-submit"><%= t('common:reviews.submit', 'Envoyer mon avis') %></button>
-        <p id="review-success" class="hidden text-sm text-emerald-600 text-center font-medium"><%= t('common:reviews.successMessage', 'Merci ! Votre avis sera publié après modération.') %></p>
+        <p id="review-success" class="hidden text-sm text-emerald-600 text-center font-medium"><%= t('common:reviews.thankYou', 'Merci pour votre avis !') %> <%= t('common:reviews.pending', 'Votre avis est en attente de modération') %></p>
         <p id="review-error" class="hidden text-sm text-destructive text-center"></p>
       </form>
     </div>
@@ -289,11 +296,11 @@
 <section class="section-padding">
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-2xl text-center glass-card-strong rounded-3xl p-8 md:p-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:finalCTA.title', 'Prêts à mieux vous connaître ?') %></h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:finalCTA.title', 'Prêts à tester votre') %> <span class="text-gradient"><%= t('home:finalCTA.titleHighlight', 'complicité') %></span></h2>
       <p class="text-muted-foreground mb-8"><%= t('home:finalCTA.description', '') %></p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-cta"><%= t('home:finalCTA.cta1', 'Commencer le test') %></a>
-        <a href="#quiz-section" class="btn btn-outline btn-lg"><%= t('home:finalCTA.cta2', 'Voir tous les quiz') %></a>
+        <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-cta"><%= t('home:finalCTA.button', 'Commencer maintenant') %></a>
+        <a href="#quiz-section" class="btn btn-outline btn-lg"><%= t('home:finalCTA.socialProof', 'Déjà') %> <%= t('home:finalCTA.socialProofCount', '1000+ couples') %> <%= t('home:finalCTA.socialProofEnd', 'ont testé leurs liens') %></a>
       </div>
     </div>
   </div>
