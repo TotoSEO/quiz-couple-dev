@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "title": "Quiz - Chi è il più... ?",
+    "description": "Il gioco ideale per scoprire cosa pensano davvero i tuoi amici di te!",
+    "descriptionBold": "240+ domande",
+    "descriptionEnd": "per ore di divertimento tra amici o in coppia."
+  },
+  "howToPlay": {
+    "title": "Come si gioca al quiz \"Chi è il più\"?",
+    "step1Title": "1. Aggiungete i giocatori",
+    "step1Text": "Inserite i nomi di 2-8 partecipanti. Più siete, più è divertente!",
+    "step2Title": "2. Votate insieme",
+    "step2Text": "Per ogni domanda, discutete e scegliete chi corrisponde meglio alla descrizione.",
+    "step3Title": "3. Scoprite il risultato",
+    "step3Text": "Alla fine, scoprite chi è stato scelto più spesso e condividete i risultati!"
+  },
+  "whyPopular": {
+    "title": "Perché il quiz \"Chi è il più\" è così popolare?",
+    "item1Title": "Un gioco perfetto per animare una serata",
+    "item1Text": "Il quiz \"Chi è il più?\" è diventato un must per le serate tra amici. Facile da capire, divertente e a volte sorprendente, crea momenti di complicità indimenticabili.",
+    "item2Title": "Ideale per conoscersi meglio tra amici o in coppia",
+    "item2Text": "Che siate in coppia, amici di lunga data o nuove conoscenze, questo quiz rivela come gli altri vi percepiscono. Un modo ludico per rafforzare i legami.",
+    "item3Title": "Domande per tutti i gusti",
+    "item3Text": "Il nostro database di <strong>oltre 240 domande \"Chi è il più\"</strong> copre tutti i temi: dalle domande classiche e familiari a quelle più piccanti per adulti."
+  },
+  "examples": {
+    "title": "240+ domande \"Chi è il più\" per ore di divertimento",
+    "subtitle": "Scoprite un'anteprima delle domande che vi aspettano nel nostro quiz interattivo gratuito!",
+    "classicTitle": "Domande classiche",
+    "classicQuestions": ["Chi è il più chiacchierone?", "Chi è il più divertente?", "Chi è il più intelligente?", "Chi è il più goloso?", "Chi è il più pigro?"],
+    "funTitle": "Domande divertenti e originali",
+    "funQuestions": ["Chi è il più dipendente da Netflix e snack?", "Chi è più probabile che parli del suo ex?", "Chi è il più maldestro nel flirtare?", "Chi è il più dipendente dalle notifiche?", "Chi mente di più?"],
+    "intimateTitle": "Domande più intime",
+    "intimateQuestions": ["Chi è segretamente il più romantico?", "Chi è il più geloso?", "Chi custodisce più segreti?", "Chi è il più sensibile ai complimenti?", "Chi è il più fedele alle sue abitudini?"]
+  },
+  "tips": {
+    "title": "I nostri consigli per un quiz \"Chi è il più\" di successo",
+    "tip1Title": "Giocate con onestà",
+    "tip1Text": "Il più divertente è rispondere con sincerità! Le risposte oneste creano i migliori momenti di risate e complicità.",
+    "tip2Title": "Discutete insieme prima di votare",
+    "tip2Text": "Prendetevi il tempo di discutere prima di ogni risposta. I dibattiti sono spesso più divertenti del risultato finale!",
+    "tip3Title": "Accettate i risultati con umorismo",
+    "tip3Text": "Niente suscettibilità! Il quiz è fatto per divertirsi. Se venite nominati \"il più testardo\", prendetela con un sorriso!"
+  },
+  "faq": {
+    "title": "FAQ - Domande frequenti",
+    "q1": "Come si gioca al quiz \"Chi è il più\"?",
+    "a1": "È semplicissimo! Inserite i nomi di 2-8 giocatori, rispondete insieme a 20 domande selezionate a caso tra più di 240. Per ogni domanda, votate la persona che corrisponde meglio. Alla fine, scoprite chi è stato scelto più spesso!",
+    "q2": "Quante domande contiene il quiz \"Chi è il più\"?",
+    "a2": "Il nostro quiz contiene più di 240 domande varie. Ogni partita ne seleziona 20 a caso, permettendovi di rigiocare molte volte senza ripetere le stesse domande!",
+    "q3": "Il quiz \"Chi è il più\" è gratuito?",
+    "a3": "Sì, il quiz è 100% gratuito e senza registrazione. Potete giocare quante volte volete, con domande diverse ogni partita.",
+    "q4": "Si può giocare con più di 2 persone?",
+    "a4": "Assolutamente! Il quiz è progettato per 2-8 giocatori. Più siete, più è divertente! Perfetto per serate tra amici o in famiglia.",
+    "q5": "Le domande sono adatte a tutte le età?",
+    "a5": "Le nostre domande vanno dalle classiche alle più piccanti. La maggior parte è adatta a tutti, ma alcune domande più audaci sono destinate a un pubblico adulto.",
+    "q6": "Come ricominciare con nuove domande?",
+    "a6": "Alla fine di ogni partita avete due opzioni: \"Ricomincia con altre domande\" per mantenere gli stessi giocatori con 20 nuove domande casuali, o \"Cambia giocatori\" per ricominciare da zero."
+  },
+  "cta": {
+    "title": "Pronti a scoprire chi è il più... ?",
+    "text": "Tornate in cima alla pagina per iniziare il vostro quiz gratuito con i vostri amici!",
+    "button": "Inizia il quiz ora"
+  }
+}

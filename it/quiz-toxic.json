@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "title": "La tua relazione è tossica? Rispondi al questionario",
+    "description": "Uno strumento di autovalutazione per comprendere le dinamiche della tua relazione"
+  },
+  "section1": {
+    "title": "Perché hai bisogno di fare questo test oggi?",
+    "p1": "È fondamentale capire perché ne senti il bisogno.",
+    "p2": "In una relazione tossica, il sintomo più comune non è sempre la violenza visibile, ma la <strong class=\"text-foreground\">nebbia mentale</strong>. Non sai più se sei troppo sensibile, se chiedi troppo o se il problema sei tu. È proprio della tossicità: erode la fiducia nella propria percezione.",
+    "p3": "Cerchi questo test per ottenere una <strong class=\"text-foreground\">validazione esterna</strong>. Hai bisogno di uno strumento oggettivo per misurare ciò che, dall'interno, sembra un ottovolante emotivo incomprensibile."
+  },
+  "section2": {
+    "title": "La differenza tra una relazione difficile e una tossica",
+    "p1": "È la domanda che mi viene posta più spesso in studio: <em>\"Tutte le coppie hanno <a href=\"https://quiz-couple.com/it/risolvere-problema-coppia\">problemi</a>, no?\"</em>",
+    "p2": "Sì, assolutamente. Ma la differenza è fondamentale:",
+    "healthy": "<strong class=\"text-foreground\">In una coppia sana che attraversa una crisi</strong>, il conflitto mira a risolvere un problema. Entrambi i partner si sentono sicuri anche nel disaccordo.",
+    "toxic": "<strong class=\"text-foreground\">In una coppia tossica</strong>, il conflitto è un modo di funzionare che mira a prendere il potere o a scaricarsi sull'altro.",
+    "quote": "Una relazione difficile stanca, ma ci si può riposare. Una relazione tossica ti svuota della tua essenza e attacca la tua autostima."
+  },
+  "section3": {
+    "title": "Interpretazione dei risultati del test",
+    "intro": "Somma i tuoi punti. Ecco come leggere il tuo punteggio. Ricorda: questo risultato è un indicatore della dinamica attuale, non una fatalità, ma va preso sul serio.",
+    "headerScore": "Punteggio Totale",
+    "headerLevel": "Livello di Tossicità",
+    "headerAnalysis": "Analisi Psicologica",
+    "row1Score": "Da 0 a 25 punti",
+    "row1Level": "Relazione Sana a Tensione Normale",
+    "row1Analysis": "La vostra coppia sta forse attraversando una turbolenza, ma le basi sembrano sane.",
+    "row2Score": "Da 26 a 60 punti",
+    "row2Level": "Relazione Disfunzionale (Zona Arancione)",
+    "row2Analysis": "Le dinamiche tossiche si sono installate. È necessario un lavoro profondo.",
+    "row3Score": "Da 61 a 125 punti",
+    "row3Level": "Relazione Altamente Tossica (Zona Rossa)",
+    "row3Analysis": "Pericolo per la tua salute mentale. È urgente proteggerti."
+  },
+  "section4": {
+    "title": "Perché non si vede la tossicità quando ci sei dentro?",
+    "p1": "Se il tuo punteggio è alto, potresti chiederti: <em>\"Come ho potuto lasciare che succedesse?\"</em>. È qui che la colpa colpisce spesso. Come terapeuta, ti chiedo di essere gentile con te stesso/a.",
+    "p2": "Non vediamo la tossicità per tre ragioni biologiche e psicologiche:",
+    "pillar1Title": "L'assuefazione (L'effetto della rana bollita)",
+    "pillar1Text": "La tossicità arriva raramente dall'oggi al domani. Si installa a microdosi. Una piccola critica, poi un'altra, poi una crisi di gelosia giustificata da \"troppo amore\". La tua soglia di tolleranza alla sofferenza è stata spostata poco a poco, a tua insaputa.",
+    "pillar2Title": "Il rinforzo intermittente",
+    "pillar2Text": "È la trappola più potente. Una coppia tossica non è orribile il 100% del tempo. Ci sono momenti di \"luna di miele\", scuse grandiose, istanti di fusione intensa. Questi momenti di speranza agiscono come una droga sul cervello.",
+    "pillar3Title": "L'empatia usata contro di te",
+    "pillar3Text": "Le persone che si ritrovano in queste relazioni hanno spesso una grande capacità di empatia. Cerchi sempre di capire le ferite dell'altro (<em>\"Ha avuto un'infanzia difficile\"</em>, <em>\"È stressato/a dal lavoro\"</em>). La tua capacità di perdonare diventa il carburante della tossicità."
+  },
+  "section5": {
+    "title": "I 4 pilastri di una dinamica tossica in una relazione",
+    "intro": "Al di là del punteggio di questo test, bisogna comprendere i meccanismi in gioco. Se riconosci uno di questi pilastri, la relazione è in pericolo.",
+    "pillar1Title": "1. L'invalidazione emotiva (Gaslighting)",
+    "pillar1Text": "Significa negare la tua realtà. Se dici <em>\"Mi hai fatto male\"</em>, l'altro risponde <em>\"Sei troppo sensibile\"</em>. Col tempo, non ti fidi più delle tue emozioni.",
+    "pillar2Title": "2. Il controllo mascherato",
+    "pillar2Text": "Il controllo non assomiglia sempre a degli ordini. Può prendere la forma di consigli insistenti, colpevolizzazione (<em>\"Se mi amassi davvero, non faresti questo\"</em>) o gestione finanziaria rigida.",
+    "pillar3Title": "3. La colpa invertita",
+    "pillar3Text": "In una relazione sana, ciascuno si assume il 50% della responsabilità. In una relazione tossica, porti il 100% della colpa.",
+    "pillar4Title": "4. L'imprevedibilità",
+    "pillar4Text": "Non sai mai cosa aspettarti. Questa insicurezza permanente mantiene il tuo sistema nervoso in stato di allerta (stress cronico), il che spiega la tua stanchezza fisica e mentale."
+  },
+  "section6": {
+    "title": "Il mio test indica una tossicità elevata: cosa fare?",
+    "p1": "Innanzitutto, sappi che questo test è puramente indicativo. Non è in alcun modo un risultato esatto e preciso, e non deve sostituire il parere di un professionista.",
+    "p2": "Prendere coscienza della situazione è il passo più difficile, e lo hai appena fatto. Un punteggio alto non significa che devi fare le valigie immediatamente (salvo in caso di pericolo fisico immediato), ma significa che lo status quo non è più un'opzione.",
+    "dontTitle": "Cosa NON fare",
+    "dont1Title": "Cercare di \"salvare\" l'altro",
+    "dont1Text": "Non puoi essere il terapeuta del tuo partner. La tossicità è un modo di funzionare che solo l'individuo interessato può decidere di cambiare.",
+    "dont2Title": "Confrontare brutalmente con questo test",
+    "dont2Text": "Mostrare questo test a un partner tossico rischia di provocare una crisi. Tieni questo risultato per te, come una bussola interiore.",
+    "doTitle": "Cosa fare (Primi passi di lucidità)",
+    "do1Title": "Riconnettiti con la realtà",
+    "do1Text": "Annota i fatti. Tieni un diario oggettivo delle discussioni e delle parole. Rileggere ciò che è successo \"a freddo\" aiuta a contrastare il dubbio.",
+    "do2Title": "Rompi l'isolamento",
+    "do2Text": "Parla con una persona di fiducia o, idealmente, con un professionista. Dare un nome alle cose ad alta voce le rende reali e diminuisce il loro potere.",
+    "do3Title": "Fissa un limite di prova",
+    "do3Text": "Metti un limite semplice ma fermo a un comportamento inaccettabile. Osserva la reazione. Un partner sano si scuserà e si adatterà. Un partner tossico escaierà il conflitto."
+  },
+  "section7": {
+    "title": "Da ricordare: Fidati della tua intuizione",
+    "p1": "Questo test non è un verdetto di tribunale, è uno specchio. Se hai risposto a queste domande con il cuore stretto, il tuo corpo sa già ciò che la tua mente si rifiuta di ammettere.",
+    "p2": "Una relazione amorosa deve essere un porto sicuro, non un campo di battaglia. Hai il diritto di essere rispettato/a, ascoltato/a e di sentirti emotivamente al sicuro.",
+    "p3": "Se questo risultato ti preoccupa, non portare questo peso da solo/a."
+  },
+  "jsonLd": {
+    "quizName": "Test Coppia Tossica",
+    "quizDescription": "Valuta se la tua relazione amorosa presenta segni di tossicità con questo questionario di 25 domande.",
+    "faq1Q": "Qual è la differenza tra una relazione difficile e una tossica?",
+    "faq1A": "In una coppia sana in crisi, il conflitto mira a risolvere un problema. In una coppia tossica, il conflitto è un modo di funzionare per prendere il potere.",
+    "faq2Q": "Perché non si vede la tossicità quando ci sei dentro?",
+    "faq2A": "Tre ragioni principali: assuefazione progressiva, rinforzo intermittente e empatia eccessiva usata contro di sé.",
+    "faq3Q": "Cosa fare se il test indica una tossicità elevata?",
+    "faq3A": "Riconnettiti con la realtà annotando i fatti, rompi l'isolamento parlando con qualcuno di fiducia e fissa un limite di prova su un comportamento inaccettabile."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "badge": "Quiz à faire en couple",
+    "title": "Quiz Amoureux :",
+    "titleHighlight": "Êtes-vous Vraiment Faits l'Un pour l'Autre ?",
+    "description": "20 affirmations pour mesurer la force de votre amour. Débattez ensemble, trouvez un accord et découvrez votre score de compatibilité !",
+    "statements": "20 affirmations",
+    "score": "Score sur 100",
+    "results": "Résultats immédiats"
+  },
+  "seo": {
+    "whyTitle": "Pourquoi faire ce quiz amoureux ensemble ?",
+    "whySubtitle": "Un quiz conçu pour renforcer votre complicité et mieux vous comprendre.",
+    "card1Title": "Ouvrez le dialogue",
+    "card1Text": "Chaque affirmation est une opportunité de discussion. Exprimez vos ressentis et écoutez ceux de votre partenaire.",
+    "card2Title": "Mesurez votre amour",
+    "card2Text": "Découvrez objectivement où vous en êtes dans votre relation et identifiez les points forts de votre couple.",
+    "card3Title": "Renforcez votre lien",
+    "card3Text": "Le simple fait de faire ce quiz ensemble montre votre investissement dans la relation. C'est déjà une preuve d'amour !",
+    "card4Title": "Célébrez votre couple",
+    "card4Text": "Quel que soit votre score, ce quiz vous permet de célébrer votre histoire et de vous rappeler pourquoi vous êtes ensemble.",
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Comment fonctionne ce quiz amoureux ?",
+    "faq1A": "Vous répondez ensemble à 20 affirmations en notant votre niveau d'accord de 1 à 5. Débattez si nécessaire pour trouver un consensus !",
+    "faq2Q": "Combien de temps dure le quiz ?",
+    "faq2A": "Environ 10 à 15 minutes, selon le temps que vous prenez pour discuter de chaque affirmation. Prenez votre temps !",
+    "faq3Q": "Le quiz est-il vraiment gratuit ?",
+    "faq3A": "Oui, 100% gratuit et sans inscription. Vos réponses ne sont pas enregistrées, vous pouvez refaire le quiz autant de fois que vous voulez.",
+    "faq4Q": "Que signifie notre score ?",
+    "faq4A": "Votre score reflète votre niveau d'accord sur des aspects clés de la relation. Un score élevé indique une forte harmonie, mais ce n'est qu'un indicateur ludique !"
+  }
+}

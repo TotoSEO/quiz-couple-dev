@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "testCouple": "Test di coppia",
+    "testCommonPoints": "Test punti comuni",
+    "testDistance": "Test relazione a distanza",
+    "testToxic": "Test relazione tossica",
+    "testCoupleSain": "Test relazione sana",
+    "testMariage": "Test matrimonio",
+    "testDivorce": "Test divorzio",
+    "quizAmoureux": "Quiz innamorati",
+    "quizCoquin": "Quiz piccante",
+    "quizMarrant": "Quiz divertente",
+    "quizKnowledge": "Chi conosce meglio?",
+    "quizMost": "Chi è più...?",
+    "questionsCouple": "Domande per coppie",
+    "problemResolver": "Risolvere problema",
+    "quizAdo": "Quiz adolescenti",
+    "categoryTests": "Test per coppie",
+    "categoryQuizzes": "I nostri quiz per coppie"
+  },
+  "footer": {
+    "brandDescription": "Metti alla prova la tua compatibilità e scopri la tua connessione amorosa con i nostri quiz gratuiti per coppie.",
+    "ourQuizzes": "I nostri Quiz",
+    "information": "Informazioni",
+    "legalMentions": "Note legali",
+    "privacy": "Privacy Policy",
+    "copyright": "Tutti i diritti riservati. Fatto con",
+    "inFrance": "in Francia"
+  },
+  "buttons": {
+    "start": "Inizia",
+    "next": "Avanti",
+    "previous": "Indietro",
+    "finish": "Termina",
+    "restart": "Ricomincia",
+    "share": "Condividi",
+    "seeResults": "Vedi risultati",
+    "startQuiz": "Fai il quiz",
+    "startTest": "Fai il test"
+  },
+  "quiz": {
+    "question": "domande",
+    "of": "di",
+    "score": "Punteggio",
+    "result": "Risultato",
+    "player1Turn": "È il turno di",
+    "player2Turn": "",
+    "forTwo": "Per due",
+    "players": "2-8 giocatori",
+    "continueAdventure": "Continua l'avventura"
+  },
+  "reviews": {
+    "title": "Cosa pensano le coppie",
+    "subtitle": "Scopri le opinioni di chi ha testato i nostri quiz",
+    "leaveReview": "Lascia una recensione",
+    "averageRating": "Valutazione media",
+    "basedOn": "basata su",
+    "reviews": "recensioni",
+    "yourName": "Il tuo nome",
+    "yourReview": "La tua recensione (opzionale)",
+    "submit": "Invia",
+    "thankYou": "Grazie per la tua recensione!",
+    "pending": "La tua recensione è in attesa di moderazione"
+  },
+  "blog": {
+    "pageTitle": "Blog - Consigli e suggerimenti per coppie | Quiz Couple",
+    "pageDescription": "Scopri i nostri articoli e consigli per rafforzare la tua relazione di coppia. Suggerimenti, test e riflessioni per capirsi meglio.",
+    "heading": "Blog",
+    "subheading": "Consigli, suggerimenti e riflessioni per le coppie",
+    "readArticle": "Leggi l'articolo",
+    "tableOfContents": "Sommario",
+    "quickSummary": "Riassunto rapido",
+    "tip": "💡 Da sapere",
+    "noArticles": "Nessun articolo al momento. Torna presto!"
+  },
+  "notFound": {
+    "title": "Pagina non trovata",
+    "description": "La pagina che stai cercando non esiste o è stata spostata.",
+    "message": "Ops! La pagina che stai cercando non esiste o è stata spostata. Non preoccuparti, torna alla homepage per scoprire i nostri quiz per coppie.",
+    "backHome": "Torna alla homepage",
+    "seeQuestions": "Vedi le domande"
+  }
+}

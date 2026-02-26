@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "badge": "200 questions • Gratuit • Sans inscription",
+    "title": "Test de points communs en couple : êtes-vous vraiment compatibles ?",
+    "description": "Découvrez vos affinités, vos goûts partagés et vos valeurs communes avec ce test interactif. 20 questions tirées au hasard parmi 200 pour une expérience unique à chaque fois !",
+    "duration": "5 minutes",
+    "players": "2 joueurs",
+    "questions": "20 questions / session"
+  },
+  "seo": {
+    "intro": "Ce test de points communs est conçu pour les couples qui veulent mieux se connaître, découvrir leurs affinités et mesurer leur compatibilité de manière ludique et interactive.",
+    "s1": {
+      "title": "Pourquoi les points communs comptent dans un couple",
+      "p1": "Les points communs constituent le socle d'une relation épanouie. Partager des goûts, des valeurs ou une vision de la vie crée une base solide pour la complicité et la compréhension mutuelle. Quand deux personnes se retrouvent sur des sujets importants, la communication devient plus fluide et les conflits moins fréquents.",
+      "p2": "Cependant, les points communs ne sont pas tout. Les différences apportent de la richesse et de la complémentarité. L'important est de trouver l'équilibre entre ce qui vous unit et ce qui vous rend uniques."
+    },
+    "s2": {
+      "title": "À quoi sert un test de points communs en couple",
+      "p1": "Ce test vous permet de <strong>mieux vous connaître</strong> en explorant des thèmes variés : vos goûts, vos habitudes, vos valeurs et vos projets. Chaque question est une occasion d'échanger et de découvrir des facettes parfois insoupçonnées de votre partenaire.",
+      "p2": "Au-delà du score final, c'est un outil pour <strong><a href=\"https://quiz-couple.com/quiz-amoureux\">ouvrir le dialogue</a></strong>. Pourquoi as-tu répondu ça ? Qu'est-ce qui t'a fait choisir cette option ? Ces discussions enrichissent votre relation et renforcent votre connexion."
+    },
+    "s3": {
+      "title": "Comment fonctionne le test de compatibilité",
+      "steps": [
+        { "title": "Entrez vos prénoms", "desc": "Renseignez les prénoms des deux joueurs" },
+        { "title": "Répondez à tour de rôle", "desc": "Pour chaque question, chacun donne sa réponse séparément" },
+        { "title": "Découvrez vos points communs", "desc": "Plus vous avez de réponses identiques, plus votre score est élevé !" }
+      ]
+    },
+    "s4": {
+      "title": "Test points communs couple : 200 questions",
+      "p1": "Notre base de données contient 200 questions soigneusement sélectionnées, couvrant tous les aspects de la vie à deux. À chaque session, 20 questions sont tirées au hasard pour une expérience toujours renouvelée.",
+      "categories": [
+        { "title": "Personnalité et caractère", "desc": "Êtes-vous introverti ou extraverti ? Patient ou impulsif ? Découvrez vos similitudes de tempérament." },
+        { "title": "Goûts et centres d'intérêt", "desc": "Films, musique, cuisine, loisirs... Partagez-vous les mêmes passions et préférences ?" },
+        { "title": "Valeurs et vision de la vie", "desc": "Famille, travail, argent, liberté... Vos priorités sont-elles alignées ?" },
+        { "title": "Quotidien et habitudes", "desc": "Rythme de vie, organisation, petites manies... Êtes-vous compatibles au quotidien ?" },
+        { "title": "Relation et intimité", "desc": "Communication, affection, besoins... Comment vivez-vous votre relation au quotidien ?" },
+        { "title": "Projets et avenir", "desc": "Voyages, famille, carrière... Votre vision du futur est-elle partagée ?" }
+      ]
+    },
+    "s5": {
+      "title": "Comment interpréter les réponses du test",
+      "p1": "Le score final vous donne une indication de vos points communs, mais il ne définit pas la qualité de votre relation. Un score élevé montre une belle harmonie, tandis qu'un score plus bas révèle des différences qui peuvent être sources de richesse.",
+      "p2": "L'essentiel est de prendre du recul et d'utiliser ce test comme point de départ pour des discussions constructives. Chaque différence est une opportunité de mieux comprendre l'autre."
+    },
+    "s6": {
+      "title": "Faut-il beaucoup de points communs pour être compatibles ?",
+      "p1": "Pas nécessairement ! La compatibilité repose sur bien plus que le nombre de points communs. Les couples les plus solides sont souvent ceux qui savent <strong>équilibrer similitudes et différences</strong>.",
+      "p2": "L'important est de partager les valeurs fondamentales (famille, fidélité, projets de vie) tout en acceptant que chacun ait ses propres goûts et sa personnalité. Les différences peuvent apporter de la complémentarité et de la surprise dans la relation."
+    },
+    "s7": {
+      "title": "Quand faire un test de points communs en couple",
+      "p1": "Ce test est parfait pour plusieurs moments clés de votre relation :",
+      "items": [
+        "<strong>En début de relation</strong> : pour mieux connaître votre nouveau partenaire",
+        "<strong>Lors d'un moment de doute</strong> : pour redécouvrir ce qui vous unit",
+        "<strong>Pour une soirée en amoureux</strong> : comme activité ludique et complice",
+        "<strong>Avant une grande décision</strong> : pour vérifier que vous êtes alignés"
+      ]
+    },
+    "ctaTitle": "Prêts à découvrir vos points communs ?",
+    "ctaDesc": "Remontez en haut de la page, entrez vos prénoms et lancez-vous dans ce test de compatibilité ! N'oubliez pas de discuter de vos réponses après le quiz.",
+    "faqTitle": "Questions fréquentes",
+    "faq": [
+      { "q": "Comment fonctionne le test de points communs ?", "a": "Entrez vos deux prénoms, puis répondez à tour de rôle aux 20 questions tirées au hasard parmi 200. Chaque réponse identique compte comme un point commun. À la fin, découvrez votre score de compatibilité !" },
+      { "q": "Faut-il beaucoup de points communs pour être compatibles ?", "a": "Pas nécessairement ! Les différences peuvent être complémentaires. L'important est de partager les valeurs fondamentales tout en acceptant que chacun ait sa personnalité." },
+      { "q": "Peut-on refaire le test avec d'autres questions ?", "a": "Oui ! À la fin du test, vous pouvez recommencer avec un nouveau tirage de 20 questions parmi les 200 disponibles. Chaque session est unique." }
+    ]
+  },
+  "results": {
+    "fewTitle": "Peu de points communs",
+    "fewDesc": "Vous avez des profils assez différents.",
+    "someTitle": "Quelques affinités",
+    "someDesc": "Vous partagez certaines choses mais beaucoup restent à découvrir.",
+    "goodTitle": "Bonne compatibilité",
+    "goodDesc": "Vous avez un bon socle de points communs.",
+    "greatTitle": "Très compatibles",
+    "greatDesc": "Vous vous connaissez et partagez beaucoup de choses."
+  }
+}

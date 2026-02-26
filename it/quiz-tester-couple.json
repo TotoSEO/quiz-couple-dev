@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "badge": "Gratuito • Senza registrazione • 5 min",
+    "title": "Metti alla prova la tua coppia: il quiz per due",
+    "description": "20 domande per scoprire il vostro livello di compatibilità. Giocate a turno e scoprite se siete davvero sulla stessa lunghezza d'onda!",
+    "duration": "5 minuti",
+    "players": "2 giocatori",
+    "questions": "20 domande"
+  },
+  "seo": {
+    "whyTitle": "Perché mettere alla prova la vostra coppia?",
+    "card1Title": "Rafforzare il vostro legame",
+    "card1Text": "Scoprite i vostri <a href=\"https://quiz-couple.com/it/test-punti-comuni-coppia\">punti in comune</a> e comprendete meglio le differenze che arricchiscono la vostra relazione.",
+    "card2Title": "Aprire il dialogo",
+    "card2Text": "Ogni domanda è un'opportunità di discussione e scambio con il vostro partner.",
+    "card3Title": "Identificare le aree di miglioramento",
+    "card3Text": "Il punteggio vi aiuta a vedere dove potete crescere insieme e quali aspetti della vostra relazione meritano attenzione.",
+    "card4Title": "Divertirsi insieme",
+    "card4Text": "Oltre al punteggio, è un momento ludico e complice da condividere in coppia.",
+    "howTitle": "Come funziona?",
+    "step1Title": "Inserite i vostri nomi",
+    "step1Text": "Inserite i nomi e i generi dei due giocatori",
+    "step2Title": "Rispondete a turno",
+    "step2Text": "Per ogni domanda, il giocatore 1 risponde per primo, poi il giocatore 2",
+    "step3Title": "Scoprite il vostro punteggio",
+    "step3Text": "Più risposte identiche avete, più alto sarà il vostro punteggio!",
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Il test di coppia è davvero gratuito?",
+    "faq1A": "Sì, il nostro test di coppia è 100% gratuito e senza registrazione. Potete farlo tutte le volte che volete.",
+    "faq2Q": "Quanto dura il test?",
+    "faq2A": "Il test dura circa 5 minuti. Include 20 domande a cui entrambi i partner rispondono a turno.",
+    "faq3Q": "Come viene calcolato il punteggio?",
+    "faq3A": "Il punteggio si basa sul numero di risposte identiche tra i due partner. Più rispondete allo stesso modo, più alto sarà il vostro punteggio di compatibilità!"
+  }
+}

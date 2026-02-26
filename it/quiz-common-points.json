@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "badge": "200 domande • Gratuito • Senza registrazione",
+    "title": "Test punti in comune in coppia: siete davvero compatibili?",
+    "description": "Scoprite le vostre affinità, i gusti condivisi e i valori comuni con questo test interattivo. 20 domande casuali tra 200 per un'esperienza unica ogni volta!",
+    "duration": "5 minuti",
+    "players": "2 giocatori",
+    "questions": "20 domande / sessione"
+  },
+  "seo": {
+    "intro": "Questo test dei punti in comune è progettato per le coppie che vogliono conoscersi meglio, scoprire le loro affinità e misurare la loro compatibilità in modo ludico e interattivo.",
+    "s1": {
+      "title": "Perché i punti in comune contano in una coppia",
+      "p1": "I punti in comune costituiscono la base di una relazione appagante. Condividere gusti, valori o una visione della vita crea una base solida per la complicità e la comprensione reciproca.",
+      "p2": "Tuttavia, i punti in comune non sono tutto. Le differenze portano ricchezza e complementarità. L'importante è trovare l'equilibrio tra ciò che vi unisce e ciò che vi rende unici."
+    },
+    "s2": {
+      "title": "A cosa serve un test di punti in comune in coppia?",
+      "p1": "Questo test vi permette di <strong>conoscervi meglio</strong> esplorando temi vari: i vostri gusti, abitudini, valori e progetti.",
+      "p2": "Oltre al punteggio finale, è uno strumento per <strong><a href=\"https://quiz-couple.com/it/quiz-innamorati\">aprire il dialogo</a></strong>. Perché hai risposto così? Cosa ti ha fatto scegliere questa opzione?"
+    },
+    "s3": {
+      "title": "Come funziona il test di compatibilità",
+      "steps": [
+        { "title": "Inserite i vostri nomi", "desc": "Inserite i nomi di entrambi i giocatori" },
+        { "title": "Rispondete a turno", "desc": "Per ogni domanda, ognuno dà la sua risposta separatamente" },
+        { "title": "Scoprite i vostri punti in comune", "desc": "Più risposte identiche avete, più alto è il vostro punteggio!" }
+      ]
+    },
+    "s4": {
+      "title": "Test punti in comune coppia: 200 domande",
+      "p1": "Il nostro database contiene 200 domande accuratamente selezionate, che coprono tutti gli aspetti della vita di coppia.",
+      "categories": [
+        { "title": "Personalità e carattere", "desc": "Siete introversi o estroversi? Pazienti o impulsivi? Scoprite le vostre somiglianze di temperamento." },
+        { "title": "Gusti e interessi", "desc": "Film, musica, cucina, hobby... Condividete le stesse passioni e preferenze?" },
+        { "title": "Valori e visione della vita", "desc": "Famiglia, lavoro, denaro, libertà... Le vostre priorità sono allineate?" },
+        { "title": "Quotidianità e abitudini", "desc": "Ritmo di vita, organizzazione, piccole manie... Siete compatibili nella quotidianità?" },
+        { "title": "Relazione e intimità", "desc": "Comunicazione, affetto, bisogni... Come vivete la vostra relazione quotidianamente?" },
+        { "title": "Progetti e futuro", "desc": "Viaggi, famiglia, carriera... La vostra visione del futuro è condivisa?" }
+      ]
+    },
+    "s5": {
+      "title": "Come interpretare i risultati del test",
+      "p1": "Il punteggio finale vi dà un'indicazione dei vostri punti in comune, ma non definisce la qualità della vostra relazione.",
+      "p2": "L'essenziale è fare un passo indietro e usare questo test come punto di partenza per discussioni costruttive."
+    },
+    "s6": {
+      "title": "Servono molti punti in comune per essere compatibili?",
+      "p1": "Non necessariamente! La compatibilità si basa su molto più del numero di punti in comune. Le coppie più solide sono spesso quelle che sanno <strong>bilanciare somiglianze e differenze</strong>.",
+      "p2": "L'importante è condividere i valori fondamentali accettando che ognuno abbia i propri gusti e la propria personalità."
+    },
+    "s7": {
+      "title": "Quando fare un test di punti in comune in coppia",
+      "p1": "Questo test è perfetto per diversi momenti chiave della vostra relazione:",
+      "items": [
+        "<strong>All'inizio della relazione</strong>: per conoscere meglio il nuovo partner",
+        "<strong>In un momento di dubbio</strong>: per riscoprire ciò che vi unisce",
+        "<strong>Per una serata romantica</strong>: come attività ludica e complice",
+        "<strong>Prima di una grande decisione</strong>: per verificare che siate allineati"
+      ]
+    },
+    "ctaTitle": "Pronti a scoprire i vostri punti in comune?",
+    "ctaDesc": "Tornate in cima alla pagina, inserite i vostri nomi e lanciatevi in questo test di compatibilità! Non dimenticate di discutere le vostre risposte dopo il quiz.",
+    "faqTitle": "Domande frequenti",
+    "faq": [
+      { "q": "Come funziona il test dei punti in comune?", "a": "Inserite i vostri nomi, poi rispondete a turno alle 20 domande casuali tra 200. Ogni risposta identica conta come un punto in comune. Alla fine, scoprite il vostro punteggio di compatibilità!" },
+      { "q": "Servono molti punti in comune per essere compatibili?", "a": "Non necessariamente! Le differenze possono essere complementari. L'importante è condividere i valori fondamentali." },
+      { "q": "Si può rifare il test con altre domande?", "a": "Sì! Alla fine del test, potete ricominciare con una nuova selezione di 20 domande tra le 200 disponibili." }
+    ]
+  },
+  "results": {
+    "fewTitle": "Pochi punti in comune",
+    "fewDesc": "Avete profili abbastanza diversi.",
+    "someTitle": "Alcune affinità",
+    "someDesc": "Condividete alcune cose ma molto resta da scoprire.",
+    "goodTitle": "Buona compatibilità",
+    "goodDesc": "Avete una buona base di punti in comune.",
+    "greatTitle": "Molto compatibili",
+    "greatDesc": "Vi conoscete e condividete molte cose."
+  }
+}

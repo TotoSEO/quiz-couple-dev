@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "title": "120 domande di coppia da farsi a vicenda",
+    "description": "Domande classificate per tema per conoscervi meglio, rafforzare la vostra complicità e creare momenti di scambio autentico."
+  },
+  "random": { "button": "Domanda casuale" },
+  "seo": {
+    "s1": {
+      "title": "Perché farsi domande in coppia?",
+      "p1": "La comunicazione è il pilastro di una relazione appagante. Farsi domande permette di mantenere una connessione autentica e di evitare la routine che a volte si instaura nelle coppie. Anche dopo anni insieme, ci sono sempre cose nuove da scoprire sull'altro.",
+      "p2": "Studi di psicologia relazionale dimostrano che le coppie che si confrontano regolarmente sulle proprie emozioni, desideri e progetti sviluppano una migliore comprensione reciproca. Questi scambi rafforzano la complicità, creano ricordi condivisi e permettono di capire meglio i bisogni, i sogni e le preoccupazioni del proprio partner.",
+      "p3": "Fare domande al proprio partner è anche un modo per mostrare interesse genuino al di là della quotidianità. È un atto di ascolto attivo che nutre la fiducia e l'intimità emotiva. Che siate all'inizio della relazione o insieme da tempo, questi momenti di scambio sono essenziali per mantenere viva la vostra coppia."
+    },
+    "s2": {
+      "title": "Le 5 categorie di domande per coppie",
+      "intro": "Le nostre 120 domande sono suddivise in 5 tematiche complementari, pensate per coprire tutti gli aspetti della vostra relazione. Ogni categoria risponde a un bisogno specifico e permette di esplorare una sfaccettatura diversa della vostra coppia.",
+      "tableHeaders": { "category": "Categoria", "goal": "Obiettivo", "example": "Esempio di domanda", "count": "Quantità" },
+      "rows": [
+        { "cat": "🧠 Conoscersi", "goal": "Approfondire la conoscenza reciproca oltre l'ovvio", "example": "Quale decisione passata ti ha cambiato di più?", "count": "24" },
+        { "cat": "🚀 Progetti futuri", "goal": "Allineare le visioni e costruire insieme", "example": "Dove ti vedi tra 5 anni?", "count": "24" },
+        { "cat": "💕 Intimità", "goal": "Rafforzare il legame emotivo e affettivo", "example": "Cosa ti fa sentire più amato/a?", "count": "24" },
+        { "cat": "😄 Divertimento", "goal": "Portare leggerezza e risate nella vostra relazione", "example": "Se la nostra coppia fosse un film, quale sarebbe il titolo?", "count": "24" },
+        { "cat": "💭 Domande profonde", "goal": "Esplorare valori, paure e filosofia di vita", "example": "Cosa dà senso alla tua vita?", "count": "24" }
+      ],
+      "outro": "Questa diversità tematica vi permette di variare gli scambi in base al vostro umore: una conversazione leggera dopo cena, una discussione profonda durante una passeggiata, o un momento di complicità intima prima di dormire."
+    },
+    "s3": {
+      "title": "Quando usare queste domande di coppia?",
+      "intro": "Non c'è un momento sbagliato per farsi domande in coppia. Ecco le situazioni in cui queste domande sono particolarmente utili:",
+      "items": [
+        { "title": "All'inizio della relazione", "desc": "I primi mesi sono cruciali per costruire basi solide. Queste domande vi aiutano ad andare oltre le conversazioni superficiali e a scoprire la personalità profonda dell'altro." },
+        { "title": "Dopo diversi anni insieme", "desc": "La routine può smorzare la curiosità. Farsi domande nuove permette di riscoprire il partner, ravvivare la fiamma e mantenere una relazione viva." },
+        { "title": "In coppia a distanza", "desc": "Quando i chilometri vi separano, la comunicazione è il vostro unico legame. Queste domande trasformano una videochiamata ordinaria in un vero momento di connessione." },
+        { "title": "Durante una serata per due", "desc": "Invece di guardare uno schermo, trasformate la serata in un gioco di domande e risposte complice. Un bicchiere di vino, niente telefoni, e domande che contano." },
+        { "title": "In un periodo di riflessione", "desc": "Quando sorgono dubbi o tensioni, queste domande aprono il dialogo in modo benevolo, senza confronto diretto." }
+      ]
+    },
+    "s4": {
+      "title": "Come usare bene queste domande? I nostri consigli",
+      "intro": "Per ottenere il massimo da queste domande e farne un vero momento di qualità, ecco le nostre raccomandazioni pratiche:",
+      "tips": [
+        { "emoji": "🎯", "title": "Limitatevi a 3-5 domande per sessione", "desc": "Uno scambio di qualità vale più di un interrogatorio. Fate alcune domande e prendetevi il tempo di ascoltare veramente le risposte. Lasciate che la conversazione fluisca naturalmente." },
+        { "emoji": "👂", "title": "Praticate l'ascolto attivo", "desc": "Non pensate alla prossima domanda mentre l'altro parla. Ascoltate davvero, fate domande di approfondimento, mostrate che la risposta vi interessa sinceramente." },
+        { "emoji": "🛑", "title": "Rispettate i limiti", "desc": "Se una domanda mette a disagio il partner, passate alla successiva senza insistere. Ognuno ha i propri tempi e le proprie zone di comfort. L'obiettivo è avvicinarsi, non forzare confidenze." },
+        { "emoji": "💖", "title": "Create un clima benevolo", "desc": "Nessun giudizio, nessuna presa in giro. Uno spazio sicuro dove ognuno possa esprimersi liberamente è la condizione essenziale perché queste domande diano i loro frutti." },
+        { "emoji": "🔄", "title": "Rispondete anche voi alle domande", "desc": "Lo scambio deve essere reciproco. Dopo aver ascoltato la risposta del partner, condividete la vostra. È questa reciprocità che crea la vera connessione." }
+      ]
+    },
+    "s5": {
+      "title": "A chi si rivolgono queste domande?",
+      "p1": "Queste 120 domande sono pensate per tutti i tipi di coppie, indipendentemente dalla loro anzianità o configurazione:",
+      "audiences": [
+        { "title": "Coppie recenti", "desc": "In fase di scoperta, queste domande accelerano la conoscenza reciproca e gettano le basi per una comunicazione aperta fin dall'inizio." },
+        { "title": "Coppie di lunga data", "desc": "Insieme da anni, pensate di sapere tutto dell'altro? Queste domande vi dimostreranno il contrario e riaccenderanno la vostra curiosità." },
+        { "title": "Coppie a distanza", "desc": "Separate geograficamente, queste domande sono uno strumento prezioso per mantenere un legame forte nonostante i chilometri." },
+        { "title": "Coppie in riconnessione", "desc": "Dopo un periodo difficile o troppa routine, queste domande aiutano a ritrovare la via del dialogo." }
+      ]
+    },
+    "s6": {
+      "title": "I benefici dimostrati della comunicazione di coppia",
+      "p1": "La ricerca in psicologia conferma ciò che molte coppie intuiscono: comunicare regolarmente e in profondità è il miglior indicatore di longevità di una relazione. Le coppie che mantengono rituali di confronto riportano una soddisfazione relazionale significativamente più alta.",
+      "p2": "I benefici concreti includono una migliore gestione dei conflitti (perché si comprendono meglio le reazioni dell'altro), un'intimità emotiva rafforzata, una maggiore capacità di superare insieme le sfide, e semplicemente più momenti di gioia condivisa.",
+      "p3": "Le nostre 120 domande sono pensate come uno strumento pratico per integrare questi momenti di scambio nella vostra quotidianità, senza pressione né formalismo. Scegliete una domanda a caso, lanciate l'argomento, e lasciate che la magia della conversazione operi."
+    },
+    "faqTitle": "Domande frequenti sulle domande di coppia",
+    "faq": [
+      { "q": "Quante domande fare di fila?", "a": "Consigliamo 3-5 domande per sessione per mantenere lo scambio naturale. L'obiettivo è creare un vero dialogo, non un questionario." },
+      { "q": "È adatto a tutte le coppie?", "a": "Sì, queste domande sono pensate per tutte le coppie, insieme da settimane o da anni. Le 5 categorie permettono di scegliere il livello di profondità adatto alla vostra situazione." },
+      { "q": "Si possono usare queste domande a distanza?", "a": "Assolutamente! Ideali per le coppie a distanza. Potete farle durante una videochiamata, via messaggio, o inviarvi una domanda al giorno per mantenere la connessione." },
+      { "q": "Cosa fare se una domanda mette a disagio?", "a": "Passate semplicemente ad un'altra domanda senza pressione. Rispettare i limiti dell'altro è essenziale per mantenere un clima di fiducia." },
+      { "q": "Bisogna rispondere a tutte le domande?", "a": "No, scegliete quelle che vi parlano e corrispondono al momento. Ciò che conta è la qualità dello scambio, non la quantità di domande." },
+      { "q": "Con quale frequenza usare queste domande?", "a": "Non c'è una regola fissa. Alcune coppie preferiscono una domanda al giorno, altre una sessione di 5 domande nel weekend. Trovate il ritmo che fa per voi." },
+      { "q": "Queste domande possono sostituire la terapia di coppia?", "a": "No, sono uno strumento di comunicazione complementare. In caso di difficoltà serie, consigliamo di consultare un professionista. Le nostre domande possono però essere un ottimo complemento." }
+    ]
+  },
+  "conclusion": "Queste 120 domande sono qui per aiutarvi a creare momenti di scambio sincero con il vostro partner. Prendetevi il tempo di ascoltarvi, scoprirvi e rafforzare la vostra connessione.",
+  "scrollTop": "Iniziare con una domanda casuale"
+}

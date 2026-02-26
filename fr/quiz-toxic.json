@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "title": "Votre couple est-il toxique ? Répondez au questionnaire",
+    "description": "Un outil d'auto-évaluation pour comprendre les dynamiques de votre relation"
+  },
+  "section1": {
+    "title": "Pourquoi avez-vous besoin de faire ce test aujourd'hui ?",
+    "p1": "Il est crucial de comprendre pourquoi vous en ressentez le besoin.",
+    "p2": "Dans une relation toxique, le symptôme le plus courant n'est pas toujours la violence visible, mais le <strong class=\"text-foreground\">brouillard mental</strong>. Vous ne savez plus si vous êtes trop sensible, si vous en demandez trop, ou si c'est vous le problème. C'est le propre de la toxicité : elle érode la confiance que l'on a en sa propre perception.",
+    "p3": "Vous cherchez ce test pour obtenir une <strong class=\"text-foreground\">validation extérieure</strong>. Vous avez besoin d'un outil objectif pour mesurer ce qui, de l'intérieur, ressemble à des montagnes russes émotionnelles incompréhensibles."
+  },
+  "section2": {
+    "title": "La différence entre relation difficile et relation toxique",
+    "p1": "C'est la question que l'on me pose le plus souvent en cabinet : <em>\"Tous les couples ont des <a href=\"https://quiz-couple.com/resoudre-probleme-couple\">problèmes</a>, non ?\"</em>",
+    "p2": "Oui, absolument. Mais la différence est fondamentale :",
+    "healthy": "<strong class=\"text-foreground\">Dans un couple sain qui traverse une crise</strong>, le conflit vise à résoudre un problème. Les deux partenaires se sentent en sécurité même dans le désaccord.",
+    "toxic": "<strong class=\"text-foreground\">Dans un couple toxique</strong>, le conflit est un mode de fonctionnement qui vise à prendre le pouvoir ou à se décharger sur l'autre.",
+    "quote": "Une relation difficile fatigue, mais on peut s'y reposer. Une relation toxique vous vide de votre essence et attaque votre estime de vous."
+  },
+  "section3": {
+    "title": "Interprétation des résultats du test",
+    "intro": "Additionnez vos points. Voici comment lire votre score. Rappelez-vous : ce résultat est un indicateur de la dynamique actuelle, pas une fatalité, mais il doit être pris au sérieux.",
+    "headerScore": "Score Total",
+    "headerLevel": "Niveau de Toxicité",
+    "headerAnalysis": "Analyse Psychologique",
+    "row1Score": "0 à 25 points",
+    "row1Level": "Relation Saine à Tension Normale",
+    "row1Analysis": "Votre couple traverse peut-être une zone de turbulence, mais les bases semblent saines.",
+    "row2Score": "26 à 60 points",
+    "row2Level": "Relation Dysfonctionnelle (Zone Orange)",
+    "row2Analysis": "Des dynamiques toxiques sont installées. Un travail de fond est nécessaire.",
+    "row3Score": "61 à 125 points",
+    "row3Level": "Relation Hautement Toxique (Zone Rouge)",
+    "row3Analysis": "Danger pour votre santé mentale. Il est urgent de vous protéger."
+  },
+  "section4": {
+    "title": "Pourquoi on ne voit pas la toxicité quand on est dedans ?",
+    "p1": "Si votre score est élevé, vous vous demandez peut-être : <em>\"Comment ai-je pu laisser faire ça ?\"</em>. C'est ici que la culpabilité frappe souvent. En tant que thérapeute, je vous demande d'être doux avec vous-même.",
+    "p2": "On ne voit pas la toxicité pour trois raisons biologiques et psychologiques :",
+    "pillar1Title": "L'accoutumance (L'effet grenouille)",
+    "pillar1Text": "La toxicité arrive rarement du jour au lendemain. Elle s'installe par micro-doses. Une petite critique, puis une autre, puis une crise de jalousie justifiée par \"trop d'amour\". Votre seuil de tolérance à la souffrance a été repoussé petit à petit, à votre insu.",
+    "pillar2Title": "Le renforcement intermittent",
+    "pillar2Text": "C'est le piège le plus puissant. Un couple toxique n'est pas horrible 100% du temps. Il y a des moments de \"lune de miel\", des excuses grandioses, des instants de fusion intense. Ces moments d'espoir agissent comme une drogue sur le cerveau, vous faisant oublier les moments sombres.",
+    "pillar3Title": "L'empathie utilisée contre vous",
+    "pillar3Text": "Les personnes qui se retrouvent dans ces relations ont souvent une grande capacité d'empathie. Vous cherchez toujours à comprendre les blessures de l'autre (<em>\"Il a eu une enfance difficile\"</em>, <em>\"Elle est stressée par son travail\"</em>). Votre capacité à pardonner devient le carburant de la toxicité."
+  },
+  "section5": {
+    "title": "Les 4 piliers d'une dynamique toxique dans une relation",
+    "intro": "Au-delà du score de ce test couple toxique, il faut comprendre les mécanismes à l'œuvre. Si vous reconnaissez l'un de ces piliers, la relation est en danger.",
+    "pillar1Title": "1. L'invalidation émotionnelle (Gaslighting)",
+    "pillar1Text": "C'est nier votre réalité. Si vous dites <em>\"Tu m'as fait mal\"</em>, l'autre répond <em>\"Tu es trop susceptible\"</em>. À force, vous ne faites plus confiance à vos propres émotions. C'est une forme de violence psychologique silencieuse qui détruit l'identité.",
+    "pillar2Title": "2. Le contrôle sous masque",
+    "pillar2Text": "Le contrôle ne ressemble pas toujours à des ordres. Il peut prendre la forme de conseils insistants, de culpabilisation (<em>\"Si tu m'aimais vraiment, tu ne ferais pas ça\"</em>) ou de gestion financière stricte. L'objectif est toujours le même : réduire votre autonomie.",
+    "pillar3Title": "3. La culpabilité inversée",
+    "pillar3Text": "Dans une relation saine, chacun prend 50% de la responsabilité. Dans une relation toxique, vous portez 100% de la faute. L'autre se pose systématiquement en victime ou en procureur, jamais en partenaire responsable.",
+    "pillar4Title": "4. L'imprévisibilité",
+    "pillar4Text": "Vous ne savez jamais sur quel pied danser. Cette insécurité permanente maintient votre système nerveux en état d'alerte (stress chronique), ce qui explique votre fatigue physique et mentale."
+  },
+  "section6": {
+    "title": "Mon test indique une toxicité élevée : que faire ?",
+    "p1": "Dans un premier temps, sachez que ce test est purement à titre indicatif. Il n'est en rien un résultat exact et précis, et ne doit pas servir à remplacer l'avis d'un professionnel. Si vous estimez que votre relation amoureuse est vraiment toxique, voire dangereuse, contactez de vrais spécialistes.",
+    "p2": "Prendre conscience de la situation est l'étape la plus difficile, et vous venez de la franchir. Un score élevé au test couple toxique ne signifie pas que vous devez faire vos valises dans la minute (sauf en cas de danger physique immédiat), mais cela signifie que le \"statu quo\" n'est plus une option.",
+    "dontTitle": "Ce qu'il ne faut PAS faire",
+    "dont1Title": "Essayer de \"sauver\" l'autre",
+    "dont1Text": "Vous ne pouvez pas être le thérapeute de votre partenaire. La toxicité est un mode de fonctionnement que seul l'individu concerné peut décider de changer.",
+    "dont2Title": "Confronter brutalement avec ce test",
+    "dont2Text": "Montrer ce test à un partenaire toxique risque de provoquer une crise (<em>\"C'est n'importe quoi ce test\"</em>, <em>\"C'est toi la toxique\"</em>). Gardez ce résultat pour vous, comme une boussole intérieure.",
+    "doTitle": "Ce qu'il faut faire (Premiers pas de lucidité)",
+    "do1Title": "Reconnectez-vous à la réalité",
+    "do1Text": "Notez les faits. Tenez un journal de bord factuel des disputes et des paroles. Relire ce qui s'est passé \"à froid\" aide à contrer le doute.",
+    "do2Title": "Brisez l'isolement",
+    "do2Text": "Parlez à une personne de confiance ou, idéalement, à un professionnel. Nommer les choses à voix haute les rend réelles et diminue leur pouvoir.",
+    "do3Title": "Fixez une limite test",
+    "do3Text": "Posez une limite simple mais ferme sur un comportement inacceptable (ex: <em>\"Je n'accepte plus que tu me cries dessus, si tu le fais, je sors de la pièce\"</em>). Observez la réaction. Un partenaire sain s'excusera et s'ajustera. Un partenaire toxique escaladera le conflit."
+  },
+  "section7": {
+    "title": "Ce qu'il faut retenir : Faire confiance à votre intuition",
+    "p1": "Ce test couple toxique n'est pas un verdict de tribunal, c'est un miroir. Si vous avez répondu à ces questions avec le cœur serré, c'est que votre corps sait déjà ce que votre tête refuse d'admettre.",
+    "p2": "Une relation amoureuse doit être un port d'attache, pas un champ de bataille. Vous avez le droit d'être respecté(e), entendu(e) et en sécurité émotionnelle. La confusion que vous ressentez n'est pas une preuve de votre faiblesse, c'est le signe que vous essayez de vous adapter à une situation anormale.",
+    "p3": "Si ce résultat vous inquiète, ne restez pas seul(e) avec ce poids."
+  },
+  "jsonLd": {
+    "quizName": "Test Couple Toxique",
+    "quizDescription": "Évaluez si votre relation amoureuse présente des signes de toxicité avec ce questionnaire de 25 questions.",
+    "faq1Q": "Quelle est la différence entre une relation difficile et une relation toxique ?",
+    "faq1A": "Dans un couple sain qui traverse une crise, le conflit vise à résoudre un problème. Dans un couple toxique, le conflit est un mode de fonctionnement qui vise à prendre le pouvoir ou à se décharger sur l'autre.",
+    "faq2Q": "Pourquoi ne voit-on pas la toxicité quand on est dedans ?",
+    "faq2A": "Trois raisons principales : l'accoutumance progressive (effet grenouille), le renforcement intermittent (moments de lune de miel) et l'empathie excessive utilisée contre soi.",
+    "faq3Q": "Que faire si mon test indique une toxicité élevée ?",
+    "faq3A": "Reconnectez-vous à la réalité en notant les faits, brisez l'isolement en parlant à une personne de confiance, et fixez une limite test sur un comportement inacceptable."
+  }
+}

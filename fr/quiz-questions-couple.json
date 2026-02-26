@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "title": "120 questions pour couple à se poser",
+    "description": "Des questions classées par thème pour mieux vous connaître, renforcer votre complicité et créer des moments d'échange authentiques."
+  },
+  "random": { "button": "Question aléatoire" },
+  "seo": {
+    "s1": {
+      "title": "Pourquoi se poser des questions en couple ?",
+      "p1": "La communication est le pilier d'une relation épanouie. Se poser des questions permet de maintenir une connexion authentique et d'éviter la routine qui s'installe parfois dans les couples. Même après des années passées ensemble, il reste toujours des choses à découvrir chez l'autre.",
+      "p2": "Des études en psychologie relationnelle montrent que les couples qui échangent régulièrement sur leurs émotions, leurs envies et leurs projets développent une meilleure compréhension mutuelle. Ces échanges renforcent la complicité, créent des souvenirs partagés et permettent de mieux comprendre les besoins, les rêves et les inquiétudes de votre partenaire.",
+      "p3": "Poser des questions à son ou sa partenaire, c'est aussi montrer qu'on s'intéresse à lui ou elle au-delà du quotidien. C'est un acte d'écoute active qui nourrit la confiance et l'intimité émotionnelle. Que vous soyez en début de relation ou ensemble depuis longtemps, ces moments d'échange sont essentiels pour faire vivre votre couple."
+    },
+    "s2": {
+      "title": "Les 5 catégories de questions pour couple",
+      "intro": "Nos 120 questions sont réparties en 5 thématiques complémentaires, conçues pour couvrir tous les aspects de votre relation. Chaque catégorie répond à un besoin spécifique et permet d'explorer une facette différente de votre couple.",
+      "tableHeaders": { "category": "Catégorie", "goal": "Objectif", "example": "Exemple de question", "count": "Nombre" },
+      "rows": [
+        { "cat": "🧠 Se connaître", "goal": "Approfondir votre connaissance mutuelle au-delà des évidences", "example": "Quelle décision passée t'a le plus changé(e) ?", "count": "24" },
+        { "cat": "🚀 Projets futurs", "goal": "Aligner vos visions et construire ensemble", "example": "Où te vois-tu dans 5 ans ?", "count": "24" },
+        { "cat": "💕 Intimité", "goal": "Renforcer votre lien émotionnel et affectif", "example": "Qu'est-ce qui te fait te sentir le plus aimé(e) ?", "count": "24" },
+        { "cat": "😄 Fun", "goal": "Apporter de la légèreté et du rire dans votre couple", "example": "Si notre couple était un film, quel serait son titre ?", "count": "24" },
+        { "cat": "💭 Questions profondes", "goal": "Explorer vos valeurs, vos peurs et votre philosophie de vie", "example": "Qu'est-ce qui donne du sens à ta vie ?", "count": "24" }
+      ],
+      "outro": "Cette diversité thématique vous permet de varier les échanges selon votre humeur : une conversation légère après le dîner, une discussion profonde lors d'une promenade, ou un moment de complicité intime avant de dormir."
+    },
+    "s3": {
+      "title": "Quand utiliser ces questions de couple ?",
+      "intro": "Il n'y a pas de mauvais moment pour se poser des questions en couple. Voici les situations où ces questions sont particulièrement utiles :",
+      "items": [
+        { "title": "En début de relation", "desc": "Les premiers mois sont cruciaux pour construire des bases solides. Ces questions vous aident à aller au-delà des conversations superficielles et à découvrir la personnalité profonde de l'autre." },
+        { "title": "Après plusieurs années ensemble", "desc": "La routine peut émousser la curiosité. Se poser des questions nouvelles permet de redécouvrir son partenaire, de raviver la flamme et de maintenir une relation vivante." },
+        { "title": "En couple à distance", "desc": "Quand les kilomètres vous séparent, la communication est votre seul lien. Ces questions transforment un appel vidéo ordinaire en un véritable moment de connexion." },
+        { "title": "Lors d'une soirée à deux", "desc": "Plutôt que de regarder un écran, transformez votre soirée en un jeu de questions-réponses complice. Un verre de vin, pas de téléphone, et des questions qui comptent." },
+        { "title": "En période de questionnement", "desc": "Quand des doutes ou des tensions apparaissent, ces questions ouvrent le dialogue de manière bienveillante, sans confrontation directe." }
+      ]
+    },
+    "s4": {
+      "title": "Comment bien utiliser ces questions ? Nos conseils",
+      "intro": "Pour tirer le meilleur de ces questions et en faire un vrai moment de qualité, voici nos recommandations concrètes :",
+      "tips": [
+        { "emoji": "🎯", "title": "Limitez-vous à 3-5 questions par session", "desc": "Un échange de qualité vaut mieux qu'un interrogatoire. Posez quelques questions et prenez le temps de vraiment écouter les réponses. Laissez la conversation dériver naturellement." },
+        { "emoji": "👂", "title": "Pratiquez l'écoute active", "desc": "Ne pensez pas à votre prochaine question pendant que l'autre parle. Écoutez vraiment, posez des questions de suivi, montrez que la réponse vous intéresse sincèrement." },
+        { "emoji": "🛑", "title": "Respectez les limites", "desc": "Si une question met mal à l'aise votre partenaire, passez à la suivante sans insister. Chacun a son rythme et ses zones de confort. L'objectif est de se rapprocher, pas de forcer des confidences." },
+        { "emoji": "💖", "title": "Créez un climat bienveillant", "desc": "Pas de jugement, pas de moquerie. Un espace sûr où chacun peut s'exprimer librement est la condition essentielle pour que ces questions portent leurs fruits." },
+        { "emoji": "🔄", "title": "Répondez aussi aux questions", "desc": "L'échange doit être réciproque. Après avoir écouté la réponse de votre partenaire, partagez la vôtre. C'est cette réciprocité qui crée la véritable connexion." }
+      ]
+    },
+    "s5": {
+      "title": "À qui s'adressent ces questions ?",
+      "p1": "Ces 120 questions sont conçues pour tous les types de couples, quel que soit leur ancienneté ou leur configuration :",
+      "audiences": [
+        { "title": "Couples récents", "desc": "En phase de découverte, ces questions accélèrent la connaissance mutuelle et posent les bases d'une communication ouverte dès le départ." },
+        { "title": "Couples de longue date", "desc": "Ensemble depuis des années, vous pensez tout savoir de l'autre ? Ces questions vous prouveront le contraire et raviveront votre curiosité." },
+        { "title": "Couples à distance", "desc": "Séparés géographiquement, ces questions sont un outil précieux pour maintenir un lien fort malgré les kilomètres." },
+        { "title": "Couples en reconnexion", "desc": "Après une période difficile ou une routine trop installée, ces questions aident à retrouver le chemin du dialogue." }
+      ]
+    },
+    "s6": {
+      "title": "Les bienfaits prouvés de la communication en couple",
+      "p1": "La recherche en psychologie confirme ce que beaucoup de couples intuitent : communiquer régulièrement et en profondeur est le meilleur indicateur de longévité d'une relation. Les couples qui maintiennent des rituels de discussion rapportent un taux de satisfaction relationnelle significativement plus élevé.",
+      "p2": "Les bénéfices concrets incluent une meilleure gestion des conflits (car on comprend mieux les réactions de l'autre), une intimité émotionnelle renforcée, une capacité accrue à traverser les épreuves ensemble, et tout simplement plus de moments de joie partagée.",
+      "p3": "Nos 120 questions sont pensées comme un outil pratique pour intégrer ces moments d'échange dans votre quotidien, sans pression ni formalisme. Piochez une question au hasard, lancez le sujet, et laissez la magie de la conversation opérer."
+    },
+    "faqTitle": "Questions fréquentes sur les questions de couple",
+    "faq": [
+      { "q": "Combien de questions poser à la suite ?", "a": "Nous recommandons de poser 3 à 5 questions par session pour garder l'échange naturel et éviter la fatigue. L'objectif est de créer un vrai dialogue, pas un questionnaire." },
+      { "q": "Est-ce adapté à tous les couples ?", "a": "Oui, ces questions sont conçues pour tous les couples, qu'ils soient ensemble depuis quelques semaines ou plusieurs années. Les 5 catégories permettent de choisir le niveau de profondeur adapté à votre situation." },
+      { "q": "Peut-on utiliser ces questions à distance ?", "a": "Absolument ! Ces questions sont idéales pour les couples à distance. Vous pouvez les poser lors d'un appel vidéo, par message, ou même vous envoyer une question par jour pour maintenir la connexion." },
+      { "q": "Que faire si une question met mal à l'aise ?", "a": "Passez simplement à une autre question sans pression. Respecter les limites de l'autre est essentiel pour maintenir un climat de confiance." },
+      { "q": "Faut-il répondre à toutes les questions ?", "a": "Non, choisissez celles qui vous parlent et qui correspondent à l'ambiance du moment. L'important est la qualité de l'échange, pas la quantité de questions posées." },
+      { "q": "À quelle fréquence utiliser ces questions ?", "a": "Il n'y a pas de règle stricte. Certains couples aiment se poser une question par jour, d'autres préfèrent une session de 5 questions le week-end. Trouvez le rythme qui vous convient." },
+      { "q": "Ces questions peuvent-elles remplacer une thérapie de couple ?", "a": "Non, ces questions sont un outil de communication complémentaire. Si vous traversez des difficultés sérieuses, nous recommandons de consulter un professionnel. Nos questions peuvent cependant être un excellent complément." }
+    ]
+  },
+  "conclusion": "Ces 120 questions sont là pour vous aider à créer des moments d'échange sincères avec votre partenaire. Prenez le temps de vous écouter, de vous découvrir et de renforcer votre connexion. La clé d'une relation épanouie, c'est la communication.",
+  "scrollTop": "Commencer avec une question aléatoire"
+}

@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "badge": "Test di compatibilità a distanza",
+    "title": "Quiz coppie a distanza - Siete capaci di mantenere una relazione lontani?",
+    "description": "Scopri se tu e il tuo partner siete pronti per l'avventura dell'amore a distanza. Un quiz interattivo con risultati personalizzati.",
+    "questions": "100 domande",
+    "players": "Quiz per due",
+    "duration": "~10 minuti"
+  },
+  "intro": {
+    "p1": "L'amore può davvero sopravvivere ai chilometri? Nel 2026, questa domanda non è mai stata così pertinente.",
+    "p2": "Eppure, quando ti ritrovi da solo/a la sera davanti a uno schermo, la preoccupazione c'è. Non sei solo/a a farti queste domande."
+  },
+  "section1": { "title": "Cos'è una relazione a distanza?", "sub1Title": "Definizione moderna", "sub1P1": "Nel 2026, una relazione a distanza (o LDR) si definisce come due partner emotivamente impegnati, ma separati geograficamente.", "sub1P2": "Non è più solo questione di chilometri, ma di frequenza di connessione.", "sub2Title": "Perché questo fenomeno è in crescita", "sub2Items": ["<strong>Carriere globali:</strong> Non si esita più ad accettare quel lavoro dei sogni a Berlino o Singapore.", "<strong>Studi all'estero:</strong> I programmi di scambio creano migliaia di coppie ogni anno.", "<strong>Telelavoro e Nomadi Digitali:</strong> La libertà geografica permette di viaggiare, ma a volte le agende non si allineano."] },
+  "section2": { "title": "Statistiche e tendenze 2026", "p1": "I dati recenti stimano che circa <strong>14-15 milioni di persone negli USA</strong> si considerano in una relazione a distanza.", "tableHeaders": ["Aspetto", "Relazione Locale", "Relazione a Distanza"], "tableRows": [["Budget Svago", "Regolare (Ristoranti, Cinema)", "Concentrato (Grandi weekend, Vacanze)"], ["Budget Trasporto", "Basso", "Alto (Aereo, Treno)"], ["Gestione del tempo", "Spontanea", "Pianificata"], ["Stanchezza", "Quotidiana", "Picchi per viaggi"]], "sub1Title": "La realtà francese", "sub1Text": "La media prima di riunirsi geograficamente è di circa <strong>18-24 mesi</strong>." },
+  "section3": { "title": "Vantaggi di una relazione a distanza", "items": [{ "title": "Rafforzamento dei legami emotivi", "text": "Quando non puoi toccare, devi parlare. Davvero parlare." }, { "title": "Crescita personale e autonomia", "text": "Hai il meglio di entrambi i mondi." }, { "title": "Migliore comunicazione", "text": "Per sopravvivere, devi comunicare le tue intenzioni." }, { "title": "Rituali e creatività relazionale", "text": "Il vincolo crea creatività." }] },
+  "section4": { "title": "Le sfide e i rischi reali", "items": [{ "title": "La solitudine e la mancanza di contatto fisico", "text": "È la sfida n°1." }, { "title": "Gelosia e insicurezza", "text": "A distanza, l'immaginazione è la tua peggior nemica." }, { "title": "Incertezza sul futuro", "text": "L'ambiguità è tossica." }, { "title": "Pressione finanziaria e logistica", "text": "L'amore non ha prezzo, ma i biglietti del treno e dell'aereo sì." }] },
+  "section5": { "title": "Cosa vivono realmente le coppie", "testimonial1": "\"Abbiamo trascorso due anni a distanza tra Parigi e Montreal. Il nostro segreto? Vedevamo la distanza come un 'nemico comune'.\"", "testimonial1Author": "— Sarah & Tom, oggi riuniti", "testimonial2": "\"Per noi, la distanza ha rivelato delle crepe.\"", "testimonial2Author": "— Julien & Marc" },
+  "section6": { "title": "Segnali che la vostra relazione a distanza può funzionare", "signs": ["<strong>Comunicazione sincera e regolare</strong>", "<strong>Fiducia e impegno reciproci</strong>", "<strong>Progetti comuni e obiettivi chiari</strong>", "<strong>Capacità di gestire l'incertezza</strong>"] },
+  "section7": { "title": "Consigli pratici per il successo", "tips": [{ "title": "Stabilire una tabella di marcia", "text": "Avere sempre la data della prossima visita prima di separarsi." }, { "title": "Usare la tecnologia intenzionalmente", "text": "Privilegiare momenti di qualità." }, { "title": "Gestire i momenti difficili insieme", "text": "L'ascolto attivo vale più di qualsiasi regalo." }, { "title": "Mantenere l'intimità", "text": "Nel 2026, non è più tabù." }] },
+  "section8": { "title": "Errori da evitare in una relazione a distanza", "errors": [{ "title": "Confrontare senza sosta", "text": "Non invidiare la coppia che litiga all'IKEA." }, { "title": "Aspettative irrealistiche sulle visite", "text": "Sii realista con il tuo budget." }, { "title": "Trascurare la vita personale", "text": "Vivi per te stesso/a!" }] },
+  "section9": { "title": "Dove sta andando il futuro delle relazioni a distanza?", "sub1Title": "Impatto delle nuove tecnologie e IA", "sub1Text": "L'IA inizia a giocare un ruolo di mediatore.", "sub2Title": "Cambiamenti sociali", "sub2Text": "La società del 2026 valorizza l'individuo." },
+  "conclusion": { "title": "Conclusione", "p1": "Una relazione a distanza è una sfida colossale, ma anche un incredibile acceleratore di maturità emotiva. E se hai dubbi sulla salute della tua relazione, il nostro <a href=\"https://quiz-couple.com/it/test-relazione-tossica\">test relazione tossica</a> può aiutarti a vederci più chiaro.", "p2": "Se la fiducia c'è, la comunicazione scorre e avete un progetto di riunione, allora sì, <strong>può funzionare</strong>." },
+  "faq": { "title": "FAQ - Relazioni a distanza", "items": [{ "q": "Cos'è una relazione a distanza di successo?", "a": "Una relazione dove entrambi si sentono sicuri, amati e liberi." }, { "q": "Quanto dura in media?", "a": "Tra 14 e 24 mesi." }, { "q": "Come sapere se ne vale la pena?", "a": "Se questa persona ti porta più gioia che tristezza." }, { "q": "Quali sono i segnali di solidità?", "a": "Se ridete insieme, pianificate il futuro e avete fiducia." }, { "q": "Perché falliscono?", "a": "Per mancanza di visione comune o esaurimento." }] },
+  "results": {
+    "fragileTitle": "Fragile con la distanza",
+    "fragileDesc": "La distanza potrebbe essere complicata per voi.",
+    "moderateTitle": "Capacità moderata",
+    "moderateDesc": "Avete delle basi ma alcuni punti devono essere lavorati.",
+    "readyTitle": "Pronti per la distanza",
+    "readyDesc": "Avete le qualità necessarie per gestire la distanza."
+  }
+}

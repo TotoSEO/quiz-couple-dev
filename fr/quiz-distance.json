@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "badge": "Test de compatibilité à distance",
+    "title": "Quiz couples à distance - Êtes vous capable de garder une relation loin de l'autre ?",
+    "description": "Découvrez si vous et votre partenaire êtes prêts pour l'aventure de l'amour à distance. Un quiz interactif avec des résultats personnalisés pour chacun.",
+    "questions": "100 questions",
+    "players": "Quiz à deux",
+    "duration": "~10 minutes"
+  },
+  "intro": {
+    "p1": "Est-ce que l'amour peut vraiment survivre aux kilomètres ? En 2026, cette question n'a jamais été aussi pertinente. Entre la généralisation du télétravail, la mobilité étudiante internationale et les applications de rencontre qui nous connectent d'un bout à l'autre de la planète, les frontières de l'amour ont explosé.",
+    "p2": "Pourtant, quand on se retrouve seul le soir face à un écran, l'inquiétude est là. \"Est-ce qu'on perd notre temps ?\", \"Est-ce qu'il/elle m'est fidèle ?\", \"Est-ce que notre histoire est solide ?\". Vous n'êtes pas seuls à vous poser ces questions."
+  },
+  "section1": {
+    "title": "Qu'est-ce qu'une relation à distance ?",
+    "sub1Title": "Définition moderne",
+    "sub1P1": "Oubliez l'image d'épinal du marin qui part en mer pour six mois sans nouvelles. En 2026, une relation à distance (ou LDR pour Long Distance Relationship) se définit par deux partenaires engagés affectivement, mais séparés géographiquement par une contrainte qui empêche une intimité physique régulière.",
+    "sub1P2": "Ce n'est plus seulement une question de kilomètres, mais de fréquence de connexion. Avec la technologie actuelle (appels vidéo HD, messageries instantanées, réalité augmentée), vous pouvez \"être\" ensemble sans \"être\" là.",
+    "sub2Title": "Pourquoi ce phénomène est en croissance",
+    "sub2Items": [
+      "<strong>Carrières globales :</strong> On n'hésite plus à accepter ce poste de rêve à Berlin ou Singapour.",
+      "<strong>Études à l'étranger :</strong> Le programme Erasmus et les échanges universitaires créent des milliers de couples chaque année.",
+      "<strong>Télétravail et Digital Nomads :</strong> La liberté géographique permet de voyager, mais parfois, les agendas ne s'alignent pas."
+    ]
+  },
+  "section2": {
+    "title": "Statistiques et tendances 2026",
+    "p1": "Les données récentes estiment qu'environ <strong>14 à 15 millions de personnes aux États-Unis</strong> se considèrent dans une relation à distance. En Europe, le chiffre grimpe aussi, porté par la facilité des transports.",
+    "tableHeaders": ["Aspect", "Relation Locale", "Relation à Distance"],
+    "tableRows": [
+      ["Budget Sorties", "Régulier (Restos, Ciné)", "Concentré (Gros week-ends, Vacances)"],
+      ["Budget Transport", "Faible", "Élevé (Avion, Train)"],
+      ["Gestion du temps", "Spontanée", "Planifiée"],
+      ["Fatigue", "Quotidienne", "Pics liés aux voyages"]
+    ],
+    "sub1Title": "La réalité française",
+    "sub1Text": "En France, la culture de l'indépendance joue un rôle clé. Les couples français à distance mettent souvent en avant la préservation de leur \"jardin secret\" comme un atout. La moyenne avant de se réunir géographiquement tourne autour de <strong>18 à 24 mois</strong>."
+  },
+  "section3": {
+    "title": "Avantages d'une relation à distance",
+    "items": [
+      { "title": "Renforcement des liens émotionnels", "text": "Quand on ne peut pas se toucher, on doit se parler. Vraiment se parler. Les couples à distance apprennent à connaître les peurs, les rêves et les pensées profondes de l'autre bien plus vite." },
+      { "title": "Croissance personnelle & autonomie", "text": "Vous avez le beurre et l'argent du beurre : le soutien émotionnel d'un couple, et la liberté d'un célibataire au quotidien." },
+      { "title": "Meilleure communication", "text": "C'est mathématique : pour survivre, vous devez communiquer vos intentions. Cet effort constant crée des communicateurs hors pair." },
+      { "title": "Rituels et créativité relationnelle", "text": "La contrainte crée la créativité. Regarder un film \"ensemble\", s'envoyer des colis surprises, cuisiner la même recette en visio... Ces rituels deviennent le ciment de votre couple." }
+    ]
+  },
+  "section4": {
+    "title": "Les défis et risques réels",
+    "items": [
+      { "title": "La solitude et le manque de contact physique", "text": "C'est le défi n°1. Pas de câlin après une dure journée, pas de main à tenir au cinéma. Cette \"famine de la peau\" peut créer une solitude intense, même si vous êtes virtuellement connectés." },
+      { "title": "La jalousie et l'insécurité", "text": "\"Pourquoi il ne répond pas ?\", \"Qui est cette fille sur sa story ?\". À distance, l'imagination est votre pire ennemie. L'absence de visibilité immédiate peut transformer un simple retard en scénario catastrophe." },
+      { "title": "Incertitude sur l'avenir", "text": "Le flou est toxique. \"Quand est-ce qu'on vivra ensemble ?\". Sans réponse claire, la motivation s'effrite." },
+      { "title": "Pression financière et logistique", "text": "L'amour n'a pas de prix, mais les billets de train et d'avion en ont un. La gestion des voyages, des décalages horaires et des budgets peut créer une fatigue importante." }
+    ]
+  },
+  "section5": {
+    "title": "Ce que vivent réellement les couples",
+    "testimonial1": "\"Nous avons passé deux ans à distance entre Paris et Montréal. Notre secret ? Nous considérions la distance comme un 'ennemi commun' à abattre ensemble, et non comme un problème entre nous deux.\"",
+    "testimonial1Author": "— Sarah & Tom, aujourd'hui réunis",
+    "testimonial2": "\"Pour nous, la distance a révélé des failles. Le manque de projets communs a transformé la relation en une amitié polie avant de s'éteindre. L'amour ne suffit pas, il faut une direction commune.\"",
+    "testimonial2Author": "— Julien & Marc"
+  },
+  "section6": {
+    "title": "Signes que votre relation à distance peut fonctionner",
+    "signs": [
+      "<strong>Communication sincère et régulière</strong> - Vous osez dire \"Je me sens seul aujourd'hui\"",
+      "<strong>Confiance et engagement mutuels</strong> - Construite par les actes, pas juste les mots",
+      "<strong>Projets communs et objectifs clairs</strong> - Une date de fin, même floue, doit exister",
+      "<strong>Capacité à gérer l'incertitude</strong> - Vous transformez la frustration en excitation des retrouvailles"
+    ]
+  },
+  "section7": {
+    "title": "Conseils pratiques pour réussir",
+    "tips": [
+      { "title": "Fixer une feuille de route", "text": "Toujours avoir la date de la prochaine visite fixée avant de se quitter. C'est le phare dans la nuit." },
+      { "title": "Utiliser la technologie intentionnellement", "text": "Privilégiez des moments de qualité (un vrai rendez-vous visio) plutôt que de la quantité vide." },
+      { "title": "Gérer les moments difficiles ensemble", "text": "Si l'un va mal, l'autre doit être présent. L'écoute active vaut tous les cadeaux du monde." },
+      { "title": "Maintenir l'intimité", "text": "En 2026, ce n'est plus tabou. Maintenir une tension et une intimité à distance est vital pour beaucoup de couples." }
+    ]
+  },
+  "section8": {
+    "title": "Erreurs à éviter dans une relation à distance",
+    "errors": [
+      { "title": "Comparer sans cesse", "text": "N'enviez pas le couple qui s'engueule chez IKEA le samedi. Votre relation est différente, avec ses propres super-pouvoirs. La comparaison est le voleur de joie." },
+      { "title": "Attentes irréalistes sur les visites", "text": "Si vous exigez de vous voir tous les 15 jours alors que votre budget ne le permet pas, vous créez une pression financière qui tuera le couple. Soyez réalistes." },
+      { "title": "Négliger sa vie personnelle", "text": "Ne mettez pas votre vie en pause. Si vous passez vos soirées à attendre un appel, vous deviendrez dépendant et inintéressant. Vivez pour vous !" }
+    ]
+  },
+  "section9": {
+    "title": "Vers où va l'avenir des relations à distance ?",
+    "sub1Title": "Impact des nouvelles technologies & IA",
+    "sub1Text": "L'IA commence à jouer un rôle de médiateur. Des apps analysent désormais les sentiments dans les messages pour éviter les malentendus textuels. Les casques de réalité mixte permettent des \"rendez-vous\" dans des mondes virtuels ultra-réalistes.",
+    "sub2Title": "Changements sociétaux",
+    "sub2Text": "La société de 2026 valorise l'individu. On accepte mieux que chacun poursuive ses rêves sans sacrifier le couple. Le modèle \"vivre ensemble à tout prix\" laisse place au modèle \"être heureux ensemble, peu importe où\"."
+  },
+  "conclusion": {
+    "title": "Conclusion",
+"p1": "Une relation à distance est un défi colossal, mais c'est aussi un accélérateur de maturité émotionnelle incroyable. Si vous lisez ceci, c'est que vous tenez à votre histoire. Et si vous avez des doutes sur la santé de votre relation, notre <a href=\"https://quiz-couple.com/test-couple-toxique\">test couple toxique</a> peut vous aider à y voir plus clair.",
+    "p2": "Il n'y a pas de test relation à distance magique qui vous donnera un score sur 100, mais il y a votre ressenti. Si la confiance est là, que la communication est fluide et que vous avez un projet de réunion, alors oui, <strong>ça peut marcher</strong>. Et souvent, les retrouvailles n'en sont que plus savoureuses."
+  },
+  "faq": {
+    "title": "FAQ - Relations à distance",
+    "items": [
+      { "q": "Qu'est-ce qu'une relation à distance réussie ?", "a": "C'est une relation où les deux partenaires se sentent sécures, aimés et libres, malgré les kilomètres. Elle se caractérise par une date de fin de la distance connue et acceptée par les deux." },
+      { "q": "Relation à distance : combien de temps ça dure en moyenne ?", "a": "Statistiquement, la phase de \"distance\" dure en moyenne entre 14 et 24 mois avant qu'une décision ne soit prise : soit la réunion géographique (déménagement), soit la rupture." },
+      { "q": "LDR : comment savoir si ça vaut le coup ?", "a": "Faites le bilan : est-ce que cette personne vous apporte plus de joie que de tristesse ? Est-ce que vos valeurs de vie s'alignent ? Si la réponse est oui, la distance n'est qu'un détail logistique temporaire." },
+      { "q": "Quels sont les 10 signes que votre relation à distance est solide ?", "a": "Si vous riez ensemble, si vous planifiez l'avenir, si vous avez confiance, et si vous avez chacun votre propre vie sociale épanouie en dehors du couple, vous êtes sur la bonne voie." },
+      { "q": "Pourquoi les relations à distance échouent (et comment l'éviter) ?", "a": "Elles échouent souvent par manque de vision commune (pas de date de fin) ou par épuisement (trop de voyages, pas assez de budget). Pour l'éviter : communiquez sur vos limites et faites un plan financier et temporel réaliste." }
+    ]
+  },
+  "results": {
+    "fragileTitle": "Fragile face à la distance",
+    "fragileDesc": "La distance risque d'être compliquée pour vous.",
+    "moderateTitle": "Capacité modérée",
+    "moderateDesc": "Vous avez des bases mais certains points restent à travailler.",
+    "readyTitle": "Prêts pour la distance",
+    "readyDesc": "Vous avez les qualités nécessaires pour gérer la distance."
+  }
+}

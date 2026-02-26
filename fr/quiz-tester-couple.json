@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "badge": "Gratuit • Sans inscription • 5 min",
+    "title": "Testez votre couple : le quiz à faire à deux",
+    "description": "20 questions pour découvrir votre niveau de compatibilité. Jouez à tour de rôle et voyez si vous êtes vraiment sur la même longueur d'onde !",
+    "duration": "5 minutes",
+    "players": "2 joueurs",
+    "questions": "20 questions"
+  },
+  "seo": {
+    "whyTitle": "Pourquoi tester son couple ?",
+    "card1Title": "Renforcer votre connexion",
+    "card1Text": "Découvrez vos <a href=\"https://quiz-couple.com/test-points-communs-couples\">points communs</a> et comprenez mieux les différences qui font la richesse de votre relation.",
+    "card2Title": "Ouvrir le dialogue",
+    "card2Text": "Chaque question est une opportunité de discussion et d'échange avec votre partenaire.",
+    "card3Title": "Identifier les axes d'amélioration",
+    "card3Text": "Le score vous aide à voir où vous pouvez grandir ensemble et quels aspects de votre relation méritent attention.",
+    "card4Title": "S'amuser ensemble",
+    "card4Text": "Au-delà du score, c'est un moment ludique et complice à partager à deux.",
+    "howTitle": "Comment ça fonctionne ?",
+    "step1Title": "Entrez vos prénoms",
+    "step1Text": "Renseignez les prénoms et genres des deux joueurs",
+    "step2Title": "Répondez à tour de rôle",
+    "step2Text": "Pour chaque question, le joueur 1 répond puis le joueur 2",
+    "step3Title": "Découvrez votre score",
+    "step3Text": "Plus vous avez de réponses identiques, plus votre score est élevé !",
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Le test couple est-il vraiment gratuit ?",
+    "faq1A": "Oui, notre test couple est 100% gratuit et sans inscription. Vous pouvez le faire autant de fois que vous le souhaitez.",
+    "faq2Q": "Combien de temps dure le test ?",
+    "faq2A": "Le test dure environ 5 minutes. Il comprend 20 questions auxquelles les deux partenaires répondent à tour de rôle.",
+    "faq3Q": "Comment le score est-il calculé ?",
+    "faq3A": "Le score est basé sur le nombre de réponses identiques entre les deux partenaires. Plus vous répondez pareil, plus votre score de compatibilité est élevé !"
+  }
+}

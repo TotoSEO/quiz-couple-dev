@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "badge": "Analyse par Intelligence Artificielle",
+    "title1": "Résolution de problèmes",
+    "title2": "pour couple",
+    "title3": "avec l'IA",
+    "description": "Notre IA analyse votre situation de manière <strong>complètement impartiale</strong> pour vous aider à résoudre vos conflits et comprendre les responsabilités de chacun.",
+    "features": ["100% Confidentiel", "Analyse impartiale", "IA avancée"]
+  },
+  "howItWorks": {
+    "title": "Comment ça fonctionne ?",
+    "steps": [
+      { "title": "Décrivez le contexte", "desc": "Expliquez la situation de manière neutre et objective." },
+      { "title": "Chacun s'exprime", "desc": "Chaque personne donne sa version des faits." },
+      { "title": "L'IA analyse", "desc": "Obtenez une analyse impartiale avec des conseils." }
+    ]
+  },
+  "seo": {
+    "s1": {
+      "title": "Comprendre l'origine d'un problème de couple",
+      "p1": "Avant de vouloir résoudre un conflit, il est essentiel de comprendre d'où il vient vraiment. Souvent, ce qu'on prend pour le problème n'est que la partie visible de l'iceberg.",
+      "h3_1": "Les causes les plus fréquentes des conflits dans un couple",
+      "p2": "Les disputes de couple naissent rarement de nulle part. Derrière chaque conflit se cache généralement un besoin non exprimé ou non satisfait. La communication défaillante arrive en tête des problèmes : on croit se comprendre, mais on parle souvent deux langues différentes.",
+      "p3": "Viennent ensuite le manque de temps passé ensemble, les différences de vision sur l'argent, l'éducation des enfants ou les projets de vie. Sans oublier les petites frustrations du quotidien qui s'accumulent silencieusement jusqu'à exploser pour une broutille.",
+      "h3_2": "Pourquoi les mêmes disputes reviennent sans cesse",
+      "p4": "Vous avez l'impression de rejouer toujours la même scène ? C'est normal. Les disputes récurrentes sont le signe que le vrai problème n'a jamais été adressé. On résout le symptôme, pas la cause. C'est comme mettre un pansement sur une plaie infectée : ça soulage un moment, mais ça revient.",
+      "p5": "Tant que les besoins profonds de chacun ne sont pas identifiés et reconnus, le même schéma se répète inlassablement."
+    },
+    "s2": {
+      "title": "Comment résoudre un problème de couple durablement",
+      "h3_1": "Identifier le vrai problème (au-delà de la dispute)",
+      "p1": "La prochaine fois que vous vous disputez pour la vaisselle, demandez-vous : est-ce vraiment les assiettes le problème ? Probablement pas. C'est peut-être un sentiment de ne pas être soutenu, de porter trop de charge mentale, ou de ne pas se sentir considéré.",
+      "p2": "Le vrai problème se cache toujours derrière la dispute apparente. Le trouver, c'est déjà faire la moitié du chemin.",
+      "h3_2": "Exprimer ses émotions sans aggraver le conflit",
+      "p3": "Dire ce qu'on ressent sans accuser l'autre, c'est tout un art. Le secret ? Parler de soi. \"Je me sens blessé quand...\" plutôt que \"Tu me fais toujours...\". Cette nuance change tout.",
+      "p4": "Votre partenaire ne se sent plus attaqué et peut vraiment vous écouter. Vos émotions méritent d'être entendues, mais la façon de les exprimer détermine si elles le seront.",
+      "h3_3": "Écouter l'autre sans se mettre sur la défensive",
+      "p5": "Écouter, ce n'est pas attendre son tour pour parler. C'est vraiment essayer de comprendre ce que l'autre vit, même si on n'est pas d'accord. Quand votre partenaire parle, résistez à l'envie de préparer votre défense.",
+      "p6": "Concentrez-vous sur ses mots, son émotion. Reformulez ce que vous avez compris. Cette simple pratique peut transformer une dispute en vraie conversation."
+    },
+    "s3": {
+      "title": "10 conseils pour résoudre un problème de couple",
+      "tips": [
+        { "h": "Communiquer au bon moment, pas sous l'émotion", "p": "Le timing est crucial. Aborder un sujet sensible quand on est épuisé, énervé ou pressé, c'est la garantie d'une dispute. Attendez le bon moment : quand vous êtes tous les deux disponibles, calmes et disposés à vraiment parler." },
+        { "h": "Parler de soi sans accuser l'autre", "p": "Remplacez les \"tu\" par des \"je\". Au lieu de \"Tu ne m'écoutes jamais\", essayez \"Je me sens ignoré quand je parle et que tu regardes ton téléphone\". Le message passe, sans mettre l'autre sur la défensive." },
+        { "h": "Apprendre à écouter sans préparer sa réponse", "p": "On a tous cette tendance : pendant que l'autre parle, on prépare déjà notre contre-argument. Faites l'effort conscient d'écouter jusqu'au bout, de comprendre, avant de répondre." },
+        { "h": "Accepter que l'autre ait un ressenti différent", "p": "Deux personnes peuvent vivre la même situation et ressentir des choses complètement différentes. Aucun des deux n'a tort. Accepter cette réalité, c'est arrêter de vouloir convaincre l'autre que sa perception est fausse." },
+        { "h": "Éviter les reproches généralisants (\"toujours\", \"jamais\")", "p": "\"Tu fais toujours ça\", \"Tu ne fais jamais attention\"... Ces mots sont des bombes relationnelles. Ils exagèrent la réalité et mettent l'autre dans une position impossible. Restez factuel." },
+        { "h": "Chercher une solution plutôt qu'un coupable", "p": "L'objectif d'une discussion de couple n'est pas de gagner ou de prouver que l'autre a tort. C'est de trouver ensemble comment aller mieux. Demandez-vous plutôt : \"Comment on fait pour que ça ne se reproduise plus ?\"" },
+        { "h": "Respecter les besoins et les limites de chacun", "p": "Chacun a ses propres besoins : de solitude, de parole, de gestes d'affection, de sécurité financière... Les connaître et les respecter, c'est la base d'une relation saine." },
+        { "h": "Faire des pauses quand la discussion devient trop tendue", "p": "Parfois, le mieux est de s'arrêter. Quand les voix montent et que les mots dépassent la pensée, proposez une pause. Ce n'est pas fuir le problème, c'est le protéger d'une escalade destructrice." },
+        { "h": "Ne pas laisser les non-dits s'accumuler", "p": "Les petites frustrations qu'on garde pour soi finissent par former une montagne. Apprenez à exprimer vos ressentis au fur et à mesure, avant qu'ils ne deviennent des rancœurs." },
+        { "h": "Se faire aider quand le dialogue tourne en rond", "p": "Reconnaître qu'on n'y arrive pas seuls n'est pas un échec, c'est une preuve de maturité. Un regard extérieur peut débloquer des situations qui semblaient sans issue." }
+      ]
+    },
+    "s4": {
+      "title": "Les erreurs à éviter quand on essaie de résoudre un conflit de couple",
+      "items": [
+        { "h": "Chercher à avoir raison plutôt qu'à se comprendre", "p1": "C'est le piège classique. On veut tellement prouver qu'on a raison qu'on en oublie l'essentiel : se comprendre.", "p2": "La victoire relationnelle, c'est quand les deux se sentent entendus." },
+        { "h": "Ignorer les besoins émotionnels de l'autre", "p1": "Votre partenaire n'attend pas forcément que vous résolviez son problème. Parfois, il ou elle a juste besoin d'être entendu, compris, soutenu.", "p2": "Cette simple question peut tout changer." }
+      ]
+    },
+    "s5": {
+      "title": "Peut-on vraiment résoudre un problème de couple seul ?",
+      "h3_1": "Les limites des discussions à deux",
+      "p1": "Quand on est impliqué émotionnellement, difficile d'être objectif. Chacun voit la situation à travers son propre prisme, ses propres blessures, son propre vécu.",
+      "h3_2": "Quand et pourquoi un regard extérieur peut aider",
+      "p2": "Un tiers neutre voit ce que vous ne voyez plus. Il peut reformuler, décrypter, mettre en lumière des schémas répétitifs."
+    },
+    "s6": {
+      "title": "Résoudre un problème de couple grâce à l'intelligence artificielle",
+      "h3_1": "Comment l'IA analyse une dispute de couple",
+      "p1": "Notre intelligence artificielle analyse votre situation de manière méthodique et impartiale. Elle examine le contexte, les arguments de chacun, et identifie les points de friction.",
+      "h3_2": "En quoi une IA peut aider à mieux communiquer",
+      "p2": "L'IA met des mots sur ce qui est parfois difficile à exprimer. Elle reformule les positions de chacun de manière claire et factuelle.",
+      "h3_3": "Les avantages d'un outil neutre pour apaiser les conflits",
+      "p3": "Quand les émotions prennent le dessus, avoir un arbitre neutre change tout. L'IA ne juge pas, ne prend pas parti, ne se laisse pas influencer par les larmes ou les éclats de voix."
+    },
+    "s7": {
+      "title": "Comment utiliser notre outil pour résoudre un problème de couple",
+      "h3_1": "Décrire la situation de manière objective",
+      "p1": "La première étape est cruciale : décrire le contexte de manière neutre et factuelle. Plus vous êtes objectif, plus l'analyse sera pertinente.",
+      "h3_2": "Comprendre les deux points de vue du couple",
+      "p2": "Ensuite, chaque personne exprime sa version des faits. L'IA prendra en compte les deux points de vue pour comprendre la dynamique du conflit.",
+      "h3_3": "Trouver des solutions concrètes et applicables",
+      "p3": "Enfin, vous recevez une analyse complète : le niveau de gravité de la situation, les chances de résolution, la répartition des responsabilités, et surtout des conseils concrets pour avancer."
+    }
+  },
+  "cta": {
+    "title": "Prêt à résoudre votre problème de couple ?",
+    "desc": "Notre outil gratuit et confidentiel vous attend. Décrivez votre situation et obtenez une analyse impartiale en quelques minutes.",
+    "button": "Analyser notre situation maintenant"
+  }
+}

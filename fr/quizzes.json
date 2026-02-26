@@ -1,0 +1,97 @@
+{
+  "testCouple": {
+    "title": "Test Couple - Êtes-vous faits l'un pour l'autre ?",
+    "shortTitle": "Test Couple",
+    "description": "Répondez à 20 questions pour évaluer la solidité de votre relation et découvrir vos points forts.",
+    "metaDescription": "Test de couple gratuit : 20 questions pour évaluer votre relation amoureuse. Découvrez votre compatibilité et vos points forts en couple."
+  },
+  "testCommonPoints": {
+    "title": "Test Points Communs - Découvrez votre compatibilité",
+    "shortTitle": "Test Points Communs",
+    "description": "Mesurez vos points communs avec 200 questions ! Répondez à tour de rôle et découvrez votre niveau de compatibilité.",
+    "metaDescription": "Test de points communs en couple avec 200 questions pour mesurer votre compatibilité et vos affinités. Gratuit et sans inscription !"
+  },
+  "testDistance": {
+    "title": "Quiz Relation à Distance - Testez votre connexion",
+    "shortTitle": "Quiz Distance",
+    "description": "100 questions pour évaluer la solidité de votre relation à distance et renforcer votre lien.",
+    "metaDescription": "Quiz gratuit pour couples à distance : 100 questions pour tester et renforcer votre relation longue distance."
+  },
+  "testToxic": {
+    "title": "Test Couple Toxique - Évaluez votre relation",
+    "shortTitle": "Test Toxique",
+    "description": "25 questions pour identifier les signes d'une relation toxique et prendre soin de vous.",
+    "metaDescription": "Test gratuit pour identifier les signes d'une relation toxique. 25 questions pour évaluer votre couple en toute confidentialité."
+  },
+  "quizAmoureux": {
+    "title": "Quiz pour amoureux - Êtes-vous faits l'un pour l'autre ?",
+    "shortTitle": "Quiz Amoureux",
+    "description": "20 questions à débattre ensemble pour mesurer votre harmonie de couple.",
+    "metaDescription": "Quiz amoureux interactif : débattez et évaluez votre compatibilité en couple. Gratuit et amusant !"
+  },
+  "quizCoquin": {
+    "title": "Quiz Coquin - Pimentez votre relation",
+    "shortTitle": "Quiz Coquin",
+    "description": "60 questions pour pimenter votre relation et mieux connaître les désirs de votre partenaire.",
+    "metaDescription": "Quiz coquin pour couples : 60 questions pour pimenter votre relation et explorer vos envies. Gratuit et confidentiel."
+  },
+  "quizMarrant": {
+    "title": "Quiz Marrant - 150+ Questions Fun pour Couples",
+    "shortTitle": "Quiz Marrant",
+    "description": "Riez ensemble avec plus de 150 questions drôles ! Un quiz fun et léger pour passer un bon moment à deux.",
+    "metaDescription": "Quiz marrant pour couples avec 150+ questions fun ! Riez ensemble et renforcez votre complicité. Gratuit, sans inscription."
+  },
+  "quizKnowledge": {
+    "title": "Qui se connait le mieux ? - Quiz Couples",
+    "shortTitle": "Qui connait le mieux ?",
+    "description": "Alternez les questions et découvrez qui connait le mieux son partenaire ! 100 questions pour tester votre complicité.",
+    "metaDescription": "Quiz interactif pour couples : qui connait le mieux son partenaire ? 100 questions à deviner en alternance. Gratuit et amusant !"
+  },
+  "quizMost": {
+    "title": "Qui est le plus... ? - 240+ Questions",
+    "shortTitle": "Qui est le plus ?",
+    "description": "De 2 à 8 joueurs, votez ensemble pour découvrir qui est le plus drôle, bavard, romantique... 240+ questions fun !",
+    "metaDescription": "Quiz Qui est le plus avec 240+ questions pour 2 à 8 joueurs. Découvrez qui est le plus drôle, bavard, romantique... Gratuit !"
+  },
+  "questionsCouple": {
+    "title": "120 Questions pour Couple à se Poser | Gratuit",
+    "shortTitle": "Questions",
+    "description": "120 questions classées par thème pour mieux vous connaître, renforcer votre complicité et créer des moments d'échange authentiques.",
+    "metaDescription": "120 questions pour couple classées en 5 thèmes : se connaître, projets, intimité, fun et questions profondes. Gratuit, sans inscription."
+  },
+  "problemResolver": {
+    "title": "Résoudre un Problème de Couple avec l'IA",
+    "shortTitle": "Résoudre un problème",
+    "description": "Notre IA analyse votre situation et vous donne des conseils personnalisés pour résoudre vos conflits.",
+    "metaDescription": "Résolvez vos problèmes de couple gratuitement grâce à notre IA. Conseils personnalisés et confidentiels."
+  },
+  "testCoupleSain": {
+    "title": "Test couple sain : votre relation est-elle solide ?",
+    "shortTitle": "Test Couple Sain",
+    "description": "Un quiz à faire à deux pour évaluer si votre relation est saine et équilibrée.",
+    "metaDescription": "Test couple sain gratuit : 20 questions à faire à deux pour évaluer votre relation. Scores individuels et conseils. Sans inscription !"
+  },
+  "testMariage": {
+    "title": "Test de couple avant le mariage : Gratuit en ligne !",
+    "shortTitle": "Test Mariage",
+    "description": "30 questions à répondre ensemble pour vérifier que vous êtes prêts à vous marier.",
+    "metaDescription": "Test de couple avant le mariage gratuit : 30 questions pour vérifier votre alignement sur les finances, enfants, valeurs et communication. Sans inscription !"
+  },
+  "testDivorce": {
+    "title": "Dois-je divorcer ? Test en ligne gratuit",
+    "shortTitle": "Test Divorce",
+    "h1": "Test : Savoir si je dois divorcer ou non",
+    "heroSubtitle": "Un outil d'auto-évaluation bienveillant pour vous aider à y voir plus clair",
+    "description": "25 questions pour vous aider à faire le point honnêtement sur votre relation.",
+    "metaDescription": "Vous vous demandez si vous devriez divorcer ? Ce test gratuit de 25 questions vous aide à faire le point honnêtement sur votre relation. Résultat immédiat, sans jugement.",
+    "startSubtitle": "Gratuit, anonyme, sans mail, sans rien",
+    "emergencyNotice": "Si vous vous trouvez dans une situation de danger, le <strong>3919</strong> (violences conjugales, France) est disponible 7j/7. En cas d'urgence immédiate : <strong>15, 17 ou 18</strong>.",
+    "emergencyResult": "Besoin d'aide ? Si vous vous trouvez dans une situation de danger, le <strong>3919</strong> (violences conjugales, France) est disponible 7j/7. En cas d'urgence immédiate : <strong>15, 17 ou 18</strong>."
+  },
+  "quizAdo": {
+    "title": "Quiz couple pour ado : Allez-vous rester ensemble ?",
+    "shortTitle": "Quiz Ado",
+    "description": "20 questions pour savoir si votre relation est vraiment solide ou juste passagère. Jouez ensemble à distance !",
+    "metaDescription": "Quiz de couple spécial ados : 20 questions pour savoir si votre relation est vraiment solide ou juste passagère. Jouez ensemble à distance, résultat immédiat !"
+  }
+}
