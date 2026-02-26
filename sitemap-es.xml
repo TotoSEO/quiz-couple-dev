@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://quiz-couple.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/test-compatibilidad-pareja</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/tester-son-couple"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/couple-compatibility-test"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-compatibilidad-pareja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/paar-kompatibilitaetstest"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-compatibilita-coppia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/tester-son-couple"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/test-puntos-comunes-pareja</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-points-communs-couples"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/couple-common-points-test"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-puntos-comunes-pareja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/gemeinsamkeiten-test-paare"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-punti-comuni-coppia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-points-communs-couples"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-pareja-distancia</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-couple-distance"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/long-distance-relationship-quiz"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-pareja-distancia"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/fernbeziehung-quiz"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-coppia-distanza"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-couple-distance"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/test-relacion-toxica</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-couple-toxique"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/toxic-relationship-test"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-relacion-toxica"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/toxische-beziehung-test"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-relazione-tossica"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-couple-toxique"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-enamorados</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-amoureux"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/love-quiz"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-enamorados"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/liebes-quiz"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-innamorati"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-amoureux"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-pareja-picante</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-couple-coquin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/spicy-couple-quiz"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-pareja-picante"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/pikantes-paar-quiz"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-coppia-piccante"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-couple-coquin"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-pareja-divertido</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-couple-marrant"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/funny-couple-quiz"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-pareja-divertido"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/lustiges-paar-quiz"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-coppia-divertente"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-couple-marrant"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-quien-conoce-mejor-pareja</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-qui-connait-mieux-partenaire"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/who-knows-partner-best-quiz"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-quien-conoce-mejor-pareja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/wer-kennt-partner-besser-quiz"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-chi-conosce-meglio-partner"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-qui-connait-mieux-partenaire"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-quien-es-mas</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-qui-est-le-plus"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/who-is-most-likely-quiz"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-quien-es-mas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/wer-ist-am-meisten-quiz"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-chi-e-piu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-qui-est-le-plus"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/preguntas-pareja</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/questions-couple"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/couple-questions"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/preguntas-pareja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/fragen-fuer-paare"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/domande-coppia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/questions-couple"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/resolver-problema-pareja</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/resoudre-probleme-couple"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/solve-couple-problem"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/resolver-problema-pareja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/paar-problem-loesen"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/risolvere-problema-coppia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/resoudre-probleme-couple"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/aviso-legal</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/note-legali"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/mentions-legales"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/politica-privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/politica-privacidad"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/confidentialite"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/test-relacion-sana</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-couple-sain"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/healthy-relationship-test"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-relacion-sana"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/gesunde-beziehung-test"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-relazione-sana"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-couple-sain"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/test-compatibilidad-matrimonio</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-couple-mariage"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/marriage-compatibility-test"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-compatibilidad-matrimonio"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/ehe-kompatibilitaetstest"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-compatibilita-matrimonio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-couple-mariage"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/test-debo-divorciarme</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-dois-je-divorcer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/should-i-divorce-test"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-debo-divorciarme"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/scheidungstest"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-devo-divorziare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-dois-je-divorcer"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/fases-de-la-ruptura-en-el-hombre</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/les-phases-de-la-rupture-chez-l-homme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/breakup-stages-for-men"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/fases-de-la-ruptura-en-el-hombre"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/trennungsphasen-beim-mann"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/fasi-della-rottura-nell-uomo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/les-phases-de-la-rupture-chez-l-homme"/>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/cosas-no-aceptar-pareja</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/choses-pas-accepter-couple"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/things-not-accept-relationship"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/cosas-no-aceptar-pareja"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/grenzen-beziehung-nicht-akzeptieren"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/cose-non-accettare-coppia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/choses-pas-accepter-couple"/>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-pareja-adolescentes</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-couple-ado"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/teen-couple-quiz"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-pareja-adolescentes"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/teenager-paar-quiz"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-coppia-adolescenti"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-couple-ado"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/tinder-opiniones-vale-la-pena</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/avis-tinder"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/tinder-review"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/tinder-opiniones-vale-la-pena"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/tinder-bewertung"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/recensione-tinder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/avis-tinder"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/opiniones-bumble</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/avis-bumble"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/bubme-app-review"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/opiniones-bumble"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/bumble-erfahrungen"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/recensione-bumble"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/avis-bumble"/>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
