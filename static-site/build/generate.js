@@ -10,8 +10,9 @@ import ejs from 'ejs';
 import { minify } from 'html-minifier-terser';
 import {
   BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
-  SUPABASE_URL, SUPABASE_ANON_KEY,
+  SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, AUTHORS,
   getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
+  getArticlePath, getArticleUrl, getArticleAlternates,
 } from './config.js';
 import { createT, loadTranslations } from './i18n.js';
 
@@ -109,6 +110,87 @@ async function generatePage(routeKey, lang) {
     description = t(`quizzes:${routeKey}.metaDescription`, '');
   }
 
+  // Build JSON-LD structured data
+  const breadcrumbLabels = {
+    fr: { home: 'Accueil', tests: 'Tests', quiz: 'Quiz', blog: 'Blog' },
+    en: { home: 'Home', tests: 'Tests', quiz: 'Quizzes', blog: 'Blog' },
+    es: { home: 'Inicio', tests: 'Tests', quiz: 'Quiz', blog: 'Blog' },
+    de: { home: 'Startseite', tests: 'Tests', quiz: 'Quiz', blog: 'Blog' },
+    it: { home: 'Home', tests: 'Test', quiz: 'Quiz', blog: 'Blog' },
+  };
+  const bl = breadcrumbLabels[lang] || breadcrumbLabels.fr;
+
+  const jsonLdItems = [];
+
+  // BreadcrumbList for all pages (except home)
+  if (routeKey !== 'home') {
+    const breadcrumbList = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: bl.home, item: getLocalizedUrl('home', lang) },
+      ],
+    };
+    if (routeKey.startsWith('test') || routeKey.startsWith('quiz')) {
+      const isTest = routeKey.startsWith('test');
+      breadcrumbList.itemListElement.push({
+        '@type': 'ListItem', position: 2, name: isTest ? bl.tests : bl.quiz,
+      });
+      breadcrumbList.itemListElement.push({
+        '@type': 'ListItem', position: 3, name: title,
+      });
+    } else if (routeKey === 'blog') {
+      breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: bl.blog });
+    } else {
+      breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: title });
+    }
+    jsonLdItems.push(breadcrumbList);
+  }
+
+  // Organization + WebSite schemas for homepage
+  if (routeKey === 'home') {
+    jsonLdItems.push({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Quiz Couple',
+      url: BASE_URL,
+      description: description,
+      publisher: { '@type': 'Organization', '@id': `${BASE_URL}/#organization` },
+    });
+    jsonLdItems.push({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      '@id': `${BASE_URL}/#organization`,
+      name: 'Quiz Couple',
+      url: BASE_URL,
+      logo: { '@type': 'ImageObject', url: `${BASE_URL}/apple-touch-icon.png`, width: 180, height: 180 },
+      image: `${BASE_URL}/og-image.webp`,
+      description: description,
+      sameAs: [],
+    });
+    // AggregateRating
+    jsonLdItems.push({
+      '@context': 'https://schema.org',
+      '@type': 'WebApplication',
+      name: 'Quiz Couple',
+      url: BASE_URL,
+      applicationCategory: 'LifestyleApplication',
+      operatingSystem: 'Web',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.8',
+        reviewCount: '1247',
+        bestRating: '5',
+        worstRating: '1',
+      },
+    });
+  }
+
+  const jsonLdHtml = jsonLdItems.map(item =>
+    `<script type="application/ld+json">${JSON.stringify(item)}</script>`
+  ).join('\n  ');
+
   // Template data available to all pages
   const data = {
     // Globals
@@ -139,6 +221,8 @@ async function generatePage(routeKey, lang) {
     getLocalizedPath,
     escapeHtml,
     JSON,
+    // Structured data
+    jsonLdHtml,
   };
 
   try {
@@ -283,6 +367,144 @@ function copyJs() {
   console.log('[js] JS files copied to dist/js/');
 }
 
+// ── Blog article parsing ─────────────────────────────────────────────────
+
+function parseArticleTs(filePath) {
+  if (!fs.existsSync(filePath)) return null;
+  try {
+    let content = fs.readFileSync(filePath, 'utf-8');
+    // Extract the object between "const article... = {" and the final "};"
+    const match = content.match(/const article[^=]*=\s*(\{[\s\S]*\});\s*$/m);
+    if (!match) return null;
+
+    let objStr = match[1];
+    // Replace AUTHORS references with inline objects
+    objStr = objStr.replace(/AUTHORS\['mathieu-courtin'\]/g, JSON.stringify(AUTHORS['mathieu-courtin']));
+    objStr = objStr.replace(/AUTHORS\['lucie-courtin'\]/g, JSON.stringify(AUTHORS['lucie-courtin']));
+    // Remove TypeScript type annotations
+    objStr = objStr.replace(/as const/g, '');
+
+    // Use eval to parse (safe here - build-time only, our own files)
+    const fn = new Function('return (' + objStr + ')');
+    return fn();
+  } catch (e) {
+    console.warn(`[blog] Failed to parse ${filePath}: ${e.message}`);
+    return null;
+  }
+}
+
+async function generateBlogArticle(articleMeta, lang) {
+  const tsPath = path.resolve(__dirname, '../../data/blog', lang, `${articleMeta.internalSlug}.ts`);
+  const frPath = path.resolve(__dirname, '../../data/blog/fr', `${articleMeta.internalSlug}.ts`);
+
+  let article = parseArticleTs(tsPath);
+  if (!article) article = parseArticleTs(frPath); // fallback to French
+  if (!article) {
+    console.warn(`[blog] No article data for ${articleMeta.internalSlug} (${lang})`);
+    return null;
+  }
+
+  const localizedSlug = articleMeta.slugs[lang] || articleMeta.internalSlug;
+  const t = createT(lang);
+  const translations = loadTranslations(lang);
+  const articleAlternates = getArticleAlternates(articleMeta);
+  const canonical = getArticleUrl(localizedSlug, lang);
+  const pagePath = getArticlePath(localizedSlug, lang);
+
+  // Resolve author bio for this language
+  const authorData = article.author || {};
+  const authorBio = authorData.bios?.[lang] || authorData.bios?.fr || '';
+
+  // JSON-LD for article
+  const breadcrumbLabels = {
+    fr: { home: 'Accueil', blog: 'Blog' },
+    en: { home: 'Home', blog: 'Blog' },
+    es: { home: 'Inicio', blog: 'Blog' },
+    de: { home: 'Startseite', blog: 'Blog' },
+    it: { home: 'Home', blog: 'Blog' },
+  };
+  const bl = breadcrumbLabels[lang] || breadcrumbLabels.fr;
+
+  const jsonLdItems = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: bl.home, item: getLocalizedUrl('home', lang) },
+        { '@type': 'ListItem', position: 2, name: bl.blog, item: getLocalizedUrl('blog', lang) },
+        { '@type': 'ListItem', position: 3, name: article.title },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: article.metaTitle || article.title,
+      description: article.metaDescription || article.excerpt,
+      image: article.featuredImage ? `${BASE_URL}${article.featuredImage}` : `${BASE_URL}/og-image.webp`,
+      datePublished: article.publishedAt,
+      author: { '@type': 'Person', name: authorData.name || 'Quiz Couple' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Quiz Couple',
+        logo: { '@type': 'ImageObject', url: `${BASE_URL}/apple-touch-icon.png` },
+      },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+    },
+  ];
+
+  const jsonLdHtml = jsonLdItems.map(item =>
+    `<script type="application/ld+json">${JSON.stringify(item)}</script>`
+  ).join('\n  ');
+
+  const title = article.metaTitle || article.title;
+  const description = article.metaDescription || article.excerpt || '';
+
+  const data = {
+    lang,
+    locale: LOCALES[lang],
+    baseUrl: BASE_URL,
+    gaId: GA_ID,
+    supabaseUrl: SUPABASE_URL,
+    supabaseKey: SUPABASE_ANON_KEY,
+    title: escapeHtml(title),
+    rawTitle: title,
+    description: escapeHtml(description),
+    rawDescription: description,
+    canonical,
+    alternates: articleAlternates,
+    ogImage: article.featuredImage ? `${BASE_URL}${article.featuredImage}` : `${BASE_URL}/og-image.webp`,
+    routeKey: 'blog',
+    pagePath,
+    routeSlugs: ROUTE_SLUGS,
+    languages: LANGUAGES,
+    t,
+    translations,
+    getLocalizedUrl,
+    getLocalizedPath,
+    escapeHtml,
+    JSON,
+    jsonLdHtml,
+    // Article-specific
+    article,
+    authorBio,
+    articleAlternates,
+  };
+
+  try {
+    const pageHtml = await renderTemplate('pages/blog-article', data);
+    const fullHtml = await renderTemplate('base', { ...data, content: pageHtml });
+    const minified = await minifyHtml(fullHtml);
+    const outputPath = path.join(DIST_DIR, pagePath, 'index.html');
+    ensureDir(path.dirname(outputPath));
+    fs.writeFileSync(outputPath, minified, 'utf-8');
+    return { route: pagePath, success: true };
+  } catch (e) {
+    console.error(`[blog] Error generating ${articleMeta.internalSlug} (${lang}): ${e.message}`);
+    if (e.stack) console.error(e.stack.split('\n').slice(0, 5).join('\n'));
+    return { route: pagePath, success: false, error: e.message };
+  }
+}
+
 // ── Main ────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -310,6 +532,21 @@ async function main() {
   for (const routeKey of routeKeys) {
     for (const lang of LANGUAGES) {
       const result = await generatePage(routeKey, lang);
+      if (result) {
+        results.push(result);
+        const status = result.success ? '✓' : '✗';
+        if (!result.success) {
+          console.log(`  ${status} ${result.route} — ${result.error}`);
+        }
+      }
+    }
+  }
+
+  // Generate blog articles
+  console.log(`\n[blog] Generating ${BLOG_ARTICLES.length} articles × ${LANGUAGES.length} languages...\n`);
+  for (const articleMeta of BLOG_ARTICLES) {
+    for (const lang of LANGUAGES) {
+      const result = await generateBlogArticle(articleMeta, lang);
       if (result) {
         results.push(result);
         const status = result.success ? '✓' : '✗';

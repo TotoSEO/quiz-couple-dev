@@ -249,8 +249,36 @@
       <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('common:reviews.title', 'Avis des utilisateurs') %></h2>
       <p class="text-muted-foreground"><%= t('common:reviews.description', '') %></p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto" id="reviews-grid">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" id="reviews-grid">
       <!-- Reviews loaded by JS -->
+    </div>
+
+    <!-- Review submission form -->
+    <div class="max-w-lg mx-auto mt-12 glass-card rounded-2xl p-6" id="review-form-section">
+      <h3 class="text-lg font-bold mb-4 text-center"><%= t('common:reviews.formTitle', 'Laissez votre avis') %></h3>
+      <form id="review-form" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1"><%= t('common:reviews.nameLabel', 'Votre prénom') %></label>
+          <input type="text" id="review-name" class="input w-full" placeholder="<%= t('common:reviews.namePlaceholder', 'Prénom') %>" required maxlength="50">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1"><%= t('common:reviews.ratingLabel', 'Note') %></label>
+          <div class="flex gap-1" id="review-stars">
+            <% for (var s = 1; s <= 5; s++) { %>
+            <button type="button" data-star="<%= s %>" class="star-btn p-1 transition-transform hover:scale-110" aria-label="<%= s %> étoiles">
+              <svg viewBox="0 0 24 24" class="w-8 h-8 <%= s <= 5 ? 'star-filled' : 'star-empty' %>"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </button>
+            <% } %>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1"><%= t('common:reviews.commentLabel', 'Votre avis') %></label>
+          <textarea id="review-comment" class="textarea w-full" rows="3" placeholder="<%= t('common:reviews.commentPlaceholder', 'Partagez votre expérience...') %>" required minlength="10" maxlength="500"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-full" id="review-submit"><%= t('common:reviews.submit', 'Envoyer mon avis') %></button>
+        <p id="review-success" class="hidden text-sm text-emerald-600 text-center font-medium"><%= t('common:reviews.successMessage', 'Merci ! Votre avis sera publié après modération.') %></p>
+        <p id="review-error" class="hidden text-sm text-destructive text-center"></p>
+      </form>
     </div>
   </div>
 </section>
@@ -341,5 +369,59 @@
       grid.innerHTML = html;
     })
     .catch(function() {});
+  })();
+
+  // Review form
+  (function() {
+    var SUPABASE_URL = '<%= supabaseUrl %>';
+    var SUPABASE_KEY = '<%= supabaseKey %>';
+    var form = document.getElementById('review-form');
+    if (!form) return;
+
+    var selectedRating = 5;
+    var starBtns = document.querySelectorAll('#review-stars .star-btn');
+    starBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        selectedRating = parseInt(this.dataset.star);
+        starBtns.forEach(function(b) {
+          var val = parseInt(b.dataset.star);
+          b.querySelector('svg').className = 'w-8 h-8 ' + (val <= selectedRating ? 'star-filled' : 'star-empty');
+        });
+      });
+    });
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = document.getElementById('review-name').value.trim();
+      var comment = document.getElementById('review-comment').value.trim();
+      if (!name || !comment || comment.length < 10) return;
+
+      var submitBtn = document.getElementById('review-submit');
+      submitBtn.disabled = true;
+      submitBtn.textContent = '...';
+
+      fetch(SUPABASE_URL + '/rest/v1/reviews', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ author_name: name, comment: comment, rating: selectedRating, is_approved: false })
+      })
+      .then(function(res) {
+        if (res.ok || res.status === 201) {
+          form.style.display = 'none';
+          document.getElementById('review-success').classList.remove('hidden');
+        } else { throw new Error('failed'); }
+      })
+      .catch(function() {
+        document.getElementById('review-error').textContent = 'Erreur, veuillez réessayer.';
+        document.getElementById('review-error').classList.remove('hidden');
+        submitBtn.disabled = false;
+        submitBtn.textContent = '<%= t("common:reviews.submit", "Envoyer mon avis") %>';
+      });
+    });
   })();
 </script>
