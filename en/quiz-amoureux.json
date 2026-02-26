@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "badge": "Quiz for couples",
+    "title": "Love Quiz:",
+    "titleHighlight": "Are You Truly Made for Each Other?",
+    "description": "20 statements to measure the strength of your love. Debate together, find agreement and discover your compatibility score!",
+    "statements": "20 statements",
+    "score": "Score out of 100",
+    "results": "Instant results"
+  },
+  "seo": {
+    "whyTitle": "Why Take This Love Quiz Together?",
+    "whySubtitle": "A quiz designed to strengthen your bond and understand each other better.",
+    "card1Title": "Open the Dialogue",
+    "card1Text": "Every statement is an opportunity for discussion. Express your feelings and listen to your partner's.",
+    "card2Title": "Measure Your Love",
+    "card2Text": "Objectively discover where you stand in your relationship and identify your couple's strengths.",
+    "card3Title": "Strengthen Your Bond",
+    "card3Text": "Simply taking this quiz together shows your commitment to the relationship. That's already a proof of love!",
+    "card4Title": "Celebrate Your Couple",
+    "card4Text": "Whatever your score, this quiz allows you to celebrate your story and remember why you're together.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "How does this love quiz work?",
+    "faq1A": "You answer together 20 statements by rating your level of agreement from 1 to 5. Debate if necessary to find a consensus!",
+    "faq2Q": "How long does the quiz take?",
+    "faq2A": "About 10 to 15 minutes, depending on how much time you take to discuss each statement. Take your time!",
+    "faq3Q": "Is the quiz really free?",
+    "faq3A": "Yes, 100% free and no registration required. Your answers are not saved, you can retake the quiz as many times as you want.",
+    "faq4Q": "What does our score mean?",
+    "faq4A": "Your score reflects your level of agreement on key aspects of the relationship. A high score indicates strong harmony, but it's just a fun indicator!"
+  }
+}

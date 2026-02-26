@@ -1,0 +1,97 @@
+{
+  "testCouple": {
+    "title": "Couple Compatibility Test - Free 20 Question Quiz",
+    "shortTitle": "Couple Test",
+    "description": "Answer 20 questions to evaluate your relationship strength and discover your strengths.",
+    "metaDescription": "Free couple compatibility test: 20 questions to evaluate your relationship. Discover your strengths and areas to improve as a couple. No signup required!"
+  },
+  "testCommonPoints": {
+    "title": "Couples Common Points Test - 200 Questions | Free",
+    "shortTitle": "Common Points Test",
+    "description": "Measure your common points with 200 questions! Take turns answering and discover your compatibility level.",
+    "metaDescription": "Free common points test for couples with 200 questions. Take turns answering and discover your compatibility percentage. No registration!"
+  },
+  "testDistance": {
+    "title": "Long Distance Relationship Quiz - 100 Free Questions",
+    "shortTitle": "Distance Quiz",
+    "description": "100 questions to evaluate the strength of your long-distance relationship and strengthen your bond.",
+    "metaDescription": "Free long distance relationship quiz: 100 questions to test your connection and strengthen your bond across the miles. Instant results!"
+  },
+  "testToxic": {
+    "title": "Toxic Relationship Test - 25 Questions | Free & Confidential",
+    "shortTitle": "Toxic Test",
+    "description": "25 questions to identify signs of a toxic relationship and take care of yourself.",
+    "metaDescription": "Free toxic relationship test: 25 questions to identify warning signs and evaluate your couple dynamics. 100% confidential, instant results."
+  },
+  "quizAmoureux": {
+    "title": "Love Quiz for Couples - Are You Made for Each Other?",
+    "shortTitle": "Love Quiz",
+    "description": "20 questions to debate together and measure your couple harmony.",
+    "metaDescription": "Free interactive love quiz for couples: debate 20 statements together and discover your compatibility score. Fun, fast and free!"
+  },
+  "quizCoquin": {
+    "title": "Spicy Couple Quiz - 60 Questions to Spice Up Your Love",
+    "shortTitle": "Spicy Quiz",
+    "description": "60 questions to spice up your relationship and better understand your partner's desires.",
+    "metaDescription": "Spicy quiz for couples: 60 intimate questions to explore desires and reignite the spark. Free, confidential, no registration needed."
+  },
+  "quizMarrant": {
+    "title": "Funny Couple Quiz - 150+ Fun Questions | Free",
+    "shortTitle": "Funny Quiz",
+    "description": "Laugh together with over 150 funny questions! A fun and light quiz to have a good time together.",
+    "metaDescription": "Funny couple quiz with 150+ hilarious questions! Laugh together, tease each other and create memories. Free, no signup required."
+  },
+  "quizKnowledge": {
+    "title": "Who Knows Their Partner Best? - Couple Quiz | Free",
+    "shortTitle": "Who Knows Best?",
+    "description": "Take turns with questions and discover who knows their partner best! 100 questions to test your bond.",
+    "metaDescription": "Interactive couples quiz: who knows their partner best? 100 questions to guess in turns. Free, fun and perfect for date night!"
+  },
+  "quizMost": {
+    "title": "Who Is Most Likely To? - 240+ Free Questions",
+    "shortTitle": "Who Is Most Likely?",
+    "description": "2 to 8 players, vote together to discover who is the funniest, most talkative, most romantic... 240+ fun questions!",
+    "metaDescription": "Who Is Most Likely To? quiz with 240+ questions for 2-8 players. Vote, laugh and discover who's the funniest, most romantic... Free!"
+  },
+  "questionsCouple": {
+    "title": "120 Questions for Couples to Ask Each Other | Free",
+    "shortTitle": "Questions",
+    "description": "120 questions sorted by theme to know each other better, strengthen your bond, and create authentic moments of exchange.",
+    "metaDescription": "120 couple questions in 5 categories: getting to know each other, future plans, intimacy, fun and deep questions. Free, no registration."
+  },
+  "problemResolver": {
+    "title": "Solve Couple Problems with AI - Free Advice",
+    "shortTitle": "Problem Solver",
+    "description": "Our AI analyzes your situation and gives you personalized advice to resolve your conflicts.",
+    "metaDescription": "Resolve couple conflicts for free with AI. Get an impartial analysis and personalized advice. 100% confidential."
+  },
+  "testCoupleSain": {
+    "title": "Healthy Relationship Test - Is Your Couple Solid?",
+    "shortTitle": "Healthy Couple Test",
+    "description": "A quiz for two to evaluate if your relationship is healthy and balanced.",
+    "metaDescription": "Free healthy relationship test: 20 questions for couples to evaluate your bond. Individual scores and advice. No signup!"
+  },
+  "testMariage": {
+    "title": "Marriage Compatibility Test - Free Online!",
+    "shortTitle": "Marriage Test",
+    "description": "30 questions to answer together and verify you're ready to get married.",
+    "metaDescription": "Free marriage compatibility test: 30 questions to check your alignment on finances, children, values and communication. No signup!"
+  },
+  "testDivorce": {
+    "title": "Should I Divorce? Free Online Test",
+    "shortTitle": "Divorce Test",
+    "h1": "Should I Get a Divorce? Free Self-Assessment Test",
+    "heroSubtitle": "A compassionate self-assessment tool to help you see things more clearly",
+    "description": "25 questions to help you honestly assess your relationship.",
+    "metaDescription": "Wondering if you should divorce? This free 25-question test helps you honestly assess your relationship. Instant result, no judgment.",
+    "startSubtitle": "Free, anonymous, no email, no strings attached",
+    "emergencyNotice": "If you are in danger, call the <strong>National Domestic Violence Hotline</strong> at <strong>1-800-799-7233</strong> (USA) or <strong>0808 2000 247</strong> (UK). In an emergency, call <strong>911</strong> (USA) or <strong>999</strong> (UK).",
+    "emergencyResult": "Need help? If you are in danger, contact the <strong>National Domestic Violence Hotline</strong> at <strong>1-800-799-7233</strong> (USA) or <strong>0808 2000 247</strong> (UK)."
+  },
+  "quizAdo": {
+    "title": "Teen Couple Quiz: Will You Stay Together?",
+    "shortTitle": "Teen Quiz",
+    "description": "20 questions to find out if your relationship is really solid or just a phase. Play together remotely!",
+    "metaDescription": "Teen couple quiz: 20 questions to find out if your relationship is solid or just a phase. Play together remotely, instant results!"
+  }
+}

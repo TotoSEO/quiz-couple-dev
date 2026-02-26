@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "title": "Quiz - Wer ist am meisten... ?",
+    "description": "Das ideale Spiel, um herauszufinden, was eure Freunde wirklich über euch denken!",
+    "descriptionBold": "240+ Fragen",
+    "descriptionEnd": "für stundenlangen Spaß unter Freunden oder als Paar."
+  },
+  "howToPlay": {
+    "title": "Wie spielt man das Quiz \"Wer ist am meisten\"?",
+    "step1Title": "1. Spieler hinzufügen",
+    "step1Text": "Gebt die Vornamen von 2 bis 8 Teilnehmern ein. Je mehr ihr seid, desto lustiger wird es!",
+    "step2Title": "2. Gemeinsam abstimmen",
+    "step2Text": "Diskutiert bei jeder Frage und wählt, wer am besten zur Beschreibung passt.",
+    "step3Title": "3. Das Ergebnis entdecken",
+    "step3Text": "Am Ende erfahrt ihr, wer am häufigsten gewählt wurde, und teilt eure Ergebnisse!"
+  },
+  "whyPopular": {
+    "title": "Warum ist das Quiz \"Wer ist am meisten\" so beliebt?",
+    "item1Title": "Das perfekte Spiel für einen lustigen Abend",
+    "item1Text": "Das Quiz \"Wer ist am meisten?\" ist ein Muss für Partys mit Freunden. Einfach zu verstehen, lustig und manchmal überraschend, schafft es unvergessliche Momente der Komplizenschaft.",
+    "item2Title": "Ideal, um sich unter Freunden oder als Paar besser kennenzulernen",
+    "item2Text": "Ob als Paar, langjährige Freunde oder neue Bekanntschaften – dieses Quiz zeigt, wie andere euch wahrnehmen. Eine spielerische Art, Bindungen zu stärken.",
+    "item3Title": "Fragen für jeden Geschmack",
+    "item3Text": "Unsere Datenbank mit <strong>über 240 \"Wer ist am meisten\"-Fragen</strong> deckt alle Themen ab: von klassischen und familienfreundlichen bis hin zu pikanten Fragen für Erwachsene."
+  },
+  "examples": {
+    "title": "240+ \"Wer ist am meisten\"-Fragen für stundenlangen Spaß",
+    "subtitle": "Entdeckt einen Vorgeschmack auf die Fragen, die euch in unserem kostenlosen interaktiven Quiz erwarten!",
+    "classicTitle": "Klassische Fragen",
+    "classicQuestions": ["Wer ist am gesprächigsten?", "Wer ist am lustigsten?", "Wer ist am intelligentesten?", "Wer ist am verfressensten?", "Wer ist am faulsten?"],
+    "funTitle": "Lustige und ausgefallene Fragen",
+    "funQuestions": ["Wer ist am süchtigsten nach Netflix und Snacks?", "Wer spricht am ehesten über den Ex?", "Wer ist am tollpatschigsten beim Flirten?", "Wer ist am süchtigsten nach Benachrichtigungen?", "Wer lügt am meisten?"],
+    "intimateTitle": "Intimere Fragen",
+    "intimateQuestions": ["Wer ist heimlich am romantischsten?", "Wer ist am eifersüchtigsten?", "Wer bewahrt die meisten Geheimnisse?", "Wer ist am empfindlichsten für Komplimente?", "Wer ist seinen Gewohnheiten am treusten?"]
+  },
+  "tips": {
+    "title": "Unsere Tipps für ein gelungenes \"Wer ist am meisten\"-Quiz",
+    "tip1Title": "Spielt ehrlich",
+    "tip1Text": "Am lustigsten ist es, ehrlich zu antworten! Ehrliche Antworten schaffen die besten Momente voller Lachen und Komplizenschaft.",
+    "tip2Title": "Diskutiert zusammen vor dem Abstimmen",
+    "tip2Text": "Nehmt euch Zeit zum Diskutieren vor jeder Antwort. Die Debatten sind oft lustiger als das Endergebnis!",
+    "tip3Title": "Akzeptiert die Ergebnisse mit Humor",
+    "tip3Text": "Keine Empfindlichkeiten! Das Quiz ist zum Spaß haben gemacht. Wenn ihr als \"der Sturste\" gewählt werdet, nehmt es mit einem Lächeln!"
+  },
+  "faq": {
+    "title": "FAQ - Häufig gestellte Fragen",
+    "q1": "Wie spielt man das Quiz \"Wer ist am meisten\"?",
+    "a1": "Ganz einfach! Gebt die Vornamen von 2 bis 8 Spielern ein, beantwortet gemeinsam 20 zufällig ausgewählte Fragen aus über 240. Bei jeder Frage stimmt für die Person ab, die am besten passt. Am Ende erfahrt ihr, wer am häufigsten gewählt wurde!",
+    "q2": "Wie viele Fragen enthält das Quiz \"Wer ist am meisten\"?",
+    "a2": "Unser Quiz enthält über 240 verschiedene Fragen. Jede Runde wählt 20 zufällig aus, sodass ihr viele Male spielen könnt, ohne dieselben Fragen zu bekommen!",
+    "q3": "Ist das Quiz \"Wer ist am meisten\" kostenlos?",
+    "a3": "Ja, das Quiz ist 100% kostenlos und ohne Anmeldung. Ihr könnt so oft spielen wie ihr wollt, mit verschiedenen Fragen in jeder Runde.",
+    "q4": "Kann man mit mehr als 2 Personen spielen?",
+    "a4": "Absolut! Das Quiz ist für 2 bis 8 Spieler konzipiert. Je mehr ihr seid, desto lustiger! Perfekt für Partys mit Freunden oder der Familie.",
+    "q5": "Sind die Fragen für alle Altersgruppen geeignet?",
+    "a5": "Unsere Fragen reichen von klassisch bis pikant. Die meisten sind für alle geeignet, aber einige freche Fragen sind für ein erwachsenes Publikum bestimmt.",
+    "q6": "Wie startet man mit neuen Fragen neu?",
+    "a6": "Am Ende jeder Runde habt ihr zwei Optionen: \"Mit anderen Fragen neu starten\" um dieselben Spieler zu behalten aber 20 neue zufällige Fragen zu bekommen, oder \"Spieler wechseln\" um von vorne zu beginnen."
+  },
+  "cta": {
+    "title": "Bereit zu entdecken, wer am meisten... ?",
+    "text": "Scrollt zurück nach oben, um euer kostenloses Quiz mit euren Freunden zu starten!",
+    "button": "Quiz jetzt starten"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "badge": "Free • No signup • 5 min",
+    "title": "Test Your Relationship: The Quiz for Two",
+    "description": "20 questions to discover your compatibility level. Take turns and see if you're truly on the same wavelength!",
+    "duration": "5 minutes",
+    "players": "2 players",
+    "questions": "20 questions"
+  },
+  "seo": {
+    "whyTitle": "Why Test Your Relationship?",
+    "card1Title": "Strengthen Your Connection",
+    "card1Text": "Discover your <a href=\"https://quiz-couple.com/en/couple-common-points-test\">common ground</a> and better understand the differences that enrich your relationship.",
+    "card2Title": "Open the Dialogue",
+    "card2Text": "Every question is an opportunity for discussion and sharing with your partner.",
+    "card3Title": "Identify Areas for Growth",
+    "card3Text": "Your score helps you see where you can grow together and which aspects of your relationship deserve attention.",
+    "card4Title": "Have Fun Together",
+    "card4Text": "Beyond the score, it's a playful and intimate moment to share as a couple.",
+    "howTitle": "How Does It Work?",
+    "step1Title": "Enter your names",
+    "step1Text": "Enter the names and genders of both players",
+    "step2Title": "Answer in turns",
+    "step2Text": "For each question, player 1 answers first, then player 2",
+    "step3Title": "Discover your score",
+    "step3Text": "The more identical answers you have, the higher your score!",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "Is the couple test really free?",
+    "faq1A": "Yes, our couple test is 100% free and requires no registration. You can take it as many times as you like.",
+    "faq2Q": "How long does the test take?",
+    "faq2A": "The test takes about 5 minutes. It includes 20 questions that both partners answer in turns.",
+    "faq3Q": "How is the score calculated?",
+    "faq3A": "The score is based on the number of identical answers between both partners. The more you answer the same, the higher your compatibility score!"
+  }
+}

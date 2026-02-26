@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "title": "120 Fragen für Paare, die man sich stellen sollte",
+    "description": "Fragen nach Themen sortiert, um sich besser kennenzulernen, die Komplizenschaft zu stärken und authentische Momente des Austauschs zu schaffen."
+  },
+  "random": { "button": "Zufallsfrage" },
+  "seo": {
+    "s1": {
+      "title": "Warum sich als Paar Fragen stellen?",
+      "p1": "Kommunikation ist die Säule einer erfüllten Beziehung. Sich Fragen zu stellen hilft, eine authentische Verbindung aufrechtzuerhalten und die Routine zu vermeiden, die sich manchmal in Beziehungen einschleicht. Selbst nach Jahren des Zusammenlebens gibt es immer noch Neues am anderen zu entdecken.",
+      "p2": "Studien der Beziehungspsychologie zeigen, dass Paare, die regelmäßig über ihre Emotionen, Wünsche und Pläne sprechen, ein tieferes gegenseitiges Verständnis entwickeln. Diese Gespräche stärken die Komplizenschaft, schaffen gemeinsame Erinnerungen und helfen, die Bedürfnisse, Träume und Sorgen des Partners besser zu verstehen.",
+      "p3": "Seinem Partner Fragen zu stellen bedeutet auch, echtes Interesse über den Alltag hinaus zu zeigen. Es ist ein Akt des aktiven Zuhörens, der Vertrauen und emotionale Intimität nährt. Ob am Anfang der Beziehung oder seit Jahren zusammen – diese Momente des Austauschs sind entscheidend, um die Beziehung lebendig zu halten."
+    },
+    "s2": {
+      "title": "Die 5 Kategorien der Paar-Fragen",
+      "intro": "Unsere 120 Fragen sind in 5 ergänzende Themenbereiche unterteilt, die alle Aspekte eurer Beziehung abdecken. Jede Kategorie erfüllt ein spezifisches Bedürfnis und ermöglicht es, eine andere Facette eurer Partnerschaft zu erkunden.",
+      "tableHeaders": { "category": "Kategorie", "goal": "Ziel", "example": "Beispielfrage", "count": "Anzahl" },
+      "rows": [
+        { "cat": "🧠 Sich kennenlernen", "goal": "Das gegenseitige Wissen über das Offensichtliche hinaus vertiefen", "example": "Welche vergangene Entscheidung hat dich am meisten verändert?", "count": "24" },
+        { "cat": "🚀 Zukunftspläne", "goal": "Visionen abstimmen und gemeinsam aufbauen", "example": "Wo siehst du dich in 5 Jahren?", "count": "24" },
+        { "cat": "💕 Intimität", "goal": "Die emotionale und affektive Bindung stärken", "example": "Was gibt dir das Gefühl, am meisten geliebt zu werden?", "count": "24" },
+        { "cat": "😄 Spaß", "goal": "Leichtigkeit und Lachen in eure Beziehung bringen", "example": "Wenn unser Paar ein Film wäre, wie hieße er?", "count": "24" },
+        { "cat": "💭 Tiefgründige Fragen", "goal": "Werte, Ängste und Lebensphilosophie erkunden", "example": "Was gibt deinem Leben Sinn?", "count": "24" }
+      ],
+      "outro": "Diese thematische Vielfalt ermöglicht es euch, die Gespräche je nach Stimmung zu variieren: ein leichtes Gespräch nach dem Abendessen, eine tiefgründige Diskussion bei einem Spaziergang oder ein intimer Moment der Komplizenschaft vor dem Einschlafen."
+    },
+    "s3": {
+      "title": "Wann diese Paar-Fragen verwenden?",
+      "intro": "Es gibt keinen falschen Zeitpunkt, um sich als Paar Fragen zu stellen. Hier sind Situationen, in denen diese Fragen besonders nützlich sind:",
+      "items": [
+        { "title": "Am Beziehungsbeginn", "desc": "Die ersten Monate sind entscheidend für den Aufbau solider Grundlagen. Diese Fragen helfen euch, über oberflächliche Gespräche hinauszugehen und die tiefere Persönlichkeit des anderen zu entdecken." },
+        { "title": "Nach mehreren Jahren zusammen", "desc": "Routine kann die Neugier abstumpfen. Neue Fragen zu stellen hilft, den Partner wiederzuentdecken, die Flamme neu zu entfachen und die Beziehung lebendig zu halten." },
+        { "title": "In einer Fernbeziehung", "desc": "Wenn Kilometer euch trennen, ist Kommunikation euer einziges Band. Diese Fragen verwandeln einen gewöhnlichen Videoanruf in einen echten Moment der Verbindung." },
+        { "title": "Bei einem Abend zu zweit", "desc": "Statt auf einen Bildschirm zu schauen, verwandelt euren Abend in ein komplizenschaftliches Frage-Antwort-Spiel. Ein Glas Wein, keine Telefone, und Fragen, die zählen." },
+        { "title": "In einer Phase des Hinterfragens", "desc": "Wenn Zweifel oder Spannungen aufkommen, öffnen diese Fragen den Dialog auf wohlwollende Weise, ohne direkte Konfrontation." }
+      ]
+    },
+    "s4": {
+      "title": "Wie diese Fragen richtig nutzen? Unsere Tipps",
+      "intro": "Um das Beste aus diesen Fragen herauszuholen und sie zu einem echten Qualitätsmoment zu machen, hier unsere praktischen Empfehlungen:",
+      "tips": [
+        { "emoji": "🎯", "title": "Beschränkt euch auf 3-5 Fragen pro Sitzung", "desc": "Ein qualitativ hochwertiger Austausch ist besser als ein Verhör. Stellt einige Fragen und nehmt euch die Zeit, die Antworten wirklich zu hören. Lasst das Gespräch natürlich fließen." },
+        { "emoji": "👂", "title": "Übt aktives Zuhören", "desc": "Denkt nicht an eure nächste Frage, während der andere spricht. Hört wirklich zu, stellt Nachfragen, zeigt, dass euch die Antwort aufrichtig interessiert." },
+        { "emoji": "🛑", "title": "Respektiert die Grenzen", "desc": "Wenn eine Frage euren Partner unangenehm berührt, wechselt ohne Druck zur nächsten. Jeder hat sein eigenes Tempo und seine Komfortzonen. Das Ziel ist Nähe, nicht erzwungene Geständnisse." },
+        { "emoji": "💖", "title": "Schafft ein wohlwollendes Klima", "desc": "Kein Urteil, kein Spott. Ein sicherer Raum, in dem sich jeder frei ausdrücken kann, ist die wesentliche Voraussetzung dafür, dass diese Fragen Früchte tragen." },
+        { "emoji": "🔄", "title": "Beantwortet die Fragen auch selbst", "desc": "Der Austausch sollte gegenseitig sein. Nachdem ihr die Antwort eures Partners gehört habt, teilt eure eigene. Diese Gegenseitigkeit schafft die wahre Verbindung." }
+      ]
+    },
+    "s5": {
+      "title": "An wen richten sich diese Fragen?",
+      "p1": "Diese 120 Fragen sind für alle Arten von Paaren konzipiert, unabhängig von der Dauer oder Konstellation:",
+      "audiences": [
+        { "title": "Neue Paare", "desc": "In der Entdeckungsphase beschleunigen diese Fragen das gegenseitige Kennenlernen und legen von Anfang an die Grundlagen für offene Kommunikation." },
+        { "title": "Langjährige Paare", "desc": "Seit Jahren zusammen, denkt ihr, alles über den anderen zu wissen? Diese Fragen werden euch vom Gegenteil überzeugen und eure Neugier neu entfachen." },
+        { "title": "Fernbeziehungen", "desc": "Geografisch getrennt, sind diese Fragen ein wertvolles Werkzeug, um trotz der Entfernung eine starke Bindung aufrechtzuerhalten." },
+        { "title": "Paare in Wiederverbindung", "desc": "Nach einer schwierigen Phase oder zu viel Routine helfen diese Fragen, den Weg zum Dialog wiederzufinden." }
+      ]
+    },
+    "s6": {
+      "title": "Die bewiesenen Vorteile der Paarkommunikation",
+      "p1": "Die Forschung in der Psychologie bestätigt, was viele Paare ahnen: Regelmäßige und tiefgehende Kommunikation ist der beste Indikator für die Langlebigkeit einer Beziehung. Paare, die Gesprächsrituale pflegen, berichten von einer deutlich höheren Beziehungszufriedenheit.",
+      "p2": "Konkrete Vorteile umfassen ein besseres Konfliktmanagement (weil man die Reaktionen des anderen besser versteht), eine gestärkte emotionale Intimität, eine erhöhte Fähigkeit, Herausforderungen gemeinsam zu meistern, und schlicht mehr Momente geteilter Freude.",
+      "p3": "Unsere 120 Fragen sind als praktisches Werkzeug gedacht, um diese Momente des Austauschs ohne Druck oder Formalismus in euren Alltag zu integrieren. Wählt eine zufällige Frage, startet das Thema und lasst die Magie des Gesprächs wirken."
+    },
+    "faqTitle": "Häufig gestellte Fragen zu Paar-Fragen",
+    "faq": [
+      { "q": "Wie viele Fragen hintereinander stellen?", "a": "Wir empfehlen 3 bis 5 Fragen pro Sitzung, um den Austausch natürlich zu halten. Das Ziel ist ein echter Dialog, kein Fragebogen." },
+      { "q": "Ist das für alle Paare geeignet?", "a": "Ja, diese Fragen sind für alle Paare konzipiert, ob seit Wochen oder Jahren zusammen. Die 5 Kategorien ermöglichen die Wahl der passenden Tiefe für eure Situation." },
+      { "q": "Kann man diese Fragen auf Distanz nutzen?", "a": "Auf jeden Fall! Ideal für Fernbeziehungen. Ihr könnt sie beim Videoanruf, per Nachricht oder sogar als tägliche Frage aneinander nutzen, um die Verbindung zu pflegen." },
+      { "q": "Was tun, wenn eine Frage unangenehm ist?", "a": "Wechselt einfach ohne Druck zur nächsten Frage. Die Grenzen des anderen zu respektieren ist wesentlich für ein Klima des Vertrauens." },
+      { "q": "Muss man alle Fragen beantworten?", "a": "Nein, wählt die aus, die euch ansprechen und zum Moment passen. Die Qualität des Austauschs zählt, nicht die Menge der Fragen." },
+      { "q": "Wie oft sollte man diese Fragen nutzen?", "a": "Es gibt keine feste Regel. Manche Paare mögen eine Frage pro Tag, andere eine Sitzung mit 5 Fragen am Wochenende. Findet den Rhythmus, der zu euch passt." },
+      { "q": "Können diese Fragen eine Paartherapie ersetzen?", "a": "Nein, sie sind ein ergänzendes Kommunikationswerkzeug. Bei ernsthaften Schwierigkeiten empfehlen wir professionelle Hilfe. Unsere Fragen können jedoch eine ausgezeichnete Ergänzung sein." }
+    ]
+  },
+  "conclusion": "Diese 120 Fragen sind da, um euch zu helfen, Momente des aufrichtigen Austauschs mit eurem Partner zu schaffen. Nehmt euch Zeit zum Zuhören, Entdecken und Stärken eurer Verbindung.",
+  "scrollTop": "Mit einer Zufallsfrage beginnen"
+}

@@ -1,0 +1,158 @@
+{
+  "seo": {
+    "title": "Free Online Couple Quizzes!",
+    "description": "Discover our free couple quizzes! Test your relationship, strengthen your bond and have fun together. No registration required, instant results.",
+    "schemaDescription": "Free quiz platform to test and strengthen your couple relationship"
+  },
+  "hero": {
+    "badge": "100% free, no registration",
+    "title": "Test your relationship with our",
+    "titleHighlight": "couple quizzes",
+    "description": "Discover your level of compatibility, explore your connection and have fun together with our interactive quizzes.",
+    "descriptionHighlight": "Instant results and personalized advice!",
+    "cta": "Start the quiz",
+    "ctaSecondary": "See questions",
+    "stats": {
+      "couples": "1000+",
+      "couplesLabel": "couples tested",
+      "quizzes": "12 quizzes",
+      "quizzesLabel": "available"
+    }
+  },
+  "quizSection": {
+    "title": "Our free quizzes for",
+    "titleHighlight": "couples",
+    "description": "Choose the quiz that suits you and learn more about your relationship. All our quizzes are free, no registration required, and results are immediate!",
+    "questionsCard": {
+      "title": "120 questions for couples",
+      "subtitle": "Discover them for your evenings together",
+      "button": "See questions"
+    }
+  },
+  "aiResolver": {
+    "badge": "New",
+    "title": "Solve your couple problems",
+    "titleHighlight": "with AI!",
+    "description": "Have a dispute to resolve? Our artificial intelligence analyzes your situation in a",
+    "descriptionHighlight": "100% impartial",
+    "descriptionEnd": "way and helps you find a solution.",
+    "cardTitle": "A neutral and objective analysis",
+    "cardDescription": "Describe your situation, each person gives their version of the facts, and the AI provides you with an analysis including the distribution of responsibilities and personalized advice to move forward together.",
+    "features": {
+      "confidential": "100% Confidential",
+      "free": "Free",
+      "impartial": "Impartial AI"
+    },
+    "cta": "Try it now"
+  },
+  "whatIs": {
+    "title": "What is a",
+    "titleHighlight": "couple quiz",
+    "paragraph1": "A couple quiz is a",
+    "paragraph1Highlight": "fun questionnaire",
+    "paragraph1End": "designed especially for romantic partners. It allows you to evaluate different aspects of your relationship: communication, intimacy, common projects, and much more.",
+    "paragraph2": "Our quizzes are designed to be",
+    "paragraph2Highlight": "fun and constructive",
+    "paragraph2End": ". Far from complex psychological tests, they offer you a moment of complicity to share together.",
+    "features": [
+      "Fun and caring questions",
+      "Suitable for all couples",
+      "No registration required",
+      "Immediate and personalized results"
+    ],
+    "imageAlt": "Illustration of a couple quiz",
+    "stats": {
+      "quizzes": "12",
+      "quizzesLabel": "quizzes available",
+      "questions": "800+",
+      "questionsLabel": "questions to discover"
+    }
+  },
+  "whyDoQuiz": {
+    "title": "What's the point of taking",
+    "titleHighlight": "these quizzes",
+    "subtitle": "More than just a game, our quizzes are a tool to enrich your relationship",
+    "reasons": {
+      "testRelation": {
+        "title": "Test your relationship",
+        "description": "Evaluate your compatibility and identify your strengths to build an even stronger relationship."
+      },
+      "haveFun": {
+        "title": "Have fun together",
+        "description": "Turn an ordinary moment into a couple game. Laugh, debate and create memories together."
+      },
+      "discover": {
+        "title": "Discover each other",
+        "description": "Learn surprising things about your partner, even after years together."
+      },
+      "strengthen": {
+        "title": "Strengthen your bond",
+        "description": "Create moments of authentic connection and strengthen the ties that bind you."
+      },
+      "dialogue": {
+        "title": "Open dialogue",
+        "description": "Start deep and sincere conversations on topics you don't address daily."
+      },
+      "memories": {
+        "title": "Create memories",
+        "description": "Share a unique experience together and keep a memory of this moment of complicity."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How does it",
+    "titleHighlight": "work",
+    "subtitle": "Simple, fast and fun: in just 3 steps",
+    "steps": {
+      "choose": {
+        "step": "1",
+        "title": "Choose your quiz",
+        "description": "Select from our quizzes the one that matches your current mood."
+      },
+      "answer": {
+        "step": "2",
+        "title": "Answer together",
+        "description": "Get comfortable and answer the questions together."
+      },
+      "results": {
+        "step": "3",
+        "title": "Discover your results",
+        "description": "Get your score, personalized advice and share your results!"
+      }
+    }
+  },
+  "finalCTA": {
+    "title": "Ready to test your",
+    "titleHighlight": "bond",
+    "description": "Choose your favorite quiz and discover what makes your couple unique. It's free, no registration required, and it only takes a few minutes!",
+    "button": "Start now",
+    "socialProof": "Already",
+    "socialProofCount": "1000+ couples",
+    "socialProofEnd": "have tested their bond 💕"
+  },
+  "latestArticles": {
+    "title": "Latest articles",
+    "titleHighlight": "from the blog",
+    "intro": "In addition to the couple games you'll find on the site, we have a blog that we update as often as possible. Dating app reviews, relationship advice, or flirting tips — we diversify our content as much as we can, for you, with passion."
+  },
+  "quizGrid": {
+    "testsTitle": "Our Couple Tests",
+    "testsDesc": "Evaluate your relationship with our compatibility and self-assessment tests",
+    "quizzesTitle": "Our Couple Quizzes",
+    "quizzesDesc": "Interactive and fun games to play together and strengthen your bond",
+    "cards": {
+      "testCouple": "20 questions to evaluate your relationship.",
+      "testCommonPoints": "Do you have things in common with your partner?",
+      "testDistance": "Find out if your relationship can handle the distance.",
+      "testToxic": "Identify the signs of an unhealthy relationship.",
+      "testCoupleSain": "Evaluate if your relationship is healthy and balanced.",
+      "testMariage": "30 questions to find out if you're ready to get married.",
+      "testDivorce": "25 questions to honestly assess your relationship.",
+      "quizAmoureux": "Debate together and measure your harmony.",
+      "quizCoquin": "Explore your desires and spice up your relationship.",
+      "quizMarrant": "Laugh together with hilarious questions!",
+      "quizKnowledge": "Who knows the other best? Challenge each other!",
+      "quizMost": "Vote to find out who is the most... among you!"
+    }
+  }
+}

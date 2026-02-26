@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "testCouple": "Beziehungstest",
+    "testCommonPoints": "Gemeinsamkeiten-Test",
+    "testDistance": "Fernbeziehungs-Test",
+    "testToxic": "Toxische Beziehung Test",
+    "testCoupleSain": "Gesunde Beziehung Test",
+    "testMariage": "Ehe-Test",
+    "testDivorce": "Scheidungstest",
+    "quizAmoureux": "Liebes-Quiz",
+    "quizCoquin": "Pikantes Quiz",
+    "quizMarrant": "Lustiges Quiz",
+    "quizKnowledge": "Wer kennt besser?",
+    "quizMost": "Wer ist am meisten...?",
+    "questionsCouple": "Fragen für Paare",
+    "problemResolver": "Problem lösen",
+    "quizAdo": "Teenager-Quiz",
+    "categoryTests": "Beziehungstests",
+    "categoryQuizzes": "Unsere Paar-Quiz"
+  },
+  "footer": {
+    "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",
+    "ourQuizzes": "Unsere Quiz",
+    "information": "Information",
+    "legalMentions": "Impressum",
+    "privacy": "Datenschutz",
+    "copyright": "Alle Rechte vorbehalten. Mit",
+    "inFrance": "in Frankreich gemacht"
+  },
+  "buttons": {
+    "start": "Starten",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "finish": "Beenden",
+    "restart": "Neustart",
+    "share": "Teilen",
+    "seeResults": "Ergebnisse sehen",
+    "startQuiz": "Quiz starten",
+    "startTest": "Test starten"
+  },
+  "quiz": {
+    "question": "Fragen",
+    "of": "von",
+    "score": "Punktzahl",
+    "result": "Ergebnis",
+    "player1Turn": "Es ist",
+    "player2Turn": "s Runde",
+    "forTwo": "Zu zweit",
+    "players": "2-8 Spieler",
+    "continueAdventure": "Setzt das Abenteuer fort"
+  },
+  "reviews": {
+    "title": "Was Paare denken",
+    "subtitle": "Entdecke die Meinungen derer, die unsere Quiz getestet haben",
+    "leaveReview": "Bewertung abgeben",
+    "averageRating": "Durchschnittliche Bewertung",
+    "basedOn": "basierend auf",
+    "reviews": "Bewertungen",
+    "yourName": "Dein Name",
+    "yourReview": "Deine Bewertung (optional)",
+    "submit": "Absenden",
+    "thankYou": "Danke für deine Bewertung!",
+    "pending": "Deine Bewertung wird moderiert"
+  },
+  "blog": {
+    "pageTitle": "Blog - Tipps und Ratschläge für Paare | Quiz Couple",
+    "pageDescription": "Entdecke unsere Artikel und Tipps, um deine Beziehung zu stärken. Ratschläge, Tests und Reflexionen für ein besseres Verständnis.",
+    "heading": "Blog",
+    "subheading": "Tipps, Ratschläge und Gedanken für Paare",
+    "readArticle": "Artikel lesen",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "quickSummary": "Kurze Zusammenfassung",
+    "tip": "💡 Gut zu wissen",
+    "noArticles": "Noch keine Artikel. Schau bald wieder vorbei!"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "message": "Hoppla! Die gesuchte Seite existiert nicht oder wurde verschoben. Keine Sorge, kehre zur Startseite zurück, um unsere Paar-Quiz zu entdecken.",
+    "backHome": "Zurück zur Startseite",
+    "seeQuestions": "Fragen ansehen"
+  }
+}

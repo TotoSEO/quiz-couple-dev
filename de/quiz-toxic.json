@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "title": "Ist Ihre Beziehung toxisch? Beantworten Sie den Fragebogen",
+    "description": "Ein Selbstbewertungs-Tool, um die Dynamiken Ihrer Beziehung zu verstehen"
+  },
+  "section1": {
+    "title": "Warum brauchen Sie diesen Test heute?",
+    "p1": "Es ist wichtig zu verstehen, warum Sie das Bedürfnis verspüren.",
+    "p2": "In einer toxischen Beziehung ist das häufigste Symptom nicht immer sichtbare Gewalt, sondern <strong class=\"text-foreground\">mentaler Nebel</strong>. Sie wissen nicht mehr, ob Sie zu sensibel sind, ob Sie zu viel verlangen oder ob Sie das Problem sind. Das ist das Wesen der Toxizität: Sie untergräbt das Vertrauen in die eigene Wahrnehmung.",
+    "p3": "Sie suchen diesen Test, um eine <strong class=\"text-foreground\">externe Bestätigung</strong> zu erhalten. Sie brauchen ein objektives Werkzeug, um das zu messen, was von innen wie eine unverständliche emotionale Achterbahn aussieht."
+  },
+  "section2": {
+    "title": "Der Unterschied zwischen einer schwierigen und einer toxischen Beziehung",
+    "p1": "Das ist die Frage, die mir am häufigsten gestellt wird: <em>\"Alle Paare haben <a href=\"https://quiz-couple.com/de/paar-problem-loesen\">Probleme</a>, oder?\"</em>",
+    "p2": "Ja, absolut. Aber der Unterschied ist grundlegend:",
+    "healthy": "<strong class=\"text-foreground\">In einem gesunden Paar in einer Krise</strong> zielt der Konflikt darauf ab, ein Problem zu lösen. Beide Partner fühlen sich auch bei Meinungsverschiedenheiten sicher.",
+    "toxic": "<strong class=\"text-foreground\">In einem toxischen Paar</strong> ist der Konflikt eine Funktionsweise, die darauf abzielt, Macht zu übernehmen oder sich am anderen abzureagieren.",
+    "quote": "Eine schwierige Beziehung ermüdet, aber man kann sich darin ausruhen. Eine toxische Beziehung raubt Ihnen Ihre Essenz und greift Ihr Selbstwertgefühl an."
+  },
+  "section3": {
+    "title": "Interpretation der Testergebnisse",
+    "intro": "Addieren Sie Ihre Punkte. So lesen Sie Ihren Score. Denken Sie daran: Dieses Ergebnis ist ein Indikator für die aktuelle Dynamik, kein Schicksal, aber es sollte ernst genommen werden.",
+    "headerScore": "Gesamtpunktzahl",
+    "headerLevel": "Toxizitätsniveau",
+    "headerAnalysis": "Psychologische Analyse",
+    "row1Score": "0 bis 25 Punkte",
+    "row1Level": "Gesunde Beziehung bis normale Spannung",
+    "row1Analysis": "Ihr Paar durchlebt vielleicht eine Turbulenz, aber die Grundlagen scheinen gesund.",
+    "row2Score": "26 bis 60 Punkte",
+    "row2Level": "Dysfunktionale Beziehung (Orange Zone)",
+    "row2Analysis": "Toxische Dynamiken haben sich etabliert. Tiefgehende Arbeit ist notwendig.",
+    "row3Score": "61 bis 125 Punkte",
+    "row3Level": "Hochgradig toxische Beziehung (Rote Zone)",
+    "row3Analysis": "Gefahr für Ihre psychische Gesundheit. Es ist dringend, sich zu schützen."
+  },
+  "section4": {
+    "title": "Warum sieht man die Toxizität nicht, wenn man mittendrin steckt?",
+    "p1": "Wenn Ihr Score hoch ist, fragen Sie sich vielleicht: <em>\"Wie konnte ich das zulassen?\"</em>. Hier schlägt oft die Schuld zu. Als Therapeut bitte ich Sie, sanft mit sich selbst umzugehen.",
+    "p2": "Wir sehen die Toxizität aus drei biologischen und psychologischen Gründen nicht:",
+    "pillar1Title": "Gewöhnung (Der Frosch-im-heißen-Wasser-Effekt)",
+    "pillar1Text": "Toxizität kommt selten über Nacht. Sie schleicht sich in Mikrodosen ein. Eine kleine Kritik, dann noch eine, dann eine Eifersuchtsszene, gerechtfertigt durch \"zu viel Liebe\". Ihre Schmerztoleranz wurde Stück für Stück verschoben, ohne dass Sie es merkten.",
+    "pillar2Title": "Intermittierende Verstärkung",
+    "pillar2Text": "Das ist die mächtigste Falle. Ein toxisches Paar ist nicht 100% der Zeit schrecklich. Es gibt \"Flitterwochen\"-Momente, großartige Entschuldigungen, intensive Verschmelzungsmomente. Diese Hoffnungsmomente wirken wie eine Droge auf das Gehirn.",
+    "pillar3Title": "Empathie wird gegen Sie verwendet",
+    "pillar3Text": "Menschen in solchen Beziehungen haben oft eine große Empathiefähigkeit. Sie versuchen immer, die Wunden des anderen zu verstehen (<em>\"Er hatte eine schwierige Kindheit\"</em>, <em>\"Sie ist gestresst von der Arbeit\"</em>). Ihre Fähigkeit zu vergeben wird zum Treibstoff der Toxizität."
+  },
+  "section5": {
+    "title": "Die 4 Säulen einer toxischen Dynamik in einer Beziehung",
+    "intro": "Über den Score dieses Tests hinaus müssen Sie die Mechanismen verstehen. Wenn Sie eine dieser Säulen erkennen, ist die Beziehung in Gefahr.",
+    "pillar1Title": "1. Emotionale Entwertung (Gaslighting)",
+    "pillar1Text": "Es bedeutet, Ihre Realität zu leugnen. Wenn Sie sagen <em>\"Du hast mich verletzt\"</em>, antwortet der andere <em>\"Du bist zu empfindlich\"</em>. Mit der Zeit vertrauen Sie Ihren eigenen Emotionen nicht mehr.",
+    "pillar2Title": "2. Versteckte Kontrolle",
+    "pillar2Text": "Kontrolle sieht nicht immer wie Befehle aus. Sie kann als aufdringliche Ratschläge, Schuldzuweisungen (<em>\"Wenn du mich wirklich lieben würdest, würdest du das nicht tun\"</em>) oder strenge Finanzverwaltung auftreten.",
+    "pillar3Title": "3. Umgekehrte Schuld",
+    "pillar3Text": "In einer gesunden Beziehung übernimmt jeder 50% der Verantwortung. In einer toxischen Beziehung tragen Sie 100% der Schuld.",
+    "pillar4Title": "4. Unberechenbarkeit",
+    "pillar4Text": "Sie wissen nie, woran Sie sind. Diese permanente Unsicherheit hält Ihr Nervensystem in Alarmbereitschaft (chronischer Stress), was Ihre physische und mentale Erschöpfung erklärt."
+  },
+  "section6": {
+    "title": "Mein Test zeigt hohe Toxizität: Was tun?",
+    "p1": "Zunächst: Dieser Test ist rein indikativ. Er ist keinesfalls ein exaktes Ergebnis und sollte nicht den Rat eines Fachmanns ersetzen. Wenn Sie glauben, dass Ihre Beziehung wirklich toxisch oder gefährlich ist, kontaktieren Sie echte Spezialisten.",
+    "p2": "Sich der Situation bewusst zu werden ist der schwierigste Schritt, und Sie haben ihn gerade getan. Ein hoher Score bedeutet nicht, dass Sie sofort Ihre Koffer packen müssen (außer bei unmittelbarer körperlicher Gefahr), aber es bedeutet, dass der Status quo keine Option mehr ist.",
+    "dontTitle": "Was Sie NICHT tun sollten",
+    "dont1Title": "Versuchen, den anderen zu \"retten\"",
+    "dont1Text": "Sie können nicht der Therapeut Ihres Partners sein. Toxizität ist eine Funktionsweise, die nur die betroffene Person ändern kann.",
+    "dont2Title": "Brutal mit diesem Test konfrontieren",
+    "dont2Text": "Einem toxischen Partner diesen Test zu zeigen, riskiert eine Krise (<em>\"Dieser Test ist Unsinn\"</em>, <em>\"Du bist die Toxische\"</em>). Behalten Sie dieses Ergebnis für sich, als inneren Kompass.",
+    "doTitle": "Was Sie tun sollten (Erste Schritte der Klarheit)",
+    "do1Title": "Verbinden Sie sich wieder mit der Realität",
+    "do1Text": "Notieren Sie die Fakten. Führen Sie ein sachliches Tagebuch über Streitigkeiten und Worte. Das Nachlesen \"in Ruhe\" hilft gegen den Zweifel.",
+    "do2Title": "Durchbrechen Sie die Isolation",
+    "do2Text": "Sprechen Sie mit einer Vertrauensperson oder idealerweise mit einem Fachmann. Dinge laut auszusprechen macht sie real und verringert ihre Macht.",
+    "do3Title": "Setzen Sie eine Testgrenze",
+    "do3Text": "Setzen Sie eine einfache, aber feste Grenze bei einem inakzeptablen Verhalten. Beobachten Sie die Reaktion. Ein gesunder Partner wird sich entschuldigen und anpassen. Ein toxischer Partner wird den Konflikt eskalieren."
+  },
+  "section7": {
+    "title": "Das Wichtigste: Vertrauen Sie Ihrer Intuition",
+    "p1": "Dieser Test ist kein Gerichtsurteil, sondern ein Spiegel. Wenn Sie diese Fragen mit schwerem Herzen beantwortet haben, weiß Ihr Körper bereits, was Ihr Verstand sich weigert zuzugeben.",
+    "p2": "Eine Liebesbeziehung sollte ein sicherer Hafen sein, kein Schlachtfeld. Sie haben das Recht, respektiert, gehört und emotional sicher zu sein.",
+    "p3": "Wenn dieses Ergebnis Sie beunruhigt, tragen Sie diese Last nicht allein."
+  },
+  "jsonLd": {
+    "quizName": "Toxischer Beziehungstest",
+    "quizDescription": "Bewerten Sie, ob Ihre Liebesbeziehung Anzeichen von Toxizität aufweist, mit diesem 25-Fragen-Fragebogen.",
+    "faq1Q": "Was ist der Unterschied zwischen einer schwierigen und einer toxischen Beziehung?",
+    "faq1A": "In einem gesunden Paar in der Krise zielt der Konflikt auf Problemlösung. In einem toxischen Paar ist der Konflikt eine Funktionsweise zur Machtübernahme.",
+    "faq2Q": "Warum sieht man die Toxizität nicht, wenn man mittendrin steckt?",
+    "faq2A": "Drei Hauptgründe: progressive Gewöhnung, intermittierende Verstärkung und übermäßige Empathie, die gegen einen selbst verwendet wird.",
+    "faq3Q": "Was tun, wenn mein Test hohe Toxizität anzeigt?",
+    "faq3A": "Verbinden Sie sich mit der Realität durch Faktennotizen, durchbrechen Sie die Isolation und setzen Sie eine Testgrenze bei inakzeptablem Verhalten."
+  }
+}

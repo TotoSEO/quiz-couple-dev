@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "badge": "Test de compatibilidad a distancia",
+    "title": "Quiz para parejas a distancia - ¿Puedes mantener tu relación lejos del otro?",
+    "description": "Descubre si tú y tu pareja estáis preparados para la aventura del amor a distancia. Un quiz interactivo con resultados personalizados.",
+    "questions": "100 preguntas",
+    "players": "Quiz para dos",
+    "duration": "~10 minutos"
+  },
+  "intro": {
+    "p1": "¿Puede el amor realmente sobrevivir a los kilómetros? En 2026, esta pregunta nunca ha sido tan pertinente.",
+    "p2": "Sin embargo, cuando te encuentras solo/a por la noche frente a una pantalla, la preocupación está ahí. No estás solo/a en hacerte estas preguntas."
+  },
+  "section1": { "title": "¿Qué es una relación a distancia?", "sub1Title": "Definición moderna", "sub1P1": "En 2026, una relación a distancia (o LDR) se define por dos personas comprometidas emocionalmente, pero separadas geográficamente.", "sub1P2": "Ya no es solo cuestión de kilómetros, sino de frecuencia de conexión.", "sub2Title": "Por qué este fenómeno está en crecimiento", "sub2Items": ["<strong>Carreras globales:</strong> Ya no se duda en aceptar ese puesto soñado en Berlín o Singapur.", "<strong>Estudios en el extranjero:</strong> Los programas de intercambio crean miles de parejas cada año.", "<strong>Teletrabajo y Nómadas Digitales:</strong> La libertad geográfica permite viajar, pero a veces las agendas no se alinean."] },
+  "section2": { "title": "Estadísticas y tendencias 2026", "p1": "Los datos recientes estiman que alrededor de <strong>14 a 15 millones de personas en EE.UU.</strong> se consideran en una relación a distancia.", "tableHeaders": ["Aspecto", "Relación Local", "Relación a Distancia"], "tableRows": [["Presupuesto Ocio", "Regular (Restaurantes, Cine)", "Concentrado (Grandes fines de semana, Vacaciones)"], ["Presupuesto Transporte", "Bajo", "Alto (Avión, Tren)"], ["Gestión del tiempo", "Espontánea", "Planificada"], ["Fatiga", "Cotidiana", "Picos por viajes"]], "sub1Title": "La realidad francesa", "sub1Text": "En Francia, la media antes de reunirse geográficamente ronda los <strong>18 a 24 meses</strong>." },
+  "section3": { "title": "Ventajas de una relación a distancia", "items": [{ "title": "Fortalecimiento de los vínculos emocionales", "text": "Cuando no puedes tocar, debes hablar. De verdad hablar." }, { "title": "Crecimiento personal y autonomía", "text": "Tienes lo mejor de ambos mundos: el apoyo emocional de una pareja y la libertad de un soltero." }, { "title": "Mejor comunicación", "text": "Para sobrevivir, debes comunicar tus intenciones." }, { "title": "Rituales y creatividad relacional", "text": "La restricción crea creatividad. Ver una película \"juntos\", enviarse paquetes sorpresa..." }] },
+  "section4": { "title": "Los desafíos y riesgos reales", "items": [{ "title": "La soledad y la falta de contacto físico", "text": "Es el desafío n°1." }, { "title": "Los celos y la inseguridad", "text": "A distancia, la imaginación es tu peor enemiga." }, { "title": "Incertidumbre sobre el futuro", "text": "La ambigüedad es tóxica." }, { "title": "Presión financiera y logística", "text": "El amor no tiene precio, pero los billetes de tren y avión sí." }] },
+  "section5": { "title": "Lo que realmente viven las parejas", "testimonial1": "\"Pasamos dos años a distancia entre París y Montreal. ¿Nuestro secreto? Veíamos la distancia como un 'enemigo común' a derrotar juntos.\"", "testimonial1Author": "— Sarah & Tom, hoy reunidos", "testimonial2": "\"Para nosotros, la distancia reveló grietas. La falta de proyectos comunes transformó la relación en una amistad educada.\"", "testimonial2Author": "— Julien & Marc" },
+  "section6": { "title": "Señales de que tu relación a distancia puede funcionar", "signs": ["<strong>Comunicación sincera y regular</strong>", "<strong>Confianza y compromiso mutuos</strong>", "<strong>Proyectos comunes y objetivos claros</strong>", "<strong>Capacidad para manejar la incertidumbre</strong>"] },
+  "section7": { "title": "Consejos prácticos para el éxito", "tips": [{ "title": "Fijar una hoja de ruta", "text": "Tener siempre la fecha de la próxima visita fijada antes de separarse." }, { "title": "Usar la tecnología intencionalmente", "text": "Priorizar momentos de calidad." }, { "title": "Gestionar los momentos difíciles juntos", "text": "La escucha activa vale más que todos los regalos." }, { "title": "Mantener la intimidad", "text": "En 2026, ya no es tabú." }] },
+  "section8": { "title": "Errores a evitar en una relación a distancia", "errors": [{ "title": "Comparar sin cesar", "text": "No envidies a la pareja que discute en IKEA." }, { "title": "Expectativas irrealistas sobre las visitas", "text": "Sé realista con tu presupuesto." }, { "title": "Descuidar tu vida personal", "text": "¡Vive para ti!" }] },
+  "section9": { "title": "¿Hacia dónde va el futuro de las relaciones a distancia?", "sub1Title": "Impacto de las nuevas tecnologías e IA", "sub1Text": "La IA empieza a jugar un papel mediador.", "sub2Title": "Cambios sociales", "sub2Text": "La sociedad de 2026 valora al individuo." },
+  "conclusion": { "title": "Conclusión", "p1": "Una relación a distancia es un desafío colosal, pero también un acelerador increíble de madurez emocional. Y si tienes dudas sobre la salud de tu relación, nuestro <a href=\"https://quiz-couple.com/es/test-relacion-toxica\">test de relación tóxica</a> puede ayudarte a ver las cosas más claramente.", "p2": "Si la confianza está ahí, la comunicación fluye y tenéis un proyecto de reunión, entonces sí, <strong>puede funcionar</strong>." },
+  "faq": { "title": "FAQ - Relaciones a distancia", "items": [{ "q": "¿Qué es una relación a distancia exitosa?", "a": "Es una relación donde ambos se sienten seguros, amados y libres." }, { "q": "¿Cuánto dura en promedio?", "a": "Entre 14 y 24 meses antes de tomar una decisión." }, { "q": "¿Cómo saber si vale la pena?", "a": "Si esa persona te aporta más alegría que tristeza." }, { "q": "¿Cuáles son las señales de solidez?", "a": "Si ríen juntos, planifican el futuro y tienen confianza." }, { "q": "¿Por qué fracasan?", "a": "Por falta de visión común o agotamiento." }] },
+  "results": {
+    "fragileTitle": "Frágil ante la distancia",
+    "fragileDesc": "La distancia puede ser complicada para vosotros.",
+    "moderateTitle": "Capacidad moderada",
+    "moderateDesc": "Tenéis bases pero algunos puntos necesitan trabajo.",
+    "readyTitle": "Preparados para la distancia",
+    "readyDesc": "Tenéis las cualidades necesarias para gestionar la distancia."
+  }
+}

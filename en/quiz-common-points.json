@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "badge": "200 questions • Free • No registration",
+    "title": "Couple Common Points Test: Are You Really Compatible?",
+    "description": "Discover your affinities, shared tastes, and common values with this interactive test. 20 random questions from 200 for a unique experience every time!",
+    "duration": "5 minutes",
+    "players": "2 players",
+    "questions": "20 questions / session"
+  },
+  "seo": {
+    "intro": "This common points test is designed for couples who want to know each other better, discover their affinities, and measure their compatibility in a fun and interactive way.",
+    "s1": {
+      "title": "Why common points matter in a couple",
+      "p1": "Common points form the foundation of a fulfilling relationship. Sharing tastes, values, or a vision of life creates a solid basis for complicity and mutual understanding. When two people agree on important subjects, communication becomes smoother and conflicts less frequent.",
+      "p2": "However, common points aren't everything. Differences bring richness and complementarity. The key is finding the balance between what unites you and what makes you unique."
+    },
+    "s2": {
+      "title": "What is a couple's common points test for?",
+      "p1": "This test allows you to <strong>know each other better</strong> by exploring varied themes: your tastes, habits, values, and plans. Each question is an opportunity to exchange and discover sometimes unsuspected facets of your partner.",
+      "p2": "Beyond the final score, it's a tool to <strong><a href=\"https://quiz-couple.com/en/love-quiz\">open dialogue</a></strong>. Why did you answer that? What made you choose this option? These discussions enrich your relationship and strengthen your connection."
+    },
+    "s3": {
+      "title": "How the compatibility test works",
+      "steps": [
+        { "title": "Enter your names", "desc": "Enter both players' first names" },
+        { "title": "Answer in turns", "desc": "For each question, each person gives their answer separately" },
+        { "title": "Discover your common points", "desc": "The more identical answers you have, the higher your score!" }
+      ]
+    },
+    "s4": {
+      "title": "Couple common points test: 200 questions",
+      "p1": "Our database contains 200 carefully selected questions covering all aspects of life together. Each session, 20 questions are randomly drawn for a constantly renewed experience.",
+      "categories": [
+        { "title": "Personality and character", "desc": "Are you introverted or extroverted? Patient or impulsive? Discover your temperament similarities." },
+        { "title": "Tastes and interests", "desc": "Movies, music, cooking, hobbies... Do you share the same passions and preferences?" },
+        { "title": "Values and life vision", "desc": "Family, work, money, freedom... Are your priorities aligned?" },
+        { "title": "Daily life and habits", "desc": "Lifestyle, organization, little quirks... Are you compatible on a daily basis?" },
+        { "title": "Relationship and intimacy", "desc": "Communication, affection, needs... How do you experience your relationship daily?" },
+        { "title": "Plans and future", "desc": "Travel, family, career... Is your vision of the future shared?" }
+      ]
+    },
+    "s5": {
+      "title": "How to interpret the test results",
+      "p1": "The final score gives you an indication of your common points, but it doesn't define the quality of your relationship. A high score shows beautiful harmony, while a lower score reveals differences that can be sources of richness.",
+      "p2": "The key is to step back and use this test as a starting point for constructive discussions. Each difference is an opportunity to better understand the other."
+    },
+    "s6": {
+      "title": "Do you need many common points to be compatible?",
+      "p1": "Not necessarily! Compatibility relies on much more than the number of common points. The strongest couples are often those who know how to <strong>balance similarities and differences</strong>.",
+      "p2": "The important thing is to share fundamental values (family, fidelity, life projects) while accepting that each person has their own tastes and personality. Differences can bring complementarity and surprise to the relationship."
+    },
+    "s7": {
+      "title": "When to take a couple's common points test",
+      "p1": "This test is perfect for several key moments in your relationship:",
+      "items": [
+        "<strong>Early in a relationship</strong>: to better know your new partner",
+        "<strong>During a moment of doubt</strong>: to rediscover what unites you",
+        "<strong>For a romantic evening</strong>: as a fun and bonding activity",
+        "<strong>Before a big decision</strong>: to check you're aligned"
+      ]
+    },
+    "ctaTitle": "Ready to discover your common points?",
+    "ctaDesc": "Scroll back to the top, enter your names, and dive into this compatibility test! Don't forget to discuss your answers after the quiz.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq": [
+      { "q": "How does the common points test work?", "a": "Enter both your names, then take turns answering 20 random questions from 200. Each identical answer counts as a common point. At the end, discover your compatibility score!" },
+      { "q": "Do you need many common points to be compatible?", "a": "Not necessarily! Differences can be complementary. The important thing is sharing fundamental values while accepting that each person has their own personality." },
+      { "q": "Can you retake the test with different questions?", "a": "Yes! At the end of the test, you can restart with a new draw of 20 questions from the 200 available. Each session is unique." }
+    ]
+  },
+  "results": {
+    "fewTitle": "Few common points",
+    "fewDesc": "You have quite different profiles.",
+    "someTitle": "Some affinities",
+    "someDesc": "You share some things but much remains to discover.",
+    "goodTitle": "Good compatibility",
+    "goodDesc": "You have a solid base of common points.",
+    "greatTitle": "Very compatible",
+    "greatDesc": "You know each other well and share a lot."
+  }
+}

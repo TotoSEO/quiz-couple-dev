@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "title": "¿Tu relación es tóxica? Responde al cuestionario",
+    "description": "Una herramienta de autoevaluación para comprender las dinámicas de tu relación"
+  },
+  "section1": {
+    "title": "¿Por qué necesitas hacer este test hoy?",
+    "p1": "Es crucial entender por qué sientes esa necesidad.",
+    "p2": "En una relación tóxica, el síntoma más común no siempre es la violencia visible, sino la <strong class=\"text-foreground\">niebla mental</strong>. Ya no sabes si eres demasiado sensible, si pides demasiado o si tú eres el problema. Eso es lo propio de la toxicidad: erosiona la confianza en tu propia percepción.",
+    "p3": "Buscas este test para obtener una <strong class=\"text-foreground\">validación externa</strong>. Necesitas una herramienta objetiva para medir lo que, desde dentro, parece una montaña rusa emocional incomprensible."
+  },
+  "section2": {
+    "title": "La diferencia entre una relación difícil y una tóxica",
+    "p1": "Es la pregunta que más me hacen en consulta: <em>\"Todas las parejas tienen <a href=\"https://quiz-couple.com/es/resolver-problema-pareja\">problemas</a>, ¿no?\"</em>",
+    "p2": "Sí, absolutamente. Pero la diferencia es fundamental:",
+    "healthy": "<strong class=\"text-foreground\">En una pareja sana que atraviesa una crisis</strong>, el conflicto busca resolver un problema. Ambos se sienten seguros incluso en el desacuerdo.",
+    "toxic": "<strong class=\"text-foreground\">En una pareja tóxica</strong>, el conflicto es un modo de funcionamiento que busca tomar el poder o descargar en el otro.",
+    "quote": "Una relación difícil cansa, pero puedes descansar en ella. Una relación tóxica te vacía de tu esencia y ataca tu autoestima."
+  },
+  "section3": {
+    "title": "Interpretación de los resultados del test",
+    "intro": "Suma tus puntos. Así es como debes leer tu puntuación. Recuerda: este resultado es un indicador de la dinámica actual, no una fatalidad, pero debe tomarse en serio.",
+    "headerScore": "Puntuación Total",
+    "headerLevel": "Nivel de Toxicidad",
+    "headerAnalysis": "Análisis Psicológico",
+    "row1Score": "0 a 25 puntos",
+    "row1Level": "Relación Sana a Tensión Normal",
+    "row1Analysis": "Tu pareja puede estar atravesando una zona de turbulencia, pero las bases parecen sanas.",
+    "row2Score": "26 a 60 puntos",
+    "row2Level": "Relación Disfuncional (Zona Naranja)",
+    "row2Analysis": "Se han instalado dinámicas tóxicas. Es necesario un trabajo profundo.",
+    "row3Score": "61 a 125 puntos",
+    "row3Level": "Relación Altamente Tóxica (Zona Roja)",
+    "row3Analysis": "Peligro para tu salud mental. Es urgente protegerte."
+  },
+  "section4": {
+    "title": "¿Por qué no se ve la toxicidad cuando estás dentro?",
+    "p1": "Si tu puntuación es alta, quizás te preguntes: <em>\"¿Cómo pude dejar que esto pasara?\"</em>. Aquí es donde la culpa golpea a menudo. Como terapeuta, te pido que seas amable contigo mismo/a.",
+    "p2": "No vemos la toxicidad por tres razones biológicas y psicológicas:",
+    "pillar1Title": "La habituación (El efecto de la rana hervida)",
+    "pillar1Text": "La toxicidad rara vez llega de un día para otro. Se instala en microdosis. Una pequeña crítica, luego otra, luego una crisis de celos justificada por \"demasiado amor\". Tu umbral de tolerancia al sufrimiento se ha ido desplazando poco a poco, sin que lo sepas.",
+    "pillar2Title": "El refuerzo intermitente",
+    "pillar2Text": "Es la trampa más poderosa. Una pareja tóxica no es horrible el 100% del tiempo. Hay momentos de \"luna de miel\", disculpas grandiosas, instantes de fusión intensa. Esos momentos de esperanza actúan como una droga en el cerebro, haciéndote olvidar los momentos oscuros.",
+    "pillar3Title": "La empatía usada en tu contra",
+    "pillar3Text": "Las personas que se encuentran en estas relaciones suelen tener una gran capacidad de empatía. Siempre intentas comprender las heridas del otro (<em>\"Tuvo una infancia difícil\"</em>, <em>\"Está estresado/a por su trabajo\"</em>). Tu capacidad de perdonar se convierte en el combustible de la toxicidad."
+  },
+  "section5": {
+    "title": "Los 4 pilares de una dinámica tóxica en una relación",
+    "intro": "Más allá de la puntuación de este test, hay que comprender los mecanismos en juego. Si reconoces uno de estos pilares, la relación está en peligro.",
+    "pillar1Title": "1. La invalidación emocional (Gaslighting)",
+    "pillar1Text": "Es negar tu realidad. Si dices <em>\"Me hiciste daño\"</em>, el otro responde <em>\"Eres demasiado sensible\"</em>. Con el tiempo, ya no confías en tus propias emociones. Es una forma de violencia psicológica silenciosa que destruye la identidad.",
+    "pillar2Title": "2. El control disfrazado",
+    "pillar2Text": "El control no siempre parece órdenes. Puede tomar la forma de consejos insistentes, culpabilización (<em>\"Si realmente me amaras, no harías eso\"</em>) o gestión financiera estricta. El objetivo es siempre el mismo: reducir tu autonomía.",
+    "pillar3Title": "3. La culpa invertida",
+    "pillar3Text": "En una relación sana, cada uno asume el 50% de la responsabilidad. En una relación tóxica, tú cargas con el 100% de la culpa. El otro se posiciona sistemáticamente como víctima o fiscal, nunca como compañero responsable.",
+    "pillar4Title": "4. La imprevisibilidad",
+    "pillar4Text": "Nunca sabes a qué atenerte. Esta inseguridad permanente mantiene tu sistema nervioso en estado de alerta (estrés crónico), lo que explica tu fatiga física y mental."
+  },
+  "section6": {
+    "title": "Mi test indica una toxicidad elevada: ¿qué hacer?",
+    "p1": "En primer lugar, debes saber que este test es puramente indicativo. No es en absoluto un resultado exacto y preciso, y no debe sustituir la opinión de un profesional. Si consideras que tu relación es realmente tóxica o peligrosa, contacta con especialistas de verdad.",
+    "p2": "Tomar conciencia de la situación es el paso más difícil, y acabas de darlo. Una puntuación alta no significa que debas hacer las maletas inmediatamente (salvo en caso de peligro físico inmediato), pero significa que el statu quo ya no es una opción.",
+    "dontTitle": "Lo que NO debes hacer",
+    "dont1Title": "Intentar \"salvar\" al otro",
+    "dont1Text": "No puedes ser el terapeuta de tu pareja. La toxicidad es un modo de funcionamiento que solo el individuo en cuestión puede decidir cambiar.",
+    "dont2Title": "Confrontar brutalmente con este test",
+    "dont2Text": "Mostrar este test a una pareja tóxica puede provocar una crisis (<em>\"Este test no tiene sentido\"</em>, <em>\"Tú eres la tóxica\"</em>). Guarda este resultado para ti, como una brújula interior.",
+    "doTitle": "Lo que SÍ debes hacer (Primeros pasos de lucidez)",
+    "do1Title": "Reconéctate con la realidad",
+    "do1Text": "Anota los hechos. Lleva un diario objetivo de las discusiones y las palabras. Releer lo que pasó \"en frío\" ayuda a contrarrestar la duda.",
+    "do2Title": "Rompe el aislamiento",
+    "do2Text": "Habla con una persona de confianza o, idealmente, con un profesional. Nombrar las cosas en voz alta las hace reales y disminuye su poder.",
+    "do3Title": "Fija un límite de prueba",
+    "do3Text": "Pon un límite simple pero firme a un comportamiento inaceptable (ej: <em>\"No acepto más que me grites, si lo haces, salgo de la habitación\"</em>). Observa la reacción. Una pareja sana se disculpará y se ajustará. Una pareja tóxica escalará el conflicto."
+  },
+  "section7": {
+    "title": "Lo que debes recordar: Confía en tu intuición",
+    "p1": "Este test no es un veredicto de tribunal, es un espejo. Si respondiste a estas preguntas con el corazón encogido, es que tu cuerpo ya sabe lo que tu mente se niega a admitir.",
+    "p2": "Una relación amorosa debe ser un puerto seguro, no un campo de batalla. Tienes derecho a ser respetado/a, escuchado/a y a sentirte emocionalmente seguro/a. La confusión que sientes no es una prueba de tu debilidad, es la señal de que intentas adaptarte a una situación anormal.",
+    "p3": "Si este resultado te preocupa, no cargues con este peso solo/a."
+  },
+  "jsonLd": {
+    "quizName": "Test de Pareja Tóxica",
+    "quizDescription": "Evalúa si tu relación amorosa presenta signos de toxicidad con este cuestionario de 25 preguntas.",
+    "faq1Q": "¿Cuál es la diferencia entre una relación difícil y una tóxica?",
+    "faq1A": "En una pareja sana en crisis, el conflicto busca resolver un problema. En una pareja tóxica, el conflicto es un modo de funcionamiento que busca tomar el poder.",
+    "faq2Q": "¿Por qué no se ve la toxicidad cuando estás dentro?",
+    "faq2A": "Tres razones principales: habituación progresiva (efecto rana hervida), refuerzo intermitente (momentos de luna de miel) y empatía excesiva usada en contra.",
+    "faq3Q": "¿Qué hacer si mi test indica una toxicidad elevada?",
+    "faq3A": "Reconéctate con la realidad anotando los hechos, rompe el aislamiento hablando con alguien de confianza, y fija un límite de prueba sobre un comportamiento inaceptable."
+  }
+}

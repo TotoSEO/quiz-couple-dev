@@ -1,0 +1,158 @@
+{
+  "seo": {
+    "title": "¡Quiz para parejas online y gratis!",
+    "description": "¡Descubre nuestros quiz gratis para parejas! Prueba tu relación, fortalece tu complicidad y diviértete juntos. Sin registro, resultados instantáneos.",
+    "schemaDescription": "Plataforma de quiz gratuitos para probar y fortalecer tu relación de pareja"
+  },
+  "hero": {
+    "badge": "100% gratis, sin registro",
+    "title": "Prueba tu relación con nuestros",
+    "titleHighlight": "quiz para parejas",
+    "description": "Descubre tu nivel de complicidad, explora tu compatibilidad y diviértete juntos con nuestros quiz interactivos.",
+    "descriptionHighlight": "¡Resultados instantáneos y consejos personalizados!",
+    "cta": "Empezar el quiz",
+    "ctaSecondary": "Ver preguntas",
+    "stats": {
+      "couples": "1000+",
+      "couplesLabel": "parejas probadas",
+      "quizzes": "12 quiz",
+      "quizzesLabel": "disponibles"
+    }
+  },
+  "quizSection": {
+    "title": "Nuestros quiz gratis para",
+    "titleHighlight": "parejas",
+    "description": "Elige el quiz que más te guste y descubre más sobre tu relación. ¡Todos nuestros quiz son gratis, sin registro, y los resultados son inmediatos!",
+    "questionsCard": {
+      "title": "120 preguntas para parejas",
+      "subtitle": "Para descubrir en vuestras noches juntos",
+      "button": "Ver preguntas"
+    }
+  },
+  "aiResolver": {
+    "badge": "Nuevo",
+    "title": "Resuelve tus problemas de pareja",
+    "titleHighlight": "¡con I.A!",
+    "description": "¿Tienes una disputa que resolver? Nuestra inteligencia artificial analiza tu situación de manera",
+    "descriptionHighlight": "100% imparcial",
+    "descriptionEnd": "y te ayuda a encontrar una solución.",
+    "cardTitle": "Un análisis neutral y objetivo",
+    "cardDescription": "Describe tu situación, cada persona da su versión de los hechos, y la IA te proporciona un análisis con la distribución de responsabilidades y consejos personalizados para avanzar juntos.",
+    "features": {
+      "confidential": "100% Confidencial",
+      "free": "Gratis",
+      "impartial": "IA imparcial"
+    },
+    "cta": "Probar ahora"
+  },
+  "whatIs": {
+    "title": "¿Qué es un",
+    "titleHighlight": "quiz para parejas",
+    "paragraph1": "Un quiz para parejas es un",
+    "paragraph1Highlight": "cuestionario divertido",
+    "paragraph1End": "diseñado especialmente para parejas enamoradas. Permite evaluar diferentes aspectos de tu relación: comunicación, intimidad, proyectos comunes, y mucho más.",
+    "paragraph2": "Nuestros quiz están pensados para ser",
+    "paragraph2Highlight": "divertidos y constructivos",
+    "paragraph2End": ". Lejos de los tests psicológicos complejos, te ofrecen un momento de complicidad para compartir juntos.",
+    "features": [
+      "Preguntas divertidas y amables",
+      "Adaptado a todas las parejas",
+      "Sin registro necesario",
+      "Resultados inmediatos y personalizados"
+    ],
+    "imageAlt": "Ilustración de un quiz para parejas",
+    "stats": {
+      "quizzes": "12",
+      "quizzesLabel": "quiz disponibles",
+      "questions": "800+",
+      "questionsLabel": "preguntas por descubrir"
+    }
+  },
+  "whyDoQuiz": {
+    "title": "¿Para qué sirve hacer",
+    "titleHighlight": "estos quiz",
+    "subtitle": "Más que un simple juego, nuestros quiz son una herramienta para enriquecer tu relación",
+    "reasons": {
+      "testRelation": {
+        "title": "Probar tu relación",
+        "description": "Evalúa tu compatibilidad e identifica tus puntos fuertes para construir una relación aún más sólida."
+      },
+      "haveFun": {
+        "title": "Divertirse juntos",
+        "description": "Transforma un momento ordinario en un juego de pareja. Ríe, debate y crea recuerdos juntos."
+      },
+      "discover": {
+        "title": "Descubrir al otro",
+        "description": "Aprende cosas sorprendentes sobre tu pareja, incluso después de años de relación."
+      },
+      "strengthen": {
+        "title": "Fortalecer la complicidad",
+        "description": "Crea momentos de conexión auténtica y refuerza los lazos que os unen."
+      },
+      "dialogue": {
+        "title": "Abrir el diálogo",
+        "description": "Inicia conversaciones profundas y sinceras sobre temas que no abordas a diario."
+      },
+      "memories": {
+        "title": "Crear recuerdos",
+        "description": "Comparte una experiencia única juntos y guarda un recuerdo de este momento de complicidad."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "¿Cómo",
+    "titleHighlight": "funciona",
+    "subtitle": "Simple, rápido y divertido: en solo 3 pasos",
+    "steps": {
+      "choose": {
+        "step": "1",
+        "title": "Elige tu quiz",
+        "description": "Selecciona entre nuestros quiz el que corresponda a tu estado de ánimo."
+      },
+      "answer": {
+        "step": "2",
+        "title": "Responde juntos",
+        "description": "Ponte cómodo y responde las preguntas juntos."
+      },
+      "results": {
+        "step": "3",
+        "title": "Descubre tus resultados",
+        "description": "¡Obtén tu puntuación, consejos personalizados y comparte tus resultados!"
+      }
+    }
+  },
+  "finalCTA": {
+    "title": "¿Listos para probar vuestra",
+    "titleHighlight": "complicidad",
+    "description": "Elige tu quiz favorito y descubre qué hace única a tu pareja. ¡Es gratis, sin registro, y solo lleva unos minutos!",
+    "button": "Empezar ahora",
+    "socialProof": "Ya",
+    "socialProofCount": "1000+ parejas",
+    "socialProofEnd": "han probado sus lazos 💕"
+  },
+  "latestArticles": {
+    "title": "Los últimos artículos",
+    "titleHighlight": "del blog",
+    "intro": "Además de los juegos para parejas que encontrarás en el sitio, tenemos un blog que actualizamos lo más posible. Reseñas de apps de citas, consejos sobre relaciones amorosas o técnicas de seducción, diversificamos nuestros contenidos al máximo, para ti, con pasión."
+  },
+  "quizGrid": {
+    "testsTitle": "Nuestros Tests para Parejas",
+    "testsDesc": "Evalúa tu relación con nuestros tests de compatibilidad y autoevaluación",
+    "quizzesTitle": "Nuestros Quiz para Parejas",
+    "quizzesDesc": "Juegos interactivos y divertidos para hacer juntos y fortalecer su complicidad",
+    "cards": {
+      "testCouple": "20 preguntas para evaluar tu relación.",
+      "testCommonPoints": "¿Tienes cosas en común con tu pareja?",
+      "testDistance": "Descubre si tu relación puede soportar la distancia.",
+      "testToxic": "Identifica las señales de una relación tóxica.",
+      "testCoupleSain": "Evalúa si tu relación es sana y equilibrada.",
+      "testMariage": "30 preguntas para saber si están listos para casarse.",
+      "testDivorce": "25 preguntas para evaluar honestamente tu relación.",
+      "quizAmoureux": "Debatan juntos y midan su armonía.",
+      "quizCoquin": "Explora tus deseos y dale sabor a tu relación.",
+      "quizMarrant": "¡Ríanse juntos con preguntas hilarantes!",
+      "quizKnowledge": "¿Quién conoce mejor al otro? ¡Desafíense!",
+      "quizMost": "¡Voten para saber quién es el más... entre ustedes!"
+    }
+  }
+}

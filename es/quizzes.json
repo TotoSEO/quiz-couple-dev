@@ -1,0 +1,97 @@
+{
+  "testCouple": {
+    "title": "Test de Compatibilidad de Pareja - 20 Preguntas Gratis",
+    "shortTitle": "Test de Pareja",
+    "description": "Responde 20 preguntas para evaluar la solidez de tu relación y descubrir tus puntos fuertes.",
+    "metaDescription": "Test de compatibilidad de pareja gratis: 20 preguntas para evaluar tu relación amorosa. Descubre tus puntos fuertes y áreas de mejora. ¡Sin registro!"
+  },
+  "testCommonPoints": {
+    "title": "Test de Puntos Comunes en Pareja - 200 Preguntas | Gratis",
+    "shortTitle": "Test Puntos Comunes",
+    "description": "¡Mide tus puntos comunes con 200 preguntas! Respondan por turnos y descubran su nivel de compatibilidad.",
+    "metaDescription": "Test de puntos comunes para parejas con 200 preguntas para medir vuestra compatibilidad. Respondan por turnos. ¡Gratis y sin registro!"
+  },
+  "testDistance": {
+    "title": "Quiz para Parejas a Distancia - 100 Preguntas Gratis",
+    "shortTitle": "Quiz Distancia",
+    "description": "100 preguntas para evaluar la solidez de tu relación a distancia y fortalecer tu vínculo.",
+    "metaDescription": "Quiz gratuito para parejas a distancia: 100 preguntas para probar vuestra conexión y fortalecer vuestro vínculo. ¡Resultados inmediatos!"
+  },
+  "testToxic": {
+    "title": "Test de Relación Tóxica - 25 Preguntas | Gratis y Confidencial",
+    "shortTitle": "Test Tóxico",
+    "description": "25 preguntas para identificar señales de una relación tóxica y cuidar de ti mismo.",
+    "metaDescription": "Test gratuito de relación tóxica: 25 preguntas para identificar señales de alarma y evaluar tu pareja. 100% confidencial, resultados inmediatos."
+  },
+  "quizAmoureux": {
+    "title": "Quiz de Enamorados - ¿Están Hechos el Uno para el Otro?",
+    "shortTitle": "Quiz Enamorados",
+    "description": "20 preguntas para debatir juntos y medir la armonía de su pareja.",
+    "metaDescription": "Quiz de enamorados interactivo: debatan 20 afirmaciones juntos y descubran su puntuación de compatibilidad. ¡Gratis y divertido!"
+  },
+  "quizCoquin": {
+    "title": "Quiz Picante para Parejas - 60 Preguntas Íntimas | Gratis",
+    "shortTitle": "Quiz Picante",
+    "description": "60 preguntas para darle sabor a tu relación y conocer mejor los deseos de tu pareja.",
+    "metaDescription": "Quiz picante para parejas: 60 preguntas íntimas para explorar deseos y reavivar la llama. Gratis, confidencial, sin registro."
+  },
+  "quizMarrant": {
+    "title": "Quiz Divertido para Parejas - 150+ Preguntas Fun | Gratis",
+    "shortTitle": "Quiz Divertido",
+    "description": "¡Ríanse juntos con más de 150 preguntas divertidas! Un quiz ligero para pasar un buen rato juntos.",
+    "metaDescription": "Quiz divertido para parejas con 150+ preguntas hilarantes. ¡Ríanse juntos y fortalezcan su complicidad. Gratis, sin registro!"
+  },
+  "quizKnowledge": {
+    "title": "¿Quién Conoce Mejor a su Pareja? - Quiz Gratis",
+    "shortTitle": "¿Quién conoce mejor?",
+    "description": "¡Alternen las preguntas y descubran quién conoce mejor a su pareja! 100 preguntas para probar su complicidad.",
+    "metaDescription": "Quiz interactivo para parejas: ¿quién conoce mejor al otro? 100 preguntas para adivinar por turnos. ¡Gratis, divertido y perfecto para una noche romántica!"
+  },
+  "quizMost": {
+    "title": "¿Quién es Más Probable Que...? - 240+ Preguntas Gratis",
+    "shortTitle": "¿Quién es más...?",
+    "description": "De 2 a 8 jugadores, voten juntos para descubrir quién es el más gracioso, hablador, romántico... ¡240+ preguntas divertidas!",
+    "metaDescription": "Quiz ¿Quién es más probable que...? con 240+ preguntas para 2-8 jugadores. Voten, ríanse y descubran quién es el más divertido. ¡Gratis!"
+  },
+  "questionsCouple": {
+    "title": "120 Preguntas para Parejas por Categorías | Gratis",
+    "shortTitle": "Preguntas",
+    "description": "120 preguntas clasificadas por tema para conoceros mejor, fortalecer vuestra complicidad y crear momentos de intercambio auténtico.",
+    "metaDescription": "120 preguntas para parejas en 5 categorías: conocerse, proyectos, intimidad, diversión y preguntas profundas. Gratis, sin registro."
+  },
+  "problemResolver": {
+    "title": "Resolver Problemas de Pareja con IA - Consejos Gratis",
+    "shortTitle": "Resolver problema",
+    "description": "Nuestra IA analiza tu situación y te da consejos personalizados para resolver tus conflictos.",
+    "metaDescription": "Resuelve conflictos de pareja gratis con inteligencia artificial. Análisis imparcial y consejos personalizados. 100% confidencial."
+  },
+  "testCoupleSain": {
+    "title": "Test de Relación Sana - ¿Tu pareja es sólida?",
+    "shortTitle": "Test Relación Sana",
+    "description": "Un quiz para dos para evaluar si tu relación es sana y equilibrada.",
+    "metaDescription": "Test de relación sana gratis: 20 preguntas para parejas. Puntuaciones individuales y consejos. ¡Sin registro!"
+  },
+  "testMariage": {
+    "title": "Test de Compatibilidad Matrimonial - ¡Gratis en línea!",
+    "shortTitle": "Test Matrimonio",
+    "description": "30 preguntas para responder juntos y verificar que están listos para casarse.",
+    "metaDescription": "Test de matrimonio gratis: 30 preguntas sobre finanzas, hijos, valores y comunicación. ¡Sin registro!"
+  },
+  "testDivorce": {
+    "title": "¿Debo divorciarme? Test gratuito en línea",
+    "shortTitle": "Test Divorcio",
+    "h1": "Test: ¿Debería divorciarme o no?",
+    "heroSubtitle": "Una herramienta de autoevaluación compasiva para ayudarte a ver las cosas con más claridad",
+    "description": "25 preguntas para ayudarte a evaluar honestamente tu relación.",
+    "metaDescription": "¿Te preguntas si deberías divorciarte? Este test gratuito de 25 preguntas te ayuda a evaluar tu relación. Resultado inmediato, sin juicios.",
+    "startSubtitle": "Gratis, anónimo, sin correo, sin compromiso",
+    "emergencyNotice": "Si te encuentras en una situación de peligro, llama al <strong>016</strong> (violencia de género, España) disponible 24h. En caso de emergencia inmediata: <strong>112</strong>.",
+    "emergencyResult": "¿Necesitas ayuda? Si estás en peligro, llama al <strong>016</strong> (violencia de género, España) disponible 24h. Emergencia: <strong>112</strong>."
+  },
+  "quizAdo": {
+    "title": "Quiz de Pareja para Adolescentes: ¿Van a Seguir Juntos?",
+    "shortTitle": "Quiz Adolescentes",
+    "description": "20 preguntas para saber si tu relación es sólida o solo pasajera. ¡Jueguen juntos a distancia!",
+    "metaDescription": "Quiz de pareja para adolescentes: 20 preguntas para saber si tu relación es sólida o pasajera. Jueguen a distancia, ¡resultado inmediato!"
+  }
+}

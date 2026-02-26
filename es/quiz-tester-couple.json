@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "badge": "Gratis • Sin registro • 5 min",
+    "title": "Pon a prueba tu pareja: el quiz para dos",
+    "description": "20 preguntas para descubrir vuestro nivel de compatibilidad. ¡Jugad por turnos y descubrid si estáis realmente en la misma onda!",
+    "duration": "5 minutos",
+    "players": "2 jugadores",
+    "questions": "20 preguntas"
+  },
+  "seo": {
+    "whyTitle": "¿Por qué poner a prueba tu pareja?",
+    "card1Title": "Fortalecer vuestra conexión",
+"card1Text": "Descubrid vuestros <a href=\"https://quiz-couple.com/es/test-puntos-comunes-pareja\">puntos en común</a> y comprended mejor las diferencias que enriquecen vuestra relación.",
+    "card2Title": "Abrir el diálogo",
+    "card2Text": "Cada pregunta es una oportunidad de discusión e intercambio con tu pareja.",
+    "card3Title": "Identificar áreas de mejora",
+    "card3Text": "La puntuación os ayuda a ver dónde podéis crecer juntos y qué aspectos de vuestra relación merecen atención.",
+    "card4Title": "Divertirse juntos",
+    "card4Text": "Más allá de la puntuación, es un momento lúdico y cómplice para compartir en pareja.",
+    "howTitle": "¿Cómo funciona?",
+    "step1Title": "Introducid vuestros nombres",
+    "step1Text": "Indicad los nombres y géneros de los dos jugadores",
+    "step2Title": "Responded por turnos",
+    "step2Text": "Para cada pregunta, el jugador 1 responde primero, luego el jugador 2",
+    "step3Title": "Descubrid vuestra puntuación",
+    "step3Text": "¡Cuantas más respuestas idénticas tengáis, mayor será vuestra puntuación!",
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿El test de pareja es realmente gratis?",
+    "faq1A": "Sí, nuestro test de pareja es 100% gratis y sin registro. Podéis hacerlo tantas veces como queráis.",
+    "faq2Q": "¿Cuánto tiempo dura el test?",
+    "faq2A": "El test dura aproximadamente 5 minutos. Incluye 20 preguntas a las que ambos responden por turnos.",
+    "faq3Q": "¿Cómo se calcula la puntuación?",
+    "faq3A": "La puntuación se basa en el número de respuestas idénticas entre ambos. ¡Cuanto más respondáis igual, mayor será vuestra puntuación de compatibilidad!"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "title": "Is Your Relationship Toxic? Take the Quiz",
+    "description": "A self-assessment tool to understand the dynamics of your relationship"
+  },
+  "section1": {
+    "title": "Why do you need to take this test today?",
+    "p1": "It's crucial to understand why you feel the need.",
+    "p2": "In a toxic relationship, the most common symptom isn't always visible violence, but <strong class=\"text-foreground\">mental fog</strong>. You no longer know if you're too sensitive, if you're asking too much, or if you're the problem. That's what toxicity does: it erodes the trust you have in your own perception.",
+    "p3": "You're looking for this test to get <strong class=\"text-foreground\">external validation</strong>. You need an objective tool to measure what, from the inside, feels like incomprehensible emotional roller coasters."
+  },
+  "section2": {
+    "title": "The difference between a difficult relationship and a toxic one",
+    "p1": "This is the question I'm asked most often in my office: <em>\"All couples have <a href=\"https://quiz-couple.com/en/solve-couple-problem\">problems</a>, right?\"</em>",
+    "p2": "Yes, absolutely. But the difference is fundamental:",
+    "healthy": "<strong class=\"text-foreground\">In a healthy couple going through a crisis</strong>, conflict aims to solve a problem. Both partners feel safe even in disagreement.",
+    "toxic": "<strong class=\"text-foreground\">In a toxic couple</strong>, conflict is a way of functioning that aims to take power or unload on the other person.",
+    "quote": "A difficult relationship is tiring, but you can rest in it. A toxic relationship drains your essence and attacks your self-esteem."
+  },
+  "section3": {
+    "title": "Interpreting the test results",
+    "intro": "Add up your points. Here's how to read your score. Remember: this result is an indicator of the current dynamic, not a fate, but it should be taken seriously.",
+    "headerScore": "Total Score",
+    "headerLevel": "Toxicity Level",
+    "headerAnalysis": "Psychological Analysis",
+    "row1Score": "0 to 25 points",
+    "row1Level": "Healthy Relationship to Normal Tension",
+    "row1Analysis": "Your couple may be going through turbulence, but the foundations seem healthy.",
+    "row2Score": "26 to 60 points",
+    "row2Level": "Dysfunctional Relationship (Orange Zone)",
+    "row2Analysis": "Toxic dynamics are established. Deep work is necessary.",
+    "row3Score": "61 to 125 points",
+    "row3Level": "Highly Toxic Relationship (Red Zone)",
+    "row3Analysis": "Danger to your mental health. It is urgent to protect yourself."
+  },
+  "section4": {
+    "title": "Why can't you see the toxicity when you're in it?",
+    "p1": "If your score is high, you may be wondering: <em>\"How could I let this happen?\"</em>. This is where guilt often strikes. As a therapist, I ask you to be gentle with yourself.",
+    "p2": "We don't see toxicity for three biological and psychological reasons:",
+    "pillar1Title": "Habituation (The boiling frog effect)",
+    "pillar1Text": "Toxicity rarely happens overnight. It creeps in through micro-doses. A small criticism, then another, then a jealousy crisis justified by \"too much love\". Your tolerance threshold for suffering has been pushed back little by little, without your knowledge.",
+    "pillar2Title": "Intermittent reinforcement",
+    "pillar2Text": "This is the most powerful trap. A toxic couple isn't horrible 100% of the time. There are \"honeymoon\" moments, grand apologies, intense moments of fusion. These moments of hope act like a drug on the brain, making you forget the dark times.",
+    "pillar3Title": "Empathy used against you",
+    "pillar3Text": "People who find themselves in these relationships often have great empathy. You always try to understand the other's wounds (<em>\"He had a difficult childhood\"</em>, <em>\"She's stressed by her job\"</em>). Your ability to forgive becomes the fuel for toxicity."
+  },
+  "section5": {
+    "title": "The 4 pillars of a toxic dynamic in a relationship",
+    "intro": "Beyond this toxic couple test score, you need to understand the mechanisms at work. If you recognize one of these pillars, the relationship is in danger.",
+    "pillar1Title": "1. Emotional invalidation (Gaslighting)",
+    "pillar1Text": "It's denying your reality. If you say <em>\"You hurt me\"</em>, the other responds <em>\"You're too sensitive\"</em>. Over time, you no longer trust your own emotions. It's a form of silent psychological violence that destroys identity.",
+    "pillar2Title": "2. Hidden control",
+    "pillar2Text": "Control doesn't always look like orders. It can take the form of insistent advice, guilt-tripping (<em>\"If you really loved me, you wouldn't do that\"</em>) or strict financial management. The goal is always the same: reduce your autonomy.",
+    "pillar3Title": "3. Reversed guilt",
+    "pillar3Text": "In a healthy relationship, each person takes 50% of the responsibility. In a toxic relationship, you carry 100% of the blame. The other systematically positions themselves as victim or prosecutor, never as a responsible partner.",
+    "pillar4Title": "4. Unpredictability",
+    "pillar4Text": "You never know what to expect. This permanent insecurity keeps your nervous system on alert (chronic stress), which explains your physical and mental fatigue."
+  },
+  "section6": {
+    "title": "My test shows high toxicity: what should I do?",
+    "p1": "First of all, know that this test is purely indicative. It is by no means an exact and precise result, and should not replace professional advice. If you believe your relationship is truly toxic or even dangerous, contact real specialists.",
+    "p2": "Becoming aware of the situation is the hardest step, and you've just taken it. A high score on the toxic couple test doesn't mean you need to pack your bags immediately (unless there's immediate physical danger), but it means the status quo is no longer an option.",
+    "dontTitle": "What NOT to do",
+    "dont1Title": "Try to \"save\" the other person",
+    "dont1Text": "You cannot be your partner's therapist. Toxicity is a way of functioning that only the individual concerned can decide to change.",
+    "dont2Title": "Confront brutally with this test",
+    "dont2Text": "Showing this test to a toxic partner risks provoking a crisis (<em>\"This test is nonsense\"</em>, <em>\"You're the toxic one\"</em>). Keep this result for yourself, as an inner compass.",
+    "doTitle": "What to do (First steps of clarity)",
+    "do1Title": "Reconnect with reality",
+    "do1Text": "Note the facts. Keep a factual journal of arguments and words. Rereading what happened \"cold\" helps counter doubt.",
+    "do2Title": "Break the isolation",
+    "do2Text": "Talk to a trusted person or, ideally, a professional. Naming things out loud makes them real and diminishes their power.",
+    "do3Title": "Set a test boundary",
+    "do3Text": "Set a simple but firm boundary on unacceptable behavior (e.g., <em>\"I will no longer accept being yelled at; if you do, I will leave the room\"</em>). Observe the reaction. A healthy partner will apologize and adjust. A toxic partner will escalate the conflict."
+  },
+  "section7": {
+    "title": "Key takeaway: Trust your intuition",
+    "p1": "This toxic couple test is not a court verdict, it's a mirror. If you answered these questions with a heavy heart, your body already knows what your mind refuses to admit.",
+    "p2": "A romantic relationship should be a safe haven, not a battlefield. You have the right to be respected, heard, and emotionally safe. The confusion you feel is not proof of your weakness—it's a sign that you're trying to adapt to an abnormal situation.",
+    "p3": "If this result worries you, don't carry this weight alone."
+  },
+  "jsonLd": {
+    "quizName": "Toxic Couple Test",
+    "quizDescription": "Assess whether your romantic relationship shows signs of toxicity with this 25-question questionnaire.",
+    "faq1Q": "What's the difference between a difficult relationship and a toxic one?",
+    "faq1A": "In a healthy couple going through a crisis, conflict aims to solve a problem. In a toxic couple, conflict is a way of functioning that aims to take power or unload on the other.",
+    "faq2Q": "Why can't you see toxicity when you're in it?",
+    "faq2A": "Three main reasons: progressive habituation (boiling frog effect), intermittent reinforcement (honeymoon moments), and excessive empathy used against oneself.",
+    "faq3Q": "What should I do if my test shows high toxicity?",
+    "faq3A": "Reconnect with reality by noting facts, break isolation by talking to someone you trust, and set a test boundary on unacceptable behavior."
+  }
+}

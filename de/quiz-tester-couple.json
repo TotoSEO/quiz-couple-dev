@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "badge": "Kostenlos • Ohne Anmeldung • 5 Min",
+    "title": "Testet eure Beziehung: Das Quiz für zwei",
+    "description": "20 Fragen, um euer Kompatibilitätsniveau zu entdecken. Spielt abwechselnd und seht, ob ihr wirklich auf derselben Wellenlänge seid!",
+    "duration": "5 Minuten",
+    "players": "2 Spieler",
+    "questions": "20 Fragen"
+  },
+  "seo": {
+    "whyTitle": "Warum eure Beziehung testen?",
+    "card1Title": "Eure Verbindung stärken",
+    "card1Text": "Entdeckt eure <a href=\"https://quiz-couple.com/de/gemeinsamkeiten-test-paare\">Gemeinsamkeiten</a> und versteht besser die Unterschiede, die eure Beziehung bereichern.",
+    "card2Title": "Den Dialog öffnen",
+    "card2Text": "Jede Frage ist eine Gelegenheit zur Diskussion und zum Austausch mit eurem Partner.",
+    "card3Title": "Verbesserungsbereiche identifizieren",
+    "card3Text": "Euer Ergebnis hilft euch zu sehen, wo ihr gemeinsam wachsen könnt und welche Aspekte eurer Beziehung Aufmerksamkeit verdienen.",
+    "card4Title": "Gemeinsam Spaß haben",
+    "card4Text": "Über das Ergebnis hinaus ist es ein spielerischer und vertrauter Moment, den ihr zu zweit teilt.",
+    "howTitle": "Wie funktioniert es?",
+    "step1Title": "Gebt eure Namen ein",
+    "step1Text": "Gebt die Vornamen und Geschlechter beider Spieler ein",
+    "step2Title": "Antwortet abwechselnd",
+    "step2Text": "Bei jeder Frage antwortet zuerst Spieler 1, dann Spieler 2",
+    "step3Title": "Entdeckt euer Ergebnis",
+    "step3Text": "Je mehr identische Antworten ihr habt, desto höher ist euer Ergebnis!",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Ist der Paartest wirklich kostenlos?",
+    "faq1A": "Ja, unser Paartest ist 100% kostenlos und ohne Anmeldung. Ihr könnt ihn so oft machen wie ihr wollt.",
+    "faq2Q": "Wie lange dauert der Test?",
+    "faq2A": "Der Test dauert etwa 5 Minuten. Er umfasst 20 Fragen, die beide Partner abwechselnd beantworten.",
+    "faq3Q": "Wie wird das Ergebnis berechnet?",
+    "faq3A": "Das Ergebnis basiert auf der Anzahl identischer Antworten beider Partner. Je mehr ihr gleich antwortet, desto höher ist euer Kompatibilitätsergebnis!"
+  }
+}

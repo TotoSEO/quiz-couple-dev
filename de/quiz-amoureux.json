@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "badge": "Quiz für Paare",
+    "title": "Liebes-Quiz:",
+    "titleHighlight": "Seid ihr wirklich füreinander gemacht?",
+    "description": "20 Aussagen, um die Stärke eurer Liebe zu messen. Diskutiert gemeinsam, findet eine Einigung und entdeckt euer Kompatibilitätsergebnis!",
+    "statements": "20 Aussagen",
+    "score": "Punktzahl von 100",
+    "results": "Sofortige Ergebnisse"
+  },
+  "seo": {
+    "whyTitle": "Warum dieses Liebes-Quiz zusammen machen?",
+    "whySubtitle": "Ein Quiz, das darauf ausgelegt ist, eure Komplizenschaft zu stärken und euch besser zu verstehen.",
+    "card1Title": "Öffnet den Dialog",
+    "card1Text": "Jede Aussage ist eine Gelegenheit zur Diskussion. Drückt eure Gefühle aus und hört die eures Partners.",
+    "card2Title": "Messt eure Liebe",
+    "card2Text": "Entdeckt objektiv, wo ihr in eurer Beziehung steht, und identifiziert die Stärken eures Paares.",
+    "card3Title": "Stärkt eure Bindung",
+    "card3Text": "Allein dieses Quiz zusammen zu machen zeigt euer Engagement für die Beziehung. Das ist bereits ein Liebesbeweis!",
+    "card4Title": "Feiert eure Beziehung",
+    "card4Text": "Egal welches Ergebnis, dieses Quiz ermöglicht es euch, eure Geschichte zu feiern und euch daran zu erinnern, warum ihr zusammen seid.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Wie funktioniert dieses Liebes-Quiz?",
+    "faq1A": "Ihr beantwortet gemeinsam 20 Aussagen, indem ihr euer Zustimmungsniveau von 1 bis 5 bewertet. Diskutiert falls nötig, um einen Konsens zu finden!",
+    "faq2Q": "Wie lange dauert das Quiz?",
+    "faq2A": "Etwa 10 bis 15 Minuten, je nachdem wie viel Zeit ihr für die Diskussion jeder Aussage braucht. Nehmt euch Zeit!",
+    "faq3Q": "Ist das Quiz wirklich kostenlos?",
+    "faq3A": "Ja, 100% kostenlos und ohne Anmeldung. Eure Antworten werden nicht gespeichert, ihr könnt das Quiz beliebig oft wiederholen.",
+    "faq4Q": "Was bedeutet unser Ergebnis?",
+    "faq4A": "Euer Ergebnis spiegelt euer Zustimmungsniveau bei wichtigen Aspekten der Beziehung wider. Ein hohes Ergebnis zeigt starke Harmonie, aber es ist nur ein spielerischer Indikator!"
+  }
+}
