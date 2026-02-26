@@ -259,15 +259,41 @@ async function generatePage(routeKey, lang) {
 function generateSitemaps() {
   const publicDir = path.resolve(__dirname, '../../public');
 
-  // Copy existing sitemaps from public/ to dist/
+  // Copy existing sitemaps from public/ to dist/ and fix trailing slashes
   for (const file of ['sitemap.xml', 'sitemap-fr.xml', 'sitemap-en.xml', 'sitemap-es.xml', 'sitemap-de.xml', 'sitemap-it.xml']) {
     const src = path.join(publicDir, file);
     const dest = path.join(DIST_DIR, file);
     if (fs.existsSync(src)) {
-      fs.copyFileSync(src, dest);
+      let content = fs.readFileSync(src, 'utf-8');
+      // Remove <url> blocks for blog articles that don't exist in BLOG_ARTICLES
+      const knownSlugs = new Set();
+      for (const art of BLOG_ARTICLES) {
+        for (const lang of LANGUAGES) {
+          knownSlugs.add(art.slugs[lang]);
+        }
+      }
+      content = content.replace(/<url>\s*<loc>[^<]*\/blog\/([^<]+)<\/loc>[\s\S]*?<\/url>/g, (block, slug) => {
+        // Strip trailing slash if present for matching
+        const cleanSlug = slug.replace(/\/$/, '');
+        if (knownSlugs.has(cleanSlug)) return block;
+        console.log(`[sitemaps] Removed phantom blog article from sitemap: /blog/${cleanSlug}`);
+        return '';
+      });
+
+      // Add trailing slash to all quiz-couple.com URLs that don't already end with /
+      // but exclude file URLs (.xml, .ico, etc.) and the sitemap index references
+      content = content.replace(
+        /(https:\/\/quiz-couple\.com\/[^<"'\s]+?)(?=[<"'\s])/g,
+        (match) => {
+          // Skip if already ends with / or has a file extension
+          if (match.endsWith('/') || /\.\w{2,4}$/.test(match)) return match;
+          return match + '/';
+        }
+      );
+      fs.writeFileSync(dest, content, 'utf-8');
     }
   }
-  console.log('[sitemaps] Copied existing sitemaps to dist/');
+  console.log('[sitemaps] Copied sitemaps to dist/ with trailing slashes');
 }
 
 // ── Static assets ───────────────────────────────────────────────────────

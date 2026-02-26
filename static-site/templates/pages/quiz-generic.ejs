@@ -3,10 +3,15 @@
    * Generic quiz page template.
    * Set these variables before including:
    * - quizType: 'toxic', 'distance', 'sain', etc.
-   * - quizRouteKey: 'testToxic', 'testDistance', etc.
    * - ns: translation namespace like 'quiz-toxic'
    * - totalQ: total number of questions
    * - sectionCount: how many content sections exist
+   *
+   * Supports multiple JSON key patterns:
+   * A) sectionN.title / sectionN.p1 (quiz-toxic, quiz-distance, quiz-marrant)
+   * B) seo.sectionN.title / seo.sectionN.p1 (quiz-coquin)
+   * C) seo.sN.title / seo.sN.p1 (quiz-divorce — nested objects)
+   * D) seo.sNTitle / seo.sNp1 (quiz-couple-sain, quiz-ado — flat keys)
    */
   if (typeof quizType === 'undefined') var quizType = 'generic';
   if (typeof ns === 'undefined') var ns = 'quiz-' + quizType;
@@ -16,14 +21,125 @@
   const quizTitle = t('quizzes:' + routeKey + '.title', 'Quiz Couple');
   const quizDesc = t('quizzes:' + routeKey + '.metaDescription', '');
 
-  // Build JSON-LD
-  const faqEntries = [];
-  for (let i = 1; i <= 5; i++) {
-    const q = t(ns + ':jsonLd.faq' + i + 'Q', '');
-    const a = t(ns + ':jsonLd.faq' + i + 'A', '');
-    if (q && q !== ns + ':jsonLd.faq' + i + 'Q') faqEntries.push({ q, a });
+  // ── Multi-pattern helpers ──────────────────────────────────────
+  // Try multiple key paths, return first non-empty result
+  function tryKeys() {
+    for (var i = 0; i < arguments.length; i++) {
+      var key = arguments[i];
+      var val = t(ns + ':' + key, '');
+      if (val) return val;
+    }
+    return '';
   }
 
+  function getSectionTitle(s) {
+    return tryKeys(
+      'section' + s + '.title',
+      'seo.section' + s + '.title',
+      'seo.s' + s + '.title',
+      'seo.s' + s + 'Title'
+    );
+  }
+
+  function getSectionIntro(s) {
+    return tryKeys(
+      'section' + s + '.intro',
+      'seo.section' + s + '.intro',
+      'seo.s' + s + '.intro',
+      'seo.s' + s + 'Intro'
+    );
+  }
+
+  function getSectionP(s, p) {
+    return tryKeys(
+      'section' + s + '.p' + p,
+      'seo.section' + s + '.p' + p,
+      'seo.s' + s + '.p' + p,
+      'seo.s' + s + 'p' + p
+    );
+  }
+
+  function getSubTitle(s, sub) {
+    return tryKeys(
+      'section' + s + '.sub' + sub + 'Title',
+      'seo.section' + s + '.h3_' + sub,
+      'seo.s' + s + '.h3_' + sub,
+      'seo.s' + s + 'h3_' + sub + 'Title'
+    );
+  }
+
+  function getSubText(s, sub, p) {
+    return tryKeys(
+      'section' + s + '.sub' + sub + 'P' + p,
+      'seo.section' + s + '.h3_' + sub + '_p' + p,
+      'seo.s' + s + '.p' + ((sub - 1) * 2 + p),
+      'seo.s' + s + 'h3_' + sub + 'Text'
+    );
+  }
+
+  function getPillarTitle(s, c) {
+    return tryKeys(
+      'section' + s + '.pillar' + c + 'Title',
+      'seo.section' + s + '.pillar' + c + 'Title',
+      'seo.s' + s + '.pillar' + c + 'Title',
+      'seo.s' + s + 'r' + c + 'Title'
+    );
+  }
+
+  function getPillarText(s, c) {
+    return tryKeys(
+      'section' + s + '.pillar' + c + 'Text',
+      'seo.section' + s + '.pillar' + c + 'Text',
+      'seo.s' + s + '.pillar' + c + 'Text',
+      'seo.s' + s + 'r' + c + 'Text'
+    );
+  }
+
+  function getQuote(s) {
+    return tryKeys(
+      'section' + s + '.quote',
+      'seo.section' + s + '.quote',
+      'seo.s' + s + '.quote',
+      'seo.s' + s + 'Quote'
+    );
+  }
+
+  function getTip(s) {
+    return tryKeys(
+      'section' + s + '.tip',
+      'seo.section' + s + '.tip',
+      'seo.s' + s + '.tip',
+      'seo.s' + s + 'Tip'
+    );
+  }
+
+  // Table helpers
+  function getTableHeader(s, col) {
+    return tryKeys(
+      'section' + s + '.header' + col,
+      'seo.section' + s + '.header' + col,
+      'seo.s' + s + '.header' + col
+    );
+  }
+
+  function getTableCell(s, r, col) {
+    return tryKeys(
+      'section' + s + '.row' + r + col,
+      'seo.section' + s + '.row' + r + col,
+      'seo.s' + s + '.row' + r + col
+    );
+  }
+
+  // ── FAQ entries ────────────────────────────────────────────────
+  const faqEntries = [];
+  for (let i = 1; i <= 5; i++) {
+    // Try multiple FAQ key patterns
+    var q = tryKeys('jsonLd.faq' + i + 'Q', 'seo.faq' + i + 'Q', 'seo.faqQ' + i);
+    var a = tryKeys('jsonLd.faq' + i + 'A', 'seo.faq' + i + 'A', 'seo.faqA' + i);
+    if (q) faqEntries.push({ q, a });
+  }
+
+  // ── JSON-LD ────────────────────────────────────────────────────
   const jsonLd = [
     {
       "@context": "https://schema.org", "@type": "Quiz",
@@ -44,6 +160,22 @@
       })
     });
   }
+
+  // Check for hero intro paragraphs (quiz-couple-sain style)
+  const heroIntro1 = tryKeys('hero.intro1', 'hero.intro');
+  const heroIntro2 = tryKeys('hero.intro2');
+
+  // Check for array-based table (quiz-couple-sain style: seo.tableHeaders + seo.tableRows)
+  const arrayTableHeaders = t(ns + ':seo.tableHeaders', '');
+  const arrayTableRows = t(ns + ':seo.tableRows', '');
+
+  // Check for signal lists (quiz-couple-sain style: seo.s4Signals)
+  function getSignals(s) {
+    return tryKeys('seo.s' + s + 'Signals', 'seo.s' + s + '.signals', 'section' + s + '.signals');
+  }
+  function getOutro(s) {
+    return tryKeys('seo.s' + s + 'Outro', 'seo.s' + s + '.outro', 'section' + s + '.outro');
+  }
 %>
 <script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
 
@@ -51,12 +183,21 @@
 <section class="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-16 md:py-24">
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center">
+      <% const heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>
+      <span class="badge badge-primary mb-4"><%= heroBadge %></span>
+      <% } %>
       <h1 class="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl"><%= t(ns + ':hero.title', quizTitle) %></h1>
       <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
       <% const heroSub = t(ns + ':hero.subtitle', ''); if (heroSub && heroSub !== ns + ':hero.subtitle') { %>
       <p class="text-sm text-muted-foreground mt-4"><%= heroSub %></p>
       <% } %>
     </div>
+    <% if (heroIntro1) { %>
+    <div class="mx-auto max-w-3xl mt-8 space-y-4 text-muted-foreground leading-relaxed">
+      <p><%= heroIntro1 %></p>
+      <% if (heroIntro2) { %><p><%= heroIntro2 %></p><% } %>
+    </div>
+    <% } %>
   </div>
 </section>
 
@@ -73,83 +214,130 @@
 <article class="py-16 md:py-24 seo-content">
   <div class="container mx-auto px-4 max-w-3xl">
     <% for (let s = 1; s <= sectionCount; s++) {
-      const sTitle = t(ns + ':section' + s + '.title', '');
-      if (!sTitle || sTitle === ns + ':section' + s + '.title') continue;
+      const sTitle = getSectionTitle(s);
+      if (!sTitle) continue;
     %>
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= sTitle %></h2>
 
-      <%/* Intro paragraph if exists */%>
-      <% const sIntro = t(ns + ':section' + s + '.intro', ''); if (sIntro && sIntro !== ns + ':section' + s + '.intro') { %>
-      <p class="text-muted-foreground leading-relaxed mb-8"><%= sIntro %></p>
+      <%/* Intro paragraph */%>
+      <% const sIntro = getSectionIntro(s); if (sIntro) { %>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- sIntro %></p>
       <% } %>
 
       <%/* Standard paragraphs */%>
+      <% const paragraphs = [];
+        for (let p = 1; p <= 5; p++) { const pText = getSectionP(s, p); if (pText) paragraphs.push(pText); }
+        if (paragraphs.length > 0) { %>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <% for (let p = 1; p <= 5; p++) {
-          const pText = t(ns + ':section' + s + '.p' + p, '');
-          if (pText && pText !== ns + ':section' + s + '.p' + p) { %>
+        <% for (const pText of paragraphs) { %>
         <p><%- pText %></p>
-        <% } } %>
+        <% } %>
       </div>
+      <% } %>
 
       <%/* Subsections (h3) */%>
-      <% for (let sub = 1; sub <= 6; sub++) {
-        const subTitle = t(ns + ':section' + s + '.sub' + sub + 'Title', '');
-        if (subTitle && subTitle !== ns + ':section' + s + '.sub' + sub + 'Title') { %>
+      <% for (let sub = 1; sub <= 8; sub++) {
+        const subTitle = getSubTitle(s, sub);
+        if (!subTitle) continue; %>
       <div class="mt-6">
         <h3 class="text-xl font-semibold mb-3"><%= subTitle %></h3>
         <% for (let sp = 1; sp <= 3; sp++) {
-          const spText = t(ns + ':section' + s + '.sub' + sub + 'P' + sp, '');
-          if (spText && spText !== ns + ':section' + s + '.sub' + sub + 'P' + sp) { %>
+          const spText = getSubText(s, sub, sp);
+          if (spText) { %>
         <p class="text-muted-foreground leading-relaxed mb-3"><%- spText %></p>
-        <% } } %>
-      </div>
-      <% } } %>
-
-      <%/* Pillar/card items */%>
-      <% const hasCards = t(ns + ':section' + s + '.pillar1Title', '');
-        if (hasCards && hasCards !== ns + ':section' + s + '.pillar1Title') { %>
-      <div class="space-y-6 mt-6">
-        <% for (let c = 1; c <= 8; c++) {
-          const cTitle = t(ns + ':section' + s + '.pillar' + c + 'Title', '');
-          if (cTitle && cTitle !== ns + ':section' + s + '.pillar' + c + 'Title') { %>
-        <div class="bg-card border border-border rounded-lg p-6">
-          <h3 class="text-xl font-semibold mb-3 text-primary"><%= cTitle %></h3>
-          <p class="text-muted-foreground"><%- t(ns + ':section' + s + '.pillar' + c + 'Text', '') %></p>
-        </div>
         <% } } %>
       </div>
       <% } %>
 
-      <%/* Table if exists */%>
-      <% const hasTable = t(ns + ':section' + s + '.headerScore', '');
-        if (hasTable && hasTable !== ns + ':section' + s + '.headerScore') { %>
+      <%/* Pillar/card items */%>
+      <% const firstPillar = getPillarTitle(s, 1);
+        if (firstPillar) { %>
+      <div class="space-y-6 mt-6">
+        <% for (let c = 1; c <= 8; c++) {
+          const cTitle = getPillarTitle(s, c);
+          if (!cTitle) continue; %>
+        <div class="bg-card border border-border rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-3 text-primary"><%= cTitle %></h3>
+          <p class="text-muted-foreground"><%- getPillarText(s, c) %></p>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+
+      <%/* Signal list (quiz-couple-sain style) */%>
+      <% const signals = getSignals(s);
+        if (signals && Array.isArray(signals)) { %>
+      <ul class="space-y-3 mt-6 ml-4">
+        <% for (const sig of signals) { %>
+        <li class="flex items-start gap-2"><span class="text-destructive font-bold mt-1">&bull;</span><span class="text-muted-foreground"><%= sig %></span></li>
+        <% } %>
+      </ul>
+      <% const outro = getOutro(s); if (outro) { %>
+      <p class="text-muted-foreground leading-relaxed mt-6"><%= outro %></p>
+      <% } } %>
+
+      <%/* Table: row-based pattern (sectionN.headerScore/row1Score) */%>
+      <% const hasRowTable = getTableHeader(s, 'Score');
+        if (hasRowTable) { %>
       <div class="overflow-x-auto mt-6">
         <table class="quiz-table">
           <thead><tr>
-            <th><%= t(ns + ':section' + s + '.headerScore', 'Score') %></th>
-            <th><%= t(ns + ':section' + s + '.headerLevel', 'Niveau') %></th>
-            <th><%= t(ns + ':section' + s + '.headerAnalysis', 'Analyse') %></th>
+            <th><%= getTableHeader(s, 'Score') %></th>
+            <th><%= getTableHeader(s, 'Level') %></th>
+            <th><%= getTableHeader(s, 'Analysis') %></th>
           </tr></thead>
           <tbody>
             <% for (let r = 1; r <= 6; r++) {
-              const rScore = t(ns + ':section' + s + '.row' + r + 'Score', '');
-              if (rScore && rScore !== ns + ':section' + s + '.row' + r + 'Score') { %>
+              const rScore = getTableCell(s, r, 'Score');
+              if (!rScore) continue; %>
             <tr>
               <td class="font-medium"><%= rScore %></td>
-              <td><%= t(ns + ':section' + s + '.row' + r + 'Level', '') %></td>
-              <td class="text-sm text-muted-foreground"><%= t(ns + ':section' + s + '.row' + r + 'Analysis', '') %></td>
+              <td><%= getTableCell(s, r, 'Level') %></td>
+              <td class="text-sm text-muted-foreground"><%= getTableCell(s, r, 'Analysis') %></td>
             </tr>
-            <% } } %>
+            <% } %>
           </tbody>
         </table>
       </div>
       <% } %>
 
-      <%/* Blockquote if exists */%>
-      <% const quote = t(ns + ':section' + s + '.quote', '');
-        if (quote && quote !== ns + ':section' + s + '.quote') { %>
+      <%/* Table: array-based pattern (seo.tableHeaders + seo.tableRows) */%>
+      <% if (Array.isArray(arrayTableHeaders) && Array.isArray(arrayTableRows) && s === (function() {
+          // Render this table in the section whose title matches the table context
+          for (var ts = 1; ts <= sectionCount; ts++) {
+            var tt = getSectionTitle(ts);
+            if (tt && (tt.toLowerCase().includes('tableau') || tt.toLowerCase().includes('repère') || tt.toLowerCase().includes('vs') || tt.toLowerCase().includes('comparaison'))) return ts;
+          }
+          return 3; // default to section 3
+        })()) { %>
+      <div class="overflow-x-auto mt-6">
+        <table class="quiz-table">
+          <thead><tr>
+            <% for (const h of arrayTableHeaders) { %><th><%= h %></th><% } %>
+          </tr></thead>
+          <tbody>
+            <% for (const row of arrayTableRows) { %>
+            <tr>
+              <% for (let ci = 0; ci < row.length; ci++) { %>
+              <td class="<%= ci === 0 ? 'font-medium' : 'text-sm text-muted-foreground' %>"><%= row[ci] %></td>
+              <% } %>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+      <% } %>
+
+      <%/* Tip box */%>
+      <% const tip = getTip(s); if (tip) { %>
+      <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+        <p class="text-sm text-muted-foreground"><%- tip %></p>
+      </div>
+      <% } %>
+
+      <%/* Blockquote */%>
+      <% const quote = getQuote(s); if (quote) { %>
       <blockquote class="border-l-4 border-primary pl-6 py-2 bg-muted/30 rounded-r-lg my-6">
         <p class="text-lg italic"><%= quote %></p>
       </blockquote>
@@ -160,7 +348,7 @@
     <%/* FAQ section */%>
     <% if (faqEntries.length > 0) { %>
     <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.faqTitle', t(ns + ':faqTitle', 'FAQ')) %></h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= tryKeys('seo.faqTitle', 'faqTitle') || 'FAQ' %></h2>
       <div class="space-y-4">
         <% for (const faq of faqEntries) { %>
         <details class="border border-border rounded-lg">
