@@ -2,9 +2,6 @@
  * Quiz Couple - Core Quiz Engine (vanilla JS)
  * Handles solo scoring tests: toxic, sain, distance, mariage, divorce
  * Also provides base for duo and multi-player quizzes.
- *
- * Usage: Each quiz type creates a small JS file that imports from this core
- * and provides its question data + config.
  */
 
 var QuizEngine = (function() {
@@ -68,7 +65,6 @@ var QuizEngine = (function() {
   }
 
   // ─── Solo Scoring Test ────────────────────────────────────
-  // Config: { container, questions[], results[], prefix, lang, labels }
   function SoloTest(config) {
     this.container = config.container;
     this.questions = config.questions;
@@ -94,12 +90,25 @@ var QuizEngine = (function() {
     var self = this;
     var wrap = el('div', 'quiz-engine animate-fade-in text-center');
 
-    var title = el('h2', 'text-2xl font-bold mb-4', tg('playerSetup.readyForTest', 'Prêt pour le test ?'));
-    var desc = el('p', 'text-muted-foreground mb-6', this.questions.length + ' questions &bull; ' + tg('meta.duration', '5-7 min'));
+    var icon = el('div', 'text-5xl mb-4', '📝');
+    var title = el('h2', 'text-2xl font-bold mb-3', tg('playerSetup.readyForTest', 'Prêt pour le test ?'));
+    var desc = el('p', 'text-muted-foreground mb-2', this.questions.length + ' questions');
+    var time = el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min') + ' &bull; 🔒 Anonyme & gratuit');
 
-    var startLabel = this.labels.start || tg('playerSetup.startNow', 'Commencer');
-    var btn = el('button', 'btn btn-cta', esc(startLabel));
+    // Prénom input
+    var nameWrap = el('div', 'max-w-sm mx-auto mb-6');
+    var nameLabel = el('label', 'block text-sm font-medium mb-2', '👤 ' + tg('playerSetup.firstName', 'Prénom'));
+    var nameInput = el('input', 'input w-full text-center');
+    nameInput.type = 'text';
+    nameInput.placeholder = tg('playerSetup.enterFirstName', 'Entrez votre prénom');
+    nameInput.maxLength = 30;
+    nameWrap.appendChild(nameLabel);
+    nameWrap.appendChild(nameInput);
+
+    var startLabel = this.labels.start || tg('playerSetup.startTest', tg('playerSetup.startNow', 'Commencer le test'));
+    var btn = el('button', 'btn btn-cta btn-lg', esc(startLabel));
     btn.addEventListener('click', function() {
+      self.playerName = nameInput.value.trim() || '';
       self.phase = 'playing';
       self.currentQ = 0;
       self.answers = [];
@@ -107,8 +116,11 @@ var QuizEngine = (function() {
       self.render();
     });
 
+    wrap.appendChild(icon);
     wrap.appendChild(title);
     wrap.appendChild(desc);
+    wrap.appendChild(time);
+    wrap.appendChild(nameWrap);
     wrap.appendChild(btn);
     this.container.appendChild(wrap);
   };
@@ -117,16 +129,16 @@ var QuizEngine = (function() {
     var self = this;
     var q = this.questions[this.currentQ];
     var total = this.questions.length;
-    var progress = Math.round(((this.currentQ + 1) / total) * 100);
+    var progress = Math.round(((this.currentQ) / total) * 100);
 
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
 
     // Progress bar
     var progressWrap = el('div', 'mb-6');
     var progressInfo = el('div', 'flex justify-between text-sm text-muted-foreground mb-2');
     progressInfo.innerHTML = '<span>' + tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total + '</span><span>' + progress + '%</span>';
-    var barOuter = el('div', 'quiz-progress-bar');
-    var barInner = el('div', 'quiz-progress-fill');
+    var barOuter = el('div', 'quiz-progress');
+    var barInner = el('div', 'quiz-progress-bar');
     barInner.style.width = progress + '%';
     barOuter.appendChild(barInner);
     progressWrap.appendChild(progressInfo);
@@ -136,22 +148,39 @@ var QuizEngine = (function() {
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
     var qEl = el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText));
 
+    // Remark (if exists)
+    var remarkKey = this.prefix + '.q' + q.id + '_r';
+    var remarkText = tgd(remarkKey, null);
+
     // Options
-    var optionsWrap = el('div', 'space-y-3');
-    q.options.forEach(function(opt) {
+    var optionsWrap = el('div', 'space-y-2');
+    q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
-      var optBtn = el('button', 'quiz-option w-full text-left p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-all');
+      var optBtn = el('button', 'quiz-option');
       optBtn.textContent = optText;
+      optBtn.style.animationDelay = (idx * 60) + 'ms';
       optBtn.addEventListener('click', function() {
+        // Visual feedback
+        optBtn.classList.add('selected');
+        var siblings = optionsWrap.querySelectorAll('.quiz-option');
+        for (var s = 0; s < siblings.length; s++) {
+          if (siblings[s] !== optBtn) siblings[s].style.opacity = '0.5';
+          siblings[s].style.pointerEvents = 'none';
+        }
+
         self.answers[self.currentQ] = opt.points || opt.score || 0;
         self.totalScore = self.answers.reduce(function(s, v) { return s + (v || 0); }, 0);
-        if (self.currentQ < total - 1) {
-          self.currentQ++;
-          self.render();
-        } else {
-          self.phase = 'results';
-          self.render();
-        }
+
+        // Delay before moving to next question for visual feedback
+        setTimeout(function() {
+          if (self.currentQ < total - 1) {
+            self.currentQ++;
+            self.render();
+          } else {
+            self.phase = 'results';
+            self.render();
+          }
+        }, 350);
       });
       optionsWrap.appendChild(optBtn);
     });
@@ -159,13 +188,18 @@ var QuizEngine = (function() {
     // Back button
     var navWrap = el('div', 'flex justify-between mt-6');
     if (this.currentQ > 0) {
-      var backBtn = el('button', 'btn btn-ghost text-sm', '&larr; ' + tg('question.previous', 'Précédent'));
+      var backBtn = el('button', 'btn btn-ghost text-sm', '&larr; ' + tg('question.previousQuestion', tg('question.previous', 'Précédent')));
       backBtn.addEventListener('click', function() { self.currentQ--; self.render(); });
       navWrap.appendChild(backBtn);
     }
 
     wrap.appendChild(progressWrap);
     wrap.appendChild(qEl);
+    if (remarkText && remarkText !== remarkKey) {
+      var remark = el('div', 'text-sm text-muted-foreground bg-secondary/10 border border-secondary/20 rounded-lg p-4 mb-6');
+      remark.innerHTML = '💡 ' + esc(remarkText);
+      wrap.appendChild(remark);
+    }
     wrap.appendChild(optionsWrap);
     wrap.appendChild(navWrap);
     this.container.appendChild(wrap);
@@ -173,7 +207,7 @@ var QuizEngine = (function() {
 
   SoloTest.prototype.renderResults = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
     var result = null;
 
     for (var i = 0; i < this.results.length; i++) {
@@ -188,34 +222,51 @@ var QuizEngine = (function() {
       result = this.results[this.results.length - 1];
     }
 
-    var card = el('div', 'quiz-result-card');
-
-    var scoreEl = el('div', 'text-5xl font-bold text-primary mb-4', '' + this.totalScore);
     var maxScore = this.results.length > 0 ? this.results[this.results.length - 1].max : 100;
-    var scoreLabel = el('p', 'text-sm text-muted-foreground mb-6', tg('result.score', 'Score') + ': ' + this.totalScore + '/' + maxScore);
+    var pct = Math.round((this.totalScore / maxScore) * 100);
 
-    card.appendChild(scoreEl);
-    card.appendChild(scoreLabel);
+    // Player name greeting
+    if (this.playerName) {
+      var greeting = el('p', 'text-lg font-semibold mb-2', tg('result.bravo', 'Bravo') + ' ' + esc(this.playerName) + ' !');
+      wrap.appendChild(greeting);
+    }
+
+    // Score circle
+    var scoreCircle = el('div', 'quiz-score-circle mx-auto mb-4', pct + '%');
+    wrap.appendChild(scoreCircle);
+
+    var scoreLabel = el('p', 'text-sm text-muted-foreground mb-6', this.totalScore + '/' + maxScore + ' points');
+    wrap.appendChild(scoreLabel);
 
     if (result) {
       var resultTitle = el('h3', 'text-2xl font-bold mb-3', esc(result.title));
-      var resultDesc = el('p', 'text-muted-foreground leading-relaxed mb-4', result.description);
-      card.appendChild(resultTitle);
-      card.appendChild(resultDesc);
+      var resultDesc = el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto', result.description);
+      wrap.appendChild(resultTitle);
+      wrap.appendChild(resultDesc);
       if (result.advice) {
-        var advice = el('p', 'text-sm text-foreground bg-muted/30 rounded-lg p-4 mt-4', result.advice);
-        card.appendChild(advice);
+        var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto');
+        advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
+        wrap.appendChild(advice);
       }
     }
 
-    var restartBtn = el('button', 'btn btn-outline mt-6', tg('question.restart', 'Recommencer'));
-    restartBtn.addEventListener('click', function() {
-      self.phase = 'intro';
-      self.render();
-    });
+    // Actions
+    var actions = el('div', 'flex flex-col sm:flex-row gap-3 justify-center mt-8');
 
-    card.appendChild(restartBtn);
-    wrap.appendChild(card);
+    // "Recommencer avec d'autres questions" reloads the page to get new random questions
+    var newQBtn = el('button', 'btn btn-cta', '🎲 ' + tg('result.restartOtherQuestions', 'Recommencer avec d\'autres questions'));
+    newQBtn.addEventListener('click', function() { location.reload(); });
+    actions.appendChild(newQBtn);
+
+    var restartBtn = el('button', 'btn btn-outline', '🔄 ' + tg('result.restartFromBeginning', tg('result.redoQuiz', 'Recommencer')));
+    restartBtn.addEventListener('click', function() { self.phase = 'intro'; self.render(); });
+    actions.appendChild(restartBtn);
+
+    var homeBtn = el('a', 'btn btn-primary', '🏠 ' + tg('question.backHome', 'Retour à l\'accueil'));
+    homeBtn.href = '/';
+    actions.appendChild(homeBtn);
+
+    wrap.appendChild(actions);
     this.container.appendChild(wrap);
 
     // Scroll to results
@@ -241,6 +292,7 @@ var QuizEngine = (function() {
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
     else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'handoff') this.renderHandoff();
     else if (this.phase === 'results') this.renderResults();
   };
 
@@ -248,22 +300,33 @@ var QuizEngine = (function() {
     var self = this;
     var wrap = el('div', 'quiz-engine animate-fade-in');
 
-    var title = el('h2', 'text-2xl font-bold mb-6 text-center', tg('playerSetup.readyToPlay', 'Prêts à jouer ?'));
+    var icon = el('div', 'text-5xl mb-4 text-center', '💕');
+    var title = el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyToPlay', 'Prêts à jouer ?'));
     var desc = el('p', 'text-muted-foreground mb-6 text-center', tg('playerSetup.enterNames', 'Entrez vos prénoms'));
 
     var form = el('div', 'space-y-4 max-w-md mx-auto');
 
-    var p1Label = el('label', 'block text-sm font-medium mb-1', tg('playerSetup.player1', 'Joueur 1'));
-    var p1Input = el('input', 'input');
+    var p1Wrap = el('div', 'glass-card rounded-xl p-4');
+    var p1Label = el('label', 'block text-sm font-medium mb-2', '👤 ' + tg('playerSetup.player1', 'Joueur 1'));
+    var p1Input = el('input', 'input w-full');
     p1Input.type = 'text';
     p1Input.placeholder = tg('playerSetup.firstName', 'Prénom');
+    p1Input.maxLength = 30;
+    p1Wrap.appendChild(p1Label);
+    p1Wrap.appendChild(p1Input);
 
-    var p2Label = el('label', 'block text-sm font-medium mb-1 mt-4', tg('playerSetup.player2', 'Joueur 2'));
-    var p2Input = el('input', 'input');
+    var p2Wrap = el('div', 'glass-card rounded-xl p-4');
+    var p2Label = el('label', 'block text-sm font-medium mb-2', '👤 ' + tg('playerSetup.player2', 'Joueur 2'));
+    var p2Input = el('input', 'input w-full');
     p2Input.type = 'text';
     p2Input.placeholder = tg('playerSetup.firstName', 'Prénom');
+    p2Input.maxLength = 30;
+    p2Wrap.appendChild(p2Label);
+    p2Wrap.appendChild(p2Input);
 
-    var startBtn = el('button', 'btn btn-cta w-full mt-6', tg('playerSetup.startNow', 'Commencer'));
+    var info = el('p', 'text-xs text-muted-foreground text-center mt-3', '📝 ' + this.questions.length + ' questions &bull; ⏱ ' + tg('meta.duration', '5 min'));
+
+    var startBtn = el('button', 'btn btn-cta w-full mt-4', tg('playerSetup.startQuiz', 'Commencer le quiz'));
     startBtn.addEventListener('click', function() {
       var n1 = p1Input.value.trim() || tg('playerSetup.player1', 'Joueur 1');
       var n2 = p2Input.value.trim() || tg('playerSetup.player2', 'Joueur 2');
@@ -276,15 +339,37 @@ var QuizEngine = (function() {
       self.render();
     });
 
-    form.appendChild(p1Label);
-    form.appendChild(p1Input);
-    form.appendChild(p2Label);
-    form.appendChild(p2Input);
+    form.appendChild(p1Wrap);
+    form.appendChild(p2Wrap);
+    form.appendChild(info);
     form.appendChild(startBtn);
 
+    wrap.appendChild(icon);
     wrap.appendChild(title);
     wrap.appendChild(desc);
     wrap.appendChild(form);
+    this.container.appendChild(wrap);
+  };
+
+  DuoQuiz.prototype.renderHandoff = function() {
+    var self = this;
+    var playerName = this.players[this.currentPlayer].name;
+    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
+
+    var icon = el('div', 'text-5xl mb-4', '📱');
+    var title = el('h2', 'text-xl font-bold mb-3', tg('question.itsTurnOf', 'C\'est au tour de') + ' ' + esc(playerName) + ' !');
+    var desc = el('p', 'text-muted-foreground mb-6', tg('question.dontLookAnswer', 'Ne regardez pas la réponse !'));
+
+    var btn = el('button', 'btn btn-cta', tg('question.chooseAnswer', 'Choisir ma réponse'));
+    btn.addEventListener('click', function() {
+      self.phase = 'playing';
+      self.render();
+    });
+
+    wrap.appendChild(icon);
+    wrap.appendChild(title);
+    wrap.appendChild(desc);
+    wrap.appendChild(btn);
     this.container.appendChild(wrap);
   };
 
@@ -297,14 +382,14 @@ var QuizEngine = (function() {
     var progress = Math.round((answered / totalNeeded) * 100);
     var playerName = this.players[this.currentPlayer].name;
 
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
 
     // Progress
     var progressWrap = el('div', 'mb-6');
     var progressInfo = el('div', 'flex justify-between text-sm text-muted-foreground mb-2');
     progressInfo.innerHTML = '<span>' + tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total + '</span><span>' + progress + '%</span>';
-    var barOuter = el('div', 'quiz-progress-bar');
-    var barInner = el('div', 'quiz-progress-fill');
+    var barOuter = el('div', 'quiz-progress');
+    var barInner = el('div', 'quiz-progress-bar');
     barInner.style.width = progress + '%';
     barOuter.appendChild(barInner);
     progressWrap.appendChild(progressInfo);
@@ -319,25 +404,37 @@ var QuizEngine = (function() {
     var qEl = el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText));
 
     // Options
-    var optionsWrap = el('div', 'space-y-3');
-    q.options.forEach(function(opt) {
+    var optionsWrap = el('div', 'space-y-2');
+    q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
-      var optBtn = el('button', 'quiz-option w-full text-left p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-all');
+      var optBtn = el('button', 'quiz-option');
       optBtn.textContent = optText;
+      optBtn.style.animationDelay = (idx * 60) + 'ms';
       optBtn.addEventListener('click', function() {
-        if (self.currentPlayer === 0) {
-          self.answers.p1[self.currentQ] = opt.id;
-          self.currentPlayer = 1;
-        } else {
-          self.answers.p2[self.currentQ] = opt.id;
-          if (self.currentQ < total - 1) {
-            self.currentQ++;
-            self.currentPlayer = 0;
-          } else {
-            self.phase = 'results';
-          }
+        optBtn.classList.add('selected');
+        var siblings = optionsWrap.querySelectorAll('.quiz-option');
+        for (var s = 0; s < siblings.length; s++) {
+          if (siblings[s] !== optBtn) siblings[s].style.opacity = '0.5';
+          siblings[s].style.pointerEvents = 'none';
         }
-        self.render();
+
+        setTimeout(function() {
+          if (self.currentPlayer === 0) {
+            self.answers.p1[self.currentQ] = opt.id;
+            self.currentPlayer = 1;
+            self.phase = 'handoff';
+          } else {
+            self.answers.p2[self.currentQ] = opt.id;
+            if (self.currentQ < total - 1) {
+              self.currentQ++;
+              self.currentPlayer = 0;
+              self.phase = 'handoff';
+            } else {
+              self.phase = 'results';
+            }
+          }
+          self.render();
+        }, 350);
       });
       optionsWrap.appendChild(optBtn);
     });
@@ -351,12 +448,14 @@ var QuizEngine = (function() {
 
   DuoQuiz.prototype.renderResults = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
     var total = this.questions.length;
     var matchCount = 0;
     for (var i = 0; i < total; i++) {
       if (this.answers.p1[i] && this.answers.p2[i] && this.answers.p1[i] === this.answers.p2[i]) matchCount++;
     }
+
+    var pct = Math.round((matchCount / total) * 100);
 
     var result = null;
     for (var j = 0; j < this.results.length; j++) {
@@ -367,22 +466,34 @@ var QuizEngine = (function() {
       }
     }
 
-    var card = el('div', 'quiz-result-card');
-    var scoreEl = el('div', 'text-5xl font-bold text-primary mb-2', matchCount + '/' + total);
-    var scoreLabel = el('p', 'text-muted-foreground mb-6', tg('result.identicalAnswers', 'réponses identiques'));
-    card.appendChild(scoreEl);
-    card.appendChild(scoreLabel);
+    var icon = el('div', 'text-5xl mb-4', pct >= 70 ? '🎉' : pct >= 40 ? '😊' : '🤔');
+    var scoreCircle = el('div', 'quiz-score-circle mx-auto mb-4', pct + '%');
+    var scoreLabel = el('p', 'text-muted-foreground mb-6', matchCount + '/' + total + ' ' + tg('result.identicalAnswers', 'réponses identiques'));
+
+    wrap.appendChild(icon);
+    wrap.appendChild(scoreCircle);
+    wrap.appendChild(scoreLabel);
 
     if (result) {
-      card.appendChild(el('h3', 'text-2xl font-bold mb-3', esc(result.title || '')));
-      card.appendChild(el('p', 'text-muted-foreground leading-relaxed', result.description || ''));
+      wrap.appendChild(el('h3', 'text-2xl font-bold mb-3', esc(result.title || '')));
+      wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed max-w-lg mx-auto', result.description || ''));
     }
 
-    var restartBtn = el('button', 'btn btn-outline mt-6', tg('question.restart', 'Recommencer'));
-    restartBtn.addEventListener('click', function() { self.phase = 'setup'; self.render(); });
-    card.appendChild(restartBtn);
+    var actions = el('div', 'flex flex-col sm:flex-row gap-3 justify-center mt-8');
 
-    wrap.appendChild(card);
+    var newQBtn = el('button', 'btn btn-cta', '🎲 ' + tg('result.restartOtherQuestions', 'Recommencer avec d\'autres questions'));
+    newQBtn.addEventListener('click', function() { location.reload(); });
+    actions.appendChild(newQBtn);
+
+    var restartBtn = el('button', 'btn btn-outline', '🔄 ' + tg('result.restartFromBeginning', tg('result.redoQuiz', 'Recommencer')));
+    restartBtn.addEventListener('click', function() { self.phase = 'setup'; self.render(); });
+    actions.appendChild(restartBtn);
+
+    var homeBtn = el('a', 'btn btn-primary', '🏠 ' + tg('question.backHome', 'Retour à l\'accueil'));
+    homeBtn.href = '/';
+    actions.appendChild(homeBtn);
+
+    wrap.appendChild(actions);
     this.container.appendChild(wrap);
     wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };

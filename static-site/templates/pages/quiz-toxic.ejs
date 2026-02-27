@@ -56,7 +56,7 @@
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%= t(ns + ':section1.p1', '') %></p>
+        <p><%- t(ns + ':section1.p1', '') %></p>
         <p><%- t(ns + ':section1.p2', '') %></p>
         <p><%- t(ns + ':section1.p3', '') %></p>
       </div>
@@ -66,20 +66,20 @@
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
         <p><%- t(ns + ':section2.p1', '') %></p>
-        <p><%= t(ns + ':section2.p2', '') %></p>
+        <p><%- t(ns + ':section2.p2', '') %></p>
         <ul class="space-y-3 ml-4">
           <li class="flex items-start gap-2"><span class="text-primary font-bold">&bull;</span><span><%- t(ns + ':section2.healthy', '') %></span></li>
           <li class="flex items-start gap-2"><span class="text-primary font-bold">&bull;</span><span><%- t(ns + ':section2.toxic', '') %></span></li>
         </ul>
         <blockquote class="border-l-4 border-primary pl-6 py-2 bg-muted/30 rounded-r-lg my-6">
-          <p class="text-lg italic"><%= t(ns + ':section2.quote', '') %></p>
+          <p class="text-lg italic"><%- t(ns + ':section2.quote', '') %></p>
         </blockquote>
       </div>
     </section>
 
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title', '') %></h2>
-      <p class="text-muted-foreground leading-relaxed mb-8"><%= t(ns + ':section3.intro', '') %></p>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section3.intro', '') %></p>
       <div class="overflow-x-auto">
         <table class="quiz-table">
           <thead><tr>
@@ -104,7 +104,7 @@
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section4.title', '') %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed mb-8">
         <p><%- t(ns + ':section4.p1', '') %></p>
-        <p><%= t(ns + ':section4.p2', '') %></p>
+        <p><%- t(ns + ':section4.p2', '') %></p>
       </div>
       <div class="space-y-6">
         <% for (let i = 1; i <= 3; i++) { %>
@@ -118,7 +118,7 @@
 
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section5.title', '') %></h2>
-      <p class="text-muted-foreground leading-relaxed mb-8"><%= t(ns + ':section5.intro', '') %></p>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section5.intro', '') %></p>
       <div class="space-y-6">
         <% for (let i = 1; i <= 4; i++) { %>
         <div class="border-l-4 border-destructive pl-6">
@@ -132,8 +132,8 @@
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section6.title', '') %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed mb-8">
-        <p><%= t(ns + ':section6.p1', '') %></p>
-        <p><%= t(ns + ':section6.p2', '') %></p>
+        <p><%- t(ns + ':section6.p1', '') %></p>
+        <p><%- t(ns + ':section6.p2', '') %></p>
       </div>
       <div class="space-y-8">
         <div>
@@ -170,9 +170,9 @@
     <section class="mb-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 border border-primary/20">
       <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t(ns + ':section7.title', '') %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%= t(ns + ':section7.p1', '') %></p>
-        <p><%= t(ns + ':section7.p2', '') %></p>
-        <p class="text-foreground font-semibold"><%= t(ns + ':section7.p3', '') %></p>
+        <p><%- t(ns + ':section7.p1', '') %></p>
+        <p><%- t(ns + ':section7.p2', '') %></p>
+        <p class="text-foreground font-semibold"><%- t(ns + ':section7.p3', '') %></p>
       </div>
     </section>
 
