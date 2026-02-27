@@ -20,29 +20,100 @@ var QuizEngine = (function() {
 
   // ─── Translation helper ───────────────────────────────────
   var gdTranslations = null;
+  var gdFrTranslations = null;
   var gamesTranslations = null;
+
+  // Prefix aliases: non-FR languages use different prefix names for some quizzes
+  var PREFIX_ALIASES = {
+    'couple': 'testerC',
+    'commonPoints': 'cp',
+    'coquin': 'coquinQ',
+    'marrant': 'funny'
+  };
 
   function loadTranslations(lang, callback) {
     var loaded = 0;
-    var total = 2;
+    var total = lang === 'fr' ? 2 : 3;
     function check() { loaded++; if (loaded >= total && callback) callback(); }
+
+    // Always load FR as base fallback
+    if (lang !== 'fr') {
+      fetch('/js/data/gd-fr.json').then(function(r) { return r.json(); })
+        .then(function(d) { gdFrTranslations = d; check(); })
+        .catch(check);
+    }
+
     fetch('/js/data/gd-' + lang + '.json').then(function(r) { return r.json(); })
-      .then(function(d) { gdTranslations = d; check(); })
-      .catch(function() { fetch('/js/data/gd-fr.json').then(function(r) { return r.json(); }).then(function(d) { gdTranslations = d; check(); }).catch(check); });
+      .then(function(d) { gdTranslations = d; if (lang === 'fr') gdFrTranslations = d; check(); })
+      .catch(function() { fetch('/js/data/gd-fr.json').then(function(r) { return r.json(); }).then(function(d) { gdTranslations = d; gdFrTranslations = d; check(); }).catch(check); });
     fetch('/js/data/games-' + lang + '.json').then(function(r) { return r.json(); })
       .then(function(d) { gamesTranslations = d; check(); })
       .catch(function() { fetch('/js/data/games-fr.json').then(function(r) { return r.json(); }).then(function(d) { gamesTranslations = d; check(); }).catch(check); });
   }
 
-  function tgd(key, fallback) {
-    if (!gdTranslations) return fallback || key;
+  function _lookup(data, key) {
+    if (!data) return undefined;
     var parts = key.split('.');
-    var val = gdTranslations;
+    var val = data;
     for (var i = 0; i < parts.length; i++) {
-      if (!val || typeof val !== 'object') return fallback || key;
+      if (!val || typeof val !== 'object') return undefined;
       val = val[parts[i]];
     }
-    return (val !== undefined && val !== null) ? val : (fallback || key);
+    return (val !== undefined && val !== null) ? val : undefined;
+  }
+
+  function _tryAllPrefixes(data, prefix, rest) {
+    var val = _lookup(data, prefix + '.' + rest);
+    if (val !== undefined) return val;
+    if (PREFIX_ALIASES[prefix]) {
+      val = _lookup(data, PREFIX_ALIASES[prefix] + '.' + rest);
+      if (val !== undefined) return val;
+    }
+    return undefined;
+  }
+
+  function tgd(key, fallback) {
+    // 1. Try current language (exact key)
+    var val = _lookup(gdTranslations, key);
+    if (val !== undefined) return val;
+
+    var dotIdx = key.indexOf('.');
+    if (dotIdx > 0) {
+      var prefix = key.substring(0, dotIdx);
+      var rest = key.substring(dotIdx + 1);
+
+      // 2. Try alias prefix in current language
+      if (PREFIX_ALIASES[prefix]) {
+        val = _lookup(gdTranslations, PREFIX_ALIASES[prefix] + '.' + rest);
+        if (val !== undefined) return val;
+      }
+
+      // 3. Try numeric variant for question keys: q{N} → {N}
+      var numMatch = rest.match(/^q(\d+)$/);
+      if (numMatch) {
+        val = _tryAllPrefixes(gdTranslations, prefix, numMatch[1]);
+        if (val !== undefined) return val;
+      }
+
+      // 4. Try option pattern variants: q{N}a → q{N}o0 or q{N}A
+      var optMatch = rest.match(/^q(\d+)([a-e])$/);
+      if (optMatch) {
+        var qNum = optMatch[1];
+        var letterIdx = optMatch[2].charCodeAt(0) - 97; // a=0, b=1, c=2, d=3, e=4
+        // Try o-pattern: q{N}o{idx}
+        val = _tryAllPrefixes(gdTranslations, prefix, 'q' + qNum + 'o' + letterIdx);
+        if (val !== undefined) return val;
+        // Try uppercase pattern: q{N}A/B/C/D
+        val = _tryAllPrefixes(gdTranslations, prefix, 'q' + qNum + optMatch[2].toUpperCase());
+        if (val !== undefined) return val;
+      }
+    }
+
+    // 5. Fallback to FR
+    val = _lookup(gdFrTranslations, key);
+    if (val !== undefined) return val;
+
+    return (fallback !== undefined && fallback !== null) ? fallback : key;
   }
 
   function tg(key, fallback) {
@@ -178,6 +249,7 @@ var QuizEngine = (function() {
     this.quizType = config.quizType || 'solo';
     this.hasSkip = config.hasSkip || false;
     this.hasLocalStorage = config.hasLocalStorage || false;
+    this.needsName = config.needsName || false;
     this.phase = 'intro';
     this.currentQ = 0;
     this.answers = [];
@@ -249,9 +321,33 @@ var QuizEngine = (function() {
       wrap.appendChild(disclaimerBox);
     }
 
+    // Name input for ado quiz
+    var nameInput = null;
+    if (this.needsName) {
+      var nameWrap = el('div', 'max-w-sm mx-auto mb-6');
+      var nameLabel = el('label', 'block text-sm font-medium text-foreground mb-2');
+      nameLabel.textContent = tg('ui.yourName', 'Prénom de ton/ta partenaire');
+      nameInput = el('input', 'w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground text-center text-lg focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none');
+      nameInput.type = 'text';
+      nameInput.placeholder = tg('ui.namePlaceholder', 'Ex : Lucas');
+      nameInput.maxLength = 30;
+      nameWrap.appendChild(nameLabel);
+      nameWrap.appendChild(nameInput);
+      wrap.appendChild(nameWrap);
+    }
+
     var startLabel = this.labels.start || tg('playerSetup.startTest', 'Commencer le test');
     var btn = el('button', 'btn btn-cta btn-lg', esc(startLabel));
     btn.addEventListener('click', function() {
+      if (self.needsName && nameInput) {
+        var name = nameInput.value.trim();
+        if (!name) {
+          nameInput.style.borderColor = '#ef4444';
+          nameInput.focus();
+          return;
+        }
+        self.playerName = name;
+      }
       self.phase = 'playing';
       self.currentQ = 0;
       self.answers = [];
@@ -911,6 +1007,8 @@ var QuizEngine = (function() {
     renderPlayerBadge(wrap, guesser.name + ' ' + tg('question.itsYourTurnToGuess', 'c\'est à toi de deviner !'));
 
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
+    // Replace NAME/{{name}} with target player's name
+    qText = qText.replace(/\bNAME\b/g, target.name).replace(/\{\{name\}\}/g, target.name);
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
 
     var optionsWrap = el('div', 'space-y-2');
@@ -948,6 +1046,7 @@ var QuizEngine = (function() {
     renderPlayerBadge(wrap, target.name + ', ' + tg('coquin.revealAnswer', 'révèle ta vraie réponse !'));
 
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
+    qText = qText.replace(/\bNAME\b/g, target.name).replace(/\{\{name\}\}/g, target.name);
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-4 text-center', esc(qText)));
     wrap.appendChild(el('p', 'text-sm text-muted-foreground text-center mb-4', tg('coquin.beHonest', 'Soyez honnête, c\'est plus fun !')));
 
@@ -1125,15 +1224,19 @@ var QuizEngine = (function() {
     wrap.appendChild(el('div', 'text-center mb-4 text-sm text-muted-foreground', esc(target.name) + ' ' + tg('question.validates', 'valide !')));
 
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
+    // Replace NAME/{{name}} placeholder with target player's name
+    qText = qText.replace(/\bNAME\b/g, target.name).replace(/\{\{name\}\}/g, target.name);
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
 
     // Show options as reference (read-only display)
-    var optionsRef = el('div', 'space-y-1 mb-6');
-    q.options.forEach(function(opt) {
-      var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
-      optionsRef.appendChild(el('div', 'text-sm text-muted-foreground text-center py-1', esc(optText)));
-    });
-    wrap.appendChild(optionsRef);
+    if (q.options && q.options.length > 0) {
+      var optionsRef = el('div', 'space-y-1 mb-6');
+      q.options.forEach(function(opt) {
+        var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
+        optionsRef.appendChild(el('div', 'text-sm text-muted-foreground text-center py-1', esc(optText)));
+      });
+      wrap.appendChild(optionsRef);
+    }
 
     // ✅ / ❌ validation buttons
     var validationWrap = el('div', 'flex justify-center gap-4 mt-4');
