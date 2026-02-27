@@ -61,6 +61,11 @@
     var textOnly = config.textOnly || false;
     var questions = parseGdQuestions(config.prefix, config.pool + 10, config.ascending, textOnly);
 
+    // Fallback: healthy quiz uses 'couple' prefix if 'healthy' has no questions
+    if (questions.length === 0 && config.prefix === 'healthy') {
+      questions = parseGdQuestions('couple', config.pool + 10, config.ascending, textOnly);
+    }
+
     if (questions.length === 0) {
       showUnavailable(config);
       return;
