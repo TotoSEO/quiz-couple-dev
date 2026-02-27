@@ -179,7 +179,7 @@
     const questionObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
     const answers = [];
     for (let oi = 0; oi < optionLetters.length; oi++) {
-      const optText = tgd(gdPrefix + '.q' + qi + optionLetters[oi], '');
+      const optText = tgd.local(gdPrefix + '.q' + qi + optionLetters[oi], '');
       if (!optText || optText === gdPrefix + '.q' + qi + optionLetters[oi]) break;
       answers.push({ "@type": "Answer", "position": oi + 1, "text": optText });
     }

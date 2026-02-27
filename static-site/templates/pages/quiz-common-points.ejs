@@ -15,7 +15,7 @@
     const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
     const ans = [];
     for (let oi = 0; oi < optLetters.length; oi++) {
-      const oText = tgd('commonPoints.q' + qi + optLetters[oi], '');
+      const oText = tgd.local('commonPoints.q' + qi + optLetters[oi], '');
       if (!oText || oText === 'commonPoints.q' + qi + optLetters[oi]) break;
       ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
     }

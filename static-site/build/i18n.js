@@ -146,8 +146,8 @@ export function createTgd(lang) {
     return undefined;
   }
 
-  return function tgd(key, fallback) {
-    // 1. Try exact key in current language
+  // Core lookup: tries current language with aliases and variants, no FR fallback
+  function lookupLocal(key) {
     let val = deepGet(gdData, key);
     if (val !== undefined) return val;
 
@@ -156,39 +156,54 @@ export function createTgd(lang) {
       const prefix = key.substring(0, dotIdx);
       const rest = key.substring(dotIdx + 1);
 
-      // 2. Try alias prefix in current language
+      // Try alias prefix
       if (PREFIX_ALIASES[prefix]) {
         val = deepGet(gdData, PREFIX_ALIASES[prefix] + '.' + rest);
         if (val !== undefined) return val;
       }
 
-      // 3. Numeric variant: q{N} → {N}
+      // Numeric variant: q{N} → {N}
       const numMatch = rest.match(/^q(\d+)$/);
       if (numMatch) {
         val = tryAllPrefixes(gdData, prefix, numMatch[1]);
         if (val !== undefined) return val;
       }
 
-      // 4. Option variants: q{N}a → q{N}o0, q{N}A
+      // Option variants: q{N}a → q{N}o0, q{N}A
       const optMatch = rest.match(/^q(\d+)([a-e])$/);
       if (optMatch) {
         const qNum = optMatch[1];
         const letterIdx = optMatch[2].charCodeAt(0) - 97;
-        // Try o-pattern: q{N}o{idx}
         val = tryAllPrefixes(gdData, prefix, 'q' + qNum + 'o' + letterIdx);
         if (val !== undefined) return val;
-        // Try uppercase: q{N}A/B/C/D
         val = tryAllPrefixes(gdData, prefix, 'q' + qNum + optMatch[2].toUpperCase());
         if (val !== undefined) return val;
       }
     }
+    return undefined;
+  }
 
-    // 5. Fallback to FR (exact key only - FR uses standard format)
+  // tgd: full lookup with FR fallback (for questions)
+  function tgd(key, fallback) {
+    let val = lookupLocal(key);
+    if (val !== undefined) return val;
+
+    // Fallback to FR
     val = deepGet(gdFr, key);
     if (val !== undefined) return val;
 
     return fallback !== undefined ? fallback : key;
-  };
+  }
+
+  // tgdLocal: lookup in current language only, no FR fallback (for answers)
+  function tgdLocal(key, fallback) {
+    const val = lookupLocal(key);
+    if (val !== undefined) return val;
+    return fallback !== undefined ? fallback : key;
+  }
+
+  tgd.local = tgdLocal;
+  return tgd;
 }
 
 /**
