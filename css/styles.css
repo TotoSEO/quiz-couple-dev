@@ -68,7 +68,7 @@ h1 { font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; }
 img, svg, video { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: inherit; }
 button, input, select, textarea { font-family: inherit; font-size: 100%; line-height: inherit; color: inherit; }
-button { cursor: pointer; }
+button { cursor: pointer; background: transparent; border: none; padding: 0; }
 :focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }
 ::selection { background: hsl(var(--primary) / 0.3); color: hsl(var(--foreground)); }
 
@@ -594,9 +594,13 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 .mobile-accordion-content.open { display: block; }
 .mobile-accordion-trigger[aria-expanded="true"] svg { transform: rotate(180deg); }
-#mobile-menu { background-color: hsl(var(--background)); }
-#mobile-menu .mobile-accordion-trigger { color: hsl(var(--foreground)); }
+#mobile-menu { background-color: hsl(var(--card)); border-top: 1px solid hsl(var(--border)); }
+#mobile-menu .mobile-accordion-trigger { color: hsl(var(--foreground)); background: transparent; }
+#mobile-menu .mobile-accordion-trigger:hover { background-color: hsl(var(--muted)); }
 #mobile-menu > div > a { color: hsl(var(--foreground)); }
+#mobile-menu > div > a:hover { background-color: hsl(var(--muted)); color: hsl(var(--primary)); }
+#mobile-menu .mobile-accordion-content a { color: hsl(var(--foreground)); }
+#mobile-menu .mobile-accordion-content a:hover { color: hsl(var(--primary)); background-color: hsl(var(--muted)); }
 
 /* ── Table styles for quiz pages ──────────────────────────── */
 
@@ -692,7 +696,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* ── Buttons ──────────────────────────────────────────────── */
 
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; white-space: nowrap; border-radius: calc(var(--radius) - 2px); font-size: 0.875rem; font-weight: 500; transition: all 150ms; outline: none; cursor: pointer; border: none; width: auto; align-self: center; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; white-space: nowrap; border-radius: calc(var(--radius) - 2px); font-size: 0.875rem; font-weight: 500; transition: all 150ms; outline: none; cursor: pointer; border: none; background: transparent; width: auto; align-self: center; }
 .btn:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }
 
 .btn-primary { background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground)); padding: 0.625rem 1.25rem; }
@@ -862,6 +866,25 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 /* Icon button (remove player) */
 .btn-icon { padding: 0.5rem; border: none; background: transparent; cursor: pointer; border-radius: 50%; transition: all 200ms ease; }
 .btn-icon:hover { background: hsl(var(--destructive) / 0.1); }
+
+/* ── Admin styles ────────────────────────────────────────── */
+
+.admin-tab.active, .admin-filter.active { background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+.admin-tab, .admin-filter { background-color: transparent; color: hsl(var(--foreground)); }
+.admin-tab:hover:not(.active), .admin-filter:hover:not(.active) { background-color: hsl(var(--muted)); }
+
+/* ── Scrollbar thin ──────────────────────────────────────── */
+
+.scrollbar-thin { scrollbar-width: thin; scrollbar-color: hsl(var(--border)) transparent; }
+.scrollbar-thin::-webkit-scrollbar { width: 6px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 3px; }
+.scrollbar-thin::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.4); }
+
+/* ── Review cards ────────────────────────────────────────── */
+
+.review-card { transition: transform 200ms ease, box-shadow 200ms ease; }
+.review-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px hsl(var(--primary) / 0.08); }
 
 /* ── Additional utils ─────────────────────────────────────── */
 
