@@ -11,13 +11,20 @@
   <% } %>
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="<%= typeof ogType !== 'undefined' && ogType ? ogType : 'website' %>">
   <meta property="og:site_name" content="Quiz Couple">
   <meta property="og:title" content="<%= rawTitle %>">
   <meta property="og:description" content="<%= rawDescription %>">
   <meta property="og:url" content="<%= canonical %>">
   <meta property="og:locale" content="<%= locale %>">
   <meta property="og:image" content="<%= ogImage %>">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <% if (typeof ogType !== 'undefined' && ogType === 'article') { %>
+  <meta property="article:published_time" content="<%= typeof articlePublishedTime !== 'undefined' ? articlePublishedTime : '' %>">
+  <meta property="article:modified_time" content="<%= typeof articleModifiedTime !== 'undefined' ? articleModifiedTime : '' %>">
+  <meta property="article:author" content="<%= typeof articleAuthor !== 'undefined' ? articleAuthor : '' %>">
+  <% } %>
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">

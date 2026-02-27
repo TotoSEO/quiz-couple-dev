@@ -113,33 +113,62 @@
 <!-- Quiz Section -->
 <section id="quiz-section" class="section-padding bg-muted/20">
   <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:quizSection.title', 'Nos quiz gratuits pour') %> <span class="text-gradient"><%= t('home:quizSection.titleHighlight', 'les couples') %></span></h2>
-      <p class="text-muted-foreground max-w-2xl mx-auto"><%= t('home:quizSection.description', '') %></p>
+    <!-- Section header -->
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4"><%= t('home:quizSection.title', 'Nos quiz gratuits pour') %> <span class="text-gradient"><%= t('home:quizSection.titleHighlight', 'les couples') %></span></h2>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto"><%= t('home:quizSection.description', '') %></p>
     </div>
 
     <!-- Tests -->
-    <h3 class="text-xl font-semibold mb-6 text-center"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-12">
-      <% for (const item of tests) { %>
-      <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="quiz-card glass-card rounded-2xl p-5 card-hover no-underline block text-center group">
-        <div class="w-14 h-14 mx-auto mb-3 rounded-xl bg-primary/10 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"><%= item.icon %></div>
-        <h4 class="text-base font-semibold mb-1 text-foreground"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
-        <p class="text-xs text-muted-foreground line-clamp-2"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
-      </a>
-      <% } %>
+    <div class="mb-14 md:mb-16">
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-3">
+          <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
+        <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.testsDesc', '') %></p>
+      </div>
+      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-5xl mx-auto">
+        <% for (const item of tests) { %>
+        <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group">
+          <div class="homepage-quiz-card-inner">
+            <div class="homepage-quiz-icon bg-gradient-to-br from-primary/15 to-secondary/15 group-hover:scale-110"><span class="text-2xl"><%= item.icon %></span></div>
+            <h4 class="text-base font-bold mb-2 text-foreground group-hover:text-primary transition-colors"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
+            <p class="text-sm text-muted-foreground leading-relaxed mb-4"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
+            <span class="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-primary opacity-80 group-hover:opacity-100 transition-opacity">
+              <%= t('common:buttons.startTest', 'Faire le test') %>
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        <% } %>
+      </div>
     </div>
 
     <!-- Quizzes -->
-    <h3 class="text-xl font-semibold mb-6 text-center"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <% for (const item of quizzes) { %>
-      <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="quiz-card glass-card rounded-2xl p-5 card-hover no-underline block text-center group">
-        <div class="w-14 h-14 mx-auto mb-3 rounded-xl bg-secondary/10 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"><%= item.icon %></div>
-        <h4 class="text-base font-semibold mb-1 text-foreground"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
-        <p class="text-xs text-muted-foreground line-clamp-2"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
-      </a>
-      <% } %>
+    <div class="mb-12">
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary/10 mb-3">
+          <svg class="w-6 h-6 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+        </div>
+        <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
+        <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.quizzesDesc', '') %></p>
+      </div>
+      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+        <% for (const item of quizzes) { %>
+        <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group">
+          <div class="homepage-quiz-card-inner">
+            <div class="homepage-quiz-icon bg-gradient-to-br from-secondary/15 to-primary/15 group-hover:scale-110"><span class="text-2xl"><%= item.icon %></span></div>
+            <h4 class="text-base font-bold mb-2 text-foreground group-hover:text-primary transition-colors"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
+            <p class="text-sm text-muted-foreground leading-relaxed mb-4"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
+            <span class="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-primary opacity-80 group-hover:opacity-100 transition-opacity">
+              <%= t('common:buttons.startQuiz', 'Faire le quiz') %>
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        <% } %>
+      </div>
     </div>
   </div>
 </section>
@@ -163,24 +192,26 @@
 <!-- What Is Quiz Couple -->
 <section class="section-padding bg-muted/20">
   <div class="container mx-auto px-4">
-    <div class="mx-auto max-w-4xl">
-      <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center"><%= t('home:whatIs.title', 'Qu\'est-ce qu\'un') %> <span class="text-gradient"><%= t('home:whatIs.titleHighlight', 'quiz pour couples') %></span></h2>
-      <div class="flex flex-col md:flex-row gap-8 items-center">
-        <div class="md:w-2/5 flex-shrink-0">
-          <img src="/assets/quiz-couple-hero.webp" alt="Quiz Couple" class="rounded-2xl shadow-lg w-full max-w-sm mx-auto" loading="lazy">
-        </div>
-        <div class="md:w-3/5">
-          <div class="space-y-4 text-muted-foreground leading-relaxed">
-            <p><%= t('home:whatIs.paragraph1', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph1Highlight', '') %></strong> <%= t('home:whatIs.paragraph1End', '') %></p>
-            <p><%= t('home:whatIs.paragraph2', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph2Highlight', '') %></strong> <%= t('home:whatIs.paragraph2End', '') %></p>
-          </div>
+    <div class="mx-auto max-w-5xl">
+      <div class="grid gap-12 grid-cols-1 lg:grid-cols-2 items-center">
+        <!-- Content -->
+        <div class="space-y-6">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold"><%= t('home:whatIs.title', 'Qu\'est-ce qu\'un') %> <span class="text-gradient"><%= t('home:whatIs.titleHighlight', 'quiz pour couples') %></span> ?</h2>
+          <p class="text-lg text-muted-foreground leading-relaxed"><%= t('home:whatIs.paragraph1', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph1Highlight', '') %></strong> <%= t('home:whatIs.paragraph1End', '') %></p>
+          <p class="text-lg text-muted-foreground leading-relaxed"><%= t('home:whatIs.paragraph2', '') %> <strong class="text-foreground"><%= t('home:whatIs.paragraph2Highlight', '') %></strong> <%= t('home:whatIs.paragraph2End', '') %></p>
           <% const whatIsFeatures = t('home:whatIs.features', []); if (Array.isArray(whatIsFeatures) && whatIsFeatures.length > 0) { %>
-          <ul class="mt-6 space-y-2">
+          <ul class="space-y-3 pt-2">
             <% for (const feat of whatIsFeatures) { %>
-            <li class="flex items-center gap-2 text-muted-foreground"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><%= feat %></li>
+            <li class="flex items-center gap-3 text-foreground"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><%= feat %></li>
             <% } %>
           </ul>
           <% } %>
+        </div>
+        <!-- Illustration -->
+        <div class="relative">
+          <div class="glass-card rounded-3xl p-4 overflow-hidden">
+            <img src="/assets/quiz-couple-hero.webp" alt="<%= t('home:whatIs.imageAlt', 'Quiz Couple') %>" class="w-full h-auto rounded-2xl object-contain" loading="lazy" width="500" height="400">
+          </div>
         </div>
       </div>
     </div>
@@ -234,20 +265,41 @@
 
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
-<!-- Latest Articles (loaded dynamically via JS from Supabase) -->
+<!-- Latest Articles (statically rendered at build time) -->
+<%
+  const latestArticles = (typeof blogArticlesList !== 'undefined' ? blogArticlesList : []).slice(0, 3);
+  const dateLocaleHome = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : lang === 'es' ? 'es-ES' : lang === 'de' ? 'de-DE' : 'it-IT';
+%>
 <section class="section-padding" id="latest-articles">
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4 max-w-6xl">
     <div class="text-center mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:latestArticles.title', 'Les derniers articles') %> <span class="text-gradient"><%= t('home:latestArticles.titleHighlight', 'du blog') %></span></h2>
-      <p class="text-muted-foreground max-w-2xl mx-auto"><%= t('home:latestArticles.intro', '') %></p>
+      <p class="text-muted-foreground max-w-3xl mx-auto mb-6 text-base md:text-lg leading-relaxed"><%= t('home:latestArticles.intro', '') %></p>
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4"><%= t('home:latestArticles.title', 'Les derniers articles') %> <span class="text-gradient"><%= t('home:latestArticles.titleHighlight', 'du blog') %></span></h2>
     </div>
-    <div class="blog-grid" id="articles-grid">
-      <!-- Articles loaded by JS -->
-      <div class="text-center text-muted-foreground col-span-full py-8">
-        <div class="spinner mx-auto mb-4"></div>
-        <p><%= t('common:blog.loading', 'Chargement des articles...') %></p>
-      </div>
+    <% if (latestArticles.length > 0) { %>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <% for (const article of latestArticles) { %>
+      <article class="group rounded-2xl overflow-hidden border border-border bg-card/60 shadow-sm hover:shadow-lg transition-shadow duration-300">
+        <a href="<%= article.url %>" class="block no-underline" tabindex="-1" aria-hidden="true">
+          <div class="aspect-video overflow-hidden">
+            <img src="<%= article.featuredImage %>" alt="<%= escapeHtml(article.featuredImageAlt) %>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+        </a>
+        <div class="p-5 space-y-3">
+          <time datetime="<%= article.publishedAt %>" class="text-xs text-muted-foreground"><%= new Date(article.publishedAt).toLocaleDateString(dateLocaleHome, { year: 'numeric', month: 'long', day: 'numeric' }) %></time>
+          <h3 class="font-semibold text-lg leading-snug line-clamp-2"><a href="<%= article.url %>" class="hover:text-primary transition-colors"><%= article.title %></a></h3>
+          <p class="text-sm text-muted-foreground line-clamp-2"><%= article.excerpt %></p>
+          <a href="<%= article.url %>" class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline mt-2 no-underline">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+            <%= t('common:blog.readArticle', 'Lire l\'article') %>
+          </a>
+        </div>
+      </article>
+      <% } %>
     </div>
+    <% } else { %>
+    <p class="text-center text-muted-foreground py-8"><%= t('common:blog.noArticles', 'Aucun article disponible.') %></p>
+    <% } %>
     <div class="text-center mt-8">
       <a href="<%= getLocalizedUrl('blog', lang) %>" class="btn btn-outline"><%= t('common:blog.seeAll', 'Voir tous les articles') %></a>
     </div>
@@ -315,46 +367,6 @@
 
 <!-- Home page dynamic scripts -->
 <script>
-  // Load latest blog articles
-  (function() {
-    var SUPABASE_URL = '<%= supabaseUrl %>';
-    var SUPABASE_KEY = '<%= supabaseKey %>';
-    var LANG = '<%= lang %>';
-    var grid = document.getElementById('articles-grid');
-    if (!grid) return;
-
-    var blogUrl = '<%= getLocalizedUrl("blog", lang) %>';
-
-    fetch(SUPABASE_URL + '/rest/v1/blog_article_translations?select=slug,title,excerpt,featured_image_alt,article_id,blog_articles(featured_image_url,status,published_at)&lang=eq.' + LANG + '&blog_articles.status=eq.published&order=blog_articles(published_at).desc&limit=3', {
-      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
-    })
-    .then(function(res) { return res.json(); })
-    .then(function(articles) {
-      if (!articles || articles.length === 0) {
-        grid.innerHTML = '<p class="text-center text-muted-foreground col-span-full py-8"><%= t("common:blog.noArticles", "Aucun article disponible.") %></p>';
-        return;
-      }
-      var html = '';
-      articles.forEach(function(a) {
-        if (!a.blog_articles) return;
-        var imgUrl = a.blog_articles.featured_image_url || '/placeholder.svg';
-        var date = new Date(a.blog_articles.published_at).toLocaleDateString(LANG === 'fr' ? 'fr-FR' : LANG + '-' + LANG.toUpperCase(), { year: 'numeric', month: 'long', day: 'numeric' });
-        var articleUrl = (LANG === 'fr' ? '/blog/' : '/' + LANG + '/blog/') + a.slug;
-        html += '<article class="blog-card">';
-        html += '<a href="' + articleUrl + '" class="blog-card-image-link no-underline"><div class="blog-card-image-wrapper"><img src="' + imgUrl + '" alt="' + (a.featured_image_alt || a.title) + '" class="blog-card-image" loading="lazy"></div></a>';
-        html += '<h3 class="blog-card-title"><a href="' + articleUrl + '">' + a.title + '</a></h3>';
-        html += '<div class="blog-card-meta"><span>' + date + '</span></div>';
-        html += '<p class="blog-card-excerpt">' + (a.excerpt || '') + '</p>';
-        html += '<a href="' + articleUrl + '" class="blog-card-cta no-underline"><%= t("common:blog.readArticle", "Lire l\'article") %></a>';
-        html += '</article>';
-      });
-      grid.innerHTML = html;
-    })
-    .catch(function() {
-      grid.innerHTML = '<p class="text-center text-muted-foreground col-span-full py-8"><%= t("common:blog.noArticles", "Aucun article disponible.") %></p>';
-    });
-  })();
-
   // Load reviews
   (function() {
     var SUPABASE_URL = '<%= supabaseUrl %>';
