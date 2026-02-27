@@ -31,6 +31,30 @@ export const blogArticles: BlogArticleMeta[] = [
     publishedAt: '2026-02-21',
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
+  {
+    slug: 'avis-tinder',
+    slugs: {
+      fr: 'avis-tinder',
+      en: 'tinder-review',
+      es: 'tinder-opiniones-vale-la-pena',
+      de: 'tinder-bewertung',
+      it: 'recensione-tinder',
+    },
+    publishedAt: '2026-02-24',
+    locales: { fr: true, en: true, es: true, de: true, it: true },
+  },
+  {
+    slug: 'avis-bumble',
+    slugs: {
+      fr: 'avis-bumble',
+      en: 'bumble-app-review',
+      es: 'opiniones-bumble',
+      de: 'bumble-erfahrungen',
+      it: 'recensione-bumble',
+    },
+    publishedAt: '2026-02-25',
+    locales: { fr: true, en: true, es: true, de: true, it: true },
+  },
 ];
 
 /**

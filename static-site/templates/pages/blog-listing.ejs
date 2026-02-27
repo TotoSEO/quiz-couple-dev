@@ -5,51 +5,18 @@
   </header>
 
   <div class="blog-grid" id="blog-articles-grid">
-    <div class="text-center text-muted-foreground col-span-full py-16">
-      <div class="spinner mx-auto mb-4"></div>
-      <p><%= t('common:blog.loading', 'Chargement des articles...') %></p>
-    </div>
+<% if (blogArticlesList && blogArticlesList.length) { %>
+  <% blogArticlesList.forEach(function(a) { %>
+    <article class="blog-card">
+      <a href="<%= a.url %>" class="no-underline"><div class="blog-card-image-wrapper"><img src="<%= a.featuredImage %>" alt="<%= escapeHtml(a.featuredImageAlt) %>" class="blog-card-image" loading="lazy"></div></a>
+      <h2 class="blog-card-title"><a href="<%= a.url %>"><%= a.title %></a></h2>
+      <div class="blog-card-meta"><span><%= new Date(a.publishedAt).toLocaleDateString(lang === 'fr' ? 'fr-FR' : lang, { year: 'numeric', month: 'long', day: 'numeric' }) %></span></div>
+      <p class="blog-card-excerpt"><%= a.excerpt %></p>
+      <a href="<%= a.url %>" class="blog-card-cta no-underline"><%= t("common:blog.readArticle", "Lire l'article") %></a>
+    </article>
+  <% }); %>
+<% } else { %>
+    <p class="text-center text-muted-foreground col-span-full py-16"><%= t('common:blog.noArticles', 'Aucun article disponible.') %></p>
+<% } %>
   </div>
 </section>
-
-<script>
-(function() {
-  var SUPABASE_URL = '<%= supabaseUrl %>';
-  var SUPABASE_KEY = '<%= supabaseKey %>';
-  var LANG = '<%= lang %>';
-  var grid = document.getElementById('blog-articles-grid');
-  if (!grid) return;
-
-  var readLabel = '<%= t("common:blog.readArticle", "Lire l\'article") %>';
-  var noArticlesLabel = '<%= t("common:blog.noArticles", "Aucun article disponible.") %>';
-
-  fetch(SUPABASE_URL + '/rest/v1/blog_article_translations?select=slug,title,excerpt,featured_image_alt,article_id,blog_articles(featured_image_url,status,published_at)&lang=eq.' + LANG + '&blog_articles.status=eq.published&order=blog_articles(published_at).desc', {
-    headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
-  })
-  .then(function(res) { return res.json(); })
-  .then(function(articles) {
-    if (!articles || !articles.length) {
-      grid.innerHTML = '<p class="text-center text-muted-foreground col-span-full py-16">' + noArticlesLabel + '</p>';
-      return;
-    }
-    var html = '';
-    articles.forEach(function(a) {
-      if (!a.blog_articles) return;
-      var imgUrl = a.blog_articles.featured_image_url || '/placeholder.svg';
-      var date = new Date(a.blog_articles.published_at).toLocaleDateString(LANG === 'fr' ? 'fr-FR' : LANG, { year: 'numeric', month: 'long', day: 'numeric' });
-      var articleUrl = (LANG === 'fr' ? '/blog/' : '/' + LANG + '/blog/') + a.slug;
-      html += '<article class="blog-card">';
-      html += '<a href="' + articleUrl + '" class="no-underline"><div class="blog-card-image-wrapper"><img src="' + imgUrl + '" alt="' + (a.featured_image_alt || a.title) + '" class="blog-card-image" loading="lazy"></div></a>';
-      html += '<h2 class="blog-card-title"><a href="' + articleUrl + '">' + a.title + '</a></h2>';
-      html += '<div class="blog-card-meta"><span>' + date + '</span></div>';
-      html += '<p class="blog-card-excerpt">' + (a.excerpt || '') + '</p>';
-      html += '<a href="' + articleUrl + '" class="blog-card-cta no-underline">' + readLabel + '</a>';
-      html += '</article>';
-    });
-    grid.innerHTML = html;
-  })
-  .catch(function() {
-    grid.innerHTML = '<p class="text-center text-muted-foreground col-span-full py-16">' + noArticlesLabel + '</p>';
-  });
-})();
-</script>

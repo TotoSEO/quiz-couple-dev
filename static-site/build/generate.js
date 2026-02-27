@@ -191,6 +191,31 @@ async function generatePage(routeKey, lang) {
     `<script type="application/ld+json">${JSON.stringify(item)}</script>`
   ).join('\n  ');
 
+  // For blog listing page, load all article summaries
+  let blogArticlesList = [];
+  if (routeKey === 'blog') {
+    for (const articleMeta of BLOG_ARTICLES) {
+      const localizedSlug = articleMeta.slugs[lang] || articleMeta.internalSlug;
+      const tsPath = path.resolve(__dirname, '../../data/blog', lang, `${articleMeta.internalSlug}.ts`);
+      const frPath = path.resolve(__dirname, '../../data/blog/fr', `${articleMeta.internalSlug}.ts`);
+      let article = parseArticleTs(tsPath);
+      if (!article) article = parseArticleTs(frPath);
+      if (article) {
+        blogArticlesList.push({
+          slug: localizedSlug,
+          title: article.title,
+          excerpt: article.excerpt || '',
+          featuredImage: article.featuredImage || '/placeholder.svg',
+          featuredImageAlt: article.featuredImageAlt || article.title,
+          publishedAt: article.publishedAt || articleMeta.publishedAt,
+          url: getArticlePath(localizedSlug, lang),
+        });
+      }
+    }
+    // Sort by date descending
+    blogArticlesList.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+  }
+
   // Template data available to all pages
   const data = {
     // Globals
@@ -223,6 +248,8 @@ async function generatePage(routeKey, lang) {
     JSON,
     // Structured data
     jsonLdHtml,
+    // Blog listing data
+    blogArticlesList,
   };
 
   try {
