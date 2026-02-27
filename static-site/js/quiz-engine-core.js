@@ -1708,7 +1708,7 @@ var QuizEngine = (function() {
 
     renderPlayersList();
 
-    var startBtn = el('button', 'btn btn-cta btn-gradient w-full mt-4 max-w-md mx-auto');
+    var startBtn = el('button', 'btn btn-cta btn-gradient w-full mt-8 max-w-md mx-auto');
     startBtn.id = 'most-start-btn';
     startBtn.textContent = tg('playerSetup.startQuiz', 'Commencer le quiz');
     startBtn.addEventListener('click', function() {
