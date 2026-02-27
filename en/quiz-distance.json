@@ -5,7 +5,8 @@
     "description": "Find out if you and your partner are ready for the adventure of long-distance love. An interactive quiz with personalized results for each of you.",
     "questions": "100 questions",
     "players": "Quiz for two",
-    "duration": "~10 minutes"
+    "duration": "~10 minutes",
+    "titleHighlight": "Long-Distance"
   },
   "intro": {
     "p1": "Can love really survive the miles? In 2026, this question has never been more relevant. With the rise of remote work, international student mobility, and dating apps that connect us across the globe, the boundaries of love have exploded.",
@@ -26,12 +27,32 @@
   "section2": {
     "title": "Statistics and trends 2026",
     "p1": "Recent data estimates that about <strong>14 to 15 million people in the United States</strong> consider themselves in a long-distance relationship. In Europe, the figure is also rising.",
-    "tableHeaders": ["Aspect", "Local Relationship", "Long-Distance Relationship"],
+    "tableHeaders": [
+      "Aspect",
+      "Local Relationship",
+      "Long-Distance Relationship"
+    ],
     "tableRows": [
-      ["Entertainment Budget", "Regular (Restaurants, Cinema)", "Concentrated (Big weekends, Vacations)"],
-      ["Transport Budget", "Low", "High (Plane, Train)"],
-      ["Time Management", "Spontaneous", "Planned"],
-      ["Fatigue", "Daily", "Peaks related to travel"]
+      [
+        "Entertainment Budget",
+        "Regular (Restaurants, Cinema)",
+        "Concentrated (Big weekends, Vacations)"
+      ],
+      [
+        "Transport Budget",
+        "Low",
+        "High (Plane, Train)"
+      ],
+      [
+        "Time Management",
+        "Spontaneous",
+        "Planned"
+      ],
+      [
+        "Fatigue",
+        "Daily",
+        "Peaks related to travel"
+      ]
     ],
     "sub1Title": "The French reality",
     "sub1Text": "In France, the culture of independence plays a key role. French long-distance couples often highlight preserving their personal space as an asset. The average time before reuniting geographically is around <strong>18 to 24 months</strong>."
@@ -39,19 +60,43 @@
   "section3": {
     "title": "Advantages of a long-distance relationship",
     "items": [
-      { "title": "Strengthening emotional bonds", "text": "When you can't touch, you must talk. Really talk. Long-distance couples learn about each other's fears, dreams, and deep thoughts much faster." },
-      { "title": "Personal growth & autonomy", "text": "You get the best of both worlds: the emotional support of a couple, and the freedom of a single person in daily life." },
-      { "title": "Better communication", "text": "It's mathematical: to survive, you must communicate your intentions. This constant effort creates outstanding communicators." },
-      { "title": "Rituals and relationship creativity", "text": "Constraint creates creativity. Watching a movie \"together\", sending surprise packages, cooking the same recipe on video call... These rituals become the glue of your couple." }
+      {
+        "title": "Strengthening emotional bonds",
+        "text": "When you can't touch, you must talk. Really talk. Long-distance couples learn about each other's fears, dreams, and deep thoughts much faster."
+      },
+      {
+        "title": "Personal growth & autonomy",
+        "text": "You get the best of both worlds: the emotional support of a couple, and the freedom of a single person in daily life."
+      },
+      {
+        "title": "Better communication",
+        "text": "It's mathematical: to survive, you must communicate your intentions. This constant effort creates outstanding communicators."
+      },
+      {
+        "title": "Rituals and relationship creativity",
+        "text": "Constraint creates creativity. Watching a movie \"together\", sending surprise packages, cooking the same recipe on video call... These rituals become the glue of your couple."
+      }
     ]
   },
   "section4": {
     "title": "The real challenges and risks",
     "items": [
-      { "title": "Loneliness and lack of physical contact", "text": "This is challenge #1. No hug after a hard day, no hand to hold at the movies. This \"skin hunger\" can create intense loneliness, even if you're virtually connected." },
-      { "title": "Jealousy and insecurity", "text": "\"Why isn't he answering?\", \"Who's that girl on his story?\". At a distance, imagination is your worst enemy." },
-      { "title": "Uncertainty about the future", "text": "Ambiguity is toxic. \"When will we live together?\". Without a clear answer, motivation crumbles." },
-      { "title": "Financial and logistical pressure", "text": "Love is priceless, but train and plane tickets have a price. Managing trips, time zones, and budgets can create significant fatigue." }
+      {
+        "title": "Loneliness and lack of physical contact",
+        "text": "This is challenge #1. No hug after a hard day, no hand to hold at the movies. This \"skin hunger\" can create intense loneliness, even if you're virtually connected."
+      },
+      {
+        "title": "Jealousy and insecurity",
+        "text": "\"Why isn't he answering?\", \"Who's that girl on his story?\". At a distance, imagination is your worst enemy."
+      },
+      {
+        "title": "Uncertainty about the future",
+        "text": "Ambiguity is toxic. \"When will we live together?\". Without a clear answer, motivation crumbles."
+      },
+      {
+        "title": "Financial and logistical pressure",
+        "text": "Love is priceless, but train and plane tickets have a price. Managing trips, time zones, and budgets can create significant fatigue."
+      }
     ]
   },
   "section5": {
@@ -73,18 +118,39 @@
   "section7": {
     "title": "Practical tips for success",
     "tips": [
-      { "title": "Set a roadmap", "text": "Always have the date of the next visit set before parting. It's the lighthouse in the night." },
-      { "title": "Use technology intentionally", "text": "Prioritize quality moments (a real video date) over empty quantity." },
-      { "title": "Handle difficult moments together", "text": "If one is struggling, the other must be present. Active listening is worth all the gifts in the world." },
-      { "title": "Maintain intimacy", "text": "In 2026, it's no longer taboo. Maintaining tension and intimacy at a distance is vital for many couples." }
+      {
+        "title": "Set a roadmap",
+        "text": "Always have the date of the next visit set before parting. It's the lighthouse in the night."
+      },
+      {
+        "title": "Use technology intentionally",
+        "text": "Prioritize quality moments (a real video date) over empty quantity."
+      },
+      {
+        "title": "Handle difficult moments together",
+        "text": "If one is struggling, the other must be present. Active listening is worth all the gifts in the world."
+      },
+      {
+        "title": "Maintain intimacy",
+        "text": "In 2026, it's no longer taboo. Maintaining tension and intimacy at a distance is vital for many couples."
+      }
     ]
   },
   "section8": {
     "title": "Mistakes to avoid in a long-distance relationship",
     "errors": [
-      { "title": "Constantly comparing", "text": "Don't envy the couple arguing at IKEA on Saturday. Your relationship is different, with its own superpowers. Comparison is the thief of joy." },
-      { "title": "Unrealistic expectations about visits", "text": "If you demand to see each other every two weeks when your budget doesn't allow it, you create financial pressure that will kill the relationship. Be realistic." },
-      { "title": "Neglecting your personal life", "text": "Don't put your life on hold. If you spend your evenings waiting for a call, you'll become dependent and uninteresting. Live for yourself!" }
+      {
+        "title": "Constantly comparing",
+        "text": "Don't envy the couple arguing at IKEA on Saturday. Your relationship is different, with its own superpowers. Comparison is the thief of joy."
+      },
+      {
+        "title": "Unrealistic expectations about visits",
+        "text": "If you demand to see each other every two weeks when your budget doesn't allow it, you create financial pressure that will kill the relationship. Be realistic."
+      },
+      {
+        "title": "Neglecting your personal life",
+        "text": "Don't put your life on hold. If you spend your evenings waiting for a call, you'll become dependent and uninteresting. Live for yourself!"
+      }
     ]
   },
   "section9": {
@@ -96,17 +162,32 @@
   },
   "conclusion": {
     "title": "Conclusion",
-"p1": "A long-distance relationship is a colossal challenge, but it's also an incredible accelerator of emotional maturity. If you're reading this, it's because you care about your story. And if you have doubts about the health of your relationship, our <a href=\"https://quiz-couple.com/en/toxic-relationship-test\">toxic relationship test</a> can help you see things more clearly.",
+    "p1": "A long-distance relationship is a colossal challenge, but it's also an incredible accelerator of emotional maturity. If you're reading this, it's because you care about your story. And if you have doubts about the health of your relationship, our <a href=\"https://quiz-couple.com/en/toxic-relationship-test\">toxic relationship test</a> can help you see things more clearly.",
     "p2": "There's no magic long-distance test that will give you a score out of 100, but there's your gut feeling. If trust is there, communication flows, and you have a reunion plan, then yes, <strong>it can work</strong>. And often, the reunions are all the sweeter."
   },
   "faq": {
     "title": "FAQ - Long-Distance Relationships",
     "items": [
-      { "q": "What makes a successful long-distance relationship?", "a": "It's a relationship where both partners feel secure, loved, and free, despite the miles. It's characterized by a known and accepted end date for the distance." },
-      { "q": "How long does a long-distance relationship last on average?", "a": "Statistically, the \"distance\" phase lasts on average between 14 and 24 months before a decision is made: either geographical reunion (moving) or breaking up." },
-      { "q": "LDR: How to know if it's worth it?", "a": "Take stock: does this person bring you more joy than sadness? Do your life values align? If yes, distance is just a temporary logistical detail." },
-      { "q": "What are the 10 signs your long-distance relationship is solid?", "a": "If you laugh together, plan the future, trust each other, and each have your own fulfilling social life, you're on the right track." },
-      { "q": "Why do long-distance relationships fail (and how to avoid it)?", "a": "They often fail from lack of shared vision (no end date) or exhaustion (too many trips, not enough budget). To avoid it: communicate your limits and make a realistic financial and time plan." }
+      {
+        "q": "What makes a successful long-distance relationship?",
+        "a": "It's a relationship where both partners feel secure, loved, and free, despite the miles. It's characterized by a known and accepted end date for the distance."
+      },
+      {
+        "q": "How long does a long-distance relationship last on average?",
+        "a": "Statistically, the \"distance\" phase lasts on average between 14 and 24 months before a decision is made: either geographical reunion (moving) or breaking up."
+      },
+      {
+        "q": "LDR: How to know if it's worth it?",
+        "a": "Take stock: does this person bring you more joy than sadness? Do your life values align? If yes, distance is just a temporary logistical detail."
+      },
+      {
+        "q": "What are the 10 signs your long-distance relationship is solid?",
+        "a": "If you laugh together, plan the future, trust each other, and each have your own fulfilling social life, you're on the right track."
+      },
+      {
+        "q": "Why do long-distance relationships fail (and how to avoid it)?",
+        "a": "They often fail from lack of shared vision (no end date) or exhaustion (too many trips, not enough budget). To avoid it: communicate your limits and make a realistic financial and time plan."
+      }
     ]
   },
   "results": {

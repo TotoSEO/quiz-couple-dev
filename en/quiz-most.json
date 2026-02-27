@@ -3,7 +3,9 @@
     "title": "Quiz - Who Is the Most... ?",
     "description": "The ideal game to discover what your friends really think about you!",
     "descriptionBold": "240+ questions",
-    "descriptionEnd": "for hours of fun with friends or as a couple."
+    "descriptionEnd": "for hours of fun with friends or as a couple.",
+    "titleHighlight": "Who Is the Most",
+    "badge": "Group Quiz • 2-8 Players"
   },
   "howToPlay": {
     "title": "How to Play the \"Who Is the Most\" Quiz?",
@@ -27,11 +29,29 @@
     "title": "240+ \"Who Is the Most\" Questions for Hours of Fun",
     "subtitle": "Discover a preview of the questions awaiting you in our free interactive quiz!",
     "classicTitle": "Classic questions",
-    "classicQuestions": ["Who is the most talkative?", "Who is the funniest?", "Who is the smartest?", "Who is the biggest foodie?", "Who is the laziest?"],
+    "classicQuestions": [
+      "Who is the most talkative?",
+      "Who is the funniest?",
+      "Who is the smartest?",
+      "Who is the biggest foodie?",
+      "Who is the laziest?"
+    ],
     "funTitle": "Fun and quirky questions",
-    "funQuestions": ["Who is the most addicted to Netflix and snacks?", "Who is the most likely to talk about their ex?", "Who is the most awkward at flirting?", "Who is the most addicted to notifications?", "Who lies the most?"],
+    "funQuestions": [
+      "Who is the most addicted to Netflix and snacks?",
+      "Who is the most likely to talk about their ex?",
+      "Who is the most awkward at flirting?",
+      "Who is the most addicted to notifications?",
+      "Who lies the most?"
+    ],
     "intimateTitle": "More intimate questions",
-    "intimateQuestions": ["Who is secretly the most romantic?", "Who is the most jealous?", "Who keeps the most secrets?", "Who is the most sensitive to compliments?", "Who is the most faithful to their habits?"]
+    "intimateQuestions": [
+      "Who is secretly the most romantic?",
+      "Who is the most jealous?",
+      "Who keeps the most secrets?",
+      "Who is the most sensitive to compliments?",
+      "Who is the most faithful to their habits?"
+    ]
   },
   "tips": {
     "title": "Our Tips for a Successful \"Who Is the Most\" Quiz",

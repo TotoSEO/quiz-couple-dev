@@ -5,7 +5,8 @@
     "description": "Un quiz leggero e divertente per ridere insieme, stuzzicarvi e rafforzare la vostra complicità. Nessun punteggio, solo divertimento!",
     "questions": "150+ domande",
     "players": "Due giocatori",
-    "duration": "~10 minuti"
+    "duration": "~10 minuti",
+    "titleHighlight": "Divertente"
   },
   "section1": {
     "title": "Il quiz divertente per coppie, molto più di un semplice gioco",

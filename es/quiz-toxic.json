@@ -1,7 +1,9 @@
 {
   "hero": {
     "title": "¿Tu relación es tóxica? Responde al cuestionario",
-    "description": "Una herramienta de autoevaluación para comprender las dinámicas de tu relación"
+    "description": "Una herramienta de autoevaluación para comprender las dinámicas de tu relación",
+    "titleHighlight": "tóxica",
+    "badge": "Test Toxicidad • Gratis • 5 min"
   },
   "section1": {
     "title": "¿Por qué necesitas hacer este test hoy?",

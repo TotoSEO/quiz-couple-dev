@@ -5,7 +5,8 @@
     "description": "Vous sortez ensemble depuis quelques semaines, quelques mois, peut-être plus. Et forcément, la question finit par arriver : est-ce que c'est du sérieux, ou juste une belle parenthèse ? Ce quiz ne va pas tout résoudre — mais il va poser les vraies questions.",
     "feat1": "À deux, à distance",
     "feat2": "Sur téléphone",
-    "feat3": "20 questions / session"
+    "feat3": "20 questions / session",
+    "titleHighlight": "adolescents"
   },
   "ui": {
     "multiplayer": "Quiz à 2 joueurs",

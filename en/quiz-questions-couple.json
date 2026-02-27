@@ -1,9 +1,13 @@
 {
   "hero": {
     "title": "120 Questions for Couples to Ask Each Other",
-    "description": "Questions sorted by theme to know each other better, strengthen your bond, and create moments of authentic exchange."
+    "description": "Questions sorted by theme to know each other better, strengthen your bond, and create moments of authentic exchange.",
+    "titleHighlight": "120 Questions",
+    "badge": "120 questions • Free"
   },
-  "random": { "button": "Random question" },
+  "random": {
+    "button": "Random question"
+  },
   "seo": {
     "s1": {
       "title": "Why ask questions as a couple?",
@@ -14,13 +18,43 @@
     "s2": {
       "title": "The 5 categories of couple questions",
       "intro": "Our 120 questions are divided into 5 complementary themes, designed to cover all aspects of your relationship. Each category addresses a specific need and allows you to explore a different facet of your couple.",
-      "tableHeaders": { "category": "Category", "goal": "Purpose", "example": "Example question", "count": "Count" },
+      "tableHeaders": {
+        "category": "Category",
+        "goal": "Purpose",
+        "example": "Example question",
+        "count": "Count"
+      },
       "rows": [
-        { "cat": "🧠 Getting to know each other", "goal": "Deepen your mutual knowledge beyond the obvious", "example": "What past decision changed you the most?", "count": "24" },
-        { "cat": "🚀 Future plans", "goal": "Align your visions and build together", "example": "Where do you see yourself in 5 years?", "count": "24" },
-        { "cat": "💕 Intimacy", "goal": "Strengthen your emotional and affective bond", "example": "What makes you feel most loved?", "count": "24" },
-        { "cat": "😄 Fun", "goal": "Bring lightness and laughter to your relationship", "example": "If our couple were a movie, what would its title be?", "count": "24" },
-        { "cat": "💭 Deep questions", "goal": "Explore your values, fears, and philosophy of life", "example": "What gives meaning to your life?", "count": "24" }
+        {
+          "cat": "🧠 Getting to know each other",
+          "goal": "Deepen your mutual knowledge beyond the obvious",
+          "example": "What past decision changed you the most?",
+          "count": "24"
+        },
+        {
+          "cat": "🚀 Future plans",
+          "goal": "Align your visions and build together",
+          "example": "Where do you see yourself in 5 years?",
+          "count": "24"
+        },
+        {
+          "cat": "💕 Intimacy",
+          "goal": "Strengthen your emotional and affective bond",
+          "example": "What makes you feel most loved?",
+          "count": "24"
+        },
+        {
+          "cat": "😄 Fun",
+          "goal": "Bring lightness and laughter to your relationship",
+          "example": "If our couple were a movie, what would its title be?",
+          "count": "24"
+        },
+        {
+          "cat": "💭 Deep questions",
+          "goal": "Explore your values, fears, and philosophy of life",
+          "example": "What gives meaning to your life?",
+          "count": "24"
+        }
       ],
       "outro": "This thematic diversity lets you vary your exchanges according to your mood: a light conversation after dinner, a deep discussion during a walk, or an intimate moment of complicity before bed."
     },
@@ -28,32 +62,79 @@
       "title": "When to use these couple questions?",
       "intro": "There's no wrong time to ask questions as a couple. Here are situations where these questions are particularly useful:",
       "items": [
-        { "title": "At the start of a relationship", "desc": "The first months are crucial for building solid foundations. These questions help you go beyond superficial conversations and discover each other's deeper personality." },
-        { "title": "After several years together", "desc": "Routine can dull curiosity. Asking new questions helps rediscover your partner, rekindle the spark, and keep the relationship alive." },
-        { "title": "In a long-distance relationship", "desc": "When miles separate you, communication is your only link. These questions transform an ordinary video call into a genuine moment of connection." },
-        { "title": "During an evening for two", "desc": "Instead of staring at a screen, turn your evening into a complicit question-and-answer game. A glass of wine, no phones, and questions that matter." },
-        { "title": "During a period of questioning", "desc": "When doubts or tensions arise, these questions open dialogue in a caring way, without direct confrontation." }
+        {
+          "title": "At the start of a relationship",
+          "desc": "The first months are crucial for building solid foundations. These questions help you go beyond superficial conversations and discover each other's deeper personality."
+        },
+        {
+          "title": "After several years together",
+          "desc": "Routine can dull curiosity. Asking new questions helps rediscover your partner, rekindle the spark, and keep the relationship alive."
+        },
+        {
+          "title": "In a long-distance relationship",
+          "desc": "When miles separate you, communication is your only link. These questions transform an ordinary video call into a genuine moment of connection."
+        },
+        {
+          "title": "During an evening for two",
+          "desc": "Instead of staring at a screen, turn your evening into a complicit question-and-answer game. A glass of wine, no phones, and questions that matter."
+        },
+        {
+          "title": "During a period of questioning",
+          "desc": "When doubts or tensions arise, these questions open dialogue in a caring way, without direct confrontation."
+        }
       ]
     },
     "s4": {
       "title": "How to use these questions effectively? Our tips",
       "intro": "To get the most out of these questions and make them a real quality moment, here are our practical recommendations:",
       "tips": [
-        { "emoji": "🎯", "title": "Limit yourself to 3-5 questions per session", "desc": "A quality exchange is better than an interrogation. Ask a few questions and take time to really listen to the answers. Let the conversation flow naturally." },
-        { "emoji": "👂", "title": "Practice active listening", "desc": "Don't think about your next question while the other is speaking. Really listen, ask follow-up questions, show that you genuinely care about the answer." },
-        { "emoji": "🛑", "title": "Respect boundaries", "desc": "If a question makes your partner uncomfortable, move to the next one without insisting. Everyone has their own pace and comfort zones. The goal is to grow closer, not to force confessions." },
-        { "emoji": "💖", "title": "Create a caring atmosphere", "desc": "No judgment, no mockery. A safe space where everyone can express themselves freely is the essential condition for these questions to bear fruit." },
-        { "emoji": "🔄", "title": "Answer the questions too", "desc": "The exchange should be reciprocal. After listening to your partner's answer, share yours. It's this reciprocity that creates the real connection." }
+        {
+          "emoji": "🎯",
+          "title": "Limit yourself to 3-5 questions per session",
+          "desc": "A quality exchange is better than an interrogation. Ask a few questions and take time to really listen to the answers. Let the conversation flow naturally."
+        },
+        {
+          "emoji": "👂",
+          "title": "Practice active listening",
+          "desc": "Don't think about your next question while the other is speaking. Really listen, ask follow-up questions, show that you genuinely care about the answer."
+        },
+        {
+          "emoji": "🛑",
+          "title": "Respect boundaries",
+          "desc": "If a question makes your partner uncomfortable, move to the next one without insisting. Everyone has their own pace and comfort zones. The goal is to grow closer, not to force confessions."
+        },
+        {
+          "emoji": "💖",
+          "title": "Create a caring atmosphere",
+          "desc": "No judgment, no mockery. A safe space where everyone can express themselves freely is the essential condition for these questions to bear fruit."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Answer the questions too",
+          "desc": "The exchange should be reciprocal. After listening to your partner's answer, share yours. It's this reciprocity that creates the real connection."
+        }
       ]
     },
     "s5": {
       "title": "Who are these questions for?",
       "p1": "These 120 questions are designed for all types of couples, regardless of how long they've been together or their situation:",
       "audiences": [
-        { "title": "New couples", "desc": "In the discovery phase, these questions accelerate mutual knowledge and lay the foundations for open communication from the start." },
-        { "title": "Long-term couples", "desc": "Together for years, you think you know everything about each other? These questions will prove you wrong and rekindle your curiosity." },
-        { "title": "Long-distance couples", "desc": "Geographically separated, these questions are a precious tool for maintaining a strong bond despite the distance." },
-        { "title": "Reconnecting couples", "desc": "After a difficult period or too much routine, these questions help find the path back to dialogue." }
+        {
+          "title": "New couples",
+          "desc": "In the discovery phase, these questions accelerate mutual knowledge and lay the foundations for open communication from the start."
+        },
+        {
+          "title": "Long-term couples",
+          "desc": "Together for years, you think you know everything about each other? These questions will prove you wrong and rekindle your curiosity."
+        },
+        {
+          "title": "Long-distance couples",
+          "desc": "Geographically separated, these questions are a precious tool for maintaining a strong bond despite the distance."
+        },
+        {
+          "title": "Reconnecting couples",
+          "desc": "After a difficult period or too much routine, these questions help find the path back to dialogue."
+        }
       ]
     },
     "s6": {
@@ -64,13 +145,34 @@
     },
     "faqTitle": "Frequently asked questions about couple questions",
     "faq": [
-      { "q": "How many questions should you ask in a row?", "a": "We recommend asking 3 to 5 questions per session to keep the exchange natural and avoid fatigue. The goal is to create a real dialogue, not a questionnaire." },
-      { "q": "Is this suitable for all couples?", "a": "Yes, these questions are designed for all couples, whether together for a few weeks or several years. The 5 categories allow you to choose the depth level suited to your situation." },
-      { "q": "Can these questions be used long-distance?", "a": "Absolutely! These questions are ideal for long-distance couples. You can ask them during a video call, by message, or even send each other a question a day to maintain the connection." },
-      { "q": "What to do if a question makes you uncomfortable?", "a": "Simply move to another question without pressure. Respecting each other's boundaries is essential for maintaining a climate of trust." },
-      { "q": "Do you have to answer all the questions?", "a": "No, choose the ones that speak to you and match the mood of the moment. What matters is the quality of the exchange, not the number of questions asked." },
-      { "q": "How often should you use these questions?", "a": "There's no strict rule. Some couples enjoy asking one question a day, others prefer a session of 5 questions on weekends. Find the rhythm that works for you." },
-      { "q": "Can these questions replace couple therapy?", "a": "No, these questions are a complementary communication tool. If you're going through serious difficulties, we recommend consulting a professional. Our questions can, however, be an excellent complement." }
+      {
+        "q": "How many questions should you ask in a row?",
+        "a": "We recommend asking 3 to 5 questions per session to keep the exchange natural and avoid fatigue. The goal is to create a real dialogue, not a questionnaire."
+      },
+      {
+        "q": "Is this suitable for all couples?",
+        "a": "Yes, these questions are designed for all couples, whether together for a few weeks or several years. The 5 categories allow you to choose the depth level suited to your situation."
+      },
+      {
+        "q": "Can these questions be used long-distance?",
+        "a": "Absolutely! These questions are ideal for long-distance couples. You can ask them during a video call, by message, or even send each other a question a day to maintain the connection."
+      },
+      {
+        "q": "What to do if a question makes you uncomfortable?",
+        "a": "Simply move to another question without pressure. Respecting each other's boundaries is essential for maintaining a climate of trust."
+      },
+      {
+        "q": "Do you have to answer all the questions?",
+        "a": "No, choose the ones that speak to you and match the mood of the moment. What matters is the quality of the exchange, not the number of questions asked."
+      },
+      {
+        "q": "How often should you use these questions?",
+        "a": "There's no strict rule. Some couples enjoy asking one question a day, others prefer a session of 5 questions on weekends. Find the rhythm that works for you."
+      },
+      {
+        "q": "Can these questions replace couple therapy?",
+        "a": "No, these questions are a complementary communication tool. If you're going through serious difficulties, we recommend consulting a professional. Our questions can, however, be an excellent complement."
+      }
     ]
   },
   "conclusion": "These 120 questions are here to help you create moments of sincere exchange with your partner. Take time to listen, discover each other, and strengthen your connection. The key to a fulfilling relationship is communication.",

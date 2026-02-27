@@ -5,7 +5,8 @@
     "description": "Entdeckt eure Affinitäten, geteilten Geschmäcker und gemeinsamen Werte mit diesem interaktiven Test. 20 zufällige Fragen aus 200 für ein einzigartiges Erlebnis jedes Mal!",
     "duration": "5 Minuten",
     "players": "2 Spieler",
-    "questions": "20 Fragen / Sitzung"
+    "questions": "20 Fragen / Sitzung",
+    "titleHighlight": "kompatibel"
   },
   "seo": {
     "intro": "Dieser Gemeinsamkeiten-Test ist für Paare konzipiert, die sich besser kennenlernen, ihre Affinitäten entdecken und ihre Kompatibilität spielerisch und interaktiv messen möchten.",
@@ -22,21 +23,48 @@
     "s3": {
       "title": "Wie der Kompatibilitätstest funktioniert",
       "steps": [
-        { "title": "Gebt eure Namen ein", "desc": "Tragt die Vornamen beider Spieler ein" },
-        { "title": "Antwortet abwechselnd", "desc": "Bei jeder Frage gibt jeder seine Antwort separat" },
-        { "title": "Entdeckt eure Gemeinsamkeiten", "desc": "Je mehr identische Antworten, desto höher euer Punktestand!" }
+        {
+          "title": "Gebt eure Namen ein",
+          "desc": "Tragt die Vornamen beider Spieler ein"
+        },
+        {
+          "title": "Antwortet abwechselnd",
+          "desc": "Bei jeder Frage gibt jeder seine Antwort separat"
+        },
+        {
+          "title": "Entdeckt eure Gemeinsamkeiten",
+          "desc": "Je mehr identische Antworten, desto höher euer Punktestand!"
+        }
       ]
     },
     "s4": {
       "title": "Paar-Gemeinsamkeiten-Test: 200 Fragen",
       "p1": "Unsere Datenbank enthält 200 sorgfältig ausgewählte Fragen, die alle Aspekte des Zusammenlebens abdecken.",
       "categories": [
-        { "title": "Persönlichkeit und Charakter", "desc": "Seid ihr introvertiert oder extrovertiert? Geduldig oder impulsiv? Entdeckt eure Temperament-Ähnlichkeiten." },
-        { "title": "Geschmack und Interessen", "desc": "Filme, Musik, Kochen, Hobbys... Teilt ihr die gleichen Leidenschaften und Vorlieben?" },
-        { "title": "Werte und Lebensvision", "desc": "Familie, Arbeit, Geld, Freiheit... Sind eure Prioritäten aufeinander abgestimmt?" },
-        { "title": "Alltag und Gewohnheiten", "desc": "Lebensrhythmus, Organisation, kleine Macken... Seid ihr im Alltag kompatibel?" },
-        { "title": "Beziehung und Intimität", "desc": "Kommunikation, Zuneigung, Bedürfnisse... Wie erlebt ihr eure Beziehung täglich?" },
-        { "title": "Pläne und Zukunft", "desc": "Reisen, Familie, Karriere... Teilt ihr dieselbe Zukunftsvision?" }
+        {
+          "title": "Persönlichkeit und Charakter",
+          "desc": "Seid ihr introvertiert oder extrovertiert? Geduldig oder impulsiv? Entdeckt eure Temperament-Ähnlichkeiten."
+        },
+        {
+          "title": "Geschmack und Interessen",
+          "desc": "Filme, Musik, Kochen, Hobbys... Teilt ihr die gleichen Leidenschaften und Vorlieben?"
+        },
+        {
+          "title": "Werte und Lebensvision",
+          "desc": "Familie, Arbeit, Geld, Freiheit... Sind eure Prioritäten aufeinander abgestimmt?"
+        },
+        {
+          "title": "Alltag und Gewohnheiten",
+          "desc": "Lebensrhythmus, Organisation, kleine Macken... Seid ihr im Alltag kompatibel?"
+        },
+        {
+          "title": "Beziehung und Intimität",
+          "desc": "Kommunikation, Zuneigung, Bedürfnisse... Wie erlebt ihr eure Beziehung täglich?"
+        },
+        {
+          "title": "Pläne und Zukunft",
+          "desc": "Reisen, Familie, Karriere... Teilt ihr dieselbe Zukunftsvision?"
+        }
       ]
     },
     "s5": {
@@ -63,9 +91,18 @@
     "ctaDesc": "Scrollt zurück nach oben, gebt eure Namen ein und stürzt euch in diesen Kompatibilitätstest! Vergesst nicht, eure Antworten nach dem Quiz zu besprechen.",
     "faqTitle": "Häufig gestellte Fragen",
     "faq": [
-      { "q": "Wie funktioniert der Gemeinsamkeiten-Test?", "a": "Gebt eure Namen ein, antwortet dann abwechselnd auf die 20 zufälligen Fragen aus 200. Jede identische Antwort zählt als Gemeinsamkeit. Am Ende entdeckt ihr euren Kompatibilitätswert!" },
-      { "q": "Braucht man viele Gemeinsamkeiten, um kompatibel zu sein?", "a": "Nicht unbedingt! Unterschiede können ergänzend sein. Wichtig ist, die grundlegenden Werte zu teilen." },
-      { "q": "Kann man den Test mit anderen Fragen wiederholen?", "a": "Ja! Am Ende des Tests könnt ihr mit einer neuen Auswahl von 20 Fragen aus den 200 verfügbaren neu beginnen." }
+      {
+        "q": "Wie funktioniert der Gemeinsamkeiten-Test?",
+        "a": "Gebt eure Namen ein, antwortet dann abwechselnd auf die 20 zufälligen Fragen aus 200. Jede identische Antwort zählt als Gemeinsamkeit. Am Ende entdeckt ihr euren Kompatibilitätswert!"
+      },
+      {
+        "q": "Braucht man viele Gemeinsamkeiten, um kompatibel zu sein?",
+        "a": "Nicht unbedingt! Unterschiede können ergänzend sein. Wichtig ist, die grundlegenden Werte zu teilen."
+      },
+      {
+        "q": "Kann man den Test mit anderen Fragen wiederholen?",
+        "a": "Ja! Am Ende des Tests könnt ihr mit einer neuen Auswahl von 20 Fragen aus den 200 verfügbaren neu beginnen."
+      }
     ]
   },
   "results": {

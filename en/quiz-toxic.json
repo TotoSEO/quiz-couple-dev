@@ -1,7 +1,9 @@
 {
   "hero": {
     "title": "Is Your Relationship Toxic? Take the Quiz",
-    "description": "A self-assessment tool to understand the dynamics of your relationship"
+    "description": "A self-assessment tool to understand the dynamics of your relationship",
+    "titleHighlight": "Toxic",
+    "badge": "Toxicity Test • Free • 5 min"
   },
   "section1": {
     "title": "Why do you need to take this test today?",

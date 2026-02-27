@@ -5,7 +5,8 @@
     "description": "Heiraten ist viel mehr als ein schönes Fest. Es ist eine Lebensentscheidung, die zwei Menschen für Jahrzehnte bindet. Dieser Ehe-Test soll Ihnen helfen zu überprüfen, ob Sie wirklich über alles nachgedacht haben — gemeinsam, ehrlich, bevor Sie Ja sagen.",
     "duration": "~10 Minuten",
     "players": "Zu zweit",
-    "questions": "30 Fragen"
+    "questions": "30 Fragen",
+    "titleHighlight": "heiraten"
   },
   "seo": {
     "whyTitle": "Warum einen Paartest vor der Hochzeit machen?",

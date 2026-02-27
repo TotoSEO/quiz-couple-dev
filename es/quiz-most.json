@@ -3,7 +3,9 @@
     "title": "Quiz - ¿Quién es el más... ?",
     "description": "¡El juego ideal para descubrir lo que tus amigos realmente piensan de ti!",
     "descriptionBold": "240+ preguntas",
-    "descriptionEnd": "para horas de diversión entre amigos o en pareja."
+    "descriptionEnd": "para horas de diversión entre amigos o en pareja.",
+    "titleHighlight": "Quién es el más",
+    "badge": "Quiz en Grupo • 2-8 jugadores"
   },
   "howToPlay": {
     "title": "¿Cómo jugar al quiz \"Quién es el más\"?",
@@ -27,11 +29,29 @@
     "title": "240+ preguntas \"Quién es el más\" para horas de diversión",
     "subtitle": "¡Descubre una muestra de las preguntas que te esperan en nuestro quiz interactivo gratuito!",
     "classicTitle": "Preguntas clásicas",
-    "classicQuestions": ["¿Quién es el más hablador?", "¿Quién es el más gracioso?", "¿Quién es el más inteligente?", "¿Quién es el más goloso?", "¿Quién es el más perezoso?"],
+    "classicQuestions": [
+      "¿Quién es el más hablador?",
+      "¿Quién es el más gracioso?",
+      "¿Quién es el más inteligente?",
+      "¿Quién es el más goloso?",
+      "¿Quién es el más perezoso?"
+    ],
     "funTitle": "Preguntas divertidas y originales",
-    "funQuestions": ["¿Quién es el más adicto a Netflix?", "¿Quién es más probable que hable de su ex?", "¿Quién es el más torpe ligando?", "¿Quién es el más adicto a las notificaciones?", "¿Quién miente más?"],
+    "funQuestions": [
+      "¿Quién es el más adicto a Netflix?",
+      "¿Quién es más probable que hable de su ex?",
+      "¿Quién es el más torpe ligando?",
+      "¿Quién es el más adicto a las notificaciones?",
+      "¿Quién miente más?"
+    ],
     "intimateTitle": "Preguntas más íntimas",
-    "intimateQuestions": ["¿Quién es secretamente el más romántico?", "¿Quién es el más celoso?", "¿Quién guarda más secretos?", "¿Quién es el más sensible a los cumplidos?", "¿Quién es el más fiel a sus hábitos?"]
+    "intimateQuestions": [
+      "¿Quién es secretamente el más romántico?",
+      "¿Quién es el más celoso?",
+      "¿Quién guarda más secretos?",
+      "¿Quién es el más sensible a los cumplidos?",
+      "¿Quién es el más fiel a sus hábitos?"
+    ]
   },
   "tips": {
     "title": "Nuestros consejos para un quiz \"Quién es el más\" exitoso",

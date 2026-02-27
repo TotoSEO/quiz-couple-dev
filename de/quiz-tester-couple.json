@@ -5,7 +5,8 @@
     "description": "20 Fragen, um euer Kompatibilitätsniveau zu entdecken. Spielt abwechselnd und seht, ob ihr wirklich auf derselben Wellenlänge seid!",
     "duration": "5 Minuten",
     "players": "2 Spieler",
-    "questions": "20 Fragen"
+    "questions": "20 Fragen",
+    "titleHighlight": "eure Beziehung"
   },
   "seo": {
     "whyTitle": "Warum eure Beziehung testen?",

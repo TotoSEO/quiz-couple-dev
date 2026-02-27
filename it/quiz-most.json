@@ -3,7 +3,9 @@
     "title": "Quiz - Chi è il più... ?",
     "description": "Il gioco ideale per scoprire cosa pensano davvero i tuoi amici di te!",
     "descriptionBold": "240+ domande",
-    "descriptionEnd": "per ore di divertimento tra amici o in coppia."
+    "descriptionEnd": "per ore di divertimento tra amici o in coppia.",
+    "titleHighlight": "Chi è il più",
+    "badge": "Quiz di Gruppo • 2-8 giocatori"
   },
   "howToPlay": {
     "title": "Come si gioca al quiz \"Chi è il più\"?",
@@ -27,11 +29,29 @@
     "title": "240+ domande \"Chi è il più\" per ore di divertimento",
     "subtitle": "Scoprite un'anteprima delle domande che vi aspettano nel nostro quiz interattivo gratuito!",
     "classicTitle": "Domande classiche",
-    "classicQuestions": ["Chi è il più chiacchierone?", "Chi è il più divertente?", "Chi è il più intelligente?", "Chi è il più goloso?", "Chi è il più pigro?"],
+    "classicQuestions": [
+      "Chi è il più chiacchierone?",
+      "Chi è il più divertente?",
+      "Chi è il più intelligente?",
+      "Chi è il più goloso?",
+      "Chi è il più pigro?"
+    ],
     "funTitle": "Domande divertenti e originali",
-    "funQuestions": ["Chi è il più dipendente da Netflix e snack?", "Chi è più probabile che parli del suo ex?", "Chi è il più maldestro nel flirtare?", "Chi è il più dipendente dalle notifiche?", "Chi mente di più?"],
+    "funQuestions": [
+      "Chi è il più dipendente da Netflix e snack?",
+      "Chi è più probabile che parli del suo ex?",
+      "Chi è il più maldestro nel flirtare?",
+      "Chi è il più dipendente dalle notifiche?",
+      "Chi mente di più?"
+    ],
     "intimateTitle": "Domande più intime",
-    "intimateQuestions": ["Chi è segretamente il più romantico?", "Chi è il più geloso?", "Chi custodisce più segreti?", "Chi è il più sensibile ai complimenti?", "Chi è il più fedele alle sue abitudini?"]
+    "intimateQuestions": [
+      "Chi è segretamente il più romantico?",
+      "Chi è il più geloso?",
+      "Chi custodisce più segreti?",
+      "Chi è il più sensibile ai complimenti?",
+      "Chi è il più fedele alle sue abitudini?"
+    ]
   },
   "tips": {
     "title": "I nostri consigli per un quiz \"Chi è il più\" di successo",

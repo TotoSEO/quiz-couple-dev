@@ -3,15 +3,28 @@
     "badge": "Quiz interactivo para dos",
     "title1": "¿Quién conoce mejor al otro?",
     "title2": "Quiz de pareja",
-    "description": "¡Pon a prueba tu conocimiento mutuo con este quiz divertido! Adivina las preferencias de tu pareja y descubre quién conoce mejor al otro."
+    "description": "¡Pon a prueba tu conocimiento mutuo con este quiz divertido! Adivina las preferencias de tu pareja y descubre quién conoce mejor al otro.",
+    "titleHighlight": "mejor"
   },
   "howItWorks": {
     "title": "¿Cómo funciona el quiz \"Quién conoce mejor\"?",
     "steps": [
-      { "title": "1. Ingresa vuestros nombres", "desc": "Identifícate para personalizar las preguntas del quiz" },
-      { "title": "2. Adivina por turnos", "desc": "Responde a las preguntas sobre las preferencias de tu pareja" },
-      { "title": "3. Valida las respuestas", "desc": "Tu pareja confirma si has acertado la respuesta" },
-      { "title": "4. Descubre el resultado", "desc": "¿Quién conoce mejor al otro en vuestra relación?" }
+      {
+        "title": "1. Ingresa vuestros nombres",
+        "desc": "Identifícate para personalizar las preguntas del quiz"
+      },
+      {
+        "title": "2. Adivina por turnos",
+        "desc": "Responde a las preguntas sobre las preferencias de tu pareja"
+      },
+      {
+        "title": "3. Valida las respuestas",
+        "desc": "Tu pareja confirma si has acertado la respuesta"
+      },
+      {
+        "title": "4. Descubre el resultado",
+        "desc": "¿Quién conoce mejor al otro en vuestra relación?"
+      }
     ]
   },
   "whatIs": {
@@ -19,51 +32,150 @@
     "p1": "El quiz \"Quién conoce mejor\" es un juego interactivo diseñado especialmente para parejas que desean poner a prueba su conocimiento mutuo de manera divertida y entretenida. Inspirado en concursos de televisión populares, este quiz desafía a los compañeros a adivinar las preferencias, hábitos y sueños del otro. Si prefieres un formato más clásico, también puedes <a href=\"https://quiz-couple.com/es/test-compatibilidad-pareja\">poner a prueba tu pareja</a> con nuestras 20 preguntas de compatibilidad.",
     "p2": "A diferencia de los quiz clásicos donde respondes solo, este formato implica una verdadera interacción entre ambos. Uno adivina, el otro valida, y luego se cambian los roles. Es esta dinámica la que hace la experiencia tan enriquecedora y reveladora.",
     "features": [
-      { "title": "100 preguntas variadas", "desc": "Preguntas sobre todos los aspectos de la vida: gustos, hábitos, sueños, miedos, proyectos de vida, preferencias cotidianas..." },
-      { "title": "20 preguntas por ronda", "desc": "Cada ronda selecciona aleatoriamente 20 preguntas de las 100 disponibles. ¡Vuelve a jugar tantas veces como quieras!" },
-      { "title": "100% gratuito", "desc": "Sin registro, sin pagos, sin publicidad intrusiva. Juega inmediatamente y tantas veces como desees." }
+      {
+        "title": "100 preguntas variadas",
+        "desc": "Preguntas sobre todos los aspectos de la vida: gustos, hábitos, sueños, miedos, proyectos de vida, preferencias cotidianas..."
+      },
+      {
+        "title": "20 preguntas por ronda",
+        "desc": "Cada ronda selecciona aleatoriamente 20 preguntas de las 100 disponibles. ¡Vuelve a jugar tantas veces como quieras!"
+      },
+      {
+        "title": "100% gratuito",
+        "desc": "Sin registro, sin pagos, sin publicidad intrusiva. Juega inmediatamente y tantas veces como desees."
+      }
     ]
   },
   "why": {
     "title": "¿Por qué jugar al quiz \"Quién conoce mejor\" en pareja?",
     "subtitle": "Este quiz no es solo un juego: es una verdadera herramienta para fortalecer tu relación y comprender mejor a tu pareja.",
     "benefits": [
-      { "title": "Fortalece tu complicidad", "desc": "Cada respuesta correcta demuestra que realmente conoces a tu pareja. Es gratificante para quien adivina y emotivo para quien es adivinado." },
-      { "title": "Abre el diálogo", "desc": "Las preguntas abordan temas variados que quizás nunca habéis discutido juntos. Una excelente base para conversaciones enriquecedoras." },
-      { "title": "Pasa un buen momento", "desc": "Más allá del puntaje, este quiz es la oportunidad de reír juntos, sorprenderse mutuamente y compartir un momento de complicidad único." },
-      { "title": "Descubre nuevas facetas", "desc": "Incluso después de años juntos, siempre quedan cosas por descubrir. Este quiz puede revelar sorpresas inesperadas." },
-      { "title": "Ideal para una noche en pareja", "desc": "Perfecto para una noche romántica, un fin de semana en pareja o simplemente para romper la rutina diaria." },
-      { "title": "Crea recuerdos", "desc": "Los momentos compartidos alrededor de este quiz se convertirán en recuerdos preciosos que disfrutaréis recordar más tarde." }
+      {
+        "title": "Fortalece tu complicidad",
+        "desc": "Cada respuesta correcta demuestra que realmente conoces a tu pareja. Es gratificante para quien adivina y emotivo para quien es adivinado."
+      },
+      {
+        "title": "Abre el diálogo",
+        "desc": "Las preguntas abordan temas variados que quizás nunca habéis discutido juntos. Una excelente base para conversaciones enriquecedoras."
+      },
+      {
+        "title": "Pasa un buen momento",
+        "desc": "Más allá del puntaje, este quiz es la oportunidad de reír juntos, sorprenderse mutuamente y compartir un momento de complicidad único."
+      },
+      {
+        "title": "Descubre nuevas facetas",
+        "desc": "Incluso después de años juntos, siempre quedan cosas por descubrir. Este quiz puede revelar sorpresas inesperadas."
+      },
+      {
+        "title": "Ideal para una noche en pareja",
+        "desc": "Perfecto para una noche romántica, un fin de semana en pareja o simplemente para romper la rutina diaria."
+      },
+      {
+        "title": "Crea recuerdos",
+        "desc": "Los momentos compartidos alrededor de este quiz se convertirán en recuerdos preciosos que disfrutaréis recordar más tarde."
+      }
     ]
   },
   "examples": {
     "title": "Ejemplos de preguntas del quiz \"Quién conoce mejor\"",
     "subtitle": "Aquí tienes una muestra de los tipos de preguntas que encontrarás en este quiz. Los temas son variados para explorar todos los aspectos de tu relación.",
     "categories": [
-      { "emoji": "🎯", "title": "Gustos y preferencias", "questions": ["¿Cuál es el color favorito de tu pareja?", "¿Prefiere el mar o la montaña?", "¿Cuál es su plato favorito?", "¿Es más de café o de té?"] },
-      { "emoji": "💭", "title": "Personalidad y hábitos", "questions": ["¿Es más de mañana o de noche?", "¿Prefiere planificar o improvisar?", "¿Es más introvertido/a o extrovertido/a?", "¿Cuál es su mayor cualidad?"] },
-      { "emoji": "❤️", "title": "Amor y relación", "questions": ["¿Qué le hace sentirse amado/a?", "¿Prefiere las palabras o los actos?", "¿Cuál es su mayor miedo en el amor?", "¿Cree en el amor para toda la vida?"] },
-      { "emoji": "🌟", "title": "Sueños y proyectos", "questions": ["¿Qué país sueña con visitar?", "¿Qué profesión le habría gustado ejercer de niño/a?", "¿Qué haría si ganara la lotería?", "¿Cuál es su mayor sueño?"] }
+      {
+        "emoji": "🎯",
+        "title": "Gustos y preferencias",
+        "questions": [
+          "¿Cuál es el color favorito de tu pareja?",
+          "¿Prefiere el mar o la montaña?",
+          "¿Cuál es su plato favorito?",
+          "¿Es más de café o de té?"
+        ]
+      },
+      {
+        "emoji": "💭",
+        "title": "Personalidad y hábitos",
+        "questions": [
+          "¿Es más de mañana o de noche?",
+          "¿Prefiere planificar o improvisar?",
+          "¿Es más introvertido/a o extrovertido/a?",
+          "¿Cuál es su mayor cualidad?"
+        ]
+      },
+      {
+        "emoji": "❤️",
+        "title": "Amor y relación",
+        "questions": [
+          "¿Qué le hace sentirse amado/a?",
+          "¿Prefiere las palabras o los actos?",
+          "¿Cuál es su mayor miedo en el amor?",
+          "¿Cree en el amor para toda la vida?"
+        ]
+      },
+      {
+        "emoji": "🌟",
+        "title": "Sueños y proyectos",
+        "questions": [
+          "¿Qué país sueña con visitar?",
+          "¿Qué profesión le habría gustado ejercer de niño/a?",
+          "¿Qué haría si ganara la lotería?",
+          "¿Cuál es su mayor sueño?"
+        ]
+      }
     ]
   },
   "when": {
     "title": "¿Cuándo jugar al quiz \"Quién conoce mejor\"?",
     "occasions": [
-      { "emoji": "🏠", "title": "Noche acogedora en casa", "desc": "Perfecto para reemplazar Netflix por un momento de verdadera conexión. ¡Una manta, una bebida caliente y a jugar!" },
-      { "emoji": "🚗", "title": "Viaje largo en coche", "desc": "Transforma un viaje aburrido en un momento de complicidad. ¡El tiempo pasará mucho más rápido!" },
-      { "emoji": "🌴", "title": "Vacaciones en pareja", "desc": "En la playa, en el restaurante o en el hotel, este quiz es el compañero ideal para tus escapadas románticas." },
-      { "emoji": "💑", "title": "Inicio de relación", "desc": "Conoce a tu nueva pareja de manera divertida. ¡Una forma original de romper el hielo!" },
-      { "emoji": "💍", "title": "Pareja de larga duración", "desc": "¡Incluso después de años, este quiz puede revelar sorpresas! Redescubre a tu pareja bajo una nueva luz." },
-      { "emoji": "🎉", "title": "Aniversario de pareja", "desc": "Una actividad original para celebrar vuestro amor y medir cuánto os conocéis después de todo este tiempo." }
+      {
+        "emoji": "🏠",
+        "title": "Noche acogedora en casa",
+        "desc": "Perfecto para reemplazar Netflix por un momento de verdadera conexión. ¡Una manta, una bebida caliente y a jugar!"
+      },
+      {
+        "emoji": "🚗",
+        "title": "Viaje largo en coche",
+        "desc": "Transforma un viaje aburrido en un momento de complicidad. ¡El tiempo pasará mucho más rápido!"
+      },
+      {
+        "emoji": "🌴",
+        "title": "Vacaciones en pareja",
+        "desc": "En la playa, en el restaurante o en el hotel, este quiz es el compañero ideal para tus escapadas románticas."
+      },
+      {
+        "emoji": "💑",
+        "title": "Inicio de relación",
+        "desc": "Conoce a tu nueva pareja de manera divertida. ¡Una forma original de romper el hielo!"
+      },
+      {
+        "emoji": "💍",
+        "title": "Pareja de larga duración",
+        "desc": "¡Incluso después de años, este quiz puede revelar sorpresas! Redescubre a tu pareja bajo una nueva luz."
+      },
+      {
+        "emoji": "🎉",
+        "title": "Aniversario de pareja",
+        "desc": "Una actividad original para celebrar vuestro amor y medir cuánto os conocéis después de todo este tiempo."
+      }
     ]
   },
   "tips": {
     "title": "Consejos para disfrutar al máximo del quiz",
     "items": [
-      { "title": "Juega sin pantallas entre vosotros", "desc": "Coloca el teléfono entre vosotros o sobre una mesa. El objetivo es mirarse a los ojos al responder, no mirar una pantalla." },
-      { "title": "Amplía tus respuestas", "desc": "No te conformes con un simple \"sí\" o \"no\". Explica por qué crees que es la respuesta correcta. Ahí es donde comienzan las verdaderas conversaciones." },
-      { "title": "No te tomes la puntuación demasiado en serio", "desc": "El objetivo no es ganar, sino pasar un buen rato juntos. ¡Las respuestas incorrectas suelen ser las más divertidas y reveladoras!" },
-      { "title": "Juega regularmente", "desc": "Con 100 preguntas y selección aleatoria, cada partida es diferente. Hazlo un ritual mensual para fortalecer vuestra conexión." }
+      {
+        "title": "Juega sin pantallas entre vosotros",
+        "desc": "Coloca el teléfono entre vosotros o sobre una mesa. El objetivo es mirarse a los ojos al responder, no mirar una pantalla."
+      },
+      {
+        "title": "Amplía tus respuestas",
+        "desc": "No te conformes con un simple \"sí\" o \"no\". Explica por qué crees que es la respuesta correcta. Ahí es donde comienzan las verdaderas conversaciones."
+      },
+      {
+        "title": "No te tomes la puntuación demasiado en serio",
+        "desc": "El objetivo no es ganar, sino pasar un buen rato juntos. ¡Las respuestas incorrectas suelen ser las más divertidas y reveladoras!"
+      },
+      {
+        "title": "Juega regularmente",
+        "desc": "Con 100 preguntas y selección aleatoria, cada partida es diferente. Hazlo un ritual mensual para fortalecer vuestra conexión."
+      }
     ]
   },
   "cta": {
@@ -74,12 +186,30 @@
   "faq": {
     "title": "Preguntas frecuentes sobre el quiz \"Quién conoce mejor\"",
     "items": [
-      { "q": "¿Cómo funciona el quiz \"Quién conoce mejor al otro\"?", "a": "Cada jugador debe adivinar las preferencias de su pareja por turnos. La pareja valida si la respuesta es correcta. Al final de las 20 preguntas, se comparan los puntajes para ver quién conoce mejor al otro." },
-      { "q": "¿Cuántas preguntas tiene este quiz de pareja?", "a": "Cada ronda incluye 20 preguntas seleccionadas aleatoriamente de un banco de 100. Puedes volver a jugar tantas veces como quieras con preguntas diferentes cada vez." },
-      { "q": "¿Este quiz es realmente gratis?", "a": "Sí, este quiz es 100% gratis y sin registro. Puedes jugar tantas veces como desees directamente en el sitio, sin crear una cuenta ni proporcionar información personal." },
-      { "q": "¿Para qué sirve el quiz de conocimiento de la pareja?", "a": "Este quiz te permite poner a prueba tu conocimiento mutuo de forma divertida, fortalecer tu complicidad y abrir el diálogo sobre temas variados: preferencias, sueños, miedos, hábitos cotidianos, proyectos de vida..." },
-      { "q": "¿Se puede volver a jugar con las mismas preguntas?", "a": "No, en cada nueva partida se sortean 20 preguntas entre las 100 disponibles. Esto garantiza una experiencia renovada cada vez y te permite descubrir nuevas facetas de tu pareja." },
-      { "q": "¿Hay que jugar al mismo tiempo que la pareja?", "a": "Sí, este quiz está diseñado para jugarse de a dos, al mismo tiempo. Debéis estar juntos ya que uno adivina y el otro valida la respuesta. Esta interacción en tiempo real es lo que hace el juego tan divertido y enriquecedor." }
+      {
+        "q": "¿Cómo funciona el quiz \"Quién conoce mejor al otro\"?",
+        "a": "Cada jugador debe adivinar las preferencias de su pareja por turnos. La pareja valida si la respuesta es correcta. Al final de las 20 preguntas, se comparan los puntajes para ver quién conoce mejor al otro."
+      },
+      {
+        "q": "¿Cuántas preguntas tiene este quiz de pareja?",
+        "a": "Cada ronda incluye 20 preguntas seleccionadas aleatoriamente de un banco de 100. Puedes volver a jugar tantas veces como quieras con preguntas diferentes cada vez."
+      },
+      {
+        "q": "¿Este quiz es realmente gratis?",
+        "a": "Sí, este quiz es 100% gratis y sin registro. Puedes jugar tantas veces como desees directamente en el sitio, sin crear una cuenta ni proporcionar información personal."
+      },
+      {
+        "q": "¿Para qué sirve el quiz de conocimiento de la pareja?",
+        "a": "Este quiz te permite poner a prueba tu conocimiento mutuo de forma divertida, fortalecer tu complicidad y abrir el diálogo sobre temas variados: preferencias, sueños, miedos, hábitos cotidianos, proyectos de vida..."
+      },
+      {
+        "q": "¿Se puede volver a jugar con las mismas preguntas?",
+        "a": "No, en cada nueva partida se sortean 20 preguntas entre las 100 disponibles. Esto garantiza una experiencia renovada cada vez y te permite descubrir nuevas facetas de tu pareja."
+      },
+      {
+        "q": "¿Hay que jugar al mismo tiempo que la pareja?",
+        "a": "Sí, este quiz está diseñado para jugarse de a dos, al mismo tiempo. Debéis estar juntos ya que uno adivina y el otro valida la respuesta. Esta interacción en tiempo real es lo que hace el juego tan divertido y enriquecedor."
+      }
     ]
   }
 }

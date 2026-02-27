@@ -5,7 +5,8 @@
     "description": "20 questions to discover your compatibility level. Take turns and see if you're truly on the same wavelength!",
     "duration": "5 minutes",
     "players": "2 players",
-    "questions": "20 questions"
+    "questions": "20 questions",
+    "titleHighlight": "Your Relationship"
   },
   "seo": {
     "whyTitle": "Why Test Your Relationship?",

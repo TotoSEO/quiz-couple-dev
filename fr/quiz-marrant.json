@@ -5,7 +5,8 @@
     "description": "Un quiz drôle et léger pour rire ensemble, vous taquiner et renforcer votre complicité. Aucun score, juste du fun à deux !",
     "questions": "150+ questions",
     "players": "À deux joueurs",
-    "duration": "~10 minutes"
+    "duration": "~10 minutes",
+    "titleHighlight": "Marrant"
   },
   "section1": {
     "title": "Le quiz drôle pour couples, bien plus qu'un simple jeu",

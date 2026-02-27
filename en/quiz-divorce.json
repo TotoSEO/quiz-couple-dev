@@ -112,5 +112,11 @@
     "importantReminder": "Important reminder:",
     "reminderText": "This test is not a diagnostic tool. It does not replace the advice of a therapist, lawyer, or doctor. Your answers are anonymous and are not recorded.",
     "redoTest": "Retake the test"
+  },
+  "hero": {
+    "badge": "Divorce Test • Free • 5 min",
+    "title": "Should I Get Divorced? Free Online Test",
+    "description": "25 questions to objectively assess your marital situation and know if it's time to take the step.",
+    "titleHighlight": "Divorced"
   }
 }

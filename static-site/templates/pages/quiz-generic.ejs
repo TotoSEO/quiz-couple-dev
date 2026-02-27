@@ -200,13 +200,28 @@
 <script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
 
 <!-- Hero -->
-<section class="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-16 md:py-24">
+<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center">
       <% const heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>
-      <span class="badge badge-primary mb-4"><%= heroBadge %></span>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        <%= heroBadge %>
+      </span>
       <% } %>
-      <h1 class="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl"><%= t(ns + ':hero.title', quizTitle) %></h1>
+      <%
+        const heroTitle = t(ns + ':hero.title', quizTitle);
+        const heroHighlight = t(ns + ':hero.titleHighlight', '');
+      %>
+      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
+        <% } else if (heroHighlight) { %>
+          <%= heroTitle %> <span class="text-gradient"><%= heroHighlight %></span>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
       <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
       <% const heroSub = t(ns + ':hero.subtitle', ''); if (heroSub && heroSub !== ns + ':hero.subtitle') { %>
       <p class="text-sm text-muted-foreground mt-4"><%= heroSub %></p>
@@ -270,16 +285,31 @@
       </div>
       <% } %>
 
-      <%/* Pillar/card items */%>
+      <%/* Pillar/card items with icon pictograms */%>
       <% const firstPillar = getPillarTitle(s, 1);
-        if (firstPillar) { %>
-      <div class="space-y-6 mt-6">
+        if (firstPillar) {
+          const pillarIcons = [
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>',
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>',
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>',
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>',
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>',
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 00-8 8c0 3.36 2.07 6.24 5 7.42V19a1 1 0 001 1h4a1 1 0 001-1v-1.58c2.93-1.18 5-4.06 5-7.42a8 8 0 00-8-8zM10 22h4"/></svg>',
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><polyline points="14,2 14,8 20,8"/></svg>'
+          ];
+          const pillarColors = ['hsl(340, 65%, 65%)', 'hsl(270, 40%, 50%)', 'hsl(200, 60%, 50%)', 'hsl(150, 50%, 45%)', 'hsl(30, 80%, 55%)', 'hsl(0, 60%, 55%)', 'hsl(180, 50%, 45%)', 'hsl(260, 50%, 55%)'];
+        %>
+      <div class="icon-cards-grid mt-6">
         <% for (let c = 1; c <= 8; c++) {
           const cTitle = getPillarTitle(s, c);
           if (!cTitle) continue; %>
-        <div class="bg-card border border-border rounded-lg p-6">
-          <h3 class="text-xl font-semibold mb-3 text-primary"><%= cTitle %></h3>
-          <p class="text-muted-foreground"><%- getPillarText(s, c) %></p>
+        <div class="card-with-icon">
+          <div class="icon-circle" style="background: <%= pillarColors[(c-1) % pillarColors.length] %>20; color: <%= pillarColors[(c-1) % pillarColors.length] %>">
+            <%- pillarIcons[(c-1) % pillarIcons.length] %>
+          </div>
+          <h3 class="text-lg font-semibold mb-2"><%= cTitle %></h3>
+          <p class="text-muted-foreground text-sm"><%- getPillarText(s, c) %></p>
         </div>
         <% } %>
       </div>
@@ -365,21 +395,34 @@
     </section>
     <% } %>
 
-    <%/* Card-based content (quiz-amoureux, quiz-mariage, quiz-tester-couple style) */%>
+    <%/* Card-based content with icon pictograms */%>
     <% const whyTitle = tryKeys('seo.whyTitle');
-      if (whyTitle) { %>
+      if (whyTitle) {
+        const cardIcons = [
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>',
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>',
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>',
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><polyline points="14,2 14,8 20,8"/></svg>',
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>'
+        ];
+        const cardColors = ['hsl(340, 65%, 65%)', 'hsl(270, 40%, 50%)', 'hsl(200, 60%, 50%)', 'hsl(150, 50%, 45%)', 'hsl(30, 80%, 55%)', 'hsl(0, 60%, 55%)'];
+      %>
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= whyTitle %></h2>
       <% const whySub = tryKeys('seo.whySubtitle'); if (whySub) { %>
       <p class="text-muted-foreground leading-relaxed mb-6"><%= whySub %></p>
       <% } %>
-      <div class="space-y-4">
+      <div class="icon-cards-grid">
         <% for (let c = 1; c <= 6; c++) {
           const cTitle = tryKeys('seo.card' + c + 'Title');
           if (!cTitle) continue; %>
-        <div class="bg-card border border-border rounded-lg p-5">
-          <h3 class="text-lg font-semibold mb-2 text-primary"><%= cTitle %></h3>
-          <p class="text-muted-foreground"><%- tryKeys('seo.card' + c + 'Text') %></p>
+        <div class="card-with-icon">
+          <div class="icon-circle" style="background: <%= cardColors[(c-1) % cardColors.length] %>20; color: <%= cardColors[(c-1) % cardColors.length] %>">
+            <%- cardIcons[(c-1) % cardIcons.length] %>
+          </div>
+          <h3 class="text-lg font-semibold mb-2"><%= cTitle %></h3>
+          <p class="text-muted-foreground text-sm"><%- tryKeys('seo.card' + c + 'Text') %></p>
         </div>
         <% } %>
       </div>
@@ -392,12 +435,18 @@
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= howTitle %></h2>
       <div class="space-y-4">
-        <% for (let s = 1; s <= 4; s++) {
+        <% const stepColors = ['hsl(340, 65%, 65%)', 'hsl(270, 40%, 50%)', 'hsl(200, 60%, 50%)', 'hsl(150, 50%, 45%)'];
+        for (let s = 1; s <= 4; s++) {
           const sTitle = tryKeys('seo.step' + s + 'Title');
           if (!sTitle) continue; %>
-        <div class="bg-card border border-border rounded-lg p-5">
-          <h3 class="text-lg font-semibold mb-2 text-primary"><%= sTitle %></h3>
-          <p class="text-muted-foreground"><%= tryKeys('seo.step' + s + 'Text') %></p>
+        <div class="card-with-icon" style="flex-direction: row; align-items: center; gap: 1rem;">
+          <div class="icon-circle" style="background: <%= stepColors[(s-1) % stepColors.length] %>20; color: <%= stepColors[(s-1) % stepColors.length] %>; flex-shrink: 0; margin-bottom: 0;">
+            <span style="font-weight: 700; font-size: 0.875rem;"><%= s %></span>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1"><%= sTitle %></h3>
+            <p class="text-muted-foreground text-sm"><%= tryKeys('seo.step' + s + 'Text') %></p>
+          </div>
         </div>
         <% } %>
       </div>

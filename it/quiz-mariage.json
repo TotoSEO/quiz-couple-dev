@@ -5,7 +5,8 @@
     "description": "Sposarsi è molto più di una bella festa. È una decisione di vita che impegna due persone per decenni. Questo test matrimoniale è progettato per aiutarvi a verificare se avete davvero riflettuto su tutto — insieme, onestamente, prima di dire sì.",
     "duration": "~10 minuti",
     "players": "In coppia",
-    "questions": "30 domande"
+    "questions": "30 domande",
+    "titleHighlight": "sposarvi"
   },
   "seo": {
     "whyTitle": "Perché fare un test di coppia prima del matrimonio?",

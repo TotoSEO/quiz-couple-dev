@@ -5,7 +5,8 @@
     "description": "State insieme da qualche settimana, qualche mese, forse di più. E inevitabilmente arriva la domanda: è una cosa seria o solo una bella parentesi? Questo quiz non risolverà tutto — ma farà le domande giuste.",
     "feat1": "In coppia, a distanza",
     "feat2": "Dal telefono",
-    "feat3": "20 domande / sessione"
+    "feat3": "20 domande / sessione",
+    "titleHighlight": "adolescenti"
   },
   "ui": {
     "multiplayer": "Quiz per 2 giocatori",

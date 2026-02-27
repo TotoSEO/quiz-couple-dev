@@ -3,7 +3,9 @@
     "title": "Quiz - Wer ist am meisten... ?",
     "description": "Das ideale Spiel, um herauszufinden, was eure Freunde wirklich über euch denken!",
     "descriptionBold": "240+ Fragen",
-    "descriptionEnd": "für stundenlangen Spaß unter Freunden oder als Paar."
+    "descriptionEnd": "für stundenlangen Spaß unter Freunden oder als Paar.",
+    "titleHighlight": "Wer ist am meisten",
+    "badge": "Gruppen-Quiz • 2-8 Spieler"
   },
   "howToPlay": {
     "title": "Wie spielt man das Quiz \"Wer ist am meisten\"?",
@@ -27,11 +29,29 @@
     "title": "240+ \"Wer ist am meisten\"-Fragen für stundenlangen Spaß",
     "subtitle": "Entdeckt einen Vorgeschmack auf die Fragen, die euch in unserem kostenlosen interaktiven Quiz erwarten!",
     "classicTitle": "Klassische Fragen",
-    "classicQuestions": ["Wer ist am gesprächigsten?", "Wer ist am lustigsten?", "Wer ist am intelligentesten?", "Wer ist am verfressensten?", "Wer ist am faulsten?"],
+    "classicQuestions": [
+      "Wer ist am gesprächigsten?",
+      "Wer ist am lustigsten?",
+      "Wer ist am intelligentesten?",
+      "Wer ist am verfressensten?",
+      "Wer ist am faulsten?"
+    ],
     "funTitle": "Lustige und ausgefallene Fragen",
-    "funQuestions": ["Wer ist am süchtigsten nach Netflix und Snacks?", "Wer spricht am ehesten über den Ex?", "Wer ist am tollpatschigsten beim Flirten?", "Wer ist am süchtigsten nach Benachrichtigungen?", "Wer lügt am meisten?"],
+    "funQuestions": [
+      "Wer ist am süchtigsten nach Netflix und Snacks?",
+      "Wer spricht am ehesten über den Ex?",
+      "Wer ist am tollpatschigsten beim Flirten?",
+      "Wer ist am süchtigsten nach Benachrichtigungen?",
+      "Wer lügt am meisten?"
+    ],
     "intimateTitle": "Intimere Fragen",
-    "intimateQuestions": ["Wer ist heimlich am romantischsten?", "Wer ist am eifersüchtigsten?", "Wer bewahrt die meisten Geheimnisse?", "Wer ist am empfindlichsten für Komplimente?", "Wer ist seinen Gewohnheiten am treusten?"]
+    "intimateQuestions": [
+      "Wer ist heimlich am romantischsten?",
+      "Wer ist am eifersüchtigsten?",
+      "Wer bewahrt die meisten Geheimnisse?",
+      "Wer ist am empfindlichsten für Komplimente?",
+      "Wer ist seinen Gewohnheiten am treusten?"
+    ]
   },
   "tips": {
     "title": "Unsere Tipps für ein gelungenes \"Wer ist am meisten\"-Quiz",

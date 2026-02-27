@@ -5,7 +5,8 @@
     "description": "Descubre vuestras afinidades, gustos compartidos y valores comunes con este test interactivo. ¡20 preguntas al azar entre 200 para una experiencia única cada vez!",
     "duration": "5 minutos",
     "players": "2 jugadores",
-    "questions": "20 preguntas / sesión"
+    "questions": "20 preguntas / sesión",
+    "titleHighlight": "compatibles"
   },
   "seo": {
     "intro": "Este test de puntos comunes está diseñado para parejas que quieren conocerse mejor, descubrir sus afinidades y medir su compatibilidad de forma lúdica e interactiva.",
@@ -22,21 +23,48 @@
     "s3": {
       "title": "Cómo funciona el test de compatibilidad",
       "steps": [
-        { "title": "Ingresad vuestros nombres", "desc": "Introduce los nombres de los dos jugadores" },
-        { "title": "Responded por turnos", "desc": "Para cada pregunta, cada uno da su respuesta por separado" },
-        { "title": "Descubrid vuestros puntos comunes", "desc": "¡Cuantas más respuestas idénticas, más alta la puntuación!" }
+        {
+          "title": "Ingresad vuestros nombres",
+          "desc": "Introduce los nombres de los dos jugadores"
+        },
+        {
+          "title": "Responded por turnos",
+          "desc": "Para cada pregunta, cada uno da su respuesta por separado"
+        },
+        {
+          "title": "Descubrid vuestros puntos comunes",
+          "desc": "¡Cuantas más respuestas idénticas, más alta la puntuación!"
+        }
       ]
     },
     "s4": {
       "title": "Test de puntos comunes en pareja: 200 preguntas",
       "p1": "Nuestra base de datos contiene 200 preguntas cuidadosamente seleccionadas, cubriendo todos los aspectos de la vida en pareja.",
       "categories": [
-        { "title": "Personalidad y carácter", "desc": "¿Sois introvertidos o extrovertidos? ¿Pacientes o impulsivos? Descubrid vuestras similitudes de temperamento." },
-        { "title": "Gustos e intereses", "desc": "Películas, música, cocina, hobbies... ¿Compartís las mismas pasiones y preferencias?" },
-        { "title": "Valores y visión de la vida", "desc": "Familia, trabajo, dinero, libertad... ¿Están alineadas vuestras prioridades?" },
-        { "title": "Cotidianidad y hábitos", "desc": "Ritmo de vida, organización, pequeñas manías... ¿Sois compatibles en el día a día?" },
-        { "title": "Relación e intimidad", "desc": "Comunicación, afecto, necesidades... ¿Cómo vivís vuestra relación en el día a día?" },
-        { "title": "Proyectos y futuro", "desc": "Viajes, familia, carrera... ¿Compartís la misma visión del futuro?" }
+        {
+          "title": "Personalidad y carácter",
+          "desc": "¿Sois introvertidos o extrovertidos? ¿Pacientes o impulsivos? Descubrid vuestras similitudes de temperamento."
+        },
+        {
+          "title": "Gustos e intereses",
+          "desc": "Películas, música, cocina, hobbies... ¿Compartís las mismas pasiones y preferencias?"
+        },
+        {
+          "title": "Valores y visión de la vida",
+          "desc": "Familia, trabajo, dinero, libertad... ¿Están alineadas vuestras prioridades?"
+        },
+        {
+          "title": "Cotidianidad y hábitos",
+          "desc": "Ritmo de vida, organización, pequeñas manías... ¿Sois compatibles en el día a día?"
+        },
+        {
+          "title": "Relación e intimidad",
+          "desc": "Comunicación, afecto, necesidades... ¿Cómo vivís vuestra relación en el día a día?"
+        },
+        {
+          "title": "Proyectos y futuro",
+          "desc": "Viajes, familia, carrera... ¿Compartís la misma visión del futuro?"
+        }
       ]
     },
     "s5": {
@@ -63,9 +91,18 @@
     "ctaDesc": "Volved arriba, ingresad vuestros nombres y ¡lanzaos a este test de compatibilidad! No olvidéis discutir vuestras respuestas después del quiz.",
     "faqTitle": "Preguntas frecuentes",
     "faq": [
-      { "q": "¿Cómo funciona el test de puntos comunes?", "a": "Ingresad vuestros nombres, luego responded por turnos a las 20 preguntas aleatorias. Cada respuesta idéntica cuenta como un punto común. ¡Al final, descubrid vuestra puntuación de compatibilidad!" },
-      { "q": "¿Se necesitan muchos puntos comunes para ser compatibles?", "a": "¡No necesariamente! Las diferencias pueden ser complementarias. Lo importante es compartir los valores fundamentales." },
-      { "q": "¿Se puede repetir el test con otras preguntas?", "a": "¡Sí! Al final del test, podéis empezar de nuevo con una nueva selección de 20 preguntas entre las 200 disponibles." }
+      {
+        "q": "¿Cómo funciona el test de puntos comunes?",
+        "a": "Ingresad vuestros nombres, luego responded por turnos a las 20 preguntas aleatorias. Cada respuesta idéntica cuenta como un punto común. ¡Al final, descubrid vuestra puntuación de compatibilidad!"
+      },
+      {
+        "q": "¿Se necesitan muchos puntos comunes para ser compatibles?",
+        "a": "¡No necesariamente! Las diferencias pueden ser complementarias. Lo importante es compartir los valores fundamentales."
+      },
+      {
+        "q": "¿Se puede repetir el test con otras preguntas?",
+        "a": "¡Sí! Al final del test, podéis empezar de nuevo con una nueva selección de 20 preguntas entre las 200 disponibles."
+      }
     ]
   },
   "results": {
