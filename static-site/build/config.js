@@ -35,6 +35,7 @@ export const ROUTE_SLUGS = {
   privacy: { fr: 'confidentialite', en: 'privacy-policy', es: 'politica-privacidad', de: 'datenschutz', it: 'privacy' },
   blog: { fr: 'blog', en: 'blog', es: 'blog', de: 'blog', it: 'blog' },
   quizAdo: { fr: 'quiz-couple-ado', en: 'teen-couple-quiz', es: 'quiz-pareja-adolescentes', de: 'teenager-paar-quiz', it: 'quiz-coppia-adolescenti' },
+  admin: { fr: 'admin', en: 'admin', es: 'admin', de: 'admin', it: 'admin' },
 };
 
 // Map route keys to their page template and translation namespaces
@@ -58,6 +59,7 @@ export const ROUTE_CONFIG = {
   privacy: { template: 'privacy', namespaces: ['legal', 'common'] },
   blog: { template: 'blog-listing', namespaces: ['common'] },
   quizAdo: { template: 'quiz-ado', namespaces: ['quiz-ado', 'quizzes', 'quizGames', 'gd', 'common'] },
+  admin: { template: 'admin', namespaces: ['common'] },
 };
 
 // Supabase config

@@ -104,6 +104,9 @@ async function generatePage(routeKey, lang) {
     };
     title = blogMeta[lang]?.title || blogMeta.fr.title;
     description = blogMeta[lang]?.description || blogMeta.fr.description;
+  } else if (routeKey === 'admin') {
+    title = 'Administration - Quiz Couple';
+    description = 'Panel d\'administration Quiz Couple';
   } else {
     // Quiz/test pages - get from quizzes.json
     title = t(`quizzes:${routeKey}.title`, 'Quiz Couple');

@@ -29,7 +29,8 @@
     questionIds: [],
     questionsReady: false,
     error: null,
-    loading: false
+    loading: false,
+    waitingForPartner: false
   };
 
   // ── UI Translations ──
@@ -524,7 +525,20 @@
       }
     }
 
-    // Online mode: check if I'm done
+    // Online mode: both done → results
+    if (state.gameMode === 'online' && qi >= totalQ && state.partnerAnswers.length >= totalQ) {
+      state.screen = 'results';
+      render();
+      return;
+    }
+
+    // Online mode: I answered this question, waiting for partner
+    if (state.gameMode === 'online' && state.waitingForPartner) {
+      renderWaitingForQuestion();
+      return;
+    }
+
+    // Online mode: I'm done but partner isn't
     if (state.gameMode === 'online' && qi >= totalQ) {
       renderWaitingForPartner();
       return;
@@ -546,15 +560,39 @@
       { key: 'd', text: q.d.replace(/\{\{name\}\}/g, partnerName) }
     ];
 
+    // Build dual progress bars for online mode
+    var progressHtml = '';
+    if (state.gameMode === 'online') {
+      var myName = state.name1;
+      var myProgress = state.answers1.length;
+      var partnerProgress = state.partnerAnswers.length;
+      progressHtml =
+        '<div class="space-y-2 mb-2">' +
+          '<div class="flex items-center gap-2 text-xs">' +
+            '<span class="font-medium text-primary w-20 truncate">' + esc(myName) + '</span>' +
+            '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-primary h-2 rounded-full transition-all duration-300" style="width:' + (myProgress / totalQ * 100) + '%"></div></div>' +
+            '<span class="text-muted-foreground w-10 text-right">' + myProgress + '/' + totalQ + '</span>' +
+          '</div>' +
+          '<div class="flex items-center gap-2 text-xs">' +
+            '<span class="font-medium text-secondary w-20 truncate">' + esc(partnerName) + '</span>' +
+            '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-secondary h-2 rounded-full transition-all duration-300" style="width:' + (partnerProgress / totalQ * 100) + '%"></div></div>' +
+            '<span class="text-muted-foreground w-10 text-right">' + partnerProgress + '/' + totalQ + '</span>' +
+          '</div>' +
+        '</div>';
+    }
+
     container.innerHTML =
       '<div class="max-w-lg mx-auto py-6 space-y-6">' +
         '<div class="flex items-center justify-between text-sm text-muted-foreground">' +
           '<span>' + (qi + 1) + ' ' + t('questionOf') + ' ' + totalQ + '</span>' +
-          '<span class="font-medium text-primary">' + t('turnOf').replace('{{name}}', esc(currentName)) + '</span>' +
+          (state.gameMode === 'local' ?
+            '<span class="font-medium text-primary">' + t('turnOf').replace('{{name}}', esc(currentName)) + '</span>' :
+            '') +
         '</div>' +
+        (state.gameMode === 'online' ? progressHtml :
         '<div class="w-full bg-muted rounded-full h-2">' +
           '<div class="bg-primary h-2 rounded-full transition-all duration-300" style="width:' + ((qi + 1) / totalQ * 100) + '%"></div>' +
-        '</div>' +
+        '</div>') +
         '<h3 class="text-lg font-semibold leading-snug">' + esc(qText) + '</h3>' +
         '<div class="grid gap-3">' +
           choices.map(function (c) {
@@ -570,16 +608,62 @@
     });
   }
 
+  // Online mode: waiting for partner to answer the same question
+  function renderWaitingForQuestion() {
+    var pName = state.name2;
+    var myName = state.name1;
+    var qi = state.currentQ;
+    var myProgress = state.answers1.length;
+    var partnerProgress = state.partnerAnswers.length;
+
+    container.innerHTML =
+      '<div class="max-w-md mx-auto py-8 space-y-6">' +
+        // Dual progress bars
+        '<div class="space-y-2">' +
+          '<div class="flex items-center gap-2 text-xs">' +
+            '<span class="font-medium text-primary w-20 truncate">' + esc(myName) + '</span>' +
+            '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-primary h-2 rounded-full transition-all duration-300" style="width:' + (myProgress / totalQ * 100) + '%"></div></div>' +
+            '<span class="text-muted-foreground w-10 text-right">' + myProgress + '/' + totalQ + '</span>' +
+          '</div>' +
+          '<div class="flex items-center gap-2 text-xs">' +
+            '<span class="font-medium text-secondary w-20 truncate">' + esc(pName) + '</span>' +
+            '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-secondary h-2 rounded-full transition-all duration-300" style="width:' + (partnerProgress / totalQ * 100) + '%"></div></div>' +
+            '<span class="text-muted-foreground w-10 text-right">' + partnerProgress + '/' + totalQ + '</span>' +
+          '</div>' +
+        '</div>' +
+        // Waiting message
+        '<div class="text-center space-y-4 py-6">' +
+          '<div class="spinner mx-auto"></div>' +
+          '<p class="font-medium text-foreground">' + t('waitingAnswer').replace('{{name}}', esc(pName)) + '</p>' +
+          '<p class="text-sm text-muted-foreground">' + t('waitingProgress').replace('{{name}}', esc(pName)).replace('{{n}}', partnerProgress).replace('{{total}}', totalQ) + '</p>' +
+        '</div>' +
+      '</div>';
+  }
+
+  // Online mode: I finished all questions, waiting for partner to finish too
   function renderWaitingForPartner() {
     var pName = state.name2;
+    var myName = state.name1;
     var pAnswers = state.partnerAnswers || [];
     container.innerHTML =
-      '<div class="max-w-md mx-auto py-12 text-center space-y-6">' +
-        '<div class="spinner mx-auto"></div>' +
-        '<p class="font-medium">' + t('waitingAnswer').replace('{{name}}', esc(pName)) + '</p>' +
-        '<p class="text-sm text-muted-foreground">' + t('waitingProgress').replace('{{name}}', esc(pName)).replace('{{n}}', pAnswers.length).replace('{{total}}', totalQ) + '</p>' +
-        '<div class="w-full bg-muted rounded-full h-2 max-w-xs mx-auto">' +
-          '<div class="bg-secondary h-2 rounded-full transition-all" style="width:' + (pAnswers.length / totalQ * 100) + '%"></div>' +
+      '<div class="max-w-md mx-auto py-8 space-y-6">' +
+        // Dual progress bars
+        '<div class="space-y-2">' +
+          '<div class="flex items-center gap-2 text-xs">' +
+            '<span class="font-medium text-primary w-20 truncate">' + esc(myName) + '</span>' +
+            '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-primary h-2 rounded-full transition-all duration-300" style="width:100%"></div></div>' +
+            '<span class="text-muted-foreground w-10 text-right">' + totalQ + '/' + totalQ + '</span>' +
+          '</div>' +
+          '<div class="flex items-center gap-2 text-xs">' +
+            '<span class="font-medium text-secondary w-20 truncate">' + esc(pName) + '</span>' +
+            '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-secondary h-2 rounded-full transition-all duration-300" style="width:' + (pAnswers.length / totalQ * 100) + '%"></div></div>' +
+            '<span class="text-muted-foreground w-10 text-right">' + pAnswers.length + '/' + totalQ + '</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="text-center space-y-4 py-6">' +
+          '<div class="spinner mx-auto"></div>' +
+          '<p class="font-medium text-foreground">' + t('waitingAnswer').replace('{{name}}', esc(pName)) + '</p>' +
+          '<p class="text-sm text-muted-foreground">' + t('waitingProgress').replace('{{name}}', esc(pName)).replace('{{n}}', pAnswers.length).replace('{{total}}', totalQ) + '</p>' +
         '</div>' +
       '</div>';
   }
@@ -671,20 +755,33 @@
       state.currentQ++;
       render();
     } else {
-      // Online mode
+      // Online mode: simultaneous play
       state.answers1.push(choice);
-      state.currentQ++;
 
+      // Broadcast my answer
       if (channel) {
         channel.send({
           type: 'broadcast', event: 'answer',
-          payload: { playerNum: state.playerNum, answers: state.answers1.slice() }
+          payload: { playerNum: state.playerNum, questionIndex: state.answers1.length - 1, answers: state.answers1.slice() }
         });
       }
 
-      if (state.currentQ >= totalQ && state.partnerAnswers.length >= totalQ) {
-        state.screen = 'results';
+      // Check if partner has answered this same question
+      if (state.partnerAnswers.length >= state.answers1.length) {
+        // Partner already answered - both can proceed to next question
+        state.currentQ = state.answers1.length;
+        state.waitingForPartner = false;
+
+        // Check if both are completely done
+        if (state.currentQ >= totalQ && state.partnerAnswers.length >= totalQ) {
+          state.screen = 'results';
+        }
+      } else {
+        // Partner hasn't answered yet - show waiting
+        state.waitingForPartner = true;
+        state.currentQ = state.answers1.length;
       }
+
       render();
     }
   }
@@ -730,9 +827,18 @@
     channel.on('broadcast', { event: 'answer' }, function (p) {
       if (p.payload.playerNum !== state.playerNum) {
         state.partnerAnswers = p.payload.answers;
+
+        // If I was waiting for partner to answer the current question
+        if (state.waitingForPartner && state.partnerAnswers.length >= state.answers1.length) {
+          state.waitingForPartner = false;
+          state.currentQ = state.answers1.length;
+        }
+
+        // Check if both are completely done
         if (state.answers1.length >= totalQ && state.partnerAnswers.length >= totalQ) {
           state.screen = 'results';
         }
+
         render();
       }
     });
@@ -827,7 +933,7 @@
       name1: '', name2: '', currentPlayer: 1, currentQ: 0,
       answers1: [], answers2: [], partnerAnswers: [],
       questionIds: [], questionsReady: false,
-      error: null, loading: false
+      error: null, loading: false, waitingForPartner: false
     };
     questions = [];
   }
