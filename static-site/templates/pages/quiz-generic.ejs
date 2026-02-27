@@ -71,6 +71,7 @@
   function getSubText(s, sub, p) {
     return tryKeys(
       'section' + s + '.sub' + sub + 'P' + p,
+      'section' + s + '.sub' + sub + 'Text',
       'seo.section' + s + '.h3_' + sub + '_p' + p,
       'seo.s' + s + '.p' + ((sub - 1) * 2 + p),
       'seo.s' + s + 'h3_' + sub + 'Text'
@@ -131,12 +132,31 @@
   }
 
   // ── FAQ entries ────────────────────────────────────────────────
-  const faqEntries = [];
-  for (let i = 1; i <= 5; i++) {
-    // Try multiple FAQ key patterns
-    var q = tryKeys('jsonLd.faq' + i + 'Q', 'seo.faq' + i + 'Q', 'seo.faqQ' + i);
-    var a = tryKeys('jsonLd.faq' + i + 'A', 'seo.faq' + i + 'A', 'seo.faqA' + i);
-    if (q) faqEntries.push({ q, a });
+  var faqEntries = [];
+
+  // Pattern 1: Array-based FAQ: seo.faq = [{q, a}] or faq.items = [{q, a}]
+  var faqArray = t(ns + ':seo.faq', '');
+  if (!Array.isArray(faqArray)) faqArray = t(ns + ':faq.items', '');
+  if (Array.isArray(faqArray) && faqArray.length > 0) {
+    faqEntries = faqArray;
+  }
+
+  // Pattern 2: Flat numbered keys: seo.faq1Q/faq1A, jsonLd.faq1Q/faq1A
+  if (faqEntries.length === 0) {
+    for (let i = 1; i <= 6; i++) {
+      var q = tryKeys('jsonLd.faq' + i + 'Q', 'seo.faq' + i + 'Q', 'seo.faqQ' + i);
+      var a = tryKeys('jsonLd.faq' + i + 'A', 'seo.faq' + i + 'A', 'seo.faqA' + i);
+      if (q) faqEntries.push({ q, a });
+    }
+  }
+
+  // Pattern 3: Named FAQ keys: faq.q1/faq.a1 or seo.faq.q1.question/answer
+  if (faqEntries.length === 0) {
+    for (let i = 1; i <= 6; i++) {
+      var q = tryKeys('faq.q' + i, 'seo.faq.q' + i + '.question');
+      var a = tryKeys('faq.a' + i, 'seo.faq.q' + i + '.answer');
+      if (q) faqEntries.push({ q, a });
+    }
   }
 
   // ── JSON-LD ────────────────────────────────────────────────────
@@ -359,7 +379,7 @@
           if (!cTitle) continue; %>
         <div class="bg-card border border-border rounded-lg p-5">
           <h3 class="text-lg font-semibold mb-2 text-primary"><%= cTitle %></h3>
-          <p class="text-muted-foreground"><%= tryKeys('seo.card' + c + 'Text') %></p>
+          <p class="text-muted-foreground"><%- tryKeys('seo.card' + c + 'Text') %></p>
         </div>
         <% } %>
       </div>
@@ -395,7 +415,7 @@
     <%/* FAQ section */%>
     <% if (faqEntries.length > 0) { %>
     <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= tryKeys('seo.faqTitle', 'faqTitle') || 'FAQ' %></h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= tryKeys('seo.faqTitle', 'faqTitle', 'faq.title', 'seo.faq.title') || 'FAQ' %></h2>
       <div class="space-y-4">
         <% for (const faq of faqEntries) { %>
         <details class="border border-border rounded-lg">

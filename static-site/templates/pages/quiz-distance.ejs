@@ -1,2 +1,263 @@
-<% var quizType = 'distance'; var ns = 'quiz-distance'; var totalQ = 20; var sectionCount = 10; %>
-<%- include('quiz-generic', { quizType, ns, totalQ, sectionCount, t, lang, routeKey, getLocalizedUrl, canonical, JSON }) %>
+<%
+  var quizType = 'distance';
+  var ns = 'quiz-distance';
+  const quizTitle = t('quizzes:' + routeKey + '.title', 'Quiz Distance');
+  const quizDesc = t('quizzes:' + routeKey + '.metaDescription', '');
+
+  const faqItems = t(ns + ':faq.items', []);
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "Quiz",
+      "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+      "isAccessibleForFree": true,
+      "learningResourceType": "Quiz", "interactivityType": "active",
+      "about": { "@type": "Thing", "name": "long distance relationship" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "totalQuestions", "value": 100 },
+        { "@type": "PropertyValue", "name": "questionsPerSession", "value": 20 }
+      ]
+    }
+  ];
+  if (Array.isArray(faqItems) && faqItems.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqItems.map(function(f) {
+        return { "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } };
+      })
+    });
+  }
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <% const heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>
+      <span class="badge badge-primary mb-4"><%= heroBadge %></span>
+      <% } %>
+      <h1 class="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl"><%= t(ns + ':hero.title', quizTitle) %></h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Quiz Engine -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div id="quiz-engine" data-quiz="<%= quizType %>" data-lang="<%= lang %>"></div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Content -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <%/* Intro */%>
+    <% const introP1 = t(ns + ':intro.p1', ''); if (introP1) { %>
+    <div class="space-y-4 text-muted-foreground leading-relaxed mb-12">
+      <p><%- introP1 %></p>
+      <% const introP2 = t(ns + ':intro.p2', ''); if (introP2) { %><p><%- introP2 %></p><% } %>
+    </div>
+    <% } %>
+
+    <%/* Section 1: Qu'est-ce qu'une relation à distance */%>
+    <% const s1Title = t(ns + ':section1.title', ''); if (s1Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s1Title %></h2>
+      <% const s1sub1Title = t(ns + ':section1.sub1Title', ''); if (s1sub1Title) { %>
+      <div class="mt-4">
+        <h3 class="text-xl font-semibold mb-3"><%= s1sub1Title %></h3>
+        <div class="space-y-3 text-muted-foreground leading-relaxed">
+          <% const s1sub1P1 = t(ns + ':section1.sub1P1', ''); if (s1sub1P1) { %><p><%- s1sub1P1 %></p><% } %>
+          <% const s1sub1P2 = t(ns + ':section1.sub1P2', ''); if (s1sub1P2) { %><p><%- s1sub1P2 %></p><% } %>
+        </div>
+      </div>
+      <% } %>
+      <% const s1sub2Title = t(ns + ':section1.sub2Title', ''); if (s1sub2Title) { %>
+      <div class="mt-6">
+        <h3 class="text-xl font-semibold mb-3"><%= s1sub2Title %></h3>
+        <% const s1sub2Items = t(ns + ':section1.sub2Items', []); if (Array.isArray(s1sub2Items) && s1sub2Items.length > 0) { %>
+        <ul class="space-y-3 ml-4">
+          <% for (const item of s1sub2Items) { %>
+          <li class="flex items-start gap-2"><span class="text-primary font-bold mt-1">&bull;</span><span class="text-muted-foreground"><%- item %></span></li>
+          <% } %>
+        </ul>
+        <% } %>
+      </div>
+      <% } %>
+    </section>
+    <% } %>
+
+    <%/* Section 2: Statistiques et tendances */%>
+    <% const s2Title = t(ns + ':section2.title', ''); if (s2Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s2Title %></h2>
+      <% const s2p1 = t(ns + ':section2.p1', ''); if (s2p1) { %>
+      <p class="text-muted-foreground leading-relaxed mb-6"><%- s2p1 %></p>
+      <% } %>
+      <% const tableHeaders = t(ns + ':section2.tableHeaders', []); const tableRows = t(ns + ':section2.tableRows', []); %>
+      <% if (Array.isArray(tableHeaders) && Array.isArray(tableRows) && tableHeaders.length > 0) { %>
+      <div class="overflow-x-auto mb-6">
+        <table class="quiz-table">
+          <thead><tr>
+            <% for (const h of tableHeaders) { %><th><%= h %></th><% } %>
+          </tr></thead>
+          <tbody>
+            <% for (const row of tableRows) { %>
+            <tr>
+              <% for (let ci = 0; ci < row.length; ci++) { %>
+              <td class="<%= ci === 0 ? 'font-medium' : 'text-sm text-muted-foreground' %>"><%= row[ci] %></td>
+              <% } %>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+      <% } %>
+      <% const s2sub1Title = t(ns + ':section2.sub1Title', ''); if (s2sub1Title) { %>
+      <div class="mt-6">
+        <h3 class="text-xl font-semibold mb-3"><%= s2sub1Title %></h3>
+        <% const s2sub1Text = t(ns + ':section2.sub1Text', ''); if (s2sub1Text) { %>
+        <p class="text-muted-foreground leading-relaxed"><%- s2sub1Text %></p>
+        <% } %>
+      </div>
+      <% } %>
+    </section>
+    <% } %>
+
+    <%/* Sections 3-4: Items-based sections (Avantages, Défis) */%>
+    <% for (let sn = 3; sn <= 4; sn++) {
+      const secTitle = t(ns + ':section' + sn + '.title', '');
+      const secItems = t(ns + ':section' + sn + '.items', []);
+      if (!secTitle) continue; %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= secTitle %></h2>
+      <% if (Array.isArray(secItems) && secItems.length > 0) { %>
+      <div class="space-y-4">
+        <% for (const item of secItems) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= item.title %></h3>
+          <p class="text-muted-foreground"><%- item.text %></p>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+    </section>
+    <% } %>
+
+    <%/* Section 5: Testimonials */%>
+    <% const s5Title = t(ns + ':section5.title', ''); if (s5Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s5Title %></h2>
+      <div class="space-y-6">
+        <% for (let ti = 1; ti <= 3; ti++) {
+          const testimonial = t(ns + ':section5.testimonial' + ti, '');
+          if (!testimonial) continue;
+          const author = t(ns + ':section5.testimonial' + ti + 'Author', ''); %>
+        <blockquote class="border-l-4 border-primary pl-6 py-2 bg-muted/30 rounded-r-lg">
+          <p class="text-lg italic text-foreground"><%= testimonial %></p>
+          <% if (author) { %><cite class="block mt-2 text-sm text-muted-foreground not-italic"><%= author %></cite><% } %>
+        </blockquote>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+
+    <%/* Section 6: Signs (bullet list) */%>
+    <% const s6Title = t(ns + ':section6.title', ''); if (s6Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s6Title %></h2>
+      <% const signs = t(ns + ':section6.signs', []); if (Array.isArray(signs) && signs.length > 0) { %>
+      <ul class="space-y-3 ml-4">
+        <% for (const sign of signs) { %>
+        <li class="flex items-start gap-2"><span class="text-primary font-bold mt-1">&bull;</span><span class="text-muted-foreground"><%- sign %></span></li>
+        <% } %>
+      </ul>
+      <% } %>
+    </section>
+    <% } %>
+
+    <%/* Section 7: Tips (cards) */%>
+    <% const s7Title = t(ns + ':section7.title', ''); if (s7Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s7Title %></h2>
+      <% const tips = t(ns + ':section7.tips', []); if (Array.isArray(tips) && tips.length > 0) { %>
+      <div class="space-y-4">
+        <% for (const tip of tips) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= tip.title %></h3>
+          <p class="text-muted-foreground"><%- tip.text %></p>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+    </section>
+    <% } %>
+
+    <%/* Section 8: Errors (cards) */%>
+    <% const s8Title = t(ns + ':section8.title', ''); if (s8Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s8Title %></h2>
+      <% const errors = t(ns + ':section8.errors', []); if (Array.isArray(errors) && errors.length > 0) { %>
+      <div class="space-y-4">
+        <% for (const err of errors) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= err.title %></h3>
+          <p class="text-muted-foreground"><%- err.text %></p>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+    </section>
+    <% } %>
+
+    <%/* Section 9: Sub-sections */%>
+    <% const s9Title = t(ns + ':section9.title', ''); if (s9Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s9Title %></h2>
+      <% for (let si = 1; si <= 3; si++) {
+        const subTitle = t(ns + ':section9.sub' + si + 'Title', '');
+        if (!subTitle) continue;
+        const subText = t(ns + ':section9.sub' + si + 'Text', ''); %>
+      <div class="<%= si > 1 ? 'mt-6' : 'mt-4' %>">
+        <h3 class="text-xl font-semibold mb-3"><%= subTitle %></h3>
+        <% if (subText) { %><p class="text-muted-foreground leading-relaxed"><%- subText %></p><% } %>
+      </div>
+      <% } %>
+    </section>
+    <% } %>
+
+    <%/* Conclusion */%>
+    <% const concTitle = t(ns + ':conclusion.title', ''); if (concTitle) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= concTitle %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <% const concP1 = t(ns + ':conclusion.p1', ''); if (concP1) { %><p><%- concP1 %></p><% } %>
+        <% const concP2 = t(ns + ':conclusion.p2', ''); if (concP2) { %><p><%- concP2 %></p><% } %>
+      </div>
+    </section>
+    <% } %>
+
+    <%/* FAQ */%>
+    <% if (Array.isArray(faqItems) && faqItems.length > 0) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', 'FAQ') %></h2>
+      <div class="space-y-4">
+        <% for (const faq of faqItems) { %>
+        <details class="border border-border rounded-lg">
+          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= faq.q %></summary>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= faq.a %></div>
+        </details>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+
+  </div>
+</article>
+
+<script src="/js/quiz-engine-core.js" defer></script>
+<script src="/js/quiz-loader.js" defer></script>
