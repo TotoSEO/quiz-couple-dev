@@ -93,11 +93,22 @@ var QuizEngine = (function() {
     var icon = el('div', 'text-5xl mb-4', '📝');
     var title = el('h2', 'text-2xl font-bold mb-3', tg('playerSetup.readyForTest', 'Prêt pour le test ?'));
     var desc = el('p', 'text-muted-foreground mb-2', this.questions.length + ' questions');
-    var time = el('p', 'text-sm text-muted-foreground mb-8', '⏱ ' + tg('meta.duration', '5 min') + ' &bull; 🔒 Anonyme & gratuit');
+    var time = el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min') + ' &bull; 🔒 Anonyme & gratuit');
+
+    // Prénom input
+    var nameWrap = el('div', 'max-w-sm mx-auto mb-6');
+    var nameLabel = el('label', 'block text-sm font-medium mb-2', '👤 ' + tg('playerSetup.firstName', 'Prénom'));
+    var nameInput = el('input', 'input w-full text-center');
+    nameInput.type = 'text';
+    nameInput.placeholder = tg('playerSetup.enterFirstName', 'Entrez votre prénom');
+    nameInput.maxLength = 30;
+    nameWrap.appendChild(nameLabel);
+    nameWrap.appendChild(nameInput);
 
     var startLabel = this.labels.start || tg('playerSetup.startTest', tg('playerSetup.startNow', 'Commencer le test'));
     var btn = el('button', 'btn btn-cta btn-lg', esc(startLabel));
     btn.addEventListener('click', function() {
+      self.playerName = nameInput.value.trim() || '';
       self.phase = 'playing';
       self.currentQ = 0;
       self.answers = [];
@@ -109,6 +120,7 @@ var QuizEngine = (function() {
     wrap.appendChild(title);
     wrap.appendChild(desc);
     wrap.appendChild(time);
+    wrap.appendChild(nameWrap);
     wrap.appendChild(btn);
     this.container.appendChild(wrap);
   };
@@ -213,6 +225,12 @@ var QuizEngine = (function() {
     var maxScore = this.results.length > 0 ? this.results[this.results.length - 1].max : 100;
     var pct = Math.round((this.totalScore / maxScore) * 100);
 
+    // Player name greeting
+    if (this.playerName) {
+      var greeting = el('p', 'text-lg font-semibold mb-2', tg('result.bravo', 'Bravo') + ' ' + esc(this.playerName) + ' !');
+      wrap.appendChild(greeting);
+    }
+
     // Score circle
     var scoreCircle = el('div', 'quiz-score-circle mx-auto mb-4', pct + '%');
     wrap.appendChild(scoreCircle);
@@ -234,7 +252,13 @@ var QuizEngine = (function() {
 
     // Actions
     var actions = el('div', 'flex flex-col sm:flex-row gap-3 justify-center mt-8');
-    var restartBtn = el('button', 'btn btn-outline', '🔄 ' + tg('result.redoQuiz', tg('question.restart', 'Recommencer')));
+
+    // "Recommencer avec d'autres questions" reloads the page to get new random questions
+    var newQBtn = el('button', 'btn btn-cta', '🎲 ' + tg('result.restartOtherQuestions', 'Recommencer avec d\'autres questions'));
+    newQBtn.addEventListener('click', function() { location.reload(); });
+    actions.appendChild(newQBtn);
+
+    var restartBtn = el('button', 'btn btn-outline', '🔄 ' + tg('result.restartFromBeginning', tg('result.redoQuiz', 'Recommencer')));
     restartBtn.addEventListener('click', function() { self.phase = 'intro'; self.render(); });
     actions.appendChild(restartBtn);
 
@@ -456,7 +480,12 @@ var QuizEngine = (function() {
     }
 
     var actions = el('div', 'flex flex-col sm:flex-row gap-3 justify-center mt-8');
-    var restartBtn = el('button', 'btn btn-outline', '🔄 ' + tg('result.redoQuiz', tg('question.restart', 'Recommencer')));
+
+    var newQBtn = el('button', 'btn btn-cta', '🎲 ' + tg('result.restartOtherQuestions', 'Recommencer avec d\'autres questions'));
+    newQBtn.addEventListener('click', function() { location.reload(); });
+    actions.appendChild(newQBtn);
+
+    var restartBtn = el('button', 'btn btn-outline', '🔄 ' + tg('result.restartFromBeginning', tg('result.redoQuiz', 'Recommencer')));
     restartBtn.addEventListener('click', function() { self.phase = 'setup'; self.render(); });
     actions.appendChild(restartBtn);
 

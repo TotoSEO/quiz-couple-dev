@@ -15,20 +15,20 @@
   // Quiz configuration: maps quiz type to gd.json key prefix, mode, and question count
   var QUIZ_CONFIG = {
     // Solo scoring tests (points-based, single player)
-    'toxic':          { prefix: 'divorce', mode: 'solo', totalQ: 25, gdKey: 'divorce' },
-    'tester-couple':  { prefix: 'couple', mode: 'solo', totalQ: 20, gdKey: null },
-    'sain':           { prefix: 'healthy', mode: 'solo', totalQ: 20, gdKey: 'healthy' },
-    'distance':       { prefix: 'distance', mode: 'solo', totalQ: 20, gdKey: null },
-    'divorce':        { prefix: 'divorce', mode: 'solo', totalQ: 25, gdKey: 'divorce' },
-    'mariage':        { prefix: 'marriage', mode: 'solo', totalQ: 30, gdKey: 'marriage' },
-    'ado':            { prefix: 'ado', mode: 'solo', totalQ: 20, gdKey: 'ado' },
+    'toxic':          { prefix: 'divorce', mode: 'solo', totalQ: 25, gdKey: 'divorce', pool: 25 },
+    'tester-couple':  { prefix: 'couple', mode: 'solo', totalQ: 20, gdKey: 'couple', pool: 20 },
+    'sain':           { prefix: 'healthy', mode: 'solo', totalQ: 20, gdKey: 'healthy', pool: 20 },
+    'distance':       { prefix: 'distance', mode: 'solo', totalQ: 20, gdKey: 'distance', pool: 20 },
+    'divorce':        { prefix: 'divorce', mode: 'solo', totalQ: 25, gdKey: 'divorce', pool: 25 },
+    'mariage':        { prefix: 'marriage', mode: 'solo', totalQ: 30, gdKey: 'marriage', pool: 30 },
+    'ado':            { prefix: 'ado', mode: 'solo', totalQ: 20, gdKey: 'ado', pool: 80 },
     // Duo quizzes (2 players, match answers)
-    'amoureux':       { prefix: 'amoureux', mode: 'duo', totalQ: 20, gdKey: null },
-    'coquin':         { prefix: 'coquin', mode: 'duo', totalQ: 20, gdKey: null },
-    'marrant':        { prefix: 'marrant', mode: 'duo', totalQ: 20, gdKey: null },
-    'knowledge':      { prefix: 'knowledge', mode: 'duo', totalQ: 20, gdKey: null },
-    'most':           { prefix: 'most', mode: 'duo', totalQ: 20, gdKey: null },
-    'common-points':  { prefix: 'commonPoints', mode: 'duo', totalQ: 20, gdKey: null }
+    'amoureux':       { prefix: 'amoureux', mode: 'duo', totalQ: 20, gdKey: 'amoureux', pool: 30 },
+    'coquin':         { prefix: 'coquin', mode: 'duo', totalQ: 20, gdKey: 'coquin', pool: 30 },
+    'marrant':        { prefix: 'marrant', mode: 'duo', totalQ: 20, gdKey: 'marrant', pool: 30 },
+    'knowledge':      { prefix: 'knowledge', mode: 'duo', totalQ: 20, gdKey: 'knowledge', pool: 30 },
+    'most':           { prefix: 'most', mode: 'duo', totalQ: 20, gdKey: 'most', pool: 30 },
+    'common-points':  { prefix: 'commonPoints', mode: 'duo', totalQ: 20, gdKey: 'commonPoints', pool: 30 }
   };
 
   var config = QUIZ_CONFIG[quizType];
@@ -39,8 +39,10 @@
 
   // Load translations then initialize
   QuizEngine.loadTranslations(lang, function() {
-    if (config.gdKey && config.mode === 'solo') {
+    if (config.mode === 'solo' && config.gdKey) {
       initSoloFromGd(config);
+    } else if (config.mode === 'duo' && config.gdKey) {
+      initDuoQuiz(config);
     } else if (config.mode === 'duo') {
       initDuoQuiz(config);
     } else {
@@ -95,7 +97,7 @@
    */
   function parseGdResults(prefix, totalQuestions, maxOptions) {
     var results = [];
-    // Try r{N}_t pattern first (healthy, marriage)
+    // Try r{N}_t pattern first (healthy, marriage, couple, distance)
     for (var i = 1; i <= 10; i++) {
       var title = QuizEngine.tgd(prefix + '.r' + i + '_t', null);
       if (!title || title === prefix + '.r' + i + '_t') break;
@@ -136,11 +138,14 @@
    */
   function initSoloFromGd(cfg) {
     var ascending = (cfg.prefix === 'ado');
-    var questions = parseGdQuestions(cfg.prefix, cfg.totalQ + 60, ascending);
+    var questions = parseGdQuestions(cfg.prefix, cfg.pool + 10, ascending);
 
-    // For ado quiz: randomly select 20 from the pool of 80
-    if (cfg.prefix === 'ado' && questions.length > 20) {
-      questions = shuffleArray(questions).slice(0, 20);
+    // Randomly select totalQ questions from pool if pool > totalQ
+    if (questions.length > cfg.totalQ) {
+      questions = shuffleArray(questions).slice(0, cfg.totalQ);
+    } else if (questions.length > 0) {
+      // Shuffle questions order even if we use all of them
+      questions = shuffleArray(questions);
     }
 
     if (questions.length === 0) {
@@ -167,7 +172,15 @@
    * Initialize a duo quiz (2 players, match answers)
    */
   function initDuoQuiz(cfg) {
-    var questions = parseGdQuestions(cfg.prefix, cfg.totalQ + 5);
+    var questions = parseGdQuestions(cfg.prefix, cfg.pool + 10);
+
+    // Randomly select totalQ questions from pool if pool > totalQ
+    if (questions.length > cfg.totalQ) {
+      questions = shuffleArray(questions).slice(0, cfg.totalQ);
+    } else if (questions.length > 0) {
+      questions = shuffleArray(questions);
+    }
+
     if (questions.length === 0) {
       initGenericQuiz(cfg);
       return;
@@ -215,7 +228,6 @@
     btn.addEventListener('click', function() {
       wrap.innerHTML = '<div class="text-center py-8"><div class="spinner mx-auto mb-4"></div><p class="text-muted-foreground">Chargement...</p></div>';
       setTimeout(function() {
-        // Try to load questions again (in case of slow network)
         var questions = parseGdQuestions(cfg.prefix, cfg.totalQ + 5);
         if (questions.length > 0) {
           container.innerHTML = '';
@@ -239,7 +251,7 @@
   function showUnavailable(cfg) {
     container.innerHTML = '';
     var wrap = QuizEngine.el('div', 'quiz-engine animate-fade-in text-center');
-    var isDuo = cfg.mode === 'duo' || cfg.mode === 'knowledge' || cfg.mode === 'most';
+    var isDuo = cfg.mode === 'duo';
     wrap.innerHTML = '<h2 class="text-2xl font-bold mb-4">' +
       QuizEngine.esc(isDuo ? QuizEngine.tg('playerSetup.readyToPlay', 'Quiz à deux') : QuizEngine.tg('playerSetup.readyForTest', 'Quiz')) + '</h2>' +
       '<p class="text-muted-foreground mb-6">Ce quiz est en cours de migration vers cette version du site. Il sera disponible très prochainement.</p>' +
