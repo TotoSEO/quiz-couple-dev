@@ -150,6 +150,21 @@
 
   function esc(s) { return s ? String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;') : ''; }
 
+  function updateJsonLdRating(avg, total) {
+    var scripts = document.querySelectorAll('script[type="application/ld+json"]');
+    for (var i = 0; i < scripts.length; i++) {
+      try {
+        var data = JSON.parse(scripts[i].textContent);
+        if (data['@type'] === 'WebApplication' && data.aggregateRating) {
+          data.aggregateRating.ratingValue = String(avg);
+          data.aggregateRating.reviewCount = String(total);
+          scripts[i].textContent = JSON.stringify(data);
+          break;
+        }
+      } catch (e) { /* skip */ }
+    }
+  }
+
   function starsHtml(rating, size) {
     var cls = size === 'sm' ? 'w-4 h-4' : 'w-5 h-5';
     var html = '';
@@ -209,6 +224,8 @@
     if (avgEl) avgEl.textContent = avg;
     if (countEl) countEl.textContent = t('basedOn') + ' ' + total + ' ' + t('reviews');
     if (starsEl) starsEl.innerHTML = starsHtml(Math.round(parseFloat(avg) || 0), 'sm');
+    // Update JSON-LD AggregateRating with real data
+    updateJsonLdRating(avg, total);
   }
 
   // ── IP check ──
