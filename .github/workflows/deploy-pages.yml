@@ -3,6 +3,7 @@ name: Deploy static site to GitHub Pages
 on:
   push:
     branches:
+      - main
       - claude/rebuild-seo-optimization-xMQ0x
   workflow_dispatch:
 

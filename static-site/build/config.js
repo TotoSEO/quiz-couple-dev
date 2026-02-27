@@ -113,6 +113,28 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-02-21',
   },
+  {
+    internalSlug: 'avis-tinder',
+    slugs: {
+      fr: 'avis-tinder',
+      en: 'tinder-review',
+      es: 'tinder-opiniones-vale-la-pena',
+      de: 'tinder-bewertung',
+      it: 'recensione-tinder',
+    },
+    publishedAt: '2026-02-27',
+  },
+  {
+    internalSlug: 'avis-bumble',
+    slugs: {
+      fr: 'avis-bumble',
+      en: 'bumble-app-review',
+      es: 'opiniones-bumble',
+      de: 'bumble-erfahrungen',
+      it: 'recensione-bumble',
+    },
+    publishedAt: '2026-02-27',
+  },
 ];
 
 // Author data
