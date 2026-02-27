@@ -1,6 +1,7 @@
 /**
  * Universal Quiz Loader - auto-initializes quiz engine based on data attributes
  * Reads data-quiz and data-lang from #quiz-engine element
+ * Maps each quiz type to its correct engine, pool size, and mechanics
  */
 (function() {
   'use strict';
@@ -12,23 +13,39 @@
   var lang = container.dataset.lang || 'fr';
   if (!quizType) return;
 
-  // Quiz configuration: maps quiz type to gd.json key prefix, mode, and question count
+  // ─── Quiz Configuration ───────────────────────────────────
+  // Each quiz has: prefix (gd.json key), engine type, totalQ, pool size
   var QUIZ_CONFIG = {
-    // Solo scoring tests (points-based, single player)
-    'toxic':          { prefix: 'divorce', mode: 'solo', totalQ: 25, gdKey: 'divorce', pool: 25 },
-    'tester-couple':  { prefix: 'couple', mode: 'solo', totalQ: 20, gdKey: 'couple', pool: 20 },
-    'sain':           { prefix: 'healthy', mode: 'solo', totalQ: 20, gdKey: 'healthy', pool: 20 },
-    'distance':       { prefix: 'distance', mode: 'solo', totalQ: 20, gdKey: 'distance', pool: 20 },
-    'divorce':        { prefix: 'divorce', mode: 'solo', totalQ: 25, gdKey: 'divorce', pool: 25 },
-    'mariage':        { prefix: 'marriage', mode: 'solo', totalQ: 30, gdKey: 'marriage', pool: 30 },
-    'ado':            { prefix: 'ado', mode: 'solo', totalQ: 20, gdKey: 'ado', pool: 80 },
-    // Duo quizzes (2 players, match answers)
-    'amoureux':       { prefix: 'amoureux', mode: 'duo', totalQ: 20, gdKey: 'amoureux', pool: 30 },
-    'coquin':         { prefix: 'coquin', mode: 'duo', totalQ: 20, gdKey: 'coquin', pool: 30 },
-    'marrant':        { prefix: 'marrant', mode: 'duo', totalQ: 20, gdKey: 'marrant', pool: 30 },
-    'knowledge':      { prefix: 'knowledge', mode: 'duo', totalQ: 20, gdKey: 'knowledge', pool: 30 },
-    'most':           { prefix: 'most', mode: 'duo', totalQ: 20, gdKey: 'most', pool: 30 },
-    'common-points':  { prefix: 'commonPoints', mode: 'duo', totalQ: 20, gdKey: 'commonPoints', pool: 30 }
+    // ── Solo scoring (single player, points-based) ──
+    'toxic':          { prefix: 'divorce', engine: 'solo', totalQ: 25, pool: 25, quizType: 'toxic' },
+    'divorce':        { prefix: 'divorce', engine: 'solo', totalQ: 15, pool: 25, quizType: 'divorce', hasSkip: true },
+    'mariage':        { prefix: 'marriage', engine: 'solo', totalQ: 30, pool: 30, hasSkip: true, hasLocalStorage: true },
+    'ado':            { prefix: 'ado', engine: 'solo', totalQ: 20, pool: 80, ascending: true },
+
+    // ── Duo with gender (2 players + gender selection, answer matching) ──
+    'tester-couple':  { prefix: 'couple', engine: 'duo-match', totalQ: 20, pool: 20, needsGender: true },
+    'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 30, needsGender: true },
+
+    // ── Healthy quiz (2 players + gender, weighted scoring) ──
+    'sain':           { prefix: 'healthy', engine: 'healthy', totalQ: 20, pool: 20, needsGender: true },
+
+    // ── Distance quiz (2 players, alternating turns, points per option) ──
+    'distance':       { prefix: 'distance', engine: 'distance', totalQ: 20, pool: 20 },
+
+    // ── Coquin quiz (guess & reveal mechanic) ──
+    'coquin':         { prefix: 'coquin', engine: 'coquin', totalQ: 30, pool: 30 },
+
+    // ── Knowledge quiz (oral validation with ✅/❌) ──
+    'knowledge':      { prefix: 'knowledge', engine: 'knowledge', totalQ: 20, pool: 30 },
+
+    // ── Debate quiz (amoureux - 1-5 scale, together) ──
+    'amoureux':       { prefix: 'amoureux', engine: 'debate', totalQ: 20, pool: 30 },
+
+    // ── Funny quiz (marrant - discussion only, no scoring) ──
+    'marrant':        { prefix: 'marrant', engine: 'funny', totalQ: 20, pool: 30 },
+
+    // ── Most quiz ("Qui est le plus..." - 2-8 players, vote) ──
+    'most':           { prefix: 'most', engine: 'most', totalQ: 20, pool: 30 }
   };
 
   var config = QUIZ_CONFIG[quizType];
@@ -39,31 +56,62 @@
 
   // Load translations then initialize
   QuizEngine.loadTranslations(lang, function() {
-    if (config.mode === 'solo' && config.gdKey) {
-      initSoloFromGd(config);
-    } else if (config.mode === 'duo' && config.gdKey) {
-      initDuoQuiz(config);
-    } else if (config.mode === 'duo') {
-      initDuoQuiz(config);
+    var questions = parseGdQuestions(config.prefix, config.pool + 10, config.ascending);
+
+    if (questions.length === 0) {
+      showUnavailable(config);
+      return;
+    }
+
+    // Randomly select totalQ questions from pool if pool > totalQ
+    if (questions.length > config.totalQ) {
+      questions = QuizEngine.shuffleArray(questions).slice(0, config.totalQ);
     } else {
-      initGenericQuiz(config);
+      questions = QuizEngine.shuffleArray(questions);
+    }
+
+    switch (config.engine) {
+      case 'solo':
+        initSoloQuiz(config, questions);
+        break;
+      case 'duo-match':
+        initDuoMatchQuiz(config, questions);
+        break;
+      case 'healthy':
+        initHealthyQuiz(config, questions);
+        break;
+      case 'distance':
+        initDistanceQuiz(config, questions);
+        break;
+      case 'coquin':
+        initCoquinQuiz(config, questions);
+        break;
+      case 'knowledge':
+        initKnowledgeQuiz(config, questions);
+        break;
+      case 'debate':
+        initDebateQuiz(config, questions);
+        break;
+      case 'funny':
+        initFunnyQuiz(config, questions);
+        break;
+      case 'most':
+        initMostQuiz(config, questions);
+        break;
+      default:
+        showUnavailable(config);
     }
   });
 
-  /**
-   * Parse questions from gd.json data for solo scoring tests.
-   * For ado quiz: questions use ascending scores (1-4 points).
-   * For other quizzes: descending scores (first option = highest).
-   */
+  // ─── Parse questions from gd.json ─────────────────────────
   function parseGdQuestions(prefix, maxQ, ascending) {
     var questions = [];
     for (var i = 1; i <= (maxQ || 50); i++) {
       var qText = QuizEngine.tgd(prefix + '.q' + i, null);
       if (!qText || qText === prefix + '.q' + i) {
-        if (questions.length > 0) break; // Stop after first gap
-        continue; // Skip gaps at start
+        if (questions.length > 0) break;
+        continue;
       }
-
       var options = [];
       var optLetters = ['a', 'b', 'c', 'd', 'e'];
       for (var j = 0; j < optLetters.length; j++) {
@@ -72,19 +120,13 @@
           options.push({ id: optLetters[j], text: oText });
         }
       }
-
       if (options.length > 0) {
+        // Assign points based on scoring mode
         if (ascending) {
-          // Ascending: a=1, b=2, c=3, d=4
-          for (var k = 0; k < options.length; k++) {
-            options[k].points = k + 1;
-          }
+          for (var k = 0; k < options.length; k++) options[k].points = k + 1;
         } else {
-          // Descending: first option = highest
           var maxPts = options.length - 1;
-          for (var k = 0; k < options.length; k++) {
-            options[k].points = maxPts - k;
-          }
+          for (var k = 0; k < options.length; k++) options[k].points = maxPts - k;
         }
         questions.push({ id: i, text: qText, options: options });
       }
@@ -92,12 +134,10 @@
     return questions;
   }
 
-  /**
-   * Parse results from gd.json data
-   */
+  // ─── Parse results from gd.json ───────────────────────────
   function parseGdResults(prefix, totalQuestions, maxOptions) {
     var results = [];
-    // Try r{N}_t pattern first (healthy, marriage, couple, distance)
+    // Try r{N}_t pattern (healthy, marriage, couple, distance, ado)
     for (var i = 1; i <= 10; i++) {
       var title = QuizEngine.tgd(prefix + '.r' + i + '_t', null);
       if (!title || title === prefix + '.r' + i + '_t') break;
@@ -107,7 +147,6 @@
         advice: QuizEngine.tgd(prefix + '.r' + i + '_a', '')
       });
     }
-
     // Try v{N}_t pattern (divorce verdicts)
     if (results.length === 0) {
       for (var j = 1; j <= 10; j++) {
@@ -120,9 +159,7 @@
         });
       }
     }
-
     if (results.length === 0) return results;
-
     // Calculate score ranges
     var maxScore = totalQuestions * (maxOptions - 1);
     var rangeSize = Math.ceil(maxScore / results.length);
@@ -133,77 +170,133 @@
     return results;
   }
 
-  /**
-   * Initialize a solo scoring test from gd.json data
-   */
-  function initSoloFromGd(cfg) {
-    var ascending = (cfg.prefix === 'ado');
-    var questions = parseGdQuestions(cfg.prefix, cfg.pool + 10, ascending);
+  // ─── Initializers ─────────────────────────────────────────
 
-    // Randomly select totalQ questions from pool if pool > totalQ
-    if (questions.length > cfg.totalQ) {
-      questions = shuffleArray(questions).slice(0, cfg.totalQ);
-    } else if (questions.length > 0) {
-      // Shuffle questions order even if we use all of them
-      questions = shuffleArray(questions);
-    }
-
-    if (questions.length === 0) {
-      initGenericQuiz(cfg);
-      return;
-    }
-
+  function initSoloQuiz(cfg, questions) {
     var maxOpts = 0;
     for (var i = 0; i < questions.length; i++) {
       if (questions[i].options.length > maxOpts) maxOpts = questions[i].options.length;
     }
     var results = parseGdResults(cfg.prefix, questions.length, maxOpts);
-
     new QuizEngine.SoloTest({
       container: container,
       questions: questions,
       results: results,
       prefix: cfg.prefix,
+      lang: lang,
+      quizType: cfg.quizType || 'solo',
+      hasSkip: cfg.hasSkip || false,
+      hasLocalStorage: cfg.hasLocalStorage || false
+    });
+  }
+
+  function initDuoMatchQuiz(cfg, questions) {
+    var total = questions.length;
+    var results = buildDuoResults(total);
+    new QuizEngine.DuoMatchQuiz({
+      container: container,
+      questions: questions,
+      results: results,
+      prefix: cfg.prefix,
+      lang: lang,
+      needsGender: cfg.needsGender || false
+    });
+  }
+
+  function initHealthyQuiz(cfg, questions) {
+    // Healthy quiz questions come from 'couple' prefix (same as tester-couple)
+    // but uses weighted scoring. Since gd.json 'healthy' only has results,
+    // we need to load questions from 'couple' prefix
+    var healthyQuestions = parseGdQuestions('couple', 30);
+    if (healthyQuestions.length > cfg.totalQ) {
+      healthyQuestions = QuizEngine.shuffleArray(healthyQuestions).slice(0, cfg.totalQ);
+    } else {
+      healthyQuestions = QuizEngine.shuffleArray(healthyQuestions);
+    }
+
+    if (healthyQuestions.length === 0) {
+      showUnavailable(cfg);
+      return;
+    }
+
+    // Parse results from healthy prefix
+    var results = [];
+    for (var i = 1; i <= 10; i++) {
+      var title = QuizEngine.tgd('healthy.r' + i + '_t', null);
+      if (!title || title === 'healthy.r' + i + '_t') break;
+      results.push({
+        title: title,
+        description: QuizEngine.tgd('healthy.r' + i + '_d', ''),
+        advice: QuizEngine.tgd('healthy.r' + i + '_a', '')
+      });
+    }
+    // Score ranges for healthy: max total = 20 questions * 2 points * 2 players = 80
+    var maxTotal = healthyQuestions.length * 2 * 2;
+    if (results.length > 0) {
+      var rangeSize = Math.ceil(maxTotal / results.length);
+      for (var r = 0; r < results.length; r++) {
+        results[r].min = r * rangeSize;
+        results[r].max = r === results.length - 1 ? maxTotal : (r + 1) * rangeSize - 1;
+      }
+    }
+
+    new QuizEngine.HealthyQuiz({
+      container: container,
+      questions: healthyQuestions,
+      results: results,
+      prefix: 'couple',
       lang: lang
     });
   }
 
-  /**
-   * Initialize a duo quiz (2 players, match answers)
-   */
-  function initDuoQuiz(cfg) {
-    var questions = parseGdQuestions(cfg.prefix, cfg.pool + 10);
-
-    // Randomly select totalQ questions from pool if pool > totalQ
-    if (questions.length > cfg.totalQ) {
-      questions = shuffleArray(questions).slice(0, cfg.totalQ);
-    } else if (questions.length > 0) {
-      questions = shuffleArray(questions);
-    }
-
-    if (questions.length === 0) {
-      initGenericQuiz(cfg);
-      return;
-    }
-
-    // Duo results: based on match count
-    var results = [];
-    var total = questions.length;
-    var third = Math.ceil(total / 3);
-    results.push({ minScore: 0, maxScore: third - 1, min: 0, max: third - 1,
-      title: QuizEngine.tg('result.low', 'Vous avez des choses à découvrir !'),
-      description: QuizEngine.tg('result.lowDesc', 'Vous avez encore beaucoup à apprendre sur vos goûts et préférences respectifs.')
+  function initDistanceQuiz(cfg, questions) {
+    new QuizEngine.DistanceQuiz({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang
     });
-    results.push({ minScore: third, maxScore: third * 2 - 1, min: third, max: third * 2 - 1,
-      title: QuizEngine.tg('result.medium', 'Bonne compatibilité !'),
-      description: QuizEngine.tg('result.mediumDesc', 'Vous vous connaissez plutôt bien, avec quelques surprises.')
-    });
-    results.push({ minScore: third * 2, maxScore: total, min: third * 2, max: total,
-      title: QuizEngine.tg('result.high', 'Incroyable connexion !'),
-      description: QuizEngine.tg('result.highDesc', 'Vous êtes sur la même longueur d\'onde !')
-    });
+  }
 
-    new QuizEngine.DuoQuiz({
+  function initCoquinQuiz(cfg, questions) {
+    new QuizEngine.CoquinQuiz({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang
+    });
+  }
+
+  function initKnowledgeQuiz(cfg, questions) {
+    new QuizEngine.KnowledgeQuiz({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang
+    });
+  }
+
+  function initDebateQuiz(cfg, questions) {
+    // Debate results: percentage-based
+    var results = [
+      { min: 0, max: 30, minScore: 0, maxScore: 30,
+        title: QuizEngine.tg('result.low', 'De belles discussions à venir'),
+        description: QuizEngine.tg('result.lowDesc', 'Vous avez des points de vue différents. C\'est une opportunité de mieux vous comprendre !'),
+        advice: QuizEngine.tg('result.lowAdvice', 'Prenez le temps de discuter de chaque sujet qui vous a surpris.')
+      },
+      { min: 31, max: 60, minScore: 31, maxScore: 60,
+        title: QuizEngine.tg('result.medium', 'Bonne connexion !'),
+        description: QuizEngine.tg('result.mediumDesc', 'Vous êtes souvent d\'accord, avec quelques sujets à explorer.'),
+        advice: ''
+      },
+      { min: 61, max: 100, minScore: 61, maxScore: 100,
+        title: QuizEngine.tg('result.high', 'Connexion exceptionnelle !'),
+        description: QuizEngine.tg('result.highDesc', 'Vous êtes sur la même longueur d\'onde !'),
+        advice: ''
+      }
+    ];
+
+    new QuizEngine.DebateQuiz({
       container: container,
       questions: questions,
       results: results,
@@ -212,61 +305,48 @@
     });
   }
 
-  /**
-   * Generic fallback: shows quiz intro with start button
-   */
-  function initGenericQuiz(cfg) {
-    var wrap = QuizEngine.el('div', 'quiz-engine animate-fade-in text-center');
-    var title = QuizEngine.el('h2', 'text-2xl font-bold mb-4',
-      QuizEngine.tg('playerSetup.readyForTest', 'Prêt pour le quiz ?'));
-    var desc = QuizEngine.el('p', 'text-muted-foreground mb-6',
-      (cfg.totalQ || 20) + ' questions &bull; ' + QuizEngine.tg('meta.duration', '5 min'));
-
-    var btn = QuizEngine.el('button', 'btn btn-cta',
-      QuizEngine.esc(QuizEngine.tg('playerSetup.startNow', 'Commencer')));
-
-    btn.addEventListener('click', function() {
-      wrap.innerHTML = '<div class="text-center py-8"><div class="spinner mx-auto mb-4"></div><p class="text-muted-foreground">Chargement...</p></div>';
-      setTimeout(function() {
-        var questions = parseGdQuestions(cfg.prefix, cfg.totalQ + 5);
-        if (questions.length > 0) {
-          container.innerHTML = '';
-          if (cfg.mode === 'duo') {
-            initDuoQuiz(cfg);
-          } else {
-            initSoloFromGd(cfg);
-          }
-        } else {
-          showUnavailable(cfg);
-        }
-      }, 300);
+  function initFunnyQuiz(cfg, questions) {
+    new QuizEngine.FunnyQuiz({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang
     });
+  }
 
-    wrap.appendChild(title);
-    wrap.appendChild(desc);
-    wrap.appendChild(btn);
-    container.appendChild(wrap);
+  function initMostQuiz(cfg, questions) {
+    new QuizEngine.MostQuiz({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang
+    });
+  }
+
+  // ─── Helpers ──────────────────────────────────────────────
+
+  function buildDuoResults(total) {
+    var third = Math.ceil(total / 3);
+    return [
+      { minScore: 0, maxScore: third - 1, min: 0, max: third - 1,
+        title: QuizEngine.tg('result.low', 'Vous avez des choses à découvrir !'),
+        description: QuizEngine.tg('result.lowDesc', 'Vous avez encore beaucoup à apprendre sur vos goûts respectifs.') },
+      { minScore: third, maxScore: third * 2 - 1, min: third, max: third * 2 - 1,
+        title: QuizEngine.tg('result.medium', 'Bonne compatibilité !'),
+        description: QuizEngine.tg('result.mediumDesc', 'Vous vous connaissez plutôt bien, avec quelques surprises.') },
+      { minScore: third * 2, maxScore: total, min: third * 2, max: total,
+        title: QuizEngine.tg('result.high', 'Incroyable connexion !'),
+        description: QuizEngine.tg('result.highDesc', 'Vous êtes sur la même longueur d\'onde !') }
+    ];
   }
 
   function showUnavailable(cfg) {
     container.innerHTML = '';
     var wrap = QuizEngine.el('div', 'quiz-engine animate-fade-in text-center');
-    var isDuo = cfg.mode === 'duo';
     wrap.innerHTML = '<h2 class="text-2xl font-bold mb-4">' +
-      QuizEngine.esc(isDuo ? QuizEngine.tg('playerSetup.readyToPlay', 'Quiz à deux') : QuizEngine.tg('playerSetup.readyForTest', 'Quiz')) + '</h2>' +
-      '<p class="text-muted-foreground mb-6">Ce quiz est en cours de migration vers cette version du site. Il sera disponible très prochainement.</p>' +
+      QuizEngine.esc(QuizEngine.tg('playerSetup.readyForTest', 'Quiz')) + '</h2>' +
+      '<p class="text-muted-foreground mb-6">Ce quiz sera disponible très prochainement.</p>' +
       '<a href="/" class="btn btn-primary">' + QuizEngine.esc(QuizEngine.tg('question.backHome', 'Retour à l\'accueil')) + '</a>';
     container.appendChild(wrap);
-  }
-
-  function shuffleArray(arr) {
-    var shuffled = arr.slice();
-    for (var i = shuffled.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var temp = shuffled[i];
-      shuffled[i] = shuffled[j];
-      shuffled[j] = temp;
-    }
-    return shuffled;
   }
 })();

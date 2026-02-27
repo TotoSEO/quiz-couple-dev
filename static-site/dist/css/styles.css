@@ -776,6 +776,74 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* Score circle */
 .quiz-score-circle { display: inline-flex; align-items: center; justify-content: center; width: 120px; height: 120px; border-radius: 50%; border: 4px solid hsl(var(--primary)); background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.1)); font-size: 2rem; font-weight: 800; color: hsl(var(--primary)); }
+.quiz-score-sm { width: 80px; height: 80px; font-size: 1.25rem; border-width: 3px; }
+
+/* ── Quiz Setup Screens ──────────────────────────────────── */
+
+/* Setup icon (gradient circle with icon) */
+.quiz-setup-icon { width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #ec4899, #a855f7); display: flex; align-items: center; justify-content: center; color: #fff; }
+.quiz-setup-icon-coquin { background: linear-gradient(135deg, #ef4444, #f97316); }
+.quiz-setup-icon svg { width: 28px; height: 28px; }
+
+/* Setup grid (2 columns on md+) */
+.quiz-setup-grid { display: grid; gap: 1rem; }
+@media (min-width: 768px) { .quiz-setup-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* Player number circle */
+.quiz-player-number { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary))); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem; margin-bottom: 0.5rem; }
+
+/* Gender selection buttons */
+.gender-btn { flex: 1; padding: 0.5rem 1rem; border-radius: calc(var(--radius)); border: 2px solid hsl(var(--border)); background: transparent; color: hsl(var(--foreground)); font-size: 0.875rem; cursor: pointer; transition: all 200ms ease; display: flex; align-items: center; justify-content: center; gap: 0.25rem; }
+.gender-btn:hover { border-color: hsl(var(--muted-foreground) / 0.4); }
+.gender-btn-selected { font-weight: 600; transform: scale(1.03); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.gender-btn-selected.gender-btn-male { border-color: #3b82f6; background: #3b82f6; color: #fff; }
+.gender-btn-selected.gender-btn-female { border-color: #ec4899; background: #ec4899; color: #fff; }
+
+/* Gradient CTA button */
+.btn-gradient { background: linear-gradient(135deg, #ec4899, #a855f7) !important; color: #fff !important; border: none; }
+.btn-gradient:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3); }
+
+/* Player badge colors */
+.badge-pink { background: #ec4899; color: #fff; }
+.badge-blue { background: #3b82f6; color: #fff; }
+
+/* ── Knowledge Quiz: Validation buttons ──────────────────── */
+.quiz-validate-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; border-radius: calc(var(--radius) + 4px); border: 2px solid; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 200ms ease; }
+.quiz-validate-correct { border-color: #22c55e; color: #22c55e; background: rgba(34, 197, 94, 0.08); }
+.quiz-validate-correct:hover { background: #22c55e; color: #fff; transform: scale(1.05); }
+.quiz-validate-correct svg { width: 24px; height: 24px; }
+.quiz-validate-wrong { border-color: #ef4444; color: #ef4444; background: rgba(239, 68, 68, 0.08); }
+.quiz-validate-wrong:hover { background: #ef4444; color: #fff; transform: scale(1.05); }
+.quiz-validate-wrong svg { width: 24px; height: 24px; }
+
+/* ── Debate Quiz: Scale option ───────────────────────────── */
+.quiz-scale-option { display: flex !important; align-items: center; gap: 1rem; }
+.quiz-scale-number { width: 32px; height: 32px; border-radius: 50%; background: hsl(var(--primary) / 0.15); color: hsl(var(--primary)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem; flex-shrink: 0; }
+.quiz-scale-option.selected .quiz-scale-number { background: hsl(var(--primary)); color: #fff; }
+
+/* ── Funny Quiz: Display-only option ─────────────────────── */
+.quiz-option-display { padding: 0.75rem 1rem; border-radius: calc(var(--radius)); background: hsl(var(--muted) / 0.5); color: hsl(var(--foreground)); font-size: 0.9rem; text-align: center; }
+
+/* ── Most Quiz: Player grid & buttons ────────────────────── */
+.quiz-most-players-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+@media (min-width: 640px) { .quiz-most-players-grid { grid-template-columns: repeat(3, 1fr); } }
+.quiz-most-player-btn { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1rem; border-radius: calc(var(--radius) + 4px); border: 2px solid hsl(var(--border)); background: hsl(var(--card) / 0.8); color: hsl(var(--foreground)); font-size: 0.9rem; cursor: pointer; transition: all 200ms ease; }
+.quiz-most-player-btn:hover { border-color: hsl(var(--primary) / 0.6); background: hsl(var(--primary) / 0.08); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.quiz-most-player-btn.selected { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.15); box-shadow: 0 0 0 3px hsl(var(--primary) / 0.2); }
+.quiz-most-nobody-btn { border-style: dashed; opacity: 0.7; }
+
+/* Player letter circle (small, for Most quiz) */
+.quiz-player-letter { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary))); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+.quiz-player-letter-sm { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary))); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.75rem; flex-shrink: 0; }
+
+/* Add player button (Most quiz) */
+.quiz-add-player-btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.75rem; border-radius: calc(var(--radius) + 4px); border: 2px dashed hsl(var(--border)); background: transparent; color: hsl(var(--muted-foreground)); font-size: 0.875rem; cursor: pointer; transition: all 200ms ease; }
+.quiz-add-player-btn:hover { border-color: hsl(var(--primary)); color: hsl(var(--primary)); background: hsl(var(--primary) / 0.05); }
+.quiz-add-player-btn svg { width: 18px; height: 18px; }
+
+/* Icon button (remove player) */
+.btn-icon { padding: 0.5rem; border: none; background: transparent; cursor: pointer; border-radius: 50%; transition: all 200ms ease; }
+.btn-icon:hover { background: hsl(var(--destructive) / 0.1); }
 
 /* ── Additional utils ─────────────────────────────────────── */
 
