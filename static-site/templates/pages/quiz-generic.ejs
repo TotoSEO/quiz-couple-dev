@@ -170,16 +170,16 @@
   };
   const gdPrefix = gdPrefixMap[quizType] || quizType;
 
-  // Build hasPart with actual quiz questions from gd.json
+  // Build hasPart with actual quiz questions from gd.json using tgd() for proper translations
   const hasPart = [];
   const optionLetters = ['a', 'b', 'c', 'd', 'e'];
   for (let qi = 1; qi <= (totalQ + 20); qi++) {
-    const qText = t('gd:' + gdPrefix + '.q' + qi, '');
+    const qText = tgd(gdPrefix + '.q' + qi, '');
     if (!qText || qText === gdPrefix + '.q' + qi) break;
     const questionObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
     const answers = [];
     for (let oi = 0; oi < optionLetters.length; oi++) {
-      const optText = t('gd:' + gdPrefix + '.q' + qi + optionLetters[oi], '');
+      const optText = tgd(gdPrefix + '.q' + qi + optionLetters[oi], '');
       if (!optText || optText === gdPrefix + '.q' + qi + optionLetters[oi]) break;
       answers.push({ "@type": "Answer", "position": oi + 1, "text": optText });
     }

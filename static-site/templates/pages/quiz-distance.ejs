@@ -6,16 +6,16 @@
 
   const faqItems = t(ns + ':faq.items', []);
 
-  // Build hasPart with actual quiz questions from gd.json
+  // Build hasPart with actual quiz questions using tgd() for proper translations
   const hasPart = [];
   const optLetters = ['a', 'b', 'c', 'd', 'e'];
   for (let qi = 1; qi <= 25; qi++) {
-    const qText = t('gd:distance.q' + qi, '');
+    const qText = tgd('distance.q' + qi, '');
     if (!qText || qText === 'distance.q' + qi) break;
     const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
     const ans = [];
     for (let oi = 0; oi < optLetters.length; oi++) {
-      const oText = t('gd:distance.q' + qi + optLetters[oi], '');
+      const oText = tgd('distance.q' + qi + optLetters[oi], '');
       if (!oText || oText === 'distance.q' + qi + optLetters[oi]) break;
       ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
     }

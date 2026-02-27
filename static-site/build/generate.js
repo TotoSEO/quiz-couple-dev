@@ -14,7 +14,7 @@ import {
   getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
 } from './config.js';
-import { createT, loadTranslations } from './i18n.js';
+import { createT, createTgd, loadTranslations } from './i18n.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TEMPLATES_DIR = path.resolve(__dirname, '../templates');
@@ -64,6 +64,7 @@ async function generatePage(routeKey, lang) {
   }
 
   const t = createT(lang);
+  const tgd = createTgd(lang);
   const translations = loadTranslations(lang);
   const alternates = getRouteAlternates(routeKey);
   const canonical = getLocalizedUrl(routeKey, lang);
@@ -243,6 +244,7 @@ async function generatePage(routeKey, lang) {
     languages: LANGUAGES,
     // Translation function
     t,
+    tgd,
     translations,
     // Helpers
     getLocalizedUrl,

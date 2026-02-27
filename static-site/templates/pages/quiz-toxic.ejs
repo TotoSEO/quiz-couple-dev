@@ -4,16 +4,16 @@
   const quizTitle = t('quizzes:testToxic.title', 'Test Couple Toxique');
   const quizDesc = t('quizzes:testToxic.metaDescription', '');
 
-  // Build hasPart with actual quiz questions from gd.json
+  // Build hasPart with actual quiz questions using tgd() for proper translations
   const hasPart = [];
   const optLetters = ['a', 'b', 'c', 'd', 'e'];
   for (let qi = 1; qi <= 30; qi++) {
-    const qText = t('gd:divorce.q' + qi, '');
+    const qText = tgd('divorce.q' + qi, '');
     if (!qText || qText === 'divorce.q' + qi) break;
     const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
     const ans = [];
     for (let oi = 0; oi < optLetters.length; oi++) {
-      const oText = t('gd:divorce.q' + qi + optLetters[oi], '');
+      const oText = tgd('divorce.q' + qi + optLetters[oi], '');
       if (!oText || oText === 'divorce.q' + qi + optLetters[oi]) break;
       ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
     }

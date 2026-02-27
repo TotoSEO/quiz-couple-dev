@@ -3,16 +3,16 @@
   const quizTitle = t('quizzes:quizAdo.title', 'Quiz Couple Ado');
   const quizDesc = t('quizzes:quizAdo.metaDescription', '');
 
-  // Build hasPart with actual quiz questions from gd.json
+  // Build hasPart with actual quiz questions using tgd() for proper translations
   const hasPart = [];
   const optLetters = ['a', 'b', 'c', 'd', 'e'];
   for (let qi = 1; qi <= 100; qi++) {
-    const qText = t('gd:ado.q' + qi, '');
+    const qText = tgd('ado.q' + qi, '');
     if (!qText || qText === 'ado.q' + qi) break;
     const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
     const ans = [];
     for (let oi = 0; oi < optLetters.length; oi++) {
-      const oText = t('gd:ado.q' + qi + optLetters[oi], '');
+      const oText = tgd('ado.q' + qi + optLetters[oi], '');
       if (!oText || oText === 'ado.q' + qi + optLetters[oi]) break;
       ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
     }
