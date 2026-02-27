@@ -128,7 +128,7 @@
         <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
         <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.testsDesc', '') %></p>
       </div>
-      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-5xl mx-auto">
+      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
         <% for (let ti = 0; ti < tests.length; ti++) { const item = tests[ti]; %>
         <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
           <div class="homepage-quiz-card-inner">
@@ -154,7 +154,7 @@
         <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
         <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.quizzesDesc', '') %></p>
       </div>
-      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 max-w-6xl mx-auto">
+      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
         <% for (let qi = 0; qi < quizzes.length; qi++) { const item = quizzes[qi]; %>
         <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
           <div class="homepage-quiz-card-inner">
