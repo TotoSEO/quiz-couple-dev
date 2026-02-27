@@ -8,6 +8,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import ejs from 'ejs';
 import { minify } from 'html-minifier-terser';
+import CleanCSS from 'clean-css';
 import {
   BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, AUTHORS,
@@ -418,14 +419,25 @@ function copyCss() {
   const destDir = path.join(DIST_DIR, 'css');
   ensureDir(destDir);
 
+  const cleanCss = new CleanCSS({ level: 2 });
+
   if (fs.existsSync(cssDir)) {
     for (const file of fs.readdirSync(cssDir)) {
       if (file.endsWith('.css')) {
-        fs.copyFileSync(path.join(cssDir, file), path.join(destDir, file));
+        const src = fs.readFileSync(path.join(cssDir, file), 'utf-8');
+        const result = cleanCss.minify(src);
+        if (result.errors && result.errors.length > 0) {
+          console.warn(`[css] Minify errors for ${file}:`, result.errors);
+          fs.copyFileSync(path.join(cssDir, file), path.join(destDir, file));
+        } else {
+          const savings = ((1 - result.styles.length / src.length) * 100).toFixed(0);
+          fs.writeFileSync(path.join(destDir, file), result.styles, 'utf-8');
+          console.log(`[css] ${file}: ${(src.length / 1024).toFixed(1)}KB → ${(result.styles.length / 1024).toFixed(1)}KB (${savings}% smaller)`);
+        }
       }
     }
   }
-  console.log('[css] CSS files copied to dist/css/');
+  console.log('[css] CSS files minified to dist/css/');
 }
 
 // ── JS copy ─────────────────────────────────────────────────────────────
@@ -598,6 +610,85 @@ async function generateBlogArticle(articleMeta, lang) {
   }
 }
 
+// ── 404 page generation ──────────────────────────────────────────────────
+
+async function generate404Pages() {
+  console.log('\n[404] Generating 404 pages...');
+  // Generate a 404 page per language; root 404.html uses FR (default)
+  for (const lang of LANGUAGES) {
+    const t = createT(lang);
+    const tgd = createTgd(lang);
+    const translations = loadTranslations(lang);
+
+    const title404 = {
+      fr: 'Page introuvable - Quiz Couple',
+      en: 'Page not found - Quiz Couple',
+      es: 'Página no encontrada - Quiz Couple',
+      de: 'Seite nicht gefunden - Quiz Couple',
+      it: 'Pagina non trovata - Quiz Couple',
+    };
+    const desc404 = {
+      fr: 'La page que vous cherchez n\'existe pas.',
+      en: 'The page you\'re looking for doesn\'t exist.',
+      es: 'La página que buscas no existe.',
+      de: 'Die Seite, die du suchst, existiert nicht.',
+      it: 'La pagina che cerchi non esiste.',
+    };
+
+    const canonical = lang === 'fr' ? `${BASE_URL}/` : `${BASE_URL}/${lang}/`;
+    const alternates = LANGUAGES.map(l => ({
+      hreflang: l,
+      href: l === 'fr' ? `${BASE_URL}/` : `${BASE_URL}/${l}/`,
+    }));
+    alternates.push({ hreflang: 'x-default', href: `${BASE_URL}/` });
+
+    const data = {
+      lang,
+      locale: LOCALES[lang],
+      baseUrl: BASE_URL,
+      gaId: GA_ID,
+      supabaseUrl: SUPABASE_URL,
+      supabaseKey: SUPABASE_ANON_KEY,
+      title: title404[lang] || title404.fr,
+      rawTitle: title404[lang] || title404.fr,
+      description: desc404[lang] || desc404.fr,
+      rawDescription: desc404[lang] || desc404.fr,
+      canonical,
+      alternates,
+      ogImage: `${BASE_URL}/og-image.webp`,
+      routeKey: '404',
+      pagePath: '/404',
+      routeSlugs: ROUTE_SLUGS,
+      languages: LANGUAGES,
+      t,
+      tgd,
+      translations,
+      getLocalizedUrl,
+      getLocalizedPath,
+      escapeHtml,
+      JSON,
+      jsonLdHtml: '',
+    };
+
+    try {
+      const pageHtml = await renderTemplate('pages/404', data);
+      const fullHtml = await renderTemplate('base', { ...data, content: pageHtml });
+      const minified = await minifyHtml(fullHtml);
+
+      // Root 404.html (FR) + language-specific ones
+      if (lang === 'fr') {
+        fs.writeFileSync(path.join(DIST_DIR, '404.html'), minified, 'utf-8');
+      }
+      const langDir = lang === 'fr' ? DIST_DIR : path.join(DIST_DIR, lang);
+      ensureDir(langDir);
+      fs.writeFileSync(path.join(langDir, '404.html'), minified, 'utf-8');
+    } catch (e) {
+      console.error(`[404] Error generating 404 (${lang}): ${e.message}`);
+    }
+  }
+  console.log('[404] 404 pages generated for all languages');
+}
+
 // ── Main ────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -649,6 +740,9 @@ async function main() {
       }
     }
   }
+
+  // Generate 404 pages
+  await generate404Pages();
 
   // Summary
   const success = results.filter(r => r.success).length;
