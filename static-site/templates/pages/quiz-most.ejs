@@ -1,2 +1,153 @@
-<% var quizType = 'most'; var ns = 'quiz-most'; var totalQ = 20; var sectionCount = 10; %>
-<%- include('quiz-generic', { quizType, ns, totalQ, sectionCount, t, lang, routeKey, getLocalizedUrl, canonical, JSON }) %>
+<%
+  var quizType = 'most';
+  var ns = 'quiz-most';
+  const quizTitle = t('quizzes:quizMost.title', 'Qui est le plus ?');
+  const quizDesc = t('quizzes:quizMost.metaDescription', '');
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "Quiz",
+      "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+      "isAccessibleForFree": true,
+      "learningResourceType": "Quiz", "interactivityType": "active",
+      "about": { "@type": "Thing", "name": "who is most likely quiz" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "totalQuestions", "value": 240 },
+        { "@type": "PropertyValue", "name": "questionsPerSession", "value": 20 },
+        { "@type": "PropertyValue", "name": "players", "value": "2-8" }
+      ]
+    }
+  ];
+  const faqQ1 = t(ns + ':faq.q1', '');
+  const faqEntries = [];
+  for (let i = 1; i <= 6; i++) {
+    var q = t(ns + ':faq.q' + i, '');
+    var a = t(ns + ':faq.a' + i, '');
+    if (q) faqEntries.push({ q, a });
+  }
+  if (faqEntries.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqEntries.map(function(f) {
+        return { "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } };
+      })
+    });
+  }
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl"><%= t(ns + ':hero.title', quizTitle) %></h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%= t(ns + ':hero.description', '') %> <strong><%= t(ns + ':hero.descriptionBold', '') %></strong> <%= t(ns + ':hero.descriptionEnd', '') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Quiz Engine -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div id="quiz-engine" data-quiz="most" data-lang="<%= lang %>"></div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Content -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <!-- How to Play -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':howToPlay.title', '') %></h2>
+      <div class="space-y-4">
+        <% for (let i = 1; i <= 3; i++) { const sTitle = t(ns + ':howToPlay.step' + i + 'Title', ''); if (sTitle) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= sTitle %></h3>
+          <p class="text-muted-foreground"><%= t(ns + ':howToPlay.step' + i + 'Text', '') %></p>
+        </div>
+        <% } } %>
+      </div>
+    </section>
+
+    <!-- Why Popular -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':whyPopular.title', '') %></h2>
+      <div class="space-y-4">
+        <% for (let i = 1; i <= 3; i++) { const iTitle = t(ns + ':whyPopular.item' + i + 'Title', ''); if (iTitle) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= iTitle %></h3>
+          <p class="text-muted-foreground"><%- t(ns + ':whyPopular.item' + i + 'Text', '') %></p>
+        </div>
+        <% } } %>
+      </div>
+    </section>
+
+    <!-- Examples -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t(ns + ':examples.title', '') %></h2>
+      <% const exSub = t(ns + ':examples.subtitle', ''); if (exSub) { %>
+      <p class="text-muted-foreground leading-relaxed mb-6"><%= exSub %></p>
+      <% } %>
+      <div class="space-y-6">
+        <% const exSections = ['classic', 'fun', 'intimate'];
+        for (const key of exSections) {
+          const secTitle = t(ns + ':examples.' + key + 'Title', '');
+          const secQuestions = t(ns + ':examples.' + key + 'Questions', []);
+          if (secTitle && Array.isArray(secQuestions) && secQuestions.length > 0) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-3"><%= secTitle %></h3>
+          <ul class="space-y-2 ml-4 list-disc text-muted-foreground">
+            <% for (const q of secQuestions) { %>
+            <li><%= q %></li>
+            <% } %>
+          </ul>
+        </div>
+        <% } } %>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':tips.title', '') %></h2>
+      <div class="space-y-4">
+        <% for (let i = 1; i <= 3; i++) { const tTitle = t(ns + ':tips.tip' + i + 'Title', ''); if (tTitle) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= tTitle %></h3>
+          <p class="text-muted-foreground"><%= t(ns + ':tips.tip' + i + 'Text', '') %></p>
+        </div>
+        <% } } %>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mb-16 text-center">
+      <div class="glass-card-strong rounded-2xl p-8">
+        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':cta.title', '') %></h2>
+        <p class="text-muted-foreground mb-6"><%= t(ns + ':cta.text', '') %></p>
+        <a href="#quiz-engine" class="btn btn-cta"><%= t(ns + ':cta.button', t('common:buttons.startQuiz', 'Commencer le quiz')) %></a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <% if (faqEntries.length > 0) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', 'FAQ') %></h2>
+      <div class="space-y-4">
+        <% for (const faq of faqEntries) { %>
+        <details class="border border-border rounded-lg">
+          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= faq.q %></summary>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= faq.a %></div>
+        </details>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+
+  </div>
+</article>
+
+<script src="/js/quiz-engine-core.js" defer></script>
+<script src="/js/quiz-loader.js" defer></script>

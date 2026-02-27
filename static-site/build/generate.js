@@ -191,9 +191,9 @@ async function generatePage(routeKey, lang) {
     `<script type="application/ld+json">${JSON.stringify(item)}</script>`
   ).join('\n  ');
 
-  // For blog listing page, load all article summaries
+  // For blog listing and home page, load article summaries
   let blogArticlesList = [];
-  if (routeKey === 'blog') {
+  if (routeKey === 'blog' || routeKey === 'home') {
     for (const articleMeta of BLOG_ARTICLES) {
       const localizedSlug = articleMeta.slugs[lang] || articleMeta.internalSlug;
       const tsPath = path.resolve(__dirname, '../../data/blog', lang, `${articleMeta.internalSlug}.ts`);
@@ -504,21 +504,36 @@ async function generateBlogArticle(articleMeta, lang) {
         { '@type': 'ListItem', position: 3, name: article.title },
       ],
     },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: article.metaTitle || article.title,
-      description: article.metaDescription || article.excerpt,
-      image: article.featuredImage ? `${BASE_URL}${article.featuredImage}` : `${BASE_URL}/og-image.webp`,
-      datePublished: article.publishedAt,
-      author: { '@type': 'Person', name: authorData.name || 'Quiz Couple' },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Quiz Couple',
-        logo: { '@type': 'ImageObject', url: `${BASE_URL}/apple-touch-icon.png` },
-      },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
-    },
+    (() => {
+      // Compute word count from all article text
+      let text = (article.introduction || '') + ' ' + (article.sections || []).map(s =>
+        (s.content || '') + ' ' + (s.subsections || []).map(sub => sub.content || '').join(' ')
+      ).join(' ');
+      const wc = text.replace(/<[^>]+>/g, '').split(/\s+/).filter(Boolean).length;
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: article.metaTitle || article.title,
+        description: article.metaDescription || article.excerpt,
+        image: article.featuredImage ? `${BASE_URL}${article.featuredImage}` : `${BASE_URL}/og-image.webp`,
+        datePublished: article.publishedAt,
+        dateModified: article.modifiedAt || article.publishedAt,
+        inLanguage: lang,
+        wordCount: wc,
+        author: {
+          '@type': 'Person',
+          name: authorData.name || 'Quiz Couple',
+          url: BASE_URL,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Quiz Couple',
+          url: BASE_URL,
+          logo: { '@type': 'ImageObject', url: `${BASE_URL}/apple-touch-icon.png`, width: 180, height: 180 },
+        },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+      };
+    })(),
   ];
 
   const jsonLdHtml = jsonLdItems.map(item =>
@@ -542,6 +557,10 @@ async function generateBlogArticle(articleMeta, lang) {
     canonical,
     alternates: articleAlternates,
     ogImage: article.featuredImage ? `${BASE_URL}${article.featuredImage}` : `${BASE_URL}/og-image.webp`,
+    ogType: 'article',
+    articlePublishedTime: article.publishedAt,
+    articleModifiedTime: article.modifiedAt || article.publishedAt,
+    articleAuthor: authorData.name || 'Quiz Couple',
     routeKey: 'blog',
     pagePath,
     routeSlugs: ROUTE_SLUGS,

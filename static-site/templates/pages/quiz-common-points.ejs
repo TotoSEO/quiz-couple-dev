@@ -1,2 +1,190 @@
-<% var quizType = 'common-points'; var ns = 'quiz-common-points'; var totalQ = 20; var sectionCount = 10; %>
-<%- include('quiz-generic', { quizType, ns, totalQ, sectionCount, t, lang, routeKey, getLocalizedUrl, canonical, JSON }) %>
+<%
+  var quizType = 'common-points';
+  var ns = 'quiz-common-points';
+  const quizTitle = t('quizzes:' + routeKey + '.title', 'Test Points Communs');
+  const quizDesc = t('quizzes:' + routeKey + '.metaDescription', '');
+
+  const faqItems = t(ns + ':seo.faq', []);
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "Quiz",
+      "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+      "isAccessibleForFree": true,
+      "learningResourceType": "Quiz", "interactivityType": "active",
+      "about": { "@type": "Thing", "name": "couple compatibility test" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "totalQuestions", "value": 200 },
+        { "@type": "PropertyValue", "name": "questionsPerSession", "value": 20 }
+      ]
+    }
+  ];
+  if (Array.isArray(faqItems) && faqItems.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqItems.map(function(f) {
+        return { "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } };
+      })
+    });
+  }
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <% const heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>
+      <span class="badge badge-primary mb-4"><%= heroBadge %></span>
+      <% } %>
+      <h1 class="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl"><%= t(ns + ':hero.title', quizTitle) %></h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Quiz Engine -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div id="quiz-engine" data-quiz="<%= quizType %>" data-lang="<%= lang %>"></div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Content -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <% const intro = t(ns + ':seo.intro', ''); if (intro) { %>
+    <p class="text-lg text-muted-foreground leading-relaxed mb-12"><%- intro %></p>
+    <% } %>
+
+    <%/* Section 1: Pourquoi les points communs comptent */%>
+    <% const s1Title = t(ns + ':seo.s1.title', ''); if (s1Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s1Title %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <% const s1p1 = t(ns + ':seo.s1.p1', ''); if (s1p1) { %><p><%- s1p1 %></p><% } %>
+        <% const s1p2 = t(ns + ':seo.s1.p2', ''); if (s1p2) { %><p><%- s1p2 %></p><% } %>
+      </div>
+    </section>
+    <% } %>
+
+    <%/* Section 2: À quoi sert un test de points communs */%>
+    <% const s2Title = t(ns + ':seo.s2.title', ''); if (s2Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s2Title %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <% const s2p1 = t(ns + ':seo.s2.p1', ''); if (s2p1) { %><p><%- s2p1 %></p><% } %>
+        <% const s2p2 = t(ns + ':seo.s2.p2', ''); if (s2p2) { %><p><%- s2p2 %></p><% } %>
+      </div>
+    </section>
+    <% } %>
+
+    <%/* Section 3: Comment fonctionne le test (steps) */%>
+    <% const s3Title = t(ns + ':seo.s3.title', ''); const s3Steps = t(ns + ':seo.s3.steps', []); if (s3Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s3Title %></h2>
+      <% if (Array.isArray(s3Steps) && s3Steps.length > 0) { %>
+      <div class="space-y-4">
+        <% for (let i = 0; i < s3Steps.length; i++) { const step = s3Steps[i]; %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= (i + 1) + '. ' + step.title %></h3>
+          <p class="text-muted-foreground"><%= step.desc %></p>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+    </section>
+    <% } %>
+
+    <%/* Section 4: 200 questions (categories) */%>
+    <% const s4Title = t(ns + ':seo.s4.title', ''); if (s4Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s4Title %></h2>
+      <% const s4p1 = t(ns + ':seo.s4.p1', ''); if (s4p1) { %>
+      <p class="text-muted-foreground leading-relaxed mb-6"><%- s4p1 %></p>
+      <% } %>
+      <% const categories = t(ns + ':seo.s4.categories', []); if (Array.isArray(categories) && categories.length > 0) { %>
+      <div class="space-y-4">
+        <% for (const cat of categories) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= cat.title %></h3>
+          <p class="text-muted-foreground"><%= cat.desc %></p>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+    </section>
+    <% } %>
+
+    <%/* Section 5: Comment interpréter les réponses */%>
+    <% const s5Title = t(ns + ':seo.s5.title', ''); if (s5Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s5Title %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <% const s5p1 = t(ns + ':seo.s5.p1', ''); if (s5p1) { %><p><%- s5p1 %></p><% } %>
+        <% const s5p2 = t(ns + ':seo.s5.p2', ''); if (s5p2) { %><p><%- s5p2 %></p><% } %>
+      </div>
+    </section>
+    <% } %>
+
+    <%/* Section 6: Faut-il beaucoup de points communs */%>
+    <% const s6Title = t(ns + ':seo.s6.title', ''); if (s6Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s6Title %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <% const s6p1 = t(ns + ':seo.s6.p1', ''); if (s6p1) { %><p><%- s6p1 %></p><% } %>
+        <% const s6p2 = t(ns + ':seo.s6.p2', ''); if (s6p2) { %><p><%- s6p2 %></p><% } %>
+      </div>
+    </section>
+    <% } %>
+
+    <%/* Section 7: Quand faire le test (items list) */%>
+    <% const s7Title = t(ns + ':seo.s7.title', ''); if (s7Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s7Title %></h2>
+      <% const s7p1 = t(ns + ':seo.s7.p1', ''); if (s7p1) { %>
+      <p class="text-muted-foreground leading-relaxed mb-4"><%- s7p1 %></p>
+      <% } %>
+      <% const items = t(ns + ':seo.s7.items', []); if (Array.isArray(items) && items.length > 0) { %>
+      <ul class="space-y-3 ml-4">
+        <% for (const item of items) { %>
+        <li class="flex items-start gap-2"><span class="text-primary font-bold mt-1">&bull;</span><span class="text-muted-foreground"><%- item %></span></li>
+        <% } %>
+      </ul>
+      <% } %>
+    </section>
+    <% } %>
+
+    <%/* CTA */%>
+    <% const ctaTitle = t(ns + ':seo.ctaTitle', ''); if (ctaTitle) { %>
+    <section class="mb-16 text-center">
+      <div class="glass-card-strong rounded-2xl p-8">
+        <h2 class="text-2xl font-bold mb-4"><%= ctaTitle %></h2>
+        <p class="text-muted-foreground mb-6"><%= t(ns + ':seo.ctaDesc', '') %></p>
+        <a href="#quiz-engine" class="btn btn-cta"><%= t('common:buttons.startQuiz', 'Commencer le test') %></a>
+      </div>
+    </section>
+    <% } %>
+
+    <%/* FAQ */%>
+    <% if (Array.isArray(faqItems) && faqItems.length > 0) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.faqTitle', 'FAQ') %></h2>
+      <div class="space-y-4">
+        <% for (const faq of faqItems) { %>
+        <details class="border border-border rounded-lg">
+          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= faq.q %></summary>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= faq.a %></div>
+        </details>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+
+  </div>
+</article>
+
+<script src="/js/quiz-engine-core.js" defer></script>
+<script src="/js/quiz-loader.js" defer></script>

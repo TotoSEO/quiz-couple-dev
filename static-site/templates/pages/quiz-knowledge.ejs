@@ -1,2 +1,182 @@
-<% var quizType = 'knowledge'; var ns = 'quiz-knowledge'; var totalQ = 20; var sectionCount = 10; %>
-<%- include('quiz-generic', { quizType, ns, totalQ, sectionCount, t, lang, routeKey, getLocalizedUrl, canonical, JSON }) %>
+<%
+  var quizType = 'knowledge';
+  var ns = 'quiz-knowledge';
+  const quizTitle = t('quizzes:quizKnowledge.title', 'Qui connait le mieux ?');
+  const quizDesc = t('quizzes:quizKnowledge.metaDescription', '');
+
+  const faqItems = t(ns + ':faq.items', []);
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "Quiz",
+      "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+      "isAccessibleForFree": true,
+      "learningResourceType": "Quiz", "interactivityType": "active",
+      "about": { "@type": "Thing", "name": "couple knowledge quiz" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "totalQuestions", "value": 100 },
+        { "@type": "PropertyValue", "name": "questionsPerSession", "value": 20 }
+      ]
+    }
+  ];
+  if (Array.isArray(faqItems) && faqItems.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqItems.map(function(f) {
+        return { "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } };
+      })
+    });
+  }
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="badge badge-primary mb-4"><%= t(ns + ':hero.badge', '') %></span>
+      <h1 class="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl"><%= t(ns + ':hero.title1', '') %> <%= t(ns + ':hero.title2', '') %></h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%= t(ns + ':hero.description', '') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Quiz Engine -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div id="quiz-engine" data-quiz="knowledge" data-lang="<%= lang %>"></div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Content -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <% const howSteps = t(ns + ':howItWorks.steps', []); if (Array.isArray(howSteps) && howSteps.length > 0) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':howItWorks.title', '') %></h2>
+      <div class="space-y-4">
+        <% for (const step of howSteps) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= step.title %></h3>
+          <p class="text-muted-foreground"><%= step.desc %></p>
+        </div>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':whatIs.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':whatIs.p1', '') %></p>
+        <p><%- t(ns + ':whatIs.p2', '') %></p>
+      </div>
+      <% const features = t(ns + ':whatIs.features', []); if (Array.isArray(features) && features.length > 0) { %>
+      <div class="space-y-4 mt-6">
+        <% for (const feat of features) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= feat.title %></h3>
+          <p class="text-muted-foreground"><%= feat.desc %></p>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+    </section>
+
+    <% const benefits = t(ns + ':why.benefits', []); %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t(ns + ':why.title', '') %></h2>
+      <% const whySub = t(ns + ':why.subtitle', ''); if (whySub) { %>
+      <p class="text-muted-foreground leading-relaxed mb-6"><%= whySub %></p>
+      <% } %>
+      <% if (Array.isArray(benefits) && benefits.length > 0) { %>
+      <div class="space-y-4">
+        <% for (const b of benefits) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= b.title %></h3>
+          <p class="text-muted-foreground"><%= b.desc %></p>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+    </section>
+
+    <% const categories = t(ns + ':examples.categories', []); %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t(ns + ':examples.title', '') %></h2>
+      <% const exSub = t(ns + ':examples.subtitle', ''); if (exSub) { %>
+      <p class="text-muted-foreground leading-relaxed mb-6"><%= exSub %></p>
+      <% } %>
+      <% if (Array.isArray(categories) && categories.length > 0) { %>
+      <div class="space-y-6">
+        <% for (const cat of categories) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-3"><%= cat.emoji %> <%= cat.title %></h3>
+          <ul class="space-y-2 ml-4 list-disc text-muted-foreground">
+            <% if (Array.isArray(cat.questions)) { for (const q of cat.questions) { %>
+            <li><%= q %></li>
+            <% } } %>
+          </ul>
+        </div>
+        <% } %>
+      </div>
+      <% } %>
+    </section>
+
+    <% const occasions = t(ns + ':when.occasions', []); if (Array.isArray(occasions) && occasions.length > 0) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':when.title', '') %></h2>
+      <div class="space-y-4">
+        <% for (const occ of occasions) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2"><%= occ.emoji %> <%= occ.title %></h3>
+          <p class="text-muted-foreground"><%= occ.desc %></p>
+        </div>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+
+    <% const tips = t(ns + ':tips.items', []); if (Array.isArray(tips) && tips.length > 0) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':tips.title', '') %></h2>
+      <div class="space-y-4">
+        <% for (const tip of tips) { %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= tip.title %></h3>
+          <p class="text-muted-foreground"><%= tip.desc %></p>
+        </div>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+
+    <section class="mb-16 text-center">
+      <div class="glass-card-strong rounded-2xl p-8">
+        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':cta.title', '') %></h2>
+        <p class="text-muted-foreground mb-6"><%= t(ns + ':cta.desc', '') %></p>
+        <a href="#quiz-engine" class="btn btn-cta"><%= t(ns + ':cta.button', t('common:buttons.startQuiz', 'Commencer le quiz')) %></a>
+      </div>
+    </section>
+
+    <% if (Array.isArray(faqItems) && faqItems.length > 0) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', 'FAQ') %></h2>
+      <div class="space-y-4">
+        <% for (const faq of faqItems) { %>
+        <details class="border border-border rounded-lg">
+          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= faq.q %></summary>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= faq.a %></div>
+        </details>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+
+  </div>
+</article>
+
+<script src="/js/quiz-engine-core.js" defer></script>
+<script src="/js/quiz-loader.js" defer></script>
