@@ -137,6 +137,17 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-02-27',
   },
+  {
+    internalSlug: 'avis-hinge',
+    slugs: {
+      fr: 'avis-hinge-rencontre',
+      en: 'hinge-dating-app-review',
+      es: 'opinion-hinge-app-citas',
+      de: 'hinge-erfahrungen-test',
+      it: 'recensione-hinge-app',
+    },
+    publishedAt: '2026-02-27',
+  },
 ];
 
 // Author data
