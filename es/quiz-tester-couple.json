@@ -5,12 +5,13 @@
     "description": "20 preguntas para descubrir vuestro nivel de compatibilidad. ¡Jugad por turnos y descubrid si estáis realmente en la misma onda!",
     "duration": "5 minutos",
     "players": "2 jugadores",
-    "questions": "20 preguntas"
+    "questions": "20 preguntas",
+    "titleHighlight": "tu pareja"
   },
   "seo": {
     "whyTitle": "¿Por qué poner a prueba tu pareja?",
     "card1Title": "Fortalecer vuestra conexión",
-"card1Text": "Descubrid vuestros <a href=\"https://quiz-couple.com/es/test-puntos-comunes-pareja\">puntos en común</a> y comprended mejor las diferencias que enriquecen vuestra relación.",
+    "card1Text": "Descubrid vuestros <a href=\"https://quiz-couple.com/es/test-puntos-comunes-pareja\">puntos en común</a> y comprended mejor las diferencias que enriquecen vuestra relación.",
     "card2Title": "Abrir el diálogo",
     "card2Text": "Cada pregunta es una oportunidad de discusión e intercambio con tu pareja.",
     "card3Title": "Identificar áreas de mejora",

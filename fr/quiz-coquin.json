@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Coquin • 15 questions • 5 min",
     "title": "Quiz Couple Coquin",
-    "titleHighlight": "Pimentez votre Relation",
+    "titleHighlight": "Coquin",
     "description": "Explorez votre complicité intime avec ce quiz sensuel. 15 questions pour raviver la flamme et découvrir votre niveau de passion !"
   },
   "seo": {
@@ -81,10 +81,26 @@
         "example": "Exemple de thème abordé"
       },
       "rows": {
-        "light": { "type": "Question légère", "objective": "Détendre l'atmosphère", "example": "Habitudes du couple" },
-        "introspective": { "type": "Question introspective", "objective": "Favoriser la réflexion", "example": "Attentes relationnelles" },
-        "suggestive": { "type": "Question suggestive", "objective": "Stimuler la curiosité", "example": "Préférences et envies" },
-        "open": { "type": "Question ouverte", "objective": "Encourager l'échange", "example": "Vision du couple" }
+        "light": {
+          "type": "Question légère",
+          "objective": "Détendre l'atmosphère",
+          "example": "Habitudes du couple"
+        },
+        "introspective": {
+          "type": "Question introspective",
+          "objective": "Favoriser la réflexion",
+          "example": "Attentes relationnelles"
+        },
+        "suggestive": {
+          "type": "Question suggestive",
+          "objective": "Stimuler la curiosité",
+          "example": "Préférences et envies"
+        },
+        "open": {
+          "type": "Question ouverte",
+          "objective": "Encourager l'échange",
+          "example": "Vision du couple"
+        }
       }
     },
     "table2": {
@@ -94,10 +110,26 @@
         "benefit": "Bénéfice principal"
       },
       "rows": {
-        "evening": { "context": "Soirée à deux", "format": "Quiz oral", "benefit": "Spontanéité" },
-        "distance": { "context": "Couple à distance", "format": "Quiz écrit", "benefit": "Continuité" },
-        "weekend": { "context": "Week-end détente", "format": "Mixte", "benefit": "Immersion" },
-        "dialogue": { "context": "Reprise de dialogue", "format": "Questions ouvertes", "benefit": "Communication" }
+        "evening": {
+          "context": "Soirée à deux",
+          "format": "Quiz oral",
+          "benefit": "Spontanéité"
+        },
+        "distance": {
+          "context": "Couple à distance",
+          "format": "Quiz écrit",
+          "benefit": "Continuité"
+        },
+        "weekend": {
+          "context": "Week-end détente",
+          "format": "Mixte",
+          "benefit": "Immersion"
+        },
+        "dialogue": {
+          "context": "Reprise de dialogue",
+          "format": "Questions ouvertes",
+          "benefit": "Communication"
+        }
       }
     },
     "faq": {

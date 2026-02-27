@@ -5,7 +5,8 @@
     "description": "You've been together for a few weeks, months, maybe more. And inevitably, the question comes up: is this for real, or just a nice chapter? This quiz won't solve everything — but it'll ask the real questions.",
     "feat1": "Play together, remotely",
     "feat2": "On your phone",
-    "feat3": "20 questions / session"
+    "feat3": "20 questions / session",
+    "titleHighlight": "Teenagers"
   },
   "ui": {
     "multiplayer": "2-player quiz",

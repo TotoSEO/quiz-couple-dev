@@ -3,7 +3,9 @@
     "title": "Quiz - Qui est le plus... ?",
     "description": "Le jeu idéal pour découvrir ce que vos amis pensent vraiment de vous !",
     "descriptionBold": "240+ questions",
-    "descriptionEnd": "pour des heures de fun entre amis ou en couple."
+    "descriptionEnd": "pour des heures de fun entre amis ou en couple.",
+    "titleHighlight": "Qui est le plus",
+    "badge": "Quiz de Groupe • 2-8 joueurs"
   },
   "howToPlay": {
     "title": "Comment jouer au quiz \"Qui est le plus\" ?",
@@ -27,11 +29,29 @@
     "title": "240+ questions \"Qui est le plus\" pour des heures de fun",
     "subtitle": "Découvrez un aperçu des questions qui vous attendent dans notre quiz interactif gratuit !",
     "classicTitle": "Questions classiques",
-    "classicQuestions": ["Qui est le plus bavard ?", "Qui est le plus drôle ?", "Qui est le plus intelligent ?", "Qui est le plus gourmand ?", "Qui est le plus paresseux ?"],
+    "classicQuestions": [
+      "Qui est le plus bavard ?",
+      "Qui est le plus drôle ?",
+      "Qui est le plus intelligent ?",
+      "Qui est le plus gourmand ?",
+      "Qui est le plus paresseux ?"
+    ],
     "funTitle": "Questions fun et décalées",
-    "funQuestions": ["Qui est le plus accro à Netflix et snacks ?", "Qui est le plus susceptible de parler de son ex ?", "Qui est le plus maladroit en flirt ?", "Qui est le plus addict aux notifications ?", "Qui ment le plus ?"],
+    "funQuestions": [
+      "Qui est le plus accro à Netflix et snacks ?",
+      "Qui est le plus susceptible de parler de son ex ?",
+      "Qui est le plus maladroit en flirt ?",
+      "Qui est le plus addict aux notifications ?",
+      "Qui ment le plus ?"
+    ],
     "intimateTitle": "Questions plus intimes",
-    "intimateQuestions": ["Qui est le plus romantique en secret ?", "Qui est le plus jaloux ?", "Qui garde le plus de secrets ?", "Qui est le plus sensible aux compliments ?", "Qui est le plus fidèle à ses habitudes ?"]
+    "intimateQuestions": [
+      "Qui est le plus romantique en secret ?",
+      "Qui est le plus jaloux ?",
+      "Qui garde le plus de secrets ?",
+      "Qui est le plus sensible aux compliments ?",
+      "Qui est le plus fidèle à ses habitudes ?"
+    ]
   },
   "tips": {
     "title": "Nos conseils pour un quiz \"Qui est le plus\" réussi",

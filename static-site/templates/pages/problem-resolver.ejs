@@ -11,14 +11,13 @@
 %>
 
 <!-- Hero -->
-<section class="relative py-12 md:py-16 overflow-hidden">
-  <div class="absolute inset-0 gradient-hero opacity-40 pointer-events-none" aria-hidden="true"></div>
+<section class="relative py-16 md:py-24 overflow-hidden hero-gradient">
   <div class="container mx-auto px-4 relative z-10">
     <div class="max-w-3xl mx-auto text-center space-y-6">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-        <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 3.36 2.07 6.24 5 7.42V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.58c2.93-1.18 5-4.06 5-7.42a8 8 0 0 0-8-8zM10 22h4"/></svg>
-        <span class="text-sm font-medium text-primary"><%= t(ns + ':hero.badge', 'IA') %></span>
-      </div>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 3.36 2.07 6.24 5 7.42V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1.58c2.93-1.18 5-4.06 5-7.42a8 8 0 0 0-8-8zM10 22h4"/></svg>
+        <%= t(ns + ':hero.badge', 'IA') %>
+      </span>
       <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
         <%= t(ns + ':hero.title1', '') %> <span class="text-gradient"><%= t(ns + ':hero.title2', '') %></span> <%= t(ns + ':hero.title3', '') %>
       </h1>

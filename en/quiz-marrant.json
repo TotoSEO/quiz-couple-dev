@@ -5,7 +5,8 @@
     "description": "A lighthearted quiz to laugh together, tease each other and strengthen your bond. No scores, just fun for two!",
     "questions": "150+ questions",
     "players": "Two players",
-    "duration": "~10 minutes"
+    "duration": "~10 minutes",
+    "titleHighlight": "Funny"
   },
   "section1": {
     "title": "The funny couples quiz, much more than a simple game",

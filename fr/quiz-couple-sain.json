@@ -3,7 +3,8 @@
     "badge": "Gratuit • Sans inscription • 5 min",
     "title": "Testez si votre relation de couple est saine - Quiz en ligne",
     "intro1": "Vous êtes bien ensemble… mais l'êtes-vous vraiment ? C'est une question qu'on ne se pose pas toujours ouvertement, parfois par peur de la réponse, parfois parce qu'on manque d'outils pour y réfléchir. Ce test couple sain est là pour vous aider à y voir plus clair, tous les deux, en jouant le jeu honnêtement.",
-    "intro2": "Ce quiz interactif est conçu pour être fait à deux. Chaque partenaire répond aux mêmes questions de son côté. Vos scores sont ensuite additionnés pour donner un résultat global sur 80 points. Pas de bonne ou de mauvaise réponse en soi — juste votre réalité, vue de près."
+    "intro2": "Ce quiz interactif est conçu pour être fait à deux. Chaque partenaire répond aux mêmes questions de son côté. Vos scores sont ensuite additionnés pour donner un résultat global sur 80 points. Pas de bonne ou de mauvaise réponse en soi — juste votre réalité, vue de près.",
+    "titleHighlight": "saine"
   },
   "quiz": {
     "sectionTitle": "Évaluez si votre couple est sain ici !"
@@ -28,13 +29,37 @@
     "s2h3_5Title": "Le soutien mutuel et la bienveillance",
     "s2h3_5Text": "Votre partenaire est-il/elle votre plus grand(e) supporter ? Dans une relation épanouissante, on célèbre les réussites de l'autre sans jalousie. On est là dans les moments difficiles, pas seulement dans les bons moments. Ce soutien inconditionnel est l'un des indicateurs les plus puissants d'une relation de qualité.",
     "s3Title": "Relation saine vs relation toxique : quelques repères",
-    "tableHeaders": ["Indicateur", "Couple sain", "Signe d'alerte"],
+    "tableHeaders": [
+      "Indicateur",
+      "Couple sain",
+      "Signe d'alerte"
+    ],
     "tableRows": [
-      ["Communication", "Ouverte, bienveillante, possible même sur les sujets difficiles", "Silences pesants, conflits évités, mots blessants"],
-      ["Confiance", "Chacun fait confiance à l'autre naturellement", "Jalousie excessive, besoin de contrôle, vérifications"],
-      ["Individualité", "Chacun garde ses amis, hobbies, ambitions", "L'un efface l'autre, dépendance totale"],
-      ["Conflits", "Débouchent sur des solutions, pas de rancœur durable", "Violences verbales, retour sur vieilles blessures"],
-      ["Bien-être", "On se sent épanoui(e), énergisé(e)", "On se sent épuisé(e), anxieux(se), diminué(e)"]
+      [
+        "Communication",
+        "Ouverte, bienveillante, possible même sur les sujets difficiles",
+        "Silences pesants, conflits évités, mots blessants"
+      ],
+      [
+        "Confiance",
+        "Chacun fait confiance à l'autre naturellement",
+        "Jalousie excessive, besoin de contrôle, vérifications"
+      ],
+      [
+        "Individualité",
+        "Chacun garde ses amis, hobbies, ambitions",
+        "L'un efface l'autre, dépendance totale"
+      ],
+      [
+        "Conflits",
+        "Débouchent sur des solutions, pas de rancœur durable",
+        "Violences verbales, retour sur vieilles blessures"
+      ],
+      [
+        "Bien-être",
+        "On se sent épanoui(e), énergisé(e)",
+        "On se sent épuisé(e), anxieux(se), diminué(e)"
+      ]
     ],
     "s4Title": "Les signaux qui doivent vous alerter",
     "s4Intro": "Certains comportements, même normalisés dans une relation, méritent qu'on s'y arrête. Ce n'est pas pour pointer du doigt ou culpabiliser — mais pour voir les choses telles qu'elles sont.",

@@ -5,7 +5,8 @@
     "description": "Casarse es mucho más que una fiesta bonita. Es una decisión de vida que compromete a dos personas durante décadas. Este test de matrimonio está diseñado para ayudarles a verificar que han reflexionado sobre todo esto — juntos, honestamente, antes de decir sí.",
     "duration": "~10 minutos",
     "players": "En pareja",
-    "questions": "30 preguntas"
+    "questions": "30 preguntas",
+    "titleHighlight": "casarse"
   },
   "seo": {
     "whyTitle": "¿Por qué hacer un test de pareja antes del matrimonio?",

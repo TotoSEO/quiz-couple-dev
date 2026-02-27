@@ -5,7 +5,8 @@
     "description": "20 questions pour découvrir votre niveau de compatibilité. Jouez à tour de rôle et voyez si vous êtes vraiment sur la même longueur d'onde !",
     "duration": "5 minutes",
     "players": "2 joueurs",
-    "questions": "20 questions"
+    "questions": "20 questions",
+    "titleHighlight": "votre couple"
   },
   "seo": {
     "whyTitle": "Pourquoi tester son couple ?",

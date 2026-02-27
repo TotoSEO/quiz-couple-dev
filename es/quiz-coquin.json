@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Picante • 15 preguntas • 5 min",
     "title": "Quiz Pareja Picante",
-    "titleHighlight": "Dale chispa a tu Relación",
+    "titleHighlight": "Picante",
     "description": "Explora tu complicidad íntima con este quiz sensual. ¡15 preguntas para reavivar la llama y descubrir tu nivel de pasión!"
   },
   "seo": {
@@ -81,10 +81,26 @@
         "example": "Ejemplo de tema abordado"
       },
       "rows": {
-        "light": { "type": "Pregunta ligera", "objective": "Relajar el ambiente", "example": "Hábitos de la pareja" },
-        "introspective": { "type": "Pregunta introspectiva", "objective": "Favorecer la reflexión", "example": "Expectativas relacionales" },
-        "suggestive": { "type": "Pregunta sugerente", "objective": "Estimular la curiosidad", "example": "Preferencias y deseos" },
-        "open": { "type": "Pregunta abierta", "objective": "Fomentar el intercambio", "example": "Visión de la pareja" }
+        "light": {
+          "type": "Pregunta ligera",
+          "objective": "Relajar el ambiente",
+          "example": "Hábitos de la pareja"
+        },
+        "introspective": {
+          "type": "Pregunta introspectiva",
+          "objective": "Favorecer la reflexión",
+          "example": "Expectativas relacionales"
+        },
+        "suggestive": {
+          "type": "Pregunta sugerente",
+          "objective": "Estimular la curiosidad",
+          "example": "Preferencias y deseos"
+        },
+        "open": {
+          "type": "Pregunta abierta",
+          "objective": "Fomentar el intercambio",
+          "example": "Visión de la pareja"
+        }
       }
     },
     "table2": {
@@ -94,10 +110,26 @@
         "benefit": "Beneficio principal"
       },
       "rows": {
-        "evening": { "context": "Velada a dos", "format": "Quiz oral", "benefit": "Espontaneidad" },
-        "distance": { "context": "Pareja a distancia", "format": "Quiz escrito", "benefit": "Continuidad" },
-        "weekend": { "context": "Fin de semana relax", "format": "Mixto", "benefit": "Inmersión" },
-        "dialogue": { "context": "Retomar el diálogo", "format": "Preguntas abiertas", "benefit": "Comunicación" }
+        "evening": {
+          "context": "Velada a dos",
+          "format": "Quiz oral",
+          "benefit": "Espontaneidad"
+        },
+        "distance": {
+          "context": "Pareja a distancia",
+          "format": "Quiz escrito",
+          "benefit": "Continuidad"
+        },
+        "weekend": {
+          "context": "Fin de semana relax",
+          "format": "Mixto",
+          "benefit": "Inmersión"
+        },
+        "dialogue": {
+          "context": "Retomar el diálogo",
+          "format": "Preguntas abiertas",
+          "benefit": "Comunicación"
+        }
       }
     },
     "faq": {

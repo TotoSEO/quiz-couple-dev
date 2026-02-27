@@ -71,8 +71,8 @@ export const GA_ID = 'G-XZV8V6FEK5';
 export function getLocalizedPath(routeKey, lang) {
   const slug = ROUTE_SLUGS[routeKey]?.[lang];
   if (slug === undefined) return null;
-  if (lang === 'fr') return slug ? `/${slug}` : '/';
-  return slug ? `/${lang}/${slug}` : `/${lang}`;
+  if (lang === 'fr') return slug ? `/${slug}/` : '/';
+  return slug ? `/${lang}/${slug}/` : `/${lang}/`;
 }
 
 export function getLocalizedUrl(routeKey, lang) {
@@ -166,8 +166,8 @@ export const AUTHORS = {
 };
 
 export function getArticlePath(articleSlug, lang) {
-  if (lang === 'fr') return `/blog/${articleSlug}`;
-  return `/${lang}/blog/${articleSlug}`;
+  if (lang === 'fr') return `/blog/${articleSlug}/`;
+  return `/${lang}/blog/${articleSlug}/`;
 }
 
 export function getArticleUrl(articleSlug, lang) {

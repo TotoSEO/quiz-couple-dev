@@ -112,5 +112,11 @@
     "importantReminder": "Wichtiger Hinweis:",
     "reminderText": "Dieser Test ist kein Diagnoseinstrument. Er ersetzt nicht die Meinung eines Therapeuten, Anwalts oder Arztes. Ihre Antworten sind anonym und werden nicht gespeichert.",
     "redoTest": "Test wiederholen"
+  },
+  "hero": {
+    "badge": "Scheidungstest • Kostenlos • 5 Min",
+    "title": "Soll ich mich scheiden lassen? Kostenloser Online-Test",
+    "description": "25 Fragen, um Ihre Ehesituation objektiv einzuschätzen und zu wissen, ob es Zeit ist, den Schritt zu wagen.",
+    "titleHighlight": "scheiden lassen"
   }
 }

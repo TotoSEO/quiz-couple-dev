@@ -5,14 +5,28 @@
     "title2": "Resolution",
     "title3": "with AI",
     "description": "Our AI analyzes your situation in a <strong>completely impartial</strong> way to help you resolve conflicts and understand each person's responsibilities.",
-    "features": ["100% Confidential", "Impartial Analysis", "Advanced AI"]
+    "features": [
+      "100% Confidential",
+      "Impartial Analysis",
+      "Advanced AI"
+    ],
+    "titleHighlight": "Artificial Intelligence"
   },
   "howItWorks": {
     "title": "How does it work?",
     "steps": [
-      { "title": "Describe the context", "desc": "Explain the situation in a neutral and objective way." },
-      { "title": "Each person speaks", "desc": "Each person gives their version of the facts." },
-      { "title": "AI analyzes", "desc": "Get an impartial analysis with advice." }
+      {
+        "title": "Describe the context",
+        "desc": "Explain the situation in a neutral and objective way."
+      },
+      {
+        "title": "Each person speaks",
+        "desc": "Each person gives their version of the facts."
+      },
+      {
+        "title": "AI analyzes",
+        "desc": "Get an impartial analysis with advice."
+      }
     ]
   },
   "seo": {
@@ -41,23 +55,61 @@
     "s3": {
       "title": "10 tips for resolving a couple's problem",
       "tips": [
-        { "h": "Communicate at the right time, not in the heat of emotion", "p": "Timing is crucial. Bringing up a sensitive topic when you're exhausted, angry, or rushed guarantees an argument. Wait for the right moment: when you're both available, calm, and ready to really talk." },
-        { "h": "Talk about yourself without accusing the other", "p": "Replace \"you\" with \"I\". Instead of \"You never listen to me,\" try \"I feel ignored when I speak and you look at your phone.\" The message gets through without putting the other on the defensive." },
-        { "h": "Learn to listen without preparing your response", "p": "We all have this tendency: while the other talks, we're already preparing our counterargument. Make the conscious effort to listen until the end, to understand, before responding." },
-        { "h": "Accept that the other may feel differently", "p": "Two people can live the same situation and feel completely different things. Neither is wrong. Accepting this reality means stopping trying to convince the other that their perception is false." },
-        { "h": "Avoid generalizing blame (\"always\", \"never\")", "p": "\"You always do that,\" \"You never pay attention\"... These words are relationship bombs. They exaggerate reality and put the other in an impossible position. Stay factual." },
-        { "h": "Seek a solution rather than someone to blame", "p": "The goal of a couple's discussion isn't to win or prove the other wrong. It's to find together how to feel better. Ask yourself: \"How do we prevent this from happening again?\"" },
-        { "h": "Respect each other's needs and boundaries", "p": "Everyone has their own needs: for solitude, for expression, for affection, for financial security... Knowing and respecting them is the foundation of a healthy relationship." },
-        { "h": "Take breaks when the discussion gets too tense", "p": "Sometimes, the best thing is to stop. When voices rise and words go beyond thoughts, suggest a break. It's not running from the problem, it's protecting it from a destructive escalation." },
-        { "h": "Don't let unspoken things accumulate", "p": "Small frustrations kept to yourself end up forming a mountain. Learn to express your feelings as they come, before they become resentment." },
-        { "h": "Get help when dialogue goes in circles", "p": "Recognizing you can't do it alone isn't failure, it's a sign of maturity. An outside perspective can unlock situations that seemed impossible to resolve." }
+        {
+          "h": "Communicate at the right time, not in the heat of emotion",
+          "p": "Timing is crucial. Bringing up a sensitive topic when you're exhausted, angry, or rushed guarantees an argument. Wait for the right moment: when you're both available, calm, and ready to really talk."
+        },
+        {
+          "h": "Talk about yourself without accusing the other",
+          "p": "Replace \"you\" with \"I\". Instead of \"You never listen to me,\" try \"I feel ignored when I speak and you look at your phone.\" The message gets through without putting the other on the defensive."
+        },
+        {
+          "h": "Learn to listen without preparing your response",
+          "p": "We all have this tendency: while the other talks, we're already preparing our counterargument. Make the conscious effort to listen until the end, to understand, before responding."
+        },
+        {
+          "h": "Accept that the other may feel differently",
+          "p": "Two people can live the same situation and feel completely different things. Neither is wrong. Accepting this reality means stopping trying to convince the other that their perception is false."
+        },
+        {
+          "h": "Avoid generalizing blame (\"always\", \"never\")",
+          "p": "\"You always do that,\" \"You never pay attention\"... These words are relationship bombs. They exaggerate reality and put the other in an impossible position. Stay factual."
+        },
+        {
+          "h": "Seek a solution rather than someone to blame",
+          "p": "The goal of a couple's discussion isn't to win or prove the other wrong. It's to find together how to feel better. Ask yourself: \"How do we prevent this from happening again?\""
+        },
+        {
+          "h": "Respect each other's needs and boundaries",
+          "p": "Everyone has their own needs: for solitude, for expression, for affection, for financial security... Knowing and respecting them is the foundation of a healthy relationship."
+        },
+        {
+          "h": "Take breaks when the discussion gets too tense",
+          "p": "Sometimes, the best thing is to stop. When voices rise and words go beyond thoughts, suggest a break. It's not running from the problem, it's protecting it from a destructive escalation."
+        },
+        {
+          "h": "Don't let unspoken things accumulate",
+          "p": "Small frustrations kept to yourself end up forming a mountain. Learn to express your feelings as they come, before they become resentment."
+        },
+        {
+          "h": "Get help when dialogue goes in circles",
+          "p": "Recognizing you can't do it alone isn't failure, it's a sign of maturity. An outside perspective can unlock situations that seemed impossible to resolve."
+        }
       ]
     },
     "s4": {
       "title": "Mistakes to avoid when trying to resolve a couple conflict",
       "items": [
-        { "h": "Trying to be right rather than understood", "p1": "It's the classic trap. We so want to prove we're right that we forget what's essential: understanding each other.", "p2": "The relational victory is when both feel heard." },
-        { "h": "Ignoring the other's emotional needs", "p1": "Your partner doesn't necessarily expect you to solve their problem. Sometimes they just need to be heard, understood, supported.", "p2": "This simple question can change everything." }
+        {
+          "h": "Trying to be right rather than understood",
+          "p1": "It's the classic trap. We so want to prove we're right that we forget what's essential: understanding each other.",
+          "p2": "The relational victory is when both feel heard."
+        },
+        {
+          "h": "Ignoring the other's emotional needs",
+          "p1": "Your partner doesn't necessarily expect you to solve their problem. Sometimes they just need to be heard, understood, supported.",
+          "p2": "This simple question can change everything."
+        }
       ]
     },
     "s5": {

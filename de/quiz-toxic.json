@@ -1,7 +1,9 @@
 {
   "hero": {
     "title": "Ist Ihre Beziehung toxisch? Beantworten Sie den Fragebogen",
-    "description": "Ein Selbstbewertungs-Tool, um die Dynamiken Ihrer Beziehung zu verstehen"
+    "description": "Ein Selbstbewertungs-Tool, um die Dynamiken Ihrer Beziehung zu verstehen",
+    "titleHighlight": "toxisch",
+    "badge": "Toxizitätstest • Kostenlos • 5 Min"
   },
   "section1": {
     "title": "Warum brauchen Sie diesen Test heute?",

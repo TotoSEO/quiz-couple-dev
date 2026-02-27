@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Spicy • 15 questions • 5 min",
     "title": "Spicy Couple Quiz",
-    "titleHighlight": "Spice Up Your Relationship",
+    "titleHighlight": "Spicy",
     "description": "Explore your intimate connection with this sensual quiz. 15 questions to rekindle the flame and discover your passion level!"
   },
   "seo": {
@@ -81,10 +81,26 @@
         "example": "Example topic covered"
       },
       "rows": {
-        "light": { "type": "Light question", "objective": "Ease the atmosphere", "example": "Couple habits" },
-        "introspective": { "type": "Introspective question", "objective": "Encourage reflection", "example": "Relationship expectations" },
-        "suggestive": { "type": "Suggestive question", "objective": "Stimulate curiosity", "example": "Preferences and desires" },
-        "open": { "type": "Open question", "objective": "Encourage exchange", "example": "Vision of the couple" }
+        "light": {
+          "type": "Light question",
+          "objective": "Ease the atmosphere",
+          "example": "Couple habits"
+        },
+        "introspective": {
+          "type": "Introspective question",
+          "objective": "Encourage reflection",
+          "example": "Relationship expectations"
+        },
+        "suggestive": {
+          "type": "Suggestive question",
+          "objective": "Stimulate curiosity",
+          "example": "Preferences and desires"
+        },
+        "open": {
+          "type": "Open question",
+          "objective": "Encourage exchange",
+          "example": "Vision of the couple"
+        }
       }
     },
     "table2": {
@@ -94,10 +110,26 @@
         "benefit": "Main benefit"
       },
       "rows": {
-        "evening": { "context": "Evening for two", "format": "Oral quiz", "benefit": "Spontaneity" },
-        "distance": { "context": "Long-distance couple", "format": "Written quiz", "benefit": "Continuity" },
-        "weekend": { "context": "Relaxing weekend", "format": "Mixed", "benefit": "Immersion" },
-        "dialogue": { "context": "Resuming dialogue", "format": "Open questions", "benefit": "Communication" }
+        "evening": {
+          "context": "Evening for two",
+          "format": "Oral quiz",
+          "benefit": "Spontaneity"
+        },
+        "distance": {
+          "context": "Long-distance couple",
+          "format": "Written quiz",
+          "benefit": "Continuity"
+        },
+        "weekend": {
+          "context": "Relaxing weekend",
+          "format": "Mixed",
+          "benefit": "Immersion"
+        },
+        "dialogue": {
+          "context": "Resuming dialogue",
+          "format": "Open questions",
+          "benefit": "Communication"
+        }
       }
     },
     "faq": {

@@ -100,7 +100,7 @@
       </div>
 
       <!-- CTAs -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a href="#quiz-section" class="btn btn-cta"><%= hero.cta1 %></a>
         <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-outline btn-lg"><%= hero.cta2 %></a>
       </div>
@@ -128,12 +128,12 @@
         <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
         <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.testsDesc', '') %></p>
       </div>
-      <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
-        <% for (const item of tests) { %>
-        <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group">
+      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-5xl mx-auto">
+        <% for (let ti = 0; ti < tests.length; ti++) { const item = tests[ti]; %>
+        <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
           <div class="homepage-quiz-card-inner">
-            <div class="homepage-quiz-icon bg-gradient-to-br from-primary/15 to-secondary/15 group-hover:scale-110"><span class="text-2xl"><%= item.icon %></span></div>
-            <h4 class="text-base font-bold mb-2 text-foreground group-hover:text-primary transition-colors"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
+            <div class="homepage-quiz-icon"><span><%= item.icon %></span></div>
+            <h4 class="text-base font-bold mb-2 text-foreground group-hover:text-primary transition-colors" style="font-family:'Poppins','Inter',system-ui,sans-serif;line-height:1.25"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
             <p class="text-sm text-muted-foreground leading-relaxed mb-4"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
             <span class="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-primary opacity-80 group-hover:opacity-100 transition-opacity">
               <%= t('common:buttons.startTest', 'Faire le test') %>
@@ -154,12 +154,12 @@
         <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
         <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.quizzesDesc', '') %></p>
       </div>
-      <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
-        <% for (const item of quizzes) { %>
-        <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group">
+      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 max-w-6xl mx-auto">
+        <% for (let qi = 0; qi < quizzes.length; qi++) { const item = quizzes[qi]; %>
+        <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
           <div class="homepage-quiz-card-inner">
-            <div class="homepage-quiz-icon bg-gradient-to-br from-secondary/15 to-primary/15 group-hover:scale-110"><span class="text-2xl"><%= item.icon %></span></div>
-            <h4 class="text-base font-bold mb-2 text-foreground group-hover:text-primary transition-colors"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
+            <div class="homepage-quiz-icon"><span><%= item.icon %></span></div>
+            <h4 class="text-base font-bold mb-2 text-foreground group-hover:text-primary transition-colors" style="font-family:'Poppins','Inter',system-ui,sans-serif;line-height:1.25"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
             <p class="text-sm text-muted-foreground leading-relaxed mb-4"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
             <span class="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-primary opacity-80 group-hover:opacity-100 transition-opacity">
               <%= t('common:buttons.startQuiz', 'Faire le quiz') %>
@@ -273,8 +273,8 @@
 <section class="section-padding" id="latest-articles">
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="text-center mb-12">
-      <p class="text-muted-foreground max-w-3xl mx-auto mb-6 text-base md:text-lg leading-relaxed"><%= t('home:latestArticles.intro', '') %></p>
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4"><%= t('home:latestArticles.title', 'Les derniers articles') %> <span class="text-gradient"><%= t('home:latestArticles.titleHighlight', 'du blog') %></span></h2>
+      <p class="text-muted-foreground max-w-3xl mx-auto text-base md:text-lg leading-relaxed"><%= t('home:latestArticles.intro', '') %></p>
     </div>
     <% if (latestArticles.length > 0) { %>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -112,5 +112,11 @@
     "importantReminder": "Recordatorio importante:",
     "reminderText": "Este test no es una herramienta de diagnóstico. No sustituye la opinión de un terapeuta, abogado o médico. Tus respuestas son anónimas y no se registran.",
     "redoTest": "Repetir el test"
+  },
+  "hero": {
+    "badge": "Test Divorcio • Gratis • 5 min",
+    "title": "¿Debo divorciarme? Test online gratuito",
+    "description": "25 preguntas para evaluar objetivamente tu situación conyugal y saber si es hora de dar el paso.",
+    "titleHighlight": "divorciarme"
   }
 }

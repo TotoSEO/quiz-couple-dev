@@ -5,7 +5,8 @@
     "description": "20 domande per scoprire il vostro livello di compatibilità. Giocate a turno e scoprite se siete davvero sulla stessa lunghezza d'onda!",
     "duration": "5 minuti",
     "players": "2 giocatori",
-    "questions": "20 domande"
+    "questions": "20 domande",
+    "titleHighlight": "la tua coppia"
   },
   "seo": {
     "whyTitle": "Perché mettere alla prova la vostra coppia?",

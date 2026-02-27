@@ -1,7 +1,9 @@
 {
   "hero": {
     "title": "Votre couple est-il toxique ? Répondez au questionnaire",
-    "description": "Un outil d'auto-évaluation pour comprendre les dynamiques de votre relation"
+    "description": "Un outil d'auto-évaluation pour comprendre les dynamiques de votre relation",
+    "titleHighlight": "toxique",
+    "badge": "Test Toxicité • Gratuit • 5 min"
   },
   "section1": {
     "title": "Pourquoi avez-vous besoin de faire ce test aujourd'hui ?",

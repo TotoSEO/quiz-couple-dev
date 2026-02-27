@@ -5,7 +5,8 @@
     "description": "Lleváis juntos unas semanas, unos meses, quizá más. Y la pregunta acaba llegando: ¿es algo serio o solo un bonito paréntesis? Este quiz no lo resolverá todo, pero hará las preguntas que importan.",
     "feat1": "En pareja, a distancia",
     "feat2": "Desde el móvil",
-    "feat3": "20 preguntas / sesión"
+    "feat3": "20 preguntas / sesión",
+    "titleHighlight": "adolescentes"
   },
   "ui": {
     "multiplayer": "Quiz para 2 jugadores",

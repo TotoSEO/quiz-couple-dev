@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Pikant • 15 Fragen • 5 Min",
     "title": "Pikantes Paar-Quiz",
-    "titleHighlight": "Würze deine Beziehung",
+    "titleHighlight": "Pikantes",
     "description": "Entdecke eure intime Komplizenschaft mit diesem sinnlichen Quiz. 15 Fragen, um die Flamme neu zu entfachen und euer Leidenschaftsniveau zu entdecken!"
   },
   "seo": {
@@ -81,10 +81,26 @@
         "example": "Beispielthema"
       },
       "rows": {
-        "light": { "type": "Leichte Frage", "objective": "Atmosphäre entspannen", "example": "Paargewohnheiten" },
-        "introspective": { "type": "Introspektive Frage", "objective": "Reflexion fördern", "example": "Beziehungserwartungen" },
-        "suggestive": { "type": "Suggestive Frage", "objective": "Neugier wecken", "example": "Vorlieben und Wünsche" },
-        "open": { "type": "Offene Frage", "objective": "Austausch fördern", "example": "Sicht auf die Beziehung" }
+        "light": {
+          "type": "Leichte Frage",
+          "objective": "Atmosphäre entspannen",
+          "example": "Paargewohnheiten"
+        },
+        "introspective": {
+          "type": "Introspektive Frage",
+          "objective": "Reflexion fördern",
+          "example": "Beziehungserwartungen"
+        },
+        "suggestive": {
+          "type": "Suggestive Frage",
+          "objective": "Neugier wecken",
+          "example": "Vorlieben und Wünsche"
+        },
+        "open": {
+          "type": "Offene Frage",
+          "objective": "Austausch fördern",
+          "example": "Sicht auf die Beziehung"
+        }
       }
     },
     "table2": {
@@ -94,10 +110,26 @@
         "benefit": "Hauptvorteil"
       },
       "rows": {
-        "evening": { "context": "Abend zu zweit", "format": "Mündliches Quiz", "benefit": "Spontaneität" },
-        "distance": { "context": "Fernbeziehung", "format": "Schriftliches Quiz", "benefit": "Kontinuität" },
-        "weekend": { "context": "Entspanntes Wochenende", "format": "Gemischt", "benefit": "Eintauchen" },
-        "dialogue": { "context": "Dialog wiederaufnehmen", "format": "Offene Fragen", "benefit": "Kommunikation" }
+        "evening": {
+          "context": "Abend zu zweit",
+          "format": "Mündliches Quiz",
+          "benefit": "Spontaneität"
+        },
+        "distance": {
+          "context": "Fernbeziehung",
+          "format": "Schriftliches Quiz",
+          "benefit": "Kontinuität"
+        },
+        "weekend": {
+          "context": "Entspanntes Wochenende",
+          "format": "Gemischt",
+          "benefit": "Eintauchen"
+        },
+        "dialogue": {
+          "context": "Dialog wiederaufnehmen",
+          "format": "Offene Fragen",
+          "benefit": "Kommunikation"
+        }
       }
     },
     "faq": {

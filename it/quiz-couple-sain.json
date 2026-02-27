@@ -3,45 +3,99 @@
     "badge": "Gratuito • Senza registrazione • 5 min",
     "title": "La tua relazione è sana? - Test online gratuito",
     "intro1": "State bene insieme… ma lo siete davvero? Questa è una domanda che non ci poniamo sempre apertamente. Questo test di coppia sana è qui per aiutarvi a vederci più chiaro, giocando il gioco con onestà.",
-    "intro2": "Questo quiz interattivo è pensato per essere fatto in coppia. Ogni partner risponde alle stesse domande separatamente. I vostri punteggi vengono sommati per dare un risultato globale su 80 punti."
+    "intro2": "Questo quiz interattivo è pensato per essere fatto in coppia. Ogni partner risponde alle stesse domande separatamente. I vostri punteggi vengono sommati per dare un risultato globale su 80 punti.",
+    "titleHighlight": "sana"
   },
-  "quiz": { "sectionTitle": "Valutate se la vostra coppia è sana qui!" },
-  "results": { "gapWarning": "C'è una differenza significativa tra i vostri due punteggi. {{name1}} sembra percepire la relazione in modo diverso da {{name2}}. È una buona occasione per parlarne insieme." },
+  "quiz": {
+    "sectionTitle": "Valutate se la vostra coppia è sana qui!"
+  },
+  "results": {
+    "gapWarning": "C'è una differenza significativa tra i vostri due punteggi. {{name1}} sembra percepire la relazione in modo diverso da {{name2}}. È una buona occasione per parlarne insieme."
+  },
   "seo": {
     "s1Title": "Cosa significa davvero una coppia sana",
     "s1p1": "Spesso sentiamo parlare di coppia sana come se fosse una casella da spuntare. Un ideale irraggiungibile riservato a chi si ama senza mai litigare. In realtà, una coppia sana non è una coppia perfetta. È una coppia viva, fatta di due individui che lavorano insieme, che sanno fare errori e tornare su di essi.",
     "s1p2": "La differenza tra una relazione appagante e una tossica non si gioca sull'intensità dei sentimenti. Si gioca su abitudini quotidiane: come parlate, come gestite i disaccordi, come vi trattate quando nessuno guarda.",
     "s2Title": "I pilastri di una relazione di coppia sana",
     "s2Intro": "Una coppia sana si regge su diverse fondamenta interdipendenti. Toglierne una può indebolire l'insieme.",
-    "s2h3_1Title": "La comunicazione autentica", "s2h3_1Text": "Comunicare non significa parlare molto. Significa che ognuno può esprimere i propri sentimenti, bisogni e insoddisfazioni senza temere di essere giudicato, deriso o ignorato.",
-    "s2h3_2Title": "La fiducia e il rispetto reciproco", "s2h3_2Text": "La fiducia non si decreta, si costruisce con atti ripetuti. Mantenere le promesse, rispettare i limiti dell'altro, non usare le debolezze dell'altro come arma durante i litigi.",
-    "s2h3_3Title": "L'equilibrio tra vita comune e personale", "s2h3_3Text": "Amare qualcuno non significa fondersi con lui. Una coppia sana sono due individui che restano individui. Ognuno ha i propri amici, passioni, ambizioni.",
-    "s2h3_4Title": "Una gestione sana dei conflitti", "s2h3_4Text": "I conflitti non sono segno che qualcosa non va. Fanno parte di ogni relazione umana. Ciò che conta è cosa se ne fa. In una coppia sana, i litigi non degenerano in attacchi personali.",
-    "s2h3_5Title": "Il sostegno reciproco e la benevolenza", "s2h3_5Text": "Il vostro partner è il vostro più grande sostenitore? In una relazione appagante, si celebrano i successi dell'altro senza gelosia. Si è presenti nei momenti difficili, non solo in quelli belli.",
+    "s2h3_1Title": "La comunicazione autentica",
+    "s2h3_1Text": "Comunicare non significa parlare molto. Significa che ognuno può esprimere i propri sentimenti, bisogni e insoddisfazioni senza temere di essere giudicato, deriso o ignorato.",
+    "s2h3_2Title": "La fiducia e il rispetto reciproco",
+    "s2h3_2Text": "La fiducia non si decreta, si costruisce con atti ripetuti. Mantenere le promesse, rispettare i limiti dell'altro, non usare le debolezze dell'altro come arma durante i litigi.",
+    "s2h3_3Title": "L'equilibrio tra vita comune e personale",
+    "s2h3_3Text": "Amare qualcuno non significa fondersi con lui. Una coppia sana sono due individui che restano individui. Ognuno ha i propri amici, passioni, ambizioni.",
+    "s2h3_4Title": "Una gestione sana dei conflitti",
+    "s2h3_4Text": "I conflitti non sono segno che qualcosa non va. Fanno parte di ogni relazione umana. Ciò che conta è cosa se ne fa. In una coppia sana, i litigi non degenerano in attacchi personali.",
+    "s2h3_5Title": "Il sostegno reciproco e la benevolenza",
+    "s2h3_5Text": "Il vostro partner è il vostro più grande sostenitore? In una relazione appagante, si celebrano i successi dell'altro senza gelosia. Si è presenti nei momenti difficili, non solo in quelli belli.",
     "s3Title": "Relazione sana vs relazione tossica: alcuni punti di riferimento",
-    "tableHeaders": ["Indicatore", "Coppia sana", "Segnale d'allarme"],
+    "tableHeaders": [
+      "Indicatore",
+      "Coppia sana",
+      "Segnale d'allarme"
+    ],
     "tableRows": [
-      ["Comunicazione", "Aperta, benevola, possibile anche su temi difficili", "Silenzi pesanti, conflitti evitati, parole offensive"],
-      ["Fiducia", "Ognuno si fida naturalmente dell'altro", "Gelosia eccessiva, bisogno di controllo, verifiche"],
-      ["Individualità", "Ognuno mantiene amici, hobby, ambizioni", "Uno cancella l'altro, dipendenza totale"],
-      ["Conflitti", "Portano a soluzioni, nessun rancore duraturo", "Violenza verbale, ritorno su vecchie ferite"],
-      ["Benessere", "Ci si sente realizzati, pieni di energia", "Ci si sente esausti, ansiosi, sminuiti"]
+      [
+        "Comunicazione",
+        "Aperta, benevola, possibile anche su temi difficili",
+        "Silenzi pesanti, conflitti evitati, parole offensive"
+      ],
+      [
+        "Fiducia",
+        "Ognuno si fida naturalmente dell'altro",
+        "Gelosia eccessiva, bisogno di controllo, verifiche"
+      ],
+      [
+        "Individualità",
+        "Ognuno mantiene amici, hobby, ambizioni",
+        "Uno cancella l'altro, dipendenza totale"
+      ],
+      [
+        "Conflitti",
+        "Portano a soluzioni, nessun rancore duraturo",
+        "Violenza verbale, ritorno su vecchie ferite"
+      ],
+      [
+        "Benessere",
+        "Ci si sente realizzati, pieni di energia",
+        "Ci si sente esausti, ansiosi, sminuiti"
+      ]
     ],
     "s4Title": "I segnali che devono mettervi in allerta",
     "s4Intro": "Alcuni comportamenti, anche normalizzati in una relazione, meritano attenzione. Non per puntare il dito — ma per vedere le cose come sono.",
-    "s4Signals": ["Avete paura della reazione del vostro partner quando esprimete qualcosa.", "I litigi finiscono senza vera risoluzione e gli stessi temi tornano in loop.", "Uno dei due si cancella costantemente — i suoi bisogni, desideri, identità.", "Ci sono state umiliazioni, derisioni o denigrazioni, anche 'per scherzo'.", "Vi sentite soli anche quando siete insieme.", "Temete di condividere i vostri veri sentimenti per paura del conflitto.", "La vostra salute mentale, fiducia o gioia di vivere si è degradata da quando state insieme."],
+    "s4Signals": [
+      "Avete paura della reazione del vostro partner quando esprimete qualcosa.",
+      "I litigi finiscono senza vera risoluzione e gli stessi temi tornano in loop.",
+      "Uno dei due si cancella costantemente — i suoi bisogni, desideri, identità.",
+      "Ci sono state umiliazioni, derisioni o denigrazioni, anche 'per scherzo'.",
+      "Vi sentite soli anche quando siete insieme.",
+      "Temete di condividere i vostri veri sentimenti per paura del conflitto.",
+      "La vostra salute mentale, fiducia o gioia di vivere si è degradata da quando state insieme."
+    ],
     "s4Outro": "Riconoscere questi segnali non è un fallimento. È il primo passo verso qualcosa di meglio.",
     "s5Title": "Come interpretare il vostro punteggio?",
     "s5Intro": "Questo test è valutato su 80 punti totali (40 per partner, sommati). Ecco una guida di lettura indicativa.",
-    "s5r1Title": "Tra 0 e 30 punti — Fondamenta da (ri)costruire", "s5r1Text": "La vostra relazione attraversa turbolenze profonde. Diversi pilastri essenziali sembrano indeboliti. Questo risultato non è una condanna — è un'informazione. Molte coppie hanno attraversato fasi molto difficili e ne sono uscite.",
-    "s5r2Title": "Tra 31 e 52 punti — Una coppia che merita più attenzione", "s5r2Text": "Ci sono cose positive nella vostra relazione, ma alcune zone d'ombra meritano attenzione. Questa fase è spesso la più propizia al cambiamento.",
-    "s5r3Title": "Tra 53 e 68 punti — Una relazione solida con punti di miglioramento", "s5r3Text": "La vostra coppia è globalmente sana. Avete buone basi. Alcuni aspetti potrebbero essere rafforzati, ed è normale.",
-    "s5r4Title": "Tra 69 e 80 punti — Una relazione appagante", "s5r4Text": "Complimenti! Avete costruito qualcosa di solido e rispettoso. Continuate a prendervene cura. Questi punteggi sono il frutto di uno sforzo quotidiano.",
-    "s6Title": "Questo test è affidabile?", "s6p1": "Questo quiz è uno strumento di riflessione, non una diagnosi clinica. È stato progettato per invitarvi a guardare la vostra relazione da vicino.", "s6p2": "Ciò che dà valore a questo test è l'onestà con cui rispondete. La vostra relazione merita questa onestà.",
-    "s7Title": "Dopo il test, e adesso?", "s7p1": "Fare questo test insieme è già un atto forte. Parlate dei risultati.", "s7p2": "Se sentite che la vostra coppia ha bisogno di aiuto professionale, non esitate a consultare un terapeuta di coppia.", "s7p3": "E se questo test vi ha mostrato che la vostra relazione è solida — assaporatelo. Le buone relazioni sono il risultato di scelte, impegno e amore quotidiano.",
+    "s5r1Title": "Tra 0 e 30 punti — Fondamenta da (ri)costruire",
+    "s5r1Text": "La vostra relazione attraversa turbolenze profonde. Diversi pilastri essenziali sembrano indeboliti. Questo risultato non è una condanna — è un'informazione. Molte coppie hanno attraversato fasi molto difficili e ne sono uscite.",
+    "s5r2Title": "Tra 31 e 52 punti — Una coppia che merita più attenzione",
+    "s5r2Text": "Ci sono cose positive nella vostra relazione, ma alcune zone d'ombra meritano attenzione. Questa fase è spesso la più propizia al cambiamento.",
+    "s5r3Title": "Tra 53 e 68 punti — Una relazione solida con punti di miglioramento",
+    "s5r3Text": "La vostra coppia è globalmente sana. Avete buone basi. Alcuni aspetti potrebbero essere rafforzati, ed è normale.",
+    "s5r4Title": "Tra 69 e 80 punti — Una relazione appagante",
+    "s5r4Text": "Complimenti! Avete costruito qualcosa di solido e rispettoso. Continuate a prendervene cura. Questi punteggi sono il frutto di uno sforzo quotidiano.",
+    "s6Title": "Questo test è affidabile?",
+    "s6p1": "Questo quiz è uno strumento di riflessione, non una diagnosi clinica. È stato progettato per invitarvi a guardare la vostra relazione da vicino.",
+    "s6p2": "Ciò che dà valore a questo test è l'onestà con cui rispondete. La vostra relazione merita questa onestà.",
+    "s7Title": "Dopo il test, e adesso?",
+    "s7p1": "Fare questo test insieme è già un atto forte. Parlate dei risultati.",
+    "s7p2": "Se sentite che la vostra coppia ha bisogno di aiuto professionale, non esitate a consultare un terapeuta di coppia.",
+    "s7p3": "E se questo test vi ha mostrato che la vostra relazione è solida — assaporatelo. Le buone relazioni sono il risultato di scelte, impegno e amore quotidiano.",
     "faqTitle": "Domande frequenti",
-    "faq1Q": "Questo test di coppia sana è davvero gratuito?", "faq1A": "Sì, il nostro test è 100% gratuito, senza registrazione e senza limiti di utilizzo.",
-    "faq2Q": "Come funziona il punteggio del test?", "faq2A": "Ogni partner risponde alle stesse 20 domande. Ogni risposta assegna tra 0,5 e 2 punti.",
-    "faq3Q": "Cosa fare se i nostri punteggi individuali sono molto diversi?", "faq3A": "Una differenza importante indica che non percepite la vostra relazione allo stesso modo. È un'informazione preziosa da discutere insieme."
+    "faq1Q": "Questo test di coppia sana è davvero gratuito?",
+    "faq1A": "Sì, il nostro test è 100% gratuito, senza registrazione e senza limiti di utilizzo.",
+    "faq2Q": "Come funziona il punteggio del test?",
+    "faq2A": "Ogni partner risponde alle stesse 20 domande. Ogni risposta assegna tra 0,5 e 2 punti.",
+    "faq3Q": "Cosa fare se i nostri punteggi individuali sono molto diversi?",
+    "faq3A": "Una differenza importante indica che non percepite la vostra relazione allo stesso modo. È un'informazione preziosa da discutere insieme."
   }
 }

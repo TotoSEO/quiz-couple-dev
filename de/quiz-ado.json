@@ -5,7 +5,8 @@
     "description": "Ihr seid seit ein paar Wochen, Monaten oder vielleicht länger zusammen. Und irgendwann kommt die Frage: Ist das was Ernstes oder nur eine schöne Phase? Dieses Quiz löst nicht alles — aber es stellt die richtigen Fragen.",
     "feat1": "Zu zweit, auf Distanz",
     "feat2": "Am Handy",
-    "feat3": "20 Fragen / Sitzung"
+    "feat3": "20 Fragen / Sitzung",
+    "titleHighlight": "Teenager"
   },
   "ui": {
     "multiplayer": "Quiz für 2 Spieler",

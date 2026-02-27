@@ -3,7 +3,8 @@
     "badge": "Free • No registration • 5 min",
     "title": "Is Your Relationship Healthy? - Free Online Quiz",
     "intro1": "You're happy together… but are you really? This is a question we don't always ask openly, sometimes out of fear of the answer, sometimes because we lack the tools to think about it. This healthy couple test is here to help you both see more clearly, by playing the game honestly.",
-    "intro2": "This interactive quiz is designed to be taken as a couple. Each partner answers the same questions separately. Your scores are then added together to give an overall result out of 80 points. No right or wrong answers — just your reality, seen up close."
+    "intro2": "This interactive quiz is designed to be taken as a couple. Each partner answers the same questions separately. Your scores are then added together to give an overall result out of 80 points. No right or wrong answers — just your reality, seen up close.",
+    "titleHighlight": "Healthy"
   },
   "quiz": {
     "sectionTitle": "Evaluate if your couple is healthy here!"
@@ -28,13 +29,37 @@
     "s2h3_5Title": "Mutual support and kindness",
     "s2h3_5Text": "Is your partner your biggest supporter? In a fulfilling relationship, you celebrate each other's successes without jealousy. You're there in difficult times, not just in good ones. This unconditional support is one of the most powerful indicators of a quality relationship.",
     "s3Title": "Healthy relationship vs toxic relationship: some benchmarks",
-    "tableHeaders": ["Indicator", "Healthy couple", "Warning sign"],
+    "tableHeaders": [
+      "Indicator",
+      "Healthy couple",
+      "Warning sign"
+    ],
     "tableRows": [
-      ["Communication", "Open, caring, possible even on difficult topics", "Heavy silences, avoided conflicts, hurtful words"],
-      ["Trust", "Each naturally trusts the other", "Excessive jealousy, need for control, checking"],
-      ["Individuality", "Each keeps their friends, hobbies, ambitions", "One erases the other, total dependence"],
-      ["Conflicts", "Lead to solutions, no lasting resentment", "Verbal violence, return to old wounds"],
-      ["Well-being", "You feel fulfilled, energized", "You feel exhausted, anxious, diminished"]
+      [
+        "Communication",
+        "Open, caring, possible even on difficult topics",
+        "Heavy silences, avoided conflicts, hurtful words"
+      ],
+      [
+        "Trust",
+        "Each naturally trusts the other",
+        "Excessive jealousy, need for control, checking"
+      ],
+      [
+        "Individuality",
+        "Each keeps their friends, hobbies, ambitions",
+        "One erases the other, total dependence"
+      ],
+      [
+        "Conflicts",
+        "Lead to solutions, no lasting resentment",
+        "Verbal violence, return to old wounds"
+      ],
+      [
+        "Well-being",
+        "You feel fulfilled, energized",
+        "You feel exhausted, anxious, diminished"
+      ]
     ],
     "s4Title": "Warning signs you should watch for",
     "s4Intro": "Some behaviors, even normalized in a relationship, deserve attention. This isn't to point fingers or blame — but to see things as they are.",

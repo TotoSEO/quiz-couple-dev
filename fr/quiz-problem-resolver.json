@@ -5,14 +5,28 @@
     "title2": "pour couple",
     "title3": "avec l'IA",
     "description": "Notre IA analyse votre situation de manière <strong>complètement impartiale</strong> pour vous aider à résoudre vos conflits et comprendre les responsabilités de chacun.",
-    "features": ["100% Confidentiel", "Analyse impartiale", "IA avancée"]
+    "features": [
+      "100% Confidentiel",
+      "Analyse impartiale",
+      "IA avancée"
+    ],
+    "titleHighlight": "Intelligence Artificielle"
   },
   "howItWorks": {
     "title": "Comment ça fonctionne ?",
     "steps": [
-      { "title": "Décrivez le contexte", "desc": "Expliquez la situation de manière neutre et objective." },
-      { "title": "Chacun s'exprime", "desc": "Chaque personne donne sa version des faits." },
-      { "title": "L'IA analyse", "desc": "Obtenez une analyse impartiale avec des conseils." }
+      {
+        "title": "Décrivez le contexte",
+        "desc": "Expliquez la situation de manière neutre et objective."
+      },
+      {
+        "title": "Chacun s'exprime",
+        "desc": "Chaque personne donne sa version des faits."
+      },
+      {
+        "title": "L'IA analyse",
+        "desc": "Obtenez une analyse impartiale avec des conseils."
+      }
     ]
   },
   "seo": {
@@ -41,23 +55,61 @@
     "s3": {
       "title": "10 conseils pour résoudre un problème de couple",
       "tips": [
-        { "h": "Communiquer au bon moment, pas sous l'émotion", "p": "Le timing est crucial. Aborder un sujet sensible quand on est épuisé, énervé ou pressé, c'est la garantie d'une dispute. Attendez le bon moment : quand vous êtes tous les deux disponibles, calmes et disposés à vraiment parler." },
-        { "h": "Parler de soi sans accuser l'autre", "p": "Remplacez les \"tu\" par des \"je\". Au lieu de \"Tu ne m'écoutes jamais\", essayez \"Je me sens ignoré quand je parle et que tu regardes ton téléphone\". Le message passe, sans mettre l'autre sur la défensive." },
-        { "h": "Apprendre à écouter sans préparer sa réponse", "p": "On a tous cette tendance : pendant que l'autre parle, on prépare déjà notre contre-argument. Faites l'effort conscient d'écouter jusqu'au bout, de comprendre, avant de répondre." },
-        { "h": "Accepter que l'autre ait un ressenti différent", "p": "Deux personnes peuvent vivre la même situation et ressentir des choses complètement différentes. Aucun des deux n'a tort. Accepter cette réalité, c'est arrêter de vouloir convaincre l'autre que sa perception est fausse." },
-        { "h": "Éviter les reproches généralisants (\"toujours\", \"jamais\")", "p": "\"Tu fais toujours ça\", \"Tu ne fais jamais attention\"... Ces mots sont des bombes relationnelles. Ils exagèrent la réalité et mettent l'autre dans une position impossible. Restez factuel." },
-        { "h": "Chercher une solution plutôt qu'un coupable", "p": "L'objectif d'une discussion de couple n'est pas de gagner ou de prouver que l'autre a tort. C'est de trouver ensemble comment aller mieux. Demandez-vous plutôt : \"Comment on fait pour que ça ne se reproduise plus ?\"" },
-        { "h": "Respecter les besoins et les limites de chacun", "p": "Chacun a ses propres besoins : de solitude, de parole, de gestes d'affection, de sécurité financière... Les connaître et les respecter, c'est la base d'une relation saine." },
-        { "h": "Faire des pauses quand la discussion devient trop tendue", "p": "Parfois, le mieux est de s'arrêter. Quand les voix montent et que les mots dépassent la pensée, proposez une pause. Ce n'est pas fuir le problème, c'est le protéger d'une escalade destructrice." },
-        { "h": "Ne pas laisser les non-dits s'accumuler", "p": "Les petites frustrations qu'on garde pour soi finissent par former une montagne. Apprenez à exprimer vos ressentis au fur et à mesure, avant qu'ils ne deviennent des rancœurs." },
-        { "h": "Se faire aider quand le dialogue tourne en rond", "p": "Reconnaître qu'on n'y arrive pas seuls n'est pas un échec, c'est une preuve de maturité. Un regard extérieur peut débloquer des situations qui semblaient sans issue." }
+        {
+          "h": "Communiquer au bon moment, pas sous l'émotion",
+          "p": "Le timing est crucial. Aborder un sujet sensible quand on est épuisé, énervé ou pressé, c'est la garantie d'une dispute. Attendez le bon moment : quand vous êtes tous les deux disponibles, calmes et disposés à vraiment parler."
+        },
+        {
+          "h": "Parler de soi sans accuser l'autre",
+          "p": "Remplacez les \"tu\" par des \"je\". Au lieu de \"Tu ne m'écoutes jamais\", essayez \"Je me sens ignoré quand je parle et que tu regardes ton téléphone\". Le message passe, sans mettre l'autre sur la défensive."
+        },
+        {
+          "h": "Apprendre à écouter sans préparer sa réponse",
+          "p": "On a tous cette tendance : pendant que l'autre parle, on prépare déjà notre contre-argument. Faites l'effort conscient d'écouter jusqu'au bout, de comprendre, avant de répondre."
+        },
+        {
+          "h": "Accepter que l'autre ait un ressenti différent",
+          "p": "Deux personnes peuvent vivre la même situation et ressentir des choses complètement différentes. Aucun des deux n'a tort. Accepter cette réalité, c'est arrêter de vouloir convaincre l'autre que sa perception est fausse."
+        },
+        {
+          "h": "Éviter les reproches généralisants (\"toujours\", \"jamais\")",
+          "p": "\"Tu fais toujours ça\", \"Tu ne fais jamais attention\"... Ces mots sont des bombes relationnelles. Ils exagèrent la réalité et mettent l'autre dans une position impossible. Restez factuel."
+        },
+        {
+          "h": "Chercher une solution plutôt qu'un coupable",
+          "p": "L'objectif d'une discussion de couple n'est pas de gagner ou de prouver que l'autre a tort. C'est de trouver ensemble comment aller mieux. Demandez-vous plutôt : \"Comment on fait pour que ça ne se reproduise plus ?\""
+        },
+        {
+          "h": "Respecter les besoins et les limites de chacun",
+          "p": "Chacun a ses propres besoins : de solitude, de parole, de gestes d'affection, de sécurité financière... Les connaître et les respecter, c'est la base d'une relation saine."
+        },
+        {
+          "h": "Faire des pauses quand la discussion devient trop tendue",
+          "p": "Parfois, le mieux est de s'arrêter. Quand les voix montent et que les mots dépassent la pensée, proposez une pause. Ce n'est pas fuir le problème, c'est le protéger d'une escalade destructrice."
+        },
+        {
+          "h": "Ne pas laisser les non-dits s'accumuler",
+          "p": "Les petites frustrations qu'on garde pour soi finissent par former une montagne. Apprenez à exprimer vos ressentis au fur et à mesure, avant qu'ils ne deviennent des rancœurs."
+        },
+        {
+          "h": "Se faire aider quand le dialogue tourne en rond",
+          "p": "Reconnaître qu'on n'y arrive pas seuls n'est pas un échec, c'est une preuve de maturité. Un regard extérieur peut débloquer des situations qui semblaient sans issue."
+        }
       ]
     },
     "s4": {
       "title": "Les erreurs à éviter quand on essaie de résoudre un conflit de couple",
       "items": [
-        { "h": "Chercher à avoir raison plutôt qu'à se comprendre", "p1": "C'est le piège classique. On veut tellement prouver qu'on a raison qu'on en oublie l'essentiel : se comprendre.", "p2": "La victoire relationnelle, c'est quand les deux se sentent entendus." },
-        { "h": "Ignorer les besoins émotionnels de l'autre", "p1": "Votre partenaire n'attend pas forcément que vous résolviez son problème. Parfois, il ou elle a juste besoin d'être entendu, compris, soutenu.", "p2": "Cette simple question peut tout changer." }
+        {
+          "h": "Chercher à avoir raison plutôt qu'à se comprendre",
+          "p1": "C'est le piège classique. On veut tellement prouver qu'on a raison qu'on en oublie l'essentiel : se comprendre.",
+          "p2": "La victoire relationnelle, c'est quand les deux se sentent entendus."
+        },
+        {
+          "h": "Ignorer les besoins émotionnels de l'autre",
+          "p1": "Votre partenaire n'attend pas forcément que vous résolviez son problème. Parfois, il ou elle a juste besoin d'être entendu, compris, soutenu.",
+          "p2": "Cette simple question peut tout changer."
+        }
       ]
     },
     "s5": {

@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Piccante • 15 domande • 5 min",
     "title": "Quiz Coppia Piccante",
-    "titleHighlight": "Dai pepe alla tua Relazione",
+    "titleHighlight": "Piccante",
     "description": "Esplora la tua complicità intima con questo quiz sensuale. 15 domande per riaccendere la fiamma e scoprire il tuo livello di passione!"
   },
   "seo": {
@@ -81,10 +81,26 @@
         "example": "Esempio di tema trattato"
       },
       "rows": {
-        "light": { "type": "Domanda leggera", "objective": "Alleggerire l'atmosfera", "example": "Abitudini di coppia" },
-        "introspective": { "type": "Domanda introspettiva", "objective": "Favorire la riflessione", "example": "Aspettative relazionali" },
-        "suggestive": { "type": "Domanda suggestiva", "objective": "Stimolare la curiosità", "example": "Preferenze e desideri" },
-        "open": { "type": "Domanda aperta", "objective": "Incoraggiare lo scambio", "example": "Visione della coppia" }
+        "light": {
+          "type": "Domanda leggera",
+          "objective": "Alleggerire l'atmosfera",
+          "example": "Abitudini di coppia"
+        },
+        "introspective": {
+          "type": "Domanda introspettiva",
+          "objective": "Favorire la riflessione",
+          "example": "Aspettative relazionali"
+        },
+        "suggestive": {
+          "type": "Domanda suggestiva",
+          "objective": "Stimolare la curiosità",
+          "example": "Preferenze e desideri"
+        },
+        "open": {
+          "type": "Domanda aperta",
+          "objective": "Incoraggiare lo scambio",
+          "example": "Visione della coppia"
+        }
       }
     },
     "table2": {
@@ -94,10 +110,26 @@
         "benefit": "Beneficio principale"
       },
       "rows": {
-        "evening": { "context": "Serata a due", "format": "Quiz orale", "benefit": "Spontaneità" },
-        "distance": { "context": "Coppia a distanza", "format": "Quiz scritto", "benefit": "Continuità" },
-        "weekend": { "context": "Weekend relax", "format": "Misto", "benefit": "Immersione" },
-        "dialogue": { "context": "Ripresa del dialogo", "format": "Domande aperte", "benefit": "Comunicazione" }
+        "evening": {
+          "context": "Serata a due",
+          "format": "Quiz orale",
+          "benefit": "Spontaneità"
+        },
+        "distance": {
+          "context": "Coppia a distanza",
+          "format": "Quiz scritto",
+          "benefit": "Continuità"
+        },
+        "weekend": {
+          "context": "Weekend relax",
+          "format": "Misto",
+          "benefit": "Immersione"
+        },
+        "dialogue": {
+          "context": "Ripresa del dialogo",
+          "format": "Domande aperte",
+          "benefit": "Comunicazione"
+        }
       }
     },
     "faq": {

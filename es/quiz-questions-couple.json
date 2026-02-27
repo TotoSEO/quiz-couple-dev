@@ -1,9 +1,13 @@
 {
   "hero": {
     "title": "120 preguntas para parejas para hacerse mutuamente",
-    "description": "Preguntas clasificadas por tema para conoceros mejor, fortalecer vuestra complicidad y crear momentos de intercambio auténtico."
+    "description": "Preguntas clasificadas por tema para conoceros mejor, fortalecer vuestra complicidad y crear momentos de intercambio auténtico.",
+    "titleHighlight": "120 preguntas",
+    "badge": "120 preguntas • Gratis"
   },
-  "random": { "button": "Pregunta aleatoria" },
+  "random": {
+    "button": "Pregunta aleatoria"
+  },
   "seo": {
     "s1": {
       "title": "¿Por qué hacerse preguntas en pareja?",
@@ -14,13 +18,43 @@
     "s2": {
       "title": "Las 5 categorías de preguntas para parejas",
       "intro": "Nuestras 120 preguntas están divididas en 5 temáticas complementarias, diseñadas para cubrir todos los aspectos de vuestra relación. Cada categoría responde a una necesidad específica y permite explorar una faceta diferente de vuestra pareja.",
-      "tableHeaders": { "category": "Categoría", "goal": "Objetivo", "example": "Ejemplo de pregunta", "count": "Cantidad" },
+      "tableHeaders": {
+        "category": "Categoría",
+        "goal": "Objetivo",
+        "example": "Ejemplo de pregunta",
+        "count": "Cantidad"
+      },
       "rows": [
-        { "cat": "🧠 Conocerse", "goal": "Profundizar el conocimiento mutuo más allá de lo evidente", "example": "¿Qué decisión pasada te cambió más?", "count": "24" },
-        { "cat": "🚀 Proyectos futuros", "goal": "Alinear visiones y construir juntos", "example": "¿Dónde te ves en 5 años?", "count": "24" },
-        { "cat": "💕 Intimidad", "goal": "Reforzar el vínculo emocional y afectivo", "example": "¿Qué te hace sentir más amado/a?", "count": "24" },
-        { "cat": "😄 Diversión", "goal": "Aportar ligereza y risas a vuestra relación", "example": "Si nuestra pareja fuera una película, ¿cuál sería el título?", "count": "24" },
-        { "cat": "💭 Preguntas profundas", "goal": "Explorar valores, miedos y filosofía de vida", "example": "¿Qué le da sentido a tu vida?", "count": "24" }
+        {
+          "cat": "🧠 Conocerse",
+          "goal": "Profundizar el conocimiento mutuo más allá de lo evidente",
+          "example": "¿Qué decisión pasada te cambió más?",
+          "count": "24"
+        },
+        {
+          "cat": "🚀 Proyectos futuros",
+          "goal": "Alinear visiones y construir juntos",
+          "example": "¿Dónde te ves en 5 años?",
+          "count": "24"
+        },
+        {
+          "cat": "💕 Intimidad",
+          "goal": "Reforzar el vínculo emocional y afectivo",
+          "example": "¿Qué te hace sentir más amado/a?",
+          "count": "24"
+        },
+        {
+          "cat": "😄 Diversión",
+          "goal": "Aportar ligereza y risas a vuestra relación",
+          "example": "Si nuestra pareja fuera una película, ¿cuál sería el título?",
+          "count": "24"
+        },
+        {
+          "cat": "💭 Preguntas profundas",
+          "goal": "Explorar valores, miedos y filosofía de vida",
+          "example": "¿Qué le da sentido a tu vida?",
+          "count": "24"
+        }
       ],
       "outro": "Esta diversidad temática os permite variar los intercambios según vuestro estado de ánimo: una conversación ligera después de cenar, una discusión profunda durante un paseo, o un momento de complicidad íntima antes de dormir."
     },
@@ -28,32 +62,79 @@
       "title": "¿Cuándo usar estas preguntas de pareja?",
       "intro": "No hay mal momento para hacerse preguntas en pareja. Aquí están las situaciones donde estas preguntas son particularmente útiles:",
       "items": [
-        { "title": "Al inicio de la relación", "desc": "Los primeros meses son cruciales para construir bases sólidas. Estas preguntas os ayudan a ir más allá de las conversaciones superficiales y descubrir la personalidad profunda del otro." },
-        { "title": "Después de varios años juntos", "desc": "La rutina puede apagar la curiosidad. Hacerse preguntas nuevas permite redescubrir a tu pareja, reavivar la llama y mantener una relación viva." },
-        { "title": "En pareja a distancia", "desc": "Cuando los kilómetros os separan, la comunicación es vuestro único vínculo. Estas preguntas transforman una videollamada ordinaria en un verdadero momento de conexión." },
-        { "title": "Durante una velada para dos", "desc": "En lugar de mirar una pantalla, transforma vuestra velada en un juego de preguntas y respuestas cómplice. Una copa de vino, sin teléfonos, y preguntas que importan." },
-        { "title": "En período de cuestionamiento", "desc": "Cuando surgen dudas o tensiones, estas preguntas abren el diálogo de manera benevolente, sin confrontación directa." }
+        {
+          "title": "Al inicio de la relación",
+          "desc": "Los primeros meses son cruciales para construir bases sólidas. Estas preguntas os ayudan a ir más allá de las conversaciones superficiales y descubrir la personalidad profunda del otro."
+        },
+        {
+          "title": "Después de varios años juntos",
+          "desc": "La rutina puede apagar la curiosidad. Hacerse preguntas nuevas permite redescubrir a tu pareja, reavivar la llama y mantener una relación viva."
+        },
+        {
+          "title": "En pareja a distancia",
+          "desc": "Cuando los kilómetros os separan, la comunicación es vuestro único vínculo. Estas preguntas transforman una videollamada ordinaria en un verdadero momento de conexión."
+        },
+        {
+          "title": "Durante una velada para dos",
+          "desc": "En lugar de mirar una pantalla, transforma vuestra velada en un juego de preguntas y respuestas cómplice. Una copa de vino, sin teléfonos, y preguntas que importan."
+        },
+        {
+          "title": "En período de cuestionamiento",
+          "desc": "Cuando surgen dudas o tensiones, estas preguntas abren el diálogo de manera benevolente, sin confrontación directa."
+        }
       ]
     },
     "s4": {
       "title": "¿Cómo usar bien estas preguntas? Nuestros consejos",
       "intro": "Para sacar el máximo provecho de estas preguntas y convertirlas en un verdadero momento de calidad, aquí van nuestras recomendaciones concretas:",
       "tips": [
-        { "emoji": "🎯", "title": "Limitaos a 3-5 preguntas por sesión", "desc": "Un intercambio de calidad vale más que un interrogatorio. Haced algunas preguntas y tomaos el tiempo de escuchar realmente las respuestas. Dejad que la conversación fluya naturalmente." },
-        { "emoji": "👂", "title": "Practicad la escucha activa", "desc": "No penséis en vuestra próxima pregunta mientras el otro habla. Escuchad de verdad, haced preguntas de seguimiento, mostrad que la respuesta os interesa sinceramente." },
-        { "emoji": "🛑", "title": "Respetad los límites", "desc": "Si una pregunta incomoda a vuestra pareja, pasad a la siguiente sin insistir. Cada uno tiene su ritmo y sus zonas de confort. El objetivo es acercaros, no forzar confidencias." },
-        { "emoji": "💖", "title": "Cread un clima acogedor", "desc": "Sin juicios ni burlas. Un espacio seguro donde cada uno pueda expresarse libremente es la condición esencial para que estas preguntas den sus frutos." },
-        { "emoji": "🔄", "title": "Responded también a las preguntas", "desc": "El intercambio debe ser recíproco. Después de escuchar la respuesta de vuestra pareja, compartid la vuestra. Es esta reciprocidad la que crea la verdadera conexión." }
+        {
+          "emoji": "🎯",
+          "title": "Limitaos a 3-5 preguntas por sesión",
+          "desc": "Un intercambio de calidad vale más que un interrogatorio. Haced algunas preguntas y tomaos el tiempo de escuchar realmente las respuestas. Dejad que la conversación fluya naturalmente."
+        },
+        {
+          "emoji": "👂",
+          "title": "Practicad la escucha activa",
+          "desc": "No penséis en vuestra próxima pregunta mientras el otro habla. Escuchad de verdad, haced preguntas de seguimiento, mostrad que la respuesta os interesa sinceramente."
+        },
+        {
+          "emoji": "🛑",
+          "title": "Respetad los límites",
+          "desc": "Si una pregunta incomoda a vuestra pareja, pasad a la siguiente sin insistir. Cada uno tiene su ritmo y sus zonas de confort. El objetivo es acercaros, no forzar confidencias."
+        },
+        {
+          "emoji": "💖",
+          "title": "Cread un clima acogedor",
+          "desc": "Sin juicios ni burlas. Un espacio seguro donde cada uno pueda expresarse libremente es la condición esencial para que estas preguntas den sus frutos."
+        },
+        {
+          "emoji": "🔄",
+          "title": "Responded también a las preguntas",
+          "desc": "El intercambio debe ser recíproco. Después de escuchar la respuesta de vuestra pareja, compartid la vuestra. Es esta reciprocidad la que crea la verdadera conexión."
+        }
       ]
     },
     "s5": {
       "title": "¿A quién van dirigidas estas preguntas?",
       "p1": "Estas 120 preguntas están diseñadas para todo tipo de parejas, sin importar su antigüedad o configuración:",
       "audiences": [
-        { "title": "Parejas recientes", "desc": "En fase de descubrimiento, estas preguntas aceleran el conocimiento mutuo y sientan las bases de una comunicación abierta desde el principio." },
-        { "title": "Parejas de larga duración", "desc": "Juntos desde hace años, ¿creéis saberlo todo del otro? Estas preguntas os demostrarán lo contrario y reavivarán vuestra curiosidad." },
-        { "title": "Parejas a distancia", "desc": "Separados geográficamente, estas preguntas son una herramienta valiosa para mantener un vínculo fuerte a pesar de los kilómetros." },
-        { "title": "Parejas en reconexión", "desc": "Después de un período difícil o demasiada rutina, estas preguntas ayudan a reencontrar el camino del diálogo." }
+        {
+          "title": "Parejas recientes",
+          "desc": "En fase de descubrimiento, estas preguntas aceleran el conocimiento mutuo y sientan las bases de una comunicación abierta desde el principio."
+        },
+        {
+          "title": "Parejas de larga duración",
+          "desc": "Juntos desde hace años, ¿creéis saberlo todo del otro? Estas preguntas os demostrarán lo contrario y reavivarán vuestra curiosidad."
+        },
+        {
+          "title": "Parejas a distancia",
+          "desc": "Separados geográficamente, estas preguntas son una herramienta valiosa para mantener un vínculo fuerte a pesar de los kilómetros."
+        },
+        {
+          "title": "Parejas en reconexión",
+          "desc": "Después de un período difícil o demasiada rutina, estas preguntas ayudan a reencontrar el camino del diálogo."
+        }
       ]
     },
     "s6": {
@@ -64,13 +145,34 @@
     },
     "faqTitle": "Preguntas frecuentes sobre las preguntas de pareja",
     "faq": [
-      { "q": "¿Cuántas preguntas hacer seguidas?", "a": "Recomendamos hacer de 3 a 5 preguntas por sesión para mantener el intercambio natural y evitar el cansancio. El objetivo es crear un verdadero diálogo, no un cuestionario." },
-      { "q": "¿Es adecuado para todas las parejas?", "a": "Sí, estas preguntas están diseñadas para todas las parejas, ya sea juntas desde hace semanas o años. Las 5 categorías permiten elegir el nivel de profundidad adecuado a vuestra situación." },
-      { "q": "¿Se pueden usar estas preguntas a distancia?", "a": "¡Absolutamente! Son ideales para parejas a distancia. Podéis hacerlas durante una videollamada, por mensaje, o incluso enviaros una pregunta al día para mantener la conexión." },
-      { "q": "¿Qué hacer si una pregunta incomoda?", "a": "Simplemente pasad a otra pregunta sin presión. Respetar los límites del otro es esencial para mantener un clima de confianza." },
-      { "q": "¿Hay que responder a todas las preguntas?", "a": "No, elegid las que os interesen y correspondan al momento. Lo importante es la calidad del intercambio, no la cantidad de preguntas." },
-      { "q": "¿Con qué frecuencia usar estas preguntas?", "a": "No hay regla estricta. Algunas parejas prefieren una pregunta al día, otras una sesión de 5 preguntas el fin de semana. Encontrad el ritmo que os convenga." },
-      { "q": "¿Pueden estas preguntas reemplazar la terapia de pareja?", "a": "No, son una herramienta de comunicación complementaria. Si atravesáis dificultades serias, recomendamos consultar a un profesional. Nuestras preguntas pueden ser un excelente complemento." }
+      {
+        "q": "¿Cuántas preguntas hacer seguidas?",
+        "a": "Recomendamos hacer de 3 a 5 preguntas por sesión para mantener el intercambio natural y evitar el cansancio. El objetivo es crear un verdadero diálogo, no un cuestionario."
+      },
+      {
+        "q": "¿Es adecuado para todas las parejas?",
+        "a": "Sí, estas preguntas están diseñadas para todas las parejas, ya sea juntas desde hace semanas o años. Las 5 categorías permiten elegir el nivel de profundidad adecuado a vuestra situación."
+      },
+      {
+        "q": "¿Se pueden usar estas preguntas a distancia?",
+        "a": "¡Absolutamente! Son ideales para parejas a distancia. Podéis hacerlas durante una videollamada, por mensaje, o incluso enviaros una pregunta al día para mantener la conexión."
+      },
+      {
+        "q": "¿Qué hacer si una pregunta incomoda?",
+        "a": "Simplemente pasad a otra pregunta sin presión. Respetar los límites del otro es esencial para mantener un clima de confianza."
+      },
+      {
+        "q": "¿Hay que responder a todas las preguntas?",
+        "a": "No, elegid las que os interesen y correspondan al momento. Lo importante es la calidad del intercambio, no la cantidad de preguntas."
+      },
+      {
+        "q": "¿Con qué frecuencia usar estas preguntas?",
+        "a": "No hay regla estricta. Algunas parejas prefieren una pregunta al día, otras una sesión de 5 preguntas el fin de semana. Encontrad el ritmo que os convenga."
+      },
+      {
+        "q": "¿Pueden estas preguntas reemplazar la terapia de pareja?",
+        "a": "No, son una herramienta de comunicación complementaria. Si atravesáis dificultades serias, recomendamos consultar a un profesional. Nuestras preguntas pueden ser un excelente complemento."
+      }
     ]
   },
   "conclusion": "Estas 120 preguntas están aquí para ayudaros a crear momentos de intercambio sincero con vuestra pareja. Tomaos tiempo para escucharos, descubriros y fortalecer vuestra conexión.",

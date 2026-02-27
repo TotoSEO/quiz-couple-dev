@@ -3,45 +3,99 @@
     "badge": "Kostenlos • Ohne Anmeldung • 5 Min",
     "title": "Ist eure Beziehung gesund? - Kostenloser Online-Test",
     "intro1": "Ihr seid glücklich zusammen… aber seid ihr es wirklich? Das ist eine Frage, die man sich nicht immer offen stellt. Dieser Test für gesunde Beziehungen hilft euch, klarer zu sehen.",
-    "intro2": "Dieses interaktive Quiz ist für Paare konzipiert. Jeder Partner beantwortet die gleichen Fragen separat. Eure Punkte werden addiert, um ein Gesamtergebnis von 80 Punkten zu ergeben."
+    "intro2": "Dieses interaktive Quiz ist für Paare konzipiert. Jeder Partner beantwortet die gleichen Fragen separat. Eure Punkte werden addiert, um ein Gesamtergebnis von 80 Punkten zu ergeben.",
+    "titleHighlight": "gesund"
   },
-  "quiz": { "sectionTitle": "Bewertet hier, ob eure Beziehung gesund ist!" },
-  "results": { "gapWarning": "Es gibt einen signifikanten Unterschied zwischen euren beiden Ergebnissen. {{name1}} scheint die Beziehung anders wahrzunehmen als {{name2}}. Das ist eine gute Gelegenheit, darüber zu sprechen." },
+  "quiz": {
+    "sectionTitle": "Bewertet hier, ob eure Beziehung gesund ist!"
+  },
+  "results": {
+    "gapWarning": "Es gibt einen signifikanten Unterschied zwischen euren beiden Ergebnissen. {{name1}} scheint die Beziehung anders wahrzunehmen als {{name2}}. Das ist eine gute Gelegenheit, darüber zu sprechen."
+  },
   "seo": {
     "s1Title": "Was ein gesundes Paar wirklich bedeutet",
     "s1p1": "Man hört oft von gesunden Paaren, als wäre es ein Kästchen zum Ankreuzen. Ein unerreichbares Ideal für Menschen, die sich lieben ohne jemals zu streiten. In Wirklichkeit ist ein gesundes Paar kein perfektes Paar. Es ist ein lebendiges Paar, bestehend aus zwei Individuen, die zusammenarbeiten, die Fehler machen und darauf zurückkommen können.",
     "s1p2": "Der Unterschied zwischen einer erfüllenden und einer toxischen Beziehung liegt nicht in der Intensität der Gefühle. Er liegt in täglichen Gewohnheiten: wie ihr sprecht, wie ihr mit Meinungsverschiedenheiten umgeht, wie ihr euch behandelt, wenn niemand zuschaut.",
     "s2Title": "Die Säulen einer gesunden Beziehung",
     "s2Intro": "Ein gesundes Paar ruht auf mehreren voneinander abhängigen Fundamenten. Eine davon zu entfernen kann das Ganze schwächen.",
-    "s2h3_1Title": "Authentische Kommunikation", "s2h3_1Text": "Kommunizieren bedeutet nicht viel reden. Es bedeutet, dass jeder seine Gefühle, Bedürfnisse und Unzufriedenheiten ausdrücken kann, ohne Angst vor Urteil, Spott oder Ignorierung zu haben.",
-    "s2h3_2Title": "Vertrauen und gegenseitiger Respekt", "s2h3_2Text": "Vertrauen wird nicht verordnet, es wird durch wiederholte Handlungen aufgebaut. Versprechen halten, die Grenzen des anderen respektieren, die Schwächen des anderen nicht als Waffe bei Streit einsetzen.",
-    "s2h3_3Title": "Gleichgewicht zwischen gemeinsamem und persönlichem Leben", "s2h3_3Text": "Jemanden zu lieben bedeutet nicht, mit ihm zu verschmelzen. Ein gesundes Paar sind zwei Individuen, die Individuen bleiben. Jeder hat seine Freunde, Leidenschaften, Ambitionen.",
-    "s2h3_4Title": "Gesunde Konfliktbewältigung", "s2h3_4Text": "Konflikte sind kein Zeichen dafür, dass etwas nicht stimmt. Sie gehören zu jeder menschlichen Beziehung. Was zählt ist, was man daraus macht. In einem gesunden Paar eskalieren Streitigkeiten nicht zu persönlichen Angriffen.",
-    "s2h3_5Title": "Gegenseitige Unterstützung und Wohlwollen", "s2h3_5Text": "Ist euer Partner euer größter Unterstützer? In einer erfüllenden Beziehung feiert man die Erfolge des anderen ohne Eifersucht. Man ist in schwierigen Zeiten da, nicht nur in guten.",
+    "s2h3_1Title": "Authentische Kommunikation",
+    "s2h3_1Text": "Kommunizieren bedeutet nicht viel reden. Es bedeutet, dass jeder seine Gefühle, Bedürfnisse und Unzufriedenheiten ausdrücken kann, ohne Angst vor Urteil, Spott oder Ignorierung zu haben.",
+    "s2h3_2Title": "Vertrauen und gegenseitiger Respekt",
+    "s2h3_2Text": "Vertrauen wird nicht verordnet, es wird durch wiederholte Handlungen aufgebaut. Versprechen halten, die Grenzen des anderen respektieren, die Schwächen des anderen nicht als Waffe bei Streit einsetzen.",
+    "s2h3_3Title": "Gleichgewicht zwischen gemeinsamem und persönlichem Leben",
+    "s2h3_3Text": "Jemanden zu lieben bedeutet nicht, mit ihm zu verschmelzen. Ein gesundes Paar sind zwei Individuen, die Individuen bleiben. Jeder hat seine Freunde, Leidenschaften, Ambitionen.",
+    "s2h3_4Title": "Gesunde Konfliktbewältigung",
+    "s2h3_4Text": "Konflikte sind kein Zeichen dafür, dass etwas nicht stimmt. Sie gehören zu jeder menschlichen Beziehung. Was zählt ist, was man daraus macht. In einem gesunden Paar eskalieren Streitigkeiten nicht zu persönlichen Angriffen.",
+    "s2h3_5Title": "Gegenseitige Unterstützung und Wohlwollen",
+    "s2h3_5Text": "Ist euer Partner euer größter Unterstützer? In einer erfüllenden Beziehung feiert man die Erfolge des anderen ohne Eifersucht. Man ist in schwierigen Zeiten da, nicht nur in guten.",
     "s3Title": "Gesunde Beziehung vs toxische Beziehung: einige Orientierungspunkte",
-    "tableHeaders": ["Indikator", "Gesundes Paar", "Warnsignal"],
+    "tableHeaders": [
+      "Indikator",
+      "Gesundes Paar",
+      "Warnsignal"
+    ],
     "tableRows": [
-      ["Kommunikation", "Offen, wohlwollend, auch bei schwierigen Themen möglich", "Schwere Stille, vermiedene Konflikte, verletzende Worte"],
-      ["Vertrauen", "Jeder vertraut dem anderen natürlich", "Übermäßige Eifersucht, Kontrollbedürfnis, Überprüfungen"],
-      ["Individualität", "Jeder behält Freunde, Hobbys, Ambitionen", "Einer löscht den anderen aus, totale Abhängigkeit"],
-      ["Konflikte", "Führen zu Lösungen, kein dauerhafter Groll", "Verbale Gewalt, Rückkehr zu alten Wunden"],
-      ["Wohlbefinden", "Man fühlt sich erfüllt, energiegeladen", "Man fühlt sich erschöpft, ängstlich, vermindert"]
+      [
+        "Kommunikation",
+        "Offen, wohlwollend, auch bei schwierigen Themen möglich",
+        "Schwere Stille, vermiedene Konflikte, verletzende Worte"
+      ],
+      [
+        "Vertrauen",
+        "Jeder vertraut dem anderen natürlich",
+        "Übermäßige Eifersucht, Kontrollbedürfnis, Überprüfungen"
+      ],
+      [
+        "Individualität",
+        "Jeder behält Freunde, Hobbys, Ambitionen",
+        "Einer löscht den anderen aus, totale Abhängigkeit"
+      ],
+      [
+        "Konflikte",
+        "Führen zu Lösungen, kein dauerhafter Groll",
+        "Verbale Gewalt, Rückkehr zu alten Wunden"
+      ],
+      [
+        "Wohlbefinden",
+        "Man fühlt sich erfüllt, energiegeladen",
+        "Man fühlt sich erschöpft, ängstlich, vermindert"
+      ]
     ],
     "s4Title": "Warnsignale, auf die ihr achten solltet",
     "s4Intro": "Manche Verhaltensweisen, auch wenn sie in einer Beziehung normalisiert sind, verdienen Aufmerksamkeit.",
-    "s4Signals": ["Ihr habt Angst vor der Reaktion eures Partners, wenn ihr etwas ausdrückt.", "Streitigkeiten enden ohne echte Lösung und dieselben Themen kommen immer wieder.", "Einer von beiden verblasst ständig — seine Bedürfnisse, Wünsche, Identität.", "Es gab Demütigungen, Spott oder Herabsetzungen, auch 'im Scherz'.", "Ihr fühlt euch allein, selbst wenn ihr zusammen seid.", "Ihr fürchtet euch, eure wahren Gefühle zu teilen aus Angst vor Konflikt.", "Eure psychische Gesundheit, euer Selbstvertrauen oder eure Lebensfreude hat sich verschlechtert, seit ihr zusammen seid."],
+    "s4Signals": [
+      "Ihr habt Angst vor der Reaktion eures Partners, wenn ihr etwas ausdrückt.",
+      "Streitigkeiten enden ohne echte Lösung und dieselben Themen kommen immer wieder.",
+      "Einer von beiden verblasst ständig — seine Bedürfnisse, Wünsche, Identität.",
+      "Es gab Demütigungen, Spott oder Herabsetzungen, auch 'im Scherz'.",
+      "Ihr fühlt euch allein, selbst wenn ihr zusammen seid.",
+      "Ihr fürchtet euch, eure wahren Gefühle zu teilen aus Angst vor Konflikt.",
+      "Eure psychische Gesundheit, euer Selbstvertrauen oder eure Lebensfreude hat sich verschlechtert, seit ihr zusammen seid."
+    ],
     "s4Outro": "Diese Signale zu erkennen ist kein Versagen. Es ist der erste Schritt zu etwas Besserem.",
     "s5Title": "Wie interpretiert ihr euer Ergebnis?",
     "s5Intro": "Dieser Test wird mit insgesamt 80 Punkten bewertet (40 pro Partner, addiert). Hier eine indikative Lesehilfe.",
-    "s5r1Title": "Zwischen 0 und 30 Punkten — Fundamente zum (Wieder-)aufbauen", "s5r1Text": "Eure Beziehung durchläuft tiefe Turbulenzen. Mehrere wesentliche Säulen scheinen geschwächt. Dieses Ergebnis ist kein Urteil — es ist eine Information. Viele Paare haben schwierige Phasen gemeistert. Aber es erfordert aufrichtigen Willen von beiden Seiten.",
-    "s5r2Title": "Zwischen 31 und 52 Punkten — Ein Paar, das mehr Aufmerksamkeit verdient", "s5r2Text": "Es gibt positive Dinge in eurer Beziehung, aber einige Schattenseiten verdienen Aufmerksamkeit. Diese Phase ist oft die günstigste für Veränderung.",
-    "s5r3Title": "Zwischen 53 und 68 Punkten — Eine solide Beziehung mit Verbesserungspotenzial", "s5r3Text": "Euer Paar ist insgesamt gesund. Ihr habt gute Grundlagen. Einige Aspekte könnten verstärkt werden, und das ist normal.",
-    "s5r4Title": "Zwischen 69 und 80 Punkten — Eine erfüllende Beziehung", "s5r4Text": "Glückwunsch! Ihr habt etwas Solides und Respektvolles aufgebaut. Kümmert euch weiter darum. Diese Ergebnisse sind das Ergebnis täglicher Anstrengung.",
-    "s6Title": "Ist dieser Test zuverlässig?", "s6p1": "Dieses Quiz ist ein Reflexionswerkzeug, keine klinische Diagnose. Es wurde entwickelt, um euch einzuladen, eure Beziehung genau zu betrachten.", "s6p2": "Was diesem Test Wert gibt, ist die Ehrlichkeit, mit der ihr antwortet. Eure Beziehung verdient diese Ehrlichkeit.",
-    "s7Title": "Nach dem Test, und jetzt?", "s7p1": "Diesen Test zusammen zu machen ist bereits ein starker Akt. Sprecht über die Ergebnisse.", "s7p2": "Wenn ihr das Gefühl habt, professionelle Hilfe zu brauchen, zögert nicht, einen Paartherapeuten zu konsultieren.", "s7p3": "Und wenn dieser Test euch gezeigt hat, dass eure Beziehung solide ist — genießt es. Gute Beziehungen sind kein Zufall.",
+    "s5r1Title": "Zwischen 0 und 30 Punkten — Fundamente zum (Wieder-)aufbauen",
+    "s5r1Text": "Eure Beziehung durchläuft tiefe Turbulenzen. Mehrere wesentliche Säulen scheinen geschwächt. Dieses Ergebnis ist kein Urteil — es ist eine Information. Viele Paare haben schwierige Phasen gemeistert. Aber es erfordert aufrichtigen Willen von beiden Seiten.",
+    "s5r2Title": "Zwischen 31 und 52 Punkten — Ein Paar, das mehr Aufmerksamkeit verdient",
+    "s5r2Text": "Es gibt positive Dinge in eurer Beziehung, aber einige Schattenseiten verdienen Aufmerksamkeit. Diese Phase ist oft die günstigste für Veränderung.",
+    "s5r3Title": "Zwischen 53 und 68 Punkten — Eine solide Beziehung mit Verbesserungspotenzial",
+    "s5r3Text": "Euer Paar ist insgesamt gesund. Ihr habt gute Grundlagen. Einige Aspekte könnten verstärkt werden, und das ist normal.",
+    "s5r4Title": "Zwischen 69 und 80 Punkten — Eine erfüllende Beziehung",
+    "s5r4Text": "Glückwunsch! Ihr habt etwas Solides und Respektvolles aufgebaut. Kümmert euch weiter darum. Diese Ergebnisse sind das Ergebnis täglicher Anstrengung.",
+    "s6Title": "Ist dieser Test zuverlässig?",
+    "s6p1": "Dieses Quiz ist ein Reflexionswerkzeug, keine klinische Diagnose. Es wurde entwickelt, um euch einzuladen, eure Beziehung genau zu betrachten.",
+    "s6p2": "Was diesem Test Wert gibt, ist die Ehrlichkeit, mit der ihr antwortet. Eure Beziehung verdient diese Ehrlichkeit.",
+    "s7Title": "Nach dem Test, und jetzt?",
+    "s7p1": "Diesen Test zusammen zu machen ist bereits ein starker Akt. Sprecht über die Ergebnisse.",
+    "s7p2": "Wenn ihr das Gefühl habt, professionelle Hilfe zu brauchen, zögert nicht, einen Paartherapeuten zu konsultieren.",
+    "s7p3": "Und wenn dieser Test euch gezeigt hat, dass eure Beziehung solide ist — genießt es. Gute Beziehungen sind kein Zufall.",
     "faqTitle": "Häufig gestellte Fragen",
-    "faq1Q": "Ist dieser Test für gesunde Beziehungen wirklich kostenlos?", "faq1A": "Ja, unser Test ist 100% kostenlos, ohne Anmeldung und unbegrenzt nutzbar.",
-    "faq2Q": "Wie funktioniert die Bewertung des Tests?", "faq2A": "Jeder Partner beantwortet die gleichen 20 Fragen. Jede Antwort gibt zwischen 0,5 und 2 Punkte.",
-    "faq3Q": "Was tun, wenn unsere individuellen Ergebnisse sehr unterschiedlich sind?", "faq3A": "Ein großer Unterschied zeigt, dass ihr eure Beziehung nicht gleich wahrnehmt. Das ist eine wertvolle Information, die es gemeinsam zu besprechen gilt."
+    "faq1Q": "Ist dieser Test für gesunde Beziehungen wirklich kostenlos?",
+    "faq1A": "Ja, unser Test ist 100% kostenlos, ohne Anmeldung und unbegrenzt nutzbar.",
+    "faq2Q": "Wie funktioniert die Bewertung des Tests?",
+    "faq2A": "Jeder Partner beantwortet die gleichen 20 Fragen. Jede Antwort gibt zwischen 0,5 und 2 Punkte.",
+    "faq3Q": "Was tun, wenn unsere individuellen Ergebnisse sehr unterschiedlich sind?",
+    "faq3A": "Ein großer Unterschied zeigt, dass ihr eure Beziehung nicht gleich wahrnehmt. Das ist eine wertvolle Information, die es gemeinsam zu besprechen gilt."
   }
 }
