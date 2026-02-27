@@ -90,6 +90,10 @@
 
   // ── Reviews CRUD ──
   function loadReviews() {
+    var listEl = document.getElementById('admin-reviews-list');
+    listEl.innerHTML = '<p class="text-center text-muted-foreground py-8">Chargement...</p>';
+
+    // Try Edge Function first, fallback to direct REST API
     fetch(SUPABASE_URL + '/functions/v1/admin-reviews', {
       method: 'GET',
       headers: {
@@ -97,16 +101,38 @@
         'x-admin-token': adminToken
       }
     })
-    .then(function (res) { return res.json(); })
-    .then(function (reviews) {
-      if (Array.isArray(reviews)) {
+    .then(function (res) {
+      if (!res.ok) throw new Error('Edge function returned ' + res.status);
+      return res.json();
+    })
+    .then(function (data) {
+      var reviews = Array.isArray(data) ? data : (data && data.reviews ? data.reviews : (data && data.data ? data.data : null));
+      if (reviews && Array.isArray(reviews)) {
         allReviews = reviews;
         updateStats();
         renderReviews();
+      } else {
+        throw new Error('Invalid response format');
       }
     })
     .catch(function () {
-      document.getElementById('admin-reviews-list').innerHTML = '<p class="text-center text-destructive py-8">Erreur de chargement</p>';
+      // Fallback: query reviews table directly via REST API (only approved ones visible due to RLS, but worth trying)
+      fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&order=created_at.desc&limit=100', {
+        headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+      })
+      .then(function (res) { return res.json(); })
+      .then(function (reviews) {
+        if (Array.isArray(reviews)) {
+          allReviews = reviews;
+          updateStats();
+          renderReviews();
+        } else {
+          listEl.innerHTML = '<p class="text-center text-destructive py-8">Erreur de chargement. Vérifiez que l\'Edge Function admin-reviews est déployée.</p>';
+        }
+      })
+      .catch(function () {
+        listEl.innerHTML = '<p class="text-center text-destructive py-8">Erreur de connexion au serveur.</p>';
+      });
     });
   }
 
