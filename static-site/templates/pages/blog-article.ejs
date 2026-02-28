@@ -3,11 +3,9 @@
    * Blog article page template.
    *
    * Variables received:
-   * - article: { slug, title, metaTitle, metaDescription, featuredImage, featuredImageAlt,
-   *              publishedAt, author: { id, name, avatar, bio }, excerpt, introduction,
-   *              quickSummary: string[], sections: [{ id, title, content, tip? }] }
-   * - lang, t, canonical, routeKey, getLocalizedUrl, alternates, escapeHtml, JSON
-   * - articleAlternates: [{ hreflang, href }] for this specific article
+   * - article, lang, t, canonical, routeKey, getLocalizedUrl, alternates, escapeHtml, JSON
+   * - articleAlternates, authorBio
+   * - sidebarTests, sidebarQuizzes, sidebarOther, sidebarArticles
    */
 
   // ── Computed values ──────────────────────────────────────────────────
@@ -16,15 +14,18 @@
 
   const homeLabel = lang === 'fr' ? 'Accueil' : lang === 'en' ? 'Home' : lang === 'es' ? 'Inicio' : lang === 'de' ? 'Startseite' : 'Home';
   const blogLabel = 'Blog';
-  const publishedByLabel = lang === 'fr' ? 'Par' : lang === 'en' ? 'By' : lang === 'es' ? 'Por' : lang === 'de' ? 'Von' : 'Di';
   const publishedOnLabel = lang === 'fr' ? 'Publié le' : lang === 'en' ? 'Published on' : lang === 'es' ? 'Publicado el' : lang === 'de' ? 'Veröffentlicht am' : 'Pubblicato il';
   const backToBlogLabel = lang === 'fr' ? 'Retour au blog' : lang === 'en' ? 'Back to blog' : lang === 'es' ? 'Volver al blog' : lang === 'de' ? 'Zurück zum Blog' : 'Torna al blog';
   const aboutAuthorLabel = lang === 'fr' ? 'À propos de l\'auteur' : lang === 'en' ? 'About the author' : lang === 'es' ? 'Sobre el autor' : lang === 'de' ? 'Über den Autor' : 'Sull\'autore';
-  const relatedQuizzesLabel = lang === 'fr' ? 'Quiz recommandés' : lang === 'en' ? 'Recommended quizzes' : lang === 'es' ? 'Quizzes recomendados' : lang === 'de' ? 'Empfohlene Quiz' : 'Quiz consigliati';
-  const relatedQuizzesDesc = lang === 'fr' ? 'Continuez à explorer votre relation avec nos quiz gratuits' : lang === 'en' ? 'Keep exploring your relationship with our free quizzes' : lang === 'es' ? 'Sigue explorando tu relación con nuestros quizzes gratuitos' : lang === 'de' ? 'Erkunde deine Beziehung weiter mit unseren kostenlosen Quiz' : 'Continua a esplorare la tua relazione con i nostri quiz gratuiti';
   const shareLabel = lang === 'fr' ? 'Partager cet article' : lang === 'en' ? 'Share this article' : lang === 'es' ? 'Compartir este artículo' : lang === 'de' ? 'Artikel teilen' : 'Condividi questo articolo';
   const copyLinkLabel = lang === 'fr' ? 'Copier le lien' : lang === 'en' ? 'Copy link' : lang === 'es' ? 'Copiar enlace' : lang === 'de' ? 'Link kopieren' : 'Copia link';
   const copiedLabel = lang === 'fr' ? 'Copié !' : lang === 'en' ? 'Copied!' : lang === 'es' ? '¡Copiado!' : lang === 'de' ? 'Kopiert!' : 'Copiato!';
+
+  // Sidebar labels
+  const sidebarTestsLabel = lang === 'fr' ? 'Tests de couple' : lang === 'en' ? 'Couple tests' : lang === 'es' ? 'Tests de pareja' : lang === 'de' ? 'Paar-Tests' : 'Test di coppia';
+  const sidebarQuizzesLabel = lang === 'fr' ? 'Quiz pour couple' : lang === 'en' ? 'Couple quizzes' : lang === 'es' ? 'Quiz de pareja' : lang === 'de' ? 'Paar-Quiz' : 'Quiz di coppia';
+  const sidebarOtherLabel = lang === 'fr' ? 'Outils' : lang === 'en' ? 'Tools' : lang === 'es' ? 'Herramientas' : lang === 'de' ? 'Werkzeuge' : 'Strumenti';
+  const sidebarRecentLabel = lang === 'fr' ? 'Articles récents' : lang === 'en' ? 'Recent articles' : lang === 'es' ? 'Artículos recientes' : lang === 'de' ? 'Neueste Artikel' : 'Articoli recenti';
 
   // Format published date
   const publishedDate = new Date(article.publishedAt);
@@ -32,13 +33,8 @@
   const formattedDate = publishedDate.toLocaleDateString(dateLocale, { year: 'numeric', month: 'long', day: 'numeric' });
   const isoDate = publishedDate.toISOString();
 
-  // Related quizzes for the CTA section
-  const relatedQuizzes = [
-    { routeKey: 'testCouple', key: 'testCouple' },
-    { routeKey: 'quizAmoureux', key: 'quizAmoureux' },
-    { routeKey: 'testCoupleSain', key: 'testCoupleSain' },
-  ];
-
+  // Base64 encode helper for link obfuscation
+  function ob(url) { return Buffer.from(url).toString('base64'); }
 %>
 
 <!-- Breadcrumb navigation -->
@@ -58,20 +54,8 @@
     <div class="mx-auto max-w-3xl text-center">
       <h1 class="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl"><%= article.title %></h1>
 
-      <!-- Author info and date -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-        <div class="flex items-center gap-3">
-          <% if (article.author.avatar) { %>
-          <img src="<%= article.author.avatar %>" alt="<%= escapeHtml(article.author.name) %>" class="w-12 h-12 rounded-full object-cover border-2 border-border" width="48" height="48" loading="eager">
-          <% } %>
-          <div class="text-left">
-            <p class="font-semibold text-foreground"><%= article.author.name %></p>
-            <% if (typeof authorBio !== 'undefined' && authorBio) { %>
-            <p class="text-sm text-muted-foreground line-clamp-1"><%= authorBio %></p>
-            <% } %>
-          </div>
-        </div>
-        <span class="hidden sm:block text-muted-foreground" aria-hidden="true">|</span>
+      <!-- Published date -->
+      <div class="mb-8">
         <time datetime="<%= isoDate %>" class="text-sm text-muted-foreground">
           <%= publishedOnLabel %> <%= formattedDate %>
         </time>
@@ -89,147 +73,197 @@
 
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
-<!-- Article content -->
-<article class="section-padding blog-article" itemscope itemtype="https://schema.org/Article">
-  <meta itemprop="headline" content="<%= escapeHtml(article.title) %>">
-  <meta itemprop="datePublished" content="<%= isoDate %>">
-  <% if (article.featuredImage) { %><meta itemprop="image" content="<%= article.featuredImage %>"><% } %>
-  <span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="<%= escapeHtml(article.author.name) %>"></span>
+<!-- Two-column layout: article + sidebar -->
+<div class="section-padding">
+  <div class="container mx-auto px-4">
+    <div class="blog-layout">
 
-  <div class="container mx-auto px-4 max-w-3xl">
+      <!-- Main article column -->
+      <article class="blog-article blog-layout-main" itemscope itemtype="https://schema.org/Article">
+        <meta itemprop="headline" content="<%= escapeHtml(article.title) %>">
+        <meta itemprop="datePublished" content="<%= isoDate %>">
+        <% if (article.featuredImage) { %><meta itemprop="image" content="<%= article.featuredImage %>"><% } %>
+        <span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="<%= escapeHtml(article.author.name) %>"></span>
 
-    <!-- Table of contents (collapsed by default) -->
-    <% if (article.sections && article.sections.length > 1) { %>
-    <nav class="blog-toc" aria-label="<%= t('common:blog.tableOfContents', 'Sommaire') %>">
-      <button class="blog-toc-toggle" aria-expanded="false" onclick="var c=this.nextElementSibling;var expanded=this.getAttribute('aria-expanded')==='true';c.style.display=expanded?'none':'block';this.setAttribute('aria-expanded',!expanded);this.querySelector('.blog-toc-chevron').style.transform=expanded?'rotate(-90deg)':'';">
-        <svg class="blog-toc-chevron w-4 h-4 transition-transform" style="transform:rotate(-90deg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        <span class="blog-toc-title"><%= t('common:blog.tableOfContents', 'Sommaire') %></span>
-      </button>
-      <ol style="display:none">
-        <% for (const section of article.sections) { %>
-        <li class="mb-1"><a href="#<%= section.id %>"><%= section.title %></a>
-          <% if (section.subsections && section.subsections.length > 0) { %>
-          <ol class="blog-toc-subsections">
-            <% for (const sub of section.subsections) { %>
-            <li><a href="#<%= sub.id %>"><%= sub.title %></a></li>
+        <!-- Table of contents (collapsed by default) -->
+        <% if (article.sections && article.sections.length > 1) { %>
+        <nav class="blog-toc" aria-label="<%= t('common:blog.tableOfContents', 'Sommaire') %>">
+          <button class="blog-toc-toggle" aria-expanded="false" onclick="var c=this.nextElementSibling;var expanded=this.getAttribute('aria-expanded')==='true';c.style.display=expanded?'none':'block';this.setAttribute('aria-expanded',!expanded);this.querySelector('.blog-toc-chevron').style.transform=expanded?'rotate(-90deg)':'';">
+            <svg class="blog-toc-chevron w-4 h-4 transition-transform" style="transform:rotate(-90deg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            <span class="blog-toc-title"><%= t('common:blog.tableOfContents', 'Sommaire') %></span>
+          </button>
+          <ol style="display:none">
+            <% for (const section of article.sections) { %>
+            <li class="mb-1"><a href="#<%= section.id %>"><%= section.title %></a>
+              <% if (section.subsections && section.subsections.length > 0) { %>
+              <ol class="blog-toc-subsections">
+                <% for (const sub of section.subsections) { %>
+                <li><a href="#<%= sub.id %>"><%= sub.title %></a></li>
+                <% } %>
+              </ol>
+              <% } %>
+            </li>
             <% } %>
           </ol>
-          <% } %>
-        </li>
+        </nav>
         <% } %>
-      </ol>
-    </nav>
-    <% } %>
 
-    <!-- Quick summary box -->
-    <% if (article.quickSummary && article.quickSummary.length > 0) { %>
-    <aside class="blog-quick-summary" aria-label="<%= t('common:blog.quickSummary', 'Résumé rapide') %>">
-      <p class="blog-quick-summary-title"><%= t('common:blog.quickSummary', 'Résumé rapide') %></p>
-      <ul>
-        <% for (const point of article.quickSummary) { %>
-        <li><%= point %></li>
+        <!-- Quick summary box -->
+        <% if (article.quickSummary && article.quickSummary.length > 0) { %>
+        <aside class="blog-quick-summary" aria-label="<%= t('common:blog.quickSummary', 'Résumé rapide') %>">
+          <p class="blog-quick-summary-title"><%= t('common:blog.quickSummary', 'Résumé rapide') %></p>
+          <ul>
+            <% for (const point of article.quickSummary) { %>
+            <li><%= point %></li>
+            <% } %>
+          </ul>
+        </aside>
         <% } %>
-      </ul>
-    </aside>
-    <% } %>
 
-    <!-- Introduction -->
-    <% if (article.introduction) { %>
-    <div class="mb-10 text-lg leading-relaxed text-muted-foreground">
-      <%- article.introduction %>
-    </div>
-    <% } %>
-
-    <!-- Sections -->
-    <% if (article.sections && article.sections.length > 0) { %>
-    <% for (const section of article.sections) { %>
-    <section id="<%= section.id %>" class="mb-12 scroll-mt-24">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= section.title %></h2>
-      <div class="text-muted-foreground leading-relaxed">
-        <%- section.content %>
-      </div>
-
-      <% if (section.subsections && section.subsections.length > 0) { %>
-      <% for (const sub of section.subsections) { %>
-      <div id="<%= sub.id %>" class="mt-8 scroll-mt-24">
-        <h3 class="text-xl md:text-2xl font-semibold mb-3"><%= sub.title %></h3>
-        <div class="text-muted-foreground leading-relaxed">
-          <%- sub.content %>
+        <!-- Introduction -->
+        <% if (article.introduction) { %>
+        <div class="mb-10 text-lg leading-relaxed text-muted-foreground">
+          <%- article.introduction %>
         </div>
-      </div>
-      <% } %>
-      <% } %>
-
-      <% if (section.tip) { %>
-      <aside class="blog-tip-box" role="note">
-        <p class="blog-tip-box-title"><%= t('common:blog.tip', 'A savoir') %></p>
-        <p class="text-sm text-muted-foreground"><%- section.tip %></p>
-      </aside>
-      <% } %>
-    </section>
-    <% } %>
-    <% } %>
-
-    <!-- Share buttons -->
-    <div class="blog-share-buttons" aria-label="<%= shareLabel %>">
-      <p class="blog-share-title"><%= shareLabel %></p>
-      <div class="flex flex-wrap gap-3">
-        <a href="https://twitter.com/intent/tweet?url=<%= encodeURIComponent(canonical) %>&text=<%= encodeURIComponent(article.title) %>" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Twitter/X">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=<%= encodeURIComponent(canonical) %>" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Facebook">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </a>
-        <a href="https://wa.me/?text=<%= encodeURIComponent(article.title + ' ' + canonical) %>" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="WhatsApp">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        </a>
-        <button class="blog-share-btn" aria-label="<%= copyLinkLabel %>" onclick="navigator.clipboard.writeText('<%= canonical %>').then(function(){var b=this;b.querySelector('.blog-share-copied').style.display='inline';setTimeout(function(){b.querySelector('.blog-share-copied').style.display='none'},2000)}.bind(this))">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-          <span class="blog-share-copied" style="display:none"><%= copiedLabel %></span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Back to blog link -->
-    <div class="mt-8 mb-10">
-      <a href="<%= blogUrl %>" class="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline transition-colors">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
-        <%= backToBlogLabel %>
-      </a>
-    </div>
-
-    <!-- Author box (at end of article) -->
-    <aside class="blog-author-box" aria-label="<%= aboutAuthorLabel %>">
-      <% if (article.author.avatar) { %>
-      <img src="<%= article.author.avatar %>" alt="<%= escapeHtml(article.author.name) %>" class="blog-author-avatar" width="64" height="64" loading="lazy">
-      <% } %>
-      <div>
-        <p class="text-sm text-muted-foreground mb-1"><%= aboutAuthorLabel %></p>
-        <p class="blog-author-name"><%= article.author.name %></p>
-        <% if (typeof authorBio !== 'undefined' && authorBio) { %>
-        <p class="blog-author-bio"><%= authorBio %></p>
         <% } %>
-      </div>
-    </aside>
-  </div>
-</article>
 
-<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+        <!-- Sections -->
+        <% if (article.sections && article.sections.length > 0) { %>
+        <% for (const section of article.sections) { %>
+        <section id="<%= section.id %>" class="mb-12 scroll-mt-24">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= section.title %></h2>
+          <div class="text-muted-foreground leading-relaxed">
+            <%- section.content %>
+          </div>
 
-<!-- Related quizzes CTA section -->
-<section class="section-padding bg-muted/20">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-10">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= relatedQuizzesLabel %></h2>
-      <p class="text-muted-foreground max-w-2xl mx-auto"><%= relatedQuizzesDesc %></p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-      <% for (const quiz of relatedQuizzes) { %>
-      <a href="<%= getLocalizedUrl(quiz.routeKey, lang) %>" class="glass-card rounded-2xl p-6 card-hover no-underline block text-center">
-        <h3 class="text-lg font-semibold text-foreground mb-2"><%= t('quizzes:' + quiz.key + '.shortTitle', t('quizzes:' + quiz.key + '.title', quiz.key)) %></h3>
-        <p class="text-sm text-muted-foreground line-clamp-2"><%= t('quizzes:' + quiz.key + '.description', '') %></p>
-      </a>
-      <% } %>
+          <% if (section.subsections && section.subsections.length > 0) { %>
+          <% for (const sub of section.subsections) { %>
+          <div id="<%= sub.id %>" class="mt-8 scroll-mt-24">
+            <h3 class="text-xl md:text-2xl font-semibold mb-3"><%= sub.title %></h3>
+            <div class="text-muted-foreground leading-relaxed">
+              <%- sub.content %>
+            </div>
+          </div>
+          <% } %>
+          <% } %>
+
+          <% if (section.tip) { %>
+          <aside class="blog-tip-box" role="note">
+            <p class="blog-tip-box-title"><%= t('common:blog.tip', 'A savoir') %></p>
+            <p class="text-sm text-muted-foreground"><%- section.tip %></p>
+          </aside>
+          <% } %>
+        </section>
+        <% } %>
+        <% } %>
+
+        <!-- Share buttons -->
+        <div class="blog-share-buttons" aria-label="<%= shareLabel %>">
+          <p class="blog-share-title"><%= shareLabel %></p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://twitter.com/intent/tweet?url=<%= encodeURIComponent(canonical) %>&text=<%= encodeURIComponent(article.title) %>" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Twitter/X">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<%= encodeURIComponent(canonical) %>" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="Facebook">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/?text=<%= encodeURIComponent(article.title + ' ' + canonical) %>" target="_blank" rel="noopener noreferrer" class="blog-share-btn" aria-label="WhatsApp">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <button class="blog-share-btn" aria-label="<%= copyLinkLabel %>" onclick="navigator.clipboard.writeText('<%= canonical %>').then(function(){var b=this;b.querySelector('.blog-share-copied').style.display='inline';setTimeout(function(){b.querySelector('.blog-share-copied').style.display='none'},2000)}.bind(this))">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              <span class="blog-share-copied" style="display:none"><%= copiedLabel %></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Back to blog link -->
+        <div class="mt-8 mb-10">
+          <a href="<%= blogUrl %>" class="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            <%= backToBlogLabel %>
+          </a>
+        </div>
+
+        <!-- Author box -->
+        <aside class="blog-author-box" aria-label="<%= aboutAuthorLabel %>">
+          <% if (article.author.avatar) { %>
+          <img src="<%= article.author.avatar %>" alt="<%= escapeHtml(article.author.name) %>" class="blog-author-avatar" width="64" height="64" loading="lazy">
+          <% } %>
+          <div>
+            <p class="text-sm text-muted-foreground mb-1"><%= aboutAuthorLabel %></p>
+            <p class="blog-author-name"><%= article.author.name %></p>
+            <% if (typeof authorBio !== 'undefined' && authorBio) { %>
+            <p class="blog-author-bio"><%= authorBio %></p>
+            <% } %>
+          </div>
+        </aside>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="blog-sidebar">
+        <div class="blog-sidebar-inner">
+
+          <!-- Tests de couple (collapsible) -->
+          <div class="blog-sidebar-section">
+            <button class="blog-sidebar-toggle" aria-expanded="true" onclick="var p=this.parentElement;p.classList.toggle('is-collapsed');this.setAttribute('aria-expanded',!p.classList.contains('is-collapsed'))">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+              <span><%= sidebarTestsLabel %></span>
+              <svg class="blog-sidebar-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="blog-sidebar-list">
+              <% for (const item of sidebarTests) { %>
+              <span class="obl" data-h="<%= ob(item.url) %>"><%= item.label %></span>
+              <% } %>
+            </div>
+          </div>
+
+          <!-- Quiz pour couple (collapsible) -->
+          <div class="blog-sidebar-section">
+            <button class="blog-sidebar-toggle" aria-expanded="true" onclick="var p=this.parentElement;p.classList.toggle('is-collapsed');this.setAttribute('aria-expanded',!p.classList.contains('is-collapsed'))">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span><%= sidebarQuizzesLabel %></span>
+              <svg class="blog-sidebar-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="blog-sidebar-list">
+              <% for (const item of sidebarQuizzes) { %>
+              <span class="obl" data-h="<%= ob(item.url) %>"><%= item.label %></span>
+              <% } %>
+            </div>
+          </div>
+
+          <!-- Outils -->
+          <div class="blog-sidebar-section">
+            <button class="blog-sidebar-toggle" aria-expanded="true" onclick="var p=this.parentElement;p.classList.toggle('is-collapsed');this.setAttribute('aria-expanded',!p.classList.contains('is-collapsed'))">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+              <span><%= sidebarOtherLabel %></span>
+              <svg class="blog-sidebar-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="blog-sidebar-list">
+              <% for (const item of sidebarOther) { %>
+              <span class="obl" data-h="<%= ob(item.url) %>"><%= item.label %></span>
+              <% } %>
+            </div>
+          </div>
+
+          <!-- Articles récents -->
+          <% if (sidebarArticles && sidebarArticles.length > 0) { %>
+          <div class="blog-sidebar-section blog-sidebar-articles">
+            <div class="blog-sidebar-heading">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+              <span><%= sidebarRecentLabel %></span>
+            </div>
+            <div class="blog-sidebar-list">
+              <% for (const a of sidebarArticles) { %>
+              <span class="obl" data-h="<%= ob(a.url) %>"><%= a.title %></span>
+              <% } %>
+            </div>
+          </div>
+          <% } %>
+
+        </div>
+      </aside>
+
     </div>
   </div>
-</section>
+</div>

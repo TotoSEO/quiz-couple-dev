@@ -93,7 +93,7 @@
 <body class="bg-background text-foreground font-sans antialiased">
   <%- include('partials/header', { lang, t, getLocalizedUrl, routeSlugs: routeSlugs }) %>
 
-  <main>
+  <main class="relative z-0">
     <%- content %>
   </main>
 
@@ -104,6 +104,7 @@
   <script src="/js/theme.js" defer></script>
   <script src="/js/mobile-menu.js" defer></script>
   <script src="/js/cookie-consent.js" defer></script>
+  <script src="/js/obl.js" defer></script>
 
   <!-- GA (deferred) -->
   <script>

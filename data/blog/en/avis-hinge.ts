@@ -76,7 +76,7 @@ const article: BlogArticleData = {
       title: `The app that decided to be different`,
       content: `<p>Hinge didn't appear out of nowhere. <strong>It's been around since 2012</strong>, founded in New York by Justin McLeod. During its early years, it looked like everything else: swipe, match, message. Nothing memorable. The real turning point came in 2016, when McLeod threw the original concept in the trash and started over with a radically different approach — rich profiles, a mechanic of targeted likes on specific elements, and an algorithm designed to push toward real dates rather than scroll addiction. The slogan "Designed to be Deleted" arrived at that point. It's a bold move for an app whose business model depends on time spent using it.</p>
 
-<p>Match Group acquired Hinge in 2019 — the same group that owns Tinder. Ironic, right? <strong>The "anti-Tinder" in Tinder's portfolio.</strong> In practice, it hasn't changed much about the app's spirit, but it explains some pricing decisions we'll get into below. Hinge now claims to be one of the most downloaded dating apps in the US/UK. The growth is real and visible.</p>`,
+<p>Match Group acquired Hinge in 2019 — the same group that owns <a href="/en/blog/tinder-review/">Tinder</a>. Ironic, right? <strong>The "anti-Tinder" in Tinder's portfolio.</strong> In practice, it hasn't changed much about the app's spirit, but it explains some pricing decisions we'll get into below. Hinge now claims to be one of the most downloaded dating apps in the US/UK. The growth is real and visible.</p>`,
     },
     {
       id: 'what-makes-hinge-truly-different',

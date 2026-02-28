@@ -148,6 +148,17 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-02-27',
   },
+  {
+    internalSlug: 'avis-badoo',
+    slugs: {
+      fr: 'avis-badoo',
+      en: 'badoo-review',
+      es: 'opinion-badoo',
+      de: 'badoo-erfahrungen',
+      it: 'recensione-badoo',
+    },
+    publishedAt: '2026-02-28',
+  },
 ];
 
 // Author data

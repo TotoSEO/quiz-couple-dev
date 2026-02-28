@@ -21,6 +21,27 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TEMPLATES_DIR = path.resolve(__dirname, '../templates');
 const DIST_DIR = path.resolve(__dirname, '../dist');
 
+// Review stats fetched from Supabase at build time
+let reviewStats = { avg: '0', count: '0' };
+
+async function fetchReviewStats() {
+  try {
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/reviews?select=rating&is_approved=eq.true`,
+      { headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` } }
+    );
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const reviews = await res.json();
+    if (reviews.length === 0) return;
+    const sum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
+    const avg = (sum / reviews.length).toFixed(1);
+    reviewStats = { avg, count: String(reviews.length) };
+    console.log(`[reviews] Fetched ${reviews.length} approved reviews (avg: ${avg})`);
+  } catch (e) {
+    console.warn(`[reviews] Could not fetch review stats: ${e.message} — using defaults`);
+  }
+}
+
 // ── Helpers ──────────────────────────────────────────────────────────────
 
 function ensureDir(dirPath) {
@@ -173,8 +194,8 @@ async function generatePage(routeKey, lang) {
       description: description,
       sameAs: [],
     });
-    // AggregateRating
-    jsonLdItems.push({
+    // AggregateRating — only include if we have real review data
+    const webApp = {
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
       name: 'Quiz Couple',
@@ -182,14 +203,17 @@ async function generatePage(routeKey, lang) {
       applicationCategory: 'LifestyleApplication',
       operatingSystem: 'Web',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
-      aggregateRating: {
+    };
+    if (parseInt(reviewStats.count) > 0) {
+      webApp.aggregateRating = {
         '@type': 'AggregateRating',
-        ratingValue: '4.8',
-        reviewCount: '1247',
+        ratingValue: reviewStats.avg,
+        reviewCount: reviewStats.count,
         bestRating: '5',
         worstRating: '1',
-      },
-    });
+      };
+    }
+    jsonLdItems.push(webApp);
   }
 
   const jsonLdHtml = jsonLdItems.map(item =>
@@ -290,17 +314,82 @@ async function generatePage(routeKey, lang) {
 // ── Sitemap generation ──────────────────────────────────────────────────
 
 function generateSitemaps() {
-  const publicDir = path.resolve(__dirname, '../../public');
+  const B = BASE_URL;
 
-  // Copy existing sitemaps from public/ to dist/ as-is
-  for (const file of ['sitemap.xml', 'sitemap-fr.xml', 'sitemap-en.xml', 'sitemap-es.xml', 'sitemap-de.xml', 'sitemap-it.xml']) {
-    const src = path.join(publicDir, file);
-    const dest = path.join(DIST_DIR, file);
-    if (fs.existsSync(src)) {
-      fs.copyFileSync(src, dest);
-    }
+  // Build URL helper: returns full URL for a route slug in a given language
+  function url(lang, slug) {
+    if (lang === 'fr') return slug ? `${B}/${slug}/` : `${B}/`;
+    return slug ? `${B}/${lang}/${slug}/` : `${B}/${lang}/`;
   }
-  console.log('[sitemaps] Copied sitemaps to dist/');
+
+  // Build blog URL helper
+  function blogUrl(lang, slug) {
+    if (lang === 'fr') return `${B}/blog/${slug}/`;
+    return `${B}/${lang}/blog/${slug}/`;
+  }
+
+  // Generate hreflang links block for a set of localized URLs
+  function hreflangs(urlsByLang) {
+    let xml = '';
+    for (const lang of LANGUAGES) {
+      xml += `    <xhtml:link rel="alternate" hreflang="${lang}" href="${urlsByLang[lang]}"/>\n`;
+    }
+    xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${urlsByLang.fr}"/>\n`;
+    return xml;
+  }
+
+  // Collect all page entries (routes + blog articles)
+  const entries = [];
+
+  // Static routes
+  for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
+    if (key === 'admin') continue;
+    const urlsByLang = {};
+    for (const lang of LANGUAGES) {
+      urlsByLang[lang] = url(lang, slugs[lang]);
+    }
+    entries.push({ urlsByLang });
+  }
+
+  // Blog articles
+  for (const article of BLOG_ARTICLES) {
+    const urlsByLang = {};
+    for (const lang of LANGUAGES) {
+      urlsByLang[lang] = blogUrl(lang, article.slugs[lang]);
+    }
+    entries.push({ urlsByLang, lastmod: article.publishedAt });
+  }
+
+  // Generate one sitemap per language
+  for (const lang of LANGUAGES) {
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+    xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
+    xml += `        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
+
+    for (const entry of entries) {
+      xml += `  <url>\n`;
+      xml += `    <loc>${entry.urlsByLang[lang]}</loc>\n`;
+      xml += hreflangs(entry.urlsByLang);
+      if (entry.lastmod) {
+        xml += `    <lastmod>${entry.lastmod}</lastmod>\n`;
+      }
+      xml += `  </url>\n`;
+    }
+
+    xml += `</urlset>`;
+    fs.writeFileSync(path.join(DIST_DIR, `sitemap-${lang}.xml`), xml);
+  }
+
+  // Sitemap index
+  let index = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  index += `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+  for (const lang of LANGUAGES) {
+    index += `  <sitemap>\n    <loc>${B}/sitemap-${lang}.xml</loc>\n  </sitemap>\n`;
+  }
+  index += `</sitemapindex>`;
+  fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), index);
+
+  console.log(`[sitemaps] Generated sitemap index + ${LANGUAGES.length} language sitemaps (${entries.length} URLs each)`);
 }
 
 // ── Static assets ───────────────────────────────────────────────────────
@@ -593,6 +682,29 @@ async function generateBlogArticle(articleMeta, lang) {
     article,
     authorBio,
     articleAlternates,
+    // Sidebar data
+    sidebarTests: [
+      'testCouple', 'testCommonPoints', 'testDistance', 'testToxic',
+      'testCoupleSain', 'testMariage', 'testDivorce',
+    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
+    sidebarQuizzes: [
+      'quizAmoureux', 'quizCoquin', 'quizMarrant', 'quizKnowledge',
+      'quizMost', 'quizAdo',
+    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
+    sidebarOther: [
+      'questionsCouple', 'problemResolver',
+    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
+    sidebarArticles: BLOG_ARTICLES
+      .filter(a => a.internalSlug !== articleMeta.internalSlug)
+      .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+      .slice(0, 5)
+      .map(a => {
+        const slug = a.slugs[lang] || a.internalSlug;
+        const aPath = path.resolve(__dirname, '../../data/blog', lang, `${a.internalSlug}.ts`);
+        const aFr = path.resolve(__dirname, '../../data/blog/fr', `${a.internalSlug}.ts`);
+        const aData = parseArticleTs(aPath) || parseArticleTs(aFr);
+        return { title: aData?.title || a.internalSlug, url: getArticleUrl(slug, lang) };
+      }),
   };
 
   try {
@@ -693,6 +805,9 @@ async function generate404Pages() {
 
 async function main() {
   console.log('=== Quiz Couple Static Site Generator ===\n');
+
+  // Fetch real review stats from Supabase
+  await fetchReviewStats();
 
   // Clean dist
   if (fs.existsSync(DIST_DIR)) {
