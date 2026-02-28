@@ -55,6 +55,30 @@ export const blogArticles: BlogArticleMeta[] = [
     publishedAt: '2026-02-25',
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
+  {
+    slug: 'avis-hinge',
+    slugs: {
+      fr: 'avis-hinge-rencontre',
+      en: 'hinge-dating-app-review',
+      es: 'opinion-hinge-app-citas',
+      de: 'hinge-erfahrungen-test',
+      it: 'recensione-hinge-app',
+    },
+    publishedAt: '2026-02-27',
+    locales: { fr: true, en: true, es: true, de: true, it: true },
+  },
+  {
+    slug: 'avis-badoo',
+    slugs: {
+      fr: 'avis-badoo',
+      en: 'badoo-review',
+      es: 'opinion-badoo',
+      de: 'badoo-erfahrungen',
+      it: 'recensione-badoo',
+    },
+    publishedAt: '2026-02-28',
+    locales: { fr: true, en: true, es: true, de: true, it: true },
+  },
 ];
 
 /**
