@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - claude/rebuild-seo-optimization-xMQ0x
   workflow_dispatch:
 
 permissions:
@@ -16,6 +15,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: cd static-site && npm ci
+
+      - name: Build static site
+        run: cd static-site && npm run build
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
