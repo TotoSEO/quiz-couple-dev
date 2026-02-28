@@ -76,7 +76,7 @@ const article: BlogArticleData = {
       title: `L'app che ha deciso di essere diversa`,
       content: `<p>Hinge non è piombata dal nulla nel 2023 con il suo lancio italiano. <strong>Esiste dal 2012</strong>, fondata a New York da Justin McLeod. Durante i primi anni, assomigliava a tutte le altre: swipe, match, messaggio. Niente di memorabile. La vera svolta arriva nel 2016, quando McLeod butta via il concetto iniziale e riparte su una logica radicalmente diversa — profili ricchi, una meccanica di like mirato su elementi precisi, e un algoritmo pensato per spingere verso veri appuntamenti piuttosto che verso la dipendenza dallo scroll. Lo slogan "Designed to be Deleted" (progettata per essere cancellata) arriva in quel momento. È audace per un'app il cui modello economico dipende dal tempo che ci passi sopra.</p>
 
-<p>Match Group acquisisce Hinge nel 2019 — lo stesso gruppo che possiede Tinder. Ironico, no? <strong>La "anti-Tinder" nel portafoglio di Tinder.</strong> In pratica, questo non ha cambiato granché lo spirito dell'app, ma spiega alcune decisioni tariffarie di cui parleremo più avanti. Da fine 2023, Hinge rivendica di essere la seconda app di incontri più scaricata in Italia, dietro Tinder. La crescita è reale e visibile.</p>`,
+<p>Match Group acquisisce Hinge nel 2019 — lo stesso gruppo che possiede <a href="/it/blog/recensione-tinder/">Tinder</a>. Ironico, no? <strong>La "anti-Tinder" nel portafoglio di Tinder.</strong> In pratica, questo non ha cambiato granché lo spirito dell'app, ma spiega alcune decisioni tariffarie di cui parleremo più avanti. Da fine 2023, Hinge rivendica di essere la seconda app di incontri più scaricata in Italia, dietro Tinder. La crescita è reale e visibile.</p>`,
     },
     {
       id: 'cosa-rende-hinge-davvero-diversa',
@@ -105,7 +105,7 @@ const article: BlogArticleData = {
     {
       id: 'versione-gratuita-hinge-plus-hingex',
       title: `Versione gratuita, Hinge+ e HingeX: cosa paghi davvero`,
-      content: `<p>La versione gratuita di Hinge è <strong>più generosa di quella di Tinder</strong> su diversi punti. Profilo completo, messaggistica aperta con i match, accesso al "Most Compatible" quotidiano, e la possibilità di commentare mettendo like — gratuitamente. È già sostanziale. Il limite: <strong>8 like al giorno</strong>, azzerati ogni 24 ore. E vedi solo una notifica di like ricevuto alla volta, senza poter consultare l'insieme delle persone che ti hanno messo like.</p>
+      content: `<p>La versione gratuita di Hinge è <strong>più generosa di quella di <a href="/it/blog/recensione-tinder/">Tinder</a></strong> su diversi punti. Profilo completo, messaggistica aperta con i match, accesso al "Most Compatible" quotidiano, e la possibilità di commentare mettendo like — gratuitamente. È già sostanziale. Il limite: <strong>8 like al giorno</strong>, azzerati ogni 24 ore. E vedi solo una notifica di like ricevuto alla volta, senza poter consultare l'insieme delle persone che ti hanno messo like.</p>
 
 <p>8 like obbligano a scegliere. Su un'app dove l'intenzione conta, è coerente con la filosofia. Ma in pratica, può diventare frustrante quando sei in fase di esplorazione all'inizio.</p>
 

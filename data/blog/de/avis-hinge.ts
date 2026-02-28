@@ -76,7 +76,7 @@ const article: BlogArticleData = {
       title: `Die App, die anders sein wollte`,
       content: `<p>Hinge ist nicht 2023 mit dem Deutschland-Launch einfach vom Himmel gefallen. <strong>Sie existiert seit 2012</strong>, gegründet in New York von Justin McLeod. In den ersten Jahren sah sie aus wie alle anderen: Swipen, Match, Nachricht. Nichts Besonderes. Der echte Wendepunkt kam 2016, als McLeod das ursprüngliche Konzept über Bord warf und auf eine radikal andere Logik setzte — reichhaltige Profile, ein Mechanismus, bei dem Likes gezielt auf bestimmte Elemente gesetzt werden, und ein Algorithmus, der auf echte Dates statt auf Scroll-Sucht ausgelegt ist. Der Slogan "Designed to be Deleted" (entwickelt, um gelöscht zu werden) entstand in diesem Moment. Ziemlich gewagt für eine App, deren Geschäftsmodell davon abhängt, dass man Zeit auf ihr verbringt.</p>
 
-<p>Match Group übernahm Hinge 2019 — dieselbe Gruppe, der auch Tinder gehört. Ironisch, oder? <strong>Die "Anti-Tinder" im Portfolio von Tinder.</strong> In der Praxis hat das den Geist der App nicht groß verändert, aber es erklärt einige Preisentscheidungen, auf die wir weiter unten eingehen. Seit Ende 2023 beansprucht Hinge, die am zweithäufigsten heruntergeladene Dating-App in Deutschland zu sein, hinter Tinder. Das Wachstum ist real und sichtbar.</p>`,
+<p>Match Group übernahm Hinge 2019 — dieselbe Gruppe, der auch <a href="/de/blog/tinder-bewertung/">Tinder</a> gehört. Ironisch, oder? <strong>Die "Anti-Tinder" im Portfolio von Tinder.</strong> In der Praxis hat das den Geist der App nicht groß verändert, aber es erklärt einige Preisentscheidungen, auf die wir weiter unten eingehen. Seit Ende 2023 beansprucht Hinge, die am zweithäufigsten heruntergeladene Dating-App in Deutschland zu sein, hinter Tinder. Das Wachstum ist real und sichtbar.</p>`,
     },
     {
       id: 'was-hinge-wirklich-anders-macht',
@@ -105,7 +105,7 @@ const article: BlogArticleData = {
     {
       id: 'kostenlose-version-hinge-plus-hingex',
       title: `Kostenlose Version, Hinge+ und HingeX: wofür du wirklich bezahlst`,
-      content: `<p>Die kostenlose Version von Hinge ist <strong>großzügiger als die von Tinder</strong> in mehreren Punkten. Vollständiges Profil, offenes Messaging mit Matches, Zugang zum täglichen "Most Compatible" und die Möglichkeit, beim Liken zu kommentieren — kostenlos. Das ist bereits ordentlich. Die Grenze: <strong>8 Likes pro Tag</strong>, die alle 24 Stunden zurückgesetzt werden. Und du siehst jeweils nur eine Benachrichtigung über ein erhaltenes Like, ohne alle Personen einsehen zu können, die dich geliked haben.</p>
+      content: `<p>Die kostenlose Version von Hinge ist <strong>großzügiger als die von <a href="/de/blog/tinder-bewertung/">Tinder</a></strong> in mehreren Punkten. Vollständiges Profil, offenes Messaging mit Matches, Zugang zum täglichen "Most Compatible" und die Möglichkeit, beim Liken zu kommentieren — kostenlos. Das ist bereits ordentlich. Die Grenze: <strong>8 Likes pro Tag</strong>, die alle 24 Stunden zurückgesetzt werden. Und du siehst jeweils nur eine Benachrichtigung über ein erhaltenes Like, ohne alle Personen einsehen zu können, die dich geliked haben.</p>
 
 <p>8 Likes zwingen zur Auswahl. Für eine App, bei der Absicht zählt, ist das konsistent mit der Philosophie. Aber in der Praxis kann es frustrierend werden, besonders in der Erkundungsphase am Anfang.</p>
 
