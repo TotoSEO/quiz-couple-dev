@@ -17,3 +17,6 @@ verify_jwt = false
 
 [functions.blog-og]
 verify_jwt = false
+
+[functions.manage-ado-session]
+verify_jwt = false
