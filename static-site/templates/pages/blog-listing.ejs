@@ -11,7 +11,7 @@
       <a href="<%= a.url %>" class="no-underline"><div class="blog-card-image-wrapper"><img src="<%= a.featuredImage %>" alt="<%= escapeHtml(a.featuredImageAlt) %>" class="blog-card-image" loading="lazy"></div></a>
       <h2 class="blog-card-title"><a href="<%= a.url %>"><%= a.title %></a></h2>
       <div class="blog-card-meta"><span><%= new Date(a.publishedAt).toLocaleDateString(lang === 'fr' ? 'fr-FR' : lang, { year: 'numeric', month: 'long', day: 'numeric' }) %></span></div>
-      <p class="blog-card-excerpt"><%= a.excerpt %></p>
+      <p class="blog-card-excerpt"><%= a.excerpt.length > 120 ? a.excerpt.slice(0, 117) + '...' : a.excerpt %></p>
       <a href="<%= a.url %>" class="blog-card-cta no-underline"><%= t("common:blog.readArticle", "Lire l'article") %></a>
     </article>
   <% }); %>
