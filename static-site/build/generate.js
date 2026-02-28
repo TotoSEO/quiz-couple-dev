@@ -21,6 +21,27 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TEMPLATES_DIR = path.resolve(__dirname, '../templates');
 const DIST_DIR = path.resolve(__dirname, '../dist');
 
+// Review stats fetched from Supabase at build time
+let reviewStats = { avg: '0', count: '0' };
+
+async function fetchReviewStats() {
+  try {
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/reviews?select=rating&is_approved=eq.true`,
+      { headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` } }
+    );
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const reviews = await res.json();
+    if (reviews.length === 0) return;
+    const sum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
+    const avg = (sum / reviews.length).toFixed(1);
+    reviewStats = { avg, count: String(reviews.length) };
+    console.log(`[reviews] Fetched ${reviews.length} approved reviews (avg: ${avg})`);
+  } catch (e) {
+    console.warn(`[reviews] Could not fetch review stats: ${e.message} — using defaults`);
+  }
+}
+
 // ── Helpers ──────────────────────────────────────────────────────────────
 
 function ensureDir(dirPath) {
@@ -173,8 +194,8 @@ async function generatePage(routeKey, lang) {
       description: description,
       sameAs: [],
     });
-    // AggregateRating
-    jsonLdItems.push({
+    // AggregateRating — only include if we have real review data
+    const webApp = {
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
       name: 'Quiz Couple',
@@ -182,14 +203,17 @@ async function generatePage(routeKey, lang) {
       applicationCategory: 'LifestyleApplication',
       operatingSystem: 'Web',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
-      aggregateRating: {
+    };
+    if (parseInt(reviewStats.count) > 0) {
+      webApp.aggregateRating = {
         '@type': 'AggregateRating',
-        ratingValue: '4.8',
-        reviewCount: '1247',
+        ratingValue: reviewStats.avg,
+        reviewCount: reviewStats.count,
         bestRating: '5',
         worstRating: '1',
-      },
-    });
+      };
+    }
+    jsonLdItems.push(webApp);
   }
 
   const jsonLdHtml = jsonLdItems.map(item =>
@@ -693,6 +717,9 @@ async function generate404Pages() {
 
 async function main() {
   console.log('=== Quiz Couple Static Site Generator ===\n');
+
+  // Fetch real review stats from Supabase
+  await fetchReviewStats();
 
   // Clean dist
   if (fs.existsSync(DIST_DIR)) {
