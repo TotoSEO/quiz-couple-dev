@@ -39,6 +39,7 @@
           <div class="flex items-center gap-4">
             <div class="flex rounded-lg border border-border overflow-hidden">
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors active" data-tab="reviews">Avis</button>
+              <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="articles">Articles</button>
             </div>
             <button id="admin-logout" class="text-sm text-destructive hover:text-destructive/80 transition-colors">Déconnexion</button>
           </div>
@@ -87,6 +88,85 @@
           <!-- Reviews list -->
           <div id="admin-reviews-list" class="space-y-4">
             <p class="text-center text-muted-foreground py-8">Chargement...</p>
+          </div>
+        </div>
+
+        <!-- Articles Tab -->
+        <div id="admin-articles-tab" class="hidden">
+          <!-- Article List View -->
+          <div id="articles-list-view">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-lg font-semibold">Articles du blog</h2>
+              <button id="articles-refresh" class="btn btn-outline btn-sm">
+                <svg class="w-4 h-4 inline-block mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+                Actualiser
+              </button>
+            </div>
+            <div id="articles-list" class="space-y-3">
+              <p class="text-center text-muted-foreground py-8">Chargement...</p>
+            </div>
+          </div>
+
+          <!-- Article Editor View -->
+          <div id="article-editor-view" class="hidden">
+            <div class="flex items-center gap-3 mb-6">
+              <button id="article-back" class="btn btn-outline btn-sm">← Retour</button>
+              <h2 class="text-lg font-semibold" id="article-editor-title">Modifier l'article</h2>
+            </div>
+
+            <!-- Image Upload -->
+            <div class="glass-card rounded-xl p-5 mb-6">
+              <h3 class="font-semibold mb-3">Image à la une</h3>
+              <div class="flex items-start gap-6 flex-wrap">
+                <div id="article-image-preview" class="w-48 h-32 rounded-lg bg-muted flex items-center justify-center text-muted-foreground text-sm overflow-hidden flex-shrink-0">
+                  Aucune image
+                </div>
+                <div class="flex-1 min-w-[200px] space-y-3">
+                  <input type="file" id="article-image-input" accept="image/webp,image/jpeg,image/png" class="text-sm file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border file:border-border file:text-sm file:font-medium file:bg-background file:text-foreground hover:file:bg-muted file:cursor-pointer file:transition-colors">
+                  <button id="article-image-upload-btn" class="btn btn-primary btn-sm hidden">Uploader l'image</button>
+                  <p id="article-image-status" class="text-sm text-muted-foreground"></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Language Tabs -->
+            <div class="flex rounded-lg border border-border overflow-hidden mb-4">
+              <button class="lang-tab px-4 py-2 text-sm font-medium transition-colors active" data-lang="fr">FR</button>
+              <button class="lang-tab px-4 py-2 text-sm font-medium transition-colors" data-lang="en">EN</button>
+              <button class="lang-tab px-4 py-2 text-sm font-medium transition-colors" data-lang="es">ES</button>
+              <button class="lang-tab px-4 py-2 text-sm font-medium transition-colors" data-lang="de">DE</button>
+              <button class="lang-tab px-4 py-2 text-sm font-medium transition-colors" data-lang="it">IT</button>
+            </div>
+
+            <!-- Translation Form -->
+            <div class="glass-card rounded-xl p-5 space-y-4">
+              <div>
+                <label class="block text-sm font-medium mb-1">Slug</label>
+                <input type="text" id="article-field-slug" class="input w-full" placeholder="slug-de-l-article">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-1">H1 (Titre principal de la page)</label>
+                <input type="text" id="article-field-title" class="input w-full" placeholder="Titre H1 de l'article">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-1">Title (balise &lt;title&gt;)</label>
+                <input type="text" id="article-field-meta-title" class="input w-full" placeholder="Balise title pour le SEO">
+                <p class="text-xs text-muted-foreground mt-1">Idéalement 50-60 caractères. <span id="meta-title-count" class="font-medium">0</span>/60</p>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-1">Meta description</label>
+                <textarea id="article-field-meta-description" class="input w-full" rows="3" placeholder="Description pour les moteurs de recherche"></textarea>
+                <p class="text-xs text-muted-foreground mt-1">Idéalement 150-160 caractères. <span id="meta-desc-count" class="font-medium">0</span>/160</p>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-1">Alt de l'image à la une</label>
+                <input type="text" id="article-field-alt" class="input w-full" placeholder="Texte alternatif de l'image">
+              </div>
+              <div class="flex items-center gap-3 pt-2">
+                <button id="article-save-lang" class="btn btn-primary">Enregistrer cette langue</button>
+                <span id="article-save-status" class="text-sm text-muted-foreground"></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

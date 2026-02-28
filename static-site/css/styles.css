@@ -924,9 +924,9 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* ── Admin styles ────────────────────────────────────────── */
 
-.admin-tab.active, .admin-filter.active { background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
-.admin-tab, .admin-filter { background-color: transparent; color: hsl(var(--foreground)); }
-.admin-tab:hover:not(.active), .admin-filter:hover:not(.active) { background-color: hsl(var(--muted)); }
+.admin-tab.active, .admin-filter.active, .lang-tab.active { background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+.admin-tab, .admin-filter, .lang-tab { background-color: transparent; color: hsl(var(--foreground)); cursor: pointer; }
+.admin-tab:hover:not(.active), .admin-filter:hover:not(.active), .lang-tab:hover:not(.active) { background-color: hsl(var(--muted)); }
 
 /* ── Scrollbar thin ──────────────────────────────────────── */
 
