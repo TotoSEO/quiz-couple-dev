@@ -358,8 +358,13 @@
       },
       body: JSON.stringify(body)
     }).then(function (res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      return res.json();
+      return res.json().then(function (data) {
+        if (!res.ok) {
+          var errMsg = (data && data.error) ? data.error : 'HTTP ' + res.status;
+          throw new Error(errMsg);
+        }
+        return data;
+      });
     });
   }
 
@@ -719,10 +724,11 @@
           statusEl.className = 'text-sm text-destructive self-center';
         }
       })
-      .catch(function () {
+      .catch(function (err) {
         saveBtn.disabled = false;
-        statusEl.textContent = 'Erreur de connexion';
+        statusEl.textContent = 'Erreur: ' + (err.message || 'Connexion échouée');
         statusEl.className = 'text-sm text-destructive self-center';
+        console.error('Save translation error:', err);
       });
   }
 
@@ -754,8 +760,10 @@
       body: formData
     })
     .then(function (res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      return res.json();
+      return res.json().catch(function () { return { success: false, error: 'HTTP ' + res.status }; }).then(function (data) {
+        if (!res.ok) throw new Error((data && data.error) || 'HTTP ' + res.status);
+        return data;
+      });
     })
     .then(function (data) {
       uploadBtn.disabled = false;
@@ -776,9 +784,10 @@
         statusEl.textContent = 'Erreur: ' + (data.error || 'Upload échoué');
       }
     })
-    .catch(function () {
+    .catch(function (err) {
       uploadBtn.disabled = false;
-      statusEl.textContent = 'Erreur de connexion lors de l\'upload';
+      statusEl.textContent = 'Erreur: ' + (err.message || 'Upload échoué');
+      console.error('Upload error:', err);
     });
   }
 
