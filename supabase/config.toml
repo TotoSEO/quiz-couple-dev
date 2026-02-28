@@ -1,4 +1,4 @@
-project_id = "nbjpgecedevlmypqisng"
+project_id = "lojvajnnvhatfplevyvy"
 
 [functions.resolve-couple-problem]
 verify_jwt = false
@@ -16,4 +16,7 @@ verify_jwt = false
 verify_jwt = false
 
 [functions.blog-og]
+verify_jwt = false
+
+[functions.manage-ado-session]
 verify_jwt = false

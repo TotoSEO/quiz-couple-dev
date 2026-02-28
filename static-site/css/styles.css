@@ -188,6 +188,7 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 .w-4 { width: 1rem; }
 .w-5 { width: 1.25rem; }
 .w-6 { width: 1.5rem; }
+.w-7 { width: 1.75rem; }
 .w-9 { width: 2.25rem; }
 .w-10 { width: 2.5rem; }
 .w-16 { width: 4rem; }
@@ -198,6 +199,7 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 .h-4 { height: 1rem; }
 .h-5 { height: 1.25rem; }
 .h-6 { height: 1.5rem; }
+.h-7 { height: 1.75rem; }
 .h-9 { height: 2.25rem; }
 .h-10 { height: 2.5rem; }
 .h-12 { height: 3rem; }
@@ -720,7 +722,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .blog-sidebar-section.is-collapsed .blog-sidebar-toggle { border-bottom: none; }
 .blog-sidebar-heading { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background-color: hsl(var(--muted) / 0.6); border-bottom: 1px solid hsl(var(--border) / 0.5); font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.01em; color: hsl(var(--foreground)); }
 .blog-sidebar-heading svg { color: hsl(var(--primary)); flex-shrink: 0; }
-.blog-sidebar-list { display: flex; flex-direction: column; padding: 0.375rem 0.5rem 0.5rem; }
+.blog-sidebar-list { display: flex; flex-direction: column; padding: 0.375rem 0.5rem 0.75rem; }
 .blog-sidebar-list .obl { display: block; padding: 0.375rem 0.625rem; border-radius: calc(var(--radius) - 2px); font-size: 0.8125rem; color: hsl(var(--muted-foreground)); cursor: pointer; transition: all 150ms; line-height: 1.4; }
 .blog-sidebar-list .obl:hover { background-color: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); }
 .blog-sidebar-articles .obl { font-size: 0.8125rem; line-height: 1.35; padding: 0.5rem 0.625rem; border-bottom: 1px solid hsl(var(--border) / 0.4); }
@@ -787,7 +789,9 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .star-rating { display: inline-flex; gap: 0.125rem; }
 .star-rating svg { width: 1.25rem; height: 1.25rem; }
 .star-filled { color: #fbbf24; fill: currentColor; }
-.star-empty { color: hsl(var(--muted-foreground) / 0.3); }
+.star-empty { color: hsl(var(--muted-foreground) / 0.3); fill: currentColor; }
+.star-btn { cursor: pointer; padding: 0.125rem; transition: transform 0.15s; }
+.star-btn:hover { transform: scale(1.1); }
 
 /* ── Print ────────────────────────────────────────────────── */
 
@@ -924,9 +928,9 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* ── Admin styles ────────────────────────────────────────── */
 
-.admin-tab.active, .admin-filter.active { background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
-.admin-tab, .admin-filter { background-color: transparent; color: hsl(var(--foreground)); }
-.admin-tab:hover:not(.active), .admin-filter:hover:not(.active) { background-color: hsl(var(--muted)); }
+.admin-tab.active, .admin-filter.active, .lang-tab.active { background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+.admin-tab, .admin-filter, .lang-tab { background-color: transparent; color: hsl(var(--foreground)); cursor: pointer; }
+.admin-tab:hover:not(.active), .admin-filter:hover:not(.active), .lang-tab:hover:not(.active) { background-color: hsl(var(--muted)); }
 
 /* ── Scrollbar thin ──────────────────────────────────────── */
 

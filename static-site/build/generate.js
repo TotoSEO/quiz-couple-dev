@@ -24,6 +24,10 @@ const DIST_DIR = path.resolve(__dirname, '../dist');
 // Review stats fetched from Supabase at build time
 let reviewStats = { avg: '0', count: '0' };
 
+// Article SEO overrides fetched from Supabase at build time
+// Map: "internalSlug-lang" → { title, metaTitle, metaDescription, featuredImageAlt, excerpt }
+let articleOverrides = {};
+
 async function fetchReviewStats() {
   try {
     const res = await fetch(
@@ -39,6 +43,39 @@ async function fetchReviewStats() {
     console.log(`[reviews] Fetched ${reviews.length} approved reviews (avg: ${avg})`);
   } catch (e) {
     console.warn(`[reviews] Could not fetch review stats: ${e.message} — using defaults`);
+  }
+}
+
+async function fetchArticleOverrides() {
+  try {
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/blog_articles?select=internal_slug,status,blog_article_translations(lang,slug,title,meta_title,meta_description,featured_image_alt,excerpt)&status=eq.published`,
+      { headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` } }
+    );
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const articles = await res.json();
+    let count = 0;
+    for (const art of articles) {
+      const translations = art.blog_article_translations || [];
+      for (const tr of translations) {
+        // Only override if there's actual content (not empty defaults)
+        if (tr.title || tr.meta_title || tr.meta_description) {
+          const key = `${art.internal_slug}-${tr.lang}`;
+          articleOverrides[key] = {
+            title: tr.title || undefined,
+            metaTitle: tr.meta_title || undefined,
+            metaDescription: tr.meta_description || undefined,
+            featuredImageAlt: tr.featured_image_alt || undefined,
+            excerpt: tr.excerpt || undefined,
+            slug: tr.slug || undefined,
+          };
+          count++;
+        }
+      }
+    }
+    console.log(`[blog] Fetched ${count} article translation overrides from Supabase (${articles.length} articles)`);
+  } catch (e) {
+    console.warn(`[blog] Could not fetch article overrides from Supabase: ${e.message} — using TS files only`);
   }
 }
 
@@ -230,12 +267,15 @@ async function generatePage(routeKey, lang) {
       let article = parseArticleTs(tsPath);
       if (!article) article = parseArticleTs(frPath);
       if (article) {
+        // Apply Supabase overrides for listing too
+        const oKey = `${articleMeta.internalSlug}-${lang}`;
+        const oData = articleOverrides[oKey];
         blogArticlesList.push({
           slug: localizedSlug,
-          title: article.title,
-          excerpt: article.excerpt || '',
+          title: (oData && oData.title) || article.title,
+          excerpt: (oData && oData.excerpt) || article.excerpt || '',
           featuredImage: article.featuredImage || '/placeholder.svg',
-          featuredImageAlt: article.featuredImageAlt || article.title,
+          featuredImageAlt: (oData && oData.featuredImageAlt) || article.featuredImageAlt || article.title,
           publishedAt: article.publishedAt || articleMeta.publishedAt,
           url: getArticlePath(localizedSlug, lang),
         });
@@ -579,6 +619,17 @@ async function generateBlogArticle(articleMeta, lang) {
     return null;
   }
 
+  // Apply Supabase overrides for SEO fields (admin edits take priority)
+  const overrideKey = `${articleMeta.internalSlug}-${lang}`;
+  const override = articleOverrides[overrideKey];
+  if (override) {
+    if (override.title) article.title = override.title;
+    if (override.metaTitle) article.metaTitle = override.metaTitle;
+    if (override.metaDescription) article.metaDescription = override.metaDescription;
+    if (override.featuredImageAlt) article.featuredImageAlt = override.featuredImageAlt;
+    if (override.excerpt) article.excerpt = override.excerpt;
+  }
+
   const localizedSlug = articleMeta.slugs[lang] || articleMeta.internalSlug;
   const t = createT(lang);
   const translations = loadTranslations(lang);
@@ -808,6 +859,9 @@ async function main() {
 
   // Fetch real review stats from Supabase
   await fetchReviewStats();
+
+  // Fetch article SEO overrides from Supabase (admin edits)
+  await fetchArticleOverrides();
 
   // Clean dist
   if (fs.existsSync(DIST_DIR)) {
