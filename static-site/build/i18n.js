@@ -102,6 +102,111 @@ export function createT(lang, defaultNamespace = null) {
 }
 
 /**
+ * Create a quiz-data translation function (mirrors runtime tgd() logic)
+ * Handles prefix aliases and key format variants across languages.
+ * Key format: "prefix.qN" for questions, "prefix.qNa" for options
+ */
+export function createTgd(lang) {
+  const translations = loadTranslations(lang);
+  const frTranslations = lang !== 'fr' ? loadTranslations('fr') : translations;
+
+  // Build merged gd data (same as copyTranslationData in generate.js)
+  const gdData = { ...(translations['gd'] || {}) };
+  const gdFr = { ...(frTranslations['gd'] || {}) };
+
+  // Merge ado questions from quiz-ado.json into gd data (q.1 → ado.q1)
+  function mergeAdoQuestions(target, allTranslations) {
+    const quizAdo = allTranslations['quiz-ado'];
+    if (quizAdo && quizAdo.q && typeof quizAdo.q === 'object') {
+      const flat = {};
+      for (const [key, value] of Object.entries(quizAdo.q)) {
+        flat['q' + key] = value;
+      }
+      target['ado'] = flat;
+    }
+  }
+  mergeAdoQuestions(gdData, translations);
+  mergeAdoQuestions(gdFr, frTranslations);
+
+  // Same aliases as runtime quiz-engine-core.js PREFIX_ALIASES
+  const PREFIX_ALIASES = {
+    'couple': 'testerC',
+    'commonPoints': 'cp',
+    'coquin': 'coquinQ',
+    'marrant': 'funny'
+  };
+
+  function tryAllPrefixes(data, prefix, rest) {
+    let val = deepGet(data, prefix + '.' + rest);
+    if (val !== undefined) return val;
+    if (PREFIX_ALIASES[prefix]) {
+      val = deepGet(data, PREFIX_ALIASES[prefix] + '.' + rest);
+      if (val !== undefined) return val;
+    }
+    return undefined;
+  }
+
+  // Core lookup: tries current language with aliases and variants, no FR fallback
+  function lookupLocal(key) {
+    let val = deepGet(gdData, key);
+    if (val !== undefined) return val;
+
+    const dotIdx = key.indexOf('.');
+    if (dotIdx > 0) {
+      const prefix = key.substring(0, dotIdx);
+      const rest = key.substring(dotIdx + 1);
+
+      // Try alias prefix
+      if (PREFIX_ALIASES[prefix]) {
+        val = deepGet(gdData, PREFIX_ALIASES[prefix] + '.' + rest);
+        if (val !== undefined) return val;
+      }
+
+      // Numeric variant: q{N} → {N}
+      const numMatch = rest.match(/^q(\d+)$/);
+      if (numMatch) {
+        val = tryAllPrefixes(gdData, prefix, numMatch[1]);
+        if (val !== undefined) return val;
+      }
+
+      // Option variants: q{N}a → q{N}o0, q{N}A
+      const optMatch = rest.match(/^q(\d+)([a-e])$/);
+      if (optMatch) {
+        const qNum = optMatch[1];
+        const letterIdx = optMatch[2].charCodeAt(0) - 97;
+        val = tryAllPrefixes(gdData, prefix, 'q' + qNum + 'o' + letterIdx);
+        if (val !== undefined) return val;
+        val = tryAllPrefixes(gdData, prefix, 'q' + qNum + optMatch[2].toUpperCase());
+        if (val !== undefined) return val;
+      }
+    }
+    return undefined;
+  }
+
+  // tgd: full lookup with FR fallback (for questions)
+  function tgd(key, fallback) {
+    let val = lookupLocal(key);
+    if (val !== undefined) return val;
+
+    // Fallback to FR
+    val = deepGet(gdFr, key);
+    if (val !== undefined) return val;
+
+    return fallback !== undefined ? fallback : key;
+  }
+
+  // tgdLocal: lookup in current language only, no FR fallback (for answers)
+  function tgdLocal(key, fallback) {
+    const val = lookupLocal(key);
+    if (val !== undefined) return val;
+    return fallback !== undefined ? fallback : key;
+  }
+
+  tgd.local = tgdLocal;
+  return tgd;
+}
+
+/**
  * Load all translations for all languages at once
  */
 export function loadAllTranslations() {

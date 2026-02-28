@@ -27,11 +27,11 @@
   const currentYear = new Date().getFullYear();
 %>
 <footer class="border-t border-border bg-muted/30">
-  <div class="container mx-auto px-4 py-12">
-    <div class="grid gap-8 grid-cols-2 md:grid-cols-4">
+  <div class="container mx-auto px-6 sm:px-8 py-12">
+    <div class="grid gap-10 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
       <!-- Brand -->
-      <div class="col-span-2 md:col-span-1 space-y-4">
-        <a href="<%= homeUrl %>" class="flex items-center gap-2 text-xl font-bold">
+      <div class="space-y-4">
+        <a href="<%= homeUrl %>" class="flex items-center gap-2 text-xl font-bold no-underline">
           <img src="/assets/logo-quiz-couple.png" alt="Quiz Couple" class="h-10 w-auto" width="40" height="40" loading="lazy">
           Quiz Couple
         </a>
@@ -41,31 +41,31 @@
       <!-- Tests -->
       <div>
         <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:nav.categoryTests', 'Tests') %></h3>
-        <ul class="space-y-2">
+        <div class="flex flex-col gap-2">
           <% for (const link of footerTestLinks) { %>
-          <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
+          <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
-        </ul>
+        </div>
       </div>
 
       <!-- Quiz -->
       <div>
         <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:nav.categoryQuizzes', 'Quiz') %></h3>
-        <ul class="space-y-2">
+        <div class="flex flex-col gap-2">
           <% for (const link of footerQuizLinks) { %>
-          <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
+          <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
-        </ul>
+        </div>
       </div>
 
-      <!-- Legal Links -->
-      <div class="col-span-2 md:col-span-1">
+      <!-- Legal / Info -->
+      <div>
         <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:footer.information', 'Information') %></h3>
-        <ul class="space-y-2">
+        <div class="flex flex-col gap-2">
           <% for (const link of footerLegalLinks) { %>
-          <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary"><%= link.label || t('common:' + link.labelKey, link.labelKey) %></a></li>
+          <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= link.label || t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
-        </ul>
+        </div>
       </div>
     </div>
 

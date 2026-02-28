@@ -4,20 +4,38 @@
   const quizTitle = t('quizzes:quizMost.title', 'Qui est le plus ?');
   const quizDesc = t('quizzes:quizMost.metaDescription', '');
 
-  const jsonLd = [
-    {
-      "@context": "https://schema.org", "@type": "Quiz",
-      "name": quizTitle, "description": quizDesc, "inLanguage": lang,
-      "isAccessibleForFree": true,
-      "learningResourceType": "Quiz", "interactivityType": "active",
-      "about": { "@type": "Thing", "name": "who is most likely quiz" },
-      "additionalProperty": [
-        { "@type": "PropertyValue", "name": "totalQuestions", "value": 240 },
-        { "@type": "PropertyValue", "name": "questionsPerSession", "value": 20 },
-        { "@type": "PropertyValue", "name": "players", "value": "2-8" }
-      ]
+  // Build hasPart with actual quiz questions using tgd() for proper translations
+  const hasPart = [];
+  const optLetters = ['a', 'b', 'c', 'd', 'e'];
+  for (let qi = 1; qi <= 260; qi++) {
+    const qText = tgd('most.q' + qi, '');
+    if (!qText || qText === 'most.q' + qi) break;
+    const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
+    const ans = [];
+    for (let oi = 0; oi < optLetters.length; oi++) {
+      const oText = tgd.local('most.q' + qi + optLetters[oi], '');
+      if (!oText || oText === 'most.q' + qi + optLetters[oi]) break;
+      ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
     }
-  ];
+    if (ans.length > 0) qObj.suggestedAnswer = ans;
+    hasPart.push(qObj);
+  }
+
+  const quizSchema = {
+    "@context": "https://schema.org", "@type": "Quiz",
+    "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+    "isAccessibleForFree": true,
+    "learningResourceType": "Quiz", "interactivityType": "active",
+    "about": { "@type": "Thing", "name": "who is most likely quiz" },
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "totalQuestions", "value": 240 },
+      { "@type": "PropertyValue", "name": "questionsPerSession", "value": 20 },
+      { "@type": "PropertyValue", "name": "players", "value": "2-8" }
+    ]
+  };
+  if (hasPart.length > 0) quizSchema.hasPart = hasPart;
+
+  const jsonLd = [quizSchema];
   const faqQ1 = t(ns + ':faq.q1', '');
   const faqEntries = [];
   for (let i = 1; i <= 6; i++) {

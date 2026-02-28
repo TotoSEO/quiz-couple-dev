@@ -128,7 +128,7 @@
         <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
         <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.testsDesc', '') %></p>
       </div>
-      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-5xl mx-auto">
+      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
         <% for (let ti = 0; ti < tests.length; ti++) { const item = tests[ti]; %>
         <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
           <div class="homepage-quiz-card-inner">
@@ -154,7 +154,7 @@
         <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
         <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.quizzesDesc', '') %></p>
       </div>
-      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 max-w-6xl mx-auto">
+      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
         <% for (let qi = 0; qi < quizzes.length; qi++) { const item = quizzes[qi]; %>
         <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
           <div class="homepage-quiz-card-inner">
@@ -308,46 +308,75 @@
 
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
-<!-- Reviews Section (loaded dynamically) -->
+<!-- Reviews Section -->
 <section class="section-padding bg-muted/20" id="avis">
+  <div id="reviews-config" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>" class="hidden"></div>
   <div class="container mx-auto px-4">
+    <!-- Header with stats -->
     <div class="text-center mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('common:reviews.title', 'Ce que les couples en pensent') %></h2>
-      <p class="text-muted-foreground"><%= t('common:reviews.subtitle', 'Découvrez les avis de ceux qui ont testé nos quiz') %></p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" id="reviews-grid">
-      <!-- Reviews loaded by JS -->
+      <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-4">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <%= t('common:reviews.badge', 'Avis vérifiés') %>
+      </div>
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4"><%= t('common:reviews.title', 'Ce que les couples') %> <span class="text-gradient"><%= t('common:reviews.titleHighlight', 'en pensent') %></span></h2>
+      <div class="flex items-center gap-3 justify-center mt-4">
+        <div id="reviews-stars-display" class="flex items-center gap-0.5">
+          <% for (var si = 0; si < 5; si++) { %>
+          <svg viewBox="0 0 24 24" class="w-5 h-5 star-filled"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <% } %>
+        </div>
+        <span class="text-2xl font-bold text-foreground" id="reviews-avg">-</span>
+        <span class="text-sm text-muted-foreground" id="reviews-count"></span>
+      </div>
     </div>
 
-    <!-- Review submission form -->
-    <div class="max-w-lg mx-auto mt-12 glass-card rounded-2xl p-6" id="review-form-section">
-      <h3 class="text-lg font-bold mb-4 text-center"><%= t('common:reviews.leaveReview', 'Laissez votre avis') %></h3>
-      <form id="review-form" class="space-y-4">
-        <div>
-          <label class="block text-sm font-medium mb-1"><%= t('common:reviews.yourName', 'Votre prénom') %></label>
-          <input type="text" id="review-name" class="input w-full" placeholder="<%= t('common:reviews.yourName', 'Votre prénom') %>" required maxlength="50">
-        </div>
-        <div>
-          <label class="block text-sm font-medium mb-1"><%= t('common:reviews.averageRating', 'Note') %></label>
-          <div class="flex gap-1" id="review-stars">
-            <% for (var s = 1; s <= 5; s++) { %>
-            <button type="button" data-star="<%= s %>" class="star-btn p-1 transition-transform hover:scale-110" aria-label="<%= s %> étoiles">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 <%= s <= 5 ? 'star-filled' : 'star-empty' %>"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    <!-- Two column layout: form LEFT + reviews RIGHT -->
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+      <!-- Review Form (2 cols - LEFT on desktop, first on mobile) -->
+      <div class="lg:col-span-2 order-1">
+        <div class="lg:sticky lg:top-24 glass-card rounded-2xl p-6" id="review-form-section">
+          <h3 class="text-lg font-bold mb-5 text-center"><%= t('common:reviews.leaveReview', 'Laissez votre avis') %></h3>
+          <form id="review-form" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium mb-1.5" for="review-name"><%= t('common:reviews.yourName', 'Votre prénom') %></label>
+              <input type="text" id="review-name" class="input w-full" placeholder="<%= t('common:reviews.namePlaceholder', 'Prénom ou pseudo') %>" maxlength="60" autocomplete="off">
+              <div class="flex justify-end mt-1"><span id="review-name-counter" class="text-xs text-muted-foreground">0/60</span></div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1.5"><%= t('common:reviews.ratingLabel', 'Votre note') %></label>
+              <div class="flex gap-1" id="review-stars">
+                <% for (var s = 1; s <= 5; s++) { %>
+                <button type="button" data-star="<%= s %>" class="star-btn p-0.5 transition-transform hover:scale-110" aria-label="<%= s %> étoiles">
+                  <svg viewBox="0 0 24 24" class="w-7 h-7 star-empty"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </button>
+                <% } %>
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1.5" for="review-comment"><%= t('common:reviews.commentLabel', 'Votre commentaire') %> <span class="text-muted-foreground font-normal">(<%= t('common:reviews.optional', 'optionnel') %>)</span></label>
+              <textarea id="review-comment" class="textarea w-full" rows="3" placeholder="<%= t('common:reviews.commentPlaceholder', 'Partagez votre expérience...') %>" maxlength="200"></textarea>
+              <div class="flex justify-end mt-1"><span id="review-comment-counter" class="text-xs text-muted-foreground">0/200</span></div>
+            </div>
+            <button type="submit" class="btn btn-cta w-full" id="review-submit">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              <%= t('common:reviews.submit', 'Envoyer mon avis') %>
             </button>
-            <% } %>
-          </div>
+            <p id="review-error" class="hidden text-sm text-destructive text-center"></p>
+          </form>
         </div>
-        <div>
-          <label class="block text-sm font-medium mb-1"><%= t('common:reviews.yourReview', 'Votre avis') %></label>
-          <textarea id="review-comment" class="textarea w-full" rows="3" placeholder="<%= t('common:reviews.yourReview', 'Votre avis (optionnel)') %>" required minlength="10" maxlength="500"></textarea>
+      </div>
+
+      <!-- Reviews List (3 cols - RIGHT on desktop) -->
+      <div class="lg:col-span-3 order-2">
+        <div class="space-y-4 max-h-[500px] overflow-y-auto pr-2 scrollbar-thin" id="reviews-grid">
+          <!-- Reviews loaded by JS -->
         </div>
-        <button type="submit" class="btn btn-primary w-full" id="review-submit"><%= t('common:reviews.submit', 'Envoyer mon avis') %></button>
-        <p id="review-success" class="hidden text-sm text-emerald-600 text-center font-medium"><%= t('common:reviews.thankYou', 'Merci pour votre avis !') %> <%= t('common:reviews.pending', 'Votre avis est en attente de modération') %></p>
-        <p id="review-error" class="hidden text-sm text-destructive text-center"></p>
-      </form>
+      </div>
     </div>
   </div>
 </section>
+
+<script src="/js/reviews.js" defer></script>
 
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
@@ -365,89 +394,3 @@
   </div>
 </section>
 
-<!-- Home page dynamic scripts -->
-<script>
-  // Load reviews
-  (function() {
-    var SUPABASE_URL = '<%= supabaseUrl %>';
-    var SUPABASE_KEY = '<%= supabaseKey %>';
-    var grid = document.getElementById('reviews-grid');
-    if (!grid) return;
-
-    fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&is_approved=eq.true&order=created_at.desc&limit=6', {
-      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
-    })
-    .then(function(res) { return res.json(); })
-    .then(function(reviews) {
-      if (!reviews || reviews.length === 0) return;
-      var html = '';
-      reviews.forEach(function(r) {
-        var stars = '';
-        for (var i = 1; i <= 5; i++) {
-          stars += '<svg viewBox="0 0 24 24" class="w-4 h-4 ' + (i <= r.rating ? 'star-filled' : 'star-empty') + '"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
-        }
-        html += '<div class="glass-card rounded-2xl p-6">';
-        html += '<div class="flex items-center gap-1 mb-3">' + stars + '</div>';
-        html += '<p class="text-sm text-muted-foreground mb-3">' + (r.comment || '') + '</p>';
-        html += '<p class="text-sm font-medium text-foreground">' + (r.author_name || 'Anonyme') + '</p>';
-        html += '</div>';
-      });
-      grid.innerHTML = html;
-    })
-    .catch(function() {});
-  })();
-
-  // Review form
-  (function() {
-    var SUPABASE_URL = '<%= supabaseUrl %>';
-    var SUPABASE_KEY = '<%= supabaseKey %>';
-    var form = document.getElementById('review-form');
-    if (!form) return;
-
-    var selectedRating = 5;
-    var starBtns = document.querySelectorAll('#review-stars .star-btn');
-    starBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        selectedRating = parseInt(this.dataset.star);
-        starBtns.forEach(function(b) {
-          var val = parseInt(b.dataset.star);
-          b.querySelector('svg').className = 'w-8 h-8 ' + (val <= selectedRating ? 'star-filled' : 'star-empty');
-        });
-      });
-    });
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var name = document.getElementById('review-name').value.trim();
-      var comment = document.getElementById('review-comment').value.trim();
-      if (!name || !comment || comment.length < 10) return;
-
-      var submitBtn = document.getElementById('review-submit');
-      submitBtn.disabled = true;
-      submitBtn.textContent = '...';
-
-      fetch(SUPABASE_URL + '/rest/v1/reviews', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'apikey': SUPABASE_KEY,
-          'Authorization': 'Bearer ' + SUPABASE_KEY,
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify({ author_name: name, comment: comment, rating: selectedRating, is_approved: false })
-      })
-      .then(function(res) {
-        if (res.ok || res.status === 201) {
-          form.style.display = 'none';
-          document.getElementById('review-success').classList.remove('hidden');
-        } else { throw new Error('failed'); }
-      })
-      .catch(function() {
-        document.getElementById('review-error').textContent = 'Erreur, veuillez réessayer.';
-        document.getElementById('review-error').classList.remove('hidden');
-        submitBtn.disabled = false;
-        submitBtn.textContent = '<%= t("common:reviews.submit", "Envoyer mon avis") %>';
-      });
-    });
-  })();
-</script>

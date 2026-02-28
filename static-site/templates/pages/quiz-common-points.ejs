@@ -5,19 +5,38 @@
   const quizDesc = t('quizzes:' + routeKey + '.metaDescription', '');
 
   const faqItems = t(ns + ':seo.faq', []);
-  const jsonLd = [
-    {
-      "@context": "https://schema.org", "@type": "Quiz",
-      "name": quizTitle, "description": quizDesc, "inLanguage": lang,
-      "isAccessibleForFree": true,
-      "learningResourceType": "Quiz", "interactivityType": "active",
-      "about": { "@type": "Thing", "name": "couple compatibility test" },
-      "additionalProperty": [
-        { "@type": "PropertyValue", "name": "totalQuestions", "value": 200 },
-        { "@type": "PropertyValue", "name": "questionsPerSession", "value": 20 }
-      ]
+
+  // Build hasPart with actual quiz questions using tgd() for proper translations
+  const hasPart = [];
+  const optLetters = ['a', 'b', 'c', 'd', 'e'];
+  for (let qi = 1; qi <= 220; qi++) {
+    const qText = tgd('commonPoints.q' + qi, '');
+    if (!qText || qText === 'commonPoints.q' + qi) break;
+    const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
+    const ans = [];
+    for (let oi = 0; oi < optLetters.length; oi++) {
+      const oText = tgd.local('commonPoints.q' + qi + optLetters[oi], '');
+      if (!oText || oText === 'commonPoints.q' + qi + optLetters[oi]) break;
+      ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
     }
-  ];
+    if (ans.length > 0) qObj.suggestedAnswer = ans;
+    hasPart.push(qObj);
+  }
+
+  const quizSchema = {
+    "@context": "https://schema.org", "@type": "Quiz",
+    "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+    "isAccessibleForFree": true,
+    "learningResourceType": "Quiz", "interactivityType": "active",
+    "about": { "@type": "Thing", "name": "couple compatibility test" },
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "totalQuestions", "value": 200 },
+      { "@type": "PropertyValue", "name": "questionsPerSession", "value": 20 }
+    ]
+  };
+  if (hasPart.length > 0) quizSchema.hasPart = hasPart;
+
+  const jsonLd = [quizSchema];
   if (Array.isArray(faqItems) && faqItems.length > 0) {
     jsonLd.push({
       "@context": "https://schema.org", "@type": "FAQPage",

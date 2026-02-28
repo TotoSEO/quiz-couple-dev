@@ -3,27 +3,47 @@
   const quizTitle = t('quizzes:quizAdo.title', 'Quiz Couple Ado');
   const quizDesc = t('quizzes:quizAdo.metaDescription', '');
 
-  const jsonLd = [
-    {
-      "@context": "https://schema.org", "@type": "Quiz",
-      "name": quizTitle, "description": quizDesc, "inLanguage": lang,
-      "dateCreated": "2026-02-24", "datePublished": "2026-02-24",
-      "isAccessibleForFree": true, "timeRequired": "PT10M",
-      "learningResourceType": "Quiz", "interactivityType": "active",
-      "educationalAlignment": {
-        "@type": "AlignmentObject",
-        "educationalFramework": "Couple relationships",
-        "targetName": "Teen relationship assessment",
-        "alignmentType": "teaches"
-      },
-      "about": { "@type": "Thing", "name": "teen couple quiz" },
-      "additionalProperty": [
-        { "@type": "PropertyValue", "name": "totalQuestions", "value": 80 },
-        { "@type": "PropertyValue", "name": "questionsPerSession", "value": 20 },
-        { "@type": "PropertyValue", "name": "players", "value": 2 },
-        { "@type": "PropertyValue", "name": "audience", "value": "teenagers" }
-      ]
+  // Build hasPart with actual quiz questions using tgd() for proper translations
+  const hasPart = [];
+  const optLetters = ['a', 'b', 'c', 'd', 'e'];
+  for (let qi = 1; qi <= 100; qi++) {
+    const qText = tgd('ado.q' + qi, '');
+    if (!qText || qText === 'ado.q' + qi) break;
+    const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
+    const ans = [];
+    for (let oi = 0; oi < optLetters.length; oi++) {
+      const oText = tgd.local('ado.q' + qi + optLetters[oi], '');
+      if (!oText || oText === 'ado.q' + qi + optLetters[oi]) break;
+      ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
+    }
+    if (ans.length > 0) qObj.suggestedAnswer = ans;
+    hasPart.push(qObj);
+  }
+
+  const quizSchema = {
+    "@context": "https://schema.org", "@type": "Quiz",
+    "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+    "dateCreated": "2026-02-24", "datePublished": "2026-02-24",
+    "isAccessibleForFree": true, "timeRequired": "PT10M",
+    "learningResourceType": "Quiz", "interactivityType": "active",
+    "educationalAlignment": {
+      "@type": "AlignmentObject",
+      "educationalFramework": "Couple relationships",
+      "targetName": "Teen relationship assessment",
+      "alignmentType": "teaches"
     },
+    "about": { "@type": "Thing", "name": "teen couple quiz" },
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "totalQuestions", "value": 80 },
+      { "@type": "PropertyValue", "name": "questionsPerSession", "value": 20 },
+      { "@type": "PropertyValue", "name": "players", "value": 2 },
+      { "@type": "PropertyValue", "name": "audience", "value": "teenagers" }
+    ]
+  };
+  if (hasPart.length > 0) quizSchema.hasPart = hasPart;
+
+  const jsonLd = [
+    quizSchema,
     {
       "@context": "https://schema.org", "@type": "FAQPage",
       "mainEntity": [1,2,3,4].map(function(i) {

@@ -33,7 +33,10 @@
     <div class="flex h-16 items-center justify-between">
       <!-- Logo -->
       <a href="<%= homeUrl %>" class="flex items-center gap-2 text-xl font-bold transition-colors hover:opacity-80" aria-label="Quiz Couple - <%= lang === 'fr' ? 'Accueil' : 'Home' %>">
-        <img src="/assets/logo-quiz-couple.png" alt="Quiz Couple" class="h-10 w-auto" width="40" height="40" loading="eager">
+        <picture>
+          <source srcset="/assets/logo-quiz-couple.webp" type="image/webp">
+          <img src="/assets/logo-quiz-couple.png" alt="Quiz Couple" class="h-10 w-auto" width="40" height="42" loading="eager" fetchpriority="high">
+        </picture>
         <span class="hidden sm:inline">Quiz Couple</span>
       </a>
 
@@ -101,11 +104,11 @@
     </div>
 
     <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="hidden border-t border-border bg-background py-4 lg:hidden animate-fade-in">
+    <div id="mobile-menu" class="hidden py-4 lg:hidden animate-fade-in">
       <div class="flex flex-col space-y-2">
         <!-- Tests accordion -->
         <div class="mobile-accordion">
-          <button class="mobile-accordion-trigger flex w-full items-center justify-between rounded-lg px-3 py-3 text-base font-medium transition-colors hover:bg-muted" style="color: hsl(var(--foreground))" aria-expanded="false">
+          <button class="mobile-accordion-trigger flex w-full items-center justify-between rounded-lg px-3 py-3 text-base font-medium transition-colors hover:bg-muted"  aria-expanded="false">
             <span><%= t('common:nav.categoryTests', 'Tests') %></span>
             <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
@@ -118,7 +121,7 @@
 
         <!-- Quiz accordion -->
         <div class="mobile-accordion">
-          <button class="mobile-accordion-trigger flex w-full items-center justify-between rounded-lg px-3 py-3 text-base font-medium transition-colors hover:bg-muted" style="color: hsl(var(--foreground))" aria-expanded="false">
+          <button class="mobile-accordion-trigger flex w-full items-center justify-between rounded-lg px-3 py-3 text-base font-medium transition-colors hover:bg-muted"  aria-expanded="false">
             <span><%= t('common:nav.categoryQuizzes', 'Quiz') %></span>
             <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
@@ -131,7 +134,7 @@
 
         <!-- Direct links -->
         <% for (const link of directLinks) { %>
-        <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="rounded-lg px-3 py-3 text-base font-medium transition-colors hover:bg-muted hover:text-primary" style="color: hsl(var(--foreground))"><%= t('common:' + link.labelKey, link.labelKey) %></a>
+        <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="rounded-lg px-3 py-3 text-base font-medium transition-colors hover:bg-muted hover:text-primary" ><%= t('common:' + link.labelKey, link.labelKey) %></a>
         <% } %>
       </div>
     </div>

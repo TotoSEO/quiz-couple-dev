@@ -160,18 +160,47 @@
   }
 
   // ── JSON-LD ────────────────────────────────────────────────────
-  const jsonLd = [
-    {
-      "@context": "https://schema.org", "@type": "Quiz",
-      "name": quizTitle, "description": quizDesc, "inLanguage": lang,
-      "isAccessibleForFree": true,
-      "learningResourceType": "Quiz", "interactivityType": "active",
-      "about": { "@type": "Thing", "name": "couple" },
-      "additionalProperty": [
-        { "@type": "PropertyValue", "name": "totalQuestions", "value": totalQ }
-      ]
+  // Map quizType to gd.json prefix for structured data questions
+  const gdPrefixMap = {
+    'toxic': 'divorce', 'divorce': 'divorce', 'mariage': 'marriage',
+    'tester-couple': 'couple', 'common-points': 'commonPoints',
+    'sain': 'healthy', 'distance': 'distance', 'coquin': 'coquin',
+    'knowledge': 'knowledge', 'amoureux': 'amoureux',
+    'marrant': 'marrant', 'most': 'most', 'ado': 'ado'
+  };
+  const gdPrefix = gdPrefixMap[quizType] || quizType;
+
+  // Build hasPart with actual quiz questions from gd.json using tgd() for proper translations
+  const hasPart = [];
+  const optionLetters = ['a', 'b', 'c', 'd', 'e'];
+  for (let qi = 1; qi <= (totalQ + 20); qi++) {
+    const qText = tgd(gdPrefix + '.q' + qi, '');
+    if (!qText || qText === gdPrefix + '.q' + qi) break;
+    const questionObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
+    const answers = [];
+    for (let oi = 0; oi < optionLetters.length; oi++) {
+      const optText = tgd.local(gdPrefix + '.q' + qi + optionLetters[oi], '');
+      if (!optText || optText === gdPrefix + '.q' + qi + optionLetters[oi]) break;
+      answers.push({ "@type": "Answer", "position": oi + 1, "text": optText });
     }
-  ];
+    if (answers.length > 0) questionObj.suggestedAnswer = answers;
+    hasPart.push(questionObj);
+  }
+
+  const quizJsonLd = {
+    "@context": "https://schema.org", "@type": "Quiz",
+    "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+    "isAccessibleForFree": true, "datePublished": "2026-01-23",
+    "learningResourceType": "Quiz", "interactivityType": "active",
+    "about": { "@type": "Thing", "name": "couple" },
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "totalQuestions", "value": totalQ },
+      { "@type": "PropertyValue", "name": "audience", "value": "couples" }
+    ]
+  };
+  if (hasPart.length > 0) quizJsonLd.hasPart = hasPart;
+
+  const jsonLd = [quizJsonLd];
   if (faqEntries.length > 0) {
     jsonLd.push({
       "@context": "https://schema.org", "@type": "FAQPage",

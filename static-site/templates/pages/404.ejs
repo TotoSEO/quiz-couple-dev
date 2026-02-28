@@ -1,0 +1,24 @@
+<%
+  const error404 = {
+    fr: { title: 'Page introuvable', desc: 'Oups ! La page que vous cherchez n\'existe pas ou a été déplacée.', home: 'Retour à l\'accueil', quiz: 'Découvrir nos quiz' },
+    en: { title: 'Page not found', desc: 'Oops! The page you\'re looking for doesn\'t exist or has been moved.', home: 'Back to home', quiz: 'Discover our quizzes' },
+    es: { title: 'Página no encontrada', desc: '¡Ups! La página que buscas no existe o ha sido movida.', home: 'Volver al inicio', quiz: 'Descubrir nuestros quiz' },
+    de: { title: 'Seite nicht gefunden', desc: 'Ups! Die Seite, die du suchst, existiert nicht oder wurde verschoben.', home: 'Zurück zur Startseite', quiz: 'Unsere Quiz entdecken' },
+    it: { title: 'Pagina non trovata', desc: 'Ops! La pagina che cerchi non esiste o è stata spostata.', home: 'Torna alla home', quiz: 'Scopri i nostri quiz' },
+  };
+  const e = error404[lang] || error404.fr;
+%>
+
+<section class="min-h-[60vh] flex items-center justify-center py-16">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-lg text-center space-y-6">
+      <div class="text-8xl font-bold text-primary/20">404</div>
+      <h1 class="text-3xl md:text-4xl font-bold text-foreground"><%= e.title %></h1>
+      <p class="text-lg text-muted-foreground"><%= e.desc %></p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+        <a href="<%= getLocalizedUrl('home', lang) %>" class="btn btn-cta"><%= e.home %></a>
+        <a href="#quiz-section" onclick="window.location='<%= getLocalizedUrl('home', lang) %>#quiz-section'" class="btn btn-outline btn-lg"><%= e.quiz %></a>
+      </div>
+    </div>
+  </div>
+</section>
