@@ -49,7 +49,7 @@ async function fetchReviewStats() {
 async function fetchArticleOverrides() {
   try {
     const res = await fetch(
-      `${SUPABASE_URL}/rest/v1/blog_articles?select=internal_slug,status,blog_article_translations(lang,slug,title,meta_title,meta_description,featured_image_alt,excerpt)&status=eq.published`,
+      `${SUPABASE_URL}/rest/v1/blog_articles?select=internal_slug,status,featured_image_url,blog_article_translations(lang,slug,title,meta_title,meta_description,featured_image_alt,excerpt)&status=eq.published`,
       { headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` } }
     );
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -68,6 +68,7 @@ async function fetchArticleOverrides() {
             featuredImageAlt: tr.featured_image_alt || undefined,
             excerpt: tr.excerpt || undefined,
             slug: tr.slug || undefined,
+            featuredImage: art.featured_image_url || undefined,
           };
           count++;
         }
@@ -274,7 +275,7 @@ async function generatePage(routeKey, lang) {
           slug: localizedSlug,
           title: (oData && oData.title) || article.title,
           excerpt: (oData && oData.excerpt) || article.excerpt || '',
-          featuredImage: article.featuredImage || '/placeholder.svg',
+          featuredImage: (oData && oData.featuredImage) || article.featuredImage || '/placeholder.svg',
           featuredImageAlt: (oData && oData.featuredImageAlt) || article.featuredImageAlt || article.title,
           publishedAt: article.publishedAt || articleMeta.publishedAt,
           url: getArticlePath(localizedSlug, lang),
@@ -628,6 +629,7 @@ async function generateBlogArticle(articleMeta, lang) {
     if (override.metaDescription) article.metaDescription = override.metaDescription;
     if (override.featuredImageAlt) article.featuredImageAlt = override.featuredImageAlt;
     if (override.excerpt) article.excerpt = override.excerpt;
+    if (override.featuredImage) article.featuredImage = override.featuredImage;
   }
 
   const localizedSlug = articleMeta.slugs[lang] || articleMeta.internalSlug;
