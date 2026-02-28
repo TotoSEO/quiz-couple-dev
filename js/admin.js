@@ -298,11 +298,8 @@
 
     if (allArticles.length === 0) {
       listEl.innerHTML = '<div class="text-center py-12 space-y-4">'
-        + '<p class="text-muted-foreground">Aucun article trouvé dans la base de données.</p>'
-        + '<button id="create-first-article" class="btn btn-primary">Créer un article</button>'
+        + '<p class="text-muted-foreground">Aucun article. Cliquez sur "+ Nouvel article" pour en ajouter un.</p>'
         + '</div>';
-      var createBtn = document.getElementById('create-first-article');
-      if (createBtn) createBtn.addEventListener('click', promptCreateArticle);
       return;
     }
 
@@ -673,6 +670,10 @@
         switchTab(this.dataset.tab);
       });
     });
+
+    // Articles create
+    var createBtn = document.getElementById('articles-create');
+    if (createBtn) createBtn.addEventListener('click', promptCreateArticle);
 
     // Articles refresh
     var articlesRefresh = document.getElementById('articles-refresh');
