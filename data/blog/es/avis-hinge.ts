@@ -105,7 +105,7 @@ const article: BlogArticleData = {
     {
       id: 'version-gratuita-hinge-plus-hingex',
       title: `Versión gratuita, Hinge+ y HingeX: lo que pagas realmente`,
-      content: `<p>La versión gratuita de Hinge es <strong>más generosa que la de <a href="/es/blog/tinder-opiniones-vale-la-pena/">Tinder</a></strong> en varios aspectos. Perfil completo, mensajería abierta con los matches, acceso al "Most Compatible" diario, y la posibilidad de comentar al dar like — gratis. Ya es bastante. El límite: <strong>8 likes al día</strong>, que se reinician cada 24 horas. Y solo ves una notificación de like recibido a la vez, sin poder consultar el conjunto de personas que te han dado like.</p>
+      content: `<p>La versión gratuita de Hinge es <strong>más generosa que la de Tinder</strong> en varios aspectos. Perfil completo, mensajería abierta con los matches, acceso al "Most Compatible" diario, y la posibilidad de comentar al dar like — gratis. Ya es bastante. El límite: <strong>8 likes al día</strong>, que se reinician cada 24 horas. Y solo ves una notificación de like recibido a la vez, sin poder consultar el conjunto de personas que te han dado like.</p>
 
 <p>8 likes obligan a elegir. En una app donde la intención cuenta, es coherente con la filosofía. Pero en la práctica, puede resultar frustrante cuando estás en fase de exploración al principio.</p>
 

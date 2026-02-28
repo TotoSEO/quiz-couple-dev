@@ -105,7 +105,7 @@ const article: BlogArticleData = {
     {
       id: 'free-version-hinge-plus-hingex',
       title: `Free version, Hinge+ and HingeX: what you're really paying for`,
-      content: `<p>Hinge's free version is <strong>more generous than <a href="/en/blog/tinder-review/">Tinder's</a></strong> in several ways. Full profile, open messaging with matches, access to the daily "Most Compatible," and the ability to comment when liking — all free. It's already substantial. The cap: <strong>8 likes per day</strong>, reset every 24 hours. And you can only see one received like notification at a time, without being able to browse everyone who's liked you.</p>
+      content: `<p>Hinge's free version is <strong>more generous than Tinder's</strong> in several ways. Full profile, open messaging with matches, access to the daily "Most Compatible," and the ability to comment when liking — all free. It's already substantial. The cap: <strong>8 likes per day</strong>, reset every 24 hours. And you can only see one received like notification at a time, without being able to browse everyone who's liked you.</p>
 
 <p>8 likes forces you to choose. On an app where intention matters, it's consistent with the philosophy. But in practice, it can get frustrating when you're in exploration mode at the start.</p>
 
