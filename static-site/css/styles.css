@@ -696,6 +696,28 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .blog-author-name { font-weight: 700; margin-bottom: 0.25rem; }
 .blog-author-bio { font-size: 0.875rem; color: hsl(var(--muted-foreground)); }
 
+/* Blog layout (article + sidebar) */
+.blog-layout { display: grid; grid-template-columns: 1fr; gap: 2.5rem; max-width: 72rem; margin: 0 auto; }
+@media (min-width: 1024px) { .blog-layout { grid-template-columns: 1fr 280px; } }
+.blog-layout-main { min-width: 0; }
+
+/* Blog sidebar */
+.blog-sidebar { display: none; }
+@media (min-width: 1024px) { .blog-sidebar { display: block; } }
+.blog-sidebar-inner { position: sticky; top: 5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.blog-sidebar-section { border-radius: calc(var(--radius) + 4px); border: 1px solid hsl(var(--border)); background-color: hsl(var(--card) / 0.6); overflow: hidden; }
+.blog-sidebar-toggle { display: flex; align-items: center; gap: 0.5rem; width: 100%; padding: 0.75rem 1rem; text-align: left; cursor: pointer; background: transparent; border: none; color: hsl(var(--foreground)); font-size: 0.8125rem; font-weight: 600; transition: background-color 150ms; }
+.blog-sidebar-toggle:hover { background-color: hsl(var(--muted) / 0.5); }
+.blog-sidebar-chevron { margin-left: auto; transition: transform 200ms; flex-shrink: 0; }
+.blog-sidebar-section.is-collapsed .blog-sidebar-chevron { transform: rotate(-90deg); }
+.blog-sidebar-section.is-collapsed .blog-sidebar-list { display: none; }
+.blog-sidebar-heading { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; font-size: 0.8125rem; font-weight: 600; color: hsl(var(--foreground)); }
+.blog-sidebar-list { display: flex; flex-direction: column; padding: 0 0.5rem 0.5rem; }
+.blog-sidebar-list .obl { display: block; padding: 0.375rem 0.625rem; border-radius: calc(var(--radius) - 2px); font-size: 0.8125rem; color: hsl(var(--muted-foreground)); cursor: pointer; transition: all 150ms; line-height: 1.4; }
+.blog-sidebar-list .obl:hover { background-color: hsl(var(--primary) / 0.08); color: hsl(var(--primary)); }
+.blog-sidebar-articles .obl { font-size: 0.8125rem; line-height: 1.35; padding: 0.5rem 0.625rem; border-bottom: 1px solid hsl(var(--border) / 0.5); }
+.blog-sidebar-articles .obl:last-child { border-bottom: none; }
+
 /* ── Quiz engine container ────────────────────────────────── */
 
 .quiz-engine { border-radius: calc(var(--radius) + 8px); border: 1px solid hsl(var(--border)); background-color: hsl(var(--card) / 0.6); backdrop-filter: blur(24px); padding: 2rem; max-width: 48rem; margin: 0 auto; text-align: center; }

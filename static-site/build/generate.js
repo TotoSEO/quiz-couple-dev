@@ -617,6 +617,29 @@ async function generateBlogArticle(articleMeta, lang) {
     article,
     authorBio,
     articleAlternates,
+    // Sidebar data
+    sidebarTests: [
+      'testCouple', 'testCommonPoints', 'testDistance', 'testToxic',
+      'testCoupleSain', 'testMariage', 'testDivorce',
+    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
+    sidebarQuizzes: [
+      'quizAmoureux', 'quizCoquin', 'quizMarrant', 'quizKnowledge',
+      'quizMost', 'quizAdo',
+    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
+    sidebarOther: [
+      'questionsCouple', 'problemResolver',
+    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
+    sidebarArticles: BLOG_ARTICLES
+      .filter(a => a.internalSlug !== articleMeta.internalSlug)
+      .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+      .slice(0, 5)
+      .map(a => {
+        const slug = a.slugs[lang] || a.internalSlug;
+        const aPath = path.resolve(__dirname, '../../data/blog', lang, `${a.internalSlug}.ts`);
+        const aFr = path.resolve(__dirname, '../../data/blog/fr', `${a.internalSlug}.ts`);
+        const aData = parseArticleTs(aPath) || parseArticleTs(aFr);
+        return { title: aData?.title || a.internalSlug, url: getArticleUrl(slug, lang) };
+      }),
   };
 
   try {
