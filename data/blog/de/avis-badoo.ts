@@ -104,7 +104,7 @@ const article: BlogArticleData = {
         {
           id: 'was-maennern-auf-badoo-wirklich-hilft',
           title: `Was Männern auf Badoo wirklich hilft`,
-          content: `<p>Nach einer Woche haben wir etwas Einfaches gemacht: Wir haben das Hauptfoto überarbeitet. Ergebnis: <strong>Die Anzahl der Matches hat sich innerhalb von vier Tagen verdoppelt.</strong> Ohne bezahlten Boost. Nur durch den Wechsel des Profilfotos. Badoo setzt in seinem Anzeige-Algorithmus enorm auf das Hauptfoto — viel stärker als beispielsweise <a href="/de/blog/hinge-erfahrungen-test/">Hinge</a>, wo die Bio genauso viel zählt. Hier gilt: Wenn das erste Bild die Aufmerksamkeit nicht in zwei Sekunden fesselt, fällt das Profil durch.</p>
+          content: `<p>Nach einer Woche haben wir etwas Einfaches gemacht: Wir haben das Hauptfoto überarbeitet. Ergebnis: <strong>Die Anzahl der Matches hat sich innerhalb von vier Tagen verdoppelt.</strong> Ohne bezahlten Boost. Nur durch den Wechsel des Profilfotos. Badoo setzt in seinem Anzeige-Algorithmus enorm auf das Hauptfoto — viel stärker als beispielsweise Hinge, wo die Bio genauso viel zählt. Hier gilt: Wenn das erste Bild die Aufmerksamkeit nicht in zwei Sekunden fesselt, fällt das Profil durch.</p>
 
 <p>Was wir beim Testen gelernt haben: Ein sichtbares Lächeln, ein Outdoor-Foto und ein Bildausschnitt, der weder zu eng noch zu weit ist. Selfies in der Büro-Toilette, Skifotos, auf denen man vor allem den Berg sieht, oder Gruppenbilder mit fünf Freunden, bei denen man raten muss, wer wer ist — all das versenkt ein Profil sicherer als eine schlechte Bio.</p>
 

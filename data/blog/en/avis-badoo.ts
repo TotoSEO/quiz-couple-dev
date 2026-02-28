@@ -104,7 +104,7 @@ const article: BlogArticleData = {
         {
           id: 'what-actually-helps-men-on-badoo',
           title: `What actually helps men on Badoo`,
-          content: `<p>We did something simple after a week: we reworked the main photo. The result: <strong>the number of matches doubled in four days.</strong> Not by adding a paid boost. Just by swapping one photo for another. Badoo relies heavily on the main photo in its display algorithm — much more than <a href="/en/blog/hinge-dating-app-review/">Hinge</a>, for example, where the bio matters just as much. Here, if the first image doesn't grab attention within two seconds, the profile gets buried.</p>
+          content: `<p>We did something simple after a week: we reworked the main photo. The result: <strong>the number of matches doubled in four days.</strong> Not by adding a paid boost. Just by swapping one photo for another. Badoo relies heavily on the main photo in its display algorithm — much more than Hinge, for example, where the bio matters just as much. Here, if the first image doesn't grab attention within two seconds, the profile gets buried.</p>
 
 <p>What we learned from testing: a visible smile, an outdoor photo, and framing that's neither too tight nor too far away. Bathroom selfies at the office, ski goggle photos where you mostly see the mountain, or groups of five friends where you have to guess who's who — all of that sinks a profile more surely than a bad bio.</p>
 

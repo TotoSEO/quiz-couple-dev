@@ -314,17 +314,82 @@ async function generatePage(routeKey, lang) {
 // ── Sitemap generation ──────────────────────────────────────────────────
 
 function generateSitemaps() {
-  const publicDir = path.resolve(__dirname, '../../public');
+  const B = BASE_URL;
 
-  // Copy existing sitemaps from public/ to dist/ as-is
-  for (const file of ['sitemap.xml', 'sitemap-fr.xml', 'sitemap-en.xml', 'sitemap-es.xml', 'sitemap-de.xml', 'sitemap-it.xml']) {
-    const src = path.join(publicDir, file);
-    const dest = path.join(DIST_DIR, file);
-    if (fs.existsSync(src)) {
-      fs.copyFileSync(src, dest);
-    }
+  // Build URL helper: returns full URL for a route slug in a given language
+  function url(lang, slug) {
+    if (lang === 'fr') return slug ? `${B}/${slug}/` : `${B}/`;
+    return slug ? `${B}/${lang}/${slug}/` : `${B}/${lang}/`;
   }
-  console.log('[sitemaps] Copied sitemaps to dist/');
+
+  // Build blog URL helper
+  function blogUrl(lang, slug) {
+    if (lang === 'fr') return `${B}/blog/${slug}/`;
+    return `${B}/${lang}/blog/${slug}/`;
+  }
+
+  // Generate hreflang links block for a set of localized URLs
+  function hreflangs(urlsByLang) {
+    let xml = '';
+    for (const lang of LANGUAGES) {
+      xml += `    <xhtml:link rel="alternate" hreflang="${lang}" href="${urlsByLang[lang]}"/>\n`;
+    }
+    xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${urlsByLang.fr}"/>\n`;
+    return xml;
+  }
+
+  // Collect all page entries (routes + blog articles)
+  const entries = [];
+
+  // Static routes
+  for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
+    if (key === 'admin') continue;
+    const urlsByLang = {};
+    for (const lang of LANGUAGES) {
+      urlsByLang[lang] = url(lang, slugs[lang]);
+    }
+    entries.push({ urlsByLang });
+  }
+
+  // Blog articles
+  for (const article of BLOG_ARTICLES) {
+    const urlsByLang = {};
+    for (const lang of LANGUAGES) {
+      urlsByLang[lang] = blogUrl(lang, article.slugs[lang]);
+    }
+    entries.push({ urlsByLang, lastmod: article.publishedAt });
+  }
+
+  // Generate one sitemap per language
+  for (const lang of LANGUAGES) {
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+    xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
+    xml += `        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
+
+    for (const entry of entries) {
+      xml += `  <url>\n`;
+      xml += `    <loc>${entry.urlsByLang[lang]}</loc>\n`;
+      xml += hreflangs(entry.urlsByLang);
+      if (entry.lastmod) {
+        xml += `    <lastmod>${entry.lastmod}</lastmod>\n`;
+      }
+      xml += `  </url>\n`;
+    }
+
+    xml += `</urlset>`;
+    fs.writeFileSync(path.join(DIST_DIR, `sitemap-${lang}.xml`), xml);
+  }
+
+  // Sitemap index
+  let index = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  index += `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+  for (const lang of LANGUAGES) {
+    index += `  <sitemap>\n    <loc>${B}/sitemap-${lang}.xml</loc>\n  </sitemap>\n`;
+  }
+  index += `</sitemapindex>`;
+  fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), index);
+
+  console.log(`[sitemaps] Generated sitemap index + ${LANGUAGES.length} language sitemaps (${entries.length} URLs each)`);
 }
 
 // ── Static assets ───────────────────────────────────────────────────────
