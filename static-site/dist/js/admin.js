@@ -327,23 +327,23 @@
         ? '<span class="inline-flex items-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-400">Publié</span>'
         : '<span class="inline-flex items-center rounded-full bg-amber-100 dark:bg-amber-900/30 px-2 py-0.5 text-xs font-medium text-amber-700 dark:text-amber-400">Brouillon</span>';
 
-      html += '<div class="glass-card rounded-xl p-5 cursor-pointer hover:ring-2 hover:ring-primary/30 transition-all article-card" data-id="' + article.id + '">';
-      html += '<div class="flex items-start gap-4">';
+      html += '<div class="glass-card rounded-xl p-5 cursor-pointer hover:ring-2 hover:ring-primary/30 transition-all article-card" data-id="' + article.id + '" style="overflow:hidden;">';
+      html += '<div style="display:flex;align-items:flex-start;gap:1rem;overflow:hidden;">';
 
       // Image thumbnail
       if (article.featured_image_url) {
-        html += '<img src="' + esc(article.featured_image_url) + '" alt="" class="w-20 h-14 rounded-lg object-cover flex-shrink-0">';
+        html += '<img src="' + esc(article.featured_image_url) + '" alt="" style="width:5rem;height:3.5rem;border-radius:0.5rem;object-fit:cover;flex-shrink:0;">';
       } else {
-        html += '<div class="w-20 h-14 rounded-lg bg-muted flex items-center justify-center text-muted-foreground text-xs flex-shrink-0">No img</div>';
+        html += '<div style="width:5rem;height:3.5rem;border-radius:0.5rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:0.75rem;background:hsl(var(--muted));color:hsl(var(--muted-foreground));">No img</div>';
       }
 
-      html += '<div class="flex-1 min-w-0">';
-      html += '<div class="flex items-center gap-2 mb-1">';
-      html += '<h3 class="font-semibold truncate">' + esc(frTitle || article.internal_slug) + '</h3>';
+      html += '<div style="flex:1;min-width:0;overflow:hidden;">';
+      html += '<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem;">';
+      html += '<h3 style="font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;">' + esc(frTitle || article.internal_slug) + '</h3>';
       html += statusBadge;
       html += '</div>';
-      html += '<p class="text-sm text-muted-foreground mb-2">/' + esc(article.internal_slug) + '</p>';
-      html += '<div class="flex items-center gap-1 flex-wrap">' + langBadges + '</div>';
+      html += '<p class="text-sm text-muted-foreground" style="margin-bottom:0.5rem;overflow:hidden;text-overflow:ellipsis;">/' + esc(article.internal_slug) + '</p>';
+      html += '<div style="display:flex;align-items:center;gap:0.25rem;flex-wrap:wrap;">' + langBadges + '</div>';
       html += '</div>';
       html += '</div>';
       html += '</div>';

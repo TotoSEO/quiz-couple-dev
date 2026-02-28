@@ -92,7 +92,7 @@
         </div>
 
         <!-- Articles Tab -->
-        <div id="admin-articles-tab" class="hidden">
+        <div id="admin-articles-tab" class="hidden" style="max-width:100%;overflow:hidden;">
           <!-- Article List View -->
           <div id="articles-list-view">
             <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
@@ -111,21 +111,21 @@
           </div>
 
           <!-- Article Editor View -->
-          <div id="article-editor-view" class="hidden">
+          <div id="article-editor-view" class="hidden" style="max-width:100%;overflow:hidden;">
             <div class="flex items-center gap-3 mb-6">
               <button id="article-back" class="btn btn-outline btn-sm">← Retour</button>
-              <h2 class="text-lg font-semibold" id="article-editor-title">Modifier l'article</h2>
+              <h2 class="text-lg font-semibold" id="article-editor-title" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;">Modifier l'article</h2>
             </div>
 
             <!-- Image Upload -->
-            <div class="glass-card rounded-xl p-5 mb-6">
+            <div class="glass-card rounded-xl p-5 mb-6" style="overflow:hidden;">
               <h3 class="font-semibold mb-3">Image à la une</h3>
-              <div class="flex items-start gap-6 flex-wrap">
-                <div id="article-image-preview" class="w-48 h-32 rounded-lg bg-muted flex items-center justify-center text-muted-foreground text-sm overflow-hidden flex-shrink-0">
+              <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                <div id="article-image-preview" style="width:12rem;height:8rem;border-radius:0.5rem;overflow:hidden;flex-shrink:0;background:hsl(var(--muted));display:flex;align-items:center;justify-content:center;color:hsl(var(--muted-foreground));font-size:0.875rem;">
                   Aucune image
                 </div>
-                <div class="flex-1 min-w-[200px] space-y-3">
-                  <input type="file" id="article-image-input" accept="image/webp,image/jpeg,image/png" class="text-sm file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border file:border-border file:text-sm file:font-medium file:bg-background file:text-foreground hover:file:bg-muted file:cursor-pointer file:transition-colors">
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:0.5rem;">
+                  <input type="file" id="article-image-input" accept="image/webp,image/jpeg,image/png" style="font-size:0.875rem;max-width:100%;overflow:hidden;">
                   <button id="article-image-upload-btn" class="btn btn-primary btn-sm hidden">Uploader l'image</button>
                   <p id="article-image-status" class="text-sm text-muted-foreground"></p>
                 </div>
@@ -142,28 +142,28 @@
             </div>
 
             <!-- Translation Form -->
-            <div class="glass-card rounded-xl p-5 space-y-4">
+            <div class="glass-card rounded-xl p-5 space-y-4" style="overflow:hidden;">
               <div>
                 <label class="block text-sm font-medium mb-1">Slug</label>
-                <input type="text" id="article-field-slug" class="input w-full" placeholder="slug-de-l-article">
+                <input type="text" id="article-field-slug" class="input" style="width:100%;max-width:100%;box-sizing:border-box;" placeholder="slug-de-l-article">
               </div>
               <div>
                 <label class="block text-sm font-medium mb-1">H1 (Titre principal de la page)</label>
-                <input type="text" id="article-field-title" class="input w-full" placeholder="Titre H1 de l'article">
+                <input type="text" id="article-field-title" class="input" style="width:100%;max-width:100%;box-sizing:border-box;" placeholder="Titre H1 de l'article">
               </div>
               <div>
                 <label class="block text-sm font-medium mb-1">Title (balise &lt;title&gt;)</label>
-                <input type="text" id="article-field-meta-title" class="input w-full" placeholder="Balise title pour le SEO">
+                <input type="text" id="article-field-meta-title" class="input" style="width:100%;max-width:100%;box-sizing:border-box;" placeholder="Balise title pour le SEO">
                 <p class="text-xs text-muted-foreground mt-1">Idéalement 50-60 caractères. <span id="meta-title-count" class="font-medium">0</span>/60</p>
               </div>
               <div>
                 <label class="block text-sm font-medium mb-1">Meta description</label>
-                <textarea id="article-field-meta-description" class="input w-full" rows="3" placeholder="Description pour les moteurs de recherche"></textarea>
+                <textarea id="article-field-meta-description" class="input" rows="3" style="width:100%;max-width:100%;box-sizing:border-box;" placeholder="Description pour les moteurs de recherche"></textarea>
                 <p class="text-xs text-muted-foreground mt-1">Idéalement 150-160 caractères. <span id="meta-desc-count" class="font-medium">0</span>/160</p>
               </div>
               <div>
                 <label class="block text-sm font-medium mb-1">Alt de l'image à la une</label>
-                <input type="text" id="article-field-alt" class="input w-full" placeholder="Texte alternatif de l'image">
+                <input type="text" id="article-field-alt" class="input" style="width:100%;max-width:100%;box-sizing:border-box;" placeholder="Texte alternatif de l'image">
               </div>
               <div class="flex items-center gap-3 pt-2">
                 <button id="article-save-lang" class="btn btn-primary">Enregistrer cette langue</button>
