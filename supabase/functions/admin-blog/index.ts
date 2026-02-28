@@ -341,6 +341,126 @@ serve(async (req) => {
       );
     }
 
+    // ===== SEED ARTICLES (bulk import) =====
+    if (req.method === 'POST' && action === 'seed') {
+      const body = await req.json();
+      const articles = body.articles; // Array of { internal_slug, featured_image_url, author_id, status, published_at, translations: [{ lang, slug, title, meta_title, meta_description, featured_image_alt, excerpt, introduction, quick_summary, sections }] }
+
+      if (!articles || !Array.isArray(articles)) {
+        return new Response(
+          JSON.stringify({ success: false, error: 'articles array required' }),
+          { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+
+      let created = 0;
+      let skipped = 0;
+      const errors: string[] = [];
+
+      for (const art of articles) {
+        // Check if article already exists
+        const { data: existing } = await supabase
+          .from('blog_articles')
+          .select('id')
+          .eq('internal_slug', art.internal_slug)
+          .maybeSingle();
+
+        if (existing) {
+          // Update existing article and upsert translations
+          await supabase
+            .from('blog_articles')
+            .update({
+              featured_image_url: art.featured_image_url || null,
+              author_id: art.author_id || 'mathieu-courtin',
+              status: art.status || 'published',
+              published_at: art.published_at || new Date().toISOString(),
+            })
+            .eq('id', existing.id);
+
+          if (art.translations) {
+            for (const tr of art.translations) {
+              const { data: existingTr } = await supabase
+                .from('blog_article_translations')
+                .select('id')
+                .eq('article_id', existing.id)
+                .eq('lang', tr.lang)
+                .maybeSingle();
+
+              const trData = {
+                article_id: existing.id,
+                lang: tr.lang,
+                slug: tr.slug,
+                title: tr.title || '',
+                meta_title: tr.meta_title || '',
+                meta_description: tr.meta_description || '',
+                featured_image_alt: tr.featured_image_alt || '',
+                excerpt: tr.excerpt || '',
+                introduction: tr.introduction || '',
+                quick_summary: tr.quick_summary || [],
+                sections: tr.sections || [],
+                is_complete: true,
+              };
+
+              if (existingTr) {
+                await supabase.from('blog_article_translations').update(trData).eq('id', existingTr.id);
+              } else {
+                await supabase.from('blog_article_translations').insert(trData);
+              }
+            }
+          }
+          skipped++;
+          continue;
+        }
+
+        // Create new article
+        const { data: newArt, error: artErr } = await supabase
+          .from('blog_articles')
+          .insert({
+            internal_slug: art.internal_slug,
+            featured_image_url: art.featured_image_url || null,
+            author_id: art.author_id || 'mathieu-courtin',
+            status: art.status || 'published',
+            published_at: art.published_at || new Date().toISOString(),
+          })
+          .select()
+          .single();
+
+        if (artErr) {
+          errors.push(`${art.internal_slug}: ${artErr.message}`);
+          continue;
+        }
+
+        // Insert translations
+        if (art.translations) {
+          for (const tr of art.translations) {
+            const { error: trErr } = await supabase
+              .from('blog_article_translations')
+              .insert({
+                article_id: newArt.id,
+                lang: tr.lang,
+                slug: tr.slug,
+                title: tr.title || '',
+                meta_title: tr.meta_title || '',
+                meta_description: tr.meta_description || '',
+                featured_image_alt: tr.featured_image_alt || '',
+                excerpt: tr.excerpt || '',
+                introduction: tr.introduction || '',
+                quick_summary: tr.quick_summary || [],
+                sections: tr.sections || [],
+                is_complete: true,
+              });
+            if (trErr) errors.push(`${art.internal_slug}/${tr.lang}: ${trErr.message}`);
+          }
+        }
+        created++;
+      }
+
+      return new Response(
+        JSON.stringify({ success: true, created, skipped, errors }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     return new Response(
       JSON.stringify({ success: false, error: 'Action non reconnue' }),
       { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }

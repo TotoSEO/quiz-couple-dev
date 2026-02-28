@@ -16,6 +16,94 @@
   var translationCache = {}; // { "articleId-lang": { ... } }
   var currentTab = 'reviews';
 
+  // ── Seed data (all existing articles) ──
+  var SEED_ARTICLES = [
+    {
+      internal_slug: 'les-phases-de-la-rupture-chez-l-homme',
+      featured_image_url: '/blog/phases-rupture-homme.webp',
+      author_id: 'mathieu-courtin',
+      status: 'published',
+      published_at: '2026-02-21',
+      translations: [
+        { lang: 'fr', slug: 'les-phases-de-la-rupture-chez-l-homme', title: "Les \u00e9tapes de la rupture chez l'Homme", meta_title: "Les phases de la rupture chez l'homme | 6 \u00e9tapes d\u00e9crypt\u00e9es", meta_description: "D\u00e9couvrez les 6 phases de la rupture chez l'homme : du d\u00e9ni \u00e0 la reconstruction. Comprendre chaque \u00e9tape pour mieux traverser une s\u00e9paration.", featured_image_alt: "Homme traversant les phases de la rupture amoureuse", excerpt: "Les 6 phases de la rupture chez l'homme : du d\u00e9ni \u00e0 la reconstruction." },
+        { lang: 'en', slug: 'breakup-stages-for-men', title: 'The Stages of a Breakup for Men', meta_title: 'The Stages of a Breakup for Men | 6 Phases Explained', meta_description: 'Discover the 6 stages of a breakup for men: from denial to rebuilding. Understand each phase to better navigate a separation.', featured_image_alt: 'Man going through the stages of a romantic breakup', excerpt: 'The 6 stages of a breakup for men: from denial to rebuilding.' },
+        { lang: 'es', slug: 'fases-de-la-ruptura-en-el-hombre', title: 'Las etapas de la ruptura en el hombre', meta_title: 'Las fases de la ruptura en el hombre | 6 etapas explicadas', meta_description: 'Descubre las 6 fases de la ruptura en el hombre: de la negaci\u00f3n a la reconstrucci\u00f3n. Comprende cada etapa para superar mejor una separaci\u00f3n.', featured_image_alt: 'Hombre atravesando las fases de una ruptura amorosa', excerpt: 'Las 6 fases de la ruptura en el hombre: de la negaci\u00f3n a la reconstrucci\u00f3n.' },
+        { lang: 'de', slug: 'trennungsphasen-beim-mann', title: 'Die Phasen der Trennung beim Mann', meta_title: 'Die Phasen der Trennung beim Mann | 6 Stufen erkl\u00e4rt', meta_description: 'Entdecken Sie die 6 Phasen der Trennung beim Mann: von der Verleugnung bis zum Neuaufbau. Verstehen Sie jede Phase, um eine Trennung besser zu bew\u00e4ltigen.', featured_image_alt: 'Mann, der die Phasen einer Trennung durchlebt', excerpt: 'Die 6 Phasen der Trennung beim Mann: von der Verleugnung bis zum Neuaufbau.' },
+        { lang: 'it', slug: 'fasi-della-rottura-nell-uomo', title: "Le fasi della rottura nell'uomo", meta_title: "Le fasi della rottura nell'uomo | 6 tappe spiegate", meta_description: "Scopri le 6 fasi della rottura nell'uomo: dalla negazione alla ricostruzione. Comprendi ogni fase per affrontare meglio una separazione.", featured_image_alt: 'Uomo che attraversa le fasi di una rottura sentimentale', excerpt: "Le 6 fasi della rottura nell'uomo: dalla negazione alla ricostruzione." }
+      ]
+    },
+    {
+      internal_slug: 'choses-pas-accepter-couple',
+      featured_image_url: '/blog/limites-couple-accepter.webp',
+      author_id: 'lucie-courtin',
+      status: 'published',
+      published_at: '2026-02-21',
+      translations: [
+        { lang: 'fr', slug: 'choses-pas-accepter-couple', title: "Ce qu'on ne devrait jamais accepter dans une relation amoureuse", meta_title: 'Choses \u00e0 ne pas accepter en couple | Limites essentielles', meta_description: "D\u00e9couvrez les choses \u00e0 ne pas accepter en couple : manque de respect, manipulation, jalousie toxique. Apprenez \u00e0 poser vos limites. Guide complet et gratuit.", featured_image_alt: 'Couple posant des limites dans leur relation amoureuse', excerpt: "Les comportements \u00e0 ne jamais tol\u00e9rer en couple et comment poser ses limites." },
+        { lang: 'en', slug: 'things-not-accept-relationship', title: 'Things You Should Never Accept in a Relationship', meta_title: 'Things Not to Accept in a Relationship | Essential Boundaries', meta_description: 'Discover things you should never accept in a relationship: disrespect, manipulation, toxic jealousy. Learn to set healthy boundaries. Free complete guide.', featured_image_alt: 'Couple setting boundaries in their romantic relationship', excerpt: 'Behaviors you should never tolerate in a relationship and how to set limits.' },
+        { lang: 'es', slug: 'cosas-no-aceptar-pareja', title: 'Lo que nunca deber\u00edas aceptar en una relaci\u00f3n de pareja', meta_title: 'Cosas que no aceptar en pareja | L\u00edmites esenciales', meta_description: 'Descubre las cosas que no debes aceptar en pareja: falta de respeto, manipulaci\u00f3n, celos t\u00f3xicos. Aprende a poner l\u00edmites. Gu\u00eda completa y gratuita.', featured_image_alt: 'Pareja estableciendo l\u00edmites en su relaci\u00f3n sentimental', excerpt: 'Los comportamientos que nunca debes tolerar en pareja y c\u00f3mo poner l\u00edmites.' },
+        { lang: 'de', slug: 'grenzen-beziehung-nicht-akzeptieren', title: 'Was man in einer Beziehung niemals akzeptieren sollte', meta_title: 'Grenzen in der Beziehung | Was nicht akzeptabel ist', meta_description: 'Erfahren Sie, was in einer Beziehung nicht akzeptabel ist: Respektlosigkeit, Manipulation, toxische Eifersucht. Lernen Sie Grenzen zu setzen. Kostenloser Leitfaden.', featured_image_alt: 'Paar setzt Grenzen in ihrer Liebesbeziehung', excerpt: 'Verhaltensweisen, die in einer Beziehung nicht toleriert werden sollten.' },
+        { lang: 'it', slug: 'cose-non-accettare-coppia', title: 'Cose da non accettare mai in una relazione di coppia', meta_title: 'Cose da non accettare in coppia | Limiti essenziali', meta_description: 'Scopri le cose da non accettare in coppia: mancanza di rispetto, manipolazione, gelosia tossica. Impara a porre i tuoi limiti. Guida completa e gratuita.', featured_image_alt: 'Coppia che stabilisce limiti nella propria relazione sentimentale', excerpt: 'I comportamenti da non tollerare mai in coppia e come porre i propri limiti.' }
+      ]
+    },
+    {
+      internal_slug: 'avis-tinder',
+      featured_image_url: '/blog/avis-tinder.webp',
+      author_id: 'mathieu-courtin',
+      status: 'published',
+      published_at: '2026-02-24',
+      translations: [
+        { lang: 'fr', slug: 'avis-tinder', title: 'Que vaut Tinder en 2026 ? Notre avis et test complet', meta_title: "Avis Tinder 2026 : notre verdict honn\u00eate apr\u00e8s des ann\u00e9es de swipe", meta_description: "Tinder vaut-il encore le coup en 2026 ? Notre avis honn\u00eate sur les fonctionnalit\u00e9s, les prix, les faux profils et les alternatives. On ne m\u00e2che pas nos mots.", featured_image_alt: "L'avis de QuizCouple sur tinder en 2026", excerpt: "Notre avis sur Tinder : ce que l'appli fait bien, mal, et pour qui elle est faite." },
+        { lang: 'en', slug: 'tinder-review', title: 'Is Tinder worth it in 2026? Our full review and test', meta_title: 'Tinder review 2026: Our honest verdict after years of swiping', meta_description: "Is Tinder still worth it in 2026? Our honest opinion on features, prices, fake profiles, and alternatives. We don't pull any punches.", featured_image_alt: "QuizCouple's opinion on Tinder in 2026", excerpt: "Our review of Tinder: what the app does well, poorly, and who it's made for." },
+        { lang: 'es', slug: 'tinder-opiniones-vale-la-pena', title: '\u00bfQu\u00e9 vale Tinder en 2026? nuestra opini\u00f3n y prueba completa', meta_title: 'Opiniones Tinder 2026 : nuestro veredicto honesto', meta_description: '\u00bfVale la pena Tinder en 2026? nuestra opini\u00f3n honesta sobre las funciones, los precios, los perfiles falsos y las alternativas. no nos mordemos la lengua.', featured_image_alt: 'La opini\u00f3n de QuizCouple sobre Tinder en 2026', excerpt: 'Nuestra opini\u00f3n sobre Tinder: lo que la app hace bien, mal, y para qui\u00e9n est\u00e1 hecha.' },
+        { lang: 'de', slug: 'tinder-bewertung', title: 'Was taugt Tinder im Jahr 2026? Unsere Bewertung und der komplette Test', meta_title: 'Tinder Erfahrungen 2026: Unser ehrliches Urteil', meta_description: 'Lohnt sich Tinder 2026 noch? Unsere ehrliche Meinung zu Funktionen, Preisen, Fake-Profilen und Alternativen. Wir nehmen kein Blatt vor den Mund.', featured_image_alt: 'Die Meinung von QuizCouple zu Tinder im Jahr 2026', excerpt: 'Unsere Meinung zu Tinder: Was die App gut und schlecht macht und f\u00fcr wen sie geeignet ist.' },
+        { lang: 'it', slug: 'recensione-tinder', title: 'Quanto vale Tinder nel 2026? La nostra recensione e test completo', meta_title: "Recensione di Tinder 2026: il nostro onesto verdetto sull'app", meta_description: 'Tinder vale ancora la pena nel 2026? La nostra opinione onesta su funzionalit\u00e0, prezzi, profili falsi e alternative. Non usiamo mezzi termini.', featured_image_alt: "L'opinione di QuizCouple su Tinder nel 2026", excerpt: "La nostra opinione su Tinder: cosa fa bene l'app, cosa fa male e per chi \u00e8 pensata." }
+      ]
+    },
+    {
+      internal_slug: 'avis-bumble',
+      featured_image_url: '/blog/avis-bumble.webp',
+      author_id: 'mathieu-courtin',
+      status: 'published',
+      published_at: '2026-02-25',
+      translations: [
+        { lang: 'fr', slug: 'avis-bumble', title: "Bumble en 2026 : une application hors budget et d\u00e9laiss\u00e9 ?", meta_title: "Notre avis sur Bumble en 2026 : test et r\u00e9sultats de l'app", meta_description: "Notre avis complet sur Bumble apr\u00e8s plusieurs mois de test : fonctionnalit\u00e9s, prix, r\u00e9sultats r\u00e9els et verdict honn\u00eate. On vous dit si \u00e7a vaut vraiment le coup en 2026.", featured_image_alt: 'image bumble avis', excerpt: "On a test\u00e9 Bumble pendant des mois. Voici notre verdict honn\u00eate et notre note." },
+        { lang: 'en', slug: 'bumble-app-review', title: 'Bumble in 2026: an over-budget and neglected app?', meta_title: 'Our Bumble review in 2026: app test and results', meta_description: "Our complete Bumble review after several months of testing: features, price, real results, and honest verdict. We tell you if it's really worth it in 2026.", featured_image_alt: 'bumble review image', excerpt: 'We tested Bumble for months. Here is our honest verdict and rating.' },
+        { lang: 'es', slug: 'opiniones-bumble', title: 'Bumble en 2026: \u00bfuna aplicaci\u00f3n fuera de presupuesto y abandonada?', meta_title: 'Nuestra opini\u00f3n sobre Bumble en 2026: prueba y resultados de la app', meta_description: 'Nuestra opini\u00f3n completa sobre Bumble tras varios meses de prueba: funcionalidades, precio, resultados reales y veredicto honesto. Te decimos si realmente vale la pena en 2026.', featured_image_alt: 'imagen opiniones bumble', excerpt: 'Hemos probado Bumble durante meses. Aqu\u00ed tienes nuestro veredicto honesto y nuestra nota.' },
+        { lang: 'de', slug: 'bumble-erfahrungen', title: 'Bumble im Jahr 2026: Eine \u00fcberteuerte und vernachl\u00e4ssigte App?', meta_title: 'Unsere Bumble-Erfahrungen 2026: App-Test und Ergebnisse', meta_description: 'Unser ausf\u00fchrlicher Bumble-Test nach mehreren Monaten: Funktionen, Preis, echte Ergebnisse und ehrliches Fazit. Wir verraten, ob es sich 2026 wirklich lohnt.', featured_image_alt: 'bild bumble erfahrungen', excerpt: 'Wir haben Bumble monatelang getestet. Hier ist unser ehrliches Fazit und unsere Bewertung.' },
+        { lang: 'it', slug: 'recensione-bumble', title: "Bumble nel 2026: un'applicazione fuori budget e trascurata?", meta_title: "La nostra recensione di Bumble nel 2026: test e risultati dell'app", meta_description: 'La nostra recensione completa su Bumble dopo diversi mesi di test: funzionalit\u00e0, prezzo, risultati reali e verdetto onesto. Ti diciamo se ne vale davvero la pena nel 2026.', featured_image_alt: 'immagine recensione bumble', excerpt: 'Abbiamo testato Bumble per mesi. Ecco il nostro verdetto onesto e il nostro voto.' }
+      ]
+    },
+    {
+      internal_slug: 'avis-hinge',
+      featured_image_url: '/blog/avis-hinge.webp',
+      author_id: 'mathieu-courtin',
+      status: 'published',
+      published_at: '2026-02-27',
+      translations: [
+        { lang: 'fr', slug: 'avis-hinge-rencontre', title: "Test de l'application Hinge en 2026 : avis et explications", meta_title: 'Notre avis sur Hinge en 2026 : test et r\u00e9sultats', meta_description: "On a test\u00e9 Hinge en France pendant plusieurs mois. Accroches, algorithme, tarifs r\u00e9els, bannissements et r\u00e9sultats : notre avis complet, honn\u00eate et sans langue de bois.", featured_image_alt: 'image hinge avis application rencontre', excerpt: "Hinge, l'appli \"con\u00e7ue pour \u00eatre supprim\u00e9e\". On a v\u00e9rifi\u00e9 si la promesse tient vraiment en France." },
+        { lang: 'en', slug: 'hinge-dating-app-review', title: 'Hinge dating app review in 2026: our honest test and verdict', meta_title: 'Our Hinge review in 2026: app test and results', meta_description: 'We tested Hinge for several months. Prompts, algorithm, real pricing, bans, and results: our complete, honest, no-nonsense review.', featured_image_alt: 'hinge review dating app image', excerpt: 'Hinge, the app "designed to be deleted." We checked whether the promise actually holds up.' },
+        { lang: 'es', slug: 'opinion-hinge-app-citas', title: 'Test de la aplicaci\u00f3n Hinge en 2026: opini\u00f3n y explicaciones', meta_title: 'Nuestra opini\u00f3n sobre Hinge en 2026: prueba y resultados', meta_description: 'Hemos probado Hinge en Espa\u00f1a durante varios meses. Frases para romper el hielo, algoritmo, precios reales, baneos y resultados: nuestra opini\u00f3n completa, honesta y sin rodeos.', featured_image_alt: 'imagen hinge opini\u00f3n aplicaci\u00f3n citas', excerpt: 'Hinge, la app "dise\u00f1ada para ser eliminada". Hemos comprobado si la promesa se cumple realmente en Espa\u00f1a.' },
+        { lang: 'de', slug: 'hinge-erfahrungen-test', title: 'Hinge im Test 2026: Erfahrungen und ehrliche Bewertung', meta_title: 'Unsere Hinge-Erfahrungen 2026: Test und Ergebnisse', meta_description: 'Wir haben Hinge in Deutschland mehrere Monate lang getestet. Prompts, Algorithmus, echte Preise, Kontosperren und Ergebnisse: unser vollst\u00e4ndiger, ehrlicher Erfahrungsbericht ohne Besch\u00f6nigung.', featured_image_alt: 'bild hinge erfahrungen dating-app', excerpt: 'Hinge, die App "die gel\u00f6scht werden soll". Wir haben gepr\u00fcft, ob das Versprechen in Deutschland wirklich h\u00e4lt.' },
+        { lang: 'it', slug: 'recensione-hinge-app', title: "Test dell'app Hinge nel 2026: recensione e spiegazioni", meta_title: 'La nostra recensione di Hinge nel 2026: test e risultati', meta_description: "Abbiamo testato Hinge in Italia per diversi mesi. Spunti di conversazione, algoritmo, prezzi reali, ban e risultati: la nostra recensione completa, onesta e senza peli sulla lingua.", featured_image_alt: 'immagine hinge recensione app incontri', excerpt: "Hinge, l'app \"progettata per essere cancellata\". Abbiamo verificato se la promessa regge davvero in Italia." }
+      ]
+    },
+    {
+      internal_slug: 'avis-badoo',
+      featured_image_url: '/blog/avis-badoo.webp',
+      author_id: 'mathieu-courtin',
+      status: 'published',
+      published_at: '2026-02-28',
+      translations: [
+        { lang: 'fr', slug: 'avis-badoo', title: "Notre avis sur l'application de rencontre Badoo", meta_title: "Avis Badoo 2026 : ce qu'on en pense vraiment apr\u00e8s des mois de test", meta_description: "L'\u00e9quipe QuizCouple a test\u00e9 Badoo pendant plusieurs mois. R\u00e9sultats, ressenti c\u00f4t\u00e9 homme et c\u00f4t\u00e9 femme, tarifs, faux profils : notre avis complet et sans filtre.", featured_image_alt: "Notre avis sur l'application de rencontre Badoo en 2026", excerpt: "Badoo, tout le monde la conna\u00eet, personne n'en parle franchement. On l'a test\u00e9e." },
+        { lang: 'en', slug: 'badoo-review', title: 'Our review of the Badoo dating app', meta_title: 'Badoo review 2026: what we really think after months of testing', meta_description: 'The QuizCouple team tested Badoo for several months. Results, experience as a man and as a woman, pricing, fake profiles: our complete, unfiltered review.', featured_image_alt: 'Our review of the Badoo dating app in 2026', excerpt: 'Badoo, everyone knows it, nobody talks about it honestly. We tested it.' },
+        { lang: 'es', slug: 'opinion-badoo', title: 'Nuestra opini\u00f3n sobre la aplicaci\u00f3n de citas Badoo', meta_title: 'Opiniones Badoo 2026: lo que pensamos de verdad tras meses de prueba', meta_description: 'El equipo QuizCouple ha probado Badoo durante varios meses. Resultados, experiencia como hombre y como mujer, precios, perfiles falsos: nuestra opini\u00f3n completa y sin filtros.', featured_image_alt: 'Nuestra opini\u00f3n sobre la aplicaci\u00f3n de citas Badoo en 2026', excerpt: 'Badoo, todo el mundo la conoce, nadie habla de ella con franqueza. La hemos probado.' },
+        { lang: 'de', slug: 'badoo-erfahrungen', title: 'Unsere Meinung zur Dating-App Badoo', meta_title: 'Badoo Erfahrungen 2026: Was wir nach monatelangem Test wirklich davon halten', meta_description: 'Das QuizCouple-Team hat Badoo mehrere Monate lang getestet. Ergebnisse, Erfahrungen aus m\u00e4nnlicher und weiblicher Sicht, Preise, Fake-Profile: unser vollst\u00e4ndiger und ehrlicher Erfahrungsbericht.', featured_image_alt: 'Unsere Meinung zur Dating-App Badoo im Jahr 2026', excerpt: 'Badoo \u2014 jeder kennt sie, aber niemand spricht offen dar\u00fcber. Wir haben sie getestet.' },
+        { lang: 'it', slug: 'recensione-badoo', title: "La nostra opinione sull'app di incontri Badoo", meta_title: 'Recensione Badoo 2026: cosa ne pensiamo davvero dopo mesi di test', meta_description: "Il team QuizCouple ha testato Badoo per diversi mesi. Risultati, esperienza lato uomo e lato donna, prezzi, profili falsi: la nostra recensione completa e senza filtri.", featured_image_alt: "La nostra opinione sull'app di incontri Badoo nel 2026", excerpt: "Badoo, tutti la conoscono, nessuno ne parla apertamente. Noi l'abbiamo testata." }
+      ]
+    }
+  ];
+
   function esc(s) { return s ? String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;') : ''; }
 
   function starsHtml(rating) {
@@ -385,6 +473,10 @@
     document.getElementById('article-editor-view').classList.remove('hidden');
     document.getElementById('article-editor-title').textContent = currentArticle.internal_slug;
 
+    // Set status select
+    var statusSelect = document.getElementById('article-status-select');
+    if (statusSelect) statusSelect.value = currentArticle.status || 'draft';
+
     // Show image preview
     updateImagePreview();
 
@@ -398,6 +490,94 @@
 
     // Load FR translation
     loadTranslation(articleId, 'fr');
+  }
+
+  // ── Delete article with confirmation ──
+  function showDeleteModal() {
+    if (!currentArticle) return;
+    var modal = document.getElementById('delete-modal');
+    var slugEl = document.getElementById('delete-modal-slug');
+    if (slugEl) slugEl.textContent = currentArticle.internal_slug;
+    modal.classList.remove('hidden');
+    modal.style.display = 'flex';
+  }
+
+  function hideDeleteModal() {
+    var modal = document.getElementById('delete-modal');
+    modal.classList.add('hidden');
+    modal.style.display = 'none';
+  }
+
+  function confirmDeleteArticle() {
+    if (!currentArticle) return;
+    var articleId = currentArticle.id;
+
+    hideDeleteModal();
+
+    adminBlogPost('delete', { id: articleId })
+      .then(function (data) {
+        if (data.success) {
+          allArticles = allArticles.filter(function (a) { return a.id !== articleId; });
+          closeArticleEditor();
+          renderArticles();
+        } else {
+          alert('Erreur: ' + (data.error || 'Suppression échouée'));
+        }
+      })
+      .catch(function () {
+        alert('Erreur de connexion lors de la suppression');
+      });
+  }
+
+  // ── Status toggle ──
+  function changeArticleStatus(newStatus) {
+    if (!currentArticle) return;
+    adminBlogPost('update', { id: currentArticle.id, status: newStatus })
+      .then(function (data) {
+        if (data.success) {
+          currentArticle.status = newStatus;
+          var idx = allArticles.findIndex(function (a) { return a.id === currentArticle.id; });
+          if (idx >= 0) allArticles[idx].status = newStatus;
+        }
+      });
+  }
+
+  // ── Seed articles from static data ──
+  function seedArticles() {
+    var modal = document.getElementById('seed-modal');
+    var statusEl = document.getElementById('seed-modal-status');
+    var actionsEl = document.getElementById('seed-modal-actions');
+    modal.classList.remove('hidden');
+    modal.style.display = 'flex';
+    actionsEl.classList.add('hidden');
+    statusEl.textContent = 'Envoi des 6 articles et 30 traductions en cours...';
+
+    adminBlogPost('seed', { articles: SEED_ARTICLES })
+      .then(function (data) {
+        if (data.success) {
+          statusEl.textContent = 'Terminé ! ' + (data.created || 0) + ' créé(s), ' + (data.skipped || 0) + ' mis à jour.';
+          if (data.errors && data.errors.length > 0) {
+            statusEl.textContent += ' Erreurs: ' + data.errors.join(', ');
+          }
+          actionsEl.classList.remove('hidden');
+          // Refresh article list
+          allArticles = [];
+          loadArticles();
+        } else {
+          statusEl.textContent = 'Erreur: ' + (data.error || 'Échec de la synchronisation');
+          actionsEl.classList.remove('hidden');
+        }
+      })
+      .catch(function (err) {
+        statusEl.textContent = 'Erreur de connexion: ' + (err.message || 'Échec');
+        actionsEl.classList.remove('hidden');
+      });
+  }
+
+  function hideSeedModal() {
+    var modal = document.getElementById('seed-modal');
+    modal.classList.add('hidden');
+    modal.style.display = 'none';
   }
 
   function updateImagePreview() {
@@ -682,12 +862,36 @@
       loadArticles();
     });
 
+    // Articles seed
+    var seedBtn = document.getElementById('articles-seed');
+    if (seedBtn) seedBtn.addEventListener('click', seedArticles);
+
+    // Seed modal close
+    var seedModalClose = document.getElementById('seed-modal-close');
+    if (seedModalClose) seedModalClose.addEventListener('click', hideSeedModal);
+
     // Article editor - back button
     var backBtn = document.getElementById('article-back');
     if (backBtn) backBtn.addEventListener('click', function () {
       closeArticleEditor();
       // Refresh the list to reflect changes
       loadArticles();
+    });
+
+    // Article delete
+    var deleteBtn = document.getElementById('article-delete');
+    if (deleteBtn) deleteBtn.addEventListener('click', showDeleteModal);
+
+    // Delete modal
+    var deleteCancel = document.getElementById('delete-modal-cancel');
+    if (deleteCancel) deleteCancel.addEventListener('click', hideDeleteModal);
+    var deleteConfirm = document.getElementById('delete-modal-confirm');
+    if (deleteConfirm) deleteConfirm.addEventListener('click', confirmDeleteArticle);
+
+    // Status change
+    var statusSelect = document.getElementById('article-status-select');
+    if (statusSelect) statusSelect.addEventListener('change', function () {
+      changeArticleStatus(this.value);
     });
 
     // Language tabs

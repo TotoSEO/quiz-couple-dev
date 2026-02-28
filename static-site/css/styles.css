@@ -188,6 +188,7 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 .w-4 { width: 1rem; }
 .w-5 { width: 1.25rem; }
 .w-6 { width: 1.5rem; }
+.w-7 { width: 1.75rem; }
 .w-9 { width: 2.25rem; }
 .w-10 { width: 2.5rem; }
 .w-16 { width: 4rem; }
@@ -198,6 +199,7 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 .h-4 { height: 1rem; }
 .h-5 { height: 1.25rem; }
 .h-6 { height: 1.5rem; }
+.h-7 { height: 1.75rem; }
 .h-9 { height: 2.25rem; }
 .h-10 { height: 2.5rem; }
 .h-12 { height: 3rem; }
@@ -787,7 +789,9 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .star-rating { display: inline-flex; gap: 0.125rem; }
 .star-rating svg { width: 1.25rem; height: 1.25rem; }
 .star-filled { color: #fbbf24; fill: currentColor; }
-.star-empty { color: hsl(var(--muted-foreground) / 0.3); }
+.star-empty { color: hsl(var(--muted-foreground) / 0.3); fill: currentColor; }
+.star-btn { cursor: pointer; padding: 0.125rem; transition: transform 0.15s; }
+.star-btn:hover { transform: scale(1.1); }
 
 /* ── Print ────────────────────────────────────────────────── */
 
