@@ -47,7 +47,10 @@
     'marrant':        { prefix: 'marrant', engine: 'funny', totalQ: 20, pool: 160, textOnly: true },
 
     // ── Most quiz ("Qui est le plus..." - 2-8 players, vote) - text only ──
-    'most':           { prefix: 'most', engine: 'most', totalQ: 20, pool: 240, textOnly: true }
+    'most':           { prefix: 'most', engine: 'most', totalQ: 20, pool: 240, textOnly: true },
+
+    // ── Parentalite quiz (2 players, same questions, explicit point values) ──
+    'parentalite':    { prefix: 'parentalite', engine: 'parentalite', totalQ: 20, pool: 20 }
   };
 
   var config = QUIZ_CONFIG[quizType];
@@ -105,6 +108,9 @@
         break;
       case 'most':
         initMostQuiz(config, questions);
+        break;
+      case 'parentalite':
+        initParentaliteQuiz(config, questions);
         break;
       default:
         showUnavailable(config);
@@ -415,6 +421,51 @@
     new QuizEngine.MostQuiz({
       container: container,
       questions: questions,
+      prefix: cfg.prefix,
+      lang: lang
+    });
+  }
+
+  function initParentaliteQuiz(cfg, questions) {
+    // Parentalite quiz: each answer has explicit point values stored in gd.json
+    // Format: parentalite.q{N}a_pts, parentalite.q{N}b_pts etc.
+    // Points are encoded in the options data
+    for (var i = 0; i < questions.length; i++) {
+      var q = questions[i];
+      for (var j = 0; j < q.options.length; j++) {
+        var ptsKey = cfg.prefix + '.q' + q.id + q.options[j].id + '_pts';
+        var pts = QuizEngine.tgd(ptsKey, null);
+        if (pts !== null && pts !== ptsKey) {
+          q.options[j].points = parseInt(pts, 10) || 0;
+        }
+      }
+    }
+
+    // Parse results from gd.json
+    var results = [];
+    for (var r = 1; r <= 10; r++) {
+      var title = QuizEngine.tgd(cfg.prefix + '.r' + r + '_t', null);
+      if (!title || title === cfg.prefix + '.r' + r + '_t') break;
+      results.push({
+        title: title,
+        description: QuizEngine.tgd(cfg.prefix + '.r' + r + '_d', ''),
+        advice: QuizEngine.tgd(cfg.prefix + '.r' + r + '_a', '')
+      });
+    }
+
+    // Fixed score ranges for parentalite (out of 60 per player):
+    // r1: 0-19, r2: 20-34, r3: 35-47, r4: 48-60
+    if (results.length === 4) {
+      results[0].min = 0;  results[0].max = 19;
+      results[1].min = 20; results[1].max = 34;
+      results[2].min = 35; results[2].max = 47;
+      results[3].min = 48; results[3].max = 60;
+    }
+
+    new QuizEngine.ParentaliteQuiz({
+      container: container,
+      questions: questions,
+      results: results,
       prefix: cfg.prefix,
       lang: lang
     });
