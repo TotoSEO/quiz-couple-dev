@@ -161,6 +161,17 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-02-28',
   },
+  {
+    internalSlug: 'femme-malheureuse-en-couple',
+    slugs: {
+      fr: 'femme-malheureuse-en-couple',
+      en: 'unhappy-woman-in-relationship-signs',
+      es: 'mujer-infeliz-en-pareja-senales',
+      de: 'unglueckliche-frau-in-beziehung-anzeichen',
+      it: 'donna-infelice-in-coppia-segnali',
+    },
+    publishedAt: '2026-03-01',
+  },
 ];
 
 // Author data
