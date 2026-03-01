@@ -267,8 +267,8 @@
     </div>
     <% if (heroIntro1) { %>
     <div class="mx-auto max-w-3xl mt-8 space-y-4 text-muted-foreground leading-relaxed">
-      <p><%= heroIntro1 %></p>
-      <% if (heroIntro2) { %><p><%= heroIntro2 %></p><% } %>
+      <p><%- heroIntro1 %></p>
+      <% if (heroIntro2) { %><p><%- heroIntro2 %></p><% } %>
     </div>
     <% } %>
   </div>
@@ -358,11 +358,11 @@
         if (signals && Array.isArray(signals)) { %>
       <ul class="space-y-3 mt-6 ml-4">
         <% for (const sig of signals) { %>
-        <li class="flex items-start gap-2"><span class="text-destructive font-bold mt-1">&bull;</span><span class="text-muted-foreground"><%= sig %></span></li>
+        <li class="flex items-start gap-2"><span class="text-destructive font-bold mt-1">&bull;</span><span class="text-muted-foreground"><%- sig %></span></li>
         <% } %>
       </ul>
       <% const outro = getOutro(s); if (outro) { %>
-      <p class="text-muted-foreground leading-relaxed mt-6"><%= outro %></p>
+      <p class="text-muted-foreground leading-relaxed mt-6"><%- outro %></p>
       <% } } %>
 
       <%/* Table: row-based pattern (sectionN.headerScore/row1Score) */%>
@@ -408,7 +408,7 @@
             <% for (const row of arrayTableRows) { %>
             <tr>
               <% for (let ci = 0; ci < row.length; ci++) { %>
-              <td class="<%= ci === 0 ? 'font-medium' : 'text-sm text-muted-foreground' %>"><%= row[ci] %></td>
+              <td class="<%= ci === 0 ? 'font-medium' : 'text-sm text-muted-foreground' %>"><%- row[ci] %></td>
               <% } %>
             </tr>
             <% } %>
@@ -427,7 +427,7 @@
       <%/* Blockquote */%>
       <% const quote = getQuote(s); if (quote) { %>
       <blockquote class="border-l-4 border-primary pl-6 py-2 bg-muted/30 rounded-r-lg my-6">
-        <p class="text-lg italic"><%= quote %></p>
+        <p class="text-lg italic"><%- quote %></p>
       </blockquote>
       <% } %>
     </section>
@@ -449,7 +449,7 @@
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= whyTitle %></h2>
       <% const whySub = tryKeys('seo.whySubtitle'); if (whySub) { %>
-      <p class="text-muted-foreground leading-relaxed mb-6"><%= whySub %></p>
+      <p class="text-muted-foreground leading-relaxed mb-6"><%- whySub %></p>
       <% } %>
       <div class="icon-cards-grid">
         <% for (let c = 1; c <= 6; c++) {
@@ -483,7 +483,7 @@
           </div>
           <div>
             <h3 class="text-lg font-semibold mb-1"><%= sTitle %></h3>
-            <p class="text-muted-foreground text-sm"><%= tryKeys('seo.step' + s + 'Text') %></p>
+            <p class="text-muted-foreground text-sm"><%- tryKeys('seo.step' + s + 'Text') %></p>
           </div>
         </div>
         <% } %>
@@ -507,7 +507,7 @@
         <% for (const faq of faqEntries) { %>
         <details class="border border-border rounded-lg">
           <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= faq.q %></summary>
-          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= faq.a %></div>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%- faq.a %></div>
         </details>
         <% } %>
       </div>
