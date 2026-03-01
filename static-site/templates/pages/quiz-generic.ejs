@@ -69,13 +69,21 @@
   }
 
   function getSubText(s, sub, p) {
-    return tryKeys(
+    // Try paragraph-numbered patterns first
+    var result = tryKeys(
       'section' + s + '.sub' + sub + 'P' + p,
-      'section' + s + '.sub' + sub + 'Text',
       'seo.section' + s + '.h3_' + sub + '_p' + p,
-      'seo.s' + s + '.p' + ((sub - 1) * 2 + p),
-      'seo.s' + s + 'h3_' + sub + 'Text'
+      'seo.s' + s + '.p' + ((sub - 1) * 2 + p)
     );
+    if (result) return result;
+    // Single-text patterns (no paragraph number) — only return for p=1
+    if (p === 1) {
+      return tryKeys(
+        'section' + s + '.sub' + sub + 'Text',
+        'seo.s' + s + 'h3_' + sub + 'Text'
+      );
+    }
+    return '';
   }
 
   function getPillarTitle(s, c) {
