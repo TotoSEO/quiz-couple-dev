@@ -79,6 +79,18 @@ export const blogArticles: BlogArticleMeta[] = [
     publishedAt: '2026-02-28',
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
+  {
+    slug: 'femme-malheureuse-en-couple',
+    slugs: {
+      fr: 'femme-malheureuse-en-couple',
+      en: 'unhappy-woman-in-relationship-signs',
+      es: 'mujer-infeliz-en-pareja-senales',
+      de: 'unglueckliche-frau-in-beziehung-anzeichen',
+      it: 'donna-infelice-in-coppia-segnali',
+    },
+    publishedAt: '2026-03-01',
+    locales: { fr: true, en: true, es: true, de: true, it: true },
+  },
 ];
 
 /**
