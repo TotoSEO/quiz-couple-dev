@@ -186,8 +186,8 @@ async function generatePage(routeKey, lang) {
 
   const jsonLdItems = [];
 
-  // BreadcrumbList for all pages (except home)
-  if (routeKey !== 'home') {
+  // BreadcrumbList – only for pages that have a visible breadcrumb (not quiz/test pages)
+  if (routeKey !== 'home' && !routeKey.startsWith('test') && !routeKey.startsWith('quiz')) {
     const breadcrumbList = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -195,15 +195,7 @@ async function generatePage(routeKey, lang) {
         { '@type': 'ListItem', position: 1, name: bl.home, item: getLocalizedUrl('home', lang) },
       ],
     };
-    if (routeKey.startsWith('test') || routeKey.startsWith('quiz')) {
-      const isTest = routeKey.startsWith('test');
-      breadcrumbList.itemListElement.push({
-        '@type': 'ListItem', position: 2, name: isTest ? bl.tests : bl.quiz,
-      });
-      breadcrumbList.itemListElement.push({
-        '@type': 'ListItem', position: 3, name: title,
-      });
-    } else if (routeKey === 'blog') {
+    if (routeKey === 'blog') {
       breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: bl.blog });
     } else {
       breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: title });

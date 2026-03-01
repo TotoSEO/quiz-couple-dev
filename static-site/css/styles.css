@@ -717,7 +717,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .blog-sidebar-inner { position: sticky; top: 5rem; max-height: calc(100vh - 6rem); overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem; scrollbar-width: thin; scrollbar-color: hsl(var(--border)) transparent; }
 .blog-sidebar-inner::-webkit-scrollbar { width: 4px; }
 .blog-sidebar-inner::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 4px; }
-.blog-sidebar-section { border-radius: calc(var(--radius) + 4px); border: 1px solid hsl(var(--border)); background-color: hsl(var(--muted) / 0.35); overflow: hidden; min-width: 0; }
+.blog-sidebar-section { border-radius: calc(var(--radius) + 4px); border: 1px solid hsl(var(--border)); background-color: hsl(var(--muted) / 0.35); overflow: hidden; min-width: 0; flex-shrink: 0; }
 .blog-sidebar-toggle { display: flex; align-items: center; gap: 0.5rem; width: 100%; padding: 0.75rem 1rem; text-align: left; cursor: pointer; background-color: hsl(var(--muted) / 0.6); border: none; border-bottom: 1px solid hsl(var(--border) / 0.5); color: hsl(var(--foreground)); font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.01em; transition: background-color 150ms; min-width: 0; }
 .blog-sidebar-toggle:hover { background-color: hsl(var(--muted) / 0.9); }
 .blog-sidebar-toggle svg:first-child { color: hsl(var(--primary)); flex-shrink: 0; }
