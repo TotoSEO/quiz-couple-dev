@@ -35,6 +35,7 @@ export const ROUTE_SLUGS = {
   privacy: { fr: 'confidentialite', en: 'privacy-policy', es: 'politica-privacidad', de: 'datenschutz', it: 'privacy' },
   blog: { fr: 'blog', en: 'blog', es: 'blog', de: 'blog', it: 'blog' },
   quizAdo: { fr: 'quiz-couple-ado', en: 'teen-couple-quiz', es: 'quiz-pareja-adolescentes', de: 'teenager-paar-quiz', it: 'quiz-coppia-adolescenti' },
+  testParentalite: { fr: 'test-parentalite-couple', en: 'parenthood-readiness-test', es: 'test-parentalidad-pareja', de: 'elternschafts-bereitschaftstest', it: 'test-genitorialita-coppia' },
   admin: { fr: 'admin', en: 'admin', es: 'admin', de: 'admin', it: 'admin' },
 };
 
@@ -59,6 +60,7 @@ export const ROUTE_CONFIG = {
   privacy: { template: 'privacy', namespaces: ['legal', 'common'] },
   blog: { template: 'blog-listing', namespaces: ['common'] },
   quizAdo: { template: 'quiz-ado', namespaces: ['quiz-ado', 'quizzes', 'quizGames', 'gd', 'common'] },
+  testParentalite: { template: 'quiz-parentalite', namespaces: ['quiz-parentalite', 'quizzes', 'quizGames', 'gd', 'common'] },
   admin: { template: 'admin', namespaces: ['common'] },
 };
 

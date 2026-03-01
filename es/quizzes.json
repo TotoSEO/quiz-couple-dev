@@ -93,5 +93,11 @@
     "shortTitle": "Quiz Adolescentes",
     "description": "20 preguntas para saber si tu relación es sólida o solo pasajera. ¡Jueguen juntos a distancia!",
     "metaDescription": "Quiz de pareja para adolescentes: 20 preguntas para saber si tu relación es sólida o pasajera. Jueguen a distancia, ¡resultado inmediato!"
+  },
+  "testParentalite": {
+    "title": "Preguntas antes de tener hijos: Test de parentalidad para parejas",
+    "shortTitle": "Test Parentalidad",
+    "description": "20 preguntas honestas para evaluar vuestra preparación como pareja antes de tener un hijo. Test gratuito, resultado inmediato.",
+    "metaDescription": "¿Estáis realmente preparados para ser padres? 20 preguntas honestas para evaluar vuestra preparación como pareja antes de tener un hijo. Test gratuito, resultado inmediato."
   }
 }

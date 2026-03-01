@@ -2097,6 +2097,213 @@ var QuizEngine = (function() {
     wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
+  // ═══════════════════════════════════════════════════════════
+  // PARENTALITE QUIZ - 2 players, same questions, fixed point values per answer
+  // Each answer has explicit points (0-3), both players answer all 20 questions
+  // Individual scores + combined score, max 60 per player / 120 total
+  // ═══════════════════════════════════════════════════════════
+  function ParentaliteQuiz(config) {
+    this.container = config.container;
+    this.questions = config.questions;
+    this.results = config.results || [];
+    this.prefix = config.prefix;
+    this.lang = config.lang || 'fr';
+    this.phase = 'setup';
+    this.players = [null, null];
+    this.currentQ = 0;
+    this.currentPlayer = 0;
+    this.scores = [[], []];
+    this.maxPerPlayer = 60;
+    this.render();
+  }
+
+  ParentaliteQuiz.prototype.render = function() {
+    this.container.innerHTML = '';
+    if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'handoff') this.renderHandoff();
+    else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'results') this.renderResults();
+  };
+
+  ParentaliteQuiz.prototype.renderSetup = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine animate-fade-in');
+
+    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-4');
+    iconWrap.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
+    wrap.appendChild(iconWrap);
+
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-2 text-center', tg('parentalite.setupDesc', 'Répondez chacun de votre côté aux mêmes 20 questions.')));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6 text-center', '20 questions &bull; ' + tg('meta.duration', '10 min') + ' &bull; ' + tg('parentalite.scoreOn60', 'Score sur 60 par personne')));
+
+    var form = el('div', 'quiz-setup-grid max-w-lg mx-auto');
+
+    for (var i = 0; i < 2; i++) {
+      (function(idx) {
+        var card = el('div', 'glass-card rounded-xl p-5');
+        var numCircle = el('div', 'quiz-player-number');
+        numCircle.textContent = (idx + 1);
+        card.appendChild(numCircle);
+        var label = el('label', 'block text-sm font-medium mb-2', tg('playerSetup.player' + (idx + 1), 'Joueur ' + (idx + 1)));
+        var input = el('input', 'input w-full');
+        input.type = 'text'; input.placeholder = tg('playerSetup.firstName', 'Prénom'); input.maxLength = 20;
+        input.id = 'parentalite-player-' + idx;
+        card.appendChild(label);
+        card.appendChild(input);
+        form.appendChild(card);
+      })(i);
+    }
+
+    var startBtn = el('button', 'btn btn-cta btn-gradient w-full mt-4', tg('playerSetup.startTest', 'Commencer le test'));
+    startBtn.addEventListener('click', function() {
+      var n1 = document.getElementById('parentalite-player-0').value.trim() || tg('playerSetup.player1', 'Joueur 1');
+      var n2 = document.getElementById('parentalite-player-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
+      self.players = [{ name: n1 }, { name: n2 }];
+      self.currentQ = 0; self.currentPlayer = 0; self.scores = [[], []];
+      self.phase = 'handoff'; self.render();
+    });
+
+    wrap.appendChild(form);
+    wrap.appendChild(startBtn);
+    this.container.appendChild(wrap);
+  };
+
+  ParentaliteQuiz.prototype.renderHandoff = function() {
+    var self = this;
+    var player = this.players[this.currentPlayer];
+    var colors = [{ bg: '#ec4899', text: '#fff' }, { bg: '#3b82f6', text: '#fff' }];
+    var color = colors[this.currentPlayer];
+    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-4', '📱'));
+    var heading = el('h2', 'text-xl font-bold mb-3');
+    heading.textContent = tg('question.itsTurnOf', 'C\'est au tour de') + ' ' + player.name + ' !';
+    wrap.appendChild(heading);
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6', tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard')));
+
+    var btn = el('button', 'btn btn-cta', tg('question.chooseAnswer', 'Répondre'));
+    btn.style.background = color.bg;
+    btn.addEventListener('click', function() { self.phase = 'playing'; self.render(); });
+    wrap.appendChild(btn);
+    this.container.appendChild(wrap);
+  };
+
+  ParentaliteQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var totalAnswers = total * 2;
+    var answeredCount = this.scores[0].length + this.scores[1].length;
+    var player = this.players[this.currentPlayer];
+    var colors = [{ bg: '#ec4899', text: '#fff' }, { bg: '#3b82f6', text: '#fff' }];
+    var color = colors[this.currentPlayer];
+
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+    renderProgressBar(wrap, answeredCount, totalAnswers, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total);
+
+    var badge = el('div', 'text-center mb-4');
+    badge.innerHTML = '<span class="badge" style="background:' + color.bg + ';color:' + color.text + '">' + esc(player.name) + '</span>';
+    wrap.appendChild(badge);
+
+    var qText = tgd(this.prefix + '.q' + q.id, q.text);
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
+
+    var optionsWrap = el('div', 'space-y-2');
+    q.options.forEach(function(opt, idx) {
+      var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
+      var optBtn = el('button', 'quiz-option');
+      optBtn.textContent = optText;
+      optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('click', function() {
+        optBtn.classList.add('selected');
+        var siblings = optionsWrap.querySelectorAll('.quiz-option');
+        for (var s = 0; s < siblings.length; s++) {
+          if (siblings[s] !== optBtn) siblings[s].style.opacity = '0.5';
+          siblings[s].style.pointerEvents = 'none';
+        }
+        self.scores[self.currentPlayer].push(opt.points);
+
+        setTimeout(function() {
+          if (self.currentPlayer === 0) {
+            self.currentPlayer = 1;
+            self.phase = 'handoff';
+          } else if (self.currentQ < total - 1) {
+            self.currentQ++;
+            self.currentPlayer = 0;
+            self.phase = 'handoff';
+          } else {
+            self.phase = 'results';
+          }
+          self.render();
+        }, 350);
+      });
+      optionsWrap.appendChild(optBtn);
+    });
+    wrap.appendChild(optionsWrap);
+    this.container.appendChild(wrap);
+  };
+
+  ParentaliteQuiz.prototype.renderResults = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+
+    var s1 = this.scores[0].reduce(function(s, v) { return s + v; }, 0);
+    var s2 = this.scores[1].reduce(function(s, v) { return s + v; }, 0);
+    var totalScore = s1 + s2;
+    var maxTotal = this.maxPerPlayer * 2;
+    var pct = Math.round((totalScore / maxTotal) * 100);
+
+    // Combined score header
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('parentalite.combinedScore', 'Score global du couple')));
+    wrap.appendChild(el('div', 'quiz-score-circle mx-auto mb-2', totalScore + '/' + maxTotal));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', pct + '%'));
+
+    // Individual scores
+    var scoresGrid = el('div', 'grid grid-cols-2 gap-4 mb-6');
+    var colors = [{ bg: '#ec4899' }, { bg: '#3b82f6' }];
+    for (var i = 0; i < 2; i++) {
+      var score = i === 0 ? s1 : s2;
+      var card = el('div', 'glass-card rounded-xl p-4 text-center');
+      card.innerHTML = '<p class="font-semibold mb-2" style="color:' + colors[i].bg + '">' + esc(this.players[i].name) + '</p>' +
+        '<div class="quiz-score-circle quiz-score-sm mx-auto mb-2">' + score + '/' + this.maxPerPlayer + '</div>' +
+        '<p class="text-xs text-muted-foreground">' + Math.round((score / this.maxPerPlayer) * 100) + '%</p>';
+      scoresGrid.appendChild(card);
+    }
+    wrap.appendChild(scoresGrid);
+
+    // Alert if big gap between scores
+    if (Math.abs(s1 - s2) > 15) {
+      var gapAlert = el('div', 'glass-card rounded-xl p-4 mb-6 border-l-4 border-orange-400');
+      gapAlert.innerHTML = '<p class="text-sm">' + esc(tg('parentalite.gapWarning', 'Il y a un écart significatif entre vos deux scores. C\'est souvent dans ces écarts que se trouvent les discussions les plus importantes à avoir.')) + '</p>';
+      wrap.appendChild(gapAlert);
+    }
+
+    // Find matching result based on combined score
+    var result = null;
+    for (var j = 0; j < this.results.length; j++) {
+      var r = this.results[j];
+      // Use individual player score (average) to match results on 60-point scale
+      var avgScore = totalScore / 2;
+      if (avgScore >= (r.min || 0) && avgScore <= (r.max || 999)) { result = r; break; }
+    }
+    if (result) {
+      var resultCard = el('div', 'glass-card rounded-xl p-6 mb-6 text-left max-w-lg mx-auto');
+      resultCard.innerHTML = '<h3 class="text-xl font-bold mb-3 text-center">' + esc(result.title) + '</h3>' +
+        '<p class="text-muted-foreground leading-relaxed mb-4">' + esc(result.description) + '</p>';
+      if (result.advice) {
+        resultCard.innerHTML += '<div class="bg-primary/5 border border-primary/20 rounded-lg p-4 mt-3"><strong class="block mb-2">' +
+          esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong><span class="text-sm text-muted-foreground">' + esc(result.advice) + '</span></div>';
+      }
+      wrap.appendChild(resultCard);
+    }
+
+    renderActionButtons(wrap, {
+      restart: function() { self.phase = 'setup'; self.render(); }
+    });
+    this.container.appendChild(wrap);
+    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -2111,6 +2318,7 @@ var QuizEngine = (function() {
     FunnyQuiz: FunnyQuiz,
     MostQuiz: MostQuiz,
     HealthyQuiz: HealthyQuiz,
+    ParentaliteQuiz: ParentaliteQuiz,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,

@@ -93,5 +93,11 @@
     "shortTitle": "Quiz Ado",
     "description": "20 questions pour savoir si votre relation est vraiment solide ou juste passagère. Jouez ensemble à distance !",
     "metaDescription": "Quiz de couple spécial ados : 20 questions pour savoir si votre relation est vraiment solide ou juste passagère. Jouez ensemble à distance, résultat immédiat !"
+  },
+  "testParentalite": {
+    "title": "Questions à se poser avant d'avoir des enfants : Test parentalité",
+    "shortTitle": "Test Parentalité",
+    "description": "20 questions honnêtes pour évaluer votre préparation en couple avant d'avoir un enfant. Test gratuit, résultat immédiat.",
+    "metaDescription": "Êtes-vous vraiment prêts à devenir parents ? 20 questions honnêtes pour évaluer votre préparation en couple avant d'avoir un enfant. Test gratuit, résultat immédiat."
   }
 }

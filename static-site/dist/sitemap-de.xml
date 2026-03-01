@@ -173,6 +173,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-couple-ado/"/>
   </url>
   <url>
+    <loc>https://quiz-couple.com/de/elternschafts-bereitschaftstest/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-parentalite-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/parenthood-readiness-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-parentalidad-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/elternschafts-bereitschaftstest/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-genitorialita-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-parentalite-couple/"/>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/de/blog/trennungsphasen-beim-mann/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/les-phases-de-la-rupture-chez-l-homme/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/breakup-stages-for-men/"/>
