@@ -136,7 +136,7 @@ RAPPEL : La somme des scores dans faultScores DOIT être exactement égale à 10
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
+        model: "gpt-4o-mini",
         messages: [
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt },
@@ -146,6 +146,8 @@ RAPPEL : La somme des scores dans faultScores DOIT être exactement égale à 10
     });
 
     if (!response.ok) {
+      const errorText = await response.text();
+      console.error("AI gateway error:", response.status, errorText);
       if (response.status === 429) {
         return new Response(
           JSON.stringify({ error: "Trop de requêtes. Veuillez réessayer plus tard." }),
@@ -158,9 +160,7 @@ RAPPEL : La somme des scores dans faultScores DOIT être exactement égale à 10
           { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
-      const errorText = await response.text();
-      console.error("AI gateway error:", response.status, errorText);
-      throw new Error("Erreur lors de l'analyse IA");
+      throw new Error("Erreur lors de l'analyse IA (code " + response.status + ")");
     }
 
     const aiResponse = await response.json();
