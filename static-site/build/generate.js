@@ -564,6 +564,49 @@ function copyCss() {
 
 // ── JS copy ─────────────────────────────────────────────────────────────
 
+function buildSeedArticles() {
+  const langs = ['fr', 'en', 'es', 'de', 'it'];
+  const seed = [];
+
+  for (const meta of BLOG_ARTICLES) {
+    const entry = {
+      internal_slug: meta.internalSlug,
+      featured_image_url: '',
+      author_id: 'mathieu-courtin',
+      status: 'published',
+      published_at: meta.publishedAt,
+      translations: [],
+    };
+
+    // Read FR article to get author_id and featured_image_url
+    const frData = parseArticleTs(path.resolve(__dirname, '../../data/blog/fr', `${meta.internalSlug}.ts`));
+    if (frData) {
+      entry.featured_image_url = frData.featuredImage || '';
+      if (frData.author && frData.author.id) entry.author_id = frData.author.id;
+    }
+
+    for (const lang of langs) {
+      const tsPath = path.resolve(__dirname, '../../data/blog', lang, `${meta.internalSlug}.ts`);
+      const data = parseArticleTs(tsPath);
+      if (data) {
+        entry.translations.push({
+          lang,
+          slug: meta.slugs[lang] || meta.internalSlug,
+          title: data.title || '',
+          meta_title: data.metaTitle || '',
+          meta_description: data.metaDescription || '',
+          featured_image_alt: data.featuredImageAlt || '',
+          excerpt: data.excerpt || '',
+        });
+      }
+    }
+
+    seed.push(entry);
+  }
+
+  return JSON.stringify(seed);
+}
+
 function copyJs() {
   const jsDir = path.resolve(__dirname, '../js');
   const destDir = path.join(DIST_DIR, 'js');
@@ -572,6 +615,19 @@ function copyJs() {
   if (fs.existsSync(jsDir)) {
     copyDirRecursive(jsDir, destDir);
   }
+
+  // Inject SEED_ARTICLES into admin.js at build time
+  const adminJsPath = path.join(destDir, 'admin.js');
+  if (fs.existsSync(adminJsPath)) {
+    let content = fs.readFileSync(adminJsPath, 'utf-8');
+    if (content.includes('/*__SEED_ARTICLES__*/')) {
+      const seedJson = buildSeedArticles();
+      content = content.replace(/\/\*__SEED_ARTICLES__\*\/\[[\s\S]*?\n  \];/, seedJson + ';');
+      fs.writeFileSync(adminJsPath, content, 'utf-8');
+      console.log(`[js] Injected ${BLOG_ARTICLES.length} articles into admin.js SEED_ARTICLES`);
+    }
+  }
+
   console.log('[js] JS files copied to dist/js/');
 }
 
