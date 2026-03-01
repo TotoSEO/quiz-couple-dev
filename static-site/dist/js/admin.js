@@ -358,8 +358,13 @@
       },
       body: JSON.stringify(body)
     }).then(function (res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      return res.json();
+      return res.json().then(function (data) {
+        if (!res.ok) {
+          var errMsg = (data && data.error) ? data.error : 'HTTP ' + res.status;
+          throw new Error(errMsg);
+        }
+        return data;
+      });
     });
   }
 
@@ -719,10 +724,11 @@
           statusEl.className = 'text-sm text-destructive self-center';
         }
       })
-      .catch(function () {
+      .catch(function (err) {
         saveBtn.disabled = false;
-        statusEl.textContent = 'Erreur de connexion';
+        statusEl.textContent = 'Erreur: ' + (err.message || 'Connexion échouée');
         statusEl.className = 'text-sm text-destructive self-center';
+        console.error('Save translation error:', err);
       });
   }
 
@@ -754,8 +760,10 @@
       body: formData
     })
     .then(function (res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      return res.json();
+      return res.json().catch(function () { return { success: false, error: 'HTTP ' + res.status }; }).then(function (data) {
+        if (!res.ok) throw new Error((data && data.error) || 'HTTP ' + res.status);
+        return data;
+      });
     })
     .then(function (data) {
       uploadBtn.disabled = false;
@@ -776,9 +784,61 @@
         statusEl.textContent = 'Erreur: ' + (data.error || 'Upload échoué');
       }
     })
-    .catch(function () {
+    .catch(function (err) {
       uploadBtn.disabled = false;
-      statusEl.textContent = 'Erreur de connexion lors de l\'upload';
+      statusEl.textContent = 'Erreur: ' + (err.message || 'Upload échoué');
+      console.error('Upload error:', err);
+    });
+  }
+
+  // ── Deploy ──
+  function triggerDeploy() {
+    var banner = document.getElementById('deploy-banner');
+    var spinner = document.getElementById('deploy-spinner');
+    var iconSuccess = document.getElementById('deploy-icon-success');
+    var iconError = document.getElementById('deploy-icon-error');
+    var message = document.getElementById('deploy-message');
+    var deployBtn = document.getElementById('admin-deploy');
+
+    banner.classList.remove('hidden');
+    spinner.classList.remove('hidden');
+    iconSuccess.classList.add('hidden');
+    iconError.classList.add('hidden');
+    message.textContent = 'Deploiement en cours...';
+    deployBtn.disabled = true;
+
+    fetch(SUPABASE_URL + '/functions/v1/trigger-deploy', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json',
+        'x-admin-token': adminToken
+      },
+      body: JSON.stringify({})
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      spinner.classList.add('hidden');
+      deployBtn.disabled = false;
+      if (data.success) {
+        iconSuccess.classList.remove('hidden');
+        message.textContent = data.message || 'Deploiement lance ! Le site sera mis a jour dans 1-2 minutes.';
+        banner.style.borderColor = 'hsl(142 71% 45% / 0.3)';
+        banner.style.background = 'hsl(142 71% 45% / 0.05)';
+      } else {
+        iconError.classList.remove('hidden');
+        message.textContent = 'Erreur: ' + (data.error || 'Deploiement echoue');
+        banner.style.borderColor = 'hsl(var(--destructive) / 0.3)';
+        banner.style.background = 'hsl(var(--destructive) / 0.05)';
+      }
+    })
+    .catch(function (err) {
+      spinner.classList.add('hidden');
+      deployBtn.disabled = false;
+      iconError.classList.remove('hidden');
+      message.textContent = 'Erreur: ' + (err.message || 'Connexion echouee');
+      banner.style.borderColor = 'hsl(var(--destructive) / 0.3)';
+      banner.style.background = 'hsl(var(--destructive) / 0.05)';
     });
   }
 
@@ -850,6 +910,10 @@
         switchTab(this.dataset.tab);
       });
     });
+
+    // Deploy button
+    var deployBtn = document.getElementById('admin-deploy');
+    if (deployBtn) deployBtn.addEventListener('click', triggerDeploy);
 
     // Articles create
     var createBtn = document.getElementById('articles-create');
