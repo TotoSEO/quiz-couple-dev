@@ -270,7 +270,7 @@
         selectedRating = parseInt(this.dataset.star);
         starBtns.forEach(function (b) {
           var val = parseInt(b.dataset.star);
-          b.querySelector('svg').className = 'w-7 h-7 ' + (val <= selectedRating ? 'star-filled' : 'star-empty');
+          b.querySelector('svg').setAttribute('class', 'w-7 h-7 ' + (val <= selectedRating ? 'star-filled' : 'star-empty'));
         });
       });
       // Hover effect
@@ -278,7 +278,7 @@
         var hoverVal = parseInt(this.dataset.star);
         starBtns.forEach(function (b) {
           var val = parseInt(b.dataset.star);
-          b.querySelector('svg').className = 'w-7 h-7 ' + (val <= hoverVal ? 'star-filled' : 'star-empty');
+          b.querySelector('svg').setAttribute('class', 'w-7 h-7 ' + (val <= hoverVal ? 'star-filled' : 'star-empty'));
         });
       });
     });
@@ -288,7 +288,7 @@
       starsContainer.addEventListener('mouseleave', function () {
         starBtns.forEach(function (b) {
           var val = parseInt(b.dataset.star);
-          b.querySelector('svg').className = 'w-7 h-7 ' + (val <= selectedRating ? 'star-filled' : 'star-empty');
+          b.querySelector('svg').setAttribute('class', 'w-7 h-7 ' + (val <= selectedRating ? 'star-filled' : 'star-empty'));
         });
       });
     }

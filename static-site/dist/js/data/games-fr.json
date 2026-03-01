@@ -249,5 +249,11 @@
       "shareOnFacebook": "Partager sur Facebook",
       "shareOnTwitter": "Partager sur Twitter",
       "each": "chacun"
+    },
+    "parentalite": {
+      "setupDesc": "Répondez chacun de votre côté aux mêmes 20 questions.",
+      "scoreOn60": "Score sur 60 par personne",
+      "combinedScore": "Score global du couple",
+      "gapWarning": "Il y a un écart significatif entre vos deux scores. C'est souvent dans ces écarts que se trouvent les discussions les plus importantes à avoir."
     }
    }

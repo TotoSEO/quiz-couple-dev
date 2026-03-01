@@ -249,5 +249,11 @@
       "shareOnFacebook": "Auf Facebook teilen",
       "shareOnTwitter": "Auf Twitter teilen",
       "each": "jeweils"
+    },
+    "parentalite": {
+      "setupDesc": "Beantwortet beide getrennt die gleichen 20 Fragen.",
+      "scoreOn60": "Punktzahl von 60 pro Person",
+      "combinedScore": "Gesamtscore des Paares",
+      "gapWarning": "Es gibt einen deutlichen Unterschied zwischen euren beiden Scores. Oft liegen in diesen Unterschieden die wichtigsten Gespräche, die noch geführt werden müssen."
     }
    }

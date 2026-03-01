@@ -249,5 +249,11 @@
       "shareOnFacebook": "Condividi su Facebook",
       "shareOnTwitter": "Condividi su Twitter",
       "each": "ciascuno"
+    },
+    "parentalite": {
+      "setupDesc": "Entrambi rispondete separatamente alle stesse 20 domande.",
+      "scoreOn60": "Punteggio su 60 per persona",
+      "combinedScore": "Punteggio globale della coppia",
+      "gapWarning": "C'è un divario significativo tra i vostri due punteggi. Spesso è in questi divari che si trovano le conversazioni più importanti da avere."
     }
    }

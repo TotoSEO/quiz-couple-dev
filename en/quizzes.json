@@ -93,5 +93,11 @@
     "shortTitle": "Teen Quiz",
     "description": "20 questions to find out if your relationship is really solid or just a phase. Play together remotely!",
     "metaDescription": "Teen couple quiz: 20 questions to find out if your relationship is solid or just a phase. Play together remotely, instant results!"
+  },
+  "testParentalite": {
+    "title": "Questions to Ask Before Having Children: Parenthood Readiness Test",
+    "shortTitle": "Parenthood Test",
+    "description": "20 honest questions to evaluate your readiness as a couple before having a child. Free test, instant results.",
+    "metaDescription": "Are you truly ready to become parents? 20 honest questions to evaluate your readiness as a couple before having a child. Free test, instant results."
   }
 }

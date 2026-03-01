@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "badge": "Free \u2022 No signup \u2022 10 min",
+    "title": "Parenthood Readiness Test: Are you ready to have children?",
+    "titleHighlight": "readiness",
+    "intro1": "You've been thinking about it for a few weeks. Maybe a few months. The idea of a child keeps coming back in your conversations, and in your silences too. And then one day, the question hits for real: are we actually ready?",
+    "intro2": "This parenthood readiness test won't give you a yes-or-no answer (nobody can). But it will force both of you to face things honestly. 20 straight-up questions about your relationship, your finances, your lifestyle, your fears. Answer separately, then compare. It's often in the gap between your answers that the real conversations are hiding."
+  },
+  "quiz": {
+    "sectionTitle": "Take the parenthood readiness test here!"
+  },
+  "seo": {
+    "s1Title": "Questions to ask before having a child: why it's so important to talk about it",
+    "s1p1": "We all know a couple who had a baby \"to see what happens.\" Spoiler: it rarely goes as planned. And it makes sense. A child doesn't put your relationship on pause — it hits fast-forward. What was going well gets better, what was slightly irritating becomes an open wound.",
+    "s1p2": "The <strong>questions to ask before having children</strong> aren't there to cool down your desire. It's the opposite. They're there to make sure your desire is grounded in reality, not in an Instagram fantasy of pastel onesies and rattan cribs. The reality of a newborn is 3 hours of sleep a night, diaper changes at 2 AM, and a libido that goes on vacation (a long one).",
+    "s1p3": "According to a study published in the <em>Journal of Family Psychology</em>, about 67% of couples experience a decline in relationship satisfaction within the first 3 years after a child's birth. That number isn't there to scare you. It's there to say one simple thing: <strong>the couples who do best are those who anticipated the difficulties</strong>. Not the ones with the most money or the biggest apartment. The ones who talked. Really talked.",
+
+    "s2Title": "The 5 topics every couple should discuss before having a baby",
+    "s2h3_1Title": "Money (not romantic, but essential)",
+    "s2h3_1Text": "A child costs on average between $500 and $800 per month in the first year. Diapers, formula (or breastfeeding with its own equipment costs), childcare, clothes they wear for 3 weeks before outgrowing them... Having a financial cushion, even a modest one, changes everything. Financial strain is one of the leading causes of tension in young families.",
+    "s2h3_2Title": "Division of parenting responsibilities",
+    "s2h3_2Text": "This is THE topic that makes or breaks couples after a baby arrives. Who gets up at night? Who handles doctor's appointments? Who cuts back on work hours? Studies consistently show that women still take on roughly 65-70% of domestic and childcare duties. Talking about this <strong>before</strong> the baby arrives is non-negotiable.",
+    "s2h3_3Title": "Parenting style",
+    "s2h3_3Text": "You grew up with strict parents? Your partner was raised in a laid-back family where everything was negotiable? These differences, harmless when there's no child, become fault lines when you have to decide whether to set firm boundaries or give more freedom. Talk about it now.",
+    "s2h3_4Title": "Impact on your relationship",
+    "s2h3_4Text": "If you're thinking about having a child, it's probably because you're <a href=\"/en/love-quiz/\">deeply in love</a>. That's beautiful and necessary. But love alone isn't enough to absorb the shock of the first months. You also need organization, patience, and the ability to see each other at your worst without it destroying everything.",
+    "s2h3_5Title": "Fears (yours, not your mother-in-law's)",
+    "s2h3_5Text": "Fear of not being good enough. Fear of repeating your parents' mistakes. Fear of losing your freedom, your identity, your body. Fear that the relationship won't survive. These fears are normal. Every single one of them. What's not normal is ignoring them. Name them, share them. A fear expressed loses half its power.",
+
+    "s3Title": "How to know if you're ready for a child: the real signs",
+    "s3p1": "Spoiler: the \"perfect moment\" doesn't exist. If you wait until everything is aligned (finances, career, housing, emotional maturity, waxing moon, and Mercury in retrograde), you'll never get there. But there are signs that don't lie.",
+    "s3p2": "You're probably ready if your relationship is in a good place, if you can handle conflicts without destroying each other, if the desire comes from both of you (and not from social pressure), and if you've at least discussed the topics mentioned above. Conversely, if your relationship is shaky, if you're hoping a baby will fix everything, or if one of you isn't really on board... wait.",
+    "s3p3": "A parenthood readiness test like the one you just took doesn't replace real introspection (and certainly not professional guidance if needed). But it's a good starting point to open the dialogue.",
+
+    "s4Title": "The mistake 90% of couples make: not talking about the \"after\"",
+    "s4p1": "People talk a lot about \"should we have a baby?\", about the pregnancy, the delivery, the name. And then the baby arrives. And it's a black hole. Nobody predicted that daily life would look like this.",
+    "s4p2": "The \"after\" is the first 6 months where you'll operate in survival mode. It's the mother feeling alone even though the father is there. It's the father not knowing what to do because nobody taught him. It's the arguments at 3 AM because the baby is crying and everyone is at their breaking point.",
+    "s4p3": "We're not saying this to be dramatic. We're saying it because couples who talk about this <strong>beforehand</strong> get through this period more smoothly. Ask yourselves: who does what during maternity leave? Will the co-parent take leave too? How do we handle family visits? Do we allow ourselves to ask for help? All these <strong>questions to ask as a couple before having a child</strong> seem trivial on paper. In practice, they make an enormous difference.",
+    "s4p4": "If <a href=\"/en/couple-compatibility-test/\">your relationship is solid</a>, these challenges will be trials you weather together. If not, now is the time to strengthen your foundation before adding a baby to the equation.",
+
+    "s5Title": "The timing question: is there an ideal age?",
+    "s5p1": "Medically, female fertility begins to decline significantly after age 35. That's a biological fact, not a judgment. On the male side, sperm quality also decreases with age, even though it's discussed less often.",
+    "s5p2": "But timing isn't just about biology. It's also about your emotional stability, your relational maturity, your material circumstances. Some couples at 25 are more ready than others at 38. Being a young parent means having physical energy but sometimes less perspective. Being an older parent is the opposite. There's no magic formula.",
+    "s5p3": "What we know for certain is that couples who have a child because they truly want to (and not \"before it's too late,\" not \"because everyone else is\") navigate the transition to parenthood better. A sincere, shared desire is the best sign of all.",
+
+    "s6Title": "Retaking the test in 6 months: why it's a good idea",
+    "s6p1": "Your score today is a snapshot of a specific moment. Your answers will evolve. Your finances may change, your career situation too. Your relationship will face new challenges (or conversely, grow stronger). That's why we recommend retaking this parenthood readiness test in a few months.",
+    "s6p2": "The point isn't to wait for a perfect score. It's to see if your answers are moving in the right direction. If the topics that were blocking you are getting unblocked. And above all, if the desire is growing or fading — because both are valid.",
+    "s6p3": "In the meantime, parenthood is also a question of day-to-day compatibility. Knowing whether you have <a href=\"/en/couple-common-points-test/\">enough in common</a> to build a project this big matters. And if marriage is also part of the conversation, it's worth checking that you're <a href=\"/en/marriage-compatibility-test/\">aligned on that question too</a>.",
+
+    "faqTitle": "Frequently asked questions about parenthood and relationships",
+    "faq": [
+      {
+        "q": "Is it normal to be afraid of having a child?",
+        "a": "Yes, absolutely. Being afraid doesn't mean you're not ready. It means you appreciate the magnitude of what's ahead, and that's actually healthy. The real problem isn't being afraid. It's not being able to talk about it with your partner."
+      },
+      {
+        "q": "My partner doesn't want children and I do — what should we do?",
+        "a": "This is one of the most painful disagreements in a relationship, because there's no obvious compromise. The first step is understanding why. Is it a 'not now' or a 'never'? Talk about it without pressure, ideally with the help of a couples therapist."
+      },
+      {
+        "q": "Can a baby save a relationship in crisis?",
+        "a": "No. That's a dangerous myth. A baby amplifies existing dynamics. If your relationship is going well, a child will probably strengthen your bond. If your relationship is struggling, a baby will add stress. Before thinking about a baby, check whether <a href=\"/en/toxic-relationship-test/\">your relationship has toxic traits</a>."
+      },
+      {
+        "q": "At what age are you too old to have a child?",
+        "a": "There's no universal answer. Reproductive medicine has pushed biological limits (IVF, egg freezing...), but later pregnancies statistically carry more risks. What matters is making this decision with your doctor and your partner."
+      },
+      {
+        "q": "How do I bring up the topic of children with my partner?",
+        "a": "Avoid the dramatic 'we need to talk' on a Sunday evening. Bring it up naturally, in a calm moment. You can even use this test as a conversation starter: 'Hey, I found this parenthood readiness test online — want to take it together?'"
+      },
+      {
+        "q": "How much does a child cost in the first year?",
+        "a": "On average, expect to spend between $6,000 and $12,000 in the first year, not including childcare (which can easily double the bill). The biggest expenses: diapers (around $600-$900/year), food, clothing, gear, and out-of-pocket medical costs."
+      }
+    ]
+  }
+}
