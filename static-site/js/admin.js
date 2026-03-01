@@ -17,7 +17,9 @@
   var currentTab = 'reviews';
 
   // ── Seed data (all existing articles) ──
-  var SEED_ARTICLES = [
+  // AUTO-GENERATED AT BUILD TIME from config.js BLOG_ARTICLES + article TS files
+  // Do NOT edit manually — add articles in data/blog/ and static-site/build/config.js
+  var SEED_ARTICLES = /*__SEED_ARTICLES__*/[
     {
       internal_slug: 'les-phases-de-la-rupture-chez-l-homme',
       featured_image_url: '/blog/phases-rupture-homme.webp',
@@ -100,6 +102,20 @@
         { lang: 'es', slug: 'opinion-badoo', title: 'Nuestra opini\u00f3n sobre la aplicaci\u00f3n de citas Badoo', meta_title: 'Opiniones Badoo 2026: lo que pensamos de verdad tras meses de prueba', meta_description: 'El equipo QuizCouple ha probado Badoo durante varios meses. Resultados, experiencia como hombre y como mujer, precios, perfiles falsos: nuestra opini\u00f3n completa y sin filtros.', featured_image_alt: 'Nuestra opini\u00f3n sobre la aplicaci\u00f3n de citas Badoo en 2026', excerpt: 'Badoo, todo el mundo la conoce, nadie habla de ella con franqueza. La hemos probado.' },
         { lang: 'de', slug: 'badoo-erfahrungen', title: 'Unsere Meinung zur Dating-App Badoo', meta_title: 'Badoo Erfahrungen 2026: Was wir nach monatelangem Test wirklich davon halten', meta_description: 'Das QuizCouple-Team hat Badoo mehrere Monate lang getestet. Ergebnisse, Erfahrungen aus m\u00e4nnlicher und weiblicher Sicht, Preise, Fake-Profile: unser vollst\u00e4ndiger und ehrlicher Erfahrungsbericht.', featured_image_alt: 'Unsere Meinung zur Dating-App Badoo im Jahr 2026', excerpt: 'Badoo \u2014 jeder kennt sie, aber niemand spricht offen dar\u00fcber. Wir haben sie getestet.' },
         { lang: 'it', slug: 'recensione-badoo', title: "La nostra opinione sull'app di incontri Badoo", meta_title: 'Recensione Badoo 2026: cosa ne pensiamo davvero dopo mesi di test', meta_description: "Il team QuizCouple ha testato Badoo per diversi mesi. Risultati, esperienza lato uomo e lato donna, prezzi, profili falsi: la nostra recensione completa e senza filtri.", featured_image_alt: "La nostra opinione sull'app di incontri Badoo nel 2026", excerpt: "Badoo, tutti la conoscono, nessuno ne parla apertamente. Noi l'abbiamo testata." }
+      ]
+    },
+    {
+      internal_slug: 'femme-malheureuse-en-couple',
+      featured_image_url: '',
+      author_id: 'mathieu-courtin',
+      status: 'published',
+      published_at: '2026-03-01',
+      translations: [
+        { lang: 'fr', slug: 'femme-malheureuse-en-couple', title: "Comment reconna\u00eetre une femme malheureuse en couple : les vrais signes", meta_title: "Comment reconna\u00eetre une femme malheureuse en couple : les vrais signes", meta_description: "Elle sourit encore, mais quelque chose a chang\u00e9. Les signes qu'une femme est malheureuse en couple sont souvent l\u00e0 depuis un moment. On vous explique quoi regarder.", featured_image_alt: "Femme pensive assise seule, signes de mal-\u00eatre dans le couple", excerpt: "Les signes sont souvent l\u00e0 depuis longtemps. On ne sait juste pas quoi regarder." },
+        { lang: 'en', slug: 'unhappy-woman-in-relationship-signs', title: 'How to Recognize an Unhappy Woman in a Relationship: The Real Signs', meta_title: 'How to Recognize an Unhappy Woman in a Relationship: The Real Signs', meta_description: "She still smiles, but something has changed. The signs a woman is unhappy in a relationship are often there -- you just don't know what to look for. Here's what to watch.", featured_image_alt: 'Pensive woman sitting alone, signs of unhappiness in a relationship', excerpt: "The signs have often been there for a while. You just didn't know what to look for." },
+        { lang: 'es', slug: 'mujer-infeliz-en-pareja-senales', title: 'C\u00f3mo reconocer a una mujer infeliz en pareja: las verdaderas se\u00f1ales', meta_title: 'C\u00f3mo reconocer a una mujer infeliz en pareja: las verdaderas se\u00f1ales', meta_description: 'Sigue sonriendo, pero algo ha cambiado. Las se\u00f1ales de que una mujer es infeliz en pareja llevan tiempo ah\u00ed. Te explicamos qu\u00e9 mirar.', featured_image_alt: 'Mujer pensativa sentada sola, se\u00f1ales de malestar en la pareja', excerpt: 'Las se\u00f1ales llevan tiempo ah\u00ed. Simplemente no sab\u00edas qu\u00e9 mirar.' },
+        { lang: 'de', slug: 'unglueckliche-frau-in-beziehung-anzeichen', title: 'Wie man eine ungl\u00fcckliche Frau in einer Beziehung erkennt: Die wahren Anzeichen', meta_title: 'Wie man eine ungl\u00fcckliche Frau in einer Beziehung erkennt: Die wahren Anzeichen', meta_description: 'Sie l\u00e4chelt noch, aber etwas hat sich ver\u00e4ndert. Die Anzeichen, dass eine Frau in der Beziehung ungl\u00fccklich ist, sind oft schon lange da. Wir erkl\u00e4ren, worauf du achten solltest.', featured_image_alt: 'Nachdenkliche Frau allein sitzend, Anzeichen von Unzufriedenheit in der Beziehung', excerpt: 'Die Anzeichen sind oft schon lange da. Man wei\u00df nur nicht, worauf man achten soll.' },
+        { lang: 'it', slug: 'donna-infelice-in-coppia-segnali', title: 'Come riconoscere una donna infelice in coppia: i veri segnali', meta_title: 'Come riconoscere una donna infelice in coppia: i veri segnali', meta_description: 'Sorride ancora, ma qualcosa \u00e8 cambiato. I segnali che una donna \u00e8 infelice in coppia spesso ci sono da tempo. Ti spieghiamo cosa osservare.', featured_image_alt: 'Donna pensierosa seduta da sola, segnali di malessere nella coppia', excerpt: "I segnali ci sono spesso da tempo. Semplicemente non sapevi cosa cercare." }
       ]
     }
   ];
