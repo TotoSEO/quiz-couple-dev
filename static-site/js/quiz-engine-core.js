@@ -208,6 +208,18 @@ var QuizEngine = (function() {
     homeBtn.href = '/';
     actions.appendChild(homeBtn);
     wrap.appendChild(actions);
+
+    // Review CTA
+    var reviewCard = el('div', 'mt-6 mx-auto max-w-md rounded-xl border border-primary/20 bg-primary/5 p-5 text-center');
+    var reviewTitle = el('p', 'font-semibold mb-1', tg('reviews.quizLiked', 'Ce quiz vous a plu ?'));
+    var reviewDesc = el('p', 'text-sm text-muted-foreground mb-3', tg('reviews.leaveReviewDesc', 'Laissez-nous un avis ! Pas d\'adresse mail, pas d\'inscription ! Juste un petit mot pour nous soutenir 💜'));
+    var reviewBtn = el('a', 'btn btn-outline inline-flex items-center gap-2');
+    reviewBtn.href = '/#avis';
+    reviewBtn.innerHTML = ICONS.heart + ' ' + esc(tg('reviews.leaveReview', 'Laissez un avis'));
+    reviewCard.appendChild(reviewTitle);
+    reviewCard.appendChild(reviewDesc);
+    reviewCard.appendChild(reviewBtn);
+    wrap.appendChild(reviewCard);
   }
 
   function renderGenderButtons(container, selectedGender, onSelect) {
