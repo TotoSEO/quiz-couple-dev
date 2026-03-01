@@ -63,8 +63,8 @@
 
       <!-- Featured image -->
       <% if (article.featuredImage) { %>
-      <div class="rounded-2xl overflow-hidden border border-border shadow-lg mx-auto max-w-4xl">
-        <img src="<%= article.featuredImage %>" alt="<%= escapeHtml(article.featuredImageAlt || article.title) %>" class="w-full h-auto object-cover" loading="eager">
+      <div class="rounded-2xl overflow-hidden border border-border shadow-lg mx-auto max-w-4xl" style="aspect-ratio:1200/630">
+        <img src="<%= article.featuredImage %>" alt="<%= escapeHtml(article.featuredImageAlt || article.title) %>" class="w-full h-auto object-cover" width="1200" height="630" fetchpriority="high">
       </div>
       <% } %>
     </div>
@@ -79,11 +79,7 @@
     <div class="blog-layout">
 
       <!-- Main article column -->
-      <article class="blog-article blog-layout-main" itemscope itemtype="https://schema.org/Article">
-        <meta itemprop="headline" content="<%= escapeHtml(article.title) %>">
-        <meta itemprop="datePublished" content="<%= isoDate %>">
-        <% if (article.featuredImage) { %><meta itemprop="image" content="<%= article.featuredImage %>"><% } %>
-        <span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="<%= escapeHtml(article.author.name) %>"></span>
+      <article class="blog-article blog-layout-main">
 
         <!-- Table of contents (collapsed by default) -->
         <% if (article.sections && article.sections.length > 1) { %>
