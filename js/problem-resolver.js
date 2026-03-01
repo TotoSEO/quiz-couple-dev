@@ -347,7 +347,8 @@
   function renderStatementForm(parent) {
     var idx = state.currentPerson;
     var person = state.persons[idx];
-    var color = PERSON_COLORS[idx];
+    var gc = GENDER_COLORS[person.gender] || GENDER_COLORS.homme;
+    var color = { bg: gc.bg, border: gc.border, gradient: gc.gradient, text: person.gender === 'femme' ? '#f43f5e' : '#3b82f6' };
     var total = state.persons.length;
 
     var wrap = el('div', 'space-y-6 text-center');
