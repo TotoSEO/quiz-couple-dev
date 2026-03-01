@@ -674,7 +674,9 @@ async function generateBlogArticle(articleMeta, lang) {
         '@type': 'Article',
         headline: article.metaTitle || article.title,
         description: article.metaDescription || article.excerpt,
-        image: article.featuredImage ? `${BASE_URL}${article.featuredImage}` : `${BASE_URL}/og-image.webp`,
+        image: article.featuredImage
+          ? (article.featuredImage.startsWith('http') ? article.featuredImage : `${BASE_URL}${article.featuredImage}`)
+          : `${BASE_URL}/og-image.webp`,
         datePublished: article.publishedAt,
         dateModified: article.modifiedAt || article.publishedAt,
         inLanguage: lang,
@@ -715,7 +717,9 @@ async function generateBlogArticle(articleMeta, lang) {
     rawDescription: description,
     canonical,
     alternates: articleAlternates,
-    ogImage: article.featuredImage ? `${BASE_URL}${article.featuredImage}` : `${BASE_URL}/og-image.webp`,
+    ogImage: article.featuredImage
+      ? (article.featuredImage.startsWith('http') ? article.featuredImage : `${BASE_URL}${article.featuredImage}`)
+      : `${BASE_URL}/og-image.webp`,
     ogType: 'article',
     articlePublishedTime: article.publishedAt,
     articleModifiedTime: article.modifiedAt || article.publishedAt,

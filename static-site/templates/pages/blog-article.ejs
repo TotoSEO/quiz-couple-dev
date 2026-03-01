@@ -79,11 +79,7 @@
     <div class="blog-layout">
 
       <!-- Main article column -->
-      <article class="blog-article blog-layout-main" itemscope itemtype="https://schema.org/Article">
-        <meta itemprop="headline" content="<%= escapeHtml(article.title) %>">
-        <meta itemprop="datePublished" content="<%= isoDate %>">
-        <% if (article.featuredImage) { %><meta itemprop="image" content="<%= article.featuredImage %>"><% } %>
-        <span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="<%= escapeHtml(article.author.name) %>"></span>
+      <article class="blog-article blog-layout-main">
 
         <!-- Table of contents (collapsed by default) -->
         <% if (article.sections && article.sections.length > 1) { %>
