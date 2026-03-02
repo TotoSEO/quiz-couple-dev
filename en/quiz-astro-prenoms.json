@@ -1,84 +1,81 @@
 {
   "hero": {
-    "badge": "Numerology & Astrology",
+    "badge": "Astrology & Numerology",
     "title": "Love compatibility by first name and zodiac sign",
-    "titleHighlight": "first name and zodiac sign",
-    "description": "Two first names. Two signs. And somewhere between the stars and the letters of your names, something that feels like an answer."
+    "highlight": "Love compatibility",
+    "description": "Two first names. Two signs. And somewhere between the stars and the letters of your names, something that looks like an answer. This test combines two ancient readings -- astrology and numerology -- to paint a picture of your compatibility.",
+    "subtitle": "Enter your first names and your signs. The rest is up to the stars."
   },
   "form": {
-    "person1Title": "Person 1",
-    "person2Title": "Person 2",
-    "namePlaceholder": "First name",
-    "signLabel": "Zodiac sign",
-    "signPlaceholder": "Choose a sign",
+    "name1Placeholder": "First name of person 1",
+    "name2Placeholder": "First name of person 2",
+    "sign1Label": "Zodiac sign",
+    "sign2Label": "Zodiac sign",
+    "selectSign": "Choose a sign",
     "submitButton": "Check compatibility",
     "signs": {
-      "aries": "Aries",
-      "taurus": "Taurus",
-      "gemini": "Gemini",
-      "cancer": "Cancer",
-      "leo": "Leo",
-      "virgo": "Virgo",
-      "libra": "Libra",
-      "scorpio": "Scorpio",
-      "sagittarius": "Sagittarius",
-      "capricorn": "Capricorn",
-      "aquarius": "Aquarius",
-      "pisces": "Pisces"
+      "belier": "Aries ♈",
+      "taureau": "Taurus ♉",
+      "gemeaux": "Gemini ♊",
+      "cancer": "Cancer ♋",
+      "lion": "Leo ♌",
+      "vierge": "Virgo ♍",
+      "balance": "Libra ♎",
+      "scorpion": "Scorpio ♏",
+      "sagittaire": "Sagittarius ♐",
+      "capricorne": "Capricorn ♑",
+      "verseau": "Aquarius ♒",
+      "poissons": "Pisces ♓"
     }
   },
   "results": {
     "title": "Your compatibility",
-    "astroTitle": "Astrological compatibility",
-    "numerologyTitle": "Numerological compatibility",
-    "overallTitle": "Overall score",
-    "outOf10": "/10",
-    "tryAgain": "Test another couple",
-    "nameVibration": "Name vibration",
-    "number": "Number"
+    "overall": "Overall score",
+    "astroScore": "Astral compatibility",
+    "numeroScore": "First name compatibility",
+    "astroLabel": "Astrology",
+    "numeroLabel": "Numerology",
+    "detailTitle": "Detailed analysis of your signs",
+    "numeroTitle": "What your first names reveal",
+    "tryAgain": "Test another couple"
   },
   "section1": {
     "title": "What this test really reveals",
-    "p1": "Love compatibility is one of the oldest questions humanity has ever asked. Before dating apps, before personality tests, before even psychologists — there were the stars and numbers. Two systems for reading the world that, each in their own way, seek to understand why some people attract each other like magnets, while others collide without ever truly connecting.",
-    "p2": "This test brings both together. <strong>Not to decide for you.</strong> But to offer a different perspective on what's happening between two people."
+    "p1": "Love compatibility is one of the oldest questions humanity has ever asked. Before dating apps, before personality tests, before psychologists even existed -- there were the stars and numbers. Two systems for reading the world that, each in their own way, seek to understand why some people attract each other like magnets, while others clash without ever truly connecting.",
+    "p2": "This test brings both together. <strong>Not to decide for you.</strong> But to offer a different perspective on what is at play between two people."
   },
   "section2": {
-    "title": "Name numerology: when letters vibrate",
-    "p1": "In numerology, every letter of the alphabet carries a number. A equals 1, B equals 2, C equals 3 — and so on up to 9, then it starts over. This isn't random: this correspondence is one of the oldest in Western esoteric tradition, dating back to the work of Pythagoras in the 6th century BCE. The idea is simple yet profound — <strong>every first name is a frequency</strong>. A vibrational signature that, according to this tradition, influences the personality of the person who bears it, and the way they relate to others.",
-    "p2": "To calculate the compatibility between two first names, you add up the values of each letter, reduce the total to a single digit between 1 and 9 (except for the \"master numbers\" 11 and 22, which retain their own power), and compare. Each number has a nature. The 1 carries drive, independence, the desire to forge its own path. The 2 seeks harmony, union, the \"we\" rather than the \"I.\" The 5 wants freedom, movement, the unexpected. Two numbers that complement each other create a balanced couple. Two numbers that clash can create either tension or magnetic attraction — depending on what you choose to make of it.",
-    "tip": "Name numerology doesn't rely on exact spelling — it captures the vibration of sounds and letters. If you use a nickname or shortened name in everyday life, try both versions: the results may differ, and one will ring truer than the other."
+    "title": "First name numerology: when letters vibrate",
+    "p1": "In numerology, each letter of the alphabet carries a number. A equals 1, B equals 2, C equals 3 -- and so on up to 9, then it starts over. This correspondence is one of the oldest in the Western esoteric tradition, dating back to the work of Pythagoras in the 6th century BCE. The idea is simple yet profound -- <strong>every first name is a frequency</strong>.",
+    "p2": "To calculate the compatibility between two first names, you add up the values of each letter, reduce the total to a single digit between 1 and 9 (except for the \"master numbers\" 11 and 22, which retain their own power), and compare. The 1 carries drive and independence. The 2 seeks harmony and union. The 5 craves freedom. Two numbers that complement each other create a balanced couple.",
+    "tip": "First name numerology does not depend on exact spelling -- it captures the vibration of sounds and letters. If you go by a nickname, try both versions: the results may differ."
   },
   "section3": {
     "title": "Astrology and the signs: the imprint of the sky at birth",
-    "p1": "Your zodiac sign isn't calculated — it's inherited. It's the position of the Sun at the moment of birth that determines it, and with it, a palette of character traits, ways of loving, reacting, and building. <strong>Twelve signs. Four elements.</strong> Fire (Aries, Leo, Sagittarius) — impulsive, passionate, always in motion. Earth (Taurus, Virgo, Capricorn) — solid, grounded, patient. Air (Gemini, Libra, Aquarius) — quick, communicative, sometimes elusive. Water (Cancer, Scorpio, Pisces) — deep, emotional, intuitive.",
-    "p2": "Astrological compatibility between two people is first analyzed through these elements. A Fire sign and an Air sign feed each other — air fans the flames. An Earth sign and a Water sign understand each other instinctively — water nurtures what the earth holds within. <strong>But opposites also attract.</strong>"
+    "p1": "Your zodiac sign is not calculated -- it is inherited. It is determined by the position of the Sun at the moment of birth. <strong>Twelve signs. Four elements.</strong> Fire (Aries, Leo, Sagittarius) -- impulsive, passionate. Earth (Taurus, Virgo, Capricorn) -- steady, patient. Air (Gemini, Libra, Aquarius) -- quick, communicative. Water (Cancer, Scorpio, Pisces) -- deep, intuitive.",
+    "p2": "Astrological compatibility is first analyzed through these elements. A Fire sign and an Air sign fuel each other. An Earth sign and a Water sign understand each other instinctively. <strong>But opposites also attract.</strong>",
+    "subtitle": "The major affinities between signs",
+    "p3": "Signs of the same element share a natural understanding. Signs in square create friction -- not necessarily destructive. Signs in opposition embody the paradox of the attraction of opposites: <strong>two halves of the same axis</strong>."
   },
   "section4": {
-    "title": "The great affinities between signs",
-    "p1": "Signs of the same element share a natural understanding — two Fire signs understand each other without having to explain, two Water signs feel the same depths. This complicity is real. But it can also lead to an uncomfortable mirror effect: <strong>seeing yourself in the other person sometimes means seeing what you didn't want to look at.</strong>",
-    "p2": "Signs in square (at 90° in the zodiac) create friction. Not necessarily destructive friction. Friction, when well channeled, generates heat, movement, and growth.",
-    "p3": "Signs in opposition embody the paradox of the attraction of opposites. <strong>Two halves of the same axis</strong>, gazing at each other from opposite ends of the zodiac and recognizing in the other what they carry and you do not."
+    "title": "Why combine both readings?",
+    "p1": "Astrology speaks of what you received at birth. Numerology speaks of what you carry in your first name. <strong>The two readings complement each other because they do not say the same thing.</strong>",
+    "p2": "Your sun sign tells how you love, at a deep level. Your first name number tells how you connect. A Leo whose first name carries the number 2 will be very different from a Leo whose first name carries the number 1. The sign gives the character; the first name shapes how that character unfolds in a relationship.",
+    "tip": "A high score does not guarantee an easy relationship. A lower score is not a death sentence: it is an invitation to understand where effort will bear fruit."
   },
   "section5": {
-    "title": "Why combine both readings?",
-    "p1": "Astrology speaks to what you received at birth. Numerology speaks to what you carry in your first name — that name you were given, that you made your own, that became part of your identity. <strong>The two readings complement each other because they don't say the same thing.</strong>",
-    "p2": "Your sun sign tells how you love, at a deep level. Your name number tells how you connect, how you vibrate in the presence of another person. It's this combination — the sign and first name of both partners — that provides a reading that is both richer and more personal than simple astrological compatibility.",
-    "tip": "A high compatibility score doesn't guarantee an easy relationship. It indicates a natural harmony of energies — but it's sometimes in couples who have to work a little harder that the deepest stories are built. A lower score isn't a condemnation: it's an invitation to understand where effort will bear fruit."
-  },
-  "section6": {
-    "title": "What these numbers can't tell you",
-    "p1": "Let's be honest — and this is perhaps the most important part of this page.",
-    "p2": "Neither numerology nor astrology can predict whether a relationship will last. They cannot measure the willingness of two people to choose each other, to weather difficulties, to grow together. <strong>They offer insight.</strong> A framework for understanding. A way to name what we sometimes feel without being able to explain it.",
-    "p3": "This test is a starting point, not a verdict. It can open a conversation, confirm an intuition, or simply offer a few enjoyable minutes contemplating what the cosmos and numbers can weave between two first names.",
-    "tip": "If you're taking this test with your current partner, the results can be an excellent starting point for a conversation about your differences and complementarities. Not as a judgment — but as a fun and sometimes surprising mirror."
+    "title": "What these numbers cannot tell you",
+    "p1": "Neither numerology nor astrology can predict whether a relationship will last. <strong>They offer insight.</strong> A framework. A way to name what we sometimes feel without being able to explain it.",
+    "p2": "This test is a starting point, not a verdict. It can open a conversation, confirm an intuition, or simply offer a few minutes of enjoyment.",
+    "tip": "If you take this test with your partner, the results can be an excellent starting point for a conversation about your differences and complementarities."
   },
   "faq": {
-    "title": "Frequently asked questions about name and sign compatibility",
+    "title": "Frequently asked questions",
     "q1": "Is astrological compatibility really reliable?",
-    "a1": "It depends on what you call \"reliable.\" Astrology doesn't predict the future with precision. What it does — and has done for millennia — is describe temperaments, ways of being, and modes of relating. Millions of people around the world use it as a tool for self-knowledge. Whether it's \"true\" in the scientific sense is another question. That it's useful and enlightening for many people — that's undeniable.",
+    "a1": "Astrology does not predict the future with precision. What it does -- and has done for millennia -- is describe temperaments, ways of being, and modes of relating. That many people find it useful and enlightening is undeniable.",
     "q2": "Should I use my full first name or my nickname?",
-    "a2": "In numerology, your given first name is considered the underlying vibration — who you are at your core. Your nickname or shortened name reflects your social vibration — what you show to others. Both are interesting. If you never use your full first name in everyday life, try both and see which one resonates more with you.",
-    "q3": "My sign is \"incompatible\" with my partner's — are we doomed?",
-    "a3": "No. Absolutely not. Pop astrology that says \"Scorpio and Gemini can never work\" ignores centuries of astrological nuance. Compatibility between signs is a tendency, not a rule. And in any case, <strong>it's the people who make the relationship</strong> — not the stars."
+    "a2": "In numerology, the given first name is considered the underlying vibration. The nickname reflects the social vibration. Both are interesting. Try both and see which one resonates with you more.",
+    "q3": "My sign is \"incompatible\" with my partner's -- are we doomed?",
+    "a3": "No. Absolutely not. Compatibility between signs is a tendency, not a rule. <strong>It is the people who make relationships</strong> -- not the stars."
   }
 }

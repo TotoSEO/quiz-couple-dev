@@ -1,199 +1,164 @@
 <%
-  const quizKey = 'testAstroPrenoms';
   const ns = 'quiz-astro-prenoms';
-  const quizTitle = t('quizzes:testAstroPrenoms.title', 'Compatibilité amoureuse par prénom et signe astrologique');
+  const quizTitle = t('quizzes:testAstroPrenoms.title', 'Compatibilité amoureuse');
   const quizDesc = t('quizzes:testAstroPrenoms.metaDescription', '');
-
-  // JSON-LD
-  const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": quizTitle,
-      "description": quizDesc,
-      "inLanguage": lang,
-      "applicationCategory": "EntertainmentApplication",
-      "operatingSystem": "Web",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [1,2,3].map(function(i) {
-        return {
-          "@type": "Question",
-          "name": t(ns + ':faq.q' + i, ''),
-          "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':faq.a' + i, '') }
-        };
-      })
-    }
-  ];
-
-  // Zodiac signs data for the form
-  const signKeys = ['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'];
-  const signEmojis = { aries:'♈', taurus:'♉', gemini:'♊', cancer:'♋', leo:'♌', virgo:'♍', libra:'♎', scorpio:'♏', sagittarius:'♐', capricorn:'♑', aquarius:'♒', pisces:'♓' };
 %>
-<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+<%- jsonLdHtml %>
 
-<!-- Hero with celestial theme -->
-<section class="relative overflow-hidden astro-hero py-20 md:py-32">
-  <!-- Decorative stars -->
-  <div class="astro-stars" aria-hidden="true">
-    <div class="astro-star" style="top:10%;left:15%;animation-delay:0s"></div>
-    <div class="astro-star" style="top:20%;left:75%;animation-delay:0.5s"></div>
-    <div class="astro-star" style="top:60%;left:85%;animation-delay:1s"></div>
-    <div class="astro-star" style="top:70%;left:10%;animation-delay:1.5s"></div>
-    <div class="astro-star" style="top:40%;left:50%;animation-delay:2s"></div>
-    <div class="astro-star" style="top:85%;left:60%;animation-delay:0.3s"></div>
-    <div class="astro-star" style="top:15%;left:40%;animation-delay:1.2s"></div>
-    <div class="astro-star" style="top:50%;left:25%;animation-delay:0.8s"></div>
-  </div>
-  <div class="container mx-auto px-4 relative z-10">
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center">
-      <span class="astro-badge mb-6">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <%= t(ns + ':hero.badge', 'Numérologie & Astrologie') %>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <%= t(ns + ':hero.badge', 'Astrologie & Numérologie') %>
       </span>
       <%
         const heroTitle = t(ns + ':hero.title', quizTitle);
-        const heroHighlight = t(ns + ':hero.titleHighlight', '');
+        const heroHighlight = t(ns + ':hero.highlight', 'Compatibilité amoureuse');
       %>
       <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
         <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
-          <%- heroTitle.replace(heroHighlight, '<span class="astro-text-glow">' + heroHighlight + '</span>') %>
+          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
         <% } else { %>
           <%= heroTitle %>
         <% } %>
       </h1>
-      <p class="text-lg text-muted-foreground md:text-xl max-w-2xl mx-auto"><%= t(ns + ':hero.description', '') %></p>
+      <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
+      <p class="text-sm text-muted-foreground mt-4"><%= t(ns + ':hero.subtitle', '') %></p>
     </div>
   </div>
 </section>
 
-<!-- Interactive Tool -->
-<section class="py-12 md:py-16 relative">
+<!-- Compatibility Tool -->
+<section class="py-12 md:py-16">
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-2xl">
-      <div class="astro-form-card" id="astro-form-wrapper">
+      <div id="astro-tool" class="glass-card-strong rounded-2xl p-6 md:p-10">
         <!-- Form -->
-        <form id="astro-compatibility-form" class="space-y-8" onsubmit="return false;">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div id="astro-form">
+          <div class="grid gap-6 md:grid-cols-2">
             <!-- Person 1 -->
-            <div class="astro-person-card">
-              <div class="astro-person-header">
-                <span class="astro-person-icon">1</span>
-                <span class="font-semibold"><%= t(ns + ':form.person1Title', 'Personne 1') %></span>
+            <div class="space-y-4">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm">1</span>
+                <span class="font-semibold text-foreground"><%= lang === 'fr' ? 'Personne 1' : lang === 'es' ? 'Persona 1' : lang === 'de' ? 'Person 1' : lang === 'it' ? 'Persona 1' : 'Person 1' %></span>
               </div>
-              <div class="space-y-4">
-                <div>
-                  <input type="text" id="name1" class="astro-input" placeholder="<%= t(ns + ':form.namePlaceholder', 'Prénom') %>" required autocomplete="off">
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-muted-foreground mb-2"><%= t(ns + ':form.signLabel', 'Signe astrologique') %></label>
-                  <div class="astro-select-wrapper">
-                    <select id="sign1" class="astro-select" required>
-                      <option value="" disabled selected><%= t(ns + ':form.signPlaceholder', 'Choisir un signe') %></option>
-                      <% for (const sk of signKeys) { %>
-                      <option value="<%= sk %>"><%= signEmojis[sk] %> <%= t(ns + ':form.signs.' + sk, sk) %></option>
-                      <% } %>
-                    </select>
-                  </div>
-                </div>
+              <input type="text" id="name1" class="input w-full h-12 text-base" placeholder="<%= t(ns + ':form.name1Placeholder', 'Prénom') %>" autocomplete="off" maxlength="30">
+              <div class="astro-select-wrap">
+                <select id="sign1" class="input w-full h-12 text-base astro-select">
+                  <option value="" disabled selected><%= t(ns + ':form.selectSign', 'Choisir un signe') %></option>
+                  <option value="belier"><%= t(ns + ':form.signs.belier', 'Bélier ♈') %></option>
+                  <option value="taureau"><%= t(ns + ':form.signs.taureau', 'Taureau ♉') %></option>
+                  <option value="gemeaux"><%= t(ns + ':form.signs.gemeaux', 'Gémeaux ♊') %></option>
+                  <option value="cancer"><%= t(ns + ':form.signs.cancer', 'Cancer ♋') %></option>
+                  <option value="lion"><%= t(ns + ':form.signs.lion', 'Lion ♌') %></option>
+                  <option value="vierge"><%= t(ns + ':form.signs.vierge', 'Vierge ♍') %></option>
+                  <option value="balance"><%= t(ns + ':form.signs.balance', 'Balance ♎') %></option>
+                  <option value="scorpion"><%= t(ns + ':form.signs.scorpion', 'Scorpion ♏') %></option>
+                  <option value="sagittaire"><%= t(ns + ':form.signs.sagittaire', 'Sagittaire ♐') %></option>
+                  <option value="capricorne"><%= t(ns + ':form.signs.capricorne', 'Capricorne ♑') %></option>
+                  <option value="verseau"><%= t(ns + ':form.signs.verseau', 'Verseau ♒') %></option>
+                  <option value="poissons"><%= t(ns + ':form.signs.poissons', 'Poissons ♓') %></option>
+                </select>
               </div>
             </div>
-
+            <!-- Heart separator (mobile) -->
+            <div class="flex items-center justify-center md:hidden">
+              <span class="text-3xl text-primary">&#10084;</span>
+            </div>
             <!-- Person 2 -->
-            <div class="astro-person-card">
-              <div class="astro-person-header">
-                <span class="astro-person-icon">2</span>
-                <span class="font-semibold"><%= t(ns + ':form.person2Title', 'Personne 2') %></span>
+            <div class="space-y-4">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary/10 text-secondary font-bold text-sm">2</span>
+                <span class="font-semibold text-foreground"><%= lang === 'fr' ? 'Personne 2' : lang === 'es' ? 'Persona 2' : lang === 'de' ? 'Person 2' : lang === 'it' ? 'Persona 2' : 'Person 2' %></span>
               </div>
-              <div class="space-y-4">
-                <div>
-                  <input type="text" id="name2" class="astro-input" placeholder="<%= t(ns + ':form.namePlaceholder', 'Prénom') %>" required autocomplete="off">
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-muted-foreground mb-2"><%= t(ns + ':form.signLabel', 'Signe astrologique') %></label>
-                  <div class="astro-select-wrapper">
-                    <select id="sign2" class="astro-select" required>
-                      <option value="" disabled selected><%= t(ns + ':form.signPlaceholder', 'Choisir un signe') %></option>
-                      <% for (const sk of signKeys) { %>
-                      <option value="<%= sk %>"><%= signEmojis[sk] %> <%= t(ns + ':form.signs.' + sk, sk) %></option>
-                      <% } %>
-                    </select>
-                  </div>
-                </div>
+              <input type="text" id="name2" class="input w-full h-12 text-base" placeholder="<%= t(ns + ':form.name2Placeholder', 'Prénom') %>" autocomplete="off" maxlength="30">
+              <div class="astro-select-wrap">
+                <select id="sign2" class="input w-full h-12 text-base astro-select">
+                  <option value="" disabled selected><%= t(ns + ':form.selectSign', 'Choisir un signe') %></option>
+                  <option value="belier"><%= t(ns + ':form.signs.belier', 'Bélier ♈') %></option>
+                  <option value="taureau"><%= t(ns + ':form.signs.taureau', 'Taureau ♉') %></option>
+                  <option value="gemeaux"><%= t(ns + ':form.signs.gemeaux', 'Gémeaux ♊') %></option>
+                  <option value="cancer"><%= t(ns + ':form.signs.cancer', 'Cancer ♋') %></option>
+                  <option value="lion"><%= t(ns + ':form.signs.lion', 'Lion ♌') %></option>
+                  <option value="vierge"><%= t(ns + ':form.signs.vierge', 'Vierge ♍') %></option>
+                  <option value="balance"><%= t(ns + ':form.signs.balance', 'Balance ♎') %></option>
+                  <option value="scorpion"><%= t(ns + ':form.signs.scorpion', 'Scorpion ♏') %></option>
+                  <option value="sagittaire"><%= t(ns + ':form.signs.sagittaire', 'Sagittaire ♐') %></option>
+                  <option value="capricorne"><%= t(ns + ':form.signs.capricorne', 'Capricorne ♑') %></option>
+                  <option value="verseau"><%= t(ns + ':form.signs.verseau', 'Verseau ♒') %></option>
+                  <option value="poissons"><%= t(ns + ':form.signs.poissons', 'Poissons ♓') %></option>
+                </select>
               </div>
             </div>
           </div>
+          <!-- Submit -->
+          <div class="mt-8 text-center">
+            <button id="astro-submit" class="btn btn-cta btn-gradient w-full sm:w-auto px-10 py-4 text-lg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <%= t(ns + ':form.submitButton', 'Vérifier la compatibilité') %>
+            </button>
+          </div>
+        </div>
 
-          <button type="button" id="astro-submit-btn" class="astro-submit-btn w-full">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <span><%= t(ns + ':form.submitButton', 'Vérifier la compatibilité') %></span>
-          </button>
-        </form>
-
-        <!-- Results (hidden by default) -->
+        <!-- Results (hidden initially) -->
         <div id="astro-results" class="hidden">
-          <div class="text-center mb-8">
-            <h2 class="text-2xl md:text-3xl font-bold mb-2"><%= t(ns + ':results.title', 'Votre compatibilité') %></h2>
-            <p class="text-muted-foreground" id="astro-results-names"></p>
-          </div>
-
           <!-- Overall Score -->
-          <div class="astro-score-main mb-8">
-            <div class="astro-score-circle" id="astro-score-overall">
-              <svg viewBox="0 0 120 120" class="astro-score-svg">
-                <defs>
-                  <linearGradient id="astroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:hsl(270,60%,60%)"/>
-                    <stop offset="100%" style="stop-color:hsl(340,60%,60%)"/>
-                  </linearGradient>
-                </defs>
-                <circle cx="60" cy="60" r="54" class="astro-score-bg"/>
-                <circle cx="60" cy="60" r="54" class="astro-score-fill" id="astro-score-ring" stroke-dasharray="339.292" stroke-dashoffset="339.292"/>
-              </svg>
-              <div class="astro-score-value">
-                <span id="astro-score-number">0</span>
-                <span class="astro-score-unit"><%= t(ns + ':results.outOf10', '/10') %></span>
+          <div class="quiz-result-card rounded-2xl p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-foreground"><%= t(ns + ':results.title', 'Votre compatibilité') %></h2>
+            <p id="result-names" class="text-lg text-muted-foreground mb-6"></p>
+            <div class="quiz-score-circle mx-auto mb-4">
+              <span id="result-overall"></span>
+            </div>
+            <p class="text-sm text-muted-foreground mt-2"><%= t(ns + ':results.overall', 'Score global') %></p>
+          </div>
+
+          <!-- Breakdown -->
+          <div class="grid gap-6 md:grid-cols-2 mb-8">
+            <!-- Astro Score -->
+            <div class="glass-card rounded-xl p-6 text-center">
+              <div class="quiz-score-circle quiz-score-sm mx-auto mb-3">
+                <span id="result-astro-score"></span>
               </div>
+              <h3 class="font-semibold text-foreground mb-1"><%= t(ns + ':results.astroLabel', 'Astrologie') %></h3>
+              <p class="text-sm text-muted-foreground"><%= t(ns + ':results.astroScore', 'Compatibilité astrale') %></p>
             </div>
-            <p class="text-lg font-semibold mt-4"><%= t(ns + ':results.overallTitle', 'Score global') %></p>
-          </div>
-
-          <!-- Detail Scores -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div class="astro-detail-card">
-              <div class="astro-detail-icon">♈</div>
-              <h3 class="font-semibold mb-2"><%= t(ns + ':results.astroTitle', 'Compatibilité astrologique') %></h3>
-              <div class="astro-detail-score" id="astro-score-astro">0<%= t(ns + ':results.outOf10', '/10') %></div>
-              <p class="text-sm text-muted-foreground mt-2" id="astro-explanation-astro"></p>
-            </div>
-            <div class="astro-detail-card">
-              <div class="astro-detail-icon">🔢</div>
-              <h3 class="font-semibold mb-2"><%= t(ns + ':results.numerologyTitle', 'Compatibilité numérologique') %></h3>
-              <div class="astro-detail-score" id="astro-score-num">0<%= t(ns + ':results.outOf10', '/10') %></div>
-              <p class="text-sm text-muted-foreground mt-2" id="astro-explanation-num"></p>
+            <!-- Numero Score -->
+            <div class="glass-card rounded-xl p-6 text-center">
+              <div class="quiz-score-circle quiz-score-sm mx-auto mb-3">
+                <span id="result-numero-score"></span>
+              </div>
+              <h3 class="font-semibold text-foreground mb-1"><%= t(ns + ':results.numeroLabel', 'Numérologie') %></h3>
+              <p class="text-sm text-muted-foreground"><%= t(ns + ':results.numeroScore', 'Compatibilité des prénoms') %></p>
             </div>
           </div>
 
-          <!-- Name Vibrations -->
-          <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="text-center p-4 rounded-lg bg-muted/30">
-              <p class="text-xs text-muted-foreground mb-1"><%= t(ns + ':results.nameVibration', 'Vibration du prénom') %></p>
-              <p class="font-bold text-lg" id="astro-name1-display"></p>
-              <p class="text-primary font-bold text-2xl" id="astro-num1"></p>
-            </div>
-            <div class="text-center p-4 rounded-lg bg-muted/30">
-              <p class="text-xs text-muted-foreground mb-1"><%= t(ns + ':results.nameVibration', 'Vibration du prénom') %></p>
-              <p class="font-bold text-lg" id="astro-name2-display"></p>
-              <p class="text-primary font-bold text-2xl" id="astro-num2"></p>
-            </div>
+          <!-- Astro Explanation -->
+          <div class="glass-card rounded-xl p-6 md:p-8 mb-6">
+            <h3 class="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 text-primary"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <%= t(ns + ':results.detailTitle', 'Analyse détaillée de vos signes') %>
+            </h3>
+            <p id="result-astro-detail" class="text-muted-foreground leading-relaxed"></p>
           </div>
 
-          <button type="button" id="astro-retry-btn" class="astro-submit-btn w-full">
-            <span><%= t(ns + ':results.tryAgain', 'Tester un autre couple') %></span>
-          </button>
+          <!-- Numero Explanation -->
+          <div class="glass-card rounded-xl p-6 md:p-8 mb-8">
+            <h3 class="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 text-primary"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              <%= t(ns + ':results.numeroTitle', 'Ce que vos prénoms révèlent') %>
+            </h3>
+            <p id="result-numero-detail" class="text-muted-foreground leading-relaxed"></p>
+          </div>
+
+          <!-- Try Again -->
+          <div class="text-center">
+            <button id="astro-retry" class="btn btn-outline px-8 py-3">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              <%= t(ns + ':results.tryAgain', 'Tester un autre couple') %>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -202,236 +167,256 @@
 
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
-<!-- SEO Article -->
+<!-- SEO Content -->
 <article class="py-16 md:py-24 seo-content">
   <div class="container mx-auto px-4 max-w-3xl">
 
+    <!-- Section 1 -->
     <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title') %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- t(ns + ':section1.p1', '') %></p>
-        <p><%- t(ns + ':section1.p2', '') %></p>
+        <p><%= t(ns + ':section1.p1') %></p>
+        <p><%- t(ns + ':section1.p2') %></p>
       </div>
     </section>
 
+    <!-- Section 2 -->
     <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title') %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- t(ns + ':section2.p1', '') %></p>
-        <p><%- t(ns + ':section2.p2', '') %></p>
-        <% const tip2 = t(ns + ':section2.tip', ''); if (tip2) { %>
-        <blockquote class="border-l-4 border-primary pl-6 py-3 bg-muted/30 rounded-r-lg my-6">
-          <p class="text-sm italic"><%- tip2 %></p>
-        </blockquote>
-        <% } %>
+        <p><%- t(ns + ':section2.p1') %></p>
+        <p><%= t(ns + ':section2.p2') %></p>
       </div>
+      <% const tip2 = t(ns + ':section2.tip', ''); if (tip2) { %>
+      <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+        <p class="text-sm text-muted-foreground"><%= tip2 %></p>
+      </div>
+      <% } %>
     </section>
 
+    <!-- Section 3 -->
     <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title', '') %></h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title') %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- t(ns + ':section3.p1', '') %></p>
-        <p><%- t(ns + ':section3.p2', '') %></p>
+        <p><%- t(ns + ':section3.p1') %></p>
+        <p><%- t(ns + ':section3.p2') %></p>
       </div>
+      <% const sub3 = t(ns + ':section3.subtitle', ''); if (sub3) { %>
+      <div class="mt-8">
+        <h3 class="text-xl font-semibold mb-3"><%= sub3 %></h3>
+        <p class="text-muted-foreground leading-relaxed"><%- t(ns + ':section3.p3', '') %></p>
+      </div>
+      <% } %>
     </section>
 
+    <!-- Section 4 -->
     <section class="mb-16">
-      <h3 class="text-xl md:text-2xl font-bold mb-6"><%= t(ns + ':section4.title', '') %></h3>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section4.title') %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- t(ns + ':section4.p1', '') %></p>
-        <p><%- t(ns + ':section4.p2', '') %></p>
-        <p><%- t(ns + ':section4.p3', '') %></p>
+        <p><%- t(ns + ':section4.p1') %></p>
+        <p><%= t(ns + ':section4.p2') %></p>
       </div>
+      <% const tip4 = t(ns + ':section4.tip', ''); if (tip4) { %>
+      <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+        <p class="text-sm text-muted-foreground"><%= tip4 %></p>
+      </div>
+      <% } %>
     </section>
 
+    <!-- Section 5 -->
     <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section5.title', '') %></h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section5.title') %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- t(ns + ':section5.p1', '') %></p>
-        <p><%- t(ns + ':section5.p2', '') %></p>
-        <% const tip5 = t(ns + ':section5.tip', ''); if (tip5) { %>
-        <blockquote class="border-l-4 border-primary pl-6 py-3 bg-muted/30 rounded-r-lg my-6">
-          <p class="text-sm italic"><%- tip5 %></p>
-        </blockquote>
-        <% } %>
+        <p><%- t(ns + ':section5.p1') %></p>
+        <p><%= t(ns + ':section5.p2') %></p>
       </div>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section6.title', '') %></h2>
-      <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- t(ns + ':section6.p1', '') %></p>
-        <p><%- t(ns + ':section6.p2', '') %></p>
-        <p><%- t(ns + ':section6.p3', '') %></p>
-        <% const tip6 = t(ns + ':section6.tip', ''); if (tip6) { %>
-        <blockquote class="border-l-4 border-primary pl-6 py-3 bg-muted/30 rounded-r-lg my-6">
-          <p class="text-sm italic"><%- tip6 %></p>
-        </blockquote>
-        <% } %>
+      <% const tip5 = t(ns + ':section5.tip', ''); if (tip5) { %>
+      <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+        <p class="text-sm text-muted-foreground"><%= tip5 %></p>
       </div>
+      <% } %>
     </section>
 
     <!-- FAQ -->
     <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-8"><%= t(ns + ':faq.title', '') %></h2>
-      <div class="space-y-6">
-        <% for (let i = 1; i <= 3; i++) { %>
-        <div class="bg-card border border-border rounded-lg p-6">
-          <h3 class="text-lg font-semibold mb-3"><%= t(ns + ':faq.q' + i, '') %></h3>
-          <p class="text-muted-foreground leading-relaxed"><%- t(ns + ':faq.a' + i, '') %></p>
-        </div>
-        <% } %>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', 'FAQ') %></h2>
+      <div class="space-y-3">
+        <details class="border border-border rounded-lg">
+          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= t(ns + ':faq.q1') %></summary>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= t(ns + ':faq.a1') %></div>
+        </details>
+        <details class="border border-border rounded-lg">
+          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= t(ns + ':faq.q2') %></summary>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= t(ns + ':faq.a2') %></div>
+        </details>
+        <details class="border border-border rounded-lg">
+          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= t(ns + ':faq.q3') %></summary>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%- t(ns + ':faq.a3') %></div>
+        </details>
       </div>
     </section>
 
   </div>
 </article>
 
-<!-- Astro Compatibility Script -->
+<!-- Zodiac Compatibility Data & Logic -->
 <script>
-(function(){
-  // Zodiac compatibility matrix [sign1][sign2] = score/10
-  var ASTRO_COMPAT = {
-    aries:       {aries:8,taurus:5,gemini:8,cancer:4,leo:9,virgo:4,libra:9,scorpio:6,sagittarius:9,capricorn:5,aquarius:8,pisces:6},
-    taurus:      {aries:5,taurus:9,gemini:3,cancer:9,leo:4,virgo:9,libra:5,scorpio:8,sagittarius:3,capricorn:9,aquarius:3,pisces:8},
-    gemini:      {aries:8,taurus:3,gemini:8,cancer:4,leo:8,virgo:4,libra:9,scorpio:4,sagittarius:9,capricorn:4,aquarius:9,pisces:4},
-    cancer:      {aries:4,taurus:9,gemini:4,cancer:8,leo:3,virgo:8,libra:4,scorpio:9,sagittarius:4,capricorn:9,aquarius:2,pisces:8},
-    leo:         {aries:9,taurus:4,gemini:8,cancer:3,leo:8,virgo:4,libra:8,scorpio:4,sagittarius:9,capricorn:3,aquarius:8,pisces:4},
-    virgo:       {aries:4,taurus:9,gemini:4,cancer:8,leo:4,virgo:8,libra:4,scorpio:9,sagittarius:4,capricorn:9,aquarius:2,pisces:8},
-    libra:       {aries:8,taurus:5,gemini:9,cancer:4,leo:8,virgo:4,libra:8,scorpio:4,sagittarius:7,capricorn:3,aquarius:9,pisces:4},
-    scorpio:     {aries:6,taurus:8,gemini:4,cancer:9,leo:4,virgo:9,libra:4,scorpio:8,sagittarius:4,capricorn:8,aquarius:3,pisces:8},
-    sagittarius: {aries:9,taurus:3,gemini:9,cancer:4,leo:9,virgo:4,libra:7,scorpio:4,sagittarius:8,capricorn:3,aquarius:8,pisces:3},
-    capricorn:   {aries:5,taurus:9,gemini:4,cancer:9,leo:3,virgo:9,libra:3,scorpio:8,sagittarius:3,capricorn:8,aquarius:2,pisces:8},
-    aquarius:    {aries:8,taurus:3,gemini:9,cancer:2,leo:8,virgo:2,libra:9,scorpio:3,sagittarius:8,capricorn:2,aquarius:8,pisces:2},
-    pisces:      {aries:6,taurus:8,gemini:4,cancer:9,leo:4,virgo:8,libra:4,scorpio:8,sagittarius:3,capricorn:8,aquarius:2,pisces:8}
+(function() {
+  // ═══════════════════════════════════════════════════════
+  // ZODIAC COMPATIBILITY DATA — 144 combinations
+  // ═══════════════════════════════════════════════════════
+  var ZODIAC_DATA = <%- zodiacDataJson %>;
+
+  // ═══════════════════════════════════════════════════════
+  // NUMEROLOGY
+  // ═══════════════════════════════════════════════════════
+  var LETTER_VALUES = {
+    a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,
+    j:1,k:2,l:3,m:4,n:5,o:6,p:7,q:8,r:9,
+    s:1,t:2,u:3,v:4,w:5,x:6,y:7,z:8
   };
 
-  // Numerology: letter to number (A=1..I=9,J=1..R=9,S=1..Z=8)
-  function letterToNum(ch) {
-    var c = ch.toUpperCase().charCodeAt(0);
-    if (c < 65 || c > 90) return 0;
-    return ((c - 65) % 9) + 1;
-  }
-
-  // Reduce to single digit (keep 11, 22 as master numbers)
-  function reduceToDigit(n) {
+  function reduceToSingle(n) {
     while (n > 9 && n !== 11 && n !== 22) {
-      var s = 0;
-      while (n > 0) { s += n % 10; n = Math.floor(n / 10); }
-      n = s;
+      var sum = 0;
+      while (n > 0) { sum += n % 10; n = Math.floor(n / 10); }
+      n = sum;
     }
     return n;
   }
 
-  // Calculate name number from full name
-  function nameNumber(name) {
+  function getNameNumber(name) {
     var sum = 0;
-    for (var i = 0; i < name.length; i++) {
-      sum += letterToNum(name[i]);
+    var clean = name.toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z]/g, '');
+    for (var i = 0; i < clean.length; i++) {
+      sum += LETTER_VALUES[clean[i]] || 0;
     }
-    return reduceToDigit(sum);
+    return reduceToSingle(sum);
   }
 
-  // Numerology compatibility between two numbers
-  function numCompat(n1, n2) {
-    var matrix = {
-      1: {1:7,2:6,3:8,4:5,5:7,6:6,7:5,8:7,9:8,11:7,22:6},
-      2: {1:6,2:7,3:7,4:8,5:5,6:9,7:4,8:8,9:6,11:9,22:8},
-      3: {1:8,2:7,3:7,4:5,5:8,6:8,7:6,8:5,9:9,11:8,22:6},
-      4: {1:5,2:8,3:5,4:7,5:4,6:7,7:7,8:9,9:5,11:7,22:9},
-      5: {1:7,2:5,3:8,4:4,5:7,6:5,7:8,8:6,9:8,11:6,22:5},
-      6: {1:6,2:9,3:8,4:7,5:5,6:8,7:5,8:6,9:9,11:9,22:8},
-      7: {1:5,2:4,3:6,4:7,5:8,6:5,7:8,8:5,9:7,11:8,22:7},
-      8: {1:7,2:8,3:5,4:9,5:6,6:6,7:5,8:7,9:6,11:7,22:9},
-      9: {1:8,2:6,3:9,4:5,5:8,6:9,7:7,8:6,9:8,11:8,22:7},
-      11:{1:7,2:9,3:8,4:7,5:6,6:9,7:8,8:7,9:8,11:9,22:9},
-      22:{1:6,2:8,3:6,4:9,5:5,6:8,7:7,8:9,9:7,11:9,22:9}
+  // Numerology compatibility matrix (1-9, 11, 22)
+  var NUMERO_COMPAT = {
+    '1_1':7,'1_2':6,'1_3':9,'1_4':4,'1_5':8,'1_6':5,'1_7':5,'1_8':7,'1_9':6,'1_11':8,'1_22':6,
+    '2_2':7,'2_3':8,'2_4':7,'2_5':4,'2_6':9,'2_7':4,'2_8':6,'2_9':7,'2_11':9,'2_22':8,
+    '3_3':7,'3_4':3,'3_5':8,'3_6':9,'3_7':5,'3_8':4,'3_9':8,'3_11':8,'3_22':5,
+    '4_4':6,'4_5':3,'4_6':7,'4_7':6,'4_8':8,'4_9':4,'4_11':5,'4_22':9,
+    '5_5':7,'5_6':4,'5_7':7,'5_8':5,'5_9':8,'5_11':7,'5_22':5,
+    '6_6':7,'6_7':5,'6_8':5,'6_9':9,'6_11':8,'6_22':8,
+    '7_7':7,'7_8':4,'7_9':6,'7_11':9,'7_22':7,
+    '8_8':7,'8_9':5,'8_11':6,'8_22':9,
+    '9_9':7,'9_11':8,'9_22':7,
+    '11_11':8,'11_22':8,
+    '22_22':8
+  };
+
+  function getNumeroCompat(n1, n2) {
+    var key = Math.min(n1,n2) + '_' + Math.max(n1,n2);
+    return NUMERO_COMPAT[key] || 5;
+  }
+
+  // Number meanings for explanations
+  var NUMBER_TRAITS = {
+    1: { fr: "leader, indépendant, pionnier", en: "leader, independent, pioneer", es: "líder, independiente, pionero", de: "Anführer, unabhängig, Pionier", it: "leader, indipendente, pioniere" },
+    2: { fr: "diplomate, sensible, partenaire", en: "diplomat, sensitive, partner", es: "diplomático, sensible, compañero", de: "Diplomat, sensibel, Partner", it: "diplomatico, sensibile, partner" },
+    3: { fr: "créatif, sociable, expressif", en: "creative, sociable, expressive", es: "creativo, sociable, expresivo", de: "kreativ, gesellig, ausdrucksvoll", it: "creativo, socievole, espressivo" },
+    4: { fr: "stable, organisé, loyal", en: "stable, organized, loyal", es: "estable, organizado, leal", de: "stabil, organisiert, loyal", it: "stabile, organizzato, leale" },
+    5: { fr: "aventurier, libre, dynamique", en: "adventurous, free, dynamic", es: "aventurero, libre, dinámico", de: "abenteuerlustig, frei, dynamisch", it: "avventuriero, libero, dinamico" },
+    6: { fr: "protecteur, harmonieux, responsable", en: "protective, harmonious, responsible", es: "protector, armonioso, responsable", de: "beschützend, harmonisch, verantwortungsvoll", it: "protettivo, armonioso, responsabile" },
+    7: { fr: "spirituel, analytique, introspectif", en: "spiritual, analytical, introspective", es: "espiritual, analítico, introspectivo", de: "spirituell, analytisch, introspektiv", it: "spirituale, analitico, introspettivo" },
+    8: { fr: "ambitieux, puissant, déterminé", en: "ambitious, powerful, determined", es: "ambicioso, poderoso, determinado", de: "ehrgeizig, kraftvoll, entschlossen", it: "ambizioso, potente, determinato" },
+    9: { fr: "altruiste, sage, universel", en: "altruistic, wise, universal", es: "altruista, sabio, universal", de: "altruistisch, weise, universell", it: "altruistisch, weise, universell" },
+    11: { fr: "visionnaire, inspiré, intuitif", en: "visionary, inspired, intuitive", es: "visionario, inspirado, intuitivo", de: "visionär, inspiriert, intuitiv", it: "visionario, ispirato, intuitivo" },
+    22: { fr: "bâtisseur, visionnaire, maître", en: "builder, visionary, master", es: "constructor, visionario, maestro", de: "Erbauer, Visionär, Meister", it: "costruttore, visionario, maestro" }
+  };
+
+  var LANG = '<%= lang %>';
+
+  function getNumeroExplanation(name1, name2, n1, n2, score) {
+    var t1 = NUMBER_TRAITS[n1] ? (NUMBER_TRAITS[n1][LANG] || NUMBER_TRAITS[n1].fr) : '';
+    var t2 = NUMBER_TRAITS[n2] ? (NUMBER_TRAITS[n2][LANG] || NUMBER_TRAITS[n2].fr) : '';
+
+    var templates = {
+      fr: name1 + ' porte le nombre ' + n1 + ' (' + t1 + ') et ' + name2 + ' porte le nombre ' + n2 + ' (' + t2 + '). ',
+      en: name1 + ' carries the number ' + n1 + ' (' + t1 + ') and ' + name2 + ' carries the number ' + n2 + ' (' + t2 + '). ',
+      es: name1 + ' lleva el número ' + n1 + ' (' + t1 + ') y ' + name2 + ' lleva el número ' + n2 + ' (' + t2 + '). ',
+      de: name1 + ' trägt die Zahl ' + n1 + ' (' + t1 + ') und ' + name2 + ' trägt die Zahl ' + n2 + ' (' + t2 + '). ',
+      it: name1 + ' porta il numero ' + n1 + ' (' + t1 + ') e ' + name2 + ' porta il numero ' + n2 + ' (' + t2 + '). '
     };
-    if (matrix[n1] && matrix[n1][n2] !== undefined) return matrix[n1][n2];
-    return 5;
+    var base = templates[LANG] || templates.fr;
+
+    var high = { fr: 'Ces vibrations se complètent naturellement, créant une belle harmonie entre vos prénoms.', en: 'These vibrations complement each other naturally, creating beautiful harmony between your names.', es: 'Estas vibraciones se complementan naturalmente, creando una hermosa armonía entre vuestros nombres.', de: 'Diese Schwingungen ergänzen sich auf natürliche Weise und schaffen eine schöne Harmonie zwischen euren Namen.', it: 'Queste vibrazioni si completano naturalmente, creando una bella armonia tra i vostri nomi.' };
+    var med = { fr: 'Vos vibrations sont différentes mais peuvent créer une dynamique intéressante si vous apprenez à apprécier vos différences.', en: 'Your vibrations are different but can create an interesting dynamic if you learn to appreciate your differences.', es: 'Vuestras vibraciones son diferentes pero pueden crear una dinámica interesante si aprendéis a apreciar vuestras diferencias.', de: 'Eure Schwingungen sind unterschiedlich, können aber eine interessante Dynamik schaffen, wenn ihr lernt, eure Unterschiede zu schätzen.', it: 'Le vostre vibrazioni sono diverse ma possono creare una dinamica interessante se imparate ad apprezzare le vostre differenze.' };
+    var low = { fr: 'Vos vibrations sont contrastées, ce qui peut créer de la tension mais aussi une forte attirance magnétique. L\'effort de compréhension mutuelle sera la clé.', en: 'Your vibrations are contrasting, which can create tension but also strong magnetic attraction. Mutual understanding will be key.', es: 'Vuestras vibraciones son contrastadas, lo que puede crear tensión pero también una fuerte atracción magnética. La comprensión mutua será la clave.', de: 'Eure Schwingungen sind gegensätzlich, was Spannung aber auch eine starke magnetische Anziehung erzeugen kann. Gegenseitiges Verständnis wird der Schlüssel sein.', it: 'Le vostre vibrazioni sono contrastanti, il che può creare tensione ma anche una forte attrazione magnetica. La comprensione reciproca sarà la chiave.' };
+
+    if (score >= 7) return base + (high[LANG] || high.fr);
+    if (score >= 5) return base + (med[LANG] || med.fr);
+    return base + (low[LANG] || low.fr);
   }
 
-  // Animate score ring
-  function animateRing(score) {
-    var ring = document.getElementById('astro-score-ring');
-    var circumference = 339.292;
-    var offset = circumference - (score / 10) * circumference;
-    ring.style.transition = 'stroke-dashoffset 1.5s ease-out';
-    ring.style.strokeDashoffset = offset;
-  }
-
-  // Animate number counting
-  function animateNumber(el, target) {
-    var current = 0;
-    var step = target / 30;
-    var interval = setInterval(function() {
-      current += step;
-      if (current >= target) { current = target; clearInterval(interval); }
-      el.textContent = Math.round(current * 10) / 10;
-    }, 50);
-  }
-
-  var form = document.getElementById('astro-compatibility-form');
+  // ═══════════════════════════════════════════════════════
+  // UI LOGIC
+  // ═══════════════════════════════════════════════════════
+  var form = document.getElementById('astro-form');
   var results = document.getElementById('astro-results');
-  var submitBtn = document.getElementById('astro-submit-btn');
-  var retryBtn = document.getElementById('astro-retry-btn');
+  var submitBtn = document.getElementById('astro-submit');
+  var retryBtn = document.getElementById('astro-retry');
 
   submitBtn.addEventListener('click', function() {
-    var n1 = document.getElementById('name1').value.trim();
-    var n2 = document.getElementById('name2').value.trim();
-    var s1 = document.getElementById('sign1').value;
-    var s2 = document.getElementById('sign2').value;
+    var name1 = document.getElementById('name1').value.trim();
+    var name2 = document.getElementById('name2').value.trim();
+    var sign1 = document.getElementById('sign1').value;
+    var sign2 = document.getElementById('sign2').value;
 
-    if (!n1 || !n2 || !s1 || !s2) return;
+    if (!name1 || !name2 || !sign1 || !sign2) {
+      // Shake the button
+      submitBtn.classList.add('animate-shake');
+      setTimeout(function(){ submitBtn.classList.remove('animate-shake'); }, 500);
+      return;
+    }
 
-    // Calculate scores
-    var astroScore = ASTRO_COMPAT[s1] ? ASTRO_COMPAT[s1][s2] || 5 : 5;
-    var num1 = nameNumber(n1);
-    var num2 = nameNumber(n2);
-    var numScore = numCompat(num1, num2);
-    var overall = Math.round((astroScore * 0.5 + numScore * 0.5) * 10) / 10;
+    // Calculate astro score
+    var astroKey = sign1 + '_' + sign2;
+    var astroData = ZODIAC_DATA[astroKey] || { score: 5, text: '' };
+    var astroScore = astroData.score;
 
-    // Show results
+    // Calculate numerology score
+    var n1 = getNameNumber(name1);
+    var n2 = getNameNumber(name2);
+    var numeroScore = getNumeroCompat(n1, n2);
+
+    // Overall score (weighted: 60% astro, 40% numero) — out of 10
+    var overall = Math.round((astroScore * 0.6 + numeroScore * 0.4) * 10) / 10;
+    var overallPct = Math.round(overall * 10);
+
+    // Display results
+    document.getElementById('result-names').textContent = name1 + ' & ' + name2;
+    document.getElementById('result-overall').textContent = overallPct + '%';
+    document.getElementById('result-astro-score').textContent = (astroScore * 10) + '%';
+    document.getElementById('result-numero-score').textContent = (numeroScore * 10) + '%';
+    document.getElementById('result-astro-detail').textContent = astroData.text;
+    document.getElementById('result-numero-detail').textContent = getNumeroExplanation(name1, name2, n1, n2, numeroScore);
+
+    // Animate score circle color
+    var overallCircle = results.querySelector('.quiz-score-circle');
+    if (overallPct >= 70) overallCircle.style.borderColor = 'hsl(142 71% 45%)';
+    else if (overallPct >= 50) overallCircle.style.borderColor = 'hsl(45 93% 47%)';
+    else overallCircle.style.borderColor = 'hsl(0 84% 60%)';
+
+    // Show results, hide form
     form.classList.add('hidden');
     results.classList.remove('hidden');
-
-    // Populate
-    document.getElementById('astro-results-names').textContent = n1 + ' & ' + n2;
-    document.getElementById('astro-name1-display').textContent = n1;
-    document.getElementById('astro-name2-display').textContent = n2;
-    document.getElementById('astro-num1').textContent = num1;
-    document.getElementById('astro-num2').textContent = num2;
-
-    // Astro explanation from matrix
-    var signNames = {};
-    var selects = document.getElementById('sign1');
-    for (var i = 0; i < selects.options.length; i++) {
-      if (selects.options[i].value) signNames[selects.options[i].value] = selects.options[i].textContent.trim();
-    }
-    document.getElementById('astro-explanation-astro').textContent = (signNames[s1] || s1) + ' × ' + (signNames[s2] || s2);
-    document.getElementById('astro-explanation-num').textContent = n1 + ' (' + num1 + ') × ' + n2 + ' (' + num2 + ')';
-
-    // Animate scores
-    var outOf = document.querySelector('[id="astro-score-astro"]');
-    if (outOf) outOf.textContent = astroScore + '/10';
-    var numEl = document.querySelector('[id="astro-score-num"]');
-    if (numEl) numEl.textContent = numScore + '/10';
-
-    // Animate overall
-    animateRing(overall);
-    animateNumber(document.getElementById('astro-score-number'), overall);
-
-    // Scroll to results
     results.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
   retryBtn.addEventListener('click', function() {
     results.classList.add('hidden');
     form.classList.remove('hidden');
-    // Reset ring
-    document.getElementById('astro-score-ring').style.transition = 'none';
-    document.getElementById('astro-score-ring').style.strokeDashoffset = '339.292';
-    document.getElementById('astro-score-number').textContent = '0';
+    document.getElementById('name1').value = '';
+    document.getElementById('name2').value = '';
+    document.getElementById('sign1').selectedIndex = 0;
+    document.getElementById('sign2').selectedIndex = 0;
     form.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 })();
