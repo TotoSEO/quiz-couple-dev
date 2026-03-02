@@ -313,8 +313,12 @@ async function generatePage(routeKey, lang) {
     jsonLdHtml,
     // Blog listing data
     blogArticlesList,
-    // Zodiac compatibility data for astro-prenoms page
-    zodiacDataJson: routeKey === 'testAstroPrenoms' ? fs.readFileSync(path.resolve(__dirname, 'zodiac-data.json'), 'utf-8') : '{}',
+    // Zodiac compatibility data for astro-prenoms page (per-language)
+    zodiacDataJson: routeKey === 'testAstroPrenoms' ? (() => {
+      const langFile = path.resolve(__dirname, `zodiac-data-${lang}.json`);
+      const defaultFile = path.resolve(__dirname, 'zodiac-data.json');
+      return fs.existsSync(langFile) ? fs.readFileSync(langFile, 'utf-8') : fs.readFileSync(defaultFile, 'utf-8');
+    })() : '{}',
   };
 
   try {

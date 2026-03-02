@@ -1,0 +1,578 @@
+{
+  "belier_belier": {
+    "score": 8,
+    "text": "Dos Aries (deux signes de Feu gouvernés par Mars) forment un duo extrêmement passionné. Leur relation est très « passionnée et explosive », remplie d’énergie et de spontanéité. Ils vivent intensément leur amour, mais leur impulsivité et leur ego similaire provoquent des conflits fréquents. Leur union est excitante, mais ils doivent apprendre à calmer leurs élans pour que la relation dure."
+  },
+  "belier_taureau": {
+    "score": 5,
+    "text": "Aries (Feu cardinal) et Tauro (Terre fixe) ont des tempéraments opposés. Le Aries est impulsif et pressé (par Mars), tandis que le Tauro est stable et patient (par Vénus). Cette différence élémentaire (Fuego vs Tierra) entraîne des frictions quotidiennes : le Tauro peut trouver le Aries imprudent et le Aries juge le Tauro trop lent. Leur attirance naît de cette complémentarité (énergie vs stabilité), mais leur entente requiert de gros compromis et une bonne dose de compréhension mutuelle."
+  },
+  "belier_gemeaux": {
+    "score": 8,
+    "text": "Aries (Fuego) et Géminis (Aire) forment un couple très vivant et dynamique. Les deux partagent une soif de liberté et d’aventure. Le Aries agit avec passion, et le Géminis, curieux et adaptable, stimule sans cesse le Aries par sa vivacité d’esprit. Leur relation est remplie de projets communs : le Aries apporte la force d’action, le Géminis les idées nouvelles. Ils évitent la routine et se comprennent bien, bien qu’ils doivent veiller à tempérer l’impulsivité du Aries face à l’indécision occasionnelle des Géminis."
+  },
+  "belier_cancer": {
+    "score": 4,
+    "text": "Aries (Fuego) et Cáncer (Agua) ont du mal à s’accorder. Leur compatibilité est faible car ils ne partagent pas le même élément. Le Cáncer est tourné vers l’avenir et la sécurité émotionnelle, tandis que le Aries vit dans l’instant. Le Cáncer peut se sentir ignoré par le Aries impétueux, et le Aries agacé par la sensibilité du Cáncer. Leur relation peut être très profonde si un véritable amour les unit, mais ils doivent accepter de gros compromis : le Cáncer apprend au Aries à tenir compte des sentiments, et le Aries apprend au Cáncer la confiance en l’impulsion du présent."
+  },
+  "belier_lion": {
+    "score": 9,
+    "text": "Aries (Fuego) et Leo (Fuego) partagent une forte affinité élémentaire. Leur union est très intense et passionnée. Tous deux sont orgueilleux et énergiques : le Aries et le Leo créent une relation pleine de puissance et d’ardeur. Ils se stimulent mutuellement et n’en manquent jamais de sel, mais peuvent entrer en compétition (chacun veut briller). Si chacun respecte la fierté de l’autre, leur couple est très fort et charnel."
+  },
+  "belier_vierge": {
+    "score": 4,
+    "text": "Aries (Fuego) et Virgo (Tierra) n’ont pas le même rythme de vie. La Virgo réfléchit longuement avant d’agir, tandis que le Aries fonce tête baissée. Le Aries n’aime pas les règles et la rigueur que la Virgo impose, ce qui crée des conflits. Inversement, la Virgo admire pourtant l’audace du Aries mais est irritée par son imprudence. Leur relation est donc tendue : l’absence d’affinité élémentaire (Fuego vs Tierra) complique la compatibilité. Pour fonctionner, ils doivent grandement s’adapter l’un à l’autre."
+  },
+  "belier_balance": {
+    "score": 9,
+    "text": "Aries (Fuego) et Libra (Aire) sont opposés dans le zodiaque, ce qui crée une complémentarité très forte. La Libra calme et diplomate tempère l’impulsivité du Aries, et le Aries passionné réchauffe le cœur de la Libra. C’est une combinaison « parfaite » en amour : la Libra apporte de l’harmonie et la maîtrise au Aries, qui lui apporte énergie et franchise. Ensemble, ils unissent leurs différences pour former un équilibre solide."
+  },
+  "belier_scorpion": {
+    "score": 6,
+    "text": "Aries (Fuego) et Escorpio (Agua) forment une relation très intense et complexe. Le Escorpio (fixe, gouverné par Mars/Pluton) est énigmatique et passionné, tandis que le Aries (cardinal Feu) est direct et énergique. Leur couple peut vivre une passion débridée : le Escorpio nourrit la force du Aries, et le Aries dynamise le Escorpio. Mais ils ont des pulsions contradictoires (le Escorpio aime tester, le Aries foncer) qui peuvent mener à des conflits dangereux. Ils peuvent vivre l’amour « le plus ultime de leur vie » ou bien subir des disputes violentes si chacun ne canalise pas son intensité."
+  },
+  "belier_sagittaire": {
+    "score": 9,
+    "text": "Aries (Fuego) et Sagitario (Fuego) partagent une grande affinité. Le Sagitario optimiste et calme incite le Aries à réfléchir avant d’agir. Ensemble, ils créent une relation douce et dynamique. Les deux sont tournés vers l’aventure : plus le Sagitario est patient, plus le Aries s’ouvre à ses conseils, et leur vie commune est remplie de voyages et de découvertes. Ils s’apprennent mutuellement le goût du combat et de l’aventure, rendant leur couple très complice."
+  },
+  "belier_capricorne": {
+    "score": 5,
+    "text": "Aries (Fuego) et Capricornio (Tierra) sont deux signes cardinaux opposés. Le Capricornio froid et posé devient comme un « mur de glace » face à l’ardeur du Aries. Le Aries apporte enthousiasme, le Capricornio apporte stabilité. Ils peuvent construire une relation équilibrée à long terme (ils partagent l’ambition et la volonté), mais leur association demande un effort : le Aries apprend la patience et le sens du futur au Capricornio, qui lui apprend au Aries à réfléchir avant de foncer. Leur union est solide, ponctuée parfois de passions intenses."
+  },
+  "belier_verseau": {
+    "score": 8,
+    "text": "Aries (Fuego) et Acuario (Aire) s’entendent très bien grâce à leur besoin commun de liberté. Ils respectent tous deux l’indépendance de l’autre et échangent en harmonie. Leur relation n’est pas chargée d’exigences excessives : ils comprennent les rêves et la vision de chacun. Le Acuario, plus détaché, équilibre le Aries plus passionné. C’est un des couples du zodiaque parmi les plus heureux, même s’ils doivent veiller à ne pas se blesser mutuellement (ex. différences sur l’intimité)."
+  },
+  "belier_poissons": {
+    "score": 6,
+    "text": "Aries (Fuego) et Piscis (Agua) forment une combinaison profondément émotionnelle. Ensemble, ils peuvent vivre une grande passion et un don mutuel. Le Aries, d’ordinaire agressif, se laisse attendrir par la dévotion du Piscis, qui s’investit totalement. Ils peuvent donc créer une alchimie intense : le Piscis réconforte le Aries, qui à son tour apporte de la vivacité. Cependant, leurs éléments étant contraires (Fuego vs Agua), la relation nécessite beaucoup de compréhension : sans vrai amour, les différences (précipitation du Aries vs rêverie du Piscis) peuvent causer des tensions."
+  },
+  "taureau_belier": {
+    "score": 5,
+    "text": "Tauro (Tierra, Vénus) et Aries (Fuego, Mars) ont des tempéraments très contrastés. Le Tauro aime la stabilité et les plaisirs simples, le Aries cherche l’action immédiate. Cette opposition élémentaire (Tierra vs Fuego) crée des frictions quotidiennes : le Tauro se sent bousculé par l’impulsivité du Aries et le Aries étouffé par le rythme tranquille du Tauro. Cependant, ils peuvent trouver un équilibre : le Aries est séduit par la constance du Tauro et le Tauro par la fougue du Aries. Leur relation tient beaucoup de compromis et de respect mutuel."
+  },
+  "taureau_taureau": {
+    "score": 9,
+    "text": "Dos Taurox ensemble (Terre fixe, gouvernée par Vénus) partagent une très grande affinité. Ils aiment tous deux le confort matériel, la douceur et la loyauté. Le couple Tauro-Tauro construit un foyer solide : chacun comprend les besoins de l’autre (sécurité financière, tendresse physique, stabilité). Leur entêtement mutuel peut provoquer quelques conflits, mais leur patience compense souvent cette tendance à ne pas céder. Au final, ils se trouvent du réconfort ensemble, avec un lien très stable et durable."
+  },
+  "taureau_gemeaux": {
+    "score": 3,
+    "text": "Tauro (Tierra) et Géminis (Aire) ont des besoins opposés. Le Tauro est fixé sur la sécurité et la routine, le Géminis cherche la diversité et le mouvement. Leur compatibilité est faible : la communication (taureau pragmatique vs gémeaux bavard) diffère radicalement. Le Tauro apprécie les échanges profonds et fiables, tandis que le Géminis multiplie les sujets de conversation, ce qui peut irriter le Tauro. Ils doivent être prêts à se comprendre malgré ces différences très marquées."
+  },
+  "taureau_cancer": {
+    "score": 9,
+    "text": "Tauro (Tierra) et Cáncer (Agua) forment un couple harmonieux et solide. Leur entente repose sur un objectif commun de sécurité et de confort. Le Tauro pragmatique rassure le Cáncer fidèle, tandis que le Cáncer, très affectueux, se sent bien soutenu par le Tauro. Ils bâtissent un foyer chaleureux ensemble. Seule la différence d’expression des émotions peut créer quelques tensions (le Cáncer a besoin de mots réconfortants, le Tauro préfère les gestes concrets), mais ils s’efforcent de combler ce décalage par la compréhension mutuelle."
+  },
+  "taureau_lion": {
+    "score": 4,
+    "text": "Tauro (Tierra) et Leo (Fuego) ont des valeurs souvent opposées. Le Tauro ancré aime la tranquillité et la sécurité, le Leo flamboyant recherche l’admiration et le luxe. Au début, une forte attraction peut exister (le Tauro admire la prestance du Leo et inversement), mais leurs différences ressortent vite. Le Tauro peut se sentir bousculé par l’exubérance du Leo, et le Leo juger le Tauro trop modeste. Leur relation demande de gros efforts pour équilibrer la stabilité du Tauro et la passion du Leo."
+  },
+  "taureau_vierge": {
+    "score": 9,
+    "text": "Tauro (Tierra) et Virgo (Tierra) sont tous deux très pragmatiques. Leur affinité élémentaire assure qu’ils se comprennent parfaitement. Ils partagent les mêmes valeurs : sens du concret, fidélité et sens des responsabilités. Le Tauro apporte à la Virgo du confort et de la constance, la Virgo apporte au Tauro sa rigueur et son sens du détail. Ensemble, ils forment un couple très harmonieux, vivant dans la stabilité et la prévoyance."
+  },
+  "taureau_balance": {
+    "score": 5,
+    "text": "Tauro (Tierra) et Libra (Aire) sont gouvernés par Vénus mais diffèrent. Le Tauro recherche la sécurité matérielle et émotionnelle, la Libra recherche l’équilibre relationnel et les plaisirs esthétiques. Ils peuvent apprécier leur sens commun de l’élégance et des relations stables, mais le Tauro trouve la Libra parfois indécise, et la Libra juge le Tauro trop matérialiste. Cette combinaison nécessite de la patience : la Libra apporte douceur, le Tauro apporte loyauté, mais ils doivent concilier Terre et Air avec effort."
+  },
+  "taureau_scorpion": {
+    "score": 8,
+    "text": "Tauro (Tierra) et Escorpio (Agua) sont opposés dans le zodiaque, ce qui engendre une forte attraction magnétique. Le Tauro stable est séduit par la profondeur émotionnelle du Escorpio, et le Escorpio est attiré par la fiabilité du Tauro. Ensemble, ils forment un équilibre puissant : sécurité affective pour le Escorpio, passion partagée pour le Tauro. Leur relation est marquée par la loyauté et l’engagement mutuels. L’intimité est intense (goût commun de la sensualité), mais leur entêtement respectif exige de l’écoute pour entretenir l’harmonie."
+  },
+  "taureau_sagittaire": {
+    "score": 3,
+    "text": "Tauro (Tierra) et Sagitario (Fuego) ont très peu de points communs. Le Tauro rigoureux aime les habitudes, tandis que le Sagitario aventureux cherche sans cesse de nouvelles expériences. Leurs éléments ne correspondent pas (Tierra vs Fuego), ce qui rend leur complicité difficile. Le Tauro peut reprocher au Sagitario son imprévisibilité, et le Sagitario trouve le Tauro trop conservateur. Leur relation exige de grandes concessions ou risque de s’essouffler rapidement."
+  },
+  "taureau_capricorne": {
+    "score": 9,
+    "text": "Tauro (Tierra) et Capricornio (Tierra) partagent une forte compatibilité élémentaire. Tous deux sont travailleurs, loyaux et pragmatiques. Le Tauro apprécie la stabilité financière que vise le Capricornio, et le Capricornio admire la constance du Tauro. Ensemble, ils bâtissent une vie solide : ils planifient l’avenir (maison, carrière) de manière commune. Leur relation est très fiable grâce à cet objectif commun de sécurité matérielle."
+  },
+  "taureau_verseau": {
+    "score": 3,
+    "text": "Tauro (Tierra) et Acuario (Aire) ont des besoins très divergents. Le Tauro cherche la routine et la sécurité, le Acuario aime l’insolite et l’indépendance. Ces différences fondamentales compliquent leur entente : le Tauro peut trouver le Acuario distant et le Acuario trouver le Tauro possessif. Leur relation nécessite un travail de compromise important pour fonctionner."
+  },
+  "taureau_poissons": {
+    "score": 8,
+    "text": "Tauro (Tierra) et Piscis (Agua) se complètent bien. Le Tauro solide rassure le Piscis sensible, qui à son tour apporte au Tauro poésie et tendresse. Ils partagent un amour profond pour le confort et la douceur : la relation est souvent très affectueuse. Le Tauro stabilise les rêves du Piscis, et le Piscis élargit l’imaginaire du Tauro. Ensemble, ils peuvent construire un cocon émotionnel très harmonieux."
+  },
+  "gemeaux_belier": {
+    "score": 8,
+    "text": "Les Géminis (Aire) et le Aries (Fuego) forment un tandem très dynamique. Le Géminis est vif et adaptable, le Aries impulsif et courageux. Ensemble, ils transforment la vie quotidienne en aventure : le Aries pousse le Géminis à passer à l’action, et le Géminis stimule le Aries par ses idées nouvelles. Ils partagent l’enthousiasme et évitent l’ennui. Leur relation est vive et passionnée, même si le Aries doit parfois modérer sa brusquerie pour ne pas blesser le Géminis."
+  },
+  "gemeaux_taureau": {
+    "score": 3,
+    "text": "Géminis (Aire) et Tauro (Tierra) ont des besoins opposés. Le Géminis aime le changement et la communication, le Tauro cherche la stabilité et les plaisirs tangibles. Leur compatibilité est faible : le Tauro peut trouver le Géminis superficiel, et le Géminis juge le Tauro trop routinier. Sans grands efforts pour respecter leurs différences, leur relation manque de profondeur et de complicité."
+  },
+  "gemeaux_gemeaux": {
+    "score": 8,
+    "text": "Dos Géminis ensemble partagent beaucoup de points communs. En tant que signes d’Air mutables, ils adorent discuter, échanger des idées et vivre de nouvelles expériences. Leur compatibilité est élevée car ils comprennent la soif de liberté et de nouveauté de l’autre. Ils dynamisent leur couple par l’humour et la créativité. Attention : ils doivent veiller à se concentrer de temps en temps pour éviter que la relation ne reste trop superficielle."
+  },
+  "gemeaux_cancer": {
+    "score": 4,
+    "text": "Géminis (Aire) et Cáncer (Agua) peinent à se comprendre. Le Cáncer rêve de sécurité affective, le Géminis recherche la diversité intellectuelle. Le Géminis peut sembler trop détaché au Cáncer, qui peut trouver le Géminis peu fiable. Leur relation nécessite de la tolérance : le Géminis doit être patient face à la sensibilité du Cáncer, et le Cáncer accepter le besoin d’indépendance du Géminis."
+  },
+  "gemeaux_lion": {
+    "score": 8,
+    "text": "Géminis (Aire) et Leo (Fuego) forment un couple amusant et stimulant. Le Leo charismatique apprécie la vivacité intellectuelle du Géminis, et le Géminis se plaît dans la chaleur et la générosité du Leo. Tous deux aiment la vie sociale, ils partagent l’optimisme et l’envie d’agir. Leur relation est pleine de bonne humeur et d’aventures communes, même si le Leo doit parfois accepter la nature inconstante du Géminis."
+  },
+  "gemeaux_vierge": {
+    "score": 4,
+    "text": "Géminis (Aire) et Virgo (Tierra) sont opposés sur l’axe mutable. Bien qu’ils partagent la planète Mercure, leurs approches diffèrent. Le Géminis aime la polyvalence et la légèreté, la Virgo l’ordre et la minutie. Leur compatibilité est faible : le Géminis peut juger la Virgo trop sévère, la Virgo trouve le Géminis trop dispersé. La relation nécessite que chacun respecte le rythme analytique de l’autre."
+  },
+  "gemeaux_balance": {
+    "score": 9,
+    "text": "Géminis (Aire) et Libra (Aire) partagent le même élément. Les deux aiment parler, échanger des idées et être entourés. La Libra diplomate apporte de l’équilibre aux réflexions du Géminis, qui en retour enrichit la Libra par son imagination. Leur relation est très harmonieuse : ils se comprennent presque instinctivement et leur complicité intellectuelle est forte."
+  },
+  "gemeaux_scorpion": {
+    "score": 4,
+    "text": "Géminis (Aire) et Escorpio (Agua) ont peu d’affinité naturelle. Le Escorpio intense et secret peut déconcerter le Géminis sociable et ouvert. La curiosité du Géminis peut ne pas suffire à percer les mystères du Escorpio. Leur relation impose d’importants efforts de communication : le Géminis doit accepter la profondeur émotionnelle du Escorpio, et le Escorpio la légèreté changeante du Géminis."
+  },
+  "gemeaux_sagittaire": {
+    "score": 9,
+    "text": "Géminis (Aire) et Sagitario (Fuego) sont des signes mutables opposés, ce qui crée une attraction naturelle. Tous deux partagent l’enthousiasme pour l’aventure et la liberté. Le Sagitario intrépide excite l’esprit curieux du Géminis, et le Géminis apporte sa polyvalence au Sagitario. Ils vivent leur relation comme une grande exploration intellectuelle et personnelle."
+  },
+  "gemeaux_capricorne": {
+    "score": 4,
+    "text": "Géminis (Aire) et Capricornio (Tierra) ont des priorités très différentes. Le Capricornio sérieux et organisé peut trouver le Géminis trop imprévisible, et le Géminis peut trouver le Capricornio rigide. Leur relation manque de fluidité naturelle : ils ont peu de points communs sans compromis, et leur compatibilité est limitée."
+  },
+  "gemeaux_verseau": {
+    "score": 9,
+    "text": "Géminis (Aire) et Acuario (Aire) partagent une forte affinité élémentaire. Tous deux aiment la communication, les idées novatrices et la liberté. Ils se stimulent intellectuellement et adorent discuter projets et concepts. Leur relation est très amicale et inventive : ils forment un tandem dynamique, avide de projets culturels ou humanitaires communs."
+  },
+  "gemeaux_poissons": {
+    "score": 4,
+    "text": "Géminis (Aire) et Piscis (Agua) s’accordent difficilement. Le Piscis rêveur et introverti peut se sentir dépassé par l’énergie du Géminis, et le Géminis peut trouver le Piscis trop émotionnel. Leur relation nécessite un grand effort d’empathie : le Géminis doit écouter le Piscis avec plus de profondeur, et le Piscis accepter le besoin de variété du Géminis."
+  },
+  "cancer_belier": {
+    "score": 4,
+    "text": "Cáncer (Agua, cardinal) et Aries (Fuego, cardinal) cherchent tous deux à initier les choses, mais différemment. Le Cáncer sensible attend de la sécurité affective, tandis que le Aries fonce sans regarder. Leur compatibilité est faible car leurs éléments diffèrent beaucoup. Le Cáncer peut se sentir blessé par l’impulsivité du Aries, et le Aries fatigué par la sensibilité du Cáncer. Leur couple nécessite de la patience : le Cáncer doit se montrer plus indulgent avec l’impatience du Aries, et le Aries apprendre à ménager le cœur du Cáncer."
+  },
+  "cancer_taureau": {
+    "score": 9,
+    "text": "Comme vu précédemment, Tauro (Tierra) et Cáncer (Agua) forment une alliance très harmonieuse. Le Cáncer émotionnel et le Tauro pragmatique ont les mêmes objectifs : créer un foyer stable et aimant. Le Cáncer, protecteur, trouve dans le Tauro un partenaire fiable, et le Tauro, fidèle, rassure le Cáncer par sa constance. Leur relation est empreinte de tendresse et de stabilité émotionnelle. Seule la différence d’expression (Cáncer verbalise ses émotions, Tauro montre l’amour par des actes) peut demander des ajustements mutuels."
+  },
+  "cancer_gemeaux": {
+    "score": 4,
+    "text": "Cáncer (Agua) et Géminis (Aire) ont peu d’affinité spontanée. Le Cáncer cherche la sécurité émotionnelle, et le Géminis, la légèreté et la diversité. Le Cáncer peut trouver le Géminis trop instable, le Géminis trouve le Cáncer trop requérant. Leur relation repose sur l’effort : le Cáncer doit comprendre le besoin d’espace du Géminis, et le Géminis la nécessité de lien du Cáncer."
+  },
+  "cancer_lion": {
+    "score": 3,
+    "text": "Cáncer (Agua) et Leo (Fuego) ont des tempéraments très différents. Le Cáncer introverti et protecteur peut être submergé par l’exubérance du Leo. Le Leo, qui veut être au centre de l’attention, peut nuire à la sécurité émotionnelle recherchée par le Cáncer. Leur relation nécessite un équilibre : le Leo doit adoucir sa nature dominante, et le Cáncer s’ouvrir davantage à la sociabilité du Leo, sinon la compatibilité reste faible."
+  },
+  "cancer_vierge": {
+    "score": 8,
+    "text": "Cáncer (Agua) et Virgo (Tierra) forment un couple chaleureux et fiable. Le Cáncer apporte sa tendresse et son soutien, la Virgo apporte sa compréhension pratique. Ils partagent un soin du détail et une sensibilité: le Cáncer rassure la Virgo par son affection, et la Virgo soulage le Cáncer par son aide concrète. Leur relation est solide, chacun soutenant l’autre dans la vie quotidienne."
+  },
+  "cancer_balance": {
+    "score": 4,
+    "text": "Cáncer (Agua) et Libra (Aire) éprouvent souvent des difficultés à se connecter. La Libra recherche l’harmonie sociale et peut sembler insouciante au Cáncer soucieux de profondeur émotionnelle. À l’inverse, le Cáncer passionné peut être trop intense pour la Libra qui valorise l’équilibre. Leur compatibilité est faible : ils doivent faire de grands efforts pour harmoniser la sensibilité du Cáncer avec la légèreté de la Libra."
+  },
+  "cancer_scorpion": {
+    "score": 9,
+    "text": "Cáncer (Agua) et Escorpio (Agua) partagent une très forte affinité élémentaire. Tous deux profondément sensibles et loyaux, ils se comprennent intuitivement. Le Cáncer protecteur rassure le Escorpio intense, et le Escorpio passionné soutient le Cáncer en retour. Leur relation est chargée d’émotion et d’engagement réciproque. Ils construisent ensemble une intimité profonde, marquée par la confiance et la compréhension mutuelle."
+  },
+  "cancer_sagittaire": {
+    "score": 4,
+    "text": "Cáncer (Agua) et Sagitario (Fuego) ont des attentes opposées. Le Cáncer cherche à s’établir et à se protéger émotionnellement, tandis que le Sagitario veut explorer et bouger constamment. Leur relation est difficile car leurs priorités diffèrent : le Cáncer peut se sentir délaissé, et le Sagitario étouffé. Ils peuvent apprendre l’un de l’autre (le Sagitario à nourrir le foyer, le Cáncer à voir plus grand), mais la compatibilité de base reste faible."
+  },
+  "cancer_capricorne": {
+    "score": 9,
+    "text": "Cáncer (Agua) et Capricornio (Tierra) sont opposés, créant un lien très puissant. Le Cáncer offert emotion trouve chez le Capricornio une sécurité matérielle, et le Capricornio ambitieux trouve dans le Cáncer un foyer protecteur. Ils partagent des valeurs de long terme (famille, stabilité) et sont tous deux très loyaux. En communiquant, ils équilibrent émotion et organisation, ce qui fait de leur relation une alliance très solide."
+  },
+  "cancer_verseau": {
+    "score": 2,
+    "text": "Cáncer (Agua) et Acuario (Aire) ont des façons de voir le monde très différentes. Le Acuario innovant et distant peut sembler froid au Cáncer émotif. Leur relation manque d’éléments communs : le Cáncer veut s’attacher, le Acuario privilégie la liberté. Sans efforts colossaux pour se comprendre, ils risquent de manquer de connexion émotionnelle."
+  },
+  "cancer_poissons": {
+    "score": 8,
+    "text": "Cáncer (Agua) et Piscis (Agua) s’entendent très bien. Les deux signes d’Eau partagent une grande empathie et douceur. Le Cáncer sécurisant et maternel apporte au Piscis soutien et réconfort, et le Piscis, imaginatif et altruiste, apporte au Cáncer de la romance et du dévouement. Leur relation est très tendre : ils nourrissent mutuellement leurs rêves et leur fidélité, formant un couple complice et protecteur."
+  },
+  "lion_belier": {
+    "score": 9,
+    "text": "Leo (Fuego) et Aries (Fuego) ont une complicité naturelle. Leur relation est passionnée et courageuse, chacun encourageant l’autre à briller. Ils partagent l’enthousiasme et la force de leadership. Ensemble, ils vivent des aventures exaltantes. Ils doivent gérer leur ego commun (chacun veut le premier rôle), mais globalement leur union est très vivante et intense."
+  },
+  "lion_taureau": {
+    "score": 4,
+    "text": "Leo (Fuego) et Tauro (Tierra) diffèrent sur beaucoup de points. Le Leo flamboyant veut de l’admiration et de l’action, tandis que le Tauro s’ancre dans la tranquillité et le confort. Une forte attraction initiale peut surgir (le Tauro admiratif, le Leo séduit par la stabilité), mais vite leurs divergences apparaissent. Le Tauro peut juger le Leo trop extravagant, et le Leo trouver le Tauro trop conservateur. Cette relation nécessite des compromis importants."
+  },
+  "lion_gemeaux": {
+    "score": 8,
+    "text": "Leo (Fuego) et Géminis (Aire) partagent l’amour de la vie sociale et de la nouveauté. Le Leo sociable et généreux apprécie le charme du Géminis, et le Géminis est séduit par la confiance du Leo. Leur relation est amusante et stimulante : ils échangent beaucoup et partagent de nombreux centres d’intérêt. Ils forment un couple vivace et créatif, à condition de respecter le besoin de l’autre de parfois prendre la parole ou de se faire valoir."
+  },
+  "lion_cancer": {
+    "score": 3,
+    "text": "Leo (Fuego) et Cáncer (Agua) ont du mal à trouver un terrain d’entente. Le Cáncer timide et protecteur peut être écrasé par le besoin constant du Leo d’être admiré. Le Leo extraverti peut stresser le Cáncer. Pour que leur relation fonctionne, le Leo doit faire preuve de plus de douceur envers le Cáncer, et le Cáncer se sentir libre d’exprimer ses émotions sans retenue."
+  },
+  "lion_vierge": {
+    "score": 4,
+    "text": "Leo (Fuego) et Virgo (Tierra) peuvent éprouver des difficultés. La Virgo discrète et perfectionniste peut juger le Leo trop dramatique, et le Leo trouver la Virgo trop critique. Leurs façons opposées de fonctionner (exubérance vs modestie) nécessitent de grands ajustements : la Virgo doit accepter la nature expansive du Leo, et le Leo la rigueur de la Virgo, sinon leur compatibilité reste moyenne."
+  },
+  "lion_balance": {
+    "score": 8,
+    "text": "Leo (Fuego) et Libra (Aire) forment un couple souvent harmonieux. La Libra équilibrée et sociable apprécie la générosité et le charisme du Leo. Le Leo, de son côté, admire la gentillesse et l’élégance de la Libra. Ils partagent l’amour des belles choses et de la vie à deux. Leur relation est équilibrée : le Leo apporte chaleur et passion, la Libra apporte écoute et diplomatie, pour une belle entente amoureuse."
+  },
+  "lion_scorpion": {
+    "score": 4,
+    "text": "Leo (Fuego) et Escorpio (Agua) sont très opposés. Le Leo, franc et dominant, peut heurter la jalousie et la profondeur du Escorpio. Le Escorpio intense peut trouver le Leo trop superficiel. Leur relation nécessite de gros compromis : le Leo doit montrer plus de compréhension, et le Escorpio, plus de légèreté, pour que l’amour résiste."
+  },
+  "lion_sagittaire": {
+    "score": 9,
+    "text": "Leo (Fuego) et Sagitario (Fuego) ont une grande affinité. Tous deux passionnés et enthousiastes, ils partagent la joie de vivre et l’amour de l’aventure. Ils se motivent mutuellement : le Leo introduit du panache dans la vie du Sagitario, et le Sagitario apporte optimisme et nouvelles expériences au Leo. Leur complicité est forte et leur entente très bonne, car ils valorisent autant l’amitié que la romance dans leur couple."
+  },
+  "lion_capricorne": {
+    "score": 3,
+    "text": "Leo (Fuego) et Capricornio (Tierra) ont peu de points communs. Le Capricornio ambitieux et réservé peut irriter le Leo extraverti et théâtral. Le Leo, qui veut des démonstrations d’amour, peut trouver le Capricornio trop distant. Leur relation demande beaucoup d’adaptations : ils doivent apprendre à respecter les besoins mutuels (reconnaissance pour le Leo, stabilité pour le Capricornio)."
+  },
+  "lion_verseau": {
+    "score": 8,
+    "text": "Leo (Fuego) et Acuario (Aire) sont signes opposés, ce qui crée souvent une forte attraction. Le Acuario indépendant admire la force et la générosité du Leo, et le Leo est intrigué par l’originalité du Acuario. Ensemble, ils peuvent mener de grands projets sociaux ou créatifs. Leur complémentarité est basée sur le respect mutuel de la liberté : le Acuario soutient le Leo sans être possessif, et le Leo encourage les idées indépendantes du Acuario."
+  },
+  "lion_poissons": {
+    "score": 4,
+    "text": "Leo (Fuego) et Piscis (Agua) ont des approches très différentes de l’amour. Le Leo flamboyant peut submerger le Piscis sensible. Le Piscis, quant à lui, peut sembler trop influençable ou distant au Leo. Pour que cette relation fonctionne, le Leo doit adopter plus de douceur, et le Piscis plus d’assurance. Sans ces ajustements, leur compatibilité reste limitée."
+  },
+  "vierge_belier": {
+    "score": 4,
+    "text": "Virgo (Tierra) et Aries (Fuego) ne partagent pas le même élément. La Virgo méthodique et prudente trouve le Aries trop brusque, et le Aries juge la Virgo trop critique. Ils ont des façons opposées de prendre des décisions, ce qui demande du tolérance. Leur relation peut fonctionner si chacun apprend à profiter des qualités de l’autre : la Virgo tempère l’impulsivité du Aries, et le Aries aide la Virgo à oser davantage."
+  },
+  "vierge_taureau": {
+    "score": 9,
+    "text": "Virgo (Tierra) et Tauro (Tierra) ont une compatibilité très élevée. Leur nature ancrée et réaliste les unit. Tous deux recherchent la sécurité et le confort. La Virgo appliquée apporte sa rigueur à la vie du Tauro, et celui-ci soutient la Virgo par sa fidélité et sa douceur. Ils partagent des valeurs communes sur le plan pratique, ce qui les rend très harmonieux."
+  },
+  "vierge_gemeaux": {
+    "score": 4,
+    "text": "Virgo (Tierra) et Géminis (Aire) sont opposés sur l’axe mutable. La Virgo cherche l’ordre et la précision, tandis que le Géminis aime le changement et la diversité. Leur relation manque d’éléments en commun : le Géminis peut trouver la Virgo trop pointilleuse, et la Virgo le Géminis trop dispersé. Ils doivent travailler dur pour trouver un terrain d’entente ou risquer de rester distants."
+  },
+  "vierge_cancer": {
+    "score": 8,
+    "text": "Virgo (Tierra) et Cáncer (Agua) forment un duo très complémentaire. Le Cáncer empathique trouve en la Virgo une oreille attentive et fiable, et la Virgo se sent soutenue par le côté maternel du Cáncer. Ils partagent un besoin de prendre soin des autres : la Virgo organise les détails pratiques, le Cáncer apporte la chaleur affective. Ensemble, ils construisent un foyer stable et aiment planifier la vie à deux, ce qui fait de leur relation une entente solide."
+  },
+  "vierge_lion": {
+    "score": 4,
+    "text": "Virgo (Tierra) et Leo (Fuego) sont très différents. La Virgo discrète peut être déconcertée par le besoin du Leo d’exprimer ouvertement ses émotions, et le Leo peut juger la Virgo trop rationnelle. Leur relation demande des concessions : le Leo doit tempérer son exubérance pour ne pas effrayer la Virgo, et la Virgo doit réagir avec plus de spontanéité envers le Leo. Sans ajustements mutuels, leur compatibilité reste moyenne."
+  },
+  "vierge_vierge": {
+    "score": 8,
+    "text": "Dos Virgo ensemble se comprennent naturellement. Ils partagent un sens de l’organisation et un esprit critique (qu’ils essaient d’utiliser positivement). Leur couple est très structuré et fiable. Ils aiment planifier leur avenir commun et travaillent dur pour le construire. Seul risque : leur tendance mutuelle à l’analyse peut les pousser à se critiquer. Cependant, leur entraide et leur dévouement l’un envers l’autre rendent leur relation très stable."
+  },
+  "vierge_balance": {
+    "score": 4,
+    "text": "Virgo (Tierra) et Libra (Aire) n’ont pas la même façon de fonctionner. La Libra recherche l’harmonie et l’esthétique, tandis que la Virgo cherche la précision et l’efficacité. Leurs domaines d’intérêt peuvent peu se croiser. La Libra peut trouver la Virgo trop pointilleuse, la Virgo la Libra trop superficielle. Ils devront faire l’effort de se compléter : par exemple, la Virgo peut aider la Libra à concrétiser ses idéaux, et la Libra peut adoucir la rigueur de la Virgo."
+  },
+  "vierge_scorpion": {
+    "score": 9,
+    "text": "Virgo (Tierra) et Escorpio (Agua) s’accordent très bien. La Escorpio passionnée trouve en la Virgo une partenaire fiable, et la Virgo apprécie la profondeur du Escorpio. Leur relation est basée sur l’engagement : ni l’un ni l’autre n’entre en jeu par hasard. Le Escorpio apporte de l’intensité émotionnelle à la Virgo, et la Virgo apporte au Escorpio pragmatisme et méthode. Ensemble, ils forment un couple loyal et persévérant."
+  },
+  "vierge_sagittaire": {
+    "score": 4,
+    "text": "Virgo (Tierra) et Sagitario (Fuego) ont peu de points communs. Le Sagitario aventurier et optimiste peut frustrer la Virgo prudente et pragmatique, et vice versa. Leur relation est généralement difficile car le Sagitario veut prendre des risques, là où la Virgo préfère la sécurité. Pour fonctionner, ils doivent faire d’énormes compromis : le Sagitario peut apprendre à mesurer ses impulsions, et la Virgo à faire preuve de plus d’enthousiasme."
+  },
+  "vierge_capricorne": {
+    "score": 9,
+    "text": "Virgo (Tierra) et Capricornio (Tierra) ont une compatibilité très forte. Ils partagent l’ambition et le sens du devoir. La Virgo soutient le Capricornio dans la réalisation de ses projets en veillant aux détails, et le Capricornio valorise la Virgo pour sa fiabilité. Leur relation est sérieuse et pragmatique : ensemble, ils construisent patiemment leur avenir, ce qui assure une belle harmonie."
+  },
+  "vierge_verseau": {
+    "score": 2,
+    "text": "Virgo (Tierra) et Acuario (Aire) sont difficiles à accorder. Le Acuario original et indépendant peut heurter la nature structurée et traditionnelle de la Virgo. Ils ont peu de centres d’intérêt communs. Leurs éléments ne s’accordent pas, ce qui rend leur compatibilité très faible sans changement fondamental."
+  },
+  "vierge_poissons": {
+    "score": 8,
+    "text": "Virgo (Tierra) et Piscis (Agua) sont opposés, mais cette polarité crée une belle complémentarité. Le Piscis rêveur et sensible adoucit le quotidien de la Virgo, qui en retour offre au Piscis un soutien solide et concret. Ils partagent un grand respect mutuel. Le Piscis apporte de l’imagination aux plans de la Virgo, et la Virgo aide le Piscis à organiser ses rêves. Leur union peut être très harmonieuse si chacun valorise l’autre."
+  },
+  "balance_belier": {
+    "score": 8,
+    "text": "Libra (Aire) et Aries (Fuego) sont opposés, ce qui engendre une alchimie particulière. La Libra équilibrée tempère l’impétuosité du Aries, et le Aries réveille la Libra à l’action. Ensemble, ils équilibrent leurs différences : le Aries apporte passion et franchise, la Libra apporte diplomatie et romantisme. C’est une relation dynamique où chacun valorise les qualités de l’autre."
+  },
+  "balance_taureau": {
+    "score": 5,
+    "text": "Libra (Aire) et Tauro (Tierra) partagent la planète Vénus, mais diffèrent sur l’essentiel. La Libra sociable et esthétique aime la discussion, le Tauro aime la quiétude et les plaisirs concrets. Ils peuvent s’entendre sur leur goût commun pour le confort (vêtements, décor…), mais le Tauro peut trouver la Libra trop indécise, et la Libra le Tauro trop possessif. Leur compatibilité dépendra de leur capacité à concilier harmonie intellectuelle et stabilité matérielle."
+  },
+  "balance_gemeaux": {
+    "score": 9,
+    "text": "Libra (Aire) et Géminis (Aire) partagent le même élément. Tous deux sont tournés vers l’autre et adorent communiquer. La Libra apporte sa diplomatie et son sens de la justice au Géminis curieux, et le Géminis enrichit la Libra par sa vivacité d’esprit. Leur relation est légère, cultivée et très harmonieuse car ils valorisent de concert la conversation et l’harmonie sociale."
+  },
+  "balance_cancer": {
+    "score": 4,
+    "text": "Libra (Aire) et Cáncer (Agua) peinent souvent à trouver un équilibre. Le Cáncer très émotif peut trouver la Libra trop superficielle ou distante, tandis que la Libra peut juger le Cáncer trop possessif ou lunatique. Leurs attentes diffèrent : le Cáncer recherche un foyer chaleureux et profond, la Libra recherche l’harmonie et le partage intellectuel. Ils doivent travailler la compréhension mutuelle pour que la relation fonctionne."
+  },
+  "balance_lion": {
+    "score": 8,
+    "text": "Libra (Aire) et Leo (Fuego) peuvent très bien s’entendre. La Libra pacifique adoucit le Leo impulsif, tandis que le Leo royal apporte à la Libra passion et reconnaissance. Ils aiment tous deux être entourés et profiter de la vie. Leur relation est souvent belle et créative, la Libra étant admirative du charisme du Leo, et le Leo charmé par l’élégance de la Libra."
+  },
+  "balance_vierge": {
+    "score": 4,
+    "text": "Libra (Aire) et Virgo (Tierra) ont des façons de penser opposées. La Libra cherche la légèreté et la beauté, la Virgo la précision et l’efficacité. Leurs valeurs diffèrent : la Libra peut trouver la Virgo trop pointilleuse et réservée, et la Virgo la Libra trop indécise. Ils doivent respecter ces différences : la Libra apprend à la Virgo à ne pas se prendre trop au sérieux, et la Virgo apprend à la Libra à concrétiser ses idées."
+  },
+  "balance_scorpion": {
+    "score": 4,
+    "text": "Libra (Aire) et Escorpio (Agua) sont très différents émotionnellement. Le Escorpio intense et jaloux peut mettre la Libra mal à l’aise, et la Libra peut paraître superficielle au Escorpio passionné. Leur relation implique des compromis : la Libra doit accepter la profondeur du Escorpio, et le Escorpio faire preuve de plus de souplesse sociale pour que l’équilibre existe."
+  },
+  "balance_sagittaire": {
+    "score": 7,
+    "text": "Libra (Aire) et Sagitario (Fuego) ont généralement une bonne entente. La Libra harmonieuse apprécie l’optimisme du Sagitario, et le Sagitario est attiré par le charme et la diplomatie de la Libra. Tous deux aiment les voyages d’esprit : ils discutent volontiers ensemble de philosophies et de projets. Leur relation est basée sur une belle complicité intellectuelle et une approche positive de la vie, même s’ils doivent parfois s’assurer d’être sur la même longueur d’onde."
+  },
+  "balance_capricorne": {
+    "score": 3,
+    "text": "Libra (Aire) et Capricornio (Tierra) ont des centres d’intérêt très différents. Le Capricornio ambitieux et réaliste peut sembler trop austère à la Libra, qui préfère l’idéal et la beauté. Leur vision de la vie diverge : la Libra recherche l’équité dans l’immédiat, le Capricornio planifie sur le long terme. Leur compatibilité est limitée sans compromis majeurs."
+  },
+  "balance_verseau": {
+    "score": 9,
+    "text": "Libra (Aire) et Acuario (Aire) partagent une forte affinité élémentaire. Les deux signes sont libres d’esprit et ouverts sur le monde. Ils aiment discuter d’idées nouvelles et agir pour des causes qui leur tiennent à cœur. Leur relation est très fluide et intellectuelle : ils se stimulent mutuellement et maintiennent une belle entente grâce à leur vision progressiste et leur sens de la justice partagée."
+  },
+  "balance_poissons": {
+    "score": 4,
+    "text": "Libra (Aire) et Piscis (Agua) ont des attentes affectives différentes. La Libra, équilibrée, peut avoir du mal à comprendre la nature très émotionnelle du Piscis. Le Piscis, rêveur, peut juger la Libra trop rationnelle ou hésitante. Leur relation fonctionne si chacun met de l’eau dans son vin : la Libra doit faire preuve de plus d’empathie, et le Piscis apprendre à communiquer ses besoins plus explicitement."
+  },
+  "scorpion_belier": {
+    "score": 6,
+    "text": "Escorpio (Agua) et Aries (Fuego) forment une relation très intense. Le Escorpio est passionné et profondément attiré par la force du Aries, et le Aries, courageux, est fasciné par le Escorpio mystérieux. Leur vie de couple est une affaire de fort tempérament : ils vivront des moments de passion débordante. Cependant, cette intensité mutuelle peut aussi dégénérer en rivalités (chacun veut dominer). Ils peuvent vivre une grande histoire d’amour si chacun apprend à tempérer ses pulsions, sinon leurs différences (confrontation vs confiance) compliquent leur compatibilité."
+  },
+  "scorpion_taureau": {
+    "score": 8,
+    "text": "Escorpio (Agua) et Tauro (Tierra) sont opposés dans le zodiaque, créant une très forte attraction. Le Escorpio intense est attiré par la stabilité du Tauro, et le Tauro est séduit par la profondeur du Escorpio. Leur couple est équilibré : le Tauro sécurise le Escorpio, et le Escorpio rend le Tauro plus expressif. Ils partagent des valeurs de loyauté et d’engagement. Leur intimité est passionnée (le Escorpio apporte de l’intensité, le Tauro de la sensualité), et ensemble ils peuvent construire une relation solide si chacun respecte l’autre."
+  },
+  "scorpion_gemeaux": {
+    "score": 4,
+    "text": "Escorpio (Agua) et Géminis (Aire) ont peu de points communs. Le Escorpio, sombre et jaloux, peut déranger le Géminis en quête de légèreté. Le Géminis, bavard et instable, peut sembler trop superficiel pour le Escorpio. Leur compatibilité reste faible sans beaucoup de compréhension mutuelle. Ils devront faire l’effort de se découvrir l’un l’autre : le Géminis doit accepter la complexité du Escorpio, et le Escorpio apprendre à relativiser."
+  },
+  "scorpion_cancer": {
+    "score": 9,
+    "text": "Escorpio (Agua) et Cáncer (Agua) partagent une affinité naturelle très forte. Les deux signes d’Eau se comprennent profondément et communiquent sans mots. Le Escorpio est attiré par la fidélité et la douceur du Cáncer, et le Cáncer est rassuré par la force protectrice du Escorpio. Leur relation est très intime et émotionnelle : ils se soutiennent mutuellement dans les épreuves. Ils construisent ensemble une connexion durable fondée sur la confiance et le dévouement."
+  },
+  "scorpion_lion": {
+    "score": 4,
+    "text": "Escorpio (Agua) et Leo (Fuego) sont très différents. Le Leo flamboyant et extraverti peut dominer le Escorpio sensible. Le Escorpio, en retour, peut trouver le Leo trop superficiel et égoïste. Leur relation exige de la tolérance : le Leo doit laisser plus d’espace émotionnel au Escorpio, et le Escorpio doit faire preuve de plus de chaleur envers le Leo. Sans ces efforts, la compatibilité reste faible."
+  },
+  "scorpion_vierge": {
+    "score": 9,
+    "text": "Escorpio (Agua) et Virgo (Tierra) s’entendent très bien. La Virgo, discrète et loyale, offre au Escorpio un soutien fiable, et le Escorpio apporte passion et intensité dans la vie de la Virgo. Leur union est sérieuse et profonde : tous deux valorisent la fidélité et l’engagement. Ils travaillent main dans la main pour leurs objectifs communs, ce qui rend leur relation durable et solide."
+  },
+  "scorpion_balance": {
+    "score": 4,
+    "text": "Escorpio (Agua) et Libra (Aire) sont difficilement compatibles. La Libra pacifique et superficielle peut heurter la profondeur émotionnelle du Escorpio. Le Escorpio, quant à lui, peut trouver la Libra trop superficielle et hésitante. Leur relation impose beaucoup de concessions : la Libra doit accepter d’aller au-delà des apparences, et le Escorpio apprendre à faire confiance plus rapidement."
+  },
+  "scorpion_scorpion": {
+    "score": 8,
+    "text": "Dos Escorpio ensemble vivent une relation extrêmement intense. Ils se comprennent naturellement et partagent les mêmes passions et mystères. Leur complicité est grande car ils n’hésitent pas à plonger profondément dans leurs émotions respectives. Cependant, leur jalousie et leur entêtement mutuels peuvent créer des conflits intenses. S’ils parviennent à communiquer ouvertement et à faire preuve de tolérance, leur union peut être très forte, mais ils doivent veiller à ne pas se laisser submerger par la méfiance ou la compétition."
+  },
+  "scorpion_sagittaire": {
+    "score": 4,
+    "text": "Escorpio (Agua) et Sagitario (Fuego) fonctionnent différemment. Le Escorpio cherche l’intensité émotionnelle et l’engagement, alors que le Sagitario veut la liberté et l’aventure. Sans concessions, leur relation est difficile : le Sagitario peut juger le Escorpio trop possessif, et le Escorpio trouver le Sagitario trop insouciant. Ils devront beaucoup communiquer pour trouver un compromis entre la profondeur du Escorpio et la légèreté du Sagitario."
+  },
+  "scorpion_capricorne": {
+    "score": 8,
+    "text": "Escorpio (Agua) et Capricornio (Tierra) peuvent former un couple solide. Le Escorpio passionné et le Capricornio ambitieux partagent le sens de l’effort et de la discipline. Le Capricornio apporte structure et stabilité au Escorpio, et le Escorpio fournit au Capricornio soutien émotionnel et intensité. Tous deux apprécient la loyauté et la planification sérieuse de l’avenir. Leur relation est sérieuse et durable, avec une forte complicité lorsque l’union est équilibrée."
+  },
+  "scorpion_verseau": {
+    "score": 3,
+    "text": "Escorpio (Agua) et Acuario (Aire) ont des visions très opposées. Le Acuario progressiste et distant peut sembler incompréhensible au Escorpio intense et émotif. Leur relation manque de terrain commun : le Escorpio veut l’authenticité passionnée, le Acuario privilégie la rationalité. Ils doivent beaucoup apprendre à écouter et à accepter le monde de l’autre, sinon leur compatibilité reste faible."
+  },
+  "scorpion_poissons": {
+    "score": 8,
+    "text": "Escorpio (Agua) et Piscis (Agua) partagent une belle complicité émotionnelle. Les deux signes d’Eau comprennent intuitivement les émotions de l’autre. Le Piscis apaisant et empathique donne au Escorpio un soutien moral, et le Escorpio offre au Piscis sécurité et passion. Leur relation est très intime : ils peuvent créer une connexion fusionnelle, alliant la profondeur du Escorpio à la douceur du Piscis."
+  },
+  "sagittaire_belier": {
+    "score": 9,
+    "text": "Sagitario (Fuego) et Aries (Fuego) sont très compatibilités car ils partagent la même passion et énergie. Le Sagitario optimiste et le Aries impulsif se stimulent mutuellement. Le Sagitario apporte de la sagesse et de la réflexion, le Aries, de la combativité. Leur couple est tourné vers l’aventure : ensemble, ils partent à la découverte du monde et se poussent à évoluer."
+  },
+  "sagittaire_taureau": {
+    "score": 3,
+    "text": "Sagitario (Fuego) et Tauro (Tierra) ont peu de points communs. Le Sagitario aime la liberté et l’imprévu, le Tauro préfère la routine et la sécurité. Leurs priorités sont divergentes : le Tauro peut se sentir ignoré par le Sagitario volage, et le Sagitario étouffé par le Tauro possessif. Leur relation nécessite de nombreux efforts pour combiner l’aventure et la stabilité."
+  },
+  "sagittaire_gemeaux": {
+    "score": 9,
+    "text": "Sagitario (Fuego) et Géminis (Aire) forment souvent un duo excellent. Ils partagent la curiosité intellectuelle et le goût de l’aventure. Le Sagitario expansif et le Géminis communicatif stimulent l’esprit l’un de l’autre. Leur relation est basée sur la liberté et la découverte : ils aiment voyager ensemble, explorer de nouvelles idées et grandir mutuellement."
+  },
+  "sagittaire_cancer": {
+    "score": 4,
+    "text": "Sagitario (Fuego) et Cáncer (Agua) ont des besoins très différents. Le Cáncer cherche la sécurité émotionnelle, tandis que le Sagitario veut l’aventure. Leur relation est souvent conflictuelle : le Cáncer peut juger le Sagitario trop insouciant, le Sagitario peut trouver le Cáncer trop casanier. Ils devront beaucoup discuter pour concilier leurs différences."
+  },
+  "sagittaire_lion": {
+    "score": 9,
+    "text": "Sagitario (Fuego) et Leo (Fuego) partagent un enthousiasme naturel. Le Leo social et le Sagitario optimiste ont la même soif de vivre pleinement. Ils aiment tous deux prendre des risques calculés et s’entraident pour atteindre leurs buts. Leur couple est dynamique et très complice : peu de conflits car ils se stimulent mutuellement et apprécient l’honnêteté de l’autre."
+  },
+  "sagittaire_vierge": {
+    "score": 4,
+    "text": "Sagitario (Fuego) et Virgo (Tierra) diffèrent sur beaucoup de plans. Le Sagitario aventurier et fougueux peut énerver la Virgo rationnelle et prudente, et inversement. Leurs approches de la vie sont opposées : la Virgo planifie chaque détail, le Sagitario agit spontanément. Ils doivent faire de nombreux compromis pour s’accorder."
+  },
+  "sagittaire_capricorne": {
+    "score": 3,
+    "text": "Sagitario (Fuego) et Capricornio (Tierra) peinent à trouver un terrain d’entente. Le Sagitario insouciant et impatient peut agacer le Capricornio travailleur et organisé, et inversement. Le Sagitario veut vivre l’instant, le Capricornio construit sur le long terme. Leur relation nécessite de la patience : chacun doit accepter le rythme de l’autre pour que cela dure."
+  },
+  "sagittaire_balance": {
+    "score": 7,
+    "text": "Sagitario (Fuego) et Libra (Aire) partagent un esprit philosophe. La Libra recherchant l’harmonie respecte l’optimisme du Sagitario, et ce dernier admire la diplomatie de la Libra. Ensemble, ils aiment discuter de grands projets et d’idées nouvelles. Leur relation est généralement positive et équilibrée : ils se stimulent mutuellement intellectuellement, bien que chacun doive parfois faire des concessions pour la sincérité et la franchise du Sagitario."
+  },
+  "sagittaire_scorpion": {
+    "score": 4,
+    "text": "Sagitario (Fuego) et Escorpio (Agua) ont des besoins divergents. Le Sagitario veut explorer à l’extérieur et s’amuser, le Escorpio veut plonger dans l’intimité et la transformation interne. Leurs priorités font qu’ils peinent à se comprendre. Ils devront apprendre à respecter leurs différences émotionnelles : le Sagitario à faire preuve de plus de profondeur, et le Escorpio à se détendre dans l’optimisme du Sagitario."
+  },
+  "sagittaire_verseau": {
+    "score": 8,
+    "text": "Sagitario (Fuego) et Acuario (Aire) forment un couple très complice. Tous deux sont tournés vers l’avenir et partagent le besoin de liberté. Ils aiment apprendre et se dépasser ensemble, notamment en voyageant ou en participant à des projets culturels. Leur connexion est intellectuelle et optimiste : l’esprit du Sagitario complète les idées visionnaires du Acuario. Ensemble, ils construisent une relation basée sur l’amitié et la confiance."
+  },
+  "sagittaire_poissons": {
+    "score": 3,
+    "text": "Sagitario (Fuego) et Piscis (Agua) ont peu de compatibilité naturelle. Le Sagitario franc et extraverti peut blesser le Piscis hypersensible, et le Piscis trop rêveur peut sembler passif au Sagitario. Leur relation demande de gros efforts de compromis, car leurs styles opposés (exploration vs introspection) tendent à créer des malentendus."
+  },
+  "capricorne_belier": {
+    "score": 5,
+    "text": "Capricornio (Tierra) et Aries (Fuego) peuvent former une équipe ambitieuse mais antagonique. Le Capricornio patient fait office de « mur de glace » face à l’ardeur du Aries. Le Aries insuffle de l’élan au couple, le Capricornio lui apporte structure. Ensemble, ils partagent l’ambition (travail, réussite) et peuvent construire quelque chose de solide. Ils doivent apprendre l’un de l’autre : le Aries à planifier et le Capricornio à saisir l’instant. Leur relation est stable si ces compromis sont trouvés."
+  },
+  "capricorne_taureau": {
+    "score": 9,
+    "text": "Capricornio (Tierra) et Tauro (Tierra) ont une compatibilité très élevée. Ils partagent les mêmes valeurs pragmatiques : travail acharné, stabilité, loyauté. Le Tauro soutient l’ambition du Capricornio par sa constance, et le Capricornio rassure le Tauro par sa fiabilité. Ensemble, ils organisent leur vie de manière pragmatique (finances, foyer) et se soutiennent mutuellement. Leur relation est solide et construite pour durer."
+  },
+  "capricorne_gemeaux": {
+    "score": 4,
+    "text": "Capricornio (Tierra) et Géminis (Aire) ont peu de choses en commun. Le Capricornio ambitieux et discipliné trouve le Géminis trop superficiel, et le Géminis trouve le Capricornio trop sérieux. Leur relation manque de communication naturelle. Ils doivent faire preuve d’efforts pour concilier le sérieux du Capricornio avec la légèreté du Géminis afin de trouver un équilibre."
+  },
+  "capricorne_cancer": {
+    "score": 9,
+    "text": "Capricornio (Tierra) et Cáncer (Agua) forment un couple très complémentaire. Le Cáncer chaleureux et protecteur rassure le Capricornio et construit un foyer aimant. Le Capricornio, ambitieux et stable, offre au Cáncer la sécurité et la structure dont il a besoin. Ensemble, ils projettent leur énergie dans les mêmes objectifs familiaux et matériels. Leur relation est équilibrée, basée sur la confiance mutuelle et la loyauté."
+  },
+  "capricorne_lion": {
+    "score": 3,
+    "text": "Capricornio (Tierra) et Leo (Fuego) ont des valeurs opposées. Le Capricornio ascendant carrière peut juger le Leo trop égoïste ou dépensier. Le Leo, lui, peut trouver le Capricornio trop rigide. Leur relation nécessite une grande adaptation pour fonctionner : chacun doit comprendre et respecter les priorités de l’autre."
+  },
+  "capricorne_vierge": {
+    "score": 9,
+    "text": "Capricornio (Tierra) et Virgo (Tierra) partagent la même énergie pragmatique. Ce duo vise l’efficacité : la Virgo minutieuse soutient les projets du Capricornio avec précision, et le Capricornio apprécie la fiabilité de la Virgo. Tous deux ont le sens du devoir et de l’organisation. Leur relation est basée sur le respect mutuel du travail bien fait, ce qui les rend très compatibles."
+  },
+  "capricorne_balance": {
+    "score": 3,
+    "text": "Capricornio (Tierra) et Libra (Aire) ont du mal à trouver un terrain d’entente. Le Capricornio travailleur peut sembler ennuyeux à la Libra, qui veut plus de plaisir et d’harmonie. La Libra peut être jugée trop désinvolte par le Capricornio. Leur relation risque de manquer de complicité sans concessions majeures."
+  },
+  "capricorne_scorpion": {
+    "score": 8,
+    "text": "Capricornio (Tierra) et Escorpio (Agua) peuvent s’entendre très bien. Le Capricornio ambitieux apporte au Escorpio structure et sens pratique, et le Escorpio apporte au Capricornio intensité émotionnelle et loyauté. Tous deux sont déterminés et sérieux dans leurs engagements. Ensemble, ils forment un couple puissant : le Capricornio stabilise le Escorpio, le Escorpio motive le Capricornio. Leur relation est très forte sur le plan affectif et concret."
+  },
+  "capricorne_sagittaire": {
+    "score": 3,
+    "text": "Capricornio (Tierra) et Sagitario (Fuego) ont peu de choses en commun. Le Capricornio réaliste et prudent peut frustrer le Sagitario optimiste et insouciant, et vice versa. Le Sagitario vit dans l’instant, le Capricornio planifie le futur. Leurs objectifs de vie divergent trop pour une grande entente sans compromis très importants."
+  },
+  "capricorne_capricorne": {
+    "score": 8,
+    "text": "Dos Capricornio ensemble se comprennent parfaitement. Ils ont les mêmes ambitions et méthodes : travail, organisation et discipline sont au cœur de leur couple. Ils se soutiennent mutuellement pour atteindre leurs objectifs à long terme. Leur relation est très solide, même si elle peut manquer de spontanéité. Ils doivent veiller à s’accorder des moments de détente pour que leur vie de couple reste équilibrée."
+  },
+  "capricorne_verseau": {
+    "score": 2,
+    "text": "Capricornio (Tierra) et Acuario (Aire) ont une compatibilité très faible. Le Acuario rebelle et tourné vers le collectif peut sembler trop distancié au Capricornio ambitieux et traditionnel. Ils n’ont pas les mêmes priorités : le Capricornio vise la sécurité et le statut, le Acuario privilégie l’innovation et la liberté. Cette différence rend leur relation difficile sans concessions énormes."
+  },
+  "capricorne_poissons": {
+    "score": 8,
+    "text": "Capricornio (Tierra) et Piscis (Agua) se complètent bien. Le Capricornio pragmatique stabilise les rêves du Piscis, tandis que le Piscis apporte au Capricornio de l’empathie et de l’imagination. Ils partagent un sens profond des responsabilités (famille, devoir). Leur relation combine réalisme (Capricornio) et douceur (Piscis), formant un lien protecteur et équilibré."
+  },
+  "verseau_belier": {
+    "score": 8,
+    "text": "Acuario (Aire) et Aries (Fuego) forment un couple très libre et innovant. Ils valorisent tous deux l’indépendance et ont le goût du défi. Le Aries apporte au Acuario de l’enthousiasme, et le Acuario au Aries de l’originalité. Leur entente se base sur une grande confiance réciproque : chacun soutient les idées folles de l’autre. Ils s’amusent ensemble, élargissent leur vision du monde, et bénéficient du respect mutuel de leurs différences."
+  },
+  "verseau_taureau": {
+    "score": 3,
+    "text": "Acuario (Aire) et Tauro (Tierra) ont des attentes très différentes. Le Acuario aime l’innovation sociale et l’excentricité, tandis que le Tauro cherche la tradition et la stabilité. Le Acuario peut trouver le Tauro trop conservateur, et le Tauro le Acuario trop imprévisible. Leur relation exige de gros compromis pour fonctionner."
+  },
+  "verseau_gemeaux": {
+    "score": 9,
+    "text": "Acuario (Aire) et Géminis (Aire) partagent le même élément, ce qui renforce leur compatibilité. Les deux signes sont communiquant et originaux. Ils ont un grand appétit pour les échanges intellectuels : discussion, idées visionnaires et projets d’avant-garde. Leur relation est basée sur l’amitié et la stimulation mentale. Ils se comprennent parfaitement et apprécient la liberté de l’autre."
+  },
+  "verseau_cancer": {
+    "score": 2,
+    "text": "Acuario (Aire) et Cáncer (Agua) ont du mal à s’accorder. Le Acuario indépendant et futuriste peut sembler froid au Cáncer sensible et orienté foyer. Le Cáncer cherche la sécurité affective que le Acuario, plus distant, a du mal à fournir constamment. Leur compatibilité est faible sans grand effort de compromis."
+  },
+  "verseau_lion": {
+    "score": 8,
+    "text": "Acuario (Aire) et Leo (Fuego) sont opposés, créant une forte attraction. Le Leo sociable aime l’originalité du Acuario, et le Acuario admire la noblesse du Leo. Ensemble, ils peuvent mener des projets créatifs et sociaux ambitieux. Leur relation est souvent excitante : le Acuario apporte des idées nouvelles au Leo, et le Leo donne de la chaleur et de l’assurance au Acuario."
+  },
+  "verseau_vierge": {
+    "score": 2,
+    "text": "Acuario (Aire) et Virgo (Tierra) sont très peu compatibles. Le Acuario idéalisant peut trouver la Virgo trop terre-à-terre, et la Virgo le Acuario trop irréaliste. Ils n’ont pas de vision commune évidente. Leur relation exige de gros ajustements pour parvenir à se comprendre."
+  },
+  "verseau_balance": {
+    "score": 9,
+    "text": "Acuario (Aire) et Libra (Aire) partagent une grande affinité élémentaire. Tous deux sont tournés vers l’abstraction, l’amitié et les causes humanistes. Ils sont visionnaires et aiment discuter de concepts philosophiques. Leur relation est très équilibrée sur le plan intellectuel : ils se comprennent vite et stimulent mutuellement leurs esprits."
+  },
+  "verseau_scorpion": {
+    "score": 3,
+    "text": "Acuario (Aire) et Escorpio (Agua) ont des natures très opposées. Le Acuario indépendant et rationnel peut paraître indifférent au Escorpio passionné et possessif. Ils doivent faire l’effort de se découvrir l’un l’autre : le Acuario à écouter les émotions du Escorpio, le Escorpio à accepter la distance du Acuario. Sans cet effort, leur compatibilité reste faible."
+  },
+  "verseau_sagittaire": {
+    "score": 8,
+    "text": "Acuario (Aire) et Sagitario (Fuego) s’entendent très bien, car tous deux aiment la liberté et l’innovation. Ils partagent l’optimisme et l’ouverture sur le monde. Leur relation est basée sur l’amitié : ils s’encouragent mutuellement à vivre de nouvelles expériences et à défendre leurs idéaux. Ensemble, ils peuvent réaliser de nombreux projets, chacun apportant son originalité."
+  },
+  "verseau_capricorne": {
+    "score": 2,
+    "text": "Acuario (Aire) et Capricornio (Tierra) sont presque incompatibles. Le Capricornio ambitieux et traditionnel ne comprend pas toujours le Acuario excentrique et tourné vers l’avenir. Le Acuario, quant à lui, peut trouver le Capricornio trop strict. Leur relation nécessite un grand compromis qui est difficile à réaliser."
+  },
+  "verseau_poissons": {
+    "score": 2,
+    "text": "Acuario (Aire) et Piscis (Agua) fonctionnent différemment. Le Piscis rêveur peut trouver le Acuario trop factuel, et le Acuario peut percevoir le Piscis comme trop émotionnel. Leur entente demande des efforts majeurs : le Acuario doit écouter l’imagination du Piscis, et le Piscis faire preuve de plus de rationalité pour se comprendre."
+  },
+  "poissons_belier": {
+    "score": 5,
+    "text": "Piscis (Agua) et Aries (Fuego) créent une combinaison surprenante. Le Aries audacieux et le Piscis sensible peuvent vivre une passion profonde. Le Piscis amène le Aries à explorer sa dimension émotionnelle, et le Aries encourage le Piscis à passer à l’action. Leur relation est très intense au niveau intime. Toutefois, leurs différences (le Aries direct, le Piscis rêveur) exigent compréhension et équilibre : le Piscis doit exprimer ses besoins, et le Aries apprendre à écouter."
+  },
+  "poissons_taureau": {
+    "score": 8,
+    "text": "Piscis (Agua) et Tauro (Tierra) se complètent bien. Le Piscis empathique et imaginaire trouve en le Tauro stabilité et confort. Le Tauro, ancré, est touché par la douceur et l’altruisme du Piscis. Ils partagent un amour du foyer et du confort sensoriel. Leur relation est tendre et rassurante : le Tauro donne de la réalité aux rêves du Piscis, et le Piscis donne de la poésie à la vie du Tauro."
+  },
+  "poissons_gemeaux": {
+    "score": 4,
+    "text": "Piscis (Agua) et Géminis (Aire) n’ont pas le même rythme. Le Géminis communicatif peut manquer de profondeur aux yeux du Piscis rêveur. Inversement, le Piscis peut sembler trop sensible au Géminis pragmatique. Leur relation nécessite des efforts d’adaptation : le Géminis doit écouter avec plus de sensibilité, et le Piscis accepter un peu de légèreté."
+  },
+  "poissons_cancer": {
+    "score": 9,
+    "text": "Piscis (Agua) et Cáncer (Agua) forment une union très douce et empathique. Ces deux signes d’Eau ont la même sensibilité. Le Piscis rêveur trouve auprès du Cáncer un partenaire protecteur, et le Cáncer reçoit du Piscis la compréhension émotionnelle qu’il désire. Leur relation est très fusionnelle : ils partagent un même rêve d’idéal et se soutiennent mutuellement dans l’affection."
+  },
+  "poissons_lion": {
+    "score": 4,
+    "text": "Piscis (Agua) et Leo (Fuego) ont des approches très divergentes. Le Leo flamboyant peut écraser le Piscis introverti. Le Piscis, trop sensible, peut se sentir blessé par la franchise du Leo. Pour que leur relation fonctionne, le Leo doit faire preuve de beaucoup de douceur et de patience, et le Piscis apprendre à s’affirmer."
+  },
+  "poissons_vierge": {
+    "score": 8,
+    "text": "Piscis (Agua) et Virgo (Tierra) sont opposés, mais cela crée une belle complémentarité. La Virgo ancrée organise la vie du Piscis, qui apporte à la Virgo de l’inspiration et de la tendresse. Ils s’équilibrent : le Piscis aide la Virgo à devenir plus compatissante, et la Virgo aide le Piscis à concrétiser ses rêves. Leur relation est empreinte de solidarité et de dévouement, chacun apportant ce qui manque à l’autre."
+  },
+  "poissons_balance": {
+    "score": 4,
+    "text": "Piscis (Agua) et Libra (Aire) ont des attentes différentes. Le Piscis romantique et émotif peut se sentir incompris par la Libra cérébrale. La Libra, pragmatique, peut trouver le Piscis trop indécis. Leur relation demande des concessions : ils doivent apprendre à harmoniser l’imaginaire du Piscis avec la raison de la Libra."
+  },
+  "poissons_scorpion": {
+    "score": 8,
+    "text": "Piscis (Agua) et Escorpio (Agua) se complètent très bien. Ils partagent une profonde compréhension émotionnelle. Le Escorpio intense protège le rêve du Piscis, et le Piscis apaise la force du Escorpio. Leur complicité est grande : ils valorisent tous deux la loyauté et l’abandon mutuel. Leur relation est riche en passion et en tendresse, marquée par le dévouement de chacun."
+  },
+  "poissons_sagittaire": {
+    "score": 3,
+    "text": "Piscis (Agua) et Sagitario (Fuego) sont très différents. Le Sagitario enthousiaste peut manquer de sensibilité aux yeux du Piscis, et le Piscis peut sembler trop mou au Sagitario. Leur relation demande des efforts de compréhension : le Sagitario doit écouter les émotions du Piscis, et le Piscis apprendre à suivre l’élan du Sagitario."
+  },
+  "poissons_capricorne": {
+    "score": 8,
+    "text": "Piscis (Agua) et Capricornio (Tierra) s’accordent bien. Le Capricornio structuré fournit au Piscis la base solide qu’il réclame, et le Piscis apporte au Capricornio de la compassion et de la créativité. Ils forment un couple équilibré : le Capricornio stabilise les idéaux du Piscis, qui adoucit l’austérité du Capricornio. Ensemble, ils peuvent réaliser de belles choses en combinant rêve et réalisme."
+  },
+  "poissons_verseau": {
+    "score": 2,
+    "text": "Piscis (Agua) et Acuario (Aire) peinent à se comprendre. Le Acuario indépendant et rationnel peut sembler insensible au Piscis, et le Piscis trop intuitif pour le Acuario. Leur relation manque d’éléments communs : le Piscis rêve d’un lien émotionnel profond, le Acuario valorise l’amitié et l’abstraction. Peu de compatibilité naturelle sans grands compromis."
+  },
+  "cancer_cancer": {
+    "score": 8,
+    "text": "Dos Cáncer ensemble forment un cocon émotionnel très fort. Ils partagent le même besoin de sécurité affective, de tendresse et de foyer. Leur sensibilité commune les rend très empathiques l'un envers l'autre : ils devinent les besoins du partenaire sans qu'il ait besoin de les exprimer. Leur relation est douce et protectrice. Cependant, leur émotivité partagée peut les rendre vulnérables aux sautes d'humeur simultanées. S'ils apprennent à ne pas se replier ensemble dans leurs coquilles, leur union est profondément aimante et durable."
+  },
+  "lion_lion": {
+    "score": 7,
+    "text": "Dos Leo ensemble créent un couple flamboyant et théâtral. Ils partagent la même passion, la même fierté et le même besoin de reconnaissance. Leur relation est intense et spectaculaire : ils s'admirent mutuellement et vivent l'amour avec panache. Cependant, leur ego puissant peut mener à des luttes de pouvoir — chacun veut être le roi ou la reine du couple. S'ils apprennent à partager la lumière et à admirer l'autre sans compétition, leur union est magnifique et pleine de chaleur."
+  },
+  "balance_balance": {
+    "score": 8,
+    "text": "Dos Libra ensemble forment un couple très harmonieux et esthétique. Elles partagent le même amour de l'équilibre, de la beauté et de la diplomatie. Leur relation est douce et raffinée : elles évitent les conflits et cherchent toujours le compromis. Cependant, cette quête permanente d'harmonie peut les empêcher d'affronter les vrais problèmes. Leur indécision commune peut aussi ralentir les décisions importantes. S'ils surmontent cette tendance, leur couple est l'un des plus agréables et élégants du zodiaque."
+  },
+  "sagittaire_sagittaire": {
+    "score": 8,
+    "text": "Dos Sagitario ensemble vivent une relation pleine d'aventures et d'optimisme. Ils partagent la même soif de liberté, de voyages et de découvertes. Leur couple est tourné vers l'extérieur : ils explorent le monde ensemble avec enthousiasme et bonne humeur. Cependant, leur besoin commun d'indépendance peut les éloigner l'un de l'autre s'ils ne prennent pas le temps de construire une intimité profonde. S'ils trouvent l'équilibre entre aventure et engagement, leur relation est joyeuse et stimulante."
+  },
+  "verseau_verseau": {
+    "score": 8,
+    "text": "Dos Acuariox ensemble forment un couple très original et intellectuel. Ils partagent la même vision progressiste du monde, le même besoin de liberté et la même curiosité. Leur relation est basée sur l'amitié et le respect de l'individualité de chacun. Cependant, leur tendance commune au détachement émotionnel peut créer une distance affective. S'ils apprennent à exprimer leurs sentiments au-delà du mental, leur union est unique, innovante et profondément respectueuse."
+  },
+  "poissons_poissons": {
+    "score": 7,
+    "text": "Dos Piscis ensemble créent une relation très émotionnelle et intuitive. Ils se comprennent profondément et partagent un monde intérieur riche et sensible. Leur couple est empreint de romantisme, de créativité et de compassion mutuelle. Cependant, leur sensibilité extrême peut les rendre vulnérables : sans ancrage concret, ils risquent de se perdre ensemble dans les rêves ou les émotions. S'ils trouvent un équilibre entre leur monde intérieur et la réalité, leur union est magique et profondément connectée."
+  }
+}

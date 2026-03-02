@@ -5,9 +5,43 @@
 %>
 <%- jsonLdHtml %>
 
-<!-- Hero -->
-<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
-  <div class="container mx-auto px-4">
+<!-- Hero with celestial background -->
+<section class="relative overflow-hidden astro-hero-section py-16 md:py-24">
+  <!-- Animated stars background -->
+  <div class="astro-stars" aria-hidden="true">
+    <div class="astro-star astro-star-1"></div>
+    <div class="astro-star astro-star-2"></div>
+    <div class="astro-star astro-star-3"></div>
+    <div class="astro-star astro-star-4"></div>
+    <div class="astro-star astro-star-5"></div>
+    <div class="astro-star astro-star-6"></div>
+    <div class="astro-star astro-star-7"></div>
+    <div class="astro-star astro-star-8"></div>
+    <div class="astro-star astro-star-9"></div>
+    <div class="astro-star astro-star-10"></div>
+    <div class="astro-star astro-star-11"></div>
+    <div class="astro-star astro-star-12"></div>
+    <div class="astro-star astro-star-13"></div>
+    <div class="astro-star astro-star-14"></div>
+    <div class="astro-star astro-star-15"></div>
+    <div class="astro-star astro-star-16"></div>
+    <div class="astro-star astro-star-17"></div>
+    <div class="astro-star astro-star-18"></div>
+    <div class="astro-star astro-star-19"></div>
+    <div class="astro-star astro-star-20"></div>
+  </div>
+  <!-- Constellation lines -->
+  <svg class="astro-constellation" viewBox="0 0 800 400" fill="none" aria-hidden="true">
+    <line x1="120" y1="80" x2="250" y2="150" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+    <line x1="250" y1="150" x2="380" y2="90" stroke="currentColor" stroke-width="0.5" opacity="0.12"/>
+    <line x1="380" y1="90" x2="500" y2="180" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+    <line x1="500" y1="180" x2="650" y2="120" stroke="currentColor" stroke-width="0.5" opacity="0.13"/>
+    <line x1="650" y1="120" x2="720" y2="250" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+    <line x1="200" y1="300" x2="350" y2="260" stroke="currentColor" stroke-width="0.5" opacity="0.12"/>
+    <line x1="350" y1="260" x2="480" y2="320" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+    <line x1="480" y1="320" x2="600" y2="280" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+  </svg>
+  <div class="container mx-auto px-4 relative z-10">
     <div class="mx-auto max-w-3xl text-center">
       <span class="hero-badge mb-4">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -34,68 +68,85 @@
 <section class="py-12 md:py-16">
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-2xl">
-      <div id="astro-tool" class="glass-card-strong rounded-2xl p-6 md:p-10">
+      <div id="astro-tool" class="astro-form-card rounded-2xl p-6 md:p-10">
         <!-- Form -->
         <div id="astro-form">
-          <div class="grid gap-6 md:grid-cols-2">
+          <div class="astro-form-grid">
             <!-- Person 1 -->
-            <div class="space-y-4">
-              <div class="flex items-center gap-2 mb-2">
-                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm">1</span>
-                <span class="font-semibold text-foreground"><%= lang === 'fr' ? 'Personne 1' : lang === 'es' ? 'Persona 1' : lang === 'de' ? 'Person 1' : lang === 'it' ? 'Persona 1' : 'Person 1' %></span>
+            <div class="astro-person-block astro-person-1">
+              <div class="astro-person-header">
+                <span class="astro-person-number astro-person-number-1">1</span>
+                <span class="astro-person-label"><%= lang === 'fr' ? 'Personne 1' : lang === 'es' ? 'Persona 1' : lang === 'de' ? 'Person 1' : lang === 'it' ? 'Persona 1' : 'Person 1' %></span>
               </div>
-              <input type="text" id="name1" class="input w-full h-12 text-base" placeholder="<%= t(ns + ':form.name1Placeholder', 'Prénom') %>" autocomplete="off" maxlength="30">
-              <div class="astro-select-wrap">
-                <select id="sign1" class="input w-full h-12 text-base astro-select">
-                  <option value="" disabled selected><%= t(ns + ':form.selectSign', 'Choisir un signe') %></option>
-                  <option value="belier"><%= t(ns + ':form.signs.belier', 'Bélier ♈') %></option>
-                  <option value="taureau"><%= t(ns + ':form.signs.taureau', 'Taureau ♉') %></option>
-                  <option value="gemeaux"><%= t(ns + ':form.signs.gemeaux', 'Gémeaux ♊') %></option>
-                  <option value="cancer"><%= t(ns + ':form.signs.cancer', 'Cancer ♋') %></option>
-                  <option value="lion"><%= t(ns + ':form.signs.lion', 'Lion ♌') %></option>
-                  <option value="vierge"><%= t(ns + ':form.signs.vierge', 'Vierge ♍') %></option>
-                  <option value="balance"><%= t(ns + ':form.signs.balance', 'Balance ♎') %></option>
-                  <option value="scorpion"><%= t(ns + ':form.signs.scorpion', 'Scorpion ♏') %></option>
-                  <option value="sagittaire"><%= t(ns + ':form.signs.sagittaire', 'Sagittaire ♐') %></option>
-                  <option value="capricorne"><%= t(ns + ':form.signs.capricorne', 'Capricorne ♑') %></option>
-                  <option value="verseau"><%= t(ns + ':form.signs.verseau', 'Verseau ♒') %></option>
-                  <option value="poissons"><%= t(ns + ':form.signs.poissons', 'Poissons ♓') %></option>
-                </select>
+              <div class="astro-field">
+                <label class="astro-field-label" for="name1"><%= lang === 'fr' ? 'Prénom' : lang === 'es' ? 'Nombre' : lang === 'de' ? 'Vorname' : lang === 'it' ? 'Nome' : 'First name' %></label>
+                <input type="text" id="name1" class="astro-input" placeholder="<%= t(ns + ':form.name1Placeholder', 'Prénom') %>" autocomplete="off" maxlength="30">
+              </div>
+              <div class="astro-field">
+                <label class="astro-field-label" for="sign1"><%= t(ns + ':form.sign1Label', 'Signe astrologique') %></label>
+                <div class="astro-select-wrap">
+                  <select id="sign1" class="astro-input astro-select">
+                    <option value="" disabled selected><%= t(ns + ':form.selectSign', 'Choisir un signe') %></option>
+                    <option value="belier"><%= t(ns + ':form.signs.belier', 'Bélier ♈') %></option>
+                    <option value="taureau"><%= t(ns + ':form.signs.taureau', 'Taureau ♉') %></option>
+                    <option value="gemeaux"><%= t(ns + ':form.signs.gemeaux', 'Gémeaux ♊') %></option>
+                    <option value="cancer"><%= t(ns + ':form.signs.cancer', 'Cancer ♋') %></option>
+                    <option value="lion"><%= t(ns + ':form.signs.lion', 'Lion ♌') %></option>
+                    <option value="vierge"><%= t(ns + ':form.signs.vierge', 'Vierge ♍') %></option>
+                    <option value="balance"><%= t(ns + ':form.signs.balance', 'Balance ♎') %></option>
+                    <option value="scorpion"><%= t(ns + ':form.signs.scorpion', 'Scorpion ♏') %></option>
+                    <option value="sagittaire"><%= t(ns + ':form.signs.sagittaire', 'Sagittaire ♐') %></option>
+                    <option value="capricorne"><%= t(ns + ':form.signs.capricorne', 'Capricorne ♑') %></option>
+                    <option value="verseau"><%= t(ns + ':form.signs.verseau', 'Verseau ♒') %></option>
+                    <option value="poissons"><%= t(ns + ':form.signs.poissons', 'Poissons ♓') %></option>
+                  </select>
+                </div>
               </div>
             </div>
-            <!-- Heart separator (mobile) -->
-            <div class="flex items-center justify-center md:hidden">
-              <span class="text-3xl text-primary">&#10084;</span>
+
+            <!-- Heart separator -->
+            <div class="astro-heart-divider">
+              <div class="astro-heart-line"></div>
+              <span class="astro-heart-icon">&#10084;&#65039;</span>
+              <div class="astro-heart-line"></div>
             </div>
+
             <!-- Person 2 -->
-            <div class="space-y-4">
-              <div class="flex items-center gap-2 mb-2">
-                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary/10 text-secondary font-bold text-sm">2</span>
-                <span class="font-semibold text-foreground"><%= lang === 'fr' ? 'Personne 2' : lang === 'es' ? 'Persona 2' : lang === 'de' ? 'Person 2' : lang === 'it' ? 'Persona 2' : 'Person 2' %></span>
+            <div class="astro-person-block astro-person-2">
+              <div class="astro-person-header">
+                <span class="astro-person-number astro-person-number-2">2</span>
+                <span class="astro-person-label"><%= lang === 'fr' ? 'Personne 2' : lang === 'es' ? 'Persona 2' : lang === 'de' ? 'Person 2' : lang === 'it' ? 'Persona 2' : 'Person 2' %></span>
               </div>
-              <input type="text" id="name2" class="input w-full h-12 text-base" placeholder="<%= t(ns + ':form.name2Placeholder', 'Prénom') %>" autocomplete="off" maxlength="30">
-              <div class="astro-select-wrap">
-                <select id="sign2" class="input w-full h-12 text-base astro-select">
-                  <option value="" disabled selected><%= t(ns + ':form.selectSign', 'Choisir un signe') %></option>
-                  <option value="belier"><%= t(ns + ':form.signs.belier', 'Bélier ♈') %></option>
-                  <option value="taureau"><%= t(ns + ':form.signs.taureau', 'Taureau ♉') %></option>
-                  <option value="gemeaux"><%= t(ns + ':form.signs.gemeaux', 'Gémeaux ♊') %></option>
-                  <option value="cancer"><%= t(ns + ':form.signs.cancer', 'Cancer ♋') %></option>
-                  <option value="lion"><%= t(ns + ':form.signs.lion', 'Lion ♌') %></option>
-                  <option value="vierge"><%= t(ns + ':form.signs.vierge', 'Vierge ♍') %></option>
-                  <option value="balance"><%= t(ns + ':form.signs.balance', 'Balance ♎') %></option>
-                  <option value="scorpion"><%= t(ns + ':form.signs.scorpion', 'Scorpion ♏') %></option>
-                  <option value="sagittaire"><%= t(ns + ':form.signs.sagittaire', 'Sagittaire ♐') %></option>
-                  <option value="capricorne"><%= t(ns + ':form.signs.capricorne', 'Capricorne ♑') %></option>
-                  <option value="verseau"><%= t(ns + ':form.signs.verseau', 'Verseau ♒') %></option>
-                  <option value="poissons"><%= t(ns + ':form.signs.poissons', 'Poissons ♓') %></option>
-                </select>
+              <div class="astro-field">
+                <label class="astro-field-label" for="name2"><%= lang === 'fr' ? 'Prénom' : lang === 'es' ? 'Nombre' : lang === 'de' ? 'Vorname' : lang === 'it' ? 'Nome' : 'First name' %></label>
+                <input type="text" id="name2" class="astro-input" placeholder="<%= t(ns + ':form.name2Placeholder', 'Prénom') %>" autocomplete="off" maxlength="30">
+              </div>
+              <div class="astro-field">
+                <label class="astro-field-label" for="sign2"><%= t(ns + ':form.sign2Label', 'Signe astrologique') %></label>
+                <div class="astro-select-wrap">
+                  <select id="sign2" class="astro-input astro-select">
+                    <option value="" disabled selected><%= t(ns + ':form.selectSign', 'Choisir un signe') %></option>
+                    <option value="belier"><%= t(ns + ':form.signs.belier', 'Bélier ♈') %></option>
+                    <option value="taureau"><%= t(ns + ':form.signs.taureau', 'Taureau ♉') %></option>
+                    <option value="gemeaux"><%= t(ns + ':form.signs.gemeaux', 'Gémeaux ♊') %></option>
+                    <option value="cancer"><%= t(ns + ':form.signs.cancer', 'Cancer ♋') %></option>
+                    <option value="lion"><%= t(ns + ':form.signs.lion', 'Lion ♌') %></option>
+                    <option value="vierge"><%= t(ns + ':form.signs.vierge', 'Vierge ♍') %></option>
+                    <option value="balance"><%= t(ns + ':form.signs.balance', 'Balance ♎') %></option>
+                    <option value="scorpion"><%= t(ns + ':form.signs.scorpion', 'Scorpion ♏') %></option>
+                    <option value="sagittaire"><%= t(ns + ':form.signs.sagittaire', 'Sagittaire ♐') %></option>
+                    <option value="capricorne"><%= t(ns + ':form.signs.capricorne', 'Capricorne ♑') %></option>
+                    <option value="verseau"><%= t(ns + ':form.signs.verseau', 'Verseau ♒') %></option>
+                    <option value="poissons"><%= t(ns + ':form.signs.poissons', 'Poissons ♓') %></option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
+
           <!-- Submit -->
           <div class="mt-8 text-center">
-            <button id="astro-submit" class="btn btn-cta btn-gradient w-full sm:w-auto px-10 py-4 text-lg">
+            <button id="astro-submit" class="btn btn-cta btn-gradient astro-submit-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               <%= t(ns + ':form.submitButton', 'Vérifier la compatibilité') %>
             </button>
