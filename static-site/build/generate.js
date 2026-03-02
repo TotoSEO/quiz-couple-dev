@@ -313,6 +313,8 @@ async function generatePage(routeKey, lang) {
     jsonLdHtml,
     // Blog listing data
     blogArticlesList,
+    // Zodiac compatibility data for astro-prenoms page
+    zodiacDataJson: routeKey === 'testAstroPrenoms' ? fs.readFileSync(path.resolve(__dirname, 'zodiac-data.json'), 'utf-8') : '{}',
   };
 
   try {
