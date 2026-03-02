@@ -1,0 +1,438 @@
+<%
+  const quizKey = 'testAstroPrenoms';
+  const ns = 'quiz-astro-prenoms';
+  const quizTitle = t('quizzes:testAstroPrenoms.title', 'Compatibilité amoureuse par prénom et signe astrologique');
+  const quizDesc = t('quizzes:testAstroPrenoms.metaDescription', '');
+
+  // JSON-LD
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": quizTitle,
+      "description": quizDesc,
+      "inLanguage": lang,
+      "applicationCategory": "EntertainmentApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [1,2,3].map(function(i) {
+        return {
+          "@type": "Question",
+          "name": t(ns + ':faq.q' + i, ''),
+          "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':faq.a' + i, '') }
+        };
+      })
+    }
+  ];
+
+  // Zodiac signs data for the form
+  const signKeys = ['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'];
+  const signEmojis = { aries:'♈', taurus:'♉', gemini:'♊', cancer:'♋', leo:'♌', virgo:'♍', libra:'♎', scorpio:'♏', sagittarius:'♐', capricorn:'♑', aquarius:'♒', pisces:'♓' };
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero with celestial theme -->
+<section class="relative overflow-hidden astro-hero py-20 md:py-32">
+  <!-- Decorative stars -->
+  <div class="astro-stars" aria-hidden="true">
+    <div class="astro-star" style="top:10%;left:15%;animation-delay:0s"></div>
+    <div class="astro-star" style="top:20%;left:75%;animation-delay:0.5s"></div>
+    <div class="astro-star" style="top:60%;left:85%;animation-delay:1s"></div>
+    <div class="astro-star" style="top:70%;left:10%;animation-delay:1.5s"></div>
+    <div class="astro-star" style="top:40%;left:50%;animation-delay:2s"></div>
+    <div class="astro-star" style="top:85%;left:60%;animation-delay:0.3s"></div>
+    <div class="astro-star" style="top:15%;left:40%;animation-delay:1.2s"></div>
+    <div class="astro-star" style="top:50%;left:25%;animation-delay:0.8s"></div>
+  </div>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="astro-badge mb-6">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <%= t(ns + ':hero.badge', 'Numérologie & Astrologie') %>
+      </span>
+      <%
+        const heroTitle = t(ns + ':hero.title', quizTitle);
+        const heroHighlight = t(ns + ':hero.titleHighlight', '');
+      %>
+      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- heroTitle.replace(heroHighlight, '<span class="astro-text-glow">' + heroHighlight + '</span>') %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl max-w-2xl mx-auto"><%= t(ns + ':hero.description', '') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Tool -->
+<section class="py-12 md:py-16 relative">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-2xl">
+      <div class="astro-form-card" id="astro-form-wrapper">
+        <!-- Form -->
+        <form id="astro-compatibility-form" class="space-y-8" onsubmit="return false;">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Person 1 -->
+            <div class="astro-person-card">
+              <div class="astro-person-header">
+                <span class="astro-person-icon">1</span>
+                <span class="font-semibold"><%= t(ns + ':form.person1Title', 'Personne 1') %></span>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <input type="text" id="name1" class="astro-input" placeholder="<%= t(ns + ':form.namePlaceholder', 'Prénom') %>" required autocomplete="off">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-muted-foreground mb-2"><%= t(ns + ':form.signLabel', 'Signe astrologique') %></label>
+                  <div class="astro-select-wrapper">
+                    <select id="sign1" class="astro-select" required>
+                      <option value="" disabled selected><%= t(ns + ':form.signPlaceholder', 'Choisir un signe') %></option>
+                      <% for (const sk of signKeys) { %>
+                      <option value="<%= sk %>"><%= signEmojis[sk] %> <%= t(ns + ':form.signs.' + sk, sk) %></option>
+                      <% } %>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Person 2 -->
+            <div class="astro-person-card">
+              <div class="astro-person-header">
+                <span class="astro-person-icon">2</span>
+                <span class="font-semibold"><%= t(ns + ':form.person2Title', 'Personne 2') %></span>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <input type="text" id="name2" class="astro-input" placeholder="<%= t(ns + ':form.namePlaceholder', 'Prénom') %>" required autocomplete="off">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-muted-foreground mb-2"><%= t(ns + ':form.signLabel', 'Signe astrologique') %></label>
+                  <div class="astro-select-wrapper">
+                    <select id="sign2" class="astro-select" required>
+                      <option value="" disabled selected><%= t(ns + ':form.signPlaceholder', 'Choisir un signe') %></option>
+                      <% for (const sk of signKeys) { %>
+                      <option value="<%= sk %>"><%= signEmojis[sk] %> <%= t(ns + ':form.signs.' + sk, sk) %></option>
+                      <% } %>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" id="astro-submit-btn" class="astro-submit-btn w-full">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span><%= t(ns + ':form.submitButton', 'Vérifier la compatibilité') %></span>
+          </button>
+        </form>
+
+        <!-- Results (hidden by default) -->
+        <div id="astro-results" class="hidden">
+          <div class="text-center mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-2"><%= t(ns + ':results.title', 'Votre compatibilité') %></h2>
+            <p class="text-muted-foreground" id="astro-results-names"></p>
+          </div>
+
+          <!-- Overall Score -->
+          <div class="astro-score-main mb-8">
+            <div class="astro-score-circle" id="astro-score-overall">
+              <svg viewBox="0 0 120 120" class="astro-score-svg">
+                <defs>
+                  <linearGradient id="astroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:hsl(270,60%,60%)"/>
+                    <stop offset="100%" style="stop-color:hsl(340,60%,60%)"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="60" cy="60" r="54" class="astro-score-bg"/>
+                <circle cx="60" cy="60" r="54" class="astro-score-fill" id="astro-score-ring" stroke-dasharray="339.292" stroke-dashoffset="339.292"/>
+              </svg>
+              <div class="astro-score-value">
+                <span id="astro-score-number">0</span>
+                <span class="astro-score-unit"><%= t(ns + ':results.outOf10', '/10') %></span>
+              </div>
+            </div>
+            <p class="text-lg font-semibold mt-4"><%= t(ns + ':results.overallTitle', 'Score global') %></p>
+          </div>
+
+          <!-- Detail Scores -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="astro-detail-card">
+              <div class="astro-detail-icon">♈</div>
+              <h3 class="font-semibold mb-2"><%= t(ns + ':results.astroTitle', 'Compatibilité astrologique') %></h3>
+              <div class="astro-detail-score" id="astro-score-astro">0<%= t(ns + ':results.outOf10', '/10') %></div>
+              <p class="text-sm text-muted-foreground mt-2" id="astro-explanation-astro"></p>
+            </div>
+            <div class="astro-detail-card">
+              <div class="astro-detail-icon">🔢</div>
+              <h3 class="font-semibold mb-2"><%= t(ns + ':results.numerologyTitle', 'Compatibilité numérologique') %></h3>
+              <div class="astro-detail-score" id="astro-score-num">0<%= t(ns + ':results.outOf10', '/10') %></div>
+              <p class="text-sm text-muted-foreground mt-2" id="astro-explanation-num"></p>
+            </div>
+          </div>
+
+          <!-- Name Vibrations -->
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+              <p class="text-xs text-muted-foreground mb-1"><%= t(ns + ':results.nameVibration', 'Vibration du prénom') %></p>
+              <p class="font-bold text-lg" id="astro-name1-display"></p>
+              <p class="text-primary font-bold text-2xl" id="astro-num1"></p>
+            </div>
+            <div class="text-center p-4 rounded-lg bg-muted/30">
+              <p class="text-xs text-muted-foreground mb-1"><%= t(ns + ':results.nameVibration', 'Vibration du prénom') %></p>
+              <p class="font-bold text-lg" id="astro-name2-display"></p>
+              <p class="text-primary font-bold text-2xl" id="astro-num2"></p>
+            </div>
+          </div>
+
+          <button type="button" id="astro-retry-btn" class="astro-submit-btn w-full">
+            <span><%= t(ns + ':results.tryAgain', 'Tester un autre couple') %></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Article -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section1.p1', '') %></p>
+        <p><%- t(ns + ':section1.p2', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section2.p1', '') %></p>
+        <p><%- t(ns + ':section2.p2', '') %></p>
+        <% const tip2 = t(ns + ':section2.tip', ''); if (tip2) { %>
+        <blockquote class="border-l-4 border-primary pl-6 py-3 bg-muted/30 rounded-r-lg my-6">
+          <p class="text-sm italic"><%- tip2 %></p>
+        </blockquote>
+        <% } %>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section3.p1', '') %></p>
+        <p><%- t(ns + ':section3.p2', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h3 class="text-xl md:text-2xl font-bold mb-6"><%= t(ns + ':section4.title', '') %></h3>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section4.p1', '') %></p>
+        <p><%- t(ns + ':section4.p2', '') %></p>
+        <p><%- t(ns + ':section4.p3', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section5.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section5.p1', '') %></p>
+        <p><%- t(ns + ':section5.p2', '') %></p>
+        <% const tip5 = t(ns + ':section5.tip', ''); if (tip5) { %>
+        <blockquote class="border-l-4 border-primary pl-6 py-3 bg-muted/30 rounded-r-lg my-6">
+          <p class="text-sm italic"><%- tip5 %></p>
+        </blockquote>
+        <% } %>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section6.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section6.p1', '') %></p>
+        <p><%- t(ns + ':section6.p2', '') %></p>
+        <p><%- t(ns + ':section6.p3', '') %></p>
+        <% const tip6 = t(ns + ':section6.tip', ''); if (tip6) { %>
+        <blockquote class="border-l-4 border-primary pl-6 py-3 bg-muted/30 rounded-r-lg my-6">
+          <p class="text-sm italic"><%- tip6 %></p>
+        </blockquote>
+        <% } %>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8"><%= t(ns + ':faq.title', '') %></h2>
+      <div class="space-y-6">
+        <% for (let i = 1; i <= 3; i++) { %>
+        <div class="bg-card border border-border rounded-lg p-6">
+          <h3 class="text-lg font-semibold mb-3"><%= t(ns + ':faq.q' + i, '') %></h3>
+          <p class="text-muted-foreground leading-relaxed"><%- t(ns + ':faq.a' + i, '') %></p>
+        </div>
+        <% } %>
+      </div>
+    </section>
+
+  </div>
+</article>
+
+<!-- Astro Compatibility Script -->
+<script>
+(function(){
+  // Zodiac compatibility matrix [sign1][sign2] = score/10
+  var ASTRO_COMPAT = {
+    aries:       {aries:8,taurus:5,gemini:8,cancer:4,leo:9,virgo:4,libra:9,scorpio:6,sagittarius:9,capricorn:5,aquarius:8,pisces:6},
+    taurus:      {aries:5,taurus:9,gemini:3,cancer:9,leo:4,virgo:9,libra:5,scorpio:8,sagittarius:3,capricorn:9,aquarius:3,pisces:8},
+    gemini:      {aries:8,taurus:3,gemini:8,cancer:4,leo:8,virgo:4,libra:9,scorpio:4,sagittarius:9,capricorn:4,aquarius:9,pisces:4},
+    cancer:      {aries:4,taurus:9,gemini:4,cancer:8,leo:3,virgo:8,libra:4,scorpio:9,sagittarius:4,capricorn:9,aquarius:2,pisces:8},
+    leo:         {aries:9,taurus:4,gemini:8,cancer:3,leo:8,virgo:4,libra:8,scorpio:4,sagittarius:9,capricorn:3,aquarius:8,pisces:4},
+    virgo:       {aries:4,taurus:9,gemini:4,cancer:8,leo:4,virgo:8,libra:4,scorpio:9,sagittarius:4,capricorn:9,aquarius:2,pisces:8},
+    libra:       {aries:8,taurus:5,gemini:9,cancer:4,leo:8,virgo:4,libra:8,scorpio:4,sagittarius:7,capricorn:3,aquarius:9,pisces:4},
+    scorpio:     {aries:6,taurus:8,gemini:4,cancer:9,leo:4,virgo:9,libra:4,scorpio:8,sagittarius:4,capricorn:8,aquarius:3,pisces:8},
+    sagittarius: {aries:9,taurus:3,gemini:9,cancer:4,leo:9,virgo:4,libra:7,scorpio:4,sagittarius:8,capricorn:3,aquarius:8,pisces:3},
+    capricorn:   {aries:5,taurus:9,gemini:4,cancer:9,leo:3,virgo:9,libra:3,scorpio:8,sagittarius:3,capricorn:8,aquarius:2,pisces:8},
+    aquarius:    {aries:8,taurus:3,gemini:9,cancer:2,leo:8,virgo:2,libra:9,scorpio:3,sagittarius:8,capricorn:2,aquarius:8,pisces:2},
+    pisces:      {aries:6,taurus:8,gemini:4,cancer:9,leo:4,virgo:8,libra:4,scorpio:8,sagittarius:3,capricorn:8,aquarius:2,pisces:8}
+  };
+
+  // Numerology: letter to number (A=1..I=9,J=1..R=9,S=1..Z=8)
+  function letterToNum(ch) {
+    var c = ch.toUpperCase().charCodeAt(0);
+    if (c < 65 || c > 90) return 0;
+    return ((c - 65) % 9) + 1;
+  }
+
+  // Reduce to single digit (keep 11, 22 as master numbers)
+  function reduceToDigit(n) {
+    while (n > 9 && n !== 11 && n !== 22) {
+      var s = 0;
+      while (n > 0) { s += n % 10; n = Math.floor(n / 10); }
+      n = s;
+    }
+    return n;
+  }
+
+  // Calculate name number from full name
+  function nameNumber(name) {
+    var sum = 0;
+    for (var i = 0; i < name.length; i++) {
+      sum += letterToNum(name[i]);
+    }
+    return reduceToDigit(sum);
+  }
+
+  // Numerology compatibility between two numbers
+  function numCompat(n1, n2) {
+    var matrix = {
+      1: {1:7,2:6,3:8,4:5,5:7,6:6,7:5,8:7,9:8,11:7,22:6},
+      2: {1:6,2:7,3:7,4:8,5:5,6:9,7:4,8:8,9:6,11:9,22:8},
+      3: {1:8,2:7,3:7,4:5,5:8,6:8,7:6,8:5,9:9,11:8,22:6},
+      4: {1:5,2:8,3:5,4:7,5:4,6:7,7:7,8:9,9:5,11:7,22:9},
+      5: {1:7,2:5,3:8,4:4,5:7,6:5,7:8,8:6,9:8,11:6,22:5},
+      6: {1:6,2:9,3:8,4:7,5:5,6:8,7:5,8:6,9:9,11:9,22:8},
+      7: {1:5,2:4,3:6,4:7,5:8,6:5,7:8,8:5,9:7,11:8,22:7},
+      8: {1:7,2:8,3:5,4:9,5:6,6:6,7:5,8:7,9:6,11:7,22:9},
+      9: {1:8,2:6,3:9,4:5,5:8,6:9,7:7,8:6,9:8,11:8,22:7},
+      11:{1:7,2:9,3:8,4:7,5:6,6:9,7:8,8:7,9:8,11:9,22:9},
+      22:{1:6,2:8,3:6,4:9,5:5,6:8,7:7,8:9,9:7,11:9,22:9}
+    };
+    if (matrix[n1] && matrix[n1][n2] !== undefined) return matrix[n1][n2];
+    return 5;
+  }
+
+  // Animate score ring
+  function animateRing(score) {
+    var ring = document.getElementById('astro-score-ring');
+    var circumference = 339.292;
+    var offset = circumference - (score / 10) * circumference;
+    ring.style.transition = 'stroke-dashoffset 1.5s ease-out';
+    ring.style.strokeDashoffset = offset;
+  }
+
+  // Animate number counting
+  function animateNumber(el, target) {
+    var current = 0;
+    var step = target / 30;
+    var interval = setInterval(function() {
+      current += step;
+      if (current >= target) { current = target; clearInterval(interval); }
+      el.textContent = Math.round(current * 10) / 10;
+    }, 50);
+  }
+
+  var form = document.getElementById('astro-compatibility-form');
+  var results = document.getElementById('astro-results');
+  var submitBtn = document.getElementById('astro-submit-btn');
+  var retryBtn = document.getElementById('astro-retry-btn');
+
+  submitBtn.addEventListener('click', function() {
+    var n1 = document.getElementById('name1').value.trim();
+    var n2 = document.getElementById('name2').value.trim();
+    var s1 = document.getElementById('sign1').value;
+    var s2 = document.getElementById('sign2').value;
+
+    if (!n1 || !n2 || !s1 || !s2) return;
+
+    // Calculate scores
+    var astroScore = ASTRO_COMPAT[s1] ? ASTRO_COMPAT[s1][s2] || 5 : 5;
+    var num1 = nameNumber(n1);
+    var num2 = nameNumber(n2);
+    var numScore = numCompat(num1, num2);
+    var overall = Math.round((astroScore * 0.5 + numScore * 0.5) * 10) / 10;
+
+    // Show results
+    form.classList.add('hidden');
+    results.classList.remove('hidden');
+
+    // Populate
+    document.getElementById('astro-results-names').textContent = n1 + ' & ' + n2;
+    document.getElementById('astro-name1-display').textContent = n1;
+    document.getElementById('astro-name2-display').textContent = n2;
+    document.getElementById('astro-num1').textContent = num1;
+    document.getElementById('astro-num2').textContent = num2;
+
+    // Astro explanation from matrix
+    var signNames = {};
+    var selects = document.getElementById('sign1');
+    for (var i = 0; i < selects.options.length; i++) {
+      if (selects.options[i].value) signNames[selects.options[i].value] = selects.options[i].textContent.trim();
+    }
+    document.getElementById('astro-explanation-astro').textContent = (signNames[s1] || s1) + ' × ' + (signNames[s2] || s2);
+    document.getElementById('astro-explanation-num').textContent = n1 + ' (' + num1 + ') × ' + n2 + ' (' + num2 + ')';
+
+    // Animate scores
+    var outOf = document.querySelector('[id="astro-score-astro"]');
+    if (outOf) outOf.textContent = astroScore + '/10';
+    var numEl = document.querySelector('[id="astro-score-num"]');
+    if (numEl) numEl.textContent = numScore + '/10';
+
+    // Animate overall
+    animateRing(overall);
+    animateNumber(document.getElementById('astro-score-number'), overall);
+
+    // Scroll to results
+    results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  retryBtn.addEventListener('click', function() {
+    results.classList.add('hidden');
+    form.classList.remove('hidden');
+    // Reset ring
+    document.getElementById('astro-score-ring').style.transition = 'none';
+    document.getElementById('astro-score-ring').style.strokeDashoffset = '339.292';
+    document.getElementById('astro-score-number').textContent = '0';
+    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>

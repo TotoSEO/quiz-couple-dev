@@ -182,6 +182,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-parentalite-couple/"/>
   </url>
   <url>
+    <loc>https://quiz-couple.com/en/zodiac-signs-names-compatibility/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/signes-astrologiques-prenoms-compatibilite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/zodiac-signs-names-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/signos-astrologicos-nombres-compatibilidad/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/sternzeichen-vornamen-kompatibilitaet/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/segni-zodiacali-nomi-compatibilita/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/signes-astrologiques-prenoms-compatibilite/"/>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/en/blog/breakup-stages-for-men/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/les-phases-de-la-rupture-chez-l-homme/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/breakup-stages-for-men/"/>

@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "badge": "Numerologia e Astrologia",
+    "title": "Compatibilità amorosa per nome e segno zodiacale",
+    "titleHighlight": "nome e segno zodiacale",
+    "description": "Due nomi. Due segni. E da qualche parte tra le stelle e le lettere dei vostri nomi, qualcosa che assomiglia a una risposta."
+  },
+  "form": {
+    "person1Title": "Persona 1",
+    "person2Title": "Persona 2",
+    "namePlaceholder": "Nome",
+    "signLabel": "Segno zodiacale",
+    "signPlaceholder": "Scegli un segno",
+    "submitButton": "Verifica la compatibilità",
+    "signs": {
+      "aries": "Ariete",
+      "taurus": "Toro",
+      "gemini": "Gemelli",
+      "cancer": "Cancro",
+      "leo": "Leone",
+      "virgo": "Vergine",
+      "libra": "Bilancia",
+      "scorpio": "Scorpione",
+      "sagittarius": "Sagittario",
+      "capricorn": "Capricorno",
+      "aquarius": "Acquario",
+      "pisces": "Pesci"
+    }
+  },
+  "results": {
+    "title": "La vostra compatibilità",
+    "astroTitle": "Compatibilità astrologica",
+    "numerologyTitle": "Compatibilità numerologica",
+    "overallTitle": "Punteggio complessivo",
+    "outOf10": "/10",
+    "tryAgain": "Prova un'altra coppia",
+    "nameVibration": "Vibrazione del nome",
+    "number": "Numero"
+  },
+  "section1": {
+    "title": "Cosa rivela davvero questo test",
+    "p1": "La compatibilità amorosa è una delle domande più antiche che l'umanità si pone. Prima delle app di incontri, prima dei test della personalità, prima ancora degli psicologi — c'erano gli astri e i numeri. Due sistemi di lettura del mondo che, ciascuno a modo suo, cercano di capire perché alcune persone si attraggono come calamite, e altre si scontrano senza mai trovarsi davvero.",
+    "p2": "Questo test li riunisce entrambi. <strong>Non per decidere al posto vostro.</strong> Ma per offrire uno sguardo diverso su ciò che accade tra due persone."
+  },
+  "section2": {
+    "title": "La numerologia dei nomi: quando le lettere vibrano",
+    "p1": "In numerologia, ogni lettera dell'alfabeto porta un numero. A vale 1, B vale 2, C vale 3 — e così via fino a 9, poi si ricomincia. Non è un caso: questa corrispondenza è una delle più antiche della tradizione esoterica occidentale, risalente ai lavori di Pitagora nel VI secolo a.C. L'idea è semplice ma profonda — <strong>ogni nome è una frequenza</strong>. Una firma vibratoria che influenza, secondo questa tradizione, la personalità di chi lo porta e il modo in cui si relaziona con gli altri.",
+    "p2": "Per calcolare la compatibilità tra due nomi, si sommano i valori di ogni lettera, si riduce il totale a una cifra tra 1 e 9 (tranne i \"numeri maestri\" 11 e 22, che mantengono la loro potenza propria) e si confrontano. Ogni numero ha una natura. L'1 porta slancio, indipendenza, il desiderio di tracciare il proprio cammino. Il 2 cerca l'armonia, la fusione, il noi anziché l'io. Il 5 vuole libertà, movimento, l'imprevisto. Due numeri che si completano creano una coppia equilibrata. Due numeri che si scontrano possono creare tensione o un'attrazione magnetica — a seconda di ciò che si decide di farne.",
+    "tip": "La numerologia dei nomi non si basa sull'ortografia esatta — cattura la vibrazione dei suoni e delle lettere. Se usate un soprannome o un diminutivo nella vita quotidiana, provate entrambe le versioni: i risultati possono differire e uno risulterà più azzeccato dell'altro."
+  },
+  "section3": {
+    "title": "L'astrologia e i segni: l'impronta del cielo alla nascita",
+    "p1": "Il segno zodiacale non si calcola — si eredita. È la posizione del Sole al momento della nascita a determinarlo, e con esso una gamma di tratti caratteriali, modi di amare, di reagire, di costruire. <strong>Dodici segni. Quattro elementi.</strong> Il Fuoco (Ariete, Leone, Sagittario) — impulsivo, appassionato, in movimento. La Terra (Toro, Vergine, Capricorno) — solido, radicato, paziente. L'Aria (Gemelli, Bilancia, Acquario) — vivace, comunicativo, talvolta inafferrabile. L'Acqua (Cancro, Scorpione, Pesci) — profondo, emotivo, intuitivo.",
+    "p2": "La compatibilità astrologica tra due persone si analizza innanzitutto attraverso questi elementi. Un segno di Fuoco e un segno d'Aria si nutrono a vicenda — l'aria attizza le fiamme. Un segno di Terra e un segno d'Acqua si comprendono istintivamente — l'acqua fa crescere ciò che la terra contiene. <strong>Ma anche gli opposti si attraggono.</strong>"
+  },
+  "section4": {
+    "title": "Le grandi affinità tra i segni",
+    "p1": "I segni dello stesso elemento condividono una comprensione naturale — due segni di Fuoco si capiscono senza bisogno di spiegarsi, due segni d'Acqua sentono le stesse profondità. Questa complicità è reale. Ma può anche portare a una forma di specchio scomodo: <strong>ritrovarsi nell'altro a volte significa vedere ciò che non si voleva guardare.</strong>",
+    "p2": "I segni in quadratura (a 90° nello zodiaco) creano attrito. Non necessariamente distruttivo. L'attrito, ben canalizzato, genera calore, movimento ed evoluzione.",
+    "p3": "I segni in opposizione incarnano il paradosso dell'attrazione dei contrari. <strong>Due metà dello stesso asse</strong>, che si guardano da estremi opposti dello zodiaco e riconoscono nell'altro ciò che questi porta e che non si possiede."
+  },
+  "section5": {
+    "title": "Perché incrociare le due letture?",
+    "p1": "L'astrologia parla di ciò che abbiamo ricevuto nascendo. La numerologia parla di ciò che portiamo nel nostro nome — quel nome che ci è stato dato, che abbiamo fatto nostro, che è diventato parte della nostra identità. <strong>Le due letture si completano perché non dicono la stessa cosa.</strong>",
+    "p2": "Il vostro segno solare dice come amate, in profondità. Il vostro numero del nome dice come vi connettete, come vibrate in presenza dell'altro. È questa combinazione — segno e nome di entrambi i partner — a offrire una lettura al tempo stesso più ricca e più personale di una semplice compatibilità astrologica.",
+    "tip": "Un punteggio di compatibilità elevato non garantisce una relazione facile. Indica un'armonia naturale delle energie — ma è talvolta nelle coppie che devono impegnarsi un po' di più che si costruiscono le storie più profonde. Un punteggio più basso non è una condanna: è un invito a capire dove l'impegno darà i suoi frutti."
+  },
+  "section6": {
+    "title": "Ciò che questi numeri non possono dire",
+    "p1": "Siamo onesti — e questa è forse la parte più importante di questa pagina.",
+    "p2": "Né la numerologia né l'astrologia possono prevedere se una relazione durerà. Non possono misurare la volontà di due persone di scegliersi, di attraversare le difficoltà, di crescere insieme. <strong>Offrono una prospettiva.</strong> Una chiave di lettura. Un modo per dare un nome a ciò che a volte sentiamo senza poterlo spiegare.",
+    "p3": "Questo test è un punto di partenza, non un verdetto. Può aprire una conversazione, confermare un'intuizione o semplicemente offrire qualche minuto di piacere contemplando ciò che il cosmo e i numeri possono tessere tra due nomi.",
+    "tip": "Se fate questo test con il vostro partner attuale, i risultati possono essere un ottimo punto di partenza per una conversazione sulle vostre differenze e complementarità. Non come un giudizio — ma come uno specchio divertente e a volte sorprendente."
+  },
+  "faq": {
+    "title": "Domande frequenti sulla compatibilità per nome e segno",
+    "q1": "La compatibilità astrologica è davvero affidabile?",
+    "a1": "Dipende da cosa si intende per \"affidabile\". L'astrologia non prevede il futuro con precisione. Ciò che fa — e lo fa da millenni — è descrivere temperamenti, modi di essere e modi di relazionarsi. Milioni di persone nel mondo la utilizzano come strumento di conoscenza di sé. Che sia \"vera\" in senso scientifico è un'altra questione. Che sia utile e illuminante per molte persone — questo è innegabile.",
+    "q2": "Devo usare il mio nome completo o il mio soprannome?",
+    "a2": "In numerologia, il nome anagrafico è considerato la vibrazione di fondo — ciò che siamo profondamente. Il soprannome o il diminutivo riflette la vibrazione sociale — ciò che mostriamo agli altri. Entrambi sono interessanti. Se non usate mai il vostro nome completo nella vita quotidiana, provate entrambi e vedete quale vi parla di più.",
+    "q3": "Il mio segno è \"incompatibile\" con quello del mio partner — siamo spacciati?",
+    "a3": "No. Assolutamente no. L'astrologia da bar che dice \"Scorpione e Gemelli, non può mai funzionare\" ignora secoli di sfumature astrologiche. La compatibilità tra segni è una tendenza, non una regola. E in ogni caso, <strong>sono le persone a fare le relazioni</strong> — non le stelle."
+  }
+}
