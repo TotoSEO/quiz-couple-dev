@@ -790,7 +790,7 @@ async function generateBlogArticle(articleMeta, lang) {
     // Sidebar data
     sidebarTests: [
       'testCouple', 'testCommonPoints', 'testDistance', 'testToxic',
-      'testCoupleSain', 'testMariage', 'testDivorce', 'testParentalite',
+      'testCoupleSain', 'testMariage', 'testDivorce', 'testParentalite', 'testAstroPrenoms',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
     sidebarQuizzes: [
       'quizAmoureux', 'quizCoquin', 'quizMarrant', 'quizKnowledge',

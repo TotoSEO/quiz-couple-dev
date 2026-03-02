@@ -99,5 +99,11 @@
     "shortTitle": "Test Genitorialità",
     "description": "20 domande oneste per valutare la vostra preparazione di coppia prima di avere un figlio. Test gratuito, risultato immediato.",
     "metaDescription": "Siete davvero pronti a diventare genitori? 20 domande oneste per valutare la vostra preparazione di coppia prima di avere un figlio. Test gratuito, risultato immediato."
+  },
+  "testAstroPrenoms": {
+    "title": "Compatibilità amorosa: Nomi e segni zodiacali",
+    "shortTitle": "Compatibilità Astro",
+    "description": "Scopri la compatibilità amorosa tra i vostri nomi e segni zodiacali. Numerologia e astrologia unite.",
+    "metaDescription": "Inserisci i vostri nomi e segni zodiacali. Il nostro test combina numerologia e astrologia per rivelare cosa dicono le stelle e i vostri nomi sulla vostra compatibilità."
   }
 }

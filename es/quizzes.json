@@ -99,5 +99,11 @@
     "shortTitle": "Test Parentalidad",
     "description": "20 preguntas honestas para evaluar vuestra preparación como pareja antes de tener un hijo. Test gratuito, resultado inmediato.",
     "metaDescription": "¿Estáis realmente preparados para ser padres? 20 preguntas honestas para evaluar vuestra preparación como pareja antes de tener un hijo. Test gratuito, resultado inmediato."
+  },
+  "testAstroPrenoms": {
+    "title": "Compatibilidad amorosa: Nombres y signos del zodíaco",
+    "shortTitle": "Compatibilidad Astro",
+    "description": "Descubre la compatibilidad amorosa entre vuestros nombres y signos astrológicos. Numerología y astrología unidas.",
+    "metaDescription": "Introduce vuestros nombres y signos astrológicos. Nuestro test combina numerología y astrología para revelar lo que las estrellas y vuestros nombres dicen de vuestra compatibilidad."
   }
 }

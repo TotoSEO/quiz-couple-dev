@@ -99,5 +99,11 @@
     "shortTitle": "Elternschaftstest",
     "description": "20 ehrliche Fragen über eure Beziehung, Finanzen, Lebensstil und Ängste. Findet heraus, ob ihr bereit seid, Eltern zu werden.",
     "metaDescription": "Kostenloser Elternschaftstest: 20 Fragen, um herauszufinden, ob ihr als Paar bereit seid für ein Kind. Sofortiges Ergebnis, ohne Anmeldung!"
+  },
+  "testAstroPrenoms": {
+    "title": "Liebeskompatibilität: Vornamen & Sternzeichen",
+    "shortTitle": "Astro-Kompatibilität",
+    "description": "Entdecke die Liebeskompatibilität zwischen euren Vornamen und Sternzeichen. Numerologie und Astrologie vereint.",
+    "metaDescription": "Gebt eure Vornamen und Sternzeichen ein. Unser Test verbindet Numerologie und Astrologie, um zu enthüllen, was die Sterne und eure Namen über eure Kompatibilität sagen."
   }
 }

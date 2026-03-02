@@ -1000,6 +1000,141 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .animate-card-fade-in { animation: none !important; opacity: 1 !important; }
 }
 
+/* ── Astrology Compatibility Page ─────────────────────────── */
+
+/* Hero */
+.astro-hero {
+  background: linear-gradient(135deg, hsl(270 60% 8%) 0%, hsl(250 50% 15%) 40%, hsl(280 40% 12%) 70%, hsl(320 40% 15%) 100%);
+  color: #fff;
+}
+.astro-hero .text-muted-foreground { color: hsl(270 20% 75%); }
+.astro-hero .text-foreground { color: #fff; }
+.dark .astro-hero { background: linear-gradient(135deg, hsl(270 60% 4%) 0%, hsl(250 50% 10%) 40%, hsl(280 40% 8%) 70%, hsl(320 40% 10%) 100%); }
+
+/* Stars */
+.astro-stars { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.astro-star {
+  position: absolute; width: 3px; height: 3px; background: #fff; border-radius: 50%;
+  animation: astroTwinkle 3s ease-in-out infinite;
+  box-shadow: 0 0 6px 2px rgba(255,255,255,0.4);
+}
+@keyframes astroTwinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* Badge */
+.astro-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.375rem 1rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;
+  background: linear-gradient(135deg, hsl(270 60% 30% / 0.6), hsl(340 60% 40% / 0.6));
+  color: hsl(270 30% 90%); border: 1px solid hsl(270 40% 50% / 0.3);
+  backdrop-filter: blur(8px);
+}
+
+/* Text glow */
+.astro-text-glow {
+  background: linear-gradient(135deg, hsl(340 80% 70%), hsl(270 80% 70%), hsl(220 80% 70%));
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* Form card */
+.astro-form-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 1.5rem; padding: 2rem;
+  box-shadow: 0 0 60px hsl(270 40% 50% / 0.08), 0 4px 20px hsl(0 0% 0% / 0.06);
+  position: relative; overflow: hidden;
+}
+.astro-form-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, hsl(270 80% 60%), hsl(340 80% 60%), hsl(220 80% 60%));
+}
+
+/* Person card */
+.astro-person-card {
+  background: hsl(var(--muted) / 0.3); border-radius: 1rem; padding: 1.5rem;
+  border: 1px solid hsl(var(--border) / 0.5);
+}
+.astro-person-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+.astro-person-icon {
+  width: 2rem; height: 2rem; border-radius: 50%;
+  background: linear-gradient(135deg, hsl(270 60% 60%), hsl(340 60% 60%));
+  color: #fff; display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700;
+}
+
+/* Input */
+.astro-input {
+  width: 100%; padding: 0.75rem 1rem; border-radius: 0.75rem; font-size: 1rem;
+  background: hsl(var(--background)); color: hsl(var(--foreground));
+  border: 1.5px solid hsl(var(--border));
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.astro-input:focus {
+  outline: none; border-color: hsl(270 60% 60%);
+  box-shadow: 0 0 0 3px hsl(270 60% 60% / 0.15);
+}
+.astro-input::placeholder { color: hsl(var(--muted-foreground)); }
+
+/* Select */
+.astro-select-wrapper { position: relative; }
+.astro-select {
+  width: 100%; padding: 0.75rem 1rem; border-radius: 0.75rem; font-size: 1rem;
+  background: hsl(var(--background)); color: hsl(var(--foreground));
+  border: 1.5px solid hsl(var(--border));
+  appearance: none; cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.astro-select:focus {
+  outline: none; border-color: hsl(270 60% 60%);
+  box-shadow: 0 0 0 3px hsl(270 60% 60% / 0.15);
+}
+.astro-select-wrapper::after {
+  content: '▾'; position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);
+  pointer-events: none; color: hsl(var(--muted-foreground)); font-size: 0.875rem;
+}
+
+/* Submit button */
+.astro-submit-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 1rem 2rem; border-radius: 0.75rem; font-size: 1.125rem; font-weight: 600;
+  background: linear-gradient(135deg, hsl(270 60% 55%), hsl(340 60% 55%));
+  color: #fff; border: none; cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+  box-shadow: 0 4px 15px hsl(270 60% 50% / 0.3);
+}
+.astro-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px hsl(270 60% 50% / 0.4); }
+.astro-submit-btn:active { transform: translateY(0); }
+
+/* Score circle */
+.astro-score-main { display: flex; flex-direction: column; align-items: center; }
+.astro-score-circle { position: relative; width: 160px; height: 160px; }
+.astro-score-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.astro-score-bg { fill: none; stroke: hsl(var(--muted)); stroke-width: 8; }
+.astro-score-fill {
+  fill: none; stroke: url(#astroGrad); stroke-width: 8; stroke-linecap: round;
+  transition: stroke-dashoffset 1.5s ease-out;
+}
+.astro-score-value {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+}
+.astro-score-value span:first-child { font-size: 2.5rem; font-weight: 800; line-height: 1; color: hsl(var(--foreground)); }
+.astro-score-unit { font-size: 0.875rem; color: hsl(var(--muted-foreground)); }
+
+/* Detail cards */
+.astro-detail-card {
+  background: hsl(var(--muted) / 0.3); border: 1px solid hsl(var(--border) / 0.5);
+  border-radius: 1rem; padding: 1.5rem; text-align: center;
+}
+.astro-detail-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.astro-detail-score {
+  font-size: 1.5rem; font-weight: 700;
+  background: linear-gradient(135deg, hsl(270 60% 60%), hsl(340 60% 60%));
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
