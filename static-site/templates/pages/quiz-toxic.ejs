@@ -53,6 +53,13 @@
 <section class="relative overflow-hidden hero-gradient py-16 md:py-24">
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= quizTitle %></li>
+        </ol>
+      </nav>
       <% const heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>
       <span class="hero-badge mb-4">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
