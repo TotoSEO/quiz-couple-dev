@@ -31,6 +31,131 @@ const article: BlogArticleData = {
 <p>Acuario (2/10) representa la asociación más difícil para Virgo. Sus modos de pensar — pragmático frente a idealista — chocan en casi todo. No es insuperable, pero exige una voluntad que ambos signos no siempre tienen.</p>`,
     },
     {
+      id: 'compatibilite-signe-par-signe',
+      title: `Compatibilidad signo por signo`,
+      content: `
+<div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fdba74;font-size:1.15rem;font-weight:800;color:#ea580c;">4<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7c2d12;">Virgo + Aries</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Virgo es prudente; Aries, brusco. Tienen métodos de decisión opuestos que generan tensión constante. Requiere tolerancia máxima.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">9<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Virgo + Tauro</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#059669" clip-path="url(#half)"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Compatibilidad altísima (Tierra). Comparten valores de seguridad, realismo y confort. Se apoyan mutuamente formando un hogar metódico y armónico.</p>
+</div>
+<div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fdba74;font-size:1.15rem;font-weight:800;color:#ea580c;">4<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7c2d12;">Virgo + Géminis</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Virgo busca orden; Géminis, diversidad. Les cuesta encontrar terreno común, debiendo trabajar mucho para tolerar el ritmo del otro.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Virgo + Cáncer</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Dúo cálido y fiable. Virgo aporta sentido práctico, y Cáncer aporta calidez afectiva. Construyen una vida estable y disfrutan planificando su futuro juntos.</p>
+</div>
+<div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fdba74;font-size:1.15rem;font-weight:800;color:#ea580c;">4<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7c2d12;">Virgo + Leo</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">La discreta Virgo se desconcierta ante la necesidad expresiva de Leo. Falta de sintonía natural que requiere grandes concesiones mutuas.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Virgo + Virgo</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Gran armonía en los detalles y la organización. Pareja estructurada, aunque deben evitar caer en la crítica constante entre ellos.</p>
+</div>
+<div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fdba74;font-size:1.15rem;font-weight:800;color:#ea580c;">4<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7c2d12;">Virgo + Libra</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Libra busca la estética y ligereza; Virgo, la eficiencia. Sus métodos chocan, siendo necesario un esfuerzo consciente para complementarse.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">9<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Virgo + Escorpio</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#059669" clip-path="url(#half)"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Excelente encaje. Virgo tranquiliza a Escorpio con su lealtad, y Escorpio anima a Virgo a profundizar. Ambos valoran el compromiso serio.</p>
+</div>
+<div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fdba74;font-size:1.15rem;font-weight:800;color:#ea580c;">4<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7c2d12;">Virgo + Sagitario</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">El aventurero Sagitario frustra a la prudente Virgo, y viceversa. Muy poca comprensión espontánea de las necesidades del otro.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">9<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Virgo + Capricornio</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#059669" clip-path="url(#half)"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Excelente alianza de pragmatismo. Comparten ambición, sentido del deber y respeto mutuo. Construyen su futuro con responsabilidad compartida.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">2<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Virgo + Acuario</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Muy difíciles de encajar. Las tradiciones de Virgo chocan con la originalidad e imprevisibilidad de Acuario. Compatibilidad muy baja.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Virgo + Piscis</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Opuestos complementarios. Piscis aporta imaginación e indulgencia, mientras que Virgo organiza el lado práctico de la vida de Piscis. Buena sintonía.</p>
+</div>`,
+    },
+    {
       id: 'descubre-mas',
       title: `Descubre más`,
       content: `<ul>

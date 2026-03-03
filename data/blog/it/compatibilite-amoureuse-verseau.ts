@@ -31,6 +31,131 @@ const article: BlogArticleData = {
 <p>Il Toro (3/10) e lo Scorpione (3/10) rappresentano le sfide più impegnative. Il Toro vuole stabilità e routine — due parole che all'Acquario provocano orticaria. Lo Scorpione chiede una fusione emotiva che l'Acquario vive come invasione del proprio spazio interiore. Non è impossibile — ma richiede che entrambi rinuncino a qualcosa di fondamentale, e questo raramente funziona a lungo. L'Ariete (7/10) è una sorpresa positiva: la sua energia diretta e il suo anticonformismo parlano lo stesso linguaggio dell'Acquario, creando una coppia dinamica e mai noiosa.</p>`,
     },
     {
+      id: 'compatibilite-signe-par-signe',
+      title: `Compatibilità segno per segno`,
+      content: `
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Acquario + Ariete</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Coppia libera e innovativa. Gusto per la sfida e rispetto dell'indipendenza reciproca.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">3<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Acquario + Toro</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#dc2626" clip-path="url(#half)"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">L'ansia di innovazione dell'Acquario si scontra con il bisogno di conservare le tradizioni del Toro.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">9<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Acquario + Gemelli</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#059669" clip-path="url(#half)"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Geniale connessione d'Aria. Condividono idee all'avanguardia, libertà totale e grande stimolazione mentale.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">2<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Acquario + Cancro</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">L'Acquario è razionale e distaccato; il Cancro è dipendente ed emotivo.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Acquario + Leone</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Attrazione degli opposti. Relazione creativa e magnetica basata sul fascino per le differenze altrui.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">2<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Acquario + Vergine</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">La prevedibilità della Vergine annoia l'Acquario, e l'imprevedibilità dell'Acquario stressa la Vergine.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">9<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Acquario + Bilancia</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#059669" clip-path="url(#half)"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Forte affinità. Condividono ideali umanisti e un'enorme connessione intellettuale basata sull'armonia.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">3<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Acquario + Scorpione</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#dc2626" clip-path="url(#half)"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">La razionalità distaccata dell'Acquario fa sentire insicuro l'intenso Scorpione.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Acquario + Sagittario</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Due anime libere che si godono l'esplorazione del futuro. Ottima amicizia e romanticismo.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">2<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Acquario + Capricorno</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Relazione quasi impossibile senza concessioni estreme (tradizione contro ribellione).</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Acquario + Acquario</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Duo estremamente intellettuale, indipendente e umanista. Condividono progetti e si concedono la massima libertà.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">2<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Acquario + Pesci</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">L'Acquario valora l'astrazione, mentre i Pesci vivono attraverso le loro profonde emozioni. Mancanza di sintonia.</p>
+</div>`,
+    },
+    {
       id: 'scopri-di-piu',
       title: `Scopri di più`,
       content: `<ul>

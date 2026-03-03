@@ -31,6 +31,131 @@ const article: BlogArticleData = {
 <p>Der Stier (3/10) und der Skorpion (4/10) stellen den Wassermann vor seine härtesten Prüfungen. Der Stier will Beständigkeit und Besitz — zwei Konzepte, die den Wassermann nervös machen. Der Skorpion fordert emotionale Tiefe und Exklusivität — und interpretiert die Distanz des Wassermanns als Gleichgültigkeit, was sie nicht ist. <strong>Diese Verbindungen scheitern selten an mangelnder Anziehung — sie scheitern an fundamental verschiedenen Definitionen dessen, was Liebe bedeutet.</strong></p>`,
     },
     {
+      id: 'compatibilite-signe-par-signe',
+      title: `Kompatibilität Zeichen für Zeichen`,
+      content: `
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Wassermann + Widder</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Wassermann (Luft) und Widder (Feuer) bilden ein freies, innovatives Paar, basierend auf tiefem gegenseitigen Vertrauen.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">3<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Wassermann + Stier</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#dc2626" clip-path="url(#half)"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Wassermann (Luft) und Stier (Erde) haben stark abweichende Erwartungen (soziale Innovation vs. Tradition).</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">9<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Wassermann + Zwillinge</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#059669" clip-path="url(#half)"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Wassermann (Luft) und Zwillinge (Luft) teilen dasselbe Element und lieben intellektuelle Diskussionen und Avantgarde-Projekte.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">2<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Wassermann + Krebs</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Wassermann (Luft) und Krebs (Wasser) passen schwer zusammen. Der Wassermann erscheint dem Krebs oft zu kalt.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Wassermann + Löwe</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Wassermann (Luft) und Löwe (Feuer) sind Gegensätze, die sich stark anziehen und gemeinsam Großes erschaffen können.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">2<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Wassermann + Jungfrau</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Wassermann (Luft) und Jungfrau (Erde) sind kaum kompatibel, da sie keine offensichtliche gemeinsame Vision haben.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">9<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Wassermann + Waage</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#059669" clip-path="url(#half)"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Wassermann (Luft) und Waage (Luft) teilen eine große elementare Affinität und stimulieren sich gegenseitig geistig extrem gut.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">3<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Wassermann + Skorpion</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#dc2626" clip-path="url(#half)"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Wassermann (Luft) und Skorpion (Wasser) haben völlig gegensätzliche Naturen (Rationalität vs. tiefe emotionale Besitztümer).</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Wassermann + Schütze</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Wassermann (Luft) und Schütze (Feuer) verstehen sich sehr gut, da beide Freiheit und Innovation über alles lieben.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">2<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Wassermann + Steinbock</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Wassermann (Luft) und Steinbock (Erde) sind fast inkompatibel. Tradition prallt auf Exzentrik.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Wassermann + Wassermann</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Ein äußerst intellektuelles, unabhängiges und humanistisches Duo. Zwei Wassermänner teilen idealistische Projekte und gewähren sich gegenseitig die Freiheit, die beide als lebenswichtig erachten.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">2<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Wassermann + Fische</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Wassermann (Luft) und Fische (Wasser) funktionieren unterschiedlich und erfordern große Anstrengungen für ein Auskommen.</p>
+</div>`,
+    },
+    {
       id: 'mehr-entdecken',
       title: `Mehr entdecken`,
       content: `<ul>

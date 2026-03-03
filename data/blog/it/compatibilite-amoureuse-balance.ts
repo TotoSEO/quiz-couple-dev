@@ -31,6 +31,131 @@ const article: BlogArticleData = {
 <p>Il Cancro (4/10) e il Capricorno (5/10) rappresentano sfide diverse ma ugualmente impegnative. Il Cancro è troppo emotivamente intenso per la Bilancia, che preferisce gestire i sentimenti con grazia piuttosto che viverli crudi. Il Capricorno è troppo rigido, troppo "bianco o nero" per un segno che vive nelle sfumature. Queste relazioni possono funzionare — ma richiedono che entrambi escano dalla propria zona di comfort.</p>`,
     },
     {
+      id: 'compatibilite-signe-par-signe',
+      title: `Compatibilità segno per segno`,
+      content: `
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Bilancia + Ariete</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Opposti che si attraggono. La Bilancia porta diplomazia; l'Ariete, passione e franchezza.</p>
+</div>
+<div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fdba74;font-size:1.15rem;font-weight:800;color:#ea580c;">5<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7c2d12;">Bilancia + Toro</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#ea580c" clip-path="url(#half)"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Entrambi governati da Venere, amano il comfort, ma il Toro è più possessivo e la Bilancia più intellettuale.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">9<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Bilancia + Gemelli</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#059669" clip-path="url(#half)"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Eccellente armonia naturale (Aria). Amano comunicare e socializzare. Relazione molto fluida.</p>
+</div>
+<div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fdba74;font-size:1.15rem;font-weight:800;color:#ea580c;">4<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7c2d12;">Bilancia + Cancro</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Aspettative diverse. Il Cancro cerca profondità affettiva e può giudicare la Bilancia distante o indecisa.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">8<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Bilancia + Leone</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Coppia brillante. La Bilancia ammira il carisma del Leone e sa come gestirlo con diplomazia.</p>
+</div>
+<div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fdba74;font-size:1.15rem;font-weight:800;color:#ea580c;">4<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7c2d12;">Bilancia + Vergine</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Valori divergenti. Il bisogno di leggerezza della Bilancia si scontra con l'approccio critico della Vergine.</p>
+</div>
+<div style="border:1px solid #fcd34d;border-radius:12px;padding:1.25rem 1.5rem;background:#fffbeb;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fcd34d;font-size:1.15rem;font-weight:800;color:#d97706;">7<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#78350f;">Bilancia + Bilancia</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#d97706" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#d97706" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#d97706" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#d97706" clip-path="url(#half)"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Armonia naturale. Cercano l'equilibrio, ma la relazione può mancare di decisione (doppia indecisione).</p>
+</div>
+<div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fdba74;font-size:1.15rem;font-weight:800;color:#ea580c;">4<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7c2d12;">Bilancia + Scorpione</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">L'intensità e la gelosia dello Scorpione innervosiscono spesso la pacifica Bilancia.</p>
+</div>
+<div style="border:1px solid #fcd34d;border-radius:12px;padding:1.25rem 1.5rem;background:#fffbeb;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fcd34d;font-size:1.15rem;font-weight:800;color:#d97706;">7<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#78350f;">Bilancia + Sagittario</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#d97706" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#d97706" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#d97706" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#d97706" clip-path="url(#half)"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Buona intesa. Entrambi socievoli e aperti. Relazione positiva e dinamica.</p>
+</div>
+<div style="border:1px solid #fca5a5;border-radius:12px;padding:1.25rem 1.5rem;background:#fef2f2;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fca5a5;font-size:1.15rem;font-weight:800;color:#dc2626;">3<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7f1d1d;">Bilancia + Capricorno</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#dc2626" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#dc2626" clip-path="url(#half)"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Il Capricorno è realista e austero; la Bilancia idealista e cerca la bellezza. Visioni troppo opposte.</p>
+</div>
+<div style="border:1px solid #6ee7b7;border-radius:12px;padding:1.25rem 1.5rem;background:#ecfdf5;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #6ee7b7;font-size:1.15rem;font-weight:800;color:#059669;">9<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#065f46;">Bilancia + Acquario</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#059669" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><clipPath id="half"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#059669" clip-path="url(#half)"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Forte affinità mentale. Condividono una visione idealista e progressista del mondo. Eccellente connessione.</p>
+</div>
+<div style="border:1px solid #fdba74;border-radius:12px;padding:1.25rem 1.5rem;background:#fff7ed;margin-bottom:1rem;">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+<div style="display:flex;align-items:center;gap:0.75rem;">
+<span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:white;border:2px solid #fdba74;font-size:1.15rem;font-weight:800;color:#ea580c;">4<span style="font-size:0.7rem;font-weight:600;">/10</span></span>
+<strong style="font-size:1.1rem;color:#7c2d12;">Bilancia + Pesci</strong>
+</div>
+<div style="display:flex;align-items:center;gap:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#ea580c" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+</div>
+<p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.65;">Modi diversi di vivere l'affetto. La Bilancia è equilibrata e razionale; i Pesci pura emozione.</p>
+</div>`,
+    },
+    {
       id: 'scopri-di-piu',
       title: `Scopri di più`,
       content: `<ul>
