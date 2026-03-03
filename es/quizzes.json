@@ -105,5 +105,11 @@
     "shortTitle": "Compatibilidad Astro",
     "description": "Descubre la compatibilidad amorosa entre vuestros nombres y signos zodiacales. Numerología y astrología combinadas.",
     "metaDescription": "Introduce vuestros nombres y signos zodiacales. Nuestro test combina numerología y astrología para revelar lo que las estrellas dicen de vuestra compatibilidad."
+  },
+  "testEmmenager": {
+    "title": "¿Preparados para vivir juntos? Test para parejas",
+    "shortTitle": "Test Convivencia",
+    "description": "20 preguntas para saber si estáis preparados para vivir juntos. Test gratuito para parejas, resultado inmediato.",
+    "metaDescription": "¿Listos para dar el paso y vivir juntos? Este test de pareja os ayuda a saber si sois realmente compatibles en el día a día. 2 modos: juntos o por separado."
   }
 }
