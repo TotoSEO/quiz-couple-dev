@@ -25,6 +25,16 @@
     "s2_2Item2Text": "To verify the daily limit",
     "s2_2Important": "Important:",
     "s2_2ImportantText": "This technical data is kept for a maximum of 7 days then automatically deleted. The content of your descriptions and versions of events is <strong>never stored</strong> on our servers — it is only transmitted to the AI for analysis and then immediately deleted.",
+    "s2_3Title": "2.3 Data collected via download forms",
+    "s2_3Intro": "When you request free content (e-book, guide), we collect the following information with your explicit consent:",
+    "s2_3Item1Label": "First name:",
+    "s2_3Item1Text": "To personalise our communications",
+    "s2_3Item2Label": "Email address:",
+    "s2_3Item2Text": "To send you the requested content and, with your consent, occasional informational communications",
+    "s2_3Item3Label": "Request subject:",
+    "s2_3Item3Text": "To identify the content you requested",
+    "s2_3Important": "Important:",
+    "s2_3ImportantText": "You can withdraw your consent at any time by contacting us at the address indicated below. Your data will then be deleted within 30 days.",
     "s3Title": "3. Use of Artificial Intelligence",
     "s3Intro": "Our \"Solve a couple problem\" feature uses an artificial intelligence model (OpenAI) to analyze conflicts and offer advice.",
     "s3_1Title": "3.1 Data Processing by the AI",
@@ -72,7 +82,7 @@
     "s9Text": "We reserve the right to modify this privacy policy at any time. Any changes will be posted on this page with an update date. We encourage you to check this page regularly.",
     "s10Title": "10. Contact",
     "s10Text": "For any questions about this privacy policy or to exercise your rights, you can contact us at the following address:",
-    "lastUpdated": "Last updated: February 2026"
+    "lastUpdated": "Last updated: March 2026"
   },
   "mentions": {
     "seoTitle": "Legal Notice | Quiz Couple",
@@ -118,6 +128,6 @@
     "s8Text": "These legal notices are governed by French law. In the event of a dispute, French courts shall have sole jurisdiction.",
     "s9Title": "9. Contact",
     "s9Text": "For any questions or requests for information regarding the site, you can contact us at the following address:",
-    "lastUpdated": "Last updated: February 2026"
+    "lastUpdated": "Last updated: March 2026"
   }
 }

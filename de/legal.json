@@ -25,6 +25,16 @@
     "s2_2Item2Text": "Zur Überprüfung des täglichen Limits",
     "s2_2Important": "Wichtig:",
     "s2_2ImportantText": "Diese technischen Daten werden maximal 7 Tage aufbewahrt und dann automatisch gelöscht. Der Inhalt Ihrer Beschreibungen und Versionen der Ereignisse wird <strong>niemals</strong> auf unseren Servern gespeichert — er wird nur zur Analyse an die KI übermittelt und dann sofort gelöscht.",
+    "s2_3Title": "2.3 Über Download-Formulare erfasste Daten",
+    "s2_3Intro": "Wenn Sie kostenlose Inhalte anfordern (E-Book, Leitfaden), erfassen wir mit Ihrer ausdrücklichen Einwilligung folgende Informationen:",
+    "s2_3Item1Label": "Vorname:",
+    "s2_3Item1Text": "Um unsere Kommunikation zu personalisieren",
+    "s2_3Item2Label": "E-Mail-Adresse:",
+    "s2_3Item2Text": "Um Ihnen den angeforderten Inhalt zu senden und, mit Ihrer Zustimmung, gelegentliche informative Mitteilungen",
+    "s2_3Item3Label": "Betreff der Anfrage:",
+    "s2_3Item3Text": "Um den von Ihnen angeforderten Inhalt zu identifizieren",
+    "s2_3Important": "Wichtig:",
+    "s2_3ImportantText": "Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie uns unter der unten angegebenen Adresse kontaktieren. Ihre Daten werden dann innerhalb von 30 Tagen gelöscht.",
     "s3Title": "3. Nutzung Künstlicher Intelligenz",
     "s3Intro": "Unsere Funktion \"Paar-Problem lösen\" verwendet ein Modell für künstliche Intelligenz (OpenAI), um Konflikte zu analysieren und Ratschläge anzubieten.",
     "s3_1Title": "3.1 Datenverarbeitung durch die KI",
@@ -72,7 +82,7 @@
     "s9Text": "Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu ändern. Alle Änderungen werden auf dieser Seite mit einem Aktualisierungsdatum veröffentlicht. Wir empfehlen Ihnen, diese Seite regelmäßig zu besuchen.",
     "s10Title": "10. Kontakt",
     "s10Text": "Bei Fragen zu dieser Datenschutzerklärung oder zur Ausübung Ihrer Rechte können Sie uns unter folgender Adresse kontaktieren:",
-    "lastUpdated": "Letzte Aktualisierung: Februar 2026"
+    "lastUpdated": "Letzte Aktualisierung: März 2026"
   },
   "mentions": {
     "seoTitle": "Impressum | Quiz Couple",
@@ -118,6 +128,6 @@
     "s8Text": "Dieses Impressum unterliegt dem französischen Recht. Im Falle eines Rechtsstreits sind ausschließlich die französischen Gerichte zuständig.",
     "s9Title": "9. Kontakt",
     "s9Text": "Bei Fragen oder Informationsanfragen zur Website können Sie uns unter folgender Adresse kontaktieren:",
-    "lastUpdated": "Letzte Aktualisierung: Februar 2026"
+    "lastUpdated": "Letzte Aktualisierung: März 2026"
   }
 }
