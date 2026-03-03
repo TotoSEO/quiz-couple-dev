@@ -25,6 +25,16 @@
     "s2_2Item2Text": "Per verificare il limite giornaliero",
     "s2_2Important": "Importante:",
     "s2_2ImportantText": "Questi dati tecnici sono conservati per un massimo di 7 giorni e poi eliminati automaticamente. Il contenuto delle vostre descrizioni e versioni dei fatti non viene <strong>mai archiviato</strong> sui nostri server — viene solo trasmesso all'IA per l'analisi e poi immediatamente cancellato.",
+    "s2_3Title": "2.3 Dati raccolti tramite moduli di download",
+    "s2_3Intro": "Quando richiedete contenuti gratuiti (e-book, guida), raccogliamo le seguenti informazioni con il vostro consenso esplicito:",
+    "s2_3Item1Label": "Nome:",
+    "s2_3Item1Text": "Per personalizzare le nostre comunicazioni",
+    "s2_3Item2Label": "Indirizzo e-mail:",
+    "s2_3Item2Text": "Per inviarvi il contenuto richiesto e, con il vostro consenso, comunicazioni informative occasionali",
+    "s2_3Item3Label": "Oggetto della richiesta:",
+    "s2_3Item3Text": "Per identificare il contenuto che avete richiesto",
+    "s2_3Important": "Importante:",
+    "s2_3ImportantText": "Potete revocare il vostro consenso in qualsiasi momento contattandoci all'indirizzo indicato di seguito. I vostri dati saranno cancellati entro 30 giorni.",
     "s3Title": "3. Utilizzo dell'Intelligenza Artificiale",
     "s3Intro": "La nostra funzionalità \"Risolvere un problema di coppia\" utilizza un modello di intelligenza artificiale (OpenAI) per analizzare i conflitti e proporre consigli.",
     "s3_1Title": "3.1 Trattamento dei dati da parte dell'IA",
@@ -72,7 +82,7 @@
     "s9Text": "Ci riserviamo il diritto di modificare questa informativa sulla privacy in qualsiasi momento. Ogni modifica verrà pubblicata su questa pagina con una data di aggiornamento. Vi incoraggiamo a consultare regolarmente questa pagina.",
     "s10Title": "10. Contatto",
     "s10Text": "Per qualsiasi domanda riguardante questa informativa sulla privacy o per esercitare i vostri diritti, potete contattarci al seguente indirizzo:",
-    "lastUpdated": "Ultimo aggiornamento: Febbraio 2026"
+    "lastUpdated": "Ultimo aggiornamento: Marzo 2026"
   },
   "mentions": {
     "seoTitle": "Note Legali | Quiz Couple",
@@ -118,6 +128,6 @@
     "s8Text": "Le presenti note legali sono disciplinate dal diritto francese. In caso di controversia, i tribunali francesi saranno gli unici competenti.",
     "s9Title": "9. Contatto",
     "s9Text": "Per qualsiasi domanda o richiesta di informazioni riguardante il sito, potete contattarci al seguente indirizzo:",
-    "lastUpdated": "Ultimo aggiornamento: Febbraio 2026"
+    "lastUpdated": "Ultimo aggiornamento: Marzo 2026"
   }
 }

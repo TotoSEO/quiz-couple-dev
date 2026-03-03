@@ -25,6 +25,16 @@
     "s2_2Item2Text": "Pour vérifier la limite quotidienne",
     "s2_2Important": "Important :",
     "s2_2ImportantText": "Ces données techniques sont conservées 7 jours maximum puis automatiquement supprimées. Le contenu de vos descriptions et versions des faits n'est <strong>jamais stocké</strong> sur nos serveurs — il est uniquement transmis à l'IA pour analyse puis immédiatement effacé.",
+    "s2_3Title": "2.3 Données collectées via les formulaires de téléchargement",
+    "s2_3Intro": "Lorsque vous demandez à recevoir un contenu gratuit (e-book, guide), nous collectons les informations suivantes avec votre consentement explicite :",
+    "s2_3Item1Label": "Prénom :",
+    "s2_3Item1Text": "Pour personnaliser nos communications",
+    "s2_3Item2Label": "Adresse e-mail :",
+    "s2_3Item2Text": "Pour vous envoyer le contenu demandé et, avec votre accord, des communications occasionnelles à des fins informationnelles",
+    "s2_3Item3Label": "Sujet de la demande :",
+    "s2_3Item3Text": "Pour identifier le contenu que vous avez demandé",
+    "s2_3Important": "Important :",
+    "s2_3ImportantText": "Vous pouvez retirer votre consentement à tout moment en nous contactant à l'adresse indiquée ci-dessous. Vos données seront alors supprimées dans un délai de 30 jours.",
     "s3Title": "3. Utilisation de l'Intelligence Artificielle",
     "s3Intro": "Notre fonctionnalité \"Résoudre un problème de couple\" utilise un modèle d'intelligence artificielle (OpenAI) pour analyser les conflits et proposer des conseils.",
     "s3_1Title": "3.1 Traitement des données par l'IA",
@@ -72,7 +82,7 @@
     "s9Text": "Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Toute modification sera publiée sur cette page avec une date de mise à jour. Nous vous encourageons à consulter régulièrement cette page.",
     "s10Title": "10. Contact",
     "s10Text": "Pour toute question concernant cette politique de confidentialité ou pour exercer vos droits, vous pouvez nous contacter à l'adresse suivante :",
-    "lastUpdated": "Dernière mise à jour : Février 2026"
+    "lastUpdated": "Dernière mise à jour : Mars 2026"
   },
   "mentions": {
     "seoTitle": "Mentions Légales | Quiz Couple",

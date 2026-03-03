@@ -203,12 +203,24 @@
             <p id="result-numero-detail" class="text-muted-foreground leading-relaxed"></p>
           </div>
 
-          <!-- Try Again -->
-          <div class="text-center">
+          <!-- Try Again + CTAs -->
+          <div class="text-center space-y-3">
             <button id="astro-retry" class="btn btn-outline px-8 py-3">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
               <%= t(ns + ':results.tryAgain', 'Tester un autre couple') %>
             </button>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-3">
+              <a href="<%= getLocalizedUrl('home', lang) %>#review-form-section" class="btn btn-outline px-6 py-2.5 text-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <%= lang === 'fr' ? 'Laisser un avis' : lang === 'es' ? 'Dejar una opinión' : lang === 'de' ? 'Bewertung abgeben' : lang === 'it' ? 'Lascia una recensione' : 'Leave a review' %>
+              </a>
+              <% if (lang === 'fr') { %>
+              <a href="#ebook-form-section" class="btn btn-primary px-6 py-2.5 text-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                Apprendre l'astrologie gratuitement en 30 minutes
+              </a>
+              <% } %>
+            </div>
           </div>
         </div>
       </div>
@@ -216,8 +228,9 @@
   </div>
 </section>
 
-<!-- E-Book Lead Magnet -->
-<section class="ebook-section py-16 md:py-20">
+<!-- E-Book Lead Magnet (FR only) -->
+<% if (lang === 'fr') { %>
+<section class="ebook-section py-16 md:py-20" id="ebook-astro">
   <div class="container mx-auto px-4 max-w-4xl">
     <div class="ebook-card">
       <div class="ebook-layout">
@@ -242,7 +255,7 @@
       </div>
 
       <!-- Email capture form -->
-      <div class="ebook-form-section">
+      <div class="ebook-form-section" id="ebook-form-section">
         <h3 class="text-xl font-bold mb-2">Recevez votre guide gratuit immédiatement</h3>
         <p class="text-muted-foreground mb-6">Pas de théorie ennuyeuse, juste des exercices pratiques et des déclics sur vous-même. Entrez simplement votre prénom et votre adresse e-mail ci-dessous, et téléchargez votre e-book.</p>
         <form id="ebook-lead-form" class="ebook-form">
@@ -250,6 +263,14 @@
             <input type="text" id="ebook-firstname" class="input" placeholder="Prénom" required maxlength="50" autocomplete="given-name">
             <input type="email" id="ebook-email" class="input" placeholder="Adresse e-mail" required maxlength="100" autocomplete="email">
           </div>
+          <!-- Honeypot anti-spam -->
+          <div style="position:absolute;left:-9999px;" aria-hidden="true">
+            <input type="text" id="ebook-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <label class="ebook-consent">
+            <input type="checkbox" id="ebook-consent-cb" required>
+            <span class="text-sm text-muted-foreground">En recevant mon E-Book, j'accepte que QuizCouple me contacte occasionnellement à des fins informationnelles, et conserve mes informations en accord avec la <a href="<%= getLocalizedUrl('privacy', lang) %>" target="_blank" class="text-primary hover:underline">politique de confidentialité</a>.</span>
+          </label>
           <button type="submit" id="ebook-submit-btn" class="btn btn-cta btn-gradient ebook-submit-btn">
             <span>OUI ! JE VEUX MON E-BOOK GRATUIT</span>
           </button>
@@ -259,6 +280,7 @@
     </div>
   </div>
 </section>
+<% } %>
 
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
@@ -524,10 +546,16 @@
       e.preventDefault();
       var firstName = document.getElementById('ebook-firstname').value.trim();
       var email = document.getElementById('ebook-email').value.trim();
+      var honeypot = document.getElementById('ebook-website');
+      var consent = document.getElementById('ebook-consent-cb');
       var statusEl = document.getElementById('ebook-form-status');
       var submitBtn = document.getElementById('ebook-submit-btn');
 
+      // Anti-spam: honeypot field must be empty
+      if (honeypot && honeypot.value) return;
+
       if (!firstName || !email) return;
+      if (!consent || !consent.checked) return;
 
       submitBtn.disabled = true;
       submitBtn.querySelector('span').textContent = 'Envoi en cours...';
