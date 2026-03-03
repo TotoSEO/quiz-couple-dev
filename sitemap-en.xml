@@ -137,24 +137,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/resoudre-probleme-couple/"/>
   </url>
   <url>
-    <loc>https://quiz-couple.com/en/legal-notice/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/mentions-legales/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/legal-notice/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/aviso-legal/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/impressum/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/note-legali/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/mentions-legales/"/>
-  </url>
-  <url>
-    <loc>https://quiz-couple.com/en/privacy-policy/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/confidentialite/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/privacy-policy/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/politica-privacidad/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/datenschutz/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/confidentialite/"/>
-  </url>
-  <url>
     <loc>https://quiz-couple.com/en/blog/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/"/>
@@ -180,6 +162,15 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/elternschafts-bereitschaftstest/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-genitorialita-coppia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-parentalite-couple/"/>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/en/moving-in-together-test/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-habiter-vivre-ensemble/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/moving-in-together-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-vivir-juntos-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/zusammenziehen-test-paare/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-andare-a-vivere-insieme/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-habiter-vivre-ensemble/"/>
   </url>
   <url>
     <loc>https://quiz-couple.com/en/zodiac-signs-names-compatibility/</loc>
