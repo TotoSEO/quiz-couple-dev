@@ -594,7 +594,9 @@ function buildSeedArticles() {
     // Read FR article to get author_id and featured_image_url
     const frData = parseArticleTs(path.resolve(__dirname, '../../data/blog/fr', `${meta.internalSlug}.ts`));
     if (frData) {
-      entry.featured_image_url = frData.featuredImage || '';
+      // Only set featured_image_url if the TS file has a real value;
+      // empty string would cause the seed to overwrite admin-uploaded images
+      if (frData.featuredImage) entry.featured_image_url = frData.featuredImage;
       if (frData.author && frData.author.id) entry.author_id = frData.author.id;
     }
 

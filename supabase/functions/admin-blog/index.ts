@@ -384,14 +384,19 @@ serve(async (req) => {
 
         if (existing) {
           // Update existing article and upsert translations
+          // Only overwrite featured_image_url if the seed provides a non-empty value,
+          // otherwise keep the existing image (may have been set via admin upload)
+          const updateData: Record<string, unknown> = {
+            author_id: art.author_id || 'mathieu-courtin',
+            status: art.status || 'published',
+            published_at: art.published_at || new Date().toISOString(),
+          };
+          if (art.featured_image_url) {
+            updateData.featured_image_url = art.featured_image_url;
+          }
           await supabase
             .from('blog_articles')
-            .update({
-              featured_image_url: art.featured_image_url || null,
-              author_id: art.author_id || 'mathieu-courtin',
-              status: art.status || 'published',
-              published_at: art.published_at || new Date().toISOString(),
-            })
+            .update(updateData)
             .eq('id', existing.id);
 
           if (art.translations) {
