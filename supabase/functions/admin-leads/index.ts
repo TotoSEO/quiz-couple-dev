@@ -24,7 +24,6 @@ async function verifyAdminToken(token: string): Promise<boolean> {
 }
 
 serve(async (req) => {
-  // Handle CORS preflight
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
@@ -40,85 +39,47 @@ serve(async (req) => {
       );
     }
 
-    // Create Supabase client with service role for admin operations
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    const url = new URL(req.url);
-    const action = url.searchParams.get('action');
-
+    // GET: list all leads
     if (req.method === 'GET') {
-      // Fetch all reviews (including non-approved)
-      const { data: reviews, error } = await supabase
-        .from('reviews')
+      const { data: leads, error } = await supabase
+        .from('leads')
         .select('*')
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: false })
+        .limit(200);
 
       if (error) throw error;
 
       return new Response(
-        JSON.stringify({ success: true, reviews }),
+        JSON.stringify({ success: true, leads }),
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
 
+    // POST: update a lead (toggle is_closed)
     if (req.method === 'POST') {
-      const { reviewId, action: bodyAction } = await req.json();
-      const reviewAction = action || bodyAction;
+      const { id, is_closed } = await req.json();
 
-      if (!reviewId) {
+      if (!id) {
         return new Response(
-          JSON.stringify({ success: false, error: 'ID de l\'avis requis' }),
+          JSON.stringify({ success: false, error: 'ID du lead requis' }),
           { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         );
       }
 
-      if (reviewAction === 'approve') {
-        const { error } = await supabase
-          .from('reviews')
-          .update({ is_approved: true })
-          .eq('id', reviewId);
+      const { error } = await supabase
+        .from('leads')
+        .update({ is_closed: !!is_closed })
+        .eq('id', id);
 
-        if (error) throw error;
-
-        return new Response(
-          JSON.stringify({ success: true, message: 'Avis approuvé' }),
-          { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      }
-
-      if (reviewAction === 'reject') {
-        const { error } = await supabase
-          .from('reviews')
-          .update({ is_approved: false })
-          .eq('id', reviewId);
-
-        if (error) throw error;
-
-        return new Response(
-          JSON.stringify({ success: true, message: 'Avis rejeté' }),
-          { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      }
-
-      if (reviewAction === 'delete') {
-        const { error } = await supabase
-          .from('reviews')
-          .delete()
-          .eq('id', reviewId);
-
-        if (error) throw error;
-
-        return new Response(
-          JSON.stringify({ success: true, message: 'Avis supprimé' }),
-          { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      }
+      if (error) throw error;
 
       return new Response(
-        JSON.stringify({ success: false, error: 'Action non reconnue' }),
-        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({ success: true }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
 

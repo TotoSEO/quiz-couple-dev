@@ -5,17 +5,34 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-admin-token',
 };
 
+const TOKEN_MAX_AGE = 86400; // 24 hours
+
+async function verifyAdminToken(token: string): Promise<boolean> {
+  const secret = Deno.env.get('ADMIN_PASSWORD');
+  if (!secret) return false;
+  const parts = token.split('.');
+  if (parts.length !== 2) return false;
+  const [timestampHex, signatureHex] = parts;
+  const timestamp = parseInt(timestampHex, 16);
+  if (isNaN(timestamp) || Math.floor(Date.now() / 1000) - timestamp > TOKEN_MAX_AGE) return false;
+  const encoder = new TextEncoder();
+  const key = await crypto.subtle.importKey('raw', encoder.encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+  const sig = await crypto.subtle.sign('HMAC', key, encoder.encode(timestampHex));
+  const expectedHex = Array.from(new Uint8Array(sig)).map(b => b.toString(16).padStart(2, '0')).join('');
+  return expectedHex === signatureHex;
+}
+
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    // Verify admin token
+    // Verify HMAC-signed admin token
     const adminToken = req.headers.get('x-admin-token');
-    if (!adminToken) {
+    if (!adminToken || !(await verifyAdminToken(adminToken))) {
       return new Response(
-        JSON.stringify({ success: false, error: 'Token admin requis' }),
+        JSON.stringify({ success: false, error: 'Token admin invalide' }),
         { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
