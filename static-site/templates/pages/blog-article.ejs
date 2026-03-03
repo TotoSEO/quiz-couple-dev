@@ -43,10 +43,6 @@
     <li><a href="<%= homeUrl %>"><%= homeLabel %></a></li>
     <li class="blog-breadcrumb-separator" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
     <li><a href="<%= blogUrl %>"><%= blogLabel %></a></li>
-    <% if (typeof articleCategoryLabel !== 'undefined' && articleCategoryLabel) { %>
-    <li class="blog-breadcrumb-separator" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
-    <li><%= articleCategoryLabel %></li>
-    <% } %>
     <li class="blog-breadcrumb-separator" aria-hidden="true"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
     <li class="blog-breadcrumb-current" aria-current="page"><%= article.title %></li>
   </ol>

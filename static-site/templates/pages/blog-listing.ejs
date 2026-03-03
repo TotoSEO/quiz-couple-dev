@@ -9,9 +9,9 @@
 
   <% if (blogCategories && blogCategories.length) { %>
   <nav class="blog-category-tabs" aria-label="Categories">
-    <button class="blog-category-tab is-active" data-category="all" onclick="filterCategory('all',this)"><%= allLabel %></button>
+    <a class="blog-category-tab" href="<%= getLocalizedPath('blog', lang) %>" data-category="all"><%= allLabel %></a>
     <% blogCategories.forEach(function(cat) { %>
-    <button class="blog-category-tab" data-category="<%= cat.key %>" onclick="filterCategory('<%= cat.key %>',this)"><%= cat.label %></button>
+    <a class="blog-category-tab" href="<%= getLocalizedPath('blog', lang) %>?category=<%= cat.key %>" data-category="<%= cat.key %>"><%= cat.label %></a>
     <% }); %>
   </nav>
   <% } %>
@@ -37,13 +37,27 @@
 </section>
 
 <script>
-function filterCategory(cat, btn) {
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var activeCat = params.get('category') || 'all';
+
+  // Activate the correct tab
   var tabs = document.querySelectorAll('.blog-category-tab');
-  for (var i = 0; i < tabs.length; i++) tabs[i].classList.remove('is-active');
-  btn.classList.add('is-active');
-  var cards = document.querySelectorAll('.blog-card[data-category]');
-  for (var j = 0; j < cards.length; j++) {
-    cards[j].style.display = (cat === 'all' || cards[j].getAttribute('data-category') === cat) ? '' : 'none';
+  for (var i = 0; i < tabs.length; i++) {
+    var tab = tabs[i];
+    if (tab.getAttribute('data-category') === activeCat) {
+      tab.classList.add('is-active');
+    }
   }
-}
+
+  // Filter cards
+  if (activeCat !== 'all') {
+    var cards = document.querySelectorAll('.blog-card[data-category]');
+    for (var j = 0; j < cards.length; j++) {
+      if (cards[j].getAttribute('data-category') !== activeCat) {
+        cards[j].style.display = 'none';
+      }
+    }
+  }
+})();
 </script>
