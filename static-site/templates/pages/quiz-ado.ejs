@@ -61,6 +61,13 @@
 <section class="relative py-16 md:py-24 overflow-hidden hero-gradient">
   <div class="container mx-auto px-4 relative">
     <div class="max-w-3xl mx-auto text-center space-y-6">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= quizTitle %></li>
+        </ol>
+      </nav>
       <span class="hero-badge mb-4">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
         <%= t(ns + ':hero.badge') %>

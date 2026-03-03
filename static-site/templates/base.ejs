@@ -94,17 +94,6 @@
   <%- include('partials/header', { lang, t, getLocalizedUrl, routeSlugs: routeSlugs }) %>
 
   <main class="relative z-0">
-    <% if (typeof breadcrumbs !== 'undefined' && breadcrumbs.length > 0) { %>
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <ol>
-        <% for (let i = 0; i < breadcrumbs.length; i++) { %>
-        <% if (i > 0) { %><li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li><% } %>
-        <% if (breadcrumbs[i].url) { %><li><a href="<%= breadcrumbs[i].url %>"><%= breadcrumbs[i].name %></a></li>
-        <% } else { %><li class="breadcrumb-current" aria-current="page"><%= breadcrumbs[i].name %></li><% } %>
-        <% } %>
-      </ol>
-    </nav>
-    <% } %>
     <%- content %>
   </main>
 

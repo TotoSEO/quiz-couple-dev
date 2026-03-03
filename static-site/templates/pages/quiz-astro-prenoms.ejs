@@ -43,6 +43,13 @@
   </svg>
   <div class="container mx-auto px-4 relative z-10">
     <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= quizTitle %></li>
+        </ol>
+      </nav>
       <span class="hero-badge mb-4">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <%= t(ns + ':hero.badge', 'Astrologie & Numérologie') %>
