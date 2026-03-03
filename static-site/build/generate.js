@@ -188,8 +188,8 @@ async function generatePage(routeKey, lang) {
 
   const jsonLdItems = [];
 
-  // BreadcrumbList – only for pages that have a visible breadcrumb (not quiz/test pages)
-  if (routeKey !== 'home' && !routeKey.startsWith('test') && !routeKey.startsWith('quiz')) {
+  // BreadcrumbList – all pages except home and admin
+  if (routeKey !== 'home' && routeKey !== 'admin') {
     const breadcrumbList = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -198,9 +198,9 @@ async function generatePage(routeKey, lang) {
       ],
     };
     if (routeKey === 'blog') {
-      breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: bl.blog });
+      breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: bl.blog, item: canonical });
     } else {
-      breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: title });
+      breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: title, item: canonical });
     }
     jsonLdItems.push(breadcrumbList);
   }
@@ -282,6 +282,13 @@ async function generatePage(routeKey, lang) {
     blogArticlesList.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
   }
 
+  // Build visual breadcrumb items for specific page types
+  const breadcrumbs = [];
+  if (routeKey.startsWith('test') || routeKey.startsWith('quiz') || routeKey === 'questionsCouple' || routeKey === 'problemResolver' || routeKey === 'activities') {
+    breadcrumbs.push({ name: bl.home, url: getLocalizedPath('home', lang) });
+    breadcrumbs.push({ name: title });
+  }
+
   // Template data available to all pages
   const data = {
     // Globals
@@ -316,6 +323,8 @@ async function generatePage(routeKey, lang) {
     JSON,
     // Structured data
     jsonLdHtml,
+    // Breadcrumb items for visual rendering
+    breadcrumbs,
     // Blog listing data
     blogArticlesList,
     // Blog categories for filter tabs
@@ -731,7 +740,7 @@ async function generateBlogArticle(articleMeta, lang) {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: bl.home, item: getLocalizedUrl('home', lang) },
         { '@type': 'ListItem', position: 2, name: bl.blog, item: getLocalizedUrl('blog', lang) },
-        { '@type': 'ListItem', position: 3, name: article.title },
+        { '@type': 'ListItem', position: 3, name: article.title, item: canonical },
       ],
     },
     (() => {
