@@ -714,26 +714,15 @@ async function generateBlogArticle(articleMeta, lang) {
   };
   const bl = breadcrumbLabels[lang] || breadcrumbLabels.fr;
 
-  const categoryLabel = articleMeta.category && BLOG_CATEGORIES[articleMeta.category]
-    ? BLOG_CATEGORIES[articleMeta.category][lang] || BLOG_CATEGORIES[articleMeta.category].fr
-    : null;
-
-  const breadcrumbItems = [
-    { '@type': 'ListItem', position: 1, name: bl.home, item: getLocalizedUrl('home', lang) },
-    { '@type': 'ListItem', position: 2, name: bl.blog, item: getLocalizedUrl('blog', lang) },
-  ];
-  if (categoryLabel) {
-    breadcrumbItems.push({ '@type': 'ListItem', position: 3, name: categoryLabel });
-    breadcrumbItems.push({ '@type': 'ListItem', position: 4, name: article.title });
-  } else {
-    breadcrumbItems.push({ '@type': 'ListItem', position: 3, name: article.title });
-  }
-
   const jsonLdItems = [
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbItems,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: bl.home, item: getLocalizedUrl('home', lang) },
+        { '@type': 'ListItem', position: 2, name: bl.blog, item: getLocalizedUrl('blog', lang) },
+        { '@type': 'ListItem', position: 3, name: article.title },
+      ],
     },
     (() => {
       // Compute word count from all article text
