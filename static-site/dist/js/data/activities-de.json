@@ -2,13 +2,12 @@
   "hero": {
     "badge": "Kostenlos",
     "badgeGeo": "Standortbasiert",
-    "badgeWeather": "Wettervernetzt",
     "title": "Aktivitäten in meiner Nähe",
     "subtitle": "Finden Sie, was Sie unternehmen können — heute Abend, am Wochenende oder genau jetzt.",
     "cta": "Suche starten"
   },
   "intro": {
-    "text": "Sie suchen eine Aktivität in Ihrer Nähe heute Abend, am Wochenende oder genau jetzt? Dann sind Sie hier richtig. <strong>Unser Tool analysiert Ihren Standort, prüft das aktuelle Wetter und schlägt Ihnen Aktivitäten vor, die zu Ihrem Budget, Ihrer Gruppe und Ihren Wünschen passen</strong> — aus Tausenden von gelisteten Orten in Ihrer Nähe. Geben Sie Ihre Kriterien ein, lassen Sie den Algorithmus arbeiten und wählen Sie aus."
+    "text": "Sie suchen eine Aktivität in Ihrer Nähe heute Abend, am Wochenende oder genau jetzt? Dann sind Sie hier richtig. <strong>Unser Tool analysiert Ihren Standort und schlägt Ihnen Aktivitäten vor, die zu Ihrem Budget, Ihrer Gruppenzusammensetzung und Ihren Wünschen passen</strong> — aus Tausenden von gelisteten Orten in Ihrer Nähe. Geben Sie Ihre Kriterien ein, lassen Sie den Algorithmus arbeiten und wählen Sie aus."
   },
   "form": {
     "panelTitle": "Ihre Kriterien",
@@ -67,12 +66,6 @@
     "budgetComfortable": "Komfortabel",
     "budgetPremium": "Premium",
     "budgetIndifferent": "Egal",
-    "groupSize": "Gruppengröße",
-    "groupSizeSolo": "Allein",
-    "groupSizeCouple": "Zu zweit",
-    "groupSizeSmall": "Kleine Gruppe (3-5)",
-    "groupSizeMedium": "Mittlere Gruppe (6-10)",
-    "groupSizeLarge": "Große Gruppe (10+)",
     "groupComposition": "Gruppenzusammensetzung",
     "groupAdults": "Erwachsene",
     "groupCouple": "Paar",
@@ -125,21 +118,10 @@
     "priceEstimate": "Schätzung: {price}",
     "recommended": "Empfohlen",
     "hiddenGem": "Geheimtipp",
-    "weatherOk": "Gutes Wetter",
-    "weatherWarning": "Wetterwarnung",
     "loading": "Aktivitäten in Ihrer Nähe werden gesucht...",
     "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
     "retry": "Erneut versuchen",
     "seeOnMap": "Auf der Karte ansehen"
-  },
-  "weather": {
-    "sun": "Sonnig",
-    "clearNight": "Klare Nacht",
-    "cloudy": "Bewölkt",
-    "lightRain": "Leichter Regen",
-    "heavyRain": "Starker Regen",
-    "snow": "Schnee",
-    "heatwave": "Hitzewelle"
   },
   "categories": {
     "culture": "Kultur & Erbe",
@@ -156,7 +138,7 @@
     "step1Title": "Ihr Standort, Ihre Kriterien",
     "step1Text": "Geben Sie an, wo Sie sich befinden, oder lassen Sie sich automatisch lokalisieren. Wählen Sie Ihren Radius, Ihr Budget, Ihre Gruppe. In dreißig Sekunden ist alles eingestellt.",
     "step2Title": "Eine Suchmaschine, die mitdenkt",
-    "step2Text": "Das Tool liefert keine ungeordnete Liste. Es berechnet, was wirklich zu Ihrer aktuellen Situation passt — unter Berücksichtigung des aktuellen Wetters, der Öffnungszeiten und Ihrer Vorlieben.",
+    "step2Text": "Das Tool liefert keine ungeordnete Liste. Es berechnet, was wirklich zu Ihrer aktuellen Situation passt — unter Berücksichtigung der Öffnungszeiten, Ihres Budgets und Ihrer Vorlieben.",
     "step3Title": "Tausende gelistete Orte",
     "step3Text": "Parks, Museen, Escape Rooms, Spas, Wanderwege, Restaurants, Wassersportzentren, Workshops — Tausende von Aktivitäten in Ihrer Nähe, einschließlich derer, die in den üblichen Suchergebnissen nie auftauchen."
   },
@@ -194,16 +176,14 @@
     "f2Text": "Allein, zu zweit, Familie mit Kindern, Freunde, Teambuilding. Wenn Sie Kinder haben, geben Sie deren Alter an — das verändert die Vorschläge wirklich.",
     "f3Title": "Budget pro Person",
     "f3Text": "Von kostenlos bis über 50 Euro pro Person. Das Tool schätzt die Preise jeder Aktivität und filtert entsprechend, mit einer einstellbaren Toleranz.",
-    "f4Title": "Echtzeit-Wetter",
-    "f4Text": "Automatisch integriert, ohne dass Sie es angeben müssen. Bei Regen werden Indoor-Aktivitäten bevorzugt. Bei Sonnenschein werden Outdoor-Aktivitäten hervorgehoben.",
-    "f5Title": "Gewünschte Atmosphäre",
-    "f5Text": "Ruhig und entspannt, spaßig und festlich, kulturell, Adrenalin, romantisch, familienfreundlich. Dieser Filter verändert das Ranking weit effektiver als ein einfacher Kategoriefilter.",
-    "f6Title": "Verfügbare Zeit",
-    "f6Text": "Weniger als eine Stunde, ein bis zwei Stunden, halber Tag, ganzer Tag. Das Tool schließt Aktivitäten aus, die nicht in Ihr Zeitfenster passen — ohne dass Sie es selbst überprüfen müssen."
+    "f4Title": "Gewünschte Atmosphäre",
+    "f4Text": "Ruhig und entspannt, spaßig und festlich, kulturell, Adrenalin, romantisch, familienfreundlich. Dieser Filter verändert das Ranking weit effektiver als ein einfacher Kategoriefilter.",
+    "f5Title": "Verfügbare Zeit",
+    "f5Text": "Weniger als eine Stunde, ein bis zwei Stunden, halber Tag, ganzer Tag. Das Tool schließt Aktivitäten aus, die nicht in Ihr Zeitfenster passen — ohne dass Sie es selbst überprüfen müssen."
   },
   "ctaFinal": {
     "title": "Bereit zu entdecken, was auf Sie wartet?",
-    "text": "Die meisten Menschen, die dieses Tool zum ersten Mal nutzen, nehmen mindestens eine Überraschung mit — einen Ort, den sie nicht kannten und der genau dem entspricht, was sie gesucht haben, ohne es in Worte fassen zu können. Geben Sie Ihren Standort ein, wählen Sie Ihre Filter und lassen Sie das Tool den Rest erledigen. Das Wetter ist bereits integriert.",
+    "text": "Die meisten Menschen, die dieses Tool zum ersten Mal nutzen, nehmen mindestens eine Überraschung mit — einen Ort, den sie nicht kannten und der genau dem entspricht, was sie gesucht haben, ohne es in Worte fassen zu können. Geben Sie Ihren Standort ein, wählen Sie Ihre Filter und lassen Sie das Tool den Rest erledigen.",
     "cta": "Suche starten",
     "note": "Kostenlos, ohne Anmeldung."
   },

@@ -2,13 +2,12 @@
   "hero": {
     "badge": "Gratuit",
     "badgeGeo": "Géolocalisé",
-    "badgeWeather": "Connecté à la météo",
     "title": "Activités autour de moi",
     "subtitle": "Trouvez quoi faire près de chez vous — ce soir, ce week-end, ou là maintenant.",
     "cta": "Lancer la recherche"
   },
   "intro": {
-    "text": "Vous cherchez une activité autour de vous ce soir, ce week-end, ou là maintenant ? Vous êtes au bon endroit. <strong>Notre outil analyse votre position, consulte la météo en temps réel, et vous propose des activités adaptées à votre budget, votre groupe et vos envies</strong>, parmi des milliers de lieux référencés près de chez vous. Renseignez vos critères, laissez l'algorithme travailler, et choisissez."
+    "text": "Vous cherchez une activité autour de vous ce soir, ce week-end, ou là maintenant ? Vous êtes au bon endroit. <strong>Notre outil analyse votre position et vous propose des activités adaptées à votre budget, votre composition de groupe et vos envies</strong>, parmi des milliers de lieux référencés près de chez vous. Renseignez vos critères, laissez l'algorithme travailler, et choisissez."
   },
   "form": {
     "panelTitle": "Vos critères",
@@ -67,12 +66,6 @@
     "budgetComfortable": "Confortable",
     "budgetPremium": "Premium",
     "budgetIndifferent": "Indifférent",
-    "groupSize": "Taille du groupe",
-    "groupSizeSolo": "Solo",
-    "groupSizeCouple": "En couple",
-    "groupSizeSmall": "Petit groupe (3-5)",
-    "groupSizeMedium": "Groupe moyen (6-10)",
-    "groupSizeLarge": "Grand groupe (10+)",
     "groupComposition": "Composition du groupe",
     "groupAdults": "Adultes",
     "groupCouple": "Couple",
@@ -126,21 +119,10 @@
     "priceEstimate": "Estimation : {price}",
     "recommended": "Recommandé",
     "hiddenGem": "Pépite cachée",
-    "weatherOk": "Météo favorable",
-    "weatherWarning": "Attention météo",
     "loading": "On cherche les activités autour de vous...",
     "error": "Une erreur est survenue. Veuillez réessayer.",
     "retry": "Réessayer",
     "seeOnMap": "Voir sur la carte"
-  },
-  "weather": {
-    "sun": "Ensoleillé",
-    "clearNight": "Nuit claire",
-    "cloudy": "Nuageux",
-    "lightRain": "Pluie légère",
-    "heavyRain": "Forte pluie",
-    "snow": "Neige",
-    "heatwave": "Canicule"
   },
   "categories": {
     "culture": "Culture & Patrimoine",
@@ -157,7 +139,7 @@
     "step1Title": "Votre position, vos critères",
     "step1Text": "Indiquez où vous êtes, ou laissez l'outil vous localiser automatiquement. Choisissez votre rayon, votre budget, votre groupe. En trente secondes, tout est paramétré.",
     "step2Title": "Un moteur qui réfléchit",
-    "step2Text": "L'outil ne vous renvoie pas une liste brute. Il calcule ce qui correspond vraiment à votre situation du moment, en tenant compte de la météo actuelle, des horaires d'ouverture et de vos préférences.",
+    "step2Text": "L'outil ne vous renvoie pas une liste brute. Il calcule ce qui correspond vraiment à votre situation du moment, en tenant compte des horaires d'ouverture, de votre budget et de vos préférences.",
     "step3Title": "Des milliers de lieux référencés",
     "step3Text": "Parcs, musées, escape games, spas, randonnées, restaurants, bases nautiques, ateliers — des milliers d'activités près de chez vous, y compris celles qui n'apparaissent jamais dans les résultats habituels."
   },
@@ -195,16 +177,14 @@
     "f2Text": "Solo, couple, famille avec enfants, amis, team building. Si vous avez des enfants, indiquez leur âge — ça change vraiment les suggestions proposées.",
     "f3Title": "Budget par personne",
     "f3Text": "Du gratuit à plus de 50€ par personne. L'outil estime les tarifs de chaque activité et filtre en conséquence, avec une tolérance paramétrable.",
-    "f4Title": "Météo en temps réel",
-    "f4Text": "Intégrée automatiquement, sans que vous ayez à l'indiquer. Par temps de pluie, les activités en intérieur remontent. Par grand soleil, les plein air sont favorisés.",
-    "f5Title": "Ambiance souhaitée",
-    "f5Text": "Calme et détente, fun et festif, culturel, adrénaline, romantique, familial. Ce filtre modifie le classement bien plus efficacement qu'un simple filtre par catégorie.",
-    "f6Title": "Durée disponible",
-    "f6Text": "Moins d'une heure, une à deux heures, demi-journée, journée entière. L'outil écarte les activités incompatibles avec votre créneau — sans que vous ayez à le vérifier vous-même."
+    "f4Title": "Ambiance souhaitée",
+    "f4Text": "Calme et détente, fun et festif, culturel, adrénaline, romantique, familial. Ce filtre modifie le classement bien plus efficacement qu'un simple filtre par catégorie.",
+    "f5Title": "Durée disponible",
+    "f5Text": "Moins d'une heure, une à deux heures, demi-journée, journée entière. L'outil écarte les activités incompatibles avec votre créneau — sans que vous ayez à le vérifier vous-même."
   },
   "ctaFinal": {
     "title": "Prêt à découvrir ce qui vous attend ?",
-    "text": "La plupart des gens qui utilisent cet outil pour la première fois repartent avec au moins une surprise, un lieu qu'ils ne connaissaient pas et qui correspond exactement à ce qu'ils cherchaient sans savoir le formuler. Renseignez votre position, choisissez vos filtres, et laissez l'outil faire le reste. La météo est déjà intégrée.",
+    "text": "La plupart des gens qui utilisent cet outil pour la première fois repartent avec au moins une surprise, un lieu qu'ils ne connaissaient pas et qui correspond exactement à ce qu'ils cherchaient sans savoir le formuler. Renseignez votre position, choisissez vos filtres, et laissez l'outil faire le reste.",
     "cta": "Lancer la recherche",
     "note": "Gratuit, sans inscription."
   },

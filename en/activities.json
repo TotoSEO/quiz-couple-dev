@@ -2,13 +2,12 @@
   "hero": {
     "badge": "Free",
     "badgeGeo": "Geolocated",
-    "badgeWeather": "Weather-connected",
     "title": "Activities near me",
     "subtitle": "Find what to do nearby — tonight, this weekend, or right now.",
     "cta": "Start searching"
   },
   "intro": {
-    "text": "Looking for something to do near you tonight, this weekend, or right now? You're in the right place. <strong>Our tool analyses your location, checks real-time weather, and suggests activities tailored to your budget, your group and your interests</strong>, from thousands of listed venues near you. Enter your criteria, let the algorithm work, and choose."
+    "text": "Looking for something to do near you tonight, this weekend, or right now? You're in the right place. <strong>Our tool analyses your location and suggests activities tailored to your budget, group composition and interests</strong>, from thousands of listed venues near you. Enter your criteria, let the algorithm work, and choose."
   },
   "form": {
     "panelTitle": "Your criteria",
@@ -67,12 +66,6 @@
     "budgetComfortable": "Comfortable",
     "budgetPremium": "Premium",
     "budgetIndifferent": "No preference",
-    "groupSize": "Group size",
-    "groupSizeSolo": "Solo",
-    "groupSizeCouple": "Couple",
-    "groupSizeSmall": "Small group (3-5)",
-    "groupSizeMedium": "Medium group (6-10)",
-    "groupSizeLarge": "Large group (10+)",
     "groupComposition": "Group composition",
     "groupAdults": "Adults",
     "groupCouple": "Couple",
@@ -125,21 +118,10 @@
     "priceEstimate": "Estimate: {price}",
     "recommended": "Recommended",
     "hiddenGem": "Hidden gem",
-    "weatherOk": "Weather OK",
-    "weatherWarning": "Weather warning",
     "loading": "Searching for activities near you...",
     "error": "An error occurred. Please try again.",
     "retry": "Retry",
     "seeOnMap": "View on map"
-  },
-  "weather": {
-    "sun": "Sunny",
-    "clearNight": "Clear night",
-    "cloudy": "Cloudy",
-    "lightRain": "Light rain",
-    "heavyRain": "Heavy rain",
-    "snow": "Snow",
-    "heatwave": "Heatwave"
   },
   "categories": {
     "culture": "Culture & Heritage",
@@ -156,7 +138,7 @@
     "step1Title": "Your location, your criteria",
     "step1Text": "Tell us where you are, or let the tool locate you automatically. Choose your radius, your budget, your group. In thirty seconds, everything is set.",
     "step2Title": "A smart search engine",
-    "step2Text": "The tool doesn't just return a raw list. It calculates what truly matches your current situation, taking into account the current weather, opening hours and your preferences.",
+    "step2Text": "The tool doesn't just return a raw list. It calculates what truly matches your current situation, taking into account opening hours, your budget and your preferences.",
     "step3Title": "Thousands of listed venues",
     "step3Text": "Parks, museums, escape rooms, spas, hiking trails, restaurants, water sports centres, workshops — thousands of activities near you, including those that never show up in the usual search results."
   },
@@ -194,16 +176,14 @@
     "f2Text": "Solo, couple, family with children, friends, team building. If you have children, enter their age — it genuinely changes the suggestions.",
     "f3Title": "Budget per person",
     "f3Text": "From free to over 50 euros per person. The tool estimates the price of each activity and filters accordingly, with an adjustable tolerance.",
-    "f4Title": "Real-time weather",
-    "f4Text": "Integrated automatically, without you having to specify it. In rainy weather, indoor activities are promoted. In sunny weather, outdoor activities are favoured.",
-    "f5Title": "Desired atmosphere",
-    "f5Text": "Calm and relaxing, fun and festive, cultural, adrenaline, romantic, family-friendly. This filter adjusts the ranking far more effectively than a simple category filter.",
-    "f6Title": "Available time",
-    "f6Text": "Less than an hour, one to two hours, half a day, full day. The tool excludes activities that don't fit your time slot — without you having to check yourself."
+    "f4Title": "Desired atmosphere",
+    "f4Text": "Calm and relaxing, fun and festive, cultural, adrenaline, romantic, family-friendly. This filter adjusts the ranking far more effectively than a simple category filter.",
+    "f5Title": "Available time",
+    "f5Text": "Less than an hour, one to two hours, half a day, full day. The tool excludes activities that don't fit your time slot — without you having to check yourself."
   },
   "ctaFinal": {
     "title": "Ready to discover what's waiting for you?",
-    "text": "Most people who use this tool for the first time come away with at least one surprise — a place they didn't know about that matches exactly what they were looking for without knowing how to put it into words. Enter your location, choose your filters, and let the tool do the rest. Weather is already built in.",
+    "text": "Most people who use this tool for the first time come away with at least one surprise — a place they didn't know about that matches exactly what they were looking for without knowing how to put it into words. Enter your location, choose your filters, and let the tool do the rest.",
     "cta": "Start searching",
     "note": "Free, no sign-up required."
   },
