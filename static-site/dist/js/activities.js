@@ -915,7 +915,7 @@
     name.textContent = activity.name;
     card.appendChild(name);
 
-    // Meta row: distance + price + weather
+    // Meta row: distance + price
     var metaRow = el('div', 'flex flex-wrap items-center gap-3 text-sm text-muted-foreground mb-2');
 
     // Distance
