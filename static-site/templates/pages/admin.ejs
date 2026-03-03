@@ -40,6 +40,7 @@
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors active" data-tab="reviews">Avis</button>
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="articles">Articles</button>
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="leads">Leads</button>
+              <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="messages">Messagerie</button>
             </div>
             <button id="admin-deploy" class="btn btn-sm" style="background:hsl(var(--primary));color:white;display:flex;align-items:center;gap:0.5rem;">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -131,6 +132,28 @@
                 </tbody>
               </table>
             </div>
+          </div>
+        </div>
+
+        <!-- Messages Tab -->
+        <div id="admin-messages-tab" class="hidden">
+          <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
+            <h2 class="text-lg font-semibold">Messagerie</h2>
+            <div class="flex items-center gap-2 flex-wrap">
+              <div class="flex rounded-lg border border-border overflow-hidden">
+                <button class="messages-filter px-3 py-1.5 text-sm transition-colors active" data-filter="all">Tous</button>
+                <button class="messages-filter px-3 py-1.5 text-sm transition-colors" data-filter="new">Nouveaux</button>
+                <button class="messages-filter px-3 py-1.5 text-sm transition-colors" data-filter="read">Lus</button>
+                <button class="messages-filter px-3 py-1.5 text-sm transition-colors" data-filter="archived">Archivés</button>
+              </div>
+              <button id="messages-refresh" class="btn btn-outline btn-sm">
+                <svg class="w-4 h-4 inline-block mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+                Actualiser
+              </button>
+            </div>
+          </div>
+          <div id="messages-list" class="space-y-3">
+            <p class="text-center text-muted-foreground py-8">Chargement...</p>
           </div>
         </div>
 

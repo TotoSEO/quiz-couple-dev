@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Contact | Quiz Couple",
+    "description": "Contact the Quiz Couple team for any question, suggestion, or partnership request. Secure contact form."
+  },
+  "hero": {
+    "title": "Contact Us",
+    "subtitle": "A question, a suggestion, a partnership? Write to us."
+  },
+  "form": {
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Your last name",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "Your first name",
+    "email": "Email Address",
+    "emailPlaceholder": "your@email.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+1 234 567 8900",
+    "company": "Company",
+    "companyPlaceholder": "Your company name",
+    "message": "Message",
+    "messagePlaceholder": "Your message...",
+    "optional": "optional",
+    "rgpd": "I agree that my data will be processed in accordance with Quiz Couple's <a href=\"/en/privacy/\" class=\"text-primary hover:underline\">privacy policy</a>.",
+    "submit": "Send",
+    "successTitle": "Message sent!",
+    "successText": "We have received your message and will respond as soon as possible.",
+    "errorLastName": "Please enter your last name (min 2 characters)",
+    "errorFirstName": "Please enter your first name (min 2 characters)",
+    "errorEmail": "Please enter a valid email address",
+    "errorMessage": "Your message must contain at least 10 characters",
+    "errorMessageLong": "Your message is too long (3000 characters max)",
+    "errorRgpd": "You must accept the privacy policy",
+    "errorGeneric": "An error occurred. Please try again."
+  }
+}

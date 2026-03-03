@@ -96,7 +96,8 @@
     "back": "Retour",
     "modify": "Modifier",
     "emptyState": "Renseignez vos critères ci-contre pour découvrir les activités autour de vous.",
-    "moreFilters": "Filtres avancés (optionnel)"
+    "moreFilters": "Filtres avancés (optionnel)",
+    "businessPromo": "Entreprise : <a href=\"/contact/\" class=\"text-primary hover:underline\">Contactez Quiz Couple pour promouvoir votre business ici !</a>"
   },
   "results": {
     "title": "Activités trouvées",

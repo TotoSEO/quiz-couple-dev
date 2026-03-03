@@ -116,6 +116,9 @@ const OSM_TAG_MAP: Record<string, string[]> = {
     "leisure=fishing",
     "waterway=waterfall",
     "natural=glacier",
+    "route=hiking",
+    "route=foot",
+    "highway=path",
   ],
   sport: [
     "leisure=swimming_pool",
@@ -346,6 +349,7 @@ const INDOOR_MAP: Record<string, boolean | null> = {
   water: false, beach: false, peak: false, cave_entrance: null, hot_spring: false,
   viewpoint: false, picnic_site: false, nature_reserve: false, bird_hide: false,
   fishing: false, waterfall: false, glacier: false,
+  hiking: false, foot: false, path: false,
   // sport
   swimming_pool: null, sports_centre: true, ice_rink: true, bowling_alley: true,
   golf_course: false, miniature_golf: false, fitness_centre: true, stadium: false,
@@ -391,6 +395,7 @@ const EXPOSURE_MAP: Record<string, ExposureType> = {
   viewpoint: "exterieur_decouvert", picnic_site: "exterieur_decouvert",
   nature_reserve: "nature_randonnee", bird_hide: "exterieur_couvert",
   fishing: "exterieur_decouvert", waterfall: "nature_randonnee", glacier: "nature_randonnee",
+  hiking: "nature_randonnee", foot: "nature_randonnee", path: "nature_randonnee",
   // sport
   swimming_pool: "aquatique_exterieur", sports_centre: "interieur",
   ice_rink: "interieur", bowling_alley: "interieur",
@@ -1108,6 +1113,11 @@ serve(async (req) => {
 
       // Categorise
       const { category, subcategory } = categoriseElement(tags);
+
+      // Filter out results from unselected categories
+      if (body.activityTypes?.length && body.activityTypes.length < Object.keys(OSM_TAG_MAP).length) {
+        if (!body.activityTypes.includes(category)) continue;
+      }
 
       // Deduplicate
       const poiRef = { name: tags.name, category, lat: elLat, lng: elLng };

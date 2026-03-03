@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Contatto | Quiz Couple",
+    "description": "Contatta il team di Quiz Couple per qualsiasi domanda, suggerimento o richiesta di partnership. Modulo di contatto sicuro."
+  },
+  "hero": {
+    "title": "Contattaci",
+    "subtitle": "Una domanda, un suggerimento, una partnership? Scrivici."
+  },
+  "form": {
+    "lastName": "Cognome",
+    "lastNamePlaceholder": "Il tuo cognome",
+    "firstName": "Nome",
+    "firstNamePlaceholder": "Il tuo nome",
+    "email": "Indirizzo e-mail",
+    "emailPlaceholder": "tua@email.it",
+    "phone": "Telefono",
+    "phonePlaceholder": "+39 320 1234567",
+    "company": "Azienda",
+    "companyPlaceholder": "Nome della tua azienda",
+    "message": "Messaggio",
+    "messagePlaceholder": "Il tuo messaggio...",
+    "optional": "opzionale",
+    "rgpd": "Accetto che i miei dati vengano trattati conformemente alla <a href=\"/it/privacy/\" class=\"text-primary hover:underline\">politica sulla privacy</a> di Quiz Couple.",
+    "submit": "Invia",
+    "successTitle": "Messaggio inviato!",
+    "successText": "Abbiamo ricevuto il tuo messaggio e ti risponderemo il prima possibile.",
+    "errorLastName": "Inserisci il tuo cognome (min. 2 caratteri)",
+    "errorFirstName": "Inserisci il tuo nome (min. 2 caratteri)",
+    "errorEmail": "Inserisci un indirizzo e-mail valido",
+    "errorMessage": "Il tuo messaggio deve contenere almeno 10 caratteri",
+    "errorMessageLong": "Il tuo messaggio è troppo lungo (max. 3000 caratteri)",
+    "errorRgpd": "Devi accettare la politica sulla privacy",
+    "errorGeneric": "Si è verificato un errore. Riprova."
+  }
+}

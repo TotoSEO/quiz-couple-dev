@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Kontakt | Quiz Couple",
+    "description": "Kontaktieren Sie das Quiz Couple Team für Fragen, Anregungen oder Partnerschaftsanfragen. Sicheres Kontaktformular."
+  },
+  "hero": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Eine Frage, ein Vorschlag, eine Partnerschaft? Schreiben Sie uns."
+  },
+  "form": {
+    "lastName": "Nachname",
+    "lastNamePlaceholder": "Ihr Nachname",
+    "firstName": "Vorname",
+    "firstNamePlaceholder": "Ihr Vorname",
+    "email": "E-Mail-Adresse",
+    "emailPlaceholder": "ihre@email.de",
+    "phone": "Telefon",
+    "phonePlaceholder": "+49 170 1234567",
+    "company": "Unternehmen",
+    "companyPlaceholder": "Name Ihres Unternehmens",
+    "message": "Nachricht",
+    "messagePlaceholder": "Ihre Nachricht...",
+    "optional": "optional",
+    "rgpd": "Ich stimme zu, dass meine Daten gemäß der <a href=\"/de/datenschutz/\" class=\"text-primary hover:underline\">Datenschutzrichtlinie</a> von Quiz Couple verarbeitet werden.",
+    "submit": "Senden",
+    "successTitle": "Nachricht gesendet!",
+    "successText": "Wir haben Ihre Nachricht erhalten und werden so schnell wie möglich antworten.",
+    "errorLastName": "Bitte geben Sie Ihren Nachnamen ein (mind. 2 Zeichen)",
+    "errorFirstName": "Bitte geben Sie Ihren Vornamen ein (mind. 2 Zeichen)",
+    "errorEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "errorMessage": "Ihre Nachricht muss mindestens 10 Zeichen enthalten",
+    "errorMessageLong": "Ihre Nachricht ist zu lang (max. 3000 Zeichen)",
+    "errorRgpd": "Sie müssen die Datenschutzrichtlinie akzeptieren",
+    "errorGeneric": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+  }
+}
