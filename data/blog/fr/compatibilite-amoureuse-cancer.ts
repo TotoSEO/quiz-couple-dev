@@ -158,17 +158,17 @@ const article: BlogArticleData = {
       id: 'decouvrez-aussi',
       title: `Découvrez aussi`,
       content: `<ul>
-<li><a href="/blog/compatibilite-amoureuse-belier">Compatibilité amoureuse du Bélier</a></li>
-<li><a href="/blog/compatibilite-amoureuse-taureau">Compatibilité amoureuse du Taureau</a></li>
-<li><a href="/blog/compatibilite-amoureuse-gemeaux">Compatibilité amoureuse des Gémeaux</a></li>
-<li><a href="/blog/compatibilite-amoureuse-lion">Compatibilité amoureuse du Lion</a></li>
-<li><a href="/blog/compatibilite-amoureuse-vierge">Compatibilité amoureuse de la Vierge</a></li>
-<li><a href="/blog/compatibilite-amoureuse-balance">Compatibilité amoureuse de la Balance</a></li>
-<li><a href="/blog/compatibilite-amoureuse-scorpion">Compatibilité amoureuse du Scorpion</a></li>
-<li><a href="/blog/compatibilite-amoureuse-sagittaire">Compatibilité amoureuse du Sagittaire</a></li>
-<li><a href="/blog/compatibilite-amoureuse-capricorne">Compatibilité amoureuse du Capricorne</a></li>
-<li><a href="/blog/compatibilite-amoureuse-verseau">Compatibilité amoureuse du Verseau</a></li>
-<li><a href="/blog/compatibilite-amoureuse-poissons">Compatibilité amoureuse des Poissons</a></li>
+<li><a href="/blog/compatibilite-amoureuse-belier/">Compatibilité amoureuse du Bélier</a></li>
+<li><a href="/blog/compatibilite-amoureuse-taureau/">Compatibilité amoureuse du Taureau</a></li>
+<li><a href="/blog/compatibilite-amoureuse-gemeaux/">Compatibilité amoureuse des Gémeaux</a></li>
+<li><a href="/blog/compatibilite-amoureuse-lion/">Compatibilité amoureuse du Lion</a></li>
+<li><a href="/blog/compatibilite-amoureuse-vierge/">Compatibilité amoureuse de la Vierge</a></li>
+<li><a href="/blog/compatibilite-amoureuse-balance/">Compatibilité amoureuse de la Balance</a></li>
+<li><a href="/blog/compatibilite-amoureuse-scorpion/">Compatibilité amoureuse du Scorpion</a></li>
+<li><a href="/blog/compatibilite-amoureuse-sagittaire/">Compatibilité amoureuse du Sagittaire</a></li>
+<li><a href="/blog/compatibilite-amoureuse-capricorne/">Compatibilité amoureuse du Capricorne</a></li>
+<li><a href="/blog/compatibilite-amoureuse-verseau/">Compatibilité amoureuse du Verseau</a></li>
+<li><a href="/blog/compatibilite-amoureuse-poissons/">Compatibilité amoureuse des Poissons</a></li>
 </ul>`,
     },
   ],

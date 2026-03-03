@@ -159,17 +159,17 @@ const article: BlogArticleData = {
       id: 'descubre-mas',
       title: `Descubre más`,
       content: `<ul>
-<li><a href="/es/blog/compatibilidad-amorosa-aries">Compatibilidad amorosa de Aries</a></li>
-<li><a href="/es/blog/compatibilidad-amorosa-tauro">Compatibilidad amorosa de Tauro</a></li>
-<li><a href="/es/blog/compatibilidad-amorosa-geminis">Compatibilidad amorosa de Géminis</a></li>
-<li><a href="/es/blog/compatibilidad-amorosa-cancer">Compatibilidad amorosa de Cáncer</a></li>
-<li><a href="/es/blog/compatibilidad-amorosa-virgo">Compatibilidad amorosa de Virgo</a></li>
-<li><a href="/es/blog/compatibilidad-amorosa-libra">Compatibilidad amorosa de Libra</a></li>
-<li><a href="/es/blog/compatibilidad-amorosa-escorpio">Compatibilidad amorosa de Escorpio</a></li>
-<li><a href="/es/blog/compatibilidad-amorosa-sagitario">Compatibilidad amorosa de Sagitario</a></li>
-<li><a href="/es/blog/compatibilidad-amorosa-capricornio">Compatibilidad amorosa de Capricornio</a></li>
-<li><a href="/es/blog/compatibilidad-amorosa-acuario">Compatibilidad amorosa de Acuario</a></li>
-<li><a href="/es/blog/compatibilidad-amorosa-piscis">Compatibilidad amorosa de Piscis</a></li>
+<li><a href="/es/blog/compatibilidad-amorosa-aries/">Compatibilidad amorosa de Aries</a></li>
+<li><a href="/es/blog/compatibilidad-amorosa-tauro/">Compatibilidad amorosa de Tauro</a></li>
+<li><a href="/es/blog/compatibilidad-amorosa-geminis/">Compatibilidad amorosa de Géminis</a></li>
+<li><a href="/es/blog/compatibilidad-amorosa-cancer/">Compatibilidad amorosa de Cáncer</a></li>
+<li><a href="/es/blog/compatibilidad-amorosa-virgo/">Compatibilidad amorosa de Virgo</a></li>
+<li><a href="/es/blog/compatibilidad-amorosa-libra/">Compatibilidad amorosa de Libra</a></li>
+<li><a href="/es/blog/compatibilidad-amorosa-escorpio/">Compatibilidad amorosa de Escorpio</a></li>
+<li><a href="/es/blog/compatibilidad-amorosa-sagitario/">Compatibilidad amorosa de Sagitario</a></li>
+<li><a href="/es/blog/compatibilidad-amorosa-capricornio/">Compatibilidad amorosa de Capricornio</a></li>
+<li><a href="/es/blog/compatibilidad-amorosa-acuario/">Compatibilidad amorosa de Acuario</a></li>
+<li><a href="/es/blog/compatibilidad-amorosa-piscis/">Compatibilidad amorosa de Piscis</a></li>
 </ul>`,
     },
   ],

@@ -159,17 +159,17 @@ const article: BlogArticleData = {
       id: 'mehr-entdecken',
       title: `Mehr entdecken`,
       content: `<ul>
-<li><a href="/de/blog/liebeskompatibilitaet-widder">Liebeskompatibilität des Widders</a></li>
-<li><a href="/de/blog/liebeskompatibilitaet-stier">Liebeskompatibilität des Stiers</a></li>
-<li><a href="/de/blog/liebeskompatibilitaet-zwillinge">Liebeskompatibilität der Zwillinge</a></li>
-<li><a href="/de/blog/liebeskompatibilitaet-krebs">Liebeskompatibilität des Krebses</a></li>
-<li><a href="/de/blog/liebeskompatibilitaet-loewe">Liebeskompatibilität des Löwen</a></li>
-<li><a href="/de/blog/liebeskompatibilitaet-jungfrau">Liebeskompatibilität der Jungfrau</a></li>
-<li><a href="/de/blog/liebeskompatibilitaet-waage">Liebeskompatibilität der Waage</a></li>
-<li><a href="/de/blog/liebeskompatibilitaet-skorpion">Liebeskompatibilität des Skorpions</a></li>
-<li><a href="/de/blog/liebeskompatibilitaet-steinbock">Liebeskompatibilität des Steinbocks</a></li>
-<li><a href="/de/blog/liebeskompatibilitaet-wassermann">Liebeskompatibilität des Wassermanns</a></li>
-<li><a href="/de/blog/liebeskompatibilitaet-fische">Liebeskompatibilität der Fische</a></li>
+<li><a href="/de/blog/liebeskompatibilitaet-widder/">Liebeskompatibilität des Widders</a></li>
+<li><a href="/de/blog/liebeskompatibilitaet-stier/">Liebeskompatibilität des Stiers</a></li>
+<li><a href="/de/blog/liebeskompatibilitaet-zwillinge/">Liebeskompatibilität der Zwillinge</a></li>
+<li><a href="/de/blog/liebeskompatibilitaet-krebs/">Liebeskompatibilität des Krebses</a></li>
+<li><a href="/de/blog/liebeskompatibilitaet-loewe/">Liebeskompatibilität des Löwen</a></li>
+<li><a href="/de/blog/liebeskompatibilitaet-jungfrau/">Liebeskompatibilität der Jungfrau</a></li>
+<li><a href="/de/blog/liebeskompatibilitaet-waage/">Liebeskompatibilität der Waage</a></li>
+<li><a href="/de/blog/liebeskompatibilitaet-skorpion/">Liebeskompatibilität des Skorpions</a></li>
+<li><a href="/de/blog/liebeskompatibilitaet-steinbock/">Liebeskompatibilität des Steinbocks</a></li>
+<li><a href="/de/blog/liebeskompatibilitaet-wassermann/">Liebeskompatibilität des Wassermanns</a></li>
+<li><a href="/de/blog/liebeskompatibilitaet-fische/">Liebeskompatibilität der Fische</a></li>
 </ul>`,
     },
   ],

@@ -161,17 +161,17 @@ const article: BlogArticleData = {
       id: 'discover-more',
       title: `Discover more`,
       content: `<ul>
-<li><a href="/en/blog/aries-love-compatibility">Aries love compatibility</a></li>
-<li><a href="/en/blog/taurus-love-compatibility">Taurus love compatibility</a></li>
-<li><a href="/en/blog/gemini-love-compatibility">Gemini love compatibility</a></li>
-<li><a href="/en/blog/cancer-love-compatibility">Cancer love compatibility</a></li>
-<li><a href="/en/blog/leo-love-compatibility">Leo love compatibility</a></li>
-<li><a href="/en/blog/virgo-love-compatibility">Virgo love compatibility</a></li>
-<li><a href="/en/blog/libra-love-compatibility">Libra love compatibility</a></li>
-<li><a href="/en/blog/scorpio-love-compatibility">Scorpio love compatibility</a></li>
-<li><a href="/en/blog/sagittarius-love-compatibility">Sagittarius love compatibility</a></li>
-<li><a href="/en/blog/capricorn-love-compatibility">Capricorn love compatibility</a></li>
-<li><a href="/en/blog/aquarius-love-compatibility">Aquarius love compatibility</a></li>
+<li><a href="/en/blog/aries-love-compatibility/">Aries love compatibility</a></li>
+<li><a href="/en/blog/taurus-love-compatibility/">Taurus love compatibility</a></li>
+<li><a href="/en/blog/gemini-love-compatibility/">Gemini love compatibility</a></li>
+<li><a href="/en/blog/cancer-love-compatibility/">Cancer love compatibility</a></li>
+<li><a href="/en/blog/leo-love-compatibility/">Leo love compatibility</a></li>
+<li><a href="/en/blog/virgo-love-compatibility/">Virgo love compatibility</a></li>
+<li><a href="/en/blog/libra-love-compatibility/">Libra love compatibility</a></li>
+<li><a href="/en/blog/scorpio-love-compatibility/">Scorpio love compatibility</a></li>
+<li><a href="/en/blog/sagittarius-love-compatibility/">Sagittarius love compatibility</a></li>
+<li><a href="/en/blog/capricorn-love-compatibility/">Capricorn love compatibility</a></li>
+<li><a href="/en/blog/aquarius-love-compatibility/">Aquarius love compatibility</a></li>
 </ul>`,
     },
   ],
