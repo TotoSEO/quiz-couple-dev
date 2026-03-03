@@ -1,86 +1,255 @@
 <%
   const ns = 'activities';
   const faqItemsRaw = t(ns + ':faq', null);
-  const faqItems = Array.isArray(faqItemsRaw) ? faqItemsRaw : [];
+  const faqItems = Array.isArray(faqItemsRaw) ? faqItemsRaw.filter(function(i) { return i.q && i.q !== '[placeholder]'; }) : [];
 %>
 
 <!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
-<!-- Hero -->
-<section class="relative py-16 md:py-24 overflow-hidden hero-gradient">
-  <div class="container mx-auto px-4 relative z-10">
-    <div class="max-w-3xl mx-auto text-center space-y-6">
-      <span class="hero-badge mb-4">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <%= t(ns + ':hero.badge', 'Interactive map') %>
-      </span>
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-        <%= t(ns + ':hero.title', '') %> <span class="text-gradient"><%= t(ns + ':hero.titleHighlight', '') %></span>
-      </h1>
-      <p class="text-lg text-muted-foreground max-w-2xl mx-auto"><%- t(ns + ':hero.description', '') %></p>
+<!-- ═══════ BLOC 1 — HERO BANNER ═══════ -->
+<section class="act-hero">
+  <div class="act-hero-inner">
+    <div class="act-hero-content">
+      <div class="act-hero-badge">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> <%= t(ns + ':hero.badge', 'Gratuit') %></span>
+        <span class="act-hero-sep">&middot;</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> <%= t(ns + ':hero.badgeGeo', 'Géolocalisé') %></span>
+        <span class="act-hero-sep">&middot;</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="10" r="5"/><line x1="3" y1="10" x2="1" y2="10"/><line x1="15" y1="10" x2="13" y2="10"/><line x1="8" y1="5" x2="8" y2="3"/><path d="M17.5 15.5A6 6 0 0122 12h-4"/><path d="M18 10h4"/></svg> <%= t(ns + ':hero.badgeWeather', 'Connecté à la météo') %></span>
+      </div>
+      <h1 class="act-hero-title"><%= t(ns + ':hero.title', 'Activités autour de moi') %></h1>
+      <p class="act-hero-sub"><%= t(ns + ':hero.subtitle', 'Trouvez quoi faire près de chez vous — ce soir, ce week-end, ou là maintenant.') %></p>
+      <a href="#outil" class="act-hero-cta" onclick="document.getElementById('outil').scrollIntoView({behavior:'smooth'});return false;"><%= t(ns + ':hero.cta', 'Lancer la recherche') %> &rarr;</a>
+    </div>
+    <div class="act-hero-illus" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="90" r="50" stroke="white" stroke-width="1" stroke-dasharray="6 4" opacity="0.2"/>
+        <circle cx="100" cy="90" r="30" stroke="white" stroke-width="1" stroke-dasharray="4 3" opacity="0.15"/>
+        <path d="M40 140 Q70 100 100 130 Q130 160 160 120" stroke="white" stroke-width="1.5" opacity="0.25" fill="none"/>
+        <path d="M30 100 Q60 70 90 90 Q120 110 170 80" stroke="white" stroke-width="1.5" opacity="0.2" fill="none"/>
+        <path d="M50 170 Q80 150 120 160 Q150 170 180 150" stroke="white" stroke-width="1" opacity="0.15" fill="none"/>
+        <path d="M100 80 C100 74 106 68 100 62 C94 68 100 74 100 80z" fill="white" opacity="0.6"/>
+        <circle cx="100" cy="72" r="4" fill="white" opacity="0.5"/>
+      </svg>
     </div>
   </div>
 </section>
 
-<!-- Activity Search Engine (JS interactive) -->
-<section id="recherche-activites" class="py-8 md:py-12">
-  <div class="container mx-auto px-4">
-    <div class="max-w-5xl mx-auto">
-      <div id="activities-engine"
-           data-lang="<%= lang %>"
-           data-supabase-url="<%= supabaseUrl %>"
-           data-supabase-key="<%= supabaseKey %>">
-        <div class="text-center py-12">
-          <div class="spinner mx-auto mb-4"></div>
-          <p class="text-muted-foreground"><%= t(ns + ':results.loading', 'Loading...') %></p>
+<!-- ═══════ BLOC 2 — INTRODUCTION ═══════ -->
+<section class="act-intro">
+  <div class="act-intro-inner">
+    <p><%- t(ns + ':intro.text', '') %></p>
+  </div>
+</section>
+
+<!-- ═══════ BLOC 3 — OUTIL INTERACTIF ═══════ -->
+<section id="outil" class="act-tool">
+  <div class="act-tool-inner">
+    <div id="activities-engine"
+         data-lang="<%= lang %>"
+         data-supabase-url="<%= supabaseUrl %>"
+         data-supabase-key="<%= supabaseKey %>">
+      <div class="text-center py-12">
+        <div class="spinner mx-auto mb-4"></div>
+        <p class="text-muted-foreground"><%= t(ns + ':results.loading', 'Chargement...') %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ BLOC 4 — COMMENT ÇA MARCHE ═══════ -->
+<section class="act-how">
+  <div class="act-section-inner">
+    <h2 class="act-section-title"><%= t(ns + ':howItWorks.title', 'Comment fonctionne l\'outil ?') %></h2>
+    <p class="act-section-sub"><%= t(ns + ':howItWorks.subtitle', 'En quelques secondes, des suggestions adaptées à votre moment.') %></p>
+    <div class="act-how-grid">
+      <div class="act-how-card">
+        <div class="act-how-icon" style="background:hsl(var(--primary)/0.12);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
+        <h3><%= t(ns + ':howItWorks.step1Title', 'Votre position, vos critères') %></h3>
+        <p><%= t(ns + ':howItWorks.step1Text', '') %></p>
+      </div>
+      <div class="act-how-card">
+        <div class="act-how-icon" style="background:hsl(var(--primary)/0.12);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="14" y1="7" x2="16" y2="5"/><line x1="15" y1="9" x2="17" y2="8"/><line x1="14.5" y1="11" x2="17" y2="11"/></svg>
+        </div>
+        <h3><%= t(ns + ':howItWorks.step2Title', 'Un moteur qui réfléchit') %></h3>
+        <p><%= t(ns + ':howItWorks.step2Text', '') %></p>
+      </div>
+      <div class="act-how-card">
+        <div class="act-how-icon" style="background:hsl(var(--primary)/0.12);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 7 Q12 12 16 7" fill="none"/><path d="M6 13 Q10 18 14 13" fill="none"/><circle cx="15" cy="16" r="2"/><line x1="15" y1="14" x2="15" y2="11"/></svg>
+        </div>
+        <h3><%= t(ns + ':howItWorks.step3Title', 'Des milliers de lieux référencés') %></h3>
+        <p><%= t(ns + ':howItWorks.step3Text', '') %></p>
       </div>
     </div>
   </div>
 </section>
 
-<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
-
-<!-- SEO Content -->
-<article class="py-16 md:py-24 seo-content">
-  <div class="container mx-auto px-4 max-w-3xl">
-    <% for (let i = 1; i <= 4; i++) { %>
-    <% const sTitle = t(ns + ':seoContent.s' + i + 'Title', ''); %>
-    <% if (sTitle && sTitle !== '[placeholder]') { %>
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= sTitle %></h2>
-      <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- t(ns + ':seoContent.s' + i + 'p1', '') %></p>
-        <% const p2 = t(ns + ':seoContent.s' + i + 'p2', ''); %>
-        <% if (p2 && p2 !== '[placeholder]') { %><p><%- p2 %></p><% } %>
+<!-- ═══════ BLOC 5 — SEO / PROBLÉMATIQUE ═══════ -->
+<section class="act-seo">
+  <div class="act-section-inner">
+    <h2 class="act-section-title"><%= t(ns + ':seoContent.title', '') %></h2>
+    <div class="act-seo-intro">
+      <p><%- t(ns + ':seoContent.p1', '') %></p>
+      <p><%- t(ns + ':seoContent.p2', '') %></p>
+    </div>
+    <blockquote class="act-quote">
+      <p>"<%= t(ns + ':seoContent.quote', '') %>"</p>
+    </blockquote>
+    <div class="act-seo-grid">
+      <div class="act-seo-card">
+        <h3><%= t(ns + ':seoContent.card1Title', '') %></h3>
+        <p><%= t(ns + ':seoContent.card1Text', '') %></p>
       </div>
-    </section>
-    <% } %>
-    <% } %>
-
-    <!-- FAQ -->
-    <% if (faqItems.length > 0 && faqItems[0].q !== '[placeholder]') { %>
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6">FAQ</h2>
-      <div class="space-y-3">
-        <% for (const item of faqItems) { %>
-        <details class="group rounded-xl border border-border p-4 transition-colors open:bg-muted/30">
-          <summary class="cursor-pointer font-semibold flex items-center justify-between gap-2">
-            <span><%= item.q %></span>
-            <svg class="h-4 w-4 flex-shrink-0 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </summary>
-          <p class="mt-3 text-muted-foreground leading-relaxed"><%- item.a %></p>
-        </details>
-        <% } %>
+      <div class="act-seo-card">
+        <h3><%= t(ns + ':seoContent.card2Title', '') %></h3>
+        <p><%= t(ns + ':seoContent.card2Text', '') %></p>
       </div>
-    </section>
-    <% } %>
+      <div class="act-seo-card">
+        <h3><%= t(ns + ':seoContent.card3Title', '') %></h3>
+        <p><%= t(ns + ':seoContent.card3Text', '') %></p>
+      </div>
+      <div class="act-seo-card">
+        <h3><%= t(ns + ':seoContent.card4Title', '') %></h3>
+        <p><%= t(ns + ':seoContent.card4Text', '') %></p>
+      </div>
+    </div>
   </div>
-</article>
+</section>
+
+<!-- ═══════ BLOC 6 — CATÉGORIES ═══════ -->
+<section class="act-cats">
+  <div class="act-section-inner">
+    <h2 class="act-section-title"><%= t(ns + ':categoriesShowcase.title', 'Quels types d\'activités sont référencés ?') %></h2>
+    <p class="act-section-sub"><%= t(ns + ':categoriesShowcase.subtitle', 'Sept grandes familles, des dizaines de sous-catégories.') %></p>
+    <div class="act-cats-grid">
+      <div class="act-cat-card" style="background:#FFF3E0;">
+        <span class="act-cat-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#E65100" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="14" width="16" height="8" rx="1"/><polygon points="4,14 12,6 20,14"/><line x1="8" y1="22" x2="8" y2="14"/><line x1="12" y1="22" x2="12" y2="14"/><line x1="16" y1="22" x2="16" y2="14"/></svg></span>
+        <h3><%= t(ns + ':categories.culture', 'Culture & Patrimoine') %></h3>
+        <p><%= t(ns + ':categoriesShowcase.cultureSub', '') %></p>
+      </div>
+      <div class="act-cat-card" style="background:#E8F5E9;">
+        <span class="act-cat-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 0-8 4-8 9s4 9 8 9"/><path d="M12 3c4 0 8 4 8 9s-4 9-8 9"/><line x1="12" y1="3" x2="12" y2="21"/></svg></span>
+        <h3><%= t(ns + ':categories.nature', 'Nature & Plein air') %></h3>
+        <p><%= t(ns + ':categoriesShowcase.natureSub', '') %></p>
+      </div>
+      <div class="act-cat-card" style="background:#E3F2FD;">
+        <span class="act-cat-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="4" r="2"/><path d="M18 20l-4-8-3 5-3-3-4 6"/></svg></span>
+        <h3><%= t(ns + ':categories.sport', 'Sport & Aventure') %></h3>
+        <p><%= t(ns + ':categoriesShowcase.sportSub', '') %></p>
+      </div>
+      <div class="act-cat-card" style="background:#FCE4EC;">
+        <span class="act-cat-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#C2185B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
+        <h3><%= t(ns + ':categories.divertissement', 'Divertissement') %></h3>
+        <p><%= t(ns + ':categoriesShowcase.divertissementSub', '') %></p>
+      </div>
+      <div class="act-cat-card" style="background:#F3E5F5;">
+        <span class="act-cat-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7B1FA2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-4 3-6 3-9a3 3 0 00-6 0c0 3 3 5 3 9z"/><path d="M12 21c0-4-4-6-5-9a5 5 0 0110 0c-1 3-5 5-5 9z"/></svg></span>
+        <h3><%= t(ns + ':categories.bienEtre', 'Bien-être & Détente') %></h3>
+        <p><%= t(ns + ':categoriesShowcase.bienEtreSub', '') %></p>
+      </div>
+      <div class="act-cat-card" style="background:#FFFDE7;">
+        <span class="act-cat-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F57F17" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="3" x2="8" y2="12"/><line x1="6" y1="3" x2="6" y2="8"/><line x1="10" y1="3" x2="10" y2="8"/><path d="M6 8a2 2 0 004 0"/><line x1="16" y1="3" x2="16" y2="12"/><path d="M14 3c0 0 0 4 2 5s2 5 2 5"/><line x1="8" y1="12" x2="8" y2="22"/><line x1="16" y1="12" x2="16" y2="22"/></svg></span>
+        <h3><%= t(ns + ':categories.gastronomie', 'Gastronomie') %></h3>
+        <p><%= t(ns + ':categoriesShowcase.gastronomieSub', '') %></p>
+      </div>
+      <div class="act-cat-card" style="background:#E0F7FA;">
+        <span class="act-cat-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00838F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3L8 13"/><path d="M8 13l-3 8 8-3"/><circle cx="18" cy="3" r="2"/></svg></span>
+        <h3><%= t(ns + ':categories.ateliers', 'Ateliers & Expériences') %></h3>
+        <p><%= t(ns + ':categoriesShowcase.ateliersSub', '') %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ BLOC 7 — FILTRES ═══════ -->
+<section class="act-filters-info">
+  <div class="act-section-inner">
+    <h2 class="act-section-title"><%= t(ns + ':filtersInfo.title', 'Des filtres pensés pour votre situation') %></h2>
+    <p class="act-section-sub"><%= t(ns + ':filtersInfo.subtitle', '') %></p>
+    <div class="act-filters-grid">
+      <div class="act-filter-card">
+        <div class="act-filter-header">
+          <span class="act-filter-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <h3><%= t(ns + ':filtersInfo.f1Title', 'Localisation & rayon') %></h3>
+        </div>
+        <p><%= t(ns + ':filtersInfo.f1Text', '') %></p>
+      </div>
+      <div class="act-filter-card">
+        <div class="act-filter-header">
+          <span class="act-filter-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
+          <h3><%= t(ns + ':filtersInfo.f2Title', 'Composition du groupe') %></h3>
+        </div>
+        <p><%= t(ns + ':filtersInfo.f2Text', '') %></p>
+      </div>
+      <div class="act-filter-card">
+        <div class="act-filter-header">
+          <span class="act-filter-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a3 3 0 015 0"/><line x1="9" y1="13" x2="15" y2="13"/></svg></span>
+          <h3><%= t(ns + ':filtersInfo.f3Title', 'Budget par personne') %></h3>
+        </div>
+        <p><%= t(ns + ':filtersInfo.f3Text', '') %></p>
+      </div>
+      <div class="act-filter-card">
+        <div class="act-filter-header">
+          <span class="act-filter-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="10" r="5"/><line x1="3" y1="10" x2="1" y2="10"/><line x1="15" y1="10" x2="13" y2="10"/><line x1="8" y1="5" x2="8" y2="3"/><line x1="8" y1="17" x2="8" y2="15"/><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg></span>
+          <h3><%= t(ns + ':filtersInfo.f4Title', 'Météo en temps réel') %></h3>
+        </div>
+        <p><%= t(ns + ':filtersInfo.f4Text', '') %></p>
+      </div>
+      <div class="act-filter-card">
+        <div class="act-filter-header">
+          <span class="act-filter-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span>
+          <h3><%= t(ns + ':filtersInfo.f5Title', 'Ambiance souhaitée') %></h3>
+        </div>
+        <p><%= t(ns + ':filtersInfo.f5Text', '') %></p>
+      </div>
+      <div class="act-filter-card">
+        <div class="act-filter-header">
+          <span class="act-filter-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 12"/></svg></span>
+          <h3><%= t(ns + ':filtersInfo.f6Title', 'Durée disponible') %></h3>
+        </div>
+        <p><%= t(ns + ':filtersInfo.f6Text', '') %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ BLOC 8 — CTA FINAL ═══════ -->
+<section class="act-cta-final">
+  <div class="act-cta-inner">
+    <h2><%= t(ns + ':ctaFinal.title', 'Prêt à découvrir ce qui vous attend ?') %></h2>
+    <p class="act-cta-text"><%= t(ns + ':ctaFinal.text', '') %></p>
+    <a href="#outil" class="act-cta-btn" onclick="document.getElementById('outil').scrollIntoView({behavior:'smooth'});return false;"><%= t(ns + ':ctaFinal.cta', 'Lancer la recherche') %> &rarr;</a>
+    <p class="act-cta-note"><%= t(ns + ':ctaFinal.note', 'Gratuit, sans inscription.') %></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<% if (faqItems.length > 0) { %>
+<section class="py-16 md:py-24">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">FAQ</h2>
+    <div class="space-y-3">
+      <% for (const item of faqItems) { %>
+      <details class="group rounded-xl border border-border p-4 transition-colors open:bg-muted/30">
+        <summary class="cursor-pointer font-semibold flex items-center justify-between gap-2">
+          <span><%= item.q %></span>
+          <svg class="h-4 w-4 flex-shrink-0 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </summary>
+        <p class="mt-3 text-muted-foreground leading-relaxed"><%- item.a %></p>
+      </details>
+      <% } %>
+    </div>
+  </div>
+</section>
+<% } %>
 
 <!-- FAQPage JSON-LD -->
-<% if (faqItems.length > 0 && faqItems[0].q !== '[placeholder]') { %>
+<% if (faqItems.length > 0) { %>
 <script type="application/ld+json"><%- JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",

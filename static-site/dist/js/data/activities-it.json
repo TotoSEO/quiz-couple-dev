@@ -1,11 +1,17 @@
 {
   "hero": {
-    "badge": "Mappa interattiva",
-    "title": "Trova",
-    "titleHighlight": "attività di coppia",
-    "description": "Inserisci la tua posizione e scopri le migliori uscite per due vicino a te: ristoranti, cultura, natura, sport e molto altro."
+    "badge": "Gratuito",
+    "badgeGeo": "Geolocalizzato",
+    "badgeWeather": "Collegato al meteo",
+    "title": "Attività vicino a me",
+    "subtitle": "Scopri cosa fare nelle vicinanze — stasera, questo weekend o adesso.",
+    "cta": "Avvia la ricerca"
+  },
+  "intro": {
+    "text": "Cerchi un'attività vicino a te stasera, questo weekend o proprio adesso? Sei nel posto giusto. <strong>Il nostro strumento analizza la tua posizione, consulta il meteo in tempo reale e ti propone attività adatte al tuo budget, al tuo gruppo e ai tuoi interessi</strong>, tra migliaia di luoghi censiti vicino a te. Inserisci i tuoi criteri, lascia lavorare l'algoritmo e scegli."
   },
   "form": {
+    "panelTitle": "I tuoi criteri",
     "stepLocation": "Posizione",
     "stepFilters": "Filtri",
     "stepResults": "Risultati",
@@ -84,17 +90,19 @@
     "yes": "Sì",
     "no": "No",
     "indifferent": "Indifferente",
-    "search": "Cerca",
+    "search": "Trova attività",
+    "surpriseLink": "Non sai cosa scegliere? Lasciati sorprendere →",
     "next": "Avanti",
     "back": "Indietro",
-    "modify": "Modifica"
+    "modify": "Modifica",
+    "emptyState": "Inserisci i tuoi criteri a sinistra per scoprire le attività vicino a te."
   },
   "results": {
     "title": "Attività trovate",
     "count": "{count} attività trovate",
     "countSingular": "1 attività trovata",
     "noResults": "Nessuna attività trovata. Prova ad ampliare i tuoi criteri.",
-    "expandedRadius": "Raggio ampliato per più risultati",
+    "expandedRadius": "Poche attività corrispondono ai tuoi criteri. Abbiamo ampliato la zona.",
     "relaxedFilters": "Filtri allentati per più risultati",
     "sortScore": "Rilevanza",
     "sortDistance": "Distanza",
@@ -114,12 +122,14 @@
     "hiddenGem": "Chicca nascosta",
     "weatherOk": "Meteo favorevole",
     "weatherWarning": "Allerta meteo",
-    "loading": "Caricamento attività...",
+    "loading": "Ricerca di attività vicino a te...",
     "error": "Si è verificato un errore. Riprova.",
-    "retry": "Riprova"
+    "retry": "Riprova",
+    "seeOnMap": "Vedi sulla mappa"
   },
   "weather": {
     "sun": "Soleggiato",
+    "clearNight": "Notte serena",
     "cloudy": "Nuvoloso",
     "lightRain": "Pioggia leggera",
     "heavyRain": "Pioggia forte",
@@ -135,18 +145,62 @@
     "gastronomie": "Gastronomia",
     "ateliers": "Laboratori & Esperienze"
   },
-  "seoContent": {
-    "s1Title": "[placeholder]",
-    "s1p1": "[placeholder]",
-    "s1p2": "[placeholder]",
-    "s2Title": "[placeholder]",
-    "s2p1": "[placeholder]",
-    "s3Title": "[placeholder]",
-    "s3p1": "[placeholder]",
-    "s4Title": "[placeholder]",
-    "s4p1": "[placeholder]"
+  "howItWorks": {
+    "title": "Come funziona lo strumento?",
+    "subtitle": "In pochi secondi, suggerimenti su misura per il tuo momento.",
+    "step1Title": "La tua posizione, i tuoi criteri",
+    "step1Text": "Indica dove ti trovi oppure lascia che lo strumento ti localizzi automaticamente. Scegli il raggio, il budget, il tuo gruppo. In trenta secondi è tutto configurato.",
+    "step2Title": "Un motore che ragiona",
+    "step2Text": "Lo strumento non ti restituisce un elenco grezzo. Calcola ciò che corrisponde davvero alla tua situazione del momento, tenendo conto del meteo attuale, degli orari di apertura e delle tue preferenze.",
+    "step3Title": "Migliaia di luoghi censiti",
+    "step3Text": "Parchi, musei, escape room, spa, sentieri escursionistici, ristoranti, centri nautici, laboratori — migliaia di attività vicino a te, comprese quelle che non compaiono mai nei risultati di ricerca abituali."
   },
-  "faq": [
-    { "q": "[placeholder]", "a": "[placeholder]" }
-  ]
+  "seoContent": {
+    "title": "Trovare attività vicino a te: perché è sempre così complicato?",
+    "p1": "C'è un paradosso che molte persone vivono senza mai riuscire a formularlo. Abitano da qualche parte da anni, conoscono la loro città e i dintorni, eppure quando arriva la domanda «cosa facciamo questo weekend?», la risposta è sempre la stessa. Lo stesso ristorante. Lo stesso cinema. La stessa passeggiata.",
+    "p2": "Non è pigrizia. <strong>È un problema di informazione.</strong> La tua zona è piena di attività che non hai mai provato — semplicemente perché nulla te le ha mai segnalate al momento giusto, con i criteri giusti.",
+    "quote": "La maggior parte delle attività che esistono intorno a te non fa pubblicità. Sono lì — semplicemente non sapevi dove cercare.",
+    "card1Title": "Le attività di base a portata di mano",
+    "card1Text": "Prima di parlare di chicche nascoste, ci sono dei classici che sottovalutiamo perché li riteniamo troppo ordinari. Un parco frequentato la domenica mattina. La piscina comunale nelle giornate di gran caldo. Un sentiero segnalato che non hai mai percorso nonostante quindici anni nella stessa città. Una biblioteca che organizza mostre, un mercato locale che non ti sei mai preso il tempo di visitare davvero. Queste attività sono gratuite o quasi, raggiungibili a piedi, e sono lì da sempre. Le dimentichiamo perché non fanno rumore. Il nostro strumento le elenca tutte, e spesso il risultato più pertinente non è l'escape room a 30 euro a persona, ma il punto panoramico sulla foresta a dodici minuti in bicicletta che non avevi mai notato su una mappa.",
+    "card2Title": "Attività in coppia: uscire dal pilota automatico",
+    "card2Text": "Le coppie cadono nella stessa routine spesso più in fretta di quanto credano. Il ristorante del venerdì, il film del sabato, il divano della domenica. Non perché sia quello che vogliono davvero, ma perché trovare qualcos'altro richiede uno sforzo di ricerca che nessuno ha voglia di fare dopo una settimana impegnativa. Un pomeriggio in una cantina a quindici chilometri. Un corso di ceramica condiviso. Un giro in kayak sul fiume più vicino. Una visita a un castello che hai visto cento volte dalla strada senza mai fermarti. Queste attività non richiedono molto tempo né molto denaro. Richiedono solo sapere che esistono ed essere disposti a provarle una volta.",
+    "card3Title": "Attività in famiglia: il rompicapo del «per tutti»",
+    "card3Text": "Con i bambini, il filtro si restringe notevolmente. Non troppo lungo, non troppo costoso, fattibile per un bambino di cinque anni, accessibile col passeggino se necessario, non troppo lontano, aperto la domenica, e possibilmente qualcosa che anche i genitori trovino almeno minimamente interessante. La buona notizia: queste attività esistono, sono numerose e vanno ben oltre il solito parco divertimenti che si rivisita ogni anno. Fattorie didattiche, laghi balneabili, parchi avventura per bambini, musei interattivi, zoo locali spesso molto meno affollati dei parchi nazionali. Il nostro strumento filtra per età dei bambini, e questo cambia davvero le proposte: un'attività perfetta per un bambino di dieci anni può essere del tutto inadatta per uno di due.",
+    "card4Title": "Attività gratuite: ci sono, spesso invisibili",
+    "card4Text": "Tendiamo a pensare che uscire costi denaro. Per alcune attività è vero. Ma una parte significativa di ciò che ti circonda è completamente gratuita, e non per questo noiosa. Sentieri escursionistici segnalati tra paesaggi che non conosci. Giardini botanici ai margini della tua città. Mercati dal carattere autentico. Punti panoramici su valli che nemmeno gli abitanti del posto hanno tutti scoperto. Spiagge fluviali raggiungibili in bicicletta. Il nostro strumento filtra per budget a partire da «gratuito», e i risultati in questa categoria riservano spesso vere sorprese."
+  },
+  "categoriesShowcase": {
+    "title": "Quali tipi di attività sono censiti?",
+    "subtitle": "Sette grandi famiglie, decine di sottocategorie.",
+    "cultureSub": "Musei, gallerie, castelli, monumenti storici, teatri, cinema, siti archeologici",
+    "natureSub": "Parchi, boschi, laghi, spiagge, punti panoramici, sentieri segnalati, riserve naturali, giardini botanici",
+    "sportSub": "Piscine, arrampicata, piste di pattinaggio, bowling, karting, parchi avventura, laser tag, centri nautici, paintball",
+    "divertissementSub": "Escape room, parchi divertimenti, zoo, acquari, parchi trampolino, sale giochi, realtà virtuale",
+    "bienEtreSub": "Spa, hammam, saune, terme, centri massaggi, corsi di yoga e meditazione",
+    "gastronomieSub": "Ristoranti, birrerie, sale da tè, mercati locali, cantine vinicole, birrifici artigianali",
+    "ateliersSub": "Laboratori creativi, corsi di cucina, ceramica, fattorie di raccolta, esperienze immersive"
+  },
+  "filtersInfo": {
+    "title": "Filtri pensati per la tua situazione",
+    "subtitle": "Perché ciò che va bene il sabato sera in coppia non va bene la domenica in famiglia.",
+    "f1Title": "Posizione e raggio",
+    "f1Text": "Geolocalizzazione automatica o inserimento manuale. Raggio da 1 a 50 km, o durata massima del tragitto. Mezzo di spostamento: a piedi, bicicletta, auto, mezzi pubblici.",
+    "f2Title": "Composizione del gruppo",
+    "f2Text": "Solo, in coppia, famiglia con bambini, amici, team building. Se hai bambini, indica la loro età — cambia davvero i suggerimenti proposti.",
+    "f3Title": "Budget per persona",
+    "f3Text": "Da gratuito a oltre 50 euro a persona. Lo strumento stima le tariffe di ogni attività e filtra di conseguenza, con una tolleranza configurabile.",
+    "f4Title": "Meteo in tempo reale",
+    "f4Text": "Integrato automaticamente, senza doverlo indicare. In caso di pioggia, le attività al chiuso salgono in classifica. Con il bel tempo, quelle all'aperto vengono privilegiate.",
+    "f5Title": "Atmosfera desiderata",
+    "f5Text": "Calma e relax, divertimento e festa, culturale, adrenalina, romantico, familiare. Questo filtro modifica la classifica in modo molto più efficace di un semplice filtro per categoria.",
+    "f6Title": "Tempo a disposizione",
+    "f6Text": "Meno di un'ora, da una a due ore, mezza giornata, giornata intera. Lo strumento esclude le attività incompatibili con la tua fascia oraria — senza che tu debba verificarlo da solo."
+  },
+  "ctaFinal": {
+    "title": "Pronto a scoprire cosa ti aspetta?",
+    "text": "La maggior parte delle persone che usa questo strumento per la prima volta se ne va con almeno una sorpresa: un luogo che non conosceva e che corrisponde esattamente a ciò che cercava senza saperlo formulare. Inserisci la tua posizione, scegli i tuoi filtri e lascia che lo strumento faccia il resto. Il meteo è già integrato.",
+    "cta": "Avvia la ricerca",
+    "note": "Gratuito, senza registrazione."
+  },
+  "faq": []
 }

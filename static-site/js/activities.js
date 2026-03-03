@@ -39,7 +39,7 @@
     { id: 'nature',         tKey: 'nature',         emoji: '\uD83C\uDF3F',       color: '#22c55e' },
     { id: 'sport',          tKey: 'sport',          emoji: '\u26A1',             color: '#f97316' },
     { id: 'divertissement', tKey: 'divertissement', emoji: '\uD83C\uDFAE',       color: '#ec4899' },
-    { id: 'bien_etre',      tKey: 'bienEtre',       emoji: '\uD83E\uDDD8',       color: '#06b6d4' },
+    { id: 'bienEtre',       tKey: 'bienEtre',       emoji: '\uD83E\uDDD8',       color: '#06b6d4' },
     { id: 'gastronomie',    tKey: 'gastronomie',    emoji: '\uD83C\uDF77',       color: '#ef4444' },
     { id: 'ateliers',       tKey: 'ateliers',       emoji: '\uD83C\uDFA8',       color: '#eab308' }
   ];
@@ -638,7 +638,7 @@
   // ── Filter section (accordion) ──────────────────────────────
   function renderFilterSection(parent, key, title, forceOpen, contentFn) {
     var isOpen = forceOpen || state.openSections[key];
-    var section = el('div', 'form-section rounded-xl border border-border overflow-hidden');
+    var section = el('div', 'form-section' + (isOpen ? ' open' : ''));
 
     var header = el('button', 'form-section-header w-full flex items-center justify-between p-4 text-left');
     header.type = 'button';
@@ -806,9 +806,10 @@
 
     // Weather badge
     if (state.weather) {
+      var isNight = state.weather.isNight || false;
       var weatherBadge = el('div', 'flex items-center gap-2 px-3 py-1.5 rounded-lg bg-muted text-sm');
-      weatherBadge.innerHTML = getWeatherIcon(state.weather.condition) +
-        ' <span class="font-medium">' + esc(getWeatherLabel(state.weather.condition)) + '</span>' +
+      weatherBadge.innerHTML = getWeatherIcon(state.weather.condition, isNight) +
+        ' <span class="font-medium">' + esc(getWeatherLabel(state.weather.condition, isNight)) + '</span>' +
         ' <span class="text-muted-foreground">' + Math.round(state.weather.temp) + '\u00B0C</span>';
       headerRow.appendChild(weatherBadge);
     }
@@ -1190,7 +1191,11 @@
     return { emoji: '\uD83D\uDCCD', color: '#6b7280', label: category, cssClass: 'other' };
   }
 
-  function getWeatherIcon(condition) {
+  function getWeatherIcon(condition, isNight) {
+    if (isNight && condition === 'nuageux') {
+      // Night clear (server sends nuageux for clear night)
+      return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>';
+    }
     switch (condition) {
       case 'soleil': return ICONS.sun;
       case 'nuageux': return ICONS.cloud;
@@ -1202,7 +1207,10 @@
     }
   }
 
-  function getWeatherLabel(condition) {
+  function getWeatherLabel(condition, isNight) {
+    if (isNight && condition === 'nuageux') {
+      return tr('weather.clearNight', 'Nuit claire');
+    }
     var map = {
       soleil: 'weather.sun',
       nuageux: 'weather.cloudy',
