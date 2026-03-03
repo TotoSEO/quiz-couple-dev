@@ -56,6 +56,7 @@ interface WeatherData {
   temp: number;
   description: string;
   icon: string;
+  isNight: boolean;
 }
 
 type WeatherCondition =
@@ -391,11 +392,21 @@ function classifyWeather(owm: any): {
   temp: number;
   description: string;
   icon: string;
+  isNight: boolean;
 } {
   const id: number = owm.weather?.[0]?.id ?? 800;
   const temp: number = owm.main?.temp ?? 20;
   const description: string = owm.weather?.[0]?.description ?? "";
   const icon: string = owm.weather?.[0]?.icon ?? "01d";
+
+  // Detect night from icon suffix ("n") or from sunrise/sunset timestamps
+  const isNight = icon.endsWith("n") || (() => {
+    const now = Math.floor(Date.now() / 1000);
+    const sunrise = owm.sys?.sunrise;
+    const sunset = owm.sys?.sunset;
+    if (sunrise && sunset) return now < sunrise || now > sunset;
+    return false;
+  })();
 
   let condition: WeatherCondition;
 
@@ -410,10 +421,12 @@ function classifyWeather(owm: any): {
   } else if (id >= 801) {
     condition = "nuageux";
   } else {
-    condition = "soleil";
+    // id=800 (clear sky) — at night, treat as "nuageux" (neutral)
+    // to avoid showing "ensoleillé" when it's dark
+    condition = isNight ? "nuageux" : "soleil";
   }
 
-  return { condition, temp, description, icon };
+  return { condition, temp, description, icon, isNight };
 }
 
 /** Map an OSM element to { category, subcategory } */
@@ -732,6 +745,90 @@ function computeScore(
 }
 
 // ---------------------------------------------------------------------------
+// Rate limiting (in-memory, per edge function instance)
+// ---------------------------------------------------------------------------
+
+const RATE_LIMIT_WINDOW = 60_000; // 1 minute
+const RATE_LIMIT_MAX = 10; // max requests per IP per minute
+const DAILY_LIMIT_MAX = 100; // max requests per IP per day
+const DAILY_WINDOW = 86_400_000; // 24h
+
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const dailyLimitMap = new Map<string, { count: number; resetAt: number }>();
+
+function checkRateLimit(ip: string): { allowed: boolean; retryAfter?: number } {
+  const now = Date.now();
+
+  // Clean stale entries periodically
+  if (rateLimitMap.size > 10000) {
+    for (const [k, v] of rateLimitMap) {
+      if (v.resetAt < now) rateLimitMap.delete(k);
+    }
+  }
+  if (dailyLimitMap.size > 10000) {
+    for (const [k, v] of dailyLimitMap) {
+      if (v.resetAt < now) dailyLimitMap.delete(k);
+    }
+  }
+
+  // Per-minute rate limit
+  const entry = rateLimitMap.get(ip);
+  if (entry && entry.resetAt > now) {
+    if (entry.count >= RATE_LIMIT_MAX) {
+      return { allowed: false, retryAfter: Math.ceil((entry.resetAt - now) / 1000) };
+    }
+    entry.count++;
+  } else {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW });
+  }
+
+  // Daily rate limit
+  const daily = dailyLimitMap.get(ip);
+  if (daily && daily.resetAt > now) {
+    if (daily.count >= DAILY_LIMIT_MAX) {
+      return { allowed: false, retryAfter: Math.ceil((daily.resetAt - now) / 1000) };
+    }
+    daily.count++;
+  } else {
+    dailyLimitMap.set(ip, { count: 1, resetAt: now + DAILY_WINDOW });
+  }
+
+  return { allowed: true };
+}
+
+// Valid enum values for input sanitization
+const VALID_STRINGS = new Set([
+  "indifferent", "sedentaire", "modere", "sportif", "extreme",
+  "calme", "fun", "culturel", "adrenaline", "romantique", "familial",
+  "1h", "2h", "halfday", "fullday",
+  "indoor", "outdoor", "mixed",
+  "nature", "urban",
+  "classic", "discovery", "unusual",
+  "free", "small", "medium", "comfortable", "premium",
+  "solo", "couple", "small", "medium", "large",
+  "adults", "family", "teens", "friends", "team",
+  "0-3", "3-6", "6-12", "12-16",
+]);
+
+const VALID_CATEGORIES = new Set([
+  "culture", "nature", "sport", "divertissement", "bienEtre", "gastronomie", "ateliers"
+]);
+
+function sanitizeString(val: unknown): string | undefined {
+  if (typeof val !== "string") return undefined;
+  const clean = val.trim().slice(0, 50);
+  if (VALID_STRINGS.has(clean)) return clean;
+  return undefined;
+}
+
+function sanitizeCategories(val: unknown): string[] | undefined {
+  if (!Array.isArray(val)) return undefined;
+  return val
+    .filter((v): v is string => typeof v === "string" && VALID_CATEGORIES.has(v))
+    .slice(0, 7);
+}
+
+// ---------------------------------------------------------------------------
 // Main handler
 // ---------------------------------------------------------------------------
 
@@ -741,8 +838,45 @@ serve(async (req) => {
   }
 
   try {
+    // ---- Rate limiting ----
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      req.headers.get("x-real-ip") ||
+      "unknown";
+
+    const rateCheck = checkRateLimit(ip);
+    if (!rateCheck.allowed) {
+      return new Response(
+        JSON.stringify({ error: "Rate limited. Please wait before retrying.", retryAfter: rateCheck.retryAfter }),
+        {
+          status: 429,
+          headers: {
+            ...corsHeaders,
+            "Content-Type": "application/json",
+            "Retry-After": String(rateCheck.retryAfter || 60),
+          },
+        }
+      );
+    }
+
     // ---- Parse & validate input ----
-    const body: SearchRequest = await req.json();
+    let rawBody: string;
+    try {
+      rawBody = await req.text();
+      if (rawBody.length > 5000) {
+        return new Response(
+          JSON.stringify({ error: "Request body too large" }),
+          { status: 413, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+    } catch {
+      return new Response(
+        JSON.stringify({ error: "Invalid request body" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    const body: SearchRequest = JSON.parse(rawBody);
     const { lat, lng, radius } = body;
 
     if (lat == null || lng == null || radius == null) {
@@ -758,10 +892,22 @@ serve(async (req) => {
     if (
       typeof lat !== "number" ||
       typeof lng !== "number" ||
-      typeof radius !== "number"
+      typeof radius !== "number" ||
+      !isFinite(lat) || !isFinite(lng) || !isFinite(radius)
     ) {
       return new Response(
-        JSON.stringify({ error: "lat, lng and radius must be numbers" }),
+        JSON.stringify({ error: "lat, lng and radius must be valid numbers" }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
+      );
+    }
+
+    // Validate coordinate ranges
+    if (lat < -90 || lat > 90 || lng < -180 || lng > 180) {
+      return new Response(
+        JSON.stringify({ error: "Invalid coordinates" }),
         {
           status: 400,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -779,6 +925,23 @@ serve(async (req) => {
           headers: { ...corsHeaders, "Content-Type": "application/json" },
         }
       );
+    }
+
+    // Sanitize optional string inputs
+    body.activityTypes = sanitizeCategories(body.activityTypes);
+    body.intensity = sanitizeString(body.intensity);
+    body.duration = sanitizeString(body.duration);
+    body.environment = sanitizeString(body.environment);
+    body.setting = sanitizeString(body.setting);
+    body.novelty = sanitizeString(body.novelty);
+    body.budget = sanitizeString(body.budget);
+    body.groupSize = sanitizeString(body.groupSize);
+    body.groupComposition = sanitizeString(body.groupComposition);
+    body.childrenAge = sanitizeString(body.childrenAge);
+    if (typeof body.pmr !== "boolean") body.pmr = undefined;
+    if (typeof body.dogAllowed !== "boolean") body.dogAllowed = undefined;
+    if (typeof body.lang === "string") {
+      body.lang = body.lang.slice(0, 5).replace(/[^a-z]/gi, "");
     }
 
     // ---- Fetch weather & Overpass data in parallel ----
@@ -829,6 +992,7 @@ serve(async (req) => {
           temp: 20,
           description: "unknown",
           icon: "02d",
+          isNight: false,
         };
 
     const weatherResponse: WeatherData = {
@@ -836,6 +1000,7 @@ serve(async (req) => {
       temp: weatherInfo.temp,
       description: weatherInfo.description,
       icon: weatherInfo.icon,
+      isNight: weatherInfo.isNight,
     };
 
     // ---- Process Overpass results ----

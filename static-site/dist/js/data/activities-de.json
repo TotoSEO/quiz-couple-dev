@@ -1,11 +1,17 @@
 {
   "hero": {
-    "badge": "Interaktive Karte",
-    "title": "Finden Sie",
-    "titleHighlight": "Paar-Aktivitäten",
-    "description": "Geben Sie Ihren Standort ein und entdecken Sie die besten Unternehmungen zu zweit in Ihrer Nähe: Restaurants, Kultur, Natur, Sport und mehr."
+    "badge": "Kostenlos",
+    "badgeGeo": "Standortbasiert",
+    "badgeWeather": "Wettervernetzt",
+    "title": "Aktivitäten in meiner Nähe",
+    "subtitle": "Finden Sie, was Sie unternehmen können — heute Abend, am Wochenende oder genau jetzt.",
+    "cta": "Suche starten"
+  },
+  "intro": {
+    "text": "Sie suchen eine Aktivität in Ihrer Nähe heute Abend, am Wochenende oder genau jetzt? Dann sind Sie hier richtig. <strong>Unser Tool analysiert Ihren Standort, prüft das aktuelle Wetter und schlägt Ihnen Aktivitäten vor, die zu Ihrem Budget, Ihrer Gruppe und Ihren Wünschen passen</strong> — aus Tausenden von gelisteten Orten in Ihrer Nähe. Geben Sie Ihre Kriterien ein, lassen Sie den Algorithmus arbeiten und wählen Sie aus."
   },
   "form": {
+    "panelTitle": "Ihre Kriterien",
     "stepLocation": "Standort",
     "stepFilters": "Filter",
     "stepResults": "Ergebnisse",
@@ -84,17 +90,19 @@
     "yes": "Ja",
     "no": "Nein",
     "indifferent": "Egal",
-    "search": "Suchen",
+    "search": "Aktivitäten finden",
+    "surpriseLink": "Sie wissen nicht, was Sie wählen sollen? Lassen Sie sich überraschen →",
     "next": "Weiter",
     "back": "Zurück",
-    "modify": "Ändern"
+    "modify": "Ändern",
+    "emptyState": "Geben Sie Ihre Kriterien links ein, um Aktivitäten in Ihrer Nähe zu entdecken."
   },
   "results": {
     "title": "Gefundene Aktivitäten",
     "count": "{count} Aktivitäten gefunden",
     "countSingular": "1 Aktivität gefunden",
     "noResults": "Keine Aktivitäten gefunden. Versuchen Sie, Ihre Kriterien zu erweitern.",
-    "expandedRadius": "Radius erweitert für mehr Ergebnisse",
+    "expandedRadius": "Wenige Aktivitäten entsprechen Ihren Kriterien. Wir haben den Bereich erweitert.",
     "relaxedFilters": "Filter gelockert für mehr Ergebnisse",
     "sortScore": "Relevanz",
     "sortDistance": "Entfernung",
@@ -114,12 +122,14 @@
     "hiddenGem": "Geheimtipp",
     "weatherOk": "Gutes Wetter",
     "weatherWarning": "Wetterwarnung",
-    "loading": "Aktivitäten werden geladen...",
+    "loading": "Aktivitäten in Ihrer Nähe werden gesucht...",
     "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
-    "retry": "Erneut versuchen"
+    "retry": "Erneut versuchen",
+    "seeOnMap": "Auf der Karte ansehen"
   },
   "weather": {
     "sun": "Sonnig",
+    "clearNight": "Klare Nacht",
     "cloudy": "Bewölkt",
     "lightRain": "Leichter Regen",
     "heavyRain": "Starker Regen",
@@ -135,18 +145,62 @@
     "gastronomie": "Gastronomie",
     "ateliers": "Workshops & Erlebnisse"
   },
-  "seoContent": {
-    "s1Title": "[placeholder]",
-    "s1p1": "[placeholder]",
-    "s1p2": "[placeholder]",
-    "s2Title": "[placeholder]",
-    "s2p1": "[placeholder]",
-    "s3Title": "[placeholder]",
-    "s3p1": "[placeholder]",
-    "s4Title": "[placeholder]",
-    "s4p1": "[placeholder]"
+  "howItWorks": {
+    "title": "Wie funktioniert das Tool?",
+    "subtitle": "In wenigen Sekunden Vorschläge, die zu Ihrem Moment passen.",
+    "step1Title": "Ihr Standort, Ihre Kriterien",
+    "step1Text": "Geben Sie an, wo Sie sich befinden, oder lassen Sie sich automatisch lokalisieren. Wählen Sie Ihren Radius, Ihr Budget, Ihre Gruppe. In dreißig Sekunden ist alles eingestellt.",
+    "step2Title": "Eine Suchmaschine, die mitdenkt",
+    "step2Text": "Das Tool liefert keine ungeordnete Liste. Es berechnet, was wirklich zu Ihrer aktuellen Situation passt — unter Berücksichtigung des aktuellen Wetters, der Öffnungszeiten und Ihrer Vorlieben.",
+    "step3Title": "Tausende gelistete Orte",
+    "step3Text": "Parks, Museen, Escape Rooms, Spas, Wanderwege, Restaurants, Wassersportzentren, Workshops — Tausende von Aktivitäten in Ihrer Nähe, einschließlich derer, die in den üblichen Suchergebnissen nie auftauchen."
   },
-  "faq": [
-    { "q": "[placeholder]", "a": "[placeholder]" }
-  ]
+  "seoContent": {
+    "title": "Aktivitäten in der Nähe finden: Warum ist das immer so kompliziert?",
+    "p1": "Es gibt ein Paradox, das viele Menschen erleben, ohne es je in Worte zu fassen. Sie wohnen seit Jahren irgendwo, kennen ihre Stadt und die Umgebung, und trotzdem ist die Antwort auf die Frage «Was machen wir am Wochenende?» immer dieselbe. Dasselbe Restaurant. Dasselbe Kino. Derselbe Spaziergang.",
+    "p2": "Das ist keine Faulheit. <strong>Es ist ein Informationsproblem.</strong> Ihre Umgebung steckt voller Aktivitäten, die Sie nie ausprobiert haben — einfach weil Sie niemand zum richtigen Zeitpunkt mit den richtigen Kriterien darauf hingewiesen hat.",
+    "quote": "Die meisten Aktivitäten, die in Ihrer Nähe existieren, machen keine Werbung. Sie sind da — Sie wussten nur nicht, wo Sie suchen sollten.",
+    "card1Title": "Die alltäglichen Aktivitäten direkt vor Ihrer Haustür",
+    "card1Text": "Bevor wir über Geheimtipps sprechen, gibt es Klassiker, die wir unterschätzen, weil wir sie für zu gewöhnlich halten. Ein gut besuchter Park an einem Sonntagmorgen. Das Freibad bei großer Hitze. Ein ausgeschilderter Wanderweg, den man trotz fünfzehn Jahren in derselben Stadt nie gemacht hat. Eine Bibliothek, die Ausstellungen organisiert, ein lokaler Markt, den man nie richtig erkundet hat. Diese Aktivitäten sind kostenlos oder fast kostenlos, zu Fuß erreichbar, und sie waren schon immer da. Wir vergessen sie, weil sie kein Aufsehen erregen. Unser Tool listet sie alle auf, und oft stellt sich heraus, dass das relevanteste Ergebnis nicht der Escape Room für 30 Euro pro Person ist, sondern der Aussichtspunkt über den Wald, zwölf Minuten mit dem Fahrrad entfernt, den Sie nie auf einer Karte bemerkt hatten.",
+    "card2Title": "Paar-Aktivitäten: Raus aus dem Autopilot",
+    "card2Text": "Paare verfallen oft schneller in dieselbe Routine, als sie es merken. Das Freitagsrestaurant, der Samstagabendfilm, das Sonntagssofa. Nicht weil es das ist, was sie wirklich wollen, sondern weil die Suche nach etwas anderem einen Rechercheaufwand erfordert, den nach einer vollen Woche niemand aufbringen möchte. Ein Nachmittag in einer Weinkellerei fünfzehn Kilometer entfernt. Ein gemeinsamer Töpferkurs. Eine Kajaktour auf dem nächsten Fluss. Ein Besuch in einer Burg, an der man schon hundertmal vorbeigefahren ist, ohne jemals anzuhalten. Diese Aktivitäten kosten nicht viel Zeit und nicht viel Geld. Man muss nur wissen, dass es sie gibt, und bereit sein, sie einmal auszuprobieren.",
+    "card3Title": "Familienaktivitäten: Das Puzzle «für alle etwas dabei»",
+    "card3Text": "Mit Kindern wird der Filter erheblich enger. Nicht zu lang, nicht zu teuer, machbar für ein fünfjähriges Kind, bei Bedarf kinderwagentauglich, nicht zu weit weg, sonntags geöffnet, und idealerweise etwas, das auch die Eltern zumindest halbwegs interessant finden. Die gute Nachricht: Diese Aktivitäten gibt es, und zwar reichlich, und sie gehen weit über den immer gleichen Freizeitpark hinaus, den man jedes Jahr besucht. Lernbauernhöfe, Badeseen, Waldparks mit Kinder-Kletterparks, interaktive Museen, lokale Zoos, die oft weit weniger überfüllt sind als die großen Nationalparks. Unser Tool filtert nach dem Alter der Kinder, was die Vorschläge wirklich verändert: Eine Aktivität, die perfekt für ein zehnjähriges Kind ist, kann für ein zweijähriges völlig ungeeignet sein.",
+    "card4Title": "Kostenlose Aktivitäten: Sie sind da, oft unsichtbar",
+    "card4Text": "Wir neigen dazu zu glauben, dass Ausgehen Geld kostet. Für manche Aktivitäten stimmt das. Aber ein beachtlicher Teil dessen, was Sie umgibt, ist völlig kostenlos — und deswegen keineswegs langweilig. Ausgeschilderte Wanderwege durch Landschaften, die Sie nicht kennen. Botanische Gärten am Stadtrand. Märkte mit echtem Charakter. Aussichtspunkte über Täler, die selbst die Einheimischen nicht alle kennen. Flussbadestrände, die mit dem Fahrrad erreichbar sind. Unser Tool filtert nach Budget ab «kostenlos», und die Ergebnisse in dieser Kategorie bieten oft echte Überraschungen."
+  },
+  "categoriesShowcase": {
+    "title": "Welche Arten von Aktivitäten sind gelistet?",
+    "subtitle": "Sieben große Kategorien, Dutzende Unterkategorien.",
+    "cultureSub": "Museen, Galerien, Schlösser, historische Denkmäler, Theater, Kinos, archäologische Stätten",
+    "natureSub": "Parks, Wälder, Seen, Strände, Aussichtspunkte, ausgeschilderte Wanderwege, Naturschutzgebiete, botanische Gärten",
+    "sportSub": "Schwimmbäder, Klettern, Eisbahnen, Bowling, Kartfahren, Kletterparks, Lasertag, Wassersportzentren, Paintball",
+    "divertissementSub": "Escape Rooms, Freizeitparks, Zoos, Aquarien, Trampolinparks, Spielhallen, Virtual Reality",
+    "bienEtreSub": "Spas, Hammams, Saunen, Thermalbäder, Massagezentren, Yoga- und Meditationskurse",
+    "gastronomieSub": "Restaurants, Brauhäuser, Teestuben, lokale Märkte, Weinkeller, Craft-Brauereien",
+    "ateliersSub": "Kreativworkshops, Kochkurse, Töpfern, Selbstpflück-Höfe, immersive Erlebnisse"
+  },
+  "filtersInfo": {
+    "title": "Filter, die auf Ihre Situation zugeschnitten sind",
+    "subtitle": "Denn was am Samstagabend zu zweit passt, passt nicht am Sonntag mit der Familie.",
+    "f1Title": "Standort & Radius",
+    "f1Text": "Automatische Geolokalisierung oder manuelle Eingabe. Radius von 1 bis 50 km oder maximale Fahrtdauer. Fortbewegungsart: zu Fuß, Fahrrad, Auto, ÖPNV.",
+    "f2Title": "Gruppenzusammensetzung",
+    "f2Text": "Allein, zu zweit, Familie mit Kindern, Freunde, Teambuilding. Wenn Sie Kinder haben, geben Sie deren Alter an — das verändert die Vorschläge wirklich.",
+    "f3Title": "Budget pro Person",
+    "f3Text": "Von kostenlos bis über 50 Euro pro Person. Das Tool schätzt die Preise jeder Aktivität und filtert entsprechend, mit einer einstellbaren Toleranz.",
+    "f4Title": "Echtzeit-Wetter",
+    "f4Text": "Automatisch integriert, ohne dass Sie es angeben müssen. Bei Regen werden Indoor-Aktivitäten bevorzugt. Bei Sonnenschein werden Outdoor-Aktivitäten hervorgehoben.",
+    "f5Title": "Gewünschte Atmosphäre",
+    "f5Text": "Ruhig und entspannt, spaßig und festlich, kulturell, Adrenalin, romantisch, familienfreundlich. Dieser Filter verändert das Ranking weit effektiver als ein einfacher Kategoriefilter.",
+    "f6Title": "Verfügbare Zeit",
+    "f6Text": "Weniger als eine Stunde, ein bis zwei Stunden, halber Tag, ganzer Tag. Das Tool schließt Aktivitäten aus, die nicht in Ihr Zeitfenster passen — ohne dass Sie es selbst überprüfen müssen."
+  },
+  "ctaFinal": {
+    "title": "Bereit zu entdecken, was auf Sie wartet?",
+    "text": "Die meisten Menschen, die dieses Tool zum ersten Mal nutzen, nehmen mindestens eine Überraschung mit — einen Ort, den sie nicht kannten und der genau dem entspricht, was sie gesucht haben, ohne es in Worte fassen zu können. Geben Sie Ihren Standort ein, wählen Sie Ihre Filter und lassen Sie das Tool den Rest erledigen. Das Wetter ist bereits integriert.",
+    "cta": "Suche starten",
+    "note": "Kostenlos, ohne Anmeldung."
+  },
+  "faq": []
 }
