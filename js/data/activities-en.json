@@ -1,11 +1,17 @@
 {
   "hero": {
-    "badge": "Interactive map",
-    "title": "Find",
-    "titleHighlight": "couple activities",
-    "description": "Enter your location and discover the best outings for two near you: restaurants, culture, nature, sports and more."
+    "badge": "Free",
+    "badgeGeo": "Geolocated",
+    "badgeWeather": "Weather-connected",
+    "title": "Activities near me",
+    "subtitle": "Find what to do nearby — tonight, this weekend, or right now.",
+    "cta": "Start searching"
+  },
+  "intro": {
+    "text": "Looking for something to do near you tonight, this weekend, or right now? You're in the right place. <strong>Our tool analyses your location, checks real-time weather, and suggests activities tailored to your budget, your group and your interests</strong>, from thousands of listed venues near you. Enter your criteria, let the algorithm work, and choose."
   },
   "form": {
+    "panelTitle": "Your criteria",
     "stepLocation": "Location",
     "stepFilters": "Filters",
     "stepResults": "Results",
@@ -84,17 +90,19 @@
     "yes": "Yes",
     "no": "No",
     "indifferent": "No preference",
-    "search": "Search",
+    "search": "Find activities",
+    "surpriseLink": "Can't decide? Let us surprise you →",
     "next": "Next",
     "back": "Back",
-    "modify": "Modify"
+    "modify": "Modify",
+    "emptyState": "Fill in your criteria on the left to discover activities near you."
   },
   "results": {
     "title": "Activities found",
     "count": "{count} activities found",
     "countSingular": "1 activity found",
     "noResults": "No activities found. Try broadening your criteria.",
-    "expandedRadius": "Radius expanded for more results",
+    "expandedRadius": "Few activities match your criteria. We've expanded the area.",
     "relaxedFilters": "Filters relaxed for more results",
     "sortScore": "Relevance",
     "sortDistance": "Distance",
@@ -114,12 +122,14 @@
     "hiddenGem": "Hidden gem",
     "weatherOk": "Weather OK",
     "weatherWarning": "Weather warning",
-    "loading": "Loading activities...",
+    "loading": "Searching for activities near you...",
     "error": "An error occurred. Please try again.",
-    "retry": "Retry"
+    "retry": "Retry",
+    "seeOnMap": "View on map"
   },
   "weather": {
     "sun": "Sunny",
+    "clearNight": "Clear night",
     "cloudy": "Cloudy",
     "lightRain": "Light rain",
     "heavyRain": "Heavy rain",
@@ -135,18 +145,62 @@
     "gastronomie": "Gastronomy",
     "ateliers": "Workshops & Experiences"
   },
-  "seoContent": {
-    "s1Title": "[placeholder]",
-    "s1p1": "[placeholder]",
-    "s1p2": "[placeholder]",
-    "s2Title": "[placeholder]",
-    "s2p1": "[placeholder]",
-    "s3Title": "[placeholder]",
-    "s3p1": "[placeholder]",
-    "s4Title": "[placeholder]",
-    "s4p1": "[placeholder]"
+  "howItWorks": {
+    "title": "How does the tool work?",
+    "subtitle": "In just a few seconds, suggestions tailored to your moment.",
+    "step1Title": "Your location, your criteria",
+    "step1Text": "Tell us where you are, or let the tool locate you automatically. Choose your radius, your budget, your group. In thirty seconds, everything is set.",
+    "step2Title": "A smart search engine",
+    "step2Text": "The tool doesn't just return a raw list. It calculates what truly matches your current situation, taking into account the current weather, opening hours and your preferences.",
+    "step3Title": "Thousands of listed venues",
+    "step3Text": "Parks, museums, escape rooms, spas, hiking trails, restaurants, water sports centres, workshops — thousands of activities near you, including those that never show up in the usual search results."
   },
-  "faq": [
-    { "q": "[placeholder]", "a": "[placeholder]" }
-  ]
+  "seoContent": {
+    "title": "Finding activities near you: why is it always so complicated?",
+    "p1": "There's a paradox that many people experience without ever putting it into words. They've lived somewhere for years, they know their city and its surroundings, and yet when the question comes up — \"what shall we do this weekend?\" — the answer is always the same. The same restaurant. The same cinema. The same walk.",
+    "p2": "It's not laziness. <strong>It's an information problem.</strong> Your area is full of activities you've never tried — simply because nothing ever pointed them out to you at the right time, with the right criteria.",
+    "quote": "Most of the activities that exist around you don't advertise. They're there — you just didn't know where to look.",
+    "card1Title": "The everyday activities right on your doorstep",
+    "card1Text": "Before we talk about hidden gems, there are classics that we underestimate because we think they're too ordinary. A well-frequented park on a Sunday morning. The local swimming pool on a scorching day. A marked hiking trail you've never done despite fifteen years in the same town. A library that hosts exhibitions, a local market you've never really taken the time to explore. These activities are free or nearly so, accessible on foot, and they've been there all along. We forget them because they don't make any noise. Our tool lists them all, and it often turns out that the most relevant result isn't the escape room at 30 euros per person, but the forest viewpoint twelve minutes away by bike that you'd never noticed on a map.",
+    "card2Title": "Couple activities: breaking out of autopilot",
+    "card2Text": "Couples fall into the same routine often faster than they realise. The Friday restaurant, the Saturday film, the Sunday sofa. Not because that's what they truly want, but because finding something else takes a research effort that nobody feels like making after a busy week. An afternoon at a wine cellar fifteen kilometres away. A shared pottery class. A kayak trip on the nearest river. A visit to a castle you've driven past a hundred times without ever stopping. These activities don't require much time or much money. They just require knowing they exist, and being willing to try them once.",
+    "card3Title": "Family activities: the \"something for everyone\" puzzle",
+    "card3Text": "With children, the filter narrows considerably. Not too long, not too expensive, doable for a five-year-old, pushchair-accessible if needed, not too far, open on Sundays, and ideally something the parents also find at least somewhat interesting. The good news: these activities exist, there are plenty of them, and they go well beyond the same theme park you revisit every year. Educational farms, swimming lakes, forest parks with junior tree-top adventures, interactive museums, local zoos that are often far less crowded than national parks. Our tool filters by children's age, which genuinely changes the suggestions: an activity perfect for a ten-year-old may be completely unsuitable for a two-year-old.",
+    "card4Title": "Free activities: they're there, often invisible",
+    "card4Text": "We tend to think that going out costs money. That's true for some activities. But a significant portion of what surrounds you is entirely free, and not just boring either. Marked hiking trails through landscapes you don't know. Botanical gardens at the edge of your town. Markets with real character. Viewpoints over valleys that even locals haven't all discovered. River beaches accessible by bike. Our tool filters by budget starting from \"free\", and the results in this category often hold genuine surprises."
+  },
+  "categoriesShowcase": {
+    "title": "What types of activities are listed?",
+    "subtitle": "Seven major categories, dozens of subcategories.",
+    "cultureSub": "Museums, galleries, castles, historic monuments, theatres, cinemas, archaeological sites",
+    "natureSub": "Parks, forests, lakes, beaches, viewpoints, marked hiking trails, nature reserves, botanical gardens",
+    "sportSub": "Swimming pools, climbing, ice rinks, bowling, go-karting, tree-top adventures, laser tag, water sports centres, paintball",
+    "divertissementSub": "Escape rooms, theme parks, zoos, aquariums, trampoline parks, arcades, virtual reality",
+    "bienEtreSub": "Spas, hammams, saunas, thermal baths, massage centres, yoga and meditation classes",
+    "gastronomieSub": "Restaurants, brasseries, tearooms, local markets, wine cellars, craft breweries",
+    "ateliersSub": "Creative workshops, cooking classes, pottery, pick-your-own farms, immersive experiences"
+  },
+  "filtersInfo": {
+    "title": "Filters designed for your situation",
+    "subtitle": "Because what works on a Saturday evening as a couple doesn't work on a Sunday with the family.",
+    "f1Title": "Location & radius",
+    "f1Text": "Automatic geolocation or manual entry. Radius from 1 to 50 km, or maximum travel time. Travel mode: walking, cycling, driving, public transport.",
+    "f2Title": "Group composition",
+    "f2Text": "Solo, couple, family with children, friends, team building. If you have children, enter their age — it genuinely changes the suggestions.",
+    "f3Title": "Budget per person",
+    "f3Text": "From free to over 50 euros per person. The tool estimates the price of each activity and filters accordingly, with an adjustable tolerance.",
+    "f4Title": "Real-time weather",
+    "f4Text": "Integrated automatically, without you having to specify it. In rainy weather, indoor activities are promoted. In sunny weather, outdoor activities are favoured.",
+    "f5Title": "Desired atmosphere",
+    "f5Text": "Calm and relaxing, fun and festive, cultural, adrenaline, romantic, family-friendly. This filter adjusts the ranking far more effectively than a simple category filter.",
+    "f6Title": "Available time",
+    "f6Text": "Less than an hour, one to two hours, half a day, full day. The tool excludes activities that don't fit your time slot — without you having to check yourself."
+  },
+  "ctaFinal": {
+    "title": "Ready to discover what's waiting for you?",
+    "text": "Most people who use this tool for the first time come away with at least one surprise — a place they didn't know about that matches exactly what they were looking for without knowing how to put it into words. Enter your location, choose your filters, and let the tool do the rest. Weather is already built in.",
+    "cta": "Start searching",
+    "note": "Free, no sign-up required."
+  },
+  "faq": []
 }
