@@ -64,8 +64,6 @@
     groupSize: 'couple',
     groupComposition: 'couple',
     childrenAge: null,
-    pmr: 'indifferent',
-    dogAllowed: 'indifferent',
     results: [],
     weather: null,
     meta: null,
@@ -76,8 +74,7 @@
     markersLayer: null,
     radiusCircle: null,
     geolocating: false,
-    nominatimResults: [],
-    openSections: { types: true, preferences: false, budget: false, group: false, accessibility: false }
+    nominatimResults: []
   };
 
   var t = {};
@@ -116,6 +113,14 @@
       });
     }
     return result;
+  }
+
+  // ── Scroll helper ─────────────────────────────────────────
+  function scrollToTool() {
+    var toolSection = document.getElementById('outil');
+    if (toolSection) {
+      toolSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   // ── Main render ─────────────────────────────────────────────
@@ -372,9 +377,9 @@
 
   // ── Step 2: Filters ────────────────────────────────────────
   function renderFilters(parent) {
-    var form = el('div', 'space-y-4');
+    var form = el('div', 'space-y-6');
 
-    // Back button
+    // Back button + location badge
     var backRow = el('div', 'flex items-center gap-2 mb-2');
     var backBtn = el('button', 'btn btn-outline flex items-center gap-1 text-sm');
     backBtn.type = 'button';
@@ -389,68 +394,134 @@
     backRow.appendChild(locBadge);
     form.appendChild(backRow);
 
-    // Section: Activity types (always open)
-    renderFilterSection(form, 'types', tr('form.activityTypes', "Types d'activites"), true, function(body) {
-      // Select all / deselect all
-      var allSelected = state.activityTypes.length === CATEGORIES.length;
-      var toggleRow = el('div', 'flex justify-end mb-2');
-      var toggleBtn = el('button', 'text-xs text-primary hover:underline');
-      toggleBtn.type = 'button';
-      toggleBtn.textContent = allSelected ? tr('form.deselectAll', 'Tout deselectionner') : tr('form.selectAll', 'Tout selectionner');
-      toggleBtn.addEventListener('click', function() {
-        if (allSelected) {
-          state.activityTypes = [];
-        } else {
-          state.activityTypes = CATEGORIES.map(function(c) { return c.id; });
-        }
+    // ── Activity types (always visible) ──
+    var typesBlock = el('div', 'rounded-xl border border-border bg-card p-5 space-y-3');
+    var typesTitle = el('h3', 'font-semibold text-sm flex items-center gap-2');
+    typesTitle.innerHTML = '<span style="color:hsl(var(--primary));">' + ICONS.filter + '</span> ' + esc(tr('form.activityTypes', "Types d'activites"));
+    typesBlock.appendChild(typesTitle);
+
+    // Select all / deselect all
+    var allSelected = state.activityTypes.length === CATEGORIES.length;
+    var toggleRow = el('div', 'flex justify-end');
+    var toggleBtn = el('button', 'text-xs text-primary hover:underline');
+    toggleBtn.type = 'button';
+    toggleBtn.textContent = allSelected ? tr('form.deselectAll', 'Tout deselectionner') : tr('form.selectAll', 'Tout selectionner');
+    toggleBtn.addEventListener('click', function() {
+      if (allSelected) { state.activityTypes = []; } else { state.activityTypes = CATEGORIES.map(function(c) { return c.id; }); }
+      render();
+    });
+    toggleRow.appendChild(toggleBtn);
+    typesBlock.appendChild(toggleRow);
+
+    var catsGrid = el('div', 'flex flex-wrap gap-2');
+    CATEGORIES.forEach(function(cat) {
+      var isActive = state.activityTypes.indexOf(cat.id) !== -1;
+      var chip = el('button', 'activity-chip' + (isActive ? ' active' : ''));
+      chip.type = 'button';
+      if (isActive) {
+        chip.style.borderColor = cat.color;
+        chip.style.background = cat.color + '15';
+      }
+      chip.innerHTML = '<span>' + cat.emoji + '</span> ' + esc(tr('categories.' + cat.tKey, cat.id));
+      chip.addEventListener('click', function() {
+        var idx = state.activityTypes.indexOf(cat.id);
+        if (idx === -1) { state.activityTypes.push(cat.id); } else { state.activityTypes.splice(idx, 1); }
         render();
       });
-      toggleRow.appendChild(toggleBtn);
-      body.appendChild(toggleRow);
-
-      // Category chips
-      var grid = el('div', 'flex flex-wrap gap-2');
-      CATEGORIES.forEach(function(cat) {
-        var isActive = state.activityTypes.indexOf(cat.id) !== -1;
-        var chip = el('button', 'activity-chip' + (isActive ? ' active' : ''));
-        chip.type = 'button';
-        if (isActive) {
-          chip.style.borderColor = cat.color;
-          chip.style.background = cat.color + '15';
-        }
-        chip.innerHTML = '<span>' + cat.emoji + '</span> ' + esc(tr('categories.' + cat.tKey, cat.id));
-        chip.addEventListener('click', function() {
-          var idx = state.activityTypes.indexOf(cat.id);
-          if (idx === -1) {
-            state.activityTypes.push(cat.id);
-          } else {
-            state.activityTypes.splice(idx, 1);
-          }
-          render();
-        });
-        grid.appendChild(chip);
-      });
-      body.appendChild(grid);
+      catsGrid.appendChild(chip);
     });
+    typesBlock.appendChild(catsGrid);
+    form.appendChild(typesBlock);
 
-    // Section: Preferences
-    renderFilterSection(form, 'preferences', tr('form.intensity', 'Preferences'), false, function(body) {
-      // Intensity
-      body.appendChild(renderOptionGroup(
-        tr('form.intensity', 'Intensite'),
+    // ── Budget + Group (side by side on desktop) ──
+    var rowGrid = el('div', 'grid md:grid-cols-2 gap-4');
+
+    // Budget
+    var budgetBlock = el('div', 'rounded-xl border border-border bg-card p-5 space-y-3');
+    var budgetTitle = el('h3', 'font-semibold text-sm');
+    budgetTitle.textContent = tr('form.budget', 'Budget');
+    budgetBlock.appendChild(budgetTitle);
+    budgetBlock.appendChild(renderOptionGroup(
+      '',
+      [
+        { value: 'indifferent', label: tr('form.budgetIndifferent', 'Indifferent') },
+        { value: 'free', label: tr('form.budgetFree', 'Gratuit') },
+        { value: 'small', label: tr('form.budgetSmall', '< 15\u20AC') },
+        { value: 'medium', label: tr('form.budgetMedium', '15-35\u20AC') },
+        { value: 'comfortable', label: tr('form.budgetComfortable', '35-55\u20AC') },
+        { value: 'premium', label: tr('form.budgetPremium', '55\u20AC+') }
+      ],
+      state.budget,
+      function(v) { state.budget = v; render(); }
+    ));
+    rowGrid.appendChild(budgetBlock);
+
+    // Group
+    var groupBlock = el('div', 'rounded-xl border border-border bg-card p-5 space-y-3');
+    var groupTitle = el('h3', 'font-semibold text-sm');
+    groupTitle.textContent = tr('form.groupSize', 'Groupe');
+    groupBlock.appendChild(groupTitle);
+    groupBlock.appendChild(renderOptionGroup(
+      '',
+      [
+        { value: 'couple', label: tr('form.groupSizeCouple', 'En couple') },
+        { value: 'solo', label: tr('form.groupSizeSolo', 'Solo') },
+        { value: 'small', label: tr('form.groupSizeSmall', 'Petit groupe') },
+        { value: 'large', label: tr('form.groupSizeLarge', 'Grand groupe') }
+      ],
+      state.groupSize,
+      function(v) { state.groupSize = v; render(); }
+    ));
+    groupBlock.appendChild(renderOptionGroup(
+      tr('form.groupComposition', 'Composition'),
+      [
+        { value: 'couple', label: tr('form.groupCouple', 'Couple') },
+        { value: 'adults', label: tr('form.groupAdults', 'Adultes') },
+        { value: 'family', label: tr('form.groupFamily', 'Famille') },
+        { value: 'friends', label: tr('form.groupFriends', 'Amis') },
+        { value: 'team', label: tr('form.groupTeamBuilding', 'Team building') }
+      ],
+      state.groupComposition,
+      function(v) { state.groupComposition = v; render(); }
+    ));
+    if (state.groupComposition === 'family') {
+      groupBlock.appendChild(renderOptionGroup(
+        tr('form.childrenAge', 'Age des enfants'),
         [
-          { value: 'indifferent', label: tr('form.indifferent', 'Indifferent') },
-          { value: 'sedentaire', label: tr('form.intensitySedentaire', 'Sedentaire') },
-          { value: 'modere', label: tr('form.intensityModere', 'Modere') },
-          { value: 'sportif', label: tr('form.intensitySportif', 'Sportif') }
+          { value: '0-3', label: tr('form.childrenAge0_3', '0-3 ans') },
+          { value: '3-6', label: tr('form.childrenAge3_6', '3-6 ans') },
+          { value: '6-12', label: tr('form.childrenAge6_12', '6-12 ans') },
+          { value: '12-16', label: tr('form.childrenAge12_16', '12-16 ans') }
         ],
-        state.intensity,
-        function(v) { state.intensity = v; render(); }
+        state.childrenAge || '6-12',
+        function(v) { state.childrenAge = v; render(); }
       ));
+    }
+    rowGrid.appendChild(groupBlock);
+    form.appendChild(rowGrid);
 
-      // Ambiance
-      var ambianceGroup = el('div', 'space-y-2 mt-4');
-      var ambianceLabel = el('label', 'text-sm font-semibold');
+    // ── Preferences (collapsible "more filters") ──
+    var moreBlock = el('div', 'rounded-xl border border-border bg-card overflow-hidden');
+    var moreHeader = el('button', 'w-full flex items-center justify-between p-4 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors');
+    moreHeader.type = 'button';
+    var moreHeaderText = el('span', '');
+    moreHeaderText.textContent = tr('form.moreFilters', 'Filtres avancés (optionnel)');
+    moreHeader.appendChild(moreHeaderText);
+    var moreChevron = el('span', 'transition-transform duration-200' + (state.showMore ? ' rotate-180' : ''));
+    moreChevron.innerHTML = ICONS.chevDown;
+    moreHeader.appendChild(moreChevron);
+    moreHeader.addEventListener('click', function() {
+      state.showMore = !state.showMore;
+      render();
+    });
+    moreBlock.appendChild(moreHeader);
+
+    if (state.showMore) {
+      var moreBody = el('div', 'p-5 pt-0 space-y-4 border-t border-border');
+
+      // Ambiance (multi-select chips)
+      var ambianceGroup = el('div', 'space-y-2');
+      var ambianceLabel = el('label', 'text-sm font-medium text-muted-foreground');
       ambianceLabel.textContent = tr('form.ambiance', 'Ambiance');
       ambianceGroup.appendChild(ambianceLabel);
       var ambianceGrid = el('div', 'flex flex-wrap gap-2');
@@ -475,10 +546,23 @@
         ambianceGrid.appendChild(chip);
       });
       ambianceGroup.appendChild(ambianceGrid);
-      body.appendChild(ambianceGroup);
+      moreBody.appendChild(ambianceGroup);
+
+      // Intensity
+      moreBody.appendChild(renderOptionGroup(
+        tr('form.intensity', 'Intensite'),
+        [
+          { value: 'indifferent', label: tr('form.indifferent', 'Indifferent') },
+          { value: 'sedentaire', label: tr('form.intensitySedentaire', 'Sedentaire') },
+          { value: 'modere', label: tr('form.intensityModere', 'Modere') },
+          { value: 'sportif', label: tr('form.intensitySportif', 'Sportif') }
+        ],
+        state.intensity,
+        function(v) { state.intensity = v; render(); }
+      ));
 
       // Duration
-      body.appendChild(renderOptionGroup(
+      moreBody.appendChild(renderOptionGroup(
         tr('form.duration', 'Duree'),
         [
           { value: 'indifferent', label: tr('form.durationIndifferent', 'Indifferent') },
@@ -492,7 +576,7 @@
       ));
 
       // Environment
-      body.appendChild(renderOptionGroup(
+      moreBody.appendChild(renderOptionGroup(
         tr('form.environment', 'Environnement'),
         [
           { value: 'indifferent', label: tr('form.envIndifferent', 'Indifferent') },
@@ -505,7 +589,7 @@
       ));
 
       // Setting
-      body.appendChild(renderOptionGroup(
+      moreBody.appendChild(renderOptionGroup(
         tr('form.setting', 'Cadre'),
         [
           { value: 'indifferent', label: tr('form.settingIndifferent', 'Indifferent') },
@@ -516,106 +600,9 @@
         function(v) { state.setting = v; render(); }
       ));
 
-      // Novelty
-      body.appendChild(renderOptionGroup(
-        tr('form.novelty', 'Nouveaute'),
-        [
-          { value: 'indifferent', label: tr('form.indifferent', 'Indifferent') },
-          { value: 'classic', label: tr('form.noveltyClassic', 'Classique') },
-          { value: 'discovery', label: tr('form.noveltyDiscovery', 'Decouverte') },
-          { value: 'unusual', label: tr('form.noveltyUnusual', 'Insolite') }
-        ],
-        state.novelty,
-        function(v) { state.novelty = v; render(); }
-      ));
-    });
-
-    // Section: Budget
-    renderFilterSection(form, 'budget', tr('form.budget', 'Budget'), false, function(body) {
-      body.appendChild(renderOptionGroup(
-        '',
-        [
-          { value: 'indifferent', label: tr('form.budgetIndifferent', 'Indifferent') },
-          { value: 'free', label: tr('form.budgetFree', 'Gratuit') },
-          { value: 'small', label: tr('form.budgetSmall', '< 15\u20AC') },
-          { value: 'medium', label: tr('form.budgetMedium', '15-35\u20AC') },
-          { value: 'comfortable', label: tr('form.budgetComfortable', '35-55\u20AC') },
-          { value: 'premium', label: tr('form.budgetPremium', '55\u20AC+') }
-        ],
-        state.budget,
-        function(v) { state.budget = v; render(); }
-      ));
-    });
-
-    // Section: Group
-    renderFilterSection(form, 'group', tr('form.groupSize', 'Groupe'), false, function(body) {
-      body.appendChild(renderOptionGroup(
-        tr('form.groupSize', 'Taille du groupe'),
-        [
-          { value: 'couple', label: tr('form.groupSizeCouple', 'En couple') },
-          { value: 'solo', label: tr('form.groupSizeSolo', 'Solo') },
-          { value: 'small', label: tr('form.groupSizeSmall', 'Petit groupe') },
-          { value: 'medium', label: tr('form.groupSizeMedium', 'Groupe moyen') },
-          { value: 'large', label: tr('form.groupSizeLarge', 'Grand groupe') }
-        ],
-        state.groupSize,
-        function(v) { state.groupSize = v; render(); }
-      ));
-
-      body.appendChild(renderOptionGroup(
-        tr('form.groupComposition', 'Composition'),
-        [
-          { value: 'couple', label: tr('form.groupCouple', 'Couple') },
-          { value: 'adults', label: tr('form.groupAdults', 'Adultes') },
-          { value: 'family', label: tr('form.groupFamily', 'Famille') },
-          { value: 'teens', label: tr('form.groupTeens', 'Ados') },
-          { value: 'friends', label: tr('form.groupFriends', 'Amis') },
-          { value: 'team', label: tr('form.groupTeamBuilding', 'Team building') }
-        ],
-        state.groupComposition,
-        function(v) { state.groupComposition = v; render(); }
-      ));
-
-      // Children age (show only if family)
-      if (state.groupComposition === 'family') {
-        body.appendChild(renderOptionGroup(
-          tr('form.childrenAge', 'Age des enfants'),
-          [
-            { value: '0-3', label: tr('form.childrenAge0_3', '0-3 ans') },
-            { value: '3-6', label: tr('form.childrenAge3_6', '3-6 ans') },
-            { value: '6-12', label: tr('form.childrenAge6_12', '6-12 ans') },
-            { value: '12-16', label: tr('form.childrenAge12_16', '12-16 ans') }
-          ],
-          state.childrenAge || '6-12',
-          function(v) { state.childrenAge = v; render(); }
-        ));
-      }
-    });
-
-    // Section: Accessibility
-    renderFilterSection(form, 'accessibility', tr('form.pmr', 'Accessibilite'), false, function(body) {
-      body.appendChild(renderOptionGroup(
-        tr('form.pmr', 'Accessible PMR'),
-        [
-          { value: 'indifferent', label: tr('form.indifferent', 'Indifferent') },
-          { value: 'yes', label: tr('form.yes', 'Oui') },
-          { value: 'no', label: tr('form.no', 'Non') }
-        ],
-        state.pmr,
-        function(v) { state.pmr = v; render(); }
-      ));
-
-      body.appendChild(renderOptionGroup(
-        tr('form.dogAllowed', 'Chien accepte'),
-        [
-          { value: 'indifferent', label: tr('form.indifferent', 'Indifferent') },
-          { value: 'yes', label: tr('form.yes', 'Oui') },
-          { value: 'no', label: tr('form.no', 'Non') }
-        ],
-        state.dogAllowed,
-        function(v) { state.dogAllowed = v; render(); }
-      ));
-    });
+      moreBlock.appendChild(moreBody);
+    }
+    form.appendChild(moreBlock);
 
     // Search button
     var searchBtn = el('button', 'btn btn-cta w-full py-4 text-lg flex items-center justify-center gap-2');
@@ -629,40 +616,12 @@
       state.error = null;
       state.results = [];
       render();
+      // Scroll to keep the tool visible
+      scrollToTool();
     });
     form.appendChild(searchBtn);
 
     parent.appendChild(form);
-  }
-
-  // ── Filter section (accordion) ──────────────────────────────
-  function renderFilterSection(parent, key, title, forceOpen, contentFn) {
-    var isOpen = forceOpen || state.openSections[key];
-    var section = el('div', 'form-section' + (isOpen ? ' open' : ''));
-
-    var header = el('button', 'form-section-header w-full flex items-center justify-between p-4 text-left');
-    header.type = 'button';
-    var headerTitle = el('span', 'text-sm font-semibold');
-    headerTitle.textContent = title;
-    header.appendChild(headerTitle);
-    if (!forceOpen) {
-      var chevron = el('span', 'transition-transform duration-200' + (isOpen ? ' rotate-180' : ''));
-      chevron.innerHTML = ICONS.chevDown;
-      header.appendChild(chevron);
-      header.addEventListener('click', function() {
-        state.openSections[key] = !state.openSections[key];
-        render();
-      });
-    }
-    section.appendChild(header);
-
-    if (isOpen) {
-      var body = el('div', 'form-section-body p-4 pt-0 space-y-4');
-      contentFn(body);
-      section.appendChild(body);
-    }
-
-    parent.appendChild(section);
   }
 
   // ── Option group (radio-like) ───────────────────────────────
@@ -730,8 +689,6 @@
       groupSize: state.groupSize,
       groupComposition: state.groupComposition,
       childrenAge: state.childrenAge,
-      pmr: state.pmr === 'yes' ? true : undefined,
-      dogAllowed: state.dogAllowed === 'yes' ? true : undefined,
       lang: lang
     };
 
@@ -753,6 +710,7 @@
         state.error = data.error;
         state.step = 'results';
         render();
+        scrollToTool();
         return;
       }
       state.results = data.activities || [];
@@ -760,11 +718,14 @@
       state.meta = data.meta || null;
       state.step = 'results';
       render();
+      // Scroll back to tool section so user sees results
+      scrollToTool();
     })
     .catch(function(err) {
       state.error = err.message || tr('results.error', 'Une erreur est survenue');
       state.step = 'results';
       render();
+      scrollToTool();
     });
   }
 
@@ -833,10 +794,11 @@
     headerRow.appendChild(modBtn);
     parent.appendChild(headerRow);
 
-    // Expanded radius notice
+    // Expanded radius notice with explanation
     if (state.meta && state.meta.expanded) {
+      var noticeMsg = getExpandedMessage();
       var notice = el('div', 'text-sm p-3 rounded-lg bg-primary/10 text-primary mb-4');
-      notice.textContent = tr('results.expandedRadius', 'Rayon elargi pour plus de resultats');
+      notice.textContent = noticeMsg;
       parent.appendChild(notice);
     }
 
@@ -894,26 +856,38 @@
     sortBar.appendChild(surpriseBtn);
     parent.appendChild(sortBar);
 
-    // Results layout: map + cards
-    var layout = el('div', 'activities-results');
-
-    // Map container
+    // Map container (full width above cards)
     var mapWrap = el('div', 'activity-map');
     mapWrap.id = 'activities-map';
-    layout.appendChild(mapWrap);
+    parent.appendChild(mapWrap);
 
-    // Cards list
-    var cardsList = el('div', 'space-y-3 overflow-y-auto');
-    cardsList.style.maxHeight = '600px';
+    // Cards grid: 2 columns on desktop, 1 on mobile
+    var cardsList = el('div', 'activity-cards-grid');
     state.results.forEach(function(activity, index) {
       cardsList.appendChild(renderActivityCard(activity, index));
     });
-    layout.appendChild(cardsList);
-
-    parent.appendChild(layout);
+    parent.appendChild(cardsList);
 
     // Initialize map after DOM is ready
     setTimeout(function() { initMap(); }, 50);
+  }
+
+  // ── Expanded radius explanation ─────────────────────────────
+  function getExpandedMessage() {
+    // Check what filters are active and give a contextual explanation
+    if (state.budget === 'free') {
+      return tr('results.expandedBudgetFree', 'Les activites gratuites sont souvent peu referencees. On a elargi la zone.');
+    }
+    if (state.budget === 'small') {
+      return tr('results.expandedBudgetSmall', 'Peu d\'activites a petit budget dans cette zone. On a elargi le rayon.');
+    }
+    if (state.activityTypes.length === 1) {
+      return tr('results.expandedCategories', 'Ce type d\'activite est peu represente dans cette zone. On a elargi pour vous proposer des resultats.');
+    }
+    if (state.activityTypes.length <= 3 && state.budget !== 'indifferent') {
+      return tr('results.expandedGeneric', 'La combinaison de vos filtres est assez restrictive dans cette zone. Essayez d\'assouplir un critere ou d\'elargir le rayon.');
+    }
+    return tr('results.expandedRadius', 'Peu d\'activites trouvees dans votre rayon — on a elargi la zone de recherche.');
   }
 
   // ── Activity card ───────────────────────────────────────────
@@ -1122,10 +1096,20 @@
   }
 
   function highlightActivity(id) {
-    // Scroll to card
+    // On mobile, scroll to map first so user sees the popup
+    var isMobile = window.innerWidth < 768;
+    var mapEl = document.getElementById('activities-map');
+
+    if (isMobile && mapEl) {
+      mapEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Highlight card visually
     var card = container.querySelector('.activity-card[data-id="' + id + '"]');
     if (card) {
-      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (!isMobile) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
       card.style.boxShadow = '0 0 0 3px hsl(var(--primary))';
       setTimeout(function() { card.style.boxShadow = ''; }, 2000);
     }
@@ -1193,7 +1177,6 @@
 
   function getWeatherIcon(condition, isNight) {
     if (isNight && condition === 'nuageux') {
-      // Night clear (server sends nuageux for clear night)
       return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>';
     }
     switch (condition) {
