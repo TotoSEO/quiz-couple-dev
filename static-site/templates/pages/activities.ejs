@@ -13,7 +13,7 @@
     <div class="mx-auto max-w-3xl text-center">
       <span class="hero-badge mb-4">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <%= t(ns + ':hero.badge', 'Gratuit') %> &middot; <%= t(ns + ':hero.badgeGeo', 'Géolocalisé') %> &middot; <%= t(ns + ':hero.badgeWeather', 'Connecté à la météo') %>
+        <%= t(ns + ':hero.badge', 'Gratuit') %> &middot; <%= t(ns + ':hero.badgeGeo', 'Géolocalisé') %>
       </span>
       <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
         <%= t(ns + ':hero.title', 'Activités autour de moi') %>
@@ -187,29 +187,20 @@
       <div class="rounded-xl border border-border bg-card p-5">
         <div class="flex items-center gap-3 mb-3">
           <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style="background:hsl(var(--primary)/0.1);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
           </div>
-          <h3 class="font-bold text-sm"><%= t(ns + ':filtersInfo.f4Title', 'Météo en temps réel') %></h3>
+          <h3 class="font-bold text-sm"><%= t(ns + ':filtersInfo.f4Title', 'Ambiance souhaitée') %></h3>
         </div>
         <p class="text-sm text-muted-foreground leading-relaxed"><%= t(ns + ':filtersInfo.f4Text', '') %></p>
       </div>
-      <div class="rounded-xl border border-border bg-card p-5">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style="background:hsl(var(--primary)/0.1);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-          </div>
-          <h3 class="font-bold text-sm"><%= t(ns + ':filtersInfo.f5Title', 'Ambiance souhaitée') %></h3>
-        </div>
-        <p class="text-sm text-muted-foreground leading-relaxed"><%= t(ns + ':filtersInfo.f5Text', '') %></p>
-      </div>
-      <div class="rounded-xl border border-border bg-card p-5">
+      <div class="rounded-xl border border-border bg-card p-5 md:col-span-2">
         <div class="flex items-center gap-3 mb-3">
           <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style="background:hsl(var(--primary)/0.1);">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 12"/></svg>
           </div>
-          <h3 class="font-bold text-sm"><%= t(ns + ':filtersInfo.f6Title', 'Durée disponible') %></h3>
+          <h3 class="font-bold text-sm"><%= t(ns + ':filtersInfo.f5Title', 'Durée disponible') %></h3>
         </div>
-        <p class="text-sm text-muted-foreground leading-relaxed"><%= t(ns + ':filtersInfo.f6Text', '') %></p>
+        <p class="text-sm text-muted-foreground leading-relaxed"><%= t(ns + ':filtersInfo.f5Text', '') %></p>
       </div>
     </div>
   </div>

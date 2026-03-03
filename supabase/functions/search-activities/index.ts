@@ -44,33 +44,8 @@ interface Activity {
   website: string | null;
   openingHours: string | null;
   indoor: boolean | null;
-  weatherCompat: number;
   confidence: number;
 }
-
-interface WeatherData {
-  condition: string;
-  temp: number;
-  description: string;
-  icon: string;
-  isNight: boolean;
-}
-
-type WeatherCondition =
-  | "soleil"
-  | "nuageux"
-  | "pluie_legere"
-  | "pluie_forte"
-  | "neige"
-  | "canicule";
-
-type ExposureType =
-  | "interieur"
-  | "exterieur_couvert"
-  | "exterieur_decouvert"
-  | "mixte"
-  | "nature_randonnee"
-  | "aquatique_exterieur";
 
 type GroupSize = "solo" | "couple" | "small" | "large";
 
@@ -222,61 +197,6 @@ const SPORT_SUB_TAGS: Record<string, string> = {
 };
 
 // ---------------------------------------------------------------------------
-// Weather matrix  [exposure][condition] → score 0–1
-// ---------------------------------------------------------------------------
-
-const WEATHER_MATRIX: Record<ExposureType, Record<WeatherCondition, number>> = {
-  interieur: {
-    soleil: 0.7,
-    nuageux: 0.8,
-    pluie_legere: 1.0,
-    pluie_forte: 1.0,
-    neige: 1.0,
-    canicule: 1.0,
-  },
-  exterieur_couvert: {
-    soleil: 1.0,
-    nuageux: 1.0,
-    pluie_legere: 0.7,
-    pluie_forte: 0.3,
-    neige: 0.5,
-    canicule: 0.7,
-  },
-  exterieur_decouvert: {
-    soleil: 1.0,
-    nuageux: 0.9,
-    pluie_legere: 0.3,
-    pluie_forte: 0.0,
-    neige: 0.3,
-    canicule: 0.4,
-  },
-  mixte: {
-    soleil: 0.9,
-    nuageux: 0.9,
-    pluie_legere: 0.6,
-    pluie_forte: 0.4,
-    neige: 0.6,
-    canicule: 0.7,
-  },
-  nature_randonnee: {
-    soleil: 1.0,
-    nuageux: 0.9,
-    pluie_legere: 0.4,
-    pluie_forte: 0.0,
-    neige: 0.2,
-    canicule: 0.3,
-  },
-  aquatique_exterieur: {
-    soleil: 1.0,
-    nuageux: 0.8,
-    pluie_legere: 0.2,
-    pluie_forte: 0.0,
-    neige: 0.0,
-    canicule: 0.9,
-  },
-};
-
-// ---------------------------------------------------------------------------
 // Group compatibility matrix  [activityKey][groupSize] → score 0–1
 // ---------------------------------------------------------------------------
 
@@ -374,62 +294,13 @@ const INDOOR_MAP: Record<string, boolean | null> = {
   photographer: true, farm: false, hackerspace: true, cooking_school: true, craft: true,
 };
 
-// ---------------------------------------------------------------------------
-// Exposure type per subcategory (for weather scoring)
-// ---------------------------------------------------------------------------
-
-const EXPOSURE_MAP: Record<string, ExposureType> = {
-  // culture
-  museum: "interieur", gallery: "interieur", artwork: "exterieur_decouvert",
-  monument: "mixte", castle: "mixte", manor: "interieur",
-  memorial: "exterieur_decouvert", ruins: "exterieur_decouvert",
-  archaeological_site: "exterieur_decouvert", fort: "mixte",
-  place_of_worship: "interieur", library: "interieur",
-  theatre: "interieur", cinema: "interieur",
-  planetarium: "interieur", community_centre: "interieur", conference_centre: "interieur",
-  // nature
-  park: "exterieur_decouvert", garden: "exterieur_decouvert", dog_park: "exterieur_decouvert",
-  forest: "nature_randonnee", wood: "nature_randonnee",
-  water: "exterieur_decouvert", beach: "exterieur_decouvert",
-  peak: "nature_randonnee", cave_entrance: "mixte", hot_spring: "aquatique_exterieur",
-  viewpoint: "exterieur_decouvert", picnic_site: "exterieur_decouvert",
-  nature_reserve: "nature_randonnee", bird_hide: "exterieur_couvert",
-  fishing: "exterieur_decouvert", waterfall: "nature_randonnee", glacier: "nature_randonnee",
-  hiking: "nature_randonnee", foot: "nature_randonnee", path: "nature_randonnee",
-  // sport
-  swimming_pool: "aquatique_exterieur", sports_centre: "interieur",
-  ice_rink: "interieur", bowling_alley: "interieur",
-  golf_course: "exterieur_decouvert", miniature_golf: "exterieur_decouvert",
-  fitness_centre: "interieur", stadium: "exterieur_couvert",
-  horse_riding: "exterieur_decouvert", pitch: "exterieur_decouvert",
-  track: "exterieur_decouvert", swimming_area: "aquatique_exterieur",
-  climbing: "mixte", tennis: "exterieur_decouvert",
-  surfing: "aquatique_exterieur", scuba_diving: "aquatique_exterieur",
-  kayak: "aquatique_exterieur", canoe: "aquatique_exterieur",
-  sailing: "aquatique_exterieur", skiing: "exterieur_decouvert",
-  public_bath: "interieur",
-  // divertissement
-  escape_game: "interieur", theme_park: "exterieur_couvert",
-  water_park: "aquatique_exterieur", zoo: "exterieur_couvert",
-  aquarium: "interieur", amusement_arcade: "interieur", trampoline_park: "interieur",
-  nightclub: "interieur", bar: "interieur", pub: "interieur",
-  casino: "interieur", dance: "interieur", events_venue: "interieur", games: "interieur",
-  // bienEtre
-  spa: "interieur", sauna: "interieur", turkish_bath: "interieur",
-  massage: "interieur", yoga: "interieur",
-  // gastronomie
-  restaurant: "interieur", cafe: "interieur", fast_food: "interieur",
-  ice_cream: "mixte", marketplace: "exterieur_couvert", biergarten: "exterieur_couvert",
-  food_court: "interieur",
-  wine: "interieur", tea: "interieur", chocolate: "interieur",
-  pastry: "interieur", bakery: "interieur", deli: "interieur", cheese: "interieur",
-  winery: "interieur", brewery: "interieur", distillery: "interieur",
-  // ateliers
-  arts_centre: "interieur", pottery: "interieur", painter: "interieur",
-  sculptor: "interieur", photographer: "interieur",
-  farm: "exterieur_decouvert", hackerspace: "interieur",
-  cooking_school: "interieur", craft: "interieur",
-};
+// Subcategories that are dangerous/unsuitable at night (for schedule scoring)
+const OUTDOOR_NIGHT_PENALTY = new Set([
+  "forest", "wood", "peak", "nature_reserve", "waterfall", "glacier",
+  "hiking", "foot", "path", "beach", "viewpoint", "fishing",
+  "swimming_area", "kayak", "canoe", "surfing", "sailing", "skiing",
+  "hot_spring", "dog_park", "bird_hide", "picnic_site",
+]);
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -452,49 +323,6 @@ function haversine(
       Math.sin(dLon / 2) ** 2;
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   return Math.round(R * c * 100) / 100;
-}
-
-/** Classify OpenWeatherMap response into our weather categories */
-function classifyWeather(owm: any): {
-  condition: WeatherCondition;
-  temp: number;
-  description: string;
-  icon: string;
-  isNight: boolean;
-} {
-  const id: number = owm.weather?.[0]?.id ?? 800;
-  const temp: number = owm.main?.temp ?? 20;
-  const description: string = owm.weather?.[0]?.description ?? "";
-  const icon: string = owm.weather?.[0]?.icon ?? "01d";
-
-  // Detect night from icon suffix ("n") or from sunrise/sunset timestamps
-  const isNight = icon.endsWith("n") || (() => {
-    const now = Math.floor(Date.now() / 1000);
-    const sunrise = owm.sys?.sunrise;
-    const sunset = owm.sys?.sunset;
-    if (sunrise && sunset) return now < sunrise || now > sunset;
-    return false;
-  })();
-
-  let condition: WeatherCondition;
-
-  if (temp >= 38) {
-    condition = "canicule";
-  } else if (id >= 600 && id < 700) {
-    condition = "neige";
-  } else if (id >= 502 && id < 600) {
-    condition = "pluie_forte";
-  } else if (id >= 300 && id < 502) {
-    condition = "pluie_legere";
-  } else if (id >= 801) {
-    condition = "nuageux";
-  } else {
-    // id=800 (clear sky) — at night, treat as "nuageux" (neutral)
-    // to avoid showing "ensoleillé" when it's dark
-    condition = isNight ? "nuageux" : "soleil";
-  }
-
-  return { condition, temp, description, icon, isNight };
 }
 
 /** Map an OSM element to { category, subcategory } */
@@ -686,7 +514,6 @@ function computeScore(
     subcategory: string;
     distance: number;
     indoor: boolean | null;
-    weatherCompat: number;
     priceRange: [number, number];
     openingHours: string | null;
   },
@@ -695,32 +522,23 @@ function computeScore(
     activityTypes?: string[];
     budget?: string;
     groupSize: GroupSize;
-    weather: WeatherCondition;
   }
 ): number {
   // ---- Adaptive weights ----
-  let wType = 30;
-  let wDistance = 25;
-  let wWeather = 15;
+  let wType = 35;
+  let wDistance = 30;
   let wBudget = 15;
-  let wSchedule = 10;
+  let wSchedule = 15;
   let wGroup = 5;
 
   // Strict budget
   if (params.budget && params.budget !== "indifferent") {
     wBudget = 20;
   }
-  // Heavy rain or snow
-  if (
-    params.weather === "pluie_forte" ||
-    params.weather === "neige"
-  ) {
-    wWeather = 25;
-  }
   // Evening
   const currentHour = new Date().getUTCHours();
   if (currentHour > 20) {
-    wSchedule = 15;
+    wSchedule = 20;
   }
 
   // ---- score_type ----
@@ -753,12 +571,6 @@ function computeScore(
     scoreDistance *= 1.2;
     scoreDistance = Math.min(scoreDistance, 1.0);
   }
-
-  // ---- score_weather ----
-  const exposure: ExposureType =
-    EXPOSURE_MAP[activity.subcategory] || "mixte";
-  const scoreWeather =
-    WEATHER_MATRIX[exposure]?.[params.weather] ?? 0.6;
 
   // ---- score_budget ----
   let scoreBudget = 1.0;
@@ -794,9 +606,8 @@ function computeScore(
     } else if (isIndoor === true) {
       scoreSchedule = Math.min(scoreSchedule + 0.2, 1.0); // indoor at night = good
     }
-    // Nature/hiking at night is a bad idea
-    const exposure: ExposureType = EXPOSURE_MAP[activity.subcategory] || "mixte";
-    if (exposure === "nature_randonnee" || exposure === "aquatique_exterieur") {
+    // Nature/hiking/water at night is a bad idea
+    if (OUTDOOR_NIGHT_PENALTY.has(activity.subcategory)) {
       scoreSchedule = 0.0;
     }
   } else if (currentHour >= 6 && currentHour < 9) {
@@ -817,11 +628,10 @@ function computeScore(
   const scoreGroup = getGroupScore(activity.subcategory, params.groupSize);
 
   // ---- Final weighted score ----
-  const totalWeight = wType + wDistance + wWeather + wBudget + wSchedule + wGroup;
+  const totalWeight = wType + wDistance + wBudget + wSchedule + wGroup;
   const raw =
     (wType * scoreType +
       wDistance * scoreDistance +
-      wWeather * scoreWeather +
       wBudget * scoreBudget +
       wSchedule * scoreSchedule +
       wGroup * scoreGroup) /
@@ -1028,20 +838,7 @@ serve(async (req) => {
       body.lang = body.lang.slice(0, 5).replace(/[^a-z]/gi, "");
     }
 
-    // ---- Fetch weather & Overpass data in parallel ----
-    const OPENWEATHER_API_KEY = Deno.env.get("OPENWEATHER_API_KEY");
-
-    const weatherPromise = OPENWEATHER_API_KEY
-      ? fetch(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${OPENWEATHER_API_KEY}`
-        )
-          .then((r) => r.json())
-          .catch((err) => {
-            console.error("Weather fetch error:", err);
-            return null;
-          })
-      : Promise.resolve(null);
-
+    // ---- Fetch Overpass data ----
     const overpassQuery = buildOverpassQuery(
       lat,
       lng,
@@ -1049,7 +846,7 @@ serve(async (req) => {
       body.activityTypes
     );
 
-    const overpassPromise = fetch(
+    const overpassData = await fetch(
       "https://overpass-api.de/api/interpreter",
       {
         method: "POST",
@@ -1062,30 +859,6 @@ serve(async (req) => {
         console.error("Overpass fetch error:", err);
         return { elements: [] };
       });
-
-    const [weatherRaw, overpassData] = await Promise.all([
-      weatherPromise,
-      overpassPromise,
-    ]);
-
-    // ---- Process weather ----
-    const weatherInfo = weatherRaw
-      ? classifyWeather(weatherRaw)
-      : {
-          condition: "nuageux" as WeatherCondition,
-          temp: 20,
-          description: "unknown",
-          icon: "02d",
-          isNight: false,
-        };
-
-    const weatherResponse: WeatherData = {
-      condition: weatherInfo.condition,
-      temp: weatherInfo.temp,
-      description: weatherInfo.description,
-      icon: weatherInfo.icon,
-      isNight: weatherInfo.isNight,
-    };
 
     // ---- Process Overpass results ----
     const elements: any[] = overpassData.elements || [];
@@ -1134,12 +907,6 @@ serve(async (req) => {
       // Indoor
       const indoor = INDOOR_MAP[subcategory] ?? null;
 
-      // Weather compatibility
-      const exposure: ExposureType =
-        EXPOSURE_MAP[subcategory] || "mixte";
-      const weatherCompat =
-        WEATHER_MATRIX[exposure]?.[weatherInfo.condition] ?? 0.6;
-
       // Address construction from OSM tags
       const addressParts: string[] = [];
       if (tags["addr:housenumber"]) addressParts.push(tags["addr:housenumber"]);
@@ -1172,7 +939,6 @@ serve(async (req) => {
         website: tags.website || tags["contact:website"] || null,
         openingHours: tags.opening_hours || null,
         indoor,
-        weatherCompat,
         confidence,
       };
 
@@ -1183,7 +949,6 @@ serve(async (req) => {
           subcategory: act.subcategory,
           distance: act.distance,
           indoor: act.indoor,
-          weatherCompat: act.weatherCompat,
           priceRange: act.priceRange,
           openingHours: act.openingHours,
         },
@@ -1192,7 +957,6 @@ serve(async (req) => {
           activityTypes: body.activityTypes,
           budget: body.budget,
           groupSize,
-          weather: weatherInfo.condition,
         }
       );
 
@@ -1232,7 +996,6 @@ serve(async (req) => {
     // ---- Build response ----
     const response = {
       activities: diversified,
-      weather: weatherResponse,
       meta: {
         total: diversified.length,
         expanded,

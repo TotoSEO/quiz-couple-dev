@@ -26,11 +26,7 @@
     star: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none" class="w-4 h-4"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
     shuffle: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>',
     arrowLeft: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>',
-    chevDown: '<svg viewBox="0 0 12 12" fill="none" class="w-4 h-4"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
-    sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
-    cloud: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>',
-    droplet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>',
-    thermometer: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg>'
+    chevDown: '<svg viewBox="0 0 12 12" fill="none" class="w-4 h-4"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>'
   };
 
   // ── Category definitions ────────────────────────────────────
@@ -65,7 +61,6 @@
     groupComposition: 'couple',
     childrenAge: null,
     results: [],
-    weather: null,
     meta: null,
     loading: false,
     error: null,
@@ -720,7 +715,6 @@
         return;
       }
       state.results = data.activities || [];
-      state.weather = data.weather || null;
       state.meta = data.meta || null;
       state.step = 'results';
       render();
@@ -768,18 +762,8 @@
       return;
     }
 
-    // Header row: weather + count + modify
+    // Header row: count + modify
     var headerRow = el('div', 'flex flex-wrap items-center justify-between gap-3 mb-4');
-
-    // Weather badge
-    if (state.weather) {
-      var isNight = state.weather.isNight || false;
-      var weatherBadge = el('div', 'flex items-center gap-2 px-3 py-1.5 rounded-lg bg-muted text-sm');
-      weatherBadge.innerHTML = getWeatherIcon(state.weather.condition, isNight) +
-        ' <span class="font-medium">' + esc(getWeatherLabel(state.weather.condition, isNight)) + '</span>' +
-        ' <span class="text-muted-foreground">' + Math.round(state.weather.temp) + '\u00B0C</span>';
-      headerRow.appendChild(weatherBadge);
-    }
 
     // Count
     var countText = el('span', 'text-sm text-muted-foreground');
@@ -948,24 +932,6 @@
       priceSpan.textContent = activity.priceRange[0] + '-' + activity.priceRange[1] + '\u20AC';
     }
     metaRow.appendChild(priceSpan);
-
-    // Weather compat
-    if (state.weather) {
-      var weatherSpan = el('span', 'flex items-center gap-1');
-      if (activity.weatherCompat >= 0.7) {
-        weatherSpan.innerHTML = ICONS.sun;
-        weatherSpan.style.color = '#22c55e';
-        weatherSpan.title = tr('results.weatherOk', 'Meteo favorable');
-      } else if (activity.weatherCompat >= 0.4) {
-        weatherSpan.innerHTML = ICONS.cloud;
-        weatherSpan.style.color = '#f59e0b';
-      } else {
-        weatherSpan.innerHTML = ICONS.droplet;
-        weatherSpan.style.color = '#ef4444';
-        weatherSpan.title = tr('results.weatherWarning', 'Attention meteo');
-      }
-      metaRow.appendChild(weatherSpan);
-    }
 
     card.appendChild(metaRow);
 
@@ -1194,36 +1160,6 @@
       };
     }
     return { emoji: '\uD83D\uDCCD', color: '#6b7280', label: category, cssClass: 'other' };
-  }
-
-  function getWeatherIcon(condition, isNight) {
-    if (isNight && condition === 'nuageux') {
-      return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>';
-    }
-    switch (condition) {
-      case 'soleil': return ICONS.sun;
-      case 'nuageux': return ICONS.cloud;
-      case 'pluie_legere':
-      case 'pluie_forte': return ICONS.droplet;
-      case 'neige': return ICONS.cloud;
-      case 'canicule': return ICONS.thermometer;
-      default: return ICONS.sun;
-    }
-  }
-
-  function getWeatherLabel(condition, isNight) {
-    if (isNight && condition === 'nuageux') {
-      return tr('weather.clearNight', 'Nuit claire');
-    }
-    var map = {
-      soleil: 'weather.sun',
-      nuageux: 'weather.cloudy',
-      pluie_legere: 'weather.lightRain',
-      pluie_forte: 'weather.heavyRain',
-      neige: 'weather.snow',
-      canicule: 'weather.heatwave'
-    };
-    return tr(map[condition] || 'weather.sun', condition);
   }
 
 })();
