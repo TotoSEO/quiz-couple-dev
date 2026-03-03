@@ -50,7 +50,10 @@
     'most':           { prefix: 'most', engine: 'most', totalQ: 20, pool: 240, textOnly: true },
 
     // ── Parentalite quiz (2 players, same questions, explicit point values) ──
-    'parentalite':    { prefix: 'parentalite', engine: 'parentalite', totalQ: 20, pool: 20 }
+    'parentalite':    { prefix: 'parentalite', engine: 'parentalite', totalQ: 20, pool: 20 },
+
+    // ── Emmenager quiz (same engine as parentalite) ──
+    'emmenager':      { prefix: 'emmenager', engine: 'parentalite', totalQ: 20, pool: 20 }
   };
 
   var config = QUIZ_CONFIG[quizType];
