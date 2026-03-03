@@ -42,13 +42,13 @@
     "metaDescription": "Quiz divertido para parejas con 150+ preguntas hilarantes. ¡Ríanse juntos y fortalezcan su complicidad. Gratis, sin registro!"
   },
   "quizKnowledge": {
-    "title": "¿Quién Conoce Mejor a su Pareja? - Quiz Gratis",
+    "title": "¿Quién conoce mejor al otro? Quiz gratis",
     "shortTitle": "¿Quién conoce mejor?",
     "description": "¡Alternen las preguntas y descubran quién conoce mejor a su pareja! 100 preguntas para probar su complicidad.",
     "metaDescription": "Quiz interactivo para parejas: ¿quién conoce mejor al otro? 100 preguntas para adivinar por turnos. ¡Gratis, divertido y perfecto para una noche romántica!"
   },
   "quizMost": {
-    "title": "¿Quién es Más Probable Que...? - 240+ Preguntas Gratis",
+    "title": "¿Quién es más...? Juegos de pareja en línea",
     "shortTitle": "¿Quién es más...?",
     "description": "De 2 a 8 jugadores, voten juntos para descubrir quién es el más gracioso, hablador, romántico... ¡240+ preguntas divertidas!",
     "metaDescription": "Quiz ¿Quién es más probable que...? con 240+ preguntas para 2-8 jugadores. Voten, ríanse y descubran quién es el más divertido. ¡Gratis!"
@@ -95,7 +95,7 @@
     "metaDescription": "Quiz de pareja para adolescentes: 20 preguntas para saber si tu relación es sólida o pasajera. Jueguen a distancia, ¡resultado inmediato!"
   },
   "testParentalite": {
-    "title": "Preguntas antes de tener hijos: Test de parentalidad para parejas",
+    "title": "Preguntas antes de tener hijos: Test",
     "shortTitle": "Test Parentalidad",
     "description": "20 preguntas honestas para evaluar vuestra preparación como pareja antes de tener un hijo. Test gratuito, resultado inmediato.",
     "metaDescription": "¿Estáis realmente preparados para ser padres? 20 preguntas honestas para evaluar vuestra preparación como pareja antes de tener un hijo. Test gratuito, resultado inmediato."
@@ -105,5 +105,11 @@
     "shortTitle": "Compatibilidad Astro",
     "description": "Descubre la compatibilidad amorosa entre vuestros nombres y signos zodiacales. Numerología y astrología combinadas.",
     "metaDescription": "Introduce vuestros nombres y signos zodiacales. Nuestro test combina numerología y astrología para revelar lo que las estrellas dicen de vuestra compatibilidad."
+  },
+  "testEmmenager": {
+    "title": "¿Preparados para vivir juntos? Test para parejas",
+    "shortTitle": "Test Convivencia",
+    "description": "20 preguntas para saber si estáis preparados para vivir juntos. Test gratuito para parejas, resultado inmediato.",
+    "metaDescription": "¿Listos para dar el paso y vivir juntos? Este test de pareja os ayuda a saber si sois realmente compatibles en el día a día. 2 modos: juntos o por separado."
   }
 }

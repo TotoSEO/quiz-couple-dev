@@ -79,7 +79,7 @@ const article: BlogArticleData = {
 <p>La <strong>reconstrucción tras una ruptura</strong> suele pasar por varios caminos:</p>
 <ul>
 <li><strong>Reencontrarse a uno mismo</strong>, primero. Muchos hombres se dan cuenta, tras una ruptura, de que perdieron pedazos de sí mismos por el camino — pasiones abandonadas, amigos dejados de lado, proyectos olvidados. Este periodo es la oportunidad de recuperarlos.</li>
-<li><strong>Reaprender a estar solo</strong>, después. No en el sentido de una soledad sufrida, sino de una soledad elegida. Saber que puedes estar bien contigo mismo es uno de los cimientos más sólidos para una futura <a href="https://quiz-couple.com/es/test-relacion-sana">relación sana</a>.</li>
+<li><strong>Reaprender a estar solo</strong>, después. No en el sentido de una soledad sufrida, sino de una soledad elegida. Saber que puedes estar bien contigo mismo es uno de los cimientos más sólidos para una futura <a href="https://quiz-couple.com/es/test-relacion-sana/">relación sana</a>.</li>
 <li><strong>Permitirse imaginar el futuro</strong>. No necesariamente con alguien más enseguida — pero simplemente, permitirse desear de nuevo.</li>
 </ul>`,
     },
@@ -96,7 +96,7 @@ const article: BlogArticleData = {
       title: 'Lo que este artículo no dice',
       content: `<p>Cada ruptura es única. Cada hombre es único. Estas <strong>fases de la ruptura</strong> no se viven necesariamente en este orden, no duran lo mismo, y algunas pueden superponerse o volver. Este esquema es una herramienta de comprensión, no un diagnóstico.</p>
 <p>Si tu ruptura va acompañada de una <strong>depresión persistente</strong>, pensamientos oscuros o una incapacidad para funcionar en la vida diaria desde hace varias semanas, no te quedes solo con eso. Pedir ayuda es el acto más valiente que existe.</p>
-<p>Para ir más allá y entender mejor tu relación, puedes <a href="https://quiz-couple.com/es/test-compatibilidad-pareja">probar tu pareja</a> o comprobar si tu relación muestra signos de una <a href="https://quiz-couple.com/es/test-relacion-toxica">relación tóxica</a>.</p>`,
+<p>Para ir más allá y entender mejor tu relación, puedes <a href="https://quiz-couple.com/es/test-compatibilidad-pareja/">probar tu pareja</a> o comprobar si tu relación muestra signos de una <a href="https://quiz-couple.com/es/test-relacion-toxica/">relación tóxica</a>.</p>`,
     },
   ],
 };

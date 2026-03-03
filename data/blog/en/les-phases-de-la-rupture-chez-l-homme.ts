@@ -79,7 +79,7 @@ const article: BlogArticleData = {
 <p><strong>Rebuilding after a breakup</strong> often follows several paths:</p>
 <ul>
 <li><strong>Finding yourself again</strong>, first. Many men realize, after a breakup, that they lost pieces of themselves along the way — neglected passions, sidelined friends, abandoned projects. This period is the chance to reclaim them.</li>
-<li><strong>Relearning to be alone</strong>, next. Not in the sense of unwanted solitude, but of chosen solitude. Knowing you can be fine on your own is one of the strongest foundations for a future <a href="https://quiz-couple.com/en/healthy-relationship-test">healthy relationship</a>.</li>
+<li><strong>Relearning to be alone</strong>, next. Not in the sense of unwanted solitude, but of chosen solitude. Knowing you can be fine on your own is one of the strongest foundations for a future <a href="https://quiz-couple.com/en/healthy-relationship-test/">healthy relationship</a>.</li>
 <li><strong>Allowing yourself to envision the future</strong>. Not necessarily with someone else right away — but simply, allowing yourself to want again.</li>
 </ul>`,
     },
@@ -96,7 +96,7 @@ const article: BlogArticleData = {
       title: "What this article doesn't say",
       content: `<p>Every breakup is unique. Every man is unique. These <strong>breakup phases</strong> don't necessarily happen in this order, don't last the same amount of time, and some may overlap or return. This framework is a comprehension tool, not a diagnosis.</p>
 <p>If your breakup is accompanied by <strong>persistent depression</strong>, dark thoughts, or an inability to function in daily life for several weeks, don't stay alone with it. Asking for help is the bravest thing you can do.</p>
-<p>To go further and better understand your relationship, you can <a href="https://quiz-couple.com/en/couple-compatibility-test">test your couple</a> or check whether your relationship shows signs of a <a href="https://quiz-couple.com/en/toxic-relationship-test">toxic relationship</a>.</p>`,
+<p>To go further and better understand your relationship, you can <a href="https://quiz-couple.com/en/couple-compatibility-test/">test your couple</a> or check whether your relationship shows signs of a <a href="https://quiz-couple.com/en/toxic-relationship-test/">toxic relationship</a>.</p>`,
     },
   ],
 };

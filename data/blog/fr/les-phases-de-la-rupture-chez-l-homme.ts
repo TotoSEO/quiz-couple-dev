@@ -79,7 +79,7 @@ const article: BlogArticleData = {
 <p>La <strong>reconstruction après une rupture</strong> passe souvent par plusieurs chemins :</p>
 <ul>
 <li><strong>Se retrouver soi-même</strong>, d'abord. Beaucoup d'hommes réalisent, après une rupture, qu'ils ont perdu des morceaux d'eux-mêmes en chemin — des passions délaissées, des amis mis de côté, des projets abandonnés. Cette période est l'occasion de les récupérer.</li>
-<li><strong>Réapprendre à être seul</strong>, ensuite. Pas dans le sens d'une solitude subie, mais d'une solitude choisie. Savoir qu'on peut être bien avec soi-même est l'un des fondements les plus solides pour une future <a href="https://quiz-couple.com/test-couple-sain">relation saine</a>.</li>
+<li><strong>Réapprendre à être seul</strong>, ensuite. Pas dans le sens d'une solitude subie, mais d'une solitude choisie. Savoir qu'on peut être bien avec soi-même est l'un des fondements les plus solides pour une future <a href="https://quiz-couple.com/test-couple-sain/">relation saine</a>.</li>
 <li><strong>S'autoriser à envisager l'avenir</strong>. Pas forcément avec quelqu'un d'autre tout de suite — mais simplement, s'autoriser à vouloir à nouveau.</li>
 </ul>`,
     },
@@ -96,7 +96,7 @@ const article: BlogArticleData = {
       title: 'Ce que cet article ne dit pas',
       content: `<p>Chaque rupture est unique. Chaque homme est unique. Ces <strong>phases de la rupture</strong> ne se vivent pas forcément dans cet ordre, ne durent pas le même temps, et certaines peuvent se chevaucher ou revenir. Ce découpage est un outil de compréhension, pas un diagnostic.</p>
 <p>Si votre rupture s'accompagne d'une <strong>dépression persistante</strong>, d'idées noires ou d'une incapacité à fonctionner au quotidien depuis plusieurs semaines, ne restez pas seul avec ça. Demander de l'aide, c'est l'acte le plus courageux qui soit.</p>
-<p>Pour aller plus loin et mieux comprendre votre relation, vous pouvez <a href="https://quiz-couple.com/tester-son-couple">tester votre couple</a> ou vérifier si votre relation présente des signes de <a href="https://quiz-couple.com/test-couple-toxique">couple toxique</a>.</p>`,
+<p>Pour aller plus loin et mieux comprendre votre relation, vous pouvez <a href="https://quiz-couple.com/tester-son-couple/">tester votre couple</a> ou vérifier si votre relation présente des signes de <a href="https://quiz-couple.com/test-couple-toxique/">couple toxique</a>.</p>`,
     },
   ],
 };

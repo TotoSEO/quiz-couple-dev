@@ -42,13 +42,13 @@
     "metaDescription": "Lustiges Paar-Quiz mit 150+ witzigen Fragen! Lacht zusammen und stärkt eure Verbindung. Kostenlos, ohne Anmeldung."
   },
   "quizKnowledge": {
-    "title": "Wer Kennt den Partner Besser? - Paar-Quiz | Kostenlos",
+    "title": "Wer kennt den anderen besser: Kostenloses Quiz",
     "shortTitle": "Wer kennt besser?",
     "description": "Wechselt euch mit den Fragen ab und findet heraus, wer seinen Partner am besten kennt! 100 Fragen, um eure Verbindung zu testen.",
     "metaDescription": "Interaktives Paar-Quiz: Wer kennt den Partner besser? 100 Fragen zum abwechselnden Raten. Kostenlos, lustig und perfekt für einen Date-Abend!"
   },
   "quizMost": {
-    "title": "Wer Ist Am Ehesten...? - 240+ Fragen Kostenlos",
+    "title": "Wer ist am meisten: Online-Spiele für Paare",
     "shortTitle": "Wer ist am meisten...?",
     "description": "2 bis 8 Spieler, stimmt zusammen ab, um herauszufinden, wer am lustigsten, gesprächigsten, romantischsten ist... 240+ lustige Fragen!",
     "metaDescription": "Wer ist am ehesten...? Quiz mit 240+ Fragen für 2-8 Spieler. Stimmt ab, lacht und entdeckt, wer am lustigsten ist. Kostenlos!"
@@ -95,7 +95,7 @@
     "metaDescription": "Teenager Paar-Quiz: 20 Fragen um herauszufinden, ob eure Beziehung solide ist oder nur eine Phase. Spielt zusammen aus der Ferne, sofortiges Ergebnis!"
   },
   "testParentalite": {
-    "title": "Elternschaftstest - Seid Ihr Bereit für ein Kind? | Kostenlos",
+    "title": "Fragen vor dem Kinderwunsch: Test",
     "shortTitle": "Elternschaftstest",
     "description": "20 ehrliche Fragen über eure Beziehung, Finanzen, Lebensstil und Ängste. Findet heraus, ob ihr bereit seid, Eltern zu werden.",
     "metaDescription": "Kostenloser Elternschaftstest: 20 Fragen, um herauszufinden, ob ihr als Paar bereit seid für ein Kind. Sofortiges Ergebnis, ohne Anmeldung!"
@@ -105,5 +105,11 @@
     "shortTitle": "Astro-Kompatibilität",
     "description": "Entdecke die Liebeskompatibilität eurer Vornamen und Sternzeichen. Numerologie und Astrologie vereint.",
     "metaDescription": "Gebt eure Vornamen und Sternzeichen ein. Unser Test kombiniert Numerologie und Astrologie, um zu enthüllen, was die Sterne über eure Kompatibilität sagen."
+  },
+  "testEmmenager": {
+    "title": "Bereit zum Zusammenziehen? Test für Paare",
+    "shortTitle": "Zusammenziehen-Test",
+    "description": "20 Fragen um herauszufinden, ob ihr bereit seid zusammenzuziehen. Kostenloser Paar-Test, sofortiges Ergebnis.",
+    "metaDescription": "Bereit für den großen Schritt und zusammenziehen? Dieser Paar-Test hilft euch herauszufinden, ob ihr wirklich alltagstauglich seid. 2 Modi: zusammen oder getrennt."
   }
 }
