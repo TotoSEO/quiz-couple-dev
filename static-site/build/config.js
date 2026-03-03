@@ -174,6 +174,138 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-03-01',
   },
+  {
+    internalSlug: 'compatibilite-amoureuse-belier',
+    slugs: {
+      fr: 'compatibilite-amoureuse-belier',
+      en: 'aries-love-compatibility',
+      es: 'compatibilidad-amorosa-aries',
+      de: 'liebeskompatibilitaet-widder',
+      it: 'compatibilita-amorosa-ariete',
+    },
+    publishedAt: '2026-03-03',
+  },
+  {
+    internalSlug: 'compatibilite-amoureuse-taureau',
+    slugs: {
+      fr: 'compatibilite-amoureuse-taureau',
+      en: 'taurus-love-compatibility',
+      es: 'compatibilidad-amorosa-tauro',
+      de: 'liebeskompatibilitaet-stier',
+      it: 'compatibilita-amorosa-toro',
+    },
+    publishedAt: '2026-03-03',
+  },
+  {
+    internalSlug: 'compatibilite-amoureuse-gemeaux',
+    slugs: {
+      fr: 'compatibilite-amoureuse-gemeaux',
+      en: 'gemini-love-compatibility',
+      es: 'compatibilidad-amorosa-geminis',
+      de: 'liebeskompatibilitaet-zwillinge',
+      it: 'compatibilita-amorosa-gemelli',
+    },
+    publishedAt: '2026-03-03',
+  },
+  {
+    internalSlug: 'compatibilite-amoureuse-cancer',
+    slugs: {
+      fr: 'compatibilite-amoureuse-cancer',
+      en: 'cancer-love-compatibility',
+      es: 'compatibilidad-amorosa-cancer',
+      de: 'liebeskompatibilitaet-krebs',
+      it: 'compatibilita-amorosa-cancro',
+    },
+    publishedAt: '2026-03-03',
+  },
+  {
+    internalSlug: 'compatibilite-amoureuse-lion',
+    slugs: {
+      fr: 'compatibilite-amoureuse-lion',
+      en: 'leo-love-compatibility',
+      es: 'compatibilidad-amorosa-leo',
+      de: 'liebeskompatibilitaet-loewe',
+      it: 'compatibilita-amorosa-leone',
+    },
+    publishedAt: '2026-03-03',
+  },
+  {
+    internalSlug: 'compatibilite-amoureuse-vierge',
+    slugs: {
+      fr: 'compatibilite-amoureuse-vierge',
+      en: 'virgo-love-compatibility',
+      es: 'compatibilidad-amorosa-virgo',
+      de: 'liebeskompatibilitaet-jungfrau',
+      it: 'compatibilita-amorosa-vergine',
+    },
+    publishedAt: '2026-03-03',
+  },
+  {
+    internalSlug: 'compatibilite-amoureuse-balance',
+    slugs: {
+      fr: 'compatibilite-amoureuse-balance',
+      en: 'libra-love-compatibility',
+      es: 'compatibilidad-amorosa-libra',
+      de: 'liebeskompatibilitaet-waage',
+      it: 'compatibilita-amorosa-bilancia',
+    },
+    publishedAt: '2026-03-03',
+  },
+  {
+    internalSlug: 'compatibilite-amoureuse-scorpion',
+    slugs: {
+      fr: 'compatibilite-amoureuse-scorpion',
+      en: 'scorpio-love-compatibility',
+      es: 'compatibilidad-amorosa-escorpio',
+      de: 'liebeskompatibilitaet-skorpion',
+      it: 'compatibilita-amorosa-scorpione',
+    },
+    publishedAt: '2026-03-03',
+  },
+  {
+    internalSlug: 'compatibilite-amoureuse-sagittaire',
+    slugs: {
+      fr: 'compatibilite-amoureuse-sagittaire',
+      en: 'sagittarius-love-compatibility',
+      es: 'compatibilidad-amorosa-sagitario',
+      de: 'liebeskompatibilitaet-schuetze',
+      it: 'compatibilita-amorosa-sagittario',
+    },
+    publishedAt: '2026-03-03',
+  },
+  {
+    internalSlug: 'compatibilite-amoureuse-capricorne',
+    slugs: {
+      fr: 'compatibilite-amoureuse-capricorne',
+      en: 'capricorn-love-compatibility',
+      es: 'compatibilidad-amorosa-capricornio',
+      de: 'liebeskompatibilitaet-steinbock',
+      it: 'compatibilita-amorosa-capricorno',
+    },
+    publishedAt: '2026-03-03',
+  },
+  {
+    internalSlug: 'compatibilite-amoureuse-verseau',
+    slugs: {
+      fr: 'compatibilite-amoureuse-verseau',
+      en: 'aquarius-love-compatibility',
+      es: 'compatibilidad-amorosa-acuario',
+      de: 'liebeskompatibilitaet-wassermann',
+      it: 'compatibilita-amorosa-acquario',
+    },
+    publishedAt: '2026-03-03',
+  },
+  {
+    internalSlug: 'compatibilite-amoureuse-poissons',
+    slugs: {
+      fr: 'compatibilite-amoureuse-poissons',
+      en: 'pisces-love-compatibility',
+      es: 'compatibilidad-amorosa-piscis',
+      de: 'liebeskompatibilitaet-fische',
+      it: 'compatibilita-amorosa-pesci',
+    },
+    publishedAt: '2026-03-03',
+  },
 ];
 
 // Author data
