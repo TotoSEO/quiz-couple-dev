@@ -257,13 +257,20 @@
     var tbody = document.getElementById('leads-table-body');
     if (tbody) tbody.innerHTML = '<tr><td colspan="5" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Chargement...</td></tr>';
 
-    fetch(SUPABASE_URL + '/rest/v1/leads?select=*&order=created_at.desc&limit=200', {
-      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+    fetch(SUPABASE_URL + '/functions/v1/admin-leads', {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'x-admin-token': adminToken
+      }
     })
-    .then(function (res) { return res.json(); })
-    .then(function (leads) {
-      if (Array.isArray(leads)) {
-        allLeads = leads;
+    .then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function (data) {
+      if (data.success && Array.isArray(data.leads)) {
+        allLeads = data.leads;
         renderLeads();
       } else {
         tbody.innerHTML = '<tr><td colspan="5" style="padding:2rem;text-align:center;color:hsl(var(--destructive));">Erreur de chargement.</td></tr>';
@@ -299,15 +306,14 @@
       cb.addEventListener('change', function () {
         var id = this.dataset.leadId;
         var closed = this.checked;
-        fetch(SUPABASE_URL + '/rest/v1/leads?id=eq.' + id, {
-          method: 'PATCH',
+        fetch(SUPABASE_URL + '/functions/v1/admin-leads', {
+          method: 'POST',
           headers: {
-            'apikey': SUPABASE_KEY,
             'Authorization': 'Bearer ' + SUPABASE_KEY,
-            'Content-Type': 'application/json',
-            'Prefer': 'return=minimal'
+            'x-admin-token': adminToken,
+            'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ is_closed: closed })
+          body: JSON.stringify({ id: id, is_closed: closed })
         });
       });
     });
