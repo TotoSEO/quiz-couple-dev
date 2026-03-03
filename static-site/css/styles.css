@@ -1309,13 +1309,20 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .range-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: hsl(var(--primary)); cursor: pointer; box-shadow: 0 0 10px hsl(var(--primary) / 0.3); }
 .range-slider::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: hsl(var(--primary)); cursor: pointer; border: none; }
 
-/* Cards grid: 2 columns on desktop, 1 on mobile */
-.activity-cards-grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin-top: 1rem; }
-@media (min-width: 768px) { .activity-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } }
+/* Results split layout: map left, cards right */
+.activities-results { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 1024px) { .activities-results { grid-template-columns: 1fr 1fr; gap: 1.5rem; } }
 
-/* Map container (full width, above cards) */
+/* Cards scroll container: scrollable on desktop, natural flow on mobile */
+.activity-cards-scroll { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+@media (min-width: 1024px) {
+  .activity-cards-scroll { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; max-height: 600px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: hsl(var(--border)) transparent; padding-right: 4px; }
+}
+
+/* Map container */
 .activity-map { height: 350px; border-radius: calc(var(--radius) + 4px); overflow: hidden; border: 1px solid hsl(var(--border)); }
 @media (min-width: 768px) { .activity-map { height: 450px; } }
+@media (min-width: 1024px) { .activity-map { height: 600px; position: sticky; top: 5rem; } }
 
 /* Leaflet theme overrides */
 .leaflet-popup-content-wrapper { border-radius: calc(var(--radius) - 2px) !important; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1) !important; background: hsl(var(--card)) !important; color: hsl(var(--foreground)) !important; border: 1px solid hsl(var(--border)) !important; }
@@ -1371,7 +1378,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* Tool section */
 .act-tool { background: hsl(var(--muted)/0.3); padding: 64px 24px; }
-.act-tool-inner { max-width: 1200px; margin: 0 auto; }
+.act-tool-inner { max-width: 1400px; margin: 0 auto; }
 @media (max-width: 768px) { .act-tool { padding: 40px 16px; } }
 
 /* Quote blockquote */
