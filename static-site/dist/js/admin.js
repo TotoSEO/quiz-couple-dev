@@ -15,6 +15,7 @@
   var currentLang = 'fr';
   var translationCache = {}; // { "articleId-lang": { ... } }
   var currentTab = 'reviews';
+  var allLeads = [];
 
   // ── Seed data (all existing articles) ──
   // AUTO-GENERATED AT BUILD TIME from config.js BLOG_ARTICLES + article TS files
@@ -109,9 +110,13 @@
 
     document.getElementById('admin-reviews-tab').classList.toggle('hidden', tab !== 'reviews');
     document.getElementById('admin-articles-tab').classList.toggle('hidden', tab !== 'articles');
+    document.getElementById('admin-leads-tab').classList.toggle('hidden', tab !== 'leads');
 
     if (tab === 'articles' && allArticles.length === 0) {
       loadArticles();
+    }
+    if (tab === 'leads' && allLeads.length === 0) {
+      loadLeads();
     }
   }
 
@@ -245,6 +250,72 @@
         reviewAction(id, action);
       });
     });
+  }
+
+  // ── Leads ──
+  function loadLeads() {
+    var tbody = document.getElementById('leads-table-body');
+    if (tbody) tbody.innerHTML = '<tr><td colspan="5" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Chargement...</td></tr>';
+
+    fetch(SUPABASE_URL + '/rest/v1/leads?select=*&order=created_at.desc&limit=200', {
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (leads) {
+      if (Array.isArray(leads)) {
+        allLeads = leads;
+        renderLeads();
+      } else {
+        tbody.innerHTML = '<tr><td colspan="5" style="padding:2rem;text-align:center;color:hsl(var(--destructive));">Erreur de chargement.</td></tr>';
+      }
+    })
+    .catch(function () {
+      tbody.innerHTML = '<tr><td colspan="5" style="padding:2rem;text-align:center;color:hsl(var(--destructive));">Erreur réseau.</td></tr>';
+    });
+  }
+
+  function renderLeads() {
+    var tbody = document.getElementById('leads-table-body');
+    if (!tbody) return;
+    if (allLeads.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="5" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Aucun lead pour le moment.</td></tr>';
+      return;
+    }
+    var html = '';
+    allLeads.forEach(function (lead) {
+      var date = new Date(lead.created_at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
+      html += '<tr style="border-top:1px solid hsl(var(--border));">'
+        + '<td style="padding:0.75rem 1rem;">' + escapeLeadHtml(lead.first_name) + '</td>'
+        + '<td style="padding:0.75rem 1rem;">' + escapeLeadHtml(lead.email) + '</td>'
+        + '<td style="padding:0.75rem 1rem;"><span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:9999px;font-size:0.75rem;background:hsl(var(--primary)/0.1);color:hsl(var(--primary));">' + escapeLeadHtml(lead.subject) + '</span></td>'
+        + '<td style="padding:0.75rem 1rem;font-size:0.8rem;color:hsl(var(--muted-foreground));">' + date + '</td>'
+        + '<td style="padding:0.75rem 1rem;text-align:center;"><input type="checkbox"' + (lead.is_closed ? ' checked' : '') + ' data-lead-id="' + lead.id + '" class="lead-closed-cb" style="width:1.1rem;height:1.1rem;cursor:pointer;accent-color:hsl(var(--primary));"></td>'
+        + '</tr>';
+    });
+    tbody.innerHTML = html;
+
+    // Bind checkboxes
+    tbody.querySelectorAll('.lead-closed-cb').forEach(function (cb) {
+      cb.addEventListener('change', function () {
+        var id = this.dataset.leadId;
+        var closed = this.checked;
+        fetch(SUPABASE_URL + '/rest/v1/leads?id=eq.' + id, {
+          method: 'PATCH',
+          headers: {
+            'apikey': SUPABASE_KEY,
+            'Authorization': 'Bearer ' + SUPABASE_KEY,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify({ is_closed: closed })
+        });
+      });
+    });
+  }
+
+  function escapeLeadHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
   // ── Articles ──
@@ -826,6 +897,13 @@
       btn.addEventListener('click', function () {
         switchTab(this.dataset.tab);
       });
+    });
+
+    // Leads refresh
+    var leadsRefresh = document.getElementById('leads-refresh');
+    if (leadsRefresh) leadsRefresh.addEventListener('click', function () {
+      allLeads = [];
+      loadLeads();
     });
 
     // Deploy button

@@ -40,6 +40,7 @@
             <div class="flex rounded-lg border border-border overflow-hidden">
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors active" data-tab="reviews">Avis</button>
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="articles">Articles</button>
+              <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="leads">Leads</button>
             </div>
             <button id="admin-deploy" class="btn btn-sm" style="background:hsl(var(--primary));color:white;display:flex;align-items:center;gap:0.5rem;">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -102,6 +103,35 @@
           <!-- Reviews list -->
           <div id="admin-reviews-list" class="space-y-4">
             <p class="text-center text-muted-foreground py-8">Chargement...</p>
+          </div>
+        </div>
+
+        <!-- Leads Tab -->
+        <div id="admin-leads-tab" class="hidden">
+          <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
+            <h2 class="text-lg font-semibold">Leads</h2>
+            <button id="leads-refresh" class="btn btn-outline btn-sm">
+              <svg class="w-4 h-4 inline-block mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+              Actualiser
+            </button>
+          </div>
+          <div class="glass-card rounded-xl overflow-hidden">
+            <div style="overflow-x:auto;">
+              <table id="leads-table" style="width:100%;border-collapse:collapse;font-size:0.875rem;">
+                <thead style="background:hsl(var(--muted));">
+                  <tr>
+                    <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;">Prénom</th>
+                    <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;">Adresse e-mail</th>
+                    <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;">Sujet</th>
+                    <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;">Date</th>
+                    <th style="padding:0.75rem 1rem;text-align:center;font-weight:600;">Clôturé</th>
+                  </tr>
+                </thead>
+                <tbody id="leads-table-body">
+                  <tr><td colspan="5" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Chargement...</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
 
