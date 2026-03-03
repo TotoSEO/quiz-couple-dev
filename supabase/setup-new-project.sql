@@ -238,5 +238,34 @@ SELECT cron.schedule(
 );
 
 -- ============================================================
+-- 9. TABLE: leads (capture e-mail lead magnets)
+-- ============================================================
+CREATE TABLE public.leads (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  first_name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  subject TEXT NOT NULL DEFAULT 'Ebook Astro',
+  is_closed BOOLEAN DEFAULT false,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+ALTER TABLE public.leads ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Anyone can submit a lead"
+ON public.leads FOR INSERT
+WITH CHECK (true);
+
+CREATE POLICY "Anyone can read leads"
+ON public.leads FOR SELECT
+USING (true);
+
+CREATE POLICY "Anyone can update leads"
+ON public.leads FOR UPDATE
+USING (true);
+
+CREATE INDEX idx_leads_email ON public.leads(email);
+CREATE INDEX idx_leads_subject ON public.leads(subject);
+
+-- ============================================================
 -- DONE! Toutes les tables, policies, triggers et cron jobs créés.
 -- ============================================================

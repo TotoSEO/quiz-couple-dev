@@ -1245,6 +1245,26 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   }
 }
 
+/* E-Book lead magnet section */
+.ebook-section { background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.3) 100%); }
+.ebook-card { background: hsl(var(--card) / 0.8); backdrop-filter: blur(8px); border: 1px solid hsl(var(--border)); border-radius: calc(var(--radius) + 12px); padding: 2rem; }
+@media (min-width: 768px) { .ebook-card { padding: 3rem; } }
+.ebook-layout { display: flex; flex-direction: column; gap: 2rem; margin-bottom: 2.5rem; }
+@media (min-width: 768px) { .ebook-layout { flex-direction: row; align-items: flex-start; } }
+.ebook-text { flex: 7; min-width: 0; }
+.ebook-cover { flex: 3; display: flex; justify-content: center; align-items: flex-start; }
+.ebook-cover img { width: 100%; max-width: 260px; height: auto; border-radius: var(--radius); box-shadow: 0 8px 30px rgb(0 0 0 / 0.15); }
+@media (max-width: 767px) { .ebook-cover { order: -1; } .ebook-cover img { max-width: 200px; } }
+.ebook-features { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+.ebook-features li { position: relative; padding-left: 1.75rem; line-height: 1.6; color: hsl(var(--muted-foreground)); }
+.ebook-features li::before { content: '✦'; position: absolute; left: 0; top: 0; color: hsl(var(--primary)); font-size: 0.875rem; }
+.ebook-features li strong { color: hsl(var(--foreground)); }
+.ebook-form-section { border-top: 1px solid hsl(var(--border)); padding-top: 2rem; text-align: center; }
+.ebook-form-fields { display: flex; flex-direction: column; gap: 0.75rem; max-width: 500px; margin: 0 auto 1rem; }
+@media (min-width: 640px) { .ebook-form-fields { flex-direction: row; } }
+.ebook-form-fields .input { flex: 1; padding: 0.75rem 1rem; font-size: 1rem; }
+.ebook-submit-btn { width: 100%; max-width: 500px; padding: 1rem 2rem; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.02em; }
+
 /* Shake animation */
 @keyframes shake {
   0%, 100% { transform: translateX(0); }

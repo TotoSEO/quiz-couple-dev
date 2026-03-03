@@ -216,6 +216,50 @@
   </div>
 </section>
 
+<!-- E-Book Lead Magnet -->
+<section class="ebook-section py-16 md:py-20">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <div class="ebook-card">
+      <div class="ebook-layout">
+        <!-- Left column: Text (70%) -->
+        <div class="ebook-text">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4">E-Book gratuit : Apprendre les bases de l'astrologie</h2>
+          <p class="text-muted-foreground leading-relaxed mb-4">Vous avez l'impression que la description de votre signe astrologique ne vous correspond pas toujours ? C'est normal : vous êtes bien plus qu'un simple signe solaire.</p>
+          <p class="text-muted-foreground leading-relaxed mb-4">Pour comprendre vos réactions, vos relations et vos besoins profonds, vous devez regarder l'image complète : votre thème natal.</p>
+          <p class="text-muted-foreground leading-relaxed mb-6">On a condensé les bases de l'astrologie dans un e-book pratique, sans jargon et sans prise de tête. Et bonne nouvelle : on vous l'offre aujourd'hui.</p>
+          <p class="font-semibold text-foreground mb-3">Ce que vous allez découvrir à l'intérieur :</p>
+          <ul class="ebook-features">
+            <li><strong>Le secret du "Big Three" :</strong> Pourquoi votre Soleil, votre Lune et votre Ascendant contrôlent 80 % de votre personnalité.</li>
+            <li><strong>Le décodeur des 12 Signes :</strong> Les forces et les failles de chaque profil (et le mythe de la "compatibilité" amoureuse enfin brisé).</li>
+            <li><strong>La carte de votre vie :</strong> Comment utiliser les 12 Maisons pour savoir exactement où vous êtes fait pour briller (carrière, amour, argent...).</li>
+            <li><strong>La "Formule Magique" :</strong> La technique infaillible pour lire votre carte du ciel de A à Z, même si vous n'y connaissez rien.</li>
+          </ul>
+        </div>
+        <!-- Right column: Cover (30%) -->
+        <div class="ebook-cover">
+          <img src="/assets/ebook-astrologie-cover.webp" alt="Couverture de l'e-book Apprendre les bases de l'astrologie" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Email capture form -->
+      <div class="ebook-form-section">
+        <h3 class="text-xl font-bold mb-2">Recevez votre guide gratuit immédiatement</h3>
+        <p class="text-muted-foreground mb-6">Pas de théorie ennuyeuse, juste des exercices pratiques et des déclics sur vous-même. Entrez simplement votre prénom et votre adresse e-mail ci-dessous, et téléchargez votre e-book.</p>
+        <form id="ebook-lead-form" class="ebook-form">
+          <div class="ebook-form-fields">
+            <input type="text" id="ebook-firstname" class="input" placeholder="Prénom" required maxlength="50" autocomplete="given-name">
+            <input type="email" id="ebook-email" class="input" placeholder="Adresse e-mail" required maxlength="100" autocomplete="email">
+          </div>
+          <button type="submit" id="ebook-submit-btn" class="btn btn-cta btn-gradient ebook-submit-btn">
+            <span>OUI ! JE VEUX MON E-BOOK GRATUIT</span>
+          </button>
+          <p id="ebook-form-status" class="text-sm mt-3 hidden"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
 <!-- SEO Content -->
@@ -470,5 +514,55 @@
     document.getElementById('sign2').selectedIndex = 0;
     form.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+
+  // ═══════════════════════════════════════════════════════
+  // E-BOOK LEAD CAPTURE
+  // ═══════════════════════════════════════════════════════
+  var ebookForm = document.getElementById('ebook-lead-form');
+  if (ebookForm) {
+    ebookForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var firstName = document.getElementById('ebook-firstname').value.trim();
+      var email = document.getElementById('ebook-email').value.trim();
+      var statusEl = document.getElementById('ebook-form-status');
+      var submitBtn = document.getElementById('ebook-submit-btn');
+
+      if (!firstName || !email) return;
+
+      submitBtn.disabled = true;
+      submitBtn.querySelector('span').textContent = 'Envoi en cours...';
+      statusEl.classList.add('hidden');
+
+      var SUPA_URL = '<%= supabaseUrl %>';
+      var SUPA_KEY = '<%= supabaseKey %>';
+
+      fetch(SUPA_URL + '/rest/v1/leads', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPA_KEY,
+          'Authorization': 'Bearer ' + SUPA_KEY,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ first_name: firstName, email: email, subject: 'Ebook Astro' })
+      })
+      .then(function(res) {
+        if (!res.ok) throw new Error('Erreur ' + res.status);
+        statusEl.textContent = 'Merci ! Vérifiez votre boîte mail pour recevoir votre e-book.';
+        statusEl.style.color = 'hsl(142 71% 45%)';
+        statusEl.classList.remove('hidden');
+        submitBtn.querySelector('span').textContent = 'E-BOOK ENVOYÉ !';
+        ebookForm.querySelector('#ebook-firstname').disabled = true;
+        ebookForm.querySelector('#ebook-email').disabled = true;
+      })
+      .catch(function() {
+        statusEl.textContent = 'Une erreur est survenue. Veuillez réessayer.';
+        statusEl.style.color = 'hsl(0 84% 60%)';
+        statusEl.classList.remove('hidden');
+        submitBtn.disabled = false;
+        submitBtn.querySelector('span').textContent = 'OUI ! JE VEUX MON E-BOOK GRATUIT';
+      });
+    });
+  }
 })();
 </script>
