@@ -95,10 +95,36 @@ export function getRouteAlternates(routeKey) {
   return alts;
 }
 
+// Blog categories with translations
+export const BLOG_CATEGORIES = {
+  astrologie: {
+    fr: 'Astrologie',
+    en: 'Astrology',
+    es: 'Astrología',
+    de: 'Astrologie',
+    it: 'Astrologia',
+  },
+  'vie-de-couple': {
+    fr: 'Vie de couple',
+    en: 'Relationship',
+    es: 'Vida en pareja',
+    de: 'Beziehung',
+    it: 'Vita di coppia',
+  },
+  'apps-rencontre': {
+    fr: 'Apps de rencontre',
+    en: 'Dating apps',
+    es: 'Apps de citas',
+    de: 'Dating-Apps',
+    it: 'App di incontri',
+  },
+};
+
 // Blog article metadata
 export const BLOG_ARTICLES = [
   {
     internalSlug: 'les-phases-de-la-rupture-chez-l-homme',
+    category: 'vie-de-couple',
     slugs: {
       fr: 'les-phases-de-la-rupture-chez-l-homme',
       en: 'breakup-stages-for-men',
@@ -110,6 +136,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'choses-pas-accepter-couple',
+    category: 'vie-de-couple',
     slugs: {
       fr: 'choses-pas-accepter-couple',
       en: 'things-not-accept-relationship',
@@ -121,6 +148,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'avis-tinder',
+    category: 'apps-rencontre',
     slugs: {
       fr: 'avis-tinder',
       en: 'tinder-review',
@@ -132,6 +160,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'avis-bumble',
+    category: 'apps-rencontre',
     slugs: {
       fr: 'avis-bumble',
       en: 'bumble-app-review',
@@ -143,6 +172,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'avis-hinge',
+    category: 'apps-rencontre',
     slugs: {
       fr: 'avis-hinge-rencontre',
       en: 'hinge-dating-app-review',
@@ -154,6 +184,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'avis-badoo',
+    category: 'apps-rencontre',
     slugs: {
       fr: 'avis-badoo',
       en: 'badoo-review',
@@ -165,6 +196,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'femme-malheureuse-en-couple',
+    category: 'vie-de-couple',
     slugs: {
       fr: 'femme-malheureuse-en-couple',
       en: 'unhappy-woman-in-relationship-signs',
@@ -175,6 +207,7 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-01',
   },
   {
+    category: 'astrologie',
     internalSlug: 'compatibilite-amoureuse-belier',
     slugs: {
       fr: 'compatibilite-amoureuse-belier',
@@ -186,6 +219,7 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-03',
   },
   {
+    category: 'astrologie',
     internalSlug: 'compatibilite-amoureuse-taureau',
     slugs: {
       fr: 'compatibilite-amoureuse-taureau',
@@ -197,6 +231,7 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-03',
   },
   {
+    category: 'astrologie',
     internalSlug: 'compatibilite-amoureuse-gemeaux',
     slugs: {
       fr: 'compatibilite-amoureuse-gemeaux',
@@ -208,6 +243,7 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-03',
   },
   {
+    category: 'astrologie',
     internalSlug: 'compatibilite-amoureuse-cancer',
     slugs: {
       fr: 'compatibilite-amoureuse-cancer',
@@ -219,6 +255,7 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-03',
   },
   {
+    category: 'astrologie',
     internalSlug: 'compatibilite-amoureuse-lion',
     slugs: {
       fr: 'compatibilite-amoureuse-lion',
@@ -230,6 +267,7 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-03',
   },
   {
+    category: 'astrologie',
     internalSlug: 'compatibilite-amoureuse-vierge',
     slugs: {
       fr: 'compatibilite-amoureuse-vierge',
@@ -241,6 +279,7 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-03',
   },
   {
+    category: 'astrologie',
     internalSlug: 'compatibilite-amoureuse-balance',
     slugs: {
       fr: 'compatibilite-amoureuse-balance',
@@ -252,6 +291,7 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-03',
   },
   {
+    category: 'astrologie',
     internalSlug: 'compatibilite-amoureuse-scorpion',
     slugs: {
       fr: 'compatibilite-amoureuse-scorpion',
@@ -263,6 +303,7 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-03',
   },
   {
+    category: 'astrologie',
     internalSlug: 'compatibilite-amoureuse-sagittaire',
     slugs: {
       fr: 'compatibilite-amoureuse-sagittaire',
@@ -274,6 +315,7 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-03',
   },
   {
+    category: 'astrologie',
     internalSlug: 'compatibilite-amoureuse-capricorne',
     slugs: {
       fr: 'compatibilite-amoureuse-capricorne',
@@ -285,6 +327,7 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-03',
   },
   {
+    category: 'astrologie',
     internalSlug: 'compatibilite-amoureuse-verseau',
     slugs: {
       fr: 'compatibilite-amoureuse-verseau',
@@ -296,6 +339,7 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-03',
   },
   {
+    category: 'astrologie',
     internalSlug: 'compatibilite-amoureuse-poissons',
     slugs: {
       fr: 'compatibilite-amoureuse-poissons',
