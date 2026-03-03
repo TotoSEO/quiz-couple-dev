@@ -75,6 +75,12 @@
         <% for (const link of directLinks) { %>
         <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="inline-flex h-10 items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"><%= t('common:' + link.labelKey, link.labelKey) %></a>
         <% } %>
+
+        <!-- Activities CTA -->
+        <a href="<%= getLocalizedUrl('activities', lang) %>" class="inline-flex h-10 items-center gap-1.5 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <%= t('common:nav.activities', 'Activities') %>
+        </a>
       </div>
 
       <!-- Actions -->
@@ -139,6 +145,12 @@
         <% for (const link of directLinks) { %>
         <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="rounded-lg px-3 py-3 text-base font-medium transition-colors hover:bg-muted hover:text-primary" ><%= t('common:' + link.labelKey, link.labelKey) %></a>
         <% } %>
+
+        <!-- Activities CTA (mobile) -->
+        <a href="<%= getLocalizedUrl('activities', lang) %>" class="flex items-center gap-2 rounded-lg px-3 py-3 text-base font-semibold text-primary transition-colors hover:bg-primary/10">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <%= t('common:nav.activities', 'Activities') %>
+        </a>
       </div>
     </div>
   </nav>

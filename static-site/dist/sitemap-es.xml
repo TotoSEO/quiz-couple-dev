@@ -137,24 +137,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/resoudre-probleme-couple/"/>
   </url>
   <url>
-    <loc>https://quiz-couple.com/es/aviso-legal/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/mentions-legales/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/legal-notice/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/aviso-legal/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/impressum/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/note-legali/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/mentions-legales/"/>
-  </url>
-  <url>
-    <loc>https://quiz-couple.com/es/politica-privacidad/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/confidentialite/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/privacy-policy/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/politica-privacidad/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/datenschutz/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/confidentialite/"/>
-  </url>
-  <url>
     <loc>https://quiz-couple.com/es/blog/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/"/>
@@ -182,6 +164,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-parentalite-couple/"/>
   </url>
   <url>
+    <loc>https://quiz-couple.com/es/test-vivir-juntos-pareja/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-habiter-vivre-ensemble/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/moving-in-together-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-vivir-juntos-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/zusammenziehen-test-paare/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-andare-a-vivere-insieme/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-habiter-vivre-ensemble/"/>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/es/signos-astrologicos-nombres-compatibilidad/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/signes-astrologiques-prenoms-compatibilite/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/zodiac-signs-names-compatibility/"/>
@@ -189,6 +180,15 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/sternzeichen-vornamen-kompatibilitaet/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/segni-zodiacali-nomi-compatibilita/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/signes-astrologiques-prenoms-compatibilite/"/>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/actividades-en-pareja-cerca/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/activites-autours-de-moi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/couple-activities-near-me/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/actividades-en-pareja-cerca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/paar-aktivitaeten-in-der-naehe/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/attivita-di-coppia-vicino/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/activites-autours-de-moi/"/>
   </url>
   <url>
     <loc>https://quiz-couple.com/es/blog/fases-de-la-ruptura-en-el-hombre/</loc>
@@ -259,5 +259,125 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/donna-infelice-in-coppia-segnali/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/femme-malheureuse-en-couple/"/>
     <lastmod>2026-03-01</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/compatibilidad-amorosa-aries/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/compatibilite-amoureuse-belier/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/aries-love-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/compatibilidad-amorosa-aries/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/liebeskompatibilitaet-widder/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/compatibilita-amorosa-ariete/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/compatibilite-amoureuse-belier/"/>
+    <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/compatibilidad-amorosa-tauro/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/compatibilite-amoureuse-taureau/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/taurus-love-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/compatibilidad-amorosa-tauro/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/liebeskompatibilitaet-stier/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/compatibilita-amorosa-toro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/compatibilite-amoureuse-taureau/"/>
+    <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/compatibilidad-amorosa-geminis/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/compatibilite-amoureuse-gemeaux/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/gemini-love-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/compatibilidad-amorosa-geminis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/liebeskompatibilitaet-zwillinge/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/compatibilita-amorosa-gemelli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/compatibilite-amoureuse-gemeaux/"/>
+    <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/compatibilidad-amorosa-cancer/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/compatibilite-amoureuse-cancer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/cancer-love-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/compatibilidad-amorosa-cancer/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/liebeskompatibilitaet-krebs/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/compatibilita-amorosa-cancro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/compatibilite-amoureuse-cancer/"/>
+    <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/compatibilidad-amorosa-leo/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/compatibilite-amoureuse-lion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/leo-love-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/compatibilidad-amorosa-leo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/liebeskompatibilitaet-loewe/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/compatibilita-amorosa-leone/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/compatibilite-amoureuse-lion/"/>
+    <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/compatibilidad-amorosa-virgo/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/compatibilite-amoureuse-vierge/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/virgo-love-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/compatibilidad-amorosa-virgo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/liebeskompatibilitaet-jungfrau/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/compatibilita-amorosa-vergine/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/compatibilite-amoureuse-vierge/"/>
+    <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/compatibilidad-amorosa-libra/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/compatibilite-amoureuse-balance/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/libra-love-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/compatibilidad-amorosa-libra/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/liebeskompatibilitaet-waage/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/compatibilita-amorosa-bilancia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/compatibilite-amoureuse-balance/"/>
+    <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/compatibilidad-amorosa-escorpio/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/compatibilite-amoureuse-scorpion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/scorpio-love-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/compatibilidad-amorosa-escorpio/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/liebeskompatibilitaet-skorpion/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/compatibilita-amorosa-scorpione/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/compatibilite-amoureuse-scorpion/"/>
+    <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/compatibilidad-amorosa-sagitario/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/compatibilite-amoureuse-sagittaire/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/sagittarius-love-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/compatibilidad-amorosa-sagitario/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/liebeskompatibilitaet-schuetze/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/compatibilita-amorosa-sagittario/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/compatibilite-amoureuse-sagittaire/"/>
+    <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/compatibilidad-amorosa-capricornio/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/compatibilite-amoureuse-capricorne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/capricorn-love-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/compatibilidad-amorosa-capricornio/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/liebeskompatibilitaet-steinbock/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/compatibilita-amorosa-capricorno/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/compatibilite-amoureuse-capricorne/"/>
+    <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/compatibilidad-amorosa-acuario/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/compatibilite-amoureuse-verseau/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/aquarius-love-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/compatibilidad-amorosa-acuario/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/liebeskompatibilitaet-wassermann/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/compatibilita-amorosa-acquario/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/compatibilite-amoureuse-verseau/"/>
+    <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/compatibilidad-amorosa-piscis/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/compatibilite-amoureuse-poissons/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/pisces-love-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/compatibilidad-amorosa-piscis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/liebeskompatibilitaet-fische/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/compatibilita-amorosa-pesci/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/compatibilite-amoureuse-poissons/"/>
+    <lastmod>2026-03-03</lastmod>
   </url>
 </urlset>

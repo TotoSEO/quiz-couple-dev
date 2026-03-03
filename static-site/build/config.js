@@ -39,6 +39,7 @@ export const ROUTE_SLUGS = {
   testEmmenager: { fr: 'test-habiter-vivre-ensemble', en: 'moving-in-together-test', es: 'test-vivir-juntos-pareja', de: 'zusammenziehen-test-paare', it: 'test-andare-a-vivere-insieme' },
   testAstroPrenoms: { fr: 'signes-astrologiques-prenoms-compatibilite', en: 'zodiac-signs-names-compatibility', es: 'signos-astrologicos-nombres-compatibilidad', de: 'sternzeichen-vornamen-kompatibilitaet', it: 'segni-zodiacali-nomi-compatibilita' },
   admin: { fr: 'admin', en: 'admin', es: 'admin', de: 'admin', it: 'admin' },
+  activities: { fr: 'activites-autours-de-moi', en: 'couple-activities-near-me', es: 'actividades-en-pareja-cerca', de: 'paar-aktivitaeten-in-der-naehe', it: 'attivita-di-coppia-vicino' },
 };
 
 // Map route keys to their page template and translation namespaces
@@ -66,6 +67,7 @@ export const ROUTE_CONFIG = {
   testEmmenager: { template: 'quiz-emmenager', namespaces: ['quiz-emmenager', 'quizzes', 'quizGames', 'gd', 'common'] },
   testAstroPrenoms: { template: 'quiz-astro-prenoms', namespaces: ['quiz-astro-prenoms', 'quizzes', 'common'] },
   admin: { template: 'admin', namespaces: ['common'] },
+  activities: { template: 'activities', namespaces: ['activities', 'common'] },
 };
 
 // Supabase config

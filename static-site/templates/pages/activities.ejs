@@ -1,0 +1,100 @@
+<%
+  const ns = 'activities';
+  const faqItemsRaw = t(ns + ':faq', null);
+  const faqItems = Array.isArray(faqItemsRaw) ? faqItemsRaw : [];
+%>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+<!-- Hero -->
+<section class="relative py-16 md:py-24 overflow-hidden hero-gradient">
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-3xl mx-auto text-center space-y-6">
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <%= t(ns + ':hero.badge', 'Interactive map') %>
+      </span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+        <%= t(ns + ':hero.title', '') %> <span class="text-gradient"><%= t(ns + ':hero.titleHighlight', '') %></span>
+      </h1>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto"><%- t(ns + ':hero.description', '') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Activity Search Engine (JS interactive) -->
+<section id="recherche-activites" class="py-8 md:py-12">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <div id="activities-engine"
+           data-lang="<%= lang %>"
+           data-supabase-url="<%= supabaseUrl %>"
+           data-supabase-key="<%= supabaseKey %>">
+        <div class="text-center py-12">
+          <div class="spinner mx-auto mb-4"></div>
+          <p class="text-muted-foreground"><%= t(ns + ':results.loading', 'Loading...') %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Content -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <% for (let i = 1; i <= 4; i++) { %>
+    <% const sTitle = t(ns + ':seoContent.s' + i + 'Title', ''); %>
+    <% if (sTitle && sTitle !== '[placeholder]') { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= sTitle %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':seoContent.s' + i + 'p1', '') %></p>
+        <% const p2 = t(ns + ':seoContent.s' + i + 'p2', ''); %>
+        <% if (p2 && p2 !== '[placeholder]') { %><p><%- p2 %></p><% } %>
+      </div>
+    </section>
+    <% } %>
+    <% } %>
+
+    <!-- FAQ -->
+    <% if (faqItems.length > 0 && faqItems[0].q !== '[placeholder]') { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">FAQ</h2>
+      <div class="space-y-3">
+        <% for (const item of faqItems) { %>
+        <details class="group rounded-xl border border-border p-4 transition-colors open:bg-muted/30">
+          <summary class="cursor-pointer font-semibold flex items-center justify-between gap-2">
+            <span><%= item.q %></span>
+            <svg class="h-4 w-4 flex-shrink-0 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </summary>
+          <p class="mt-3 text-muted-foreground leading-relaxed"><%- item.a %></p>
+        </details>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+  </div>
+</article>
+
+<!-- FAQPage JSON-LD -->
+<% if (faqItems.length > 0 && faqItems[0].q !== '[placeholder]') { %>
+<script type="application/ld+json"><%- JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(function(item) {
+    return {
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": { "@type": "Answer", "text": item.a }
+    };
+  })
+}) %></script>
+<% } %>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<!-- Activities Engine -->
+<script src="/js/activities.js" defer></script>

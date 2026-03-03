@@ -111,5 +111,11 @@
     "shortTitle": "Test Emménager",
     "description": "20 questions pour savoir si vous êtes prêts à vivre ensemble. Test gratuit à faire en couple, résultat immédiat.",
     "metaDescription": "Prêts à sauter le pas et vivre ensemble ? Ce test de couple vous aide à savoir si vous êtes vraiment compatibles au quotidien. 2 modes : ensemble ou chacun de son côté."
+  },
+  "activities": {
+    "title": "Activités à faire en couple près de chez vous | Quiz Couple",
+    "shortTitle": "Activités en couple",
+    "description": "Trouvez des activités à faire en couple près de chez vous grâce à notre carte interactive. Restaurants, culture, nature, sport — découvrez les meilleures sorties à deux.",
+    "metaDescription": "Trouvez des activités à faire en couple près de chez vous grâce à notre carte interactive. Restaurants, culture, nature, sport — découvrez les meilleures sorties à deux."
   }
 }

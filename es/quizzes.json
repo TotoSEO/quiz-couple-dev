@@ -111,5 +111,11 @@
     "shortTitle": "Test Convivencia",
     "description": "20 preguntas para saber si estáis preparados para vivir juntos. Test gratuito para parejas, resultado inmediato.",
     "metaDescription": "¿Listos para dar el paso y vivir juntos? Este test de pareja os ayuda a saber si sois realmente compatibles en el día a día. 2 modos: juntos o por separado."
+  },
+  "activities": {
+    "title": "Actividades en pareja cerca de ti | Quiz Couple",
+    "shortTitle": "Actividades en pareja",
+    "description": "Encuentra actividades en pareja cerca de ti con nuestro mapa interactivo. Restaurantes, cultura, naturaleza, deportes — descubre las mejores salidas para dos.",
+    "metaDescription": "Encuentra actividades en pareja cerca de ti con nuestro mapa interactivo. Restaurantes, cultura, naturaleza, deportes — descubre las mejores salidas para dos."
   }
 }

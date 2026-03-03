@@ -1285,6 +1285,87 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .animate-shake { animation: shake 0.4s ease-in-out; }
 
+/* ── Activities Search Page ──────────────────────────── */
+
+/* Nominatim autocomplete dropdown */
+.nominatim-dropdown { position: absolute; top: 100%; left: 0; right: 0; z-index: 40; background: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: calc(var(--radius) - 2px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); max-height: 200px; overflow-y: auto; margin-top: 0.25rem; }
+.nominatim-item { padding: 0.625rem 0.75rem; font-size: 0.875rem; cursor: pointer; transition: background-color 150ms; border-bottom: 1px solid hsl(var(--border) / 0.3); }
+.nominatim-item:last-child { border-bottom: none; }
+.nominatim-item:hover { background-color: hsl(var(--accent)); }
+
+/* Activity type chip toggles */
+.activity-chip { display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.5rem 0.875rem; border-radius: 9999px; border: 1px solid hsl(var(--border)); background: transparent; font-size: 0.8125rem; font-weight: 500; cursor: pointer; transition: all 150ms; user-select: none; color: hsl(var(--foreground)); }
+.activity-chip:hover { border-color: hsl(var(--primary) / 0.5); color: hsl(var(--primary)); }
+.activity-chip.active { background: hsl(var(--primary) / 0.15); border-color: hsl(var(--primary) / 0.4); color: hsl(var(--primary)); }
+.activity-chip svg { width: 1rem; height: 1rem; }
+
+/* Radio/option cards for single-select fields */
+.option-card { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: calc(var(--radius) - 2px); border: 1px solid hsl(var(--border)); background: transparent; font-size: 0.8125rem; cursor: pointer; transition: all 150ms; color: hsl(var(--foreground)); }
+.option-card:hover { border-color: hsl(var(--primary) / 0.4); }
+.option-card.active { background: hsl(var(--primary) / 0.1); border-color: hsl(var(--primary)); color: hsl(var(--primary)); font-weight: 500; }
+
+/* Custom range slider for radius */
+.range-slider { -webkit-appearance: none; width: 100%; height: 6px; border-radius: 3px; background: hsl(var(--muted)); outline: none; margin: 0.5rem 0; }
+.range-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: hsl(var(--primary)); cursor: pointer; box-shadow: 0 0 10px hsl(var(--primary) / 0.3); }
+.range-slider::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: hsl(var(--primary)); cursor: pointer; border: none; }
+
+/* Results split layout */
+.activities-results { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 1024px) { .activities-results { grid-template-columns: 3fr 2fr; } }
+
+/* Map container */
+.activity-map { height: 350px; border-radius: calc(var(--radius) + 4px); overflow: hidden; border: 1px solid hsl(var(--border)); }
+@media (min-width: 768px) { .activity-map { height: 450px; } }
+@media (min-width: 1024px) { .activity-map { height: 600px; position: sticky; top: 5rem; } }
+
+/* Leaflet theme overrides */
+.leaflet-popup-content-wrapper { border-radius: calc(var(--radius) - 2px) !important; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1) !important; background: hsl(var(--card)) !important; color: hsl(var(--foreground)) !important; border: 1px solid hsl(var(--border)) !important; }
+.leaflet-popup-tip { background: hsl(var(--card)) !important; }
+.leaflet-popup-content { font-family: 'Inter', system-ui, sans-serif !important; font-size: 0.875rem !important; margin: 0.75rem 1rem !important; }
+.leaflet-popup-close-button { color: hsl(var(--muted-foreground)) !important; }
+.leaflet-control-zoom a { background: hsl(var(--card)) !important; color: hsl(var(--foreground)) !important; border-color: hsl(var(--border)) !important; }
+.dark .leaflet-tile { filter: brightness(0.8) contrast(1.1) saturate(0.8); }
+.dark .leaflet-control-zoom a { background: hsl(var(--card)) !important; }
+
+/* Activity cards */
+.activity-card { background: hsl(var(--card) / 0.6); backdrop-filter: blur(12px); border: 1px solid hsl(var(--border) / 0.5); border-radius: calc(var(--radius) + 4px); padding: 1rem; transition: all 200ms; cursor: pointer; }
+.activity-card:hover { border-color: hsl(var(--primary) / 0.4); box-shadow: 0 8px 25px -5px hsl(var(--primary) / 0.1); transform: translateY(-2px); }
+.activity-card.highlighted { border-color: hsl(var(--primary) / 0.6); box-shadow: 0 0 0 2px hsl(var(--primary) / 0.15); }
+
+/* Sort bar */
+.activity-sort-btn { padding: 0.375rem 0.75rem; border-radius: 9999px; font-size: 0.8125rem; font-weight: 500; border: 1px solid transparent; background: transparent; color: hsl(var(--muted-foreground)); cursor: pointer; transition: all 150ms; }
+.activity-sort-btn:hover { color: hsl(var(--foreground)); }
+.activity-sort-btn.active { background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); border-color: hsl(var(--primary) / 0.3); }
+
+/* Score badge */
+.score-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 2.5rem; height: 1.5rem; padding: 0 0.375rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+.score-high { background: hsl(142 71% 45% / 0.15); color: hsl(142 71% 35%); }
+.score-medium { background: hsl(48 96% 53% / 0.15); color: hsl(48 96% 35%); }
+.score-low { background: hsl(var(--muted)); color: hsl(var(--muted-foreground)); }
+
+/* Category badges */
+.cat-badge { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.125rem 0.5rem; border-radius: 9999px; font-size: 0.6875rem; font-weight: 500; }
+.cat-culture { background: hsl(270 40% 50% / 0.12); color: hsl(270 40% 45%); }
+.cat-nature { background: hsl(142 50% 45% / 0.12); color: hsl(142 50% 35%); }
+.cat-sport { background: hsl(210 70% 50% / 0.12); color: hsl(210 70% 40%); }
+.cat-divertissement { background: hsl(340 65% 55% / 0.12); color: hsl(340 65% 45%); }
+.cat-bienEtre { background: hsl(180 50% 45% / 0.12); color: hsl(180 50% 35%); }
+.cat-gastronomie { background: hsl(30 80% 50% / 0.12); color: hsl(30 80% 40%); }
+.cat-ateliers { background: hsl(48 80% 50% / 0.12); color: hsl(48 80% 35%); }
+
+/* Form section accordion */
+.form-section { border: 1px solid hsl(var(--border)); border-radius: calc(var(--radius) + 2px); overflow: hidden; }
+.form-section + .form-section { margin-top: 0.75rem; }
+.form-section-header { display: flex; align-items: center; justify-content: space-between; padding: 0.875rem 1rem; background: hsl(var(--card) / 0.5); cursor: pointer; user-select: none; transition: background 150ms; }
+.form-section-header:hover { background: hsl(var(--muted) / 0.5); }
+.form-section-header svg { transition: transform 200ms; }
+.form-section.open .form-section-header svg { transform: rotate(180deg); }
+.form-section-body { padding: 1rem; display: none; }
+.form-section.open .form-section-body { display: block; }
+
+/* Loading skeleton */
+.skeleton { background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--muted) / 0.5) 50%, hsl(var(--muted)) 75%); background-size: 200% 100%; animation: shimmer 1.5s ease-in-out infinite; border-radius: calc(var(--radius) - 2px); }
+
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }

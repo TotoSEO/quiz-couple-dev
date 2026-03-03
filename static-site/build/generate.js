@@ -546,6 +546,11 @@ function copyTranslationData() {
     if (fs.existsSync(gamesSrc)) {
       fs.copyFileSync(gamesSrc, path.join(dataDir, `games-${lang}.json`));
     }
+
+    const activitiesSrc = path.join(langDir, 'activities.json');
+    if (fs.existsSync(activitiesSrc)) {
+      fs.copyFileSync(activitiesSrc, path.join(dataDir, `activities-${lang}.json`));
+    }
   }
   console.log('[data] Translation data files copied to dist/js/data/');
 }
