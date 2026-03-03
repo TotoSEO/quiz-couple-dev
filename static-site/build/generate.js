@@ -178,11 +178,11 @@ async function generatePage(routeKey, lang) {
 
   // Build JSON-LD structured data
   const breadcrumbLabels = {
-    fr: { home: 'Accueil', tests: 'Tests', quiz: 'Quiz', blog: 'Blog' },
-    en: { home: 'Home', tests: 'Tests', quiz: 'Quizzes', blog: 'Blog' },
-    es: { home: 'Inicio', tests: 'Tests', quiz: 'Quiz', blog: 'Blog' },
-    de: { home: 'Startseite', tests: 'Tests', quiz: 'Quiz', blog: 'Blog' },
-    it: { home: 'Home', tests: 'Test', quiz: 'Quiz', blog: 'Blog' },
+    fr: { home: 'Quiz Couple', tests: 'Tests', quiz: 'Quiz', blog: 'Blog' },
+    en: { home: 'Quiz Couple', tests: 'Tests', quiz: 'Quizzes', blog: 'Blog' },
+    es: { home: 'Quiz Couple', tests: 'Tests', quiz: 'Quiz', blog: 'Blog' },
+    de: { home: 'Quiz Couple', tests: 'Tests', quiz: 'Quiz', blog: 'Blog' },
+    it: { home: 'Quiz Couple', tests: 'Test', quiz: 'Quiz', blog: 'Blog' },
   };
   const bl = breadcrumbLabels[lang] || breadcrumbLabels.fr;
 
@@ -725,11 +725,11 @@ async function generateBlogArticle(articleMeta, lang) {
 
   // JSON-LD for article
   const breadcrumbLabels = {
-    fr: { home: 'Accueil', blog: 'Blog' },
-    en: { home: 'Home', blog: 'Blog' },
-    es: { home: 'Inicio', blog: 'Blog' },
-    de: { home: 'Startseite', blog: 'Blog' },
-    it: { home: 'Home', blog: 'Blog' },
+    fr: { home: 'Quiz Couple', blog: 'Blog' },
+    en: { home: 'Quiz Couple', blog: 'Blog' },
+    es: { home: 'Quiz Couple', blog: 'Blog' },
+    de: { home: 'Quiz Couple', blog: 'Blog' },
+    it: { home: 'Quiz Couple', blog: 'Blog' },
   };
   const bl = breadcrumbLabels[lang] || breadcrumbLabels.fr;
 
