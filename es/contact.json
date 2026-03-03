@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Contacto | Quiz Couple",
+    "description": "Contacta al equipo de Quiz Couple para cualquier pregunta, sugerencia o solicitud de colaboración. Formulario de contacto seguro."
+  },
+  "hero": {
+    "title": "Contáctanos",
+    "subtitle": "¿Una pregunta, una sugerencia, una colaboración? Escríbenos."
+  },
+  "form": {
+    "lastName": "Apellido",
+    "lastNamePlaceholder": "Tu apellido",
+    "firstName": "Nombre",
+    "firstNamePlaceholder": "Tu nombre",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "tu@email.com",
+    "phone": "Teléfono",
+    "phonePlaceholder": "+34 612 345 678",
+    "company": "Empresa",
+    "companyPlaceholder": "Nombre de tu empresa",
+    "message": "Mensaje",
+    "messagePlaceholder": "Tu mensaje...",
+    "optional": "opcional",
+    "rgpd": "Acepto que mis datos sean tratados conforme a la <a href=\"/es/privacidad/\" class=\"text-primary hover:underline\">política de privacidad</a> de Quiz Couple.",
+    "submit": "Enviar",
+    "successTitle": "¡Mensaje enviado!",
+    "successText": "Hemos recibido tu mensaje y te responderemos lo antes posible.",
+    "errorLastName": "Por favor, introduce tu apellido (mín. 2 caracteres)",
+    "errorFirstName": "Por favor, introduce tu nombre (mín. 2 caracteres)",
+    "errorEmail": "Por favor, introduce un correo electrónico válido",
+    "errorMessage": "Tu mensaje debe contener al menos 10 caracteres",
+    "errorMessageLong": "Tu mensaje es demasiado largo (máx. 3000 caracteres)",
+    "errorRgpd": "Debes aceptar la política de privacidad",
+    "errorGeneric": "Ha ocurrido un error. Por favor, inténtalo de nuevo."
+  }
+}

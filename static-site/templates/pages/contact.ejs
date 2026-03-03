@@ -1,0 +1,188 @@
+<%
+  const ns = 'contact';
+%>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <%= t(ns + ':hero.title', 'Contactez-nous') %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%= t(ns + ':hero.subtitle', 'Une question, une suggestion, un partenariat ? Écrivez-nous.') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FORM ═══════ -->
+<section class="py-16 md:py-24">
+  <div class="container mx-auto px-4 max-w-2xl">
+    <div id="contact-form-wrapper" class="rounded-2xl border border-border bg-card p-6 md:p-10 space-y-6">
+      <form id="contact-form" novalidate>
+        <!-- Nom + Prénom -->
+        <div class="grid md:grid-cols-2 gap-4 mb-4">
+          <div>
+            <label for="contact-lastname" class="block text-sm font-semibold mb-1"><%= t(ns + ':form.lastName', 'Nom') %> <span class="text-destructive">*</span></label>
+            <input type="text" id="contact-lastname" class="input w-full" maxlength="100" required placeholder="<%= t(ns + ':form.lastNamePlaceholder', 'Votre nom') %>">
+            <p class="text-xs text-destructive mt-1 hidden" id="contact-lastname-error"></p>
+          </div>
+          <div>
+            <label for="contact-firstname" class="block text-sm font-semibold mb-1"><%= t(ns + ':form.firstName', 'Prénom') %> <span class="text-destructive">*</span></label>
+            <input type="text" id="contact-firstname" class="input w-full" maxlength="100" required placeholder="<%= t(ns + ':form.firstNamePlaceholder', 'Votre prénom') %>">
+            <p class="text-xs text-destructive mt-1 hidden" id="contact-firstname-error"></p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-4">
+          <label for="contact-email" class="block text-sm font-semibold mb-1"><%= t(ns + ':form.email', 'Adresse e-mail') %> <span class="text-destructive">*</span></label>
+          <input type="email" id="contact-email" class="input w-full" maxlength="254" required placeholder="<%= t(ns + ':form.emailPlaceholder', 'votre@email.com') %>">
+          <p class="text-xs text-destructive mt-1 hidden" id="contact-email-error"></p>
+        </div>
+
+        <!-- Téléphone (optional) -->
+        <div class="mb-4">
+          <label for="contact-phone" class="block text-sm font-semibold mb-1"><%= t(ns + ':form.phone', 'Téléphone') %> <span class="text-muted-foreground text-xs">(<%= t(ns + ':form.optional', 'optionnel') %>)</span></label>
+          <input type="tel" id="contact-phone" class="input w-full" maxlength="20" placeholder="<%= t(ns + ':form.phonePlaceholder', '+33 6 12 34 56 78') %>">
+        </div>
+
+        <!-- Entreprise (optional) -->
+        <div class="mb-4">
+          <label for="contact-company" class="block text-sm font-semibold mb-1"><%= t(ns + ':form.company', 'Entreprise') %> <span class="text-muted-foreground text-xs">(<%= t(ns + ':form.optional', 'optionnel') %>)</span></label>
+          <input type="text" id="contact-company" class="input w-full" maxlength="150" placeholder="<%= t(ns + ':form.companyPlaceholder', 'Nom de votre entreprise') %>">
+        </div>
+
+        <!-- Message -->
+        <div class="mb-4">
+          <label for="contact-message" class="block text-sm font-semibold mb-1"><%= t(ns + ':form.message', 'Message') %> <span class="text-destructive">*</span></label>
+          <textarea id="contact-message" class="input w-full" rows="5" maxlength="3000" required placeholder="<%= t(ns + ':form.messagePlaceholder', 'Votre message...') %>"></textarea>
+          <p class="text-xs text-muted-foreground mt-1"><span id="contact-char-count">0</span>/3000</p>
+          <p class="text-xs text-destructive mt-1 hidden" id="contact-message-error"></p>
+        </div>
+
+        <!-- RGPD -->
+        <div class="mb-6">
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" id="contact-rgpd" class="mt-1 accent-primary" required>
+            <span class="text-sm text-muted-foreground leading-relaxed"><%- t(ns + ':form.rgpd', 'J\'accepte que mes données soient traitées conformément à la <a href=\"/confidentialite/\" class=\"text-primary hover:underline\">politique de confidentialité</a> de Quiz Couple.') %></span>
+          </label>
+          <p class="text-xs text-destructive mt-1 hidden" id="contact-rgpd-error"></p>
+        </div>
+
+        <!-- Honeypot (anti-spam) -->
+        <div style="position:absolute;left:-9999px;" aria-hidden="true">
+          <input type="text" name="website" id="contact-honeypot" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- Submit -->
+        <div class="text-center">
+          <button type="submit" id="contact-submit" class="btn btn-cta inline-flex items-center gap-2 px-10 py-3 text-base">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <%= t(ns + ':form.submit', 'Envoyer') %>
+          </button>
+        </div>
+      </form>
+
+      <!-- Success state (hidden by default) -->
+      <div id="contact-success" class="hidden text-center py-8 space-y-4">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto" style="background:hsl(142 71% 45% / 0.15);color:hsl(142 71% 45%);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h2 class="text-xl font-bold"><%= t(ns + ':form.successTitle', 'Message envoyé !') %></h2>
+        <p class="text-muted-foreground"><%= t(ns + ':form.successText', 'Nous avons bien reçu votre message et vous répondrons dans les plus brefs délais.') %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  'use strict';
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+
+  var SUPABASE_URL = '<%= supabaseUrl %>';
+  var SUPABASE_KEY = '<%= supabaseKey %>';
+
+  var charCount = document.getElementById('contact-char-count');
+  var msgField = document.getElementById('contact-message');
+  if (msgField && charCount) {
+    msgField.addEventListener('input', function() {
+      charCount.textContent = msgField.value.length;
+    });
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    clearErrors();
+
+    // Honeypot check
+    var honeypot = document.getElementById('contact-honeypot');
+    if (honeypot && honeypot.value) return;
+
+    var lastName = document.getElementById('contact-lastname').value.trim();
+    var firstName = document.getElementById('contact-firstname').value.trim();
+    var email = document.getElementById('contact-email').value.trim();
+    var phone = document.getElementById('contact-phone').value.trim();
+    var company = document.getElementById('contact-company').value.trim();
+    var message = document.getElementById('contact-message').value.trim();
+    var rgpd = document.getElementById('contact-rgpd').checked;
+
+    var valid = true;
+
+    if (!lastName || lastName.length < 2) { showError('lastname', '<%= t(ns + ":form.errorLastName", "Veuillez renseigner votre nom") %>'); valid = false; }
+    if (!firstName || firstName.length < 2) { showError('firstname', '<%= t(ns + ":form.errorFirstName", "Veuillez renseigner votre prénom") %>'); valid = false; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('email', '<%= t(ns + ":form.errorEmail", "Veuillez renseigner un e-mail valide") %>'); valid = false; }
+    if (!message || message.length < 10) { showError('message', '<%= t(ns + ":form.errorMessage", "Votre message doit contenir au moins 10 caractères") %>'); valid = false; }
+    if (message.length > 3000) { showError('message', '<%= t(ns + ":form.errorMessageLong", "Votre message est trop long (3000 caractères max)") %>'); valid = false; }
+    if (!rgpd) { showError('rgpd', '<%= t(ns + ":form.errorRgpd", "Vous devez accepter la politique de confidentialité") %>'); valid = false; }
+
+    if (!valid) return;
+
+    var btn = document.getElementById('contact-submit');
+    btn.disabled = true;
+    btn.style.opacity = '0.5';
+
+    fetch(SUPABASE_URL + '/functions/v1/contact-message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'apikey': SUPABASE_KEY
+      },
+      body: JSON.stringify({
+        last_name: lastName.slice(0, 100),
+        first_name: firstName.slice(0, 100),
+        email: email.slice(0, 254),
+        phone: phone.slice(0, 20) || null,
+        company: company.slice(0, 150) || null,
+        message: message.slice(0, 3000),
+        lang: '<%= lang %>'
+      })
+    })
+    .then(function(res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function() {
+      form.classList.add('hidden');
+      document.getElementById('contact-success').classList.remove('hidden');
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      showError('message', '<%= t(ns + ":form.errorGeneric", "Une erreur est survenue. Veuillez réessayer.") %>');
+    });
+  });
+
+  function showError(field, msg) {
+    var el = document.getElementById('contact-' + field + '-error');
+    if (el) { el.textContent = msg; el.classList.remove('hidden'); }
+  }
+
+  function clearErrors() {
+    var errors = document.querySelectorAll('[id$="-error"]');
+    for (var i = 0; i < errors.length; i++) { errors[i].classList.add('hidden'); }
+  }
+})();
+</script>

@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Contact | Quiz Couple",
+    "description": "Contactez l'équipe Quiz Couple pour toute question, suggestion ou demande de partenariat. Formulaire de contact sécurisé."
+  },
+  "hero": {
+    "title": "Contactez-nous",
+    "subtitle": "Une question, une suggestion, un partenariat ? Écrivez-nous."
+  },
+  "form": {
+    "lastName": "Nom",
+    "lastNamePlaceholder": "Votre nom",
+    "firstName": "Prénom",
+    "firstNamePlaceholder": "Votre prénom",
+    "email": "Adresse e-mail",
+    "emailPlaceholder": "votre@email.com",
+    "phone": "Téléphone",
+    "phonePlaceholder": "+33 6 12 34 56 78",
+    "company": "Entreprise",
+    "companyPlaceholder": "Nom de votre entreprise",
+    "message": "Message",
+    "messagePlaceholder": "Votre message...",
+    "optional": "optionnel",
+    "rgpd": "J'accepte que mes données soient traitées conformément à la <a href=\"/confidentialite/\" class=\"text-primary hover:underline\">politique de confidentialité</a> de Quiz Couple.",
+    "submit": "Envoyer",
+    "successTitle": "Message envoyé !",
+    "successText": "Nous avons bien reçu votre message et vous répondrons dans les plus brefs délais.",
+    "errorLastName": "Veuillez renseigner votre nom (2 caractères minimum)",
+    "errorFirstName": "Veuillez renseigner votre prénom (2 caractères minimum)",
+    "errorEmail": "Veuillez renseigner un e-mail valide",
+    "errorMessage": "Votre message doit contenir au moins 10 caractères",
+    "errorMessageLong": "Votre message est trop long (3000 caractères max)",
+    "errorRgpd": "Vous devez accepter la politique de confidentialité",
+    "errorGeneric": "Une erreur est survenue. Veuillez réessayer."
+  }
+}
