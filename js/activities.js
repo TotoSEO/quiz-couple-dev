@@ -318,6 +318,11 @@
     });
     form.appendChild(nextBtn);
 
+    // Business promo link
+    var promoLink = el('p', 'text-center text-xs text-muted-foreground mt-4');
+    promoLink.innerHTML = tr('form.businessPromo', 'Entreprise : <a href="' + getContactUrl() + '" class="text-primary hover:underline">Contactez Quiz Couple pour promouvoir votre business ici !</a>');
+    form.appendChild(promoLink);
+
     parent.appendChild(form);
   }
 
@@ -377,7 +382,7 @@
 
   // ── Step 2: Filters ────────────────────────────────────────
   function renderFilters(parent) {
-    var form = el('div', 'space-y-6');
+    var form = el('div', 'space-y-6 rounded-2xl border border-border bg-card p-5 md:p-8 max-w-3xl mx-auto');
 
     // Back button + location badge
     var backRow = el('div', 'flex items-center gap-2 mb-2');
@@ -437,7 +442,7 @@
     var rowGrid = el('div', 'grid md:grid-cols-2 gap-4');
 
     // Budget
-    var budgetBlock = el('div', 'rounded-xl border border-border bg-card p-5 space-y-3');
+    var budgetBlock = el('div', 'rounded-xl border border-border bg-card/50 p-5 space-y-3');
     var budgetTitle = el('h3', 'font-semibold text-sm');
     budgetTitle.textContent = tr('form.budget', 'Budget');
     budgetBlock.appendChild(budgetTitle);
@@ -456,24 +461,13 @@
     ));
     rowGrid.appendChild(budgetBlock);
 
-    // Group
-    var groupBlock = el('div', 'rounded-xl border border-border bg-card p-5 space-y-3');
+    // Group (composition only — groupSize is derived)
+    var groupBlock = el('div', 'rounded-xl border border-border bg-card/50 p-5 space-y-3');
     var groupTitle = el('h3', 'font-semibold text-sm');
-    groupTitle.textContent = tr('form.groupSize', 'Groupe');
+    groupTitle.textContent = tr('form.groupComposition', 'Composition du groupe');
     groupBlock.appendChild(groupTitle);
     groupBlock.appendChild(renderOptionGroup(
       '',
-      [
-        { value: 'couple', label: tr('form.groupSizeCouple', 'En couple') },
-        { value: 'solo', label: tr('form.groupSizeSolo', 'Solo') },
-        { value: 'small', label: tr('form.groupSizeSmall', 'Petit groupe') },
-        { value: 'large', label: tr('form.groupSizeLarge', 'Grand groupe') }
-      ],
-      state.groupSize,
-      function(v) { state.groupSize = v; render(); }
-    ));
-    groupBlock.appendChild(renderOptionGroup(
-      tr('form.groupComposition', 'Composition'),
       [
         { value: 'couple', label: tr('form.groupCouple', 'Couple') },
         { value: 'adults', label: tr('form.groupAdults', 'Adultes') },
@@ -482,7 +476,13 @@
         { value: 'team', label: tr('form.groupTeamBuilding', 'Team building') }
       ],
       state.groupComposition,
-      function(v) { state.groupComposition = v; render(); }
+      function(v) {
+        state.groupComposition = v;
+        // Derive groupSize from composition
+        var sizeMap = { couple: 'couple', adults: 'small', family: 'small', friends: 'small', team: 'large' };
+        state.groupSize = sizeMap[v] || 'couple';
+        render();
+      }
     ));
     if (state.groupComposition === 'family') {
       groupBlock.appendChild(renderOptionGroup(
@@ -604,8 +604,9 @@
     }
     form.appendChild(moreBlock);
 
-    // Search button
-    var searchBtn = el('button', 'btn btn-cta w-full py-4 text-lg flex items-center justify-center gap-2');
+    // Search button (centered)
+    var searchWrap = el('div', 'text-center mt-6');
+    var searchBtn = el('button', 'btn btn-cta py-4 text-lg inline-flex items-center justify-center gap-2 px-12');
     searchBtn.type = 'button';
     searchBtn.disabled = state.activityTypes.length === 0;
     if (state.activityTypes.length === 0) searchBtn.style.opacity = '0.5';
@@ -619,7 +620,8 @@
       // Scroll to keep the tool visible
       scrollToTool();
     });
-    form.appendChild(searchBtn);
+    searchWrap.appendChild(searchBtn);
+    form.appendChild(searchWrap);
 
     parent.appendChild(form);
   }
@@ -872,6 +874,11 @@
     layout.appendChild(cardsList);
 
     parent.appendChild(layout);
+
+    // Business promo link below the map
+    var promoLink2 = el('p', 'text-center text-xs text-muted-foreground mt-4');
+    promoLink2.innerHTML = tr('form.businessPromo', 'Entreprise : <a href="' + getContactUrl() + '" class="text-primary hover:underline">Contactez Quiz Couple pour promouvoir votre business ici !</a>');
+    parent.appendChild(promoLink2);
 
     // Initialize map after DOM is ready
     setTimeout(function() { initMap(); }, 50);
@@ -1160,6 +1167,11 @@
     var d = document.createElement('div');
     d.textContent = str || '';
     return d.innerHTML;
+  }
+
+  function getContactUrl() {
+    var contactSlugs = { fr: '/contact/', en: '/en/contact/', es: '/es/contacto/', de: '/de/kontakt/', it: '/it/contatto/' };
+    return contactSlugs[lang] || '/contact/';
   }
 
   function formatDistance(km) {

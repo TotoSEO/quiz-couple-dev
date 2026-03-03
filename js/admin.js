@@ -16,6 +16,8 @@
   var translationCache = {}; // { "articleId-lang": { ... } }
   var currentTab = 'reviews';
   var allLeads = [];
+  var allMessages = [];
+  var currentMessageFilter = 'all';
 
   // ── Seed data (all existing articles) ──
   // AUTO-GENERATED AT BUILD TIME from config.js BLOG_ARTICLES + article TS files
@@ -111,12 +113,16 @@
     document.getElementById('admin-reviews-tab').classList.toggle('hidden', tab !== 'reviews');
     document.getElementById('admin-articles-tab').classList.toggle('hidden', tab !== 'articles');
     document.getElementById('admin-leads-tab').classList.toggle('hidden', tab !== 'leads');
+    document.getElementById('admin-messages-tab').classList.toggle('hidden', tab !== 'messages');
 
     if (tab === 'articles' && allArticles.length === 0) {
       loadArticles();
     }
     if (tab === 'leads' && allLeads.length === 0) {
       loadLeads();
+    }
+    if (tab === 'messages' && allMessages.length === 0) {
+      loadMessages();
     }
   }
 
@@ -322,6 +328,122 @@
   function escapeLeadHtml(str) {
     if (!str) return '';
     return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  // ── Messages ──
+  function loadMessages() {
+    var listEl = document.getElementById('messages-list');
+    if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-8">Chargement...</p>';
+
+    fetch(SUPABASE_URL + '/functions/v1/admin-messages', {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'x-admin-token': adminToken
+      }
+    })
+    .then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function (data) {
+      if (data.success && Array.isArray(data.messages)) {
+        allMessages = data.messages;
+        renderMessages();
+      } else {
+        listEl.innerHTML = '<p class="text-center text-destructive py-8">Erreur de chargement.</p>';
+      }
+    })
+    .catch(function () {
+      listEl.innerHTML = '<p class="text-center text-destructive py-8">Erreur réseau.</p>';
+    });
+  }
+
+  function renderMessages() {
+    var listEl = document.getElementById('messages-list');
+    if (!listEl) return;
+
+    var filtered = allMessages;
+    if (currentMessageFilter !== 'all') {
+      filtered = allMessages.filter(function (m) { return m.status === currentMessageFilter; });
+    }
+
+    if (filtered.length === 0) {
+      listEl.innerHTML = '<p class="text-center text-muted-foreground py-8">Aucun message' + (currentMessageFilter !== 'all' ? ' dans cette catégorie' : '') + '.</p>';
+      return;
+    }
+
+    var html = '';
+    filtered.forEach(function (msg) {
+      var date = new Date(msg.created_at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+      var statusColors = { 'new': 'background:hsl(var(--primary)/0.15);color:hsl(var(--primary));', 'read': 'background:hsl(var(--muted));color:hsl(var(--muted-foreground));', 'archived': 'background:hsl(var(--muted));color:hsl(var(--muted-foreground));opacity:0.6;' };
+      var statusLabels = { 'new': 'Nouveau', 'read': 'Lu', 'archived': 'Archivé' };
+      var isNew = msg.status === 'new';
+
+      html += '<div class="glass-card rounded-xl p-5 space-y-3' + (isNew ? '' : ' opacity-80') + '" data-msg-id="' + msg.id + '">'
+        + '<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">'
+        + '<div style="display:flex;align-items:center;gap:0.75rem;">'
+        + '<span style="font-weight:700;">' + escapeLeadHtml(msg.first_name) + ' ' + escapeLeadHtml(msg.last_name) + '</span>'
+        + '<span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:9999px;font-size:0.7rem;font-weight:600;' + (statusColors[msg.status] || '') + '">' + (statusLabels[msg.status] || msg.status) + '</span>'
+        + '</div>'
+        + '<span style="font-size:0.8rem;color:hsl(var(--muted-foreground));">' + date + '</span>'
+        + '</div>'
+        + '<div style="display:flex;flex-wrap:wrap;gap:0.75rem;font-size:0.85rem;color:hsl(var(--muted-foreground));">'
+        + '<span>' + escapeLeadHtml(msg.email) + '</span>'
+        + (msg.phone ? '<span>' + escapeLeadHtml(msg.phone) + '</span>' : '')
+        + (msg.company ? '<span style="font-style:italic;">' + escapeLeadHtml(msg.company) + '</span>' : '')
+        + '</div>'
+        + '<div style="background:hsl(var(--muted)/0.5);border-radius:0.5rem;padding:0.75rem;font-size:0.875rem;line-height:1.6;white-space:pre-wrap;word-break:break-word;">' + escapeLeadHtml(msg.message) + '</div>'
+        + '<div style="display:flex;gap:0.5rem;justify-content:flex-end;">';
+
+      if (msg.status === 'new') {
+        html += '<button class="btn btn-sm msg-action" data-action="read" data-id="' + msg.id + '" style="font-size:0.75rem;">Marquer lu</button>';
+      }
+      if (msg.status !== 'archived') {
+        html += '<button class="btn btn-sm msg-action" data-action="archived" data-id="' + msg.id + '" style="font-size:0.75rem;color:hsl(var(--muted-foreground));">Archiver</button>';
+      }
+      html += '<button class="btn btn-sm msg-action" data-action="delete" data-id="' + msg.id + '" style="font-size:0.75rem;color:hsl(var(--destructive));">Supprimer</button>';
+      html += '</div></div>';
+    });
+
+    listEl.innerHTML = html;
+
+    // Bind action buttons
+    listEl.querySelectorAll('.msg-action').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var id = this.dataset.id;
+        var action = this.dataset.action;
+        if (action === 'delete') {
+          if (!confirm('Supprimer ce message ?')) return;
+          fetch(SUPABASE_URL + '/functions/v1/admin-messages', {
+            method: 'DELETE',
+            headers: {
+              'Authorization': 'Bearer ' + SUPABASE_KEY,
+              'x-admin-token': adminToken,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id: id })
+          }).then(function () {
+            allMessages = allMessages.filter(function (m) { return m.id !== id; });
+            renderMessages();
+          });
+        } else {
+          fetch(SUPABASE_URL + '/functions/v1/admin-messages', {
+            method: 'POST',
+            headers: {
+              'Authorization': 'Bearer ' + SUPABASE_KEY,
+              'x-admin-token': adminToken,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id: id, status: action })
+          }).then(function () {
+            var msg = allMessages.find(function (m) { return m.id === id; });
+            if (msg) msg.status = action;
+            renderMessages();
+          });
+        }
+      });
+    });
   }
 
   // ── Articles ──
@@ -910,6 +1032,23 @@
     if (leadsRefresh) leadsRefresh.addEventListener('click', function () {
       allLeads = [];
       loadLeads();
+    });
+
+    // Messages refresh
+    var messagesRefresh = document.getElementById('messages-refresh');
+    if (messagesRefresh) messagesRefresh.addEventListener('click', function () {
+      allMessages = [];
+      loadMessages();
+    });
+
+    // Messages filter buttons
+    document.querySelectorAll('.messages-filter').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.messages-filter').forEach(function (b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        currentMessageFilter = this.dataset.filter;
+        renderMessages();
+      });
     });
 
     // Deploy button
