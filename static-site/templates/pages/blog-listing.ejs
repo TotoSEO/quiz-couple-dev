@@ -1,14 +1,29 @@
+<%
+  const allLabel = lang === 'fr' ? 'Tous' : lang === 'en' ? 'All' : lang === 'es' ? 'Todos' : lang === 'de' ? 'Alle' : 'Tutti';
+%>
 <section class="container mx-auto px-4 section-padding">
   <header class="mb-12 text-center">
     <h1 class="text-3xl md:text-4xl font-bold mb-4"><%= t('common:blog.heading', 'Blog') %></h1>
     <p class="text-muted-foreground text-lg max-w-2xl mx-auto"><%= t('common:blog.subheading', '') %></p>
   </header>
 
+  <% if (blogCategories && blogCategories.length) { %>
+  <nav class="blog-category-tabs" aria-label="Categories">
+    <button class="blog-category-tab is-active" data-category="all" onclick="filterCategory('all',this)"><%= allLabel %></button>
+    <% blogCategories.forEach(function(cat) { %>
+    <button class="blog-category-tab" data-category="<%= cat.key %>" onclick="filterCategory('<%= cat.key %>',this)"><%= cat.label %></button>
+    <% }); %>
+  </nav>
+  <% } %>
+
   <div class="blog-grid" id="blog-articles-grid">
 <% if (blogArticlesList && blogArticlesList.length) { %>
   <% blogArticlesList.forEach(function(a) { %>
-    <article class="blog-card">
+    <article class="blog-card" data-category="<%= a.category || '' %>">
       <a href="<%= a.url %>" class="no-underline"><div class="blog-card-image-wrapper"><img src="<%= a.featuredImage %>" alt="<%= escapeHtml(a.featuredImageAlt) %>" class="blog-card-image" loading="lazy"></div></a>
+      <% if (a.categoryLabel) { %>
+      <div class="blog-card-category"><span class="blog-category-badge"><%= a.categoryLabel %></span></div>
+      <% } %>
       <h2 class="blog-card-title"><a href="<%= a.url %>"><%= a.title %></a></h2>
       <div class="blog-card-meta"><span><%= new Date(a.publishedAt).toLocaleDateString(lang === 'fr' ? 'fr-FR' : lang, { year: 'numeric', month: 'long', day: 'numeric' }) %></span></div>
       <p class="blog-card-excerpt"><%= a.excerpt %></p>
@@ -20,3 +35,15 @@
 <% } %>
   </div>
 </section>
+
+<script>
+function filterCategory(cat, btn) {
+  var tabs = document.querySelectorAll('.blog-category-tab');
+  for (var i = 0; i < tabs.length; i++) tabs[i].classList.remove('is-active');
+  btn.classList.add('is-active');
+  var cards = document.querySelectorAll('.blog-card[data-category]');
+  for (var j = 0; j < cards.length; j++) {
+    cards[j].style.display = (cat === 'all' || cards[j].getAttribute('data-category') === cat) ? '' : 'none';
+  }
+}
+</script>

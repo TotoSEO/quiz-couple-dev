@@ -11,7 +11,7 @@ import { minify } from 'html-minifier-terser';
 import CleanCSS from 'clean-css';
 import {
   BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
-  SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, AUTHORS,
+  SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
 } from './config.js';
@@ -271,6 +271,8 @@ async function generatePage(routeKey, lang) {
           featuredImageAlt: (oData && oData.featuredImageAlt) || article.featuredImageAlt || article.title,
           publishedAt: article.publishedAt || articleMeta.publishedAt,
           url: getArticlePath(localizedSlug, lang),
+          category: articleMeta.category || null,
+          categoryLabel: articleMeta.category && BLOG_CATEGORIES[articleMeta.category] ? BLOG_CATEGORIES[articleMeta.category][lang] || BLOG_CATEGORIES[articleMeta.category].fr : null,
         });
       }
     }
@@ -313,6 +315,11 @@ async function generatePage(routeKey, lang) {
     jsonLdHtml,
     // Blog listing data
     blogArticlesList,
+    // Blog categories for filter tabs
+    blogCategories: Object.entries(BLOG_CATEGORIES).map(([key, labels]) => ({
+      key,
+      label: labels[lang] || labels.fr,
+    })),
     // Zodiac compatibility data for astro-prenoms page (per-language)
     zodiacDataJson: routeKey === 'testAstroPrenoms' ? (() => {
       const langFile = path.resolve(__dirname, `zodiac-data-${lang}.json`);
@@ -707,15 +714,26 @@ async function generateBlogArticle(articleMeta, lang) {
   };
   const bl = breadcrumbLabels[lang] || breadcrumbLabels.fr;
 
+  const categoryLabel = articleMeta.category && BLOG_CATEGORIES[articleMeta.category]
+    ? BLOG_CATEGORIES[articleMeta.category][lang] || BLOG_CATEGORIES[articleMeta.category].fr
+    : null;
+
+  const breadcrumbItems = [
+    { '@type': 'ListItem', position: 1, name: bl.home, item: getLocalizedUrl('home', lang) },
+    { '@type': 'ListItem', position: 2, name: bl.blog, item: getLocalizedUrl('blog', lang) },
+  ];
+  if (categoryLabel) {
+    breadcrumbItems.push({ '@type': 'ListItem', position: 3, name: categoryLabel });
+    breadcrumbItems.push({ '@type': 'ListItem', position: 4, name: article.title });
+  } else {
+    breadcrumbItems.push({ '@type': 'ListItem', position: 3, name: article.title });
+  }
+
   const jsonLdItems = [
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: bl.home, item: getLocalizedUrl('home', lang) },
-        { '@type': 'ListItem', position: 2, name: bl.blog, item: getLocalizedUrl('blog', lang) },
-        { '@type': 'ListItem', position: 3, name: article.title },
-      ],
+      itemListElement: breadcrumbItems,
     },
     (() => {
       // Compute word count from all article text
@@ -793,6 +811,9 @@ async function generateBlogArticle(articleMeta, lang) {
     article,
     authorBio,
     articleAlternates,
+    // Category
+    articleCategory: articleMeta.category || null,
+    articleCategoryLabel: articleMeta.category && BLOG_CATEGORIES[articleMeta.category] ? BLOG_CATEGORIES[articleMeta.category][lang] || BLOG_CATEGORIES[articleMeta.category].fr : null,
     // Sidebar data
     sidebarTests: [
       'testCouple', 'testCommonPoints', 'testDistance', 'testToxic',

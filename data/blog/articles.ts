@@ -9,6 +9,7 @@ import { AUTHORS, getAuthor } from './authors';
 export const blogArticles: BlogArticleMeta[] = [
   {
     slug: 'les-phases-de-la-rupture-chez-l-homme',
+    category: 'vie-de-couple',
     slugs: {
       fr: 'les-phases-de-la-rupture-chez-l-homme',
       en: 'breakup-stages-for-men',
@@ -21,6 +22,7 @@ export const blogArticles: BlogArticleMeta[] = [
   },
   {
     slug: 'choses-pas-accepter-couple',
+    category: 'vie-de-couple',
     slugs: {
       fr: 'choses-pas-accepter-couple',
       en: 'things-not-accept-relationship',
@@ -33,6 +35,7 @@ export const blogArticles: BlogArticleMeta[] = [
   },
   {
     slug: 'avis-tinder',
+    category: 'apps-rencontre',
     slugs: {
       fr: 'avis-tinder',
       en: 'tinder-review',
@@ -45,6 +48,7 @@ export const blogArticles: BlogArticleMeta[] = [
   },
   {
     slug: 'avis-bumble',
+    category: 'apps-rencontre',
     slugs: {
       fr: 'avis-bumble',
       en: 'bumble-app-review',
@@ -57,6 +61,7 @@ export const blogArticles: BlogArticleMeta[] = [
   },
   {
     slug: 'avis-hinge',
+    category: 'apps-rencontre',
     slugs: {
       fr: 'avis-hinge-rencontre',
       en: 'hinge-dating-app-review',
@@ -69,6 +74,7 @@ export const blogArticles: BlogArticleMeta[] = [
   },
   {
     slug: 'avis-badoo',
+    category: 'apps-rencontre',
     slugs: {
       fr: 'avis-badoo',
       en: 'badoo-review',
@@ -81,6 +87,7 @@ export const blogArticles: BlogArticleMeta[] = [
   },
   {
     slug: 'femme-malheureuse-en-couple',
+    category: 'vie-de-couple',
     slugs: {
       fr: 'femme-malheureuse-en-couple',
       en: 'unhappy-woman-in-relationship-signs',
@@ -92,6 +99,7 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    category: 'astrologie',
     slug: 'compatibilite-amoureuse-belier',
     slugs: {
       fr: 'compatibilite-amoureuse-belier',
@@ -104,6 +112,7 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    category: 'astrologie',
     slug: 'compatibilite-amoureuse-taureau',
     slugs: {
       fr: 'compatibilite-amoureuse-taureau',
@@ -116,6 +125,7 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    category: 'astrologie',
     slug: 'compatibilite-amoureuse-gemeaux',
     slugs: {
       fr: 'compatibilite-amoureuse-gemeaux',
@@ -128,6 +138,7 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    category: 'astrologie',
     slug: 'compatibilite-amoureuse-cancer',
     slugs: {
       fr: 'compatibilite-amoureuse-cancer',
@@ -140,6 +151,7 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    category: 'astrologie',
     slug: 'compatibilite-amoureuse-lion',
     slugs: {
       fr: 'compatibilite-amoureuse-lion',
@@ -152,6 +164,7 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    category: 'astrologie',
     slug: 'compatibilite-amoureuse-vierge',
     slugs: {
       fr: 'compatibilite-amoureuse-vierge',
@@ -164,6 +177,7 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    category: 'astrologie',
     slug: 'compatibilite-amoureuse-balance',
     slugs: {
       fr: 'compatibilite-amoureuse-balance',
@@ -176,6 +190,7 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    category: 'astrologie',
     slug: 'compatibilite-amoureuse-scorpion',
     slugs: {
       fr: 'compatibilite-amoureuse-scorpion',
@@ -188,6 +203,7 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    category: 'astrologie',
     slug: 'compatibilite-amoureuse-sagittaire',
     slugs: {
       fr: 'compatibilite-amoureuse-sagittaire',
@@ -200,6 +216,7 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    category: 'astrologie',
     slug: 'compatibilite-amoureuse-capricorne',
     slugs: {
       fr: 'compatibilite-amoureuse-capricorne',
@@ -212,6 +229,7 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    category: 'astrologie',
     slug: 'compatibilite-amoureuse-verseau',
     slugs: {
       fr: 'compatibilite-amoureuse-verseau',
@@ -224,6 +242,7 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    category: 'astrologie',
     slug: 'compatibilite-amoureuse-poissons',
     slugs: {
       fr: 'compatibilite-amoureuse-poissons',
