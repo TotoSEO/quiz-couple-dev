@@ -856,17 +856,22 @@
     sortBar.appendChild(surpriseBtn);
     parent.appendChild(sortBar);
 
-    // Map container (full width above cards)
+    // Results layout: map left, cards right
+    var layout = el('div', 'activities-results');
+
+    // Map container (sticky on desktop)
     var mapWrap = el('div', 'activity-map');
     mapWrap.id = 'activities-map';
-    parent.appendChild(mapWrap);
+    layout.appendChild(mapWrap);
 
-    // Cards grid: 2 columns on desktop, 1 on mobile
-    var cardsList = el('div', 'activity-cards-grid');
+    // Cards scroll container: 2-col grid, scrollable on desktop, natural flow on mobile
+    var cardsList = el('div', 'activity-cards-scroll');
     state.results.forEach(function(activity, index) {
       cardsList.appendChild(renderActivityCard(activity, index));
     });
-    parent.appendChild(cardsList);
+    layout.appendChild(cardsList);
+
+    parent.appendChild(layout);
 
     // Initialize map after DOM is ready
     setTimeout(function() { initMap(); }, 50);
