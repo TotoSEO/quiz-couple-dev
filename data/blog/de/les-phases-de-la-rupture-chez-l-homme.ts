@@ -79,7 +79,7 @@ const article: BlogArticleData = {
 <p>Der <strong>Neuaufbau nach einer Trennung</strong> führt oft über mehrere Wege:</p>
 <ul>
 <li><strong>Sich selbst wiederfinden</strong>, zunächst. Viele Männer stellen nach einer Trennung fest, dass sie unterwegs Teile von sich verloren haben — vernachlässigte Leidenschaften, beiseitegeschobene Freunde, aufgegebene Projekte. Diese Zeit ist die Gelegenheit, sie zurückzuholen.</li>
-<li><strong>Wieder allein sein lernen</strong>, dann. Nicht im Sinne einer erlittenen Einsamkeit, sondern einer gewählten. Zu wissen, dass man allein gut sein kann, ist eines der solidesten Fundamente für eine zukünftige <a href="https://quiz-couple.com/de/gesunde-beziehung-test">gesunde Beziehung</a>.</li>
+<li><strong>Wieder allein sein lernen</strong>, dann. Nicht im Sinne einer erlittenen Einsamkeit, sondern einer gewählten. Zu wissen, dass man allein gut sein kann, ist eines der solidesten Fundamente für eine zukünftige <a href="https://quiz-couple.com/de/gesunde-beziehung-test/">gesunde Beziehung</a>.</li>
 <li><strong>Sich erlauben, die Zukunft ins Auge zu fassen</strong>. Nicht unbedingt sofort mit jemand anderem — sondern einfach, sich erlauben, wieder zu wollen.</li>
 </ul>`,
     },
@@ -96,7 +96,7 @@ const article: BlogArticleData = {
       title: 'Was dieser Artikel nicht sagt',
       content: `<p>Jede Trennung ist einzigartig. Jeder Mann ist einzigartig. Diese <strong>Trennungsphasen</strong> werden nicht unbedingt in dieser Reihenfolge erlebt, dauern nicht gleich lang, und manche können sich überschneiden oder wiederkehren. Diese Einteilung ist ein Verständniswerkzeug, keine Diagnose.</p>
 <p>Wenn Ihre Trennung von einer <strong>anhaltenden Depression</strong>, dunklen Gedanken oder einer Unfähigkeit begleitet wird, seit mehreren Wochen im Alltag zu funktionieren, bleiben Sie damit nicht allein. Um Hilfe zu bitten ist der mutigste Akt, den es gibt.</p>
-<p>Um weiterzugehen und Ihre Beziehung besser zu verstehen, können Sie <a href="https://quiz-couple.com/de/paar-kompatibilitaetstest">Ihre Beziehung testen</a> oder überprüfen, ob Ihre Beziehung Anzeichen einer <a href="https://quiz-couple.com/de/toxische-beziehung-test">toxischen Beziehung</a> zeigt.</p>`,
+<p>Um weiterzugehen und Ihre Beziehung besser zu verstehen, können Sie <a href="https://quiz-couple.com/de/paar-kompatibilitaetstest/">Ihre Beziehung testen</a> oder überprüfen, ob Ihre Beziehung Anzeichen einer <a href="https://quiz-couple.com/de/toxische-beziehung-test/">toxischen Beziehung</a> zeigt.</p>`,
     },
   ],
 };

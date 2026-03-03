@@ -126,7 +126,9 @@ async function generatePage(routeKey, lang) {
   const t = createT(lang);
   const tgd = createTgd(lang);
   const translations = loadTranslations(lang);
-  const alternates = getRouteAlternates(routeKey);
+  const noindexRoutes = ['legalMentions', 'privacy', 'admin'];
+  const isNoindex = noindexRoutes.includes(routeKey);
+  const alternates = isNoindex ? [] : getRouteAlternates(routeKey);
   const canonical = getLocalizedUrl(routeKey, lang);
   const pagePath = getLocalizedPath(routeKey, lang);
 
@@ -296,6 +298,7 @@ async function generatePage(routeKey, lang) {
     rawDescription: description,
     canonical,
     alternates,
+    noindex: isNoindex ? (routeKey === 'admin' ? 'noindex, nofollow' : 'noindex, follow') : false,
     ogImage: `${BASE_URL}/og-image.webp`,
     // Navigation/routing
     routeKey,
@@ -389,7 +392,7 @@ function generateSitemaps() {
 
   // Static routes
   for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
-    if (key === 'admin') continue;
+    if (['admin', 'legalMentions', 'privacy'].includes(key)) continue;
     const urlsByLang = {};
     for (const lang of LANGUAGES) {
       urlsByLang[lang] = url(lang, slugs[lang]);
@@ -984,6 +987,18 @@ async function main() {
 
   // Generate 404 pages
   await generate404Pages();
+
+  // Generate redirect pages for old URLs
+  const REDIRECTS = [
+    { from: 'de/test-gesunde-beziehung', to: '/de/gesunde-beziehung-test/' },
+  ];
+  for (const { from, to } of REDIRECTS) {
+    const redirectDir = path.join(DIST_DIR, from);
+    ensureDir(redirectDir);
+    const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="refresh" content="0;url=${to}"><link rel="canonical" href="${BASE_URL}${to}"><title>Redirecting...</title></head><body><p>Redirecting to <a href="${to}">${to}</a></p></body></html>`;
+    fs.writeFileSync(path.join(redirectDir, 'index.html'), html);
+    console.log(`[redirect] ${from} → ${to}`);
+  }
 
   // Summary
   const success = results.filter(r => r.success).length;

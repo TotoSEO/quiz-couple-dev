@@ -8,7 +8,8 @@
   <link rel="dns-prefetch" href="<%= supabaseUrl %>">
   <title><%= rawTitle %></title>
   <meta name="description" content="<%= rawDescription %>">
-  <link rel="canonical" href="<%= canonical %>">
+  <% if (typeof noindex !== 'undefined' && noindex) { %><meta name="robots" content="<%= noindex %>">
+  <% } %><link rel="canonical" href="<%= canonical %>">
   <% for (const alt of alternates) { %>
   <link rel="alternate" hreflang="<%= alt.hreflang %>" href="<%= alt.href %>">
   <% } %>
