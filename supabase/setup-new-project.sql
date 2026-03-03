@@ -41,9 +41,8 @@ CREATE POLICY "Anyone can insert reviews"
 ON public.reviews FOR INSERT
 WITH CHECK (true);
 
-CREATE POLICY "Anyone can check their own IP"
-ON public.reviews FOR SELECT
-USING (true);
+-- NOTE: No blanket SELECT policy — admin reads all reviews (including IPs)
+-- via the admin-reviews edge function using service_role key.
 
 CREATE INDEX idx_reviews_ip_address ON public.reviews(ip_address);
 CREATE INDEX idx_reviews_approved ON public.reviews(is_approved) WHERE is_approved = true;
@@ -255,13 +254,8 @@ CREATE POLICY "Anyone can submit a lead"
 ON public.leads FOR INSERT
 WITH CHECK (true);
 
-CREATE POLICY "Anyone can read leads"
-ON public.leads FOR SELECT
-USING (true);
-
-CREATE POLICY "Anyone can update leads"
-ON public.leads FOR UPDATE
-USING (true);
+-- NOTE: No public SELECT/UPDATE policies — leads are accessed via
+-- the admin-leads edge function using service_role key.
 
 CREATE INDEX idx_leads_email ON public.leads(email);
 CREATE INDEX idx_leads_subject ON public.leads(subject);

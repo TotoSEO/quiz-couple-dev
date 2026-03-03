@@ -5,6 +5,24 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Generate HMAC-signed admin token: "timestampHex.signatureHex"
+async function generateAdminToken(secret: string): Promise<string> {
+  const timestamp = Math.floor(Date.now() / 1000).toString(16);
+  const encoder = new TextEncoder();
+  const key = await crypto.subtle.importKey(
+    'raw',
+    encoder.encode(secret),
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['sign']
+  );
+  const signature = await crypto.subtle.sign('HMAC', key, encoder.encode(timestamp));
+  const signatureHex = Array.from(new Uint8Array(signature))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+  return `${timestamp}.${signatureHex}`;
+}
+
 serve(async (req) => {
   // Handle CORS preflight
   if (req.method === 'OPTIONS') {
@@ -44,9 +62,9 @@ serve(async (req) => {
     }
 
     if (isValid) {
-      // Generate a session token (simple implementation)
-      const sessionToken = crypto.randomUUID();
-      
+      // Generate HMAC-signed session token (validated by other edge functions)
+      const sessionToken = await generateAdminToken(adminPassword);
+
       return new Response(
         JSON.stringify({ success: true, token: sessionToken }),
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
