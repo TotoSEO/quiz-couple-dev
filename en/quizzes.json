@@ -111,5 +111,11 @@
     "shortTitle": "Moving In Test",
     "description": "20 questions to find out if you're ready to live together. Free couples test, instant results.",
     "metaDescription": "Ready to take the plunge and move in together? This couples test helps you find out if you're truly compatible for daily life. 2 modes: together or separately."
+  },
+  "activities": {
+    "title": "Couple Activities Near You | Quiz Couple",
+    "shortTitle": "Couple Activities",
+    "description": "Find couple activities near you with our interactive map. Restaurants, culture, nature, sports — discover the best outings for two.",
+    "metaDescription": "Find couple activities near you with our interactive map. Restaurants, culture, nature, sports — discover the best outings for two."
   }
 }

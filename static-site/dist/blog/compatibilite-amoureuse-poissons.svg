@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#302b63"/>
+      <stop offset="100%" stop-color="#24243e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="315" r="250" fill="url(#glow)"/>
+  <circle cx="148" cy="96" r="1.5" fill="#fff" opacity="0.5"/>
+  <circle cx="1058" cy="128" r="2" fill="#fff" opacity="0.4"/>
+  <circle cx="295" cy="536" r="1" fill="#fff" opacity="0.6"/>
+  <circle cx="908" cy="516" r="1.8" fill="#fff" opacity="0.3"/>
+  <circle cx="82" cy="386" r="1.2" fill="#fff" opacity="0.5"/>
+  <circle cx="1112" cy="352" r="1" fill="#fff" opacity="0.4"/>
+  <circle cx="488" cy="46" r="2" fill="#fff" opacity="0.3"/>
+  <circle cx="765" cy="584" r="1.5" fill="#fff" opacity="0.5"/>
+  <circle cx="415" cy="152" r="1" fill="#fff" opacity="0.35"/>
+  <circle cx="865" cy="78" r="1.8" fill="#fff" opacity="0.45"/>
+  <text x="600" y="340" text-anchor="middle" dominant-baseline="central" font-size="280" fill="#e2d9f3" font-family="'Segoe UI Symbol','Apple Symbols','Noto Sans Symbols 2',serif" opacity="0.95">♓</text>
+</svg>

@@ -111,5 +111,11 @@
     "shortTitle": "Zusammenziehen-Test",
     "description": "20 Fragen um herauszufinden, ob ihr bereit seid zusammenzuziehen. Kostenloser Paar-Test, sofortiges Ergebnis.",
     "metaDescription": "Bereit für den großen Schritt und zusammenziehen? Dieser Paar-Test hilft euch herauszufinden, ob ihr wirklich alltagstauglich seid. 2 Modi: zusammen oder getrennt."
+  },
+  "activities": {
+    "title": "Paar-Aktivitäten in der Nähe | Quiz Couple",
+    "shortTitle": "Paar-Aktivitäten",
+    "description": "Finden Sie Paar-Aktivitäten in Ihrer Nähe mit unserer interaktiven Karte. Restaurants, Kultur, Natur, Sport — entdecken Sie die besten Unternehmungen zu zweit.",
+    "metaDescription": "Finden Sie Paar-Aktivitäten in Ihrer Nähe mit unserer interaktiven Karte. Restaurants, Kultur, Natur, Sport — entdecken Sie die besten Unternehmungen zu zweit."
   }
 }
