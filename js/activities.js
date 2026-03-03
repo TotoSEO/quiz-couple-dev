@@ -185,10 +185,11 @@
 
   // ── Step 1: Location ────────────────────────────────────────
   function renderLocation(parent) {
-    var form = el('div', 'space-y-6 max-w-lg mx-auto');
+    var form = el('div', 'space-y-6 rounded-2xl border border-border bg-card p-5 md:p-8 max-w-lg mx-auto');
 
     // Geolocation button
-    var geoBtn = el('button', 'btn btn-cta w-full flex items-center justify-center gap-2 py-4 text-lg');
+    var geoWrap = el('div', 'text-center');
+    var geoBtn = el('button', 'btn btn-cta inline-flex items-center justify-center gap-2 py-4 px-8 text-lg');
     geoBtn.type = 'button';
     if (state.geolocating) {
       geoBtn.innerHTML = '<div class="spinner w-5 h-5"></div> ' + esc(tr('form.geolocSearching', 'Recherche...'));
@@ -221,7 +222,8 @@
         { enableHighAccuracy: true, timeout: 10000 }
       );
     });
-    form.appendChild(geoBtn);
+    geoWrap.appendChild(geoBtn);
+    form.appendChild(geoWrap);
 
     // Separator
     var sep = el('div', 'flex items-center gap-3');
@@ -302,8 +304,9 @@
     radiusGroup.appendChild(radiusTicks);
     form.appendChild(radiusGroup);
 
-    // Next button
-    var nextBtn = el('button', 'btn btn-cta w-full mt-4');
+    // Next button (centered)
+    var nextWrap = el('div', 'text-center mt-4');
+    var nextBtn = el('button', 'btn btn-cta inline-flex items-center justify-center gap-2 py-4 px-12 text-lg');
     nextBtn.type = 'button';
     nextBtn.textContent = tr('form.next', 'Suivant');
     nextBtn.disabled = !state.lat;
@@ -316,7 +319,8 @@
       }
       render();
     });
-    form.appendChild(nextBtn);
+    nextWrap.appendChild(nextBtn);
+    form.appendChild(nextWrap);
 
     // Business promo link
     var promoLink = el('p', 'text-center text-xs text-muted-foreground mt-4');
