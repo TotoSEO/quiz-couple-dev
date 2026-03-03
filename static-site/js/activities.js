@@ -856,23 +856,17 @@
     sortBar.appendChild(surpriseBtn);
     parent.appendChild(sortBar);
 
-    // Results layout: map + cards
-    var layout = el('div', 'activities-results');
-
-    // Map container
+    // Map container (full width above cards)
     var mapWrap = el('div', 'activity-map');
     mapWrap.id = 'activities-map';
-    layout.appendChild(mapWrap);
+    parent.appendChild(mapWrap);
 
-    // Cards list
-    var cardsList = el('div', 'space-y-3 overflow-y-auto');
-    cardsList.style.maxHeight = '600px';
+    // Cards grid: 2 columns on desktop, 1 on mobile
+    var cardsList = el('div', 'activity-cards-grid');
     state.results.forEach(function(activity, index) {
       cardsList.appendChild(renderActivityCard(activity, index));
     });
-    layout.appendChild(cardsList);
-
-    parent.appendChild(layout);
+    parent.appendChild(cardsList);
 
     // Initialize map after DOM is ready
     setTimeout(function() { initMap(); }, 50);
@@ -1102,10 +1096,20 @@
   }
 
   function highlightActivity(id) {
-    // Scroll to card
+    // On mobile, scroll to map first so user sees the popup
+    var isMobile = window.innerWidth < 768;
+    var mapEl = document.getElementById('activities-map');
+
+    if (isMobile && mapEl) {
+      mapEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Highlight card visually
     var card = container.querySelector('.activity-card[data-id="' + id + '"]');
     if (card) {
-      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (!isMobile) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
       card.style.boxShadow = '0 0 0 3px hsl(var(--primary))';
       setTimeout(function() { card.style.boxShadow = ''; }, 2000);
     }
