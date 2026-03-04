@@ -148,7 +148,31 @@
       adminToken = token;
       showDashboard();
       loadReviews();
+      loadActivityCount();
     }
+  }
+
+  function loadActivityCount() {
+    fetch(SUPABASE_URL + '/rest/v1/activity_validations?select=id&limit=0', {
+      method: 'HEAD',
+      headers: {
+        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Prefer': 'count=exact'
+      }
+    })
+    .then(function (res) {
+      var range = res.headers.get('content-range');
+      if (range) {
+        var total = range.split('/')[1];
+        var el = document.getElementById('admin-stat-activities');
+        if (el) el.textContent = total === '*' ? '0' : total;
+      }
+    })
+    .catch(function () {
+      var el = document.getElementById('admin-stat-activities');
+      if (el) el.textContent = '?';
+    });
   }
 
   function login() {
@@ -175,6 +199,7 @@
         sessionStorage.setItem('admin-token-expiry', expiry.toString());
         showDashboard();
         loadReviews();
+        loadActivityCount();
       } else {
         errorEl.textContent = data.error || 'Mot de passe incorrect';
         errorEl.classList.remove('hidden');
