@@ -58,6 +58,7 @@ const OSM_TAG_MAP: Record<string, string[]> = {
     "tourism=museum",
     "tourism=gallery",
     "tourism=artwork",
+    "tourism=attraction",
     "historic=monument",
     "historic=castle",
     "historic=manor",
@@ -65,6 +66,8 @@ const OSM_TAG_MAP: Record<string, string[]> = {
     "historic=ruins",
     "historic=archaeological_site",
     "historic=fort",
+    "historic=church",
+    "historic=building",
     "amenity=place_of_worship",
     "amenity=library",
     "amenity=theatre",
@@ -72,28 +75,31 @@ const OSM_TAG_MAP: Record<string, string[]> = {
     "amenity=planetarium",
     "amenity=community_centre",
     "amenity=conference_centre",
+    "amenity=fountain",
   ],
   nature: [
     "leisure=park",
     "leisure=garden",
     "leisure=dog_park",
+    "leisure=nature_reserve",
+    "leisure=bird_hide",
+    "leisure=fishing",
+    "leisure=recreation_ground",
+    "leisure=playground",
     "landuse=forest",
+    "landuse=recreation_ground",
     "natural=wood",
     "natural=water",
     "natural=beach",
     "natural=peak",
     "natural=cave_entrance",
     "natural=hot_spring",
+    "natural=spring",
+    "natural=wetland",
     "tourism=viewpoint",
     "tourism=picnic_site",
-    "leisure=nature_reserve",
-    "leisure=bird_hide",
-    "leisure=fishing",
+    "tourism=camp_site",
     "waterway=waterfall",
-    "natural=glacier",
-    "route=hiking",
-    "route=foot",
-    "highway=path",
   ],
   sport: [
     "leisure=swimming_pool",
@@ -108,6 +114,7 @@ const OSM_TAG_MAP: Record<string, string[]> = {
     "leisure=pitch",
     "leisure=track",
     "leisure=swimming_area",
+    "leisure=skatepark",
     "sport=climbing",
     "sport=tennis",
     "sport=surfing",
@@ -116,6 +123,7 @@ const OSM_TAG_MAP: Record<string, string[]> = {
     "sport=canoe",
     "sport=sailing",
     "sport=skiing",
+    "sport=skateboard",
     "amenity=public_bath",
   ],
   divertissement: [
@@ -126,6 +134,7 @@ const OSM_TAG_MAP: Record<string, string[]> = {
     "tourism=aquarium",
     "leisure=amusement_arcade",
     "leisure=trampoline_park",
+    "leisure=miniature_golf",
     "amenity=nightclub",
     "amenity=bar",
     "amenity=pub",
@@ -133,16 +142,19 @@ const OSM_TAG_MAP: Record<string, string[]> = {
     "leisure=dance",
     "amenity=events_venue",
     "shop=games",
+    "leisure=bowling_alley",
   ],
   bienEtre: [
     "leisure=spa",
     "leisure=sauna",
     "amenity=public_bath",
     "shop=massage",
+    "shop=beauty",
     "leisure=turkish_bath",
     "amenity=hot_spring",
     "sport=yoga",
     "leisure=fitness_centre",
+    "amenity=spa",
   ],
   gastronomie: [
     "amenity=restaurant",
@@ -159,6 +171,8 @@ const OSM_TAG_MAP: Record<string, string[]> = {
     "shop=bakery",
     "shop=deli",
     "shop=cheese",
+    "shop=coffee",
+    "shop=organic",
     "craft=winery",
     "craft=brewery",
     "craft=distillery",
@@ -169,11 +183,14 @@ const OSM_TAG_MAP: Record<string, string[]> = {
     "craft=painter",
     "craft=sculptor",
     "craft=photographer",
+    "craft=florist",
+    "craft=jeweller",
     "shop=farm",
     "tourism=gallery",
     "leisure=hackerspace",
     "amenity=cooking_school",
     "shop=craft",
+    "shop=art",
   ],
 };
 
@@ -238,8 +255,10 @@ const PRICE_SUBCATEGORY: Record<string, [number, number]> = {
   // Free or nearly free
   park: [0, 0], garden: [0, 0], dog_park: [0, 0], forest: [0, 0],
   beach: [0, 0], viewpoint: [0, 0], picnic_site: [0, 0], nature_reserve: [0, 0],
+  recreation_ground: [0, 0], playground: [0, 0], spring: [0, 0], wetland: [0, 0],
+  camp_site: [5, 20], fountain: [0, 0], attraction: [0, 15],
   library: [0, 0], place_of_worship: [0, 0], memorial: [0, 0],
-  artwork: [0, 0], bird_hide: [0, 0],
+  artwork: [0, 0], bird_hide: [0, 0], skatepark: [0, 0],
   // Cheap
   cafe: [2, 8], bakery: [2, 6], pastry: [2, 8], ice_cream: [2, 6],
   fast_food: [5, 15], pub: [5, 15], bar: [5, 15],
@@ -268,12 +287,15 @@ const INDOOR_MAP: Record<string, boolean | null> = {
   park: false, garden: false, dog_park: false, forest: false, wood: false,
   water: false, beach: false, peak: false, cave_entrance: null, hot_spring: false,
   viewpoint: false, picnic_site: false, nature_reserve: false, bird_hide: false,
-  fishing: false, waterfall: false, glacier: false,
-  hiking: false, foot: false, path: false,
+  fishing: false, waterfall: false, spring: false, wetland: false,
+  recreation_ground: false, playground: false, camp_site: false,
+  // culture extras
+  attraction: null, church: true, building: true, fountain: false,
   // sport
   swimming_pool: null, sports_centre: true, ice_rink: true, bowling_alley: true,
   golf_course: false, miniature_golf: false, fitness_centre: true, stadium: false,
   horse_riding: false, pitch: false, track: false, swimming_area: false,
+  skatepark: false, skateboard: false,
   climbing: null, tennis: false, surfing: false, scuba_diving: false,
   kayak: false, canoe: false, sailing: false, skiing: false,
   public_bath: true,
@@ -288,18 +310,23 @@ const INDOOR_MAP: Record<string, boolean | null> = {
   restaurant: true, cafe: true, fast_food: true, ice_cream: null,
   marketplace: null, biergarten: false, food_court: true,
   wine: true, tea: true, chocolate: true, pastry: true, bakery: true,
-  deli: true, cheese: true, winery: true, brewery: true, distillery: true,
+  deli: true, cheese: true, coffee: true, organic: true,
+  winery: true, brewery: true, distillery: true,
+  // bienEtre extras
+  beauty: true,
   // ateliers
   arts_centre: true, pottery: true, painter: true, sculptor: true,
-  photographer: true, farm: false, hackerspace: true, cooking_school: true, craft: true,
+  photographer: true, florist: true, jeweller: true,
+  farm: false, hackerspace: true, cooking_school: true, craft: true, art: true,
 };
 
 // Subcategories that are dangerous/unsuitable at night (for schedule scoring)
 const OUTDOOR_NIGHT_PENALTY = new Set([
-  "forest", "wood", "peak", "nature_reserve", "waterfall", "glacier",
-  "hiking", "foot", "path", "beach", "viewpoint", "fishing",
+  "forest", "wood", "peak", "nature_reserve", "waterfall",
+  "beach", "viewpoint", "fishing", "spring", "wetland",
   "swimming_area", "kayak", "canoe", "surfing", "sailing", "skiing",
   "hot_spring", "dog_park", "bird_hide", "picnic_site",
+  "recreation_ground", "playground", "camp_site", "skatepark",
 ]);
 
 // ---------------------------------------------------------------------------
@@ -392,6 +419,9 @@ function getGroupScore(subcategory: string, size: GroupSize): number {
     park: "hiking", garden: "hiking", forest: "hiking", wood: "hiking",
     nature_reserve: "hiking", viewpoint: "hiking", beach: "hiking",
     peak: "hiking", picnic_site: "hiking", dog_park: "hiking",
+    recreation_ground: "hiking", playground: "hiking", spring: "hiking",
+    wetland: "hiking", camp_site: "hiking", waterfall: "hiking",
+    skatepark: "karting", skateboard: "karting",
     theme_park: "theme_park", water_park: "theme_park", zoo: "theme_park",
     aquarium: "theme_park", trampoline_park: "theme_park",
     spa: "spa", public_bath: "spa", sauna: "spa", turkish_bath: "spa",
@@ -488,7 +518,7 @@ function buildOverpassQuery(
     }
   }
 
-  return `[out:json][timeout:25];\n(\n${statements.join("\n")}\n);\nout center body qt 300;`;
+  return `[out:json][timeout:25];\n(\n${statements.join("\n")}\n);\nout center body qt 500;`;
 }
 
 /** Check if a POI is a duplicate (same name + same category within 100m) */
