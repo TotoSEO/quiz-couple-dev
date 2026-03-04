@@ -55,7 +55,7 @@
 
   function loadActivityCount() {
     fetch(SUPABASE_URL + '/rest/v1/activity_validations?select=id&limit=0', {
-      method: 'HEAD',
+      method: 'GET',
       headers: {
         'apikey': SUPABASE_KEY,
         'Authorization': 'Bearer ' + SUPABASE_KEY,
