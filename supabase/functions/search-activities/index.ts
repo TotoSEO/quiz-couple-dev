@@ -838,6 +838,21 @@ serve(async (req) => {
       body.lang = body.lang.slice(0, 5).replace(/[^a-z]/gi, "");
     }
 
+    // ---- Track activity validation (fire-and-forget) ----
+    const sbUrl = Deno.env.get("SUPABASE_URL");
+    const sbServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    if (sbUrl && sbServiceKey) {
+      fetch(`${sbUrl}/rest/v1/activity_validations`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "apikey": sbServiceKey,
+          "Authorization": `Bearer ${sbServiceKey}`,
+        },
+        body: JSON.stringify({ ip_address: ip }),
+      }).catch(() => {/* ignore tracking errors */});
+    }
+
     // ---- Fetch Overpass data ----
     const overpassQuery = buildOverpassQuery(
       lat,
