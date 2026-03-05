@@ -1,23 +1,247 @@
+<%
+const c = {
+  fr: {
+    badge: 'Co-fondateurs',
+    h1: 'Qui sommes-nous',
+    heroIntro: 'Quand tu cherches quelque chose sur la vie amoureuse en ligne, tu tombes généralement sur deux types de contenus. Le premier : des articles écrits par des thérapeutes qui sonnent comme des manuels scolaires. Le second : des listes de conseils passe-partout qui pourraient s\'appliquer à n\'importe qui — et donc à personne vraiment.',
+    whyText: '<strong>Quiz Couple est né de cette frustration.</strong> On ne voulait pas un site de plus sur le couple. On voulait quelque chose d\'honnête, de concret, qui parle aux gens tels qu\'ils sont — pas tels qu\'ils devraient être selon une théorie quelconque. Quelque chose qui reconnaisse que les relations amoureuses sont compliquées, imparfaites, et que c\'est précisément pour ça qu\'elles valent la peine qu\'on s\'y intéresse sérieusement.',
+    storyTitle: 'Comment Quiz Couple est né',
+    storyP1: 'Tout a commencé par des conversations. Des vraies, les longues, celles qui partent d\'un truc anodin et finissent trois heures plus tard sur des questions qu\'on ne s\'était jamais vraiment posées. Avec des amis, en couple, en famille. Des discussions sur ce qui fait qu\'une relation dure, sur pourquoi certaines personnes restent dans des situations qui les rendent malheureuses, sur la différence entre ce qu\'on croit vouloir et ce dont on a vraiment besoin.',
+    storyQuote: 'Ce qui nous a frappés, c\'est à quel point ces conversations manquaient d\'espace pour exister. Pas en thérapie — la thérapie c\'est autre chose, c\'est précieux mais c\'est un cadre particulier. Dans la vraie vie. Sur internet. Dans les contenus qu\'on consommait. <strong>On parlait peu de la mécanique interne des relations</strong>, de ce qui se passe vraiment entre deux personnes qui s\'aiment, qui se blessent, qui se choisissent ou pas.',
+    storyP2: 'Alors on a commencé à écrire. Sans prétendre tout savoir. Avec la conviction qu\'un regard sincère vaut mieux qu\'une expertise froide, et qu\'on peut parler de psychologie de couple sans pour autant se prendre pour des psys. On a lu, beaucoup. On a observé, autour de nous et en nous. On a recueilli des témoignages, des histoires, des questions que les gens n\'osaient pas poser à voix haute mais cherchaient désespérément sur Google à 23h.',
+    storyP3: '<strong>Quiz Couple, c\'est l\'endroit où ces questions trouvent des réponses sérieuses — formulées par des humains, pas par des algorithmes ou des robots.</strong>',
+    doTitle: 'Ce qu\'on fait — et ce qu\'on ne fait pas',
+    doLabel: 'Ce qu\'on fait',
+    doText: 'On écrit sur les relations amoureuses. Les dynamiques, les patterns, les signaux qu\'on ne sait pas toujours lire, les questions qu\'on se pose seul à 23h. On creuse. On prend le temps de comprendre avant d\'écrire. On relit, on coupe, on recommence.',
+    dontLabel: 'Ce qu\'on ne fait pas',
+    dontText: 'Des diagnostics, des jugements moraux, des listes de « comment trouver l\'homme parfait en 30 jours ». <strong>On n\'est pas thérapeutes et on ne joue pas à l\'être.</strong>',
+    doExtra: 'Les quizzes qu\'on a construits ne sont pas là pour « révéler ta personnalité en 5 questions » — ce type de contenu, honnêtement, on trouve ça creux. Ils sont là pour déclencher une réflexion, mettre des mots sur quelque chose qu\'on ressent confusément, ou simplement créer un point de départ pour une conversation avec son partenaire.',
+    doDisclaimer: 'Si quelqu\'un traverse quelque chose de vraiment difficile — une séparation douloureuse, une relation qui fait du mal — on dit clairement que parler à un professionnel est la meilleure chose à faire. Ce n\'est pas une clause de style. C\'est une conviction.',
+    teamBadge: 'L\'équipe',
+    teamTitle: 'Les visages derrière Quiz Couple',
+    lucieAlt: 'Lucie Courtin, co-fondatrice de Quiz Couple',
+    lucieRole: 'Co-fondatrice · Ligne éditoriale',
+    lucieP1: 'Lucie est co-fondatrice de Quiz Couple et responsable de la ligne éditoriale féminine du site. C\'est elle qui gère la majorité des articles adressés aux femmes — les red flags, la confiance en soi dans une relation, les dynamiques d\'attachement, les questions qu\'on se pose sur ce qu\'on ressent sans vraiment savoir comment les formuler.',
+    lucieP2: 'Ce qui caractérise son écriture, c\'est le refus de la condescendance. Elle n\'écrit pas pour « aider » les femmes depuis une position de surplomb. Elle écrit <em>avec</em> elles, depuis un endroit de reconnaissance mutuelle.',
+    lucieQuote: '« Je sais ce que c\'est que de douter de ce qu\'on ressent dans une relation. Je sais ce que c\'est que de chercher des réponses sur internet à une heure du matin parce qu\'on n\'ose pas en parler autour de soi. »',
+    lucieP3: 'Lucie s\'est passionnée pour les mécanismes émotionnels du couple en observant d\'abord — les relations autour d\'elle, les siennes, les schémas qui revenaient d\'une histoire à l\'autre chez des personnes très différentes. Elle a ensuite structuré cette curiosité en lisant sur la psychologie de l\'attachement, les dynamiques relationnelles, la communication émotionnelle.',
+    lucieSpecLabel: 'Son terrain de prédilection',
+    lucieSpecText: 'Les émotions complexes qu\'on a du mal à démêler seule. La différence entre la jalousie et l\'insécurité. Ce que le silence d\'un partenaire dit vraiment. Pourquoi on reste parfois dans des relations qui ne nous correspondent plus.',
+    mathieuAlt: 'Mathieu Courtin, co-fondateur de Quiz Couple',
+    mathieuRole: 'Co-fondateur · Contenus masculins',
+    mathieuP1: 'Mathieu est co-fondateur de Quiz Couple et responsable des contenus masculins du site. Son angle : décrypter ce qui se passe du côté des hommes dans une relation — ce qu\'ils ressentent, ce qu\'ils expriment mal, ce qu\'ils ne comprennent pas toujours chez eux-mêmes.',
+    mathieuP2: 'C\'est un sujet qu\'il a mis du temps à trouver. Pas parce qu\'il en manquait d\'intérêt, mais parce que les espaces pour en parler sérieusement — sans tomber dans le coaching viriliste d\'un côté ou le discours moralisateur de l\'autre — sont rares. <strong>Il a voulu créer cet espace.</strong>',
+    mathieuP3: 'Mathieu s\'est intéressé à la psychologie masculine dans les relations après avoir passé des années à observer — et à vivre — le décalage entre ce que les hommes disent vouloir en amour et ce qu\'ils font réellement. Ce décalage, il ne l\'aborde pas comme une critique. Il l\'aborde comme un mystère à élucider, avec curiosité et sans tabou.',
+    mathieuSpecLabel: 'Ce qu\'il sait faire mieux que personne sur le site',
+    mathieuSpecText: 'Mettre des mots sur des choses que les hommes ressentent sans les formuler. La peur de l\'engagement qui n\'est pas toujours ce qu\'elle semble être. La difficulté à exprimer un besoin émotionnel sans avoir l\'impression de perdre quelque chose. Le moment où une relation commence à peser sans qu\'on sache exactement pourquoi.',
+    workTitle: 'Comment on travaille',
+    workCard1Title: 'Deux regards',
+    workCard1Text: 'Les articles qui regardent une situation depuis les deux côtés sont souvent le fruit de vraies discussions entre nous avant d\'être écrits.',
+    workCard2Title: 'Du temps',
+    workCard2Text: 'Un sujet comme l\'attachement anxieux ou les dynamiques de pouvoir dans un couple — ça demande du temps pour comprendre et trouver l\'angle juste.',
+    workCard3Title: 'Exigence mutuelle',
+    workCard3Text: 'On se relit, on se challenge. Si un texte sonne faux ou reste trop dans la théorie, l\'autre le ramène à terre. Ce n\'est pas toujours confortable, mais c\'est ce qui fait la qualité.',
+    workHighlight: '<strong>On préfère publier moins souvent et publier bien.</strong>',
+    conclusion: 'Si tu es sur Quiz Couple, c\'est que tu t\'intéresses aux relations amoureuses — les tiennes, celles des autres, ou juste la mécanique générale de tout ça. On est content que tu sois là. Et si quelque chose qu\'on a écrit t\'a aidé à mettre des mots sur quelque chose, ou à voir une situation différemment, <strong>c\'est exactement pour ça qu\'on fait ce travail.</strong>',
+  },
+  en: {
+    badge: 'Co-founders',
+    h1: 'About us',
+    heroIntro: 'When you look up something about relationships online, you usually find one of two things. Either articles written by therapists that read like textbooks. Or generic advice lists that could apply to anyone — and therefore to no one in particular.',
+    whyText: '<strong>Quiz Couple was born out of that frustration.</strong> We didn\'t want yet another relationship website. We wanted something honest, concrete, that speaks to people as they actually are — not as some theory thinks they should be. Something that acknowledges that romantic relationships are complicated, imperfect, and that\'s precisely why they deserve to be taken seriously.',
+    storyTitle: 'How Quiz Couple came to be',
+    storyP1: 'It started with conversations. Real ones — the long kind, the ones that begin with something trivial and end three hours later on questions you\'d never quite sat with before. With friends, as a couple, with family. Conversations about what makes a relationship last, about why some people stay in situations that make them unhappy, about the gap between what we think we want and what we actually need.',
+    storyQuote: 'What struck us was how little space those conversations had to exist. Not in therapy — therapy is something else, it\'s valuable but it\'s a specific context. In real life. Online. In the content we consumed. <strong>The inner workings of relationships</strong> — what actually happens between two people who love each other, hurt each other, choose each other or don\'t — rarely got a proper look.',
+    storyP2: 'So we started writing. Without pretending to know everything. With the conviction that a sincere perspective is worth more than cold expertise, and that you can talk about relationship psychology without playing therapist. We read, a lot. We observed, around us and within ourselves. We collected testimonies, stories, questions people didn\'t dare ask out loud but were desperately searching for on Google at 11pm.',
+    storyP3: '<strong>Quiz Couple is the place where those questions find real answers — written by humans, not algorithms.</strong>',
+    doTitle: 'What we do — and what we don\'t',
+    doLabel: 'What we do',
+    doText: 'We write about romantic relationships. The dynamics, the patterns, the signals people don\'t always know how to read, the questions you ask yourself alone late at night. We dig. We take the time to understand before we write. We reread, cut, start over.',
+    dontLabel: 'What we don\'t do',
+    dontText: 'Diagnoses, moral judgements, listicles on "how to find the perfect man in 30 days". <strong>We\'re not therapists and we don\'t pretend to be.</strong>',
+    doExtra: 'The quizzes we\'ve built aren\'t there to "reveal your personality in 5 questions" — that kind of content, honestly, we find hollow. They\'re there to spark reflection, to put words on something you feel vaguely, or simply to create a starting point for a conversation with your partner.',
+    doDisclaimer: 'If someone is going through something genuinely difficult — a painful breakup, a relationship that\'s doing damage — we say clearly that talking to a professional is the best thing to do. That\'s not a disclaimer. It\'s a conviction.',
+    teamBadge: 'The team',
+    teamTitle: 'The faces behind Quiz Couple',
+    lucieAlt: 'Lucie Courtin, co-founder of Quiz Couple',
+    lucieRole: 'Co-founder · Editorial line',
+    lucieP1: 'Lucie is co-founder of Quiz Couple and responsible for the site\'s feminine editorial angle. She handles the majority of articles addressed to women — red flags, self-confidence in relationships, attachment dynamics, the questions you ask yourself about what you feel without quite knowing how to name it.',
+    lucieP2: 'What defines her writing is a refusal to be condescending. She doesn\'t write to "help" women from a position of superiority. She writes <em>with</em> them, from a place of mutual recognition.',
+    lucieQuote: '"I know what it\'s like to doubt what you feel in a relationship. I know what it\'s like to look for answers online at one in the morning because you don\'t feel able to bring it up with anyone around you."',
+    lucieP3: 'Lucie became passionate about the emotional mechanics of relationships by observing first — relationships around her, her own, the patterns that came up again and again across very different people and very different stories. She then gave that curiosity some structure by reading about attachment theory, relational dynamics, emotional communication.',
+    lucieSpecLabel: 'Her favourite territory',
+    lucieSpecText: 'The complex emotions that are hard to untangle alone. The difference between jealousy and insecurity. What a partner\'s silence actually says. Why people sometimes stay in relationships that no longer suit them.',
+    mathieuAlt: 'Mathieu Courtin, co-founder of Quiz Couple',
+    mathieuRole: 'Co-founder · Male content',
+    mathieuP1: 'Mathieu is co-founder of Quiz Couple and responsible for the site\'s masculine content. His angle: unpacking what goes on for men in a relationship — what they feel, what they express badly, what they don\'t always understand about themselves.',
+    mathieuP2: 'It\'s a subject he took a while to find his footing on. Not because he lacked interest, but because spaces to discuss it seriously — without veering into men\'s-rights coaching on one side or moralistic lectures on the other — are rare. <strong>He wanted to create that space.</strong>',
+    mathieuP3: 'Mathieu became interested in male psychology in relationships after years of observing — and experiencing — the gap between what men say they want in love and what they actually do. He doesn\'t approach that gap as a criticism. He approaches it as a puzzle to work through, with curiosity and without taboo.',
+    mathieuSpecLabel: 'What he does better than anyone on the site',
+    mathieuSpecText: 'Put words on things men feel but don\'t say. The fear of commitment that isn\'t always what it seems. The difficulty of expressing an emotional need without feeling like you\'re losing something in the process. The moment a relationship starts to weigh on you without being able to say exactly why.',
+    workTitle: 'How we work',
+    workCard1Title: 'Two perspectives',
+    workCard1Text: 'Articles that look at a situation from both sides are often the result of real discussions between us before a single word is written.',
+    workCard2Title: 'Taking time',
+    workCard2Text: 'A subject like anxious attachment or power dynamics in a couple — that takes time to understand and find the right angle.',
+    workCard3Title: 'Mutual standards',
+    workCard3Text: 'We push back on each other. If a piece rings false or stays too theoretical, the other brings it back down to earth. It\'s not always comfortable, but it\'s what keeps the quality.',
+    workHighlight: '<strong>We\'d rather publish less often and publish well.</strong>',
+    conclusion: 'If you\'re on Quiz Couple, you care about romantic relationships — yours, other people\'s, or just the general mechanics of the whole thing. We\'re glad you\'re here. And if something we\'ve written has helped you put words on something, or see a situation differently, <strong>that\'s exactly why we do this.</strong>',
+  },
+  es: {
+    badge: 'Cofundadores',
+    h1: 'Quiénes somos',
+    heroIntro: 'Cuando buscas algo sobre la vida amorosa en internet, sueles encontrar dos tipos de contenido. El primero: artículos escritos por terapeutas que parecen manuales universitarios. El segundo: listas de consejos genéricos que podrían aplicarse a cualquiera — y por tanto, a nadie en realidad.',
+    whyText: '<strong>Quiz Couple nació de esa frustración.</strong> No queríamos crear un sitio más sobre las relaciones de pareja. Queríamos algo honesto, concreto, que hablara a las personas tal como son — no tal como alguna teoría cree que deberían ser. Algo que reconociera que las relaciones amorosas son complicadas, imperfectas, y que precisamente por eso merecen que las tomemos en serio.',
+    storyTitle: 'Cómo nació Quiz Couple',
+    storyP1: 'Todo empezó con conversaciones. De las buenas — las largas, las que arrancan con algo trivial y acaban tres horas después en preguntas que nunca nos habíamos planteado de verdad. Con amigos, en pareja, en familia. Conversaciones sobre qué hace que una relación dure, sobre por qué hay personas que se quedan en situaciones que las hacen infelices, sobre la diferencia entre lo que creemos querer y lo que realmente necesitamos.',
+    storyQuote: 'Lo que nos llamó la atención fue lo poco que existía ese espacio para esas conversaciones. No en terapia — la terapia es otra cosa, es valiosa pero es un marco muy concreto. En la vida real. En internet. En el contenido que consumíamos. <strong>La mecánica interna de las relaciones</strong> — lo que ocurre de verdad entre dos personas que se quieren, que se hacen daño, que se eligen o no — raramente encontraba un lugar serio donde explorarse.',
+    storyP2: 'Así que empezamos a escribir. Sin pretender saberlo todo. Con la convicción de que una mirada sincera vale más que una expertise fría, y de que se puede hablar de psicología de pareja sin hacerse pasar por psicólogos. Leímos, mucho. Observamos, a nuestro alrededor y en nosotros mismos. Recogimos testimonios, historias, preguntas que la gente no se atrevía a hacer en voz alta pero buscaba desesperadamente en Google a las once de la noche.',
+    storyP3: '<strong>Quiz Couple es el lugar donde esas preguntas encuentran respuestas serias — escritas por personas, no por algoritmos.</strong>',
+    doTitle: 'Qué hacemos — y qué no hacemos',
+    doLabel: 'Qué hacemos',
+    doText: 'Escribimos sobre relaciones amorosas. Las dinámicas, los patrones, las señales que no siempre sabemos leer, las preguntas que nos hacemos solos a deshora. Profundizamos. Nos tomamos el tiempo necesario para entender antes de escribir. Releemos, cortamos, volvemos a empezar.',
+    dontLabel: 'Qué no hacemos',
+    dontText: 'Diagnósticos, juicios morales, listas de "cómo encontrar al hombre perfecto en 30 días". <strong>No somos terapeutas y no pretendemos serlo.</strong>',
+    doExtra: 'Los tests que hemos creado no están ahí para "revelar tu personalidad en 5 preguntas" — ese tipo de contenido, sinceramente, nos parece hueco. Están ahí para generar reflexión, para ponerle palabras a algo que sientes de forma difusa, o simplemente para crear un punto de partida para una conversación con tu pareja.',
+    doDisclaimer: 'Si alguien está pasando por algo realmente difícil — una ruptura dolorosa, una relación que hace daño — decimos claramente que hablar con un profesional es lo mejor. No es una advertencia legal. Es una convicción.',
+    teamBadge: 'El equipo',
+    teamTitle: 'Los rostros detrás de Quiz Couple',
+    lucieAlt: 'Lucie Courtin, cofundadora de Quiz Couple',
+    lucieRole: 'Cofundadora · Línea editorial',
+    lucieP1: 'Lucie es cofundadora de Quiz Couple y responsable de la línea editorial femenina del sitio. Ella se ocupa de la mayoría de los artículos dirigidos a mujeres — las red flags, la confianza en una misma dentro de una relación, las dinámicas de apego, las preguntas que te haces sobre lo que sientes sin saber bien cómo formularlo.',
+    lucieP2: 'Lo que define su escritura es el rechazo a la condescendencia. No escribe para "ayudar" a las mujeres desde una posición de superioridad. Escribe <em>con</em> ellas, desde un lugar de reconocimiento mutuo.',
+    lucieQuote: '"Sé lo que es dudar de lo que sientes en una relación. Sé lo que es buscar respuestas en internet a la una de la madrugada porque no te atreves a hablar de ello con nadie de tu entorno."',
+    lucieP3: 'Lucie se apasionó por los mecanismos emocionales de la pareja empezando por observar — las relaciones a su alrededor, las suyas propias, los patrones que aparecían una y otra vez en personas muy distintas y en historias muy diferentes. Luego le dio estructura a esa curiosidad leyendo sobre teoría del apego, dinámicas relacionales, comunicación emocional.',
+    lucieSpecLabel: 'Su territorio preferido',
+    lucieSpecText: 'Las emociones complejas que cuesta desenredar sola. La diferencia entre los celos y la inseguridad. Lo que el silencio de una pareja dice realmente. Por qué a veces nos quedamos en relaciones que ya no nos corresponden.',
+    mathieuAlt: 'Mathieu Courtin, cofundador de Quiz Couple',
+    mathieuRole: 'Cofundador · Contenidos masculinos',
+    mathieuP1: 'Mathieu es cofundador de Quiz Couple y responsable de los contenidos masculinos del sitio. Su enfoque: descifrar lo que ocurre en los hombres dentro de una relación — lo que sienten, lo que expresan mal, lo que no siempre comprenden de sí mismos.',
+    mathieuP2: 'Es un tema que le costó encontrar. No por falta de interés, sino porque los espacios para abordarlo en serio — sin caer en el coaching virilista por un lado ni en el discurso moralizante por el otro — son escasos. <strong>Quiso crear ese espacio.</strong>',
+    mathieuP3: 'Mathieu se interesó por la psicología masculina en las relaciones después de años de observar — y de vivir — la distancia entre lo que los hombres dicen querer en el amor y lo que hacen en realidad. No aborda esa distancia como una crítica. La aborda como un misterio que resolver, con curiosidad y sin tabúes.',
+    mathieuSpecLabel: 'Lo que hace mejor que nadie en el sitio',
+    mathieuSpecText: 'Ponerle palabras a cosas que los hombres sienten pero no dicen. El miedo al compromiso que no siempre es lo que parece. La dificultad de expresar una necesidad emocional sin tener la sensación de perder algo en el proceso. El momento en que una relación empieza a pesar sin saber exactamente por qué.',
+    workTitle: 'Cómo trabajamos',
+    workCard1Title: 'Dos miradas',
+    workCard1Text: 'Los artículos que abordan una situación desde los dos lados son a menudo el resultado de conversaciones reales entre nosotros antes de que se escriba una sola palabra.',
+    workCard2Title: 'Tiempo',
+    workCard2Text: 'Un tema como el apego ansioso o las dinámicas de poder en una pareja — requiere tiempo para entender y encontrar el ángulo adecuado.',
+    workCard3Title: 'Exigencia mutua',
+    workCard3Text: 'Nos cuestionamos mutuamente. Si un texto va en una dirección que no suena auténtica, el otro lo dice. No siempre es cómodo, pero es lo que mantiene la calidad.',
+    workHighlight: '<strong>Preferimos publicar menos y publicar bien.</strong>',
+    conclusion: 'Si estás en Quiz Couple, es porque te interesan las relaciones amorosas — las tuyas, las de los demás, o simplemente la mecánica general de todo esto. Nos alegra que estés aquí. Y si algo de lo que hemos escrito te ha ayudado a ponerle palabras a algo, o a ver una situación de otra manera, <strong>es exactamente para eso por lo que hacemos este trabajo.</strong>',
+  },
+  de: {
+    badge: 'Mitgründer',
+    h1: 'Über uns',
+    heroIntro: 'Wenn man online nach etwas über das Liebesleben sucht, findet man meistens eines von zwei Dingen. Entweder Artikel von Therapeuten, die sich wie Lehrbücher lesen. Oder generische Ratgeberlisten, die auf jeden zutreffen könnten — und deshalb auf niemanden wirklich.',
+    whyText: '<strong>Quiz Couple entstand aus dieser Frustration.</strong> Wir wollten keine weitere Beziehungsseite. Wir wollten etwas Ehrliches, Konkretes — etwas, das Menschen so anspricht, wie sie wirklich sind, nicht wie irgendeine Theorie meint, dass sie sein sollten. Etwas, das anerkennt, dass romantische Beziehungen kompliziert und unvollkommen sind, und dass genau das der Grund ist, warum sie es wert sind, ernst genommen zu werden.',
+    storyTitle: 'Wie Quiz Couple entstanden ist',
+    storyP1: 'Es begann mit Gesprächen. Echten — den langen, die mit einer Kleinigkeit anfangen und drei Stunden später bei Fragen enden, über die man noch nie wirklich nachgedacht hatte. Mit Freunden, als Paar, mit der Familie. Gespräche darüber, was eine Beziehung langfristig trägt, warum manche Menschen in Situationen bleiben, die sie unglücklich machen, über den Unterschied zwischen dem, was man zu wollen glaubt, und dem, was man wirklich braucht.',
+    storyQuote: 'Was uns auffiel, war, wie wenig Raum diese Gespräche hatten. Nicht in der Therapie — Therapie ist etwas anderes, wertvoll, aber in einem sehr bestimmten Rahmen. Im echten Leben. Im Internet. In den Inhalten, die wir konsumierten. <strong>Die inneren Mechanismen von Beziehungen</strong> — was wirklich zwischen zwei Menschen passiert, die sich lieben, verletzen, wählen oder nicht wählen — bekamen selten den Platz, den sie verdient hätten.',
+    storyP2: 'Also begannen wir zu schreiben. Ohne so zu tun, als würden wir alles wissen. In der Überzeugung, dass ein aufrichtiger Blick mehr wert ist als kalte Expertise, und dass man über Beziehungspsychologie schreiben kann, ohne dabei den Therapeuten zu spielen. Wir haben viel gelesen. Wir haben beobachtet, in unserem Umfeld und in uns selbst. Wir haben Erfahrungsberichte, Geschichten und Fragen gesammelt, die Menschen nicht laut zu stellen wagten, aber nachts um elf verzweifelt in Google eingaben.',
+    storyP3: '<strong>Quiz Couple ist der Ort, an dem diese Fragen echte Antworten finden — geschrieben von Menschen, nicht von Algorithmen.</strong>',
+    doTitle: 'Was wir tun — und was nicht',
+    doLabel: 'Was wir tun',
+    doText: 'Wir schreiben über romantische Beziehungen. Die Dynamiken, die Muster, die Signale, die man nicht immer richtig liest, die Fragen, die man sich alleine spät nachts stellt. Wir graben tiefer. Wir nehmen uns Zeit zum Verstehen, bevor wir schreiben. Wir lesen noch einmal, streichen, fangen neu an.',
+    dontLabel: 'Was wir nicht tun',
+    dontText: 'Diagnosen stellen, moralische Urteile fällen, Listen à la "Wie du in 30 Tagen den perfekten Mann findest" schreiben. <strong>Wir sind keine Therapeuten und spielen auch keine.</strong>',
+    doExtra: 'Die Tests, die wir entwickelt haben, sind nicht dazu da, "deine Persönlichkeit in 5 Fragen zu enthüllen" — solche Inhalte finden wir ehrlich gesagt hohl. Sie sollen Reflexion anstoßen, diffus Gespürtem einen Namen geben, oder einfach einen Ausgangspunkt für ein Gespräch mit dem Partner schaffen.',
+    doDisclaimer: 'Wenn jemand durch etwas wirklich Schwieriges geht — eine schmerzhafte Trennung, eine Beziehung, die Schaden anrichtet — sagen wir klar, dass der Gang zu einem Fachmann das Richtige ist. Das ist kein Haftungsausschluss. Das ist eine Überzeugung.',
+    teamBadge: 'Das Team',
+    teamTitle: 'Die Gesichter hinter Quiz Couple',
+    lucieAlt: 'Lucie Courtin, Mitgründerin von Quiz Couple',
+    lucieRole: 'Mitgründerin · Redaktionsleitung',
+    lucieP1: 'Lucie ist Mitgründerin von Quiz Couple und verantwortlich für die weibliche Redaktionslinie der Seite. Sie schreibt den Großteil der Artikel, die sich an Frauen richten — Red Flags, Selbstvertrauen in einer Beziehung, Bindungsdynamiken, die Fragen, die man sich über das eigene Fühlen stellt, ohne genau zu wissen, wie man sie formulieren soll.',
+    lucieP2: 'Was ihr Schreiben auszeichnet, ist die Weigerung, herablassend zu sein. Sie schreibt nicht, um Frauen aus einer Überlegenheitsposition heraus zu "helfen". Sie schreibt <em>mit</em> ihnen, aus einem Ort gegenseitiger Wiedererkennung heraus.',
+    lucieQuote: '„Ich weiß, wie es ist, daran zu zweifeln, was man in einer Beziehung fühlt. Ich weiß, wie es ist, nachts um ein Uhr online nach Antworten zu suchen, weil man es mit niemandem im eigenen Umfeld besprechen kann."',
+    lucieP3: 'Lucies Leidenschaft für die emotionalen Mechanismen in Paarbeziehungen entstand durch Beobachten — Beziehungen in ihrem Umfeld, ihre eigenen, Muster, die sich bei sehr unterschiedlichen Menschen und in sehr verschiedenen Geschichten immer wieder zeigten. Diese Neugier gab sie dann durch Lektüre eine Struktur: Bindungstheorie, relationale Dynamiken, emotionale Kommunikation.',
+    lucieSpecLabel: 'Ihr bevorzugtes Terrain',
+    lucieSpecText: 'Komplexe Gefühle, die sich schwer alleine entwirren lassen. Der Unterschied zwischen Eifersucht und Unsicherheit. Was das Schweigen eines Partners wirklich sagt. Warum man manchmal in Beziehungen bleibt, die einem nicht mehr entsprechen.',
+    mathieuAlt: 'Mathieu Courtin, Mitgründer von Quiz Couple',
+    mathieuRole: 'Mitgründer · Männliche Inhalte',
+    mathieuP1: 'Mathieu ist Mitgründer von Quiz Couple und verantwortlich für die männlichen Inhalte der Seite. Sein Ansatz: zu entschlüsseln, was in Männern innerhalb einer Beziehung vorgeht — was sie fühlen, was sie schlecht ausdrücken, was sie an sich selbst nicht immer verstehen.',
+    mathieuP2: 'Das ist ein Thema, zu dem er seinen Weg erst finden musste. Nicht aus Mangel an Interesse, sondern weil Räume für ernsthafte Auseinandersetzungen damit selten sind — ohne in männerrechtliches Coaching auf der einen Seite oder in moralisierendes Belehren auf der anderen zu verfallen. <strong>Er wollte diesen Raum schaffen.</strong>',
+    mathieuP3: 'Mathieu begann sich für männliche Psychologie in Beziehungen zu interessieren, nachdem er jahrelang beobachtet hatte — und selbst erlebt hatte — wie groß die Lücke zwischen dem ist, was Männer sagen, in der Liebe zu wollen, und dem, was sie tatsächlich tun. Diese Lücke nähert er sich nicht als Kritik. Er nähert sich ihr als Rätsel, das es zu lösen gilt, mit Neugier und ohne Tabus.',
+    mathieuSpecLabel: 'Was er auf der Seite besser macht als jeder andere',
+    mathieuSpecText: 'Dinge in Worte fassen, die Männer fühlen, aber nicht sagen. Die Angst vor Bindung, die nicht immer das ist, was sie zu sein scheint. Die Schwierigkeit, ein emotionales Bedürfnis auszudrücken, ohne das Gefühl zu haben, dabei etwas zu verlieren. Der Moment, in dem eine Beziehung anfängt zu lasten, ohne genau sagen zu können warum.',
+    workTitle: 'Wie wir arbeiten',
+    workCard1Title: 'Zwei Perspektiven',
+    workCard1Text: 'Artikel, die eine Situation von beiden Seiten beleuchten, entstehen oft aus echten Gesprächen zwischen uns, bevor auch nur ein Wort geschrieben wird.',
+    workCard2Title: 'Zeit',
+    workCard2Text: 'Ein Thema wie ängstliche Bindung oder Machtdynamiken in einer Beziehung — das braucht Zeit zum Verstehen und zum Finden des richtigen Blickwinkels.',
+    workCard3Title: 'Gegenseitige Ansprüche',
+    workCard3Text: 'Wir hinterfragen uns gegenseitig. Wenn ein Text sich nicht stimmig anfühlt oder zu theoretisch bleibt, holt der andere ihn auf den Boden zurück. Nicht immer angenehm, aber es hält die Qualität.',
+    workHighlight: '<strong>Wir veröffentlichen lieber seltener und dafür gut.</strong>',
+    conclusion: 'Wenn du auf Quiz Couple bist, interessieren dich romantische Beziehungen — deine eigenen, die anderer Menschen, oder einfach die allgemeine Mechanik dahinter. Wir freuen uns, dass du hier bist. Und wenn etwas, das wir geschrieben haben, dir geholfen hat, etwas in Worte zu fassen, oder eine Situation anders zu sehen — <strong>genau dafür machen wir diese Arbeit.</strong>',
+  },
+  it: {
+    badge: 'Cofondatori',
+    h1: 'Chi siamo',
+    heroIntro: 'Quando cerchi qualcosa sulla vita amorosa online, trovi di solito una di due cose. Articoli scritti da terapeuti che sembrano manuali universitari. Oppure liste di consigli generici che potrebbero applicarsi a chiunque — e quindi a nessuno davvero.',
+    whyText: '<strong>Quiz Couple è nato da questa frustrazione.</strong> Non volevamo creare l\'ennesimo sito sulle relazioni di coppia. Volevamo qualcosa di onesto, di concreto, che parlasse alle persone per come sono davvero — non per come qualche teoria ritiene che dovrebbero essere. Qualcosa che riconoscesse che le relazioni amorose sono complicate, imperfette, e che è proprio per questo che meritano di essere prese sul serio.',
+    storyTitle: 'Come è nato Quiz Couple',
+    storyP1: 'Tutto è cominciato con delle conversazioni. Quelle vere — le lunghe, quelle che partono da una cosa banale e finiscono tre ore dopo su domande che non ci si era mai davvero posti. Con gli amici, in coppia, in famiglia. Conversazioni su cosa fa durare una relazione, su perché certe persone restano in situazioni che le rendono infelici, sulla differenza tra quello che pensiamo di volere e quello di cui abbiamo veramente bisogno.',
+    storyQuote: 'Quello che ci ha colpiti è stato quanto poco spazio esistesse per quelle conversazioni. Non in terapia — la terapia è un\'altra cosa, preziosa ma in un contesto molto specifico. Nella vita reale. Online. Nei contenuti che consumavamo. <strong>I meccanismi interni delle relazioni</strong> — quello che accade davvero tra due persone che si amano, si feriscono, si scelgono o meno — raramente trovavano un posto serio dove essere esplorati.',
+    storyP2: 'Così abbiamo iniziato a scrivere. Senza pretendere di sapere tutto. Con la convinzione che uno sguardo sincero valga più di un\'expertise fredda, e che si possa parlare di psicologia di coppia senza fingere di essere psicologi. Abbiamo letto, molto. Abbiamo osservato, intorno a noi e dentro di noi. Abbiamo raccolto testimonianze, storie, domande che le persone non osavano fare ad alta voce ma cercavano disperatamente su Google alle undici di sera.',
+    storyP3: '<strong>Quiz Couple è il posto dove quelle domande trovano risposte serie — scritte da persone, non da algoritmi.</strong>',
+    doTitle: 'Cosa facciamo — e cosa non facciamo',
+    doLabel: 'Cosa facciamo',
+    doText: 'Scriviamo di relazioni amorose. Le dinamiche, i pattern, i segnali che non sempre sappiamo leggere, le domande che ci poniamo da soli a tarda notte. Scaviamo. Ci prendiamo il tempo di capire prima di scrivere. Rileggiamo, tagliamo, ricominciamo.',
+    dontLabel: 'Cosa non facciamo',
+    dontText: 'Diagnosi, giudizi morali, liste su "come trovare l\'uomo perfetto in 30 giorni". <strong>Non siamo terapeuti e non fingiamo di esserlo.</strong>',
+    doExtra: 'I test che abbiamo costruito non sono lì per "rivelare la tua personalità in 5 domande" — quel tipo di contenuto, onestamente, lo troviamo vuoto. Sono lì per innescare una riflessione, per mettere parole su qualcosa che si sente in modo diffuso, o semplicemente per creare un punto di partenza per una conversazione con il proprio partner.',
+    doDisclaimer: 'Se qualcuno sta attraversando qualcosa di davvero difficile — una rottura dolorosa, una relazione che fa male — diciamo chiaramente che parlare con un professionista è la cosa migliore da fare. Non è una clausola di stile. È una convinzione.',
+    teamBadge: 'Il team',
+    teamTitle: 'I volti dietro Quiz Couple',
+    lucieAlt: 'Lucie Courtin, cofondatrice di Quiz Couple',
+    lucieRole: 'Cofondatrice · Linea editoriale',
+    lucieP1: 'Lucie è cofondatrice di Quiz Couple e responsabile della linea editoriale femminile del sito. Si occupa della maggior parte degli articoli rivolti alle donne — i red flag, la fiducia in se stesse all\'interno di una relazione, le dinamiche di attaccamento, le domande che ci si pone su quello che si prova senza sapere bene come formularlo.',
+    lucieP2: 'Quello che caratterizza il suo modo di scrivere è il rifiuto della condiscendenza. Non scrive per "aiutare" le donne da una posizione di superiorità. Scrive <em>con</em> loro, da un posto di riconoscimento reciproco.',
+    lucieQuote: '"So cosa significa dubitare di quello che si prova in una relazione. So cosa significa cercare risposte online all\'una di notte perché non ci si sente di parlarne con nessuno intorno a sé."',
+    lucieP3: 'Lucie si è appassionata ai meccanismi emotivi della coppia iniziando dall\'osservazione — le relazioni intorno a lei, le sue, i pattern che tornavano continuamente in persone molto diverse e in storie molto diverse. Ha poi dato struttura a quella curiosità leggendo di teoria dell\'attaccamento, dinamiche relazionali, comunicazione emotiva.',
+    lucieSpecLabel: 'Il suo territorio preferito',
+    lucieSpecText: 'Le emozioni complesse che è difficile districare da soli. La differenza tra gelosia e insicurezza. Quello che il silenzio di un partner dice davvero. Perché a volte si resta in relazioni che non ci corrispondono più.',
+    mathieuAlt: 'Mathieu Courtin, cofondatore di Quiz Couple',
+    mathieuRole: 'Cofondatore · Contenuti maschili',
+    mathieuP1: 'Mathieu è cofondatore di Quiz Couple e responsabile dei contenuti maschili del sito. Il suo approccio: decifrare cosa accade negli uomini all\'interno di una relazione — quello che sentono, quello che esprimono male, quello che non sempre capiscono di se stessi.',
+    mathieuP2: 'È un argomento che ha impiegato tempo a trovare. Non per mancanza di interesse, ma perché gli spazi per affrontarlo seriamente — senza cadere nel coaching virilista da un lato o nel discorso moralizzante dall\'altro — sono rari. <strong>Ha voluto creare quello spazio.</strong>',
+    mathieuP3: 'Mathieu si è interessato alla psicologia maschile nelle relazioni dopo anni trascorsi a osservare — e a vivere — il divario tra quello che gli uomini dicono di volere in amore e quello che fanno realmente. Non affronta quel divario come una critica. Lo affronta come un mistero da risolvere, con curiosità e senza tabù.',
+    mathieuSpecLabel: 'Quello che sa fare meglio di chiunque altro sul sito',
+    mathieuSpecText: 'Mettere parole su cose che gli uomini sentono ma non dicono. La paura dell\'impegno che non è sempre quello che sembra. La difficoltà di esprimere un bisogno emotivo senza avere la sensazione di perdere qualcosa nel farlo. Il momento in cui una relazione comincia a pesare senza riuscire a dire esattamente perché.',
+    workTitle: 'Come lavoriamo',
+    workCard1Title: 'Due sguardi',
+    workCard1Text: 'Gli articoli che affrontano una situazione da entrambi i lati sono spesso il frutto di conversazioni reali tra noi prima che venga scritto una sola parola.',
+    workCard2Title: 'Tempo',
+    workCard2Text: 'Un tema come l\'attaccamento ansioso o le dinamiche di potere in una coppia — richiede tempo per capire e trovare l\'angolazione giusta.',
+    workCard3Title: 'Esigenza reciproca',
+    workCard3Text: 'Ci mettiamo in discussione a vicenda. Se un testo va in una direzione che non suona autentica, l\'altro lo dice. Non è sempre comodo, ma è quello che mantiene la qualità.',
+    workHighlight: '<strong>Preferiamo pubblicare meno spesso e pubblicare bene.</strong>',
+    conclusion: 'Se sei su Quiz Couple, le relazioni amorose ti interessano — le tue, quelle degli altri, o semplicemente la meccanica generale di tutto questo. Siamo contenti che tu sia qui. E se qualcosa che abbiamo scritto ti ha aiutato a mettere parole su qualcosa, o a vedere una situazione in modo diverso, <strong>è esattamente per questo che facciamo questo lavoro.</strong>',
+  },
+};
+const p = c[lang] || c.fr;
+%>
 <!-- ═══════ HERO ═══════ -->
 <section class="relative overflow-hidden gradient-hero py-20 md:py-32">
-  <!-- Decorative blobs -->
   <div class="absolute top-20 left-10 w-64 h-64 blob-primary animate-blob opacity-40 pointer-events-none" aria-hidden="true"></div>
   <div class="absolute bottom-10 right-10 w-48 h-48 blob-secondary animate-blob delay-500 opacity-40 pointer-events-none" aria-hidden="true"></div>
 
   <div class="container mx-auto px-4 relative z-10">
     <div class="mx-auto max-w-3xl text-center">
-      <span class="badge badge-primary mb-4">Co-fondateurs</span>
+      <span class="badge badge-primary mb-4"><%= p.badge %></span>
       <h1 class="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
-        Qui sommes-nous<span class="text-primary"> ?</span>
+        <%= p.h1 %><span class="text-primary"><% if (lang === 'fr') { %> ?<% } %></span>
       </h1>
       <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-        Quand tu cherches quelque chose sur la vie amoureuse en ligne, tu tombes g&eacute;n&eacute;ralement sur deux types de contenus. Le premier&nbsp;: des articles &eacute;crits par des th&eacute;rapeutes qui sonnent comme des manuels scolaires. Le second&nbsp;: des listes de conseils passe-partout qui pourraient s&rsquo;appliquer &agrave; n&rsquo;importe qui &mdash; et donc &agrave; personne vraiment.
+        <%= p.heroIntro %>
       </p>
     </div>
   </div>
 </section>
 
-<!-- ═══════ POURQUOI QUIZ COUPLE ═══════ -->
+<!-- ═══════ WHY ═══════ -->
 <section class="py-16 md:py-24">
   <div class="container mx-auto px-4">
     <div class="max-w-4xl mx-auto">
@@ -25,84 +249,79 @@
         <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
           <svg class="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
         </div>
-        <p class="text-lg md:text-xl text-foreground leading-relaxed">
-          <strong>Quiz Couple est n&eacute; de cette frustration.</strong> On ne voulait pas un site de plus sur le couple. On voulait quelque chose d&rsquo;honn&ecirc;te, de concret, qui parle aux gens tels qu&rsquo;ils sont &mdash; pas tels qu&rsquo;ils devraient &ecirc;tre selon une th&eacute;orie quelconque. Quelque chose qui reconnaisse que les relations amoureuses sont compliqu&eacute;es, imparfaites, et que c&rsquo;est pr&eacute;cis&eacute;ment pour &ccedil;a qu&rsquo;elles valent la peine qu&rsquo;on s&rsquo;y int&eacute;resse s&eacute;rieusement.
-        </p>
+        <p class="text-lg md:text-xl text-foreground leading-relaxed"><%- p.whyText %></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════ NOTRE HISTOIRE ═══════ -->
+<!-- ═══════ STORY ═══════ -->
 <section class="py-16 md:py-24 bg-muted/30">
   <div class="container mx-auto px-4">
     <div class="max-w-4xl mx-auto">
       <div class="flex items-center gap-3 mb-8">
         <div class="w-12 h-1 rounded-full bg-primary"></div>
-        <h2 class="text-3xl md:text-4xl font-bold text-foreground">Comment Quiz Couple est n&eacute;</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-foreground"><%= p.storyTitle %></h2>
       </div>
 
       <div class="space-y-6 text-foreground text-lg leading-relaxed">
-        <p>Tout a commenc&eacute; par des conversations. Des vraies, les longues, celles qui partent d&rsquo;un truc anodin et finissent trois heures plus tard sur des questions qu&rsquo;on ne s&rsquo;&eacute;tait jamais vraiment pos&eacute;es. Avec des amis, en couple, en famille. Des discussions sur ce qui fait qu&rsquo;une relation dure, sur pourquoi certaines personnes restent dans des situations qui les rendent malheureuses, sur la diff&eacute;rence entre ce qu&rsquo;on croit vouloir et ce dont on a vraiment besoin.</p>
+        <p><%= p.storyP1 %></p>
 
         <div class="rounded-xl border border-border bg-card p-6 md:p-8">
-          <p class="text-muted-foreground italic">Ce qui nous a frapp&eacute;s, c&rsquo;est &agrave; quel point ces conversations manquaient d&rsquo;espace pour exister. Pas en th&eacute;rapie &mdash; la th&eacute;rapie c&rsquo;est autre chose, c&rsquo;est pr&eacute;cieux mais c&rsquo;est un cadre particulier. Dans la vraie vie. Sur internet. Dans les contenus qu&rsquo;on consommait. <strong>On parlait peu de la m&eacute;canique interne des relations</strong>, de ce qui se passe vraiment entre deux personnes qui s&rsquo;aiment, qui se blessent, qui se choisissent ou pas.</p>
+          <p class="text-muted-foreground italic"><%- p.storyQuote %></p>
         </div>
 
-        <p>Alors on a commenc&eacute; &agrave; &eacute;crire. Sans pr&eacute;tendre tout savoir. Avec la conviction qu&rsquo;un regard sinc&egrave;re vaut mieux qu&rsquo;une expertise froide, et qu&rsquo;on peut parler de psychologie de couple sans pour autant se prendre pour des psys. On a lu, beaucoup. On a observ&eacute;, autour de nous et en nous. On a recueilli des t&eacute;moignages, des histoires, des questions que les gens n&rsquo;osaient pas poser &agrave; voix haute mais cherchaient d&eacute;sesp&eacute;r&eacute;ment sur Google &agrave; 23h.</p>
-
-        <p><strong>Quiz Couple, c&rsquo;est l&rsquo;endroit o&ugrave; ces questions trouvent des r&eacute;ponses s&eacute;rieuses &mdash; formul&eacute;es par des humains, pas par des algorithmes ou des robots.</strong></p>
+        <p><%= p.storyP2 %></p>
+        <p><%- p.storyP3 %></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════ CE QU'ON FAIT ═══════ -->
+<!-- ═══════ DO / DON'T ═══════ -->
 <section class="py-16 md:py-24">
   <div class="container mx-auto px-4">
     <div class="max-w-4xl mx-auto">
       <div class="flex items-center gap-3 mb-8">
         <div class="w-12 h-1 rounded-full bg-secondary"></div>
-        <h2 class="text-3xl md:text-4xl font-bold text-foreground">Ce qu&rsquo;on fait &mdash; et ce qu&rsquo;on ne fait pas</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-foreground"><%= p.doTitle %></h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6 mb-8">
-        <!-- Ce qu'on fait -->
         <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-8">
           <div class="flex items-center gap-3 mb-4">
             <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
               <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <h3 class="text-xl font-semibold text-foreground">Ce qu&rsquo;on fait</h3>
+            <h3 class="text-xl font-semibold text-foreground"><%= p.doLabel %></h3>
           </div>
-          <p class="text-foreground leading-relaxed">On &eacute;crit sur les relations amoureuses. Les dynamiques, les patterns, les signaux qu&rsquo;on ne sait pas toujours lire, les questions qu&rsquo;on se pose seul &agrave; 23h. On creuse. On prend le temps de comprendre avant d&rsquo;&eacute;crire. On relit, on coupe, on recommence.</p>
+          <p class="text-foreground leading-relaxed"><%= p.doText %></p>
         </div>
 
-        <!-- Ce qu'on ne fait pas -->
         <div class="rounded-2xl border border-border bg-card p-6 md:p-8">
           <div class="flex items-center gap-3 mb-4">
             <div class="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
               <svg class="w-5 h-5 text-muted-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </div>
-            <h3 class="text-xl font-semibold text-foreground">Ce qu&rsquo;on ne fait pas</h3>
+            <h3 class="text-xl font-semibold text-foreground"><%= p.dontLabel %></h3>
           </div>
-          <p class="text-foreground leading-relaxed">Des diagnostics, des jugements moraux, des listes de &laquo;&nbsp;comment trouver l&rsquo;homme parfait en 30 jours&nbsp;&raquo;. <strong>On n&rsquo;est pas th&eacute;rapeutes et on ne joue pas &agrave; l&rsquo;&ecirc;tre.</strong></p>
+          <p class="text-foreground leading-relaxed"><%- p.dontText %></p>
         </div>
       </div>
 
-      <p class="text-foreground text-lg leading-relaxed">Les quizzes qu&rsquo;on a construits ne sont pas l&agrave; pour &laquo;&nbsp;r&eacute;v&eacute;ler ta personnalit&eacute; en 5 questions&nbsp;&raquo; &mdash; ce type de contenu, honn&ecirc;tement, on trouve &ccedil;a creux. Ils sont l&agrave; pour d&eacute;clencher une r&eacute;flexion, mettre des mots sur quelque chose qu&rsquo;on ressent confus&eacute;ment, ou simplement cr&eacute;er un point de d&eacute;part pour une conversation avec son partenaire.</p>
-      <p class="text-muted-foreground mt-4 leading-relaxed">Si quelqu&rsquo;un traverse quelque chose de vraiment difficile &mdash; une s&eacute;paration douloureuse, une relation qui fait du mal &mdash; on dit clairement que parler &agrave; un professionnel est la meilleure chose &agrave; faire. Ce n&rsquo;est pas une clause de style. C&rsquo;est une conviction.</p>
+      <p class="text-foreground text-lg leading-relaxed"><%= p.doExtra %></p>
+      <p class="text-muted-foreground mt-4 leading-relaxed"><%= p.doDisclaimer %></p>
     </div>
   </div>
 </section>
 
-<!-- ═══════ L'EQUIPE ═══════ -->
+<!-- ═══════ TEAM ═══════ -->
 <section class="py-16 md:py-24 bg-muted/30">
   <div class="container mx-auto px-4">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12 md:mb-16">
-        <span class="badge badge-primary mb-4">L&rsquo;&eacute;quipe</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-foreground">Les visages derri&egrave;re Quiz Couple</h2>
+        <span class="badge badge-primary mb-4"><%= p.teamBadge %></span>
+        <h2 class="text-3xl md:text-4xl font-bold text-foreground"><%= p.teamTitle %></h2>
       </div>
 
       <!-- Lucie -->
@@ -110,20 +329,20 @@
         <div class="rounded-2xl border border-border bg-card overflow-hidden">
           <div class="md:flex">
             <div class="md:w-1/3 p-8 md:p-10 flex flex-col items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/15">
-              <img src="/authors/lucie-courtin.webp" alt="Lucie Courtin, co-fondatrice de Quiz Couple" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-background shadow-lg mb-4" width="160" height="160" loading="lazy">
+              <img src="/authors/lucie-courtin.webp" alt="<%= p.lucieAlt %>" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-background shadow-lg mb-4" width="160" height="160" loading="lazy">
               <h3 class="text-2xl font-bold text-foreground mb-1">Lucie Courtin</h3>
-              <p class="text-sm text-primary font-medium">Co-fondatrice &middot; Ligne &eacute;ditoriale</p>
+              <p class="text-sm text-primary font-medium"><%= p.lucieRole %></p>
             </div>
             <div class="md:w-2/3 p-8 md:p-10 space-y-4 text-foreground leading-relaxed">
-              <p>Lucie est co-fondatrice de Quiz Couple et responsable de la ligne &eacute;ditoriale f&eacute;minine du site. C&rsquo;est elle qui g&egrave;re la majorit&eacute; des articles adress&eacute;s aux femmes &mdash; les red flags, la confiance en soi dans une relation, les dynamiques d&rsquo;attachement, les questions qu&rsquo;on se pose sur ce qu&rsquo;on ressent sans vraiment savoir comment les formuler.</p>
-              <p>Ce qui caract&eacute;rise son &eacute;criture, c&rsquo;est le refus de la condescendance. Elle n&rsquo;&eacute;crit pas pour &laquo;&nbsp;aider&nbsp;&raquo; les femmes depuis une position de surplomb. Elle &eacute;crit <em>avec</em> elles, depuis un endroit de reconnaissance mutuelle.</p>
+              <p><%= p.lucieP1 %></p>
+              <p><%- p.lucieP2 %></p>
               <blockquote class="border-l-4 border-primary pl-4 py-2 text-muted-foreground italic">
-                &laquo;&nbsp;Je sais ce que c&rsquo;est que de douter de ce qu&rsquo;on ressent dans une relation. Je sais ce que c&rsquo;est que de chercher des r&eacute;ponses sur internet &agrave; une heure du matin parce qu&rsquo;on n&rsquo;ose pas en parler autour de soi.&nbsp;&raquo;
+                <%= p.lucieQuote %>
               </blockquote>
-              <p>Lucie s&rsquo;est passionn&eacute;e pour les m&eacute;canismes &eacute;motionnels du couple en observant d&rsquo;abord &mdash; les relations autour d&rsquo;elle, les siennes, les sch&eacute;mas qui revenaient d&rsquo;une histoire &agrave; l&rsquo;autre chez des personnes tr&egrave;s diff&eacute;rentes. Elle a ensuite structur&eacute; cette curiosit&eacute; en lisant sur la psychologie de l&rsquo;attachement, les dynamiques relationnelles, la communication &eacute;motionnelle.</p>
+              <p><%= p.lucieP3 %></p>
               <div class="rounded-xl bg-primary/5 border border-primary/10 p-4">
-                <p class="text-sm font-semibold text-primary mb-1">Son terrain de pr&eacute;dilection</p>
-                <p class="text-sm text-foreground">Les &eacute;motions complexes qu&rsquo;on a du mal &agrave; d&eacute;m&ecirc;ler seule. La diff&eacute;rence entre la jalousie et l&rsquo;ins&eacute;curit&eacute;. Ce que le silence d&rsquo;un partenaire dit vraiment. Pourquoi on reste parfois dans des relations qui ne nous correspondent plus.</p>
+                <p class="text-sm font-semibold text-primary mb-1"><%= p.lucieSpecLabel %></p>
+                <p class="text-sm text-foreground"><%= p.lucieSpecText %></p>
               </div>
             </div>
           </div>
@@ -135,17 +354,17 @@
         <div class="rounded-2xl border border-border bg-card overflow-hidden">
           <div class="md:flex md:flex-row-reverse">
             <div class="md:w-1/3 p-8 md:p-10 flex flex-col items-center justify-center bg-gradient-to-bl from-secondary/15 to-primary/10">
-              <img src="/authors/mathieu-courtin.webp" alt="Mathieu Courtin, co-fondateur de Quiz Couple" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-background shadow-lg mb-4" width="160" height="160" loading="lazy">
+              <img src="/authors/mathieu-courtin.webp" alt="<%= p.mathieuAlt %>" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-background shadow-lg mb-4" width="160" height="160" loading="lazy">
               <h3 class="text-2xl font-bold text-foreground mb-1">Mathieu Courtin</h3>
-              <p class="text-sm text-secondary font-medium">Co-fondateur &middot; Contenus masculins</p>
+              <p class="text-sm text-secondary font-medium"><%= p.mathieuRole %></p>
             </div>
             <div class="md:w-2/3 p-8 md:p-10 space-y-4 text-foreground leading-relaxed">
-              <p>Mathieu est co-fondateur de Quiz Couple et responsable des contenus masculins du site. Son angle&nbsp;: d&eacute;crypter ce qui se passe du c&ocirc;t&eacute; des hommes dans une relation &mdash; ce qu&rsquo;ils ressentent, ce qu&rsquo;ils expriment mal, ce qu&rsquo;ils ne comprennent pas toujours chez eux-m&ecirc;mes.</p>
-              <p>C&rsquo;est un sujet qu&rsquo;il a mis du temps &agrave; trouver. Pas parce qu&rsquo;il en manquait d&rsquo;int&eacute;r&ecirc;t, mais parce que les espaces pour en parler s&eacute;rieusement &mdash; sans tomber dans le coaching viriliste d&rsquo;un c&ocirc;t&eacute; ou le discours moralisateur de l&rsquo;autre &mdash; sont rares. <strong>Il a voulu cr&eacute;er cet espace.</strong></p>
-              <p>Mathieu s&rsquo;est int&eacute;ress&eacute; &agrave; la psychologie masculine dans les relations apr&egrave;s avoir pass&eacute; des ann&eacute;es &agrave; observer &mdash; et &agrave; vivre &mdash; le d&eacute;calage entre ce que les hommes disent vouloir en amour et ce qu&rsquo;ils font r&eacute;ellement. Ce d&eacute;calage, il ne l&rsquo;aborde pas comme une critique. Il l&rsquo;aborde comme un myst&egrave;re &agrave; &eacute;lucider, avec curiosit&eacute; et sans tabou.</p>
+              <p><%= p.mathieuP1 %></p>
+              <p><%- p.mathieuP2 %></p>
+              <p><%= p.mathieuP3 %></p>
               <div class="rounded-xl bg-secondary/5 border border-secondary/10 p-4">
-                <p class="text-sm font-semibold text-secondary mb-1">Ce qu&rsquo;il sait faire mieux que personne sur le site</p>
-                <p class="text-sm text-foreground">Mettre des mots sur des choses que les hommes ressentent sans les formuler. La peur de l&rsquo;engagement qui n&rsquo;est pas toujours ce qu&rsquo;elle semble &ecirc;tre. La difficult&eacute; &agrave; exprimer un besoin &eacute;motionnel sans avoir l&rsquo;impression de perdre quelque chose. Le moment o&ugrave; une relation commence &agrave; peser sans qu&rsquo;on sache exactement pourquoi.</p>
+                <p class="text-sm font-semibold text-secondary mb-1"><%= p.mathieuSpecLabel %></p>
+                <p class="text-sm text-foreground"><%= p.mathieuSpecText %></p>
               </div>
             </div>
           </div>
@@ -155,13 +374,13 @@
   </div>
 </section>
 
-<!-- ═══════ COMMENT ON TRAVAILLE ═══════ -->
+<!-- ═══════ HOW WE WORK ═══════ -->
 <section class="py-16 md:py-24">
   <div class="container mx-auto px-4">
     <div class="max-w-4xl mx-auto">
       <div class="flex items-center gap-3 mb-8">
         <div class="w-12 h-1 rounded-full bg-primary"></div>
-        <h2 class="text-3xl md:text-4xl font-bold text-foreground">Comment on travaille</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-foreground"><%= p.workTitle %></h2>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6 mb-10">
@@ -169,29 +388,29 @@
           <div class="w-12 h-12 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3 class="font-semibold text-foreground mb-2">Deux regards</h3>
-          <p class="text-sm text-muted-foreground">Les articles qui regardent une situation depuis les deux c&ocirc;t&eacute;s sont souvent le fruit de vraies discussions entre nous avant d&rsquo;&ecirc;tre &eacute;crits.</p>
+          <h3 class="font-semibold text-foreground mb-2"><%= p.workCard1Title %></h3>
+          <p class="text-sm text-muted-foreground"><%= p.workCard1Text %></p>
         </div>
 
         <div class="rounded-2xl border border-border bg-card p-6 text-center">
           <div class="w-12 h-12 mx-auto rounded-full bg-secondary/10 flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <h3 class="font-semibold text-foreground mb-2">Du temps</h3>
-          <p class="text-sm text-muted-foreground">Un sujet comme l&rsquo;attachement anxieux ou les dynamiques de pouvoir dans un couple &mdash; &ccedil;a demande du temps pour comprendre et trouver l&rsquo;angle juste.</p>
+          <h3 class="font-semibold text-foreground mb-2"><%= p.workCard2Title %></h3>
+          <p class="text-sm text-muted-foreground"><%= p.workCard2Text %></p>
         </div>
 
         <div class="rounded-2xl border border-border bg-card p-6 text-center">
           <div class="w-12 h-12 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
           </div>
-          <h3 class="font-semibold text-foreground mb-2">Exigence mutuelle</h3>
-          <p class="text-sm text-muted-foreground">On se relit, on se challenge. Si un texte sonne faux ou reste trop dans la th&eacute;orie, l&rsquo;autre le ram&egrave;ne &agrave; terre. Ce n&rsquo;est pas toujours confortable, mais c&rsquo;est ce qui fait la qualit&eacute;.</p>
+          <h3 class="font-semibold text-foreground mb-2"><%= p.workCard3Title %></h3>
+          <p class="text-sm text-muted-foreground"><%= p.workCard3Text %></p>
         </div>
       </div>
 
       <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-8 text-center">
-        <p class="text-lg text-foreground leading-relaxed"><strong>On pr&eacute;f&egrave;re publier moins souvent et publier bien.</strong></p>
+        <p class="text-lg text-foreground leading-relaxed"><%- p.workHighlight %></p>
       </div>
     </div>
   </div>
@@ -204,9 +423,7 @@
       <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
         <svg class="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
       </div>
-      <p class="text-lg md:text-xl text-foreground leading-relaxed">
-        Si tu es sur Quiz Couple, c&rsquo;est que tu t&rsquo;int&eacute;resses aux relations amoureuses &mdash; les tiennes, celles des autres, ou juste la m&eacute;canique g&eacute;n&eacute;rale de tout &ccedil;a. On est content que tu sois l&agrave;. Et si quelque chose qu&rsquo;on a &eacute;crit t&rsquo;a aid&eacute; &agrave; mettre des mots sur quelque chose, ou &agrave; voir une situation diff&eacute;remment, <strong>c&rsquo;est exactement pour &ccedil;a qu&rsquo;on fait ce travail.</strong>
-      </p>
+      <p class="text-lg md:text-xl text-foreground leading-relaxed"><%- p.conclusion %></p>
     </div>
   </div>
 </section>
