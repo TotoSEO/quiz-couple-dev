@@ -356,6 +356,18 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-03-03',
   },
+  {
+    internalSlug: 'red-flags-homme',
+    category: 'vie-de-couple',
+    slugs: {
+      fr: 'red-flags-homme',
+      en: 'red-flags-in-a-man',
+      es: 'red-flags-en-un-hombre',
+      de: 'red-flags-bei-einem-mann',
+      it: 'red-flag-in-un-uomo',
+    },
+    publishedAt: '2026-03-05',
+  },
 ];
 
 // Author data
