@@ -209,12 +209,33 @@
             render();
           });
         },
-        function() {
-          state.geolocating = false;
-          showLocationError(tr('form.geolocDenied', 'Geolocalisation refusee'));
-          render();
+        function(err) {
+          // On mobile Safari, high accuracy often fails — retry with low accuracy
+          if (err && err.code !== 1) {
+            navigator.geolocation.getCurrentPosition(
+              function(pos) {
+                state.lat = pos.coords.latitude;
+                state.lng = pos.coords.longitude;
+                state.geolocating = false;
+                reverseGeocode(state.lat, state.lng, function(addr) {
+                  state.address = addr;
+                  render();
+                });
+              },
+              function() {
+                state.geolocating = false;
+                showLocationError(tr('form.geolocDenied', 'Geolocalisation refusee'));
+                render();
+              },
+              { enableHighAccuracy: false, timeout: 15000, maximumAge: 300000 }
+            );
+          } else {
+            state.geolocating = false;
+            showLocationError(tr('form.geolocDenied', 'Geolocalisation refusee'));
+            render();
+          }
         },
-        { enableHighAccuracy: true, timeout: 10000 }
+        { enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 }
       );
     });
     geoWrap.appendChild(geoBtn);
