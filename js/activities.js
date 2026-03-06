@@ -128,7 +128,7 @@
     switch (state.step) {
       case 'location': renderLocation(wrap); break;
       case 'filters': renderFilters(wrap); break;
-      case 'loading': renderLoading(wrap); doSearch(); break;
+      case 'loading': renderLoading(wrap); if (!state.searching) doSearch(); break;
       case 'results': renderResults(wrap); break;
     }
 
@@ -695,6 +695,7 @@
 
   // ── API Call ────────────────────────────────────────────────
   function doSearch() {
+    state.searching = true;
     var radiusKm = RADIUS_STEPS[state.radiusIndex];
     var payload = {
       lat: state.lat,
@@ -728,6 +729,7 @@
       return res.json();
     })
     .then(function(data) {
+      state.searching = false;
       if (data.error) {
         state.error = data.error;
         state.step = 'results';
@@ -737,12 +739,21 @@
       }
       state.results = data.activities || [];
       state.meta = data.meta || null;
+      // If Overpass failed silently (0 results + overpassFailed flag), show error
+      if (state.results.length === 0 && data.meta && data.meta.overpassFailed) {
+        state.error = tr('results.overpassError', 'Le service de recherche est temporairement surchargé. Veuillez réessayer dans quelques instants.');
+        state.step = 'results';
+        render();
+        scrollToTool();
+        return;
+      }
       state.step = 'results';
       render();
       // Scroll back to tool section so user sees results
       scrollToTool();
     })
     .catch(function(err) {
+      state.searching = false;
       state.error = err.message || tr('results.error', 'Une erreur est survenue');
       state.step = 'results';
       render();
@@ -771,6 +782,7 @@
       retryBtn.addEventListener('click', function() {
         state.step = 'loading';
         state.error = null;
+        state.searching = false;
         render();
       });
       errWrap.appendChild(retryBtn);
@@ -804,6 +816,14 @@
     modBtn.addEventListener('click', function() { state.step = 'filters'; render(); });
     headerRow.appendChild(modBtn);
     parent.appendChild(headerRow);
+
+    // Reduced radius notice (Overpass had to shrink search area)
+    if (state.meta && state.meta.radiusReduced && state.meta.actualRadius) {
+      var reducedKm = Math.round(state.meta.actualRadius / 1000);
+      var reducedNotice = el('div', 'text-sm p-3 rounded-lg bg-amber-500/10 text-amber-700 mb-4');
+      reducedNotice.textContent = tr('results.radiusReduced', 'Le rayon a été réduit à {radius} km pour obtenir des résultats (serveur surchargé).', { radius: reducedKm });
+      parent.appendChild(reducedNotice);
+    }
 
     // Expanded radius notice with explanation
     if (state.meta && state.meta.expanded) {
