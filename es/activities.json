@@ -120,6 +120,7 @@
     "hiddenGem": "Joya oculta",
     "loading": "Buscando actividades cerca de ti...",
     "error": "Ocurrió un error. Por favor, inténtalo de nuevo.",
+    "overpassError": "El servicio de búsqueda está temporalmente sobrecargado. Por favor, inténtalo de nuevo en unos instantes.",
     "retry": "Reintentar",
     "seeOnMap": "Ver en el mapa"
   },

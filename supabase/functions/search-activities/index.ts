@@ -780,9 +780,10 @@ function sanitizeCategories(val: unknown): string[] | undefined {
 const OVERPASS_URLS = [
   "https://overpass-api.de/api/interpreter",
   "https://overpass.kumi.systems/api/interpreter",
+  "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
 ];
 
-async function fetchOverpass(query: string): Promise<{ elements: any[] }> {
+async function fetchOverpass(query: string): Promise<{ elements: any[]; failed?: boolean }> {
   const body = `data=${encodeURIComponent(query)}`;
 
   for (const url of OVERPASS_URLS) {
@@ -801,7 +802,7 @@ async function fetchOverpass(query: string): Promise<{ elements: any[] }> {
     }
   }
 
-  return { elements: [] };
+  return { elements: [], failed: true };
 }
 
 // ---------------------------------------------------------------------------
@@ -939,6 +940,7 @@ serve(async (req) => {
     );
 
     const overpassData = await fetchOverpass(overpassQuery);
+    const overpassFailed = !!overpassData.failed;
 
     // ---- Process Overpass results ----
     const elements: any[] = overpassData.elements || [];
@@ -1074,6 +1076,7 @@ serve(async (req) => {
         total: diversified.length,
         expanded,
         suggestedRadius,
+        overpassFailed,
       },
     };
 

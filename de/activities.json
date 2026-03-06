@@ -120,6 +120,7 @@
     "hiddenGem": "Geheimtipp",
     "loading": "Aktivitäten in Ihrer Nähe werden gesucht...",
     "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "overpassError": "Der Suchdienst ist vorübergehend überlastet. Bitte versuchen Sie es in wenigen Augenblicken erneut.",
     "retry": "Erneut versuchen",
     "seeOnMap": "Auf der Karte ansehen"
   },

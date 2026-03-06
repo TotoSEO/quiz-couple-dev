@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
@@ -198,6 +199,15 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/kontakt/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/contatto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/contact/"/>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quienes-somos/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/qui-sommes-nous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quienes-somos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/chi-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/qui-sommes-nous/"/>
   </url>
   <url>
     <loc>https://quiz-couple.com/es/blog/fases-de-la-ruptura-en-el-hombre/</loc>

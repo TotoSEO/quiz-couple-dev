@@ -120,6 +120,7 @@
     "hiddenGem": "Hidden gem",
     "loading": "Searching for activities near you...",
     "error": "An error occurred. Please try again.",
+    "overpassError": "The search service is temporarily overloaded. Please try again in a few moments.",
     "retry": "Retry",
     "seeOnMap": "View on map"
   },
