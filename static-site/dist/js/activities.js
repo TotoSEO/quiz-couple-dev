@@ -817,6 +817,14 @@
     headerRow.appendChild(modBtn);
     parent.appendChild(headerRow);
 
+    // Reduced radius notice (Overpass had to shrink search area)
+    if (state.meta && state.meta.radiusReduced && state.meta.actualRadius) {
+      var reducedKm = Math.round(state.meta.actualRadius / 1000);
+      var reducedNotice = el('div', 'text-sm p-3 rounded-lg bg-amber-500/10 text-amber-700 mb-4');
+      reducedNotice.textContent = tr('results.radiusReduced', 'Le rayon a été réduit à {radius} km pour obtenir des résultats (serveur surchargé).', { radius: reducedKm });
+      parent.appendChild(reducedNotice);
+    }
+
     // Expanded radius notice with explanation
     if (state.meta && state.meta.expanded) {
       var noticeMsg = getExpandedMessage();

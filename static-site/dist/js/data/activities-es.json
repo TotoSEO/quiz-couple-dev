@@ -121,6 +121,7 @@
     "loading": "Buscando actividades cerca de ti...",
     "error": "Ocurrió un error. Por favor, inténtalo de nuevo.",
     "overpassError": "El servicio de búsqueda está temporalmente sobrecargado. Por favor, inténtalo de nuevo en unos instantes.",
+    "radiusReduced": "El radio se redujo a {radius} km para obtener resultados (servidor sobrecargado).",
     "retry": "Reintentar",
     "seeOnMap": "Ver en el mapa"
   },
