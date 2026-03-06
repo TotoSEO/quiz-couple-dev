@@ -1,0 +1,204 @@
+<%
+const i18n = {
+  fr: {
+    title: 'Plan du site',
+    subtitle: 'Retrouvez toutes les pages de Quiz Couple',
+    pages: 'Pages',
+    tests: 'Tests de couple',
+    quizzes: 'Quiz de couple',
+    tools: 'Outils',
+    articles: 'Articles du blog',
+    info: 'Informations',
+  },
+  en: {
+    title: 'Sitemap',
+    subtitle: 'Find all Quiz Couple pages',
+    pages: 'Pages',
+    tests: 'Couple Tests',
+    quizzes: 'Couple Quizzes',
+    tools: 'Tools',
+    articles: 'Blog Articles',
+    info: 'Information',
+  },
+  es: {
+    title: 'Mapa del sitio',
+    subtitle: 'Encuentra todas las páginas de Quiz Couple',
+    pages: 'Páginas',
+    tests: 'Tests de pareja',
+    quizzes: 'Quiz de pareja',
+    tools: 'Herramientas',
+    articles: 'Artículos del blog',
+    info: 'Información',
+  },
+  de: {
+    title: 'Seitenverzeichnis',
+    subtitle: 'Alle Seiten von Quiz Couple auf einen Blick',
+    pages: 'Seiten',
+    tests: 'Paar-Tests',
+    quizzes: 'Paar-Quiz',
+    tools: 'Werkzeuge',
+    articles: 'Blog-Artikel',
+    info: 'Informationen',
+  },
+  it: {
+    title: 'Mappa del sito',
+    subtitle: 'Trova tutte le pagine di Quiz Couple',
+    pages: 'Pagine',
+    tests: 'Test di coppia',
+    quizzes: 'Quiz di coppia',
+    tools: 'Strumenti',
+    articles: 'Articoli del blog',
+    info: 'Informazioni',
+  },
+};
+const s = i18n[lang] || i18n.fr;
+
+const testLinks = [
+  { routeKey: 'testCouple', labelKey: 'nav.testCouple' },
+  { routeKey: 'testCommonPoints', labelKey: 'nav.testCommonPoints' },
+  { routeKey: 'testDistance', labelKey: 'nav.testDistance' },
+  { routeKey: 'testToxic', labelKey: 'nav.testToxic' },
+  { routeKey: 'testCoupleSain', labelKey: 'nav.testCoupleSain' },
+  { routeKey: 'testMariage', labelKey: 'nav.testMariage' },
+  { routeKey: 'testDivorce', labelKey: 'nav.testDivorce' },
+  { routeKey: 'testParentalite', labelKey: 'nav.testParentalite' },
+  { routeKey: 'testEmmenager', labelKey: 'nav.testEmmenager' },
+  { routeKey: 'testAstroPrenoms', labelKey: 'nav.testAstroPrenoms' },
+];
+const quizLinks = [
+  { routeKey: 'quizAmoureux', labelKey: 'nav.quizAmoureux' },
+  { routeKey: 'quizCoquin', labelKey: 'nav.quizCoquin' },
+  { routeKey: 'quizMarrant', labelKey: 'nav.quizMarrant' },
+  { routeKey: 'quizKnowledge', labelKey: 'nav.quizKnowledge' },
+  { routeKey: 'quizMost', labelKey: 'nav.quizMost' },
+  { routeKey: 'quizAdo', labelKey: 'nav.quizAdo' },
+];
+const toolLinks = [
+  { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple' },
+  { routeKey: 'problemResolver', labelKey: 'nav.problemResolver' },
+  { routeKey: 'activities', labelKey: 'nav.activities' },
+];
+const infoLinks = [
+  { routeKey: 'about', labelKey: 'footer.about' },
+  { routeKey: 'blog', label: 'Blog' },
+  { routeKey: 'contact', labelKey: 'nav.contact' },
+  { routeKey: 'legalMentions', labelKey: 'footer.legalMentions' },
+  { routeKey: 'privacy', labelKey: 'footer.privacy' },
+];
+%>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground"><%= s.title %></h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%= s.subtitle %></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PAGES ═══════ -->
+<section class="py-12 md:py-20">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
+        <div class="w-10 h-1 rounded-full bg-primary"></div>
+        <%= s.pages %>
+      </h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Tests -->
+        <div class="rounded-2xl border border-border bg-card p-6">
+          <h3 class="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+            <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-sm">
+              <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </span>
+            <%= s.tests %>
+          </h3>
+          <ul class="space-y-2">
+            <% for (const link of testLinks) { %>
+            <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
+            <% } %>
+          </ul>
+        </div>
+
+        <!-- Quiz -->
+        <div class="rounded-2xl border border-border bg-card p-6">
+          <h3 class="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-sm">
+              <svg class="w-4 h-4 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </span>
+            <%= s.quizzes %>
+          </h3>
+          <ul class="space-y-2">
+            <% for (const link of quizLinks) { %>
+            <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
+            <% } %>
+          </ul>
+        </div>
+
+        <!-- Tools + Info -->
+        <div class="space-y-6">
+          <div class="rounded-2xl border border-border bg-card p-6">
+            <h3 class="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+              <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-sm">
+                <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+              </span>
+              <%= s.tools %>
+            </h3>
+            <ul class="space-y-2">
+              <% for (const link of toolLinks) { %>
+              <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-border bg-card p-6">
+            <h3 class="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+              <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-sm">
+                <svg class="w-4 h-4 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </span>
+              <%= s.info %>
+            </h3>
+            <ul class="space-y-2">
+              <% for (const link of infoLinks) { %>
+              <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= link.label || t('common:' + link.labelKey, link.labelKey) %></a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ ARTICLES ═══════ -->
+<% if (blogArticlesList && blogArticlesList.length > 0) { %>
+<section class="py-12 md:py-20 bg-muted/30">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
+        <div class="w-10 h-1 rounded-full bg-secondary"></div>
+        <%= s.articles %> <span class="text-base font-normal text-muted-foreground">(<%= blogArticlesList.length %>)</span>
+      </h2>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <% for (const article of blogArticlesList) { %>
+        <a href="<%= article.url %>" class="group rounded-xl border border-border bg-card p-4 no-underline transition-all hover:border-primary/30 hover:shadow-sm flex gap-4 items-start">
+          <% if (article.featuredImage) { %>
+          <img src="<%= article.featuredImage %>" alt="<%= article.featuredImageAlt %>" class="w-16 h-16 rounded-lg object-cover shrink-0" width="64" height="64" loading="lazy">
+          <% } %>
+          <div class="min-w-0">
+            <% if (article.categoryLabel) { %>
+            <span class="text-xs text-primary font-medium"><%= article.categoryLabel %></span>
+            <% } %>
+            <h3 class="text-sm font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2"><%= article.title %></h3>
+            <time class="text-xs text-muted-foreground" datetime="<%= article.publishedAt %>"><%= new Date(article.publishedAt).toLocaleDateString(lang === 'fr' ? 'fr-FR' : lang === 'de' ? 'de-DE' : lang === 'es' ? 'es-ES' : lang === 'it' ? 'it-IT' : 'en-GB', { year: 'numeric', month: 'long', day: 'numeric' }) %></time>
+          </div>
+        </a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
