@@ -177,6 +177,16 @@ async function generatePage(routeKey, lang) {
     };
     title = aboutMeta[lang]?.title || aboutMeta.fr.title;
     description = aboutMeta[lang]?.description || aboutMeta.fr.description;
+  } else if (routeKey === 'sitemap') {
+    const sitemapMeta = {
+      fr: { title: 'Plan du site | Quiz Couple', description: 'Plan du site Quiz Couple — retrouvez toutes les pages, tests, quiz et articles du blog.' },
+      en: { title: 'Sitemap | Quiz Couple', description: 'Quiz Couple sitemap — find all pages, tests, quizzes and blog articles.' },
+      es: { title: 'Mapa del sitio | Quiz Couple', description: 'Mapa del sitio Quiz Couple — encuentra todas las páginas, tests, quiz y artículos del blog.' },
+      de: { title: 'Seitenverzeichnis | Quiz Couple', description: 'Quiz Couple Seitenverzeichnis — finde alle Seiten, Tests, Quiz und Blog-Artikel.' },
+      it: { title: 'Mappa del sito | Quiz Couple', description: 'Mappa del sito Quiz Couple — trova tutte le pagine, test, quiz e articoli del blog.' },
+    };
+    title = sitemapMeta[lang]?.title || sitemapMeta.fr.title;
+    description = sitemapMeta[lang]?.description || sitemapMeta.fr.description;
   } else if (routeKey === 'admin') {
     title = 'Administration - Quiz Couple';
     description = 'Panel d\'administration Quiz Couple';
@@ -264,7 +274,7 @@ async function generatePage(routeKey, lang) {
 
   // For blog listing and home page, load article summaries
   let blogArticlesList = [];
-  if (routeKey === 'blog' || routeKey === 'home') {
+  if (routeKey === 'blog' || routeKey === 'home' || routeKey === 'sitemap') {
     for (const articleMeta of BLOG_ARTICLES) {
       const localizedSlug = articleMeta.slugs[lang] || articleMeta.internalSlug;
       const tsPath = path.resolve(__dirname, '../../data/blog', lang, `${articleMeta.internalSlug}.ts`);
@@ -411,7 +421,7 @@ function generateSitemaps() {
 
   // Static routes
   for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
-    if (['admin', 'legalMentions', 'privacy'].includes(key)) continue;
+    if (['admin', 'legalMentions', 'privacy', 'sitemap'].includes(key)) continue;
     const urlsByLang = {};
     for (const lang of LANGUAGES) {
       urlsByLang[lang] = url(lang, slugs[lang]);
@@ -431,6 +441,7 @@ function generateSitemaps() {
   // Generate one sitemap per language
   for (const lang of LANGUAGES) {
     let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+    xml += `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n`;
     xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
     xml += `        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
 
@@ -450,6 +461,7 @@ function generateSitemaps() {
 
   // Sitemap index
   let index = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  index += `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n`;
   index += `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
   for (const lang of LANGUAGES) {
     index += `  <sitemap>\n    <loc>${B}/sitemap-${lang}.xml</loc>\n  </sitemap>\n`;

@@ -42,6 +42,7 @@ export const ROUTE_SLUGS = {
   activities: { fr: 'activites-autours-de-moi', en: 'couple-activities-near-me', es: 'actividades-en-pareja-cerca', de: 'paar-aktivitaeten-in-der-naehe', it: 'attivita-di-coppia-vicino' },
   contact: { fr: 'contact', en: 'contact', es: 'contacto', de: 'kontakt', it: 'contatto' },
   about: { fr: 'qui-sommes-nous', en: 'about-us', es: 'quienes-somos', de: 'ueber-uns', it: 'chi-siamo' },
+  sitemap: { fr: 'plan-du-site', en: 'sitemap', es: 'mapa-del-sitio', de: 'seitenverzeichnis', it: 'mappa-del-sito' },
 };
 
 // Map route keys to their page template and translation namespaces
@@ -72,6 +73,7 @@ export const ROUTE_CONFIG = {
   activities: { template: 'activities', namespaces: ['activities', 'common'] },
   contact: { template: 'contact', namespaces: ['contact', 'common'] },
   about: { template: 'about', namespaces: ['common'] },
+  sitemap: { template: 'sitemap', namespaces: ['common'] },
 };
 
 // Supabase config
