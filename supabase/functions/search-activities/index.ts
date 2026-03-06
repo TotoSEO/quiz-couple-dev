@@ -520,7 +520,12 @@ function priceClass(range: [number, number]): string {
   return "premium";
 }
 
-/** Build Overpass QL query from selected activity types */
+/**
+ * Build Overpass QL query from selected activity types.
+ * Groups tags by OSM key into regex patterns for efficiency:
+ *   nwr["amenity"~"^(restaurant|cafe|fast_food)$"] instead of 3 separate statements.
+ * This reduces statement count by ~7x and avoids Overpass timeouts on large radii.
+ */
 function buildOverpassQuery(
   lat: number,
   lng: number,
@@ -529,7 +534,8 @@ function buildOverpassQuery(
 ): string {
   const types = activityTypes?.length ? activityTypes : Object.keys(OSM_TAG_MAP);
 
-  const statements: string[] = [];
+  // Group all tag values by their OSM key (e.g. "amenity" → ["restaurant","cafe",...])
+  const keyGroups: Record<string, Set<string>> = {};
 
   for (const type of types) {
     const tags = OSM_TAG_MAP[type];
@@ -537,35 +543,49 @@ function buildOverpassQuery(
 
     for (const tagStr of tags) {
       const [key, value] = tagStr.split("=");
-      // Use nwr (node/way/relation) for efficiency — 1 statement instead of 3
-      statements.push(
-        `nwr["${key}"="${value}"](around:${radius},${lat},${lng});`
-      );
+      if (!keyGroups[key]) keyGroups[key] = new Set();
+      keyGroups[key].add(value);
+    }
+  }
+
+  const around = `around:${radius},${lat},${lng}`;
+  const statements: string[] = [];
+
+  // Emit one regex statement per OSM key
+  for (const [key, values] of Object.entries(keyGroups)) {
+    const valArr = Array.from(values);
+    if (valArr.length === 1) {
+      statements.push(`nwr["${key}"="${valArr[0]}"](${around});`);
+    } else {
+      statements.push(`nwr["${key}"~"^(${valArr.join("|")})$"](${around});`);
     }
   }
 
   // Broad sport=* regex query: catches ALL sport types in one statement
   if (types.includes("sport")) {
     statements.push(
-      `nwr["sport"~"^(${SPORT_REGEX})$",i](around:${radius},${lat},${lng});`
+      `nwr["sport"~"^(${SPORT_REGEX})$",i](${around});`
     );
   }
 
   // Broad historic=* for culture: catch any named historic feature
   if (types.includes("culture")) {
     statements.push(
-      `nwr["historic"]["name"](around:${radius},${lat},${lng});`
+      `nwr["historic"]["name"](${around});`
     );
   }
 
-  // Broad craft=* for ateliers
+  // Broad craft=* for ateliers (only if not already covered by keyGroups)
   if (types.includes("ateliers")) {
     statements.push(
-      `nwr["craft"]["name"](around:${radius},${lat},${lng});`
+      `nwr["craft"]["name"](${around});`
     );
   }
 
-  return `[out:json][timeout:30];\n(\n${statements.join("\n")}\n);\nout center body qt 800;`;
+  // Adapt timeout to query complexity: more statements or larger radius → more time
+  const timeout = Math.min(60, Math.max(25, statements.length * 3 + Math.ceil(radius / 5000) * 5));
+
+  return `[out:json][timeout:${timeout}];\n(\n${statements.join("\n")}\n);\nout center body qt 800;`;
 }
 
 /** Check if a POI is a duplicate (same name + same category within 100m) */
@@ -780,18 +800,23 @@ function sanitizeCategories(val: unknown): string[] | undefined {
 const OVERPASS_URLS = [
   "https://overpass-api.de/api/interpreter",
   "https://overpass.kumi.systems/api/interpreter",
+  "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
 ];
 
-async function fetchOverpass(query: string): Promise<{ elements: any[] }> {
+async function fetchOverpass(query: string): Promise<{ elements: any[]; failed?: boolean }> {
   const body = `data=${encodeURIComponent(query)}`;
 
   for (const url of OVERPASS_URLS) {
     try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 45_000); // 45s hard timeout per server
       const res = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body,
+        signal: controller.signal,
       });
+      clearTimeout(timer);
       if (res.ok) {
         return await res.json();
       }
@@ -801,7 +826,7 @@ async function fetchOverpass(query: string): Promise<{ elements: any[] }> {
     }
   }
 
-  return { elements: [] };
+  return { elements: [], failed: true };
 }
 
 // ---------------------------------------------------------------------------
@@ -930,18 +955,35 @@ serve(async (req) => {
       }).catch(() => {/* ignore tracking errors */});
     }
 
-    // ---- Fetch Overpass data ----
-    const overpassQuery = buildOverpassQuery(
-      lat,
-      lng,
-      radius,
-      body.activityTypes
-    );
+    // ---- Fetch Overpass data (with progressive fallback) ----
+    let overpassData: { elements: any[]; failed?: boolean };
+    let actualRadius = radius;
 
-    const overpassData = await fetchOverpass(overpassQuery);
+    // Try full radius first, then halve on failure (max 2 retries)
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const overpassQuery = buildOverpassQuery(
+        lat,
+        lng,
+        actualRadius,
+        body.activityTypes
+      );
+
+      overpassData = await fetchOverpass(overpassQuery);
+
+      if (!overpassData.failed) break;
+
+      // Reduce radius by half for next attempt
+      if (attempt < 2) {
+        console.log(`Overpass failed at ${actualRadius}m, retrying at ${Math.round(actualRadius / 2)}m`);
+        actualRadius = Math.round(actualRadius / 2);
+      }
+    }
+
+    const overpassFailed = !!overpassData!.failed;
+    const radiusReduced = actualRadius < radius;
 
     // ---- Process Overpass results ----
-    const elements: any[] = overpassData.elements || [];
+    const elements: any[] = overpassData!.elements || [];
     const groupSize = getGroupSize(body.groupSize);
     const selectedCategories = body.activityTypes;
 
@@ -1074,6 +1116,9 @@ serve(async (req) => {
         total: diversified.length,
         expanded,
         suggestedRadius,
+        overpassFailed,
+        radiusReduced,
+        actualRadius: radiusReduced ? actualRadius : undefined,
       },
     };
 

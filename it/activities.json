@@ -120,6 +120,8 @@
     "hiddenGem": "Chicca nascosta",
     "loading": "Ricerca di attività vicino a te...",
     "error": "Si è verificato un errore. Riprova.",
+    "overpassError": "Il servizio di ricerca è temporaneamente sovraccarico. Riprova tra qualche istante.",
+    "radiusReduced": "Il raggio è stato ridotto a {radius} km per ottenere risultati (server sovraccarico).",
     "retry": "Riprova",
     "seeOnMap": "Vedi sulla mappa"
   },

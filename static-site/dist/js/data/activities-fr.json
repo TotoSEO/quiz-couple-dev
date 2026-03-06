@@ -121,6 +121,8 @@
     "hiddenGem": "Pépite cachée",
     "loading": "On cherche les activités autour de vous...",
     "error": "Une erreur est survenue. Veuillez réessayer.",
+    "overpassError": "Le service de recherche est temporairement surchargé. Veuillez réessayer dans quelques instants.",
+    "radiusReduced": "Le rayon a été réduit à {radius} km pour obtenir des résultats (serveur surchargé).",
     "retry": "Réessayer",
     "seeOnMap": "Voir sur la carte"
   },
