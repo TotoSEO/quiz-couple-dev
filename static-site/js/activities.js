@@ -40,7 +40,7 @@
     { id: 'ateliers',       tKey: 'ateliers',       emoji: '\uD83C\uDFA8',       color: '#eab308' }
   ];
 
-  var RADIUS_STEPS = [1, 3, 5, 10, 15, 20, 30, 50];
+  var RADIUS_STEPS = [1, 2, 3, 4, 5];
 
   // ── State ───────────────────────────────────────────────────
   var state = {
@@ -48,7 +48,7 @@
     lat: null,
     lng: null,
     address: '',
-    radiusIndex: 3, // 10km default
+    radiusIndex: 2, // 3km default
     activityTypes: [],
     intensity: 'indifferent',
     ambiance: [],

@@ -2,12 +2,12 @@
   "hero": {
     "badge": "Gratuito",
     "badgeGeo": "Geolocalizzato",
-    "title": "Attività vicino a me",
-    "subtitle": "Scopri cosa fare nelle vicinanze — stasera, questo weekend o adesso.",
+    "title": "Trova attività di coppia vicino a te!",
+    "subtitle": "Idee per uscite a due vicino a te — stasera, questo weekend o adesso.",
     "cta": "Avvia la ricerca"
   },
   "intro": {
-    "text": "Cerchi un'attività vicino a te stasera, questo weekend o proprio adesso? Sei nel posto giusto. <strong>Il nostro strumento analizza la tua posizione e ti propone attività adatte al tuo budget, alla composizione del tuo gruppo e ai tuoi interessi</strong>, tra migliaia di luoghi censiti vicino a te. Inserisci i tuoi criteri, lascia lavorare l'algoritmo e scegli."
+    "text": "Cerchi un'attività di coppia vicino a te stasera, questo weekend o proprio adesso? Sei nel posto giusto. <strong>Il nostro strumento analizza la tua posizione e ti propone attività di coppia adatte al tuo budget, all'atmosfera desiderata e ai tuoi interessi</strong>, tra migliaia di luoghi censiti vicino a te. Inserisci i tuoi criteri, lascia lavorare l'algoritmo e scegli la tua prossima uscita a due."
   },
   "form": {
     "panelTitle": "I tuoi criteri",
@@ -173,7 +173,7 @@
     "title": "Filtri pensati per la tua situazione",
     "subtitle": "Perché ciò che va bene il sabato sera in coppia non va bene la domenica in famiglia.",
     "f1Title": "Posizione e raggio",
-    "f1Text": "Geolocalizzazione automatica o inserimento manuale. Raggio da 1 a 50 km, o durata massima del tragitto. Mezzo di spostamento: a piedi, bicicletta, auto, mezzi pubblici.",
+    "f1Text": "Geolocalizzazione automatica o inserimento manuale. Raggio da 1 a 5 km. Mezzo di spostamento: a piedi, bicicletta, auto, mezzi pubblici.",
     "f2Title": "Composizione del gruppo",
     "f2Text": "Solo, in coppia, famiglia con bambini, amici, team building. Se hai bambini, indica la loro età — cambia davvero i suggerimenti proposti.",
     "f3Title": "Budget per persona",
