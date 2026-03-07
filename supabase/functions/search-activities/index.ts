@@ -84,13 +84,8 @@ const OSM_TAG_MAP: Record<string, string[]> = {
     "amenity=theatre",
     "amenity=cinema",
     "amenity=planetarium",
-    "amenity=community_centre",
-    "amenity=conference_centre",
-    "amenity=fountain",
-    "amenity=townhall",
     // Man-made landmarks
     "man_made=lighthouse",
-    "man_made=tower",
   ],
   nature: [
     // Leisure areas
@@ -169,7 +164,6 @@ const OSM_TAG_MAP: Record<string, string[]> = {
     "leisure=turkish_bath",
     "amenity=spa",
     "shop=massage",
-    "shop=beauty",
     "shop=perfumery",
     "shop=herbalist",
     "amenity=public_bath",
@@ -242,6 +236,301 @@ const SPORT_REGEX =
   "cricket|baseball|softball|" +
   "petanque|boules|" +
   "orienteering|triathlon";
+
+// ---------------------------------------------------------------------------
+// Blocked OSM tags — elements with ANY of these key=value pairs are excluded
+// These cover infrastructure, admin, education, healthcare, residential, etc.
+// ---------------------------------------------------------------------------
+
+const BLOCKED_TAGS: Record<string, Set<string>> = {
+  highway: new Set(["*"]),
+  railway: new Set(["*"]),
+  aeroway: new Set(["*"]),
+  public_transport: new Set(["*"]),
+  route: new Set(["*"]),
+  junction: new Set(["*"]),
+  traffic_calming: new Set(["*"]),
+  power: new Set(["*"]),
+  pipeline: new Set(["*"]),
+  amenity: new Set([
+    "parking", "parking_space", "parking_entrance", "bicycle_parking",
+    "bus_station", "fuel", "charging_station",
+    "car_wash", "car_repair", "car_rental",
+    "hospital", "clinic", "doctors", "dentist", "pharmacy", "nursing_home",
+    "veterinary",
+    "school", "college", "kindergarten", "university", "research_institute",
+    "recycling", "waste_basket", "waste_disposal", "waste_transfer_station",
+    "toilets", "bench", "shelter", "drinking_water", "watering_place",
+    "telephone", "post_box", "parcel_locker", "vending_machine",
+    "atm", "bank", "bureau_de_change", "post_office",
+    "courthouse", "townhall", "police", "fire_station", "prison",
+    "community_centre", "conference_centre", "fountain",
+    "grave_yard",
+  ]),
+  shop: new Set([
+    "car", "car_repair", "car_parts", "tyres",
+    "hardware", "furniture", "electronics", "houseware",
+    "supermarket", "convenience", "mall", "wholesale", "department_store",
+    "kiosk", "vacant", "storage_rental",
+    "doityourself", "trade", "agrarian",
+    "hairdresser", "beauty", "optician",
+    "funeral_directors", "insurance",
+  ]),
+  healthcare: new Set(["*"]),
+  landuse: new Set([
+    "industrial", "railway", "construction", "depot", "garages",
+    "residential", "commercial", "retail", "farmland", "farmyard",
+    "cemetery", "military",
+  ]),
+  building: new Set([
+    "house", "residential", "apartments", "detached", "terrace",
+    "semidetached_house", "warehouse", "industrial", "garage", "garages",
+    "service", "hut", "farm", "barn", "stable", "cowshed", "greenhouse",
+    "farm_auxiliary", "commercial", "retail", "school", "hospital",
+    "church", "chapel", "mosque", "synagogue",
+  ]),
+  man_made: new Set([
+    "works", "pipeline", "chimney", "water_tower", "wastewater_plant",
+    "monitoring_station", "storage_tank", "utility_pole",
+    "communications_tower", "crane", "embankment", "cutline",
+    "adit", "pipeline_marker", "silo",
+  ]),
+  military: new Set(["*"]),
+  office: new Set(["*"]),
+};
+
+// ---------------------------------------------------------------------------
+// Whitelist: an element MUST have at least one of these tag keys/values
+// to be considered a valid activity. This prevents random infrastructure
+// from slipping through.
+// ---------------------------------------------------------------------------
+
+const WHITELIST_KEYS = new Set([
+  "tourism", "leisure", "sport", "historic", "natural",
+  "waterway", "craft",
+]);
+
+// Specific amenity values that ARE valid activities
+const WHITELIST_AMENITY = new Set([
+  "restaurant", "cafe", "fast_food", "ice_cream", "marketplace",
+  "biergarten", "food_court", "bar", "pub", "nightclub", "casino",
+  "events_venue", "theatre", "cinema", "planetarium", "library",
+  "place_of_worship", "arts_centre", "cooking_school", "studio",
+  "boat_rental", "bicycle_rental", "public_bath",
+]);
+
+// Specific shop values that ARE valid activities
+const WHITELIST_SHOP = new Set([
+  "wine", "tea", "chocolate", "pastry", "bakery", "deli", "cheese",
+  "coffee", "organic", "confectionery", "beverages", "health_food",
+  "farm", "craft", "art", "fabric", "games",
+  "massage", "perfumery", "herbalist",
+]);
+
+// ---------------------------------------------------------------------------
+// Name-based blocklist — multilingual keywords to reject by name
+// Covers parking, infrastructure, admin, education, healthcare,
+// residential, commercial, technical facilities, cemeteries, telecom, etc.
+// ---------------------------------------------------------------------------
+
+const NAME_BLOCKLIST_PATTERNS: RegExp = new RegExp(
+  "(?:" + [
+    // FR
+    "parking", "stationnement", "garage automobile", "station.service",
+    "station.lavage", "lavage auto", "borne.recharge", "borne.électrique",
+    "borne.incendie", "boîte aux lettres", "distributeur automatique",
+    "cabine téléphonique",
+    "entrepôt", "hangar", "dépôt", "zone logistique", "zone industrielle",
+    "usine", "atelier industriel", "atelier mécanique", "atelier réparation",
+    "atelier maintenance", "centrale électrique", "transformateur",
+    "poste électrique", "station.pompage", "station.épuration",
+    "château.d.eau", "incinérateur", "décharge", "centre.recyclage",
+    "centre.tri", "carrière", "gravière", "silo", "raffinerie",
+    "pipeline", "terminal industriel",
+    "autoroute", "voie rapide", "bretelle", "échangeur", "rond.point",
+    "carrefour", "tunnel routier", "pont routier", "viaduc",
+    "passage.niveau", "voie ferrée", "quai ferroviaire", "triage",
+    "arrêt.bus", "station.bus", "station.tramway", "station.métro",
+    "gare routière", "gare ferroviaire", "dépôt ferroviaire",
+    "terminal ferry", "port commercial", "port industriel",
+    "aéroport", "aérodrome", "héliport", "piste aéroportuaire",
+    "tour.contrôle",
+    "mairie", "préfecture", "sous.préfecture", "tribunal",
+    "commissariat", "gendarmerie", "caserne.pompier",
+    "centre administratif", "centre fiscal", "centre.impôt",
+    "administration publique", "ambassade", "consulat", "ministère",
+    "service municipal",
+    "école", "école maternelle", "école primaire", "collège", "lycée",
+    "université", "campus universitaire", "résidence étudiante",
+    "internat", "centre.formation", "centre.apprentissage",
+    "amphithéâtre universitaire", "laboratoire universitaire",
+    "hôpital", "clinique", "cabinet médical", "cabinet dentaire",
+    "pharmacie", "laboratoire.analyse", "centre médical",
+    "centre.radiologie", "centre.vaccination", "maison.retraite",
+    "maison.repos", "établissement.santé", "centre.soins",
+    "cabinet.kinésithérapeute",
+    "immeuble résidentiel", "résidence privée", "maison individuelle",
+    "lotissement", "copropriété", "logement social", "résidence senior",
+    "supermarché", "hypermarché", "épicerie", "supérette",
+    "magasin.bricolage", "magasin.meuble", "magasin.électroménager",
+    "concession automobile", "station.essence", "banque",
+    "distributeur.billet", "assurance", "agence immobilière",
+    "bureau.poste", "relais.colis", "pressing", "coiffeur", "barbier",
+    "salon.beauté", "opticien",
+    "chantier", "terrain vague", "friche", "terrain agricole",
+    "champ agricole", "prairie agricole", "serre agricole",
+    "exploitation agricole", "ferme industrielle",
+    "local technique", "local poubelle", "local vélo", "cage.escalier",
+    "sortie.secours", "accès.service", "accès.technique",
+    "local maintenance", "local électrique", "sous.station",
+    "salle.machine", "salle.technique",
+    "toilette", "sanitaire public", "abri.bus", "abri.vélo",
+    "abri.technique", "kiosque technique", "guérite", "poste.sécurité",
+    "barrière.sécurité", "portail.technique",
+    "cimetière", "crématorium", "monument funéraire", "ossuaire",
+    "monument commémoratif", "mémorial militaire",
+    "antenne télécom", "antenne relais", "pylône", "tour.télécommunication",
+    "station météo", "radar",
+    "réservoir.eau", "bassin.rétention", "bassin.technique",
+    "bassin.irrigation", "barrage.technique", "canal technique",
+    "écluse.technique",
+    "plateforme logistique", "plateforme transport", "quai.chargement",
+    "quai logistique", "aire.livraison", "aire.manutention",
+    // EN
+    "car park", "underground parking", "private parking",
+    "bus depot", "train depot", "logistics depot", "industrial zone",
+    "factory", "power plant", "electric transformer", "pumping station",
+    "water treatment", "sewage", "incinerator", "landfill",
+    "recycling centre", "recycling center", "sorting centre", "quarry",
+    "refinery", "warehouse",
+    "motorway", "highway ramp", "interchange", "roundabout",
+    "road tunnel", "road bridge", "level crossing", "railway",
+    "bus stop", "bus station", "tram stop", "metro station",
+    "coach station", "ferry terminal", "commercial port",
+    "industrial port", "airport", "airfield", "heliport",
+    "control tower",
+    "town hall", "city hall", "prefecture", "courthouse",
+    "police station", "fire station", "barracks",
+    "tax office", "public administration", "embassy", "consulate",
+    "ministry",
+    "school", "primary school", "elementary school",
+    "middle school", "high school", "college", "university", "campus",
+    "student residence", "dormitory", "training centre", "training center",
+    "hospital", "medical clinic", "dental office", "dental clinic",
+    "pharmacy", "medical lab", "medical centre", "medical center",
+    "radiology", "vaccination centre", "nursing home",
+    "retirement home", "care home", "health facility",
+    "residential building", "private residence", "housing estate",
+    "social housing", "condominium",
+    "supermarket", "hypermarket", "grocery store", "convenience store",
+    "hardware store", "furniture store", "appliance store",
+    "car dealership", "gas station", "petrol station",
+    "insurance office", "real estate agency", "post office",
+    "parcel locker", "dry cleaner", "barber shop", "optician",
+    "construction site", "wasteland", "brownfield", "farmland",
+    "industrial farm",
+    "technical room", "utility room", "bin store", "stairwell",
+    "emergency exit", "service access",
+    "public toilet", "bus shelter",
+    "cemetery", "crematorium", "funeral", "ossuary",
+    "war memorial", "military memorial",
+    "telecom tower", "relay antenna", "pylon", "weather station",
+    "water reservoir", "retention basin", "technical basin",
+    "loading dock", "delivery area",
+    // ES
+    "aparcamiento", "estacionamiento", "garaje", "gasolinera",
+    "lavadero", "punto.recarga", "buzón",
+    "almacén", "nave industrial", "depósito", "zona industrial",
+    "fábrica", "taller mecánico", "taller.reparación",
+    "central eléctrica", "depuradora", "vertedero",
+    "centro.reciclaje", "cantera", "refinería",
+    "autopista", "rotonda", "túnel", "viaducto",
+    "paso.nivel", "vía férrea", "parada.autobús",
+    "estación.autobuses", "estación.tren", "estación.metro",
+    "aeropuerto", "aeródromo", "helipuerto",
+    "ayuntamiento", "prefectura", "juzgado", "comisaría",
+    "cuartel.bomberos", "administración pública",
+    "embajada", "consulado", "ministerio",
+    "escuela", "colegio", "instituto", "liceo", "universidad",
+    "residencia estudiantil", "centro.formación",
+    "hospital", "clínica", "consultorio médico", "consultorio dental",
+    "farmacia", "laboratorio", "centro médico",
+    "residencia.ancianos", "centro.salud",
+    "edificio residencial", "residencia privada", "urbanización",
+    "vivienda social",
+    "supermercado", "hipermercado", "tienda.bricolaje",
+    "tienda.muebles", "concesionario",
+    "banco", "oficina.correos", "peluquería", "barbería", "óptica",
+    "obra", "terreno baldío", "terreno agrícola", "granja industrial",
+    "local técnico", "cuarto.basura",
+    "aseo público", "marquesina",
+    "cementerio", "crematorio", "osario",
+    "antena.telecomunicaciones", "torre.telecomunicaciones",
+    "estación meteorológica",
+    "depósito.agua", "balsa.retención", "muelle.carga",
+    // DE
+    "parkplatz", "parkhaus", "tiefgarage", "tankstelle",
+    "waschanlage", "ladestation",
+    "lagerhalle", "lagerhaus", "industriegebiet", "fabrik",
+    "werkstatt", "kraftwerk", "umspannwerk", "kläranlage",
+    "müllverbrennungsanlage", "deponie", "recyclinghof",
+    "steinbruch", "raffinerie",
+    "autobahn", "kreisverkehr", "straßentunnel", "eisenbahn",
+    "bushaltestelle", "bahnhof", "u.bahn", "s.bahn",
+    "flughafen", "flugplatz", "hubschrauberlandeplatz",
+    "rathaus", "amtsgericht", "polizei", "feuerwehr",
+    "finanzamt", "verwaltung", "botschaft", "konsulat",
+    "ministerium",
+    "schule", "grundschule", "gymnasium", "realschule",
+    "hauptschule", "gesamtschule", "universität",
+    "studentenwohnheim", "ausbildungszentrum",
+    "krankenhaus", "klinik", "arztpraxis", "zahnarzt",
+    "apotheke", "medizinisches zentrum", "pflegeheim",
+    "altenheim", "seniorenheim",
+    "wohngebäude", "wohnanlage", "siedlung", "sozialwohnung",
+    "supermarkt", "baumarkt", "möbelhaus",
+    "autohaus", "versicherung", "immobilienbüro", "postamt",
+    "friseur", "frisör", "optiker",
+    "baustelle", "brachfläche", "ackerland", "industriefarm",
+    "technikraum", "müllraum",
+    "öffentliche toilette",
+    "friedhof", "krematorium", "beinhaus",
+    "sendemast", "funkmast", "strommast", "wetterstation",
+    "wasserspeicher", "rückhaltebecken", "laderampe",
+    // IT
+    "parcheggio", "distributore", "autolavaggio",
+    "stazione.ricarica", "cassetta.posta",
+    "magazzino", "capannone", "deposito", "zona industriale",
+    "fabbrica", "officina meccanica", "officina.riparazione",
+    "centrale elettrica", "depuratore", "discarica",
+    "centro.riciclaggio", "cava", "raffineria",
+    "autostrada", "rotatoria", "galleria stradale", "viadotto",
+    "passaggio.livello", "ferrovia", "fermata.autobus",
+    "stazione.autobus", "stazione.treno", "stazione.metro",
+    "aeroporto", "aviosuperficie", "eliporto",
+    "municipio", "prefettura", "tribunale", "commissariato",
+    "caserma.pompieri", "ambasciata", "consolato", "ministero",
+    "scuola", "scuola materna", "scuola elementare", "scuola media",
+    "liceo", "università", "residenza studentesca",
+    "centro.formazione",
+    "ospedale", "ambulatorio", "studio medico", "studio dentistico",
+    "farmacia", "centro medico", "casa.riposo", "casa.cura",
+    "edificio residenziale", "residenza privata", "lottizzazione",
+    "edilizia popolare",
+    "supermercato", "ipermercato", "negozio.ferramenta",
+    "negozio.mobili", "concessionaria",
+    "banca", "ufficio postale", "parrucchiere", "barbiere", "ottico",
+    "cantiere", "terreno.incolto", "terreno agricolo",
+    "fattoria industriale",
+    "locale tecnico", "locale.rifiuti",
+    "bagno pubblico", "pensilina",
+    "cimitero", "crematorio", "ossario",
+    "antenna.telecomunicazioni", "torre.telecomunicazioni",
+    "stazione meteo",
+    "serbatoio.acqua", "bacino.ritenzione", "banchina.carico",
+  ].join("|") + ")",
+  "i"
+);
 
 // ---------------------------------------------------------------------------
 // Group compatibility matrix  [activityKey][groupSize] → score 0–1
@@ -586,6 +875,53 @@ function buildOverpassQuery(
   const timeout = Math.min(60, Math.max(25, statements.length * 3 + Math.ceil(radius / 5000) * 5));
 
   return `[out:json][timeout:${timeout}];\n(\n${statements.join("\n")}\n);\nout center body qt 800;`;
+}
+
+/**
+ * Check if an OSM element should be blocked based on its tags.
+ * Uses three layers:
+ * 1. BLOCKED_TAGS — reject if any blocked key=value is present
+ * 2. WHITELIST — accept only if at least one whitelisted tag key is present
+ * 3. NAME_BLOCKLIST_PATTERNS — reject if the name matches a blocked keyword
+ */
+function isBlockedElement(tags: Record<string, string>): boolean {
+  // Layer 1: check blocked tags
+  for (const [key, blockedValues] of Object.entries(BLOCKED_TAGS)) {
+    if (tags[key]) {
+      if (blockedValues.has("*")) return true;
+      if (blockedValues.has(tags[key])) return true;
+    }
+  }
+
+  // Layer 2: whitelist check — element must have at least one valid activity tag
+  let hasWhitelistedTag = false;
+
+  for (const key of WHITELIST_KEYS) {
+    if (tags[key]) {
+      hasWhitelistedTag = true;
+      break;
+    }
+  }
+
+  if (!hasWhitelistedTag) {
+    // Check specific amenity values
+    if (tags["amenity"] && WHITELIST_AMENITY.has(tags["amenity"])) {
+      hasWhitelistedTag = true;
+    }
+    // Check specific shop values
+    if (tags["shop"] && WHITELIST_SHOP.has(tags["shop"])) {
+      hasWhitelistedTag = true;
+    }
+  }
+
+  if (!hasWhitelistedTag) return true;
+
+  // Layer 3: name blocklist (multilingual keywords)
+  if (tags.name && NAME_BLOCKLIST_PATTERNS.test(tags.name)) {
+    return true;
+  }
+
+  return false;
 }
 
 /** Check if a POI is a duplicate (same name + same category within 100m) */
@@ -1001,6 +1337,9 @@ serve(async (req) => {
 
       // Filter out unnamed POIs
       if (!tags.name) continue;
+
+      // Filter out blocked elements (infrastructure, schools, hospitals, etc.)
+      if (isBlockedElement(tags)) continue;
 
       // Get coordinates (ways/relations use center)
       const elLat: number = el.lat ?? el.center?.lat;
