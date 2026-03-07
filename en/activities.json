@@ -2,12 +2,12 @@
   "hero": {
     "badge": "Free",
     "badgeGeo": "Geolocated",
-    "title": "Activities near me",
-    "subtitle": "Find what to do nearby — tonight, this weekend, or right now.",
+    "title": "Find couple activities near you!",
+    "subtitle": "Date ideas close to you — tonight, this weekend, or right now.",
     "cta": "Start searching"
   },
   "intro": {
-    "text": "Looking for something to do near you tonight, this weekend, or right now? You're in the right place. <strong>Our tool analyses your location and suggests activities tailored to your budget, group composition and interests</strong>, from thousands of listed venues near you. Enter your criteria, let the algorithm work, and choose."
+    "text": "Looking for a couple activity near you tonight, this weekend, or right now? You're in the right place. <strong>Our tool analyses your location and suggests couple activities tailored to your budget, atmosphere and interests</strong>, from thousands of listed venues near you. Enter your criteria, let the algorithm work, and pick your next date."
   },
   "form": {
     "panelTitle": "Your criteria",
@@ -173,7 +173,7 @@
     "title": "Filters designed for your situation",
     "subtitle": "Because what works on a Saturday evening as a couple doesn't work on a Sunday with the family.",
     "f1Title": "Location & radius",
-    "f1Text": "Automatic geolocation or manual entry. Radius from 1 to 50 km, or maximum travel time. Travel mode: walking, cycling, driving, public transport.",
+    "f1Text": "Automatic geolocation or manual entry. Radius from 1 to 5 km. Travel mode: walking, cycling, driving, public transport.",
     "f2Title": "Group composition",
     "f2Text": "Solo, couple, family with children, friends, team building. If you have children, enter their age — it genuinely changes the suggestions.",
     "f3Title": "Budget per person",

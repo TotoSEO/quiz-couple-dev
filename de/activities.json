@@ -2,12 +2,12 @@
   "hero": {
     "badge": "Kostenlos",
     "badgeGeo": "Standortbasiert",
-    "title": "Aktivitäten in meiner Nähe",
-    "subtitle": "Finden Sie, was Sie unternehmen können — heute Abend, am Wochenende oder genau jetzt.",
+    "title": "Finden Sie Paar-Aktivitäten in Ihrer Nähe!",
+    "subtitle": "Date-Ideen in Ihrer Nähe — heute Abend, am Wochenende oder genau jetzt.",
     "cta": "Suche starten"
   },
   "intro": {
-    "text": "Sie suchen eine Aktivität in Ihrer Nähe heute Abend, am Wochenende oder genau jetzt? Dann sind Sie hier richtig. <strong>Unser Tool analysiert Ihren Standort und schlägt Ihnen Aktivitäten vor, die zu Ihrem Budget, Ihrer Gruppenzusammensetzung und Ihren Wünschen passen</strong> — aus Tausenden von gelisteten Orten in Ihrer Nähe. Geben Sie Ihre Kriterien ein, lassen Sie den Algorithmus arbeiten und wählen Sie aus."
+    "text": "Sie suchen eine Paar-Aktivität in Ihrer Nähe heute Abend, am Wochenende oder genau jetzt? Dann sind Sie hier richtig. <strong>Unser Tool analysiert Ihren Standort und schlägt Ihnen Paar-Aktivitäten vor, die zu Ihrem Budget, Ihrer gewünschten Atmosphäre und Ihren Wünschen passen</strong> — aus Tausenden von gelisteten Orten in Ihrer Nähe. Geben Sie Ihre Kriterien ein, lassen Sie den Algorithmus arbeiten und wählen Sie Ihr nächstes Date."
   },
   "form": {
     "panelTitle": "Ihre Kriterien",
@@ -173,7 +173,7 @@
     "title": "Filter, die auf Ihre Situation zugeschnitten sind",
     "subtitle": "Denn was am Samstagabend zu zweit passt, passt nicht am Sonntag mit der Familie.",
     "f1Title": "Standort & Radius",
-    "f1Text": "Automatische Geolokalisierung oder manuelle Eingabe. Radius von 1 bis 50 km oder maximale Fahrtdauer. Fortbewegungsart: zu Fuß, Fahrrad, Auto, ÖPNV.",
+    "f1Text": "Automatische Geolokalisierung oder manuelle Eingabe. Radius von 1 bis 5 km. Fortbewegungsart: zu Fuß, Fahrrad, Auto, ÖPNV.",
     "f2Title": "Gruppenzusammensetzung",
     "f2Text": "Allein, zu zweit, Familie mit Kindern, Freunde, Teambuilding. Wenn Sie Kinder haben, geben Sie deren Alter an — das verändert die Vorschläge wirklich.",
     "f3Title": "Budget pro Person",
