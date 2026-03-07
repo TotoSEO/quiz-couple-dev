@@ -372,6 +372,18 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-03-05',
   },
+  {
+    internalSlug: 'red-flags-femme',
+    category: 'vie-de-couple',
+    slugs: {
+      fr: 'red-flags-femme',
+      en: 'red-flags-in-a-woman',
+      es: 'red-flags-en-una-mujer',
+      de: 'red-flags-bei-einer-frau',
+      it: 'red-flag-in-una-donna',
+    },
+    publishedAt: '2026-03-07',
+  },
 ];
 
 // Author data

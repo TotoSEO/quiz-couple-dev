@@ -409,4 +409,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/red-flags-homme/"/>
     <lastmod>2026-03-05</lastmod>
   </url>
+  <url>
+    <loc>https://quiz-couple.com/es/blog/red-flags-en-una-mujer/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/red-flags-femme/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/red-flags-in-a-woman/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/red-flags-en-una-mujer/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/red-flags-bei-einer-frau/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/red-flag-in-una-donna/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/red-flags-femme/"/>
+    <lastmod>2026-03-07</lastmod>
+  </url>
 </urlset>
