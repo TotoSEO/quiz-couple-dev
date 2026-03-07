@@ -2,12 +2,12 @@
   "hero": {
     "badge": "Gratuit",
     "badgeGeo": "Géolocalisé",
-    "title": "Activités autour de moi",
-    "subtitle": "Trouvez quoi faire près de chez vous — ce soir, ce week-end, ou là maintenant.",
+    "title": "Trouvez des activités de couple autour de chez vous !",
+    "subtitle": "Des idées de sorties à deux près de chez vous — ce soir, ce week-end, ou là maintenant.",
     "cta": "Lancer la recherche"
   },
   "intro": {
-    "text": "Vous cherchez une activité autour de vous ce soir, ce week-end, ou là maintenant ? Vous êtes au bon endroit. <strong>Notre outil analyse votre position et vous propose des activités adaptées à votre budget, votre composition de groupe et vos envies</strong>, parmi des milliers de lieux référencés près de chez vous. Renseignez vos critères, laissez l'algorithme travailler, et choisissez."
+    "text": "Vous cherchez une activité en couple près de chez vous ce soir, ce week-end, ou là maintenant ? Vous êtes au bon endroit. <strong>Notre outil analyse votre position et vous propose des activités de couple adaptées à votre budget, votre ambiance et vos envies</strong>, parmi des milliers de lieux référencés autour de chez vous. Renseignez vos critères, laissez l'algorithme travailler, et choisissez votre prochaine sortie à deux."
   },
   "form": {
     "panelTitle": "Vos critères",
@@ -174,7 +174,7 @@
     "title": "Des filtres pensés pour votre situation",
     "subtitle": "Parce que ce qui convient un samedi soir en couple ne convient pas un dimanche en famille.",
     "f1Title": "Localisation & rayon",
-    "f1Text": "Géolocalisation automatique ou saisie manuelle. Rayon de 1 à 50 km, ou durée de trajet maximale. Mode de déplacement : à pied, vélo, voiture, transports.",
+    "f1Text": "Géolocalisation automatique ou saisie manuelle. Rayon de 1 à 5 km. Mode de déplacement : à pied, vélo, voiture, transports.",
     "f2Title": "Composition du groupe",
     "f2Text": "Solo, couple, famille avec enfants, amis, team building. Si vous avez des enfants, indiquez leur âge — ça change vraiment les suggestions proposées.",
     "f3Title": "Budget par personne",
