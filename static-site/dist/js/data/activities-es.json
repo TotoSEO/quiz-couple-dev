@@ -2,12 +2,12 @@
   "hero": {
     "badge": "Gratis",
     "badgeGeo": "Geolocalizado",
-    "title": "Actividades cerca de mí",
-    "subtitle": "Encuentra qué hacer cerca de ti — esta noche, este fin de semana o ahora mismo.",
+    "title": "¡Encuentra actividades en pareja cerca de ti!",
+    "subtitle": "Ideas para salir en pareja cerca de ti — esta noche, este fin de semana o ahora mismo.",
     "cta": "Iniciar búsqueda"
   },
   "intro": {
-    "text": "¿Buscas una actividad cerca de ti esta noche, este fin de semana o ahora mismo? Estás en el lugar indicado. <strong>Nuestra herramienta analiza tu ubicación y te propone actividades adaptadas a tu presupuesto, la composición de tu grupo y tus preferencias</strong>, entre miles de lugares referenciados cerca de ti. Introduce tus criterios, deja que el algoritmo trabaje y elige."
+    "text": "¿Buscas una actividad en pareja cerca de ti esta noche, este fin de semana o ahora mismo? Estás en el lugar indicado. <strong>Nuestra herramienta analiza tu ubicación y te propone actividades de pareja adaptadas a tu presupuesto, ambiente y preferencias</strong>, entre miles de lugares referenciados cerca de ti. Introduce tus criterios, deja que el algoritmo trabaje y elige tu próxima salida a dos."
   },
   "form": {
     "panelTitle": "Tus criterios",
@@ -173,7 +173,7 @@
     "title": "Filtros pensados para tu situación",
     "subtitle": "Porque lo que funciona un sábado por la noche en pareja no funciona un domingo en familia.",
     "f1Title": "Ubicación y radio",
-    "f1Text": "Geolocalización automática o introducción manual. Radio de 1 a 50 km, o duración máxima de trayecto. Modo de desplazamiento: a pie, bicicleta, coche, transporte público.",
+    "f1Text": "Geolocalización automática o introducción manual. Radio de 1 a 5 km. Modo de desplazamiento: a pie, bicicleta, coche, transporte público.",
     "f2Title": "Composición del grupo",
     "f2Text": "Solo, en pareja, familia con niños, amigos, team building. Si tienes niños, indica su edad — cambia realmente las sugerencias propuestas.",
     "f3Title": "Presupuesto por persona",
