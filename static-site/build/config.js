@@ -384,6 +384,18 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-03-07',
   },
+  {
+    internalSlug: 'copain-ne-fait-pas-effort',
+    category: 'vie-de-couple',
+    slugs: {
+      fr: 'copain-ne-fait-pas-effort',
+      en: 'boyfriend-doesnt-make-effort',
+      es: 'novio-no-hace-esfuerzo',
+      de: 'freund-gibt-sich-keine-muehe',
+      it: 'ragazzo-non-si-impegna',
+    },
+    publishedAt: '2026-03-08',
+  },
 ];
 
 // Author data
