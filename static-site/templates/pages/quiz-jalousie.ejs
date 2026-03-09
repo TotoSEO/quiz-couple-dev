@@ -105,36 +105,36 @@
 <!-- Test Selector + Quiz Engine -->
 <section class="py-12 md:py-16">
   <div class="container mx-auto px-4">
-    <!-- Tab Selector -->
-    <div class="max-w-2xl mx-auto mb-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="jalousie-tabs">
-        <button type="button" id="tab-jalousie1" class="jalousie-tab-btn btn btn-cta text-center py-4 px-6 rounded-xl font-semibold transition-all" aria-pressed="true" onclick="switchJalousieTest(1)">
-          <span class="text-lg block mb-1">&#128566;</span>
+    <div class="jalousie-encart max-w-3xl mx-auto">
+      <!-- Tab Selector -->
+      <div id="jalousie-tabs" class="jalousie-tabs">
+        <button type="button" id="tab-jalousie1" class="jalousie-tab active" aria-pressed="true" onclick="switchJalousieTest(1)">
+          <span class="jalousie-tab-icon">&#128566;</span>
           <span><%= labels.tab1 %></span>
         </button>
-        <button type="button" id="tab-jalousie2" class="jalousie-tab-btn btn btn-outline text-center py-4 px-6 rounded-xl font-semibold transition-all" aria-pressed="false" onclick="switchJalousieTest(2)">
-          <span class="text-lg block mb-1">&#128101;</span>
+        <button type="button" id="tab-jalousie2" class="jalousie-tab" aria-pressed="false" onclick="switchJalousieTest(2)">
+          <span class="jalousie-tab-icon">&#128101;</span>
           <span><%= labels.tab2 %></span>
         </button>
       </div>
-    </div>
 
-    <!-- Test 1 Container -->
-    <div id="jalousie-test-1" class="jalousie-test-container">
-      <div class="text-center mb-6">
-        <h2 class="text-2xl md:text-3xl font-bold mb-2"><%= labels.title1 %></h2>
-        <p class="text-muted-foreground"><%= labels.sub1 %></p>
+      <!-- Test 1 Container -->
+      <div id="jalousie-test-1" class="jalousie-test-container">
+        <div class="text-center mb-6">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2"><%= labels.title1 %></h2>
+          <p class="text-muted-foreground"><%= labels.sub1 %></p>
+        </div>
+        <div id="quiz-engine" data-quiz="jalousie1" data-lang="<%= lang %>"></div>
       </div>
-      <div id="quiz-engine" data-quiz="jalousie1" data-lang="<%= lang %>"></div>
-    </div>
 
-    <!-- Test 2 Container (hidden initially) -->
-    <div id="jalousie-test-2" class="jalousie-test-container hidden">
-      <div class="text-center mb-6">
-        <h2 class="text-2xl md:text-3xl font-bold mb-2"><%= labels.title2 %></h2>
-        <p class="text-muted-foreground"><%= labels.sub2 %></p>
+      <!-- Test 2 Container (hidden initially) -->
+      <div id="jalousie-test-2" class="jalousie-test-container hidden">
+        <div class="text-center mb-6">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2"><%= labels.title2 %></h2>
+          <p class="text-muted-foreground"><%= labels.sub2 %></p>
+        </div>
+        <div id="quiz-engine-2" data-quiz="jalousie2" data-lang="<%= lang %>"></div>
       </div>
-      <div id="quiz-engine-2" data-quiz="jalousie2" data-lang="<%= lang %>"></div>
     </div>
   </div>
 </section>
@@ -380,15 +380,15 @@
     if (testNum === 1) {
       test1.classList.remove('hidden');
       test2.classList.add('hidden');
-      tab1.className = tab1.className.replace('btn-outline', 'btn-cta');
-      tab2.className = tab2.className.replace('btn-cta', 'btn-outline');
+      tab1.classList.add('active');
+      tab2.classList.remove('active');
       tab1.setAttribute('aria-pressed', 'true');
       tab2.setAttribute('aria-pressed', 'false');
     } else {
       test1.classList.add('hidden');
       test2.classList.remove('hidden');
-      tab2.className = tab2.className.replace('btn-outline', 'btn-cta');
-      tab1.className = tab1.className.replace('btn-cta', 'btn-outline');
+      tab2.classList.add('active');
+      tab1.classList.remove('active');
       tab2.setAttribute('aria-pressed', 'true');
       tab1.setAttribute('aria-pressed', 'false');
       initJalousieQuiz(2);
