@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "Embarrassing Couple Quiz: How Far Do You Dare to Go?",
+    "description": "Kissing in public, ordering for your partner, calling them \"snuggle bear pumpkin\" in front of their colleagues... Every couple has their slightly embarrassing habits. The question is: how many do you have, and do you own them?",
+    "titleHighlight": "Embarrassing",
+    "badge": "Fun Quiz • Free • 5 min",
+    "subtitle": "This quiz is here to stir the pot. Fifteen real-life situations, four possible answers, a couple profile at the end. Answer honestly, it's way more fun that way."
+  },
+  "section1": {
+    "title": "What exactly is an \"embarrassing\" couple?",
+    "p1": "Embarrassment in a couple is subjective. For some people, two people cuddling on the subway is already too much. For others, ordering for your partner at a restaurant is cute. What everyone calls an \"embarrassing couple\" is actually a couple that steps outside their private zone and lets things spill into public spaces that would conventionally stay within the walls of their home.",
+    "p2": "It's not a judgement. It's an observation.",
+    "p3": "Very close-knit couples often fit this profile. Not because they lack tact, but because their bubble is so dense that it takes up a bit more space than expected. They've developed their codes, their rituals, their way of being together, and sometimes they export them. The people around see something that doesn't belong to them, and that's what creates the feeling of embarrassment."
+  },
+  "section2": {
+    "title": "Is it a big deal to be an embarrassing couple?",
+    "p1": "No. Not really. There are obviously limits: behaviours that genuinely make people uncomfortable in spaces where they can't leave, situations where the public display becomes a form of disrespect towards the context. A funeral is not a party with friends. A professional open-plan office is not a flat.",
+    "p2": "But in the vast majority of cases, an \"embarrassing\" couple is just a couple that likes being together, that doesn't overthink what people think, and that has a way of interacting that slightly exceeds social conventions. Most of the time, the people around find it endearing far more often than they'll admit.",
+    "p3": "What really becomes a problem is when one of the two is much more comfortable than the other with this public display. When one finds it natural and the other manages it by smiling without really feeling good about it. That asymmetry deserves a real conversation, not to put an end to the impulses, but to make sure both people are in the same place."
+  },
+  "section3": {
+    "title": "Why are some couples more demonstrative than others?",
+    "p1": "It's a combination of factors, and none of them are really deliberate. Family history plays a big role. People who grew up in families where affection is expressed physically and openly find it natural to reproduce that in their adult relationships. Those who had a more reserved upbringing often feel a real inner resistance to showing anything in public, even when they want to.",
+    "p2": "The length of the relationship also changes things. At the beginning, couples tend to be either very demonstrative (the \"we can't help it\" phase) or very discreet (we don't know where we stand yet). Over time, a kind of balance settles in. Couples who remain very demonstrative after several years have generally chosen this way of functioning consciously, even if it's not always said explicitly.",
+    "p3": "And then there's simply personality. Some people constitutionally don't care about other people's gaze. Not out of bravado, not out of exhibitionism, just because that particular antenna is less developed in them. They live their relationships with the same intensity in private and in public, without really making the distinction.",
+    "p4": ""
+  },
+  "section4": {
+    "title": "How to tell if your couple is in the \"fun embarrassing\" or \"problematic embarrassing\" zone?",
+    "p1": "The line is blurry, but it exists. A few useful markers. If the people around you are smiling (even while looking away), you're in the \"fun embarrassing\" zone. If the people around you are crossing the street or staring at their shoes with unusual intensity, you're approaching the line.",
+    "p2": "If you and your partner laugh about the same situations afterwards, that's a good sign. If one of you regularly has to \"manage\" the social fallout of what the other did, there's an imbalance worth looking at.",
+    "p3": "If your friends still invite you over, it means you haven't crossed the tolerance threshold. That's a concrete and underestimated indicator.",
+    "p4": "And if you took this quiz together and got very different scores, take five minutes to compare your answers question by question. The gaps are often more interesting than the final score."
+  },
+  "jsonLd": {
+    "faq1Q": "What is an embarrassing couple?",
+    "faq1A": "An embarrassing couple is a couple that lets behaviours usually reserved for the private sphere spill into public spaces: embarrassing pet names, prolonged cuddling, public arguments, etc. It's not a judgement, it's an observation about the gap between the couple's bubble and social conventions.",
+    "faq2Q": "Is it a big deal to be an embarrassing couple?",
+    "faq2A": "No, not really. In the vast majority of cases, an embarrassing couple is just a close-knit couple that doesn't overthink other people's gaze. The only thing to watch out for is the asymmetry: that both partners are at the same comfort level with this public display.",
+    "faq3Q": "Why are some couples more demonstrative than others?",
+    "faq3A": "It's a combination of family history (emotional upbringing), the length of the relationship (honeymoon phase vs established balance) and each person's personality. Some people are naturally less sensitive to other people's gaze."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "Peinliches Paar-Quiz: Wie weit traut ihr euch zu zweit?",
+    "description": "In der Öffentlichkeit knutschen, für den anderen bestellen, euren Partner \"Schnuckiputzi\" vor seinen Kollegen nennen... Jedes Paar hat so seine etwas peinlichen Sachen. Die Frage ist: Wie viele habt ihr, und steht ihr dazu?",
+    "titleHighlight": "Peinliches",
+    "badge": "Fun-Quiz • Kostenlos • 5 Min",
+    "subtitle": "Dieses Quiz ist dazu da, den Finger in die Wunde zu legen. Fünfzehn konkrete Situationen, vier mögliche Antworten, ein Paar-Profil am Ende. Antwortet ehrlich, das ist viel lustiger."
+  },
+  "section1": {
+    "title": "Was genau ist ein \"peinliches\" Paar?",
+    "p1": "Peinlichkeit in der Beziehung ist subjektiv. Für manche ist es schon zu viel, wenn sich zwei Leute in der U-Bahn umarmen. Für andere ist es süß, wenn man für den anderen im Restaurant bestellt. Was alle als \"peinliches Paar\" bezeichnen, ist in Wirklichkeit ein Paar, das seine private Zone verlässt und in den öffentlichen Raum Dinge überschwappen lässt, die konventionell gesehen zwischen den eigenen vier Wänden bleiben würden.",
+    "p2": "Das ist kein Urteil. Das ist eine Beobachtung.",
+    "p3": "Sehr fusionierte Paare haben oft dieses Profil. Nicht weil ihnen das Taktgefühl fehlt, sondern weil ihre Blase so dicht ist, dass sie etwas mehr Platz einnimmt als vorgesehen. Sie haben ihre Codes entwickelt, ihre Rituale, ihre Art zusammen zu sein, und manchmal exportieren sie die. Die Leute drumherum sehen etwas, das ihnen nicht gehört, und genau das erzeugt das Gefühl von Peinlichkeit."
+  },
+  "section2": {
+    "title": "Ist es schlimm, ein peinliches Paar zu sein?",
+    "p1": "Nein. Nicht wirklich. Es gibt natürlich Grenzen: Verhaltensweisen, die Leuten wirklich unangenehm sind an Orten, wo sie nicht weg können, Situationen, in denen das Zurschaustellen zu einer Form von Respektlosigkeit gegenüber dem Kontext wird. Eine Beerdigung ist keine Party unter Freunden. Ein Großraumbüro ist keine Wohnung.",
+    "p2": "Aber in den meisten Fällen ist ein \"peinliches\" Paar einfach ein Paar, das gerne zusammen ist, nicht groß drüber nachdenkt, was die Leute denken, und eine Art der Interaktion hat, die leicht über die Konventionen hinausgeht. Meistens finden die Leute drumherum das viel häufiger rührend, als sie es zugeben würden.",
+    "p3": "Was wirklich problematisch ist: wenn einer von beiden viel entspannter mit diesem Zurschaustellen umgeht als der andere. Wenn der eine es natürlich findet und der andere lächelnd mitmacht, ohne es wirklich gut zu finden. Diese Asymmetrie verdient ein echtes Gespräch, nicht um die Impulse abzuwürgen, sondern um sicherzustellen, dass beide am gleichen Punkt sind."
+  },
+  "section3": {
+    "title": "Warum sind manche Paare demonstrativer als andere?",
+    "p1": "Es ist eine Kombination aus Faktoren, und keiner davon ist wirklich gewollt. Die Familiengeschichte spielt eine große Rolle. Leute, die in Familien aufgewachsen sind, in denen Zuneigung körperlich und offen ausgedrückt wird, finden es natürlich, das in ihrer erwachsenen Beziehung zu reproduzieren. Diejenigen, die eine zurückhaltendere Erziehung hatten, spüren oft einen echten inneren Widerstand, irgendetwas in der Öffentlichkeit zu zeigen, selbst wenn sie Lust darauf haben.",
+    "p2": "Die Dauer der Beziehung verändert auch die Lage. Am Anfang neigen Paare dazu, entweder sehr demonstrativ zu sein (die Phase \"wir können uns nicht zurückhalten\") oder sehr diskret (man weiß noch nicht, wo man steht). Mit der Zeit stellt sich eine Art Gleichgewicht ein. Paare, die nach mehreren Jahren noch sehr demonstrativ sind, haben diese Funktionsweise in der Regel bewusst gewählt, auch wenn es nicht immer explizit gesagt wird.",
+    "p3": "Und dann gibt es einfach die Persönlichkeit. Manche Leute ist der Blick anderer einfach von Natur aus egal. Nicht aus Provokation, nicht aus Exhibitionismus, einfach weil diese Antenne bei ihnen weniger ausgeprägt ist. Sie leben ihre Beziehungen mit der gleichen Intensität privat und öffentlich, ohne wirklich einen Unterschied zu machen.",
+    "p4": ""
+  },
+  "section4": {
+    "title": "Wie erkennt man, ob euer Paar in der Zone \"peinlich lustig\" oder \"peinlich problematisch\" ist?",
+    "p1": "Die Grenze ist unscharf, aber sie existiert. Ein paar nützliche Anhaltspunkte. Wenn die Leute um euch herum lächeln (auch wenn sie wegschauen), seid ihr in der Zone \"peinlich lustig\". Wenn die Leute um euch herum die Straßenseite wechseln oder ihre Schuhe mit ungewöhnlicher Intensität betrachten, nähert ihr euch der Grenze.",
+    "p2": "Wenn euer Partner und ihr im Nachhinein über die gleichen Situationen lacht, ist das ein gutes Zeichen. Wenn einer von euch regelmäßig die sozialen Nachwirkungen dessen \"managen\" muss, was der andere getan hat, gibt es ein Ungleichgewicht, das man sich ansehen sollte.",
+    "p3": "Wenn eure Freunde euch immer noch einladen, heißt das, dass ihr die Toleranzschwelle nicht überschritten habt. Das ist ein konkreter und unterschätzter Indikator.",
+    "p4": "Und wenn ihr dieses Quiz zusammen gemacht habt und sehr unterschiedliche Ergebnisse hattet, nehmt euch fünf Minuten, um eure Antworten Frage für Frage zu vergleichen. Die Abweichungen sind oft interessanter als das Endergebnis."
+  },
+  "jsonLd": {
+    "faq1Q": "Was ist ein peinliches Paar?",
+    "faq1A": "Ein peinliches Paar ist ein Paar, das in den öffentlichen Raum Verhaltensweisen überschwappen lässt, die normalerweise der Privatsphäre vorbehalten sind: peinliche Spitznamen, ausgedehnte Umarmungen, Streit in der Öffentlichkeit, usw. Das ist kein Urteil, es ist eine Beobachtung über die Diskrepanz zwischen der Blase des Paares und den sozialen Konventionen.",
+    "faq2Q": "Ist es schlimm, ein peinliches Paar zu sein?",
+    "faq2A": "Nein, nicht wirklich. In den meisten Fällen ist ein peinliches Paar einfach ein fusioniertes Paar, das nicht groß auf die Blicke anderer achtet. Der einzige Punkt, auf den man achten sollte, ist die Asymmetrie: dass beide auf dem gleichen Komfort-Level mit dieser öffentlichen Demonstration sind.",
+    "faq3Q": "Warum sind manche Paare demonstrativer als andere?",
+    "faq3A": "Es ist eine Kombination aus Familiengeschichte (emotionale Erziehung), Dauer der Beziehung (fusionierte Phase vs. eingestelltes Gleichgewicht) und der Persönlichkeit jedes Einzelnen. Manche Menschen sind von Natur aus weniger empfindlich gegenüber den Blicken anderer."
+  }
+}

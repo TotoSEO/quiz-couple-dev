@@ -57,7 +57,10 @@
 
     // ── Jalousie quizzes (solo scoring, two sub-tests on same page) ──
     'jalousie1':      { prefix: 'jalousie1', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie1' },
-    'jalousie2':      { prefix: 'jalousie2', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie2' }
+    'jalousie2':      { prefix: 'jalousie2', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie2' },
+
+    // ── Genant quiz (solo scoring, embarrassing couple behaviors) ──
+    'genant':         { prefix: 'genant', engine: 'solo', totalQ: 15, pool: 15, quizType: 'genant' }
   };
 
   var config = QUIZ_CONFIG[quizType];

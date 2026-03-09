@@ -1,0 +1,143 @@
+<%
+  const quizKey = 'quizGenant';
+  const ns = 'quiz-genant';
+  const quizTitle = t('quizzes:quizGenant.title', 'Quiz Couple Gênant');
+  const quizDesc = t('quizzes:quizGenant.metaDescription', '');
+
+  // Build hasPart with actual quiz questions
+  const hasPart = [];
+  const optLetters = ['a', 'b', 'c', 'd'];
+  for (let qi = 1; qi <= 15; qi++) {
+    const qText = tgd('genant.q' + qi, '');
+    if (!qText || qText === 'genant.q' + qi) break;
+    const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
+    const ans = [];
+    for (let oi = 0; oi < optLetters.length; oi++) {
+      const oText = tgd.local('genant.q' + qi + optLetters[oi], '');
+      if (!oText || oText === 'genant.q' + qi + optLetters[oi]) break;
+      ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
+    }
+    if (ans.length > 0) qObj.suggestedAnswer = ans;
+    hasPart.push(qObj);
+  }
+
+  const quizSchema = {
+    "@context": "https://schema.org", "@type": "Quiz",
+    "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+    "datePublished": "2026-03-09", "isAccessibleForFree": true,
+    "learningResourceType": "Quiz", "interactivityType": "active",
+    "about": { "@type": "Thing", "name": "couple" },
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "totalQuestions", "value": 15 },
+      { "@type": "PropertyValue", "name": "audience", "value": "couples" }
+    ]
+  };
+  if (hasPart.length > 0) quizSchema.hasPart = hasPart;
+
+  const jsonLd = [
+    quizSchema,
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [1,2,3].map(function(i) {
+        return {
+          "@type": "Question", "name": t(ns + ':jsonLd.faq' + i + 'Q', ''),
+          "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':jsonLd.faq' + i + 'A', '') }
+        };
+      })
+    }
+  ];
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= quizTitle %></li>
+        </ol>
+      </nav>
+      <% const heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        <%= heroBadge %>
+      </span>
+      <% } %>
+      <%
+        const heroTitle = t(ns + ':hero.title', quizTitle);
+        const heroHighlight = t(ns + ':hero.titleHighlight', '');
+      %>
+      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%= t(ns + ':hero.description', '') %></p>
+      <% const heroSubtitle = t(ns + ':hero.subtitle', ''); if (heroSubtitle) { %>
+      <p class="mt-4 text-muted-foreground"><%= heroSubtitle %></p>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<!-- Quiz Engine -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div id="quiz-engine" data-quiz="genant" data-lang="<%= lang %>"></div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Article -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section1.p1', '') %></p>
+        <p><%- t(ns + ':section1.p2', '') %></p>
+        <p><%- t(ns + ':section1.p3', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section2.p1', '') %></p>
+        <p><%- t(ns + ':section2.p2', '') %></p>
+        <p><%- t(ns + ':section2.p3', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section3.p1', '') %></p>
+        <p><%- t(ns + ':section3.p2', '') %></p>
+        <p><%- t(ns + ':section3.p3', '') %></p>
+        <p><%- t(ns + ':section3.p4', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 border border-primary/20">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section4.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section4.p1', '') %></p>
+        <p><%- t(ns + ':section4.p2', '') %></p>
+        <p><%- t(ns + ':section4.p3', '') %></p>
+        <p><%- t(ns + ':section4.p4', '') %></p>
+      </div>
+    </section>
+
+  </div>
+</article>
+
+<script src="/js/quiz-engine-core.js" defer></script>
+<script src="/js/quiz-loader.js" defer></script>

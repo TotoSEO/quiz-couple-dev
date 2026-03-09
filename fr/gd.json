@@ -808,5 +808,116 @@
     "r5_t": "Jalousie intense",
     "r5_d": "Ce que vous avez décrit va au-delà de la jalousie ordinaire. Le niveau de surveillance, de contrôle ou de pression que vous vivez mérite d'être pris au sérieux. Vous n'êtes pas obligé(e) de normaliser ce que vous ressentez. Si vous vous sentez à l'étroit dans votre relation, si vous calculez vos faits et gestes pour éviter des réactions, c'est important d'en parler à quelqu'un de confiance.",
     "r5_a": ""
+  },
+  "genant": {
+    "q1": "Vous êtes en soirée chez des amis. Vous vous roulez des pelles.",
+    "q1a": "On n'a jamais vraiment calculé. Si on a envie, on le fait.",
+    "q1b": "Ça peut durer un moment si l'ambiance s'y prête. Les gens peuvent s'adapter.",
+    "q1c": "Un bisou rapide, oui. Mais on reste corrects.",
+    "q1d": "Non, jamais. On garde ça pour chez nous.",
+
+    "q2": "Vous êtes au restaurant. Votre partenaire hésite sur ce qu'il/elle va prendre.",
+    "q2a": "On commande pour lui/elle ET on négocie avec le serveur pour ajuster. Il/elle valide après.",
+    "q2b": "On commande pour lui/elle sans lui demander. On sait ce qu'il/elle aime.",
+    "q2c": "On lui suggère un ou deux plats si on connaît ses goûts.",
+    "q2d": "On attend qu'il/elle choisisse, on ne s'en mêle pas.",
+
+    "q3": "Vous êtes dans les transports en commun. Votre partenaire s'endort sur votre épaule.",
+    "q3a": "On le/la réveille en l'embrassant franchement parce qu'on ne peut pas s'en empêcher. Gêne des voisins non incluse.",
+    "q3b": "On lui fait des petits bisous dans le cou. Les autres passagers peuvent voir, tant mieux.",
+    "q3c": "On lui pose la main sur le genou ou on l'embrasse sur le front discrètement.",
+    "q3d": "On reste immobile pour ne pas le/la réveiller, sans en faire plus.",
+
+    "q4": "Vous avez un surnom pour votre partenaire. Quelqu'un d'extérieur l'entend pour la première fois.",
+    "q4a": "Le surnom est objectivement embarrassant (\"bibiche\", \"nounours patate\", \"bébé loulou\") et on s'en fout.",
+    "q4b": "Le surnom sort naturellement. Si les gens trouvent ça cute, tant mieux.",
+    "q4c": "Il peut arriver qu'on glisse le surnom, mais c'est un surnom assez neutre.",
+    "q4d": "On n'utilise jamais les surnoms en public. C'est entre nous.",
+
+    "q5": "Vous êtes chez les parents de votre partenaire. Vous vous disputez.",
+    "q5a": "On règle le truc là, maintenant. Les parents font partie de la famille, ils gèrent.",
+    "q5b": "On ne se crie pas dessus mais la tension est visible. Les parents ont compris.",
+    "q5c": "On se dit ce qu'on a à se dire à voix basse, dans un coin.",
+    "q5d": "On attend d'être seuls pour en parler. Sourires de façade.",
+
+    "q6": "Votre partenaire dit quelque chose de faux lors d'un dîner en groupe.",
+    "q6a": "On le/la reprend, on développe pourquoi il/elle a tort, et on finit par raconter l'anecdote liée. Les gens autour ont l'habitude.",
+    "q6b": "On le/la corrige directement. On essaie d'être sympa mais on corrige.",
+    "q6c": "On glisse une correction discrète pour lui éviter de continuer dans l'erreur.",
+    "q6d": "On laisse passer. On en parle après.",
+
+    "q7": "Vous êtes dans une file d'attente. Vous vous ennuyez.",
+    "q7a": "On joue à des jeux qui peuvent surprendre les voisins de file (chatouilles, défis, concours de grimaces niveau adulte).",
+    "q7b": "On se fait des câlins, on fait nos petits trucs. Les gens attendent aussi, ils comprennent.",
+    "q7c": "On parle, on commente les gens autour (à voix basse, quand même).",
+    "q7d": "On regarde chacun son téléphone.",
+
+    "q8": "Votre partenaire pète. En public.",
+    "q8a": "On commente, on note, on compare avec la dernière fois. Les gens autour peuvent entendre.",
+    "q8b": "On rit. Franchement, sans se cacher.",
+    "q8c": "On échange un regard complice mais on reste dignes.",
+    "q8d": "On fait comme si rien ne s'était passé. Ça n'existe pas.",
+
+    "q9": "Vous faites vos courses ensemble. Votre partenaire met un truc dans le caddie que vous n'aviez pas prévu.",
+    "q9a": "On débat longuement, on appelle l'autre à la rescousse (\"mais tu avais dit qu'on faisait attention\"), et au final on l'achète quand même.",
+    "q9b": "On repose l'article en expliquant pourquoi. Petit débat dans le rayon yaourts.",
+    "q9c": "On lève un sourcil, il/elle explique, OK.",
+    "q9d": "On ne dit rien, on peut bien se faire plaisir.",
+
+    "q10": "Vous êtes à une soirée. Votre partenaire danse. Vous, non.",
+    "q10a": "On crée un moment. Tango improvisé, danse de groupe recrutée autour, show pour personne en particulier.",
+    "q10b": "On finit par danser. Pas très bien. On s'en fout.",
+    "q10c": "On s'approche, on met les mains sur ses hanches, on accompagne sans vraiment danser.",
+    "q10d": "On regarde de loin avec tendresse. On ne bouge pas.",
+
+    "q11": "Votre partenaire a quelque chose entre les dents.",
+    "q11a": "On essaie de l'enlever nous-mêmes avant de lui dire. Les gens autour voient tout, c'est OK.",
+    "q11b": "On lui dit directement, devant les gens. C'est pour son bien.",
+    "q11c": "On lui fait signe avec les yeux et un petit geste de la main.",
+    "q11d": "On lui chuchote discrètement à l'oreille.",
+
+    "q12": "Vous prenez une photo en amoureux. Dans un lieu public.",
+    "q12a": "Séance photo complète avec re-prises, chorégraphie légère, éventuellement un inconnu recruté comme photographe.",
+    "q12b": "Séance photo complète. On fait poser, on recommence, on dirige.",
+    "q12c": "Quelques poses, on prend le temps de trouver le bon angle.",
+    "q12d": "Une photo rapide, naturelle, sans mise en scène.",
+
+    "q13": "Votre partenaire pleure devant un film, dans une salle de cinéma.",
+    "q13a": "On pleure aussi. On s'étreint. Les gens autour peuvent commenter, on ne les entend pas.",
+    "q13b": "On lui fait un câlin. Pas de problème avec les voisins de rangée.",
+    "q13c": "On lui prend la main, on se penche vers lui/elle.",
+    "q13d": "On lui tend un mouchoir discrètement.",
+
+    "q14": "Vous avez une dispute dans la rue.",
+    "q14a": "On règle le truc là, maintenant, à la vitesse où on en a besoin. Volume non garanti.",
+    "q14b": "On s'arrête, on dit ce qu'on a à dire. Les passants font un détour.",
+    "q14c": "On parle, mais à voix basse, en continuant à marcher.",
+    "q14d": "On arrête net. On reprend ça chez nous.",
+
+    "q15": "Vous êtes au bureau de votre partenaire (open space, collègues présents). Vous venez l'embrasser.",
+    "q15a": "On débarque comme à la maison. Bisou, installation, éventuellement une remarque sur la déco du bureau. Les collègues adorent ou font semblant.",
+    "q15b": "Bisou, câlin, petit moment. Les collègues savent qu'on est ensemble, c'est pas un secret.",
+    "q15c": "On s'approche, bisou rapide, bonjour aux collègues proches.",
+    "q15d": "On fait un signe de la main depuis l'entrée et on attend qu'il/elle vienne.",
+
+    "r1_t": "Les discrets",
+    "r1_d": "Votre couple existe, mais vous gardez ça pour vous. En public, vous êtes deux personnes qui se connaissent. En privé, c'est une autre histoire. Vous aimez avoir un espace bien à vous, inaccessible au regard des autres, et c'est une façon de fonctionner tout à fait valide. Certains couples se construisent en dehors du monde, et ça tient très bien. Le seul truc à surveiller : que cette discrétion ne devienne pas une distance. Qu'elle soit un choix actif et partagé, pas une habitude qui s'est installée sans qu'on s'en rende compte.",
+    "r1_a": "Faites le quiz \"Êtes-vous un couple sain ?\" pour aller un peu plus loin.",
+
+    "r2_t": "Les raisonnables",
+    "r2_d": "Vous vous aimez, ça se voit, vous ne traumatisez personne. Vous avez trouvé un équilibre que beaucoup cherchent. Assez proches pour que ça se sente, assez discrets pour que les gens autour ne se sentent pas agressés. Vous vous permettez des petits moments sans en faire une démonstration publique, et c'est probablement pour ça que les gens aiment être avec vous deux. Ce n'est pas le score le plus spectaculaire, mais c'est souvent le plus agréable à vivre, pour vous et pour tout le monde autour.",
+    "r2_a": "Testez vos points communs avec le quiz dédié.",
+
+    "r3_t": "Les décomplexés",
+    "r3_d": "Vous faites votre vie, les gens s'adaptent. Vous ne vous posez pas trop de questions sur ce que les autres pensent, et c'est globalement une bonne nouvelle. Vous avez vos trucs à vous, vos codes, vos moments, et vous ne les cachez pas vraiment. Les gens autour savent que vous êtes ensemble, dans tous les sens du terme. Attention quand même à garder un œil sur les situations où l'autre ne partage pas exactement votre niveau de décomplexion ce jour-là. La liberté de gêner, ça marche mieux quand les deux sont à fond.",
+    "r3_a": "Vous êtes plutôt du style à tout partager ? Découvrez le quiz \"Qui connaît le mieux son partenaire\".",
+
+    "r4_t": "Les sans-filtre",
+    "r4_d": "Votre couple est une expérience de vie pour tout le monde autour. Vous vivez votre relation à fond, et à fond ça veut dire en public aussi. Les gens autour de vous ont probablement des avis sur votre couple, des anecdotes à raconter, et peut-être quelques images difficiles à effacer. Vous, vous appelez ça aimer sans retenue. Difficile de vous donner tort. La seule vraie question : est-ce que votre partenaire est exactement au même niveau que vous ? Parce que \"sans-filtre à deux\" c'est une chose, \"sans-filtre tout seul pendant que l'autre gère\" c'en est une autre.",
+    "r4_a": "Faites le quiz ensemble pour comparer vos réponses.",
+
+    "r5_t": "Les légendaires",
+    "r5_d": "Les gens se souviennent des soirées où vous étiez là. Vous êtes un couple monument. Une expérience. Les gens qui vous côtoient ont soit une affection sincère pour vous deux, soit un stock d'histoires pour les dîners. Dans tous les cas, vous ne laissez personne indifférent. Il y a une forme de liberté là-dedans qui est assez rare. La gêne, vous l'avez tellement digérée qu'elle n'existe plus vraiment. C'est presque un niveau supérieur de tranquillité d'esprit, juste obtenu par un chemin inhabituel. Une question pour la route : est-ce que votre entourage vous le dit avec le sourire ou avec une légère crispation ? La réponse à ça, c'est votre seul vrai indicateur.",
+    "r5_a": "Vous êtes faits pour un quiz coquin ? Testez-vous."
   }
 }

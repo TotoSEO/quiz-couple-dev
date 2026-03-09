@@ -192,6 +192,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-jalousie-couple/"/>
   </url>
   <url>
+    <loc>https://quiz-couple.com/en/embarrassing-couple-quiz/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-couple-genant/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/embarrassing-couple-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-pareja-vergonzoso/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/peinliches-paar-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-coppia-imbarazzante/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-couple-genant/"/>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/en/couple-activities-near-me/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/activites-autours-de-moi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/couple-activities-near-me/"/>

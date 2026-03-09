@@ -930,5 +930,116 @@
     "r5_t": "Gelosia intensa",
     "r5_d": "Quello che hai descritto va oltre la gelosia ordinaria. Il livello di sorveglianza, controllo o pressione che vivi merita di essere preso sul serio. Non sei obbligato/a a normalizzare quello che senti.",
     "r5_a": ""
+  },
+  "genant": {
+    "q1": "Siete a una festa a casa di amici. Vi state limonando.",
+    "q1a": "Non ci abbiamo mai fatto troppo caso. Se ne abbiamo voglia, lo facciamo.",
+    "q1b": "Può durare un po' se l'atmosfera è giusta. La gente può adattarsi.",
+    "q1c": "Un bacio veloce, sì. Ma restiamo composti.",
+    "q1d": "No, mai. Quello lo teniamo per casa nostra.",
+
+    "q2": "Siete al ristorante. Il/la vostro/a partner esita su cosa prendere.",
+    "q2a": "Ordiniamo per lui/lei E tratttiamo col cameriere per aggiustare. Lui/lei approva dopo.",
+    "q2b": "Ordiniamo per lui/lei senza chiedergli/le. Sappiamo cosa gli/le piace.",
+    "q2c": "Gli/le suggeriamo un paio di piatti se conosciamo i suoi gusti.",
+    "q2d": "Aspettiamo che scelga lui/lei, non ci immischiamo.",
+
+    "q3": "Siete sui mezzi pubblici. Il/la vostro/a partner si addormenta sulla vostra spalla.",
+    "q3a": "Lo/la svegliamo baciandolo/a di brutto perché non riusciamo a trattenerci. Imbarazzo dei vicini non incluso.",
+    "q3b": "Gli/le diamo dei bacetti sul collo. Gli altri passeggeri possono vedere, tanto meglio.",
+    "q3c": "Gli/le mettiamo la mano sul ginocchio o lo/la baciamo sulla fronte con discrezione.",
+    "q3d": "Restiamo immobili per non svegliarlo/a, senza fare altro.",
+
+    "q4": "Avete un soprannome per il/la vostro/a partner. Qualcuno di esterno lo sente per la prima volta.",
+    "q4a": "Il soprannome è oggettivamente imbarazzante (\"ciccipucci\", \"orsacchiotto patatoso\", \"bebè cucciolino\") e ce ne freghiamo.",
+    "q4b": "Il soprannome esce naturalmente. Se la gente lo trova carino, tanto meglio.",
+    "q4c": "Può capitare che ci scappi il soprannome, ma è un soprannome abbastanza neutro.",
+    "q4d": "Non usiamo mai i soprannomi in pubblico. È una cosa tra noi.",
+
+    "q5": "Siete a casa dei genitori del/della vostro/a partner. Litigate.",
+    "q5a": "Sistemiamo la cosa lì, adesso. I genitori fanno parte della famiglia, gestiscono.",
+    "q5b": "Non ci urliamo dietro ma la tensione è visibile. I genitori hanno capito.",
+    "q5c": "Ci diciamo quello che dobbiamo dirci a voce bassa, in un angolo.",
+    "q5d": "Aspettiamo di essere soli per parlarne. Sorrisi di facciata.",
+
+    "q6": "Il/la vostro/a partner dice qualcosa di sbagliato durante una cena in gruppo.",
+    "q6a": "Lo/la correggiamo, spieghiamo perché ha torto, e finiamo per raccontare l'aneddoto collegato. La gente intorno è abituata.",
+    "q6b": "Lo/la correggiamo direttamente. Cerchiamo di essere gentili ma correggiamo.",
+    "q6c": "Facciamo scivolare una correzione discreta per evitare che continui nell'errore.",
+    "q6d": "Lasciamo correre. Ne parliamo dopo.",
+
+    "q7": "Siete in fila. Vi annoiate.",
+    "q7a": "Giochiamo a giochi che possono sorprendere i vicini di fila (solletico, sfide, gare di smorfie livello adulto).",
+    "q7b": "Ci facciamo le coccole, facciamo le nostre cosette. Anche la gente aspetta, capiscono.",
+    "q7c": "Parliamo, commentiamo la gente intorno (a voce bassa, almeno).",
+    "q7d": "Guardiamo ognuno il proprio telefono.",
+
+    "q8": "Il/la vostro/a partner scoreggia. In pubblico.",
+    "q8a": "Commentiamo, diamo i voti, confrontiamo con l'ultima volta. La gente intorno può sentire.",
+    "q8b": "Ridiamo. Di gusto, senza nasconderci.",
+    "q8c": "Ci scambiamo uno sguardo complice ma restiamo dignitosi.",
+    "q8d": "Facciamo come se niente fosse successo. Non esiste.",
+
+    "q9": "Fate la spesa insieme. Il/la vostro/a partner mette nel carrello qualcosa che non avevate previsto.",
+    "q9a": "Dibattiamo a lungo, chiamiamo l'altro in causa (\"ma avevi detto che stavamo attenti\"), e alla fine lo compriamo lo stesso.",
+    "q9b": "Rimettiamo l'articolo a posto spiegando perché. Piccolo dibattito nel reparto yogurt.",
+    "q9c": "Alziamo un sopracciglio, lui/lei spiega, OK.",
+    "q9d": "Non diciamo niente, ci si può pur concedere qualcosa.",
+
+    "q10": "Siete a una festa. Il/la vostro/a partner balla. Voi no.",
+    "q10a": "Creiamo un momento. Tango improvvisato, ballo di gruppo reclutato intorno, show per nessuno in particolare.",
+    "q10b": "Alla fine balliamo. Non benissimo. Ce ne freghiamo.",
+    "q10c": "Ci avviciniamo, mettiamo le mani sui suoi fianchi, accompagniamo senza ballare davvero.",
+    "q10d": "Guardiamo da lontano con tenerezza. Non ci muoviamo.",
+
+    "q11": "Il/la vostro/a partner ha qualcosa tra i denti.",
+    "q11a": "Cerchiamo di toglierlo noi stessi prima di dirglielo. La gente intorno vede tutto, va bene così.",
+    "q11b": "Glielo diciamo direttamente, davanti alla gente. È per il suo bene.",
+    "q11c": "Gli/le facciamo segno con gli occhi e un piccolo gesto della mano.",
+    "q11d": "Glielo sussurriamo discretamente all'orecchio.",
+
+    "q12": "Fate una foto da innamorati. In un luogo pubblico.",
+    "q12a": "Sessione foto completa con ri-scatti, coreografia leggera, eventualmente uno sconosciuto reclutato come fotografo.",
+    "q12b": "Sessione foto completa. Facciamo posare, ricominciamo, dirigiamo.",
+    "q12c": "Qualche posa, ci prendiamo il tempo di trovare l'angolazione giusta.",
+    "q12d": "Una foto veloce, naturale, senza messa in scena.",
+
+    "q13": "Il/la vostro/a partner piange davanti a un film, in una sala cinematografica.",
+    "q13a": "Piangiamo anche noi. Ci abbracciamo forte. La gente intorno può commentare, noi non li sentiamo.",
+    "q13b": "Gli/le facciamo una coccola. Nessun problema con i vicini di fila.",
+    "q13c": "Gli/le prendiamo la mano, ci sporgiamo verso di lui/lei.",
+    "q13d": "Gli/le passiamo un fazzoletto discretamente.",
+
+    "q14": "Avete una discussione in strada.",
+    "q14a": "Sistemiamo la cosa lì, adesso, alla velocità che ci serve. Volume non garantito.",
+    "q14b": "Ci fermiamo, diciamo quello che dobbiamo dire. I passanti fanno una deviazione.",
+    "q14c": "Parliamo, ma a voce bassa, continuando a camminare.",
+    "q14d": "Stop secco. Riprendiamo a casa.",
+
+    "q15": "Siete all'ufficio del/della vostro/a partner (open space, colleghi presenti). Andate a dargli/le un bacio.",
+    "q15a": "Sbarchiamo come a casa. Bacio, ci installiamo, eventualmente un commento sull'arredamento dell'ufficio. I colleghi adorano o fanno finta.",
+    "q15b": "Bacio, coccola, piccolo momento. I colleghi sanno che stiamo insieme, non è un segreto.",
+    "q15c": "Ci avviciniamo, bacio veloce, saluto ai colleghi vicini.",
+    "q15d": "Facciamo un cenno con la mano dall'ingresso e aspettiamo che venga lui/lei.",
+
+    "r1_t": "I discreti",
+    "r1_d": "La vostra coppia esiste, ma ve la tenete per voi. In pubblico, siete due persone che si conoscono. In privato, è tutta un'altra storia. Vi piace avere uno spazio tutto vostro, inaccessibile allo sguardo degli altri, ed è un modo di funzionare assolutamente valido. Certe coppie si costruiscono al di fuori del mondo, e regge benissimo. L'unica cosa da tenere d'occhio: che questa discrezione non diventi una distanza. Che sia una scelta attiva e condivisa, non un'abitudine che si è installata senza che ce ne rendessimo conto.",
+    "r1_a": "Fai il quiz \"Siete una coppia sana?\" per andare un po' più a fondo.",
+
+    "r2_t": "I ragionevoli",
+    "r2_d": "Vi amate, si vede, e non traumatizzate nessuno. Avete trovato un equilibrio che molti cercano. Abbastanza vicini perché si senta, abbastanza discreti perché la gente intorno non si senta aggredita. Vi concedete dei piccoli momenti senza farne una dimostrazione pubblica, e probabilmente è per questo che alla gente piace stare con voi due. Non è il punteggio più spettacolare, ma è spesso il più piacevole da vivere, per voi e per tutti intorno.",
+    "r2_a": "Testate i vostri punti in comune con il quiz dedicato.",
+
+    "r3_t": "I disinibiti",
+    "r3_d": "Voi vivete la vostra vita, la gente si adatta. Non vi fate troppe domande su quello che pensano gli altri, e globalmente è una buona notizia. Avete i vostri riti, i vostri codici, i vostri momenti, e non li nascondete davvero. La gente intorno sa che state insieme, in tutti i sensi del termine. Attenzione però a tenere d'occhio le situazioni in cui l'altro/a non condivide esattamente il vostro livello di disinibizione quel giorno. La libertà di imbarazzare funziona meglio quando tutti e due sono a mille.",
+    "r3_a": "Siete piuttosto del tipo che condivide tutto? Scoprite il quiz \"Chi conosce meglio il proprio partner\".",
+
+    "r4_t": "I senza-filtro",
+    "r4_d": "La vostra coppia è un'esperienza di vita per tutti quelli intorno. Vivete la vostra relazione a fondo, e a fondo vuol dire anche in pubblico. La gente intorno a voi ha probabilmente delle opinioni sulla vostra coppia, degli aneddoti da raccontare, e forse qualche immagine difficile da cancellare. Voi, la chiamate amare senza freni. Difficile darvi torto. L'unica vera domanda: il/la vostro/a partner è esattamente allo stesso livello vostro? Perché \"senza-filtro in due\" è una cosa, \"senza-filtro da soli mentre l'altro/a gestisce\" è un'altra.",
+    "r4_a": "Fate il quiz insieme per confrontare le vostre risposte.",
+
+    "r5_t": "I leggendari",
+    "r5_d": "La gente si ricorda delle serate in cui c'eravate voi. Siete una coppia monumento. Un'esperienza. La gente che vi frequenta ha o un affetto sincero per voi due, o una scorta di storie per le cene. In ogni caso, non lasciate nessuno indifferente. C'è una forma di libertà lì dentro che è abbastanza rara. L'imbarazzo, l'avete talmente digerito che non esiste più davvero. È quasi un livello superiore di tranquillità mentale, solo ottenuto per una strada insolita. Una domanda per la strada: il vostro entourage ve lo dice col sorriso o con una leggera contrazione? La risposta a questo è il vostro unico vero indicatore.",
+    "r5_a": "Siete fatti per un quiz piccante? Mettetevi alla prova."
   }
 }
