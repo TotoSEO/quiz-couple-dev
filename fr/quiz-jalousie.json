@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "title": "Test de jalousie dans le couple : suis-je jaloux(se) ?",
+    "description": "Deux tests pour mesurer la jalousie : la vôtre et celle de votre partenaire. Résultats nuancés.",
+    "titleHighlight": "jaloux(se)",
+    "badge": "Test Jalousie • Gratuit • 5 min"
+  },
+  "section1": {
+    "title": "Pourquoi ressent-on de la jalousie dans un couple ?",
+    "p1": "La jalousie n'apparaît pas par hasard. Elle s'installe là où il y a quelque chose à perdre, ce qui veut dire que dans beaucoup de cas, elle dit d'abord qu'on tient à l'autre. Sauf que ce n'est pas toute l'histoire.",
+    "p2": "La majorité des jalousies relationnelles puisent dans deux sources principales. La première, c'est la peur de l'abandon, souvent héritée d'expériences passées, une relation qui s'est mal terminée, une trahison ancienne, parfois quelque chose de bien plus ancien que la relation actuelle. La deuxième, c'est le manque de confiance en soi. Pas en l'autre, en soi. \"Pourquoi resterait-il/elle avec moi si quelqu'un de mieux se présente ?\" C'est cette question-là, pas toujours consciente, qui alimente beaucoup de réactions qu'on attribue à tort à l'autre.",
+    "p3": "Il y a aussi un troisième facteur qu'on mentionne moins : le style d'attachement. Les personnes avec un attachement dit anxieux, qui représentent environ un tiers de la population adulte selon les études en psychologie du développement, ont une sensibilité accrue aux signaux d'éloignement et interprètent plus facilement des situations neutres comme des menaces. Ce n'est pas un défaut, c'est un câblage émotionnel qui s'est mis en place tôt et qui peut se travailler."
+  },
+  "section2": {
+    "title": "La jalousie dans un couple, est-ce grave ?",
+    "p1": "La réponse courte : ça dépend de son intensité et de ce qu'elle produit comme comportements.",
+    "p2": "Une jalousie légère, celle qui se manifeste par un pincement quand quelqu'un drague votre partenaire ou par une légère inquiétude quand il/elle rentre tard sans prévenir, ne pose pas de problème en soi. Elle reste dans les limites de ce qui est humain et même, dans une certaine mesure, de ce qui maintient une attention réciproque dans la relation.",
+    "healthy": "<strong class=\"text-foreground\">La jalousie reste saine</strong> tant qu'elle n'engendre pas de comportements de contrôle ou de surveillance. C'est une émotion qui dit que vous tenez à votre partenaire.",
+    "toxic": "<strong class=\"text-foreground\">La jalousie devient problématique</strong> quand elle commence à dicter des comportements : vérifier le téléphone, surveiller les déplacements, interroger systématiquement, restreindre les relations sociales de l'autre.",
+    "quote": "On bascule alors d'une émotion normale vers un mode de contrôle qui abîme la confiance et l'espace vital de chacun. La personne jalouse souffre, la personne surveillée étouffe. Les deux en sortent perdants."
+  },
+  "section3": {
+    "title": "Comment interpréter votre score ?",
+    "intro": "Chaque test est noté sur 60 points (20 questions × 3 points max). Voici les paliers de résultat :",
+    "headerScore": "Score",
+    "headerLevel": "Niveau de jalousie",
+    "headerAnalysis": "Interprétation",
+    "row1Score": "0 à 12 points",
+    "row1Level": "Peu ou pas jaloux(se)",
+    "row1Analysis": "La jalousie ne semble pas être un sujet dans votre relation. Base solide de confiance.",
+    "row2Score": "13 à 36 points",
+    "row2Level": "Jalousie légère à modérée",
+    "row2Analysis": "Des réflexes de jalousie existent mais restent gérables. Un bon point de départ pour réfléchir.",
+    "row3Score": "37 à 60 points",
+    "row3Level": "Jalousie importante à intense",
+    "row3Analysis": "La jalousie prend une place significative. Il est important d'en parler et de chercher de l'aide."
+  },
+  "section4": {
+    "title": "Comment arrêter d'être jaloux(se) dans sa relation ?",
+    "p1": "La première étape, c'est de comprendre d'où vient la jalousie. Pas en théorie générale, mais dans votre cas précis. Est-ce qu'elle a toujours été là ou est-elle apparue à un moment particulier de cette relation ?",
+    "p2": "Voici ce qui aide concrètement :",
+    "pillar1Title": "Travailler sur la confiance en soi",
+    "pillar1Text": "La jalousie qui vient du sentiment de ne pas être \"à la hauteur\" ne se résout pas en surveillant l'autre davantage, elle se résout en reconstruisant l'estime de soi. Thérapie, activités valorisantes, cercle social en dehors du couple.",
+    "pillar2Title": "Nommer ce que vous ressentez",
+    "pillar2Text": "\"Quand tu rentres tard sans me prévenir, je me sens anxieux(se)\" dit quelque chose de différent de \"tu n'en as rien à faire de moi\". Le premier ouvre une conversation, le second en ferme une.",
+    "pillar3Title": "Distinguer fait et interprétation",
+    "pillar3Text": "Votre partenaire a ri au téléphone, c'est un fait. \"Il/elle riait avec quelqu'un qui lui plaît\" est une interprétation. <strong>L'espace entre les deux, c'est là que la jalousie vit.</strong> Réduire cet espace, c'est une compétence qui s'apprend."
+  },
+  "section5": {
+    "title": "Mon/ma partenaire est trop jaloux(se) : que faire ?",
+    "intro": "Vivre avec une personne très jalouse est épuisant. Parce que vous ne faites rien de mal, mais vous devez quand même en rendre compte.",
+    "pillar1Title": "Ne pas confondre amour et jalousie",
+    "pillar1Text": "La jalousie excessive n'est pas une preuve d'amour, c'est un signal que quelque chose ne va pas chez lui/elle, et que ça déborde sur vous. Cette distinction change la façon d'aborder la situation.",
+    "pillar2Title": "En parler directement",
+    "pillar2Text": "En dehors d'un contexte de conflit. \"Quand tu vérifies où je suis plusieurs fois par jour, je me sens surveillé(e) et ça me pèse\" est une entrée en matière qui permet à l'autre d'entendre quelque chose de concret.",
+    "pillar3Title": "Poser des limites claires",
+    "pillar3Text": "Si les comportements jaloux persistent, s'intensifient ou commencent à ressembler à du contrôle ou à de l'isolement, c'est une limite qui mérite d'être posée clairement. <strong>Aimer quelqu'un ne signifie pas accepter de vivre sous surveillance.</strong>",
+    "pillar4Title": "Reconnaître les signaux d'alarme",
+    "pillar4Text": "Vous modifiez régulièrement votre comportement, les comportements de contrôle s'étendent (localisation, messages, isolement), vous vous sentez coupable de choses que vous n'avez pas faites. Si vous reconnaissez plusieurs de ces signaux, ce n'est pas une situation à normaliser."
+  },
+  "section6": {
+    "title": "Quand la jalousie devient-elle un problème sérieux ?",
+    "p1": "Il y a des signaux qui indiquent que la jalousie a franchi un cap. Quand la peur de la réaction de l'autre dicte vos choix, ce n'est plus de la jalousie ordinaire.",
+    "p2": "Un travail avec un professionnel, thérapeute ou psychologue, n'est pas un aveu d'échec. C'est souvent le chemin le plus direct pour retrouver une relation sereine.",
+    "dontTitle": "Ce qui aggrave la jalousie",
+    "dont1Title": "Chercher des preuves",
+    "dont1Text": "Fouiller le téléphone, surveiller les réseaux sociaux, vérifier les localisations. Ces comportements alimentent l'anxiété au lieu de la calmer. Plus on cherche, plus on interprète, et le cercle vicieux s'installe.",
+    "dont2Title": "Accuser sans faits",
+    "dont2Text": "Transformer une interprétation en accusation crée de la méfiance des deux côtés et éloigne le partenaire au lieu de rassurer.",
+    "doTitle": "Ce qui aide à avancer",
+    "do1Title": "Communiquer sans accuser",
+    "do1Text": "Exprimer ses émotions (\"je me sens inquiet(e) quand...\") plutôt que des accusations (\"tu fais toujours...\"). Le premier invite au dialogue, le second provoque la défense.",
+    "do2Title": "Consulter un professionnel",
+    "do2Text": "Si la jalousie est profondément ancrée, si elle revient malgré vos efforts, si elle a déjà abîmé des relations précédentes. C'est souvent le chemin le plus efficace.",
+    "do3Title": "Travailler sur soi",
+    "do3Text": "Renforcer l'estime de soi, développer des activités personnelles, maintenir un cercle social en dehors du couple. La sécurité intérieure est le meilleur antidote à la jalousie."
+  },
+  "section7": {
+    "title": "Ce qu'il faut retenir",
+    "p1": "La jalousie dans une relation, c'est rarement noir ou blanc. Il y a celle qui rassure parce qu'elle dit qu'on tient à l'autre, et puis il y a celle qui étouffe, qui surveille, qui finit par tout abîmer.",
+    "p2": "Ces deux tests sont un point de départ pour réfléchir, seul ou à deux. Les résultats ne sont pas des diagnostics.",
+    "p3": "Si vous sentez que la jalousie, la vôtre ou celle de votre partenaire, prend trop de place, c'est une information précieuse. N'hésitez pas à en parler."
+  },
+  "jsonLd": {
+    "faq1Q": "Comment savoir si je suis jaloux(se) dans mon couple ?",
+    "faq1A": "Ce test de 20 questions mesure votre niveau de jalousie sur une échelle de 0 à 60 points, en évaluant vos réactions dans des situations relationnelles courantes. Il identifie 5 niveaux, de l'absence de jalousie à la jalousie intense.",
+    "faq2Q": "La jalousie dans un couple est-elle normale ?",
+    "faq2A": "Une jalousie légère et occasionnelle est tout à fait normale et indique que vous tenez à votre partenaire. Elle devient problématique quand elle engendre des comportements de contrôle, de surveillance ou de restriction des libertés de l'autre.",
+    "faq3Q": "Que faire si mon/ma partenaire est trop jaloux(se) ?",
+    "faq3A": "En parler directement en dehors d'un contexte de conflit, exprimer l'impact réel sur vous, et poser des limites claires. Si les comportements persistent ou s'intensifient, consulter un professionnel peut être nécessaire."
+  }
+}

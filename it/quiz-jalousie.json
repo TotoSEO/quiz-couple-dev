@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "title": "Test gelosia coppia: sei geloso/a?",
+    "description": "Due test per misurare la gelosia nella coppia: la tua e quella del partner. Risultati sfumati.",
+    "titleHighlight": "geloso/a",
+    "badge": "Test Gelosia • Gratuito • 5 min"
+  },
+  "section1": {
+    "title": "Perché proviamo gelosia in una relazione?",
+    "p1": "La gelosia non appare per caso. Si installa dove c'è qualcosa da perdere, il che significa che in molti casi dice prima di tutto che tieni all'altro. Tranne che non è tutta la storia.",
+    "p2": "La maggior parte della gelosia relazionale attinge a due fonti principali. La prima è la paura dell'abbandono, spesso ereditata da esperienze passate: una relazione finita male, un vecchio tradimento, a volte qualcosa di molto più antico della relazione attuale. La seconda è la mancanza di fiducia in se stessi. Non nell'altro, in se stessi. \"Perché resterebbe con me se arrivasse qualcuno di meglio?\" Questa domanda, non sempre conscia, alimenta molte reazioni che attribuiamo erroneamente all'altra persona.",
+    "p3": "C'è anche un terzo fattore meno menzionato: lo stile di attaccamento. Le persone con attaccamento ansioso, circa un terzo della popolazione adulta secondo gli studi di psicologia dello sviluppo, hanno una sensibilità aumentata ai segnali di distanza e interpretano più facilmente situazioni neutre come minacce. Non è un difetto, è un cablaggio emotivo che si è instaurato presto e su cui si può lavorare."
+  },
+  "section2": {
+    "title": "La gelosia in coppia è un problema?",
+    "p1": "La risposta breve: dipende dalla sua intensità e dai comportamenti che produce.",
+    "p2": "Una gelosia lieve, quella che si manifesta come un pizzico quando qualcuno corteggia il partner o come una leggera ansia quando rientra tardi senza avvisare, non è un problema di per sé.",
+    "healthy": "<strong class=\"text-foreground\">La gelosia resta sana</strong> finché non porta a comportamenti di controllo o sorveglianza. È un'emozione che dice che tieni al tuo partner.",
+    "toxic": "<strong class=\"text-foreground\">La gelosia diventa problematica</strong> quando comincia a dettare comportamenti: controllare il telefono, sorvegliare gli spostamenti, interrogare sistematicamente, limitare le relazioni sociali dell'altro.",
+    "quote": "Si passa da un'emozione normale a una modalità di controllo che danneggia la fiducia e lo spazio vitale di ciascuno. La persona gelosa soffre, la persona sorvegliata soffoca. Entrambi perdono."
+  },
+  "section3": {
+    "title": "Come interpretare il tuo punteggio?",
+    "intro": "Ogni test è valutato su 60 punti (20 domande × max 3 punti). Ecco i livelli di risultato:",
+    "headerScore": "Punteggio",
+    "headerLevel": "Livello di gelosia",
+    "headerAnalysis": "Interpretazione",
+    "row1Score": "0 a 12 punti",
+    "row1Level": "Poca o nessuna gelosia",
+    "row1Analysis": "La gelosia non sembra essere un tema nella tua relazione. Base solida di fiducia.",
+    "row2Score": "13 a 36 punti",
+    "row2Level": "Gelosia lieve a moderata",
+    "row2Analysis": "Esistono riflessi di gelosia ma restano gestibili. Un buon punto di partenza per riflettere.",
+    "row3Score": "37 a 60 punti",
+    "row3Level": "Gelosia importante a intensa",
+    "row3Analysis": "La gelosia occupa uno spazio significativo. È importante parlarne e cercare aiuto."
+  },
+  "section4": {
+    "title": "Come smettere di essere geloso/a nella relazione?",
+    "p1": "Il primo passo è capire da dove viene la gelosia. Non in teoria generale, ma nel tuo caso specifico.",
+    "p2": "Cosa aiuta concretamente:",
+    "pillar1Title": "Lavorare sulla fiducia in sé",
+    "pillar1Text": "La gelosia che viene dal sentirsi \"non abbastanza\" non si risolve sorvegliando di più l'altro, si risolve ricostruendo l'autostima. Terapia, attività gratificanti, cerchia sociale fuori dalla coppia.",
+    "pillar2Title": "Nominare quello che senti",
+    "pillar2Text": "\"Quando rientri tardi senza avvisarmi mi sento ansioso/a\" dice qualcosa di diverso da \"non ti importa nulla di me\". Il primo apre una conversazione, il secondo ne chiude una.",
+    "pillar3Title": "Distinguere fatto e interpretazione",
+    "pillar3Text": "Il tuo partner ha riso al telefono — questo è un fatto. \"Rideva con qualcuno che gli/le piace\" è un'interpretazione. <strong>Lo spazio tra i due è il luogo dove vive la gelosia.</strong> Ridurre quello spazio è un'abilità che si impara."
+  },
+  "section5": {
+    "title": "Il mio/la mia partner è troppo geloso/a: cosa fare?",
+    "intro": "Vivere con una persona molto gelosa è estenuante in modo particolare. Perché non fai nulla di sbagliato, ma devi comunque renderne conto.",
+    "pillar1Title": "Non confondere amore e gelosia",
+    "pillar1Text": "La gelosia eccessiva non è una prova d'amore, è un segnale che qualcosa non va in lui/lei e si sta riversando su di te.",
+    "pillar2Title": "Parlarne direttamente",
+    "pillar2Text": "Fuori da un contesto di conflitto. \"Quando controlli dove sono più volte al giorno, mi sento sorvegliato/a e mi pesa\" permette all'altro di ascoltare qualcosa di concreto.",
+    "pillar3Title": "Stabilire limiti chiari",
+    "pillar3Text": "Se i comportamenti gelosi persistono, si intensificano o cominciano ad assomigliare a controllo o isolamento, è un limite che merita di essere stabilito chiaramente. <strong>Amare qualcuno non significa accettare di vivere sotto sorveglianza.</strong>",
+    "pillar4Title": "Riconoscere i segnali d'allarme",
+    "pillar4Text": "Modifichi regolarmente il tuo comportamento, i comportamenti di controllo si espandono (posizione, messaggi, isolamento), ti senti in colpa per cose che non hai fatto. Se riconosci diversi di questi segnali, non è una situazione da normalizzare."
+  },
+  "section6": {
+    "title": "Quando la gelosia diventa un problema serio?",
+    "p1": "Ci sono segnali che indicano che la gelosia ha superato una soglia. Quando la paura della reazione dell'altro detta le tue scelte, non è più gelosia ordinaria.",
+    "p2": "Lavorare con un professionista non è un'ammissione di fallimento. È spesso il percorso più diretto verso una relazione serena.",
+    "dontTitle": "Cosa peggiora la gelosia",
+    "dont1Title": "Cercare prove",
+    "dont1Text": "Frugare nel telefono, sorvegliare i social media, controllare le posizioni. Questi comportamenti alimentano l'ansia invece di calmarla.",
+    "dont2Title": "Accusare senza fatti",
+    "dont2Text": "Trasformare un'interpretazione in un'accusa crea diffidenza da entrambi i lati e allontana il partner invece di rassicurare.",
+    "doTitle": "Cosa aiuta ad andare avanti",
+    "do1Title": "Comunicare senza accusare",
+    "do1Text": "Esprimere le proprie emozioni (\"mi sento preoccupato/a quando...\") piuttosto che accuse (\"fai sempre...\"). Il primo invita al dialogo, il secondo provoca difesa.",
+    "do2Title": "Consultare un professionista",
+    "do2Text": "Se la gelosia è profondamente radicata, se ritorna nonostante i tuoi sforzi, se ha già danneggiato relazioni precedenti. È spesso il percorso più efficace.",
+    "do3Title": "Lavorare su se stessi",
+    "do3Text": "Rafforzare l'autostima, sviluppare attività personali, mantenere una cerchia sociale fuori dalla coppia. La sicurezza interiore è il miglior antidoto alla gelosia."
+  },
+  "section7": {
+    "title": "Cosa ricordare",
+    "p1": "La gelosia in una relazione è raramente in bianco o nero. C'è quella che rassicura perché dice che tieni all'altro, e poi c'è quella che soffoca, che controlla, che alla fine rovina tutto.",
+    "p2": "Questi due test sono un punto di partenza per riflettere, da soli o in coppia. I risultati non sono diagnosi.",
+    "p3": "Se senti che la gelosia, la tua o quella del tuo partner, occupa troppo spazio, è un'informazione preziosa. Non esitare a parlarne."
+  },
+  "jsonLd": {
+    "faq1Q": "Come faccio a sapere se sono geloso/a nella mia relazione?",
+    "faq1A": "Questo test di 20 domande misura il tuo livello di gelosia su una scala da 0 a 60 punti, valutando le tue reazioni in situazioni di coppia comuni. Identifica 5 livelli, dall'assenza di gelosia alla gelosia intensa.",
+    "faq2Q": "La gelosia in coppia è normale?",
+    "faq2A": "Una gelosia lieve e occasionale è del tutto normale e indica che tieni al tuo partner. Diventa problematica quando genera comportamenti di controllo, sorveglianza o restrizione delle libertà dell'altro.",
+    "faq3Q": "Cosa fare se il mio/la mia partner è troppo geloso/a?",
+    "faq3A": "Parlarne direttamente fuori da un contesto di conflitto, esprimere l'impatto reale su di te e stabilire limiti chiari. Se i comportamenti persistono, consultare un professionista può essere necessario."
+  }
+}

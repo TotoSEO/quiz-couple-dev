@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "title": "Couple jealousy test: are you jealous?",
+    "description": "Two tests to measure jealousy in your relationship: your own and your partner's. Nuanced results.",
+    "titleHighlight": "jealous",
+    "badge": "Jealousy Test • Free • 5 min"
+  },
+  "section1": {
+    "title": "Why do we feel jealousy in a relationship?",
+    "p1": "Jealousy doesn't appear out of nowhere. It settles where there's something to lose, which means that in many cases, it first says that you care about the other person. Except that's not the whole story.",
+    "p2": "Most relational jealousy draws from two main sources. The first is fear of abandonment, often inherited from past experiences, a relationship that ended badly, an old betrayal, sometimes something far older than the current relationship. The second is a lack of self-confidence. Not a lack of trust in the other person, but in yourself. \"Why would they stay with me if someone better comes along?\" That question, not always conscious, feeds a lot of reactions we wrongly attribute to the other person.",
+    "p3": "There's also a third factor that gets mentioned less: attachment style. People with what's called anxious attachment, roughly a third of the adult population according to developmental psychology research, have a heightened sensitivity to signals of distance and more easily interpret neutral situations as threats. It's not a flaw, it's an emotional wiring that set in early and can be worked on."
+  },
+  "section2": {
+    "title": "Is jealousy in a relationship a problem?",
+    "p1": "The short answer: it depends on its intensity and the behaviours it produces.",
+    "p2": "A mild jealousy, the kind that shows up as a twinge when someone flirts with your partner or a slight anxiety when they come home late without warning, isn't a problem in itself. It stays within the bounds of what's human.",
+    "healthy": "<strong class=\"text-foreground\">Jealousy remains healthy</strong> as long as it doesn't lead to controlling or monitoring behaviours. It's an emotion that says you care about your partner.",
+    "toxic": "<strong class=\"text-foreground\">Jealousy becomes problematic</strong> when it starts dictating behaviours: checking the phone, monitoring movements, systematic questioning, restricting the other person's social life.",
+    "quote": "We move from a normal emotion to a mode of control that damages trust and personal space. The jealous person suffers, the monitored person suffocates. Both lose."
+  },
+  "section3": {
+    "title": "How to interpret your score?",
+    "intro": "Each test is scored out of 60 points (20 questions × 3 points max). Here are the result levels:",
+    "headerScore": "Score",
+    "headerLevel": "Jealousy level",
+    "headerAnalysis": "Interpretation",
+    "row1Score": "0 to 12 points",
+    "row1Level": "Little to no jealousy",
+    "row1Analysis": "Jealousy doesn't seem to be an issue in your relationship. Solid foundation of trust.",
+    "row2Score": "13 to 36 points",
+    "row2Level": "Mild to moderate jealousy",
+    "row2Analysis": "Jealous reflexes exist but remain manageable. A good starting point for reflection.",
+    "row3Score": "37 to 60 points",
+    "row3Level": "Significant to intense jealousy",
+    "row3Analysis": "Jealousy takes up significant space. It's important to talk about it and seek help."
+  },
+  "section4": {
+    "title": "How to stop being jealous in a relationship?",
+    "p1": "The first step is to understand where the jealousy comes from. Not in general theory, but in your specific case. Has it always been there or did it appear at a particular point in this relationship?",
+    "p2": "Here's what concretely helps:",
+    "pillar1Title": "Work on self-confidence",
+    "pillar1Text": "Jealousy that comes from feeling \"not good enough\" doesn't resolve itself by monitoring the other person more, it resolves by rebuilding self-esteem. Therapy, fulfilling activities, a social circle outside the couple.",
+    "pillar2Title": "Name what you feel",
+    "pillar2Text": "\"When you come home late without warning, I feel anxious\" says something different from \"you couldn't care less about me\". The first opens a conversation, the second closes one.",
+    "pillar3Title": "Distinguish fact from interpretation",
+    "pillar3Text": "Your partner laughed on the phone, that's a fact. \"They were laughing with someone they fancy\" is an interpretation. <strong>The space between the two is where jealousy lives.</strong> Shrinking that space is a skill that can be learned."
+  },
+  "section5": {
+    "title": "My partner is too jealous: what should I do?",
+    "intro": "Living with a very jealous person is exhausting in a specific way. Because you're not doing anything wrong, but you still have to account for it.",
+    "pillar1Title": "Don't confuse love and jealousy",
+    "pillar1Text": "Excessive jealousy isn't proof of love, it's a signal that something isn't right in them, and that it's spilling onto you. That distinction changes how you approach the situation.",
+    "pillar2Title": "Talk about it directly",
+    "pillar2Text": "Outside of a conflict context. \"When you check where I am several times a day, I feel monitored and it weighs on me\" is an opening that lets the other person hear something concrete.",
+    "pillar3Title": "Set clear boundaries",
+    "pillar3Text": "If jealous behaviours persist, intensify or start to look like control or isolation, that's a limit worth setting clearly. <strong>Loving someone doesn't mean accepting living under surveillance.</strong>",
+    "pillar4Title": "Recognise warning signs",
+    "pillar4Text": "You regularly modify your behaviour, controlling behaviours expand (location, messages, isolation), you feel guilty for things you haven't done. If you recognise several of these signals, it's not a situation to normalise."
+  },
+  "section6": {
+    "title": "When does jealousy become a serious problem?",
+    "p1": "There are signals that indicate jealousy has crossed a threshold. When fear of their reaction dictates your choices, it's no longer ordinary jealousy.",
+    "p2": "Working with a professional, therapist or psychologist, is not an admission of failure. It's often the most direct path to a serene relationship.",
+    "dontTitle": "What makes jealousy worse",
+    "dont1Title": "Looking for proof",
+    "dont1Text": "Going through phones, monitoring social media, checking locations. These behaviours feed anxiety instead of calming it. The more you search, the more you interpret, and the vicious cycle sets in.",
+    "dont2Title": "Accusing without facts",
+    "dont2Text": "Turning an interpretation into an accusation creates distrust on both sides and pushes the partner away instead of providing reassurance.",
+    "doTitle": "What helps move forward",
+    "do1Title": "Communicate without accusing",
+    "do1Text": "Express your emotions (\"I feel worried when...\") rather than accusations (\"you always...\"). The first invites dialogue, the second triggers defensiveness.",
+    "do2Title": "Consult a professional",
+    "do2Text": "If jealousy is deeply rooted, if it comes back despite your efforts, if it has already damaged previous relationships. It's often the most effective path.",
+    "do3Title": "Work on yourself",
+    "do3Text": "Strengthen self-esteem, develop personal activities, maintain a social circle outside the couple. Inner security is the best antidote to jealousy."
+  },
+  "section7": {
+    "title": "Key takeaways",
+    "p1": "Jealousy in a relationship is rarely black and white. There's the kind that reassures because it says you care about the other person, and then there's the kind that suffocates, that watches, that ends up damaging everything.",
+    "p2": "These two tests are a starting point for reflection, alone or together. The results aren't diagnoses.",
+    "p3": "If you feel that jealousy, yours or your partner's, is taking up too much space, that's valuable information. Don't hesitate to talk about it."
+  },
+  "jsonLd": {
+    "faq1Q": "How do I know if I'm jealous in my relationship?",
+    "faq1A": "This 20-question test measures your jealousy level on a scale of 0 to 60 points, evaluating your reactions in common relationship situations. It identifies 5 levels, from no jealousy to intense jealousy.",
+    "faq2Q": "Is jealousy in a relationship normal?",
+    "faq2A": "Mild, occasional jealousy is completely normal and indicates you care about your partner. It becomes problematic when it leads to controlling behaviours, monitoring or restricting the other person's freedom.",
+    "faq3Q": "What should I do if my partner is too jealous?",
+    "faq3A": "Talk about it directly outside of a conflict context, express the real impact on you, and set clear boundaries. If behaviours persist or intensify, consulting a professional may be necessary."
+  }
+}

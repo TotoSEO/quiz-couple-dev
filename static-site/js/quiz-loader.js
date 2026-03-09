@@ -53,7 +53,11 @@
     'parentalite':    { prefix: 'parentalite', engine: 'parentalite', totalQ: 20, pool: 20 },
 
     // ── Emmenager quiz (same engine as parentalite) ──
-    'emmenager':      { prefix: 'emmenager', engine: 'parentalite', totalQ: 20, pool: 20 }
+    'emmenager':      { prefix: 'emmenager', engine: 'parentalite', totalQ: 20, pool: 20 },
+
+    // ── Jalousie quizzes (solo scoring, two sub-tests on same page) ──
+    'jalousie1':      { prefix: 'jalousie1', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie1' },
+    'jalousie2':      { prefix: 'jalousie2', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie2' }
   };
 
   var config = QUIZ_CONFIG[quizType];
