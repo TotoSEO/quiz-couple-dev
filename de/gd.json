@@ -910,5 +910,116 @@
     "r3_t": "Moderate Eifersucht", "r3_d": "Das Verhalten deines Partners deutet auf eine moderate, aber reale Eifersucht hin. Bestimmte Situationen erzeugen Spannungen und du spürst, dass er/sie überwacht oder befragt auf eine Weise, die dir manchmal zu schaffen macht. Jetzt ist ein guter Zeitpunkt, ruhig darüber zu sprechen.", "r3_a": "",
     "r4_t": "Ausgeprägte Eifersucht", "r4_d": "Was du beschreibst, deutet auf eine Eifersucht hin, die beginnt, deine Freiheit und deinen Alltag zu belasten. Du veränderst vielleicht bereits bestimmte Verhaltensweisen, um Konflikte zu vermeiden. Das ist ein wichtiges Signal.", "r4_a": "",
     "r5_t": "Intensive Eifersucht", "r5_d": "Was du beschrieben hast, geht über gewöhnliche Eifersucht hinaus. Das Ausmaß an Überwachung, Kontrolle oder Druck, dem du ausgesetzt bist, verdient es, ernst genommen zu werden. Du bist nicht verpflichtet, das zu normalisieren, was du fühlst.", "r5_a": ""
+  },
+  "genant": {
+    "q1": "Ihr seid auf einer Party bei Freunden. Ihr knutscht rum.",
+    "q1a": "Wir haben da nie groß drüber nachgedacht. Wenn wir Lust haben, machen wir's.",
+    "q1b": "Das kann schon mal länger dauern, wenn die Stimmung passt. Die Leute können sich anpassen.",
+    "q1c": "Ein schneller Kuss, ja. Aber wir bleiben anständig.",
+    "q1d": "Nein, nie. Das bleibt bei uns zuhause.",
+
+    "q2": "Ihr seid im Restaurant. Euer Partner / eure Partnerin kann sich nicht entscheiden, was er/sie nimmt.",
+    "q2a": "Wir bestellen für ihn/sie UND verhandeln mit dem Kellner, um Sachen anzupassen. Er/sie nickt danach ab.",
+    "q2b": "Wir bestellen für ihn/sie, ohne zu fragen. Wir wissen, was er/sie mag.",
+    "q2c": "Wir schlagen ein oder zwei Gerichte vor, wenn wir seinen/ihren Geschmack kennen.",
+    "q2d": "Wir warten, bis er/sie sich entscheidet, wir mischen uns nicht ein.",
+
+    "q3": "Ihr seid in den öffentlichen Verkehrsmitteln. Euer Partner / eure Partnerin schläft auf eurer Schulter ein.",
+    "q3a": "Wir wecken ihn/sie mit einem herzhaften Kuss, weil wir es einfach nicht lassen können. Peinlichkeit der Nachbarn nicht inbegriffen.",
+    "q3b": "Wir geben ihm/ihr kleine Küsschen in den Nacken. Die anderen Fahrgäste können zuschauen, umso besser.",
+    "q3c": "Wir legen ihm/ihr die Hand aufs Knie oder küssen ihn/sie diskret auf die Stirn.",
+    "q3d": "Wir bleiben regungslos, um ihn/sie nicht aufzuwecken, ohne mehr zu tun.",
+
+    "q4": "Ihr habt einen Spitznamen für euren Partner / eure Partnerin. Jemand Außenstehendes hört ihn zum ersten Mal.",
+    "q4a": "Der Spitzname ist objektiv peinlich (\"Mausebärchen\", \"Schnuckiputz\", \"Honigkrümelchen\") und es ist uns egal.",
+    "q4b": "Der Spitzname kommt ganz natürlich raus. Wenn die Leute es süß finden, umso besser.",
+    "q4c": "Es kann passieren, dass uns der Spitzname rausrutscht, aber es ist ein ziemlich neutraler.",
+    "q4d": "Wir benutzen Spitznamen nie in der Öffentlichkeit. Das bleibt unter uns.",
+
+    "q5": "Ihr seid bei den Eltern eures Partners / eurer Partnerin. Ihr streitet euch.",
+    "q5a": "Wir klären das hier und jetzt. Die Eltern gehören zur Familie, die kommen klar.",
+    "q5b": "Wir schreien uns nicht an, aber die Spannung ist sichtbar. Die Eltern haben's kapiert.",
+    "q5c": "Wir sagen uns, was wir zu sagen haben, leise, in einer Ecke.",
+    "q5d": "Wir warten, bis wir allein sind, um darüber zu reden. Fassadenlächeln.",
+
+    "q6": "Euer Partner / eure Partnerin sagt etwas Falsches bei einem Abendessen in der Gruppe.",
+    "q6a": "Wir korrigieren ihn/sie, erklären ausführlich, warum er/sie falsch liegt, und erzählen am Ende die dazugehörige Anekdote. Die Leute drumherum sind das gewohnt.",
+    "q6b": "Wir korrigieren ihn/sie direkt. Wir versuchen nett zu sein, aber wir korrigieren.",
+    "q6c": "Wir schieben eine diskrete Korrektur ein, damit er/sie nicht weiter danebenliegt.",
+    "q6d": "Wir lassen es durchgehen. Wir reden danach darüber.",
+
+    "q7": "Ihr steht in einer Warteschlange. Euch ist langweilig.",
+    "q7a": "Wir spielen Spiele, die die Nachbarn in der Schlange überraschen könnten (Kitzeln, Challenges, Grimassen-Wettbewerb auf Erwachsenen-Niveau).",
+    "q7b": "Wir kuscheln, machen unsere kleinen Sachen. Die Leute warten auch, die verstehen das.",
+    "q7c": "Wir reden, kommentieren die Leute um uns herum (leise, immerhin).",
+    "q7d": "Jeder guckt auf sein Handy.",
+
+    "q8": "Euer Partner / eure Partnerin furzt. In der Öffentlichkeit.",
+    "q8a": "Wir kommentieren, bewerten, vergleichen mit dem letzten Mal. Die Leute drumherum können es hören.",
+    "q8b": "Wir lachen. Ehrlich, ohne uns zu verstecken.",
+    "q8c": "Wir tauschen einen verschwörerischen Blick aus, bleiben aber würdevoll.",
+    "q8d": "Wir tun so, als wäre nichts passiert. Das existiert nicht.",
+
+    "q9": "Ihr kauft zusammen ein. Euer Partner / eure Partnerin legt etwas in den Einkaufswagen, das nicht geplant war.",
+    "q9a": "Wir diskutieren ausgiebig, rufen den anderen zur Hilfe (\"aber du hattest doch gesagt, wir passen auf\"), und am Ende kaufen wir es trotzdem.",
+    "q9b": "Wir legen den Artikel zurück und erklären warum. Kleine Debatte in der Joghurt-Abteilung.",
+    "q9c": "Wir heben eine Augenbraue, er/sie erklärt, OK.",
+    "q9d": "Wir sagen nichts, man darf sich doch mal was gönnen.",
+
+    "q10": "Ihr seid auf einer Party. Euer Partner / eure Partnerin tanzt. Ihr nicht.",
+    "q10a": "Wir kreieren einen Moment. Improvisierter Tango, Gruppentanz um uns herum rekrutiert, Show für niemand Bestimmten.",
+    "q10b": "Wir tanzen am Ende doch. Nicht besonders gut. Ist uns egal.",
+    "q10c": "Wir gehen näher ran, legen die Hände auf seine/ihre Hüften, begleiten, ohne wirklich zu tanzen.",
+    "q10d": "Wir schauen von weitem liebevoll zu. Wir bewegen uns nicht.",
+
+    "q11": "Euer Partner / eure Partnerin hat etwas zwischen den Zähnen.",
+    "q11a": "Wir versuchen, es selbst rauszuholen, bevor wir es ihm/ihr sagen. Die Leute drumherum sehen alles, ist OK.",
+    "q11b": "Wir sagen es ihm/ihr direkt, vor den Leuten. Ist ja zu seinem/ihrem Besten.",
+    "q11c": "Wir geben ihm/ihr ein Zeichen mit den Augen und einer kleinen Handbewegung.",
+    "q11d": "Wir flüstern es ihm/ihr diskret ins Ohr.",
+
+    "q12": "Ihr macht ein Pärchenfoto. An einem öffentlichen Ort.",
+    "q12a": "Komplettes Fotoshooting mit Wiederholungen, leichter Choreografie, eventuell ein Fremder als Fotograf rekrutiert.",
+    "q12b": "Komplettes Fotoshooting. Wir lassen posieren, machen es nochmal, geben Anweisungen.",
+    "q12c": "Ein paar Posen, wir nehmen uns die Zeit, den richtigen Winkel zu finden.",
+    "q12d": "Ein schnelles, natürliches Foto, ohne Inszenierung.",
+
+    "q13": "Euer Partner / eure Partnerin weint bei einem Film, im Kino.",
+    "q13a": "Wir weinen auch. Wir umarmen uns. Die Leute drumherum können kommentieren, wir hören sie nicht.",
+    "q13b": "Wir kuscheln ihn/sie. Kein Problem mit den Sitznachbarn.",
+    "q13c": "Wir nehmen seine/ihre Hand, beugen uns zu ihm/ihr.",
+    "q13d": "Wir reichen ihm/ihr diskret ein Taschentuch.",
+
+    "q14": "Ihr habt einen Streit auf der Straße.",
+    "q14a": "Wir klären das hier und jetzt, in dem Tempo, das wir brauchen. Lautstärke nicht garantiert.",
+    "q14b": "Wir bleiben stehen, sagen was wir zu sagen haben. Die Passanten machen einen Bogen.",
+    "q14c": "Wir reden, aber leise, während wir weitergehen.",
+    "q14d": "Wir hören sofort auf. Das klären wir zuhause.",
+
+    "q15": "Ihr seid im Büro eures Partners / eurer Partnerin (Großraumbüro, Kollegen anwesend). Ihr kommt vorbei, um ihn/sie zu küssen.",
+    "q15a": "Wir tauchen auf wie zuhause. Kuss, Niederlassung, eventuell eine Bemerkung über die Bürodeko. Die Kollegen lieben es oder tun so.",
+    "q15b": "Kuss, Umarmung, kleiner Moment. Die Kollegen wissen, dass wir zusammen sind, ist kein Geheimnis.",
+    "q15c": "Wir gehen hin, schneller Kuss, Hallo an die nächsten Kollegen.",
+    "q15d": "Wir winken vom Eingang und warten, bis er/sie kommt.",
+
+    "r1_t": "Die Diskreten",
+    "r1_d": "Euer Paar existiert, aber ihr behaltet das für euch. In der Öffentlichkeit seid ihr zwei Personen, die sich kennen. Privat ist es eine andere Geschichte. Ihr habt gern einen eigenen Raum, unzugänglich für die Blicke anderer, und das ist eine völlig valide Art zu funktionieren. Manche Paare bauen sich abseits der Welt auf, und das hält sehr gut. Das Einzige, worauf man achten sollte: dass diese Diskretion nicht zu Distanz wird. Dass sie eine aktive und gemeinsame Entscheidung ist, keine Gewohnheit, die sich eingeschlichen hat, ohne dass man es merkt.",
+    "r1_a": "Macht das Quiz \"Habt ihr eine gesunde Beziehung?\", um etwas weiter zu gehen.",
+
+    "r2_t": "Die Vernünftigen",
+    "r2_d": "Ihr liebt euch, das sieht man, ihr traumatisiert niemanden. Ihr habt ein Gleichgewicht gefunden, das viele suchen. Nah genug, dass man es spürt, diskret genug, dass sich die Leute um euch herum nicht angegriffen fühlen. Ihr erlaubt euch kleine Momente, ohne eine öffentliche Demonstration daraus zu machen, und genau deshalb verbringen die Leute wahrscheinlich gerne Zeit mit euch beiden. Es ist nicht der spektakulärste Score, aber es ist oft der angenehmste zum Leben, für euch und für alle um euch herum.",
+    "r2_a": "Testet eure Gemeinsamkeiten mit dem entsprechenden Quiz.",
+
+    "r3_t": "Die Enthemmten",
+    "r3_d": "Ihr lebt euer Leben, die Leute passen sich an. Ihr macht euch nicht allzu viele Gedanken darüber, was andere denken, und das ist grundsätzlich eine gute Nachricht. Ihr habt eure eigenen Sachen, eure Codes, eure Momente, und ihr versteckt sie nicht wirklich. Die Leute drumherum wissen, dass ihr zusammen seid, in jeder Hinsicht. Aber achtet trotzdem darauf, dass der andere an diesem Tag nicht vielleicht ein anderes Level an Enthemmtheit hat als ihr. Die Freiheit zu peinlich zu sein, funktioniert besser, wenn beide voll dabei sind.",
+    "r3_a": "Ihr seid eher der Typ, der alles teilt? Entdeckt das Quiz \"Wer kennt seinen Partner am besten\".",
+
+    "r4_t": "Die Ungefilterten",
+    "r4_d": "Euer Paar ist ein Lebenserlebnis für alle drumherum. Ihr lebt eure Beziehung voll aus, und voll aus heißt auch in der Öffentlichkeit. Die Leute um euch herum haben wahrscheinlich Meinungen über euer Paar, Anekdoten zu erzählen, und vielleicht ein paar Bilder, die schwer zu löschen sind. Ihr nennt das Lieben ohne Zurückhaltung. Schwer, euch da zu widersprechen. Die einzige echte Frage: Ist euer Partner / eure Partnerin auf exakt demselben Level wie ihr? Denn \"ungefiltert zu zweit\" ist eine Sache, \"ungefiltert alleine, während der andere die Lage managt\" ist eine andere.",
+    "r4_a": "Macht das Quiz zusammen, um eure Antworten zu vergleichen.",
+
+    "r5_t": "Die Legendären",
+    "r5_d": "Die Leute erinnern sich an die Partys, auf denen ihr wart. Ihr seid ein Paar-Denkmal. Ein Erlebnis. Die Leute, die mit euch zu tun haben, hegen entweder eine aufrichtige Zuneigung für euch beide oder haben einen Vorrat an Geschichten für Abendessen. In jedem Fall lasst ihr niemanden gleichgültig. Es steckt eine Form von Freiheit darin, die ziemlich selten ist. Die Peinlichkeit, ihr habt sie so sehr verdaut, dass sie eigentlich nicht mehr existiert. Es ist fast ein höheres Level an Seelenfrieden, nur auf einem ungewöhnlichen Weg erreicht. Eine Frage zum Schluss: Sagt euer Umfeld euch das mit einem Lächeln oder mit einem leichten Verkrampfen? Die Antwort darauf ist euer einziger echter Indikator.",
+    "r5_a": "Seid ihr gemacht für ein pikantes Quiz? Testet euch."
   }
 }

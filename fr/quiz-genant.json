@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "Quiz couple gênant : jusqu'où osez-vous aller à deux ?",
+    "description": "Se faire des bisous en public, commander à la place de l'autre, appeler votre partenaire \"chéri papounet\" devant ses collègues... Chaque couple a ses trucs un peu gênants. La question, c'est : vous en avez combien, et est-ce que vous assumez ?",
+    "titleHighlight": "gênant",
+    "badge": "Quiz Fun • Gratuit • 5 min",
+    "subtitle": "Ce quiz est là pour mettre les pieds dans le plat. Quinze situations concrètes, quatre réponses possibles, un profil de couple à la clé. Répondez honnêtement, c'est beaucoup plus drôle."
+  },
+  "section1": {
+    "title": "C'est quoi exactement un couple \"gênant\" ?",
+    "p1": "La gêne en couple, c'est subjectif. Pour certains, deux personnes qui se font un câlin dans le métro c'est déjà trop. Pour d'autres, commander à la place de l'autre au restaurant c'est mignon. Ce que tout le monde appelle \"couple gênant\", c'est en réalité un couple qui sort de sa zone privée et qui laisse déborder dans l'espace public des choses qui, conventionnellement, resteraient entre les murs de chez eux.",
+    "p2": "Ce n'est pas un jugement. C'est une observation.",
+    "p3": "Les couples très fusionnels ont souvent ce profil. Pas parce qu'ils manquent de tact, mais parce que leur bulle est tellement dense qu'elle occupe un peu plus d'espace que prévu. Ils ont développé leurs codes, leurs rituels, leur façon d'être ensemble, et parfois ils les exportent. Les gens autour voient quelque chose qui leur appartient pas, et c'est ça qui crée le sentiment de gêne."
+  },
+  "section2": {
+    "title": "Est-ce grave d'être un couple gênant ?",
+    "p1": "Non. Pas vraiment. Il y a évidemment des limites : des comportements qui mettent réellement les gens mal à l'aise dans des espaces où ils ne peuvent pas partir, des situations où l'affichage devient une forme d'irrespect vis-à-vis du contexte. Un enterrement n'est pas une soirée entre amis. Un open space professionnel n'est pas un appartement.",
+    "p2": "Mais dans la majorité des cas, un couple \"gênant\" est juste un couple qui aime bien être ensemble, qui ne calcule pas trop ce que les gens pensent, et qui a une façon d'interagir qui déborde légèrement des conventions. La plupart du temps, les gens autour trouvent ça attendrissant bien plus souvent qu'ils ne l'admettent.",
+    "p3": "Ce qui pose vraiment problème, c'est quand l'un des deux est beaucoup plus à l'aise que l'autre avec cet affichage. Quand l'un trouve ça naturel et que l'autre gère en souriant sans vraiment le vivre bien. Cette asymétrie-là mérite une vraie conversation, pas pour mettre fin aux élans, mais pour s'assurer que les deux sont au même endroit."
+  },
+  "section3": {
+    "title": "Pourquoi certains couples sont-ils plus démonstratifs que d'autres ?",
+    "p1": "C'est une combinaison de facteurs, et aucun n'est vraiment volontaire. L'histoire familiale joue beaucoup. Les gens qui ont grandi dans des familles où l'affection s'exprime physiquement et ouvertement trouvent naturel de reproduire ça dans leur relation adulte. Ceux qui ont eu une éducation plus pudique ressentent souvent une vraie résistance intérieure à montrer quoi que ce soit en public, même quand ils en ont envie.",
+    "p2": "La durée de la relation change aussi la donne. Au début, les couples ont tendance à être soit très demonstratifs (la phase \"on ne peut pas s'empêcher\") soit très discrets (on ne sait pas encore où on en est). Avec le temps, une sorte d'équilibre s'installe. Les couples qui restent très démonstratifs après plusieurs années ont généralement choisi ce mode de fonctionnement consciemment, même si ce n'est pas toujours dit explicitement.",
+    "p3": "Et puis il y a simplement la personnalité. Certaines personnes s'en foutent du regard des autres de façon constitutive. Pas par bravade, pas par exhibitionnisme, juste parce que cette antenne-là est moins développée chez elles. Elles vivent leurs relations avec la même intensité en privé et en public, sans vraiment faire la différence.",
+    "p4": ""
+  },
+  "section4": {
+    "title": "Comment savoir si votre couple est dans la zone \"gênant fun\" ou \"gênant problématique\" ?",
+    "p1": "La ligne est floue, mais elle existe. Quelques repères utiles. Si les gens autour de vous sourient (même en regardant ailleurs), vous êtes dans la zone \"gênant fun\". Si les gens autour de vous changent de trottoir ou regardent leurs chaussures avec une intensité inhabituelle, vous approchez de la ligne.",
+    "p2": "Si votre partenaire et vous riez des mêmes situations après coup, c'est bon signe. Si l'un d'entre vous doit régulièrement \"gérer\" les retombées sociales de ce que l'autre a fait, il y a un déséquilibre à regarder.",
+    "p3": "Si vos amis vous invitent encore, c'est que vous n'avez pas dépassé le seuil de tolérance. C'est un indicateur concret et sous-estimé.",
+    "p4": "Et si vous avez fait ce quiz ensemble et que vous avez eu des scores très différents, prenez cinq minutes pour comparer vos réponses question par question. Les écarts sont souvent plus intéressants que le score final."
+  },
+  "jsonLd": {
+    "faq1Q": "C'est quoi un couple gênant ?",
+    "faq1A": "Un couple gênant est un couple qui laisse déborder dans l'espace public des comportements habituellement réservés à la sphère privée : surnoms embarrassants, câlins prolongés, disputes en public, etc. Ce n'est pas un jugement, c'est une observation sur le décalage entre la bulle du couple et les conventions sociales.",
+    "faq2Q": "Est-ce grave d'être un couple gênant ?",
+    "faq2A": "Non, pas vraiment. Dans la majorité des cas, un couple gênant est juste un couple fusionnel qui ne calcule pas trop le regard des autres. Le seul point de vigilance, c'est l'asymétrie : que les deux soient au même niveau de confort avec cette démonstration publique.",
+    "faq3Q": "Pourquoi certains couples sont-ils plus démonstratifs que d'autres ?",
+    "faq3A": "C'est une combinaison de l'histoire familiale (éducation affective), de la durée de la relation (phase fusionnelle vs équilibre installé) et de la personnalité de chacun. Certaines personnes sont naturellement moins sensibles au regard des autres."
+  }
+}

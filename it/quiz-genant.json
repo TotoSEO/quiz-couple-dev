@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "Quiz coppia imbarazzante: fino a dove osate arrivare a due?",
+    "description": "Pomiciare in pubblico, ordinare al posto dell'altro, chiamare il/la vostro/a partner \"ciccio patatino\" davanti ai suoi colleghi... Ogni coppia ha le sue cosette un po' imbarazzanti. La domanda è: quante ne avete, e le assumete?",
+    "titleHighlight": "imbarazzante",
+    "badge": "Quiz Fun • Gratuito • 5 min",
+    "subtitle": "Questo quiz è qui per mettere i piedi nel piatto. Quindici situazioni concrete, quattro risposte possibili, un profilo di coppia alla chiave. Rispondete onestamente, è molto più divertente."
+  },
+  "section1": {
+    "title": "Cos'è esattamente una coppia \"imbarazzante\"?",
+    "p1": "L'imbarazzo in coppia è soggettivo. Per alcuni, due persone che si fanno le coccole in metropolitana è già troppo. Per altri, ordinare al posto dell'altro al ristorante è carino. Quello che tutti chiamano \"coppia imbarazzante\" è in realtà una coppia che esce dalla propria zona privata e che lascia debordare nello spazio pubblico cose che, convenzionalmente, resterebbero tra le mura di casa.",
+    "p2": "Non è un giudizio. È un'osservazione.",
+    "p3": "Le coppie molto fusionali hanno spesso questo profilo. Non perché manchino di tatto, ma perché la loro bolla è talmente densa che occupa un po' più di spazio del previsto. Hanno sviluppato i loro codici, i loro rituali, il loro modo di stare insieme, e a volte li esportano. La gente intorno vede qualcosa che non gli appartiene, ed è quello che crea il sentimento di imbarazzo."
+  },
+  "section2": {
+    "title": "È grave essere una coppia imbarazzante?",
+    "p1": "No. Non proprio. Ci sono ovviamente dei limiti: comportamenti che mettono realmente la gente a disagio in spazi dove non possono andarsene, situazioni in cui l'esibizione diventa una forma di mancanza di rispetto nei confronti del contesto. Un funerale non è una serata tra amici. Un open space professionale non è un appartamento.",
+    "p2": "Ma nella maggior parte dei casi, una coppia \"imbarazzante\" è semplicemente una coppia a cui piace stare insieme, che non calcola troppo quello che pensa la gente, e che ha un modo di interagire che deborda leggermente dalle convenzioni. La maggior parte delle volte, la gente intorno lo trova tenero molto più spesso di quanto non lo ammetta.",
+    "p3": "Quello che pone davvero un problema è quando uno dei due è molto più a suo agio dell'altro con questa esibizione. Quando uno lo trova naturale e l'altro gestisce sorridendo senza viverlo davvero bene. Questa asimmetria merita una vera conversazione, non per mettere fine agli slanci, ma per assicurarsi che entrambi siano allo stesso punto."
+  },
+  "section3": {
+    "title": "Perché certe coppie sono più dimostrative di altre?",
+    "p1": "È una combinazione di fattori, e nessuno è davvero volontario. La storia familiare gioca molto. Le persone cresciute in famiglie dove l'affetto si esprime fisicamente e apertamente trovano naturale riprodurlo nella loro relazione adulta. Quelli che hanno avuto un'educazione più pudica sentono spesso una vera resistenza interiore a mostrare qualsiasi cosa in pubblico, anche quando ne hanno voglia.",
+    "p2": "La durata della relazione cambia anche le carte in tavola. All'inizio, le coppie tendono a essere o molto dimostrative (la fase \"non possiamo farne a meno\") o molto discrete (non sappiamo ancora a che punto siamo). Col tempo, si installa una sorta di equilibrio. Le coppie che restano molto dimostrative dopo diversi anni hanno generalmente scelto questa modalità di funzionamento consapevolmente, anche se non è sempre detto esplicitamente.",
+    "p3": "E poi c'è semplicemente la personalità. Certe persone se ne fregano dello sguardo degli altri in modo costitutivo. Non per sfida, non per esibizionismo, semplicemente perché quell'antenna lì è meno sviluppata in loro. Vivono le loro relazioni con la stessa intensità in privato e in pubblico, senza fare davvero la differenza.",
+    "p4": ""
+  },
+  "section4": {
+    "title": "Come sapere se la vostra coppia è nella zona \"imbarazzante divertente\" o \"imbarazzante problematico\"?",
+    "p1": "La linea è sfumata, ma esiste. Qualche punto di riferimento utile. Se la gente intorno a voi sorride (anche guardando altrove), siete nella zona \"imbarazzante divertente\". Se la gente intorno a voi cambia marciapiede o si guarda le scarpe con un'intensità insolita, vi state avvicinando alla linea.",
+    "p2": "Se il/la vostro/a partner e voi ridete delle stesse situazioni a posteriori, è un buon segno. Se uno di voi deve regolarmente \"gestire\" le ricadute sociali di quello che l'altro ha fatto, c'è uno squilibrio da guardare.",
+    "p3": "Se i vostri amici vi invitano ancora, è che non avete superato la soglia di tolleranza. È un indicatore concreto e sottovalutato.",
+    "p4": "E se avete fatto questo quiz insieme e avete ottenuto punteggi molto diversi, prendetevi cinque minuti per confrontare le vostre risposte domanda per domanda. Le differenze sono spesso più interessanti del punteggio finale."
+  },
+  "jsonLd": {
+    "faq1Q": "Cos'è una coppia imbarazzante?",
+    "faq1A": "Una coppia imbarazzante è una coppia che lascia debordare nello spazio pubblico comportamenti abitualmente riservati alla sfera privata: soprannomi imbarazzanti, coccole prolungate, litigi in pubblico, ecc. Non è un giudizio, è un'osservazione sul divario tra la bolla della coppia e le convenzioni sociali.",
+    "faq2Q": "È grave essere una coppia imbarazzante?",
+    "faq2A": "No, non proprio. Nella maggior parte dei casi, una coppia imbarazzante è semplicemente una coppia fusionale che non calcola troppo lo sguardo degli altri. L'unico punto di attenzione è l'asimmetria: che entrambi siano allo stesso livello di comfort con questa dimostrazione pubblica.",
+    "faq3Q": "Perché certe coppie sono più dimostrative di altre?",
+    "faq3A": "È una combinazione della storia familiare (educazione affettiva), della durata della relazione (fase fusionale vs equilibrio instaurato) e della personalità di ciascuno. Certe persone sono naturalmente meno sensibili allo sguardo degli altri."
+  }
+}

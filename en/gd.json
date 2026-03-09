@@ -910,5 +910,116 @@
     "r3_t": "Moderate jealousy", "r3_d": "Your partner's behaviours point to a moderate but real jealousy. Certain situations create tension and you feel them monitor or question in ways that sometimes weigh on you. This is a good time to talk about it calmly, before habits set in. An open conversation about what you both feel can change a lot.", "r3_a": "",
     "r4_t": "Significant jealousy", "r4_d": "What you describe points to a jealousy that is starting to affect your freedom and daily life. You may already be changing some of your behaviours to avoid conflict. That's an important signal. Jealousy at this level isn't just a matter of temperament — it needs to be addressed directly in the relationship.", "r4_a": "",
     "r5_t": "Intense jealousy", "r5_d": "What you've described goes beyond ordinary jealousy. The level of monitoring, control or pressure you're experiencing deserves to be taken seriously. You don't have to normalise what you feel. If you feel constrained in your relationship, if you calculate your actions to avoid reactions, it's important to talk to someone you trust.", "r5_a": ""
+  },
+  "genant": {
+    "q1": "You're at a party at a friend's place. You're making out.",
+    "q1a": "We never really thought about it. If we feel like it, we do it.",
+    "q1b": "It can go on for a while if the vibe is right. People can deal with it.",
+    "q1c": "A quick peck, sure. But we keep it classy.",
+    "q1d": "No, never. We save that for home.",
+
+    "q2": "You're at a restaurant. Your partner can't decide what to order.",
+    "q2a": "We order for them AND negotiate with the waiter to make adjustments. They approve after the fact.",
+    "q2b": "We order for them without asking. We know what they like.",
+    "q2c": "We suggest a dish or two if we know their taste.",
+    "q2d": "We wait for them to choose, we don't get involved.",
+
+    "q3": "You're on public transport. Your partner falls asleep on your shoulder.",
+    "q3a": "We wake them up with a proper kiss because we just can't help it. Neighbours' discomfort not included.",
+    "q3b": "We give them little kisses on the neck. The other passengers can see, good for them.",
+    "q3c": "We put a hand on their knee or give them a discreet kiss on the forehead.",
+    "q3d": "We stay still so we don't wake them up, without doing anything more.",
+
+    "q4": "You have a pet name for your partner. An outsider hears it for the first time.",
+    "q4a": "The pet name is objectively embarrassing (\"snookums\", \"teddy bear potato\", \"baby boo boo\") and we don't care.",
+    "q4b": "The pet name slips out naturally. If people think it's cute, great.",
+    "q4c": "It might slip out, but it's a pretty neutral pet name.",
+    "q4d": "We never use pet names in public. That's between us.",
+
+    "q5": "You're at your partner's parents' place. You're having an argument.",
+    "q5a": "We sort it out right here, right now. The parents are part of the family, they can handle it.",
+    "q5b": "We don't shout at each other but the tension is visible. The parents have noticed.",
+    "q5c": "We say what we need to say in a low voice, in a corner.",
+    "q5d": "We wait until we're alone to talk about it. Fake smiles all around.",
+
+    "q6": "Your partner says something wrong during a group dinner.",
+    "q6a": "We correct them, explain why they're wrong, and end up telling the related story. People around are used to it.",
+    "q6b": "We correct them directly. We try to be nice about it but we correct them.",
+    "q6c": "We slip in a discreet correction to stop them from digging deeper.",
+    "q6d": "We let it slide. We talk about it later.",
+
+    "q7": "You're in a queue. You're bored.",
+    "q7a": "We play games that might surprise the people around us (tickle fights, dares, adult-level funny face contests).",
+    "q7b": "We cuddle, we do our little things. Everyone else is waiting too, they get it.",
+    "q7c": "We chat, we comment on the people around us (quietly, though).",
+    "q7d": "We each look at our phones.",
+
+    "q8": "Your partner farts. In public.",
+    "q8a": "We comment on it, rate it, compare it to last time. The people around can hear.",
+    "q8b": "We laugh. Openly, without hiding it.",
+    "q8c": "We exchange a knowing look but keep our composure.",
+    "q8d": "We act like nothing happened. It doesn't exist.",
+
+    "q9": "You're grocery shopping together. Your partner puts something in the cart that wasn't planned.",
+    "q9a": "We debate at length, call the other one out (\"but you said we were being careful\"), and end up buying it anyway.",
+    "q9b": "We put the item back and explain why. Little debate in the yoghurt aisle.",
+    "q9c": "We raise an eyebrow, they explain, OK.",
+    "q9d": "We don't say anything, we can treat ourselves.",
+
+    "q10": "You're at a party. Your partner is dancing. You're not.",
+    "q10a": "We create a moment. Impromptu tango, group dance recruited from the crowd, a show for nobody in particular.",
+    "q10b": "We end up dancing. Not very well. We don't care.",
+    "q10c": "We move closer, put our hands on their hips, sway along without really dancing.",
+    "q10d": "We watch from afar with tenderness. We don't move.",
+
+    "q11": "Your partner has something stuck in their teeth.",
+    "q11a": "We try to remove it ourselves before telling them. The people around see everything, that's fine.",
+    "q11b": "We tell them directly, in front of everyone. It's for their own good.",
+    "q11c": "We signal with our eyes and a little hand gesture.",
+    "q11d": "We whisper it discreetly in their ear.",
+
+    "q12": "You're taking a couple's photo. In a public place.",
+    "q12a": "Full photo shoot with retakes, light choreography, possibly a stranger recruited as photographer.",
+    "q12b": "Full photo shoot. We pose, we redo it, we direct.",
+    "q12c": "A few poses, we take the time to find the right angle.",
+    "q12d": "One quick photo, natural, no staging.",
+
+    "q13": "Your partner cries during a film, in a movie theatre.",
+    "q13a": "We cry too. We hold each other. The people around can comment, we don't hear them.",
+    "q13b": "We give them a hug. No problem with the neighbours in our row.",
+    "q13c": "We take their hand, we lean towards them.",
+    "q13d": "We discreetly hand them a tissue.",
+
+    "q14": "You're having an argument in the street.",
+    "q14a": "We sort it out right here, right now, at whatever speed we need. Volume not guaranteed.",
+    "q14b": "We stop, we say what needs to be said. Passers-by take a detour.",
+    "q14c": "We talk, but in a low voice, while still walking.",
+    "q14d": "We stop immediately. We'll pick this up at home.",
+
+    "q15": "You're at your partner's office (open plan, colleagues present). You come to give them a kiss.",
+    "q15a": "We show up like we're at home. Kiss, settle in, maybe a comment about the desk decor. The colleagues love it or pretend to.",
+    "q15b": "Kiss, cuddle, a little moment. The colleagues know we're together, it's not a secret.",
+    "q15c": "We approach, quick kiss, hello to the nearby colleagues.",
+    "q15d": "We wave from the entrance and wait for them to come over.",
+
+    "r1_t": "The discreet ones",
+    "r1_d": "Your couple exists, but you keep it to yourselves. In public, you're two people who happen to know each other. In private, that's a different story. You like having a space that's all yours, inaccessible to the outside gaze, and that's a perfectly valid way to operate. Some couples build themselves away from the world, and it holds up just fine. The only thing to watch out for: that this discretion doesn't turn into distance. That it's an active, shared choice, not a habit that crept in without either of you noticing.",
+    "r1_a": "Take the \"Are you a healthy couple?\" quiz to dig a little deeper.",
+
+    "r2_t": "The reasonable ones",
+    "r2_d": "You love each other, it shows, and you don't traumatise anyone. You've found a balance that many are looking for. Close enough for it to be felt, discreet enough for the people around you not to feel assaulted. You allow yourselves little moments without turning it into a public display, and that's probably why people enjoy being around you two. It's not the most spectacular score, but it's often the most pleasant to live with, for you and for everyone around.",
+    "r2_a": "Test your common points with the dedicated quiz.",
+
+    "r3_t": "The uninhibited ones",
+    "r3_d": "You live your life, people adapt. You don't overthink what others think, and that's generally good news. You have your own things, your codes, your moments, and you don't really hide them. The people around you know you're together, in every sense of the word. Just be careful to keep an eye on situations where your partner doesn't quite share your level of uninhibitedness that day. The freedom to be embarrassing works better when both of you are all in.",
+    "r3_a": "Are you the type to share everything? Check out the \"Who knows their partner best\" quiz.",
+
+    "r4_t": "The unfiltered ones",
+    "r4_d": "Your couple is a life experience for everyone around. You live your relationship to the fullest, and to the fullest means in public too. The people around you probably have opinions about your couple, stories to tell, and maybe a few images that are hard to erase. You call it loving without restraint. Hard to say you're wrong. The only real question: is your partner at exactly the same level as you? Because \"unfiltered together\" is one thing, \"unfiltered alone while the other one manages the fallout\" is another.",
+    "r4_a": "Take the quiz together to compare your answers.",
+
+    "r5_t": "The legendary ones",
+    "r5_d": "People remember the parties where you were there. You're a monument couple. An experience. The people who spend time with you either have a genuine affection for you two, or a stockpile of stories for dinner parties. Either way, you leave nobody indifferent. There's a kind of freedom in there that's pretty rare. Embarrassment, you've digested it so thoroughly that it doesn't really exist anymore. It's almost a higher level of peace of mind, just reached through an unusual path. One question for the road: does your circle tell you this with a smile or with a slight grimace? The answer to that is your only real indicator.",
+    "r5_a": "Ready for a spicy quiz? Test yourselves."
   }
 }

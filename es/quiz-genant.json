@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "title": "Quiz pareja vergonzoso: ¿hasta dónde os atrevéis a llegar juntos?",
+    "description": "Morrearos en público, pedir por el otro en el restaurante, llamar a vuestra pareja \"osito pachoncete\" delante de sus compañeros de trabajo... Cada pareja tiene sus cosillas vergonzosas. La pregunta es: ¿cuántas tenéis vosotros, y las asumís?",
+    "titleHighlight": "vergonzoso",
+    "badge": "Quiz Divertido • Gratis • 5 min",
+    "subtitle": "Este quiz está aquí para meter el dedo en la llaga. Quince situaciones concretas, cuatro respuestas posibles, un perfil de pareja al final. Responded con honestidad, es mucho más divertido."
+  },
+  "section1": {
+    "title": "¿Qué es exactamente una pareja \"vergonzosa\"?",
+    "p1": "La vergüenza en pareja es subjetiva. Para algunos, dos personas que se abrazan en el metro ya es demasiado. Para otros, pedir por el otro en el restaurante es mono. Lo que todo el mundo llama \"pareja vergonzosa\" es en realidad una pareja que sale de su zona privada y deja que se desborden en el espacio público cosas que, convencionalmente, se quedarían entre las paredes de su casa.",
+    "p2": "No es un juicio. Es una observación.",
+    "p3": "Las parejas muy fusionales suelen tener este perfil. No porque les falte tacto, sino porque su burbuja es tan densa que ocupa un poco más de espacio del previsto. Han desarrollado sus códigos, sus rituales, su forma de estar juntos, y a veces los exportan. La gente de alrededor ve algo que no les pertenece, y eso es lo que crea la sensación de vergüenza."
+  },
+  "section2": {
+    "title": "¿Es grave ser una pareja vergonzosa?",
+    "p1": "No. No realmente. Obviamente hay límites: comportamientos que realmente incomodan a la gente en espacios donde no pueden irse, situaciones donde la exhibición se convierte en una forma de falta de respeto hacia el contexto. Un funeral no es una fiesta entre amigos. Una oficina diáfana no es un piso.",
+    "p2": "Pero en la gran mayoría de los casos, una pareja \"vergonzosa\" es simplemente una pareja a la que le gusta estar junta, que no se come demasiado la cabeza con lo que piensa la gente, y que tiene una forma de interactuar que se sale ligeramente de las convenciones. La mayoría de las veces, la gente de alrededor lo encuentra entrañable mucho más a menudo de lo que admiten.",
+    "p3": "Lo que realmente causa problema es cuando uno de los dos está mucho más cómodo que el otro con esta exhibición pública. Cuando uno lo encuentra natural y el otro lo gestiona sonriendo sin vivirlo realmente bien. Esa asimetría merece una conversación de verdad, no para cortar los impulsos, sino para asegurarse de que los dos están en el mismo sitio."
+  },
+  "section3": {
+    "title": "¿Por qué algunas parejas son más demostrativas que otras?",
+    "p1": "Es una combinación de factores, y ninguno es realmente voluntario. La historia familiar juega mucho. Las personas que crecieron en familias donde el afecto se expresa física y abiertamente encuentran natural reproducir eso en su relación adulta. Los que tuvieron una educación más pudorosa sienten a menudo una verdadera resistencia interior a mostrar cualquier cosa en público, incluso cuando les apetece.",
+    "p2": "La duración de la relación también cambia las cosas. Al principio, las parejas tienden a ser o muy demostrativas (la fase de \"no podemos evitarlo\") o muy discretas (aún no sabemos dónde estamos). Con el tiempo, se instala una especie de equilibrio. Las parejas que siguen siendo muy demostrativas después de varios años generalmente han elegido este modo de funcionamiento conscientemente, aunque no siempre se diga explícitamente.",
+    "p3": "Y luego está simplemente la personalidad. Algunas personas les da igual la mirada de los demás de forma constitutiva. No por fanfarronería, no por exhibicionismo, simplemente porque esa antena está menos desarrollada en ellas. Viven sus relaciones con la misma intensidad en privado y en público, sin hacer realmente la diferencia.",
+    "p4": ""
+  },
+  "section4": {
+    "title": "¿Cómo saber si vuestra pareja está en la zona \"vergonzosa divertida\" o \"vergonzosa problemática\"?",
+    "p1": "La línea es difusa, pero existe. Algunos puntos de referencia útiles. Si la gente de alrededor sonríe (incluso mirando para otro lado), estáis en la zona \"vergonzosa divertida\". Si la gente de alrededor cambia de acera o mira sus zapatos con una intensidad inusual, os estáis acercando a la línea.",
+    "p2": "Si tu pareja y tú os reís de las mismas situaciones después, es buena señal. Si uno de vosotros tiene que \"gestionar\" regularmente las consecuencias sociales de lo que el otro ha hecho, hay un desequilibrio que merece la pena examinar.",
+    "p3": "Si vuestros amigos os siguen invitando, es que no habéis superado el umbral de tolerancia. Es un indicador concreto e infravalorado.",
+    "p4": "Y si habéis hecho este quiz juntos y habéis sacado puntuaciones muy diferentes, tomad cinco minutos para comparar vuestras respuestas pregunta por pregunta. Las diferencias suelen ser más interesantes que la puntuación final."
+  },
+  "jsonLd": {
+    "faq1Q": "¿Qué es una pareja vergonzosa?",
+    "faq1A": "Una pareja vergonzosa es una pareja que deja que se desborden en el espacio público comportamientos habitualmente reservados a la esfera privada: motes vergonzosos, abrazos prolongados, discusiones en público, etc. No es un juicio, es una observación sobre el desfase entre la burbuja de la pareja y las convenciones sociales.",
+    "faq2Q": "¿Es grave ser una pareja vergonzosa?",
+    "faq2A": "No, no realmente. En la gran mayoría de los casos, una pareja vergonzosa es simplemente una pareja fusional que no se come demasiado la cabeza con la mirada de los demás. El único punto de vigilancia es la asimetría: que los dos estén al mismo nivel de comodidad con esta demostración pública.",
+    "faq3Q": "¿Por qué algunas parejas son más demostrativas que otras?",
+    "faq3A": "Es una combinación de la historia familiar (educación afectiva), la duración de la relación (fase fusional vs equilibrio establecido) y la personalidad de cada uno. Algunas personas son naturalmente menos sensibles a la mirada de los demás."
+  }
+}

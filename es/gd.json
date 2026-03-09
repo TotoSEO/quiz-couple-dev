@@ -910,5 +910,116 @@
     "r3_t": "Celos moderados", "r3_d": "Los comportamientos de tu pareja apuntan a unos celos moderados pero reales. Ciertas situaciones crean tensión y sientes que vigila o interroga de una forma que a veces te pesa. Es un buen momento para hablarlo con calma, antes de que los hábitos se instalen.", "r3_a": "",
     "r4_t": "Celos importantes", "r4_d": "Lo que describes apunta a unos celos que empiezan a pesar sobre tu libertad y tu día a día. Quizás ya estás modificando algunos comportamientos para evitar conflictos. Es una señal importante que merece ser abordada directamente en la relación.", "r4_a": "",
     "r5_t": "Celos intensos", "r5_d": "Lo que has descrito va más allá de los celos ordinarios. El nivel de vigilancia, control o presión que vives merece ser tomado en serio. No estás obligado/a a normalizar lo que sientes. Si te sientes a disgusto en tu relación, si calculas lo que haces para evitar reacciones, es importante hablarlo con alguien de confianza.", "r5_a": ""
+  },
+  "genant": {
+    "q1": "Estáis en una fiesta en casa de unos amigos. Os coméis a morreos.",
+    "q1a": "Nunca nos hemos fijado mucho. Si nos apetece, lo hacemos.",
+    "q1b": "Puede durar un rato si el ambiente acompaña. La gente se puede adaptar.",
+    "q1c": "Un besito rápido, sí. Pero nos mantenemos correctos.",
+    "q1d": "No, nunca. Eso lo guardamos para casa.",
+
+    "q2": "Estáis en un restaurante. Tu pareja no sabe qué va a pedir.",
+    "q2a": "Pedimos por él/ella Y negociamos con el camarero para ajustar. Él/ella valida después.",
+    "q2b": "Pedimos por él/ella sin preguntarle. Sabemos lo que le gusta.",
+    "q2c": "Le sugerimos uno o dos platos si conocemos sus gustos.",
+    "q2d": "Esperamos a que elija, no nos metemos.",
+
+    "q3": "Estáis en el transporte público. Tu pareja se queda dormida en tu hombro.",
+    "q3a": "Le despertamos dándole un beso con ganas porque no podemos evitarlo. La incomodidad de los vecinos no está incluida.",
+    "q3b": "Le damos besitos en el cuello. Los demás pasajeros pueden mirar, mejor para ellos.",
+    "q3c": "Le ponemos la mano en la rodilla o le damos un beso en la frente discretamente.",
+    "q3d": "Nos quedamos inmóviles para no despertarle, sin hacer nada más.",
+
+    "q4": "Tenéis un mote para vuestra pareja. Alguien de fuera lo escucha por primera vez.",
+    "q4a": "El mote es objetivamente vergonzoso (\"cariñito\", \"osito patata\", \"bebé bombón\") y nos da igual.",
+    "q4b": "El mote sale de forma natural. Si a la gente le parece mono, mejor.",
+    "q4c": "Puede que se nos escape el mote, pero es un mote bastante neutro.",
+    "q4d": "Nunca usamos los motes en público. Eso es entre nosotros.",
+
+    "q5": "Estáis en casa de los padres de tu pareja. Os estáis peleando.",
+    "q5a": "Lo resolvemos ahí, ahora. Los padres son familia, que lo gestionen.",
+    "q5b": "No nos gritamos pero la tensión se nota. Los padres se han dado cuenta.",
+    "q5c": "Nos decimos lo que tenemos que decirnos en voz baja, en un rincón.",
+    "q5d": "Esperamos a estar solos para hablarlo. Sonrisas de fachada.",
+
+    "q6": "Tu pareja dice algo incorrecto durante una cena en grupo.",
+    "q6a": "Le corregimos, desarrollamos por qué se equivoca, y acabamos contando la anécdota relacionada. La gente de alrededor ya está acostumbrada.",
+    "q6b": "Le corregimos directamente. Intentamos ser majos pero corregimos.",
+    "q6c": "Deslizamos una corrección discreta para evitar que siga en el error.",
+    "q6d": "Lo dejamos pasar. Ya hablaremos después.",
+
+    "q7": "Estáis en una cola. Os aburrís.",
+    "q7a": "Jugamos a cosas que pueden sorprender a los vecinos de cola (cosquillas, retos, concurso de muecas nivel adulto).",
+    "q7b": "Nos hacemos mimos, hacemos nuestras cositas. La gente también está esperando, lo entienden.",
+    "q7c": "Hablamos, comentamos a la gente de alrededor (en voz baja, eso sí).",
+    "q7d": "Cada uno mira su móvil.",
+
+    "q8": "Tu pareja se tira un pedo. En público.",
+    "q8a": "Lo comentamos, lo puntuamos, lo comparamos con la última vez. La gente alrededor puede oírlo.",
+    "q8b": "Nos reímos. Abiertamente, sin escondernos.",
+    "q8c": "Nos lanzamos una mirada cómplice pero mantenemos la dignidad.",
+    "q8d": "Hacemos como si no hubiese pasado nada. Eso no existe.",
+
+    "q9": "Estáis haciendo la compra juntos. Tu pareja mete algo en el carrito que no estaba previsto.",
+    "q9a": "Debatimos largo y tendido, llamamos al otro al rescate (\"pero si habías dicho que íbamos a controlar\"), y al final lo compramos igualmente.",
+    "q9b": "Devolvemos el artículo al estante explicando por qué. Pequeño debate en el pasillo de los yogures.",
+    "q9c": "Levantamos una ceja, él/ella se explica, vale.",
+    "q9d": "No decimos nada, podemos darnos un capricho.",
+
+    "q10": "Estáis en una fiesta. Tu pareja está bailando. Tú, no.",
+    "q10a": "Creamos un momento. Tango improvisado, grupo de baile reclutado a nuestro alrededor, show para nadie en particular.",
+    "q10b": "Acabamos bailando. No muy bien. Nos da igual.",
+    "q10c": "Nos acercamos, le ponemos las manos en las caderas, acompañamos sin bailar realmente.",
+    "q10d": "Miramos desde lejos con ternura. No nos movemos.",
+
+    "q11": "Tu pareja tiene algo entre los dientes.",
+    "q11a": "Intentamos quitárselo nosotros mismos antes de decírselo. La gente de alrededor lo ve todo, no pasa nada.",
+    "q11b": "Se lo decimos directamente, delante de la gente. Es por su bien.",
+    "q11c": "Le hacemos señas con los ojos y un pequeño gesto con la mano.",
+    "q11d": "Se lo susurramos discretamente al oído.",
+
+    "q12": "Os hacéis una foto en plan enamorados. En un lugar público.",
+    "q12a": "Sesión de fotos completa con repeticiones, coreografía ligera, eventualmente un desconocido reclutado como fotógrafo.",
+    "q12b": "Sesión de fotos completa. Posamos, repetimos, dirigimos.",
+    "q12c": "Algunas poses, nos tomamos el tiempo de encontrar el buen ángulo.",
+    "q12d": "Una foto rápida, natural, sin montaje.",
+
+    "q13": "Tu pareja llora viendo una película, en una sala de cine.",
+    "q13a": "Lloramos también. Nos abrazamos. La gente de alrededor puede comentar, no les oímos.",
+    "q13b": "Le damos un abrazo. Sin problema con los vecinos de fila.",
+    "q13c": "Le cogemos la mano, nos inclinamos hacia él/ella.",
+    "q13d": "Le pasamos un pañuelo discretamente.",
+
+    "q14": "Tenéis una pelea en la calle.",
+    "q14a": "Resolvemos el asunto ahí, ahora, a la velocidad que necesitemos. Volumen no garantizado.",
+    "q14b": "Nos paramos, decimos lo que tenemos que decir. Los peatones hacen un rodeo.",
+    "q14c": "Hablamos, pero en voz baja, mientras seguimos caminando.",
+    "q14d": "Paramos en seco. Lo retomamos en casa.",
+
+    "q15": "Estáis en la oficina de tu pareja (espacio abierto, compañeros presentes). Vienes a darle un beso.",
+    "q15a": "Llegamos como si estuviéramos en casa. Beso, nos instalamos, incluso algún comentario sobre la decoración del escritorio. Los compañeros lo adoran o disimulan.",
+    "q15b": "Beso, abrazo, un ratito. Los compañeros saben que estamos juntos, no es ningún secreto.",
+    "q15c": "Nos acercamos, besito rápido, saludamos a los compañeros cercanos.",
+    "q15d": "Hacemos una señal con la mano desde la entrada y esperamos a que venga.",
+
+    "r1_t": "Los discretos",
+    "r1_d": "Vuestra pareja existe, pero os lo guardáis para vosotros. En público, sois dos personas que se conocen. En privado, es otra historia. Os gusta tener un espacio bien vuestro, inaccesible a la mirada de los demás, y es una forma de funcionar totalmente válida. Algunas parejas se construyen fuera del mundo, y eso se sostiene muy bien. Lo único que hay que vigilar: que esa discreción no se convierta en distancia. Que sea una elección activa y compartida, no una costumbre que se ha instalado sin que os dierais cuenta.",
+    "r1_a": "Haz el quiz \"¿Sois una pareja sana?\" para ir un poco más lejos.",
+
+    "r2_t": "Los razonables",
+    "r2_d": "Os queréis, se nota, no traumatizáis a nadie. Habéis encontrado un equilibrio que muchos buscan. Suficientemente cercanos para que se sienta, suficientemente discretos para que la gente alrededor no se sienta agredida. Os permitís pequeños momentos sin hacer de ello una demostración pública, y probablemente por eso a la gente le gusta estar con vosotros dos. No es la puntuación más espectacular, pero a menudo es la más agradable de vivir, para vosotros y para todos los que os rodean.",
+    "r2_a": "Probad vuestros puntos en común con el quiz dedicado.",
+
+    "r3_t": "Los desinhibidos",
+    "r3_d": "Hacéis vuestra vida, la gente se adapta. No os hacéis demasiadas preguntas sobre lo que piensan los demás, y eso en general es una buena noticia. Tenéis vuestras cosas, vuestros códigos, vuestros momentos, y no los escondéis realmente. La gente de alrededor sabe que estáis juntos, en todos los sentidos del término. Eso sí, tened cuidado con las situaciones en las que el otro no comparte exactamente vuestro nivel de desinhibición ese día. La libertad de incomodar funciona mejor cuando los dos vais a tope.",
+    "r3_a": "¿Sois del tipo que lo compartís todo? Descubrid el quiz \"¿Quién conoce mejor a su pareja?\".",
+
+    "r4_t": "Los sin filtro",
+    "r4_d": "Vuestra pareja es una experiencia vital para todos los que os rodean. Vivís vuestra relación a tope, y a tope significa en público también. La gente a vuestro alrededor probablemente tiene opiniones sobre vuestra pareja, anécdotas que contar, y quizás algunas imágenes difíciles de borrar. Vosotros lo llamáis amar sin frenos. Difícil llevaros la contraria. La única pregunta de verdad: ¿vuestra pareja está exactamente al mismo nivel que vosotros? Porque \"sin filtro de a dos\" es una cosa, \"sin filtro solo mientras el otro gestiona\" es otra muy distinta.",
+    "r4_a": "Haz el quiz juntos para comparar vuestras respuestas.",
+
+    "r5_t": "Los legendarios",
+    "r5_d": "La gente se acuerda de las fiestas en las que estuvisteis. Sois una pareja monumento. Una experiencia. La gente que os trata tiene o bien un cariño sincero hacia vosotros dos, o bien un arsenal de historias para las cenas. En cualquier caso, no dejáis a nadie indiferente. Hay una forma de libertad ahí dentro que es bastante rara. La vergüenza, la habéis digerido tanto que ya no existe realmente. Es casi un nivel superior de tranquilidad mental, solo que conseguido por un camino poco habitual. Una pregunta para el camino: ¿vuestro entorno os lo dice con una sonrisa o con una ligera crispación? La respuesta a eso es vuestro único indicador real.",
+    "r5_a": "¿Estáis hechos para un quiz picante? Poneos a prueba."
   }
 }
