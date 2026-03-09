@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "title": "Test de celos en pareja: ¿eres celoso/a?",
+    "description": "Dos tests para medir los celos en pareja: los tuyos y los de tu pareja. Resultados matizados.",
+    "titleHighlight": "celoso/a",
+    "badge": "Test Celos • Gratis • 5 min"
+  },
+  "section1": {
+    "title": "¿Por qué sentimos celos en pareja?",
+    "p1": "Los celos no aparecen por azar. Se instalan donde hay algo que perder, lo que significa que en muchos casos dicen ante todo que te importa el otro. Excepto que eso no es toda la historia.",
+    "p2": "La mayoría de los celos relacionales beben de dos fuentes principales. La primera es el miedo al abandono, a menudo heredado de experiencias pasadas: una relación que terminó mal, una traición antigua, a veces algo mucho más antiguo que la relación actual. La segunda es la falta de confianza en uno mismo. No en el otro, en uno mismo. \"¿Por qué se quedaría conmigo si aparece alguien mejor?\" Esa pregunta, no siempre consciente, alimenta muchas reacciones que atribuimos erróneamente a la otra persona.",
+    "p3": "También hay un tercer factor que se menciona menos: el estilo de apego. Las personas con apego ansioso, aproximadamente un tercio de la población adulta según estudios de psicología del desarrollo, tienen una sensibilidad aumentada a las señales de alejamiento e interpretan más fácilmente situaciones neutras como amenazas. No es un defecto, es un cableado emocional que se instaló temprano y sobre el que se puede trabajar."
+  },
+  "section2": {
+    "title": "¿Son los celos en pareja un problema?",
+    "p1": "La respuesta corta: depende de su intensidad y de los comportamientos que produce.",
+    "p2": "Unos celos leves, los que se manifiestan como un pellizco cuando alguien flirtea con tu pareja o como una ligera inquietud cuando llega tarde sin avisar, no son un problema en sí mismos.",
+    "healthy": "<strong class=\"text-foreground\">Los celos se mantienen sanos</strong> mientras no generen comportamientos de control o vigilancia. Es una emoción que dice que te importa tu pareja.",
+    "toxic": "<strong class=\"text-foreground\">Los celos se vuelven problemáticos</strong> cuando empiezan a dictar comportamientos: revisar el teléfono, vigilar los desplazamientos, interrogar sistemáticamente, restringir las relaciones sociales del otro.",
+    "quote": "Pasamos entonces de una emoción normal a un modo de control que daña la confianza y el espacio vital de cada uno. La persona celosa sufre, la persona vigilada se asfixia. Los dos salen perdiendo."
+  },
+  "section3": {
+    "title": "¿Cómo interpretar tu puntuación?",
+    "intro": "Cada test se puntúa sobre 60 puntos (20 preguntas × 3 puntos máx). Estos son los niveles de resultado:",
+    "headerScore": "Puntuación",
+    "headerLevel": "Nivel de celos",
+    "headerAnalysis": "Interpretación",
+    "row1Score": "0 a 12 puntos",
+    "row1Level": "Poco o nada celoso/a",
+    "row1Analysis": "Los celos no parecen ser un tema en tu relación. Base sólida de confianza.",
+    "row2Score": "13 a 36 puntos",
+    "row2Level": "Celos leves a moderados",
+    "row2Analysis": "Existen reflejos de celos pero se mantienen manejables. Un buen punto de partida para reflexionar.",
+    "row3Score": "37 a 60 puntos",
+    "row3Level": "Celos importantes a intensos",
+    "row3Analysis": "Los celos ocupan un lugar significativo. Es importante hablarlo y buscar ayuda."
+  },
+  "section4": {
+    "title": "¿Cómo dejar de ser celoso/a en la relación?",
+    "p1": "El primer paso es entender de dónde vienen los celos. No en teoría general, sino en tu caso concreto. ¿Siempre han estado ahí o aparecieron en un momento particular?",
+    "p2": "Lo que ayuda concretamente:",
+    "pillar1Title": "Trabajar en la confianza en uno mismo",
+    "pillar1Text": "Los celos que vienen del sentimiento de no ser \"suficiente\" no se resuelven vigilando más al otro, se resuelven reconstruyendo la autoestima. Terapia, actividades valorantes, círculo social fuera de la pareja.",
+    "pillar2Title": "Nombrar lo que sientes",
+    "pillar2Text": "\"Cuando llegas tarde sin avisarme me siento ansioso/a\" dice algo diferente a \"no te importo nada\". Lo primero abre una conversación, lo segundo la cierra.",
+    "pillar3Title": "Distinguir hecho e interpretación",
+    "pillar3Text": "Tu pareja se río por teléfono, eso es un hecho. \"Se reía con alguien que le gusta\" es una interpretación. <strong>El espacio entre los dos es donde viven los celos.</strong> Reducir ese espacio es una habilidad que se aprende."
+  },
+  "section5": {
+    "title": "Mi pareja es demasiado celosa: ¿qué hago?",
+    "intro": "Vivir con una persona muy celosa es agotador de una forma particular. Porque no haces nada malo, pero aun así tienes que dar cuentas.",
+    "pillar1Title": "No confundir amor y celos",
+    "pillar1Text": "Los celos excesivos no son una prueba de amor, son una señal de que algo no va bien en él/ella y que se está desbordando sobre ti.",
+    "pillar2Title": "Hablarlo directamente",
+    "pillar2Text": "Fuera de un contexto de conflicto. \"Cuando compruebas dónde estoy varias veces al día, me siento vigilado/a y me pesa\" permite al otro escuchar algo concreto.",
+    "pillar3Title": "Establecer límites claros",
+    "pillar3Text": "Si los comportamientos celosos persisten, se intensifican o empiezan a parecerse a control o aislamiento, es un límite que merece establecerse claramente. <strong>Querer a alguien no significa aceptar vivir vigilado/a.</strong>",
+    "pillar4Title": "Reconocer las señales de alarma",
+    "pillar4Text": "Modificas regularmente tu comportamiento, los comportamientos de control se expanden (localización, mensajes, aislamiento), te sientes culpable de cosas que no has hecho. Si reconoces varias de estas señales, no es una situación que normalizar."
+  },
+  "section6": {
+    "title": "¿Cuándo se convierten los celos en un problema serio?",
+    "p1": "Hay señales que indican que los celos han cruzado un umbral. Cuando el miedo a la reacción del otro dicta tus decisiones, ya no son celos ordinarios.",
+    "p2": "Trabajar con un profesional no es un último recurso. Es a menudo el camino más directo hacia una relación serena.",
+    "dontTitle": "Lo que agrava los celos",
+    "dont1Title": "Buscar pruebas",
+    "dont1Text": "Revisar el teléfono, vigilar las redes sociales, comprobar localizaciones. Estos comportamientos alimentan la ansiedad en lugar de calmarla.",
+    "dont2Title": "Acusar sin hechos",
+    "dont2Text": "Convertir una interpretación en acusación crea desconfianza por ambos lados y aleja a la pareja en lugar de tranquilizar.",
+    "doTitle": "Lo que ayuda a avanzar",
+    "do1Title": "Comunicar sin acusar",
+    "do1Text": "Expresar tus emociones (\"me siento preocupado/a cuando...\") en lugar de acusaciones (\"siempre haces...\"). Lo primero invita al diálogo, lo segundo provoca defensa.",
+    "do2Title": "Consultar a un profesional",
+    "do2Text": "Si los celos son profundos, si vuelven a pesar de tus esfuerzos, si ya han dañado relaciones anteriores. Es a menudo el camino más eficaz.",
+    "do3Title": "Trabajar en uno mismo",
+    "do3Text": "Reforzar la autoestima, desarrollar actividades personales, mantener un círculo social fuera de la pareja. La seguridad interior es el mejor antídoto contra los celos."
+  },
+  "section7": {
+    "title": "Lo que hay que recordar",
+    "p1": "Los celos en una relación raramente son blanco o negro. Están los que tranquilizan porque dicen que te importa el otro, y luego están los que asfixian, que vigilan, que acaban con todo.",
+    "p2": "Estos dos tests son un punto de partida para reflexionar, solo o en pareja. Los resultados no son diagnósticos.",
+    "p3": "Si sientes que los celos, los tuyos o los de tu pareja, ocupan demasiado espacio, es una información valiosa. No dudes en hablarlo."
+  },
+  "jsonLd": {
+    "faq1Q": "¿Cómo saber si soy celoso/a en mi relación?",
+    "faq1A": "Este test de 20 preguntas mide tu nivel de celos en una escala de 0 a 60 puntos, evaluando tus reacciones en situaciones de pareja comunes. Identifica 5 niveles, desde la ausencia de celos hasta los celos intensos.",
+    "faq2Q": "¿Son los celos en pareja normales?",
+    "faq2A": "Unos celos leves y ocasionales son completamente normales e indican que te importa tu pareja. Se vuelven problemáticos cuando generan comportamientos de control, vigilancia o restricción de libertades.",
+    "faq3Q": "¿Qué hacer si mi pareja es demasiado celosa?",
+    "faq3A": "Hablarlo directamente fuera de un contexto de conflicto, expresar el impacto real sobre ti y establecer límites claros. Si los comportamientos persisten, consultar a un profesional puede ser necesario."
+  }
+}

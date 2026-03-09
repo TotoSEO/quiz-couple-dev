@@ -1,0 +1,401 @@
+<%
+  const quizKey = 'testJalousie';
+  const ns = 'quiz-jalousie';
+  const quizTitle = t('quizzes:testJalousie.title', 'Test Jalousie Couple');
+  const quizDesc = t('quizzes:testJalousie.metaDescription', '');
+
+  // Build hasPart with actual quiz questions from jalousie1 prefix
+  const hasPart = [];
+  const optLetters = ['a', 'b', 'c', 'd'];
+  for (let qi = 1; qi <= 20; qi++) {
+    const qText = tgd('jalousie1.q' + qi, '');
+    if (!qText || qText === 'jalousie1.q' + qi) break;
+    const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
+    const ans = [];
+    for (let oi = 0; oi < optLetters.length; oi++) {
+      const oText = tgd.local ? tgd.local('jalousie1.q' + qi + optLetters[oi], '') : tgd('jalousie1.q' + qi + optLetters[oi], '');
+      if (!oText || oText === 'jalousie1.q' + qi + optLetters[oi]) break;
+      ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
+    }
+    if (ans.length > 0) qObj.suggestedAnswer = ans;
+    hasPart.push(qObj);
+  }
+
+  const quizSchema = {
+    "@context": "https://schema.org", "@type": "Quiz",
+    "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+    "datePublished": "2026-03-09", "isAccessibleForFree": true,
+    "learningResourceType": "Quiz", "interactivityType": "active",
+    "about": { "@type": "Thing", "name": "couple jealousy" },
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "totalQuestions", "value": 40 },
+      { "@type": "PropertyValue", "name": "audience", "value": "couples" }
+    ]
+  };
+  if (hasPart.length > 0) quizSchema.hasPart = hasPart;
+
+  const jsonLd = [
+    quizSchema,
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [1,2,3].map(function(i) {
+        return {
+          "@type": "Question", "name": t(ns + ':jsonLd.faq' + i + 'Q', ''),
+          "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':jsonLd.faq' + i + 'A', '') }
+        };
+      })
+    }
+  ];
+
+  // Translated labels for the tab selector
+  const tabLabels = {
+    fr: { tab1: 'Je veux tester ma jalousie', tab2: 'Je veux \u00e9valuer la jalousie de mon/ma partenaire', title1: 'Suis-je jaloux(se) ? Test de jalousie personnel', sub1: 'R\u00e9pondez spontan\u00e9ment. Ce qui compte, c\'est votre premi\u00e8re r\u00e9action.', title2: 'Mon/ma partenaire est-il/elle jaloux(se) ?', sub2: 'R\u00e9pondez en pensant \u00e0 ses comportements r\u00e9els, pas \u00e0 ce que vous imaginez.' },
+    en: { tab1: 'I want to test my own jealousy', tab2: 'I want to evaluate my partner\'s jealousy', title1: 'Am I jealous? Personal jealousy test', sub1: 'Answer spontaneously. Your first reaction is what counts.', title2: 'Is my partner jealous?', sub2: 'Answer based on their actual behaviours, not what you imagine.' },
+    es: { tab1: 'Quiero evaluar mis propios celos', tab2: 'Quiero evaluar los celos de mi pareja', title1: '\u00bfSoy celoso/a? Test de celos personal', sub1: 'Responde de forma espont\u00e1nea. Lo que cuenta es tu primera reacci\u00f3n.', title2: '\u00bfMi pareja es celosa?', sub2: 'Responde pensando en sus comportamientos reales, no en lo que imaginas.' },
+    de: { tab1: 'Ich m\u00f6chte meine eigene Eifersucht testen', tab2: 'Ich m\u00f6chte die Eifersucht meines Partners einsch\u00e4tzen', title1: 'Bin ich eifers\u00fcchtig? Pers\u00f6nlicher Eifersucht-Test', sub1: 'Antworte spontan. Deine erste Reaktion z\u00e4hlt.', title2: 'Ist mein Partner eifers\u00fcchtig?', sub2: 'Antworte basierend auf tats\u00e4chlich beobachtetem Verhalten, nicht auf Annahmen.' },
+    it: { tab1: 'Voglio testare la mia gelosia', tab2: 'Voglio valutare la gelosia del mio/della mia partner', title1: 'Sono geloso/a? Test di gelosia personale', sub1: 'Rispondi spontaneamente. Conta la tua prima reazione.', title2: 'Il mio partner \u00e8 geloso/a?', sub2: 'Rispondi pensando ai suoi comportamenti reali, non a ci\u00f2 che immagini.' }
+  };
+  const labels = tabLabels[lang] || tabLabels.fr;
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= quizTitle %></li>
+        </ol>
+      </nav>
+      <% const heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        <%= heroBadge %>
+      </span>
+      <% } %>
+      <%
+        const heroTitle = t(ns + ':hero.title', quizTitle);
+        const heroHighlight = t(ns + ':hero.titleHighlight', '');
+      %>
+      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%= t(ns + ':hero.description', '') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <div class="space-y-4 text-muted-foreground leading-relaxed text-center">
+      <p><%= lang === 'fr' ? 'La jalousie dans une relation, c\'est rarement noir ou blanc. Il y a celle qui rassure parce qu\'elle dit qu\'on tient \u00e0 l\'autre, et puis il y a celle qui \u00e9touffe, qui surveille, qui finit par tout ab\u00eemer. Entre les deux, il y a toute une gamme de comportements qu\'on ne voit pas toujours clairement quand on est dedans.' : lang === 'en' ? 'Jealousy in a relationship is rarely black and white. There\'s the kind that reassures because it says you care about the other person, and then there\'s the kind that suffocates, that watches, that ends up damaging everything. In between there\'s a whole range of behaviours we don\'t always see clearly when we\'re in the middle of it.' : lang === 'es' ? 'Los celos en una relaci\u00f3n raramente son blanco o negro. Est\u00e1n los que tranquilizan porque dicen que te importa el otro, y luego est\u00e1n los que asfixian, que vigilan, que acaban con todo. En medio hay toda una gama de comportamientos que no siempre se ven con claridad cuando est\u00e1s dentro.' : lang === 'de' ? 'Eifersucht in einer Beziehung ist selten schwarz oder wei\u00df. Es gibt die Art, die beruhigt, weil sie sagt, dass dir der andere etwas bedeutet, und dann gibt es die Art, die erstickt, die \u00fcberwacht, die am Ende alles zerst\u00f6rt.' : 'La gelosia in una relazione \u00e8 raramente in bianco o nero. C\'\u00e8 quella che rassicura perch\u00e9 dice che tieni all\'altro, e poi c\'\u00e8 quella che soffoca, che controlla, che alla fine rovina tutto.' %></p>
+      <p><%= lang === 'fr' ? 'Cette page propose deux tests distincts. Le premier est l\u00e0 si vous vous interrogez sur vous-m\u00eame. Le second est l\u00e0 si c\'est votre partenaire qui vous pr\u00e9occupe. Les r\u00e9sultats ne sont pas des diagnostics. Ils sont un point de d\u00e9part pour r\u00e9fl\u00e9chir, seul ou \u00e0 deux.' : lang === 'en' ? 'This page offers two distinct tests. The first is for those who are questioning themselves. The second is for those whose partner is the concern. The results aren\'t diagnoses. They\'re a starting point for reflection, alone or together.' : lang === 'es' ? 'Esta p\u00e1gina ofrece dos tests distintos. El primero es para los que se cuestionan a s\u00ed mismos. El segundo es para los que se preocupan por su pareja. Los resultados no son diagn\u00f3sticos. Son un punto de partida para reflexionar.' : lang === 'de' ? 'Diese Seite bietet zwei verschiedene Tests. Der erste ist f\u00fcr diejenigen, die sich selbst hinterfragen. Der zweite ist f\u00fcr diejenigen, die sich Sorgen um ihren Partner machen. Die Ergebnisse sind keine Diagnosen. Sie sind ein Ausgangspunkt zum Nachdenken.' : 'Questa pagina offre due test distinti. Il primo \u00e8 per chi si interroga su se stesso. Il secondo \u00e8 per chi si preoccupa per il proprio partner. I risultati non sono diagnosi. Sono un punto di partenza per riflettere.' %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Test Selector + Quiz Engine -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <!-- Tab Selector -->
+    <div class="max-w-2xl mx-auto mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="jalousie-tabs">
+        <button type="button" id="tab-jalousie1" class="jalousie-tab-btn btn btn-cta text-center py-4 px-6 rounded-xl font-semibold transition-all" aria-pressed="true" onclick="switchJalousieTest(1)">
+          <span class="text-lg block mb-1">&#128566;</span>
+          <span><%= labels.tab1 %></span>
+        </button>
+        <button type="button" id="tab-jalousie2" class="jalousie-tab-btn btn btn-outline text-center py-4 px-6 rounded-xl font-semibold transition-all" aria-pressed="false" onclick="switchJalousieTest(2)">
+          <span class="text-lg block mb-1">&#128101;</span>
+          <span><%= labels.tab2 %></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Test 1 Container -->
+    <div id="jalousie-test-1" class="jalousie-test-container">
+      <div class="text-center mb-6">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2"><%= labels.title1 %></h2>
+        <p class="text-muted-foreground"><%= labels.sub1 %></p>
+      </div>
+      <div id="quiz-engine" data-quiz="jalousie1" data-lang="<%= lang %>"></div>
+    </div>
+
+    <!-- Test 2 Container (hidden initially) -->
+    <div id="jalousie-test-2" class="jalousie-test-container hidden">
+      <div class="text-center mb-6">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2"><%= labels.title2 %></h2>
+        <p class="text-muted-foreground"><%= labels.sub2 %></p>
+      </div>
+      <div id="quiz-engine-2" data-quiz="jalousie2" data-lang="<%= lang %>"></div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Article -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section1.p1', '') %></p>
+        <p><%- t(ns + ':section1.p2', '') %></p>
+        <p><%- t(ns + ':section1.p3', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section2.p1', '') %></p>
+        <p><%- t(ns + ':section2.p2', '') %></p>
+        <ul class="space-y-3 ml-4">
+          <li class="flex items-start gap-2"><span class="text-primary font-bold">&bull;</span><span><%- t(ns + ':section2.healthy', '') %></span></li>
+          <li class="flex items-start gap-2"><span class="text-primary font-bold">&bull;</span><span><%- t(ns + ':section2.toxic', '') %></span></li>
+        </ul>
+        <blockquote class="border-l-4 border-primary pl-6 py-2 bg-muted/30 rounded-r-lg my-6">
+          <p class="text-lg italic"><%- t(ns + ':section2.quote', '') %></p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section3.intro', '') %></p>
+      <div class="overflow-x-auto">
+        <table class="quiz-table">
+          <thead><tr>
+            <th><%= t(ns + ':section3.headerScore', 'Score') %></th>
+            <th><%= t(ns + ':section3.headerLevel', 'Niveau') %></th>
+            <th><%= t(ns + ':section3.headerAnalysis', 'Analyse') %></th>
+          </tr></thead>
+          <tbody>
+            <% for (let i = 1; i <= 3; i++) { %>
+            <tr>
+              <td class="font-medium <%= i === 1 ? 'text-emerald-600' : i === 2 ? 'text-amber-600' : 'text-rose-600' %>"><%= t(ns + ':section3.row' + i + 'Score', '') %></td>
+              <td><%= t(ns + ':section3.row' + i + 'Level', '') %></td>
+              <td class="text-sm text-muted-foreground"><%= t(ns + ':section3.row' + i + 'Analysis', '') %></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section4.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed mb-8">
+        <p><%- t(ns + ':section4.p1', '') %></p>
+        <p><%- t(ns + ':section4.p2', '') %></p>
+      </div>
+      <div class="space-y-6">
+        <% for (let i = 1; i <= 3; i++) { %>
+        <div class="bg-card border border-border rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-3 text-primary"><%= t(ns + ':section4.pillar' + i + 'Title', '') %></h3>
+          <p class="text-muted-foreground"><%- t(ns + ':section4.pillar' + i + 'Text', '') %></p>
+        </div>
+        <% } %>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section5.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section5.intro', '') %></p>
+      <div class="space-y-6">
+        <% for (let i = 1; i <= 4; i++) { %>
+        <div class="border-l-4 border-destructive pl-6">
+          <h3 class="text-xl font-semibold mb-2"><%= t(ns + ':section5.pillar' + i + 'Title', '') %></h3>
+          <p class="text-muted-foreground"><%- t(ns + ':section5.pillar' + i + 'Text', '') %></p>
+        </div>
+        <% } %>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section6.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed mb-8">
+        <p><%- t(ns + ':section6.p1', '') %></p>
+        <p><%- t(ns + ':section6.p2', '') %></p>
+      </div>
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-destructive"><%= t(ns + ':section6.dontTitle', '') %></h3>
+          <div class="space-y-4">
+            <% for (let i = 1; i <= 2; i++) { %>
+            <div class="flex items-start gap-4 p-4 bg-destructive/10 border border-destructive/20 rounded-lg">
+              <span class="text-destructive font-bold">&#10007;</span>
+              <div>
+                <h4 class="font-semibold mb-1"><%= t(ns + ':section6.dont' + i + 'Title', '') %></h4>
+                <p class="text-muted-foreground"><%- t(ns + ':section6.dont' + i + 'Text', '') %></p>
+              </div>
+            </div>
+            <% } %>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-primary"><%= t(ns + ':section6.doTitle', '') %></h3>
+          <div class="space-y-4">
+            <% for (let i = 1; i <= 3; i++) { %>
+            <div class="flex items-start gap-4 p-4 bg-card border border-border rounded-lg">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex-shrink-0"><%= i %></span>
+              <div>
+                <h4 class="font-semibold mb-1"><%= t(ns + ':section6.do' + i + 'Title', '') %></h4>
+                <p class="text-muted-foreground"><%- t(ns + ':section6.do' + i + 'Text', '') %></p>
+              </div>
+            </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 border border-primary/20">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t(ns + ':section7.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section7.p1', '') %></p>
+        <p><%- t(ns + ':section7.p2', '') %></p>
+        <p class="text-foreground font-semibold"><%- t(ns + ':section7.p3', '') %></p>
+      </div>
+    </section>
+
+  </div>
+</article>
+
+<script src="/js/quiz-engine-core.js" defer></script>
+<script>
+// Custom jalousie quiz initializer - handles two quiz engines on one page
+(function() {
+  'use strict';
+
+  var JALOUSIE_QUIZ_CONFIG = {
+    'jalousie1': { prefix: 'jalousie1', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie1' },
+    'jalousie2': { prefix: 'jalousie2', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie2' }
+  };
+
+  var initialized = {};
+
+  function parseGdQuestions(prefix, maxQ) {
+    var questions = [];
+    var consecutiveMisses = 0;
+    for (var i = 1; i <= (maxQ || 50); i++) {
+      var qText = QuizEngine.tgd(prefix + '.q' + i, null);
+      if (!qText || qText === prefix + '.q' + i) {
+        consecutiveMisses++;
+        if (questions.length > 0 && consecutiveMisses >= 3) break;
+        continue;
+      }
+      consecutiveMisses = 0;
+      var options = [];
+      var optLetters = ['a', 'b', 'c', 'd'];
+      for (var j = 0; j < optLetters.length; j++) {
+        var oText = QuizEngine.tgd(prefix + '.q' + i + optLetters[j], null);
+        if (oText && oText !== prefix + '.q' + i + optLetters[j]) {
+          options.push({ id: optLetters[j], text: oText });
+        }
+      }
+      if (options.length > 0) {
+        var maxPts = options.length - 1;
+        for (var k = 0; k < options.length; k++) options[k].points = maxPts - k;
+        questions.push({ id: i, text: qText, options: options });
+      }
+    }
+    return questions;
+  }
+
+  function parseGdResults(prefix) {
+    var results = [];
+    for (var i = 1; i <= 10; i++) {
+      var title = QuizEngine.tgd(prefix + '.r' + i + '_t', null);
+      if (!title || title === prefix + '.r' + i + '_t') break;
+      results.push({
+        title: title,
+        description: QuizEngine.tgd(prefix + '.r' + i + '_d', ''),
+        advice: QuizEngine.tgd(prefix + '.r' + i + '_a', '')
+      });
+    }
+    if (results.length === 0) return results;
+    // Score ranges: 5 levels for 0-60 (20 questions * 3 pts max)
+    var maxScore = 60;
+    var ranges = [[0,12],[13,24],[25,36],[37,48],[49,60]];
+    for (var r = 0; r < results.length && r < ranges.length; r++) {
+      results[r].min = ranges[r][0];
+      results[r].max = ranges[r][1];
+    }
+    return results;
+  }
+
+  function initJalousieQuiz(testNum) {
+    if (initialized[testNum]) return;
+    var containerId = testNum === 1 ? 'quiz-engine' : 'quiz-engine-2';
+    var container = document.getElementById(containerId);
+    if (!container) return;
+
+    var configKey = 'jalousie' + testNum;
+    var cfg = JALOUSIE_QUIZ_CONFIG[configKey];
+    var lang = container.dataset.lang || 'fr';
+
+    QuizEngine.loadTranslations(lang, function() {
+      var questions = parseGdQuestions(cfg.prefix, cfg.pool + 10);
+      if (questions.length === 0) {
+        container.innerHTML = '<p class="text-center text-muted-foreground py-8">Quiz loading...</p>';
+        return;
+      }
+      var results = parseGdResults(cfg.prefix);
+      new QuizEngine.SoloTest({
+        container: container,
+        questions: questions,
+        results: results,
+        prefix: cfg.prefix,
+        lang: lang,
+        quizType: cfg.quizType || 'solo'
+      });
+      initialized[testNum] = true;
+    });
+  }
+
+  // Initialize test 1 on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { initJalousieQuiz(1); });
+  } else {
+    initJalousieQuiz(1);
+  }
+
+  // Switch between tests
+  window.switchJalousieTest = function(testNum) {
+    var test1 = document.getElementById('jalousie-test-1');
+    var test2 = document.getElementById('jalousie-test-2');
+    var tab1 = document.getElementById('tab-jalousie1');
+    var tab2 = document.getElementById('tab-jalousie2');
+
+    if (testNum === 1) {
+      test1.classList.remove('hidden');
+      test2.classList.add('hidden');
+      tab1.className = tab1.className.replace('btn-outline', 'btn-cta');
+      tab2.className = tab2.className.replace('btn-cta', 'btn-outline');
+      tab1.setAttribute('aria-pressed', 'true');
+      tab2.setAttribute('aria-pressed', 'false');
+    } else {
+      test1.classList.add('hidden');
+      test2.classList.remove('hidden');
+      tab2.className = tab2.className.replace('btn-outline', 'btn-cta');
+      tab1.className = tab1.className.replace('btn-cta', 'btn-outline');
+      tab2.setAttribute('aria-pressed', 'true');
+      tab1.setAttribute('aria-pressed', 'false');
+      initJalousieQuiz(2);
+    }
+
+    // Scroll to tabs
+    document.getElementById('jalousie-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+})();
+</script>

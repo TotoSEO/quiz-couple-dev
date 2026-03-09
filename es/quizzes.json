@@ -112,6 +112,12 @@
     "description": "20 preguntas para saber si estáis preparados para vivir juntos. Test gratuito para parejas, resultado inmediato.",
     "metaDescription": "¿Listos para dar el paso y vivir juntos? Este test de pareja os ayuda a saber si sois realmente compatibles en el día a día. 2 modos: juntos o por separado."
   },
+  "testJalousie": {
+    "title": "Test de celos en pareja: ¿eres celoso/a? Evalúa también a tu pareja",
+    "shortTitle": "Test Celos",
+    "description": "Dos tests de celos para parejas: uno para medir los tuyos, otro para evaluar los de tu pareja. Resultados matizados.",
+    "metaDescription": "Dos tests de celos para parejas: uno para medir los tuyos, otro para evaluar los de tu pareja. Preguntas precisas, resultados matizados."
+  },
   "activities": {
     "title": "Actividades en pareja cerca de mí — Ideas para salir juntos | Quiz Couple",
     "shortTitle": "Actividades en pareja",

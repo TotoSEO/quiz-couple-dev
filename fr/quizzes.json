@@ -112,6 +112,12 @@
     "description": "20 questions pour savoir si vous êtes prêts à vivre ensemble. Test gratuit à faire en couple, résultat immédiat.",
     "metaDescription": "Prêts à sauter le pas et vivre ensemble ? Ce test de couple vous aide à savoir si vous êtes vraiment compatibles au quotidien. 2 modes : ensemble ou chacun de son côté."
   },
+  "testJalousie": {
+    "title": "Test jalousie couple : suis-je jaloux(se) ? Testez-vous",
+    "shortTitle": "Test Jalousie",
+    "description": "Deux tests pour mesurer la jalousie dans le couple : la vôtre et celle de votre partenaire. Résultats nuancés.",
+    "metaDescription": "Deux tests de jalousie dans le couple : l'un pour mesurer votre propre jalousie, l'autre pour évaluer celle de votre partenaire. Questions précises, résultats nuancés."
+  },
   "activities": {
     "title": "Activités à faire en couple autour de chez soi | Quiz Couple",
     "shortTitle": "Activités en couple",
