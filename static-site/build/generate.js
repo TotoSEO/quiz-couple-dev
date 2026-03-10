@@ -848,10 +848,11 @@ async function generateBlogArticle(articleMeta, lang) {
     sidebarTests: [
       'testCouple', 'testCommonPoints', 'testDistance', 'testToxic',
       'testCoupleSain', 'testMariage', 'testDivorce', 'testParentalite', 'testAstroPrenoms',
+      'testJalousie', 'testLangageAmour',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
     sidebarQuizzes: [
       'quizAmoureux', 'quizCoquin', 'quizMarrant', 'quizKnowledge',
-      'quizMost', 'quizAdo',
+      'quizMost', 'quizAdo', 'quizGenant', 'quizTuPreferes',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
     sidebarOther: [
       'questionsCouple', 'problemResolver',

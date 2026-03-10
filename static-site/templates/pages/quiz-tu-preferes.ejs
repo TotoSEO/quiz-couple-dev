@@ -180,6 +180,94 @@
   </div>
 </article>
 
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- Vous aimerez aussi -->
+<%
+  var relatedItems = [
+    { routeKey: 'quizAmoureux', icon: '❤️' },
+    { routeKey: 'quizGenant', icon: '😳' },
+    { routeKey: 'quizMarrant', icon: '😂' },
+  ];
+%>
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-8"><%= t(ns + ':related.title', lang === 'fr' ? 'Vous aimerez aussi' : lang === 'en' ? 'You might also like' : lang === 'es' ? 'También te gustará' : lang === 'de' ? 'Das könnte euch auch gefallen' : 'Potrebbe piacerti anche') %></h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <% for (var ri = 0; ri < relatedItems.length; ri++) { var rel = relatedItems[ri]; %>
+      <a href="<%= getLocalizedUrl(rel.routeKey, lang) %>" class="glass-card rounded-xl p-6 text-center no-underline group hover:border-primary/30 transition-all">
+        <div class="text-3xl mb-3"><%= rel.icon %></div>
+        <h3 class="text-base font-bold mb-2 text-foreground group-hover:text-primary transition-colors"><%= t('quizzes:' + rel.routeKey + '.shortTitle', t('quizzes:' + rel.routeKey + '.title', '')) %></h3>
+        <p class="text-sm text-muted-foreground line-clamp-2"><%= t('quizzes:' + rel.routeKey + '.description', '') %></p>
+      </a>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'background', direction: 'up' }) %>
+
+<!-- Reviews Section -->
+<section class="py-12 md:py-16 bg-muted/20" id="avis">
+  <div id="reviews-config" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>" class="hidden"></div>
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-4">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <%= t('common:reviews.badge', 'Avis vérifiés') %>
+      </div>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('common:reviews.title', 'Ce que les couples') %> <span class="text-gradient"><%= t('common:reviews.titleHighlight', 'en pensent') %></span></h2>
+      <div class="flex items-center gap-3 justify-center mt-4">
+        <div id="reviews-stars-display" class="flex items-center gap-0.5">
+          <% for (var si = 0; si < 5; si++) { %>
+          <svg viewBox="0 0 24 24" class="w-5 h-5 star-filled"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <% } %>
+        </div>
+        <span class="text-2xl font-bold text-foreground" id="reviews-avg">-</span>
+        <span class="text-sm text-muted-foreground" id="reviews-count"></span>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+      <div class="lg:col-span-2 order-1">
+        <div class="lg:sticky lg:top-24 glass-card rounded-2xl p-6" id="review-form-section">
+          <h3 class="text-lg font-bold mb-5 text-center"><%= t('common:reviews.leaveReview', 'Laissez votre avis') %></h3>
+          <form id="review-form" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium mb-1.5" for="review-name"><%= t('common:reviews.yourName', 'Votre prénom') %></label>
+              <input type="text" id="review-name" class="input w-full" placeholder="<%= t('common:reviews.namePlaceholder', 'Prénom ou pseudo') %>" maxlength="60" autocomplete="off">
+              <div class="flex justify-end mt-1"><span id="review-name-counter" class="text-xs text-muted-foreground">0/60</span></div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1.5"><%= t('common:reviews.ratingLabel', 'Votre note') %></label>
+              <div class="flex gap-1" id="review-stars">
+                <% for (var s = 1; s <= 5; s++) { %>
+                <button type="button" data-star="<%= s %>" class="star-btn p-0.5 transition-transform hover:scale-110" aria-label="<%= s %> étoiles">
+                  <svg viewBox="0 0 24 24" class="w-7 h-7 star-empty"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </button>
+                <% } %>
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1.5" for="review-comment"><%= t('common:reviews.commentLabel', 'Votre commentaire') %> <span class="text-muted-foreground font-normal">(<%= t('common:reviews.optional', 'optionnel') %>)</span></label>
+              <textarea id="review-comment" class="textarea w-full" rows="3" placeholder="<%= t('common:reviews.commentPlaceholder', 'Partagez votre expérience...') %>" maxlength="200"></textarea>
+              <div class="flex justify-end mt-1"><span id="review-comment-counter" class="text-xs text-muted-foreground">0/200</span></div>
+            </div>
+            <button type="submit" class="btn btn-cta w-full" id="review-submit">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              <%= t('common:reviews.submit', 'Envoyer mon avis') %>
+            </button>
+            <p id="review-error" class="hidden text-sm text-destructive text-center"></p>
+          </form>
+        </div>
+      </div>
+      <div class="lg:col-span-3 order-2">
+        <div class="space-y-4 max-h-[500px] overflow-y-auto pr-2 scrollbar-thin" id="reviews-grid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="/js/reviews.js" defer></script>
 <script src="/js/quiz-engine-core.js" defer></script>
 <script>
 // Would You Rather - Custom Duo Quiz Engine
@@ -282,13 +370,12 @@
     html += '<div class="text-5xl mb-4">' + emoji + '</div>';
     html += '<p class="text-lg text-muted-foreground mb-2">' + UI.passPhone + '</p>';
     html += '<h2 class="text-2xl font-bold mb-6" style="color: var(--primary)">' + QuizEngine.esc(name) + '</h2>';
-    html += '<p class="text-sm text-muted-foreground mb-6">' + this.totalQ + ' questions</p>';
+    html += '<p class="text-sm text-muted-foreground mb-6">' + (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.totalQ + '</p>';
     html += '<button type="button" class="btn btn-cta" id="wyr-ready">' + UI.ready + '</button>';
     html += '</div>';
     this.container.innerHTML = html;
 
     document.getElementById('wyr-ready').addEventListener('click', function() {
-      self.currentQ = 0;
       self.phase = 'playing';
       self.render();
     });
@@ -298,7 +385,9 @@
   WYRGame.prototype.renderQuestion = function() {
     var self = this;
     var q = this.questions[this.currentQ];
-    var progress = Math.round((this.currentQ / this.totalQ) * 100);
+    var totalSteps = this.totalQ * 2;
+    var doneSteps = this.currentQ * 2 + (this.currentPlayer === 2 ? 1 : 0);
+    var progress = Math.round((doneSteps / totalSteps) * 100);
     var name = this.currentPlayer === 1 ? this.p1Name : this.p2Name;
 
     var html = '<div class="glass-card rounded-xl p-6 animate-fade-in">';
@@ -362,26 +451,73 @@
 
     // Store answer
     if (this.currentPlayer === 1) {
-      this.p1Answers.push(choice);
+      this.p1Answers[this.currentQ] = choice;
     } else {
-      this.p2Answers.push(choice);
+      this.p2Answers[this.currentQ] = choice;
     }
 
     var self = this;
     setTimeout(function() {
-      self.currentQ++;
-      if (self.currentQ >= self.totalQ) {
-        if (self.currentPlayer === 1) {
-          // Player 1 done, switch to player 2
-          self.currentPlayer = 2;
-          self.phase = 'handoff';
-        } else {
-          // Both done
-          self.phase = 'results';
-        }
+      if (self.currentPlayer === 1) {
+        // P1 just answered → handoff to P2 for same question
+        self.currentPlayer = 2;
+        self.phase = 'handoff';
+      } else {
+        // P2 just answered → show reveal for this question
+        self.phase = 'reveal';
       }
       self.render();
     }, 350);
+  };
+
+  // ── Reveal: show both answers for the current question ──
+  WYRGame.prototype.renderReveal = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var p1 = this.p1Answers[this.currentQ];
+    var p2 = this.p2Answers[this.currentQ];
+    var same = p1 === p2;
+
+    var html = '<div class="glass-card rounded-xl p-6 text-center animate-fade-in">';
+    html += '<div class="text-4xl mb-3">' + (same ? '🎉' : '😅') + '</div>';
+    html += '<h3 class="text-lg font-semibold mb-1">' + (same ? UI.sameChoice : UI.diffChoice) + '</h3>';
+    html += '<p class="text-sm text-muted-foreground mb-6">' + (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.totalQ + '</p>';
+
+    // Question text
+    html += '<p class="text-base text-muted-foreground mb-5">' + q.text + '</p>';
+
+    // Show both answers side by side
+    html += '<div class="grid grid-cols-2 gap-3 mb-6">';
+
+    html += '<div class="p-3 rounded-lg ' + (same ? 'bg-green-500/10 border border-green-500/20' : 'bg-muted') + '">';
+    html += '<p class="text-xs font-medium text-muted-foreground mb-1">' + QuizEngine.esc(this.p1Name) + '</p>';
+    html += '<p class="text-sm font-semibold text-foreground">' + (p1 === 'a' ? q.a : q.b) + '</p>';
+    html += '</div>';
+
+    html += '<div class="p-3 rounded-lg ' + (same ? 'bg-green-500/10 border border-green-500/20' : 'bg-muted') + '">';
+    html += '<p class="text-xs font-medium text-muted-foreground mb-1">' + QuizEngine.esc(this.p2Name) + '</p>';
+    html += '<p class="text-sm font-semibold text-foreground">' + (p2 === 'a' ? q.a : q.b) + '</p>';
+    html += '</div>';
+
+    html += '</div>';
+
+    // Next button
+    var isLast = this.currentQ >= this.totalQ - 1;
+    html += '<button type="button" class="btn btn-cta" id="wyr-next">' + (isLast ? UI.done : UI.next) + '</button>';
+    html += '</div>';
+
+    this.container.innerHTML = html;
+
+    document.getElementById('wyr-next').addEventListener('click', function() {
+      if (isLast) {
+        self.phase = 'results';
+      } else {
+        self.currentQ++;
+        self.currentPlayer = 1;
+        self.phase = 'handoff';
+      }
+      self.render();
+    });
   };
 
   // ── Results ──
