@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "badge": "Cosa Preferiresti • 30 domande • 2 giocatori",
+    "title": "Cosa Preferiresti? Il quiz di coppia che vi sorprenderà",
+    "titleHighlight": "vi sorprenderà",
+    "description": "30 domande per fare scelte impossibili insieme. Il gioco Cosa Preferiresti versione coppia: divertente, profondo e sempre sorprendente."
+  },
+  "intro": {
+    "p1": "Il gioco <strong class=\"text-foreground\">Cosa Preferiresti in coppia</strong> è uno di quei rari formati che funziona sempre. Nessun materiale, nessuna regola complicata, solo due persone, scelte impossibili e risposte che rivelano più di quanto si pensi. Questo quiz vi propone 30 domande selezionate per farvi ridere, riflettere e soprattutto sorprendervi a vicenda.",
+    "p2": "Che stiate insieme da tre mesi o da quindici anni, le risposte del vostro partner hanno sempre il potenziale di stupirvi. È questo il bello del gioco: non è un test con risposte giuste, è una conversazione travestita da quiz."
+  },
+  "section1": {
+    "title": "Come giocare a \"Cosa Preferiresti\" in coppia?",
+    "p1": "Il principio è semplice, ed è proprio questo che lo fa funzionare. Ognuno pone una domanda all'altro con due opzioni, e l'altro sceglie. Nessuna risposta giusta. Nemmeno sbagliata. Solo una scelta, e ciò che quella scelta dice di voi.",
+    "p2": "Quello che rende il gioco interessante in coppia è che vi conoscete già. Pensate di conoscere le risposte dell'altro. E poi arriva una domanda, e la risposta che vi aspettavate non esce. Lì diventa una conversazione.",
+    "p3": "Alcune regole non ufficiali che rendono le partite migliori: <strong class=\"text-foreground\">vietare il \"dipende\"</strong> (è la risposta che uccide tutto, forzate la scelta anche se scomoda), chiedere perché dopo ogni risposta (la scelta da sola non dice molto, la spiegazione dietro sì), alternare chi fa le domande, e prevedere tempo — una partita che inizia bene può facilmente durare due ore."
+  },
+  "section2": {
+    "title": "Cosa si impara davvero sull'altro giocando",
+    "p1": "Sulla carta, è un gioco. In pratica, è uno di quei rari momenti in cui si fanno domande che non si farebbero in una conversazione normale, e l'altro risponde senza avere il tempo di pensare troppo a cosa dovrebbe dire.",
+    "p2": "È lì che il gioco \"Cosa Preferiresti\" in coppia rivela delle cose. Non grandi rivelazioni drammatiche, ma piccole scoperte: una priorità che non si sospettava, una paura che emerge attraverso una scelta innocua, un valore che arriva per primo quando si pensava fosse l'altro.",
+    "p3": "Le coppie che giocano regolarmente a questo tipo di quiz hanno spesso una migliore conoscenza dei piccoli dettagli dell'altro — non i grandi temi della vita, ma le preferenze sottili, le scelte quotidiane, le cose che contano senza che siano mai state verbalizzate. È tra l'altro un ottimo complemento per <a href=\"/it/test-compatibilita-coppia/\">conoscere meglio il proprio partner</a> nella vita di tutti i giorni."
+  },
+  "section3": {
+    "title": "Le varianti del \"Cosa Preferiresti\" in base all'atmosfera",
+    "p1": "Il formato base va bene per cominciare, ma ci sono varianti che cambiano completamente il colore della partita.",
+    "sub1Title": "La versione \"chi si somiglia\"",
+    "sub1P1": "Invece di rispondere per sé, ognuno risponde come pensa che l'altro risponderà. Poi si confronta. Le differenze tra ciò che si immaginava e ciò che esce davvero sono spesso rivelatrici, e spesso esilaranti.",
+    "sub2Title": "La versione cronometro",
+    "sub2P1": "5 secondi per rispondere, non di più. Elimina la riflessione strategica e forza la risposta istintiva. È quella che sorprende di più.",
+    "sub3Title": "La versione festa",
+    "sub3P1": "Per giocare con più coppie. Ognuno scommette sulla risposta degli altri. Le coppie che si conoscono da tanto tempo pensano spesso che indovineranno tutto, e sbagliano più spesso di quanto credano. Se vi piacciono i <a href=\"/it/quiz-chi-e-piu/\">giochi di gruppo tra coppie</a>, questa variante è fatta per voi."
+  },
+  "section4": {
+    "title": "Le domande che fanno davvero riflettere (e quelle che fanno solo ridere)",
+    "p1": "Ci sono due categorie di domande in un buon \"Cosa Preferiresti\" per coppie, e entrambe sono utili, ma non allo stesso modo.",
+    "p2": "Le <strong class=\"text-foreground\">domande leggere</strong> servono a mettere a proprio agio, a ridere, a stabilire un ritmo. Non insegnano nulla di profondo ma creano il contesto perché le domande successive arrivino meglio.",
+    "p3": "Le <strong class=\"text-foreground\">domande che scavano</strong> aprono qualcosa. Toccano aspettative reali nella relazione, bisogni che non sono sempre stati formulati chiaramente. Il rapporto giusto in una partita è circa 60/40: abbastanza leggerezza perché resti un gioco, abbastanza profondità perché valga la pena aver giocato."
+  },
+  "section5": {
+    "title": "Perché questo quiz funziona così bene in coppia",
+    "p1": "Le domande migliori sono quelle in cui entrambe le opzioni hanno davvero un costo, e dove la scelta dice qualcosa di vero. Questo formato funziona perché aggira le difese abituali: non si parla direttamente della relazione, ma ogni risposta rivela un po' di più su come si vede la coppia, il quotidiano, il futuro.",
+    "p2": "È anche un formato che non mette nessuno in posizione di fallimento. Non c'è una risposta sbagliata, non c'è un punteggio da raggiungere. Solo due persone che scoprono, domanda dopo domanda, che forse non si conoscono così bene come pensavano — ed è esattamente questo che rende il gioco prezioso. Se cercate altre <a href=\"/it/quiz-coppia-divertente/\">attività divertenti da fare in coppia</a>, troverete altri formati altrettanto coinvolgenti."
+  },
+  "faq": {
+    "q1": "Quante domande contiene questo quiz Cosa Preferiresti per coppie?",
+    "a1": "Questo quiz propone 30 domande \"Cosa Preferiresti\" appositamente pensate per le coppie. Ogni domanda propone due opzioni con una scelta da fare. Le domande mescolano umorismo, riflessione e temi di coppia per una partita completa e variegata.",
+    "q2": "Il gioco Cosa Preferiresti è adatto a tutte le coppie?",
+    "a2": "Sì, il formato \"Cosa Preferiresti\" funziona indipendentemente dall'età della coppia o dalla durata della relazione. Le domande sono pensate per far ridere e riflettere senza mai mettere a disagio. È un gioco accessibile che non richiede alcuna preparazione.",
+    "q3": "Ci sono domande piccanti in questo quiz?",
+    "a3": "Questo quiz resta in un registro divertente e riflessivo, senza domande esplicitamente piccanti. Gli argomenti trattati toccano valori, priorità e scelte quotidiane nella coppia. Se cercate una versione più intima, esistono anche varianti più piccanti.",
+    "q4": "Si può giocare a questo quiz a distanza?",
+    "a4": "Assolutamente! Il formato \"Cosa Preferiresti\" si presta perfettamente al gioco a distanza tramite videochiamata o anche per messaggi. Ognuno può leggere la domanda sul proprio schermo e dare la propria risposta. È tra l'altro un'attività ideale per le coppie in relazione a distanza."
+  }
+}

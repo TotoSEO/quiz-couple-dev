@@ -210,6 +210,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-langage-amour-couple/"/>
   </url>
   <url>
+    <loc>https://quiz-couple.com/es/quiz-preferirias-pareja/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/tu-preferes-couple-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/would-you-rather-couple-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-preferirias-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/was-wuerdest-du-lieber-paar-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/preferiresti-quiz-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/tu-preferes-couple-quiz/"/>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/es/actividades-en-pareja-cerca/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/activites-autours-de-moi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/couple-activities-near-me/"/>

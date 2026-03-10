@@ -1,0 +1,609 @@
+<%
+  var quizType = 'tu-preferes';
+  var ns = 'quiz-tu-preferes';
+  var totalQ = 30;
+  var sectionCount = 5;
+
+  const quizTitle = t('quizzes:quizTuPreferes.title', 'Tu Préfères Couple');
+  const quizDesc = t('quizzes:quizTuPreferes.metaDescription', '');
+
+  // ── FAQ entries ──
+  var faqEntries = [];
+  for (var fi = 1; fi <= 6; fi++) {
+    var fq = t(ns + ':faq.q' + fi, '');
+    var fa = t(ns + ':faq.a' + fi, '');
+    if (fq) faqEntries.push({ q: fq, a: fa });
+  }
+
+  // ── JSON-LD ──
+  const hasPart = [];
+  for (var qi = 1; qi <= 40; qi++) {
+    var qText = tgd('wyr.q' + qi, '');
+    if (!qText || qText === 'wyr.q' + qi) break;
+    var questionObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
+    var answers = [];
+    var oA = tgd('wyr.q' + qi + 'a', '');
+    var oB = tgd('wyr.q' + qi + 'b', '');
+    if (oA && oA !== 'wyr.q' + qi + 'a') answers.push({ "@type": "Answer", "position": 1, "text": oA });
+    if (oB && oB !== 'wyr.q' + qi + 'b') answers.push({ "@type": "Answer", "position": 2, "text": oB });
+    if (answers.length > 0) questionObj.suggestedAnswer = answers;
+    hasPart.push(questionObj);
+  }
+
+  var jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "Quiz",
+      "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+      "datePublished": "2026-03-10", "isAccessibleForFree": true,
+      "learningResourceType": "Quiz", "interactivityType": "active",
+      "about": { "@type": "Thing", "name": "would you rather couple" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "totalQuestions", "value": 30 },
+        { "@type": "PropertyValue", "name": "audience", "value": "couples" }
+      ]
+    }
+  ];
+  if (hasPart.length > 0) jsonLd[0].hasPart = hasPart;
+  if (faqEntries.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqEntries.map(function(f) {
+        return { "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } };
+      })
+    });
+  }
+
+  // UI labels
+  var uiLabels = {
+    fr: { start: 'Commencer', qOf: 'sur', or: 'OU', match: 'En accord !', diff: 'Avis différents !', next: 'Question suivante', done: 'Voir les résultats', agree: 'En accord', disagree: 'Pas d\'accord', result: 'Votre compatibilité', retake: 'Rejouer', p1Turn: 'C\'est au tour de', p2Turn: 'C\'est au tour de', chooseA: 'Option A', chooseB: 'Option B', yourChoice: 'Votre choix', partnerChoice: 'Son choix', matchRate: 'Taux d\'accord', name1: 'Joueur 1', name2: 'Joueur 2', namePlaceholder: 'Prénom', both: 'Vous deux', intro: 'Un choix, deux réponses, zéro bonne réponse.', startGame: 'Lancer le jeu', passPhone: 'Passe le téléphone à', ready: 'Je suis prêt(e)', sameChoice: 'Même choix !', diffChoice: 'Choix différent !' },
+    en: { start: 'Start', qOf: 'of', or: 'OR', match: 'You agree!', diff: 'Different picks!', next: 'Next question', done: 'See results', agree: 'Agree', disagree: 'Disagree', result: 'Your compatibility', retake: 'Play again', p1Turn: 'It\'s your turn,', p2Turn: 'It\'s your turn,', chooseA: 'Option A', chooseB: 'Option B', yourChoice: 'Your choice', partnerChoice: 'Their choice', matchRate: 'Agreement rate', name1: 'Player 1', name2: 'Player 2', namePlaceholder: 'First name', both: 'Both of you', intro: 'One choice, two answers, zero right answers.', startGame: 'Start the game', passPhone: 'Pass the phone to', ready: 'I\'m ready', sameChoice: 'Same choice!', diffChoice: 'Different choice!' },
+    es: { start: 'Empezar', qOf: 'de', or: 'O', match: '¡De acuerdo!', diff: '¡Opiniones diferentes!', next: 'Siguiente pregunta', done: 'Ver resultados', agree: 'De acuerdo', disagree: 'En desacuerdo', result: 'Vuestra compatibilidad', retake: 'Volver a jugar', p1Turn: 'Es tu turno,', p2Turn: 'Es tu turno,', chooseA: 'Opción A', chooseB: 'Opción B', yourChoice: 'Tu elección', partnerChoice: 'Su elección', matchRate: 'Tasa de acuerdo', name1: 'Jugador 1', name2: 'Jugador 2', namePlaceholder: 'Nombre', both: 'Los dos', intro: 'Una elección, dos respuestas, cero respuestas correctas.', startGame: 'Empezar el juego', passPhone: 'Pasa el móvil a', ready: 'Estoy listo/a', sameChoice: '¡Misma elección!', diffChoice: '¡Elección diferente!' },
+    de: { start: 'Starten', qOf: 'von', or: 'ODER', match: 'Einig!', diff: 'Unterschiedlich!', next: 'Nächste Frage', done: 'Ergebnisse anzeigen', agree: 'Einig', disagree: 'Uneinig', result: 'Eure Kompatibilität', retake: 'Nochmal spielen', p1Turn: 'Du bist dran,', p2Turn: 'Du bist dran,', chooseA: 'Option A', chooseB: 'Option B', yourChoice: 'Deine Wahl', partnerChoice: 'Seine/ihre Wahl', matchRate: 'Übereinstimmungsrate', name1: 'Spieler 1', name2: 'Spieler 2', namePlaceholder: 'Vorname', both: 'Ihr beide', intro: 'Eine Wahl, zwei Antworten, null richtige Antworten.', startGame: 'Spiel starten', passPhone: 'Gib das Handy an', ready: 'Ich bin bereit', sameChoice: 'Gleiche Wahl!', diffChoice: 'Andere Wahl!' },
+    it: { start: 'Inizia', qOf: 'di', or: 'O', match: 'D\'accordo!', diff: 'Opinioni diverse!', next: 'Prossima domanda', done: 'Vedi risultati', agree: 'D\'accordo', disagree: 'In disaccordo', result: 'La vostra compatibilità', retake: 'Rigioca', p1Turn: 'Tocca a te,', p2Turn: 'Tocca a te,', chooseA: 'Opzione A', chooseB: 'Opzione B', yourChoice: 'La tua scelta', partnerChoice: 'La sua scelta', matchRate: 'Tasso di accordo', name1: 'Giocatore 1', name2: 'Giocatore 2', namePlaceholder: 'Nome', both: 'Entrambi', intro: 'Una scelta, due risposte, zero risposte giuste.', startGame: 'Inizia il gioco', passPhone: 'Passa il telefono a', ready: 'Sono pronto/a', sameChoice: 'Stessa scelta!', diffChoice: 'Scelta diversa!' }
+  };
+  var ui = uiLabels[lang] || uiLabels.fr;
+
+  // Section helpers (same as quiz-generic)
+  function tryKeys() {
+    for (var i = 0; i < arguments.length; i++) {
+      var val = t(ns + ':' + arguments[i], '');
+      if (val) return val;
+    }
+    return '';
+  }
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= quizTitle %></li>
+        </ol>
+      </nav>
+      <% var heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.07-2.14 0-5.5 3.5-7.5-2.5 5 .5 7 2 7.5 1.5.5 3 1 3 3.5a2.5 2.5 0 01-2.5 2.5"/><path d="M12 14v8"/><path d="M8 18h8"/></svg>
+        <%= heroBadge %>
+      </span>
+      <% } %>
+      <%
+        var heroTitle = t(ns + ':hero.title', quizTitle);
+        var heroHighlight = t(ns + ':hero.titleHighlight', '');
+      %>
+      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <div class="space-y-4 text-muted-foreground leading-relaxed text-center">
+      <p><%- t(ns + ':intro.p1', '') %></p>
+      <p><%- t(ns + ':intro.p2', '') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Quiz Engine -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto">
+      <div id="wyr-quiz" data-lang="<%= lang %>"></div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Article -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <% for (var s = 1; s <= sectionCount; s++) {
+      var sTitle = tryKeys('section' + s + '.title');
+      if (!sTitle) continue;
+    %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= sTitle %></h2>
+
+      <% var paragraphs = [];
+        for (var p = 1; p <= 5; p++) { var pText = tryKeys('section' + s + '.p' + p); if (pText) paragraphs.push(pText); }
+        if (paragraphs.length > 0) { %>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <% for (var pi = 0; pi < paragraphs.length; pi++) { %>
+        <p><%- paragraphs[pi] %></p>
+        <% } %>
+      </div>
+      <% } %>
+
+      <% for (var sub = 1; sub <= 4; sub++) {
+        var subTitle = tryKeys('section' + s + '.sub' + sub + 'Title');
+        if (!subTitle) continue; %>
+      <div class="mt-6">
+        <h3 class="text-xl font-semibold mb-3"><%= subTitle %></h3>
+        <% for (var sp = 1; sp <= 2; sp++) {
+          var spText = tryKeys('section' + s + '.sub' + sub + 'P' + sp);
+          if (spText) { %>
+        <p class="text-muted-foreground leading-relaxed mb-3"><%- spText %></p>
+        <% } } %>
+      </div>
+      <% } %>
+    </section>
+    <% } %>
+
+    <% if (faqEntries.length > 0) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">FAQ</h2>
+      <div class="space-y-4">
+        <% for (var fe = 0; fe < faqEntries.length; fe++) { %>
+        <details class="border border-border rounded-lg">
+          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= faqEntries[fe].q %></summary>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%- faqEntries[fe].a %></div>
+        </details>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+  </div>
+</article>
+
+<script src="/js/quiz-engine-core.js" defer></script>
+<script>
+// Would You Rather - Custom Duo Quiz Engine
+(function() {
+  'use strict';
+
+  var UI = <%- JSON.stringify(ui) %>;
+
+  function init() {
+    var container = document.getElementById('wyr-quiz');
+    if (!container) return;
+    var lang = container.dataset.lang || 'fr';
+
+    QuizEngine.loadTranslations(lang, function() {
+      var questions = parseQuestions();
+      if (questions.length === 0) {
+        container.innerHTML = '<p class="text-center text-muted-foreground py-8">Loading...</p>';
+        return;
+      }
+      // Shuffle and pick 30
+      questions = QuizEngine.shuffleArray(questions);
+      if (questions.length > 30) questions = questions.slice(0, 30);
+      new WYRGame(container, questions);
+    });
+  }
+
+  function parseQuestions() {
+    var questions = [];
+    for (var i = 1; i <= 50; i++) {
+      var qText = QuizEngine.tgd('wyr.q' + i, null);
+      if (!qText || qText === 'wyr.q' + i) {
+        if (questions.length > 0 && i > questions[questions.length - 1].id + 3) break;
+        continue;
+      }
+      var optA = QuizEngine.tgd('wyr.q' + i + 'a', null);
+      var optB = QuizEngine.tgd('wyr.q' + i + 'b', null);
+      if (optA && optB && optA !== 'wyr.q' + i + 'a' && optB !== 'wyr.q' + i + 'b') {
+        questions.push({ id: i, text: qText, a: optA, b: optB });
+      }
+    }
+    return questions;
+  }
+
+  // ── Game constructor ──
+  function WYRGame(container, questions) {
+    this.container = container;
+    this.questions = questions;
+    this.totalQ = questions.length;
+    this.currentQ = 0;
+    this.p1Name = '';
+    this.p2Name = '';
+    this.p1Answers = [];
+    this.p2Answers = [];
+    this.currentPlayer = 1; // 1 or 2
+    this.phase = 'setup'; // setup, handoff, playing, reveal, results
+    this.render();
+  }
+
+  WYRGame.prototype.render = function() {
+    switch (this.phase) {
+      case 'setup': this.renderSetup(); break;
+      case 'handoff': this.renderHandoff(); break;
+      case 'playing': this.renderQuestion(); break;
+      case 'reveal': this.renderReveal(); break;
+      case 'results': this.renderResults(); break;
+    }
+  };
+
+  // ── Setup: enter names ──
+  WYRGame.prototype.renderSetup = function() {
+    var self = this;
+    var html = '<div class="glass-card rounded-xl p-8 text-center animate-fade-in">';
+    html += '<div class="text-5xl mb-4">🤔</div>';
+    html += '<h2 class="text-2xl font-bold mb-2">' + UI.or + '...</h2>';
+    html += '<p class="text-muted-foreground mb-6">' + UI.intro + '</p>';
+    html += '<div class="max-w-xs mx-auto space-y-3 mb-6">';
+    html += '<input type="text" id="wyr-p1" class="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground text-center" placeholder="' + UI.name1 + ' — ' + UI.namePlaceholder + '" maxlength="20" />';
+    html += '<input type="text" id="wyr-p2" class="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground text-center" placeholder="' + UI.name2 + ' — ' + UI.namePlaceholder + '" maxlength="20" />';
+    html += '</div>';
+    html += '<button type="button" class="btn btn-cta" id="wyr-start">' + UI.startGame + '</button>';
+    html += '</div>';
+    this.container.innerHTML = html;
+
+    document.getElementById('wyr-start').addEventListener('click', function() {
+      self.p1Name = (document.getElementById('wyr-p1').value || '').trim() || UI.name1;
+      self.p2Name = (document.getElementById('wyr-p2').value || '').trim() || UI.name2;
+      self.currentPlayer = 1;
+      self.currentQ = 0;
+      self.phase = 'handoff';
+      self.render();
+    });
+  };
+
+  // ── Handoff screen ──
+  WYRGame.prototype.renderHandoff = function() {
+    var self = this;
+    var name = this.currentPlayer === 1 ? this.p1Name : this.p2Name;
+    var emoji = this.currentPlayer === 1 ? '👋' : '🫣';
+    var html = '<div class="glass-card rounded-xl p-8 text-center animate-fade-in">';
+    html += '<div class="text-5xl mb-4">' + emoji + '</div>';
+    html += '<p class="text-lg text-muted-foreground mb-2">' + UI.passPhone + '</p>';
+    html += '<h2 class="text-2xl font-bold mb-6" style="color: var(--primary)">' + QuizEngine.esc(name) + '</h2>';
+    html += '<p class="text-sm text-muted-foreground mb-6">' + this.totalQ + ' questions</p>';
+    html += '<button type="button" class="btn btn-cta" id="wyr-ready">' + UI.ready + '</button>';
+    html += '</div>';
+    this.container.innerHTML = html;
+
+    document.getElementById('wyr-ready').addEventListener('click', function() {
+      self.currentQ = 0;
+      self.phase = 'playing';
+      self.render();
+    });
+  };
+
+  // ── Question screen ──
+  WYRGame.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var progress = Math.round((this.currentQ / this.totalQ) * 100);
+    var name = this.currentPlayer === 1 ? this.p1Name : this.p2Name;
+
+    var html = '<div class="glass-card rounded-xl p-6 animate-fade-in">';
+
+    // Player indicator + progress
+    html += '<div class="mb-5">';
+    html += '<div class="flex justify-between items-center text-sm text-muted-foreground mb-2">';
+    html += '<span class="font-medium" style="color: var(--primary)">' + QuizEngine.esc(name) + '</span>';
+    html += '<span>' + (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.totalQ + '</span>';
+    html += '</div>';
+    html += '<div class="w-full bg-muted rounded-full h-1.5">';
+    html += '<div class="bg-primary h-1.5 rounded-full transition-all duration-500" style="width:' + progress + '%"></div>';
+    html += '</div></div>';
+
+    // Question
+    html += '<h3 class="text-lg md:text-xl font-semibold mb-8 text-foreground text-center leading-relaxed">' + q.text + '</h3>';
+
+    // Options A/B with VS divider
+    html += '<div class="wyr-options">';
+
+    // Option A
+    html += '<button type="button" class="wyr-option wyr-option-a" data-choice="a">';
+    html += '<span class="wyr-option-label">A</span>';
+    html += '<span class="wyr-option-text">' + q.a + '</span>';
+    html += '</button>';
+
+    // VS divider
+    html += '<div class="wyr-vs"><span>' + UI.or + '</span></div>';
+
+    // Option B
+    html += '<button type="button" class="wyr-option wyr-option-b" data-choice="b">';
+    html += '<span class="wyr-option-label">B</span>';
+    html += '<span class="wyr-option-text">' + q.b + '</span>';
+    html += '</button>';
+
+    html += '</div></div>';
+
+    this.container.innerHTML = html;
+
+    // Bind clicks
+    var buttons = this.container.querySelectorAll('.wyr-option');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function() {
+        var choice = this.getAttribute('data-choice');
+        self.selectOption(choice, this);
+      });
+    }
+  };
+
+  WYRGame.prototype.selectOption = function(choice, btn) {
+    // Visual feedback
+    var buttons = this.container.querySelectorAll('.wyr-option');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].style.pointerEvents = 'none';
+      if (buttons[i] === btn) {
+        buttons[i].classList.add('wyr-selected');
+      } else {
+        buttons[i].classList.add('wyr-not-selected');
+      }
+    }
+
+    // Store answer
+    if (this.currentPlayer === 1) {
+      this.p1Answers.push(choice);
+    } else {
+      this.p2Answers.push(choice);
+    }
+
+    var self = this;
+    setTimeout(function() {
+      self.currentQ++;
+      if (self.currentQ >= self.totalQ) {
+        if (self.currentPlayer === 1) {
+          // Player 1 done, switch to player 2
+          self.currentPlayer = 2;
+          self.phase = 'handoff';
+        } else {
+          // Both done
+          self.phase = 'results';
+        }
+      }
+      self.render();
+    }, 350);
+  };
+
+  // ── Results ──
+  WYRGame.prototype.renderResults = function() {
+    var self = this;
+    var matches = 0;
+    var details = [];
+
+    for (var i = 0; i < this.totalQ; i++) {
+      var same = this.p1Answers[i] === this.p2Answers[i];
+      if (same) matches++;
+      details.push({
+        q: this.questions[i],
+        p1: this.p1Answers[i],
+        p2: this.p2Answers[i],
+        match: same
+      });
+    }
+
+    var pct = Math.round((matches / this.totalQ) * 100);
+    var emoji = pct >= 80 ? '🔥' : pct >= 60 ? '💕' : pct >= 40 ? '😄' : '🤷';
+
+    var html = '<div class="glass-card rounded-xl p-6 animate-fade-in">';
+
+    // Score hero
+    html += '<div class="text-center mb-8">';
+    html += '<div class="text-5xl mb-3">' + emoji + '</div>';
+    html += '<p class="text-sm text-muted-foreground mb-2">' + UI.matchRate + '</p>';
+    html += '<h2 class="text-4xl md:text-5xl font-bold text-primary mb-1">' + pct + '%</h2>';
+    html += '<p class="text-muted-foreground">' + matches + '/' + this.totalQ + ' ' + UI.agree + '</p>';
+    html += '</div>';
+
+    // Agreement bar
+    html += '<div class="mb-8">';
+    html += '<div class="w-full bg-muted rounded-full h-4 overflow-hidden">';
+    html += '<div class="h-4 rounded-full transition-all duration-1000" style="width:' + pct + '%;background:linear-gradient(90deg, hsl(340,65%,65%), hsl(270,40%,70%))"></div>';
+    html += '</div></div>';
+
+    // Question-by-question breakdown
+    html += '<div class="space-y-3 mb-8">';
+    for (var d = 0; d < details.length; d++) {
+      var det = details[d];
+      var matchIcon = det.match ? '✅' : '❌';
+      var matchClass = det.match ? 'border-green-500/30 bg-green-500/5' : 'border-red-500/30 bg-red-500/5';
+
+      html += '<details class="border rounded-lg ' + matchClass + '">';
+      html += '<summary class="p-3 cursor-pointer flex items-center gap-2 text-sm">';
+      html += '<span>' + matchIcon + '</span>';
+      html += '<span class="font-medium text-foreground flex-1">' + (d + 1) + '. ' + det.q.text + '</span>';
+      html += '</summary>';
+      html += '<div class="px-3 pb-3 grid grid-cols-2 gap-2 text-sm">';
+
+      // P1 choice
+      html += '<div class="p-2 rounded-lg ' + (det.p1 === 'a' ? 'bg-primary/10 border border-primary/20' : 'bg-muted') + '">';
+      html += '<p class="font-medium text-xs text-muted-foreground mb-1">' + QuizEngine.esc(this.p1Name) + '</p>';
+      html += '<p class="text-foreground">' + (det.p1 === 'a' ? det.q.a : det.q.b) + '</p>';
+      html += '</div>';
+
+      // P2 choice
+      html += '<div class="p-2 rounded-lg ' + (det.p2 === 'a' ? 'bg-primary/10 border border-primary/20' : 'bg-muted') + '">';
+      html += '<p class="font-medium text-xs text-muted-foreground mb-1">' + QuizEngine.esc(this.p2Name) + '</p>';
+      html += '<p class="text-foreground">' + (det.p2 === 'a' ? det.q.a : det.q.b) + '</p>';
+      html += '</div>';
+
+      html += '</div></details>';
+    }
+    html += '</div>';
+
+    // Retake
+    html += '<div class="text-center">';
+    html += '<button type="button" class="btn btn-outline" id="wyr-retake">' + UI.retake + '</button>';
+    html += '</div>';
+
+    html += '</div>';
+    this.container.innerHTML = html;
+
+    document.getElementById('wyr-retake').addEventListener('click', function() {
+      self.p1Answers = [];
+      self.p2Answers = [];
+      self.currentQ = 0;
+      self.currentPlayer = 1;
+      self.questions = QuizEngine.shuffleArray(self.questions);
+      self.phase = 'setup';
+      self.render();
+      self.container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    this.container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  // Initialize
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+<style>
+.wyr-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+.wyr-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  border: 2px solid var(--border);
+  background: var(--card);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: var(--foreground);
+}
+.wyr-option-a {
+  border-radius: 0.75rem 0.75rem 0 0;
+  border-bottom: 1px solid var(--border);
+}
+.wyr-option-b {
+  border-radius: 0 0 0.75rem 0.75rem;
+  border-top: 1px solid var(--border);
+}
+.wyr-option:hover {
+  border-color: var(--primary);
+  background: hsl(340 65% 65% / 0.05);
+  transform: scale(1.01);
+}
+.wyr-option-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--muted);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+.wyr-option:hover .wyr-option-label {
+  background: var(--primary);
+  color: white;
+}
+.wyr-option-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.wyr-vs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 0;
+  z-index: 2;
+}
+.wyr-vs span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 8px hsl(340 65% 65% / 0.3);
+}
+.wyr-selected {
+  border-color: var(--primary) !important;
+  background: hsl(340 65% 65% / 0.1) !important;
+  transform: scale(1.02);
+}
+.wyr-selected .wyr-option-label {
+  background: var(--primary);
+  color: white;
+}
+.wyr-not-selected {
+  opacity: 0.4;
+  transform: scale(0.98);
+}
+@media (min-width: 640px) {
+  .wyr-options {
+    flex-direction: row;
+    gap: 0;
+  }
+  .wyr-option {
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    min-height: 140px;
+    justify-content: center;
+  }
+  .wyr-option-a {
+    border-radius: 0.75rem 0 0 0.75rem;
+    border-bottom: 2px solid var(--border);
+    border-right: 1px solid var(--border);
+  }
+  .wyr-option-b {
+    border-radius: 0 0.75rem 0.75rem 0;
+    border-top: 2px solid var(--border);
+    border-left: 1px solid var(--border);
+  }
+  .wyr-vs {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: auto;
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+</style>
