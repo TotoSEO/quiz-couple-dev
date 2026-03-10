@@ -118,6 +118,12 @@
     "description": "Deux tests pour mesurer la jalousie dans le couple : la vôtre et celle de votre partenaire. Résultats nuancés.",
     "metaDescription": "Deux tests de jalousie dans le couple : l'un pour mesurer votre propre jalousie, l'autre pour évaluer celle de votre partenaire. Questions précises, résultats nuancés."
   },
+  "testLangageAmour": {
+    "title": "Test des 5 Langages de l'Amour - Découvrez le vôtre",
+    "shortTitle": "Langages de l'amour",
+    "description": "30 questions pour découvrir votre langage de l'amour dominant parmi les 5 identifiés par Gary Chapman.",
+    "metaDescription": "Test gratuit des 5 langages de l'amour. 30 questions pour découvrir comment vous exprimez et recevez l'amour dans votre couple."
+  },
   "quizGenant": {
     "title": "Quiz couple gênant : jusqu'où osez-vous aller ?",
     "shortTitle": "Quiz Gênant",
