@@ -34,6 +34,9 @@
   };
   if (hasPart.length > 0) quizSchema.hasPart = hasPart;
 
+  const homeUrl = getLocalizedUrl('home', lang);
+  const homeLabel = { fr: 'Accueil', en: 'Home', es: 'Inicio', de: 'Startseite', it: 'Home' }[lang] || 'Accueil';
+
   const jsonLd = [
     quizSchema,
     {
@@ -44,6 +47,20 @@
           "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':jsonLd.faq' + i + 'A', '') }
         };
       })
+    },
+    {
+      "@context": "https://schema.org", "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": homeLabel, "item": baseUrl + homeUrl },
+        { "@type": "ListItem", "position": 2, "name": quizTitle, "item": canonical }
+      ]
+    },
+    {
+      "@context": "https://schema.org", "@type": "WebPage",
+      "name": quizTitle, "description": quizDesc, "url": canonical, "inLanguage": lang,
+      "isPartOf": { "@type": "WebSite", "name": "Quiz Couple", "url": baseUrl },
+      "datePublished": "2026-03-10", "dateModified": "2026-03-10",
+      "publisher": { "@type": "Organization", "name": "Quiz Couple", "url": baseUrl }
     }
   ];
 
