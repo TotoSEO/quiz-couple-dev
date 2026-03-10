@@ -68,7 +68,7 @@
       <!-- Featured image -->
       <% if (article.featuredImage) { %>
       <div class="blog-img-wrap blog-img-wrap--hero">
-        <img src="<%= article.featuredImage %>" alt="<%= escapeHtml(article.featuredImageAlt || article.title) %>" fetchpriority="high">
+        <img src="<%= article.featuredImage %>" alt="<%= escapeHtml(article.featuredImageAlt || article.title) %>" fetchpriority="high" width="1200" height="675">
       </div>
       <% } %>
     </div>

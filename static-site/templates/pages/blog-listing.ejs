@@ -20,7 +20,7 @@
 <% if (blogArticlesList && blogArticlesList.length) { %>
   <% blogArticlesList.forEach(function(a) { %>
     <article class="blog-card" data-category="<%= a.category || '' %>">
-      <a href="<%= a.url %>" class="no-underline"><div class="blog-card-image-wrapper"><img src="<%= a.featuredImage %>" alt="<%= escapeHtml(a.featuredImageAlt) %>" class="blog-card-image" loading="lazy"></div></a>
+      <a href="<%= a.url %>" class="no-underline"><div class="blog-card-image-wrapper"><img src="<%= a.featuredImage %>" alt="<%= escapeHtml(a.featuredImageAlt) %>" class="blog-card-image" loading="lazy" width="400" height="225"></div></a>
       <% if (a.categoryLabel) { %>
       <div class="blog-card-category"><span class="blog-category-badge"><%= a.categoryLabel %></span></div>
       <% } %>
