@@ -1041,6 +1041,19 @@ async function main() {
   // Generate redirect pages for old URLs
   const REDIRECTS = [
     { from: 'de/test-gesunde-beziehung', to: '/de/gesunde-beziehung-test/' },
+    { from: 'de/quiz-paar-pikant', to: '/de/pikantes-paar-quiz/' },
+    { from: 'de/liebes-quiz-paare', to: '/de/liebes-quiz/' },
+    { from: 'es/privacidad', to: '/es/politica-privacidad/' },
+    { from: 'it/test-cose-in-comune-coppia', to: '/it/test-punti-comuni-coppia/' },
+    { from: 'es/test-pareja', to: '/es/test-compatibilidad-pareja/' },
+    { from: 'de/gemeinsamkeiten-test-paar', to: '/de/gemeinsamkeiten-test-paare/' },
+    { from: 'en/love-quiz-couples', to: '/en/love-quiz/' },
+    { from: 'de/beziehungsproblem-loesen', to: '/de/paar-problem-loesen/' },
+    { from: 'it/test-coppia', to: '/it/test-compatibilita-coppia/' },
+    { from: 'es/test-cosas-en-comun-pareja', to: '/es/test-puntos-comunes-pareja/' },
+    { from: 'en/privacy', to: '/en/privacy-policy/' },
+    { from: 'de/beziehungstest', to: '/de/paar-kompatibilitaetstest/' },
+    { from: 'de/quiz-wer-kennt-partner-besser', to: '/de/wer-kennt-partner-besser-quiz/' },
   ];
   for (const { from, to } of REDIRECTS) {
     const redirectDir = path.join(DIST_DIR, from);

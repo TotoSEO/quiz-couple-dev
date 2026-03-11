@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-acquario',
   title: `Compatibilità amorosa dell'Acquario: l'amore secondo le proprie regole`,
-  metaTitle: `Compatibilità amorosa Acquario: chi accetta il suo modo unico di amare?`,
+  metaTitle: `Compatibilità amorosa Acquario: chi accetta il suo amore?`,
   metaDescription: `L'Acquario ama a modo suo — e quel modo non somiglia a nessun altro. Scopri quali segni capiscono la sua libertà e quali tentano invano di cambiarlo.`,
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Simbolo astrologico dell'Acquario — compatibilità amorosa`,
