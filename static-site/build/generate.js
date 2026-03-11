@@ -479,7 +479,7 @@ function copyStaticAssets() {
   const assetsDir = path.resolve(__dirname, '../../assets');
 
   // Copy public/ files
-  const publicFiles = ['favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'og-image.webp', 'robots.txt', 'site.webmanifest', 'placeholder.svg', 'sitemap.xsl'];
+  const publicFiles = ['favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'og-image.webp', 'robots.txt', 'site.webmanifest', 'placeholder.svg', 'sitemap.xsl', 'f4b78b7e6bfeaefe7290b5ce249449a8.txt'];
   for (const file of publicFiles) {
     const src = path.join(publicDir, file);
     if (fs.existsSync(src)) {
