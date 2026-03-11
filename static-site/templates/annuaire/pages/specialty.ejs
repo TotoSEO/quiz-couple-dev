@@ -130,22 +130,19 @@
   </div>
 </section>
 
-<% if (seo.whenToConsult) { %>
+<% if (seo.sections && seo.sections.length) { %>
 <div class="ann-divider"></div>
 
-<!-- SEO Content: When to consult + How it works -->
+<!-- SEO Content -->
 <section class="ann-section">
   <div class="ann-container">
     <div class="ann-seo-content">
+      <% for (const section of seo.sections) { %>
       <div class="ann-seo-block">
-        <h2><%= seo.whenToConsult %></h2>
-        <p><%= seo.whenToConsultText %></p>
+        <h2><%= section.title %></h2>
+        <%- section.content %>
       </div>
-
-      <div class="ann-seo-block">
-        <h2><%= seo.howItWorks %></h2>
-        <p><%= seo.howItWorksText %></p>
-      </div>
+      <% } %>
 
       <% if (seo.priceRange) { %>
       <div class="ann-seo-block">

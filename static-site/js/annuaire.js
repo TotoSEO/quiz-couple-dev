@@ -199,18 +199,144 @@
     });
   }
 
-  // ── Hero Search Form ──────────────────────────────────────────────
+  // ── Search Autocomplete ──────────────────────────────────────────
+  var searchData = window.__ANN_SEARCH__ || { specialties: [], cities: [] };
+
+  function normalize(str) {
+    return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function createDropdown(input, type) {
+    var dropdown = document.createElement('div');
+    dropdown.className = 'ann-search-dropdown';
+    dropdown.style.cssText = 'display:none;position:absolute;top:100%;left:0;right:0;z-index:100;background:hsl(var(--ann-bg));border:1px solid hsl(var(--ann-border));border-radius:0.5rem;box-shadow:var(--ann-shadow-md,0 4px 16px rgba(0,0,0,0.08));max-height:16rem;overflow-y:auto;margin-top:0.25rem;';
+    var wrapper = input.closest('.ann-search-field') || input.closest('.ann-search-compact') || input.closest('.ann-mobile-search');
+    if (wrapper) {
+      wrapper.style.position = 'relative';
+      wrapper.appendChild(dropdown);
+    }
+
+    var items = type === 'city' ? searchData.cities : searchData.specialties;
+
+    input.addEventListener('input', function () {
+      var val = normalize(input.value.trim());
+      if (val.length < 1) { dropdown.style.display = 'none'; return; }
+
+      var matches = items.filter(function (item) {
+        var name = normalize(item.name);
+        var short = item.shortName ? normalize(item.shortName) : '';
+        var dept = item.department || '';
+        return name.indexOf(val) !== -1 || short.indexOf(val) !== -1 || dept.indexOf(val) !== -1;
+      }).slice(0, 6);
+
+      if (!matches.length) { dropdown.style.display = 'none'; return; }
+
+      dropdown.innerHTML = '';
+      matches.forEach(function (item) {
+        var a = document.createElement('a');
+        a.href = '/' + item.id + '/';
+        a.style.cssText = 'display:flex;align-items:center;gap:0.5rem;padding:0.625rem 0.75rem;color:hsl(var(--ann-fg));text-decoration:none;font-size:0.875rem;transition:background 150ms;';
+        a.innerHTML = (type === 'city'
+          ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;flex-shrink:0;color:hsl(var(--ann-muted-fg))"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>'
+          : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;flex-shrink:0;color:hsl(var(--ann-muted-fg))"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>')
+          + '<span>' + item.name + (item.department ? ' <span style="color:hsl(var(--ann-muted-fg))">(' + item.department + ')</span>' : '') + '</span>';
+        a.addEventListener('mouseenter', function () { a.style.background = 'hsl(var(--ann-muted) / 0.5)'; });
+        a.addEventListener('mouseleave', function () { a.style.background = 'none'; });
+        dropdown.appendChild(a);
+      });
+      dropdown.style.display = 'block';
+    });
+
+    input.addEventListener('blur', function () {
+      setTimeout(function () { dropdown.style.display = 'none'; }, 200);
+    });
+    input.addEventListener('focus', function () {
+      if (input.value.trim().length >= 1) input.dispatchEvent(new Event('input'));
+    });
+
+    return dropdown;
+  }
+
+  // Hero search
   var heroForm = document.getElementById('hero-search-form');
   if (heroForm) {
+    var heroQ = heroForm.querySelector('input[name="q"]');
+    var heroCity = heroForm.querySelector('input[name="city"]');
+    if (heroQ) createDropdown(heroQ, 'specialty');
+    if (heroCity) createDropdown(heroCity, 'city');
+
     heroForm.addEventListener('submit', function (e) {
-      // For now, just prevent and log (search page not yet built)
       e.preventDefault();
-      var q = heroForm.querySelector('input[name="q"]');
-      var city = heroForm.querySelector('input[name="city"]');
-      // In future: redirect to /recherche/?q=...&city=...
-      if (q && q.value) {
-        window.location.href = '/recherche/?q=' + encodeURIComponent(q.value) + (city && city.value ? '&city=' + encodeURIComponent(city.value) : '');
+      var qVal = normalize((heroQ && heroQ.value) || '');
+      var cityVal = normalize((heroCity && heroCity.value) || '');
+
+      // Try to match city first
+      if (cityVal) {
+        var cityMatch = searchData.cities.find(function (c) { return normalize(c.name) === cityVal || c.department === heroCity.value.trim(); });
+        if (cityMatch) { window.location.href = '/' + cityMatch.id + '/'; return; }
       }
+      // Then specialty
+      if (qVal) {
+        var specMatch = searchData.specialties.find(function (s) { return normalize(s.name).indexOf(qVal) !== -1 || (s.shortName && normalize(s.shortName).indexOf(qVal) !== -1); });
+        if (specMatch) { window.location.href = '/' + specMatch.id + '/'; return; }
+      }
+      // Fallback: go to first city or specialty that partially matches
+      var anyCity = cityVal && searchData.cities.find(function (c) { return normalize(c.name).indexOf(cityVal) !== -1; });
+      if (anyCity) { window.location.href = '/' + anyCity.id + '/'; return; }
+      var anySpec = qVal && searchData.specialties.find(function (s) { return normalize(s.name).indexOf(qVal) !== -1; });
+      if (anySpec) { window.location.href = '/' + anySpec.id + '/'; return; }
     });
   }
+
+  // Nav search inputs
+  ['nav-search-input', 'mobile-search-input'].forEach(function (id) {
+    var input = document.getElementById(id);
+    if (!input) return;
+    // Combined search: match both specialties and cities
+    var dropdown = document.createElement('div');
+    dropdown.className = 'ann-search-dropdown';
+    dropdown.style.cssText = 'display:none;position:absolute;top:100%;left:0;right:0;z-index:100;background:hsl(var(--ann-bg));border:1px solid hsl(var(--ann-border));border-radius:0.5rem;box-shadow:var(--ann-shadow-md,0 4px 16px rgba(0,0,0,0.08));max-height:16rem;overflow-y:auto;margin-top:0.25rem;';
+    var wrapper = input.closest('.ann-search-compact') || input.closest('.ann-mobile-search');
+    if (wrapper) { wrapper.style.position = 'relative'; wrapper.appendChild(dropdown); }
+
+    input.addEventListener('input', function () {
+      var val = normalize(input.value.trim());
+      if (val.length < 1) { dropdown.style.display = 'none'; return; }
+
+      var specMatches = searchData.specialties.filter(function (s) { return normalize(s.name).indexOf(val) !== -1 || (s.shortName && normalize(s.shortName).indexOf(val) !== -1); }).slice(0, 3);
+      var cityMatches = searchData.cities.filter(function (c) { return normalize(c.name).indexOf(val) !== -1 || (c.department && c.department.indexOf(val) !== -1); }).slice(0, 4);
+
+      if (!specMatches.length && !cityMatches.length) { dropdown.style.display = 'none'; return; }
+
+      dropdown.innerHTML = '';
+      function addItem(item, icon, suffix) {
+        var a = document.createElement('a');
+        a.href = '/' + item.id + '/';
+        a.style.cssText = 'display:flex;align-items:center;gap:0.5rem;padding:0.625rem 0.75rem;color:hsl(var(--ann-fg));text-decoration:none;font-size:0.875rem;transition:background 150ms;';
+        a.innerHTML = icon + '<span>' + item.name + (suffix || '') + '</span>';
+        a.addEventListener('mouseenter', function () { a.style.background = 'hsl(var(--ann-muted) / 0.5)'; });
+        a.addEventListener('mouseleave', function () { a.style.background = 'none'; });
+        dropdown.appendChild(a);
+      }
+
+      var specIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;flex-shrink:0;color:hsl(var(--ann-muted-fg))"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>';
+      var cityIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;flex-shrink:0;color:hsl(var(--ann-muted-fg))"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+
+      specMatches.forEach(function (s) { addItem(s, specIcon, ''); });
+      cityMatches.forEach(function (c) { addItem(c, cityIcon, ' <span style="color:hsl(var(--ann-muted-fg))">(' + c.department + ')</span>'); });
+
+      dropdown.style.display = 'block';
+    });
+
+    input.addEventListener('blur', function () { setTimeout(function () { dropdown.style.display = 'none'; }, 200); });
+    input.addEventListener('focus', function () { if (input.value.trim().length >= 1) input.dispatchEvent(new Event('input')); });
+
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        var first = dropdown.querySelector('a');
+        if (first) window.location.href = first.href;
+      }
+    });
+  });
 })();
