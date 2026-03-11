@@ -404,6 +404,15 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-03-08',
   },
+  {
+    internalSlug: 'lexique-relations-2026',
+    category: 'vie-de-couple',
+    frOnly: true,
+    slugs: {
+      fr: 'lexique-relations-2026',
+    },
+    publishedAt: '2026-03-11',
+  },
 ];
 
 // Author data
