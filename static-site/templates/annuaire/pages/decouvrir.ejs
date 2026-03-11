@@ -1,0 +1,213 @@
+<%
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Découvrir l'annuaire des professionnels du couple",
+      "url": "https://annuaire.quiz-couple.com/decouvrir/",
+      "description": "Découvrez comment notre annuaire vous aide à trouver le professionnel du couple idéal près de chez vous. Thérapeutes, sexologues, médiateurs et plus encore.",
+      "isPartOf": { "@id": "https://annuaire.quiz-couple.com/#website" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment trouver un professionnel du couple près de chez moi ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Utilisez notre barre de recherche en indiquant votre ville ou code postal, puis sélectionnez la spécialité souhaitée. Vous verrez instantanément les professionnels disponibles autour de vous, avec leurs coordonnées, avis et disponibilités." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels types de professionnels sont référencés ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Notre annuaire référence les thérapeutes de couple, sexologues, sexothérapeutes, médiateurs familiaux, coachs parentaux et conseillers conjugaux. Tous les professionnels listés exercent dans le domaine de la relation de couple et de la famille." }
+        },
+        {
+          "@type": "Question",
+          "name": "Les professionnels sont-ils vérifiés ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Chaque professionnel inscrit sur notre annuaire fournit ses qualifications et certifications. Les profils Premium bénéficient d'une vérification approfondie de leurs diplômes et de leur activité professionnelle." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte une consultation ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Les tarifs varient selon la spécialité et la localisation du professionnel. En moyenne, comptez entre 50€ et 100€ par séance. Chaque fiche professionnelle indique sa fourchette de prix. Certains professionnels proposent un premier échange gratuit." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment s'inscrire en tant que professionnel ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Les professionnels du couple peuvent s'inscrire via notre page dédiée. L'inscription de base est gratuite. Des formules Premium sont disponibles pour bénéficier d'une meilleure visibilité, d'un profil enrichi et d'un positionnement prioritaire dans les résultats." }
+        }
+      ]
+    }
+  ];
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="ann-hero" style="padding-bottom: 2rem;">
+  <div class="ann-hero-bg"></div>
+  <div class="ann-container ann-hero-content">
+    <div class="ann-discover-hero">
+      <div class="ann-badge ann-badge-primary" style="margin-bottom: 1rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        En savoir plus
+      </div>
+      <h1>L'annuaire qui rapproche <span class="ann-text-gradient">les couples des bons professionnels</span></h1>
+      <p class="ann-text-muted ann-text-lg" style="max-width: 36rem; margin: 1rem auto 0;">Une plateforme indépendante conçue pour vous aider à trouver le professionnel adapté à votre situation, en toute confiance.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ann-divider"></div>
+
+<!-- Why this directory exists -->
+<section class="ann-section">
+  <div class="ann-container" style="max-width: 48rem;">
+    <h2 style="margin-bottom: 1.5rem;">Pourquoi cet <span class="ann-text-gradient">annuaire</span> existe</h2>
+    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+      <p style="font-size: 1.0625rem; line-height: 1.8; color: hsl(var(--ann-muted-fg));">
+        Quand on traverse une période difficile dans son couple, trouver le bon professionnel peut vite devenir un parcours du combattant. <strong style="color: hsl(var(--ann-fg))">Entre les annuaires généralistes, les résultats Google peu fiables et le bouche-à-oreille limité</strong>, beaucoup de couples renoncent ou perdent un temps précieux.
+      </p>
+      <p style="font-size: 1.0625rem; line-height: 1.8; color: hsl(var(--ann-muted-fg));">
+        C'est pour répondre à ce besoin qu'a été créé cet annuaire : un espace <strong style="color: hsl(var(--ann-fg))">100% dédié aux professionnels du couple</strong> — thérapeutes, sexologues, médiateurs familiaux, conseillers conjugaux et coachs parentaux — permettant de les trouver facilement, <strong style="color: hsl(var(--ann-fg))">par spécialité et par ville</strong>.
+      </p>
+      <p style="font-size: 1.0625rem; line-height: 1.8; color: hsl(var(--ann-muted-fg));">
+        Chaque professionnel dispose d'une fiche détaillée avec ses qualifications, ses méthodes, ses tarifs et les avis de ses patients. L'objectif est simple : <strong style="color: hsl(var(--ann-fg))">vous donner toutes les informations pour faire le bon choix, rapidement</strong>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="ann-divider"></div>
+
+<!-- Features -->
+<section class="ann-section" style="background: hsl(var(--ann-muted) / 0.25);">
+  <div class="ann-container">
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <h2>Ce qui rend cet annuaire <span class="ann-text-gradient">différent</span></h2>
+    </div>
+
+    <div class="ann-feature-grid" style="max-width: 52rem; margin: 0 auto;">
+      <div class="ann-feature-card ann-animate-fade-in-up">
+        <div class="ann-feature-icon" style="background: hsl(var(--ann-primary))">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="ann-feature-title">Recherche géolocalisée</h3>
+        <p class="ann-feature-desc">Trouvez les professionnels les plus proches de chez vous grâce à notre carte interactive et notre moteur de recherche par ville et code postal.</p>
+      </div>
+
+      <div class="ann-feature-card ann-animate-fade-in-up">
+        <div class="ann-feature-icon" style="background: hsl(var(--ann-secondary))">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="ann-feature-title">Profils vérifiés</h3>
+        <p class="ann-feature-desc">Chaque professionnel fournit ses qualifications. Les profils Premium bénéficient d'une vérification approfondie de leurs diplômes et certifications.</p>
+      </div>
+
+      <div class="ann-feature-card ann-animate-fade-in-up">
+        <div class="ann-feature-icon" style="background: hsl(160 60% 40%)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3 class="ann-feature-title">Avis authentiques</h3>
+        <p class="ann-feature-desc">Consultez les avis laissés par d'autres patients pour vous faire une idée de la qualité de l'accompagnement proposé par chaque professionnel.</p>
+      </div>
+
+      <div class="ann-feature-card ann-animate-fade-in-up">
+        <div class="ann-feature-icon" style="background: hsl(40 90% 50%)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3 class="ann-feature-title">100% spécialisé couple</h3>
+        <p class="ann-feature-desc">Contrairement aux annuaires généralistes, chaque professionnel référencé ici est spécifiquement formé pour accompagner les couples et les familles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ann-divider"></div>
+
+<!-- FAQ Section -->
+<section class="ann-section">
+  <div class="ann-container">
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <h2>Questions <span class="ann-text-gradient">fréquentes</span></h2>
+    </div>
+
+    <div class="ann-faq-list">
+      <div class="ann-faq-item" data-faq>
+        <button class="ann-faq-trigger" data-faq-trigger>
+          <span>Comment trouver un professionnel du couple près de chez moi ?</span>
+          <svg class="ann-chevron" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="ann-faq-answer hidden">
+          Utilisez notre barre de recherche en indiquant votre ville ou code postal, puis sélectionnez la spécialité souhaitée. Vous verrez instantanément les professionnels disponibles autour de vous, avec leurs coordonnées, avis et disponibilités.
+        </div>
+      </div>
+
+      <div class="ann-faq-item" data-faq>
+        <button class="ann-faq-trigger" data-faq-trigger>
+          <span>Quels types de professionnels sont référencés ?</span>
+          <svg class="ann-chevron" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="ann-faq-answer hidden">
+          Notre annuaire référence les thérapeutes de couple, sexologues, sexothérapeutes, médiateurs familiaux, coachs parentaux et conseillers conjugaux. Tous les professionnels listés exercent dans le domaine de la relation de couple et de la famille.
+        </div>
+      </div>
+
+      <div class="ann-faq-item" data-faq>
+        <button class="ann-faq-trigger" data-faq-trigger>
+          <span>Les professionnels sont-ils vérifiés ?</span>
+          <svg class="ann-chevron" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="ann-faq-answer hidden">
+          Chaque professionnel inscrit sur notre annuaire fournit ses qualifications et certifications. Les profils Premium bénéficient d'une vérification approfondie de leurs diplômes et de leur activité professionnelle.
+        </div>
+      </div>
+
+      <div class="ann-faq-item" data-faq>
+        <button class="ann-faq-trigger" data-faq-trigger>
+          <span>Combien coûte une consultation ?</span>
+          <svg class="ann-chevron" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="ann-faq-answer hidden">
+          Les tarifs varient selon la spécialité et la localisation du professionnel. En moyenne, comptez entre 50€ et 100€ par séance. Chaque fiche professionnelle indique sa fourchette de prix. Certains professionnels proposent un premier échange téléphonique gratuit.
+        </div>
+      </div>
+
+      <div class="ann-faq-item" data-faq>
+        <button class="ann-faq-trigger" data-faq-trigger>
+          <span>Comment s'inscrire en tant que professionnel ?</span>
+          <svg class="ann-chevron" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="ann-faq-answer hidden">
+          Les professionnels du couple peuvent s'inscrire directement via notre page dédiée. L'inscription de base est gratuite et permet de créer une fiche complète. Des formules Premium sont disponibles pour ceux qui souhaitent bénéficier d'une visibilité renforcée et d'un positionnement prioritaire.
+        </div>
+      </div>
+
+      <div class="ann-faq-item" data-faq>
+        <button class="ann-faq-trigger" data-faq-trigger>
+          <span>Quel est le lien avec Quiz Couple ?</span>
+          <svg class="ann-chevron" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="ann-faq-answer hidden">
+          Cet annuaire est une extension naturelle de Quiz Couple, la plateforme de quiz et tests relationnels. Après avoir identifié des axes d'amélioration grâce aux quiz, il est logique de pouvoir trouver un professionnel qualifié pour aller plus loin dans sa démarche de couple.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ann-divider"></div>
+
+<!-- Bottom CTA -->
+<section class="ann-section">
+  <div class="ann-container">
+    <div class="ann-cta-section">
+      <h2 style="margin-bottom: 0.75rem;">Prêt à trouver votre <span class="ann-text-gradient">professionnel</span> ?</h2>
+      <p class="ann-text-muted" style="max-width: 28rem; margin: 0 auto 1.5rem;">Faites le premier pas vers un accompagnement de qualité pour votre couple.</p>
+      <a href="/" class="ann-btn ann-btn-primary ann-btn-lg">
+        Rechercher un professionnel
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      </a>
+    </div>
+  </div>
+</section>

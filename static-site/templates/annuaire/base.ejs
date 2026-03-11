@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <title><%= metaTitle %></title>
+  <meta name="description" content="<%= metaDescription %>">
+  <% if (typeof noindex !== 'undefined' && noindex) { %><meta name="robots" content="noindex, nofollow"><% } %>
+  <link rel="canonical" href="<%= canonical %>">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Quiz Couple - Annuaire">
+  <meta property="og:title" content="<%= metaTitle %>">
+  <meta property="og:description" content="<%= metaDescription %>">
+  <meta property="og:url" content="<%= canonical %>">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="https://quiz-couple.com/og-image.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= metaTitle %>">
+  <meta name="twitter:description" content="<%= metaDescription %>">
+  <meta name="twitter:image" content="https://quiz-couple.com/og-image.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://quiz-couple.com/favicon.ico">
+  <link rel="icon" type="image/png" href="https://quiz-couple.com/favicon.png">
+  <link rel="apple-touch-icon" href="https://quiz-couple.com/apple-touch-icon.png">
+
+  <!-- Theme initialization -->
+  <script>
+    (function(){
+      var t=localStorage.getItem('annuaire-theme');
+      if(t==='dark'){document.documentElement.classList.add('dark')}
+      else if(t==='light'){document.documentElement.classList.remove('dark')}
+      else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){document.documentElement.classList.add('dark')}
+    })();
+  </script>
+
+  <!-- Critical CSS -->
+  <style>
+    :root{
+      --ann-bg:250 20% 98%;--ann-fg:250 30% 12%;--ann-card:250 15% 96%;
+      --ann-primary:340 65% 55%;--ann-primary-fg:0 0% 100%;
+      --ann-secondary:260 50% 62%;--ann-secondary-fg:0 0% 100%;
+      --ann-muted:250 15% 92%;--ann-muted-fg:250 10% 46%;
+      --ann-accent:340 70% 95%;--ann-accent-fg:340 65% 35%;
+      --ann-border:250 15% 88%;--ann-radius:0.75rem;
+      --ann-success:160 60% 45%;--ann-warning:40 90% 55%;
+    }
+    .dark{
+      --ann-bg:250 30% 5%;--ann-fg:250 15% 93%;--ann-card:250 25% 9%;
+      --ann-primary:340 65% 60%;--ann-muted:250 20% 14%;--ann-muted-fg:250 12% 58%;
+      --ann-accent:340 50% 15%;--ann-accent-fg:340 60% 75%;--ann-border:250 20% 18%;
+    }
+    *,::after,::before{box-sizing:border-box;margin:0;padding:0;border:0 solid}
+    body{font-family:Inter,system-ui,-apple-system,sans-serif;background-color:hsl(var(--ann-bg));color:hsl(var(--ann-fg));-webkit-font-smoothing:antialiased;line-height:1.6}
+    .ann-container{width:100%;max-width:80rem;margin:0 auto;padding:0 1rem}
+    header{background-color:hsl(var(--ann-bg)/0.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid hsl(var(--ann-border)/0.5);position:sticky;top:0;z-index:50}
+    .hidden{display:none}.flex{display:flex}.grid{display:grid}.block{display:block}.inline-flex{display:inline-flex}
+    .items-center{align-items:center}.justify-between{justify-content:space-between}.justify-center{justify-content:center}
+  </style>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"></noscript>
+
+  <!-- Leaflet CSS for maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+
+  <!-- Annuaire CSS -->
+  <link rel="stylesheet" href="/css/annuaire.css">
+
+  <!-- JSON-LD Structured Data -->
+  <%- typeof jsonLdHtml !== 'undefined' && jsonLdHtml ? jsonLdHtml : '' %>
+</head>
+<body>
+  <%- include('partials/header', { currentPage: typeof currentPage !== 'undefined' ? currentPage : 'home', specialties: typeof specialties !== 'undefined' ? specialties : [] }) %>
+
+  <main class="ann-main">
+    <%- content %>
+  </main>
+
+  <%- include('partials/footer', { specialties: typeof specialties !== 'undefined' ? specialties : [] }) %>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
+
+  <!-- Annuaire JS -->
+  <script src="/js/annuaire.js" defer></script>
+
+  <!-- GA (deferred) -->
+  <script>
+    window.addEventListener('load',function(){
+      var s=document.createElement('script');
+      s.src='https://www.googletagmanager.com/gtag/js?id=G-XZV8V6FEK5';
+      s.async=true;
+      document.head.appendChild(s);
+      s.onload=function(){
+        window.dataLayer=window.dataLayer||[];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js',new Date());
+        gtag('config','G-XZV8V6FEK5',{send_page_view:true});
+      };
+    });
+  </script>
+</body>
+</html>
