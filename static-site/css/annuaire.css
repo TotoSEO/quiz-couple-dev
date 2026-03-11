@@ -2075,3 +2075,334 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
   .ann-footer-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   .ann-feature-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   LISTING PAGES (Specialty + City)
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Breadcrumb ──────────────────────────────────────────────────────── */
+.ann-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: hsl(var(--ann-muted-fg));
+  margin-bottom: 1.5rem;
+}
+.ann-breadcrumb a {
+  color: hsl(var(--ann-muted-fg));
+  transition: color var(--ann-transition);
+}
+.ann-breadcrumb a:hover { color: hsl(var(--ann-primary)); }
+.ann-breadcrumb svg { width: 0.75rem; height: 0.75rem; flex-shrink: 0; }
+.ann-breadcrumb span { color: hsl(var(--ann-fg)); font-weight: 500; }
+
+/* ── Listing Hero ────────────────────────────────────────────────────── */
+.ann-listing-hero {
+  padding: 3rem 0 2.5rem;
+  background: linear-gradient(180deg, hsl(var(--ann-muted) / 0.3) 0%, hsl(var(--ann-bg)) 100%);
+}
+.ann-listing-hero-content {
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto;
+}
+.ann-listing-hero-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: #fff;
+}
+.ann-listing-hero-icon svg { width: 2rem; height: 2rem; }
+.ann-listing-hero-icon--city {
+  background: linear-gradient(135deg, hsl(var(--ann-primary)), hsl(var(--ann-secondary)));
+}
+.ann-listing-hero-content h1 { margin-bottom: 0.75rem; }
+.ann-listing-hero-content p { margin: 0 auto; }
+
+.ann-listing-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.ann-listing-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.9375rem;
+  color: hsl(var(--ann-muted-fg));
+}
+.ann-listing-stat strong {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(var(--ann-fg));
+}
+
+/* ── Listing Grid ────────────────────────────────────────────────────── */
+.ann-listing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── Empty State ─────────────────────────────────────────────────────── */
+.ann-empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.ann-empty-state h3 { margin: 1rem 0 0.5rem; }
+
+/* ── Filter Chips ────────────────────────────────────────────────────── */
+.ann-filter-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.ann-filter-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: hsl(var(--ann-muted-fg));
+  margin-right: 0.25rem;
+}
+.ann-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 2rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background: hsl(var(--ann-card));
+  border: 1px solid hsl(var(--ann-border));
+  color: hsl(var(--ann-fg));
+  transition: all var(--ann-transition);
+}
+.ann-chip:hover {
+  border-color: var(--chip-color, hsl(var(--ann-primary)));
+  background: hsl(var(--ann-accent));
+}
+.ann-chip-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── City count badge ────────────────────────────────────────────────── */
+.ann-city-count {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  background: hsl(var(--ann-primary) / 0.1);
+  color: hsl(var(--ann-primary));
+  padding: 0.125rem 0.5rem;
+  border-radius: 1rem;
+  margin-left: auto;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   PROFESSIONAL PROFILE PAGE
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Profile Hero ────────────────────────────────────────────────────── */
+.ann-profile-hero {
+  padding: 2rem 0 2.5rem;
+  background: linear-gradient(180deg, hsl(var(--ann-muted) / 0.3) 0%, hsl(var(--ann-bg)) 100%);
+}
+.ann-profile-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.ann-profile-avatar-lg {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, hsl(var(--ann-primary)), hsl(var(--ann-secondary)));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  position: relative;
+}
+.ann-profile-verified {
+  position: absolute;
+  bottom: -0.125rem;
+  right: -0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: hsl(var(--ann-success));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 2px solid hsl(var(--ann-bg));
+}
+.ann-profile-identity { flex: 1; min-width: 0; }
+.ann-profile-name {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  margin: 0;
+}
+.ann-profile-specialty {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--spec-color, hsl(var(--ann-primary)));
+  margin-top: 0.25rem;
+}
+.ann-profile-quick-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: hsl(var(--ann-muted-fg));
+}
+.ann-profile-quick-info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+/* ── Profile Layout (main + sidebar) ─────────────────────────────────── */
+.ann-profile-layout {
+  display: grid;
+  grid-template-columns: 1fr 22rem;
+  gap: 2rem;
+  align-items: start;
+}
+.ann-profile-main { display: flex; flex-direction: column; gap: 1.5rem; }
+.ann-profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 5rem;
+}
+
+/* ── Profile Cards ───────────────────────────────────────────────────── */
+.ann-profile-card {
+  background: hsl(var(--ann-card));
+  border: 1px solid hsl(var(--ann-border));
+  border-radius: var(--ann-radius);
+  padding: 1.5rem;
+}
+.ann-profile-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: hsl(var(--ann-fg));
+}
+.ann-profile-bio {
+  line-height: 1.7;
+  color: hsl(var(--ann-muted-fg));
+}
+.ann-profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.ann-profile-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background: hsl(var(--ann-accent));
+  color: hsl(var(--ann-accent-fg));
+  border: 1px solid hsl(var(--ann-border));
+}
+
+/* ── Contact Card ────────────────────────────────────────────────────── */
+.ann-profile-contact-card {
+  border-color: hsl(var(--ann-primary) / 0.2);
+  background: linear-gradient(135deg, hsl(var(--ann-accent) / 0.5), hsl(var(--ann-card)));
+}
+.ann-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.ann-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: hsl(var(--ann-fg));
+  transition: color var(--ann-transition);
+}
+.ann-contact-item:hover { color: hsl(var(--ann-primary)); }
+.ann-contact-item svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  color: hsl(var(--ann-primary));
+}
+
+/* ── Info List ───────────────────────────────────────────────────────── */
+.ann-profile-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.ann-profile-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.875rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid hsl(var(--ann-border) / 0.5);
+}
+.ann-profile-info-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+.ann-link-primary {
+  color: hsl(var(--ann-primary));
+  font-weight: 500;
+  transition: opacity var(--ann-transition);
+}
+.ann-link-primary:hover { opacity: 0.8; }
+
+/* ── Small Map ───────────────────────────────────────────────────────── */
+.ann-map-sm { height: 16rem; border-radius: var(--ann-radius); }
+
+/* ── Profile Responsive ──────────────────────────────────────────────── */
+@media (max-width: 899px) {
+  .ann-profile-layout {
+    grid-template-columns: 1fr;
+  }
+  .ann-profile-sidebar {
+    position: static;
+    order: -1;
+  }
+  .ann-profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .ann-profile-quick-info { justify-content: center; }
+}
+
+@media (max-width: 639px) {
+  .ann-listing-grid {
+    grid-template-columns: 1fr;
+  }
+  .ann-listing-stats { gap: 1rem; }
+  .ann-listing-hero-icon { width: 3rem; height: 3rem; }
+  .ann-listing-hero-icon svg { width: 1.5rem; height: 1.5rem; }
+  .ann-profile-avatar-lg { width: 4rem; height: 4rem; font-size: 1.25rem; }
+}

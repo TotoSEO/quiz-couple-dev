@@ -11,6 +11,7 @@ import { minify } from 'html-minifier-terser';
 import {
   ANNUAIRE_BASE_URL, SPECIALTIES, CITIES, MOCK_PROFESSIONALS,
   getSpecialtyById, getCityById, getAnnuaireUrl,
+  getProfessionalsBySpecialty, getProfessionalsByCity,
 } from './annuaire-config.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -133,6 +134,67 @@ async function generateTarifsPage() {
   console.log('[annuaire] Generated: /tarifs/');
 }
 
+// ── Dynamic page generators ──────────────────────────────────────────────
+
+async function generateSpecialtyPages() {
+  for (const specialty of SPECIALTIES) {
+    const filteredProfessionals = getProfessionalsBySpecialty(specialty.id);
+    const data = {
+      ...getSharedData(),
+      specialty,
+      filteredProfessionals,
+      metaTitle: `${specialty.metaTitle} | Annuaire Quiz Couple`,
+      metaDescription: specialty.metaDescription,
+      canonical: getAnnuaireUrl(`/${specialty.id}/`),
+      currentPage: 'specialty',
+    };
+
+    const html = renderTemplate('specialty', data);
+    await writePage(path.join(DIST_DIR, `${specialty.id}/index.html`), html);
+    console.log(`[annuaire] Generated: /${specialty.id}/ (${filteredProfessionals.length} pros)`);
+  }
+}
+
+async function generateCityPages() {
+  for (const city of CITIES) {
+    const filteredProfessionals = getProfessionalsByCity(city.id);
+    const data = {
+      ...getSharedData(),
+      city,
+      filteredProfessionals,
+      metaTitle: `Professionnels du couple à ${city.name} | Annuaire Quiz Couple`,
+      metaDescription: `Trouvez un thérapeute de couple, sexologue ou médiateur familial à ${city.name} (${city.department}). ${filteredProfessionals.length} professionnels référencés.`,
+      canonical: getAnnuaireUrl(`/${city.id}/`),
+      currentPage: 'city',
+    };
+
+    const html = renderTemplate('city', data);
+    await writePage(path.join(DIST_DIR, `${city.id}/index.html`), html);
+    console.log(`[annuaire] Generated: /${city.id}/ (${filteredProfessionals.length} pros)`);
+  }
+}
+
+async function generateProfessionalPages() {
+  for (const pro of MOCK_PROFESSIONALS) {
+    const proSpec = getSpecialtyById(pro.specialty);
+    const proCity = getCityById(pro.city);
+    const data = {
+      ...getSharedData(),
+      pro,
+      proSpec,
+      proCity,
+      metaTitle: `${pro.firstName} ${pro.lastName} — ${proSpec ? proSpec.name : ''} à ${proCity ? proCity.name : ''} | Annuaire Quiz Couple`,
+      metaDescription: `${pro.firstName} ${pro.lastName}, ${proSpec ? proSpec.name.toLowerCase() : ''} à ${proCity ? proCity.name : ''}. ${pro.yearsExperience} ans d'expérience. ${pro.priceRange}. Prenez rendez-vous en ligne.`,
+      canonical: getAnnuaireUrl(`/professionnel/${pro.slug}/`),
+      currentPage: 'professionnel',
+    };
+
+    const html = renderTemplate('professionnel', data);
+    await writePage(path.join(DIST_DIR, `professionnel/${pro.slug}/index.html`), html);
+    console.log(`[annuaire] Generated: /professionnel/${pro.slug}/`);
+  }
+}
+
 // ── Copy static assets ──────────────────────────────────────────────────
 
 function copyAssets() {
@@ -173,6 +235,9 @@ async function main() {
   await generateDecouvrirPage();
   await generateRejoindrePage();
   await generateTarifsPage();
+  await generateSpecialtyPages();
+  await generateCityPages();
+  await generateProfessionalPages();
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(2);
   console.log(`\n✅ Annuaire build complete in ${elapsed}s`);
