@@ -7,28 +7,57 @@
     prosByCity[p.city].push(p);
   });
   const activeCities = Object.keys(prosByCity).map(id => cities.find(c => c.id === id)).filter(Boolean);
+  const seo = specialty.seoContent || {};
 
-  // JSON-LD
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": specialty.name + " en France — Annuaire Quiz Couple",
-    "description": specialty.description,
-    "url": canonical,
-    "mainEntity": {
-      "@type": "ItemList",
-      "name": "Liste des " + specialty.name.toLowerCase() + "s en France",
-      "numberOfItems": filteredProfessionals.length,
-      "itemListElement": filteredProfessionals.map((p, i) => ({
-        "@type": "ListItem",
-        "position": i + 1,
-        "name": p.firstName + " " + p.lastName,
-        "url": baseUrl + "/professionnel/" + p.slug + "/"
-      }))
+  // JSON-LD: CollectionPage + BreadcrumbList + FAQPage
+  const jsonLdArray = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": specialty.name + " en France — Annuaire Quiz Couple",
+      "description": specialty.description,
+      "url": canonical,
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Liste des " + specialty.name.toLowerCase() + "s en France",
+        "numberOfItems": filteredProfessionals.length,
+        "itemListElement": filteredProfessionals.map((p, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": p.firstName + " " + p.lastName,
+          "url": baseUrl + "/professionnel/" + p.slug + "/"
+        }))
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": baseUrl + "/" },
+        { "@type": "ListItem", "position": 2, "name": specialty.name }
+      ]
     }
-  };
+  ];
+
+  // Add FAQPage schema if FAQ data exists
+  if (seo.faq && seo.faq.length > 0) {
+    jsonLdArray.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": seo.faq.map(item => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.a
+        }
+      }))
+    });
+  }
 %>
-<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+<% for (const ld of jsonLdArray) { %>
+<script type="application/ld+json"><%- JSON.stringify(ld) %></script>
+<% } %>
 
 <!-- Specialty Hero -->
 <section class="ann-listing-hero">
@@ -101,11 +130,66 @@
   </div>
 </section>
 
+<% if (seo.whenToConsult) { %>
+<div class="ann-divider"></div>
+
+<!-- SEO Content: When to consult + How it works -->
+<section class="ann-section">
+  <div class="ann-container">
+    <div class="ann-seo-content">
+      <div class="ann-seo-block">
+        <h2><%= seo.whenToConsult %></h2>
+        <p><%= seo.whenToConsultText %></p>
+      </div>
+
+      <div class="ann-seo-block">
+        <h2><%= seo.howItWorks %></h2>
+        <p><%= seo.howItWorksText %></p>
+      </div>
+
+      <% if (seo.priceRange) { %>
+      <div class="ann-seo-block">
+        <h3>Tarifs indicatifs</h3>
+        <p><%= seo.priceRange %></p>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<% if (seo.faq && seo.faq.length > 0) { %>
+<div class="ann-divider"></div>
+
+<!-- FAQ -->
+<section class="ann-section" style="background: hsl(var(--ann-muted) / 0.25);">
+  <div class="ann-container">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h2>Questions fréquentes sur <span class="ann-text-gradient">les <%= specialty.name.toLowerCase() %>s</span></h2>
+    </div>
+
+    <div class="ann-faq-list">
+      <% for (const item of seo.faq) { %>
+      <div class="ann-faq-item" data-faq>
+        <button class="ann-faq-trigger" data-faq-trigger aria-expanded="false">
+          <span><%= item.q %></span>
+          <svg class="ann-chevron" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="ann-faq-answer hidden" data-faq-answer>
+          <p><%= item.a %></p>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+<% } %>
+
 <% if (activeCities.length > 0) { %>
 <div class="ann-divider"></div>
 
 <!-- Cities for this specialty -->
-<section class="ann-section" style="background: hsl(var(--ann-muted) / 0.25);">
+<section class="ann-section">
   <div class="ann-container">
     <div style="text-align: center; margin-bottom: 2rem;">
       <h2>Trouver un <%= specialty.name.toLowerCase() %> par <span class="ann-text-gradient">ville</span></h2>
@@ -128,7 +212,7 @@
 <div class="ann-divider"></div>
 
 <!-- Other specialties -->
-<section class="ann-section">
+<section class="ann-section" style="background: hsl(var(--ann-muted) / 0.25);">
   <div class="ann-container">
     <div style="text-align: center; margin-bottom: 2rem;">
       <h2>Autres <span class="ann-text-gradient">spécialités</span></h2>
@@ -167,7 +251,7 @@
 <div class="ann-divider"></div>
 
 <!-- CTA -->
-<section class="ann-section" style="background: hsl(var(--ann-muted) / 0.25);">
+<section class="ann-section">
   <div class="ann-container">
     <div class="ann-cta-section">
       <h2 style="margin-bottom: 0.75rem;">Vous êtes <span class="ann-text-gradient"><%= specialty.name.toLowerCase() %></span> ?</h2>

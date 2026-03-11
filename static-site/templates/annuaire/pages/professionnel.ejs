@@ -2,37 +2,50 @@
   // Variables: pro, proSpec, proCity, specialties, cities, professionals
   const otherPros = professionals.filter(p => p.id !== pro.id && (p.specialty === pro.specialty || p.city === pro.city)).slice(0, 3);
 
-  // JSON-LD
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": pro.firstName + " " + pro.lastName,
-    "jobTitle": proSpec ? proSpec.name : pro.specialty,
-    "description": pro.description,
-    "url": canonical,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": pro.address,
-      "addressLocality": proCity ? proCity.name : pro.city,
-      "addressCountry": "FR"
+  // JSON-LD: Person + BreadcrumbList
+  const jsonLdArray = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": pro.firstName + " " + pro.lastName,
+      "jobTitle": proSpec ? proSpec.name : pro.specialty,
+      "description": pro.description,
+      "url": canonical,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": pro.address,
+        "addressLocality": proCity ? proCity.name : pro.city,
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": pro.lat,
+        "longitude": pro.lng
+      },
+      "telephone": pro.phone,
+      "email": pro.email,
+      "knowsLanguage": pro.languages,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": pro.rating,
+        "reviewCount": pro.reviewCount,
+        "bestRating": 5
+      }
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": pro.lat,
-      "longitude": pro.lng
-    },
-    "telephone": pro.phone,
-    "email": pro.email,
-    "knowsLanguage": pro.languages,
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": pro.rating,
-      "reviewCount": pro.reviewCount,
-      "bestRating": 5
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": baseUrl + "/" },
+        { "@type": "ListItem", "position": 2, "name": proSpec ? proSpec.name : pro.specialty, "item": baseUrl + "/" + pro.specialty + "/" },
+        { "@type": "ListItem", "position": 3, "name": pro.firstName + " " + pro.lastName }
+      ]
     }
-  };
+  ];
 %>
-<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+<% for (const ld of jsonLdArray) { %>
+<script type="application/ld+json"><%- JSON.stringify(ld) %></script>
+<% } %>
 
 <!-- Profile Hero -->
 <section class="ann-profile-hero">
