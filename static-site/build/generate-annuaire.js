@@ -119,6 +119,20 @@ async function generateRejoindrePage() {
   console.log('[annuaire] Generated: /rejoindre/');
 }
 
+async function generateTarifsPage() {
+  const data = {
+    ...getSharedData(),
+    metaTitle: 'Tarifs professionnels — Annuaire Quiz Couple | Gratuit, Pro, Boost',
+    metaDescription: 'Découvrez nos formules pour les professionnels du couple. Fiche gratuite à vie, formule Professionnel dès 5,99€/mois, programme Boost pour une visibilité maximale.',
+    canonical: getAnnuaireUrl('/tarifs/'),
+    currentPage: 'tarifs',
+  };
+
+  const html = renderTemplate('tarifs', data);
+  await writePage(path.join(DIST_DIR, 'tarifs/index.html'), html);
+  console.log('[annuaire] Generated: /tarifs/');
+}
+
 // ── Copy static assets ──────────────────────────────────────────────────
 
 function copyAssets() {
@@ -158,6 +172,7 @@ async function main() {
   await generateHomePage();
   await generateDecouvrirPage();
   await generateRejoindrePage();
+  await generateTarifsPage();
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(2);
   console.log(`\n✅ Annuaire build complete in ${elapsed}s`);
