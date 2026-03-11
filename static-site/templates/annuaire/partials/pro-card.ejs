@@ -3,7 +3,7 @@
   const proSpec = specialties.find(s => s.id === pro.specialty);
   const proCity = cities.find(c => c.id === pro.city);
 %>
-<div class="ann-pro-card<%= pro.premium ? ' ann-pro-card-premium' : '' %> ann-animate-fade-in-up">
+<a href="/professionnel/<%= pro.slug %>/" class="ann-pro-card<%= pro.premium ? ' ann-pro-card-premium' : '' %> ann-animate-fade-in-up" style="text-decoration:none;color:inherit;display:block;">
   <% if (pro.premium) { %>
   <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
     <div class="ann-badge ann-badge-premium" style="font-size: 0.6875rem;">
@@ -14,7 +14,13 @@
   <% } %>
 
   <div class="ann-pro-header">
+    <% if (pro.photoUrl) { %>
+    <div class="ann-pro-avatar ann-pro-avatar-photo">
+      <img src="<%= pro.photoUrl %>" alt="Photo de <%= pro.firstName %> <%= pro.lastName %>" loading="lazy">
+    </div>
+    <% } else { %>
     <div class="ann-pro-avatar"><%= pro.firstName[0] %><%= pro.lastName[0] %></div>
+    <% } %>
     <div class="ann-pro-info">
       <div class="ann-pro-name"><%= pro.firstName %> <%= pro.lastName %></div>
       <div class="ann-pro-specialty"><%= proSpec ? proSpec.name : pro.specialty %></div>
@@ -49,7 +55,9 @@
   </div>
 
   <div class="ann-pro-actions">
-    <a href="/professionnel/<%= pro.slug %>/" class="ann-btn ann-btn-primary ann-btn-sm" style="flex:1">Voir le profil</a>
-    <a href="/professionnel/<%= pro.slug %>/#contact" class="ann-btn ann-btn-outline ann-btn-sm" style="flex:1">Contacter</a>
+    <span class="ann-btn ann-btn-primary ann-btn-sm" style="flex:1;justify-content:center;">
+      Voir le profil
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+    </span>
   </div>
-</div>
+</a>

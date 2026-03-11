@@ -67,11 +67,65 @@ async function writePage(outputPath, html) {
 
 // ── Shared template data ─────────────────────────────────────────────────
 
+let liveProfessionals = null;
+
+async function fetchLiveProfessionals() {
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key) {
+    console.log('[annuaire] No SUPABASE_URL/SERVICE_ROLE_KEY — using mock data');
+    return null;
+  }
+
+  try {
+    const res = await fetch(`${url}/rest/v1/annuaire_professionals?is_published=eq.true&select=*`, {
+      headers: {
+        'apikey': key,
+        'Authorization': `Bearer ${key}`,
+        'Content-Type': 'application/json',
+      },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = await res.json();
+    console.log(`[annuaire] Fetched ${rows.length} professionals from Supabase`);
+
+    // Map DB columns to template format
+    return rows.map(r => ({
+      id: r.id,
+      firstName: r.first_name,
+      lastName: r.last_name,
+      slug: r.slug,
+      photoUrl: r.photo_url || null,
+      specialty: r.specialty,
+      city: r.city,
+      description: r.description || '',
+      methods: r.methods || [],
+      languages: r.languages || ['Français'],
+      yearsExperience: r.years_experience || 0,
+      email: r.email,
+      phone: r.phone || '',
+      address: r.address || '',
+      website: r.website || '',
+      priceRange: r.price_range || '',
+      lat: r.lat || 0,
+      lng: r.lng || 0,
+      rating: parseFloat(r.rating) || 0,
+      reviewCount: r.review_count || 0,
+      availability: r.availability || 'Sur rendez-vous',
+      premium: r.plan === 'pro' || r.plan === 'boost',
+    }));
+  } catch (err) {
+    console.warn(`[annuaire] Supabase fetch failed: ${err.message} — using mock data`);
+    return null;
+  }
+}
+
 function getSharedData() {
+  const professionals = liveProfessionals || MOCK_PROFESSIONALS;
   return {
     specialties: SPECIALTIES,
     cities: CITIES,
-    professionals: MOCK_PROFESSIONALS,
+    professionals,
     baseUrl: ANNUAIRE_BASE_URL,
   };
 }
@@ -120,6 +174,21 @@ async function generateRejoindrePage() {
   console.log('[annuaire] Generated: /rejoindre/');
 }
 
+async function generateDashboardPage() {
+  const data = {
+    ...getSharedData(),
+    metaTitle: 'Mon espace professionnel — Annuaire',
+    metaDescription: 'Gérez votre fiche professionnelle, modifiez vos informations et suivez vos statistiques de visibilité.',
+    canonical: getAnnuaireUrl('/dashboard/'),
+    currentPage: 'dashboard',
+    noindex: true,
+  };
+
+  const html = renderTemplate('dashboard', data);
+  await writePage(path.join(DIST_DIR, 'dashboard/index.html'), html);
+  console.log('[annuaire] Generated: /dashboard/');
+}
+
 async function generateTarifsPage() {
   const data = {
     ...getSharedData(),
@@ -137,10 +206,11 @@ async function generateTarifsPage() {
 // ── Dynamic page generators ──────────────────────────────────────────────
 
 async function generateSpecialtyPages() {
+  const shared = getSharedData();
   for (const specialty of SPECIALTIES) {
-    const filteredProfessionals = getProfessionalsBySpecialty(specialty.id);
+    const filteredProfessionals = shared.professionals.filter(p => p.specialty === specialty.id);
     const data = {
-      ...getSharedData(),
+      ...shared,
       specialty,
       filteredProfessionals,
       metaTitle: specialty.metaTitle,
@@ -156,10 +226,11 @@ async function generateSpecialtyPages() {
 }
 
 async function generateCityPages() {
+  const shared = getSharedData();
   for (const city of CITIES) {
-    const filteredProfessionals = getProfessionalsByCity(city.id);
+    const filteredProfessionals = shared.professionals.filter(p => p.city === city.id);
     const data = {
-      ...getSharedData(),
+      ...shared,
       city,
       filteredProfessionals,
       metaTitle: `Professionnels du couple à ${city.name} (${city.department})`,
@@ -220,6 +291,11 @@ function copyAssets() {
     fs.copyFileSync(jsRejoindreSrc, path.join(jsDir, 'annuaire-rejoindre.js'));
     console.log('[annuaire] Copied: /js/annuaire-rejoindre.js');
   }
+  const jsDashboardSrc = path.resolve(__dirname, '../js/annuaire-dashboard.js');
+  if (fs.existsSync(jsDashboardSrc)) {
+    fs.copyFileSync(jsDashboardSrc, path.join(jsDir, 'annuaire-dashboard.js'));
+    console.log('[annuaire] Copied: /js/annuaire-dashboard.js');
+  }
 }
 
 // ── Main ─────────────────────────────────────────────────────────────────
@@ -231,10 +307,14 @@ async function main() {
   ensureDir(DIST_DIR);
   copyAssets();
 
+  // Try to fetch live data from Supabase
+  liveProfessionals = await fetchLiveProfessionals();
+
   await generateHomePage();
   await generateDecouvrirPage();
   await generateRejoindrePage();
   await generateTarifsPage();
+  await generateDashboardPage();
   await generateSpecialtyPages();
   await generateCityPages();
   await generateProfessionalPages();

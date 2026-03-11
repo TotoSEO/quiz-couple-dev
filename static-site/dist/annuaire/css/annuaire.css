@@ -665,6 +665,14 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
   font-size: 1.25rem;
   font-weight: 700;
   color: hsl(var(--ann-primary));
+  overflow: hidden;
+}
+.ann-pro-avatar-photo img,
+.ann-profile-avatar-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .ann-pro-info { flex: 1; min-width: 0; }
@@ -1700,6 +1708,20 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
   80% { transform: translateX(4px); }
 }
 .ann-shake { animation: ann-shake 400ms ease-out; }
+
+/* Dashboard form aliases */
+.ann-form-label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.375rem; color: hsl(var(--ann-fg)); }
+.ann-form-input { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid hsl(var(--ann-border)); border-radius: var(--ann-radius); background: hsl(var(--ann-card)); color: hsl(var(--ann-fg)); font-size: 0.9375rem; font-family: inherit; transition: all var(--ann-transition); outline: none; }
+.ann-form-input::placeholder { color: hsl(var(--ann-muted-fg)); }
+.ann-form-input:focus { border-color: hsl(var(--ann-primary)); box-shadow: 0 0 0 3px hsl(var(--ann-primary) / 0.08); }
+select.ann-form-input { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23888' stroke-width='1.5'%3E%3Cpath d='M2.5 4.5l3.5 3.5 3.5-3.5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; }
+.ann-form-error { background: hsl(0 70% 95%); color: hsl(0 70% 40%); padding: 0.75rem 1rem; border-radius: var(--ann-radius); font-size: 0.875rem; margin-bottom: 1rem; }
+.dark .ann-form-error { background: hsl(0 50% 15%); color: hsl(0 70% 75%); }
+
+/* Auth tabs */
+.ann-auth-tab { flex: 1; padding: 0.625rem; font-size: 0.875rem; font-weight: 500; background: none; color: hsl(var(--ann-muted-fg)); cursor: pointer; border: none; transition: all var(--ann-transition); font-family: inherit; }
+.ann-auth-tab-active { background: hsl(var(--ann-primary)); color: hsl(var(--ann-primary-fg)); font-weight: 600; }
 
 /* Success state */
 .ann-form-success {

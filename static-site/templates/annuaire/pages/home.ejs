@@ -156,7 +156,11 @@
         </div>
 
         <div class="ann-pro-header">
+          <% if (pro.photoUrl) { %>
+          <div class="ann-pro-avatar ann-pro-avatar-photo"><img src="<%= pro.photoUrl %>" alt="Photo de <%= pro.firstName %> <%= pro.lastName %>" loading="lazy"></div>
+          <% } else { %>
           <div class="ann-pro-avatar"><%= pro.firstName[0] %><%= pro.lastName[0] %></div>
+          <% } %>
           <div class="ann-pro-info">
             <div class="ann-pro-name"><%= pro.firstName %> <%= pro.lastName %></div>
             <div class="ann-pro-specialty"><%= proSpec ? proSpec.name : pro.specialty %></div>
