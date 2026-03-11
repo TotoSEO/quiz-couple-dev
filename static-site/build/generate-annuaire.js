@@ -81,8 +81,8 @@ function getSharedData() {
 async function generateHomePage() {
   const data = {
     ...getSharedData(),
-    metaTitle: 'Annuaire des professionnels du couple en France | Quiz Couple',
-    metaDescription: 'Trouvez un thérapeute de couple, sexologue, médiateur familial ou conseiller conjugal près de chez vous. L\'annuaire spécialisé des professionnels du couple.',
+    metaTitle: 'Annuaire des professionnels du couple en France',
+    metaDescription: 'Thérapeutes de couple, sexologues et médiateurs familiaux en France | Trouvez votre spécialiste et prenez rendez-vous près de chez vous.',
     canonical: getAnnuaireUrl('/'),
     currentPage: 'home',
   };
@@ -95,8 +95,8 @@ async function generateHomePage() {
 async function generateDecouvrirPage() {
   const data = {
     ...getSharedData(),
-    metaTitle: 'Professionnels du couple : rejoignez l\'annuaire gratuitement | Quiz Couple',
-    metaDescription: 'Thérapeute de couple, sexologue, médiateur familial ? Créez votre fiche gratuitement sur l\'annuaire Quiz Couple. Visibilité locale, zéro commission, contact direct avec vos futurs patients.',
+    metaTitle: 'Professionnels du couple : rejoignez l\'annuaire',
+    metaDescription: 'Thérapeute, sexologue, médiateur familial ? Créez votre fiche gratuitement. Visibilité locale, zéro commission, contact direct avec vos patients.',
     canonical: getAnnuaireUrl('/decouvrir/'),
     currentPage: 'decouvrir',
   };
@@ -109,8 +109,8 @@ async function generateDecouvrirPage() {
 async function generateRejoindrePage() {
   const data = {
     ...getSharedData(),
-    metaTitle: 'Inscrire mon cabinet gratuitement — Annuaire Quiz Couple',
-    metaDescription: 'Créez votre fiche professionnelle gratuitement sur l\'annuaire Quiz Couple. Formulaire simple en 5 minutes. Visibilité locale, zéro commission.',
+    metaTitle: 'Inscrire mon cabinet gratuitement sur l\'annuaire',
+    metaDescription: 'Créez votre fiche professionnelle gratuitement en 5 minutes. Visibilité locale, zéro commission, contact direct avec vos futurs patients.',
     canonical: getAnnuaireUrl('/rejoindre/'),
     currentPage: 'rejoindre',
   };
@@ -123,8 +123,8 @@ async function generateRejoindrePage() {
 async function generateTarifsPage() {
   const data = {
     ...getSharedData(),
-    metaTitle: 'Tarifs professionnels — Annuaire Quiz Couple | Gratuit, Pro, Boost',
-    metaDescription: 'Découvrez nos formules pour les professionnels du couple. Fiche gratuite à vie, formule Professionnel dès 5,99€/mois, programme Boost pour une visibilité maximale.',
+    metaTitle: 'Tarifs annuaire couple | Gratuit, Pro et Boost',
+    metaDescription: 'Fiche gratuite à vie, formule Pro dès 5,99€/mois, programme Boost pour une visibilité maximale. Découvrez nos offres pour professionnels.',
     canonical: getAnnuaireUrl('/tarifs/'),
     currentPage: 'tarifs',
   };
@@ -143,7 +143,7 @@ async function generateSpecialtyPages() {
       ...getSharedData(),
       specialty,
       filteredProfessionals,
-      metaTitle: `${specialty.metaTitle} | Annuaire Quiz Couple`,
+      metaTitle: specialty.metaTitle,
       metaDescription: specialty.metaDescription,
       canonical: getAnnuaireUrl(`/${specialty.id}/`),
       currentPage: 'specialty',
@@ -162,8 +162,8 @@ async function generateCityPages() {
       ...getSharedData(),
       city,
       filteredProfessionals,
-      metaTitle: `Professionnels du couple à ${city.name} | Annuaire Quiz Couple`,
-      metaDescription: `Trouvez un thérapeute de couple, sexologue ou médiateur familial à ${city.name} (${city.department}). ${filteredProfessionals.length} professionnels référencés.`,
+      metaTitle: `Professionnels du couple à ${city.name} (${city.department})`,
+      metaDescription: `Thérapeutes de couple, sexologues et médiateurs familiaux à ${city.name} | Trouvez votre spécialiste et prenez rendez-vous dès maintenant.`,
       canonical: getAnnuaireUrl(`/${city.id}/`),
       currentPage: 'city',
     };
@@ -183,8 +183,8 @@ async function generateProfessionalPages() {
       pro,
       proSpec,
       proCity,
-      metaTitle: `${pro.firstName} ${pro.lastName} — ${proSpec ? proSpec.name : ''} à ${proCity ? proCity.name : ''} | Annuaire Quiz Couple`,
-      metaDescription: `${pro.firstName} ${pro.lastName}, ${proSpec ? proSpec.name.toLowerCase() : ''} à ${proCity ? proCity.name : ''}. ${pro.yearsExperience} ans d'expérience. ${pro.priceRange}. Prenez rendez-vous en ligne.`,
+      metaTitle: `${pro.firstName} ${pro.lastName} — ${proSpec ? proSpec.name : ''} à ${proCity ? proCity.name : ''}`,
+      metaDescription: `${pro.firstName} ${pro.lastName}, ${proSpec ? proSpec.name.toLowerCase() : ''} à ${proCity ? proCity.name : ''} | ${pro.yearsExperience} ans d'expérience, ${pro.priceRange}. Prenez rendez-vous en ligne.`,
       canonical: getAnnuaireUrl(`/professionnel/${pro.slug}/`),
       currentPage: 'professionnel',
     };

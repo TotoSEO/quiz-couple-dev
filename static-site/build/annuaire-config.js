@@ -15,7 +15,7 @@ export const SPECIALTIES = [
     color: '#E84393',
     description: 'Le thérapeute de couple accompagne les partenaires dans la résolution de leurs difficultés relationnelles. Il aide à rétablir la communication, gérer les conflits et renforcer les liens affectifs au sein du couple.',
     metaTitle: 'Trouver un thérapeute de couple près de chez vous',
-    metaDescription: 'Consultez notre annuaire de thérapeutes de couple qualifiés. Trouvez un professionnel près de chez vous pour améliorer votre relation.',
+    metaDescription: 'Thérapeutes de couple qualifiés en France | Consultez les profils et prenez rendez-vous avec un spécialiste près de chez vous.',
     seoContent: {
       whenToConsult: 'Quand consulter un thérapeute de couple ?',
       whenToConsultText: 'La thérapie de couple est recommandée lorsque la communication devient difficile, que les conflits se répètent, ou qu\'un événement (infidélité, deuil, arrivée d\'un enfant) fragilise la relation. Il n\'est pas nécessaire d\'attendre la crise pour consulter : de nombreux couples consultent en prévention pour renforcer leur relation.',
@@ -37,7 +37,7 @@ export const SPECIALTIES = [
     color: '#E17055',
     description: 'Le sexologue est un professionnel de santé spécialisé dans les troubles de la sexualité. Il accompagne les individus et les couples confrontés à des difficultés d\'ordre sexuel, qu\'elles soient physiques ou psychologiques.',
     metaTitle: 'Trouver un sexologue près de chez vous',
-    metaDescription: 'Annuaire des sexologues en France. Trouvez un sexologue qualifié proche de chez vous pour une consultation confidentielle.',
+    metaDescription: 'Sexologues qualifiés en France | Trouvez votre spécialiste près de chez vous pour une consultation confidentielle.',
     seoContent: {
       whenToConsult: 'Quand consulter un sexologue ?',
       whenToConsultText: 'La consultation d\'un sexologue est adaptée en cas de trouble du désir, de douleurs pendant les rapports, de dysfonction érectile, d\'éjaculation précoce, ou simplement de questionnements sur votre sexualité. Le sexologue accompagne aussi les couples qui souhaitent enrichir leur intimité.',
@@ -59,7 +59,7 @@ export const SPECIALTIES = [
     color: '#A29BFE',
     description: 'Le sexothérapeute combine les approches de la psychothérapie et de la sexologie pour traiter les problématiques liées à la sexualité dans un cadre thérapeutique global. Il aide les couples à retrouver une intimité épanouissante.',
     metaTitle: 'Trouver un sexothérapeute près de chez vous',
-    metaDescription: 'Consultez notre annuaire de sexothérapeutes qualifiés. Trouvez un professionnel pour accompagner votre vie intime de couple.',
+    metaDescription: 'Sexothérapeutes qualifiés en France | Trouvez votre spécialiste pour accompagner votre vie intime de couple.',
     seoContent: {
       whenToConsult: 'Quand consulter un sexothérapeute ?',
       whenToConsultText: 'La sexothérapie est adaptée lorsque les difficultés sexuelles ont une composante psychologique importante : traumatismes, blocages émotionnels, troubles de l\'image corporelle, ou difficultés relationnelles qui impactent l\'intimité. Elle est particulièrement efficace pour les couples qui souhaitent retrouver une connexion intime.',
@@ -81,7 +81,7 @@ export const SPECIALTIES = [
     color: '#00B894',
     description: 'Le médiateur familial intervient pour faciliter le dialogue et la recherche de solutions amiables lors de conflits familiaux : séparation, divorce, garde des enfants, relations intergénérationnelles.',
     metaTitle: 'Trouver un médiateur familial près de chez vous',
-    metaDescription: 'Annuaire des médiateurs familiaux en France. Trouvez un professionnel pour résoudre vos conflits familiaux à l\'amiable.',
+    metaDescription: 'Médiateurs familiaux en France | Trouvez votre spécialiste pour résoudre vos conflits familiaux à l\'amiable.',
     seoContent: {
       whenToConsult: 'Quand faire appel à un médiateur familial ?',
       whenToConsultText: 'La médiation familiale est utile lors d\'une séparation ou d\'un divorce pour organiser la garde des enfants et le partage des biens à l\'amiable. Elle intervient aussi dans les conflits entre parents et enfants adultes, les tensions intergénérationnelles, ou les désaccords sur la prise en charge d\'un parent âgé.',
@@ -103,7 +103,7 @@ export const SPECIALTIES = [
     color: '#FDCB6E',
     description: 'Le coach parental accompagne les parents dans leur rôle éducatif. Il aide à développer des stratégies adaptées pour gérer les défis de la parentalité tout en préservant l\'équilibre du couple.',
     metaTitle: 'Trouver un coach parental près de chez vous',
-    metaDescription: 'Annuaire des coachs parentaux en France. Trouvez un professionnel pour vous accompagner dans votre rôle de parent.',
+    metaDescription: 'Coachs parentaux en France | Trouvez votre spécialiste pour vous accompagner dans votre rôle de parent.',
     seoContent: {
       whenToConsult: 'Quand consulter un coach parental ?',
       whenToConsultText: 'Le coaching parental est adapté lorsque vous vous sentez dépassé(e) par les comportements de votre enfant, que les crises sont fréquentes, ou que le couple est en tension autour des questions éducatives. Il est aussi utile lors des transitions (naissance, adolescence, famille recomposée).',
@@ -125,7 +125,7 @@ export const SPECIALTIES = [
     color: '#74B9FF',
     description: 'Le conseiller conjugal et familial accompagne les couples et les familles dans les moments de crise ou de transition. Il aide à clarifier les sentiments, améliorer la communication et prendre des décisions éclairées.',
     metaTitle: 'Trouver un conseiller conjugal près de chez vous',
-    metaDescription: 'Annuaire des conseillers conjugaux en France. Trouvez un professionnel qualifié pour accompagner votre couple.',
+    metaDescription: 'Conseillers conjugaux en France | Trouvez votre spécialiste qualifié pour accompagner votre couple.',
     seoContent: {
       whenToConsult: 'Quand consulter un conseiller conjugal ?',
       whenToConsultText: 'Le conseiller conjugal est recommandé quand le couple traverse une crise (dispute récurrente, éloignement émotionnel, questionnement sur l\'avenir de la relation), lors d\'un deuil, d\'une maladie, ou d\'un changement de vie majeur. Il aide aussi les personnes seules qui rencontrent des difficultés relationnelles.',
