@@ -1,0 +1,247 @@
+<%
+  // Variables: city, filteredProfessionals, specialties, cities, professionals
+  const prosBySpecialty = {};
+  filteredProfessionals.forEach(p => {
+    if (!prosBySpecialty[p.specialty]) prosBySpecialty[p.specialty] = [];
+    prosBySpecialty[p.specialty].push(p);
+  });
+  const activeSpecialties = Object.keys(prosBySpecialty).map(id => specialties.find(s => s.id === id)).filter(Boolean);
+
+  // Nearby cities (same region, excluding current)
+  const nearbyCities = cities.filter(c => c.id !== city.id && c.region === city.region).slice(0, 6);
+  // If not enough cities in same region, add from other regions
+  if (nearbyCities.length < 6) {
+    const otherCities = cities.filter(c => c.id !== city.id && c.region !== city.region)
+      .sort((a, b) => {
+        const distA = Math.abs(a.lat - city.lat) + Math.abs(a.lng - city.lng);
+        const distB = Math.abs(b.lat - city.lat) + Math.abs(b.lng - city.lng);
+        return distA - distB;
+      });
+    for (const c of otherCities) {
+      if (nearbyCities.length >= 6) break;
+      nearbyCities.push(c);
+    }
+  }
+
+  // JSON-LD: CollectionPage + BreadcrumbList
+  const jsonLdArray = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Professionnels du couple à " + city.name,
+      "description": "Trouvez un professionnel du couple à " + city.name + " (" + city.department + "). " + filteredProfessionals.length + " praticiens référencés.",
+      "url": canonical,
+      "about": {
+        "@type": "City",
+        "name": city.name,
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": city.region
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": baseUrl + "/" },
+        { "@type": "ListItem", "position": 2, "name": city.name }
+      ]
+    }
+  ];
+%>
+<% for (const ld of jsonLdArray) { %>
+<script type="application/ld+json"><%- JSON.stringify(ld) %></script>
+<% } %>
+
+<!-- City Hero -->
+<section class="ann-listing-hero">
+  <div class="ann-container">
+    <nav class="ann-breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a>
+      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 2.5l3.5 3.5-3.5 3.5"/></svg>
+      <span><%= city.name %></span>
+    </nav>
+
+    <div class="ann-listing-hero-content">
+      <div class="ann-listing-hero-icon ann-listing-hero-icon--city">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+
+      <h1>
+        Professionnels du couple à <span class="ann-text-gradient"><%= city.name %></span>
+      </h1>
+      <p class="ann-text-muted ann-text-lg" style="max-width: 40rem;">
+        Trouvez un thérapeute de couple, sexologue, médiateur familial ou conseiller conjugal à <%= city.name %> (<%= city.department %>), en <%= city.region %>.
+      </p>
+
+      <div class="ann-listing-stats">
+        <div class="ann-listing-stat">
+          <strong><%= filteredProfessionals.length %></strong>
+          <span>professionnel<%= filteredProfessionals.length > 1 ? 's' : '' %></span>
+        </div>
+        <div class="ann-listing-stat">
+          <strong><%= activeSpecialties.length %></strong>
+          <span>spécialité<%= activeSpecialties.length > 1 ? 's' : '' %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ann-divider"></div>
+
+<% if (activeSpecialties.length > 1) { %>
+<!-- Filter by specialty -->
+<section class="ann-section-sm">
+  <div class="ann-container">
+    <div class="ann-filter-chips">
+      <span class="ann-filter-label">Filtrer :</span>
+      <% for (const spec of activeSpecialties) { %>
+      <a href="/<%= spec.id %>/" class="ann-chip" style="--chip-color: <%= spec.color %>">
+        <span class="ann-chip-dot" style="background: <%= spec.color %>"></span>
+        <%= spec.name %> (<%= prosBySpecialty[spec.id].length %>)
+      </a>
+      <% } %>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<!-- Professionals listing -->
+<section class="ann-section">
+  <div class="ann-container">
+    <% if (filteredProfessionals.length > 0) { %>
+    <div class="ann-listing-grid ann-stagger">
+      <% for (const pro of filteredProfessionals) { %>
+        <%- include('../partials/pro-card', { pro, specialties, cities }) %>
+      <% } %>
+    </div>
+    <% } else { %>
+    <div class="ann-empty-state">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:3rem;height:3rem;color:hsl(var(--ann-muted-fg))"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <h3>Aucun professionnel à <%= city.name %> pour le moment</h3>
+      <p class="ann-text-muted">Soyez le premier professionnel référencé à <%= city.name %> !</p>
+      <a href="/rejoindre/" class="ann-btn ann-btn-primary" style="margin-top: 1rem;">
+        Inscrire mon cabinet à <%= city.name %>
+      </a>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<% if (typeof city.seoText !== 'undefined' && city.seoText) { %>
+<div class="ann-divider"></div>
+
+<!-- SEO Content -->
+<section class="ann-section">
+  <div class="ann-container">
+    <div class="ann-seo-content">
+      <div class="ann-seo-block">
+        <h2>Professionnels du couple à <span class="ann-text-gradient"><%= city.name %></span> (<%= city.department %>)</h2>
+        <p><%= city.seoText %></p>
+        <p>L'annuaire Quiz Couple référence des thérapeutes de couple, sexologues, sexothérapeutes, médiateurs familiaux, coachs parentaux et conseillers conjugaux à <%= city.name %> et dans toute la région <%= city.region %>. Chaque professionnel est vérifié et dispose d'une fiche détaillée avec ses spécialités, tarifs, méthodes et disponibilités.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<% if (filteredProfessionals.length > 0) { %>
+<div class="ann-divider"></div>
+
+<!-- Map -->
+<section class="ann-section" style="background: hsl(var(--ann-muted) / 0.25);">
+  <div class="ann-container">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h2>Carte des professionnels à <span class="ann-text-gradient"><%= city.name %></span></h2>
+    </div>
+
+    <div class="ann-map-container" id="ann-map"
+      data-professionals='<%- JSON.stringify(filteredProfessionals.map(p => ({ id: p.id, name: p.firstName + " " + p.lastName, lat: p.lat, lng: p.lng, specialty: p.specialty, city: p.city, slug: p.slug, premium: p.premium }))) %>'
+      data-specialties='<%- JSON.stringify(specialties.map(s => ({ id: s.id, name: s.name, color: s.color }))) %>'
+      data-center='<%- JSON.stringify({ lat: city.lat, lng: city.lng }) %>'
+      data-zoom="12">
+    </div>
+  </div>
+</section>
+<% } %>
+
+<div class="ann-divider"></div>
+
+<!-- Nearby cities -->
+<section class="ann-section">
+  <div class="ann-container">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h2>Villes <span class="ann-text-gradient">proches</span></h2>
+      <p class="ann-text-muted">Consultez aussi les professionnels dans les villes voisines.</p>
+    </div>
+
+    <div class="ann-cities-grid ann-stagger">
+      <% for (const nearCity of nearbyCities) { %>
+      <a href="/<%= nearCity.id %>/" class="ann-city-card ann-animate-fade-in-up">
+        <svg class="ann-city-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span class="ann-city-name"><%= nearCity.name %></span>
+        <span class="ann-city-count"><%= professionals.filter(p => p.city === nearCity.id).length %></span>
+      </a>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<div class="ann-divider"></div>
+
+<!-- Browse by specialty -->
+<section class="ann-section" style="background: hsl(var(--ann-muted) / 0.25);">
+  <div class="ann-container">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h2>Explorer par <span class="ann-text-gradient">spécialité</span></h2>
+    </div>
+
+    <div class="ann-categories-grid ann-stagger">
+      <% for (const spec of specialties) { %>
+      <a href="/<%= spec.id %>/" class="ann-category-card ann-animate-fade-in-up">
+        <div class="ann-category-icon" style="background: <%= spec.color %>">
+          <% if (spec.icon === 'heart-handshake') { %>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5L9.04 7.96a2.17 2.17 0 000 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 013.79 0l2.96 2.66"/><path d="M18 15l-2-2"/><path d="M15 18l-2-2"/></svg>
+          <% } else if (spec.icon === 'flame') { %>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg>
+          <% } else if (spec.icon === 'sparkles') { %>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 01-1.275 1.275L3 12l5.813 1.912a2 2 0 011.275 1.275L12 21l1.912-5.813a2 2 0 011.275-1.275L21 12l-5.813-1.912a2 2 0 01-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+          <% } else if (spec.icon === 'scale') { %>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+          <% } else if (spec.icon === 'baby') { %>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 01.8 3.7c0 5-3.6 9-8 9s-8-4-8-9a9 9 0 01.8-3.7"/><path d="M12 2c-1.5 0-3 .5-4 1.5"/><path d="M16 3.5c-1-1-2.5-1.5-4-1.5"/></svg>
+          <% } else if (spec.icon === 'message-circle-heart') { %>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 104 16.1L2 22Z"/><path d="M15.8 9.2a2.5 2.5 0 00-3.5 0l-.3.4-.3-.4a2.5 2.5 0 00-3.5 0 2.7 2.7 0 000 3.5L12 17l3.8-4.3a2.7 2.7 0 000-3.5Z"/></svg>
+          <% } %>
+        </div>
+        <div class="ann-category-info">
+          <div class="ann-category-name"><%= spec.name %></div>
+          <div class="ann-category-count"><%= professionals.filter(p => p.specialty === spec.id).length %> professionnel<%= professionals.filter(p => p.specialty === spec.id).length > 1 ? 's' : '' %></div>
+        </div>
+        <svg class="ann-category-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+      </a>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<div class="ann-divider"></div>
+
+<!-- CTA -->
+<section class="ann-section">
+  <div class="ann-container">
+    <div class="ann-cta-section">
+      <h2 style="margin-bottom: 0.75rem;">Professionnel à <span class="ann-text-gradient"><%= city.name %></span> ?</h2>
+      <p class="ann-text-muted" style="max-width: 32rem; margin: 0 auto 1.5rem;">Rejoignez gratuitement l'annuaire et soyez visible auprès des couples qui cherchent un professionnel à <%= city.name %>.</p>
+      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/rejoindre/" class="ann-btn ann-btn-primary ann-btn-lg">
+          Inscrire mon cabinet
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/tarifs/" class="ann-btn ann-btn-outline ann-btn-lg">Voir les tarifs</a>
+      </div>
+    </div>
+  </div>
+</section>

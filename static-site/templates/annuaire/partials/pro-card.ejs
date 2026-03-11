@@ -1,0 +1,55 @@
+<%
+  // Expected variables: pro, specialties, cities
+  const proSpec = specialties.find(s => s.id === pro.specialty);
+  const proCity = cities.find(c => c.id === pro.city);
+%>
+<div class="ann-pro-card<%= pro.premium ? ' ann-pro-card-premium' : '' %> ann-animate-fade-in-up">
+  <% if (pro.premium) { %>
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
+    <div class="ann-badge ann-badge-premium" style="font-size: 0.6875rem;">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:0.625rem;height:0.625rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Premium
+    </div>
+  </div>
+  <% } %>
+
+  <div class="ann-pro-header">
+    <div class="ann-pro-avatar"><%= pro.firstName[0] %><%= pro.lastName[0] %></div>
+    <div class="ann-pro-info">
+      <div class="ann-pro-name"><%= pro.firstName %> <%= pro.lastName %></div>
+      <div class="ann-pro-specialty"><%= proSpec ? proSpec.name : pro.specialty %></div>
+    </div>
+  </div>
+
+  <div class="ann-pro-rating">
+    <div class="ann-stars">
+      <% for (let i = 1; i <= 5; i++) { %>
+      <svg class="ann-star<%= i > Math.round(pro.rating) ? ' ann-star-empty' : '' %>" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <% } %>
+    </div>
+    <span class="ann-rating-text"><%= pro.rating %></span>
+    <span class="ann-review-count">(<%= pro.reviewCount %> avis)</span>
+  </div>
+
+  <p class="ann-pro-desc"><%= pro.description %></p>
+
+  <div class="ann-pro-meta">
+    <span class="ann-pro-meta-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <%= proCity ? proCity.name : pro.city %>
+    </span>
+    <span class="ann-pro-meta-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <%= pro.yearsExperience %> ans d'exp.
+    </span>
+    <span class="ann-pro-meta-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      <%= pro.priceRange %>
+    </span>
+  </div>
+
+  <div class="ann-pro-actions">
+    <a href="/professionnel/<%= pro.slug %>/" class="ann-btn ann-btn-primary ann-btn-sm" style="flex:1">Voir le profil</a>
+    <a href="/professionnel/<%= pro.slug %>/#contact" class="ann-btn ann-btn-outline ann-btn-sm" style="flex:1">Contacter</a>
+  </div>
+</div>

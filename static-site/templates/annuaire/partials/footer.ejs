@@ -1,0 +1,74 @@
+<%
+  const footerSpecialties = (typeof specialties !== 'undefined' ? specialties : []);
+%>
+<footer class="ann-footer">
+  <div class="ann-container">
+    <div class="ann-footer-grid">
+      <!-- Brand -->
+      <div class="ann-footer-brand">
+        <a href="/" class="ann-logo" aria-label="Quiz Couple Annuaire">
+          <div class="ann-logo-icon">
+            <svg viewBox="0 0 32 32" fill="none" class="ann-logo-svg">
+              <path d="M16 28s-11-7.2-11-14.5C5 8.8 8.6 5 13 5c2.5 0 4.7 1.2 6 3a7.1 7.1 0 016-3c4.4 0 8 3.8 8 8.5C33 20.8 22 28 22 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="ann-logo-text">
+            <span class="ann-logo-title">Quiz Couple</span>
+            <span class="ann-logo-subtitle">Annuaire</span>
+          </div>
+        </a>
+        <p class="ann-footer-desc">L'annuaire des professionnels du couple en France. Trouvez le thérapeute, sexologue ou conseiller conjugal qu'il vous faut, près de chez vous.</p>
+        <div class="ann-footer-back">
+          <a href="https://quiz-couple.com" class="ann-link-muted">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ann-link-icon"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            Retour sur quiz-couple.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Spécialités -->
+      <div class="ann-footer-col">
+        <h4 class="ann-footer-heading">Spécialités</h4>
+        <ul class="ann-footer-links">
+          <% for (const spec of footerSpecialties) { %>
+          <li><a href="/<%= spec.id %>/"><%= spec.name %></a></li>
+          <% } %>
+        </ul>
+      </div>
+
+      <!-- Villes populaires -->
+      <div class="ann-footer-col">
+        <h4 class="ann-footer-heading">Villes populaires</h4>
+        <ul class="ann-footer-links">
+          <li><a href="/paris/">Paris</a></li>
+          <li><a href="/lyon/">Lyon</a></li>
+          <li><a href="/marseille/">Marseille</a></li>
+          <li><a href="/toulouse/">Toulouse</a></li>
+          <li><a href="/bordeaux/">Bordeaux</a></li>
+          <li><a href="/nantes/">Nantes</a></li>
+          <li><a href="/lille/">Lille</a></li>
+          <li><a href="/nice/">Nice</a></li>
+        </ul>
+      </div>
+
+      <!-- Informations -->
+      <div class="ann-footer-col">
+        <h4 class="ann-footer-heading">Informations</h4>
+        <ul class="ann-footer-links">
+          <li><a href="/decouvrir/">Découvrir l'annuaire</a></li>
+          <li><a href="/tarifs/">Tarifs professionnels</a></li>
+          <li><a href="/rejoindre/">Inscrire mon cabinet</a></li>
+          <li><a href="https://quiz-couple.com/mentions-legales/">Mentions légales</a></li>
+          <li><a href="https://quiz-couple.com/confidentialite/">Politique de confidentialité</a></li>
+          <li><a href="https://quiz-couple.com/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="ann-footer-bottom">
+      <p>&copy; <%= new Date().getFullYear() %> Quiz Couple. Tous droits réservés.</p>
+      <p class="ann-footer-tagline">Fait avec soin pour les couples qui veulent avancer ensemble.</p>
+    </div>
+  </div>
+</footer>
