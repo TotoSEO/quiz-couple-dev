@@ -36,3 +36,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./static-site/dist
           cname: quiz-couple.com
+
+      - name: Submit URLs to IndexNow
+        run: cd static-site && npm run indexnow
+        continue-on-error: true
