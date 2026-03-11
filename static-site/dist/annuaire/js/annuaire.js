@@ -339,4 +339,66 @@
       }
     });
   });
+
+  // ── City Carousel (specialty pages) ─────────────────────────────
+  var track = document.getElementById('city-carousel-track');
+  if (track) {
+    var cards = track.querySelectorAll('.ann-city-carousel-card');
+    var prevBtn = document.querySelector('[data-carousel-prev]');
+    var nextBtn = document.querySelector('[data-carousel-next]');
+    var offset = 0;
+
+    function getVisibleCount() {
+      var w = window.innerWidth;
+      if (w <= 480) return 1;
+      if (w <= 768) return 2;
+      if (w <= 1024) return 3;
+      return 4;
+    }
+
+    function getCardWidth() {
+      if (!cards.length) return 0;
+      var card = cards[0];
+      var style = getComputedStyle(track);
+      var gap = parseFloat(style.gap) || 16;
+      return card.offsetWidth + gap;
+    }
+
+    function slide(dir) {
+      var visible = getVisibleCount();
+      var visibleCards = Array.prototype.filter.call(cards, function (c) { return c.style.display !== 'none'; });
+      var maxOffset = Math.max(0, visibleCards.length - visible);
+      offset = Math.max(0, Math.min(offset + dir, maxOffset));
+      track.style.transform = 'translateX(-' + (offset * getCardWidth()) + 'px)';
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', function () { slide(-1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { slide(1); });
+  }
+
+  // ── City Filter (specialty pages) ───────────────────────────────
+  var cityFilterInput = document.getElementById('city-filter-input');
+  var noResultsMsg = document.getElementById('city-no-results');
+  if (cityFilterInput && track) {
+    cityFilterInput.addEventListener('input', function () {
+      var val = normalize(cityFilterInput.value.trim());
+      var anyVisible = false;
+      offset = 0;
+      track.style.transform = 'translateX(0)';
+
+      cards.forEach(function (card) {
+        var name = card.getAttribute('data-city-name') || '';
+        if (!val || name.indexOf(val) !== -1) {
+          card.style.display = '';
+          anyVisible = true;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (noResultsMsg) {
+        noResultsMsg.classList.toggle('hidden', anyVisible);
+      }
+    });
+  }
 })();

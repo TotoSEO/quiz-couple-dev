@@ -245,6 +245,33 @@ async function generateCityPages() {
   }
 }
 
+async function generateSpecialtyCityPages() {
+  const shared = getSharedData();
+  let count = 0;
+  for (const specialty of SPECIALTIES) {
+    for (const city of CITIES) {
+      const filteredProfessionals = shared.professionals.filter(
+        p => p.specialty === specialty.id && p.city === city.id
+      );
+      const data = {
+        ...shared,
+        specialty,
+        city,
+        filteredProfessionals,
+        metaTitle: `${specialty.name} à ${city.name} (${city.department})`,
+        metaDescription: `${specialty.name} à ${city.name} — ${filteredProfessionals.length} professionnel${filteredProfessionals.length > 1 ? 's' : ''} référencé${filteredProfessionals.length > 1 ? 's' : ''}. Consultez les profils et prenez rendez-vous.`,
+        canonical: getAnnuaireUrl(`/${specialty.id}/${city.id}/`),
+        currentPage: 'specialty-city',
+      };
+
+      const html = renderTemplate('specialty-city', data);
+      await writePage(path.join(DIST_DIR, `${specialty.id}/${city.id}/index.html`), html);
+      count++;
+    }
+  }
+  console.log(`[annuaire] Generated: ${count} specialty×city pages`);
+}
+
 async function generateProfessionalPages() {
   for (const pro of MOCK_PROFESSIONALS) {
     const proSpec = getSpecialtyById(pro.specialty);
@@ -317,6 +344,7 @@ async function main() {
   await generateDashboardPage();
   await generateSpecialtyPages();
   await generateCityPages();
+  await generateSpecialtyCityPages();
   await generateProfessionalPages();
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(2);
