@@ -94,8 +94,8 @@ async function generateHomePage() {
 async function generateDecouvrirPage() {
   const data = {
     ...getSharedData(),
-    metaTitle: 'Découvrir l\'annuaire des professionnels du couple | Quiz Couple',
-    metaDescription: 'Comment fonctionne notre annuaire ? Découvrez comment trouver le thérapeute de couple, sexologue ou médiateur familial idéal près de chez vous.',
+    metaTitle: 'Professionnels du couple : rejoignez l\'annuaire gratuitement | Quiz Couple',
+    metaDescription: 'Thérapeute de couple, sexologue, médiateur familial ? Créez votre fiche gratuitement sur l\'annuaire Quiz Couple. Visibilité locale, zéro commission, contact direct avec vos futurs patients.',
     canonical: getAnnuaireUrl('/decouvrir/'),
     currentPage: 'decouvrir',
   };
