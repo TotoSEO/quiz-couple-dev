@@ -276,6 +276,8 @@ async function generatePage(routeKey, lang) {
   let blogArticlesList = [];
   if (routeKey === 'blog' || routeKey === 'home' || routeKey === 'sitemap') {
     for (const articleMeta of BLOG_ARTICLES) {
+      // Skip frOnly articles for non-FR languages
+      if (articleMeta.frOnly && lang !== 'fr') continue;
       const localizedSlug = articleMeta.slugs[lang] || articleMeta.internalSlug;
       const tsPath = path.resolve(__dirname, '../../data/blog', lang, `${articleMeta.internalSlug}.ts`);
       const frPath = path.resolve(__dirname, '../../data/blog/fr', `${articleMeta.internalSlug}.ts`);
@@ -431,11 +433,16 @@ function generateSitemaps() {
 
   // Blog articles
   for (const article of BLOG_ARTICLES) {
-    const urlsByLang = {};
-    for (const lang of LANGUAGES) {
-      urlsByLang[lang] = blogUrl(lang, article.slugs[lang]);
+    if (article.frOnly) {
+      // frOnly articles: only appear in FR sitemap, no hreflang alternates
+      entries.push({ urlsByLang: { fr: blogUrl('fr', article.slugs.fr) }, lastmod: article.publishedAt, frOnly: true });
+    } else {
+      const urlsByLang = {};
+      for (const lang of LANGUAGES) {
+        urlsByLang[lang] = blogUrl(lang, article.slugs[lang]);
+      }
+      entries.push({ urlsByLang, lastmod: article.publishedAt });
     }
-    entries.push({ urlsByLang, lastmod: article.publishedAt });
   }
 
   // Generate one sitemap per language
@@ -446,9 +453,13 @@ function generateSitemaps() {
     xml += `        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
 
     for (const entry of entries) {
+      // Skip frOnly entries for non-FR sitemaps
+      if (entry.frOnly && lang !== 'fr') continue;
       xml += `  <url>\n`;
       xml += `    <loc>${entry.urlsByLang[lang]}</loc>\n`;
-      xml += hreflangs(entry.urlsByLang);
+      if (!entry.frOnly) {
+        xml += hreflangs(entry.urlsByLang);
+      }
       if (entry.lastmod) {
         xml += `    <lastmod>${entry.lastmod}</lastmod>\n`;
       }
@@ -737,7 +748,7 @@ async function generateBlogArticle(articleMeta, lang) {
   const localizedSlug = articleMeta.slugs[lang] || articleMeta.internalSlug;
   const t = createT(lang);
   const translations = loadTranslations(lang);
-  const articleAlternates = getArticleAlternates(articleMeta);
+  const articleAlternates = articleMeta.frOnly ? [] : getArticleAlternates(articleMeta);
   const canonical = getArticleUrl(localizedSlug, lang);
   const pagePath = getArticlePath(localizedSlug, lang);
 
@@ -771,9 +782,10 @@ async function generateBlogArticle(articleMeta, lang) {
         (s.content || '') + ' ' + (s.subsections || []).map(sub => sub.content || '').join(' ')
       ).join(' ');
       const wc = text.replace(/<[^>]+>/g, '').split(/\s+/).filter(Boolean).length;
+      const schemaType = articleMeta.frOnly ? 'NewsArticle' : 'Article';
       return {
         '@context': 'https://schema.org',
-        '@type': 'Article',
+        '@type': schemaType,
         headline: article.metaTitle || article.title,
         description: article.metaDescription || article.excerpt,
         image: article.featuredImage
@@ -858,7 +870,7 @@ async function generateBlogArticle(articleMeta, lang) {
       'questionsCouple', 'problemResolver',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
     sidebarArticles: BLOG_ARTICLES
-      .filter(a => a.internalSlug !== articleMeta.internalSlug)
+      .filter(a => a.internalSlug !== articleMeta.internalSlug && !(a.frOnly && lang !== 'fr'))
       .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
       .slice(0, 5)
       .map(a => {
@@ -1010,7 +1022,8 @@ async function main() {
   // Generate blog articles
   console.log(`\n[blog] Generating ${BLOG_ARTICLES.length} articles × ${LANGUAGES.length} languages...\n`);
   for (const articleMeta of BLOG_ARTICLES) {
-    for (const lang of LANGUAGES) {
+    const articleLangs = articleMeta.frOnly ? ['fr'] : LANGUAGES;
+    for (const lang of articleLangs) {
       const result = await generateBlogArticle(articleMeta, lang);
       if (result) {
         results.push(result);
