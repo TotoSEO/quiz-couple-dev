@@ -105,6 +105,20 @@ async function generateDecouvrirPage() {
   console.log('[annuaire] Generated: /decouvrir/');
 }
 
+async function generateRejoindrePage() {
+  const data = {
+    ...getSharedData(),
+    metaTitle: 'Inscrire mon cabinet gratuitement — Annuaire Quiz Couple',
+    metaDescription: 'Créez votre fiche professionnelle gratuitement sur l\'annuaire Quiz Couple. Formulaire simple en 5 minutes. Visibilité locale, zéro commission.',
+    canonical: getAnnuaireUrl('/rejoindre/'),
+    currentPage: 'rejoindre',
+  };
+
+  const html = renderTemplate('rejoindre', data);
+  await writePage(path.join(DIST_DIR, 'rejoindre/index.html'), html);
+  console.log('[annuaire] Generated: /rejoindre/');
+}
+
 // ── Copy static assets ──────────────────────────────────────────────────
 
 function copyAssets() {
@@ -125,6 +139,11 @@ function copyAssets() {
     fs.copyFileSync(jsSrc, path.join(jsDir, 'annuaire.js'));
     console.log('[annuaire] Copied: /js/annuaire.js');
   }
+  const jsRejoindreSrc = path.resolve(__dirname, '../js/annuaire-rejoindre.js');
+  if (fs.existsSync(jsRejoindreSrc)) {
+    fs.copyFileSync(jsRejoindreSrc, path.join(jsDir, 'annuaire-rejoindre.js'));
+    console.log('[annuaire] Copied: /js/annuaire-rejoindre.js');
+  }
 }
 
 // ── Main ─────────────────────────────────────────────────────────────────
@@ -138,6 +157,7 @@ async function main() {
 
   await generateHomePage();
   await generateDecouvrirPage();
+  await generateRejoindrePage();
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(2);
   console.log(`\n✅ Annuaire build complete in ${elapsed}s`);

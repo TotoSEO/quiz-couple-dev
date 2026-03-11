@@ -95,6 +95,9 @@
 
   <!-- Annuaire JS -->
   <script src="/js/annuaire.js" defer></script>
+  <% if (typeof currentPage !== 'undefined' && currentPage === 'rejoindre') { %>
+  <script src="/js/annuaire-rejoindre.js" defer></script>
+  <% } %>
 
   <!-- GA (deferred) -->
   <script>

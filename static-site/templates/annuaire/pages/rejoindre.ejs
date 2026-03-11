@@ -1,0 +1,445 @@
+<%
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Inscrire mon cabinet — Annuaire Quiz Couple",
+    "url": "https://annuaire.quiz-couple.com/rejoindre/",
+    "description": "Créez gratuitement votre fiche professionnelle sur l'annuaire Quiz Couple. Visibilité locale, contact direct, zéro commission."
+  };
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero (compact) -->
+<section class="ann-hero" style="padding: 2.5rem 0 1.5rem;">
+  <div class="ann-hero-bg"></div>
+  <div class="ann-container ann-hero-content" style="text-align: center;">
+    <div class="ann-badge ann-badge-success ann-animate-fade-in" style="margin-bottom: 0.75rem;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      Inscription 100% gratuite
+    </div>
+    <h1 class="ann-animate-fade-in-up" style="font-size: clamp(1.5rem, 3.5vw, 2.25rem);">Créez votre fiche <span class="ann-text-gradient">en 5 minutes</span></h1>
+    <p class="ann-text-muted ann-animate-fade-in-up" style="max-width: 32rem; margin: 0.5rem auto 0;">
+      Remplissez les informations ci-dessous. Votre fiche sera en ligne après validation par notre équipe.
+    </p>
+  </div>
+</section>
+
+<div class="ann-divider"></div>
+
+<!-- Multi-step Form -->
+<section class="ann-section" style="padding-top: 2rem;">
+  <div class="ann-container" style="max-width: 44rem;">
+
+    <!-- Progress Bar -->
+    <div class="ann-form-progress" id="form-progress">
+      <div class="ann-progress-track">
+        <div class="ann-progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="ann-progress-steps">
+        <button class="ann-progress-step active" data-step="1">
+          <span class="ann-progress-dot">1</span>
+          <span class="ann-progress-label">Identité</span>
+        </button>
+        <button class="ann-progress-step" data-step="2">
+          <span class="ann-progress-dot">2</span>
+          <span class="ann-progress-label">Pratique</span>
+        </button>
+        <button class="ann-progress-step" data-step="3">
+          <span class="ann-progress-dot">3</span>
+          <span class="ann-progress-label">Cabinet</span>
+        </button>
+        <button class="ann-progress-step" data-step="4">
+          <span class="ann-progress-dot">4</span>
+          <span class="ann-progress-label">Présentation</span>
+        </button>
+        <button class="ann-progress-step" data-step="5">
+          <span class="ann-progress-dot">5</span>
+          <span class="ann-progress-label">Confirmation</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form id="rejoindre-form" novalidate autocomplete="off">
+
+      <!-- ═══ Step 1: Identity ═══ -->
+      <div class="ann-form-step active" data-form-step="1">
+        <div class="ann-form-step-header">
+          <h2>Qui êtes-vous <span class="ann-text-gradient">?</span></h2>
+          <p class="ann-text-muted">Vos informations de contact. Elles apparaîtront sur votre fiche publique.</p>
+        </div>
+
+        <div class="ann-form-grid">
+          <div class="ann-form-group">
+            <label class="ann-label" for="f-prenom">Prénom <span class="ann-required">*</span></label>
+            <input type="text" id="f-prenom" name="prenom" class="ann-input" placeholder="Ex: Marie" maxlength="60" required>
+            <div class="ann-field-meta">
+              <span class="ann-field-error" id="err-prenom"></span>
+              <span class="ann-char-count"><span id="count-prenom">0</span>/60</span>
+            </div>
+          </div>
+
+          <div class="ann-form-group">
+            <label class="ann-label" for="f-nom">Nom <span class="ann-required">*</span></label>
+            <input type="text" id="f-nom" name="nom" class="ann-input" placeholder="Ex: Dupont" maxlength="60" required>
+            <div class="ann-field-meta">
+              <span class="ann-field-error" id="err-nom"></span>
+              <span class="ann-char-count"><span id="count-nom">0</span>/60</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label" for="f-email">Email professionnel <span class="ann-required">*</span></label>
+          <input type="email" id="f-email" name="email" class="ann-input" placeholder="contact@votre-cabinet.fr" maxlength="120" required>
+          <span class="ann-field-error" id="err-email"></span>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label" for="f-telephone">Téléphone <span class="ann-required">*</span></label>
+          <input type="tel" id="f-telephone" name="telephone" class="ann-input" placeholder="01 42 00 00 00" maxlength="20" required>
+          <span class="ann-field-error" id="err-telephone"></span>
+        </div>
+      </div>
+
+      <!-- ═══ Step 2: Practice ═══ -->
+      <div class="ann-form-step" data-form-step="2">
+        <div class="ann-form-step-header">
+          <h2>Votre <span class="ann-text-gradient">pratique</span></h2>
+          <p class="ann-text-muted">Aidez les patients à comprendre votre expertise et vos méthodes.</p>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label">Spécialité(s) <span class="ann-required">*</span> <span class="ann-text-muted ann-text-xs">(1 à 3)</span></label>
+          <div class="ann-specialty-grid" id="specialty-selector">
+            <% for (const spec of specialties) { %>
+            <label class="ann-specialty-option" data-specialty="<%= spec.id %>">
+              <input type="checkbox" name="specialites" value="<%= spec.id %>" class="ann-sr-only">
+              <span class="ann-specialty-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span class="ann-specialty-dot" style="background: <%= spec.color %>;"></span>
+              <span class="ann-specialty-name"><%= spec.name %></span>
+            </label>
+            <% } %>
+          </div>
+          <span class="ann-field-error" id="err-specialites"></span>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label" for="f-titre">Titre / diplôme principal <span class="ann-required">*</span></label>
+          <input type="text" id="f-titre" name="titre" class="ann-input" placeholder="Ex: Psychologue clinicienne, thérapeute de couple" maxlength="120" required>
+          <div class="ann-field-meta">
+            <span class="ann-field-error" id="err-titre"></span>
+            <span class="ann-char-count"><span id="count-titre">0</span>/120</span>
+          </div>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label">Méthodes pratiquées <span class="ann-text-muted ann-text-xs">(optionnel)</span></label>
+          <div class="ann-methods-grid" id="methods-selector">
+            <% const methods = [
+              'Thérapie systémique', 'TCC', 'Approche Imago', 'Gestalt-thérapie',
+              'EMDR', 'Psychanalyse', 'Médiation', 'Approche sexocorporelle',
+              'Communication non-violente', 'Hypnothérapie', 'PNL', 'Pleine conscience',
+              'Approche humaniste', 'Écoute active', 'Discipline positive'
+            ]; %>
+            <% for (const method of methods) { %>
+            <label class="ann-method-option">
+              <input type="checkbox" name="methodes" value="<%= method %>" class="ann-sr-only">
+              <span class="ann-method-tag"><%= method %></span>
+            </label>
+            <% } %>
+          </div>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label" for="f-experience">Années d'expérience <span class="ann-required">*</span></label>
+          <select id="f-experience" name="experience" class="ann-input ann-select" required>
+            <option value="" disabled selected>Sélectionnez...</option>
+            <option value="0-2">Moins de 2 ans</option>
+            <option value="2-5">2 à 5 ans</option>
+            <option value="5-10">5 à 10 ans</option>
+            <option value="10-20">10 à 20 ans</option>
+            <option value="20+">Plus de 20 ans</option>
+          </select>
+          <span class="ann-field-error" id="err-experience"></span>
+        </div>
+      </div>
+
+      <!-- ═══ Step 3: Cabinet & Location ═══ -->
+      <div class="ann-form-step" data-form-step="3">
+        <div class="ann-form-step-header">
+          <h2>Votre <span class="ann-text-gradient">cabinet</span></h2>
+          <p class="ann-text-muted">Où exercez-vous ? Les patients vous trouveront grâce à ces informations.</p>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label" for="f-cabinet">Nom du cabinet <span class="ann-text-muted ann-text-xs">(optionnel)</span></label>
+          <input type="text" id="f-cabinet" name="cabinet" class="ann-input" placeholder="Ex: Cabinet Harmonie Couple" maxlength="100">
+          <div class="ann-field-meta">
+            <span class="ann-field-error"></span>
+            <span class="ann-char-count"><span id="count-cabinet">0</span>/100</span>
+          </div>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label" for="f-adresse">Adresse <span class="ann-required">*</span></label>
+          <input type="text" id="f-adresse" name="adresse" class="ann-input" placeholder="45 Rue de Rivoli" maxlength="200" required>
+          <span class="ann-field-error" id="err-adresse"></span>
+        </div>
+
+        <div class="ann-form-grid">
+          <div class="ann-form-group">
+            <label class="ann-label" for="f-codepostal">Code postal <span class="ann-required">*</span></label>
+            <input type="text" id="f-codepostal" name="codepostal" class="ann-input" placeholder="75001" maxlength="5" pattern="[0-9]{5}" required>
+            <span class="ann-field-error" id="err-codepostal"></span>
+          </div>
+
+          <div class="ann-form-group">
+            <label class="ann-label" for="f-ville">Ville <span class="ann-required">*</span></label>
+            <input type="text" id="f-ville" name="ville" class="ann-input" placeholder="Paris" maxlength="100" required>
+            <span class="ann-field-error" id="err-ville"></span>
+          </div>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label">Modes de consultation <span class="ann-required">*</span></label>
+          <div class="ann-consult-modes">
+            <label class="ann-consult-option">
+              <input type="checkbox" name="modes" value="cabinet" class="ann-sr-only">
+              <div class="ann-consult-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.5rem;height:1.5rem"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span>En cabinet</span>
+              </div>
+            </label>
+            <label class="ann-consult-option">
+              <input type="checkbox" name="modes" value="en-ligne" class="ann-sr-only">
+              <div class="ann-consult-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.5rem;height:1.5rem"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span>En ligne</span>
+              </div>
+            </label>
+            <label class="ann-consult-option">
+              <input type="checkbox" name="modes" value="domicile" class="ann-sr-only">
+              <div class="ann-consult-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.5rem;height:1.5rem"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg>
+                <span>À domicile</span>
+              </div>
+            </label>
+          </div>
+          <span class="ann-field-error" id="err-modes"></span>
+        </div>
+      </div>
+
+      <!-- ═══ Step 4: Presentation & Pricing ═══ -->
+      <div class="ann-form-step" data-form-step="4">
+        <div class="ann-form-step-header">
+          <h2>Présentez-vous <span class="ann-text-gradient">aux patients</span></h2>
+          <p class="ann-text-muted">C'est ce que les couples verront en premier. Soyez clair et authentique.</p>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label" for="f-description">Votre description <span class="ann-required">*</span></label>
+          <textarea id="f-description" name="description" class="ann-input ann-textarea" placeholder="Décrivez votre approche, votre parcours et ce qui vous différencie. Les couples veulent savoir à qui ils vont confier leur relation..." maxlength="600" rows="5" required></textarea>
+          <div class="ann-field-meta">
+            <span class="ann-field-error" id="err-description"></span>
+            <span class="ann-char-count"><span id="count-description">0</span>/600</span>
+          </div>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label">Langues parlées</label>
+          <div class="ann-methods-grid" id="langues-selector">
+            <% const langues = ['Français', 'Anglais', 'Espagnol', 'Allemand', 'Italien', 'Portugais', 'Arabe', 'Chinois', 'Langue des signes']; %>
+            <% for (const langue of langues) { %>
+            <label class="ann-method-option">
+              <input type="checkbox" name="langues" value="<%= langue %>" class="ann-sr-only" <%= langue === 'Français' ? 'checked' : '' %>>
+              <span class="ann-method-tag"><%= langue %></span>
+            </label>
+            <% } %>
+          </div>
+        </div>
+
+        <div class="ann-form-grid">
+          <div class="ann-form-group">
+            <label class="ann-label" for="f-prix-min">Tarif min (€/séance) <span class="ann-required">*</span></label>
+            <input type="number" id="f-prix-min" name="prix_min" class="ann-input" placeholder="60" min="0" max="500" required>
+            <span class="ann-field-error" id="err-prix-min"></span>
+          </div>
+          <div class="ann-form-group">
+            <label class="ann-label" for="f-prix-max">Tarif max (€/séance) <span class="ann-required">*</span></label>
+            <input type="number" id="f-prix-max" name="prix_max" class="ann-input" placeholder="90" min="0" max="500" required>
+            <span class="ann-field-error" id="err-prix-max"></span>
+          </div>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label">Premier RDV découverte gratuit ?</label>
+          <div class="ann-toggle-group">
+            <label class="ann-toggle-option">
+              <input type="radio" name="rdv_gratuit" value="oui" class="ann-sr-only">
+              <span class="ann-toggle-btn">Oui</span>
+            </label>
+            <label class="ann-toggle-option">
+              <input type="radio" name="rdv_gratuit" value="non" class="ann-sr-only" checked>
+              <span class="ann-toggle-btn">Non</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="ann-form-hint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;flex-shrink:0;color:hsl(var(--ann-muted-fg))"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span class="ann-text-muted ann-text-sm">Vous avez un site web ? Avec le <a href="/tarifs/" style="color:hsl(var(--ann-primary));font-weight:600;">programme Boost</a>, ajoutez un lien direct vers votre site sur votre fiche.</span>
+        </div>
+      </div>
+
+      <!-- ═══ Step 5: Recap & Submit ═══ -->
+      <div class="ann-form-step" data-form-step="5">
+        <div class="ann-form-step-header">
+          <h2>Tout est <span class="ann-text-gradient">bon ?</span></h2>
+          <p class="ann-text-muted">Vérifiez vos informations avant de soumettre. Vous pourrez modifier votre fiche après validation.</p>
+        </div>
+
+        <!-- Summary Card -->
+        <div class="ann-recap-card" id="recap-card">
+          <div class="ann-recap-section">
+            <h3 class="ann-recap-heading">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4-4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Identité
+            </h3>
+            <div class="ann-recap-row"><span class="ann-recap-label">Nom</span><span class="ann-recap-value" id="recap-nom">—</span></div>
+            <div class="ann-recap-row"><span class="ann-recap-label">Email</span><span class="ann-recap-value" id="recap-email">—</span></div>
+            <div class="ann-recap-row"><span class="ann-recap-label">Téléphone</span><span class="ann-recap-value" id="recap-telephone">—</span></div>
+          </div>
+
+          <div class="ann-recap-divider"></div>
+
+          <div class="ann-recap-section">
+            <h3 class="ann-recap-heading">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Pratique
+            </h3>
+            <div class="ann-recap-row"><span class="ann-recap-label">Spécialités</span><span class="ann-recap-value" id="recap-specialites">—</span></div>
+            <div class="ann-recap-row"><span class="ann-recap-label">Titre</span><span class="ann-recap-value" id="recap-titre">—</span></div>
+            <div class="ann-recap-row"><span class="ann-recap-label">Méthodes</span><span class="ann-recap-value" id="recap-methodes">—</span></div>
+            <div class="ann-recap-row"><span class="ann-recap-label">Expérience</span><span class="ann-recap-value" id="recap-experience">—</span></div>
+          </div>
+
+          <div class="ann-recap-divider"></div>
+
+          <div class="ann-recap-section">
+            <h3 class="ann-recap-heading">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Cabinet
+            </h3>
+            <div class="ann-recap-row" id="recap-cabinet-row" style="display:none"><span class="ann-recap-label">Cabinet</span><span class="ann-recap-value" id="recap-cabinet">—</span></div>
+            <div class="ann-recap-row"><span class="ann-recap-label">Adresse</span><span class="ann-recap-value" id="recap-adresse">—</span></div>
+            <div class="ann-recap-row"><span class="ann-recap-label">Modes</span><span class="ann-recap-value" id="recap-modes">—</span></div>
+          </div>
+
+          <div class="ann-recap-divider"></div>
+
+          <div class="ann-recap-section">
+            <h3 class="ann-recap-heading">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              Tarifs & présentation
+            </h3>
+            <div class="ann-recap-row"><span class="ann-recap-label">Tarifs</span><span class="ann-recap-value" id="recap-tarifs">—</span></div>
+            <div class="ann-recap-row"><span class="ann-recap-label">RDV découverte</span><span class="ann-recap-value" id="recap-rdv">—</span></div>
+            <div class="ann-recap-row"><span class="ann-recap-label">Langues</span><span class="ann-recap-value" id="recap-langues">—</span></div>
+            <div class="ann-recap-row"><span class="ann-recap-label">Description</span><span class="ann-recap-value ann-recap-desc" id="recap-description">—</span></div>
+          </div>
+        </div>
+
+        <!-- Boost Upsell -->
+        <div class="ann-boost-card">
+          <div class="ann-boost-header">
+            <div class="ann-badge ann-badge-premium" style="font-size: 0.8125rem;">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:0.75rem;height:0.75rem"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              Programme Boost
+            </div>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Placez-vous devant les autres professionnels de votre secteur</h3>
+          <p class="ann-text-muted" style="font-size: 0.9375rem; line-height: 1.7; margin-bottom: 1.25rem;">
+            Avec le programme Boost, votre fiche apparaît en priorité dans les résultats de recherche, sur la page d'accueil et sur la carte. Vous bénéficiez aussi d'un badge vérifié et d'un profil enrichi.
+          </p>
+          <ul class="ann-boost-benefits">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:1rem;height:1rem;color:hsl(var(--ann-success));flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Positionnement prioritaire dans votre ville</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:1rem;height:1rem;color:hsl(var(--ann-success));flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Badge "Vérifié" sur votre fiche</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:1rem;height:1rem;color:hsl(var(--ann-success));flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Mise en avant sur la page d'accueil</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:1rem;height:1rem;color:hsl(var(--ann-success));flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Lien vers votre site web sur votre fiche</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:1rem;height:1rem;color:hsl(var(--ann-success));flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Profil enrichi avec photos et vidéos</span>
+            </li>
+          </ul>
+          <a href="/tarifs/" class="ann-btn ann-btn-boost">
+            Découvrir le programme Boost
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Consent -->
+        <div class="ann-form-group" style="margin-top: 1.5rem;">
+          <label class="ann-checkbox-label">
+            <input type="checkbox" name="consent" id="f-consent" class="ann-sr-only" required>
+            <span class="ann-checkbox-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span class="ann-checkbox-text">
+              Je certifie que les informations fournies sont exactes et que je suis un professionnel qualifié. J'accepte les <a href="https://quiz-couple.com/mentions-legales/" target="_blank" style="color:hsl(var(--ann-primary));text-decoration:underline;">conditions d'utilisation</a>.
+            </span>
+          </label>
+          <span class="ann-field-error" id="err-consent"></span>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="ann-form-nav" id="form-nav">
+        <button type="button" class="ann-btn ann-btn-outline" id="btn-prev" style="display: none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Précédent
+        </button>
+        <div style="flex: 1;"></div>
+        <button type="button" class="ann-btn ann-btn-primary ann-btn-lg" id="btn-next">
+          Suivant
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </button>
+        <button type="submit" class="ann-btn ann-btn-primary ann-btn-lg" id="btn-submit" style="display: none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Soumettre pour validation
+        </button>
+      </div>
+
+    </form>
+
+    <!-- Success State -->
+    <div class="ann-form-success hidden" id="form-success">
+      <div class="ann-success-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <h2>Demande envoyée <span class="ann-text-gradient">avec succès</span></h2>
+      <p class="ann-text-muted" style="max-width: 28rem; margin: 0.75rem auto 1.5rem; font-size: 1.0625rem;">
+        Merci ! Notre équipe va examiner votre dossier. Vous recevrez un email de confirmation sous 48h.
+      </p>
+      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/" class="ann-btn ann-btn-outline">Retour à l'annuaire</a>
+        <a href="/tarifs/" class="ann-btn ann-btn-primary">Découvrir le programme Boost</a>
+      </div>
+    </div>
+
+  </div>
+</section>
