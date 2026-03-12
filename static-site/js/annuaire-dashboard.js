@@ -190,6 +190,24 @@
       $('dash-photo-preview').innerHTML = '<img src="' + safeUrl + '" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" alt="Photo de profil">';
     }
 
+    // Google Place ID (Boost only)
+    if (profile.google_place_id) {
+      var gpi = $('prof-google-place-id');
+      if (gpi) gpi.value = profile.google_place_id;
+    }
+
+    // Show Google Reviews section for Boost users
+    var googleSection = $('dash-google-reviews-section');
+    if (googleSection && profile.plan === 'boost') {
+      show(googleSection);
+      // Show current reviews status
+      if (profile.rating > 0 || profile.review_count > 0) {
+        var statusEl = $('dash-google-reviews-status');
+        statusEl.innerHTML = '<strong>Avis synchronisés :</strong> ' + profile.rating + '/5 (' + profile.review_count + ' avis)';
+        show(statusEl);
+      }
+    }
+
     // View profile link
     if (profile.slug && profile.is_published) {
       var link = $('dash-view-profile');
@@ -215,6 +233,12 @@
       languages: $('prof-languages').value.split(',').map(function (l) { return l.trim(); }).filter(Boolean),
       availability: $('prof-availability').value.trim() || null,
     };
+    // Include google_place_id if Boost user has the field visible
+    var gpiInput = $('prof-google-place-id');
+    if (gpiInput && $('dash-google-reviews-section') && $('dash-google-reviews-section').style.display !== 'none') {
+      data.google_place_id = gpiInput.value.trim() || null;
+    }
+    return data;
   }
 
   // ── Profile status banner ──
@@ -321,6 +345,7 @@
     bindRegisterForm();
     bindForgotPassword();
     bindResetForm();
+    bindDeleteAccount();
 
     // ── Logout ──
     $('dash-logout').addEventListener('click', logout);
@@ -607,6 +632,66 @@
     } catch (err) {
       console.error('Stats error:', err);
     }
+  }
+
+  // ── Delete account ──
+  function bindDeleteAccount() {
+    var toggleBtn = $('dash-delete-toggle');
+    var confirmBox = $('dash-delete-confirm');
+    var cancelBtn = $('dash-delete-cancel');
+    var deleteBtn = $('dash-delete-btn');
+    var emailInput = $('delete-email-confirm');
+    if (!toggleBtn || !confirmBox) return;
+
+    toggleBtn.addEventListener('click', function () {
+      show(confirmBox);
+      toggleBtn.style.display = 'none';
+      emailInput.value = '';
+      deleteBtn.disabled = true;
+      hideError('dash-delete-error');
+    });
+
+    cancelBtn.addEventListener('click', function () {
+      hide(confirmBox);
+      toggleBtn.style.display = '';
+      emailInput.value = '';
+      deleteBtn.disabled = true;
+      hideError('dash-delete-error');
+    });
+
+    emailInput.addEventListener('input', function () {
+      deleteBtn.disabled = !currentUser || emailInput.value.trim().toLowerCase() !== currentUser.email.toLowerCase();
+    });
+
+    deleteBtn.addEventListener('click', async function () {
+      if (!currentUser || emailInput.value.trim().toLowerCase() !== currentUser.email.toLowerCase()) return;
+      hideError('dash-delete-error');
+
+      deleteBtn.disabled = true;
+      deleteBtn.textContent = 'Suppression...';
+
+      try {
+        var session = await checkAuth();
+        if (!session) { showError('dash-delete-error', 'Session expirée.'); return; }
+
+        var res = await apiCall('annuaire-profile', 'DELETE', null, session.access_token);
+        if (res.error) {
+          showError('dash-delete-error', res.error);
+          deleteBtn.disabled = false;
+          deleteBtn.textContent = 'Supprimer définitivement';
+          return;
+        }
+
+        // Sign out and clear local data
+        await supabase.auth.signOut();
+        localStorage.removeItem('sb-lojvajnnvhatfplevyvy-auth-token');
+        window.location.href = '/?deleted=1';
+      } catch (err) {
+        showError('dash-delete-error', err.message || 'Erreur lors de la suppression.');
+        deleteBtn.disabled = false;
+        deleteBtn.textContent = 'Supprimer définitivement';
+      }
+    });
   }
 
   // ── Start ──

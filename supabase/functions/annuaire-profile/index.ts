@@ -163,6 +163,33 @@ serve(async (req: Request) => {
       });
     }
 
+    // ── DELETE: Supprimer mon compte et ma fiche ──
+    if (method === 'DELETE') {
+      // Delete profile (if exists)
+      await supabase
+        .from('annuaire_professionals')
+        .delete()
+        .eq('user_id', user.id);
+
+      // Delete storage photos
+      const { data: files } = await supabase.storage
+        .from('annuaire-photos')
+        .list(user.id);
+      if (files && files.length > 0) {
+        await supabase.storage
+          .from('annuaire-photos')
+          .remove(files.map((f: { name: string }) => `${user.id}/${f.name}`));
+      }
+
+      // Delete auth user (requires service role)
+      const { error: deleteError } = await supabase.auth.admin.deleteUser(user.id);
+      if (deleteError) throw deleteError;
+
+      return new Response(JSON.stringify({ success: true }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
     return new Response(JSON.stringify({ error: 'Méthode non supportée' }), {
       status: 405, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
@@ -263,6 +290,12 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
     // Only allow Supabase storage URLs
     if (url && !url.includes('supabase.co/storage')) return { error: 'URL photo invalide.' };
     result.photo_url = url || null;
+  }
+  if (body.google_place_id !== undefined) {
+    const gpi = sanitize(body.google_place_id, 200);
+    // Basic validation: Google Place IDs start with "ChIJ" or similar patterns
+    if (gpi && gpi.length < 10) return { error: 'Google Place ID invalide.' };
+    result.google_place_id = gpi || null;
   }
   // is_published is admin-only — users cannot set their own publication status
 
