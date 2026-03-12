@@ -278,22 +278,24 @@
       } catch (e) { /* no profile yet */ }
 
       // Auto-create profile from user_metadata (post email confirmation flow)
+      var pendingMeta = null;
       if (!currentProfile && currentUser.user_metadata && currentUser.user_metadata.has_pending_profile) {
-        try {
-          var meta = currentUser.user_metadata.annuaire_profile;
-          if (meta) {
+        pendingMeta = currentUser.user_metadata.annuaire_profile;
+        if (pendingMeta) {
+          try {
             // Ensure is_published is never set by client
-            delete meta.is_published;
-            var res = await saveProfile(meta, session.access_token, true);
+            var metaCopy = JSON.parse(JSON.stringify(pendingMeta));
+            delete metaCopy.is_published;
+            var res = await saveProfile(metaCopy, session.access_token, true);
             if (res.profile) {
               currentProfile = res.profile;
+              // Clear the pending flag on success
+              await supabase.auth.updateUser({ data: { has_pending_profile: false } });
             } else if (res.error) {
               console.warn('Auto-create profile error:', res.error);
             }
-            // Clear the pending flag regardless (avoid infinite retry)
-            await supabase.auth.updateUser({ data: { has_pending_profile: false } });
-          }
-        } catch (e) { console.warn('Auto-create profile failed:', e); }
+          } catch (e) { console.warn('Auto-create profile failed:', e); }
+        }
       }
 
       $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
@@ -301,6 +303,10 @@
         fillForm(currentProfile);
         updateProfileStatus(currentProfile);
       } else {
+        // No profile in DB — pre-fill form from registration metadata if available
+        if (pendingMeta) {
+          fillForm(pendingMeta);
+        }
         updateProfileStatus(null);
       }
       showDashboard();
@@ -416,17 +422,28 @@
         currentUser = data.user;
         currentProfile = await loadProfile(data.session.access_token);
 
-        // If profile exists but not published → show waiting message
-        if (currentProfile && !currentProfile.is_published) {
-          $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
-          fillForm(currentProfile);
-          updateProfileStatus(currentProfile);
-          showDashboard();
-          return;
+        // Auto-create from metadata if no profile yet
+        if (!currentProfile && currentUser.user_metadata && currentUser.user_metadata.has_pending_profile) {
+          var meta = currentUser.user_metadata.annuaire_profile;
+          if (meta) {
+            try {
+              var metaCopy = JSON.parse(JSON.stringify(meta));
+              delete metaCopy.is_published;
+              var res = await saveProfile(metaCopy, data.session.access_token, true);
+              if (res.profile) {
+                currentProfile = res.profile;
+                await supabase.auth.updateUser({ data: { has_pending_profile: false } });
+              }
+            } catch (autoErr) { console.warn('Auto-create on login failed:', autoErr); }
+          }
         }
 
         $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
-        if (currentProfile) fillForm(currentProfile);
+        if (currentProfile) {
+          fillForm(currentProfile);
+        } else if (currentUser.user_metadata && currentUser.user_metadata.annuaire_profile) {
+          fillForm(currentUser.user_metadata.annuaire_profile);
+        }
         updateProfileStatus(currentProfile);
         showDashboard();
       } catch (err) {
