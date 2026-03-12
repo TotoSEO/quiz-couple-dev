@@ -488,7 +488,6 @@
           resetSubmitBtn();
           return;
         }
-
         // Supabase sends confirmation email via its built-in templates (configured in Dashboard)
         // Profile data is stored in user_metadata and will be auto-created on first dashboard login
         showSuccess();
