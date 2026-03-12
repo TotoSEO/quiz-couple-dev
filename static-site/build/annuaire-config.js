@@ -50,6 +50,47 @@ export const SPECIALTIES = [
 <p>Si la dimension familiale est aussi en jeu (conflits autour des enfants, relations avec les beaux-parents), <a href="/mediateur-familial/">un médiateur familial</a> peut prendre le relais sur les aspects pratiques.</p>
 `
         },
+        {
+          title: 'Thérapie de couple en ligne : ça marche vraiment ?',
+          content: `
+<p>Depuis 2020, la téléconsultation a explosé dans tous les domaines de la santé — et la thérapie de couple n'a pas fait exception. Aujourd'hui, une part importante des séances se fait en visioconférence, et les retours sont plutôt positifs.</p>
+<p>Plusieurs études confirment que la thérapie de couple en ligne produit des résultats comparables au présentiel pour la plupart des problématiques courantes. Une méta-analyse publiée dans le <em>Journal of Marital and Family Therapy</em> montre une efficacité similaire sur la satisfaction relationnelle, la communication et la gestion des conflits.</p>
+<p>Les avantages sont concrets :</p>
+<ul>
+<li>Pas de trajet, pas de parking — un frein de moins pour les couples qui hésitent</li>
+<li>Plus facile de caler un rendez-vous dans des emplois du temps chargés</li>
+<li>Les deux partenaires peuvent se connecter depuis des lieux différents (pratique pour les couples en situation de séparation géographique)</li>
+<li>Certains patients se sentent plus à l'aise chez eux pour aborder des sujets intimes</li>
+</ul>
+<p>Cela dit, le présentiel garde ses avantages dans certaines situations : quand les émotions sont très intenses (risque de violence, crise aiguë), quand l'un des partenaires a tendance à se « cacher » derrière l'écran, ou quand le travail implique des exercices corporels (respiration, contact physique). Un bon thérapeute sait alterner les deux formats selon les besoins du moment.</p>
+`
+        },
+        {
+          title: 'Les signes qui montrent qu\'il est temps de consulter',
+          content: `
+<p>Beaucoup de couples attendent trop longtemps avant de consulter. Les recherches de John Gottman montrent que les couples mettent en moyenne six ans entre l'apparition des premières difficultés et la prise de rendez-vous. Six ans de ressentiment accumulé, c'est beaucoup à rattraper.</p>
+<p>Voici les signaux d'alerte à ne pas ignorer :</p>
+<ul>
+<li><strong>Les mêmes disputes en boucle</strong> — vous vous disputez sur les mêmes sujets depuis des mois (ou des années) sans jamais avancer. Le contenu change peut-être, mais le schéma est toujours le même.</li>
+<li><strong>Le mépris qui s'installe</strong> — les yeux qui roulent, les soupirs d'exaspération, les remarques acides. Selon Gottman, le mépris est le prédicteur numéro un du divorce.</li>
+<li><strong>L'évitement systématique</strong> — vous évitez certains sujets, certaines pièces, certains moments. L'intimité physique a disparu, ou elle se fait par obligation.</li>
+<li><strong>La vie de colocataires</strong> — vous cohabitez, vous gérez la logistique, mais il n'y a plus de connexion émotionnelle. Vous vivez des vies parallèles sous le même toit.</li>
+<li><strong>Les fantasmes de vie sans l'autre</strong> — vous vous surprenez à imaginer votre vie si vous étiez seul(e), ou avec quelqu'un d'autre.</li>
+</ul>
+<p>Reconnaître un ou plusieurs de ces signes ne signifie pas que tout est perdu. Au contraire : c'est le moment idéal pour consulter, parce qu'il reste encore des choses à sauver. Un <a href="/conseiller-conjugal/">conseiller conjugal</a> peut aussi être un bon premier pas si une thérapie longue vous semble intimidante.</p>
+`
+        },
+        {
+          title: 'Thérapie de couple après une infidélité : reconstruire la confiance',
+          content: `
+<p>L'infidélité est l'un des motifs de consultation les plus fréquents en thérapie de couple. Et contrairement à ce qu'on pourrait croire, la majorité des couples qui consultent après une infidélité ne viennent pas pour divorcer — ils viennent pour essayer de comprendre et, si possible, de reconstruire.</p>
+<p>Le travail thérapeutique après une infidélité suit généralement trois phases :</p>
+<p><strong>Phase 1 : la crise.</strong> Les premières séances sont consacrées à la gestion de la douleur brute. Le partenaire trahi a besoin de poser ses questions, d'exprimer sa colère, son sentiment de trahison. Le thérapeute canalise ces émotions pour éviter que les échanges ne deviennent destructeurs.</p>
+<p><strong>Phase 2 : la compréhension.</strong> Pourquoi c'est arrivé ? Cette phase ne cherche pas à excuser l'infidélité, mais à comprendre ce qui l'a rendue possible. Souvent, on découvre que le couple avait des besoins non satisfaits bien avant la tromperie — des besoins qui n'avaient jamais été formulés clairement.</p>
+<p><strong>Phase 3 : la reconstruction.</strong> Si le couple choisit de continuer ensemble, cette phase travaille sur la reconstruction de la confiance. C'est la plus longue. Elle implique de la transparence, de la patience, et souvent un « nouveau contrat » dans le couple — des règles et des engagements explicites qui n'existaient pas avant.</p>
+<p>Les études montrent qu'environ 60 à 65 % des couples qui s'engagent dans une thérapie après une infidélité restent ensemble. Et parmi ceux-là, beaucoup rapportent que leur relation est devenue plus solide qu'avant — parce que la crise les a forcés à aborder des sujets qu'ils avaient toujours évités. Le chemin est difficile, mais il est possible.</p>
+`
+        },
       ],
       priceRange: 'Comptez entre 60€ et 120€ la séance, selon la ville et l\'expérience du praticien. Paris et les grandes métropoles se situent plutôt dans la fourchette haute. La Sécurité sociale ne rembourse pas la thérapie de couple, mais pas mal de mutuelles proposent un forfait « médecines douces » qui couvre 3 à 6 séances par an. Vérifiez votre contrat, ça vaut le coup.',
       faq: [
@@ -99,6 +140,47 @@ export const SPECIALTIES = [
 <p>Pas de table d'examen, pas de blouse blanche. Le premier rendez-vous chez un sexologue ressemble à une conversation — certes un peu intime, mais menée avec tact et professionnalisme.</p>
 <p>Il dure environ une heure. Le praticien pose des questions sur votre santé générale, vos antécédents, votre vie relationnelle et bien sûr votre sexualité. Pas pour juger, mais pour comprendre ce qui se passe et depuis quand. C'est aussi le moment de vérifier qu'il n'y a pas de cause médicale sous-jacente (diabète, troubles hormonaux, effets secondaires d'un traitement).</p>
 <p>Les séances suivantes sont plus courtes (30 à 45 minutes) et orientées vers le travail concret : exercices de pleine conscience corporelle, techniques de gestion du stress, exercices à faire seul ou en couple entre les séances. Le rythme habituel est d'une consultation toutes les deux à trois semaines, sur une durée totale de 6 à 12 séances.</p>
+`
+        },
+        {
+          title: 'Sexologie et couple : quand la sexualité fragilise la relation',
+          content: `
+<p>Dans beaucoup de couples, la sexualité est le baromètre silencieux de la relation. Quand tout va bien, on n'en parle pas forcément. Mais quand quelque chose coince — un décalage de désir, une routine qui s'installe, un blocage qui apparaît — le malaise se diffuse dans toute la vie conjugale. Les non-dits s'accumulent, la frustration grandit, et parfois la distance s'installe sans qu'on comprenne vraiment pourquoi.</p>
+<p>Le sexologue qui reçoit des couples joue alors un double rôle. Il est le professionnel qui comprend les mécanismes physiologiques (les hormones, le vieillissement, les effets des médicaments sur la libido), mais il est aussi celui qui aide à poser les mots sur ce qui ne se dit pas. Beaucoup de couples n'ont jamais vraiment parlé de sexualité entre eux — pas en termes concrets, en tout cas.</p>
+<p>Les motifs de consultation en couple les plus fréquents chez le sexologue :</p>
+<ul>
+<li><strong>Le décalage de désir</strong> — l'un veut plus, l'autre moins. C'est le motif numéro un. Et c'est rarement une question de « qui a raison » : le désir fluctue avec l'âge, le stress, les événements de vie.</li>
+<li><strong>La routine sexuelle</strong> — quand les rapports deviennent mécaniques, prévisibles, sans plaisir réel. Le sexologue aide à sortir du « pilote automatique ».</li>
+<li><strong>Les problèmes fonctionnels qui affectent les deux</strong> — une dysfonction érectile ne touche pas que l'homme, elle impacte aussi la partenaire. Un vaginisme ne concerne pas que la femme, il pèse sur le couple entier.</li>
+<li><strong>La reprise de la sexualité après un événement</strong> — accouchement, maladie, opération, deuil. Reprendre une vie intime après une période d'abstinence forcée ne va pas de soi.</li>
+</ul>
+<p>Le sexologue ne juge pas, ne prescrit pas de « normalité ». Il part de ce que le couple vit et de ce qu'il souhaite, et il accompagne vers un mieux qui soit acceptable pour les deux.</p>
+`
+        },
+        {
+          title: 'Les troubles sexuels masculins : au-delà des clichés',
+          content: `
+<p>Parlons-en franchement, parce que les tabous autour de la sexualité masculine restent tenaces. Un homme qui consulte un sexologue, c'est encore souvent perçu comme un aveu de faiblesse. Résultat : beaucoup d'hommes attendent des années avant de prendre rendez-vous, et arrivent en consultation avec un problème qui s'est aggravé.</p>
+<p>Les troubles sexuels masculins les plus courants sont bien documentés par la recherche médicale :</p>
+<p><strong>La dysfonction érectile</strong> touche environ 1 homme sur 3 après 40 ans. Elle peut avoir des causes organiques (diabète, hypertension, tabagisme, effets secondaires de médicaments) ou psychologiques (anxiété de performance, stress professionnel, conflit conjugal). Souvent, c'est un mélange des deux. Le sexologue médecin peut prescrire un traitement médicamenteux si nécessaire, mais le travail thérapeutique reste essentiel pour traiter la composante psychologique.</p>
+<p><strong>L'éjaculation précoce</strong> concerne environ 20 à 30 % des hommes. C'est le trouble sexuel masculin le plus fréquent, et pourtant le plus simple à traiter quand on consulte. Les techniques comportementales (stop-start, squeeze technique) donnent des résultats en quelques semaines.</p>
+<p><strong>La baisse de libido masculine</strong>, longtemps ignorée, est de plus en plus prise en compte. Elle peut être liée à un déficit en testostérone (à vérifier par une prise de sang), à la prise d'antidépresseurs, ou simplement à l'épuisement professionnel et parental. Le « burn-out sexuel » existe, et il se traite.</p>
+<p>Dans tous les cas, le premier pas est souvent le plus difficile. Mais une fois en consultation, la grande majorité des hommes se disent soulagés d'avoir enfin pu en parler à quelqu'un qui comprend, sans jugement.</p>
+`
+        },
+        {
+          title: 'Sexualité féminine : ce que le sexologue peut vraiment apporter',
+          content: `
+<p>La sexualité féminine a longtemps été le parent pauvre de la médecine. Ce n'est que depuis les années 2000 que la recherche s'y intéresse sérieusement, et que les consultations de sexologie se sont ouvertes aux problématiques spécifiquement féminines — au-delà du sempiternel « c'est dans la tête ».</p>
+<p>Les motifs de consultation les plus fréquents chez les femmes :</p>
+<ul>
+<li><strong>Le vaginisme</strong> — une contraction involontaire des muscles du périnée qui rend la pénétration douloureuse ou impossible. C'est plus courant qu'on ne le croit (environ 5 à 17 % des femmes selon les études), et ça se traite très bien avec un accompagnement adapté : exercices de relaxation, dilatateurs progressifs, travail sur les peurs associées.</li>
+<li><strong>Les dyspareunies</strong> — des douleurs pendant les rapports, qui peuvent avoir des causes multiples (endométriose, sécheresse vaginale, cicatrice d'épisiotomie, infection). Le sexologue médecin fait d'abord un bilan pour écarter ou traiter les causes organiques.</li>
+<li><strong>L'anorgasmie</strong> — l'absence d'orgasme, totale ou situationnelle. Le sexologue travaille à la fois sur la connaissance du corps, la communication avec le partenaire, et les croyances qui bloquent le lâcher-prise.</li>
+<li><strong>La chute de désir post-partum</strong> — parfaitement normale sur le plan hormonal, mais souvent source d'inquiétude et de tension dans le couple. Le sexologue aide à comprendre ce qui se passe physiologiquement et à trouver un nouveau rythme.</li>
+</ul>
+<p>Ce qui change vraiment avec un sexologue formé, c'est le regard posé sur ces difficultés. Pas de dramatisation, pas de normalisation forcée. Chaque femme est différente, chaque couple fonctionne à son rythme.</p>
+<p>Quand le blocage est principalement d'ordre émotionnel ou lié à un traumatisme, <a href="/sexotherapeute/">un sexothérapeute</a> pourra approfondir le travail psychologique en complément.</p>
 `
         },
       ],
@@ -153,6 +235,42 @@ export const SPECIALTIES = [
 <p>Quand le problème dépasse la sexualité et touche à la relation elle-même, un travail parallèle avec <a href="/therapeute-de-couple/">un thérapeute de couple</a> peut vraiment accélérer les choses.</p>
 `
         },
+        {
+          title: 'Traumatismes sexuels : le rôle central du sexothérapeute',
+          content: `
+<p>C'est probablement le domaine où le sexothérapeute est le plus irremplaçable. Les traumatismes sexuels — agression, abus dans l'enfance, rapport non consenti, attouchements — laissent des traces profondes qui affectent la sexualité pendant des années, parfois des décennies. Et ces traces ne se traitent pas avec un simple conseil ou une prescription médicamenteuse.</p>
+<p>Le sexothérapeute formé aux psycho-traumatismes sait que le corps garde en mémoire ce que le cerveau a parfois mis de côté. Des réactions automatiques se déclenchent dans l'intimité : une crispation, une dissociation (le sentiment de « ne plus être là »), une incapacité à ressentir du plaisir, ou au contraire une hypersexualité compulsive. Ces réactions ne sont pas des choix. Ce sont des mécanismes de protection que le cerveau a mis en place, et qu'il faut déconstruire progressivement.</p>
+<p>Les techniques utilisées dans ce cadre sont spécifiques :</p>
+<ul>
+<li><strong>L'EMDR</strong> (Eye Movement Desensitization and Reprocessing) permet de retraiter les souvenirs traumatiques sans les revivre dans toute leur intensité. Des études publiées dans le <em>Journal of EMDR Practice and Research</em> montrent une efficacité significative sur les troubles sexuels post-traumatiques.</li>
+<li><strong>La thérapie sensorimotrice</strong> travaille directement avec les réactions du corps : apprendre à reconnaître les signaux de stress, à réguler l'activation du système nerveux, à retrouver un sentiment de sécurité dans son propre corps.</li>
+<li><strong>L'approche narrative</strong> aide la personne à se réapproprier son histoire, à passer du statut de victime à celui de survivant, puis à celui de personne qui vit pleinement sa sexualité.</li>
+</ul>
+<p>Ce travail prend du temps — souvent 6 mois à un an, parfois plus. Mais il est transformateur. Le sexothérapeute accompagne à un rythme que la personne choisit, sans jamais forcer une confrontation pour laquelle elle n'est pas prête.</p>
+`
+        },
+        {
+          title: 'Sexothérapie et nouvelles conjugalités',
+          content: `
+<p>La sexothérapie ne se limite pas au schéma classique du couple hétérosexuel installé. Les sexothérapeutes d'aujourd'hui accompagnent une diversité de situations que la société reconnaît de plus en plus :</p>
+<p><strong>Les couples LGBTQ+</strong> ont des problématiques parfois spécifiques. L'homophobie intériorisée peut créer des blocages sexuels profonds. La question du coming-out tardif, quand on se découvre après des années de relation hétérosexuelle, bouscule toute la construction identitaire et intime. Le sexothérapeute offre un espace sans jugement pour explorer ces questions.</p>
+<p><strong>Les relations non-monogames</strong> — polyamour, relation libre, échangisme — soulèvent des questions propres : comment gérer la jalousie ? Comment maintenir l'intimité avec un partenaire « principal » ? Comment poser des limites claires ? Le sexothérapeute aide à démêler ce qui relève du désir authentique et ce qui cache un évitement ou une fuite.</p>
+<p><strong>Les transitions de vie</strong> bouleversent la sexualité : la ménopause et l'andropause, le veuvage et la reconstruction d'une vie intime après un deuil, le handicap acquis qui impose de réinventer sa sexualité. Ce sont des accompagnements de plus en plus demandés, et les sexothérapeutes s'y forment activement.</p>
+<p><strong>L'impact du numérique</strong> est aussi un sujet croissant : addiction à la pornographie, sexting compulsif, infidélité en ligne. Ces comportements ont des mécanismes psychologiques propres que le sexothérapeute est formé à traiter, en combinant approche addictologique et travail sur la sexualité.</p>
+<p>Ce qui caractérise un bon sexothérapeute, c'est sa capacité à accueillir toutes ces réalités sans plaquer un modèle unique. La norme, en matière de sexualité, c'est qu'il n'y en a pas — tant que les pratiques sont consenties et ne génèrent pas de souffrance.</p>
+`
+        },
+        {
+          title: 'Bien choisir son sexothérapeute : les critères qui comptent',
+          content: `
+<p>Le titre de sexothérapeute n'étant pas protégé par la loi en France, n'importe qui peut en théorie se déclarer comme tel. C'est un vrai problème, et c'est pourquoi il est essentiel de vérifier quelques points avant de prendre rendez-vous.</p>
+<p><strong>La formation initiale</strong> est le premier critère. Un sexothérapeute sérieux a d'abord une formation de base solide : psychologue (Master en psychologie clinique), médecin, ou professionnel paramédical. À cela s'ajoute une formation complémentaire en sexologie (DU ou DIU) et en psychothérapie (TCC, EMDR, systémique, psychodynamique…). Méfiez-vous des praticiens qui n'affichent qu'une certification privée de quelques semaines.</p>
+<p><strong>La supervision</strong> est un indicateur de sérieux. Un bon sexothérapeute continue de travailler avec un superviseur tout au long de sa carrière — un confrère plus expérimenté qui l'aide à prendre du recul sur ses cas et à maintenir une posture professionnelle. N'hésitez pas à demander si le praticien est supervisé.</p>
+<p><strong>Le cadre déontologique</strong> doit être explicite. Un sexothérapeute professionnel respecte un code de déontologie (celui des psychologues, des médecins, ou celui de son association professionnelle). Il ne touche jamais le patient, ne propose jamais d'exercice en séance impliquant la nudité, et maintient une distance professionnelle absolue. Si un praticien vous met mal à l'aise ou franchit ces limites, partez immédiatement.</p>
+<p><strong>Le premier contact</strong> est révélateur. Un bon sexothérapeute prend le temps d'expliquer sa méthode lors du premier échange téléphonique, répond à vos questions sur sa formation, et ne promet pas de résultats miracles. Il vous dit aussi clairement si votre problématique relève de ses compétences ou s'il est préférable de consulter un autre type de professionnel — un <a href="/sexologue/">sexologue médecin</a> pour un bilan organique, par exemple.</p>
+<p>Sur notre annuaire, les praticiens affichent leur formation, leurs spécialisations et leurs méthodes. C'est un bon point de départ pour faire un choix éclairé.</p>
+`
+        },
       ],
       priceRange: 'Les séances coûtent entre 70€ et 110€, selon la ville et l\'expérience du praticien. La Sécurité sociale ne rembourse pas la sexothérapie, sauf si le praticien est aussi médecin (auquel cas la part « consultation médicale » est prise en charge). Certaines mutuelles proposent un forfait annuel pour les consultations chez un sexothérapeute, souvent dans la rubrique « psy » ou « médecines douces ».',
       faq: [
@@ -198,6 +316,42 @@ export const SPECIALTIES = [
 <p>Ce cadre légal a considérablement développé la médiation familiale en France. Les Caisses d'Allocations Familiales (CAF) financent un réseau de services de médiation familiale sur tout le territoire, avec un barème national qui rend les séances accessibles à tous les revenus : de 2€ à 131€ par séance et par personne, selon les ressources du ménage.</p>
 <p>Les accords trouvés en médiation ne restent pas de simples « promesses en l'air ». Ils peuvent être homologués par le juge aux affaires familiales, ce qui leur donne la même force juridique qu'un jugement. C'est un point que beaucoup de gens ignorent, et qui change la donne.</p>
 <p>Quand la séparation affecte aussi les enfants et la parentalité, <a href="/coach-parental/">un coach parental</a> peut prendre le relais sur les questions éducatives du quotidien.</p>
+`
+        },
+        {
+          title: 'Médiation familiale et garde des enfants : trouver un accord qui tient',
+          content: `
+<p>C'est souvent le sujet le plus explosif dans une séparation : la garde des enfants. Garde alternée ou résidence principale chez un parent ? Quel rythme de week-ends ? Et les vacances, on fait comment ? Chaque décision est chargée d'émotion, de peur de perdre du temps avec ses enfants, de sentiment d'injustice.</p>
+<p>Le médiateur familial aborde ces questions avec une méthode bien rodée. Il ne tranche pas — ce n'est pas un juge. Il aide les deux parents à se concentrer sur ce qui compte vraiment : l'intérêt de l'enfant. Et cet intérêt, ce n'est pas une notion abstraite. C'est concret : l'école, les activités, le rythme de sommeil, la distance entre les deux domiciles, le réseau social de l'enfant.</p>
+<p>En médiation, on construit un calendrier de garde en prenant en compte les contraintes réelles de chacun. Horaires de travail, trajets, disponibilité des grands-parents… Le résultat est souvent plus réaliste qu'une décision judiciaire standardisée, parce qu'il est fait sur mesure par les deux personnes qui connaissent le mieux la situation.</p>
+<p>Les études montrent que les accords parentaux issus de la médiation sont mieux respectés que les décisions imposées par un tribunal. La raison est simple : quand on a participé à la construction d'un accord, on s'y tient davantage que quand il nous est imposé. Le taux de retour devant le juge après une médiation réussie est significativement plus bas — environ 20 %, contre 40 à 50 % après un jugement classique.</p>
+<p>Le médiateur peut aussi aider à organiser les aspects pratiques post-séparation : qui garde le logement ? Comment se répartissent les frais liés aux enfants ? Quel mode de communication entre les ex-conjoints ? Autant de questions qui, sans médiation, deviennent des sources de conflit récurrent.</p>
+`
+        },
+        {
+          title: 'Au-delà du divorce : les autres visages de la médiation familiale',
+          content: `
+<p>On associe souvent la médiation familiale au divorce. Mais c'est loin d'être son seul champ d'action. Les conflits familiaux prennent des formes très variées, et le médiateur est équipé pour les traiter.</p>
+<p><strong>Les conflits intergénérationnels</strong> constituent une part croissante des médiations. Un parent âgé que les enfants n'arrivent plus à gérer ensemble. Un frère qui s'occupe de tout et en veut aux autres de ne rien faire. Un placement en EHPAD qui divise la fratrie. Ces situations sont émotionnellement chargées et la médiation permet de désamorcer les ressentiments avant qu'ils ne deviennent irréparables.</p>
+<p><strong>Le droit de visite des grands-parents</strong> est un motif de médiation en forte augmentation. Quand un couple se sépare, les grands-parents du côté « exclu » perdent parfois tout contact avec leurs petits-enfants. La médiation permet de rétablir un lien, en trouvant un cadre acceptable pour tous. Le Code civil (article 371-4) garantit le droit de l'enfant à entretenir des relations avec ses ascendants, mais la médiation évite d'en arriver à une procédure judiciaire.</p>
+<p><strong>Les familles recomposées</strong> génèrent des situations complexes : la place du beau-parent, les tensions entre demi-frères et sœurs, les désaccords éducatifs entre « tes enfants » et « mes enfants ». Le médiateur aide à clarifier les rôles et à poser un cadre familial cohérent.</p>
+<p><strong>Les successions conflictuelles</strong>, bien que souvent traitées par des notaires, relèvent parfois de la médiation quand le blocage est émotionnel plus que juridique. La maison familiale qu'on n'arrive pas à vendre, le sentiment d'avoir été lésé dans un testament, les vieilles rancœurs qui ressortent au moment du partage.</p>
+<p>Dans tous ces cas, le médiateur apporte ce que ni un avocat ni un juge ne peut offrir : un espace où les émotions ont leur place, où on peut exprimer ce qu'on ressent sans que ce soit utilisé contre soi.</p>
+`
+        },
+        {
+          title: 'Comment se déroule une médiation familiale concrètement ?',
+          content: `
+<p>Si vous n'avez jamais mis les pieds chez un médiateur familial, voici à quoi vous attendre. Le processus est structuré mais souple, et il s'adapte à chaque situation.</p>
+<p><strong>L'entretien d'information préalable</strong> (gratuit dans les services conventionnés) est le premier contact. Le médiateur vous reçoit — seul ou avec l'autre partie — pour expliquer ce qu'est la médiation, ce qu'elle n'est pas, et vérifier qu'elle est adaptée à votre situation. C'est aussi le moment de poser toutes vos questions. Si la situation implique des violences conjugales, le médiateur vous orientera vers d'autres dispositifs, car la médiation n'est pas indiquée dans ce cas.</p>
+<p><strong>Les séances de médiation</strong> durent environ 1h30 à 2h. Le médiateur applique des techniques de communication très précises :</p>
+<ul>
+<li>La <strong>reformulation</strong> — il répète ce que chacun a dit, en neutralisant la charge émotionnelle. « Si je comprends bien, vous ressentez de l'injustice parce que… »</li>
+<li>Le <strong>recadrage</strong> — il recentre la discussion quand elle dérape vers les accusations mutuelles. « On peut revenir sur ce qui est important pour votre fille dans cette situation ? »</li>
+<li>L'<strong>exploration des besoins</strong> — derrière chaque position (« je veux la garde exclusive »), il y a un besoin (« j'ai peur de perdre le lien avec mon enfant »). Le médiateur aide à passer de l'un à l'autre.</li>
+<li>La <strong>génération d'options</strong> — une fois les besoins identifiés, le médiateur aide les parties à inventer des solutions créatives auxquelles un juge n'aurait jamais pensé.</li>
+</ul>
+<p><strong>L'accord de médiation</strong> est rédigé en fin de processus. C'est un document clair qui récapitule tout ce qui a été décidé. Il peut être soumis à un avocat pour vérification juridique, puis homologué par le juge pour avoir force exécutoire. Ce protocole d'accord, construit ensemble, a une valeur considérable : il est le fruit d'un travail commun, pas d'une décision imposée.</p>
 `
         },
       ],
@@ -254,6 +408,46 @@ export const SPECIALTIES = [
 <p>Quand les tensions éducatives fragilisent le couple lui-même, combiner le coaching parental avec <a href="/conseiller-conjugal/">un suivi conjugal</a> peut aider à retrouver une alliance parentale solide.</p>
 `
         },
+        {
+          title: 'Parentalité et couple : le duo qui se fragilise',
+          content: `
+<p>C'est un paradoxe que peu de gens anticipent : avoir un enfant, censé être le projet le plus beau du couple, est aussi l'événement qui met le plus la relation sous tension. Les études sur la satisfaction conjugale sont unanimes : elle chute significativement dans les deux premières années suivant l'arrivée d'un enfant. Et quand ça se répète avec le deuxième ou le troisième, les fissures peuvent devenir des fractures.</p>
+<p>Les mécanismes sont bien identifiés par la recherche :</p>
+<ul>
+<li><strong>Le déséquilibre de la charge parentale</strong> — en France, les mères assurent encore en moyenne 71 % des tâches liées aux enfants (enquête INSEE 2023). Ce déséquilibre crée du ressentiment, de l'épuisement, et un sentiment d'injustice qui empoisonne la relation.</li>
+<li><strong>Les conflits éducatifs</strong> — les deux parents n'ont pas été élevés de la même façon. L'un a grandi dans un cadre strict, l'autre dans un environnement permissif. Ces différences, invisibles avant l'arrivée de l'enfant, deviennent soudain des sujets de dispute quotidiens.</li>
+<li><strong>La disparition du couple</strong> — on devient « papa et maman » et on oublie d'être « amoureux ». Les sorties à deux disparaissent, l'intimité se réduit, les conversations se limitent à la logistique. Le couple meurt à petit feu, englouti par la parentalité.</li>
+</ul>
+<p>Le coach parental travaille sur ces trois dimensions. Il ne s'agit pas de sauver le couple au sens romantique (c'est le travail du <a href="/therapeute-de-couple/">thérapeute de couple</a>), mais de reconstruire l'alliance parentale. Quand les deux parents tirent dans le même sens sur l'éducation, toute la famille y gagne — y compris le couple.</p>
+`
+        },
+        {
+          title: 'Coaching parental et adolescence : survivre aux années tempête',
+          content: `
+<p>Si les crises de colère du bambin de 3 ans usent la patience, celles de l'adolescent de 14 ans usent l'âme. L'adolescence est la période qui génère le plus de demandes de coaching parental, et pour cause : les parents se retrouvent face à un être qu'ils ne reconnaissent plus, avec des outils éducatifs qui ne fonctionnent plus.</p>
+<p>Le coach parental spécialisé en adolescence travaille sur plusieurs fronts :</p>
+<p><strong>La communication</strong> est le premier chantier. L'adolescent ne veut plus « parler ». Il répond par monosyllabes, claque les portes, vit dans sa chambre. Le coach enseigne aux parents des techniques de communication adaptées à cet âge : questions ouvertes au bon moment, écoute active sans jugement, partage d'expériences personnelles plutôt que leçons de morale.</p>
+<p><strong>Le cadre et les limites</strong> doivent évoluer. Les règles qui marchaient à 8 ans ne marchent plus à 14. Le coach aide à définir un cadre adapté : quels sont les sujets non négociables (sécurité, respect, scolarité) ? Où peut-on lâcher du lest (habillement, rangement, heure de coucher le week-end) ? L'idée, c'est de choisir ses batailles — et de les gagner.</p>
+<p><strong>Les écrans et les réseaux sociaux</strong> sont devenus un sujet central. Combien de temps ? Quelles applis ? Comment contrôler sans fliquer ? Le coach aide les parents à sortir de l'opposition frontale pour construire un accord basé sur la confiance et la responsabilisation progressive.</p>
+<p><strong>Les comportements à risque</strong> (expérimentation de l'alcool, du cannabis, premiers rapports sexuels) plongent beaucoup de parents dans la panique. Le coach aide à distinguer l'expérimentation normale de l'adolescence d'un comportement préoccupant qui nécessite une prise en charge spécialisée. Il aide aussi à ouvrir le dialogue sur ces sujets, ce qui est souvent plus protecteur que n'importe quelle interdiction.</p>
+<p>Le coaching parental pendant l'adolescence, c'est souvent 6 à 10 séances. Le but n'est pas de « corriger » l'ado, mais d'outiller les parents pour traverser cette période de transition sans y perdre la relation — ni avec l'enfant, ni entre eux.</p>
+`
+        },
+        {
+          title: 'Burn-out parental : quand le coaching devient indispensable',
+          content: `
+<p>Le burn-out parental n'est pas une invention médiatique. C'est un syndrome reconnu par la communauté scientifique, étudié notamment par les chercheuses belges Moïra Mikolajczak et Isabelle Roskam, qui ont développé le premier outil de mesure validé (le PBA — Parental Burnout Assessment). Selon leurs recherches, environ 5 à 8 % des parents sont en situation de burn-out à un moment donné.</p>
+<p>Les trois symptômes-clés du burn-out parental :</p>
+<ul>
+<li><strong>L'épuisement intense</strong> — physique et émotionnel. Le parent n'a plus d'énergie, plus de patience, plus d'envie. Se lever le matin pour gérer les enfants devient une épreuve.</li>
+<li><strong>La distanciation affective</strong> — le parent fait les gestes (nourrir, habiller, accompagner), mais mécaniquement, sans plaisir, sans connexion émotionnelle avec ses enfants. Il se sent coupable de ne plus ressentir de joie dans la parentalité.</li>
+<li><strong>La perte d'efficacité</strong> — le sentiment de ne plus être un bon parent, de tout faire de travers, de ne plus rien contrôler. La culpabilité est écrasante et alimente un cercle vicieux.</li>
+</ul>
+<p>Le coach parental formé au burn-out intervient sur plusieurs leviers. D'abord, la déculpabilisation : non, vous n'êtes pas un mauvais parent. Vous êtes un parent qui a dépassé ses limites, ce qui est très différent. Ensuite, l'identification des facteurs de risque : perfectionnisme éducatif, absence de soutien extérieur, charge mentale non partagée, isolement social.</p>
+<p>Le travail concret porte sur la réorganisation du quotidien : déléguer, simplifier, accepter que tout ne soit pas parfait. Il porte aussi sur la récupération : retrouver du temps pour soi, recréer des moments de plaisir (y compris dans la parentalité), et surtout accepter de l'aide — de son partenaire, de sa famille, de professionnels.</p>
+<p>Quand le burn-out parental s'accompagne d'une détresse psychologique sévère (pensées suicidaires, maltraitance par épuisement), le coach oriente vers un suivi psychologique ou psychiatrique. Le coaching seul ne suffit pas dans ces cas, mais il peut être un excellent complément une fois la crise stabilisée.</p>
+`
+        },
       ],
       priceRange: 'Les séances coûtent entre 50€ et 90€, selon le praticien et la ville. Certains coachs proposent des forfaits de 5 à 8 séances à tarif dégressif (entre 250€ et 500€ le parcours complet). Le coaching parental n\'est pas remboursé par la Sécurité sociale, mais quelques mutuelles commencent à le couvrir dans leur forfait « bien-être » ou « prévention ».',
       faq: [
@@ -300,6 +494,47 @@ export const SPECIALTIES = [
 <p>Les <strong>associations</strong> comme le CLER, l'AFCCC ou Couples et Familles ont des antennes dans de nombreuses villes. Les tarifs y sont modérés, souvent entre 20€ et 50€ la séance, adaptés aux revenus du ménage.</p>
 <p>En <strong>cabinet libéral</strong>, les tarifs sont plus élevés (40€ à 80€ par séance), mais les délais sont plus courts et les horaires plus souples. Certaines mutuelles proposent un remboursement partiel dans le cadre d'un forfait « médecines douces » ou « consultations psychologiques ».</p>
 <p>Quel que soit le cadre, la confidentialité est totale. Le conseiller conjugal est tenu au secret professionnel. Rien de ce qui est dit en séance ne sort du cabinet — c'est un principe non négociable de la profession.</p>
+`
+        },
+        {
+          title: 'Les crises de couple les plus fréquentes en France',
+          content: `
+<p>Le conseiller conjugal voit passer toutes les crises, des plus banales aux plus explosives. Et avec le recul de la pratique, certains schémas reviennent de manière récurrente. Connaître ces crises typiques peut aider à les identifier — et à consulter avant qu'elles ne s'enracinent.</p>
+<p><strong>La crise du « sept ans »</strong> (qui survient en réalité entre 3 et 7 ans de vie commune). La passion des débuts a fait place à la routine. On se connaît par cœur, on ne se surprend plus. L'un des deux commence à se demander si « c'est vraiment ça, la vie de couple ». Le conseiller aide à distinguer un essoufflement normal (qui se travaille) d'une incompatibilité profonde (qui nécessite d'autres décisions).</p>
+<p><strong>La crise post-naissance</strong>. L'arrivée d'un enfant redistribue toutes les cartes : sommeil, intimité, répartition des tâches, identité de chacun. Le couple d'amants devient un binôme parental, et ce passage n'a rien d'évident. Les conseillers conjugaux reçoivent de plus en plus de jeunes parents dans les deux premières années de vie de l'enfant — un signe que la prise de conscience progresse.</p>
+<p><strong>La crise du nid vide</strong>. Quand le dernier enfant part, certains couples réalisent qu'il ne reste plus grand-chose entre eux. Vingt ans de vie commune centrée sur les enfants, et soudain, le silence. Le conseiller aide à se redécouvrir en tant que couple, pas seulement en tant que parents. C'est un travail délicat mais souvent salvateur.</p>
+<p><strong>La crise de la quarantaine/cinquantaine</strong>. Bilan professionnel, questionnements existentiels, changements physiques. L'un des deux remet tout en question — y compris le couple. L'autre se sent trahi ou abandonné. Le conseiller aide à traverser cette période de doute sans prendre de décisions irréversibles sous le coup de l'émotion.</p>
+<p><strong>La crise technologique</strong>. De plus en plus de couples consultent pour des problèmes liés au numérique : l'un des deux passe ses soirées sur son téléphone, une découverte de messages ambigus sur les réseaux sociaux, une addiction aux applications de rencontre. Le conseiller aide à poser un cadre autour de l'utilisation du numérique dans le couple.</p>
+`
+        },
+        {
+          title: 'Conseil conjugal et violences : ce qu\'il faut savoir',
+          content: `
+<p>C'est un sujet sensible, mais essentiel. Le conseil conjugal n'est PAS adapté aux situations de violence conjugale active. C'est un principe fondamental de la profession, et tout conseiller sérieux le vérifie dès le premier entretien.</p>
+<p>Pourquoi ? Parce que la violence conjugale repose sur un mécanisme de domination et de contrôle. Mettre l'auteur et la victime face à face dans un cadre thérapeutique peut renforcer l'emprise, exposer la victime à des représailles, et donner à l'auteur un sentiment de légitimité (« tu vois, le professionnel dit que toi aussi tu as des torts »). Les associations spécialisées (comme le 3919 — numéro national contre les violences faites aux femmes) sont le bon premier interlocuteur dans ces situations.</p>
+<p>Cela dit, le conseiller conjugal joue un rôle important dans d'autres contextes liés aux violences :</p>
+<ul>
+<li><strong>Après la sortie de violence</strong> — quand la victime a quitté la situation d'emprise et souhaite reconstruire sa vie affective. Le conseiller aide à identifier les signaux d'alerte, à poser ses limites, à retrouver confiance dans sa capacité à vivre une relation saine.</li>
+<li><strong>Pour les auteurs engagés dans un travail</strong> — certains conseillers conjugaux travaillent en lien avec des structures d'accompagnement des auteurs de violences (comme le CPCA — Centre de Prise en Charge des Auteurs). Ce travail ne remplace pas un suivi spécialisé, mais il peut le compléter quand le couple choisit de rester ensemble après un parcours thérapeutique.</li>
+<li><strong>Pour les violences « douces »</strong> — le dénigrement systématique, le contrôle financier, l'isolement social. Ces formes de violence psychologique sont parfois présentes dans des couples qui ne se reconnaissent pas dans le schéma de la violence conjugale. Le conseiller aide à nommer ces comportements et à poser des limites claires.</li>
+</ul>
+<p>Dans tous les cas, si vous êtes en danger immédiat, appelez le 3919 (violences faites aux femmes), le 114 par SMS, ou le 17 (police/gendarmerie). Le conseil conjugal viendra après, quand la sécurité sera assurée.</p>
+`
+        },
+        {
+          title: 'Conseil conjugal en ligne : une alternative qui se développe',
+          content: `
+<p>Comme beaucoup de professions d'accompagnement, le conseil conjugal a pris le virage de la visioconférence. Depuis 2020, de plus en plus de conseillers proposent des séances en ligne, et les retours sont globalement positifs — aussi bien côté praticiens que côté patients.</p>
+<p>Les avantages sont concrets pour les couples :</p>
+<ul>
+<li><strong>L'accessibilité géographique</strong> — dans les zones rurales ou les petites villes, il n'y a parfois aucun conseiller conjugal à moins d'une heure de route. La visioconférence supprime cette barrière.</li>
+<li><strong>La souplesse horaire</strong> — plus facile de caler un créneau de 45 minutes en visio qu'un rendez-vous qui implique trajet, stationnement, salle d'attente. Pour les couples avec enfants en bas âge, c'est parfois la seule option réaliste.</li>
+<li><strong>Le confort du domicile</strong> — certaines personnes s'expriment plus facilement chez elles que dans un cabinet inconnu. Le cadre familier peut favoriser l'authenticité.</li>
+<li><strong>Les situations de séparation géographique</strong> — quand les deux partenaires ne vivent pas dans la même ville (mutation professionnelle, séparation en cours), la visioconférence permet de consulter ensemble sans se déplacer.</li>
+</ul>
+<p>Les limites existent aussi. L'écran filtre une partie du langage non-verbal, ce qui peut compliquer le travail du conseiller. Les problèmes de connexion interrompent parfois des moments émotionnels importants. Et la tentation de « couper sa caméra » pour se cacher derrière l'écran est réelle.</p>
+<p>La plupart des conseillers qui proposent des séances en ligne recommandent un format hybride : commencer par une ou deux séances en présentiel pour établir le lien, puis alterner selon les besoins. C'est un bon compromis entre efficacité et praticité.</p>
+<p>Pour les couples qui hésitent à franchir la porte d'un cabinet, la visioconférence peut aussi servir de premier pas — moins intimidant qu'un rendez-vous physique, mais tout aussi efficace pour les premières prises de conscience. Et si la situation nécessite un travail plus approfondi, le conseiller pourra orienter vers <a href="/therapeute-de-couple/">un thérapeute de couple</a> pour un suivi plus long.</p>
 `
         },
       ],
@@ -580,7 +815,7 @@ export const CITIES = [
 export const MOCK_PROFESSIONALS = [
   {
     id: 'marie-dupont',
-    slug: 'marie-dupont-therapeute-couple-paris',
+    slug: 'marie-dupont',
     firstName: 'Marie',
     lastName: 'Dupont',
     photoUrl: null,
@@ -604,7 +839,7 @@ export const MOCK_PROFESSIONALS = [
   },
   {
     id: 'jean-martin',
-    slug: 'jean-martin-sexologue-lyon',
+    slug: 'jean-martin',
     firstName: 'Jean',
     lastName: 'Martin',
     photoUrl: null,
@@ -628,7 +863,7 @@ export const MOCK_PROFESSIONALS = [
   },
   {
     id: 'sophie-bernard',
-    slug: 'sophie-bernard-mediateur-familial-bordeaux',
+    slug: 'sophie-bernard',
     firstName: 'Sophie',
     lastName: 'Bernard',
     photoUrl: null,
@@ -651,7 +886,7 @@ export const MOCK_PROFESSIONALS = [
   },
   {
     id: 'claire-moreau',
-    slug: 'claire-moreau-conseiller-conjugal-nantes',
+    slug: 'claire-moreau',
     firstName: 'Claire',
     lastName: 'Moreau',
     photoUrl: null,
@@ -674,7 +909,7 @@ export const MOCK_PROFESSIONALS = [
   },
   {
     id: 'thomas-leroy',
-    slug: 'thomas-leroy-coach-parental-toulouse',
+    slug: 'thomas-leroy',
     firstName: 'Thomas',
     lastName: 'Leroy',
     photoUrl: null,
@@ -697,7 +932,7 @@ export const MOCK_PROFESSIONALS = [
   },
   {
     id: 'isabelle-petit',
-    slug: 'isabelle-petit-sexotherapeute-marseille',
+    slug: 'isabelle-petit',
     firstName: 'Isabelle',
     lastName: 'Petit',
     photoUrl: null,

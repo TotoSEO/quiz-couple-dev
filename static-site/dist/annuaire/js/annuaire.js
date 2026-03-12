@@ -193,7 +193,7 @@
           '<strong style="font-size:14px;">' + pro.name + '</strong><br>' +
           '<span style="color:' + color + ';font-size:12px;font-weight:500;">' + (spec.name || '') + '</span>' +
           (pro.premium ? '<span style="display:inline-block;margin-left:6px;background:#FFF3CD;color:#856404;font-size:10px;padding:1px 6px;border-radius:10px;font-weight:600;">Premium</span>' : '') +
-          '<br><a href="/professionnel/' + pro.slug + '/" style="color:hsl(340,65%,55%);font-size:12px;font-weight:500;margin-top:6px;display:inline-block;">Voir le profil →</a>' +
+          '<br><a href="/' + pro.specialty + '/' + pro.city + '/' + pro.slug + '/" style="color:hsl(340,65%,55%);font-size:12px;font-weight:500;margin-top:6px;display:inline-block;">Voir le profil →</a>' +
           '</div>'
         );
     });
