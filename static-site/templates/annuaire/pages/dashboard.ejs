@@ -19,13 +19,7 @@
           <h1 style="font-size: 1.5rem; margin-bottom: 0.5rem;">
             <span class="ann-text-gradient">Espace professionnel</span>
           </h1>
-          <p class="ann-text-muted">Connectez-vous ou créez votre compte pour gérer votre fiche.</p>
-        </div>
-
-        <!-- Toggle login/register -->
-        <div style="display: flex; gap: 0; margin-bottom: 1.5rem; border: 1px solid hsl(var(--ann-border)); border-radius: var(--ann-radius); overflow: hidden;">
-          <button id="auth-tab-login" class="ann-auth-tab ann-auth-tab-active" type="button">Connexion</button>
-          <button id="auth-tab-register" class="ann-auth-tab" type="button">Inscription</button>
+          <p class="ann-text-muted">Connectez-vous pour gérer votre fiche professionnelle.</p>
         </div>
 
         <!-- Login form -->
@@ -87,28 +81,14 @@
           </button>
         </form>
 
-        <!-- Register form -->
-        <form id="auth-register-form" style="display: none;">
-          <div class="ann-form-group">
-            <label class="ann-form-label" for="reg-email">Email professionnel</label>
-            <input class="ann-form-input" type="email" id="reg-email" required placeholder="votre@email.com">
-          </div>
-          <div class="ann-form-group">
-            <label class="ann-form-label" for="reg-password">Mot de passe</label>
-            <input class="ann-form-input" type="password" id="reg-password" required placeholder="10 car. min, 1 majuscule, 1 spécial" minlength="10">
-          </div>
-          <div class="ann-form-group">
-            <label class="ann-form-label" for="reg-password2">Confirmer le mot de passe</label>
-            <input class="ann-form-input" type="password" id="reg-password2" required placeholder="Retapez votre mot de passe" minlength="10">
-          </div>
-          <div id="auth-register-error" class="ann-form-error" style="display:none;"></div>
-          <button type="submit" class="ann-btn ann-btn-primary ann-btn-full" style="margin-top: 0.5rem;">
-            Créer mon compte
-          </button>
-          <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.75rem; text-align: center;">
-            En créant un compte, vous acceptez nos conditions d'utilisation.
-          </p>
-        </form>
+        <!-- Link to register -->
+        <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid hsl(var(--ann-border));">
+          <p class="ann-text-muted" style="font-size: 0.875rem; margin-bottom: 0.75rem;">Pas encore de compte ?</p>
+          <a href="/rejoindre/" class="ann-btn ann-btn-outline ann-btn-full">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+            Rejoindre l'annuaire
+          </a>
+        </div>
       </div>
     </div>
   </section>

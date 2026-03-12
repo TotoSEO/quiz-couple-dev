@@ -90,12 +90,6 @@
     return data;
   }
 
-  async function register(email, password) {
-    var { data, error } = await supabase.auth.signUp({ email: email, password: password });
-    if (error) throw error;
-    return data;
-  }
-
   async function logout() {
     await supabase.auth.signOut();
     currentUser = null;
@@ -159,7 +153,6 @@
 
   function showAuthForm(formId) {
     hide($('auth-login-form'));
-    hide($('auth-register-form'));
     hide($('auth-forgot-form'));
     hide($('auth-reset-form'));
     show($(formId));
@@ -291,10 +284,8 @@
       show($('dash-auth'));
       showAuthForm('auth-reset-form');
       bindLoginForm();
-      bindRegisterForm();
       bindResetForm();
       bindForgotPassword();
-      bindAuthTabs();
       return;
     }
 
@@ -342,9 +333,7 @@
       showAuthScreen();
     }
 
-    bindAuthTabs();
     bindLoginForm();
-    bindRegisterForm();
     bindForgotPassword();
     bindResetForm();
     bindDeleteAccount();
@@ -427,20 +416,6 @@
     });
   }
 
-  // ── Auth tabs ──
-  function bindAuthTabs() {
-    $('auth-tab-login').addEventListener('click', function () {
-      this.classList.add('ann-auth-tab-active');
-      $('auth-tab-register').classList.remove('ann-auth-tab-active');
-      showAuthForm('auth-login-form');
-    });
-    $('auth-tab-register').addEventListener('click', function () {
-      this.classList.add('ann-auth-tab-active');
-      $('auth-tab-login').classList.remove('ann-auth-tab-active');
-      showAuthForm('auth-register-form');
-    });
-  }
-
   // ── Login form ──
   function bindLoginForm() {
     $('auth-login-form').addEventListener('submit', async function (e) {
@@ -477,49 +452,6 @@
         showDashboard();
       } catch (err) {
         showError('auth-login-error', err.message || 'Erreur de connexion');
-      }
-    });
-  }
-
-  // ── Register form ──
-  function bindRegisterForm() {
-    $('auth-register-form').addEventListener('submit', async function (e) {
-      e.preventDefault();
-      hideError('auth-register-error');
-      var pw1 = $('reg-password').value;
-      var pw2 = $('reg-password2').value;
-
-      // Validate password strength
-      var pwError = validatePassword(pw1);
-      if (pwError) {
-        showError('auth-register-error', pwError);
-        return;
-      }
-
-      if (pw1 !== pw2) {
-        showError('auth-register-error', 'Les mots de passe ne correspondent pas.');
-        return;
-      }
-      try {
-        var data = await register($('reg-email').value.trim(), pw1);
-        if (data.user && !data.session) {
-          // Detect fake/obfuscated user (Supabase returns this for already-existing emails)
-          if (data.user.identities && data.user.identities.length === 0) {
-            showError('auth-register-error', 'Un compte existe déjà avec cet email. Connectez-vous ou utilisez \"J\'ai oublié mon mot de passe\".');
-            return;
-          }
-          // Email confirmation required
-          var el = $('auth-register-error');
-          el.textContent = 'Un email de confirmation vous a été envoyé. Vérifiez votre boîte de réception (et vos spams).';
-          el.style.display = 'block';
-          el.style.color = 'hsl(var(--ann-success))';
-          return;
-        }
-        currentUser = data.user;
-        $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
-        showDashboard();
-      } catch (err) {
-        showError('auth-register-error', err.message || 'Erreur lors de l\'inscription');
       }
     });
   }
