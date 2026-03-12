@@ -37,7 +37,7 @@ serve(async (req) => {
       );
     }
 
-    const adminPassword = Deno.env.get('ANNUAIRE_ADMIN_PASSWORD');
+    const adminPassword = (Deno.env.get('ANNUAIRE_ADMIN_PASSWORD') || '').trim();
 
     if (!adminPassword) {
       console.error('ANNUAIRE_ADMIN_PASSWORD not configured');
