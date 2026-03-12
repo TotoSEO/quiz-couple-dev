@@ -166,26 +166,42 @@ serve(async (req: Request) => {
 
     // ── DELETE: Supprimer mon compte et ma fiche ──
     if (method === 'DELETE') {
-      // Delete profile (if exists)
-      await supabase
+      const userId = user.id;
+      console.log(`[DELETE] Starting account deletion for user ${userId}`);
+
+      // 1. Delete profile (if exists)
+      const { error: profileError } = await supabase
         .from('annuaire_professionals')
         .delete()
-        .eq('user_id', user.id);
+        .eq('user_id', userId);
+      if (profileError) console.error('[DELETE] Profile deletion error:', profileError);
 
-      // Delete storage photos
-      const { data: files } = await supabase.storage
-        .from('annuaire-photos')
-        .list(user.id);
-      if (files && files.length > 0) {
-        await supabase.storage
+      // 2. Delete storage photos
+      try {
+        const { data: files } = await supabase.storage
           .from('annuaire-photos')
-          .remove(files.map((f: { name: string }) => `${user.id}/${f.name}`));
+          .list(userId);
+        if (files && files.length > 0) {
+          await supabase.storage
+            .from('annuaire-photos')
+            .remove(files.map((f: { name: string }) => `${userId}/${f.name}`));
+        }
+      } catch (storageErr) {
+        console.error('[DELETE] Storage cleanup error:', storageErr);
       }
 
-      // Delete auth user (requires service role)
-      const { error: deleteError } = await supabase.auth.admin.deleteUser(user.id);
-      if (deleteError) throw deleteError;
+      // 3. Delete auth user (requires service role — hard delete)
+      const { data: deleteData, error: deleteError } = await supabase.auth.admin.deleteUser(userId);
+      console.log(`[DELETE] deleteUser result:`, { deleteData, deleteError });
 
+      if (deleteError) {
+        console.error('[DELETE] Auth user deletion failed:', deleteError);
+        return new Response(JSON.stringify({ error: 'Impossible de supprimer le compte: ' + deleteError.message }), {
+          status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+
+      console.log(`[DELETE] Account ${userId} fully deleted`);
       return new Response(JSON.stringify({ success: true }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });

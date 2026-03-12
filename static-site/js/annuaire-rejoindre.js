@@ -482,6 +482,12 @@
 
       // ── 3. If email confirmation is required (no session yet) ──
       if (user && !session) {
+        // Detect fake/obfuscated user (Supabase returns this for already-existing emails)
+        if (user.identities && user.identities.length === 0) {
+          showError('err-consent', 'Un compte existe déjà avec cet email. Connectez-vous sur votre espace professionnel.');
+          resetSubmitBtn();
+          return;
+        }
         // Profile data is stored in user_metadata and will be auto-created on first dashboard login
         showSuccess();
         return;
