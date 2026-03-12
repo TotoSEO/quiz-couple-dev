@@ -2435,24 +2435,73 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   margin: 0 auto;
 }
 .ann-seo-block {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid hsl(var(--ann-border));
 }
-.ann-seo-block:last-child { margin-bottom: 0; }
+.ann-seo-block:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
 .ann-seo-block h2 {
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-  margin-bottom: 0.75rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  margin-bottom: 1rem;
+  color: hsl(var(--ann-fg));
+  line-height: 1.35;
 }
 .ann-seo-block h3 {
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: hsl(var(--ann-fg));
 }
 .ann-seo-block p {
-  font-size: 0.9375rem;
-  color: hsl(var(--ann-muted-fg));
-  line-height: 1.8;
-  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: hsl(var(--ann-fg) / 0.8);
+  line-height: 1.85;
+  margin-bottom: 1rem;
 }
 .ann-seo-block p:last-child { margin-bottom: 0; }
+.ann-seo-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.ann-seo-block li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  color: hsl(var(--ann-fg) / 0.8);
+  line-height: 1.75;
+}
+.ann-seo-block li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: hsl(var(--ann-primary));
+}
+.ann-seo-block li strong {
+  color: hsl(var(--ann-fg));
+  font-weight: 600;
+}
+.ann-seo-block a {
+  color: hsl(var(--ann-primary));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.ann-seo-block a:hover {
+  color: hsl(var(--ann-primary) / 0.8);
+}
+.ann-seo-block strong {
+  color: hsl(var(--ann-fg));
+  font-weight: 600;
+}
+.ann-seo-block em {
+  font-style: italic;
+}
 
 /* ── City Search (specialty page) ──────────────────────────────────── */
 .ann-city-search-wrap {
