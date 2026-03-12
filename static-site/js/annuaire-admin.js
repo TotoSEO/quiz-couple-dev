@@ -34,19 +34,24 @@
       headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY },
       body: JSON.stringify({ password: pw.value.trim() }),
     })
-    .then(function (r) { return r.json(); })
+    .then(function (r) {
+      if (!r.ok && r.status === 404) {
+        throw new Error('Function verify-annuaire-admin introuvable (404). Verifiez le deploiement.');
+      }
+      return r.json();
+    })
     .then(function (data) {
       if (data.token) {
         adminToken = data.token;
         sessionStorage.setItem('ann-admin-token', adminToken);
         showDashboard();
       } else {
-        errEl.textContent = 'Mot de passe incorrect';
+        errEl.textContent = data.error || 'Mot de passe incorrect';
         errEl.style.display = 'block';
       }
     })
-    .catch(function () {
-      errEl.textContent = 'Erreur de connexion';
+    .catch(function (err) {
+      errEl.textContent = err.message || 'Erreur de connexion';
       errEl.style.display = 'block';
     });
   }
