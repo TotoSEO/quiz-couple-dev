@@ -93,10 +93,22 @@
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
 
+  <!-- Search index -->
+  <script>
+    window.__ANN_SEARCH__={
+      specialties:<%- JSON.stringify((typeof specialties !== 'undefined' ? specialties : []).map(function(s){return{id:s.id,name:s.name,shortName:s.shortName}})) %>,
+      cities:<%- JSON.stringify((typeof cities !== 'undefined' ? cities : []).map(function(c){return{id:c.id,name:c.name,department:c.department}})) %>
+    };
+  </script>
+
   <!-- Annuaire JS -->
   <script src="/js/annuaire.js" defer></script>
   <% if (typeof currentPage !== 'undefined' && currentPage === 'rejoindre') { %>
   <script src="/js/annuaire-rejoindre.js" defer></script>
+  <% } %>
+  <% if (typeof currentPage !== 'undefined' && currentPage === 'dashboard') { %>
+  <script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+  <script src="/js/annuaire-dashboard.js" defer></script>
   <% } %>
 
   <!-- GA (deferred) -->

@@ -130,17 +130,26 @@
   </div>
 </section>
 
-<% if (typeof city.seoText !== 'undefined' && city.seoText) { %>
+<% if (city.seoHtml) { %>
 <div class="ann-divider"></div>
 
 <!-- SEO Content -->
 <section class="ann-section">
   <div class="ann-container">
     <div class="ann-seo-content">
+      <%- city.seoHtml %>
+    </div>
+  </div>
+</section>
+<% } else if (typeof city.seoText !== 'undefined' && city.seoText) { %>
+<div class="ann-divider"></div>
+
+<section class="ann-section">
+  <div class="ann-container">
+    <div class="ann-seo-content">
       <div class="ann-seo-block">
         <h2>Professionnels du couple à <span class="ann-text-gradient"><%= city.name %></span> (<%= city.department %>)</h2>
         <p><%= city.seoText %></p>
-        <p>L'annuaire Quiz Couple référence des thérapeutes de couple, sexologues, sexothérapeutes, médiateurs familiaux, coachs parentaux et conseillers conjugaux à <%= city.name %> et dans toute la région <%= city.region %>. Chaque professionnel est vérifié et dispose d'une fiche détaillée avec ses spécialités, tarifs, méthodes et disponibilités.</p>
       </div>
     </div>
   </div>

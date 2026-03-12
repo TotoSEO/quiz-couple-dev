@@ -665,6 +665,14 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
   font-size: 1.25rem;
   font-weight: 700;
   color: hsl(var(--ann-primary));
+  overflow: hidden;
+}
+.ann-pro-avatar-photo img,
+.ann-profile-avatar-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .ann-pro-info { flex: 1; min-width: 0; }
@@ -1701,6 +1709,20 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
 }
 .ann-shake { animation: ann-shake 400ms ease-out; }
 
+/* Dashboard form aliases */
+.ann-form-label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.375rem; color: hsl(var(--ann-fg)); }
+.ann-form-input { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid hsl(var(--ann-border)); border-radius: var(--ann-radius); background: hsl(var(--ann-card)); color: hsl(var(--ann-fg)); font-size: 0.9375rem; font-family: inherit; transition: all var(--ann-transition); outline: none; }
+.ann-form-input::placeholder { color: hsl(var(--ann-muted-fg)); }
+.ann-form-input:focus { border-color: hsl(var(--ann-primary)); box-shadow: 0 0 0 3px hsl(var(--ann-primary) / 0.08); }
+select.ann-form-input { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23888' stroke-width='1.5'%3E%3Cpath d='M2.5 4.5l3.5 3.5 3.5-3.5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; }
+.ann-form-error { background: hsl(0 70% 95%); color: hsl(0 70% 40%); padding: 0.75rem 1rem; border-radius: var(--ann-radius); font-size: 0.875rem; margin-bottom: 1rem; }
+.dark .ann-form-error { background: hsl(0 50% 15%); color: hsl(0 70% 75%); }
+
+/* Auth tabs */
+.ann-auth-tab { flex: 1; padding: 0.625rem; font-size: 0.875rem; font-weight: 500; background: none; color: hsl(var(--ann-muted-fg)); cursor: pointer; border: none; transition: all var(--ann-transition); font-family: inherit; }
+.ann-auth-tab-active { background: hsl(var(--ann-primary)); color: hsl(var(--ann-primary-fg)); font-weight: 600; }
+
 /* Success state */
 .ann-form-success {
   text-align: center;
@@ -2431,3 +2453,137 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
   margin-bottom: 0.75rem;
 }
 .ann-seo-block p:last-child { margin-bottom: 0; }
+
+/* ── City Search (specialty page) ──────────────────────────────────── */
+.ann-city-search-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.ann-city-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background: hsl(var(--ann-card));
+  border: 1px solid hsl(var(--ann-border));
+  border-radius: var(--ann-radius);
+  width: 100%;
+  max-width: 24rem;
+  transition: border-color var(--ann-transition), box-shadow var(--ann-transition);
+}
+.ann-city-search:focus-within {
+  border-color: hsl(var(--ann-primary));
+  box-shadow: 0 0 0 3px hsl(var(--ann-primary) / 0.15);
+}
+.ann-city-search-input {
+  border: none;
+  background: none;
+  outline: none;
+  font: inherit;
+  font-size: 0.9375rem;
+  color: hsl(var(--ann-fg));
+  width: 100%;
+}
+.ann-city-search-input::placeholder {
+  color: hsl(var(--ann-muted-fg));
+}
+
+/* ── Carousel ─────────────────────────────────────────────────────── */
+.ann-carousel-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+.ann-carousel-viewport {
+  overflow: hidden;
+  flex: 1;
+  border-radius: var(--ann-radius);
+}
+.ann-carousel-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ann-carousel-btn {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: hsl(var(--ann-card));
+  border: 1px solid hsl(var(--ann-border));
+  box-shadow: var(--ann-shadow-sm);
+  color: hsl(var(--ann-fg));
+  cursor: pointer;
+  transition: background var(--ann-transition), box-shadow var(--ann-transition);
+}
+.ann-carousel-btn:hover {
+  background: hsl(var(--ann-muted));
+  box-shadow: var(--ann-shadow);
+}
+.ann-carousel-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+@media (max-width: 640px) {
+  .ann-carousel-btn { display: none; }
+  .ann-carousel-viewport { overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+  .ann-carousel-track { transition: none; }
+  .ann-city-carousel-card { scroll-snap-align: start; }
+}
+
+/* ── City Carousel Card ───────────────────────────────────────────── */
+.ann-city-carousel-card {
+  flex: 0 0 calc(25% - 0.75rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 1.25rem 0.75rem;
+  background: hsl(var(--ann-card));
+  border: 1px solid hsl(var(--ann-border));
+  border-radius: var(--ann-radius);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--ann-transition), box-shadow var(--ann-transition), transform var(--ann-transition);
+  min-width: 0;
+}
+.ann-city-carousel-card:hover {
+  border-color: hsl(var(--ann-primary) / 0.4);
+  box-shadow: var(--ann-shadow);
+  transform: translateY(-2px);
+}
+.ann-city-carousel-card .ann-city-pin {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: hsl(var(--ann-primary));
+}
+.ann-city-carousel-name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+.ann-city-carousel-dept {
+  font-size: 0.75rem;
+  color: hsl(var(--ann-muted-fg));
+}
+.ann-city-carousel-count {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: hsl(var(--ann-primary));
+  background: hsl(var(--ann-accent));
+  padding: 0.125rem 0.5rem;
+  border-radius: 1rem;
+}
+@media (max-width: 1024px) {
+  .ann-city-carousel-card { flex: 0 0 calc(33.333% - 0.667rem); }
+}
+@media (max-width: 768px) {
+  .ann-city-carousel-card { flex: 0 0 calc(50% - 0.5rem); }
+}
+@media (max-width: 480px) {
+  .ann-city-carousel-card { flex: 0 0 80%; }
+}
