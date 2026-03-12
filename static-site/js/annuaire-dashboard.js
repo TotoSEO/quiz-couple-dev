@@ -264,6 +264,8 @@
       show($('ann-dash'));
       show($('dash-auth'));
       showAuthForm('auth-reset-form');
+      bindLoginForm();
+      bindRegisterForm();
       bindResetForm();
       bindForgotPassword();
       bindAuthTabs();
