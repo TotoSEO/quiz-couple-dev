@@ -57,7 +57,15 @@
       opts.headers['Content-Type'] = 'application/json';
       opts.body = JSON.stringify(body);
     }
-    return fetch(SUPABASE_URL + '/functions/v1/' + endpoint, opts).then(function (r) { return r.json(); });
+    return fetch(SUPABASE_URL + '/functions/v1/' + endpoint, opts).then(function (r) {
+      if (!r.ok) {
+        console.warn('[apiCall] ' + method + ' ' + endpoint + ' returned ' + r.status);
+      }
+      return r.json().catch(function (parseErr) {
+        console.error('[apiCall] Failed to parse JSON response:', parseErr);
+        return { error: 'Réponse invalide du serveur (HTTP ' + r.status + ')' };
+      });
+    });
   }
 
   // ── DOM helpers ──
@@ -305,13 +313,17 @@
             // Ensure is_published is never set by client
             var metaCopy = JSON.parse(JSON.stringify(pendingMeta));
             delete metaCopy.is_published;
+            console.log('[Dashboard] Auto-creating profile from metadata:', metaCopy);
             var res = await saveProfile(metaCopy, session.access_token, true);
+            console.log('[Dashboard] Auto-create response:', JSON.stringify(res));
             if (res.profile) {
               currentProfile = res.profile;
               // Clear the pending flag on success
               await supabase.auth.updateUser({ data: { has_pending_profile: false } });
-            } else if (res.error) {
-              console.warn('Auto-create profile error:', res.error);
+            } else if (res.error || res.msg) {
+              console.warn('Auto-create profile error:', res.error || res.msg);
+            } else {
+              console.warn('Auto-create unexpected response:', res);
             }
           } catch (e) { console.warn('Auto-create profile failed:', e); }
         }
@@ -393,9 +405,12 @@
       btn.textContent = 'Enregistrement...';
 
       try {
-        var res = await saveProfile(data, session.access_token, !currentProfile);
-        if (res.error) {
-          showError('dash-profile-error', res.error);
+        var isNew = !currentProfile;
+        console.log('[Dashboard] Saving profile, isNew:', isNew, 'data:', data);
+        var res = await saveProfile(data, session.access_token, isNew);
+        console.log('[Dashboard] Save response:', JSON.stringify(res));
+        if (res.error || res.msg) {
+          showError('dash-profile-error', res.error || res.msg);
         } else if (res.profile) {
           currentProfile = res.profile;
           updateProfileStatus(currentProfile);
@@ -407,7 +422,8 @@
             show(link);
           }
         } else {
-          showError('dash-profile-error', 'Erreur lors de l\'enregistrement. Réessayez.');
+          console.error('[Dashboard] Unexpected response:', res);
+          showError('dash-profile-error', 'Réponse inattendue du serveur. Vérifiez la console (F12) pour plus de détails.');
         }
       } catch (err) {
         showError('dash-profile-error', err.message || 'Erreur serveur');
