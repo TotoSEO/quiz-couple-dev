@@ -468,29 +468,6 @@
       });
 
       if (authResult.error) {
-        // Auth Hook failure: user IS created but email sending failed via hook.
-        // We send the confirmation email manually via our edge function.
-        if (authResult.error.message.includes('Hook') || authResult.error.message.includes('hook')) {
-          console.warn('Auth hook failed, sending confirmation email manually:', authResult.error.message);
-          try {
-            await fetch(SUPABASE_URL + '/functions/v1/send-email', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'apikey': SUPABASE_KEY,
-              },
-              body: JSON.stringify({
-                action: 'send-signup-confirmation',
-                email: email,
-                redirect_to: window.location.origin + '/dashboard/',
-              }),
-            });
-          } catch (emailErr) {
-            console.error('Manual confirmation email failed:', emailErr);
-          }
-          showSuccess();
-          return;
-        }
         if (authResult.error.message.includes('already registered')) {
           showError('err-consent', 'Un compte existe déjà avec cet email. Connectez-vous sur votre espace professionnel.');
         } else {
@@ -511,25 +488,7 @@
           resetSubmitBtn();
           return;
         }
-
-        // Send custom confirmation email via our edge function (bypasses Auth Hooks)
-        try {
-          await fetch(SUPABASE_URL + '/functions/v1/send-email', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'apikey': SUPABASE_KEY,
-            },
-            body: JSON.stringify({
-              action: 'send-signup-confirmation',
-              email: email,
-              redirect_to: window.location.origin + '/dashboard/',
-            }),
-          });
-        } catch (emailErr) {
-          console.error('Custom confirmation email failed:', emailErr);
-        }
-
+        // Supabase sends confirmation email via its built-in templates (configured in Dashboard)
         // Profile data is stored in user_metadata and will be auto-created on first dashboard login
         showSuccess();
         return;
