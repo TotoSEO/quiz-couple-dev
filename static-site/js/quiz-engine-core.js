@@ -9,7 +9,7 @@
  * - DebateQuiz: amoureux (1-5 scale debate mode, played together)
  * - FunnyQuiz: marrant (discussion-only, "Question suivante" button)
  * - MostQuiz: most (2-8 players, vote for one player per question)
- * - HealthyQuiz: couple-sain (weighted scoring a=0.5 b=1 c=1.5 d=2, 2 players + gender)
+ * - HealthyQuiz: couple-sain (weighted scoring a=3 b=2 c=1 d=0, 2 players + gender)
  */
 
 var QuizEngine = (function() {
@@ -751,7 +751,16 @@ var QuizEngine = (function() {
     this.currentPlayer = 0;
     this.p1Score = 0;
     this.p2Score = 0;
-    this.maxScorePerPlayer = this.questions.length * 2;
+    // Compute real max from actual question points
+    var realMax = 0;
+    for (var i = 0; i < this.questions.length; i++) {
+      var qMax = 0;
+      for (var j = 0; j < this.questions[i].options.length; j++) {
+        if (this.questions[i].options[j].points > qMax) qMax = this.questions[i].options[j].points;
+      }
+      realMax += qMax;
+    }
+    this.maxScorePerPlayer = realMax;
     this.render();
   }
 
@@ -887,7 +896,8 @@ var QuizEngine = (function() {
     for (var i = 0; i < 2; i++) {
       var score = i === 0 ? this.p1Score : this.p2Score;
       var pct = Math.round((score / this.maxScorePerPlayer) * 100);
-      var vKey = score >= 32 ? 'h' : score >= 24 ? 'm' : score >= 16 ? 'l' : 'vl';
+      var scorePct = score / self.maxScorePerPlayer;
+      var vKey = scorePct >= 0.8 ? 'h' : scorePct >= 0.6 ? 'm' : scorePct >= 0.4 ? 'l' : 'vl';
       var verdict = tgd(this.prefix + '.pv_' + vKey, '');
       verdict = verdict.replace('{{name}}', this.players[i].name);
 
@@ -902,7 +912,8 @@ var QuizEngine = (function() {
 
     // Couple verdict
     var avg = (this.p1Score + this.p2Score) / 2;
-    var cvKey = avg >= 28 ? 'h' : avg >= 20 ? 'm' : avg >= 12 ? 'l' : 'vl';
+    var avgPct = avg / this.maxScorePerPlayer;
+    var cvKey = avgPct >= 0.7 ? 'h' : avgPct >= 0.5 ? 'm' : avgPct >= 0.3 ? 'l' : 'vl';
     var coupleVerdict = tgd(this.prefix + '.cv_' + cvKey, '');
     if (coupleVerdict) {
       var cvBox = el('div', 'glass-card rounded-xl p-5 text-center mb-4');
@@ -1871,7 +1882,7 @@ var QuizEngine = (function() {
 
   // ═══════════════════════════════════════════════════════════
   // HEALTHY QUIZ - couple-sain (weighted scoring, 2 players + gender)
-  // Each answer has weighted points: a=0.5, b=1, c=1.5, d=2
+  // Each answer has weighted points: a=3, b=2, c=1, d=0
   // Both players answer each question, scores summed
   // ═══════════════════════════════════════════════════════════
   function HealthyQuiz(config) {
@@ -1885,7 +1896,7 @@ var QuizEngine = (function() {
     this.currentQ = 0;
     this.currentPlayer = 0;
     this.scores = [[], []];
-    this.maxScorePerPlayer = this.questions.length * 2;
+    this.maxScorePerPlayer = this.questions.length * 3;
     this.render();
   }
 
@@ -2001,7 +2012,7 @@ var QuizEngine = (function() {
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
 
-    var OPTION_SCORES = { a: 2, b: 1.5, c: 1, d: 0.5 };
+    var OPTION_SCORES = { a: 3, b: 2, c: 1, d: 0 };
     var optionsWrap = el('div', 'space-y-2');
     q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
