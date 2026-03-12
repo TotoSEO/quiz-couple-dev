@@ -2,24 +2,17 @@
  * Send Email via Resend API
  *
  * This edge function handles transactional emails for the annuaire:
- * - Email confirmation (triggered by Supabase Auth hook)
- * - Profile approval/rejection notifications (called from admin-annuaire)
+ * - Signup confirmation (called directly after signUp, bypasses Auth Hooks)
  * - Password reset emails
+ * - Profile approval/rejection notifications (called from admin-annuaire)
  *
  * Required env vars:
  *   RESEND_API_KEY - Your Resend API key
  *   SITE_URL - e.g. https://annuaire.quiz-couple.com
- *   SEND_EMAIL_HOOK_SECRET - Webhook signing secret (from Auth Hook config)
- *
- * Supabase Auth Hook setup:
- *   In Supabase Dashboard > Authentication > Hooks > Send Email
- *   Set this function as the hook handler.
- *   Configure a signing secret (format: v1,whsec_<base64secret>).
- *   Set the same secret as SEND_EMAIL_HOOK_SECRET edge function secret.
- *   This replaces Supabase's default email sending with Resend.
+ *   SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY - for admin.generateLink
  */
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { Webhook } from "https://esm.sh/standardwebhooks@1.0.0";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -180,70 +173,86 @@ serve(async (req) => {
       });
     }
 
-    // Read raw body for webhook signature verification
-    const rawBody = await req.text();
-    const body = JSON.parse(rawBody);
+    const body = await req.json();
 
-    // ── Supabase Auth Hook format ──
-    // Supabase sends: { user, email_data: { token, token_hash, redirect_to, email_action_type } }
-    // with Standard Webhooks signature headers for verification.
-    if (body.user && body.email_data) {
-      // Verify webhook signature (required by Supabase Auth Hooks)
-      const hookSecret = Deno.env.get('SEND_EMAIL_HOOK_SECRET');
-      if (hookSecret) {
-        const wh = new Webhook(hookSecret);
-        try {
-          wh.verify(rawBody, {
-            'webhook-id': req.headers.get('webhook-id') || '',
-            'webhook-timestamp': req.headers.get('webhook-timestamp') || '',
-            'webhook-signature': req.headers.get('webhook-signature') || '',
-          });
-        } catch (err) {
-          console.error('Webhook signature verification failed:', err);
-          return new Response(JSON.stringify({ error: { http_code: 401, message: 'Invalid webhook signature' } }), {
-            status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-          });
-        }
+    // ── Signup confirmation (called from client after signUp) ──
+    // Uses admin.generateLink to create a magic link that confirms email + logs in.
+    // This bypasses Auth Hooks entirely.
+    if (body.action === 'send-signup-confirmation' && body.email) {
+      const supabaseUrl = Deno.env.get('SUPABASE_URL');
+      const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+      if (!supabaseUrl || !serviceRoleKey) {
+        console.error('SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY not configured');
+        return new Response(JSON.stringify({ error: 'Server configuration error' }), {
+          status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
       }
 
-      const { user, email_data } = body;
-      const email = user.email;
-      const { token_hash, redirect_to, email_action_type } = email_data;
+      const supabaseAdmin = createClient(supabaseUrl, serviceRoleKey);
+      const redirectTo = body.redirect_to || `${SITE_URL}/dashboard/`;
 
-      // Build the confirmation/reset URL
-      const redirectUrl = redirect_to || `${SITE_URL}/dashboard/`;
-      const actionUrl = `${Deno.env.get('SUPABASE_URL')}/auth/v1/verify?token=${token_hash}&type=${email_action_type}&redirect_to=${encodeURIComponent(redirectUrl)}`;
+      const { data: linkData, error: linkError } = await supabaseAdmin.auth.admin.generateLink({
+        type: 'magiclink',
+        email: body.email,
+        options: { redirectTo },
+      });
 
-      let emailPayload: EmailPayload;
-
-      switch (email_action_type) {
-        case 'signup':
-        case 'email_change':
-          emailPayload = confirmationEmail(email, actionUrl);
-          break;
-        case 'recovery':
-          emailPayload = passwordResetEmail(email, actionUrl);
-          break;
-        case 'magic_link':
-          emailPayload = magicLinkEmail(email, actionUrl);
-          break;
-        default:
-          emailPayload = confirmationEmail(email, actionUrl);
+      if (linkError) {
+        console.error('generateLink error:', linkError);
+        return new Response(JSON.stringify({ error: linkError.message }), {
+          status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
       }
 
+      // Build verification URL from the returned token
+      const tokenHash = linkData.properties.hashed_token;
+      const actionUrl = `${supabaseUrl}/auth/v1/verify?token=${tokenHash}&type=magiclink&redirect_to=${encodeURIComponent(redirectTo)}`;
+
+      const emailPayload = confirmationEmail(body.email, actionUrl);
       const result = await sendWithResend(emailPayload);
 
-      if (result.success) {
-        // Return empty object — required response format for Supabase Auth Hooks
-        return new Response(JSON.stringify({}), {
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      return new Response(JSON.stringify(result), {
+        status: result.success ? 200 : 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    // ── Password reset (called from client) ──
+    if (body.action === 'send-password-reset' && body.email) {
+      const supabaseUrl = Deno.env.get('SUPABASE_URL');
+      const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+      if (!supabaseUrl || !serviceRoleKey) {
+        return new Response(JSON.stringify({ error: 'Server configuration error' }), {
+          status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
-      } else {
-        return new Response(
-          JSON.stringify({ error: { http_code: 500, message: result.error || 'Email sending failed' } }),
-          { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } },
-        );
       }
+
+      const supabaseAdmin = createClient(supabaseUrl, serviceRoleKey);
+      const redirectTo = body.redirect_to || `${SITE_URL}/dashboard/`;
+
+      const { data: linkData, error: linkError } = await supabaseAdmin.auth.admin.generateLink({
+        type: 'recovery',
+        email: body.email,
+        options: { redirectTo },
+      });
+
+      if (linkError) {
+        console.error('generateLink error:', linkError);
+        return new Response(JSON.stringify({ error: linkError.message }), {
+          status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+
+      const tokenHash = linkData.properties.hashed_token;
+      const actionUrl = `${supabaseUrl}/auth/v1/verify?token=${tokenHash}&type=recovery&redirect_to=${encodeURIComponent(redirectTo)}`;
+
+      const emailPayload = passwordResetEmail(body.email, actionUrl);
+      const result = await sendWithResend(emailPayload);
+
+      return new Response(JSON.stringify(result), {
+        status: result.success ? 200 : 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
     }
 
     // ── Direct email sending (internal use only — requires service role key) ──
