@@ -356,9 +356,7 @@
     } catch (e) { return; }
 
     // User is logged in — swap to "Voir ma fiche"
-    var dashPath = btoa('/dashboard/');
     btns.forEach(function (btn) {
-      btn.setAttribute('data-h', dashPath);
       // Update icon to user profile icon
       var svg = btn.querySelector('svg');
       if (svg) {
