@@ -221,11 +221,13 @@
   function updateProfileStatus(profile) {
     var banner = $('dash-status-banner');
     if (!banner) return;
+    banner.style.display = '';
     if (!profile) {
-      banner.style.display = 'none';
+      banner.style.background = 'hsl(var(--ann-muted) / 0.3)';
+      banner.style.borderColor = 'hsl(var(--ann-border))';
+      banner.innerHTML = '<div style="display:flex;align-items:center;gap:0.75rem"><svg viewBox="0 0 24 24" fill="none" stroke="hsl(var(--ann-muted-fg))" stroke-width="2" style="width:1.25rem;height:1.25rem;flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><div><strong>Fiche non créée</strong><p style="font-size:0.8125rem;color:hsl(var(--ann-muted-fg));margin-top:0.125rem">Remplissez le formulaire ci-dessous pour soumettre votre fiche à la modération.</p></div></div>';
       return;
     }
-    banner.style.display = '';
     if (profile.is_published) {
       banner.style.background = 'hsl(160 60% 45% / 0.08)';
       banner.style.borderColor = 'hsl(160 60% 45% / 0.3)';
@@ -233,7 +235,7 @@
     } else {
       banner.style.background = 'hsl(40 90% 55% / 0.08)';
       banner.style.borderColor = 'hsl(40 90% 55% / 0.3)';
-      banner.innerHTML = '<div style="display:flex;align-items:center;gap:0.75rem"><svg viewBox="0 0 24 24" fill="none" stroke="hsl(40 90% 45%)" stroke-width="2" style="width:1.25rem;height:1.25rem;flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div><strong style="color:hsl(40 70% 35%)">En attente de validation</strong><p style="font-size:0.8125rem;color:hsl(var(--ann-muted-fg));margin-top:0.125rem">Votre fiche est en cours de vérification par notre équipe. Ce processus prend 24h à 72h.</p></div></div>';
+      banner.innerHTML = '<div style="display:flex;align-items:center;gap:0.75rem"><svg viewBox="0 0 24 24" fill="none" stroke="hsl(40 90% 45%)" stroke-width="2" style="width:1.25rem;height:1.25rem;flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div><strong style="color:hsl(40 70% 35%)">Votre fiche n\'est pas encore visible</strong><p style="font-size:0.8125rem;color:hsl(var(--ann-muted-fg));margin-top:0.125rem">Notre équipe de modération se chargera bientôt de vérifier votre fiche. Vous serez notifié par email dès qu\'elle sera acceptée ou refusée. Délai habituel : 24h à 72h.</p></div></div>';
     }
   }
 
@@ -280,32 +282,28 @@
         try {
           var meta = currentUser.user_metadata.annuaire_profile;
           if (meta) {
+            // Ensure is_published is never set by client
+            delete meta.is_published;
             var res = await saveProfile(meta, session.access_token, true);
             if (res.profile) {
               currentProfile = res.profile;
-              // Clear the pending flag from user_metadata
-              await supabase.auth.updateUser({ data: { has_pending_profile: false } });
+            } else if (res.error) {
+              console.warn('Auto-create profile error:', res.error);
             }
+            // Clear the pending flag regardless (avoid infinite retry)
+            await supabase.auth.updateUser({ data: { has_pending_profile: false } });
           }
         } catch (e) { console.warn('Auto-create profile failed:', e); }
       }
 
-      // Check if account is approved (profile exists but not published)
-      if (currentProfile && !currentProfile.is_published) {
-        $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
+      $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
+      if (currentProfile) {
         fillForm(currentProfile);
         updateProfileStatus(currentProfile);
-        showDashboard();
-      } else if (currentProfile && currentProfile.is_published) {
-        $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
-        fillForm(currentProfile);
-        updateProfileStatus(currentProfile);
-        showDashboard();
       } else {
-        // No profile yet — show dashboard so they can create one
-        $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
-        showDashboard();
+        updateProfileStatus(null);
       }
+      showDashboard();
     } else {
       showAuthScreen();
     }
