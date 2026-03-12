@@ -68,14 +68,14 @@
     update();
   });
 
-  // ── Specialty Selection (max 3) ──────────────────────────────────
+  // ── Specialty Selection (max 2) ──────────────────────────────────
   var specSelector = document.getElementById('specialty-selector');
   if (specSelector) {
     specSelector.addEventListener('change', function (e) {
       if (!e.target.matches('input[type="checkbox"]')) return;
 
       var checked = specSelector.querySelectorAll('input:checked');
-      if (checked.length > 3) {
+      if (checked.length > 2) {
         e.target.checked = false;
         return;
       }
