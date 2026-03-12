@@ -14,8 +14,6 @@
 
   var TOTAL_STEPS = 5;
   var currentStep = 1;
-  var photoFile = null;
-
   var steps = form.querySelectorAll('[data-form-step]');
   var progressSteps = document.querySelectorAll('.ann-progress-step');
   var progressFill = document.getElementById('progress-fill');
@@ -153,63 +151,6 @@
     });
   }
 
-  // ── Photo Upload ─────────────────────────────────────────────────
-  var photoInput = document.getElementById('f-photo');
-  var photoPreview = document.getElementById('photo-preview');
-  var btnChoosePhoto = document.getElementById('btn-choose-photo');
-  var photoZone = document.getElementById('photo-upload-zone');
-
-  if (btnChoosePhoto && photoInput) {
-    btnChoosePhoto.addEventListener('click', function () {
-      photoInput.click();
-    });
-  }
-
-  if (photoInput) {
-    photoInput.addEventListener('change', function () {
-      var file = photoInput.files[0];
-      if (file) handlePhotoFile(file);
-    });
-  }
-
-  // Drag & drop
-  if (photoZone) {
-    photoZone.addEventListener('dragover', function (e) {
-      e.preventDefault();
-      photoZone.classList.add('dragover');
-    });
-    photoZone.addEventListener('dragleave', function () {
-      photoZone.classList.remove('dragover');
-    });
-    photoZone.addEventListener('drop', function (e) {
-      e.preventDefault();
-      photoZone.classList.remove('dragover');
-      var file = e.dataTransfer.files[0];
-      if (file && file.type.startsWith('image/')) handlePhotoFile(file);
-    });
-  }
-
-  function handlePhotoFile(file) {
-    var validTypes = ['image/jpeg', 'image/png', 'image/webp'];
-    if (!validTypes.includes(file.type)) {
-      showError('err-photo', 'Format non supporté. Utilisez JPEG, PNG ou WebP.');
-      return;
-    }
-    if (file.size > 5 * 1024 * 1024) {
-      showError('err-photo', 'Photo trop lourde (5 Mo max).');
-      return;
-    }
-
-    clearError('err-photo');
-    photoFile = file;
-
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      photoPreview.innerHTML = '<img src="' + e.target.result + '" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" alt="Aperçu photo">';
-    };
-    reader.readAsDataURL(file);
-  }
-
   // ── Validation ───────────────────────────────────────────────────
   function showError(id, msg) {
     var el = document.getElementById(id);
@@ -278,7 +219,6 @@
     }
 
     if (step === 4) {
-      if (!photoFile && !photoInput.files.length) { showError('err-photo', 'La photo de profil est requise'); valid = false; }
       var desc = val('f-description');
       if (!desc) { showError('err-description', 'La description est requise'); valid = false; }
       else if (desc.length < 50) { showError('err-description', 'Minimum 50 caractères (' + desc.length + '/50)'); valid = false; }
@@ -540,31 +480,8 @@
       var user = authResult.data.user;
       var session = authResult.data.session;
 
-      // ── 3. Upload photo (if we have a session, upload now; otherwise store info for later) ──
-      var photoUrl = null;
-      if (session && photoFile) {
-        submitBtn.innerHTML = '<svg class="ann-spinner" viewBox="0 0 24 24" style="width:1rem;height:1rem;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Upload de la photo...';
-
-        var ext = photoFile.name.split('.').pop().toLowerCase();
-        var storagePath = user.id + '/photo.' + ext;
-
-        var uploadResult = await supabase.storage
-          .from('annuaire-photos')
-          .upload(storagePath, photoFile, { upsert: true, contentType: photoFile.type });
-
-        if (uploadResult.error) {
-          console.warn('Photo upload failed:', uploadResult.error.message);
-        } else {
-          var urlResult = supabase.storage
-            .from('annuaire-photos')
-            .getPublicUrl(storagePath);
-          photoUrl = urlResult.data.publicUrl;
-        }
-      }
-
-      // If email confirmation is required (no session yet)
+      // ── 3. If email confirmation is required (no session yet) ──
       if (user && !session) {
-        // Photo will need to be uploaded after email confirmation on dashboard
         // Profile data is stored in user_metadata and will be auto-created on first dashboard login
         showSuccess();
         return;
@@ -578,10 +495,6 @@
 
       // ── 4. Create profile via edge function ──
       submitBtn.innerHTML = '<svg class="ann-spinner" viewBox="0 0 24 24" style="width:1rem;height:1rem;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Création de votre fiche...';
-
-      if (photoUrl) {
-        profileData.photo_url = photoUrl;
-      }
 
       var profileRes = await fetch(SUPABASE_URL + '/functions/v1/annuaire-profile', {
         method: 'POST',
