@@ -125,6 +125,9 @@ async function fetchLiveProfessionals() {
     console.log(`[annuaire] Fetched ${rows.length} professionals from Supabase`);
 
     // Map DB columns to template format
+    // Also fetch Google reviews
+    liveGoogleReviews = await fetchGoogleReviews(url, key);
+
     return rows.map(r => ({
       id: r.id,
       firstName: r.first_name,
@@ -150,9 +153,6 @@ async function fetchLiveProfessionals() {
       premium: r.plan === 'pro' || r.plan === 'boost',
       googlePlaceId: r.google_place_id || null,
     }));
-
-    // Also fetch Google reviews
-    liveGoogleReviews = await fetchGoogleReviews(url, key);
   } catch (err) {
     console.warn(`[annuaire] Supabase fetch failed: ${err.message} — using mock data`);
     return null;
