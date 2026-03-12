@@ -18,7 +18,7 @@ function escapeHtml(str: string): string {
 }
 
 async function verifyAdminToken(token: string): Promise<boolean> {
-  const secret = Deno.env.get('ADMIN_PASSWORD');
+  const secret = Deno.env.get('ANNUAIRE_ADMIN_PASSWORD');
   if (!secret) return false;
   const parts = token.split('.');
   if (parts.length !== 2) return false;

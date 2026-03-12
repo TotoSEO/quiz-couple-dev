@@ -50,3 +50,6 @@ verify_jwt = false
 
 [functions.admin-annuaire]
 verify_jwt = false
+
+[functions.verify-annuaire-admin]
+verify_jwt = false
