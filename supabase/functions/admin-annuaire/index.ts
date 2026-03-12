@@ -8,8 +8,17 @@ const corsHeaders = {
 
 const TOKEN_MAX_AGE = 86400; // 24 hours
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 async function verifyAdminToken(token: string): Promise<boolean> {
-  const secret = Deno.env.get('ADMIN_PASSWORD');
+  const secret = Deno.env.get('ANNUAIRE_ADMIN_PASSWORD');
   if (!secret) return false;
   const parts = token.split('.');
   if (parts.length !== 2) return false;
@@ -121,7 +130,7 @@ serve(async (req) => {
               subject: 'Votre fiche est en ligne !',
               html: `
                 <div style="font-family:Inter,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:2rem;">
-                  <h1 style="color:#d6336c;font-size:1.5rem;">Bonne nouvelle, ${data.first_name} !</h1>
+                  <h1 style="color:#d6336c;font-size:1.5rem;">Bonne nouvelle, ${escapeHtml(data.first_name || '')} !</h1>
                   <p style="font-size:1rem;line-height:1.6;color:#333;">
                     Votre fiche professionnelle a été validée par notre équipe et est désormais <strong>visible dans l'annuaire</strong>.
                   </p>
@@ -197,13 +206,13 @@ serve(async (req) => {
               subject: 'Votre fiche nécessite des modifications',
               html: `
                 <div style="font-family:Inter,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:2rem;">
-                  <h1 style="color:#d6336c;font-size:1.5rem;">Bonjour ${profile.first_name},</h1>
+                  <h1 style="color:#d6336c;font-size:1.5rem;">Bonjour ${escapeHtml(profile.first_name || '')},</h1>
                   <p style="font-size:1rem;line-height:1.6;color:#333;">
                     Après vérification, votre fiche nécessite quelques modifications avant de pouvoir être publiée.
                   </p>
                   ${reason ? `
                   <div style="margin:1.5rem 0;padding:1rem;background:#fff3cd;border-radius:0.5rem;border:1px solid #ffc107;">
-                    <p style="font-size:0.9375rem;color:#333;margin:0;"><strong>Motif :</strong> ${reason}</p>
+                    <p style="font-size:0.9375rem;color:#333;margin:0;"><strong>Motif :</strong> ${escapeHtml(reason)}</p>
                   </div>
                   ` : ''}
                   <p style="font-size:1rem;line-height:1.6;color:#333;">
