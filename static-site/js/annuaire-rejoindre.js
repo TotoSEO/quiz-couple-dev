@@ -68,23 +68,47 @@
     update();
   });
 
-  // ── Specialty Selection (max 3) ──────────────────────────────────
+  // ── Specialty Selection (max 2, ordered) ────────────────────────
   var specSelector = document.getElementById('specialty-selector');
+  var specOrder = []; // tracks selection order by value
+
+  function updateSpecBadges() {
+    specSelector.querySelectorAll('.ann-specialty-option').forEach(function (opt) {
+      var cb = opt.querySelector('input');
+      var existing = opt.querySelector('.ann-spec-order');
+      if (existing) existing.remove();
+
+      opt.classList.toggle('selected', cb.checked);
+
+      if (cb.checked) {
+        var idx = specOrder.indexOf(cb.value);
+        if (idx !== -1) {
+          var badge = document.createElement('span');
+          badge.className = 'ann-spec-order';
+          badge.textContent = idx + 1;
+          badge.style.cssText = 'display:inline-flex;align-items:center;justify-content:center;width:1.25rem;height:1.25rem;border-radius:50%;background:hsl(var(--ann-primary));color:white;font-size:0.7rem;font-weight:700;margin-left:auto;flex-shrink:0;';
+          opt.appendChild(badge);
+        }
+      }
+    });
+  }
+
   if (specSelector) {
     specSelector.addEventListener('change', function (e) {
       if (!e.target.matches('input[type="checkbox"]')) return;
 
-      var checked = specSelector.querySelectorAll('input:checked');
-      if (checked.length > 3) {
-        e.target.checked = false;
-        return;
+      if (e.target.checked) {
+        if (specOrder.length >= 2) {
+          e.target.checked = false;
+          return;
+        }
+        specOrder.push(e.target.value);
+      } else {
+        var removeIdx = specOrder.indexOf(e.target.value);
+        if (removeIdx !== -1) specOrder.splice(removeIdx, 1);
       }
 
-      specSelector.querySelectorAll('.ann-specialty-option').forEach(function (opt) {
-        var cb = opt.querySelector('input');
-        opt.classList.toggle('selected', cb.checked);
-      });
-
+      updateSpecBadges();
       clearError('err-specialites');
     });
   }
@@ -350,10 +374,24 @@
     setText('recap-telephone', val('f-telephone'));
 
     var specs = [];
-    form.querySelectorAll('input[name="specialites"]:checked').forEach(function (cb) {
-      var label = cb.closest('.ann-specialty-option');
-      if (label) specs.push(label.querySelector('.ann-specialty-name').textContent);
-    });
+    var orderedValues = specOrder.length ? specOrder : [];
+    if (orderedValues.length) {
+      orderedValues.forEach(function (val, i) {
+        var cb = specSelector.querySelector('input[value="' + val + '"]');
+        if (cb) {
+          var label = cb.closest('.ann-specialty-option');
+          if (label) {
+            var name = label.querySelector('.ann-specialty-name').textContent;
+            specs.push(i === 0 ? name + ' (principale)' : name);
+          }
+        }
+      });
+    } else {
+      form.querySelectorAll('input[name="specialites"]:checked').forEach(function (cb) {
+        var label = cb.closest('.ann-specialty-option');
+        if (label) specs.push(label.querySelector('.ann-specialty-name').textContent);
+      });
+    }
     setText('recap-specialites', specs.join(', ') || '—');
 
     setText('recap-titre', val('f-titre'));
@@ -431,11 +469,13 @@
       var email = val('f-email');
       var password = val('f-password');
 
-      // Collect specialties (use the first one as primary)
-      var specialties = [];
-      form.querySelectorAll('input[name="specialites"]:checked').forEach(function (cb) {
-        specialties.push(cb.value);
-      });
+      // Collect specialties in selection order (first = primary)
+      var specialties = specOrder.length ? specOrder.slice() : [];
+      if (!specialties.length) {
+        form.querySelectorAll('input[name="specialites"]:checked').forEach(function (cb) {
+          specialties.push(cb.value);
+        });
+      }
 
       // Collect methods
       var methods = [];

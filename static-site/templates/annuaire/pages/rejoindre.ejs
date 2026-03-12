@@ -124,7 +124,8 @@
         </div>
 
         <div class="ann-form-group">
-          <label class="ann-label">Spécialité(s) <span class="ann-required">*</span> <span class="ann-text-muted ann-text-xs">(1 à 3)</span></label>
+          <label class="ann-label">Spécialité(s) <span class="ann-required">*</span> <span class="ann-text-muted ann-text-xs">(2 maximum)</span></label>
+          <p class="ann-text-muted ann-text-sm" style="margin-bottom: 0.75rem; margin-top: -0.25rem;">La <strong>première spécialité</strong> sélectionnée sera votre catégorie principale dans l'annuaire (celle où vous apparaîtrez en priorité).</p>
           <div class="ann-specialty-grid" id="specialty-selector">
             <% for (const spec of specialties) { %>
             <label class="ann-specialty-option" data-specialty="<%= spec.id %>">
