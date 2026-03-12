@@ -32,6 +32,38 @@ async function verifyAdminToken(token: string): Promise<boolean> {
   return expectedHex === signatureHex;
 }
 
+async function triggerDeploy(): Promise<void> {
+  const token = Deno.env.get('GITHUB_DEPLOY_TOKEN');
+  if (!token) {
+    console.warn('[deploy] GITHUB_DEPLOY_TOKEN not set — skipping auto-deploy');
+    return;
+  }
+  const owner = Deno.env.get('GITHUB_REPO_OWNER') || 'TotoSEO';
+  const repo = Deno.env.get('GITHUB_REPO_NAME') || 'quiz-couple-dev';
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${owner}/${repo}/actions/workflows/deploy-pages.yml/dispatches`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json',
+          'User-Agent': 'quiz-couple-admin',
+        },
+        body: JSON.stringify({ ref: 'main' }),
+      }
+    );
+    if (res.status === 204) {
+      console.log('[deploy] GitHub Actions triggered successfully');
+    } else {
+      console.warn(`[deploy] GitHub API returned ${res.status}`);
+    }
+  } catch (err) {
+    console.warn('[deploy] Failed to trigger deploy:', err);
+  }
+}
+
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -160,6 +192,9 @@ serve(async (req) => {
         console.warn('Approval email failed:', emailErr);
       }
 
+      // Auto-deploy to rebuild static pages with new profile
+      triggerDeploy();
+
       return new Response(JSON.stringify({ success: true, profile: data }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
@@ -237,6 +272,9 @@ serve(async (req) => {
         console.warn('Rejection email failed:', emailErr);
       }
 
+      // Auto-deploy to rebuild static pages (remove unpublished profile)
+      triggerDeploy();
+
       return new Response(JSON.stringify({ success: true, profile: data }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
@@ -257,6 +295,9 @@ serve(async (req) => {
         .eq('id', id);
 
       if (error) throw error;
+
+      // Auto-deploy to rebuild static pages (remove deleted profile)
+      triggerDeploy();
 
       return new Response(JSON.stringify({ success: true }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
