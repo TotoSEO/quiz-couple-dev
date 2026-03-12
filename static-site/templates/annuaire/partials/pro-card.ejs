@@ -3,7 +3,7 @@
   const proSpec = specialties.find(s => s.id === pro.specialty);
   const proCity = cities.find(c => c.id === pro.city);
 %>
-<a href="/professionnel/<%= pro.slug %>/" class="ann-pro-card<%= pro.premium ? ' ann-pro-card-premium' : '' %> ann-animate-fade-in-up" style="text-decoration:none;color:inherit;display:block;">
+<a href="/<%= pro.specialty %>/<%= pro.city %>/<%= pro.slug %>/" class="ann-pro-card<%= pro.premium ? ' ann-pro-card-premium' : '' %> ann-animate-fade-in-up" style="text-decoration:none;color:inherit;display:block;">
   <% if (pro.premium) { %>
   <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
     <div class="ann-badge ann-badge-premium" style="font-size: 0.6875rem;">

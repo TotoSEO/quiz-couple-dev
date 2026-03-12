@@ -23,7 +23,7 @@
           "@type": "ListItem",
           "position": i + 1,
           "name": p.firstName + " " + p.lastName,
-          "url": baseUrl + "/professionnel/" + p.slug + "/"
+          "url": baseUrl + "/" + p.specialty + "/" + p.city + "/" + p.slug + "/"
         }))
       }
     },
@@ -114,6 +114,24 @@
       data-specialties='<%- JSON.stringify(specialties.map(s => ({ id: s.id, name: s.name, color: s.color }))) %>'
       data-center='<%- JSON.stringify({ lat: city.lat, lng: city.lng }) %>'
       data-zoom="12">
+    </div>
+  </div>
+</section>
+<% } %>
+
+<% if (typeof seoContent !== 'undefined' && seoContent && seoContent.sections && seoContent.sections.length) { %>
+<div class="ann-divider"></div>
+
+<!-- SEO Content -->
+<section class="ann-section">
+  <div class="ann-container">
+    <div class="ann-seo-content">
+      <% for (const section of seoContent.sections) { %>
+      <div class="ann-seo-block">
+        <h2><%= section.title %></h2>
+        <%- section.content %>
+      </div>
+      <% } %>
     </div>
   </div>
 </section>

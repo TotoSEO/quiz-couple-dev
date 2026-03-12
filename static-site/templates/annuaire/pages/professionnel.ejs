@@ -38,7 +38,8 @@
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Accueil", "item": baseUrl + "/" },
         { "@type": "ListItem", "position": 2, "name": proSpec ? proSpec.name : pro.specialty, "item": baseUrl + "/" + pro.specialty + "/" },
-        { "@type": "ListItem", "position": 3, "name": pro.firstName + " " + pro.lastName }
+        { "@type": "ListItem", "position": 3, "name": proCity ? proCity.name : pro.city, "item": baseUrl + "/" + pro.specialty + "/" + pro.city + "/" },
+        { "@type": "ListItem", "position": 4, "name": pro.firstName + " " + pro.lastName }
       ]
     }
   ];
@@ -54,6 +55,8 @@
       <a href="/">Accueil</a>
       <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 2.5l3.5 3.5-3.5 3.5"/></svg>
       <a href="/<%= pro.specialty %>/"><%= proSpec ? proSpec.name : pro.specialty %></a>
+      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 2.5l3.5 3.5-3.5 3.5"/></svg>
+      <a href="/<%= pro.specialty %>/<%= pro.city %>/"><%= proCity ? proCity.name : pro.city %></a>
       <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 2.5l3.5 3.5-3.5 3.5"/></svg>
       <span><%= pro.firstName %> <%= pro.lastName %></span>
     </nav>
