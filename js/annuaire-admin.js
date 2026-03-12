@@ -31,7 +31,7 @@
 
     fetch(SUPABASE_URL + '/functions/v1/verify-annuaire-admin', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY },
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + SUPABASE_KEY },
       body: JSON.stringify({ password: pw.value.trim() }),
     })
     .then(function (r) {
@@ -88,7 +88,7 @@
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
         'x-admin-token': adminToken,
       },
     })
@@ -213,7 +213,7 @@
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
         'x-admin-token': adminToken,
       },
       body: JSON.stringify(body),
