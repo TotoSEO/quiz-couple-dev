@@ -64,8 +64,13 @@
       return r.json().catch(function (parseErr) {
         console.error('[apiCall] Failed to parse JSON response:', parseErr);
         return { error: 'Réponse invalide du serveur (HTTP ' + r.status + ')' };
+      }).then(function (json) {
+        // Normalize Supabase gateway errors: {"code":401,"message":"..."} → {"error":"..."}
+        if (json.message && !json.error && !json.profile) {
+          json.error = json.message;
+        }
+        return json;
       });
-    });
   }
 
   // ── DOM helpers ──
@@ -130,6 +135,10 @@
   // ── Profile ──
   async function loadProfile(token) {
     var res = await apiCall('annuaire-profile', 'GET', null, token);
+    if (res.error) {
+      console.warn('[loadProfile] Error:', res.error);
+      return null;
+    }
     return res.profile || null;
   }
 
@@ -242,7 +251,7 @@
   }
 
   function getFormData() {
-    return {
+    var data = {
       first_name: $('prof-firstname').value.trim(),
       last_name: $('prof-lastname').value.trim(),
       specialty: $('prof-specialty').value,
@@ -335,9 +344,7 @@
             // Ensure is_published is never set by client
             var metaCopy = JSON.parse(JSON.stringify(pendingMeta));
             delete metaCopy.is_published;
-            console.log('[Dashboard] Auto-creating profile from metadata:', metaCopy);
             var res = await saveProfile(metaCopy, session.access_token, true);
-            console.log('[Dashboard] Auto-create response:', JSON.stringify(res));
             if (res.profile) {
               currentProfile = res.profile;
               // Clear the pending flag on success
@@ -428,9 +435,7 @@
 
       try {
         var isNew = !currentProfile;
-        console.log('[Dashboard] Saving profile, isNew:', isNew, 'data:', data);
         var res = await saveProfile(data, session.access_token, isNew);
-        console.log('[Dashboard] Save response:', JSON.stringify(res));
         if (res.error || res.msg) {
           showError('dash-profile-error', res.error || res.msg);
         } else if (res.profile) {
