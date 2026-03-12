@@ -408,64 +408,9 @@
     submitBtn.innerHTML = '<svg class="ann-spinner" viewBox="0 0 24 24" style="width:1rem;height:1rem;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Création du compte...';
 
     try {
-      // ── 1. Register auth account ──
+      // ── 1. Collect all profile data first ──
       var email = val('f-email');
       var password = val('f-password');
-
-      var authResult = await supabase.auth.signUp({
-        email: email,
-        password: password,
-      });
-
-      if (authResult.error) {
-        if (authResult.error.message.includes('already registered')) {
-          showError('err-consent', 'Un compte existe déjà avec cet email. Connectez-vous sur votre espace professionnel.');
-        } else {
-          showError('err-consent', authResult.error.message);
-        }
-        resetSubmitBtn();
-        return;
-      }
-
-      var user = authResult.data.user;
-      var session = authResult.data.session;
-
-      // If email confirmation is required
-      if (user && !session) {
-        showSuccessWithMessage('Vérifiez votre email pour confirmer votre compte. Un lien de confirmation vous a été envoyé à <strong>' + email + '</strong>. Après confirmation, connectez-vous sur votre espace professionnel pour compléter votre fiche.');
-        return;
-      }
-
-      if (!session) {
-        showError('err-consent', 'Erreur lors de la création du compte. Réessayez.');
-        resetSubmitBtn();
-        return;
-      }
-
-      // ── 2. Upload photo ──
-      submitBtn.innerHTML = '<svg class="ann-spinner" viewBox="0 0 24 24" style="width:1rem;height:1rem;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Upload de la photo...';
-
-      var photoUrl = null;
-      if (photoFile) {
-        var ext = photoFile.name.split('.').pop().toLowerCase();
-        var storagePath = user.id + '/photo.' + ext;
-
-        var uploadResult = await supabase.storage
-          .from('annuaire-photos')
-          .upload(storagePath, photoFile, { upsert: true, contentType: photoFile.type });
-
-        if (uploadResult.error) {
-          console.warn('Photo upload failed:', uploadResult.error.message);
-        } else {
-          var urlResult = supabase.storage
-            .from('annuaire-photos')
-            .getPublicUrl(storagePath);
-          photoUrl = urlResult.data.publicUrl;
-        }
-      }
-
-      // ── 3. Create profile via edge function ──
-      submitBtn.innerHTML = '<svg class="ann-spinner" viewBox="0 0 24 24" style="width:1rem;height:1rem;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Création de votre fiche...';
 
       // Collect specialties (use the first one as primary)
       var specialties = [];
@@ -505,6 +450,71 @@
         is_published: false,
       };
 
+      // ── 2. Register auth account (store profile in user_metadata) ──
+      var authResult = await supabase.auth.signUp({
+        email: email,
+        password: password,
+        options: {
+          data: {
+            annuaire_profile: profileData,
+            has_pending_profile: true,
+          },
+          emailRedirectTo: window.location.origin + '/dashboard/',
+        },
+      });
+
+      if (authResult.error) {
+        if (authResult.error.message.includes('already registered')) {
+          showError('err-consent', 'Un compte existe déjà avec cet email. Connectez-vous sur votre espace professionnel.');
+        } else {
+          showError('err-consent', authResult.error.message);
+        }
+        resetSubmitBtn();
+        return;
+      }
+
+      var user = authResult.data.user;
+      var session = authResult.data.session;
+
+      // ── 3. Upload photo (if we have a session, upload now; otherwise store info for later) ──
+      var photoUrl = null;
+      if (session && photoFile) {
+        submitBtn.innerHTML = '<svg class="ann-spinner" viewBox="0 0 24 24" style="width:1rem;height:1rem;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Upload de la photo...';
+
+        var ext = photoFile.name.split('.').pop().toLowerCase();
+        var storagePath = user.id + '/photo.' + ext;
+
+        var uploadResult = await supabase.storage
+          .from('annuaire-photos')
+          .upload(storagePath, photoFile, { upsert: true, contentType: photoFile.type });
+
+        if (uploadResult.error) {
+          console.warn('Photo upload failed:', uploadResult.error.message);
+        } else {
+          var urlResult = supabase.storage
+            .from('annuaire-photos')
+            .getPublicUrl(storagePath);
+          photoUrl = urlResult.data.publicUrl;
+        }
+      }
+
+      // If email confirmation is required (no session yet)
+      if (user && !session) {
+        // Photo will need to be uploaded after email confirmation on dashboard
+        // Profile data is stored in user_metadata and will be auto-created on first dashboard login
+        showSuccess();
+        return;
+      }
+
+      if (!session) {
+        showError('err-consent', 'Erreur lors de la création du compte. Réessayez.');
+        resetSubmitBtn();
+        return;
+      }
+
+      // ── 4. Create profile via edge function ──
+      submitBtn.innerHTML = '<svg class="ann-spinner" viewBox="0 0 24 24" style="width:1rem;height:1rem;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Création de votre fiche...';
+
       if (photoUrl) {
         profileData.photo_url = photoUrl;
       }
@@ -523,12 +533,11 @@
 
       if (profileResult.error) {
         console.error('Profile creation error:', profileResult.error);
-        // Account was created but profile failed — still show partial success
         showSuccessWithMessage('Votre compte a été créé mais la fiche n\'a pas pu être enregistrée automatiquement. Connectez-vous sur votre <a href="/dashboard/" target="_blank" style="color:hsl(var(--ann-primary))">espace professionnel</a> pour compléter votre fiche.');
         return;
       }
 
-      // ── 4. Success! ──
+      // ── 5. Success! ──
       showSuccess();
 
     } catch (err) {

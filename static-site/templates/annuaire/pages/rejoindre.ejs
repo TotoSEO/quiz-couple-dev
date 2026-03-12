@@ -427,6 +427,24 @@
           </a>
         </div>
 
+        <!-- Moderation Notice -->
+        <div class="ann-moderation-notice" style="margin-top: 1.5rem; padding: 1.25rem; border-radius: var(--ann-radius); background: hsl(40 90% 55% / 0.08); border: 1px solid hsl(40 90% 55% / 0.25);">
+          <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="hsl(40 90% 45%)" stroke-width="2" style="width: 1.25rem; height: 1.25rem; flex-shrink: 0; margin-top: 0.125rem;">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            <div>
+              <p style="font-weight: 600; font-size: 0.9375rem; margin-bottom: 0.25rem; color: hsl(40 70% 35%);">
+                <span class="dark" style="display:none;color:hsl(40 80% 65%);">Modération avant publication</span>
+                <span style="color:hsl(40 70% 35%);">Modération avant publication</span>
+              </p>
+              <p class="ann-text-muted" style="font-size: 0.875rem; line-height: 1.6;">
+                Chaque fiche est vérifiée manuellement par notre équipe avant d'être publiée. Ce processus prend généralement <strong>24 à 48h</strong>, et peut aller jusqu'à <strong>72h</strong> en période d'affluence. La modération est très active : vous serez notifié par email dès validation.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <!-- Consent -->
         <div class="ann-form-group" style="margin-top: 1.5rem;">
           <label class="ann-checkbox-label">
@@ -467,12 +485,20 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
       </div>
       <h2>Demande envoyée <span class="ann-text-gradient">avec succès</span></h2>
-      <p class="ann-text-muted" style="max-width: 28rem; margin: 0.75rem auto 1.5rem; font-size: 1.0625rem;">
-        Merci ! Notre équipe va examiner votre dossier. Vous recevrez un email de confirmation sous 48h.
+      <p class="ann-text-muted" style="max-width: 32rem; margin: 0.75rem auto 0; font-size: 1.0625rem;">
+        Merci ! Vérifiez votre boîte email pour confirmer votre adresse.
       </p>
+      <div style="max-width: 32rem; margin: 1rem auto 1.5rem; padding: 1rem; border-radius: var(--ann-radius); background: hsl(var(--ann-muted)); text-align: left;">
+        <p style="font-weight: 600; font-size: 0.9375rem; margin-bottom: 0.5rem;">Et ensuite ?</p>
+        <ol class="ann-text-muted" style="font-size: 0.875rem; line-height: 1.8; padding-left: 1.25rem;">
+          <li>Confirmez votre adresse email en cliquant sur le lien reçu</li>
+          <li>Notre équipe vérifie manuellement votre fiche (<strong>24h à 72h</strong>)</li>
+          <li>Vous recevez un email dès que votre fiche est en ligne</li>
+        </ol>
+      </div>
       <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
-        <a href="/" target="_blank" rel="noopener" class="ann-btn ann-btn-outline">Retour à l'annuaire</a>
-        <a href="/tarifs/" target="_blank" rel="noopener" class="ann-btn ann-btn-primary">Découvrir le programme Boost</a>
+        <a href="/" rel="noopener" class="ann-btn ann-btn-outline">Retour à l'annuaire</a>
+        <a href="/tarifs/" rel="noopener" class="ann-btn ann-btn-primary">Découvrir le programme Boost</a>
       </div>
     </div>
 

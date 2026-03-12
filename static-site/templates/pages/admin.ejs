@@ -41,6 +41,7 @@
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="articles">Articles</button>
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="leads">Leads</button>
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="messages">Messagerie</button>
+              <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="annuaire">Annuaire</button>
             </div>
             <button id="admin-deploy" class="btn btn-sm" style="background:hsl(var(--primary));color:white;display:flex;align-items:center;gap:0.5rem;">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -265,6 +266,59 @@
             </div>
           </div>
         </div>
+
+        <!-- Annuaire Tab -->
+        <div id="admin-annuaire-tab" class="hidden">
+          <!-- Stats -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            <div class="glass-card rounded-xl p-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg" style="background:hsl(40 90% 92%);color:hsl(40 80% 45%);">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div>
+                <p class="text-2xl font-bold" id="ann-stat-pending">-</p>
+                <p class="text-xs text-muted-foreground">En attente</p>
+              </div>
+            </div>
+            <div class="glass-card rounded-xl p-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg" style="background:hsl(160 60% 92%);color:hsl(160 60% 40%);">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div>
+                <p class="text-2xl font-bold" id="ann-stat-approved">-</p>
+                <p class="text-xs text-muted-foreground">Publiés</p>
+              </div>
+            </div>
+            <div class="glass-card rounded-xl p-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg" style="background:hsl(260 50% 92%);color:hsl(260 50% 50%);">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div>
+                <p class="text-2xl font-bold" id="ann-stat-total">-</p>
+                <p class="text-xs text-muted-foreground">Total fiches</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filters -->
+          <div class="flex items-center gap-3 mb-6 flex-wrap">
+            <button id="ann-refresh" class="btn btn-outline btn-sm">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+              Actualiser
+            </button>
+            <div class="flex rounded-lg border border-border overflow-hidden">
+              <button class="ann-filter px-3 py-1.5 text-sm transition-colors active" data-ann-filter="all">Tous</button>
+              <button class="ann-filter px-3 py-1.5 text-sm transition-colors" data-ann-filter="pending">En attente</button>
+              <button class="ann-filter px-3 py-1.5 text-sm transition-colors" data-ann-filter="approved">Publiés</button>
+            </div>
+          </div>
+
+          <!-- Profiles List -->
+          <div id="ann-profiles-list" class="space-y-4">
+            <p class="text-center text-muted-foreground py-8">Chargement...</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
