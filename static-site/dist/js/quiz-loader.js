@@ -56,8 +56,8 @@
     'emmenager':      { prefix: 'emmenager', engine: 'parentalite', totalQ: 20, pool: 20 },
 
     // ── Jalousie quizzes (solo scoring, two sub-tests on same page) ──
-    'jalousie1':      { prefix: 'jalousie1', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie1' },
-    'jalousie2':      { prefix: 'jalousie2', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie2' },
+    'jalousie1':      { prefix: 'jalousie1', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie1', ascending: true },
+    'jalousie2':      { prefix: 'jalousie2', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie2', ascending: true },
 
     // ── Genant quiz (solo scoring, embarrassing couple behaviors) ──
     'genant':         { prefix: 'genant', engine: 'solo', totalQ: 15, pool: 15, quizType: 'genant' }
@@ -193,7 +193,7 @@
       if (options.length > 0) {
         // Assign points based on scoring mode
         if (ascending) {
-          for (var k = 0; k < options.length; k++) options[k].points = k + 1;
+          for (var k = 0; k < options.length; k++) options[k].points = k;
         } else {
           var maxPts = options.length - 1;
           for (var k = 0; k < options.length; k++) options[k].points = maxPts - k;
@@ -325,8 +325,8 @@
         advice: QuizEngine.tgd('healthy.r' + i + '_a', '')
       });
     }
-    // Score ranges for healthy: max total = 20 questions * 2 points * 2 players = 80
-    var maxTotal = healthyQuestions.length * 2 * 2;
+    // Score ranges for healthy: max total = 20 questions * 3 points * 2 players = 120
+    var maxTotal = healthyQuestions.length * 3 * 2;
     if (results.length > 0) {
       var rangeSize = Math.ceil(maxTotal / results.length);
       for (var r = 0; r < results.length; r++) {
