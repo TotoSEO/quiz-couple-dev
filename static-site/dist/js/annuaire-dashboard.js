@@ -231,6 +231,16 @@
       if (gpi) gpi.value = profile.google_place_id;
     }
 
+    // Unlock website field for Boost users
+    var websiteInput = $('prof-website');
+    var websiteLocked = $('dash-website-locked');
+    if (websiteInput && profile.plan === 'boost') {
+      websiteInput.disabled = false;
+      websiteInput.style.opacity = '';
+      websiteInput.style.cursor = '';
+      if (websiteLocked) hide(websiteLocked);
+    }
+
     // Show Google Reviews section for Boost users
     var googleSection = $('dash-google-reviews-section');
     if (googleSection && profile.plan === 'boost') {
@@ -260,7 +270,7 @@
       email: $('prof-email').value.trim(),
       phone: $('prof-phone').value.trim() || null,
       address: $('prof-address').value.trim() || null,
-      website: $('prof-website').value.trim() || null,
+      website: $('prof-website').disabled ? undefined : ($('prof-website').value.trim() || null),
       description: $('prof-description').value.trim(),
       years_experience: parseInt($('prof-experience').value) || 0,
       price_range: $('prof-price').value.trim() || null,
