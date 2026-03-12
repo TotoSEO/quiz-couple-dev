@@ -70,7 +70,6 @@ serve(async (req: Request) => {
       auth: { autoRefreshToken: false, persistSession: false },
     });
 
-    const url = new URL(req.url);
     const method = req.method;
 
     // ── GET: Récupérer mon profil ──
@@ -81,7 +80,12 @@ serve(async (req: Request) => {
         .eq('user_id', user.id)
         .maybeSingle();
 
-      if (error) throw error;
+      if (error) {
+        console.error('Get profile error:', JSON.stringify(error));
+        return new Response(JSON.stringify({ error: 'Erreur lecture profil: ' + (error.message || error.code || 'inconnue') }), {
+          status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
 
       return new Response(JSON.stringify({ profile }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -127,7 +131,10 @@ serve(async (req: Request) => {
             status: 409, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
           });
         }
-        throw error;
+        console.error('Insert error:', JSON.stringify(error));
+        return new Response(JSON.stringify({ error: 'Erreur création profil: ' + (error.message || error.code || 'inconnue') }), {
+          status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
       }
 
       return new Response(JSON.stringify({ profile: data }), {
@@ -158,7 +165,10 @@ serve(async (req: Request) => {
             status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
           });
         }
-        throw error;
+        console.error('Update error:', JSON.stringify(error));
+        return new Response(JSON.stringify({ error: 'Erreur mise à jour: ' + (error.message || error.code || 'inconnue') }), {
+          status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
       }
 
       return new Response(JSON.stringify({ profile: data }), {
@@ -224,7 +234,8 @@ serve(async (req: Request) => {
 
   } catch (err) {
     console.error('annuaire-profile error:', err);
-    return new Response(JSON.stringify({ error: 'Erreur serveur' }), {
+    const errMsg = err instanceof Error ? err.message : String(err);
+    return new Response(JSON.stringify({ error: 'Erreur serveur: ' + errMsg }), {
       status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
