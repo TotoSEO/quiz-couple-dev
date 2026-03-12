@@ -19,8 +19,8 @@
   // textOnly: true means no per-question options (knowledge, most, funny, debate)
   var QUIZ_CONFIG = {
     // ── Solo scoring (single player, points-based) ──
-    'toxic':          { prefix: 'divorce', engine: 'solo', totalQ: 25, pool: 25, quizType: 'toxic' },
-    'divorce':        { prefix: 'divorce', engine: 'solo', totalQ: 15, pool: 25, quizType: 'divorce', hasSkip: true },
+    'toxic':          { prefix: 'divorce', engine: 'solo', totalQ: 25, pool: 25, quizType: 'toxic', ascending: true },
+    'divorce':        { prefix: 'divorce', engine: 'solo', totalQ: 15, pool: 25, quizType: 'divorce', hasSkip: true, ascending: true },
     'mariage':        { prefix: 'marriage', engine: 'solo', totalQ: 30, pool: 30, hasSkip: true, hasLocalStorage: true },
     'ado':            { prefix: 'ado', engine: 'solo', totalQ: 20, pool: 80, ascending: true, needsName: true },
 
@@ -205,7 +205,8 @@
   }
 
   // ─── Parse results from gd.json ───────────────────────────
-  function parseGdResults(prefix, totalQuestions, maxOptions) {
+  // maxScore: the real achievable max score (sum of max points per question)
+  function parseGdResults(prefix, maxScore) {
     var results = [];
     // Try r{N}_t pattern (healthy, marriage, couple, distance, ado)
     for (var i = 1; i <= 10; i++) {
@@ -245,8 +246,7 @@
       }
     }
     if (results.length === 0) return results;
-    // Calculate score ranges
-    var maxScore = totalQuestions * (maxOptions - 1);
+    // Calculate score ranges based on real achievable max score
     var rangeSize = Math.ceil(maxScore / results.length);
     for (var r = 0; r < results.length; r++) {
       results[r].min = r * rangeSize;
@@ -258,11 +258,16 @@
   // ─── Initializers ─────────────────────────────────────────
 
   function initSoloQuiz(cfg, questions) {
-    var maxOpts = 0;
+    // Calculate real achievable max score (sum of max points per question)
+    var realMaxScore = 0;
     for (var i = 0; i < questions.length; i++) {
-      if (questions[i].options.length > maxOpts) maxOpts = questions[i].options.length;
+      var qMax = 0;
+      for (var j = 0; j < questions[i].options.length; j++) {
+        if (questions[i].options[j].points > qMax) qMax = questions[i].options[j].points;
+      }
+      realMaxScore += qMax;
     }
-    var results = parseGdResults(cfg.prefix, questions.length, maxOpts);
+    var results = parseGdResults(cfg.prefix, realMaxScore);
     new QuizEngine.SoloTest({
       container: container,
       questions: questions,
@@ -386,7 +391,8 @@
     if (debateQuestions.length === 0) debateQuestions = questions;
 
     // Debate results: try from gd.json first (non-FR debate prefix has r0t/r1t pattern)
-    var results = parseGdResults(cfg.prefix, debateQuestions.length, 5);
+    // Debate uses 1-5 scale, so max score = questions * 5
+    var results = parseGdResults(cfg.prefix, debateQuestions.length * 5);
 
     if (results.length === 0) {
       // Fallback to percentage-based defaults

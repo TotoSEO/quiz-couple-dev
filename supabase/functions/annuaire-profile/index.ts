@@ -10,6 +10,38 @@ const corsHeaders = {
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const SUPABASE_SERVICE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
 
+async function triggerDeploy(): Promise<void> {
+  const token = Deno.env.get('GITHUB_DEPLOY_TOKEN');
+  if (!token) {
+    console.warn('[deploy] GITHUB_DEPLOY_TOKEN not set — skipping auto-deploy');
+    return;
+  }
+  const owner = Deno.env.get('GITHUB_REPO_OWNER') || 'TotoSEO';
+  const repo = Deno.env.get('GITHUB_REPO_NAME') || 'quiz-couple-dev';
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${owner}/${repo}/actions/workflows/deploy-pages.yml/dispatches`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json',
+          'User-Agent': 'quiz-couple-admin',
+        },
+        body: JSON.stringify({ ref: 'main' }),
+      }
+    );
+    if (res.status === 204) {
+      console.log('[deploy] GitHub Actions triggered successfully');
+    } else {
+      console.warn(`[deploy] GitHub API returned ${res.status}`);
+    }
+  } catch (err) {
+    console.warn('[deploy] Failed to trigger deploy:', err);
+  }
+}
+
 // Allowed specialties and cities (must match annuaire-config)
 const VALID_SPECIALTIES = [
   'therapeute-de-couple', 'sexologue', 'sexotherapeute',
@@ -169,6 +201,11 @@ serve(async (req: Request) => {
         return new Response(JSON.stringify({ error: 'Erreur mise à jour: ' + (error.message || error.code || 'inconnue') }), {
           status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
+      }
+
+      // Auto-deploy if profile is published (rebuild static pages with fresh data)
+      if (data && data.is_published) {
+        triggerDeploy();
       }
 
       return new Response(JSON.stringify({ profile: data }), {

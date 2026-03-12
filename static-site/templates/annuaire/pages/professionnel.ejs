@@ -291,6 +291,122 @@
   </div>
 </section>
 
+<!-- Live data refresh: fetch fresh profile data from Supabase and update DOM -->
+<script>
+(function() {
+  var SUPABASE_URL = '<%= typeof supabaseUrl !== "undefined" ? supabaseUrl : "https://lojvajnnvhatfplevyvy.supabase.co" %>';
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
+  var slug = '<%= pro.slug %>';
+
+  fetch(SUPABASE_URL + '/rest/v1/annuaire_professionals?slug=eq.' + encodeURIComponent(slug) + '&is_published=eq.true&select=*&limit=1', {
+    headers: { 'apikey': SUPABASE_KEY, 'Accept': 'application/json' }
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(rows) {
+    if (!rows || !rows.length) return;
+    var p = rows[0];
+
+    // Update name
+    var nameEl = document.querySelector('.ann-profile-name');
+    if (nameEl) nameEl.textContent = (p.first_name || '') + ' ' + (p.last_name || '');
+
+    // Update bio
+    var bioEl = document.querySelector('.ann-profile-bio');
+    if (bioEl && p.description) bioEl.textContent = p.description;
+
+    // Update phone
+    var phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    if (phoneLinks.length && p.phone) {
+      for (var i = 0; i < phoneLinks.length; i++) {
+        phoneLinks[i].href = 'tel:' + p.phone.replace(/\s/g, '');
+        var span = phoneLinks[i].querySelector('span');
+        if (span) span.textContent = p.phone;
+      }
+    }
+
+    // Update email
+    var emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    if (emailLinks.length && p.email) {
+      for (var i = 0; i < emailLinks.length; i++) {
+        var href = emailLinks[i].getAttribute('href');
+        if (href.indexOf('subject=') > -1) {
+          emailLinks[i].href = 'mailto:' + p.email + '?subject=Demande de rendez-vous';
+        } else {
+          emailLinks[i].href = 'mailto:' + p.email;
+          var span = emailLinks[i].querySelector('span');
+          if (span) span.textContent = p.email;
+        }
+      }
+    }
+
+    // Update address
+    var addrEl = document.querySelector('.ann-map-container');
+    if (addrEl) {
+      var prev = addrEl.previousElementSibling;
+      if (prev && prev.classList.contains('ann-text-muted') && p.address) {
+        prev.textContent = p.address;
+      }
+    }
+
+    // Update avatar photo
+    if (p.photo_url) {
+      var avatarDiv = document.querySelector('.ann-profile-avatar-lg');
+      if (avatarDiv) {
+        var img = avatarDiv.querySelector('img');
+        if (img) {
+          img.src = p.photo_url;
+          img.alt = 'Photo de ' + (p.first_name || '') + ' ' + (p.last_name || '');
+        } else {
+          var newImg = document.createElement('img');
+          newImg.src = p.photo_url;
+          newImg.alt = 'Photo de ' + (p.first_name || '') + ' ' + (p.last_name || '');
+          avatarDiv.textContent = '';
+          avatarDiv.appendChild(newImg);
+          avatarDiv.classList.add('ann-profile-avatar-photo');
+        }
+      }
+    }
+
+    // Update methods/approaches
+    if (Array.isArray(p.methods) && p.methods.length) {
+      var tagContainers = document.querySelectorAll('.ann-profile-tags');
+      if (tagContainers.length > 0) {
+        tagContainers[0].innerHTML = p.methods.map(function(m) {
+          var d = document.createElement('span');
+          d.textContent = m;
+          return '<span class="ann-profile-tag">' + d.textContent + '</span>';
+        }).join('');
+      }
+    }
+
+    // Update languages
+    if (Array.isArray(p.languages) && p.languages.length) {
+      var tagContainers = document.querySelectorAll('.ann-profile-tags');
+      if (tagContainers.length > 1) {
+        tagContainers[1].innerHTML = p.languages.map(function(l) {
+          var d = document.createElement('span');
+          d.textContent = l;
+          return '<span class="ann-profile-tag">' + d.textContent + '</span>';
+        }).join('');
+      }
+    }
+
+    // Update practical info sidebar
+    var infoRows = document.querySelectorAll('.ann-profile-info-row');
+    for (var i = 0; i < infoRows.length; i++) {
+      var label = infoRows[i].querySelector('.ann-text-muted');
+      var value = infoRows[i].querySelector('.ann-font-medium, .ann-link-primary');
+      if (!label || !value) continue;
+      var key = label.textContent.trim();
+      if (key === 'Tarif' && p.price_range) value.textContent = p.price_range;
+      if (key === 'Expérience' && p.years_experience != null) value.textContent = p.years_experience + ' ans';
+      if (key === 'Disponibilités' && p.availability) value.textContent = p.availability;
+    }
+  })
+  .catch(function(err) { console.warn('[live-profile] Could not refresh data:', err); });
+})();
+</script>
+
 <% if (otherPros.length > 0) { %>
 <div class="ann-divider"></div>
 

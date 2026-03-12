@@ -2001,7 +2001,7 @@ var QuizEngine = (function() {
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
 
-    var OPTION_SCORES = { a: 0.5, b: 1, c: 1.5, d: 2 };
+    var OPTION_SCORES = { a: 2, b: 1.5, c: 1, d: 0.5 };
     var optionsWrap = el('div', 'space-y-2');
     q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
