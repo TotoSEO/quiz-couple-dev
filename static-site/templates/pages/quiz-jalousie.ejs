@@ -304,8 +304,8 @@
         }
       }
       if (options.length > 0) {
-        var maxPts = options.length - 1;
-        for (var k = 0; k < options.length; k++) options[k].points = maxPts - k;
+        // Ascending: a (calm) = 0 points, d (jealous) = max points
+        for (var k = 0; k < options.length; k++) options[k].points = k;
         questions.push({ id: i, text: qText, options: options });
       }
     }
