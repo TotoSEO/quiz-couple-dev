@@ -6,6 +6,7 @@
   'use strict';
 
   var SUPABASE_URL;
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
   var adminToken = null;
   var allProfiles = [];
   var currentFilter = 'all';
@@ -30,7 +31,7 @@
 
     fetch(SUPABASE_URL + '/functions/v1/verify-admin', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY },
       body: JSON.stringify({ password: pw.value.trim() }),
     })
     .then(function (r) { return r.json(); })
@@ -82,6 +83,7 @@
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        'apikey': SUPABASE_KEY,
         'x-admin-token': adminToken,
       },
     })
@@ -206,6 +208,7 @@
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'apikey': SUPABASE_KEY,
         'x-admin-token': adminToken,
       },
       body: JSON.stringify(body),
