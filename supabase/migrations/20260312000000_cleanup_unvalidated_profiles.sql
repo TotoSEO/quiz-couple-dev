@@ -12,12 +12,13 @@ AS $$
 DECLARE
   r RECORD;
 BEGIN
-  -- Find profiles that are not published and older than 48 hours
+  -- Find unpublished profiles not touched in 48 hours
+  -- Uses updated_at so rejected profiles get 48h from rejection to fix
   FOR r IN
     SELECT id, user_id
     FROM annuaire_professionals
     WHERE is_published = false
-      AND created_at < now() - interval '48 hours'
+      AND updated_at < now() - interval '48 hours'
   LOOP
     -- Delete the profile (cascades to views/clicks)
     DELETE FROM annuaire_professionals WHERE id = r.id;

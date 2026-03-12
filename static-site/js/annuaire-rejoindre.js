@@ -376,8 +376,8 @@
     var specs = [];
     var orderedValues = specOrder.length ? specOrder : [];
     if (orderedValues.length) {
-      orderedValues.forEach(function (val, i) {
-        var cb = specSelector.querySelector('input[value="' + val + '"]');
+      orderedValues.forEach(function (v, i) {
+        var cb = specSelector.querySelector('input[value="' + v + '"]');
         if (cb) {
           var label = cb.closest('.ann-specialty-option');
           if (label) {
@@ -400,7 +400,9 @@
     form.querySelectorAll('input[name="methodes"]:checked').forEach(function (cb) { methods.push(cb.value); });
     setText('recap-methodes', methods.length ? methods.join(', ') : 'Non renseigné');
 
-    setText('recap-experience', val('f-experience') || '—');
+    var expSelect = document.getElementById('f-experience');
+    var expText = expSelect && expSelect.selectedIndex > 0 ? expSelect.options[expSelect.selectedIndex].text : '—';
+    setText('recap-experience', expText);
 
     var cabinetVal = val('f-cabinet');
     var cabinetRow = document.getElementById('recap-cabinet-row');
@@ -504,7 +506,10 @@
         languages: languages.length ? languages : ['Français'],
         years_experience: experienceToYears(val('f-experience')),
         price_range: pmin && pmax ? pmin + '€ - ' + pmax + '€' : '',
-        address: val('f-adresse') + ', ' + val('f-codepostal'),
+        address: val('f-adresse') + ', ' + val('f-codepostal') + ' ' + (function () {
+          var vs = document.getElementById('f-ville');
+          return vs && vs.selectedIndex > 0 ? vs.options[vs.selectedIndex].text.replace(/\s*\(.*\)$/, '') : '';
+        })(),
         availability: 'Sur rendez-vous',
         is_published: false,
       };
