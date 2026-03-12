@@ -314,6 +314,41 @@
         </div>
       </div>
 
+      <!-- Delete account section -->
+      <div style="margin-top: 3rem; border-top: 1px solid hsl(var(--ann-border)); padding-top: 2rem;">
+        <div id="dash-delete-section">
+          <button id="dash-delete-toggle" type="button" class="ann-btn ann-btn-sm" style="color: hsl(0 70% 50%); background: transparent; border: 1px solid hsl(0 70% 50% / 0.3); font-size: 0.8125rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+            Supprimer mon compte
+          </button>
+
+          <div id="dash-delete-confirm" style="display: none; margin-top: 1rem; max-width: 28rem;">
+            <div class="ann-profile-card" style="padding: 1.5rem; border-color: hsl(0 70% 50% / 0.3);">
+              <h3 style="color: hsl(0 70% 50%); font-size: 1rem; margin-bottom: 0.5rem;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;vertical-align:middle;margin-right:0.25rem"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Suppression définitive
+              </h3>
+              <p class="ann-text-muted" style="font-size: 0.8125rem; line-height: 1.6; margin-bottom: 1rem;">
+                Cette action est <strong>irréversible</strong>. Votre fiche professionnelle, vos photos et votre compte seront définitivement supprimés.
+              </p>
+              <div class="ann-form-group" style="margin-bottom: 1rem;">
+                <label class="ann-form-label" for="delete-email-confirm" style="font-size: 0.8125rem;">Pour confirmer, saisissez votre adresse email :</label>
+                <input class="ann-form-input" type="email" id="delete-email-confirm" placeholder="votre@email.com" autocomplete="off">
+              </div>
+              <div id="dash-delete-error" class="ann-form-error" style="display:none;"></div>
+              <div style="display: flex; gap: 0.5rem;">
+                <button id="dash-delete-btn" type="button" class="ann-btn ann-btn-sm" style="background: hsl(0 70% 50%); color: white; border: none;" disabled>
+                  Supprimer définitivement
+                </button>
+                <button id="dash-delete-cancel" type="button" class="ann-btn ann-btn-outline ann-btn-sm">
+                  Annuler
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
