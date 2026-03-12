@@ -378,6 +378,8 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
 
 .ann-btn-nav { padding: 0.5rem 1rem; font-size: 0.8125rem; }
 
+.ann-login-btn { cursor: pointer; }
+
 /* ── Cards ─────────────────────────────────────────────────────────── */
 .ann-card {
   background: hsl(var(--ann-card));
