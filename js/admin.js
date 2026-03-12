@@ -18,8 +18,6 @@
   var allLeads = [];
   var allMessages = [];
   var currentMessageFilter = 'all';
-  var allAnnuaireProfiles = [];
-  var currentAnnuaireFilter = 'all';
 
   // ── Seed data (all existing articles) ──
   // AUTO-GENERATED AT BUILD TIME from config.js BLOG_ARTICLES + article TS files
@@ -141,7 +139,6 @@
     document.getElementById('admin-articles-tab').classList.toggle('hidden', tab !== 'articles');
     document.getElementById('admin-leads-tab').classList.toggle('hidden', tab !== 'leads');
     document.getElementById('admin-messages-tab').classList.toggle('hidden', tab !== 'messages');
-    document.getElementById('admin-annuaire-tab').classList.toggle('hidden', tab !== 'annuaire');
 
     if (tab === 'articles' && allArticles.length === 0) {
       loadArticles();
@@ -151,9 +148,6 @@
     }
     if (tab === 'messages' && allMessages.length === 0) {
       loadMessages();
-    }
-    if (tab === 'annuaire' && allAnnuaireProfiles.length === 0) {
-      loadAnnuaireProfiles();
     }
   }
 
@@ -1007,172 +1001,6 @@
     }
   }
 
-  // ── Annuaire CRUD ──
-  function loadAnnuaireProfiles() {
-    var listEl = document.getElementById('ann-profiles-list');
-    if (!listEl) return;
-    listEl.innerHTML = '<p class="text-center text-muted-foreground py-8">Chargement...</p>';
-
-    fetch(SUPABASE_URL + '/functions/v1/admin-annuaire?action=list&filter=' + currentAnnuaireFilter, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-admin-token': adminToken,
-      },
-    })
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      if (!data.success) {
-        listEl.innerHTML = '<p class="text-center text-destructive py-8">Erreur: ' + (data.error || 'Inconnue') + '</p>';
-        return;
-      }
-      allAnnuaireProfiles = data.profiles || [];
-
-      // Update stats
-      var s = data.stats || {};
-      var pendingEl = document.getElementById('ann-stat-pending');
-      var approvedEl = document.getElementById('ann-stat-approved');
-      var totalEl = document.getElementById('ann-stat-total');
-      if (pendingEl) pendingEl.textContent = s.pending || 0;
-      if (approvedEl) approvedEl.textContent = s.approved || 0;
-      if (totalEl) totalEl.textContent = s.total || 0;
-
-      renderAnnuaireProfiles();
-    })
-    .catch(function (err) {
-      listEl.innerHTML = '<p class="text-center text-destructive py-8">Erreur réseau</p>';
-    });
-  }
-
-  function renderAnnuaireProfiles() {
-    var listEl = document.getElementById('ann-profiles-list');
-    if (!listEl) return;
-
-    var filtered = allAnnuaireProfiles;
-    if (currentAnnuaireFilter === 'pending') {
-      filtered = allAnnuaireProfiles.filter(function (p) { return !p.is_published; });
-    } else if (currentAnnuaireFilter === 'approved') {
-      filtered = allAnnuaireProfiles.filter(function (p) { return p.is_published; });
-    }
-
-    if (filtered.length === 0) {
-      listEl.innerHTML = '<p class="text-center text-muted-foreground py-8">Aucune fiche trouvée.</p>';
-      return;
-    }
-
-    var SPEC_LABELS = {
-      'therapeute-de-couple': 'Thérapeute de couple',
-      'sexologue': 'Sexologue',
-      'sexotherapeute': 'Sexothérapeute',
-      'mediateur-familial': 'Médiateur familial',
-      'coach-parental': 'Coach parental',
-      'conseiller-conjugal': 'Conseiller conjugal',
-    };
-
-    listEl.innerHTML = filtered.map(function (p) {
-      var statusBadge = p.is_published
-        ? '<span style="display:inline-flex;align-items:center;gap:0.25rem;padding:0.125rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background:hsl(160 60% 45%/0.1);color:hsl(160 60% 35%);">Publié</span>'
-        : '<span style="display:inline-flex;align-items:center;gap:0.25rem;padding:0.125rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background:hsl(40 90% 55%/0.1);color:hsl(40 70% 35%);">En attente</span>';
-
-      var photoHtml = p.photo_url
-        ? '<img src="' + p.photo_url + '" style="width:3rem;height:3rem;border-radius:50%;object-fit:cover;" alt="">'
-        : '<div style="width:3rem;height:3rem;border-radius:50%;background:hsl(var(--muted));display:flex;align-items:center;justify-content:center;"><svg class="w-5 h-5" style="color:hsl(var(--muted-foreground))" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>';
-
-      var date = p.created_at ? new Date(p.created_at).toLocaleDateString('fr-FR') : '—';
-
-      var actions = '';
-      if (!p.is_published) {
-        actions += '<button class="btn btn-sm" style="background:hsl(160 60% 45%);color:white;font-size:0.75rem;padding:0.25rem 0.75rem;" onclick="window.__annApprove(\'' + p.id + '\')">Approuver</button>';
-        actions += ' <button class="btn btn-sm" style="color:hsl(var(--destructive));border:1px solid hsl(var(--destructive)/0.3);background:transparent;font-size:0.75rem;padding:0.25rem 0.75rem;" onclick="window.__annReject(\'' + p.id + '\')">Rejeter</button>';
-      } else {
-        actions += '<button class="btn btn-sm" style="color:hsl(40 70% 40%);border:1px solid hsl(40 70% 40%/0.3);background:transparent;font-size:0.75rem;padding:0.25rem 0.75rem;" onclick="window.__annReject(\'' + p.id + '\')">Dépublier</button>';
-      }
-      actions += ' <button class="btn btn-sm" style="color:hsl(var(--destructive));font-size:0.75rem;padding:0.25rem 0.5rem;" onclick="window.__annDelete(\'' + p.id + '\')" title="Supprimer définitivement">' +
-        '<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></button>';
-
-      return '<div class="glass-card rounded-xl p-4" style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap;">' +
-        '<div style="flex-shrink:0;">' + photoHtml + '</div>' +
-        '<div style="flex:1;min-width:0;">' +
-          '<div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.25rem;">' +
-            '<span class="font-bold">' + (p.first_name || '') + ' ' + (p.last_name || '') + '</span>' +
-            statusBadge +
-          '</div>' +
-          '<p class="text-sm text-muted-foreground" style="margin-bottom:0.25rem;">' +
-            (SPEC_LABELS[p.specialty] || p.specialty || '—') + ' — ' + (p.city || '—') +
-          '</p>' +
-          '<p class="text-xs text-muted-foreground">' + (p.email || '') + ' · ' + (p.phone || '—') + ' · Inscrit le ' + date + '</p>' +
-          (p.description ? '<p class="text-xs text-muted-foreground" style="margin-top:0.5rem;max-height:3rem;overflow:hidden;text-overflow:ellipsis;">' + p.description.substring(0, 150) + (p.description.length > 150 ? '...' : '') + '</p>' : '') +
-        '</div>' +
-        '<div style="display:flex;gap:0.5rem;flex-shrink:0;flex-wrap:wrap;">' + actions + '</div>' +
-      '</div>';
-    }).join('');
-  }
-
-  // Global handlers for annuaire actions (called from onclick)
-  window.__annApprove = function (id) {
-    if (!confirm('Approuver et publier cette fiche ?')) return;
-    fetch(SUPABASE_URL + '/functions/v1/admin-annuaire?action=approve', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-admin-token': adminToken,
-      },
-      body: JSON.stringify({ id: id }),
-    })
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      if (data.success) {
-        allAnnuaireProfiles = [];
-        loadAnnuaireProfiles();
-      } else {
-        alert('Erreur: ' + (data.error || 'Inconnue'));
-      }
-    });
-  };
-
-  window.__annReject = function (id) {
-    var reason = prompt('Motif du rejet (optionnel) :');
-    if (reason === null) return; // cancelled
-    fetch(SUPABASE_URL + '/functions/v1/admin-annuaire?action=reject', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-admin-token': adminToken,
-      },
-      body: JSON.stringify({ id: id, reason: reason }),
-    })
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      if (data.success) {
-        allAnnuaireProfiles = [];
-        loadAnnuaireProfiles();
-      } else {
-        alert('Erreur: ' + (data.error || 'Inconnue'));
-      }
-    });
-  };
-
-  window.__annDelete = function (id) {
-    if (!confirm('Supprimer définitivement cette fiche ? Cette action est irréversible.')) return;
-    fetch(SUPABASE_URL + '/functions/v1/admin-annuaire?action=delete', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-admin-token': adminToken,
-      },
-      body: JSON.stringify({ id: id }),
-    })
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      if (data.success) {
-        allAnnuaireProfiles = [];
-        loadAnnuaireProfiles();
-      } else {
-        alert('Erreur: ' + (data.error || 'Inconnue'));
-      }
-    });
-  };
-
   // ── Init ──
   function init() {
     var app = document.getElementById('admin-app');
@@ -1245,22 +1073,6 @@
         this.classList.add('active');
         currentMessageFilter = this.dataset.filter;
         renderMessages();
-      });
-    });
-
-    // ── Annuaire bindings ──
-    var annRefresh = document.getElementById('ann-refresh');
-    if (annRefresh) annRefresh.addEventListener('click', function () {
-      allAnnuaireProfiles = [];
-      loadAnnuaireProfiles();
-    });
-
-    document.querySelectorAll('.ann-filter').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        document.querySelectorAll('.ann-filter').forEach(function (b) { b.classList.remove('active'); });
-        this.classList.add('active');
-        currentAnnuaireFilter = this.dataset.annFilter;
-        renderAnnuaireProfiles();
       });
     });
 
