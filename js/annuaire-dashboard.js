@@ -22,9 +22,26 @@
 
   // ── Init Supabase ──
   function initSupabase() {
+    if (supabase) return;
     if (typeof window.supabase !== 'undefined' && window.supabase.createClient) {
       supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     }
+  }
+
+  function waitForSupabase(timeout) {
+    return new Promise(function (resolve) {
+      initSupabase();
+      if (supabase) return resolve(true);
+      var elapsed = 0;
+      var interval = setInterval(function () {
+        initSupabase();
+        elapsed += 200;
+        if (supabase || elapsed >= timeout) {
+          clearInterval(interval);
+          resolve(!!supabase);
+        }
+      }, 200);
+    });
   }
 
   // ── API helpers ──
@@ -231,7 +248,7 @@
 
   // ── Init ──
   async function init() {
-    initSupabase();
+    await waitForSupabase(5000);
     if (!supabase) {
       hide($('ann-dash-loading'));
       show($('ann-dash'));

@@ -27,9 +27,26 @@
   // ── Supabase init ──────────────────────────────────────────────
   var supabase = null;
   function initSupabase() {
+    if (supabase) return;
     if (typeof window.supabase !== 'undefined' && window.supabase.createClient) {
       supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     }
+  }
+
+  function waitForSupabase(timeout) {
+    return new Promise(function (resolve) {
+      initSupabase();
+      if (supabase) return resolve(true);
+      var elapsed = 0;
+      var interval = setInterval(function () {
+        initSupabase();
+        elapsed += 200;
+        if (supabase || elapsed >= timeout) {
+          clearInterval(interval);
+          resolve(!!supabase);
+        }
+      }, 200);
+    });
   }
 
   // ── Char Counters ────────────────────────────────────────────────
@@ -398,10 +415,10 @@
     e.preventDefault();
     if (!validateStep(5)) return;
 
-    // Check Supabase is loaded
-    initSupabase();
-    if (!supabase) {
-      showError('err-consent', 'Erreur de connexion au serveur. Rechargez la page et réessayez.');
+    // Wait for Supabase SDK to load (up to 5s)
+    var sbReady = await waitForSupabase(5000);
+    if (!sbReady) {
+      showError('err-consent', 'Le service de connexion n\'a pas pu être chargé. Vérifiez votre connexion internet et rechargez la page.');
       return;
     }
 
