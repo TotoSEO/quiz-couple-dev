@@ -65,8 +65,10 @@ serve(async (req: Request) => {
       });
     }
 
-    // Service role client for operations
-    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+    // Service role client for operations (admin access for deleteUser, RLS bypass, etc.)
+    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, {
+      auth: { autoRefreshToken: false, persistSession: false },
+    });
 
     const url = new URL(req.url);
     const method = req.method;
@@ -190,9 +192,10 @@ serve(async (req: Request) => {
         console.error('[DELETE] Storage cleanup error:', storageErr);
       }
 
-      // 3. Delete auth user (requires service role — hard delete)
-      const { data: deleteData, error: deleteError } = await supabase.auth.admin.deleteUser(userId);
-      console.log(`[DELETE] deleteUser result:`, { deleteData, deleteError });
+      // 3. Delete auth user (requires service role — hard delete, not soft delete)
+      console.log(`[DELETE] Attempting auth.admin.deleteUser for ${userId}, service key present: ${!!SUPABASE_SERVICE_KEY}`);
+      const { data: deleteData, error: deleteError } = await supabase.auth.admin.deleteUser(userId, false);
+      console.log(`[DELETE] deleteUser result:`, JSON.stringify({ deleteData, deleteError }));
 
       if (deleteError) {
         console.error('[DELETE] Auth user deletion failed:', deleteError);
