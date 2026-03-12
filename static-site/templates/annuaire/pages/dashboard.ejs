@@ -91,6 +91,9 @@
         </div>
       </div>
 
+      <!-- Status banner -->
+      <div id="dash-status-banner" style="display:none; margin-bottom: 1.5rem; padding: 1rem 1.25rem; border-radius: var(--ann-radius); border: 1px solid;"></div>
+
       <!-- Nav tabs -->
       <div style="display: flex; gap: 0; margin-bottom: 2rem; border: 1px solid hsl(var(--ann-border)); border-radius: var(--ann-radius); overflow: hidden;">
         <button class="ann-auth-tab ann-auth-tab-active" data-dash-tab="profile" type="button">Ma fiche</button>
@@ -215,13 +218,13 @@
 
           <div class="ann-divider" style="margin: 1.5rem 0;"></div>
 
-          <!-- Publish toggle -->
-          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; padding: 1rem; background: hsl(var(--ann-muted) / 0.3); border-radius: var(--ann-radius);">
-            <input type="checkbox" id="prof-published" style="width: 1.25rem; height: 1.25rem; accent-color: hsl(var(--ann-primary));">
-            <div>
-              <label for="prof-published" style="font-weight: 600; cursor: pointer;">Publier ma fiche</label>
-              <p class="ann-text-muted" style="font-size: 0.8125rem;">Votre fiche sera visible dans l'annuaire une fois publiée.</p>
-            </div>
+          <!-- Publication note (admin-controlled) -->
+          <input type="hidden" id="prof-published" value="">
+          <div style="margin-bottom: 1.5rem; padding: 1rem; background: hsl(var(--ann-muted) / 0.3); border-radius: var(--ann-radius);">
+            <p class="ann-text-muted" style="font-size: 0.8125rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem;vertical-align:middle;margin-right:0.25rem"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              La publication de votre fiche est gérée par notre équipe de modération. Vous serez notifié par email lorsque votre fiche sera en ligne.
+            </p>
           </div>
 
           <div id="dash-profile-error" class="ann-form-error" style="display:none;"></div>

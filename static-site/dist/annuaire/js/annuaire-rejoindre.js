@@ -1,15 +1,20 @@
 /**
  * Annuaire — Multi-step registration form
- * Handles: step navigation, validation, char counters, recap, animations
+ * Handles: step navigation, validation, char counters, recap,
+ *          Supabase auth registration, profile creation, photo upload
  */
 (function () {
   'use strict';
+
+  var SUPABASE_URL = 'https://lojvajnnvhatfplevyvy.supabase.co';
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
 
   var form = document.getElementById('rejoindre-form');
   if (!form) return;
 
   var TOTAL_STEPS = 5;
   var currentStep = 1;
+  var photoFile = null;
 
   var steps = form.querySelectorAll('[data-form-step]');
   var progressSteps = document.querySelectorAll('.ann-progress-step');
@@ -18,6 +23,14 @@
   var btnNext = document.getElementById('btn-next');
   var btnSubmit = document.getElementById('btn-submit');
   var formSuccess = document.getElementById('form-success');
+
+  // ── Supabase init ──────────────────────────────────────────────
+  var supabase = null;
+  function initSupabase() {
+    if (typeof window.supabase !== 'undefined' && window.supabase.createClient) {
+      supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    }
+  }
 
   // ── Char Counters ────────────────────────────────────────────────
   var counters = [
@@ -50,7 +63,6 @@
         return;
       }
 
-      // Toggle visual state
       specSelector.querySelectorAll('.ann-specialty-option').forEach(function (opt) {
         var cb = opt.querySelector('input');
         opt.classList.toggle('selected', cb.checked);
@@ -65,7 +77,6 @@
     cb.addEventListener('change', function () {
       cb.closest('.ann-method-option').querySelector('.ann-method-tag').classList.toggle('selected', cb.checked);
     });
-    // Init state for pre-checked (like Français)
     if (cb.checked) {
       cb.closest('.ann-method-option').querySelector('.ann-method-tag').classList.add('selected');
     }
@@ -87,7 +98,6 @@
       });
       radio.closest('.ann-toggle-option').querySelector('.ann-toggle-btn').classList.add('selected');
     });
-    // Init
     if (radio.checked) {
       radio.closest('.ann-toggle-option').querySelector('.ann-toggle-btn').classList.add('selected');
     }
@@ -100,6 +110,63 @@
       consentCb.closest('.ann-checkbox-label').classList.toggle('checked', consentCb.checked);
       clearError('err-consent');
     });
+  }
+
+  // ── Photo Upload ─────────────────────────────────────────────────
+  var photoInput = document.getElementById('f-photo');
+  var photoPreview = document.getElementById('photo-preview');
+  var btnChoosePhoto = document.getElementById('btn-choose-photo');
+  var photoZone = document.getElementById('photo-upload-zone');
+
+  if (btnChoosePhoto && photoInput) {
+    btnChoosePhoto.addEventListener('click', function () {
+      photoInput.click();
+    });
+  }
+
+  if (photoInput) {
+    photoInput.addEventListener('change', function () {
+      var file = photoInput.files[0];
+      if (file) handlePhotoFile(file);
+    });
+  }
+
+  // Drag & drop
+  if (photoZone) {
+    photoZone.addEventListener('dragover', function (e) {
+      e.preventDefault();
+      photoZone.classList.add('dragover');
+    });
+    photoZone.addEventListener('dragleave', function () {
+      photoZone.classList.remove('dragover');
+    });
+    photoZone.addEventListener('drop', function (e) {
+      e.preventDefault();
+      photoZone.classList.remove('dragover');
+      var file = e.dataTransfer.files[0];
+      if (file && file.type.startsWith('image/')) handlePhotoFile(file);
+    });
+  }
+
+  function handlePhotoFile(file) {
+    var validTypes = ['image/jpeg', 'image/png', 'image/webp'];
+    if (!validTypes.includes(file.type)) {
+      showError('err-photo', 'Format non supporté. Utilisez JPEG, PNG ou WebP.');
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      showError('err-photo', 'Photo trop lourde (5 Mo max).');
+      return;
+    }
+
+    clearError('err-photo');
+    photoFile = file;
+
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      photoPreview.innerHTML = '<img src="' + e.target.result + '" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" alt="Aperçu photo">';
+    };
+    reader.readAsDataURL(file);
   }
 
   // ── Validation ───────────────────────────────────────────────────
@@ -142,6 +209,12 @@
       if (!email) { showError('err-email', 'L\'email est requis'); valid = false; }
       else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('err-email', 'Email invalide'); valid = false; }
       if (!val('f-telephone')) { showError('err-telephone', 'Le téléphone est requis'); valid = false; }
+      var pw = val('f-password');
+      if (!pw) { showError('err-password', 'Le mot de passe est requis'); valid = false; }
+      else if (pw.length < 8) { showError('err-password', 'Minimum 8 caractères'); valid = false; }
+      var pw2 = val('f-password2');
+      if (!pw2) { showError('err-password2', 'Confirmez le mot de passe'); valid = false; }
+      else if (pw !== pw2) { showError('err-password2', 'Les mots de passe ne correspondent pas'); valid = false; }
     }
 
     if (step === 2) {
@@ -162,6 +235,7 @@
     }
 
     if (step === 4) {
+      if (!photoFile && !photoInput.files.length) { showError('err-photo', 'La photo de profil est requise'); valid = false; }
       var desc = val('f-description');
       if (!desc) { showError('err-description', 'La description est requise'); valid = false; }
       else if (desc.length < 50) { showError('err-description', 'Minimum 50 caractères (' + desc.length + '/50)'); valid = false; }
@@ -183,7 +257,6 @@
   function goToStep(step) {
     if (step < 1 || step > TOTAL_STEPS) return;
 
-    // Animate out
     var currentEl = form.querySelector('[data-form-step="' + currentStep + '"]');
     if (currentEl) {
       currentEl.classList.remove('active');
@@ -193,38 +266,29 @@
 
     currentStep = step;
 
-    // Animate in
     setTimeout(function () {
       var nextEl = form.querySelector('[data-form-step="' + step + '"]');
       if (nextEl) nextEl.classList.add('active');
-
-      // Update progress
       updateProgress();
-
-      // Scroll to form top
       var formRect = form.getBoundingClientRect();
       if (formRect.top < 0) {
         window.scrollTo({ top: window.scrollY + formRect.top - 100, behavior: 'smooth' });
       }
     }, 150);
 
-    // If step 5 build recap
     if (step === 5) buildRecap();
   }
 
   function updateProgress() {
-    // Fill bar
     var pct = ((currentStep - 1) / (TOTAL_STEPS - 1)) * 100;
     if (progressFill) progressFill.style.width = pct + '%';
 
-    // Steps
     progressSteps.forEach(function (el) {
       var s = parseInt(el.getAttribute('data-step'), 10);
       el.classList.toggle('active', s === currentStep);
       el.classList.toggle('completed', s < currentStep);
     });
 
-    // Buttons
     btnPrev.style.display = currentStep > 1 ? '' : 'none';
     btnNext.style.display = currentStep < TOTAL_STEPS ? '' : 'none';
     btnSubmit.style.display = currentStep === TOTAL_STEPS ? '' : 'none';
@@ -234,7 +298,6 @@
     if (validateStep(currentStep)) {
       goToStep(currentStep + 1);
     } else {
-      // Shake the first error
       var firstErr = form.querySelector('.ann-field-error.visible');
       if (firstErr) {
         var group = firstErr.closest('.ann-form-group');
@@ -251,7 +314,6 @@
     goToStep(currentStep - 1);
   });
 
-  // Allow clicking progress steps to go back
   progressSteps.forEach(function (el) {
     el.addEventListener('click', function () {
       var target = parseInt(el.getAttribute('data-step'), 10);
@@ -281,7 +343,7 @@
     form.querySelectorAll('input[name="methodes"]:checked').forEach(function (cb) { methods.push(cb.value); });
     setText('recap-methodes', methods.length ? methods.join(', ') : 'Non renseigné');
 
-    setText('recap-experience', val('f-experience') ? val('f-experience') + ' ans' : '—');
+    setText('recap-experience', val('f-experience') || '—');
 
     var cabinetVal = val('f-cabinet');
     var cabinetRow = document.getElementById('recap-cabinet-row');
@@ -292,7 +354,10 @@
       cabinetRow.style.display = 'none';
     }
 
-    setText('recap-adresse', val('f-adresse') + ', ' + val('f-codepostal') + ' ' + val('f-ville'));
+    // City: get the selected option text
+    var villeSelect = document.getElementById('f-ville');
+    var villeName = villeSelect && villeSelect.selectedIndex > 0 ? villeSelect.options[villeSelect.selectedIndex].text : '—';
+    setText('recap-adresse', val('f-adresse') + ', ' + val('f-codepostal') + ' ' + villeName);
 
     var modes = [];
     form.querySelectorAll('input[name="modes"]:checked').forEach(function (cb) {
@@ -320,36 +385,187 @@
     if (el) el.textContent = text;
   }
 
-  // ── Submit ───────────────────────────────────────────────────────
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+  // ── Experience mapping ────────────────────────────────────────────
+  function experienceToYears(val) {
+    var map = { '0-2': 1, '2-5': 3, '5-10': 7, '10-20': 15, '20+': 25 };
+    return map[val] || 0;
+  }
 
+  // ── Submit: Supabase auth + profile creation ─────────────────────
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
     if (!validateStep(5)) return;
 
-    // Collect all form data
-    var data = {};
-    new FormData(form).forEach(function (value, key) {
-      if (data[key]) {
-        if (!Array.isArray(data[key])) data[key] = [data[key]];
-        data[key].push(value);
-      } else {
-        data[key] = value;
+    // Check Supabase is loaded
+    initSupabase();
+    if (!supabase) {
+      showError('err-consent', 'Erreur de connexion au serveur. Rechargez la page et réessayez.');
+      return;
+    }
+
+    var submitBtn = document.getElementById('btn-submit');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<svg class="ann-spinner" viewBox="0 0 24 24" style="width:1rem;height:1rem;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Création du compte...';
+
+    try {
+      // ── 1. Register auth account ──
+      var email = val('f-email');
+      var password = val('f-password');
+
+      var authResult = await supabase.auth.signUp({
+        email: email,
+        password: password,
+      });
+
+      if (authResult.error) {
+        if (authResult.error.message.includes('already registered')) {
+          showError('err-consent', 'Un compte existe déjà avec cet email. Connectez-vous sur votre espace professionnel.');
+        } else {
+          showError('err-consent', authResult.error.message);
+        }
+        resetSubmitBtn();
+        return;
       }
-    });
 
-    // In production: send to Supabase or API
-    // For now: show success
-    console.log('[annuaire] Registration data:', data);
+      var user = authResult.data.user;
+      var session = authResult.data.session;
 
+      // If email confirmation is required
+      if (user && !session) {
+        showSuccessWithMessage('Vérifiez votre email pour confirmer votre compte. Un lien de confirmation vous a été envoyé à <strong>' + email + '</strong>. Après confirmation, connectez-vous sur votre espace professionnel pour compléter votre fiche.');
+        return;
+      }
+
+      if (!session) {
+        showError('err-consent', 'Erreur lors de la création du compte. Réessayez.');
+        resetSubmitBtn();
+        return;
+      }
+
+      // ── 2. Upload photo ──
+      submitBtn.innerHTML = '<svg class="ann-spinner" viewBox="0 0 24 24" style="width:1rem;height:1rem;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Upload de la photo...';
+
+      var photoUrl = null;
+      if (photoFile) {
+        var ext = photoFile.name.split('.').pop().toLowerCase();
+        var storagePath = user.id + '/photo.' + ext;
+
+        var uploadResult = await supabase.storage
+          .from('annuaire-photos')
+          .upload(storagePath, photoFile, { upsert: true, contentType: photoFile.type });
+
+        if (uploadResult.error) {
+          console.warn('Photo upload failed:', uploadResult.error.message);
+        } else {
+          var urlResult = supabase.storage
+            .from('annuaire-photos')
+            .getPublicUrl(storagePath);
+          photoUrl = urlResult.data.publicUrl;
+        }
+      }
+
+      // ── 3. Create profile via edge function ──
+      submitBtn.innerHTML = '<svg class="ann-spinner" viewBox="0 0 24 24" style="width:1rem;height:1rem;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Création de votre fiche...';
+
+      // Collect specialties (use the first one as primary)
+      var specialties = [];
+      form.querySelectorAll('input[name="specialites"]:checked').forEach(function (cb) {
+        specialties.push(cb.value);
+      });
+
+      // Collect methods
+      var methods = [];
+      form.querySelectorAll('input[name="methodes"]:checked').forEach(function (cb) {
+        methods.push(cb.value);
+      });
+
+      // Collect languages
+      var languages = [];
+      form.querySelectorAll('input[name="langues"]:checked').forEach(function (cb) {
+        languages.push(cb.value);
+      });
+
+      var pmin = val('f-prix-min');
+      var pmax = val('f-prix-max');
+
+      var profileData = {
+        first_name: val('f-prenom'),
+        last_name: val('f-nom'),
+        email: email,
+        phone: val('f-telephone'),
+        specialty: specialties[0] || '',
+        city: val('f-ville'),
+        description: val('f-description'),
+        methods: methods,
+        languages: languages.length ? languages : ['Français'],
+        years_experience: experienceToYears(val('f-experience')),
+        price_range: pmin && pmax ? pmin + '€ - ' + pmax + '€' : '',
+        address: val('f-adresse') + ', ' + val('f-codepostal'),
+        availability: 'Sur rendez-vous',
+        is_published: false,
+      };
+
+      if (photoUrl) {
+        profileData.photo_url = photoUrl;
+      }
+
+      var profileRes = await fetch(SUPABASE_URL + '/functions/v1/annuaire-profile', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + session.access_token,
+        },
+        body: JSON.stringify(profileData),
+      });
+
+      var profileResult = await profileRes.json();
+
+      if (profileResult.error) {
+        console.error('Profile creation error:', profileResult.error);
+        // Account was created but profile failed — still show partial success
+        showSuccessWithMessage('Votre compte a été créé mais la fiche n\'a pas pu être enregistrée automatiquement. Connectez-vous sur votre <a href="/dashboard/" target="_blank" style="color:hsl(var(--ann-primary))">espace professionnel</a> pour compléter votre fiche.');
+        return;
+      }
+
+      // ── 4. Success! ──
+      showSuccess();
+
+    } catch (err) {
+      console.error('Registration error:', err);
+      showError('err-consent', 'Une erreur est survenue. Vérifiez votre connexion et réessayez.');
+      resetSubmitBtn();
+    }
+  });
+
+  function resetSubmitBtn() {
+    var submitBtn = document.getElementById('btn-submit');
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Soumettre pour validation';
+  }
+
+  function showSuccess() {
+    form.style.display = 'none';
+    document.getElementById('form-progress').style.display = 'none';
+    document.getElementById('form-nav').style.display = 'none';
+    formSuccess.classList.remove('hidden');
+    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function showSuccessWithMessage(msg) {
     form.style.display = 'none';
     document.getElementById('form-progress').style.display = 'none';
     document.getElementById('form-nav').style.display = 'none';
     formSuccess.classList.remove('hidden');
 
-    // Scroll to success
+    // Replace the default message
+    var msgEl = formSuccess.querySelector('.ann-text-muted');
+    if (msgEl) msgEl.innerHTML = msg;
+
     formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  });
+  }
 
   // Init
+  initSupabase();
   updateProgress();
 })();
