@@ -232,6 +232,41 @@
     });
   }
 
+  // ── Deploy ──
+
+  function triggerDeploy() {
+    var btn = document.getElementById('aadm-deploy');
+    if (!btn) return;
+    var origText = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = '<svg style="width:1rem;height:1rem;animation:spin 1s linear infinite;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg> Deploiement...';
+
+    fetch(SUPABASE_URL + '/functions/v1/trigger-deploy', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'x-admin-token': adminToken,
+      },
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.success) {
+        btn.innerHTML = '<svg style="width:1rem;height:1rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Deploiement lance !';
+        setTimeout(function () { btn.innerHTML = origText; btn.disabled = false; }, 5000);
+      } else {
+        alert('Erreur: ' + (data.error || 'Inconnue'));
+        btn.innerHTML = origText;
+        btn.disabled = false;
+      }
+    })
+    .catch(function () {
+      alert('Erreur reseau');
+      btn.innerHTML = origText;
+      btn.disabled = false;
+    });
+  }
+
   // ── Init ──
 
   function init() {
@@ -260,6 +295,10 @@
       allProfiles = [];
       loadProfiles();
     });
+
+    // Deploy button
+    var deployBtn = document.getElementById('aadm-deploy');
+    if (deployBtn) deployBtn.addEventListener('click', triggerDeploy);
 
     // Filter buttons
     document.querySelectorAll('.aadm-filter').forEach(function (btn) {
