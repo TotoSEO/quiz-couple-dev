@@ -104,6 +104,7 @@
   <!-- Annuaire JS -->
   <script src="/js/annuaire.js" defer></script>
   <% if (typeof currentPage !== 'undefined' && currentPage === 'rejoindre') { %>
+  <script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
   <script src="/js/annuaire-rejoindre.js" defer></script>
   <% } %>
   <% if (typeof currentPage !== 'undefined' && currentPage === 'dashboard') { %>

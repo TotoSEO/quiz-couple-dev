@@ -100,6 +100,20 @@
           <input type="tel" id="f-telephone" name="telephone" class="ann-input" placeholder="01 42 00 00 00" maxlength="20" required>
           <span class="ann-field-error" id="err-telephone"></span>
         </div>
+
+        <div class="ann-form-grid">
+          <div class="ann-form-group">
+            <label class="ann-label" for="f-password">Mot de passe <span class="ann-required">*</span></label>
+            <input type="password" id="f-password" name="password" class="ann-input" placeholder="Minimum 8 caractères" minlength="8" required>
+            <span class="ann-field-error" id="err-password"></span>
+          </div>
+          <div class="ann-form-group">
+            <label class="ann-label" for="f-password2">Confirmer <span class="ann-required">*</span></label>
+            <input type="password" id="f-password2" name="password2" class="ann-input" placeholder="Retapez le mot de passe" minlength="8" required>
+            <span class="ann-field-error" id="err-password2"></span>
+          </div>
+        </div>
+        <p class="ann-text-muted ann-text-sm" style="margin-top: -0.5rem;">Ce mot de passe vous permettra d'accéder à votre <a href="/dashboard/" target="_blank" rel="noopener" style="color:hsl(var(--ann-primary))">espace professionnel</a> pour modifier votre fiche.</p>
       </div>
 
       <!-- ═══ Step 2: Practice ═══ -->
@@ -198,7 +212,12 @@
 
           <div class="ann-form-group">
             <label class="ann-label" for="f-ville">Ville <span class="ann-required">*</span></label>
-            <input type="text" id="f-ville" name="ville" class="ann-input" placeholder="Paris" maxlength="100" required>
+            <select id="f-ville" name="ville" class="ann-input ann-select" required>
+              <option value="" disabled selected>Sélectionnez votre ville...</option>
+              <% for (const c of cities) { %>
+              <option value="<%= c.id %>"><%= c.name %> (<%= c.department %>)</option>
+              <% } %>
+            </select>
             <span class="ann-field-error" id="err-ville"></span>
           </div>
         </div>
@@ -237,6 +256,22 @@
         <div class="ann-form-step-header">
           <h2>Présentez-vous <span class="ann-text-gradient">aux patients</span></h2>
           <p class="ann-text-muted">C'est ce que les couples verront en premier. Soyez clair et authentique.</p>
+        </div>
+
+        <div class="ann-form-group">
+          <label class="ann-label">Photo de profil <span class="ann-required">*</span></label>
+          <div class="ann-photo-upload" id="photo-upload-zone">
+            <div class="ann-photo-preview" id="photo-preview">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:2.5rem;height:2.5rem;color:hsl(var(--ann-muted-fg))"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="ann-photo-info">
+              <button type="button" class="ann-btn ann-btn-outline ann-btn-sm" id="btn-choose-photo">Choisir une photo</button>
+              <span class="ann-text-muted ann-text-sm">JPG ou PNG, max 5 Mo. Photo de face recommandée.</span>
+            </div>
+            <input type="file" id="f-photo" name="photo" accept="image/jpeg,image/png,image/webp" class="ann-sr-only">
+          </div>
+          <p class="ann-text-muted ann-text-sm" style="margin-top: 0.5rem;">Les couples préfèrent consulter un professionnel dont ils voient le visage.</p>
+          <span class="ann-field-error" id="err-photo"></span>
         </div>
 
         <div class="ann-form-group">

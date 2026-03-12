@@ -1579,6 +1579,43 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
   line-height: 1.6;
 }
 
+/* Photo upload */
+.ann-photo-upload {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border: 2px dashed hsl(var(--ann-border));
+  border-radius: var(--ann-radius);
+  transition: border-color 0.2s;
+}
+.ann-photo-upload:hover,
+.ann-photo-upload.dragover {
+  border-color: hsl(var(--ann-primary));
+}
+.ann-photo-preview {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: hsl(var(--ann-muted) / 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.ann-photo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.ann-spinner {
+  animation: spin 1s linear infinite;
+}
+
 /* Form hint */
 .ann-form-hint {
   display: flex;
