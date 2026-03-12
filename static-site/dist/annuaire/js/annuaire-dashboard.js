@@ -396,7 +396,7 @@
         var res = await saveProfile(data, session.access_token, !currentProfile);
         if (res.error) {
           showError('dash-profile-error', res.error);
-        } else {
+        } else if (res.profile) {
           currentProfile = res.profile;
           updateProfileStatus(currentProfile);
           $('dash-profile-success').textContent = 'Fiche enregistrée avec succès !';
@@ -406,6 +406,8 @@
             link.href = '/' + (currentProfile.specialty || '') + '/' + (currentProfile.city || '') + '/' + currentProfile.slug + '/';
             show(link);
           }
+        } else {
+          showError('dash-profile-error', 'Erreur lors de l\'enregistrement. Réessayez.');
         }
       } catch (err) {
         showError('dash-profile-error', err.message || 'Erreur serveur');
