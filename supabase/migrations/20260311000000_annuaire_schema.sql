@@ -234,13 +234,11 @@ DECLARE
   counter INTEGER := 0;
 BEGIN
   -- Générer le slug de base: prenom-nom-specialite-ville
-  base_slug := lower(
-    regexp_replace(
-      unaccent(
-        NEW.first_name || '-' || NEW.last_name || '-' || NEW.specialty || '-' || NEW.city
-      ),
-      '[^a-z0-9-]', '-', 'g'
-    )
+  base_slug := regexp_replace(
+    lower(unaccent(
+      NEW.first_name || '-' || NEW.last_name || '-' || NEW.specialty || '-' || NEW.city
+    )),
+    '[^a-z0-9-]', '-', 'g'
   );
   -- Nettoyer les tirets multiples
   base_slug := regexp_replace(base_slug, '-+', '-', 'g');
