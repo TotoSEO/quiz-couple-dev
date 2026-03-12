@@ -355,8 +355,13 @@
         var img = avatarDiv.querySelector('img');
         if (img) {
           img.src = p.photo_url;
+          img.alt = 'Photo de ' + (p.first_name || '') + ' ' + (p.last_name || '');
         } else {
-          avatarDiv.innerHTML = '<img src="' + p.photo_url + '" alt="Photo de ' + (p.first_name || '') + ' ' + (p.last_name || '') + '">';
+          var newImg = document.createElement('img');
+          newImg.src = p.photo_url;
+          newImg.alt = 'Photo de ' + (p.first_name || '') + ' ' + (p.last_name || '');
+          avatarDiv.textContent = '';
+          avatarDiv.appendChild(newImg);
           avatarDiv.classList.add('ann-profile-avatar-photo');
         }
       }
