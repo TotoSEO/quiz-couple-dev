@@ -49,12 +49,14 @@
     var opts = {
       method: method || 'GET',
       headers: {
-        'Content-Type': 'application/json',
         'apikey': SUPABASE_KEY,
       },
     };
     if (token) opts.headers['Authorization'] = 'Bearer ' + token;
-    if (body) opts.body = JSON.stringify(body);
+    if (body) {
+      opts.headers['Content-Type'] = 'application/json';
+      opts.body = JSON.stringify(body);
+    }
     return fetch(SUPABASE_URL + '/functions/v1/' + endpoint, opts).then(function (r) { return r.json(); });
   }
 
