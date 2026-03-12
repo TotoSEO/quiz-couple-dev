@@ -177,8 +177,27 @@
       methods: $('prof-methods').value.split(',').map(function (m) { return m.trim(); }).filter(Boolean),
       languages: $('prof-languages').value.split(',').map(function (l) { return l.trim(); }).filter(Boolean),
       availability: $('prof-availability').value.trim() || null,
-      is_published: $('prof-published').checked,
     };
+  }
+
+  // ── Profile status banner ──
+  function updateProfileStatus(profile) {
+    var banner = $('dash-status-banner');
+    if (!banner) return;
+    if (!profile) {
+      banner.style.display = 'none';
+      return;
+    }
+    banner.style.display = '';
+    if (profile.is_published) {
+      banner.style.background = 'hsl(160 60% 45% / 0.08)';
+      banner.style.borderColor = 'hsl(160 60% 45% / 0.3)';
+      banner.innerHTML = '<div style="display:flex;align-items:center;gap:0.75rem"><svg viewBox="0 0 24 24" fill="none" stroke="hsl(160 60% 45%)" stroke-width="2" style="width:1.25rem;height:1.25rem;flex-shrink:0"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><div><strong style="color:hsl(160 60% 35%)">Fiche en ligne</strong><p style="font-size:0.8125rem;color:hsl(var(--ann-muted-fg));margin-top:0.125rem">Votre fiche est visible par les patients.</p></div></div>';
+    } else {
+      banner.style.background = 'hsl(40 90% 55% / 0.08)';
+      banner.style.borderColor = 'hsl(40 90% 55% / 0.3)';
+      banner.innerHTML = '<div style="display:flex;align-items:center;gap:0.75rem"><svg viewBox="0 0 24 24" fill="none" stroke="hsl(40 90% 45%)" stroke-width="2" style="width:1.25rem;height:1.25rem;flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div><strong style="color:hsl(40 70% 35%)">En attente de validation</strong><p style="font-size:0.8125rem;color:hsl(var(--ann-muted-fg));margin-top:0.125rem">Votre fiche est en cours de vérification par notre équipe. Ce processus prend 24h à 72h.</p></div></div>';
+    }
   }
 
   // ── Init ──
@@ -198,8 +217,24 @@
         currentProfile = await loadProfile(session.access_token);
       } catch (e) { /* no profile yet */ }
 
+      // Auto-create profile from user_metadata (post email confirmation flow)
+      if (!currentProfile && currentUser.user_metadata && currentUser.user_metadata.has_pending_profile) {
+        try {
+          var meta = currentUser.user_metadata.annuaire_profile;
+          if (meta) {
+            var res = await saveProfile(meta, session.access_token, true);
+            if (res.profile) {
+              currentProfile = res.profile;
+              // Clear the pending flag from user_metadata
+              await supabase.auth.updateUser({ data: { has_pending_profile: false } });
+            }
+          }
+        } catch (e) { console.warn('Auto-create profile failed:', e); }
+      }
+
       $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
       if (currentProfile) fillForm(currentProfile);
+      updateProfileStatus(currentProfile);
       showDashboard();
     } else {
       showAuthScreen();
