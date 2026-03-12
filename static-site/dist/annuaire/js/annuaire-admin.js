@@ -6,6 +6,7 @@
   'use strict';
 
   var SUPABASE_URL;
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
   var adminToken = null;
   var allProfiles = [];
   var currentFilter = 'all';
@@ -28,24 +29,29 @@
 
     errEl.style.display = 'none';
 
-    fetch(SUPABASE_URL + '/functions/v1/verify-admin', {
+    fetch(SUPABASE_URL + '/functions/v1/verify-annuaire-admin', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + SUPABASE_KEY },
       body: JSON.stringify({ password: pw.value.trim() }),
     })
-    .then(function (r) { return r.json(); })
+    .then(function (r) {
+      if (!r.ok && r.status === 404) {
+        throw new Error('Function verify-annuaire-admin introuvable (404). Verifiez le deploiement.');
+      }
+      return r.json();
+    })
     .then(function (data) {
       if (data.token) {
         adminToken = data.token;
         sessionStorage.setItem('ann-admin-token', adminToken);
         showDashboard();
       } else {
-        errEl.textContent = 'Mot de passe incorrect';
+        errEl.textContent = data.error || 'Mot de passe incorrect';
         errEl.style.display = 'block';
       }
     })
-    .catch(function () {
-      errEl.textContent = 'Erreur de connexion';
+    .catch(function (err) {
+      errEl.textContent = err.message || 'Erreur de connexion';
       errEl.style.display = 'block';
     });
   }
@@ -82,6 +88,7 @@
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
         'x-admin-token': adminToken,
       },
     })
@@ -97,7 +104,7 @@
     })
     .then(function (data) {
       if (!data.success) {
-        listEl.innerHTML = '<p style="text-align:center;color:hsl(0 70% 50%);padding:3rem 0;">Erreur: ' + (data.error || 'Inconnue') + '</p>';
+        listEl.innerHTML = '<p style="text-align:center;color:hsl(0 70% 50%);padding:3rem 0;">Erreur: ' + esc(data.error || 'Inconnue') + '</p>';
         return;
       }
       allProfiles = data.profiles || [];
@@ -146,7 +153,7 @@
         : '<span style="display:inline-flex;padding:0.125rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background:hsl(40 90% 55%/0.1);color:hsl(40 70% 35%);">En attente</span>';
 
       var photoHtml = p.photo_url
-        ? '<img src="' + p.photo_url + '" style="width:3rem;height:3rem;border-radius:50%;object-fit:cover;" alt="">'
+        ? '<img src="' + esc(p.photo_url) + '" style="width:3rem;height:3rem;border-radius:50%;object-fit:cover;" alt="">'
         : '<div style="width:3rem;height:3rem;border-radius:50%;background:hsl(var(--ann-muted));display:flex;align-items:center;justify-content:center;"><svg style="width:1.25rem;height:1.25rem;color:hsl(var(--ann-muted-fg));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>';
 
       var date = p.created_at ? new Date(p.created_at).toLocaleDateString('fr-FR') : '';
@@ -206,6 +213,7 @@
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
         'x-admin-token': adminToken,
       },
       body: JSON.stringify(body),

@@ -14,8 +14,6 @@
 
   var TOTAL_STEPS = 5;
   var currentStep = 1;
-  var photoFile = null;
-
   var steps = form.querySelectorAll('[data-form-step]');
   var progressSteps = document.querySelectorAll('.ann-progress-step');
   var progressFill = document.getElementById('progress-fill');
@@ -27,9 +25,26 @@
   // ── Supabase init ──────────────────────────────────────────────
   var supabase = null;
   function initSupabase() {
+    if (supabase) return;
     if (typeof window.supabase !== 'undefined' && window.supabase.createClient) {
       supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     }
+  }
+
+  function waitForSupabase(timeout) {
+    return new Promise(function (resolve) {
+      initSupabase();
+      if (supabase) return resolve(true);
+      var elapsed = 0;
+      var interval = setInterval(function () {
+        initSupabase();
+        elapsed += 200;
+        if (supabase || elapsed >= timeout) {
+          clearInterval(interval);
+          resolve(!!supabase);
+        }
+      }, 200);
+    });
   }
 
   // ── Char Counters ────────────────────────────────────────────────
@@ -51,23 +66,47 @@
     update();
   });
 
-  // ── Specialty Selection (max 3) ──────────────────────────────────
+  // ── Specialty Selection (max 2, ordered) ────────────────────────
   var specSelector = document.getElementById('specialty-selector');
+  var specOrder = []; // tracks selection order by value
+
+  function updateSpecBadges() {
+    specSelector.querySelectorAll('.ann-specialty-option').forEach(function (opt) {
+      var cb = opt.querySelector('input');
+      var existing = opt.querySelector('.ann-spec-order');
+      if (existing) existing.remove();
+
+      opt.classList.toggle('selected', cb.checked);
+
+      if (cb.checked) {
+        var idx = specOrder.indexOf(cb.value);
+        if (idx !== -1) {
+          var badge = document.createElement('span');
+          badge.className = 'ann-spec-order';
+          badge.textContent = idx + 1;
+          badge.style.cssText = 'display:inline-flex;align-items:center;justify-content:center;width:1.25rem;height:1.25rem;border-radius:50%;background:hsl(var(--ann-primary));color:white;font-size:0.7rem;font-weight:700;margin-left:auto;flex-shrink:0;';
+          opt.appendChild(badge);
+        }
+      }
+    });
+  }
+
   if (specSelector) {
     specSelector.addEventListener('change', function (e) {
       if (!e.target.matches('input[type="checkbox"]')) return;
 
-      var checked = specSelector.querySelectorAll('input:checked');
-      if (checked.length > 3) {
-        e.target.checked = false;
-        return;
+      if (e.target.checked) {
+        if (specOrder.length >= 2) {
+          e.target.checked = false;
+          return;
+        }
+        specOrder.push(e.target.value);
+      } else {
+        var removeIdx = specOrder.indexOf(e.target.value);
+        if (removeIdx !== -1) specOrder.splice(removeIdx, 1);
       }
 
-      specSelector.querySelectorAll('.ann-specialty-option').forEach(function (opt) {
-        var cb = opt.querySelector('input');
-        opt.classList.toggle('selected', cb.checked);
-      });
-
+      updateSpecBadges();
       clearError('err-specialites');
     });
   }
@@ -112,63 +151,6 @@
     });
   }
 
-  // ── Photo Upload ─────────────────────────────────────────────────
-  var photoInput = document.getElementById('f-photo');
-  var photoPreview = document.getElementById('photo-preview');
-  var btnChoosePhoto = document.getElementById('btn-choose-photo');
-  var photoZone = document.getElementById('photo-upload-zone');
-
-  if (btnChoosePhoto && photoInput) {
-    btnChoosePhoto.addEventListener('click', function () {
-      photoInput.click();
-    });
-  }
-
-  if (photoInput) {
-    photoInput.addEventListener('change', function () {
-      var file = photoInput.files[0];
-      if (file) handlePhotoFile(file);
-    });
-  }
-
-  // Drag & drop
-  if (photoZone) {
-    photoZone.addEventListener('dragover', function (e) {
-      e.preventDefault();
-      photoZone.classList.add('dragover');
-    });
-    photoZone.addEventListener('dragleave', function () {
-      photoZone.classList.remove('dragover');
-    });
-    photoZone.addEventListener('drop', function (e) {
-      e.preventDefault();
-      photoZone.classList.remove('dragover');
-      var file = e.dataTransfer.files[0];
-      if (file && file.type.startsWith('image/')) handlePhotoFile(file);
-    });
-  }
-
-  function handlePhotoFile(file) {
-    var validTypes = ['image/jpeg', 'image/png', 'image/webp'];
-    if (!validTypes.includes(file.type)) {
-      showError('err-photo', 'Format non supporté. Utilisez JPEG, PNG ou WebP.');
-      return;
-    }
-    if (file.size > 5 * 1024 * 1024) {
-      showError('err-photo', 'Photo trop lourde (5 Mo max).');
-      return;
-    }
-
-    clearError('err-photo');
-    photoFile = file;
-
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      photoPreview.innerHTML = '<img src="' + e.target.result + '" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" alt="Aperçu photo">';
-    };
-    reader.readAsDataURL(file);
-  }
-
   // ── Validation ───────────────────────────────────────────────────
   function showError(id, msg) {
     var el = document.getElementById(id);
@@ -211,7 +193,9 @@
       if (!val('f-telephone')) { showError('err-telephone', 'Le téléphone est requis'); valid = false; }
       var pw = val('f-password');
       if (!pw) { showError('err-password', 'Le mot de passe est requis'); valid = false; }
-      else if (pw.length < 8) { showError('err-password', 'Minimum 8 caractères'); valid = false; }
+      else if (pw.length < 10) { showError('err-password', 'Minimum 10 caractères'); valid = false; }
+      else if (!/[A-Z]/.test(pw)) { showError('err-password', 'Le mot de passe doit contenir au moins une majuscule'); valid = false; }
+      else if (!/[^a-zA-Z0-9]/.test(pw)) { showError('err-password', 'Le mot de passe doit contenir au moins un caractère spécial'); valid = false; }
       var pw2 = val('f-password2');
       if (!pw2) { showError('err-password2', 'Confirmez le mot de passe'); valid = false; }
       else if (pw !== pw2) { showError('err-password2', 'Les mots de passe ne correspondent pas'); valid = false; }
@@ -235,7 +219,6 @@
     }
 
     if (step === 4) {
-      if (!photoFile && !photoInput.files.length) { showError('err-photo', 'La photo de profil est requise'); valid = false; }
       var desc = val('f-description');
       if (!desc) { showError('err-description', 'La description est requise'); valid = false; }
       else if (desc.length < 50) { showError('err-description', 'Minimum 50 caractères (' + desc.length + '/50)'); valid = false; }
@@ -331,10 +314,24 @@
     setText('recap-telephone', val('f-telephone'));
 
     var specs = [];
-    form.querySelectorAll('input[name="specialites"]:checked').forEach(function (cb) {
-      var label = cb.closest('.ann-specialty-option');
-      if (label) specs.push(label.querySelector('.ann-specialty-name').textContent);
-    });
+    var orderedValues = specOrder.length ? specOrder : [];
+    if (orderedValues.length) {
+      orderedValues.forEach(function (v, i) {
+        var cb = specSelector.querySelector('input[value="' + v + '"]');
+        if (cb) {
+          var label = cb.closest('.ann-specialty-option');
+          if (label) {
+            var name = label.querySelector('.ann-specialty-name').textContent;
+            specs.push(i === 0 ? name + ' (principale)' : name);
+          }
+        }
+      });
+    } else {
+      form.querySelectorAll('input[name="specialites"]:checked').forEach(function (cb) {
+        var label = cb.closest('.ann-specialty-option');
+        if (label) specs.push(label.querySelector('.ann-specialty-name').textContent);
+      });
+    }
     setText('recap-specialites', specs.join(', ') || '—');
 
     setText('recap-titre', val('f-titre'));
@@ -343,7 +340,9 @@
     form.querySelectorAll('input[name="methodes"]:checked').forEach(function (cb) { methods.push(cb.value); });
     setText('recap-methodes', methods.length ? methods.join(', ') : 'Non renseigné');
 
-    setText('recap-experience', val('f-experience') || '—');
+    var expSelect = document.getElementById('f-experience');
+    var expText = expSelect && expSelect.selectedIndex > 0 ? expSelect.options[expSelect.selectedIndex].text : '—';
+    setText('recap-experience', expText);
 
     var cabinetVal = val('f-cabinet');
     var cabinetRow = document.getElementById('recap-cabinet-row');
@@ -396,10 +395,10 @@
     e.preventDefault();
     if (!validateStep(5)) return;
 
-    // Check Supabase is loaded
-    initSupabase();
-    if (!supabase) {
-      showError('err-consent', 'Erreur de connexion au serveur. Rechargez la page et réessayez.');
+    // Wait for Supabase SDK to load (up to 5s)
+    var sbReady = await waitForSupabase(5000);
+    if (!sbReady) {
+      showError('err-consent', 'Le service de connexion n\'a pas pu être chargé. Vérifiez votre connexion internet et rechargez la page.');
       return;
     }
 
@@ -412,11 +411,13 @@
       var email = val('f-email');
       var password = val('f-password');
 
-      // Collect specialties (use the first one as primary)
-      var specialties = [];
-      form.querySelectorAll('input[name="specialites"]:checked').forEach(function (cb) {
-        specialties.push(cb.value);
-      });
+      // Collect specialties in selection order (first = primary)
+      var specialties = specOrder.length ? specOrder.slice() : [];
+      if (!specialties.length) {
+        form.querySelectorAll('input[name="specialites"]:checked').forEach(function (cb) {
+          specialties.push(cb.value);
+        });
+      }
 
       // Collect methods
       var methods = [];
@@ -445,7 +446,10 @@
         languages: languages.length ? languages : ['Français'],
         years_experience: experienceToYears(val('f-experience')),
         price_range: pmin && pmax ? pmin + '€ - ' + pmax + '€' : '',
-        address: val('f-adresse') + ', ' + val('f-codepostal'),
+        address: val('f-adresse') + ', ' + val('f-codepostal') + ' ' + (function () {
+          var vs = document.getElementById('f-ville');
+          return vs && vs.selectedIndex > 0 ? vs.options[vs.selectedIndex].text.replace(/\s*\(.*\)$/, '') : '';
+        })(),
         availability: 'Sur rendez-vous',
         is_published: false,
       };
@@ -476,31 +480,14 @@
       var user = authResult.data.user;
       var session = authResult.data.session;
 
-      // ── 3. Upload photo (if we have a session, upload now; otherwise store info for later) ──
-      var photoUrl = null;
-      if (session && photoFile) {
-        submitBtn.innerHTML = '<svg class="ann-spinner" viewBox="0 0 24 24" style="width:1rem;height:1rem;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Upload de la photo...';
-
-        var ext = photoFile.name.split('.').pop().toLowerCase();
-        var storagePath = user.id + '/photo.' + ext;
-
-        var uploadResult = await supabase.storage
-          .from('annuaire-photos')
-          .upload(storagePath, photoFile, { upsert: true, contentType: photoFile.type });
-
-        if (uploadResult.error) {
-          console.warn('Photo upload failed:', uploadResult.error.message);
-        } else {
-          var urlResult = supabase.storage
-            .from('annuaire-photos')
-            .getPublicUrl(storagePath);
-          photoUrl = urlResult.data.publicUrl;
-        }
-      }
-
-      // If email confirmation is required (no session yet)
+      // ── 3. If email confirmation is required (no session yet) ──
       if (user && !session) {
-        // Photo will need to be uploaded after email confirmation on dashboard
+        // Detect fake/obfuscated user (Supabase returns this for already-existing emails)
+        if (user.identities && user.identities.length === 0) {
+          showError('err-consent', 'Un compte existe déjà avec cet email. Connectez-vous sur votre espace professionnel.');
+          resetSubmitBtn();
+          return;
+        }
         // Profile data is stored in user_metadata and will be auto-created on first dashboard login
         showSuccess();
         return;
@@ -514,10 +501,6 @@
 
       // ── 4. Create profile via edge function ──
       submitBtn.innerHTML = '<svg class="ann-spinner" viewBox="0 0 24 24" style="width:1rem;height:1rem;animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Création de votre fiche...';
-
-      if (photoUrl) {
-        profileData.photo_url = photoUrl;
-      }
 
       var profileRes = await fetch(SUPABASE_URL + '/functions/v1/annuaire-profile', {
         method: 'POST',
