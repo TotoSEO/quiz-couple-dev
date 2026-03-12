@@ -88,8 +88,30 @@
   // ── Auth ──
   async function checkAuth() {
     if (!supabase) return null;
+    // First try cached session
     var { data } = await supabase.auth.getSession();
-    return data.session;
+    if (data.session) return data.session;
+    // If no session but URL has auth params (email confirmation redirect),
+    // wait for Supabase to process them
+    var hash = window.location.hash;
+    var search = window.location.search;
+    if (hash.includes('access_token') || hash.includes('type=') || search.includes('code=')) {
+      return new Promise(function (resolve) {
+        var timeout = setTimeout(function () { resolve(null); }, 5000);
+        var { data: listener } = supabase.auth.onAuthStateChange(function (event, session) {
+          if (session) {
+            clearTimeout(timeout);
+            listener.subscription.unsubscribe();
+            // Clean URL
+            if (window.history.replaceState) {
+              window.history.replaceState(null, '', window.location.pathname);
+            }
+            resolve(session);
+          }
+        });
+      });
+    }
+    return null;
   }
 
   async function login(email, password) {
