@@ -169,7 +169,8 @@
 
     // Photo preview
     if (profile.photo_url) {
-      $('dash-photo-preview').innerHTML = '<img src="' + profile.photo_url + '" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" alt="Photo de profil">';
+      var safeUrl = profile.photo_url.replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; });
+      $('dash-photo-preview').innerHTML = '<img src="' + safeUrl + '" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" alt="Photo de profil">';
     }
 
     // View profile link

@@ -99,7 +99,7 @@
     })
     .then(function (data) {
       if (!data.success) {
-        listEl.innerHTML = '<p style="text-align:center;color:hsl(0 70% 50%);padding:3rem 0;">Erreur: ' + (data.error || 'Inconnue') + '</p>';
+        listEl.innerHTML = '<p style="text-align:center;color:hsl(0 70% 50%);padding:3rem 0;">Erreur: ' + esc(data.error || 'Inconnue') + '</p>';
         return;
       }
       allProfiles = data.profiles || [];
@@ -148,7 +148,7 @@
         : '<span style="display:inline-flex;padding:0.125rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background:hsl(40 90% 55%/0.1);color:hsl(40 70% 35%);">En attente</span>';
 
       var photoHtml = p.photo_url
-        ? '<img src="' + p.photo_url + '" style="width:3rem;height:3rem;border-radius:50%;object-fit:cover;" alt="">'
+        ? '<img src="' + esc(p.photo_url) + '" style="width:3rem;height:3rem;border-radius:50%;object-fit:cover;" alt="">'
         : '<div style="width:3rem;height:3rem;border-radius:50%;background:hsl(var(--ann-muted));display:flex;align-items:center;justify-content:center;"><svg style="width:1.25rem;height:1.25rem;color:hsl(var(--ann-muted-fg));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>';
 
       var date = p.created_at ? new Date(p.created_at).toLocaleDateString('fr-FR') : '';
