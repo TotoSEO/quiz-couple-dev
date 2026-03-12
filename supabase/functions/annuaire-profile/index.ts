@@ -192,14 +192,22 @@ serve(async (req: Request) => {
         console.error('[DELETE] Storage cleanup error:', storageErr);
       }
 
-      // 3. Delete auth user (requires service role — hard delete, not soft delete)
-      console.log(`[DELETE] Attempting auth.admin.deleteUser for ${userId}, service key present: ${!!SUPABASE_SERVICE_KEY}`);
-      const { data: deleteData, error: deleteError } = await supabase.auth.admin.deleteUser(userId, false);
-      console.log(`[DELETE] deleteUser result:`, JSON.stringify({ deleteData, deleteError }));
+      // 3. Delete auth user via direct API call (most reliable method)
+      console.log(`[DELETE] Calling Auth Admin API to delete user ${userId}`);
+      const deleteRes = await fetch(`${SUPABASE_URL}/auth/v1/admin/users/${userId}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${SUPABASE_SERVICE_KEY}`,
+          'apikey': SUPABASE_SERVICE_KEY,
+        },
+      });
 
-      if (deleteError) {
-        console.error('[DELETE] Auth user deletion failed:', deleteError);
-        return new Response(JSON.stringify({ error: 'Impossible de supprimer le compte: ' + deleteError.message }), {
+      console.log(`[DELETE] Auth Admin API response: ${deleteRes.status}`);
+
+      if (!deleteRes.ok) {
+        const errBody = await deleteRes.text();
+        console.error(`[DELETE] Auth user deletion failed: ${deleteRes.status} ${errBody}`);
+        return new Response(JSON.stringify({ error: 'Impossible de supprimer le compte utilisateur.' }), {
           status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
       }
