@@ -190,6 +190,24 @@
       $('dash-photo-preview').innerHTML = '<img src="' + safeUrl + '" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" alt="Photo de profil">';
     }
 
+    // Google Place ID (Boost only)
+    if (profile.google_place_id) {
+      var gpi = $('prof-google-place-id');
+      if (gpi) gpi.value = profile.google_place_id;
+    }
+
+    // Show Google Reviews section for Boost users
+    var googleSection = $('dash-google-reviews-section');
+    if (googleSection && profile.plan === 'boost') {
+      show(googleSection);
+      // Show current reviews status
+      if (profile.rating > 0 || profile.review_count > 0) {
+        var statusEl = $('dash-google-reviews-status');
+        statusEl.innerHTML = '<strong>Avis synchronisés :</strong> ' + profile.rating + '/5 (' + profile.review_count + ' avis)';
+        show(statusEl);
+      }
+    }
+
     // View profile link
     if (profile.slug && profile.is_published) {
       var link = $('dash-view-profile');
@@ -215,6 +233,12 @@
       languages: $('prof-languages').value.split(',').map(function (l) { return l.trim(); }).filter(Boolean),
       availability: $('prof-availability').value.trim() || null,
     };
+    // Include google_place_id if Boost user has the field visible
+    var gpiInput = $('prof-google-place-id');
+    if (gpiInput && $('dash-google-reviews-section') && $('dash-google-reviews-section').style.display !== 'none') {
+      data.google_place_id = gpiInput.value.trim() || null;
+    }
+    return data;
   }
 
   // ── Profile status banner ──

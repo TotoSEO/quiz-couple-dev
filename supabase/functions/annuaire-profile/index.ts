@@ -291,6 +291,12 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
     if (url && !url.includes('supabase.co/storage')) return { error: 'URL photo invalide.' };
     result.photo_url = url || null;
   }
+  if (body.google_place_id !== undefined) {
+    const gpi = sanitize(body.google_place_id, 200);
+    // Basic validation: Google Place IDs start with "ChIJ" or similar patterns
+    if (gpi && gpi.length < 10) return { error: 'Google Place ID invalide.' };
+    result.google_place_id = gpi || null;
+  }
   // is_published is admin-only — users cannot set their own publication status
 
   return result;

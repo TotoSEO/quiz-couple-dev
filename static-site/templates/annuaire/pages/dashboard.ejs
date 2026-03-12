@@ -261,9 +261,29 @@
 
           <div class="ann-divider" style="margin: 1.5rem 0;"></div>
 
+          <!-- Google Reviews (Boost only) -->
+          <div id="dash-google-reviews-section" style="display: none;">
+            <div class="ann-divider" style="margin: 1.5rem 0;"></div>
+            <h3 style="margin-bottom: 0.5rem; font-size: 1rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;vertical-align:middle;margin-right:0.25rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Avis Google
+            </h3>
+            <p class="ann-text-muted" style="font-size: 0.8125rem; margin-bottom: 1rem; line-height: 1.6;">
+              Connectez votre fiche Google Business pour afficher automatiquement vos avis. La note moyenne, le nombre total d'avis et vos 3 derniers avis seront synchronisés chaque mois.
+            </p>
+            <div class="ann-form-group">
+              <label class="ann-form-label" for="prof-google-place-id">Google Place ID</label>
+              <input class="ann-form-input" type="text" id="prof-google-place-id" placeholder="ChIJ... (trouvable sur Google Maps)" maxlength="200">
+              <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.25rem;">
+                Trouvez votre Place ID sur <a href="https://developers.google.com/maps/documentation/places/web-service/place-id" target="_blank" rel="noopener" style="color:hsl(var(--ann-primary))">Google Place ID Finder</a>
+              </p>
+            </div>
+            <div id="dash-google-reviews-status" style="display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; border-radius: var(--ann-radius); background: hsl(var(--ann-muted) / 0.3); font-size: 0.8125rem;"></div>
+          </div>
+
           <!-- Publication note (admin-controlled) -->
           <input type="hidden" id="prof-published" value="">
-          <div style="margin-bottom: 1.5rem; padding: 1rem; background: hsl(var(--ann-muted) / 0.3); border-radius: var(--ann-radius);">
+          <div style="margin-bottom: 1.5rem; margin-top: 1.5rem; padding: 1rem; background: hsl(var(--ann-muted) / 0.3); border-radius: var(--ann-radius);">
             <p class="ann-text-muted" style="font-size: 0.8125rem;">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem;vertical-align:middle;margin-right:0.25rem"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
               La publication de votre fiche est gérée par notre équipe de modération. Vous serez notifié par email lorsque votre fiche sera en ligne.

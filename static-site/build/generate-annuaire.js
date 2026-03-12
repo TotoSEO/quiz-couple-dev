@@ -69,6 +69,40 @@ async function writePage(outputPath, html) {
 // ── Shared template data ─────────────────────────────────────────────────
 
 let liveProfessionals = null;
+let liveGoogleReviews = null;
+
+async function fetchGoogleReviews(url, key) {
+  try {
+    const res = await fetch(`${url}/rest/v1/annuaire_google_reviews?select=*&order=time.desc`, {
+      headers: {
+        'apikey': key,
+        'Authorization': `Bearer ${key}`,
+        'Content-Type': 'application/json',
+      },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = await res.json();
+    console.log(`[annuaire] Fetched ${rows.length} Google reviews from Supabase`);
+
+    // Group by professional_id
+    const byPro = {};
+    for (const r of rows) {
+      if (!byPro[r.professional_id]) byPro[r.professional_id] = [];
+      byPro[r.professional_id].push({
+        authorName: r.author_name,
+        authorPhotoUrl: r.author_photo_url,
+        rating: r.rating,
+        text: r.text || '',
+        relativeTime: r.relative_time_description || '',
+        time: r.time,
+      });
+    }
+    return byPro;
+  } catch (err) {
+    console.warn(`[annuaire] Google reviews fetch failed: ${err.message}`);
+    return null;
+  }
+}
 
 async function fetchLiveProfessionals() {
   const url = process.env.SUPABASE_URL;
@@ -114,7 +148,11 @@ async function fetchLiveProfessionals() {
       reviewCount: r.review_count || 0,
       availability: r.availability || 'Sur rendez-vous',
       premium: r.plan === 'pro' || r.plan === 'boost',
+      googlePlaceId: r.google_place_id || null,
     }));
+
+    // Also fetch Google reviews
+    liveGoogleReviews = await fetchGoogleReviews(url, key);
   } catch (err) {
     console.warn(`[annuaire] Supabase fetch failed: ${err.message} — using mock data`);
     return null;
@@ -320,11 +358,15 @@ async function generateProfessionalPages() {
     const proSpec = getSpecialtyById(pro.specialty);
     const proCity = getCityById(pro.city);
     const proPath = `${pro.specialty}/${pro.city}/${pro.slug}`;
+    // Get Google reviews for this professional
+    const googleReviews = (liveGoogleReviews && liveGoogleReviews[pro.id]) || [];
+
     const data = {
       ...getSharedData(),
       pro,
       proSpec,
       proCity,
+      googleReviews,
       metaTitle: `${pro.firstName} ${pro.lastName} — ${proSpec ? proSpec.name : ''} à ${proCity ? proCity.name : ''}`,
       metaDescription: `${pro.firstName} ${pro.lastName}, ${proSpec ? proSpec.name.toLowerCase() : ''} à ${proCity ? proCity.name : ''} | ${pro.yearsExperience} ans d'expérience, ${pro.priceRange}. Prenez rendez-vous en ligne.`,
       canonical: getAnnuaireUrl(`/${proPath}/`),
