@@ -71,6 +71,7 @@
         }
         return json;
       });
+    });
   }
 
   // ── DOM helpers ──
