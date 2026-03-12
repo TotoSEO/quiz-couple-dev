@@ -36,11 +36,54 @@
           </div>
           <div class="ann-form-group">
             <label class="ann-form-label" for="login-password">Mot de passe</label>
-            <input class="ann-form-input" type="password" id="login-password" required placeholder="••••••••" minlength="8">
+            <input class="ann-form-input" type="password" id="login-password" required placeholder="••••••••" minlength="10">
           </div>
           <div id="auth-login-error" class="ann-form-error" style="display:none;"></div>
           <button type="submit" class="ann-btn ann-btn-primary ann-btn-full" style="margin-top: 0.5rem;">
             Se connecter
+          </button>
+          <p style="text-align:center;margin-top:0.75rem;">
+            <a href="#" id="forgot-password-link" style="font-size:0.8125rem;color:hsl(var(--ann-primary));text-decoration:none;">J'ai oublié mon mot de passe</a>
+          </p>
+        </form>
+
+        <!-- Forgot password form -->
+        <form id="auth-forgot-form" style="display: none;">
+          <p class="ann-text-muted" style="font-size:0.875rem;margin-bottom:1rem;">Entrez votre adresse email pour recevoir un lien de réinitialisation.</p>
+          <div class="ann-form-group">
+            <label class="ann-form-label" for="forgot-email">Email</label>
+            <input class="ann-form-input" type="email" id="forgot-email" required placeholder="votre@email.com">
+          </div>
+          <div id="auth-forgot-error" class="ann-form-error" style="display:none;"></div>
+          <div id="auth-forgot-success" class="ann-form-success" style="display:none;"></div>
+          <button type="submit" class="ann-btn ann-btn-primary ann-btn-full" style="margin-top: 0.5rem;">
+            Envoyer le lien
+          </button>
+          <p style="text-align:center;margin-top:0.75rem;">
+            <a href="#" id="back-to-login-link" style="font-size:0.8125rem;color:hsl(var(--ann-primary));text-decoration:none;">Retour à la connexion</a>
+          </p>
+        </form>
+
+        <!-- Reset password form (shown after recovery redirect) -->
+        <form id="auth-reset-form" style="display: none;">
+          <h2 style="font-size:1.25rem;margin-bottom:1rem;text-align:center;">
+            <span class="ann-text-gradient">Nouveau mot de passe</span>
+          </h2>
+          <p class="ann-text-muted" style="font-size:0.8125rem;margin-bottom:1rem;">
+            10 caractères minimum, 1 majuscule, 1 caractère spécial.
+          </p>
+          <div class="ann-form-group">
+            <label class="ann-form-label" for="reset-password">Nouveau mot de passe</label>
+            <input class="ann-form-input" type="password" id="reset-password" required placeholder="Minimum 10 caractères" minlength="10">
+          </div>
+          <div class="ann-form-group">
+            <label class="ann-form-label" for="reset-password2">Confirmer</label>
+            <input class="ann-form-input" type="password" id="reset-password2" required placeholder="Retapez le mot de passe" minlength="10">
+          </div>
+          <div id="auth-reset-error" class="ann-form-error" style="display:none;"></div>
+          <div id="auth-reset-success" class="ann-form-success" style="display:none;"></div>
+          <button type="submit" class="ann-btn ann-btn-primary ann-btn-full" style="margin-top: 0.5rem;">
+            Enregistrer le nouveau mot de passe
           </button>
         </form>
 
@@ -52,11 +95,11 @@
           </div>
           <div class="ann-form-group">
             <label class="ann-form-label" for="reg-password">Mot de passe</label>
-            <input class="ann-form-input" type="password" id="reg-password" required placeholder="Minimum 8 caractères" minlength="8">
+            <input class="ann-form-input" type="password" id="reg-password" required placeholder="10 car. min, 1 majuscule, 1 spécial" minlength="10">
           </div>
           <div class="ann-form-group">
             <label class="ann-form-label" for="reg-password2">Confirmer le mot de passe</label>
-            <input class="ann-form-input" type="password" id="reg-password2" required placeholder="Retapez votre mot de passe" minlength="8">
+            <input class="ann-form-input" type="password" id="reg-password2" required placeholder="Retapez votre mot de passe" minlength="10">
           </div>
           <div id="auth-register-error" class="ann-form-error" style="display:none;"></div>
           <button type="submit" class="ann-btn ann-btn-primary ann-btn-full" style="margin-top: 0.5rem;">

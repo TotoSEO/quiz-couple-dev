@@ -284,6 +284,36 @@ async function generateSpecialtyCityPages() {
   console.log(`[annuaire] Generated: ${count} specialty×city pages`);
 }
 
+async function generateAdminPage() {
+  const data = {
+    ...getSharedData(),
+    metaTitle: 'Administration Annuaire',
+    metaDescription: 'Espace d\'administration de l\'annuaire des professionnels du couple.',
+    canonical: getAnnuaireUrl('/admin/'),
+    currentPage: 'admin',
+    noindex: true,
+  };
+
+  const html = renderTemplate('admin', data);
+  await writePage(path.join(DIST_DIR, 'admin/index.html'), html);
+  console.log('[annuaire] Generated: /admin/');
+}
+
+async function generate404Page() {
+  const data = {
+    ...getSharedData(),
+    metaTitle: 'Page introuvable — Annuaire',
+    metaDescription: 'La page que vous cherchez n\'existe pas.',
+    canonical: getAnnuaireUrl('/'),
+    currentPage: '404',
+    noindex: true,
+  };
+
+  const html = renderTemplate('404', data);
+  await writePage(path.join(DIST_DIR, '404.html'), html);
+  console.log('[annuaire] Generated: /404.html');
+}
+
 async function generateProfessionalPages() {
   const professionals = liveProfessionals || MOCK_PROFESSIONALS;
   for (const pro of professionals) {
@@ -337,6 +367,11 @@ function copyAssets() {
     fs.copyFileSync(jsDashboardSrc, path.join(jsDir, 'annuaire-dashboard.js'));
     console.log('[annuaire] Copied: /js/annuaire-dashboard.js');
   }
+  const jsAdminSrc = path.resolve(__dirname, '../js/annuaire-admin.js');
+  if (fs.existsSync(jsAdminSrc)) {
+    fs.copyFileSync(jsAdminSrc, path.join(jsDir, 'annuaire-admin.js'));
+    console.log('[annuaire] Copied: /js/annuaire-admin.js');
+  }
 }
 
 // ── Main ─────────────────────────────────────────────────────────────────
@@ -356,6 +391,8 @@ async function main() {
   await generateRejoindrePage();
   await generateTarifsPage();
   await generateDashboardPage();
+  await generateAdminPage();
+  await generate404Page();
   await generateSpecialtyPages();
   await generateCityPages();
   await generateSpecialtyCityPages();

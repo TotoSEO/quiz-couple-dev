@@ -264,9 +264,7 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
     if (url && !url.includes('supabase.co/storage')) return { error: 'URL photo invalide.' };
     result.photo_url = url || null;
   }
-  if (body.is_published !== undefined) {
-    result.is_published = Boolean(body.is_published);
-  }
+  // is_published is admin-only — users cannot set their own publication status
 
   return result;
 }

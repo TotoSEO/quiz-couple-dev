@@ -1,6 +1,6 @@
 /**
  * Annuaire Dashboard — Client-side JavaScript
- * Handles: Auth, Profile CRUD, Photo upload, Stats
+ * Handles: Auth, Profile CRUD, Photo upload, Stats, Forgot/Reset password
  */
 (function () {
   'use strict';
@@ -11,6 +11,14 @@
   var supabase = null;
   var currentUser = null;
   var currentProfile = null;
+
+  // ── Password validation ──
+  function validatePassword(pw) {
+    if (pw.length < 10) return 'Minimum 10 caractères.';
+    if (!/[A-Z]/.test(pw)) return 'Le mot de passe doit contenir au moins une majuscule.';
+    if (!/[^a-zA-Z0-9]/.test(pw)) return 'Le mot de passe doit contenir au moins un caractère spécial.';
+    return null;
+  }
 
   // ── Init Supabase ──
   function initSupabase() {
@@ -39,11 +47,15 @@
   function hide(el) { if (el) el.style.display = 'none'; }
   function showError(id, msg) {
     var el = $(id);
-    if (el) { el.textContent = msg; el.style.display = 'block'; }
+    if (el) { el.textContent = msg; el.style.display = 'block'; el.style.color = ''; }
   }
   function hideError(id) {
     var el = $(id);
     if (el) el.style.display = 'none';
+  }
+  function showSuccess(id, msg) {
+    var el = $(id);
+    if (el) { el.textContent = msg; el.style.display = 'block'; }
   }
 
   // ── Auth ──
@@ -126,6 +138,14 @@
     show($('dash-main'));
   }
 
+  function showAuthForm(formId) {
+    hide($('auth-login-form'));
+    hide($('auth-register-form'));
+    hide($('auth-forgot-form'));
+    hide($('auth-reset-form'));
+    show($(formId));
+  }
+
   function fillForm(profile) {
     if (!profile) return;
     $('prof-firstname').value = profile.first_name || '';
@@ -142,7 +162,6 @@
     $('prof-methods').value = (profile.methods || []).join(', ');
     $('prof-languages').value = (profile.languages || []).join(', ');
     $('prof-availability').value = profile.availability || '';
-    $('prof-published').checked = profile.is_published || false;
 
     // Update char count
     var descEl = $('prof-description');
@@ -200,6 +219,15 @@
     }
   }
 
+  // ── Detect recovery redirect (password reset flow) ──
+  function isRecoveryRedirect() {
+    var hash = window.location.hash;
+    if (hash && hash.includes('type=recovery')) return true;
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('type') === 'recovery') return true;
+    return false;
+  }
+
   // ── Init ──
   async function init() {
     initSupabase();
@@ -207,6 +235,18 @@
       hide($('ann-dash-loading'));
       show($('ann-dash'));
       show($('dash-auth'));
+      return;
+    }
+
+    // Check if this is a password recovery redirect
+    if (isRecoveryRedirect()) {
+      hide($('ann-dash-loading'));
+      show($('ann-dash'));
+      show($('dash-auth'));
+      showAuthForm('auth-reset-form');
+      bindResetForm();
+      bindForgotPassword();
+      bindAuthTabs();
       return;
     }
 
@@ -232,68 +272,31 @@
         } catch (e) { console.warn('Auto-create profile failed:', e); }
       }
 
-      $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
-      if (currentProfile) fillForm(currentProfile);
-      updateProfileStatus(currentProfile);
-      showDashboard();
+      // Check if account is approved (profile exists but not published)
+      if (currentProfile && !currentProfile.is_published) {
+        $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
+        fillForm(currentProfile);
+        updateProfileStatus(currentProfile);
+        showDashboard();
+      } else if (currentProfile && currentProfile.is_published) {
+        $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
+        fillForm(currentProfile);
+        updateProfileStatus(currentProfile);
+        showDashboard();
+      } else {
+        // No profile yet — show dashboard so they can create one
+        $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
+        showDashboard();
+      }
     } else {
       showAuthScreen();
     }
 
-    // ── Auth tab toggle ──
-    $('auth-tab-login').addEventListener('click', function () {
-      this.classList.add('ann-auth-tab-active');
-      $('auth-tab-register').classList.remove('ann-auth-tab-active');
-      show($('auth-login-form'));
-      hide($('auth-register-form'));
-    });
-    $('auth-tab-register').addEventListener('click', function () {
-      this.classList.add('ann-auth-tab-active');
-      $('auth-tab-login').classList.remove('ann-auth-tab-active');
-      hide($('auth-login-form'));
-      show($('auth-register-form'));
-    });
-
-    // ── Login form ──
-    $('auth-login-form').addEventListener('submit', async function (e) {
-      e.preventDefault();
-      hideError('auth-login-error');
-      try {
-        var data = await login($('login-email').value.trim(), $('login-password').value);
-        currentUser = data.user;
-        currentProfile = await loadProfile(data.session.access_token);
-        $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
-        if (currentProfile) fillForm(currentProfile);
-        showDashboard();
-      } catch (err) {
-        showError('auth-login-error', err.message || 'Erreur de connexion');
-      }
-    });
-
-    // ── Register form ──
-    $('auth-register-form').addEventListener('submit', async function (e) {
-      e.preventDefault();
-      hideError('auth-register-error');
-      var pw1 = $('reg-password').value;
-      var pw2 = $('reg-password2').value;
-      if (pw1 !== pw2) {
-        showError('auth-register-error', 'Les mots de passe ne correspondent pas.');
-        return;
-      }
-      try {
-        var data = await register($('reg-email').value.trim(), pw1);
-        if (data.user && !data.session) {
-          showError('auth-register-error', 'Vérifiez votre email pour confirmer votre compte.');
-          $('auth-register-error').style.color = 'hsl(var(--ann-success))';
-          return;
-        }
-        currentUser = data.user;
-        $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
-        showDashboard();
-      } catch (err) {
-        showError('auth-register-error', err.message || 'Erreur lors de l\'inscription');
-      }
-    });
+    bindAuthTabs();
+    bindLoginForm();
+    bindRegisterForm();
+    bindForgotPassword();
+    bindResetForm();
 
     // ── Logout ──
     $('dash-logout').addEventListener('click', logout);
@@ -355,6 +358,7 @@
           showError('dash-profile-error', res.error);
         } else {
           currentProfile = res.profile;
+          updateProfileStatus(currentProfile);
           $('dash-profile-success').textContent = 'Fiche enregistrée avec succès !';
           show($('dash-profile-success'));
           if (currentProfile.slug && currentProfile.is_published) {
@@ -368,6 +372,164 @@
       } finally {
         btn.disabled = false;
         btn.textContent = 'Enregistrer';
+      }
+    });
+  }
+
+  // ── Auth tabs ──
+  function bindAuthTabs() {
+    $('auth-tab-login').addEventListener('click', function () {
+      this.classList.add('ann-auth-tab-active');
+      $('auth-tab-register').classList.remove('ann-auth-tab-active');
+      showAuthForm('auth-login-form');
+    });
+    $('auth-tab-register').addEventListener('click', function () {
+      this.classList.add('ann-auth-tab-active');
+      $('auth-tab-login').classList.remove('ann-auth-tab-active');
+      showAuthForm('auth-register-form');
+    });
+  }
+
+  // ── Login form ──
+  function bindLoginForm() {
+    $('auth-login-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      hideError('auth-login-error');
+      try {
+        var data = await login($('login-email').value.trim(), $('login-password').value);
+        currentUser = data.user;
+        currentProfile = await loadProfile(data.session.access_token);
+
+        // If profile exists but not published → show waiting message
+        if (currentProfile && !currentProfile.is_published) {
+          $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
+          fillForm(currentProfile);
+          updateProfileStatus(currentProfile);
+          showDashboard();
+          return;
+        }
+
+        $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
+        if (currentProfile) fillForm(currentProfile);
+        updateProfileStatus(currentProfile);
+        showDashboard();
+      } catch (err) {
+        showError('auth-login-error', err.message || 'Erreur de connexion');
+      }
+    });
+  }
+
+  // ── Register form ──
+  function bindRegisterForm() {
+    $('auth-register-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      hideError('auth-register-error');
+      var pw1 = $('reg-password').value;
+      var pw2 = $('reg-password2').value;
+
+      // Validate password strength
+      var pwError = validatePassword(pw1);
+      if (pwError) {
+        showError('auth-register-error', pwError);
+        return;
+      }
+
+      if (pw1 !== pw2) {
+        showError('auth-register-error', 'Les mots de passe ne correspondent pas.');
+        return;
+      }
+      try {
+        var data = await register($('reg-email').value.trim(), pw1);
+        if (data.user && !data.session) {
+          // Email confirmation required
+          var el = $('auth-register-error');
+          el.textContent = 'Un email de confirmation vous a été envoyé. Vérifiez votre boîte de réception (et vos spams).';
+          el.style.display = 'block';
+          el.style.color = 'hsl(var(--ann-success))';
+          return;
+        }
+        currentUser = data.user;
+        $('dash-welcome').textContent = 'Connecté en tant que ' + currentUser.email;
+        showDashboard();
+      } catch (err) {
+        showError('auth-register-error', err.message || 'Erreur lors de l\'inscription');
+      }
+    });
+  }
+
+  // ── Forgot password ──
+  function bindForgotPassword() {
+    var forgotLink = $('forgot-password-link');
+    var backLink = $('back-to-login-link');
+    if (!forgotLink || !backLink) return;
+
+    forgotLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      showAuthForm('auth-forgot-form');
+    });
+
+    backLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      showAuthForm('auth-login-form');
+    });
+
+    $('auth-forgot-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      hideError('auth-forgot-error');
+      hide($('auth-forgot-success'));
+
+      var email = $('forgot-email').value.trim();
+      if (!email) {
+        showError('auth-forgot-error', 'Entrez votre adresse email.');
+        return;
+      }
+
+      try {
+        var { error } = await supabase.auth.resetPasswordForEmail(email, {
+          redirectTo: window.location.origin + '/dashboard/',
+        });
+        if (error) throw error;
+        showSuccess('auth-forgot-success', 'Un email de réinitialisation vous a été envoyé. Vérifiez votre boîte de réception.');
+      } catch (err) {
+        showError('auth-forgot-error', err.message || 'Erreur lors de l\'envoi.');
+      }
+    });
+  }
+
+  // ── Reset password form (after recovery redirect) ──
+  function bindResetForm() {
+    var form = $('auth-reset-form');
+    if (!form) return;
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      hideError('auth-reset-error');
+      hide($('auth-reset-success'));
+
+      var pw1 = $('reset-password').value;
+      var pw2 = $('reset-password2').value;
+
+      var pwError = validatePassword(pw1);
+      if (pwError) {
+        showError('auth-reset-error', pwError);
+        return;
+      }
+
+      if (pw1 !== pw2) {
+        showError('auth-reset-error', 'Les mots de passe ne correspondent pas.');
+        return;
+      }
+
+      try {
+        var { error } = await supabase.auth.updateUser({ password: pw1 });
+        if (error) throw error;
+        showSuccess('auth-reset-success', 'Mot de passe mis à jour ! Redirection...');
+        // Clear hash and redirect
+        setTimeout(function () {
+          window.location.href = '/dashboard/';
+        }, 2000);
+      } catch (err) {
+        showError('auth-reset-error', err.message || 'Erreur lors de la réinitialisation.');
       }
     });
   }

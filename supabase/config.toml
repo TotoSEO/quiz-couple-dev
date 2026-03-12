@@ -29,3 +29,24 @@ verify_jwt = false
 
 [functions.annuaire-track]
 verify_jwt = false
+
+[functions.contact-message]
+verify_jwt = false
+
+[functions.search-activities]
+verify_jwt = false
+
+[functions.admin-leads]
+verify_jwt = false
+
+[functions.admin-messages]
+verify_jwt = false
+
+[functions.trigger-deploy]
+verify_jwt = false
+
+[functions.send-email]
+verify_jwt = false
+
+[functions.admin-annuaire]
+verify_jwt = false

@@ -211,7 +211,9 @@
       if (!val('f-telephone')) { showError('err-telephone', 'Le téléphone est requis'); valid = false; }
       var pw = val('f-password');
       if (!pw) { showError('err-password', 'Le mot de passe est requis'); valid = false; }
-      else if (pw.length < 8) { showError('err-password', 'Minimum 8 caractères'); valid = false; }
+      else if (pw.length < 10) { showError('err-password', 'Minimum 10 caractères'); valid = false; }
+      else if (!/[A-Z]/.test(pw)) { showError('err-password', 'Le mot de passe doit contenir au moins une majuscule'); valid = false; }
+      else if (!/[^a-zA-Z0-9]/.test(pw)) { showError('err-password', 'Le mot de passe doit contenir au moins un caractère spécial'); valid = false; }
       var pw2 = val('f-password2');
       if (!pw2) { showError('err-password2', 'Confirmez le mot de passe'); valid = false; }
       else if (pw !== pw2) { showError('err-password2', 'Les mots de passe ne correspondent pas'); valid = false; }
