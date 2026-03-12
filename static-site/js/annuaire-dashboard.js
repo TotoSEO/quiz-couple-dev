@@ -156,7 +156,7 @@
     // View profile link
     if (profile.slug && profile.is_published) {
       var link = $('dash-view-profile');
-      link.href = '/professionnel/' + profile.slug + '/';
+      link.href = '/' + (profile.specialty || '') + '/' + (profile.city || '') + '/' + profile.slug + '/';
       show(link);
     }
   }
@@ -324,7 +324,7 @@
           show($('dash-profile-success'));
           if (currentProfile.slug && currentProfile.is_published) {
             var link = $('dash-view-profile');
-            link.href = '/professionnel/' + currentProfile.slug + '/';
+            link.href = '/' + (currentProfile.specialty || '') + '/' + (currentProfile.city || '') + '/' + currentProfile.slug + '/';
             show(link);
           }
         }

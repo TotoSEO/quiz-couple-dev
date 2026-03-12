@@ -13,6 +13,7 @@ import {
   getSpecialtyById, getCityById, getAnnuaireUrl,
   getProfessionalsBySpecialty, getProfessionalsByCity,
 } from './annuaire-config.js';
+import { SPECIALTY_CITY_TEMPLATES } from './annuaire-seo-city-content.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TEMPLATES_DIR = path.resolve(__dirname, '../templates/annuaire');
@@ -249,15 +250,26 @@ async function generateSpecialtyCityPages() {
   const shared = getSharedData();
   let count = 0;
   for (const specialty of SPECIALTIES) {
-    for (const city of CITIES) {
+    const templates = SPECIALTY_CITY_TEMPLATES[specialty.id] || [];
+    for (let i = 0; i < CITIES.length; i++) {
+      const city = CITIES[i];
       const filteredProfessionals = shared.professionals.filter(
         p => p.specialty === specialty.id && p.city === city.id
       );
+
+      // Generate unique SEO content using rotating templates
+      let seoContent = null;
+      if (templates.length > 0) {
+        const templateFn = templates[i % templates.length];
+        seoContent = templateFn(city);
+      }
+
       const data = {
         ...shared,
         specialty,
         city,
         filteredProfessionals,
+        seoContent,
         metaTitle: `${specialty.name} à ${city.name} (${city.department})`,
         metaDescription: `${specialty.name} à ${city.name} — ${filteredProfessionals.length} professionnel${filteredProfessionals.length > 1 ? 's' : ''} référencé${filteredProfessionals.length > 1 ? 's' : ''}. Consultez les profils et prenez rendez-vous.`,
         canonical: getAnnuaireUrl(`/${specialty.id}/${city.id}/`),
@@ -273,9 +285,11 @@ async function generateSpecialtyCityPages() {
 }
 
 async function generateProfessionalPages() {
-  for (const pro of MOCK_PROFESSIONALS) {
+  const professionals = liveProfessionals || MOCK_PROFESSIONALS;
+  for (const pro of professionals) {
     const proSpec = getSpecialtyById(pro.specialty);
     const proCity = getCityById(pro.city);
+    const proPath = `${pro.specialty}/${pro.city}/${pro.slug}`;
     const data = {
       ...getSharedData(),
       pro,
@@ -283,13 +297,13 @@ async function generateProfessionalPages() {
       proCity,
       metaTitle: `${pro.firstName} ${pro.lastName} — ${proSpec ? proSpec.name : ''} à ${proCity ? proCity.name : ''}`,
       metaDescription: `${pro.firstName} ${pro.lastName}, ${proSpec ? proSpec.name.toLowerCase() : ''} à ${proCity ? proCity.name : ''} | ${pro.yearsExperience} ans d'expérience, ${pro.priceRange}. Prenez rendez-vous en ligne.`,
-      canonical: getAnnuaireUrl(`/professionnel/${pro.slug}/`),
+      canonical: getAnnuaireUrl(`/${proPath}/`),
       currentPage: 'professionnel',
     };
 
     const html = renderTemplate('professionnel', data);
-    await writePage(path.join(DIST_DIR, `professionnel/${pro.slug}/index.html`), html);
-    console.log(`[annuaire] Generated: /professionnel/${pro.slug}/`);
+    await writePage(path.join(DIST_DIR, `${proPath}/index.html`), html);
+    console.log(`[annuaire] Generated: /${proPath}/`);
   }
 }
 
