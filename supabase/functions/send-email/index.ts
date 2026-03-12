@@ -9,13 +9,17 @@
  * Required env vars:
  *   RESEND_API_KEY - Your Resend API key
  *   SITE_URL - e.g. https://annuaire.quiz-couple.com
+ *   SEND_EMAIL_HOOK_SECRET - Webhook signing secret (from Auth Hook config)
  *
  * Supabase Auth Hook setup:
  *   In Supabase Dashboard > Authentication > Hooks > Send Email
  *   Set this function as the hook handler.
+ *   Configure a signing secret (format: v1,whsec_<base64secret>).
+ *   Set the same secret as SEND_EMAIL_HOOK_SECRET edge function secret.
  *   This replaces Supabase's default email sending with Resend.
  */
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { Webhook } from "https://esm.sh/standardwebhooks@1.0.0";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -176,11 +180,32 @@ serve(async (req) => {
       });
     }
 
-    const body = await req.json();
+    // Read raw body for webhook signature verification
+    const rawBody = await req.text();
+    const body = JSON.parse(rawBody);
 
     // ── Supabase Auth Hook format ──
     // Supabase sends: { user, email_data: { token, token_hash, redirect_to, email_action_type } }
+    // with Standard Webhooks signature headers for verification.
     if (body.user && body.email_data) {
+      // Verify webhook signature (required by Supabase Auth Hooks)
+      const hookSecret = Deno.env.get('SEND_EMAIL_HOOK_SECRET');
+      if (hookSecret) {
+        const wh = new Webhook(hookSecret);
+        try {
+          wh.verify(rawBody, {
+            'webhook-id': req.headers.get('webhook-id') || '',
+            'webhook-timestamp': req.headers.get('webhook-timestamp') || '',
+            'webhook-signature': req.headers.get('webhook-signature') || '',
+          });
+        } catch (err) {
+          console.error('Webhook signature verification failed:', err);
+          return new Response(JSON.stringify({ error: { http_code: 401, message: 'Invalid webhook signature' } }), {
+            status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          });
+        }
+      }
+
       const { user, email_data } = body;
       const email = user.email;
       const { token_hash, redirect_to, email_action_type } = email_data;
@@ -203,20 +228,21 @@ serve(async (req) => {
           emailPayload = magicLinkEmail(email, actionUrl);
           break;
         default:
-          // Fallback: generic confirmation
           emailPayload = confirmationEmail(email, actionUrl);
       }
 
       const result = await sendWithResend(emailPayload);
 
       if (result.success) {
-        return new Response(JSON.stringify({ success: true }), {
+        // Return empty object — required response format for Supabase Auth Hooks
+        return new Response(JSON.stringify({}), {
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
       } else {
-        return new Response(JSON.stringify({ error: result.error }), {
-          status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        });
+        return new Response(
+          JSON.stringify({ error: { http_code: 500, message: result.error || 'Email sending failed' } }),
+          { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } },
+        );
       }
     }
 
