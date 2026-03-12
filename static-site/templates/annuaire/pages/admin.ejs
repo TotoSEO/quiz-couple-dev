@@ -1,0 +1,95 @@
+<%
+  // Annuaire Admin - Professional moderation dashboard
+  // Separate from the main site admin, same HMAC auth system
+%>
+
+<section class="ann-section" style="min-height:100vh;padding:2rem 0;">
+  <div class="ann-container" style="max-width:64rem;">
+    <div id="ann-admin-app" data-url="<%= typeof supabaseUrl !== 'undefined' ? supabaseUrl : 'https://lojvajnnvhatfplevyvy.supabase.co' %>">
+
+      <!-- Login Screen -->
+      <div id="ann-admin-login" style="max-width:24rem;margin:5rem auto 0;">
+        <div style="background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));border-radius:1rem;padding:2rem;text-align:center;">
+          <div style="width:3.5rem;height:3.5rem;margin:0 auto 1.5rem;border-radius:50%;background:hsl(var(--ann-primary)/0.1);display:flex;align-items:center;justify-content:center;">
+            <svg style="width:1.75rem;height:1.75rem;color:hsl(var(--ann-primary));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.25rem;">Administration Annuaire</h1>
+          <p style="font-size:0.875rem;color:hsl(var(--ann-muted-fg));margin-bottom:1.5rem;">Moderation des fiches professionnelles</p>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <div style="position:relative;">
+              <input type="password" id="ann-admin-pw" style="width:100%;padding:0.75rem 1rem;border:1px solid hsl(var(--ann-border));border-radius:var(--ann-radius);background:hsl(var(--ann-bg));color:hsl(var(--ann-fg));font-size:0.875rem;" placeholder="Mot de passe admin" autocomplete="current-password">
+            </div>
+            <p id="ann-admin-error" style="display:none;font-size:0.875rem;color:hsl(0 70% 50%);"></p>
+            <button id="ann-admin-login-btn" class="ann-btn ann-btn-primary" style="width:100%;padding:0.75rem;font-weight:600;">Se connecter</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard -->
+      <div id="ann-admin-dashboard" style="display:none;">
+        <!-- Header -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid hsl(var(--ann-border));flex-wrap:wrap;gap:1rem;">
+          <div>
+            <h1 style="font-size:1.5rem;font-weight:700;">Administration Annuaire</h1>
+            <p style="font-size:0.875rem;color:hsl(var(--ann-muted-fg));">Gestion des fiches professionnelles</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <a href="/" style="font-size:0.875rem;color:hsl(var(--ann-primary));text-decoration:none;">Retour au site</a>
+            <button id="ann-admin-logout" style="font-size:0.875rem;color:hsl(0 70% 50%);background:none;border:none;cursor:pointer;">Deconnexion</button>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem;margin-bottom:2rem;">
+          <div style="background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));border-radius:var(--ann-radius);padding:1rem;display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:2.5rem;height:2.5rem;border-radius:50%;background:hsl(40 90% 92%);color:hsl(40 80% 45%);display:flex;align-items:center;justify-content:center;">
+              <svg style="width:1.25rem;height:1.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <p style="font-size:1.5rem;font-weight:700;" id="aadm-stat-pending">-</p>
+              <p style="font-size:0.75rem;color:hsl(var(--ann-muted-fg));">En attente</p>
+            </div>
+          </div>
+          <div style="background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));border-radius:var(--ann-radius);padding:1rem;display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:2.5rem;height:2.5rem;border-radius:50%;background:hsl(160 60% 92%);color:hsl(160 60% 40%);display:flex;align-items:center;justify-content:center;">
+              <svg style="width:1.25rem;height:1.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div>
+              <p style="font-size:1.5rem;font-weight:700;" id="aadm-stat-approved">-</p>
+              <p style="font-size:0.75rem;color:hsl(var(--ann-muted-fg));">Publies</p>
+            </div>
+          </div>
+          <div style="background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));border-radius:var(--ann-radius);padding:1rem;display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:2.5rem;height:2.5rem;border-radius:50%;background:hsl(260 50% 92%);color:hsl(260 50% 50%);display:flex;align-items:center;justify-content:center;">
+              <svg style="width:1.25rem;height:1.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <p style="font-size:1.5rem;font-weight:700;" id="aadm-stat-total">-</p>
+              <p style="font-size:0.75rem;color:hsl(var(--ann-muted-fg));">Total fiches</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+          <button id="aadm-refresh" class="ann-btn" style="font-size:0.875rem;padding:0.5rem 1rem;background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));color:hsl(var(--ann-fg));display:flex;align-items:center;gap:0.5rem;">
+            <svg style="width:1rem;height:1rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+            Actualiser
+          </button>
+          <div style="display:flex;border:1px solid hsl(var(--ann-border));border-radius:var(--ann-radius);overflow:hidden;">
+            <button class="aadm-filter" data-filter="all" style="padding:0.375rem 0.75rem;font-size:0.875rem;border:none;cursor:pointer;background:hsl(var(--ann-primary));color:hsl(var(--ann-primary-fg));">Tous</button>
+            <button class="aadm-filter" data-filter="pending" style="padding:0.375rem 0.75rem;font-size:0.875rem;border:none;cursor:pointer;background:hsl(var(--ann-card));color:hsl(var(--ann-fg));">En attente</button>
+            <button class="aadm-filter" data-filter="approved" style="padding:0.375rem 0.75rem;font-size:0.875rem;border:none;cursor:pointer;background:hsl(var(--ann-card));color:hsl(var(--ann-fg));">Publies</button>
+          </div>
+        </div>
+
+        <!-- Profiles List -->
+        <div id="aadm-profiles-list">
+          <p style="text-align:center;color:hsl(var(--ann-muted-fg));padding:3rem 0;">Chargement...</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script src="/js/annuaire-admin.js" defer></script>
