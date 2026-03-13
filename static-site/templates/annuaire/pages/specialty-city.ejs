@@ -89,7 +89,7 @@
     <% } else { %>
     <div class="ann-empty-state">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:3rem;height:3rem;color:hsl(var(--ann-muted-fg))"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-      <h3>Aucun <%= specialty.name.toLowerCase() %> à <%= city.name %> pour le moment</h3>
+      <h2>Aucun <%= specialty.name.toLowerCase() %> à <%= city.name %> pour le moment</h2>
       <p class="ann-text-muted">Soyez le premier <%= specialty.name.toLowerCase() %> référencé à <%= city.name %> !</p>
       <a href="/rejoindre/" class="ann-btn ann-btn-primary" style="margin-top: 1rem;">
         Inscrire mon cabinet à <%= city.name %>

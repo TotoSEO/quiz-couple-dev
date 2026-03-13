@@ -361,6 +361,7 @@
     $('prof-phone').value = profile.phone || '';
     $('prof-address').value = profile.address || '';
     $('prof-website').value = profile.website || '';
+    if ($('prof-doctolib')) $('prof-doctolib').value = profile.doctolib_url || '';
     $('prof-description').value = profile.description || '';
     $('prof-experience').value = profile.years_experience || '';
     $('prof-price').value = profile.price_range || '';
@@ -442,6 +443,10 @@
       languages: getSelectedBubbles('prof-languages-container'),
       availability: getSelectedBubbles('prof-availability-container').join(', ') || null,
     };
+    var doctolibInput = $('prof-doctolib');
+    if (doctolibInput) {
+      data.doctolib_url = doctolibInput.value.trim() || null;
+    }
     var gpiInput = $('prof-google-place-id');
     if (gpiInput && $('dash-google-reviews-section') && $('dash-google-reviews-section').style.display !== 'none') {
       data.google_place_id = gpiInput.value.trim() || null;
@@ -591,6 +596,21 @@
       if (!session) { showError('dash-profile-error', 'Session expirée. Reconnectez-vous.'); return; }
 
       var data = getFormData();
+
+      // Validate Doctolib URL client-side
+      if (data.doctolib_url) {
+        try {
+          var dUrl = new URL(data.doctolib_url);
+          if (dUrl.hostname !== 'www.doctolib.fr' && dUrl.hostname !== 'doctolib.fr') {
+            showError('dash-profile-error', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
+            return;
+          }
+        } catch (e) {
+          showError('dash-profile-error', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
+          return;
+        }
+      }
+
       var btn = $('dash-save-btn');
       btn.disabled = true; btn.textContent = 'Enregistrement...';
 

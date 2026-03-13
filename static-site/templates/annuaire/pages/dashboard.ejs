@@ -146,7 +146,7 @@
           <div class="ann-divider" style="margin-bottom: 1.5rem;"></div>
 
           <!-- Identity -->
-          <h3 style="margin-bottom: 1rem; font-size: 1rem;">Identité</h3>
+          <h2 style="margin-bottom: 1rem; font-size: 1rem;">Identité</h2>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div class="ann-form-group">
               <label class="ann-form-label" for="prof-firstname">Prénom *</label>
@@ -183,7 +183,7 @@
           <div class="ann-divider" style="margin: 1.5rem 0;"></div>
 
           <!-- Contact -->
-          <h3 style="margin-bottom: 1rem; font-size: 1rem;">Contact</h3>
+          <h2 style="margin-bottom: 1rem; font-size: 1rem;">Contact</h2>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div class="ann-form-group">
               <label class="ann-form-label" for="prof-email">Email professionnel *</label>
@@ -207,11 +207,19 @@
               <a href="/tarifs/" style="color:hsl(var(--ann-primary));">Voir les tarifs</a>
             </p>
           </div>
+          <div class="ann-form-group">
+            <label class="ann-form-label" for="prof-doctolib">Lien Doctolib <span class="ann-text-muted" style="font-size:0.75rem; font-weight:400;">(optionnel)</span></label>
+            <input class="ann-form-input" type="url" id="prof-doctolib" placeholder="https://www.doctolib.fr/votre-profil" maxlength="300">
+            <p class="ann-text-muted" style="font-size:0.75rem;margin-top:0.25rem;">
+              Ajoutez votre lien Doctolib pour permettre aux patients de prendre rendez-vous directement en ligne.
+            </p>
+            <div id="dash-doctolib-error" class="ann-form-error" style="display:none;"></div>
+          </div>
 
           <div class="ann-divider" style="margin: 1.5rem 0;"></div>
 
           <!-- Professional info -->
-          <h3 style="margin-bottom: 1rem; font-size: 1rem;">Informations professionnelles</h3>
+          <h2 style="margin-bottom: 1rem; font-size: 1rem;">Informations professionnelles</h2>
           <div class="ann-form-group">
             <label class="ann-form-label" for="prof-description">Présentation *</label>
             <textarea class="ann-form-input" id="prof-description" rows="5" required maxlength="600" placeholder="Décrivez votre parcours, votre approche et ce qui vous distingue..."></textarea>
@@ -249,10 +257,10 @@
           <!-- Google Reviews (Boost only) -->
           <div id="dash-google-reviews-section" style="display: none;">
             <div class="ann-divider" style="margin: 1.5rem 0;"></div>
-            <h3 style="margin-bottom: 0.5rem; font-size: 1rem;">
+            <h2 style="margin-bottom: 0.5rem; font-size: 1rem;">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;vertical-align:middle;margin-right:0.25rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               Avis Google
-            </h3>
+            </h2>
             <p class="ann-text-muted" style="font-size: 0.8125rem; margin-bottom: 1rem; line-height: 1.6;">
               Connectez votre fiche Google Business pour afficher automatiquement vos avis. La note moyenne, le nombre total d'avis et vos 3 derniers avis seront synchronisés chaque mois.
             </p>
@@ -312,7 +320,7 @@
       <div id="dash-tab-stats" style="display: none;">
         <div id="dash-stats-locked" class="ann-profile-card" style="padding: 2rem; text-align: center;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:3rem;height:3rem;color:hsl(var(--ann-muted-fg));margin-bottom:1rem;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-          <h3 style="margin-bottom: 0.5rem;">Statistiques réservées aux abonnés Boost</h3>
+          <h2 style="margin-bottom: 0.5rem;">Statistiques réservées aux abonnés Boost</h2>
           <p class="ann-text-muted" style="max-width: 24rem; margin: 0 auto 1.5rem;">Avec l'abonnement Boost, suivez en temps réel les vues de votre fiche, les clics sur vos coordonnées et votre visibilité.</p>
           <a href="/tarifs/" class="ann-btn ann-btn-primary">Découvrir l'offre Boost</a>
         </div>
@@ -334,7 +342,7 @@
           </div>
 
           <div class="ann-profile-card" style="padding: 1.5rem;">
-            <h3 style="margin-bottom: 1rem;">Détail des clics</h3>
+            <h2 style="margin-bottom: 1rem;">Détail des clics</h2>
             <div id="stat-clicks-detail" class="ann-profile-info-list"></div>
           </div>
         </div>
@@ -350,10 +358,10 @@
 
           <div id="dash-delete-confirm" style="display: none; margin-top: 1rem; max-width: 28rem;">
             <div class="ann-profile-card" style="padding: 1.5rem; border-color: hsl(0 70% 50% / 0.3);">
-              <h3 style="color: hsl(0 70% 50%); font-size: 1rem; margin-bottom: 0.5rem;">
+              <h2 style="color: hsl(0 70% 50%); font-size: 1rem; margin-bottom: 0.5rem;">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;vertical-align:middle;margin-right:0.25rem"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                 Suppression définitive
-              </h3>
+              </h2>
               <p class="ann-text-muted" style="font-size: 0.8125rem; line-height: 1.6; margin-bottom: 1rem;">
                 Cette action est <strong>irréversible</strong>. Votre fiche professionnelle, vos photos et votre compte seront définitivement supprimés.
               </p>

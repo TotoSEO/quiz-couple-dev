@@ -48,6 +48,25 @@ function isValidPhone(phone: string): boolean {
   return /^[\d\s+\-().]{8,20}$/.test(phone);
 }
 
+function isValidDoctolibUrl(url: string): boolean {
+  try {
+    const parsed = new URL(url);
+    return (parsed.hostname === 'www.doctolib.fr' || parsed.hostname === 'doctolib.fr') && parsed.protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
+
+function cleanDoctolibUrl(url: string): string {
+  try {
+    const parsed = new URL(url);
+    // Strip query params and fragments for cleanliness
+    return parsed.origin + parsed.pathname;
+  } catch {
+    return url;
+  }
+}
+
 function getUserFromAuth(req: Request) {
   const authHeader = req.headers.get('authorization');
   if (!authHeader || !authHeader.startsWith('Bearer ')) return null;
@@ -347,6 +366,15 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
     // Only allow Supabase storage URLs
     if (url && !url.includes('supabase.co/storage')) return { error: 'URL photo invalide.' };
     result.photo_url = url || null;
+  }
+  if (body.doctolib_url !== undefined) {
+    const d = sanitize(body.doctolib_url, 300);
+    if (d) {
+      if (!isValidDoctolibUrl(d)) return { error: 'URL Doctolib invalide. Seuls les liens doctolib.fr sont acceptés (https://www.doctolib.fr/...).' };
+      result.doctolib_url = cleanDoctolibUrl(d);
+    } else {
+      result.doctolib_url = null;
+    }
   }
   if (body.google_place_id !== undefined) {
     const gpi = sanitize(body.google_place_id, 200);

@@ -166,6 +166,7 @@ async function fetchLiveProfessionals() {
       availability: r.availability || 'Sur rendez-vous',
       premium: r.plan === 'pro' || r.plan === 'boost',
       googlePlaceId: r.google_place_id || null,
+      doctolibUrl: r.doctolib_url || '',
     }));
   } catch (err) {
     if (isCI) {
@@ -243,6 +244,23 @@ async function generateDashboardPage() {
   const html = renderTemplate('dashboard', data);
   await writePage(path.join(DIST_DIR, 'dashboard/index.html'), html);
   console.log('[annuaire] Generated: /dashboard/');
+}
+
+async function generateRecherchePage() {
+  const professionals = liveProfessionals || MOCK_PROFESSIONALS;
+  const data = {
+    ...getSharedData(),
+    metaTitle: 'Rechercher un professionnel du couple',
+    metaDescription: 'Recherchez un thérapeute de couple, sexologue, médiateur familial ou conseiller conjugal en France. Filtrez par spécialité, ville et mode de consultation.',
+    canonical: getAnnuaireUrl('/recherche/'),
+    currentPage: 'recherche',
+    noindex: true,
+    allProfessionals: professionals,
+  };
+
+  const html = renderTemplate('recherche', data);
+  await writePage(path.join(DIST_DIR, 'recherche/index.html'), html);
+  console.log('[annuaire] Generated: /recherche/');
 }
 
 async function generateTarifsPage() {
@@ -396,16 +414,32 @@ async function generateProfessionalPages() {
   }
 }
 
+// ── CSS Minification ────────────────────────────────────────────────────
+
+function minifyCss(css) {
+  return css
+    .replace(/\/\*[\s\S]*?\*\//g, '')       // Remove comments
+    .replace(/\s+/g, ' ')                    // Collapse whitespace
+    .replace(/\s*\{\s*/g, '{')               // Remove spaces around {
+    .replace(/\s*\}\s*/g, '}')               // Remove spaces around }
+    .replace(/\s*:\s*/g, ':')                // Remove spaces around :
+    .replace(/\s*;\s*/g, ';')                // Remove spaces around ;
+    .replace(/\s*,\s*/g, ',')                // Remove spaces around ,
+    .trim();
+}
+
 // ── Copy static assets ──────────────────────────────────────────────────
 
 function copyAssets() {
-  // CSS
+  // CSS — read, minify, then write
   const cssDir = path.join(DIST_DIR, 'css');
   ensureDir(cssDir);
   const cssSrc = path.resolve(__dirname, '../css/annuaire.css');
   if (fs.existsSync(cssSrc)) {
-    fs.copyFileSync(cssSrc, path.join(cssDir, 'annuaire.css'));
-    console.log('[annuaire] Copied: /css/annuaire.css');
+    const rawCss = fs.readFileSync(cssSrc, 'utf8');
+    const minified = minifyCss(rawCss);
+    fs.writeFileSync(path.join(cssDir, 'annuaire.css'), minified, 'utf8');
+    console.log(`[annuaire] Minified & wrote: /css/annuaire.css (${rawCss.length} → ${minified.length} bytes)`);
   }
 
   // JS
@@ -442,6 +476,59 @@ function copyAssets() {
       console.log(`[annuaire] Copied: /assets/${file}`);
     }
   }
+}
+
+// ── Sitemap ──────────────────────────────────────────────────────────────
+
+function generateSitemap() {
+  const professionals = liveProfessionals || MOCK_PROFESSIONALS;
+  const today = new Date().toISOString().split('T')[0];
+
+  const urls = [];
+
+  // Helper to add a URL entry
+  const addUrl = (loc, changefreq, priority) => {
+    urls.push(`  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`);
+  };
+
+  // Home page
+  addUrl(getAnnuaireUrl('/'), 'daily', '1.0');
+
+  // Specialty pages (6)
+  for (const specialty of SPECIALTIES) {
+    addUrl(getAnnuaireUrl(`/${specialty.id}/`), 'weekly', '0.9');
+  }
+
+  // City pages
+  for (const city of CITIES) {
+    addUrl(getAnnuaireUrl(`/${city.id}/`), 'weekly', '0.8');
+  }
+
+  // Specialty x City pages
+  for (const specialty of SPECIALTIES) {
+    for (const city of CITIES) {
+      addUrl(getAnnuaireUrl(`/${specialty.id}/${city.id}/`), 'weekly', '0.7');
+    }
+  }
+
+  // Professional pages
+  for (const pro of professionals) {
+    const proPath = `${pro.specialty}/${pro.city}/${pro.slug}`;
+    addUrl(getAnnuaireUrl(`/${proPath}/`), 'weekly', '0.6');
+  }
+
+  // Static pages (decouvrir, tarifs, rejoindre)
+  addUrl(getAnnuaireUrl('/decouvrir/'), 'monthly', '0.5');
+  addUrl(getAnnuaireUrl('/tarifs/'), 'monthly', '0.5');
+  addUrl(getAnnuaireUrl('/rejoindre/'), 'monthly', '0.5');
+
+  // Search page
+  addUrl(getAnnuaireUrl('/recherche/'), 'weekly', '0.5');
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`;
+
+  fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), xml, 'utf8');
+  console.log(`[annuaire] Generated: /sitemap.xml (${urls.length} URLs)`);
 }
 
 // ── Redirects (301 for deleted professionals) ───────────────────────────
@@ -494,6 +581,7 @@ async function main() {
   await generateHomePage();
   await generateDecouvrirPage();
   await generateRejoindrePage();
+  await generateRecherchePage();
   await generateTarifsPage();
   await generateDashboardPage();
   await generateAdminPage();
@@ -502,6 +590,9 @@ async function main() {
   await generateCityPages();
   await generateSpecialtyCityPages();
   await generateProfessionalPages();
+
+  // Generate sitemap.xml
+  generateSitemap();
 
   // Generate _redirects for Cloudflare Pages (301 for deleted professionals)
   const redirects = await fetchRedirects();
