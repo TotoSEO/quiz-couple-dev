@@ -258,10 +258,31 @@
             </p>
             <div class="ann-form-group">
               <label class="ann-form-label" for="prof-google-place-id">Google Place ID</label>
-              <input class="ann-form-input" type="text" id="prof-google-place-id" placeholder="ChIJ... (trouvable sur Google Maps)" maxlength="200">
-              <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.25rem;">
-                Trouvez votre Place ID sur <a href="https://developers.google.com/maps/documentation/places/web-service/place-id" target="_blank" rel="noopener" style="color:hsl(var(--ann-primary))">Google Place ID Finder</a>
-              </p>
+              <input class="ann-form-input" type="text" id="prof-google-place-id" placeholder="Ex : ChIJe2jeNttx5kcRXwGMo8coG1w" maxlength="200">
+              <details style="margin-top: 0.5rem; border: 1px solid hsl(var(--ann-border)); border-radius: var(--ann-radius); overflow: hidden;">
+                <summary style="padding: 0.625rem 0.875rem; font-size: 0.8125rem; font-weight: 600; cursor: pointer; background: hsl(var(--ann-muted) / 0.3); color: hsl(var(--ann-fg)); display: flex; align-items: center; gap: 0.5rem;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Comment trouver mon Google Place ID ?
+                </summary>
+                <div style="padding: 0.875rem; font-size: 0.8125rem; line-height: 1.7; color: hsl(var(--ann-muted-fg));">
+                  <ol style="margin: 0; padding-left: 1.25rem;">
+                    <li style="margin-bottom: 0.5rem;">Ouvrez <a href="https://www.google.com/maps" target="_blank" rel="noopener" style="color:hsl(var(--ann-primary)); font-weight: 600;">Google Maps</a></li>
+                    <li style="margin-bottom: 0.5rem;">Recherchez le <strong>nom de votre cabinet</strong> (ex : "Cabinet Dupont therapie Paris")</li>
+                    <li style="margin-bottom: 0.5rem;">Cliquez sur votre etablissement dans les resultats</li>
+                    <li style="margin-bottom: 0.5rem;">Regardez l'URL dans la barre d'adresse de votre navigateur</li>
+                    <li style="margin-bottom: 0.5rem;">Repérez le code qui commence par <strong style="color:hsl(var(--ann-fg));">ChIJ</strong> dans l'URL<br>
+                      <span style="font-size: 0.75rem; font-family: monospace; background: hsl(var(--ann-muted) / 0.5); padding: 0.25rem 0.5rem; border-radius: 0.25rem; display: inline-block; margin-top: 0.25rem; word-break: break-all;">
+                        google.com/maps/place/.../<strong style="color:hsl(var(--ann-primary));">ChIJe2jeNttx5kcRXwGMo8coG1w</strong>
+                      </span>
+                    </li>
+                    <li>Copiez-collez ce code (commencant par ChIJ) dans le champ ci-dessus</li>
+                  </ol>
+                  <div style="margin-top: 0.75rem; padding: 0.625rem; background: hsl(40 90% 55% / 0.1); border-radius: 0.375rem; font-size: 0.75rem;">
+                    <strong style="color: hsl(40 70% 35%);">Vous ne trouvez pas votre cabinet ?</strong><br>
+                    Si votre cabinet n'apparait pas sur Google Maps, vous pouvez le creer gratuitement via <a href="https://business.google.com/" target="_blank" rel="noopener" style="color:hsl(var(--ann-primary)); font-weight: 600;">Google Business Profile</a>.
+                  </div>
+                </div>
+              </details>
             </div>
             <div id="dash-google-reviews-status" style="display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; border-radius: var(--ann-radius); background: hsl(var(--ann-muted) / 0.3); font-size: 0.8125rem;"></div>
           </div>
