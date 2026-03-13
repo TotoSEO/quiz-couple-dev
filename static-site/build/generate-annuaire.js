@@ -433,6 +433,41 @@ function copyAssets() {
   }
 }
 
+// ── Redirects (301 for deleted professionals) ───────────────────────────
+
+async function fetchRedirects() {
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key) return [];
+
+  try {
+    const res = await fetch(`${url}/rest/v1/annuaire_redirects?select=from_path,to_path`, {
+      headers: {
+        'apikey': key,
+        'Authorization': `Bearer ${key}`,
+        'Content-Type': 'application/json',
+      },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = await res.json();
+    console.log(`[annuaire] Fetched ${rows.length} redirects from Supabase`);
+    return rows;
+  } catch (err) {
+    console.warn(`[annuaire] Redirects fetch failed: ${err.message} — skipping`);
+    return [];
+  }
+}
+
+function generateRedirectsFile(redirects) {
+  if (redirects.length === 0) return;
+
+  const lines = redirects.map(r => `${r.from_path} ${r.to_path} 301`);
+  const content = lines.join('\n') + '\n';
+
+  fs.writeFileSync(path.join(DIST_DIR, '_redirects'), content, 'utf8');
+  console.log(`[annuaire] Generated: /_redirects (${redirects.length} rules)`);
+}
+
 // ── Main ─────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -456,6 +491,10 @@ async function main() {
   await generateCityPages();
   await generateSpecialtyCityPages();
   await generateProfessionalPages();
+
+  // Generate _redirects for Cloudflare Pages (301 for deleted professionals)
+  const redirects = await fetchRedirects();
+  generateRedirectsFile(redirects);
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(2);
   console.log(`\n✅ Annuaire build complete in ${elapsed}s`);
