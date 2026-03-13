@@ -2,6 +2,8 @@
  * Annuaire — Multi-step registration form
  * Handles: step navigation, validation, char counters, recap,
  *          Supabase auth registration, profile creation, photo upload
+ *          Bubble selectors for methods (specialty-specific) and languages
+ *          Address autocomplete via OpenStreetMap Nominatim
  */
 (function () {
   'use strict';
@@ -11,6 +13,50 @@
 
   var form = document.getElementById('rejoindre-form');
   if (!form) return;
+
+  // ── Specialty-specific methods (same as dashboard) ──
+  var METHODS_BY_SPECIALTY = {
+    'therapeute-de-couple': [
+      'Thérapie systémique', 'TCC', 'EFT (Thérapie centrée sur les émotions)',
+      'Méthode Gottman', 'Approche Imago', 'Psychanalyse', 'Thérapie narrative',
+      'Thérapie brève', 'EMDR', 'Pleine conscience', 'Médiation conjugale',
+      'Analyse transactionnelle',
+    ],
+    'sexologue': [
+      'Sexocorporel', 'TCC', 'Pleine conscience', 'Hypnose', 'Sophrologie',
+      'Approche psychodynamique', 'Sensate focus', 'EMDR', 'Thérapie de couple',
+      'Sexoanalyse',
+    ],
+    'sexotherapeute': [
+      'Sexocorporel', 'TCC', 'Pleine conscience', 'Hypnose', 'Sophrologie',
+      'EMDR', 'Approche corporelle', 'Thérapie psychosexuelle', 'Sensate focus',
+      'Relaxation psychosomatique',
+    ],
+    'mediateur-familial': [
+      'Médiation familiale', 'Médiation transformative', 'Médiation intégrative',
+      'Approche systémique', 'Communication non-violente (CNV)',
+      'Négociation raisonnée', 'Médiation narrative', 'Droit collaboratif',
+    ],
+    'coach-parental': [
+      'Discipline positive', 'Communication non-violente (CNV)', 'Approche Montessori',
+      'Parentalité bienveillante', 'Coaching systémique', 'PNL',
+      'Gestion des émotions', 'Faber et Mazlish', 'Parentalité Filliozat',
+    ],
+    'conseiller-conjugal': [
+      'Écoute active', 'Communication non-violente (CNV)', 'Approche systémique',
+      'TCC', 'Thérapie brève', 'Analyse transactionnelle', 'Counseling',
+      'Approche humaniste', 'Médiation conjugale',
+    ],
+  };
+
+  var LANGUAGES = [
+    'Français', 'Anglais', 'Espagnol', 'Allemand', 'Italien', 'Portugais',
+    'Arabe', 'Chinois (Mandarin)', 'Russe', 'Turc', 'Japonais', 'Coréen',
+    'Néerlandais', 'Polonais', 'Roumain', 'Hindi',
+    'Langue des signes française (LSF)',
+  ];
+
+  var METHODS_LIMIT = 3; // free plan limit at registration
 
   var TOTAL_STEPS = 5;
   var currentStep = 1;
@@ -66,9 +112,53 @@
     update();
   });
 
+  // ── Bubble builder (shared for methods & languages) ────────────
+  function buildBubbles(container, items, nameAttr, selectedValues, maxSelect) {
+    if (!container) return;
+    container.innerHTML = '';
+    items.forEach(function (item) {
+      var label = document.createElement('label');
+      label.className = 'ann-method-option';
+      var cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.name = nameAttr;
+      cb.value = item;
+      cb.className = 'ann-sr-only';
+      if (selectedValues && selectedValues.indexOf(item) !== -1) cb.checked = true;
+      var tag = document.createElement('span');
+      tag.className = 'ann-method-tag';
+      if (cb.checked) tag.classList.add('selected');
+      tag.textContent = item;
+      label.appendChild(cb);
+      label.appendChild(tag);
+      container.appendChild(label);
+
+      cb.addEventListener('change', function () {
+        if (maxSelect && cb.checked) {
+          var checked = container.querySelectorAll('input:checked');
+          if (checked.length > maxSelect) {
+            cb.checked = false;
+            return;
+          }
+        }
+        tag.classList.toggle('selected', cb.checked);
+      });
+    });
+  }
+
+  function getSelectedBubbles(container) {
+    var values = [];
+    if (!container) return values;
+    container.querySelectorAll('input:checked').forEach(function (cb) {
+      values.push(cb.value);
+    });
+    return values;
+  }
+
   // ── Specialty Selection (max 2, ordered) ────────────────────────
   var specSelector = document.getElementById('specialty-selector');
   var specOrder = []; // tracks selection order by value
+  var methodsContainer = document.getElementById('methods-selector');
 
   function updateSpecBadges() {
     specSelector.querySelectorAll('.ann-specialty-option').forEach(function (opt) {
@@ -91,6 +181,13 @@
     });
   }
 
+  function rebuildMethods() {
+    var primary = specOrder.length ? specOrder[0] : null;
+    var methods = primary && METHODS_BY_SPECIALTY[primary] ? METHODS_BY_SPECIALTY[primary] : [];
+    var currentSelected = getSelectedBubbles(methodsContainer);
+    buildBubbles(methodsContainer, methods, 'methodes', currentSelected, METHODS_LIMIT);
+  }
+
   if (specSelector) {
     specSelector.addEventListener('change', function (e) {
       if (!e.target.matches('input[type="checkbox"]')) return;
@@ -108,18 +205,13 @@
 
       updateSpecBadges();
       clearError('err-specialites');
+      rebuildMethods();
     });
   }
 
-  // ── Method/Language Tag Toggle ───────────────────────────────────
-  document.querySelectorAll('.ann-method-option input').forEach(function (cb) {
-    cb.addEventListener('change', function () {
-      cb.closest('.ann-method-option').querySelector('.ann-method-tag').classList.toggle('selected', cb.checked);
-    });
-    if (cb.checked) {
-      cb.closest('.ann-method-option').querySelector('.ann-method-tag').classList.add('selected');
-    }
-  });
+  // ── Build languages bubbles ────────────────────────────────────
+  var languesContainer = document.getElementById('langues-selector');
+  buildBubbles(languesContainer, LANGUAGES, 'langues', ['Français'], null);
 
   // ── Consultation Mode Toggle ─────────────────────────────────────
   document.querySelectorAll('.ann-consult-option input').forEach(function (cb) {
@@ -150,6 +242,49 @@
       clearError('err-consent');
     });
   }
+
+  // ── Address Autocomplete (OpenStreetMap Nominatim) ─────────────
+  (function () {
+    var addrInput = document.getElementById('f-adresse');
+    var sugBox = document.getElementById('f-adresse-suggestions');
+    if (!addrInput || !sugBox) return;
+    var debounceTimer = null;
+
+    addrInput.addEventListener('input', function () {
+      clearTimeout(debounceTimer);
+      var q = addrInput.value.trim();
+      if (q.length < 4) { sugBox.style.display = 'none'; return; }
+      debounceTimer = setTimeout(function () {
+        fetch('https://nominatim.openstreetmap.org/search?format=json&countrycodes=fr&limit=5&q=' + encodeURIComponent(q), {
+          headers: { 'Accept-Language': 'fr' }
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (results) {
+            sugBox.innerHTML = '';
+            if (!results.length) { sugBox.style.display = 'none'; return; }
+            results.forEach(function (r) {
+              var div = document.createElement('div');
+              div.textContent = r.display_name;
+              div.style.cssText = 'padding:0.625rem 0.75rem;cursor:pointer;font-size:0.875rem;border-bottom:1px solid hsl(var(--ann-border)/0.5);';
+              div.addEventListener('mouseenter', function () { div.style.background = 'hsl(var(--ann-muted)/0.5)'; });
+              div.addEventListener('mouseleave', function () { div.style.background = ''; });
+              div.addEventListener('mousedown', function (e) {
+                e.preventDefault();
+                addrInput.value = r.display_name;
+                sugBox.style.display = 'none';
+              });
+              sugBox.appendChild(div);
+            });
+            sugBox.style.display = 'block';
+          })
+          .catch(function () { sugBox.style.display = 'none'; });
+      }, 350);
+    });
+
+    addrInput.addEventListener('blur', function () {
+      setTimeout(function () { sugBox.style.display = 'none'; }, 200);
+    });
+  })();
 
   // ── Validation ───────────────────────────────────────────────────
   function showError(id, msg) {
@@ -205,7 +340,9 @@
       var specChecked = form.querySelectorAll('input[name="specialites"]:checked');
       if (specChecked.length === 0) { showError('err-specialites', 'Sélectionnez au moins une spécialité'); valid = false; }
       if (!val('f-titre')) { showError('err-titre', 'Le titre est requis'); valid = false; }
-      if (!val('f-experience')) { showError('err-experience', 'Sélectionnez votre expérience'); valid = false; }
+      var exp = val('f-experience');
+      if (!exp) { showError('err-experience', 'Les années d\'expérience sont requises'); valid = false; }
+      else if (Number(exp) < 0 || Number(exp) > 50) { showError('err-experience', 'Valeur entre 0 et 50'); valid = false; }
     }
 
     if (step === 3) {
@@ -336,13 +473,11 @@
 
     setText('recap-titre', val('f-titre'));
 
-    var methods = [];
-    form.querySelectorAll('input[name="methodes"]:checked').forEach(function (cb) { methods.push(cb.value); });
+    var methods = getSelectedBubbles(methodsContainer);
     setText('recap-methodes', methods.length ? methods.join(', ') : 'Non renseigné');
 
-    var expSelect = document.getElementById('f-experience');
-    var expText = expSelect && expSelect.selectedIndex > 0 ? expSelect.options[expSelect.selectedIndex].text : '—';
-    setText('recap-experience', expText);
+    var exp = val('f-experience');
+    setText('recap-experience', exp ? exp + ' an' + (Number(exp) > 1 ? 's' : '') : '—');
 
     var cabinetVal = val('f-cabinet');
     var cabinetRow = document.getElementById('recap-cabinet-row');
@@ -372,8 +507,7 @@
     var rdv = form.querySelector('input[name="rdv_gratuit"]:checked');
     setText('recap-rdv', rdv && rdv.value === 'oui' ? 'Oui' : 'Non');
 
-    var langues = [];
-    form.querySelectorAll('input[name="langues"]:checked').forEach(function (cb) { langues.push(cb.value); });
+    var langues = getSelectedBubbles(languesContainer);
     setText('recap-langues', langues.length ? langues.join(', ') : 'Non renseigné');
 
     setText('recap-description', val('f-description'));
@@ -382,12 +516,6 @@
   function setText(id, text) {
     var el = document.getElementById(id);
     if (el) el.textContent = text;
-  }
-
-  // ── Experience mapping ────────────────────────────────────────────
-  function experienceToYears(val) {
-    var map = { '0-2': 1, '2-5': 3, '5-10': 7, '10-20': 15, '20+': 25 };
-    return map[val] || 0;
   }
 
   // ── Submit: Supabase auth + profile creation ─────────────────────
@@ -419,17 +547,11 @@
         });
       }
 
-      // Collect methods
-      var methods = [];
-      form.querySelectorAll('input[name="methodes"]:checked').forEach(function (cb) {
-        methods.push(cb.value);
-      });
+      // Collect methods from bubble selector
+      var methods = getSelectedBubbles(methodsContainer);
 
-      // Collect languages
-      var languages = [];
-      form.querySelectorAll('input[name="langues"]:checked').forEach(function (cb) {
-        languages.push(cb.value);
-      });
+      // Collect languages from bubble selector
+      var languages = getSelectedBubbles(languesContainer);
 
       var pmin = val('f-prix-min');
       var pmax = val('f-prix-max');
@@ -444,13 +566,20 @@
         description: val('f-description'),
         methods: methods,
         languages: languages.length ? languages : ['Français'],
-        years_experience: experienceToYears(val('f-experience')),
+        years_experience: parseInt(val('f-experience'), 10) || 0,
         price_range: pmin && pmax ? pmin + '€ - ' + pmax + '€' : '',
         address: val('f-adresse') + ', ' + val('f-codepostal') + ' ' + (function () {
           var vs = document.getElementById('f-ville');
           return vs && vs.selectedIndex > 0 ? vs.options[vs.selectedIndex].text.replace(/\s*\(.*\)$/, '') : '';
         })(),
-        availability: 'Sur rendez-vous',
+        availability: (function () {
+          var modes = [];
+          form.querySelectorAll('input[name="modes"]:checked').forEach(function (cb) {
+            var map = { 'cabinet': 'En cabinet', 'en-ligne': 'En ligne', 'domicile': 'À domicile' };
+            modes.push(map[cb.value] || cb.value);
+          });
+          return modes.join(', ') || 'Sur rendez-vous';
+        })(),
         is_published: false,
       };
 

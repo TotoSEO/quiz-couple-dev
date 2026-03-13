@@ -340,6 +340,47 @@
     });
   });
 
+  // ── Login/Profile Button (auth-aware) ──────────────────────────
+  (function () {
+    var btns = document.querySelectorAll('.ann-login-btn');
+    if (!btns.length) return;
+
+    // Check Supabase auth token in localStorage
+    var authKey = 'sb-lojvajnnvhatfplevyvy-auth-token';
+    var raw = localStorage.getItem(authKey);
+    if (!raw) return;
+
+    try {
+      var data = JSON.parse(raw);
+      if (!data || !data.access_token) return;
+    } catch (e) { return; }
+
+    // User is logged in — swap to "Voir ma fiche"
+    btns.forEach(function (btn) {
+      // Update icon to user profile icon
+      var svg = btn.querySelector('svg');
+      if (svg) {
+        svg.innerHTML = '<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>';
+      }
+      // Update text
+      var span = btn.querySelector('span');
+      if (span) {
+        span.textContent = 'Voir ma fiche';
+      } else {
+        // Mobile version (text node)
+        var textNodes = [];
+        btn.childNodes.forEach(function (n) {
+          if (n.nodeType === 3 && n.textContent.trim()) textNodes.push(n);
+        });
+        if (textNodes.length) textNodes[0].textContent = ' Voir ma fiche';
+      }
+
+      // Swap outline style for a subtle highlight
+      btn.classList.remove('ann-btn-outline');
+      btn.classList.add('ann-btn-secondary');
+    });
+  })();
+
   // ── City Carousel (specialty pages) ─────────────────────────────
   var track = document.getElementById('city-carousel-track');
   if (track) {

@@ -151,33 +151,15 @@
         </div>
 
         <div class="ann-form-group">
-          <label class="ann-label">Méthodes pratiquées <span class="ann-text-muted ann-text-xs">(optionnel)</span></label>
-          <div class="ann-methods-grid" id="methods-selector">
-            <% const methods = [
-              'Thérapie systémique', 'TCC', 'Approche Imago', 'Gestalt-thérapie',
-              'EMDR', 'Psychanalyse', 'Médiation', 'Approche sexocorporelle',
-              'Communication non-violente', 'Hypnothérapie', 'PNL', 'Pleine conscience',
-              'Approche humaniste', 'Écoute active', 'Discipline positive'
-            ]; %>
-            <% for (const method of methods) { %>
-            <label class="ann-method-option">
-              <input type="checkbox" name="methodes" value="<%= method %>" class="ann-sr-only">
-              <span class="ann-method-tag"><%= method %></span>
-            </label>
-            <% } %>
-          </div>
+          <label class="ann-label">Méthodes / approches <span class="ann-text-muted ann-text-xs">(3 max — plan gratuit)</span></label>
+          <p class="ann-text-muted ann-text-sm" style="margin-bottom:0.75rem;margin-top:-0.25rem;">Les méthodes s'adaptent à votre spécialité principale.</p>
+          <div class="ann-methods-grid" id="methods-selector"></div>
+          <span class="ann-field-error" id="err-methodes"></span>
         </div>
 
         <div class="ann-form-group">
           <label class="ann-label" for="f-experience">Années d'expérience <span class="ann-required">*</span></label>
-          <select id="f-experience" name="experience" class="ann-input ann-select" required>
-            <option value="" disabled selected>Sélectionnez...</option>
-            <option value="0-2">Moins de 2 ans</option>
-            <option value="2-5">2 à 5 ans</option>
-            <option value="5-10">5 à 10 ans</option>
-            <option value="10-20">10 à 20 ans</option>
-            <option value="20+">Plus de 20 ans</option>
-          </select>
+          <input type="number" id="f-experience" name="experience" class="ann-input" placeholder="Ex: 8" min="0" max="50" required>
           <span class="ann-field-error" id="err-experience"></span>
         </div>
       </div>
@@ -198,9 +180,10 @@
           </div>
         </div>
 
-        <div class="ann-form-group">
+        <div class="ann-form-group" style="position:relative;">
           <label class="ann-label" for="f-adresse">Adresse <span class="ann-required">*</span></label>
-          <input type="text" id="f-adresse" name="adresse" class="ann-input" placeholder="45 Rue de Rivoli" maxlength="200" required>
+          <input type="text" id="f-adresse" name="adresse" class="ann-input" placeholder="45 Rue de Rivoli" maxlength="200" autocomplete="off" required>
+          <div id="f-adresse-suggestions" style="display:none;position:absolute;top:100%;left:0;right:0;z-index:50;background:var(--ann-card-bg,#fff);border:1px solid hsl(var(--ann-border));border-radius:0 0 var(--ann-radius) var(--ann-radius);max-height:200px;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
           <span class="ann-field-error" id="err-adresse"></span>
         </div>
 
@@ -277,15 +260,7 @@
 
         <div class="ann-form-group">
           <label class="ann-label">Langues parlées</label>
-          <div class="ann-methods-grid" id="langues-selector">
-            <% const langues = ['Français', 'Anglais', 'Espagnol', 'Allemand', 'Italien', 'Portugais', 'Arabe', 'Chinois', 'Langue des signes']; %>
-            <% for (const langue of langues) { %>
-            <label class="ann-method-option">
-              <input type="checkbox" name="langues" value="<%= langue %>" class="ann-sr-only" <%= langue === 'Français' ? 'checked' : '' %>>
-              <span class="ann-method-tag"><%= langue %></span>
-            </label>
-            <% } %>
-          </div>
+          <div class="ann-methods-grid" id="langues-selector"></div>
         </div>
 
         <div class="ann-form-grid">

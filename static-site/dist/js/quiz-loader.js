@@ -391,6 +391,7 @@
     if (debateQuestions.length === 0) debateQuestions = questions;
 
     // Debate results: try from gd.json first (non-FR debate prefix has r0t/r1t pattern)
+    // Debate uses 1-5 scale, so max score = questions * 5
     var results = parseGdResults(cfg.prefix, debateQuestions.length * 5);
 
     if (results.length === 0) {
