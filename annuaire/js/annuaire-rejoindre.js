@@ -353,6 +353,19 @@
       if (!val('f-ville')) { showError('err-ville', 'La ville est requise'); valid = false; }
       var modesChecked = form.querySelectorAll('input[name="modes"]:checked');
       if (modesChecked.length === 0) { showError('err-modes', 'Sélectionnez au moins un mode'); valid = false; }
+      var doctolibVal = val('f-doctolib');
+      if (doctolibVal) {
+        try {
+          var dUrl = new URL(doctolibVal);
+          if (dUrl.hostname !== 'www.doctolib.fr' && dUrl.hostname !== 'doctolib.fr') {
+            showError('err-doctolib', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
+            valid = false;
+          }
+        } catch (e) {
+          showError('err-doctolib', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
+          valid = false;
+        }
+      }
     }
 
     if (step === 4) {
@@ -580,6 +593,7 @@
           });
           return modes.join(', ') || 'Sur rendez-vous';
         })(),
+        doctolib_url: val('f-doctolib') || null,
         is_published: false,
       };
 
