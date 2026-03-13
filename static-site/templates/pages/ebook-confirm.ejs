@@ -8,8 +8,14 @@
     <div id="ebook-confirm-result" class="hidden">
       <div id="ebook-confirm-icon" class="text-4xl mb-4"></div>
       <h1 id="ebook-confirm-title" class="text-2xl font-bold mb-2"></h1>
-      <p id="ebook-confirm-message" class="text-muted-foreground mb-8"></p>
-      <a href="/" class="btn btn-cta btn-gradient" style="padding:0.875rem 2rem;font-size:1rem;">Retourner sur Quiz Couple</a>
+      <p id="ebook-confirm-message" class="text-muted-foreground mb-6"></p>
+      <div id="ebook-download-section" class="hidden" style="margin-bottom:2rem;">
+        <a href="/assets/ebook-astrologie.pdf" download="Apprendre-les-bases-de-l-Astrologie-QuizCouple.pdf" class="btn btn-cta btn-gradient" style="padding:0.875rem 2rem;font-size:1.0625rem;display:inline-flex;align-items:center;gap:0.5rem;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          T&eacute;l&eacute;charger mon E-Book (PDF)
+        </a>
+      </div>
+      <a href="/" style="color:#d6336c;text-decoration:none;font-size:0.9375rem;">Retourner sur Quiz Couple</a>
     </div>
   </div>
 </section>
@@ -24,16 +30,19 @@
   var title = document.getElementById('ebook-confirm-title');
   var message = document.getElementById('ebook-confirm-message');
 
-  function showResult(i, t, m) {
+  var downloadSection = document.getElementById('ebook-download-section');
+
+  function showResult(i, t, m, showDownload) {
     icon.textContent = i;
     title.textContent = t;
     message.textContent = m;
     loading.classList.add('hidden');
     result.classList.remove('hidden');
+    if (showDownload && downloadSection) downloadSection.classList.remove('hidden');
   }
 
   if (!token) {
-    showResult('\u274C', 'Lien invalide', 'Ce lien de confirmation est invalide ou incomplet.');
+    showResult('\u274C', 'Lien invalide', 'Ce lien de confirmation est invalide ou incomplet.', false);
     return;
   }
 
@@ -50,15 +59,15 @@
   .then(function(res) { return res.json(); })
   .then(function(data) {
     if (data.error) {
-      showResult('\u274C', 'Oups...', data.error);
+      showResult('\u274C', 'Oups...', data.error, false);
     } else if (data.already_verified) {
-      showResult('\u2139\uFE0F', 'D\u00E9j\u00E0 confirm\u00E9 !', data.first_name + ', votre e-mail a d\u00E9j\u00E0 \u00E9t\u00E9 confirm\u00E9. L\'E-Book a \u00E9t\u00E9 envoy\u00E9 pr\u00E9c\u00E9demment. Si vous ne le retrouvez pas, v\u00E9rifiez votre dossier spam.');
+      showResult('\u2139\uFE0F', 'D\u00E9j\u00E0 confirm\u00E9 !', data.first_name + ', votre e-mail a d\u00E9j\u00E0 \u00E9t\u00E9 confirm\u00E9. Vous pouvez t\u00E9l\u00E9charger votre E-Book ci-dessous.', true);
     } else {
-      showResult('\u2705', 'E-mail confirm\u00E9 !', 'Merci ' + data.first_name + ' ! Votre E-Book a \u00E9t\u00E9 envoy\u00E9 \u00E0 votre adresse e-mail. V\u00E9rifiez votre bo\u00EEte de r\u00E9ception (et le dossier spam, au cas o\u00F9).');
+      showResult('\u2705', 'E-mail confirm\u00E9 !', 'Merci ' + data.first_name + ' ! Votre E-Book est pr\u00EAt, cliquez ci-dessous pour le t\u00E9l\u00E9charger.', true);
     }
   })
   .catch(function() {
-    showResult('\u274C', 'Erreur', 'Une erreur est survenue. Veuillez r\u00E9essayer plus tard.');
+    showResult('\u274C', 'Erreur', 'Une erreur est survenue. Veuillez r\u00E9essayer plus tard.', false);
   });
 })();
 </script>

@@ -13,6 +13,7 @@ const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
 // Hardcoded to avoid SITE_URL env var misconfiguration
 const SITE_URL = 'https://quiz-couple.com';
 const EBOOK_PDF_URL = SITE_URL + '/assets/ebook-astrologie.pdf';
+const EBOOK_FILENAME = 'Apprendre-les-bases-de-l-Astrologie-QuizCouple.pdf';
 
 function escapeHtml(str: string): string {
   return str
@@ -115,7 +116,7 @@ serve(async (req) => {
         body: JSON.stringify({
           from: 'Quiz Couple <noreply@quiz-couple.com>',
           to: [email.toLowerCase().trim()],
-          subject: 'Confirmez votre e-mail pour recevoir votre E-Book gratuit',
+          subject: 'Confirmez votre e-mail pour accéder à votre E-Book gratuit',
           html: `
             <div style="font-family:Inter,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:2rem;">
               <div style="text-align:center;margin-bottom:2rem;">
@@ -123,12 +124,12 @@ serve(async (req) => {
               </div>
               <h1 style="color:#d6336c;font-size:1.5rem;text-align:center;">Plus qu'une étape, ${escapeHtml(first_name.trim())} !</h1>
               <p style="font-size:1rem;line-height:1.6;color:#333;text-align:center;">
-                Cliquez sur le bouton ci-dessous pour confirmer votre adresse e-mail et recevoir immédiatement votre E-Book gratuit sur l'astrologie.
+                Cliquez sur le bouton ci-dessous pour confirmer votre adresse e-mail et accéder immédiatement à votre E-Book gratuit sur l'astrologie.
               </p>
               <div style="text-align:center;margin:2rem 0;">
                 <a href="${verifyUrl}"
                    style="display:inline-block;padding:0.875rem 2rem;background:linear-gradient(135deg,#d6336c,#e8590c);color:white;text-decoration:none;border-radius:0.5rem;font-weight:700;font-size:1rem;">
-                  Confirmer et recevoir mon E-Book
+                  Confirmer et accéder à mon E-Book
                 </a>
               </div>
               <p style="font-size:0.875rem;color:#666;text-align:center;">
@@ -213,82 +214,7 @@ serve(async (req) => {
         })
         .eq('id', lead.id);
 
-      // Send ebook email with PDF attachment
-      if (RESEND_API_KEY) {
-        try {
-          const pdfRes = await fetch(EBOOK_PDF_URL);
-          if (!pdfRes.ok) throw new Error(`PDF fetch failed: ${pdfRes.status}`);
-          const pdfBuffer = await pdfRes.arrayBuffer();
-          const pdfBase64 = btoa(
-            new Uint8Array(pdfBuffer).reduce((data, byte) => data + String.fromCharCode(byte), '')
-          );
-
-          const ebookEmailRes = await fetch('https://api.resend.com/emails', {
-            method: 'POST',
-            headers: {
-              'Authorization': `Bearer ${RESEND_API_KEY}`,
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              from: 'Quiz Couple <noreply@quiz-couple.com>',
-              to: [lead.email],
-              subject: 'Votre E-Book gratuit : Apprendre les bases de l\'astrologie',
-              html: `
-                <div style="font-family:Inter,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:2rem;">
-                  <div style="text-align:center;margin-bottom:2rem;">
-                    <img src="${SITE_URL}/assets/logo-quiz-couple.png" alt="Quiz Couple" style="height:40px;">
-                  </div>
-                  <h1 style="color:#d6336c;font-size:1.5rem;text-align:center;">Voici votre E-Book, ${escapeHtml(lead.first_name)} !</h1>
-                  <p style="font-size:1rem;line-height:1.6;color:#333;text-align:center;">
-                    Merci d'avoir confirmé votre adresse e-mail. Vous trouverez votre E-Book <strong>"Apprendre les bases de l'astrologie"</strong> en pièce jointe de cet e-mail.
-                  </p>
-                  <div style="text-align:center;margin:2rem 0;padding:1.5rem;background:#f8f9fa;border-radius:0.75rem;">
-                    <p style="font-size:0.9375rem;color:#555;margin:0;">
-                      📎 Le PDF est joint à cet e-mail.<br>
-                      Si vous ne le voyez pas, vérifiez votre dossier spam.
-                    </p>
-                  </div>
-                  <p style="font-size:1rem;line-height:1.6;color:#333;text-align:center;">
-                    Bonne lecture et à bientôt sur Quiz Couple !
-                  </p>
-                  <hr style="border:none;border-top:1px solid #eee;margin:2rem 0;">
-                  <p style="font-size:0.75rem;color:#999;text-align:center;">
-                    Quiz Couple — quiz-couple.com
-                  </p>
-                </div>
-              `,
-              attachments: [
-                {
-                  filename: 'Apprendre-les-bases-de-l-Astrologie-QuizCouple.pdf',
-                  content: pdfBase64,
-                },
-              ],
-            }),
-          });
-          if (!ebookEmailRes.ok) {
-            const errText = await ebookEmailRes.text();
-            throw new Error(`Resend error ${ebookEmailRes.status}: ${errText}`);
-          }
-          console.log(`[ebook-verify] Ebook sent to ${lead.email}`);
-        } catch (emailErr) {
-          console.error('[ebook-verify] Failed to send ebook email:', emailErr);
-          // Reset verified status so user can retry
-          await supabase
-            .from('leads')
-            .update({ email_verified: false, is_closed: false })
-            .eq('id', lead.id);
-          if (req.method === 'POST') {
-            return new Response(
-              JSON.stringify({ error: 'L\'envoi de l\'e-book a échoué. Veuillez réessayer.' }),
-              { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-            );
-          }
-          return new Response(buildResultPage('error', 'L\'envoi de l\'e-book a échoué. Veuillez réessayer.'), {
-            status: 500,
-            headers: { 'Content-Type': 'text/html; charset=utf-8' },
-          });
-        }
-      }
+      console.log(`[ebook-verify] Email verified for ${lead.email}`);
 
       if (req.method === 'POST') {
         return new Response(
@@ -326,8 +252,8 @@ function buildResultPage(status: 'success' | 'already' | 'error', nameOrMessage:
   };
 
   const messages: Record<string, string> = {
-    success: `Merci ${escapeHtml(nameOrMessage)} ! Votre E-Book a été envoyé à votre adresse e-mail. Vérifiez votre boîte de réception (et le dossier spam, au cas où).`,
-    already: `${escapeHtml(nameOrMessage)}, votre e-mail a déjà été confirmé. L'E-Book a été envoyé précédemment. Si vous ne le retrouvez pas, vérifiez votre dossier spam.`,
+    success: `Merci ${escapeHtml(nameOrMessage)} ! Votre E-Book est prêt, cliquez ci-dessous pour le télécharger.`,
+    already: `${escapeHtml(nameOrMessage)}, votre e-mail a déjà été confirmé. Vous pouvez télécharger votre E-Book ci-dessous.`,
     error: escapeHtml(nameOrMessage),
   };
 
@@ -360,7 +286,15 @@ function buildResultPage(status: 'success' | 'already' | 'error', nameOrMessage:
     </div>
     <h1>${titles[status]}</h1>
     <p>${messages[status]}</p>
-    <a href="https://quiz-couple.com" class="btn">Retourner sur Quiz Couple</a>
+    ${status !== 'error' ? `
+    <div style="margin-bottom:1.5rem;">
+      <a href="${EBOOK_PDF_URL}" download="${EBOOK_FILENAME}" class="btn" style="display:inline-flex;align-items:center;gap:0.5rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Télécharger mon E-Book (PDF)
+      </a>
+    </div>
+    ` : ''}
+    <a href="https://quiz-couple.com" style="color:#d6336c;text-decoration:none;font-size:0.9375rem;">Retourner sur Quiz Couple</a>
   </div>
 </body>
 </html>`;
