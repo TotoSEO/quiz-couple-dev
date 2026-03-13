@@ -160,10 +160,27 @@
 
     if (!professionals.length) return;
 
+    // Use data-center and data-zoom if provided (individual profile pages)
+    var centerAttr = container.getAttribute('data-center');
+    var zoomAttr = container.getAttribute('data-zoom');
+    var defaultCenter = [46.603354, 1.888334];
+    var defaultZoom = 6;
+
+    if (centerAttr) {
+      try {
+        var c = JSON.parse(centerAttr);
+        if (c.lat && c.lng) { defaultCenter = [c.lat, c.lng]; }
+      } catch (e) { /* use default */ }
+    }
+    if (zoomAttr) {
+      var z = parseInt(zoomAttr, 10);
+      if (!isNaN(z)) { defaultZoom = z; }
+    }
+
     var map = L.map(container, {
       scrollWheelZoom: false,
       zoomControl: true,
-    }).setView([46.603354, 1.888334], 6); // Center of France
+    }).setView(defaultCenter, defaultZoom);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
