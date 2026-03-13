@@ -308,7 +308,7 @@ async function generateSpecialtyCityPages() {
         city,
         filteredProfessionals,
         seoContent,
-        metaTitle: `${specialty.name} à ${city.name} (${city.department})`,
+        metaTitle: `Annuaire des ${specialty.namePlural || specialty.name + 's'} à ${city.name} : Trouvez un spécialiste`,
         metaDescription: `${specialty.name} à ${city.name} — ${filteredProfessionals.length} professionnel${filteredProfessionals.length > 1 ? 's' : ''} référencé${filteredProfessionals.length > 1 ? 's' : ''}. Consultez les profils et prenez rendez-vous.`,
         canonical: getAnnuaireUrl(`/${specialty.id}/${city.id}/`),
         currentPage: 'specialty-city',

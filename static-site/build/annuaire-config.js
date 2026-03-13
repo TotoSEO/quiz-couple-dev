@@ -10,6 +10,7 @@ export const SPECIALTIES = [
   {
     id: 'therapeute-de-couple',
     name: 'Thérapeute de couple',
+    namePlural: 'thérapeutes de couple',
     shortName: 'Thérapeute',
     icon: 'heart-handshake',
     color: '#E84393',
@@ -104,6 +105,7 @@ export const SPECIALTIES = [
   {
     id: 'sexologue',
     name: 'Sexologue',
+    namePlural: 'sexologues',
     shortName: 'Sexologue',
     icon: 'flame',
     color: '#E17055',
@@ -196,6 +198,7 @@ export const SPECIALTIES = [
   {
     id: 'sexotherapeute',
     name: 'Sexothérapeute',
+    namePlural: 'sexothérapeutes',
     shortName: 'Sexothérapeute',
     icon: 'sparkles',
     color: '#A29BFE',
@@ -284,6 +287,7 @@ export const SPECIALTIES = [
   {
     id: 'mediateur-familial',
     name: 'Médiateur familial',
+    namePlural: 'médiateurs familiaux',
     shortName: 'Médiateur',
     icon: 'scale',
     color: '#00B894',
@@ -367,6 +371,7 @@ export const SPECIALTIES = [
   {
     id: 'coach-parental',
     name: 'Coach parental',
+    namePlural: 'coachs parentaux',
     shortName: 'Coach parental',
     icon: 'baby',
     color: '#FDCB6E',
@@ -461,6 +466,7 @@ export const SPECIALTIES = [
   {
     id: 'conseiller-conjugal',
     name: 'Conseiller conjugal',
+    namePlural: 'conseillers conjugaux',
     shortName: 'Conseiller',
     icon: 'message-circle-heart',
     color: '#74B9FF',
