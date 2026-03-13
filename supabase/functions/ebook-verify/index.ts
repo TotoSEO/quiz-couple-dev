@@ -9,9 +9,9 @@ const corsHeaders = {
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const SUPABASE_SERVICE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
 const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
-const SITE_URL = Deno.env.get('SITE_URL') || 'https://quiz-couple.com';
 
-// PDF hosted on the static site (copied during build from assets/)
+// Hardcoded to avoid SITE_URL env var misconfiguration
+const SITE_URL = 'https://quiz-couple.com';
 const EBOOK_PDF_URL = SITE_URL + '/assets/ebook-astrologie.pdf';
 
 function escapeHtml(str: string): string {
@@ -223,7 +223,7 @@ serve(async (req) => {
             new Uint8Array(pdfBuffer).reduce((data, byte) => data + String.fromCharCode(byte), '')
           );
 
-          await fetch('https://api.resend.com/emails', {
+          const ebookEmailRes = await fetch('https://api.resend.com/emails', {
             method: 'POST',
             headers: {
               'Authorization': `Bearer ${RESEND_API_KEY}`,
@@ -265,9 +265,28 @@ serve(async (req) => {
               ],
             }),
           });
+          if (!ebookEmailRes.ok) {
+            const errText = await ebookEmailRes.text();
+            throw new Error(`Resend error ${ebookEmailRes.status}: ${errText}`);
+          }
           console.log(`[ebook-verify] Ebook sent to ${lead.email}`);
         } catch (emailErr) {
           console.error('[ebook-verify] Failed to send ebook email:', emailErr);
+          // Reset verified status so user can retry
+          await supabase
+            .from('leads')
+            .update({ email_verified: false, is_closed: false })
+            .eq('id', lead.id);
+          if (req.method === 'POST') {
+            return new Response(
+              JSON.stringify({ error: 'L\'envoi de l\'e-book a échoué. Veuillez réessayer.' }),
+              { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+            );
+          }
+          return new Response(buildResultPage('error', 'L\'envoi de l\'e-book a échoué. Veuillez réessayer.'), {
+            status: 500,
+            headers: { 'Content-Type': 'text/html; charset=utf-8' },
+          });
         }
       }
 
