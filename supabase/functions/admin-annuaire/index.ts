@@ -193,7 +193,7 @@ serve(async (req) => {
       }
 
       // Auto-deploy to rebuild static pages with new profile
-      triggerDeploy();
+      await triggerDeploy();
 
       return new Response(JSON.stringify({ success: true, profile: data }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -273,7 +273,7 @@ serve(async (req) => {
       }
 
       // Auto-deploy to rebuild static pages (remove unpublished profile)
-      triggerDeploy();
+      await triggerDeploy();
 
       return new Response(JSON.stringify({ success: true, profile: data }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -297,7 +297,7 @@ serve(async (req) => {
       if (error) throw error;
 
       // Auto-deploy to rebuild static pages (remove deleted profile)
-      triggerDeploy();
+      await triggerDeploy();
 
       return new Response(JSON.stringify({ success: true }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },

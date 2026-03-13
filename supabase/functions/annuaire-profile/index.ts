@@ -205,7 +205,7 @@ serve(async (req: Request) => {
 
       // Auto-deploy if profile is published (rebuild static pages with fresh data)
       if (data && data.is_published) {
-        triggerDeploy();
+        await triggerDeploy();
       }
 
       return new Response(JSON.stringify({ profile: data }), {
