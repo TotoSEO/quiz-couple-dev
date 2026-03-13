@@ -10,6 +10,7 @@
   var adminToken = null;
   var allProfiles = [];
   var currentFilter = 'all';
+  var searchQuery = '';
 
   var SPEC_LABELS = {
     'therapeute-de-couple': 'Therapeute de couple',
@@ -142,8 +143,17 @@
       filtered = allProfiles.filter(function (p) { return p.is_published; });
     }
 
+    // Apply search filter
+    if (searchQuery) {
+      var q = searchQuery.toLowerCase();
+      filtered = filtered.filter(function (p) {
+        var fullName = ((p.first_name || '') + ' ' + (p.last_name || '')).toLowerCase();
+        return fullName.indexOf(q) !== -1;
+      });
+    }
+
     if (filtered.length === 0) {
-      listEl.innerHTML = '<p style="text-align:center;color:hsl(var(--ann-muted-fg));padding:3rem 0;">Aucune fiche trouvee.</p>';
+      listEl.innerHTML = '<p style="text-align:center;color:hsl(var(--ann-muted-fg));padding:3rem 0;">' + (searchQuery ? 'Aucun resultat pour "' + esc(searchQuery) + '"' : 'Aucune fiche trouvee.') + '</p>';
       return;
     }
 
@@ -157,6 +167,14 @@
         : '<div style="width:3rem;height:3rem;border-radius:50%;background:hsl(var(--ann-muted));display:flex;align-items:center;justify-content:center;"><svg style="width:1.25rem;height:1.25rem;color:hsl(var(--ann-muted-fg));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>';
 
       var date = p.created_at ? new Date(p.created_at).toLocaleDateString('fr-FR') : '';
+
+      // Build fiche URL for the external link icon
+      var ficheUrl = 'https://annuaire.quiz-couple.com/' + encodeURIComponent(p.specialty || '') + '/' + encodeURIComponent(p.city || '') + '/' + encodeURIComponent(p.slug || '') + '/';
+      var linkIcon = p.is_published && p.slug
+        ? ' <a href="' + esc(ficheUrl) + '" target="_blank" rel="noopener" title="Voir la fiche en ligne" style="color:hsl(var(--ann-primary));display:inline-flex;align-items:center;vertical-align:middle;">' +
+            '<svg style="width:0.875rem;height:0.875rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>' +
+          '</a>'
+        : '';
 
       var actions = '';
       if (!p.is_published) {
@@ -173,7 +191,7 @@
         '<div style="flex:1;min-width:0;">' +
           '<div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.25rem;">' +
             '<span style="font-weight:700;">' + esc(p.first_name || '') + ' ' + esc(p.last_name || '') + '</span>' +
-            statusBadge +
+            statusBadge + linkIcon +
           '</div>' +
           '<p style="font-size:0.875rem;color:hsl(var(--ann-muted-fg));margin-bottom:0.25rem;">' +
             esc(SPEC_LABELS[p.specialty] || p.specialty || '') + ' &mdash; ' + esc(p.city || '') +
@@ -299,6 +317,15 @@
     // Deploy button
     var deployBtn = document.getElementById('aadm-deploy');
     if (deployBtn) deployBtn.addEventListener('click', triggerDeploy);
+
+    // Search bar
+    var searchInput = document.getElementById('aadm-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', function () {
+        searchQuery = this.value.trim();
+        renderProfiles();
+      });
+    }
 
     // Filter buttons
     document.querySelectorAll('.aadm-filter').forEach(function (btn) {
