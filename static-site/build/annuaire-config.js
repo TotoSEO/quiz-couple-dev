@@ -828,26 +828,28 @@ export const CITIES = [
 `
   },
   {
-    id: 'le-mans', name: 'Le Mans', department: '72', region: 'Pays de la Loire', lat: 48.0061, lng: 0.1996, population: 145421,
+    id: 'le-mans', name: 'Le Mans', department: '72', region: 'Pays de la Loire', lat: 47.9960, lng: 0.1933, population: 145502,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Professionnels du couple au <span class="ann-text-gradient">Mans</span></h2>
-  <p>Capitale de la Sarthe, Le Mans est une ville à taille humaine qui attire des familles en quête de qualité de vie, à seulement une heure de Paris en TGV. Cette proximité avec la capitale crée des profils de couples navetteurs, avec les tensions que l'éloignement quotidien peut générer.</p>
-  <p>Les cabinets se concentrent dans le centre historique (la Cité Plantagenêt), le quartier de la gare et les zones résidentielles comme Pontlieue ou les Maillets. L'UDAF 72 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> en Sarthe, avec des tarifs adaptés aux revenus via le barème CAF.</p>
-  <p>Pour les couples manceaux, la ville offre un accès à des <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/conseiller-conjugal/">conseillers conjugaux</a> formés, avec des tarifs généralement plus accessibles que dans les grandes métropoles.</p>
+  <h2>Thérapie de couple au <span class="ann-text-gradient">Mans</span></h2>
+  <p>Le Mans, préfecture de la Sarthe, est une ville au riche patrimoine historique — sa cité Plantagenêt, l'un des plus grands ensembles médiévaux d'Europe, témoigne de siècles d'histoire. Mais c'est aussi une ville active et familiale, bien reliée à Paris (55 minutes en TGV), où de nombreux couples s'installent pour concilier qualité de vie et accès à la capitale. Cette situation de ville-relais génère des problématiques spécifiques : couples séparés par le travail, fatigue liée aux trajets quotidiens, difficulté à préserver du temps à deux.</p>
+  <p>Les praticiens manceaux exercent principalement dans le centre-ville (quartier de la République, place des Jacobins), autour de la gare TGV, et dans la cité Plantagenêt. Les communes de l'agglomération comme Coulaines, Allonnes ou La Chapelle-Saint-Aubin accueillent également des cabinets. Le réseau de tramway facilite l'accès aux différents quartiers.</p>
+  <p>La Sarthe dispose d'un service de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 72, avec des permanences régulières au Mans et dans les principales villes du département. La CAF de la Sarthe finance des séances à tarif adapté selon les revenus. Pour le <a href="/conseiller-conjugal/">conseil conjugal</a>, les antennes locales de l'AFCCC et du CLER proposent un accompagnement accessible.</p>
+  <p>Le centre hospitalier du Mans dispose d'une consultation en sexologie rattachée au pôle de santé publique. L'université du Mans, à travers son département de psychologie, forme des professionnels qui contribuent au maillage local en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
 </div>
 `
   },
   {
-    id: 'brest', name: 'Brest', department: '29', region: 'Bretagne', lat: 48.3904, lng: -4.4861, population: 142722,
+    id: 'brest', name: 'Brest', department: '29', region: 'Bretagne', lat: 48.3904, lng: -4.4861, population: 139386,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
   <h2>Accompagnement de couple à <span class="ann-text-gradient">Brest</span></h2>
-  <p>Brest, ville portuaire au bout du Finistère, a une identité forte marquée par la présence de la Marine nationale et de l'arsenal. Les couples de militaires, confrontés aux séparations prolongées et aux mutations fréquentes, représentent une part significative de la patientèle des professionnels du couple brestois.</p>
-  <p>Les praticiens exercent dans le centre-ville (quartier de Siam, Saint-Martin), à Recouvrance sur la rive droite de la Penfeld, et dans les quartiers résidentiels de Saint-Marc ou Lambézellec. Le CHU de Brest dispose d'une consultation de <a href="/sexologue/">sexologie</a> rattachée au service de gynécologie.</p>
-  <p>L'UDAF 29 et les associations comme le CLER Bretagne proposent des services de <a href="/mediateur-familial/">médiation familiale</a> et de <a href="/conseiller-conjugal/">conseil conjugal</a> à tarif modéré dans tout le Finistère.</p>
+  <p>Brest, ville portuaire tournée vers l'Atlantique, est la deuxième ville de Bretagne et un bastion de la Marine nationale. La base navale et l'arsenal emploient des milliers de personnes, créant une population de couples de militaires confrontés à des absences prolongées, au stress des missions et aux difficultés de réintégration au foyer. Plusieurs <a href="/therapeute-de-couple/">thérapeutes de couple</a> brestois se sont spécialisés dans l'accompagnement de ces familles.</p>
+  <p>Les cabinets se concentrent dans le centre-ville reconstruit après-guerre (quartier de Siam, rue Jean-Jaurès), dans le quartier de Saint-Martin et vers la faculté. Les communes de la métropole — Guipavas, Plouzané, Le Relecq-Kerhuon — accueillent aussi des praticiens. Le tramway, mis en service en 2012, facilite les déplacements dans l'agglomération.</p>
+  <p>Le CHRU de Brest dispose d'une consultation de <a href="/sexologue/">sexologie</a> rattachée au service de gynécologie-obstétrique. L'Université de Bretagne Occidentale (UBO) forme des psychologues cliniciens dont certains s'orientent ensuite vers la thérapie de couple. Le Finistère bénéficie d'un réseau de médiation familiale bien structuré, coordonné par l'UDAF 29, avec des permanences à Brest, Quimper et Morlaix.</p>
+  <p>L'éloignement géographique de Brest — à la pointe de la Bretagne — pousse les praticiens locaux à développer les consultations en visioconférence, une option appréciée par les couples dont l'un des conjoints est en mer ou en déplacement.</p>
 </div>
 `
   },
@@ -856,10 +858,11 @@ export const CITIES = [
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Thérapie de couple à <span class="ann-text-gradient">Tours</span></h2>
-  <p>Tours, « le jardin de la France », est une ville universitaire dynamique au cœur du Val de Loire. La faculté de médecine de Tours propose un DU de sexologie qui forme des praticiens locaux de qualité. Le CHRU de Tours dispose d'une consultation hospitalière de <a href="/sexologue/">sexologie</a> accessible sur adressage médical.</p>
-  <p>Les cabinets se répartissent dans l'hypercentre (place Plumereau, rue Nationale), le quartier des Prébendes, et les communes périphériques comme Joué-lès-Tours, Saint-Avertin ou Chambray-lès-Tours. La proximité de Paris (1h15 en TGV) crée des couples à distance que les praticiens tourangeaux accompagnent régulièrement.</p>
-  <p>Les associations de <a href="/mediateur-familial/">médiation familiale</a> d'Indre-et-Loire proposent des tarifs indexés sur les revenus via la CAF. Pour le <a href="/conseiller-conjugal/">conseil conjugal</a>, le CPEF de Tours offre des consultations gratuites.</p>
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Tours</span></h2>
+  <p>Tours, « le jardin de la France », est une ville universitaire et culturelle au cœur du Val de Loire. Ville à taille humaine, bien desservie par le TGV (1h15 de Paris), elle attire des couples séduits par la douceur de vivre tourangelle. Mais cette qualité de vie n'empêche pas les difficultés conjugales : l'arrivée d'un enfant, un déménagement depuis l'Île-de-France, le décalage entre les attentes et la réalité d'une nouvelle vie de province — autant de motifs qui amènent les couples à consulter.</p>
+  <p>Les praticiens tourangeaux exercent principalement dans le vieux Tours (place Plumereau, quartier de la cathédrale), autour de la gare et dans les quartiers des Prébendes et de Grammont. Les communes de la métropole comme Joué-lès-Tours, Saint-Cyr-sur-Loire et Saint-Avertin accueillent aussi des cabinets.</p>
+  <p>L'Université de Tours, à travers sa faculté de médecine, propose un DU de sexologie reconnu. Le CHRU de Tours dispose d'une consultation de <a href="/sexologue/">sexologie</a> accessible sur adressage médical. L'Indre-et-Loire bénéficie d'un réseau de <a href="/mediateur-familial/">médiation familiale</a> actif, géré par l'UDAF 37, avec des permanences à Tours et dans les villes du département.</p>
+  <p>Pour les couples qui cherchent un accompagnement financièrement accessible, le CPEF de Tours propose des consultations gratuites de conseil conjugal et familial. Les antennes locales du CLER et de l'AFCCC complètent l'offre avec du <a href="/conseiller-conjugal/">conseil conjugal</a> à tarif modéré.</p>
 </div>
 `
   },
@@ -868,10 +871,11 @@ export const CITIES = [
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Professionnels du couple à <span class="ann-text-gradient">Amiens</span></h2>
-  <p>Capitale de la Picardie historique, Amiens est une ville accessible : à 1h20 de Paris et 1h30 de Lille en train. Les professionnels du couple amiénois accompagnent une population variée, des étudiants de l'université de Picardie Jules Verne aux familles installées dans les quartiers résidentiels.</p>
-  <p>Les cabinets se trouvent dans le centre-ville (quartier Saint-Leu, cathédrale), le secteur de la gare et les quartiers sud comme Saint-Acheul. L'UDAF 80 gère un service de <a href="/mediateur-familial/">médiation familiale</a> avec des permanences dans la Somme.</p>
-  <p>Le CHU Amiens-Picardie propose une consultation de sexologie. Pour un accompagnement conjugal accessible, les CPEF du département offrent des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>.</p>
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Amiens</span></h2>
+  <p>Amiens, préfecture de la Somme et capitale historique de la Picardie, est une ville à la fois étudiante et familiale. Sa cathédrale gothique — la plus vaste de France — témoigne d'un patrimoine exceptionnel, mais c'est surtout la qualité de vie et le coût raisonnable de l'immobilier qui retiennent les couples. Beaucoup d'Amiénois travaillent à Paris (1h20 en TGV), créant des couples de navetteurs avec les tensions que cela implique : fatigue, manque de temps partagé, sentiment de vivre des vies parallèles.</p>
+  <p>Les praticiens amiénois exercent dans le centre-ville (quartier Saint-Leu, place Gambetta, rue des Trois-Cailloux), autour de la gare et dans les quartiers résidentiels de Saint-Acheul, Henriville et de la Hotoie. Les communes limitrophes comme Rivery, Longueau et Camon accueillent aussi des cabinets.</p>
+  <p>Le CHU Amiens-Picardie dispose d'une consultation de sexologie rattachée au service d'endocrinologie. L'Université de Picardie Jules Verne forme des psychologues cliniciens qui viennent enrichir l'offre locale en <a href="/therapeute-de-couple/">thérapie de couple</a>. La Somme bénéficie de services de <a href="/mediateur-familial/">médiation familiale</a> coordonnés par l'UDAF 80, avec des permanences à Amiens, Abbeville et Péronne.</p>
+  <p>Pour un accompagnement conjugal à tarif accessible, les antennes picardes du CLER et de Couples et Familles proposent des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> adaptées aux revenus des ménages.</p>
 </div>
 `
   },
@@ -881,9 +885,10 @@ export const CITIES = [
     seoHtml: `
 <div class="ann-seo-block">
   <h2>Accompagnement conjugal à <span class="ann-text-gradient">Perpignan</span></h2>
-  <p>Perpignan, porte de la Catalogne française, est une ville méditerranéenne à la frontière espagnole. Les couples transfrontaliers (français-espagnols ou français-catalans) représentent une particularité locale. Certains praticiens proposent des consultations bilingues français-catalan ou français-espagnol.</p>
-  <p>Les cabinets se concentrent dans le centre historique (quartier Saint-Jean), autour du Castillet et dans les quartiers résidentiels du Moulin à Vent ou de la Patte d'Oie. L'UDAF 66 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans les Pyrénées-Orientales.</p>
-  <p>Pour les couples perpignanais, la ville offre un accès à des <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/sexologue/">sexologues</a> formés, à des tarifs souvent plus accessibles que sur la Côte d'Azur voisine.</p>
+  <p>Perpignan, ville catalane baignée de soleil au pied des Pyrénées-Orientales, possède une identité culturelle forte à la croisée des influences françaises, catalanes et espagnoles. Cette richesse culturelle se reflète dans les couples qui consultent : couples franco-espagnols, familles enracinées dans la tradition catalane, retraités venus s'installer au soleil. Les praticiens perpignanais sont habitués à ces réalités multiculturelles et adaptent leur accompagnement en conséquence.</p>
+  <p>Les cabinets se trouvent principalement dans le centre-ville historique (quartier Saint-Jean, place de la Loge, boulevard Wilson) et dans les quartiers résidentiels du Moulin à Vent, de Saint-Assiscle et du Bas-Vernet. Canet-en-Roussillon et Saint-Estève, communes limitrophes, accueillent aussi des praticiens.</p>
+  <p>Les Pyrénées-Orientales disposent d'un réseau de <a href="/mediateur-familial/">médiation familiale</a> géré par l'UDAF 66, avec des permanences à Perpignan et Céret. Le centre hospitalier de Perpignan offre une consultation de <a href="/sexologue/">sexologie</a> accessible sur adressage. Le CPEF du département propose des consultations gratuites de conseil conjugal et familial.</p>
+  <p>Perpignan a la particularité d'être proche de la frontière espagnole (30 minutes de Figueras). Certains praticiens proposent des consultations bilingues français-espagnol, un atout pour les couples transfrontaliers ou les familles d'origine hispanique.</p>
 </div>
 `
   },
@@ -892,22 +897,24 @@ export const CITIES = [
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Thérapie de couple à <span class="ann-text-gradient">Limoges</span></h2>
-  <p>Limoges, préfecture de la Haute-Vienne, est une ville à taille humaine avec un tissu associatif dense. L'université de Limoges dispose d'une faculté de médecine qui contribue à former des professionnels de santé, y compris des <a href="/sexologue/">sexologues</a>.</p>
-  <p>Les praticiens exercent dans le centre-ville (quartier de la Cathédrale, place de la République), autour de la gare des Bénédictins et dans les quartiers comme Beaubreuil ou La Bastide. Le CHU de Limoges propose des consultations spécialisées en sexologie.</p>
-  <p>L'UDAF 87 et les associations locales offrent des services de <a href="/mediateur-familial/">médiation familiale</a> à tarif adapté. Les CPEF du département proposent des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal et familial</a>.</p>
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Limoges</span></h2>
+  <p>Limoges, préfecture de la Haute-Vienne, est connue pour sa porcelaine et ses émaux, mais c'est aussi une ville universitaire à taille humaine qui offre un cadre de vie paisible. Les couples limougeauds bénéficient d'un coût de la vie modéré et d'une proximité avec la nature — les monts du Limousin sont à quelques minutes. Cette tranquillité n'empêche cependant pas les difficultés relationnelles, et la ville dispose d'un réseau de praticiens compétents.</p>
+  <p>Les cabinets se concentrent dans le centre-ville (quartier de la cathédrale, place de la République, boulevard Carnot), autour de la gare des Bénédictins — l'une des plus belles gares de France — et dans les quartiers résidentiels de Beaubreuil, La Bastide et du Val de l'Aurence. Les communes voisines comme Isle et Panazol accueillent aussi des professionnels.</p>
+  <p>Le CHU de Limoges dispose d'une consultation de sexologie. L'Université de Limoges forme des psychologues dont certains se spécialisent en <a href="/therapeute-de-couple/">thérapie de couple</a>. La Haute-Vienne bénéficie d'un service de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 87, avec des permanences à Limoges et Saint-Junien.</p>
+  <p>Pour les couples à revenus modestes, le CPEF de Limoges propose des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les associations locales (CLER, Couples et Familles) complètent l'offre avec un accompagnement à tarif adapté selon les ressources du ménage.</p>
 </div>
 `
   },
   {
-    id: 'besancon', name: 'Besançon', department: '25', region: 'Bourgogne-Franche-Comté', lat: 47.2378, lng: 6.0241, population: 119192,
+    id: 'besancon', name: 'Besançon', department: '25', region: 'Bourgogne-Franche-Comté', lat: 47.2378, lng: 6.0241, population: 119198,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Professionnels du couple à <span class="ann-text-gradient">Besançon</span></h2>
-  <p>Besançon, classée ville verte, offre un cadre de vie apprécié des familles. La proximité avec la Suisse (30 minutes de la frontière) crée des couples transfrontaliers avec des problématiques spécifiques liées au différentiel de revenus et aux cultures professionnelles distinctes.</p>
-  <p>Les cabinets se trouvent dans la Boucle (centre historique inscrit UNESCO), le quartier de Battant et les secteurs résidentiels de Planoise ou Palente. L'université de Franche-Comté forme des praticiens en psychologie clinique qui exercent ensuite dans la région.</p>
-  <p>L'UDAF 25 coordonne la <a href="/mediateur-familial/">médiation familiale</a> dans le Doubs. Le CHRU de Besançon dispose d'une consultation de <a href="/sexologue/">sexologie</a>. Le CPEF de Besançon offre des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>.</p>
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Besançon</span></h2>
+  <p>Besançon, lovée dans une boucle du Doubs et dominée par la citadelle de Vauban classée à l'UNESCO, est une ville verte et universitaire. Capitale historique de l'horlogerie française, elle a su se reconvertir dans les microtechniques et les industries de pointe. Les couples bisontins ont des profils variés : jeunes actifs, étudiants, familles installées, fonctionnaires de la capitale régionale. L'offre en accompagnement de couple répond à cette diversité.</p>
+  <p>Les praticiens exercent principalement dans la Boucle (le centre historique piéton), autour de la place de la Révolution, du quartier Battant et de la gare Viotte. Les quartiers de Planoise, Palente et Bregille, ainsi que les communes voisines comme Thise et Ecole-Valentin, accueillent aussi des cabinets.</p>
+  <p>Le CHU de Besançon dispose d'une consultation de <a href="/sexologue/">sexologie</a> rattachée au service d'urologie. L'Université de Franche-Comté forme des psychologues cliniciens dont certains se spécialisent en thérapie conjugale. Le Doubs bénéficie d'un réseau de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 25, avec des permanences à Besançon, Montbéliard et Pontarlier.</p>
+  <p>La proximité avec la Suisse (Lausanne est à 1h30) crée des couples transfrontaliers confrontés à des problématiques spécifiques : décalage de revenus, doubles fiscalités, gestion du temps entre deux pays. Les praticiens bisontins connaissent ces réalités.</p>
 </div>
 `
   },
@@ -917,9 +924,10 @@ export const CITIES = [
     seoHtml: `
 <div class="ann-seo-block">
   <h2>Accompagnement de couple à <span class="ann-text-gradient">Orléans</span></h2>
-  <p>Orléans, à seulement 1h10 de Paris en train, est une ville en pleine transformation. La métropole orléanaise attire de plus en plus de couples parisiens en quête d'espace et de qualité de vie, ce qui génère des problématiques de transition : adaptation, isolement, couples à distance.</p>
-  <p>Les praticiens exercent dans l'hypercentre (rue Royale, place du Martroi), le quartier Madeleine et les communes périphériques comme Olivet, Saint-Jean-de-Braye ou Fleury-les-Aubrais. Le CHRO (Centre Hospitalier Régional d'Orléans) offre des consultations spécialisées.</p>
-  <p>L'UDAF 45 et les antennes locales de l'AFCCC proposent des services de <a href="/mediateur-familial/">médiation familiale</a> et de <a href="/conseiller-conjugal/">conseil conjugal</a> accessibles financièrement.</p>
+  <p>Orléans, préfecture du Loiret et métropole ligérienne, est une ville à la fois historique et moderne. Sa proximité avec Paris (1h10 en train) en fait une destination prisée des couples qui quittent l'Île-de-France pour gagner en espace et en qualité de vie. Cette transition, si elle est souvent positive, peut aussi créer des tensions : l'un des partenaires regrette Paris, l'autre s'épanouit en province — un décalage que les praticiens orléanais connaissent bien.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la cathédrale Sainte-Croix, rue de la République, place du Martroi), dans le quartier de la Source — où se situe le campus universitaire — et dans les communes de la métropole comme Olivet, Saint-Jean-de-Braye et Fleury-les-Aubrais. Le tramway facilite l'accès aux différents quartiers.</p>
+  <p>Le CHR d'Orléans dispose d'une consultation de sexologie. L'Université d'Orléans, avec son département de psychologie, contribue à former des professionnels locaux. Le Loiret bénéficie de services de <a href="/mediateur-familial/">médiation familiale</a> coordonnés par l'UDAF 45, avec des permanences à Orléans, Montargis et Pithiviers.</p>
+  <p>Pour les couples qui cherchent un <a href="/conseiller-conjugal/">conseil conjugal</a> accessible, les antennes locales du CLER et de l'AFCCC proposent des consultations à tarif adapté. Le CPEF du Loiret offre également des consultations gratuites de planification et de conseil familial.</p>
 </div>
 `
   },
@@ -929,21 +937,23 @@ export const CITIES = [
     seoHtml: `
 <div class="ann-seo-block">
   <h2>Thérapie de couple à <span class="ann-text-gradient">Saint-Étienne</span></h2>
-  <p>Saint-Étienne, en pleine renaissance après des décennies de désindustrialisation, attire une nouvelle population grâce à un immobilier très accessible et la proximité de Lyon (45 minutes en TER). Cette position crée des couples navetteurs, avec les défis quotidiens que cela implique.</p>
-  <p>Les cabinets se trouvent dans le centre-ville (place Jean Jaurès, quartier Fauriel), autour de la gare de Châteaucreux et dans les quartiers résidentiels. Le CHU de Saint-Étienne propose des consultations de <a href="/sexologue/">sexologie</a>.</p>
-  <p>L'UDAF 42 gère un service de <a href="/mediateur-familial/">médiation familiale</a> actif dans la Loire. Les tarifs des <a href="/therapeute-de-couple/">thérapeutes de couple</a> stéphanois sont parmi les plus accessibles de la région Auvergne-Rhône-Alpes.</p>
+  <p>Saint-Étienne, ancienne capitale industrielle reconvertie dans le design et l'innovation (ville UNESCO de Design depuis 2010), a un caractère populaire et authentique qui la distingue de sa voisine lyonnaise. Les couples stéphanois font face à des réalités économiques parfois plus tendues que dans les métropoles voisines, et les tensions financières sont un motif fréquent de consultation. Les praticiens locaux sont sensibles à ces problématiques et proposent souvent des tarifs adaptés.</p>
+  <p>Les cabinets se concentrent dans le centre-ville (place Jean-Jaurès, quartier de l'Hôtel de Ville, rue Gambetta), dans le quartier de Carnot et vers la gare de Châteaucreux. Les communes de la métropole comme Saint-Priest-en-Jarez, Villars et La Ricamarie accueillent aussi des praticiens. La proximité de Lyon (45 minutes en TER) permet également aux Stéphanois d'accéder à l'offre lyonnaise.</p>
+  <p>Le CHU de Saint-Étienne dispose d'une consultation de <a href="/sexologue/">sexologie</a>. L'Université Jean Monnet forme des psychologues cliniciens qui s'installent ensuite dans la Loire. L'UDAF 42 coordonne un service de <a href="/mediateur-familial/">médiation familiale</a> avec des permanences à Saint-Étienne, Roanne et Montbrison.</p>
+  <p>L'AFCCC et le CLER disposent d'antennes dans la Loire, proposant du <a href="/conseiller-conjugal/">conseil conjugal</a> à tarif modéré — une ressource précieuse dans un bassin de vie où les revenus sont souvent inférieurs à la moyenne nationale.</p>
 </div>
 `
   },
   {
-    id: 'caen', name: 'Caen', department: '14', region: 'Normandie', lat: 49.1829, lng: -0.3707, population: 108365,
+    id: 'caen', name: 'Caen', department: '14', region: 'Normandie', lat: 49.1829, lng: -0.3707, population: 106260,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
   <h2>Professionnels du couple à <span class="ann-text-gradient">Caen</span></h2>
-  <p>Caen, capitale de la Normandie, est une ville universitaire dynamique avec une population jeune et familiale. La faculté de médecine de Caen contribue à la formation de professionnels de santé spécialisés dans la région.</p>
-  <p>Les praticiens exercent dans le centre reconstruit (quartier du Château, Saint-Pierre), le secteur de la Prairie et les communes périphériques comme Hérouville-Saint-Clair ou Mondeville. Le CHU de Caen dispose d'une consultation de <a href="/sexologue/">sexologie</a>.</p>
-  <p>L'UDAF 14 et les associations de <a href="/mediateur-familial/">médiation familiale</a> du Calvados proposent des services à tarif adapté. Le CPEF de Caen offre des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a> pour les couples normands.</p>
+  <p>Caen, préfecture du Calvados et ancienne capitale du duché de Normandie, est une ville universitaire dynamique reconstruite après les destructions de 1944. Aujourd'hui, c'est une métropole à taille humaine qui offre un bon équilibre entre vie professionnelle, accès à la culture et proximité de la mer. Les couples caennais qui traversent des difficultés trouvent sur place une offre diversifiée de praticiens.</p>
+  <p>Les cabinets se répartissent dans le centre-ville (quartier du château, place Saint-Sauveur, rue Saint-Pierre), autour de la gare, et dans les quartiers résidentiels de la Prairie, de Venoix et de la Guérinière. Les communes de l'agglomération — Hérouville-Saint-Clair, Mondeville, Ifs — accueillent aussi des professionnels bien desservis par le tramway.</p>
+  <p>Le CHU de Caen dispose d'une consultation de <a href="/sexologue/">sexologie</a> rattachée au service de gynécologie. L'Université de Caen Normandie forme des psychologues cliniciens dans son département de psychologie. Le Calvados bénéficie d'un réseau de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 14, avec des permanences à Caen, Lisieux et Bayeux.</p>
+  <p>Le CPEF de Caen propose des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal et familial</a>. Les antennes normandes du CLER et de l'AFCCC complètent l'offre avec un accompagnement adapté aux revenus des couples.</p>
 </div>
 `
   },
@@ -952,10 +962,11 @@ export const CITIES = [
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Mulhouse</span></h2>
-  <p>Mulhouse, ville trinationale au carrefour de la France, de l'Allemagne et de la Suisse, accueille une population multiculturelle. Les praticiens mulhousiens sont souvent habitués à accompagner des couples binationaux, avec les particularités que cela implique en termes de communication et de référentiel culturel.</p>
-  <p>Les cabinets se trouvent dans le centre-ville (place de la Réunion, quartier de la gare) et les quartiers résidentiels de Dornach, Rebberg ou Riedisheim. Comme Strasbourg, Mulhouse est soumise au droit local alsacien-mosellan pour certaines questions familiales.</p>
-  <p>L'UDAF 68 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans le Haut-Rhin. Plusieurs praticiens proposent des consultations bilingues français-allemand, un atout dans cette région frontalière.</p>
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Mulhouse</span></h2>
+  <p>Mulhouse, au carrefour de la France, de l'Allemagne et de la Suisse, est une ville au caractère industriel affirmé et à la population particulièrement diverse. Ancienne capitale du textile, elle s'est reconvertie dans l'automobile (PSA), la chimie et les nouvelles technologies. Cette diversité sociale et culturelle se retrouve dans les consultations : couples franco-allemands, familles d'origines variées, travailleurs frontaliers — les praticiens mulhousiens sont rompus à l'accompagnement interculturel.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place de la Réunion, quartier de la Bourse), dans le quartier Rebberg — résidentiel et verdoyant — et dans les communes voisines comme Illzach, Wittenheim et Riedisheim. Le tramway-train permet aussi de consulter des praticiens à Thann ou dans la vallée de la Thur.</p>
+  <p>Comme Strasbourg et Metz, Mulhouse est soumise au droit local alsacien-mosellan. Les <a href="/mediateur-familial/">médiateurs familiaux</a> et <a href="/conseiller-conjugal/">conseillers conjugaux</a> du Haut-Rhin connaissent ces particularités juridiques. L'UDAF 68 coordonne un service de médiation familiale avec des permanences à Mulhouse et Colmar.</p>
+  <p>Le groupe hospitalier de la région de Mulhouse et Sud-Alsace (GHRMSA) propose une consultation de <a href="/sexologue/">sexologie</a>. Plusieurs praticiens mulhousiens consultent en français, allemand et parfois en anglais — un atout dans cette ville trinationale.</p>
 </div>
 `
   },
@@ -965,21 +976,23 @@ export const CITIES = [
     seoHtml: `
 <div class="ann-seo-block">
   <h2>Thérapie de couple à <span class="ann-text-gradient">Nancy</span></h2>
-  <p>Nancy, ancienne capitale des ducs de Lorraine, est une ville universitaire de renom avec un campus de 50 000 étudiants. La faculté de médecine de Nancy est l'une des plus réputées de l'Est de la France, et forme régulièrement des <a href="/sexologue/">sexologues</a> via son DU de sexologie.</p>
-  <p>Les cabinets se répartissent dans le centre historique (place Stanislas, Vieille Ville), le quartier de la gare et les secteurs résidentiels comme Laxou, Villers-lès-Nancy ou Vandœuvre. Le CHRU de Nancy dispose d'une consultation de sexologie.</p>
-  <p>L'UDAF 54 et les associations locales proposent des services de <a href="/mediateur-familial/">médiation familiale</a> en Meurthe-et-Moselle. Le CLER et l'AFCCC ont des antennes nancéiennes pour le <a href="/conseiller-conjugal/">conseil conjugal</a> à tarif accessible.</p>
+  <p>Nancy, ancienne capitale des ducs de Lorraine, est célèbre pour sa place Stanislas — l'une des plus belles places d'Europe — et son patrimoine Art nouveau. C'est aussi une grande ville universitaire (plus de 50 000 étudiants), ce qui en fait une cité jeune et dynamique. Les couples nancéiens qui consultent sont souvent des jeunes actifs, des familles avec enfants ou des couples confrontés à l'éloignement familial après une installation récente.</p>
+  <p>Les praticiens exercent dans le centre-ville (quartier de la Ville Neuve, rue Saint-Dizier, place Stanislas), dans le quartier de la gare et dans les secteurs résidentiels de Laxou, Villers-lès-Nancy et Vandœuvre-lès-Nancy — où se situe le campus universitaire. Le Cours Léopold et le quartier de la Pépinière accueillent aussi des cabinets.</p>
+  <p>Le CHU de Nancy dispose d'une consultation de <a href="/sexologue/">sexologie</a> reconnue. L'Université de Lorraine, avec ses facultés de médecine et de psychologie, forme des professionnels qui s'installent ensuite dans la région. La Meurthe-et-Moselle bénéficie d'un réseau de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 54.</p>
+  <p>Nancy est à 1h30 de Paris en TGV et à proximité du Luxembourg. Certains couples nancéiens sont des travailleurs frontaliers, avec les problématiques que cela implique : horaires décalés, fatigue du trajet quotidien, écart de revenus entre conjoints. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> locaux connaissent bien ces situations.</p>
 </div>
 `
   },
   {
-    id: 'pau', name: 'Pau', department: '64', region: 'Nouvelle-Aquitaine', lat: 43.2951, lng: -0.3708, population: 77130,
+    id: 'pau', name: 'Pau', department: '64', region: 'Nouvelle-Aquitaine', lat: 43.2951, lng: -0.3708, population: 77215,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Professionnels du couple à <span class="ann-text-gradient">Pau</span></h2>
-  <p>Pau, préfecture des Pyrénées-Atlantiques, est une ville agréable au pied des montagnes. La présence de Total Energies et de ses sous-traitants crée une population d'expatriés et de couples confrontés aux mutations professionnelles fréquentes.</p>
-  <p>Les praticiens exercent dans le centre-ville (boulevard des Pyrénées, quartier du Château), à Jurançon et dans les communes environnantes comme Billère ou Lescar. Le Centre Hospitalier de Pau propose des consultations spécialisées.</p>
-  <p>L'UDAF 64 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans le département. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> palois offrent un accompagnement de proximité, souvent en lien avec les spécificités culturelles béarnaises et basques.</p>
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Pau</span></h2>
+  <p>Pau, préfecture des Pyrénées-Atlantiques, est une ville au cadre de vie exceptionnel : son boulevard des Pyrénées offre un panorama unique sur la chaîne montagneuse. Ville de garnison historique (régiments de parachutistes), Pau accueille aussi une population internationale liée à l'industrie pétrolière et gazière (TotalEnergies y a un important centre technique). Les couples palois reflètent cette diversité : familles de militaires, expatriés du secteur énergétique, retraités séduits par le climat béarnais.</p>
+  <p>Les cabinets se concentrent dans le centre-ville (quartier du château, place Clemenceau, boulevard des Pyrénées) et dans les quartiers résidentiels de Trespoey, Jurançon et Billère. Lescar et Lons, communes de l'agglomération, accueillent aussi des praticiens.</p>
+  <p>Le centre hospitalier de Pau dispose d'une consultation de <a href="/sexologue/">sexologie</a>. L'Université de Pau et des Pays de l'Adour (UPPA) contribue à la vie intellectuelle de la ville. L'UDAF 64, qui couvre aussi le Pays basque, coordonne un service de <a href="/mediateur-familial/">médiation familiale</a> avec des permanences à Pau, Bayonne et Oloron-Sainte-Marie.</p>
+  <p>Pour les couples de militaires stationnés à Pau, des dispositifs spécifiques d'accompagnement existent via les services sociaux des armées. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> palois sont souvent familiers des problématiques liées aux mutations fréquentes et aux absences prolongées.</p>
 </div>
 `
   },
