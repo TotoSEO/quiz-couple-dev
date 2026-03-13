@@ -210,6 +210,34 @@
     return d.innerHTML;
   }
 
+  // ── Delete Modal ──
+
+  var pendingDeleteId = null;
+
+  function showDeleteModal(id) {
+    var profile = allProfiles.find(function (p) { return p.id === id; });
+    var nameEl = document.getElementById('aadm-delete-name');
+    if (nameEl && profile) {
+      nameEl.textContent = (profile.first_name || '') + ' ' + (profile.last_name || '') + ' — ' + (SPEC_LABELS[profile.specialty] || profile.specialty || '') + ', ' + (profile.city || '');
+    }
+    pendingDeleteId = id;
+    var modal = document.getElementById('aadm-delete-modal');
+    if (modal) modal.style.display = 'flex';
+  }
+
+  function hideDeleteModal() {
+    pendingDeleteId = null;
+    var modal = document.getElementById('aadm-delete-modal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  function confirmDelete() {
+    if (!pendingDeleteId) return;
+    var id = pendingDeleteId;
+    hideDeleteModal();
+    apiPost('delete', { id: id });
+  }
+
   // ── Actions ──
 
   function handleAction(action, id) {
@@ -221,8 +249,7 @@
       if (reason === null) return;
       apiPost('reject', { id: id, reason: reason });
     } else if (action === 'delete') {
-      if (!confirm('Supprimer definitivement cette fiche ? Cette action est irreversible.')) return;
-      apiPost('delete', { id: id });
+      showDeleteModal(id);
     }
   }
 
@@ -339,6 +366,23 @@
         currentFilter = this.dataset.filter;
         renderProfiles();
       });
+    });
+
+    // Delete modal buttons
+    var deleteCancelBtn = document.getElementById('aadm-delete-cancel');
+    if (deleteCancelBtn) deleteCancelBtn.addEventListener('click', hideDeleteModal);
+    var deleteConfirmBtn = document.getElementById('aadm-delete-confirm');
+    if (deleteConfirmBtn) deleteConfirmBtn.addEventListener('click', confirmDelete);
+
+    // Close modal on backdrop click
+    var deleteModal = document.getElementById('aadm-delete-modal');
+    if (deleteModal) deleteModal.addEventListener('click', function (e) {
+      if (e.target === deleteModal) hideDeleteModal();
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') hideDeleteModal();
     });
 
     // Action delegation (approve/reject/delete buttons)
