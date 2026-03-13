@@ -265,13 +265,13 @@
       <div class="ebook-form-section" id="ebook-form-section">
         <h3 class="text-xl font-bold mb-2">Recevez votre guide gratuit immédiatement</h3>
         <p class="text-muted-foreground mb-6">Pas de théorie ennuyeuse, juste des exercices pratiques et des déclics sur vous-même. Entrez simplement votre prénom et votre adresse e-mail ci-dessous, et téléchargez votre e-book.</p>
-        <form id="ebook-lead-form" class="ebook-form">
+        <form id="ebook-lead-form" class="ebook-form" style="position:relative;">
           <div class="ebook-form-fields">
             <input type="text" id="ebook-firstname" class="input" placeholder="Prénom" required maxlength="50" autocomplete="given-name">
             <input type="email" id="ebook-email" class="input" placeholder="Adresse e-mail" required maxlength="100" autocomplete="email">
           </div>
           <!-- Honeypot anti-spam -->
-          <div style="position:absolute;left:-9999px;" aria-hidden="true">
+          <div style="position:absolute;left:-9999px;pointer-events:none;" aria-hidden="true">
             <input type="text" id="ebook-website" name="website" tabindex="-1" autocomplete="off">
           </div>
           <label class="ebook-consent">
