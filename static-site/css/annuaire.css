@@ -59,6 +59,16 @@ img { max-width: 100%; height: auto; display: block; }
 button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
 ul { list-style: none; padding: 0; }
 
+/* ── Accessibility ─────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid hsl(var(--ann-primary));
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 /* ── Typography ────────────────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', 'Inter', system-ui, sans-serif;
@@ -355,6 +365,28 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
 .ann-btn-full { width: 100%; }
 
 .ann-btn-nav { padding: 0.5rem 1rem; font-size: 0.8125rem; }
+
+/* Focus-visible overrides for interactive elements */
+.ann-btn:focus-visible {
+  outline: 2px solid hsl(var(--ann-primary));
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px hsl(var(--ann-primary) / 0.15);
+}
+.ann-nav-link:focus-visible {
+  background: hsl(var(--ann-muted));
+  outline: 2px solid hsl(var(--ann-primary));
+  outline-offset: 2px;
+}
+.ann-pro-card:focus-visible {
+  outline: 2px solid hsl(var(--ann-primary));
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px hsl(var(--ann-primary) / 0.15);
+}
+.ann-city-card:focus-visible {
+  outline: 2px solid hsl(var(--ann-primary));
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px hsl(var(--ann-primary) / 0.15);
+}
 
 /* ── Cards ─────────────────────────────────────────────────────────── */
 .ann-card {
@@ -1075,6 +1107,11 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
   transition: color var(--ann-transition);
 }
 .ann-faq-trigger:hover { color: hsl(var(--ann-primary)); }
+.ann-faq-trigger:focus-visible {
+  outline: 2px solid hsl(var(--ann-primary));
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px hsl(var(--ann-primary) / 0.15);
+}
 .ann-faq-trigger .ann-chevron { width: 1rem; height: 1rem; }
 .ann-faq-item.open .ann-chevron { transform: rotate(180deg); }
 
@@ -1729,6 +1766,7 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
 .ann-form-input { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid hsl(var(--ann-border)); border-radius: var(--ann-radius); background: hsl(var(--ann-card)); color: hsl(var(--ann-fg)); font-size: 0.9375rem; font-family: inherit; transition: all var(--ann-transition); outline: none; }
 .ann-form-input::placeholder { color: hsl(var(--ann-muted-fg)); }
 .ann-form-input:focus { border-color: hsl(var(--ann-primary)); box-shadow: 0 0 0 3px hsl(var(--ann-primary) / 0.08); }
+.ann-form-input:focus-visible { border-color: hsl(var(--ann-primary)); box-shadow: 0 0 0 4px hsl(var(--ann-primary) / 0.15); }
 select.ann-form-input { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23888' stroke-width='1.5'%3E%3Cpath d='M2.5 4.5l3.5 3.5 3.5-3.5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
 textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; }
 .ann-form-error { background: hsl(0 70% 95%); color: hsl(0 70% 40%); padding: 0.75rem 1rem; border-radius: var(--ann-radius); font-size: 0.875rem; margin-bottom: 1rem; }
@@ -2075,7 +2113,7 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
 }
 
 /* ── Pricing Responsive ─────────────────────────────────────────────── */
-@media (max-width: 899px) {
+@media (max-width: 1023px) {
   .ann-pricing-grid {
     grid-template-columns: 1fr;
     max-width: 28rem;
@@ -2088,7 +2126,7 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
     transform: none;
   }
 }
-@media (min-width: 900px) and (max-width: 1023px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
   .ann-pricing-grid { gap: 1rem; }
   .ann-pricing-card { padding: 1.5rem; }
 }
@@ -2418,7 +2456,7 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
 .ann-map-sm { height: 16rem; border-radius: var(--ann-radius); }
 
 /* ── Profile Responsive ──────────────────────────────────────────────── */
-@media (max-width: 899px) {
+@media (max-width: 767px) {
   .ann-profile-layout {
     grid-template-columns: 1fr;
   }
@@ -2593,7 +2631,7 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   width: 1.25rem;
   height: 1.25rem;
 }
-@media (max-width: 640px) {
+@media (max-width: 639px) {
   .ann-carousel-btn { display: none; }
   .ann-carousel-viewport { overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
   .ann-carousel-track { transition: none; }
@@ -2642,12 +2680,35 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   padding: 0.125rem 0.5rem;
   border-radius: 1rem;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .ann-city-carousel-card { flex: 0 0 calc(33.333% - 0.667rem); }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .ann-city-carousel-card { flex: 0 0 calc(50% - 0.5rem); }
 }
-@media (max-width: 480px) {
+@media (max-width: 639px) {
   .ann-city-carousel-card { flex: 0 0 80%; }
+}
+
+/* ── Mobile Stacking ──────────────────────────────────────────────── */
+@media (max-width: 639px) {
+  /* Dashboard form fields stack */
+  #dash-profile-form [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Pro listing grid stacks */
+  .ann-listing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Pro profile page layout — sidebar below main */
+  .ann-profile-layout {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
+
+  .ann-profile-sidebar {
+    order: 1;
+  }
 }

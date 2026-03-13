@@ -99,6 +99,8 @@ export const SPECIALTIES = [
         { q: 'Comment convaincre mon partenaire de venir ?', a: 'C\'est une situation très fréquente. Plutôt que de présenter ça comme « on a un problème », essayez l\'angle « j\'ai besoin qu\'on se fasse aider pour mieux se comprendre ». Certains thérapeutes acceptent de recevoir un seul partenaire dans un premier temps, ce qui peut débloquer la situation.' },
         { q: 'Combien de séances faut-il prévoir ?', a: 'En moyenne entre 8 et 15 séances, toutes les deux semaines. Mais ça dépend vraiment de la situation : un couple qui consulte tôt pour un problème de communication aura besoin de moins de temps qu\'un couple en pleine crise après une infidélité.' },
         { q: 'Thérapeute de couple ou conseiller conjugal ?', a: 'Le thérapeute de couple travaille plus en profondeur sur les dynamiques relationnelles et les blessures anciennes, souvent sur plusieurs mois. Le conseiller conjugal propose un accompagnement plus court et plus centré sur des solutions concrètes. Les deux approches se complètent.' },
+        { q: 'La thérapie de couple est-elle remboursée ?', a: 'La Sécurité sociale ne rembourse pas la thérapie de couple en tant que telle. En revanche, si votre thérapeute est aussi psychologue ou psychiatre, une partie de la consultation peut être prise en charge. De nombreuses mutuelles proposent désormais un forfait « médecines douces » ou « consultations psy » qui couvre entre 3 et 6 séances par an. Pensez à vérifier votre contrat de complémentaire santé avant de commencer le suivi, car les montants remboursés varient considérablement d\'une mutuelle à l\'autre.' },
+        { q: 'Peut-on faire une thérapie de couple en ligne ?', a: 'Oui, et c\'est de plus en plus courant depuis 2020. Les études montrent que la thérapie de couple en visioconférence produit des résultats comparables au présentiel pour la plupart des problématiques courantes (communication, gestion des conflits, décalage de désir). C\'est particulièrement pratique pour les couples aux emplois du temps chargés ou en situation de séparation géographique. Certains thérapeutes alternent séances en cabinet et séances en visio selon les besoins du moment. Le présentiel reste toutefois préférable en cas de crise aiguë ou quand les émotions sont très intenses.' },
       ],
     },
   },
@@ -192,6 +194,8 @@ export const SPECIALTIES = [
         { q: 'Comment choisir entre sexologue et sexothérapeute ?', a: 'Si votre problème est plutôt médical ou fonctionnel (dysfonction érectile, douleurs, éjaculation précoce), un sexologue — surtout médecin — est le bon choix. Si le blocage est d\'ordre émotionnel, psychologique ou lié à un traumatisme, un sexothérapeute sera plus adapté. Dans le doute, consultez l\'un ou l\'autre : il saura vous orienter.' },
         { q: 'Est-ce qu\'il faut une ordonnance ?', a: 'Non. Vous pouvez prendre rendez-vous directement, sans passer par votre médecin traitant. C\'est une démarche libre et confidentielle.' },
         { q: 'Mon partenaire n\'est pas au courant, est-ce un problème ?', a: 'Pas du tout. La consultation est confidentielle. Beaucoup de patients commencent par consulter seuls avant d\'en parler à leur partenaire, et c\'est tout à fait normal.' },
+        { q: 'Quelle est la durée moyenne d\'un suivi ?', a: 'Un suivi en sexologie dure en moyenne entre 6 et 12 séances, à raison d\'une consultation toutes les deux à trois semaines. Les premières séances sont consacrées au bilan et à la compréhension du problème, puis le travail se poursuit avec des exercices pratiques et un accompagnement progressif. Pour certains troubles fonctionnels comme l\'éjaculation précoce, des améliorations significatives peuvent être observées en 4 à 6 séances. Pour des problématiques plus complexes impliquant un traumatisme ou un blocage ancien, le suivi peut s\'étendre sur 6 mois ou plus.' },
+        { q: 'Le sexologue peut-il prescrire des médicaments ?', a: 'Cela dépend de sa formation initiale. Un sexologue médecin (généraliste, urologue, gynécologue, psychiatre ayant ajouté le DU ou DIU de sexologie) peut prescrire des médicaments : traitement de la dysfonction érectile, hormonothérapie, antidépresseurs adaptés. Un sexologue non-médecin (psychologue, sage-femme, infirmier spécialisé) ne peut pas prescrire et travaille exclusivement par la parole, les exercices et les approches comportementales. Si un traitement médicamenteux s\'avère nécessaire, il vous orientera vers un confrère médecin.' },
       ],
     },
   },
@@ -281,6 +285,8 @@ export const SPECIALTIES = [
         { q: 'Les séances se font-elles en couple ?', a: 'Ça dépend de la situation. Le sexothérapeute peut recevoir en individuel, en couple, ou alterner les deux. Si le problème concerne l\'intimité du couple, travailler ensemble est souvent plus efficace.' },
         { q: 'Est-ce que le sexothérapeute touche le patient ?', a: 'Non. La sexothérapie est une thérapie par la parole et les exercices. Il n\'y a aucun contact physique avec le thérapeute. Les exercices corporels sont faits par le patient seul ou avec son partenaire, chez lui.' },
         { q: 'Combien de temps dure un suivi complet ?', a: 'Entre 10 et 20 séances en moyenne, à raison d\'une séance par semaine ou toutes les deux semaines. Un blocage ciblé se résout plus vite qu\'un traumatisme ancien.' },
+        { q: 'La sexothérapie est-elle remboursée par la mutuelle ?', a: 'La Sécurité sociale ne prend pas en charge la sexothérapie. Cependant, si le sexothérapeute est également psychologue inscrit au répertoire ADELI, certaines mutuelles remboursent une partie des séances dans le cadre d\'un forfait « consultations psychologiques » — généralement entre 3 et 8 séances par an, avec un plafond de 40 à 60 euros par séance. Le dispositif MonParcoursPsy peut aussi offrir une prise en charge partielle si le praticien est conventionné. Renseignez-vous auprès de votre complémentaire santé pour connaître les conditions exactes de remboursement.' },
+        { q: 'Peut-on consulter un sexothérapeute en visio ?', a: 'Oui, de nombreux sexothérapeutes proposent des séances en visioconférence. Cette modalité fonctionne bien pour le travail de parole, l\'exploration des blocages émotionnels et le suivi régulier entre les séances en cabinet. La visio est particulièrement adaptée aux personnes vivant dans des zones où peu de sexothérapeutes exercent, ou à celles qui ressentent de la gêne à se rendre physiquement en cabinet pour cette thématique. Pour le travail corporel (exercices de relaxation, de reconnexion au corps), le présentiel reste préférable, et beaucoup de praticiens recommandent un format hybride qui alterne les deux.' },
       ],
     },
   },
@@ -365,6 +371,8 @@ export const SPECIALTIES = [
         { q: 'Que se passe-t-il si l\'autre refuse la médiation ?', a: 'Vous pouvez quand même entamer la démarche. Le médiateur envoie une invitation à l\'autre partie. Si elle refuse, un certificat de non-accord est délivré, et vous pouvez saisir le juge. Le refus de médiation n\'est pas sanctionné, mais le juge peut le prendre en compte.' },
         { q: 'Les accords de médiation sont-ils juridiquement solides ?', a: 'Oui, à condition de les faire homologuer par le juge aux affaires familiales. Une fois homologués, ils ont la même valeur qu\'un jugement. En cas de non-respect, vous pouvez demander l\'exécution forcée.' },
         { q: 'Combien de séances faut-il en général ?', a: 'Entre 4 et 10 séances d\'environ 1h30, réparties sur 2 à 6 mois. Le rythme est adapté à la situation. Certaines médiations aboutissent en 3 séances, d\'autres nécessitent plus de temps quand les enjeux sont complexes (partage de biens, garde alternée, relations intergénérationnelles).' },
+        { q: 'Peut-on faire une médiation familiale en ligne ?', a: 'Oui, la médiation familiale en visioconférence s\'est développée depuis 2020 et est désormais proposée par de nombreux services, y compris les services conventionnés par la CAF. Elle est particulièrement utile lorsque les deux parties vivent dans des villes différentes, ce qui est fréquent après une séparation. Le processus reste le même : le médiateur applique les mêmes techniques de communication et de reformulation. Toutefois, pour les situations très conflictuelles où les émotions sont vives, le présentiel reste recommandé car le médiateur peut mieux capter le langage non-verbal et gérer les tensions.' },
+        { q: 'La médiation familiale est-elle gratuite ?', a: 'Dans les services conventionnés par la CAF (associations agréées, CPEF), la médiation familiale est soumise à un barème national indexé sur les revenus du ménage. Le tarif par séance et par personne va de 2 euros pour les revenus les plus modestes à 131 euros pour les revenus les plus élevés. L\'entretien d\'information préalable est toujours gratuit. En cabinet libéral, les tarifs sont fixés librement par le médiateur, généralement entre 100 et 180 euros la séance, parfois partagés entre les deux parties. Certains tribunaux prennent en charge les frais de médiation dans le cadre de l\'aide juridictionnelle.' },
       ],
     },
   },
@@ -460,6 +468,8 @@ export const SPECIALTIES = [
         { q: 'Mon enfant a 14 ans, est-ce adapté ?', a: 'Tout à fait. Le coaching parental avec des parents d\'adolescents est même très demandé. Les outils sont différents de ceux utilisés avec des tout-petits, mais le principe reste le même : améliorer la communication et poser un cadre adapté à l\'âge.' },
         { q: 'Faut-il venir en couple ?', a: 'Ce n\'est pas obligatoire, mais c\'est recommandé quand les deux parents sont impliqués au quotidien. Quand les deux sont sur la même longueur d\'onde, les résultats sont plus rapides et plus durables.' },
         { q: 'En combien de séances voit-on des résultats ?', a: 'La plupart des parents constatent des changements dès les 2 ou 3 premières séances. Le coaching parental est une approche courte : 5 à 8 séances suffisent généralement pour une problématique ciblée.' },
+        { q: 'Le coaching parental est-il remboursé ?', a: 'Le coaching parental n\'est pas remboursé par la Sécurité sociale, car il ne s\'agit pas d\'un acte médical. Cependant, quelques mutuelles commencent à inclure le coaching parental dans leurs forfaits « bien-être », « prévention » ou « médecines douces », avec un remboursement de 2 à 5 séances par an. Certaines entreprises proposent également une prise en charge via leur programme d\'aide aux employés (EAP). Il existe aussi des ateliers collectifs de coaching parental gratuits ou à faible coût, organisés par les maisons de quartier, les centres sociaux ou les associations familiales comme l\'UDAF.' },
+        { q: 'À partir de quel âge de l\'enfant consulter ?', a: 'On peut consulter un coach parental dès la naissance. En effet, les premiers mois de vie sont souvent une période où les parents se sentent démunis : pleurs inconsolables, troubles du sommeil, difficulté à trouver son rôle de parent. Le coaching parental s\'adapte à chaque tranche d\'âge : pour les tout-petits (0 à 3 ans), le travail porte sur le rythme, l\'attachement et la gestion des frustrations. Pour les enfants d\'âge scolaire (6 à 12 ans), on aborde les devoirs, les écrans, les conflits entre frères et sœurs. Pour les adolescents, le coach aide à maintenir le dialogue et à poser un cadre qui respecte leur besoin croissant d\'autonomie.' },
       ],
     },
   },
@@ -550,6 +560,8 @@ export const SPECIALTIES = [
         { q: 'Peut-on consulter sans être en couple ?', a: 'Oui. Le conseiller conjugal et familial reçoit aussi les personnes seules : après une rupture, face à des difficultés relationnelles récurrentes, ou simplement pour mieux se comprendre dans sa vie affective. C\'est d\'ailleurs une part importante de leur activité.' },
         { q: 'Est-ce que tout est confidentiel ?', a: 'Sans exception. Le secret professionnel est un pilier du métier. Le conseiller ne communique rien à personne — ni à votre famille, ni à un juge, ni à votre employeur. Les seules exceptions légales concernent les situations de danger pour un mineur.' },
         { q: 'Mon conjoint refuse de venir. Que faire ?', a: 'Commencez seul(e). Le conseiller peut vous aider à travailler sur votre positionnement dans la relation, ce qui a souvent un effet indirect sur le couple. Parfois, voir que le partenaire fait la démarche suffit à convaincre l\'autre de rejoindre le processus.' },
+        { q: 'Le conseil conjugal est-il remboursé par la Sécurité sociale ?', a: 'Non, le conseil conjugal n\'est pas remboursé par la Sécurité sociale. Toutefois, les consultations en CPEF (Centre de Planification et d\'Éducation Familiale) sont gratuites car financées par les collectivités locales. Les associations comme le CLER ou l\'AFCCC pratiquent des tarifs solidaires indexés sur les revenus (de 20 à 50 euros la séance). En cabinet libéral, certaines mutuelles prennent en charge une partie des frais dans le cadre d\'un forfait « médecines douces » ou « consultations psychologiques ». Vérifiez les conditions de votre contrat de complémentaire santé.' },
+        { q: 'Combien de séances sont nécessaires en moyenne ?', a: 'Un suivi en conseil conjugal dure généralement entre 5 et 12 séances, à raison d\'une rencontre toutes les deux à trois semaines. C\'est volontairement plus court qu\'une thérapie de couple classique : l\'objectif est de donner au couple des outils concrets pour mieux communiquer et résoudre un blocage identifié. Certains couples constatent des améliorations significatives dès les 3 ou 4 premières séances. Pour les situations plus complexes (crise post-infidélité, séparation en cours), le suivi peut s\'étendre sur 4 à 6 mois. Le conseiller réévalue régulièrement la pertinence de la poursuite du suivi avec vous.' },
       ],
     },
   },
@@ -812,6 +824,366 @@ export const CITIES = [
   <p>Comme Strasbourg, Metz est soumise au droit local alsacien-mosellan pour certaines questions de droit de la famille. Les <a href="/mediateur-familial/">médiateurs familiaux</a> et les conseillers conjugaux qui exercent en Moselle connaissent ces particularités et peuvent orienter les couples en conséquence.</p>
   <p>Les cabinets se trouvent dans le centre-ville (quartier impérial, place de la République), autour de la gare TGV, et dans les quartiers résidentiels de Queuleu, Sablon et Borny. L'Eurométropole de Metz (Montigny-lès-Metz, Woippy, Marly) accueille aussi des praticiens.</p>
   <p>L'UDAF 57 gère un service de médiation familiale avec des permanences à Metz, Thionville et Forbach. Le CHR Metz-Thionville dispose d'une consultation de sexologie. Pour le <a href="/conseiller-conjugal/">conseil conjugal</a> à tarif accessible, les associations locales (CLER, Couples et Familles) ont des antennes en Moselle.</p>
+</div>
+`
+  },
+  {
+    id: 'le-mans', name: 'Le Mans', department: '72', region: 'Pays de la Loire', lat: 48.0061, lng: 0.1996, population: 145421,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Professionnels du couple au <span class="ann-text-gradient">Mans</span></h2>
+  <p>Capitale de la Sarthe, Le Mans est une ville à taille humaine qui attire des familles en quête de qualité de vie, à seulement une heure de Paris en TGV. Cette proximité avec la capitale crée des profils de couples navetteurs, avec les tensions que l'éloignement quotidien peut générer.</p>
+  <p>Les cabinets se concentrent dans le centre historique (la Cité Plantagenêt), le quartier de la gare et les zones résidentielles comme Pontlieue ou les Maillets. L'UDAF 72 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> en Sarthe, avec des tarifs adaptés aux revenus via le barème CAF.</p>
+  <p>Pour les couples manceaux, la ville offre un accès à des <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/conseiller-conjugal/">conseillers conjugaux</a> formés, avec des tarifs généralement plus accessibles que dans les grandes métropoles.</p>
+</div>
+`
+  },
+  {
+    id: 'brest', name: 'Brest', department: '29', region: 'Bretagne', lat: 48.3904, lng: -4.4861, population: 142722,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Brest</span></h2>
+  <p>Brest, ville portuaire au bout du Finistère, a une identité forte marquée par la présence de la Marine nationale et de l'arsenal. Les couples de militaires, confrontés aux séparations prolongées et aux mutations fréquentes, représentent une part significative de la patientèle des professionnels du couple brestois.</p>
+  <p>Les praticiens exercent dans le centre-ville (quartier de Siam, Saint-Martin), à Recouvrance sur la rive droite de la Penfeld, et dans les quartiers résidentiels de Saint-Marc ou Lambézellec. Le CHU de Brest dispose d'une consultation de <a href="/sexologue/">sexologie</a> rattachée au service de gynécologie.</p>
+  <p>L'UDAF 29 et les associations comme le CLER Bretagne proposent des services de <a href="/mediateur-familial/">médiation familiale</a> et de <a href="/conseiller-conjugal/">conseil conjugal</a> à tarif modéré dans tout le Finistère.</p>
+</div>
+`
+  },
+  {
+    id: 'tours', name: 'Tours', department: '37', region: 'Centre-Val de Loire', lat: 47.3941, lng: 0.6848, population: 136252,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Tours</span></h2>
+  <p>Tours, « le jardin de la France », est une ville universitaire dynamique au cœur du Val de Loire. La faculté de médecine de Tours propose un DU de sexologie qui forme des praticiens locaux de qualité. Le CHRU de Tours dispose d'une consultation hospitalière de <a href="/sexologue/">sexologie</a> accessible sur adressage médical.</p>
+  <p>Les cabinets se répartissent dans l'hypercentre (place Plumereau, rue Nationale), le quartier des Prébendes, et les communes périphériques comme Joué-lès-Tours, Saint-Avertin ou Chambray-lès-Tours. La proximité de Paris (1h15 en TGV) crée des couples à distance que les praticiens tourangeaux accompagnent régulièrement.</p>
+  <p>Les associations de <a href="/mediateur-familial/">médiation familiale</a> d'Indre-et-Loire proposent des tarifs indexés sur les revenus via la CAF. Pour le <a href="/conseiller-conjugal/">conseil conjugal</a>, le CPEF de Tours offre des consultations gratuites.</p>
+</div>
+`
+  },
+  {
+    id: 'amiens', name: 'Amiens', department: '80', region: 'Hauts-de-France', lat: 49.8941, lng: 2.2958, population: 134057,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Amiens</span></h2>
+  <p>Capitale de la Picardie historique, Amiens est une ville accessible : à 1h20 de Paris et 1h30 de Lille en train. Les professionnels du couple amiénois accompagnent une population variée, des étudiants de l'université de Picardie Jules Verne aux familles installées dans les quartiers résidentiels.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier Saint-Leu, cathédrale), le secteur de la gare et les quartiers sud comme Saint-Acheul. L'UDAF 80 gère un service de <a href="/mediateur-familial/">médiation familiale</a> avec des permanences dans la Somme.</p>
+  <p>Le CHU Amiens-Picardie propose une consultation de sexologie. Pour un accompagnement conjugal accessible, les CPEF du département offrent des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'perpignan', name: 'Perpignan', department: '66', region: 'Occitanie', lat: 42.6887, lng: 2.8948, population: 121875,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Perpignan</span></h2>
+  <p>Perpignan, porte de la Catalogne française, est une ville méditerranéenne à la frontière espagnole. Les couples transfrontaliers (français-espagnols ou français-catalans) représentent une particularité locale. Certains praticiens proposent des consultations bilingues français-catalan ou français-espagnol.</p>
+  <p>Les cabinets se concentrent dans le centre historique (quartier Saint-Jean), autour du Castillet et dans les quartiers résidentiels du Moulin à Vent ou de la Patte d'Oie. L'UDAF 66 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans les Pyrénées-Orientales.</p>
+  <p>Pour les couples perpignanais, la ville offre un accès à des <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/sexologue/">sexologues</a> formés, à des tarifs souvent plus accessibles que sur la Côte d'Azur voisine.</p>
+</div>
+`
+  },
+  {
+    id: 'limoges', name: 'Limoges', department: '87', region: 'Nouvelle-Aquitaine', lat: 45.8336, lng: 1.2611, population: 132175,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Limoges</span></h2>
+  <p>Limoges, préfecture de la Haute-Vienne, est une ville à taille humaine avec un tissu associatif dense. L'université de Limoges dispose d'une faculté de médecine qui contribue à former des professionnels de santé, y compris des <a href="/sexologue/">sexologues</a>.</p>
+  <p>Les praticiens exercent dans le centre-ville (quartier de la Cathédrale, place de la République), autour de la gare des Bénédictins et dans les quartiers comme Beaubreuil ou La Bastide. Le CHU de Limoges propose des consultations spécialisées en sexologie.</p>
+  <p>L'UDAF 87 et les associations locales offrent des services de <a href="/mediateur-familial/">médiation familiale</a> à tarif adapté. Les CPEF du département proposent des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal et familial</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'besancon', name: 'Besançon', department: '25', region: 'Bourgogne-Franche-Comté', lat: 47.2378, lng: 6.0241, population: 119192,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Besançon</span></h2>
+  <p>Besançon, classée ville verte, offre un cadre de vie apprécié des familles. La proximité avec la Suisse (30 minutes de la frontière) crée des couples transfrontaliers avec des problématiques spécifiques liées au différentiel de revenus et aux cultures professionnelles distinctes.</p>
+  <p>Les cabinets se trouvent dans la Boucle (centre historique inscrit UNESCO), le quartier de Battant et les secteurs résidentiels de Planoise ou Palente. L'université de Franche-Comté forme des praticiens en psychologie clinique qui exercent ensuite dans la région.</p>
+  <p>L'UDAF 25 coordonne la <a href="/mediateur-familial/">médiation familiale</a> dans le Doubs. Le CHRU de Besançon dispose d'une consultation de <a href="/sexologue/">sexologie</a>. Le CPEF de Besançon offre des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'orleans', name: 'Orléans', department: '45', region: 'Centre-Val de Loire', lat: 47.9029, lng: 1.9093, population: 116238,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Orléans</span></h2>
+  <p>Orléans, à seulement 1h10 de Paris en train, est une ville en pleine transformation. La métropole orléanaise attire de plus en plus de couples parisiens en quête d'espace et de qualité de vie, ce qui génère des problématiques de transition : adaptation, isolement, couples à distance.</p>
+  <p>Les praticiens exercent dans l'hypercentre (rue Royale, place du Martroi), le quartier Madeleine et les communes périphériques comme Olivet, Saint-Jean-de-Braye ou Fleury-les-Aubrais. Le CHRO (Centre Hospitalier Régional d'Orléans) offre des consultations spécialisées.</p>
+  <p>L'UDAF 45 et les antennes locales de l'AFCCC proposent des services de <a href="/mediateur-familial/">médiation familiale</a> et de <a href="/conseiller-conjugal/">conseil conjugal</a> accessibles financièrement.</p>
+</div>
+`
+  },
+  {
+    id: 'saint-etienne', name: 'Saint-Étienne', department: '42', region: 'Auvergne-Rhône-Alpes', lat: 45.4397, lng: 4.3872, population: 172565,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Saint-Étienne</span></h2>
+  <p>Saint-Étienne, en pleine renaissance après des décennies de désindustrialisation, attire une nouvelle population grâce à un immobilier très accessible et la proximité de Lyon (45 minutes en TER). Cette position crée des couples navetteurs, avec les défis quotidiens que cela implique.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place Jean Jaurès, quartier Fauriel), autour de la gare de Châteaucreux et dans les quartiers résidentiels. Le CHU de Saint-Étienne propose des consultations de <a href="/sexologue/">sexologie</a>.</p>
+  <p>L'UDAF 42 gère un service de <a href="/mediateur-familial/">médiation familiale</a> actif dans la Loire. Les tarifs des <a href="/therapeute-de-couple/">thérapeutes de couple</a> stéphanois sont parmi les plus accessibles de la région Auvergne-Rhône-Alpes.</p>
+</div>
+`
+  },
+  {
+    id: 'caen', name: 'Caen', department: '14', region: 'Normandie', lat: 49.1829, lng: -0.3707, population: 108365,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Caen</span></h2>
+  <p>Caen, capitale de la Normandie, est une ville universitaire dynamique avec une population jeune et familiale. La faculté de médecine de Caen contribue à la formation de professionnels de santé spécialisés dans la région.</p>
+  <p>Les praticiens exercent dans le centre reconstruit (quartier du Château, Saint-Pierre), le secteur de la Prairie et les communes périphériques comme Hérouville-Saint-Clair ou Mondeville. Le CHU de Caen dispose d'une consultation de <a href="/sexologue/">sexologie</a>.</p>
+  <p>L'UDAF 14 et les associations de <a href="/mediateur-familial/">médiation familiale</a> du Calvados proposent des services à tarif adapté. Le CPEF de Caen offre des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a> pour les couples normands.</p>
+</div>
+`
+  },
+  {
+    id: 'mulhouse', name: 'Mulhouse', department: '68', region: 'Grand Est', lat: 47.7508, lng: 7.3359, population: 109443,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Mulhouse</span></h2>
+  <p>Mulhouse, ville trinationale au carrefour de la France, de l'Allemagne et de la Suisse, accueille une population multiculturelle. Les praticiens mulhousiens sont souvent habitués à accompagner des couples binationaux, avec les particularités que cela implique en termes de communication et de référentiel culturel.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place de la Réunion, quartier de la gare) et les quartiers résidentiels de Dornach, Rebberg ou Riedisheim. Comme Strasbourg, Mulhouse est soumise au droit local alsacien-mosellan pour certaines questions familiales.</p>
+  <p>L'UDAF 68 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans le Haut-Rhin. Plusieurs praticiens proposent des consultations bilingues français-allemand, un atout dans cette région frontalière.</p>
+</div>
+`
+  },
+  {
+    id: 'nancy', name: 'Nancy', department: '54', region: 'Grand Est', lat: 48.6921, lng: 6.1844, population: 104072,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Nancy</span></h2>
+  <p>Nancy, ancienne capitale des ducs de Lorraine, est une ville universitaire de renom avec un campus de 50 000 étudiants. La faculté de médecine de Nancy est l'une des plus réputées de l'Est de la France, et forme régulièrement des <a href="/sexologue/">sexologues</a> via son DU de sexologie.</p>
+  <p>Les cabinets se répartissent dans le centre historique (place Stanislas, Vieille Ville), le quartier de la gare et les secteurs résidentiels comme Laxou, Villers-lès-Nancy ou Vandœuvre. Le CHRU de Nancy dispose d'une consultation de sexologie.</p>
+  <p>L'UDAF 54 et les associations locales proposent des services de <a href="/mediateur-familial/">médiation familiale</a> en Meurthe-et-Moselle. Le CLER et l'AFCCC ont des antennes nancéiennes pour le <a href="/conseiller-conjugal/">conseil conjugal</a> à tarif accessible.</p>
+</div>
+`
+  },
+  {
+    id: 'pau', name: 'Pau', department: '64', region: 'Nouvelle-Aquitaine', lat: 43.2951, lng: -0.3708, population: 77130,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Pau</span></h2>
+  <p>Pau, préfecture des Pyrénées-Atlantiques, est une ville agréable au pied des montagnes. La présence de Total Energies et de ses sous-traitants crée une population d'expatriés et de couples confrontés aux mutations professionnelles fréquentes.</p>
+  <p>Les praticiens exercent dans le centre-ville (boulevard des Pyrénées, quartier du Château), à Jurançon et dans les communes environnantes comme Billère ou Lescar. Le Centre Hospitalier de Pau propose des consultations spécialisées.</p>
+  <p>L'UDAF 64 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans le département. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> palois offrent un accompagnement de proximité, souvent en lien avec les spécificités culturelles béarnaises et basques.</p>
+</div>
+`
+  },
+  {
+    id: 'avignon', name: 'Avignon', department: '84', region: 'Provence-Alpes-Côte d\'Azur', lat: 43.9493, lng: 4.8055, population: 91921,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Avignon</span></h2>
+  <p>Avignon, cité des Papes et ville du festival, est au carrefour de la Provence et du Languedoc. Sa position stratégique dans la vallée du Rhône en fait un pôle qui dessert un large bassin de population, de Carpentras à Orange en passant par Villeneuve-lès-Avignon.</p>
+  <p>Les cabinets se trouvent dans l'intra-muros (centre historique fortifié), le quartier de la gare TGV et les secteurs résidentiels comme Montfavet, Le Pontet ou Vedène. Le Centre Hospitalier d'Avignon offre des consultations spécialisées.</p>
+  <p>L'UDAF 84 propose des services de <a href="/mediateur-familial/">médiation familiale</a> dans le Vaucluse. Plusieurs <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/sexologue/">sexologues</a> exercent en bilingue français-provençal ou français-anglais, un atout dans cette ville cosmopolite.</p>
+</div>
+`
+  },
+  {
+    id: 'la-rochelle', name: 'La Rochelle', department: '17', region: 'Nouvelle-Aquitaine', lat: 46.1603, lng: -1.1511, population: 79344,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">La Rochelle</span></h2>
+  <p>La Rochelle, ville maritime et touristique, attire des couples séduits par la qualité de vie atlantique. La reconversion professionnelle et les changements de vie radicaux (quitter Paris pour s'installer au bord de l'océan) sont des thématiques que les praticiens rochelais connaissent bien.</p>
+  <p>Les cabinets se concentrent dans le centre historique (Vieux-Port, quartier Saint-Nicolas), le secteur de Tasdon-Les Minimes et les communes comme Aytré ou Lagord. L'UDAF 17 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> en Charente-Maritime.</p>
+  <p>Pour les couples rochelais, la ville offre un accès à des <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/conseiller-conjugal/">conseillers conjugaux</a> de qualité, dans un cadre propice au recul et à la réflexion.</p>
+</div>
+`
+  },
+  {
+    id: 'poitiers', name: 'Poitiers', department: '86', region: 'Nouvelle-Aquitaine', lat: 46.5802, lng: 0.3404, population: 88665,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Poitiers</span></h2>
+  <p>Poitiers, ville universitaire au riche patrimoine, accueille 28 000 étudiants qui représentent un quart de la population. L'université de Poitiers forme des psychologues cliniciens qui exercent ensuite dans la région, contribuant à un maillage de praticiens compétents.</p>
+  <p>Les cabinets se trouvent dans le centre historique (quartier de la cathédrale, place du Maréchal Leclerc), le secteur de la gare et les quartiers comme les Couronneries ou Buxerolles. Le CHU de Poitiers dispose de consultations spécialisées en <a href="/sexologue/">sexologie</a>.</p>
+  <p>L'UDAF 86 gère un service de <a href="/mediateur-familial/">médiation familiale</a> dans la Vienne. Les CPEF départementaux proposent des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'versailles', name: 'Versailles', department: '78', region: 'Île-de-France', lat: 48.8014, lng: 2.1301, population: 85205,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Versailles</span></h2>
+  <p>Versailles, ville résidentielle prisée de l'Ouest parisien, accueille une population aisée avec des attentes élevées en matière d'accompagnement de couple. Les praticiens versaillais sont souvent spécialisés dans les problématiques de couples à hauts revenus : gestion du patrimoine, pression sociale, éducation des enfants dans un milieu exigeant.</p>
+  <p>Les cabinets se concentrent dans le quartier Notre-Dame, le quartier Saint-Louis, autour de la gare et dans les communes voisines comme Le Chesnay ou Viroflay. Le tribunal de grande instance de Versailles, l'un des plus importants de France, oriente régulièrement vers la <a href="/mediateur-familial/">médiation familiale</a>.</p>
+  <p>Versailles offre un accès à des <a href="/therapeute-de-couple/">thérapeutes de couple</a> de haut niveau, souvent formés dans les universités parisiennes et disposant d'une pratique clinique solide.</p>
+</div>
+`
+  },
+  {
+    id: 'bayonne', name: 'Bayonne', department: '64', region: 'Nouvelle-Aquitaine', lat: 43.4929, lng: -1.4748, population: 52006,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Bayonne</span></h2>
+  <p>Bayonne, capitale du Pays basque français, est une ville à forte identité culturelle. Les praticiens bayonnais accompagnent des couples dans un contexte où la famille élargie occupe une place importante — ce qui peut être une ressource mais aussi une source de tension, notamment dans les familles recomposées.</p>
+  <p>Les cabinets se trouvent dans le Grand Bayonne, le Petit Bayonne et les communes de l'agglomération comme Anglet ou Biarritz. La proximité avec le Pays basque espagnol crée des couples transfrontaliers que certains praticiens accompagnent en bilingue.</p>
+  <p>L'UDAF 64 propose des services de <a href="/mediateur-familial/">médiation familiale</a> dans le département. Les <a href="/conseiller-conjugal/">conseillers conjugaux</a> du Pays basque français sont sensibilisés aux spécificités culturelles locales.</p>
+</div>
+`
+  },
+  {
+    id: 'cannes', name: 'Cannes', department: '06', region: 'Provence-Alpes-Côte d\'Azur', lat: 43.5528, lng: 7.0174, population: 74285,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Cannes</span></h2>
+  <p>Cannes, ville internationale de la Côte d'Azur, accueille une population diversifiée entre résidents permanents, retraités aisés et expatriés. Les praticiens cannois accompagnent souvent des couples confrontés à des écarts d'âge importants, des reconversions de vie après la retraite, ou des relations à distance entre la Côte d'Azur et d'autres pays.</p>
+  <p>Les cabinets se concentrent sur la Croisette, dans le quartier du Suquet et le secteur de la Bocca. Cannes bénéficie de la proximité de Nice et de son offre universitaire en <a href="/sexologue/">sexologie</a>. Plusieurs praticiens proposent des consultations en anglais ou en russe.</p>
+  <p>L'UDAF 06 gère les services de <a href="/mediateur-familial/">médiation familiale</a> dans les Alpes-Maritimes, avec des permanences à Cannes et dans les villes voisines.</p>
+</div>
+`
+  },
+  {
+    id: 'aix-en-provence', name: 'Aix-en-Provence', department: '13', region: 'Provence-Alpes-Côte d\'Azur', lat: 43.5297, lng: 5.4474, population: 145133,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Aix-en-Provence</span></h2>
+  <p>Aix-en-Provence, ville d'art et d'université, est l'une des communes les plus aisées de France. L'Université d'Aix-Marseille, dont les campus s'étendent entre les deux villes, forme chaque année des psychologues et des <a href="/sexologue/">sexologues</a> via son DU de sexologie réputé.</p>
+  <p>Les cabinets se trouvent dans le centre historique (cours Mirabeau, quartier Mazarin), le quartier du Jas de Bouffan et les communes périphériques comme Luynes ou Venelles. Aix dispose d'un tribunal de grande instance actif en droit de la famille.</p>
+  <p>L'UDAF 13 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans les Bouches-du-Rhône. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> aixois proposent un accompagnement de qualité dans un cadre provençal propice à la sérénité.</p>
+</div>
+`
+  },
+  {
+    id: 'dunkerque', name: 'Dunkerque', department: '59', region: 'Hauts-de-France', lat: 51.0343, lng: 2.3768, population: 87353,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Dunkerque</span></h2>
+  <p>Dunkerque, troisième port de France, est une ville en mutation qui se réinvente après l'ère industrielle. Les couples dunkerquois sont confrontés aux défis du travail posté (port, industrie) et aux horaires décalés qui pèsent sur la vie conjugale.</p>
+  <p>Les praticiens exercent dans le centre-ville (quartier de la Citadelle, Malo-les-Bains) et les communes de l'agglomération comme Grande-Synthe, Coudekerque-Branche ou Saint-Pol-sur-Mer. L'UDAF 59, basée à Lille, dispose d'antennes dans le Dunkerquois pour la <a href="/mediateur-familial/">médiation familiale</a>.</p>
+  <p>Pour le <a href="/conseiller-conjugal/">conseil conjugal</a>, les CPEF du littoral Nord proposent des consultations accessibles. La proximité avec la Belgique et l'Angleterre crée des couples transfrontaliers que certains praticiens accompagnent.</p>
+</div>
+`
+  },
+  {
+    id: 'calais', name: 'Calais', department: '62', region: 'Hauts-de-France', lat: 50.9513, lng: 1.8587, population: 72929,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Calais</span></h2>
+  <p>Calais, ville portuaire face à l'Angleterre, vit au rythme du transmanche. Les couples franco-britanniques y sont nombreux, et les praticiens calaisiens sont habitués à accompagner des problématiques liées à la biculturalité et aux relations à distance post-Brexit.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier Calais-Nord, boulevard Jacquard) et les secteurs résidentiels. L'UDAF 62 gère les services de <a href="/mediateur-familial/">médiation familiale</a> dans le Pas-de-Calais.</p>
+  <p>Le Centre Hospitalier de Calais propose des consultations en <a href="/sexologue/">sexologie</a>. Pour le <a href="/conseiller-conjugal/">conseil conjugal</a>, les CPEF du littoral sont accessibles et proposent des consultations gratuites.</p>
+</div>
+`
+  },
+  {
+    id: 'colmar', name: 'Colmar', department: '68', region: 'Grand Est', lat: 48.0794, lng: 7.3558, population: 69105,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Colmar</span></h2>
+  <p>Colmar, joyau alsacien entre vignobles et montagnes, est une ville à taille humaine qui bénéficie de la proximité de Strasbourg et Mulhouse. Comme le reste de l'Alsace, Colmar est soumise au droit local pour certaines questions familiales, ce que les praticiens locaux maîtrisent.</p>
+  <p>Les cabinets se trouvent dans la Petite Venise, le centre historique et les quartiers résidentiels. L'UDAF 68 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans le Haut-Rhin, avec des permanences à Colmar.</p>
+  <p>Plusieurs praticiens proposent des consultations en français et en allemand. Pour le <a href="/conseiller-conjugal/">conseil conjugal</a> à tarif accessible, les associations locales (CLER, Couples et Familles) disposent d'antennes dans le département.</p>
+</div>
+`
+  },
+  {
+    id: 'valence', name: 'Valence', department: '26', region: 'Auvergne-Rhône-Alpes', lat: 44.9334, lng: 4.8924, population: 65726,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Valence</span></h2>
+  <p>Valence, porte du Midi sur le Rhône, est une ville dynamique qui bénéficie d'un cadre de vie agréable entre Lyon et la Provence. La gare TGV Valence Rhône-Alpes Sud connecte la ville à toute la France, attirant des couples en reconversion géographique.</p>
+  <p>Les praticiens exercent dans le centre-ville (quartier de la Cathédrale, boulevards), le secteur de la gare et les communes comme Bourg-lès-Valence ou Guilherand-Granges. Le Centre Hospitalier de Valence offre des consultations spécialisées.</p>
+  <p>L'UDAF 26 gère les services de <a href="/mediateur-familial/">médiation familiale</a> dans la Drôme. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> valentinois proposent un accompagnement de qualité à des tarifs modérés.</p>
+</div>
+`
+  },
+  {
+    id: 'chambery', name: 'Chambéry', department: '73', region: 'Auvergne-Rhône-Alpes', lat: 45.5646, lng: 5.9178, population: 60466,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Chambéry</span></h2>
+  <p>Chambéry, ancienne capitale des États de Savoie, est une ville universitaire nichée entre les massifs alpins. La proximité avec la Suisse et l'Italie en fait un carrefour international, et certains praticiens accompagnent des couples transfrontaliers.</p>
+  <p>Les cabinets se trouvent dans le centre historique (quartier du Château, place Saint-Léger), le secteur de la gare et les communes comme La Ravoire, Cognin ou Jacob-Bellecombette. Le Centre Hospitalier Métropole Savoie propose des consultations spécialisées.</p>
+  <p>L'UDAF 73 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> en Savoie. Les <a href="/conseiller-conjugal/">conseillers conjugaux</a> chambériens offrent un accompagnement de proximité dans un cadre alpin apaisant.</p>
+</div>
+`
+  },
+  {
+    id: 'ajaccio', name: 'Ajaccio', department: '2A', region: 'Corse', lat: 41.9192, lng: 8.7386, population: 71361,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Ajaccio</span></h2>
+  <p>Ajaccio, préfecture de la Corse-du-Sud, est une ville insulaire où la famille occupe une place centrale dans la culture. Les praticiens ajacciens connaissent les spécificités des familles corses — le poids des traditions, les relations intergénérationnelles étroites, les héritages familiaux complexes.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (cours Napoléon, quartier des étrangers), les Sanguinaires et les quartiers résidentiels. Le Centre Hospitalier d'Ajaccio dispose de consultations spécialisées. L'insularité crée des défis d'accès, compensés par le développement de la téléconsultation.</p>
+  <p>L'UDAF 2A gère les services de <a href="/mediateur-familial/">médiation familiale</a> en Corse-du-Sud. Pour les <a href="/therapeute-de-couple/">thérapeutes de couple</a>, Ajaccio offre un nombre limité mais qualifié de praticiens, complété par des consultations en visio avec le continent.</p>
+</div>
+`
+  },
+  {
+    id: 'troyes', name: 'Troyes', department: '10', region: 'Grand Est', lat: 48.2973, lng: 4.0744, population: 61996,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Troyes</span></h2>
+  <p>Troyes, ville d'art et de magasins d'usine, est une cité champenoise à taille humaine, à 1h30 de Paris. Son centre historique en forme de bouchon de champagne accueille des praticiens dans un cadre patrimonial unique.</p>
+  <p>Les cabinets se trouvent dans le centre historique, le quartier de la gare et les secteurs résidentiels comme les Noës, Pont-Sainte-Marie ou Saint-André-les-Vergers. L'UDAF 10 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans l'Aube.</p>
+  <p>Les CPEF du département proposent des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> troyens offrent un accompagnement accessible dans une ville où le coût de la vie reste raisonnable.</p>
+</div>
+`
+  },
+  {
+    id: 'quimper', name: 'Quimper', department: '29', region: 'Bretagne', lat: 47.9960, lng: -4.1024, population: 63929,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Quimper</span></h2>
+  <p>Quimper, préfecture du Finistère sud, est une ville à l'identité bretonne affirmée. La tradition associative bretonne se retrouve dans un réseau dense de services d'accompagnement familial, coordonné par l'UDAF 29 et les antennes locales du CLER et de l'AFCCC.</p>
+  <p>Les cabinets se trouvent dans le centre historique (quartier de la cathédrale, rue Kéréon), le secteur d'Ergué-Armel et les communes comme Ergué-Gabéric ou Pluguffan. Le Centre Hospitalier de Cornouaille propose des consultations spécialisées.</p>
+  <p>Pour les couples quimpérois, la ville offre un accès à des <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/mediateur-familial/">médiateurs familiaux</a> qualifiés, dans un cadre breton propice à la sérénité et au recul.</p>
+</div>
+`
+  },
+  {
+    id: 'beziers', name: 'Béziers', department: '34', region: 'Occitanie', lat: 43.3440, lng: 3.2150, population: 78683,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Béziers</span></h2>
+  <p>Béziers, ville viticole de l'Hérault, connaît un renouveau démographique porté par un immobilier accessible et la proximité de la Méditerranée. Les nouveaux arrivants, souvent des couples en reconversion, trouvent dans les praticiens biterrois un accompagnement adapté à leurs transitions de vie.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (allées Paul Riquet, quartier de la cathédrale) et les secteurs résidentiels. L'UDAF 34 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans l'Hérault, avec des antennes à Béziers.</p>
+  <p>Le CPEF de Béziers propose des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>. La ville bénéficie de la proximité de Montpellier et de son université pour l'accès à des <a href="/sexologue/">sexologues</a> formés.</p>
+</div>
+`
+  },
+  {
+    id: 'saint-nazaire', name: 'Saint-Nazaire', department: '44', region: 'Pays de la Loire', lat: 47.2736, lng: -2.2137, population: 72437,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Saint-Nazaire</span></h2>
+  <p>Saint-Nazaire, ville portuaire de l'estuaire de la Loire, est marquée par les chantiers navals et l'industrie aéronautique (Airbus). Les couples nazairiens sont souvent confrontés aux réalités du travail industriel : horaires décalés, contrats en intérim, éloignement géographique pour les déplacements professionnels.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la gare, Petit Maroc) et les communes comme Pornichet, Trignac ou Montoir-de-Bretagne. Saint-Nazaire fait partie de la métropole nantaise élargie, ce qui donne accès à l'offre de Nantes en complément.</p>
+  <p>L'UDAF 44 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> en Loire-Atlantique. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/conseiller-conjugal/">conseillers conjugaux</a> nazairiens proposent un accompagnement de proximité à tarifs accessibles.</p>
 </div>
 `
   },
