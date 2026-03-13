@@ -135,32 +135,10 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
 }
 .ann-logo:hover { opacity: 0.8; }
 
-.ann-logo-icon {
-  width: 2.25rem;
+.ann-logo-img {
   height: 2.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.ann-logo-svg {
-  width: 100%;
-  height: 100%;
-  color: hsl(var(--ann-primary));
-}
-
-.ann-logo-text { display: flex; flex-direction: column; line-height: 1; }
-.ann-logo-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: hsl(var(--ann-fg));
-}
-.ann-logo-subtitle {
-  font-size: 0.7rem;
-  font-weight: 500;
-  font-style: italic;
-  color: hsl(var(--ann-secondary));
-  letter-spacing: 0.05em;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Nav search */
