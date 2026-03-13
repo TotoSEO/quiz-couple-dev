@@ -194,9 +194,10 @@
               <input class="ann-form-input" type="tel" id="prof-phone" placeholder="01 23 45 67 89" maxlength="20">
             </div>
           </div>
-          <div class="ann-form-group">
+          <div class="ann-form-group" style="position:relative;">
             <label class="ann-form-label" for="prof-address">Adresse du cabinet</label>
-            <input class="ann-form-input" type="text" id="prof-address" placeholder="12 rue de la Paix, 75001 Paris" maxlength="200">
+            <input class="ann-form-input" type="text" id="prof-address" placeholder="Commencez à taper votre adresse..." maxlength="200" autocomplete="off">
+            <div id="prof-address-suggestions" style="display:none;position:absolute;left:0;right:0;top:100%;z-index:50;background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));border-radius:0 0 var(--ann-radius) var(--ann-radius);max-height:12rem;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
           </div>
           <div class="ann-form-group" id="dash-website-group">
             <label class="ann-form-label" for="prof-website">Site web <span class="ann-text-muted" style="font-size:0.75rem; font-weight:400;">(abonnement Boost requis)</span></label>
@@ -213,14 +214,14 @@
           <h3 style="margin-bottom: 1rem; font-size: 1rem;">Informations professionnelles</h3>
           <div class="ann-form-group">
             <label class="ann-form-label" for="prof-description">Présentation *</label>
-            <textarea class="ann-form-input" id="prof-description" rows="5" required maxlength="2000" placeholder="Décrivez votre parcours, votre approche et ce qui vous distingue..."></textarea>
-            <span class="ann-text-muted" style="font-size: 0.75rem;"><span id="prof-desc-count">0</span>/2000 caractères</span>
+            <textarea class="ann-form-input" id="prof-description" rows="5" required maxlength="600" placeholder="Décrivez votre parcours, votre approche et ce qui vous distingue..."></textarea>
+            <span class="ann-text-muted" style="font-size: 0.75rem;"><span id="prof-desc-count">0</span>/600 caractères</span>
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div class="ann-form-group">
               <label class="ann-form-label" for="prof-experience">Années d'expérience</label>
-              <input class="ann-form-input" type="number" id="prof-experience" min="0" max="60" placeholder="10">
+              <input class="ann-form-input" type="number" id="prof-experience" min="0" max="50" placeholder="10">
             </div>
             <div class="ann-form-group">
               <label class="ann-form-label" for="prof-price">Tarifs</label>
@@ -229,18 +230,18 @@
           </div>
 
           <div class="ann-form-group">
-            <label class="ann-form-label" for="prof-methods">Méthodes et approches</label>
-            <input class="ann-form-input" type="text" id="prof-methods" placeholder="Thérapie systémique, EFT, Gottman... (séparées par des virgules)" maxlength="500">
+            <label class="ann-form-label">Méthodes et approches <span class="ann-text-muted" style="font-size:0.75rem;font-weight:400;" id="prof-methods-limit"></span></label>
+            <div id="prof-methods-container" style="display:flex;flex-wrap:wrap;gap:0.5rem;"></div>
           </div>
 
           <div class="ann-form-group">
-            <label class="ann-form-label" for="prof-languages">Langues parlées</label>
-            <input class="ann-form-input" type="text" id="prof-languages" placeholder="Français, Anglais... (séparées par des virgules)" maxlength="200">
+            <label class="ann-form-label">Langues parlées</label>
+            <div id="prof-languages-container" style="display:flex;flex-wrap:wrap;gap:0.5rem;"></div>
           </div>
 
           <div class="ann-form-group">
-            <label class="ann-form-label" for="prof-availability">Disponibilités</label>
-            <input class="ann-form-input" type="text" id="prof-availability" placeholder="Lundi-Vendredi 9h-19h" maxlength="200">
+            <label class="ann-form-label">Modes de consultation</label>
+            <div id="prof-availability-container" style="display:flex;flex-wrap:wrap;gap:0.75rem;"></div>
           </div>
 
           <div class="ann-divider" style="margin: 1.5rem 0;"></div>
@@ -265,9 +266,9 @@
             <div id="dash-google-reviews-status" style="display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; border-radius: var(--ann-radius); background: hsl(var(--ann-muted) / 0.3); font-size: 0.8125rem;"></div>
           </div>
 
-          <!-- Publication note (admin-controlled) -->
+          <!-- Publication note (admin-controlled, hidden when published) -->
           <input type="hidden" id="prof-published" value="">
-          <div style="margin-bottom: 1.5rem; margin-top: 1.5rem; padding: 1rem; background: hsl(var(--ann-muted) / 0.3); border-radius: var(--ann-radius);">
+          <div id="dash-moderation-note" style="margin-bottom: 1.5rem; margin-top: 1.5rem; padding: 1rem; background: hsl(var(--ann-muted) / 0.3); border-radius: var(--ann-radius);">
             <p class="ann-text-muted" style="font-size: 0.8125rem;">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem;vertical-align:middle;margin-right:0.25rem"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
               La publication de votre fiche est gérée par notre équipe de modération. Vous serez notifié par email lorsque votre fiche sera en ligne.
