@@ -286,7 +286,7 @@
   // ── Leads ──
   function loadLeads() {
     var tbody = document.getElementById('leads-table-body');
-    if (tbody) tbody.innerHTML = '<tr><td colspan="5" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Chargement...</td></tr>';
+    if (tbody) tbody.innerHTML = '<tr><td colspan="6" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Chargement...</td></tr>';
 
     fetch(SUPABASE_URL + '/functions/v1/admin-leads', {
       method: 'GET',
@@ -304,11 +304,11 @@
         allLeads = data.leads;
         renderLeads();
       } else {
-        tbody.innerHTML = '<tr><td colspan="5" style="padding:2rem;text-align:center;color:hsl(var(--destructive));">Erreur de chargement.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="6" style="padding:2rem;text-align:center;color:hsl(var(--destructive));">Erreur de chargement.</td></tr>';
       }
     })
     .catch(function () {
-      tbody.innerHTML = '<tr><td colspan="5" style="padding:2rem;text-align:center;color:hsl(var(--destructive));">Erreur réseau.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="6" style="padding:2rem;text-align:center;color:hsl(var(--destructive));">Erreur réseau.</td></tr>';
     });
   }
 
@@ -316,17 +316,21 @@
     var tbody = document.getElementById('leads-table-body');
     if (!tbody) return;
     if (allLeads.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="5" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Aucun lead pour le moment.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="6" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Aucun lead pour le moment.</td></tr>';
       return;
     }
     var html = '';
     allLeads.forEach(function (lead) {
       var date = new Date(lead.created_at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
+      var verifiedBadge = lead.email_verified
+        ? '<span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:9999px;font-size:0.75rem;background:hsl(142 71% 45%/0.12);color:hsl(142 71% 35%);font-weight:500;">✓ Vérifié</span>'
+        : '<span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:9999px;font-size:0.75rem;background:hsl(40 95% 55%/0.12);color:hsl(40 80% 35%);font-weight:500;">En attente</span>';
       html += '<tr style="border-top:1px solid hsl(var(--border));">'
         + '<td style="padding:0.75rem 1rem;">' + escapeLeadHtml(lead.first_name) + '</td>'
         + '<td style="padding:0.75rem 1rem;">' + escapeLeadHtml(lead.email) + '</td>'
         + '<td style="padding:0.75rem 1rem;"><span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:9999px;font-size:0.75rem;background:hsl(var(--primary)/0.1);color:hsl(var(--primary));">' + escapeLeadHtml(lead.subject) + '</span></td>'
         + '<td style="padding:0.75rem 1rem;font-size:0.8rem;color:hsl(var(--muted-foreground));">' + date + '</td>'
+        + '<td style="padding:0.75rem 1rem;text-align:center;">' + verifiedBadge + '</td>'
         + '<td style="padding:0.75rem 1rem;text-align:center;"><input type="checkbox"' + (lead.is_closed ? ' checked' : '') + ' data-lead-id="' + lead.id + '" class="lead-closed-cb" style="width:1.1rem;height:1.1rem;cursor:pointer;accent-color:hsl(var(--primary));"></td>'
         + '</tr>';
     });
