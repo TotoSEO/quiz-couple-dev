@@ -10,35 +10,16 @@ const corsHeaders = {
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const SUPABASE_SERVICE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
 
-async function triggerDeploy(): Promise<void> {
-  const token = Deno.env.get('GITHUB_DEPLOY_TOKEN');
-  if (!token) {
-    console.warn('[deploy] GITHUB_DEPLOY_TOKEN not set — skipping auto-deploy');
-    return;
-  }
-  const owner = Deno.env.get('GITHUB_REPO_OWNER') || 'TotoSEO';
-  const repo = Deno.env.get('GITHUB_REPO_NAME') || 'quiz-couple-dev';
+async function queueDeploy(reason: string): Promise<void> {
   try {
-    const res = await fetch(
-      `https://api.github.com/repos/${owner}/${repo}/actions/workflows/deploy-pages.yml/dispatches`,
-      {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json',
-          'User-Agent': 'quiz-couple-admin',
-        },
-        body: JSON.stringify({ ref: 'main' }),
-      }
-    );
-    if (res.status === 204) {
-      console.log('[deploy] GitHub Actions triggered successfully');
-    } else {
-      console.warn(`[deploy] GitHub API returned ${res.status}`);
-    }
+    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+    const { error } = await supabase
+      .from('annuaire_deploy_queue')
+      .insert({ reason });
+    if (error) throw error;
+    console.log(`[deploy] Queued deploy: ${reason}`);
   } catch (err) {
-    console.warn('[deploy] Failed to trigger deploy:', err);
+    console.warn('[deploy] Failed to queue deploy:', err);
   }
 }
 
@@ -203,9 +184,9 @@ serve(async (req: Request) => {
         });
       }
 
-      // Auto-deploy if profile is published (rebuild static pages with fresh data)
+      // Queue deploy if profile is published (rebuild static pages with fresh data)
       if (data && data.is_published) {
-        await triggerDeploy();
+        await queueDeploy('profile updated: ' + data.slug);
       }
 
       return new Response(JSON.stringify({ profile: data }), {
