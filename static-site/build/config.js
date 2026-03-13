@@ -47,6 +47,7 @@ export const ROUTE_SLUGS = {
   contact: { fr: 'contact', en: 'contact', es: 'contacto', de: 'kontakt', it: 'contatto' },
   about: { fr: 'qui-sommes-nous', en: 'about-us', es: 'quienes-somos', de: 'ueber-uns', it: 'chi-siamo' },
   sitemap: { fr: 'plan-du-site', en: 'sitemap', es: 'mapa-del-sitio', de: 'seitenverzeichnis', it: 'mappa-del-sito' },
+  ebookConfirm: { fr: 'confirmation-ebook' },
 };
 
 // Map route keys to their page template and translation namespaces
@@ -82,6 +83,7 @@ export const ROUTE_CONFIG = {
   contact: { template: 'contact', namespaces: ['contact', 'common'] },
   about: { template: 'about', namespaces: ['common'] },
   sitemap: { template: 'sitemap', namespaces: ['common'] },
+  ebookConfirm: { template: 'ebook-confirm', namespaces: ['common'], frOnly: true },
 };
 
 // Supabase config

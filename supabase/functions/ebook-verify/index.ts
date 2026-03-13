@@ -104,7 +104,7 @@ serve(async (req) => {
         );
       }
 
-      const verifyUrl = `${SUPABASE_URL}/functions/v1/ebook-verify?action=confirm&token=${token}`;
+      const verifyUrl = `${SITE_URL}/confirmation-ebook/?token=${token}`;
 
       const emailRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
@@ -154,11 +154,17 @@ serve(async (req) => {
       );
     }
 
-    // ── GET: Confirm email → mark verified + send ebook ──
-    if (req.method === 'GET' && action === 'confirm') {
+    // ── POST/GET: Confirm email → mark verified + send ebook ──
+    if ((req.method === 'GET' || req.method === 'POST') && action === 'confirm') {
       const token = url.searchParams.get('token');
 
       if (!token) {
+        if (req.method === 'POST') {
+          return new Response(
+            JSON.stringify({ error: 'Token manquant.' }),
+            { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+          );
+        }
         return new Response('Lien invalide.', {
           status: 400,
           headers: { 'Content-Type': 'text/html; charset=utf-8' },
@@ -173,6 +179,12 @@ serve(async (req) => {
         .maybeSingle();
 
       if (error || !lead) {
+        if (req.method === 'POST') {
+          return new Response(
+            JSON.stringify({ error: 'Ce lien est invalide ou a expiré.' }),
+            { status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+          );
+        }
         return new Response(buildResultPage('error', 'Ce lien est invalide ou a expiré.'), {
           status: 404,
           headers: { 'Content-Type': 'text/html; charset=utf-8' },
@@ -180,7 +192,12 @@ serve(async (req) => {
       }
 
       if (lead.email_verified) {
-        // Already verified — just show success + download link
+        if (req.method === 'POST') {
+          return new Response(
+            JSON.stringify({ success: true, already_verified: true, first_name: lead.first_name }),
+            { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+          );
+        }
         return new Response(buildResultPage('already', lead.first_name), {
           headers: { 'Content-Type': 'text/html; charset=utf-8' },
         });
@@ -254,6 +271,12 @@ serve(async (req) => {
         }
       }
 
+      if (req.method === 'POST') {
+        return new Response(
+          JSON.stringify({ success: true, first_name: lead.first_name }),
+          { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
       return new Response(buildResultPage('success', lead.first_name), {
         headers: { 'Content-Type': 'text/html; charset=utf-8' },
       });
