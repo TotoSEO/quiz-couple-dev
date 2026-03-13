@@ -212,13 +212,17 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="ann-profile-sidebar" id="contact">
         <!-- Map -->
         <div class="ann-profile-card">
-          <h2 class="ann-profile-card-title">
+          <h3 class="ann-profile-card-title">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             Localisation
-          </h2>
-          <p class="ann-text-muted" style="margin-bottom: 1rem;"><%= pro.address %></p>
+          </h3>
+          <p class="ann-text-muted" style="margin-bottom: 0.75rem; font-size: 0.875rem;"><%= pro.address %></p>
           <div class="ann-map-container ann-map-sm" id="ann-map"
             data-professionals='<%- JSON.stringify([{ id: pro.id, name: pro.firstName + " " + pro.lastName, lat: pro.lat, lng: pro.lng, specialty: pro.specialty, city: pro.city, slug: pro.slug, premium: pro.premium }]) %>'
             data-specialties='<%- JSON.stringify(specialties.map(s => ({ id: s.id, name: s.name, color: s.color }))) %>'
@@ -226,10 +230,7 @@
             data-zoom="15">
           </div>
         </div>
-      </div>
 
-      <!-- Sidebar -->
-      <aside class="ann-profile-sidebar" id="contact">
         <!-- Contact card -->
         <div class="ann-profile-card ann-profile-contact-card">
           <h3 class="ann-profile-card-title">
