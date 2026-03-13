@@ -105,10 +105,17 @@ async function fetchGoogleReviews(url, key) {
 }
 
 async function fetchLiveProfessionals() {
+  const isCI = process.env.CI || process.env.GITHUB_ACTIONS;
   const url = process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) {
-    console.log('[annuaire] No SUPABASE_URL/SERVICE_ROLE_KEY — using mock data');
+    if (isCI) {
+      throw new Error(
+        'SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing! ' +
+        'Check that these secrets are configured in GitHub repo settings → Secrets → Actions.'
+      );
+    }
+    console.log('[annuaire] No SUPABASE_URL/SERVICE_ROLE_KEY — using mock data (local dev)');
     return null;
   }
 
@@ -120,9 +127,16 @@ async function fetchLiveProfessionals() {
         'Content-Type': 'application/json',
       },
     });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) {
+      const body = await res.text().catch(() => '');
+      throw new Error(`HTTP ${res.status}: ${body}`);
+    }
     const rows = await res.json();
-    console.log(`[annuaire] Fetched ${rows.length} professionals from Supabase`);
+    console.log(`[annuaire] Fetched ${rows.length} published professionals from Supabase`);
+
+    if (rows.length === 0) {
+      console.warn('[annuaire] WARNING: 0 published professionals found in Supabase — no professional pages will be generated');
+    }
 
     // Map DB columns to template format
     // Also fetch Google reviews
@@ -154,6 +168,9 @@ async function fetchLiveProfessionals() {
       googlePlaceId: r.google_place_id || null,
     }));
   } catch (err) {
+    if (isCI) {
+      throw new Error(`[annuaire] Supabase fetch FAILED in CI: ${err.message}`);
+    }
     console.warn(`[annuaire] Supabase fetch failed: ${err.message} — using mock data`);
     return null;
   }
