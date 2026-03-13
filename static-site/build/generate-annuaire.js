@@ -431,6 +431,17 @@ function copyAssets() {
     fs.copyFileSync(jsAdminSrc, path.join(jsDir, 'annuaire-admin.js'));
     console.log('[annuaire] Copied: /js/annuaire-admin.js');
   }
+
+  // Assets (images, logo, etc.)
+  const assetsSrcDir = path.resolve(__dirname, '../annuaire/assets');
+  if (fs.existsSync(assetsSrcDir)) {
+    const assetsDistDir = path.join(DIST_DIR, 'assets');
+    ensureDir(assetsDistDir);
+    for (const file of fs.readdirSync(assetsSrcDir)) {
+      fs.copyFileSync(path.join(assetsSrcDir, file), path.join(assetsDistDir, file));
+      console.log(`[annuaire] Copied: /assets/${file}`);
+    }
+  }
 }
 
 // ── Redirects (301 for deleted professionals) ───────────────────────────
