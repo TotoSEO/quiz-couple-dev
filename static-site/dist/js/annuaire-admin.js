@@ -6,9 +6,11 @@
   'use strict';
 
   var SUPABASE_URL;
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
   var adminToken = null;
   var allProfiles = [];
   var currentFilter = 'all';
+  var searchQuery = '';
 
   var SPEC_LABELS = {
     'therapeute-de-couple': 'Therapeute de couple',
@@ -28,24 +30,29 @@
 
     errEl.style.display = 'none';
 
-    fetch(SUPABASE_URL + '/functions/v1/verify-admin', {
+    fetch(SUPABASE_URL + '/functions/v1/verify-annuaire-admin', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + SUPABASE_KEY },
       body: JSON.stringify({ password: pw.value.trim() }),
     })
-    .then(function (r) { return r.json(); })
+    .then(function (r) {
+      if (!r.ok && r.status === 404) {
+        throw new Error('Function verify-annuaire-admin introuvable (404). Verifiez le deploiement.');
+      }
+      return r.json();
+    })
     .then(function (data) {
       if (data.token) {
         adminToken = data.token;
         sessionStorage.setItem('ann-admin-token', adminToken);
         showDashboard();
       } else {
-        errEl.textContent = 'Mot de passe incorrect';
+        errEl.textContent = data.error || 'Mot de passe incorrect';
         errEl.style.display = 'block';
       }
     })
-    .catch(function () {
-      errEl.textContent = 'Erreur de connexion';
+    .catch(function (err) {
+      errEl.textContent = err.message || 'Erreur de connexion';
       errEl.style.display = 'block';
     });
   }
@@ -82,6 +89,7 @@
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
         'x-admin-token': adminToken,
       },
     })
@@ -97,7 +105,7 @@
     })
     .then(function (data) {
       if (!data.success) {
-        listEl.innerHTML = '<p style="text-align:center;color:hsl(0 70% 50%);padding:3rem 0;">Erreur: ' + (data.error || 'Inconnue') + '</p>';
+        listEl.innerHTML = '<p style="text-align:center;color:hsl(0 70% 50%);padding:3rem 0;">Erreur: ' + esc(data.error || 'Inconnue') + '</p>';
         return;
       }
       allProfiles = data.profiles || [];
@@ -135,8 +143,17 @@
       filtered = allProfiles.filter(function (p) { return p.is_published; });
     }
 
+    // Apply search filter
+    if (searchQuery) {
+      var q = searchQuery.toLowerCase();
+      filtered = filtered.filter(function (p) {
+        var fullName = ((p.first_name || '') + ' ' + (p.last_name || '')).toLowerCase();
+        return fullName.indexOf(q) !== -1;
+      });
+    }
+
     if (filtered.length === 0) {
-      listEl.innerHTML = '<p style="text-align:center;color:hsl(var(--ann-muted-fg));padding:3rem 0;">Aucune fiche trouvee.</p>';
+      listEl.innerHTML = '<p style="text-align:center;color:hsl(var(--ann-muted-fg));padding:3rem 0;">' + (searchQuery ? 'Aucun resultat pour "' + esc(searchQuery) + '"' : 'Aucune fiche trouvee.') + '</p>';
       return;
     }
 
@@ -146,10 +163,18 @@
         : '<span style="display:inline-flex;padding:0.125rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background:hsl(40 90% 55%/0.1);color:hsl(40 70% 35%);">En attente</span>';
 
       var photoHtml = p.photo_url
-        ? '<img src="' + p.photo_url + '" style="width:3rem;height:3rem;border-radius:50%;object-fit:cover;" alt="">'
+        ? '<img src="' + esc(p.photo_url) + '" style="width:3rem;height:3rem;border-radius:50%;object-fit:cover;" alt="">'
         : '<div style="width:3rem;height:3rem;border-radius:50%;background:hsl(var(--ann-muted));display:flex;align-items:center;justify-content:center;"><svg style="width:1.25rem;height:1.25rem;color:hsl(var(--ann-muted-fg));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>';
 
       var date = p.created_at ? new Date(p.created_at).toLocaleDateString('fr-FR') : '';
+
+      // Build fiche URL for the external link icon
+      var ficheUrl = 'https://annuaire.quiz-couple.com/' + encodeURIComponent(p.specialty || '') + '/' + encodeURIComponent(p.city || '') + '/' + encodeURIComponent(p.slug || '') + '/';
+      var linkIcon = p.is_published && p.slug
+        ? ' <a href="' + esc(ficheUrl) + '" target="_blank" rel="noopener" title="Voir la fiche en ligne" style="color:hsl(var(--ann-primary));display:inline-flex;align-items:center;vertical-align:middle;">' +
+            '<svg style="width:0.875rem;height:0.875rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>' +
+          '</a>'
+        : '';
 
       var actions = '';
       if (!p.is_published) {
@@ -166,7 +191,7 @@
         '<div style="flex:1;min-width:0;">' +
           '<div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.25rem;">' +
             '<span style="font-weight:700;">' + esc(p.first_name || '') + ' ' + esc(p.last_name || '') + '</span>' +
-            statusBadge +
+            statusBadge + linkIcon +
           '</div>' +
           '<p style="font-size:0.875rem;color:hsl(var(--ann-muted-fg));margin-bottom:0.25rem;">' +
             esc(SPEC_LABELS[p.specialty] || p.specialty || '') + ' &mdash; ' + esc(p.city || '') +
@@ -206,6 +231,7 @@
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
         'x-admin-token': adminToken,
       },
       body: JSON.stringify(body),
@@ -221,6 +247,41 @@
     })
     .catch(function () {
       alert('Erreur reseau');
+    });
+  }
+
+  // ── Deploy ──
+
+  function triggerDeploy() {
+    var btn = document.getElementById('aadm-deploy');
+    if (!btn) return;
+    var origText = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = '<svg style="width:1rem;height:1rem;animation:spin 1s linear infinite;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg> Deploiement...';
+
+    fetch(SUPABASE_URL + '/functions/v1/trigger-deploy', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'x-admin-token': adminToken,
+      },
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.success) {
+        btn.innerHTML = '<svg style="width:1rem;height:1rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Deploiement lance !';
+        setTimeout(function () { btn.innerHTML = origText; btn.disabled = false; }, 5000);
+      } else {
+        alert('Erreur: ' + (data.error || 'Inconnue'));
+        btn.innerHTML = origText;
+        btn.disabled = false;
+      }
+    })
+    .catch(function () {
+      alert('Erreur reseau');
+      btn.innerHTML = origText;
+      btn.disabled = false;
     });
   }
 
@@ -252,6 +313,19 @@
       allProfiles = [];
       loadProfiles();
     });
+
+    // Deploy button
+    var deployBtn = document.getElementById('aadm-deploy');
+    if (deployBtn) deployBtn.addEventListener('click', triggerDeploy);
+
+    // Search bar
+    var searchInput = document.getElementById('aadm-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', function () {
+        searchQuery = this.value.trim();
+        renderProfiles();
+      });
+    }
 
     // Filter buttons
     document.querySelectorAll('.aadm-filter').forEach(function (btn) {
