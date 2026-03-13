@@ -270,9 +270,9 @@
             <input type="text" id="ebook-firstname" class="input" placeholder="Prénom" required maxlength="50" autocomplete="given-name">
             <input type="email" id="ebook-email" class="input" placeholder="Adresse e-mail" required maxlength="100" autocomplete="email">
           </div>
-          <!-- Honeypot anti-spam -->
-          <div style="position:absolute;left:-9999px;pointer-events:none;" aria-hidden="true">
-            <input type="text" id="ebook-website" name="website" tabindex="-1" autocomplete="off">
+          <!-- Honeypot anti-spam (field name must NOT match any real field browsers might autofill) -->
+          <div style="position:absolute;left:-9999px;pointer-events:none;opacity:0;height:0;overflow:hidden;" aria-hidden="true">
+            <input type="text" id="ebook-hp-f" name="quiz_hp_field" tabindex="-1" autocomplete="new-password">
           </div>
           <label class="ebook-consent">
             <input type="checkbox" id="ebook-consent-cb">
@@ -553,7 +553,7 @@
       e.preventDefault();
       var firstName = document.getElementById('ebook-firstname').value.trim();
       var email = document.getElementById('ebook-email').value.trim();
-      var honeypot = document.getElementById('ebook-website');
+      var honeypot = document.getElementById('ebook-hp-f');
       var consent = document.getElementById('ebook-consent-cb');
       var statusEl = document.getElementById('ebook-form-status');
       var submitBtn = document.getElementById('ebook-submit-btn');
@@ -596,10 +596,10 @@
       })
       .then(function(data) {
         if (data.already_verified) {
-          statusEl.textContent = 'Cet e-mail a déjà été vérifié. L\'e-book vous a déjà été envoyé. Vérifiez votre boîte mail !';
+          statusEl.textContent = 'Cet e-mail a déjà été vérifié. Vous pouvez télécharger votre e-book depuis le lien envoyé par mail.';
           statusEl.style.color = 'hsl(210 80% 55%)';
         } else {
-          statusEl.textContent = 'Un e-mail de vérification vient d\'être envoyé ! Cliquez sur le lien dans le mail pour recevoir votre e-book.';
+          statusEl.textContent = 'Un e-mail de vérification vient d\'être envoyé ! Cliquez sur le lien dans le mail pour accéder à votre e-book.';
           statusEl.style.color = 'hsl(142 71% 45%)';
         }
         statusEl.classList.remove('hidden');
