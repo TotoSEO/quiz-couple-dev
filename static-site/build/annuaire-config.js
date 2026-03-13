@@ -1166,50 +1166,54 @@ export const CITIES = [
 `
   },
   {
-    id: 'troyes', name: 'Troyes', department: '10', region: 'Grand Est', lat: 48.2973, lng: 4.0744, population: 61996,
+    id: 'troyes', name: 'Troyes', department: '10', region: 'Grand Est', lat: 48.2973, lng: 4.0744, population: 61652,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
   <h2>Thérapie de couple à <span class="ann-text-gradient">Troyes</span></h2>
-  <p>Troyes, ville d'art et de magasins d'usine, est une cité champenoise à taille humaine, à 1h30 de Paris. Son centre historique en forme de bouchon de champagne accueille des praticiens dans un cadre patrimonial unique.</p>
-  <p>Les cabinets se trouvent dans le centre historique, le quartier de la gare et les secteurs résidentiels comme les Noës, Pont-Sainte-Marie ou Saint-André-les-Vergers. L'UDAF 10 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans l'Aube.</p>
-  <p>Les CPEF du département proposent des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> troyens offrent un accompagnement accessible dans une ville où le coût de la vie reste raisonnable.</p>
+  <p>Troyes, préfecture de l'Aube, est une ville au patrimoine médiéval remarquable — son centre historique en forme de bouchon de champagne abrite l'une des plus belles collections de maisons à colombages de France. Ville à taille humaine, elle offre un cadre de vie accessible, avec un coût de l'immobilier bien inférieur à celui de l'Île-de-France. Les couples troyens qui consultent sont souvent des familles installées, des jeunes actifs ou des couples confrontés aux réalités économiques d'un bassin d'emploi en mutation (textile, bonneterie, industrie agroalimentaire).</p>
+  <p>Les praticiens exercent principalement dans le centre-ville historique (quartier de la cathédrale, rue Émile-Zola, place Alexandre-Israël) et dans les quartiers de Chartreux, des Marots et de la gare. Les communes voisines de Sainte-Savine, La Chapelle-Saint-Luc et Saint-André-les-Vergers accueillent aussi des cabinets.</p>
+  <p>Le centre hospitalier de Troyes dispose de consultations en psychologie. L'Aube bénéficie d'un service de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 10, avec des permanences à Troyes et Bar-sur-Aube. Le CPEF de l'Aube propose des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal et familial</a>.</p>
+  <p>Troyes est à 1h30 de Paris en train, ce qui offre une alternative : certains couples troyens consultent des praticiens parisiens quand l'offre locale ne correspond pas à leur besoin. Mais la ville dispose d'un réseau de <a href="/therapeute-de-couple/">thérapeutes de couple</a> suffisant pour la plupart des demandes.</p>
 </div>
 `
   },
   {
-    id: 'quimper', name: 'Quimper', department: '29', region: 'Bretagne', lat: 47.9960, lng: -4.1024, population: 63929,
+    id: 'quimper', name: 'Quimper', department: '29', region: 'Bretagne', lat: 47.9960, lng: -4.1024, population: 63508,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Professionnels du couple à <span class="ann-text-gradient">Quimper</span></h2>
-  <p>Quimper, préfecture du Finistère sud, est une ville à l'identité bretonne affirmée. La tradition associative bretonne se retrouve dans un réseau dense de services d'accompagnement familial, coordonné par l'UDAF 29 et les antennes locales du CLER et de l'AFCCC.</p>
-  <p>Les cabinets se trouvent dans le centre historique (quartier de la cathédrale, rue Kéréon), le secteur d'Ergué-Armel et les communes comme Ergué-Gabéric ou Pluguffan. Le Centre Hospitalier de Cornouaille propose des consultations spécialisées.</p>
-  <p>Pour les couples quimpérois, la ville offre un accès à des <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/mediateur-familial/">médiateurs familiaux</a> qualifiés, dans un cadre breton propice à la sérénité et au recul.</p>
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Quimper</span></h2>
+  <p>Quimper, préfecture du Finistère et capitale historique de la Cornouaille bretonne, est une ville où la culture et les traditions bretonnes restent vivaces. Au confluent du Steïr et de l'Odet, la ville offre un cadre de vie remarquable entre terre et mer. Les couples quimpérois qui consultent sont souvent des familles enracinées, des actifs du secteur agroalimentaire ou maritime, ou des couples venus s'installer en Bretagne pour la qualité de vie — avec les défis d'intégration que cela suppose.</p>
+  <p>Les praticiens exercent dans le centre-ville historique (quartier de la cathédrale Saint-Corentin, rue Kéréon, place Terre-au-Duc) et dans les quartiers résidentiels d'Ergué-Armel, de Penhars et du Moulin Vert. Les communes voisines de Quimper Bretagne Occidentale accueillent aussi des cabinets.</p>
+  <p>Le centre hospitalier de Cornouaille dispose de consultations spécialisées en psychologie. Le Finistère bénéficie d'un réseau de <a href="/mediateur-familial/">médiation familiale</a> bien structuré, coordonné par l'UDAF 29, avec des permanences à Quimper, Brest et Morlaix. La tradition associative bretonne se retrouve dans l'offre en <a href="/conseiller-conjugal/">conseil conjugal</a> : les antennes locales du CLER et de l'AFCCC proposent un accompagnement accessible.</p>
+  <p>L'éloignement de Quimper par rapport aux grandes métropoles pousse les praticiens locaux à développer la visioconférence. C'est un atout pour les couples des communes rurales de Cornouaille qui n'ont pas de <a href="/therapeute-de-couple/">thérapeute de couple</a> à proximité immédiate.</p>
 </div>
 `
   },
   {
-    id: 'beziers', name: 'Béziers', department: '34', region: 'Occitanie', lat: 43.3440, lng: 3.2150, population: 78683,
+    id: 'beziers', name: 'Béziers', department: '34', region: 'Occitanie', lat: 43.3440, lng: 3.2191, population: 78683,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Béziers</span></h2>
-  <p>Béziers, ville viticole de l'Hérault, connaît un renouveau démographique porté par un immobilier accessible et la proximité de la Méditerranée. Les nouveaux arrivants, souvent des couples en reconversion, trouvent dans les praticiens biterrois un accompagnement adapté à leurs transitions de vie.</p>
-  <p>Les cabinets se trouvent dans le centre-ville (allées Paul Riquet, quartier de la cathédrale) et les secteurs résidentiels. L'UDAF 34 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans l'Hérault, avec des antennes à Béziers.</p>
-  <p>Le CPEF de Béziers propose des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>. La ville bénéficie de la proximité de Montpellier et de son université pour l'accès à des <a href="/sexologue/">sexologues</a> formés.</p>
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Béziers</span></h2>
+  <p>Béziers, ville languedocienne surplombant l'Orb, est une cité au riche passé viticole et au caractère méridional affirmé. La ville connaît un renouveau démographique, attirant des retraités, des télétravailleurs et des familles séduits par le coût de la vie modéré et la proximité de la Méditerranée. Ces nouveaux arrivants, souvent venus du nord de la France, doivent s'adapter à un rythme de vie différent — une transition qui peut créer des tensions dans le couple.</p>
+  <p>Les praticiens exercent dans le centre-ville (allées Paul-Riquet, quartier de la cathédrale Saint-Nazaire, boulevard de la Liberté) et dans les quartiers résidentiels de la Devèze, de Montimaran et de la route de Béziers-Plage. Les communes voisines de Sérignan et Villeneuve-lès-Béziers accueillent aussi des cabinets.</p>
+  <p>Le centre hospitalier de Béziers dispose de consultations en psychologie. L'Hérault bénéficie d'un réseau de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 34, avec des permanences à Béziers, Montpellier et Lodève. La proximité de Montpellier (1h en train) permet d'accéder aux formations universitaires et aux consultations hospitalières de <a href="/sexologue/">sexologie</a> de la faculté de médecine.</p>
+  <p>Pour les couples biterrois à revenus modestes, le CPEF de Béziers propose des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal et familial</a>. Les antennes locales du CLER complètent l'offre avec un <a href="/therapeute-de-couple/">accompagnement de couple</a> à tarif adapté.</p>
 </div>
 `
   },
   {
-    id: 'saint-nazaire', name: 'Saint-Nazaire', department: '44', region: 'Pays de la Loire', lat: 47.2736, lng: -2.2137, population: 72437,
+    id: 'saint-nazaire', name: 'Saint-Nazaire', department: '44', region: 'Pays de la Loire', lat: 47.2734, lng: -2.2136, population: 72299,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
   <h2>Thérapie de couple à <span class="ann-text-gradient">Saint-Nazaire</span></h2>
-  <p>Saint-Nazaire, ville portuaire de l'estuaire de la Loire, est marquée par les chantiers navals et l'industrie aéronautique (Airbus). Les couples nazairiens sont souvent confrontés aux réalités du travail industriel : horaires décalés, contrats en intérim, éloignement géographique pour les déplacements professionnels.</p>
-  <p>Les cabinets se trouvent dans le centre-ville (quartier de la gare, Petit Maroc) et les communes comme Pornichet, Trignac ou Montoir-de-Bretagne. Saint-Nazaire fait partie de la métropole nantaise élargie, ce qui donne accès à l'offre de Nantes en complément.</p>
-  <p>L'UDAF 44 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> en Loire-Atlantique. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/conseiller-conjugal/">conseillers conjugaux</a> nazairiens proposent un accompagnement de proximité à tarifs accessibles.</p>
+  <p>Saint-Nazaire, ville portuaire et industrielle de l'estuaire de la Loire, est mondialement connue pour ses chantiers navals (Chantiers de l'Atlantique) où se construisent les plus grands paquebots du monde. Cette industrie, avec ses cycles de commandes et ses périodes de forte activité, crée des rythmes de travail intenses qui pèsent sur la vie de couple : horaires décalés, travail le week-end, stress des délais de livraison. Les praticiens nazairiens connaissent ces réalités industrielles.</p>
+  <p>Les cabinets se trouvent dans le centre-ville reconstruit après-guerre (quartier de la gare, avenue de la République, rue de la Paix), dans les quartiers de Méan-Penhoët, de Ville-Port et de Plaisance. Les communes voisines de Pornichet, Trignac et Montoir-de-Bretagne accueillent aussi des praticiens.</p>
+  <p>Saint-Nazaire fait partie de la métropole nantaise élargie, ce qui donne accès aux ressources de Nantes (45 minutes en TER) : CHU, formations universitaires, réseau dense de <a href="/therapeute-de-couple/">thérapeutes de couple</a>. Localement, le centre hospitalier de Saint-Nazaire dispose de consultations spécialisées.</p>
+  <p>La Loire-Atlantique bénéficie d'un réseau de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 44, avec des permanences à Saint-Nazaire et Nantes. Le CPEF de Saint-Nazaire propose des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal et familial</a> — une ressource importante dans un bassin de vie où les revenus ouvriers sont fréquents.</p>
 </div>
 `
   },
