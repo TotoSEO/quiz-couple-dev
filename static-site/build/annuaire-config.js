@@ -15,7 +15,7 @@ export const SPECIALTIES = [
     icon: 'heart-handshake',
     color: '#E84393',
     description: 'Le thérapeute de couple accompagne les partenaires dans la résolution de leurs difficultés relationnelles. Il aide à rétablir la communication, gérer les conflits et renforcer les liens affectifs au sein du couple.',
-    metaTitle: 'Trouver un thérapeute de couple près de chez vous',
+    metaTitle: 'Annuaire N°1 des thérapeutes de couple en France',
     metaDescription: 'Thérapeutes de couple qualifiés en France | Consultez les profils et prenez rendez-vous avec un spécialiste près de chez vous.',
     seoContent: {
       sections: [
@@ -112,7 +112,7 @@ export const SPECIALTIES = [
     icon: 'flame',
     color: '#E17055',
     description: 'Le sexologue est un professionnel de santé spécialisé dans les troubles de la sexualité. Il accompagne les individus et les couples confrontés à des difficultés d\'ordre sexuel, qu\'elles soient physiques ou psychologiques.',
-    metaTitle: 'Trouver un sexologue près de chez vous',
+    metaTitle: 'Annuaire N°1 des sexologues en France',
     metaDescription: 'Sexologues qualifiés en France | Trouvez votre spécialiste près de chez vous pour une consultation confidentielle.',
     seoContent: {
       sections: [
@@ -207,7 +207,7 @@ export const SPECIALTIES = [
     icon: 'sparkles',
     color: '#A29BFE',
     description: 'Le sexothérapeute combine les approches de la psychothérapie et de la sexologie pour traiter les problématiques liées à la sexualité dans un cadre thérapeutique global. Il aide les couples à retrouver une intimité épanouissante.',
-    metaTitle: 'Trouver un sexothérapeute près de chez vous',
+    metaTitle: 'Annuaire N°1 des sexothérapeutes en France',
     metaDescription: 'Sexothérapeutes qualifiés en France | Trouvez votre spécialiste pour accompagner votre vie intime de couple.',
     seoContent: {
       sections: [
@@ -298,7 +298,7 @@ export const SPECIALTIES = [
     icon: 'scale',
     color: '#00B894',
     description: 'Le médiateur familial intervient pour faciliter le dialogue et la recherche de solutions amiables lors de conflits familiaux : séparation, divorce, garde des enfants, relations intergénérationnelles.',
-    metaTitle: 'Trouver un médiateur familial près de chez vous',
+    metaTitle: 'Annuaire N°1 des médiateurs familiaux en France',
     metaDescription: 'Médiateurs familiaux en France | Trouvez votre spécialiste pour résoudre vos conflits familiaux à l\'amiable.',
     seoContent: {
       sections: [
@@ -384,7 +384,7 @@ export const SPECIALTIES = [
     icon: 'baby',
     color: '#FDCB6E',
     description: 'Le coach parental accompagne les parents dans leur rôle éducatif. Il aide à développer des stratégies adaptées pour gérer les défis de la parentalité tout en préservant l\'équilibre du couple.',
-    metaTitle: 'Trouver un coach parental près de chez vous',
+    metaTitle: 'Annuaire N°1 des coachs parentaux en France',
     metaDescription: 'Coachs parentaux en France | Trouvez votre spécialiste pour vous accompagner dans votre rôle de parent.',
     seoContent: {
       sections: [
@@ -481,7 +481,7 @@ export const SPECIALTIES = [
     icon: 'message-circle-heart',
     color: '#74B9FF',
     description: 'Le conseiller conjugal et familial accompagne les couples et les familles dans les moments de crise ou de transition. Il aide à clarifier les sentiments, améliorer la communication et prendre des décisions éclairées.',
-    metaTitle: 'Trouver un conseiller conjugal près de chez vous',
+    metaTitle: 'Annuaire N°1 des conseillers conjugaux en France',
     metaDescription: 'Conseillers conjugaux en France | Trouvez votre spécialiste qualifié pour accompagner votre couple.',
     seoContent: {
       sections: [
@@ -1001,22 +1001,24 @@ export const CITIES = [
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Accompagnement de couple à <span class="ann-text-gradient">Avignon</span></h2>
-  <p>Avignon, cité des Papes et ville du festival, est au carrefour de la Provence et du Languedoc. Sa position stratégique dans la vallée du Rhône en fait un pôle qui dessert un large bassin de population, de Carpentras à Orange en passant par Villeneuve-lès-Avignon.</p>
-  <p>Les cabinets se trouvent dans l'intra-muros (centre historique fortifié), le quartier de la gare TGV et les secteurs résidentiels comme Montfavet, Le Pontet ou Vedène. Le Centre Hospitalier d'Avignon offre des consultations spécialisées.</p>
-  <p>L'UDAF 84 propose des services de <a href="/mediateur-familial/">médiation familiale</a> dans le Vaucluse. Plusieurs <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/sexologue/">sexologues</a> exercent en bilingue français-provençal ou français-anglais, un atout dans cette ville cosmopolite.</p>
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Avignon</span></h2>
+  <p>Avignon, cité des Papes ceinte de ses remparts médiévaux, est une ville au patrimoine exceptionnel et à l'identité culturelle forte — le Festival d'Avignon en est le symbole mondial. Préfecture du Vaucluse, elle est aussi le centre d'un bassin de vie qui rayonne sur plusieurs départements (Gard, Bouches-du-Rhône, Drôme). Les couples avignonnais qui cherchent un accompagnement trouvent une offre structurée, à la croisée des influences provençales et rhodaniennes.</p>
+  <p>Les praticiens exercent dans l'intra-muros (quartier de la place de l'Horloge, rue de la République, quartier des Teinturiers) et dans les quartiers extra-muros comme Montfavet, Saint-Chamand et la Rocade. Les communes du Grand Avignon — Villeneuve-lès-Avignon, Le Pontet, Vedène — accueillent aussi des cabinets.</p>
+  <p>L'Université d'Avignon forme des psychologues via son département de sciences humaines. Le centre hospitalier d'Avignon dispose d'une consultation de <a href="/sexologue/">sexologie</a>. Le Vaucluse bénéficie d'un service de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 84, avec des permanences à Avignon, Carpentras et Orange.</p>
+  <p>Le CPEF d'Avignon propose des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal et familial</a>. Les antennes locales du CLER et de l'AFCCC complètent l'offre avec un accompagnement à tarif accessible, ce qui est précieux dans un département où les revenus sont souvent inférieurs à la moyenne régionale.</p>
 </div>
 `
   },
   {
-    id: 'la-rochelle', name: 'La Rochelle', department: '17', region: 'Nouvelle-Aquitaine', lat: 46.1603, lng: -1.1511, population: 79344,
+    id: 'la-rochelle', name: 'La Rochelle', department: '17', region: 'Nouvelle-Aquitaine', lat: 46.1603, lng: -1.1511, population: 77196,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Thérapie de couple à <span class="ann-text-gradient">La Rochelle</span></h2>
-  <p>La Rochelle, ville maritime et touristique, attire des couples séduits par la qualité de vie atlantique. La reconversion professionnelle et les changements de vie radicaux (quitter Paris pour s'installer au bord de l'océan) sont des thématiques que les praticiens rochelais connaissent bien.</p>
-  <p>Les cabinets se concentrent dans le centre historique (Vieux-Port, quartier Saint-Nicolas), le secteur de Tasdon-Les Minimes et les communes comme Aytré ou Lagord. L'UDAF 17 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> en Charente-Maritime.</p>
-  <p>Pour les couples rochelais, la ville offre un accès à des <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/conseiller-conjugal/">conseillers conjugaux</a> de qualité, dans un cadre propice au recul et à la réflexion.</p>
+  <h2>Professionnels du couple à <span class="ann-text-gradient">La Rochelle</span></h2>
+  <p>La Rochelle, port atlantique au charme indéniable, est une ville qui attire. Son vieux port, ses tours médiévales, ses plages et l'île de Ré toute proche en font l'une des villes les plus prisées de la côte ouest. Beaucoup de couples s'y installent pour la qualité de vie — mais le coût de l'immobilier, la saisonnalité touristique et l'éloignement des grandes métropoles créent aussi des tensions spécifiques que les praticiens rochelais connaissent bien.</p>
+  <p>Les cabinets se trouvent dans le centre-ville historique (quartier du Vieux-Port, rue du Palais, place de Verdun), dans les quartiers de Tasdon, Laleu et La Genette. Les communes voisines d'Aytré, Lagord et Périgny accueillent aussi des praticiens. La saison estivale, avec l'afflux touristique, peut compliquer la prise de rendez-vous — anticiper est conseillé.</p>
+  <p>Le groupe hospitalier de La Rochelle-Ré-Aunis propose une consultation de <a href="/sexologue/">sexologie</a>. L'Université de La Rochelle, bien que de taille modeste, contribue à la dynamique intellectuelle de la ville. La Charente-Maritime bénéficie d'un service de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 17, avec des permanences à La Rochelle, Saintes et Rochefort.</p>
+  <p>Pour le <a href="/conseiller-conjugal/">conseil conjugal</a> accessible, les antennes locales du CLER proposent des consultations à tarif adapté. Le CPEF de La Rochelle offre aussi des consultations gratuites de conseil familial et de planification.</p>
 </div>
 `
   },
@@ -1025,22 +1027,24 @@ export const CITIES = [
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Professionnels du couple à <span class="ann-text-gradient">Poitiers</span></h2>
-  <p>Poitiers, ville universitaire au riche patrimoine, accueille 28 000 étudiants qui représentent un quart de la population. L'université de Poitiers forme des psychologues cliniciens qui exercent ensuite dans la région, contribuant à un maillage de praticiens compétents.</p>
-  <p>Les cabinets se trouvent dans le centre historique (quartier de la cathédrale, place du Maréchal Leclerc), le secteur de la gare et les quartiers comme les Couronneries ou Buxerolles. Le CHU de Poitiers dispose de consultations spécialisées en <a href="/sexologue/">sexologie</a>.</p>
-  <p>L'UDAF 86 gère un service de <a href="/mediateur-familial/">médiation familiale</a> dans la Vienne. Les CPEF départementaux proposent des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>.</p>
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Poitiers</span></h2>
+  <p>Poitiers, l'une des plus anciennes villes universitaires de France (son université date de 1431), est une cité où la proportion d'étudiants est parmi les plus élevées du pays. Mais au-delà du monde étudiant, Poitiers est aussi une ville familiale et administrative, préfecture de la Vienne. Les couples poitevins ont des profils variés : jeunes en début de vie commune, familles installées, couples de fonctionnaires — et l'offre en accompagnement conjugal reflète cette diversité.</p>
+  <p>Les praticiens exercent dans le centre historique (quartier de la cathédrale Saint-Pierre, place du Maréchal-Leclerc, rue de la Chaîne), autour de la gare TGV et dans les quartiers de Beaulieu, des Couronneries et de Saint-Eloi. Les communes de Grand Poitiers comme Buxerolles, Saint-Benoît et Chasseneuil-du-Poitou (où se trouve le Futuroscope) accueillent aussi des cabinets.</p>
+  <p>Le CHU de Poitiers dispose d'une consultation de <a href="/sexologue/">sexologie</a>. L'Université de Poitiers, à travers sa faculté de médecine et son département de psychologie, forme des praticiens qui s'installent ensuite dans la Vienne. L'UDAF 86 coordonne un service de <a href="/mediateur-familial/">médiation familiale</a> avec des permanences à Poitiers et Châtellerault.</p>
+  <p>Le CPEF de la Vienne propose des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>. Poitiers est aussi bien reliée à Paris (1h40 en TGV), Bordeaux et Tours, ce qui ouvre l'accès à des praticiens d'autres villes si besoin.</p>
 </div>
 `
   },
   {
-    id: 'versailles', name: 'Versailles', department: '78', region: 'Île-de-France', lat: 48.8014, lng: 2.1301, population: 85205,
+    id: 'versailles', name: 'Versailles', department: '78', region: 'Île-de-France', lat: 48.8014, lng: 2.1301, population: 85272,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Versailles</span></h2>
-  <p>Versailles, ville résidentielle prisée de l'Ouest parisien, accueille une population aisée avec des attentes élevées en matière d'accompagnement de couple. Les praticiens versaillais sont souvent spécialisés dans les problématiques de couples à hauts revenus : gestion du patrimoine, pression sociale, éducation des enfants dans un milieu exigeant.</p>
-  <p>Les cabinets se concentrent dans le quartier Notre-Dame, le quartier Saint-Louis, autour de la gare et dans les communes voisines comme Le Chesnay ou Viroflay. Le tribunal de grande instance de Versailles, l'un des plus importants de France, oriente régulièrement vers la <a href="/mediateur-familial/">médiation familiale</a>.</p>
-  <p>Versailles offre un accès à des <a href="/therapeute-de-couple/">thérapeutes de couple</a> de haut niveau, souvent formés dans les universités parisiennes et disposant d'une pratique clinique solide.</p>
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Versailles</span></h2>
+  <p>Versailles, célèbre dans le monde entier pour son château, est aussi une ville résidentielle cossue de la grande couronne parisienne. Préfecture des Yvelines, elle accueille une population aisée et éduquée, souvent composée de cadres travaillant à Paris ou à La Défense. Les couples versaillais qui consultent font souvent face à des problématiques liées au rythme de vie francilien : stress professionnel, manque de temps conjugal, pression sociale dans un environnement où l'apparence compte.</p>
+  <p>Les praticiens exercent dans le centre-ville (quartier Notre-Dame, quartier Saint-Louis, avenue de Paris), dans le quartier de Montreuil et dans les communes voisines comme Le Chesnay-Rocquencourt, Viroflay et Vélizy-Villacoublay. Le RER C et le réseau de bus facilitent l'accès depuis les Yvelines et Paris.</p>
+  <p>Les Yvelines disposent d'un réseau dense de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 78. Le centre hospitalier de Versailles dispose de consultations spécialisées. La proximité de Paris donne aussi accès à l'ensemble de l'offre parisienne en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Versailles se distingue par une forte présence de praticiens libéraux aux formations variées : thérapie systémique, approche psychanalytique, thérapies brèves, EMDR. Le niveau de formation est généralement élevé, porté par la proximité des universités parisiennes et des instituts de formation franciliens.</p>
 </div>
 `
   },
@@ -1049,22 +1053,24 @@ export const CITIES = [
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Thérapie de couple à <span class="ann-text-gradient">Bayonne</span></h2>
-  <p>Bayonne, capitale du Pays basque français, est une ville à forte identité culturelle. Les praticiens bayonnais accompagnent des couples dans un contexte où la famille élargie occupe une place importante — ce qui peut être une ressource mais aussi une source de tension, notamment dans les familles recomposées.</p>
-  <p>Les cabinets se trouvent dans le Grand Bayonne, le Petit Bayonne et les communes de l'agglomération comme Anglet ou Biarritz. La proximité avec le Pays basque espagnol crée des couples transfrontaliers que certains praticiens accompagnent en bilingue.</p>
-  <p>L'UDAF 64 propose des services de <a href="/mediateur-familial/">médiation familiale</a> dans le département. Les <a href="/conseiller-conjugal/">conseillers conjugaux</a> du Pays basque français sont sensibilisés aux spécificités culturelles locales.</p>
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Bayonne</span></h2>
+  <p>Bayonne, capitale du Pays basque français, est une ville à l'identité culturelle forte, à la confluence de la Nive et de l'Adour. Avec Anglet et Biarritz, elle forme une agglomération dynamique où la qualité de vie attire de plus en plus de nouveaux habitants. Les couples bayonnais naviguent entre tradition basque et modernité, dans un territoire où les liens familiaux sont souvent très présents — ce qui peut être à la fois une ressource et une source de tension.</p>
+  <p>Les praticiens exercent dans le centre-ville historique (Grand Bayonne, Petit Bayonne, quartier Saint-Esprit) et dans l'agglomération BAB (Biarritz, Anglet, Bayonne). Anglet, plus résidentielle, et Biarritz, plus touristique, accueillent aussi des cabinets. Le réseau de bus Txik Txak facilite les déplacements dans l'agglomération.</p>
+  <p>Le centre hospitalier de la Côte Basque propose une consultation de <a href="/sexologue/">sexologie</a>. L'UDAF 64 coordonne un service de <a href="/mediateur-familial/">médiation familiale</a> qui couvre le Pays basque et le Béarn, avec des permanences à Bayonne et Pau. Les associations locales proposent du <a href="/conseiller-conjugal/">conseil conjugal</a> à tarif adapté.</p>
+  <p>La proximité de la frontière espagnole (Irun et Saint-Sébastien sont à 30 minutes) crée des couples transfrontaliers avec des réalités spécifiques. Certains praticiens bayonnais proposent des consultations bilingues français-espagnol, et quelques-uns parlent aussi le basque — un atout pour les couples qui s'expriment plus naturellement en euskara.</p>
 </div>
 `
   },
   {
-    id: 'cannes', name: 'Cannes', department: '06', region: 'Provence-Alpes-Côte d\'Azur', lat: 43.5528, lng: 7.0174, population: 74285,
+    id: 'cannes', name: 'Cannes', department: '06', region: 'Provence-Alpes-Côte d\'Azur', lat: 43.5528, lng: 7.0174, population: 74152,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
   <h2>Professionnels du couple à <span class="ann-text-gradient">Cannes</span></h2>
-  <p>Cannes, ville internationale de la Côte d'Azur, accueille une population diversifiée entre résidents permanents, retraités aisés et expatriés. Les praticiens cannois accompagnent souvent des couples confrontés à des écarts d'âge importants, des reconversions de vie après la retraite, ou des relations à distance entre la Côte d'Azur et d'autres pays.</p>
-  <p>Les cabinets se concentrent sur la Croisette, dans le quartier du Suquet et le secteur de la Bocca. Cannes bénéficie de la proximité de Nice et de son offre universitaire en <a href="/sexologue/">sexologie</a>. Plusieurs praticiens proposent des consultations en anglais ou en russe.</p>
-  <p>L'UDAF 06 gère les services de <a href="/mediateur-familial/">médiation familiale</a> dans les Alpes-Maritimes, avec des permanences à Cannes et dans les villes voisines.</p>
+  <p>Cannes, mondialement connue pour son festival de cinéma et sa Croisette, est aussi une ville résidentielle de la Côte d'Azur avec une population permanente diversifiée. Retraités aisés, professionnels de l'événementiel et du tourisme, résidents étrangers — les couples cannois présentent des profils variés. La vie sur la Riviera, malgré son cadre idyllique, n'est pas exempte de tensions : coût de la vie élevé, saisonnalité de l'emploi, pression de l'image dans une ville qui cultive le paraître.</p>
+  <p>Les praticiens exercent dans le centre-ville (quartier de la Croisette, rue d'Antibes, le Suquet), dans les quartiers résidentiels de La Bocca, Carnot et du Cannet — commune limitrophe qui fait quasiment partie de Cannes. Mougins et Mandelieu-la-Napoule accueillent aussi des cabinets.</p>
+  <p>Cannes bénéficie de la proximité de Nice (30 minutes en train) et de son offre médicale et universitaire. Le centre hospitalier de Cannes-Simone Veil propose des consultations spécialisées. L'UDAF 06 coordonne un service de <a href="/mediateur-familial/">médiation familiale</a> avec des permanences dans les Alpes-Maritimes.</p>
+  <p>Plusieurs <a href="/therapeute-de-couple/">thérapeutes de couple</a> cannois proposent des consultations en anglais ou en italien, une nécessité dans une ville aussi cosmopolite. La visioconférence est aussi très développée, pratique pour les couples dont l'un des conjoints est fréquemment en déplacement professionnel.</p>
 </div>
 `
   },
@@ -1073,22 +1079,24 @@ export const CITIES = [
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Accompagnement de couple à <span class="ann-text-gradient">Aix-en-Provence</span></h2>
-  <p>Aix-en-Provence, ville d'art et d'université, est l'une des communes les plus aisées de France. L'Université d'Aix-Marseille, dont les campus s'étendent entre les deux villes, forme chaque année des psychologues et des <a href="/sexologue/">sexologues</a> via son DU de sexologie réputé.</p>
-  <p>Les cabinets se trouvent dans le centre historique (cours Mirabeau, quartier Mazarin), le quartier du Jas de Bouffan et les communes périphériques comme Luynes ou Venelles. Aix dispose d'un tribunal de grande instance actif en droit de la famille.</p>
-  <p>L'UDAF 13 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans les Bouches-du-Rhône. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> aixois proposent un accompagnement de qualité dans un cadre provençal propice à la sérénité.</p>
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Aix-en-Provence</span></h2>
+  <p>Aix-en-Provence, ville d'art et d'eau au pied de la montagne Sainte-Victoire chère à Cézanne, est l'une des villes les plus attractives du sud de la France. Son centre historique élégant, son festival lyrique, ses universités (dont Sciences Po Aix et l'Université Aix-Marseille) et sa qualité de vie en font un lieu prisé par les couples aisés et éduqués. Les praticiens aixois reçoivent une clientèle souvent exigeante, habituée à un haut niveau de service.</p>
+  <p>Les cabinets se concentrent dans le centre-ville (cours Mirabeau, quartier Mazarin, place de la Rotonde), dans le quartier du Jas de Bouffan et vers le quartier des Facultés. Les communes voisines de Luynes, Venelles et Gardanne accueillent aussi des professionnels. Le réseau Aix en Bus et la proximité de Marseille (TER en 30 minutes) élargissent les possibilités.</p>
+  <p>Aix-en-Provence bénéficie de la formation universitaire dispensée par l'Université Aix-Marseille, dont le DU de sexologie est reconnu. Plusieurs <a href="/sexologue/">sexologues</a> formés localement exercent en ville. L'UDAF 13, qui couvre les Bouches-du-Rhône, coordonne un service de <a href="/mediateur-familial/">médiation familiale</a> avec des antennes à Aix-en-Provence, Marseille et Salon-de-Provence.</p>
+  <p>Pour les couples qui cherchent un <a href="/conseiller-conjugal/">conseil conjugal</a> accessible, le CPEF d'Aix propose des consultations gratuites. La ville abrite aussi des praticiens spécialisés dans l'accompagnement des couples confrontés à des problématiques de parentalité, de recomposition familiale ou de vieillissement.</p>
 </div>
 `
   },
   {
-    id: 'dunkerque', name: 'Dunkerque', department: '59', region: 'Hauts-de-France', lat: 51.0343, lng: 2.3768, population: 87353,
+    id: 'dunkerque', name: 'Dunkerque', department: '59', region: 'Hauts-de-France', lat: 51.0343, lng: 2.3768, population: 86279,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Thérapie de couple à <span class="ann-text-gradient">Dunkerque</span></h2>
-  <p>Dunkerque, troisième port de France, est une ville en mutation qui se réinvente après l'ère industrielle. Les couples dunkerquois sont confrontés aux défis du travail posté (port, industrie) et aux horaires décalés qui pèsent sur la vie conjugale.</p>
-  <p>Les praticiens exercent dans le centre-ville (quartier de la Citadelle, Malo-les-Bains) et les communes de l'agglomération comme Grande-Synthe, Coudekerque-Branche ou Saint-Pol-sur-Mer. L'UDAF 59, basée à Lille, dispose d'antennes dans le Dunkerquois pour la <a href="/mediateur-familial/">médiation familiale</a>.</p>
-  <p>Pour le <a href="/conseiller-conjugal/">conseil conjugal</a>, les CPEF du littoral Nord proposent des consultations accessibles. La proximité avec la Belgique et l'Angleterre crée des couples transfrontaliers que certains praticiens accompagnent.</p>
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Dunkerque</span></h2>
+  <p>Dunkerque, troisième port de France et ville du célèbre carnaval, est une cité portuaire et industrielle du littoral nord. Son identité est marquée par la mer, l'industrie (sidérurgie, pétrochimie, énergie) et une culture flamande vivace. Les couples dunkerquois font face à des réalités spécifiques : travail posté dans l'industrie, précarité dans certains quartiers, éloignement géographique des grandes métropoles. Les praticiens locaux connaissent ces problématiques et adaptent leur accompagnement.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place Jean-Bart, quartier de la gare, boulevard Alexandre-III) et dans les communes de la communauté urbaine comme Grande-Synthe, Coudekerque-Branche et Saint-Pol-sur-Mer. Gravelines et Bergues, à quelques kilomètres, accueillent aussi des praticiens.</p>
+  <p>Le centre hospitalier de Dunkerque propose des consultations spécialisées. La proximité de Lille (45 minutes en train) donne accès à l'offre universitaire et hospitalière lilloise, notamment le DU de <a href="/sexologue/">sexologie</a> de la faculté de médecine. L'UDAF 59, qui couvre tout le Nord, coordonne un réseau de <a href="/mediateur-familial/">médiation familiale</a> avec des permanences à Dunkerque et dans le Dunkerquois.</p>
+  <p>Pour le <a href="/conseiller-conjugal/">conseil conjugal</a> accessible, les associations locales (CLER, Couples et Familles) proposent des consultations à tarif adapté. La proximité de la frontière belge crée aussi des couples transfrontaliers qui peuvent trouver à Dunkerque un accompagnement en français.</p>
 </div>
 `
   },
@@ -1097,10 +1105,11 @@ export const CITIES = [
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Professionnels du couple à <span class="ann-text-gradient">Calais</span></h2>
-  <p>Calais, ville portuaire face à l'Angleterre, vit au rythme du transmanche. Les couples franco-britanniques y sont nombreux, et les praticiens calaisiens sont habitués à accompagner des problématiques liées à la biculturalité et aux relations à distance post-Brexit.</p>
-  <p>Les cabinets se trouvent dans le centre-ville (quartier Calais-Nord, boulevard Jacquard) et les secteurs résidentiels. L'UDAF 62 gère les services de <a href="/mediateur-familial/">médiation familiale</a> dans le Pas-de-Calais.</p>
-  <p>Le Centre Hospitalier de Calais propose des consultations en <a href="/sexologue/">sexologie</a>. Pour le <a href="/conseiller-conjugal/">conseil conjugal</a>, les CPEF du littoral sont accessibles et proposent des consultations gratuites.</p>
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Calais</span></h2>
+  <p>Calais, ville portuaire tournée vers l'Angleterre, est un territoire à l'identité forte. Premier port passagers de France, la ville vit au rythme des ferries et du tunnel sous la Manche. Les couples calaisiens font face à des réalités économiques parfois difficiles — la désindustrialisation de la dentelle a laissé des traces — et les tensions financières sont un motif fréquent de consultation. Les praticiens locaux sont sensibles à ces enjeux sociaux et proposent souvent des tarifs accessibles.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de l'Hôtel de Ville, rue Royale, boulevard Jacquard) et dans les quartiers résidentiels de Saint-Pierre, du Fort Nieulay et de Calais-Nord. Les communes voisines de Coquelles, Sangatte et Marck accueillent ponctuellement des praticiens.</p>
+  <p>Le centre hospitalier de Calais dispose de consultations de psychologie. Le Pas-de-Calais bénéficie d'un réseau de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 62, avec des permanences à Calais, Boulogne-sur-Mer et Arras. La proximité de Lille (1h30 en train) permet d'accéder à une offre plus large en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Pour les couples à revenus modestes, le CPEF de Calais propose des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal et familial</a>. La position frontalière de Calais crée aussi des couples franco-britanniques avec des problématiques interculturelles spécifiques — certains praticiens proposent des consultations en anglais.</p>
 </div>
 `
   },
@@ -1110,33 +1119,36 @@ export const CITIES = [
     seoHtml: `
 <div class="ann-seo-block">
   <h2>Accompagnement conjugal à <span class="ann-text-gradient">Colmar</span></h2>
-  <p>Colmar, joyau alsacien entre vignobles et montagnes, est une ville à taille humaine qui bénéficie de la proximité de Strasbourg et Mulhouse. Comme le reste de l'Alsace, Colmar est soumise au droit local pour certaines questions familiales, ce que les praticiens locaux maîtrisent.</p>
-  <p>Les cabinets se trouvent dans la Petite Venise, le centre historique et les quartiers résidentiels. L'UDAF 68 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> dans le Haut-Rhin, avec des permanences à Colmar.</p>
-  <p>Plusieurs praticiens proposent des consultations en français et en allemand. Pour le <a href="/conseiller-conjugal/">conseil conjugal</a> à tarif accessible, les associations locales (CLER, Couples et Familles) disposent d'antennes dans le département.</p>
+  <p>Colmar, préfecture du Haut-Rhin, est un joyau alsacien niché au cœur du vignoble. Sa Petite Venise, ses maisons à colombages et son marché de Noël en font l'une des villes les plus pittoresques de France. Mais derrière la carte postale, Colmar est aussi une ville active et résidentielle, avec des couples confrontés aux mêmes défis qu'ailleurs : communication difficile, tensions autour de la parentalité, crises de la quarantaine ou du couple recomposé.</p>
+  <p>Les praticiens colmariens exercent dans le centre-ville historique (quartier des Tanneurs, rue des Clefs, place Rapp) et dans les quartiers résidentiels de la Lauch, d'Europe et du Logelbach. Les communes voisines de Wintzenheim, Horbourg-Wihr et Ingersheim accueillent aussi des cabinets.</p>
+  <p>Comme le reste de l'Alsace, Colmar est soumise au droit local alsacien-mosellan en matière de famille. Les <a href="/mediateur-familial/">médiateurs familiaux</a> et <a href="/conseiller-conjugal/">conseillers conjugaux</a> locaux maîtrisent ces particularités. L'UDAF 68 coordonne un service de médiation familiale avec des permanences à Colmar et Mulhouse.</p>
+  <p>Le centre hospitalier de Colmar dispose de consultations spécialisées. Plusieurs praticiens colmariens consultent en français et en allemand, un atout dans cette région bilingue. La proximité de Strasbourg (30 minutes en TER) et de Fribourg-en-Brisgau (Allemagne) élargit aussi les possibilités pour les couples transfrontaliers.</p>
 </div>
 `
   },
   {
-    id: 'valence', name: 'Valence', department: '26', region: 'Auvergne-Rhône-Alpes', lat: 44.9334, lng: 4.8924, population: 65726,
+    id: 'valence', name: 'Valence', department: '26', region: 'Auvergne-Rhône-Alpes', lat: 44.9334, lng: 4.8924, population: 65349,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Thérapie de couple à <span class="ann-text-gradient">Valence</span></h2>
-  <p>Valence, porte du Midi sur le Rhône, est une ville dynamique qui bénéficie d'un cadre de vie agréable entre Lyon et la Provence. La gare TGV Valence Rhône-Alpes Sud connecte la ville à toute la France, attirant des couples en reconversion géographique.</p>
-  <p>Les praticiens exercent dans le centre-ville (quartier de la Cathédrale, boulevards), le secteur de la gare et les communes comme Bourg-lès-Valence ou Guilherand-Granges. Le Centre Hospitalier de Valence offre des consultations spécialisées.</p>
-  <p>L'UDAF 26 gère les services de <a href="/mediateur-familial/">médiation familiale</a> dans la Drôme. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> valentinois proposent un accompagnement de qualité à des tarifs modérés.</p>
+  <h2>Professionnels du couple à <span class="ann-text-gradient">Valence</span></h2>
+  <p>Valence, « porte du Midi » située au confluent du Rhône et de l'Isère, est une ville qui marque la transition entre la France du Nord et la Provence. Préfecture de la Drôme, elle bénéficie d'un ensoleillement généreux et d'un cadre de vie attractif, à mi-chemin entre Lyon et Marseille. Les couples valentinois sont souvent des familles installées, des actifs qui travaillent dans la vallée du Rhône ou des couples en reconversion venus chercher un rythme de vie plus apaisé.</p>
+  <p>Les praticiens exercent dans le centre-ville (quartier de la cathédrale Saint-Apollinaire, boulevard Bancel, place de la Pierre) et dans les quartiers de Fontlozier, du Plan et de Châteauvert. Les communes voisines de Bourg-lès-Valence, Portes-lès-Valence et Guilherand-Granges accueillent aussi des cabinets.</p>
+  <p>Le centre hospitalier de Valence dispose d'une consultation de <a href="/sexologue/">sexologie</a>. La Drôme bénéficie d'un réseau de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 26, avec des permanences à Valence, Montélimar et Romans-sur-Isère. Le CPEF de la Drôme propose des consultations gratuites de conseil familial.</p>
+  <p>La position géographique de Valence, sur l'axe rhodanien, facilite l'accès à Lyon (1h en TER) et à ses ressources universitaires et hospitalières en <a href="/therapeute-de-couple/">thérapie de couple</a>. Les praticiens valentinois bénéficient de cette proximité pour leur formation continue et leurs échanges professionnels.</p>
 </div>
 `
   },
   {
-    id: 'chambery', name: 'Chambéry', department: '73', region: 'Auvergne-Rhône-Alpes', lat: 45.5646, lng: 5.9178, population: 60466,
+    id: 'chambery', name: 'Chambéry', department: '73', region: 'Auvergne-Rhône-Alpes', lat: 45.5646, lng: 5.9178, population: 59490,
     seoText: '',
     seoHtml: `
 <div class="ann-seo-block">
-  <h2>Professionnels du couple à <span class="ann-text-gradient">Chambéry</span></h2>
-  <p>Chambéry, ancienne capitale des États de Savoie, est une ville universitaire nichée entre les massifs alpins. La proximité avec la Suisse et l'Italie en fait un carrefour international, et certains praticiens accompagnent des couples transfrontaliers.</p>
-  <p>Les cabinets se trouvent dans le centre historique (quartier du Château, place Saint-Léger), le secteur de la gare et les communes comme La Ravoire, Cognin ou Jacob-Bellecombette. Le Centre Hospitalier Métropole Savoie propose des consultations spécialisées.</p>
-  <p>L'UDAF 73 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> en Savoie. Les <a href="/conseiller-conjugal/">conseillers conjugaux</a> chambériens offrent un accompagnement de proximité dans un cadre alpin apaisant.</p>
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Chambéry</span></h2>
+  <p>Chambéry, ancienne capitale du duché de Savoie, est une ville alpine à taille humaine nichée entre le massif des Bauges et la Chartreuse. La qualité de vie y est remarquable : montagne, lac du Bourget à quelques minutes, accès rapide aux stations de ski. Mais cette douceur apparente cache les mêmes tensions conjugales qu'ailleurs, parfois amplifiées par l'isolement hivernal en montagne ou la pression d'un mode de vie très orienté plein air où le couple peut perdre ses repères.</p>
+  <p>Les praticiens chambériens exercent dans le centre historique (quartier du château, place Saint-Léger, rue de Boigne), dans le quartier de la gare et dans les communes voisines de La Ravoire, Cognin et La Motte-Servolex. Le lac du Bourget (Aix-les-Bains) et la combe de Savoie accueillent aussi des cabinets.</p>
+  <p>Le centre hospitalier Métropole Savoie dispose de consultations spécialisées. L'Université Savoie Mont Blanc, présente à Chambéry et Annecy, forme des psychologues cliniciens. La Savoie bénéficie d'un service de <a href="/mediateur-familial/">médiation familiale</a> coordonné par l'UDAF 73, avec des permanences à Chambéry, Albertville et Saint-Jean-de-Maurienne.</p>
+  <p>La proximité de Lyon (1h en TER) et de Grenoble (45 minutes) permet aux couples chambériens d'accéder facilement aux offres de ces métropoles en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>. Les praticiens locaux développent aussi la visioconférence pour les couples des vallées environnantes.</p>
 </div>
 `
   },
@@ -1146,9 +1158,10 @@ export const CITIES = [
     seoHtml: `
 <div class="ann-seo-block">
   <h2>Accompagnement de couple à <span class="ann-text-gradient">Ajaccio</span></h2>
-  <p>Ajaccio, préfecture de la Corse-du-Sud, est une ville insulaire où la famille occupe une place centrale dans la culture. Les praticiens ajacciens connaissent les spécificités des familles corses — le poids des traditions, les relations intergénérationnelles étroites, les héritages familiaux complexes.</p>
-  <p>Les cabinets se trouvent dans le centre-ville (cours Napoléon, quartier des étrangers), les Sanguinaires et les quartiers résidentiels. Le Centre Hospitalier d'Ajaccio dispose de consultations spécialisées. L'insularité crée des défis d'accès, compensés par le développement de la téléconsultation.</p>
-  <p>L'UDAF 2A gère les services de <a href="/mediateur-familial/">médiation familiale</a> en Corse-du-Sud. Pour les <a href="/therapeute-de-couple/">thérapeutes de couple</a>, Ajaccio offre un nombre limité mais qualifié de praticiens, complété par des consultations en visio avec le continent.</p>
+  <p>Ajaccio, cité impériale et préfecture de la Corse-du-Sud, est une ville méditerranéenne où les liens familiaux occupent une place centrale. En Corse, la famille élargie est souvent très impliquée dans la vie du couple — ce qui peut être un soutien précieux mais aussi une source de tension, notamment pour les couples dont l'un des partenaires n'est pas insulaire. Les praticiens ajacciens connaissent ces dynamiques familiales spécifiques et savent les prendre en compte dans leur accompagnement.</p>
+  <p>Les cabinets se concentrent dans le centre-ville (quartier du cours Napoléon, place de Gaulle, rue Fesch) et dans les quartiers résidentiels des Sanguinaires, de Mezzavia et du Vazzio. L'offre est plus restreinte que sur le continent, mais elle couvre les principales spécialités.</p>
+  <p>Le centre hospitalier d'Ajaccio dispose de consultations spécialisées en psychologie. L'UDAF de Corse-du-Sud coordonne un service de <a href="/mediateur-familial/">médiation familiale</a> avec des permanences à Ajaccio et dans les principales communes du département. L'insularité rend les déplacements vers le continent coûteux et compliqués, ce qui renforce l'importance de l'offre locale.</p>
+  <p>La visioconférence constitue une avancée majeure pour les couples corses : elle permet de consulter des <a href="/therapeute-de-couple/">thérapeutes de couple</a> ou des <a href="/sexologue/">sexologues</a> basés sur le continent sans avoir à prendre l'avion ou le ferry. Plusieurs praticiens ajacciens proposent aussi des consultations en ligne pour les couples des villages de l'intérieur de l'île.</p>
 </div>
 `
   },
