@@ -571,22 +571,28 @@
       var SUPA_URL = '<%= supabaseUrl %>';
       var SUPA_KEY = '<%= supabaseKey %>';
 
-      fetch(SUPA_URL + '/rest/v1/leads', {
+      fetch(SUPA_URL + '/functions/v1/ebook-verify?action=submit', {
         method: 'POST',
         headers: {
-          'apikey': SUPA_KEY,
           'Authorization': 'Bearer ' + SUPA_KEY,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ first_name: firstName, email: email, subject: 'Ebook Astro' })
+        body: JSON.stringify({ first_name: firstName, email: email })
       })
       .then(function(res) {
         if (!res.ok) throw new Error('Erreur ' + res.status);
-        statusEl.textContent = 'Merci ! Vérifiez votre boîte mail pour recevoir votre e-book.';
-        statusEl.style.color = 'hsl(142 71% 45%)';
+        return res.json();
+      })
+      .then(function(data) {
+        if (data.already_verified) {
+          statusEl.textContent = 'Cet e-mail a déjà été vérifié. L\'e-book vous a déjà été envoyé. Vérifiez votre boîte mail !';
+          statusEl.style.color = 'hsl(210 80% 55%)';
+        } else {
+          statusEl.textContent = 'Un e-mail de vérification vient d\'être envoyé ! Cliquez sur le lien dans le mail pour recevoir votre e-book.';
+          statusEl.style.color = 'hsl(142 71% 45%)';
+        }
         statusEl.classList.remove('hidden');
-        submitBtn.querySelector('span').textContent = 'E-BOOK ENVOYÉ !';
+        submitBtn.querySelector('span').textContent = 'VÉRIFIEZ VOS E-MAILS !';
         ebookForm.querySelector('#ebook-firstname').disabled = true;
         ebookForm.querySelector('#ebook-email').disabled = true;
       })
