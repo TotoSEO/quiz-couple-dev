@@ -246,6 +246,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/qui-sommes-nous/"/>
   </url>
   <url>
+    <loc>https://quiz-couple.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/confirmation-ebook/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/confirmation-ebook/"/>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/es/blog/fases-de-la-ruptura-en-el-hombre/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/les-phases-de-la-rupture-chez-l-homme/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/breakup-stages-for-men/"/>

@@ -126,11 +126,13 @@ async function generatePage(routeKey, lang) {
   const t = createT(lang);
   const tgd = createTgd(lang);
   const translations = loadTranslations(lang);
-  const noindexRoutes = ['legalMentions', 'privacy', 'admin'];
+  const pagePath = getLocalizedPath(routeKey, lang);
+  if (pagePath === null) return; // Route not available in this language
+
+  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm'];
   const isNoindex = noindexRoutes.includes(routeKey);
   const alternates = isNoindex ? [] : getRouteAlternates(routeKey);
   const canonical = getLocalizedUrl(routeKey, lang);
-  const pagePath = getLocalizedPath(routeKey, lang);
 
   // Get page title and description
   let title, description;

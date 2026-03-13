@@ -1,0 +1,64 @@
+<section class="py-20 min-h-[60vh] flex items-center">
+  <div class="container mx-auto px-4 max-w-lg text-center">
+    <div id="ebook-confirm-loading">
+      <div class="text-4xl mb-4" role="status" aria-label="Chargement">&#9203;</div>
+      <h1 class="text-2xl font-bold mb-2">Vérification en cours...</h1>
+      <p class="text-muted-foreground">Merci de patienter quelques secondes.</p>
+    </div>
+    <div id="ebook-confirm-result" class="hidden">
+      <div id="ebook-confirm-icon" class="text-4xl mb-4"></div>
+      <h1 id="ebook-confirm-title" class="text-2xl font-bold mb-2"></h1>
+      <p id="ebook-confirm-message" class="text-muted-foreground mb-8"></p>
+      <a href="/" class="btn btn-cta btn-gradient" style="padding:0.875rem 2rem;font-size:1rem;">Retourner sur Quiz Couple</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var token = params.get('token');
+  var loading = document.getElementById('ebook-confirm-loading');
+  var result = document.getElementById('ebook-confirm-result');
+  var icon = document.getElementById('ebook-confirm-icon');
+  var title = document.getElementById('ebook-confirm-title');
+  var message = document.getElementById('ebook-confirm-message');
+
+  function showResult(i, t, m) {
+    icon.textContent = i;
+    title.textContent = t;
+    message.textContent = m;
+    loading.classList.add('hidden');
+    result.classList.remove('hidden');
+  }
+
+  if (!token) {
+    showResult('\u274C', 'Lien invalide', 'Ce lien de confirmation est invalide ou incomplet.');
+    return;
+  }
+
+  var SUPA_URL = '<%= supabaseUrl %>';
+  var SUPA_KEY = '<%= supabaseKey %>';
+
+  fetch(SUPA_URL + '/functions/v1/ebook-verify?action=confirm&token=' + encodeURIComponent(token), {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer ' + SUPA_KEY,
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(data) {
+    if (data.error) {
+      showResult('\u274C', 'Oups...', data.error);
+    } else if (data.already_verified) {
+      showResult('\u2139\uFE0F', 'D\u00E9j\u00E0 confirm\u00E9 !', data.first_name + ', votre e-mail a d\u00E9j\u00E0 \u00E9t\u00E9 confirm\u00E9. L\'E-Book a \u00E9t\u00E9 envoy\u00E9 pr\u00E9c\u00E9demment. Si vous ne le retrouvez pas, v\u00E9rifiez votre dossier spam.');
+    } else {
+      showResult('\u2705', 'E-mail confirm\u00E9 !', 'Merci ' + data.first_name + ' ! Votre E-Book a \u00E9t\u00E9 envoy\u00E9 \u00E0 votre adresse e-mail. V\u00E9rifiez votre bo\u00EEte de r\u00E9ception (et le dossier spam, au cas o\u00F9).');
+    }
+  })
+  .catch(function() {
+    showResult('\u274C', 'Erreur', 'Une erreur est survenue. Veuillez r\u00E9essayer plus tard.');
+  });
+})();
+</script>
