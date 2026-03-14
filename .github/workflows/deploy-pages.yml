@@ -36,12 +36,19 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
-      - name: Deploy to gh-pages branch
+      - name: Deploy to gh-pages branch (quiz-couple.com)
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./static-site/dist
           cname: quiz-couple.com
+
+      - name: Deploy annuaire to Cloudflare Pages (annuaire.quiz-couple.com)
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ./static-site/dist/annuaire --project-name=annuaire-quiz-couple
 
       - name: Submit URLs to IndexNow
         run: cd static-site && npm run indexnow
