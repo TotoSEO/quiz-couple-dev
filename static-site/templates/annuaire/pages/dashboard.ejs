@@ -120,6 +120,7 @@
       <!-- Nav tabs -->
       <div style="display: flex; gap: 0; margin-bottom: 2rem; border: 1px solid hsl(var(--ann-border)); border-radius: var(--ann-radius); overflow: hidden;">
         <button class="ann-auth-tab ann-auth-tab-active" data-dash-tab="profile" type="button">Ma fiche</button>
+        <button class="ann-auth-tab" data-dash-tab="billing" type="button">Facturation</button>
         <button class="ann-auth-tab" data-dash-tab="stats" type="button">Statistiques</button>
       </div>
 
@@ -314,6 +315,95 @@
             </button>
           </div>
         </form>
+      </div>
+
+      <!-- Billing tab -->
+      <div id="dash-tab-billing" style="display: none;">
+        <form id="dash-billing-form" class="ann-profile-card" style="padding: 2rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.5rem;height:1.5rem;color:hsl(var(--ann-primary))"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            <h2 style="font-size: 1.125rem;">Informations de facturation</h2>
+          </div>
+          <p class="ann-text-muted" style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.5rem;">
+            Ces informations sont obligatoires pour souscrire à un abonnement payant. Elles figureront sur vos factures.
+          </p>
+
+          <div class="ann-divider" style="margin-bottom: 1.5rem;"></div>
+
+          <!-- Company name -->
+          <div class="ann-form-group">
+            <label class="ann-form-label" for="bill-company">Nom de l'entreprise ou de la société <span style="color:hsl(0 70% 50%)">*</span></label>
+            <input class="ann-form-input" type="text" id="bill-company" maxlength="200" placeholder="Ex: Cabinet Dupont EIRL, SAS Harmonie Couple...">
+          </div>
+
+          <!-- SIRET -->
+          <div class="ann-form-group">
+            <label class="ann-form-label" for="bill-siret">Numéro SIRET <span style="color:hsl(0 70% 50%)">*</span></label>
+            <input class="ann-form-input" type="text" id="bill-siret" maxlength="14" pattern="\d{14}" placeholder="12345678901234" inputmode="numeric" style="font-family: monospace;">
+            <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.25rem;">14 chiffres — disponible sur <a href="https://www.societe.com" target="_blank" rel="noopener" style="color:hsl(var(--ann-primary))">societe.com</a> ou votre Kbis.</p>
+            <span class="ann-field-error" id="bill-siret-error" style="display:none;"></span>
+          </div>
+
+          <!-- TVA -->
+          <div class="ann-form-group">
+            <label class="ann-form-label" for="bill-tva">N° TVA intracommunautaire <span style="color:hsl(0 70% 50%)">*</span></label>
+            <input class="ann-form-input" type="text" id="bill-tva" maxlength="13" placeholder="FR12345678901" style="font-family: monospace; text-transform: uppercase;">
+            <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.25rem;">Format : FR + 11 chiffres. Disponible sur votre attestation fiscale.</p>
+            <span class="ann-field-error" id="bill-tva-error" style="display:none;"></span>
+          </div>
+
+          <!-- Billing email -->
+          <div class="ann-form-group">
+            <label class="ann-form-label" for="bill-email">Email de facturation <span class="ann-text-muted" style="font-weight:400;">(optionnel)</span></label>
+            <input class="ann-form-input" type="email" id="bill-email" maxlength="150" placeholder="comptabilite@votre-cabinet.fr">
+            <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.25rem;">Si vide, les factures seront envoyées à l'email de votre compte.</p>
+            <span class="ann-field-error" id="bill-email-error" style="display:none;"></span>
+          </div>
+
+          <!-- Billing address -->
+          <div class="ann-form-group">
+            <label class="ann-form-label" for="bill-address">Adresse complète de facturation <span style="color:hsl(0 70% 50%)">*</span></label>
+            <textarea class="ann-form-input" id="bill-address" rows="3" maxlength="500" placeholder="45 Rue de Rivoli&#10;75001 Paris&#10;France" style="resize: vertical; min-height: 5rem;"></textarea>
+          </div>
+
+          <!-- Billing status indicator -->
+          <div id="bill-status" style="display:none; margin-bottom: 1rem; padding: 0.875rem 1rem; border-radius: var(--ann-radius); font-size: 0.875rem; display: flex; align-items: center; gap: 0.5rem;">
+          </div>
+
+          <div id="bill-error" class="ann-form-error" style="display:none;"></div>
+          <div id="bill-success" class="ann-form-success" style="display:none;"></div>
+
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <button type="submit" class="ann-btn ann-btn-primary" id="bill-save-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              Enregistrer
+            </button>
+            <span id="bill-saved-indicator" class="ann-text-muted" style="font-size: 0.8125rem; display: none;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="hsl(var(--ann-success))" stroke-width="2" style="width:0.875rem;height:0.875rem;vertical-align:middle;margin-right:0.25rem"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Enregistré
+            </span>
+          </div>
+        </form>
+
+        <!-- Current plan section -->
+        <div class="ann-profile-card" style="padding: 1.5rem; margin-top: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem;color:hsl(var(--ann-primary))"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <h2 style="font-size: 1rem;">Mon abonnement</h2>
+          </div>
+          <div id="bill-plan-info">
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+              <span id="bill-plan-badge" class="ann-badge" style="font-size: 0.8125rem;">Gratuit</span>
+              <span id="bill-plan-expiry" class="ann-text-muted" style="font-size: 0.8125rem;"></span>
+            </div>
+            <div style="margin-top: 1rem;">
+              <a href="/tarifs/" class="ann-btn ann-btn-outline ann-btn-sm" id="bill-upgrade-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                Changer de formule
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Stats tab -->
