@@ -277,6 +277,51 @@ async function generateTarifsPage() {
   console.log('[annuaire] Generated: /tarifs/');
 }
 
+async function generateMentionsLegalesPage() {
+  const data = {
+    ...getSharedData(),
+    metaTitle: 'Mentions légales — Annuaire Quiz Couple',
+    metaDescription: 'Mentions légales du site annuaire.quiz-couple.com : éditeur, hébergeur, propriété intellectuelle, responsabilité.',
+    canonical: getAnnuaireUrl('/mentions-legales/'),
+    currentPage: 'mentions-legales',
+    noindex: true,
+  };
+
+  const html = renderTemplate('mentions-legales', data);
+  await writePage(path.join(DIST_DIR, 'mentions-legales/index.html'), html);
+  console.log('[annuaire] Generated: /mentions-legales/');
+}
+
+async function generateConfidentialitePage() {
+  const data = {
+    ...getSharedData(),
+    metaTitle: 'Politique de confidentialité — Annuaire Quiz Couple',
+    metaDescription: 'Politique de confidentialité et protection des données personnelles du site annuaire.quiz-couple.com, conforme au RGPD.',
+    canonical: getAnnuaireUrl('/confidentialite/'),
+    currentPage: 'confidentialite',
+    noindex: true,
+  };
+
+  const html = renderTemplate('confidentialite', data);
+  await writePage(path.join(DIST_DIR, 'confidentialite/index.html'), html);
+  console.log('[annuaire] Generated: /confidentialite/');
+}
+
+async function generateCgvPage() {
+  const data = {
+    ...getSharedData(),
+    metaTitle: 'Conditions Générales de Vente — Annuaire Quiz Couple',
+    metaDescription: 'Conditions générales de vente applicables aux abonnements professionnels sur annuaire.quiz-couple.com.',
+    canonical: getAnnuaireUrl('/cgv/'),
+    currentPage: 'cgv',
+    noindex: true,
+  };
+
+  const html = renderTemplate('cgv', data);
+  await writePage(path.join(DIST_DIR, 'cgv/index.html'), html);
+  console.log('[annuaire] Generated: /cgv/');
+}
+
 // ── Dynamic page generators ──────────────────────────────────────────────
 
 async function generateSpecialtyPages() {
@@ -585,6 +630,9 @@ async function main() {
   await generateTarifsPage();
   await generateDashboardPage();
   await generateAdminPage();
+  await generateMentionsLegalesPage();
+  await generateConfidentialitePage();
+  await generateCgvPage();
   await generate404Page();
   await generateSpecialtyPages();
   await generateCityPages();

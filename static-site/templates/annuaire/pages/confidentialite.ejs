@@ -1,0 +1,241 @@
+<%
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Politique de confidentialité — Annuaire Quiz Couple",
+    "url": "https://annuaire.quiz-couple.com/confidentialite/",
+    "description": "Politique de confidentialité et de protection des données personnelles du site annuaire.quiz-couple.com, conformément au RGPD.",
+    "isPartOf": { "@id": "https://annuaire.quiz-couple.com/#website" }
+  };
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<section class="ann-section" style="padding-top: 3rem;">
+  <div class="ann-container" style="max-width: 48rem;">
+    <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Politique de confidentialité</h1>
+    <p class="ann-text-muted" style="margin-bottom: 2rem;">Dernière mise à jour : 14 mars 2026</p>
+
+    <div class="ann-profile-card" style="padding: 2rem;">
+
+      <!-- Introduction -->
+      <p>La présente politique de confidentialité décrit la manière dont [NOM_SOCIÉTÉ] (ci-après « nous », « notre ») collecte, utilise et protège vos données personnelles lorsque vous utilisez le site <strong>annuaire.quiz-couple.com</strong> (ci-après « le Site »).</p>
+      <p style="margin-top: 0.75rem;">Nous nous engageons à respecter le Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679), la loi Informatique et Libertés du 6 janvier 1978 modifiée, ainsi que les recommandations de la Commission Nationale de l'Informatique et des Libertés (CNIL).</p>
+
+      <!-- 1. Responsable du traitement -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">1. Responsable du traitement</h2>
+      <p>Le responsable du traitement des données personnelles est :</p>
+      <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8;">
+        <li><strong>Raison sociale :</strong> [NOM_SOCIÉTÉ]</li>
+        <li><strong>Adresse :</strong> [ADRESSE_COMPLÈTE]</li>
+        <li><strong>E-mail :</strong> <a href="mailto:contact@quiz-couple.com">contact@quiz-couple.com</a></li>
+        <li><strong>Représentant légal :</strong> [PRÉNOM NOM]</li>
+      </ul>
+
+      <!-- 2. Données collectées -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">2. Données personnelles collectées</h2>
+      <p>Nous collectons les catégories de données suivantes selon votre utilisation du Site :</p>
+
+      <h3 style="font-size: 1.05rem; margin-top: 1.25rem; margin-bottom: 0.5rem;">a) Visiteurs du Site</h3>
+      <ul style="padding-left: 1.5rem; line-height: 1.8;">
+        <li>Adresse IP (anonymisée après collecte)</li>
+        <li>Données de navigation : pages visitées, durée de visite, référent</li>
+        <li>Agent utilisateur (type de navigateur, système d'exploitation)</li>
+      </ul>
+
+      <h3 style="font-size: 1.05rem; margin-top: 1.25rem; margin-bottom: 0.5rem;">b) Professionnels inscrits</h3>
+      <ul style="padding-left: 1.5rem; line-height: 1.8;">
+        <li><strong>Données d'identification :</strong> nom, prénom, adresse e-mail, numéro de téléphone</li>
+        <li><strong>Données professionnelles :</strong> spécialité, ville d'exercice, adresse du cabinet, description, méthodes pratiquées, langues parlées, tarifs, années d'expérience</li>
+        <li><strong>Photo de profil</strong></li>
+        <li><strong>Données de facturation :</strong> nom de l'entreprise, SIRET, numéro de TVA intracommunautaire, adresse de facturation, e-mail de facturation</li>
+        <li><strong>Données de paiement :</strong> traitées exclusivement par notre prestataire Stripe (nous ne stockons ni numéros de carte, ni données bancaires)</li>
+        <li><strong>Données techniques :</strong> identifiant utilisateur, dates de création et modification du profil, plan d'abonnement</li>
+      </ul>
+
+      <h3 style="font-size: 1.05rem; margin-top: 1.25rem; margin-bottom: 0.5rem;">c) Utilisateurs contactant un professionnel</h3>
+      <ul style="padding-left: 1.5rem; line-height: 1.8;">
+        <li>Type de contact effectué (appel, e-mail, site web, rendez-vous) — sans contenu du message</li>
+        <li>Adresse IP (pour prévenir les abus)</li>
+      </ul>
+
+      <!-- 3. Finalités et bases légales -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">3. Finalités et bases légales des traitements</h2>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 1rem 0;">
+        <thead>
+          <tr style="border-bottom: 2px solid hsl(var(--ann-border));">
+            <th style="text-align: left; padding: 0.75rem 0.5rem;">Finalité</th>
+            <th style="text-align: left; padding: 0.75rem 0.5rem;">Base légale (art. 6 RGPD)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Création et gestion du compte professionnel</td>
+            <td style="padding: 0.75rem 0.5rem;">Exécution du contrat (art. 6.1.b)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Publication et affichage de la fiche sur l'annuaire</td>
+            <td style="padding: 0.75rem 0.5rem;">Exécution du contrat (art. 6.1.b)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Gestion des abonnements et facturation</td>
+            <td style="padding: 0.75rem 0.5rem;">Exécution du contrat (art. 6.1.b)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Émission de factures</td>
+            <td style="padding: 0.75rem 0.5rem;">Obligation légale (art. 6.1.c)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Statistiques de visites (pour les abonnés Boost)</td>
+            <td style="padding: 0.75rem 0.5rem;">Exécution du contrat (art. 6.1.b)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Envoi d'e-mails transactionnels (validation, factures)</td>
+            <td style="padding: 0.75rem 0.5rem;">Exécution du contrat (art. 6.1.b)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Envoi d'e-mails promotionnels (offres d'abonnement)</td>
+            <td style="padding: 0.75rem 0.5rem;">Intérêt légitime (art. 6.1.f)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Prévention des abus et sécurité du Site</td>
+            <td style="padding: 0.75rem 0.5rem;">Intérêt légitime (art. 6.1.f)</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem 0.5rem;">Respect des obligations légales (conservation des factures)</td>
+            <td style="padding: 0.75rem 0.5rem;">Obligation légale (art. 6.1.c)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 4. Caractère obligatoire ou facultatif -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">4. Caractère obligatoire ou facultatif des données</h2>
+      <p>Lors de l'inscription, les champs marqués comme obligatoires (nom, prénom, e-mail, téléphone, spécialité, ville, adresse) sont nécessaires à la création et à la publication de votre fiche professionnelle. Sans ces informations, nous ne pouvons pas fournir le service.</p>
+      <p style="margin-top: 0.75rem;">Les autres données (photo, description, méthodes, langues, tarifs, disponibilités, lien Doctolib, données de facturation) sont facultatives et permettent d'enrichir votre fiche ou de bénéficier de services complémentaires.</p>
+
+      <!-- 5. Destinataires -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">5. Destinataires des données</h2>
+      <p>Vos données personnelles sont destinées à :</p>
+      <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8;">
+        <li><strong>[NOM_SOCIÉTÉ]</strong> — pour la gestion du Site et du service</li>
+        <li><strong>Supabase Inc.</strong> (hébergement et base de données) — Région UE (Francfort)</li>
+        <li><strong>Stripe Inc.</strong> (paiement en ligne) — certifié conforme au RGPD</li>
+        <li><strong>Resend Inc.</strong> (envoi d'e-mails transactionnels)</li>
+        <li><strong>Vercel Inc.</strong> (hébergement du site web)</li>
+      </ul>
+      <p>Nous ne vendons, ne louons et ne partageons jamais vos données personnelles à des tiers à des fins commerciales ou publicitaires.</p>
+
+      <!-- 6. Transferts hors UE -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">6. Transferts de données hors de l'Union européenne</h2>
+      <p>Certains de nos sous-traitants (Stripe, Resend, Vercel) sont situés aux États-Unis. Ces transferts sont encadrés par :</p>
+      <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8;">
+        <li>Le cadre de protection des données UE-États-Unis (<em>EU-US Data Privacy Framework</em>), auquel ces prestataires sont certifiés</li>
+        <li>Des clauses contractuelles types (CCT) approuvées par la Commission européenne</li>
+      </ul>
+
+      <!-- 7. Durée de conservation -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">7. Durée de conservation des données</h2>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 1rem 0;">
+        <thead>
+          <tr style="border-bottom: 2px solid hsl(var(--ann-border));">
+            <th style="text-align: left; padding: 0.75rem 0.5rem;">Type de données</th>
+            <th style="text-align: left; padding: 0.75rem 0.5rem;">Durée de conservation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Données du profil professionnel</td>
+            <td style="padding: 0.75rem 0.5rem;">Durée du compte + 3 ans après suppression</td>
+          </tr>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Données de facturation et factures</td>
+            <td style="padding: 0.75rem 0.5rem;">10 ans (obligation légale comptable)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Données de paiement (chez Stripe)</td>
+            <td style="padding: 0.75rem 0.5rem;">Selon la politique de Stripe</td>
+          </tr>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Statistiques de visites (vues, clics)</td>
+            <td style="padding: 0.75rem 0.5rem;">90 jours (purge automatique quotidienne)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;">Logs de connexion</td>
+            <td style="padding: 0.75rem 0.5rem;">12 mois (obligation légale LCEN)</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem 0.5rem;">Cookies d'authentification</td>
+            <td style="padding: 0.75rem 0.5rem;">Durée de la session</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 8. Vos droits -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">8. Vos droits</h2>
+      <p>Conformément au RGPD et à la loi Informatique et Libertés, vous disposez des droits suivants :</p>
+      <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8;">
+        <li><strong>Droit d'accès</strong> (art. 15 RGPD) : obtenir la confirmation que vos données sont traitées et en recevoir une copie</li>
+        <li><strong>Droit de rectification</strong> (art. 16 RGPD) : corriger des données inexactes ou compléter des données incomplètes</li>
+        <li><strong>Droit à l'effacement</strong> (art. 17 RGPD) : demander la suppression de vos données, sous réserve des obligations légales de conservation</li>
+        <li><strong>Droit à la limitation du traitement</strong> (art. 18 RGPD) : restreindre temporairement le traitement de vos données</li>
+        <li><strong>Droit à la portabilité</strong> (art. 20 RGPD) : recevoir vos données dans un format structuré et couramment utilisé</li>
+        <li><strong>Droit d'opposition</strong> (art. 21 RGPD) : vous opposer au traitement de vos données fondé sur l'intérêt légitime, y compris la prospection commerciale</li>
+        <li><strong>Droit de définir des directives post-mortem</strong> (loi Informatique et Libertés) : définir le sort de vos données après votre décès</li>
+      </ul>
+      <p>Pour exercer ces droits, contactez-nous par e-mail à <a href="mailto:contact@quiz-couple.com">contact@quiz-couple.com</a> en joignant une copie d'un justificatif d'identité. Nous nous engageons à vous répondre dans un délai d'un mois.</p>
+
+      <!-- 9. Réclamation CNIL -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">9. Droit de réclamation auprès de la CNIL</h2>
+      <p>Si vous estimez que le traitement de vos données personnelles constitue une violation du RGPD, vous avez le droit d'introduire une réclamation auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL) :</p>
+      <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8;">
+        <li><strong>CNIL</strong> — 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07</li>
+        <li><strong>Site web :</strong> <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a></li>
+        <li><strong>Téléphone :</strong> 01 53 73 22 22</li>
+      </ul>
+
+      <!-- 10. Cookies -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">10. Cookies</h2>
+      <p>Le Site utilise uniquement des <strong>cookies strictement nécessaires</strong> au fonctionnement du service :</p>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 1rem 0;">
+        <thead>
+          <tr style="border-bottom: 2px solid hsl(var(--ann-border));">
+            <th style="text-align: left; padding: 0.75rem 0.5rem;">Cookie</th>
+            <th style="text-align: left; padding: 0.75rem 0.5rem;">Finalité</th>
+            <th style="text-align: left; padding: 0.75rem 0.5rem;">Durée</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid hsl(var(--ann-border));">
+            <td style="padding: 0.75rem 0.5rem;"><code>sb-*-auth-token</code></td>
+            <td style="padding: 0.75rem 0.5rem;">Authentification de session (Supabase)</td>
+            <td style="padding: 0.75rem 0.5rem;">Session</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Aucun cookie publicitaire, analytique ou de traçage n'est déposé. Conformément aux recommandations de la CNIL, les cookies strictement nécessaires ne requièrent pas de consentement préalable.</p>
+
+      <!-- 11. Sécurité -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">11. Sécurité des données</h2>
+      <p>Nous mettons en œuvre les mesures techniques et organisationnelles appropriées pour garantir la sécurité de vos données :</p>
+      <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8;">
+        <li>Chiffrement des données en transit (HTTPS/TLS)</li>
+        <li>Chiffrement des données au repos (base de données)</li>
+        <li>Contrôle d'accès par rôles (Row Level Security)</li>
+        <li>Authentification sécurisée (JWT, tokens d'accès à durée limitée)</li>
+        <li>Paiements gérés exclusivement par Stripe (certifié PCI-DSS Niveau 1)</li>
+      </ul>
+
+      <!-- 12. Modification -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">12. Modification de la politique</h2>
+      <p>Nous nous réservons le droit de modifier la présente politique de confidentialité à tout moment. En cas de modification substantielle, nous en informerons les utilisateurs inscrits par e-mail. La date de dernière mise à jour est indiquée en haut de cette page.</p>
+
+      <!-- 13. Contact -->
+      <h2 style="font-size: 1.25rem; color: var(--ann-primary); margin-top: 2rem; margin-bottom: 1rem;">13. Contact</h2>
+      <p>Pour toute question relative à la protection de vos données personnelles :</p>
+      <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8;">
+        <li><strong>E-mail :</strong> <a href="mailto:contact@quiz-couple.com">contact@quiz-couple.com</a></li>
+        <li><strong>Formulaire :</strong> <a href="https://quiz-couple.com/contact/">quiz-couple.com/contact</a></li>
+      </ul>
+
+    </div>
+  </div>
+</section>
