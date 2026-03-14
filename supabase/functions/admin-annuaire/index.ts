@@ -141,29 +141,60 @@ serve(async (req) => {
               to: [data.email],
               subject: 'Votre fiche est en ligne !',
               html: `
-                <div style="font-family:Inter,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:2rem;">
-                  <h1 style="color:#d6336c;font-size:1.5rem;">Bonne nouvelle, ${escapeHtml(data.first_name || '')} !</h1>
-                  <p style="font-size:1rem;line-height:1.6;color:#333;">
-                    Votre fiche professionnelle a été validée par notre équipe et est désormais <strong>visible dans l'annuaire</strong>.
-                  </p>
-                  <p style="font-size:1rem;line-height:1.6;color:#333;">
-                    Les patients peuvent maintenant vous trouver et vous contacter directement.
-                  </p>
-                  <div style="margin:2rem 0;">
-                    <a href="https://annuaire.quiz-couple.com/${data.specialty}/${data.city}/${data.slug}/"
-                       style="display:inline-block;padding:0.75rem 1.5rem;background:#d6336c;color:white;text-decoration:none;border-radius:0.5rem;font-weight:600;">
-                      Voir ma fiche en ligne
-                    </a>
+                <!DOCTYPE html>
+                <html lang="fr">
+                <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+                <body style="margin:0;padding:0;background:#f8f7fc;font-family:Inter,system-ui,-apple-system,sans-serif;">
+                  <div style="max-width:600px;margin:0 auto;padding:2rem 1rem;">
+                    <!-- Header -->
+                    <div style="text-align:center;margin-bottom:2rem;">
+                      <img src="https://annuaire.quiz-couple.com/assets/logo-annuaire.png" alt="Quiz Couple Annuaire" width="40" height="42" style="display:inline-block;">
+                      <span style="font-size:1.25rem;font-weight:700;vertical-align:middle;margin-left:0.5rem;color:#1a1625;">Annuaire</span>
+                    </div>
+
+                    <!-- Main content -->
+                    <div style="background:white;border-radius:1rem;padding:2rem;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+                      <h1 style="color:#d6336c;font-size:1.5rem;margin:0 0 1rem;">Bonne nouvelle, ${escapeHtml(data.first_name || '')} !</h1>
+                      <p style="font-size:1rem;line-height:1.6;color:#333;margin:0 0 1rem;">
+                        Votre fiche professionnelle a été validée par notre équipe et est désormais <strong>visible dans l'annuaire</strong>.
+                      </p>
+                      <p style="font-size:1rem;line-height:1.6;color:#333;margin:0 0 1.5rem;">
+                        Les patients peuvent maintenant vous trouver et vous contacter directement.
+                      </p>
+                      <div style="text-align:center;margin:1.5rem 0;">
+                        <a href="https://annuaire.quiz-couple.com/${data.specialty}/${data.city}/${data.slug}/"
+                           style="display:inline-block;padding:0.875rem 2rem;background:#d6336c;color:white;text-decoration:none;border-radius:0.5rem;font-weight:600;font-size:1rem;">
+                          Voir ma fiche en ligne
+                        </a>
+                      </div>
+                      <p style="font-size:0.875rem;color:#666;margin:0;">
+                        Vous pouvez modifier vos informations à tout moment depuis votre
+                        <a href="https://annuaire.quiz-couple.com/dashboard/" style="color:#d6336c;">espace professionnel</a>.
+                      </p>
+                    </div>
+
+                    <!-- Promo section -->
+                    <div style="background:linear-gradient(135deg,#d6336c 0%,#a61e4d 100%);border-radius:1rem;padding:2rem;margin-top:1.5rem;text-align:center;color:white;">
+                      <div style="font-size:1.5rem;margin-bottom:0.5rem;">&#9889;</div>
+                      <h2 style="font-size:1.125rem;margin:0 0 0.75rem;font-weight:700;">Améliorez la visibilité de votre fiche</h2>
+                      <p style="font-size:0.9375rem;line-height:1.6;margin:0 0 1.25rem;opacity:0.95;">
+                        Démarquez-vous auprès de milliers de patients avec nos offres à prix bas : badge certifié, position prioritaire, avis Google et bien plus.
+                      </p>
+                      <a href="https://annuaire.quiz-couple.com/tarifs/"
+                         style="display:inline-block;padding:0.75rem 2rem;background:white;color:#d6336c;text-decoration:none;border-radius:0.5rem;font-weight:700;font-size:0.9375rem;">
+                        Découvrir les offres
+                      </a>
+                      <p style="font-size:0.75rem;margin:0.75rem 0 0;opacity:0.8;">À partir de 4,99€ HT/mois &middot; Sans engagement</p>
+                    </div>
+
+                    <!-- Footer -->
+                    <div style="text-align:center;margin-top:2rem;padding:1rem;">
+                      <p style="font-size:0.75rem;color:#999;margin:0;">Quiz Couple — Annuaire des professionnels du couple en France</p>
+                      <p style="font-size:0.75rem;color:#bbb;margin:0.5rem 0 0;"><a href="https://annuaire.quiz-couple.com" style="color:#bbb;">annuaire.quiz-couple.com</a></p>
+                    </div>
                   </div>
-                  <p style="font-size:0.875rem;color:#666;">
-                    Vous pouvez modifier vos informations à tout moment depuis votre
-                    <a href="https://annuaire.quiz-couple.com/dashboard/" style="color:#d6336c;">espace professionnel</a>.
-                  </p>
-                  <hr style="border:none;border-top:1px solid #eee;margin:2rem 0;">
-                  <p style="font-size:0.75rem;color:#999;">
-                    Quiz Couple — Annuaire des professionnels du couple en France
-                  </p>
-                </div>
+                </body>
+                </html>
               `,
             }),
           });
@@ -220,30 +251,42 @@ serve(async (req) => {
               to: [profile.email],
               subject: 'Votre fiche nécessite des modifications',
               html: `
-                <div style="font-family:Inter,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:2rem;">
-                  <h1 style="color:#d6336c;font-size:1.5rem;">Bonjour ${escapeHtml(profile.first_name || '')},</h1>
-                  <p style="font-size:1rem;line-height:1.6;color:#333;">
-                    Après vérification, votre fiche nécessite quelques modifications avant de pouvoir être publiée.
-                  </p>
-                  ${reason ? `
-                  <div style="margin:1.5rem 0;padding:1rem;background:#fff3cd;border-radius:0.5rem;border:1px solid #ffc107;">
-                    <p style="font-size:0.9375rem;color:#333;margin:0;"><strong>Motif :</strong> ${escapeHtml(reason)}</p>
+                <!DOCTYPE html>
+                <html lang="fr">
+                <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+                <body style="margin:0;padding:0;background:#f8f7fc;font-family:Inter,system-ui,-apple-system,sans-serif;">
+                  <div style="max-width:600px;margin:0 auto;padding:2rem 1rem;">
+                    <div style="text-align:center;margin-bottom:2rem;">
+                      <img src="https://annuaire.quiz-couple.com/assets/logo-annuaire.png" alt="Quiz Couple Annuaire" width="40" height="42" style="display:inline-block;">
+                      <span style="font-size:1.25rem;font-weight:700;vertical-align:middle;margin-left:0.5rem;color:#1a1625;">Annuaire</span>
+                    </div>
+                    <div style="background:white;border-radius:1rem;padding:2rem;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+                      <h1 style="color:#d6336c;font-size:1.5rem;margin:0 0 1rem;">Bonjour ${escapeHtml(profile.first_name || '')},</h1>
+                      <p style="font-size:1rem;line-height:1.6;color:#333;margin:0 0 1rem;">
+                        Après vérification, votre fiche nécessite quelques modifications avant de pouvoir être publiée.
+                      </p>
+                      ${reason ? `
+                      <div style="margin:1rem 0;padding:1rem;background:#fff3cd;border-radius:0.5rem;border:1px solid #ffc107;">
+                        <p style="font-size:0.9375rem;color:#333;margin:0;"><strong>Motif :</strong> ${escapeHtml(reason)}</p>
+                      </div>
+                      ` : ''}
+                      <p style="font-size:1rem;line-height:1.6;color:#333;margin:0 0 1.5rem;">
+                        Connectez-vous à votre espace professionnel pour mettre à jour vos informations. Votre fiche sera automatiquement re-soumise pour validation.
+                      </p>
+                      <div style="text-align:center;margin:1.5rem 0;">
+                        <a href="https://annuaire.quiz-couple.com/dashboard/"
+                           style="display:inline-block;padding:0.875rem 2rem;background:#d6336c;color:white;text-decoration:none;border-radius:0.5rem;font-weight:600;font-size:1rem;">
+                          Modifier ma fiche
+                        </a>
+                      </div>
+                    </div>
+                    <div style="text-align:center;margin-top:2rem;padding:1rem;">
+                      <p style="font-size:0.75rem;color:#999;margin:0;">Quiz Couple — Annuaire des professionnels du couple en France</p>
+                      <p style="font-size:0.75rem;color:#bbb;margin:0.5rem 0 0;"><a href="https://annuaire.quiz-couple.com" style="color:#bbb;">annuaire.quiz-couple.com</a></p>
+                    </div>
                   </div>
-                  ` : ''}
-                  <p style="font-size:1rem;line-height:1.6;color:#333;">
-                    Connectez-vous à votre espace professionnel pour mettre à jour vos informations. Votre fiche sera automatiquement re-soumise pour validation.
-                  </p>
-                  <div style="margin:2rem 0;">
-                    <a href="https://annuaire.quiz-couple.com/dashboard/"
-                       style="display:inline-block;padding:0.75rem 1.5rem;background:#d6336c;color:white;text-decoration:none;border-radius:0.5rem;font-weight:600;">
-                      Modifier ma fiche
-                    </a>
-                  </div>
-                  <hr style="border:none;border-top:1px solid #eee;margin:2rem 0;">
-                  <p style="font-size:0.75rem;color:#999;">
-                    Quiz Couple — Annuaire des professionnels du couple en France
-                  </p>
-                </div>
+                </body>
+                </html>
               `,
             }),
           });

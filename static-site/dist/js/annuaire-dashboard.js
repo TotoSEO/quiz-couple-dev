@@ -554,7 +554,7 @@
         hide($('dash-tab-profile')); hide($('dash-tab-billing')); hide($('dash-tab-stats'));
         show($('dash-tab-' + tab));
         if (tab === 'stats') await loadStatsTab();
-        if (tab === 'billing') fillBillingForm(currentProfile);
+        if (tab === 'billing') { fillBillingForm(currentProfile); loadInvoicesTab(); }
       });
     });
 
@@ -750,6 +750,88 @@
         detail.appendChild(row);
       });
     } catch (err) { console.error('Stats error:', err); }
+  }
+
+  // ── Invoice history ──
+  var invoicesLoaded = false;
+  async function loadInvoicesTab() {
+    if (invoicesLoaded) return;
+    var loading = $('bill-invoices-loading');
+    var empty = $('bill-invoices-empty');
+    var list = $('bill-invoices-list');
+    var tbody = $('bill-invoices-tbody');
+    if (!loading || !tbody) return;
+
+    try {
+      var { data: invoices, error } = await supabase
+        .from('annuaire_invoices')
+        .select('invoice_number, created_at, plan, period, amount_ttc, pdf_storage_path, paid_at')
+        .order('created_at', { ascending: false });
+
+      hide(loading);
+      if (error) { console.error('[invoices]', error); show(empty); return; }
+      if (!invoices || invoices.length === 0) { show(empty); return; }
+
+      var planLabels = { pro: 'Professionnel', boost: 'Boost' };
+      var periodLabels = { monthly: 'Mensuel', annual: 'Annuel' };
+
+      tbody.innerHTML = '';
+      invoices.forEach(function (inv) {
+        var tr = document.createElement('tr');
+        tr.style.borderBottom = '1px solid hsl(var(--ann-border) / 0.5)';
+        var date = new Date(inv.paid_at || inv.created_at).toLocaleDateString('fr-FR');
+        var amount = (inv.amount_ttc / 100).toFixed(2).replace('.', ',') + ' €';
+        var plan = (planLabels[inv.plan] || inv.plan) + ' — ' + (periodLabels[inv.period] || inv.period);
+
+        var pdfCell = '';
+        if (inv.pdf_storage_path) {
+          pdfCell = '<button type="button" class="ann-btn ann-btn-outline ann-btn-sm" data-download-invoice="' + inv.pdf_storage_path + '" style="font-size:0.75rem;padding:0.25rem 0.625rem;">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.75rem;height:0.75rem"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>' +
+            ' PDF</button>';
+        } else {
+          pdfCell = '<span class="ann-text-muted" style="font-size:0.75rem;">—</span>';
+        }
+
+        tr.innerHTML = '<td style="padding:0.625rem 0.5rem;font-weight:500;">' + inv.invoice_number + '</td>' +
+          '<td style="padding:0.625rem 0.5rem;">' + date + '</td>' +
+          '<td style="padding:0.625rem 0.5rem;">' + plan + '</td>' +
+          '<td style="padding:0.625rem 0.5rem;text-align:right;font-weight:600;">' + amount + '</td>' +
+          '<td style="padding:0.625rem 0.5rem;text-align:center;">' + pdfCell + '</td>';
+        tbody.appendChild(tr);
+      });
+
+      show(list);
+      invoicesLoaded = true;
+
+      // Bind download buttons
+      document.querySelectorAll('[data-download-invoice]').forEach(function (btn) {
+        btn.addEventListener('click', async function () {
+          var path = btn.getAttribute('data-download-invoice');
+          btn.disabled = true;
+          try {
+            var { data, error } = await supabase.storage
+              .from('annuaire-invoices')
+              .download(path);
+            if (error) throw error;
+            var url = URL.createObjectURL(data);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = path.split('/').pop();
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+          } catch (err) {
+            alert('Erreur lors du téléchargement : ' + (err.message || err));
+          } finally {
+            btn.disabled = false;
+          }
+        });
+      });
+    } catch (err) {
+      hide(loading); show(empty);
+      console.error('[invoices]', err);
+    }
   }
 
   // ── Billing info ──

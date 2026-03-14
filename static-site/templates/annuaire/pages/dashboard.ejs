@@ -471,6 +471,42 @@
             &middot; Paiement sécurisé par Stripe &middot; Sans engagement
           </p>
         </div>
+
+        <!-- Invoice history -->
+        <div class="ann-profile-card" style="padding: 1.5rem; margin-top: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem;color:hsl(var(--ann-primary))"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <h2 style="font-size: 1rem;">Mes factures</h2>
+          </div>
+
+          <div id="bill-invoices-loading" class="ann-text-muted" style="text-align: center; padding: 1.5rem; font-size: 0.875rem;">
+            Chargement des factures...
+          </div>
+
+          <div id="bill-invoices-empty" style="display: none; text-align: center; padding: 1.5rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:2.5rem;height:2.5rem;color:hsl(var(--ann-muted-fg));margin-bottom:0.75rem;">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>
+            </svg>
+            <p class="ann-text-muted" style="font-size: 0.875rem;">Aucune facture pour le moment.</p>
+          </div>
+
+          <div id="bill-invoices-list" style="display: none;">
+            <div style="overflow-x: auto;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.8125rem;">
+                <thead>
+                  <tr style="border-bottom: 2px solid hsl(var(--ann-border));">
+                    <th style="text-align: left; padding: 0.625rem 0.5rem; font-weight: 600; color: hsl(var(--ann-muted-fg)); font-size: 0.75rem; text-transform: uppercase;">Facture</th>
+                    <th style="text-align: left; padding: 0.625rem 0.5rem; font-weight: 600; color: hsl(var(--ann-muted-fg)); font-size: 0.75rem; text-transform: uppercase;">Date</th>
+                    <th style="text-align: left; padding: 0.625rem 0.5rem; font-weight: 600; color: hsl(var(--ann-muted-fg)); font-size: 0.75rem; text-transform: uppercase;">Formule</th>
+                    <th style="text-align: right; padding: 0.625rem 0.5rem; font-weight: 600; color: hsl(var(--ann-muted-fg)); font-size: 0.75rem; text-transform: uppercase;">Montant TTC</th>
+                    <th style="text-align: center; padding: 0.625rem 0.5rem; font-weight: 600; color: hsl(var(--ann-muted-fg)); font-size: 0.75rem; text-transform: uppercase;">PDF</th>
+                  </tr>
+                </thead>
+                <tbody id="bill-invoices-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Stats tab -->
