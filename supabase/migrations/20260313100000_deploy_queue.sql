@@ -36,6 +36,8 @@ $$;
 
 -- 3. Function: process the queue (called by cron every 2 min)
 --    If there are pending items, trigger ONE deploy and mark all as processed.
+--    NOTE: Supabase managed DB does not allow ALTER DATABASE for app.settings,
+--    so we read the service_role_key from Supabase vault (secrets table).
 CREATE OR REPLACE FUNCTION public.process_annuaire_deploy_queue()
 RETURNS void
 LANGUAGE plpgsql
@@ -44,7 +46,6 @@ SET search_path = public
 AS $$
 DECLARE
   pending_count INTEGER;
-  supabase_url TEXT;
   service_key TEXT;
 BEGIN
   -- Count pending deploy requests
@@ -62,13 +63,15 @@ BEGIN
   SET processed_at = now()
   WHERE processed_at IS NULL;
 
-  -- Trigger ONE deploy via pg_net
-  supabase_url := current_setting('app.settings.supabase_url', true);
-  service_key := current_setting('app.settings.service_role_key', true);
+  -- Read service role key from vault
+  SELECT decrypted_secret INTO service_key
+  FROM vault.decrypted_secrets
+  WHERE name = 'service_role_key'
+  LIMIT 1;
 
-  IF supabase_url IS NOT NULL AND service_key IS NOT NULL THEN
+  IF service_key IS NOT NULL THEN
     PERFORM net.http_post(
-      url := supabase_url || '/functions/v1/trigger-deploy',
+      url := 'https://lojvajnnvhatfplevyvy.supabase.co/functions/v1/trigger-deploy',
       headers := jsonb_build_object(
         'Content-Type', 'application/json',
         'Authorization', 'Bearer ' || service_key
@@ -77,7 +80,7 @@ BEGIN
     );
     RAISE LOG '[annuaire-deploy] Triggered 1 deploy for % queued changes', pending_count;
   ELSE
-    RAISE WARNING '[annuaire-deploy] Cannot trigger deploy: missing app.settings';
+    RAISE WARNING '[annuaire-deploy] Cannot trigger deploy: missing service_role_key in vault. Add it via Supabase Dashboard > Project Settings > Vault.';
   END IF;
 
   -- Cleanup old processed entries (keep last 7 days)

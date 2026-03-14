@@ -36,6 +36,7 @@
     </div>
   </div>
 
+  <% if (pro.premium && pro.reviewCount > 0) { %>
   <div class="ann-pro-rating">
     <div class="ann-stars">
       <% for (let i = 1; i <= 5; i++) { %>
@@ -45,6 +46,7 @@
     <span class="ann-rating-text"><%= pro.rating %></span>
     <span class="ann-review-count">(<%= pro.reviewCount %> avis)</span>
   </div>
+  <% } %>
 
   <p class="ann-pro-desc"><%= pro.description %></p>
 

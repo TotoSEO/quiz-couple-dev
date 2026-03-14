@@ -197,11 +197,13 @@ window.__ANN_CITIES__ = <%- JSON.stringify(cities.map(function(c){ return { id: 
     html += '<div class="ann-pro-specialty">' + specName + '</div>';
     html += '</div></div>';
 
-    html += '<div class="ann-pro-rating">';
-    html += renderStars(p.rating);
-    html += '<span class="ann-rating-text">' + p.rating + '</span>';
-    html += '<span class="ann-review-count">(' + p.reviewCount + ' avis)</span>';
-    html += '</div>';
+    if (p.premium && p.reviewCount > 0) {
+      html += '<div class="ann-pro-rating">';
+      html += renderStars(p.rating);
+      html += '<span class="ann-rating-text">' + p.rating + '</span>';
+      html += '<span class="ann-review-count">(' + p.reviewCount + ' avis)</span>';
+      html += '</div>';
+    }
 
     if (p.description) {
       html += '<p class="ann-pro-desc">' + p.description + '</p>';
