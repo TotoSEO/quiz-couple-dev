@@ -556,6 +556,8 @@
       var profile = result.profile;
       if (!profile) return;
 
+      var billingComplete = !!(profile.billing_company_name && profile.billing_siret && profile.billing_tva_number && profile.billing_address);
+
       var pricingCards = document.querySelectorAll('.ann-pricing-card');
       pricingCards.forEach(function(card) {
         var btn = card.querySelector('.ann-btn');
@@ -582,7 +584,51 @@
           return;
         }
 
-        btn.href = '/dashboard/#billing';
+        if (!billingComplete) {
+          // State 2: billing info missing → redirect to dashboard billing tab
+          btn.href = '/dashboard/#billing';
+          return;
+        }
+
+        // State 3: billing complete → direct Stripe checkout
+        var planKey = isPro ? 'pro' : 'boost';
+        btn.href = '#';
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var currentPeriod = document.querySelector('#toggle-annual.active') ? 'annual' : 'monthly';
+          var priceKey = planKey + '_' + currentPeriod;
+          btn.style.pointerEvents = 'none';
+          btn.style.opacity = '0.7';
+          var origText = btn.textContent;
+          btn.textContent = 'Redirection vers Stripe...';
+
+          fetch(SUPABASE_URL + '/functions/v1/annuaire-checkout', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': SUPABASE_KEY,
+              'Authorization': 'Bearer ' + token,
+            },
+            body: JSON.stringify({ price_key: priceKey }),
+          })
+          .then(function(r) { return r.json(); })
+          .then(function(res) {
+            if (res.url) {
+              window.location.href = res.url;
+            } else {
+              alert(res.error || 'Erreur lors de la création de la session de paiement.');
+              btn.textContent = origText;
+              btn.style.pointerEvents = '';
+              btn.style.opacity = '';
+            }
+          })
+          .catch(function() {
+            alert('Erreur réseau. Veuillez réessayer.');
+            btn.textContent = origText;
+            btn.style.pointerEvents = '';
+            btn.style.opacity = '';
+          });
+        });
       });
 
       var bottomCta = document.querySelector('.ann-cta-section .ann-btn');
