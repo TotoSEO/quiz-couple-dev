@@ -199,6 +199,10 @@
             <label class="ann-form-label" for="prof-address">Adresse du cabinet</label>
             <input class="ann-form-input" type="text" id="prof-address" placeholder="Commencez à taper votre adresse..." maxlength="200" autocomplete="off">
             <div id="prof-address-suggestions" style="display:none;position:absolute;left:0;right:0;top:100%;z-index:50;background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));border-radius:0 0 var(--ann-radius) var(--ann-radius);max-height:12rem;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
+            <input type="hidden" id="prof-display-city">
+            <input type="hidden" id="prof-postal-code">
+            <input type="hidden" id="prof-lat">
+            <input type="hidden" id="prof-lng">
           </div>
           <div class="ann-form-group" id="dash-website-group">
             <label class="ann-form-label" for="prof-website">Site web <span class="ann-text-muted" style="font-size:0.75rem; font-weight:400;">(abonnement Boost requis)</span></label>
@@ -241,7 +245,7 @@
             </div>
             <div class="ann-form-group">
               <label class="ann-form-label" for="prof-price">Tarifs</label>
-              <input class="ann-form-input" type="text" id="prof-price" placeholder="70€ - 100€ / séance" maxlength="100">
+              <input class="ann-form-input" type="text" id="prof-price" placeholder="70€ - 100€ / séance" maxlength="30">
             </div>
           </div>
 
