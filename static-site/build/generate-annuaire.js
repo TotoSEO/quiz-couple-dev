@@ -617,6 +617,12 @@ async function main() {
   console.log('\n🏗️  Building annuaire.quiz-couple.com...\n');
   const start = Date.now();
 
+  // Clean dist/annuaire/ completely to remove stale pages (deleted profiles, etc.)
+  if (fs.existsSync(DIST_DIR)) {
+    fs.rmSync(DIST_DIR, { recursive: true });
+    console.log('[annuaire] Cleaned dist/annuaire/');
+  }
+
   ensureDir(DIST_DIR);
   copyAssets();
 
