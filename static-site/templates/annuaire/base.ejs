@@ -103,12 +103,13 @@
 
   <!-- Annuaire JS -->
   <script src="/js/annuaire.js" defer></script>
-  <% if (typeof currentPage !== 'undefined' && currentPage === 'rejoindre') { %>
+  <% if (typeof currentPage !== 'undefined' && ['rejoindre', 'dashboard', 'tarifs'].indexOf(currentPage) !== -1) { %>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.min.js" defer onerror="var s=document.createElement('script');s.src='https://unpkg.com/@supabase/supabase-js@2.49.1/dist/umd/supabase.min.js';document.head.appendChild(s);"></script>
+  <% } %>
+  <% if (typeof currentPage !== 'undefined' && currentPage === 'rejoindre') { %>
   <script src="/js/annuaire-rejoindre.js" defer></script>
   <% } %>
   <% if (typeof currentPage !== 'undefined' && currentPage === 'dashboard') { %>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.1/dist/umd/supabase.min.js" defer onerror="var s=document.createElement('script');s.src='https://unpkg.com/@supabase/supabase-js@2.49.1/dist/umd/supabase.min.js';document.head.appendChild(s);"></script>
   <script src="/js/annuaire-dashboard.js" defer></script>
   <% } %>
 
