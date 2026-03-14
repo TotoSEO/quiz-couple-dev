@@ -364,12 +364,26 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
   }
   if (body.description !== undefined) result.description = sanitize(body.description, 2000);
   if (body.address !== undefined) result.address = sanitize(body.address, 200);
+  if (body.display_city !== undefined) result.display_city = sanitize(body.display_city, 100) || null;
+  if (body.postal_code !== undefined) {
+    const pc = sanitize(body.postal_code, 5);
+    if (pc && !/^\d{5}$/.test(pc)) return { error: 'Code postal invalide.' };
+    result.postal_code = pc || null;
+  }
   if (body.website !== undefined) {
     const w = sanitize(body.website, 200);
     if (w && !w.startsWith('http')) return { error: 'URL du site invalide (doit commencer par http).' };
     result.website = w || null;
   }
-  if (body.price_range !== undefined) result.price_range = sanitize(body.price_range, 100);
+  if (body.price_range !== undefined) {
+    const pr = sanitize(body.price_range, 30);
+    // Extract all numbers and ensure none exceed 9999
+    const nums = pr.match(/\d+/g);
+    if (nums && nums.some((n: string) => parseInt(n, 10) > 9999)) {
+      return { error: 'Le tarif ne peut pas dépasser 9999€.' };
+    }
+    result.price_range = pr || null;
+  }
   if (body.availability !== undefined) result.availability = sanitize(body.availability, 200);
   if (body.years_experience !== undefined) {
     const y = Number(body.years_experience);

@@ -300,7 +300,7 @@
       if (query.length < 4) { suggestions.style.display = 'none'; return; }
 
       addressTimeout = setTimeout(function () {
-        fetch('https://nominatim.openstreetmap.org/search?format=json&countrycodes=fr&limit=5&q=' + encodeURIComponent(query), {
+        fetch('https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&countrycodes=fr&limit=5&q=' + encodeURIComponent(query), {
           headers: { 'Accept-Language': 'fr' },
         })
         .then(function (r) { return r.json(); })
@@ -317,6 +317,23 @@
               var parts = r.display_name.split(', ');
               input.value = parts.slice(0, 3).join(', ');
               suggestions.style.display = 'none';
+
+              // Extract real city from Nominatim structured address
+              var addr = r.address || {};
+              var realCity = addr.city || addr.town || addr.village || addr.municipality || '';
+              var postalCode = addr.postcode || '';
+
+              // Store in hidden fields for form submission
+              var dcField = $('prof-display-city');
+              var pcField = $('prof-postal-code');
+              if (dcField) dcField.value = realCity;
+              if (pcField) pcField.value = postalCode;
+
+              // Store lat/lng from Nominatim
+              var latField = $('prof-lat');
+              var lngField = $('prof-lng');
+              if (latField && r.lat) latField.value = r.lat;
+              if (lngField && r.lon) lngField.value = r.lon;
             });
             item.addEventListener('mouseenter', function () { item.style.background = 'hsl(var(--ann-muted)/0.3)'; });
             item.addEventListener('mouseleave', function () { item.style.background = ''; });
@@ -438,6 +455,10 @@
     $('prof-email').value = profile.email || '';
     $('prof-phone').value = profile.phone || '';
     $('prof-address').value = profile.address || '';
+    if ($('prof-display-city')) $('prof-display-city').value = profile.display_city || '';
+    if ($('prof-postal-code')) $('prof-postal-code').value = profile.postal_code || '';
+    if ($('prof-lat') && profile.lat) $('prof-lat').value = profile.lat;
+    if ($('prof-lng') && profile.lng) $('prof-lng').value = profile.lng;
     $('prof-website').value = profile.website || '';
     if ($('prof-doctolib')) $('prof-doctolib').value = profile.doctolib_url || '';
     $('prof-description').value = profile.description || '';
@@ -542,6 +563,10 @@
       email: $('prof-email').value.trim(),
       phone: $('prof-phone').value.trim() || null,
       address: $('prof-address').value.trim() || null,
+      display_city: $('prof-display-city') ? ($('prof-display-city').value.trim() || null) : null,
+      postal_code: $('prof-postal-code') ? ($('prof-postal-code').value.trim() || null) : null,
+      lat: $('prof-lat') && $('prof-lat').value ? parseFloat($('prof-lat').value) : undefined,
+      lng: $('prof-lng') && $('prof-lng').value ? parseFloat($('prof-lng').value) : undefined,
       website: $('prof-website').disabled ? undefined : ($('prof-website').value.trim() || null),
       description: $('prof-description').value.trim(),
       years_experience: parseInt($('prof-experience').value) || 0,

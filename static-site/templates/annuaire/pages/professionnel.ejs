@@ -14,7 +14,8 @@
       "address": {
         "@type": "PostalAddress",
         "streetAddress": pro.address,
-        "addressLocality": proCity ? proCity.name : pro.city,
+        "addressLocality": pro.displayCity || (proCity ? proCity.name : pro.city),
+        "postalCode": pro.postalCode || "",
         "addressCountry": "FR"
       },
       "geo": {
@@ -107,7 +108,7 @@
         <div class="ann-profile-quick-info">
           <span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <%= proCity ? proCity.name : pro.city %>
+            <%= pro.displayCity || (proCity ? proCity.name : pro.city) %><% if (pro.postalCode) { %> (<%= pro.postalCode %>)<% } %>
           </span>
           <span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -292,7 +293,7 @@
             </div>
             <div class="ann-profile-info-row">
               <span class="ann-text-muted">Ville</span>
-              <a href="/<%= pro.city %>/" class="ann-link-primary"><%= proCity ? proCity.name : pro.city %></a>
+              <a href="/<%= pro.city %>/" class="ann-link-primary"><%= pro.displayCity || (proCity ? proCity.name : pro.city) %><% if (pro.postalCode) { %> (<%= pro.postalCode %>)<% } %></a>
             </div>
             <div class="ann-profile-info-row">
               <span class="ann-text-muted">Spécialité</span>
@@ -415,6 +416,11 @@
       if (key === 'Tarif' && p.price_range) value.textContent = p.price_range;
       if (key === 'Expérience' && p.years_experience != null) value.textContent = p.years_experience + ' ans';
       if (key === 'Disponibilités' && p.availability) value.textContent = p.availability;
+      if (key === 'Ville' && (p.display_city || p.city)) {
+        var cityLabel = p.display_city || p.city;
+        if (p.postal_code) cityLabel += ' (' + p.postal_code + ')';
+        value.textContent = cityLabel;
+      }
     }
   })
   .catch(function(err) { console.warn('[live-profile] Could not refresh data:', err); });
