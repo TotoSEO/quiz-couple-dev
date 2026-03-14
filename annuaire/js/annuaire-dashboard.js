@@ -219,6 +219,74 @@
     buildBubbles('prof-methods-container', allMethods, selectedMethods || [], maxMethods);
   }
 
+  // ── Cabinet Photos (Pro/Boost) ──
+  function renderCabinetPhotos(photos, maxPhotos) {
+    var grid = $('dash-photos-grid');
+    var addLabel = $('dash-photos-add-label');
+    if (!grid) return;
+    grid.innerHTML = '';
+    (photos || []).forEach(function (url, idx) {
+      var card = document.createElement('div');
+      card.style.cssText = 'position:relative;border-radius:var(--ann-radius);overflow:hidden;aspect-ratio:1;background:hsl(var(--ann-muted)/0.3);';
+      card.innerHTML = '<img src="' + url + '" alt="Photo cabinet ' + (idx + 1) + '" style="width:100%;height:100%;object-fit:cover;">' +
+        '<button type="button" data-remove-photo="' + idx + '" style="position:absolute;top:0.25rem;right:0.25rem;width:1.5rem;height:1.5rem;border-radius:50%;background:hsl(0 70% 50%);color:white;border:none;cursor:pointer;font-size:0.75rem;display:flex;align-items:center;justify-content:center;">&times;</button>';
+      grid.appendChild(card);
+    });
+    // Show/hide add button based on limit
+    if (addLabel) addLabel.style.display = (photos || []).length >= maxPhotos ? 'none' : '';
+  }
+
+  async function uploadCabinetPhoto(file) {
+    if (!currentUser || !currentProfile) return;
+    var ext = file.name.split('.').pop().toLowerCase();
+    if (!['jpg', 'jpeg', 'png', 'webp'].includes(ext)) throw new Error('Format non supporté.');
+    if (file.size > 5 * 1024 * 1024) throw new Error('Photo trop lourde (5 Mo max).');
+    var timestamp = Date.now();
+    var path = currentUser.id + '/cabinet-' + timestamp + '.' + ext;
+    var result = await supabase.storage.from('annuaire-photos').upload(path, file, { upsert: true, contentType: file.type });
+    if (result.error) throw result.error;
+    var urlData = supabase.storage.from('annuaire-photos').getPublicUrl(path);
+    return urlData.data.publicUrl;
+  }
+
+  async function removeCabinetPhoto(idx) {
+    if (!currentProfile || !currentProfile.photos) return;
+    var photos = (currentProfile.photos || []).slice();
+    var removedUrl = photos.splice(idx, 1)[0];
+    // Delete from storage
+    if (removedUrl) {
+      var match = removedUrl.match(/annuaire-photos\/(.+)$/);
+      if (match) {
+        try { await supabase.storage.from('annuaire-photos').remove([match[1]]); } catch (e) {}
+      }
+    }
+    // Update profile
+    var session = await checkAuth();
+    if (session) {
+      var res = await saveProfile({ photos: photos }, session.access_token, false);
+      if (res.profile) {
+        currentProfile = res.profile;
+        var maxPhotos = currentProfile.plan === 'boost' ? 4 : 2;
+        renderCabinetPhotos(currentProfile.photos || [], maxPhotos);
+      }
+    }
+  }
+
+  // ── Video Preview ──
+  function updateVideoPreview(url) {
+    var preview = $('dash-video-preview');
+    if (!preview) return;
+    if (!url) { hide(preview); return; }
+    // Extract YouTube video ID
+    var match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/);
+    if (match) {
+      preview.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + match[1] + '" frameborder="0" allowfullscreen style="border-radius:var(--ann-radius);"></iframe>';
+      show(preview);
+    } else {
+      hide(preview);
+    }
+  }
+
   // ── Address autocomplete (OpenStreetMap Nominatim) ──
   var addressTimeout = null;
   function initAddressAutocomplete() {
@@ -413,6 +481,27 @@
       if (doctolibLocked) hide(doctolibLocked);
     }
 
+    // Show cabinet photos section for Pro & Boost users
+    var photosSection = $('dash-photos-section');
+    if (photosSection && (profile.plan === 'pro' || profile.plan === 'boost')) {
+      show(photosSection);
+      var maxPhotos = profile.plan === 'boost' ? 4 : 2; // +1 profile photo = 5 or 3 total
+      var limitEl = $('dash-photos-limit');
+      if (limitEl) limitEl.textContent = '(max ' + maxPhotos + ' photos)';
+      renderCabinetPhotos(profile.photos || [], maxPhotos);
+    }
+
+    // Show video section for Boost users
+    var videoSection = $('dash-video-section');
+    if (videoSection && profile.plan === 'boost') {
+      show(videoSection);
+      var videoInput = $('prof-video-url');
+      if (videoInput && profile.video_url) {
+        videoInput.value = profile.video_url;
+        updateVideoPreview(profile.video_url);
+      }
+    }
+
     // Show Google Reviews for Boost users
     var googleSection = $('dash-google-reviews-section');
     if (googleSection && profile.plan === 'boost') {
@@ -460,6 +549,10 @@
     var gpiInput = $('prof-google-place-id');
     if (gpiInput && $('dash-google-reviews-section') && $('dash-google-reviews-section').style.display !== 'none') {
       data.google_place_id = gpiInput.value.trim() || null;
+    }
+    var videoInput = $('prof-video-url');
+    if (videoInput && $('dash-video-section') && $('dash-video-section').style.display !== 'none') {
+      data.video_url = videoInput.value.trim() || null;
     }
     return data;
   }
@@ -614,6 +707,52 @@
         alert(err.message || 'Erreur lors de l\'upload');
       }
     });
+
+    // Cabinet photos upload
+    var photosInput = $('dash-photos-input');
+    if (photosInput) {
+      photosInput.addEventListener('change', async function () {
+        var file = this.files[0];
+        if (!file) return;
+        var errEl = $('dash-photos-error');
+        if (errEl) hide(errEl);
+        try {
+          var session = await checkAuth();
+          if (!session) { alert('Session expirée.'); return; }
+          var url = await uploadCabinetPhoto(file);
+          var photos = (currentProfile.photos || []).slice();
+          photos.push(url);
+          var res = await saveProfile({ photos: photos }, session.access_token, false);
+          if (res.profile) {
+            currentProfile = res.profile;
+            var maxPhotos = currentProfile.plan === 'boost' ? 4 : 2;
+            renderCabinetPhotos(currentProfile.photos || [], maxPhotos);
+          } else if (res.error) {
+            if (errEl) { errEl.textContent = res.error; show(errEl); }
+          }
+        } catch (err) {
+          if (errEl) { errEl.textContent = err.message || 'Erreur upload'; show(errEl); }
+        }
+        this.value = '';
+      });
+    }
+
+    // Remove cabinet photo
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-remove-photo]');
+      if (btn) {
+        var idx = parseInt(btn.getAttribute('data-remove-photo'));
+        if (!isNaN(idx)) removeCabinetPhoto(idx);
+      }
+    });
+
+    // Video URL preview
+    var videoInput = $('prof-video-url');
+    if (videoInput) {
+      videoInput.addEventListener('input', function () {
+        updateVideoPreview(this.value.trim());
+      });
+    }
 
     // Profile save
     $('dash-profile-form').addEventListener('submit', async function (e) {
