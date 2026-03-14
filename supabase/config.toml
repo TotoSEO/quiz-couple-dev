@@ -56,3 +56,15 @@ verify_jwt = false
 
 [functions.ebook-verify]
 verify_jwt = false
+
+[functions.annuaire-stripe-webhook]
+verify_jwt = false
+
+[functions.annuaire-checkout]
+verify_jwt = false
+
+[functions.annuaire-generate-invoice]
+verify_jwt = false
+
+[functions.annuaire-billing-portal]
+verify_jwt = false
