@@ -149,6 +149,7 @@ serve(async (req: Request) => {
           plan: targetPlan,
         },
       },
+      customer_update: { name: 'auto' },
       tax_id_collection: { enabled: true },
       automatic_tax: { enabled: false },
       locale: 'fr',
