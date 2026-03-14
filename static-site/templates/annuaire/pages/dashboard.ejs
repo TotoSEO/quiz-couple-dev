@@ -392,17 +392,84 @@
             <h2 style="font-size: 1rem;">Mon abonnement</h2>
           </div>
           <div id="bill-plan-info">
-            <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem;">
               <span id="bill-plan-badge" class="ann-badge" style="font-size: 0.8125rem;">Gratuit</span>
               <span id="bill-plan-expiry" class="ann-text-muted" style="font-size: 0.8125rem;"></span>
             </div>
-            <div style="margin-top: 1rem;">
-              <a href="/tarifs/" class="ann-btn ann-btn-outline ann-btn-sm" id="bill-upgrade-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                Changer de formule
-              </a>
+
+            <!-- Manage existing subscription -->
+            <div id="bill-manage-sub" style="display: none; margin-bottom: 1rem;">
+              <button type="button" id="bill-portal-btn" class="ann-btn ann-btn-outline ann-btn-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                Gérer mon abonnement
+              </button>
+              <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.5rem;">Modifier le moyen de paiement, changer de formule ou annuler via le portail sécurisé Stripe.</p>
             </div>
           </div>
+
+          <!-- Billing incomplete warning -->
+          <div id="bill-incomplete-warning" style="display: none; padding: 0.875rem 1rem; border-radius: var(--ann-radius); background: hsl(40 90% 55% / 0.08); border: 1px solid hsl(40 90% 55% / 0.25); margin-bottom: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="hsl(40 90% 45%)" stroke-width="2" style="width:1rem;height:1rem;flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span style="font-size: 0.875rem; color: hsl(40 70% 35%);">Renseignez vos <strong>informations de facturation</strong> ci-dessus avant de souscrire à un abonnement.</span>
+            </div>
+          </div>
+
+          <!-- Period toggle -->
+          <div id="bill-period-toggle" style="display: flex; gap: 0; margin-bottom: 1rem; border: 1px solid hsl(var(--ann-border)); border-radius: var(--ann-radius); overflow: hidden; max-width: 16rem;">
+            <button type="button" class="ann-auth-tab ann-auth-tab-active" data-bill-period="monthly" style="flex:1;font-size:0.8125rem;padding:0.5rem;">Mensuel</button>
+            <button type="button" class="ann-auth-tab" data-bill-period="annual" style="flex:1;font-size:0.8125rem;padding:0.5rem;">Annuel <span style="color:hsl(var(--ann-success));font-weight:700;">-17%</span></button>
+          </div>
+
+          <!-- Plan cards -->
+          <div id="bill-plan-cards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <!-- Professionnel -->
+            <div class="ann-profile-card" style="padding: 1.25rem; border: 2px solid transparent; transition: border-color 200ms;" id="bill-card-pro">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <span class="ann-badge ann-badge-primary" style="font-size: 0.75rem;">Professionnel</span>
+              </div>
+              <div style="margin-bottom: 0.75rem;">
+                <span id="bill-price-pro" style="font-size: 1.5rem; font-weight: 700;">5,99</span>
+                <span class="ann-text-muted" style="font-size: 0.8125rem;">€ HT/mois</span>
+              </div>
+              <ul style="list-style: none; padding: 0; margin: 0 0 1rem; font-size: 0.8125rem; line-height: 1.8;">
+                <li style="color: hsl(var(--ann-success));">&#10003; Badge "Certifié"</li>
+                <li style="color: hsl(var(--ann-success));">&#10003; Résultats prioritaires</li>
+                <li style="color: hsl(var(--ann-success));">&#10003; 3 spécialités, 5 méthodes</li>
+                <li style="color: hsl(var(--ann-success));">&#10003; 3 photos, bio 1 000 car.</li>
+              </ul>
+              <button type="button" class="ann-btn ann-btn-primary ann-btn-full ann-btn-sm" data-checkout="pro">
+                Souscrire
+              </button>
+            </div>
+
+            <!-- Boost -->
+            <div class="ann-profile-card" style="padding: 1.25rem; border: 2px solid hsl(var(--ann-primary) / 0.3); transition: border-color 200ms; position: relative;" id="bill-card-boost">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <span class="ann-badge ann-badge-premium" style="font-size: 0.75rem;">Boost</span>
+              </div>
+              <div style="margin-bottom: 0.75rem;">
+                <span id="bill-price-boost" style="font-size: 1.5rem; font-weight: 700;">11,99</span>
+                <span class="ann-text-muted" style="font-size: 0.8125rem;">€ HT/mois</span>
+              </div>
+              <ul style="list-style: none; padding: 0; margin: 0 0 1rem; font-size: 0.8125rem; line-height: 1.8;">
+                <li style="color: hsl(var(--ann-success));">&#10003; Tout Professionnel +</li>
+                <li style="color: hsl(var(--ann-success));">&#10003; Position #1, badge doré</li>
+                <li style="color: hsl(var(--ann-success));">&#10003; Backlink SEO, stats</li>
+                <li style="color: hsl(var(--ann-success));">&#10003; Avis Google, 5 photos</li>
+              </ul>
+              <button type="button" class="ann-btn ann-btn-boost ann-btn-full ann-btn-sm" data-checkout="boost">
+                Souscrire
+              </button>
+            </div>
+          </div>
+
+          <div id="bill-checkout-error" class="ann-form-error" style="display:none; margin-top: 1rem;"></div>
+
+          <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 1rem; text-align: center;">
+            <a href="/tarifs/" target="_blank" style="color: hsl(var(--ann-primary));">Voir le détail complet des formules</a>
+            &middot; Paiement sécurisé par Stripe &middot; Sans engagement
+          </p>
         </div>
       </div>
 
