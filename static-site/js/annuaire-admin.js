@@ -485,6 +485,10 @@
       if (data.success) {
         allProfiles = [];
         loadProfiles();
+        // Auto-trigger deploy after approve/reject/delete to rebuild static pages
+        if (action === 'approve' || action === 'reject' || action === 'delete') {
+          autoTriggerDeploy();
+        }
       } else {
         alert('Erreur: ' + (data.error || 'Inconnue'));
       }
@@ -492,6 +496,27 @@
     .catch(function () {
       alert('Erreur reseau');
     });
+  }
+
+  function autoTriggerDeploy() {
+    var btn = document.getElementById('aadm-deploy');
+    fetch(SUPABASE_URL + '/functions/v1/trigger-deploy', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'x-admin-token': adminToken,
+      },
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.success && btn) {
+        var origText = btn.innerHTML;
+        btn.innerHTML = '<svg style="width:1rem;height:1rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Deploiement auto lance';
+        setTimeout(function () { btn.innerHTML = origText; }, 4000);
+      }
+    })
+    .catch(function () { /* silent — deploy queue already has the entry */ });
   }
 
   // ── Deploy ──
