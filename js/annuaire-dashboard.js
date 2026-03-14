@@ -337,7 +337,15 @@
   async function checkAuth() {
     if (!supabase) return null;
     var { data } = await supabase.auth.getSession();
-    if (data.session) return data.session;
+    if (data.session) {
+      // Refresh if token expires within the next 60 seconds
+      var expiresAt = data.session.expires_at;
+      if (expiresAt && expiresAt < Math.floor(Date.now() / 1000) + 60) {
+        var { data: refreshed } = await supabase.auth.refreshSession();
+        return (refreshed && refreshed.session) || null;
+      }
+      return data.session;
+    }
     var hash = window.location.hash;
     var search = window.location.search;
     if (hash.includes('access_token') || hash.includes('type=') || search.includes('code=')) {
