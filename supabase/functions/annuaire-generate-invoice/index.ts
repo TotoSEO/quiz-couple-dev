@@ -408,8 +408,9 @@ async function generateInvoicePdf(data: PdfData): Promise<Uint8Array> {
   const planLabel = PLAN_LABELS[data.plan] || data.plan;
   const periodLabel = data.periodType === 'annual' ? 'annuel' : 'mensuel';
   const designation = `Abonnement ${periodLabel} — ${planLabel}`;
-  const lineHt = data.amountHt + data.discountAmount; // HT before discount
-  const lineTtc = Math.round(lineHt * 1.2); // TTC before discount
+  // amountHt is after discount; line item shows pre-discount price
+  const lineHt = data.amountHt + data.discountAmount;
+  const lineTtc = Math.round(lineHt * 1.2);
 
   text(designation, colDesig + 8, y, { font: fontBold, size: 10 });
   y -= 14;
@@ -440,8 +441,13 @@ async function generateInvoicePdf(data: PdfData): Promise<Uint8Array> {
     y -= 5;
   }
 
-  // TVA line
+  // Sous-total HT (after discount)
   y -= 15;
+  text('Sous-total HT', colDesig + 8, y, { size: 9, color: gray });
+  text(`${formatCents(data.amountHt)} €`, colTtc, y, { size: 10 });
+
+  // TVA line
+  y -= 18;
   text('TVA (20%)', colDesig + 8, y, { size: 9, color: gray });
   text(`${formatCents(data.amountTva)} €`, colTtc, y, { size: 10 });
 
@@ -449,11 +455,12 @@ async function generateInvoicePdf(data: PdfData): Promise<Uint8Array> {
   line(margin, y, width - margin, 1, primary);
   y -= 5;
 
-  // Total TTC
+  // Total TTC — calculated from actual HT + TVA for consistency
+  const verifiedTtc = data.amountHt + data.amountTva;
   y -= 15;
   page.drawRectangle({ x: colHt - 10, y: y - 8, width: width - margin - colHt + 10, height: 28, color: primary });
   text('TOTAL TTC', colHt, y, { font: fontBold, size: 11, color: white });
-  const totalStr = `${formatCents(data.amountTtc)} €`;
+  const totalStr = `${formatCents(verifiedTtc)} €`;
   const totalWidth = fontBold.widthOfTextAtSize(totalStr, 12);
   text(totalStr, width - margin - totalWidth - 8, y, { font: fontBold, size: 12, color: white });
 

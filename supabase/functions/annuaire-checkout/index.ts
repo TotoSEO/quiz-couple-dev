@@ -54,12 +54,17 @@ serve(async (req: Request) => {
     });
     const { data: profile, error: profileError } = await supabase
       .from('annuaire_professionals')
-      .select('id, user_id, email, billing_company_name, billing_siret, billing_tva_number, billing_address, billing_email, stripe_customer_id, plan')
+      .select('id, user_id, email, is_published, billing_company_name, billing_siret, billing_tva_number, billing_address, billing_email, stripe_customer_id, plan')
       .eq('user_id', user.id)
       .single();
 
     if (profileError || !profile) {
       return jsonRes({ error: 'Profil introuvable. Créez votre fiche d\'abord.' }, 404);
+    }
+
+    // Check profile is validated by admin
+    if (!profile.is_published) {
+      return jsonRes({ error: 'profile_not_validated' }, 400);
     }
 
     // Check billing info is complete

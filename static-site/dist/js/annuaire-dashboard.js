@@ -361,6 +361,7 @@
     $('prof-phone').value = profile.phone || '';
     $('prof-address').value = profile.address || '';
     $('prof-website').value = profile.website || '';
+    if ($('prof-doctolib')) $('prof-doctolib').value = profile.doctolib_url || '';
     $('prof-description').value = profile.description || '';
     $('prof-experience').value = profile.years_experience || '';
     $('prof-price').value = profile.price_range || '';
@@ -442,6 +443,10 @@
       languages: getSelectedBubbles('prof-languages-container'),
       availability: getSelectedBubbles('prof-availability-container').join(', ') || null,
     };
+    var doctolibInput = $('prof-doctolib');
+    if (doctolibInput) {
+      data.doctolib_url = doctolibInput.value.trim() || null;
+    }
     var gpiInput = $('prof-google-place-id');
     if (gpiInput && $('dash-google-reviews-section') && $('dash-google-reviews-section').style.display !== 'none') {
       data.google_place_id = gpiInput.value.trim() || null;
@@ -536,7 +541,7 @@
       showAuthScreen();
     }
 
-    bindLoginForm(); bindForgotPassword(); bindResetForm(); bindDeleteAccount();
+    bindLoginForm(); bindForgotPassword(); bindResetForm(); bindBillingForm(); bindDeleteAccount();
 
     $('dash-logout').addEventListener('click', logout);
 
@@ -546,9 +551,10 @@
         document.querySelectorAll('[data-dash-tab]').forEach(function (b) { b.classList.remove('ann-auth-tab-active'); });
         btn.classList.add('ann-auth-tab-active');
         var tab = btn.getAttribute('data-dash-tab');
-        hide($('dash-tab-profile')); hide($('dash-tab-stats'));
+        hide($('dash-tab-profile')); hide($('dash-tab-billing')); hide($('dash-tab-stats'));
         show($('dash-tab-' + tab));
         if (tab === 'stats') await loadStatsTab();
+        if (tab === 'billing') fillBillingForm(currentProfile);
       });
     });
 
@@ -591,6 +597,21 @@
       if (!session) { showError('dash-profile-error', 'Session expirée. Reconnectez-vous.'); return; }
 
       var data = getFormData();
+
+      // Validate Doctolib URL client-side
+      if (data.doctolib_url) {
+        try {
+          var dUrl = new URL(data.doctolib_url);
+          if (dUrl.hostname !== 'www.doctolib.fr' && dUrl.hostname !== 'doctolib.fr') {
+            showError('dash-profile-error', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
+            return;
+          }
+        } catch (e) {
+          showError('dash-profile-error', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
+          return;
+        }
+      }
+
       var btn = $('dash-save-btn');
       btn.disabled = true; btn.textContent = 'Enregistrement...';
 
@@ -729,6 +750,304 @@
         detail.appendChild(row);
       });
     } catch (err) { console.error('Stats error:', err); }
+  }
+
+  // ── Billing info ──
+  function isValidSiret(val) { return /^\d{14}$/.test(val); }
+  function isValidTva(val) { return /^FR\d{11}$/.test(val.toUpperCase()); }
+
+  function isBillingComplete(profile) {
+    if (!profile) return false;
+    return !!(profile.billing_company_name && profile.billing_siret && profile.billing_tva_number && profile.billing_address);
+  }
+
+  function fillBillingForm(profile) {
+    if (!profile) return;
+    var el;
+    el = $('bill-company'); if (el) el.value = profile.billing_company_name || '';
+    el = $('bill-siret'); if (el) el.value = profile.billing_siret || '';
+    el = $('bill-tva'); if (el) el.value = profile.billing_tva_number || '';
+    el = $('bill-email'); if (el) el.value = profile.billing_email || '';
+    el = $('bill-address'); if (el) el.value = profile.billing_address || '';
+
+    // Update plan info
+    var badge = $('bill-plan-badge');
+    if (badge) {
+      var planLabels = { gratuit: 'Gratuit', pro: 'Professionnel', boost: 'Boost' };
+      var plan = profile.plan || 'gratuit';
+      badge.textContent = planLabels[plan] || plan;
+      badge.className = 'ann-badge';
+      if (plan === 'pro') badge.classList.add('ann-badge-primary');
+      if (plan === 'boost') badge.classList.add('ann-badge-premium');
+    }
+    var expiry = $('bill-plan-expiry');
+    if (expiry && profile.plan_expires_at) {
+      var d = new Date(profile.plan_expires_at);
+      expiry.textContent = 'Expire le ' + d.toLocaleDateString('fr-FR');
+    }
+    var upgradeLink = $('bill-upgrade-link');
+    if (upgradeLink && profile.plan !== 'gratuit') {
+      upgradeLink.textContent = 'Gérer mon abonnement';
+    }
+
+    // Show billing completeness status and plan UI
+    updateBillingStatus(profile);
+    updatePlanUI(profile);
+  }
+
+  function updateBillingStatus(profile) {
+    var statusEl = $('bill-status');
+    if (!statusEl) return;
+    if (isBillingComplete(profile)) {
+      statusEl.style.display = 'flex';
+      statusEl.style.background = 'hsl(var(--ann-success) / 0.1)';
+      statusEl.style.border = '1px solid hsl(var(--ann-success) / 0.3)';
+      statusEl.style.color = 'hsl(var(--ann-success))';
+      statusEl.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;flex-shrink:0"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Informations de facturation complètes';
+    } else {
+      statusEl.style.display = 'flex';
+      statusEl.style.background = 'hsl(40 90% 55% / 0.08)';
+      statusEl.style.border = '1px solid hsl(40 90% 55% / 0.25)';
+      statusEl.style.color = 'hsl(40 70% 35%)';
+      statusEl.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Informations incomplètes — obligatoires pour souscrire à un abonnement payant';
+    }
+  }
+
+  // ── Billing period state ──
+  var billingPeriod = 'monthly';
+  var PRICES = {
+    pro:   { monthly: '5,99', annual: '4,99' },
+    boost: { monthly: '11,99', annual: '9,99' },
+  };
+
+  function bindBillingForm() {
+    var form = $('dash-billing-form');
+    if (!form) return;
+
+    // Auto-format SIRET (digits only)
+    var siretInput = $('bill-siret');
+    if (siretInput) {
+      siretInput.addEventListener('input', function () {
+        this.value = this.value.replace(/\D/g, '').slice(0, 14);
+        hideError('bill-siret-error');
+      });
+    }
+
+    // Auto-format TVA
+    var tvaInput = $('bill-tva');
+    if (tvaInput) {
+      tvaInput.addEventListener('input', function () {
+        var v = this.value.toUpperCase();
+        if (v.length <= 2) {
+          this.value = v.replace(/[^FR]/g, '').slice(0, 2);
+        } else {
+          this.value = v.slice(0, 2) + v.slice(2).replace(/\D/g, '').slice(0, 11);
+        }
+        hideError('bill-tva-error');
+      });
+    }
+
+    // Billing form submit
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      hideError('bill-error');
+      hide($('bill-success'));
+      hide($('bill-saved-indicator'));
+
+      var company = ($('bill-company').value || '').trim();
+      var siret = ($('bill-siret').value || '').trim();
+      var tva = ($('bill-tva').value || '').trim().toUpperCase();
+      var billingEmail = ($('bill-email').value || '').trim();
+      var address = ($('bill-address').value || '').trim();
+
+      if (!company) { showError('bill-error', 'Le nom de l\'entreprise est obligatoire.'); return; }
+      if (!siret || !isValidSiret(siret)) {
+        showError('bill-siret-error', 'Le SIRET doit contenir exactement 14 chiffres.');
+        showError('bill-error', 'Veuillez corriger les erreurs ci-dessus.'); return;
+      }
+      if (!tva || !isValidTva(tva)) {
+        showError('bill-tva-error', 'Format attendu : FR + 11 chiffres (ex: FR12345678901).');
+        showError('bill-error', 'Veuillez corriger les erreurs ci-dessus.'); return;
+      }
+      if (billingEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(billingEmail)) {
+        showError('bill-email-error', 'Format d\'email invalide.');
+        showError('bill-error', 'Veuillez corriger les erreurs ci-dessus.'); return;
+      }
+      if (!address) { showError('bill-error', 'L\'adresse de facturation est obligatoire.'); return; }
+
+      var btn = $('bill-save-btn');
+      btn.disabled = true; btn.textContent = 'Enregistrement...';
+
+      try {
+        var session = await checkAuth();
+        if (!session) { showError('bill-error', 'Session expirée. Reconnectez-vous.'); return; }
+
+        var data = {
+          billing_company_name: company,
+          billing_siret: siret,
+          billing_tva_number: tva,
+          billing_email: billingEmail || null,
+          billing_address: address
+        };
+
+        var res = await saveProfile(data, session.access_token, !currentProfile);
+        if (res.error || res.msg) {
+          showError('bill-error', res.error || res.msg);
+        } else if (res.profile) {
+          currentProfile = res.profile;
+          updateBillingStatus(currentProfile);
+          updatePlanUI(currentProfile);
+          $('bill-success').textContent = 'Informations de facturation enregistrées !';
+          show($('bill-success'));
+          show($('bill-saved-indicator'));
+          setTimeout(function () { hide($('bill-success')); }, 4000);
+        }
+      } catch (err) {
+        showError('bill-error', err.message || 'Erreur serveur');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Enregistrer';
+      }
+    });
+
+    // Period toggle (monthly / annual)
+    document.querySelectorAll('[data-bill-period]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('[data-bill-period]').forEach(function (b) { b.classList.remove('ann-auth-tab-active'); });
+        btn.classList.add('ann-auth-tab-active');
+        billingPeriod = btn.getAttribute('data-bill-period');
+        if ($('bill-price-pro')) $('bill-price-pro').textContent = PRICES.pro[billingPeriod];
+        if ($('bill-price-boost')) $('bill-price-boost').textContent = PRICES.boost[billingPeriod];
+      });
+    });
+
+    // Checkout buttons
+    document.querySelectorAll('[data-checkout]').forEach(function (btn) {
+      btn.addEventListener('click', async function () {
+        hideError('bill-checkout-error');
+
+        if (!currentProfile || !isBillingComplete(currentProfile)) {
+          show($('bill-incomplete-warning'));
+          showError('bill-checkout-error', 'Veuillez d\'abord renseigner vos informations de facturation ci-dessus.');
+          return;
+        }
+
+        var plan = btn.getAttribute('data-checkout');
+        var priceKey = plan + '_' + billingPeriod;
+
+        btn.disabled = true;
+        var origText = btn.textContent;
+        btn.textContent = 'Redirection...';
+
+        try {
+          var session = await checkAuth();
+          if (!session) { showError('bill-checkout-error', 'Session expirée.'); return; }
+
+          var res = await apiCall('annuaire-checkout', 'POST', { price_key: priceKey }, session.access_token);
+
+          if (res.error === 'billing_incomplete') {
+            show($('bill-incomplete-warning'));
+            showError('bill-checkout-error', 'Veuillez d\'abord renseigner vos informations de facturation ci-dessus.');
+            return;
+          }
+          if (res.error === 'profile_not_validated') {
+            showError('bill-checkout-error', 'Votre fiche doit d\'abord être validée par notre équipe avant de pouvoir souscrire à un abonnement. Vous recevrez un email dès qu\'elle sera en ligne.');
+            return;
+          }
+          if (res.error) {
+            showError('bill-checkout-error', res.error);
+            return;
+          }
+          if (res.url) {
+            window.location.href = res.url;
+          }
+        } catch (err) {
+          showError('bill-checkout-error', err.message || 'Erreur lors de la redirection vers Stripe');
+        } finally {
+          btn.disabled = false;
+          btn.textContent = origText;
+        }
+      });
+    });
+
+    // Stripe billing portal button
+    var portalBtn = $('bill-portal-btn');
+    if (portalBtn) {
+      portalBtn.addEventListener('click', async function () {
+        portalBtn.disabled = true;
+        portalBtn.textContent = 'Redirection...';
+        try {
+          var session = await checkAuth();
+          if (!session) { alert('Session expirée.'); return; }
+          var res = await apiCall('annuaire-billing-portal', 'POST', {}, session.access_token);
+          if (res.url) {
+            window.location.href = res.url;
+          } else {
+            alert(res.error || 'Erreur lors de l\'ouverture du portail.');
+          }
+        } catch (err) {
+          alert('Erreur: ' + (err.message || err));
+        } finally {
+          portalBtn.disabled = false;
+          portalBtn.textContent = 'Gérer mon abonnement';
+        }
+      });
+    }
+
+    // Handle checkout success/cancel from URL params
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('checkout') === 'success') {
+      setTimeout(function () {
+        var billingTab = document.querySelector('[data-dash-tab="billing"]');
+        if (billingTab) billingTab.click();
+        showSuccess('bill-success', 'Abonnement activé avec succès ! Votre fiche sera mise à jour dans quelques instants.');
+      }, 500);
+      window.history.replaceState({}, '', window.location.pathname);
+    } else if (params.get('checkout') === 'cancel') {
+      setTimeout(function () {
+        var billingTab = document.querySelector('[data-dash-tab="billing"]');
+        if (billingTab) billingTab.click();
+      }, 500);
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  }
+
+  function updatePlanUI(profile) {
+    if (!profile) return;
+    var plan = profile.plan || 'gratuit';
+    var hasSub = plan !== 'gratuit' && profile.stripe_subscription_id;
+
+    // Show/hide manage button
+    var manageSub = $('bill-manage-sub');
+    if (manageSub) {
+      if (hasSub) show(manageSub); else hide(manageSub);
+    }
+
+    // Show/hide billing incomplete warning
+    var warning = $('bill-incomplete-warning');
+    if (warning) {
+      if (!isBillingComplete(profile) && plan === 'gratuit') show(warning); else hide(warning);
+    }
+
+    // Update checkout button labels for current plan
+    document.querySelectorAll('[data-checkout]').forEach(function (btn) {
+      var btnPlan = btn.getAttribute('data-checkout');
+      if (btnPlan === plan) {
+        btn.textContent = 'Formule actuelle';
+        btn.disabled = true;
+        btn.style.opacity = '0.5';
+      } else {
+        btn.textContent = hasSub ? 'Changer' : 'Souscrire';
+        btn.disabled = false;
+        btn.style.opacity = '';
+      }
+    });
+
+    // Highlight current plan card
+    var proCard = $('bill-card-pro');
+    var boostCard = $('bill-card-boost');
+    if (proCard) proCard.style.borderColor = plan === 'pro' ? 'hsl(var(--ann-primary))' : 'transparent';
+    if (boostCard) boostCard.style.borderColor = plan === 'boost' ? 'hsl(var(--ann-primary))' : 'hsl(var(--ann-primary) / 0.3)';
   }
 
   function bindDeleteAccount() {

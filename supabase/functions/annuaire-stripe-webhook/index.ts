@@ -100,8 +100,9 @@ serve(async (req: Request) => {
         const periodStart = new Date(subscription.current_period_start * 1000).toISOString();
         const periodEnd = new Date(subscription.current_period_end * 1000).toISOString();
 
-        // Update plan in DB
-        const { data: updatedProfile, error } = await supabase
+        // Update plan in DB — try by stripe_subscription_id first
+        let updatedProfile: { id: string } | null = null;
+        const { data: profileBySub, error: errBySub } = await supabase
           .from('annuaire_professionals')
           .update({
             plan,
@@ -109,57 +110,88 @@ serve(async (req: Request) => {
           })
           .eq('stripe_subscription_id', subscription.id)
           .select('id')
-          .single();
+          .maybeSingle();
 
-        if (error) {
-          console.error('[webhook] Update error on invoice.paid:', error);
+        if (profileBySub) {
+          updatedProfile = profileBySub;
+        } else {
+          // Fallback: if checkout.session.completed hasn't run yet,
+          // stripe_subscription_id may not be in DB. Use subscription metadata.
+          const professionalId = subscription.metadata?.professional_id;
+          if (professionalId) {
+            const { data: profileByMeta, error: errByMeta } = await supabase
+              .from('annuaire_professionals')
+              .update({
+                plan,
+                plan_expires_at: periodEnd,
+                stripe_subscription_id: subscription.id,
+              })
+              .eq('id', professionalId)
+              .select('id')
+              .maybeSingle();
+
+            if (errByMeta) {
+              console.error('[webhook] Update error on invoice.paid (fallback):', errByMeta);
+            }
+            updatedProfile = profileByMeta;
+          } else {
+            console.error('[webhook] invoice.paid: no subscription match and no professional_id in metadata');
+          }
+        }
+
+        if (!updatedProfile) {
+          console.error('[webhook] invoice.paid: could not find professional for subscription', subscription.id);
           break;
         }
         console.log(`[webhook] Plan renewed: ${plan}, expires ${periodEnd}`);
 
         // Generate invoice PDF and send by email
-        if (updatedProfile) {
-          try {
-            // Calculate amounts from Stripe invoice
-            const amountHt = invoice.subtotal || 0;         // HT in cents
-            const amountTva = invoice.tax || Math.round(amountHt * 0.2); // TVA
-            const amountTtc = invoice.amount_paid || (amountHt + amountTva);
+        try {
+          // Stripe prices are HT. invoice.subtotal = HT amount before discount.
+          const amountHt = invoice.subtotal || 0;
+          const amountTva = invoice.tax || Math.round(amountHt * 0.2);
+          // TTC = HT + TVA (don't use invoice.amount_paid since Stripe may not charge TVA)
+          const amountTtc = amountHt + amountTva;
 
-            // Check for discount
-            let discountAmount = 0;
-            let discountLabel: string | null = null;
-            if (invoice.discount && invoice.total_discount_amounts && invoice.total_discount_amounts.length > 0) {
-              discountAmount = invoice.total_discount_amounts[0].amount || 0;
-              const coupon = invoice.discount.coupon;
-              if (coupon) {
-                if (coupon.percent_off) {
-                  discountLabel = `Réduction de -${coupon.percent_off}%`;
-                } else if (coupon.amount_off) {
-                  discountLabel = `Réduction de -${(coupon.amount_off / 100).toFixed(2).replace('.', ',')} €`;
-                } else {
-                  discountLabel = 'Réduction';
-                }
+          // Check for discount
+          let discountAmount = 0;
+          let discountLabel: string | null = null;
+          if (invoice.discount && invoice.total_discount_amounts && invoice.total_discount_amounts.length > 0) {
+            discountAmount = invoice.total_discount_amounts[0].amount || 0;
+            const coupon = invoice.discount.coupon;
+            if (coupon) {
+              if (coupon.percent_off) {
+                discountLabel = `Réduction de -${coupon.percent_off}%`;
+              } else if (coupon.amount_off) {
+                discountLabel = `Réduction de -${(coupon.amount_off / 100).toFixed(2).replace('.', ',')} €`;
+              } else {
+                discountLabel = 'Réduction';
               }
             }
-
-            await triggerInvoiceGeneration({
-              stripe_invoice_id: invoice.id,
-              professional_id: updatedProfile.id,
-              plan,
-              period,
-              period_start: periodStart,
-              period_end: periodEnd,
-              amount_ht: amountHt,
-              amount_tva: amountTva,
-              amount_ttc: amountTtc,
-              discount_amount: discountAmount,
-              discount_label: discountLabel,
-              paid_at: new Date().toISOString(),
-            });
-          } catch (invoiceErr) {
-            // Don't fail the webhook if invoice generation fails
-            console.error('[webhook] Invoice generation error:', invoiceErr);
           }
+
+          // Adjust HT for discount: invoice.subtotal is pre-discount, so actual HT = subtotal - discount
+          const actualHt = amountHt - discountAmount;
+          const actualTva = invoice.tax || Math.round(actualHt * 0.2);
+          const actualTtc = actualHt + actualTva;
+
+          await triggerInvoiceGeneration({
+            stripe_invoice_id: invoice.id,
+            professional_id: updatedProfile.id,
+            plan,
+            period,
+            period_start: periodStart,
+            period_end: periodEnd,
+            amount_ht: actualHt,
+            amount_tva: actualTva,
+            amount_ttc: actualTtc,
+            discount_amount: discountAmount,
+            discount_label: discountLabel,
+            paid_at: new Date().toISOString(),
+          });
+        } catch (invoiceErr) {
+          // Don't fail the webhook if invoice generation fails
+          console.error('[webhook] Invoice generation error:', invoiceErr);
         }
         break;
       }
