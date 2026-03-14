@@ -245,7 +245,9 @@
             item.textContent = r.display_name;
             item.addEventListener('mousedown', function (e) {
               e.preventDefault();
-              input.value = r.display_name;
+              // Simplify address: keep only the first 2-3 meaningful parts
+              var parts = r.display_name.split(', ');
+              input.value = parts.slice(0, 3).join(', ');
               suggestions.style.display = 'none';
             });
             item.addEventListener('mouseenter', function () { item.style.background = 'hsl(var(--ann-muted)/0.3)'; });
@@ -554,17 +556,28 @@
     $('dash-logout').addEventListener('click', logout);
 
     // Dashboard tabs
+    function activateTab(tab) {
+      document.querySelectorAll('[data-dash-tab]').forEach(function (b) { b.classList.remove('ann-auth-tab-active'); });
+      var activeBtn = document.querySelector('[data-dash-tab="' + tab + '"]');
+      if (activeBtn) activeBtn.classList.add('ann-auth-tab-active');
+      hide($('dash-tab-profile')); hide($('dash-tab-billing')); hide($('dash-tab-stats'));
+      show($('dash-tab-' + tab));
+      if (tab === 'stats') loadStatsTab();
+      if (tab === 'billing') { fillBillingForm(currentProfile); loadInvoicesTab(); }
+    }
+
     document.querySelectorAll('[data-dash-tab]').forEach(function (btn) {
-      btn.addEventListener('click', async function () {
-        document.querySelectorAll('[data-dash-tab]').forEach(function (b) { b.classList.remove('ann-auth-tab-active'); });
-        btn.classList.add('ann-auth-tab-active');
+      btn.addEventListener('click', function () {
         var tab = btn.getAttribute('data-dash-tab');
-        hide($('dash-tab-profile')); hide($('dash-tab-billing')); hide($('dash-tab-stats'));
-        show($('dash-tab-' + tab));
-        if (tab === 'stats') await loadStatsTab();
-        if (tab === 'billing') { fillBillingForm(currentProfile); loadInvoicesTab(); }
+        activateTab(tab);
       });
     });
+
+    // Handle URL hash to auto-switch tabs (e.g. /dashboard/#billing)
+    var tabHash = window.location.hash.replace('#', '');
+    if (tabHash === 'billing' || tabHash === 'stats') {
+      activateTab(tabHash);
+    }
 
     // Description char count
     $('prof-description').addEventListener('input', function () {
@@ -859,7 +872,19 @@
     el = $('bill-siret'); if (el) el.value = profile.billing_siret || '';
     el = $('bill-tva'); if (el) el.value = profile.billing_tva_number || '';
     el = $('bill-email'); if (el) el.value = profile.billing_email || '';
-    el = $('bill-address'); if (el) el.value = profile.billing_address || '';
+    // Parse structured billing address (stored as "street\npostalcode city")
+    var billAddr = profile.billing_address || '';
+    var addrLines = billAddr.split('\n');
+    el = $('bill-street'); if (el) el.value = addrLines[0] || '';
+    if (addrLines[1]) {
+      var match = addrLines[1].match(/^(\d{5})\s+(.+)$/);
+      if (match) {
+        el = $('bill-postalcode'); if (el) el.value = match[1];
+        el = $('bill-city'); if (el) el.value = match[2];
+      } else {
+        el = $('bill-city'); if (el) el.value = addrLines[1];
+      }
+    }
 
     // Update plan info
     var badge = $('bill-plan-badge');
@@ -949,7 +974,9 @@
       var siret = ($('bill-siret').value || '').trim();
       var tva = ($('bill-tva').value || '').trim().toUpperCase();
       var billingEmail = ($('bill-email').value || '').trim();
-      var address = ($('bill-address').value || '').trim();
+      var billStreet = ($('bill-street').value || '').trim();
+      var billPostalcode = ($('bill-postalcode').value || '').trim();
+      var billCity = ($('bill-city').value || '').trim();
 
       if (!company) { showError('bill-error', 'Le nom de l\'entreprise est obligatoire.'); return; }
       if (!siret || !isValidSiret(siret)) {
@@ -964,7 +991,11 @@
         showError('bill-email-error', 'Format d\'email invalide.');
         showError('bill-error', 'Veuillez corriger les erreurs ci-dessus.'); return;
       }
-      if (!address) { showError('bill-error', 'L\'adresse de facturation est obligatoire.'); return; }
+      if (!billStreet) { showError('bill-error', 'Le numéro et la rue sont obligatoires.'); return; }
+      if (!billPostalcode) { showError('bill-error', 'Le code postal est obligatoire.'); return; }
+      if (!billCity) { showError('bill-error', 'La ville est obligatoire.'); return; }
+
+      var address = billStreet + '\n' + billPostalcode + ' ' + billCity;
 
       var btn = $('bill-save-btn');
       btn.disabled = true; btn.textContent = 'Enregistrement...';
@@ -981,7 +1012,11 @@
           billing_address: address
         };
 
-        var res = await saveProfile(data, session.access_token, !currentProfile);
+        if (!currentProfile || !currentProfile.id) {
+          showError('bill-error', 'Votre fiche professionnelle n\'a pas encore été créée. Complétez d\'abord l\'onglet "Ma fiche" puis réessayez.');
+          return;
+        }
+        var res = await saveProfile(data, session.access_token, false);
         if (res.error || res.msg) {
           showError('bill-error', res.error || res.msg);
         } else if (res.profile) {

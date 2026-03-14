@@ -115,7 +115,7 @@
           </span>
           <span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-            <%= pro.priceRange %><%= pro.priceRange ? ' / séance' : '' %>
+            <%= pro.priceRange %>
           </span>
         </div>
       </div>
@@ -280,7 +280,7 @@
           <div class="ann-profile-info-list">
             <div class="ann-profile-info-row">
               <span class="ann-text-muted">Tarif</span>
-              <span class="ann-font-medium"><%= pro.priceRange %><%= pro.priceRange ? ' / séance' : '' %></span>
+              <span class="ann-font-medium"><%= pro.priceRange %></span>
             </div>
             <div class="ann-profile-info-row">
               <span class="ann-text-muted">Expérience</span>
@@ -412,7 +412,7 @@
       var value = infoRows[i].querySelector('.ann-font-medium, .ann-link-primary');
       if (!label || !value) continue;
       var key = label.textContent.trim();
-      if (key === 'Tarif' && p.price_range) value.textContent = p.price_range + ' / séance';
+      if (key === 'Tarif' && p.price_range) value.textContent = p.price_range;
       if (key === 'Expérience' && p.years_experience != null) value.textContent = p.years_experience + ' ans';
       if (key === 'Disponibilités' && p.availability) value.textContent = p.availability;
     }

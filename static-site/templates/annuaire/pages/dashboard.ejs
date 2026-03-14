@@ -367,10 +367,20 @@
             <span class="ann-field-error" id="bill-email-error" style="display:none;"></span>
           </div>
 
-          <!-- Billing address -->
+          <!-- Billing address (structured) -->
           <div class="ann-form-group">
-            <label class="ann-form-label" for="bill-address">Adresse complète de facturation <span style="color:hsl(0 70% 50%)">*</span></label>
-            <textarea class="ann-form-input" id="bill-address" rows="3" maxlength="500" placeholder="45 Rue de Rivoli&#10;75001 Paris&#10;France" style="resize: vertical; min-height: 5rem;"></textarea>
+            <label class="ann-form-label" for="bill-street">Numéro et rue <span style="color:hsl(0 70% 50%)">*</span></label>
+            <input class="ann-form-input" type="text" id="bill-street" maxlength="200" placeholder="45 Rue de Rivoli">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1rem;">
+            <div class="ann-form-group">
+              <label class="ann-form-label" for="bill-postalcode">Code postal <span style="color:hsl(0 70% 50%)">*</span></label>
+              <input class="ann-form-input" type="text" id="bill-postalcode" maxlength="10" placeholder="75001" inputmode="numeric">
+            </div>
+            <div class="ann-form-group">
+              <label class="ann-form-label" for="bill-city">Ville <span style="color:hsl(0 70% 50%)">*</span></label>
+              <input class="ann-form-input" type="text" id="bill-city" maxlength="100" placeholder="Paris">
+            </div>
           </div>
 
           <!-- Billing status indicator -->
