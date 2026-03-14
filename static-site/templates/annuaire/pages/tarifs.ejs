@@ -530,28 +530,29 @@
   // ── Auth-aware pricing buttons ──
   var SUPABASE_URL = 'https://lojvajnnvhatfplevyvy.supabase.co';
   var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
-  var authKey = 'sb-lojvajnnvhatfplevyvy-auth-token';
-  var raw = localStorage.getItem(authKey);
-  if (!raw) return;
 
-  try {
-    var data = JSON.parse(raw);
-    if (!data || !data.access_token) return;
-  } catch (e) { return; }
+  // Use Supabase client for proper token auto-refresh
+  if (typeof window.supabase === 'undefined' || !window.supabase.createClient) return;
+  var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-  var token = data.access_token;
+  sb.auth.getSession().then(function(sessionResult) {
+    var session = sessionResult.data.session;
+    if (!session) return;
+    var token = session.access_token;
 
-  // Fetch profile to check status
-  fetch(SUPABASE_URL + '/functions/v1/annuaire-profile', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'apikey': SUPABASE_KEY,
-      'Authorization': 'Bearer ' + token,
-    },
+    // Fetch profile to check status
+    return fetch(SUPABASE_URL + '/functions/v1/annuaire-profile', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + token,
+      },
+    })
+    .then(function(r) { return r.json(); });
   })
-  .then(function(r) { return r.json(); })
   .then(function(result) {
+    if (!result) return;
     var profile = result.profile;
     if (!profile) return;
 

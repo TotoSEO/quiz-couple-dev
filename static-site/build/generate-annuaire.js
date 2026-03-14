@@ -511,6 +511,15 @@ function copyAssets() {
     console.log('[annuaire] Copied: /js/annuaire-admin.js');
   }
 
+  // IndexNow key file (needed for annuaire.quiz-couple.com domain verification)
+  const indexNowKey = path.resolve(__dirname, '../dist/f4b78b7e6bfeaefe7290b5ce249449a8.txt');
+  const indexNowKeySrc = path.resolve(__dirname, '../f4b78b7e6bfeaefe7290b5ce249449a8.txt');
+  const keySource = fs.existsSync(indexNowKey) ? indexNowKey : (fs.existsSync(indexNowKeySrc) ? indexNowKeySrc : null);
+  if (keySource) {
+    fs.copyFileSync(keySource, path.join(DIST_DIR, 'f4b78b7e6bfeaefe7290b5ce249449a8.txt'));
+    console.log('[annuaire] Copied: IndexNow key file');
+  }
+
   // Assets (images, logo, etc.)
   const assetsSrcDir = path.resolve(__dirname, '../annuaire/assets');
   if (fs.existsSync(assetsSrcDir)) {
