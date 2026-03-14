@@ -15,6 +15,14 @@ const PLAN_FROM_PRICE: Record<string, string> = {
   'price_1TAsKsCqyRKQqXWFwzZh2Oeo': 'boost',
 };
 
+// Price → period mapping
+const PERIOD_FROM_PRICE: Record<string, string> = {
+  'price_1TArSxCqyRKQqXWFAHOj8WVt': 'monthly',
+  'price_1TArTdCqyRKQqXWFckgu1Rt2': 'annual',
+  'price_1TAsKSCqyRKQqXWF2mOyaLTm': 'monthly',
+  'price_1TAsKsCqyRKQqXWFwzZh2Oeo': 'annual',
+};
+
 serve(async (req: Request) => {
   // Only POST allowed
   if (req.method !== 'POST') {
@@ -80,7 +88,7 @@ serve(async (req: Request) => {
         break;
       }
 
-      // ── Invoice paid → renew plan period ──
+      // ── Invoice paid → renew plan period + generate invoice PDF ──
       case 'invoice.paid': {
         const invoice = event.data.object as Stripe.Invoice;
         if (!invoice.subscription) break;
@@ -88,18 +96,71 @@ serve(async (req: Request) => {
         const subscription = await stripe.subscriptions.retrieve(invoice.subscription as string);
         const priceId = subscription.items.data[0]?.price.id;
         const plan = PLAN_FROM_PRICE[priceId] || 'pro';
+        const period = PERIOD_FROM_PRICE[priceId] || 'monthly';
+        const periodStart = new Date(subscription.current_period_start * 1000).toISOString();
         const periodEnd = new Date(subscription.current_period_end * 1000).toISOString();
 
-        const { error } = await supabase
+        // Update plan in DB
+        const { data: updatedProfile, error } = await supabase
           .from('annuaire_professionals')
           .update({
             plan,
             plan_expires_at: periodEnd,
           })
-          .eq('stripe_subscription_id', subscription.id);
+          .eq('stripe_subscription_id', subscription.id)
+          .select('id')
+          .single();
 
-        if (error) console.error('[webhook] Update error on invoice.paid:', error);
-        else console.log(`[webhook] Plan renewed: ${plan}, expires ${periodEnd}`);
+        if (error) {
+          console.error('[webhook] Update error on invoice.paid:', error);
+          break;
+        }
+        console.log(`[webhook] Plan renewed: ${plan}, expires ${periodEnd}`);
+
+        // Generate invoice PDF and send by email
+        if (updatedProfile) {
+          try {
+            // Calculate amounts from Stripe invoice
+            const amountHt = invoice.subtotal || 0;         // HT in cents
+            const amountTva = invoice.tax || Math.round(amountHt * 0.2); // TVA
+            const amountTtc = invoice.amount_paid || (amountHt + amountTva);
+
+            // Check for discount
+            let discountAmount = 0;
+            let discountLabel: string | null = null;
+            if (invoice.discount && invoice.total_discount_amounts && invoice.total_discount_amounts.length > 0) {
+              discountAmount = invoice.total_discount_amounts[0].amount || 0;
+              const coupon = invoice.discount.coupon;
+              if (coupon) {
+                if (coupon.percent_off) {
+                  discountLabel = `Réduction de -${coupon.percent_off}%`;
+                } else if (coupon.amount_off) {
+                  discountLabel = `Réduction de -${(coupon.amount_off / 100).toFixed(2).replace('.', ',')} €`;
+                } else {
+                  discountLabel = 'Réduction';
+                }
+              }
+            }
+
+            await triggerInvoiceGeneration({
+              stripe_invoice_id: invoice.id,
+              professional_id: updatedProfile.id,
+              plan,
+              period,
+              period_start: periodStart,
+              period_end: periodEnd,
+              amount_ht: amountHt,
+              amount_tva: amountTva,
+              amount_ttc: amountTtc,
+              discount_amount: discountAmount,
+              discount_label: discountLabel,
+              paid_at: new Date().toISOString(),
+            });
+          } catch (invoiceErr) {
+            // Don't fail the webhook if invoice generation fails
+            console.error('[webhook] Invoice generation error:', invoiceErr);
+          }
+        }
         break;
       }
 
@@ -185,5 +246,28 @@ async function queueDeploy(supabase: ReturnType<typeof createClient>, reason: st
     await supabase.from('annuaire_deploy_queue').insert({ reason });
   } catch (err) {
     console.warn('[webhook] Failed to queue deploy:', err);
+  }
+}
+
+async function triggerInvoiceGeneration(invoiceData: Record<string, unknown>) {
+  try {
+    const res = await fetch(`${SUPABASE_URL}/functions/v1/annuaire-generate-invoice`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${SUPABASE_SERVICE_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(invoiceData),
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      console.error(`[webhook] Invoice generation failed: ${res.status} ${errText}`);
+    } else {
+      const result = await res.json();
+      console.log(`[webhook] Invoice generated: ${result.invoice_number}, sent to ${result.sent_to}`);
+    }
+  } catch (err) {
+    console.error('[webhook] Invoice trigger error:', err);
   }
 }
