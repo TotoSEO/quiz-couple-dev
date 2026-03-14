@@ -183,6 +183,8 @@
         <div class="ann-form-group" style="position:relative;">
           <label class="ann-label" for="f-adresse">Adresse <span class="ann-required">*</span></label>
           <input type="text" id="f-adresse" name="adresse" class="ann-input" placeholder="45 Rue de Rivoli" maxlength="200" autocomplete="off" required>
+          <input type="hidden" id="f-lat" name="lat" value="">
+          <input type="hidden" id="f-lng" name="lng" value="">
           <div id="f-adresse-suggestions" style="display:none;position:absolute;top:100%;left:0;right:0;z-index:50;background:var(--ann-card-bg,#fff);border:1px solid hsl(var(--ann-border));border-radius:0 0 var(--ann-radius) var(--ann-radius);max-height:200px;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
           <span class="ann-field-error" id="err-adresse"></span>
         </div>
@@ -234,12 +236,6 @@
           <span class="ann-field-error" id="err-modes"></span>
         </div>
 
-        <div class="ann-form-group">
-          <label class="ann-label" for="f-doctolib">Lien Doctolib <span class="ann-text-muted ann-text-xs">(optionnel)</span></label>
-          <input type="url" id="f-doctolib" name="doctolib" class="ann-input" placeholder="https://www.doctolib.fr/votre-profil" maxlength="300">
-          <p class="ann-text-muted ann-text-sm" style="margin-top: 0.25rem;">Si vous utilisez Doctolib, ajoutez votre lien pour permettre la prise de rendez-vous en ligne.</p>
-          <span class="ann-field-error" id="err-doctolib"></span>
-        </div>
       </div>
 
       <!-- ═══ Step 4: Presentation & Pricing ═══ -->

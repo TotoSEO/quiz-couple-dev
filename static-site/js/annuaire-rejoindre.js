@@ -14,6 +14,19 @@
   var form = document.getElementById('rejoindre-form');
   if (!form) return;
 
+  // ── Redirect logged-in users to dashboard ──
+  (function () {
+    var authKey = 'sb-lojvajnnvhatfplevyvy-auth-token';
+    var raw = localStorage.getItem(authKey);
+    if (!raw) return;
+    try {
+      var data = JSON.parse(raw);
+      if (data && data.access_token) {
+        window.location.href = '/dashboard/';
+      }
+    } catch (e) { /* not logged in */ }
+  })();
+
   // ── Specialty-specific methods (same as dashboard) ──
   var METHODS_BY_SPECIALTY = {
     'therapeute-de-couple': [
@@ -271,6 +284,11 @@
               div.addEventListener('mousedown', function (e) {
                 e.preventDefault();
                 addrInput.value = r.display_name;
+                // Capture lat/lng from Nominatim result
+                var latInput = document.getElementById('f-lat');
+                var lngInput = document.getElementById('f-lng');
+                if (latInput && r.lat) latInput.value = r.lat;
+                if (lngInput && r.lon) lngInput.value = r.lon;
                 sugBox.style.display = 'none';
               });
               sugBox.appendChild(div);
@@ -353,19 +371,6 @@
       if (!val('f-ville')) { showError('err-ville', 'La ville est requise'); valid = false; }
       var modesChecked = form.querySelectorAll('input[name="modes"]:checked');
       if (modesChecked.length === 0) { showError('err-modes', 'Sélectionnez au moins un mode'); valid = false; }
-      var doctolibVal = val('f-doctolib');
-      if (doctolibVal) {
-        try {
-          var dUrl = new URL(doctolibVal);
-          if (dUrl.hostname !== 'www.doctolib.fr' && dUrl.hostname !== 'doctolib.fr') {
-            showError('err-doctolib', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
-            valid = false;
-          }
-        } catch (e) {
-          showError('err-doctolib', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
-          valid = false;
-        }
-      }
     }
 
     if (step === 4) {
@@ -593,7 +598,8 @@
           });
           return modes.join(', ') || 'Sur rendez-vous';
         })(),
-        doctolib_url: val('f-doctolib') || null,
+        lat: parseFloat(val('f-lat')) || null,
+        lng: parseFloat(val('f-lng')) || null,
         is_published: false,
       };
 

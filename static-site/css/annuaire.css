@@ -2357,6 +2357,11 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   align-items: start;
 }
 .ann-profile-main { display: flex; flex-direction: column; gap: 1.5rem; }
+.ann-profile-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
 .ann-profile-sidebar {
   display: flex;
   flex-direction: column;
@@ -2470,6 +2475,9 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
     text-align: center;
   }
   .ann-profile-quick-info { justify-content: center; }
+  .ann-profile-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 639px) {

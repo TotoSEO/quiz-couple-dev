@@ -25,12 +25,14 @@
       "telephone": pro.phone,
       "email": pro.email,
       "knowsLanguage": pro.languages,
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": pro.rating,
-        "reviewCount": pro.reviewCount,
-        "bestRating": 5
-      }
+      ...(pro.premium && pro.reviewCount > 0 ? {
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": pro.rating,
+          "reviewCount": pro.reviewCount,
+          "bestRating": 5
+        }
+      } : {})
     },
     {
       "@context": "https://schema.org",
@@ -90,6 +92,7 @@
           <%= proSpec ? proSpec.name : pro.specialty %>
         </a>
 
+        <% if (pro.premium && pro.reviewCount > 0) { %>
         <div class="ann-pro-rating" style="margin-top: 0.5rem;">
           <div class="ann-stars">
             <% for (let i = 1; i <= 5; i++) { %>
@@ -99,6 +102,7 @@
           <span class="ann-rating-text"><%= pro.rating %></span>
           <span class="ann-review-count">(<%= pro.reviewCount %> avis)</span>
         </div>
+        <% } %>
 
         <div class="ann-profile-quick-info">
           <span>
@@ -111,7 +115,7 @@
           </span>
           <span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-            <%= pro.priceRange %>
+            <%= pro.priceRange %><%= pro.priceRange ? ' / séance' : '' %>
           </span>
         </div>
       </div>
@@ -136,16 +140,32 @@
           <p class="ann-profile-bio"><%= pro.description %></p>
         </div>
 
-        <!-- Methods -->
-        <div class="ann-profile-card">
-          <h2 class="ann-profile-card-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem"><path d="m12 3-1.912 5.813a2 2 0 01-1.275 1.275L3 12l5.813 1.912a2 2 0 011.275 1.275L12 21l1.912-5.813a2 2 0 011.275-1.275L21 12l-5.813-1.912a2 2 0 01-1.275-1.275L12 3Z"/></svg>
-            Approches et méthodes
-          </h2>
-          <div class="ann-profile-tags">
-            <% for (const method of pro.methods) { %>
-            <span class="ann-profile-tag"><%= method %></span>
-            <% } %>
+        <!-- Methods & Languages (side by side on desktop) -->
+        <div class="ann-profile-row">
+          <!-- Methods -->
+          <div class="ann-profile-card">
+            <h2 class="ann-profile-card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem"><path d="m12 3-1.912 5.813a2 2 0 01-1.275 1.275L3 12l5.813 1.912a2 2 0 011.275 1.275L12 21l1.912-5.813a2 2 0 011.275-1.275L21 12l-5.813-1.912a2 2 0 01-1.275-1.275L12 3Z"/></svg>
+              Approches et méthodes
+            </h2>
+            <div class="ann-profile-tags">
+              <% for (const method of pro.methods) { %>
+              <span class="ann-profile-tag"><%= method %></span>
+              <% } %>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="ann-profile-card">
+            <h2 class="ann-profile-card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+              Langues parlées
+            </h2>
+            <div class="ann-profile-tags">
+              <% for (const lang of pro.languages) { %>
+              <span class="ann-profile-tag"><%= lang %></span>
+              <% } %>
+            </div>
           </div>
         </div>
 
@@ -198,19 +218,6 @@
           </p>
         </div>
         <% } %>
-
-        <!-- Languages -->
-        <div class="ann-profile-card">
-          <h2 class="ann-profile-card-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
-            Langues parlées
-          </h2>
-          <div class="ann-profile-tags">
-            <% for (const lang of pro.languages) { %>
-            <span class="ann-profile-tag"><%= lang %></span>
-            <% } %>
-          </div>
-        </div>
 
       </div>
 
@@ -273,7 +280,7 @@
           <div class="ann-profile-info-list">
             <div class="ann-profile-info-row">
               <span class="ann-text-muted">Tarif</span>
-              <span class="ann-font-medium"><%= pro.priceRange %></span>
+              <span class="ann-font-medium"><%= pro.priceRange %><%= pro.priceRange ? ' / séance' : '' %></span>
             </div>
             <div class="ann-profile-info-row">
               <span class="ann-text-muted">Expérience</span>
@@ -405,7 +412,7 @@
       var value = infoRows[i].querySelector('.ann-font-medium, .ann-link-primary');
       if (!label || !value) continue;
       var key = label.textContent.trim();
-      if (key === 'Tarif' && p.price_range) value.textContent = p.price_range;
+      if (key === 'Tarif' && p.price_range) value.textContent = p.price_range + ' / séance';
       if (key === 'Expérience' && p.years_experience != null) value.textContent = p.years_experience + ' ans';
       if (key === 'Disponibilités' && p.availability) value.textContent = p.availability;
     }

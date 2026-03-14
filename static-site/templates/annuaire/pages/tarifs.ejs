@@ -504,7 +504,7 @@
   </div>
 </section>
 
-<!-- Pricing toggle JS (inline, tiny) -->
+<!-- Pricing toggle JS + auth-aware buttons -->
 <script>
 (function(){
   var monthly = document.getElementById('toggle-monthly');
@@ -526,5 +526,75 @@
 
   monthly.addEventListener('click', function() { setPeriod('monthly'); });
   annual.addEventListener('click', function() { setPeriod('annual'); });
+
+  // ── Auth-aware pricing buttons ──
+  var SUPABASE_URL = 'https://lojvajnnvhatfplevyvy.supabase.co';
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
+  var authKey = 'sb-lojvajnnvhatfplevyvy-auth-token';
+  var raw = localStorage.getItem(authKey);
+  if (!raw) return;
+
+  try {
+    var data = JSON.parse(raw);
+    if (!data || !data.access_token) return;
+  } catch (e) { return; }
+
+  var token = data.access_token;
+
+  // Fetch profile to check status
+  fetch(SUPABASE_URL + '/functions/v1/annuaire-profile', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'apikey': SUPABASE_KEY,
+      'Authorization': 'Bearer ' + token,
+    },
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(result) {
+    var profile = result.profile;
+    if (!profile) return;
+
+    // Get all pricing CTA buttons
+    var pricingCards = document.querySelectorAll('.ann-pricing-card');
+    pricingCards.forEach(function(card) {
+      var btn = card.querySelector('.ann-btn');
+      if (!btn || !btn.getAttribute('href')) return;
+      var href = btn.getAttribute('href');
+      if (href !== '/rejoindre/') return;
+
+      var isPro = btn.textContent.indexOf('Professionnel') !== -1;
+      var isBoost = btn.textContent.indexOf('Boost') !== -1;
+      var isFree = !isPro && !isBoost;
+
+      if (isFree) {
+        // Already registered — redirect to dashboard
+        btn.href = '/dashboard/';
+        btn.textContent = 'Accéder à mon espace';
+        return;
+      }
+
+      if (!profile.is_published) {
+        // Account pending validation
+        btn.href = '#';
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          alert('Votre fiche est en attente de validation. Veuillez patienter quelques heures avant de souscrire à un abonnement.');
+        });
+        return;
+      }
+
+      // Published — redirect to dashboard billing section
+      btn.href = '/dashboard/#billing';
+    });
+
+    // Also update bottom CTA
+    var bottomCta = document.querySelector('.ann-cta-section .ann-btn');
+    if (bottomCta && bottomCta.getAttribute('href') === '/rejoindre/') {
+      bottomCta.href = '/dashboard/';
+      bottomCta.innerHTML = 'Accéder à mon espace <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>';
+    }
+  })
+  .catch(function() { /* ignore — keep default buttons */ });
 })();
 </script>
