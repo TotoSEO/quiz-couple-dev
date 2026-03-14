@@ -950,6 +950,10 @@
             showError('bill-checkout-error', 'Veuillez d\'abord renseigner vos informations de facturation ci-dessus.');
             return;
           }
+          if (res.error === 'profile_not_validated') {
+            showError('bill-checkout-error', 'Votre fiche doit d\'abord être validée par notre équipe avant de pouvoir souscrire à un abonnement. Vous recevrez un email dès qu\'elle sera en ligne.');
+            return;
+          }
           if (res.error) {
             showError('bill-checkout-error', res.error);
             return;
