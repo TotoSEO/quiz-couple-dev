@@ -412,6 +412,32 @@
   })
   .catch(function(err) { console.warn('[live-profile] Could not refresh data:', err); });
 })();
+
+// Analytics tracking
+(function() {
+  var TRACK_URL = '<%= typeof supabaseUrl !== "undefined" ? supabaseUrl : "https://lojvajnnvhatfplevyvy.supabase.co" %>' + '/functions/v1/annuaire-track';
+  var PRO_ID = '<%= pro.id %>';
+  function track(payload) {
+    try { navigator.sendBeacon(TRACK_URL, JSON.stringify(payload)); } catch(e) {}
+  }
+  // Track page view
+  track({ type: 'view', professional_id: PRO_ID, referrer: document.referrer, user_agent: navigator.userAgent });
+  // Track contact clicks
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+    el.addEventListener('click', function() { track({ type: 'click', professional_id: PRO_ID, click_type: 'phone' }); });
+  });
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+    el.addEventListener('click', function() { track({ type: 'click', professional_id: PRO_ID, click_type: 'email' }); });
+  });
+  document.querySelectorAll('.ann-contact-item[href*="doctolib"], a[href*="doctolib"]').forEach(function(el) {
+    el.addEventListener('click', function() { track({ type: 'click', professional_id: PRO_ID, click_type: 'appointment' }); });
+  });
+  document.querySelectorAll('.ann-contact-item[target="_blank"]:not([href*="doctolib"])').forEach(function(el) {
+    if (el.querySelector('span') && el.querySelector('span').textContent.trim() === 'Site web') {
+      el.addEventListener('click', function() { track({ type: 'click', professional_id: PRO_ID, click_type: 'website' }); });
+    }
+  });
+})();
 </script>
 
 <% if (otherPros.length > 0) { %>
