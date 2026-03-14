@@ -8,7 +8,7 @@ const corsHeaders = {
 const TOKEN_MAX_AGE = 86400; // 24 hours
 
 async function verifyAdminToken(token: string): Promise<boolean> {
-  const secret = Deno.env.get('ADMIN_PASSWORD');
+  const secret = (Deno.env.get('ANNUAIRE_ADMIN_PASSWORD') || Deno.env.get('ADMIN_PASSWORD') || '').trim();
   if (!secret) return false;
   const parts = token.split('.');
   if (parts.length !== 2) return false;
@@ -28,9 +28,16 @@ serve(async (req) => {
   }
 
   try {
-    // Verify HMAC-signed admin token
+    // Auth: accept either HMAC admin token OR service_role key (for Postgres triggers)
     const adminToken = req.headers.get('x-admin-token');
-    if (!adminToken || !(await verifyAdminToken(adminToken))) {
+    const authHeader = req.headers.get('authorization') || '';
+    const bearerToken = authHeader.replace('Bearer ', '');
+    const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '';
+
+    const isAdminAuth = adminToken && (await verifyAdminToken(adminToken));
+    const isServiceRoleAuth = serviceRoleKey && bearerToken === serviceRoleKey;
+
+    if (!isAdminAuth && !isServiceRoleAuth) {
       return new Response(
         JSON.stringify({ success: false, error: 'Token admin invalide' }),
         { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }

@@ -232,12 +232,35 @@ serve(async (req: Request) => {
       const userId = user.id;
       console.log(`[DELETE] Starting account deletion for user ${userId}`);
 
+      // 0. Get profile info BEFORE deleting (needed for redirect + deploy)
+      const { data: profileInfo } = await supabase
+        .from('annuaire_professionals')
+        .select('slug, specialty, city, is_published')
+        .eq('user_id', userId)
+        .maybeSingle();
+
       // 1. Delete profile (if exists)
       const { error: profileError } = await supabase
         .from('annuaire_professionals')
         .delete()
         .eq('user_id', userId);
       if (profileError) console.error('[DELETE] Profile deletion error:', profileError);
+
+      // 1b. Create 301 redirect if profile was published
+      if (profileInfo?.slug && profileInfo?.specialty && profileInfo?.city && profileInfo?.is_published) {
+        const fromPath = `/${profileInfo.specialty}/${profileInfo.city}/${profileInfo.slug}/`;
+        const toPath = `/${profileInfo.specialty}/${profileInfo.city}/`;
+        try {
+          await supabase
+            .from('annuaire_redirects')
+            .upsert({ from_path: fromPath, to_path: toPath }, { onConflict: 'from_path' });
+          console.log(`[DELETE] Created redirect: ${fromPath} → ${toPath}`);
+        } catch (e) {
+          console.warn('[DELETE] Redirect creation failed:', e);
+        }
+        // Queue deploy to remove the deleted profile's page
+        await queueDeploy('user-delete: ' + profileInfo.slug);
+      }
 
       // 2. Delete storage photos
       try {
@@ -395,6 +418,24 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
     // Basic validation: Google Place IDs start with "ChIJ" or similar patterns
     if (gpi && gpi.length < 10) return { error: 'Google Place ID invalide.' };
     result.google_place_id = gpi || null;
+  }
+  if (Array.isArray(body.photos)) {
+    result.photos = body.photos
+      .filter((u: unknown) => typeof u === 'string' && (u as string).includes('supabase.co/storage'))
+      .map((u: string) => u.trim().slice(0, 500))
+      .slice(0, 5);
+  }
+  if (body.video_url !== undefined) {
+    const v = sanitize(body.video_url, 300);
+    if (v) {
+      // Only allow YouTube URLs
+      if (!/^https?:\/\/(www\.)?(youtube\.com|youtu\.be)\//.test(v)) {
+        return { error: 'Seules les vidéos YouTube sont acceptées.' };
+      }
+      result.video_url = v;
+    } else {
+      result.video_url = null;
+    }
   }
 
   // ── Billing fields ──

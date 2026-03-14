@@ -350,6 +350,13 @@ serve(async (req) => {
         });
       }
 
+      // Get profile info BEFORE deleting (needed for redirect)
+      const { data: profile } = await supabase
+        .from('annuaire_professionals')
+        .select('slug, specialty, city, is_published')
+        .eq('id', id)
+        .single();
+
       const { error } = await supabase
         .from('annuaire_professionals')
         .delete()
@@ -357,8 +364,22 @@ serve(async (req) => {
 
       if (error) throw error;
 
-      // Deploy is triggered by Postgres AFTER DELETE trigger (via deploy queue)
-      // No need to queue here — the DB trigger handles it
+      // Create 301 redirect from the old profile URL to the specialty/city page
+      if (profile?.slug && profile?.specialty && profile?.city) {
+        const fromPath = `/${profile.specialty}/${profile.city}/${profile.slug}/`;
+        const toPath = `/${profile.specialty}/${profile.city}/`;
+        try {
+          await supabase
+            .from('annuaire_redirects')
+            .upsert({ from_path: fromPath, to_path: toPath }, { onConflict: 'from_path' });
+          console.log(`[delete] Created redirect: ${fromPath} → ${toPath}`);
+        } catch (redirectErr) {
+          console.warn('[delete] Redirect creation failed:', redirectErr);
+        }
+      }
+
+      // Queue deploy to rebuild static site (remove deleted profile page)
+      await queueDeploy(supabase, 'delete: ' + (profile?.slug || id));
 
       return new Response(JSON.stringify({ success: true }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
