@@ -283,7 +283,10 @@
               div.addEventListener('mouseleave', function () { div.style.background = ''; });
               div.addEventListener('mousedown', function (e) {
                 e.preventDefault();
-                addrInput.value = r.display_name;
+                // Simplify address: keep only the first 2-3 meaningful parts
+                var parts = r.display_name.split(', ');
+                var simplified = parts.slice(0, 3).join(', ');
+                addrInput.value = simplified;
                 // Capture lat/lng from Nominatim result
                 var latInput = document.getElementById('f-lat');
                 var lngInput = document.getElementById('f-lng');
