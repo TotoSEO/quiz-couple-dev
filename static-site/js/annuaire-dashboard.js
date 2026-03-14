@@ -790,8 +790,9 @@
       upgradeLink.textContent = 'Gérer mon abonnement';
     }
 
-    // Show billing completeness status
+    // Show billing completeness status and plan UI
     updateBillingStatus(profile);
+    updatePlanUI(profile);
   }
 
   function updateBillingStatus(profile) {
@@ -812,6 +813,13 @@
     }
   }
 
+  // ── Billing period state ──
+  var billingPeriod = 'monthly';
+  var PRICES = {
+    pro:   { monthly: '5,99', annual: '4,99' },
+    boost: { monthly: '11,99', annual: '9,99' },
+  };
+
   function bindBillingForm() {
     var form = $('dash-billing-form');
     if (!form) return;
@@ -830,7 +838,6 @@
     if (tvaInput) {
       tvaInput.addEventListener('input', function () {
         var v = this.value.toUpperCase();
-        // Allow typing: force FR prefix, then digits
         if (v.length <= 2) {
           this.value = v.replace(/[^FR]/g, '').slice(0, 2);
         } else {
@@ -840,13 +847,13 @@
       });
     }
 
+    // Billing form submit
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
       hideError('bill-error');
       hide($('bill-success'));
       hide($('bill-saved-indicator'));
 
-      // Client-side validation
       var company = ($('bill-company').value || '').trim();
       var siret = ($('bill-siret').value || '').trim();
       var tva = ($('bill-tva').value || '').trim().toUpperCase();
@@ -889,6 +896,7 @@
         } else if (res.profile) {
           currentProfile = res.profile;
           updateBillingStatus(currentProfile);
+          updatePlanUI(currentProfile);
           $('bill-success').textContent = 'Informations de facturation enregistrées !';
           show($('bill-success'));
           show($('bill-saved-indicator'));
@@ -901,6 +909,141 @@
         btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Enregistrer';
       }
     });
+
+    // Period toggle (monthly / annual)
+    document.querySelectorAll('[data-bill-period]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('[data-bill-period]').forEach(function (b) { b.classList.remove('ann-auth-tab-active'); });
+        btn.classList.add('ann-auth-tab-active');
+        billingPeriod = btn.getAttribute('data-bill-period');
+        if ($('bill-price-pro')) $('bill-price-pro').textContent = PRICES.pro[billingPeriod];
+        if ($('bill-price-boost')) $('bill-price-boost').textContent = PRICES.boost[billingPeriod];
+      });
+    });
+
+    // Checkout buttons
+    document.querySelectorAll('[data-checkout]').forEach(function (btn) {
+      btn.addEventListener('click', async function () {
+        hideError('bill-checkout-error');
+
+        if (!currentProfile || !isBillingComplete(currentProfile)) {
+          show($('bill-incomplete-warning'));
+          showError('bill-checkout-error', 'Veuillez d\'abord renseigner vos informations de facturation ci-dessus.');
+          return;
+        }
+
+        var plan = btn.getAttribute('data-checkout');
+        var priceKey = plan + '_' + billingPeriod;
+
+        btn.disabled = true;
+        var origText = btn.textContent;
+        btn.textContent = 'Redirection...';
+
+        try {
+          var session = await checkAuth();
+          if (!session) { showError('bill-checkout-error', 'Session expirée.'); return; }
+
+          var res = await apiCall('annuaire-checkout', 'POST', { price_key: priceKey }, session.access_token);
+
+          if (res.error === 'billing_incomplete') {
+            show($('bill-incomplete-warning'));
+            showError('bill-checkout-error', 'Veuillez d\'abord renseigner vos informations de facturation ci-dessus.');
+            return;
+          }
+          if (res.error) {
+            showError('bill-checkout-error', res.error);
+            return;
+          }
+          if (res.url) {
+            window.location.href = res.url;
+          }
+        } catch (err) {
+          showError('bill-checkout-error', err.message || 'Erreur lors de la redirection vers Stripe');
+        } finally {
+          btn.disabled = false;
+          btn.textContent = origText;
+        }
+      });
+    });
+
+    // Stripe billing portal button
+    var portalBtn = $('bill-portal-btn');
+    if (portalBtn) {
+      portalBtn.addEventListener('click', async function () {
+        portalBtn.disabled = true;
+        portalBtn.textContent = 'Redirection...';
+        try {
+          var session = await checkAuth();
+          if (!session) { alert('Session expirée.'); return; }
+          var res = await apiCall('annuaire-billing-portal', 'POST', {}, session.access_token);
+          if (res.url) {
+            window.location.href = res.url;
+          } else {
+            alert(res.error || 'Erreur lors de l\'ouverture du portail.');
+          }
+        } catch (err) {
+          alert('Erreur: ' + (err.message || err));
+        } finally {
+          portalBtn.disabled = false;
+          portalBtn.textContent = 'Gérer mon abonnement';
+        }
+      });
+    }
+
+    // Handle checkout success/cancel from URL params
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('checkout') === 'success') {
+      setTimeout(function () {
+        var billingTab = document.querySelector('[data-dash-tab="billing"]');
+        if (billingTab) billingTab.click();
+        showSuccess('bill-success', 'Abonnement activé avec succès ! Votre fiche sera mise à jour dans quelques instants.');
+      }, 500);
+      window.history.replaceState({}, '', window.location.pathname);
+    } else if (params.get('checkout') === 'cancel') {
+      setTimeout(function () {
+        var billingTab = document.querySelector('[data-dash-tab="billing"]');
+        if (billingTab) billingTab.click();
+      }, 500);
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  }
+
+  function updatePlanUI(profile) {
+    if (!profile) return;
+    var plan = profile.plan || 'gratuit';
+    var hasSub = plan !== 'gratuit' && profile.stripe_subscription_id;
+
+    // Show/hide manage button
+    var manageSub = $('bill-manage-sub');
+    if (manageSub) {
+      if (hasSub) show(manageSub); else hide(manageSub);
+    }
+
+    // Show/hide billing incomplete warning
+    var warning = $('bill-incomplete-warning');
+    if (warning) {
+      if (!isBillingComplete(profile) && plan === 'gratuit') show(warning); else hide(warning);
+    }
+
+    // Update checkout button labels for current plan
+    document.querySelectorAll('[data-checkout]').forEach(function (btn) {
+      var btnPlan = btn.getAttribute('data-checkout');
+      if (btnPlan === plan) {
+        btn.textContent = 'Formule actuelle';
+        btn.disabled = true;
+        btn.style.opacity = '0.5';
+      } else {
+        btn.textContent = hasSub ? 'Changer' : 'Souscrire';
+        btn.disabled = false;
+        btn.style.opacity = '';
+      }
+    });
+
+    // Highlight current plan card
+    var proCard = $('bill-card-pro');
+    var boostCard = $('bill-card-boost');
+    if (proCard) proCard.style.borderColor = plan === 'pro' ? 'hsl(var(--ann-primary))' : 'transparent';
+    if (boostCard) boostCard.style.borderColor = plan === 'boost' ? 'hsl(var(--ann-primary))' : 'hsl(var(--ann-primary) / 0.3)';
   }
 
   function bindDeleteAccount() {
