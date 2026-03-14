@@ -210,10 +210,17 @@
           </div>
           <div class="ann-form-group">
             <label class="ann-form-label" for="prof-doctolib">Lien Doctolib <span class="ann-text-muted" style="font-size:0.75rem; font-weight:400;">(optionnel)</span></label>
-            <input class="ann-form-input" type="url" id="prof-doctolib" placeholder="https://www.doctolib.fr/votre-profil" maxlength="300">
+            <input class="ann-form-input" type="url" id="prof-doctolib" placeholder="https://www.doctolib.fr/votre-profil" maxlength="300" disabled style="opacity:0.5; cursor:not-allowed;">
             <p class="ann-text-muted" style="font-size:0.75rem;margin-top:0.25rem;">
               Ajoutez votre lien Doctolib pour permettre aux patients de prendre rendez-vous directement en ligne.
             </p>
+            <div id="dash-doctolib-locked" style="margin-top: 0.375rem;">
+              <p class="ann-text-muted" style="font-size: 0.75rem; color: hsl(var(--ann-primary));">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.75rem;height:0.75rem;vertical-align:middle;margin-right:0.25rem"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                Passez à l'offre <strong>Professionnel</strong> ou <strong>Boost</strong> pour ajouter votre lien Doctolib.
+                <a href="/tarifs/" style="color:hsl(var(--ann-primary));">Voir les tarifs</a>
+              </p>
+            </div>
             <div id="dash-doctolib-error" class="ann-form-error" style="display:none;"></div>
           </div>
 
