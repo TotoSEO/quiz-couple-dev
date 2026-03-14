@@ -128,7 +128,7 @@ serve(async (req: Request) => {
                     </div>
 
                     <p style="font-size:0.875rem;color:#666;text-align:center;margin:0;">
-                      À partir de <strong>4,99€ HT/mois</strong> &middot; Sans engagement &middot; Annulable à tout moment
+                      À partir de <strong>4,99€/mois</strong> &middot; Sans engagement &middot; Annulable à tout moment
                     </p>
                   </div>
 

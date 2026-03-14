@@ -5,6 +5,23 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Rate limiting: max 5 attempts per IP per 15 minutes
+const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 min
+const RATE_LIMIT_MAX = 5;
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW });
+    return true;
+  }
+  if (entry.count >= RATE_LIMIT_MAX) return false;
+  entry.count++;
+  return true;
+}
+
 async function generateAdminToken(secret: string): Promise<string> {
   const timestamp = Math.floor(Date.now() / 1000).toString(16);
   const encoder = new TextEncoder();
@@ -28,6 +45,17 @@ serve(async (req) => {
   }
 
   try {
+    // Rate limit check
+    const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+      || req.headers.get('cf-connecting-ip')
+      || 'unknown';
+    if (!checkRateLimit(clientIp)) {
+      return new Response(
+        JSON.stringify({ success: false, error: 'Trop de tentatives. Reessayez dans 15 minutes.' }),
+        { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     const { password } = await req.json();
 
     if (!password || typeof password !== 'string') {

@@ -75,6 +75,15 @@
           </div>
         </div>
 
+        <!-- Section Tabs -->
+        <div style="display:flex;border-bottom:2px solid hsl(var(--ann-border));margin-bottom:1.5rem;gap:0;">
+          <button class="aadm-tab" data-tab="profiles" style="padding:0.75rem 1.5rem;font-size:0.875rem;font-weight:600;border:none;cursor:pointer;background:none;color:hsl(var(--ann-primary));border-bottom:2px solid hsl(var(--ann-primary));margin-bottom:-2px;">Fiches</button>
+          <button class="aadm-tab" data-tab="invoices" style="padding:0.75rem 1.5rem;font-size:0.875rem;font-weight:600;border:none;cursor:pointer;background:none;color:hsl(var(--ann-muted-fg));border-bottom:2px solid transparent;margin-bottom:-2px;">Factures</button>
+        </div>
+
+        <!-- ═══ PROFILES TAB ═══ -->
+        <div id="aadm-tab-profiles">
+
         <!-- Filters & Search -->
         <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;flex-wrap:wrap;">
           <button id="aadm-refresh" class="ann-btn" style="font-size:0.875rem;padding:0.5rem 1rem;background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));color:hsl(var(--ann-fg));display:flex;align-items:center;gap:0.5rem;">
@@ -96,6 +105,26 @@
         <div id="aadm-profiles-list">
           <p style="text-align:center;color:hsl(var(--ann-muted-fg));padding:3rem 0;">Chargement...</p>
         </div>
+
+        </div><!-- end profiles tab -->
+
+        <!-- ═══ INVOICES TAB ═══ -->
+        <div id="aadm-tab-invoices" style="display:none;">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+            <button id="aadm-invoices-refresh" class="ann-btn" style="font-size:0.875rem;padding:0.5rem 1rem;background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));color:hsl(var(--ann-fg));display:flex;align-items:center;gap:0.5rem;">
+              <svg style="width:1rem;height:1rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+              Actualiser
+            </button>
+            <div style="position:relative;flex:1;min-width:12rem;max-width:20rem;">
+              <svg style="position:absolute;left:0.75rem;top:50%;transform:translateY(-50%);width:0.875rem;height:0.875rem;color:hsl(var(--ann-muted-fg));pointer-events:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              <input type="text" id="aadm-invoices-search" placeholder="Rechercher par nom ou numero..." style="width:100%;padding:0.5rem 0.75rem 0.5rem 2.25rem;font-size:0.875rem;border:1px solid hsl(var(--ann-border));border-radius:var(--ann-radius);background:hsl(var(--ann-card));color:hsl(var(--ann-fg));">
+            </div>
+          </div>
+          <div id="aadm-invoices-list">
+            <p style="text-align:center;color:hsl(var(--ann-muted-fg));padding:3rem 0;">Selectionnez l'onglet Factures pour charger les donnees.</p>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -116,6 +145,35 @@
         <div style="display:flex;gap:0.75rem;">
           <button id="aadm-delete-cancel" class="ann-btn" style="flex:1;padding:0.625rem;font-size:0.875rem;font-weight:600;background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));color:hsl(var(--ann-fg));">Annuler</button>
           <button id="aadm-delete-confirm" class="ann-btn" style="flex:1;padding:0.625rem;font-size:0.875rem;font-weight:600;background:hsl(0 70% 50%);color:white;border:1px solid hsl(0 70% 50%);">Supprimer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plan Change Modal -->
+    <div id="aadm-plan-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);align-items:center;justify-content:center;">
+      <div style="background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));border-radius:1rem;padding:2rem;max-width:28rem;width:calc(100% - 2rem);margin:auto;box-shadow:0 25px 50px -12px rgba(0,0,0,0.25);">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+          <div style="width:3.5rem;height:3.5rem;margin:0 auto 1rem;border-radius:50%;background:hsl(260 50% 92%);display:flex;align-items:center;justify-content:center;">
+            <svg style="width:1.75rem;height:1.75rem;color:hsl(260 50% 50%);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+          </div>
+          <h2 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Modifier l'abonnement</h2>
+          <p id="aadm-plan-name" style="font-size:1rem;font-weight:600;color:hsl(var(--ann-primary));margin-bottom:0.5rem;"></p>
+          <p style="font-size:0.875rem;color:hsl(var(--ann-muted-fg));margin-bottom:1rem;">Plan actuel : <strong id="aadm-plan-current"></strong></p>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;text-align:left;">
+            <label style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem;border:1px solid hsl(var(--ann-border));border-radius:var(--ann-radius);cursor:pointer;">
+              <input type="radio" name="aadm-plan" value="gratuit"> <span><strong>Gratuit</strong> — Fiche basique</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem;border:1px solid hsl(var(--ann-border));border-radius:var(--ann-radius);cursor:pointer;">
+              <input type="radio" name="aadm-plan" value="pro"> <span><strong>Pro</strong> — Badge certifie, priorite</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem;border:1px solid hsl(var(--ann-border));border-radius:var(--ann-radius);cursor:pointer;">
+              <input type="radio" name="aadm-plan" value="boost"> <span><strong>Boost</strong> — Toutes fonctionnalites</span>
+            </label>
+          </div>
+        </div>
+        <div style="display:flex;gap:0.75rem;">
+          <button id="aadm-plan-cancel" class="ann-btn" style="flex:1;padding:0.625rem;font-size:0.875rem;font-weight:600;background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));color:hsl(var(--ann-fg));">Annuler</button>
+          <button id="aadm-plan-confirm" class="ann-btn ann-btn-primary" style="flex:1;padding:0.625rem;font-size:0.875rem;font-weight:600;">Confirmer</button>
         </div>
       </div>
     </div>
