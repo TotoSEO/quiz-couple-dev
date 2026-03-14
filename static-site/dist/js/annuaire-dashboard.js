@@ -403,6 +403,14 @@
       if (websiteLocked) hide(websiteLocked);
     }
 
+    // Unlock Doctolib for Pro or Boost users
+    var doctolibInput = $('prof-doctolib');
+    var doctolibLocked = $('dash-doctolib-locked');
+    if (doctolibInput && (profile.plan === 'pro' || profile.plan === 'boost')) {
+      doctolibInput.disabled = false; doctolibInput.style.opacity = ''; doctolibInput.style.cursor = '';
+      if (doctolibLocked) hide(doctolibLocked);
+    }
+
     // Show Google Reviews for Boost users
     var googleSection = $('dash-google-reviews-section');
     if (googleSection && profile.plan === 'boost') {
@@ -444,7 +452,7 @@
       availability: getSelectedBubbles('prof-availability-container').join(', ') || null,
     };
     var doctolibInput = $('prof-doctolib');
-    if (doctolibInput) {
+    if (doctolibInput && !doctolibInput.disabled) {
       data.doctolib_url = doctolibInput.value.trim() || null;
     }
     var gpiInput = $('prof-google-place-id');
@@ -580,7 +588,8 @@
         var session = await checkAuth();
         if (!session) { alert('Session expirée. Reconnectez-vous.'); return; }
         var url = await uploadPhoto(file, session.user.id);
-        $('dash-photo-preview').innerHTML = '<img src="' + url + '" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" alt="Photo">';
+        var safePhotoUrl = url.replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; });
+        $('dash-photo-preview').innerHTML = '<img src="' + safePhotoUrl + '" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" alt="Photo">';
         await saveProfile({ photo_url: url }, session.access_token, !currentProfile);
       } catch (err) {
         alert(err.message || 'Erreur lors de l\'upload');

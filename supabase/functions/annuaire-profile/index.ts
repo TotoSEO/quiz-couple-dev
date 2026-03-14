@@ -184,6 +184,20 @@ serve(async (req: Request) => {
         });
       }
 
+      // Doctolib URL is only allowed for paid plans (pro/boost)
+      if (updates.doctolib_url) {
+        const { data: current } = await supabase
+          .from('annuaire_professionals')
+          .select('plan')
+          .eq('user_id', user.id)
+          .maybeSingle();
+        if (!current || !current.plan || current.plan === 'gratuit') {
+          return new Response(JSON.stringify({ error: 'Le lien Doctolib est réservé aux offres Professionnel et Boost.' }), {
+            status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          });
+        }
+      }
+
       const { data, error } = await supabase
         .from('annuaire_professionals')
         .update(updates)
