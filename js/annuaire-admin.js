@@ -14,6 +14,7 @@
   var searchQuery = '';
   var invoiceSearchQuery = '';
   var invoicesLoaded = false;
+  var selectedIds = new Set();
 
   var SPEC_LABELS = {
     'therapeute-de-couple': 'Therapeute de couple',
@@ -143,6 +144,7 @@
         return;
       }
       allProfiles = data.profiles || [];
+      selectedIds.clear();
 
       // Update stats
       var s = data.stats || {};
@@ -191,7 +193,12 @@
       return;
     }
 
+    // Show bulk bar
+    var bulkBar = document.getElementById('aadm-bulk-bar');
+    if (bulkBar) bulkBar.style.display = 'flex';
+
     listEl.innerHTML = filtered.map(function (p) {
+      var isChecked = selectedIds.has(p.id);
       var statusBadge = p.is_published
         ? '<span style="display:inline-flex;padding:0.125rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background:hsl(160 60% 45%/0.1);color:hsl(160 60% 35%);">Publie</span>'
         : '<span style="display:inline-flex;padding:0.125rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background:hsl(40 90% 55%/0.1);color:hsl(40 70% 35%);">En attente</span>';
@@ -230,6 +237,7 @@
         '<svg style="width:0.875rem;height:0.875rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></button>';
 
       return '<div style="background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));border-radius:var(--ann-radius);padding:1rem;display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:0.75rem;">' +
+        '<div style="flex-shrink:0;display:flex;align-items:center;"><input type="checkbox" class="aadm-check" data-id="' + p.id + '"' + (isChecked ? ' checked' : '') + ' style="width:1.125rem;height:1.125rem;cursor:pointer;accent-color:hsl(var(--ann-primary));"></div>' +
         '<div style="flex-shrink:0;">' + photoHtml + '</div>' +
         '<div style="flex:1;min-width:0;">' +
           '<div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.25rem;">' +
@@ -245,6 +253,8 @@
         '<div style="display:flex;gap:0.5rem;flex-shrink:0;flex-wrap:wrap;">' + actions + '</div>' +
       '</div>';
     }).join('');
+
+    updateBulkUI();
   }
 
   function esc(s) {
@@ -498,25 +508,40 @@
     });
   }
 
+  var deployDebounceTimer = null;
+  var pendingDeployActions = 0;
+
   function autoTriggerDeploy() {
+    pendingDeployActions++;
+    // Debounce: wait 5 seconds after last action before triggering deploy
+    // This prevents 10 deploys when approving 10 profiles
+    if (deployDebounceTimer) clearTimeout(deployDebounceTimer);
     var btn = document.getElementById('aadm-deploy');
-    fetch(SUPABASE_URL + '/functions/v1/trigger-deploy', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + SUPABASE_KEY,
-        'x-admin-token': adminToken,
-      },
-    })
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      if (data.success && btn) {
-        var origText = btn.innerHTML;
-        btn.innerHTML = '<svg style="width:1rem;height:1rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Deploiement auto lance';
-        setTimeout(function () { btn.innerHTML = origText; }, 4000);
-      }
-    })
-    .catch(function () { /* silent — deploy queue already has the entry */ });
+    if (btn) {
+      btn.innerHTML = '<svg style="width:1rem;height:1rem;animation:spin 1s linear infinite;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg> Deploiement dans 5s... (' + pendingDeployActions + ' action' + (pendingDeployActions > 1 ? 's' : '') + ')';
+    }
+    deployDebounceTimer = setTimeout(function () {
+      var count = pendingDeployActions;
+      pendingDeployActions = 0;
+      deployDebounceTimer = null;
+      fetch(SUPABASE_URL + '/functions/v1/trigger-deploy', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'x-admin-token': adminToken,
+        },
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data.success && btn) {
+          var origText = '<svg style="width:1rem;height:1rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg> Deployer les fiches';
+          btn.innerHTML = '<svg style="width:1rem;height:1rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Deploiement lance (' + count + ' action' + (count > 1 ? 's' : '') + ')';
+          setTimeout(function () { btn.innerHTML = origText; }, 4000);
+        }
+      })
+      .catch(function () { /* silent */ });
+    }, 5000);
   }
 
   // ── Deploy ──
@@ -551,6 +576,84 @@
       alert('Erreur reseau');
       btn.innerHTML = origText;
       btn.disabled = false;
+    });
+  }
+
+  // ── Bulk Selection ──
+
+  function updateBulkUI() {
+    var countEl = document.getElementById('aadm-selected-count');
+    var approveBtn = document.getElementById('aadm-bulk-approve');
+    var rejectBtn = document.getElementById('aadm-bulk-reject');
+    var deleteBtn = document.getElementById('aadm-bulk-delete');
+    var selectAll = document.getElementById('aadm-select-all');
+
+    var count = selectedIds.size;
+    if (countEl) countEl.textContent = count + ' selectionne' + (count > 1 ? 's' : '');
+    if (approveBtn) approveBtn.disabled = count === 0;
+    if (rejectBtn) rejectBtn.disabled = count === 0;
+    if (deleteBtn) deleteBtn.disabled = count === 0;
+
+    // Update select-all checkbox state
+    var checkboxes = document.querySelectorAll('.aadm-check');
+    if (selectAll && checkboxes.length > 0) {
+      selectAll.checked = count > 0 && count === checkboxes.length;
+      selectAll.indeterminate = count > 0 && count < checkboxes.length;
+    }
+  }
+
+  function bulkAction(action) {
+    if (selectedIds.size === 0) return;
+    var ids = Array.from(selectedIds);
+    var count = ids.length;
+
+    if (action === 'approve') {
+      if (!confirm('Approuver et publier ' + count + ' fiche' + (count > 1 ? 's' : '') + ' ?')) return;
+    } else if (action === 'reject') {
+      var reason = prompt('Motif du rejet (optionnel) pour ' + count + ' fiche(s) :');
+      if (reason === null) return;
+    } else if (action === 'delete') {
+      if (!confirm('Supprimer definitivement ' + count + ' fiche' + (count > 1 ? 's' : '') + ' ? Cette action est irreversible.')) return;
+    }
+
+    var completed = 0;
+    var errors = 0;
+
+    ids.forEach(function (id) {
+      var body = { id: id };
+      if (action === 'reject' && reason) body.reason = reason;
+
+      fetch(SUPABASE_URL + '/functions/v1/admin-annuaire?action=' + action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'x-admin-token': adminToken,
+        },
+        body: JSON.stringify(body),
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (!data.success) errors++;
+        completed++;
+        if (completed === count) {
+          selectedIds.clear();
+          allProfiles = [];
+          loadProfiles();
+          autoTriggerDeploy();
+          if (errors > 0) alert(errors + ' erreur(s) sur ' + count + ' action(s).');
+        }
+      })
+      .catch(function () {
+        errors++;
+        completed++;
+        if (completed === count) {
+          selectedIds.clear();
+          allProfiles = [];
+          loadProfiles();
+          if (errors > 0) alert(errors + ' erreur(s) sur ' + count + ' action(s).');
+        }
+      });
     });
   }
 
@@ -660,6 +763,35 @@
       if (e.key === 'Escape') {
         hideDeleteModal();
         hidePlanModal();
+      }
+    });
+
+    // Bulk action buttons
+    var bulkApproveBtn = document.getElementById('aadm-bulk-approve');
+    if (bulkApproveBtn) bulkApproveBtn.addEventListener('click', function () { bulkAction('approve'); });
+    var bulkRejectBtn = document.getElementById('aadm-bulk-reject');
+    if (bulkRejectBtn) bulkRejectBtn.addEventListener('click', function () { bulkAction('reject'); });
+    var bulkDeleteBtn = document.getElementById('aadm-bulk-delete');
+    if (bulkDeleteBtn) bulkDeleteBtn.addEventListener('click', function () { bulkAction('delete'); });
+
+    // Select all checkbox
+    var selectAllCb = document.getElementById('aadm-select-all');
+    if (selectAllCb) selectAllCb.addEventListener('change', function () {
+      var checked = this.checked;
+      document.querySelectorAll('.aadm-check').forEach(function (cb) {
+        cb.checked = checked;
+        if (checked) selectedIds.add(cb.dataset.id);
+        else selectedIds.delete(cb.dataset.id);
+      });
+      updateBulkUI();
+    });
+
+    // Individual checkbox delegation
+    document.addEventListener('change', function (e) {
+      if (e.target.classList.contains('aadm-check')) {
+        if (e.target.checked) selectedIds.add(e.target.dataset.id);
+        else selectedIds.delete(e.target.dataset.id);
+        updateBulkUI();
       }
     });
 

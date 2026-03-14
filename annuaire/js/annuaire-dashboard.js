@@ -527,6 +527,12 @@
             if (res.profile) {
               currentProfile = res.profile;
               await supabase.auth.updateUser({ data: { has_pending_profile: false } });
+            } else if (res.error) {
+              // Profile may already exist (409) — reload it
+              currentProfile = await loadProfile(session.access_token);
+              if (currentProfile) {
+                await supabase.auth.updateUser({ data: { has_pending_profile: false } });
+              }
             }
           } catch (e) { console.warn('Auto-create profile failed:', e); }
         }
@@ -640,6 +646,13 @@
       try {
         var isNew = !currentProfile;
         var res = await saveProfile(data, session.access_token, isNew);
+        // If POST failed with 409 (profile already exists), reload and retry as PUT
+        if (isNew && res.error && res.error.indexOf('déjà') !== -1) {
+          currentProfile = await loadProfile(session.access_token);
+          if (currentProfile) {
+            res = await saveProfile(data, session.access_token, false);
+          }
+        }
         if (res.error || res.msg) {
           showError('dash-profile-error', res.error || res.msg);
         } else if (res.profile) {
@@ -1012,6 +1025,10 @@
           billing_address: address
         };
 
+        // Reload profile to ensure it's current before saving billing
+        if (!currentProfile || !currentProfile.id) {
+          currentProfile = await loadProfile(session.access_token);
+        }
         if (!currentProfile || !currentProfile.id) {
           showError('bill-error', 'Votre fiche professionnelle n\'a pas encore été créée. Complétez d\'abord l\'onglet "Ma fiche" puis réessayez.');
           return;
