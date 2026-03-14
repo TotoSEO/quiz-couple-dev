@@ -44,6 +44,44 @@ async function queueDeploy(supabase: any, reason: string): Promise<void> {
   }
 }
 
+async function cleanupExtraPhotos(supabase: any, professionalId: string): Promise<void> {
+  // Free plan allows only 1 photo (profile photo). Delete any extras.
+  const { data: profile } = await supabase
+    .from('annuaire_professionals')
+    .select('photo_url, photos')
+    .eq('id', professionalId)
+    .single();
+
+  if (!profile) return;
+
+  // photos is a JSON array of extra photo URLs beyond the profile photo
+  const extraPhotos: string[] = profile.photos || [];
+  if (extraPhotos.length === 0) return;
+
+  // Delete extra photos from storage
+  const filePaths = extraPhotos
+    .map((url: string) => {
+      // Extract storage path from URL: .../annuaire-photos/{professional_id}/{filename}
+      const match = url.match(/annuaire-photos\/(.+)$/);
+      return match ? match[1] : null;
+    })
+    .filter(Boolean) as string[];
+
+  if (filePaths.length > 0) {
+    const { error } = await supabase.storage
+      .from('annuaire-photos')
+      .remove(filePaths);
+    if (error) console.warn('[cleanup] Storage remove error:', error);
+    else console.log(`[cleanup] Removed ${filePaths.length} extra photos for ${professionalId}`);
+  }
+
+  // Clear the photos array in DB (keep only photo_url = profile photo)
+  await supabase
+    .from('annuaire_professionals')
+    .update({ photos: [] })
+    .eq('id', professionalId);
+}
+
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -323,6 +361,95 @@ serve(async (req) => {
       // No need to queue here — the DB trigger handles it
 
       return new Response(JSON.stringify({ success: true }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    // ── INVOICES: List all invoices ──
+    if (action === 'invoices') {
+      const { data, error } = await supabase
+        .from('annuaire_invoices')
+        .select('*, annuaire_professionals!inner(first_name, last_name, email, specialty, city)')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+
+      return new Response(JSON.stringify({ success: true, invoices: data || [] }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    // ── INVOICE-PDF: Get signed URL for invoice PDF ──
+    if (action === 'invoice-pdf' && req.method === 'POST') {
+      const { path } = await req.json();
+      if (!path) {
+        return new Response(JSON.stringify({ success: false, error: 'path requis' }), {
+          status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+
+      const { data, error } = await supabase.storage
+        .from('annuaire-invoices')
+        .createSignedUrl(path, 300); // 5 min validity
+
+      if (error) throw error;
+
+      return new Response(JSON.stringify({ success: true, url: data.signedUrl }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    // ── UPDATE-PLAN: Manually change a professional's plan ──
+    if (action === 'update-plan' && req.method === 'POST') {
+      const { id, plan } = await req.json();
+      if (!id || !plan) {
+        return new Response(JSON.stringify({ success: false, error: 'id et plan requis' }), {
+          status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+
+      const validPlans = ['gratuit', 'pro', 'boost'];
+      if (!validPlans.includes(plan)) {
+        return new Response(JSON.stringify({ success: false, error: 'Plan invalide. Valeurs acceptées: gratuit, pro, boost' }), {
+          status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+
+      const updates: Record<string, unknown> = { plan };
+
+      if (plan === 'gratuit') {
+        updates.plan_expires_at = null;
+        updates.stripe_subscription_id = null;
+      } else {
+        // Set expiration to 1 year from now for manual plans (admin-managed)
+        const expiry = new Date();
+        expiry.setFullYear(expiry.getFullYear() + 1);
+        updates.plan_expires_at = expiry.toISOString();
+      }
+
+      const { data, error } = await supabase
+        .from('annuaire_professionals')
+        .update(updates)
+        .eq('id', id)
+        .select('id, first_name, last_name, plan, plan_expires_at')
+        .single();
+
+      if (error) throw error;
+
+      // If downgraded to gratuit, clean up extra photos
+      if (plan === 'gratuit') {
+        try {
+          await cleanupExtraPhotos(supabase, id);
+        } catch (cleanupErr) {
+          console.warn('[admin] Photo cleanup failed:', cleanupErr);
+        }
+      }
+
+      await queueDeploy(supabase, `admin plan change: ${data.first_name} ${data.last_name} → ${plan}`);
+
+      console.log(`[admin] Plan updated: ${data.first_name} ${data.last_name} → ${plan}`);
+
+      return new Response(JSON.stringify({ success: true, profile: data }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }

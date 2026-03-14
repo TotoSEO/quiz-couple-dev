@@ -232,9 +232,16 @@ serve(async (req: Request) => {
         break;
       }
 
-      // ── Subscription deleted → revert to free ──
+      // ── Subscription deleted → revert to free + cleanup photos ──
       case 'customer.subscription.deleted': {
         const subscription = event.data.object as Stripe.Subscription;
+
+        // Get professional ID before updating
+        const { data: proData } = await supabase
+          .from('annuaire_professionals')
+          .select('id, photos')
+          .eq('stripe_subscription_id', subscription.id)
+          .maybeSingle();
 
         const { error } = await supabase
           .from('annuaire_professionals')
@@ -247,6 +254,15 @@ serve(async (req: Request) => {
 
         if (error) console.error('[webhook] Update error on subscription.deleted:', error);
         else console.log(`[webhook] Subscription deleted, reverted to gratuit`);
+
+        // Clean up extra photos (free plan = 1 profile photo only)
+        if (proData?.id) {
+          try {
+            await cleanupExtraPhotos(supabase, proData.id, proData.photos || []);
+          } catch (cleanupErr) {
+            console.warn('[webhook] Photo cleanup error:', cleanupErr);
+          }
+        }
 
         await queueDeploy(supabase, 'plan reverted to gratuit');
         break;
@@ -272,6 +288,35 @@ serve(async (req: Request) => {
     headers: { 'Content-Type': 'application/json' },
   });
 });
+
+async function cleanupExtraPhotos(
+  supabase: ReturnType<typeof createClient>,
+  professionalId: string,
+  photos: string[]
+): Promise<void> {
+  if (!photos || photos.length === 0) return;
+
+  const filePaths = photos
+    .map((url: string) => {
+      const match = url.match(/annuaire-photos\/(.+)$/);
+      return match ? match[1] : null;
+    })
+    .filter(Boolean) as string[];
+
+  if (filePaths.length > 0) {
+    const { error } = await supabase.storage
+      .from('annuaire-photos')
+      .remove(filePaths);
+    if (error) console.warn('[cleanup] Storage remove error:', error);
+    else console.log(`[cleanup] Removed ${filePaths.length} extra photos for ${professionalId}`);
+  }
+
+  // Clear the photos array (keep only photo_url = profile photo)
+  await supabase
+    .from('annuaire_professionals')
+    .update({ photos: [] })
+    .eq('id', professionalId);
+}
 
 async function queueDeploy(supabase: ReturnType<typeof createClient>, reason: string) {
   try {

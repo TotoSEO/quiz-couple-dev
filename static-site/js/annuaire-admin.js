@@ -9,8 +9,11 @@
   var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
   var adminToken = null;
   var allProfiles = [];
+  var allInvoices = [];
   var currentFilter = 'all';
   var searchQuery = '';
+  var invoiceSearchQuery = '';
+  var invoicesLoaded = false;
 
   var SPEC_LABELS = {
     'therapeute-de-couple': 'Therapeute de couple',
@@ -19,6 +22,18 @@
     'mediateur-familial': 'Mediateur familial',
     'coach-parental': 'Coach parental',
     'conseiller-conjugal': 'Conseiller conjugal',
+  };
+
+  var PLAN_LABELS = {
+    'gratuit': 'Gratuit',
+    'pro': 'Pro',
+    'boost': 'Boost',
+  };
+
+  var PLAN_COLORS = {
+    'gratuit': 'hsl(var(--ann-muted-fg))',
+    'pro': 'hsl(220 70% 50%)',
+    'boost': 'hsl(280 70% 50%)',
   };
 
   // ── Auth ──
@@ -78,6 +93,25 @@
     loadProfiles();
   }
 
+  // ── Tabs ──
+
+  function switchTab(tab) {
+    document.querySelectorAll('.aadm-tab').forEach(function (btn) {
+      var isActive = btn.dataset.tab === tab;
+      btn.style.color = isActive ? 'hsl(var(--ann-primary))' : 'hsl(var(--ann-muted-fg))';
+      btn.style.borderBottomColor = isActive ? 'hsl(var(--ann-primary))' : 'transparent';
+    });
+
+    var profilesTab = document.getElementById('aadm-tab-profiles');
+    var invoicesTab = document.getElementById('aadm-tab-invoices');
+    if (profilesTab) profilesTab.style.display = tab === 'profiles' ? '' : 'none';
+    if (invoicesTab) invoicesTab.style.display = tab === 'invoices' ? '' : 'none';
+
+    if (tab === 'invoices' && !invoicesLoaded) {
+      loadInvoices();
+    }
+  }
+
   // ── Load Profiles ──
 
   function loadProfiles() {
@@ -130,7 +164,7 @@
     if (el) el.textContent = val;
   }
 
-  // ── Render ──
+  // ── Render Profiles ──
 
   function renderProfiles() {
     var listEl = document.getElementById('aadm-profiles-list');
@@ -162,6 +196,11 @@
         ? '<span style="display:inline-flex;padding:0.125rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background:hsl(160 60% 45%/0.1);color:hsl(160 60% 35%);">Publie</span>'
         : '<span style="display:inline-flex;padding:0.125rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background:hsl(40 90% 55%/0.1);color:hsl(40 70% 35%);">En attente</span>';
 
+      // Plan badge
+      var planLabel = PLAN_LABELS[p.plan] || p.plan || 'Gratuit';
+      var planColor = PLAN_COLORS[p.plan] || PLAN_COLORS.gratuit;
+      var planBadge = '<span style="display:inline-flex;padding:0.125rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;border:1px solid ' + planColor + ';color:' + planColor + ';">' + esc(planLabel) + '</span>';
+
       var photoHtml = p.photo_url
         ? '<img src="' + esc(p.photo_url) + '" style="width:3rem;height:3rem;border-radius:50%;object-fit:cover;" alt="">'
         : '<div style="width:3rem;height:3rem;border-radius:50%;background:hsl(var(--ann-muted));display:flex;align-items:center;justify-content:center;"><svg style="width:1.25rem;height:1.25rem;color:hsl(var(--ann-muted-fg));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>';
@@ -183,6 +222,10 @@
       } else {
         actions += '<button class="ann-btn" style="font-size:0.75rem;padding:0.25rem 0.75rem;color:hsl(40 70% 40%);border:1px solid hsl(40 70% 40%/0.3);background:transparent;" data-action="reject" data-id="' + p.id + '">Depublier</button>';
       }
+      // Change plan button
+      actions += ' <button class="ann-btn" style="font-size:0.75rem;padding:0.25rem 0.75rem;color:hsl(260 50% 50%);border:1px solid hsl(260 50% 50%/0.3);background:transparent;" data-action="change-plan" data-id="' + p.id + '" title="Modifier l\'abonnement">' +
+        '<svg style="width:0.75rem;height:0.75rem;margin-right:0.25rem;vertical-align:middle;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>Plan</button>';
+      // Delete button
       actions += ' <button class="ann-btn" style="font-size:0.75rem;padding:0.25rem 0.5rem;color:hsl(0 70% 50%);background:transparent;border:none;" data-action="delete" data-id="' + p.id + '" title="Supprimer definitivement">' +
         '<svg style="width:0.875rem;height:0.875rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></button>';
 
@@ -191,7 +234,7 @@
         '<div style="flex:1;min-width:0;">' +
           '<div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.25rem;">' +
             '<span style="font-weight:700;">' + esc(p.first_name || '') + ' ' + esc(p.last_name || '') + '</span>' +
-            statusBadge + linkIcon +
+            statusBadge + planBadge + linkIcon +
           '</div>' +
           '<p style="font-size:0.875rem;color:hsl(var(--ann-muted-fg));margin-bottom:0.25rem;">' +
             esc(SPEC_LABELS[p.specialty] || p.specialty || '') + ' &mdash; ' + esc(p.city || '') +
@@ -208,6 +251,123 @@
     var d = document.createElement('div');
     d.textContent = s;
     return d.innerHTML;
+  }
+
+  // ── Load Invoices ──
+
+  function loadInvoices() {
+    var listEl = document.getElementById('aadm-invoices-list');
+    if (!listEl) return;
+    listEl.innerHTML = '<p style="text-align:center;color:hsl(var(--ann-muted-fg));padding:3rem 0;">Chargement des factures...</p>';
+
+    fetch(SUPABASE_URL + '/functions/v1/admin-annuaire?action=invoices', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'x-admin-token': adminToken,
+      },
+    })
+    .then(function (r) {
+      if (r.status === 401 || r.status === 403) {
+        logout();
+        throw new Error('unauthorized');
+      }
+      return r.json();
+    })
+    .then(function (data) {
+      if (!data.success) {
+        listEl.innerHTML = '<p style="text-align:center;color:hsl(0 70% 50%);padding:3rem 0;">Erreur: ' + esc(data.error || 'Inconnue') + '</p>';
+        return;
+      }
+      allInvoices = data.invoices || [];
+      invoicesLoaded = true;
+      renderInvoices();
+    })
+    .catch(function (err) {
+      if (err.message !== 'unauthorized') {
+        listEl.innerHTML = '<p style="text-align:center;color:hsl(0 70% 50%);padding:3rem 0;">Erreur reseau</p>';
+      }
+    });
+  }
+
+  function renderInvoices() {
+    var listEl = document.getElementById('aadm-invoices-list');
+    if (!listEl) return;
+
+    var filtered = allInvoices;
+    if (invoiceSearchQuery) {
+      var q = invoiceSearchQuery.toLowerCase();
+      filtered = allInvoices.filter(function (inv) {
+        var name = ((inv.annuaire_professionals?.first_name || '') + ' ' + (inv.annuaire_professionals?.last_name || '')).toLowerCase();
+        var num = (inv.invoice_number || '').toLowerCase();
+        return name.indexOf(q) !== -1 || num.indexOf(q) !== -1;
+      });
+    }
+
+    if (filtered.length === 0) {
+      listEl.innerHTML = '<p style="text-align:center;color:hsl(var(--ann-muted-fg));padding:3rem 0;">' +
+        (invoiceSearchQuery ? 'Aucune facture trouvee pour "' + esc(invoiceSearchQuery) + '"' : 'Aucune facture.') + '</p>';
+      return;
+    }
+
+    // Table header
+    var html = '<div style="overflow-x:auto;">' +
+      '<table style="width:100%;border-collapse:collapse;font-size:0.875rem;">' +
+      '<thead><tr style="border-bottom:2px solid hsl(var(--ann-border));text-align:left;">' +
+        '<th style="padding:0.75rem 0.5rem;font-weight:600;">N° Facture</th>' +
+        '<th style="padding:0.75rem 0.5rem;font-weight:600;">Professionnel</th>' +
+        '<th style="padding:0.75rem 0.5rem;font-weight:600;">Plan</th>' +
+        '<th style="padding:0.75rem 0.5rem;font-weight:600;">Montant TTC</th>' +
+        '<th style="padding:0.75rem 0.5rem;font-weight:600;">Date</th>' +
+        '<th style="padding:0.75rem 0.5rem;font-weight:600;">PDF</th>' +
+      '</tr></thead><tbody>';
+
+    html += filtered.map(function (inv) {
+      var pro = inv.annuaire_professionals || {};
+      var name = esc((pro.first_name || '') + ' ' + (pro.last_name || ''));
+      var amountTtc = inv.amount_ttc ? (inv.amount_ttc / 100).toFixed(2).replace('.', ',') + ' €' : '-';
+      var date = inv.created_at ? new Date(inv.created_at).toLocaleDateString('fr-FR') : '-';
+      var planLabel = PLAN_LABELS[inv.plan] || inv.plan || '-';
+      var periodLabel = inv.period === 'annual' ? '/an' : '/mois';
+
+      var pdfBtn = inv.pdf_storage_path
+        ? '<button class="ann-btn" style="font-size:0.75rem;padding:0.25rem 0.5rem;background:transparent;border:1px solid hsl(var(--ann-primary));color:hsl(var(--ann-primary));" data-action="download-invoice" data-path="' + esc(inv.pdf_storage_path) + '">PDF</button>'
+        : '<span style="color:hsl(var(--ann-muted-fg));">-</span>';
+
+      return '<tr style="border-bottom:1px solid hsl(var(--ann-border));">' +
+        '<td style="padding:0.625rem 0.5rem;font-weight:600;">' + esc(inv.invoice_number || '-') + '</td>' +
+        '<td style="padding:0.625rem 0.5rem;">' + name + '<br><span style="font-size:0.75rem;color:hsl(var(--ann-muted-fg));">' + esc(pro.email || '') + '</span></td>' +
+        '<td style="padding:0.625rem 0.5rem;">' + esc(planLabel) + ' ' + esc(periodLabel) + '</td>' +
+        '<td style="padding:0.625rem 0.5rem;font-weight:600;">' + amountTtc + '</td>' +
+        '<td style="padding:0.625rem 0.5rem;">' + date + '</td>' +
+        '<td style="padding:0.625rem 0.5rem;">' + pdfBtn + '</td>' +
+      '</tr>';
+    }).join('');
+
+    html += '</tbody></table></div>';
+    listEl.innerHTML = html;
+  }
+
+  function downloadInvoicePdf(path) {
+    fetch(SUPABASE_URL + '/functions/v1/admin-annuaire?action=invoice-pdf', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'x-admin-token': adminToken,
+      },
+      body: JSON.stringify({ path: path }),
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.success && data.url) {
+        window.open(data.url, '_blank');
+      } else {
+        alert('Erreur: ' + (data.error || 'Impossible de telecharger la facture'));
+      }
+    })
+    .catch(function () { alert('Erreur reseau'); });
   }
 
   // ── Delete Modal ──
@@ -238,9 +398,62 @@
     apiPost('delete', { id: id });
   }
 
+  // ── Plan Modal ──
+
+  var pendingPlanId = null;
+
+  function showPlanModal(id) {
+    var profile = allProfiles.find(function (p) { return p.id === id; });
+    if (!profile) return;
+
+    var nameEl = document.getElementById('aadm-plan-name');
+    if (nameEl) nameEl.textContent = (profile.first_name || '') + ' ' + (profile.last_name || '');
+
+    var currentEl = document.getElementById('aadm-plan-current');
+    if (currentEl) currentEl.textContent = PLAN_LABELS[profile.plan] || profile.plan || 'Gratuit';
+
+    // Pre-select current plan
+    var radios = document.querySelectorAll('input[name="aadm-plan"]');
+    radios.forEach(function (r) {
+      r.checked = r.value === (profile.plan || 'gratuit');
+    });
+
+    pendingPlanId = id;
+    var modal = document.getElementById('aadm-plan-modal');
+    if (modal) modal.style.display = 'flex';
+  }
+
+  function hidePlanModal() {
+    pendingPlanId = null;
+    var modal = document.getElementById('aadm-plan-modal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  function confirmPlanChange() {
+    if (!pendingPlanId) return;
+
+    var selected = document.querySelector('input[name="aadm-plan"]:checked');
+    if (!selected) {
+      alert('Veuillez selectionner un plan.');
+      return;
+    }
+
+    var newPlan = selected.value;
+    var profile = allProfiles.find(function (p) { return p.id === pendingPlanId; });
+    if (profile && profile.plan === newPlan) {
+      hidePlanModal();
+      return;
+    }
+
+    var id = pendingPlanId;
+    hidePlanModal();
+
+    apiPost('update-plan', { id: id, plan: newPlan });
+  }
+
   // ── Actions ──
 
-  function handleAction(action, id) {
+  function handleAction(action, id, extraData) {
     if (action === 'approve') {
       if (!confirm('Approuver et publier cette fiche ?')) return;
       apiPost('approve', { id: id });
@@ -250,6 +463,10 @@
       apiPost('reject', { id: id, reason: reason });
     } else if (action === 'delete') {
       showDeleteModal(id);
+    } else if (action === 'change-plan') {
+      showPlanModal(id);
+    } else if (action === 'download-invoice') {
+      downloadInvoicePdf(extraData);
     }
   }
 
@@ -345,7 +562,7 @@
     var deployBtn = document.getElementById('aadm-deploy');
     if (deployBtn) deployBtn.addEventListener('click', triggerDeploy);
 
-    // Search bar
+    // Search bar (profiles)
     var searchInput = document.getElementById('aadm-search');
     if (searchInput) {
       searchInput.addEventListener('input', function () {
@@ -368,28 +585,68 @@
       });
     });
 
+    // Tab buttons
+    document.querySelectorAll('.aadm-tab').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        switchTab(this.dataset.tab);
+      });
+    });
+
+    // Invoices refresh
+    var invRefreshBtn = document.getElementById('aadm-invoices-refresh');
+    if (invRefreshBtn) invRefreshBtn.addEventListener('click', function () {
+      invoicesLoaded = false;
+      loadInvoices();
+    });
+
+    // Invoices search
+    var invSearchInput = document.getElementById('aadm-invoices-search');
+    if (invSearchInput) {
+      invSearchInput.addEventListener('input', function () {
+        invoiceSearchQuery = this.value.trim();
+        renderInvoices();
+      });
+    }
+
     // Delete modal buttons
     var deleteCancelBtn = document.getElementById('aadm-delete-cancel');
     if (deleteCancelBtn) deleteCancelBtn.addEventListener('click', hideDeleteModal);
     var deleteConfirmBtn = document.getElementById('aadm-delete-confirm');
     if (deleteConfirmBtn) deleteConfirmBtn.addEventListener('click', confirmDelete);
 
-    // Close modal on backdrop click
+    // Plan modal buttons
+    var planCancelBtn = document.getElementById('aadm-plan-cancel');
+    if (planCancelBtn) planCancelBtn.addEventListener('click', hidePlanModal);
+    var planConfirmBtn = document.getElementById('aadm-plan-confirm');
+    if (planConfirmBtn) planConfirmBtn.addEventListener('click', confirmPlanChange);
+
+    // Close modals on backdrop click
     var deleteModal = document.getElementById('aadm-delete-modal');
     if (deleteModal) deleteModal.addEventListener('click', function (e) {
       if (e.target === deleteModal) hideDeleteModal();
     });
-
-    // Close modal on Escape key
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') hideDeleteModal();
+    var planModal = document.getElementById('aadm-plan-modal');
+    if (planModal) planModal.addEventListener('click', function (e) {
+      if (e.target === planModal) hidePlanModal();
     });
 
-    // Action delegation (approve/reject/delete buttons)
+    // Close modals on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        hideDeleteModal();
+        hidePlanModal();
+      }
+    });
+
+    // Action delegation (approve/reject/delete/change-plan/download-invoice buttons)
     document.addEventListener('click', function (e) {
       var btn = e.target.closest('[data-action]');
-      if (btn && btn.dataset.action && btn.dataset.id) {
-        handleAction(btn.dataset.action, btn.dataset.id);
+      if (btn && btn.dataset.action) {
+        if (btn.dataset.action === 'download-invoice') {
+          handleAction('download-invoice', null, btn.dataset.path);
+        } else if (btn.dataset.id) {
+          handleAction(btn.dataset.action, btn.dataset.id);
+        }
       }
     });
 
