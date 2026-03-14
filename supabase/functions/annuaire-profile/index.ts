@@ -382,6 +382,30 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
     if (gpi && gpi.length < 10) return { error: 'Google Place ID invalide.' };
     result.google_place_id = gpi || null;
   }
+
+  // ── Billing fields ──
+  if (body.billing_company_name !== undefined) {
+    result.billing_company_name = sanitize(body.billing_company_name, 200) || null;
+  }
+  if (body.billing_siret !== undefined) {
+    const siret = sanitize(body.billing_siret, 14).replace(/\D/g, '');
+    if (siret && !/^\d{14}$/.test(siret)) return { error: 'Le SIRET doit contenir exactement 14 chiffres.' };
+    result.billing_siret = siret || null;
+  }
+  if (body.billing_tva_number !== undefined) {
+    const tva = sanitize(body.billing_tva_number, 13).toUpperCase();
+    if (tva && !/^FR\d{11}$/.test(tva)) return { error: 'Le n° TVA doit être au format FR + 11 chiffres.' };
+    result.billing_tva_number = tva || null;
+  }
+  if (body.billing_email !== undefined) {
+    const be = sanitize(body.billing_email, 150);
+    if (be && !isValidEmail(be)) return { error: 'Email de facturation invalide.' };
+    result.billing_email = be || null;
+  }
+  if (body.billing_address !== undefined) {
+    result.billing_address = sanitize(body.billing_address, 500) || null;
+  }
+
   // is_published is admin-only — users cannot set their own publication status
 
   return result;
