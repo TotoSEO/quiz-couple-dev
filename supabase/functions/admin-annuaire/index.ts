@@ -222,7 +222,7 @@ serve(async (req) => {
                          style="display:inline-block;padding:0.75rem 2rem;background:white;color:#d6336c;text-decoration:none;border-radius:0.5rem;font-weight:700;font-size:0.9375rem;">
                         Découvrir les offres
                       </a>
-                      <p style="font-size:0.75rem;margin:0.75rem 0 0;opacity:0.8;">À partir de 4,99€ HT/mois &middot; Sans engagement</p>
+                      <p style="font-size:0.75rem;margin:0.75rem 0 0;opacity:0.8;">À partir de 4,99€/mois &middot; Sans engagement</p>
                     </div>
 
                     <!-- Footer -->

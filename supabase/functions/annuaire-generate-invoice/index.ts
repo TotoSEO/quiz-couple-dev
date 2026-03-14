@@ -399,8 +399,8 @@ async function generateInvoicePdf(data: PdfData): Promise<Uint8Array> {
   page.drawRectangle({ x: margin, y: y - 5, width: width - 2 * margin, height: 22, color: lightGray });
   text('Désignation', colDesig + 8, y, { font: fontBold, size: 9 });
   text('Qté', colQty, y, { font: fontBold, size: 9 });
-  text('Prix HT', colHt, y, { font: fontBold, size: 9 });
-  text('Prix TTC', colTtc, y, { font: fontBold, size: 9 });
+  text('Prix unitaire', colHt, y, { font: fontBold, size: 9 });
+  text('Montant', colTtc, y, { font: fontBold, size: 9 });
 
   y -= 30;
 
@@ -410,7 +410,6 @@ async function generateInvoicePdf(data: PdfData): Promise<Uint8Array> {
   const designation = `Abonnement ${periodLabel} — ${planLabel}`;
   // amountHt is after discount; line item shows pre-discount price
   const lineHt = data.amountHt + data.discountAmount;
-  const lineTtc = Math.round(lineHt * 1.2);
 
   text(designation, colDesig + 8, y, { font: fontBold, size: 10 });
   y -= 14;
@@ -418,11 +417,11 @@ async function generateInvoicePdf(data: PdfData): Promise<Uint8Array> {
   y -= 11;
   text('meilleure mise en avant sur la plateforme.', colDesig + 8, y, { size: 8, color: gray });
 
-  // Qty, HT, TTC on the first line
+  // Qty + amount on the first line
   const lineY = y + 25;
   text('1', colQty + 5, lineY, { size: 10 });
   text(`${formatCents(lineHt)} €`, colHt, lineY, { size: 10 });
-  text(`${formatCents(lineTtc)} €`, colTtc, lineY, { size: 10 });
+  text(`${formatCents(lineHt)} €`, colTtc, lineY, { size: 10 });
 
   y -= 15;
   line(margin, y, width - margin, 0.3);
@@ -434,33 +433,31 @@ async function generateInvoicePdf(data: PdfData): Promise<Uint8Array> {
     text(data.discountLabel, colDesig + 8, y, { size: 10, color: primary });
     text('1', colQty + 5, y, { size: 10 });
     text(`-${formatCents(data.discountAmount)} €`, colHt, y, { size: 10, color: primary });
-    const discountTtc = Math.round(data.discountAmount * 1.2);
-    text(`-${formatCents(discountTtc)} €`, colTtc, y, { size: 10, color: primary });
+    text(`-${formatCents(data.discountAmount)} €`, colTtc, y, { size: 10, color: primary });
     y -= 15;
     line(margin, y, width - margin, 0.3);
     y -= 5;
   }
 
-  // Sous-total HT (after discount)
+  // Sous-total
   y -= 15;
-  text('Sous-total HT', colDesig + 8, y, { size: 9, color: gray });
+  text('Sous-total', colDesig + 8, y, { size: 9, color: gray });
   text(`${formatCents(data.amountHt)} €`, colTtc, y, { size: 10 });
 
-  // TVA line
+  // TVA non applicable
   y -= 18;
-  text('TVA (20%)', colDesig + 8, y, { size: 9, color: gray });
-  text(`${formatCents(data.amountTva)} €`, colTtc, y, { size: 10 });
+  text('TVA non applicable, art. 293 B du CGI', colDesig + 8, y, { size: 9, color: gray });
+  text('0,00 €', colTtc, y, { size: 10, color: gray });
 
   y -= 20;
   line(margin, y, width - margin, 1, primary);
   y -= 5;
 
-  // Total TTC — calculated from actual HT + TVA for consistency
-  const verifiedTtc = data.amountHt + data.amountTva;
+  // Net à payer
   y -= 15;
   page.drawRectangle({ x: colHt - 10, y: y - 8, width: width - margin - colHt + 10, height: 28, color: primary });
-  text('TOTAL TTC', colHt, y, { font: fontBold, size: 11, color: white });
-  const totalStr = `${formatCents(verifiedTtc)} €`;
+  text('NET À PAYER', colHt, y, { font: fontBold, size: 11, color: white });
+  const totalStr = `${formatCents(data.amountHt)} €`;
   const totalWidth = fontBold.widthOfTextAtSize(totalStr, 12);
   text(totalStr, width - margin - totalWidth - 8, y, { font: fontBold, size: 12, color: white });
 
@@ -490,17 +487,17 @@ async function generateInvoicePdf(data: PdfData): Promise<Uint8Array> {
   const footerY = 60;
   line(margin, footerY + 20, width - margin, 0.5, lightGray);
 
-  const footerLine1 = 'Quiz Couple Annuaire : améliorez votre visibilité en ligne';
-  const footerLine2 = 'annuaire.quiz-couple.com';
-  const footerLine3 = 'En cas de question sur cette facture, contactez-nous.';
+  const footerLine0 = 'TVA non applicable, art. 293 B du CGI';
+  const footerLine1 = 'Quiz Couple Annuaire — annuaire.quiz-couple.com';
+  const footerLine2 = 'En cas de question sur cette facture, contactez-nous.';
 
+  const f0w = fontBold.widthOfTextAtSize(footerLine0, 8);
   const f1w = fontRegular.widthOfTextAtSize(footerLine1, 8);
   const f2w = fontRegular.widthOfTextAtSize(footerLine2, 8);
-  const f3w = fontRegular.widthOfTextAtSize(footerLine3, 8);
 
-  text(footerLine1, (width - f1w) / 2, footerY + 5, { size: 8, color: gray });
-  text(footerLine2, (width - f2w) / 2, footerY - 7, { size: 8, color: primary });
-  text(footerLine3, (width - f3w) / 2, footerY - 19, { size: 8, color: gray });
+  text(footerLine0, (width - f0w) / 2, footerY + 5, { font: fontBold, size: 8, color: gray });
+  text(footerLine1, (width - f1w) / 2, footerY - 7, { size: 8, color: primary });
+  text(footerLine2, (width - f2w) / 2, footerY - 19, { size: 8, color: gray });
 
   return await doc.save();
 }
@@ -535,7 +532,7 @@ async function sendInvoiceEmail(data: EmailData): Promise<void> {
           </p>
           <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:0.5rem;padding:1rem;margin:1rem 0;">
             <p style="margin:0;font-size:0.9375rem;color:#166534;">
-              <strong>Montant réglé :</strong> ${data.amountTtc} € TTC
+              <strong>Montant réglé :</strong> ${data.amountTtc} €
             </p>
           </div>
           <p style="font-size:0.9375rem;line-height:1.6;color:#333;margin:1rem 0 0;">

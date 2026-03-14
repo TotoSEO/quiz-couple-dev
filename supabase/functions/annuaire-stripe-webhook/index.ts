@@ -147,11 +147,8 @@ serve(async (req: Request) => {
 
         // Generate invoice PDF and send by email
         try {
-          // Stripe prices are HT. invoice.subtotal = HT amount before discount.
+          // TVA non applicable (art. 293 B du CGI) — no VAT calculation
           const amountHt = invoice.subtotal || 0;
-          const amountTva = invoice.tax || Math.round(amountHt * 0.2);
-          // TTC = HT + TVA (don't use invoice.amount_paid since Stripe may not charge TVA)
-          const amountTtc = amountHt + amountTva;
 
           // Check for discount
           let discountAmount = 0;
@@ -170,10 +167,10 @@ serve(async (req: Request) => {
             }
           }
 
-          // Adjust HT for discount: invoice.subtotal is pre-discount, so actual HT = subtotal - discount
+          // Net amount = subtotal - discount (no TVA)
           const actualHt = amountHt - discountAmount;
-          const actualTva = invoice.tax || Math.round(actualHt * 0.2);
-          const actualTtc = actualHt + actualTva;
+          const actualTva = 0;
+          const actualTtc = actualHt;
 
           await triggerInvoiceGeneration({
             stripe_invoice_id: invoice.id,
