@@ -1315,9 +1315,34 @@
       setTimeout(function () {
         var billingTab = document.querySelector('[data-dash-tab="billing"]');
         if (billingTab) billingTab.click();
-        showSuccess('bill-success', 'Abonnement activé avec succès ! Votre fiche sera mise à jour dans quelques instants.');
+        showSuccess('bill-success', 'Paiement reçu ! Activation de votre abonnement en cours...');
       }, 500);
       window.history.replaceState({}, '', window.location.pathname);
+
+      // Poll for plan update (webhook may take a few seconds)
+      var pollCount = 0;
+      var pollInterval = setInterval(async function () {
+        pollCount++;
+        try {
+          var session = await checkAuth();
+          if (session) {
+            var freshProfile = await loadProfile(session.access_token);
+            if (freshProfile && freshProfile.plan && freshProfile.plan !== 'gratuit') {
+              clearInterval(pollInterval);
+              currentProfile = freshProfile;
+              fillForm(currentProfile);
+              updateBillingStatus(currentProfile);
+              updatePlanUI(currentProfile);
+              updateProfileStatus(currentProfile);
+              showSuccess('bill-success', 'Abonnement ' + freshProfile.plan.toUpperCase() + ' activé avec succès !');
+            }
+          }
+        } catch (e) { /* ignore polling errors */ }
+        if (pollCount >= 20) {
+          clearInterval(pollInterval);
+          showError('bill-success', 'Le paiement a été reçu mais l\'activation prend plus de temps que prévu. Rechargez la page dans quelques instants.');
+        }
+      }, 3000); // Check every 3 seconds, up to 60 seconds
     } else if (params.get('checkout') === 'cancel') {
       setTimeout(function () {
         var billingTab = document.querySelector('[data-dash-tab="billing"]');
