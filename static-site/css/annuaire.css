@@ -2113,13 +2113,29 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
 }
 
 /* ── Pricing Responsive ─────────────────────────────────────────────── */
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .ann-pricing-grid {
     grid-template-columns: 1fr;
     max-width: 28rem;
     margin: 0 auto;
   }
   .ann-pricing-card-popular { order: -1; }
+  .ann-pricing-card { padding: 1.5rem; }
+  .ann-price-amount { font-size: 2rem; }
+  .ann-info-tooltip::after {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ann-pricing-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+  .ann-pricing-card-popular { order: -1; }
+  .ann-pricing-card { padding: 1.5rem; }
   .ann-info-tooltip::after {
     left: auto;
     right: 0;
@@ -2719,4 +2735,24 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   .ann-profile-sidebar {
     order: 1;
   }
+
+  /* Comparison table — reduce padding on mobile */
+  .ann-comparison-table th,
+  .ann-comparison-table td {
+    padding: 0.5rem 0.375rem;
+    font-size: 0.75rem;
+  }
+  .ann-comp-feature-col { width: auto; }
+  .ann-comp-plan-col { width: auto; }
+
+  /* Steps grid on mobile */
+  .ann-steps { grid-template-columns: 1fr; }
+
+  /* Touch-friendly buttons on mobile (min 44px tap targets) */
+  .ann-btn { min-height: 2.75rem; }
+  .ann-btn-sm { min-height: 2.5rem; }
+  .ann-icon-btn { width: 2.75rem; height: 2.75rem; }
+
+  /* Small map on mobile */
+  .ann-map-sm { height: 14rem; }
 }
