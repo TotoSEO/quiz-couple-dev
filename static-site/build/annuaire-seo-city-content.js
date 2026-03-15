@@ -749,72 +749,140 @@ const SPECIALTY_CITY_TEMPLATES = {
         {
           title: `Trouver un conseiller conjugal à ${city.name}`,
           content: `
-<p>Le conseil conjugal est peut-être la porte d'entrée la plus accessible pour un couple en difficulté à ${city.name}. Moins intimidant qu'une « thérapie de couple », plus structuré qu'une discussion avec un ami, le conseil conjugal offre un cadre professionnel pour aborder ce qui ne va plus, sans s'engager dans un processus long et coûteux.</p>
-<p>Les conseillers conjugaux et familiaux exercent dans des cadres variés dans le ${city.department} : CPEF (Centres de Planification et d'Éducation Familiale), associations spécialisées (CLER, AFCCC, Couples et Familles), ou en cabinet libéral. Cette diversité de structures permet de trouver un accompagnement adapté à chaque budget.</p>
-<p>Le suivi est court (5 à 12 séances en général) et tourné vers l'action. Le conseiller ne cherche pas à creuser le passé de chacun en profondeur. Il se concentre sur ce qui bloque maintenant et aide le couple à trouver des pistes concrètes pour avancer : mieux communiquer, gérer les conflits autrement, prendre des décisions éclairées sur l'avenir de la relation.</p>
+<p>Samedi soir, le dîner est silencieux. Pas de dispute, pas de tension visible. Juste deux personnes qui mangent face à face sans avoir grand-chose à se dire. Ce genre de scène, les conseillers conjugaux à ${city.name} l'entendent raconter chaque semaine. Le silence dans un couple fait moins de bruit qu'une crise, mais il use davantage.</p>
+<p>Un conseiller conjugal à ${city.name} reçoit les couples (et les individus seuls, on y reviendra) qui sentent que quelque chose coince dans leur relation. Le cadre est différent d'une <a href="/therapeute-de-couple/">thérapie de couple</a> classique : le suivi dure entre 5 et 12 séances, il est centré sur le présent, et le conseiller travaille avec ce que le couple apporte en séance plutôt que de fouiller les histoires familiales de chacun. C'est concret. On identifie les blocages, on teste des façons de faire autrement, on avance.</p>
+<p>Dans le ${city.department}, les conseillers conjugaux exercent en CPEF (Centres de Planification et d'Éducation Familiale), dans des associations comme le CLER ou l'AFCCC, ou en cabinet libéral. Chaque structure a ses avantages. Les CPEF proposent des consultations gratuites mais avec des délais d'attente. Les associations ajustent leurs tarifs aux revenus. Les cabinets privés offrent plus de souplesse dans les horaires. Le bon choix dépend de votre situation, pas d'un classement universel.</p>
 `
         },
         {
-          title: `Quand consulter un conseiller conjugal dans le ${city.department} ?`,
+          title: `Ce que fait un conseiller conjugal à ${city.name} (et ce qu'il ne fait pas)`,
           content: `
-<p>Les raisons qui amènent les couples de ${city.name} chez un conseiller conjugal sont aussi variées que les couples eux-mêmes :</p>
+<p>Le conseiller conjugal n'est pas un arbitre. Il ne va pas décider qui a raison dans votre dispute sur la répartition des tâches ménagères ou sur la fréquence des visites chez votre belle-mère. Son rôle, c'est de créer un espace où chacun peut parler sans être coupé, reformuler ce que l'autre n'arrive pas à entendre, et aider le couple à trouver ses propres solutions.</p>
+<p>Concrètement, une séance de conseil conjugal dans le ${city.department} ressemble à ça : le conseiller écoute, pose des questions, fait remarquer les dynamiques que le couple ne voit plus (parce qu'on finit par s'habituer à tout, même aux schémas qui nous abîment). Il propose des exercices entre les séances. Rien de spectaculaire. Un changement dans la façon de formuler une demande, une habitude de prise de parole à instaurer le soir, un rituel de connexion à réintroduire.</p>
+<p>Trois choses que le conseiller conjugal ne fait pas :</p>
 <ul>
-<li>La communication qui s'est rompue : on ne se parle plus que pour la logistique, les sujets de fond sont soigneusement évités</li>
-<li>Les disputes à répétition sur les mêmes sujets, sans jamais avancer (argent, belle-famille, répartition des tâches, éducation des enfants)</li>
-<li>Un événement déclencheur : infidélité découverte, perte d'emploi, maladie, déménagement subi</li>
-<li>Le doute existentiel, « est-ce qu'on doit rester ensemble ? », quand la réponse n'est pas claire et qu'on a besoin d'aide pour y voir clair</li>
+<li>Il ne prescrit pas de médicaments (ce n'est pas un médecin, contrairement à certains <a href="/sexologue/">sexologues</a>)</li>
+<li>Il ne rédige pas de certificats pour le juge aux affaires familiales</li>
+<li>Il ne prend pas parti, même quand un des deux partenaires insiste pour obtenir sa validation</li>
 </ul>
-<p>Le conseiller conjugal ne prend pas parti. Il aide chacun à exprimer ses besoins, à entendre ceux de l'autre, et à prendre des décisions en pleine conscience. Parfois, la décision est de reconstruire. Parfois, c'est de se séparer dignement. Les deux sont des issues légitimes.</p>
+<p>Est-ce que ça marche ? Les études sur le conseil conjugal montrent des résultats positifs dans 60 à 70% des cas, à condition que les deux partenaires s'investissent dans le processus. Le conseiller ne fait pas le travail à la place du couple. Il donne un cadre. Le reste, c'est au couple de le faire.</p>
 `
         },
         {
-          title: `Tarifs et structures de conseil conjugal à ${city.name}`,
+          title: `Combien coûte un conseiller conjugal dans le ${city.department} ?`,
           content: `
-<p>L'un des grands avantages du conseil conjugal, c'est son accessibilité financière. Dans le ${city.department}, plusieurs options s'offrent aux couples :</p>
-<p>Les <strong>CPEF</strong> de ${city.name} proposent des consultations gratuites ou à participation symbolique. On y trouve des conseillers conjugaux et familiaux salariés, formés et supervisés. L'inconvénient : les délais d'attente peuvent être longs.</p>
-<p>Les <strong>associations</strong> agréées (CLER, AFCCC, UDAF) pratiquent des tarifs modérés, souvent entre 20€ et 50€ la séance, ajustés aux revenus du ménage. Elles sont présentes dans la plupart des villes de la région ${city.region}.</p>
-<p>En <strong>cabinet libéral</strong> à ${city.name}, comptez entre 40€ et 80€ la séance. C'est plus cher, mais les délais sont plus courts et la flexibilité des horaires est meilleure.</p>
-<p>Avec un suivi moyen de 8 séances, le coût total d'un accompagnement en conseil conjugal reste très raisonnable comparé à une procédure de divorce (dont les frais d'avocat s'élèvent en moyenne à 2 000€ à 5 000€ par personne). C'est un investissement dans la relation (ou, si la séparation s'impose, dans une séparation bien gérée).</p>
+<p>Question directe, réponse directe. En cabinet libéral à ${city.name}, une séance de conseil conjugal coûte entre 40€ et 80€. Elle dure en général une heure. La Sécurité sociale ne rembourse pas ces consultations.</p>
+<p>Certaines mutuelles prennent en charge quelques séances par an (souvent 3 à 6) dans le cadre d'un forfait « bien-être » ou « consultations psychologiques ». Vérifiez votre contrat, ça vaut le coup d'y jeter un œil avant de commencer.</p>
+<p>Pour les budgets plus serrés, les associations agréées en ${city.region} pratiquent des tarifs entre 15€ et 45€ la séance, calculés sur la base de vos revenus. Les CPEF du ${city.department} proposent des consultations gratuites, financées par le département. Le délai d'attente est le principal inconvénient (parfois plusieurs semaines), mais la qualité de l'accompagnement est la même qu'en libéral.</p>
+<p>Sur un suivi complet de 8 séances en libéral, le budget total se situe entre 320€ et 640€ pour le couple. C'est une somme. Mais si on compare avec le coût d'un divorce (comptez 2 000€ à 5 000€ d'honoraires d'avocat par personne, sans parler du reste), la proportion est vite remise en perspective. Et même si la séparation reste la meilleure option, un <a href="/mediateur-familial/">médiateur familial</a> pourra prendre le relais pour organiser les choses dans de bonnes conditions.</p>
+<p>Première séance gratuite ? Certains conseillers conjugaux à ${city.name} le proposent. Demandez directement en prenant rendez-vous.</p>
 `
         },
       ],
     }),
+    // Template B - Entry: surprising comparison
     (city) => ({
       sections: [
         {
-          title: `Conseil conjugal à ${city.name} : accompagner les transitions du couple`,
+          title: `Conseiller conjugal à ${city.name} : le premier pas`,
           content: `
-<p>Un couple, ça évolue. Ce qui fonctionnait à 25 ans ne fonctionne plus forcément à 40. Les enfants grandissent, les carrières prennent des tournants, les corps changent, les envies aussi. À ${city.name}, les conseillers conjugaux accompagnent ces transitions, pas pour empêcher le changement, mais pour que le couple s'y adapte plutôt que de s'y briser.</p>
-<p>Les transitions les plus fréquemment abordées en conseil conjugal dans le ${city.department} : l'arrivée du premier enfant (qui bouleverse l'équilibre du couple), le départ des enfants du foyer (le « syndrome du nid vide »), la retraite (quand on se retrouve soudain 24h/24 ensemble), un changement professionnel majeur, ou le vieillissement et ses conséquences sur l'intimité.</p>
-<p>Le conseiller conjugal aide le couple à nommer ce qui change, à exprimer les peurs et les attentes que ces changements génèrent, et à réinventer ensemble un mode de fonctionnement qui convient aux deux. C'est un travail de réajustement, pas de réparation.</p>
+<p>On emmène sa voiture au garage avant qu'elle tombe en panne sur l'autoroute. On va chez le dentiste avant que la douleur devienne insupportable. Mais pour son couple, on attend. On attend que la situation soit vraiment dégradée, que les mots aient dépassé les pensées, que le silence se soit installé comme un troisième habitant du logement. Les conseillers conjugaux à ${city.name} voient arriver beaucoup de couples qui auraient gagné à consulter six mois ou un an plus tôt.</p>
+<p>Le conseiller conjugal à ${city.name} propose un accompagnement court (entre 5 et 12 séances) pour les couples qui traversent une difficulté relationnelle. Le format est direct, centré sur le quotidien du couple, sans plonger dans l'analyse du passé de chacun. On parle de ce qui bloque maintenant et on cherche comment débloquer la situation.</p>
+<p>Dans le ${city.department}, cette profession existe sous plusieurs formes : en CPEF, en association (CLER, AFCCC, Couples et Familles), ou en libéral. La formation est la même, environ 400 heures de spécialisation après un cursus initial en sciences humaines ou en travail social. Ce qui change, c'est le cadre de travail et le tarif.</p>
 `
         },
         {
-          title: `La formation des conseillers conjugaux en ${city.region}`,
+          title: `Conseiller conjugal ou thérapeute de couple à ${city.name} : quelle différence ?`,
           content: `
-<p>Les conseillers conjugaux et familiaux qui exercent à ${city.name} ont suivi une formation d'au moins 400 heures, dispensée par un organisme agréé. Les principaux centres de formation en France sont le CLER, l'AFCCC, et l'association Couples et Familles.</p>
-<p>Cette formation couvre un spectre large :</p>
-<ul>
-<li>Psychologie du couple et de la famille : comprendre les dynamiques relationnelles, les cycles de vie du couple, les mécanismes de conflit</li>
-<li>Droit de la famille : connaître le cadre juridique du mariage, du PACS, de la séparation, de l'autorité parentale</li>
-<li>Sociologie : comprendre l'évolution des modèles familiaux, les enjeux de genre, les différences culturelles</li>
-<li>Un travail personnel approfondi (parce qu'on ne peut pas accompagner les autres dans leurs difficultés de couple sans avoir exploré les siennes)</li>
-</ul>
-<p>Tous les conseillers conjugaux de notre annuaire à ${city.name} justifient de cette formation et exercent dans le respect de la déontologie de la profession : confidentialité, neutralité, respect du libre choix du couple.</p>
+<p>La question revient tout le temps. Normal, la frontière n'est pas toujours claire. Voilà comment distinguer les deux, sans jargon.</p>
+<p>Le <strong>conseiller conjugal</strong> à ${city.name} travaille sur une durée courte, avec un objectif concret. Vous venez avec un problème identifié (on ne communique plus, on se dispute sur l'éducation des enfants, on hésite à se séparer) et le conseiller vous aide à avancer sur ce point précis. Le travail est ancré dans le présent. La formation du conseiller conjugal est spécifique : 400 heures centrées sur la relation de couple, la famille, le droit, la sexualité.</p>
+<p>Le <a href="/therapeute-de-couple/">thérapeute de couple</a>, lui, propose un travail plus long et plus profond. Il explore les dynamiques relationnelles, les schémas répétitifs, parfois les blessures anciennes qui se rejouent dans le couple actuel. La plupart des thérapeutes de couple sont psychologues ou psychiatres avec une spécialisation.</p>
+<p>Les deux approches sont complémentaires. Certains couples commencent par du conseil conjugal dans le ${city.department} et poursuivent ensuite avec une thérapie de couple quand ils réalisent que le travail à faire est plus profond. D'autres n'ont besoin que de quelques séances de conseil pour remettre leur relation sur de bons rails. Pas de hiérarchie entre les deux.</p>
+<p>Un repère simple : si vous savez ce qui ne va pas mais que vous n'arrivez pas à le résoudre seuls, le conseil conjugal est probablement le bon point de départ. Si vous sentez que le malaise est diffus, ancien, difficile à nommer, une thérapie de couple sera sans doute plus adaptée.</p>
 `
         },
         {
-          title: `Conseil conjugal et personnes seules : pas que pour les couples à ${city.name}`,
+          title: `Trouver le bon conseiller conjugal en ${city.region}`,
           content: `
-<p>Contrairement à ce que son nom suggère, le conseil conjugal s'adresse aussi aux personnes seules. C'est même une part importante de l'activité des conseillers à ${city.name}.</p>
-<p>Les situations qui amènent une personne seule à consulter un conseiller conjugal dans le ${city.department} :</p>
+<p>Le titre de conseiller conjugal et familial n'est pas protégé par la loi en France (un vrai problème, à mon avis). N'importe qui peut se déclarer conseiller conjugal sans formation. Ça veut dire que c'est à vous de vérifier les qualifications du praticien avant de prendre rendez-vous à ${city.name}.</p>
+<p>Ce qu'il faut vérifier :</p>
 <ul>
-<li>Après une rupture difficile : comprendre ce qui s'est passé, faire le deuil de la relation, éviter de reproduire les mêmes schémas</li>
-<li>Face à des relations qui n'aboutissent pas, quand on enchaîne les histoires courtes ou qu'on n'arrive pas à s'engager</li>
-<li>Pour des questionnements sur sa vie affective (« pourquoi est-ce que j'attire toujours le même profil ? », « pourquoi j'ai peur de l'engagement ? »)</li>
-<li>En préparation d'une nouvelle relation, après un divorce ou un long célibat, pour aborder la suite avec plus de lucidité</li>
+<li>Un certificat de qualification délivré par un organisme reconnu (CLER, AFCCC, Couples et Familles, EPE)</li>
+<li>Une pratique de supervision régulière, c'est-à-dire que le conseiller est lui-même accompagné par un professionnel plus expérimenté</li>
+<li>Une adhésion à un code de déontologie qui garantit la confidentialité et la neutralité</li>
 </ul>
-<p>Le conseiller conjugal apporte un regard extérieur, professionnel et bienveillant sur ces questionnements. En quelques séances, il aide à identifier les schémas relationnels récurrents et à envisager les choses différemment. C'est un travail pragmatique, ancré dans le présent, qui ne remplace pas une psychothérapie mais qui peut suffire quand le besoin est ciblé.</p>
+<p>Le premier rendez-vous est un bon test. Le conseiller doit poser un cadre clair : durée des séances, fréquence, tarif, règles de fonctionnement (pas d'appels entre les séances, pas de rencontres individuelles secrètes avec un seul partenaire). Si ce cadre n'est pas posé dès le départ, c'est un signal d'alerte.</p>
+<p>Et si le courant ne passe pas ? Changez. La relation de confiance entre le couple et le conseiller, c'est le socle du travail. Sans cette base, même le conseiller conjugal le plus compétent de ${city.name} ne pourra pas faire grand-chose. Consultez les profils de notre annuaire pour comparer les praticiens disponibles dans le ${city.department} et en ${city.region}.</p>
+`
+        },
+      ],
+    }),
+    // Template C - Entry: stat
+    (city) => ({
+      sections: [
+        {
+          title: `Conseiller conjugal à ${city.name} : un accompagnement qui change les choses`,
+          content: `
+<p>45% des mariages en France se terminent par un divorce. Ce chiffre, on le connaît. Ce qu'on sait moins, c'est que la majorité de ces couples n'ont jamais consulté de professionnel avant la rupture. Pas un <a href="/therapeute-de-couple/">thérapeute de couple</a>, pas un conseiller conjugal. Rien. Comme si demander de l'aide était plus difficile que de signer des papiers chez un avocat.</p>
+<p>À ${city.name}, les conseillers conjugaux reçoivent des couples à tous les stades de la difficulté : ceux qui sentent les premiers craquements, ceux qui sont en pleine crise, ceux qui veulent se séparer correctement. Le conseil conjugal dans le ${city.department} n'est pas réservé aux situations désespérées. C'est même l'inverse : plus on consulte tôt, plus le travail est rapide et les résultats durables.</p>
+<p>Le format est court. Entre 5 et 12 séances, espacées d'une à deux semaines. Le conseiller conjugal travaille sur le présent : ce qui bloque aujourd'hui, comment le couple fonctionne (ou dysfonctionne) au quotidien, ce que chacun attend de la relation. Pas de plongée dans l'enfance, pas d'interprétation psychanalytique. Du concret.</p>
+`
+        },
+        {
+          title: `Les situations qui amènent chez un conseiller conjugal dans le ${city.department}`,
+          content: `
+<p>Qui pousse la porte d'un cabinet de conseil conjugal à ${city.name} ? Des profils très différents, en réalité.</p>
+<p>Il y a les couples où <strong>la communication est cassée</strong>. On se parle pour organiser la semaine, gérer les enfants, répartir les courses. Le reste, on l'a laissé tomber. Les vrais sujets sont devenus des zones interdites parce que chaque tentative finit en dispute ou en mur de silence.</p>
+<p>Il y a les couples <strong>après un choc</strong>. Une infidélité découverte, une perte d'emploi, un deuil, un déménagement subi. L'événement a secoué l'équilibre du couple et les deux partenaires ne savent pas comment reconstruire sur des fondations qui ont bougé.</p>
+<p>Il y a aussi les <strong>personnes seules</strong> (oui, le conseiller conjugal reçoit aussi en individuel) qui sortent d'une rupture ou qui enchaînent les relations courtes sans comprendre pourquoi. Ce travail-là ressemble à ce que propose un psychologue, mais il est centré uniquement sur la dimension relationnelle et affective.</p>
+<p>Et puis il y a un cas qu'on mentionne rarement : les couples qui vont bien mais qui traversent une transition. Arrivée d'un enfant, départ des enfants, retraite, changement de carrière. Le conseiller conjugal à ${city.name} aide ces couples à s'adapter au changement avant que le changement ne crée une crise. Ce n'est pas de la prévention théorique, c'est du travail concret sur les ajustements que la nouvelle situation demande.</p>
+`
+        },
+        {
+          title: `Où consulter un conseiller conjugal à ${city.name} et à quel prix ?`,
+          content: `
+<p>Trois options dans le ${city.department}, chacune avec ses avantages.</p>
+<p>Les <strong>CPEF</strong> (Centres de Planification et d'Éducation Familiale) : consultations gratuites, conseillers salariés et formés. C'est la solution la plus accessible financièrement. Le bémol, c'est le délai d'attente, qui peut atteindre plusieurs semaines en ${city.region} selon la période.</p>
+<p>Les <strong>associations agréées</strong> (CLER, AFCCC, UDAF) : tarifs entre 15€ et 45€ la séance, ajustés aux revenus du couple. Bon compromis entre accessibilité et disponibilité. Les conseillers qui y exercent ont la même formation que ceux en libéral.</p>
+<p>Les <strong>cabinets libéraux</strong> à ${city.name} : entre 40€ et 80€ la séance. Délais plus courts, horaires flexibles, choix du praticien. C'est l'option la plus chère mais aussi la plus souple.</p>
+<p>La Sécurité sociale ne rembourse pas le conseil conjugal. Certaines mutuelles, en revanche, prennent en charge 3 à 6 séances annuelles. Ça vaut le coup de vérifier.</p>
+<p>Un dernier point que les couples oublient souvent : le conseil conjugal peut aussi servir de première étape avant un travail plus long. Si le conseiller à ${city.name} estime que la situation demande un suivi approfondi, il orientera le couple vers un thérapeute de couple ou, si les questions touchent à l'intimité physique, vers un <a href="/sexologue/">sexologue</a>. Ce passage de relais fait partie du métier.</p>
+`
+        },
+      ],
+    }),
+    // Template D - Entry: question
+    (city) => ({
+      sections: [
+        {
+          title: `Conseiller conjugal à ${city.name} : pour qui, pour quoi ?`,
+          content: `
+<p>Votre couple a-t-il vraiment besoin d'un conseiller conjugal, ou est-ce que vous traversez juste un mauvais moment ? La question est légitime. Tout conflit ne justifie pas une consultation. Mais certains signes méritent qu'on y prête attention : des disputes qui tournent en boucle sur les mêmes sujets depuis des mois, un sentiment de solitude à l'intérieur même de la relation, l'impression que votre partenaire est devenu un colocataire plutôt qu'un complice.</p>
+<p>Le conseiller conjugal à ${city.name} est un professionnel formé (400 heures de spécialisation minimum) qui accompagne les couples dans leurs difficultés relationnelles. Son approche est pragmatique et limitée dans le temps : 5 à 12 séances en moyenne, centrées sur ce qui pose problème maintenant. C'est moins long qu'une <a href="/therapeute-de-couple/">thérapie de couple</a>, et c'est voulu. Le conseil conjugal vise un déblocage concret, pas une exploration en profondeur de la psyché de chacun.</p>
+<p>Dans le ${city.department}, les conseillers conjugaux et familiaux travaillent en CPEF, en association ou en libéral. Tous suivent le même socle de formation, délivré par des organismes agréés (CLER, AFCCC, Couples et Familles). Ce qui varie, c'est le cadre de travail, le tarif, et la personnalité du praticien. Ce dernier point compte plus qu'on ne le croit.</p>
+`
+        },
+        {
+          title: `Le déroulement du conseil conjugal dans le ${city.department}`,
+          content: `
+<p>Première séance. Le conseiller reçoit le couple ensemble (sauf situation particulière, comme des violences conjugales où la rencontre individuelle est préférable). Il écoute chacun exposer sa vision de la situation. Pas de jugement, pas de prise de parti. Cette première heure sert à poser le cadre et à vérifier que le courant passe entre le couple et le praticien.</p>
+<p>Les séances suivantes à ${city.name} alternent entre échanges en séance et exercices à pratiquer entre les rendez-vous. Le conseiller conjugal ne se contente pas d'écouter, c'est une différence importante avec l'image qu'on peut en avoir. Il intervient, reformule, pointe les malentendus, propose des outils. Quelques exemples concrets :</p>
+<ul>
+<li>Apprendre à formuler une demande sans que l'autre se sente attaqué (ça a l'air simple, en pratique c'est un vrai travail)</li>
+<li>Mettre en place un temps d'échange quotidien de 15 minutes, sans téléphone, sans enfants</li>
+<li>Identifier les « déclencheurs » de conflit propres au couple et trouver comment les désamorcer</li>
+<li>Clarifier les attentes de chacun sur des sujets concrets : argent, éducation, vie sociale, intimité</li>
+</ul>
+<p>Le conseiller conjugal en ${city.region} travaille aussi avec des personnes seules. Après une séparation, avant une nouvelle relation, ou face à des schémas relationnels qui se répètent. Ce volet individuel représente une part non négligeable de l'activité des conseillers dans le ${city.department}, et il est souvent méconnu.</p>
+`
+        },
+        {
+          title: `Conseiller conjugal à ${city.name} : coût et accès`,
+          content: `
+<p>Le nerf de la guerre. En libéral à ${city.name}, comptez 40€ à 80€ la séance. Les associations du ${city.department} proposent des tarifs modulés (15€ à 45€ selon les revenus). Les CPEF, financés par le conseil départemental, sont gratuits.</p>
+<p>La Sécurité sociale ne prend pas en charge le conseil conjugal. C'est une réalité. Certaines mutuelles couvrent quelques séances par an dans un forfait « consultations psychologiques » ou « prévention ». Le remboursement varie tellement d'un contrat à l'autre qu'il faut vérifier le vôtre.</p>
+<p>Sur un suivi de 8 séances en libéral, le budget total se situe entre 320€ et 640€. Ce n'est pas rien. Mais c'est un montant à mettre en regard de ce que coûte une séparation mal gérée, autant sur le plan financier qu'émotionnel, surtout quand il y a des enfants. Et si le couple décide malgré tout de se séparer, le travail fait en conseil conjugal n'est pas perdu : il aura posé les bases d'une séparation dans le respect mutuel, avec la possibilité de continuer le travail chez un <a href="/mediateur-familial/">médiateur familial</a> pour les questions pratiques.</p>
+<p>Un conseil pour choisir votre praticien à ${city.name} : ne vous arrêtez pas au premier profil trouvé en ligne. Comparez les formations, les approches, et surtout, faites confiance à votre ressenti lors de la première séance. Si vous sentez que le conseiller comprend votre situation et que vous pouvez lui parler librement, c'est bon signe. Sinon, essayez quelqu'un d'autre.</p>
 `
         },
       ],
