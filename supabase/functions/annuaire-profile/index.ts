@@ -577,6 +577,37 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
     }
   }
 
+  // ── Opening hours ──
+  if (body.opening_hours !== undefined) {
+    if (body.opening_hours === null) {
+      result.opening_hours = null;
+    } else if (typeof body.opening_hours === 'object' && !Array.isArray(body.opening_hours)) {
+      const validDays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+      const timeRegex = /^\d{2}:\d{2}$/;
+      const oh: Record<string, unknown> = {};
+      for (const day of validDays) {
+        const d = (body.opening_hours as Record<string, unknown>)[day];
+        if (!d || typeof d !== 'object') {
+          oh[day] = { closed: true };
+          continue;
+        }
+        const dayObj = d as Record<string, unknown>;
+        if (dayObj.closed) {
+          oh[day] = { closed: true };
+          continue;
+        }
+        const entry: Record<string, unknown> = { closed: false };
+        for (const slot of ['morning_start', 'morning_end', 'afternoon_start', 'afternoon_end']) {
+          const v = dayObj[slot];
+          if (typeof v === 'string' && timeRegex.test(v)) entry[slot] = v;
+          else entry[slot] = null;
+        }
+        oh[day] = entry;
+      }
+      result.opening_hours = oh;
+    }
+  }
+
   // ── Billing fields ──
   if (body.billing_company_name !== undefined) {
     result.billing_company_name = sanitize(body.billing_company_name, 200) || null;
