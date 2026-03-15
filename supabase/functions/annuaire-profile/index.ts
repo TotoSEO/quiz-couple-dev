@@ -538,9 +538,10 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
   }
   if (Array.isArray(body.photos)) {
     result.photos = body.photos
-      .filter((u: unknown) => typeof u === 'string' && (u as string).includes('supabase.co/storage'))
+      .filter((u: unknown) => typeof u === 'string' && ((u as string).includes('supabase.co/storage') || (u as string) === 'video'))
       .map((u: string) => u.trim().slice(0, 500))
-      .slice(0, 5);
+      .filter((u: string, i: number, arr: string[]) => u !== 'video' || arr.indexOf('video') === i) // max 1 video marker
+      .slice(0, 6); // 5 photos + 1 video marker
   }
   if (body.video_url !== undefined) {
     const v = sanitize(body.video_url, 300);
