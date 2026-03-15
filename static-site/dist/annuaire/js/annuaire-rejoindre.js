@@ -176,6 +176,23 @@
     update();
   });
 
+  // ── Short description counter ──
+  (function() {
+    var input = document.getElementById('f-short-description');
+    var counter = document.getElementById('f-short-desc-counter');
+    if (!input || !counter) return;
+    function update() {
+      var len = input.value.length;
+      counter.textContent = len + '/165';
+      counter.style.color = len > 155 ? 'hsl(0 70% 50%)' : '';
+    }
+    input.addEventListener('input', update);
+    input.addEventListener('paste', function() {
+      var el = this;
+      setTimeout(function() { if (el.value.length > 165) el.value = el.value.slice(0, 165); update(); }, 0);
+    });
+  })();
+
   // ── Rich Text Editor (registration) ──
   initRichTextEditorRejoindre('f-desc-toolbar', 'f-description-editor', 'f-description', 'count-description');
 
@@ -206,6 +223,43 @@
   limitDigits('f-prix-min', 4);
   limitDigits('f-prix-max', 4);
   limitDigits('f-experience', 2);
+
+  // ── Hours toggle (day open/closed) ─────────────────────────────
+  document.querySelectorAll('.ann-hours-day-toggle').forEach(function (cb) {
+    function toggle() {
+      var day = cb.getAttribute('data-day');
+      var slots = document.querySelector('.ann-hours-form-slots[data-day="' + day + '"]');
+      if (slots) {
+        if (cb.checked) { slots.classList.remove('disabled'); }
+        else { slots.classList.add('disabled'); }
+      }
+    }
+    cb.addEventListener('change', toggle);
+    toggle(); // init
+  });
+
+  // Helper: collect opening_hours from form
+  function collectOpeningHours() {
+    var days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+    var hasAny = false;
+    var result = {};
+    days.forEach(function (day) {
+      var toggle = form.querySelector('input[name="hours_' + day + '_open"]');
+      if (!toggle || !toggle.checked) {
+        result[day] = { closed: true };
+        return;
+      }
+      hasAny = true;
+      result[day] = {
+        closed: false,
+        morning_start: form.querySelector('input[name="hours_' + day + '_am_start"]').value || null,
+        morning_end: form.querySelector('input[name="hours_' + day + '_am_end"]').value || null,
+        afternoon_start: form.querySelector('input[name="hours_' + day + '_pm_start"]').value || null,
+        afternoon_end: form.querySelector('input[name="hours_' + day + '_pm_end"]').value || null,
+      };
+    });
+    return hasAny ? result : null;
+  }
 
   // ── Bubble builder (shared for methods & languages) ────────────
   function buildBubbles(container, items, nameAttr, selectedValues, maxSelect) {
@@ -350,7 +404,7 @@
       var q = addrInput.value.trim();
       if (q.length < 4) { sugBox.style.display = 'none'; return; }
       debounceTimer = setTimeout(function () {
-        fetch('https://nominatim.openstreetmap.org/search?format=json&countrycodes=fr&limit=5&q=' + encodeURIComponent(q), {
+        fetch('https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&countrycodes=fr&limit=5&q=' + encodeURIComponent(q), {
           headers: { 'Accept-Language': 'fr' }
         })
           .then(function (r) { return r.json(); })
@@ -374,6 +428,14 @@
                 var lngInput = document.getElementById('f-lng');
                 if (latInput && r.lat) latInput.value = r.lat;
                 if (lngInput && r.lon) lngInput.value = r.lon;
+                // Extract real city and postal code from Nominatim structured address
+                var addr = r.address || {};
+                var realCity = addr.city || addr.town || addr.village || addr.municipality || '';
+                var postalCode = addr.postcode || '';
+                var dcField = document.getElementById('f-display-city');
+                var pcField = document.getElementById('f-codepostal');
+                if (dcField) dcField.value = realCity;
+                if (pcField && postalCode) pcField.value = postalCode;
                 sugBox.style.display = 'none';
               });
               sugBox.appendChild(div);
@@ -459,6 +521,12 @@
     }
 
     if (step === 4) {
+      // Short description
+      var shortDesc = val('f-short-description').trim();
+      if (!shortDesc) { showError('err-short-description', 'La description courte est requise'); valid = false; }
+      else if (shortDesc.length < 20) { showError('err-short-description', 'Minimum 20 caractères'); valid = false; }
+      else if (shortDesc.length > 165) { showError('err-short-description', 'Maximum 165 caractères'); valid = false; }
+
       // Sync rich text editor to hidden textarea
       var descEditorEl = document.getElementById('f-description-editor');
       var descTextareaEl = document.getElementById('f-description');
@@ -680,6 +748,7 @@
         phone: val('f-telephone'),
         specialty: specialties[0] || '',
         city: val('f-ville'),
+        short_description: val('f-short-description').slice(0, 165).trim(),
         description: val('f-description'),
         methods: methods,
         languages: languages.length ? languages : ['Français'],
@@ -697,8 +766,11 @@
           });
           return modes.join(', ') || 'Sur rendez-vous';
         })(),
+        postal_code: val('f-codepostal') || null,
+        display_city: val('f-display-city') || null,
         lat: parseFloat(val('f-lat')) || null,
         lng: parseFloat(val('f-lng')) || null,
+        opening_hours: collectOpeningHours(),
         is_published: false,
       };
 
