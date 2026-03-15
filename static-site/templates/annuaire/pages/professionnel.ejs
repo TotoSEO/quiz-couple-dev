@@ -141,6 +141,23 @@
           <p class="ann-profile-bio"><%= pro.description %></p>
         </div>
 
+        <!-- Cabinet photos gallery -->
+        <div class="ann-profile-card" id="ann-cabinet-photos" style="<%= (pro.photos && pro.photos.length > 0) ? '' : 'display:none;' %>">
+          <h2 class="ann-profile-card-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            Photos du cabinet
+          </h2>
+          <div class="ann-cabinet-gallery" id="ann-cabinet-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.75rem;">
+            <% if (pro.photos && pro.photos.length > 0) { %>
+              <% for (const photoUrl of pro.photos) { %>
+              <div style="border-radius: var(--ann-radius); overflow: hidden; aspect-ratio: 4/3; background: hsl(var(--ann-muted) / 0.3);">
+                <img src="<%= photoUrl %>" alt="Photo du cabinet de <%= pro.firstName %> <%= pro.lastName %>" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <% } %>
+            <% } %>
+          </div>
+        </div>
+
         <!-- Methods & Languages (side by side on desktop) -->
         <div class="ann-profile-row">
           <!-- Methods -->
@@ -420,6 +437,82 @@
         var cityLabel = p.display_city || p.city;
         if (p.postal_code) cityLabel += ' (' + p.postal_code + ')';
         value.textContent = cityLabel;
+      }
+    }
+
+    // Update cabinet photos
+    var gallerySection = document.getElementById('ann-cabinet-photos');
+    var gallery = document.getElementById('ann-cabinet-gallery');
+    if (gallerySection && gallery && Array.isArray(p.photos) && p.photos.length > 0) {
+      gallery.innerHTML = p.photos.map(function(url) {
+        var safe = url.replace(/[&<>"']/g, function(c) { return '&#' + c.charCodeAt(0) + ';'; });
+        return '<div style="border-radius:var(--ann-radius);overflow:hidden;aspect-ratio:4/3;background:hsl(var(--ann-muted)/0.3);">' +
+          '<img src="' + safe + '" alt="Photo du cabinet" loading="lazy" style="width:100%;height:100%;object-fit:cover;">' +
+          '</div>';
+      }).join('');
+      gallerySection.style.display = '';
+    } else if (gallerySection && (!p.photos || !p.photos.length)) {
+      gallerySection.style.display = 'none';
+    }
+
+    // Update premium badge
+    var isPremium = p.plan === 'pro' || p.plan === 'boost';
+    var verifiedBadge = document.querySelector('.ann-profile-verified');
+    if (isPremium && !verifiedBadge) {
+      var avatarDiv = document.querySelector('.ann-profile-avatar-lg');
+      if (avatarDiv) {
+        var badge = document.createElement('div');
+        badge.className = 'ann-profile-verified';
+        badge.title = 'Professionnel vérifié';
+        badge.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" style="width:1rem;height:1rem"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
+        avatarDiv.appendChild(badge);
+      }
+    } else if (!isPremium && verifiedBadge) {
+      verifiedBadge.remove();
+    }
+
+    // Update premium text badge
+    var premiumBadge = document.querySelector('.ann-badge-premium');
+    if (isPremium && !premiumBadge) {
+      var nameRow = document.querySelector('.ann-profile-identity > div');
+      if (nameRow) {
+        var span = document.createElement('span');
+        span.className = 'ann-badge ann-badge-premium';
+        span.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" style="width:0.625rem;height:0.625rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Premium';
+        nameRow.appendChild(span);
+      }
+    } else if (!isPremium && premiumBadge) {
+      premiumBadge.remove();
+    }
+
+    // Update website link visibility (premium only)
+    var contactInfo = document.querySelector('.ann-contact-info');
+    if (contactInfo) {
+      var websiteLink = contactInfo.querySelector('a[target="_blank"]:not([href*="doctolib"])');
+      if (isPremium && p.website && !websiteLink) {
+        var a = document.createElement('a');
+        a.href = p.website;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.className = 'ann-contact-item';
+        a.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg><span>Site web</span>';
+        contactInfo.appendChild(a);
+      } else if (websiteLink && isPremium && p.website) {
+        websiteLink.href = p.website;
+      } else if (websiteLink && (!isPremium || !p.website)) {
+        websiteLink.remove();
+      }
+    }
+
+    // Update quick info experience in header
+    var quickInfo = document.querySelectorAll('.ann-profile-quick-info span');
+    for (var i = 0; i < quickInfo.length; i++) {
+      var text = quickInfo[i].textContent.trim();
+      if (text.indexOf('ans') > -1 && p.years_experience != null) {
+        quickInfo[i].innerHTML = quickInfo[i].innerHTML.replace(/\d+\s*ans/, p.years_experience + ' ans');
+      }
+      if (text.indexOf('€') > -1 && p.price_range) {
+        quickInfo[i].innerHTML = quickInfo[i].querySelector('svg').outerHTML + '\n            ' + p.price_range;
       }
     }
   })
