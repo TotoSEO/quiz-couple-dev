@@ -289,10 +289,11 @@ const SPECIALTY_CITY_TEMPLATES = {
   ],
 
   'mediateur-familial': [
+    // Template A - Entry: statistic
     (city) => ({
       sections: [
         {
-          title: `La médiation familiale à ${city.name} : une alternative au tribunal`,
+          title: `Médiateur familial à ${city.name} : régler un conflit sans passer par le juge`,
           content: `
 <p>Quand un conflit familial éclate à ${city.name} — divorce, garde des enfants, héritage, conflit avec les beaux-parents — le réflexe est souvent de consulter un avocat et de saisir le juge. C'est compréhensible, mais ce n'est pas la seule option. Et rarement la plus rapide ou la moins douloureuse.</p>
 <p>La médiation familiale offre un cadre structuré pour résoudre les conflits autrement. Un médiateur familial diplômé d'État accueille les parties en conflit et les aide à construire ensemble des solutions acceptables pour tous. Pas de gagnant, pas de perdant. Pas de décision imposée par un tiers. Juste un accord sur mesure, construit par les personnes directement concernées.</p>
