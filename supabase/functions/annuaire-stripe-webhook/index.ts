@@ -202,8 +202,11 @@ serve(async (req: Request) => {
             break;
           }
 
-          const clientEmail = billingProfile.billing_email || billingProfile.email;
-          const clientCompanyName = billingProfile.billing_company_name || `${billingProfile.first_name} ${billingProfile.last_name}`;
+          const clientEmail = billingProfile.billing_email || billingProfile.email || '';
+          const clientCompanyName = billingProfile.billing_company_name || `${billingProfile.first_name || ''} ${billingProfile.last_name || ''}`.trim() || 'Client';
+          const clientSiret = billingProfile.billing_siret || '';
+          const clientTva = billingProfile.billing_tva_number || '';
+          const clientAddress = billingProfile.billing_address || '';
 
           // Check for duplicate invoice
           const { data: existingInvoice } = await supabase
@@ -251,9 +254,9 @@ serve(async (req: Request) => {
                 period_start: periodStart,
                 period_end: periodEnd,
                 client_company_name: clientCompanyName,
-                client_siret: billingProfile.billing_siret,
-                client_tva_number: billingProfile.billing_tva_number,
-                client_address: billingProfile.billing_address,
+                client_siret: clientSiret,
+                client_tva_number: clientTva,
+                client_address: clientAddress,
                 client_email: clientEmail,
                 paid_at: paidAt,
               });
