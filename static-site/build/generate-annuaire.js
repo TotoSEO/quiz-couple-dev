@@ -285,6 +285,7 @@ async function generateRejoindrePage() {
     metaDescription: 'Créez votre fiche professionnelle gratuitement en 5 minutes. Visibilité locale, zéro commission, contact direct avec vos futurs patients.',
     canonical: getAnnuaireUrl('/rejoindre/'),
     currentPage: 'rejoindre',
+    noindex: true,
   };
 
   const html = renderTemplate('rejoindre', data);
@@ -645,6 +646,11 @@ function generateSitemap() {
 
   fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), xml, 'utf8');
   console.log(`[annuaire] Generated: /sitemap.xml (${urls.length} URLs)`);
+
+  // Generate robots.txt
+  const robotsTxt = `User-agent: *\nAllow: /\nDisallow: /dashboard/\nDisallow: /admin/\n\nSitemap: ${ANNUAIRE_BASE_URL}/sitemap.xml\n`;
+  fs.writeFileSync(path.join(DIST_DIR, 'robots.txt'), robotsTxt, 'utf8');
+  console.log('[annuaire] Generated: /robots.txt');
 }
 
 // ── Redirects (301 for deleted professionals) ───────────────────────────
