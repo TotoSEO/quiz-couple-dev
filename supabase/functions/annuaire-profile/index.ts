@@ -510,6 +510,9 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
     if (isNaN(y) || y < 0 || y > 60) return { error: 'Années d\'expérience invalides.' };
     result.years_experience = Math.round(y);
   }
+  if (body.professional_id_number !== undefined) {
+    result.professional_id_number = sanitize(body.professional_id_number, 80) || null;
+  }
   if (body.lat !== undefined && body.lng !== undefined) {
     const lat = Number(body.lat);
     const lng = Number(body.lng);

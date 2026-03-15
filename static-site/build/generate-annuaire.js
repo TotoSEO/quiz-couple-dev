@@ -157,6 +157,7 @@ async function fetchLiveProfessionals() {
       methods: r.methods || [],
       languages: r.languages || ['Français'],
       yearsExperience: r.years_experience || 0,
+      professionalIdNumber: r.professional_id_number || '',
       email: r.email,
       phone: r.phone || '',
       address: r.address || '',
