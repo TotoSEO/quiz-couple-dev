@@ -287,6 +287,23 @@ serve(async (req: Request) => {
         });
       }
 
+      // If google_place_id was removed, clean up cached reviews and rating
+      if (updates.google_place_id === null && data?.id) {
+        try {
+          await supabase
+            .from('annuaire_google_reviews')
+            .delete()
+            .eq('professional_id', data.id);
+          await supabase
+            .from('annuaire_professionals')
+            .update({ rating: null, review_count: 0 })
+            .eq('id', data.id);
+          console.log('[profile] Cleaned up Google reviews after Place ID removal');
+        } catch (e) {
+          console.warn('[profile] Google reviews cleanup error:', e);
+        }
+      }
+
       // Queue deploy if profile is published (rebuild static pages with fresh data)
       if (data && data.is_published) {
         await queueDeploy('profile updated: ' + data.slug);
@@ -511,8 +528,12 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
   }
   if (body.google_place_id !== undefined) {
     const gpi = sanitize(body.google_place_id, 200);
-    // Basic validation: Google Place IDs start with "ChIJ" or similar patterns
-    if (gpi && gpi.length < 10) return { error: 'Google Place ID invalide.' };
+    if (gpi) {
+      // Google Place IDs are alphanumeric with hyphens/underscores, typically start with "ChIJ"
+      if (gpi.length < 10 || !/^[A-Za-z0-9_-]+$/.test(gpi)) {
+        return { error: 'Google Place ID invalide. Vérifiez le format (ex: ChIJ...).' };
+      }
+    }
     result.google_place_id = gpi || null;
   }
   if (Array.isArray(body.photos)) {

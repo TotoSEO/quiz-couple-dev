@@ -108,19 +108,25 @@ serve(async (req: Request) => {
       console.log(`[invoice] Record already exists: ${invoiceNumber}, generating PDF`);
     } else {
       // No record yet — create one (fallback if webhook didn't create it)
-      const { data: seqResult } = await supabase.rpc('generate_invoice_number');
-      invoiceNumber = seqResult;
+      // Generate invoice number (retry RPC up to 3 times to avoid unsafe fallback)
+      let rpcAttempts = 0;
+      while (rpcAttempts < 3) {
+        const { data: seqResult, error: rpcErr } = await supabase.rpc('generate_invoice_number');
+        console.log(`[invoice] generate_invoice_number RPC attempt ${rpcAttempts + 1}: result=${seqResult}, error=${JSON.stringify(rpcErr)}`);
+        if (seqResult) {
+          invoiceNumber = seqResult;
+          break;
+        }
+        rpcAttempts++;
+        if (rpcAttempts < 3) await new Promise(r => setTimeout(r, 500 * rpcAttempts));
+      }
+
       if (!invoiceNumber) {
-        const { data: rawSeq } = await supabase
-          .from('annuaire_invoices')
-          .select('invoice_number')
-          .order('created_at', { ascending: false })
-          .limit(1)
-          .maybeSingle();
-        const lastNum = rawSeq?.invoice_number
-          ? parseInt(rawSeq.invoice_number.replace('ANNQUCO-', ''), 10)
-          : 0;
-        invoiceNumber = `ANNQUCO-${lastNum + 1}`;
+        // Last resort fallback with timestamp + random suffix to avoid collisions
+        const ts = Date.now();
+        const rand = Math.floor(Math.random() * 9000) + 1000;
+        invoiceNumber = `ANNQUCO-${ts}-${rand}`;
+        console.warn(`[invoice] RPC failed 3 times, using fallback invoice number: ${invoiceNumber}`);
       }
 
       const { data: insertedInvoice, error: insertError } = await supabase

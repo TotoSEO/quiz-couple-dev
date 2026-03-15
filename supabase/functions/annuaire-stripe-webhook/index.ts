@@ -293,23 +293,25 @@ serve(async (req: Request) => {
           invoiceNumber = existingInvoice.invoice_number;
           console.log(`[webhook] Invoice already exists: ${invoiceNumber}`);
         } else {
-          // Generate invoice number
-          const { data: seqResult, error: rpcErr } = await supabase.rpc('generate_invoice_number');
-          console.log(`[webhook] generate_invoice_number RPC: result=${seqResult}, error=${JSON.stringify(rpcErr)}`);
+          // Generate invoice number (retry RPC up to 3 times to avoid unsafe fallback)
+          let rpcAttempts = 0;
+          while (rpcAttempts < 3) {
+            const { data: seqResult, error: rpcErr } = await supabase.rpc('generate_invoice_number');
+            console.log(`[webhook] generate_invoice_number RPC attempt ${rpcAttempts + 1}: result=${seqResult}, error=${JSON.stringify(rpcErr)}`);
+            if (seqResult) {
+              invoiceNumber = seqResult;
+              break;
+            }
+            rpcAttempts++;
+            if (rpcAttempts < 3) await new Promise(r => setTimeout(r, 500 * rpcAttempts));
+          }
 
-          if (seqResult) {
-            invoiceNumber = seqResult;
-          } else {
-            const { data: rawSeq } = await supabase
-              .from('annuaire_invoices')
-              .select('invoice_number')
-              .order('created_at', { ascending: false })
-              .limit(1)
-              .maybeSingle();
-            const lastNum = rawSeq?.invoice_number
-              ? parseInt(rawSeq.invoice_number.replace('ANNQUCO-', ''), 10)
-              : 0;
-            invoiceNumber = `ANNQUCO-${lastNum + 1}`;
+          if (!invoiceNumber) {
+            // Last resort fallback with timestamp + random suffix to avoid collisions
+            const ts = Date.now();
+            const rand = Math.floor(Math.random() * 9000) + 1000;
+            invoiceNumber = `ANNQUCO-${ts}-${rand}`;
+            console.warn(`[webhook] RPC failed 3 times, using fallback invoice number: ${invoiceNumber}`);
           }
 
           // Insert invoice record
@@ -486,6 +488,21 @@ Votre facture PDF sera disponible dans votre <a href="https://annuaire.quiz-coup
             await cleanupExtraPhotos(supabase, proData.id, proData.photos || []);
           } catch (cleanupErr) {
             console.warn('[webhook] Photo cleanup error:', cleanupErr);
+          }
+
+          // Clean up Google reviews (only available on Boost plan)
+          try {
+            await supabase
+              .from('annuaire_google_reviews')
+              .delete()
+              .eq('professional_id', proData.id);
+            await supabase
+              .from('annuaire_professionals')
+              .update({ rating: null, review_count: 0 })
+              .eq('id', proData.id);
+            console.log('[webhook] Cleaned up Google reviews after downgrade');
+          } catch (reviewCleanupErr) {
+            console.warn('[webhook] Google reviews cleanup error:', reviewCleanupErr);
           }
         }
 
