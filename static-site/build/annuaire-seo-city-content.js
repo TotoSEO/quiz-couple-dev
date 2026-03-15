@@ -359,71 +359,147 @@ const SPECIALTY_CITY_TEMPLATES = {
   ],
 
   'coach-parental': [
+    // Template A - Entry: morning chaos scene
     (city) => ({
       sections: [
         {
-          title: `Coaching parental à ${city.name} : reprendre le contrôle du quotidien`,
+          title: `Coach parental à ${city.name} : quand le quotidien familial déraille`,
           content: `
-<p>Les matins qui partent en vrille, les devoirs qui virent au bras de fer, les couchers qui n'en finissent pas. À ${city.name} comme partout, la parentalité met les nerfs à rude épreuve. Et quand les parents s'épuisent, c'est souvent le couple qui trinque.</p>
-<p>Le coaching parental, c'est un accompagnement concret pour sortir de ces situations de blocage. Pas un cours de morale sur la bonne façon d'élever ses enfants. Plutôt un espace où on peut poser ses difficultés, comprendre ce qui les entretient, et repartir avec des stratégies qui marchent — adaptées à votre famille, pas à un modèle théorique.</p>
-<p>Dans le département ${city.department}, les coachs parentaux reçoivent des familles aux profils très différents : parents de jeunes enfants submergés par les crises de colère, parents d'ados en perte de communication, couples en désaccord sur l'éducation, familles recomposées cherchant leurs repères, parents solo en quête de soutien.</p>
+<p>6h47. Le réveil a sonné trois fois. Le petit refuse de s'habiller, la grande a perdu son cahier de textes, le café refroidit sur le comptoir. Et vous, debout depuis vingt minutes, vous avez déjà crié deux fois. Trouver un coach parental à ${city.name}, ça commence souvent par un matin comme celui-là. Un matin de trop.</p>
+<p>Le coaching parental, c'est un accompagnement qui part de ces situations concrètes. Pas de grandes théories sur l'enfance, pas de culpabilisation. Un professionnel qui écoute ce que vous vivez au quotidien dans le ${city.department} et qui vous aide à comprendre ce qui coince. Votre enfant fait une crise à chaque repas ? Le coach va chercher ce qui se joue là (et c'est rarement une question de nourriture).</p>
+<p>À ${city.name}, les familles qui consultent un coach parental ont des profils très variés. Des parents de tout-petits épuisés par les colères, des parents d'ados qui se sentent dépassés, des couples qui ne sont pas d'accord sur les règles à la maison. Ce qui les réunit : le sentiment d'avoir tout essayé. Les livres, les podcasts, les conseils de la belle-mère. Rien n'a tenu. Le coaching parental propose autre chose, un regard extérieur sur votre famille, avec vous dedans, pas au-dessus.</p>
 `
         },
         {
-          title: `Ce que le coaching parental change concrètement dans le ${city.department}`,
+          title: `Ce qu'un coach parental change vraiment à ${city.name}`,
           content: `
-<p>Un bon coach parental à ${city.name} ne vous dit pas quoi faire. Il vous aide à comprendre pourquoi ce que vous faites ne fonctionne plus — et à trouver des alternatives.</p>
-<p>Les outils les plus utilisés par les coachs de la région ${city.region} :</p>
+<p>Soyons francs. Un coach parental à ${city.name} ne va pas transformer votre enfant en trois séances. Ce qu'il va transformer, c'est votre façon de réagir quand les choses s'enveniment. Et ça, ça change beaucoup de choses.</p>
+<p>Les approches les plus utilisées dans le ${city.department} :</p>
 <ul>
-<li>La <strong>discipline positive</strong> : poser un cadre ferme sans recourir aux punitions, aux cris ou aux menaces. Des techniques concrètes comme les « choix limités » ou le « temps de pause positif »</li>
-<li>L'<strong>écoute active</strong> et la <strong>reformulation</strong> : apprendre à entendre ce que l'enfant exprime vraiment derrière son comportement (un enfant qui provoque est souvent un enfant qui cherche de l'attention ou qui a besoin de se sentir en sécurité)</li>
-<li>La <strong>gestion émotionnelle du parent</strong> : parce que quand on est à bout, on réagit au lieu de répondre. Le coach aide à identifier les déclencheurs et à développer des réflexes plus adaptés</li>
+<li>La <strong>discipline positive</strong>, qui pose un cadre clair sans punitions ni rapports de force. Ça marche, à condition de s'y tenir (le coach est là pour ça)</li>
+<li>Le travail sur les <strong>déclencheurs émotionnels du parent</strong> : pourquoi cette phrase de votre fils de 4 ans vous met dans un état pareil ? La réponse a souvent à voir avec votre propre histoire</li>
+<li>Des <strong>mises en situation</strong> concrètes, adaptées à votre quotidien et à l'âge de vos enfants</li>
 </ul>
-<p>Les résultats sont généralement visibles dès les 2-3 premières séances. Pas parce que les problèmes disparaissent d'un coup, mais parce que le parent change de regard sur ce qui se passe — et ça change tout.</p>
+<p>Est-ce que tous les coachs parentaux se valent ? Non. Comme dans tous les métiers non réglementés, il y a des professionnels formés et rigoureux, et d'autres moins. Vérifiez la formation (certification reconnue, diplôme en psychologie ou en sciences de l'éducation), demandez sur quelle méthode le coach s'appuie, et faites confiance à votre ressenti lors du premier échange.</p>
+<p>Un parcours de coaching parental à ${city.name} dure en moyenne 5 à 8 séances, avec un rendez-vous toutes les deux semaines. Les tarifs dans la région ${city.region} vont de 50€ à 90€ la séance. C'est un investissement, oui. Mais les familles qui vont au bout du processus disent toutes la même chose : les matins ne sont plus les mêmes. Les repas non plus. Et les soirées sont redevenues vivables.</p>
 `
         },
         {
-          title: `Coaching parental et couple à ${city.name} : un travail d'équipe`,
+          title: `Coach parental et tensions de couple à ${city.name} : le lien qu'on ne voit pas`,
           content: `
-<p>Les disputes éducatives sont l'une des premières sources de conflit dans les couples avec enfants. « Tu es trop dur avec eux », « Tu leur passes tout », « C'est toujours moi qui fais le méchant » — ces phrases résonnent dans beaucoup de foyers à ${city.name}.</p>
-<p>Le coaching parental, quand les deux parents s'y engagent, permet de reconstruire une alliance éducative. Le coach aide chaque parent à exprimer sa vision de l'éducation, à comprendre d'où elle vient (souvent de sa propre enfance), et à trouver un terrain d'entente qui respecte les valeurs de chacun.</p>
-<p>Un parcours de coaching parental à ${city.name} dure généralement 5 à 8 séances, à raison d'un rendez-vous toutes les deux semaines. Les tarifs varient entre 50€ et 90€ la séance. Certains coachs proposent des forfaits qui incluent un suivi par email ou téléphone entre les rendez-vous.</p>
-<p>Quand les tensions éducatives ont abîmé la relation de couple en profondeur, combiner le coaching parental avec un accompagnement conjugal est souvent la meilleure stratégie. Notre annuaire vous permet de trouver les deux types de professionnels à ${city.name}.</p>
+<p>« Tu cèdes tout le temps. » « Et toi, tu ne fais que crier. » Les désaccords éducatifs sont le terreau de beaucoup de conflits conjugaux à ${city.name}. On croit se disputer sur les devoirs ou le temps d'écran, mais le vrai sujet, c'est le sentiment de ne pas former une équipe.</p>
+<p>Le coaching parental, quand les deux parents participent, a un effet direct sur la relation de couple. Le coach aide chacun à mettre des mots sur sa vision de l'éducation (souvent héritée de sa propre enfance, sans qu'on en ait conscience) et à construire des règles communes. Pas un compromis mou où personne ne se retrouve. Un vrai accord, discuté, choisi.</p>
+<p>Ce travail rejoint souvent celui d'un <a href="/therapeute-de-couple/">thérapeute de couple</a> ou d'un <a href="/conseiller-conjugal/">conseiller conjugal</a>. La frontière entre problèmes parentaux et problèmes conjugaux est rarement nette. Un coach parental à ${city.name} saura vous orienter si le travail sur la parentalité fait remonter des tensions plus profondes dans la relation.</p>
+<p>Si vous êtes dans une situation de séparation ou de divorce, un <a href="/mediateur-familial/">médiateur familial</a> peut aussi intervenir sur les questions de coparentalité (qui est un sujet à part entière, et pas le plus simple).</p>
+<p>Un exercice à tester ce soir : au lieu de corriger ce que l'autre parent fait avec l'enfant, notez mentalement ce qu'il fait de bien. Juste ça. Pendant une semaine.</p>
 `
         },
       ],
     }),
+    // Template B - Entry: question
     (city) => ({
       sections: [
         {
-          title: `Pourquoi de plus en plus de parents consultent à ${city.name}`,
+          title: `Coach parental à ${city.name} : à qui ça s'adresse vraiment ?`,
           content: `
-<p>Le coaching parental n'est plus réservé aux familles « en difficulté ». Dans le ${city.department}, des parents de tous milieux font appel à un coach parental pour une raison simple : être parent, personne ne nous y a formés. On apprend sur le tas, avec les exemples qu'on a reçus (pas toujours les meilleurs) et les conseils contradictoires qu'on lit partout.</p>
-<p>Ce qui amène les parents de ${city.name} à consulter :</p>
+<p>Vous pensez que le coaching parental, c'est pour les parents qui ne s'en sortent pas ? C'est le premier malentendu à déconstruire. À ${city.name}, la majorité des parents qui consultent un coach parental sont des parents investis. Ils lisent, ils s'informent, ils essaient. Le problème, c'est qu'ils essaient trop de choses à la fois, sans ligne directrice, et finissent par ne plus savoir quoi appliquer.</p>
+<p>Un coach parental à ${city.name} reçoit des profils très différents dans le ${city.department}. Des mères en congé parental qui se sentent seules face aux crises du quotidien. Des pères qui veulent s'impliquer autrement que dans le rôle du « méchant ». Des grands-parents, aussi, qui gardent leurs petits-enfants et se retrouvent démunis face à des comportements qu'ils n'ont jamais connus avec leurs propres enfants.</p>
+<p>Fait rarement mentionné : selon une étude de l'INED publiée en 2023, 60 % des parents français se disent « souvent ou très souvent stressés » par leur rôle parental. Soixante pour cent. Et ce chiffre monte à 72 % chez les parents d'enfants de moins de 6 ans. Le stress parental n'est pas un problème individuel, c'est un fait de société.</p>
+`
+        },
+        {
+          title: `Les méthodes du coaching parental dans le ${city.department}`,
+          content: `
+<p>Le coaching parental n'est pas de la thérapie. La distinction compte. On ne creuse pas l'enfance du parent pendant des mois. On travaille sur le présent : cette situation précise, avec cet enfant-là, dans cette famille-là. Court. Concret. Cinq à huit séances en général.</p>
+<p>Les coachs parentaux à ${city.name} s'appuient sur plusieurs outils :</p>
 <ul>
-<li>L'<strong>épuisement parental</strong> — le burn-out n'est pas réservé au travail, et il touche de plus en plus de parents, surtout les mères</li>
-<li>Les <strong>crises répétitives</strong> — quand chaque repas, chaque coucher, chaque départ à l'école se transforme en épreuve</li>
-<li>Le <strong>passage à l'adolescence</strong> — quand les règles qui marchaient à 8 ans ne fonctionnent plus à 13</li>
-<li>L'<strong>arrivée d'un nouvel enfant</strong> — et la jalousie, les régressions, les changements de dynamique familiale qui vont avec</li>
+<li>La <strong>discipline positive</strong> (inspirée d'Adler et Dreikurs), qui repose sur la fermeté et la bienveillance en même temps. Pas l'une ou l'autre</li>
+<li>L'approche <strong>Faber et Mazlish</strong>, centrée sur la communication parent-enfant : comment parler pour que les enfants écoutent, et comment écouter pour qu'ils parlent</li>
+<li>Le travail sur la <strong>régulation émotionnelle</strong> du parent (parce que quand on crie, c'est rarement à propos de la chaussette qui traîne)</li>
+<li>Des <strong>grilles d'observation</strong> que le parent remplit entre les séances pour repérer les schémas qui se répètent</li>
 </ul>
-<p>Le coaching parental n'est pas de la thérapie. On ne fouille pas le passé, on travaille sur le présent. C'est court (5 à 8 séances), concret, orienté vers l'action. On en repart avec des choses à essayer, observer, ajuster.</p>
+<p>Je pense que la vraie valeur du coaching parental ne réside pas dans les techniques elles-mêmes. Vous pouvez trouver la discipline positive dans un livre à 12€. Ce qui change la donne, c'est le fait d'avoir quelqu'un qui vous connaît, qui connaît votre famille, et qui ajuste les outils à votre réalité. Un livre ne fait pas ça.</p>
+<p>La plupart des coachs parentaux de la région ${city.region} proposent un premier entretien téléphonique gratuit. Profitez-en pour poser vos questions et sentir si le courant passe. L'alliance avec le coach est aussi importante que la méthode.</p>
 `
         },
         {
-          title: `Écrans, réseaux sociaux et parentalité : le défi du ${city.department}`,
+          title: `Trouver un coach parental qualifié à ${city.name}`,
           content: `
-<p>C'est probablement le sujet qui revient le plus en coaching parental à ${city.name} ces dernières années. Les écrans. Combien de temps, à quel âge, quel contenu, comment poser des limites sans déclencher une crise. Et surtout, comment gérer sa propre culpabilité quand on cède pour avoir la paix.</p>
-<p>Les recommandations officielles sont claires (pas d'écran avant 3 ans, maximum 1h par jour entre 3 et 6 ans, des règles négociées après), mais la réalité des familles est souvent bien différente. Le coach parental ne juge pas l'écart entre la théorie et la pratique. Il aide à trouver un équilibre réaliste qui fonctionne pour cette famille-là, dans son contexte.</p>
-<p>Concrètement, les coachs de la région ${city.region} proposent des stratégies éprouvées : créer un « contrat écran » en famille (avec des règles négociées par tous), aménager des « zones sans écran » (repas, chambre, voiture), proposer des alternatives attractives, et surtout montrer l'exemple — parce que les enfants apprennent plus de ce qu'ils voient que de ce qu'on leur dit.</p>
+<p>Le titre de coach parental n'est pas protégé en France. Ça veut dire que n'importe qui peut s'installer demain matin avec une plaque sur la porte. C'est un problème réel, et il faut le dire.</p>
+<p>Pour choisir un coach parental sérieux à ${city.name}, voici ce qu'il faut vérifier. La formation d'abord : une certification reconnue en coaching parental, un diplôme en psychologie de l'enfant, ou une formation longue en discipline positive (au moins 200 heures de cursus). La supervision ensuite : un bon professionnel est suivi par un pair ou un formateur qui l'aide à prendre du recul sur sa pratique.</p>
+<p>Les tarifs dans le ${city.department} varient entre 50€ et 90€ la séance, pour des rendez-vous de 60 à 90 minutes. Certaines mutuelles remboursent une partie des séances dans le cadre d'un forfait « bien-être » ou « médecines douces ». Renseignez-vous auprès de la vôtre avant de commencer.</p>
+<p>Si les difficultés parentales ont créé des tensions dans votre couple, un <a href="/therapeute-de-couple/">thérapeute de couple</a> peut travailler en parallèle sur la dimension conjugale. Les deux démarches se complètent bien. Et si vous traversez une séparation, un <a href="/mediateur-familial/">médiateur familial</a> peut vous aider à organiser la coparentalité dans de bonnes conditions.</p>
+<p>Dernière chose : quand vous appelez un coach parental pour la première fois, demandez-lui de vous décrire une situation concrète qu'il a accompagnée (sans noms, bien sûr). Sa réponse vous en dira plus que n'importe quel diplôme sur sa façon de travailler.</p>
+`
+        },
+      ],
+    }),
+    // Template C - Entry: stat
+    (city) => ({
+      sections: [
+        {
+          title: `Coach parental à ${city.name} : un accompagnement en forte demande`,
+          content: `
+<p>En France, 1 parent sur 5 déclare avoir déjà ressenti un épuisement parental intense, selon les travaux de la chercheuse Isabelle Roskam. À ${city.name}, ce chiffre prend un visage concret : des parents qui dorment mal, qui s'énervent pour un rien, qui n'arrivent plus à supporter le bruit. Le coach parental intervient à ce moment-là, quand les ressources sont à plat et que les automatismes éducatifs ne fonctionnent plus.</p>
+<p>Le coaching parental à ${city.name} connaît une croissance forte depuis 2020. La pandémie a joué un rôle d'accélérateur (des familles enfermées ensemble pendant des semaines, ça laisse des traces), mais la tendance était déjà là avant. Les parents d'aujourd'hui veulent bien faire. Ils ont accès à une quantité d'informations sur l'éducation bienveillante, les neurosciences, la communication non violente. Le problème ? Savoir et faire, ce n'est pas la même chose. Le coaching parental comble cet écart.</p>
+<p>Dans le département ${city.department}, les coachs parentaux reçoivent aussi bien des familles avec de jeunes enfants que des parents d'adolescents. Les problématiques changent selon l'âge, mais le mécanisme est souvent le même : un parent débordé qui réagit sous le stress au lieu de répondre avec recul.</p>
 `
         },
         {
-          title: `Trouver le bon coach parental à ${city.name}`,
+          title: `Le coach parental à ${city.name}, ce qu'il fait (et ce qu'il ne fait pas)`,
           content: `
-<p>Le titre de « coach parental » n'est pas réglementé en France, ce qui implique une certaine vigilance dans le choix du praticien. À ${city.name}, privilégiez un professionnel qui peut justifier d'une formation solide : certification en coaching parental, formation en discipline positive, diplôme en psychologie de l'enfant ou en sciences de l'éducation.</p>
-<p>Un bon coach parental dans le ${city.department} se reconnaît aussi à sa posture : il ne vous dit pas quoi faire, il vous aide à trouver vos propres solutions. Il ne culpabilise pas, ne compare pas. Il accueille vos difficultés sans jugement et vous propose des outils adaptés à votre situation, pas des recettes universelles.</p>
-<p>Posez ces questions lors du premier contact : quelle est votre formation ? Quelle méthode utilisez-vous ? Combien de séances prévoyez-vous ? Est-ce que je peux vous contacter entre les séances ? Un praticien sérieux répondra à toutes ces questions de manière claire et transparente.</p>
-<p>Consultez notre annuaire pour découvrir les coachs parentaux disponibles à ${city.name} et comparer leurs profils, méthodes et tarifs.</p>
+<p>Première clarification. Un coach parental n'est pas un psy. Il ne pose pas de diagnostic, ne traite pas de troubles. Si votre enfant présente un TDAH, un trouble du spectre autistique ou une phobie scolaire, le coach parental peut vous accompagner dans la gestion du quotidien, mais le suivi thérapeutique de l'enfant relève d'un autre professionnel.</p>
+<p>Ce que fait un coach parental à ${city.name}, c'est du travail sur la posture du parent. Comment vous réagissez face à une crise. Ce que vous dites (et ce que votre enfant entend, qui est souvent différent). Les habitudes familiales qui entretiennent les conflits sans que personne ne s'en rende compte.</p>
+<p>Un exemple. Votre fille de 9 ans refuse de faire ses devoirs chaque soir. Vous haussez le ton. Elle pleure. Vous culpabilisez. Le lendemain, rebelote. Le coach parental va décortiquer cette séquence avec vous : qu'est-ce qui se passe juste avant le refus ? Qu'est-ce que vous ressentez physiquement quand elle dit non ? Quelle serait une alternative à la montée en pression ? C'est un travail minutieux, ancré dans le réel.</p>
+<p>Les séances durent entre 60 et 90 minutes. Entre deux rendez-vous (espacés de deux semaines en général), le coach peut donner des exercices à pratiquer à la maison. Observer sans intervenir pendant un repas. Noter les moments où ça se passe bien, pas seulement les crises. Essayer une formulation différente au moment du coucher. Des petites choses, mais c'est souvent par là que ça bascule.</p>
+`
+        },
+        {
+          title: `Coach parental et vie de couple dans le ${city.department} : des vases communicants`,
+          content: `
+<p>On sous-estime à quel point la parentalité pèse sur le couple. À ${city.name}, les coachs parentaux le constatent chaque semaine : derrière la demande sur l'enfant, il y a presque toujours une tension conjugale. Le parent qui se sent seul face aux difficultés. Celui qui a l'impression de faire tout le sale boulot éducatif pendant que l'autre « débarque en mode copain ». Les reproches mutuels sur l'éducation, qui masquent des frustrations plus anciennes.</p>
+<p>Le coaching parental ne remplace pas une <a href="/therapeute-de-couple/">thérapie de couple</a>. Mais il touche la relation conjugale par ricochet. Quand les deux parents apprennent à fonctionner en équipe face à l'enfant, quand les règles sont claires et partagées, la charge mentale se répartit mieux. Et la relation s'en porte mieux aussi.</p>
+<p>Certains coachs parentaux de la région ${city.region} proposent des séances spécifiques pour les couples en coparentalité après une séparation. C'est un besoin croissant, et c'est un travail différent du coaching parental classique (le cadre est plus complexe, les enjeux émotionnels sont plus vifs). Un <a href="/mediateur-familial/">médiateur familial</a> peut intervenir en complément quand les désaccords portent sur l'organisation concrète de la garde.</p>
+<p>À quelle fréquence les parents de ${city.name} consultent-ils un <a href="/conseiller-conjugal/">conseiller conjugal</a> en parallèle du coaching parental ? Difficile d'avoir des chiffres, mais les professionnels estiment que c'est le cas pour environ un tiers des familles accompagnées. Les deux démarches ne se chevauchent pas, elles se complètent.</p>
+<p>Si vous hésitez entre coaching parental et accompagnement de couple, posez-vous cette question : est-ce que le problème principal concerne votre relation à votre enfant, ou votre relation à votre partenaire ? Si la réponse est « les deux », commencez par ce qui vous semble le plus urgent. L'autre suivra.</p>
+`
+        },
+      ],
+    }),
+    // Template D - Entry: opinion
+    (city) => ({
+      sections: [
+        {
+          title: `Coach parental à ${city.name} : un métier encore mal compris`,
+          content: `
+<p>Le coaching parental souffre d'un problème d'image. Beaucoup de gens le confondent avec du conseil en éducation, voire avec une forme de jugement déguisé. « Vous avez besoin d'un coach pour élever vos enfants ? » La remarque est courante à ${city.name} comme ailleurs. Elle passe à côté du sujet.</p>
+<p>Consulter un coach parental à ${city.name}, ce n'est pas admettre qu'on est un mauvais parent. C'est reconnaître qu'on est face à une difficulté qu'on n'arrive pas à résoudre seul. Exactement comme on irait voir un kiné pour un dos bloqué. Le parallèle n'est pas anodin : le burn-out parental a des conséquences physiques réelles (troubles du sommeil, maux de tête, tensions musculaires chroniques) en plus des conséquences sur la relation avec l'enfant et avec le conjoint.</p>
+<p>Dans le ${city.department}, la demande de coaching parental a nettement augmenté ces cinq dernières années. Les profils qui consultent ont changé aussi. Il y a dix ans, c'étaient principalement des familles orientées par l'école ou les services sociaux. Aujourd'hui, la grande majorité des parents viennent d'eux-mêmes, par choix. Ils ont lu un article, écouté un podcast, ou un ami leur a parlé de son expérience. Le regard sur la parentalité accompagnée évolue, même si le chemin est encore long.</p>
+`
+        },
+        {
+          title: `Comment se déroule un coaching parental dans le ${city.department}`,
+          content: `
+<p>La première séance est une séance de cadrage. Le coach parental vous écoute décrire votre quotidien à ${city.name}, vos difficultés, ce que vous avez déjà essayé. Il pose des questions sur la composition de la famille, les routines, les moments de tension récurrents. Cette première rencontre dure souvent plus longtemps que les suivantes (comptez 90 minutes).</p>
+<p>Ce qui se passe ensuite dépend du coach et de la situation. Mais un schéma classique en région ${city.region} ressemble à ça :</p>
+<ul>
+<li>Séance 2 : identification des schémas répétitifs et des déclencheurs. Le coach propose une grille de lecture (souvent issue de la discipline positive ou de l'approche Faber et Mazlish)</li>
+<li>Séances 3 à 5 : mise en place de nouvelles stratégies, testées entre les séances et ajustées au rendez-vous suivant. C'est la phase où les parents voient les premiers changements</li>
+<li>Séances 6 à 8 : consolidation. Le coach aide à ancrer les nouveaux réflexes et à anticiper les situations futures (rentrée scolaire, vacances, arrivée d'un bébé)</li>
+</ul>
+<p>Pas de miracles. Des ajustements progressifs, un parent qui reprend confiance, un enfant qui se sent mieux compris. C'est moins spectaculaire qu'une transformation radicale en 48 heures (comme le promettent certaines émissions de télé), mais c'est solide.</p>
+<p>Un point que je trouve important : le coaching parental fonctionne mieux quand les deux parents participent. Pas à chaque séance, mais au moins aux moments clés. Un seul parent peut changer la dynamique familiale, c'est vrai. Mais quand l'autre parent n'est pas embarqué, les progrès sont plus fragiles.</p>
+`
+        },
+        {
+          title: `Choisir son coach parental à ${city.name} : les questions à poser`,
+          content: `
+<p>Le métier de coach parental n'étant pas réglementé en France, la qualité des praticiens varie beaucoup à ${city.name}. Voici comment faire le tri sans y passer des heures.</p>
+<p>La formation. C'est le premier filtre. Un coach parental sérieux dans le ${city.department} a suivi un cursus d'au moins 200 heures, avec une composante pratique (stages supervisés, études de cas). Les certifications les plus reconnues sont celles délivrées par des organismes affiliés à la Positive Discipline Association ou à des universités françaises.</p>
+<p>La posture. Lors du premier contact, observez comment le coach vous parle. S'il donne des solutions toutes faites avant même de connaître votre situation, méfiance. S'il vous pose des questions, s'il écoute vos réponses, s'il vous demande ce que vous avez déjà tenté : c'est plutôt bon signe. Un bon coach parental part de vous, pas de sa méthode.</p>
+<p>Les tarifs à ${city.name} se situent entre 50€ et 90€ par séance. Certains coachs proposent des forfaits de 5 ou 6 séances avec un tarif dégressif. Vérifiez auprès de votre mutuelle : les forfaits « bien-être » ou « soutien psychologique » couvrent parfois ce type d'accompagnement.</p>
+<p>Si les tensions éducatives débordent sur votre relation de couple, un <a href="/therapeute-de-couple/">thérapeute de couple</a> ou un <a href="/conseiller-conjugal/">conseiller conjugal</a> peut travailler sur cette dimension en parallèle du coaching parental. Les deux approches se nourrissent mutuellement. Et si vous êtes en situation de séparation, un <a href="/mediateur-familial/">médiateur familial</a> peut accompagner la mise en place d'une coparentalité fonctionnelle.</p>
+<p>Avant de prendre rendez-vous, essayez ceci : pendant trois jours, notez les moments de la journée où la tension monte avec votre enfant. L'heure, le contexte, ce qui se passe juste avant. Amenez ces notes à votre premier rendez-vous avec le coach. Ça lui donnera un point de départ concret, et vous, ça vous aidera déjà à y voir plus clair.</p>
 `
         },
       ],
