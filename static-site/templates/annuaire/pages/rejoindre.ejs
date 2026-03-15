@@ -253,6 +253,16 @@
         </div>
 
         <div class="ann-form-group">
+          <label class="ann-label" for="f-short-description">Description courte <span class="ann-required">*</span></label>
+          <div style="position: relative;">
+            <input class="ann-input" type="text" id="f-short-description" placeholder="Ex : Thérapeute de couple spécialisée en communication et gestion des conflits à Lyon." maxlength="165" required style="padding-right: 3.5rem;">
+            <span id="f-short-desc-counter" style="position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); font-size: 0.6875rem; color: hsl(var(--ann-muted-fg)); pointer-events: none;">0/165</span>
+          </div>
+          <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.25rem;">Une phrase d'accroche qui résume votre activité. Visible dans les résultats de recherche.</p>
+          <span class="ann-field-error" id="err-short-description"></span>
+        </div>
+
+        <div class="ann-form-group">
           <label class="ann-label">Votre description <span class="ann-required">*</span></label>
           <!-- Rich text toolbar -->
           <div class="ann-rte-toolbar" id="f-desc-toolbar">

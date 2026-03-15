@@ -7,21 +7,20 @@
   });
   const activeSpecialties = Object.keys(prosBySpecialty).map(id => specialties.find(s => s.id === id)).filter(Boolean);
 
-  // Nearby cities (same region, excluding current)
-  const nearbyCities = cities.filter(c => c.id !== city.id && c.region === city.region).slice(0, 6);
-  // If not enough cities in same region, add from other regions
-  if (nearbyCities.length < 6) {
-    const otherCities = cities.filter(c => c.id !== city.id && c.region !== city.region)
-      .sort((a, b) => {
-        const distA = Math.abs(a.lat - city.lat) + Math.abs(a.lng - city.lng);
-        const distB = Math.abs(b.lat - city.lat) + Math.abs(b.lng - city.lng);
-        return distA - distB;
-      });
-    for (const c of otherCities) {
-      if (nearbyCities.length >= 6) break;
-      nearbyCities.push(c);
-    }
-  }
+  // Nearby cities: only major cities (population > 150k), same region first, then by distance
+  const majorCities = cities.filter(c => c.id !== city.id && c.population >= 150000);
+  const nearbyCities = majorCities
+    .sort((a, b) => {
+      // Same region first
+      const aRegion = a.region === city.region ? 0 : 1;
+      const bRegion = b.region === city.region ? 0 : 1;
+      if (aRegion !== bRegion) return aRegion - bRegion;
+      // Then by distance
+      const distA = Math.abs(a.lat - city.lat) + Math.abs(a.lng - city.lng);
+      const distB = Math.abs(b.lat - city.lat) + Math.abs(b.lng - city.lng);
+      return distA - distB;
+    })
+    .slice(0, 8);
 
   // JSON-LD: CollectionPage + BreadcrumbList
   const jsonLdArray = [
