@@ -453,7 +453,7 @@ async function generateSpecialtyCityPages() {
         city,
         filteredProfessionals,
         seoContent,
-        metaTitle: `Annuaire des ${specialty.namePlural || specialty.name + 's'} à ${city.name} : Trouvez un spécialiste`,
+        metaTitle: `${specialty.name} à ${city.name} | Profils vérifiés`,
         metaDescription: filteredProfessionals.length > 0
           ? `${specialty.name} à ${city.name} : ${filteredProfessionals.length} professionnel${filteredProfessionals.length > 1 ? 's' : ''} référencé${filteredProfessionals.length > 1 ? 's' : ''}. Consultez les profils et prenez rendez-vous.`
           : `${specialty.name} à ${city.name} : trouvez un spécialiste qualifié près de chez vous. Tarifs, avis et prise de rendez-vous en ligne.`,
