@@ -599,7 +599,7 @@
           var priceKey = planKey + '_' + currentPeriod;
           btn.style.pointerEvents = 'none';
           btn.style.opacity = '0.7';
-          var origText = btn.textContent;
+          var origText = btn.innerHTML;
           btn.textContent = 'Redirection vers Stripe...';
 
           fetch(SUPABASE_URL + '/functions/v1/annuaire-checkout', {
@@ -611,20 +611,36 @@
             },
             body: JSON.stringify({ price_key: priceKey }),
           })
-          .then(function(r) { return r.json(); })
+          .then(function(r) {
+            return r.json().catch(function() {
+              return { error: 'Erreur serveur (HTTP ' + r.status + '). Essayez depuis votre espace pro.' };
+            });
+          })
           .then(function(res) {
             if (res.url) {
               window.location.href = res.url;
             } else {
-              alert(res.error || 'Erreur lors de la création de la session de paiement.');
-              btn.textContent = origText;
+              var errMsg = res.error || 'Erreur lors de la création de la session de paiement.';
+              if (errMsg === 'billing_incomplete') errMsg = 'Veuillez d\'abord renseigner vos informations de facturation dans votre espace pro.';
+              if (errMsg === 'profile_not_validated') errMsg = 'Votre fiche est en attente de validation. Réessayez dans quelques heures.';
+              var errDiv = document.createElement('div');
+              errDiv.style.cssText = 'position:fixed;top:1rem;left:50%;transform:translateX(-50%);background:#fee;color:#c00;padding:1rem 1.5rem;border-radius:0.5rem;border:1px solid #fcc;z-index:9999;font-size:0.875rem;max-width:90vw;box-shadow:0 4px 12px rgba(0,0,0,0.15);';
+              errDiv.textContent = errMsg;
+              document.body.appendChild(errDiv);
+              setTimeout(function() { errDiv.remove(); }, 6000);
+              btn.innerHTML = origText;
               btn.style.pointerEvents = '';
               btn.style.opacity = '';
             }
           })
-          .catch(function() {
-            alert('Erreur réseau. Veuillez réessayer.');
-            btn.textContent = origText;
+          .catch(function(err) {
+            console.error('[tarifs] Checkout error:', err);
+            var errDiv = document.createElement('div');
+            errDiv.style.cssText = 'position:fixed;top:1rem;left:50%;transform:translateX(-50%);background:#fee;color:#c00;padding:1rem 1.5rem;border-radius:0.5rem;border:1px solid #fcc;z-index:9999;font-size:0.875rem;max-width:90vw;box-shadow:0 4px 12px rgba(0,0,0,0.15);';
+            errDiv.textContent = 'Erreur réseau. Veuillez réessayer ou souscrire depuis votre espace pro.';
+            document.body.appendChild(errDiv);
+            setTimeout(function() { errDiv.remove(); }, 6000);
+            btn.innerHTML = origText;
             btn.style.pointerEvents = '';
             btn.style.opacity = '';
           });

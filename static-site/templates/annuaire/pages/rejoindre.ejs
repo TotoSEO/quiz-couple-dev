@@ -269,12 +269,12 @@
         <div class="ann-form-grid">
           <div class="ann-form-group">
             <label class="ann-label" for="f-prix-min">Tarif min (€/séance) <span class="ann-required">*</span></label>
-            <input type="number" id="f-prix-min" name="prix_min" class="ann-input" placeholder="60" min="0" max="500" required>
+            <input type="number" id="f-prix-min" name="prix_min" class="ann-input" placeholder="60" min="0" max="9999" step="1" inputmode="numeric" pattern="[0-9]*" required>
             <span class="ann-field-error" id="err-prix-min"></span>
           </div>
           <div class="ann-form-group">
             <label class="ann-label" for="f-prix-max">Tarif max (€/séance) <span class="ann-required">*</span></label>
-            <input type="number" id="f-prix-max" name="prix_max" class="ann-input" placeholder="90" min="0" max="500" required>
+            <input type="number" id="f-prix-max" name="prix_max" class="ann-input" placeholder="90" min="0" max="9999" step="1" inputmode="numeric" pattern="[0-9]*" required>
             <span class="ann-field-error" id="err-prix-max"></span>
           </div>
         </div>

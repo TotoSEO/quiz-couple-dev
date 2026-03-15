@@ -1,0 +1,54 @@
+name: Scheduled site rebuild
+
+on:
+  schedule:
+    # Every 2 hours from 7h to 19h (UTC: 5h-17h for CET, 6h-18h for CEST)
+    # Using CET (winter) times — adjust if needed for summer
+    - cron: '0 6,8,10,12,14,16 * * *'
+    # Once at 3h AM (CET = 2h UTC winter)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: cd static-site && npm ci
+
+      - name: Build static site
+        run: cd static-site && npm run build
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+
+      - name: Build annuaire pages
+        run: cd static-site && npm run build:annuaire
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+      - name: Deploy to gh-pages branch (quiz-couple.com)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./static-site/dist
+          cname: quiz-couple.com
+
+      - name: Deploy annuaire to Cloudflare Pages (annuaire.quiz-couple.com)
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ./static-site/dist/annuaire --project-name=annuaire-quiz-couple
