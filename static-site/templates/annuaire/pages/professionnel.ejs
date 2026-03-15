@@ -227,7 +227,7 @@
             <div style="padding: 1rem; border-radius: var(--ann-radius); background: hsl(var(--ann-muted) / 0.2); border: 1px solid hsl(var(--ann-border));">
               <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
                 <% if (review.authorPhotoUrl) { %>
-                <img src="<%= review.authorPhotoUrl %>" alt="" style="width: 2rem; height: 2rem; border-radius: 50%; object-fit: cover;">
+                <img src="<%= review.authorPhotoUrl %>" alt="Photo de <%= review.authorName %>" loading="lazy" style="width: 2rem; height: 2rem; border-radius: 50%; object-fit: cover;">
                 <% } else { %>
                 <div style="width: 2rem; height: 2rem; border-radius: 50%; background: linear-gradient(135deg, hsl(var(--ann-primary) / 0.15), hsl(var(--ann-secondary) / 0.15)); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600; color: hsl(var(--ann-primary));">
                   <%= review.authorName[0] %>

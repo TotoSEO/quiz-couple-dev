@@ -296,7 +296,7 @@ async function generateRejoindrePage() {
 async function generateDashboardPage() {
   const data = {
     ...getSharedData(),
-    metaTitle: 'Mon espace professionnel — Annuaire',
+    metaTitle: 'Mon espace professionnel | Annuaire',
     metaDescription: 'Gérez votre fiche professionnelle, modifiez vos informations et suivez vos statistiques de visibilité.',
     canonical: getAnnuaireUrl('/dashboard/'),
     currentPage: 'dashboard',
@@ -342,7 +342,7 @@ async function generateTarifsPage() {
 async function generateMentionsLegalesPage() {
   const data = {
     ...getSharedData(),
-    metaTitle: 'Mentions légales — Annuaire Quiz Couple',
+    metaTitle: 'Mentions légales | Annuaire Quiz Couple',
     metaDescription: 'Mentions légales du site annuaire.quiz-couple.com : éditeur, hébergeur, propriété intellectuelle, responsabilité.',
     canonical: getAnnuaireUrl('/mentions-legales/'),
     currentPage: 'mentions-legales',
@@ -357,7 +357,7 @@ async function generateMentionsLegalesPage() {
 async function generateConfidentialitePage() {
   const data = {
     ...getSharedData(),
-    metaTitle: 'Politique de confidentialité — Annuaire Quiz Couple',
+    metaTitle: 'Politique de confidentialité | Annuaire Quiz Couple',
     metaDescription: 'Politique de confidentialité et protection des données personnelles du site annuaire.quiz-couple.com, conforme au RGPD.',
     canonical: getAnnuaireUrl('/confidentialite/'),
     currentPage: 'confidentialite',
@@ -372,7 +372,7 @@ async function generateConfidentialitePage() {
 async function generateCgvPage() {
   const data = {
     ...getSharedData(),
-    metaTitle: 'Conditions Générales de Vente — Annuaire Quiz Couple',
+    metaTitle: 'Conditions Générales de Vente | Annuaire Quiz Couple',
     metaDescription: 'Conditions générales de vente applicables aux abonnements professionnels sur annuaire.quiz-couple.com.',
     canonical: getAnnuaireUrl('/cgv/'),
     currentPage: 'cgv',
@@ -452,7 +452,9 @@ async function generateSpecialtyCityPages() {
         filteredProfessionals,
         seoContent,
         metaTitle: `Annuaire des ${specialty.namePlural || specialty.name + 's'} à ${city.name} : Trouvez un spécialiste`,
-        metaDescription: `${specialty.name} à ${city.name} — ${filteredProfessionals.length} professionnel${filteredProfessionals.length > 1 ? 's' : ''} référencé${filteredProfessionals.length > 1 ? 's' : ''}. Consultez les profils et prenez rendez-vous.`,
+        metaDescription: filteredProfessionals.length > 0
+          ? `${specialty.name} à ${city.name} : ${filteredProfessionals.length} professionnel${filteredProfessionals.length > 1 ? 's' : ''} référencé${filteredProfessionals.length > 1 ? 's' : ''}. Consultez les profils et prenez rendez-vous.`
+          : `${specialty.name} à ${city.name} : trouvez un spécialiste qualifié près de chez vous. Tarifs, avis et prise de rendez-vous en ligne.`,
         canonical: getAnnuaireUrl(`/${specialty.id}/${city.id}/`),
         currentPage: 'specialty-city',
       };
@@ -483,7 +485,7 @@ async function generateAdminPage() {
 async function generate404Page() {
   const data = {
     ...getSharedData(),
-    metaTitle: 'Page introuvable — Annuaire',
+    metaTitle: 'Page introuvable | Annuaire',
     metaDescription: 'La page que vous cherchez n\'existe pas.',
     canonical: getAnnuaireUrl('/'),
     currentPage: '404',
@@ -510,7 +512,7 @@ async function generateProfessionalPages() {
       proSpec,
       proCity,
       googleReviews,
-      metaTitle: `${pro.firstName} ${pro.lastName} — ${proSpec ? proSpec.name : ''} à ${pro.displayCity || (proCity ? proCity.name : '')}`,
+      metaTitle: `${pro.firstName} ${pro.lastName}, ${proSpec ? proSpec.name : ''} à ${pro.displayCity || (proCity ? proCity.name : '')}`,
       metaDescription: pro.shortDescription || `${pro.firstName} ${pro.lastName}, ${proSpec ? proSpec.name.toLowerCase() : ''} à ${pro.displayCity || (proCity ? proCity.name : '')} | ${pro.yearsExperience} ans d'expérience, ${pro.priceRange}. Prenez rendez-vous en ligne.`,
       canonical: getAnnuaireUrl(`/${proPath}/`),
       currentPage: 'professionnel',
