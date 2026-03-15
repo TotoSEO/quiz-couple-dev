@@ -68,3 +68,6 @@ verify_jwt = false
 
 [functions.annuaire-billing-portal]
 verify_jwt = false
+
+[functions.admin-mass-mail]
+verify_jwt = false

@@ -105,8 +105,10 @@
 
     var profilesTab = document.getElementById('aadm-tab-profiles');
     var invoicesTab = document.getElementById('aadm-tab-invoices');
+    var mailTab = document.getElementById('aadm-tab-mail');
     if (profilesTab) profilesTab.style.display = tab === 'profiles' ? '' : 'none';
     if (invoicesTab) invoicesTab.style.display = tab === 'invoices' ? '' : 'none';
+    if (mailTab) mailTab.style.display = tab === 'mail' ? '' : 'none';
 
     if (tab === 'invoices' && !invoicesLoaded) {
       loadInvoices();
@@ -657,6 +659,246 @@
     });
   }
 
+  // ── Mail Templates ──
+
+  var MAIL_TEMPLATES = {
+    prospection: {
+      subject: 'Invitation a rejoindre un nouvel annuaire specialise',
+      html: '<p style="font-size:15px;line-height:1.7;color:#1a1a2e;margin:0 0 16px;">Bonjour,</p>\n' +
+        '<p style="font-size:15px;line-height:1.7;color:#1a1a2e;margin:0 0 16px;">Nous avons le plaisir de vous informer du lancement d\'un <strong>nouvel annuaire en ligne</strong> dedie aux professionnels de la therapie de couple, sexologie et mediation familiale.</p>\n' +
+        '<p style="font-size:15px;line-height:1.7;color:#1a1a2e;margin:0 0 16px;">L\'<strong>Annuaire Quiz Couple</strong> a ete concu pour offrir une visibilite optimale aux professionnels comme vous, aupres de patients qui recherchent activement un specialiste dans leur ville.</p>\n' +
+        '<p style="font-size:15px;line-height:1.7;color:#1a1a2e;margin:0 0 20px;">Votre inscription est <strong>gratuite</strong> et ne prend que quelques minutes :</p>\n' +
+        '<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://annuaire.quiz-couple.com/rejoindre/" style="height:44px;v-text-anchor:middle;width:260px;" arcsize="14%" strokecolor="#c0507e" fillcolor="#c0507e"><w:anchorlock/><center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;">Creer ma fiche gratuitement</center></v:roundrect><![endif]-->\n' +
+        '<!--[if !mso]><!--><a href="https://annuaire.quiz-couple.com/rejoindre/" style="display:inline-block;background-color:#c0507e;color:#ffffff;font-size:15px;font-weight:bold;text-decoration:none;padding:12px 28px;border-radius:6px;font-family:Arial,sans-serif;">Creer ma fiche gratuitement</a><!--<![endif]-->\n' +
+        '<p style="font-size:15px;line-height:1.7;color:#1a1a2e;margin:24px 0 16px;">Ce que l\'annuaire vous apporte :</p>\n' +
+        '<ul style="font-size:15px;line-height:1.8;color:#1a1a2e;margin:0 0 16px;padding-left:20px;">\n' +
+        '  <li>Une fiche professionnelle complete et referencee sur Google</li>\n' +
+        '  <li>Une visibilite locale aupres de patients dans votre ville</li>\n' +
+        '  <li>Un lien direct vers votre site ou votre Doctolib</li>\n' +
+        '</ul>\n' +
+        '<p style="font-size:15px;line-height:1.7;color:#1a1a2e;margin:0 0 16px;">N\'hesitez pas a decouvrir l\'annuaire : <a href="https://annuaire.quiz-couple.com/" style="color:#c0507e;">annuaire.quiz-couple.com</a></p>\n' +
+        '<p style="font-size:15px;line-height:1.7;color:#1a1a2e;margin:0 0 4px;">Cordialement,</p>\n' +
+        '<p style="font-size:15px;line-height:1.7;color:#1a1a2e;margin:0;">L\'equipe Annuaire Quiz Couple</p>',
+    },
+  };
+
+  function wrapMailHtml(bodyHtml) {
+    // Wrap in a responsive, anti-spam compliant email wrapper
+    // Key anti-spam rules: 600px max, inline CSS, system fonts, minimal structure, DOCTYPE
+    return '<!DOCTYPE html>\n' +
+      '<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">\n' +
+      '<head>\n' +
+      '  <meta charset="UTF-8">\n' +
+      '  <meta name="viewport" content="width=device-width,initial-scale=1">\n' +
+      '  <meta http-equiv="X-UA-Compatible" content="IE=edge">\n' +
+      '  <title></title>\n' +
+      '  <!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->\n' +
+      '</head>\n' +
+      '<body style="margin:0;padding:0;background-color:#f4f4f7;font-family:Arial,Helvetica,sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">\n' +
+      '  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f4f7;">\n' +
+      '    <tr><td align="center" style="padding:32px 16px;">\n' +
+      '      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:8px;overflow:hidden;">\n' +
+      '        <!-- Content -->\n' +
+      '        <tr><td style="padding:32px 40px;">\n' +
+      bodyHtml + '\n' +
+      '        </td></tr>\n' +
+      '        <!-- Footer -->\n' +
+      '        <tr><td style="padding:20px 40px;border-top:1px solid #e8e8ed;">\n' +
+      '          <p style="font-size:12px;line-height:1.6;color:#8e8ea0;margin:0;text-align:center;">\n' +
+      '            Annuaire Quiz Couple &mdash; annuaire.quiz-couple.com\n' +
+      '          </p>\n' +
+      '        </td></tr>\n' +
+      '      </table>\n' +
+      '    </td></tr>\n' +
+      '  </table>\n' +
+      '</body>\n' +
+      '</html>';
+  }
+
+  function parseEmails(text) {
+    // Split by newlines, commas, semicolons
+    return text
+      .split(/[\n,;]+/)
+      .map(function (e) { return e.trim().toLowerCase(); })
+      .filter(function (e) { return e && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); });
+  }
+
+  function updateMailCount() {
+    var textarea = document.getElementById('aadm-mail-emails');
+    var countEl = document.getElementById('aadm-mail-count');
+    if (!textarea || !countEl) return;
+    var emails = parseEmails(textarea.value);
+    var unique = new Set(emails);
+    countEl.textContent = unique.size + ' email(s) unique(s)';
+  }
+
+  function loadMailTemplate(templateKey) {
+    var tpl = MAIL_TEMPLATES[templateKey];
+    if (!tpl) return;
+    var subjectInput = document.getElementById('aadm-mail-subject');
+    var htmlInput = document.getElementById('aadm-mail-html');
+    if (subjectInput) subjectInput.value = tpl.subject;
+    if (htmlInput) htmlInput.value = tpl.html;
+  }
+
+  function refreshMailPreview() {
+    var htmlInput = document.getElementById('aadm-mail-html');
+    var previewEl = document.getElementById('aadm-mail-preview');
+    if (!htmlInput || !previewEl) return;
+
+    var bodyHtml = htmlInput.value.trim();
+    if (!bodyHtml) {
+      previewEl.innerHTML = '<p style="color:hsl(var(--ann-muted-fg));font-size:0.875rem;text-align:center;padding:2rem 0;">Saisissez du contenu HTML pour voir l\'apercu.</p>';
+      return;
+    }
+
+    var fullHtml = wrapMailHtml(bodyHtml);
+    // Render in a sandboxed iframe for safety
+    var iframe = document.createElement('iframe');
+    iframe.style.cssText = 'width:100%;border:none;min-height:20rem;background:#fff;border-radius:4px;';
+    iframe.sandbox = 'allow-same-origin';
+    previewEl.innerHTML = '';
+    previewEl.appendChild(iframe);
+
+    var doc = iframe.contentDocument || iframe.contentWindow.document;
+    doc.open();
+    doc.write(fullHtml);
+    doc.close();
+
+    // Auto-resize iframe to content
+    setTimeout(function () {
+      try {
+        var h = doc.documentElement.scrollHeight;
+        if (h > 0) iframe.style.height = Math.min(h + 20, 600) + 'px';
+      } catch (e) { /* cross-origin fallback */ }
+    }, 200);
+  }
+
+  function sendMassMail() {
+    var emailsTextarea = document.getElementById('aadm-mail-emails');
+    var subjectInput = document.getElementById('aadm-mail-subject');
+    var htmlInput = document.getElementById('aadm-mail-html');
+    var fromNameInput = document.getElementById('aadm-mail-from-name');
+    var replyToInput = document.getElementById('aadm-mail-reply-to');
+    var sendBtn = document.getElementById('aadm-mail-send');
+    var statusEl = document.getElementById('aadm-mail-status');
+    var progressEl = document.getElementById('aadm-mail-progress');
+    var progressBar = document.getElementById('aadm-mail-progress-bar');
+    var progressText = document.getElementById('aadm-mail-progress-text');
+    var resultsEl = document.getElementById('aadm-mail-results');
+
+    if (!emailsTextarea || !subjectInput || !htmlInput) return;
+
+    var emails = parseEmails(emailsTextarea.value);
+    var uniqueEmails = Array.from(new Set(emails));
+    var subject = subjectInput.value.trim();
+    var bodyHtml = htmlInput.value.trim();
+    var fromName = fromNameInput ? fromNameInput.value.trim() : '';
+    var replyTo = replyToInput ? replyToInput.value.trim() : '';
+
+    if (uniqueEmails.length === 0) {
+      if (statusEl) { statusEl.textContent = 'Aucun email valide.'; statusEl.style.color = 'hsl(0 70% 50%)'; }
+      return;
+    }
+    if (!subject) {
+      if (statusEl) { statusEl.textContent = 'Sujet requis.'; statusEl.style.color = 'hsl(0 70% 50%)'; }
+      return;
+    }
+    if (!bodyHtml) {
+      if (statusEl) { statusEl.textContent = 'Contenu HTML requis.'; statusEl.style.color = 'hsl(0 70% 50%)'; }
+      return;
+    }
+
+    var fullHtml = wrapMailHtml(bodyHtml);
+
+    if (!confirm('Envoyer ' + uniqueEmails.length + ' email(s) ?\n\nObjet : ' + subject + '\n\nCette action est irreversible.')) return;
+
+    // UI: disable and show progress
+    if (sendBtn) { sendBtn.disabled = true; sendBtn.textContent = 'Envoi en cours...'; }
+    if (statusEl) { statusEl.textContent = 'Envoi en cours...'; statusEl.style.color = 'hsl(var(--ann-muted-fg))'; }
+    if (progressEl) progressEl.style.display = 'block';
+    if (progressBar) progressBar.style.width = '0%';
+    if (progressText) progressText.textContent = '0 / ' + uniqueEmails.length + ' envoye(s)';
+    if (resultsEl) resultsEl.style.display = 'none';
+
+    // Simulate progress while waiting (the backend processes all)
+    var progressInterval = setInterval(function () {
+      // The actual progress is unknown since it's one API call. Show an animated bar.
+    }, 500);
+
+    // Show an indeterminate animation
+    if (progressBar) {
+      progressBar.style.width = '30%';
+      setTimeout(function () { if (progressBar) progressBar.style.width = '60%'; }, 3000);
+      setTimeout(function () { if (progressBar) progressBar.style.width = '80%'; }, 10000);
+    }
+
+    var requestBody = {
+      emails: uniqueEmails,
+      subject: subject,
+      html: fullHtml,
+    };
+    if (fromName) requestBody.fromName = fromName;
+    if (replyTo) requestBody.replyTo = replyTo;
+
+    fetch(SUPABASE_URL + '/functions/v1/admin-mass-mail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'x-admin-token': adminToken,
+      },
+      body: JSON.stringify(requestBody),
+    })
+    .then(function (r) {
+      if (r.status === 401 || r.status === 403) {
+        logout();
+        throw new Error('Session expiree');
+      }
+      return r.json();
+    })
+    .then(function (data) {
+      clearInterval(progressInterval);
+      if (progressBar) progressBar.style.width = '100%';
+      if (progressText) progressText.textContent = (data.sent || 0) + ' / ' + (data.total || uniqueEmails.length) + ' envoye(s)';
+
+      if (data.success) {
+        var msg = data.sent + ' email(s) envoye(s) avec succes.';
+        if (data.failed > 0) msg += ' ' + data.failed + ' echec(s).';
+        if (statusEl) { statusEl.textContent = msg; statusEl.style.color = data.failed > 0 ? 'hsl(40 70% 40%)' : 'hsl(160 60% 35%)'; }
+
+        if (resultsEl) {
+          var bgColor = data.failed > 0 ? 'hsl(40 90% 55%/0.08)' : 'hsl(160 60% 45%/0.08)';
+          var borderColor = data.failed > 0 ? 'hsl(40 90% 55%/0.25)' : 'hsl(160 60% 45%/0.25)';
+          var textColor = data.failed > 0 ? 'hsl(40 70% 35%)' : 'hsl(160 60% 30%)';
+          resultsEl.style.display = 'block';
+          resultsEl.style.background = bgColor;
+          resultsEl.style.border = '1px solid ' + borderColor;
+          resultsEl.style.color = textColor;
+          var html = '<strong>' + msg + '</strong>';
+          if (data.errors && data.errors.length > 0) {
+            html += '<br><br><strong>Erreurs :</strong><ul style="margin:0.5rem 0 0;padding-left:1.25rem;font-size:0.8125rem;">';
+            data.errors.forEach(function (e) { html += '<li>' + esc(e) + '</li>'; });
+            html += '</ul>';
+          }
+          resultsEl.innerHTML = html;
+        }
+      } else {
+        if (statusEl) { statusEl.textContent = 'Erreur: ' + (data.error || 'Inconnue'); statusEl.style.color = 'hsl(0 70% 50%)'; }
+      }
+    })
+    .catch(function (err) {
+      clearInterval(progressInterval);
+      if (statusEl) { statusEl.textContent = 'Erreur: ' + (err.message || 'Erreur reseau'); statusEl.style.color = 'hsl(0 70% 50%)'; }
+    })
+    .finally(function () {
+      if (sendBtn) {
+        sendBtn.disabled = false;
+        sendBtn.innerHTML = '<svg style="width:1rem;height:1rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Envoyer';
+      }
+    });
+  }
+
   // ── Init ──
 
   function init() {
@@ -765,6 +1007,25 @@
         hidePlanModal();
       }
     });
+
+    // ── Mail tab events ──
+    var mailEmailsTextarea = document.getElementById('aadm-mail-emails');
+    if (mailEmailsTextarea) {
+      mailEmailsTextarea.addEventListener('input', updateMailCount);
+    }
+
+    var mailTemplateSelect = document.getElementById('aadm-mail-template');
+    if (mailTemplateSelect) {
+      mailTemplateSelect.addEventListener('change', function () {
+        if (this.value) loadMailTemplate(this.value);
+      });
+    }
+
+    var mailPreviewBtn = document.getElementById('aadm-mail-preview-btn');
+    if (mailPreviewBtn) mailPreviewBtn.addEventListener('click', refreshMailPreview);
+
+    var mailSendBtn = document.getElementById('aadm-mail-send');
+    if (mailSendBtn) mailSendBtn.addEventListener('click', sendMassMail);
 
     // Bulk action buttons
     var bulkApproveBtn = document.getElementById('aadm-bulk-approve');
