@@ -80,72 +80,153 @@ const SPECIALTY_CITY_TEMPLATES = {
   ],
 
   'sexologue': [
+    // Template A - Bold statement entry
     (city) => ({
       sections: [
         {
-          title: `Consulter un sexologue à ${city.name} : lever le tabou`,
+          title: `Sexologue à ${city.name} : on en parle, pour de vrai`,
           content: `
-<p>Parler de sexualité reste compliqué pour beaucoup de gens. À ${city.name} comme ailleurs, on préfère souvent souffrir en silence plutôt que de prendre rendez-vous chez un sexologue. Et pourtant, les troubles sexuels touchent une personne sur trois à un moment de sa vie — c'est loin d'être marginal.</p>
-<p>Dans le département ${city.department}, les sexologues exercent en cabinet privé, à l'hôpital, ou en centre de santé. Certains sont médecins (généralistes, gynécologues, urologues ayant une formation complémentaire en sexologie), d'autres sont psychologues ou professionnels de santé spécialisés. La distinction est importante car elle détermine les outils à disposition : un sexologue médecin peut prescrire des traitements, un sexologue non-médecin travaille par la parole et les thérapies comportementales.</p>
-<p>Quel que soit le profil du praticien, la consultation est confidentielle. Rien n'apparaît sous le terme « sexologue » sur vos relevés de santé. C'est un point qui rassure beaucoup de patients à ${city.name}.</p>
+<p>Un tiers des adultes en France a déjà rencontré un trouble sexuel. Un tiers. On ne parle pas d'un petit souci passager : on parle de quelque chose qui pourrit la vie intime de millions de personnes. Et à ${city.name}, la situation n'a rien de différent. Les sexologues du département ${city.department} reçoivent chaque semaine des patients qui auraient dû consulter des mois, parfois des années plus tôt.</p>
+<p>Le problème, c'est la honte. On a beau vivre en 2025, parler de sa sexualité à un professionnel reste un cap difficile à franchir. Pourtant, un sexologue à ${city.name} ne va pas vous juger. C'est son métier. Il a entendu des centaines de situations comme la vôtre (et des bien plus compliquées, croyez-moi). La consultation est confidentielle, rien ne figure sur vos relevés de santé sous l'intitulé « sexologue », et le premier rendez-vous sert surtout à faire connaissance.</p>
+<p>Ce qui frappe quand on discute avec des sexologues installés en ${city.region}, c'est la diversité des profils qu'ils reçoivent. Des hommes de 25 ans comme des femmes de 60 ans. Des couples mariés depuis vingt ans comme des personnes célibataires qui n'arrivent pas à vivre une relation intime sereinement. La sexologie ne s'adresse pas à une catégorie de gens, elle s'adresse à tout le monde.</p>
 `
         },
         {
-          title: `Les troubles sexuels les plus fréquents en consultation à ${city.name}`,
+          title: `Sexologue médecin ou sexologue thérapeute à ${city.name} : comment choisir`,
           content: `
-<p>Les motifs de consultation chez un sexologue dans le ${city.department} reflètent les tendances nationales :</p>
+<p>C'est une question que beaucoup de patients se posent avant de prendre rendez-vous. À ${city.name}, vous trouverez deux grands profils de sexologues :</p>
 <ul>
-<li>La <strong>dysfonction érectile</strong> — elle concerne un homme sur trois après 40 ans et peut avoir des causes physiques (diabète, hypertension, tabac) ou psychologiques (stress, anxiété de performance)</li>
-<li>L'<strong>éjaculation précoce</strong> — le trouble sexuel masculin le plus fréquent, présent chez 20 à 30 % des hommes</li>
-<li>Le <strong>vaginisme</strong> et les <strong>dyspareunies</strong> — des douleurs pendant les rapports qui touchent 10 à 15 % des femmes</li>
-<li>La <strong>baisse ou absence de désir</strong> — motif numéro un chez les femmes et en forte augmentation chez les hommes</li>
-<li>L'<strong>anorgasmie</strong> — difficulté ou impossibilité d'atteindre l'orgasme</li>
+<li>Les sexologues médecins (généralistes, gynécologues, urologues avec un DU ou DIU de sexologie) qui peuvent prescrire des traitements, faire des bilans hormonaux, poser un diagnostic médical</li>
+<li>Les sexologues non-médecins, souvent psychologues ou <a href="/sexotherapeute/">sexothérapeutes</a>, qui travaillent avec la parole, les exercices comportementaux et les thérapies cognitives</li>
+<li>Quelques praticiens ont la double casquette (c'est plus rare mais ça existe dans le ${city.department})</li>
 </ul>
-<p>Mais un sexologue à ${city.name} reçoit aussi des patients pour des questions qui n'entrent pas dans une case médicale : interrogations sur l'orientation sexuelle, décalage de désir dans le couple, difficultés liées au vieillissement, reprise de la sexualité après une maladie ou un accouchement.</p>
+<p>Mon conseil ? Si votre trouble a une dimension physique claire, comme des douleurs pendant les rapports ou une dysfonction érectile apparue brutalement, commencez par un sexologue médecin. Si c'est plutôt une question de désir, de blocage psychologique ou d'anxiété, un sexologue thérapeute sera plus adapté. Et si vous ne savez pas, prenez rendez-vous avec le premier disponible : un bon sexologue saura vous réorienter si besoin.</p>
+<p>Est-ce que le feeling avec le praticien compte ? Oui. Énormément. Vous allez parler de choses intimes, il faut que vous vous sentiez en sécurité. Si après la première séance vous n'êtes pas à l'aise, changez de sexologue à ${city.name}. C'est normal et aucun professionnel sérieux ne le prendra mal.</p>
 `
         },
         {
-          title: `Comment se déroule un suivi sexologique dans le ${city.department}`,
+          title: `Combien coûte un sexologue à ${city.name} et comment s'y retrouver`,
           content: `
-<p>Le premier rendez-vous chez un sexologue à ${city.name} dure environ une heure. Le praticien recueille votre histoire médicale, votre contexte relationnel et les difficultés qui vous amènent. Pas de jugement, pas d'examen physique lors de cette première rencontre — c'est une conversation structurée, menée avec professionnalisme.</p>
-<p>Les séances suivantes, plus courtes (30 à 45 minutes), sont orientées vers le travail concret. Selon le trouble et l'approche du sexologue, le suivi peut inclure :</p>
-<ul>
-<li>Des <strong>exercices de pleine conscience corporelle</strong> pour se reconnecter à ses sensations</li>
-<li>Des <strong>techniques cognitivo-comportementales</strong> pour déconstruire les pensées anxieuses liées à la performance</li>
-<li>Des <strong>exercices progressifs</strong> à faire seul ou en couple entre les séances</li>
-<li>Un <strong>bilan médical</strong> si une cause organique est suspectée (analyse hormonale, bilan cardiovasculaire)</li>
-</ul>
-<p>Un suivi complet s'étale sur 6 à 12 séances en moyenne. Les résultats sont souvent visibles dès les premières semaines, à condition de s'investir dans le travail entre les séances. C'est un aspect que les sexologues de ${city.name} soulignent systématiquement : le changement ne se fait pas uniquement dans le cabinet.</p>
+<p>Parlons argent. Une séance chez un sexologue à ${city.name} coûte entre 60 et 100€ en moyenne. Les sexologues médecins peuvent appliquer une partie en tarif conventionné (25€ remboursés par la Sécurité sociale), le reste étant à votre charge ou couvert par votre mutuelle. Les sexologues non-médecins ne sont pas remboursés par la Sécu, mais de plus en plus de mutuelles couvrent 3 à 6 séances par an sous l'intitulé « consultations psy » ou « médecines complémentaires ». Vérifiez votre contrat.</p>
+<p>Un suivi complet dure en général 6 à 12 séances. C'est un budget, oui. Mais comparez ça au coût d'un couple qui se délite ou à des années de mal-être silencieux. L'IFOP rapportait en 2023 que 40 % des Français considèrent leur vie sexuelle comme « insatisfaisante ». Ce chiffre est énorme, et il cache beaucoup de souffrance qui pourrait être soulagée.</p>
+<p>Pour les budgets serrés, des alternatives existent dans le ${city.department} : services de sexologie hospitaliers, CPEF (Centres de Planification), consultations à tarif adapté dans les centres de santé. Notre annuaire liste les sexologues à ${city.name} avec leurs tarifs, spécialités et disponibilités. Prenez le temps de comparer, puis lancez-vous. Le plus dur, c'est de décrocher le téléphone.</p>
 `
         },
       ],
     }),
+    // Template B - Concrete patient story entry
     (city) => ({
       sections: [
         {
-          title: `Sexologue à ${city.name} : qui consulter et pourquoi`,
+          title: `Trouver un sexologue à ${city.name} : le déclic qui change tout`,
           content: `
-<p>Dans la région ${city.region}, de plus en plus de patients franchissent le pas de la consultation en sexologie. Et c'est une bonne nouvelle. Les troubles sexuels ne sont pas une fatalité : dans la grande majorité des cas, un accompagnement professionnel permet d'obtenir des améliorations concrètes en quelques semaines.</p>
-<p>À ${city.name}, vous trouverez des sexologues aux profils variés. Certains sont médecins et peuvent prescrire un traitement médicamenteux si nécessaire (inhibiteurs de la PDE5 pour l'érection, traitements hormonaux pour la ménopause, etc.). D'autres sont psychologues ou thérapeutes et travaillent sur les blocages émotionnels, relationnels ou traumatiques qui affectent la sexualité.</p>
-<p>Le choix dépend de votre situation. Si votre difficulté a une composante physique évidente (douleurs, troubles hormonaux, effets secondaires d'un traitement), commencez par un sexologue médecin. Si le problème est plutôt d'ordre psychologique (anxiété, trauma, conflit de couple), un sexologue psychologue sera plus adapté.</p>
+<p>Marie (le prénom est changé) avait 34 ans quand elle a consulté un sexologue à ${city.name} pour la première fois. Ça faisait deux ans qu'elle n'avait plus de désir. Zéro. Son couple en souffrait, elle en souffrait, mais elle pensait que « c'était comme ça » après un bébé et de la fatigue accumulée. Au bout de quatre séances, elle a compris que le problème n'était ni hormonal ni lié à la fatigue : c'était un conflit non résolu avec son partenaire qui avait éteint quelque chose en elle. Le sexologue l'a orientée vers un <a href="/therapeute-de-couple/">thérapeute de couple</a> en parallèle. Six mois plus tard, le désir était revenu.</p>
+<p>Cette histoire n'a rien d'exceptionnel. Les sexologues du ${city.department} la racontent sous des formes différentes plusieurs fois par semaine. Ce qui est frappant, c'est le temps perdu avant de consulter : en moyenne, les patients attendent 3 ans entre l'apparition d'un trouble sexuel et leur premier rendez-vous chez un sexologue. Trois ans. C'est long quand on souffre.</p>
+<p>À ${city.name}, le premier rendez-vous chez un sexologue dure environ une heure. On parle de votre situation, de votre histoire, de ce qui vous amène. Pas d'examen physique, pas de questions intrusives dès les premières minutes. Le sexologue pose le cadre, vous posez vos questions. C'est une conversation, pas un interrogatoire.</p>
 `
         },
         {
-          title: `Sexualité et couple : quand consulter à deux à ${city.name}`,
+          title: `Les raisons qui amènent chez un sexologue à ${city.name}`,
           content: `
-<p>La sexualité d'un couple n'existe pas dans un vide. Elle est liée à la communication, à la confiance, à l'histoire partagée. Quand un trouble sexuel apparaît chez l'un des partenaires, l'autre est toujours impacté — même s'il ne le dit pas.</p>
-<p>Les sexologues à ${city.name} reçoivent régulièrement des couples pour des problématiques comme le décalage de désir (l'un veut plus, l'autre moins — et les deux en souffrent), la routine sexuelle après des années de vie commune, ou les conséquences d'un événement de vie sur l'intimité (naissance, maladie, infidélité).</p>
-<p>Consulter à deux ne signifie pas que les deux ont un « problème ». Ça signifie que les deux sont prêts à s'investir pour retrouver une connexion intime satisfaisante. Le sexologue crée un espace de parole où chacun peut exprimer ses envies, ses craintes et ses limites — quelque chose qui est souvent très difficile à faire en tête-à-tête à la maison.</p>
-<p>Les séances de couple alternent généralement avec des séances individuelles, selon ce que le praticien juge pertinent. Le rythme habituel est d'un rendez-vous toutes les deux à trois semaines.</p>
+<p>Les motifs de consultation en sexologie dans la région ${city.region} sont variés, mais certains reviennent plus souvent que d'autres :</p>
+<ul>
+<li>La baisse de désir, qui est le motif numéro un tous genres confondus (et qui augmente chez les hommes jeunes, un phénomène encore mal compris)</li>
+<li>La dysfonction érectile : un homme sur trois après 40 ans, souvent liée au stress ou à des causes vasculaires</li>
+<li>Les douleurs pendant les rapports, vaginisme et dyspareunies (10 à 15 % des femmes concernées, et c'est probablement sous-estimé)</li>
+<li>L'anxiété de performance, ce cercle vicieux où la peur de « rater » finit par provoquer exactement ce qu'on redoute</li>
+</ul>
+<p>Mais un sexologue à ${city.name} reçoit aussi des patients pour des questions qui ne rentrent pas dans ces cases : comment reprendre une vie sexuelle après un cancer, comment gérer un décalage de désir dans le couple sans que ça devienne un sujet toxique, comment vivre sa sexualité après 60 ans quand le corps change. Ce sont des vraies questions, légitimes, et un sexologue est formé pour y répondre.</p>
+<p>Et puis il y a les questions d'identité sexuelle, d'orientation, de pratiques. Des sujets qu'on n'ose pas aborder avec son médecin traitant (qui n'est pas formé pour ça de toute façon). Le cabinet du sexologue est un des rares endroits où on peut en parler sans filtre.</p>
 `
         },
         {
-          title: `Tarifs et accès à un sexologue dans le ${city.department}`,
+          title: `Ce que fait concrètement un sexologue à ${city.name} pendant les séances`,
           content: `
-<p>À ${city.name}, une consultation de sexologie coûte entre 60€ et 100€. Les sexologues médecins peuvent appliquer le tarif conventionné pour la partie « consultation médicale » (25€ remboursés par la Sécu), mais le reste est à la charge du patient ou de sa mutuelle.</p>
-<p>Pour les sexologues non-médecins, aucun remboursement Sécu n'est prévu. En revanche, de plus en plus de mutuelles incluent un forfait « consultations psychologiques » ou « médecines douces » dans leurs contrats. Vérifiez le vôtre : il couvre parfois 3 à 6 séances par an.</p>
-<p>Si le budget est un frein, certaines structures à ${city.name} proposent des tarifs adaptés : centres hospitaliers avec service de sexologie, CPEF (Centres de Planification et d'Éducation Familiale), ou consultations à tarif réduit dans les centres de santé municipaux.</p>
-<p>Notre annuaire vous permet de comparer les sexologues disponibles à ${city.name} et de consulter directement leurs tarifs, horaires et spécialisations.</p>
+<p>Beaucoup de gens imaginent la consultation de sexologie comme quelque chose de gênant ou bizarre. En réalité, c'est assez proche d'une consultation psy classique. On parle. Le sexologue écoute, pose des questions, vous aide à identifier ce qui bloque.</p>
+<p>Après les premières séances d'évaluation, le sexologue à ${city.name} propose un plan de travail adapté à votre situation. Selon les cas, ça peut inclure :</p>
+<ul>
+<li>Des exercices de sensibilisation corporelle inspirés de la méthode Masters et Johnson (le « sensate focus », un classique qui a fait ses preuves depuis les années 70)</li>
+<li>Un travail cognitif sur les pensées négatives liées au corps ou à la performance</li>
+<li>Des exercices à faire chez vous, seul ou en couple, entre les séances</li>
+<li>Un bilan médical si le sexologue suspecte une cause physique, avec orientation vers un spécialiste dans le ${city.department}</li>
+</ul>
+<p>Les résultats arrivent souvent plus vite qu'on ne le pense. En 4 à 6 séances, la plupart des patients notent une amélioration. Le suivi complet s'étale sur 6 à 12 rendez-vous en moyenne. Ce qui fait la différence, c'est le travail entre les séances : le changement se construit au quotidien, pas uniquement dans le cabinet du sexologue à ${city.name}. Alors oui, ça demande un engagement. Mais le jeu en vaut la chandelle.</p>
+`
+        },
+      ],
+    }),
+    // Template C - Surprising statistic entry
+    (city) => ({
+      sections: [
+        {
+          title: `Sexologue à ${city.name} : des chiffres qui parlent`,
+          content: `
+<p>76 % des patients qui consultent un sexologue constatent une amélioration significative de leur vie sexuelle en moins de six mois. Ce chiffre (issu d'une étude de l'Association Interdisciplinaire post-Universitaire de Sexologie) devrait suffire à convaincre ceux qui hésitent encore. Pourtant, à ${city.name} comme dans le reste de la France, la grande majorité des personnes concernées par un trouble sexuel ne consultent jamais.</p>
+<p>Pourquoi ? Parce que la sexualité reste un sujet tabou dans la relation avec les soignants. On parle de son dos, de son cholestérol, de son sommeil. Mais de sa vie sexuelle ? Rarement. Les sexologues du ${city.department} sont formés exactement pour ça : créer un espace où ces sujets se disent sans honte, sans jugement, avec un cadre professionnel rigoureux.</p>
+<p>Un sexologue à ${city.name} peut être médecin (et dans ce cas prescrire des traitements, réaliser des bilans) ou non-médecin, c'est-à-dire psychologue ou thérapeute spécialisé qui travaille par la parole et les approches comportementales. Les deux profils sont complémentaires. Le bon choix dépend de votre situation personnelle, pas d'une hiérarchie entre les deux.</p>
+`
+        },
+        {
+          title: `Quand faut-il consulter un sexologue à ${city.name} ?`,
+          content: `
+<p>La réponse courte : dès que ça vous pèse. Pas besoin d'attendre que le problème devienne « grave » ou qu'il mette votre couple en danger. Si votre vie sexuelle vous fait souffrir (ou si l'absence de vie sexuelle vous fait souffrir, ce qui est tout aussi valable), c'est le bon moment pour prendre rendez-vous.</p>
+<p>Voici les situations qui amènent le plus souvent chez un sexologue en ${city.region} :</p>
+<ul>
+<li>Un désir qui a disparu, progressivement ou d'un coup, sans explication évidente</li>
+<li>Des troubles de l'érection ou de l'éjaculation qui reviennent régulièrement (pas un épisode isolé, ça arrive à tout le monde)</li>
+<li>Des douleurs pendant les rapports qui persistent malgré un bilan gynécologique normal</li>
+<li>Un mal-être autour de la sexualité : culpabilité, dégoût, peur, évitement</li>
+</ul>
+<p>On peut aussi consulter un sexologue à ${city.name} en couple. C'est même fréquent. Quand le décalage de désir s'installe, quand la routine a tout aplati, quand une infidélité a brisé la confiance, travailler à deux avec un sexologue change la donne. Le praticien aide chacun à exprimer ce qu'il n'arrive pas à dire seul, dans un cadre structuré qui évite que la discussion dérape (comme c'est souvent le cas à la maison).</p>
+`
+        },
+        {
+          title: `Sexologue à ${city.name} : tarifs, remboursements et premier rendez-vous`,
+          content: `
+<p>Comptez entre 60 et 100€ la séance chez un sexologue à ${city.name}. Les médecins sexologues sont partiellement remboursés par la Sécurité sociale (la part « consultation médicale », soit 25€). Pour les sexologues non-médecins, pas de remboursement Sécu, mais regardez du côté de votre mutuelle : beaucoup proposent un forfait annuel pour les consultations de type « psy » ou « médecines complémentaires », souvent 3 à 6 séances prises en charge.</p>
+<p>Le premier rendez-vous dure généralement une heure. C'est un entretien, pas un examen. Le sexologue vous pose des questions sur votre parcours, votre situation actuelle, ce qui vous amène. Vous pouvez venir seul ou en couple. Et si au bout de cette première séance le courant ne passe pas, vous changez de praticien. Point. C'est votre droit et c'est même recommandé, parce que la relation de confiance avec le sexologue est un facteur clé de réussite du suivi.</p>
+<p>Pour les personnes à budget limité dans le ${city.department}, il existe des consultations en milieu hospitalier, des CPEF, et des praticiens qui pratiquent des tarifs adaptés. Notre annuaire référence les sexologues à ${city.name} avec leurs tarifs et leurs spécialités. Comparez, lisez les informations, et faites votre choix. Le reste, c'est le début d'un chemin qui vaut vraiment la peine d'être parcouru.</p>
+`
+        },
+      ],
+    }),
+    // Template D - Question entry
+    (city) => ({
+      sections: [
+        {
+          title: `Pourquoi consulter un sexologue à ${city.name} ?`,
+          content: `
+<p>Vous êtes-vous déjà demandé à quel moment un problème sexuel mérite qu'on consulte ? La plupart des gens que reçoivent les sexologues à ${city.name} se sont posé cette question pendant des mois avant de franchir la porte du cabinet. Et presque tous disent la même chose après : « J'aurais dû venir plus tôt. »</p>
+<p>Il n'y a pas de seuil officiel. Pas de règle qui dit « au bout de X semaines de trouble, il faut consulter ». Le critère, c'est la souffrance. Si votre sexualité (ou son absence) vous pèse, vous inquiète, crée des tensions dans votre couple, alors un sexologue à ${city.name} peut vous aider. C'est aussi simple que ça.</p>
+<p>Dans le ${city.department}, les sexologues reçoivent des profils très différents. Des personnes jeunes qui n'ont jamais eu de rapport satisfaisant. Des couples qui s'aiment mais dont la vie intime s'est éteinte. Des patients sous traitement médical (antidépresseurs, antihypertenseurs) dont les effets secondaires ont tué le désir ou la fonction. Des personnes en questionnement sur leur identité ou leurs pratiques. Le point commun ? Tous avaient besoin d'un espace professionnel pour en parler, et ils l'ont trouvé.</p>
+`
+        },
+        {
+          title: `Sexologue à ${city.name} : comment se passe le suivi`,
+          content: `
+<p>Première séance : vous racontez, le sexologue écoute. Il pose des questions pour comprendre votre situation dans sa globalité (santé physique, contexte relationnel, histoire personnelle). Pas d'examen, pas de mise en situation. Juste un échange. Cette première rencontre dure environ une heure et sert à poser les bases du travail.</p>
+<p>Les séances suivantes (30 à 45 minutes, toutes les deux à trois semaines) sont plus ciblées. Le sexologue à ${city.name} utilise différents outils selon votre problématique :</p>
+<ul>
+<li>La méthode du sensate focus (développée par Masters et Johnson dans les années 60, toujours aussi efficace) pour les troubles liés à l'anxiété de performance</li>
+<li>Des approches cognitivo-comportementales quand des pensées négatives ou des croyances limitantes bloquent le plaisir</li>
+<li>Un travail corporel et émotionnel pour les personnes ayant vécu un trauma</li>
+<li>Des exercices concrets à faire entre les séances, seul ou en couple (c'est là que le changement se joue vraiment)</li>
+</ul>
+<p>Combien de temps ça prend ? Entre 6 et 12 séances en général. Certains patients voient des résultats dès la troisième ou quatrième séance. D'autres ont besoin de plus de temps, surtout quand le trouble est ancien ou qu'il est lié à un traumatisme. Le sexologue adapte le rythme. C'est du sur-mesure, pas du prêt-à-porter.</p>
+`
+        },
+        {
+          title: `Bien choisir son sexologue dans le ${city.department}`,
+          content: `
+<p>Le titre de sexologue n'est pas protégé en France. Ça veut dire que n'importe qui pourrait, en théorie, se déclarer sexologue demain matin. En pratique, les professionnels sérieux à ${city.name} ont un DU ou DIU de sexologie délivré par une faculté de médecine, en plus de leur formation initiale (médecin, psychologue, sage-femme). C'est le minimum à vérifier.</p>
+<p>Quelques repères pour faire le bon choix :</p>
+<ul>
+<li>Le sexologue affiche ses diplômes et sa formation clairement</li>
+<li>Il pose un cadre dès le premier rendez-vous : durée, tarif, confidentialité, déroulement du suivi</li>
+<li>Il ne vous touche jamais (la sexologie clinique est un travail par la parole et les exercices à domicile, ce n'est pas de la pratique corporelle en cabinet)</li>
+<li>Il accepte que vous ne reveniez pas si le courant ne passe pas, sans culpabilisation</li>
+</ul>
+<p>Pour les couples, la question se pose aussi : faut-il un sexologue ou un <a href="/therapeute-de-couple/">thérapeute de couple</a> ? Ça dépend. Si le problème est clairement sexuel (trouble du désir, dysfonction, douleurs), commencez par un sexologue. Si c'est un problème relationnel qui rejaillit sur la sexualité (conflits, communication rompue, trahison), un thérapeute de couple sera plus adapté. Et parfois, les deux suivis se combinent. Les sexologues à ${city.name} savent orienter vers le bon professionnel quand c'est nécessaire. Faites-leur confiance sur ce point.</p>
 `
         },
       ],
