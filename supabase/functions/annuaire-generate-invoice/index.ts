@@ -68,15 +68,16 @@ serve(async (req: Request) => {
       auth: { autoRefreshToken: false, persistSession: false },
     });
 
-    // Check for duplicate (idempotency)
+    // Check if record already exists (webhook creates it before calling us)
     const { data: existing } = await supabase
       .from('annuaire_invoices')
-      .select('id, invoice_number')
+      .select('id, invoice_number, pdf_storage_path')
       .eq('stripe_invoice_id', invoiceData.stripe_invoice_id)
       .maybeSingle();
 
-    if (existing) {
-      console.log(`[invoice] Already exists: ${existing.invoice_number}`);
+    // If PDF already generated, skip (true idempotency)
+    if (existing?.pdf_storage_path) {
+      console.log(`[invoice] PDF already exists for ${existing.invoice_number}, skipping`);
       return new Response(JSON.stringify({ invoice_number: existing.invoice_number }), {
         headers: { 'Content-Type': 'application/json' },
       });
@@ -94,66 +95,77 @@ serve(async (req: Request) => {
       return new Response(JSON.stringify({ error: 'Profile not found' }), { status: 404 });
     }
 
-    // Generate invoice number
-    const { data: seqResult } = await supabase
-      .rpc('generate_invoice_number');
-
-    // Fallback if RPC doesn't work (use raw query)
-    let invoiceNumber = seqResult;
-    if (!invoiceNumber) {
-      const { data: rawSeq } = await supabase
-        .from('annuaire_invoices')
-        .select('invoice_number')
-        .order('created_at', { ascending: false })
-        .limit(1)
-        .maybeSingle();
-      const lastNum = rawSeq?.invoice_number
-        ? parseInt(rawSeq.invoice_number.replace('ANNQUCO-', ''), 10)
-        : 0;
-      invoiceNumber = `ANNQUCO-${lastNum + 1}`;
-    }
-
     const clientEmail = profile.billing_email || profile.email;
     const clientCompanyName = profile.billing_company_name || `${profile.first_name} ${profile.last_name}`;
 
-    // Create invoice record
-    const invoiceRecord = {
-      professional_id: invoiceData.professional_id,
-      invoice_number: invoiceNumber,
-      stripe_invoice_id: invoiceData.stripe_invoice_id,
-      amount_ht: invoiceData.amount_ht,
-      amount_tva: invoiceData.amount_tva,
-      amount_ttc: invoiceData.amount_ttc,
-      discount_amount: invoiceData.discount_amount,
-      discount_label: invoiceData.discount_label,
-      plan: invoiceData.plan,
-      period: invoiceData.period,
-      period_start: invoiceData.period_start,
-      period_end: invoiceData.period_end,
-      client_company_name: clientCompanyName,
-      client_siret: profile.billing_siret,
-      client_tva_number: profile.billing_tva_number,
-      client_address: profile.billing_address,
-      client_email: clientEmail,
-      paid_at: invoiceData.paid_at,
-    };
+    let invoiceNumber: string;
+    let invoiceRecordId: string;
 
-    const { data: insertedInvoice, error: insertError } = await supabase
-      .from('annuaire_invoices')
-      .insert(invoiceRecord)
-      .select()
-      .single();
-
-    if (insertError) {
-      // Handle duplicate constraint (race condition)
-      if (insertError.code === '23505') {
-        console.log(`[invoice] Duplicate detected for ${invoiceData.stripe_invoice_id}`);
-        return new Response(JSON.stringify({ invoice_number: invoiceNumber }), {
-          headers: { 'Content-Type': 'application/json' },
-        });
+    if (existing) {
+      // Record already created by webhook — reuse it
+      invoiceNumber = existing.invoice_number;
+      invoiceRecordId = existing.id;
+      console.log(`[invoice] Record already exists: ${invoiceNumber}, generating PDF`);
+    } else {
+      // No record yet — create one (fallback if webhook didn't create it)
+      const { data: seqResult } = await supabase.rpc('generate_invoice_number');
+      invoiceNumber = seqResult;
+      if (!invoiceNumber) {
+        const { data: rawSeq } = await supabase
+          .from('annuaire_invoices')
+          .select('invoice_number')
+          .order('created_at', { ascending: false })
+          .limit(1)
+          .maybeSingle();
+        const lastNum = rawSeq?.invoice_number
+          ? parseInt(rawSeq.invoice_number.replace('ANNQUCO-', ''), 10)
+          : 0;
+        invoiceNumber = `ANNQUCO-${lastNum + 1}`;
       }
-      console.error('[invoice] Insert error:', insertError);
-      return new Response(JSON.stringify({ error: 'Failed to create invoice record' }), { status: 500 });
+
+      const { data: insertedInvoice, error: insertError } = await supabase
+        .from('annuaire_invoices')
+        .insert({
+          professional_id: invoiceData.professional_id,
+          invoice_number: invoiceNumber,
+          stripe_invoice_id: invoiceData.stripe_invoice_id,
+          amount_ht: invoiceData.amount_ht,
+          amount_tva: invoiceData.amount_tva,
+          amount_ttc: invoiceData.amount_ttc,
+          discount_amount: invoiceData.discount_amount,
+          discount_label: invoiceData.discount_label,
+          plan: invoiceData.plan,
+          period: invoiceData.period,
+          period_start: invoiceData.period_start,
+          period_end: invoiceData.period_end,
+          client_company_name: clientCompanyName,
+          client_siret: profile.billing_siret,
+          client_tva_number: profile.billing_tva_number,
+          client_address: profile.billing_address,
+          client_email: clientEmail,
+          paid_at: invoiceData.paid_at,
+        })
+        .select()
+        .single();
+
+      if (insertError) {
+        if (insertError.code === '23505') {
+          console.log(`[invoice] Duplicate detected for ${invoiceData.stripe_invoice_id}`);
+          // Re-fetch to get the id
+          const { data: dup } = await supabase
+            .from('annuaire_invoices')
+            .select('id, invoice_number')
+            .eq('stripe_invoice_id', invoiceData.stripe_invoice_id)
+            .single();
+          invoiceNumber = dup?.invoice_number || invoiceNumber;
+          invoiceRecordId = dup?.id;
+        } else {
+          console.error('[invoice] Insert error:', insertError);
+          return new Response(JSON.stringify({ error: 'Failed to create invoice record' }), { status: 500 });
+        }
+      } else {
+        invoiceRecordId = insertedInvoice.id;
+      }
     }
 
     // Generate PDF
@@ -192,12 +204,12 @@ serve(async (req: Request) => {
 
     if (storageError) {
       console.error('[invoice] Storage upload error:', storageError);
-    } else {
+    } else if (invoiceRecordId) {
       // Update invoice record with storage path
       await supabase
         .from('annuaire_invoices')
         .update({ pdf_storage_path: storagePath })
-        .eq('id', insertedInvoice.id);
+        .eq('id', invoiceRecordId);
     }
 
     // Send email with PDF attachment
