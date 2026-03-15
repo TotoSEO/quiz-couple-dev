@@ -585,66 +585,15 @@
         }
 
         if (!billingComplete) {
-          // State 2: billing info missing → redirect to dashboard billing tab
+          // Billing info missing → redirect to dashboard billing tab
           btn.href = '/dashboard/#billing';
           return;
         }
 
-        // State 3: billing complete → direct Stripe checkout
-        var planKey = isPro ? 'pro' : 'boost';
-        btn.href = '#';
-        btn.addEventListener('click', function(e) {
-          e.preventDefault();
-          var currentPeriod = document.querySelector('#toggle-annual.active') ? 'annual' : 'monthly';
-          var priceKey = planKey + '_' + currentPeriod;
-          btn.style.pointerEvents = 'none';
-          btn.style.opacity = '0.7';
-          var origText = btn.innerHTML;
-          btn.textContent = 'Redirection vers Stripe...';
-
-          fetch(SUPABASE_URL + '/functions/v1/annuaire-checkout', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'apikey': SUPABASE_KEY,
-              'Authorization': 'Bearer ' + token,
-            },
-            body: JSON.stringify({ price_key: priceKey }),
-          })
-          .then(function(r) {
-            return r.json().catch(function() {
-              return { error: 'Erreur serveur (HTTP ' + r.status + '). Essayez depuis votre espace pro.' };
-            });
-          })
-          .then(function(res) {
-            if (res.url) {
-              window.location.href = res.url;
-            } else {
-              var errMsg = res.error || 'Erreur lors de la création de la session de paiement.';
-              if (errMsg === 'billing_incomplete') errMsg = 'Veuillez d\'abord renseigner vos informations de facturation dans votre espace pro.';
-              if (errMsg === 'profile_not_validated') errMsg = 'Votre fiche est en attente de validation. Réessayez dans quelques heures.';
-              var errDiv = document.createElement('div');
-              errDiv.style.cssText = 'position:fixed;top:1rem;left:50%;transform:translateX(-50%);background:#fee;color:#c00;padding:1rem 1.5rem;border-radius:0.5rem;border:1px solid #fcc;z-index:9999;font-size:0.875rem;max-width:90vw;box-shadow:0 4px 12px rgba(0,0,0,0.15);';
-              errDiv.textContent = errMsg;
-              document.body.appendChild(errDiv);
-              setTimeout(function() { errDiv.remove(); }, 6000);
-              btn.innerHTML = origText;
-              btn.style.pointerEvents = '';
-              btn.style.opacity = '';
-            }
-          })
-          .catch(function(err) {
-            console.error('[tarifs] Checkout error:', err);
-            var errDiv = document.createElement('div');
-            errDiv.style.cssText = 'position:fixed;top:1rem;left:50%;transform:translateX(-50%);background:#fee;color:#c00;padding:1rem 1.5rem;border-radius:0.5rem;border:1px solid #fcc;z-index:9999;font-size:0.875rem;max-width:90vw;box-shadow:0 4px 12px rgba(0,0,0,0.15);';
-            errDiv.textContent = 'Erreur réseau. Veuillez réessayer ou souscrire depuis votre espace pro.';
-            document.body.appendChild(errDiv);
-            setTimeout(function() { errDiv.remove(); }, 6000);
-            btn.innerHTML = origText;
-            btn.style.pointerEvents = '';
-            btn.style.opacity = '';
-          });
-        });
+        // Billing complete → redirect to dashboard billing section to subscribe
+        btn.href = '/dashboard/#billing';
+        btn.innerHTML = (isPro ? 'Souscrire à Professionnel' : 'Souscrire au Boost') +
+          ' <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>';
       });
 
       var bottomCta = document.querySelector('.ann-cta-section .ann-btn');

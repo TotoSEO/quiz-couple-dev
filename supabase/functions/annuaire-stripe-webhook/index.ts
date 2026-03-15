@@ -6,6 +6,7 @@ const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const SUPABASE_SERVICE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
 const STRIPE_SECRET_KEY = Deno.env.get('STRIPE_SECRET_KEY')!;
 const STRIPE_WEBHOOK_SECRET = Deno.env.get('STRIPE_WEBHOOK_SECRET')!;
+const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY') || '';
 
 // Price → plan mapping
 const PLAN_FROM_PRICE: Record<string, string> = {
@@ -145,12 +146,9 @@ serve(async (req: Request) => {
         }
         console.log(`[webhook] Plan renewed: ${plan}, expires ${periodEnd}`);
 
-        // Generate invoice PDF and send by email
+        // Generate invoice record + send email directly (no inter-function HTTP call)
         try {
-          // TVA non applicable (art. 293 B du CGI) — no VAT calculation
           const amountHt = invoice.subtotal || 0;
-
-          // Check for discount
           let discountAmount = 0;
           let discountLabel: string | null = null;
           if (invoice.discount && invoice.total_discount_amounts && invoice.total_discount_amounts.length > 0) {
@@ -166,28 +164,154 @@ serve(async (req: Request) => {
               }
             }
           }
-
-          // Net amount = subtotal - discount (no TVA)
           const actualHt = amountHt - discountAmount;
-          const actualTva = 0;
-          const actualTtc = actualHt;
+          const paidAt = new Date().toISOString();
+          const periodLabel = period === 'annual' ? 'annuel' : 'mensuel';
+          const planLabels: Record<string, string> = { pro: 'Professionnel', boost: 'Boost' };
+          const planLabel = planLabels[plan] || plan;
 
-          await triggerInvoiceGeneration({
+          // Get billing info for the invoice
+          const { data: billingProfile } = await supabase
+            .from('annuaire_professionals')
+            .select('email, first_name, last_name, billing_company_name, billing_siret, billing_tva_number, billing_address, billing_email')
+            .eq('id', updatedProfile.id)
+            .single();
+
+          if (!billingProfile) {
+            console.error('[webhook] Could not fetch billing profile for invoice');
+            break;
+          }
+
+          const clientEmail = billingProfile.billing_email || billingProfile.email;
+          const clientCompanyName = billingProfile.billing_company_name || `${billingProfile.first_name} ${billingProfile.last_name}`;
+
+          // Check for duplicate invoice
+          const { data: existingInvoice } = await supabase
+            .from('annuaire_invoices')
+            .select('id, invoice_number')
+            .eq('stripe_invoice_id', invoice.id)
+            .maybeSingle();
+
+          let invoiceNumber: string;
+          if (existingInvoice) {
+            invoiceNumber = existingInvoice.invoice_number;
+            console.log(`[webhook] Invoice already exists: ${invoiceNumber}`);
+          } else {
+            // Generate invoice number
+            const { data: seqResult } = await supabase.rpc('generate_invoice_number');
+            if (seqResult) {
+              invoiceNumber = seqResult;
+            } else {
+              const { data: rawSeq } = await supabase
+                .from('annuaire_invoices')
+                .select('invoice_number')
+                .order('created_at', { ascending: false })
+                .limit(1)
+                .maybeSingle();
+              const lastNum = rawSeq?.invoice_number
+                ? parseInt(rawSeq.invoice_number.replace('ANNQUCO-', ''), 10)
+                : 0;
+              invoiceNumber = `ANNQUCO-${lastNum + 1}`;
+            }
+
+            // Insert invoice record
+            const { error: insertErr } = await supabase
+              .from('annuaire_invoices')
+              .insert({
+                professional_id: updatedProfile.id,
+                invoice_number: invoiceNumber,
+                stripe_invoice_id: invoice.id,
+                amount_ht: actualHt,
+                amount_tva: 0,
+                amount_ttc: actualHt,
+                discount_amount: discountAmount,
+                discount_label: discountLabel,
+                plan,
+                period,
+                period_start: periodStart,
+                period_end: periodEnd,
+                client_company_name: clientCompanyName,
+                client_siret: billingProfile.billing_siret,
+                client_tva_number: billingProfile.billing_tva_number,
+                client_address: billingProfile.billing_address,
+                client_email: clientEmail,
+                paid_at: paidAt,
+              });
+            if (insertErr && insertErr.code !== '23505') {
+              console.error('[webhook] Invoice insert error:', insertErr);
+            } else {
+              console.log(`[webhook] Invoice record created: ${invoiceNumber}`);
+            }
+          }
+
+          // Send invoice email directly via Resend (no inter-function HTTP call)
+          if (RESEND_API_KEY) {
+            const amountStr = (actualHt / 100).toFixed(2).replace('.', ',');
+            const emailHtml = `<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"></head>
+<body style="margin:0;padding:0;background:#f8f7fc;font-family:Inter,system-ui,sans-serif;">
+<div style="max-width:600px;margin:0 auto;padding:2rem 1rem;">
+<div style="text-align:center;margin-bottom:2rem;">
+<span style="font-size:1.25rem;font-weight:700;color:#1a1625;">Annuaire Quiz Couple</span>
+</div>
+<div style="background:white;border-radius:1rem;padding:2rem;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+<h1 style="color:#d6336c;font-size:1.5rem;margin:0 0 1rem;">Votre facture ${invoiceNumber}</h1>
+<p style="font-size:1rem;line-height:1.6;color:#333;margin:0 0 1rem;">
+Votre paiement pour l'abonnement <strong>${planLabel}</strong> (${periodLabel}) a bien été reçu.
+</p>
+<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:0.5rem;padding:1rem;margin:1rem 0;">
+<p style="margin:0;font-size:0.9375rem;color:#166534;">
+<strong>Montant réglé :</strong> ${amountStr} €
+</p>
+</div>
+<p style="font-size:0.9375rem;line-height:1.6;color:#333;margin:1rem 0 0;">
+Votre facture PDF sera disponible dans votre <a href="https://annuaire.quiz-couple.com/dashboard/#billing" style="color:#d6336c;text-decoration:underline;">espace professionnel</a>.
+</p>
+</div>
+<div style="text-align:center;margin-top:2rem;">
+<p style="font-size:0.75rem;color:#999;">Quiz Couple — Annuaire des professionnels du couple en France</p>
+</div>
+</div></body></html>`;
+
+            const emailRes = await fetch('https://api.resend.com/emails', {
+              method: 'POST',
+              headers: {
+                'Authorization': `Bearer ${RESEND_API_KEY}`,
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                from: 'Annuaire Quiz Couple <annuaire@quiz-couple.com>',
+                to: [clientEmail],
+                subject: `Facture ${invoiceNumber} — Annuaire Quiz Couple`,
+                html: emailHtml,
+              }),
+            });
+
+            if (!emailRes.ok) {
+              const errText = await emailRes.text();
+              console.error(`[webhook] Resend email error: ${emailRes.status} ${errText}`);
+            } else {
+              console.log(`[webhook] Invoice email sent to ${clientEmail}`);
+            }
+          } else {
+            console.error('[webhook] RESEND_API_KEY not set — cannot send invoice email');
+          }
+
+          // Also try PDF generation via separate function (best-effort, non-blocking)
+          triggerInvoiceGeneration({
             stripe_invoice_id: invoice.id,
             professional_id: updatedProfile.id,
-            plan,
-            period,
+            plan, period,
             period_start: periodStart,
             period_end: periodEnd,
             amount_ht: actualHt,
-            amount_tva: actualTva,
-            amount_ttc: actualTtc,
+            amount_tva: 0,
+            amount_ttc: actualHt,
             discount_amount: discountAmount,
             discount_label: discountLabel,
-            paid_at: new Date().toISOString(),
-          });
+            paid_at: paidAt,
+          }).catch(err => console.warn('[webhook] PDF generation (best-effort) failed:', err));
+
         } catch (invoiceErr) {
-          // Don't fail the webhook if invoice generation fails
           console.error('[webhook] Invoice generation error:', invoiceErr);
         }
         break;
