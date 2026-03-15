@@ -1,6 +1,7 @@
 <%
   // Variables: specialty, city, filteredProfessionals, specialties, cities, professionals
-  const otherCities = cities.filter(c => c.id !== city.id);
+  const featuredCityIds = ['paris', 'lyon', 'nice', 'marseille', 'toulouse', 'bordeaux', 'strasbourg', 'lille', 'nantes', 'angers'];
+  const otherCities = cities.filter(c => c.id !== city.id && featuredCityIds.includes(c.id));
 
   // JSON-LD
   const jsonLdArray = [
