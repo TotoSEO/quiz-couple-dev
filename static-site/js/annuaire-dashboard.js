@@ -850,8 +850,14 @@
       var maxPhotos = profile.plan === 'boost' ? 4 : 2;
 
       // Auto-add video marker for existing Boost profiles with video but no marker
+      // Also persist to DB so it survives reorders
       if (profile.plan === 'boost' && profile.video_url && Array.isArray(profile.photos) && profile.photos.indexOf('video') === -1) {
         profile.photos = ['video'].concat(profile.photos);
+        // Save the marker to DB in background
+        (async function() {
+          var s = await checkAuth();
+          if (s) await saveProfile({ photos: profile.photos }, s.access_token, false);
+        })();
       }
 
       var limitEl = $('dash-photos-limit');
