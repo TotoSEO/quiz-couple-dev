@@ -266,6 +266,14 @@
           <!-- Professional info -->
           <h2 style="margin-bottom: 1rem; font-size: 1rem;">Informations professionnelles</h2>
           <div class="ann-form-group">
+            <label class="ann-form-label" for="prof-short-description">Description courte *</label>
+            <div style="position: relative;">
+              <input class="ann-form-input" type="text" id="prof-short-description" placeholder="Ex : Thérapeute de couple spécialisée en communication et gestion des conflits à Lyon." maxlength="165" required style="padding-right: 3.5rem;">
+              <span id="prof-short-desc-counter" style="position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); font-size: 0.6875rem; color: hsl(var(--ann-muted-fg)); pointer-events: none;">0/165</span>
+            </div>
+            <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.25rem;">Cette phrase apparaîtra dans les résultats de recherche et comme méta-description de votre fiche (SEO).</p>
+          </div>
+          <div class="ann-form-group">
             <label class="ann-form-label">Présentation *</label>
             <!-- Rich text toolbar -->
             <div class="ann-rte-toolbar" id="prof-desc-toolbar">

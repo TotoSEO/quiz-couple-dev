@@ -500,6 +500,7 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
     result.price_range = pr || null;
   }
   if (body.availability !== undefined) result.availability = sanitize(body.availability, 200);
+  if (body.short_description !== undefined) result.short_description = sanitize(body.short_description, 165);
   if (body.years_experience !== undefined) {
     const y = Number(body.years_experience);
     if (isNaN(y) || y < 0 || y > 60) return { error: 'Années d\'expérience invalides.' };

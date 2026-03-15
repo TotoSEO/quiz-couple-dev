@@ -647,6 +647,40 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
   }
 }
 
+/* ── Search Results Grid (3 columns) ──────────────────────────────── */
+.ann-search-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+@media (min-width: 640px) {
+  .ann-search-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .ann-search-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── Search Card (compact) ───────────────────────────────────────── */
+.ann-search-card {
+  background: hsl(var(--ann-card));
+  border: 1px solid hsl(var(--ann-border) / 0.6);
+  border-radius: var(--ann-radius);
+  padding: 0.875rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.ann-search-card:hover {
+  border-color: hsl(var(--ann-primary) / 0.3);
+  box-shadow: 0 2px 8px hsl(var(--ann-primary) / 0.08);
+}
+.ann-search-card-premium {
+  border-color: hsl(var(--ann-primary) / 0.25);
+  background: linear-gradient(135deg, hsl(var(--ann-card)), hsl(var(--ann-primary) / 0.03));
+}
+
 /* ── Professional Card ─────────────────────────────────────────────── */
 .ann-pro-card {
   background: hsl(var(--ann-card));

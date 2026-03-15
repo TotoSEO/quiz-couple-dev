@@ -565,6 +565,16 @@
     }
   }
 
+  // ── Short Description Counter ──
+  function updateShortDescCounter() {
+    var input = $('prof-short-description');
+    var counter = $('prof-short-desc-counter');
+    if (!input || !counter) return;
+    var len = input.value.length;
+    counter.textContent = len + '/165';
+    counter.style.color = len > 155 ? 'hsl(0 70% 50%)' : 'hsl(var(--ann-muted-fg))';
+  }
+
   // ── Video Preview ──
   function updateVideoPreview(url) {
     var preview = $('dash-video-preview');
@@ -754,6 +764,13 @@
     if ($('prof-lng') && profile.lng) $('prof-lng').value = profile.lng;
     $('prof-website').value = profile.website || '';
     if ($('prof-doctolib')) $('prof-doctolib').value = profile.doctolib_url || '';
+    // Short description
+    var shortDescInput = $('prof-short-description');
+    if (shortDescInput) {
+      shortDescInput.value = profile.short_description || '';
+      updateShortDescCounter();
+    }
+
     var descVal = profile.description || '';
     $('prof-description').value = descVal;
     var descEditor = $('prof-description-editor');
@@ -890,6 +907,7 @@
       lat: $('prof-lat') && $('prof-lat').value ? parseFloat($('prof-lat').value) : undefined,
       lng: $('prof-lng') && $('prof-lng').value ? parseFloat($('prof-lng').value) : undefined,
       website: $('prof-website').disabled ? undefined : ($('prof-website').value.trim() || null),
+      short_description: ($('prof-short-description').value || '').slice(0, 165).trim(),
       description: syncEditorToTextarea('prof-description-editor', 'prof-description'),
       years_experience: parseInt($('prof-experience').value) || 0,
       price_range: (function() {
@@ -1123,6 +1141,20 @@
         if (!isNaN(idx)) reorderPhotos(idx, idx + 1);
       }
     });
+
+    // Short description counter
+    var shortDescInput = $('prof-short-description');
+    if (shortDescInput) {
+      shortDescInput.addEventListener('input', updateShortDescCounter);
+      // Block paste that would exceed limit
+      shortDescInput.addEventListener('paste', function(e) {
+        var el = this;
+        setTimeout(function() {
+          if (el.value.length > 165) el.value = el.value.slice(0, 165);
+          updateShortDescCounter();
+        }, 0);
+      });
+    }
 
     // Video URL preview
     var videoInput = $('prof-video-url');

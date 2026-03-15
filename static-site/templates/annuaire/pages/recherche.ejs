@@ -27,7 +27,9 @@
       specialty: p.specialty,
       city: p.city,
       postalCode: p.postalCode || '',
+      shortDescription: p.shortDescription || '',
       description: p.description || '',
+      plan: p.plan || 'gratuit',
       methods: p.methods || [],
       languages: p.languages || ['Fran\u00e7ais'],
       yearsExperience: p.yearsExperience || 0,
@@ -116,8 +118,8 @@
     <!-- Results count -->
     <p id="recherche-count" style="text-align: center; margin-bottom: 1.5rem; color: hsl(var(--ann-muted-fg)); font-size: 0.9375rem;"></p>
 
-    <!-- Results grid -->
-    <div id="recherche-results" class="ann-pro-grid">
+    <!-- Results grid (3 columns) -->
+    <div id="recherche-results" class="ann-search-grid">
     </div>
 
     <!-- No results message -->
@@ -210,48 +212,44 @@ window.__ANN_CITIES__ = <%- JSON.stringify(cities.map(function(c){ return { id: 
     var proUrl = '/' + p.specialty + '/' + p.city + '/' + p.slug + '/';
     var initials = (p.firstName ? p.firstName[0] : '') + (p.lastName ? p.lastName[0] : '');
 
-    var html = '<a href="' + proUrl + '" class="ann-pro-card' + (p.premium ? ' ann-pro-card-premium' : '') + ' ann-animate-fade-in-up" style="text-decoration:none;color:inherit;display:block;">';
+    var html = '<a href="' + proUrl + '" class="ann-search-card' + (p.premium ? ' ann-search-card-premium' : '') + ' ann-animate-fade-in-up" style="text-decoration:none;color:inherit;display:block;">';
 
-    if (p.premium) {
-      html += '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.25rem;">';
-      html += '<div class="ann-badge ann-badge-premium" style="font-size:0.6875rem;">';
-      html += '<svg viewBox="0 0 24 24" fill="currentColor" style="width:0.625rem;height:0.625rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
-      html += ' Premium</div></div>';
+    // Badge
+    if (p.plan === 'boost') {
+      html += '<div class="ann-badge ann-badge-mini ann-badge-mini-boost" style="font-size:0.625rem;margin-bottom:0.375rem;">';
+      html += '<svg viewBox="0 0 24 24" fill="currentColor" style="width:0.5rem;height:0.5rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
+      html += ' Top Pro</div>';
+    } else if (p.plan === 'pro') {
+      html += '<div class="ann-badge ann-badge-mini ann-badge-mini-pro" style="font-size:0.625rem;margin-bottom:0.375rem;">';
+      html += '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.5rem;height:0.5rem"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>';
+      html += ' Certifi\u00e9</div>';
     }
 
-    html += '<div class="ann-pro-header">';
+    // Photo + name
+    html += '<div style="display:flex;align-items:center;gap:0.625rem;margin-bottom:0.5rem;">';
     if (p.photoUrl) {
-      html += '<div class="ann-pro-avatar ann-pro-avatar-photo"><img src="' + p.photoUrl + '" alt="Photo de ' + p.firstName + ' ' + p.lastName + '" loading="lazy"></div>';
+      html += '<img src="' + p.photoUrl + '" alt="" loading="lazy" style="width:2.5rem;height:2.5rem;border-radius:50%;object-fit:cover;flex-shrink:0;">';
     } else {
-      html += '<div class="ann-pro-avatar">' + initials + '</div>';
+      html += '<div style="width:2.5rem;height:2.5rem;border-radius:50%;background:hsl(var(--ann-primary)/0.1);color:hsl(var(--ann-primary));display:flex;align-items:center;justify-content:center;font-weight:600;font-size:0.75rem;flex-shrink:0;">' + initials + '</div>';
     }
-    html += '<div class="ann-pro-info">';
-    html += '<div class="ann-pro-name">' + p.firstName + ' ' + p.lastName + '</div>';
-    html += '<div class="ann-pro-specialty">' + specName + '</div>';
+    html += '<div style="min-width:0;">';
+    html += '<div style="font-weight:600;font-size:0.875rem;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + p.firstName + ' ' + p.lastName + '</div>';
+    html += '<div style="font-size:0.75rem;color:hsl(var(--ann-primary));font-weight:500;">' + specName + '</div>';
     html += '</div></div>';
 
-    if (p.premium && p.reviewCount > 0) {
-      html += '<div class="ann-pro-rating">';
-      html += renderStars(p.rating);
-      html += '<span class="ann-rating-text">' + p.rating + '</span>';
-      html += '<span class="ann-review-count">(' + p.reviewCount + ' avis)</span>';
-      html += '</div>';
+    // Short description
+    var desc = p.shortDescription || '';
+    if (desc) {
+      html += '<p style="font-size:0.75rem;color:hsl(var(--ann-muted-fg));line-height:1.5;margin:0 0 0.5rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">' + desc + '</p>';
     }
 
-    if (p.description) {
-      html += '<p class="ann-pro-desc">' + p.description + '</p>';
-    }
-
-    html += '<div class="ann-pro-meta">';
-    html += '<span class="ann-pro-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>' + cityName + '</span>';
-    html += '<span class="ann-pro-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' + p.yearsExperience + ' ans d\'exp.</span>';
+    // Meta: location, experience, price
+    html += '<div style="display:flex;flex-wrap:wrap;gap:0.25rem 0.75rem;font-size:0.6875rem;color:hsl(var(--ann-muted-fg));">';
+    html += '<span style="display:flex;align-items:center;gap:0.25rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.625rem;height:0.625rem;flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>' + cityName + '</span>';
+    html += '<span style="display:flex;align-items:center;gap:0.25rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.625rem;height:0.625rem;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' + p.yearsExperience + ' ans</span>';
     if (p.priceRange) {
-      html += '<span class="ann-pro-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>' + p.priceRange + '</span>';
+      html += '<span style="display:flex;align-items:center;gap:0.25rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.625rem;height:0.625rem;flex-shrink:0;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>' + p.priceRange + '</span>';
     }
-    html += '</div>';
-
-    html += '<div class="ann-pro-actions">';
-    html += '<span class="ann-btn ann-btn-primary ann-btn-sm" style="flex:1;justify-content:center;">Voir le profil <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></span>';
     html += '</div>';
 
     html += '</a>';

@@ -152,6 +152,7 @@ async function fetchLiveProfessionals() {
       city: r.city,
       displayCity: r.display_city || '',
       postalCode: r.postal_code || '',
+      shortDescription: r.short_description || '',
       description: r.description || '',
       methods: r.methods || [],
       languages: r.languages || ['Français'],
@@ -509,7 +510,7 @@ async function generateProfessionalPages() {
       proCity,
       googleReviews,
       metaTitle: `${pro.firstName} ${pro.lastName} — ${proSpec ? proSpec.name : ''} à ${pro.displayCity || (proCity ? proCity.name : '')}`,
-      metaDescription: `${pro.firstName} ${pro.lastName}, ${proSpec ? proSpec.name.toLowerCase() : ''} à ${pro.displayCity || (proCity ? proCity.name : '')} | ${pro.yearsExperience} ans d'expérience, ${pro.priceRange}. Prenez rendez-vous en ligne.`,
+      metaDescription: pro.shortDescription || `${pro.firstName} ${pro.lastName}, ${proSpec ? proSpec.name.toLowerCase() : ''} à ${pro.displayCity || (proCity ? proCity.name : '')} | ${pro.yearsExperience} ans d'expérience, ${pro.priceRange}. Prenez rendez-vous en ligne.`,
       canonical: getAnnuaireUrl(`/${proPath}/`),
       currentPage: 'professionnel',
     };
