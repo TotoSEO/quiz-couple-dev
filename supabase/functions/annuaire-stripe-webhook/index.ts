@@ -92,24 +92,47 @@ serve(async (req: Request) => {
       // ── Invoice paid → renew plan period + generate invoice + send email ──
       case 'invoice.paid': {
         const invoice = event.data.object as Stripe.Invoice;
-        console.log(`[webhook] invoice.paid: ${invoice.id}, subscription=${invoice.subscription}, customer=${invoice.customer}`);
+        // deno-lint-ignore no-explicit-any
+        const invoiceAny = invoice as any;
 
-        if (!invoice.subscription) {
-          console.log('[webhook] invoice.paid: no subscription attached, skipping');
+        // ── Extract subscription ID (handles both old and new Stripe API versions) ──
+        // Old API (2023-10-16): invoice.subscription = "sub_xxx"
+        // New API (2026-02-25.clover): invoice.parent.subscription_details.subscription = "sub_xxx"
+        let rawSubscription = invoice.subscription
+          || invoiceAny?.parent?.subscription_details?.subscription
+          || null;
+        let subscriptionId: string | null = null;
+        if (rawSubscription) {
+          subscriptionId = typeof rawSubscription === 'string'
+            ? rawSubscription
+            : (rawSubscription as { id: string }).id;
+        }
+
+        console.log(`[webhook] invoice.paid: id=${invoice.id}, subscription=${subscriptionId}, customer=${invoice.customer}, amount=${invoice.amount_paid ?? invoiceAny?.amount_paid}`);
+
+        if (!subscriptionId) {
+          console.log('[webhook] invoice.paid: no subscription attached (checked invoice.subscription AND parent.subscription_details.subscription), skipping');
           break;
         }
 
-        // Extract price/period from invoice lines (no API call needed)
-        const lineItem = (invoice as unknown as { lines: { data: Array<{ price: { id: string }; period: { start: number; end: number } }> } }).lines?.data?.[0];
-        const priceId = lineItem?.price?.id || '';
+        // ── Extract price ID (handles both old and new Stripe API versions) ──
+        // Old API: invoice.lines.data[0].price.id
+        // New API: invoice.parent.subscription_details.pricing.price_details.price = "price_xxx"
+        const lineItem = invoiceAny?.lines?.data?.[0];
+        let priceId = lineItem?.price?.id
+          || invoiceAny?.parent?.subscription_details?.pricing?.price_details?.price
+          || '';
+        // If price is an object with .id, extract the string
+        if (priceId && typeof priceId === 'object' && priceId.id) {
+          priceId = priceId.id;
+        }
         const plan = PLAN_FROM_PRICE[priceId] || 'pro';
         const period = PERIOD_FROM_PRICE[priceId] || 'monthly';
-        console.log(`[webhook] invoice.paid: priceId=${priceId}, plan=${plan}, period=${period}`);
+        console.log(`[webhook] invoice.paid: priceId=${priceId || '(empty, using default)'}, plan=${plan}, period=${period}`);
 
         // Get period from subscription (need API call for accurate dates)
         let periodStart: string;
         let periodEnd: string;
-        let subscriptionId = invoice.subscription as string;
         let subscriptionMetaProfessionalId: string | undefined;
 
         try {
@@ -117,9 +140,9 @@ serve(async (req: Request) => {
           periodStart = new Date(subscription.current_period_start * 1000).toISOString();
           periodEnd = new Date(subscription.current_period_end * 1000).toISOString();
           subscriptionMetaProfessionalId = subscription.metadata?.professional_id;
+          console.log(`[webhook] Subscription retrieved: period=${periodStart}→${periodEnd}, meta.professional_id=${subscriptionMetaProfessionalId || 'none'}`);
         } catch (subErr) {
           console.warn('[webhook] Could not retrieve subscription, using invoice line period:', subErr);
-          // Fallback: use invoice line item period
           periodStart = lineItem?.period?.start
             ? new Date(lineItem.period.start * 1000).toISOString()
             : new Date().toISOString();
@@ -130,6 +153,9 @@ serve(async (req: Request) => {
 
         // Find the professional — try multiple strategies
         let professionalId: string | null = null;
+        const customerId = invoice.customer
+          ? (typeof invoice.customer === 'string' ? invoice.customer : (invoice.customer as unknown as { id: string }).id)
+          : null;
 
         // Strategy 1: by stripe_subscription_id
         const { data: profileBySub } = await supabase
@@ -142,7 +168,7 @@ serve(async (req: Request) => {
           console.log(`[webhook] Found professional by stripe_subscription_id: ${professionalId}`);
         }
 
-        // Strategy 2: by subscription metadata
+        // Strategy 2: by subscription metadata (professional_id set during checkout)
         if (!professionalId && subscriptionMetaProfessionalId) {
           const { data: profileByMeta } = await supabase
             .from('annuaire_professionals')
@@ -155,9 +181,8 @@ serve(async (req: Request) => {
           }
         }
 
-        // Strategy 3: by stripe_customer_id
-        if (!professionalId && invoice.customer) {
-          const customerId = typeof invoice.customer === 'string' ? invoice.customer : (invoice.customer as { id: string }).id;
+        // Strategy 3: by stripe_customer_id (saved during checkout creation)
+        if (!professionalId && customerId) {
           const { data: profileByCust } = await supabase
             .from('annuaire_professionals')
             .select('id')
@@ -169,9 +194,35 @@ serve(async (req: Request) => {
           }
         }
 
+        // Strategy 4: by Stripe customer metadata (set during customer creation)
+        if (!professionalId && customerId) {
+          try {
+            const stripeCustomer = await stripe.customers.retrieve(customerId);
+            if (stripeCustomer && !stripeCustomer.deleted && stripeCustomer.metadata?.professional_id) {
+              const metaId = stripeCustomer.metadata.professional_id;
+              const { data: profileByCustomerMeta } = await supabase
+                .from('annuaire_professionals')
+                .select('id')
+                .eq('id', metaId)
+                .maybeSingle();
+              if (profileByCustomerMeta) {
+                professionalId = profileByCustomerMeta.id;
+                console.log(`[webhook] Found professional by Stripe customer metadata: ${professionalId}`);
+                // Also save stripe_customer_id so future lookups are faster
+                await supabase
+                  .from('annuaire_professionals')
+                  .update({ stripe_customer_id: customerId })
+                  .eq('id', professionalId);
+              }
+            }
+          } catch (custErr) {
+            console.warn('[webhook] Strategy 4 (customer metadata) failed:', custErr);
+          }
+        }
+
         if (!professionalId) {
-          console.error(`[webhook] invoice.paid: CANNOT find professional. subscription=${subscriptionId}, customer=${invoice.customer}`);
-          break;
+          // THROW instead of break — Stripe will retry, giving checkout.session.completed time to save IDs
+          throw new Error(`invoice.paid: CANNOT find professional. subscription=${subscriptionId}, customer=${customerId}. All 4 lookup strategies failed.`);
         }
 
         // Update plan in DB
@@ -190,12 +241,14 @@ serve(async (req: Request) => {
         }
 
         // ── Invoice record + email ──
-        const amountHt = invoice.subtotal || 0;
+        const amountHt = invoice.subtotal || invoice.amount_paid || invoiceAny?.amount_paid || 0;
         let discountAmount = 0;
         let discountLabel: string | null = null;
-        if (invoice.discount && invoice.total_discount_amounts && invoice.total_discount_amounts.length > 0) {
-          discountAmount = invoice.total_discount_amounts[0].amount || 0;
-          const coupon = invoice.discount.coupon;
+        const totalDiscountAmounts = invoice.total_discount_amounts || invoiceAny?.total_discount_amounts;
+        const invoiceDiscount = invoice.discount || invoiceAny?.discount;
+        if (invoiceDiscount && totalDiscountAmounts && totalDiscountAmounts.length > 0) {
+          discountAmount = totalDiscountAmounts[0].amount || 0;
+          const coupon = invoiceDiscount.coupon;
           if (coupon) {
             if (coupon.percent_off) {
               discountLabel = `Réduction de -${coupon.percent_off}%`;
@@ -212,7 +265,7 @@ serve(async (req: Request) => {
         const planLabels: Record<string, string> = { pro: 'Professionnel', boost: 'Boost' };
         const planLabel = planLabels[plan] || plan;
 
-        // Get billing info
+        // Get billing info from annuaire_professionals (NOT from Stripe)
         const { data: billingProfile, error: billingErr } = await supabase
           .from('annuaire_professionals')
           .select('email, first_name, last_name, billing_company_name, billing_siret, billing_tva_number, billing_address, billing_email')
@@ -220,8 +273,8 @@ serve(async (req: Request) => {
           .single();
 
         if (billingErr || !billingProfile) {
-          console.error('[webhook] Could not fetch billing profile:', billingErr);
-          break;
+          // THROW instead of break — this should never fail since we just found this professional
+          throw new Error(`invoice.paid: Could not fetch billing profile for ${professionalId}: ${JSON.stringify(billingErr)}`);
         }
 
         const clientEmail = billingProfile.billing_email || billingProfile.email || '';
@@ -283,6 +336,7 @@ serve(async (req: Request) => {
               paid_at: paidAt,
             });
           if (insertErr) {
+            // Log but don't throw — still try to send email
             console.error(`[webhook] Invoice INSERT error (code=${insertErr.code}):`, JSON.stringify(insertErr));
           } else {
             console.log(`[webhook] Invoice record created: ${invoiceNumber}`);
@@ -296,7 +350,7 @@ serve(async (req: Request) => {
 <body style="margin:0;padding:0;background:#f8f7fc;font-family:Inter,system-ui,sans-serif;">
 <div style="max-width:600px;margin:0 auto;padding:2rem 1rem;">
 <div style="text-align:center;margin-bottom:2rem;">
-<span style="font-size:1.25rem;font-weight:700;color:#1a1625;">Annuaire Quiz Couple</span>
+<img src="https://annuaire.quiz-couple.com/assets/logo-annuaire.png" alt="Quiz Couple Annuaire" width="40" height="42" style="display:block;margin:0 auto;">
 </div>
 <div style="background:white;border-radius:1rem;padding:2rem;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
 <h1 style="color:#d6336c;font-size:1.5rem;margin:0 0 1rem;">Votre facture ${invoiceNumber}</h1>
@@ -437,8 +491,11 @@ Votre facture PDF sera disponible dans votre <a href="https://annuaire.quiz-coup
 
       // ── Invoice payment failed ──
       case 'invoice.payment_failed': {
-        const invoice = event.data.object as Stripe.Invoice;
-        console.warn(`[webhook] Payment failed for invoice ${invoice.id}, subscription ${invoice.subscription}`);
+        const failedInvoice = event.data.object as Stripe.Invoice;
+        // deno-lint-ignore no-explicit-any
+        const failedInvoiceAny = failedInvoice as any;
+        const failedSubId = failedInvoice.subscription || failedInvoiceAny?.parent?.subscription_details?.subscription;
+        console.warn(`[webhook] Payment failed for invoice ${failedInvoice.id}, subscription ${failedSubId}`);
         // Stripe handles retries automatically. Plan stays active until subscription.deleted.
         break;
       }
