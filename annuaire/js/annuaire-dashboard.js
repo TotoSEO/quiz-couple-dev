@@ -447,20 +447,86 @@
   }
 
   // ── Cabinet Photos (Pro/Boost) ──
+  function getYouTubeThumb(videoUrl) {
+    if (!videoUrl) return '';
+    var m = videoUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/);
+    return m ? 'https://img.youtube.com/vi/' + m[1] + '/hqdefault.jpg' : '';
+  }
+
   function renderCabinetPhotos(photos, maxPhotos) {
     var grid = $('dash-photos-grid');
     var addLabel = $('dash-photos-add-label');
     if (!grid) return;
     grid.innerHTML = '';
-    (photos || []).forEach(function (url, idx) {
+    var items = (photos || []).slice();
+    var count = items.length;
+    var photoCount = items.filter(function(u) { return u !== 'video'; }).length;
+    items.forEach(function (url, idx) {
+      var isVideo = (url === 'video');
       var card = document.createElement('div');
-      card.style.cssText = 'position:relative;border-radius:var(--ann-radius);overflow:hidden;aspect-ratio:1;background:hsl(var(--ann-muted)/0.3);';
-      card.innerHTML = '<img src="' + url + '" alt="Photo cabinet ' + (idx + 1) + '" style="width:100%;height:100%;object-fit:cover;">' +
-        '<button type="button" data-remove-photo="' + idx + '" style="position:absolute;top:0.25rem;right:0.25rem;width:1.5rem;height:1.5rem;border-radius:50%;background:hsl(0 70% 50%);color:white;border:none;cursor:pointer;font-size:0.75rem;display:flex;align-items:center;justify-content:center;">&times;</button>';
+      card.className = 'ann-dash-photo-card';
+      card.setAttribute('draggable', 'true');
+      card.setAttribute('data-photo-idx', idx);
+
+      if (isVideo) {
+        var thumb = getYouTubeThumb(currentProfile && currentProfile.video_url);
+        card.innerHTML =
+          '<span class="ann-dash-photo-badge" style="background:hsl(0 0% 15%);">N°' + (idx + 1) + '</span>' +
+          (thumb ? '<img src="' + thumb + '" alt="Vidéo">' : '<div style="width:100%;height:100%;background:hsl(var(--ann-muted)/0.5);display:flex;align-items:center;justify-content:center;color:hsl(var(--ann-muted-fg));">Vidéo</div>') +
+          '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">' +
+            '<div style="width:2.5rem;height:2.5rem;border-radius:50%;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;">' +
+              '<svg viewBox="0 0 24 24" fill="white" style="width:1.25rem;height:1.25rem;margin-left:2px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>' +
+            '</div>' +
+          '</div>' +
+          '<div class="ann-dash-photo-actions">' +
+            (idx > 0 ? '<button type="button" data-move-photo-up="' + idx + '" class="ann-dash-photo-btn" title="Déplacer avant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M15 18l-6-6 6-6"/></svg></button>' : '') +
+            (idx < count - 1 ? '<button type="button" data-move-photo-down="' + idx + '" class="ann-dash-photo-btn" title="Déplacer après"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M9 18l6-6-6-6"/></svg></button>' : '') +
+          '</div>';
+      } else {
+        card.innerHTML =
+          '<span class="ann-dash-photo-badge">N°' + (idx + 1) + '</span>' +
+          '<img src="' + url + '" alt="Photo cabinet ' + (idx + 1) + '">' +
+          '<div class="ann-dash-photo-actions">' +
+            (idx > 0 ? '<button type="button" data-move-photo-up="' + idx + '" class="ann-dash-photo-btn" title="Déplacer avant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M15 18l-6-6 6-6"/></svg></button>' : '') +
+            (idx < count - 1 ? '<button type="button" data-move-photo-down="' + idx + '" class="ann-dash-photo-btn" title="Déplacer après"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M9 18l6-6-6-6"/></svg></button>' : '') +
+            '<button type="button" data-remove-photo="' + idx + '" class="ann-dash-photo-btn ann-dash-photo-btn-danger" title="Supprimer">&times;</button>' +
+          '</div>';
+      }
+      // Drag & drop
+      card.addEventListener('dragstart', function(e) {
+        e.dataTransfer.setData('text/plain', idx);
+        card.classList.add('ann-dash-photo-dragging');
+      });
+      card.addEventListener('dragend', function() { card.classList.remove('ann-dash-photo-dragging'); });
+      card.addEventListener('dragover', function(e) { e.preventDefault(); card.classList.add('ann-dash-photo-dragover'); });
+      card.addEventListener('dragleave', function() { card.classList.remove('ann-dash-photo-dragover'); });
+      card.addEventListener('drop', function(e) {
+        e.preventDefault();
+        card.classList.remove('ann-dash-photo-dragover');
+        var fromIdx = parseInt(e.dataTransfer.getData('text/plain'));
+        var toIdx = idx;
+        if (fromIdx !== toIdx) reorderPhotos(fromIdx, toIdx);
+      });
       grid.appendChild(card);
     });
-    // Show/hide add button based on limit
-    if (addLabel) addLabel.style.display = (photos || []).length >= maxPhotos ? 'none' : '';
+    // Show/hide add button based on limit (don't count video marker towards photo limit)
+    if (addLabel) addLabel.style.display = photoCount >= maxPhotos ? 'none' : '';
+  }
+
+  async function reorderPhotos(fromIdx, toIdx) {
+    if (!currentProfile || !currentProfile.photos) return;
+    var photos = (currentProfile.photos || []).slice();
+    var item = photos.splice(fromIdx, 1)[0];
+    photos.splice(toIdx, 0, item);
+    var session = await checkAuth();
+    if (session) {
+      var res = await saveProfile({ photos: photos }, session.access_token, false);
+      if (res.profile) {
+        currentProfile = res.profile;
+        var maxPhotos = currentProfile.plan === 'boost' ? 4 : 2;
+        renderCabinetPhotos(currentProfile.photos || [], maxPhotos);
+      }
+    }
   }
 
   async function uploadCabinetPhoto(file) {
@@ -764,7 +830,13 @@
     var photosSection = $('dash-photos-section');
     if (photosSection && (profile.plan === 'pro' || profile.plan === 'boost')) {
       show(photosSection);
-      var maxPhotos = profile.plan === 'boost' ? 4 : 2; // +1 profile photo = 5 or 3 total
+      var maxPhotos = profile.plan === 'boost' ? 4 : 2;
+
+      // Auto-add video marker for existing Boost profiles with video but no marker
+      if (profile.plan === 'boost' && profile.video_url && Array.isArray(profile.photos) && profile.photos.indexOf('video') === -1) {
+        profile.photos = ['video'].concat(profile.photos);
+      }
+
       var limitEl = $('dash-photos-limit');
       if (limitEl) limitEl.textContent = '(max ' + maxPhotos + ' photos)';
       renderCabinetPhotos(profile.photos || [], maxPhotos);
@@ -1031,12 +1103,24 @@
       });
     }
 
-    // Remove cabinet photo
+    // Cabinet photo actions (remove, reorder)
     document.addEventListener('click', function (e) {
-      var btn = e.target.closest('[data-remove-photo]');
-      if (btn) {
-        var idx = parseInt(btn.getAttribute('data-remove-photo'));
+      var removeBtn = e.target.closest('[data-remove-photo]');
+      if (removeBtn) {
+        var idx = parseInt(removeBtn.getAttribute('data-remove-photo'));
         if (!isNaN(idx)) removeCabinetPhoto(idx);
+        return;
+      }
+      var upBtn = e.target.closest('[data-move-photo-up]');
+      if (upBtn) {
+        var idx = parseInt(upBtn.getAttribute('data-move-photo-up'));
+        if (!isNaN(idx) && idx > 0) reorderPhotos(idx, idx - 1);
+        return;
+      }
+      var downBtn = e.target.closest('[data-move-photo-down]');
+      if (downBtn) {
+        var idx = parseInt(downBtn.getAttribute('data-move-photo-down'));
+        if (!isNaN(idx)) reorderPhotos(idx, idx + 1);
       }
     });
 
@@ -1089,6 +1173,21 @@
         } catch (e) {
           showError('dash-profile-error', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
           return;
+        }
+      }
+
+      // Sync video marker in photos array
+      if (currentProfile && currentProfile.plan === 'boost') {
+        var photos = (currentProfile.photos || []).slice();
+        var hasVideoMarker = photos.indexOf('video') !== -1;
+        var hasVideoUrl = data.video_url && data.video_url.length > 0;
+        if (hasVideoUrl && !hasVideoMarker) {
+          // Insert video marker at position 0 (hero) by default
+          photos.unshift('video');
+          data.photos = photos;
+        } else if (!hasVideoUrl && hasVideoMarker) {
+          // Remove video marker
+          data.photos = photos.filter(function(p) { return p !== 'video'; });
         }
       }
 
