@@ -452,15 +452,55 @@
     var addLabel = $('dash-photos-add-label');
     if (!grid) return;
     grid.innerHTML = '';
+    var count = (photos || []).length;
     (photos || []).forEach(function (url, idx) {
       var card = document.createElement('div');
-      card.style.cssText = 'position:relative;border-radius:var(--ann-radius);overflow:hidden;aspect-ratio:1;background:hsl(var(--ann-muted)/0.3);';
-      card.innerHTML = '<img src="' + url + '" alt="Photo cabinet ' + (idx + 1) + '" style="width:100%;height:100%;object-fit:cover;">' +
-        '<button type="button" data-remove-photo="' + idx + '" style="position:absolute;top:0.25rem;right:0.25rem;width:1.5rem;height:1.5rem;border-radius:50%;background:hsl(0 70% 50%);color:white;border:none;cursor:pointer;font-size:0.75rem;display:flex;align-items:center;justify-content:center;">&times;</button>';
+      card.className = 'ann-dash-photo-card';
+      card.setAttribute('draggable', 'true');
+      card.setAttribute('data-photo-idx', idx);
+      card.innerHTML =
+        '<span class="ann-dash-photo-badge">N°' + (idx + 1) + '</span>' +
+        '<img src="' + url + '" alt="Photo cabinet ' + (idx + 1) + '">' +
+        '<div class="ann-dash-photo-actions">' +
+          (idx > 0 ? '<button type="button" data-move-photo-up="' + idx + '" class="ann-dash-photo-btn" title="Déplacer avant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M15 18l-6-6 6-6"/></svg></button>' : '') +
+          (idx < count - 1 ? '<button type="button" data-move-photo-down="' + idx + '" class="ann-dash-photo-btn" title="Déplacer après"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M9 18l6-6-6-6"/></svg></button>' : '') +
+          '<button type="button" data-remove-photo="' + idx + '" class="ann-dash-photo-btn ann-dash-photo-btn-danger" title="Supprimer">&times;</button>' +
+        '</div>';
+      // Drag & drop
+      card.addEventListener('dragstart', function(e) {
+        e.dataTransfer.setData('text/plain', idx);
+        card.classList.add('ann-dash-photo-dragging');
+      });
+      card.addEventListener('dragend', function() { card.classList.remove('ann-dash-photo-dragging'); });
+      card.addEventListener('dragover', function(e) { e.preventDefault(); card.classList.add('ann-dash-photo-dragover'); });
+      card.addEventListener('dragleave', function() { card.classList.remove('ann-dash-photo-dragover'); });
+      card.addEventListener('drop', function(e) {
+        e.preventDefault();
+        card.classList.remove('ann-dash-photo-dragover');
+        var fromIdx = parseInt(e.dataTransfer.getData('text/plain'));
+        var toIdx = idx;
+        if (fromIdx !== toIdx) reorderPhotos(fromIdx, toIdx);
+      });
       grid.appendChild(card);
     });
     // Show/hide add button based on limit
-    if (addLabel) addLabel.style.display = (photos || []).length >= maxPhotos ? 'none' : '';
+    if (addLabel) addLabel.style.display = count >= maxPhotos ? 'none' : '';
+  }
+
+  async function reorderPhotos(fromIdx, toIdx) {
+    if (!currentProfile || !currentProfile.photos) return;
+    var photos = (currentProfile.photos || []).slice();
+    var item = photos.splice(fromIdx, 1)[0];
+    photos.splice(toIdx, 0, item);
+    var session = await checkAuth();
+    if (session) {
+      var res = await saveProfile({ photos: photos }, session.access_token, false);
+      if (res.profile) {
+        currentProfile = res.profile;
+        var maxPhotos = currentProfile.plan === 'boost' ? 4 : 2;
+        renderCabinetPhotos(currentProfile.photos || [], maxPhotos);
+      }
+    }
   }
 
   async function uploadCabinetPhoto(file) {
@@ -1031,12 +1071,24 @@
       });
     }
 
-    // Remove cabinet photo
+    // Cabinet photo actions (remove, reorder)
     document.addEventListener('click', function (e) {
-      var btn = e.target.closest('[data-remove-photo]');
-      if (btn) {
-        var idx = parseInt(btn.getAttribute('data-remove-photo'));
+      var removeBtn = e.target.closest('[data-remove-photo]');
+      if (removeBtn) {
+        var idx = parseInt(removeBtn.getAttribute('data-remove-photo'));
         if (!isNaN(idx)) removeCabinetPhoto(idx);
+        return;
+      }
+      var upBtn = e.target.closest('[data-move-photo-up]');
+      if (upBtn) {
+        var idx = parseInt(upBtn.getAttribute('data-move-photo-up'));
+        if (!isNaN(idx) && idx > 0) reorderPhotos(idx, idx - 1);
+        return;
+      }
+      var downBtn = e.target.closest('[data-move-photo-down]');
+      if (downBtn) {
+        var idx = parseInt(downBtn.getAttribute('data-move-photo-down'));
+        if (!isNaN(idx)) reorderPhotos(idx, idx + 1);
       }
     });
 

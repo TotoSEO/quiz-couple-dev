@@ -147,11 +147,11 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
             Photos du cabinet
           </h2>
-          <div class="ann-cabinet-gallery" id="ann-cabinet-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.75rem;">
+          <div class="ann-cabinet-gallery<%= pro.plan === 'boost' ? ' ann-gallery-mosaic' : ' ann-gallery-duo' %>" id="ann-cabinet-gallery">
             <% if (pro.photos && pro.photos.length > 0) { %>
-              <% for (const photoUrl of pro.photos) { %>
-              <div style="border-radius: var(--ann-radius); overflow: hidden; aspect-ratio: 4/3; background: hsl(var(--ann-muted) / 0.3);">
-                <img src="<%= photoUrl %>" alt="Photo du cabinet de <%= pro.firstName %> <%= pro.lastName %>" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+              <% for (let i = 0; i < pro.photos.length; i++) { %>
+              <div class="ann-gallery-item<%= (pro.plan === 'boost' && i === 0) ? ' ann-gallery-hero' : '' %>" data-gallery-idx="<%= i %>">
+                <img src="<%= pro.photos[i] %>" alt="Photo du cabinet de <%= pro.firstName %> <%= pro.lastName %> — <%= i + 1 %>/<%= pro.photos.length %>" loading="lazy">
               </div>
               <% } %>
             <% } %>
@@ -444,10 +444,13 @@
     var gallerySection = document.getElementById('ann-cabinet-photos');
     var gallery = document.getElementById('ann-cabinet-gallery');
     if (gallerySection && gallery && Array.isArray(p.photos) && p.photos.length > 0) {
-      gallery.innerHTML = p.photos.map(function(url) {
+      var isBoost = p.plan === 'boost';
+      gallery.className = isBoost ? 'ann-cabinet-gallery ann-gallery-mosaic' : 'ann-cabinet-gallery ann-gallery-duo';
+      gallery.innerHTML = p.photos.map(function(url, i) {
         var safe = url.replace(/[&<>"']/g, function(c) { return '&#' + c.charCodeAt(0) + ';'; });
-        return '<div style="border-radius:var(--ann-radius);overflow:hidden;aspect-ratio:4/3;background:hsl(var(--ann-muted)/0.3);">' +
-          '<img src="' + safe + '" alt="Photo du cabinet" loading="lazy" style="width:100%;height:100%;object-fit:cover;">' +
+        var heroClass = (isBoost && i === 0) ? ' ann-gallery-hero' : '';
+        return '<div class="ann-gallery-item' + heroClass + '" data-gallery-idx="' + i + '">' +
+          '<img src="' + safe + '" alt="Photo du cabinet" loading="lazy">' +
           '</div>';
       }).join('');
       gallerySection.style.display = '';
@@ -543,6 +546,92 @@
       el.addEventListener('click', function() { track({ type: 'click', professional_id: PRO_ID, click_type: 'website' }); });
     }
   });
+})();
+
+// ── Photo Lightbox ──
+(function() {
+  // Build lightbox DOM
+  var overlay = document.createElement('div');
+  overlay.className = 'ann-lightbox';
+  overlay.innerHTML =
+    '<button class="ann-lightbox-close" aria-label="Fermer">&times;</button>' +
+    '<button class="ann-lightbox-prev" aria-label="Précédent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>' +
+    '<div class="ann-lightbox-img-wrap"><img class="ann-lightbox-img" src="" alt=""><span class="ann-lightbox-counter"></span></div>' +
+    '<button class="ann-lightbox-next" aria-label="Suivant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>';
+  document.body.appendChild(overlay);
+
+  var img = overlay.querySelector('.ann-lightbox-img');
+  var counter = overlay.querySelector('.ann-lightbox-counter');
+  var photos = [];
+  var currentIdx = 0;
+
+  function collectPhotos() {
+    photos = [];
+    var items = document.querySelectorAll('#ann-cabinet-gallery .ann-gallery-item');
+    items.forEach(function(item) {
+      var imgEl = item.querySelector('img');
+      if (imgEl) photos.push(imgEl.src);
+    });
+  }
+
+  function showPhoto(idx) {
+    if (photos.length === 0) return;
+    currentIdx = ((idx % photos.length) + photos.length) % photos.length;
+    img.src = photos[currentIdx];
+    counter.textContent = (currentIdx + 1) + ' / ' + photos.length;
+    overlay.querySelector('.ann-lightbox-prev').style.display = photos.length > 1 ? '' : 'none';
+    overlay.querySelector('.ann-lightbox-next').style.display = photos.length > 1 ? '' : 'none';
+  }
+
+  function openLightbox(idx) {
+    collectPhotos();
+    if (photos.length === 0) return;
+    showPhoto(idx);
+    overlay.classList.add('ann-lightbox-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove('ann-lightbox-open');
+    document.body.style.overflow = '';
+  }
+
+  // Click on gallery items
+  document.addEventListener('click', function(e) {
+    var item = e.target.closest('.ann-gallery-item');
+    if (item) {
+      var idx = parseInt(item.getAttribute('data-gallery-idx')) || 0;
+      openLightbox(idx);
+    }
+  });
+
+  overlay.querySelector('.ann-lightbox-close').addEventListener('click', closeLightbox);
+  overlay.querySelector('.ann-lightbox-prev').addEventListener('click', function() { showPhoto(currentIdx - 1); });
+  overlay.querySelector('.ann-lightbox-next').addEventListener('click', function() { showPhoto(currentIdx + 1); });
+
+  // Close on overlay background click
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeLightbox();
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (!overlay.classList.contains('ann-lightbox-open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showPhoto(currentIdx - 1);
+    if (e.key === 'ArrowRight') showPhoto(currentIdx + 1);
+  });
+
+  // Touch swipe support
+  var touchStartX = 0;
+  overlay.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+  overlay.addEventListener('touchend', function(e) {
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) {
+      if (dx > 0) showPhoto(currentIdx - 1);
+      else showPhoto(currentIdx + 1);
+    }
+  }, { passive: true });
 })();
 </script>
 
