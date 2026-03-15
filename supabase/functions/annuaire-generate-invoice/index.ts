@@ -522,8 +522,7 @@ async function sendInvoiceEmail(data: EmailData): Promise<void> {
     <body style="margin:0;padding:0;background:#f8f7fc;font-family:Inter,system-ui,-apple-system,sans-serif;">
       <div style="max-width:600px;margin:0 auto;padding:2rem 1rem;">
         <div style="text-align:center;margin-bottom:2rem;">
-          <img src="https://annuaire.quiz-couple.com/assets/logo-annuaire.png" alt="Quiz Couple Annuaire" width="40" height="42" style="display:inline-block;">
-          <span style="font-size:1.25rem;font-weight:700;vertical-align:middle;margin-left:0.5rem;color:#1a1625;">Annuaire</span>
+          <img src="https://annuaire.quiz-couple.com/assets/logo-annuaire.png" alt="Quiz Couple Annuaire" width="40" height="42" style="display:block;margin:0 auto;">
         </div>
         <div style="background:white;border-radius:1rem;padding:2rem;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
           <h1 style="color:#d6336c;font-size:1.5rem;margin:0 0 1rem;">Votre facture ${data.invoiceNumber}</h1>

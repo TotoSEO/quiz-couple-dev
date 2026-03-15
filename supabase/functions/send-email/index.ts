@@ -67,8 +67,7 @@ function wrapInTemplate(content: string): string {
       <div style="max-width:600px;margin:0 auto;padding:2rem 1rem;">
         <!-- Header -->
         <div style="text-align:center;margin-bottom:2rem;">
-          <img src="https://annuaire.quiz-couple.com/assets/logo-annuaire.png" alt="Quiz Couple Annuaire" width="40" height="42" style="display:inline-block;">
-          <span style="font-size:1.25rem;font-weight:700;vertical-align:middle;margin-left:0.5rem;color:#1a1625;">Annuaire</span>
+          <img src="https://annuaire.quiz-couple.com/assets/logo-annuaire.png" alt="Quiz Couple Annuaire" width="40" height="42" style="display:block;margin:0 auto;">
         </div>
 
         <!-- Content -->
