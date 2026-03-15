@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import Stripe from "https://esm.sh/stripe@14.21.0?target=deno";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -9,6 +10,7 @@ const corsHeaders = {
 
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const SUPABASE_SERVICE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+const STRIPE_SECRET_KEY = Deno.env.get('STRIPE_SECRET_KEY') || '';
 
 async function queueDeploy(reason: string): Promise<void> {
   try {
@@ -232,12 +234,24 @@ serve(async (req: Request) => {
       const userId = user.id;
       console.log(`[DELETE] Starting account deletion for user ${userId}`);
 
-      // 0. Get profile info BEFORE deleting (needed for redirect + deploy)
+      // 0. Get profile info BEFORE deleting (needed for redirect + deploy + Stripe cancel)
       const { data: profileInfo } = await supabase
         .from('annuaire_professionals')
-        .select('slug, specialty, city, is_published')
+        .select('slug, specialty, city, is_published, stripe_subscription_id, stripe_customer_id')
         .eq('user_id', userId)
         .maybeSingle();
+
+      // 0b. Cancel Stripe subscription if active
+      if (profileInfo?.stripe_subscription_id && STRIPE_SECRET_KEY) {
+        try {
+          const stripe = new Stripe(STRIPE_SECRET_KEY, { apiVersion: '2023-10-16' });
+          await stripe.subscriptions.cancel(profileInfo.stripe_subscription_id);
+          console.log(`[DELETE] Stripe subscription ${profileInfo.stripe_subscription_id} cancelled`);
+        } catch (stripeErr) {
+          // Don't block account deletion if Stripe cancel fails
+          console.error('[DELETE] Stripe subscription cancel error:', stripeErr);
+        }
+      }
 
       // 1. Delete profile (if exists)
       const { error: profileError } = await supabase
