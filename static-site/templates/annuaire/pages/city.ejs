@@ -166,7 +166,7 @@
     </div>
 
     <div class="ann-map-container" id="ann-map"
-      data-professionals='<%- JSON.stringify(filteredProfessionals.map(p => ({ id: p.id, name: p.firstName + " " + p.lastName, lat: p.lat, lng: p.lng, specialty: p.specialty, city: p.city, slug: p.slug, premium: p.premium }))) %>'
+      data-professionals='<%- JSON.stringify(filteredProfessionals.map(p => ({ id: p.id, name: p.firstName + " " + p.lastName, lat: p.lat, lng: p.lng, specialty: p.specialty, city: p.city, slug: p.slug, premium: p.premium, plan: p.plan }))) %>'
       data-specialties='<%- JSON.stringify(specialties.map(s => ({ id: s.id, name: s.name, color: s.color }))) %>'
       data-center='<%- JSON.stringify({ lat: city.lat, lng: city.lng }) %>'
       data-zoom="12">

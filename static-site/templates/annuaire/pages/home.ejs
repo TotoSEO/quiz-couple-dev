@@ -224,7 +224,7 @@
       <p class="ann-text-muted" style="max-width: 32rem; margin: 0.75rem auto 0;">Tous les professionnels du couple sur une carte interactive. Zoomez sur votre ville pour trouver les plus proches.</p>
     </div>
 
-    <div class="ann-map-container" id="ann-map" data-professionals='<%- JSON.stringify(professionals.map(p => ({ id: p.id, name: p.firstName + " " + p.lastName, lat: p.lat, lng: p.lng, specialty: p.specialty, city: p.city, slug: p.slug, premium: p.premium }))) %>' data-specialties='<%- JSON.stringify(specialties.map(s => ({ id: s.id, name: s.name, color: s.color }))) %>'>
+    <div class="ann-map-container" id="ann-map" data-professionals='<%- JSON.stringify(professionals.map(p => ({ id: p.id, name: p.firstName + " " + p.lastName, lat: p.lat, lng: p.lng, specialty: p.specialty, city: p.city, slug: p.slug, premium: p.premium, plan: p.plan }))) %>' data-specialties='<%- JSON.stringify(specialties.map(s => ({ id: s.id, name: s.name, color: s.color }))) %>'>
     </div>
 
     <!-- Popular Cities -->

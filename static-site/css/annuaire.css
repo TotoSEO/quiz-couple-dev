@@ -2196,8 +2196,8 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   font-weight: 700;
 }
 .ann-badge-mini-pro {
-  background: hsl(var(--ann-primary) / 0.1);
-  color: hsl(var(--ann-primary));
+  background: hsl(210 80% 55% / 0.12);
+  color: hsl(210 70% 45%);
 }
 .ann-badge-mini-boost {
   background: linear-gradient(135deg, hsl(40 90% 50% / 0.15), hsl(30 90% 55% / 0.15));
@@ -2938,6 +2938,7 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   background: hsl(var(--ann-muted) / 0.3);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
 }
 .ann-gallery-item:hover {
   transform: scale(1.02);
@@ -2947,12 +2948,14 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
+  /* Prevent blurry upscaling of small images */
+  image-rendering: auto;
 }
 
 /* ── Video in gallery ─────────────────────────────────────────────────── */
 .ann-gallery-video {
-  position: relative;
   aspect-ratio: 16 / 9;
   cursor: default;
 }
@@ -2968,22 +2971,25 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   gap: 0.75rem;
 }
 .ann-gallery-duo .ann-gallery-item {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
+  max-height: 18rem;
 }
 
 /* ── Boost layout: mosaic (hero left + 2×2 grid right) ────────────────── */
 .ann-gallery-mosaic {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 0.75rem;
-  min-height: 22rem;
 }
 .ann-gallery-mosaic .ann-gallery-hero {
   grid-row: 1 / 3;
+  aspect-ratio: 3 / 4;
+  max-height: 24rem;
 }
-.ann-gallery-mosaic .ann-gallery-item {
-  min-height: 0;
+.ann-gallery-mosaic .ann-gallery-item:not(.ann-gallery-hero) {
+  aspect-ratio: 4 / 3;
+  max-height: 11.25rem;
 }
 
 /* Single photo in boost — full width */
@@ -2991,6 +2997,7 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   aspect-ratio: 16 / 9;
+  max-height: 22rem;
 }
 
 /* ── Responsive: gallery ──────────────────────────────────────────────── */
@@ -3000,18 +3007,20 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   }
   .ann-gallery-duo .ann-gallery-item {
     aspect-ratio: 16 / 9;
+    max-height: 14rem;
   }
   .ann-gallery-mosaic {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    min-height: auto;
   }
   .ann-gallery-mosaic .ann-gallery-hero {
     grid-row: auto;
     aspect-ratio: 16 / 9;
+    max-height: 16rem;
   }
-  .ann-gallery-mosaic .ann-gallery-item {
+  .ann-gallery-mosaic .ann-gallery-item:not(.ann-gallery-hero) {
     aspect-ratio: 16 / 9;
+    max-height: 14rem;
   }
 }
 
