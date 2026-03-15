@@ -2080,7 +2080,7 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   bottom: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
-  width: 18rem;
+  width: min(18rem, 90vw);
   padding: 0.75rem 1rem;
   background: hsl(var(--ann-fg));
   color: hsl(var(--ann-bg));
@@ -2223,6 +2223,9 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   .ann-cities-grid { grid-template-columns: repeat(3, 1fr); }
   .ann-footer-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   .ann-feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .ann-consult-modes { grid-template-columns: repeat(2, 1fr); }
+  .ann-stats { gap: 2rem; flex-wrap: wrap; }
+  .ann-map-container { height: 20rem; }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════
@@ -2540,6 +2543,14 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
 .ann-map-sm { height: 16rem; border-radius: var(--ann-radius); }
 
 /* ── Profile Responsive ──────────────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ann-profile-layout {
+    grid-template-columns: 1fr 18rem;
+  }
+  .ann-profile-sidebar {
+    position: static;
+  }
+}
 @media (max-width: 767px) {
   .ann-profile-layout {
     grid-template-columns: 1fr;
