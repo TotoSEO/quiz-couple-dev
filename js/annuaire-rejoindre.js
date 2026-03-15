@@ -224,6 +224,43 @@
   limitDigits('f-prix-max', 4);
   limitDigits('f-experience', 2);
 
+  // ── Hours toggle (day open/closed) ─────────────────────────────
+  document.querySelectorAll('.ann-hours-day-toggle').forEach(function (cb) {
+    function toggle() {
+      var day = cb.getAttribute('data-day');
+      var slots = document.querySelector('.ann-hours-form-slots[data-day="' + day + '"]');
+      if (slots) {
+        if (cb.checked) { slots.classList.remove('disabled'); }
+        else { slots.classList.add('disabled'); }
+      }
+    }
+    cb.addEventListener('change', toggle);
+    toggle(); // init
+  });
+
+  // Helper: collect opening_hours from form
+  function collectOpeningHours() {
+    var days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+    var hasAny = false;
+    var result = {};
+    days.forEach(function (day) {
+      var toggle = form.querySelector('input[name="hours_' + day + '_open"]');
+      if (!toggle || !toggle.checked) {
+        result[day] = { closed: true };
+        return;
+      }
+      hasAny = true;
+      result[day] = {
+        closed: false,
+        morning_start: form.querySelector('input[name="hours_' + day + '_am_start"]').value || null,
+        morning_end: form.querySelector('input[name="hours_' + day + '_am_end"]').value || null,
+        afternoon_start: form.querySelector('input[name="hours_' + day + '_pm_start"]').value || null,
+        afternoon_end: form.querySelector('input[name="hours_' + day + '_pm_end"]').value || null,
+      };
+    });
+    return hasAny ? result : null;
+  }
+
   // ── Bubble builder (shared for methods & languages) ────────────
   function buildBubbles(container, items, nameAttr, selectedValues, maxSelect) {
     if (!container) return;
@@ -733,6 +770,7 @@
         display_city: val('f-display-city') || null,
         lat: parseFloat(val('f-lat')) || null,
         lng: parseFloat(val('f-lng')) || null,
+        opening_hours: collectOpeningHours(),
         is_published: false,
       };
 
