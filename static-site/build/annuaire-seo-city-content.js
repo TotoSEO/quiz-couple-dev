@@ -8,11 +8,11 @@
 
 const SPECIALTY_CITY_TEMPLATES = {
   'therapeute-de-couple': [
-    // Template A
+    // Template A - starts with concrete situation
     (city) => ({
       sections: [
         {
-          title: `Pourquoi consulter un thérapeute de couple à ${city.name} ?`,
+          title: `Thérapeute de couple à ${city.name} : quand la conversation ne suffit plus`,
           content: `
 <p>Trouver un thérapeute de couple à ${city.name} n'a rien d'un aveu d'échec. C'est même plutôt le contraire : c'est décider de ne pas laisser les choses se dégrader sans rien faire. Dans le département ${city.department}, comme partout en France, les couples traversent des périodes de doute, de conflit silencieux ou de crise ouverte. La différence entre ceux qui s'en sortent et les autres, c'est souvent la décision de se faire accompagner — avant qu'il ne soit trop tard.</p>
 <p>À ${city.name}, les thérapeutes de couple exercent dans des cadres variés : cabinets privés, centres de consultation psychologique, ou en ligne pour ceux qui préfèrent la flexibilité. La plupart proposent un premier entretien qui permet de poser le cadre, comprendre ce qui amène le couple et vérifier que le courant passe avec le praticien. Parce que oui, le feeling compte autant que les diplômes.</p>
@@ -376,64 +376,135 @@ const SPECIALTY_CITY_TEMPLATES = {
         {
           title: `Médiateur familial à ${city.name} : régler un conflit sans passer par le juge`,
           content: `
-<p>Quand un conflit familial éclate à ${city.name} — divorce, garde des enfants, héritage, conflit avec les beaux-parents — le réflexe est souvent de consulter un avocat et de saisir le juge. C'est compréhensible, mais ce n'est pas la seule option. Et rarement la plus rapide ou la moins douloureuse.</p>
-<p>La médiation familiale offre un cadre structuré pour résoudre les conflits autrement. Un médiateur familial diplômé d'État accueille les parties en conflit et les aide à construire ensemble des solutions acceptables pour tous. Pas de gagnant, pas de perdant. Pas de décision imposée par un tiers. Juste un accord sur mesure, construit par les personnes directement concernées.</p>
-<p>Dans le département ${city.department}, la médiation familiale est accessible via plusieurs canaux : les services conventionnés par la CAF (avec un barème tarifaire basé sur les revenus), les associations spécialisées (CLER, AFCCC, UDAF), et les médiateurs en cabinet libéral. Les délais sont généralement plus courts qu'une procédure judiciaire — quelques semaines contre plusieurs mois devant un tribunal.</p>
+<p>70 % des médiations familiales aboutissent à un accord quand les deux parties jouent le jeu. Ce chiffre, publié par la CNAF, dit quelque chose de simple : un médiateur familial à ${city.name} a de vraies chances de vous aider à sortir d'une impasse. Le tribunal n'est pas le seul chemin possible.</p>
+<p>La médiation familiale, c'est un espace de dialogue encadré par un professionnel diplômé d'État (le DEMF). Divorce, conflit autour de la garde des enfants, tensions avec un ex-conjoint, héritage qui tourne mal : le médiateur familial à ${city.name} reçoit les personnes en conflit et les accompagne vers une solution construite ensemble. Pas de jugement rendu. Pas de gagnant ni de perdant.</p>
+<p>Dans le département ${city.department}, vous pouvez accéder à la médiation par trois biais : les services conventionnés par la CAF (tarif ajusté aux revenus, de 2 € à 131 € la séance), les associations spécialisées comme l'UDAF ou l'AFCCC, et les médiateurs en libéral. Les délais sont souvent plus courts que devant un tribunal, ce qui compte quand la situation est tendue au quotidien.</p>
 `
         },
         {
-          title: `Séparation et garde des enfants : le rôle du médiateur dans le ${city.department}`,
+          title: `Séparation, garde, pension : ce que le médiateur familial traite à ${city.name}`,
           content: `
-<p>La séparation est souvent le moment où la médiation familiale prend tout son sens. À ${city.name}, les médiateurs accompagnent des couples en train de se séparer pour organiser la vie d'après : garde des enfants, pension alimentaire, partage du logement, organisation des vacances et des fêtes.</p>
-<p>Depuis 2022, la loi impose une tentative de médiation avant de saisir le juge aux affaires familiales pour modifier les modalités d'exercice de l'autorité parentale ou la contribution à l'entretien des enfants. Cette obligation a considérablement augmenté le recours à la médiation dans toute la ${city.region}.</p>
-<p>Ce que les parents découvrent souvent en médiation, c'est que leurs positions divergentes cachent des besoins communs : la sécurité de leurs enfants, le maintien d'un lien de qualité avec chaque parent, la fin de l'hostilité qui empoisonne tout le monde.</p>
-<p>Le médiateur à ${city.name} ne donne pas de conseil juridique et ne prend pas parti. Son rôle est de créer les conditions d'un dialogue respectueux et productif. Les accords trouvés en médiation peuvent ensuite être homologués par le juge, ce qui leur confère une force juridique identique à un jugement.</p>
+<p>Le gros de l'activité d'un médiateur familial à ${city.name}, c'est la séparation. Organiser la vie d'après quand un couple se défait : qui garde les enfants quand, quel montant pour la pension alimentaire, comment on gère le logement, les vacances, Noël. Des questions concrètes, souvent chargées d'émotion.</p>
+<p>Depuis 2022, la loi impose une tentative de médiation avant de saisir le juge aux affaires familiales pour modifier une décision sur l'autorité parentale ou la pension. Ce n'est pas une formalité : les juges de la région ${city.region} regardent si l'effort a été sincère.</p>
+<p>Ce que les parents réalisent souvent en séance (et c'est presque toujours une surprise) : derrière leurs désaccords, ils veulent la même chose. La stabilité de leurs enfants, un lien maintenu avec chaque parent, la fin des tensions permanentes. Le médiateur ne prend pas parti. Il aide chacun à formuler ce qui compte vraiment, puis à bâtir un accord qui tient la route. Cet accord peut être homologué par le juge aux affaires familiales de ${city.name}, ce qui lui donne la même force qu'un jugement.</p>
+<p>Quand les conflits de couple ont précédé la séparation, un travail avec un <a href="/therapeute-de-couple/">thérapeute de couple</a> peut aussi aider à démêler ce qui relève de la blessure relationnelle et ce qui relève de l'organisation pratique.</p>
 `
         },
         {
-          title: `Au-delà du divorce : les autres visages de la médiation à ${city.name}`,
+          title: `Médiateur familial à ${city.name} : pas seulement pour les divorces`,
           content: `
-<p>La médiation familiale ne se limite pas aux séparations conjugales. À ${city.name}, les médiateurs interviennent aussi dans des conflits intergénérationnels (relations avec les grands-parents, prise en charge d'un parent âgé), des tensions dans les familles recomposées, ou des disputes autour d'un héritage.</p>
-<p>Quelques situations fréquentes dans le ${city.department} :</p>
+<p>On associe souvent la médiation familiale au divorce. C'est réducteur. À ${city.name}, les médiateurs reçoivent aussi des familles en conflit pour des raisons qui n'ont rien à voir avec une séparation conjugale.</p>
+<p>Quelques cas courants dans le ${city.department} :</p>
 <ul>
-<li>Des <strong>grands-parents privés de contact</strong> avec leurs petits-enfants après un conflit avec les parents</li>
-<li>Des <strong>fratries en désaccord</strong> sur la prise en charge d'un parent dépendant — qui fait quoi, qui paie quoi</li>
-<li>Des <strong>familles recomposées</strong> où le rôle du beau-parent génère des tensions avec les enfants ou l'ex-conjoint</li>
-<li>Des <strong>successions conflictuelles</strong> où les héritiers n'arrivent pas à s'entendre sur le partage</li>
+<li>Des grands-parents qui n'ont plus accès à leurs petits-enfants après une brouille familiale</li>
+<li>Des frères et sœurs en désaccord sur la prise en charge d'un parent vieillissant, ou sur le partage d'un héritage</li>
+<li>Des tensions dans une famille recomposée (le rôle du beau-parent est un sujet récurrent, et rarement simple)</li>
 </ul>
-<p>Dans tous ces cas, le médiateur familial apporte un cadre neutre et structuré que les discussions en famille ne permettent plus. Le taux de réussite de la médiation familiale en France est d'environ 70 % quand les deux parties s'engagent dans le processus — un chiffre qui donne de l'espoir.</p>
+<p>Le point commun de ces situations : les discussions en famille ne fonctionnent plus. Trop de rancœur, trop de non-dits, trop d'enjeux mêlés. Le médiateur apporte un cadre neutre et confidentiel. Ce qui se dit en séance reste en séance, y compris si la médiation échoue et que l'affaire va devant un juge.</p>
+<p>Est-ce que la médiation marche à tous les coups ? Non. Elle est exclue en cas de violences intrafamiliales, et elle suppose que chaque partie accepte de s'engager dans le processus. Mais quand les conditions sont réunies, c'est souvent plus rapide, moins coûteux et moins destructeur qu'un passage au tribunal.</p>
 `
         },
       ],
     }),
+    // Template B - Entry: concrete case
     (city) => ({
       sections: [
         {
-          title: `Comment fonctionne la médiation familiale dans le ${city.department}`,
+          title: `Trouver un médiateur familial à ${city.name} : guide pratique`,
           content: `
-<p>Le processus de médiation familiale à ${city.name} suit un déroulement bien établi. Tout commence par un entretien d'information — souvent individuel — où le médiateur explique ce qu'est la médiation, ce qu'elle peut apporter, et ce qu'elle ne peut pas faire. C'est aussi le moment pour le médiateur d'évaluer si la situation est éligible à la médiation (elle est exclue en cas de violences intrafamiliales).</p>
-<p>Ensuite, les séances de médiation proprement dites réunissent les deux parties en présence du médiateur. Chaque séance dure environ 1h30 et se déroule dans un cadre confidentiel. Le médiateur s'assure que chacun peut s'exprimer, reformule les positions pour éviter les malentendus, et guide progressivement vers la recherche de solutions.</p>
-<p>En moyenne, une médiation familiale aboutit en 4 à 8 séances, réparties sur 2 à 4 mois. C'est nettement plus court et moins coûteux qu'une procédure devant le juge aux affaires familiales, qui peut s'étaler sur 6 à 18 mois selon l'encombrement du tribunal de ${city.name}.</p>
+<p>Un couple se sépare à ${city.name}. Deux enfants de 6 et 9 ans. Le père veut la garde alternée, la mère préfère une résidence principale chez elle avec un week-end sur deux chez le père. Leur avocat respectif leur a chacun dit qu'ils avaient raison. Résultat : blocage total. C'est exactement le type de situation où un médiateur familial à ${city.name} intervient.</p>
+<p>Le médiateur familial ne donne pas raison à l'un ou à l'autre. Il crée un espace où chacun peut exprimer ses inquiétudes réelles (la mère craint que le père ne gère pas les devoirs, le père a peur de perdre le lien quotidien avec ses enfants) et où, à partir de là, on construit un arrangement sur mesure. Quatre à huit séances d'1h30 en moyenne, réparties sur deux à quatre mois.</p>
+<p>Pour trouver un médiateur familial à ${city.name}, trois options existent dans le département ${city.department}. Les services conventionnés CAF, avec un barème progressif selon vos revenus. Les associations agréées (UDAF, AFCCC, CLER). Et les médiateurs en cabinet libéral, qui pratiquent entre 100 € et 180 € la séance, souvent partagés entre les deux parties. Tous les médiateurs de notre annuaire sont titulaires du Diplôme d'État de Médiateur Familial.</p>
 `
         },
         {
-          title: `Trouver un médiateur familial à ${city.name} : structures et tarifs`,
+          title: `Médiateur familial dans le ${city.department} : déroulement d'une médiation`,
           content: `
-<p>Le département ${city.department} dispose de plusieurs points d'accès à la médiation familiale :</p>
-<p>Les <strong>services conventionnés par la CAF</strong> appliquent un barème national progressif basé sur les revenus : de 2€ à 131€ par séance et par personne. C'est l'option la plus accessible financièrement. Les associations comme l'UDAF, le CLER ou l'AFCCC gèrent ces services dans la plupart des départements.</p>
-<p>Les <strong>médiateurs en cabinet libéral</strong> à ${city.name} pratiquent des tarifs entre 100€ et 180€ par séance (souvent partagés entre les deux parties). Les délais sont généralement plus courts et les horaires plus flexibles.</p>
-<p>Le <strong>tribunal judiciaire de ${city.name}</strong> peut aussi orienter vers la médiation familiale, soit sur demande des parties, soit sur initiative du juge. Dans ce cas, le médiateur est rémunéré via l'aide juridictionnelle si les parties y sont éligibles.</p>
-<p>Tous les médiateurs familiaux figurant dans notre annuaire sont titulaires du Diplôme d'État de Médiateur Familial (DEMF), le seul diplôme reconnu pour exercer dans les services conventionnés et les tribunaux.</p>
+<p>La première étape, c'est un entretien d'information. Gratuit dans la plupart des structures du ${city.department}. Individuel ou en commun, selon les cas. Le médiateur explique ce qu'est la médiation, vérifie que la situation s'y prête (pas de violence, pas de rapport de domination qui fausserait les échanges), et répond à vos questions.</p>
+<p>Si les deux parties acceptent de s'engager, les séances de médiation commencent. Concrètement, ça ressemble à quoi ? Deux personnes assises dans un bureau, un médiateur qui structure la discussion. Chacun parle à tour de rôle. Le médiateur reformule, recadre quand la conversation dérape, et note les points d'accord au fur et à mesure.</p>
+<p>Pas de miracle. Certaines séances sont tendues. D'autres avancent vite. Le rythme habituel à ${city.name} est d'une séance toutes les deux à trois semaines. C'est volontairement espacé : il faut du temps pour digérer ce qui s'est dit, réfléchir, revenir avec un regard un peu différent.</p>
+<p>Un point que beaucoup ignorent : la confidentialité en médiation est absolue. Le médiateur ne peut pas être appelé comme témoin au tribunal. Rien de ce qui est dit en séance ne peut être utilisé dans une procédure judiciaire. Cette règle protège la parole de chacun et rend le dialogue plus libre qu'il ne le serait devant un juge.</p>
 `
         },
         {
-          title: `Médiation familiale et cadre juridique en ${city.region}`,
+          title: `Médiation familiale ou <a href="/conseiller-conjugal/">conseil conjugal</a> à ${city.name} : quelle différence ?`,
           content: `
-<p>La médiation familiale n'est pas un dispositif informel. Elle s'inscrit dans un cadre légal précis qui lui donne sa légitimité et sa force :</p>
-<p>La <strong>confidentialité</strong> est absolue. Ce qui se dit en médiation reste en médiation. Le médiateur ne peut pas être appelé comme témoin devant le tribunal. Même en cas d'échec, rien de ce qui a été échangé ne peut être utilisé par l'une ou l'autre partie dans une procédure ultérieure.</p>
-<p>Les <strong>accords</strong> obtenus en médiation peuvent être homologués par le juge aux affaires familiales de ${city.name}. Une fois homologués, ils ont exactement la même valeur juridique qu'un jugement : ils sont exécutoires et opposables aux tiers.</p>
-<p>En cas de <strong>violences intrafamiliales</strong>, la médiation est exclue — c'est une protection prévue par la loi. Le médiateur est formé pour détecter ces situations et orienter vers les structures appropriées (associations d'aide aux victimes, forces de l'ordre, hébergement d'urgence).</p>
-<p>Ce cadre solide fait de la médiation familiale une vraie alternative à la justice, pas un simple « essai » avant le tribunal. Les familles de ${city.name} qui s'y engagent sérieusement en ressortent avec des accords plus durables que ceux imposés par un juge — parce qu'elles les ont construits elles-mêmes.</p>
+<p>La confusion est fréquente. Un <a href="/conseiller-conjugal/">conseiller conjugal</a> travaille sur la relation de couple : communication, intimité, crises. Un médiateur familial à ${city.name} intervient sur des conflits précis qui nécessitent un accord concret. Les deux métiers sont complémentaires, pas interchangeables.</p>
+<p>Prenons un exemple. Vous êtes en plein divorce et vous devez décider de la garde des enfants : c'est de la médiation familiale. Vous êtes en couple, vous n'arrivez plus à vous parler sans que ça explose, mais vous ne voulez pas vous séparer : c'est du conseil conjugal (ou de la <a href="/therapeute-de-couple/">thérapie de couple</a>, selon la profondeur du travail souhaité).</p>
+<p>Il arrive que les deux se combinent. Un couple qui se sépare à ${city.name} peut avoir besoin d'un médiateur pour les questions pratiques et d'un accompagnement individuel ou conjugal pour traverser la douleur de la rupture. Mon avis : ne pas hésiter à combiner les deux si le budget le permet, parce que régler la logistique sans traiter les émotions laisse souvent des traces qui ressurgissent plus tard.</p>
+<p>Le tribunal judiciaire de ${city.name} peut orienter vers la médiation, sur demande des parties ou à l'initiative du juge. Dans ce cadre, l'aide juridictionnelle peut couvrir les frais pour les personnes éligibles. Une piste à explorer si le coût est un frein.</p>
+`
+        },
+      ],
+    }),
+    // Template C - Entry: question
+    (city) => ({
+      sections: [
+        {
+          title: `Médiateur familial à ${city.name} : est-ce que ça vaut le coup ?`,
+          content: `
+<p>Vous êtes en conflit avec votre ex sur la garde des enfants. Ou avec votre frère à propos de l'héritage de vos parents. Ou avec votre belle-famille qui s'immisce dans vos décisions. La question se pose : est-ce qu'un médiateur familial à ${city.name} peut vraiment changer quelque chose ?</p>
+<p>Réponse courte : oui, dans la majorité des cas. Réponse longue : ça dépend de votre situation et de la volonté de chaque partie.</p>
+<p>Un médiateur familial à ${city.name} est un professionnel formé (titulaire du Diplôme d'État, le DEMF) qui ne prend pas parti, ne juge pas, ne donne pas de leçon. Son travail consiste à rétablir un dialogue quand il est rompu et à accompagner les personnes vers un accord mutuellement acceptable. Les séances durent environ 1h30, dans un cadre strictement confidentiel. Ce qui est dit en médiation ne sort pas de la pièce.</p>
+<p>Sur le plan financier, la comparaison avec une procédure judiciaire parle d'elle-même. Une médiation complète dans le ${city.department} coûte entre 200 € et 800 € au total (selon que vous passez par un service conventionné CAF ou un cabinet libéral). Un divorce contentieux avec avocats : comptez 2 000 € à 5 000 € par personne, parfois bien plus.</p>
+`
+        },
+        {
+          title: `Ce qu'un médiateur familial fait (et ne fait pas) dans le ${city.department}`,
+          content: `
+<p>Le médiateur familial n'est pas un juge. Il n'est pas un avocat. Il n'est pas un <a href="/therapeute-de-couple/">thérapeute de couple</a>. Ces distinctions comptent.</p>
+<p>Ce qu'il fait concrètement à ${city.name} :</p>
+<ul>
+<li>Il accueille les personnes en conflit dans un lieu neutre, sans prendre le parti de quiconque</li>
+<li>Il structure les échanges pour que chacun puisse s'exprimer sans être interrompu ou écrasé</li>
+<li>Il aide à identifier les vrais points de blocage, qui ne sont pas toujours ceux qu'on croit</li>
+<li>Il accompagne la rédaction d'un accord que le juge aux affaires familiales peut homologuer</li>
+</ul>
+<p>Ce qu'il ne fait pas : donner des conseils juridiques, imposer une solution, prendre parti pour l'un ou pour l'autre, faire de la thérapie. Si vous avez besoin d'un accompagnement psychologique pendant une séparation, un <a href="/conseiller-conjugal/">conseiller conjugal</a> ou un psychologue sera plus adapté, en complément de la médiation.</p>
+<p>Un détail qui a son importance (et que beaucoup de gens ignorent au départ) : la médiation est volontaire. Même quand le juge l'ordonne, personne ne peut vous forcer à signer un accord. Vous gardez le contrôle du processus à chaque étape.</p>
+`
+        },
+        {
+          title: `Accéder à un médiateur familial à ${city.name} : les démarches concrètes`,
+          content: `
+<p>Trois chemins mènent à la médiation familiale dans le ${city.department}.</p>
+<p>Le premier : les <strong>services conventionnés par la CAF</strong>. Le tarif est calculé sur vos revenus, de 2 € à 131 € par séance et par personne. Les associations comme l'UDAF ou l'AFCCC gèrent ces services dans la plupart des départements de la région ${city.region}. L'accès est ouvert à tous, que vous soyez marié, pacsé ou en union libre.</p>
+<p>Le deuxième : les <strong>médiateurs en libéral</strong> à ${city.name}. Tarifs entre 100 € et 180 € la séance (généralement partagés à parts égales). L'avantage : des délais plus courts et des horaires souvent plus flexibles, y compris en soirée.</p>
+<p>Le troisième : une <strong>orientation par le tribunal</strong>. Le juge aux affaires familiales de ${city.name} peut proposer ou ordonner une médiation. Si vous êtes éligible à l'aide juridictionnelle, les frais sont pris en charge.</p>
+<p>Depuis 2022, la tentative de médiation est obligatoire avant de saisir le juge pour toute demande de modification des mesures concernant les enfants (garde, pension). Ce n'est pas juste administratif : les magistrats de la région ${city.region} prennent cette étape au sérieux.</p>
+<p>Premier réflexe concret : contactez un médiateur de notre annuaire à ${city.name} pour un entretien d'information. Ce premier rendez-vous est souvent gratuit et sans engagement. Il vous donnera une idée claire de ce que la médiation peut apporter à votre situation.</p>
+`
+        },
+      ],
+    }),
+    // Template D - Entry: bold assertion
+    (city) => ({
+      sections: [
+        {
+          title: `Médiateur familial à ${city.name} : la solution que les familles sous-estiment`,
+          content: `
+<p>La médiation familiale reste sous-utilisée en France. C'est un fait. Beaucoup de familles à ${city.name} passent directement par le tribunal alors qu'un médiateur familial pourrait les aider à trouver un accord en quelques semaines, pour une fraction du coût d'une procédure judiciaire.</p>
+<p>Pourquoi ? Parce que le réflexe « conflit = avocat = tribunal » est profondément ancré. Et parce que peu de gens savent vraiment ce qu'est un médiateur familial à ${city.name} et ce qu'il peut faire. Un médiateur familial diplômé d'État reçoit les personnes en conflit (couples en séparation, fratries, parents et enfants adultes, grands-parents) et les aide à construire un accord. Pas un compromis mou : un vrai accord, détaillé, qui peut être homologué par le juge et qui a la même valeur qu'un jugement.</p>
+<p>Dans le département ${city.department}, la médiation familiale est accessible via les services conventionnés CAF, les associations agréées et les cabinets libéraux. Le premier entretien d'information est gratuit dans la grande majorité des structures. C'est concret, rapide (4 à 8 séances en moyenne), et strictement confidentiel.</p>
+`
+        },
+        {
+          title: `Conflits familiaux à ${city.name} : quand la médiation change la donne`,
+          content: `
+<p>Le divorce avec enfants, c'est le cas classique. Mais à ${city.name}, les médiateurs familiaux voient aussi des situations que personne n'avait vu venir.</p>
+<p>Un exemple parmi d'autres : deux sœurs qui ne se parlent plus depuis la mort de leur mère. L'une estime avoir tout géré seule pendant les années de maladie. L'autre se sent exclue des décisions et conteste le partage de la maison familiale. En trois séances de médiation, elles ont pu poser ce qui pesait vraiment (la reconnaissance du sacrifice de l'une, le sentiment d'abandon de l'autre) et trouver un arrangement pour la maison.</p>
+<p>La médiation fonctionne parce qu'elle traite à la fois le problème concret et ce qui se cache dessous. Un juge statue sur le partage des biens. Le médiateur dans le ${city.department} aide les personnes à comprendre pourquoi elles n'arrivent pas à s'entendre, et c'est ça qui débloque la situation.</p>
+<p>Les familles recomposées représentent une part croissante des médiations à ${city.name}. Le beau-parent qui veut trouver sa place, l'ex-conjoint qui vit mal la présence d'un nouveau compagnon auprès de ses enfants, les enfants qui jouent un parent contre l'autre : ces dynamiques sont compliquées, et un <a href="/therapeute-de-couple/">thérapeute de couple</a> peut compléter le travail du médiateur quand la relation conjugale elle-même a besoin d'attention.</p>
+`
+        },
+        {
+          title: `Tarifs, délais et cadre légal du médiateur familial dans le ${city.department}`,
+          content: `
+<p>Combien coûte une médiation familiale à ${city.name} ? Ça dépend de la structure choisie.</p>
+<p>Les services conventionnés CAF appliquent un barème national : de 2 € à 131 € par séance et par personne, selon vos revenus. Les médiateurs en libéral facturent entre 100 € et 180 € la séance, généralement partagés entre les parties. Pour une médiation complète (comptez 4 à 8 séances), le budget total va de quelques dizaines d'euros en conventionné à 400-700 € en libéral par personne.</p>
+<p>C'est peu comparé aux frais d'une procédure contentieuse. Et le gain de temps est réel : deux à quatre mois pour une médiation, contre six à dix-huit mois pour un passage devant le juge aux affaires familiales de ${city.name} (parfois plus quand le tribunal est engorgé).</p>
+<p>Sur le plan juridique, la médiation familiale est encadrée par la loi. La confidentialité des échanges est totale : le médiateur ne peut pas témoigner en justice, et rien de ce qui est dit en séance ne peut être utilisé dans une procédure. Les accords obtenus peuvent être homologués par le juge, ce qui leur donne force exécutoire. En cas de violences intrafamiliales, la médiation est exclue (le médiateur est formé pour repérer ces situations et orienter vers les ressources adaptées).</p>
+<p>Si vous êtes dans le ${city.department} et que vous vous demandez si votre situation relève de la médiation, prenez un entretien d'information avec un médiateur de notre annuaire. C'est le meilleur moyen de savoir si cette voie a du sens pour vous, sans engagement.</p>
 `
         },
       ],
@@ -589,10 +660,11 @@ const SPECIALTY_CITY_TEMPLATES = {
   ],
 
   'conseiller-conjugal': [
+    // Template A - Entry: concrete couple situation
     (city) => ({
       sections: [
         {
-          title: `Le conseil conjugal à ${city.name} : un accompagnement accessible`,
+          title: `Trouver un conseiller conjugal à ${city.name}`,
           content: `
 <p>Le conseil conjugal est peut-être la porte d'entrée la plus accessible pour un couple en difficulté à ${city.name}. Moins intimidant qu'une « thérapie de couple », plus structuré qu'une discussion avec un ami, le conseil conjugal offre un cadre professionnel pour aborder ce qui ne va plus — sans s'engager dans un processus long et coûteux.</p>
 <p>Les conseillers conjugaux et familiaux exercent dans des cadres variés dans le ${city.department} : CPEF (Centres de Planification et d'Éducation Familiale), associations spécialisées (CLER, AFCCC, Couples et Familles), ou en cabinet libéral. Cette diversité de structures permet de trouver un accompagnement adapté à chaque budget.</p>
