@@ -311,7 +311,11 @@ serve(async (req: Request) => {
           const serviceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
           fetch(syncUrl, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + serviceKey },
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + serviceKey,
+              'apikey': serviceKey!,
+            },
             body: JSON.stringify({ professional_id: data.id }),
           }).catch(e => console.warn('[profile] Google reviews sync trigger error:', e));
           console.log('[profile] Triggered immediate Google reviews sync for', data.id);

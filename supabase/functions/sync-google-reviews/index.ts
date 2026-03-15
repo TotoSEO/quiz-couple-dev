@@ -16,16 +16,19 @@ serve(async (req: Request) => {
   }
 
   try {
-    // Verify caller is service_role (cron or admin)
-    const authHeader = req.headers.get('authorization');
-    if (!authHeader || !authHeader.includes(SUPABASE_SERVICE_KEY)) {
+    // Verify caller is service_role (cron, admin, or internal edge function call)
+    const authHeader = req.headers.get('authorization') || '';
+    const apikeyHeader = req.headers.get('apikey') || '';
+    const isServiceRole = authHeader.includes(SUPABASE_SERVICE_KEY) || apikeyHeader === SUPABASE_SERVICE_KEY;
+    if (!isServiceRole) {
       // Also allow Bearer token from authenticated admin
-      const token = authHeader?.replace('Bearer ', '') || '';
+      const token = authHeader.replace('Bearer ', '') || '';
       const supabaseAuth = createClient(SUPABASE_URL, Deno.env.get('SUPABASE_ANON_KEY')!, {
         global: { headers: { Authorization: `Bearer ${token}` } },
       });
       const { data: { user } } = await supabaseAuth.auth.getUser();
       if (!user) {
+        console.error('[sync-google-reviews] Auth failed - no valid service key or user token');
         return new Response(JSON.stringify({ error: 'Non autorisé' }), {
           status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
@@ -105,9 +108,9 @@ async function syncProfessionalReviews(
   googlePlaceId: string,
 ) {
   // Fetch place details from Google Places API (New)
-  // Using the Places API (New) — fields: rating, userRatingCount, reviews
-  const url = `https://places.googleapis.com/v1/places/${googlePlaceId}?fields=rating,userRatingsTotal,reviews&languageCode=fr&key=${GOOGLE_PLACES_API_KEY}`;
+  const url = `https://places.googleapis.com/v1/places/${googlePlaceId}?languageCode=fr`;
 
+  console.log(`[sync] Fetching Google Places for ${googlePlaceId}`);
   const res = await fetch(url, {
     headers: {
       'X-Goog-Api-Key': GOOGLE_PLACES_API_KEY!,
@@ -116,15 +119,18 @@ async function syncProfessionalReviews(
   });
 
   if (!res.ok) {
+    const errBody = await res.text();
+    console.warn(`[sync] Places API (New) failed: ${res.status} — ${errBody}`);
     // Fallback to legacy Places API
+    console.log(`[sync] Trying legacy API for ${googlePlaceId}`);
     const legacyUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${googlePlaceId}&fields=rating,user_ratings_total,reviews&language=fr&key=${GOOGLE_PLACES_API_KEY}`;
     const legacyRes = await fetch(legacyUrl);
     if (!legacyRes.ok) {
-      throw new Error(`Google Places API error: ${legacyRes.status}`);
+      throw new Error(`Google Places API (legacy) error: ${legacyRes.status}`);
     }
     const legacyData = await legacyRes.json();
     if (legacyData.status !== 'OK') {
-      throw new Error(`Google Places API: ${legacyData.status}`);
+      throw new Error(`Google Places API (legacy): ${legacyData.status} — ${legacyData.error_message || ''}`);
     }
 
     const result = legacyData.result;
