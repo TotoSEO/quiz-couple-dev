@@ -140,6 +140,26 @@ serve(async (req: Request) => {
           }
         }
 
+        // Third fallback: lookup by stripe_customer_id
+        if (!updatedProfile && subscription.customer) {
+          const customerId = typeof subscription.customer === 'string' ? subscription.customer : subscription.customer.id;
+          const { data: profileByCust } = await supabase
+            .from('annuaire_professionals')
+            .update({
+              plan,
+              plan_expires_at: periodEnd,
+              stripe_subscription_id: subscription.id,
+            })
+            .eq('stripe_customer_id', customerId)
+            .select('id')
+            .maybeSingle();
+
+          if (profileByCust) {
+            updatedProfile = profileByCust;
+            console.log(`[webhook] Found professional by stripe_customer_id: ${customerId}`);
+          }
+        }
+
         if (!updatedProfile) {
           console.error('[webhook] invoice.paid: could not find professional for subscription', subscription.id);
           break;
