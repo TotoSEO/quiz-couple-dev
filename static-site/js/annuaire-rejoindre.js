@@ -383,8 +383,12 @@
       var pmin = val('f-prix-min');
       var pmax = val('f-prix-max');
       if (!pmin) { showError('err-prix-min', 'Requis'); valid = false; }
+      else if (Number(pmin) < 0 || !Number.isInteger(Number(pmin))) { showError('err-prix-min', 'Nombre entier positif requis'); valid = false; }
+      else if (Number(pmin) > 9999) { showError('err-prix-min', 'Maximum 9999'); valid = false; }
       if (!pmax) { showError('err-prix-max', 'Requis'); valid = false; }
-      if (pmin && pmax && Number(pmin) > Number(pmax)) { showError('err-prix-max', 'Doit être ≥ tarif min'); valid = false; }
+      else if (Number(pmax) < 0 || !Number.isInteger(Number(pmax))) { showError('err-prix-max', 'Nombre entier positif requis'); valid = false; }
+      else if (Number(pmax) > 9999) { showError('err-prix-max', 'Maximum 9999'); valid = false; }
+      if (pmin && pmax && Number(pmax) <= Number(pmin)) { showError('err-prix-max', 'Doit être supérieur au tarif min'); valid = false; }
     }
 
     if (step === 5) {

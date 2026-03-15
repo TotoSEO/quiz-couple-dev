@@ -114,6 +114,39 @@
         </div>
       </div>
 
+      <!-- Subscription banner (shown prominently at the top) -->
+      <div id="dash-plan-banner" style="display:none; margin-bottom: 1.5rem; padding: 1rem 1.25rem; border-radius: var(--ann-radius); border: 1px solid hsl(var(--ann-border)); background: hsl(var(--ann-card));">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem;color:hsl(var(--ann-primary));flex-shrink:0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <div>
+              <span style="font-weight: 600; font-size: 0.9375rem;">Mon abonnement : </span>
+              <span id="dash-top-plan-badge" class="ann-badge" style="font-size: 0.8125rem;">Gratuit</span>
+              <span id="dash-top-plan-expiry" class="ann-text-muted" style="font-size: 0.8125rem; margin-left: 0.5rem;"></span>
+            </div>
+          </div>
+          <a href="#" id="dash-top-plan-action" class="ann-btn ann-btn-primary ann-btn-sm" style="display:none;" data-dash-tab-link="billing">
+            Changer de formule
+          </a>
+        </div>
+      </div>
+
+      <!-- Checkout success thank you message -->
+      <div id="dash-checkout-thanks" style="display:none; margin-bottom: 1.5rem; padding: 1.5rem; border-radius: var(--ann-radius); background: linear-gradient(135deg, hsl(var(--ann-primary) / 0.08), hsl(var(--ann-secondary) / 0.08)); border: 2px solid hsl(var(--ann-primary) / 0.25); text-align: center;">
+        <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">&#127881;</div>
+        <h2 style="font-size: 1.125rem; margin-bottom: 0.5rem; background: linear-gradient(135deg, hsl(var(--ann-primary)), hsl(var(--ann-secondary))); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Merci pour votre confiance !
+        </h2>
+        <p style="font-size: 0.9375rem; color: hsl(var(--ann-foreground)); margin-bottom: 0.25rem;">
+          Votre abonnement <strong id="dash-thanks-plan"></strong> est maintenant actif.
+        </p>
+        <p class="ann-text-muted" style="font-size: 0.8125rem;">
+          Votre fiche sera automatiquement mise à jour avec vos avantages d'ici <strong>4 heures maximum</strong>.
+          <br>Vous recevrez votre facture par email.
+        </p>
+        <button type="button" onclick="this.parentElement.style.display='none'" class="ann-btn ann-btn-outline ann-btn-sm" style="margin-top: 0.75rem;">Fermer</button>
+      </div>
+
       <!-- Status banner -->
       <div id="dash-status-banner" style="display:none; margin-bottom: 1.5rem; padding: 1rem 1.25rem; border-radius: var(--ann-radius); border: 1px solid;"></div>
 
@@ -244,8 +277,13 @@
               <input class="ann-form-input" type="number" id="prof-experience" min="0" max="50" placeholder="10">
             </div>
             <div class="ann-form-group">
-              <label class="ann-form-label" for="prof-price">Tarifs</label>
-              <input class="ann-form-input" type="text" id="prof-price" placeholder="70€ - 100€ / séance" maxlength="30">
+              <label class="ann-form-label">Tarifs (€/séance)</label>
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <input class="ann-form-input" type="number" id="prof-price-min" placeholder="60" min="0" max="9999" step="1" inputmode="numeric" style="flex:1;">
+                <span class="ann-text-muted">à</span>
+                <input class="ann-form-input" type="number" id="prof-price-max" placeholder="100" min="0" max="9999" step="1" inputmode="numeric" style="flex:1;">
+              </div>
+              <span class="ann-field-error" id="err-prof-price" style="display:none;"></span>
             </div>
           </div>
 
