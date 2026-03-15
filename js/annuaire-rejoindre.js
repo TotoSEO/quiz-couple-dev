@@ -163,6 +163,7 @@
     { input: 'f-prenom', counter: 'count-prenom' },
     { input: 'f-nom', counter: 'count-nom' },
     { input: 'f-titre', counter: 'count-titre' },
+    { input: 'f-pro-id-number', counter: 'count-pro-id-number' },
     { input: 'f-cabinet', counter: 'count-cabinet' },
   ];
 
@@ -652,6 +653,15 @@
 
     setText('recap-titre', val('f-titre'));
 
+    var proIdVal = val('f-pro-id-number');
+    var proIdRow = document.getElementById('recap-pro-id-number-row');
+    if (proIdVal && proIdRow) {
+      proIdRow.style.display = '';
+      setText('recap-pro-id-number', proIdVal);
+    } else if (proIdRow) {
+      proIdRow.style.display = 'none';
+    }
+
     var methods = getSelectedBubbles(methodsContainer);
     setText('recap-methodes', methods.length ? methods.join(', ') : 'Non renseigné');
 
@@ -753,6 +763,7 @@
         methods: methods,
         languages: languages.length ? languages : ['Français'],
         years_experience: parseInt(val('f-experience'), 10) || 0,
+        professional_id_number: val('f-pro-id-number').trim() || null,
         price_range: pmin && pmax ? pmin + '€ - ' + pmax + '€' : '',
         address: val('f-adresse') + ', ' + val('f-codepostal') + ' ' + (function () {
           var vs = document.getElementById('f-ville');
