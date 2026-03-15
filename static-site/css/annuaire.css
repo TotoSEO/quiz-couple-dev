@@ -1629,6 +1629,7 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
 .ann-checkbox-sm {
   width: 1.125rem;
   height: 1.125rem;
+  margin-top: 0;
 }
 .ann-hours-form-slots {
   display: flex;
@@ -1684,11 +1685,13 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
   color: white;
   transition: opacity var(--ann-transition);
 }
-.ann-checkbox-label.checked .ann-checkbox-box {
+.ann-checkbox-label.checked .ann-checkbox-box,
+.ann-checkbox-label:has(:checked) .ann-checkbox-box {
   background: hsl(var(--ann-primary));
   border-color: hsl(var(--ann-primary));
 }
-.ann-checkbox-label.checked .ann-checkbox-box svg { opacity: 1; }
+.ann-checkbox-label.checked .ann-checkbox-box svg,
+.ann-checkbox-label:has(:checked) .ann-checkbox-box svg { opacity: 1; }
 .ann-checkbox-text {
   font-size: 0.8125rem;
   color: hsl(var(--ann-muted-fg));
