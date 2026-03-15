@@ -405,6 +405,12 @@
               <span class="ann-text-muted">Spécialité</span>
               <a href="/<%= pro.specialty %>/" class="ann-link-primary"><%= proSpec ? proSpec.name : pro.specialty %></a>
             </div>
+            <% if (pro.professionalIdNumber) { %>
+            <div class="ann-profile-info-row">
+              <span class="ann-text-muted">N° professionnel</span>
+              <span class="ann-font-medium"><%= pro.professionalIdNumber %></span>
+            </div>
+            <% } %>
             <% if (pro.plan === 'boost' && pro.website) { %>
             <div class="ann-profile-info-row">
               <span class="ann-text-muted">Site web</span>
@@ -546,6 +552,33 @@
         var cityLabel = p.display_city || p.city;
         if (p.postal_code) cityLabel += ' (' + p.postal_code + ')';
         value.textContent = cityLabel;
+      }
+      if (key === 'N° professionnel' && p.professional_id_number) {
+        value.textContent = p.professional_id_number;
+      }
+    }
+
+    // Add N° professionnel row if it exists in data but not in DOM
+    if (p.professional_id_number) {
+      var hasPidRow = false;
+      for (var i = 0; i < infoRows.length; i++) {
+        var lbl = infoRows[i].querySelector('.ann-text-muted');
+        if (lbl && lbl.textContent.trim() === 'N° professionnel') { hasPidRow = true; break; }
+      }
+      if (!hasPidRow) {
+        var infoList = document.querySelector('.ann-profile-info-list');
+        if (infoList) {
+          var row = document.createElement('div');
+          row.className = 'ann-profile-info-row';
+          row.innerHTML = '<span class="ann-text-muted">N° professionnel</span><span class="ann-font-medium">' + p.professional_id_number.replace(/[<>&"']/g, function(c) { return '&#' + c.charCodeAt(0) + ';'; }) + '</span>';
+          var specRow = null;
+          for (var i = 0; i < infoList.children.length; i++) {
+            var lbl = infoList.children[i].querySelector('.ann-text-muted');
+            if (lbl && lbl.textContent.trim() === 'Spécialité') { specRow = infoList.children[i]; break; }
+          }
+          if (specRow && specRow.nextSibling) infoList.insertBefore(row, specRow.nextSibling);
+          else infoList.appendChild(row);
+        }
       }
     }
 

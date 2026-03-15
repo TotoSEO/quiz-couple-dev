@@ -151,6 +151,24 @@
         </div>
 
         <div class="ann-form-group">
+          <label class="ann-label" for="f-pro-id-number">
+            N° d'identification professionnel / de certification
+            <span class="ann-text-muted ann-text-xs">(optionnel)</span>
+            <span class="ann-tooltip-wrap" style="position:relative;display:inline-block;vertical-align:middle;margin-left:0.25rem;cursor:help;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem;color:hsl(var(--ann-muted-fg))"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span class="ann-tooltip-bubble" style="display:none;position:absolute;bottom:calc(100% + 0.5rem);left:50%;transform:translateX(-50%);width:16rem;padding:0.625rem 0.75rem;background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));border-radius:var(--ann-radius);box-shadow:0 4px 12px rgba(0,0,0,0.15);font-size:0.75rem;line-height:1.5;color:hsl(var(--ann-fg));z-index:100;font-weight:400;">
+                RPPS, ADELI, FINESS, SIREN, SIRET, RNA, N° d'agrément CAF, N° d'enregistrement RNCP, N° de déclaration d'activité (organisme de formation), N° d'identification URSSAF...
+              </span>
+            </span>
+          </label>
+          <input type="text" id="f-pro-id-number" name="pro_id_number" class="ann-input" placeholder="Ex: RPPS 10000000000" maxlength="80">
+          <div class="ann-field-meta">
+            <span class="ann-field-error" id="err-pro-id-number"></span>
+            <span class="ann-char-count"><span id="count-pro-id-number">0</span>/80</span>
+          </div>
+        </div>
+
+        <div class="ann-form-group">
           <label class="ann-label">Méthodes / approches <span class="ann-text-muted ann-text-xs">(3 max — plan gratuit)</span></label>
           <p class="ann-text-muted ann-text-sm" style="margin-bottom:0.75rem;margin-top:-0.25rem;">Les méthodes s'adaptent à votre spécialité principale. <a href="/tarifs/" target="_blank" rel="noopener" style="color:hsl(var(--ann-primary));">Les plans Pro et Boost</a> permettent d'ajouter des méthodes personnalisées.</p>
           <div class="ann-methods-grid" id="methods-selector"></div>
@@ -393,6 +411,7 @@
             </h3>
             <div class="ann-recap-row"><span class="ann-recap-label">Spécialités</span><span class="ann-recap-value" id="recap-specialites">—</span></div>
             <div class="ann-recap-row"><span class="ann-recap-label">Titre</span><span class="ann-recap-value" id="recap-titre">—</span></div>
+            <div class="ann-recap-row" id="recap-pro-id-number-row" style="display:none"><span class="ann-recap-label">N° professionnel</span><span class="ann-recap-value" id="recap-pro-id-number">—</span></div>
             <div class="ann-recap-row"><span class="ann-recap-label">Méthodes</span><span class="ann-recap-value" id="recap-methodes">—</span></div>
             <div class="ann-recap-row"><span class="ann-recap-label">Expérience</span><span class="ann-recap-value" id="recap-experience">—</span></div>
           </div>

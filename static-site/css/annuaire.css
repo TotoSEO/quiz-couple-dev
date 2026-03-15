@@ -3335,3 +3335,16 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   .ann-lightbox-next { right: 0.5rem; }
   .ann-lightbox-close { top: 0.5rem; right: 0.5rem; }
 }
+
+/* ── Tooltip ── */
+.ann-tooltip-wrap:hover .ann-tooltip-bubble,
+.ann-tooltip-wrap:focus-within .ann-tooltip-bubble {
+  display: block !important;
+}
+@media (max-width: 639px) {
+  .ann-tooltip-bubble {
+    left: 0 !important;
+    transform: none !important;
+    width: 14rem !important;
+  }
+}

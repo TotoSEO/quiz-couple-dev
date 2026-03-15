@@ -822,6 +822,7 @@
     if ($('prof-lat') && profile.lat) $('prof-lat').value = profile.lat;
     if ($('prof-lng') && profile.lng) $('prof-lng').value = profile.lng;
     $('prof-website').value = profile.website || '';
+    if ($('prof-pro-id-number')) $('prof-pro-id-number').value = profile.professional_id_number || '';
     if ($('prof-doctolib')) $('prof-doctolib').value = profile.doctolib_url || '';
     // Short description
     var shortDescInput = $('prof-short-description');
@@ -978,6 +979,7 @@
       short_description: ($('prof-short-description').value || '').slice(0, 165).trim(),
       description: syncEditorToTextarea('prof-description-editor', 'prof-description'),
       years_experience: parseInt($('prof-experience').value) || 0,
+      professional_id_number: $('prof-pro-id-number') ? ($('prof-pro-id-number').value.trim() || null) : undefined,
       price_range: (function() {
         var pmin = $('prof-price-min').value.trim();
         var pmax = $('prof-price-max').value.trim();
