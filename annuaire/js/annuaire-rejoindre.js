@@ -176,6 +176,23 @@
     update();
   });
 
+  // ── Short description counter ──
+  (function() {
+    var input = document.getElementById('f-short-description');
+    var counter = document.getElementById('f-short-desc-counter');
+    if (!input || !counter) return;
+    function update() {
+      var len = input.value.length;
+      counter.textContent = len + '/165';
+      counter.style.color = len > 155 ? 'hsl(0 70% 50%)' : '';
+    }
+    input.addEventListener('input', update);
+    input.addEventListener('paste', function() {
+      var el = this;
+      setTimeout(function() { if (el.value.length > 165) el.value = el.value.slice(0, 165); update(); }, 0);
+    });
+  })();
+
   // ── Rich Text Editor (registration) ──
   initRichTextEditorRejoindre('f-desc-toolbar', 'f-description-editor', 'f-description', 'count-description');
 
@@ -459,6 +476,12 @@
     }
 
     if (step === 4) {
+      // Short description
+      var shortDesc = val('f-short-description').trim();
+      if (!shortDesc) { showError('err-short-description', 'La description courte est requise'); valid = false; }
+      else if (shortDesc.length < 20) { showError('err-short-description', 'Minimum 20 caractères'); valid = false; }
+      else if (shortDesc.length > 165) { showError('err-short-description', 'Maximum 165 caractères'); valid = false; }
+
       // Sync rich text editor to hidden textarea
       var descEditorEl = document.getElementById('f-description-editor');
       var descTextareaEl = document.getElementById('f-description');
@@ -680,6 +703,7 @@
         phone: val('f-telephone'),
         specialty: specialties[0] || '',
         city: val('f-ville'),
+        short_description: val('f-short-description').slice(0, 165).trim(),
         description: val('f-description'),
         methods: methods,
         languages: languages.length ? languages : ['Français'],
