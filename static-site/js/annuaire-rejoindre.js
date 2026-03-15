@@ -125,6 +125,34 @@
     update();
   });
 
+  // ── Limit digit count on numeric inputs ────────────────────────
+  function limitDigits(inputId, maxDigits) {
+    var el = document.getElementById(inputId);
+    if (!el) return;
+    el.addEventListener('keydown', function (e) {
+      // Allow: backspace, delete, tab, escape, enter, arrows, home, end
+      if ([8, 9, 13, 27, 35, 36, 37, 38, 39, 40, 46].indexOf(e.keyCode) !== -1) return;
+      // Allow Ctrl/Cmd+A/C/V/X
+      if ((e.ctrlKey || e.metaKey) && [65, 67, 86, 88].indexOf(e.keyCode) !== -1) return;
+      // Block non-digit keys
+      var isDigit = (e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105);
+      if (!isDigit) { e.preventDefault(); return; }
+      // Block if already at max digits
+      var val = el.value.replace(/[^0-9]/g, '');
+      if (val.length >= maxDigits) { e.preventDefault(); }
+    });
+    el.addEventListener('input', function () {
+      // Truncate on paste or any other input that bypasses keydown
+      var digits = el.value.replace(/[^0-9]/g, '');
+      if (digits.length > maxDigits) {
+        el.value = digits.slice(0, maxDigits);
+      }
+    });
+  }
+  limitDigits('f-prix-min', 4);
+  limitDigits('f-prix-max', 4);
+  limitDigits('f-experience', 2);
+
   // ── Bubble builder (shared for methods & languages) ────────────
   function buildBubbles(container, items, nameAttr, selectedValues, maxSelect) {
     if (!container) return;
