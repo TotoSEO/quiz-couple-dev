@@ -167,6 +167,9 @@ async function fetchLiveProfessionals() {
       reviewCount: r.review_count || 0,
       availability: r.availability || 'Sur rendez-vous',
       premium: r.plan === 'pro' || r.plan === 'boost',
+      plan: r.plan || 'gratuit',
+      photos: r.photos || [],
+      videoUrl: r.video_url || '',
       googlePlaceId: r.google_place_id || null,
       doctolibUrl: r.doctolib_url || '',
     }));
