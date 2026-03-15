@@ -178,7 +178,7 @@
     }
 
     var map = L.map(container, {
-      scrollWheelZoom: false,
+      scrollWheelZoom: true,
       zoomControl: true,
     }).setView(defaultCenter, defaultZoom);
 
@@ -223,7 +223,8 @@
     return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
 
-  function createDropdown(input, type) {
+  function createDropdown(input, type, opts) {
+    opts = opts || {};
     var dropdown = document.createElement('div');
     dropdown.className = 'ann-search-dropdown';
     dropdown.style.cssText = 'display:none;position:absolute;top:100%;left:0;right:0;z-index:100;background:hsl(var(--ann-bg));border:1px solid hsl(var(--ann-border));border-radius:0.5rem;box-shadow:var(--ann-shadow-md,0 4px 16px rgba(0,0,0,0.08));max-height:16rem;overflow-y:auto;margin-top:0.25rem;';
@@ -239,6 +240,7 @@
       var val = normalize(input.value.trim());
       if (val.length < 1) { dropdown.style.display = 'none'; return; }
 
+      // For cities, also match by postal code prefix (department)
       var matches = items.filter(function (item) {
         var name = normalize(item.name);
         var short = item.shortName ? normalize(item.shortName) : '';
@@ -251,7 +253,7 @@
       dropdown.innerHTML = '';
       matches.forEach(function (item) {
         var a = document.createElement('a');
-        a.href = '/' + item.id + '/';
+        a.href = opts.fillOnly ? '#' : ('/' + item.id + '/');
         a.style.cssText = 'display:flex;align-items:center;gap:0.5rem;padding:0.625rem 0.75rem;color:hsl(var(--ann-fg));text-decoration:none;font-size:0.875rem;transition:background 150ms;';
         a.innerHTML = (type === 'city'
           ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;flex-shrink:0;color:hsl(var(--ann-muted-fg))"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>'
@@ -259,6 +261,13 @@
           + '<span>' + item.name + (item.department ? ' <span style="color:hsl(var(--ann-muted-fg))">(' + item.department + ')</span>' : '') + '</span>';
         a.addEventListener('mouseenter', function () { a.style.background = 'hsl(var(--ann-muted) / 0.5)'; });
         a.addEventListener('mouseleave', function () { a.style.background = 'none'; });
+        if (opts.fillOnly) {
+          a.addEventListener('click', function (e) {
+            e.preventDefault();
+            input.value = item.name;
+            dropdown.style.display = 'none';
+          });
+        }
         dropdown.appendChild(a);
       });
       dropdown.style.display = 'block';
@@ -274,34 +283,45 @@
     return dropdown;
   }
 
-  // Hero search
+  // Hero search — fills inputs on dropdown click, submits to /recherche/
   var heroForm = document.getElementById('hero-search-form');
   if (heroForm) {
     var heroQ = heroForm.querySelector('input[name="q"]');
     var heroCity = heroForm.querySelector('input[name="city"]');
-    if (heroQ) createDropdown(heroQ, 'specialty');
-    if (heroCity) createDropdown(heroCity, 'city');
+    if (heroQ) createDropdown(heroQ, 'specialty', { fillOnly: true });
+    if (heroCity) createDropdown(heroCity, 'city', { fillOnly: true });
 
     heroForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      var qVal = normalize((heroQ && heroQ.value) || '');
-      var cityVal = normalize((heroCity && heroCity.value) || '');
+      var qVal = (heroQ && heroQ.value || '').trim();
+      var cityVal = (heroCity && heroCity.value || '').trim();
 
-      // Try to match city first
+      // Build query params for /recherche/
+      var params = new URLSearchParams();
+      if (qVal) params.set('q', qVal);
+
+      // Try to resolve city to a ville/specialite param
       if (cityVal) {
-        var cityMatch = searchData.cities.find(function (c) { return normalize(c.name) === cityVal || c.department === heroCity.value.trim(); });
-        if (cityMatch) { window.location.href = '/' + cityMatch.id + '/'; return; }
+        var normCity = normalize(cityVal);
+        var cityMatch = searchData.cities.find(function (c) { return normalize(c.name) === normCity || c.department === cityVal; });
+        if (!cityMatch && /^\d{2,5}$/.test(cityVal)) {
+          var deptCode = cityVal.length >= 3 && cityVal.startsWith('97') ? cityVal.slice(0, 3) : cityVal.slice(0, 2);
+          cityMatch = searchData.cities.find(function (c) { return c.department === deptCode; });
+        }
+        if (!cityMatch) cityMatch = searchData.cities.find(function (c) { return normalize(c.name).indexOf(normCity) !== -1; });
+        if (cityMatch) params.set('ville', cityMatch.id);
+        else params.set('q', (qVal ? qVal + ' ' : '') + cityVal);
       }
-      // Then specialty
+
+      // Also try to resolve specialty from q
       if (qVal) {
-        var specMatch = searchData.specialties.find(function (s) { return normalize(s.name).indexOf(qVal) !== -1 || (s.shortName && normalize(s.shortName).indexOf(qVal) !== -1); });
-        if (specMatch) { window.location.href = '/' + specMatch.id + '/'; return; }
+        var normQ = normalize(qVal);
+        var specMatch = searchData.specialties.find(function (s) { return normalize(s.name).indexOf(normQ) !== -1 || (s.shortName && normalize(s.shortName).indexOf(normQ) !== -1); });
+        if (specMatch) params.set('specialite', specMatch.id);
       }
-      // Fallback: go to first city or specialty that partially matches
-      var anyCity = cityVal && searchData.cities.find(function (c) { return normalize(c.name).indexOf(cityVal) !== -1; });
-      if (anyCity) { window.location.href = '/' + anyCity.id + '/'; return; }
-      var anySpec = qVal && searchData.specialties.find(function (s) { return normalize(s.name).indexOf(qVal) !== -1; });
-      if (anySpec) { window.location.href = '/' + anySpec.id + '/'; return; }
+
+      var qs = params.toString();
+      window.location.href = '/recherche/' + (qs ? '?' + qs : '');
     });
   }
 
@@ -321,7 +341,16 @@
       if (val.length < 1) { dropdown.style.display = 'none'; return; }
 
       var specMatches = searchData.specialties.filter(function (s) { return normalize(s.name).indexOf(val) !== -1 || (s.shortName && normalize(s.shortName).indexOf(val) !== -1); }).slice(0, 3);
-      var cityMatches = searchData.cities.filter(function (c) { return normalize(c.name).indexOf(val) !== -1 || (c.department && c.department.indexOf(val) !== -1); }).slice(0, 4);
+      var cityMatches = searchData.cities.filter(function (c) { return normalize(c.name).indexOf(val) !== -1 || (c.department && c.department.indexOf(val) !== -1); });
+      // If searching by department code (numeric), prioritize exact department matches
+      if (/^\d{2,3}$/.test(val)) {
+        cityMatches.sort(function (a, b) {
+          var aExact = a.department === val ? 0 : 1;
+          var bExact = b.department === val ? 0 : 1;
+          return aExact - bExact;
+        });
+      }
+      cityMatches = cityMatches.slice(0, 4);
 
       if (!specMatches.length && !cityMatches.length) { dropdown.style.display = 'none'; return; }
 
