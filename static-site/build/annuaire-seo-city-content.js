@@ -153,71 +153,135 @@ const SPECIALTY_CITY_TEMPLATES = {
   ],
 
   'sexotherapeute': [
+    // Template A - concrete situation entry
     (city) => ({
       sections: [
         {
-          title: `Sexothérapie à ${city.name} : quand le corps et l'esprit se bloquent`,
+          title: `Sexothérapeute à ${city.name} : quand la vie intime se complique`,
           content: `
-<p>Votre médecin a dit que « tout est normal ». Les examens ne montrent rien d'anormal. Et pourtant, quelque chose bloque dans votre vie intime. Désir absent, angoisse avant chaque rapport, souvenirs douloureux qui remontent, impossibilité de lâcher prise — ce sont des situations que les sexothérapeutes de ${city.name} rencontrent quotidiennement.</p>
-<p>La sexothérapie se situe à la croisée de la psychothérapie et de la sexologie. Elle s'adresse aux personnes dont les difficultés sexuelles ont une dimension émotionnelle ou psychologique forte. Ce n'est pas de la sexologie médicale : ici, on ne prescrit pas de médicament. On travaille sur ce qui se passe dans la tête, dans le cœur, et dans la relation.</p>
-<p>À ${city.name}, les sexothérapeutes sont généralement des psychologues, psychothérapeutes ou professionnels de santé ayant suivi une double formation en psychothérapie et en sexologie clinique. Cette double compétence leur permet d'aborder les problématiques intimes dans leur globalité, sans les réduire à un symptôme à traiter.</p>
+<p>Un couple dort dans le même lit depuis des mois sans se toucher. Une femme évite les rapports depuis son accouchement. Un homme de 35 ans n'arrive plus à maintenir une érection avec sa partenaire alors que tout fonctionne quand il est seul. Ce sont des situations concrètes que les patients racontent aux sexothérapeutes de ${city.name}, souvent après avoir attendu trop longtemps.</p>
+<p>Consulter un sexothérapeute à ${city.name}, c'est choisir un professionnel qui travaille sur le lien entre le corps et la tête. Pas un médecin qui prescrit des comprimés. Pas un <a href="/sexologue/">sexologue</a> centré sur la mécanique. Le sexothérapeute s'intéresse à ce qui bloque émotionnellement, à l'histoire personnelle, aux croyances sur la sexualité qu'on traîne parfois depuis l'adolescence. C'est une approche qui prend du temps (comptez 10 à 20 séances en moyenne), mais les résultats tiennent sur la durée.</p>
+<p>Dans le ${city.department}, les sexothérapeutes reçoivent en cabinet ou en visio. La plupart ont une formation de base en psychologie ou en psychothérapie, complétée par un DU ou DIU de sexologie. Ce double parcours est important : il signifie que le praticien sait à la fois écouter une souffrance psychique et comprendre les mécanismes de la réponse sexuelle.</p>
 `
         },
         {
-          title: `À qui s'adresse la sexothérapie dans le ${city.department} ?`,
+          title: `Ce qu'un sexothérapeute à ${city.name} peut traiter (et ce qu'il ne traite pas)`,
           content: `
-<p>Les profils des patients qui consultent un sexothérapeute à ${city.name} sont très variés :</p>
+<p>La sexothérapie a un champ d'action précis. Quand quelqu'un consulte un sexothérapeute à ${city.name}, c'est généralement pour des difficultés où la dimension psychologique domine :</p>
 <ul>
-<li>Des personnes ayant vécu un <strong>traumatisme sexuel</strong> (agression, abus) et souhaitant se réapproprier leur corps et leur sexualité</li>
-<li>Des couples confrontés à un <strong>décalage de désir persistant</strong> que la simple communication n'arrive pas à résoudre</li>
-<li>Des individus souffrant d'<strong>anxiété de performance</strong> — cette peur paralysante de ne pas être « à la hauteur » qui finit par bloquer toute spontanéité</li>
-<li>Des personnes ayant des <strong>difficultés liées à l'image corporelle</strong> — se sentir indésirable, avoir honte de son corps, ne pas supporter d'être regardé(e)</li>
-<li>Des couples en <strong>transition de vie</strong> (post-partum, ménopause, maladie) dont la sexualité a été bousculée et qui veulent la reconstruire autrement</li>
+<li>Perte de désir installée depuis plusieurs mois, sans cause médicale identifiée</li>
+<li>Anxiété de performance qui transforme chaque rapport en épreuve (un problème qui touche bien plus de personnes qu'on ne le croit, hommes comme femmes)</li>
+<li>Blocages liés à un vécu traumatique, agression ou expériences douloureuses du passé</li>
 </ul>
-<p>Le point commun de toutes ces situations ? Le problème n'est pas mécanique. Il est ancré dans l'histoire personnelle, dans les croyances, dans la relation. Et c'est exactement ce que le sexothérapeute sait travailler.</p>
+<p>Ce que le sexothérapeute ne fait pas : il ne réalise aucun examen physique, ne prescrit rien, et ne vous touche jamais. Toute la thérapie passe par la parole et par des exercices à pratiquer chez vous, seul ou en couple. Si votre problème est d'ordre médical (douleurs, troubles hormonaux), un bon praticien à ${city.name} vous orientera vers un médecin ou un <a href="/sexologue/">sexologue</a> formé à ces questions.</p>
+<p>Est-ce que ça marche vraiment ? Les études sur les approches cognitivo-comportementales appliquées à la sexualité montrent des taux d'amélioration autour de 60 à 80 % selon les problématiques. Ce n'est pas magique, mais c'est solide.</p>
 `
         },
         {
-          title: `Le déroulement d'une sexothérapie à ${city.name}`,
+          title: `Choisir son sexothérapeute à ${city.name} : les points à vérifier`,
           content: `
-<p>Les premières séances sont consacrées à comprendre votre parcours : éducation, premières expériences, relation actuelle, ce qui vous amène aujourd'hui. Le sexothérapeute à ${city.name} ne vous demandera pas de détails intimes dès le premier rendez-vous — le rythme est progressif, respectueux de vos limites.</p>
-<p>Ensuite, le travail combine parole et exercices pratiques. Selon la problématique :</p>
-<ul>
-<li><strong>EMDR</strong> pour le retraitement des souvenirs traumatiques — une technique très efficace qui permet de « désamorcer » les images et sensations associées au trauma</li>
-<li><strong>Pleine conscience sexuelle</strong> pour sortir du mode performance et revenir aux sensations du moment présent</li>
-<li><strong>Exercices de sensibilisation sensorielle</strong> (inspirés de Masters et Johnson) à pratiquer chez soi, seul ou en couple</li>
-<li><strong>TCC</strong> pour identifier et déconstruire les pensées automatiques négatives liées au corps et à la sexualité</li>
-</ul>
-<p>Un suivi en sexothérapie dure en moyenne 10 à 20 séances à ${city.name}. C'est plus long qu'un suivi purement sexologique parce qu'on travaille en profondeur. Mais les résultats sont souvent plus durables, justement parce qu'on traite la racine du problème et pas seulement le symptôme.</p>
+<p>Le titre de sexothérapeute n'est pas protégé en France. N'importe qui peut se déclarer sexothérapeute demain matin, ce qui pose un vrai problème. Dans le ${city.department}, comme partout, il faut savoir trier.</p>
+<p>Vérifiez d'abord la formation. Un sexothérapeute compétent à ${city.name} a généralement un diplôme de psychologue, de médecin ou de psychothérapeute, plus une spécialisation en sexologie (DU de l'université, pas une formation en ligne de trois week-ends). Regardez aussi s'il est membre d'une association professionnelle reconnue comme l'AIUS ou le Syndicat des sexologues.</p>
+<p>Lors du premier rendez-vous, observez le cadre. Le praticien doit poser des règles claires : durée de la séance, tarif, confidentialité. Il doit vous mettre à l'aise sans vous brusquer. Si vous sentez la moindre pression ou le moindre malaise, partez. Un bon sexothérapeute respecte votre rythme, point. Les tarifs à ${city.name} tournent autour de 60 à 100 € la séance, rarement remboursés par la Sécurité sociale (sauf si le praticien est médecin). Pensez à vérifier ce que couvre votre mutuelle avant de commencer un suivi.</p>
 `
         },
       ],
     }),
+    // Template B - surprising fact entry
     (city) => ({
       sections: [
         {
-          title: `Trouver un sexothérapeute qualifié à ${city.name}`,
+          title: `Sexothérapeute à ${city.name} : une consultation plus courante qu'on ne l'imagine`,
           content: `
-<p>La sexothérapie n'est pas un titre protégé en France, ce qui rend le choix du praticien d'autant plus important. À ${city.name}, les professionnels sérieux cumulent généralement une formation en psychologie ou en psychothérapie et une spécialisation en sexologie clinique (DU ou DIU de sexologie).</p>
-<p>Quelques signaux rassurants quand vous cherchez un sexothérapeute dans le ${city.department} : il affiche clairement ses diplômes et formations, il pose un cadre dès la première séance (durée, tarifs, confidentialité), il ne vous touche jamais (la sexothérapie est un travail par la parole et les exercices à domicile), et il accepte que vous changiez de praticien si le courant ne passe pas.</p>
-<p>Méfiez-vous des praticiens qui promettent des résultats rapides ou qui vous mettent mal à l'aise. Un bon sexothérapeute ne juge pas, ne moralise pas, et ne vous pousse jamais au-delà de ce que vous êtes prêt(e) à explorer.</p>
+<p>Environ 40 % des femmes et 30 % des hommes déclarent avoir connu au moins une difficulté sexuelle significative au cours de leur vie, selon les données de l'enquête IFOP de 2019 sur la sexualité des Français. Ce ne sont pas des chiffres marginaux. Et pourtant, le sexothérapeute reste un professionnel qu'on hésite à consulter, souvent par gêne ou parce qu'on ne sait pas exactement ce qui se passe dans son cabinet.</p>
+<p>À ${city.name}, un sexothérapeute reçoit des patients de tous âges et de tous parcours. Ce qui les réunit, c'est une difficulté intime qui résiste aux solutions simples : en parler au partenaire n'a pas suffi, les conseils lus en ligne n'ont rien changé, et le médecin a dit que "physiquement tout va bien". Le sexothérapeute à ${city.name} intervient exactement là : quand le problème n'est pas dans le corps mais dans la relation au corps, au désir, à l'autre.</p>
+<p>La plupart des praticiens du ${city.department} proposent un premier entretien pour comprendre la demande. Pas besoin d'arriver avec un diagnostic. Vous venez avec ce que vous ressentez, et le professionnel vous aide à y voir plus clair.</p>
 `
         },
         {
-          title: `Sexothérapie individuelle ou en couple à ${city.name} ?`,
+          title: `Comment se déroule une sexothérapie à ${city.name}`,
           content: `
-<p>Les deux formats existent et les sexothérapeutes de ${city.name} adaptent leur approche à chaque situation. En pratique, beaucoup de suivis combinent des séances individuelles et des séances de couple.</p>
-<p>La <strong>sexothérapie individuelle</strong> est particulièrement adaptée quand le blocage est personnel — trauma passé, anxiété de performance, difficultés liées à l'identité sexuelle ou à l'image corporelle. Le patient a besoin d'un espace à lui pour explorer des sujets parfois très intimes, sans la présence du partenaire.</p>
-<p>La <strong>sexothérapie de couple</strong> prend tout son sens quand le problème concerne l'interaction entre les deux partenaires : décalage de désir, évitement de l'intimité physique, communication impossible sur les besoins sexuels. Le sexothérapeute aide le couple à recréer un dialogue autour de l'intimité — un dialogue qui s'est souvent rompu depuis des mois, voire des années.</p>
-<p>Dans les deux cas, les exercices à faire entre les séances sont un élément central du processus. C'est dans le quotidien que les changements se concrétisent, pas uniquement dans le cabinet du praticien à ${city.name}.</p>
+<p>Première séance : le sexothérapeute à ${city.name} pose des questions sur votre parcours. Pas un interrogatoire, plutôt une conversation guidée. Il veut comprendre votre histoire relationnelle, votre éducation, vos premières expériences intimes, et bien sûr ce qui vous amène. Vous n'êtes jamais obligé de répondre à tout. Le rythme est le vôtre.</p>
+<p>Les séances suivantes alternent entre parole et mise en pratique. Le sexothérapeute peut vous proposer :</p>
+<ul>
+<li>Des exercices de pleine conscience corporelle, pour réapprendre à sentir votre corps sans pression de "performance"</li>
+<li>Un travail sur les pensées automatiques négatives (le fameux "je ne vais pas y arriver" qui s'auto-réalise)</li>
+<li>Des exercices sensoriels à faire chez vous, inspirés des protocoles de Masters et Johnson, qui restent une référence</li>
+</ul>
+<p>Un suivi complet dure entre 8 et 20 séances selon la problématique. C'est plus long qu'une consultation chez un <a href="/sexologue/">sexologue</a> classique, parce qu'on travaille sur des schémas profonds. Mais ce temps investi a une vraie valeur : les patients qui terminent leur sexothérapie à ${city.name} rapportent des changements stables, pas juste une amélioration temporaire.</p>
+<p>Le travail peut se faire seul ou en couple. Beaucoup de sexothérapeutes dans le ${city.department} proposent les deux formats, et il arrive souvent qu'un suivi commence en individuel avant d'intégrer le partenaire plus tard.</p>
 `
         },
         {
-          title: `Budget et accès à la sexothérapie en ${city.region}`,
+          title: `Sexothérapeute à ${city.name} : tarifs et remboursements`,
           content: `
-<p>Les séances de sexothérapie à ${city.name} coûtent entre 70€ et 110€, pour une durée de 45 minutes à une heure. Un suivi complet (10 à 20 séances) représente donc un investissement de 700€ à 2 200€. C'est conséquent, mais à mettre en perspective avec le coût d'une procédure de divorce ou l'impact d'un trouble sexuel non traité sur la qualité de vie.</p>
-<p>La Sécurité sociale ne rembourse pas la sexothérapie, sauf si le praticien est aussi médecin conventionné. Certaines mutuelles proposent un forfait annuel pour les « consultations psy » ou « médecines douces » — vérifiez votre contrat avant de commencer.</p>
-<p>Pour ceux qui cherchent des alternatives plus accessibles dans le ${city.department}, certains hôpitaux disposent de services de sexologie avec des tarifs adaptés. Les associations spécialisées peuvent aussi orienter vers des praticiens proposant des consultations à tarif solidaire.</p>
+<p>Combien coûte un sexothérapeute à ${city.name} ? Les tarifs varient entre 60 et 110 € la séance dans le ${city.department}. Certains praticiens proposent une première consultation un peu plus longue (et parfois un peu plus chère) pour prendre le temps de bien cerner la situation.</p>
+<p>Côté remboursement, la réalité est simple : la Sécurité sociale ne prend pas en charge la sexothérapie, sauf dans le cas où votre praticien est médecin conventionné. Certaines mutuelles remboursent une partie des séances dans le cadre d'un forfait "psychologie" ou "médecines complémentaires". Ça vaut le coup de passer un coup de fil à votre mutuelle avant de démarrer.</p>
+<p>Pour les budgets serrés, les consultations hospitalières en sexologie (quand elles existent dans la région ${city.region}) proposent des tarifs adaptés aux revenus. Les délais d'attente sont plus longs, mais l'accès est garanti. Quelques associations locales orientent aussi vers des praticiens pratiquant des tarifs solidaires.</p>
+<p>Si vous hésitez entre un sexothérapeute et un <a href="/therapeute-de-couple/">thérapeute de couple</a>, la distinction tient au cœur du problème : le <a href="/therapeute-de-couple/">thérapeute de couple</a> travaille sur la relation dans sa globalité, le sexothérapeute se concentre sur la dimension intime. Quand les deux sont imbriqués (ce qui arrive souvent), certains praticiens de ${city.name} ont la double compétence.</p>
+`
+        },
+      ],
+    }),
+    // Template C - direct question entry
+    (city) => ({
+      sections: [
+        {
+          title: `Pourquoi consulter un sexothérapeute à ${city.name} ?`,
+          content: `
+<p>Vous avez l'impression que votre vie sexuelle est en panne et vous ne savez pas à qui en parler ? C'est le point de départ de la majorité des consultations chez un sexothérapeute à ${city.name}. Le sujet reste tabou dans beaucoup de familles et de couples, même en 2025. On peut parler de tout sauf de ça.</p>
+<p>Le sexothérapeute à ${city.name} est formé pour accueillir cette parole sans jugement. Son cabinet est probablement le seul endroit où vous pouvez dire les choses comme elles sont, sans filtre, sans honte. Et c'est souvent le simple fait de poser les mots sur le problème qui amorce le changement.</p>
+<p>Qui consulte concrètement dans le ${city.department} ? Des profils très différents. Des femmes qui n'ont jamais ressenti de plaisir et qui se demandent si c'est normal (spoiler : ce n'est pas une fatalité). Des hommes confrontés à des pannes d'érection que le Viagra ne résout pas parce que le blocage est dans la tête. Des couples où l'un veut, l'autre non, depuis si longtemps que le sujet est devenu un mur. Des personnes qui portent les traces d'un traumatisme ancien et qui veulent reprendre possession de leur corps.</p>
+<p>Le point commun : quelque chose coince, et la volonté seule ne suffit pas à le débloquer.</p>
+`
+        },
+        {
+          title: `Sexothérapeute à ${city.name} : les approches utilisées en séance`,
+          content: `
+<p>Un sexothérapeute à ${city.name} ne se contente pas de vous écouter (même si l'écoute compte beaucoup). Il utilise des outils concrets, validés par la recherche. La thérapie cognitivo-comportementale reste l'approche la plus répandue : on identifie les pensées parasites qui sabotent la vie intime, et on les déconstruit progressivement.</p>
+<p>Certains praticiens du ${city.department} intègrent aussi l'EMDR dans leur pratique, surtout pour les patients ayant vécu des traumatismes. Cette technique, initialement développée pour le stress post-traumatique, s'avère très efficace pour "désamorcer" les souvenirs douloureux liés à la sexualité.</p>
+<p>Et puis il y a les exercices. C'est la partie que les patients redoutent souvent au début, à tort. Il ne s'agit pas de performances à réaliser. Les exercices sensoriels (comme le sensate focus, mis au point dans les années 1970 et toujours utilisé) visent à redécouvrir le contact physique sans aucun objectif de résultat. Juste sentir. C'est souvent une révélation pour des personnes habituées à vivre leur sexualité sous pression.</p>
+<p>Un suivi avec un sexothérapeute à ${city.name} s'organise en général sur 10 à 15 séances. Les premières posent le cadre, les suivantes avancent au rythme du patient. Rien n'est imposé, jamais.</p>
+`
+        },
+        {
+          title: `Trouver le bon sexothérapeute dans le ${city.department}`,
+          content: `
+<p>Le choix du praticien compte autant que la méthode. À ${city.name}, vous trouverez des sexothérapeutes avec des parcours variés : psychologues cliniciens, médecins, infirmiers ou sages-femmes ayant complété leur formation initiale par un diplôme universitaire en sexologie.</p>
+<p>Mon avis, pour ce qu'il vaut : privilégiez un praticien dont la formation de base est solide (psychologue ou médecin) et qui affiche clairement son parcours sur son profil. La transparence sur les diplômes, c'est un signal fort. Un professionnel qui reste flou sur sa formation a rarement quelque chose de rassurant à cacher.</p>
+<p>Le feeling compte aussi, bien sûr. Lors du premier rendez-vous, posez-vous une question simple : est-ce que je me sens en sécurité ici ? Si la réponse est non, changez de praticien. Ce n'est pas un caprice. La confiance est la base de tout travail thérapeutique, et encore plus quand il touche à l'intimité.</p>
+<p>Si votre difficulté concerne autant la relation que la sexualité, un premier rendez-vous avec un <a href="/therapeute-de-couple/">thérapeute de couple</a> peut aussi être un bon point de départ. Ce professionnel saura vous réorienter vers un sexothérapeute à ${city.name} si le problème l'exige, ou travailler avec vous sur les deux dimensions en parallèle.</p>
+`
+        },
+      ],
+    }),
+    // Template D - opinion/assertion entry
+    (city) => ({
+      sections: [
+        {
+          title: `Un sexothérapeute à ${city.name}, c'est d'abord un thérapeute`,
+          content: `
+<p>On se trompe souvent sur ce métier. Un sexothérapeute, ce n'est pas un coach en techniques sexuelles. C'est un professionnel de la santé mentale qui a choisi de se spécialiser dans les difficultés intimes. La nuance est importante, et elle change tout dans la manière dont se passe une consultation à ${city.name}.</p>
+<p>Le sexothérapeute à ${city.name} travaille comme un psychothérapeute : par la parole, dans un cadre confidentiel, avec un rythme adapté à chaque patient. La seule différence, c'est que le sujet central est la sexualité. Les émotions, les peurs, l'histoire personnelle, la dynamique de couple (quand il y en a un) : tout ça fait partie du travail.</p>
+<p>Dans le ${city.department}, les praticiens que nous référençons ont une formation clinique solide. Psychologues ou médecins de formation, ils ont complété leur parcours par un diplôme universitaire en sexologie humaine. Cette double compétence leur donne les outils pour comprendre à la fois ce qui se passe sur le plan psychique et ce qui se joue dans le corps, sans jamais réduire l'un à l'autre.</p>
+`
+        },
+        {
+          title: `Sexothérapeute à ${city.name} : seul, en couple, ou les deux`,
+          content: `
+<p>La question revient souvent : faut-il consulter seul ou à deux ? La réponse dépend de la situation, mais un sexothérapeute à ${city.name} ne vous forcera jamais à venir en couple si vous préférez un suivi individuel.</p>
+<p>Le suivi individuel est adapté quand le blocage vient de votre propre histoire. Un traumatisme passé, une anxiété de performance ancrée depuis longtemps, un rapport compliqué à votre corps ou à votre identité sexuelle : ce sont des sujets qu'on explore mieux dans un espace à soi, sans la pression (même involontaire) du regard de l'autre.</p>
+<p>Le suivi en couple fonctionne bien quand le problème est relationnel. Le désir qui a disparu entre vous deux. Les non-dits qui se sont accumulés autour de la sexualité. L'évitement physique qui s'est installé comme une habitude. Le sexothérapeute aide alors à rouvrir un dialogue que les mois ou les années de silence ont rendu impossible. Beaucoup de praticiens dans le ${city.department} combinent d'ailleurs les deux formats au fil du suivi, selon ce qui émerge en séance.</p>
+<p>Ce qui est sûr, c'est que le partenaire n'a pas besoin d'être "d'accord sur tout" pour que la thérapie fonctionne. Il suffit qu'il accepte de participer.</p>
+`
+        },
+        {
+          title: `Coût et accès à un sexothérapeute en ${city.region}`,
+          content: `
+<p>Parlons argent. Une séance chez un sexothérapeute à ${city.name} coûte entre 60 et 100 €, parfois plus pour les médecins-sexologues. Un suivi complet représente un budget de 600 à 1 500 €. C'est une somme, clairement.</p>
+<p>La Sécurité sociale ne rembourse pas ces consultations, sauf quand le praticien est médecin conventionné (et dans ce cas, seule la part "consultation médicale" est prise en charge, pas la totalité). Certaines mutuelles proposent un forfait annuel pour les consultations de psychologie, qui couvre parfois la sexothérapie. Vérifiez votre contrat, ça peut faire une vraie différence.</p>
+<p>Dans la région ${city.region}, quelques centres hospitaliers universitaires disposent de consultations de sexologie à tarif hospitalier. Les délais sont longs (plusieurs semaines, voire mois), mais pour les personnes sans mutuelle complémentaire, c'est une option à connaître. On peut aussi commencer par consulter un <a href="/sexologue/">sexologue</a> en première intention si le doute persiste sur la nature du problème.</p>
+<p>Dernier point pratique : de plus en plus de sexothérapeutes à ${city.name} proposent des séances en visio. Pour ceux qui ont du mal à franchir la porte d'un cabinet (la gêne reste le premier frein), c'est un format qui lève une partie de l'obstacle. Le travail thérapeutique y est le même, seul le cadre change.</p>
 `
         },
       ],
