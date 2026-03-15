@@ -62,6 +62,7 @@
   ];
 
   var METHODS_LIMITS = { 'gratuit': 3, 'pro': 5, 'boost': 7 };
+  var CUSTOM_METHODS_LIMITS = { 'gratuit': 0, 'pro': 2, 'boost': 5 };
   var DESC_LIMITS = { 'gratuit': 600, 'pro': 1000, 'boost': 2000 };
 
   // ── Rich Text Editor ──
@@ -229,7 +230,8 @@
   }
 
   // ── Bubble selector builder ──
-  function buildBubbles(containerId, items, selectedItems, maxItems) {
+  // extraCountFn: optional function returning extra count to add when checking maxItems
+  function buildBubbles(containerId, items, selectedItems, maxItems, extraCountFn) {
     var container = $(containerId);
     if (!container) return;
     container.innerHTML = '';
@@ -246,7 +248,8 @@
       cb.style.display = 'none';
       cb.addEventListener('change', function () {
         var checked = container.querySelectorAll('input:checked');
-        if (maxItems && checked.length > maxItems) {
+        var total = checked.length + (extraCountFn ? extraCountFn() : 0);
+        if (maxItems && total > maxItems) {
           cb.checked = false;
           return;
         }
@@ -299,11 +302,18 @@
   }
 
   // ── Methods: rebuild based on specialty ──
+  // Collect all predefined method names for detecting custom ones
+  var ALL_PREDEFINED_METHODS = [];
+  Object.values(METHODS_BY_SPECIALTY).forEach(function (methods) {
+    methods.forEach(function (m) { if (ALL_PREDEFINED_METHODS.indexOf(m) === -1) ALL_PREDEFINED_METHODS.push(m); });
+  });
+
   function rebuildMethods(specialty, selectedMethods) {
     var plan = (currentProfile && currentProfile.plan) || 'gratuit';
     var maxMethods = METHODS_LIMITS[plan] || 3;
+    var maxCustom = CUSTOM_METHODS_LIMITS[plan] || 0;
     var limitEl = $('prof-methods-limit');
-    if (limitEl) limitEl.textContent = '(max ' + maxMethods + ')';
+    if (limitEl) limitEl.textContent = '(max ' + maxMethods + (maxCustom > 0 ? ', dont ' + maxCustom + ' personnalisée' + (maxCustom > 1 ? 's' : '') : '') + ')';
 
     var allMethods = [];
     if (specialty && METHODS_BY_SPECIALTY[specialty]) {
@@ -313,7 +323,127 @@
         methods.forEach(function (m) { if (allMethods.indexOf(m) === -1) allMethods.push(m); });
       });
     }
-    buildBubbles('prof-methods-container', allMethods, selectedMethods || [], maxMethods);
+
+    // Separate selected into predefined and custom
+    var selected = selectedMethods || [];
+    var selectedPredefined = selected.filter(function (m) { return ALL_PREDEFINED_METHODS.indexOf(m) !== -1; });
+    var selectedCustom = selected.filter(function (m) { return ALL_PREDEFINED_METHODS.indexOf(m) === -1; });
+
+    buildBubbles('prof-methods-container', allMethods, selectedPredefined, maxMethods, function () {
+      return getCustomMethods().length;
+    });
+
+    // Build custom methods UI for pro/boost
+    buildCustomMethodsUI(maxCustom, selectedCustom, maxMethods);
+  }
+
+  function buildCustomMethodsUI(maxCustom, existingCustom, maxTotal) {
+    var wrapper = $('prof-custom-methods-wrapper');
+    if (!wrapper) return;
+
+    if (maxCustom <= 0) {
+      wrapper.style.display = 'none';
+      wrapper.innerHTML = '';
+      return;
+    }
+
+    wrapper.style.display = '';
+    wrapper.innerHTML = '';
+
+    // Label
+    var label = document.createElement('p');
+    label.style.cssText = 'font-size:0.8125rem;color:hsl(var(--ann-muted-fg));margin:0 0 0.5rem;';
+    label.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem;vertical-align:middle;margin-right:0.25rem"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>'
+      + 'Méthodes personnalisées <span style="font-weight:600;">(' + maxCustom + ' max)</span>';
+    wrapper.appendChild(label);
+
+    // Container for custom method tags
+    var tagsContainer = document.createElement('div');
+    tagsContainer.id = 'prof-custom-methods-tags';
+    tagsContainer.style.cssText = 'display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.5rem;';
+    wrapper.appendChild(tagsContainer);
+
+    // Render existing custom methods
+    (existingCustom || []).forEach(function (m) {
+      addCustomMethodTag(tagsContainer, m, maxCustom);
+    });
+
+    // Input row for adding new custom methods
+    var inputRow = document.createElement('div');
+    inputRow.style.cssText = 'display:flex;gap:0.5rem;align-items:center;';
+    var input = document.createElement('input');
+    input.type = 'text';
+    input.id = 'prof-custom-method-input';
+    input.className = 'ann-form-input';
+    input.placeholder = 'Ex: Art-thérapie, Hypnose ericksonienne...';
+    input.maxLength = 60;
+    input.style.cssText = 'flex:1;font-size:0.8125rem;padding:0.375rem 0.75rem;';
+    var addBtn = document.createElement('button');
+    addBtn.type = 'button';
+    addBtn.className = 'ann-btn ann-btn-outline ann-btn-sm';
+    addBtn.textContent = 'Ajouter';
+    addBtn.style.cssText = 'white-space:nowrap;font-size:0.8125rem;padding:0.375rem 0.75rem;';
+    inputRow.appendChild(input);
+    inputRow.appendChild(addBtn);
+    wrapper.appendChild(inputRow);
+
+    function doAdd() {
+      var val = input.value.trim();
+      if (!val) return;
+      // Check total limit
+      var predefinedCount = getSelectedBubbles('prof-methods-container').length;
+      var customCount = tagsContainer.querySelectorAll('.ann-custom-method-tag').length;
+      if (predefinedCount + customCount >= maxTotal) {
+        input.value = '';
+        input.placeholder = 'Limite totale atteinte';
+        return;
+      }
+      if (customCount >= maxCustom) {
+        input.value = '';
+        input.placeholder = 'Limite personnalisées atteinte';
+        return;
+      }
+      // Check duplicate
+      var existing = [];
+      tagsContainer.querySelectorAll('.ann-custom-method-tag').forEach(function (t) { existing.push(t.getAttribute('data-value')); });
+      if (existing.indexOf(val) !== -1 || ALL_PREDEFINED_METHODS.indexOf(val) !== -1) {
+        input.value = '';
+        return;
+      }
+      addCustomMethodTag(tagsContainer, val, maxCustom);
+      input.value = '';
+      input.placeholder = 'Ex: Art-thérapie, Hypnose ericksonienne...';
+    }
+
+    addBtn.addEventListener('click', doAdd);
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); doAdd(); }
+    });
+  }
+
+  function addCustomMethodTag(container, value, maxCustom) {
+    var tag = document.createElement('span');
+    tag.className = 'ann-custom-method-tag';
+    tag.setAttribute('data-value', value);
+    tag.style.cssText = 'display:inline-flex;align-items:center;gap:0.375rem;padding:0.375rem 0.75rem;border-radius:9999px;font-size:0.8125rem;background:hsl(var(--ann-primary)/0.1);color:hsl(var(--ann-primary));border:1px solid hsl(var(--ann-primary)/0.3);';
+    var text = document.createElement('span');
+    text.textContent = value;
+    var removeBtn = document.createElement('button');
+    removeBtn.type = 'button';
+    removeBtn.innerHTML = '&times;';
+    removeBtn.style.cssText = 'background:none;border:none;color:hsl(var(--ann-primary));cursor:pointer;font-size:1rem;line-height:1;padding:0;';
+    removeBtn.addEventListener('click', function () { tag.remove(); });
+    tag.appendChild(text);
+    tag.appendChild(removeBtn);
+    container.appendChild(tag);
+  }
+
+  function getCustomMethods() {
+    var container = $('prof-custom-methods-tags');
+    if (!container) return [];
+    var result = [];
+    container.querySelectorAll('.ann-custom-method-tag').forEach(function (t) { result.push(t.getAttribute('data-value')); });
+    return result;
   }
 
   // ── Cabinet Photos (Pro/Boost) ──
@@ -697,7 +827,7 @@
         if (pmin) return pmin + '€';
         return null;
       })(),
-      methods: getSelectedBubbles('prof-methods-container'),
+      methods: getSelectedBubbles('prof-methods-container').concat(getCustomMethods()),
       languages: getSelectedBubbles('prof-languages-container'),
       availability: getSelectedBubbles('prof-availability-container').join(', ') || null,
     };
