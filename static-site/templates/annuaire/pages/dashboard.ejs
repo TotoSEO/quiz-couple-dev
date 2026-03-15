@@ -159,177 +159,232 @@
 
       <!-- Profile edit tab -->
       <div id="dash-tab-profile">
-        <form id="dash-profile-form" class="ann-profile-card" style="padding: 2rem;">
+        <form id="dash-profile-form">
 
-          <!-- Photo section -->
-          <div style="margin-bottom: 2rem; text-align: center;">
-            <div id="dash-photo-preview" style="width: 6rem; height: 6rem; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: linear-gradient(135deg, hsl(var(--ann-primary) / 0.15), hsl(var(--ann-secondary) / 0.15)); display: flex; align-items: center; justify-content: center;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:2rem;height:2rem;color:hsl(var(--ann-muted-fg))"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <label class="ann-btn ann-btn-outline ann-btn-sm" style="cursor:pointer;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-              Changer la photo
-              <input type="file" id="dash-photo-input" accept="image/jpeg,image/png,image/webp" style="display:none;">
-            </label>
-            <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.5rem;">
-              Choisissez une photo où l'on voit votre visage — c'est ce qui inspire le plus confiance aux patients.
-              <br>JPEG, PNG ou WebP. 200 Ko max.
-            </p>
-          </div>
-
-          <div class="ann-divider" style="margin-bottom: 1.5rem;"></div>
-
-          <!-- Identity -->
-          <h2 style="margin-bottom: 1rem; font-size: 1rem;">Identité</h2>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div class="ann-form-group">
-              <label class="ann-form-label" for="prof-firstname">Prénom *</label>
-              <input class="ann-form-input" type="text" id="prof-firstname" required maxlength="50">
-            </div>
-            <div class="ann-form-group">
-              <label class="ann-form-label" for="prof-lastname">Nom *</label>
-              <input class="ann-form-input" type="text" id="prof-lastname" required maxlength="50">
-            </div>
-          </div>
-
-          <!-- Specialty & City -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div class="ann-form-group">
-              <label class="ann-form-label" for="prof-specialty">Spécialité *</label>
-              <select class="ann-form-input" id="prof-specialty" required>
-                <option value="">Choisir...</option>
-                <% for (const spec of specialties) { %>
-                <option value="<%= spec.id %>"><%= spec.name %></option>
-                <% } %>
-              </select>
-            </div>
-            <div class="ann-form-group">
-              <label class="ann-form-label" for="prof-city">Ville *</label>
-              <select class="ann-form-input" id="prof-city" required>
-                <option value="">Choisir...</option>
-                <% for (const city of cities.sort((a, b) => a.name.localeCompare(b.name))) { %>
-                <option value="<%= city.id %>"><%= city.name %> (<%= city.department %>)</option>
-                <% } %>
-              </select>
-            </div>
-          </div>
-
-          <div class="ann-divider" style="margin: 1.5rem 0;"></div>
-
-          <!-- Contact -->
-          <h2 style="margin-bottom: 1rem; font-size: 1rem;">Contact</h2>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div class="ann-form-group">
-              <label class="ann-form-label" for="prof-email">Email professionnel *</label>
-              <input class="ann-form-input" type="email" id="prof-email" required maxlength="100">
-            </div>
-            <div class="ann-form-group">
-              <label class="ann-form-label" for="prof-phone">Téléphone</label>
-              <input class="ann-form-input" type="tel" id="prof-phone" placeholder="01 23 45 67 89" maxlength="20">
-            </div>
-          </div>
-          <div class="ann-form-group" style="position:relative;">
-            <label class="ann-form-label" for="prof-address">Adresse du cabinet</label>
-            <input class="ann-form-input" type="text" id="prof-address" placeholder="Commencez à taper votre adresse..." maxlength="200" autocomplete="off">
-            <div id="prof-address-suggestions" style="display:none;position:absolute;left:0;right:0;top:100%;z-index:50;background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));border-radius:0 0 var(--ann-radius) var(--ann-radius);max-height:12rem;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
-            <input type="hidden" id="prof-display-city">
-            <input type="hidden" id="prof-postal-code">
-            <input type="hidden" id="prof-lat">
-            <input type="hidden" id="prof-lng">
-          </div>
-          <div class="ann-form-group" id="dash-website-group">
-            <label class="ann-form-label" for="prof-website">Site web <span class="ann-text-muted" style="font-size:0.75rem; font-weight:400;">(abonnement Boost requis)</span></label>
-            <input class="ann-form-input" type="url" id="prof-website" placeholder="https://www.monsite.fr" maxlength="200" disabled style="opacity:0.5;cursor:not-allowed;">
-            <p id="dash-website-locked" class="ann-text-muted" style="font-size:0.75rem;margin-top:0.25rem;">
-              Passez à l'offre <strong>Boost</strong> pour ajouter un lien vers votre site web.
-              <a href="/tarifs/" style="color:hsl(var(--ann-primary));">Voir les tarifs</a>
-            </p>
-          </div>
-          <div class="ann-form-group">
-            <label class="ann-form-label" for="prof-doctolib">Lien Doctolib <span class="ann-text-muted" style="font-size:0.75rem; font-weight:400;">(optionnel)</span></label>
-            <input class="ann-form-input" type="url" id="prof-doctolib" placeholder="https://www.doctolib.fr/votre-profil" maxlength="300" disabled style="opacity:0.5; cursor:not-allowed;">
-            <p class="ann-text-muted" style="font-size:0.75rem;margin-top:0.25rem;">
-              Ajoutez votre lien Doctolib pour permettre aux patients de prendre rendez-vous directement en ligne.
-            </p>
-            <div id="dash-doctolib-locked" style="margin-top: 0.375rem;">
-              <p class="ann-text-muted" style="font-size: 0.75rem; color: hsl(var(--ann-primary));">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.75rem;height:0.75rem;vertical-align:middle;margin-right:0.25rem"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                Passez à l'offre <strong>Professionnel</strong> ou <strong>Boost</strong> pour ajouter votre lien Doctolib.
-                <a href="/tarifs/" style="color:hsl(var(--ann-primary));">Voir les tarifs</a>
-              </p>
-            </div>
-            <div id="dash-doctolib-error" class="ann-form-error" style="display:none;"></div>
-          </div>
-
-          <div class="ann-divider" style="margin: 1.5rem 0;"></div>
-
-          <!-- Professional info -->
-          <h2 style="margin-bottom: 1rem; font-size: 1rem;">Informations professionnelles</h2>
-          <div class="ann-form-group">
-            <label class="ann-form-label" for="prof-short-description">Description courte *</label>
-            <div style="position: relative;">
-              <input class="ann-form-input" type="text" id="prof-short-description" placeholder="Ex : Thérapeute de couple spécialisée en communication et gestion des conflits à Lyon." maxlength="165" required style="padding-right: 3.5rem;">
-              <span id="prof-short-desc-counter" style="position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); font-size: 0.6875rem; color: hsl(var(--ann-muted-fg)); pointer-events: none;">0/165</span>
-            </div>
-            <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.25rem;">Cette phrase apparaîtra dans les résultats de recherche et comme méta-description de votre fiche (SEO).</p>
-          </div>
-          <div class="ann-form-group">
-            <label class="ann-form-label">Présentation *</label>
-            <!-- Rich text toolbar -->
-            <div class="ann-rte-toolbar" id="prof-desc-toolbar">
-              <button type="button" data-cmd="bold" title="Gras" class="ann-rte-btn"><strong>G</strong></button>
-              <button type="button" data-cmd="italic" title="Italique" class="ann-rte-btn"><em>I</em></button>
-              <button type="button" data-cmd="underline" title="Souligner" class="ann-rte-btn"><u>S</u></button>
-              <span class="ann-rte-sep"></span>
-              <button type="button" data-cmd="insertUnorderedList" title="Liste à puces" class="ann-rte-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-              </button>
-              <button type="button" data-cmd="insertTable" title="Insérer un tableau" class="ann-rte-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
-              </button>
-            </div>
-            <!-- Editable area -->
-            <div class="ann-form-input ann-rte-editor" id="prof-description-editor" contenteditable="true" data-placeholder="Décrivez votre parcours, votre approche et ce qui vous distingue..." style="min-height: 8rem; line-height: 1.6; overflow-y: auto;"></div>
-            <!-- Hidden textarea for form submission -->
-            <textarea id="prof-description" style="display:none;"></textarea>
-            <span class="ann-text-muted" style="font-size: 0.75rem;"><span id="prof-desc-count">0</span>/<span id="prof-desc-max">600</span> caractères</span>
-          </div>
-
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div class="ann-form-group">
-              <label class="ann-form-label" for="prof-experience">Années d'expérience</label>
-              <input class="ann-form-input" type="number" id="prof-experience" min="0" max="50" placeholder="10">
-            </div>
-            <div class="ann-form-group">
-              <label class="ann-form-label">Tarifs (€/séance)</label>
-              <div style="display: flex; gap: 0.5rem; align-items: center;">
-                <input class="ann-form-input" type="number" id="prof-price-min" placeholder="60" min="0" max="9999" step="1" inputmode="numeric" style="flex:1;">
-                <span class="ann-text-muted">à</span>
-                <input class="ann-form-input" type="number" id="prof-price-max" placeholder="100" min="0" max="9999" step="1" inputmode="numeric" style="flex:1;">
+          <!-- ═══ Section 1: Photo & Identité ═══ -->
+          <div class="ann-dash-section">
+            <div class="ann-dash-section-header">
+              <div class="ann-dash-section-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               </div>
-              <span class="ann-field-error" id="err-prof-price" style="display:none;"></span>
+              <div>
+                <h2 class="ann-dash-section-title">Photo & Identité</h2>
+                <p class="ann-dash-section-desc">Votre photo de profil et vos informations de base. Ces éléments apparaissent en premier sur votre fiche.</p>
+              </div>
+            </div>
+
+            <!-- Photo -->
+            <div style="display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+              <div id="dash-photo-preview" style="width: 5rem; height: 5rem; border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, hsl(var(--ann-primary) / 0.15), hsl(var(--ann-secondary) / 0.15)); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:2rem;height:2rem;color:hsl(var(--ann-muted-fg))"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div>
+                <label class="ann-btn ann-btn-outline ann-btn-sm" style="cursor:pointer; margin-bottom: 0.375rem;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  Changer la photo
+                  <input type="file" id="dash-photo-input" accept="image/jpeg,image/png,image/webp" style="display:none;">
+                </label>
+                <p class="ann-text-muted" style="font-size: 0.75rem; max-width: 22rem;">
+                  Photo de visage recommandée. JPEG, PNG ou WebP, 200 Ko max.
+                </p>
+              </div>
+            </div>
+
+            <!-- Identity fields -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="ann-form-group">
+                <label class="ann-form-label" for="prof-firstname">Prénom *</label>
+                <input class="ann-form-input" type="text" id="prof-firstname" required maxlength="50">
+              </div>
+              <div class="ann-form-group">
+                <label class="ann-form-label" for="prof-lastname">Nom *</label>
+                <input class="ann-form-input" type="text" id="prof-lastname" required maxlength="50">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="ann-form-group">
+                <label class="ann-form-label" for="prof-specialty">Spécialité *</label>
+                <select class="ann-form-input" id="prof-specialty" required>
+                  <option value="">Choisir...</option>
+                  <% for (const spec of specialties) { %>
+                  <option value="<%= spec.id %>"><%= spec.name %></option>
+                  <% } %>
+                </select>
+              </div>
+              <div class="ann-form-group">
+                <label class="ann-form-label" for="prof-city">Ville *</label>
+                <select class="ann-form-input" id="prof-city" required>
+                  <option value="">Choisir...</option>
+                  <% for (const city of cities.sort((a, b) => a.name.localeCompare(b.name))) { %>
+                  <option value="<%= city.id %>"><%= city.name %> (<%= city.department %>)</option>
+                  <% } %>
+                </select>
+              </div>
             </div>
           </div>
 
-          <div class="ann-form-group">
-            <label class="ann-form-label">Méthodes et approches <span class="ann-text-muted" style="font-size:0.75rem;font-weight:400;" id="prof-methods-limit"></span></label>
-            <div id="prof-methods-container" style="display:flex;flex-wrap:wrap;gap:0.5rem;"></div>
-            <div id="prof-custom-methods-wrapper" style="display:none;margin-top:0.75rem;"></div>
+          <!-- ═══ Section 2: Coordonnées ═══ -->
+          <div class="ann-dash-section">
+            <div class="ann-dash-section-header">
+              <div class="ann-dash-section-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <h2 class="ann-dash-section-title">Coordonnées</h2>
+                <p class="ann-dash-section-desc">Comment les patients peuvent vous contacter et vous trouver.</p>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="ann-form-group">
+                <label class="ann-form-label" for="prof-email">Email professionnel *</label>
+                <input class="ann-form-input" type="email" id="prof-email" required maxlength="100">
+              </div>
+              <div class="ann-form-group">
+                <label class="ann-form-label" for="prof-phone">Téléphone</label>
+                <input class="ann-form-input" type="tel" id="prof-phone" placeholder="01 23 45 67 89" maxlength="20">
+              </div>
+            </div>
+            <div class="ann-form-group" style="position:relative;">
+              <label class="ann-form-label" for="prof-address">Adresse du cabinet</label>
+              <input class="ann-form-input" type="text" id="prof-address" placeholder="Commencez à taper votre adresse..." maxlength="200" autocomplete="off">
+              <div id="prof-address-suggestions" style="display:none;position:absolute;left:0;right:0;top:100%;z-index:50;background:hsl(var(--ann-card));border:1px solid hsl(var(--ann-border));border-radius:0 0 var(--ann-radius) var(--ann-radius);max-height:12rem;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
+              <input type="hidden" id="prof-display-city">
+              <input type="hidden" id="prof-postal-code">
+              <input type="hidden" id="prof-lat">
+              <input type="hidden" id="prof-lng">
+            </div>
+
+            <!-- Links sub-section -->
+            <div class="ann-dash-subsection">
+              <p class="ann-dash-subsection-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                Liens externes
+              </p>
+              <div class="ann-form-group" id="dash-website-group">
+                <label class="ann-form-label" for="prof-website">Site web</label>
+                <input class="ann-form-input" type="url" id="prof-website" placeholder="https://www.monsite.fr" maxlength="200" disabled style="opacity:0.5;cursor:not-allowed;">
+                <div id="dash-website-locked" class="ann-dash-locked-hint">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.75rem;height:0.75rem;flex-shrink:0"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                  <span>Disponible avec l'offre <strong>Boost</strong>. <a href="/tarifs/" style="color:hsl(var(--ann-primary));">Voir les tarifs</a></span>
+                </div>
+              </div>
+              <div class="ann-form-group">
+                <label class="ann-form-label" for="prof-doctolib">Lien Doctolib <span class="ann-text-muted" style="font-size:0.75rem; font-weight:400;">(optionnel)</span></label>
+                <input class="ann-form-input" type="url" id="prof-doctolib" placeholder="https://www.doctolib.fr/votre-profil" maxlength="300" disabled style="opacity:0.5; cursor:not-allowed;">
+                <p class="ann-text-muted" style="font-size:0.75rem;margin-top:0.25rem;">
+                  Permet aux patients de prendre rendez-vous directement en ligne.
+                </p>
+                <div id="dash-doctolib-locked" class="ann-dash-locked-hint">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.75rem;height:0.75rem;flex-shrink:0"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                  <span>Disponible avec l'offre <strong>Professionnel</strong> ou <strong>Boost</strong>. <a href="/tarifs/" style="color:hsl(var(--ann-primary));">Voir les tarifs</a></span>
+                </div>
+                <div id="dash-doctolib-error" class="ann-form-error" style="display:none;"></div>
+              </div>
+            </div>
           </div>
 
-          <div class="ann-form-group">
-            <label class="ann-form-label">Langues parlées</label>
-            <div id="prof-languages-container" style="display:flex;flex-wrap:wrap;gap:0.5rem;"></div>
+          <!-- ═══ Section 3: Présentation ═══ -->
+          <div class="ann-dash-section">
+            <div class="ann-dash-section-header">
+              <div class="ann-dash-section-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <div>
+                <h2 class="ann-dash-section-title">Présentation</h2>
+                <p class="ann-dash-section-desc">Décrivez votre parcours et votre approche pour convaincre les patients de vous choisir.</p>
+              </div>
+            </div>
+
+            <div class="ann-form-group">
+              <label class="ann-form-label" for="prof-short-description">Description courte *</label>
+              <div style="position: relative;">
+                <input class="ann-form-input" type="text" id="prof-short-description" placeholder="Ex : Thérapeute de couple spécialisée en communication et gestion des conflits à Lyon." maxlength="165" required style="padding-right: 3.5rem;">
+                <span id="prof-short-desc-counter" style="position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); font-size: 0.6875rem; color: hsl(var(--ann-muted-fg)); pointer-events: none;">0/165</span>
+              </div>
+              <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.25rem;">Apparaît dans les résultats de recherche et comme méta-description (SEO).</p>
+            </div>
+            <div class="ann-form-group">
+              <label class="ann-form-label">Présentation détaillée *</label>
+              <!-- Rich text toolbar -->
+              <div class="ann-rte-toolbar" id="prof-desc-toolbar">
+                <button type="button" data-cmd="bold" title="Gras" class="ann-rte-btn"><strong>G</strong></button>
+                <button type="button" data-cmd="italic" title="Italique" class="ann-rte-btn"><em>I</em></button>
+                <button type="button" data-cmd="underline" title="Souligner" class="ann-rte-btn"><u>S</u></button>
+                <span class="ann-rte-sep"></span>
+                <button type="button" data-cmd="insertUnorderedList" title="Liste à puces" class="ann-rte-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                </button>
+                <button type="button" data-cmd="insertTable" title="Insérer un tableau" class="ann-rte-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+                </button>
+              </div>
+              <!-- Editable area -->
+              <div class="ann-form-input ann-rte-editor" id="prof-description-editor" contenteditable="true" data-placeholder="Décrivez votre parcours, votre approche et ce qui vous distingue..." style="min-height: 8rem; line-height: 1.6; overflow-y: auto;"></div>
+              <!-- Hidden textarea for form submission -->
+              <textarea id="prof-description" style="display:none;"></textarea>
+              <span class="ann-text-muted" style="font-size: 0.75rem;"><span id="prof-desc-count">0</span>/<span id="prof-desc-max">600</span> caractères</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="ann-form-group">
+                <label class="ann-form-label" for="prof-experience">Années d'expérience</label>
+                <input class="ann-form-input" type="number" id="prof-experience" min="0" max="50" placeholder="10">
+              </div>
+              <div class="ann-form-group">
+                <label class="ann-form-label">Tarifs (€/séance)</label>
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                  <input class="ann-form-input" type="number" id="prof-price-min" placeholder="60" min="0" max="9999" step="1" inputmode="numeric" style="flex:1;">
+                  <span class="ann-text-muted">à</span>
+                  <input class="ann-form-input" type="number" id="prof-price-max" placeholder="100" min="0" max="9999" step="1" inputmode="numeric" style="flex:1;">
+                </div>
+                <span class="ann-field-error" id="err-prof-price" style="display:none;"></span>
+              </div>
+            </div>
           </div>
 
-          <div class="ann-form-group">
-            <label class="ann-form-label">Modes de consultation</label>
-            <div id="prof-availability-container" style="display:flex;flex-wrap:wrap;gap:0.75rem;"></div>
+          <!-- ═══ Section 4: Méthodes & Spécialités ═══ -->
+          <div class="ann-dash-section">
+            <div class="ann-dash-section-header">
+              <div class="ann-dash-section-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div>
+                <h2 class="ann-dash-section-title">Méthodes & Spécialités</h2>
+                <p class="ann-dash-section-desc">Sélectionnez vos approches thérapeutiques. Cliquez sur les bulles pour les activer ou les désactiver.</p>
+              </div>
+            </div>
+
+            <div class="ann-form-group">
+              <label class="ann-form-label">Méthodes et approches <span class="ann-text-muted" style="font-size:0.75rem;font-weight:400;" id="prof-methods-limit"></span></label>
+              <div id="prof-methods-container" style="display:flex;flex-wrap:wrap;gap:0.5rem;"></div>
+              <div id="prof-custom-methods-wrapper" style="display:none;margin-top:0.75rem;"></div>
+            </div>
+
+            <div class="ann-form-group">
+              <label class="ann-form-label">Langues parlées</label>
+              <div id="prof-languages-container" style="display:flex;flex-wrap:wrap;gap:0.5rem;"></div>
+            </div>
+
+            <div class="ann-form-group">
+              <label class="ann-form-label">Modes de consultation</label>
+              <div id="prof-availability-container" style="display:flex;flex-wrap:wrap;gap:0.75rem;"></div>
+            </div>
           </div>
 
-          <!-- Opening Hours -->
-          <div class="ann-form-group" style="margin-top: 1rem;">
-            <label class="ann-form-label">Horaires d'ouverture <span class="ann-text-muted" style="font-size:0.75rem;font-weight:400;">(optionnel)</span></label>
+          <!-- ═══ Section 5: Horaires ═══ -->
+          <div class="ann-dash-section">
+            <div class="ann-dash-section-header">
+              <div class="ann-dash-section-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h2 class="ann-dash-section-title">Horaires d'ouverture</h2>
+                <p class="ann-dash-section-desc">Cochez les jours où vous recevez et ajustez les créneaux. <span class="ann-text-muted" style="font-weight:400;">(optionnel)</span></p>
+              </div>
+            </div>
+
             <div class="ann-hours-form" id="dash-hours-form">
               <% const dashDays = [
                 { key: 'monday', label: 'Lundi' },
@@ -365,17 +420,18 @@
             </div>
           </div>
 
-          <div class="ann-divider" style="margin: 1.5rem 0;"></div>
+          <!-- ═══ Section 6: Médias (Photos, Vidéo, Avis) ═══ -->
+          <div id="dash-photos-section" class="ann-dash-section" style="display: none;">
+            <div class="ann-dash-section-header">
+              <div class="ann-dash-section-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+              <div>
+                <h2 class="ann-dash-section-title">Photos du cabinet</h2>
+                <p class="ann-dash-section-desc">Ajoutez des photos pour rassurer les patients. Glissez-déposez ou utilisez les flèches pour réorganiser. <span id="dash-photos-limit" style="font-weight:600;"></span></p>
+              </div>
+            </div>
 
-          <!-- Cabinet Photos (Pro & Boost only) -->
-          <div id="dash-photos-section" style="display: none;">
-            <h2 style="margin-bottom: 0.5rem; font-size: 1rem;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;vertical-align:middle;margin-right:0.25rem"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-              Photos du cabinet
-            </h2>
-            <p class="ann-text-muted" style="font-size: 0.8125rem; margin-bottom: 1rem; line-height: 1.6;">
-              Ajoutez des photos de votre cabinet pour rassurer les patients. Glissez-déposez ou utilisez les flèches pour réorganiser l'ordre. <span id="dash-photos-limit" class="ann-text-muted" style="font-weight:600;"></span>
-            </p>
             <div id="dash-photos-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); gap: 0.75rem; margin-bottom: 1rem;">
             </div>
             <label class="ann-btn ann-btn-outline ann-btn-sm" style="cursor:pointer;" id="dash-photos-add-label">
@@ -385,19 +441,19 @@
             </label>
             <p class="ann-text-muted" style="font-size: 0.75rem; margin-top: 0.5rem;">JPEG, PNG ou WebP. 300 Ko max par photo.</p>
             <div id="dash-photos-error" class="ann-form-error" style="display:none;"></div>
-
-            <div class="ann-divider" style="margin: 1.5rem 0;"></div>
           </div>
 
-          <!-- Video (Boost only) -->
-          <div id="dash-video-section" style="display: none;">
-            <h2 style="margin-bottom: 0.5rem; font-size: 1rem;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;vertical-align:middle;margin-right:0.25rem"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-              Vidéo de présentation
-            </h2>
-            <p class="ann-text-muted" style="font-size: 0.8125rem; margin-bottom: 1rem; line-height: 1.6;">
-              Ajoutez un lien YouTube pour présenter votre cabinet et votre approche en vidéo. Cela apparaîtra sur votre fiche publique.
-            </p>
+          <div id="dash-video-section" class="ann-dash-section" style="display: none;">
+            <div class="ann-dash-section-header">
+              <div class="ann-dash-section-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+              </div>
+              <div>
+                <h2 class="ann-dash-section-title">Vidéo de présentation</h2>
+                <p class="ann-dash-section-desc">Ajoutez un lien YouTube pour présenter votre cabinet en vidéo. Apparaîtra sur votre fiche publique.</p>
+              </div>
+            </div>
+
             <div class="ann-form-group">
               <label class="ann-form-label" for="prof-video-url">Lien YouTube</label>
               <input class="ann-form-input" type="url" id="prof-video-url" placeholder="https://www.youtube.com/watch?v=..." maxlength="300">
@@ -405,20 +461,19 @@
             </div>
             <div id="dash-video-preview" style="display:none; margin-bottom: 1rem; border-radius: var(--ann-radius); overflow: hidden; aspect-ratio: 16/9; max-width: 28rem;">
             </div>
-
-            <div class="ann-divider" style="margin: 1.5rem 0;"></div>
           </div>
 
-          <!-- Google Reviews (Boost only) -->
-          <div id="dash-google-reviews-section" style="display: none;">
-            <div class="ann-divider" style="margin: 1.5rem 0;"></div>
-            <h2 style="margin-bottom: 0.5rem; font-size: 1rem;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;vertical-align:middle;margin-right:0.25rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              Avis Google
-            </h2>
-            <p class="ann-text-muted" style="font-size: 0.8125rem; margin-bottom: 1rem; line-height: 1.6;">
-              Connectez votre fiche Google Business pour afficher automatiquement vos avis. La note moyenne, le nombre total d'avis et vos 3 derniers avis seront synchronisés chaque mois.
-            </p>
+          <div id="dash-google-reviews-section" class="ann-dash-section" style="display: none;">
+            <div class="ann-dash-section-header">
+              <div class="ann-dash-section-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div>
+                <h2 class="ann-dash-section-title">Avis Google</h2>
+                <p class="ann-dash-section-desc">Connectez votre fiche Google Business pour afficher vos avis automatiquement (synchronisation mensuelle).</p>
+              </div>
+            </div>
+
             <div class="ann-form-group">
               <label class="ann-form-label" for="prof-google-place-id">Google Place ID</label>
               <input class="ann-form-input" type="text" id="prof-google-place-id" placeholder="Ex : ChIJe2jeNttx5kcRXwGMo8coG1w" maxlength="200">
@@ -453,11 +508,11 @@
             <div id="dash-google-reviews-status" style="display: none; margin-top: 0.75rem; padding: 0.75rem 1rem; border-radius: var(--ann-radius); background: hsl(var(--ann-muted) / 0.3); font-size: 0.8125rem;"></div>
           </div>
 
-          <!-- Publication note (admin-controlled, hidden when published) -->
+          <!-- ═══ Save & Status ═══ -->
           <input type="hidden" id="prof-published" value="">
-          <div id="dash-moderation-note" style="margin-bottom: 1.5rem; margin-top: 1.5rem; padding: 1rem; background: hsl(var(--ann-muted) / 0.3); border-radius: var(--ann-radius);">
-            <p class="ann-text-muted" style="font-size: 0.8125rem;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem;vertical-align:middle;margin-right:0.25rem"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <div id="dash-moderation-note" class="ann-dash-info-banner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;flex-shrink:0;color:hsl(var(--ann-primary))"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <p style="font-size: 0.8125rem; color: hsl(var(--ann-muted-fg)); margin: 0;">
               La publication de votre fiche est gérée par notre équipe de modération. Vous serez notifié par email lorsque votre fiche sera en ligne.
             </p>
           </div>
@@ -465,10 +520,10 @@
           <div id="dash-profile-error" class="ann-form-error" style="display:none;"></div>
           <div id="dash-profile-success" class="ann-form-success" style="display:none;"></div>
 
-          <div style="display: flex; gap: 0.75rem;">
+          <div class="ann-dash-save-bar">
             <button type="submit" class="ann-btn ann-btn-primary" id="dash-save-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
-              Enregistrer
+              Enregistrer les modifications
             </button>
           </div>
         </form>
