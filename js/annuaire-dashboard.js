@@ -1209,7 +1209,11 @@
         } else if (res.profile) {
           currentProfile = res.profile;
           updateProfileStatus(currentProfile);
-          $('dash-profile-success').textContent = 'Fiche enregistrée avec succès !';
+          var successMsg = 'Fiche enregistrée avec succès !';
+          if (res.profile.google_place_id && res.profile.plan === 'boost') {
+            successMsg += ' Les avis Google sont en cours de synchronisation (quelques secondes).';
+          }
+          $('dash-profile-success').textContent = successMsg;
           show($('dash-profile-success'));
           if (currentProfile.slug && currentProfile.is_published) {
             var link = $('dash-view-profile');
