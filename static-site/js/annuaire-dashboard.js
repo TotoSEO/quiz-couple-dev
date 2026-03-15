@@ -749,6 +749,65 @@
     return modes;
   }
 
+  // ── Opening hours: populate dashboard form from DB data ──
+  function populateDashHours(oh) {
+    var days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+    days.forEach(function (day) {
+      var toggle = document.querySelector('.ann-dash-hours-toggle[data-day="' + day + '"]');
+      var slots = document.querySelector('#dash-hours-form .ann-hours-form-slots[data-day="' + day + '"]');
+      if (!toggle || !slots) return;
+      if (oh && oh[day] && !oh[day].closed) {
+        toggle.checked = true;
+        slots.classList.remove('disabled');
+        var d = oh[day];
+        if (d.morning_start) slots.querySelector('input[name="dash_hours_' + day + '_am_start"]').value = d.morning_start;
+        if (d.morning_end) slots.querySelector('input[name="dash_hours_' + day + '_am_end"]').value = d.morning_end;
+        if (d.afternoon_start) slots.querySelector('input[name="dash_hours_' + day + '_pm_start"]').value = d.afternoon_start;
+        if (d.afternoon_end) slots.querySelector('input[name="dash_hours_' + day + '_pm_end"]').value = d.afternoon_end;
+      } else {
+        toggle.checked = false;
+        slots.classList.add('disabled');
+      }
+    });
+  }
+
+  // ── Opening hours: collect from dashboard form ──
+  function collectDashHours() {
+    var days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+    var hasAny = false;
+    var result = {};
+    days.forEach(function (day) {
+      var toggle = document.querySelector('.ann-dash-hours-toggle[data-day="' + day + '"]');
+      if (!toggle || !toggle.checked) {
+        result[day] = { closed: true };
+        return;
+      }
+      hasAny = true;
+      var prefix = 'dash_hours_' + day;
+      result[day] = {
+        closed: false,
+        morning_start: (document.querySelector('input[name="' + prefix + '_am_start"]') || {}).value || null,
+        morning_end: (document.querySelector('input[name="' + prefix + '_am_end"]') || {}).value || null,
+        afternoon_start: (document.querySelector('input[name="' + prefix + '_pm_start"]') || {}).value || null,
+        afternoon_end: (document.querySelector('input[name="' + prefix + '_pm_end"]') || {}).value || null,
+      };
+    });
+    return hasAny ? result : null;
+  }
+
+  // ── Dashboard hours toggle ──
+  document.querySelectorAll('.ann-dash-hours-toggle').forEach(function (cb) {
+    function toggle() {
+      var day = cb.getAttribute('data-day');
+      var slots = document.querySelector('#dash-hours-form .ann-hours-form-slots[data-day="' + day + '"]');
+      if (slots) {
+        if (cb.checked) slots.classList.remove('disabled');
+        else slots.classList.add('disabled');
+      }
+    }
+    cb.addEventListener('change', toggle);
+  });
+
   function fillForm(profile) {
     if (!profile) return;
     $('prof-firstname').value = profile.first_name || '';
@@ -816,6 +875,9 @@
     rebuildMethods(profile.specialty, profile.methods || []);
     buildBubbles('prof-languages-container', LANGUAGES, profile.languages || []);
     buildConsultationModes('prof-availability-container', parseAvailability(profile.availability));
+
+    // Opening hours
+    populateDashHours(profile.opening_hours);
 
     // Photo preview
     if (profile.photo_url) {
@@ -926,6 +988,7 @@
       methods: getSelectedBubbles('prof-methods-container').concat(getCustomMethods()),
       languages: getSelectedBubbles('prof-languages-container'),
       availability: getSelectedBubbles('prof-availability-container').join(', ') || null,
+      opening_hours: collectDashHours(),
     };
     var doctolibInput = $('prof-doctolib');
     if (doctolibInput && !doctolibInput.disabled) {

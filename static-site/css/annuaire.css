@@ -1603,6 +1603,61 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
   color: hsl(var(--ann-primary));
 }
 
+/* Hours Form */
+.ann-hours-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ann-hours-form-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid hsl(var(--ann-border) / 0.3);
+}
+.ann-hours-form-row:last-child { border-bottom: none; }
+.ann-hours-form-day {
+  min-width: 8rem;
+  flex-shrink: 0;
+}
+.ann-hours-form-day .ann-checkbox-label {
+  font-size: 0.875rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ann-checkbox-sm {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.ann-hours-form-slots {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+}
+.ann-hours-form-slots.disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+.ann-input-time {
+  width: 5.5rem;
+  padding: 0.25rem 0.375rem;
+  font-size: 0.8125rem;
+  text-align: center;
+}
+.ann-hours-sep {
+  margin: 0 0.125rem;
+}
+@media (max-width: 639px) {
+  .ann-hours-form-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.375rem;
+  }
+  .ann-hours-form-day { min-width: auto; }
+}
+
 /* Checkbox */
 .ann-checkbox-label {
   display: flex;
@@ -2446,18 +2501,74 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   color: var(--spec-color, hsl(var(--ann-primary)));
   margin-top: 0.25rem;
 }
-.ann-profile-quick-info {
+/* ── Hero Split 50/50 ────────────────────────────────────────────────── */
+.ann-profile-hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+.ann-profile-hero-left {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 0.75rem;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.ann-profile-hero-right {
+  border-radius: var(--ann-radius);
+  overflow: hidden;
+}
+.ann-map-hero {
+  height: 22rem;
+  border-radius: var(--ann-radius);
+}
+.ann-profile-quick-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ann-profile-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.875rem;
   color: hsl(var(--ann-muted-fg));
 }
-.ann-profile-quick-info span {
-  display: inline-flex;
+.ann-profile-detail-item svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  color: hsl(var(--ann-primary));
+}
+.ann-profile-hero-cta {
+  margin-top: 0.25rem;
+}
+
+/* ── Hours Card ──────────────────────────────────────────────────────── */
+.ann-hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.ann-hours-row {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.375rem;
+  padding: 0.5rem 0;
+  font-size: 0.8125rem;
+  border-bottom: 1px solid hsl(var(--ann-border) / 0.3);
+}
+.ann-hours-row:last-child { border-bottom: none; }
+.ann-hours-day {
+  font-weight: 500;
+  color: hsl(var(--ann-fg));
+}
+.ann-hours-time {
+  color: hsl(var(--ann-muted-fg));
+}
+.ann-hours-closed .ann-hours-time {
+  color: hsl(var(--ann-danger, 0 65% 50%));
+  font-size: 0.75rem;
 }
 
 /* ── Profile Layout (main + sidebar) ─────────────────────────────────── */
@@ -2578,6 +2689,10 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
 
 /* ── Profile Responsive ──────────────────────────────────────────────── */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .ann-profile-hero-split {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ann-map-hero { height: 18rem; }
   .ann-profile-layout {
     grid-template-columns: 1fr 18rem;
   }
@@ -2586,19 +2701,23 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   }
 }
 @media (max-width: 767px) {
+  .ann-profile-hero-split {
+    grid-template-columns: 1fr;
+  }
+  .ann-map-hero { height: 14rem; }
   .ann-profile-layout {
     grid-template-columns: 1fr;
   }
   .ann-profile-sidebar {
     position: static;
-    order: -1;
   }
   .ann-profile-header {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .ann-profile-quick-info { justify-content: center; }
+  .ann-profile-quick-details { align-items: center; }
+  .ann-profile-hero-cta { text-align: center; }
   .ann-profile-row {
     grid-template-columns: 1fr;
   }

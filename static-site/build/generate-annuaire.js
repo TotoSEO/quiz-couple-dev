@@ -180,6 +180,7 @@ async function fetchLiveProfessionals() {
       videoUrl: r.video_url || '',
       googlePlaceId: r.google_place_id || null,
       doctolibUrl: r.doctolib_url || '',
+      openingHours: r.opening_hours || null,
     }));
   } catch (err) {
     if (isCI) {
