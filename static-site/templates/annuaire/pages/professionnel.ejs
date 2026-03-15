@@ -81,10 +81,15 @@
       <div class="ann-profile-identity">
         <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
           <h1 class="ann-profile-name"><%= pro.firstName %> <%= pro.lastName %></h1>
-          <% if (pro.premium) { %>
-          <span class="ann-badge ann-badge-premium">
+          <% if (pro.plan === 'boost') { %>
+          <span class="ann-badge ann-badge-mini ann-badge-mini-boost">
             <svg viewBox="0 0 24 24" fill="currentColor" style="width:0.625rem;height:0.625rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            Premium
+            Top Pro
+          </span>
+          <% } else if (pro.plan === 'pro') { %>
+          <span class="ann-badge ann-badge-mini ann-badge-mini-pro">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.625rem;height:0.625rem"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Certifié
           </span>
           <% } %>
         </div>
@@ -572,8 +577,11 @@
   document.querySelectorAll('.ann-contact-item[href*="doctolib"], a[href*="doctolib"]').forEach(function(el) {
     el.addEventListener('click', function() { track({ type: 'click', professional_id: PRO_ID, click_type: 'appointment' }); });
   });
-  document.querySelectorAll('.ann-contact-item[target="_blank"]:not([href*="doctolib"])').forEach(function(el) {
-    if (el.querySelector('span') && el.querySelector('span').textContent.trim() === 'Site web') {
+  // Website clicks: contact card + informations pratiques
+  document.querySelectorAll('.ann-contact-item[target="_blank"]:not([href*="doctolib"]), .ann-profile-info-row a[target="_blank"]').forEach(function(el) {
+    var span = el.querySelector('span');
+    var isWebsite = (span && span.textContent.trim() === 'Site web') || el.closest('.ann-profile-info-row');
+    if (isWebsite) {
       el.addEventListener('click', function() { track({ type: 'click', professional_id: PRO_ID, click_type: 'website' }); });
     }
   });

@@ -304,6 +304,22 @@ serve(async (req: Request) => {
         }
       }
 
+      // If google_place_id was set/updated, trigger immediate Google reviews sync
+      if (updates.google_place_id && data?.id && data?.plan === 'boost') {
+        try {
+          const syncUrl = Deno.env.get('SUPABASE_URL') + '/functions/v1/sync-google-reviews';
+          const serviceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+          fetch(syncUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + serviceKey },
+            body: JSON.stringify({ professional_id: data.id }),
+          }).catch(e => console.warn('[profile] Google reviews sync trigger error:', e));
+          console.log('[profile] Triggered immediate Google reviews sync for', data.id);
+        } catch (e) {
+          console.warn('[profile] Google reviews sync trigger error:', e);
+        }
+      }
+
       // Queue deploy if profile is published (rebuild static pages with fresh data)
       if (data && data.is_published) {
         await queueDeploy('profile updated: ' + data.slug);

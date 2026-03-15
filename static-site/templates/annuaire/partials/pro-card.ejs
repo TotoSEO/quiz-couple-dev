@@ -4,11 +4,18 @@
   const proCity = cities.find(c => c.id === pro.city);
 %>
 <a href="/<%= pro.specialty %>/<%= pro.city %>/<%= pro.slug %>/" class="ann-pro-card<%= pro.premium ? ' ann-pro-card-premium' : '' %> ann-animate-fade-in-up" style="text-decoration:none;color:inherit;display:block;">
-  <% if (pro.premium) { %>
+  <% if (pro.plan === 'boost') { %>
   <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
-    <div class="ann-badge ann-badge-premium" style="font-size: 0.6875rem;">
+    <div class="ann-badge ann-badge-mini ann-badge-mini-boost" style="font-size: 0.6875rem;">
       <svg viewBox="0 0 24 24" fill="currentColor" style="width:0.625rem;height:0.625rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      Premium
+      Top Pro
+    </div>
+  </div>
+  <% } else if (pro.plan === 'pro') { %>
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
+    <div class="ann-badge ann-badge-mini ann-badge-mini-pro" style="font-size: 0.6875rem;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.625rem;height:0.625rem"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      Certifié
     </div>
   </div>
   <% } %>

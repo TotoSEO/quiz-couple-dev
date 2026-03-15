@@ -178,7 +178,7 @@
     }
 
     var map = L.map(container, {
-      scrollWheelZoom: false,
+      scrollWheelZoom: true,
       zoomControl: true,
     }).setView(defaultCenter, defaultZoom);
 
