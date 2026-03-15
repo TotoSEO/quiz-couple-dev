@@ -447,25 +447,51 @@
   }
 
   // ── Cabinet Photos (Pro/Boost) ──
+  function getYouTubeThumb(videoUrl) {
+    if (!videoUrl) return '';
+    var m = videoUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/);
+    return m ? 'https://img.youtube.com/vi/' + m[1] + '/hqdefault.jpg' : '';
+  }
+
   function renderCabinetPhotos(photos, maxPhotos) {
     var grid = $('dash-photos-grid');
     var addLabel = $('dash-photos-add-label');
     if (!grid) return;
     grid.innerHTML = '';
-    var count = (photos || []).length;
-    (photos || []).forEach(function (url, idx) {
+    var items = (photos || []).slice();
+    var count = items.length;
+    var photoCount = items.filter(function(u) { return u !== 'video'; }).length;
+    items.forEach(function (url, idx) {
+      var isVideo = (url === 'video');
       var card = document.createElement('div');
       card.className = 'ann-dash-photo-card';
       card.setAttribute('draggable', 'true');
       card.setAttribute('data-photo-idx', idx);
-      card.innerHTML =
-        '<span class="ann-dash-photo-badge">N°' + (idx + 1) + '</span>' +
-        '<img src="' + url + '" alt="Photo cabinet ' + (idx + 1) + '">' +
-        '<div class="ann-dash-photo-actions">' +
-          (idx > 0 ? '<button type="button" data-move-photo-up="' + idx + '" class="ann-dash-photo-btn" title="Déplacer avant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M15 18l-6-6 6-6"/></svg></button>' : '') +
-          (idx < count - 1 ? '<button type="button" data-move-photo-down="' + idx + '" class="ann-dash-photo-btn" title="Déplacer après"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M9 18l6-6-6-6"/></svg></button>' : '') +
-          '<button type="button" data-remove-photo="' + idx + '" class="ann-dash-photo-btn ann-dash-photo-btn-danger" title="Supprimer">&times;</button>' +
-        '</div>';
+
+      if (isVideo) {
+        var thumb = getYouTubeThumb(currentProfile && currentProfile.video_url);
+        card.innerHTML =
+          '<span class="ann-dash-photo-badge" style="background:hsl(0 0% 15%);">N°' + (idx + 1) + '</span>' +
+          (thumb ? '<img src="' + thumb + '" alt="Vidéo">' : '<div style="width:100%;height:100%;background:hsl(var(--ann-muted)/0.5);display:flex;align-items:center;justify-content:center;color:hsl(var(--ann-muted-fg));">Vidéo</div>') +
+          '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">' +
+            '<div style="width:2.5rem;height:2.5rem;border-radius:50%;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;">' +
+              '<svg viewBox="0 0 24 24" fill="white" style="width:1.25rem;height:1.25rem;margin-left:2px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>' +
+            '</div>' +
+          '</div>' +
+          '<div class="ann-dash-photo-actions">' +
+            (idx > 0 ? '<button type="button" data-move-photo-up="' + idx + '" class="ann-dash-photo-btn" title="Déplacer avant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M15 18l-6-6 6-6"/></svg></button>' : '') +
+            (idx < count - 1 ? '<button type="button" data-move-photo-down="' + idx + '" class="ann-dash-photo-btn" title="Déplacer après"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M9 18l6-6-6-6"/></svg></button>' : '') +
+          '</div>';
+      } else {
+        card.innerHTML =
+          '<span class="ann-dash-photo-badge">N°' + (idx + 1) + '</span>' +
+          '<img src="' + url + '" alt="Photo cabinet ' + (idx + 1) + '">' +
+          '<div class="ann-dash-photo-actions">' +
+            (idx > 0 ? '<button type="button" data-move-photo-up="' + idx + '" class="ann-dash-photo-btn" title="Déplacer avant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M15 18l-6-6 6-6"/></svg></button>' : '') +
+            (idx < count - 1 ? '<button type="button" data-move-photo-down="' + idx + '" class="ann-dash-photo-btn" title="Déplacer après"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M9 18l6-6-6-6"/></svg></button>' : '') +
+            '<button type="button" data-remove-photo="' + idx + '" class="ann-dash-photo-btn ann-dash-photo-btn-danger" title="Supprimer">&times;</button>' +
+          '</div>';
+      }
       // Drag & drop
       card.addEventListener('dragstart', function(e) {
         e.dataTransfer.setData('text/plain', idx);
@@ -483,8 +509,8 @@
       });
       grid.appendChild(card);
     });
-    // Show/hide add button based on limit
-    if (addLabel) addLabel.style.display = count >= maxPhotos ? 'none' : '';
+    // Show/hide add button based on limit (don't count video marker towards photo limit)
+    if (addLabel) addLabel.style.display = photoCount >= maxPhotos ? 'none' : '';
   }
 
   async function reorderPhotos(fromIdx, toIdx) {
@@ -804,7 +830,13 @@
     var photosSection = $('dash-photos-section');
     if (photosSection && (profile.plan === 'pro' || profile.plan === 'boost')) {
       show(photosSection);
-      var maxPhotos = profile.plan === 'boost' ? 4 : 2; // +1 profile photo = 5 or 3 total
+      var maxPhotos = profile.plan === 'boost' ? 4 : 2;
+
+      // Auto-add video marker for existing Boost profiles with video but no marker
+      if (profile.plan === 'boost' && profile.video_url && Array.isArray(profile.photos) && profile.photos.indexOf('video') === -1) {
+        profile.photos = ['video'].concat(profile.photos);
+      }
+
       var limitEl = $('dash-photos-limit');
       if (limitEl) limitEl.textContent = '(max ' + maxPhotos + ' photos)';
       renderCabinetPhotos(profile.photos || [], maxPhotos);
@@ -1141,6 +1173,21 @@
         } catch (e) {
           showError('dash-profile-error', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
           return;
+        }
+      }
+
+      // Sync video marker in photos array
+      if (currentProfile && currentProfile.plan === 'boost') {
+        var photos = (currentProfile.photos || []).slice();
+        var hasVideoMarker = photos.indexOf('video') !== -1;
+        var hasVideoUrl = data.video_url && data.video_url.length > 0;
+        if (hasVideoUrl && !hasVideoMarker) {
+          // Insert video marker at position 0 (hero) by default
+          photos.unshift('video');
+          data.photos = photos;
+        } else if (!hasVideoUrl && hasVideoMarker) {
+          // Remove video marker
+          data.photos = photos.filter(function(p) { return p !== 'video'; });
         }
       }
 

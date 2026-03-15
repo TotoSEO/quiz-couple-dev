@@ -2916,6 +2916,17 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   display: block;
 }
 
+/* ── Video in gallery ─────────────────────────────────────────────────── */
+.ann-gallery-video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  cursor: default;
+}
+.ann-gallery-video:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 /* ── Pro layout: 2 photos side by side (50/50) ────────────────────────── */
 .ann-gallery-duo {
   display: grid;

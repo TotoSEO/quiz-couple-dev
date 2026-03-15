@@ -168,7 +168,14 @@ async function fetchLiveProfessionals() {
       availability: r.availability || 'Sur rendez-vous',
       premium: r.plan === 'pro' || r.plan === 'boost',
       plan: r.plan || 'gratuit',
-      photos: r.photos || [],
+      photos: (() => {
+        const photos = r.photos || [];
+        // Auto-add video marker for profiles with video but no marker
+        if (r.video_url && r.plan === 'boost' && !photos.includes('video')) {
+          return ['video', ...photos];
+        }
+        return photos;
+      })(),
       videoUrl: r.video_url || '',
       googlePlaceId: r.google_place_id || null,
       doctolibUrl: r.doctolib_url || '',
