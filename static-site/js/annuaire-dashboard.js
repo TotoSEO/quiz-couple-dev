@@ -62,6 +62,80 @@
   ];
 
   var METHODS_LIMITS = { 'gratuit': 3, 'pro': 5, 'boost': 7 };
+  var DESC_LIMITS = { 'gratuit': 600, 'pro': 1000, 'boost': 2000 };
+
+  // ── Rich Text Editor ──
+  function syncEditorToTextarea(editorId, textareaId) {
+    var editor = $(editorId);
+    var textarea = $(textareaId);
+    if (editor && textarea) {
+      textarea.value = editor.innerHTML.trim();
+    }
+    return textarea ? textarea.value : '';
+  }
+
+  function initRichTextEditor(toolbarId, editorId, textareaId, countId, maxId) {
+    var toolbar = $(toolbarId);
+    var editor = $(editorId);
+    if (!toolbar || !editor) return;
+
+    // Toolbar buttons
+    toolbar.querySelectorAll('.ann-rte-btn').forEach(function (btn) {
+      btn.addEventListener('mousedown', function (e) {
+        e.preventDefault(); // Keep focus in editor
+      });
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var cmd = btn.getAttribute('data-cmd');
+        if (cmd === 'insertTable') {
+          // Check if table already exists
+          if (editor.querySelector('table')) {
+            alert('Un seul tableau est autorise par description.');
+            return;
+          }
+          var cols = prompt('Nombre de colonnes (2 a 5) :', '3');
+          cols = parseInt(cols, 10);
+          if (isNaN(cols) || cols < 2) cols = 2;
+          if (cols > 5) cols = 5;
+          var rows = prompt('Nombre de lignes (2 a 10) :', '3');
+          rows = parseInt(rows, 10);
+          if (isNaN(rows) || rows < 2) rows = 2;
+          if (rows > 10) rows = 10;
+          var tableHtml = '<table><thead><tr>';
+          for (var c = 0; c < cols; c++) tableHtml += '<th>En-tete</th>';
+          tableHtml += '</tr></thead><tbody>';
+          for (var r = 0; r < rows - 1; r++) {
+            tableHtml += '<tr>';
+            for (var c2 = 0; c2 < cols; c2++) tableHtml += '<td>...</td>';
+            tableHtml += '</tr>';
+          }
+          tableHtml += '</tbody></table><p><br></p>';
+          document.execCommand('insertHTML', false, tableHtml);
+        } else {
+          document.execCommand(cmd, false, null);
+        }
+        editor.focus();
+        updateCount();
+      });
+    });
+
+    function updateCount() {
+      var count = (editor.textContent || '').length;
+      var countEl = $(countId);
+      if (countEl) countEl.textContent = count;
+      syncEditorToTextarea(editorId, textareaId);
+    }
+
+    editor.addEventListener('input', updateCount);
+    editor.addEventListener('blur', updateCount);
+
+    // Prevent pasting HTML (paste as plain text to avoid messy formatting)
+    editor.addEventListener('paste', function (e) {
+      e.preventDefault();
+      var text = (e.clipboardData || window.clipboardData).getData('text/plain');
+      document.execCommand('insertText', false, text);
+    });
+  }
 
   // ── Password validation ──
   function validatePassword(pw) {
@@ -484,7 +558,12 @@
     if ($('prof-lng') && profile.lng) $('prof-lng').value = profile.lng;
     $('prof-website').value = profile.website || '';
     if ($('prof-doctolib')) $('prof-doctolib').value = profile.doctolib_url || '';
-    $('prof-description').value = profile.description || '';
+    var descVal = profile.description || '';
+    $('prof-description').value = descVal;
+    var descEditor = $('prof-description-editor');
+    if (descEditor) {
+      descEditor.innerHTML = descVal;
+    }
     $('prof-experience').value = profile.years_experience || '';
     // Parse price_range "60€ - 100€" into min/max
     if (profile.price_range) {
@@ -501,9 +580,14 @@
       $('prof-price-max').value = '';
     }
 
-    // Update char count
-    var descEl = $('prof-description');
-    if (descEl) $('prof-desc-count').textContent = (descEl.value || '').length;
+    // Update char count and limit from editor
+    var plan = profile.plan || 'gratuit';
+    var descMax = DESC_LIMITS[plan] || 600;
+    var descMaxEl = $('prof-desc-max');
+    if (descMaxEl) descMaxEl.textContent = descMax;
+    if (descEditor) {
+      $('prof-desc-count').textContent = (descEditor.textContent || '').length;
+    }
 
     // Lock name and specialty if profile already exists in DB
     if (profile.id) {
@@ -604,7 +688,7 @@
       lat: $('prof-lat') && $('prof-lat').value ? parseFloat($('prof-lat').value) : undefined,
       lng: $('prof-lng') && $('prof-lng').value ? parseFloat($('prof-lng').value) : undefined,
       website: $('prof-website').disabled ? undefined : ($('prof-website').value.trim() || null),
-      description: $('prof-description').value.trim(),
+      description: syncEditorToTextarea('prof-description-editor', 'prof-description'),
       years_experience: parseInt($('prof-experience').value) || 0,
       price_range: (function() {
         var pmin = $('prof-price-min').value.trim();
@@ -748,16 +832,20 @@
       });
     });
 
-    // Handle URL hash to auto-switch tabs (e.g. /dashboard/#billing)
+    // Handle URL hash to auto-switch tabs (e.g. /dashboard/#billing, /dashboard/#subscription)
     var tabHash = window.location.hash.replace('#', '');
-    if (tabHash === 'billing' || tabHash === 'stats') {
-      activateTab(tabHash);
+    if (tabHash === 'billing' || tabHash === 'stats' || tabHash === 'subscription') {
+      activateTab('billing');
+      if (tabHash === 'subscription') {
+        setTimeout(function () {
+          var subEl = document.getElementById('subscription');
+          if (subEl) subEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 200);
+      }
     }
 
-    // Description char count
-    $('prof-description').addEventListener('input', function () {
-      $('prof-desc-count').textContent = this.value.length;
-    });
+    // ── Rich Text Editor init (dashboard) ──
+    initRichTextEditor('prof-desc-toolbar', 'prof-description-editor', 'prof-description', 'prof-desc-count', 'prof-desc-max');
 
     // Specialty change → rebuild methods
     $('prof-specialty').addEventListener('change', function () {
@@ -1458,15 +1546,14 @@
       if (plan === 'gratuit') {
         actionBtn.textContent = 'Passer à un abonnement';
         show(actionBtn);
+        actionBtn.onclick = function(e) {
+          e.preventDefault();
+          var billingTab = document.querySelector('[data-dash-tab="billing"]');
+          if (billingTab) billingTab.click();
+        };
       } else {
-        actionBtn.textContent = 'Gérer mon abonnement';
-        show(actionBtn);
+        hide(actionBtn);
       }
-      actionBtn.onclick = function(e) {
-        e.preventDefault();
-        var billingTab = document.querySelector('[data-dash-tab="billing"]');
-        if (billingTab) billingTab.click();
-      };
     }
 
     show(banner);

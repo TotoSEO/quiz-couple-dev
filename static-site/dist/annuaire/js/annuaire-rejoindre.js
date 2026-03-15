@@ -11,6 +11,58 @@
   var SUPABASE_URL = 'https://lojvajnnvhatfplevyvy.supabase.co';
   var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
 
+  // ── Rich Text Editor helper ──
+  function initRichTextEditorRejoindre(toolbarId, editorId, textareaId, countId) {
+    var toolbar = document.getElementById(toolbarId);
+    var editor = document.getElementById(editorId);
+    var textarea = document.getElementById(textareaId);
+    if (!toolbar || !editor) return;
+
+    toolbar.querySelectorAll('.ann-rte-btn').forEach(function (btn) {
+      btn.addEventListener('mousedown', function (e) { e.preventDefault(); });
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var cmd = btn.getAttribute('data-cmd');
+        if (cmd === 'insertTable') {
+          if (editor.querySelector('table')) { alert('Un seul tableau est autorise par description.'); return; }
+          var cols = prompt('Nombre de colonnes (2 a 5) :', '3');
+          cols = parseInt(cols, 10);
+          if (isNaN(cols) || cols < 2) cols = 2;
+          if (cols > 5) cols = 5;
+          var rows = prompt('Nombre de lignes (2 a 10) :', '3');
+          rows = parseInt(rows, 10);
+          if (isNaN(rows) || rows < 2) rows = 2;
+          if (rows > 10) rows = 10;
+          var html = '<table><thead><tr>';
+          for (var c = 0; c < cols; c++) html += '<th>En-tete</th>';
+          html += '</tr></thead><tbody>';
+          for (var r = 0; r < rows - 1; r++) { html += '<tr>'; for (var c2 = 0; c2 < cols; c2++) html += '<td>...</td>'; html += '</tr>'; }
+          html += '</tbody></table><p><br></p>';
+          document.execCommand('insertHTML', false, html);
+        } else {
+          document.execCommand(cmd, false, null);
+        }
+        editor.focus();
+        updateCount();
+      });
+    });
+
+    function updateCount() {
+      var count = (editor.textContent || '').length;
+      var countEl = document.getElementById(countId);
+      if (countEl) countEl.textContent = count;
+      if (textarea) textarea.value = editor.innerHTML.trim();
+    }
+
+    editor.addEventListener('input', updateCount);
+    editor.addEventListener('blur', updateCount);
+    editor.addEventListener('paste', function (e) {
+      e.preventDefault();
+      var text = (e.clipboardData || window.clipboardData).getData('text/plain');
+      document.execCommand('insertText', false, text);
+    });
+  }
+
   var form = document.getElementById('rejoindre-form');
   if (!form) return;
 
@@ -112,7 +164,6 @@
     { input: 'f-nom', counter: 'count-nom' },
     { input: 'f-titre', counter: 'count-titre' },
     { input: 'f-cabinet', counter: 'count-cabinet' },
-    { input: 'f-description', counter: 'count-description' },
   ];
 
   counters.forEach(function (c) {
@@ -124,6 +175,9 @@
     input.addEventListener('input', update);
     update();
   });
+
+  // ── Rich Text Editor (registration) ──
+  initRichTextEditorRejoindre('f-desc-toolbar', 'f-description-editor', 'f-description', 'count-description');
 
   // ── Limit digit count on numeric inputs ────────────────────────
   function limitDigits(inputId, maxDigits) {
@@ -405,9 +459,13 @@
     }
 
     if (step === 4) {
-      var desc = val('f-description');
-      if (!desc) { showError('err-description', 'La description est requise'); valid = false; }
-      else if (desc.length < 50) { showError('err-description', 'Minimum 50 caractères (' + desc.length + '/50)'); valid = false; }
+      // Sync rich text editor to hidden textarea
+      var descEditorEl = document.getElementById('f-description-editor');
+      var descTextareaEl = document.getElementById('f-description');
+      if (descEditorEl && descTextareaEl) descTextareaEl.value = descEditorEl.innerHTML.trim();
+      var descText = descEditorEl ? (descEditorEl.textContent || '').trim() : val('f-description');
+      if (!descText) { showError('err-description', 'La description est requise'); valid = false; }
+      else if (descText.length < 50) { showError('err-description', 'Minimum 50 caractères (' + descText.length + '/50)'); valid = false; }
       var pmin = val('f-prix-min');
       var pmax = val('f-prix-max');
       if (!pmin) { showError('err-prix-min', 'Requis'); valid = false; }
@@ -563,7 +621,8 @@
     var langues = getSelectedBubbles(languesContainer);
     setText('recap-langues', langues.length ? langues.join(', ') : 'Non renseigné');
 
-    setText('recap-description', val('f-description'));
+    var recapDescEditor = document.getElementById('f-description-editor');
+    setText('recap-description', recapDescEditor ? (recapDescEditor.textContent || '') : val('f-description'));
   }
 
   function setText(id, text) {
@@ -608,6 +667,11 @@
 
       var pmin = val('f-prix-min');
       var pmax = val('f-prix-max');
+
+      // Sync editor to textarea before reading
+      var subDescEditor = document.getElementById('f-description-editor');
+      var subDescTextarea = document.getElementById('f-description');
+      if (subDescEditor && subDescTextarea) subDescTextarea.value = subDescEditor.innerHTML.trim();
 
       var profileData = {
         first_name: val('f-prenom'),

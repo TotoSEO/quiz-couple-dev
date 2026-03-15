@@ -66,6 +66,50 @@ function sanitize(val: unknown, maxLen: number): string {
   return val.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim().slice(0, maxLen);
 }
 
+// Allow only safe HTML tags for rich text description
+const ALLOWED_TAGS = new Set(['b', 'strong', 'i', 'em', 'u', 'ul', 'li', 'br', 'p', 'div', 'table', 'thead', 'tbody', 'tr', 'td', 'th', 'span']);
+
+function sanitizeHtml(val: unknown, maxLen: number): string {
+  if (typeof val !== 'string') return '';
+  let html = val.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
+  // Strip all tags except allowed ones (no attributes except colspan/rowspan on td/th)
+  html = html.replace(/<\/?([a-zA-Z][a-zA-Z0-9]*)\b[^>]*>/g, (match, tag) => {
+    const lower = tag.toLowerCase();
+    if (!ALLOWED_TAGS.has(lower)) return '';
+    // Strip all attributes for safety
+    if (match.startsWith('</')) return `</${lower}>`;
+    return `<${lower}>`;
+  });
+  // Remove any remaining < or > that aren't part of valid tags
+  html = html.replace(/<(?!\/?(?:b|strong|i|em|u|ul|li|br|p|div|table|thead|tbody|tr|td|th|span)>)/gi, '&lt;');
+  // Limit table count to 1
+  const tableCount = (html.match(/<table>/g) || []).length;
+  if (tableCount > 1) {
+    let found = 0;
+    html = html.replace(/<table>[\s\S]*?<\/table>/g, (m) => {
+      found++;
+      return found <= 1 ? m : '';
+    });
+  }
+  // Limit columns per row to 5
+  html = html.replace(/<tr>([\s\S]*?)<\/tr>/g, (_match, inner) => {
+    const cells = inner.match(/<t[dh]>/g) || [];
+    if (cells.length > 5) {
+      let count = 0;
+      const trimmed = inner.replace(/<t([dh])>[\s\S]*?<\/t\1>/g, (cell: string) => {
+        count++;
+        return count <= 5 ? cell : '';
+      });
+      return `<tr>${trimmed}</tr>`;
+    }
+    return `<tr>${inner}</tr>`;
+  });
+  // Check text length
+  const textOnly = html.replace(/<[^>]+>/g, '');
+  if (textOnly.length > maxLen) return textOnly.slice(0, maxLen);
+  return html;
+}
+
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -400,7 +444,7 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
     if (p && !isValidPhone(p)) return { error: 'Téléphone invalide.' };
     result.phone = p || null;
   }
-  if (body.description !== undefined) result.description = sanitize(body.description, 2000);
+  if (body.description !== undefined) result.description = sanitizeHtml(body.description, 2000);
   if (body.address !== undefined) result.address = sanitize(body.address, 200);
   if (body.display_city !== undefined) result.display_city = sanitize(body.display_city, 100) || null;
   if (body.postal_code !== undefined) {
