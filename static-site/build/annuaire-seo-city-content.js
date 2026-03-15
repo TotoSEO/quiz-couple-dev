@@ -14,65 +14,148 @@ const SPECIALTY_CITY_TEMPLATES = {
         {
           title: `Thérapeute de couple à ${city.name} : quand la conversation ne suffit plus`,
           content: `
-<p>Trouver un thérapeute de couple à ${city.name} n'a rien d'un aveu d'échec. C'est même plutôt le contraire : c'est décider de ne pas laisser les choses se dégrader sans rien faire. Dans le département ${city.department}, comme partout en France, les couples traversent des périodes de doute, de conflit silencieux ou de crise ouverte. La différence entre ceux qui s'en sortent et les autres, c'est souvent la décision de se faire accompagner — avant qu'il ne soit trop tard.</p>
-<p>À ${city.name}, les thérapeutes de couple exercent dans des cadres variés : cabinets privés, centres de consultation psychologique, ou en ligne pour ceux qui préfèrent la flexibilité. La plupart proposent un premier entretien qui permet de poser le cadre, comprendre ce qui amène le couple et vérifier que le courant passe avec le praticien. Parce que oui, le feeling compte autant que les diplômes.</p>
-<p>Les motifs de consultation les plus fréquents dans la région ${city.region} rejoignent les tendances nationales : problèmes de communication (le numéro un, de loin), gestion des conflits, infidélité, impact de l'arrivée d'un enfant sur le couple, ou simplement un sentiment de distance émotionnelle qui s'est installé progressivement.</p>
+<p>Hier soir, vous avez encore essayé de « parler calmement ». Ça a duré dix minutes avant que les reproches reviennent, les mêmes qu'il y a six mois. Vous tournez en rond. Si vous lisez cette page, c'est probablement que vous cherchez un thérapeute de couple à ${city.name} et que vous sentez, quelque part, que vous ne vous en sortirez pas seuls. C'est lucide.</p>
+<p>Un thérapeute de couple à ${city.name} ne va pas vous dire qui a raison et qui a tort (personne n'a raison dans un conflit de couple, ou alors les deux à la fois, ce qui revient au même). Ce qu'il fait, c'est poser un cadre où chacun peut parler sans être coupé, interprété ou jugé. Ça paraît simple. En pratique, beaucoup de couples dans le ${city.department} réalisent en première séance qu'ils ne s'étaient pas vraiment écoutés depuis des mois, parfois des années.</p>
+<p>Les raisons qui poussent à consulter sont souvent les mêmes dans la région ${city.region} : une communication qui s'est dégradée, des disputes qui se répètent sans jamais rien résoudre, une infidélité (découverte ou avouée), l'arrivée d'un enfant qui a tout chamboulé. Ou simplement cette impression sourde de vivre à côté de quelqu'un sans le voir. Ce n'est pas spectaculaire, mais c'est usant.</p>
 `
         },
         {
-          title: `Ce que peut apporter une thérapie de couple dans le ${city.department}`,
+          title: `Comment travaille un thérapeute de couple à ${city.name}`,
           content: `
-<p>Une thérapie de couple ne se résume pas à « parler de ses problèmes devant un psy ». Le thérapeute utilise des techniques précises — thérapie systémique, EFT, méthode Gottman — pour aider chaque partenaire à exprimer ses besoins profonds, ceux qu'on n'arrive plus à formuler quand la frustration a pris le dessus.</p>
-<p>Concrètement, voilà ce que ça peut changer :</p>
+<p>Première chose à savoir : un thérapeute de couple n'est pas un arbitre. Il ne distribue pas les bons et les mauvais points. Son travail, c'est d'aider chacun à comprendre ce qui se joue sous la surface des disputes quotidiennes. Pourquoi cette remarque sur la vaisselle déclenche une explosion ? Parce qu'elle touche un besoin plus profond : être reconnu, se sentir respecté, exister dans le regard de l'autre.</p>
+<p>À ${city.name}, les thérapeutes de couple utilisent plusieurs méthodes. La thérapie systémique est la plus courante en France : elle regarde le couple comme un système où chaque réaction de l'un nourrit une réaction de l'autre. L'EFT (Emotionally Focused Therapy) se concentre sur les besoins d'attachement, ces besoins qu'on n'ose plus exprimer quand on a été blessé trop souvent. La méthode Gottman, basée sur 40 ans de recherche, identifie quatre comportements toxiques (critique, mépris, défensivité, mutisme) et apprend à les remplacer par autre chose.</p>
+<p>Concrètement, une thérapie de couple dans le ${city.department} dure entre 8 et 15 séances. Voilà ce que vous pouvez en attendre :</p>
 <ul>
-<li>Apprendre à se disputer <strong>sans se détruire</strong> — parce que le conflit n'est pas le problème, c'est la façon dont on le gère qui l'est</li>
-<li>Retrouver une <strong>complicité</strong> qui s'est érodée au fil des années, des routines, des charges mentales</li>
-<li>Traverser une crise (infidélité, deuil, perte d'emploi) <strong>ensemble plutôt que chacun de son côté</strong></li>
-<li>Prendre une décision éclairée sur l'avenir du couple — rester ou se séparer, mais en pleine conscience</li>
+<li>Comprendre vos schémas de conflit, ceux qui reviennent à chaque dispute (et oui, on a tous les mêmes en boucle)</li>
+<li>Réapprendre à formuler un besoin sans que ça sonne comme un reproche</li>
+<li>Traverser une crise ensemble plutôt que chacun dans son coin</li>
+<li>Décider de l'avenir du couple avec clarté, que ce soit rester ou se séparer</li>
 </ul>
-<p>Les thérapeutes de couple à ${city.name} suivent généralement leurs patients sur 8 à 15 séances, à raison d'un rendez-vous toutes les deux semaines. C'est un investissement en temps et en argent, mais les couples qui vont au bout du processus rapportent des améliorations significatives dans leur satisfaction relationnelle.</p>
+<p>Un détail qui compte : le feeling avec le thérapeute. Si au bout de deux séances vous ne vous sentez pas en confiance, changez. L'alliance thérapeutique (la qualité de la relation entre le couple et le thérapeute) est le premier facteur de réussite. Avant la méthode, avant le diplôme.</p>
 `
         },
         {
-          title: `Choisir son thérapeute de couple à ${city.name} : les bons réflexes`,
+          title: `Trouver le bon thérapeute de couple à ${city.name} : ce qu'il faut vérifier`,
           content: `
-<p>Le titre de thérapeute de couple n'étant pas protégé en France, il faut être vigilant dans son choix. Quelques critères à vérifier avant de prendre rendez-vous dans le ${city.department} :</p>
-<p>D'abord, la <strong>formation</strong>. Privilégiez un praticien qui a une formation de base solide (psychologie, psychiatrie, travail social) complétée par une spécialisation en thérapie de couple. Les sigles comme EMDR, EFT, ou thérapie systémique ne sont pas du jargon — ils désignent des méthodes validées scientifiquement.</p>
-<p>Ensuite, la <strong>supervision</strong>. Un bon thérapeute continue de se former et consulte régulièrement un superviseur. Ce n'est pas un signe de faiblesse, c'est un gage de professionnalisme.</p>
-<p>Enfin, le <strong>cadre</strong>. Le thérapeute doit poser des règles claires dès la première séance : confidentialité, neutralité (il ne prend pas parti), durée et fréquence des séances, tarifs. Si quelque chose vous met mal à l'aise, c'est normal d'essayer un autre praticien. L'alliance thérapeutique — la confiance entre le couple et le thérapeute — est le premier facteur de réussite du travail.</p>
-<p>Notre annuaire référence des thérapeutes de couple qualifiés à ${city.name} et dans toute la région ${city.region}. Consultez les profils pour trouver celui qui correspond à vos besoins.</p>
+<p>Le titre de « thérapeute de couple » n'est pas protégé en France. Ça veut dire que n'importe qui peut se déclarer thérapeute de couple demain matin. Conséquence : il faut vérifier quelques points avant de prendre rendez-vous à ${city.name}.</p>
+<p>Regardez la formation de base. Un thérapeute de couple sérieux a généralement un diplôme en psychologie, en psychiatrie ou en travail social, complété par une formation spécifique en thérapie conjugale. Les formations courtes de trois week-ends ne suffisent pas (même si on ne manque pas de gens qui les brandissent fièrement).</p>
+<p>Vérifiez aussi si le thérapeute est supervisé. Un thérapeute de couple à ${city.name} qui travaille sans supervision, c'est un peu comme un pilote qui ne ferait jamais de check-up. C'est possible, mais risqué.</p>
+<p>Côté budget, comptez entre 60 et 120 euros par séance dans le ${city.department}. La Sécurité sociale ne rembourse pas la thérapie de couple, sauf si le thérapeute est aussi psychiatre. Votre mutuelle couvre peut-être quelques séances, pensez à vérifier. Et si le budget est serré, des structures comme les CPEF ou l'AFCCC proposent des consultations à tarif adapté dans la région ${city.region}.</p>
+<p>Vous pouvez aussi consulter un <a href="/conseiller-conjugal/">conseiller conjugal</a> ou un <a href="/mediateur-familial/">médiateur familial</a> si vos difficultés portent davantage sur l'organisation de la vie commune ou sur un conflit précis à dénouer. Et si la sexualité est au coeur du problème, un <a href="/sexotherapeute/">sexothérapeute</a> ou un <a href="/sexologue/">sexologue</a> sera plus indiqué.</p>
+<p>Un dernier conseil concret : lors du premier rendez-vous, observez si le thérapeute donne la parole équitablement. S'il passe 40 minutes à écouter l'un et 10 minutes l'autre, c'est mauvais signe.</p>
 `
         },
       ],
     }),
-    // Template B
+    // Template B - starts with a question
     (city) => ({
       sections: [
         {
-          title: `Thérapie de couple à ${city.name} : à quel moment franchir le pas ?`,
+          title: `Thérapeute de couple à ${city.name} : est-ce vraiment utile ?`,
           content: `
-<p>La plupart des couples qui consultent un thérapeute à ${city.name} attendent en moyenne six ans après l'apparition des premières difficultés. Six ans de malentendus accumulés, de non-dits, de frustrations enfouies. Ce chiffre, issu des travaux de John Gottman, montre à quel point il est difficile de demander de l'aide — et à quel point c'est dommage d'attendre autant.</p>
-<p>Les signaux d'alerte ne sont pas toujours spectaculaires. Parfois, c'est un silence qui s'installe. On se parle pour la logistique — « t'as sorti les poubelles ? » — mais plus pour le reste. Parfois, c'est un mépris qui pointe sous les remarques quotidiennes. Ou cette impression de vivre comme des colocataires plutôt que comme des partenaires.</p>
-<p>Si vous reconnaissez un de ces schémas dans votre quotidien à ${city.name}, consulter un thérapeute de couple n'est pas prématuré. C'est probablement le bon timing. Plus le travail commence tôt, plus les résultats sont rapides et durables.</p>
+<p>Est-ce qu'un thérapeute de couple à ${city.name} peut vraiment changer quelque chose quand on en est au point de dormir dans des chambres séparées, de ne plus se toucher, de soupirer chaque fois que l'autre ouvre la bouche ? Réponse courte : oui, dans la majorité des cas. Réponse longue : ça dépend de ce que chacun est prêt à remettre en question.</p>
+<p>Selon une méta-analyse publiée dans le Journal of Marital and Family Therapy, environ 70 % des couples qui suivent une thérapie complète constatent une amélioration significative de leur relation. Ce n'est pas 100 %. Mais c'est beaucoup plus que les 0 % de résultat qu'on obtient en attendant que les choses « s'arrangent d'elles-mêmes » (spoiler : elles ne s'arrangent jamais d'elles-mêmes).</p>
+<p>Ce qui fait la différence, dans le ${city.department} comme partout, c'est la précocité de la consultation. Les travaux de John Gottman montrent que les couples attendent en moyenne six ans entre les premiers signaux de difficulté et le premier rendez-vous chez un thérapeute. Six ans. Et c'est beaucoup trop long, parce que les schémas négatifs ont le temps de se solidifier. Plus on attend, plus le travail est lourd.</p>
 `
         },
         {
-          title: `Les approches thérapeutiques pratiquées dans le ${city.department}`,
+          title: `Ce qui se passe vraiment chez un thérapeute de couple dans le ${city.department}`,
           content: `
-<p>Les thérapeutes de couple à ${city.name} utilisent différentes méthodes, chacune avec ses forces :</p>
-<p>La <strong>thérapie systémique</strong> considère le couple comme un système où chaque comportement de l'un influence l'autre. Plutôt que de chercher un coupable, on analyse les interactions. C'est l'approche la plus répandue en France, héritée de l'École de Palo Alto.</p>
-<p>L'<strong>EFT</strong> (Emotionally Focused Therapy) se concentre sur les besoins d'attachement de chaque partenaire. Derrière la colère ou le retrait, il y a souvent un besoin fondamental non satisfait : être rassuré, se sentir désiré, compter pour l'autre. L'EFT aide à identifier et exprimer ces besoins.</p>
-<p>La <strong>méthode Gottman</strong> s'appuie sur 40 ans de recherche pour identifier les « quatre cavaliers de l'Apocalypse » dans un couple : la critique, le mépris, l'attitude défensive et le stonewalling (se murer dans le silence). Le thérapeute aide le couple à remplacer ces comportements destructeurs par des alternatives constructives.</p>
-<p>Quelle que soit l'approche, l'objectif reste le même : créer un espace sûr où chacun peut s'exprimer sans crainte de jugement, et repartir avec des outils concrets pour améliorer la relation au quotidien.</p>
+<p>Beaucoup de gens imaginent la thérapie de couple comme un tribunal où le thérapeute décide qui a tort. C'est faux. Le thérapeute n'est pas là pour juger. Il est là pour faire émerger ce qui se cache sous les disputes : les blessures, les peurs, les besoins qui ne sont plus entendus.</p>
+<p>Une séance typique chez un thérapeute de couple à ${city.name} dure entre 60 et 90 minutes. Plus longue qu'une consultation classique, parce qu'il faut donner du temps à chacun. Le thérapeute observe les interactions, pose des questions, reformule. Parfois il interrompt un échange qui dérape pour demander : « Qu'est-ce que vous ressentez là, maintenant, quand votre partenaire dit ça ? » Ce genre de question toute simple peut débloquer des mois de silence.</p>
+<p>Entre les séances, le thérapeute propose souvent des exercices à faire chez soi. Rien de sorcier : prendre 20 minutes par semaine pour parler de ce qui va bien (pas de ce qui ne va pas), écrire ce qu'on apprécie chez l'autre, pratiquer l'écoute active pendant une dispute. Des choses simples, mais que personne ne fait spontanément quand le couple va mal.</p>
+<p>Si la dimension intime est au coeur de vos difficultés, le thérapeute peut vous orienter vers un <a href="/sexologue/">sexologue</a> ou un <a href="/sexotherapeute/">sexothérapeute</a>. Les deux approches se complètent bien, et certains thérapeutes de couple à ${city.name} ont d'ailleurs la double casquette.</p>
 `
         },
         {
-          title: `Tarifs et remboursement de la thérapie de couple en ${city.region}`,
+          title: `Bien choisir son thérapeute de couple à ${city.name}`,
           content: `
-<p>À ${city.name}, les tarifs des thérapeutes de couple varient entre 60€ et 120€ la séance, selon l'expérience du praticien et le quartier. Les séances durent généralement entre 60 et 90 minutes — plus longues qu'une consultation classique, parce que le thérapeute doit accorder du temps à chaque partenaire.</p>
-<p>La Sécurité sociale ne rembourse pas la thérapie de couple en tant que telle. Toutefois, si le thérapeute est aussi psychologue ou psychiatre, une partie de la consultation peut être prise en charge. Le dispositif MonParcoursPsy (anciennement MonPsy) permet aussi d'accéder à des séances remboursées chez un psychologue conventionné, mais le nombre de séances est limité.</p>
-<p>Vérifiez aussi votre mutuelle : beaucoup proposent un forfait annuel « médecines douces » ou « consultations psychologiques » qui couvre entre 3 et 8 séances. Ça ne paie pas tout, mais ça allège la note.</p>
-<p>Certaines structures à ${city.name} proposent aussi des tarifs adaptés aux revenus : CPEF (Centres de Planification), associations comme le CLER ou l'AFCCC, ou centres de consultation universitaires si la ville en dispose. N'hésitez pas à vous renseigner.</p>
+<p>Un bon thérapeute de couple à ${city.name} ne prend jamais parti. Jamais. Si au bout de deux séances vous avez l'impression qu'il donne raison à votre partenaire (ou à vous, d'ailleurs), c'est un signal d'alarme. La neutralité du thérapeute n'est pas un bonus, c'est la condition de base pour que le travail fonctionne.</p>
+<p>Voici ce que je recommande de vérifier avant de prendre rendez-vous dans le ${city.department} :</p>
+<ul>
+<li>Une formation solide en psychologie ou psychothérapie, pas juste un week-end de « coaching de couple » (ça existe, et c'est insuffisant)</li>
+<li>Une spécialisation en thérapie conjugale : EFT, Gottman, approche systémique</li>
+<li>Un cadre clair posé dès la première séance : durée, fréquence, tarifs, règles de confidentialité</li>
+<li>La possibilité de faire une première séance « pour voir », sans engagement sur un suivi complet</li>
+</ul>
+<p>Les tarifs à ${city.name} oscillent entre 60 et 120 euros la séance. La Sécurité sociale ne rembourse pas, sauf exception (psychiatres). Vérifiez votre mutuelle : beaucoup incluent un forfait de 3 à 8 séances de psychologie par an. Ça ne couvre pas tout, mais ça aide.</p>
+<p>Pour les petits budgets, il existe aussi des structures accessibles dans la région ${city.region} : les CPEF, les associations comme le CLER ou l'AFCCC, et parfois les centres de consultation rattachés aux universités. Les <a href="/conseiller-conjugal/">conseillers conjugaux</a> et <a href="/mediateur-familial/">médiateurs familiaux</a> proposent aussi un accompagnement, souvent à moindre coût.</p>
+<p>Avant votre première séance, parlez-en avec votre partenaire. Pas pour le convaincre (ça ne marche pas), mais pour lui dire simplement ce que vous ressentez et pourquoi vous pensez qu'un regard extérieur pourrait aider. Et si votre partenaire refuse ? Vous pouvez commencer seul. Un thérapeute de couple peut recevoir un seul membre du couple, et c'est déjà un premier pas.</p>
+`
+        },
+      ],
+    }),
+    // Template C - starts with bold opinion/statement
+    (city) => ({
+      sections: [
+        {
+          title: `Thérapeute de couple à ${city.name} : arrêtez d'attendre que ça passe`,
+          content: `
+<p>La plupart des couples qui vont mal font la même erreur : ils attendent. Ils se disent que c'est une mauvaise passe, que ça ira mieux après les vacances, après le déménagement, après. Sauf que « après », il y a toujours autre chose. Et pendant ce temps, la distance se creuse. Un thérapeute de couple à ${city.name} ne va pas sauver votre couple par magie. Mais il va vous donner les outils que vous n'avez pas, ceux que personne ne nous apprend, pour communiquer autrement.</p>
+<p>Je le dis clairement : consulter un thérapeute de couple n'est pas un signe de faiblesse. C'est même l'inverse. C'est reconnaître que la relation compte assez pour qu'on y investisse du temps et de l'énergie. Dans le ${city.department}, les thérapeutes de couple voient arriver des gens ordinaires confrontés à des problèmes ordinaires : des disputes qui tournent en boucle, un silence qui pèse, une vie sexuelle en berne, des reproches qui fusent au moindre prétexte.</p>
+<p>Et vous savez quoi ? Ces problèmes « ordinaires » sont exactement ceux pour lesquels la thérapie de couple donne les meilleurs résultats. Les crises graves (infidélité, violence) nécessitent un travail plus long, mais les problèmes de communication classiques, un thérapeute de couple à ${city.name} les traite en 10 à 15 séances en moyenne. Avec des résultats concrets : moins de disputes, plus de complicité, le sentiment de s'être retrouvé.</p>
+`
+        },
+        {
+          title: `Les méthodes des thérapeutes de couple dans le ${city.department}`,
+          content: `
+<p>Tous les thérapeutes de couple à ${city.name} ne travaillent pas de la même façon, et c'est normal. Chaque méthode a ses forces. Ce qui compte, c'est que le thérapeute maîtrise la sienne et qu'elle vous convienne.</p>
+<p>La thérapie systémique est la plus répandue en France. L'idée est simple (sur le papier) : dans un couple, tout est interaction. Votre réaction à ce que dit votre partenaire provoque une réaction chez lui, qui provoque une réaction chez vous, et ainsi de suite. Le thérapeute aide à identifier ces boucles et à les casser. L'École de Palo Alto a posé les bases de cette approche dans les années 60, et elle reste redoutablement efficace.</p>
+<p>L'EFT (Emotionally Focused Therapy), développée par Sue Johnson, part du principe que les conflits de couple cachent des besoins d'attachement non satisfaits. Derrière « tu ne fais jamais rien à la maison », il y a souvent « j'ai besoin de sentir que tu es là pour moi ». Le thérapeute aide à exprimer le vrai besoin, celui qu'on a appris à masquer sous la colère ou le retrait.</p>
+<p>Il y a aussi la méthode Gottman, avec ses fameux « quatre cavaliers » (critique, mépris, défensivité, stonewalling). C'est une approche très concrète, basée sur l'observation de milliers de couples en laboratoire. Un peu scientifique dans l'âme, si vous voulez.</p>
+<p>Certains thérapeutes de couple à ${city.name} combinent ces approches. D'autres se spécialisent dans une seule. Pour savoir ce qui vous convient, le plus simple reste de poser la question en première séance : « Comment travaillez-vous ? » Un bon thérapeute sera toujours à l'aise pour expliquer sa méthode.</p>
+`
+        },
+        {
+          title: `Prendre rendez-vous avec un thérapeute de couple à ${city.name} : guide pratique`,
+          content: `
+<p>Vous avez décidé de consulter. Bien. Maintenant, comment choisir parmi les thérapeutes de couple disponibles à ${city.name} ? Voici ce qui compte vraiment :</p>
+<ul>
+<li>La formation : un diplôme en psychologie ou psychothérapie, complété par une spécialisation en thérapie de couple. Les formations en ligne de 20 heures, on oublie</li>
+<li>L'expérience avec les couples (pas juste de la thérapie individuelle reconvertie)</li>
+<li>Un premier entretien proposé pour vérifier que le courant passe, des deux côtés du couple</li>
+<li>Des tarifs annoncés clairement, sans surprise à la fin de la séance</li>
+</ul>
+<p>Parlons argent. À ${city.name}, une séance de thérapie de couple coûte entre 60 et 120 euros. La séance dure entre 60 et 90 minutes, ce qui est plus long qu'une consultation psychologique individuelle (logique : le thérapeute doit écouter deux personnes). La Sécurité sociale ne prend rien en charge, sauf si le thérapeute est psychiatre. Côté mutuelle, vérifiez si vous avez un forfait « consultations psychologiques », c'est de plus en plus courant.</p>
+<p>Si le budget est un frein dans la région ${city.region}, il existe des alternatives : les CPEF proposent des consultations gratuites ou à tarif réduit, des associations comme l'AFCCC pratiquent des prix adaptés aux revenus, et les <a href="/conseiller-conjugal/">conseillers conjugaux</a> proposent un accompagnement souvent moins coûteux. Un <a href="/mediateur-familial/">médiateur familial</a> peut aussi intervenir si le conflit porte sur des questions concrètes (gestion des enfants, répartition des tâches, décisions financières).</p>
+<p>Dernier point, et pas des moindres : votre partenaire hésite ? Proposez-lui de venir « juste une fois, pour voir ». La plupart des thérapeutes de couple à ${city.name} acceptent de faire une première séance sans engagement. Souvent, ça suffit pour que la personne réticente comprenne l'intérêt de la démarche.</p>
+`
+        },
+      ],
+    }),
+    // Template D - starts with a statistic/number
+    (city) => ({
+      sections: [
+        {
+          title: `Thérapeute de couple à ${city.name} : les chiffres que vous devriez connaître`,
+          content: `
+<p>45 % des mariages en France se terminent par un divorce. C'est un chiffre qu'on cite souvent, mais qu'on utilise rarement à bon escient. Parce que ce chiffre dit aussi que 55 % des couples tiennent. Et parmi ceux qui traversent une crise et consultent un thérapeute de couple, le taux de satisfaction post-thérapie tourne autour de 70 % selon les études disponibles. Consulter un thérapeute de couple à ${city.name}, c'est donc mettre les statistiques de son côté.</p>
+<p>Autre chiffre, moins connu : les couples attendent en moyenne six ans (selon les recherches de John Gottman) entre les premiers signaux de difficulté et le premier rendez-vous chez un thérapeute. Six ans. Dans le ${city.department}, ce délai est probablement similaire. Et c'est beaucoup trop long, parce que les schémas négatifs ont le temps de se solidifier. Plus on attend, plus le travail est lourd.</p>
+<p>Alors oui, un thérapeute de couple à ${city.name} ne peut pas garantir que votre relation survivra. Personne ne le peut. Mais il peut vous aider à comprendre ce qui dysfonctionne, à changer vos modes de communication et à prendre des décisions en connaissance de cause, pas sous le coup de la colère ou de la fatigue.</p>
+`
+        },
+        {
+          title: `À quoi ressemble une thérapie de couple à ${city.name} en pratique`,
+          content: `
+<p>On fantasme beaucoup sur la thérapie de couple (merci le cinéma). La réalité est plus sobre. Pas de révélations fracassantes ni de scènes de cinéma. C'est un travail régulier, parfois inconfortable, souvent éclairant.</p>
+<p>Le premier rendez-vous chez un thérapeute de couple à ${city.name} dure en général 60 à 90 minutes. Chacun raconte sa version. Le thérapeute écoute, pose des questions, reformule. Il ne donne pas de solution miracle à la fin de la séance (si c'est le cas, méfiez-vous). Ce qu'il fait, c'est identifier les patterns : ces boucles de conflit où vous retombez sans cesse, souvent sans même vous en rendre compte.</p>
+<p>Les séances suivantes, le thérapeute travaille sur ces patterns. Ça passe par des exercices concrets :</p>
+<ul>
+<li>L'écoute active : reformuler ce que l'autre vient de dire avant de répondre. Basique mais redoutablement difficile quand on est en colère</li>
+<li>Le « je » à la place du « tu » : « je me sens ignoré » plutôt que « tu ne m'écoutes jamais » (la nuance change tout)</li>
+<li>Des rituels de connexion à instaurer au quotidien : 10 minutes de discussion sans téléphone, un moment de gratitude partagée</li>
+</ul>
+<p>Un suivi complet dans le ${city.department} prend entre 8 et 15 séances, espacées de deux à trois semaines. C'est un rythme qui laisse le temps d'expérimenter entre les rendez-vous. Parce que le vrai travail, il se fait chez vous, pas dans le cabinet du thérapeute.</p>
+`
+        },
+        {
+          title: `Combien coûte un thérapeute de couple à ${city.name} et comment choisir`,
+          content: `
+<p>Question légitime, et qui freine beaucoup de couples dans la région ${city.region}. Le tarif d'un thérapeute de couple à ${city.name} se situe entre 60 et 120 euros par séance. C'est un budget, personne ne dit le contraire. Mais rapporté au coût d'un divorce (frais d'avocat, déménagement, impact sur les enfants), c'est une perspective à garder en tête.</p>
+<p>Côté remboursement : la Sécurité sociale ne prend pas en charge la thérapie de couple. Si le thérapeute est aussi psychiatre, la consultation de base est remboursée, mais c'est rare. Les mutuelles, en revanche, couvrent de plus en plus souvent quelques séances par an dans leur forfait « bien-être » ou « psychologie ». Regardez votre contrat, vous pourriez être surpris.</p>
+<p>Pour les revenus modestes, des solutions existent dans le ${city.department}. Les CPEF (Centres de Planification et d'Éducation Familiale) proposent des consultations gratuites ou à prix réduit. Les associations comme le CLER ou l'AFCCC ajustent leurs tarifs. C'est moins connu, mais ça existe. Les <a href="/conseiller-conjugal/">conseillers conjugaux</a> dans ces structures font un travail sérieux.</p>
+<p>Pour bien choisir votre thérapeute de couple, posez-lui trois questions lors du premier contact : quelle est votre formation, quelle méthode utilisez-vous, et êtes-vous supervisé ? Si les réponses sont claires et directes, bon signe. Si le thérapeute botte en touche ou se vexe, passez votre chemin.</p>
+<p>Et si votre problématique touche à la sexualité (baisse de désir, difficultés intimes, décalage), pensez aussi à consulter un <a href="/sexologue/">sexologue</a> ou un <a href="/sexotherapeute/">sexothérapeute</a> en complément. Les deux démarches se renforcent mutuellement, et plusieurs thérapeutes de couple à ${city.name} pourront vous orienter vers un confrère de confiance.</p>
 `
         },
       ],
