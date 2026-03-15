@@ -26,6 +26,7 @@
       slug: p.slug,
       specialty: p.specialty,
       city: p.city,
+      displayCity: p.displayCity || '',
       postalCode: p.postalCode || '',
       shortDescription: p.shortDescription || '',
       description: p.description || '',
@@ -208,7 +209,7 @@ window.__ANN_CITIES__ = <%- JSON.stringify(cities.map(function(c){ return { id: 
 
   function renderCard(p) {
     var specName = specs[p.specialty] || p.specialty;
-    var cityName = citiesMap[p.city] || p.city;
+    var cityName = p.displayCity || citiesMap[p.city] || p.city;
     var proUrl = '/' + p.specialty + '/' + p.city + '/' + p.slug + '/';
     var initials = (p.firstName ? p.firstName[0] : '') + (p.lastName ? p.lastName[0] : '');
 

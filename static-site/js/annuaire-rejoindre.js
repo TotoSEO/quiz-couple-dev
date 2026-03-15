@@ -367,7 +367,7 @@
       var q = addrInput.value.trim();
       if (q.length < 4) { sugBox.style.display = 'none'; return; }
       debounceTimer = setTimeout(function () {
-        fetch('https://nominatim.openstreetmap.org/search?format=json&countrycodes=fr&limit=5&q=' + encodeURIComponent(q), {
+        fetch('https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&countrycodes=fr&limit=5&q=' + encodeURIComponent(q), {
           headers: { 'Accept-Language': 'fr' }
         })
           .then(function (r) { return r.json(); })
@@ -391,6 +391,14 @@
                 var lngInput = document.getElementById('f-lng');
                 if (latInput && r.lat) latInput.value = r.lat;
                 if (lngInput && r.lon) lngInput.value = r.lon;
+                // Extract real city and postal code from Nominatim structured address
+                var addr = r.address || {};
+                var realCity = addr.city || addr.town || addr.village || addr.municipality || '';
+                var postalCode = addr.postcode || '';
+                var dcField = document.getElementById('f-display-city');
+                var pcField = document.getElementById('f-codepostal');
+                if (dcField) dcField.value = realCity;
+                if (pcField && postalCode) pcField.value = postalCode;
                 sugBox.style.display = 'none';
               });
               sugBox.appendChild(div);
@@ -721,6 +729,8 @@
           });
           return modes.join(', ') || 'Sur rendez-vous';
         })(),
+        postal_code: val('f-codepostal') || null,
+        display_city: val('f-display-city') || null,
         lat: parseFloat(val('f-lat')) || null,
         lng: parseFloat(val('f-lng')) || null,
         is_published: false,
