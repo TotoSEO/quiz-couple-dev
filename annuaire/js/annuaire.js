@@ -209,7 +209,7 @@
           '<div style="font-family:Inter,sans-serif;min-width:180px;">' +
           '<strong style="font-size:14px;">' + pro.name + '</strong><br>' +
           '<span style="color:' + color + ';font-size:12px;font-weight:500;">' + (spec.name || '') + '</span>' +
-          (pro.premium ? '<span style="display:inline-block;margin-left:6px;background:#FFF3CD;color:#856404;font-size:10px;padding:1px 6px;border-radius:10px;font-weight:600;">Premium</span>' : '') +
+          (pro.plan === 'boost' ? '<span style="display:inline-block;margin-left:6px;background:linear-gradient(135deg,hsl(40 90% 50%/0.15),hsl(30 90% 55%/0.15));color:hsl(35 80% 45%);font-size:10px;padding:1px 6px;border-radius:10px;font-weight:600;">Top Pro</span>' : pro.plan === 'pro' ? '<span style="display:inline-block;margin-left:6px;background:hsl(210 80% 55%/0.12);color:hsl(210 70% 45%);font-size:10px;padding:1px 6px;border-radius:10px;font-weight:600;">Premium</span>' : '') +
           '<br><a href="/' + pro.specialty + '/' + pro.city + '/' + pro.slug + '/" style="color:hsl(340,65%,55%);font-size:12px;font-weight:500;margin-top:6px;display:inline-block;">Voir le profil →</a>' +
           '</div>'
         );
