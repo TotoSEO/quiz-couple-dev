@@ -14,6 +14,19 @@
   var form = document.getElementById('rejoindre-form');
   if (!form) return;
 
+  // ── Redirect logged-in users to dashboard ──
+  (function () {
+    var authKey = 'sb-lojvajnnvhatfplevyvy-auth-token';
+    var raw = localStorage.getItem(authKey);
+    if (!raw) return;
+    try {
+      var data = JSON.parse(raw);
+      if (data && data.access_token) {
+        window.location.href = '/dashboard/';
+      }
+    } catch (e) { /* not logged in */ }
+  })();
+
   // ── Specialty-specific methods (same as dashboard) ──
   var METHODS_BY_SPECIALTY = {
     'therapeute-de-couple': [
@@ -111,6 +124,34 @@
     input.addEventListener('input', update);
     update();
   });
+
+  // ── Limit digit count on numeric inputs ────────────────────────
+  function limitDigits(inputId, maxDigits) {
+    var el = document.getElementById(inputId);
+    if (!el) return;
+    el.addEventListener('keydown', function (e) {
+      // Allow: backspace, delete, tab, escape, enter, arrows, home, end
+      if ([8, 9, 13, 27, 35, 36, 37, 38, 39, 40, 46].indexOf(e.keyCode) !== -1) return;
+      // Allow Ctrl/Cmd+A/C/V/X
+      if ((e.ctrlKey || e.metaKey) && [65, 67, 86, 88].indexOf(e.keyCode) !== -1) return;
+      // Block non-digit keys
+      var isDigit = (e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105);
+      if (!isDigit) { e.preventDefault(); return; }
+      // Block if already at max digits
+      var val = el.value.replace(/[^0-9]/g, '');
+      if (val.length >= maxDigits) { e.preventDefault(); }
+    });
+    el.addEventListener('input', function () {
+      // Truncate on paste or any other input that bypasses keydown
+      var digits = el.value.replace(/[^0-9]/g, '');
+      if (digits.length > maxDigits) {
+        el.value = digits.slice(0, maxDigits);
+      }
+    });
+  }
+  limitDigits('f-prix-min', 4);
+  limitDigits('f-prix-max', 4);
+  limitDigits('f-experience', 2);
 
   // ── Bubble builder (shared for methods & languages) ────────────
   function buildBubbles(container, items, nameAttr, selectedValues, maxSelect) {
@@ -270,7 +311,15 @@
               div.addEventListener('mouseleave', function () { div.style.background = ''; });
               div.addEventListener('mousedown', function (e) {
                 e.preventDefault();
-                addrInput.value = r.display_name;
+                // Simplify address: keep only the first 2-3 meaningful parts
+                var parts = r.display_name.split(', ');
+                var simplified = parts.slice(0, 3).join(', ');
+                addrInput.value = simplified;
+                // Capture lat/lng from Nominatim result
+                var latInput = document.getElementById('f-lat');
+                var lngInput = document.getElementById('f-lng');
+                if (latInput && r.lat) latInput.value = r.lat;
+                if (lngInput && r.lon) lngInput.value = r.lon;
                 sugBox.style.display = 'none';
               });
               sugBox.appendChild(div);
@@ -353,19 +402,6 @@
       if (!val('f-ville')) { showError('err-ville', 'La ville est requise'); valid = false; }
       var modesChecked = form.querySelectorAll('input[name="modes"]:checked');
       if (modesChecked.length === 0) { showError('err-modes', 'Sélectionnez au moins un mode'); valid = false; }
-      var doctolibVal = val('f-doctolib');
-      if (doctolibVal) {
-        try {
-          var dUrl = new URL(doctolibVal);
-          if (dUrl.hostname !== 'www.doctolib.fr' && dUrl.hostname !== 'doctolib.fr') {
-            showError('err-doctolib', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
-            valid = false;
-          }
-        } catch (e) {
-          showError('err-doctolib', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
-          valid = false;
-        }
-      }
     }
 
     if (step === 4) {
@@ -375,8 +411,12 @@
       var pmin = val('f-prix-min');
       var pmax = val('f-prix-max');
       if (!pmin) { showError('err-prix-min', 'Requis'); valid = false; }
+      else if (Number(pmin) < 0 || !Number.isInteger(Number(pmin))) { showError('err-prix-min', 'Nombre entier positif requis'); valid = false; }
+      else if (Number(pmin) > 9999) { showError('err-prix-min', 'Maximum 9999'); valid = false; }
       if (!pmax) { showError('err-prix-max', 'Requis'); valid = false; }
-      if (pmin && pmax && Number(pmin) > Number(pmax)) { showError('err-prix-max', 'Doit être ≥ tarif min'); valid = false; }
+      else if (Number(pmax) < 0 || !Number.isInteger(Number(pmax))) { showError('err-prix-max', 'Nombre entier positif requis'); valid = false; }
+      else if (Number(pmax) > 9999) { showError('err-prix-max', 'Maximum 9999'); valid = false; }
+      if (pmin && pmax && Number(pmax) <= Number(pmin)) { showError('err-prix-max', 'Doit être supérieur au tarif min'); valid = false; }
     }
 
     if (step === 5) {
@@ -593,7 +633,8 @@
           });
           return modes.join(', ') || 'Sur rendez-vous';
         })(),
-        doctolib_url: val('f-doctolib') || null,
+        lat: parseFloat(val('f-lat')) || null,
+        lng: parseFloat(val('f-lng')) || null,
         is_published: false,
       };
 
