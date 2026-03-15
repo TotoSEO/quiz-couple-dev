@@ -240,7 +240,7 @@
     if (!currentUser || !currentProfile) return;
     var ext = file.name.split('.').pop().toLowerCase();
     if (!['jpg', 'jpeg', 'png', 'webp'].includes(ext)) throw new Error('Format non supporté.');
-    if (file.size > 5 * 1024 * 1024) throw new Error('Photo trop lourde (5 Mo max).');
+    if (file.size > 300 * 1024) throw new Error('Photo trop lourde (300 Ko max). Compressez-la avant de l\'envoyer.');
     var timestamp = Date.now();
     var path = currentUser.id + '/cabinet-' + timestamp + '.' + ext;
     var result = await supabase.storage.from('annuaire-photos').upload(path, file, { upsert: true, contentType: file.type });
@@ -409,7 +409,7 @@
   async function uploadPhoto(file, userId) {
     var ext = file.name.split('.').pop().toLowerCase();
     if (!['jpg', 'jpeg', 'png', 'webp'].includes(ext)) throw new Error('Format non supporté. Utilisez JPEG, PNG ou WebP.');
-    if (file.size > 5 * 1024 * 1024) throw new Error('Photo trop lourde (5 Mo max).');
+    if (file.size > 200 * 1024) throw new Error('Photo de profil trop lourde (200 Ko max). Compressez-la avant de l\'envoyer.');
     var path = userId + '/photo.' + ext;
     var { data, error } = await supabase.storage.from('annuaire-photos').upload(path, file, { upsert: true, contentType: file.type });
     if (error) throw error;
