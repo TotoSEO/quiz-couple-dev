@@ -182,6 +182,54 @@ async function fetchLiveProfessionals() {
   }
 }
 
+/**
+ * Extract department code from a postal code string.
+ * Handles metropolitan (2 digits), Corsica (2A/2B), and overseas (3 digits: 971-976).
+ */
+function getDepartmentFromPostalCode(postalCode) {
+  if (!postalCode || typeof postalCode !== 'string') return '';
+  const pc = postalCode.trim();
+  // Overseas departments: 971xx, 972xx, 973xx, 974xx, 976xx
+  if (/^97[1-6]/.test(pc)) return pc.slice(0, 3);
+  // Corsica: 20xxx → 2A (south, 200xx-201xx) or 2B (north, 202xx-206xx)
+  if (pc.startsWith('20') && pc.length >= 5) {
+    const sub = parseInt(pc.slice(0, 3), 10);
+    return sub <= 201 ? '2A' : '2B';
+  }
+  // Metropolitan: first 2 digits
+  return pc.slice(0, 2);
+}
+
+// Build lookup: department code → array of city IDs in that department
+const DEPT_TO_CITIES = {};
+for (const city of CITIES) {
+  if (!DEPT_TO_CITIES[city.department]) DEPT_TO_CITIES[city.department] = [];
+  DEPT_TO_CITIES[city.department].push(city.id);
+}
+
+/**
+ * Filter professionals for a given city, matching by department.
+ * A professional matches if:
+ * 1. Their city field matches exactly, OR
+ * 2. Their postal code's department matches the city's department
+ *    AND their city field is not another known city in our directory
+ */
+function filterProfessionalsForCity(professionals, city) {
+  const dept = city.department;
+  const knownCitiesInDept = new Set(DEPT_TO_CITIES[dept] || []);
+  return professionals.filter(p => {
+    // Exact city match always wins
+    if (p.city === city.id) return true;
+    // Department-based match: postal code department matches AND
+    // the professional's city is not another known city in our directory for this department
+    if (p.postalCode) {
+      const proDept = getDepartmentFromPostalCode(p.postalCode);
+      if (proDept === dept && !knownCitiesInDept.has(p.city)) return true;
+    }
+    return false;
+  });
+}
+
 function getSharedData() {
   const professionals = liveProfessionals || MOCK_PROFESSIONALS;
   return {
@@ -352,7 +400,7 @@ async function generateSpecialtyPages() {
 async function generateCityPages() {
   const shared = getSharedData();
   for (const city of CITIES) {
-    const filteredProfessionals = shared.professionals.filter(p => p.city === city.id);
+    const filteredProfessionals = filterProfessionalsForCity(shared.professionals, city);
     const data = {
       ...shared,
       city,
@@ -376,8 +424,9 @@ async function generateSpecialtyCityPages() {
     const templates = SPECIALTY_CITY_TEMPLATES[specialty.id] || [];
     for (let i = 0; i < CITIES.length; i++) {
       const city = CITIES[i];
-      const filteredProfessionals = shared.professionals.filter(
-        p => p.specialty === specialty.id && p.city === city.id
+      const cityPros = filterProfessionalsForCity(shared.professionals, city);
+      const filteredProfessionals = cityPros.filter(
+        p => p.specialty === specialty.id
       );
 
       // Generate unique SEO content using rotating templates

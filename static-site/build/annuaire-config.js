@@ -1580,6 +1580,535 @@ export const CITIES = [
 </div>
 `
   },
+  // ── Department coverage: filling remaining departments ──────────────
+  {
+    id: 'bourg-en-bresse', name: 'Bourg-en-Bresse', department: '01', region: 'Auvergne-Rhône-Alpes', lat: 46.2056, lng: 5.2251, population: 41365,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Bourg-en-Bresse</span></h2>
+  <p>Bourg-en-Bresse, préfecture de l'Ain, se situe à mi-chemin entre Lyon et Genève. Ce positionnement géographique attire des couples actifs dans les deux métropoles, souvent confrontés aux contraintes de la mobilité pendulaire. Les praticiens burgiens connaissent bien les tensions liées aux longs trajets quotidiens et à l'éloignement familial.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la cathédrale, boulevard de Brou), dans le secteur de la gare et dans les communes voisines de Péronnas et Viriat. La proximité de Lyon (1h en TER) complète l'offre en <a href="/sexologue/">sexologie</a> et spécialités pointues.</p>
+  <p>Le centre hospitalier de Bourg-en-Bresse (hôpital Fleyriat) propose des consultations en psychiatrie. Le CPEF de l'Ain offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. L'UDAF 01 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs en libéral vont de 50€ à 80€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'vichy', name: 'Vichy', department: '03', region: 'Auvergne-Rhône-Alpes', lat: 46.1264, lng: 3.4256, population: 25279,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Vichy</span></h2>
+  <p>Vichy, ville thermale inscrite au patrimoine mondial de l'UNESCO, accueille une population mixte de curistes, retraités et actifs. Les couples vichyssois vivent dans un cadre de vie agréable mais parfois éloigné des grands centres urbains, ce qui limite l'accès aux spécialistes. La téléconsultation s'y développe pour pallier ce manque.</p>
+  <p>Les cabinets se concentrent dans le centre thermal (quartier des Sources, rue du Parc), dans le quartier de la gare et à Cusset, commune limitrophe. Clermont-Ferrand (1h) offre un complément en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier de Vichy dispose de consultations en psychiatrie. L'UDAF 03 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de l'Allier propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> gratuites. Les tarifs en libéral vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'digne-les-bains', name: 'Digne-les-Bains', department: '04', region: 'Provence-Alpes-Côte d\'Azur', lat: 44.0927, lng: 6.2359, population: 17042,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Digne-les-Bains</span></h2>
+  <p>Digne-les-Bains, préfecture des Alpes-de-Haute-Provence, est une petite ville thermale nichée dans les Préalpes. L'offre en accompagnement de couple y est restreinte mais de qualité. L'isolement rural du département pousse de nombreux couples à consulter en visioconférence avec des praticiens basés à Marseille ou Nice.</p>
+  <p>Les quelques cabinets se trouvent dans le centre-ville (boulevard Gassendi, place du Général de Gaulle). Manosque (45 min) et Sisteron (40 min) complètent l'offre locale en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier de Digne dispose de consultations en psychiatrie. L'UDAF 04 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs en libéral vont de 50€ à 80€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'gap', name: 'Gap', department: '05', region: 'Provence-Alpes-Côte d\'Azur', lat: 44.5593, lng: 6.0786, population: 40895,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Gap</span></h2>
+  <p>Gap, préfecture des Hautes-Alpes, est la ville la plus haute de France parmi les préfectures (735 m). La vie en montagne crée des dynamiques particulières : isolement hivernal, saisonnalité touristique, vie en communauté restreinte. Les praticiens gapençais comprennent ces réalités et accompagnent des couples souvent éloignés de leur famille d'origine.</p>
+  <p>Les cabinets se concentrent dans le centre-ville (cours Ladoucette, avenue Jean Jaurès) et dans le quartier de la gare. Briançon et Embrun complètent l'offre du département en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier intercommunal des Alpes du Sud dispose de consultations spécialisées. L'UDAF 05 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF des Hautes-Alpes propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 50€ à 80€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'annonay', name: 'Annonay', department: '07', region: 'Auvergne-Rhône-Alpes', lat: 45.2404, lng: 4.6715, population: 16922,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple en <span class="ann-text-gradient">Ardèche</span></h2>
+  <p>Annonay, principale ville du nord de l'Ardèche, est un bassin industriel historique (papeterie, tannerie, agroalimentaire). Les couples ardéchois vivent dans un environnement rural et semi-rural où la discrétion est importante. Les praticiens locaux savent instaurer un cadre de confiance adapté à ce contexte.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place des Cordeliers, rue Boissy d'Anglas). Privas (préfecture), Aubenas et Tournon-sur-Rhône complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>. Valence et Lyon sont accessibles pour les consultations en <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier d'Annonay propose des consultations en psychiatrie. L'UDAF 07 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de l'Ardèche offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'charleville-mezieres', name: 'Charleville-Mézières', department: '08', region: 'Grand Est', lat: 49.7718, lng: 4.7200, population: 47425,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Charleville-Mézières</span></h2>
+  <p>Charleville-Mézières, préfecture des Ardennes, est une ville frontalière avec la Belgique. Le département a connu des difficultés économiques liées à la désindustrialisation, et les praticiens locaux accompagnent des couples confrontés au chômage, à la précarité et au stress financier qui en découle.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place Ducale, avenue Jean Jaurès), dans le quartier de Manchester et à Sedan (30 min). Reims (1h15) offre un complément en <a href="/sexologue/">sexologie</a> et <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier de Charleville-Mézières (Manchester) dispose de consultations en psychiatrie. L'UDAF 08 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF des Ardennes propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> gratuites. Les tarifs vont de 45€ à 70€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'foix', name: 'Foix', department: '09', region: 'Occitanie', lat: 42.9638, lng: 1.6053, population: 9933,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal en <span class="ann-text-gradient">Ariège</span></h2>
+  <p>Foix, petite préfecture pyrénéenne, dessert un département rural où les néo-ruraux côtoient les familles ariégeoises de longue date. Les couples y font face à l'isolement géographique et au manque de services, ce qui rend l'accompagnement conjugal d'autant plus précieux. La visioconférence est très utilisée dans ce département.</p>
+  <p>Les cabinets se concentrent à Foix (centre-ville, quartier de la gare) et à Pamiers, plus grande ville du département. Saint-Girons et Lavelanet complètent l'offre. Toulouse (1h15) est le recours pour les <a href="/sexologue/">sexologues</a> spécialisés.</p>
+  <p>Le centre hospitalier de Foix-Pamiers propose des consultations. L'UDAF 09 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de l'Ariège offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 70€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'rodez', name: 'Rodez', department: '12', region: 'Occitanie', lat: 44.3509, lng: 2.5753, population: 24088,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Rodez</span></h2>
+  <p>Rodez, préfecture de l'Aveyron, est une ville dynamique au cœur d'un département rural attaché à ses traditions. Le musée Soulages a donné un nouvel élan culturel à la ville. Les couples ruthénois vivent dans un environnement où les liens familiaux et communautaires sont forts, ce qui peut compliquer les démarches de séparation.</p>
+  <p>Les cabinets se trouvent dans le centre historique (quartier de la cathédrale, place du Bourg) et dans le quartier de Bourran. Millau et Villefranche-de-Rouergue complètent l'offre départementale en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier de Rodez dispose de consultations en psychiatrie. L'UDAF 12 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de l'Aveyron offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'aurillac', name: 'Aurillac', department: '15', region: 'Auvergne-Rhône-Alpes', lat: 44.9261, lng: 2.4417, population: 26330,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Aurillac</span></h2>
+  <p>Aurillac, préfecture du Cantal, est l'une des préfectures les plus isolées de France. Le département est le moins peuplé de la métropole, ce qui rend l'offre en accompagnement de couple limitée mais d'autant plus nécessaire. Les praticiens aurillacois connaissent les réalités de la vie en territoire rural de montagne.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier Saint-Géraud, place du Square) et dans le secteur de la gare. Mauriac et Saint-Flour complètent l'offre. Clermont-Ferrand (2h) est le recours pour les <a href="/sexologue/">sexologues</a> et <a href="/therapeute-de-couple/">thérapeutes de couple</a> spécialisés.</p>
+  <p>Le centre hospitalier Henri Mondor dispose de consultations en psychiatrie. L'UDAF 15 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF du Cantal propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 70€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'angouleme', name: 'Angoulême', department: '16', region: 'Nouvelle-Aquitaine', lat: 45.6500, lng: 0.1600, population: 42242,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Angoulême</span></h2>
+  <p>Angoulême, ville de la bande dessinée et du cinéma d'animation, est une préfecture à taille humaine perchée sur un plateau dominant la Charente. Les couples angoumoisins bénéficient d'un cadre de vie tranquille mais peuvent manquer de choix en matière de praticiens spécialisés. Le festival international de la BD attire chaque année une population créative et ouverte.</p>
+  <p>Les cabinets se trouvent dans le plateau historique (place du Champ de Mars, remparts), dans le quartier de la gare TGV (Paris à 2h15) et à L'Isle-d'Espagnac. Cognac et Soyaux complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier d'Angoulême (hôpital de Girac) propose des consultations spécialisées. L'UDAF 16 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Charente offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'brive-la-gaillarde', name: 'Brive-la-Gaillarde', department: '19', region: 'Nouvelle-Aquitaine', lat: 45.1588, lng: 1.5339, population: 48949,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Brive-la-Gaillarde</span></h2>
+  <p>Brive-la-Gaillarde, sous-préfecture de Corrèze et principale ville du département, est un carrefour entre le Limousin, le Périgord et le Quercy. Ville de rugby et de gastronomie, Brive attire des couples actifs qui apprécient son cadre de vie et sa desserte autoroutière. Les praticiens brivistes accompagnent une clientèle variée, des familles rurales aux cadres néo-arrivants.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place de la Guierle, avenue de Paris), dans le quartier de la gare et à Malemort-sur-Corrèze. Tulle (préfecture, 30 min) complète l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier de Brive dispose de consultations en psychiatrie. L'UDAF 19 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Corrèze propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'gueret', name: 'Guéret', department: '23', region: 'Nouvelle-Aquitaine', lat: 46.1712, lng: 1.8718, population: 13375,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple en <span class="ann-text-gradient">Creuse</span></h2>
+  <p>Guéret, préfecture de la Creuse, est au cœur d'un département très rural et peu peuplé. L'offre en accompagnement de couple y est limitée, mais les praticiens présents compensent par un engagement fort et une connaissance fine du territoire. La Creuse attire de plus en plus de néo-ruraux, dont les couples doivent s'adapter à un mode de vie radicalement différent.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (avenue de la Sénatorerie, place Bonnyaud). Aubusson et La Souterraine complètent l'offre. Limoges (1h15) est le recours pour les <a href="/sexologue/">sexologues</a> et <a href="/therapeute-de-couple/">thérapeutes de couple</a> spécialisés.</p>
+  <p>Le centre hospitalier de Guéret dispose de consultations en psychiatrie. L'UDAF 23 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de la Creuse offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 40€ à 65€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'perigueux', name: 'Périgueux', department: '24', region: 'Nouvelle-Aquitaine', lat: 45.1849, lng: 0.7215, population: 30366,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Périgueux</span></h2>
+  <p>Périgueux, préfecture de la Dordogne et capitale du Périgord, est une ville chargée d'histoire (cathédrale Saint-Front, vestiges gallo-romains). Le département attire de nombreux retraités britanniques et néerlandais, créant des couples binationaux avec des dynamiques culturelles particulières que les praticiens locaux savent accompagner.</p>
+  <p>Les cabinets se trouvent dans le centre historique (quartier Saint-Front, boulevard Montaigne), dans le secteur de la gare et à Trélissac. Bergerac et Sarlat complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>. Bordeaux (1h30) est accessible pour les <a href="/sexologue/">sexologues</a> spécialisés.</p>
+  <p>Le centre hospitalier de Périgueux dispose de consultations en psychiatrie. L'UDAF 24 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Dordogne propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'evreux', name: 'Évreux', department: '27', region: 'Normandie', lat: 49.0241, lng: 1.1508, population: 51159,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Évreux</span></h2>
+  <p>Évreux, préfecture de l'Eure, est une ville normande à une heure de Paris par le train. Beaucoup de couples ébroïciens travaillent en Île-de-France et subissent le stress des trajets quotidiens. Les praticiens locaux sont habitués à accompagner ces couples « navetteurs » dont le temps partagé est souvent réduit à la portion congrue.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la cathédrale, rue du Docteur-Guindey), dans le quartier de la Madeleine et à Vernon (30 min). Rouen (1h) et Paris (1h) complètent l'offre en <a href="/sexologue/">sexologie</a> et <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier d'Évreux dispose de consultations en psychiatrie. L'UDAF 27 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de l'Eure offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 50€ à 80€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'auch', name: 'Auch', department: '32', region: 'Occitanie', lat: 43.6461, lng: 0.5863, population: 22516,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal dans le <span class="ann-text-gradient">Gers</span></h2>
+  <p>Auch, préfecture du Gers, est le cœur de la Gascogne. Le département, très rural, est connu pour son art de vivre (armagnac, foie gras, rugby). Les couples gersois vivent souvent dans un tissu social serré où tout le monde se connaît, ce qui peut freiner la démarche de consulter. Les praticiens locaux garantissent une confidentialité absolue.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (escalier monumental, quartier de la cathédrale). Condom et L'Isle-Jourdain complètent l'offre. Toulouse (1h15) est le recours pour les <a href="/sexologue/">sexologues</a> et <a href="/therapeute-de-couple/">thérapeutes de couple</a> spécialisés.</p>
+  <p>Le centre hospitalier d'Auch dispose de consultations en psychiatrie. L'UDAF 32 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF du Gers propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 70€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'chateauroux', name: 'Châteauroux', department: '36', region: 'Centre-Val de Loire', lat: 46.8103, lng: 1.6913, population: 44316,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Châteauroux</span></h2>
+  <p>Châteauroux, préfecture de l'Indre, est une ville tranquille au cœur du Berry. L'ancienne base aérienne Marcel Dassault, reconvertie en zone économique, a longtemps accueilli des militaires et leurs familles — une population confrontée à la mobilité et aux absences. Les praticiens castelroussins connaissent ces problématiques spécifiques.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place de la République, rue Grande), dans le quartier de Belle-Isle et à Déols. Tours (1h30) et Limoges (1h30) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier de Châteauroux dispose de consultations en psychiatrie. L'UDAF 36 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de l'Indre offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 70€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'lons-le-saunier', name: 'Lons-le-Saunier', department: '39', region: 'Bourgogne-Franche-Comté', lat: 46.6748, lng: 5.5515, population: 17311,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple dans le <span class="ann-text-gradient">Jura</span></h2>
+  <p>Lons-le-Saunier, préfecture du Jura, est une ville thermale paisible au pied du massif jurassien. La vie jurassienne, entre montagne et vignoble, offre un cadre agréable mais aussi un certain isolement. Les praticiens lédoniens accompagnent des couples ruraux et semi-urbains avec une approche adaptée au territoire.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (rue du Commerce, place de la Liberté). Dole (40 min) et Besançon (1h) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier de Lons-le-Saunier dispose de consultations. L'UDAF 39 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF du Jura propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 70€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'mont-de-marsan', name: 'Mont-de-Marsan', department: '40', region: 'Nouvelle-Aquitaine', lat: 43.8941, lng: -0.4984, population: 31009,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Mont-de-Marsan</span></h2>
+  <p>Mont-de-Marsan, préfecture des Landes, est une ville de tradition taurine et festive (fêtes de la Madeleine). La base aérienne 118 fait de Mont-de-Marsan une ville militaire importante — les couples de militaires y sont nombreux et confrontés aux absences prolongées et à la mobilité. Les praticiens montois connaissent ces réalités.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier Saint-Jean-d'Août, place Charles de Gaulle). Dax (30 min) et Bordeaux (1h30) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier de Mont-de-Marsan (Layné) dispose de consultations en psychiatrie. L'UDAF 40 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF des Landes offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'blois', name: 'Blois', department: '41', region: 'Centre-Val de Loire', lat: 47.5860, lng: 1.3359, population: 46086,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Blois</span></h2>
+  <p>Blois, préfecture du Loir-et-Cher et ville royale des châteaux de la Loire, offre un cadre de vie historique et verdoyant. La ville attire des couples qui cherchent la qualité de vie à une heure de Paris en TGV. Les praticiens blésois accompagnent autant les familles installées de longue date que les nouveaux arrivants parisiens.</p>
+  <p>Les cabinets se trouvent dans le centre historique (quartier du château, rue du Commerce), dans le quartier de la gare et à Vineuil. Tours (1h) et Orléans (45 min) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier de Blois dispose de consultations en psychiatrie. L'UDAF 41 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF du Loir-et-Cher propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'le-puy-en-velay', name: 'Le Puy-en-Velay', department: '43', region: 'Auvergne-Rhône-Alpes', lat: 45.0433, lng: 3.8853, population: 19824,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple au <span class="ann-text-gradient">Puy-en-Velay</span></h2>
+  <p>Le Puy-en-Velay, préfecture de Haute-Loire et point de départ du chemin de Compostelle, est une ville singulière avec ses pitons volcaniques. Le département, rural et montagneux, connaît un tissu social traditionnel où la vie de couple s'inscrit dans des normes parfois rigides. Les praticiens ponots savent accompagner avec respect ces spécificités culturelles.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place du Breuil, boulevard Maréchal Fayolle). Yssingeaux et Brioude complètent l'offre. Saint-Étienne (1h15) et Clermont-Ferrand (1h30) sont accessibles pour les <a href="/sexologue/">sexologues</a> spécialisés.</p>
+  <p>Le centre hospitalier Émile Roux dispose de consultations. L'UDAF 43 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Haute-Loire offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 70€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'cahors', name: 'Cahors', department: '46', region: 'Occitanie', lat: 44.4491, lng: 1.4403, population: 20312,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal dans le <span class="ann-text-gradient">Lot</span></h2>
+  <p>Cahors, préfecture du Lot, est une ville médiévale enserrée dans un méandre de la rivière Lot. Le département, rural et touristique (Rocamadour, vallée de la Dordogne), accueille une population vieillissante mais aussi des néo-ruraux en quête de sens. Les praticiens cadurciens accompagnent ces transitions de vie qui impactent profondément les couples.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (boulevard Gambetta, quartier du pont Valentré). Figeac et Gourdon complètent l'offre. Toulouse (1h30) est le recours pour les <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/sexologue/">sexologues</a> spécialisés.</p>
+  <p>Le centre hospitalier de Cahors dispose de consultations en psychiatrie. L'UDAF 46 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF du Lot offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 70€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'agen', name: 'Agen', department: '47', region: 'Nouvelle-Aquitaine', lat: 44.2033, lng: 0.6164, population: 34126,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Agen</span></h2>
+  <p>Agen, préfecture du Lot-et-Garonne, est une ville moyenne entre Bordeaux et Toulouse. Connue pour son pruneau et son rugby, Agen est un carrefour du Sud-Ouest où les couples bénéficient d'un coût de la vie modéré et d'un accès rapide aux deux métropoles régionales. Les praticiens agenais accompagnent une clientèle diversifiée.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (boulevard de la République, esplanade du Gravier), dans le quartier de la gare et à Bon-Encontre. Villeneuve-sur-Lot (30 min) complète l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier d'Agen (hôpital Saint-Esprit) dispose de consultations en psychiatrie. L'UDAF 47 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF du Lot-et-Garonne offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'mende', name: 'Mende', department: '48', region: 'Occitanie', lat: 44.5188, lng: 3.4998, population: 12286,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple en <span class="ann-text-gradient">Lozère</span></h2>
+  <p>Mende, préfecture de la Lozère, est la plus petite préfecture de France par sa population. Le département le moins peuplé de métropole offre une qualité de vie exceptionnelle mais un accès limité aux services de santé. La visioconférence est devenue indispensable pour les couples lozériens qui souhaitent consulter un <a href="/therapeute-de-couple/">thérapeute de couple</a>.</p>
+  <p>Les quelques cabinets se trouvent dans le centre-ville de Mende (cathédrale, boulevard Henri Bourrillon). Marvejols et Florac complètent l'offre. Montpellier (2h) et Clermont-Ferrand (2h30) sont les recours pour les <a href="/sexologue/">sexologues</a> spécialisés.</p>
+  <p>Le centre hospitalier de Mende dispose de consultations. L'UDAF 48 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Lozère offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 40€ à 65€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'cherbourg-en-cotentin', name: 'Cherbourg-en-Cotentin', department: '50', region: 'Normandie', lat: 49.6337, lng: -1.6222, population: 79200,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Cherbourg</span></h2>
+  <p>Cherbourg-en-Cotentin, à la pointe du Cotentin, est une ville portuaire et militaire (arsenal, base sous-marine). Les couples cherbourgeois vivent entre mer et bocage, dans un environnement marqué par la présence de la Marine nationale et de l'industrie nucléaire (usine de La Hague). Les praticiens locaux accompagnent des couples confrontés aux contraintes du travail posté et des absences en mer.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place Napoléon, rue du Commerce), dans le quartier des Flamands et à Tourlaville. Saint-Lô (1h) et Caen (1h30) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier public du Cotentin dispose de consultations en psychiatrie. L'UDAF 50 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de la Manche offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'chaumont', name: 'Chaumont', department: '52', region: 'Grand Est', lat: 48.1137, lng: 5.1414, population: 22917,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal en <span class="ann-text-gradient">Haute-Marne</span></h2>
+  <p>Chaumont, préfecture de Haute-Marne, est une ville discrète au cœur d'un département rural en déprise démographique. Le festival international de l'affiche et le viaduc ferroviaire rappellent son passé dynamique. Les couples haut-marnais font face à l'éloignement des services et à un tissu économique fragilisé. La téléconsultation est une alternative précieuse.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (rue de Verdun, place de la Concorde). Langres et Saint-Dizier complètent l'offre. Troyes (1h) et Dijon (1h30) sont accessibles pour les <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/sexologue/">sexologues</a> spécialisés.</p>
+  <p>Le centre hospitalier de Chaumont dispose de consultations. L'UDAF 52 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Haute-Marne offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 40€ à 65€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'laval', name: 'Laval', department: '53', region: 'Pays de la Loire', lat: 48.0725, lng: -0.7717, population: 53777,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Laval</span></h2>
+  <p>Laval, préfecture de la Mayenne, est une ville à taille humaine entre Rennes et Le Mans. Son tissu industriel (agroalimentaire, automobile, numérique avec Laval Virtual) attire des couples actifs qui apprécient un cadre de vie familial et des prix immobiliers raisonnables. Les praticiens lavallois accompagnent une clientèle stable et fidèle.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (vieux château, rue de la Paix), dans le quartier de la gare (TGV Paris 1h30) et à Changé. Rennes (1h) et Le Mans (1h) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier de Laval dispose de consultations en psychiatrie. L'UDAF 53 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Mayenne offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'verdun', name: 'Verdun', department: '55', region: 'Grand Est', lat: 49.1600, lng: 5.3833, population: 17861,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple dans la <span class="ann-text-gradient">Meuse</span></h2>
+  <p>Verdun, sous-préfecture de la Meuse et ville de mémoire, est profondément marquée par l'histoire de la Première Guerre mondiale. Le département, rural et peu peuplé, connaît une offre limitée en accompagnement de couple. Les praticiens verdunois compensent par un engagement personnel fort et une connaissance approfondie du territoire.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quai de la République, rue Mazel). Bar-le-Duc (préfecture, 45 min) et Commercy complètent l'offre. Metz (1h15) et Nancy (1h30) sont accessibles pour les <a href="/therapeute-de-couple/">thérapeutes de couple</a> et <a href="/sexologue/">sexologues</a> spécialisés.</p>
+  <p>Le centre hospitalier de Verdun dispose de consultations. L'UDAF 55 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de la Meuse offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 40€ à 65€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'nevers', name: 'Nevers', department: '58', region: 'Bourgogne-Franche-Comté', lat: 46.9893, lng: 3.1590, population: 33576,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Nevers</span></h2>
+  <p>Nevers, préfecture de la Nièvre et ancienne capitale du duché de Nivernais, est une ville au confluent de la Loire et de la Nièvre. Le département, touché par la déprise démographique, conserve un charme rural qui attire des couples en quête de tranquillité. Le circuit de Magny-Cours apporte une touche sportive à ce territoire préservé.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place de la République, rue du Commerce), dans le quartier de la gare et à Varennes-Vauzelles. Bourges (1h) et Clermont-Ferrand (2h) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier de Nevers dispose de consultations en psychiatrie. L'UDAF 58 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de la Nièvre offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 70€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'beauvais', name: 'Beauvais', department: '60', region: 'Hauts-de-France', lat: 49.4295, lng: 2.0807, population: 56254,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Beauvais</span></h2>
+  <p>Beauvais, préfecture de l'Oise, est une ville à une heure de Paris qui attire des couples franciliens en quête d'espace et de prix immobiliers plus doux. L'aéroport de Beauvais-Tillé apporte un flux de travailleurs saisonniers et de voyageurs. Les praticiens beauvaisiens accompagnent autant les familles picardes que les néo-Beauvaisiens venus d'Île-de-France.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la cathédrale, rue de Malherbe), dans le quartier Saint-Jean et à Allonne. Compiègne (45 min) et Amiens (1h) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier de Beauvais dispose de consultations en psychiatrie. L'UDAF 60 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de l'Oise offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 50€ à 80€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'alencon', name: 'Alençon', department: '61', region: 'Normandie', lat: 48.4323, lng: 0.0930, population: 26028,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Alençon</span></h2>
+  <p>Alençon, préfecture de l'Orne et ville de la dentelle, est une petite ville normande au caractère paisible. Le département, rural et vieillissant, connaît une offre restreinte en accompagnement de couple. Les praticiens alençonnais sont souvent des généralistes polyvalents qui accompagnent aussi bien les difficultés conjugales que les problématiques familiales.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la dentelle, rue Saint-Blaise), dans le secteur de la gare et à Damigny. Le Mans (1h) et Caen (1h30) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier intercommunal d'Alençon-Mamers dispose de consultations. L'UDAF 61 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de l'Orne offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 70€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'tarbes', name: 'Tarbes', department: '65', region: 'Occitanie', lat: 43.2332, lng: 0.0789, population: 41518,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Tarbes</span></h2>
+  <p>Tarbes, préfecture des Hautes-Pyrénées, est la porte d'entrée des stations de ski pyrénéennes et de Lourdes. La présence militaire (1er régiment de hussards parachutistes) crée une population de couples confrontés aux absences et à la mobilité. Les praticiens tarbais connaissent bien ces dynamiques spécifiques aux familles militaires.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place de Verdun, allées Larbanère), dans le quartier de la gare et à Lourdes (20 min). Pau (40 min) et Toulouse (1h30) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier de Tarbes (La Gespe) dispose de consultations en psychiatrie. L'UDAF 65 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF des Hautes-Pyrénées offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'vesoul', name: 'Vesoul', department: '70', region: 'Bourgogne-Franche-Comté', lat: 47.6261, lng: 6.1547, population: 15409,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple en <span class="ann-text-gradient">Haute-Saône</span></h2>
+  <p>Vesoul, préfecture de Haute-Saône, est une petite ville qui rayonne sur un territoire rural et industriel (PSA/Stellantis à Vesoul). Les couples vésuliens vivent dans un environnement où l'offre en accompagnement est limitée mais où les besoins existent : stress industriel, isolement rural, transitions professionnelles.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (rue Georges Genoux, place de la République). Besançon (45 min) et Belfort (50 min) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier de Vesoul (Paul Morel) dispose de consultations. L'UDAF 70 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Haute-Saône offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 40€ à 65€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'macon', name: 'Mâcon', department: '71', region: 'Bourgogne-Franche-Comté', lat: 46.3060, lng: 4.8283, population: 33456,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Mâcon</span></h2>
+  <p>Mâcon, préfecture de Saône-et-Loire, est une ville viticole au bord de la Saône, entre Bourgogne et Beaujolais. Sa position entre Lyon (1h) et Dijon (1h30) en fait un carrefour régional. Les couples mâconnais bénéficient d'un cadre de vie agréable et d'un accès rapide aux grandes métropoles pour les spécialités pointues.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quai Lamartine, rue Carnot), dans le quartier de la gare TGV et à Charnay-lès-Mâcon. Chalon-sur-Saône (45 min) complète l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier de Mâcon dispose de consultations en psychiatrie. L'UDAF 71 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Saône-et-Loire offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'annecy', name: 'Annecy', department: '74', region: 'Auvergne-Rhône-Alpes', lat: 45.8992, lng: 6.1294, population: 128199,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Annecy</span></h2>
+  <p>Annecy, préfecture de Haute-Savoie, est régulièrement classée parmi les villes où il fait le mieux vivre en France. Son lac, ses montagnes et sa vieille ville attirent une population aisée et active, souvent frontalière avec la Suisse. Les couples annéciens font face à des problématiques liées au coût de la vie élevé, au rythme soutenu et parfois à la pression sociale de cette ville « carte postale ».</p>
+  <p>Les cabinets se trouvent dans la vieille ville (quartier du Thiou, rue Royale), dans le quartier de Novel, à Cran-Gevrier et Seynod. Chambéry (45 min) et Genève (40 min) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier Annecy Genevois (CHANGE) dispose de consultations en psychiatrie. L'UDAF 74 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Haute-Savoie offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 60€ à 100€ la séance — parmi les plus élevés de province.</p>
+</div>
+`
+  },
+  {
+    id: 'meaux', name: 'Meaux', department: '77', region: 'Île-de-France', lat: 48.9602, lng: 2.8779, population: 55750,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Meaux</span> et en Seine-et-Marne</h2>
+  <p>Meaux, sous-préfecture de Seine-et-Marne, est une ville francilienne qui conjugue proximité parisienne (25 min en Transilien) et cadre semi-rural. Le département, le plus grand d'Île-de-France, accueille des couples de toutes origines dans des contextes très variés : Marne-la-Vallée et Disneyland, zones pavillonnaires, villages agricoles de la Brie.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la cathédrale, rue du Grand Cerf), dans le quartier de la gare et à Melun (préfecture). Chelles, Torcy et Pontault-Combault complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier de Meaux dispose de consultations en psychiatrie. L'UDAF 77 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Seine-et-Marne offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 55€ à 90€ la séance, proches des tarifs parisiens.</p>
+</div>
+`
+  },
+  {
+    id: 'albi', name: 'Albi', department: '81', region: 'Occitanie', lat: 43.9298, lng: 2.1487, population: 49531,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Albi</span></h2>
+  <p>Albi, préfecture du Tarn et cité épiscopale inscrite au patrimoine mondial de l'UNESCO, est une ville d'art et d'histoire (musée Toulouse-Lautrec, cathédrale Sainte-Cécile). Les couples albigeois vivent dans un cadre de vie agréable, entre ville et campagne, avec un accès facile à Toulouse (1h) pour les besoins spécialisés.</p>
+  <p>Les cabinets se trouvent dans le centre historique (quartier du Castelviel, place du Vigan), dans le quartier de la gare et à Carmaux. Castres (40 min) complète l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier d'Albi dispose de consultations en psychiatrie. L'UDAF 81 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF du Tarn offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Toulouse est facilement accessible pour les <a href="/sexologue/">sexologues</a> spécialisés. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'montauban', name: 'Montauban', department: '82', region: 'Occitanie', lat: 44.0177, lng: 1.3525, population: 60444,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Montauban</span></h2>
+  <p>Montauban, préfecture du Tarn-et-Garonne, est une ville rose à 50 minutes de Toulouse. Sa croissance démographique soutenue attire de jeunes couples qui trouvent ici un immobilier plus abordable que dans la métropole toulousaine. Les praticiens montalbanais accompagnent cette population en expansion, souvent des primo-accédants confrontés au stress financier de la construction ou de l'achat.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place Nationale, quartier Villebourbon), dans le quartier de la gare et à Bressols. Toulouse (50 min en TER) complète l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier de Montauban dispose de consultations en psychiatrie. L'UDAF 82 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF du Tarn-et-Garonne offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'la-roche-sur-yon', name: 'La Roche-sur-Yon', department: '85', region: 'Pays de la Loire', lat: 46.6705, lng: -1.4269, population: 55408,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">La Roche-sur-Yon</span></h2>
+  <p>La Roche-sur-Yon, préfecture de Vendée, est une ville napoléonienne au plan en damier caractéristique. Le département vendéen, dynamique économiquement (agroalimentaire, nautisme, tourisme), accueille des couples actifs et familiaux. La Vendée affiche l'un des taux de fécondité les plus élevés de France, et les problématiques parentales sont fréquentes en consultation.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (place Napoléon, rue Georges Clemenceau), dans le quartier de la gare et à Mouilleron-le-Captif. Les Sables-d'Olonne et Challans complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier départemental de Vendée dispose de consultations en psychiatrie. L'UDAF 85 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Vendée offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance. Nantes (1h) complète l'offre en <a href="/sexologue/">sexologie</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'epinal', name: 'Épinal', department: '88', region: 'Grand Est', lat: 48.1725, lng: 6.4502, population: 32016,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Épinal</span></h2>
+  <p>Épinal, préfecture des Vosges et ville de l'imagerie, est une cité vosgienne entre montagne et plaine. Le département, marqué par la désindustrialisation textile, conserve un tissu social solidaire. Les praticiens spinaliens accompagnent des couples confrontés aux mutations économiques et aux reconversions professionnelles qui fragilisent l'équilibre conjugal.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la Basilique, rue Léopold Bourg), dans le quartier de la gare et à Golbey. Saint-Dié-des-Vosges (45 min) et Remiremont (25 min) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>. Nancy (1h) est accessible pour les <a href="/sexologue/">sexologues</a> spécialisés.</p>
+  <p>Le centre hospitalier Émile Durkheim dispose de consultations en psychiatrie. L'UDAF 88 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF des Vosges offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 70€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'auxerre', name: 'Auxerre', department: '89', region: 'Bourgogne-Franche-Comté', lat: 47.7980, lng: 3.5674, population: 36200,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Auxerre</span></h2>
+  <p>Auxerre, préfecture de l'Yonne, est une ville bourguignonne au patrimoine architectural remarquable, baignée par l'Yonne. Sa position entre Paris (1h40 en TER) et Dijon (2h) en fait un point de passage mais aussi une ville résidentielle prisée. Les couples auxerrois bénéficient d'un cadre de vie agréable dans un environnement viticole (Chablis, Irancy).</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la cathédrale, rue du Temple), dans le quartier Saint-Gervais et à Perrigny. Sens (1h) et Joigny complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier d'Auxerre dispose de consultations en psychiatrie. L'UDAF 89 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de l'Yonne offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance. Dijon et Paris complètent l'offre en <a href="/sexologue/">sexologie</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'belfort', name: 'Belfort', department: '90', region: 'Bourgogne-Franche-Comté', lat: 47.6400, lng: 6.8628, population: 46443,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Belfort</span></h2>
+  <p>Belfort, préfecture du Territoire de Belfort, est une ville industrielle (Alstom/General Electric) et militaire marquée par son lion sculpté par Bartholdi. Le plus petit département de métropole conserve une identité forte, à la croisée de la Franche-Comté, de l'Alsace et de la Suisse. Les couples belfortains vivent dans un environnement industriel en mutation qui impacte la vie conjugale.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la citadelle, faubourg de France), dans le quartier des Résidences et à Delle. Montbéliard (20 min) et Mulhouse (40 min) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier de Belfort-Montbéliard (HNFC) dispose de consultations en psychiatrie. L'UDAF 90 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF du Territoire de Belfort offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'pointe-a-pitre', name: 'Pointe-à-Pitre', department: '971', region: 'Guadeloupe', lat: 16.2411, lng: -61.5331, population: 15410,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple en <span class="ann-text-gradient">Guadeloupe</span></h2>
+  <p>Pointe-à-Pitre, capitale économique de la Guadeloupe, est au cœur d'un archipel caribéen aux dynamiques familiales singulières. La matrifocalité, les familles recomposées multigénérationnelles et la place de la communauté dans la vie de couple sont des réalités que les praticiens guadeloupéens intègrent dans leur accompagnement. L'héritage culturel créole enrichit et complexifie les relations conjugales.</p>
+  <p>Les cabinets se trouvent à Pointe-à-Pitre (centre-ville, quartier de l'Assainissement), aux Abymes, à Baie-Mahault et au Gosier. Les Saintes et Marie-Galante sont desservies par téléconsultation. L'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> se développe mais reste plus limitée qu'en métropole.</p>
+  <p>Le CHU de Pointe-à-Pitre dispose de consultations en psychiatrie et <a href="/sexologue/">sexologie</a>. L'UDAF 971 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Guadeloupe offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs vont de 50€ à 80€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'cayenne', name: 'Cayenne', department: '973', region: 'Guyane', lat: 4.9372, lng: -52.3260, population: 63652,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal en <span class="ann-text-gradient">Guyane</span></h2>
+  <p>Cayenne, préfecture de la Guyane française, est la porte d'entrée d'un département amazonien unique en France. La Guyane, avec sa mosaïque de communautés (créoles, métropolitains, Hmong, brésiliens, bushinengués, amérindiens), présente des dynamiques conjugales extrêmement variées. Les praticiens cayennais naviguent entre ces cultures avec sensibilité, dans un contexte où les normes relationnelles diffèrent profondément selon les communautés.</p>
+  <p>Les cabinets se trouvent à Cayenne (centre-ville, quartier Buzaret), à Rémire-Montjoly et à Matoury. Kourou (centre spatial, 1h) et Saint-Laurent-du-Maroni complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>. L'offre reste très inférieure aux besoins du territoire.</p>
+  <p>Le centre hospitalier de Cayenne (Andrée Rosemon) dispose de consultations en psychiatrie. L'UDAF 973 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. La téléconsultation avec des praticiens métropolitains est une alternative précieuse pour accéder à des <a href="/sexologue/">sexologues</a> spécialisés. Les tarifs vont de 50€ à 80€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'mamoudzou', name: 'Mamoudzou', department: '976', region: 'Mayotte', lat: -12.7809, lng: 45.2278, population: 71437,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Mayotte</span></h2>
+  <p>Mamoudzou, chef-lieu de Mayotte, est au cœur du plus jeune département français. La société mahoraise, à la croisée des cultures comoriennes, malgaches et françaises, vit des transformations rapides qui impactent profondément les couples : passage du droit coutumier au droit commun, évolution du statut des femmes, tensions entre tradition et modernité. Les praticiens mahorais accompagnent ces mutations profondes.</p>
+  <p>Les cabinets se trouvent à Mamoudzou (centre-ville, quartier de Cavani) et à Dembéni. L'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> est très limitée sur l'île — la téléconsultation avec des praticiens de La Réunion ou de métropole est souvent nécessaire.</p>
+  <p>Le centre hospitalier de Mayotte dispose de consultations en psychiatrie. L'UDAF 976 gère un service de <a href="/mediateur-familial/">médiation familiale</a> adapté au contexte culturel local. Le CPEF de Mayotte offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Les tarifs sont comparables à ceux de métropole, entre 50€ et 80€ la séance.</p>
+</div>
+`
+  },
 ];
 
 // ── No mock data — live professionals are fetched from Supabase ──────

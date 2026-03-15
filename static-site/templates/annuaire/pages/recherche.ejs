@@ -26,6 +26,7 @@
       slug: p.slug,
       specialty: p.specialty,
       city: p.city,
+      postalCode: p.postalCode || '',
       description: p.description || '',
       methods: p.methods || [],
       languages: p.languages || ['Fran\u00e7ais'],
@@ -81,11 +82,22 @@
         <% } %>
       </select>
 
-      <!-- City filter -->
+      <!-- City filter (filters by department to catch nearby professionals) -->
       <select id="filter-city" style="padding: 0.5rem 0.75rem; border-radius: var(--ann-radius); border: 1px solid hsl(var(--ann-border)); background: hsl(var(--ann-card)); color: hsl(var(--ann-fg)); font-size: 0.875rem;">
         <option value="">Toutes les villes</option>
-        <% for (const c of cities) { %>
-        <option value="<%= c.id %>"><%= c.name %></option>
+        <%
+          // Group cities by department, show one entry per department
+          const deptSeen = new Set();
+          for (const c of cities) {
+            if (deptSeen.has(c.department)) continue;
+            deptSeen.add(c.department);
+            // Find all city names in this department for the label
+            const deptCities = cities.filter(x => x.department === c.department);
+            const label = deptCities.length > 1
+              ? deptCities.map(x => x.name).join(', ') + ' (' + c.department + ')'
+              : c.name + ' (' + c.department + ')';
+        %>
+        <option value="<%= c.department %>"><%= label %></option>
         <% } %>
       </select>
 
@@ -139,14 +151,29 @@
 <script>
 window.__ANN_PROS__ = <%- JSON.stringify(prosForSearch) %>;
 window.__ANN_SPECS__ = <%- JSON.stringify(specialties.map(function(s){ return { id: s.id, name: s.name }; })) %>;
-window.__ANN_CITIES__ = <%- JSON.stringify(cities.map(function(c){ return { id: c.id, name: c.name }; })) %>;
+window.__ANN_CITIES__ = <%- JSON.stringify(cities.map(function(c){ return { id: c.id, name: c.name, department: c.department }; })) %>;
 
 (function() {
   var pros = window.__ANN_PROS__;
   var specs = {};
   window.__ANN_SPECS__.forEach(function(s) { specs[s.id] = s.name; });
   var citiesMap = {};
-  window.__ANN_CITIES__.forEach(function(c) { citiesMap[c.id] = c.name; });
+  var cityDeptMap = {};
+  window.__ANN_CITIES__.forEach(function(c) {
+    citiesMap[c.id] = c.name;
+    cityDeptMap[c.id] = c.department;
+  });
+
+  // Extract department from postal code (mirrors server-side logic)
+  function getDeptFromPostalCode(pc) {
+    if (!pc) return '';
+    pc = pc.trim();
+    if (/^97[1-6]/.test(pc)) return pc.slice(0, 3);
+    if (pc.startsWith('20') && pc.length >= 5) {
+      return parseInt(pc.slice(0, 3), 10) <= 201 ? '2A' : '2B';
+    }
+    return pc.slice(0, 2);
+  }
 
   var inputEl = document.getElementById('recherche-input');
   var specEl = document.getElementById('filter-specialty');
@@ -160,7 +187,13 @@ window.__ANN_CITIES__ = <%- JSON.stringify(cities.map(function(c){ return { id: 
   var params = new URLSearchParams(window.location.search);
   if (params.get('q')) inputEl.value = params.get('q');
   if (params.get('specialite')) specEl.value = params.get('specialite');
-  if (params.get('ville')) cityEl.value = params.get('ville');
+  if (params.get('ville')) {
+    // ville param can be a city id or a department code
+    var villeParam = params.get('ville');
+    // If it's a city id, look up its department
+    var matchedDept = cityDeptMap[villeParam] || villeParam;
+    cityEl.value = matchedDept;
+  }
 
   function renderStars(rating) {
     var html = '<div class="ann-stars">';
@@ -232,19 +265,23 @@ window.__ANN_CITIES__ = <%- JSON.stringify(cities.map(function(c){ return { id: 
     var langFilter = langEl.value;
 
     var filtered = pros.filter(function(p) {
-      // Text search
+      // Text search (name, city, specialty, postal code)
       if (q) {
         var fullName = (p.firstName + ' ' + p.lastName).toLowerCase();
         var cityName = (citiesMap[p.city] || '').toLowerCase();
         var specName = (specs[p.specialty] || '').toLowerCase();
-        if (fullName.indexOf(q) === -1 && cityName.indexOf(q) === -1 && specName.indexOf(q) === -1) {
+        var pc = (p.postalCode || '').toLowerCase();
+        if (fullName.indexOf(q) === -1 && cityName.indexOf(q) === -1 && specName.indexOf(q) === -1 && pc.indexOf(q) === -1) {
           return false;
         }
       }
       // Specialty filter
       if (specFilter && p.specialty !== specFilter) return false;
-      // City filter
-      if (cityFilter && p.city !== cityFilter) return false;
+      // City filter: match by department (first 2/3 digits of postal code)
+      if (cityFilter) {
+        var proDept = p.postalCode ? getDeptFromPostalCode(p.postalCode) : (cityDeptMap[p.city] || '');
+        if (proDept !== cityFilter) return false;
+      }
       // Language filter
       if (langFilter && (!p.languages || p.languages.indexOf(langFilter) === -1)) return false;
       return true;

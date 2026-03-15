@@ -239,6 +239,7 @@
       var val = normalize(input.value.trim());
       if (val.length < 1) { dropdown.style.display = 'none'; return; }
 
+      // For cities, also match by postal code prefix (department)
       var matches = items.filter(function (item) {
         var name = normalize(item.name);
         var short = item.shortName ? normalize(item.shortName) : '';
@@ -287,9 +288,15 @@
       var qVal = normalize((heroQ && heroQ.value) || '');
       var cityVal = normalize((heroCity && heroCity.value) || '');
 
-      // Try to match city first
+      // Try to match city first (by name or by department/postal code)
       if (cityVal) {
-        var cityMatch = searchData.cities.find(function (c) { return normalize(c.name) === cityVal || c.department === heroCity.value.trim(); });
+        var rawCityVal = heroCity.value.trim();
+        var cityMatch = searchData.cities.find(function (c) { return normalize(c.name) === cityVal || c.department === rawCityVal; });
+        // Also try matching postal code prefix to department
+        if (!cityMatch && /^\d{2,5}$/.test(rawCityVal)) {
+          var deptCode = rawCityVal.length >= 3 && rawCityVal.startsWith('97') ? rawCityVal.slice(0, 3) : rawCityVal.slice(0, 2);
+          cityMatch = searchData.cities.find(function (c) { return c.department === deptCode; });
+        }
         if (cityMatch) { window.location.href = '/' + cityMatch.id + '/'; return; }
       }
       // Then specialty
@@ -321,7 +328,16 @@
       if (val.length < 1) { dropdown.style.display = 'none'; return; }
 
       var specMatches = searchData.specialties.filter(function (s) { return normalize(s.name).indexOf(val) !== -1 || (s.shortName && normalize(s.shortName).indexOf(val) !== -1); }).slice(0, 3);
-      var cityMatches = searchData.cities.filter(function (c) { return normalize(c.name).indexOf(val) !== -1 || (c.department && c.department.indexOf(val) !== -1); }).slice(0, 4);
+      var cityMatches = searchData.cities.filter(function (c) { return normalize(c.name).indexOf(val) !== -1 || (c.department && c.department.indexOf(val) !== -1); });
+      // If searching by department code (numeric), prioritize exact department matches
+      if (/^\d{2,3}$/.test(val)) {
+        cityMatches.sort(function (a, b) {
+          var aExact = a.department === val ? 0 : 1;
+          var bExact = b.department === val ? 0 : 1;
+          return aExact - bExact;
+        });
+      }
+      cityMatches = cityMatches.slice(0, 4);
 
       if (!specMatches.length && !cityMatches.length) { dropdown.style.display = 'none'; return; }
 
