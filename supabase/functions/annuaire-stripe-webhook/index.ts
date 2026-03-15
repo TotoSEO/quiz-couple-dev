@@ -399,20 +399,24 @@ Votre facture PDF sera disponible dans votre <a href="https://annuaire.quiz-coup
           console.error(`[webhook] Cannot send email: RESEND_API_KEY=${RESEND_API_KEY ? 'set' : 'NOT SET'}, clientEmail=${clientEmail || 'EMPTY'}`);
         }
 
-        // PDF generation via separate function (best-effort, non-blocking)
-        triggerInvoiceGeneration({
-          stripe_invoice_id: invoice.id,
-          professional_id: professionalId,
-          plan, period,
-          period_start: periodStart,
-          period_end: periodEnd,
-          amount_ht: actualHt,
-          amount_tva: 0,
-          amount_ttc: actualHt,
-          discount_amount: discountAmount,
-          discount_label: discountLabel,
-          paid_at: paidAt,
-        }).catch(err => console.warn('[webhook] PDF generation (best-effort) failed:', err));
+        // PDF generation via separate function (await to ensure it completes before response)
+        try {
+          await triggerInvoiceGeneration({
+            stripe_invoice_id: invoice.id,
+            professional_id: professionalId,
+            plan, period,
+            period_start: periodStart,
+            period_end: periodEnd,
+            amount_ht: actualHt,
+            amount_tva: 0,
+            amount_ttc: actualHt,
+            discount_amount: discountAmount,
+            discount_label: discountLabel,
+            paid_at: paidAt,
+          });
+        } catch (pdfErr) {
+          console.error('[webhook] PDF generation failed:', pdfErr);
+        }
 
         break;
       }

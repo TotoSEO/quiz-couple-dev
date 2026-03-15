@@ -489,7 +489,7 @@ async function generateInvoicePdf(data: PdfData): Promise<Uint8Array> {
     borderWidth: 0.5,
   });
 
-  text('✓  Paiement confirmé', margin + 15, y + 12, { font: fontBold, size: 10, color: green });
+  text('PAIEMENT CONFIRME', margin + 15, y + 12, { font: fontBold, size: 10, color: green });
   text(`Cette facture a été réglée via Stripe le ${formatDateLong(data.paidAt)}.`, margin + 15, y - 2, { size: 9, color: gray });
 
   // ═══════════════════════════════════════════
