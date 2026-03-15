@@ -89,188 +89,210 @@ serve(async (req: Request) => {
         break;
       }
 
-      // ── Invoice paid → renew plan period + generate invoice PDF ──
+      // ── Invoice paid → renew plan period + generate invoice + send email ──
       case 'invoice.paid': {
         const invoice = event.data.object as Stripe.Invoice;
-        if (!invoice.subscription) break;
+        console.log(`[webhook] invoice.paid: ${invoice.id}, subscription=${invoice.subscription}, customer=${invoice.customer}`);
 
-        const subscription = await stripe.subscriptions.retrieve(invoice.subscription as string);
-        const priceId = subscription.items.data[0]?.price.id;
+        if (!invoice.subscription) {
+          console.log('[webhook] invoice.paid: no subscription attached, skipping');
+          break;
+        }
+
+        // Extract price/period from invoice lines (no API call needed)
+        const lineItem = (invoice as unknown as { lines: { data: Array<{ price: { id: string }; period: { start: number; end: number } }> } }).lines?.data?.[0];
+        const priceId = lineItem?.price?.id || '';
         const plan = PLAN_FROM_PRICE[priceId] || 'pro';
         const period = PERIOD_FROM_PRICE[priceId] || 'monthly';
-        const periodStart = new Date(subscription.current_period_start * 1000).toISOString();
-        const periodEnd = new Date(subscription.current_period_end * 1000).toISOString();
+        console.log(`[webhook] invoice.paid: priceId=${priceId}, plan=${plan}, period=${period}`);
 
-        // Update plan in DB — try by stripe_subscription_id first
-        let updatedProfile: { id: string } | null = null;
-        const { data: profileBySub, error: errBySub } = await supabase
+        // Get period from subscription (need API call for accurate dates)
+        let periodStart: string;
+        let periodEnd: string;
+        let subscriptionId = invoice.subscription as string;
+        let subscriptionMetaProfessionalId: string | undefined;
+
+        try {
+          const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+          periodStart = new Date(subscription.current_period_start * 1000).toISOString();
+          periodEnd = new Date(subscription.current_period_end * 1000).toISOString();
+          subscriptionMetaProfessionalId = subscription.metadata?.professional_id;
+        } catch (subErr) {
+          console.warn('[webhook] Could not retrieve subscription, using invoice line period:', subErr);
+          // Fallback: use invoice line item period
+          periodStart = lineItem?.period?.start
+            ? new Date(lineItem.period.start * 1000).toISOString()
+            : new Date().toISOString();
+          periodEnd = lineItem?.period?.end
+            ? new Date(lineItem.period.end * 1000).toISOString()
+            : new Date(Date.now() + 30 * 24 * 3600 * 1000).toISOString();
+        }
+
+        // Find the professional — try multiple strategies
+        let professionalId: string | null = null;
+
+        // Strategy 1: by stripe_subscription_id
+        const { data: profileBySub } = await supabase
+          .from('annuaire_professionals')
+          .select('id')
+          .eq('stripe_subscription_id', subscriptionId)
+          .maybeSingle();
+        if (profileBySub) {
+          professionalId = profileBySub.id;
+          console.log(`[webhook] Found professional by stripe_subscription_id: ${professionalId}`);
+        }
+
+        // Strategy 2: by subscription metadata
+        if (!professionalId && subscriptionMetaProfessionalId) {
+          const { data: profileByMeta } = await supabase
+            .from('annuaire_professionals')
+            .select('id')
+            .eq('id', subscriptionMetaProfessionalId)
+            .maybeSingle();
+          if (profileByMeta) {
+            professionalId = profileByMeta.id;
+            console.log(`[webhook] Found professional by subscription metadata: ${professionalId}`);
+          }
+        }
+
+        // Strategy 3: by stripe_customer_id
+        if (!professionalId && invoice.customer) {
+          const customerId = typeof invoice.customer === 'string' ? invoice.customer : (invoice.customer as { id: string }).id;
+          const { data: profileByCust } = await supabase
+            .from('annuaire_professionals')
+            .select('id')
+            .eq('stripe_customer_id', customerId)
+            .maybeSingle();
+          if (profileByCust) {
+            professionalId = profileByCust.id;
+            console.log(`[webhook] Found professional by stripe_customer_id: ${professionalId}`);
+          }
+        }
+
+        if (!professionalId) {
+          console.error(`[webhook] invoice.paid: CANNOT find professional. subscription=${subscriptionId}, customer=${invoice.customer}`);
+          break;
+        }
+
+        // Update plan in DB
+        const { error: updateErr } = await supabase
           .from('annuaire_professionals')
           .update({
             plan,
             plan_expires_at: periodEnd,
+            stripe_subscription_id: subscriptionId,
           })
-          .eq('stripe_subscription_id', subscription.id)
-          .select('id')
-          .maybeSingle();
-
-        if (profileBySub) {
-          updatedProfile = profileBySub;
+          .eq('id', professionalId);
+        if (updateErr) {
+          console.error('[webhook] Plan update error:', updateErr);
         } else {
-          // Fallback: if checkout.session.completed hasn't run yet,
-          // stripe_subscription_id may not be in DB. Use subscription metadata.
-          const professionalId = subscription.metadata?.professional_id;
-          if (professionalId) {
-            const { data: profileByMeta, error: errByMeta } = await supabase
-              .from('annuaire_professionals')
-              .update({
-                plan,
-                plan_expires_at: periodEnd,
-                stripe_subscription_id: subscription.id,
-              })
-              .eq('id', professionalId)
-              .select('id')
-              .maybeSingle();
+          console.log(`[webhook] Plan renewed: ${plan}, expires ${periodEnd}`);
+        }
 
-            if (errByMeta) {
-              console.error('[webhook] Update error on invoice.paid (fallback):', errByMeta);
+        // ── Invoice record + email ──
+        const amountHt = invoice.subtotal || 0;
+        let discountAmount = 0;
+        let discountLabel: string | null = null;
+        if (invoice.discount && invoice.total_discount_amounts && invoice.total_discount_amounts.length > 0) {
+          discountAmount = invoice.total_discount_amounts[0].amount || 0;
+          const coupon = invoice.discount.coupon;
+          if (coupon) {
+            if (coupon.percent_off) {
+              discountLabel = `Réduction de -${coupon.percent_off}%`;
+            } else if (coupon.amount_off) {
+              discountLabel = `Réduction de -${(coupon.amount_off / 100).toFixed(2).replace('.', ',')} €`;
+            } else {
+              discountLabel = 'Réduction';
             }
-            updatedProfile = profileByMeta;
-          } else {
-            console.error('[webhook] invoice.paid: no subscription match and no professional_id in metadata');
           }
         }
+        const actualHt = amountHt - discountAmount;
+        const paidAt = new Date().toISOString();
+        const periodLabel = period === 'annual' ? 'annuel' : 'mensuel';
+        const planLabels: Record<string, string> = { pro: 'Professionnel', boost: 'Boost' };
+        const planLabel = planLabels[plan] || plan;
 
-        // Third fallback: lookup by stripe_customer_id
-        if (!updatedProfile && subscription.customer) {
-          const customerId = typeof subscription.customer === 'string' ? subscription.customer : subscription.customer.id;
-          const { data: profileByCust } = await supabase
-            .from('annuaire_professionals')
-            .update({
-              plan,
-              plan_expires_at: periodEnd,
-              stripe_subscription_id: subscription.id,
-            })
-            .eq('stripe_customer_id', customerId)
-            .select('id')
-            .maybeSingle();
+        // Get billing info
+        const { data: billingProfile, error: billingErr } = await supabase
+          .from('annuaire_professionals')
+          .select('email, first_name, last_name, billing_company_name, billing_siret, billing_tva_number, billing_address, billing_email')
+          .eq('id', professionalId)
+          .single();
 
-          if (profileByCust) {
-            updatedProfile = profileByCust;
-            console.log(`[webhook] Found professional by stripe_customer_id: ${customerId}`);
-          }
-        }
-
-        if (!updatedProfile) {
-          console.error('[webhook] invoice.paid: could not find professional for subscription', subscription.id);
+        if (billingErr || !billingProfile) {
+          console.error('[webhook] Could not fetch billing profile:', billingErr);
           break;
         }
-        console.log(`[webhook] Plan renewed: ${plan}, expires ${periodEnd}`);
 
-        // Generate invoice record + send email directly (no inter-function HTTP call)
-        try {
-          const amountHt = invoice.subtotal || 0;
-          let discountAmount = 0;
-          let discountLabel: string | null = null;
-          if (invoice.discount && invoice.total_discount_amounts && invoice.total_discount_amounts.length > 0) {
-            discountAmount = invoice.total_discount_amounts[0].amount || 0;
-            const coupon = invoice.discount.coupon;
-            if (coupon) {
-              if (coupon.percent_off) {
-                discountLabel = `Réduction de -${coupon.percent_off}%`;
-              } else if (coupon.amount_off) {
-                discountLabel = `Réduction de -${(coupon.amount_off / 100).toFixed(2).replace('.', ',')} €`;
-              } else {
-                discountLabel = 'Réduction';
-              }
-            }
-          }
-          const actualHt = amountHt - discountAmount;
-          const paidAt = new Date().toISOString();
-          const periodLabel = period === 'annual' ? 'annuel' : 'mensuel';
-          const planLabels: Record<string, string> = { pro: 'Professionnel', boost: 'Boost' };
-          const planLabel = planLabels[plan] || plan;
+        const clientEmail = billingProfile.billing_email || billingProfile.email || '';
+        const clientCompanyName = billingProfile.billing_company_name || `${billingProfile.first_name || ''} ${billingProfile.last_name || ''}`.trim() || 'Client';
+        console.log(`[webhook] Billing: email=${clientEmail}, company=${clientCompanyName}`);
 
-          // Get billing info for the invoice
-          const { data: billingProfile } = await supabase
-            .from('annuaire_professionals')
-            .select('email, first_name, last_name, billing_company_name, billing_siret, billing_tva_number, billing_address, billing_email')
-            .eq('id', updatedProfile.id)
-            .single();
+        // Check for duplicate invoice
+        const { data: existingInvoice } = await supabase
+          .from('annuaire_invoices')
+          .select('id, invoice_number')
+          .eq('stripe_invoice_id', invoice.id)
+          .maybeSingle();
 
-          if (!billingProfile) {
-            console.error('[webhook] Could not fetch billing profile for invoice');
-            break;
-          }
+        let invoiceNumber: string;
+        if (existingInvoice) {
+          invoiceNumber = existingInvoice.invoice_number;
+          console.log(`[webhook] Invoice already exists: ${invoiceNumber}`);
+        } else {
+          // Generate invoice number
+          const { data: seqResult, error: rpcErr } = await supabase.rpc('generate_invoice_number');
+          console.log(`[webhook] generate_invoice_number RPC: result=${seqResult}, error=${JSON.stringify(rpcErr)}`);
 
-          const clientEmail = billingProfile.billing_email || billingProfile.email || '';
-          const clientCompanyName = billingProfile.billing_company_name || `${billingProfile.first_name || ''} ${billingProfile.last_name || ''}`.trim() || 'Client';
-          const clientSiret = billingProfile.billing_siret || '';
-          const clientTva = billingProfile.billing_tva_number || '';
-          const clientAddress = billingProfile.billing_address || '';
-
-          // Check for duplicate invoice
-          const { data: existingInvoice } = await supabase
-            .from('annuaire_invoices')
-            .select('id, invoice_number')
-            .eq('stripe_invoice_id', invoice.id)
-            .maybeSingle();
-
-          let invoiceNumber: string;
-          if (existingInvoice) {
-            invoiceNumber = existingInvoice.invoice_number;
-            console.log(`[webhook] Invoice already exists: ${invoiceNumber}`);
+          if (seqResult) {
+            invoiceNumber = seqResult;
           } else {
-            // Generate invoice number
-            const { data: seqResult } = await supabase.rpc('generate_invoice_number');
-            if (seqResult) {
-              invoiceNumber = seqResult;
-            } else {
-              const { data: rawSeq } = await supabase
-                .from('annuaire_invoices')
-                .select('invoice_number')
-                .order('created_at', { ascending: false })
-                .limit(1)
-                .maybeSingle();
-              const lastNum = rawSeq?.invoice_number
-                ? parseInt(rawSeq.invoice_number.replace('ANNQUCO-', ''), 10)
-                : 0;
-              invoiceNumber = `ANNQUCO-${lastNum + 1}`;
-            }
-
-            // Insert invoice record
-            const { error: insertErr } = await supabase
+            const { data: rawSeq } = await supabase
               .from('annuaire_invoices')
-              .insert({
-                professional_id: updatedProfile.id,
-                invoice_number: invoiceNumber,
-                stripe_invoice_id: invoice.id,
-                amount_ht: actualHt,
-                amount_tva: 0,
-                amount_ttc: actualHt,
-                discount_amount: discountAmount,
-                discount_label: discountLabel,
-                plan,
-                period,
-                period_start: periodStart,
-                period_end: periodEnd,
-                client_company_name: clientCompanyName,
-                client_siret: clientSiret,
-                client_tva_number: clientTva,
-                client_address: clientAddress,
-                client_email: clientEmail,
-                paid_at: paidAt,
-              });
-            if (insertErr && insertErr.code !== '23505') {
-              console.error('[webhook] Invoice insert error:', insertErr);
-            } else {
-              console.log(`[webhook] Invoice record created: ${invoiceNumber}`);
-            }
+              .select('invoice_number')
+              .order('created_at', { ascending: false })
+              .limit(1)
+              .maybeSingle();
+            const lastNum = rawSeq?.invoice_number
+              ? parseInt(rawSeq.invoice_number.replace('ANNQUCO-', ''), 10)
+              : 0;
+            invoiceNumber = `ANNQUCO-${lastNum + 1}`;
           }
 
-          // Send invoice email directly via Resend (no inter-function HTTP call)
-          if (RESEND_API_KEY) {
-            const amountStr = (actualHt / 100).toFixed(2).replace('.', ',');
-            const emailHtml = `<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"></head>
+          // Insert invoice record
+          const { error: insertErr } = await supabase
+            .from('annuaire_invoices')
+            .insert({
+              professional_id: professionalId,
+              invoice_number: invoiceNumber,
+              stripe_invoice_id: invoice.id,
+              amount_ht: actualHt,
+              amount_tva: 0,
+              amount_ttc: actualHt,
+              discount_amount: discountAmount,
+              discount_label: discountLabel,
+              plan,
+              period,
+              period_start: periodStart,
+              period_end: periodEnd,
+              client_company_name: clientCompanyName,
+              client_siret: billingProfile.billing_siret || '',
+              client_tva_number: billingProfile.billing_tva_number || '',
+              client_address: billingProfile.billing_address || '',
+              client_email: clientEmail,
+              paid_at: paidAt,
+            });
+          if (insertErr) {
+            console.error(`[webhook] Invoice INSERT error (code=${insertErr.code}):`, JSON.stringify(insertErr));
+          } else {
+            console.log(`[webhook] Invoice record created: ${invoiceNumber}`);
+          }
+        }
+
+        // Send invoice email via Resend
+        if (RESEND_API_KEY && clientEmail) {
+          const amountStr = (actualHt / 100).toFixed(2).replace('.', ',');
+          const emailHtml = `<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"></head>
 <body style="margin:0;padding:0;background:#f8f7fc;font-family:Inter,system-ui,sans-serif;">
 <div style="max-width:600px;margin:0 auto;padding:2rem 1rem;">
 <div style="text-align:center;margin-bottom:2rem;">
@@ -295,6 +317,7 @@ Votre facture PDF sera disponible dans votre <a href="https://annuaire.quiz-coup
 </div>
 </div></body></html>`;
 
+          try {
             const emailRes = await fetch('https://api.resend.com/emails', {
               method: 'POST',
               headers: {
@@ -311,32 +334,32 @@ Votre facture PDF sera disponible dans votre <a href="https://annuaire.quiz-coup
 
             if (!emailRes.ok) {
               const errText = await emailRes.text();
-              console.error(`[webhook] Resend email error: ${emailRes.status} ${errText}`);
+              console.error(`[webhook] Resend email FAILED: ${emailRes.status} ${errText}`);
             } else {
-              console.log(`[webhook] Invoice email sent to ${clientEmail}`);
+              console.log(`[webhook] Invoice email SENT to ${clientEmail}`);
             }
-          } else {
-            console.error('[webhook] RESEND_API_KEY not set — cannot send invoice email');
+          } catch (emailErr) {
+            console.error('[webhook] Resend fetch error:', emailErr);
           }
-
-          // Also try PDF generation via separate function (best-effort, non-blocking)
-          triggerInvoiceGeneration({
-            stripe_invoice_id: invoice.id,
-            professional_id: updatedProfile.id,
-            plan, period,
-            period_start: periodStart,
-            period_end: periodEnd,
-            amount_ht: actualHt,
-            amount_tva: 0,
-            amount_ttc: actualHt,
-            discount_amount: discountAmount,
-            discount_label: discountLabel,
-            paid_at: paidAt,
-          }).catch(err => console.warn('[webhook] PDF generation (best-effort) failed:', err));
-
-        } catch (invoiceErr) {
-          console.error('[webhook] Invoice generation error:', invoiceErr);
+        } else {
+          console.error(`[webhook] Cannot send email: RESEND_API_KEY=${RESEND_API_KEY ? 'set' : 'NOT SET'}, clientEmail=${clientEmail || 'EMPTY'}`);
         }
+
+        // PDF generation via separate function (best-effort, non-blocking)
+        triggerInvoiceGeneration({
+          stripe_invoice_id: invoice.id,
+          professional_id: professionalId,
+          plan, period,
+          period_start: periodStart,
+          period_end: periodEnd,
+          amount_ht: actualHt,
+          amount_tva: 0,
+          amount_ttc: actualHt,
+          discount_amount: discountAmount,
+          discount_label: discountLabel,
+          paid_at: paidAt,
+        }).catch(err => console.warn('[webhook] PDF generation (best-effort) failed:', err));
+
         break;
       }
 
@@ -424,8 +447,12 @@ Votre facture PDF sera disponible dans votre <a href="https://annuaire.quiz-coup
         console.log(`[webhook] Unhandled event type: ${event.type}`);
     }
   } catch (err) {
-    console.error(`[webhook] Error processing ${event.type}:`, err);
-    // Return 200 anyway to prevent Stripe from retrying
+    console.error(`[webhook] UNCAUGHT ERROR processing ${event.type}:`, err);
+    // Return 500 so Stripe retries and the error is visible in the Stripe dashboard
+    return new Response(JSON.stringify({ error: `Processing error: ${String(err)}` }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   return new Response(JSON.stringify({ received: true }), {

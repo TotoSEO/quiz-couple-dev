@@ -1217,6 +1217,369 @@ export const CITIES = [
 </div>
 `
   },
+  {
+    id: 'villeurbanne', name: 'Villeurbanne', department: '69', region: 'Auvergne-Rhône-Alpes', lat: 45.7667, lng: 4.8799, population: 152212,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Villeurbanne</span></h2>
+  <p>Villeurbanne, souvent perçue comme un prolongement de Lyon, est en réalité une ville à part entière — la plus peuplée de la métropole après Lyon, avec plus de 150 000 habitants. Son identité ouvrière et universitaire (le campus de la Doua accueille l'INSA et l'Université Lyon 1) crée un tissu social très mélangé : jeunes couples étudiants, familles installées dans les quartiers des Gratte-Ciel ou de Cusset, cadres du secteur tertiaire autour du Tonkin.</p>
+  <p>Les praticiens villeurbannais exercent dans plusieurs pôles : autour des Gratte-Ciel (le centre historique redessiné par Lazare Goujon dans les années 1930), dans le quartier Charpennes-Tonkin avec sa proximité du métro, et le long du cours Émile Zola. La ligne A du métro relie Villeurbanne au cœur de Lyon en quelques minutes, ce qui donne aussi accès à l'offre lyonnaise de <a href="/therapeute-de-couple/">thérapeutes de couple</a>.</p>
+  <p>Le CCAS de Villeurbanne propose des permanences d'écoute familiale gratuites, et le Centre Médico-Psychologique du secteur offre un accompagnement psychologique sans avance de frais. L'UDAF du Rhône gère des services de <a href="/mediateur-familial/">médiation familiale</a> accessibles sur le territoire villeurbannais — une ressource précieuse pour les couples en séparation avec enfants.</p>
+  <p>Côté tarifs, les praticiens villeurbannais sont généralement légèrement moins chers que leurs homologues lyonnais : comptez entre 55€ et 100€ la séance de thérapie de couple. La Maison de la Métropole du quartier offre aussi des orientations vers les services de <a href="/conseiller-conjugal/">conseil conjugal</a> du département.</p>
+</div>
+`
+  },
+  {
+    id: 'le-havre', name: 'Le Havre', department: '76', region: 'Normandie', lat: 49.4944, lng: 0.1079, population: 170147,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapeutes de couple au <span class="ann-text-gradient">Havre</span></h2>
+  <p>Le Havre, deuxième port de France et ville reconstruite par Auguste Perret après la guerre (classée au patrimoine mondial de l'UNESCO), porte dans son ADN cette capacité à se réinventer. C'est une ville de travailleurs — portuaires, industriels, tertiaires — où le rythme de vie est marqué par l'activité du port et de la zone industrielle. Les horaires atypiques, le travail posté et l'éloignement géographique de certains conjoints marins ou routiers créent des tensions spécifiques dans les couples havrais.</p>
+  <p>Les cabinets de thérapeutes se concentrent dans le centre reconstruit (quartier Perret, autour de l'Hôtel de Ville), dans le quartier de Sainte-Adresse en surplomb de la ville, et dans les quartiers résidentiels de Sanvic et Bléville. Les communes voisines de Montivilliers, Harfleur et Gonfreville-l'Orcher complètent l'offre locale.</p>
+  <p>Le CHU du Havre (hôpital Jacques Monod) dispose d'un service de psychiatrie qui propose des consultations de couple dans le cadre de suivis psychiatriques. Le CPEF du Havre offre des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal et familial</a>. L'association Le Phare (réseau d'écoute et de soutien) propose aussi des groupes de parole pour les personnes en difficulté conjugale.</p>
+  <p>Comptez entre 50€ et 90€ la séance chez un <a href="/therapeute-de-couple/">thérapeute de couple</a> en libéral au Havre — des tarifs plus accessibles que dans les grandes métropoles. La proximité de Rouen (1h en voiture) permet aussi d'accéder aux ressources départementales en <a href="/sexologue/">sexologie</a> et <a href="/mediateur-familial/">médiation familiale</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'saint-denis-reunion', name: 'Saint-Denis (La Réunion)', department: '974', region: 'La Réunion', lat: -20.8789, lng: 55.4481, population: 154765,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Saint-Denis de La Réunion</span></h2>
+  <p>Saint-Denis, chef-lieu de La Réunion, est la ville la plus peuplée des outre-mer français. L'île présente des dynamiques conjugales particulières : pluralité culturelle (créole, malgache, indienne, chinoise, métropolitaine), traditions familiales fortes, et un taux de familles monoparentales parmi les plus élevés de France. Les praticiens réunionnais sont formés à naviguer dans cette richesse culturelle qui influence profondément la vie de couple.</p>
+  <p>Les cabinets sont concentrés dans le centre-ville historique (rue de Paris, rue Maréchal Leclerc, quartier du Barachois) et dans les quartiers de Sainte-Clotilde et du Moufia (campus universitaire). Le CHU Félix Guyon dispose d'un pôle de psychiatrie avec des consultations spécialisées. L'offre est complétée par les praticiens de Saint-Paul, Saint-Pierre et Saint-Benoît qui couvrent le reste de l'île.</p>
+  <p>La Réunion bénéficie de dispositifs spécifiques : la CAF 974 finance des services de <a href="/mediateur-familial/">médiation familiale</a> gratuits, et les CPEF de l'île proposent des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> sans avance de frais. L'isolement insulaire peut amplifier les difficultés de couple, mais la solidarité familiale réunionnaise — le fameux « vivre ensemble créole » — constitue aussi un filet de sécurité.</p>
+  <p>Côté tarifs, comptez entre 50€ et 80€ la séance de thérapie de couple à La Réunion. La téléconsultation s'est beaucoup développée sur l'île, permettant d'accéder à des <a href="/sexologue/">sexologues</a> ou spécialistes qui ne sont pas toujours disponibles localement.</p>
+</div>
+`
+  },
+  {
+    id: 'saint-paul-reunion', name: 'Saint-Paul (La Réunion)', department: '974', region: 'La Réunion', lat: -21.0098, lng: 55.2710, population: 105240,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapeutes et conseillers conjugaux à <span class="ann-text-gradient">Saint-Paul</span></h2>
+  <p>Saint-Paul, deuxième commune de La Réunion par sa population, s'étend de la côte ouest (les plages de Boucan Canot et Saint-Gilles) jusqu'aux hauteurs de la Plaine (Le Guillaume, Sans-Souci). Cette géographie étendue fait que les praticiens sont dispersés sur un large territoire. On trouve des cabinets dans le centre de Saint-Paul, à Saint-Gilles-les-Bains (station balnéaire très active), et dans les quartiers de La Saline et du Port voisin.</p>
+  <p>La côte ouest réunionnaise attire beaucoup de métropolitains et de retraités, ce qui crée un mélange de cultures conjugales intéressant. Les couples « mixtes » (créole-métropolitain) sont nombreux et peuvent rencontrer des défis liés à la différence de codes culturels et familiaux. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> de la zone ouest sont habitués à accompagner ces dynamiques interculturelles.</p>
+  <p>Le CPEF de Saint-Paul propose des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>. La CAF Réunion finance un service de <a href="/mediateur-familial/">médiation familiale</a> accessible sur rendez-vous. Le centre hospitalier Gabriel Martin offre aussi des consultations en psychiatrie et psychologie. Comptez entre 50€ et 80€ la séance en libéral.</p>
+</div>
+`
+  },
+  {
+    id: 'fort-de-france', name: 'Fort-de-France', department: '972', region: 'Martinique', lat: 14.6161, lng: -61.0588, population: 78126,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Fort-de-France</span></h2>
+  <p>Fort-de-France, capitale de la Martinique, concentre l'essentiel de l'offre en accompagnement de couple de l'île. La société martiniquaise, marquée par une histoire complexe et un système familial matrifocal (où la mère est souvent le pivot de la famille), génère des dynamiques conjugales spécifiques. Les thérapeutes foyalais connaissent ces réalités : relations à distance quand un conjoint part étudier ou travailler en métropole, poids des liens familiaux, tabous autour de la sexualité dans une culture où le paraître compte.</p>
+  <p>Les cabinets se trouvent principalement dans le centre-ville (quartier Didier, boulevard du Général de Gaulle, route de la Folie) et dans les communes voisines de Schoelcher et du Lamentin. Le CHU de Martinique (hôpital Pierre Zobda-Quitman) dispose de consultations en psychiatrie et psychologie. Le CPEF de Fort-de-France propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal et familial</a> gratuites.</p>
+  <p>L'UDAF de Martinique gère un service de <a href="/mediateur-familial/">médiation familiale</a>. La consultation chez un <a href="/therapeute-de-couple/">thérapeute de couple</a> coûte entre 50€ et 90€ en Martinique. La téléconsultation est aussi très développée, permettant aux couples des communes éloignées (Grand-Rivière, Le Prêcheur, Trinité) d'accéder à des spécialistes sans se déplacer.</p>
+</div>
+`
+  },
+  {
+    id: 'antibes', name: 'Antibes', department: '06', region: 'Provence-Alpes-Côte d\'Azur', lat: 43.5808, lng: 7.1239, population: 72999,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Antibes</span></h2>
+  <p>Antibes-Juan-les-Pins, entre Cannes et Nice sur la Côte d'Azur, est à la fois une station balnéaire prisée et une ville technologique (Sophia Antipolis, la « Silicon Valley française », est à 15 minutes). Ce double visage crée un tissu social contrasté : cadres du numérique sous pression, saisonniers du tourisme, retraités installés au soleil, et familles locales. Les dynamiques de couple y sont influencées par la saisonnalité (l'été amène stress professionnel et tentations), le coût de la vie élevé et parfois l'éloignement familial des « expats » de Sophia.</p>
+  <p>Les cabinets de <a href="/therapeute-de-couple/">thérapeutes de couple</a> sont répartis entre la vieille ville d'Antibes (quartier du Safranier, boulevard d'Aguillon), Juan-les-Pins et la zone de Sophia Antipolis. La proximité de Nice et Cannes élargit considérablement le choix de praticiens accessibles en 20-30 minutes de voiture.</p>
+  <p>Le centre hospitalier d'Antibes propose des consultations en psychologie. Le CPEF des Alpes-Maritimes dispose d'antennes locales. Comptez entre 60€ et 110€ la séance de thérapie de couple à Antibes — des tarifs alignés sur ceux de la Côte d'Azur. Les <a href="/sexologue/">sexologues</a> et <a href="/sexotherapeute/">sexothérapeutes</a> sont également bien représentés dans le bassin antibois.</p>
+</div>
+`
+  },
+  {
+    id: 'saint-quentin', name: 'Saint-Quentin', department: '02', region: 'Hauts-de-France', lat: 49.8486, lng: 3.2876, population: 53900,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Saint-Quentin</span></h2>
+  <p>Saint-Quentin, sous-préfecture de l'Aisne dans les Hauts-de-France, est une ville au patrimoine Art déco remarquable mais confrontée à des défis économiques importants. Le taux de chômage y est supérieur à la moyenne nationale, et les difficultés financières sont l'un des premiers facteurs de tension dans les couples saint-quentinois. Les praticiens locaux sont habitués à accompagner des couples où le stress économique s'ajoute aux problèmes relationnels.</p>
+  <p>L'offre de praticiens à Saint-Quentin est plus restreinte que dans les grandes métropoles, ce qui rend chaque cabinet d'autant plus précieux. On trouve des <a href="/therapeute-de-couple/">thérapeutes de couple</a> dans le centre-ville (quartier de la Basilique, rue d'Isle) et aux abords de l'hôpital. Le centre hospitalier de Saint-Quentin dispose d'un CMP (Centre Médico-Psychologique) qui propose des consultations gratuites.</p>
+  <p>Le CPEF de l'Aisne offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> sans avance de frais. L'UDAF 02 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs en libéral sont plus accessibles que dans les grandes villes : entre 45€ et 75€ la séance. Pour les spécialités plus pointues (<a href="/sexologue/">sexologie</a>), les praticiens de Laon, Reims ou Amiens complètent l'offre locale.</p>
+</div>
+`
+  },
+  {
+    id: 'la-seyne-sur-mer', name: 'La Seyne-sur-Mer', department: '83', region: 'Provence-Alpes-Côte d\'Azur', lat: 43.1010, lng: 5.8784, population: 65926,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">La Seyne-sur-Mer</span></h2>
+  <p>La Seyne-sur-Mer, voisine de Toulon sur la rade, porte l'héritage de ses anciens chantiers navals et une identité ouvrière forte. La reconversion économique de la ville a entraîné des bouleversements sociaux qui se répercutent dans la vie des couples : chômage, précarité, relogements. Les praticiens seynois connaissent ces réalités et accompagnent des couples de tous milieux.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier du port, avenue Gambetta), au quartier des Sablettes et à Tamaris. La proximité immédiate de Toulon (10 minutes en voiture, liaison maritime directe) donne accès à l'offre toulonnaise en <a href="/therapeute-de-couple/">thérapie de couple</a>, <a href="/sexologue/">sexologie</a> et <a href="/mediateur-familial/">médiation familiale</a>.</p>
+  <p>Le CCAS de La Seyne propose des permanences sociales qui peuvent orienter vers des consultations de couple. Le CPEF du Var dispose d'antennes dans l'agglomération toulonnaise. Comptez entre 50€ et 85€ la séance en libéral — des tarifs proches de ceux de Toulon.</p>
+</div>
+`
+  },
+  {
+    id: 'lorient', name: 'Lorient', department: '56', region: 'Bretagne', lat: 47.7482, lng: -3.3702, population: 57149,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Lorient</span></h2>
+  <p>Lorient, ville portuaire du Morbihan, a été reconstruite après-guerre et s'est développée autour de la pêche, de la marine militaire (base de sous-marins de Keroman) et de la plaisance. Les métiers de la mer — marins-pêcheurs absents pendant des jours, militaires en déploiement — créent des configurations conjugales particulières où l'absence prolongée du conjoint est un facteur de tension récurrent. Les <a href="/therapeute-de-couple/">thérapeutes de couple</a> lorientais sont familiers de ces problématiques.</p>
+  <p>Les cabinets se concentrent dans le centre-ville reconstruit (quartier de la gare, rue du Port, avenue Jean Jaurès), dans les quartiers de Merville et Nouvelle Ville, et dans les communes voisines de Lanester, Hennebont et Ploemeur. Le festival interceltique de Lorient, chaque été, rythme aussi la vie sociale de la ville.</p>
+  <p>Le CHBS (Centre Hospitalier de Bretagne Sud) propose des consultations en psychiatrie et psychologie. L'UDAF du Morbihan gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Lorient offre des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>. En libéral, comptez entre 50€ et 80€ la séance. La proximité de Vannes (45 min) et Quimper (1h) élargit l'offre en <a href="/sexologue/">sexologie</a> et spécialités complémentaires.</p>
+</div>
+`
+  },
+  {
+    id: 'vannes', name: 'Vannes', department: '56', region: 'Bretagne', lat: 47.6586, lng: -2.7599, population: 53352,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Vannes</span></h2>
+  <p>Vannes, préfecture du Morbihan, est une ville historique au bord du golfe du Morbihan. Son cadre de vie attractif (ville moyenne, littoral, patrimoine médiéval) attire de nombreux couples en quête de qualité de vie — souvent en reconversion après une vie en métropole. Ce déménagement, même choisi, peut être source de tensions : isolement social, décalage de rythme, difficultés d'insertion professionnelle pour l'un des conjoints.</p>
+  <p>Les praticiens sont installés dans le centre historique (intra-muros, quartier Saint-Patern), dans la zone de Tohannic et vers le quartier de la gare. Le littoral (Arradon, Séné, Baden) accueille aussi des cabinets dans un cadre plus verdoyant. Le golfe du Morbihan crée un bassin de vie cohérent où les praticiens rayonnent sur plusieurs communes.</p>
+  <p>Le centre hospitalier Bretagne Atlantique (CHBA) propose des consultations en psychiatrie-psychologie. L'UDAF 56 dispose d'un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF de Vannes offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> gratuites. Les tarifs en libéral vont de 50€ à 85€ la séance pour un <a href="/therapeute-de-couple/">thérapeute de couple</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'saint-denis', name: 'Saint-Denis', department: '93', region: 'Île-de-France', lat: 48.9362, lng: 2.3574, population: 112091,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Saint-Denis</span></h2>
+  <p>Saint-Denis, au nord de Paris en Seine-Saint-Denis, est une ville de contrastes : patrimoine historique (la basilique des rois de France), campus universitaire (Paris 8), Stade de France, et quartiers populaires où se côtoient des dizaines de nationalités. Cette diversité culturelle fait que les praticiens dionysiens accompagnent des couples aux configurations très variées : couples mixtes, familles recomposées, unions traditionnelles de différentes cultures.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (autour de la basilique et de la place du marché), dans le quartier de la Plaine Saint-Denis (en pleine transformation avec de nombreux bureaux et logements neufs), et près de l'université. Le métro ligne 13 et bientôt le Grand Paris Express relient directement Saint-Denis à Paris.</p>
+  <p>Le centre hospitalier Delafontaine dispose d'un service de psychiatrie avec des consultations de couple. Le CPEF de Seine-Saint-Denis propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> gratuites, y compris avec interprétariat pour les couples non francophones. L'UDAF 93 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs en libéral sont proches de ceux de Paris : entre 60€ et 100€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'montreuil', name: 'Montreuil', department: '93', region: 'Île-de-France', lat: 48.8638, lng: 2.4484, population: 109897,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapeutes de couple à <span class="ann-text-gradient">Montreuil</span></h2>
+  <p>Montreuil, en bordure de Paris dans le 93, est devenue l'une des villes les plus prisées de la petite couronne par les jeunes couples et familles attirés par ses espaces, ses prix (encore) plus accessibles que Paris, et son ambiance artistique et associative. Le « Montreuil bobo » cohabite avec le « Montreuil populaire », créant une ville socialement diverse où les praticiens accompagnent des couples de tous profils.</p>
+  <p>Les cabinets de <a href="/therapeute-de-couple/">thérapeutes de couple</a> sont concentrés autour de la mairie (centre-ville, rue de Paris), dans le quartier Croix-de-Chavaux (métro ligne 9, très bien desservi), et dans le bas-Montreuil — quartier créatif avec beaucoup de locaux transformés en cabinets. La proximité immédiate de Paris (ligne 9, ligne 1 à Nation en 5 min) donne aussi accès à tout le réseau parisien de praticiens.</p>
+  <p>Le CPEF de Montreuil propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> gratuites. Le CMP du secteur offre un suivi psychologique sans avance de frais. L'UDAF 93 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a> sur le département. Comptez entre 55€ et 100€ la séance en libéral — légèrement moins cher que dans Paris intra-muros.</p>
+</div>
+`
+  },
+  {
+    id: 'argenteuil', name: 'Argenteuil', department: '95', region: 'Île-de-France', lat: 48.9472, lng: 2.2467, population: 113505,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Argenteuil</span></h2>
+  <p>Argenteuil, première ville du Val-d'Oise avec plus de 110 000 habitants, est une commune dynamique et multiculturelle en bord de Seine. Historiquement liée aux impressionnistes (Monet y a peint le célèbre « Les Coquelicots »), la ville est aujourd'hui un pôle de vie de la banlieue nord-ouest parisienne. La diversité culturelle y est forte, et les praticiens argenteuillais accompagnent des couples aux origines et traditions familiales variées.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (autour de la basilique Saint-Denys, rue Paul Vaillant-Couturier), dans le quartier du Val-d'Argent Sud, et à proximité de la gare (Transilien J vers Paris Saint-Lazare en 12 min). Les communes voisines de Bezons, Cormeilles-en-Parisis et Colombes complètent l'offre locale de <a href="/therapeute-de-couple/">thérapeutes de couple</a>.</p>
+  <p>Le centre hospitalier d'Argenteuil dispose de consultations en psychiatrie et psychologie. Le CPEF du Val-d'Oise propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> gratuites. L'UDAF 95 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs en libéral sont accessibles : entre 50€ et 90€ la séance, soit nettement moins que dans Paris.</p>
+</div>
+`
+  },
+  {
+    id: 'boulogne-billancourt', name: 'Boulogne-Billancourt', department: '92', region: 'Île-de-France', lat: 48.8397, lng: 2.2399, population: 120071,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Boulogne-Billancourt</span></h2>
+  <p>Boulogne-Billancourt, dans les Hauts-de-Seine, est la commune la plus peuplée d'Île-de-France après Paris. Ville aisée et résidentielle, elle attire des couples actifs travaillant souvent dans les sièges sociaux installés sur son territoire (TF1, Bouygues, Renault historiquement). Le stress professionnel, les emplois du temps surchargés et la pression de « réussir sa vie » — professionnelle, parentale, conjugale — sont des motifs fréquents de consultation chez les couples boulonnais.</p>
+  <p>L'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> est dense : de nombreux cabinets existent autour de la place Marcel Sembat, de l'avenue Jean-Baptiste Clément, du quartier Billancourt-Rives de Seine et du Point du Jour. Le métro ligne 9 et ligne 10 relient directement le centre de Boulogne à Paris.</p>
+  <p>Les tarifs reflètent le pouvoir d'achat local : comptez entre 70€ et 130€ la séance. Le CPEF des Hauts-de-Seine propose des consultations gratuites de <a href="/conseiller-conjugal/">conseil conjugal</a>. Le CMP de Boulogne offre un accompagnement psychologique sans avance de frais. L'hôpital Ambroise Paré (AP-HP) dispose d'un service de psychiatrie avec des consultations spécialisées en <a href="/sexologue/">sexologie</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'nanterre', name: 'Nanterre', department: '92', region: 'Île-de-France', lat: 48.8924, lng: 2.2071, population: 96689,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Nanterre</span></h2>
+  <p>Nanterre, préfecture des Hauts-de-Seine, mêle un campus universitaire majeur (Paris-Nanterre, berceau de Mai 68), le quartier d'affaires de La Défense (en partie sur son territoire) et des quartiers populaires. Ce patchwork social fait que les praticiens nanterriens accompagnent des couples très divers : étudiants en début de vie commune, cadres stressés de La Défense, familles des quartiers.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier du Vieux-Pont, avenue de la République), autour de la gare de Nanterre-Ville (RER A) et dans le quartier de l'Université. La Défense, avec ses tours, accueille aussi des cabinets de <a href="/therapeute-de-couple/">thérapie de couple</a> ouverts en horaires étendus pour les actifs qui veulent consulter en fin de journée.</p>
+  <p>L'hôpital Max Fourestier et l'hôpital Louis Mourier (AP-HP) disposent de consultations en psychiatrie. Le CPEF des Hauts-de-Seine propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. L'UDAF 92 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs vont de 55€ à 100€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'tourcoing', name: 'Tourcoing', department: '59', region: 'Hauts-de-France', lat: 50.7239, lng: 3.1613, population: 98656,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapeutes de couple à <span class="ann-text-gradient">Tourcoing</span></h2>
+  <p>Tourcoing, ancienne capitale du textile dans la métropole lilloise, traverse une profonde mutation économique et urbaine. Le programme de rénovation urbaine a transformé des quartiers entiers, mais les difficultés sociales persistent dans certaines zones. Les couples tourquennois peuvent être confrontés à des problématiques liées au chômage, au déclassement économique ou aux différences culturelles — Tourcoing est l'une des villes les plus multiculturelles de France.</p>
+  <p>Les cabinets de <a href="/therapeute-de-couple/">thérapeutes de couple</a> se trouvent dans le centre-ville (Grand Place, rue de Tournai, quartier de la gare), dans le quartier du Blanc Seau et à proximité du métro. Le métro lillois relie Tourcoing à Lille en 20 minutes, donnant accès au réseau lillois de praticiens. Les communes voisines de Roubaix, Wattrelos et Mouscron (Belgique, à 5 km) complètent l'offre.</p>
+  <p>Le centre hospitalier de Tourcoing dispose de consultations en psychiatrie et psychologie. Le CPEF du Nord propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> gratuites. L'UDAF 59 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs sont accessibles : entre 45€ et 80€ la séance en libéral.</p>
+</div>
+`
+  },
+  {
+    id: 'roubaix', name: 'Roubaix', department: '59', region: 'Hauts-de-France', lat: 50.6942, lng: 3.1746, population: 98828,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Roubaix</span></h2>
+  <p>Roubaix, dans la métropole lilloise, est une ville en pleine renaissance après des décennies de désindustrialisation. La Piscine (musée d'art et d'industrie), la Condition Publique et les friches industrielles reconverties témoignent de cette transformation. Mais Roubaix reste l'une des villes les plus pauvres de France, et les difficultés économiques pèsent lourdement sur la vie conjugale : stress financier, logements précaires, manque de perspectives.</p>
+  <p>Les praticiens roubaisiens sont installés dans le centre-ville (quartier de la Grand'Place, boulevard du Général Leclerc), autour du parc Barbieux et dans le quartier de l'Alma-Gare. Le métro ligne 2 connecte Roubaix à Lille et Tourcoing. L'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> est complétée par le réseau métropolitain lillois.</p>
+  <p>Le CMP de Roubaix propose des consultations psychologiques gratuites — une ressource essentielle dans une ville où beaucoup de couples ne peuvent pas se permettre le libéral. Le CPEF propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. L'UDAF 59 gère la <a href="/mediateur-familial/">médiation familiale</a> sur le territoire. En libéral, les tarifs vont de 45€ à 75€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'vitry-sur-seine', name: 'Vitry-sur-Seine', department: '94', region: 'Île-de-France', lat: 48.7875, lng: 2.3933, population: 94649,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Vitry-sur-Seine</span></h2>
+  <p>Vitry-sur-Seine, la ville la plus peuplée du Val-de-Marne, est connue pour son engagement culturel (le MAC VAL, musée d'art contemporain, le street art omniprésent) et sa diversité sociale. Ville populaire et multiculturelle, elle accueille de nombreux jeunes couples et familles attirés par des loyers encore accessibles tout en restant à 15 minutes de Paris par le métro ligne 7.</p>
+  <p>Les cabinets de <a href="/therapeute-de-couple/">thérapeutes de couple</a> se trouvent dans le centre-ville (quartier de la mairie, rue du Moulin de Saquet), dans le quartier du Port-à-l'Anglais et vers les bords de Seine. L'arrivée prochaine du Grand Paris Express (ligne 15) va améliorer la desserte et développer l'offre de services.</p>
+  <p>Le CMP de Vitry propose des consultations gratuites. Le CPEF du Val-de-Marne offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. L'hôpital Paul Brousse (AP-HP, Villejuif) est à proximité immédiate. L'UDAF 94 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs en libéral vont de 50€ à 90€.</p>
+</div>
+`
+  },
+  {
+    id: 'creteil', name: 'Créteil', department: '94', region: 'Île-de-France', lat: 48.7900, lng: 2.4550, population: 92382,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Créteil</span></h2>
+  <p>Créteil, préfecture du Val-de-Marne, est une ville structurée autour de grands ensembles architecturaux des années 1970 (les Choux de Gérard Grandval, la préfecture en étoile) et du lac de Créteil. L'université Paris-Est Créteil (UPEC) et le CHU Henri Mondor en font un pôle de santé et d'enseignement majeur. Les couples cristoliens bénéficient de cette proximité avec des structures de soins de haut niveau.</p>
+  <p>Les praticiens exercent dans le centre commercial régional Créteil Soleil et ses environs, dans le quartier de l'Échat (métro ligne 8), autour du lac et dans le quartier universitaire. Le CHU Henri Mondor dispose d'un service de psychiatrie avec des consultations spécialisées, y compris en <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le CPEF du Val-de-Marne propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> à Créteil même. L'UDAF 94 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CMP de Créteil offre un suivi psychologique gratuit. En libéral, comptez entre 55€ et 95€ la séance de <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'narbonne', name: 'Narbonne', department: '11', region: 'Occitanie', lat: 43.1840, lng: 3.0034, population: 55600,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Narbonne</span></h2>
+  <p>Narbonne, ancienne capitale de la Gaule romaine dans l'Aude, est une ville méditerranéenne au carrefour entre Toulouse et Montpellier. Le canal de la Robine traverse la ville et lui donne un charme particulier. La viticulture reste un pilier économique du Narbonnais, et les crises viticoles successives ont laissé des traces dans le tissu social. Les praticiens narbonnais accompagnent des couples aux profils variés : viticulteurs, retraités du littoral (Narbonne-Plage, Gruissan), actifs du tertiaire.</p>
+  <p>Les cabinets se trouvent dans le centre-ville historique (quartier de la cathédrale Saint-Just, boulevard du Docteur Ferroul), dans le quartier de la gare et dans les zones résidentielles de Bourg et Razimbaud. Les communes de Gruissan et Narbonne-Plage complètent l'offre en été avec des praticiens saisonniers.</p>
+  <p>Le centre hospitalier de Narbonne dispose de consultations en psychiatrie. Le CPEF de l'Aude propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> gratuites. L'UDAF 11 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs sont accessibles : entre 45€ et 80€ la séance pour un <a href="/therapeute-de-couple/">thérapeute de couple</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'cergy', name: 'Cergy', department: '95', region: 'Île-de-France', lat: 49.0363, lng: 2.0780, population: 67317,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Cergy</span></h2>
+  <p>Cergy, au cœur de l'agglomération de Cergy-Pontoise dans le Val-d'Oise, est une ville nouvelle née dans les années 1970. Son architecture caractéristique (l'Axe Majeur de Dani Karavan, les Douze Colonnes de Ricardo Bofill), son université (CY Cergy Paris Université) et sa base de loisirs en font un cadre de vie atypique. Les couples cergyssois sont souvent des jeunes familles installées en accession à la propriété, confrontées aux longs trajets vers Paris (RER A, 40 min) qui grignotent le temps de couple.</p>
+  <p>Les praticiens sont installés dans le centre de Cergy-Préfecture, dans le quartier du Grand Centre (centre commercial Les 3 Fontaines), et à Cergy-Saint-Christophe. Les communes voisines de Pontoise, Osny et Saint-Ouen-l'Aumône complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier de Pontoise dispose de consultations en psychiatrie et psychologie. Le CPEF du Val-d'Oise propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. L'UDAF 95 coordonne les services de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs en libéral vont de 50€ à 85€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'bourges', name: 'Bourges', department: '18', region: 'Centre-Val de Loire', lat: 47.0810, lng: 2.3988, population: 64668,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Bourges</span></h2>
+  <p>Bourges, préfecture du Cher, est une ville de patrimoine (cathédrale gothique classée UNESCO, Palais Jacques-Cœur) connue pour son festival Le Printemps de Bourges. Ville à taille humaine au centre géographique de la France, elle offre un cadre de vie paisible mais peut souffrir d'un certain isolement — la gare n'est reliée à Paris que par des trains Intercités (2h15) sans TGV direct. Cet éloignement des grandes métropoles renforce l'importance de l'offre locale en accompagnement de couple.</p>
+  <p>Les cabinets se trouvent dans le centre historique (quartier de la cathédrale, place Gordaine, rue Moyenne), dans le quartier de la gare et dans les zones résidentielles de Pignoux et Val d'Auron. L'offre est complétée par les praticiens de Vierzon, Châteauroux et Nevers dans les départements voisins.</p>
+  <p>Le centre hospitalier Jacques-Cœur dispose d'un CMP avec des consultations psychologiques gratuites. Le CPEF du Cher propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. L'UDAF 18 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs en libéral sont parmi les plus accessibles de France : entre 40€ et 70€ la séance de <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'chartres', name: 'Chartres', department: '28', region: 'Centre-Val de Loire', lat: 48.4469, lng: 1.4891, population: 38752,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Chartres</span></h2>
+  <p>Chartres, préfecture d'Eure-et-Loir, est mondialement connue pour sa cathédrale gothique et ses vitraux. Située à seulement 1h de Paris en TER, la ville attire des couples qui travaillent dans la capitale mais cherchent un cadre de vie plus calme et des loyers plus accessibles. Les longs trajets quotidiens (domicile-gare-Paris-bureau) créent cependant des tensions spécifiques dans les couples chartrains : peu de temps ensemble en semaine, fatigue chronique, vie sociale réduite.</p>
+  <p>Les praticiens sont installés dans le centre-ville historique (quartier de la cathédrale, place des Épars, rue du Grand Faubourg) et dans les quartiers résidentiels de Mainvilliers et Lucé. La Cosmetic Valley (pôle de compétitivité parfumerie-cosmétique) basée à Chartres attire aussi des cadres et ingénieurs dont les couples peuvent bénéficier de l'offre locale.</p>
+  <p>Le centre hospitalier Louis Pasteur propose des consultations en psychiatrie et psychologie. Le CPEF d'Eure-et-Loir offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> gratuites. L'UDAF 28 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. En libéral, comptez entre 50€ et 80€ la séance. La proximité de Paris (1h) permet aussi d'accéder au réseau parisien de <a href="/sexologue/">sexologues</a> et spécialistes.</p>
+</div>
+`
+  },
+  {
+    id: 'cholet', name: 'Cholet', department: '49', region: 'Pays de la Loire', lat: 47.0609, lng: -0.8791, population: 54204,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Cholet</span></h2>
+  <p>Cholet, deuxième ville du Maine-et-Loire, est un bassin industriel dynamique (chaussure, textile, agroalimentaire, industrie mécanique). Le plein emploi relatif de la zone crée des rythmes de travail intenses — heures supplémentaires, travail posté, week-ends travaillés — qui peuvent peser sur la vie de couple. Les praticiens choletais connaissent ces réalités industrielles et accompagnent des couples où le travail occupe souvent une place centrale.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la mairie, avenue Gambetta, boulevard Guy Chouteau), dans le quartier de la gare et dans les zones résidentielles du Lac de Ribou et du parc de Moine. Les communes de Beaupréau, Chemillé et Maulévrier complètent l'offre sur le territoire des Mauges.</p>
+  <p>Le centre hospitalier de Cholet dispose de consultations en psychiatrie et psychologie. L'UDAF 49 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF du Maine-et-Loire propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. Comptez entre 45€ et 75€ la séance en libéral. Angers (1h) et Nantes (1h) complètent l'offre en <a href="/sexologue/">sexologie</a> et spécialités pointues.</p>
+</div>
+`
+  },
+  {
+    id: 'saint-brieuc', name: 'Saint-Brieuc', department: '22', region: 'Bretagne', lat: 48.5131, lng: -2.7600, population: 45207,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Saint-Brieuc</span></h2>
+  <p>Saint-Brieuc, préfecture des Côtes-d'Armor, est une ville bretonne à taille humaine entre Rennes et Brest. La baie de Saint-Brieuc, ses falaises et son littoral en font un cadre de vie agréable, mais la ville connaît des difficultés économiques liées à la reconversion du secteur agroalimentaire (Cooperl, Kermené) et au vieillissement de la population. Les praticiens briochins accompagnent des couples dans ces contextes de transition professionnelle et générationnelle.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la cathédrale Saint-Étienne, rue Saint-Gilles, rue Fardel), dans le quartier de la gare (TGV vers Paris en 2h40) et dans les communes voisines de Ploufragan, Trégueux et Langueux. Le littoral (Plérin, Binic-Étables-sur-Mer) accueille aussi quelques praticiens.</p>
+  <p>Le centre hospitalier Yves Le Foll dispose de consultations en psychiatrie et psychologie. L'UDAF 22 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Le CPEF des Côtes-d'Armor propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> gratuites. Les tarifs en libéral vont de 45€ à 75€ la séance. Rennes (1h en TER) et Brest (1h30) complètent l'offre en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'niort', name: 'Niort', department: '79', region: 'Nouvelle-Aquitaine', lat: 46.3239, lng: -0.4593, population: 59005,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Niort</span></h2>
+  <p>Niort, préfecture des Deux-Sèvres, est la « capitale française des mutuelles » — MAIF, MAAF, Groupama, Intermarché y ont leur siège. Ce tissu de grandes entreprises tertiaires crée un bassin d'emploi stable mais aussi des couples de cadres confrontés au stress professionnel, à la mobilité (mutations vers Niort depuis d'autres villes) et à l'éloignement familial. Les praticiens niortais accompagnent souvent des couples « transplantés » qui ont choisi Niort pour le travail sans y avoir d'attaches.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier du donjon, rue Ricard, rue Victor Hugo), dans le quartier de la gare et dans les zones résidentielles de Sainte-Pezenne et Souché. Les communes de Chauray et Aiffres accueillent aussi des praticiens.</p>
+  <p>Le centre hospitalier de Niort propose des consultations en psychiatrie et psychologie. Le CPEF des Deux-Sèvres offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> gratuites. L'UDAF 79 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs sont accessibles : entre 45€ et 75€ la séance de <a href="/therapeute-de-couple/">thérapie de couple</a>. La Rochelle (1h) et Poitiers (1h) complètent l'offre en <a href="/sexologue/">sexologie</a>.</p>
+</div>
+`
+  },
+  {
+    id: 'hyeres', name: 'Hyères', department: '83', region: 'Provence-Alpes-Côte d\'Azur', lat: 43.1204, lng: 6.1286, population: 57530,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement de couple à <span class="ann-text-gradient">Hyères</span></h2>
+  <p>Hyères-les-Palmiers, la plus ancienne station balnéaire de la Côte d'Azur, est une ville étendue entre la vieille ville médiévale perchée et les plages de la presqu'île de Giens. Les îles d'Or (Porquerolles, Port-Cros) font partie de son territoire. La ville attire de nombreux retraités et couples en quête de soleil, mais aussi des militaires (base aéronavale d'Hyères) dont les conjoints vivent les absences prolongées et la mobilité géographique imposée.</p>
+  <p>Les praticiens exercent dans le centre-ville historique (place Massillon, avenue des Îles d'Or), dans le quartier de l'Almanarre et à Hyères-Plage. La proximité de Toulon (20 min en voiture, TER direct) donne accès à l'offre toulonnaise en <a href="/therapeute-de-couple/">thérapie de couple</a> et <a href="/sexologue/">sexologie</a>.</p>
+  <p>Le centre hospitalier d'Hyères dispose de consultations. Le CPEF du Var propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. L'UDAF 83 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Comptez entre 55€ et 90€ la séance en libéral — tarifs typiques de la Côte d'Azur.</p>
+</div>
+`
+  },
+  {
+    id: 'evry-courcouronnes', name: 'Évry-Courcouronnes', department: '91', region: 'Île-de-France', lat: 48.6321, lng: 2.4412, population: 69477,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Évry-Courcouronnes</span></h2>
+  <p>Évry-Courcouronnes, préfecture de l'Essonne, est une ville nouvelle des années 1970 qui a fusionné avec Courcouronnes en 2019. Elle abrite la cathédrale de la Résurrection (la seule cathédrale construite au XXe siècle en France), l'université d'Évry et le Génopole (pôle de biotechnologies). La ville se caractérise par une grande diversité culturelle et sociale — les couples évryens viennent d'horizons très variés, ce qui enrichit et complexifie parfois les dynamiques conjugales.</p>
+  <p>Les cabinets de <a href="/therapeute-de-couple/">thérapeutes de couple</a> se trouvent dans le centre-ville (quartier des Pyramides, agora d'Évry), dans le quartier de la gare RER D (Évry-Courcouronnes, 35 min de Paris) et dans les zones résidentielles de Courcouronnes. Les communes de Corbeil-Essonnes, Ris-Orangis et Lisses complètent l'offre locale.</p>
+  <p>Le centre hospitalier Sud Francilien (CHSF) dispose d'un service de psychiatrie avec des consultations spécialisées. Le CPEF de l'Essonne propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. L'UDAF 91 gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs en libéral vont de 50€ à 85€ la séance.</p>
+</div>
+`
+  },
+  {
+    id: 'bastia', name: 'Bastia', department: '2B', region: 'Corse', lat: 42.6975, lng: 9.4502, population: 48044,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Accompagnement conjugal à <span class="ann-text-gradient">Bastia</span></h2>
+  <p>Bastia, principale ville de Haute-Corse, est le poumon économique du nord de l'île avec son port (le plus important de Corse), ses commerces et ses administrations. La société corse, avec ses liens familiaux forts, son sens de l'honneur et ses traditions, crée un contexte particulier pour la vie de couple. Les séparations sont souvent vécues sous le regard de la communauté, et les praticiens bastiais savent naviguer dans cette dimension culturelle.</p>
+  <p>Les cabinets se trouvent dans le centre-ville (quartier de la place Saint-Nicolas, rue César Campinchi, boulevard Paoli), dans le quartier de Lupino et dans la commune voisine de Furiani. L'offre est plus restreinte qu'en métropole, mais la qualité des praticiens formés sur le continent (Aix-Marseille, Nice) compense la quantité.</p>
+  <p>Le centre hospitalier de Bastia dispose de consultations en psychiatrie. Le CPEF de Haute-Corse propose des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a>. L'UDAF 2B gère un service de <a href="/mediateur-familial/">médiation familiale</a>. Les tarifs en libéral vont de 50€ à 85€ la séance. La téléconsultation est une alternative intéressante pour accéder à des <a href="/sexologue/">sexologues</a> spécialisés basés sur le continent.</p>
+</div>
+`
+  },
+  {
+    id: 'saint-malo', name: 'Saint-Malo', department: '35', region: 'Bretagne', lat: 48.6493, lng: -2.0007, population: 46097,
+    seoText: '',
+    seoHtml: `
+<div class="ann-seo-block">
+  <h2>Thérapie de couple à <span class="ann-text-gradient">Saint-Malo</span></h2>
+  <p>Saint-Malo, cité corsaire intra-muros et station balnéaire prisée de la Côte d'Émeraude, est une ville où le tourisme rythme la vie économique. La saisonnalité forte (afflux estival, calme hivernal) crée des rythmes de travail intenses pour les couples du secteur hôtelier et de la restauration : journées à rallonge en été, sous-emploi en hiver. Les praticiens malouins connaissent bien ces cycles et leur impact sur la vie de couple.</p>
+  <p>Les cabinets se trouvent dans le quartier de Paramé (avenue John Kennedy, quartier résidentiel), dans le quartier de la gare (Gare de Saint-Malo, TGV vers Paris en 2h30) et dans les quartiers de Rothéneuf et Saint-Servan. Les communes voisines de Dinard, Dinan et Cancale complètent l'offre locale en <a href="/therapeute-de-couple/">thérapie de couple</a>.</p>
+  <p>Le centre hospitalier de Saint-Malo (hôpital Chateaubriand) propose des consultations en psychiatrie. Le CPEF d'Ille-et-Vilaine offre des consultations de <a href="/conseiller-conjugal/">conseil conjugal</a> gratuites. L'UDAF 35 gère un service de <a href="/mediateur-familial/">médiation familiale</a> accessible depuis Saint-Malo. Les tarifs en libéral vont de 50€ à 80€ la séance. Rennes (1h en TER) complète l'offre en <a href="/sexologue/">sexologie</a> et spécialités pointues.</p>
+</div>
+`
+  },
 ];
 
 // ── No mock data — live professionals are fetched from Supabase ──────
