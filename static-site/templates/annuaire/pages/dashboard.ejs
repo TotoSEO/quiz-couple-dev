@@ -327,6 +327,44 @@
             <div id="prof-availability-container" style="display:flex;flex-wrap:wrap;gap:0.75rem;"></div>
           </div>
 
+          <!-- Opening Hours -->
+          <div class="ann-form-group" style="margin-top: 1rem;">
+            <label class="ann-form-label">Horaires d'ouverture <span class="ann-text-muted" style="font-size:0.75rem;font-weight:400;">(optionnel)</span></label>
+            <div class="ann-hours-form" id="dash-hours-form">
+              <% const dashDays = [
+                { key: 'monday', label: 'Lundi' },
+                { key: 'tuesday', label: 'Mardi' },
+                { key: 'wednesday', label: 'Mercredi' },
+                { key: 'thursday', label: 'Jeudi' },
+                { key: 'friday', label: 'Vendredi' },
+                { key: 'saturday', label: 'Samedi' },
+                { key: 'sunday', label: 'Dimanche' }
+              ]; %>
+              <% for (const day of dashDays) { %>
+              <div class="ann-hours-form-row" data-day="<%= day.key %>">
+                <div class="ann-hours-form-day">
+                  <label class="ann-checkbox-label ann-hours-toggle">
+                    <input type="checkbox" name="dash_hours_<%= day.key %>_open" class="ann-sr-only ann-dash-hours-toggle" data-day="<%= day.key %>">
+                    <span class="ann-checkbox-box ann-checkbox-sm">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                    <span><%= day.label %></span>
+                  </label>
+                </div>
+                <div class="ann-hours-form-slots disabled" data-day="<%= day.key %>">
+                  <input type="time" name="dash_hours_<%= day.key %>_am_start" class="ann-input ann-input-time" value="09:00">
+                  <span class="ann-text-muted">-</span>
+                  <input type="time" name="dash_hours_<%= day.key %>_am_end" class="ann-input ann-input-time" value="12:00">
+                  <span class="ann-text-muted ann-hours-sep">|</span>
+                  <input type="time" name="dash_hours_<%= day.key %>_pm_start" class="ann-input ann-input-time" value="14:00">
+                  <span class="ann-text-muted">-</span>
+                  <input type="time" name="dash_hours_<%= day.key %>_pm_end" class="ann-input ann-input-time" value="18:00">
+                </div>
+              </div>
+              <% } %>
+            </div>
+          </div>
+
           <div class="ann-divider" style="margin: 1.5rem 0;"></div>
 
           <!-- Cabinet Photos (Pro & Boost only) -->
