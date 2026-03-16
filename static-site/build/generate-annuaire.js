@@ -70,6 +70,7 @@ async function writePage(outputPath, html) {
 
 let liveProfessionals = null;
 let liveGoogleReviews = null;
+let liveProReviews = null;
 
 async function fetchGoogleReviews(url, key) {
   try {
@@ -101,6 +102,25 @@ async function fetchGoogleReviews(url, key) {
   } catch (err) {
     console.warn(`[annuaire] Google reviews fetch failed: ${err.message}`);
     return null;
+  }
+}
+
+async function fetchProReviews(url, key) {
+  try {
+    const res = await fetch(`${url}/rest/v1/annuaire_pro_reviews?select=*,annuaire_professionals(first_name,last_name,specialty,city)&is_approved=eq.true&order=created_at.desc`, {
+      headers: {
+        'apikey': key,
+        'Authorization': `Bearer ${key}`,
+        'Content-Type': 'application/json',
+      },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = await res.json();
+    console.log(`[annuaire] Fetched ${rows.length} professional reviews from Supabase`);
+    return rows;
+  } catch (err) {
+    console.warn(`[annuaire] Pro reviews fetch failed: ${err.message}`);
+    return [];
   }
 }
 
@@ -139,8 +159,9 @@ async function fetchLiveProfessionals() {
     }
 
     // Map DB columns to template format
-    // Also fetch Google reviews
+    // Also fetch Google reviews + pro reviews
     liveGoogleReviews = await fetchGoogleReviews(url, key);
+    liveProReviews = await fetchProReviews(url, key);
 
     return rows.map(r => ({
       id: r.id,
@@ -253,8 +274,26 @@ function getSharedData() {
 // ── Page generators ──────────────────────────────────────────────────────
 
 async function generateHomePage() {
+  // Prepare pro reviews for homepage (latest 3)
+  const proReviews = (liveProReviews || []).slice(0, 3).map(r => ({
+    rating: r.rating,
+    comment: r.comment || '',
+    authorName: r.author_name,
+    specialty: r.annuaire_professionals?.specialty || '',
+    city: r.annuaire_professionals?.city || '',
+    createdAt: r.created_at,
+  }));
+  const allReviews = liveProReviews || [];
+  const proReviewsAvg = allReviews.length > 0
+    ? (allReviews.reduce((s, r) => s + r.rating, 0) / allReviews.length).toFixed(1)
+    : '0';
+  const proReviewsCount = allReviews.length;
+
   const data = {
     ...getSharedData(),
+    proReviews,
+    proReviewsAvg,
+    proReviewsCount,
     metaTitle: 'Annuaire des professionnels du couple en France',
     metaDescription: 'Thérapeutes de couple, sexologues et médiateurs familiaux en France | Trouvez votre spécialiste et prenez rendez-vous près de chez vous.',
     canonical: getAnnuaireUrl('/'),
