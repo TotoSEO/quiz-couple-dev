@@ -680,6 +680,26 @@
         '<p style="font-size:15px;line-height:1.7;color:#1a1a2e;margin:0 0 4px;">Cordialement,</p>\n' +
         '<p style="font-size:15px;line-height:1.7;color:#1a1a2e;margin:0;">L\'equipe Annuaire Quiz Couple</p>',
     },
+    'no-spam': {
+      subject: 'Annuaire gratuit pour les therapeutes de couple',
+      plainText: true,
+      html: 'Bonjour,\n' +
+        '\n' +
+        'Je me permets de vous contacter car je lance un annuaire en ligne dedié aux professionnels de la thérapie de couple et de l\'accompagnement conjugal.\n' +
+        '\n' +
+        'L\'idée est simple : permettre aux patients de trouver facilement un spécialiste dans leur ville, avec une fiche complète (parcours, méthodes, tarifs, avis Google).\n' +
+        '\n' +
+        'Si vous le souhaitez, vous pouvez créer votre fiche ici :\n' +
+        'https://annuaire.quiz-couple.com/rejoindre/\n' +
+        '\n' +
+        'L\'inscription est gratuite et prend quelques minutes. Votre fiche sera référencée sur Google et visible par les patients qui cherchent un professionnel dans votre ville.\n' +
+        '\n' +
+        'N\'hésitez pas si vous avez des questions.\n' +
+        '\n' +
+        'Bonne journée,\n' +
+        'L\'équipe Annuaire Quiz Couple\n' +
+        'https://annuaire.quiz-couple.com',
+    },
   };
 
   function wrapMailHtml(bodyHtml) {
@@ -748,7 +768,20 @@
 
     var bodyHtml = htmlInput.value.trim();
     if (!bodyHtml) {
-      previewEl.innerHTML = '<p style="color:hsl(var(--ann-muted-fg));font-size:0.875rem;text-align:center;padding:2rem 0;">Saisissez du contenu HTML pour voir l\'apercu.</p>';
+      previewEl.innerHTML = '<p style="color:hsl(var(--ann-muted-fg));font-size:0.875rem;text-align:center;padding:2rem 0;">Saisissez du contenu pour voir l\'apercu.</p>';
+      return;
+    }
+
+    // Detect plain text mode
+    var templateSelect = document.getElementById('aadm-mail-template');
+    var currentTemplateKey = templateSelect ? templateSelect.value : '';
+    var isPlainText = currentTemplateKey && MAIL_TEMPLATES[currentTemplateKey] && MAIL_TEMPLATES[currentTemplateKey].plainText;
+
+    if (isPlainText) {
+      // Plain text preview: render as preformatted text with clickable links
+      var escaped = bodyHtml.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      var withLinks = escaped.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" style="color:#c0507e;">$1</a>');
+      previewEl.innerHTML = '<div style="background:#fff;border-radius:4px;padding:2rem;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.7;color:#1a1a2e;white-space:pre-wrap;">' + withLinks + '</div>';
       return;
     }
 
@@ -805,13 +838,19 @@
       return;
     }
     if (!bodyHtml) {
-      if (statusEl) { statusEl.textContent = 'Contenu HTML requis.'; statusEl.style.color = 'hsl(0 70% 50%)'; }
+      if (statusEl) { statusEl.textContent = 'Contenu requis.'; statusEl.style.color = 'hsl(0 70% 50%)'; }
       return;
     }
 
-    var fullHtml = wrapMailHtml(bodyHtml);
+    // Detect if current template is plain-text-only (no-spam mode)
+    var templateSelect = document.getElementById('aadm-mail-template');
+    var currentTemplateKey = templateSelect ? templateSelect.value : '';
+    var isPlainText = currentTemplateKey && MAIL_TEMPLATES[currentTemplateKey] && MAIL_TEMPLATES[currentTemplateKey].plainText;
 
-    if (!confirm('Envoyer ' + uniqueEmails.length + ' email(s) ?\n\nObjet : ' + subject + '\n\nCette action est irreversible.')) return;
+    var fullHtml = isPlainText ? null : wrapMailHtml(bodyHtml);
+
+    var confirmMode = isPlainText ? ' (mode texte pur)' : '';
+    if (!confirm('Envoyer ' + uniqueEmails.length + ' email(s)' + confirmMode + ' ?\n\nObjet : ' + subject + '\n\nCette action est irreversible.')) return;
 
     // UI: disable and show progress
     if (sendBtn) { sendBtn.disabled = true; sendBtn.textContent = 'Envoi en cours...'; }
@@ -836,8 +875,13 @@
     var requestBody = {
       emails: uniqueEmails,
       subject: subject,
-      html: fullHtml,
     };
+    if (isPlainText) {
+      requestBody.plainTextOnly = true;
+      requestBody.text = bodyHtml;
+    } else {
+      requestBody.html = fullHtml;
+    }
     if (fromName) requestBody.fromName = fromName;
     if (replyTo) requestBody.replyTo = replyTo;
 

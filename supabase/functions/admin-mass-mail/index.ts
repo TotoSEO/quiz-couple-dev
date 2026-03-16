@@ -41,7 +41,7 @@ serve(async (req) => {
       });
     }
 
-    const { emails, subject, html, replyTo, fromName } = await req.json();
+    const { emails, subject, html, text, plainTextOnly, replyTo, fromName } = await req.json();
 
     // Validate inputs
     if (!emails || !Array.isArray(emails) || emails.length === 0) {
@@ -58,7 +58,14 @@ serve(async (req) => {
       });
     }
 
-    if (!html || typeof html !== 'string' || html.trim().length === 0) {
+    if (plainTextOnly) {
+      if (!text || typeof text !== 'string' || text.trim().length === 0) {
+        return new Response(JSON.stringify({ success: false, error: 'Contenu texte requis' }), {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        });
+      }
+    } else if (!html || typeof html !== 'string' || html.trim().length === 0) {
       return new Response(JSON.stringify({ success: false, error: 'Contenu HTML requis' }), {
         status: 400,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -89,23 +96,28 @@ serve(async (req) => {
     }
 
     // Generate plain text from HTML for multipart (anti-spam best practice)
-    const plainText = html
-      .replace(/<br\s*\/?>/gi, '\n')
-      .replace(/<\/p>/gi, '\n\n')
-      .replace(/<\/div>/gi, '\n')
-      .replace(/<\/h[1-6]>/gi, '\n\n')
-      .replace(/<\/li>/gi, '\n')
-      .replace(/<li[^>]*>/gi, '- ')
-      .replace(/<a[^>]*href="([^"]*)"[^>]*>(.*?)<\/a>/gi, '$2 ($1)')
-      .replace(/<[^>]+>/g, '')
-      .replace(/&nbsp;/g, ' ')
-      .replace(/&amp;/g, '&')
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>')
-      .replace(/&quot;/g, '"')
-      .replace(/&#039;/g, "'")
-      .replace(/\n{3,}/g, '\n\n')
-      .trim();
+    let plainText: string;
+    if (plainTextOnly) {
+      plainText = text.trim();
+    } else {
+      plainText = html
+        .replace(/<br\s*\/?>/gi, '\n')
+        .replace(/<\/p>/gi, '\n\n')
+        .replace(/<\/div>/gi, '\n')
+        .replace(/<\/h[1-6]>/gi, '\n\n')
+        .replace(/<\/li>/gi, '\n')
+        .replace(/<li[^>]*>/gi, '- ')
+        .replace(/<a[^>]*href="([^"]*)"[^>]*>(.*?)<\/a>/gi, '$2 ($1)')
+        .replace(/<[^>]+>/g, '')
+        .replace(/&nbsp;/g, ' ')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#039;/g, "'")
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
+    }
 
     const senderName = fromName || 'Annuaire Quiz Couple';
     const fromEmail = `${senderName} <annuaire@quiz-couple.com>`;
@@ -121,9 +133,14 @@ serve(async (req) => {
           from: fromEmail,
           to: [email],
           subject: subject.trim(),
-          html: html,
           text: plainText,
         };
+
+        // In plain text mode, only send text (no HTML = lands in primary inbox).
+        // In normal mode, send both HTML and text for multipart.
+        if (!plainTextOnly) {
+          body.html = html;
+        }
 
         // Add reply-to if provided
         if (replyTo && emailRegex.test(replyTo.trim())) {
