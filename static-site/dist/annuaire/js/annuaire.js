@@ -305,7 +305,14 @@
         var normCity = normalize(cityVal);
         var cityMatch = searchData.cities.find(function (c) { return normalize(c.name) === normCity || c.department === cityVal; });
         if (!cityMatch && /^\d{2,5}$/.test(cityVal)) {
-          var deptCode = cityVal.length >= 3 && cityVal.startsWith('97') ? cityVal.slice(0, 3) : cityVal.slice(0, 2);
+          var deptCode;
+          if (cityVal.length >= 3 && cityVal.startsWith('97')) {
+            deptCode = cityVal.slice(0, 3);
+          } else if (cityVal.startsWith('20') && cityVal.length >= 5) {
+            deptCode = parseInt(cityVal.slice(0, 3), 10) <= 201 ? '2A' : '2B';
+          } else {
+            deptCode = cityVal.slice(0, 2);
+          }
           cityMatch = searchData.cities.find(function (c) { return c.department === deptCode; });
         }
         if (!cityMatch) cityMatch = searchData.cities.find(function (c) { return normalize(c.name).indexOf(normCity) !== -1; });

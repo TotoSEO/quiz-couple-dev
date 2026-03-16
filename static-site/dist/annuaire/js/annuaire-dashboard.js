@@ -822,6 +822,7 @@
     if ($('prof-lat') && profile.lat) $('prof-lat').value = profile.lat;
     if ($('prof-lng') && profile.lng) $('prof-lng').value = profile.lng;
     $('prof-website').value = profile.website || '';
+    if ($('prof-pro-id-number')) $('prof-pro-id-number').value = profile.professional_id_number || '';
     if ($('prof-doctolib')) $('prof-doctolib').value = profile.doctolib_url || '';
     // Short description
     var shortDescInput = $('prof-short-description');
@@ -978,6 +979,7 @@
       short_description: ($('prof-short-description').value || '').slice(0, 165).trim(),
       description: syncEditorToTextarea('prof-description-editor', 'prof-description'),
       years_experience: parseInt($('prof-experience').value) || 0,
+      professional_id_number: $('prof-pro-id-number') ? ($('prof-pro-id-number').value.trim() || null) : undefined,
       price_range: (function() {
         var pmin = $('prof-price-min').value.trim();
         var pmax = $('prof-price-max').value.trim();
@@ -1095,6 +1097,18 @@
         updateProfileStatus(null);
       }
       showDashboard();
+
+      // Review system
+      initReviewSystem();
+      if (shouldShowReviewBanner()) {
+        show($('dash-review-banner'));
+      }
+      if (shouldShowReviewPopup()) {
+        setTimeout(function () {
+          openReviewModal();
+          try { localStorage.setItem('ann_review_popup_shown', '1'); } catch(e) {}
+        }, 1500);
+      }
     } else {
       showAuthScreen();
     }
@@ -1369,6 +1383,9 @@
         }
         updateProfileStatus(currentProfile);
         showDashboard();
+        // Review system after login
+        initReviewSystem();
+        if (shouldShowReviewBanner()) show($('dash-review-banner'));
       } catch (err) {
         showError('auth-login-error', err.message || 'Erreur de connexion');
       }
@@ -1971,6 +1988,154 @@
         deleteBtn.disabled = false; deleteBtn.textContent = 'Supprimer définitivement';
       }
     });
+  }
+
+  // ── Review system ──
+  var reviewSelectedRating = 0;
+
+  function openReviewModal() {
+    var overlay = $('review-modal-overlay');
+    if (!overlay) return;
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeReviewModal() {
+    var overlay = $('review-modal-overlay');
+    if (!overlay) return;
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function initReviewSystem() {
+    var overlay = $('review-modal-overlay');
+    if (!overlay) return;
+
+    // Close modal
+    var closeBtn = $('review-modal-close');
+    if (closeBtn) closeBtn.addEventListener('click', closeReviewModal);
+    var doneBtn = $('review-modal-done');
+    if (doneBtn) doneBtn.addEventListener('click', closeReviewModal);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeReviewModal();
+    });
+
+    // Banner button opens modal
+    var bannerBtn = $('dash-review-banner-btn');
+    if (bannerBtn) bannerBtn.addEventListener('click', function (e) { e.stopPropagation(); openReviewModal(); });
+    var banner = $('dash-review-banner');
+    if (banner) banner.addEventListener('click', openReviewModal);
+
+    // Star rating
+    var starBtns = document.querySelectorAll('#review-modal-stars .ann-review-star-btn');
+    starBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        reviewSelectedRating = parseInt(this.getAttribute('data-star'));
+        updateReviewStars(starBtns, reviewSelectedRating);
+      });
+      btn.addEventListener('mouseenter', function () {
+        updateReviewStars(starBtns, parseInt(this.getAttribute('data-star')));
+      });
+    });
+    var starsContainer = $('review-modal-stars');
+    if (starsContainer) {
+      starsContainer.addEventListener('mouseleave', function () {
+        updateReviewStars(starBtns, reviewSelectedRating);
+      });
+    }
+
+    // Comment counter
+    var comment = $('review-modal-comment');
+    var counter = $('review-modal-counter');
+    if (comment && counter) {
+      comment.addEventListener('input', function () { counter.textContent = this.value.length; });
+    }
+
+    // Submit review
+    var form = $('review-modal-form');
+    if (form) {
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var errEl = $('review-modal-error');
+        if (errEl) { errEl.style.display = 'none'; errEl.textContent = ''; }
+
+        if (reviewSelectedRating === 0) {
+          if (errEl) { errEl.textContent = 'Veuillez donner une note.'; errEl.style.display = 'block'; }
+          return;
+        }
+
+        var submitBtn = $('review-modal-submit');
+        if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Envoi...'; }
+
+        try {
+          var session = await checkAuth();
+          if (!session) throw new Error('Session expirée');
+
+          var reviewData = {
+            professional_id: currentProfile.id,
+            rating: reviewSelectedRating,
+            comment: (comment ? comment.value.trim() : '').substring(0, 300),
+            author_name: (currentProfile.first_name || currentProfile.firstName || 'Professionnel') + ' ' + ((currentProfile.last_name || currentProfile.lastName || '').charAt(0) || '') + '.'
+          };
+
+          var res = await fetch(SUPABASE_URL + '/rest/v1/annuaire_pro_reviews', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': SUPABASE_KEY,
+              'Authorization': 'Bearer ' + session.access_token,
+              'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify(reviewData)
+          });
+
+          if (res.ok || res.status === 201) {
+            hide($('review-modal-form-view'));
+            show($('review-modal-success-view'));
+            // Hide banner + mark as reviewed in localStorage
+            var bannerEl = $('dash-review-banner');
+            if (bannerEl) hide(bannerEl);
+            try { localStorage.setItem('ann_review_done', '1'); } catch(e) {}
+          } else if (res.status === 409 || res.status === 400) {
+            // Duplicate review — already reviewed
+            hide($('review-modal-form-view'));
+            show($('review-modal-success-view'));
+            $('review-modal-success-view').querySelector('h2').textContent = 'Vous avez deja laisse un avis !';
+            $('review-modal-success-view').querySelector('p').textContent = 'Merci pour votre soutien.';
+            try { localStorage.setItem('ann_review_done', '1'); } catch(e) {}
+          } else {
+            throw new Error('Erreur serveur');
+          }
+        } catch (err) {
+          if (errEl) { errEl.textContent = err.message || 'Erreur, veuillez reessayer.'; errEl.style.display = 'block'; }
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Envoyer mon avis'; }
+        }
+      });
+    }
+  }
+
+  function updateReviewStars(btns, rating) {
+    btns.forEach(function (b) {
+      var val = parseInt(b.getAttribute('data-star'));
+      b.querySelector('svg').style.fill = val <= rating ? 'hsl(40 95% 55%)' : 'hsl(var(--ann-border))';
+    });
+  }
+
+  function shouldShowReviewBanner() {
+    if (!currentProfile) return false;
+    try { if (localStorage.getItem('ann_review_done') === '1') return false; } catch(e) {}
+    return true;
+  }
+
+  function shouldShowReviewPopup() {
+    if (!currentProfile) return false;
+    // Show popup only once: first time the profile is pending moderation after signup
+    if (currentProfile.is_published) return false;
+    try {
+      if (localStorage.getItem('ann_review_popup_shown') === '1') return false;
+      if (localStorage.getItem('ann_review_done') === '1') return false;
+    } catch(e) {}
+    return true;
   }
 
   if (document.readyState === 'loading') {
