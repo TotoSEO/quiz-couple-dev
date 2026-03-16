@@ -26,6 +26,38 @@
       }))
     }
   ];
+
+  // Add AggregateRating + individual reviews to structured data if reviews exist
+  if (typeof proReviewsCount !== 'undefined' && proReviewsCount > 0) {
+    const reviewSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Annuaire des professionnels du couple",
+      "url": "https://annuaire.quiz-couple.com",
+      "applicationCategory": "HealthApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": proReviewsAvg,
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": String(proReviewsCount)
+      }
+    };
+    if (typeof proReviews !== 'undefined' && proReviews.length > 0) {
+      reviewSchema.review = proReviews.map(r => ({
+        "@type": "Review",
+        "author": { "@type": "Person", "name": r.authorName },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": String(r.rating),
+          "bestRating": "5"
+        },
+        ...(r.comment ? { "reviewBody": r.comment } : {}),
+        "datePublished": r.createdAt ? r.createdAt.split('T')[0] : undefined
+      }));
+    }
+    jsonLd.push(reviewSchema);
+  }
 %>
 <script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
 
@@ -273,6 +305,72 @@
     </div>
   </div>
 </section>
+
+<% if (typeof proReviews !== 'undefined' && proReviews.length > 0) { %>
+<!-- Divider -->
+<div class="ann-divider"></div>
+
+<!-- Professional Reviews Section -->
+<section class="ann-section">
+  <div class="ann-container">
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <div class="ann-badge ann-badge-primary" style="margin-bottom: 0.75rem;">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:0.75rem;height:0.75rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Avis des professionnels
+      </div>
+      <h2>Ce qu'en pensent les <span class="ann-text-gradient">professionnels inscrits</span></h2>
+      <p class="ann-text-muted" style="max-width: 32rem; margin: 0.75rem auto 0;">
+        Ils ont rejoint notre annuaire gratuit et partagent leur experience.
+      </p>
+
+      <!-- Global rating -->
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem;">
+        <div style="display: flex; gap: 0.125rem;">
+          <% const avgRound = Math.round(parseFloat(proReviewsAvg)); %>
+          <% for (let i = 1; i <= 5; i++) { %>
+          <svg viewBox="0 0 24 24" style="width:1.25rem;height:1.25rem;fill:<%= i <= avgRound ? 'hsl(40 95% 55%)' : 'hsl(var(--ann-border))' %>"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <% } %>
+        </div>
+        <span style="font-weight: 700; font-size: 1.125rem; color: hsl(var(--ann-foreground));"><%= proReviewsAvg %></span>
+        <span class="ann-text-muted" style="font-size: 0.875rem;">/5 — <%= proReviewsCount %> avis</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 1.25rem; max-width: 60rem; margin: 0 auto;">
+      <% for (const review of proReviews) { %>
+      <% const revSpec = specialties.find(s => s.id === review.specialty); %>
+      <div class="ann-profile-card ann-animate-fade-in-up" style="padding: 1.5rem;">
+        <!-- Stars -->
+        <div style="display: flex; gap: 0.125rem; margin-bottom: 0.75rem;">
+          <% for (let i = 1; i <= 5; i++) { %>
+          <svg viewBox="0 0 24 24" style="width:1rem;height:1rem;fill:<%= i <= review.rating ? 'hsl(40 95% 55%)' : 'hsl(var(--ann-border))' %>"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <% } %>
+        </div>
+
+        <% if (review.comment) { %>
+        <p style="font-size: 0.875rem; color: hsl(var(--ann-foreground)); line-height: 1.6; margin-bottom: 1rem;">
+          &laquo; <%= review.comment %> &raquo;
+        </p>
+        <% } %>
+
+        <!-- Author -->
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <div style="width: 2rem; height: 2rem; border-radius: 50%; background: linear-gradient(135deg, hsl(var(--ann-primary) / 0.15), hsl(var(--ann-secondary) / 0.15)); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600; color: hsl(var(--ann-primary));">
+            <%= review.authorName.charAt(0).toUpperCase() %>
+          </div>
+          <div>
+            <div style="font-size: 0.8125rem; font-weight: 600; color: hsl(var(--ann-foreground));"><%= review.authorName %></div>
+            <% if (revSpec) { %>
+            <div style="font-size: 0.75rem; color: hsl(var(--ann-muted-fg));"><%= revSpec.name %></div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+<% } %>
 
 <!-- Divider -->
 <div class="ann-divider"></div>

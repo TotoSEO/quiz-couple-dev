@@ -147,6 +147,23 @@
         <button type="button" onclick="this.parentElement.style.display='none'" class="ann-btn ann-btn-outline ann-btn-sm" style="margin-top: 0.75rem;">Fermer</button>
       </div>
 
+      <!-- Review banner -->
+      <div id="dash-review-banner" style="display:none; margin-bottom: 1.5rem; padding: 1rem 1.25rem; border-radius: var(--ann-radius); border: 1px solid hsl(var(--ann-primary) / 0.3); background: linear-gradient(135deg, hsl(var(--ann-primary) / 0.06), hsl(var(--ann-secondary) / 0.06)); cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease;" onmouseenter="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 12px hsl(var(--ann-primary) / 0.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+        <div style="display:flex;align-items:center;gap:0.75rem;justify-content:space-between;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span style="font-size:1.5rem;">&#11088;</span>
+            <div>
+              <strong style="color:hsl(var(--ann-foreground));font-size:0.9375rem;">Vous aimez notre annuaire ?</strong>
+              <p style="font-size:0.8125rem;color:hsl(var(--ann-muted-fg));margin-top:0.125rem;">Cet annuaire est <strong>100% gratuit</strong> pour tous les professionnels. Un petit avis nous aide enormement !</p>
+            </div>
+          </div>
+          <button type="button" id="dash-review-banner-btn" class="ann-btn ann-btn-primary ann-btn-sm" style="white-space:nowrap;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Laisser un avis
+          </button>
+        </div>
+      </div>
+
       <!-- Status banner -->
       <div id="dash-status-banner" style="display:none; margin-bottom: 1.5rem; padding: 1rem 1.25rem; border-radius: var(--ann-radius); border: 1px solid;"></div>
 
@@ -822,6 +839,76 @@
   </section>
 
 </div>
+
+<!-- Review Modal Popup -->
+<div id="review-modal-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:9999;display:none;align-items:center;justify-content:center;padding:1rem;">
+  <div id="review-modal" style="background:hsl(var(--ann-card));border-radius:calc(var(--ann-radius) * 1.5);padding:2rem;max-width:28rem;width:100%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:annReviewModalIn 0.3s ease;">
+    <button type="button" id="review-modal-close" style="position:absolute;top:0.75rem;right:0.75rem;background:none;border:none;cursor:pointer;color:hsl(var(--ann-muted-fg));padding:0.25rem;" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1.25rem;height:1.25rem"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <div id="review-modal-form-view" style="text-align:center;">
+      <div style="font-size:2rem;margin-bottom:0.5rem;">&#11088;</div>
+      <h2 style="font-size:1.25rem;margin-bottom:0.25rem;">Votre inscription s'est bien passee ?</h2>
+      <p style="font-size:0.875rem;color:hsl(var(--ann-muted-fg));margin-bottom:1.5rem;">
+        Cet annuaire est <strong>gratuit pour tous</strong>. Pour nous soutenir, un petit avis est le meilleur moyen !
+      </p>
+
+      <form id="review-modal-form">
+        <!-- Star rating -->
+        <div style="margin-bottom:1.25rem;">
+          <div id="review-modal-stars" style="display:flex;gap:0.25rem;justify-content:center;">
+            <button type="button" class="ann-review-star-btn" data-star="1" style="background:none;border:none;cursor:pointer;padding:0.125rem;">
+              <svg viewBox="0 0 24 24" style="width:2rem;height:2rem;fill:hsl(var(--ann-border));transition:fill 0.15s"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </button>
+            <button type="button" class="ann-review-star-btn" data-star="2" style="background:none;border:none;cursor:pointer;padding:0.125rem;">
+              <svg viewBox="0 0 24 24" style="width:2rem;height:2rem;fill:hsl(var(--ann-border));transition:fill 0.15s"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </button>
+            <button type="button" class="ann-review-star-btn" data-star="3" style="background:none;border:none;cursor:pointer;padding:0.125rem;">
+              <svg viewBox="0 0 24 24" style="width:2rem;height:2rem;fill:hsl(var(--ann-border));transition:fill 0.15s"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </button>
+            <button type="button" class="ann-review-star-btn" data-star="4" style="background:none;border:none;cursor:pointer;padding:0.125rem;">
+              <svg viewBox="0 0 24 24" style="width:2rem;height:2rem;fill:hsl(var(--ann-border));transition:fill 0.15s"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </button>
+            <button type="button" class="ann-review-star-btn" data-star="5" style="background:none;border:none;cursor:pointer;padding:0.125rem;">
+              <svg viewBox="0 0 24 24" style="width:2rem;height:2rem;fill:hsl(var(--ann-border));transition:fill 0.15s"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Comment -->
+        <div style="margin-bottom:1rem;">
+          <textarea id="review-modal-comment" class="ann-form-input" rows="3" maxlength="300" placeholder="Partagez votre experience... (optionnel)" style="resize:vertical;font-size:0.875rem;"></textarea>
+          <div style="text-align:right;font-size:0.75rem;color:hsl(var(--ann-muted-fg));margin-top:0.25rem;">
+            <span id="review-modal-counter">0</span>/300
+          </div>
+        </div>
+
+        <div id="review-modal-error" style="display:none;color:hsl(0 80% 55%);font-size:0.8125rem;margin-bottom:0.75rem;"></div>
+
+        <button type="submit" id="review-modal-submit" class="ann-btn ann-btn-primary ann-btn-full">
+          Envoyer mon avis
+        </button>
+      </form>
+    </div>
+
+    <div id="review-modal-success-view" style="display:none;text-align:center;padding:1rem 0;">
+      <div style="font-size:2.5rem;margin-bottom:0.75rem;">&#128155;</div>
+      <h2 style="font-size:1.25rem;margin-bottom:0.5rem;">Merci beaucoup !</h2>
+      <p style="font-size:0.875rem;color:hsl(var(--ann-muted-fg));margin-bottom:1.25rem;">
+        Votre avis compte enormement pour nous. Merci de soutenir cet annuaire gratuit !
+      </p>
+      <button type="button" id="review-modal-done" class="ann-btn ann-btn-outline">Fermer</button>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes annReviewModalIn {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+</style>
 
 <!-- Loading state -->
 <div id="ann-dash-loading" class="ann-section" style="min-height: 80vh; display: flex; align-items: center; justify-content: center;">
