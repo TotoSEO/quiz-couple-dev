@@ -11,8 +11,73 @@
   var SUPABASE_URL = 'https://lojvajnnvhatfplevyvy.supabase.co';
   var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
 
+  // ── Rich Text Editor helper ──
+  function initRichTextEditorRejoindre(toolbarId, editorId, textareaId, countId) {
+    var toolbar = document.getElementById(toolbarId);
+    var editor = document.getElementById(editorId);
+    var textarea = document.getElementById(textareaId);
+    if (!toolbar || !editor) return;
+
+    toolbar.querySelectorAll('.ann-rte-btn').forEach(function (btn) {
+      btn.addEventListener('mousedown', function (e) { e.preventDefault(); });
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var cmd = btn.getAttribute('data-cmd');
+        if (cmd === 'insertTable') {
+          if (editor.querySelector('table')) { alert('Un seul tableau est autorise par description.'); return; }
+          var cols = prompt('Nombre de colonnes (2 a 5) :', '3');
+          cols = parseInt(cols, 10);
+          if (isNaN(cols) || cols < 2) cols = 2;
+          if (cols > 5) cols = 5;
+          var rows = prompt('Nombre de lignes (2 a 10) :', '3');
+          rows = parseInt(rows, 10);
+          if (isNaN(rows) || rows < 2) rows = 2;
+          if (rows > 10) rows = 10;
+          var html = '<table><thead><tr>';
+          for (var c = 0; c < cols; c++) html += '<th>En-tete</th>';
+          html += '</tr></thead><tbody>';
+          for (var r = 0; r < rows - 1; r++) { html += '<tr>'; for (var c2 = 0; c2 < cols; c2++) html += '<td>...</td>'; html += '</tr>'; }
+          html += '</tbody></table><p><br></p>';
+          document.execCommand('insertHTML', false, html);
+        } else {
+          document.execCommand(cmd, false, null);
+        }
+        editor.focus();
+        updateCount();
+      });
+    });
+
+    function updateCount() {
+      var count = (editor.textContent || '').length;
+      var countEl = document.getElementById(countId);
+      if (countEl) countEl.textContent = count;
+      if (textarea) textarea.value = editor.innerHTML.trim();
+    }
+
+    editor.addEventListener('input', updateCount);
+    editor.addEventListener('blur', updateCount);
+    editor.addEventListener('paste', function (e) {
+      e.preventDefault();
+      var text = (e.clipboardData || window.clipboardData).getData('text/plain');
+      document.execCommand('insertText', false, text);
+    });
+  }
+
   var form = document.getElementById('rejoindre-form');
   if (!form) return;
+
+  // ── Redirect logged-in users to dashboard ──
+  (function () {
+    var authKey = 'sb-lojvajnnvhatfplevyvy-auth-token';
+    var raw = localStorage.getItem(authKey);
+    if (!raw) return;
+    try {
+      var data = JSON.parse(raw);
+      if (data && data.access_token) {
+        window.location.href = '/dashboard/';
+      }
+    } catch (e) { /* not logged in */ }
+  })();
 
   // ── Specialty-specific methods (same as dashboard) ──
   var METHODS_BY_SPECIALTY = {
@@ -98,8 +163,8 @@
     { input: 'f-prenom', counter: 'count-prenom' },
     { input: 'f-nom', counter: 'count-nom' },
     { input: 'f-titre', counter: 'count-titre' },
+    { input: 'f-pro-id-number', counter: 'count-pro-id-number' },
     { input: 'f-cabinet', counter: 'count-cabinet' },
-    { input: 'f-description', counter: 'count-description' },
   ];
 
   counters.forEach(function (c) {
@@ -111,6 +176,91 @@
     input.addEventListener('input', update);
     update();
   });
+
+  // ── Short description counter ──
+  (function() {
+    var input = document.getElementById('f-short-description');
+    var counter = document.getElementById('f-short-desc-counter');
+    if (!input || !counter) return;
+    function update() {
+      var len = input.value.length;
+      counter.textContent = len + '/165';
+      counter.style.color = len > 155 ? 'hsl(0 70% 50%)' : '';
+    }
+    input.addEventListener('input', update);
+    input.addEventListener('paste', function() {
+      var el = this;
+      setTimeout(function() { if (el.value.length > 165) el.value = el.value.slice(0, 165); update(); }, 0);
+    });
+  })();
+
+  // ── Rich Text Editor (registration) ──
+  initRichTextEditorRejoindre('f-desc-toolbar', 'f-description-editor', 'f-description', 'count-description');
+
+  // ── Limit digit count on numeric inputs ────────────────────────
+  function limitDigits(inputId, maxDigits) {
+    var el = document.getElementById(inputId);
+    if (!el) return;
+    el.addEventListener('keydown', function (e) {
+      // Allow: backspace, delete, tab, escape, enter, arrows, home, end
+      if ([8, 9, 13, 27, 35, 36, 37, 38, 39, 40, 46].indexOf(e.keyCode) !== -1) return;
+      // Allow Ctrl/Cmd+A/C/V/X
+      if ((e.ctrlKey || e.metaKey) && [65, 67, 86, 88].indexOf(e.keyCode) !== -1) return;
+      // Block non-digit keys
+      var isDigit = (e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105);
+      if (!isDigit) { e.preventDefault(); return; }
+      // Block if already at max digits
+      var val = el.value.replace(/[^0-9]/g, '');
+      if (val.length >= maxDigits) { e.preventDefault(); }
+    });
+    el.addEventListener('input', function () {
+      // Truncate on paste or any other input that bypasses keydown
+      var digits = el.value.replace(/[^0-9]/g, '');
+      if (digits.length > maxDigits) {
+        el.value = digits.slice(0, maxDigits);
+      }
+    });
+  }
+  limitDigits('f-prix-min', 4);
+  limitDigits('f-prix-max', 4);
+  limitDigits('f-experience', 2);
+
+  // ── Hours toggle (day open/closed) ─────────────────────────────
+  document.querySelectorAll('.ann-hours-day-toggle').forEach(function (cb) {
+    function toggle() {
+      var day = cb.getAttribute('data-day');
+      var slots = document.querySelector('.ann-hours-form-slots[data-day="' + day + '"]');
+      if (slots) {
+        if (cb.checked) { slots.classList.remove('disabled'); }
+        else { slots.classList.add('disabled'); }
+      }
+    }
+    cb.addEventListener('change', toggle);
+    toggle(); // init
+  });
+
+  // Helper: collect opening_hours from form
+  function collectOpeningHours() {
+    var days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+    var hasAny = false;
+    var result = {};
+    days.forEach(function (day) {
+      var toggle = form.querySelector('input[name="hours_' + day + '_open"]');
+      if (!toggle || !toggle.checked) {
+        result[day] = { closed: true };
+        return;
+      }
+      hasAny = true;
+      result[day] = {
+        closed: false,
+        morning_start: form.querySelector('input[name="hours_' + day + '_am_start"]').value || null,
+        morning_end: form.querySelector('input[name="hours_' + day + '_am_end"]').value || null,
+        afternoon_start: form.querySelector('input[name="hours_' + day + '_pm_start"]').value || null,
+        afternoon_end: form.querySelector('input[name="hours_' + day + '_pm_end"]').value || null,
+      };
+    });
+    return hasAny ? result : null;
+  }
 
   // ── Bubble builder (shared for methods & languages) ────────────
   function buildBubbles(container, items, nameAttr, selectedValues, maxSelect) {
@@ -255,7 +405,7 @@
       var q = addrInput.value.trim();
       if (q.length < 4) { sugBox.style.display = 'none'; return; }
       debounceTimer = setTimeout(function () {
-        fetch('https://nominatim.openstreetmap.org/search?format=json&countrycodes=fr&limit=5&q=' + encodeURIComponent(q), {
+        fetch('https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&countrycodes=fr&limit=5&q=' + encodeURIComponent(q), {
           headers: { 'Accept-Language': 'fr' }
         })
           .then(function (r) { return r.json(); })
@@ -270,7 +420,23 @@
               div.addEventListener('mouseleave', function () { div.style.background = ''; });
               div.addEventListener('mousedown', function (e) {
                 e.preventDefault();
-                addrInput.value = r.display_name;
+                // Simplify address: keep only the first 2-3 meaningful parts
+                var parts = r.display_name.split(', ');
+                var simplified = parts.slice(0, 3).join(', ');
+                addrInput.value = simplified;
+                // Capture lat/lng from Nominatim result
+                var latInput = document.getElementById('f-lat');
+                var lngInput = document.getElementById('f-lng');
+                if (latInput && r.lat) latInput.value = r.lat;
+                if (lngInput && r.lon) lngInput.value = r.lon;
+                // Extract real city and postal code from Nominatim structured address
+                var addr = r.address || {};
+                var realCity = addr.city || addr.town || addr.village || addr.municipality || '';
+                var postalCode = addr.postcode || '';
+                var dcField = document.getElementById('f-display-city');
+                var pcField = document.getElementById('f-codepostal');
+                if (dcField) dcField.value = realCity;
+                if (pcField && postalCode) pcField.value = postalCode;
                 sugBox.style.display = 'none';
               });
               sugBox.appendChild(div);
@@ -353,30 +519,31 @@
       if (!val('f-ville')) { showError('err-ville', 'La ville est requise'); valid = false; }
       var modesChecked = form.querySelectorAll('input[name="modes"]:checked');
       if (modesChecked.length === 0) { showError('err-modes', 'Sélectionnez au moins un mode'); valid = false; }
-      var doctolibVal = val('f-doctolib');
-      if (doctolibVal) {
-        try {
-          var dUrl = new URL(doctolibVal);
-          if (dUrl.hostname !== 'www.doctolib.fr' && dUrl.hostname !== 'doctolib.fr') {
-            showError('err-doctolib', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
-            valid = false;
-          }
-        } catch (e) {
-          showError('err-doctolib', 'Seuls les liens Doctolib (doctolib.fr) sont acceptés.');
-          valid = false;
-        }
-      }
     }
 
     if (step === 4) {
-      var desc = val('f-description');
-      if (!desc) { showError('err-description', 'La description est requise'); valid = false; }
-      else if (desc.length < 50) { showError('err-description', 'Minimum 50 caractères (' + desc.length + '/50)'); valid = false; }
+      // Short description
+      var shortDesc = val('f-short-description').trim();
+      if (!shortDesc) { showError('err-short-description', 'La description courte est requise'); valid = false; }
+      else if (shortDesc.length < 20) { showError('err-short-description', 'Minimum 20 caractères'); valid = false; }
+      else if (shortDesc.length > 165) { showError('err-short-description', 'Maximum 165 caractères'); valid = false; }
+
+      // Sync rich text editor to hidden textarea
+      var descEditorEl = document.getElementById('f-description-editor');
+      var descTextareaEl = document.getElementById('f-description');
+      if (descEditorEl && descTextareaEl) descTextareaEl.value = descEditorEl.innerHTML.trim();
+      var descText = descEditorEl ? (descEditorEl.textContent || '').trim() : val('f-description');
+      if (!descText) { showError('err-description', 'La description est requise'); valid = false; }
+      else if (descText.length < 50) { showError('err-description', 'Minimum 50 caractères (' + descText.length + '/50)'); valid = false; }
       var pmin = val('f-prix-min');
       var pmax = val('f-prix-max');
       if (!pmin) { showError('err-prix-min', 'Requis'); valid = false; }
+      else if (Number(pmin) < 0 || !Number.isInteger(Number(pmin))) { showError('err-prix-min', 'Nombre entier positif requis'); valid = false; }
+      else if (Number(pmin) > 9999) { showError('err-prix-min', 'Maximum 9999'); valid = false; }
       if (!pmax) { showError('err-prix-max', 'Requis'); valid = false; }
-      if (pmin && pmax && Number(pmin) > Number(pmax)) { showError('err-prix-max', 'Doit être ≥ tarif min'); valid = false; }
+      else if (Number(pmax) < 0 || !Number.isInteger(Number(pmax))) { showError('err-prix-max', 'Nombre entier positif requis'); valid = false; }
+      else if (Number(pmax) > 9999) { showError('err-prix-max', 'Maximum 9999'); valid = false; }
+      if (pmin && pmax && Number(pmax) <= Number(pmin)) { showError('err-prix-max', 'Doit être supérieur au tarif min'); valid = false; }
     }
 
     if (step === 5) {
@@ -486,6 +653,15 @@
 
     setText('recap-titre', val('f-titre'));
 
+    var proIdVal = val('f-pro-id-number');
+    var proIdRow = document.getElementById('recap-pro-id-number-row');
+    if (proIdVal && proIdRow) {
+      proIdRow.style.display = '';
+      setText('recap-pro-id-number', proIdVal);
+    } else if (proIdRow) {
+      proIdRow.style.display = 'none';
+    }
+
     var methods = getSelectedBubbles(methodsContainer);
     setText('recap-methodes', methods.length ? methods.join(', ') : 'Non renseigné');
 
@@ -523,7 +699,8 @@
     var langues = getSelectedBubbles(languesContainer);
     setText('recap-langues', langues.length ? langues.join(', ') : 'Non renseigné');
 
-    setText('recap-description', val('f-description'));
+    var recapDescEditor = document.getElementById('f-description-editor');
+    setText('recap-description', recapDescEditor ? (recapDescEditor.textContent || '') : val('f-description'));
   }
 
   function setText(id, text) {
@@ -569,6 +746,11 @@
       var pmin = val('f-prix-min');
       var pmax = val('f-prix-max');
 
+      // Sync editor to textarea before reading
+      var subDescEditor = document.getElementById('f-description-editor');
+      var subDescTextarea = document.getElementById('f-description');
+      if (subDescEditor && subDescTextarea) subDescTextarea.value = subDescEditor.innerHTML.trim();
+
       var profileData = {
         first_name: val('f-prenom'),
         last_name: val('f-nom'),
@@ -576,10 +758,12 @@
         phone: val('f-telephone'),
         specialty: specialties[0] || '',
         city: val('f-ville'),
+        short_description: val('f-short-description').slice(0, 165).trim(),
         description: val('f-description'),
         methods: methods,
         languages: languages.length ? languages : ['Français'],
         years_experience: parseInt(val('f-experience'), 10) || 0,
+        professional_id_number: val('f-pro-id-number').trim() || null,
         price_range: pmin && pmax ? pmin + '€ - ' + pmax + '€' : '',
         address: val('f-adresse') + ', ' + val('f-codepostal') + ' ' + (function () {
           var vs = document.getElementById('f-ville');
@@ -593,7 +777,11 @@
           });
           return modes.join(', ') || 'Sur rendez-vous';
         })(),
-        doctolib_url: val('f-doctolib') || null,
+        postal_code: val('f-codepostal') || null,
+        display_city: val('f-display-city') || null,
+        lat: parseFloat(val('f-lat')) || null,
+        lng: parseFloat(val('f-lng')) || null,
+        opening_hours: collectOpeningHours(),
         is_published: false,
       };
 

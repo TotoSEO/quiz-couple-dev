@@ -239,10 +239,11 @@
 <script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
 
 <!-- Hero -->
-<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
-  <div class="container mx-auto px-4">
+<section class="quiz-page-hero relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true" style="background: radial-gradient(ellipse at 30% 30%, hsl(var(--primary) / 0.1) 0%, transparent 50%), radial-gradient(ellipse at 70% 70%, hsl(var(--secondary) / 0.06) 0%, transparent 50%);"></div>
+  <div class="container mx-auto px-4 relative z-10">
     <div class="mx-auto max-w-3xl text-center">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
+      <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
         <ol>
           <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
           <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
@@ -250,7 +251,7 @@
         </ol>
       </nav>
       <% const heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>
-      <span class="hero-badge mb-4">
+      <span class="hero-badge mb-5">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         <%= heroBadge %>
       </span>
@@ -259,7 +260,7 @@
         const heroTitle = t(ns + ':hero.title', quizTitle);
         const heroHighlight = t(ns + ':hero.titleHighlight', '');
       %>
-      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+      <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight">
         <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
           <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
         <% } else if (heroHighlight) { %>
@@ -268,13 +269,13 @@
           <%= heroTitle %>
         <% } %>
       </h1>
-      <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
+      <p class="text-lg text-muted-foreground md:text-xl leading-relaxed max-w-2xl mx-auto"><%- t(ns + ':hero.description', '') %></p>
       <% const heroSub = t(ns + ':hero.subtitle', ''); if (heroSub && heroSub !== ns + ':hero.subtitle') { %>
-      <p class="text-sm text-muted-foreground mt-4"><%= heroSub %></p>
+      <p class="text-sm text-muted-foreground mt-4 max-w-xl mx-auto"><%= heroSub %></p>
       <% } %>
     </div>
     <% if (heroIntro1) { %>
-    <div class="mx-auto max-w-3xl mt-8 space-y-4 text-muted-foreground leading-relaxed">
+    <div class="mx-auto max-w-3xl mt-8 space-y-4 text-muted-foreground leading-relaxed text-center">
       <p><%- heroIntro1 %></p>
       <% if (heroIntro2) { %><p><%- heroIntro2 %></p><% } %>
     </div>
@@ -283,9 +284,11 @@
 </section>
 
 <!-- Quiz Engine -->
-<section class="py-12 md:py-16">
+<section class="quiz-engine-section">
   <div class="container mx-auto px-4">
-    <div id="quiz-engine" data-quiz="<%= quizType %>" data-lang="<%= lang %>"></div>
+    <div class="quiz-engine-wrapper">
+      <div id="quiz-engine" data-quiz="<%= quizType %>" data-lang="<%= lang %>"></div>
+    </div>
   </div>
 </section>
 

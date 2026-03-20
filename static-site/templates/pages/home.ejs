@@ -74,18 +74,24 @@
 <script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
 
 <!-- Hero Section -->
-<section class="relative overflow-hidden gradient-hero py-16 md:py-24">
-  <!-- Decorative blobs -->
-  <div class="absolute top-20 left-10 w-64 h-64 blob-primary animate-blob opacity-40 pointer-events-none" aria-hidden="true"></div>
-  <div class="absolute bottom-10 right-10 w-48 h-48 blob-secondary animate-blob delay-500 opacity-40 pointer-events-none" aria-hidden="true"></div>
+<section class="hero-home relative overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="absolute top-20 left-10 w-72 h-72 blob-primary animate-blob opacity-30 pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute bottom-20 right-10 w-56 h-56 blob-secondary animate-blob delay-500 opacity-30 pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style="background: radial-gradient(circle, hsl(var(--primary) / 0.06) 0%, transparent 70%);" aria-hidden="true"></div>
 
   <div class="container mx-auto px-4 relative z-10">
-    <div class="mx-auto max-w-3xl text-center">
-      <span class="badge badge-primary mb-4"><%= hero.badge %></span>
-      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-        <%= hero.title %> <span class="text-gradient"><%= hero.titleHighlight %></span>
+    <div class="mx-auto max-w-3xl text-center hero-home-content">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-4 py-1.5 text-sm font-medium text-primary mb-6">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <%= hero.badge %>
+      </div>
+
+      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground leading-tight">
+        <%= hero.title %><br class="hidden sm:block"> <span class="text-gradient"><%= hero.titleHighlight %></span>
       </h1>
-      <p class="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+      <p class="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
         <% if (hero.descriptionHighlight && hero.description.includes(hero.descriptionHighlight)) { %>
           <%- hero.description.replace(hero.descriptionHighlight, '<strong class="text-foreground">' + hero.descriptionHighlight + '</strong>') %>
         <% } else { %>
@@ -93,28 +99,30 @@
         <% } %>
       </p>
 
-      <!-- Stats -->
-      <div class="flex justify-center gap-8 mb-8">
-        <div class="text-center">
-          <div class="text-2xl md:text-3xl font-bold text-primary tabular-nums"><%= hero.stat1Value %></div>
-          <div class="text-sm text-muted-foreground"><%= hero.stat1Label %></div>
-        </div>
-        <div class="text-center">
-          <div class="text-2xl md:text-3xl font-bold text-primary tabular-nums"><%= hero.stat2Value %></div>
-          <div class="text-sm text-muted-foreground"><%= hero.stat2Label %></div>
-        </div>
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <a href="#quiz-section" class="btn btn-cta btn-lg"><%= hero.cta1 %></a>
+        <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-outline btn-lg"><%= hero.cta2 %></a>
       </div>
 
-      <!-- CTAs -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="#quiz-section" class="btn btn-cta"><%= hero.cta1 %></a>
-        <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-outline btn-lg"><%= hero.cta2 %></a>
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-value"><%= hero.stat1Value %></div>
+          <div class="hero-stat-label"><%= hero.stat1Label %></div>
+        </div>
+        <div class="hero-stat-sep"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-value"><%= hero.stat2Value %></div>
+          <div class="hero-stat-label"><%= hero.stat2Label %></div>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+  <!-- Smooth transition to next section -->
+  <div class="hero-home-fade" aria-hidden="true"></div>
+</section>
 
 <!-- Quiz Section -->
 <section id="quiz-section" class="section-padding bg-muted/20">
@@ -129,11 +137,7 @@
     <div class="quiz-section-block quiz-section-tests">
       <div class="quiz-section-block-inner">
         <div class="text-center mb-10">
-          <span class="quiz-section-badge quiz-section-badge--tests">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-            <%= t('home:quizGrid.testsTitle', 'Tests de couple') %>
-          </span>
-          <h3 class="text-xl md:text-2xl font-bold mt-4"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
+          <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
           <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.testsDesc', '') %></p>
         </div>
         <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
@@ -157,9 +161,6 @@
     <!-- Visual separator between tests and quizzes -->
     <div class="quiz-section-divider">
       <div class="quiz-section-divider-line"></div>
-      <div class="quiz-section-divider-icon">
-        <span>VS</span>
-      </div>
       <div class="quiz-section-divider-line"></div>
     </div>
 
@@ -167,11 +168,7 @@
     <div class="quiz-section-block quiz-section-quizzes">
       <div class="quiz-section-block-inner">
         <div class="text-center mb-10">
-          <span class="quiz-section-badge quiz-section-badge--quizzes">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-            <%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %>
-          </span>
-          <h3 class="text-xl md:text-2xl font-bold mt-4"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
+          <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
           <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.quizzesDesc', '') %></p>
         </div>
         <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
