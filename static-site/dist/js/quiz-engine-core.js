@@ -533,26 +533,26 @@ var QuizEngine = (function() {
 
   DuoMatchQuiz.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
     // Icon in gradient circle
-    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-4');
+    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-6');
     iconWrap.innerHTML = ICONS.users;
     wrap.appendChild(iconWrap);
 
-    var title = el('h2', 'text-2xl font-bold mb-2 text-center', this.setupTitle || tg('playerSetup.readyToPlay', 'Prêts à jouer ensemble ?'));
-    var desc = el('p', 'text-muted-foreground mb-6 text-center', this.setupDesc || tg('playerSetup.enterNames', 'Entrez vos prénoms'));
+    var title = el('h2', 'text-2xl font-bold mb-3 text-center', this.setupTitle || tg('playerSetup.readyToPlay', 'Prêts à jouer ensemble ?'));
+    var desc = el('p', 'text-muted-foreground mb-8 text-center', this.setupDesc || tg('playerSetup.enterNames', 'Entrez vos prénoms et commencez le quiz à deux !'));
 
     var form = el('div', 'quiz-setup-grid max-w-lg mx-auto');
 
     var genders = ['', ''];
 
     function createPlayerCard(idx) {
-      var card = el('div', 'glass-card rounded-xl p-5');
+      var card = el('div', 'quiz-player-card');
       var numCircle = el('div', 'quiz-player-number');
       numCircle.textContent = (idx + 1);
       card.appendChild(numCircle);
-      var label = el('label', 'block text-sm font-medium mb-2', tg('playerSetup.player' + (idx + 1), 'Joueur ' + (idx + 1)));
+      var label = el('label', 'block text-sm font-semibold mb-2 text-center', tg('playerSetup.player' + (idx + 1), 'Joueur ' + (idx + 1)));
       var input = el('input', 'input w-full');
       input.type = 'text';
       input.placeholder = tg('playerSetup.firstName', 'Prénom');
@@ -562,9 +562,9 @@ var QuizEngine = (function() {
       card.appendChild(input);
 
       if (self.needsGender) {
-        var gLabel = el('label', 'block text-sm font-medium mt-3 mb-1', tg('playerSetup.gender', 'Genre'));
+        var gLabel = el('label', 'block text-sm font-semibold mt-4 mb-2 text-center', tg('playerSetup.gender', 'Genre'));
         card.appendChild(gLabel);
-        var gWrap = el('div', 'flex gap-2');
+        var gWrap = el('div', 'flex gap-3 justify-center');
         var maleBtn = el('button', 'gender-btn', '👨 ' + tg('playerSetup.male', 'Homme'));
         var femaleBtn = el('button', 'gender-btn', '👩 ' + tg('playerSetup.female', 'Femme'));
         maleBtn.addEventListener('click', function() {
@@ -587,9 +587,9 @@ var QuizEngine = (function() {
     form.appendChild(createPlayerCard(0));
     form.appendChild(createPlayerCard(1));
 
-    var info = el('p', 'text-xs text-muted-foreground text-center mt-4', '📝 ' + this.questions.length + ' questions &bull; ⏱ ' + tg('meta.duration', '5 min'));
+    var info = el('div', 'quiz-setup-meta', '📝 ' + this.questions.length + ' questions &bull; ⏱ ' + tg('meta.duration', '5 min'));
 
-    var startBtn = el('button', 'btn btn-cta w-full mt-4 btn-gradient', tg('playerSetup.startQuiz', 'Commencer le quiz'));
+    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', tg('playerSetup.startQuiz', 'Commencer le quiz'));
     startBtn.addEventListener('click', function() {
       var n1 = document.getElementById('player-input-0').value.trim() || tg('playerSetup.player1', 'Joueur 1');
       var n2 = document.getElementById('player-input-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
@@ -1910,25 +1910,25 @@ var QuizEngine = (function() {
 
   HealthyQuiz.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
-    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-4');
+    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-6');
     iconWrap.innerHTML = ICONS.users;
     wrap.appendChild(iconWrap);
 
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', tg('playerSetup.enterNames', 'Entrez vos prénoms')));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center', tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-8 text-center', tg('playerSetup.enterNames', 'Entrez vos prénoms et commencez le test à deux !')));
 
     var form = el('div', 'quiz-setup-grid max-w-lg mx-auto');
     var genders = ['', ''];
 
     for (var i = 0; i < 2; i++) {
       (function(idx) {
-        var card = el('div', 'glass-card rounded-xl p-5');
+        var card = el('div', 'quiz-player-card');
         var numCircle = el('div', 'quiz-player-number');
         numCircle.textContent = (idx + 1);
         card.appendChild(numCircle);
-        var label = el('label', 'block text-sm font-medium mb-2', tg('playerSetup.player' + (idx + 1), 'Joueur ' + (idx + 1)));
+        var label = el('label', 'block text-sm font-semibold mb-2 text-center', tg('playerSetup.player' + (idx + 1), 'Joueur ' + (idx + 1)));
         var input = el('input', 'input w-full');
         input.type = 'text'; input.placeholder = tg('playerSetup.firstName', 'Prénom'); input.maxLength = 20;
         input.id = 'healthy-player-' + idx;
@@ -1936,9 +1936,9 @@ var QuizEngine = (function() {
         card.appendChild(input);
 
         // Gender buttons
-        var gLabel = el('label', 'block text-sm font-medium mt-3 mb-1', tg('playerSetup.gender', 'Genre'));
+        var gLabel = el('label', 'block text-sm font-semibold mt-4 mb-2 text-center', tg('playerSetup.gender', 'Genre'));
         card.appendChild(gLabel);
-        var gWrap = el('div', 'flex gap-2');
+        var gWrap = el('div', 'flex gap-3 justify-center');
         var maleBtn = el('button', 'gender-btn', '👨 ' + tg('playerSetup.male', 'Homme'));
         var femaleBtn = el('button', 'gender-btn', '👩 ' + tg('playerSetup.female', 'Femme'));
         maleBtn.addEventListener('click', function() {
@@ -1958,7 +1958,7 @@ var QuizEngine = (function() {
       })(i);
     }
 
-    var startBtn = el('button', 'btn btn-cta btn-gradient w-full mt-4', tg('playerSetup.startTest', 'Commencer le test'));
+    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', tg('playerSetup.startTest', 'Commencer le test'));
     startBtn.addEventListener('click', function() {
       var n1 = document.getElementById('healthy-player-0').value.trim() || tg('playerSetup.player1', 'Joueur 1');
       var n2 = document.getElementById('healthy-player-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
