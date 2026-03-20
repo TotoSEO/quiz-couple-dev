@@ -62,6 +62,81 @@
   ];
 
   var METHODS_LIMITS = { 'gratuit': 3, 'pro': 5, 'boost': 7 };
+  var CUSTOM_METHODS_LIMITS = { 'gratuit': 0, 'pro': 2, 'boost': 5 };
+  var DESC_LIMITS = { 'gratuit': 600, 'pro': 1000, 'boost': 2000 };
+
+  // ── Rich Text Editor ──
+  function syncEditorToTextarea(editorId, textareaId) {
+    var editor = $(editorId);
+    var textarea = $(textareaId);
+    if (editor && textarea) {
+      textarea.value = editor.innerHTML.trim();
+    }
+    return textarea ? textarea.value : '';
+  }
+
+  function initRichTextEditor(toolbarId, editorId, textareaId, countId, maxId) {
+    var toolbar = $(toolbarId);
+    var editor = $(editorId);
+    if (!toolbar || !editor) return;
+
+    // Toolbar buttons
+    toolbar.querySelectorAll('.ann-rte-btn').forEach(function (btn) {
+      btn.addEventListener('mousedown', function (e) {
+        e.preventDefault(); // Keep focus in editor
+      });
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var cmd = btn.getAttribute('data-cmd');
+        if (cmd === 'insertTable') {
+          // Check if table already exists
+          if (editor.querySelector('table')) {
+            alert('Un seul tableau est autorise par description.');
+            return;
+          }
+          var cols = prompt('Nombre de colonnes (2 a 5) :', '3');
+          cols = parseInt(cols, 10);
+          if (isNaN(cols) || cols < 2) cols = 2;
+          if (cols > 5) cols = 5;
+          var rows = prompt('Nombre de lignes (2 a 10) :', '3');
+          rows = parseInt(rows, 10);
+          if (isNaN(rows) || rows < 2) rows = 2;
+          if (rows > 10) rows = 10;
+          var tableHtml = '<table><thead><tr>';
+          for (var c = 0; c < cols; c++) tableHtml += '<th>En-tete</th>';
+          tableHtml += '</tr></thead><tbody>';
+          for (var r = 0; r < rows - 1; r++) {
+            tableHtml += '<tr>';
+            for (var c2 = 0; c2 < cols; c2++) tableHtml += '<td>...</td>';
+            tableHtml += '</tr>';
+          }
+          tableHtml += '</tbody></table><p><br></p>';
+          document.execCommand('insertHTML', false, tableHtml);
+        } else {
+          document.execCommand(cmd, false, null);
+        }
+        editor.focus();
+        updateCount();
+      });
+    });
+
+    function updateCount() {
+      var count = (editor.textContent || '').length;
+      var countEl = $(countId);
+      if (countEl) countEl.textContent = count;
+      syncEditorToTextarea(editorId, textareaId);
+    }
+
+    editor.addEventListener('input', updateCount);
+    editor.addEventListener('blur', updateCount);
+
+    // Prevent pasting HTML (paste as plain text to avoid messy formatting)
+    editor.addEventListener('paste', function (e) {
+      e.preventDefault();
+      var text = (e.clipboardData || window.clipboardData).getData('text/plain');
+      document.execCommand('insertText', false, text);
+    });
+  }
 
   // ── Password validation ──
   function validatePassword(pw) {
@@ -94,6 +169,29 @@
       }, 200);
     });
   }
+
+  // ── Limit digit count on numeric inputs ──
+  function limitDigits(inputId, maxDigits) {
+    var el = document.getElementById(inputId);
+    if (!el) return;
+    el.addEventListener('keydown', function (e) {
+      if ([8, 9, 13, 27, 35, 36, 37, 38, 39, 40, 46].indexOf(e.keyCode) !== -1) return;
+      if ((e.ctrlKey || e.metaKey) && [65, 67, 86, 88].indexOf(e.keyCode) !== -1) return;
+      var isDigit = (e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105);
+      if (!isDigit) { e.preventDefault(); return; }
+      var val = el.value.replace(/[^0-9]/g, '');
+      if (val.length >= maxDigits) { e.preventDefault(); }
+    });
+    el.addEventListener('input', function () {
+      var digits = el.value.replace(/[^0-9]/g, '');
+      if (digits.length > maxDigits) {
+        el.value = digits.slice(0, maxDigits);
+      }
+    });
+  }
+  limitDigits('prof-price-min', 4);
+  limitDigits('prof-price-max', 4);
+  limitDigits('prof-experience', 2);
 
   // ── API helpers ──
   function apiCall(endpoint, method, body, token) {
@@ -132,7 +230,8 @@
   }
 
   // ── Bubble selector builder ──
-  function buildBubbles(containerId, items, selectedItems, maxItems) {
+  // extraCountFn: optional function returning extra count to add when checking maxItems
+  function buildBubbles(containerId, items, selectedItems, maxItems, extraCountFn) {
     var container = $(containerId);
     if (!container) return;
     container.innerHTML = '';
@@ -149,7 +248,8 @@
       cb.style.display = 'none';
       cb.addEventListener('change', function () {
         var checked = container.querySelectorAll('input:checked');
-        if (maxItems && checked.length > maxItems) {
+        var total = checked.length + (extraCountFn ? extraCountFn() : 0);
+        if (maxItems && total > maxItems) {
           cb.checked = false;
           return;
         }
@@ -202,11 +302,18 @@
   }
 
   // ── Methods: rebuild based on specialty ──
+  // Collect all predefined method names for detecting custom ones
+  var ALL_PREDEFINED_METHODS = [];
+  Object.values(METHODS_BY_SPECIALTY).forEach(function (methods) {
+    methods.forEach(function (m) { if (ALL_PREDEFINED_METHODS.indexOf(m) === -1) ALL_PREDEFINED_METHODS.push(m); });
+  });
+
   function rebuildMethods(specialty, selectedMethods) {
     var plan = (currentProfile && currentProfile.plan) || 'gratuit';
     var maxMethods = METHODS_LIMITS[plan] || 3;
+    var maxCustom = CUSTOM_METHODS_LIMITS[plan] || 0;
     var limitEl = $('prof-methods-limit');
-    if (limitEl) limitEl.textContent = '(max ' + maxMethods + ')';
+    if (limitEl) limitEl.textContent = '(max ' + maxMethods + (maxCustom > 0 ? ', dont ' + maxCustom + ' personnalisée' + (maxCustom > 1 ? 's' : '') : '') + ')';
 
     var allMethods = [];
     if (specialty && METHODS_BY_SPECIALTY[specialty]) {
@@ -216,7 +323,271 @@
         methods.forEach(function (m) { if (allMethods.indexOf(m) === -1) allMethods.push(m); });
       });
     }
-    buildBubbles('prof-methods-container', allMethods, selectedMethods || [], maxMethods);
+
+    // Separate selected into predefined and custom
+    var selected = selectedMethods || [];
+    var selectedPredefined = selected.filter(function (m) { return ALL_PREDEFINED_METHODS.indexOf(m) !== -1; });
+    var selectedCustom = selected.filter(function (m) { return ALL_PREDEFINED_METHODS.indexOf(m) === -1; });
+
+    buildBubbles('prof-methods-container', allMethods, selectedPredefined, maxMethods, function () {
+      return getCustomMethods().length;
+    });
+
+    // Build custom methods UI for pro/boost
+    buildCustomMethodsUI(maxCustom, selectedCustom, maxMethods);
+  }
+
+  function buildCustomMethodsUI(maxCustom, existingCustom, maxTotal) {
+    var wrapper = $('prof-custom-methods-wrapper');
+    if (!wrapper) return;
+
+    if (maxCustom <= 0) {
+      wrapper.style.display = 'none';
+      wrapper.innerHTML = '';
+      return;
+    }
+
+    wrapper.style.display = '';
+    wrapper.innerHTML = '';
+
+    // Label
+    var label = document.createElement('p');
+    label.style.cssText = 'font-size:0.8125rem;color:hsl(var(--ann-muted-fg));margin:0 0 0.5rem;';
+    label.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:0.875rem;height:0.875rem;vertical-align:middle;margin-right:0.25rem"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>'
+      + 'Méthodes personnalisées <span style="font-weight:600;">(' + maxCustom + ' max)</span>';
+    wrapper.appendChild(label);
+
+    // Container for custom method tags
+    var tagsContainer = document.createElement('div');
+    tagsContainer.id = 'prof-custom-methods-tags';
+    tagsContainer.style.cssText = 'display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.5rem;';
+    wrapper.appendChild(tagsContainer);
+
+    // Render existing custom methods
+    (existingCustom || []).forEach(function (m) {
+      addCustomMethodTag(tagsContainer, m, maxCustom);
+    });
+
+    // Input row for adding new custom methods
+    var inputRow = document.createElement('div');
+    inputRow.style.cssText = 'display:flex;gap:0.5rem;align-items:center;';
+    var input = document.createElement('input');
+    input.type = 'text';
+    input.id = 'prof-custom-method-input';
+    input.className = 'ann-form-input';
+    input.placeholder = 'Ex: Art-thérapie, Hypnose ericksonienne...';
+    input.maxLength = 60;
+    input.style.cssText = 'flex:1;font-size:0.8125rem;padding:0.375rem 0.75rem;';
+    var addBtn = document.createElement('button');
+    addBtn.type = 'button';
+    addBtn.className = 'ann-btn ann-btn-outline ann-btn-sm';
+    addBtn.textContent = 'Ajouter';
+    addBtn.style.cssText = 'white-space:nowrap;font-size:0.8125rem;padding:0.375rem 0.75rem;';
+    inputRow.appendChild(input);
+    inputRow.appendChild(addBtn);
+    wrapper.appendChild(inputRow);
+
+    function doAdd() {
+      var val = input.value.trim();
+      if (!val) return;
+      // Check total limit
+      var predefinedCount = getSelectedBubbles('prof-methods-container').length;
+      var customCount = tagsContainer.querySelectorAll('.ann-custom-method-tag').length;
+      if (predefinedCount + customCount >= maxTotal) {
+        input.value = '';
+        input.placeholder = 'Limite totale atteinte';
+        return;
+      }
+      if (customCount >= maxCustom) {
+        input.value = '';
+        input.placeholder = 'Limite personnalisées atteinte';
+        return;
+      }
+      // Check duplicate
+      var existing = [];
+      tagsContainer.querySelectorAll('.ann-custom-method-tag').forEach(function (t) { existing.push(t.getAttribute('data-value')); });
+      if (existing.indexOf(val) !== -1 || ALL_PREDEFINED_METHODS.indexOf(val) !== -1) {
+        input.value = '';
+        return;
+      }
+      addCustomMethodTag(tagsContainer, val, maxCustom);
+      input.value = '';
+      input.placeholder = 'Ex: Art-thérapie, Hypnose ericksonienne...';
+    }
+
+    addBtn.addEventListener('click', doAdd);
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); doAdd(); }
+    });
+  }
+
+  function addCustomMethodTag(container, value, maxCustom) {
+    var tag = document.createElement('span');
+    tag.className = 'ann-custom-method-tag';
+    tag.setAttribute('data-value', value);
+    tag.style.cssText = 'display:inline-flex;align-items:center;gap:0.375rem;padding:0.375rem 0.75rem;border-radius:9999px;font-size:0.8125rem;background:hsl(var(--ann-primary)/0.1);color:hsl(var(--ann-primary));border:1px solid hsl(var(--ann-primary)/0.3);';
+    var text = document.createElement('span');
+    text.textContent = value;
+    var removeBtn = document.createElement('button');
+    removeBtn.type = 'button';
+    removeBtn.innerHTML = '&times;';
+    removeBtn.style.cssText = 'background:none;border:none;color:hsl(var(--ann-primary));cursor:pointer;font-size:1rem;line-height:1;padding:0;';
+    removeBtn.addEventListener('click', function () { tag.remove(); });
+    tag.appendChild(text);
+    tag.appendChild(removeBtn);
+    container.appendChild(tag);
+  }
+
+  function getCustomMethods() {
+    var container = $('prof-custom-methods-tags');
+    if (!container) return [];
+    var result = [];
+    container.querySelectorAll('.ann-custom-method-tag').forEach(function (t) { result.push(t.getAttribute('data-value')); });
+    return result;
+  }
+
+  // ── Cabinet Photos (Pro/Boost) ──
+  function getYouTubeThumb(videoUrl) {
+    if (!videoUrl) return '';
+    var m = videoUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/);
+    return m ? 'https://img.youtube.com/vi/' + m[1] + '/hqdefault.jpg' : '';
+  }
+
+  function renderCabinetPhotos(photos, maxPhotos) {
+    var grid = $('dash-photos-grid');
+    var addLabel = $('dash-photos-add-label');
+    if (!grid) return;
+    grid.innerHTML = '';
+    var items = (photos || []).slice();
+    var count = items.length;
+    var photoCount = items.filter(function(u) { return u !== 'video'; }).length;
+    items.forEach(function (url, idx) {
+      var isVideo = (url === 'video');
+      var card = document.createElement('div');
+      card.className = 'ann-dash-photo-card';
+      card.setAttribute('draggable', 'true');
+      card.setAttribute('data-photo-idx', idx);
+
+      if (isVideo) {
+        var thumb = getYouTubeThumb(currentProfile && currentProfile.video_url);
+        card.innerHTML =
+          '<span class="ann-dash-photo-badge" style="background:hsl(0 0% 15%);">N°' + (idx + 1) + '</span>' +
+          (thumb ? '<img src="' + thumb + '" alt="Vidéo">' : '<div style="width:100%;height:100%;background:hsl(var(--ann-muted)/0.5);display:flex;align-items:center;justify-content:center;color:hsl(var(--ann-muted-fg));">Vidéo</div>') +
+          '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">' +
+            '<div style="width:2.5rem;height:2.5rem;border-radius:50%;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;">' +
+              '<svg viewBox="0 0 24 24" fill="white" style="width:1.25rem;height:1.25rem;margin-left:2px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>' +
+            '</div>' +
+          '</div>' +
+          '<div class="ann-dash-photo-actions">' +
+            (idx > 0 ? '<button type="button" data-move-photo-up="' + idx + '" class="ann-dash-photo-btn" title="Déplacer avant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M15 18l-6-6 6-6"/></svg></button>' : '') +
+            (idx < count - 1 ? '<button type="button" data-move-photo-down="' + idx + '" class="ann-dash-photo-btn" title="Déplacer après"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M9 18l6-6-6-6"/></svg></button>' : '') +
+          '</div>';
+      } else {
+        card.innerHTML =
+          '<span class="ann-dash-photo-badge">N°' + (idx + 1) + '</span>' +
+          '<img src="' + url + '" alt="Photo cabinet ' + (idx + 1) + '">' +
+          '<div class="ann-dash-photo-actions">' +
+            (idx > 0 ? '<button type="button" data-move-photo-up="' + idx + '" class="ann-dash-photo-btn" title="Déplacer avant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M15 18l-6-6 6-6"/></svg></button>' : '') +
+            (idx < count - 1 ? '<button type="button" data-move-photo-down="' + idx + '" class="ann-dash-photo-btn" title="Déplacer après"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M9 18l6-6-6-6"/></svg></button>' : '') +
+            '<button type="button" data-remove-photo="' + idx + '" class="ann-dash-photo-btn ann-dash-photo-btn-danger" title="Supprimer">&times;</button>' +
+          '</div>';
+      }
+      // Drag & drop
+      card.addEventListener('dragstart', function(e) {
+        e.dataTransfer.setData('text/plain', idx);
+        card.classList.add('ann-dash-photo-dragging');
+      });
+      card.addEventListener('dragend', function() { card.classList.remove('ann-dash-photo-dragging'); });
+      card.addEventListener('dragover', function(e) { e.preventDefault(); card.classList.add('ann-dash-photo-dragover'); });
+      card.addEventListener('dragleave', function() { card.classList.remove('ann-dash-photo-dragover'); });
+      card.addEventListener('drop', function(e) {
+        e.preventDefault();
+        card.classList.remove('ann-dash-photo-dragover');
+        var fromIdx = parseInt(e.dataTransfer.getData('text/plain'));
+        var toIdx = idx;
+        if (fromIdx !== toIdx) reorderPhotos(fromIdx, toIdx);
+      });
+      grid.appendChild(card);
+    });
+    // Show/hide add button based on limit (don't count video marker towards photo limit)
+    if (addLabel) addLabel.style.display = photoCount >= maxPhotos ? 'none' : '';
+  }
+
+  async function reorderPhotos(fromIdx, toIdx) {
+    if (!currentProfile || !currentProfile.photos) return;
+    var photos = (currentProfile.photos || []).slice();
+    var item = photos.splice(fromIdx, 1)[0];
+    photos.splice(toIdx, 0, item);
+    var session = await checkAuth();
+    if (session) {
+      var res = await saveProfile({ photos: photos }, session.access_token, false);
+      if (res.profile) {
+        currentProfile = res.profile;
+        var maxPhotos = currentProfile.plan === 'boost' ? 4 : 2;
+        renderCabinetPhotos(currentProfile.photos || [], maxPhotos);
+      }
+    }
+  }
+
+  async function uploadCabinetPhoto(file) {
+    if (!currentUser || !currentProfile) return;
+    var ext = file.name.split('.').pop().toLowerCase();
+    if (!['jpg', 'jpeg', 'png', 'webp'].includes(ext)) throw new Error('Format non supporté.');
+    if (file.size > 300 * 1024) throw new Error('Photo trop lourde (300 Ko max). Compressez-la avant de l\'envoyer.');
+    var timestamp = Date.now();
+    var path = currentUser.id + '/cabinet-' + timestamp + '.' + ext;
+    var result = await supabase.storage.from('annuaire-photos').upload(path, file, { upsert: true, contentType: file.type });
+    if (result.error) throw result.error;
+    var urlData = supabase.storage.from('annuaire-photos').getPublicUrl(path);
+    return urlData.data.publicUrl;
+  }
+
+  async function removeCabinetPhoto(idx) {
+    if (!currentProfile || !currentProfile.photos) return;
+    var photos = (currentProfile.photos || []).slice();
+    var removedUrl = photos.splice(idx, 1)[0];
+    // Delete from storage
+    if (removedUrl) {
+      var match = removedUrl.match(/annuaire-photos\/(.+)$/);
+      if (match) {
+        try { await supabase.storage.from('annuaire-photos').remove([match[1]]); } catch (e) {}
+      }
+    }
+    // Update profile
+    var session = await checkAuth();
+    if (session) {
+      var res = await saveProfile({ photos: photos }, session.access_token, false);
+      if (res.profile) {
+        currentProfile = res.profile;
+        var maxPhotos = currentProfile.plan === 'boost' ? 4 : 2;
+        renderCabinetPhotos(currentProfile.photos || [], maxPhotos);
+      }
+    }
+  }
+
+  // ── Short Description Counter ──
+  function updateShortDescCounter() {
+    var input = $('prof-short-description');
+    var counter = $('prof-short-desc-counter');
+    if (!input || !counter) return;
+    var len = input.value.length;
+    counter.textContent = len + '/165';
+    counter.style.color = len > 155 ? 'hsl(0 70% 50%)' : 'hsl(var(--ann-muted-fg))';
+  }
+
+  // ── Video Preview ──
+  function updateVideoPreview(url) {
+    var preview = $('dash-video-preview');
+    if (!preview) return;
+    if (!url) { hide(preview); return; }
+    // Extract YouTube video ID
+    var match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/);
+    if (match) {
+      preview.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + match[1] + '" frameborder="0" allowfullscreen style="border-radius:var(--ann-radius);"></iframe>';
+      show(preview);
+    } else {
+      hide(preview);
+    }
   }
 
   // ── Address autocomplete (OpenStreetMap Nominatim) ──
@@ -232,7 +603,7 @@
       if (query.length < 4) { suggestions.style.display = 'none'; return; }
 
       addressTimeout = setTimeout(function () {
-        fetch('https://nominatim.openstreetmap.org/search?format=json&countrycodes=fr&limit=5&q=' + encodeURIComponent(query), {
+        fetch('https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&countrycodes=fr&limit=5&q=' + encodeURIComponent(query), {
           headers: { 'Accept-Language': 'fr' },
         })
         .then(function (r) { return r.json(); })
@@ -245,8 +616,27 @@
             item.textContent = r.display_name;
             item.addEventListener('mousedown', function (e) {
               e.preventDefault();
-              input.value = r.display_name;
+              // Simplify address: keep only the first 2-3 meaningful parts
+              var parts = r.display_name.split(', ');
+              input.value = parts.slice(0, 3).join(', ');
               suggestions.style.display = 'none';
+
+              // Extract real city from Nominatim structured address
+              var addr = r.address || {};
+              var realCity = addr.city || addr.town || addr.village || addr.municipality || '';
+              var postalCode = addr.postcode || '';
+
+              // Store in hidden fields for form submission
+              var dcField = $('prof-display-city');
+              var pcField = $('prof-postal-code');
+              if (dcField) dcField.value = realCity;
+              if (pcField) pcField.value = postalCode;
+
+              // Store lat/lng from Nominatim
+              var latField = $('prof-lat');
+              var lngField = $('prof-lng');
+              if (latField && r.lat) latField.value = r.lat;
+              if (lngField && r.lon) lngField.value = r.lon;
             });
             item.addEventListener('mouseenter', function () { item.style.background = 'hsl(var(--ann-muted)/0.3)'; });
             item.addEventListener('mouseleave', function () { item.style.background = ''; });
@@ -267,7 +657,15 @@
   async function checkAuth() {
     if (!supabase) return null;
     var { data } = await supabase.auth.getSession();
-    if (data.session) return data.session;
+    if (data.session) {
+      // Refresh if token expires within the next 60 seconds
+      var expiresAt = data.session.expires_at;
+      if (expiresAt && expiresAt < Math.floor(Date.now() / 1000) + 60) {
+        var { data: refreshed } = await supabase.auth.refreshSession();
+        return (refreshed && refreshed.session) || null;
+      }
+      return data.session;
+    }
     var hash = window.location.hash;
     var search = window.location.search;
     if (hash.includes('access_token') || hash.includes('type=') || search.includes('code=')) {
@@ -314,7 +712,7 @@
   async function uploadPhoto(file, userId) {
     var ext = file.name.split('.').pop().toLowerCase();
     if (!['jpg', 'jpeg', 'png', 'webp'].includes(ext)) throw new Error('Format non supporté. Utilisez JPEG, PNG ou WebP.');
-    if (file.size > 5 * 1024 * 1024) throw new Error('Photo trop lourde (5 Mo max).');
+    if (file.size > 200 * 1024) throw new Error('Photo de profil trop lourde (200 Ko max). Compressez-la avant de l\'envoyer.');
     var path = userId + '/photo.' + ext;
     var { data, error } = await supabase.storage.from('annuaire-photos').upload(path, file, { upsert: true, contentType: file.type });
     if (error) throw error;
@@ -351,6 +749,65 @@
     return modes;
   }
 
+  // ── Opening hours: populate dashboard form from DB data ──
+  function populateDashHours(oh) {
+    var days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+    days.forEach(function (day) {
+      var toggle = document.querySelector('.ann-dash-hours-toggle[data-day="' + day + '"]');
+      var slots = document.querySelector('#dash-hours-form .ann-hours-form-slots[data-day="' + day + '"]');
+      if (!toggle || !slots) return;
+      if (oh && oh[day] && !oh[day].closed) {
+        toggle.checked = true;
+        slots.classList.remove('disabled');
+        var d = oh[day];
+        if (d.morning_start) slots.querySelector('input[name="dash_hours_' + day + '_am_start"]').value = d.morning_start;
+        if (d.morning_end) slots.querySelector('input[name="dash_hours_' + day + '_am_end"]').value = d.morning_end;
+        if (d.afternoon_start) slots.querySelector('input[name="dash_hours_' + day + '_pm_start"]').value = d.afternoon_start;
+        if (d.afternoon_end) slots.querySelector('input[name="dash_hours_' + day + '_pm_end"]').value = d.afternoon_end;
+      } else {
+        toggle.checked = false;
+        slots.classList.add('disabled');
+      }
+    });
+  }
+
+  // ── Opening hours: collect from dashboard form ──
+  function collectDashHours() {
+    var days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+    var hasAny = false;
+    var result = {};
+    days.forEach(function (day) {
+      var toggle = document.querySelector('.ann-dash-hours-toggle[data-day="' + day + '"]');
+      if (!toggle || !toggle.checked) {
+        result[day] = { closed: true };
+        return;
+      }
+      hasAny = true;
+      var prefix = 'dash_hours_' + day;
+      result[day] = {
+        closed: false,
+        morning_start: (document.querySelector('input[name="' + prefix + '_am_start"]') || {}).value || null,
+        morning_end: (document.querySelector('input[name="' + prefix + '_am_end"]') || {}).value || null,
+        afternoon_start: (document.querySelector('input[name="' + prefix + '_pm_start"]') || {}).value || null,
+        afternoon_end: (document.querySelector('input[name="' + prefix + '_pm_end"]') || {}).value || null,
+      };
+    });
+    return hasAny ? result : null;
+  }
+
+  // ── Dashboard hours toggle ──
+  document.querySelectorAll('.ann-dash-hours-toggle').forEach(function (cb) {
+    function toggle() {
+      var day = cb.getAttribute('data-day');
+      var slots = document.querySelector('#dash-hours-form .ann-hours-form-slots[data-day="' + day + '"]');
+      if (slots) {
+        if (cb.checked) slots.classList.remove('disabled');
+        else slots.classList.add('disabled');
+      }
+    }
+    cb.addEventListener('change', toggle);
+  });
+
   function fillForm(profile) {
     if (!profile) return;
     $('prof-firstname').value = profile.first_name || '';
@@ -360,15 +817,50 @@
     $('prof-email').value = profile.email || '';
     $('prof-phone').value = profile.phone || '';
     $('prof-address').value = profile.address || '';
+    if ($('prof-display-city')) $('prof-display-city').value = profile.display_city || '';
+    if ($('prof-postal-code')) $('prof-postal-code').value = profile.postal_code || '';
+    if ($('prof-lat') && profile.lat) $('prof-lat').value = profile.lat;
+    if ($('prof-lng') && profile.lng) $('prof-lng').value = profile.lng;
     $('prof-website').value = profile.website || '';
+    if ($('prof-pro-id-number')) $('prof-pro-id-number').value = profile.professional_id_number || '';
     if ($('prof-doctolib')) $('prof-doctolib').value = profile.doctolib_url || '';
-    $('prof-description').value = profile.description || '';
-    $('prof-experience').value = profile.years_experience || '';
-    $('prof-price').value = profile.price_range || '';
+    // Short description
+    var shortDescInput = $('prof-short-description');
+    if (shortDescInput) {
+      shortDescInput.value = profile.short_description || '';
+      updateShortDescCounter();
+    }
 
-    // Update char count
-    var descEl = $('prof-description');
-    if (descEl) $('prof-desc-count').textContent = (descEl.value || '').length;
+    var descVal = profile.description || '';
+    $('prof-description').value = descVal;
+    var descEditor = $('prof-description-editor');
+    if (descEditor) {
+      descEditor.innerHTML = descVal;
+    }
+    $('prof-experience').value = profile.years_experience || '';
+    // Parse price_range "60€ - 100€" into min/max
+    if (profile.price_range) {
+      var priceMatch = profile.price_range.match(/(\d+)\s*€?\s*[-–]\s*(\d+)/);
+      if (priceMatch) {
+        $('prof-price-min').value = priceMatch[1];
+        $('prof-price-max').value = priceMatch[2];
+      } else {
+        var singlePrice = profile.price_range.match(/(\d+)/);
+        if (singlePrice) { $('prof-price-min').value = singlePrice[1]; $('prof-price-max').value = singlePrice[1]; }
+      }
+    } else {
+      $('prof-price-min').value = '';
+      $('prof-price-max').value = '';
+    }
+
+    // Update char count and limit from editor
+    var plan = profile.plan || 'gratuit';
+    var descMax = DESC_LIMITS[plan] || 600;
+    var descMaxEl = $('prof-desc-max');
+    if (descMaxEl) descMaxEl.textContent = descMax;
+    if (descEditor) {
+      $('prof-desc-count').textContent = (descEditor.textContent || '').length;
+    }
 
     // Lock name and specialty if profile already exists in DB
     if (profile.id) {
@@ -384,6 +876,9 @@
     rebuildMethods(profile.specialty, profile.methods || []);
     buildBubbles('prof-languages-container', LANGUAGES, profile.languages || []);
     buildConsultationModes('prof-availability-container', parseAvailability(profile.availability));
+
+    // Opening hours
+    populateDashHours(profile.opening_hours);
 
     // Photo preview
     if (profile.photo_url) {
@@ -409,6 +904,39 @@
     if (doctolibInput && (profile.plan === 'pro' || profile.plan === 'boost')) {
       doctolibInput.disabled = false; doctolibInput.style.opacity = ''; doctolibInput.style.cursor = '';
       if (doctolibLocked) hide(doctolibLocked);
+    }
+
+    // Show cabinet photos section for Pro & Boost users
+    var photosSection = $('dash-photos-section');
+    if (photosSection && (profile.plan === 'pro' || profile.plan === 'boost')) {
+      show(photosSection);
+      var maxPhotos = profile.plan === 'boost' ? 4 : 2;
+
+      // Auto-add video marker for existing Boost profiles with video but no marker
+      // Also persist to DB so it survives reorders
+      if (profile.plan === 'boost' && profile.video_url && Array.isArray(profile.photos) && profile.photos.indexOf('video') === -1) {
+        profile.photos = ['video'].concat(profile.photos);
+        // Save the marker to DB in background
+        (async function() {
+          var s = await checkAuth();
+          if (s) await saveProfile({ photos: profile.photos }, s.access_token, false);
+        })();
+      }
+
+      var limitEl = $('dash-photos-limit');
+      if (limitEl) limitEl.textContent = '(max ' + maxPhotos + ' photos)';
+      renderCabinetPhotos(profile.photos || [], maxPhotos);
+    }
+
+    // Show video section for Boost users
+    var videoSection = $('dash-video-section');
+    if (videoSection && profile.plan === 'boost') {
+      show(videoSection);
+      var videoInput = $('prof-video-url');
+      if (videoInput && profile.video_url) {
+        videoInput.value = profile.video_url;
+        updateVideoPreview(profile.video_url);
+      }
     }
 
     // Show Google Reviews for Boost users
@@ -443,13 +971,26 @@
       email: $('prof-email').value.trim(),
       phone: $('prof-phone').value.trim() || null,
       address: $('prof-address').value.trim() || null,
+      display_city: $('prof-display-city') ? ($('prof-display-city').value.trim() || null) : null,
+      postal_code: $('prof-postal-code') ? ($('prof-postal-code').value.trim() || null) : null,
+      lat: $('prof-lat') && $('prof-lat').value ? parseFloat($('prof-lat').value) : undefined,
+      lng: $('prof-lng') && $('prof-lng').value ? parseFloat($('prof-lng').value) : undefined,
       website: $('prof-website').disabled ? undefined : ($('prof-website').value.trim() || null),
-      description: $('prof-description').value.trim(),
+      short_description: ($('prof-short-description').value || '').slice(0, 165).trim(),
+      description: syncEditorToTextarea('prof-description-editor', 'prof-description'),
       years_experience: parseInt($('prof-experience').value) || 0,
-      price_range: $('prof-price').value.trim() || null,
-      methods: getSelectedBubbles('prof-methods-container'),
+      professional_id_number: $('prof-pro-id-number') ? ($('prof-pro-id-number').value.trim() || null) : undefined,
+      price_range: (function() {
+        var pmin = $('prof-price-min').value.trim();
+        var pmax = $('prof-price-max').value.trim();
+        if (pmin && pmax) return pmin + '€ - ' + pmax + '€';
+        if (pmin) return pmin + '€';
+        return null;
+      })(),
+      methods: getSelectedBubbles('prof-methods-container').concat(getCustomMethods()),
       languages: getSelectedBubbles('prof-languages-container'),
       availability: getSelectedBubbles('prof-availability-container').join(', ') || null,
+      opening_hours: collectDashHours(),
     };
     var doctolibInput = $('prof-doctolib');
     if (doctolibInput && !doctolibInput.disabled) {
@@ -458,6 +999,10 @@
     var gpiInput = $('prof-google-place-id');
     if (gpiInput && $('dash-google-reviews-section') && $('dash-google-reviews-section').style.display !== 'none') {
       data.google_place_id = gpiInput.value.trim() || null;
+    }
+    var videoInput = $('prof-video-url');
+    if (videoInput && $('dash-video-section') && $('dash-video-section').style.display !== 'none') {
+      data.video_url = videoInput.value.trim() || null;
     }
     return data;
   }
@@ -525,6 +1070,12 @@
             if (res.profile) {
               currentProfile = res.profile;
               await supabase.auth.updateUser({ data: { has_pending_profile: false } });
+            } else if (res.error) {
+              // Profile may already exist (409) — reload it
+              currentProfile = await loadProfile(session.access_token);
+              if (currentProfile) {
+                await supabase.auth.updateUser({ data: { has_pending_profile: false } });
+              }
             }
           } catch (e) { console.warn('Auto-create profile failed:', e); }
         }
@@ -540,11 +1091,24 @@
       if (currentProfile) {
         fillForm(currentProfile);
         updateProfileStatus(currentProfile);
+        updateTopPlanBanner(currentProfile);
       } else {
         if (pendingMeta) fillForm(pendingMeta);
         updateProfileStatus(null);
       }
       showDashboard();
+
+      // Review system
+      initReviewSystem();
+      if (shouldShowReviewBanner()) {
+        show($('dash-review-banner'));
+      }
+      if (shouldShowReviewPopup()) {
+        setTimeout(function () {
+          openReviewModal();
+          try { localStorage.setItem('ann_review_popup_shown', '1'); } catch(e) {}
+        }, 1500);
+      }
     } else {
       showAuthScreen();
     }
@@ -554,22 +1118,37 @@
     $('dash-logout').addEventListener('click', logout);
 
     // Dashboard tabs
+    function activateTab(tab) {
+      document.querySelectorAll('[data-dash-tab]').forEach(function (b) { b.classList.remove('ann-auth-tab-active'); });
+      var activeBtn = document.querySelector('[data-dash-tab="' + tab + '"]');
+      if (activeBtn) activeBtn.classList.add('ann-auth-tab-active');
+      hide($('dash-tab-profile')); hide($('dash-tab-billing')); hide($('dash-tab-stats'));
+      show($('dash-tab-' + tab));
+      if (tab === 'stats') loadStatsTab();
+      if (tab === 'billing') { fillBillingForm(currentProfile); loadInvoicesTab(); }
+    }
+
     document.querySelectorAll('[data-dash-tab]').forEach(function (btn) {
-      btn.addEventListener('click', async function () {
-        document.querySelectorAll('[data-dash-tab]').forEach(function (b) { b.classList.remove('ann-auth-tab-active'); });
-        btn.classList.add('ann-auth-tab-active');
+      btn.addEventListener('click', function () {
         var tab = btn.getAttribute('data-dash-tab');
-        hide($('dash-tab-profile')); hide($('dash-tab-billing')); hide($('dash-tab-stats'));
-        show($('dash-tab-' + tab));
-        if (tab === 'stats') await loadStatsTab();
-        if (tab === 'billing') { fillBillingForm(currentProfile); loadInvoicesTab(); }
+        activateTab(tab);
       });
     });
 
-    // Description char count
-    $('prof-description').addEventListener('input', function () {
-      $('prof-desc-count').textContent = this.value.length;
-    });
+    // Handle URL hash to auto-switch tabs (e.g. /dashboard/#billing, /dashboard/#subscription)
+    var tabHash = window.location.hash.replace('#', '');
+    if (tabHash === 'billing' || tabHash === 'stats' || tabHash === 'subscription') {
+      activateTab('billing');
+      if (tabHash === 'subscription') {
+        setTimeout(function () {
+          var subEl = document.getElementById('subscription');
+          if (subEl) subEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 200);
+      }
+    }
+
+    // ── Rich Text Editor init (dashboard) ──
+    initRichTextEditor('prof-desc-toolbar', 'prof-description-editor', 'prof-description', 'prof-desc-count', 'prof-desc-max');
 
     // Specialty change → rebuild methods
     $('prof-specialty').addEventListener('change', function () {
@@ -596,6 +1175,78 @@
       }
     });
 
+    // Cabinet photos upload
+    var photosInput = $('dash-photos-input');
+    if (photosInput) {
+      photosInput.addEventListener('change', async function () {
+        var file = this.files[0];
+        if (!file) return;
+        var errEl = $('dash-photos-error');
+        if (errEl) hide(errEl);
+        try {
+          var session = await checkAuth();
+          if (!session) { alert('Session expirée.'); return; }
+          var url = await uploadCabinetPhoto(file);
+          var photos = (currentProfile.photos || []).slice();
+          photos.push(url);
+          var res = await saveProfile({ photos: photos }, session.access_token, false);
+          if (res.profile) {
+            currentProfile = res.profile;
+            var maxPhotos = currentProfile.plan === 'boost' ? 4 : 2;
+            renderCabinetPhotos(currentProfile.photos || [], maxPhotos);
+          } else if (res.error) {
+            if (errEl) { errEl.textContent = res.error; show(errEl); }
+          }
+        } catch (err) {
+          if (errEl) { errEl.textContent = err.message || 'Erreur upload'; show(errEl); }
+        }
+        this.value = '';
+      });
+    }
+
+    // Cabinet photo actions (remove, reorder)
+    document.addEventListener('click', function (e) {
+      var removeBtn = e.target.closest('[data-remove-photo]');
+      if (removeBtn) {
+        var idx = parseInt(removeBtn.getAttribute('data-remove-photo'));
+        if (!isNaN(idx)) removeCabinetPhoto(idx);
+        return;
+      }
+      var upBtn = e.target.closest('[data-move-photo-up]');
+      if (upBtn) {
+        var idx = parseInt(upBtn.getAttribute('data-move-photo-up'));
+        if (!isNaN(idx) && idx > 0) reorderPhotos(idx, idx - 1);
+        return;
+      }
+      var downBtn = e.target.closest('[data-move-photo-down]');
+      if (downBtn) {
+        var idx = parseInt(downBtn.getAttribute('data-move-photo-down'));
+        if (!isNaN(idx)) reorderPhotos(idx, idx + 1);
+      }
+    });
+
+    // Short description counter
+    var shortDescInput = $('prof-short-description');
+    if (shortDescInput) {
+      shortDescInput.addEventListener('input', updateShortDescCounter);
+      // Block paste that would exceed limit
+      shortDescInput.addEventListener('paste', function(e) {
+        var el = this;
+        setTimeout(function() {
+          if (el.value.length > 165) el.value = el.value.slice(0, 165);
+          updateShortDescCounter();
+        }, 0);
+      });
+    }
+
+    // Video URL preview
+    var videoInput = $('prof-video-url');
+    if (videoInput) {
+      videoInput.addEventListener('input', function () {
+        updateVideoPreview(this.value.trim());
+      });
+    }
+
     // Profile save
     $('dash-profile-form').addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -606,6 +1257,25 @@
       if (!session) { showError('dash-profile-error', 'Session expirée. Reconnectez-vous.'); return; }
 
       var data = getFormData();
+
+      // Validate price fields
+      var priceMin = $('prof-price-min').value.trim();
+      var priceMax = $('prof-price-max').value.trim();
+      if (priceMin || priceMax) {
+        var nMin = Number(priceMin), nMax = Number(priceMax);
+        if (priceMin && (nMin < 0 || nMin > 9999 || !Number.isInteger(nMin))) {
+          showError('dash-profile-error', 'Le tarif min doit être un nombre entier entre 0 et 9999.');
+          return;
+        }
+        if (priceMax && (nMax < 0 || nMax > 9999 || !Number.isInteger(nMax))) {
+          showError('dash-profile-error', 'Le tarif max doit être un nombre entier entre 0 et 9999.');
+          return;
+        }
+        if (priceMin && priceMax && nMax <= nMin) {
+          showError('dash-profile-error', 'Le tarif max doit être supérieur au tarif min.');
+          return;
+        }
+      }
 
       // Validate Doctolib URL client-side
       if (data.doctolib_url) {
@@ -621,18 +1291,44 @@
         }
       }
 
+      // Sync video marker in photos array
+      if (currentProfile && currentProfile.plan === 'boost') {
+        var photos = (currentProfile.photos || []).slice();
+        var hasVideoMarker = photos.indexOf('video') !== -1;
+        var hasVideoUrl = data.video_url && data.video_url.length > 0;
+        if (hasVideoUrl && !hasVideoMarker) {
+          // Insert video marker at position 0 (hero) by default
+          photos.unshift('video');
+          data.photos = photos;
+        } else if (!hasVideoUrl && hasVideoMarker) {
+          // Remove video marker
+          data.photos = photos.filter(function(p) { return p !== 'video'; });
+        }
+      }
+
       var btn = $('dash-save-btn');
       btn.disabled = true; btn.textContent = 'Enregistrement...';
 
       try {
         var isNew = !currentProfile;
         var res = await saveProfile(data, session.access_token, isNew);
+        // If POST failed with 409 (profile already exists), reload and retry as PUT
+        if (isNew && res.error && res.error.indexOf('déjà') !== -1) {
+          currentProfile = await loadProfile(session.access_token);
+          if (currentProfile) {
+            res = await saveProfile(data, session.access_token, false);
+          }
+        }
         if (res.error || res.msg) {
           showError('dash-profile-error', res.error || res.msg);
         } else if (res.profile) {
           currentProfile = res.profile;
           updateProfileStatus(currentProfile);
-          $('dash-profile-success').textContent = 'Fiche enregistrée avec succès !';
+          var successMsg = 'Fiche enregistrée avec succès !';
+          if (res.profile.google_place_id && res.profile.plan === 'boost') {
+            successMsg += ' Les avis Google sont en cours de synchronisation (quelques secondes).';
+          }
+          $('dash-profile-success').textContent = successMsg;
           show($('dash-profile-success'));
           if (currentProfile.slug && currentProfile.is_published) {
             var link = $('dash-view-profile');
@@ -687,6 +1383,9 @@
         }
         updateProfileStatus(currentProfile);
         showDashboard();
+        // Review system after login
+        initReviewSystem();
+        if (shouldShowReviewBanner()) show($('dash-review-banner'));
       } catch (err) {
         showError('auth-login-error', err.message || 'Erreur de connexion');
       }
@@ -859,7 +1558,19 @@
     el = $('bill-siret'); if (el) el.value = profile.billing_siret || '';
     el = $('bill-tva'); if (el) el.value = profile.billing_tva_number || '';
     el = $('bill-email'); if (el) el.value = profile.billing_email || '';
-    el = $('bill-address'); if (el) el.value = profile.billing_address || '';
+    // Parse structured billing address (stored as "street\npostalcode city")
+    var billAddr = profile.billing_address || '';
+    var addrLines = billAddr.split('\n');
+    el = $('bill-street'); if (el) el.value = addrLines[0] || '';
+    if (addrLines[1]) {
+      var match = addrLines[1].match(/^(\d{5})\s+(.+)$/);
+      if (match) {
+        el = $('bill-postalcode'); if (el) el.value = match[1];
+        el = $('bill-city'); if (el) el.value = match[2];
+      } else {
+        el = $('bill-city'); if (el) el.value = addrLines[1];
+      }
+    }
 
     // Update plan info
     var badge = $('bill-plan-badge');
@@ -880,6 +1591,9 @@
     if (upgradeLink && profile.plan !== 'gratuit') {
       upgradeLink.textContent = 'Gérer mon abonnement';
     }
+
+    // Update top plan banner
+    updateTopPlanBanner(profile);
 
     // Show billing completeness status and plan UI
     updateBillingStatus(profile);
@@ -949,7 +1663,9 @@
       var siret = ($('bill-siret').value || '').trim();
       var tva = ($('bill-tva').value || '').trim().toUpperCase();
       var billingEmail = ($('bill-email').value || '').trim();
-      var address = ($('bill-address').value || '').trim();
+      var billStreet = ($('bill-street').value || '').trim();
+      var billPostalcode = ($('bill-postalcode').value || '').trim();
+      var billCity = ($('bill-city').value || '').trim();
 
       if (!company) { showError('bill-error', 'Le nom de l\'entreprise est obligatoire.'); return; }
       if (!siret || !isValidSiret(siret)) {
@@ -964,7 +1680,11 @@
         showError('bill-email-error', 'Format d\'email invalide.');
         showError('bill-error', 'Veuillez corriger les erreurs ci-dessus.'); return;
       }
-      if (!address) { showError('bill-error', 'L\'adresse de facturation est obligatoire.'); return; }
+      if (!billStreet) { showError('bill-error', 'Le numéro et la rue sont obligatoires.'); return; }
+      if (!billPostalcode) { showError('bill-error', 'Le code postal est obligatoire.'); return; }
+      if (!billCity) { showError('bill-error', 'La ville est obligatoire.'); return; }
+
+      var address = billStreet + '\n' + billPostalcode + ' ' + billCity;
 
       var btn = $('bill-save-btn');
       btn.disabled = true; btn.textContent = 'Enregistrement...';
@@ -981,7 +1701,15 @@
           billing_address: address
         };
 
-        var res = await saveProfile(data, session.access_token, !currentProfile);
+        // Reload profile to ensure it's current before saving billing
+        if (!currentProfile || !currentProfile.id) {
+          currentProfile = await loadProfile(session.access_token);
+        }
+        if (!currentProfile || !currentProfile.id) {
+          showError('bill-error', 'Votre fiche professionnelle n\'a pas encore été créée. Complétez d\'abord l\'onglet "Ma fiche" puis réessayez.');
+          return;
+        }
+        var res = await saveProfile(data, session.access_token, false);
         if (res.error || res.msg) {
           showError('bill-error', res.error || res.msg);
         } else if (res.profile) {
@@ -1089,11 +1817,50 @@
     var params = new URLSearchParams(window.location.search);
     if (params.get('checkout') === 'success') {
       setTimeout(function () {
-        var billingTab = document.querySelector('[data-dash-tab="billing"]');
-        if (billingTab) billingTab.click();
-        showSuccess('bill-success', 'Abonnement activé avec succès ! Votre fiche sera mise à jour dans quelques instants.');
+        // Show thank you banner immediately
+        var thanksBanner = $('dash-checkout-thanks');
+        if (thanksBanner) {
+          var thanksPlan = $('dash-thanks-plan');
+          if (thanksPlan) thanksPlan.textContent = '';
+          show(thanksBanner);
+          thanksBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
       }, 500);
       window.history.replaceState({}, '', window.location.pathname);
+
+      // Poll for plan update (webhook may take a few seconds)
+      var pollCount = 0;
+      var pollInterval = setInterval(async function () {
+        pollCount++;
+        try {
+          var session = await checkAuth();
+          if (session) {
+            var freshProfile = await loadProfile(session.access_token);
+            if (freshProfile && freshProfile.plan && freshProfile.plan !== 'gratuit') {
+              clearInterval(pollInterval);
+              currentProfile = freshProfile;
+              fillForm(currentProfile);
+              updateBillingStatus(currentProfile);
+              updatePlanUI(currentProfile);
+              updateProfileStatus(currentProfile);
+              updateTopPlanBanner(currentProfile);
+              // Show thank you message
+              var planLabels = { pro: 'Professionnel', boost: 'Boost' };
+              var thanksBanner = $('dash-checkout-thanks');
+              var thanksPlan = $('dash-thanks-plan');
+              if (thanksBanner && thanksPlan) {
+                thanksPlan.textContent = planLabels[freshProfile.plan] || freshProfile.plan;
+                show(thanksBanner);
+                thanksBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }
+          }
+        } catch (e) { /* ignore polling errors */ }
+        if (pollCount >= 20) {
+          clearInterval(pollInterval);
+          showError('bill-success', 'Le paiement a été reçu mais l\'activation prend plus de temps que prévu. Rechargez la page dans quelques instants.');
+        }
+      }, 3000); // Check every 3 seconds, up to 60 seconds
     } else if (params.get('checkout') === 'cancel') {
       setTimeout(function () {
         var billingTab = document.querySelector('[data-dash-tab="billing"]');
@@ -1101,6 +1868,46 @@
       }, 500);
       window.history.replaceState({}, '', window.location.pathname);
     }
+  }
+
+  function updateTopPlanBanner(profile) {
+    var banner = $('dash-plan-banner');
+    if (!banner || !profile) return;
+    var planLabels = { gratuit: 'Gratuit', pro: 'Professionnel', boost: 'Boost' };
+    var plan = profile.plan || 'gratuit';
+
+    var topBadge = $('dash-top-plan-badge');
+    if (topBadge) {
+      topBadge.textContent = planLabels[plan] || plan;
+      topBadge.className = 'ann-badge';
+      if (plan === 'pro') topBadge.classList.add('ann-badge-primary');
+      if (plan === 'boost') topBadge.classList.add('ann-badge-premium');
+    }
+
+    var topExpiry = $('dash-top-plan-expiry');
+    if (topExpiry && profile.plan_expires_at) {
+      var d = new Date(profile.plan_expires_at);
+      topExpiry.textContent = '· Expire le ' + d.toLocaleDateString('fr-FR');
+    } else if (topExpiry) {
+      topExpiry.textContent = '';
+    }
+
+    var actionBtn = $('dash-top-plan-action');
+    if (actionBtn) {
+      if (plan === 'gratuit') {
+        actionBtn.textContent = 'Passer à un abonnement';
+        show(actionBtn);
+        actionBtn.onclick = function(e) {
+          e.preventDefault();
+          var billingTab = document.querySelector('[data-dash-tab="billing"]');
+          if (billingTab) billingTab.click();
+        };
+      } else {
+        hide(actionBtn);
+      }
+    }
+
+    show(banner);
   }
 
   function updatePlanUI(profile) {
@@ -1181,6 +1988,154 @@
         deleteBtn.disabled = false; deleteBtn.textContent = 'Supprimer définitivement';
       }
     });
+  }
+
+  // ── Review system ──
+  var reviewSelectedRating = 0;
+
+  function openReviewModal() {
+    var overlay = $('review-modal-overlay');
+    if (!overlay) return;
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeReviewModal() {
+    var overlay = $('review-modal-overlay');
+    if (!overlay) return;
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function initReviewSystem() {
+    var overlay = $('review-modal-overlay');
+    if (!overlay) return;
+
+    // Close modal
+    var closeBtn = $('review-modal-close');
+    if (closeBtn) closeBtn.addEventListener('click', closeReviewModal);
+    var doneBtn = $('review-modal-done');
+    if (doneBtn) doneBtn.addEventListener('click', closeReviewModal);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeReviewModal();
+    });
+
+    // Banner button opens modal
+    var bannerBtn = $('dash-review-banner-btn');
+    if (bannerBtn) bannerBtn.addEventListener('click', function (e) { e.stopPropagation(); openReviewModal(); });
+    var banner = $('dash-review-banner');
+    if (banner) banner.addEventListener('click', openReviewModal);
+
+    // Star rating
+    var starBtns = document.querySelectorAll('#review-modal-stars .ann-review-star-btn');
+    starBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        reviewSelectedRating = parseInt(this.getAttribute('data-star'));
+        updateReviewStars(starBtns, reviewSelectedRating);
+      });
+      btn.addEventListener('mouseenter', function () {
+        updateReviewStars(starBtns, parseInt(this.getAttribute('data-star')));
+      });
+    });
+    var starsContainer = $('review-modal-stars');
+    if (starsContainer) {
+      starsContainer.addEventListener('mouseleave', function () {
+        updateReviewStars(starBtns, reviewSelectedRating);
+      });
+    }
+
+    // Comment counter
+    var comment = $('review-modal-comment');
+    var counter = $('review-modal-counter');
+    if (comment && counter) {
+      comment.addEventListener('input', function () { counter.textContent = this.value.length; });
+    }
+
+    // Submit review
+    var form = $('review-modal-form');
+    if (form) {
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var errEl = $('review-modal-error');
+        if (errEl) { errEl.style.display = 'none'; errEl.textContent = ''; }
+
+        if (reviewSelectedRating === 0) {
+          if (errEl) { errEl.textContent = 'Veuillez donner une note.'; errEl.style.display = 'block'; }
+          return;
+        }
+
+        var submitBtn = $('review-modal-submit');
+        if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Envoi...'; }
+
+        try {
+          var session = await checkAuth();
+          if (!session) throw new Error('Session expirée');
+
+          var reviewData = {
+            professional_id: currentProfile.id,
+            rating: reviewSelectedRating,
+            comment: (comment ? comment.value.trim() : '').substring(0, 300),
+            author_name: (currentProfile.first_name || currentProfile.firstName || 'Professionnel') + ' ' + ((currentProfile.last_name || currentProfile.lastName || '').charAt(0) || '') + '.'
+          };
+
+          var res = await fetch(SUPABASE_URL + '/rest/v1/annuaire_pro_reviews', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': SUPABASE_KEY,
+              'Authorization': 'Bearer ' + session.access_token,
+              'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify(reviewData)
+          });
+
+          if (res.ok || res.status === 201) {
+            hide($('review-modal-form-view'));
+            show($('review-modal-success-view'));
+            // Hide banner + mark as reviewed in localStorage
+            var bannerEl = $('dash-review-banner');
+            if (bannerEl) hide(bannerEl);
+            try { localStorage.setItem('ann_review_done', '1'); } catch(e) {}
+          } else if (res.status === 409 || res.status === 400) {
+            // Duplicate review — already reviewed
+            hide($('review-modal-form-view'));
+            show($('review-modal-success-view'));
+            $('review-modal-success-view').querySelector('h2').textContent = 'Vous avez deja laisse un avis !';
+            $('review-modal-success-view').querySelector('p').textContent = 'Merci pour votre soutien.';
+            try { localStorage.setItem('ann_review_done', '1'); } catch(e) {}
+          } else {
+            throw new Error('Erreur serveur');
+          }
+        } catch (err) {
+          if (errEl) { errEl.textContent = err.message || 'Erreur, veuillez reessayer.'; errEl.style.display = 'block'; }
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Envoyer mon avis'; }
+        }
+      });
+    }
+  }
+
+  function updateReviewStars(btns, rating) {
+    btns.forEach(function (b) {
+      var val = parseInt(b.getAttribute('data-star'));
+      b.querySelector('svg').style.fill = val <= rating ? 'hsl(40 95% 55%)' : 'hsl(var(--ann-border))';
+    });
+  }
+
+  function shouldShowReviewBanner() {
+    if (!currentProfile) return false;
+    try { if (localStorage.getItem('ann_review_done') === '1') return false; } catch(e) {}
+    return true;
+  }
+
+  function shouldShowReviewPopup() {
+    if (!currentProfile) return false;
+    // Show popup only once: first time the profile is pending moderation after signup
+    if (currentProfile.is_published) return false;
+    try {
+      if (localStorage.getItem('ann_review_popup_shown') === '1') return false;
+      if (localStorage.getItem('ann_review_done') === '1') return false;
+    } catch(e) {}
+    return true;
   }
 
   if (document.readyState === 'loading') {
