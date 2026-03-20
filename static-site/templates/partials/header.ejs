@@ -34,7 +34,6 @@
   // Language names for selector
   const langNames = { fr: 'FR', en: 'EN', es: 'ES', de: 'DE', it: 'IT' };
   const langFullNames = { fr: 'Français', en: 'English', es: 'Español', de: 'Deutsch', it: 'Italiano' };
-  const langFlags = { fr: '🇫🇷', en: '🇬🇧', es: '🇪🇸', de: '🇩🇪', it: '🇮🇹' };
 %>
 <header class="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80" id="site-header">
   <nav class="container mx-auto px-4" aria-label="<%= lang === 'fr' ? 'Navigation principale' : 'Main navigation' %>">
@@ -49,7 +48,7 @@
       </a>
 
       <!-- Desktop Navigation -->
-      <div class="hidden lg:flex lg:items-center lg:gap-0.5">
+      <div class="hidden lg:flex lg:items-center lg:gap-1">
         <!-- Tests Mega Menu -->
         <div class="nav-dropdown relative" data-megamenu>
           <button class="nav-link nav-dropdown-trigger" aria-expanded="false">
@@ -122,14 +121,14 @@
         <!-- Language Selector -->
         <div class="nav-dropdown relative">
           <button class="nav-dropdown-trigger nav-action-btn" aria-label="<%= lang === 'fr' ? 'Changer de langue' : 'Change language' %>">
-            <span class="nav-lang-flag"><%= langFlags[lang] %></span>
-            <span class="hidden sm:inline text-xs font-semibold"><%= langNames[lang] %></span>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            <span class="text-xs font-semibold"><%= langNames[lang] %></span>
             <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
           <div class="nav-dropdown-content nav-lang-dropdown hidden">
             <% for (const l of ['fr','en','es','de','it']) { %>
             <a href="<%= getLocalizedUrl(typeof routeKey !== 'undefined' ? routeKey : 'home', l) %>" class="nav-lang-option <%= l === lang ? 'nav-lang-option--active' : '' %>" <%= l === lang ? 'aria-current="true"' : '' %>>
-              <span class="nav-lang-flag"><%= langFlags[l] %></span>
+              <span class="text-xs font-bold uppercase w-6"><%= langNames[l] %></span>
               <span><%= langFullNames[l] %></span>
               <% if (l === lang) { %><svg class="w-4 h-4 text-primary ml-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><% } %>
             </a>
@@ -144,7 +143,7 @@
         </button>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="nav-action-btn lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
           <svg class="h-5 w-5 menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           <svg class="h-5 w-5 close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>

@@ -75,23 +75,15 @@
 
 <!-- Hero Section -->
 <section class="hero-home relative overflow-hidden">
-  <!-- Decorative elements -->
-  <div class="absolute top-20 left-10 w-72 h-72 blob-primary animate-blob opacity-30 pointer-events-none" aria-hidden="true"></div>
-  <div class="absolute bottom-20 right-10 w-56 h-56 blob-secondary animate-blob delay-500 opacity-30 pointer-events-none" aria-hidden="true"></div>
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style="background: radial-gradient(circle, hsl(var(--primary) / 0.06) 0%, transparent 70%);" aria-hidden="true"></div>
-
   <div class="container mx-auto px-4 relative z-10">
-    <div class="mx-auto max-w-3xl text-center hero-home-content">
+    <div class="mx-auto max-w-3xl text-center">
       <!-- Badge -->
-      <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-4 py-1.5 text-sm font-medium text-primary mb-6">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-        <%= hero.badge %>
-      </div>
+      <span class="badge badge-primary mb-4"><%= hero.badge %></span>
 
-      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground leading-tight">
-        <%= hero.title %><br class="hidden sm:block"> <span class="text-gradient"><%= hero.titleHighlight %></span>
+      <h1 class="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight">
+        <%= hero.title %> <span class="text-gradient"><%= hero.titleHighlight %></span>
       </h1>
-      <p class="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+      <p class="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
         <% if (hero.descriptionHighlight && hero.description.includes(hero.descriptionHighlight)) { %>
           <%- hero.description.replace(hero.descriptionHighlight, '<strong class="text-foreground">' + hero.descriptionHighlight + '</strong>') %>
         <% } else { %>
@@ -99,44 +91,34 @@
         <% } %>
       </p>
 
-      <!-- CTAs -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-        <a href="#quiz-section" class="btn btn-cta btn-lg"><%= hero.cta1 %></a>
+      <!-- CTAs + Stats inline -->
+      <div class="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">
+        <a href="#quiz-section" class="btn btn-cta"><%= hero.cta1 %></a>
         <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-outline btn-lg"><%= hero.cta2 %></a>
       </div>
 
-      <!-- Stats -->
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-value"><%= hero.stat1Value %></div>
-          <div class="hero-stat-label"><%= hero.stat1Label %></div>
-        </div>
-        <div class="hero-stat-sep"></div>
-        <div class="hero-stat">
-          <div class="hero-stat-value"><%= hero.stat2Value %></div>
-          <div class="hero-stat-label"><%= hero.stat2Label %></div>
-        </div>
+      <div class="flex items-center justify-center gap-6 text-sm text-muted-foreground">
+        <span class="flex items-center gap-1.5"><strong class="text-primary font-bold"><%= hero.stat1Value %></strong> <%= hero.stat1Label %></span>
+        <span style="color: hsl(var(--border))">|</span>
+        <span class="flex items-center gap-1.5"><strong class="text-primary font-bold"><%= hero.stat2Value %></strong> <%= hero.stat2Label %></span>
       </div>
     </div>
   </div>
-
-  <!-- Smooth transition to next section -->
-  <div class="hero-home-fade" aria-hidden="true"></div>
 </section>
 
 <!-- Quiz Section -->
 <section id="quiz-section" class="section-padding bg-muted/20">
   <div class="container mx-auto px-4">
     <!-- Section header -->
-    <div class="text-center mb-12 md:mb-16">
-      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4"><%= t('home:quizSection.title', 'Nos quiz gratuits pour') %> <span class="text-gradient"><%= t('home:quizSection.titleHighlight', 'les couples') %></span></h2>
-      <p class="text-lg text-muted-foreground max-w-2xl mx-auto"><%= t('home:quizSection.description', '') %></p>
+    <div class="text-center mb-8 md:mb-10">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-3"><%= t('home:quizSection.title', 'Nos quiz gratuits pour') %> <span class="text-gradient"><%= t('home:quizSection.titleHighlight', 'les couples') %></span></h2>
+      <p class="text-base text-muted-foreground max-w-2xl mx-auto"><%= t('home:quizSection.description', '') %></p>
     </div>
 
     <!-- Tests block -->
     <div class="quiz-section-block quiz-section-tests">
       <div class="quiz-section-block-inner">
-        <div class="text-center mb-10">
+        <div class="text-center mb-6">
           <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
           <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.testsDesc', '') %></p>
         </div>
@@ -167,7 +149,7 @@
     <!-- Quizzes block -->
     <div class="quiz-section-block quiz-section-quizzes">
       <div class="quiz-section-block-inner">
-        <div class="text-center mb-10">
+        <div class="text-center mb-6">
           <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
           <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.quizzesDesc', '') %></p>
         </div>
@@ -241,7 +223,7 @@
 <!-- Why Do Quiz -->
 <section class="section-padding">
   <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
+    <div class="text-center mb-8">
       <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:whyDoQuiz.title', 'À quoi ça sert de faire') %> <span class="text-gradient"><%= t('home:whyDoQuiz.titleHighlight', 'ces quiz') %></span></h2>
       <p class="text-muted-foreground max-w-2xl mx-auto"><%= t('home:whyDoQuiz.subtitle', '') %></p>
     </div>
@@ -262,7 +244,7 @@
 <!-- How It Works -->
 <section class="section-padding bg-muted/20">
   <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
+    <div class="text-center mb-8">
       <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:howItWorks.title', 'Comment ça') %> <span class="text-gradient"><%= t('home:howItWorks.titleHighlight', 'marche') %></span></h2>
       <p class="text-muted-foreground max-w-2xl mx-auto"><%= t('home:howItWorks.subtitle', '') %></p>
     </div>
@@ -290,7 +272,7 @@
 %>
 <section class="section-padding" id="latest-articles">
   <div class="container mx-auto px-4 max-w-6xl">
-    <div class="text-center mb-12">
+    <div class="text-center mb-8">
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4"><%= t('home:latestArticles.title', 'Les derniers articles') %> <span class="text-gradient"><%= t('home:latestArticles.titleHighlight', 'du blog') %></span></h2>
       <p class="text-muted-foreground max-w-3xl mx-auto text-base md:text-lg leading-relaxed"><%= t('home:latestArticles.intro', '') %></p>
     </div>
@@ -307,8 +289,8 @@
           <time datetime="<%= article.publishedAt %>" class="text-xs text-muted-foreground"><%= new Date(article.publishedAt).toLocaleDateString(dateLocaleHome, { year: 'numeric', month: 'long', day: 'numeric' }) %></time>
           <h3 class="font-semibold text-lg leading-snug line-clamp-2"><a href="<%= article.url %>" class="hover:text-primary transition-colors"><%= article.title %></a></h3>
           <p class="text-sm text-muted-foreground line-clamp-2"><%= article.excerpt %></p>
-          <a href="<%= article.url %>" class="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline mt-2 no-underline">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          <a href="<%= article.url %>" class="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline mt-2 no-underline">
+            <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
             <%= t('common:blog.readArticle', 'Lire l\'article') %>
           </a>
         </div>
@@ -331,7 +313,7 @@
   <div id="reviews-config" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>" class="hidden"></div>
   <div class="container mx-auto px-4">
     <!-- Header with stats -->
-    <div class="text-center mb-12">
+    <div class="text-center mb-8">
       <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-4">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
         <%= t('common:reviews.badge', 'Avis vérifiés') %>
