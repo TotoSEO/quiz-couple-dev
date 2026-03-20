@@ -125,52 +125,70 @@
       <p class="text-lg text-muted-foreground max-w-2xl mx-auto"><%= t('home:quizSection.description', '') %></p>
     </div>
 
-    <!-- Tests -->
-    <div class="mb-14 md:mb-16">
-      <div class="text-center mb-8">
-        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-3">
-          <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+    <!-- Tests block -->
+    <div class="quiz-section-block quiz-section-tests">
+      <div class="quiz-section-block-inner">
+        <div class="text-center mb-10">
+          <span class="quiz-section-badge quiz-section-badge--tests">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            <%= t('home:quizGrid.testsTitle', 'Tests de couple') %>
+          </span>
+          <h3 class="text-xl md:text-2xl font-bold mt-4"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
+          <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.testsDesc', '') %></p>
         </div>
-        <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
-        <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.testsDesc', '') %></p>
-      </div>
-      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
-        <% for (let ti = 0; ti < tests.length; ti++) { const item = tests[ti]; %>
-        <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
-          <div class="quiz-bubble-card">
-            <div class="quiz-bubble-emoji"><span><%= item.icon %></span></div>
-            <h4 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
-            <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
-            <span class="quiz-bubble-cta">
-              <%= t('common:buttons.startTest', 'Faire le test') %>
-              <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </a>
-        <% } %>
+        <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
+          <% for (let ti = 0; ti < tests.length; ti++) { const item = tests[ti]; %>
+          <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
+            <div class="quiz-bubble-card quiz-bubble-card--test">
+              <div class="quiz-bubble-emoji"><span><%= item.icon %></span></div>
+              <h4 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
+              <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
+              <span class="quiz-bubble-cta">
+                <%= t('common:buttons.startTest', 'Faire le test') %>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+          <% } %>
+        </div>
       </div>
     </div>
 
-    <!-- Quizzes -->
-    <div class="mb-12">
-      <div class="text-center mb-8">
-        <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
-        <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.quizzesDesc', '') %></p>
+    <!-- Visual separator between tests and quizzes -->
+    <div class="quiz-section-divider">
+      <div class="quiz-section-divider-line"></div>
+      <div class="quiz-section-divider-icon">
+        <span>VS</span>
       </div>
-      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
-        <% for (let qi = 0; qi < quizzes.length; qi++) { const item = quizzes[qi]; %>
-        <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
-          <div class="quiz-bubble-card">
-            <div class="quiz-bubble-emoji"><span><%= item.icon %></span></div>
-            <h4 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
-            <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
-            <span class="quiz-bubble-cta">
-              <%= t('common:buttons.startQuiz', 'Faire le quiz') %>
-              <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </a>
-        <% } %>
+      <div class="quiz-section-divider-line"></div>
+    </div>
+
+    <!-- Quizzes block -->
+    <div class="quiz-section-block quiz-section-quizzes">
+      <div class="quiz-section-block-inner">
+        <div class="text-center mb-10">
+          <span class="quiz-section-badge quiz-section-badge--quizzes">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            <%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %>
+          </span>
+          <h3 class="text-xl md:text-2xl font-bold mt-4"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
+          <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.quizzesDesc', '') %></p>
+        </div>
+        <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
+          <% for (let qi = 0; qi < quizzes.length; qi++) { const item = quizzes[qi]; %>
+          <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
+            <div class="quiz-bubble-card quiz-bubble-card--quiz">
+              <div class="quiz-bubble-emoji quiz-bubble-emoji--quiz"><span><%= item.icon %></span></div>
+              <h4 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
+              <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
+              <span class="quiz-bubble-cta quiz-bubble-cta--quiz">
+                <%= t('common:buttons.startQuiz', 'Faire le quiz') %>
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+          <% } %>
+        </div>
       </div>
     </div>
   </div>

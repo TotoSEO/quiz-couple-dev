@@ -61,7 +61,8 @@
     "continueAdventure": "Setzt das Abenteuer fort"
   },
   "reviews": {
-    "title": "Was Paare denken",
+    "title": "Was Paare",
+    "titleHighlight": "denken",
     "subtitle": "Entdecke die Meinungen derer, die unsere Quiz getestet haben",
     "leaveReview": "Bewertung abgeben",
     "averageRating": "Durchschnittliche Bewertung",

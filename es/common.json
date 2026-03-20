@@ -61,7 +61,8 @@
     "continueAdventure": "Continúa la aventura"
   },
   "reviews": {
-    "title": "Lo que piensan las parejas",
+    "title": "Lo que piensan",
+    "titleHighlight": "las parejas",
     "subtitle": "Descubre las opiniones de quienes probaron nuestros quiz",
     "leaveReview": "Dejar una opinión",
     "averageRating": "Puntuación media",
