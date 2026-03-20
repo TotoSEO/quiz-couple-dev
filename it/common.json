@@ -61,7 +61,8 @@
     "continueAdventure": "Continua l'avventura"
   },
   "reviews": {
-    "title": "Cosa pensano le coppie",
+    "title": "Cosa pensano",
+    "titleHighlight": "le coppie",
     "subtitle": "Scopri le opinioni di chi ha testato i nostri quiz",
     "leaveReview": "Lascia una recensione",
     "averageRating": "Valutazione media",

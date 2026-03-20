@@ -61,7 +61,8 @@
     "continueAdventure": "Continuez l'aventure"
   },
   "reviews": {
-    "title": "Ce que les couples en pensent",
+    "title": "Ce que les couples",
+    "titleHighlight": "en pensent",
     "subtitle": "Découvrez les avis de ceux qui ont testé nos quiz",
     "leaveReview": "Laisser un avis",
     "averageRating": "Note moyenne",

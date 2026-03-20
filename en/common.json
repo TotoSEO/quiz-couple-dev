@@ -61,7 +61,8 @@
     "continueAdventure": "Continue the adventure"
   },
   "reviews": {
-    "title": "What couples think",
+    "title": "What couples",
+    "titleHighlight": "think",
     "subtitle": "See reviews from those who tested our quizzes",
     "leaveReview": "Leave a review",
     "averageRating": "Average rating",
