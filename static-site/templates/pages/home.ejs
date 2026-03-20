@@ -98,9 +98,9 @@
       </div>
 
       <div class="flex items-center justify-center gap-6 text-sm text-muted-foreground">
-        <span class="flex items-center gap-1.5"><strong class="text-primary font-bold"><%= hero.stat1Value %></strong> <%= hero.stat1Label %></span>
+        <span><strong class="text-primary font-bold"><%= hero.stat1Value %></strong> <%= hero.stat1Label %></span>
         <span style="color: hsl(var(--border))">|</span>
-        <span class="flex items-center gap-1.5"><strong class="text-primary font-bold"><%= hero.stat2Value %></strong> <%= hero.stat2Label %></span>
+        <span><strong class="text-primary font-bold"><%= hero.stat2Value %></strong> <%= hero.stat2Label %></span>
       </div>
     </div>
   </div>
@@ -116,7 +116,7 @@
     <div class="quiz-section-block quiz-section-tests">
       <div class="quiz-section-block-inner">
         <div class="text-center mb-6">
-          <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.testsTitle', 'Tests de couple') %></h3>
+          <h2 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.testsTitle', 'Nos Tests pour les Couples') %></h2>
           <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.testsDesc', '') %></p>
         </div>
         <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
@@ -124,7 +124,7 @@
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
             <div class="quiz-bubble-card quiz-bubble-card--test">
               <div class="quiz-bubble-emoji"><span><%= item.icon %></span></div>
-              <h4 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
+              <h3 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
               <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
               <span class="quiz-bubble-cta">
                 <%= t('common:buttons.startTest', 'Faire le test') %>
@@ -147,7 +147,7 @@
     <div class="quiz-section-block quiz-section-quizzes">
       <div class="quiz-section-block-inner">
         <div class="text-center mb-6">
-          <h3 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.quizzesTitle', 'Quiz pour couples') %></h3>
+          <h2 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.quizzesTitle', 'Nos Quiz à Faire en Couple') %></h2>
           <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.quizzesDesc', '') %></p>
         </div>
         <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
@@ -155,7 +155,7 @@
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
             <div class="quiz-bubble-card quiz-bubble-card--quiz">
               <div class="quiz-bubble-emoji quiz-bubble-emoji--quiz"><span><%= item.icon %></span></div>
-              <h4 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
+              <h3 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
               <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
               <span class="quiz-bubble-cta quiz-bubble-cta--quiz">
                 <%= t('common:buttons.startQuiz', 'Faire le quiz') %>
