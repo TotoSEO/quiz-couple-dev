@@ -760,6 +760,10 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   background: hsl(var(--card));
   border-top: 1px solid hsl(var(--border) / 0.5);
   padding-bottom: 1rem;
+  max-height: calc(100vh - 4rem);
+  max-height: calc(100dvh - 4rem);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .mobile-nav-inner { padding: 0.75rem 0; }
 
