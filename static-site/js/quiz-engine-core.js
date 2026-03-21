@@ -187,39 +187,110 @@ var QuizEngine = (function() {
     return badge;
   }
 
+  // ─── Related quizzes data ────────────────────────────────
+  var ALL_QUIZZES_LIST = [
+    { type: 'test', key: 'tester-couple', icon: '💕', route: 'testCouple' },
+    { type: 'test', key: 'common-points', icon: '🎯', route: 'testCommonPoints' },
+    { type: 'test', key: 'distance', icon: '🌍', route: 'testDistance' },
+    { type: 'test', key: 'toxic', icon: '⚠️', route: 'testToxic' },
+    { type: 'test', key: 'sain', icon: '💚', route: 'testCoupleSain' },
+    { type: 'test', key: 'mariage', icon: '💒', route: 'testMariage' },
+    { type: 'test', key: 'divorce', icon: '⚖️', route: 'testDivorce' },
+    { type: 'test', key: 'parentalite', icon: '👶', route: 'testParentalite' },
+    { type: 'test', key: 'jalousie', icon: '🫣', route: 'testJalousie' },
+    { type: 'quiz', key: 'amoureux', icon: '❤️', route: 'quizAmoureux' },
+    { type: 'quiz', key: 'coquin', icon: '🔥', route: 'quizCoquin' },
+    { type: 'quiz', key: 'marrant', icon: '😂', route: 'quizMarrant' },
+    { type: 'quiz', key: 'knowledge', icon: '🧠', route: 'quizKnowledge' },
+    { type: 'quiz', key: 'most', icon: '🏆', route: 'quizMost' },
+    { type: 'quiz', key: 'ado', icon: '🌟', route: 'quizAdo' },
+    { type: 'quiz', key: 'genant', icon: '😳', route: 'quizGenant' },
+    { type: 'quiz', key: 'tu-preferes', icon: '🤔', route: 'quizTuPreferes' },
+  ];
+
+  function getRelatedQuizUrl(routeKey, lang) {
+    // Build localized URL from ROUTE_SLUGS-like data embedded in page
+    var slugEl = document.querySelector('[data-route-slugs]');
+    if (slugEl) {
+      try {
+        var slugs = JSON.parse(slugEl.dataset.routeSlugs);
+        var slug = slugs[routeKey] && slugs[routeKey][lang];
+        if (slug) return lang === 'fr' ? '/' + slug + '/' : '/' + lang + '/' + slug + '/';
+      } catch(e) {}
+    }
+    // Fallback: just go home
+    return '/';
+  }
+
+  function renderRelatedQuizzes(wrap, currentQuizKey, lang) {
+    var others = ALL_QUIZZES_LIST.filter(function(q) { return q.key !== currentQuizKey; });
+    var shuffled = shuffleArray(others).slice(0, 3);
+    if (shuffled.length === 0) return;
+
+    var section = el('div', 'result-related-section mt-10');
+    var title = el('p', 'text-lg font-bold text-center mb-6', tg('result.relatedTitle', 'Poursuivez avec d\'autres tests / quiz !'));
+    section.appendChild(title);
+
+    var grid = el('div', 'result-related-grid');
+    for (var i = 0; i < shuffled.length; i++) {
+      var q = shuffled[i];
+      var card = el('a', 'result-related-card');
+      card.href = getRelatedQuizUrl(q.route, lang);
+      var emoji = el('span', 'result-related-emoji', q.icon);
+      var name = el('span', 'result-related-name', esc(tg('quizNames.' + q.route, q.key)));
+      var typeLabel = el('span', 'result-related-type', q.type === 'test' ? 'Test' : 'Quiz');
+      card.appendChild(emoji);
+      card.appendChild(name);
+      card.appendChild(typeLabel);
+      grid.appendChild(card);
+    }
+    section.appendChild(grid);
+    wrap.appendChild(section);
+  }
+
   function renderActionButtons(wrap, opts) {
-    var actions = el('div', 'flex flex-col sm:flex-row gap-3 justify-center mt-8');
+    // ── Action buttons in a clean grid ──
+    var actions = el('div', 'result-actions-grid mt-8');
+
     if (opts.newQuestions) {
-      var newQBtn = el('button', 'btn btn-cta', '🎲 ' + tg('result.restartOtherQuestions', 'Recommencer avec d\'autres questions'));
+      var newQBtn = el('button', 'result-action-btn result-action-btn--primary');
+      newQBtn.innerHTML = '<span class="result-action-icon">🎲</span><span class="result-action-label">' + esc(tg('result.restartOtherQuestions', 'Autres questions')) + '</span>';
       newQBtn.addEventListener('click', opts.newQuestions);
       actions.appendChild(newQBtn);
     }
     if (opts.restart) {
-      var restartBtn = el('button', 'btn btn-outline', '🔄 ' + tg('result.restartFromBeginning', 'Recommencer'));
+      var restartBtn = el('button', 'result-action-btn');
+      restartBtn.innerHTML = '<span class="result-action-icon">🔄</span><span class="result-action-label">' + esc(tg('result.restartFromBeginning', 'Recommencer')) + '</span>';
       restartBtn.addEventListener('click', opts.restart);
       actions.appendChild(restartBtn);
     }
     if (opts.changePlayers) {
-      var changeBtn = el('button', 'btn btn-outline', '👥 ' + tg('result.changePlayers', 'Changer de joueurs'));
+      var changeBtn = el('button', 'result-action-btn');
+      changeBtn.innerHTML = '<span class="result-action-icon">👥</span><span class="result-action-label">' + esc(tg('result.changePlayers', 'Changer de joueurs')) + '</span>';
       changeBtn.addEventListener('click', opts.changePlayers);
       actions.appendChild(changeBtn);
     }
-    var homeBtn = el('a', 'btn btn-primary', '🏠 ' + tg('question.backHome', 'Retour à l\'accueil'));
+    var homeBtn = el('a', 'result-action-btn');
     homeBtn.href = '/';
+    homeBtn.innerHTML = '<span class="result-action-icon">🏠</span><span class="result-action-label">' + esc(tg('question.backHome', 'Accueil')) + '</span>';
     actions.appendChild(homeBtn);
     wrap.appendChild(actions);
 
-    // Review CTA
-    var reviewCard = el('div', 'mt-6 mx-auto max-w-md rounded-xl border border-primary/20 bg-primary/5 p-5 text-center');
-    var reviewTitle = el('p', 'font-semibold mb-1', tg('reviews.quizLiked', 'Ce quiz vous a plu ?'));
-    var reviewDesc = el('p', 'text-sm text-muted-foreground mb-3', tg('reviews.leaveReviewDesc', 'Laissez-nous un avis ! Pas d\'adresse mail, pas d\'inscription ! Juste un petit mot pour nous soutenir 💜'));
-    var reviewBtn = el('a', 'btn btn-outline inline-flex items-center gap-2');
+    // ── Review CTA — compact inline ──
+    var reviewRow = el('div', 'result-review-row mt-6');
+    var reviewText = el('span', 'result-review-text', esc(tg('reviews.quizLiked', 'Ce quiz vous a plu ?')));
+    var reviewBtn = el('a', 'result-review-btn');
     reviewBtn.href = '/#avis';
-    reviewBtn.innerHTML = ICONS.heart + ' ' + esc(tg('reviews.leaveReview', 'Laissez un avis'));
-    reviewCard.appendChild(reviewTitle);
-    reviewCard.appendChild(reviewDesc);
-    reviewCard.appendChild(reviewBtn);
-    wrap.appendChild(reviewCard);
+    reviewBtn.innerHTML = ICONS.heart + ' ' + esc(tg('reviews.leaveReview', 'Laisser un avis'));
+    reviewRow.appendChild(reviewText);
+    reviewRow.appendChild(reviewBtn);
+    wrap.appendChild(reviewRow);
+
+    // ── Related quizzes ──
+    var quizEl = document.getElementById('quiz-engine');
+    var currentKey = quizEl ? quizEl.dataset.quiz : '';
+    var currentLang = quizEl ? (quizEl.dataset.lang || 'fr') : 'fr';
+    renderRelatedQuizzes(wrap, currentKey, currentLang);
   }
 
   function renderGenderButtons(container, selectedGender, onSelect) {

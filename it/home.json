@@ -16,7 +16,8 @@
       "couples": "1000+",
       "couplesLabel": "coppie testate",
       "quizzes": "12 quiz",
-      "quizzesLabel": "disponibili"
+      "quizzesLabel": "quiz disponibili",
+      "testsLabel": "test disponibili"
     }
   },
   "quizSection": {
