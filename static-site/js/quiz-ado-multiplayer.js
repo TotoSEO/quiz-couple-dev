@@ -245,6 +245,16 @@
   function t(key) { return (UI[lang] || UI.fr)[key] || UI.fr[key] || key; }
   function esc(s) { return s ? String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') : ''; }
 
+  // Helper: resolve names consistently regardless of player perspective
+  function getMyName() {
+    if (state.gameMode === 'online' && state.playerNum === 2) return state.name2;
+    return state.name1;
+  }
+  function getPartnerName() {
+    if (state.gameMode === 'online' && state.playerNum === 2) return state.name1;
+    return state.name2;
+  }
+
   // ── Data ──
   var allQData = null;
 
@@ -298,20 +308,20 @@
           '<h2 class="text-2xl font-bold">' + t('modeTitle') + '</h2>' +
           '<p class="text-muted-foreground">' + t('modeSubtitle') + '</p>' +
         '</div>' +
-        '<div class="grid gap-4 max-w-md mx-auto">' +
-          '<button id="btn-local" class="btn btn-primary py-6 text-lg flex flex-col items-center gap-1">' +
+        '<div class="grid gap-3 max-w-sm mx-auto px-4">' +
+          '<button id="btn-local" class="btn btn-primary py-4 text-base flex flex-col items-center gap-1 w-full">' +
             '<span class="flex items-center gap-2">' +
-              '<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>' +
-              t('localBtn') +
+              '<svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>' +
+              '<span>' + t('localBtn') + '</span>' +
             '</span>' +
-            '<span class="text-xs opacity-70 font-normal">' + t('localDesc') + '</span>' +
+            '<span class="text-xs opacity-70 font-normal leading-tight">' + t('localDesc') + '</span>' +
           '</button>' +
-          '<button id="btn-online" class="btn btn-outline py-6 text-lg flex flex-col items-center gap-1">' +
+          '<button id="btn-online" class="btn btn-outline py-4 text-base flex flex-col items-center gap-1 w-full">' +
             '<span class="flex items-center gap-2">' +
-              '<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>' +
-              t('onlineBtn') +
+              '<svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>' +
+              '<span>' + t('onlineBtn') + '</span>' +
             '</span>' +
-            '<span class="text-xs opacity-70 font-normal">' + t('onlineDesc') + '</span>' +
+            '<span class="text-xs opacity-70 font-normal leading-tight">' + t('onlineDesc') + '</span>' +
           '</button>' +
         '</div>' +
       '</div>';
@@ -380,11 +390,13 @@
       '<div class="max-w-md mx-auto py-8 space-y-6">' +
         backBtn() +
         '<div class="grid gap-3 mb-4">' +
-          '<button id="btn-create" class="btn ' + (state.onlineRole === 'create' ? 'btn-primary' : 'btn-outline') + ' py-3 text-sm">' +
-            t('createGame') + ' <span class="text-xs opacity-70 ml-1">(' + t('createDesc2') + ')</span>' +
+          '<button id="btn-create" class="btn ' + (state.onlineRole === 'create' ? 'btn-primary' : 'btn-outline') + ' py-3 text-sm flex flex-col items-center gap-0.5 w-full">' +
+            '<span>' + t('createGame') + '</span>' +
+            '<span class="text-xs opacity-70 font-normal leading-tight">' + t('createDesc2') + '</span>' +
           '</button>' +
-          '<button id="btn-join" class="btn ' + (state.onlineRole === 'join' ? 'btn-primary' : 'btn-outline') + ' py-3 text-sm">' +
-            t('joinGame') + ' <span class="text-xs opacity-70 ml-1">(' + t('joinDesc2') + ')</span>' +
+          '<button id="btn-join" class="btn ' + (state.onlineRole === 'join' ? 'btn-primary' : 'btn-outline') + ' py-3 text-sm flex flex-col items-center gap-0.5 w-full">' +
+            '<span>' + t('joinGame') + '</span>' +
+            '<span class="text-xs opacity-70 font-normal leading-tight">' + t('joinDesc2') + '</span>' +
           '</button>' +
         '</div>' +
         (state.onlineRole ?
@@ -547,10 +559,10 @@
     var q = questions[qi];
     var currentName = (state.gameMode === 'local')
       ? (state.currentPlayer === 1 ? state.name1 : state.name2)
-      : state.name1;
+      : getMyName();
     var partnerName = (state.gameMode === 'local')
       ? (state.currentPlayer === 1 ? state.name2 : state.name1)
-      : state.name2;
+      : getPartnerName();
 
     var qText = q.text.replace(/\{\{name\}\}/g, partnerName);
     var choices = [
@@ -563,13 +575,13 @@
     // Build dual progress bars for online mode
     var progressHtml = '';
     if (state.gameMode === 'online') {
-      var myName = state.name1;
+      var myNameProg = getMyName();
       var myProgress = state.answers1.length;
       var partnerProgress = state.partnerAnswers.length;
       progressHtml =
         '<div class="space-y-2 mb-2">' +
           '<div class="flex items-center gap-2 text-xs">' +
-            '<span class="font-medium text-primary w-20 truncate">' + esc(myName) + '</span>' +
+            '<span class="font-medium text-primary w-20 truncate">' + esc(myNameProg) + '</span>' +
             '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-primary h-2 rounded-full transition-all duration-300" style="width:' + (myProgress / totalQ * 100) + '%"></div></div>' +
             '<span class="text-muted-foreground w-10 text-right">' + myProgress + '/' + totalQ + '</span>' +
           '</div>' +
@@ -610,8 +622,8 @@
 
   // Online mode: waiting for partner to answer the same question
   function renderWaitingForQuestion() {
-    var pName = state.name2;
-    var myName = state.name1;
+    var pName = getPartnerName();
+    var myName = getMyName();
     var qi = state.currentQ;
     var myProgress = state.answers1.length;
     var partnerProgress = state.partnerAnswers.length;
@@ -642,8 +654,8 @@
 
   // Online mode: I finished all questions, waiting for partner to finish too
   function renderWaitingForPartner() {
-    var pName = state.name2;
-    var myName = state.name1;
+    var pName = getPartnerName();
+    var myName = getMyName();
     var pAnswers = state.partnerAnswers || [];
     container.innerHTML =
       '<div class="max-w-md mx-auto py-8 space-y-6">' +
