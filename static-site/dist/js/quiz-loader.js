@@ -85,7 +85,9 @@
     }
 
     // Randomly select totalQ questions from pool if pool > totalQ
-    if (questions.length > config.totalQ) {
+    var hasRandomPool = questions.length > config.totalQ;
+    container.dataset.hasPool = hasRandomPool ? '1' : '0';
+    if (hasRandomPool) {
       questions = QuizEngine.shuffleArray(questions).slice(0, config.totalQ);
     } else {
       questions = QuizEngine.shuffleArray(questions);
