@@ -157,6 +157,7 @@
      "times": "volte",
      "shareResults": "Condividi i tuoi risultati!",
      "changePlayers": "Cambia giocatori",
+     "relatedTitle": "Continua con altri test / quiz!",
      "commonPoints": "punti in comune",
      "shareYourResult": "Condividi il tuo risultato!",
       "loveScore": "Punteggio d'amore",
@@ -256,5 +257,24 @@
       "scoreOn60": "Punteggio su 60 per persona",
       "combinedScore": "Punteggio globale della coppia",
       "gapWarning": "C'è un divario significativo tra i vostri due punteggi. Spesso è in questi divari che si trovano le conversazioni più importanti da avere."
+    },
+    "quizNames": {
+      "testCouple": "Test di Coppia",
+      "testCommonPoints": "Test Punti Comuni",
+      "testDistance": "Test Distanza",
+      "testToxic": "Test Tossico",
+      "testCoupleSain": "Test Coppia Sana",
+      "testMariage": "Test Matrimonio",
+      "testDivorce": "Test Divorzio",
+      "testParentalite": "Test Genitorialità",
+      "testJalousie": "Test Gelosia",
+      "quizAmoureux": "Quiz Innamorati",
+      "quizCoquin": "Quiz Piccante",
+      "quizMarrant": "Quiz Divertente",
+      "quizKnowledge": "Quiz Conoscenza",
+      "quizMost": "Quiz Chi è il più",
+      "quizAdo": "Quiz Adolescenti",
+      "quizGenant": "Quiz Imbarazzante",
+      "quizTuPreferes": "Quiz Preferiresti"
     }
    }

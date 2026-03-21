@@ -126,7 +126,7 @@
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
             <div class="quiz-bubble-card quiz-bubble-card--test">
               <div class="quiz-bubble-emoji"><span><%= item.icon %></span></div>
-              <h3 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
+              <h3 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h3>
               <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
               <span class="quiz-bubble-cta">
                 <%= t('common:buttons.startTest', 'Faire le test') %>
@@ -157,7 +157,7 @@
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
             <div class="quiz-bubble-card quiz-bubble-card--quiz">
               <div class="quiz-bubble-emoji quiz-bubble-emoji--quiz"><span><%= item.icon %></span></div>
-              <h3 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h4>
+              <h3 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h3>
               <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
               <span class="quiz-bubble-cta quiz-bubble-cta--quiz">
                 <%= t('common:buttons.startQuiz', 'Faire le quiz') %>
