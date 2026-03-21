@@ -79,7 +79,7 @@ export const ROUTE_CONFIG = {
   quizGenant: { template: 'quiz-genant', namespaces: ['quiz-genant', 'quizzes', 'quizGames', 'gd', 'common'] },
   testLangageAmour: { template: 'quiz-langage-amour', namespaces: ['quiz-langage-amour', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizTuPreferes: { template: 'quiz-tu-preferes', namespaces: ['quiz-tu-preferes', 'quizzes', 'quizGames', 'gd', 'common'] },
-  quizVraiFaux: { template: 'quiz-vrai-faux', namespaces: ['quiz-vrai-faux', 'quizzes', 'quizGames', 'common'] },
+  quizVraiFaux: { template: 'quiz-vrai-faux', namespaces: ['quiz-vrai-faux', 'quizzes', 'quizGames', 'gd', 'common'] },
   admin: { template: 'admin', namespaces: ['common'] },
   activities: { template: 'activities', namespaces: ['activities', 'common'] },
   contact: { template: 'contact', namespaces: ['contact', 'common'] },
