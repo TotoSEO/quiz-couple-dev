@@ -275,6 +275,25 @@
       "quizMost": "Quiz Chi è il più",
       "quizAdo": "Quiz Adolescenti",
       "quizGenant": "Quiz Imbarazzante",
-      "quizTuPreferes": "Quiz Preferiresti"
+      "quizTuPreferes": "Quiz Preferiresti",
+      "quizVraiFaux": "Quiz Vero o Falso"
+    },
+    "truefalse": {
+      "ready": "Pronto per il vero o falso?",
+      "statements": "affermazioni",
+      "freeAnon": "Gratuito e anonimo",
+      "howTitle": "Come funziona?",
+      "howDesc": "Per ogni affermazione, scegli Vero o Falso. La risposta corretta e una spiegazione vengono mostrate dopo ogni domanda.",
+      "true": "Vero",
+      "false": "Falso",
+      "correct": "Risposta corretta!",
+      "wrong": "Risposta sbagliata",
+      "correctAnswer": "La risposta:",
+      "explanation": "Spiegazione",
+      "score": "Punteggio",
+      "next": "Prossima domanda",
+      "seeResults": "Vedi risultati",
+      "correctAnswers": "risposte corrette",
+      "summary": "Riepilogo delle tue risposte"
     }
    }

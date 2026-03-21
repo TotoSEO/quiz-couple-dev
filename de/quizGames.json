@@ -275,6 +275,25 @@
       "quizMost": "Wer ist am meisten Quiz",
       "quizAdo": "Teenager-Quiz",
       "quizGenant": "Peinliches Quiz",
-      "quizTuPreferes": "Würdest du lieber Quiz"
+      "quizTuPreferes": "Würdest du lieber Quiz",
+      "quizVraiFaux": "Richtig oder Falsch Quiz"
+    },
+    "truefalse": {
+      "ready": "Bereit für Richtig oder Falsch?",
+      "statements": "Aussagen",
+      "freeAnon": "Kostenlos & anonym",
+      "howTitle": "Wie funktioniert es?",
+      "howDesc": "Wähle bei jeder Aussage Richtig oder Falsch. Die richtige Antwort und eine Erklärung werden nach jeder Frage angezeigt.",
+      "true": "Richtig",
+      "false": "Falsch",
+      "correct": "Richtige Antwort!",
+      "wrong": "Falsche Antwort",
+      "correctAnswer": "Die Antwort:",
+      "explanation": "Erklärung",
+      "score": "Punktzahl",
+      "next": "Nächste Frage",
+      "seeResults": "Ergebnisse anzeigen",
+      "correctAnswers": "richtige Antworten",
+      "summary": "Zusammenfassung deiner Antworten"
     }
    }

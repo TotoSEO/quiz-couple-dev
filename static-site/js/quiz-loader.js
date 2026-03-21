@@ -60,7 +60,10 @@
     'jalousie2':      { prefix: 'jalousie2', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie2', ascending: true },
 
     // ── Genant quiz (solo scoring, embarrassing couple behaviors) ──
-    'genant':         { prefix: 'genant', engine: 'solo', totalQ: 15, pool: 15, quizType: 'genant' }
+    'genant':         { prefix: 'genant', engine: 'solo', totalQ: 15, pool: 15, quizType: 'genant' },
+
+    // ── Vrai/Faux quiz (true/false with correct answer reveal) ──
+    'vrai-faux':      { prefix: 'vraifaux', engine: 'truefalse', totalQ: 30, pool: 100, textOnly: true }
   };
 
   var config = QUIZ_CONFIG[quizType];
@@ -123,6 +126,9 @@
         break;
       case 'parentalite':
         initParentaliteQuiz(config, questions);
+        break;
+      case 'truefalse':
+        initTruefalseQuiz(config, questions);
         break;
       default:
         showUnavailable(config);
@@ -483,6 +489,43 @@
     new QuizEngine.ParentaliteQuiz({
       container: container,
       questions: questions,
+      results: results,
+      prefix: cfg.prefix,
+      lang: lang
+    });
+  }
+
+  function initTruefalseQuiz(cfg, questions) {
+    // Parse true/false questions: each has q{N}, q{N}answer (true/false), q{N}exp
+    var tfQuestions = [];
+    for (var i = 0; i < questions.length; i++) {
+      var q = questions[i];
+      var answer = QuizEngine.tgd(cfg.prefix + '.q' + q.id + 'answer', null);
+      if (!answer || (answer !== 'true' && answer !== 'false')) continue;
+      tfQuestions.push({ id: q.id, text: q.text, answer: answer });
+    }
+    if (tfQuestions.length === 0) {
+      showUnavailable(cfg);
+      return;
+    }
+    // Build score-based results
+    var total = tfQuestions.length;
+    var results = parseGdResults(cfg.prefix, total);
+    if (results.length === 0) {
+      // Default 4-tier results
+      var q1 = Math.ceil(total * 0.25);
+      var q2 = Math.ceil(total * 0.50);
+      var q3 = Math.ceil(total * 0.75);
+      results = [
+        { min: 0, max: q1 - 1, title: QuizEngine.tgd(cfg.prefix + '.r1_t', 'Novice'), description: QuizEngine.tgd(cfg.prefix + '.r1_d', ''), advice: QuizEngine.tgd(cfg.prefix + '.r1_a', '') },
+        { min: q1, max: q2 - 1, title: QuizEngine.tgd(cfg.prefix + '.r2_t', 'En bonne voie'), description: QuizEngine.tgd(cfg.prefix + '.r2_d', ''), advice: QuizEngine.tgd(cfg.prefix + '.r2_a', '') },
+        { min: q2, max: q3 - 1, title: QuizEngine.tgd(cfg.prefix + '.r3_t', 'Expert'), description: QuizEngine.tgd(cfg.prefix + '.r3_d', ''), advice: QuizEngine.tgd(cfg.prefix + '.r3_a', '') },
+        { min: q3, max: total, title: QuizEngine.tgd(cfg.prefix + '.r4_t', 'Maître'), description: QuizEngine.tgd(cfg.prefix + '.r4_d', ''), advice: QuizEngine.tgd(cfg.prefix + '.r4_a', '') }
+      ];
+    }
+    new QuizEngine.TruefalseQuiz({
+      container: container,
+      questions: tfQuestions,
       results: results,
       prefix: cfg.prefix,
       lang: lang

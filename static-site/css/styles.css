@@ -1248,6 +1248,19 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .btn-icon { padding: 0.5rem; border: none; background: transparent; cursor: pointer; border-radius: 50%; transition: all 200ms ease; }
 .btn-icon:hover { background: hsl(var(--destructive) / 0.1); }
 
+/* ── True/False Quiz buttons ─────────────────────────────── */
+.quiz-tf-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; padding: 1.5rem 1rem; border-radius: calc(var(--radius) + 6px); border: 2px solid hsl(var(--border)); background: hsl(var(--card) / 0.8); color: hsl(var(--foreground)); font-size: 1rem; cursor: pointer; transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+.quiz-tf-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+.quiz-tf-btn:active { transform: scale(0.97); }
+.quiz-tf-icon { font-size: 1.75rem; font-weight: 700; line-height: 1; }
+.quiz-tf-label { font-weight: 600; font-size: 1.1rem; }
+.quiz-tf-btn--true:hover { border-color: hsl(142 71% 45%); background: hsl(142 71% 45% / 0.1); }
+.quiz-tf-btn--true:active, .quiz-tf-btn--true.selected { border-color: hsl(142 71% 45%); background: hsl(142 71% 45% / 0.15); box-shadow: 0 0 0 3px hsl(142 71% 45% / 0.2); }
+.quiz-tf-btn--true .quiz-tf-icon { color: hsl(142 71% 45%); }
+.quiz-tf-btn--false:hover { border-color: hsl(0 84% 60%); background: hsl(0 84% 60% / 0.1); }
+.quiz-tf-btn--false:active, .quiz-tf-btn--false.selected { border-color: hsl(0 84% 60%); background: hsl(0 84% 60% / 0.15); box-shadow: 0 0 0 3px hsl(0 84% 60% / 0.2); }
+.quiz-tf-btn--false .quiz-tf-icon { color: hsl(0 84% 60%); }
+
 /* ── Admin styles ────────────────────────────────────────── */
 
 .admin-tab.active, .admin-filter.active, .lang-tab.active { background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }

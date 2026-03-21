@@ -1,0 +1,159 @@
+<%
+  var quizType = 'vrai-faux';
+  var ns = 'quiz-vrai-faux';
+  const quizTitle = t(ns + ':hero.title', 'Quiz vrai ou faux') + ' ' + t(ns + ':hero.titleHighlight', 'pour les couples');
+  const quizDesc = t('quizzes:quizVraiFaux.metaDescription', '');
+
+  const faqItems = t(ns + ':seo.faq', []);
+
+  // Build hasPart with actual quiz questions using tgd() for structured data
+  const hasPart = [];
+  for (let qi = 1; qi <= 100; qi++) {
+    const qText = tgd('vraifaux.q' + qi, '');
+    if (!qText || qText === 'vraifaux.q' + qi) break;
+    hasPart.push({
+      "@type": "Question",
+      "position": hasPart.length + 1,
+      "name": qText,
+      "suggestedAnswer": [
+        { "@type": "Answer", "position": 1, "text": lang === 'fr' ? 'Vrai' : lang === 'en' ? 'True' : lang === 'es' ? 'Verdadero' : lang === 'de' ? 'Richtig' : 'Vero' },
+        { "@type": "Answer", "position": 2, "text": lang === 'fr' ? 'Faux' : lang === 'en' ? 'False' : lang === 'es' ? 'Falso' : lang === 'de' ? 'Falsch' : 'Falso' }
+      ]
+    });
+  }
+
+  const quizSchema = {
+    "@context": "https://schema.org", "@type": "Quiz",
+    "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+    "datePublished": "2026-03-21", "isAccessibleForFree": true,
+    "learningResourceType": "Quiz", "interactivityType": "active",
+    "about": { "@type": "Thing", "name": "couple true or false quiz" },
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "totalQuestions", "value": 30 },
+      { "@type": "PropertyValue", "name": "questionPool", "value": 100 },
+      { "@type": "PropertyValue", "name": "audience", "value": "couples" }
+    ]
+  };
+  if (hasPart.length > 0) quizSchema.hasPart = hasPart;
+
+  const jsonLd = [quizSchema];
+  if (Array.isArray(faqItems) && faqItems.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqItems.map(function(f) {
+        return { "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } };
+      })
+    });
+  }
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= t(ns + ':hero.title', 'Quiz vrai ou faux') %></li>
+        </ol>
+      </nav>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        <%= t(ns + ':hero.badge', '100 Questions') %>
+      </span>
+      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <%= t(ns + ':hero.title', 'Quiz vrai ou faux') %> <span class="text-gradient"><%= t(ns + ':hero.titleHighlight', 'pour les couples') %></span>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl mb-4"><%= t(ns + ':hero.description', '') %></p>
+      <p class="text-sm text-muted-foreground"><%= t(ns + ':hero.subtitle', '') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Quiz Engine -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div id="quiz-engine" data-quiz="vrai-faux" data-lang="<%= lang %>"></div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Content -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.s1Title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%= t(ns + ':seo.s1p1', '') %></p>
+        <p><%= t(ns + ':seo.s1p2', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.s2Title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-6"><%= t(ns + ':seo.s2p1', '') %></p>
+      <div class="space-y-6">
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= t(ns + ':seo.s2h3_1', '') %></h3>
+          <p class="text-muted-foreground"><%= t(ns + ':seo.s2h3_1_p1', '') %></p>
+        </div>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= t(ns + ':seo.s2h3_2', '') %></h3>
+          <p class="text-muted-foreground"><%= t(ns + ':seo.s2h3_2_p1', '') %></p>
+        </div>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= t(ns + ':seo.s2h3_3', '') %></h3>
+          <p class="text-muted-foreground"><%= t(ns + ':seo.s2h3_3_p1', '') %></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.s3Title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%= t(ns + ':seo.s3p1', '') %></p>
+        <p><%= t(ns + ':seo.s3p2', '') %></p>
+        <p><%= t(ns + ':seo.s3p3', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.s4Title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%= t(ns + ':seo.s4p1', '') %></p>
+        <p><%= t(ns + ':seo.s4p2', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16 text-center">
+      <div class="glass-card-strong rounded-2xl p-8">
+        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':hero.title', 'Quiz vrai ou faux') %></h2>
+        <p class="text-muted-foreground mb-6"><%= t(ns + ':hero.subtitle', '') %></p>
+        <a href="#quiz-engine" class="btn btn-cta"><%= t('common:buttons.startQuiz', 'Commencer le quiz') %></a>
+      </div>
+    </section>
+
+    <% if (Array.isArray(faqItems) && faqItems.length > 0) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.faqTitle', 'FAQ') %></h2>
+      <div class="space-y-4">
+        <% for (const faq of faqItems) { %>
+        <details class="border border-border rounded-lg">
+          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= faq.q %></summary>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= faq.a %></div>
+        </details>
+        <% } %>
+      </div>
+    </section>
+    <% } %>
+
+  </div>
+</article>
+
+<div id="route-slugs-data" data-route-slugs="<%- escapeHtml(JSON.stringify(routeSlugs)) %>" hidden></div>
+<script src="/js/quiz-engine-core.js" defer></script>
+<script src="/js/quiz-loader.js" defer></script>

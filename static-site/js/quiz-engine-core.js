@@ -206,6 +206,7 @@ var QuizEngine = (function() {
     { type: 'quiz', key: 'ado', icon: '🌟', route: 'quizAdo' },
     { type: 'quiz', key: 'genant', icon: '😳', route: 'quizGenant' },
     { type: 'quiz', key: 'tu-preferes', icon: '🤔', route: 'quizTuPreferes' },
+    { type: 'quiz', key: 'vrai-faux', icon: '✅', route: 'quizVraiFaux' },
   ];
 
   function getRelatedQuizUrl(routeKey, lang) {
@@ -2389,6 +2390,245 @@ var QuizEngine = (function() {
     wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
+  // ═══════════════════════════════════════════════════════════
+  // TRUE/FALSE QUIZ - vrai-faux (solo, correct answer reveal)
+  // Single player: statement → Vrai/Faux → reveal correct + explanation
+  // ═══════════════════════════════════════════════════════════
+  function TruefalseQuiz(config) {
+    this.container = config.container;
+    this.questions = config.questions;
+    this.results = config.results;
+    this.prefix = config.prefix;
+    this.lang = config.lang || 'fr';
+    this.phase = 'intro';
+    this.currentQ = 0;
+    this.score = 0;
+    this.answers = [];
+    this.render();
+  }
+
+  TruefalseQuiz.prototype.render = function() {
+    this.container.innerHTML = '';
+    if (this.phase === 'intro') this.renderIntro();
+    else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'reveal') this.renderReveal();
+    else if (this.phase === 'results') this.renderResults();
+  };
+
+  TruefalseQuiz.prototype.renderIntro = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-4', '✅'));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', tg('truefalse.ready', 'Prêt pour le vrai ou faux ?')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-2', this.questions.length + ' ' + tg('truefalse.statements', 'affirmations')));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min') + ' \u2022 ' + tg('truefalse.freeAnon', 'Gratuit & anonyme')));
+
+    var infoBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-md mx-auto text-left');
+    infoBox.innerHTML = '<p class="text-sm text-muted-foreground mb-2"><strong>' + esc(tg('truefalse.howTitle', 'Comment ça marche ?')) + '</strong></p>' +
+      '<p class="text-sm text-muted-foreground">' + esc(tg('truefalse.howDesc', 'Pour chaque affirmation, choisissez Vrai ou Faux. La bonne réponse et une explication s\'affichent après chaque question.')) + '</p>';
+    wrap.appendChild(infoBox);
+
+    var btn = el('button', 'btn btn-cta btn-lg', esc(tg('playerSetup.startQuiz', 'Commencer le quiz')));
+    btn.addEventListener('click', function() {
+      self.phase = 'playing';
+      self.currentQ = 0;
+      self.score = 0;
+      self.answers = [];
+      self.render();
+    });
+    wrap.appendChild(btn);
+    this.container.appendChild(wrap);
+  };
+
+  TruefalseQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+
+    renderProgressBar(wrap, this.currentQ, total);
+
+    // Score display
+    var scoreDisp = el('div', 'text-center mb-4');
+    scoreDisp.innerHTML = '<span class="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 rounded-full px-3 py-1">' +
+      esc(tg('truefalse.score', 'Score')) + ': ' + this.score + '/' + this.currentQ + '</span>';
+    wrap.appendChild(scoreDisp);
+
+    // Statement
+    var qText = tgd(this.prefix + '.q' + q.id, q.text);
+    var qEl = el('h3', 'text-xl font-semibold mb-8 text-center leading-relaxed', esc(qText));
+    wrap.appendChild(qEl);
+
+    // True / False buttons
+    var btnWrap = el('div', 'grid grid-cols-2 gap-4 max-w-md mx-auto');
+
+    var trueBtn = el('button', 'quiz-tf-btn quiz-tf-btn--true');
+    trueBtn.innerHTML = '<span class="quiz-tf-icon">✓</span><span class="quiz-tf-label">' + esc(tg('truefalse.true', 'Vrai')) + '</span>';
+    trueBtn.addEventListener('click', function() { self.handleAnswer('true'); });
+
+    var falseBtn = el('button', 'quiz-tf-btn quiz-tf-btn--false');
+    falseBtn.innerHTML = '<span class="quiz-tf-icon">✗</span><span class="quiz-tf-label">' + esc(tg('truefalse.false', 'Faux')) + '</span>';
+    falseBtn.addEventListener('click', function() { self.handleAnswer('false'); });
+
+    btnWrap.appendChild(trueBtn);
+    btnWrap.appendChild(falseBtn);
+    wrap.appendChild(btnWrap);
+
+    // Back button
+    if (this.currentQ > 0) {
+      var navWrap = el('div', 'flex justify-center mt-6');
+      var backBtn = el('button', 'btn btn-ghost text-sm', '&larr; ' + tg('question.previousQuestion', 'Précédent'));
+      backBtn.addEventListener('click', function() {
+        var prev = self.answers[self.currentQ - 1];
+        if (prev && prev.correct) self.score--;
+        self.answers.splice(self.currentQ - 1, 1);
+        self.currentQ--;
+        self.render();
+      });
+      navWrap.appendChild(backBtn);
+      wrap.appendChild(navWrap);
+    }
+
+    this.container.appendChild(wrap);
+  };
+
+  TruefalseQuiz.prototype.handleAnswer = function(userAnswer) {
+    var q = this.questions[this.currentQ];
+    var correctAnswer = tgd(this.prefix + '.q' + q.id + 'answer', q.answer || 'true');
+    var isCorrect = userAnswer === correctAnswer;
+    if (isCorrect) this.score++;
+    this.answers.push({ qId: q.id, userAnswer: userAnswer, correctAnswer: correctAnswer, correct: isCorrect });
+    this.phase = 'reveal';
+    this.render();
+  };
+
+  TruefalseQuiz.prototype.renderReveal = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var lastAnswer = this.answers[this.answers.length - 1];
+    var isCorrect = lastAnswer.correct;
+    var correctAnswer = lastAnswer.correctAnswer;
+    var wrap = el('div', 'quiz-engine animate-fade-in');
+
+    renderProgressBar(wrap, this.currentQ, total);
+
+    // Result badge
+    var badge = el('div', 'text-center mb-4');
+    if (isCorrect) {
+      badge.innerHTML = '<span class="inline-flex items-center gap-2 text-sm font-bold bg-green-500/15 text-green-600 dark:text-green-400 rounded-full px-4 py-2">' +
+        '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>' +
+        esc(tg('truefalse.correct', 'Bonne réponse !')) + '</span>';
+    } else {
+      badge.innerHTML = '<span class="inline-flex items-center gap-2 text-sm font-bold bg-red-500/15 text-red-600 dark:text-red-400 rounded-full px-4 py-2">' +
+        '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+        esc(tg('truefalse.wrong', 'Mauvaise réponse')) + '</span>';
+    }
+    wrap.appendChild(badge);
+
+    // Statement
+    var qText = tgd(this.prefix + '.q' + q.id, q.text);
+    var qEl = el('h3', 'text-lg font-semibold mb-4 text-center', esc(qText));
+    wrap.appendChild(qEl);
+
+    // Correct answer display
+    var answerLabel = correctAnswer === 'true' ? tg('truefalse.true', 'Vrai') : tg('truefalse.false', 'Faux');
+    var answerBox = el('div', 'text-center mb-4');
+    answerBox.innerHTML = '<span class="text-sm text-muted-foreground">' + esc(tg('truefalse.correctAnswer', 'La réponse :')) +
+      '</span> <span class="font-bold text-primary">' + esc(answerLabel) + '</span>';
+    wrap.appendChild(answerBox);
+
+    // Explanation
+    var expText = tgd(this.prefix + '.q' + q.id + 'exp', '');
+    if (expText && expText !== this.prefix + '.q' + q.id + 'exp') {
+      var expBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-lg mx-auto text-left');
+      expBox.innerHTML = '<p class="text-sm text-muted-foreground leading-relaxed">' +
+        '<strong class="text-foreground">' + esc(tg('truefalse.explanation', 'Explication')) + ' :</strong> ' + esc(expText) + '</p>';
+      wrap.appendChild(expBox);
+    }
+
+    // Score tracker
+    var scoreDisp = el('div', 'text-center mb-6');
+    scoreDisp.innerHTML = '<span class="text-sm font-medium text-muted-foreground">' +
+      esc(tg('truefalse.score', 'Score')) + ': <span class="text-primary font-bold">' + this.score + '</span>/' + (this.currentQ + 1) + '</span>';
+    wrap.appendChild(scoreDisp);
+
+    // Next button
+    var isLast = this.currentQ >= total - 1;
+    var nextLabel = isLast ? tg('truefalse.seeResults', 'Voir les résultats') : tg('truefalse.next', 'Question suivante');
+    var nextBtn = el('button', 'btn btn-cta btn-lg', esc(nextLabel) + ' &rarr;');
+    nextBtn.addEventListener('click', function() {
+      if (isLast) {
+        self.phase = 'results';
+      } else {
+        self.currentQ++;
+        self.phase = 'playing';
+      }
+      self.render();
+    });
+    var btnWrap = el('div', 'text-center');
+    btnWrap.appendChild(nextBtn);
+    wrap.appendChild(btnWrap);
+
+    this.container.appendChild(wrap);
+    this.container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  TruefalseQuiz.prototype.renderResults = function() {
+    var self = this;
+    var total = this.questions.length;
+    var pct = Math.round((this.score / total) * 100);
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+
+    // Score circle
+    var scoreCircle = el('div', 'quiz-score-circle mx-auto mb-4', pct + '%');
+    wrap.appendChild(scoreCircle);
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', this.score + '/' + total + ' ' + tg('truefalse.correctAnswers', 'bonnes réponses')));
+
+    // Find matching result
+    var result = null;
+    for (var i = 0; i < this.results.length; i++) {
+      var r = this.results[i];
+      if (this.score >= r.min && this.score <= r.max) { result = r; break; }
+    }
+    if (!result && this.results.length > 0) result = this.results[this.results.length - 1];
+
+    if (result) {
+      wrap.appendChild(el('h3', 'text-2xl font-bold mb-3', esc(result.title)));
+      wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto', result.description));
+      if (result.advice) {
+        var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto');
+        advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
+        wrap.appendChild(advice);
+      }
+    }
+
+    // Review answers summary
+    var summaryWrap = el('div', 'mt-8 max-w-lg mx-auto text-left');
+    summaryWrap.appendChild(el('h4', 'text-lg font-bold mb-4 text-center', esc(tg('truefalse.summary', 'Résumé de vos réponses'))));
+    for (var j = 0; j < this.answers.length; j++) {
+      var a = this.answers[j];
+      var qObj = this.questions[j];
+      var qTextSum = tgd(this.prefix + '.q' + qObj.id, qObj.text);
+      var icon = a.correct ? '✅' : '❌';
+      var row = el('div', 'flex items-start gap-2 py-2 border-b border-border last:border-0');
+      row.innerHTML = '<span class="shrink-0 mt-0.5">' + icon + '</span>' +
+        '<span class="text-sm text-muted-foreground">' + esc(qTextSum) + '</span>';
+      summaryWrap.appendChild(row);
+    }
+    wrap.appendChild(summaryWrap);
+
+    renderActionButtons(wrap, {
+      newQuestions: function() { location.reload(); },
+      restart: function() { self.phase = 'intro'; self.render(); }
+    });
+
+    renderRelatedQuizzes(wrap, 'vrai-faux', this.lang);
+
+    this.container.appendChild(wrap);
+    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -2404,6 +2644,7 @@ var QuizEngine = (function() {
     MostQuiz: MostQuiz,
     HealthyQuiz: HealthyQuiz,
     ParentaliteQuiz: ParentaliteQuiz,
+    TruefalseQuiz: TruefalseQuiz,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,
