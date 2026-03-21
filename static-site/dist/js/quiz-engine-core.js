@@ -382,8 +382,8 @@ var QuizEngine = (function() {
 
     var icon = el('div', 'text-5xl mb-4', this.labels.icon || '📝');
     var title = el('h2', 'text-2xl font-bold mb-3', tg('playerSetup.readyForTest', 'Prêt pour le test ?'));
-    var desc = el('p', 'text-muted-foreground mb-2', this.questions.length + ' questions');
-    var time = el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min') + ' &bull; 🔒 Anonyme & gratuit');
+    var desc = el('p', 'text-muted-foreground mb-2', this.questions.length + ' ' + tg('meta.questionsWord', 'questions'));
+    var time = el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min') + ' &bull; 🔒 ' + tg('truefalse.freeAnon', 'Gratuit & anonyme'));
 
     wrap.appendChild(icon);
     wrap.appendChild(title);
@@ -402,8 +402,7 @@ var QuizEngine = (function() {
     // Special divorce quiz intro
     if (this.quizType === 'divorce') {
       var disclaimerBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-md mx-auto text-left');
-      disclaimerBox.innerHTML = '<p class="text-sm text-muted-foreground">💡 Ce test est un outil de réflexion personnel. ' +
-        'Il ne remplace en aucun cas l\'avis d\'un professionnel.</p>';
+      disclaimerBox.innerHTML = '<p class="text-sm text-muted-foreground">💡 ' + esc(tg('divorce.disclaimer', 'Ce test est un outil de réflexion personnel. Il ne remplace en aucun cas l\'avis d\'un professionnel.')) + '</p>';
       wrap.appendChild(disclaimerBox);
     }
 

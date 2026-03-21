@@ -167,7 +167,11 @@
     "meta": {
       "duration": "5 min",
       "players": "2 joueurs",
-      "questions": "20 questions"
+      "questions": "20 questions",
+      "questionsWord": "questions"
+    },
+    "divorce": {
+      "disclaimer": "Ce test est un outil de réflexion personnel. Il ne remplace en aucun cas l'avis d'un professionnel."
     },
    "reviews": {
      "yourReviews": "Vos avis",
