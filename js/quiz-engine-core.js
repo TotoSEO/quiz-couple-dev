@@ -2494,7 +2494,7 @@ var QuizEngine = (function() {
 
   TruefalseQuiz.prototype.handleAnswer = function(userAnswer) {
     var q = this.questions[this.currentQ];
-    var correctAnswer = tgd(this.prefix + '.q' + q.id + 'answer', q.answer || 'true');
+    var correctAnswer = tgd(this.prefix + '.q' + q.id + 'answer', q.answer || 'true').trim().toLowerCase();
     var isCorrect = userAnswer === correctAnswer;
     if (isCorrect) this.score++;
     this.answers.push({ qId: q.id, userAnswer: userAnswer, correctAnswer: correctAnswer, correct: isCorrect });
@@ -2540,7 +2540,7 @@ var QuizEngine = (function() {
 
     // Explanation
     var expText = tgd(this.prefix + '.q' + q.id + 'exp', '');
-    if (expText && expText !== this.prefix + '.q' + q.id + 'exp') {
+    if (expText) {
       var expBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-lg mx-auto text-left');
       expBox.innerHTML = '<p class="text-sm text-muted-foreground leading-relaxed">' +
         '<strong class="text-foreground">' + esc(tg('truefalse.explanation', 'Explication')) + ' :</strong> ' + esc(expText) + '</p>';
