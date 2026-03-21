@@ -167,7 +167,11 @@
     "meta": {
       "duration": "5 min",
       "players": "2 players",
-      "questions": "20 questions"
+      "questions": "20 questions",
+      "questionsWord": "questions"
+    },
+    "divorce": {
+      "disclaimer": "This test is a personal reflection tool. It does not replace professional advice in any way."
     },
    "reviews": {
      "yourReviews": "Your reviews",
@@ -275,6 +279,14 @@
       "quizMost": "Most Likely Quiz",
       "quizAdo": "Teen Quiz",
       "quizGenant": "Embarrassing Quiz",
-      "quizTuPreferes": "Would You Rather Quiz"
+      "quizTuPreferes": "Would You Rather Quiz",
+      "quizVraiFaux": "True or False Quiz"
+    },
+    "truefalse": {
+      "ready": "Ready for true or false?",
+      "statements": "statements",
+      "freeAnon": "Free & anonymous",
+      "howTitle": "How does it work?",
+      "howDesc": "For each statement, choose True or False. The correct answer and an explanation are shown after each question."
     }
    }
