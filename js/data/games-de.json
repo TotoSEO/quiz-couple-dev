@@ -157,6 +157,7 @@
      "times": "mal",
      "shareResults": "Teile deine Ergebnisse!",
      "changePlayers": "Spieler wechseln",
+     "relatedTitle": "Machen Sie weiter mit anderen Tests / Quizzen!",
      "commonPoints": "gemeinsame Punkte",
      "shareYourResult": "Teile dein Ergebnis!",
       "loveScore": "Liebespunktzahl",
@@ -256,5 +257,24 @@
       "scoreOn60": "Punktzahl von 60 pro Person",
       "combinedScore": "Gesamtscore des Paares",
       "gapWarning": "Es gibt einen deutlichen Unterschied zwischen euren beiden Scores. Oft liegen in diesen Unterschieden die wichtigsten Gespräche, die noch geführt werden müssen."
+    },
+    "quizNames": {
+      "testCouple": "Paar-Test",
+      "testCommonPoints": "Gemeinsamkeiten-Test",
+      "testDistance": "Fernbeziehung-Test",
+      "testToxic": "Toxisch-Test",
+      "testCoupleSain": "Gesunde Beziehung Test",
+      "testMariage": "Heirats-Test",
+      "testDivorce": "Scheidungs-Test",
+      "testParentalite": "Elternschaft-Test",
+      "testJalousie": "Eifersucht-Test",
+      "quizAmoureux": "Liebes-Quiz",
+      "quizCoquin": "Pikantes Quiz",
+      "quizMarrant": "Lustiges Quiz",
+      "quizKnowledge": "Wissens-Quiz",
+      "quizMost": "Wer ist am meisten Quiz",
+      "quizAdo": "Teenager-Quiz",
+      "quizGenant": "Peinliches Quiz",
+      "quizTuPreferes": "Würdest du lieber Quiz"
     }
    }
