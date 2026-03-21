@@ -29,7 +29,7 @@
     "faq": [
       {"q": "¿Cuánto tiempo dura el quiz de verdadero o falso?", "a": "Calcula entre 15 y 25 minutos para responder a las 100 preguntas, dependiendo de tu velocidad de lectura. También puedes elegir jugar por categoría para sesiones más cortas y enfocadas."},
       {"q": "¿Se puede jugar en pareja?", "a": "Por supuesto. El quiz está diseñado para jugarse solo o en pareja. Jugando de a dos, comparad vuestras respuestas y discutid las explicaciones — es ahí donde la experiencia se vuelve realmente interesante y reveladora."},
-      {"q": "¿Las respuestas están basadas en estudios científicos?", "a": "Sí. Cada explicación se apoya en investigaciones de psicología, sociología o neurociencias. Las fuentes principales incluyen los trabajos de John Gottman, Helen Fisher, así como estudios del INSEE y del Ifop."},
+      {"q": "¿Las respuestas están basadas en estudios científicos?", "a": "Sí. Cada explicación se apoya en investigaciones de psicología, sociología o neurociencias. Las fuentes principales incluyen los trabajos de John Gottman, Helen Fisher, así como estudios del INE y otras fuentes estadísticas."},
       {"q": "¿Se guarda mi puntuación en algún sitio?", "a": "No. No se recoge ningún dato personal en ningún momento durante el quiz. Tu puntuación se muestra al final del quiz y permanece almacenada exclusivamente en tu propio dispositivo."}
     ]
   }
