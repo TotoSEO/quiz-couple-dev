@@ -136,6 +136,12 @@
     "description": "30 questions \"tu préfères\" pour jouer en couple. Des choix impossibles qui font rire et réfléchir.",
     "metaDescription": "Le jeu tu préfères version couple : règles, variantes et questions qui font vraiment réfléchir. Jouez maintenant, répondez honnêtement."
   },
+  "quizVraiFaux": {
+    "title": "Quiz vrai ou faux spécial couple | 100 questions",
+    "shortTitle": "Vrai ou Faux",
+    "description": "100 questions vrai ou faux sur le couple : mythes, psychologie, chiffres surprenants et idées reçues.",
+    "metaDescription": "100 questions vrai ou faux sur le couple : mythes, psychologie, chiffres surprenants et idées reçues. Testez vos connaissances maintenant."
+  },
   "activities": {
     "title": "Activités à faire en couple autour de chez soi | Quiz Couple",
     "shortTitle": "Activités en couple",
