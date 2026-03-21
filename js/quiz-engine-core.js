@@ -252,7 +252,10 @@ var QuizEngine = (function() {
     // ── Action buttons in a clean grid ──
     var actions = el('div', 'result-actions-grid mt-8');
 
-    if (opts.newQuestions) {
+    // Only show "other questions" button if quiz has a random pool (pool > totalQ)
+    var quizEl = document.getElementById('quiz-engine');
+    var hasPool = quizEl && quizEl.dataset.hasPool === '1';
+    if (opts.newQuestions && hasPool) {
       var newQBtn = el('button', 'result-action-btn result-action-btn--primary');
       newQBtn.innerHTML = '<span class="result-action-icon">🎲</span><span class="result-action-label">' + esc(tg('result.restartOtherQuestions', 'Autres questions')) + '</span>';
       newQBtn.addEventListener('click', opts.newQuestions);
