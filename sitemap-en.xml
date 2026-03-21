@@ -219,6 +219,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/tu-preferes-couple-quiz/"/>
   </url>
   <url>
+    <loc>https://quiz-couple.com/en/true-or-false-couple-quiz/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-vrai-ou-faux/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/true-or-false-couple-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-verdadero-o-falso-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/richtig-oder-falsch-paar-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-vero-o-falso-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-vrai-ou-faux/"/>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/en/couple-activities-near-me/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/activites-autours-de-moi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/couple-activities-near-me/"/>

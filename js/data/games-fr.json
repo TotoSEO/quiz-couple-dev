@@ -275,6 +275,25 @@
       "quizMost": "Quiz Qui est le plus",
       "quizAdo": "Quiz Ado",
       "quizGenant": "Quiz Gênant",
-      "quizTuPreferes": "Quiz Tu Préfères"
+      "quizTuPreferes": "Quiz Tu Préfères",
+      "quizVraiFaux": "Quiz Vrai ou Faux"
+    },
+    "truefalse": {
+      "ready": "Prêt pour le vrai ou faux ?",
+      "statements": "affirmations",
+      "freeAnon": "Gratuit & anonyme",
+      "howTitle": "Comment ça marche ?",
+      "howDesc": "Pour chaque affirmation, choisissez Vrai ou Faux. La bonne réponse et une explication s'affichent après chaque question.",
+      "true": "Vrai",
+      "false": "Faux",
+      "correct": "Bonne réponse !",
+      "wrong": "Mauvaise réponse",
+      "correctAnswer": "La réponse :",
+      "explanation": "Explication",
+      "score": "Score",
+      "next": "Question suivante",
+      "seeResults": "Voir les résultats",
+      "correctAnswers": "bonnes réponses",
+      "summary": "Résumé de vos réponses"
     }
    }
