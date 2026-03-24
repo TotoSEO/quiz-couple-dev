@@ -33,6 +33,20 @@
     waitingForPartner: false
   };
 
+  // ── Score ring SVG helper ──
+  function adoScoreRing(pct) {
+    var c = 283;
+    var offset = c - (c * pct / 100);
+    var color = pct >= 60 ? '#10b981' : pct >= 30 ? '#f59e0b' : '#ef4444';
+    return '<div class="score-ring-wrap" style="width:140px;height:140px;margin:0 auto">' +
+      '<svg viewBox="0 0 100 100" class="score-ring">' +
+        '<circle cx="50" cy="50" r="45" class="score-ring-bg"/>' +
+        '<circle cx="50" cy="50" r="45" class="score-ring-fill" style="stroke-dashoffset:' + offset + ';stroke:' + color + '"/>' +
+      '</svg>' +
+      '<span class="score-ring-value">' + pct + '%</span>' +
+    '</div>';
+  }
+
   // ── UI Translations ──
   var UI = {
     fr: {
@@ -607,8 +621,9 @@
         '</div>') +
         '<h3 class="text-lg font-semibold leading-snug">' + esc(qText) + '</h3>' +
         '<div class="grid gap-3">' +
-          choices.map(function (c) {
-            return '<button class="choice-btn btn btn-outline text-left py-3 px-4 w-full" data-choice="' + c.key + '">' + esc(c.text) + '</button>';
+          choices.map(function (c, idx) {
+            var optLetters = ['A','B','C','D','E'];
+            return '<button class="choice-btn quiz-option w-full" data-choice="' + c.key + '"><span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(c.text) + '</span></button>';
           }).join('') +
         '</div>' +
       '</div>';
@@ -719,14 +734,11 @@
         '</tr>';
     }
 
-    var borderColor = pct >= 60 ? 'border-emerald-500' : pct >= 30 ? 'border-amber-500' : 'border-red-400';
-
     container.innerHTML =
       '<div class="max-w-lg mx-auto py-8 space-y-8">' +
         '<div class="text-center space-y-4">' +
-          '<div class="inline-flex items-center justify-center w-32 h-32 rounded-full border-4 ' + borderColor + '">' +
-            '<div><p class="text-3xl font-bold">' + pct + '%</p><p class="text-xs text-muted-foreground">' + matches + '/' + totalQ + ' ' + t('identical') + '</p></div>' +
-          '</div>' +
+          adoScoreRing(pct) +
+          '<p class="text-sm text-muted-foreground">' + matches + '/' + totalQ + ' ' + t('identical') + '</p>' +
           '<p class="text-lg font-semibold text-gradient">' + t('matchPercent').replace('{{pct}}', pct) + '</p>' +
           (resultTitle ? '<h2 class="text-2xl font-bold">' + esc(resultTitle) + '</h2>' : '') +
           (resultDesc ? '<p class="text-muted-foreground">' + esc(resultDesc) + '</p>' : '') +

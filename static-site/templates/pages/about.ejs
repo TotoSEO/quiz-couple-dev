@@ -267,9 +267,9 @@ const p = c[lang] || c.fr;
       <div class="space-y-6 text-foreground text-lg leading-relaxed">
         <p><%= p.storyP1 %></p>
 
-        <div class="rounded-xl border border-border bg-card p-6 md:p-8">
-          <p class="text-muted-foreground italic"><%- p.storyQuote %></p>
-        </div>
+        <blockquote class="about-blockquote">
+          <p class="text-muted-foreground italic text-lg"><%- p.storyQuote %></p>
+        </blockquote>
 
         <p><%= p.storyP2 %></p>
         <p><%- p.storyP3 %></p>
@@ -329,7 +329,9 @@ const p = c[lang] || c.fr;
         <div class="rounded-2xl border border-border bg-card overflow-hidden">
           <div class="md:flex">
             <div class="md:w-1/3 p-8 md:p-10 flex flex-col items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/15">
-              <img src="/authors/lucie-courtin.webp" alt="<%= p.lucieAlt %>" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-background shadow-lg mb-4" width="160" height="160" loading="lazy">
+              <div class="team-photo-ring mb-4">
+                <img src="/authors/lucie-courtin.webp" alt="<%= p.lucieAlt %>" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover" width="160" height="160" loading="lazy">
+              </div>
               <h3 class="text-2xl font-bold text-foreground mb-1">Lucie Courtin</h3>
               <p class="text-sm text-primary font-medium"><%= p.lucieRole %></p>
             </div>
@@ -354,7 +356,9 @@ const p = c[lang] || c.fr;
         <div class="rounded-2xl border border-border bg-card overflow-hidden">
           <div class="md:flex md:flex-row-reverse">
             <div class="md:w-1/3 p-8 md:p-10 flex flex-col items-center justify-center bg-gradient-to-bl from-secondary/15 to-primary/10">
-              <img src="/authors/mathieu-courtin.webp" alt="<%= p.mathieuAlt %>" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-background shadow-lg mb-4" width="160" height="160" loading="lazy">
+              <div class="team-photo-ring mb-4">
+                <img src="/authors/mathieu-courtin.webp" alt="<%= p.mathieuAlt %>" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover" width="160" height="160" loading="lazy">
+              </div>
               <h3 class="text-2xl font-bold text-foreground mb-1">Mathieu Courtin</h3>
               <p class="text-sm text-secondary font-medium"><%= p.mathieuRole %></p>
             </div>
@@ -384,7 +388,8 @@ const p = c[lang] || c.fr;
       </div>
 
       <div class="grid md:grid-cols-3 gap-6 mb-10">
-        <div class="rounded-2xl border border-border bg-card p-6 text-center">
+        <div class="about-work-card rounded-2xl border border-border bg-card p-6 text-center">
+          <div class="about-work-badge">1</div>
           <div class="w-12 h-12 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
@@ -392,7 +397,8 @@ const p = c[lang] || c.fr;
           <p class="text-sm text-muted-foreground"><%= p.workCard1Text %></p>
         </div>
 
-        <div class="rounded-2xl border border-border bg-card p-6 text-center">
+        <div class="about-work-card rounded-2xl border border-border bg-card p-6 text-center">
+          <div class="about-work-badge">2</div>
           <div class="w-12 h-12 mx-auto rounded-full bg-secondary/10 flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
@@ -400,7 +406,8 @@ const p = c[lang] || c.fr;
           <p class="text-sm text-muted-foreground"><%= p.workCard2Text %></p>
         </div>
 
-        <div class="rounded-2xl border border-border bg-card p-6 text-center">
+        <div class="about-work-card rounded-2xl border border-border bg-card p-6 text-center">
+          <div class="about-work-badge">3</div>
           <div class="w-12 h-12 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
           </div>

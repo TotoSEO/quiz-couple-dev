@@ -74,36 +74,79 @@
 <!-- JSON-LD injected in head via base template -->
 <script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
 
-<!-- Hero Section -->
-<section class="hero-home relative overflow-hidden">
+<!-- Hero Section — Full viewport radical -->
+<section class="hero-home">
+  <!-- Animated blobs -->
+  <div class="hero-blob hero-blob--1"></div>
+  <div class="hero-blob hero-blob--2"></div>
+  <div class="hero-blob hero-blob--3"></div>
+
   <div class="container mx-auto px-4 relative z-10">
-    <div class="mx-auto max-w-3xl text-center">
-      <!-- Badge -->
-      <span class="badge badge-primary mb-4"><%= hero.badge %></span>
+    <div class="hero-grid">
+      <!-- Left column: text content -->
+      <div class="hero-content">
+        <span class="badge badge-primary mb-4"><%= hero.badge %></span>
 
-      <h1 class="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight">
-        <%= hero.title %> <span class="text-gradient"><%= hero.titleHighlight %></span>
-      </h1>
-      <p class="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-        <% if (hero.descriptionHighlight && hero.description.includes(hero.descriptionHighlight)) { %>
-          <%- hero.description.replace(hero.descriptionHighlight, '<strong class="text-foreground">' + hero.descriptionHighlight + '</strong>') %>
-        <% } else { %>
-          <%= hero.description %>
-        <% } %>
-      </p>
+        <h1 class="hero-title">
+          <%= hero.title %> <span class="text-gradient"><%= hero.titleHighlight %></span>
+        </h1>
+        <p class="hero-desc">
+          <% if (hero.descriptionHighlight && hero.description.includes(hero.descriptionHighlight)) { %>
+            <%- hero.description.replace(hero.descriptionHighlight, '<strong class="text-foreground">' + hero.descriptionHighlight + '</strong>') %>
+          <% } else { %>
+            <%= hero.description %>
+          <% } %>
+        </p>
 
-      <!-- CTAs + Stats inline -->
-      <div class="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">
-        <a href="#quiz-section" class="btn btn-cta"><%= hero.cta1 %></a>
-        <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-outline btn-lg"><%= hero.cta2 %></a>
+        <div class="hero-ctas">
+          <a href="#quiz-section" class="btn btn-cta btn-lg"><%= hero.cta1 %></a>
+          <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-outline btn-lg"><%= hero.cta2 %></a>
+        </div>
+
+        <!-- Stats cards -->
+        <div class="hero-stats">
+          <div class="hero-stat-card">
+            <span class="hero-stat-icon">💕</span>
+            <div>
+              <span class="hero-stat-value"><%= hero.stat1Value %></span>
+              <span class="hero-stat-label"><%= hero.stat1Label %></span>
+            </div>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-icon">📝</span>
+            <div>
+              <span class="hero-stat-value"><%= tests.length %></span>
+              <span class="hero-stat-label"><%= t('home:hero.stats.testsLabel', 'tests disponibles') %></span>
+            </div>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-icon">🎮</span>
+            <div>
+              <span class="hero-stat-value"><%= quizzes.length %></span>
+              <span class="hero-stat-label"><%= t('home:hero.stats.quizzesLabel', 'quiz à faire en couple') %></span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="flex items-center justify-center gap-6 text-sm text-muted-foreground flex-wrap">
-        <span><strong class="text-primary font-bold"><%= hero.stat1Value %></strong> <%= hero.stat1Label %></span>
-        <span style="color: hsl(var(--border))">|</span>
-        <span><strong class="text-primary font-bold"><%= tests.length %></strong> <%= t('home:hero.stats.testsLabel', 'tests disponibles') %></span>
-        <span style="color: hsl(var(--border))">|</span>
-        <span><strong class="text-primary font-bold"><%= quizzes.length %></strong> <%= t('home:hero.stats.quizzesLabel', 'quiz à faire en couple') %></span>
+      <!-- Right column: floating cards -->
+      <div class="hero-visual">
+        <div class="hero-float-card hero-float-card--1 animate-float">
+          <span class="hero-float-icon">💕</span>
+          <span><%= t('quizzes:testCouple.shortTitle', 'Test Couple') %></span>
+        </div>
+        <div class="hero-float-card hero-float-card--2 animate-float-slow">
+          <span class="hero-float-icon">🔥</span>
+          <span><%= t('quizzes:quizCoquin.shortTitle', 'Quiz Coquin') %></span>
+        </div>
+        <div class="hero-float-card hero-float-card--3 animate-float" style="animation-delay: 300ms">
+          <span class="hero-float-icon">⚖️</span>
+          <span><%= t('quizzes:testDivorce.shortTitle', 'Dois-je divorcer ?') %></span>
+        </div>
+        <div class="hero-float-card hero-float-card--4 animate-float-slow" style="animation-delay: 600ms">
+          <span class="hero-float-icon">🧠</span>
+          <span><%= t('quizzes:quizKnowledge.shortTitle', 'Quiz Knowledge') %></span>
+        </div>
       </div>
     </div>
   </div>
@@ -267,13 +310,14 @@
       <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:howItWorks.title', 'Comment ça') %> <span class="text-gradient"><%= t('home:howItWorks.titleHighlight', 'marche') %></span></h2>
       <p class="text-muted-foreground max-w-2xl mx-auto"><%= t('home:howItWorks.subtitle', '') %></p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+    <div class="how-it-works-grid">
       <% for (let i = 0; i < steps.length; i++) { %>
-      <div class="text-center">
-        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-          <span class="text-2xl"><%= stepIcons[i] %></span>
+      <div class="how-it-works-step">
+        <div class="how-it-works-number-wrap">
+          <div class="how-it-works-number"><%= i + 1 %></div>
+          <% if (i < steps.length - 1) { %><div class="how-it-works-connector"></div><% } %>
         </div>
-        <div class="text-sm font-medium text-primary mb-2"><%= t('home:howItWorks.step', 'Étape') %> <%= i + 1 %></div>
+        <div class="how-it-works-icon"><%= stepIcons[i] %></div>
         <h3 class="text-lg font-semibold mb-2"><%= t('home:howItWorks.steps.' + steps[i] + '.title', steps[i]) %></h3>
         <p class="text-sm text-muted-foreground"><%= t('home:howItWorks.steps.' + steps[i] + '.description', '') %></p>
       </div>
@@ -402,12 +446,12 @@
 <!-- Final CTA -->
 <section class="section-padding">
   <div class="container mx-auto px-4">
-    <div class="mx-auto max-w-2xl text-center glass-card-strong rounded-3xl p-8 md:p-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:finalCTA.title', 'Prêts à tester votre') %> <span class="text-gradient"><%= t('home:finalCTA.titleHighlight', 'complicité') %></span></h2>
-      <p class="text-muted-foreground mb-8"><%= t('home:finalCTA.description', '') %></p>
+    <div class="final-cta-card mx-auto max-w-2xl text-center rounded-3xl p-8 md:p-12">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white"><%= t('home:finalCTA.title', 'Prêts à tester votre') %> <span class="final-cta-highlight"><%= t('home:finalCTA.titleHighlight', 'complicité') %></span></h2>
+      <p class="text-white/80 mb-8"><%= t('home:finalCTA.description', '') %></p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-cta"><%= t('home:finalCTA.button', 'Commencer maintenant') %></a>
-        <a href="#quiz-section" class="btn btn-outline btn-lg"><%= t('home:finalCTA.socialProof', 'Déjà') %> <%= t('home:finalCTA.socialProofCount', '1000+ couples') %> <%= t('home:finalCTA.socialProofEnd', 'ont testé leurs liens') %></a>
+        <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-lg" style="background: #fff; color: hsl(var(--primary)); font-weight: 700;"><%= t('home:finalCTA.button', 'Commencer maintenant') %></a>
+        <a href="#quiz-section" class="btn btn-lg" style="border: 2px solid rgba(255,255,255,0.4); color: #fff; background: transparent;"><%= t('home:finalCTA.socialProof', 'Déjà') %> <%= t('home:finalCTA.socialProofCount', '1000+ couples') %></a>
       </div>
     </div>
   </div>

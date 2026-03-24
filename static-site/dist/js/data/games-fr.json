@@ -287,6 +287,17 @@
       "statements": "affirmations",
       "freeAnon": "Gratuit & anonyme",
       "howTitle": "Comment ça marche ?",
-      "howDesc": "Pour chaque affirmation, choisissez Vrai ou Faux. La bonne réponse et une explication s'affichent après chaque question."
+      "howDesc": "Pour chaque affirmation, choisissez Vrai ou Faux. La bonne réponse et une explication s'affichent après chaque question.",
+      "true": "Vrai",
+      "false": "Faux",
+      "correct": "Bonne réponse !",
+      "wrong": "Mauvaise réponse",
+      "correctAnswer": "La réponse :",
+      "explanation": "Explication",
+      "score": "Score",
+      "next": "Question suivante",
+      "seeResults": "Voir les résultats",
+      "correctAnswers": "bonnes réponses",
+      "summary": "Résumé de vos réponses"
     }
    }
