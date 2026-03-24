@@ -280,13 +280,24 @@
       "quizAdo": "Teenager-Quiz",
       "quizGenant": "Peinliches Quiz",
       "quizTuPreferes": "Würdest du lieber Quiz",
-      "quizVraiFaux": "Wahr oder Falsch Quiz"
+      "quizVraiFaux": "Richtig oder Falsch Quiz"
     },
     "truefalse": {
-      "ready": "Bereit für wahr oder falsch?",
+      "ready": "Bereit für Richtig oder Falsch?",
       "statements": "Aussagen",
       "freeAnon": "Kostenlos & anonym",
       "howTitle": "Wie funktioniert es?",
-      "howDesc": "Wähle für jede Aussage Wahr oder Falsch. Die richtige Antwort und eine Erklärung werden nach jeder Frage angezeigt."
+      "howDesc": "Wähle bei jeder Aussage Richtig oder Falsch. Die richtige Antwort und eine Erklärung werden nach jeder Frage angezeigt.",
+      "true": "Richtig",
+      "false": "Falsch",
+      "correct": "Richtige Antwort!",
+      "wrong": "Falsche Antwort",
+      "correctAnswer": "Die Antwort:",
+      "explanation": "Erklärung",
+      "score": "Punktzahl",
+      "next": "Nächste Frage",
+      "seeResults": "Ergebnisse anzeigen",
+      "correctAnswers": "richtige Antworten",
+      "summary": "Zusammenfassung deiner Antworten"
     }
    }

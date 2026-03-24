@@ -287,6 +287,17 @@
       "statements": "statements",
       "freeAnon": "Free & anonymous",
       "howTitle": "How does it work?",
-      "howDesc": "For each statement, choose True or False. The correct answer and an explanation are shown after each question."
+      "howDesc": "For each statement, choose True or False. The correct answer and an explanation are shown after each question.",
+      "true": "True",
+      "false": "False",
+      "correct": "Correct!",
+      "wrong": "Wrong answer",
+      "correctAnswer": "The answer:",
+      "explanation": "Explanation",
+      "score": "Score",
+      "next": "Next question",
+      "seeResults": "See results",
+      "correctAnswers": "correct answers",
+      "summary": "Your answers summary"
     }
    }

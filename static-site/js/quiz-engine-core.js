@@ -166,17 +166,54 @@ var QuizEngine = (function() {
 
   function renderProgressBar(wrap, current, total, label) {
     var progress = Math.round((current / total) * 100);
-    var progressWrap = el('div', 'mb-6');
-    var progressInfo = el('div', 'flex justify-between text-sm text-muted-foreground mb-2');
-    progressInfo.innerHTML = '<span>' + esc(label || (tg('question.question', 'Question') + ' ' + (current + 1) + '/' + total)) + '</span><span>' + progress + '%</span>';
-    var barOuter = el('div', 'quiz-progress');
-    var barInner = el('div', 'quiz-progress-bar');
+    var progressWrap = el('div', 'quiz-progress-wrapper');
+    var header = el('div', 'quiz-progress-header');
+    header.innerHTML = '<span class="quiz-progress-label">' + esc(label || (tg('question.question', 'Question') + ' ' + (current + 1) + '/' + total)) + '</span><span class="quiz-progress-pct">' + progress + '%</span>';
+    var barOuter = el('div', 'quiz-progress-bar');
+    var barInner = el('div', 'quiz-progress-fill');
     barInner.style.width = progress + '%';
     barOuter.appendChild(barInner);
-    progressWrap.appendChild(progressInfo);
+    progressWrap.appendChild(header);
     progressWrap.appendChild(barOuter);
     wrap.appendChild(progressWrap);
     return progressWrap;
+  }
+
+  // SVG gradient definition (injected once for score rings)
+  function ensureScoreGradient() {
+    if (document.getElementById('scoreGradientSvg')) return;
+    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.id = 'scoreGradientSvg';
+    svg.setAttribute('width', '0');
+    svg.setAttribute('height', '0');
+    svg.style.position = 'absolute';
+    svg.innerHTML = '<defs><linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="hsl(340, 65%, 65%)"/><stop offset="100%" stop-color="hsl(270, 40%, 70%)"/></linearGradient></defs>';
+    document.body.appendChild(svg);
+  }
+
+  function renderScoreRing(pct, size) {
+    ensureScoreGradient();
+    var circumference = 283; // 2 * PI * 45
+    var offset = circumference - (circumference * pct / 100);
+    var sizeClass = size === 'sm' ? ' score-ring-wrap--sm' : '';
+    var confetti = '';
+    if (pct >= 70 && size !== 'sm') {
+      var colors = ['#ec4899','#a855f7','#f59e0b','#22c55e','#3b82f6','#ef4444','#8b5cf6','#06b6d4'];
+      for (var i = 0; i < 8; i++) {
+        var angle = (i / 8) * Math.PI * 2;
+        var tx = Math.round(Math.cos(angle) * 60);
+        var ty = Math.round(Math.sin(angle) * 60);
+        confetti += '<span class="confetti-dot" style="background:' + colors[i] + ';--tx:' + tx + 'px;--ty:' + ty + 'px;animation-delay:' + (0.1 * i) + 's"></span>';
+      }
+    }
+    return '<div class="score-ring-wrap' + sizeClass + '">' +
+      (confetti ? '<div class="confetti-container">' + confetti + '</div>' : '') +
+      '<svg viewBox="0 0 100 100" class="score-ring">' +
+        '<circle cx="50" cy="50" r="45" class="score-ring-bg"/>' +
+        '<circle cx="50" cy="50" r="45" class="score-ring-fill" style="stroke-dashoffset:' + offset + '"/>' +
+      '</svg>' +
+      '<span class="score-ring-value">' + pct + '%</span>' +
+    '</div>';
   }
 
   function renderPlayerBadge(wrap, name, color) {
@@ -477,7 +514,8 @@ var QuizEngine = (function() {
     q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
       var optBtn = el('button', 'quiz-option');
-      optBtn.textContent = optText;
+      var optLetters = ['A','B','C','D','E'];
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
@@ -551,17 +589,18 @@ var QuizEngine = (function() {
     var maxScore = this.results.length > 0 ? this.results[this.results.length - 1].max : 100;
     var pct = Math.round((this.totalScore / maxScore) * 100);
 
-    // Score circle
-    var scoreCircle = el('div', 'quiz-score-circle mx-auto mb-4', pct + '%');
-    wrap.appendChild(scoreCircle);
+    // Score ring (SVG animated)
+    var scoreDiv = el('div', 'mb-4');
+    scoreDiv.innerHTML = renderScoreRing(pct);
+    wrap.appendChild(scoreDiv);
     var scoreLabel = el('p', 'text-sm text-muted-foreground mb-6', this.totalScore + '/' + maxScore + ' points');
     wrap.appendChild(scoreLabel);
 
     if (result) {
-      wrap.appendChild(el('h3', 'text-2xl font-bold mb-3', esc(result.title)));
-      wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto', result.description));
+      wrap.appendChild(el('h3', 'text-2xl font-bold mb-3 quiz-reveal-enter', esc(result.title)));
+      wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto quiz-reveal-enter', result.description));
       if (result.advice) {
-        var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto');
+        var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto quiz-reveal-enter');
         advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
         wrap.appendChild(advice);
       }
@@ -738,7 +777,8 @@ var QuizEngine = (function() {
     q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
       var optBtn = el('button', 'quiz-option');
-      optBtn.textContent = optText;
+      var optLetters = ['A','B','C','D','E'];
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
@@ -789,8 +829,11 @@ var QuizEngine = (function() {
 
     var icon = el('div', 'text-5xl mb-4', pct >= 70 ? '🎉' : pct >= 40 ? '😊' : '🤔');
     wrap.appendChild(icon);
-    wrap.appendChild(el('div', 'quiz-score-circle mx-auto mb-4', pct + '%'));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6', matchCount + '/' + total + ' ' + tg('result.identicalAnswers', 'réponses identiques')));
+    var scoreRingDiv = el('div', '');
+    scoreRingDiv.innerHTML = renderScoreRing(pct);
+    wrap.appendChild(scoreRingDiv);
+    var matchLabel = el('p', 'text-muted-foreground mb-6 quiz-reveal-enter', matchCount + '/' + total + ' ' + tg('result.identicalAnswers', 'réponses identiques'));
+    wrap.appendChild(matchLabel);
 
     if (result) {
       wrap.appendChild(el('h3', 'text-2xl font-bold mb-3', esc(result.title || '')));
@@ -924,7 +967,8 @@ var QuizEngine = (function() {
     q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
       var optBtn = el('button', 'quiz-option');
-      optBtn.textContent = optText;
+      var optLetters = ['A','B','C','D','E'];
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
@@ -977,7 +1021,9 @@ var QuizEngine = (function() {
 
       var card = el('div', 'glass-card rounded-xl p-4 text-center');
       card.appendChild(el('p', 'font-semibold mb-2', esc(this.players[i].name)));
-      card.appendChild(el('div', 'quiz-score-circle quiz-score-sm mx-auto mb-2', pct + '%'));
+      var ringDiv = el('div', '');
+      ringDiv.innerHTML = renderScoreRing(pct, 90);
+      card.appendChild(ringDiv);
       card.appendChild(el('p', 'text-xs text-muted-foreground', score + '/' + this.maxScorePerPlayer));
       if (verdict) card.appendChild(el('p', 'text-sm mt-2', esc(verdict)));
       scoresGrid.appendChild(card);
@@ -1112,7 +1158,8 @@ var QuizEngine = (function() {
     q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
       var optBtn = el('button', 'quiz-option');
-      optBtn.textContent = optText;
+      var optLetters = ['A','B','C','D','E'];
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
@@ -1151,7 +1198,8 @@ var QuizEngine = (function() {
     q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
       var optBtn = el('button', 'quiz-option');
-      optBtn.textContent = optText;
+      var optLetters = ['A','B','C','D','E'];
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
@@ -1534,8 +1582,9 @@ var QuizEngine = (function() {
     var scaleWrap = el('div', 'space-y-2');
     for (var s = 1; s <= 5; s++) {
       (function(score) {
+        var scaleEmojis = ['😕', '😐', '🙂', '😊', '😍'];
         var scaleBtn = el('button', 'quiz-option quiz-scale-option');
-        scaleBtn.innerHTML = '<span class="quiz-scale-number">' + score + '</span> <span>' + esc(scaleLabels[score - 1]) + '</span>';
+        scaleBtn.innerHTML = '<span class="quiz-scale-number">' + score + '</span> <span class="quiz-scale-emoji">' + scaleEmojis[score - 1] + '</span> <span>' + esc(scaleLabels[score - 1]) + '</span>';
         scaleBtn.style.animationDelay = ((score - 1) * 60) + 'ms';
         scaleBtn.addEventListener('click', function() {
           scaleBtn.classList.add('selected');
@@ -1926,12 +1975,16 @@ var QuizEngine = (function() {
     var ranking = el('div', 'space-y-3 max-w-md mx-auto mb-6');
     sorted.forEach(function(p, idx) {
       var count = self.designations[p.letter] || 0;
-      var card = el('div', 'glass-card rounded-xl p-4 flex items-center gap-3');
+      var podiumClass = idx === 0 ? 'quiz-podium-gold' : idx === 1 ? 'quiz-podium-silver' : idx === 2 ? 'quiz-podium-bronze' : '';
+      var card = el('div', 'glass-card rounded-xl p-4 flex items-center gap-3 quiz-reveal-enter ' + podiumClass);
+      card.style.animationDelay = (idx * 100) + 'ms';
       var medal = idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : (idx + 1) + '.';
+      var barPct = sorted[0] && self.designations[sorted[0].letter] ? Math.round((count / self.designations[sorted[0].letter]) * 100) : 0;
       card.innerHTML = '<span class="text-2xl">' + medal + '</span>' +
         '<span class="quiz-player-letter-sm">' + esc(p.letter) + '</span>' +
-        '<span class="flex-1 font-medium">' + esc(p.name) + '</span>' +
-        '<span class="text-muted-foreground">' + count + ' ' + tg('result.times', 'fois') + '</span>';
+        '<div class="flex-1"><span class="font-medium block">' + esc(p.name) + '</span>' +
+        '<div class="quiz-podium-bar mt-1"><div class="quiz-podium-bar-fill" style="width:' + barPct + '%"></div></div></div>' +
+        '<span class="text-muted-foreground font-semibold">' + count + ' ' + tg('result.times', 'fois') + '</span>';
       ranking.appendChild(card);
     });
     wrap.appendChild(ranking);
@@ -2091,7 +2144,8 @@ var QuizEngine = (function() {
     q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
       var optBtn = el('button', 'quiz-option');
-      optBtn.textContent = optText;
+      var optLetters = ['A','B','C','D','E'];
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
@@ -2134,8 +2188,10 @@ var QuizEngine = (function() {
     var pct = Math.round((totalScore / maxTotal) * 100);
 
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('result.totalCoupleScore', 'Score total du couple')));
-    wrap.appendChild(el('div', 'quiz-score-circle mx-auto mb-2', pct + '%'));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', Math.round(totalScore) + '/' + maxTotal + ' points'));
+    var mainRingDiv = el('div', '');
+    mainRingDiv.innerHTML = renderScoreRing(pct);
+    wrap.appendChild(mainRingDiv);
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6 quiz-reveal-enter', Math.round(totalScore) + '/' + maxTotal + ' points'));
 
     // Individual scores
     var scoresGrid = el('div', 'grid grid-cols-2 gap-4 mb-6');
@@ -2145,7 +2201,7 @@ var QuizEngine = (function() {
       var iPct = Math.round((score / this.maxScorePerPlayer) * 100);
       var card = el('div', 'glass-card rounded-xl p-4 text-center');
       card.innerHTML = '<p class="font-semibold mb-2" style="color:' + color.bg + '">' + esc(this.players[i].name) + '</p>' +
-        '<div class="quiz-score-circle quiz-score-sm mx-auto mb-2">' + iPct + '%</div>' +
+        renderScoreRing(iPct, 90) +
         '<p class="text-xs text-muted-foreground">' + Math.round(score) + '/' + this.maxScorePerPlayer + '</p>';
       scoresGrid.appendChild(card);
     }
@@ -2297,7 +2353,8 @@ var QuizEngine = (function() {
     q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
       var optBtn = el('button', 'quiz-option');
-      optBtn.textContent = optText;
+      var optLetters = ['A','B','C','D','E'];
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
@@ -2340,8 +2397,10 @@ var QuizEngine = (function() {
 
     // Combined score header
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('parentalite.combinedScore', 'Score global du couple')));
-    wrap.appendChild(el('div', 'quiz-score-circle mx-auto mb-2', totalScore + '/' + maxTotal));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', pct + '%'));
+    var mainRingP = el('div', '');
+    mainRingP.innerHTML = renderScoreRing(pct);
+    wrap.appendChild(mainRingP);
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6 quiz-reveal-enter', totalScore + '/' + maxTotal));
 
     // Individual scores
     var scoresGrid = el('div', 'grid grid-cols-2 gap-4 mb-6');
@@ -2349,9 +2408,10 @@ var QuizEngine = (function() {
     for (var i = 0; i < 2; i++) {
       var score = i === 0 ? s1 : s2;
       var card = el('div', 'glass-card rounded-xl p-4 text-center');
+      var iPctP = Math.round((score / this.maxPerPlayer) * 100);
       card.innerHTML = '<p class="font-semibold mb-2" style="color:' + colors[i].bg + '">' + esc(this.players[i].name) + '</p>' +
-        '<div class="quiz-score-circle quiz-score-sm mx-auto mb-2">' + score + '/' + this.maxPerPlayer + '</div>' +
-        '<p class="text-xs text-muted-foreground">' + Math.round((score / this.maxPerPlayer) * 100) + '%</p>';
+        renderScoreRing(iPctP, 90) +
+        '<p class="text-xs text-muted-foreground">' + score + '/' + this.maxPerPlayer + '</p>';
       scoresGrid.appendChild(card);
     }
     wrap.appendChild(scoresGrid);
@@ -2512,14 +2572,14 @@ var QuizEngine = (function() {
 
     renderProgressBar(wrap, this.currentQ, total);
 
-    // Result badge
-    var badge = el('div', 'text-center mb-4');
+    // Result badge with revealSlide animation
+    var badge = el('div', 'text-center mb-4 quiz-reveal-enter');
     if (isCorrect) {
-      badge.innerHTML = '<span class="inline-flex items-center gap-2 text-sm font-bold bg-green-500/15 text-green-600 dark:text-green-400 rounded-full px-4 py-2">' +
+      badge.innerHTML = '<span class="inline-flex items-center gap-2 text-base font-bold bg-green-500/15 text-green-600 dark:text-green-400 rounded-full px-5 py-2.5 shadow-sm">' +
         '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>' +
         esc(tg('truefalse.correct', 'Bonne réponse !')) + '</span>';
     } else {
-      badge.innerHTML = '<span class="inline-flex items-center gap-2 text-sm font-bold bg-red-500/15 text-red-600 dark:text-red-400 rounded-full px-4 py-2">' +
+      badge.innerHTML = '<span class="inline-flex items-center gap-2 text-base font-bold bg-red-500/15 text-red-600 dark:text-red-400 rounded-full px-5 py-2.5 shadow-sm">' +
         '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
         esc(tg('truefalse.wrong', 'Mauvaise réponse')) + '</span>';
     }
@@ -2540,16 +2600,17 @@ var QuizEngine = (function() {
     // Explanation
     var expText = tgd(this.prefix + '.q' + q.id + 'exp', '');
     if (expText) {
-      var expBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-lg mx-auto text-left');
+      var expBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-lg mx-auto text-left quiz-reveal-enter');
+      expBox.style.animationDelay = '200ms';
       expBox.innerHTML = '<p class="text-sm text-muted-foreground leading-relaxed">' +
         '<strong class="text-foreground">' + esc(tg('truefalse.explanation', 'Explication')) + ' :</strong> ' + esc(expText) + '</p>';
       wrap.appendChild(expBox);
     }
 
-    // Score tracker
-    var scoreDisp = el('div', 'text-center mb-6');
+    // Score tracker with pulse
+    var scoreDisp = el('div', 'text-center mb-6 quiz-score-tracker');
     scoreDisp.innerHTML = '<span class="text-sm font-medium text-muted-foreground">' +
-      esc(tg('truefalse.score', 'Score')) + ': <span class="text-primary font-bold">' + this.score + '</span>/' + (this.currentQ + 1) + '</span>';
+      esc(tg('truefalse.score', 'Score')) + ': <span class="text-primary font-bold quiz-score-pulse">' + this.score + '</span>/' + (this.currentQ + 1) + '</span>';
     wrap.appendChild(scoreDisp);
 
     // Next button
@@ -2579,10 +2640,11 @@ var QuizEngine = (function() {
     var pct = Math.round((this.score / total) * 100);
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
 
-    // Score circle
-    var scoreCircle = el('div', 'quiz-score-circle mx-auto mb-4', pct + '%');
-    wrap.appendChild(scoreCircle);
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', this.score + '/' + total + ' ' + tg('truefalse.correctAnswers', 'bonnes réponses')));
+    // Score ring
+    var scoreRingTf = el('div', '');
+    scoreRingTf.innerHTML = renderScoreRing(pct);
+    wrap.appendChild(scoreRingTf);
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6 quiz-reveal-enter', this.score + '/' + total + ' ' + tg('truefalse.correctAnswers', 'bonnes réponses')));
 
     // Find matching result
     var result = null;
