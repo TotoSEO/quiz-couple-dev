@@ -1119,10 +1119,14 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .blog-sidebar-heading { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background-color: hsl(var(--muted) / 0.6); border-bottom: 1px solid hsl(var(--border) / 0.5); font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.01em; color: hsl(var(--foreground)); }
 .blog-sidebar-heading svg { color: hsl(var(--primary)); flex-shrink: 0; }
 .blog-sidebar-list { display: flex; flex-direction: column; padding: 0.375rem 0.5rem 1rem; }
-.blog-sidebar-list .obl { display: block; padding: 0.375rem 0.625rem 0.5rem; border-radius: calc(var(--radius) - 2px); font-size: 0.8125rem; color: hsl(var(--muted-foreground)); cursor: pointer; transition: all 150ms; line-height: 1.4; overflow-wrap: break-word; word-break: break-word; }
-.blog-sidebar-list .obl:hover { background-color: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); }
-.blog-sidebar-articles .obl { font-size: 0.8125rem; line-height: 1.35; padding: 0.5rem 0.625rem 0.625rem; border-bottom: 1px solid hsl(var(--border) / 0.4); overflow-wrap: break-word; word-break: break-word; }
-.blog-sidebar-articles .obl:last-child { border-bottom: none; }
+.blog-sidebar-list .obl,
+.blog-sidebar-list .blog-sidebar-link { display: block; padding: 0.375rem 0.625rem 0.5rem; border-radius: calc(var(--radius) - 2px); font-size: 0.8125rem; color: hsl(var(--muted-foreground)); cursor: pointer; transition: all 150ms; line-height: 1.4; overflow-wrap: break-word; word-break: break-word; text-decoration: none; }
+.blog-sidebar-list .obl:hover,
+.blog-sidebar-list .blog-sidebar-link:hover { background-color: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); }
+.blog-sidebar-articles .obl,
+.blog-sidebar-articles .blog-sidebar-link { font-size: 0.8125rem; line-height: 1.35; padding: 0.5rem 0.625rem 0.625rem; border-bottom: 1px solid hsl(var(--border) / 0.4); overflow-wrap: break-word; word-break: break-word; }
+.blog-sidebar-articles .obl:last-child,
+.blog-sidebar-articles .blog-sidebar-link:last-child { border-bottom: none; }
 
 /* ── Quiz page hero ──────────────────────────────────────── */
 

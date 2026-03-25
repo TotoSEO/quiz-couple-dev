@@ -213,7 +213,7 @@
             </button>
             <div class="blog-sidebar-list">
               <% for (const item of sidebarTests) { %>
-              <span class="obl" data-h="<%= ob(item.url) %>"><%= item.label %></span>
+              <a href="<%= item.url %>" class="blog-sidebar-link"><%= item.label %></a>
               <% } %>
             </div>
           </div>
@@ -227,7 +227,7 @@
             </button>
             <div class="blog-sidebar-list">
               <% for (const item of sidebarQuizzes) { %>
-              <span class="obl" data-h="<%= ob(item.url) %>"><%= item.label %></span>
+              <a href="<%= item.url %>" class="blog-sidebar-link"><%= item.label %></a>
               <% } %>
             </div>
           </div>
@@ -241,7 +241,7 @@
             </button>
             <div class="blog-sidebar-list">
               <% for (const item of sidebarOther) { %>
-              <span class="obl" data-h="<%= ob(item.url) %>"><%= item.label %></span>
+              <a href="<%= item.url %>" class="blog-sidebar-link"><%= item.label %></a>
               <% } %>
             </div>
           </div>
@@ -255,7 +255,7 @@
             </div>
             <div class="blog-sidebar-list">
               <% for (const a of sidebarArticles) { %>
-              <span class="obl" data-h="<%= ob(a.url) %>"><%= a.title %></span>
+              <a href="<%= a.url %>" class="blog-sidebar-link"><%= a.title %></a>
               <% } %>
             </div>
           </div>

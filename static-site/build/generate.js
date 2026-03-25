@@ -422,28 +422,45 @@ function generateSitemaps() {
 
   // Collect all page entries (routes + blog articles)
   const entries = [];
+  const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
   // Static routes
   for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
-    if (['admin', 'legalMentions', 'privacy', 'sitemap'].includes(key)) continue;
+    // Skip noindex pages, admin, and frOnly routes without proper multilang support
+    if (['admin', 'legalMentions', 'privacy', 'sitemap', 'ebookConfirm'].includes(key)) continue;
+
+    // Check if this route has all language slugs
     const urlsByLang = {};
+    let hasAllLangs = true;
     for (const lang of LANGUAGES) {
+      if (slugs[lang] === undefined) { hasAllLangs = false; continue; }
       urlsByLang[lang] = url(lang, slugs[lang]);
     }
-    entries.push({ urlsByLang });
+    // Only include routes that have all language variants
+    if (!hasAllLangs) continue;
+
+    // Assign priority and changefreq based on page type
+    let priority = '0.7';
+    let changefreq = 'weekly';
+    if (key === 'home') { priority = '1.0'; changefreq = 'daily'; }
+    else if (key === 'blog') { priority = '0.8'; changefreq = 'daily'; }
+    else if (key === 'contact' || key === 'about') { priority = '0.4'; changefreq = 'monthly'; }
+    else if (key === 'activities') { priority = '0.6'; changefreq = 'weekly'; }
+
+    entries.push({ urlsByLang, lastmod: today, priority, changefreq });
   }
 
   // Blog articles
   for (const article of BLOG_ARTICLES) {
     if (article.frOnly) {
       // frOnly articles: only appear in FR sitemap, no hreflang alternates
-      entries.push({ urlsByLang: { fr: blogUrl('fr', article.slugs.fr) }, lastmod: article.publishedAt, frOnly: true });
+      entries.push({ urlsByLang: { fr: blogUrl('fr', article.slugs.fr) }, lastmod: article.publishedAt, frOnly: true, priority: '0.6', changefreq: 'monthly' });
     } else {
       const urlsByLang = {};
       for (const lang of LANGUAGES) {
         urlsByLang[lang] = blogUrl(lang, article.slugs[lang]);
       }
-      entries.push({ urlsByLang, lastmod: article.publishedAt });
+      entries.push({ urlsByLang, lastmod: article.publishedAt, priority: '0.6', changefreq: 'monthly' });
     }
   }
 
@@ -457,6 +474,8 @@ function generateSitemaps() {
     for (const entry of entries) {
       // Skip frOnly entries for non-FR sitemaps
       if (entry.frOnly && lang !== 'fr') continue;
+      // Skip entries that don't have a URL for this language
+      if (!entry.urlsByLang[lang]) continue;
       xml += `  <url>\n`;
       xml += `    <loc>${entry.urlsByLang[lang]}</loc>\n`;
       if (!entry.frOnly) {
@@ -464,6 +483,12 @@ function generateSitemaps() {
       }
       if (entry.lastmod) {
         xml += `    <lastmod>${entry.lastmod}</lastmod>\n`;
+      }
+      if (entry.changefreq) {
+        xml += `    <changefreq>${entry.changefreq}</changefreq>\n`;
+      }
+      if (entry.priority) {
+        xml += `    <priority>${entry.priority}</priority>\n`;
       }
       xml += `  </url>\n`;
     }
@@ -943,7 +968,8 @@ async function generate404Pages() {
       description: desc404[lang] || desc404.fr,
       rawDescription: desc404[lang] || desc404.fr,
       canonical,
-      alternates,
+      alternates: [],
+      noindex: 'noindex, follow',
       ogImage: `${BASE_URL}/og-image.webp`,
       routeKey: '404',
       pagePath: '/404',
