@@ -1,5 +1,12 @@
+# quiz-couple.com robots.txt
+
 User-agent: *
 Allow: /
 Disallow: /admin
+Disallow: /admin/
+Disallow: /confirmation-ebook/
+Disallow: /js/data/
+Disallow: /js/admin.js
 
+# Sitemaps
 Sitemap: https://quiz-couple.com/sitemap.xml
