@@ -268,6 +268,45 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
+    slug: 'red-flags-femme',
+    category: 'vie-de-couple',
+    slugs: {
+      fr: 'red-flags-femme',
+      en: 'red-flags-in-a-woman',
+      es: 'red-flags-en-una-mujer',
+      de: 'red-flags-bei-einer-frau',
+      it: 'red-flag-in-una-donna',
+    },
+    publishedAt: '2026-03-07',
+    locales: { fr: true, en: true, es: true, de: true, it: true },
+  },
+  {
+    slug: 'copain-ne-fait-pas-effort',
+    category: 'vie-de-couple',
+    slugs: {
+      fr: 'copain-ne-fait-pas-effort',
+      en: 'boyfriend-doesnt-make-effort',
+      es: 'novio-no-hace-esfuerzo',
+      de: 'freund-gibt-sich-keine-muehe',
+      it: 'ragazzo-non-si-impegna',
+    },
+    publishedAt: '2026-03-08',
+    locales: { fr: true, en: true, es: true, de: true, it: true },
+  },
+  {
+    slug: 'lexique-relations-2026',
+    category: 'vie-de-couple',
+    slugs: {
+      fr: 'lexique-relations-2026',
+      en: 'lexique-relations-2026',
+      es: 'lexique-relations-2026',
+      de: 'lexique-relations-2026',
+      it: 'lexique-relations-2026',
+    },
+    publishedAt: '2026-03-11',
+    locales: { fr: true, en: false, es: false, de: false, it: false },
+  },
+  {
     slug: 'dependance-affective',
     category: 'vie-de-couple',
     slugs: {
