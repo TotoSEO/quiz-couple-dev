@@ -44,7 +44,7 @@ const article: BlogArticleData = {
           id: 'necesidad-vs-amor',
           title: "No es amor, es una necesidad",
           content: `<p>La distinción es fundamental. El amor es elegir a alguien libremente. La dependencia emocional es <strong>necesitar</strong> a alguien para llenar un vacío interior. No amas a la persona por lo que es. Te aferras a lo que te hace sentir cuando está. Y sobre todo, entras en pánico con la idea de perder esa sensación.</p>
-<p>Por eso las personas con dependencia emocional pueden quedarse en <a href="/blog/cosas-no-aceptar-pareja/">relaciones donde aceptan lo inaceptable</a> durante años. No es debilidad. Es que el vacío que espera al otro lado da más miedo que el sufrimiento que viven dentro.</p>`,
+<p>Por eso las personas con dependencia emocional pueden quedarse en <a href="/es/blog/cosas-no-aceptar-pareja/">relaciones donde aceptan lo inaceptable</a> durante años. No es debilidad. Es que el vacío que espera al otro lado da más miedo que el sufrimiento que viven dentro.</p>`,
         },
         {
           id: 'miedo-abandono',
@@ -56,7 +56,7 @@ const article: BlogArticleData = {
           id: 'perdida-identidad',
           title: "La pérdida progresiva de identidad",
           content: `<p>Es uno de los aspectos más insidiosos. No ocurre de golpe. Empiezas adaptando tus gustos. Luego tus horarios. Luego tus amistades. Luego tus opiniones. Al cabo de unos meses, ya no sabes muy bien qué te gusta, qué quieres, qué piensas independientemente del otro.</p>
-<p>No es un compromiso de pareja: es un borrado. Y lo peor es que normalmente solo te das cuenta después de la ruptura, cuando te encuentras frente a ti mismo/a y descubres que ya no sabes quién eres. Si te sientes atrapado/a en esta situación, <a href="/tester-son-couple/">hacer balance de tu relación</a> puede ayudarte a ver las cosas con más claridad.</p>`,
+<p>No es un compromiso de pareja: es un borrado. Y lo peor es que normalmente solo te das cuenta después de la ruptura, cuando te encuentras frente a ti mismo/a y descubres que ya no sabes quién eres. Si te sientes atrapado/a en esta situación, <a href="/es/test-compatibilidad-pareja/">hacer balance de tu relación</a> puede ayudarte a ver las cosas con más claridad.</p>`,
         },
       ],
     },
@@ -98,7 +98,7 @@ const article: BlogArticleData = {
 <h3>Fase 4: La sumisión</h3>
 <p>Para calmar la ansiedad, haces lo que sea para que el otro vuelva. Te disculpas (aunque no tengas razón). Te haces más disponible, más complaciente, más "fácil de llevar". Borras tus necesidades para no molestar. Te conviertes en la versión de ti que el otro parece querer.</p>
 <h3>Fase 5: El agotamiento o la ruptura</h3>
-<p>Un día, el otro se va (o tú, agotado/a). Y el ciclo vuelve a empezar con otra persona. A veces peor, porque cada ruptura refuerza la creencia: "no soy suficiente". Si has vivido esto, quizás reconozcas también las <a href="/blog/fases-de-la-ruptura-en-el-hombre/">diferentes fases emocionales que siguen a una ruptura</a>.</p>`,
+<p>Un día, el otro se va (o tú, agotado/a). Y el ciclo vuelve a empezar con otra persona. A veces peor, porque cada ruptura refuerza la creencia: "no soy suficiente". Si has vivido esto, quizás reconozcas también las <a href="/es/blog/fases-de-la-ruptura-en-el-hombre/">diferentes fases emocionales que siguen a una ruptura</a>.</p>`,
     },
     {
       id: 'dependencia-vs-amor-sano',
@@ -149,8 +149,8 @@ const article: BlogArticleData = {
       id: 'conclusion',
       title: "Lo que debes recordar",
       content: `<p>La dependencia emocional no es una fatalidad. Es un patrón, potente, arraigado, a veces doloroso, pero un patrón que puedes transformar. No en un día, no leyendo un artículo, sino aceptando mirar de frente lo que está en juego y eligiendo, día tras día, elegirte también a ti.</p>
-<p>Mereces una relación donde seas libre. No libre de irte, libre de estar ahí por elección, no por miedo al vacío. Y si te preguntas si tu relación actual presenta <a href="/test-couple-toxique/">dinámicas tóxicas</a>, puede ser un buen punto de partida para avanzar.</p>
-<a href="/blog/mujer-infeliz-en-pareja-senales/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leer también</span><span class="blog-read-also-title">Cómo reconocer a una mujer infeliz en su pareja</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+<p>Mereces una relación donde seas libre. No libre de irte, libre de estar ahí por elección, no por miedo al vacío. Y si te preguntas si tu relación actual presenta <a href="/es/test-relacion-toxica/">dinámicas tóxicas</a>, puede ser un buen punto de partida para avanzar.</p>
+<a href="/es/blog/mujer-infeliz-en-pareja-senales/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leer también</span><span class="blog-read-also-title">Cómo reconocer a una mujer infeliz en su pareja</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };

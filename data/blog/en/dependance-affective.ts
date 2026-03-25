@@ -44,7 +44,7 @@ const article: BlogArticleData = {
           id: 'need-vs-love',
           title: "It's Not Love, It's a Need",
           content: `<p>The distinction is fundamental. Love means freely choosing someone. Emotional dependency means <strong>needing</strong> someone to fill an inner void. You don't love the person for who they are, you cling to how they make you feel when they're there. And above all, you panic at the thought of losing that feeling.</p>
-<p>This is why emotionally dependent people can stay in <a href="/blog/things-not-accept-relationship/">relationships where they accept the unacceptable</a> for years. It's not weakness. It's that the emptiness waiting on the other side is scarier than the pain they're living through.</p>`,
+<p>This is why emotionally dependent people can stay in <a href="/en/blog/things-not-accept-relationship/">relationships where they accept the unacceptable</a> for years. It's not weakness. It's that the emptiness waiting on the other side is scarier than the pain they're living through.</p>`,
         },
         {
           id: 'fear-of-abandonment',
@@ -56,7 +56,7 @@ const article: BlogArticleData = {
           id: 'loss-of-identity',
           title: "The Gradual Loss of Identity",
           content: `<p>This is one of the most insidious aspects. It doesn't happen overnight. You start by adapting your tastes. Then your schedule. Then your friendships. Then your opinions. After a few months, you can barely tell what you like, what you want, what you think independently of the other person.</p>
-<p>This isn't relationship compromise, it's erasure. And the worst part is that you usually only realize it after the breakup, when you're face to face with yourself and discover you no longer know who you are. If you feel stuck in this situation, <a href="/tester-son-couple/">taking stock of your relationship</a> can help you see things more clearly.</p>`,
+<p>This isn't relationship compromise, it's erasure. And the worst part is that you usually only realize it after the breakup, when you're face to face with yourself and discover you no longer know who you are. If you feel stuck in this situation, <a href="/en/couple-compatibility-test/">taking stock of your relationship</a> can help you see things more clearly.</p>`,
         },
       ],
     },
@@ -98,7 +98,7 @@ const article: BlogArticleData = {
 <h3>Phase 4: Submission</h3>
 <p>To calm the anxiety, you do whatever it takes to bring the other person back. You apologize (even without reason). You make yourself more available, more accommodating, more "easy to be with." You erase your needs to avoid being a bother. You become the version of yourself the other person seems to want.</p>
 <h3>Phase 5: Exhaustion or Breakup</h3>
-<p>Eventually, they leave (or you do, completely drained). And the cycle starts over with someone new. Sometimes worse, because each breakup reinforces the belief: "I'm not enough." If you've been through this, you may also recognize the <a href="/blog/breakup-stages-for-men/">different emotional phases that follow a breakup</a>.</p>`,
+<p>Eventually, they leave (or you do, completely drained). And the cycle starts over with someone new. Sometimes worse, because each breakup reinforces the belief: "I'm not enough." If you've been through this, you may also recognize the <a href="/en/blog/breakup-stages-for-men/">different emotional phases that follow a breakup</a>.</p>`,
     },
     {
       id: 'dependency-vs-healthy-love',
@@ -149,8 +149,8 @@ const article: BlogArticleData = {
       id: 'conclusion',
       title: "The Bottom Line",
       content: `<p>Emotional dependency is not a life sentence. It's a pattern, powerful, deeply rooted, sometimes painful, but a pattern you can transform. Not in a day, not by reading an article, but by accepting to look at what's really going on and choosing, day after day, to also choose yourself.</p>
-<p>You deserve a relationship where you're free. Not free to leave, but free to be there by choice, not out of fear of the void. And if you're wondering whether your current relationship has <a href="/test-couple-toxique/">toxic dynamics</a>, that might be a good starting point to move forward.</p>
-<a href="/blog/unhappy-woman-in-relationship-signs/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">How to Recognize an Unhappy Woman in a Relationship</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+<p>You deserve a relationship where you're free. Not free to leave, but free to be there by choice, not out of fear of the void. And if you're wondering whether your current relationship has <a href="/en/toxic-relationship-test/">toxic dynamics</a>, that might be a good starting point to move forward.</p>
+<a href="/en/blog/unhappy-woman-in-relationship-signs/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">How to Recognize an Unhappy Woman in a Relationship</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };
