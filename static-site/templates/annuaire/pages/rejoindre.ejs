@@ -219,7 +219,7 @@
             <label class="ann-label" for="f-ville">Ville <span class="ann-required">*</span></label>
             <select id="f-ville" name="ville" class="ann-input ann-select" required>
               <option value="" disabled selected>Sélectionnez votre ville...</option>
-              <% for (const c of cities) { %>
+              <% for (const c of [...cities].sort((a, b) => a.name.localeCompare(b.name, 'fr'))) { %>
               <option value="<%= c.id %>"><%= c.name %> (<%= c.department %>)</option>
               <% } %>
             </select>
