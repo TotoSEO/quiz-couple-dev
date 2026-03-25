@@ -263,7 +263,7 @@
     <div style="margin-top: 2.5rem;">
       <h3 style="margin-bottom: 1.25rem; text-align: center;">Villes populaires</h3>
       <div class="ann-cities-grid ann-stagger">
-        <% const topCities = cities.sort((a, b) => b.population - a.population).slice(0, 10); %>
+        <% const topCities = [...cities].sort((a, b) => b.population - a.population).slice(0, 10); %>
         <% for (const city of topCities) { %>
         <a href="/<%= city.id %>/" class="ann-city-card ann-animate-fade-in-up">
           <svg class="ann-city-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
