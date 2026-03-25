@@ -437,6 +437,37 @@
                 var pcField = document.getElementById('f-codepostal');
                 if (dcField) dcField.value = realCity;
                 if (pcField && postalCode) pcField.value = postalCode;
+                // Auto-select the matching city in the dropdown based on postal code department
+                var villeSelect = document.getElementById('f-ville');
+                if (villeSelect && postalCode && postalCode.length >= 5) {
+                  var dept;
+                  if (/^97[1-6]/.test(postalCode)) {
+                    dept = postalCode.slice(0, 3);
+                  } else if (postalCode.startsWith('20')) {
+                    var sub = parseInt(postalCode.slice(0, 3), 10);
+                    dept = sub <= 201 ? '2A' : '2B';
+                  } else {
+                    dept = postalCode.slice(0, 2);
+                  }
+                  // Try to find a city in this department
+                  var options = villeSelect.options;
+                  var bestMatch = -1;
+                  for (var oi = 1; oi < options.length; oi++) {
+                    var optText = options[oi].text;
+                    // Option format: "CityName (dept)"
+                    var deptMatch = optText.match(/\(([^)]+)\)$/);
+                    if (deptMatch && deptMatch[1] === dept) {
+                      // Prefer exact city name match
+                      var optCity = optText.replace(/\s*\([^)]+\)$/, '');
+                      if (realCity && optCity.toLowerCase() === realCity.toLowerCase()) {
+                        bestMatch = oi;
+                        break;
+                      }
+                      if (bestMatch === -1) bestMatch = oi;
+                    }
+                  }
+                  if (bestMatch > 0) villeSelect.selectedIndex = bestMatch;
+                }
                 sugBox.style.display = 'none';
               });
               sugBox.appendChild(div);
