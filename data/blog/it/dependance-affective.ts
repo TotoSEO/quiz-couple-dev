@@ -44,7 +44,7 @@ const article: BlogArticleData = {
           id: 'bisogno-vs-amore',
           title: "Non è amore, è un bisogno",
           content: `<p>La distinzione è fondamentale. L'amore è scegliere qualcuno liberamente. La dipendenza affettiva è <strong>aver bisogno</strong> di qualcuno per riempire un vuoto interiore. Non ami la persona per quello che è, ti aggrappi a quello che ti fa provare quando c'è. E soprattutto, vai nel panico all'idea di perdere quella sensazione.</p>
-<p>Ecco perché le persone con dipendenza affettiva possono restare in <a href="/blog/cose-non-accettare-coppia/">relazioni dove accettano l'inaccettabile</a> per anni. Non è debolezza. È che il vuoto che aspetta dall'altra parte fa più paura della sofferenza che vivono dentro.</p>`,
+<p>Ecco perché le persone con dipendenza affettiva possono restare in <a href="/it/blog/cose-non-accettare-coppia/">relazioni dove accettano l'inaccettabile</a> per anni. Non è debolezza. È che il vuoto che aspetta dall'altra parte fa più paura della sofferenza che vivono dentro.</p>`,
         },
         {
           id: 'paura-abbandono',
@@ -56,7 +56,7 @@ const article: BlogArticleData = {
           id: 'perdita-identita',
           title: "La perdita progressiva di identità",
           content: `<p>È uno degli aspetti più insidiosi. Non succede da un giorno all'altro. Inizi ad adattare i tuoi gusti. Poi i tuoi orari. Poi le tue amicizie. Poi le tue opinioni. Dopo qualche mese, non sai più bene cosa ti piace, cosa vuoi, cosa pensi indipendentemente dall'altro.</p>
-<p>Non è un compromesso di coppia, è una cancellazione. E il peggio è che di solito te ne rendi conto solo dopo la rottura, quando ti ritrovi di fronte a te stesso/a e scopri di non sapere più chi sei. Se ti senti intrappolato/a in questa situazione, <a href="/tester-son-couple/">fare il punto sulla tua relazione</a> può aiutarti a vederci più chiaro.</p>`,
+<p>Non è un compromesso di coppia, è una cancellazione. E il peggio è che di solito te ne rendi conto solo dopo la rottura, quando ti ritrovi di fronte a te stesso/a e scopri di non sapere più chi sei. Se ti senti intrappolato/a in questa situazione, <a href="/it/test-compatibilita-coppia/">fare il punto sulla tua relazione</a> può aiutarti a vederci più chiaro.</p>`,
         },
       ],
     },
@@ -98,7 +98,7 @@ const article: BlogArticleData = {
 <h3>Fase 4: La sottomissione</h3>
 <p>Per calmare l'ansia, fai di tutto per riportare l'altro da te. Ti scusi (anche senza motivo). Ti rendi più disponibile, più accomodante, più "facile da gestire". Cancelli i tuoi bisogni per non disturbare. Diventi la versione di te che l'altro sembra volere.</p>
 <h3>Fase 5: L'esaurimento o la rottura</h3>
-<p>Un giorno, l'altro se ne va (o tu, completamente esausto/a). E il ciclo ricomincia con qualcun altro. A volte peggio, perché ogni rottura rafforza la convinzione: "non sono abbastanza". Se hai vissuto questo, potresti riconoscere anche le <a href="/blog/fasi-della-rottura-nell-uomo/">diverse fasi emotive che seguono una rottura</a>.</p>`,
+<p>Un giorno, l'altro se ne va (o tu, completamente esausto/a). E il ciclo ricomincia con qualcun altro. A volte peggio, perché ogni rottura rafforza la convinzione: "non sono abbastanza". Se hai vissuto questo, potresti riconoscere anche le <a href="/it/blog/fasi-della-rottura-nell-uomo/">diverse fasi emotive che seguono una rottura</a>.</p>`,
     },
     {
       id: 'dipendenza-vs-amore-sano',
@@ -149,8 +149,8 @@ const article: BlogArticleData = {
       id: 'conclusione',
       title: "Quello che devi ricordare",
       content: `<p>La dipendenza affettiva non è una fatalità. È un pattern, potente, radicato, a volte doloroso, ma un pattern che puoi trasformare. Non in un giorno, non leggendo un articolo, ma accettando di guardare in faccia quello che succede e scegliendo, giorno dopo giorno, di scegliere anche te stesso/a.</p>
-<p>Meriti una relazione in cui sei libero/a. Non libero/a di andartene, libero/a di essere lì per scelta, non per paura del vuoto. E se ti chiedi se la tua relazione attuale presenta <a href="/test-couple-toxique/">dinamiche tossiche</a>, questo può essere un buon punto di partenza per andare avanti.</p>
-<a href="/blog/donna-infelice-in-coppia-segnali/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leggi anche</span><span class="blog-read-also-title">Come riconoscere una donna infelice nella coppia</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+<p>Meriti una relazione in cui sei libero/a. Non libero/a di andartene, libero/a di essere lì per scelta, non per paura del vuoto. E se ti chiedi se la tua relazione attuale presenta <a href="/it/test-relazione-tossica/">dinamiche tossiche</a>, questo può essere un buon punto di partenza per andare avanti.</p>
+<a href="/it/blog/donna-infelice-in-coppia-segnali/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leggi anche</span><span class="blog-read-also-title">Come riconoscere una donna infelice nella coppia</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };

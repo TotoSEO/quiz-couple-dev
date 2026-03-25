@@ -44,7 +44,7 @@ const article: BlogArticleData = {
           id: 'beduernis-vs-liebe',
           title: "Es ist keine Liebe, es ist ein Bedürfnis",
           content: `<p>Der Unterschied ist fundamental. Liebe bedeutet, jemanden frei zu wählen. Emotionale Abhängigkeit bedeutet, jemanden zu <strong>brauchen</strong>, um eine innere Leere zu füllen. Du liebst die Person nicht für das, was sie ist, du klammerst dich an das, was sie in dir auslöst, wenn sie da ist. Und vor allem: Du gerätst in Panik bei dem Gedanken, dieses Gefühl zu verlieren.</p>
-<p>Deshalb können emotional abhängige Menschen jahrelang in <a href="/blog/grenzen-beziehung-nicht-akzeptieren/">Beziehungen bleiben, in denen sie das Inakzeptable akzeptieren</a>. Das ist keine Schwäche. Es ist, dass die Leere dahinter mehr Angst macht als der Schmerz, den sie darin erleben.</p>`,
+<p>Deshalb können emotional abhängige Menschen jahrelang in <a href="/de/blog/grenzen-beziehung-nicht-akzeptieren/">Beziehungen bleiben, in denen sie das Inakzeptable akzeptieren</a>. Das ist keine Schwäche. Es ist, dass die Leere dahinter mehr Angst macht als der Schmerz, den sie darin erleben.</p>`,
         },
         {
           id: 'verlustangst',
@@ -56,7 +56,7 @@ const article: BlogArticleData = {
           id: 'identitaetsverlust',
           title: "Der schleichende Identitätsverlust",
           content: `<p>Das ist einer der tückischsten Aspekte. Es passiert nicht über Nacht. Du fängst an, deinen Geschmack anzupassen. Dann deinen Zeitplan. Dann deine Freundschaften. Dann deine Meinungen. Nach ein paar Monaten weißt du kaum noch, was dir gefällt, was du willst, was du unabhängig vom anderen denkst.</p>
-<p>Das ist kein Beziehungskompromiss. Das ist Auslöschung. Und das Schlimmste ist, dass du es meist erst nach der Trennung bemerkst, wenn du dir selbst gegenüberstehst und feststellst, dass du nicht mehr weißt, wer du bist. Wenn du in dieser Situation steckst, kann dir <a href="/tester-son-couple/">eine Bestandsaufnahme deiner Beziehung</a> helfen, klarer zu sehen.</p>`,
+<p>Das ist kein Beziehungskompromiss. Das ist Auslöschung. Und das Schlimmste ist, dass du es meist erst nach der Trennung bemerkst, wenn du dir selbst gegenüberstehst und feststellst, dass du nicht mehr weißt, wer du bist. Wenn du in dieser Situation steckst, kann dir <a href="/de/paar-kompatibilitaetstest/">eine Bestandsaufnahme deiner Beziehung</a> helfen, klarer zu sehen.</p>`,
         },
       ],
     },
@@ -98,7 +98,7 @@ const article: BlogArticleData = {
 <h3>Phase 4: Die Unterwerfung</h3>
 <p>Um die Angst zu beruhigen, tust du alles, um den anderen zurückzugewinnen. Du entschuldigst dich (auch grundlos). Du machst dich verfügbarer, anpassungsfähiger, "unkomplizierter". Du löschst deine Bedürfnisse aus, um nicht zu stören. Du wirst zu der Version von dir, die der andere zu wollen scheint.</p>
 <h3>Phase 5: Die Erschöpfung oder Trennung</h3>
-<p>Irgendwann geht der andere (oder du, völlig erschöpft). Und der Kreislauf beginnt von vorn mit jemand Neuem. Manchmal schlimmer, weil jede Trennung die Überzeugung verstärkt: "Ich bin nicht genug." Wenn du das erlebt hast, erkennst du vielleicht auch die <a href="/blog/trennungsphasen-beim-mann/">verschiedenen emotionalen Phasen nach einer Trennung</a>.</p>`,
+<p>Irgendwann geht der andere (oder du, völlig erschöpft). Und der Kreislauf beginnt von vorn mit jemand Neuem. Manchmal schlimmer, weil jede Trennung die Überzeugung verstärkt: "Ich bin nicht genug." Wenn du das erlebt hast, erkennst du vielleicht auch die <a href="/de/blog/trennungsphasen-beim-mann/">verschiedenen emotionalen Phasen nach einer Trennung</a>.</p>`,
     },
     {
       id: 'abhaengigkeit-vs-gesunde-liebe',
@@ -149,8 +149,8 @@ const article: BlogArticleData = {
       id: 'fazit',
       title: "Das Wichtigste zum Mitnehmen",
       content: `<p>Emotionale Abhängigkeit ist kein Schicksal. Es ist ein Muster, mächtig, tief verwurzelt, manchmal schmerzhaft, aber ein Muster, das du verändern kannst. Nicht an einem Tag, nicht durch das Lesen eines Artikels, aber indem du akzeptierst, dem ins Auge zu sehen, was wirklich passiert, und dich Tag für Tag auch für dich selbst entscheidest.</p>
-<p>Du verdienst eine Beziehung, in der du frei bist. Nicht frei zu gehen, frei, da zu sein aus freiem Willen, nicht aus Angst vor der Leere. Und wenn du dich fragst, ob deine aktuelle Beziehung <a href="/test-couple-toxique/">toxische Dynamiken</a> aufweist, kann das ein guter Ausgangspunkt sein, um weiterzukommen.</p>
-<a href="/blog/unglueckliche-frau-in-beziehung-anzeichen/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lies auch</span><span class="blog-read-also-title">Wie man eine unglückliche Frau in einer Beziehung erkennt</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+<p>Du verdienst eine Beziehung, in der du frei bist. Nicht frei zu gehen, frei, da zu sein aus freiem Willen, nicht aus Angst vor der Leere. Und wenn du dich fragst, ob deine aktuelle Beziehung <a href="/de/toxische-beziehung-test/">toxische Dynamiken</a> aufweist, kann das ein guter Ausgangspunkt sein, um weiterzukommen.</p>
+<a href="/de/blog/unglueckliche-frau-in-beziehung-anzeichen/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lies auch</span><span class="blog-read-also-title">Wie man eine unglückliche Frau in einer Beziehung erkennt</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };
