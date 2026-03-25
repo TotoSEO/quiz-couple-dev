@@ -417,6 +417,18 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-03-11',
   },
+  {
+    internalSlug: 'dependance-affective',
+    category: 'vie-de-couple',
+    slugs: {
+      fr: 'dependance-affective',
+      en: 'emotional-dependency-in-relationships',
+      es: 'dependencia-emocional-en-la-pareja',
+      de: 'emotionale-abhaengigkeit-in-beziehungen',
+      it: 'dipendenza-affettiva-nella-coppia',
+    },
+    publishedAt: '2026-03-24',
+  },
 ];
 
 // Author data
