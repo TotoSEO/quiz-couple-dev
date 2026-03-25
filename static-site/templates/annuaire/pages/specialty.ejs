@@ -105,7 +105,7 @@
 
       <div class="ann-carousel-viewport">
         <div class="ann-carousel-track" id="city-carousel-track">
-          <% for (const c of cities) { %>
+          <% for (const c of [...cities].sort((a, b) => a.name.localeCompare(b.name, 'fr'))) { %>
           <a href="/<%= specialty.id %>/<%= c.id %>/" class="ann-city-carousel-card" data-city-name="<%= c.name.toLowerCase() %>">
             <svg class="ann-city-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <span class="ann-city-carousel-name"><%= c.name %></span>
