@@ -36,6 +36,11 @@
   ];
   const homeUrl = getLocalizedUrl('home', lang);
   const currentYear = new Date().getFullYear();
+
+  // Filter out links not available in current language
+  const _filterAvail = (links) => links.filter(l => getLocalizedUrl(l.routeKey, lang));
+  const footerTestLinksFiltered = _filterAvail(footerTestLinks);
+  const footerQuizLinksFiltered = _filterAvail(footerQuizLinks);
 %>
 <footer class="border-t border-border bg-muted/30">
   <div class="container mx-auto px-6 sm:px-8 py-12">
@@ -53,7 +58,7 @@
       <div>
         <span class="block mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:nav.categoryTests', 'Tests') %></span>
         <div class="flex flex-col gap-2">
-          <% for (const link of footerTestLinks) { %>
+          <% for (const link of footerTestLinksFiltered) { %>
           <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
         </div>
@@ -63,7 +68,7 @@
       <div>
         <span class="block mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:nav.categoryQuizzes', 'Quiz') %></span>
         <div class="flex flex-col gap-2">
-          <% for (const link of footerQuizLinks) { %>
+          <% for (const link of footerQuizLinksFiltered) { %>
           <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
         </div>

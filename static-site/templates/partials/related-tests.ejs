@@ -1,0 +1,57 @@
+<%
+  const _relatedMap = {
+    testCouple:       ['testCommonPoints', 'testCoupleSain', 'testConfiance', 'testAttachement'],
+    testCommonPoints: ['testCouple', 'testMariage', 'testLangageAmour', 'testEmmenager'],
+    testDistance:     ['testCouple', 'testConfiance', 'testLangageAmour', 'testAttachement'],
+    testToxic:        ['testCoupleSain', 'testDivorce', 'testJalousie', 'testAttachement'],
+    testCoupleSain:   ['testToxic', 'testCouple', 'testLangageAmour', 'testConfiance'],
+    testMariage:      ['testCouple', 'testCommonPoints', 'testParentalite', 'testEmmenager'],
+    testDivorce:      ['testToxic', 'testCoupleSain', 'testConfiance', 'testAttachement'],
+    testParentalite:  ['testMariage', 'testEmmenager', 'testCoupleSain', 'testCommonPoints'],
+    testEmmenager:    ['testMariage', 'testCommonPoints', 'testParentalite', 'testCoupleSain'],
+    testAstroPrenoms: ['testCouple', 'testCommonPoints', 'testLangageAmour', 'testMariage'],
+    testJalousie:     ['testConfiance', 'testToxic', 'testAttachement', 'testCoupleSain'],
+    testLangageAmour: ['testAttachement', 'testCouple', 'testCommonPoints', 'testCoupleSain'],
+    testAttachement:  ['testConfiance', 'testLangageAmour', 'testToxic', 'testJalousie'],
+    testConfiance:    ['testJalousie', 'testAttachement', 'testToxic', 'testCoupleSain'],
+    quizAmoureux:     ['quizCoquin', 'quizMarrant', 'testLangageAmour', 'quizTuPreferes'],
+    quizCoquin:       ['quizAmoureux', 'testLangageAmour', 'quizGenant', 'quizTuPreferes'],
+    quizMarrant:      ['quizGenant', 'quizTuPreferes', 'quizMost', 'quizKnowledge'],
+    quizKnowledge:    ['quizMost', 'quizMarrant', 'quizAmoureux', 'testCommonPoints'],
+    quizMost:         ['quizKnowledge', 'quizMarrant', 'quizGenant', 'quizTuPreferes'],
+    quizAdo:          ['quizAmoureux', 'quizMarrant', 'quizKnowledge', 'testCouple'],
+    quizGenant:       ['quizMarrant', 'quizCoquin', 'quizTuPreferes', 'quizMost'],
+    quizTuPreferes:   ['quizMarrant', 'quizGenant', 'quizMost', 'quizAmoureux'],
+    quizVraiFaux:     ['quizKnowledge', 'quizMarrant', 'testCouple', 'quizMost'],
+  };
+
+  const _relatedKeys = (_relatedMap[routeKey] || []).filter(function(k) {
+    return getLocalizedUrl(k, lang);
+  }).slice(0, 4);
+
+  const _relatedLabel = lang === 'fr' ? 'Ces tests pourraient aussi vous intéresser' :
+    lang === 'en' ? 'You might also like these tests' :
+    lang === 'es' ? 'Estos tests también te pueden interesar' :
+    lang === 'de' ? 'Diese Tests könnten Sie auch interessieren' :
+    'Potrebbero interessarti anche questi test';
+%>
+<% if (_relatedKeys.length > 0) { %>
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= _relatedLabel %></h2>
+    <div class="grid gap-4 grid-cols-1 sm:grid-cols-2">
+      <% for (const rk of _relatedKeys) {
+        const rTitle = t('quizzes:' + rk + '.shortTitle', t('quizzes:' + rk + '.title', rk));
+        const rDesc = t('quizzes:' + rk + '.description', '');
+        const rUrl = getLocalizedUrl(rk, lang);
+        if (!rUrl) continue;
+      %>
+      <a href="<%= rUrl %>" class="block p-4 rounded-lg border border-border hover:border-primary/40 hover:bg-primary/5 transition-all no-underline group">
+        <h3 class="font-semibold text-foreground group-hover:text-primary transition-colors mb-1"><%= rTitle %></h3>
+        <% if (rDesc) { %><p class="text-sm text-muted-foreground line-clamp-2"><%= rDesc %></p><% } %>
+      </a>
+      <% } %>
+    </div>
+  </div>
+</section>
+<% } %>
