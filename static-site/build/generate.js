@@ -131,7 +131,7 @@ async function generatePage(routeKey, lang) {
 
   const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm'];
   const isNoindex = noindexRoutes.includes(routeKey);
-  const alternates = isNoindex ? [] : getRouteAlternates(routeKey);
+  const alternates = isNoindex ? [] : getRouteAlternates(routeKey).filter(alt => alt.href);
   const canonical = getLocalizedUrl(routeKey, lang);
 
   // Get page title and description
@@ -429,15 +429,17 @@ function generateSitemaps() {
     // Skip noindex pages, admin, and frOnly routes without proper multilang support
     if (['admin', 'legalMentions', 'privacy', 'sitemap', 'ebookConfirm'].includes(key)) continue;
 
-    // Check if this route has all language slugs
+    // Build URL map for available languages
     const urlsByLang = {};
-    let hasAllLangs = true;
     for (const lang of LANGUAGES) {
-      if (slugs[lang] === undefined) { hasAllLangs = false; continue; }
-      urlsByLang[lang] = url(lang, slugs[lang]);
+      if (slugs[lang] !== undefined) {
+        urlsByLang[lang] = url(lang, slugs[lang]);
+      }
     }
-    // Only include routes that have all language variants
-    if (!hasAllLangs) continue;
+    // Skip routes with no valid URLs
+    if (Object.keys(urlsByLang).length === 0) continue;
+    // Mark as frOnly if only FR is available
+    const isFrOnly = Object.keys(urlsByLang).length === 1 && urlsByLang.fr;
 
     // Assign priority and changefreq based on page type
     let priority = '0.7';
@@ -447,7 +449,7 @@ function generateSitemaps() {
     else if (key === 'contact' || key === 'about') { priority = '0.4'; changefreq = 'monthly'; }
     else if (key === 'activities') { priority = '0.6'; changefreq = 'weekly'; }
 
-    entries.push({ urlsByLang, lastmod: today, priority, changefreq });
+    entries.push({ urlsByLang, lastmod: today, priority, changefreq, frOnly: isFrOnly || false });
   }
 
   // Blog articles
@@ -887,8 +889,8 @@ async function generateBlogArticle(articleMeta, lang) {
     sidebarTests: [
       'testCouple', 'testCommonPoints', 'testDistance', 'testToxic',
       'testCoupleSain', 'testMariage', 'testDivorce', 'testParentalite', 'testAstroPrenoms',
-      'testJalousie', 'testLangageAmour',
-    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
+      'testJalousie', 'testLangageAmour', 'testAttachement', 'testConfiance',
+    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarQuizzes: [
       'quizAmoureux', 'quizCoquin', 'quizMarrant', 'quizKnowledge',
       'quizMost', 'quizAdo', 'quizGenant', 'quizTuPreferes',

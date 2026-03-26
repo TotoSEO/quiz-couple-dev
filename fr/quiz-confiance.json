@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Test Gratuit",
+    "title": "Test Confiance en Couple :",
+    "titleHighlight": "faites-vous vraiment confiance ?",
+    "description": "20 questions pour évaluer la <strong>confiance mutuelle</strong> dans votre relation. Jalousie, transparence, communication : découvrez où vous en êtes vraiment.",
+    "subtitle": "Gratuit, confidentiel, résultat immédiat"
+  },
+  "section1": {
+    "title": "Pourquoi la confiance est le pilier n°1 du couple",
+    "intro": "La confiance n'est pas un bonus dans une relation — c'est le socle sur lequel tout repose. Sans elle, l'amour, la complicité et l'intimité sont constamment menacés par le doute et la peur.",
+    "p1": "Les recherches du psychologue <strong>John Gottman</strong> montrent que la confiance et l'engagement sont les deux facteurs les plus prédictifs de la longévité d'un couple. Les couples qui se font confiance ont des conflits moins fréquents, moins intenses, et se remettent plus vite des crises.",
+    "p2": "La confiance se construit dans les <strong>petits moments du quotidien</strong> : tenir ses promesses, être ponctuel, répondre aux messages, être transparent sur ses émotions. Ce n'est pas un grand geste héroïque — c'est la somme de milliers de micro-décisions de fiabilité."
+  },
+  "section2": {
+    "title": "Les 5 dimensions de la confiance en couple",
+    "intro": "La confiance n'est pas un concept monolithique. Elle se décompose en plusieurs dimensions, chacune pouvant être solide ou fragilisée indépendamment des autres.",
+    "pillar1Title": "La fiabilité",
+    "pillar1Text": "Tenir ses promesses, être ponctuel, respecter ses engagements. C'est la dimension la plus concrète : votre partenaire fait-il ce qu'il dit ?",
+    "pillar2Title": "La transparence",
+    "pillar2Text": "Être honnête sur ses pensées, ses émotions, ses actions. Pas de mensonges, pas de zones grises, pas d'omissions stratégiques.",
+    "pillar3Title": "La sécurité émotionnelle",
+    "pillar3Text": "Se sentir libre d'être vulnérable sans craindre le jugement ou le rejet. Pouvoir exprimer ses peurs, ses doutes, ses faiblesses.",
+    "pillar4Title": "La fidélité",
+    "pillar4Text": "La confiance que votre partenaire respecte les limites de votre relation, qu'elles soient sexuelles, émotionnelles ou sociales.",
+    "pillar5Title": "La bienveillance",
+    "pillar5Text": "Croire que votre partenaire agit dans votre intérêt et celui du couple, même quand vous n'êtes pas d'accord."
+  },
+  "section3": {
+    "title": "Les signes d'un manque de confiance",
+    "p1": "Le manque de confiance ne se manifeste pas toujours de manière évidente. Parfois, il se cache derrière des comportements que l'on normalise sans s'en rendre compte.",
+    "p2": "Voici les signaux d'alerte les plus courants :",
+    "sub1Title": "Le contrôle excessif",
+    "sub1P1": "Vérifier le téléphone de l'autre, demander des comptes sur chaque sortie, exiger de connaître les mots de passe. Le contrôle est souvent déguisé en \"je m'inquiète pour toi\" mais c'est un signe de méfiance profonde.",
+    "sub2Title": "L'hyper-vigilance",
+    "sub2P1": "Analyser chaque message, chaque regard, chaque changement d'habitude. Quand tout devient un indice potentiel, vous vivez dans un état de stress permanent qui empoisonne la relation.",
+    "sub3Title": "L'évitement émotionnel",
+    "sub3P1": "Ne plus partager ses émotions, ses peurs ou ses projets. Quand on ne fait plus confiance, on se protège en se fermant — ce qui, paradoxalement, éloigne encore plus le partenaire."
+  },
+  "section4": {
+    "title": "Confiance et jalousie : quelle est la limite ?",
+    "p1": "Une pointe de jalousie peut être normale et même flatteuse. Mais quand elle devient obsessionnelle ou contrôlante, elle détruit la relation qu'elle prétend protéger.",
+    "p2": "La jalousie saine dit : \"Je tiens à toi et j'ai un petit pincement quand je te vois proche de quelqu'un d'autre.\" La jalousie toxique dit : \"Tu n'as pas le droit de parler à cette personne, montre-moi ton téléphone.\"",
+    "p3": "La différence fondamentale : la jalousie saine est un <strong>sentiment</strong> que l'on gère. La jalousie toxique est un <strong>comportement</strong> que l'on impose à l'autre.",
+    "tip": "Si la jalousie vous empêche de vivre sereinement, ce n'est pas un problème de couple — c'est un travail personnel. Un thérapeute peut vous aider à identifier les racines de cette insécurité (souvent liées au style d'attachement)."
+  },
+  "section5": {
+    "title": "Comment reconstruire la confiance après une trahison",
+    "p1": "Qu'il s'agisse d'un mensonge, d'une infidélité ou d'une trahison émotionnelle, reconstruire la confiance est un processus long mais possible. Voici les étapes clés :",
+    "sub1Title": "1. L'aveu complet et sincère",
+    "sub1P1": "Pas de demi-vérités, pas de minimisation. La personne qui a trahi doit assumer pleinement et répondre aux questions de l'autre avec honnêteté. C'est douloureux mais indispensable.",
+    "sub2Title": "2. La période de transparence renforcée",
+    "sub2P1": "Temporairement, la personne qui a trahi accepte un niveau de transparence plus élevé : partage de localisation, accès aux messages, etc. Ce n'est pas du contrôle — c'est un pont de transition vers la confiance retrouvée.",
+    "sub3Title": "3. Le travail sur les causes profondes",
+    "sub3P1": "Comprendre pourquoi la trahison a eu lieu (insatisfaction, évitement, addiction…) est essentiel pour éviter la récidive. Un accompagnement professionnel est fortement recommandé à cette étape."
+  },
+  "section6": {
+    "title": "Les rituels quotidiens qui renforcent la confiance",
+    "intro": "La confiance ne se construit pas en un jour. Elle se nourrit de petites actions répétées qui disent à votre partenaire : \"Tu peux compter sur moi.\"",
+    "pillar1Title": "Tenez vos promesses",
+    "pillar1Text": "Même les plus petites. Dire \"je serai là à 19h\" et être là à 19h, c'est construire la confiance brique par brique.",
+    "pillar2Title": "Partagez vos émotions",
+    "pillar2Text": "Dire \"j'ai eu une journée difficile\" au lieu de se fermer. La vulnérabilité partagée crée un cercle vertueux de confiance.",
+    "pillar3Title": "Respectez la vie privée",
+    "pillar3Text": "Avoir confiance, c'est aussi accepter de ne pas tout savoir. Chacun a droit à un espace personnel.",
+    "pillar4Title": "Réparez rapidement",
+    "pillar4Text": "Quand vous faites une erreur, excusez-vous sincèrement et corrigez le tir. Ne laissez pas les petites blessures s'accumuler."
+  },
+  "section7": {
+    "title": "Confiance et dépendance : ne pas confondre",
+    "p1": "Faire confiance ne signifie pas être naïf ou dépendant. Une confiance saine coexiste avec l'autonomie et le discernement.",
+    "p2": "La confiance mature dit : \"Je te fais confiance ET je suis capable de survivre si cette confiance est trahie.\" C'est cette double assise (confiance + autonomie) qui rend une relation vraiment solide.",
+    "p3": "Si vous ne pouvez pas imaginer votre vie sans votre partenaire, la question n'est peut-être pas \"est-ce que je lui fais confiance ?\" mais \"est-ce que je me fais confiance à moi-même ?\"",
+    "quote": "\"La confiance, c'est se savoir capable de traverser la tempête, seul ou à deux. C'est choisir d'être avec l'autre, pas en avoir besoin pour exister.\""
+  },
+  "section8": {
+    "title": "Les chiffres de la confiance en couple",
+    "headerScore": "Facteur",
+    "headerLevel": "Impact",
+    "headerAnalysis": "Détail",
+    "row1Score": "Transparence",
+    "row1Level": "Très fort",
+    "row1Analysis": "85% des couples heureux déclarent une communication ouverte et honnête",
+    "row2Score": "Fiabilité",
+    "row2Level": "Fort",
+    "row2Analysis": "Tenir ses promesses est cité comme critère n°1 de confiance",
+    "row3Score": "Infidélité",
+    "row3Level": "Destructeur",
+    "row3Analysis": "60-65% des couples ne survivent pas à une infidélité sans aide professionnelle",
+    "row4Score": "Jalousie excessive",
+    "row4Level": "Corrosif",
+    "row4Analysis": "Le contrôle est la 3e cause de rupture en France"
+  },
+  "seo": {
+    "faq1Q": "Comment savoir si je manque de confiance dans mon couple ?",
+    "faq1A": "Les signes incluent : vérifier le téléphone de votre partenaire, questionner ses sorties, interpréter négativement ses actions, avoir besoin de réassurance constante, ou éviter de partager vos émotions par peur d'être blessé·e. Ce test vous aide à évaluer objectivement votre niveau de confiance.",
+    "faq2Q": "La confiance peut-elle revenir après une infidélité ?",
+    "faq2A": "Oui, mais c'est un processus long (souvent 1 à 3 ans) qui nécessite un engagement sincère des deux partenaires. La transparence renforcée, la thérapie de couple et le travail sur les causes profondes sont essentiels. Environ 35-40% des couples qui s'engagent sérieusement dans ce processus retrouvent une confiance solide.",
+    "faq3Q": "Est-il normal d'avoir des doutes dans un couple ?",
+    "faq3A": "Tout à fait. Des doutes ponctuels sont humains et normaux. Ce qui fait la différence, c'est leur fréquence et leur intensité. Si les doutes sont occasionnels et que vous arrivez à les gérer, c'est sain. S'ils sont permanents et envahissants, c'est un signal à prendre au sérieux.",
+    "faq4Q": "Comment distinguer jalousie saine et jalousie toxique ?",
+    "faq4A": "La jalousie saine est un sentiment passager que vous gérez en interne. La jalousie toxique se traduit par des comportements de contrôle : fouiller le téléphone, interdire des fréquentations, exiger des comptes sur chaque activité. La première est un ressenti, la seconde est une action qui viole la liberté de l'autre.",
+    "faq5Q": "Faut-il tout se dire dans un couple ?",
+    "faq5A": "Non. La transparence totale n'est ni réaliste ni souhaitable. Chacun a droit à un jardin secret (pensées, journaux intimes, conversations privées avec des ami·es). La confiance, c'est ne pas avoir besoin de tout savoir pour se sentir en sécurité. L'important est de ne pas mentir activement, pas de tout révéler.",
+    "faq6Q": "Ce test de confiance est-il fiable ?",
+    "faq6A": "Ce test est un outil d'auto-évaluation qui vous donne une tendance générale. Il n'a pas la valeur d'un diagnostic clinique. Si vos résultats vous préoccupent, nous vous recommandons d'en discuter avec un thérapeute de couple qui pourra approfondir l'analyse dans le contexte de votre relation."
+  }
+}

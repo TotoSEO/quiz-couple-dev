@@ -142,6 +142,18 @@
     "description": "100 questions vrai ou faux sur le couple : mythes, psychologie, chiffres surprenants et idées reçues.",
     "metaDescription": "100 questions vrai ou faux sur le couple : mythes, psychologie, chiffres surprenants et idées reçues. Testez vos connaissances maintenant."
   },
+  "testConfiance": {
+    "title": "Test Confiance en Couple : Faites-vous vraiment confiance ?",
+    "shortTitle": "Test Confiance",
+    "description": "20 questions pour évaluer le niveau de confiance dans votre couple. Découvrez vos points forts et vos zones de fragilité.",
+    "metaDescription": "Test de confiance en couple gratuit : 20 questions pour mesurer la confiance mutuelle dans votre relation. Résultat immédiat, sans inscription."
+  },
+  "testAttachement": {
+    "title": "Test Style d'Attachement en Couple | Gratuit",
+    "shortTitle": "Test Attachement",
+    "description": "20 questions pour découvrir votre style d'attachement amoureux : sécure, anxieux, évitant ou désorganisé. Résultat immédiat.",
+    "metaDescription": "Quel est votre style d'attachement amoureux ? Test gratuit de 20 questions basé sur la théorie de Bowlby. Découvrez si vous êtes sécure, anxieux, évitant ou désorganisé."
+  },
   "activities": {
     "title": "Activités à faire en couple autour de chez soi | Quiz Couple",
     "shortTitle": "Activités en couple",

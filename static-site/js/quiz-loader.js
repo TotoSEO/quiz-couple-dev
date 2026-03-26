@@ -63,7 +63,13 @@
     'genant':         { prefix: 'genant', engine: 'solo', totalQ: 15, pool: 15, quizType: 'genant' },
 
     // ── Vrai/Faux quiz (true/false with correct answer reveal) ──
-    'vrai-faux':      { prefix: 'vraifaux', engine: 'truefalse', totalQ: 30, pool: 100, textOnly: true }
+    'vrai-faux':      { prefix: 'vraifaux', engine: 'truefalse', totalQ: 30, pool: 100, textOnly: true },
+
+    // ── Attachement quiz (solo scoring, attachment style assessment) ──
+    'attachement':    { prefix: 'attachement', engine: 'solo', totalQ: 20, pool: 20, quizType: 'attachement' },
+
+    // ── Confiance quiz (solo scoring, trust assessment) ──
+    'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' }
   };
 
   var config = QUIZ_CONFIG[quizType];
