@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "badge": "Test Scientifique",
+    "title": "Test Style d'Attachement :",
+    "titleHighlight": "quel amoureux êtes-vous ?",
+    "description": "20 questions pour découvrir votre style d'attachement amoureux. Êtes-vous <strong>sécure, anxieux, évitant ou désorganisé</strong> ? Basé sur la théorie de l'attachement de John Bowlby.",
+    "subtitle": "Gratuit, anonyme, résultat immédiat — sans inscription"
+  },
+  "section1": {
+    "title": "Qu'est-ce que la théorie de l'attachement ?",
+    "intro": "La théorie de l'attachement, développée par le psychiatre britannique <strong>John Bowlby</strong> dans les années 1950, est l'un des cadres les plus validés scientifiquement en psychologie relationnelle. Elle explique comment nos premières relations (surtout avec nos parents) façonnent notre manière d'aimer à l'âge adulte.",
+    "p1": "Concrètement, votre style d'attachement influence la façon dont vous réagissez dans vos relations intimes : comment vous gérez la proximité, la séparation, les conflits et la vulnérabilité émotionnelle.",
+    "p2": "La psychologue <strong>Mary Ainsworth</strong> a identifié trois styles principaux (sécure, anxieux, évitant), complétés plus tard par un quatrième : le style désorganisé. Ces styles ne sont pas figés — ils peuvent évoluer avec la prise de conscience et le travail sur soi."
+  },
+  "section2": {
+    "title": "Les 4 styles d'attachement amoureux",
+    "intro": "Chaque style d'attachement reflète une façon unique de vivre les relations. Aucun n'est \"bon\" ou \"mauvais\" — ce sont des stratégies adaptatives développées face à vos expériences relationnelles.",
+    "pillar1Title": "Sécure",
+    "pillar1Text": "Vous êtes à l'aise avec l'intimité et l'autonomie. Vous communiquez vos besoins clairement, faites confiance à votre partenaire et gérez les conflits avec maturité. Environ <strong>50-60%</strong> de la population.",
+    "pillar2Title": "Anxieux (préoccupé)",
+    "pillar2Text": "Vous avez un besoin intense de proximité et de réassurance. La peur de l'abandon peut vous pousser à vous accrocher ou à sur-interpréter les signaux. Environ <strong>20-25%</strong> de la population.",
+    "pillar3Title": "Évitant (détaché)",
+    "pillar3Text": "Vous valorisez fortement votre indépendance. L'intimité émotionnelle vous met mal à l'aise et vous avez tendance à prendre de la distance quand les choses deviennent trop proches. Environ <strong>15-20%</strong> de la population.",
+    "pillar4Title": "Désorganisé (craintif)",
+    "pillar4Text": "Vous oscillez entre un désir de connexion et une peur de l'intimité. Ce style combine des traits anxieux et évitants, souvent lié à des expériences relationnelles complexes. Environ <strong>5-10%</strong> de la population."
+  },
+  "section3": {
+    "title": "Comment le style d'attachement affecte votre couple",
+    "p1": "Votre style d'attachement ne détermine pas seulement comment vous aimez — il influence directement la dynamique de votre couple au quotidien. Il façonne vos réactions face aux conflits, votre communication émotionnelle et même votre vie sexuelle.",
+    "p2": "Les chercheurs ont identifié un phénomène appelé <strong>\"la danse de l'attachement\"</strong> : les partenaires anxieux et évitants s'attirent souvent mutuellement, créant un cycle de poursuite-retrait qui peut être épuisant pour les deux.",
+    "p3": "La bonne nouvelle : comprendre son style d'attachement est le premier pas vers une relation plus épanouissante. Les études montrent que même les personnes avec un attachement insécure peuvent développer un attachement \"acquis sécure\" grâce à la thérapie ou une relation avec un partenaire sécure."
+  },
+  "section4": {
+    "title": "Anxieux + Évitant : le piège du couple toxique",
+    "intro": "La combinaison la plus fréquente — et la plus problématique — est celle du partenaire anxieux avec le partenaire évitant. Ce schéma crée un cercle vicieux :",
+    "p1": "Le partenaire <strong>anxieux</strong> cherche de la proximité → le partenaire <strong>évitant</strong> se sent envahi et prend de la distance → l'anxieux panique et s'accroche davantage → l'évitant fuit encore plus. Ce cycle peut durer des mois, voire des années.",
+    "p2": "Briser ce cycle demande une prise de conscience des deux côtés. L'anxieux doit apprendre à s'auto-réguler et à tolérer l'espace. L'évitant doit s'entraîner à rester présent et à exprimer ses émotions.",
+    "tip": "Si vous reconnaissez ce pattern dans votre couple, ce n'est pas une fatalité. La <strong>thérapie de couple</strong> axée sur l'attachement (EFT — Emotionally Focused Therapy) a un taux de réussite de 70-75% pour les couples en détresse."
+  },
+  "section5": {
+    "title": "Peut-on changer son style d'attachement ?",
+    "p1": "Oui, absolument. Le style d'attachement n'est pas gravé dans le marbre. Les neurosciences ont montré que le cerveau est plastique : de nouvelles expériences relationnelles positives peuvent littéralement recâbler vos schémas d'attachement.",
+    "p2": "Plusieurs voies permettent d'évoluer vers un attachement plus sécure :",
+    "sub1Title": "La thérapie individuelle",
+    "sub1P1": "Les approches comme la <strong>thérapie des schémas</strong>, l'EMDR ou la psychothérapie d'orientation psychodynamique sont particulièrement efficaces pour travailler sur les blessures d'attachement.",
+    "sub2Title": "Une relation sécurisante",
+    "sub2P1": "Être en couple avec un·e partenaire au style sécure peut progressivement transformer votre propre style. L'amour sain est thérapeutique en soi.",
+    "sub3Title": "La pleine conscience",
+    "sub3P1": "Apprendre à observer vos réactions automatiques sans les suivre aveuglément. La méditation et la pleine conscience aident à créer un espace entre le déclencheur et la réponse."
+  },
+  "section6": {
+    "title": "Pourquoi faire ce test d'attachement ?",
+    "p1": "Ce test vous aide à mettre des mots sur des ressentis souvent confus. Comprendre votre style d'attachement, c'est comprendre pourquoi vous réagissez de telle façon dans vos relations — et surtout, comment évoluer.",
+    "pillar1Title": "Mieux vous comprendre",
+    "pillar1Text": "Identifiez vos schémas relationnels récurrents et comprenez d'où ils viennent.",
+    "pillar2Title": "Mieux communiquer",
+    "pillar2Text": "Expliquez vos besoins à votre partenaire avec un vocabulaire clair et validé.",
+    "pillar3Title": "Casser les cycles",
+    "pillar3Text": "Repérez les dynamiques toxiques (poursuite-retrait) pour les désamorcer.",
+    "pillar4Title": "Évoluer ensemble",
+    "pillar4Text": "Faites le test à deux et comparez vos résultats pour une meilleure compréhension mutuelle."
+  },
+  "section7": {
+    "title": "Ce que ce test ne fait pas",
+    "p1": "Ce test est un <strong>outil d'auto-évaluation</strong>, pas un diagnostic clinique. Il vous donne une tendance générale basée sur vos réponses, mais ne remplace pas l'évaluation d'un professionnel de santé mentale.",
+    "p2": "Votre style d'attachement peut varier selon les contextes (amical, familial, amoureux) et selon les périodes de votre vie. Un seul test ne capture pas toute la complexité de votre personnalité relationnelle.",
+    "tip": "Si vos résultats vous interpellent, n'hésitez pas à en parler avec un psychologue ou un thérapeute de couple. C'est un excellent point de départ pour un travail plus approfondi."
+  },
+  "section8": {
+    "title": "Quelques chiffres sur l'attachement en couple",
+    "headerScore": "Style",
+    "headerLevel": "Prévalence",
+    "headerAnalysis": "Caractéristiques principales",
+    "row1Score": "Sécure",
+    "row1Level": "50-60%",
+    "row1Analysis": "À l'aise avec l'intimité et l'autonomie, bonne gestion des conflits",
+    "row2Score": "Anxieux",
+    "row2Level": "20-25%",
+    "row2Analysis": "Besoin de réassurance, peur de l'abandon, hyper-vigilance relationnelle",
+    "row3Score": "Évitant",
+    "row3Level": "15-20%",
+    "row3Analysis": "Valorise l'indépendance, inconfort avec la proximité émotionnelle",
+    "row4Score": "Désorganisé",
+    "row4Level": "5-10%",
+    "row4Analysis": "Oscillation entre désir de connexion et peur de l'intimité"
+  },
+  "seo": {
+    "faq1Q": "Qu'est-ce qu'un style d'attachement ?",
+    "faq1A": "Le style d'attachement est un modèle relationnel développé dès l'enfance qui influence la façon dont vous vivez l'intimité, la confiance et la séparation dans vos relations amoureuses. Il existe 4 styles principaux : sécure, anxieux, évitant et désorganisé. Ce concept est issu de la théorie de l'attachement de John Bowlby et Mary Ainsworth.",
+    "faq2Q": "Peut-on changer son style d'attachement ?",
+    "faq2A": "Oui. Le style d'attachement n'est pas figé. Grâce à la thérapie (notamment l'EFT, la thérapie des schémas ou l'EMDR), à des relations sécurisantes et au travail sur soi, il est tout à fait possible de passer d'un attachement insécure à un attachement \"acquis sécure\". Les neurosciences confirment la plasticité cérébrale qui rend ce changement possible.",
+    "faq3Q": "Quel est le style d'attachement le plus courant ?",
+    "faq3A": "Le style d'attachement sécure est le plus répandu, représentant environ 50 à 60% de la population. Le style anxieux concerne environ 20-25% des personnes, le style évitant 15-20%, et le style désorganisé environ 5-10%.",
+    "faq4Q": "Comment connaître le style d'attachement de mon partenaire ?",
+    "faq4A": "Observez ses réactions face aux conflits, à la séparation et à l'intimité. Un partenaire anxieux aura tendance à chercher la réassurance, un partenaire évitant prendra de la distance sous pression. Le plus simple reste de lui proposer de faire ce test et d'en discuter ensemble.",
+    "faq5Q": "Deux styles d'attachement insécures peuvent-ils former un couple heureux ?",
+    "faq5A": "Oui, à condition d'en être conscients et de travailler ensemble dessus. La combinaison anxieux-évitant est la plus problématique car elle crée un cycle poursuite-retrait. Mais avec de la communication, de la thérapie de couple et une volonté mutuelle de progresser, ces couples peuvent tout à fait s'épanouir.",
+    "faq6Q": "Ce test est-il fiable scientifiquement ?",
+    "faq6A": "Ce test est inspiré des questionnaires validés (ECR-R de Fraley et Brennan). Il donne une tendance générale de votre style d'attachement. Pour un diagnostic précis, consultez un psychologue qui pourra utiliser les outils cliniques validés et interpréter les résultats dans le contexte de votre histoire personnelle."
+  }
+}
