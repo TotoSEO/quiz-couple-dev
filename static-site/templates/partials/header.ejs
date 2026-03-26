@@ -34,6 +34,12 @@
   ];
   const homeUrl = getLocalizedUrl('home', lang);
 
+  // Filter out links that don't have a URL for the current language (frOnly pages in non-FR)
+  const filterAvailable = (links) => links.filter(link => getLocalizedUrl(link.routeKey, lang));
+  const testLinksFiltered = filterAvailable(testLinks);
+  const quizLinksFiltered = filterAvailable(quizLinks);
+  const directLinksFiltered = filterAvailable(directLinks);
+
   // Language names for selector
   const langNames = { fr: 'FR', en: 'EN', es: 'ES', de: 'DE', it: 'IT' };
   const langFullNames = { fr: 'Français', en: 'English', es: 'Español', de: 'Deutsch', it: 'Italiano' };
@@ -64,10 +70,10 @@
               <div class="nav-megamenu-header">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
                 <span><%= t('common:nav.categoryTests', 'Tests') %></span>
-                <span class="nav-megamenu-count"><%= testLinks.length %></span>
+                <span class="nav-megamenu-count"><%= testLinksFiltered.length %></span>
               </div>
               <div class="nav-megamenu-grid">
-                <% for (const link of testLinks) { %>
+                <% for (const link of testLinksFiltered) { %>
                 <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item">
                   <span class="nav-megamenu-icon"><%= link.icon %></span>
                   <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
@@ -90,10 +96,10 @@
               <div class="nav-megamenu-header nav-megamenu-header--quiz">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
                 <span><%= t('common:nav.categoryQuizzes', 'Quiz') %></span>
-                <span class="nav-megamenu-count"><%= quizLinks.length %></span>
+                <span class="nav-megamenu-count"><%= quizLinksFiltered.length %></span>
               </div>
               <div class="nav-megamenu-grid">
-                <% for (const link of quizLinks) { %>
+                <% for (const link of quizLinksFiltered) { %>
                 <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item nav-megamenu-item--quiz">
                   <span class="nav-megamenu-icon"><%= link.icon %></span>
                   <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
@@ -108,7 +114,7 @@
         <div class="nav-separator"></div>
 
         <!-- Direct links -->
-        <% for (const link of directLinks) { %>
+        <% for (const link of directLinksFiltered) { %>
         <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-link"><%= t('common:' + link.labelKey, link.labelKey) %></a>
         <% } %>
 
@@ -162,13 +168,13 @@
             <span class="flex items-center gap-2">
               <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
               <%= t('common:nav.categoryTests', 'Tests') %>
-              <span class="mobile-nav-count"><%= testLinks.length %></span>
+              <span class="mobile-nav-count"><%= testLinksFiltered.length %></span>
             </span>
             <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
           <div class="mobile-accordion-content hidden">
             <div class="mobile-nav-grid">
-              <% for (const link of testLinks) { %>
+              <% for (const link of testLinksFiltered) { %>
               <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item">
                 <span class="mobile-nav-item-icon"><%= link.icon %></span>
                 <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
@@ -184,13 +190,13 @@
             <span class="flex items-center gap-2">
               <svg class="w-4 h-4 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
               <%= t('common:nav.categoryQuizzes', 'Quiz') %>
-              <span class="mobile-nav-count"><%= quizLinks.length %></span>
+              <span class="mobile-nav-count"><%= quizLinksFiltered.length %></span>
             </span>
             <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </button>
           <div class="mobile-accordion-content hidden">
             <div class="mobile-nav-grid">
-              <% for (const link of quizLinks) { %>
+              <% for (const link of quizLinksFiltered) { %>
               <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item mobile-nav-item--quiz">
                 <span class="mobile-nav-item-icon"><%= link.icon %></span>
                 <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
@@ -204,7 +210,7 @@
         <div class="mobile-nav-divider"></div>
 
         <!-- Direct links -->
-        <% for (const link of directLinks) { %>
+        <% for (const link of directLinksFiltered) { %>
         <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-link"><%= t('common:' + link.labelKey, link.labelKey) %></a>
         <% } %>
 

@@ -42,6 +42,10 @@
     { routeKey: 'quizVraiFaux', key: 'quizVraiFaux', icon: '✅' },
   ];
 
+  // Filter out tests/quizzes not available in current language
+  const testsFiltered = tests.filter(item => getLocalizedUrl(item.routeKey, lang));
+  const quizzesFiltered = quizzes.filter(item => getLocalizedUrl(item.routeKey, lang));
+
   // Why do quiz - 6 reasons
   const reasons = ['testRelation', 'haveFun', 'discover', 'strengthen', 'dialogue', 'memories'];
   const reasonIcons = ['💕', '🎉', '🔍', '💪', '💬', '📸'];
@@ -95,14 +99,14 @@
           <div class="hero-stat-card">
             <span class="hero-stat-icon">📝</span>
             <div>
-              <span class="hero-stat-value"><%= tests.length %></span>
+              <span class="hero-stat-value"><%= testsFiltered.length %></span>
               <span class="hero-stat-label"><%= t('home:hero.stats.testsLabel', 'tests disponibles') %></span>
             </div>
           </div>
           <div class="hero-stat-card">
             <span class="hero-stat-icon">🎮</span>
             <div>
-              <span class="hero-stat-value"><%= quizzes.length %></span>
+              <span class="hero-stat-value"><%= quizzesFiltered.length %></span>
               <span class="hero-stat-label"><%= t('home:hero.stats.quizzesLabel', 'quiz à faire en couple') %></span>
             </div>
           </div>
@@ -146,7 +150,7 @@
           <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.testsDesc', '') %></p>
         </div>
         <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
-          <% for (let ti = 0; ti < tests.length; ti++) { const item = tests[ti]; %>
+          <% for (let ti = 0; ti < testsFiltered.length; ti++) { const item = testsFiltered[ti]; %>
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
             <div class="quiz-bubble-card quiz-bubble-card--test">
               <div class="quiz-bubble-emoji"><span><%= item.icon %></span></div>
@@ -177,7 +181,7 @@
           <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.quizzesDesc', '') %></p>
         </div>
         <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
-          <% for (let qi = 0; qi < quizzes.length; qi++) { const item = quizzes[qi]; %>
+          <% for (let qi = 0; qi < quizzesFiltered.length; qi++) { const item = quizzesFiltered[qi]; %>
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
             <div class="quiz-bubble-card quiz-bubble-card--quiz">
               <div class="quiz-bubble-emoji quiz-bubble-emoji--quiz"><span><%= item.icon %></span></div>
