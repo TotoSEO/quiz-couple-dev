@@ -384,12 +384,14 @@ var QuizEngine = (function() {
     if (this.hasLocalStorage) {
       try {
         var saved = JSON.parse(localStorage.getItem('quiz-' + this.prefix) || 'null');
-        if (saved && saved.currentQ > 0) {
+        if (saved && saved.currentQ > 0 && saved.questionCount === this.questions.length) {
           this.currentQ = saved.currentQ;
           this.answers = saved.answers;
           this.totalScore = saved.totalScore;
           this.skippedCount = saved.skippedCount || 0;
           this.phase = saved.isComplete ? 'results' : 'playing';
+        } else if (saved) {
+          localStorage.removeItem('quiz-' + this.prefix);
         }
       } catch(e) {}
     }
@@ -402,7 +404,8 @@ var QuizEngine = (function() {
       localStorage.setItem('quiz-' + this.prefix, JSON.stringify({
         currentQ: this.currentQ, answers: this.answers,
         totalScore: this.totalScore, skippedCount: this.skippedCount,
-        isComplete: this.phase === 'results'
+        isComplete: this.phase === 'results',
+        questionCount: this.questions.length
       }));
     } catch(e) {}
   };
@@ -546,12 +549,11 @@ var QuizEngine = (function() {
     if (this.currentQ > 0) {
       var backBtn = el('button', 'btn btn-ghost text-sm', '&larr; ' + tg('question.previousQuestion', 'Précédent'));
       backBtn.addEventListener('click', function() {
-        // Undo last answer
-        var lastAnswer = self.answers[self.currentQ - 1];
-        if (lastAnswer === 'skip') self.skippedCount--;
-        self.answers.splice(self.currentQ - 1, 1);
-        self.totalScore = self.answers.reduce(function(s, v) { return s + (typeof v === 'number' ? v : 0); }, 0);
         self.currentQ--;
+        var prevAnswer = self.answers[self.currentQ];
+        if (prevAnswer === 'skip') self.skippedCount--;
+        if (typeof prevAnswer === 'number') self.totalScore -= prevAnswer;
+        delete self.answers[self.currentQ];
         self.saveState();
         self.render();
       });
@@ -1022,7 +1024,7 @@ var QuizEngine = (function() {
       var card = el('div', 'glass-card rounded-xl p-4 text-center');
       card.appendChild(el('p', 'font-semibold mb-2', esc(this.players[i].name)));
       var ringDiv = el('div', '');
-      ringDiv.innerHTML = renderScoreRing(pct, 90);
+      ringDiv.innerHTML = renderScoreRing(pct, 'sm');
       card.appendChild(ringDiv);
       card.appendChild(el('p', 'text-xs text-muted-foreground', score + '/' + this.maxScorePerPlayer));
       if (verdict) card.appendChild(el('p', 'text-sm mt-2', esc(verdict)));
@@ -1264,12 +1266,12 @@ var QuizEngine = (function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
     var score = this.rounds.filter(function(r) { return r.correct === true; }).length;
-    var pct = Math.round((score / this.questionsPerPlayer) * 100);
+    var pct = Math.round((score / this.totalRounds) * 100);
 
     wrap.appendChild(el('div', 'text-5xl mb-4', '🔥'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('coquin.resultsOf', 'Résultats de') + ' ' + esc(this.players[0].name) + ' & ' + esc(this.players[1].name)));
     wrap.appendChild(el('div', 'quiz-score-circle mx-auto mb-4', pct + '%'));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6', score + '/' + this.questionsPerPlayer + ' ' + tg('coquin.goodGuesses', 'bonnes devinettes')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6', score + '/' + this.totalRounds + ' ' + tg('coquin.goodGuesses', 'bonnes devinettes')));
 
     renderActionButtons(wrap, {
       newQuestions: function() { location.reload(); },
@@ -1427,23 +1429,20 @@ var QuizEngine = (function() {
     wrap.appendChild(el('p', 'text-muted-foreground mb-2', tg('question.getReadyToGuess', 'Préparez-vous à deviner !')));
     wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', tg('coquin.currentScore', 'Score') + ' : ' + esc(this.players[0].name) + ' ' + this.scores[0] + ' - ' + this.scores[1] + ' ' + esc(this.players[1].name)));
 
-    // Auto-advance after 2.5s or click
+    // Auto-advance after 2.5s or click (but never both)
+    var advanced = false;
+    function advance() {
+      if (advanced) return;
+      advanced = true;
+      clearTimeout(timer);
+      self.currentQ++;
+      self.phase = 'question';
+      self.render();
+    }
     var btn = el('button', 'btn btn-cta', tg('question.nextQuestionBtn', 'Question suivante !'));
-    btn.addEventListener('click', function() {
-      self.currentQ++;
-      self.phase = 'question';
-      self.render();
-    });
+    btn.addEventListener('click', advance);
     wrap.appendChild(btn);
-
-    var timer = setTimeout(function() {
-      self.currentQ++;
-      self.phase = 'question';
-      self.render();
-    }, 2500);
-
-    // Cancel timer if button clicked
-    btn.addEventListener('click', function() { clearTimeout(timer); });
+    var timer = setTimeout(advance, 2500);
 
     this.container.appendChild(wrap);
   };
@@ -2201,7 +2200,7 @@ var QuizEngine = (function() {
       var iPct = Math.round((score / this.maxScorePerPlayer) * 100);
       var card = el('div', 'glass-card rounded-xl p-4 text-center');
       card.innerHTML = '<p class="font-semibold mb-2" style="color:' + color.bg + '">' + esc(this.players[i].name) + '</p>' +
-        renderScoreRing(iPct, 90) +
+        renderScoreRing(iPct, 'sm') +
         '<p class="text-xs text-muted-foreground">' + Math.round(score) + '/' + this.maxScorePerPlayer + '</p>';
       scoresGrid.appendChild(card);
     }
@@ -2254,7 +2253,15 @@ var QuizEngine = (function() {
     this.currentQ = 0;
     this.currentPlayer = 0;
     this.scores = [[], []];
-    this.maxPerPlayer = 60;
+    var maxPts = 0;
+    for (var i = 0; i < this.questions.length; i++) {
+      var qMax = 0;
+      for (var j = 0; j < this.questions[i].options.length; j++) {
+        if (this.questions[i].options[j].points > qMax) qMax = this.questions[i].options[j].points;
+      }
+      maxPts += qMax;
+    }
+    this.maxPerPlayer = maxPts || 60;
     this.render();
   }
 
@@ -2410,7 +2417,7 @@ var QuizEngine = (function() {
       var card = el('div', 'glass-card rounded-xl p-4 text-center');
       var iPctP = Math.round((score / this.maxPerPlayer) * 100);
       card.innerHTML = '<p class="font-semibold mb-2" style="color:' + colors[i].bg + '">' + esc(this.players[i].name) + '</p>' +
-        renderScoreRing(iPctP, 90) +
+        renderScoreRing(iPctP, 'sm') +
         '<p class="text-xs text-muted-foreground">' + score + '/' + this.maxPerPlayer + '</p>';
       scoresGrid.appendChild(card);
     }
@@ -2683,8 +2690,6 @@ var QuizEngine = (function() {
       newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'intro'; self.render(); }
     });
-
-    renderRelatedQuizzes(wrap, 'vrai-faux', this.lang);
 
     this.container.appendChild(wrap);
     wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });

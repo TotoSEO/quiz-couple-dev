@@ -1,4 +1,14 @@
 {
+  "toxic": {
+    "v1_t": "Relation globalement saine",
+    "v1_d": "D'après vos réponses, votre relation ne présente pas de signaux inquiétants. Des tensions existent dans tout couple, mais rien ici ne pointe vers un schéma toxique.",
+    "v2_t": "Quelques signaux d'alerte à surveiller",
+    "v2_d": "Votre relation présente certaines dynamiques qui méritent votre attention. Ce n'est pas forcément toxique, mais des schémas de contrôle, de manque de communication ou de déséquilibre commencent à émerger.",
+    "v3_t": "Relation avec des traits toxiques marqués",
+    "v3_d": "Plusieurs de vos réponses révèlent des schémas préoccupants : manque de respect, contrôle, isolement ou manipulation émotionnelle. Ces comportements, s'ils se répètent, constituent une relation toxique.",
+    "v4_t": "Relation toxique — votre bien-être est en jeu",
+    "v4_d": "Vos réponses dessinent une situation de souffrance réelle. Contrôle, peur, manipulation ou violence émotionnelle sont présents. Il est essentiel de prendre du recul et de chercher de l'aide. Si vous êtes en danger, contactez le 3919 (violences conjugales) ou le 17 en cas d'urgence."
+  },
   "confiance": {
     "r1_t": "Confiance fragilisée",
     "r1_d": "Votre relation semble traverser une crise de confiance importante. Les doutes, les non-dits ou les blessures passées pèsent lourd sur votre quotidien. Ce constat n'est pas un jugement — c'est un signal d'alerte.",
