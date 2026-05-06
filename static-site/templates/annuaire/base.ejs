@@ -12,7 +12,7 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Quiz Couple - Annuaire">
+  <meta property="og:site_name" content="Annuaire des professionnels du couple">
   <meta property="og:title" content="<%= metaTitle %>">
   <meta property="og:description" content="<%= metaDescription %>">
   <meta property="og:url" content="<%= canonical %>">
@@ -113,20 +113,8 @@
   <script src="/js/annuaire-dashboard.js" defer></script>
   <% } %>
 
-  <!-- GA (deferred) -->
-  <script>
-    window.addEventListener('load',function(){
-      var s=document.createElement('script');
-      s.src='https://www.googletagmanager.com/gtag/js?id=G-XZV8V6FEK5';
-      s.async=true;
-      document.head.appendChild(s);
-      s.onload=function(){
-        window.dataLayer=window.dataLayer||[];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js',new Date());
-        gtag('config','G-XZV8V6FEK5',{send_page_view:true});
-      };
-    });
-  </script>
+  <!-- Note: Google Analytics intentionally removed to dissociate this subdomain
+       from the main quiz-couple.com domain. Use a separate GA property if tracking
+       is needed in the future. -->
 </body>
 </html>
