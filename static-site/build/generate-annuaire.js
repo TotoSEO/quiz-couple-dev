@@ -433,8 +433,9 @@ async function generateSpecialtyPages() {
   let skipped = 0;
   for (const specialty of SPECIALTIES) {
     const filteredProfessionals = shared.professionals.filter(p => p.specialty === specialty.id);
-    // Skip specialty pages with no professionals — they are pure doorway pages
+    // Skip specialty pages with no professionals — redirect to homepage
     if (filteredProfessionals.length === 0) {
+      emptyRedirects.push({ from: `/${specialty.id}/`, to: '/', status: 302 });
       skipped++;
       continue;
     }
@@ -458,6 +459,7 @@ async function generateSpecialtyPages() {
 // Track which pages were actually generated (used by sitemap to avoid listing empty pages)
 const generatedCityIds = new Set();
 const generatedSpecialtyCityPairs = new Set();
+const emptyRedirects = []; // 302 redirects for empty pages (reactivated when pro registers)
 
 async function generateCityPages() {
   const shared = getSharedData();
@@ -465,8 +467,9 @@ async function generateCityPages() {
   let skipped = 0;
   for (const city of CITIES) {
     const filteredProfessionals = filterProfessionalsForCity(shared.professionals, city);
-    // Skip cities with no professionals — these are doorway pages with zero value
+    // Skip cities with no professionals — redirect to homepage instead
     if (filteredProfessionals.length === 0) {
+      emptyRedirects.push({ from: `/${city.id}/`, to: '/', status: 302 });
       skipped++;
       continue;
     }
@@ -505,6 +508,7 @@ async function generateSpecialtyCityPages() {
       // that triggered Google quality penalties. Only generate pages with real
       // professionals listed.
       if (filteredProfessionals.length === 0) {
+        emptyRedirects.push({ from: `/${specialty.id}/${city.id}/`, to: `/${specialty.id}/`, status: 302 });
         skipped++;
         continue;
       }
@@ -751,14 +755,25 @@ async function fetchRedirects() {
   }
 }
 
-function generateRedirectsFile(redirects) {
-  if (redirects.length === 0) return;
+function generateRedirectsFile(supabaseRedirects) {
+  const lines = [];
 
-  const lines = redirects.map(r => `${r.from_path} ${r.to_path} 301`);
+  // 301 redirects from Supabase (deleted professionals)
+  for (const r of supabaseRedirects) {
+    lines.push(`${r.from_path} ${r.to_path} 301`);
+  }
+
+  // 302 redirects for empty pages (no professionals yet — will be removed
+  // when a professional registers in that specialty/city)
+  for (const r of emptyRedirects) {
+    lines.push(`${r.from} ${r.to} ${r.status}`);
+  }
+
+  if (lines.length === 0) return;
+
   const content = lines.join('\n') + '\n';
-
   fs.writeFileSync(path.join(DIST_DIR, '_redirects'), content, 'utf8');
-  console.log(`[annuaire] Generated: /_redirects (${redirects.length} rules)`);
+  console.log(`[annuaire] Generated: /_redirects (${supabaseRedirects.length} permanent + ${emptyRedirects.length} temporary)`);
 }
 
 // ── Main ─────────────────────────────────────────────────────────────────
