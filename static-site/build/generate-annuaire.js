@@ -429,8 +429,15 @@ async function generateCgvPage() {
 
 async function generateSpecialtyPages() {
   const shared = getSharedData();
+  let generated = 0;
+  let skipped = 0;
   for (const specialty of SPECIALTIES) {
     const filteredProfessionals = shared.professionals.filter(p => p.specialty === specialty.id);
+    // Skip specialty pages with no professionals — they are pure doorway pages
+    if (filteredProfessionals.length === 0) {
+      skipped++;
+      continue;
+    }
     const data = {
       ...shared,
       specialty,
@@ -443,14 +450,26 @@ async function generateSpecialtyPages() {
 
     const html = renderTemplate('specialty', data);
     await writePage(path.join(DIST_DIR, `${specialty.id}/index.html`), html);
-    console.log(`[annuaire] Generated: /${specialty.id}/ (${filteredProfessionals.length} pros)`);
+    generated++;
   }
+  console.log(`[annuaire] Generated: ${generated} specialty pages (skipped ${skipped} empty)`);
 }
+
+// Track which pages were actually generated (used by sitemap to avoid listing empty pages)
+const generatedCityIds = new Set();
+const generatedSpecialtyCityPairs = new Set();
 
 async function generateCityPages() {
   const shared = getSharedData();
+  let generated = 0;
+  let skipped = 0;
   for (const city of CITIES) {
     const filteredProfessionals = filterProfessionalsForCity(shared.professionals, city);
+    // Skip cities with no professionals — these are doorway pages with zero value
+    if (filteredProfessionals.length === 0) {
+      skipped++;
+      continue;
+    }
     const data = {
       ...shared,
       city,
@@ -463,13 +482,16 @@ async function generateCityPages() {
 
     const html = renderTemplate('city', data);
     await writePage(path.join(DIST_DIR, `${city.id}/index.html`), html);
-    console.log(`[annuaire] Generated: /${city.id}/ (${filteredProfessionals.length} pros)`);
+    generatedCityIds.add(city.id);
+    generated++;
   }
+  console.log(`[annuaire] Generated: ${generated} city pages (skipped ${skipped} empty cities)`);
 }
 
 async function generateSpecialtyCityPages() {
   const shared = getSharedData();
-  let count = 0;
+  let generated = 0;
+  let skipped = 0;
   for (const specialty of SPECIALTIES) {
     const templates = SPECIALTY_CITY_TEMPLATES[specialty.id] || [];
     for (let i = 0; i < CITIES.length; i++) {
@@ -478,6 +500,14 @@ async function generateSpecialtyCityPages() {
       const filteredProfessionals = cityPros.filter(
         p => p.specialty === specialty.id
       );
+
+      // Skip empty specialty×city combinations — these are pure doorway pages
+      // that triggered Google quality penalties. Only generate pages with real
+      // professionals listed.
+      if (filteredProfessionals.length === 0) {
+        skipped++;
+        continue;
+      }
 
       // Generate unique SEO content using rotating templates
       let seoContent = null;
@@ -493,19 +523,18 @@ async function generateSpecialtyCityPages() {
         filteredProfessionals,
         seoContent,
         metaTitle: `${specialty.name} à ${city.name} | Profils vérifiés`,
-        metaDescription: filteredProfessionals.length > 0
-          ? `${specialty.name} à ${city.name} : ${filteredProfessionals.length} professionnel${filteredProfessionals.length > 1 ? 's' : ''} référencé${filteredProfessionals.length > 1 ? 's' : ''}. Consultez les profils et prenez rendez-vous.`
-          : `${specialty.name} à ${city.name} : trouvez un spécialiste qualifié près de chez vous. Tarifs, avis et prise de rendez-vous en ligne.`,
+        metaDescription: `${specialty.name} à ${city.name} : ${filteredProfessionals.length} professionnel${filteredProfessionals.length > 1 ? 's' : ''} référencé${filteredProfessionals.length > 1 ? 's' : ''}. Consultez les profils et prenez rendez-vous.`,
         canonical: getAnnuaireUrl(`/${specialty.id}/${city.id}/`),
         currentPage: 'specialty-city',
       };
 
       const html = renderTemplate('specialty-city', data);
       await writePage(path.join(DIST_DIR, `${specialty.id}/${city.id}/index.html`), html);
-      count++;
+      generatedSpecialtyCityPairs.add(`${specialty.id}/${city.id}`);
+      generated++;
     }
   }
-  console.log(`[annuaire] Generated: ${count} specialty×city pages`);
+  console.log(`[annuaire] Generated: ${generated} specialty×city pages (skipped ${skipped} empty combinations)`);
 }
 
 async function generateAdminPage() {
@@ -654,21 +683,22 @@ function generateSitemap() {
   // Home page
   addUrl(getAnnuaireUrl('/'), 'daily', '1.0');
 
-  // Specialty pages (6)
+  // Specialty pages (only specialties with at least 1 professional)
   for (const specialty of SPECIALTIES) {
+    const hasPros = professionals.some(p => p.specialty === specialty.id);
+    if (!hasPros) continue;
     addUrl(getAnnuaireUrl(`/${specialty.id}/`), 'weekly', '0.9');
   }
 
-  // City pages
+  // City pages — only cities that were actually generated (have professionals)
   for (const city of CITIES) {
+    if (!generatedCityIds.has(city.id)) continue;
     addUrl(getAnnuaireUrl(`/${city.id}/`), 'weekly', '0.8');
   }
 
-  // Specialty x City pages
-  for (const specialty of SPECIALTIES) {
-    for (const city of CITIES) {
-      addUrl(getAnnuaireUrl(`/${specialty.id}/${city.id}/`), 'weekly', '0.7');
-    }
+  // Specialty x City pages — only combinations actually generated (have professionals)
+  for (const pair of generatedSpecialtyCityPairs) {
+    addUrl(getAnnuaireUrl(`/${pair}/`), 'weekly', '0.7');
   }
 
   // Professional pages
