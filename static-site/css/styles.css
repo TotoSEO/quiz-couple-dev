@@ -1973,19 +1973,21 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 /* ── Quiz section blocks ── */
 .quiz-section-block {
   position: relative;
-  border-radius: 2rem;
-  padding: 2.5rem 1.5rem;
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
 }
 .quiz-section-tests {
-  background: linear-gradient(135deg, hsl(var(--primary) / 0.04), hsl(var(--primary) / 0.08));
-  border: 1px solid hsl(var(--primary) / 0.1);
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border) / 0.5);
+  box-shadow: 0 2px 24px -8px hsl(var(--primary) / 0.06);
 }
 .quiz-section-quizzes {
-  background: linear-gradient(135deg, hsl(var(--secondary) / 0.04), hsl(var(--secondary) / 0.08));
-  border: 1px solid hsl(var(--secondary) / 0.1);
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border) / 0.5);
+  box-shadow: 0 2px 24px -8px hsl(var(--secondary) / 0.06);
 }
 @media (max-width: 640px) {
-  .quiz-section-block { padding: 1.5rem 1rem; border-radius: 1.5rem; }
+  .quiz-section-block { padding: 1.5rem 0.75rem; border-radius: 1rem; }
 }
 
 /* Section badges */
@@ -1999,75 +2001,186 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* Divider between tests and quizzes */
 .quiz-section-divider {
-  display: flex; align-items: center; gap: 0;
-  padding: 2rem 0;
+  display: flex; align-items: center; justify-content: center;
+  padding: 2.5rem 0;
+  gap: 1rem;
 }
 .quiz-section-divider-line {
-  flex: 1; height: 2px;
+  flex: 1; height: 1px; max-width: 120px;
   background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
+}
+.quiz-section-divider::before {
+  content: '✦';
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground) / 0.3);
 }
 
 /* ── Bubble cards ── */
+/* ── Quiz Cards — Modern, Premium Design ─────────────────── */
+
 .quiz-bubble-card {
   position: relative; height: 100%;
-  border-radius: 1.5rem;
-  border: 2px solid hsl(var(--primary) / 0.12);
-  background: hsl(var(--card) / 0.92);
-  backdrop-filter: blur(8px);
-  padding: 1.75rem 1.25rem 1.5rem;
-  display: flex; flex-direction: column; align-items: center; text-align: center;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 12px -2px rgb(0 0 0 / 0.05);
+  border-radius: 1.25rem;
+  border: 1px solid hsl(var(--border) / 0.6);
+  background: hsl(var(--card));
+  padding: 1.5rem 1.25rem 1.25rem;
+  display: flex; flex-direction: column; align-items: flex-start; text-align: left;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   overflow: hidden;
 }
-.quiz-bubble-card--quiz { border-color: hsl(var(--secondary) / 0.15); }
-.quiz-bubble-card:hover {
-  transform: translateY(-6px);
-  border-color: hsl(var(--primary) / 0.35);
-  box-shadow: 0 16px 32px -8px hsl(var(--primary) / 0.15), 0 4px 8px -2px rgb(0 0 0 / 0.04);
+.quiz-bubble-card::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.quiz-bubble-card--quiz:hover { border-color: hsl(var(--secondary) / 0.35); box-shadow: 0 16px 32px -8px hsl(var(--secondary) / 0.15), 0 4px 8px -2px rgb(0 0 0 / 0.04); }
+.quiz-bubble-card--quiz::after { background: linear-gradient(90deg, hsl(var(--secondary)), hsl(270 60% 65%)); }
+.quiz-bubble-card:hover {
+  transform: translateY(-8px);
+  border-color: hsl(var(--primary) / 0.3);
+  box-shadow:
+    0 20px 40px -12px hsl(var(--primary) / 0.15),
+    0 8px 16px -4px rgba(0,0,0,0.06);
+}
+.quiz-bubble-card:hover::after { transform: scaleX(1); }
+.quiz-bubble-card--quiz { border-color: hsl(var(--border) / 0.6); }
+.quiz-bubble-card--quiz:hover {
+  border-color: hsl(var(--secondary) / 0.3);
+  box-shadow:
+    0 20px 40px -12px hsl(var(--secondary) / 0.15),
+    0 8px 16px -4px rgba(0,0,0,0.06);
+}
+
 .quiz-bubble-emoji {
   display: flex; align-items: center; justify-content: center;
-  width: 4.25rem; height: 4.25rem;
-  border-radius: 50%;
-  background: linear-gradient(145deg, hsl(var(--primary) / 0.1), hsl(var(--primary) / 0.18));
-  margin-bottom: 1rem; font-size: 1.85rem;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: inset 0 -2px 6px hsl(var(--primary) / 0.08);
+  width: 3.5rem; height: 3.5rem;
+  border-radius: 0.875rem;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--primary) / 0.05));
+  border: 1px solid hsl(var(--primary) / 0.1);
+  margin-bottom: 1rem; font-size: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .quiz-bubble-emoji--quiz {
-  background: linear-gradient(145deg, hsl(var(--secondary) / 0.1), hsl(var(--secondary) / 0.18));
-  box-shadow: inset 0 -2px 6px hsl(var(--secondary) / 0.08);
+  background: linear-gradient(135deg, hsl(var(--secondary) / 0.1), hsl(var(--secondary) / 0.05));
+  border-color: hsl(var(--secondary) / 0.1);
 }
-.quiz-bubble-card:hover .quiz-bubble-emoji { transform: scale(1.18) rotate(-6deg); }
+.quiz-bubble-card:hover .quiz-bubble-emoji {
+  transform: scale(1.15) rotate(-6deg);
+  box-shadow: 0 6px 20px -4px hsl(var(--primary) / 0.25);
+  border-color: hsl(var(--primary) / 0.25);
+}
+.quiz-bubble-card--quiz:hover .quiz-bubble-emoji {
+  box-shadow: 0 6px 20px -4px hsl(var(--secondary) / 0.25);
+  border-color: hsl(var(--secondary) / 0.25);
+}
 .quiz-bubble-title {
-  font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: hsl(var(--foreground));
+  font-size: 0.9375rem; font-weight: 700; margin-bottom: 0.375rem; color: hsl(var(--foreground));
   font-family: 'Poppins', 'Inter', system-ui, sans-serif; line-height: 1.3;
   transition: color 0.3s;
 }
 .quiz-bubble-card:hover .quiz-bubble-title { color: hsl(var(--primary)); }
 .quiz-bubble-card--quiz:hover .quiz-bubble-title { color: hsl(var(--secondary)); }
 .quiz-bubble-desc {
-  font-size: 0.8125rem; color: hsl(var(--muted-foreground)); line-height: 1.6; margin-bottom: 1.25rem; flex: 1;
+  font-size: 0.8125rem; color: hsl(var(--muted-foreground)); line-height: 1.55; margin-bottom: 1rem; flex: 1;
 }
 .quiz-bubble-cta {
-  display: inline-flex; align-items: center; gap: 0.5rem;
+  display: inline-flex; align-items: center; gap: 0.375rem;
   font-size: 0.8125rem; font-weight: 600;
-  color: hsl(var(--primary-foreground));
-  background: hsl(var(--primary));
-  padding: 0.5rem 1.25rem;
-  border-radius: 9999px;
+  color: hsl(var(--primary));
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px -2px hsl(var(--primary) / 0.35);
+  box-shadow: none;
   white-space: nowrap;
 }
-.quiz-bubble-cta--quiz {
-  background: hsl(var(--secondary));
-  box-shadow: 0 2px 8px -2px hsl(var(--secondary) / 0.35);
+.quiz-bubble-cta--quiz { color: hsl(var(--secondary)); }
+.quiz-bubble-card:hover .quiz-bubble-cta {
+  gap: 0.625rem;
+  box-shadow: none; transform: none;
 }
-.quiz-bubble-card:hover .quiz-bubble-cta { box-shadow: 0 4px 14px -2px hsl(var(--primary) / 0.45); transform: scale(1.05); }
-.quiz-bubble-card--quiz:hover .quiz-bubble-cta--quiz { box-shadow: 0 4px 14px -2px hsl(var(--secondary) / 0.45); }
+.quiz-bubble-card--quiz:hover .quiz-bubble-cta--quiz { box-shadow: none; }
+
+/* ── Related Tests Section — Complete Redesign ───────── */
+
+.related-tests-section {
+  padding: 3rem 0 4rem;
+  background: linear-gradient(180deg, transparent, hsl(var(--muted) / 0.3));
+}
+.related-tests-header {
+  text-align: center; margin-bottom: 2rem;
+}
+.related-tests-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 1.5rem; font-weight: 800;
+  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+.related-tests-sub {
+  font-size: 0.9375rem; color: hsl(var(--muted-foreground));
+}
+.related-tests-grid {
+  display: grid; grid-template-columns: 1fr; gap: 0.75rem;
+}
+@media (min-width: 640px) { .related-tests-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.related-test-card {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid hsl(var(--border) / 0.6);
+  background: hsl(var(--card));
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-decoration: none;
+}
+.related-test-card:hover {
+  border-color: hsl(var(--primary) / 0.3);
+  background: hsl(var(--primary) / 0.03);
+  transform: translateY(-4px) translateX(4px);
+  box-shadow: 0 12px 32px -8px hsl(var(--primary) / 0.12);
+}
+.related-test-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 2.75rem; height: 2.75rem; flex-shrink: 0;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.06));
+  border: 1px solid hsl(var(--primary) / 0.08);
+  font-size: 1.25rem;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.related-test-card:hover .related-test-icon {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 4px 12px -2px hsl(var(--primary) / 0.2);
+}
+.related-test-content { flex: 1; min-width: 0; }
+.related-test-title {
+  font-size: 0.875rem; font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.125rem;
+  transition: color 0.2s;
+}
+.related-test-card:hover .related-test-title { color: hsl(var(--primary)); }
+.related-test-desc {
+  font-size: 0.75rem; color: hsl(var(--muted-foreground));
+  line-height: 1.4;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.related-test-arrow {
+  width: 1.25rem; height: 1.25rem; flex-shrink: 0;
+  color: hsl(var(--muted-foreground) / 0.4);
+  transition: all 0.3s ease;
+}
+.related-test-card:hover .related-test-arrow {
+  color: hsl(var(--primary));
+  transform: translateX(4px);
+}
 
 /* ── AI Resolver card ─────────────────────────────────────── */
 
@@ -2474,45 +2587,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   transform: scale(1.1) rotate(-5deg);
 }
 
-/* ── Homepage Quiz Cards ───────────────────────────── */
-.homepage-quiz-card .quiz-bubble-card {
-  transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-.homepage-quiz-card .quiz-bubble-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.homepage-quiz-card:hover .quiz-bubble-card::before {
-  transform: scaleX(1);
-}
-.homepage-quiz-card:hover .quiz-bubble-card {
-  border-color: hsl(var(--primary) / 0.3);
-  box-shadow:
-    0 12px 40px -12px hsl(var(--primary) / 0.12),
-    0 4px 12px rgba(0,0,0,0.04);
-  transform: translateY(-6px);
-}
-.quiz-bubble-emoji {
-  transition: transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-.homepage-quiz-card:hover .quiz-bubble-emoji {
-  transform: scale(1.2) rotate(-8deg);
-}
-.quiz-bubble-cta {
-  transition: all 250ms ease;
-}
-.homepage-quiz-card:hover .quiz-bubble-cta {
-  color: hsl(var(--primary));
-  gap: 0.75rem;
-}
+/* ── Homepage Quiz Cards — no extra overrides needed, base styles handle it ── */
 
 /* ── Hero Section Enhancement ──────────────────────── */
 .hero-home {
@@ -2604,27 +2679,7 @@ details[open] summary {
   color: hsl(var(--primary));
 }
 
-/* ── Related Tests Section Enhancement ─────────────── */
-.block.p-4.rounded-lg.border {
-  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-.block.p-4.rounded-lg.border::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 3px;
-  background: linear-gradient(to bottom, hsl(var(--primary)), hsl(var(--secondary)));
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 300ms ease;
-}
-.block.p-4.rounded-lg.border:hover::before { transform: scaleY(1); }
-.block.p-4.rounded-lg.border:hover {
-  transform: translateY(-3px) translateX(4px);
-  box-shadow: 0 8px 24px -8px hsl(var(--primary) / 0.12);
-}
+/* ── Related Tests — styles moved to .related-test-card ── */
 
 /* ── Smooth Page Entrance ─────────────────────────── */
 main > section:first-child { animation: pageEnter 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
