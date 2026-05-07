@@ -161,21 +161,21 @@ async function generatePage(routeKey, lang) {
     description = privacyMeta[lang]?.description || privacyMeta.fr.description;
   } else if (routeKey === 'blog') {
     const blogMeta = {
-      fr: { title: 'Blog - Conseils et astuces pour couples | Quiz Couple', description: 'Découvrez nos articles et conseils pour renforcer votre relation de couple.' },
-      en: { title: 'Blog - Tips & Advice for Couples | Quiz Couple', description: 'Discover our articles and tips to strengthen your relationship.' },
-      es: { title: 'Blog - Consejos para parejas | Quiz Couple', description: 'Descubre nuestros artículos y consejos para fortalecer tu relación de pareja.' },
-      de: { title: 'Blog - Tipps und Ratschläge für Paare | Quiz Couple', description: 'Entdecke unsere Artikel und Tipps, um deine Beziehung zu stärken.' },
-      it: { title: 'Blog - Consigli per coppie | Quiz Couple', description: 'Scopri i nostri articoli e consigli per rafforzare la tua relazione di coppia.' },
+      fr: { title: 'Blog couple : conseils relations amoureuses et vie à deux', description: 'Articles experts sur les relations amoureuses, la compatibilité et la vie de couple. Conseils pratiques, astrologie et psychologie.' },
+      en: { title: 'Couple Blog: Tips, Advice & Relationship Insights', description: 'Expert articles on love, compatibility and relationships. Practical tips, astrology and psychology for couples.' },
+      es: { title: 'Blog Pareja: Consejos y Relaciones Amorosas', description: 'Artículos sobre relaciones, compatibilidad y vida en pareja. Consejos prácticos y psicología.' },
+      de: { title: 'Paar-Blog: Tipps und Beziehungsratgeber', description: 'Fachartikel über Liebe, Kompatibilität und Beziehungen. Praktische Tipps und Psychologie für Paare.' },
+      it: { title: 'Blog Coppia: Consigli e Relazioni Amorose', description: 'Articoli su relazioni, compatibilità e vita di coppia. Consigli pratici e psicologia.' },
     };
     title = blogMeta[lang]?.title || blogMeta.fr.title;
     description = blogMeta[lang]?.description || blogMeta.fr.description;
   } else if (routeKey === 'about') {
     const aboutMeta = {
-      fr: { title: 'Qui sommes-nous ? L\'équipe derrière Quiz Couple', description: 'Lucie et Mathieu Courtin, co-fondateurs de Quiz Couple. Pourquoi on a créé ce site, ce qu\'on y met, et comment on travaille — sans langue de bois.' },
-      en: { title: 'About Us - The Team Behind Quiz Couple', description: 'Lucie and Mathieu Courtin, co-founders of Quiz Couple. Why we created this site, what we put into it, and how we work — no sugarcoating.' },
-      es: { title: 'Quiénes somos - El equipo detrás de Quiz Couple', description: 'Lucie y Mathieu Courtin, cofundadores de Quiz Couple. Por qué creamos este sitio, qué ponemos en él y cómo trabajamos — sin rodeos.' },
-      de: { title: 'Über uns - Das Team hinter Quiz Couple', description: 'Lucie und Mathieu Courtin, Mitgründer von Quiz Couple. Warum wir diese Seite erstellt haben, was wir hineinlegen und wie wir arbeiten — ohne Beschönigung.' },
-      it: { title: 'Chi siamo - Il team dietro Quiz Couple', description: 'Lucie e Mathieu Courtin, co-fondatori di Quiz Couple. Perché abbiamo creato questo sito, cosa ci mettiamo e come lavoriamo — senza giri di parole.' },
+      fr: { title: 'Qui sommes-nous ? L\'équipe derrière Quiz Couple | notre histoire', description: 'Lucie et Mathieu Courtin, co-fondateurs de Quiz Couple. Pourquoi on a créé ce site, notre mission, et comment on travaille — en toute transparence.' },
+      en: { title: 'About Us — The People Behind Quiz Couple', description: 'Meet Lucie and Mathieu Courtin, co-founders of Quiz Couple. Our mission, our story, and how we work — no sugarcoating.' },
+      es: { title: 'Quiénes Somos — El Equipo de Quiz Couple', description: 'Lucie y Mathieu Courtin, cofundadores de Quiz Couple. Nuestra misión y cómo trabajamos — sin rodeos.' },
+      de: { title: 'Über Uns — Das Team von Quiz Couple', description: 'Lucie und Mathieu Courtin, Gründer von Quiz Couple. Unsere Mission und wie wir arbeiten — ehrlich und direkt.' },
+      it: { title: 'Chi Siamo — Il Team di Quiz Couple', description: 'Lucie e Mathieu Courtin, co-fondatori di Quiz Couple. La nostra missione e come lavoriamo — in trasparenza.' },
     };
     title = aboutMeta[lang]?.title || aboutMeta.fr.title;
     description = aboutMeta[lang]?.description || aboutMeta.fr.description;
