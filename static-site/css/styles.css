@@ -2251,3 +2251,436 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   *, ::before, ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   .blob, .blob-primary, .blob-secondary { display: none !important; }
 }
+
+/* ================================================================
+   PREMIUM VISUAL ENHANCEMENTS
+   Depth, micro-interactions, celebration effects, glassmorphism
+   ================================================================ */
+
+/* ── Enhanced Quiz Engine Container ────────────────────── */
+.quiz-engine {
+  border: 1px solid hsl(var(--border) / 0.6);
+  background: hsl(var(--card) / 0.7);
+  backdrop-filter: blur(32px) saturate(1.5);
+  box-shadow:
+    0 0 0 1px hsl(var(--border) / 0.1),
+    0 4px 24px -4px hsl(var(--primary) / 0.06),
+    0 24px 48px -12px rgba(0,0,0,0.08);
+}
+.dark .quiz-engine {
+  box-shadow:
+    0 0 0 1px hsl(var(--border) / 0.2),
+    0 4px 24px -4px hsl(var(--primary) / 0.08),
+    0 24px 48px -12px rgba(0,0,0,0.4);
+}
+
+/* ── Enhanced Quiz Options — Glassmorphism + Ripple ──── */
+.quiz-option {
+  border: 1.5px solid hsl(var(--border) / 0.8);
+  background: hsl(var(--card) / 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px -4px rgba(0,0,0,0.03);
+  position: relative;
+  overflow: hidden;
+}
+.quiz-option::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--ripple-x, 50%) var(--ripple-y, 50%), hsl(var(--primary) / 0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.quiz-option:hover::before { opacity: 1; }
+.quiz-option:hover {
+  border-color: hsl(var(--primary) / 0.4);
+  background: hsl(var(--card));
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 32px -8px hsl(var(--primary) / 0.15),
+    0 2px 8px rgba(0,0,0,0.04);
+}
+.quiz-option:active {
+  transform: scale(0.98) translateY(0);
+  transition-duration: 100ms;
+}
+.quiz-option.selected {
+  border-color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.08);
+  box-shadow:
+    0 0 0 3px hsl(var(--primary) / 0.12),
+    0 8px 24px -8px hsl(var(--primary) / 0.2),
+    inset 0 1px 2px hsl(var(--primary) / 0.06);
+}
+
+/* ── Enhanced Option Letter Indicator ───────────────── */
+.quiz-option-letter {
+  width: 34px; height: 34px; border-radius: 10px;
+  font-size: 0.85rem; letter-spacing: -0.02em;
+  background: linear-gradient(135deg, hsl(var(--muted)), hsl(var(--muted) / 0.5));
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.06);
+  transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.quiz-option:hover .quiz-option-letter {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.15), hsl(var(--primary) / 0.08));
+  color: hsl(var(--primary));
+  transform: scale(1.08);
+  box-shadow: 0 2px 8px -2px hsl(var(--primary) / 0.2);
+}
+.quiz-option.selected .quiz-option-letter {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px -2px hsl(var(--primary) / 0.4);
+}
+
+/* ── Progress Bar Enhancement ──────────────────────── */
+.quiz-progress-bar {
+  height: 6px;
+  background: hsl(var(--muted) / 0.7);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.06);
+}
+.quiz-progress-fill {
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(340 80% 60%), hsl(var(--secondary)));
+  background-size: 200% 100%;
+  animation: shimmerProgress 2.5s ease-in-out infinite;
+  box-shadow: 0 0 12px -2px hsl(var(--primary) / 0.4);
+}
+
+/* ── Enhanced Result Card — Celebration ─────────────── */
+.quiz-result-card {
+  padding: 2.5rem 2rem;
+  background: linear-gradient(145deg, hsl(var(--primary) / 0.06), hsl(var(--secondary) / 0.08), hsl(var(--primary) / 0.04));
+  border: 1px solid hsl(var(--primary) / 0.15);
+  box-shadow:
+    0 0 0 1px hsl(var(--primary) / 0.05),
+    0 8px 32px -8px hsl(var(--primary) / 0.1),
+    0 24px 64px -16px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+.quiz-result-card::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: conic-gradient(from 0deg, transparent, hsl(var(--primary) / 0.03), transparent, hsl(var(--secondary) / 0.03), transparent);
+  animation: resultGlow 8s linear infinite;
+}
+@keyframes resultGlow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.quiz-result-card > * { position: relative; z-index: 1; }
+
+/* ── Score Ring Enhancement ─────────────────────────── */
+.score-ring-wrap {
+  filter: drop-shadow(0 4px 16px hsl(var(--primary) / 0.2));
+}
+.score-ring-fill {
+  stroke-width: 7;
+  filter: drop-shadow(0 0 6px hsl(var(--primary) / 0.4));
+}
+.score-ring-bg {
+  stroke-width: 7;
+  stroke: hsl(var(--muted) / 0.5);
+}
+.score-ring-value {
+  font-weight: 900;
+  text-shadow: 0 2px 8px hsl(var(--primary) / 0.15);
+}
+
+/* ── Enhanced Score Circle ──────────────────────────── */
+.quiz-score-circle {
+  width: 130px; height: 130px;
+  border: none;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.12), hsl(var(--secondary) / 0.15));
+  box-shadow:
+    0 0 0 4px hsl(var(--primary) / 0.3),
+    0 0 0 8px hsl(var(--primary) / 0.08),
+    0 8px 32px -8px hsl(var(--primary) / 0.25);
+  font-size: 2.25rem;
+  animation: scoreCircleReveal 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+@keyframes scoreCircleReveal {
+  0% { transform: scale(0.3); opacity: 0; box-shadow: 0 0 0 0 hsl(var(--primary) / 0.6); }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ── Buttons Enhancement ───────────────────────────── */
+.btn-cta {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(340 70% 55%));
+  box-shadow:
+    0 2px 8px -2px hsl(var(--primary) / 0.4),
+    0 8px 24px -4px hsl(var(--primary) / 0.2),
+    inset 0 1px 1px rgba(255,255,255,0.15);
+  transition: all 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+.btn-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.12) 50%, transparent 70%);
+  background-size: 200% 100%;
+  animation: btnSheen 3s ease-in-out infinite;
+}
+@keyframes btnSheen {
+  0%,100% { background-position: 200% 0; }
+  50% { background-position: -200% 0; }
+}
+.btn-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 4px 16px -2px hsl(var(--primary) / 0.5),
+    0 12px 40px -8px hsl(var(--primary) / 0.3),
+    inset 0 1px 1px rgba(255,255,255,0.2);
+}
+.btn-cta:active {
+  transform: translateY(0) scale(0.98);
+  transition-duration: 100ms;
+}
+
+.btn-outline {
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.btn-outline:hover {
+  border-color: hsl(var(--primary) / 0.5);
+  background: hsl(var(--primary) / 0.05);
+  color: hsl(var(--primary));
+  box-shadow: 0 4px 16px -4px hsl(var(--primary) / 0.15);
+  transform: translateY(-1px);
+}
+
+/* ── Card Enhancement ──────────────────────────────── */
+.card-with-icon {
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid hsl(var(--border) / 0.7);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.card-with-icon:hover {
+  border-color: hsl(var(--primary) / 0.3);
+  box-shadow:
+    0 8px 32px -8px hsl(var(--primary) / 0.1),
+    0 2px 8px rgba(0,0,0,0.04);
+  transform: translateY(-4px);
+}
+.icon-circle {
+  transition: all 300ms ease;
+  box-shadow: 0 2px 8px -2px currentColor;
+}
+.card-with-icon:hover .icon-circle {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* ── Homepage Quiz Cards ───────────────────────────── */
+.homepage-quiz-card .quiz-bubble-card {
+  transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+.homepage-quiz-card .quiz-bubble-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.homepage-quiz-card:hover .quiz-bubble-card::before {
+  transform: scaleX(1);
+}
+.homepage-quiz-card:hover .quiz-bubble-card {
+  border-color: hsl(var(--primary) / 0.3);
+  box-shadow:
+    0 12px 40px -12px hsl(var(--primary) / 0.12),
+    0 4px 12px rgba(0,0,0,0.04);
+  transform: translateY(-6px);
+}
+.quiz-bubble-emoji {
+  transition: transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.homepage-quiz-card:hover .quiz-bubble-emoji {
+  transform: scale(1.2) rotate(-8deg);
+}
+.quiz-bubble-cta {
+  transition: all 250ms ease;
+}
+.homepage-quiz-card:hover .quiz-bubble-cta {
+  color: hsl(var(--primary));
+  gap: 0.75rem;
+}
+
+/* ── Hero Section Enhancement ──────────────────────── */
+.hero-home {
+  position: relative;
+  overflow: hidden;
+}
+.hero-home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 40%, hsl(var(--primary) / 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 80% 30%, hsl(var(--secondary) / 0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-stats {
+  position: relative;
+}
+.hero-stat-card {
+  transition: all 250ms ease;
+  position: relative;
+}
+.hero-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px -8px hsl(var(--primary) / 0.15);
+}
+.hero-stat-value {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-float-card {
+  backdrop-filter: blur(12px) saturate(1.3);
+  box-shadow: 0 8px 32px -8px rgba(0,0,0,0.12), 0 0 0 1px hsl(var(--border) / 0.3);
+}
+
+/* ── Blog Cards Enhancement ────────────────────────── */
+.blog-card {
+  transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px -12px rgba(0,0,0,0.12);
+}
+.blog-card-image {
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.blog-card:hover .blog-card-image {
+  transform: scale(1.06);
+}
+
+/* ── Navigation Enhancement ─────────────────────────── */
+.nav-megamenu-item {
+  transition: all 200ms ease;
+  position: relative;
+}
+.nav-megamenu-item:hover {
+  transform: translateX(4px);
+}
+.nav-megamenu-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  width: 3px; height: 0;
+  background: hsl(var(--primary));
+  border-radius: 2px;
+  transform: translateY(-50%);
+  transition: height 200ms ease;
+}
+.nav-megamenu-item:hover::before { height: 60%; }
+
+/* ── FAQ Accordion Enhancement ──────────────────────── */
+details.border {
+  transition: all 250ms ease;
+}
+details.border:hover {
+  border-color: hsl(var(--primary) / 0.3);
+  box-shadow: 0 4px 16px -4px hsl(var(--primary) / 0.08);
+}
+details[open] {
+  border-color: hsl(var(--primary) / 0.2);
+  background: hsl(var(--primary) / 0.02);
+}
+details summary {
+  transition: color 200ms ease;
+}
+details[open] summary {
+  color: hsl(var(--primary));
+}
+
+/* ── Related Tests Section Enhancement ─────────────── */
+.block.p-4.rounded-lg.border {
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+.block.p-4.rounded-lg.border::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, hsl(var(--primary)), hsl(var(--secondary)));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 300ms ease;
+}
+.block.p-4.rounded-lg.border:hover::before { transform: scaleY(1); }
+.block.p-4.rounded-lg.border:hover {
+  transform: translateY(-3px) translateX(4px);
+  box-shadow: 0 8px 24px -8px hsl(var(--primary) / 0.12);
+}
+
+/* ── Smooth Page Entrance ─────────────────────────── */
+main > section:first-child { animation: pageEnter 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes pageEnter { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── Enhanced Scroll Animations (no JS needed) ────── */
+@supports (animation-timeline: view()) {
+  .seo-content section,
+  .icon-cards-grid .card-with-icon,
+  .quiz-section-block {
+    animation: scrollReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 30%;
+  }
+  @keyframes scrollReveal {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* ── Enhanced Confetti — More particles, varied shapes ── */
+.confetti-dot {
+  width: 10px; height: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.confetti-dot:nth-child(odd) { border-radius: 2px; transform: rotate(45deg); }
+.confetti-dot:nth-child(3n) { width: 6px; height: 14px; border-radius: 3px; }
+
+/* ── Glassmorphism for setup screens ───────────────── */
+.quiz-setup-screen {
+  background: hsl(var(--card) / 0.5);
+  backdrop-filter: blur(24px);
+}
+
+/* ── Glow effect on focus for inputs ───────────────── */
+.input:focus, .textarea:focus {
+  border-color: hsl(var(--primary) / 0.5);
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1), 0 0 16px -4px hsl(var(--primary) / 0.2);
+}
+
+/* ── Enhanced breadcrumb ────────────────────────────── */
+.breadcrumb a { transition: all 200ms ease; }
+.breadcrumb a:hover { color: hsl(var(--primary)); transform: translateX(2px); display: inline-block; }
+
+/* ── Smooth selection color ─────────────────────────── */
+::selection { background: hsl(var(--primary) / 0.2); color: hsl(var(--foreground)); }
+
+/* ── Scrollbar styling ──────────────────────────────── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: hsl(var(--muted-foreground) / 0.2); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.4); }
+
+/* ── Enhanced mobile touch feedback ─────────────────── */
+@media (hover: none) {
+  .quiz-option:active { background: hsl(var(--primary) / 0.08); border-color: hsl(var(--primary) / 0.4); }
+  .btn-cta:active { transform: scale(0.96); }
+}
+
