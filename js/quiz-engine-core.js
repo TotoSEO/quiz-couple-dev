@@ -520,6 +520,11 @@ var QuizEngine = (function() {
       var optLetters = ['A','B','C','D','E'];
       optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('mousemove', function(e) {
+        var rect = optBtn.getBoundingClientRect();
+        optBtn.style.setProperty('--ripple-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+        optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+      });
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
@@ -782,6 +787,11 @@ var QuizEngine = (function() {
       var optLetters = ['A','B','C','D','E'];
       optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('mousemove', function(e) {
+        var rect = optBtn.getBoundingClientRect();
+        optBtn.style.setProperty('--ripple-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+        optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+      });
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
@@ -972,6 +982,11 @@ var QuizEngine = (function() {
       var optLetters = ['A','B','C','D','E'];
       optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('mousemove', function(e) {
+        var rect = optBtn.getBoundingClientRect();
+        optBtn.style.setProperty('--ripple-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+        optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+      });
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
@@ -1163,6 +1178,11 @@ var QuizEngine = (function() {
       var optLetters = ['A','B','C','D','E'];
       optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('mousemove', function(e) {
+        var rect = optBtn.getBoundingClientRect();
+        optBtn.style.setProperty('--ripple-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+        optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+      });
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
@@ -1203,6 +1223,11 @@ var QuizEngine = (function() {
       var optLetters = ['A','B','C','D','E'];
       optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('mousemove', function(e) {
+        var rect = optBtn.getBoundingClientRect();
+        optBtn.style.setProperty('--ripple-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+        optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+      });
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
@@ -2146,6 +2171,11 @@ var QuizEngine = (function() {
       var optLetters = ['A','B','C','D','E'];
       optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('mousemove', function(e) {
+        var rect = optBtn.getBoundingClientRect();
+        optBtn.style.setProperty('--ripple-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+        optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+      });
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
@@ -2363,6 +2393,11 @@ var QuizEngine = (function() {
       var optLetters = ['A','B','C','D','E'];
       optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
       optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('mousemove', function(e) {
+        var rect = optBtn.getBoundingClientRect();
+        optBtn.style.setProperty('--ripple-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+        optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+      });
       optBtn.addEventListener('click', function() {
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
