@@ -162,7 +162,13 @@
      "shareYourResult": "Teile dein Ergebnis!",
       "loveScore": "Liebespunktzahl",
       "shareWithFriends": "Teile dein Ergebnis mit Freunden",
-      "totalCoupleScore": "Gesamtpunktzahl des Paares"
+      "totalCoupleScore": "Gesamtpunktzahl des Paares",
+      "low": "Ihr ergänzt euch",
+      "lowDesc": "Eure Antworten unterscheiden sich oft – und das ist okay! Eure Unterschiede können eine echte Bereicherung sein, solange ihr darüber sprecht. Nutzt dieses Quiz, um die Vorlieben des anderen zu entdecken, ohne es zu einem Urteil zu machen.",
+      "medium": "Ihr kennt euch gut",
+      "mediumDesc": "Ihr teilt echte Gemeinsamkeiten und einige kleine Überraschungen. Das ist eine schöne Basis: kein Paar hat zu 100% die gleichen Vorlieben, und genau das macht jede Beziehung einzigartig.",
+      "high": "Unglaubliche Verbindung!",
+      "highDesc": "Eure Antworten stimmen fast jedes Mal überein – ihr seid wirklich auf derselben Wellenlänge!"
     },
     "meta": {
       "duration": "5 Min",

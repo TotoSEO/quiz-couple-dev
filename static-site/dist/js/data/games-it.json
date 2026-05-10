@@ -162,7 +162,13 @@
      "shareYourResult": "Condividi il tuo risultato!",
       "loveScore": "Punteggio d'amore",
       "shareWithFriends": "Condividi il tuo risultato con gli amici",
-      "totalCoupleScore": "Punteggio totale della coppia"
+      "totalCoupleScore": "Punteggio totale della coppia",
+      "low": "Vi completate a vicenda",
+      "lowDesc": "Le vostre risposte spesso divergono — e va bene così! Le vostre differenze possono essere una vera ricchezza, a condizione di parlarne. Approfittate di questo quiz per scoprire i gusti dell'altro, senza farne un giudizio.",
+      "medium": "Vi conoscete bene",
+      "mediumDesc": "Condividete veri punti in comune e qualche piccola sorpresa. È una bella base: nessuna coppia ha il 100% degli stessi gusti, ed è questo che rende ogni relazione unica.",
+      "high": "Connessione incredibile!",
+      "highDesc": "Le vostre risposte coincidono quasi ogni volta — siete davvero sulla stessa lunghezza d'onda!"
     },
     "meta": {
       "duration": "5 min",

@@ -340,13 +340,29 @@
         advice: QuizEngine.tgd('healthy.r' + i + '_a', '')
       });
     }
-    // Score ranges for healthy: max total = 20 questions * 3 points * 2 players = 120
-    var maxTotal = healthyQuestions.length * 3 * 2;
+    // Score ranges for healthy: non-linear weights a=4,b=3,c=1,d=0.
+    // Max total = questions × 4 × 2 players. Tiers use realistic percentage
+    // bands instead of equal split so a couple averaging "Souvent" answers
+    // (~75%) lands in tier 3 ("solid"), not tier 2 ("needs attention").
+    var maxTotal = healthyQuestions.length * 4 * 2;
     if (results.length > 0) {
-      var rangeSize = Math.ceil(maxTotal / results.length);
+      var bands;
+      if (results.length === 4) {
+        bands = [0.30, 0.55, 0.80, 1.00]; // 0-30% / 31-55% / 56-80% / 81-100%
+      } else if (results.length === 3) {
+        bands = [0.40, 0.75, 1.00];
+      } else if (results.length === 5) {
+        bands = [0.25, 0.45, 0.65, 0.85, 1.00];
+      } else {
+        // Fallback: equal split
+        bands = [];
+        for (var b = 1; b <= results.length; b++) bands.push(b / results.length);
+      }
+      var prevMax = -1;
       for (var r = 0; r < results.length; r++) {
-        results[r].min = r * rangeSize;
-        results[r].max = r === results.length - 1 ? maxTotal : (r + 1) * rangeSize - 1;
+        results[r].min = prevMax + 1;
+        results[r].max = r === results.length - 1 ? maxTotal : Math.round(bands[r] * maxTotal);
+        prevMax = results[r].max;
       }
     }
 
@@ -542,17 +558,22 @@
   // ─── Helpers ──────────────────────────────────────────────
 
   function buildDuoResults(total) {
-    var third = Math.ceil(total / 3);
+    // Match-count tiers calibrated for 4-5 option questions where random
+    // matching is ~25%. With total=20: low 0-5 (≈ chance), mid 6-12
+    // (real but partial overlap), high 13-20 (strongly aligned).
+    // Boundaries scale for any total via fractions of total.
+    var lowMax = Math.max(2, Math.floor(total * 0.30));         // ~6/20
+    var midMax = Math.max(lowMax + 1, Math.floor(total * 0.65)); // ~13/20
     return [
-      { minScore: 0, maxScore: third - 1, min: 0, max: third - 1,
-        title: QuizEngine.tg('result.low', 'Vous avez des choses à découvrir !'),
-        description: QuizEngine.tg('result.lowDesc', 'Vous avez encore beaucoup à apprendre sur vos goûts respectifs.') },
-      { minScore: third, maxScore: third * 2 - 1, min: third, max: third * 2 - 1,
-        title: QuizEngine.tg('result.medium', 'Bonne compatibilité !'),
-        description: QuizEngine.tg('result.mediumDesc', 'Vous vous connaissez plutôt bien, avec quelques surprises.') },
-      { minScore: third * 2, maxScore: total, min: third * 2, max: total,
+      { minScore: 0, maxScore: lowMax - 1, min: 0, max: lowMax - 1,
+        title: QuizEngine.tg('result.low', 'Vous êtes complémentaires'),
+        description: QuizEngine.tg('result.lowDesc', 'Vos réponses divergent souvent — et c\'est ok ! Vos différences peuvent être une vraie richesse à condition d\'en parler. Profitez de ce quiz pour découvrir les goûts de l\'autre, sans en faire un jugement.') },
+      { minScore: lowMax, maxScore: midMax - 1, min: lowMax, max: midMax - 1,
+        title: QuizEngine.tg('result.medium', 'Vous vous connaissez bien'),
+        description: QuizEngine.tg('result.mediumDesc', 'Vous partagez de vrais points communs et quelques petites surprises. C\'est une belle base : aucun couple n\'a 100% des mêmes goûts, c\'est ce qui rend chaque relation unique.') },
+      { minScore: midMax, maxScore: total, min: midMax, max: total,
         title: QuizEngine.tg('result.high', 'Incroyable connexion !'),
-        description: QuizEngine.tg('result.highDesc', 'Vous êtes sur la même longueur d\'onde !') }
+        description: QuizEngine.tg('result.highDesc', 'Vos réponses se rejoignent presque à chaque fois — vous êtes vraiment sur la même longueur d\'onde !') }
     ];
   }
 

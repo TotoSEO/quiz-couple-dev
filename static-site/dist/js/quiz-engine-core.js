@@ -831,7 +831,13 @@ var QuizEngine = (function() {
     for (var i = 0; i < total; i++) {
       if (this.answers.p1[i] && this.answers.p2[i] && this.answers.p1[i] === this.answers.p2[i]) matchCount++;
     }
-    var pct = Math.round((matchCount / total) * 100);
+    var rawPct = matchCount / total;
+    // Compatibility curve: with 4-5 options, random matching is ~25%, and
+    // honest couples who disagree on aesthetic preferences typically land at
+    // 40-60% raw. A linear % feels punitive for users in love. We apply a
+    // gentle curve so 50% raw → ~63%, 70% raw → ~78%, while preserving a
+    // ranked feel. 100% stays 100%, 0% stays 0%.
+    var pct = Math.round(Math.pow(rawPct, 0.7) * 100);
 
     var result = null;
     for (var j = 0; j < this.results.length; j++) {
@@ -839,7 +845,7 @@ var QuizEngine = (function() {
       if (matchCount >= (r.minScore || r.min || 0) && matchCount <= (r.maxScore || r.max || 999)) { result = r; break; }
     }
 
-    var icon = el('div', 'text-5xl mb-4', pct >= 70 ? '🎉' : pct >= 40 ? '😊' : '🤔');
+    var icon = el('div', 'text-5xl mb-4', pct >= 70 ? '🎉' : pct >= 45 ? '😊' : '🤔');
     wrap.appendChild(icon);
     var scoreRingDiv = el('div', '');
     scoreRingDiv.innerHTML = renderScoreRing(pct);
@@ -2033,8 +2039,9 @@ var QuizEngine = (function() {
 
   // ═══════════════════════════════════════════════════════════
   // HEALTHY QUIZ - couple-sain (weighted scoring, 2 players + gender)
-  // Each answer has weighted points: a=3, b=2, c=1, d=0
-  // Both players answer each question, scores summed
+  // Non-linear weights: a=4 (ideal), b=3 (often/honest mid), c=1 (rarely), d=0 (never).
+  // Curve makes "Souvent / Plutôt oui" honest answers reach ~75% so loving
+  // couples don't see deflated scores when they pick realistic mid options.
   // ═══════════════════════════════════════════════════════════
   function HealthyQuiz(config) {
     this.container = config.container;
@@ -2047,7 +2054,7 @@ var QuizEngine = (function() {
     this.currentQ = 0;
     this.currentPlayer = 0;
     this.scores = [[], []];
-    this.maxScorePerPlayer = this.questions.length * 3;
+    this.maxScorePerPlayer = this.questions.length * 4;
     this.render();
   }
 
@@ -2163,7 +2170,7 @@ var QuizEngine = (function() {
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
 
-    var OPTION_SCORES = { a: 3, b: 2, c: 1, d: 0 };
+    var OPTION_SCORES = { a: 4, b: 3, c: 1, d: 0 };
     var optionsWrap = el('div', 'space-y-2');
     q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);

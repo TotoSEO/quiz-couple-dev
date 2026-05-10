@@ -162,7 +162,13 @@
      "shareYourResult": "Partagez votre résultat !",
       "loveScore": "Score d'amour",
       "shareWithFriends": "Partagez votre résultat avec vos amis",
-      "totalCoupleScore": "Score total du couple"
+      "totalCoupleScore": "Score total du couple",
+      "low": "Vous êtes complémentaires",
+      "lowDesc": "Vos réponses divergent souvent — et c'est ok ! Vos différences peuvent être une vraie richesse à condition d'en parler. Profitez de ce quiz pour découvrir les goûts de l'autre, sans en faire un jugement.",
+      "medium": "Vous vous connaissez bien",
+      "mediumDesc": "Vous partagez de vrais points communs et quelques petites surprises. C'est une belle base : aucun couple n'a 100% des mêmes goûts, c'est ce qui rend chaque relation unique.",
+      "high": "Incroyable connexion !",
+      "highDesc": "Vos réponses se rejoignent presque à chaque fois — vous êtes vraiment sur la même longueur d'onde !"
     },
     "meta": {
       "duration": "5 min",
