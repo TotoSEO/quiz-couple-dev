@@ -534,7 +534,7 @@ var QuizEngine = (function() {
         }
 
         self.answers[self.currentQ] = opt.points || 0;
-        self.totalScore = self.answers.reduce(function(s, v) { return s + (v || 0); }, 0);
+        self.totalScore = self.answers.reduce(function(s, v) { return s + (typeof v === 'number' ? v : 0); }, 0);
         // Divorce: check conditional Q11 (Q10 answer 'b' = has children)
         if (self.quizType === 'divorce' && q.id === 10) {
           self.hasChildren = (opt.id === 'b');
