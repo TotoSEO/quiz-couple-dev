@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#140820"/>
+      <stop offset="50%" stop-color="#1a0a2e"/>
+      <stop offset="100%" stop-color="#0e0518"/>
+    </linearGradient>
+    <linearGradient id="head" x1="350" y1="80" x2="450" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8b5cc2"/>
+      <stop offset="100%" stop-color="#6b3fa0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="400" cy="200" r="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8b5cc2" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#8b5cc2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <circle cx="400" cy="200" r="180" fill="url(#glow)"/>
+  <!-- Head/brain outline -->
+  <g transform="translate(400,195)" fill="none" stroke="url(#head)" stroke-width="2.5" opacity="0.85">
+    <!-- Head silhouette -->
+    <ellipse cx="0" cy="-20" rx="70" ry="85"/>
+    <!-- Brain curve lines inside -->
+    <path d="M-35,-55 C-10,-70 20,-65 35,-50" stroke-width="1.5" opacity="0.5"/>
+    <path d="M-40,-30 C-10,-45 25,-40 42,-22" stroke-width="1.5" opacity="0.5"/>
+    <path d="M-38,0 C-5,-15 20,-10 40,5" stroke-width="1.5" opacity="0.5"/>
+    <!-- Neck -->
+    <line x1="-15" y1="65" x2="-15" y2="95" stroke-width="2" opacity="0.6"/>
+    <line x1="15" y1="65" x2="15" y2="95" stroke-width="2" opacity="0.6"/>
+  </g>
+  <!-- Floating task circles - orbiting the head -->
+  <!-- Top cluster -->
+  <circle cx="310" cy="70" r="16" fill="none" stroke="#d4618c" stroke-width="1.8" opacity="0.7"/>
+  <line x1="304" y1="70" x2="316" y2="70" stroke="#d4618c" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="400" cy="50" r="12" fill="none" stroke="#e87d4a" stroke-width="1.8" opacity="0.6"/>
+  <polyline points="395,50 398,54 406,46" fill="none" stroke="#e87d4a" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="490" cy="65" r="14" fill="none" stroke="#8b5cc2" stroke-width="1.8" opacity="0.65"/>
+  <line x1="484" y1="62" x2="496" y2="62" stroke="#8b5cc2" stroke-width="1.5" opacity="0.5"/>
+  <line x1="484" y1="68" x2="493" y2="68" stroke="#8b5cc2" stroke-width="1.5" opacity="0.5"/>
+  <!-- Left cluster -->
+  <circle cx="230" cy="130" r="13" fill="none" stroke="#d4618c" stroke-width="1.8" opacity="0.55"/>
+  <circle cx="230" cy="130" r="3" fill="#d4618c" opacity="0.4"/>
+  <circle cx="210" cy="210" r="17" fill="none" stroke="#e87d4a" stroke-width="1.8" opacity="0.6"/>
+  <rect x="203" y="205" width="14" height="10" rx="2" fill="none" stroke="#e87d4a" stroke-width="1.2" opacity="0.5"/>
+  <circle cx="240" cy="290" r="11" fill="none" stroke="#8b5cc2" stroke-width="1.8" opacity="0.5"/>
+  <line x1="235" y1="290" x2="245" y2="290" stroke="#8b5cc2" stroke-width="1.5" opacity="0.4"/>
+  <!-- Right cluster -->
+  <circle cx="570" cy="120" r="15" fill="none" stroke="#e87d4a" stroke-width="1.8" opacity="0.6"/>
+  <circle cx="570" cy="120" r="4" fill="#e87d4a" opacity="0.35"/>
+  <circle cx="590" cy="200" r="12" fill="none" stroke="#d4618c" stroke-width="1.8" opacity="0.55"/>
+  <polyline points="585,200 588,204 596,196" fill="none" stroke="#d4618c" stroke-width="1.5" opacity="0.45"/>
+  <circle cx="560" cy="280" r="14" fill="none" stroke="#8b5cc2" stroke-width="1.8" opacity="0.5"/>
+  <line x1="554" y1="277" x2="566" y2="277" stroke="#8b5cc2" stroke-width="1.5" opacity="0.4"/>
+  <line x1="554" y1="283" x2="563" y2="283" stroke="#8b5cc2" stroke-width="1.5" opacity="0.4"/>
+  <!-- Connecting dotted lines from tasks to head -->
+  <line x1="326" y1="78" x2="345" y2="115" stroke="#d4618c" stroke-width="1" stroke-dasharray="3,4" opacity="0.3"/>
+  <line x1="400" y1="62" x2="400" y2="100" stroke="#e87d4a" stroke-width="1" stroke-dasharray="3,4" opacity="0.3"/>
+  <line x1="478" y1="76" x2="458" y2="115" stroke="#8b5cc2" stroke-width="1" stroke-dasharray="3,4" opacity="0.3"/>
+  <line x1="243" y1="135" x2="330" y2="165" stroke="#d4618c" stroke-width="1" stroke-dasharray="3,4" opacity="0.25"/>
+  <line x1="227" y1="210" x2="330" y2="195" stroke="#e87d4a" stroke-width="1" stroke-dasharray="3,4" opacity="0.25"/>
+  <line x1="555" y1="125" x2="470" y2="160" stroke="#e87d4a" stroke-width="1" stroke-dasharray="3,4" opacity="0.25"/>
+  <line x1="578" y1="200" x2="470" y2="195" stroke="#d4618c" stroke-width="1" stroke-dasharray="3,4" opacity="0.25"/>
+  <!-- Bottom subtle particles -->
+  <circle cx="150" cy="380" r="2" fill="#8b5cc2" opacity="0.2"/>
+  <circle cx="650" cy="390" r="1.5" fill="#d4618c" opacity="0.2"/>
+  <circle cx="400" cy="410" r="2" fill="#e87d4a" opacity="0.15"/>
+  <circle cx="300" cy="400" r="1" fill="#fff" opacity="0.1"/>
+  <circle cx="520" cy="395" r="1" fill="#fff" opacity="0.1"/>
+</svg>
