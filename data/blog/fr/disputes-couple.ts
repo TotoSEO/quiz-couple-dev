@@ -160,7 +160,7 @@ const article: BlogArticleData = {
         {
           id: 'argent-finances',
           title: "L'argent et les finances",
-          content: `<p>Le sujet numéro un de dispute dans les couples, toutes études confondues. Et souvent, ce n'est pas vraiment une question d'argent, c'est une question de <strong>valeurs, de priorités et de contrôle</strong>.</p>
+          content: `<p>Le sujet numéro un de dispute dans les couples, toutes études confondues. Et souvent, ce n'est pas vraiment une question d'argent : c'est une question de <strong>valeurs, de priorités et de contrôle</strong>.</p>
 <p>L'un veut épargner, l'autre veut profiter. L'un trouve que l'autre dépense trop, l'autre se sent surveillé. Les revenus sont inégaux et ça crée un déséquilibre de pouvoir. Le crédit de la maison pèse et les choix se limitent. Ces tensions sont réelles, et elles ne se résolvent pas en ignorant le sujet.</p>
 <p>La clé : en parler régulièrement et factuellement, pas quand la facture vient d'arriver et que tu es furieux. Posez vos chiffres sur la table, définissez ensemble ce qui est "commun" et ce qui est "perso", et acceptez que vous n'aurez pas toujours la même vision, et que c'est OK si vous trouvez un compromis.</p>`,
         },
@@ -174,7 +174,7 @@ const article: BlogArticleData = {
         {
           id: 'jalousie-confiance',
           title: "La jalousie et les questions de confiance",
-          content: `<p>La jalousie légère, c'est humain. Ton ou ta partenaire qui dit "je n'aime pas trop comment cette personne te regarde" en souriant, ça peut même être flatteur. Mais quand la jalousie devient un sujet de dispute récurrent, <strong>c'est rarement un problème de comportement, c'est un problème de confiance</strong>.</p>
+          content: `<p>La jalousie légère, c'est humain. Ton ou ta partenaire qui dit "je n'aime pas trop comment cette personne te regarde" en souriant, ça peut même être flatteur. Mais quand la jalousie devient un sujet de dispute récurrent, <strong>c'est rarement un problème de comportement : c'est un problème de confiance</strong>.</p>
 <p>Soit la confiance a été brisée (infidélité, mensonge) et elle doit être reconstruite activement. Soit la jalousie vient d'une insécurité personnelle qui n'a rien à voir avec ce que l'autre fait ou ne fait pas. Dans les deux cas, la solution n'est pas de crier plus fort ou de poser plus de restrictions. C'est de traiter la racine du problème.</p>
 <p>Si la jalousie est un sujet chez vous, notre <a href="/test-confiance-couple/">test de confiance en couple</a> peut t'aider à comprendre ce qui se joue vraiment derrière les disputes de surface.</p>`,
         },
