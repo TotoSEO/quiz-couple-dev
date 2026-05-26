@@ -1,12 +1,1 @@
-/* Obfuscated link handler */
-(function () {
-  document.addEventListener('click', function (e) {
-    var el = e.target.closest('.obl');
-    if (!el) return;
-    var h = el.getAttribute('data-h');
-    if (!h) return;
-    try {
-      window.location.href = atob(h);
-    } catch (err) { /* ignore */ }
-  });
-})();
+document.addEventListener("click",function(t){var a=t.target.closest(".obl");if(a){var e=a.getAttribute("data-h");if(e)try{window.location.href=atob(e)}catch(t){}}});

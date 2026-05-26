@@ -136,7 +136,7 @@
           </button>
           <div class="nav-dropdown-content nav-lang-dropdown hidden">
             <% for (const l of ['fr','en','es','de','it']) { %>
-            <a href="<%= getLocalizedUrl(typeof routeKey !== 'undefined' ? routeKey : 'home', l) %>" class="nav-lang-option <%= l === lang ? 'nav-lang-option--active' : '' %>" <%= l === lang ? 'aria-current="true"' : '' %>>
+            <a href="<%= getLocalizedUrl(typeof routeKey !== 'undefined' ? routeKey : 'home', l) || getLocalizedUrl('home', l) %>" class="nav-lang-option <%= l === lang ? 'nav-lang-option--active' : '' %>"<%- l === lang ? ' aria-current="true"' : '' %>>
               <span class="text-xs font-bold uppercase w-6"><%= langNames[l] %></span>
               <span><%= langFullNames[l] %></span>
               <% if (l === lang) { %><svg class="w-4 h-4 text-primary ml-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><% } %>

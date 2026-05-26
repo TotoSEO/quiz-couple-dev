@@ -2463,7 +2463,8 @@
     "r3_a": "Some aspects could be strengthened, and that's normal in any relationship. You're in a positive dynamic!",
     "r4_t": "A fulfilling relationship",
     "r4_d": "Congratulations! You've built something solid, respectful, and caring. Your couple is a beautiful illustration of what a healthy relationship can be.",
-    "r4_a": "Keep taking care of it, talking to each other, choosing each other. These scores don't maintain themselves: they're the result of daily effort."
+    "r4_a": "Keep taking care of it, talking to each other, choosing each other. These scores don't maintain themselves: they're the result of daily effort.",
+    "gapWarning": "The gap between your scores is significant. Take time to discuss your respective perceptions."
   },
   "marriage": {
     "t1": "Finances & Money",
@@ -3993,5 +3994,8 @@
     "r4_t": "Relationship Expert",
     "r4_d": "Impressive! You have mastered the subject thoroughly. Myths, psychology, statistics — nothing escapes you.",
     "r4_a": "You could almost teach a class! Keep cultivating this curiosity — it's precious for your relationship."
+  },
+  "question": {
+    "discussTogether": "Discuss your answers together!"
   }
 }

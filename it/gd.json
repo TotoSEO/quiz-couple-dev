@@ -2463,7 +2463,8 @@
     "r3_a": "Alcuni aspetti potrebbero essere rafforzati, ed è normale in ogni relazione. Siete in una dinamica positiva!",
     "r4_t": "Una relazione appagante",
     "r4_d": "Complimenti! Avete costruito qualcosa di solido, rispettoso e benevolo. La vostra coppia è una bella illustrazione di ciò che può essere una relazione sana.",
-    "r4_a": "Continuate a prendervene cura, a parlarvi, a scegliervi. Questi punteggi non si mantengono da soli: sono il frutto di uno sforzo quotidiano."
+    "r4_a": "Continuate a prendervene cura, a parlarvi, a scegliervi. Questi punteggi non si mantengono da soli: sono il frutto di uno sforzo quotidiano.",
+    "gapWarning": "La differenza tra i vostri punteggi è significativa. Prendetevi del tempo per discutere le vostre rispettive percezioni."
   },
   "marriage": {
     "t1": "Finanze e Denaro",
@@ -4083,5 +4084,8 @@
     "r4_t": "Esperto di relazioni",
     "r4_d": "Impressionante! Padroneggi l'argomento alla perfezione. Miti, psicologia, statistiche — nulla ti sfugge.",
     "r4_a": "Potresti quasi tenere dei corsi! Continua a coltivare questa curiosità — è preziosa per la tua relazione."
+  },
+  "question": {
+    "discussTogether": "Discutete le vostre risposte insieme!"
   }
 }

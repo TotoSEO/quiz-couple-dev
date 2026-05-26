@@ -1758,7 +1758,7 @@ var QuizEngine = (function() {
     });
     wrap.appendChild(optionsWrap);
 
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground text-center mb-4', '💬 Discutez de vos réponses ensemble !'));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground text-center mb-4', tg('question.discussTogether', '💬 Discutez de vos réponses ensemble !')));
 
     // Navigation
     var navWrap = el('div', 'flex justify-between items-center mt-4');
@@ -2239,7 +2239,7 @@ var QuizEngine = (function() {
     // Alert if big gap
     if (Math.abs(s1 - s2) > 10) {
       var gapAlert = el('div', 'glass-card rounded-xl p-4 mb-4 border-l-4 border-orange-400');
-      gapAlert.innerHTML = '<p class="text-sm">⚠️ L\'écart entre vos scores est significatif. Prenez le temps de discuter de vos perceptions respectives.</p>';
+      gapAlert.innerHTML = '<p class="text-sm">' + esc(tg('healthy.gapWarning', '⚠️ L\'écart entre vos scores est significatif. Prenez le temps de discuter de vos perceptions respectives.')) + '</p>';
       wrap.appendChild(gapAlert);
     }
 

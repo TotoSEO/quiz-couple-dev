@@ -200,8 +200,12 @@
   const quizJsonLd = {
     "@context": "https://schema.org", "@type": "Quiz",
     "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+    "url": canonical,
     "isAccessibleForFree": true, "datePublished": "2026-03-01",
     "learningResourceType": "Quiz", "interactivityType": "active",
+    "image": baseUrl + '/og-image.webp',
+    "author": { "@type": "Organization", "name": "Quiz Couple", "url": baseUrl },
+    "publisher": { "@type": "Organization", "name": "Quiz Couple", "url": baseUrl, "logo": { "@type": "ImageObject", "url": baseUrl + "/apple-touch-icon.png" } },
     "about": { "@type": "Thing", "name": "couple" },
     "additionalProperty": [
       { "@type": "PropertyValue", "name": "totalQuestions", "value": totalQ },

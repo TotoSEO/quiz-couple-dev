@@ -448,7 +448,7 @@
       var nextPerson = state.persons[idx + 1];
       var passBox = el('div', 'rounded-xl p-4 border text-center');
       passBox.style.cssText = 'background:hsl(var(--muted)/0.5);border-color:hsl(var(--border));';
-      passBox.innerHTML = '<p class="text-sm font-medium">&#128274; ' + esc(tr('passDeviceTo', 'Passez l\'appareil à la personne suivante.').replace('la personne suivante', nextPerson.name)) + '</p><p class="text-xs text-muted-foreground mt-1">' + esc(tr('textNotVisible', 'Votre texte ne sera pas visible.')) + '</p>';
+      passBox.innerHTML = '<p class="text-sm font-medium">&#128274; ' + esc(tr('passDeviceTo', 'Passez l\'appareil à {name}.').replace('{name}', nextPerson.name)) + '</p><p class="text-xs text-muted-foreground mt-1">' + esc(tr('textNotVisible', 'Votre texte ne sera pas visible.')) + '</p>';
       wrap.appendChild(passBox);
     }
 

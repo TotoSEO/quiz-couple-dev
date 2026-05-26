@@ -433,6 +433,51 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-03-24',
   },
+  {
+    internalSlug: 'sauver-son-couple',
+    category: 'vie-de-couple',
+    frOnly: true,
+    slugs: {
+      fr: 'sauver-son-couple',
+    },
+    publishedAt: '2026-05-26',
+  },
+  {
+    internalSlug: 'disputes-couple',
+    category: 'vie-de-couple',
+    frOnly: true,
+    slugs: {
+      fr: 'disputes-couple',
+    },
+    publishedAt: '2026-05-26',
+  },
+  {
+    internalSlug: 'charge-mentale-couple',
+    category: 'vie-de-couple',
+    frOnly: true,
+    slugs: {
+      fr: 'charge-mentale-couple',
+    },
+    publishedAt: '2026-05-26',
+  },
+  {
+    internalSlug: 'manque-communication-couple',
+    category: 'vie-de-couple',
+    frOnly: true,
+    slugs: {
+      fr: 'manque-communication-couple',
+    },
+    publishedAt: '2026-05-26',
+  },
+  {
+    internalSlug: 'comment-savoir-si-cest-le-bon',
+    category: 'vie-de-couple',
+    frOnly: true,
+    slugs: {
+      fr: 'comment-savoir-si-cest-le-bon',
+    },
+    publishedAt: '2026-05-26',
+  },
 ];
 
 // Author data

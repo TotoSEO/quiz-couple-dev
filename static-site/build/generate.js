@@ -8,6 +8,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import ejs from 'ejs';
 import { minify } from 'html-minifier-terser';
+import { minify as minifyJs } from 'terser';
 import CleanCSS from 'clean-css';
 import {
   BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
@@ -189,6 +190,16 @@ async function generatePage(routeKey, lang) {
     };
     title = sitemapMeta[lang]?.title || sitemapMeta.fr.title;
     description = sitemapMeta[lang]?.description || sitemapMeta.fr.description;
+  } else if (routeKey === 'contact') {
+    const contactMeta = {
+      fr: { title: 'Contactez-nous | Quiz Couple', description: 'Une question, une suggestion ? Contactez l\'équipe Quiz Couple. Nous répondons à tous les messages.' },
+      en: { title: 'Contact Us | Quiz Couple', description: 'Have a question or suggestion? Get in touch with the Quiz Couple team. We reply to every message.' },
+      es: { title: 'Contáctanos | Quiz Couple', description: '¿Tienes alguna pregunta o sugerencia? Contacta al equipo de Quiz Couple. Respondemos a todos los mensajes.' },
+      de: { title: 'Kontakt | Quiz Couple', description: 'Fragen oder Anregungen? Kontaktiere das Quiz Couple Team. Wir antworten auf jede Nachricht.' },
+      it: { title: 'Contattaci | Quiz Couple', description: 'Hai domande o suggerimenti? Contatta il team Quiz Couple. Rispondiamo a tutti i messaggi.' },
+    };
+    title = contactMeta[lang]?.title || contactMeta.fr.title;
+    description = contactMeta[lang]?.description || contactMeta.fr.description;
   } else if (routeKey === 'admin') {
     title = 'Administration - Quiz Couple';
     description = 'Panel d\'administration Quiz Couple';
@@ -235,6 +246,7 @@ async function generatePage(routeKey, lang) {
       name: 'Quiz Couple',
       url: BASE_URL,
       description: description,
+      inLanguage: lang,
       publisher: { '@type': 'Organization', '@id': `${BASE_URL}/#organization` },
     });
     jsonLdItems.push({
@@ -246,7 +258,6 @@ async function generatePage(routeKey, lang) {
       logo: { '@type': 'ImageObject', url: `${BASE_URL}/apple-touch-icon.png`, width: 180, height: 180 },
       image: `${BASE_URL}/og-image.webp`,
       description: description,
-      sameAs: [],
     });
     // AggregateRating — only include if we have real review data
     const webApp = {
@@ -482,6 +493,9 @@ function generateSitemaps() {
       xml += `    <loc>${entry.urlsByLang[lang]}</loc>\n`;
       if (!entry.frOnly) {
         xml += hreflangs(entry.urlsByLang);
+      } else {
+        xml += `    <xhtml:link rel="alternate" hreflang="fr" href="${entry.urlsByLang.fr}"/>\n`;
+        xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${entry.urlsByLang.fr}"/>\n`;
       }
       if (entry.lastmod) {
         xml += `    <lastmod>${entry.lastmod}</lastmod>\n`;
@@ -504,7 +518,7 @@ function generateSitemaps() {
   index += `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n`;
   index += `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
   for (const lang of LANGUAGES) {
-    index += `  <sitemap>\n    <loc>${B}/sitemap-${lang}.xml</loc>\n  </sitemap>\n`;
+    index += `  <sitemap>\n    <loc>${B}/sitemap-${lang}.xml</loc>\n    <lastmod>${today}</lastmod>\n  </sitemap>\n`;
   }
   index += `</sitemapindex>`;
   fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), index);
@@ -519,7 +533,7 @@ function copyStaticAssets() {
   const assetsDir = path.resolve(__dirname, '../../assets');
 
   // Copy public/ files
-  const publicFiles = ['favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'og-image.webp', 'robots.txt', 'site.webmanifest', 'placeholder.svg', 'sitemap.xsl', 'f4b78b7e6bfeaefe7290b5ce249449a8.txt'];
+  const publicFiles = ['favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'og-image.webp', 'robots.txt', 'site.webmanifest', 'placeholder.svg', 'sitemap.xsl', 'f4b78b7e6bfeaefe7290b5ce249449a8.txt', 'llms.txt'];
   for (const file of publicFiles) {
     const src = path.join(publicDir, file);
     if (fs.existsSync(src)) {
@@ -701,7 +715,7 @@ function buildSeedArticles() {
   return JSON.stringify(seed);
 }
 
-function copyJs() {
+async function copyJs() {
   const jsDir = path.resolve(__dirname, '../js');
   const destDir = path.join(DIST_DIR, 'js');
   ensureDir(destDir);
@@ -723,6 +737,27 @@ function copyJs() {
   }
 
   console.log('[js] JS files copied to dist/js/');
+
+  // Minify JS files
+  const jsFiles = fs.readdirSync(destDir).filter(f => f.endsWith('.js'));
+  let totalSaved = 0;
+  for (const file of jsFiles) {
+    const filePath = path.join(destDir, file);
+    const src = fs.readFileSync(filePath, 'utf-8');
+    try {
+      const result = await minifyJs(src, { compress: true, mangle: true });
+      if (result.code) {
+        const saved = src.length - result.code.length;
+        if (saved > 0) {
+          fs.writeFileSync(filePath, result.code, 'utf-8');
+          totalSaved += saved;
+        }
+      }
+    } catch (e) {
+      console.warn(`[js] Minify warning for ${file}: ${e.message}`);
+    }
+  }
+  console.log(`[js] JS files minified (saved ${(totalSaved / 1024).toFixed(1)}KB)`);
 }
 
 // ── Blog article parsing ─────────────────────────────────────────────────
@@ -1026,7 +1061,7 @@ async function main() {
   // Copy static assets, CSS, JS, translation data
   copyStaticAssets();
   copyCss();
-  copyJs();
+  await copyJs();
   copyTranslationData();
   generateSitemaps();
 
