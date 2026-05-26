@@ -31,7 +31,7 @@ const article: BlogArticleData = {
         {
           id: 'conflit-signe-investissement',
           title: "Le conflit est un signe d'investissement",
-          content: `<p>Réfléchis deux secondes. Tu te disputes avec qui ? Pas avec des gens qui te sont indifférents. Tu te disputes avec les personnes qui comptent, sur des sujets qui comptent. <strong>Le conflit, c'est la preuve que tu tiens assez à la relation pour te battre</strong>, au sens figuré, plutôt que de laisser couler.</p>
+          content: `<p>Réfléchis deux secondes. Tu te disputes avec qui ? Pas avec des gens qui te sont indifférents. Tu te disputes avec les personnes qui comptent, sur des sujets qui comptent. <strong>Le conflit, c'est la preuve que tu tiens assez à la relation pour te battre</strong> (au sens figuré) plutôt que de laisser couler.</p>
 <p>John Gottman, le chercheur qui a passé sa carrière à étudier les couples, l'a montré clairement : ce n'est pas la fréquence des disputes qui prédit une rupture, c'est la façon dont elles se passent. Des couples qui se disputent régulièrement mais avec respect durent plus longtemps que des couples qui évitent tout conflit.</p>
 <p>Quand tu te disputes avec ton ou ta partenaire, tu lui dis en substance : "Ce sujet est important pour moi, et je veux qu'on le règle ensemble." C'est ça, le vrai sens d'une dispute saine. Si tu n'es pas sûr de la dynamique dans ton couple, notre <a href="/test-confiance-couple/">test de confiance en couple</a> peut t'aider à y voir plus clair.</p>`,
         },
@@ -45,7 +45,7 @@ const article: BlogArticleData = {
         {
           id: 'dispute-permet-avancer',
           title: "La dispute permet d'avancer (si elle est bien gérée)",
-          content: `<p>Une bonne dispute, oui, ça existe, te permet d'exprimer un besoin, de poser une limite, de comprendre le point de vue de l'autre. Elle crée un <strong>espace où les choses non-dites deviennent dites</strong>, et où les compromis deviennent possibles.</p>
+          content: `<p>Une bonne dispute (oui, ça existe) te permet d'exprimer un besoin, de poser une limite, de comprendre le point de vue de l'autre. Elle crée un <strong>espace où les choses non-dites deviennent dites</strong>, et où les compromis deviennent possibles.</p>
 <p>Après une dispute constructive, tu te sens soulagé. Pas parce que tu as "gagné", mais parce que quelque chose a bougé. Tu comprends mieux l'autre, l'autre te comprend mieux, et vous avez trouvé un terrain d'entente, même imparfait. C'est exactement comme ça que les relations se renforcent : pas dans le confort, mais dans la capacité à traverser les tensions ensemble.</p>`,
         },
       ],
@@ -90,7 +90,7 @@ const article: BlogArticleData = {
           title: "Crier pour dominer la conversation",
           content: `<p>Quand tu cries, tu ne communiques plus. Tu intimides. L'autre se ferme, se braque, ou crie plus fort. <strong>Personne n'a jamais changé d'avis parce qu'on lui hurlait dessus.</strong></p>
 <p>Le volume sonore n'est pas un argument. C'est même l'inverse : plus tu cries, moins l'autre t'écoute. Son cerveau passe en mode survie : il ne traite plus l'information, il se défend. Résultat : tu te fatigues, il ne retient rien de ce que tu dis, et vous finissez tous les deux épuisés sans avoir avancé d'un centimètre.</p>
-<p>Si tu sens que ta voix monte, c'est le signal que tes émotions ont pris le dessus sur ta capacité à raisonner. Ce n'est pas grave, c'est humain. Mais c'est le moment de faire une pause, pas de monter encore d'un cran.</p>`,
+<p>Si tu sens que ta voix monte, c'est le signal que tes émotions ont pris le dessus sur ta capacité à raisonner. Ce n'est pas grave : c'est humain. Mais c'est le moment de faire une pause, pas de monter encore d'un cran.</p>`,
         },
         {
           id: 'mur-du-silence',
@@ -168,8 +168,8 @@ const article: BlogArticleData = {
           id: 'taches-menageres',
           title: "Les tâches ménagères et la charge mentale",
           content: `<p>Le classique. Et honnêtement, en tant que mec, je sais qu'on est souvent en tort sur ce sujet. Pas forcément par mauvaise volonté, mais par un angle mort que beaucoup d'hommes ont : <strong>on ne voit pas ce qu'on ne fait pas</strong>.</p>
-<p>Le problème n'est jamais vraiment la vaisselle ou l'aspirateur. C'est la charge mentale, le fait de devoir penser à tout, planifier, anticiper, rappeler. Quand ta partenaire te dit "tu ne fais jamais rien à la maison", elle ne parle pas que du ménage. Elle te dit qu'elle porte la gestion du foyer à bout de bras et qu'elle est épuisée.</p>
-<p>Si ce sujet revient régulièrement chez vous : assieds-toi et fais une liste honnête de qui fait quoi. Pas ce que tu penses faire, ce que tu fais réellement. Le résultat est souvent éclairant. Et si ton ou ta partenaire te dit que le déséquilibre est là, crois-le. Même si toi tu ne le vois pas. C'est exactement le point : <a href="/blog/copain-ne-fait-pas-effort/">ne pas voir le problème fait partie du problème</a>.</p>`,
+<p>Le problème n'est jamais vraiment la vaisselle ou l'aspirateur. C'est la charge mentale : le fait de devoir penser à tout, planifier, anticiper, rappeler. Quand ta partenaire te dit "tu ne fais jamais rien à la maison", elle ne parle pas que du ménage. Elle te dit qu'elle porte la gestion du foyer à bout de bras et qu'elle est épuisée.</p>
+<p>Si ce sujet revient régulièrement chez vous : assieds-toi et fais une liste honnête de qui fait quoi. Pas ce que tu penses faire : ce que tu fais réellement. Le résultat est souvent éclairant. Et si ton ou ta partenaire te dit que le déséquilibre est là, crois-le. Même si toi tu ne le vois pas. C'est exactement le point : <a href="/blog/copain-ne-fait-pas-effort/">ne pas voir le problème fait partie du problème</a>.</p>`,
         },
         {
           id: 'jalousie-confiance',
