@@ -409,6 +409,17 @@
     // Debate uses 1-5 scale, so max score = questions * 5
     var results = parseGdResults(cfg.prefix, debateQuestions.length * 5);
 
+    // Convert absolute score brackets to percentage for debate engine (matches on pct)
+    if (results.length > 0) {
+      var maxAbs = debateQuestions.length * 5;
+      for (var ri = 0; ri < results.length; ri++) {
+        results[ri].min = Math.round((results[ri].min / maxAbs) * 100);
+        results[ri].max = ri === results.length - 1 ? 100 : Math.round((results[ri].max / maxAbs) * 100);
+        results[ri].minScore = results[ri].min;
+        results[ri].maxScore = results[ri].max;
+      }
+    }
+
     if (results.length === 0) {
       // Fallback to percentage-based defaults
       results = [
