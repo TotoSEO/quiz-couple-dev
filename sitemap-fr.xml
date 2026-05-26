@@ -304,12 +304,16 @@
   </url>
   <url>
     <loc>https://quiz-couple.com/test-style-attachement-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-style-attachement-couple/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-style-attachement-couple/"/>
     <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://quiz-couple.com/test-confiance-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-confiance-couple/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-confiance-couple/"/>
     <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -616,6 +620,8 @@
   </url>
   <url>
     <loc>https://quiz-couple.com/blog/lexique-relations-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/lexique-relations-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/lexique-relations-2026/"/>
     <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -629,6 +635,46 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/dipendenza-affettiva-nella-coppia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/dependance-affective/"/>
     <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/blog/sauver-son-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/sauver-son-couple/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/sauver-son-couple/"/>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/blog/disputes-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/disputes-couple/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/disputes-couple/"/>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/blog/charge-mentale-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/charge-mentale-couple/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/charge-mentale-couple/"/>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/blog/manque-communication-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/manque-communication-couple/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/manque-communication-couple/"/>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/blog/comment-savoir-si-cest-le-bon/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/comment-savoir-si-cest-le-bon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/comment-savoir-si-cest-le-bon/"/>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
