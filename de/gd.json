@@ -2463,7 +2463,8 @@
     "r3_a": "Einige Aspekte könnten verstärkt werden, und das ist in jeder Beziehung normal. Ihr seid in einer positiven Dynamik!",
     "r4_t": "Eine erfüllende Beziehung",
     "r4_d": "Glückwunsch! Ihr habt etwas Solides, Respektvolles und Wohlwollendes aufgebaut. Euer Paar ist ein schönes Beispiel für eine gesunde Beziehung.",
-    "r4_a": "Kümmert euch weiter darum, redet miteinander, wählt euch gegenseitig. Diese Ergebnisse erhalten sich nicht von allein: sie sind das Ergebnis täglicher Anstrengung."
+    "r4_a": "Kümmert euch weiter darum, redet miteinander, wählt euch gegenseitig. Diese Ergebnisse erhalten sich nicht von allein: sie sind das Ergebnis täglicher Anstrengung.",
+    "gapWarning": "Der Unterschied zwischen euren Punktzahlen ist erheblich. Nehmt euch Zeit, um eure jeweiligen Wahrnehmungen zu besprechen."
   },
   "marriage": {
     "t1": "Finanzen & Geld",
@@ -3993,5 +3994,8 @@
     "r4_t": "Beziehungsexperte",
     "r4_d": "Beeindruckend! Du beherrschst das Thema durch und durch. Mythen, Psychologie, Statistiken — nichts entgeht dir.",
     "r4_a": "Du könntest fast Kurse geben! Pflege diese Neugier weiter — sie ist wertvoll für deine Beziehung."
+  },
+  "question": {
+    "discussTogether": "Besprecht eure Antworten gemeinsam!"
   }
 }

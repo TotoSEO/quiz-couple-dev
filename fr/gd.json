@@ -249,7 +249,8 @@
     "r3_a": "Certains aspects pourraient être renforcés, et c'est normal dans toute relation. Vous êtes dans une dynamique positive !",
     "r4_t": "Une relation épanouissante",
     "r4_d": "Bravo ! Vous avez construit quelque chose de solide, de respectueux et de bienveillant. Votre couple est une belle illustration de ce que peut être une relation saine.",
-    "r4_a": "Continuez à en prendre soin, à vous parler, à vous choisir. Ces scores ne se maintiennent pas tout seuls : ils sont le fruit d'un effort quotidien."
+    "r4_a": "Continuez à en prendre soin, à vous parler, à vous choisir. Ces scores ne se maintiennent pas tout seuls : ils sont le fruit d'un effort quotidien.",
+    "gapWarning": "L'écart entre vos scores est significatif. Prenez le temps de discuter de vos perceptions respectives."
   },
   "marriage": {
     "t1": "Finances & Argent",
@@ -2837,5 +2838,8 @@
     "r4_t": "Expert en relations",
     "r4_d": "Impressionnant ! Vous maîtrisez le sujet sur le bout des doigts. Mythes, psychologie, statistiques — rien ne vous échappe.",
     "r4_a": "Vous pourriez presque donner des cours ! Continuez à cultiver cette curiosité — elle est précieuse pour votre couple."
+  },
+  "question": {
+    "discussTogether": "Discutez de vos réponses ensemble !"
   }
 }

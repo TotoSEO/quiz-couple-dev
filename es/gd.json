@@ -2463,7 +2463,8 @@
     "r3_a": "Algunos aspectos podrían reforzarse, y es normal en toda relación. ¡Están en una dinámica positiva!",
     "r4_t": "Una relación plena",
     "r4_d": "¡Felicidades! Han construido algo sólido, respetuoso y benevolente. Su pareja es una bella ilustración de lo que puede ser una relación sana.",
-    "r4_a": "Sigan cuidándola, hablándose, eligiéndose. Estas puntuaciones no se mantienen solas: son el fruto de un esfuerzo diario."
+    "r4_a": "Sigan cuidándola, hablándose, eligiéndose. Estas puntuaciones no se mantienen solas: son el fruto de un esfuerzo diario.",
+    "gapWarning": "La diferencia entre sus puntajes es significativa. Tomen tiempo para discutir sus respectivas percepciones."
   },
   "marriage": {
     "t1": "Finanzas y Dinero",
@@ -3993,5 +3994,8 @@
     "r4_t": "Experto en relaciones",
     "r4_d": "¡Impresionante! Dominas el tema a la perfección. Mitos, psicología, estadísticas — nada se te escapa.",
     "r4_a": "¡Podrías casi dar clases! Sigue cultivando esta curiosidad — es valiosa para tu relación."
+  },
+  "question": {
+    "discussTogether": "Discutan sus respuestas juntos!"
   }
 }
