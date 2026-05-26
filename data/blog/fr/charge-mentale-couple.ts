@@ -6,7 +6,7 @@ const article: BlogArticleData = {
   title: "Charge mentale dans le couple : quand un seul cerveau gère tout",
   metaTitle: "Charge mentale dans le couple : signes et solutions concrètes",
   metaDescription: "Tu gères tout dans ta tête : rendez-vous, courses, planning. La charge mentale dans le couple est réelle. Comment la reconnaître et agir.",
-  featuredImage: '',
+  featuredImage: '/blog/charge-mentale-couple.svg',
   featuredImageAlt: "Femme épuisée qui gère la charge mentale du couple au quotidien",
   publishedAt: '2026-05-26',
   author: AUTHORS['lucie-courtin'],
@@ -16,7 +16,7 @@ const article: BlogArticleData = {
 <p><strong>Ce n'est pas une question de tâches ménagères.</strong> C'est une question de qui porte le poids invisible de tout ce qui fait tourner un foyer. Et ce poids-là, il a un nom : la charge mentale. Elle est épuisante, elle est invisible, et dans la grande majorité des couples hétérosexuels, c'est la femme qui la porte. Pas parce qu'elle le veut. Parce que personne d'autre ne s'en empare.</p>`,
   quickSummary: [
     "La charge mentale, ce n'est pas faire les tâches : c'est devoir penser à tout, planifier, anticiper et coordonner en permanence.",
-    "Les femmes portent 71 % de la charge mentale dans les couples hétérosexuels — pas par choix, par défaut.",
+    "Les femmes portent 71 % de la charge mentale dans les couples hétérosexuels, pas par choix, par défaut.",
     "L'impact est concret : épuisement, ressentiment, baisse de libido, distance émotionnelle, disputes récurrentes.",
     "Rééquilibrer demande un vrai transfert de responsabilité, pas juste « aider » quand on te le demande.",
     "Si ton partenaire refuse de voir le problème après en avoir parlé clairement, c'est un problème de respect, plus de charge mentale.",
@@ -90,7 +90,7 @@ const article: BlogArticleData = {
         {
           id: 'les-chiffres',
           title: "Les chiffres parlent d'eux-mêmes",
-          content: `<p>Selon l'INSEE (2023), les femmes consacrent en moyenne 3h26 par jour aux tâches domestiques et parentales, contre 2h pour les hommes. Mais ces chiffres ne captent que le temps visible. La charge mentale — planifier, anticiper, coordonner — n'est pas mesurée.</p>
+          content: `<p>Selon l'INSEE (2023), les femmes consacrent en moyenne 3h26 par jour aux tâches domestiques et parentales, contre 2h pour les hommes. Mais ces chiffres ne captent que le temps visible. La charge mentale (planifier, anticiper, coordonner) n'est pas mesurée.</p>
 <p>Une étude UCLouvain (2023) montre que <strong>71 % de la charge mentale domestique est portée par les femmes</strong>, même dans les couples qui se considèrent « égalitaires ». Autrement dit : même quand les deux travaillent à temps plein, même quand l'homme « participe » aux tâches, c'est elle qui pense à tout.</p>
 <p>Et non, ce n'est pas parce qu'elle est « plus organisée ». C'est parce que si elle ne le faisait pas, personne ne le ferait.</p>`,
         },
@@ -125,7 +125,7 @@ const article: BlogArticleData = {
           id: 'disputes-repetitives',
           title: "Les disputes qui tournent en boucle",
           content: `<p>Les mêmes disputes, encore et encore. Le lave-vaisselle. Les courses. Les enfants. Et à chaque fois, tu as l'impression de repartir de zéro parce que rien ne change structurellement. <strong>Ces disputes répétitives ne sont pas le problème. Elles sont le symptôme d'un déséquilibre qui n'a jamais été traité à la racine.</strong></p>
-<p>Lui pense que tu te plains pour des broutilles. Toi tu essaies de lui faire comprendre quelque chose qu'il ne voit pas, avec des mots qui ne portent pas, et une frustration qui monte à chaque tentative ratée. Ce schéma-là peut durer des années. Et il finit toujours par produire soit une explosion, soit un désengagement silencieux — celui qui précède les ruptures qu'on ne voyait pas venir.</p>
+<p>Lui pense que tu te plains pour des broutilles. Toi tu essaies de lui faire comprendre quelque chose qu'il ne voit pas, avec des mots qui ne portent pas, et une frustration qui monte à chaque tentative ratée. Ce schéma-là peut durer des années. Et il finit toujours par produire soit une explosion, soit un désengagement silencieux, celui qui précède les ruptures qu'on ne voyait pas venir.</p>
 <p>Si ça te parle, notre <a href="/quiz-amoureux/">quiz amoureux</a> peut vous aider à ouvrir le dialogue autrement.</p>`,
         },
       ],
@@ -133,7 +133,7 @@ const article: BlogArticleData = {
     {
       id: 'reequilibrer',
       title: "Comment rééquilibrer concrètement",
-      content: `<p>Pas de platitudes ici. Pas de « communiquez mieux » sans explication. Voici ce qui fonctionne vraiment — et ce qui ne fonctionne pas.</p>`,
+      content: `<p>Pas de platitudes ici. Pas de « communiquez mieux » sans explication. Voici ce qui fonctionne vraiment, et ce qui ne fonctionne pas.</p>`,
       subsections: [
         {
           id: 'transfert-responsabilite',
@@ -167,11 +167,11 @@ const article: BlogArticleData = {
         {
           id: 'les-reponses-types',
           title: "Les réponses qui ferment la porte",
-          content: `<p>« Tu n'as qu'à demander. » — La charge mentale, c'est justement devoir demander.</p>
-<p>« J'allais le faire. » — Mais tu ne l'as pas fait, et je l'ai encore porté mentalement en attendant.</p>
-<p>« Tu veux tout contrôler. » — Non, je veux que quelqu'un d'autre contrôle quelque chose.</p>
-<p>« Ma mère faisait tout et elle ne se plaignait pas. » — Exactement le problème.</p>
-<p>« On n'est pas obligés d'être égalitaires sur tout. » — Non, mais on est obligés d'être justes.</p>
+          content: `<p>« Tu n'as qu'à demander. » La charge mentale, c'est justement devoir demander.</p>
+<p>« J'allais le faire. » Mais tu ne l'as pas fait, et je l'ai encore porté mentalement en attendant.</p>
+<p>« Tu veux tout contrôler. » Non, je veux que quelqu'un d'autre contrôle quelque chose.</p>
+<p>« Ma mère faisait tout et elle ne se plaignait pas. » Exactement le problème.</p>
+<p>« On n'est pas obligés d'être égalitaires sur tout. » Non, mais on est obligés d'être justes.</p>
 <p><strong>Ces réponses ne sont pas juste agaçantes. Elles sont une forme de déresponsabilisation active.</strong> Elles disent : « le problème que tu vis, ce n'est pas mon problème ». Et ça, c'est un signal qui va bien au-delà de la vaisselle.</p>
 <p>Si tu te reconnais dans cette situation, l'article sur <a href="/blog/copain-ne-fait-pas-effort/">le copain qui ne fait pas d'effort</a> aborde la question du déséquilibre global dans le couple.</p>`,
         },
@@ -187,7 +187,7 @@ const article: BlogArticleData = {
           content: `<p>Il y a un moment où il faut arrêter de traiter la charge mentale comme un problème logistique. Si ton partenaire <strong>voit</strong> que tu es épuisée, <strong>comprend</strong> pourquoi, et <strong>choisit</strong> de ne rien changer, ce n'est plus un problème d'organisation. C'est un problème de respect.</p>
 <p>Un partenaire qui te regarde couler sans bouger, ce n'est pas un partenaire qui « ne comprend pas ». C'est un partenaire qui a décidé que ton confort importait moins que le sien. Et ça, aucune appli de calendrier partagé ne le résoudra.</p>
 <p>Si tu as des enfants et que ce déséquilibre touche aussi la parentalité, <a href="/test-parentalite-couple/">le test parentalité couple</a> peut vous aider à objectiver la situation.</p>
-<p>À ce stade, la question n'est plus « comment rééquilibrer la charge mentale ». La question est : est-ce que cette relation te rend heureuse, ou est-ce qu'elle te vide ? Et si la réponse te fait peur, c'est peut-être le moment de lire notre article sur <a href="/blog/sauver-son-couple/">comment sauver son couple</a> — pour savoir si c'est encore possible, et si tu le veux vraiment.</p>`,
+<p>À ce stade, la question n'est plus « comment rééquilibrer la charge mentale ». La question est : est-ce que cette relation te rend heureuse, ou est-ce qu'elle te vide ? Et si la réponse te fait peur, c'est peut-être le moment de lire notre article sur <a href="/blog/sauver-son-couple/">comment sauver son couple</a>, pour savoir si c'est encore possible, et si tu le veux vraiment.</p>`,
         },
       ],
     },

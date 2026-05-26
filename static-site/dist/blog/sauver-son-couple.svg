@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2a0a1e"/>
+      <stop offset="50%" stop-color="#1a0628"/>
+      <stop offset="100%" stop-color="#0f0318"/>
+    </linearGradient>
+    <linearGradient id="bridge" x1="300" y1="260" x2="500" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d4618c"/>
+      <stop offset="100%" stop-color="#8b5cc2"/>
+    </linearGradient>
+    <radialGradient id="glowL" cx="250" cy="200" r="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d4618c" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d4618c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowR" cx="550" cy="200" r="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8b5cc2" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8b5cc2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- Ambient glow -->
+  <circle cx="250" cy="200" r="120" fill="url(#glowL)"/>
+  <circle cx="550" cy="200" r="120" fill="url(#glowR)"/>
+  <!-- Left heart -->
+  <g transform="translate(210,140)" opacity="0.9">
+    <path d="M0,20 C0,-10 -30,-10 -30,10 C-30,30 0,50 0,50 C0,50 30,30 30,10 C30,-10 0,-10 0,20Z" fill="#d4618c" stroke="none"/>
+  </g>
+  <!-- Right heart -->
+  <g transform="translate(590,140)" opacity="0.9">
+    <path d="M0,20 C0,-10 -30,-10 -30,10 C-30,30 0,50 0,50 C0,50 30,30 30,10 C30,-10 0,-10 0,20Z" fill="#8b5cc2" stroke="none"/>
+  </g>
+  <!-- Left abstract figure -->
+  <circle cx="210" cy="230" r="28" fill="none" stroke="#d4618c" stroke-width="2.5" opacity="0.85"/>
+  <line x1="210" y1="258" x2="210" y2="330" stroke="#d4618c" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+  <line x1="210" y1="280" x2="185" y2="305" stroke="#d4618c" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+  <line x1="210" y1="280" x2="240" y2="260" stroke="#d4618c" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+  <!-- Right abstract figure -->
+  <circle cx="590" cy="230" r="28" fill="none" stroke="#8b5cc2" stroke-width="2.5" opacity="0.85"/>
+  <line x1="590" y1="258" x2="590" y2="330" stroke="#8b5cc2" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+  <line x1="590" y1="280" x2="615" y2="305" stroke="#8b5cc2" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+  <line x1="590" y1="280" x2="560" y2="260" stroke="#8b5cc2" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+  <!-- Bridge / connecting path -->
+  <path d="M260,280 C330,240 470,240 540,280" fill="none" stroke="url(#bridge)" stroke-width="3" stroke-dasharray="0" stroke-linecap="round" opacity="0.7"/>
+  <path d="M280,300 C350,265 450,265 520,300" fill="none" stroke="url(#bridge)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M300,315 C370,290 430,290 500,315" fill="none" stroke="url(#bridge)" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/>
+  <!-- Small decorative hearts along the path -->
+  <g transform="translate(365,255) scale(0.4)" opacity="0.6">
+    <path d="M0,8 C0,-4 -12,-4 -12,4 C-12,12 0,20 0,20 C0,20 12,12 12,4 C12,-4 0,-4 0,8Z" fill="#d4618c"/>
+  </g>
+  <g transform="translate(400,250) scale(0.55)" opacity="0.7">
+    <path d="M0,8 C0,-4 -12,-4 -12,4 C-12,12 0,20 0,20 C0,20 12,12 12,4 C12,-4 0,-4 0,8Z" fill="#c76aad"/>
+  </g>
+  <g transform="translate(435,255) scale(0.4)" opacity="0.6">
+    <path d="M0,8 C0,-4 -12,-4 -12,4 C-12,12 0,20 0,20 C0,20 12,12 12,4 C12,-4 0,-4 0,8Z" fill="#8b5cc2"/>
+  </g>
+  <!-- Subtle particles -->
+  <circle cx="150" cy="100" r="2" fill="#d4618c" opacity="0.3"/>
+  <circle cx="650" cy="90" r="1.5" fill="#8b5cc2" opacity="0.3"/>
+  <circle cx="100" cy="350" r="1.5" fill="#d4618c" opacity="0.2"/>
+  <circle cx="700" cy="370" r="2" fill="#8b5cc2" opacity="0.2"/>
+  <circle cx="400" cy="380" r="1.5" fill="#c76aad" opacity="0.25"/>
+  <circle cx="340" cy="100" r="1" fill="#fff" opacity="0.15"/>
+  <circle cx="480" cy="120" r="1" fill="#fff" opacity="0.15"/>
+</svg>

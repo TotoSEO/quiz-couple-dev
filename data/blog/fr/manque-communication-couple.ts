@@ -6,7 +6,7 @@ const article: BlogArticleData = {
   title: "Manque de communication dans le couple : comprendre et briser le silence",
   metaTitle: "Manque de communication dans le couple : causes et solutions",
   metaDescription: "Tu vis avec quelqu'un mais tu as l'impression de ne plus rien partager. Signes, causes et outils concrets pour retrouver un vrai dialogue de couple.",
-  featuredImage: '',
+  featuredImage: '/blog/manque-communication-couple.svg',
   featuredImageAlt: "Couple assis côte à côte en silence illustrant le manque de communication",
   publishedAt: '2026-05-26',
   author: AUTHORS['mathieu-courtin'],
@@ -17,9 +17,9 @@ const article: BlogArticleData = {
   quickSummary: [
     "Le manque de communication n'est pas l'absence de mots, c'est l'absence de connexion réelle dans les échanges.",
     "Les causes principales : peur du conflit, impression de ne pas être entendu, lassitude et routinisation de la relation.",
-    "Il existe 4 styles de communication (passif, agressif, passif-agressif, assertif) — seul le dernier construit vraiment.",
+    "Il existe 4 styles de communication (passif, agressif, passif-agressif, assertif) : seul le dernier construit vraiment.",
     "Les outils concrets : écoute active, reformulation, le « je » au lieu du « tu accuses », et des temps dédiés au dialogue.",
-    "Certains sujets font peur, mais les éviter ne les fait pas disparaître — ça les fait grossir en silence.",
+    "Certains sujets font peur, mais les éviter ne les fait pas disparaître. Ça les fait grossir en silence.",
   ],
   sections: [
     {
@@ -31,7 +31,7 @@ const article: BlogArticleData = {
           id: 'conversations-superficielles',
           title: "Vos conversations sont devenues purement logistiques",
           content: `<p>« Tu peux passer au supermarché ? » « C'est bon pour samedi. » « Le plombier vient à 14h. » Si tu fais le bilan d'une semaine d'échanges et que tout tourne autour de l'organisation du quotidien, <strong>vous gérez un foyer, vous ne vivez plus une relation.</strong> La communication de couple, ce n'est pas un tableau de bord partagé.</p>
-<p>Ce glissement est tellement progressif qu'on ne s'en rend souvent compte qu'au moment où quelqu'un d'autre — un ami, un collègue — te pose une question sur ta vie de couple et que tu réalises que tu n'as rien à raconter. Pas parce qu'il ne se passe rien. Parce que rien ne se dit.</p>`,
+<p>Ce glissement est tellement progressif qu'on ne s'en rend souvent compte qu'au moment où quelqu'un d'autre, un ami, un collègue, te pose une question sur ta vie de couple et que tu réalises que tu n'as rien à raconter. Pas parce qu'il ne se passe rien. Parce que rien ne se dit.</p>`,
         },
         {
           id: 'evitement-sujets',
@@ -56,13 +56,13 @@ const article: BlogArticleData = {
           id: 'peur-du-conflit',
           title: "La peur du conflit",
           content: `<p>C'est la raison numéro un. Tu te tais parce que tu ne veux pas de dispute. La dernière fois que tu as abordé un sujet sensible, ça a mal tourné. Alors tu choisis la paix à court terme. Le problème, c'est que cette « paix » est un leurre. <strong>Éviter le conflit ne supprime pas le problème, ça le met en incubation.</strong></p>
-<p>Et le jour où ça sort — et ça sort toujours — c'est avec une violence proportionnelle au temps passé à se taire. Des mois de frustration accumulée dans une seule phrase. Résultat : l'autre ne comprend pas d'où ça vient, tu te sens incompris, et la prochaine fois tu te tairas encore plus longtemps. C'est un cercle vicieux classique que l'on retrouve dans les <a href="/blog/disputes-couple/">dynamiques de dispute en couple</a>.</p>`,
+<p>Et le jour où ça sort, et ça sort toujours, c'est avec une violence proportionnelle au temps passé à se taire. Des mois de frustration accumulée dans une seule phrase. Résultat : l'autre ne comprend pas d'où ça vient, tu te sens incompris, et la prochaine fois tu te tairas encore plus longtemps. C'est un cercle vicieux classique que l'on retrouve dans les <a href="/blog/disputes-couple/">dynamiques de dispute en couple</a>.</p>`,
         },
         {
           id: 'impression-pas-entendu',
           title: "L'impression de ne pas être entendu",
           content: `<p>Tu as essayé. Plusieurs fois. Tu as dit ce qui n'allait pas, ce dont tu avais besoin, ce qui te faisait mal. Et rien n'a changé. Ou pire : on t'a répondu « tu exagères », « c'est pas si grave », « t'es toujours en train de te plaindre ».</p>
-<p>Quand tes tentatives de communication se heurtent systématiquement à un mur — que ce soit du déni, de la minimisation ou de l'indifférence — ton cerveau tire une conclusion logique : ça ne sert à rien. Et tu arrêtes. <strong>Ce n'est pas un abandon, c'est une adaptation à une réalité frustrante.</strong> Mais c'est aussi le début de la fin si personne ne corrige le tir.</p>`,
+<p>Quand tes tentatives de communication se heurtent systématiquement à un mur, que ce soit du déni, de la minimisation ou de l'indifférence, ton cerveau tire une conclusion logique : ça ne sert à rien. Et tu arrêtes. <strong>Ce n'est pas un abandon, c'est une adaptation à une réalité frustrante.</strong> Mais c'est aussi le début de la fin si personne ne corrige le tir.</p>`,
         },
         {
           id: 'lassitude-routine',
@@ -75,7 +75,7 @@ const article: BlogArticleData = {
     {
       id: 'styles-de-communication',
       title: "Les 4 styles de communication en couple",
-      content: `<p>On communique tous différemment, et la façon dont tu t'exprimes a un impact direct sur ce que l'autre reçoit. Comprendre ton style — et celui de ton ou ta partenaire — c'est déjà un pas vers un dialogue plus constructif.</p>
+      content: `<p>On communique tous différemment, et la façon dont tu t'exprimes a un impact direct sur ce que l'autre reçoit. Comprendre ton style, et celui de ton ou ta partenaire, c'est déjà un pas vers un dialogue plus constructif.</p>
 <div><table><thead><tr><th>Style</th><th>Ce que tu fais</th><th>Ce que l'autre reçoit</th><th>Impact sur le couple</th></tr></thead><tbody>
 <tr><td><strong>Passif</strong></td><td>Tu te tais, tu minimises tes besoins, tu laisses passer</td><td>« Tout va bien pour lui/elle » (alors que non)</td><td>Accumulation de frustration, distance émotionnelle</td></tr>
 <tr><td><strong>Agressif</strong></td><td>Tu accuses, tu hausses le ton, tu domines la conversation</td><td>Attaque, manque de respect, besoin de se défendre</td><td>Escalade des conflits, peur de s'exprimer chez l'autre</td></tr>
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
     {
       id: 'outils-concrets-mieux-communiquer',
       title: "Les outils concrets pour mieux communiquer",
-      content: `<p>Savoir qu'on communique mal ne suffit pas. Il faut savoir quoi faire différemment. Voici des techniques qui ne viennent pas de nulle part — elles sont utilisées en thérapie de couple et elles fonctionnent quand elles sont appliquées avec régularité.</p>`,
+      content: `<p>Savoir qu'on communique mal ne suffit pas. Il faut savoir quoi faire différemment. Voici des techniques qui ne viennent pas de nulle part : elles sont utilisées en thérapie de couple et elles fonctionnent quand elles sont appliquées avec régularité.</p>`,
       subsections: [
         {
           id: 'ecoute-active',
@@ -137,7 +137,7 @@ const article: BlogArticleData = {
     {
       id: 'sujets-qu-on-evite',
       title: "Les sujets qu'on évite (et pourquoi il faut les aborder)",
-      content: `<p>Il y a des conversations que la plupart des couples repoussent indéfiniment. Pas parce qu'elles ne sont pas importantes — justement parce qu'elles le sont trop. Mais un sujet évité ne disparaît pas. Il pourrit en silence.</p>`,
+      content: `<p>Il y a des conversations que la plupart des couples repoussent indéfiniment. Pas parce qu'elles ne sont pas importantes : justement parce qu'elles le sont trop. Mais un sujet évité ne disparaît pas. Il pourrit en silence.</p>`,
       subsections: [
         {
           id: 'argent-et-projets',

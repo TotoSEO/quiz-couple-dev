@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a0818"/>
+      <stop offset="50%" stop-color="#150a22"/>
+      <stop offset="100%" stop-color="#0d0414"/>
+    </linearGradient>
+    <linearGradient id="figL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4618c"/>
+      <stop offset="100%" stop-color="#b8547a"/>
+    </linearGradient>
+    <linearGradient id="figR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cc2"/>
+      <stop offset="100%" stop-color="#7248a8"/>
+    </linearGradient>
+    <radialGradient id="glowL" cx="230" cy="225" r="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d4618c" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#d4618c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowR" cx="570" cy="225" r="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8b5cc2" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#8b5cc2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <circle cx="230" cy="225" r="130" fill="url(#glowL)"/>
+  <circle cx="570" cy="225" r="130" fill="url(#glowR)"/>
+  <!-- Left figure - turned slightly away -->
+  <g opacity="0.85">
+    <circle cx="220" cy="160" r="32" fill="none" stroke="url(#figL)" stroke-width="2.5"/>
+    <line x1="220" y1="192" x2="220" y2="290" stroke="#d4618c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="220" y1="230" x2="190" y2="265" stroke="#d4618c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="220" y1="230" x2="248" y2="210" stroke="#d4618c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="220" y1="290" x2="200" y2="350" stroke="#d4618c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="220" y1="290" x2="240" y2="350" stroke="#d4618c" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <!-- Right figure - turned slightly away -->
+  <g opacity="0.85">
+    <circle cx="580" cy="160" r="32" fill="none" stroke="url(#figR)" stroke-width="2.5"/>
+    <line x1="580" y1="192" x2="580" y2="290" stroke="#8b5cc2" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="580" y1="230" x2="610" y2="265" stroke="#8b5cc2" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="580" y1="230" x2="552" y2="210" stroke="#8b5cc2" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="580" y1="290" x2="560" y2="350" stroke="#8b5cc2" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="580" y1="290" x2="600" y2="350" stroke="#8b5cc2" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <!-- Broken / disconnected communication line -->
+  <line x1="270" y1="200" x2="330" y2="200" stroke="#d4618c" stroke-width="2" stroke-dasharray="6,8" opacity="0.5" stroke-linecap="round"/>
+  <line x1="350" y1="200" x2="370" y2="200" stroke="#c76aad" stroke-width="2" stroke-dasharray="4,10" opacity="0.35" stroke-linecap="round"/>
+  <!-- Gap / break area -->
+  <circle cx="400" cy="200" r="4" fill="none" stroke="#c76aad" stroke-width="1.5" opacity="0.3"/>
+  <line x1="388" y1="192" x2="412" y2="208" stroke="#c76aad" stroke-width="1.5" opacity="0.25"/>
+  <line x1="388" y1="208" x2="412" y2="192" stroke="#c76aad" stroke-width="1.5" opacity="0.25"/>
+  <!-- Broken line continues -->
+  <line x1="430" y1="200" x2="450" y2="200" stroke="#a068b8" stroke-width="2" stroke-dasharray="4,10" opacity="0.35" stroke-linecap="round"/>
+  <line x1="470" y1="200" x2="530" y2="200" stroke="#8b5cc2" stroke-width="2" stroke-dasharray="6,8" opacity="0.5" stroke-linecap="round"/>
+  <!-- Second broken line lower -->
+  <line x1="280" y1="230" x2="320" y2="230" stroke="#d4618c" stroke-width="1.5" stroke-dasharray="4,8" opacity="0.3" stroke-linecap="round"/>
+  <line x1="355" y1="230" x2="370" y2="230" stroke="#c76aad" stroke-width="1.5" stroke-dasharray="3,10" opacity="0.2" stroke-linecap="round"/>
+  <line x1="430" y1="230" x2="445" y2="230" stroke="#a068b8" stroke-width="1.5" stroke-dasharray="3,10" opacity="0.2" stroke-linecap="round"/>
+  <line x1="480" y1="230" x2="520" y2="230" stroke="#8b5cc2" stroke-width="1.5" stroke-dasharray="4,8" opacity="0.3" stroke-linecap="round"/>
+  <!-- Fading signal waves from left -->
+  <path d="M260,170 C270,160 270,180 260,170" fill="none" stroke="#d4618c" stroke-width="1.5" opacity="0.3"/>
+  <path d="M275,160 C290,145 290,185 275,170" fill="none" stroke="#d4618c" stroke-width="1.2" opacity="0.2"/>
+  <!-- Fading signal waves from right -->
+  <path d="M540,170 C530,160 530,180 540,170" fill="none" stroke="#8b5cc2" stroke-width="1.5" opacity="0.3"/>
+  <path d="M525,160 C510,145 510,185 525,170" fill="none" stroke="#8b5cc2" stroke-width="1.2" opacity="0.2"/>
+  <!-- Ambient particles -->
+  <circle cx="100" cy="80" r="1.5" fill="#d4618c" opacity="0.2"/>
+  <circle cx="700" cy="90" r="2" fill="#8b5cc2" opacity="0.2"/>
+  <circle cx="400" cy="400" r="1.5" fill="#c76aad" opacity="0.15"/>
+  <circle cx="150" cy="380" r="1" fill="#d4618c" opacity="0.15"/>
+  <circle cx="650" cy="390" r="1" fill="#8b5cc2" opacity="0.15"/>
+</svg>
