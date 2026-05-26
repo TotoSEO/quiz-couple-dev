@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['lucie-courtin'],
   excerpt: "Le bon partenaire ne te fait pas douter de ta valeur. Il te donne envie de construire, pas de survivre. Voici comment faire la différence.",
   introduction: `<p>Tu l'aimes, ça c'est sûr. Mais est-ce que c'est <strong>la bonne personne</strong> pour toi, pour la vie ? C'est la question qui te tourne dans la tête, probablement depuis un moment. Peut-être que tout va bien en surface, mais quelque chose en toi a besoin d'être rassuré. Ou peut-être que tu sens des frictions et tu te demandes si c'est normal ou si c'est un signe.</p>
-<p>Spoiler : il n'existe pas de check-list magique. Pas de moment "eurêka" où tout devient limpide. Mais il y a <strong>des signaux concrets</strong>, des indicateurs fiables, des questions que tu peux te poser honnêtement pour y voir plus clair. Pas des clichés de comédies romantiques, des vrais repères, ancrés dans ce que la psychologie et l'expérience nous apprennent sur les relations qui durent.</p>
+<p>Spoiler : il n'existe pas de check-list magique. Pas de moment "eurêka" où tout devient limpide. Mais il y a <strong>des signaux concrets</strong>, des indicateurs fiables, des questions que tu peux te poser honnêtement pour y voir plus clair. Pas des clichés de comédies romantiques. Des vrais repères, ancrés dans ce que la psychologie et l'expérience nous apprennent sur les relations qui durent.</p>
 <p>Cet article est là pour ça. T'aider à démêler l'amour du fantasme, le confort de l'habitude, et la bonne personne de celle qui "fait l'affaire pour l'instant".</p>`,
   quickSummary: [
     "Le coup de foudre n'est pas un indicateur fiable. Les vraies relations se construisent, elles ne tombent pas du ciel.",
@@ -43,7 +43,7 @@ const article: BlogArticleData = {
           id: 'attention-a-l-intensite-toxique',
           title: "Attention à l'intensité toxique",
           content: `<p>Il y a une nuance importante à comprendre. Parfois, ce qu'on prend pour de la passion est en réalité le signe d'une <strong>dynamique anxieuse</strong>. Tu es sur un nuage quand il est là, et en panique quand il est distant. Ce yoyo émotionnel, ce n'est pas de la passion. C'est de l'insécurité.</p>
-<p>Les relations les plus intenses au départ sont souvent celles qui activent nos blessures d'attachement. Tu peux être magnétiquement attirée par quelqu'un qui reproduit exactement le schéma qui te fait souffrir. Ce n'est pas le destin, c'est ton cerveau qui répète un pattern connu. La <a href="/blog/dependance-affective/">dépendance affective</a> fonctionne exactement comme ça.</p>`,
+<p>Les relations les plus intenses au départ sont souvent celles qui activent nos blessures d'attachement. Tu peux être magnétiquement attirée par quelqu'un qui reproduit exactement le schéma qui te fait souffrir. Ce n'est pas le destin : c'est ton cerveau qui répète un pattern connu. La <a href="/blog/dependance-affective/">dépendance affective</a> fonctionne exactement comme ça.</p>`,
         },
       ],
     },
@@ -74,8 +74,8 @@ const article: BlogArticleData = {
         {
           id: 'respect-et-admiration',
           title: "Il y a du respect et de l'admiration mutuelle",
-          content: `<p>Le chercheur John Gottman, qui a étudié des milliers de couples pendant 40 ans, a identifié un facteur prédictif majeur de longévité : <strong>le respect et l'admiration mutuels</strong>. Pas l'admiration aveugle. L'admiration lucide, celle où tu connais ses défauts et tu l'estimes quand même.</p>
-<p>Avec le bon partenaire, tu es fière de lui. Pas parce qu'il est parfait, mais parce que tu respectes la personne qu'il est. Et lui, il parle de toi avec chaleur. Pas avec condescendance, pas avec agacement, avec une fierté sincère. Le jour où le mépris remplace l'admiration, la relation est en danger. C'est d'ailleurs l'un des premiers <a href="/blog/red-flags-homme/">red flags</a> à surveiller.</p>`,
+          content: `<p>Le chercheur John Gottman, qui a étudié des milliers de couples pendant 40 ans, a identifié un facteur prédictif majeur de longévité : <strong>le respect et l'admiration mutuels</strong>. Pas l'admiration aveugle. L'admiration lucide : celle où tu connais ses défauts et tu l'estimes quand même.</p>
+<p>Avec le bon partenaire, tu es fière de lui. Pas parce qu'il est parfait, mais parce que tu respectes la personne qu'il est. Et lui, il parle de toi avec chaleur. Pas avec condescendance, pas avec agacement. Avec une fierté sincère. Le jour où le mépris remplace l'admiration, la relation est en danger. C'est d'ailleurs l'un des premiers <a href="/blog/red-flags-homme/">red flags</a> à surveiller.</p>`,
         },
         {
           id: 'grandir-ensemble',
@@ -109,7 +109,7 @@ const article: BlogArticleData = {
           id: 'tes-proches-voient-clair',
           title: "Tes proches te le disent (et tu ne les écoutes pas)",
           content: `<p>Ta meilleure amie a fait une remarque. Ta mère a posé des questions. Ton frère a eu un regard. Les gens qui t'aiment et qui te connaissent voient souvent ce que toi tu refuses de voir, parce que toi tu es dedans. Eux sont dehors.</p>
-<p>Ça ne veut pas dire qu'ils ont toujours raison. Mais quand <strong>plusieurs personnes de confiance</strong> ont la même réserve, la probabilité que le problème soit chez elles diminue sérieusement. Écoute-les. Pas pour leur obéir, pour te poser les bonnes questions.</p>`,
+<p>Ça ne veut pas dire qu'ils ont toujours raison. Mais quand <strong>plusieurs personnes de confiance</strong> ont la même réserve, la probabilité que le problème soit chez elles diminue sérieusement. Écoute-les. Pas pour leur obéir, mais pour te poser les bonnes questions.</p>`,
         },
         {
           id: 'tu-esperes-qu-il-change',
@@ -127,8 +127,8 @@ const article: BlogArticleData = {
         {
           id: 'le-doute-normal',
           title: "Le doute normal : celui qui passe",
-          content: `<p>Le doute normal, c'est celui qui surgit dans les moments de transition. Un pas important à franchir, emménager ensemble, se fiancer, faire un enfant, et ton cerveau fait ce qu'il sait faire de mieux : envisager le pire. "Et si ça ne marchait pas ? Et si je me trompais ?"</p>
-<p>Ce doute-là est <strong>sain</strong>. Il ne remet pas en question la personne. Il remet en question l'inconnu. Tu ne doutes pas de lui, tu doutes de l'avenir, parce que l'avenir est incertain. C'est normal. Ça veut dire que tu prends les choses au sérieux. Ce doute se calme quand tu regardes la personne à côté de toi et que tu te dis : <strong>"Avec lui, je veux essayer."</strong></p>`,
+          content: `<p>Le doute normal, c'est celui qui surgit dans les moments de transition. Un pas important à franchir (emménager ensemble, se fiancer, faire un enfant) et ton cerveau fait ce qu'il sait faire de mieux : envisager le pire. "Et si ça ne marchait pas ? Et si je me trompais ?"</p>
+<p>Ce doute-là est <strong>sain</strong>. Il ne remet pas en question la personne. Il remet en question l'inconnu. Tu ne doutes pas de lui : tu doutes de l'avenir, parce que l'avenir est incertain. C'est normal. Ça veut dire que tu prends les choses au sérieux. Ce doute se calme quand tu regardes la personne à côté de toi et que tu te dis : <strong>"Avec lui, je veux essayer."</strong></p>`,
         },
         {
           id: 'le-doute-profond',
@@ -153,13 +153,13 @@ const article: BlogArticleData = {
     {
       id: 'questions-honnetes',
       title: "Les questions à se poser honnêtement",
-      content: `<p>Parfois, ce dont tu as besoin, ce n'est pas d'un article qui te dit quoi penser. C'est d'un espace pour <strong>penser par toi-même</strong>, avec les bonnes questions. En voici quelques-unes. Pas des questions faciles, des questions qui comptent.</p>`,
+      content: `<p>Parfois, ce dont tu as besoin, ce n'est pas d'un article qui te dit quoi penser. C'est d'un espace pour <strong>penser par toi-même</strong>, avec les bonnes questions. En voici quelques-unes. Pas des questions faciles. Des questions qui comptent.</p>`,
       subsections: [
         {
           id: 'questions-sur-toi',
           title: "Sur toi dans cette relation",
-          content: `<p><strong>Est-ce que tu es toi-même avec lui ?</strong> Pas la version polie, la version filtrée, la version "je-fais-attention-à-ce-que-je-dis". Toi. Celle qui rit fort, qui a des opinions, qui a mauvais caractère parfois, qui est imparfaite. Si tu joues un rôle depuis le début, la question n'est pas de savoir si c'est le bon, c'est de savoir qui tu es devenue pour lui plaire.</p>
-<p><strong>Est-ce que tu te sens libre ?</strong> Libre de voir tes amis, de dire non, de prendre des décisions sans demander permission, de vivre ta vie en dehors du couple. Si tu vis avec un sentiment diffus de restriction, même s'il ne t'interdit rien explicitement, c'est un signal.</p>
+          content: `<p><strong>Est-ce que tu es toi-même avec lui ?</strong> Pas la version polie, la version filtrée, la version "je-fais-attention-à-ce-que-je-dis". Toi. Celle qui rit fort, qui a des opinions, qui a mauvais caractère parfois, qui est imparfaite. Si tu joues un rôle depuis le début, la question n'est pas de savoir si c'est le bon : c'est de savoir qui tu es devenue pour lui plaire.</p>
+<p><strong>Est-ce que tu te sens libre ?</strong> Libre de voir tes amis, de dire non, de prendre des décisions sans demander permission, de vivre ta vie en dehors du couple. Si tu vis avec un sentiment diffus de restriction (même s'il ne t'interdit rien explicitement), c'est un signal.</p>
 <p><strong>Est-ce que tu es heureuse au quotidien ?</strong> Pas dans les grands moments. Pas en vacances. Dans la vie de tous les jours, un mardi soir ordinaire, est-ce que tu es bien avec lui ? La vraie compatibilité se mesure dans le banal, pas dans l'exceptionnel.</p>`,
         },
         {
@@ -173,7 +173,7 @@ const article: BlogArticleData = {
           id: 'questions-sur-le-futur',
           title: "Sur votre avenir ensemble",
           content: `<p><strong>Est-ce que tu arrives à te projeter avec lui ?</strong> Pas dans un fantasme romantique. Dans le concret. Gérer un budget ensemble. Traverser une période difficile. Élever un enfant (si c'est ton souhait). Vieillir. Est-ce que quand tu imagines tout ça, tu te sens confiante ou angoissée ?</p>
-<p><strong>Est-ce que vos visions de la vie sont compatibles ?</strong> Il n'a pas besoin de vouloir exactement la même chose que toi. Mais sur les fondamentaux, la fidélité, les enfants, le rapport à l'argent, les priorités de vie, est-ce que vous êtes alignés ? Pour aller plus loin, le <a href="/test-couple-mariage/">test de mariage</a> pose exactement ces questions.</p>
+<p><strong>Est-ce que vos visions de la vie sont compatibles ?</strong> Il n'a pas besoin de vouloir exactement la même chose que toi. Mais sur les fondamentaux (la fidélité, les enfants, le rapport à l'argent, les priorités de vie), est-ce que vous êtes alignés ? Pour aller plus loin, le <a href="/test-couple-mariage/">test de mariage</a> pose exactement ces questions.</p>
 <p><strong>Si rien ne changeait dans ta relation, est-ce que tu resterais ?</strong> C'est peut-être la question la plus dure. Parce qu'elle élimine l'espoir du changement. Elle te met face à la réalité telle qu'elle est, pas telle que tu voudrais qu'elle soit.</p>`,
         },
       ],
@@ -193,13 +193,13 @@ const article: BlogArticleData = {
           id: 'parle-en',
           title: "Parle. Pas à tes amies. À lui.",
           content: `<p>Tu as probablement analysé ta relation avec tes amies, ta sœur, tes collègues, Internet. Tout le monde a un avis. Mais la seule personne avec qui tu dois <strong>vraiment</strong> avoir cette conversation, c'est lui.</p>
-<p>Dis-lui ce que tu ressens. Pas sous forme d'attaque, sous forme de vulnérabilité. "J'ai besoin d'être rassurée." "Je me pose des questions sur nous." "J'ai peur." Sa réaction à cette conversation te dira plus que n'importe quel article. Est-ce qu'il écoute ? Est-ce qu'il se braque ? Est-ce qu'il cherche à comprendre ? La <a href="/blog/manque-communication-couple/">qualité de la communication</a> dans un couple est un des meilleurs indicateurs de sa solidité.</p>`,
+<p>Dis-lui ce que tu ressens. Pas sous forme d'attaque, mais sous forme de vulnérabilité. "J'ai besoin d'être rassurée." "Je me pose des questions sur nous." "J'ai peur." Sa réaction à cette conversation te dira plus que n'importe quel article. Est-ce qu'il écoute ? Est-ce qu'il se braque ? Est-ce qu'il cherche à comprendre ? La <a href="/blog/manque-communication-couple/">qualité de la communication</a> dans un couple est un des meilleurs indicateurs de sa solidité.</p>`,
         },
         {
           id: 'fais-le-point-objectivement',
           title: "Fais le point avec des outils concrets",
           content: `<p>Parfois, on est tellement dans sa tête qu'on perd la capacité à voir clair. C'est là que des outils extérieurs peuvent aider, pas pour décider à ta place, mais pour <strong>structurer ta réflexion</strong>.</p>
-<p><a href="/tester-son-couple/">Tester ton couple</a> gratuitement, c'est une façon de mettre des mots sur ce que tu ressens sans le filtre de l'émotion. C'est aussi un bon point de départ pour ouvrir la discussion avec ton partenaire, les résultats peuvent vous aider à identifier ensemble ce qui fonctionne et ce qui doit évoluer.</p>
+<p><a href="/tester-son-couple/">Tester ton couple</a> gratuitement, c'est une façon de mettre des mots sur ce que tu ressens sans le filtre de l'émotion. C'est aussi un bon point de départ pour ouvrir la discussion avec ton partenaire : les résultats peuvent vous aider à identifier ensemble ce qui fonctionne et ce qui doit évoluer.</p>
 <p>Et si tu sens que tes doutes sont plus profonds, que quelque chose te pèse depuis longtemps, qu'un schéma se répète relation après relation, un accompagnement thérapeutique peut t'aider à démêler ce qui relève de ta relation et ce qui relève de toi. Les deux sont valides. Les deux méritent d'être explorés.</p>`,
         },
       ],
@@ -209,7 +209,7 @@ const article: BlogArticleData = {
       title: "En résumé : le bon partenaire ne te fait pas douter de ta valeur",
       content: `<p>Il n'y a pas de formule universelle pour savoir si c'est le bon. Mais il y a un repère qui ne trompe presque jamais : <strong>la personne avec qui tu es censée construire ta vie ne te fait pas douter de qui tu es</strong>. Elle ne te demande pas de rapetisser, de te taire, de te transformer. Elle te regarde telle que tu es et elle choisit de rester.</p>
 <p>Le bon partenaire, c'est celui qui te donne envie de construire quelque chose, pas de survivre au quotidien. C'est celui avec qui les discussions difficiles mènent quelque part. C'est celui dont la présence est un <strong>réconfort, pas une source d'anxiété</strong>.</p>
-<p>Si tu as lu cet article jusqu'ici, c'est que tu te poses les bonnes questions. C'est déjà un acte de lucidité et de respect envers toi-même. Quelle que soit ta conclusion, reste, pars, prends du temps, fais-toi confiance. Ton instinct n'est pas ton ennemi. Il essaie de te montrer ce que ta tête refuse encore de voir.</p>
+<p>Si tu as lu cet article jusqu'ici, c'est que tu te poses les bonnes questions. C'est déjà un acte de lucidité et de respect envers toi-même. Quelle que soit ta conclusion (reste, pars, prends du temps), fais-toi confiance. Ton instinct n'est pas ton ennemi. Il essaie de te montrer ce que ta tête refuse encore de voir.</p>
 <a href="/blog/red-flags-homme/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Red flags chez un homme : les signaux d'alerte à ne pas ignorer</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

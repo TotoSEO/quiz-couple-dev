@@ -19,14 +19,14 @@ const article: BlogArticleData = {
     "Les disputes sont normales : un couple qui ne se dispute jamais n'est pas un couple sain, c'est un couple qui évite les vrais sujets.",
     "La différence entre dispute saine et dispute toxique tient en un mot : le respect. Même en colère.",
     "Les quatre erreurs les plus destructrices : crier pour dominer, le mur du silence, ramener le passé, menacer de rompre.",
-    "La communication non-violente n'est pas un truc de bisounours, c'est l'outil le plus efficace pour que le conflit serve à quelque chose.",
+    "La communication non-violente n'est pas un truc de bisounours : c'est l'outil le plus efficace pour que le conflit serve à quelque chose.",
     "Si les disputes tournent en boucle sur les mêmes sujets sans jamais avancer, c'est le signe qu'un problème plus profond n'est pas traité.",
   ],
   sections: [
     {
       id: 'pourquoi-disputes-normales',
       title: "Pourquoi les disputes sont normales (et même nécessaires)",
-      content: `<p>Je vais commencer par casser un mythe : <strong>un couple qui ne se dispute jamais n'est pas un couple heureux</strong>. C'est un couple où au moins une personne avale ses frustrations en silence. Et le silence, dans une relation, c'est comme de la moisissure derrière un mur, tu ne la vois pas, mais elle fait des dégâts.</p>`,
+      content: `<p>Je vais commencer par casser un mythe : <strong>un couple qui ne se dispute jamais n'est pas un couple heureux</strong>. C'est un couple où au moins une personne avale ses frustrations en silence. Et le silence, dans une relation, c'est comme de la moisissure derrière un mur : tu ne la vois pas, mais elle fait des dégâts.</p>`,
       subsections: [
         {
           id: 'conflit-signe-investissement',
@@ -110,7 +110,7 @@ const article: BlogArticleData = {
           id: 'menacer-de-rompre',
           title: "Menacer de rompre à chaque conflit",
           content: `<p>"Si c'est comme ça, on se sépare." "Peut-être qu'on n'est pas faits l'un pour l'autre." Ces phrases, lancées en pleine dispute, font des dégâts énormes, même si tu ne les penses pas vraiment.</p>
-<p><strong>Menacer de rompre, c'est utiliser la relation elle-même comme arme.</strong> Tu places l'autre face à sa peur la plus profonde, perdre la relation, pour "gagner" la dispute. C'est une forme de chantage affectif, et à force de répétition, elle érode complètement la sécurité émotionnelle du couple.</p>
+<p><strong>Menacer de rompre, c'est utiliser la relation elle-même comme arme.</strong> Tu places l'autre face à sa peur la plus profonde (perdre la relation) pour "gagner" la dispute. C'est une forme de chantage affectif, et à force de répétition, elle érode complètement la sécurité émotionnelle du couple.</p>
 <p>Soit tu penses vraiment à la rupture, et dans ce cas il faut en parler sérieusement en dehors d'une dispute. Soit tu ne le penses pas, et alors arrête de le dire. Parce qu'à force de brandir cette menace, deux choses vont se passer : soit l'autre va finir par te prendre au mot, soit il va arrêter de te croire, et les deux sont mauvais. Si tu sens que la menace de rupture revient souvent, c'est peut-être un <a href="/blog/red-flags-homme/">red flag à ne pas ignorer</a>.</p>`,
         },
       ],
@@ -118,7 +118,7 @@ const article: BlogArticleData = {
     {
       id: 'methode-dispute-constructive',
       title: "Comment se disputer de façon constructive",
-      content: `<p>Maintenant qu'on sait ce qu'il ne faut pas faire, voici ce qui marche. Ce n'est pas de la théorie abstraite, c'est une méthode concrète, inspirée de la communication non-violente, mais adaptée à la vraie vie. Parce que soyons honnêtes : quand tu es énervé, tu n'as pas envie de sortir ton manuel de CNV.</p>`,
+      content: `<p>Maintenant qu'on sait ce qu'il ne faut pas faire, voici ce qui marche. Ce n'est pas de la théorie abstraite : c'est une méthode concrète, inspirée de la communication non-violente, mais adaptée à la vraie vie. Parce que soyons honnêtes : quand tu es énervé, tu n'as pas envie de sortir ton manuel de CNV.</p>`,
       subsections: [
         {
           id: 'methode-desc',

@@ -17,9 +17,9 @@ const article: BlogArticleData = {
   quickSummary: [
     "Le manque de communication n'est pas l'absence de mots, c'est l'absence de connexion réelle dans les échanges.",
     "Les causes principales : peur du conflit, impression de ne pas être entendu, lassitude et routinisation de la relation.",
-    "Il existe 4 styles de communication (passif, agressif, passif-agressif, assertif), seul le dernier construit vraiment.",
+    "Il existe 4 styles de communication (passif, agressif, passif-agressif, assertif) : seul le dernier construit vraiment.",
     "Les outils concrets : écoute active, reformulation, le « je » au lieu du « tu accuses », et des temps dédiés au dialogue.",
-    "Certains sujets font peur, mais les éviter ne les fait pas disparaître, ça les fait grossir en silence.",
+    "Certains sujets font peur, mais les éviter ne les fait pas disparaître. Ça les fait grossir en silence.",
   ],
   sections: [
     {
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
     {
       id: 'outils-concrets-mieux-communiquer',
       title: "Les outils concrets pour mieux communiquer",
-      content: `<p>Savoir qu'on communique mal ne suffit pas. Il faut savoir quoi faire différemment. Voici des techniques qui ne viennent pas de nulle part, elles sont utilisées en thérapie de couple et elles fonctionnent quand elles sont appliquées avec régularité.</p>`,
+      content: `<p>Savoir qu'on communique mal ne suffit pas. Il faut savoir quoi faire différemment. Voici des techniques qui ne viennent pas de nulle part : elles sont utilisées en thérapie de couple et elles fonctionnent quand elles sont appliquées avec régularité.</p>`,
       subsections: [
         {
           id: 'ecoute-active',
@@ -137,7 +137,7 @@ const article: BlogArticleData = {
     {
       id: 'sujets-qu-on-evite',
       title: "Les sujets qu'on évite (et pourquoi il faut les aborder)",
-      content: `<p>Il y a des conversations que la plupart des couples repoussent indéfiniment. Pas parce qu'elles ne sont pas importantes, justement parce qu'elles le sont trop. Mais un sujet évité ne disparaît pas. Il pourrit en silence.</p>`,
+      content: `<p>Il y a des conversations que la plupart des couples repoussent indéfiniment. Pas parce qu'elles ne sont pas importantes : justement parce qu'elles le sont trop. Mais un sujet évité ne disparaît pas. Il pourrit en silence.</p>`,
       subsections: [
         {
           id: 'argent-et-projets',
