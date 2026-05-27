@@ -69,7 +69,13 @@
     'attachement':    { prefix: 'attachement', engine: 'solo', totalQ: 20, pool: 20, quizType: 'attachement' },
 
     // ── Confiance quiz (solo scoring, trust assessment) ──
-    'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' }
+    'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
+
+    // ── Infidelite quiz (solo scoring, ascending: more signs = higher score) ──
+    'infidelite':     { prefix: 'infidelite', engine: 'solo', totalQ: 20, pool: 20, quizType: 'infidelite', ascending: true },
+
+    // ── Bebe quiz (solo scoring, descending: more ready = higher score) ──
+    'bebe':           { prefix: 'bebe', engine: 'solo', totalQ: 20, pool: 20, quizType: 'bebe' }
   };
 
   var config = QUIZ_CONFIG[quizType];
