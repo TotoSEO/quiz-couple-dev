@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "badge": "Test gratuit, 20 questions",
+    "title": "Test infidélité :",
+    "titleHighlight": "les signes qui ne trompent pas",
+    "description": "20 questions pour identifier les <strong>signaux d'alerte</strong> dans votre relation. Changements de comportement, distance émotionnelle, secret : faites le point en toute confidentialité.",
+    "subtitle": "Gratuit, confidentiel, résultat immédiat"
+  },
+  "section1": {
+    "title": "Pourquoi faites-vous ce test aujourd'hui ?",
+    "p1": "Si vous êtes ici, c'est que quelque chose vous travaille. Peut-être un détail qui vous a interpellé, une accumulation de petits changements, ou simplement une intuition tenace qui refuse de disparaître. Et plutôt que de rester seul(e) avec ce doute, vous cherchez un outil concret pour y voir plus clair.",
+    "p2": "Ce test n'est pas un détecteur de mensonges. Il ne prétend pas prouver quoi que ce soit. Son rôle est de vous aider à <strong class=\"text-foreground\">mettre des mots sur ce que vous observez</strong>, à organiser vos ressentis et à évaluer objectivement si les signaux que vous percevez méritent d'être pris au sérieux, ou s'ils trouvent des explications plus simples.",
+    "p3": "Quelle que soit l'issue, rappelez-vous que le simple fait de chercher à comprendre est un acte de lucidité, pas de faiblesse. Votre ressenti compte, et il mérite d'être entendu."
+  },
+  "section2": {
+    "title": "Les 7 signaux comportementaux les plus fréquents",
+    "intro": "Les recherches en psychologie du couple identifient des patterns récurrents lorsqu'un partenaire entretient une relation extérieure. Ces signes ne sont pas des preuves, mais leur accumulation doit alerter.",
+    "pillar1Title": "1. Le secret autour du téléphone",
+    "pillar1Text": "Changement de code, écran retourné, notifications désactivées, suppression de messages. Le téléphone devient un territoire interdit alors qu'il ne l'était pas avant. C'est l'un des signaux les plus cités dans les témoignages et les études cliniques.",
+    "pillar2Title": "2. Les changements d'emploi du temps",
+    "pillar2Text": "Retards récurrents, sorties imprévues, week-ends \"professionnels\" soudains. Ce n'est pas le changement en soi qui pose question, c'est le fait qu'il s'accompagne d'explications vagues ou contradictoires.",
+    "pillar3Title": "3. La distance émotionnelle progressive",
+    "pillar3Text": "Moins de conversations profondes, moins d'intérêt pour votre quotidien, un regard qui semble tourné ailleurs. La personne est physiquement présente mais émotionnellement absente.",
+    "pillar4Title": "4. Les modifications d'apparence",
+    "pillar4Text": "Nouveau style vestimentaire, remise en forme soudaine, parfum différent. Quand ces changements ne sont pas liés à un événement identifiable (nouveau poste, anniversaire), ils peuvent signaler un désir de plaire à quelqu'un de nouveau.",
+    "pillar5Title": "5. La réactivité excessive",
+    "pillar5Text": "Toute question devient une accusation, toute remarque provoque une réaction disproportionnée. Cette défensivité permanente est souvent le signe que la personne se sent \"prise\" et tente de renverser la culpabilité.",
+    "pillar6Title": "6. Les incohérences dans le récit",
+    "pillar6Text": "De petits mensonges sur des détails anodins, des versions qui changent, des emplois du temps qui ne collent pas. Pris isolément, chacun semble anodin. Ensemble, ils dessinent un schéma de dissimulation.",
+    "pillar7Title": "7. Les changements dans l'intimité",
+    "pillar7Text": "Soit un recul net (moins de tendresse, moins de désir), soit au contraire un regain soudain d'attention et de passion. Les deux extrêmes peuvent traduire un sentiment de culpabilité ou un besoin de compensation."
+  },
+  "section3": {
+    "title": "Infidélité émotionnelle vs. infidélité physique",
+    "p1": "Quand on parle d'infidélité, on pense souvent à une relation sexuelle avec un tiers. Mais la réalité est plus nuancée. Les thérapeutes de couple distinguent deux formes principales qui, toutes les deux, peuvent être dévastatrices pour la relation.",
+    "sub1Title": "L'infidélité émotionnelle",
+    "sub1P1": "Elle commence souvent par une amitié intense, des confidences partagées, un lien privilégié avec quelqu'un d'extérieur au couple. Votre partenaire confie à cette personne ce qu'il/elle ne vous dit plus. Cette forme est plus insidieuse parce qu'elle n'implique pas nécessairement de contact physique, ce qui permet de la nier plus facilement : \"On est juste amis.\"",
+    "sub1P2": "Pourtant, l'infidélité émotionnelle peut blesser autant, voire davantage, que l'infidélité physique. Elle touche à ce qui fonde le lien : l'intimité, le partage, la complicité exclusive.",
+    "sub2Title": "L'infidélité physique",
+    "sub2P1": "Plus facilement identifiable, elle implique un contact intime avec un tiers. Elle peut être ponctuelle (un écart isolé) ou installée dans la durée (double vie). Dans les deux cas, c'est la rupture du contrat de confiance qui fait mal, pas uniquement l'acte en lui-même.",
+    "sub2P2": "Certaines études suggèrent que les hommes sont plus affectés par l'infidélité physique, tandis que les femmes souffrent davantage de l'infidélité émotionnelle. Mais cette distinction est une tendance, pas une règle : la douleur dépend de chaque individu et de chaque histoire."
+  },
+  "section4": {
+    "title": "La psychologie derrière l'infidélité",
+    "p1": "Comprendre ne veut pas dire excuser. Mais pour avancer, qu'on décide de rester ou de partir, il peut être utile de comprendre les mécanismes psychologiques à l'origine de l'infidélité.",
+    "pillar1Title": "Le manque affectif non exprimé",
+    "pillar1Text": "La cause la plus fréquemment citée en thérapie n'est pas le désir sexuel, c'est le sentiment de ne plus être vu, entendu ou désiré dans le couple. L'infidélité devient alors une quête maladroite de validation émotionnelle.",
+    "pillar2Title": "La peur de l'engagement ou de la routine",
+    "pillar2Text": "Certaines personnes sabotent inconsciemment leur relation quand elle devient trop stable. La nouveauté d'une relation extérieure leur procure une montée d'adrénaline qui compense une angoisse existentielle face à l'engagement durable.",
+    "pillar3Title": "Les schémas répétitifs",
+    "pillar3Text": "L'infidélité peut être un pattern qui se répète d'une relation à l'autre. Dans ce cas, le problème n'est pas la relation elle-même, mais un fonctionnement personnel profond, souvent lié au style d'attachement ou à l'histoire familiale. Notre <a href=\"/test-style-attachement-couple/\">test de style d'attachement</a> peut éclairer cette dimension.",
+    "pillar4Title": "La crise identitaire",
+    "pillar4Text": "Le passage de la quarantaine, un deuil, une perte d'emploi, l'arrivée d'un enfant : ces moments de fragilité peuvent déclencher une quête de sens qui s'exprime par une relation extérieure. Ce n'est pas une excuse, c'est un contexte à prendre en compte."
+  },
+  "section5": {
+    "title": "Que faire si vous suspectez une infidélité",
+    "p1": "La période de doute est l'une des plus éprouvantes. L'esprit oscille entre le besoin de savoir et la peur de la réponse. Voici ce que recommandent les thérapeutes de couple.",
+    "dontTitle": "Ce qu'il ne faut PAS faire",
+    "dont1Title": "Jouer au détective",
+    "dont1Text": "Fouiller le téléphone, installer des logiciels espions, suivre votre partenaire. Même si vous trouvez quelque chose, cette démarche empoisonne la relation et peut avoir des conséquences juridiques. De plus, elle vous enferme dans un rôle de surveillance qui détruit votre propre sérénité.",
+    "dont2Title": "Lancer des accusations sans fondement",
+    "dont2Text": "Confronter votre partenaire en criant \"Je sais que tu me trompes !\" quand vous n'en savez rien provoquera soit un mur de déni, soit une escalade. L'accusation directe ferme le dialogue au lieu de l'ouvrir.",
+    "dont3Title": "En parler à tout votre entourage",
+    "dont3Text": "Se confier à un(e) ami(e) de confiance est sain. Mais exposer la situation à toute votre famille et à vos réseaux sociaux avant d'avoir clarifié les choses complique considérablement une éventuelle réconciliation.",
+    "doTitle": "Ce qu'il faut faire",
+    "do1Title": "Observez, notez, ne réagissez pas à chaud",
+    "do1Text": "Prenez du recul. Notez factuellement ce que vous observez (dates, comportements, incohérences). Cela vous aidera à distinguer les faits de vos interprétations et à structurer vos pensées.",
+    "do2Title": "Exprimez vos ressentis sans accuser",
+    "do2Text": "\"Depuis quelques semaines, je sens une distance entre nous et ça m'inquiète. J'ai besoin qu'on en parle.\" Cette approche ouvre le dialogue au lieu de le fermer. Vous n'accusez pas, vous partagez un ressenti.",
+    "do3Title": "Consultez un professionnel",
+    "do3Text": "Un thérapeute, en individuel ou en couple, peut vous aider à traverser cette période. Il/elle vous donnera un espace neutre pour mettre des mots sur ce que vous vivez et vous guidera vers la meilleure décision pour vous."
+  },
+  "section6": {
+    "title": "Peut-on reconstruire après une infidélité ?",
+    "p1": "La réponse courte : oui, dans certains cas. Des études montrent qu'environ 50 à 60 % des couples qui choisissent de travailler sur une infidélité parviennent à reconstruire une relation satisfaisante. Mais cela demande un investissement massif des deux côtés.",
+    "sub1Title": "Les conditions de la reconstruction",
+    "sub1P1": "La première condition est que la personne infidèle assume pleinement sa responsabilité, sans minimiser, sans blâmer l'autre. La deuxième est une transparence totale pendant la période de reconstruction : accès libre aux communications, réponses honnêtes à toutes les questions. La troisième est un travail thérapeutique pour comprendre les causes profondes et empêcher la récidive.",
+    "sub2Title": "Le temps nécessaire",
+    "sub2P1": "Les thérapeutes estiment qu'il faut entre 1 et 3 ans pour qu'un couple retrouve une confiance stable après une infidélité. Les premiers mois sont les plus difficiles : la douleur est vive, la confiance est au plus bas, et la personne trahie revit régulièrement la blessure. C'est normal, et il est essentiel que le partenaire infidèle comprenne cela sans s'impatienter.",
+    "sub3Title": "Quand la reconstruction n'est pas possible",
+    "sub3P1": "Si votre partenaire nie les faits malgré les évidences, refuse de mettre fin à la relation extérieure, vous culpabilise pour ses propres choix ou récidive, la reconstruction n'est pas envisageable. Ces situations indiquent un manque de respect profond qui dépasse la question de l'infidélité. Notre <a href=\"/test-couple-toxique/\">test couple toxique</a> peut vous aider à évaluer la santé globale de votre relation."
+  },
+  "section7": {
+    "title": "Quand faut-il envisager de partir ?",
+    "p1": "Rester ou partir n'est pas une décision binaire qui se prend en un jour. Mais certains signes indiquent clairement que la relation ne peut plus fonctionner dans sa forme actuelle.",
+    "p2": "Il est légitime de partir quand votre partenaire refuse toute responsabilité et retourne la culpabilité contre vous, quand l'infidélité se répète malgré les promesses, quand votre santé mentale ou physique se dégrade (anxiété chronique, troubles du sommeil, perte de poids), quand vous restez uniquement par peur d'être seul(e) ou par obligation.",
+    "p3": "Partir n'est pas un échec. C'est parfois l'acte le plus courageux et le plus sain qu'on puisse poser. Si les <a href=\"/blog/red-flags-homme/\">red flags chez l'homme</a> ou les <a href=\"/blog/red-flags-femme/\">red flags chez la femme</a> s'accumulent, faites confiance à ce que vous voyez.",
+    "quote": "Vous ne pouvez pas sauver une relation à vous seul(e). Il faut être deux pour reconstruire, mais il suffit d'un(e) pour décider de se protéger."
+  },
+  "section8": {
+    "title": "Les chiffres clés de l'infidélité en France",
+    "headerScore": "Indicateur",
+    "headerLevel": "Chiffre",
+    "headerAnalysis": "Source / Contexte",
+    "row1Score": "Taux d'infidélité déclaré",
+    "row1Level": "30 à 40 %",
+    "row1Analysis": "Pourcentage de Français déclarant avoir été infidèles au moins une fois (sondages IFOP)",
+    "row2Score": "Infidélité émotionnelle",
+    "row2Level": "En hausse",
+    "row2Analysis": "Les applications de messagerie ont facilité les liens intimes à distance",
+    "row3Score": "Couples qui survivent",
+    "row3Level": "50 à 60 %",
+    "row3Analysis": "Parmi les couples qui choisissent la thérapie après une infidélité",
+    "row4Score": "Durée de reconstruction",
+    "row4Level": "1 à 3 ans",
+    "row4Analysis": "Temps moyen estimé par les thérapeutes pour retrouver une confiance stable"
+  },
+  "seo": {
+    "faq1Q": "Comment savoir si mon mari me trompe ?",
+    "faq1A": "Les signes les plus fréquents incluent un changement soudain de comportement avec le téléphone (code modifié, notifications masquées), des horaires inhabituels avec des explications vagues, une distance émotionnelle croissante et une réactivité excessive quand vous posez des questions. Aucun signe isolé ne constitue une preuve, mais leur accumulation doit alerter. Ce test de 20 questions vous aide à évaluer objectivement la situation.",
+    "faq2Q": "Quels sont les signes d'infidélité émotionnelle ?",
+    "faq2A": "L'infidélité émotionnelle se manifeste par une complicité exclusive avec une personne extérieure au couple : confidences, messages fréquents, besoin de partager avec cette personne plutôt qu'avec vous. Votre partenaire peut devenir distant(e), moins intéressé(e) par vos conversations et plus protecteur/protectrice de son téléphone. La phrase \"on est juste amis\" revient souvent pour minimiser la situation.",
+    "faq3Q": "Peut-on reconstruire un couple après une tromperie ?",
+    "faq3A": "Oui, à condition que les deux partenaires le veuillent sincèrement. Environ 50 à 60 % des couples qui choisissent de travailler sur une infidélité y parviennent. Les conditions essentielles sont la responsabilité pleinement assumée, une transparence renforcée et un accompagnement thérapeutique. Le processus prend généralement entre 1 et 3 ans.",
+    "faq4Q": "Mon partenaire est devenu distant, est-ce un signe de tromperie ?",
+    "faq4A": "La distance émotionnelle peut avoir de nombreuses causes : stress professionnel, dépression, fatigue, crise personnelle. Elle ne signifie pas automatiquement infidélité. En revanche, si cette distance s'accompagne d'autres changements (secret autour du téléphone, modifications d'horaires, réactivité excessive), l'ensemble du tableau mérite votre attention. La meilleure approche reste d'en parler directement avec votre partenaire.",
+    "faq5Q": "Faut-il fouiller le téléphone de son partenaire en cas de doute ?",
+    "faq5A": "Les thérapeutes déconseillent cette approche. Fouiller le téléphone de votre partenaire vous enferme dans un rôle de surveillance qui détruit votre propre sérénité et empoisonne la relation, que vous trouviez quelque chose ou non. De plus, cela peut avoir des implications juridiques. La démarche recommandée est d'exprimer vos ressentis directement : décrivez ce que vous observez, ce que vous ressentez et ce dont vous avez besoin, sans accuser."
+  }
+}

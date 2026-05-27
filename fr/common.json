@@ -30,7 +30,11 @@
     "categoryTests": "Tests de couple",
     "categoryQuizzes": "Nos quiz pour couple",
     "activities": "Activités autour de moi",
-    "contact": "Contact"
+    "contact": "Contact",
+    "testInfidelite": "Test infidélité",
+    "testInfideliteDesc": "Détectez les signes d'infidélité",
+    "testBebe": "Test bébé",
+    "testBebeDesc": "Êtes-vous prêt(e) pour un enfant ?"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",

@@ -159,5 +159,17 @@
     "shortTitle": "Activités en couple",
     "description": "Trouvez des activités à faire en couple près de chez vous. Outil gratuit et géolocalisé : filtrez par budget, ambiance et distance pour des sorties à deux inoubliables.",
     "metaDescription": "Trouvez des activités en couple près de chez vous ! Filtrez par budget, ambiance et distance. Outil géolocalisé, 100% gratuit."
+  },
+  "testInfidelite": {
+    "title": "Test infidélité couple gratuit : les signes qui ne trompent pas",
+    "shortTitle": "Test Infidélité",
+    "description": "20 questions pour identifier les signes d'infidélité dans votre couple. Résultat immédiat, gratuit et confidentiel.",
+    "metaDescription": "Votre partenaire vous trompe-t-il ? 20 questions pour déceler les signes d'infidélité. Test gratuit, résultat immédiat et confidentiel."
+  },
+  "testBebe": {
+    "title": "Test : êtes-vous prêt(e) pour un bébé ? 20 questions essentielles",
+    "shortTitle": "Test Bébé",
+    "description": "20 questions pour savoir si vous êtes vraiment prêt(e) à avoir un enfant. Financier, émotionnel, relationnel : on fait le point.",
+    "metaDescription": "Prêt(e) pour un bébé ? 20 questions sur votre situation financière, émotionnelle et relationnelle. Test gratuit, résultat immédiat."
   }
 }
