@@ -2403,6 +2403,33 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .result-action-icon { font-size: 1.5rem; }
 .result-action-label { line-height: 1.2; }
 
+/* ── Result share button (primary virality CTA) ───────────── */
+
+.result-share-row {
+  display: flex; justify-content: center;
+  max-width: 28rem; margin-left: auto; margin-right: auto;
+}
+.result-share-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem;
+  width: 100%; padding: 0.875rem 1.5rem; border-radius: 1rem;
+  border: none; cursor: pointer;
+  font-size: 0.9375rem; font-weight: 700; line-height: 1;
+  color: #fff;
+  background: linear-gradient(135deg, hsl(340, 65%, 60%), hsl(270, 40%, 55%));
+  box-shadow: 0 6px 18px hsl(var(--primary) / 0.28);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.result-share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px hsl(var(--primary) / 0.38);
+}
+.result-share-btn:active { transform: translateY(0); }
+.result-share-btn svg { width: 20px; height: 20px; }
+.result-share-btn--copied {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.3);
+}
+
 /* ── Result review row ────────────────────────────────────── */
 
 .result-review-row {

@@ -72,7 +72,7 @@ var QuizEngine = (function() {
     return undefined;
   }
 
-  function tgd(key, fallback) {
+  function tgd(key, fallback, nativeOnly) {
     // 1. Try current language (exact key)
     var val = _lookup(gdTranslations, key);
     if (val !== undefined) return val;
@@ -109,9 +109,13 @@ var QuizEngine = (function() {
       }
     }
 
-    // 5. Fallback to FR
-    val = _lookup(gdFrTranslations, key);
-    if (val !== undefined) return val;
+    // 5. Fallback to FR (skipped when nativeOnly — used during option discovery
+    //    so a non-FR quiz never inherits FR-only options it doesn't actually have,
+    //    e.g. the FR distance quiz has 4 options where non-FR natively has 3)
+    if (!nativeOnly) {
+      val = _lookup(gdFrTranslations, key);
+      if (val !== undefined) return val;
+    }
 
     return (fallback !== undefined && fallback !== null) ? fallback : key;
   }
@@ -159,8 +163,52 @@ var QuizEngine = (function() {
     check: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>',
     cross: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>',
     plus: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>',
-    trash: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>'
+    trash: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>',
+    share: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>'
   };
+
+  // ── Share result (Web Share API with copy-link fallback) ──
+  function renderShareButton(wrap, shareText) {
+    var shareRow = el('div', 'result-share-row mt-6');
+    var btn = el('button', 'result-share-btn');
+    var label = tg('result.shareYourResult', 'Partagez votre résultat !');
+    btn.innerHTML = ICONS.share + '<span>' + esc(label) + '</span>';
+
+    function flashCopied() {
+      var original = btn.innerHTML;
+      btn.classList.add('result-share-btn--copied');
+      btn.innerHTML = ICONS.check + '<span>' + esc(tg('share.linkCopied', 'Lien copié ! 💜')) + '</span>';
+      setTimeout(function() {
+        btn.innerHTML = original;
+        btn.classList.remove('result-share-btn--copied');
+      }, 2200);
+    }
+    function fallbackCopy(text) {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.focus(); ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        flashCopied();
+      } catch (e) {}
+    }
+
+    btn.addEventListener('click', function() {
+      var url = location.href;
+      var text = shareText || document.title;
+      if (navigator.share) {
+        navigator.share({ title: document.title, text: text, url: url }).catch(function() {});
+      } else if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(flashCopied).catch(function() { fallbackCopy(url); });
+      } else {
+        fallbackCopy(url);
+      }
+    });
+
+    shareRow.appendChild(btn);
+    wrap.appendChild(shareRow);
+  }
 
   // ─── Common UI Components ─────────────────────────────────
 
@@ -287,6 +335,9 @@ var QuizEngine = (function() {
   }
 
   function renderActionButtons(wrap, opts) {
+    // ── Share result — prominent CTA (virality + retention) ──
+    renderShareButton(wrap, opts.shareText);
+
     // ── Action buttons in a clean grid ──
     var actions = el('div', 'result-actions-grid mt-8');
 
@@ -2042,6 +2093,10 @@ var QuizEngine = (function() {
     this.results = config.results;
     this.prefix = config.prefix;
     this.lang = config.lang || 'fr';
+    // 'couple' questions (FR) are authored a=healthiest→d=least, matching the
+    // a=3..d=0 weights. Native 'healthy' questions (non-FR) are authored the
+    // other way (a=least→d=healthiest), so their weights must be reversed.
+    this.reverseScore = config.reverseScore || false;
     this.phase = 'setup';
     this.players = [null, null];
     this.currentQ = 0;
@@ -2163,7 +2218,7 @@ var QuizEngine = (function() {
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
 
-    var OPTION_SCORES = { a: 3, b: 2, c: 1, d: 0 };
+    var OPTION_SCORES = this.reverseScore ? { a: 0, b: 1, c: 2, d: 3 } : { a: 3, b: 2, c: 1, d: 0 };
     var optionsWrap = el('div', 'space-y-2');
     q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);

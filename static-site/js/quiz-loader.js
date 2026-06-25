@@ -178,37 +178,40 @@
         continue;
       }
 
-      var options = [];
       var optLetters = ['a', 'b', 'c', 'd', 'e'];
 
-      // Pattern 1: Standard a/b/c/d/e (FR format)
-      for (var j = 0; j < optLetters.length; j++) {
-        var oText = QuizEngine.tgd(prefix + '.q' + i + optLetters[j], null);
-        if (oText && oText !== prefix + '.q' + i + optLetters[j]) {
-          options.push({ id: optLetters[j], text: oText });
+      // Option discovery: prefer NATIVE options (no FR fallback) so a non-FR
+      // quiz never inherits FR-only options it doesn't actually have (e.g. FR
+      // distance has 4 options where non-FR natively has 3). But if a language
+      // has NO native options for this question, fall back to FR-inclusive
+      // lookup so fully-untranslated quizzes (e.g. non-FR common-points) still
+      // render their options instead of disappearing.
+      var findOptions = function(nativeOnly) {
+        var opts = [];
+        // Pattern 1: Standard a/b/c/d/e (FR format)
+        for (var p1 = 0; p1 < optLetters.length; p1++) {
+          var t1 = QuizEngine.tgd(prefix + '.q' + i + optLetters[p1], null, nativeOnly);
+          if (t1 && t1 !== prefix + '.q' + i + optLetters[p1]) opts.push({ id: optLetters[p1], text: t1 });
         }
-      }
-
-      // Pattern 2: o0/o1/o2/o3 (testerC, amoureux in non-FR)
-      if (options.length === 0) {
-        for (var j = 0; j < 5; j++) {
-          var oText = QuizEngine.tgd(prefix + '.q' + i + 'o' + j, null);
-          if (oText && oText !== prefix + '.q' + i + 'o' + j) {
-            options.push({ id: optLetters[j], text: oText });
+        // Pattern 2: o0/o1/o2/o3 (testerC, amoureux in non-FR)
+        if (opts.length === 0) {
+          for (var p2 = 0; p2 < 5; p2++) {
+            var t2 = QuizEngine.tgd(prefix + '.q' + i + 'o' + p2, null, nativeOnly);
+            if (t2 && t2 !== prefix + '.q' + i + 'o' + p2) opts.push({ id: optLetters[p2], text: t2 });
           }
         }
-      }
-
-      // Pattern 3: Uppercase A/B/C/D (coquinQ in non-FR)
-      if (options.length === 0) {
-        var upperLetters = ['A', 'B', 'C', 'D', 'E'];
-        for (var j = 0; j < upperLetters.length; j++) {
-          var oText = QuizEngine.tgd(prefix + '.q' + i + upperLetters[j], null);
-          if (oText && oText !== prefix + '.q' + i + upperLetters[j]) {
-            options.push({ id: optLetters[j], text: oText });
+        // Pattern 3: Uppercase A/B/C/D (coquinQ in non-FR)
+        if (opts.length === 0) {
+          var upper = ['A', 'B', 'C', 'D', 'E'];
+          for (var p3 = 0; p3 < upper.length; p3++) {
+            var t3 = QuizEngine.tgd(prefix + '.q' + i + upper[p3], null, nativeOnly);
+            if (t3 && t3 !== prefix + '.q' + i + upper[p3]) opts.push({ id: optLetters[p3], text: t3 });
           }
         }
-      }
+        return opts;
+      };
+      var options = findOptions(true);
+      if (options.length === 0) options = findOptions(false);
 
       if (options.length > 0) {
         // Assign points based on scoring mode
@@ -319,7 +322,8 @@
     // In non-FR languages, 'healthy' prefix has full questions with options.
     // In FR, 'healthy' only has results, questions come from 'couple' prefix.
     var healthyQuestions = parseGdQuestions('healthy', 100);
-    if (healthyQuestions.length === 0) {
+    var usedHealthyNative = healthyQuestions.length > 0;
+    if (!usedHealthyNative) {
       // Fallback: try 'couple' prefix (FR behavior)
       healthyQuestions = parseGdQuestions('couple', 30);
     }
@@ -356,15 +360,18 @@
       }
     }
 
-    // Determine the prefix used for question text lookup at render time
-    var usedPrefix = healthyQuestions.length > 0 && QuizEngine.tgd('healthy.q1', null) !== null ? 'healthy' : 'couple';
+    // Determine the prefix used for question text lookup at render time.
+    // Native 'healthy' questions (non-FR) are authored a=least→d=healthiest, so
+    // their weighting is reversed vs the 'couple' questions used as FR fallback.
+    var usedPrefix = usedHealthyNative ? 'healthy' : 'couple';
 
     new QuizEngine.HealthyQuiz({
       container: container,
       questions: healthyQuestions,
       results: results,
       prefix: usedPrefix,
-      lang: lang
+      lang: lang,
+      reverseScore: usedHealthyNative
     });
   }
 
