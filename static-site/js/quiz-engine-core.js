@@ -2785,6 +2785,172 @@ var QuizEngine = (function() {
     wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
+  // ═══════════════════════════════════════════════════════════
+  // PROFILE QUIZ - attachement (categorical, not a linear score)
+  // Each option maps to an attachment category (secure/anxious/avoidant).
+  // The dominant pattern yields one of 4 styles: secure, anxious,
+  // avoidant, or disorganized (anxious + avoidant both high).
+  // ═══════════════════════════════════════════════════════════
+  function ProfileQuiz(config) {
+    this.container = config.container;
+    this.questions = config.questions;
+    this.prefix = config.prefix;
+    this.lang = config.lang || 'fr';
+    this.labels = config.labels || {};
+    this.categoryMap = config.categoryMap || { a: 'secure', b: 'secure', c: 'avoidant', d: 'anxious' };
+    this.profiles = config.profiles || {};
+    this.axisLabels = config.axisLabels || { secure: 'Sécure', anxious: 'Anxieux', avoidant: 'Évitant' };
+    this.phase = 'intro';
+    this.currentQ = 0;
+    this.answers = [];
+    this.tally = { secure: 0, anxious: 0, avoidant: 0 };
+    this.render();
+  }
+
+  ProfileQuiz.prototype.render = function() {
+    this.container.innerHTML = '';
+    if (this.phase === 'intro') this.renderIntro();
+    else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'results') this.renderResults();
+  };
+
+  ProfileQuiz.prototype.renderIntro = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-4', this.labels.icon || '🔗'));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', tg('attachment.introTitle', 'Quel est votre style d\'attachement ?')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-2', this.questions.length + ' ' + tg('meta.questionsWord', 'questions')));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min') + ' • 🔒 ' + tg('truefalse.freeAnon', 'Gratuit & anonyme')));
+    var btn = el('button', 'btn btn-cta btn-lg', tg('playerSetup.startTest', 'Commencer le test'));
+    btn.addEventListener('click', function() {
+      self.phase = 'playing'; self.currentQ = 0; self.answers = [];
+      self.tally = { secure: 0, anxious: 0, avoidant: 0 };
+      self.render();
+    });
+    wrap.appendChild(btn);
+    this.container.appendChild(wrap);
+  };
+
+  ProfileQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+    renderProgressBar(wrap, this.currentQ, total);
+
+    var qText = tgd(this.prefix + '.q' + q.id, q.text);
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
+
+    var optionsWrap = el('div', 'space-y-2');
+    // Shuffle display order so users can't pattern-pick a fixed letter; the
+    // category mapping keys off the option id, so order never affects scoring.
+    var shown = shuffleArray(q.options);
+    var letters = ['A', 'B', 'C', 'D', 'E'];
+    shown.forEach(function(opt, idx) {
+      var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
+      var optBtn = el('button', 'quiz-option');
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (letters[idx] || '') + '</span><span>' + esc(optText) + '</span>';
+      optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('mousemove', function(e) {
+        var rect = optBtn.getBoundingClientRect();
+        optBtn.style.setProperty('--ripple-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+        optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+      });
+      optBtn.addEventListener('click', function() {
+        optBtn.classList.add('selected');
+        var sibs = optionsWrap.querySelectorAll('.quiz-option');
+        for (var s = 0; s < sibs.length; s++) { if (sibs[s] !== optBtn) sibs[s].style.opacity = '0.5'; sibs[s].style.pointerEvents = 'none'; }
+        var cat = self.categoryMap[opt.id];
+        self.answers[self.currentQ] = cat;
+        if (cat && self.tally[cat] !== undefined) self.tally[cat]++;
+        setTimeout(function() {
+          if (self.currentQ < total - 1) { self.currentQ++; self.render(); }
+          else { self.phase = 'results'; self.render(); }
+        }, 300);
+      });
+      optionsWrap.appendChild(optBtn);
+    });
+    wrap.appendChild(optionsWrap);
+
+    if (this.currentQ > 0) {
+      var navWrap = el('div', 'mt-6');
+      var backBtn = el('button', 'btn btn-ghost text-sm', '&larr; ' + tg('question.previousQuestion', 'Précédent'));
+      backBtn.addEventListener('click', function() {
+        self.currentQ--;
+        var prev = self.answers[self.currentQ];
+        if (prev && self.tally[prev] !== undefined && self.tally[prev] > 0) self.tally[prev]--;
+        self.answers[self.currentQ] = undefined;
+        self.render();
+      });
+      navWrap.appendChild(backBtn);
+      wrap.appendChild(navWrap);
+    }
+
+    this.container.appendChild(wrap);
+  };
+
+  ProfileQuiz.prototype.classify = function() {
+    var n = this.questions.length || 1;
+    var s = this.tally.secure, anx = this.tally.anxious, av = this.tally.avoidant;
+    if (s >= Math.ceil(n * 0.45)) return 'secure';
+    // Both insecure axes substantial → disorganized (fearful-avoidant)
+    if (Math.min(anx, av) >= Math.ceil(n * 0.2)) return 'disorganized';
+    return anx >= av ? 'anxious' : 'avoidant';
+  };
+
+  ProfileQuiz.prototype.renderResults = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    var key = this.classify();
+    var profile = this.profiles[key] || {};
+    var n = this.questions.length || 1;
+    var pcts = {
+      secure: Math.round(this.tally.secure / n * 100),
+      anxious: Math.round(this.tally.anxious / n * 100),
+      avoidant: Math.round(this.tally.avoidant / n * 100)
+    };
+
+    wrap.appendChild(el('div', 'text-5xl mb-3', this.labels.icon || '🔗'));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-1', tg('attachment.yourStyle', 'Votre style d\'attachement')));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-5 quiz-reveal-enter', esc(profile.title || key)));
+
+    // ── Axis breakdown bars ──
+    var breakdown = el('div', 'profile-breakdown max-w-md mx-auto mb-6');
+    var axes = [
+      { id: 'secure', color: '#22c55e' },
+      { id: 'anxious', color: '#f59e0b' },
+      { id: 'avoidant', color: '#6366f1' }
+    ];
+    axes.forEach(function(ax) {
+      var pct = pcts[ax.id];
+      var row = el('div', 'profile-axis-row');
+      row.innerHTML =
+        '<div class="profile-axis-head"><span>' + esc(self.axisLabels[ax.id] || ax.id) + '</span>' +
+        '<span class="profile-axis-pct">' + pct + '%</span></div>' +
+        '<div class="profile-axis-bar"><div class="profile-axis-fill" data-w="' + pct + '" style="width:0%;background:' + ax.color + '"></div></div>';
+      breakdown.appendChild(row);
+    });
+    wrap.appendChild(breakdown);
+    setTimeout(function() {
+      var fills = wrap.querySelectorAll('.profile-axis-fill');
+      for (var i = 0; i < fills.length; i++) fills[i].style.width = fills[i].getAttribute('data-w') + '%';
+    }, 120);
+
+    if (profile.description) wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto quiz-reveal-enter', profile.description));
+    if (profile.advice) {
+      var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto quiz-reveal-enter');
+      advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(profile.advice);
+      wrap.appendChild(advice);
+    }
+
+    renderActionButtons(wrap, {
+      shareText: tg('attachment.yourStyle', 'Votre style d\'attachement') + ' : ' + (profile.title || ''),
+      restart: function() { self.phase = 'intro'; self.render(); }
+    });
+    this.container.appendChild(wrap);
+    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -2801,6 +2967,7 @@ var QuizEngine = (function() {
     HealthyQuiz: HealthyQuiz,
     ParentaliteQuiz: ParentaliteQuiz,
     TruefalseQuiz: TruefalseQuiz,
+    ProfileQuiz: ProfileQuiz,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,
