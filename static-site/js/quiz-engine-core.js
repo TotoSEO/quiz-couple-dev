@@ -154,6 +154,36 @@ var QuizEngine = (function() {
     return shuffled;
   }
 
+  // ── Motion / accessibility helpers ────────────────────────
+  function prefersReducedMotion() {
+    return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  }
+
+  function smoothScroll(node, block) {
+    if (!node) return;
+    try { node.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: block || 'center' }); }
+    catch (e) { try { node.scrollIntoView(); } catch (_) {} }
+  }
+
+  // Tween a percentage value 0→target inside an element (count-up effect)
+  function animateCountUp(elemId, target) {
+    var node = document.getElementById(elemId);
+    if (!node) return;
+    if (prefersReducedMotion()) { node.textContent = target + '%'; return; }
+    var startTs = null, duration = 900;
+    function step(ts) {
+      if (startTs === null) startTs = ts;
+      var t = Math.min((ts - startTs) / duration, 1);
+      var eased = 1 - Math.pow(1 - t, 3);
+      node.textContent = Math.round(target * eased) + '%';
+      if (t < 1) requestAnimationFrame(step); else node.textContent = target + '%';
+    }
+    requestAnimationFrame(step);
+  }
+
+  var _scoreRingSeq = 0;
+
+
   // ─── SVG Icons ────────────────────────────────────────────
   var ICONS = {
     heart: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
@@ -218,6 +248,11 @@ var QuizEngine = (function() {
     var header = el('div', 'quiz-progress-header');
     header.innerHTML = '<span class="quiz-progress-label">' + esc(label || (tg('question.question', 'Question') + ' ' + (current + 1) + '/' + total)) + '</span><span class="quiz-progress-pct">' + progress + '%</span>';
     var barOuter = el('div', 'quiz-progress-bar');
+    barOuter.setAttribute('role', 'progressbar');
+    barOuter.setAttribute('aria-valuenow', String(progress));
+    barOuter.setAttribute('aria-valuemin', '0');
+    barOuter.setAttribute('aria-valuemax', '100');
+    barOuter.setAttribute('aria-label', tg('question.question', 'Question') + ' ' + (current + 1) + '/' + total);
     var barInner = el('div', 'quiz-progress-fill');
     barInner.style.width = progress + '%';
     barOuter.appendChild(barInner);
@@ -254,13 +289,17 @@ var QuizEngine = (function() {
         confetti += '<span class="confetti-dot" style="background:' + colors[i] + ';--tx:' + tx + 'px;--ty:' + ty + 'px;animation-delay:' + (0.1 * i) + 's"></span>';
       }
     }
+    var valId = 'scoreRingVal' + (++_scoreRingSeq);
+    var startVal = prefersReducedMotion() ? pct : 0;
+    // Count the value up after it's in the DOM
+    setTimeout(function() { animateCountUp(valId, pct); }, 80);
     return '<div class="score-ring-wrap' + sizeClass + '">' +
-      (confetti ? '<div class="confetti-container">' + confetti + '</div>' : '') +
-      '<svg viewBox="0 0 100 100" class="score-ring">' +
+      (confetti ? '<div class="confetti-container" aria-hidden="true">' + confetti + '</div>' : '') +
+      '<svg viewBox="0 0 100 100" class="score-ring" aria-hidden="true">' +
         '<circle cx="50" cy="50" r="45" class="score-ring-bg"/>' +
         '<circle cx="50" cy="50" r="45" class="score-ring-fill" style="stroke-dashoffset:' + offset + '"/>' +
       '</svg>' +
-      '<span class="score-ring-value">' + pct + '%</span>' +
+      '<span class="score-ring-value" id="' + valId + '">' + startVal + '%</span>' +
     '</div>';
   }
 
@@ -670,7 +709,7 @@ var QuizEngine = (function() {
     });
 
     this.container.appendChild(wrap);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    smoothScroll(wrap, 'center');
   };
 
   // ═══════════════════════════════════════════════════════════
@@ -914,7 +953,7 @@ var QuizEngine = (function() {
     });
 
     this.container.appendChild(wrap);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    smoothScroll(wrap, 'center');
   };
 
   // ═══════════════════════════════════════════════════════════
@@ -1115,7 +1154,7 @@ var QuizEngine = (function() {
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    smoothScroll(wrap, 'center');
   };
 
   // ═══════════════════════════════════════════════════════════
@@ -1354,7 +1393,7 @@ var QuizEngine = (function() {
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    smoothScroll(wrap, 'center');
   };
 
   // ═══════════════════════════════════════════════════════════
@@ -1557,7 +1596,7 @@ var QuizEngine = (function() {
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    smoothScroll(wrap, 'center');
   };
 
   // ═══════════════════════════════════════════════════════════
@@ -1724,7 +1763,7 @@ var QuizEngine = (function() {
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    smoothScroll(wrap, 'center');
   };
 
   // ═══════════════════════════════════════════════════════════
@@ -1846,7 +1885,7 @@ var QuizEngine = (function() {
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    smoothScroll(wrap, 'center');
   };
 
   // ═══════════════════════════════════════════════════════════
@@ -2079,7 +2118,7 @@ var QuizEngine = (function() {
       changePlayers: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    smoothScroll(wrap, 'center');
   };
 
   // ═══════════════════════════════════════════════════════════
@@ -2319,7 +2358,7 @@ var QuizEngine = (function() {
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    smoothScroll(wrap, 'center');
   };
 
   // ═══════════════════════════════════════════════════════════
@@ -2543,7 +2582,7 @@ var QuizEngine = (function() {
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    smoothScroll(wrap, 'center');
   };
 
   // ═══════════════════════════════════════════════════════════
@@ -2728,7 +2767,7 @@ var QuizEngine = (function() {
     wrap.appendChild(btnWrap);
 
     this.container.appendChild(wrap);
-    this.container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    smoothScroll(this.container, 'start');
   };
 
   TruefalseQuiz.prototype.renderResults = function() {
@@ -2782,7 +2821,7 @@ var QuizEngine = (function() {
     });
 
     this.container.appendChild(wrap);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    smoothScroll(wrap, 'center');
   };
 
   // ═══════════════════════════════════════════════════════════
@@ -2948,7 +2987,7 @@ var QuizEngine = (function() {
       restart: function() { self.phase = 'intro'; self.render(); }
     });
     this.container.appendChild(wrap);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    smoothScroll(wrap, 'center');
   };
 
   // ─── Public API ───────────────────────────────────────────
