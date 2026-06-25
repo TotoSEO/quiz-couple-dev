@@ -50,6 +50,9 @@
       if(t==='dark'){document.documentElement.classList.add('dark')}
       else if(t==='light'){document.documentElement.classList.remove('dark')}
       else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){document.documentElement.classList.add('dark')}
+      // Enable scroll-reveal only when motion is allowed (gates the hiding CSS,
+      // set before paint so there is no flash and no-JS users see everything).
+      if(!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){document.documentElement.classList.add('js-reveal')}
     })();
   </script>
 
@@ -59,7 +62,7 @@
     .dark{--background:270 50% 4%;--foreground:280 20% 95%;--card:270 45% 8%;--primary:340 65% 65%;--muted:270 30% 15%;--muted-foreground:270 15% 60%;--border:270 30% 18%}
     *,::after,::before{box-sizing:border-box;margin:0;padding:0;border:0 solid}
     body{font-family:Inter,system-ui,-apple-system,sans-serif;background-color:hsl(var(--background));color:hsl(var(--foreground));-webkit-font-smoothing:antialiased;line-height:1.5}
-    .container{width:100%;max-width:80rem;margin:0 auto;padding:0 1rem}
+    .container{width:100%;max-width:80rem;margin:0 auto;padding:0 1rem}@media(min-width:640px){.container{padding:0 2rem}}
     .text-foreground{color:hsl(var(--foreground))}.bg-background{background-color:hsl(var(--background))}
     .font-bold{font-weight:700}.text-center{text-align:center}
     .mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.py-16{padding-top:4rem;padding-bottom:4rem}
@@ -111,6 +114,7 @@
   <script src="/js/mobile-menu.js" defer></script>
   <script src="/js/cookie-consent.js" defer></script>
   <script src="/js/obl.js" defer></script>
+  <script src="/js/scroll-reveal.js" defer></script>
 
   <!-- GA (deferred) -->
   <script>

@@ -65,8 +65,8 @@
     // ── Vrai/Faux quiz (true/false with correct answer reveal) ──
     'vrai-faux':      { prefix: 'vraifaux', engine: 'truefalse', totalQ: 30, pool: 100, textOnly: true },
 
-    // ── Attachement quiz (solo scoring, attachment style assessment) ──
-    'attachement':    { prefix: 'attachement', engine: 'solo', totalQ: 20, pool: 20, quizType: 'attachement' },
+    // ── Attachement quiz (categorical: secure/anxious/avoidant → 4 styles) ──
+    'attachement':    { prefix: 'attachement', engine: 'profile', totalQ: 20, pool: 20, quizType: 'attachement', categoryMap: { a: 'secure', b: 'secure', c: 'avoidant', d: 'anxious' } },
 
     // ── Confiance quiz (solo scoring, trust assessment) ──
     'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
@@ -141,6 +141,9 @@
         break;
       case 'truefalse':
         initTruefalseQuiz(config, questions);
+        break;
+      case 'profile':
+        initProfileQuiz(config, questions);
         break;
       default:
         showUnavailable(config);
@@ -560,6 +563,39 @@
       results: results,
       prefix: cfg.prefix,
       lang: lang
+    });
+  }
+
+  function initProfileQuiz(cfg, questions) {
+    // Categorical attachment test: each option maps to a style; the dominant
+    // pattern yields secure / anxious / avoidant / disorganized.
+    function prof(key) {
+      return {
+        title: QuizEngine.tgd(cfg.prefix + '.pf_' + key + '_t', ''),
+        description: QuizEngine.tgd(cfg.prefix + '.pf_' + key + '_d', ''),
+        advice: QuizEngine.tgd(cfg.prefix + '.pf_' + key + '_a', '')
+      };
+    }
+    var profiles = {
+      secure: prof('secure'),
+      anxious: prof('anxious'),
+      avoidant: prof('avoidant'),
+      disorganized: prof('disorganized')
+    };
+    var axisLabels = {
+      secure: QuizEngine.tgd(cfg.prefix + '.pf_axis_secure', 'Sécure'),
+      anxious: QuizEngine.tgd(cfg.prefix + '.pf_axis_anxious', 'Anxieux'),
+      avoidant: QuizEngine.tgd(cfg.prefix + '.pf_axis_avoidant', 'Évitant')
+    };
+    new QuizEngine.ProfileQuiz({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang,
+      labels: { icon: '🔗' },
+      categoryMap: cfg.categoryMap,
+      profiles: profiles,
+      axisLabels: axisLabels
     });
   }
 

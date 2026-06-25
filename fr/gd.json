@@ -235,7 +235,22 @@
     "q20a": "En sécurité, aimé·e et libre d'être vous-même.",
     "q20b": "Plutôt bien, avec des hauts et des bas comme tout le monde.",
     "q20c": "Parfois un peu enfermé·e ou étouffé·e par les attentes de l'autre.",
-    "q20d": "Souvent sur le qui-vive, comme si la relation pouvait basculer à tout moment."
+    "q20d": "Souvent sur le qui-vive, comme si la relation pouvait basculer à tout moment.",
+    "pf_secure_t": "Attachement Sécure",
+    "pf_secure_d": "Vous avez un attachement sécure : vous êtes à l'aise aussi bien avec l'intimité qu'avec l'autonomie. Vous faites confiance sans anxiété excessive, vous exprimez clairement vos besoins et vos limites, et vous gérez les conflits avec maturité. Vous offrez un espace rassurant à votre partenaire. C'est le style le plus répandu (50-60% de la population) et le plus favorable à des relations durables et épanouies.",
+    "pf_secure_a": "Votre sécurité affective est une vraie force pour votre couple — vous pouvez même aider un·e partenaire plus anxieux·se ou évitant·e à se sentir en confiance. Restez attentif·ve aux périodes de stress qui peuvent temporairement réactiver des réflexes moins sécures, et continuez à cultiver la communication ouverte et la vulnérabilité.",
+    "pf_anxious_t": "Attachement Anxieux (préoccupé)",
+    "pf_anxious_d": "Votre attachement penche vers l'anxieux : vous avez un besoin intense de proximité et de réassurance, et la peur de l'abandon peut vous pousser à sur-interpréter les signaux ou à vous accrocher. Ce n'est pas un défaut — c'est une stratégie développée face à vos expériences passées. Environ 20-25% des personnes partagent ce profil.",
+    "pf_anxious_a": "Apprenez à vous auto-réguler quand l'angoisse monte : respiration, ancrage, attendre quelques minutes avant de réagir. Exprimez vos besoins de réassurance calmement plutôt que dans l'urgence. Méfiez-vous de la dynamique « anxieux-évitant » qui peut vous épuiser. Le livre « Attached » d'Amir Levine et Rachel Heller est un excellent point de départ.",
+    "pf_avoidant_t": "Attachement Évitant (détaché)",
+    "pf_avoidant_d": "Votre attachement penche vers l'évitant : vous valorisez fortement votre indépendance et l'intimité émotionnelle peut vous mettre mal à l'aise. Sous la pression, votre réflexe est de prendre de la distance. Derrière ce besoin d'autonomie se cache souvent une difficulté à se montrer vulnérable. Environ 15-20% des personnes ont ce profil.",
+    "pf_avoidant_a": "Entraînez-vous à rester présent·e dans les moments d'intimité plutôt qu'à fuir, et à nommer vos émotions même quand c'est inconfortable. Prévenez votre partenaire quand vous avez besoin d'espace, au lieu de vous couper sans explication. La vulnérabilité n'est pas une faiblesse : c'est précisément ce qui crée la connexion.",
+    "pf_disorganized_t": "Attachement Désorganisé (craintif)",
+    "pf_disorganized_d": "Votre attachement combine des traits anxieux et évitants : vous oscillez entre un désir intense de connexion et une peur de l'intimité. Vous pouvez vouloir vous rapprocher puis fuir, ce qui rend les relations déroutantes pour vous comme pour votre partenaire. Ce style, plus rare (5-10%), est souvent lié à des expériences relationnelles complexes — et il peut tout à fait évoluer.",
+    "pf_disorganized_a": "Ce profil bénéficie particulièrement d'un accompagnement : la thérapie des schémas, l'EMDR ou l'EFT (thérapie de couple axée sur l'attachement) sont très efficaces. Identifier vos déclencheurs et réapprendre à vous sentir en sécurité dans la proximité est un travail progressif. Soyez patient·e et bienveillant·e envers vous-même : ce schéma n'est pas une fatalité.",
+    "pf_axis_secure": "Sécure",
+    "pf_axis_anxious": "Anxieux",
+    "pf_axis_avoidant": "Évitant"
   },
   "healthy": {
     "r1_t": "Des fondations à (re)construire",

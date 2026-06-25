@@ -539,3 +539,31 @@ export function escapeHtml(str) {
     .replace(/>/g, '&gt;')
     .replace(/'/g, '&#39;');
 }
+
+// Quiz/test route → relevant existing blog articles (by internalSlug).
+// Resolved at build time per language; articles not published in a language are
+// filtered out automatically, so non-FR pages only show their available ones.
+export const QUIZ_RELATED_ARTICLES = {
+  testCouple:       ['comment-savoir-si-cest-le-bon', 'sauver-son-couple', 'manque-communication-couple'],
+  testCommonPoints: ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
+  testDistance:     ['manque-communication-couple', 'sauver-son-couple'],
+  testToxic:        ['choses-pas-accepter-couple', 'red-flags-homme', 'red-flags-femme', 'femme-malheureuse-en-couple'],
+  testCoupleSain:   ['sauver-son-couple', 'disputes-couple', 'manque-communication-couple'],
+  testMariage:      ['comment-savoir-si-cest-le-bon', 'charge-mentale-couple'],
+  testDivorce:      ['les-phases-de-la-rupture-chez-l-homme', 'choses-pas-accepter-couple', 'sauver-son-couple'],
+  testParentalite:  ['charge-mentale-couple', 'manque-communication-couple'],
+  testEmmenager:    ['charge-mentale-couple', 'disputes-couple'],
+  testJalousie:     ['dependance-affective', 'red-flags-homme', 'choses-pas-accepter-couple'],
+  testLangageAmour: ['manque-communication-couple', 'sauver-son-couple'],
+  testAttachement:  ['dependance-affective', 'comment-savoir-si-cest-le-bon', 'sauver-son-couple'],
+  testConfiance:    ['sauver-son-couple', 'red-flags-homme', 'disputes-couple'],
+  testInfidelite:   ['red-flags-homme', 'red-flags-femme', 'choses-pas-accepter-couple'],
+  testBebe:         ['charge-mentale-couple', 'comment-savoir-si-cest-le-bon'],
+  testAstroPrenoms: ['compatibilite-amoureuse-belier', 'compatibilite-amoureuse-lion', 'compatibilite-amoureuse-scorpion'],
+  quizAmoureux:     ['comment-savoir-si-cest-le-bon', 'sauver-son-couple'],
+  quizCoquin:       ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
+  quizGenant:       ['copain-ne-fait-pas-effort', 'red-flags-homme'],
+  quizAdo:          ['red-flags-homme', 'red-flags-femme'],
+  quizMarrant:      ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
+  quizKnowledge:    ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
+};

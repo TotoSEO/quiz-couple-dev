@@ -13,6 +13,7 @@ import CleanCSS from 'clean-css';
 import {
   BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
+  QUIZ_RELATED_ARTICLES,
   getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
 } from './config.js';
@@ -373,6 +374,20 @@ async function generatePage(routeKey, lang) {
       const defaultFile = path.resolve(__dirname, 'zodiac-data.json');
       return fs.existsSync(langFile) ? fs.readFileSync(langFile, 'utf-8') : fs.readFileSync(defaultFile, 'utf-8');
     })() : '{}',
+    // Related blog articles for this quiz/test (existing articles, per language)
+    relatedArticles: (QUIZ_RELATED_ARTICLES[routeKey] || [])
+      .map(internalSlug => {
+        const a = BLOG_ARTICLES.find(x => x.internalSlug === internalSlug);
+        if (!a) return null;
+        const slug = a.slugs[lang];
+        if (!slug) return null; // not published in this language
+        const aPath = path.resolve(__dirname, '../../data/blog', lang, `${internalSlug}.ts`);
+        const aFr = path.resolve(__dirname, '../../data/blog/fr', `${internalSlug}.ts`);
+        const aData = parseArticleTs(aPath) || parseArticleTs(aFr);
+        return { title: aData?.title || internalSlug, url: getArticleUrl(slug, lang) };
+      })
+      .filter(Boolean)
+      .slice(0, 4),
   };
 
   try {
