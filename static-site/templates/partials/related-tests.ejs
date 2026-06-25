@@ -49,6 +49,20 @@
     lang === 'es' ? 'Estos tests también te pueden gustar' :
     lang === 'de' ? 'Diese Tests könnten Ihnen auch gefallen' :
     'Potrebbero piacerti anche questi test';
+
+  const _articlesLabel = lang === 'fr' ? 'Pour aller plus loin' :
+    lang === 'en' ? 'Go further' :
+    lang === 'es' ? 'Para profundizar' :
+    lang === 'de' ? 'Mehr erfahren' :
+    'Per approfondire';
+
+  const _articlesSub = lang === 'fr' ? 'Nos articles pour approfondir le sujet' :
+    lang === 'en' ? 'Our articles to dig deeper' :
+    lang === 'es' ? 'Nuestros artículos para profundizar' :
+    lang === 'de' ? 'Unsere Artikel zum Vertiefen' :
+    'I nostri articoli per approfondire';
+
+  const _relatedArticles = (typeof relatedArticles !== 'undefined' && Array.isArray(relatedArticles)) ? relatedArticles : [];
 %>
 <% if (_relatedKeys.length > 0) { %>
 <section class="related-tests-section">
@@ -72,6 +86,25 @@
           <% if (rDesc) { %><p class="related-test-desc"><%= rDesc %></p><% } %>
         </div>
         <svg class="related-test-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+      </a>
+      <% } %>
+    </div>
+  </div>
+</section>
+<% } %>
+<% if (_relatedArticles.length > 0) { %>
+<section class="related-articles-section animate-on-scroll">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <div class="related-tests-header">
+      <span class="related-tests-badge related-tests-badge--articles"><%= _articlesLabel %></span>
+      <p class="related-tests-sub"><%= _articlesSub %></p>
+    </div>
+    <div class="related-articles-grid">
+      <% for (const art of _relatedArticles) { if (!art.url) continue; %>
+      <a href="<%= art.url %>" class="related-article-card no-underline group">
+        <span class="related-article-icon" aria-hidden="true">📖</span>
+        <span class="related-article-title"><%= art.title %></span>
+        <svg class="related-test-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
       </a>
       <% } %>
     </div>

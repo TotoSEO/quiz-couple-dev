@@ -736,8 +736,11 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 
 /* Scroll-triggered animation */
-.animate-on-scroll { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+/* Scroll-reveal: only hides when JS is active (html.js-reveal is set, before
+   paint, and only when motion is allowed) so content is never stranded for
+   no-JS or reduced-motion users. */
+.js-reveal .animate-on-scroll { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; will-change: opacity, transform; }
+.js-reveal .animate-on-scroll.visible { opacity: 1; transform: none; }
 
 /* Icon cards for SEO content sections */
 .card-with-icon { background: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: 0.75rem; padding: 1.5rem; }
@@ -2285,6 +2288,38 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .related-tests-grid {
   display: grid; grid-template-columns: 1fr; gap: 0.75rem;
 }
+
+/* ── Related articles (quiz → blog internal linking) ──────── */
+.related-articles-section { padding: 0 0 4rem; }
+.related-tests-badge--articles {
+  background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.related-articles-grid {
+  display: grid; grid-template-columns: 1fr; gap: 0.75rem;
+  max-width: 42rem; margin: 0 auto;
+}
+@media (min-width: 640px) { .related-articles-grid { grid-template-columns: repeat(2, 1fr); } }
+.related-article-card {
+  display: flex; align-items: center; gap: 0.875rem;
+  padding: 1rem 1.25rem; border-radius: 1rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card)); color: hsl(var(--foreground));
+  text-decoration: none; transition: all 0.2s;
+}
+.related-article-card:hover {
+  border-color: hsl(var(--secondary) / 0.4);
+  background: hsl(var(--secondary) / 0.04);
+  transform: translateY(-2px); box-shadow: 0 6px 16px hsl(var(--secondary) / 0.1);
+}
+.related-article-icon { font-size: 1.5rem; flex-shrink: 0; }
+.related-article-title { flex: 1; font-size: 0.9375rem; font-weight: 600; line-height: 1.35; }
+.related-article-card:hover .related-article-title { color: hsl(var(--secondary)); }
+.related-article-card .related-test-arrow {
+  width: 18px; height: 18px; color: hsl(var(--muted-foreground)); flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.related-article-card:hover .related-test-arrow { transform: translateX(3px); color: hsl(var(--secondary)); }
 @media (min-width: 640px) { .related-tests-grid { grid-template-columns: repeat(2, 1fr); } }
 
 .related-test-card {
