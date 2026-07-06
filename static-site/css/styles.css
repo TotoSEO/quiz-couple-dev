@@ -2741,6 +2741,57 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 .quiz-result-card > * { position: relative; z-index: 1; }
 
+/* ── Gamified quiz engine polish (rest state + feedback) ───── */
+/* Colourful letter badge even at rest, so options look inviting */
+.quiz-option-letter {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.16), hsl(var(--secondary) / 0.12));
+  color: hsl(var(--primary));
+}
+/* Right-side selection indicator: empty circle → animated check */
+.quiz-option { padding-right: 3.5rem; }
+.quiz-option::after {
+  content: '';
+  position: absolute; right: 1.1rem; top: 50%; transform: translateY(-50%);
+  width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  border: 2px solid hsl(var(--border));
+  background-color: transparent;
+  background-position: center; background-repeat: no-repeat; background-size: 0.9rem;
+  transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1;
+}
+.quiz-option:hover::after { border-color: hsl(var(--primary) / 0.55); transform: translateY(-50%) scale(1.08); }
+.quiz-option.selected::after {
+  border-color: hsl(var(--primary));
+  background-color: hsl(var(--primary));
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.15);
+  transform: translateY(-50%) scale(1.12);
+}
+
+/* Progress header as pills + a livelier, taller bar */
+.quiz-progress-header { font-size: 0.8125rem; margin-bottom: 0.625rem; }
+.quiz-progress-label {
+  display: inline-flex; align-items: center; gap: 0.375rem;
+  padding: 0.25rem 0.75rem; border-radius: 9999px;
+  background: hsl(var(--muted) / 0.8); color: hsl(var(--foreground));
+  font-weight: 700;
+}
+.quiz-progress-label::before { content: '🎯'; font-size: 0.9em; }
+.quiz-progress-pct {
+  padding: 0.25rem 0.7rem; border-radius: 9999px;
+  background: hsl(var(--primary) / 0.12); color: hsl(var(--primary));
+  font-weight: 800;
+}
+.quiz-progress-bar { height: 10px; }
+.quiz-progress-fill { min-width: 0.75rem; }
+
+/* Snappier tap targets on mobile */
+@media (max-width: 640px) {
+  .quiz-option { padding: 0.875rem 3rem 0.875rem 0.875rem; }
+  .quiz-option::after { right: 0.75rem; width: 1.4rem; height: 1.4rem; }
+  .quiz-option-letter { width: 30px; height: 30px; }
+}
+
 /* ── Score Ring Enhancement ─────────────────────────── */
 .score-ring-wrap {
   filter: drop-shadow(0 4px 16px hsl(var(--primary) / 0.2));
