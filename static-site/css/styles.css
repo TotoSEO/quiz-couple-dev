@@ -2182,59 +2182,63 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   border-radius: 1.25rem;
   border: 1px solid hsl(var(--border) / 0.6);
   background: hsl(var(--card));
-  padding: 1.5rem 1.25rem 1.25rem;
-  display: flex; flex-direction: column; align-items: flex-start; text-align: left;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex; flex-direction: column; align-items: stretch; text-align: left;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.4s ease;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   overflow: hidden;
 }
-.quiz-bubble-card::after {
-  content: '';
-  position: absolute; bottom: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-.quiz-bubble-card--quiz::after { background: linear-gradient(90deg, hsl(var(--secondary)), hsl(270 60% 65%)); }
 .quiz-bubble-card:hover {
   transform: translateY(-8px);
   border-color: hsl(var(--primary) / 0.3);
   box-shadow:
-    0 20px 40px -12px hsl(var(--primary) / 0.15),
+    0 22px 44px -14px hsl(var(--primary) / 0.28),
     0 8px 16px -4px rgba(0,0,0,0.06);
 }
-.quiz-bubble-card:hover::after { transform: scaleX(1); }
-.quiz-bubble-card--quiz { border-color: hsl(var(--border) / 0.6); }
 .quiz-bubble-card--quiz:hover {
   border-color: hsl(var(--secondary) / 0.3);
   box-shadow:
-    0 20px 40px -12px hsl(var(--secondary) / 0.15),
+    0 22px 44px -14px hsl(var(--secondary) / 0.28),
     0 8px 16px -4px rgba(0,0,0,0.06);
 }
 
-.quiz-bubble-emoji {
+/* ── Card image banner ── */
+.quiz-bubble-media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: hsl(var(--muted));
+}
+.quiz-bubble-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.quiz-bubble-card:hover .quiz-bubble-media img { transform: scale(1.06); }
+.quiz-bubble-media::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 55%, hsl(var(--card) / 0.35) 100%);
+  pointer-events: none;
+}
+/* Floating emoji chip on image */
+.quiz-bubble-chip {
+  position: absolute; top: 0.75rem; left: 0.75rem; z-index: 1;
   display: flex; align-items: center; justify-content: center;
-  width: 3.5rem; height: 3.5rem;
-  border-radius: 0.875rem;
-  background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--primary) / 0.05));
-  border: 1px solid hsl(var(--primary) / 0.1);
-  margin-bottom: 1rem; font-size: 1.5rem;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  width: 2.5rem; height: 2.5rem;
+  border-radius: 0.75rem;
+  font-size: 1.25rem; line-height: 1;
+  background: hsl(var(--card) / 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid hsl(0 0% 100% / 0.4);
+  box-shadow: 0 4px 12px -4px rgba(0,0,0,0.25);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.quiz-bubble-emoji--quiz {
-  background: linear-gradient(135deg, hsl(var(--secondary) / 0.1), hsl(var(--secondary) / 0.05));
-  border-color: hsl(var(--secondary) / 0.1);
-}
-.quiz-bubble-card:hover .quiz-bubble-emoji {
-  transform: scale(1.15) rotate(-6deg);
-  box-shadow: 0 6px 20px -4px hsl(var(--primary) / 0.25);
-  border-color: hsl(var(--primary) / 0.25);
-}
-.quiz-bubble-card--quiz:hover .quiz-bubble-emoji {
-  box-shadow: 0 6px 20px -4px hsl(var(--secondary) / 0.25);
-  border-color: hsl(var(--secondary) / 0.25);
+.quiz-bubble-card:hover .quiz-bubble-chip { transform: scale(1.12) rotate(-6deg); }
+
+/* ── Card body ── */
+.quiz-bubble-body {
+  display: flex; flex-direction: column; flex: 1;
+  padding: 1.125rem 1.125rem 1.125rem;
 }
 .quiz-bubble-title {
   font-size: 0.9375rem; font-weight: 700; margin-bottom: 0.375rem; color: hsl(var(--foreground));
@@ -2248,21 +2252,36 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .quiz-bubble-cta {
   display: inline-flex; align-items: center; gap: 0.375rem;
+  margin-top: auto;
   font-size: 0.8125rem; font-weight: 600;
   color: hsl(var(--primary));
   background: transparent;
   padding: 0;
   border-radius: 0;
-  transition: all 0.3s ease;
+  transition: gap 0.3s ease, color 0.3s ease;
   box-shadow: none;
   white-space: nowrap;
 }
+.quiz-bubble-cta svg { width: 0.875rem; height: 0.875rem; flex-shrink: 0; }
 .quiz-bubble-cta--quiz { color: hsl(var(--secondary)); }
-.quiz-bubble-card:hover .quiz-bubble-cta {
-  gap: 0.625rem;
-  box-shadow: none; transform: none;
-}
+.quiz-bubble-card:hover .quiz-bubble-cta { gap: 0.625rem; }
 .quiz-bubble-card--quiz:hover .quiz-bubble-cta--quiz { box-shadow: none; }
+
+/* ── Static questions (SEO only) ─────────────────────────────
+   The real quiz questions are rendered as H3 in the HTML so that
+   crawlers and AI bots (which don't run the JS quiz engine) can read
+   them. They are visually hidden from human visitors, who use the
+   interactive quiz above. Off-screen (not display:none) so the markup
+   stays in the DOM and accessible to crawlers/screen readers. */
+.quiz-static-questions {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  border: 0;
+}
 
 /* ── Related Tests Section, Complete Redesign ───────── */
 
@@ -2722,6 +2741,57 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 .quiz-result-card > * { position: relative; z-index: 1; }
 
+/* ── Gamified quiz engine polish (rest state + feedback) ───── */
+/* Colourful letter badge even at rest, so options look inviting */
+.quiz-option-letter {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.16), hsl(var(--secondary) / 0.12));
+  color: hsl(var(--primary));
+}
+/* Right-side selection indicator: empty circle → animated check */
+.quiz-option { padding-right: 3.5rem; }
+.quiz-option::after {
+  content: '';
+  position: absolute; right: 1.1rem; top: 50%; transform: translateY(-50%);
+  width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  border: 2px solid hsl(var(--border));
+  background-color: transparent;
+  background-position: center; background-repeat: no-repeat; background-size: 0.9rem;
+  transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1;
+}
+.quiz-option:hover::after { border-color: hsl(var(--primary) / 0.55); transform: translateY(-50%) scale(1.08); }
+.quiz-option.selected::after {
+  border-color: hsl(var(--primary));
+  background-color: hsl(var(--primary));
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.15);
+  transform: translateY(-50%) scale(1.12);
+}
+
+/* Progress header as pills + a livelier, taller bar */
+.quiz-progress-header { font-size: 0.8125rem; margin-bottom: 0.625rem; }
+.quiz-progress-label {
+  display: inline-flex; align-items: center; gap: 0.375rem;
+  padding: 0.25rem 0.75rem; border-radius: 9999px;
+  background: hsl(var(--muted) / 0.8); color: hsl(var(--foreground));
+  font-weight: 700;
+}
+.quiz-progress-label::before { content: '🎯'; font-size: 0.9em; }
+.quiz-progress-pct {
+  padding: 0.25rem 0.7rem; border-radius: 9999px;
+  background: hsl(var(--primary) / 0.12); color: hsl(var(--primary));
+  font-weight: 800;
+}
+.quiz-progress-bar { height: 10px; }
+.quiz-progress-fill { min-width: 0.75rem; }
+
+/* Snappier tap targets on mobile */
+@media (max-width: 640px) {
+  .quiz-option { padding: 0.875rem 3rem 0.875rem 0.875rem; }
+  .quiz-option::after { right: 0.75rem; width: 1.4rem; height: 1.4rem; }
+  .quiz-option-letter { width: 30px; height: 30px; }
+}
+
 /* ── Score Ring Enhancement ─────────────────────────── */
 .score-ring-wrap {
   filter: drop-shadow(0 4px 16px hsl(var(--primary) / 0.2));
@@ -3084,8 +3154,33 @@ footer .mt-12.border-t svg.text-primary {
 .gender-btn { border-radius: 0.75rem; border-width: 1.5px; padding: 0.75rem 1rem; transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); }
 .gender-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
 .gender-btn-selected { transform: scale(1.04) !important; box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important; }
-.seo-content section { padding: 2rem 0; border-bottom: 1px solid hsl(var(--border) / 0.2); }
-.seo-content section:last-of-type { border-bottom: none; }
+/* SEO article: alternating soft "content blocks" to break the flat wall of
+   text (background variation + breathing room, no copy changes). */
+.seo-content section {
+  position: relative;
+  padding: 2.25rem 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.seo-content section:nth-of-type(odd) {
+  background:
+    radial-gradient(ellipse at 100% 0%, hsl(var(--primary) / 0.05), transparent 60%),
+    hsl(var(--muted) / 0.4);
+  border-color: hsl(var(--border) / 0.5);
+}
+.seo-content section:nth-of-type(even) {
+  background:
+    radial-gradient(ellipse at 0% 0%, hsl(var(--secondary) / 0.05), transparent 60%),
+    hsl(var(--card));
+  border-color: hsl(var(--border) / 0.35);
+  box-shadow: 0 2px 16px -8px rgba(0,0,0,0.06);
+}
+.seo-content section:hover { box-shadow: 0 10px 30px -14px hsl(var(--primary) / 0.14); }
+@media (max-width: 640px) {
+  .seo-content section { padding: 1.5rem 1.125rem; border-radius: 1rem; }
+}
 .seo-content blockquote { border-left-width: 3px; border-radius: 0 1rem 1rem 0; padding: 1.25rem 1.5rem; background: hsl(var(--primary) / 0.03); border-color: hsl(var(--primary) / 0.4); position: relative; }
 .seo-content blockquote::before { content: '\201C'; position: absolute; top: -0.5rem; left: 0.75rem; font-size: 3rem; font-weight: 900; color: hsl(var(--primary) / 0.15); font-family: Georgia, serif; line-height: 1; }
 .seo-content details { border: 1px solid hsl(var(--border) / 0.5); border-radius: calc(var(--radius)); background: hsl(var(--card)); transition: all 0.3s ease; overflow: hidden; }

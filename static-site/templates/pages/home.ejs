@@ -16,30 +16,30 @@
 
   // Quiz grid data
   const tests = [
-    { routeKey: 'testCouple', key: 'testCouple', icon: '💕' },
-    { routeKey: 'testCommonPoints', key: 'testCommonPoints', icon: '🎯' },
-    { routeKey: 'testDistance', key: 'testDistance', icon: '🌍' },
-    { routeKey: 'testToxic', key: 'testToxic', icon: '⚠️' },
-    { routeKey: 'testCoupleSain', key: 'testCoupleSain', icon: '💚' },
-    { routeKey: 'testMariage', key: 'testMariage', icon: '💒' },
-    { routeKey: 'testDivorce', key: 'testDivorce', icon: '⚖️' },
-    { routeKey: 'testParentalite', key: 'testParentalite', icon: '👶' },
-    { routeKey: 'testAstroPrenoms', key: 'testAstroPrenoms', icon: '♈' },
-    { routeKey: 'testJalousie', key: 'testJalousie', icon: '🫣' },
-    { routeKey: 'testLangageAmour', key: 'testLangageAmour', icon: '💬' },
-    { routeKey: 'testAttachement', key: 'testAttachement', icon: '🔗' },
-    { routeKey: 'testConfiance', key: 'testConfiance', icon: '🤝' },
+    { routeKey: 'testCouple', key: 'testCouple', icon: '💕', img: 'test-couple' },
+    { routeKey: 'testCommonPoints', key: 'testCommonPoints', icon: '🎯', img: 'test-common-points' },
+    { routeKey: 'testDistance', key: 'testDistance', icon: '🌍', img: 'test-distance' },
+    { routeKey: 'testToxic', key: 'testToxic', icon: '⚠️', img: 'test-toxic' },
+    { routeKey: 'testCoupleSain', key: 'testCoupleSain', icon: '💚', img: 'test-couple-sain' },
+    { routeKey: 'testMariage', key: 'testMariage', icon: '💒', img: 'test-mariage' },
+    { routeKey: 'testDivorce', key: 'testDivorce', icon: '⚖️', img: 'test-divorce' },
+    { routeKey: 'testParentalite', key: 'testParentalite', icon: '👶', img: 'test-parentalite' },
+    { routeKey: 'testAstroPrenoms', key: 'testAstroPrenoms', icon: '♈', img: 'test-astro-prenoms' },
+    { routeKey: 'testJalousie', key: 'testJalousie', icon: '🫣', img: 'test-jalousie' },
+    { routeKey: 'testLangageAmour', key: 'testLangageAmour', icon: '💬', img: 'test-langage-amour' },
+    { routeKey: 'testAttachement', key: 'testAttachement', icon: '🔗', img: 'test-attachement' },
+    { routeKey: 'testConfiance', key: 'testConfiance', icon: '🤝', img: 'test-confiance' },
   ];
   const quizzes = [
-    { routeKey: 'quizAmoureux', key: 'quizAmoureux', icon: '❤️' },
-    { routeKey: 'quizCoquin', key: 'quizCoquin', icon: '🔥' },
-    { routeKey: 'quizMarrant', key: 'quizMarrant', icon: '😂' },
-    { routeKey: 'quizKnowledge', key: 'quizKnowledge', icon: '🧠' },
-    { routeKey: 'quizMost', key: 'quizMost', icon: '🏆' },
-    { routeKey: 'quizAdo', key: 'quizAdo', icon: '🌟' },
-    { routeKey: 'quizGenant', key: 'quizGenant', icon: '😳' },
-    { routeKey: 'quizTuPreferes', key: 'quizTuPreferes', icon: '🤔' },
-    { routeKey: 'quizVraiFaux', key: 'quizVraiFaux', icon: '✅' },
+    { routeKey: 'quizAmoureux', key: 'quizAmoureux', icon: '❤️', img: 'quiz-amoureux' },
+    { routeKey: 'quizCoquin', key: 'quizCoquin', icon: '🔥', img: 'quiz-coquin' },
+    { routeKey: 'quizMarrant', key: 'quizMarrant', icon: '😂', img: 'quiz-marrant' },
+    { routeKey: 'quizKnowledge', key: 'quizKnowledge', icon: '🧠', img: 'quiz-knowledge' },
+    { routeKey: 'quizMost', key: 'quizMost', icon: '🏆', img: 'quiz-most' },
+    { routeKey: 'quizAdo', key: 'quizAdo', icon: '🌟', img: 'quiz-ado' },
+    { routeKey: 'quizGenant', key: 'quizGenant', icon: '😳', img: 'quiz-genant' },
+    { routeKey: 'quizTuPreferes', key: 'quizTuPreferes', icon: '🤔', img: 'quiz-tu-preferes' },
+    { routeKey: 'quizVraiFaux', key: 'quizVraiFaux', icon: '✅', img: 'quiz-vrai-faux' },
   ];
 
   // Filter out tests/quizzes not available in current language
@@ -151,15 +151,21 @@
         </div>
         <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
           <% for (let ti = 0; ti < testsFiltered.length; ti++) { const item = testsFiltered[ti]; %>
+          <% const tTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)); %>
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
             <div class="quiz-bubble-card quiz-bubble-card--test">
-              <div class="quiz-bubble-emoji"><span><%= item.icon %></span></div>
-              <h3 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h3>
-              <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
-              <span class="quiz-bubble-cta">
-                <%= t('common:buttons.startTest', 'Faire le test') %>
-                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-              </span>
+              <div class="quiz-bubble-media">
+                <img src="/quiz/<%= item.img %>.webp" alt="<%= escapeHtml(tTitle) %>" loading="lazy" decoding="async" width="1000" height="667">
+                <span class="quiz-bubble-chip"><%= item.icon %></span>
+              </div>
+              <div class="quiz-bubble-body">
+                <h3 class="quiz-bubble-title"><%= tTitle %></h3>
+                <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
+                <span class="quiz-bubble-cta">
+                  <%= t('common:buttons.startTest', 'Faire le test') %>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </span>
+              </div>
             </div>
           </a>
           <% } %>
@@ -182,15 +188,21 @@
         </div>
         <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
           <% for (let qi = 0; qi < quizzesFiltered.length; qi++) { const item = quizzesFiltered[qi]; %>
+          <% const qTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)); %>
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
             <div class="quiz-bubble-card quiz-bubble-card--quiz">
-              <div class="quiz-bubble-emoji quiz-bubble-emoji--quiz"><span><%= item.icon %></span></div>
-              <h3 class="quiz-bubble-title"><%= t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)) %></h3>
-              <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
-              <span class="quiz-bubble-cta quiz-bubble-cta--quiz">
-                <%= t('common:buttons.startQuiz', 'Faire le quiz') %>
-                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-              </span>
+              <div class="quiz-bubble-media">
+                <img src="/quiz/<%= item.img %>.webp" alt="<%= escapeHtml(qTitle) %>" loading="lazy" decoding="async" width="1000" height="667">
+                <span class="quiz-bubble-chip quiz-bubble-chip--quiz"><%= item.icon %></span>
+              </div>
+              <div class="quiz-bubble-body">
+                <h3 class="quiz-bubble-title"><%= qTitle %></h3>
+                <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
+                <span class="quiz-bubble-cta quiz-bubble-cta--quiz">
+                  <%= t('common:buttons.startQuiz', 'Faire le quiz') %>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </span>
+              </div>
             </div>
           </a>
           <% } %>
