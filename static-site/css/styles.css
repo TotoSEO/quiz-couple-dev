@@ -3154,8 +3154,33 @@ footer .mt-12.border-t svg.text-primary {
 .gender-btn { border-radius: 0.75rem; border-width: 1.5px; padding: 0.75rem 1rem; transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); }
 .gender-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
 .gender-btn-selected { transform: scale(1.04) !important; box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important; }
-.seo-content section { padding: 2rem 0; border-bottom: 1px solid hsl(var(--border) / 0.2); }
-.seo-content section:last-of-type { border-bottom: none; }
+/* SEO article: alternating soft "content blocks" to break the flat wall of
+   text (background variation + breathing room, no copy changes). */
+.seo-content section {
+  position: relative;
+  padding: 2.25rem 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.seo-content section:nth-of-type(odd) {
+  background:
+    radial-gradient(ellipse at 100% 0%, hsl(var(--primary) / 0.05), transparent 60%),
+    hsl(var(--muted) / 0.4);
+  border-color: hsl(var(--border) / 0.5);
+}
+.seo-content section:nth-of-type(even) {
+  background:
+    radial-gradient(ellipse at 0% 0%, hsl(var(--secondary) / 0.05), transparent 60%),
+    hsl(var(--card));
+  border-color: hsl(var(--border) / 0.35);
+  box-shadow: 0 2px 16px -8px rgba(0,0,0,0.06);
+}
+.seo-content section:hover { box-shadow: 0 10px 30px -14px hsl(var(--primary) / 0.14); }
+@media (max-width: 640px) {
+  .seo-content section { padding: 1.5rem 1.125rem; border-radius: 1rem; }
+}
 .seo-content blockquote { border-left-width: 3px; border-radius: 0 1rem 1rem 0; padding: 1.25rem 1.5rem; background: hsl(var(--primary) / 0.03); border-color: hsl(var(--primary) / 0.4); position: relative; }
 .seo-content blockquote::before { content: '\201C'; position: absolute; top: -0.5rem; left: 0.75rem; font-size: 3rem; font-weight: 900; color: hsl(var(--primary) / 0.15); font-family: Georgia, serif; line-height: 1; }
 .seo-content details { border: 1px solid hsl(var(--border) / 0.5); border-radius: calc(var(--radius)); background: hsl(var(--card)); transition: all 0.3s ease; overflow: hidden; }
