@@ -37,6 +37,108 @@ function stripEmDashes(text) {
   return text.replace(/ — /g, ', ').replace(/(\w)—(\w)/g, '$1, $2');
 }
 
+// ── SEO: static quiz questions ─────────────────────────────────────────────
+// The interactive quiz engine injects its questions client-side (JS), so
+// crawlers that don't execute JS (and most AI bots) never see them. We render
+// the real questions as a visible, static H3 list at build time so Google & AI
+// can index them. The interactive engine remains the primary experience above.
+//
+// quizType (from the #quiz-engine data-quiz attribute) → candidate gd.json
+// prefixes. First candidate that actually has questions wins (handles FR vs
+// non-FR authoring, e.g. healthy questions live under 'couple' in FR).
+const GD_QUESTION_PREFIXES = {
+  toxic: ['divorce'], divorce: ['divorce'], mariage: ['marriage'], ado: ['ado'],
+  'tester-couple': ['couple'], 'common-points': ['commonPoints'],
+  sain: ['healthy', 'couple'], distance: ['distance'], coquin: ['coquin'],
+  knowledge: ['knowledge'], amoureux: ['amoureux'], marrant: ['marrant'],
+  most: ['most'], parentalite: ['parentalite'], emmenager: ['emmenager'],
+  jalousie1: ['jalousie1'], jalousie2: ['jalousie2'],
+  genant: ['genant'], 'vrai-faux': ['vraifaux'],
+  attachement: ['attachement'], confiance: ['confiance'],
+  infidelite: ['infidelite'], bebe: ['bebe'],
+  'tu-preferes': ['wyr'], 'langage-amour': ['loveLanguage'],
+};
+// Quiz types whose answers aren't meaningful multiple-choice options to list.
+const NO_OPTION_TYPES = new Set(['most', 'knowledge', 'marrant', 'vrai-faux']);
+const STATIC_Q_LABELS = {
+  fr: { heading: 'Aperçu des questions', intro: 'Voici un aperçu des questions abordées. Lancez le test ci-dessus pour obtenir votre résultat personnalisé.' },
+  en: { heading: 'Questions preview', intro: 'Here is a preview of the questions covered. Start the quiz above to get your personalized result.' },
+  es: { heading: 'Vista previa de las preguntas', intro: 'Aquí tienes una vista previa de las preguntas. Inicia el test arriba para obtener tu resultado personalizado.' },
+  de: { heading: 'Vorschau der Fragen', intro: 'Hier ist eine Vorschau der behandelten Fragen. Starte den Test oben, um dein persönliches Ergebnis zu erhalten.' },
+  it: { heading: 'Anteprima delle domande', intro: 'Ecco un\'anteprima delle domande trattate. Avvia il test qui sopra per ottenere il tuo risultato personalizzato.' },
+};
+
+function buildStaticQuestionsSection(quizType, tgd, lang) {
+  const candidates = GD_QUESTION_PREFIXES[quizType];
+  if (!candidates) return '';
+
+  const has = (key) => { const v = tgd(key, ''); return v && v !== key ? v : ''; };
+
+  // Pick the first candidate prefix that actually has a first question.
+  let prefix = '';
+  for (const c of candidates) {
+    if (has(c + '.q1') || has(c + '.1')) { prefix = c; break; }
+  }
+  if (!prefix) return '';
+
+  const CAP = 24;
+  const showOptions = !NO_OPTION_TYPES.has(quizType);
+  const optLetters = ['a', 'b', 'c', 'd', 'e'];
+  const items = [];
+  let misses = 0;
+  for (let i = 1; i <= 300 && items.length < CAP; i++) {
+    const qText = has(prefix + '.q' + i) || has(prefix + '.' + i);
+    if (!qText) { if (items.length > 0 && ++misses >= 8) break; continue; }
+    misses = 0;
+    const opts = [];
+    if (showOptions) {
+      for (const L of optLetters) {
+        const o = has(prefix + '.q' + i + L);
+        if (o) opts.push(o);
+      }
+    }
+    items.push({ q: qText, opts });
+  }
+  if (items.length < 3) return '';
+
+  const L = STATIC_Q_LABELS[lang] || STATIC_Q_LABELS.fr;
+  let out = '<section class="quiz-static-questions"><div class="container mx-auto px-4 max-w-3xl">';
+  out += `<h2 class="quiz-static-title">${escapeHtml(L.heading)}</h2>`;
+  out += `<p class="quiz-static-intro">${escapeHtml(L.intro)}</p>`;
+  out += '<ol class="quiz-static-list">';
+  for (const it of items) {
+    out += '<li class="quiz-static-item">';
+    out += `<h3 class="quiz-static-q">${escapeHtml(it.q)}</h3>`;
+    if (it.opts.length) {
+      out += '<ul class="quiz-static-opts">';
+      for (const o of it.opts) out += `<li>${escapeHtml(o)}</li>`;
+      out += '</ul>';
+    }
+    out += '</li>';
+  }
+  out += '</ol></div></section>';
+  return out;
+}
+
+// Inject the static questions section right after the (empty) quiz mount div.
+// Handles the generic engine (#quiz-engine data-quiz=…) and the two bespoke
+// mounts (tu-préfères → #wyr-quiz, love languages → #love-language-quiz).
+const QUIZ_MOUNT_MATCHERS = [
+  { re: /<div id="quiz-engine" data-quiz="([^"]+)"[^>]*><\/div>/, type: (m) => m[1] },
+  { re: /<div id="wyr-quiz"[^>]*><\/div>/, type: () => 'tu-preferes' },
+  { re: /<div id="love-language-quiz"[^>]*><\/div>/, type: () => 'langage-amour' },
+];
+function injectStaticQuestions(html, tgd, lang) {
+  for (const matcher of QUIZ_MOUNT_MATCHERS) {
+    const m = html.match(matcher.re);
+    if (!m) continue;
+    const section = buildStaticQuestionsSection(matcher.type(m), tgd, lang);
+    if (!section) return html;
+    return html.replace(m[0], m[0] + section);
+  }
+  return html;
+}
+
 async function fetchReviewStats() {
   try {
     const res = await fetch(
@@ -403,10 +505,13 @@ async function generatePage(routeKey, lang) {
     const pageHtml = await renderTemplate(`pages/${config.template}`, data);
 
     // Then render the base template wrapping the page content
-    const fullHtml = await renderTemplate('base', {
+    let fullHtml = await renderTemplate('base', {
       ...data,
       content: pageHtml,
     });
+
+    // SEO: render the quiz questions as static HTML so JS-less crawlers see them
+    fullHtml = injectStaticQuestions(fullHtml, data.tgd, lang);
 
     // Minify
     const minified = await minifyHtml(fullHtml);
