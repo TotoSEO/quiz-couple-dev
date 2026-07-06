@@ -137,7 +137,7 @@ serve(async (req) => {
               </p>
               <hr style="border:none;border-top:1px solid #eee;margin:2rem 0;">
               <p style="font-size:0.75rem;color:#999;text-align:center;">
-                Quiz Couple — quiz-couple.com
+                Quiz Couple, quiz-couple.com
               </p>
             </div>
           `,
@@ -268,7 +268,7 @@ function buildResultPage(status: 'success' | 'already' | 'error', nameOrMessage:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${titles[status]} — Quiz Couple</title>
+  <title>${titles[status]}, Quiz Couple</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: Inter, system-ui, sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #fdf2f8, #fff7ed); padding: 1rem; }

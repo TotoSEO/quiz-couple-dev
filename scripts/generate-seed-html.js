@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Generates a self-contained HTML page that seeds blog data into Supabase.
- * No network needed to run this script — it just reads TS files and outputs HTML.
+ * No network needed to run this script, it just reads TS files and outputs HTML.
  *
  * Usage: node scripts/generate-seed-html.js > seed-blog.html
  * Then open seed-blog.html in your browser.
@@ -61,7 +61,7 @@ for (const meta of ARTICLE_METAS) {
   for (const lang of LANGUAGES) {
     const filePath = path.join(DATA_DIR, lang, `${meta.internalSlug}.ts`);
     const article = parseArticleTs(filePath);
-    if (!article) { console.error(`  [${lang}] ${meta.internalSlug} — not found`); continue; }
+    if (!article) { console.error(`  [${lang}] ${meta.internalSlug}, not found`); continue; }
     const slug = meta.slugs[lang] || meta.internalSlug;
     translations.push({
       lang, slug,
@@ -101,7 +101,7 @@ const html = `<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Seed Blog — Quiz Couple</title>
+<title>Seed Blog, Quiz Couple</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; padding: 2rem; }

@@ -21,7 +21,7 @@
 
   // ── Seed data (all existing articles) ──
   // AUTO-GENERATED AT BUILD TIME from config.js BLOG_ARTICLES + article TS files
-  // Do NOT edit manually — add articles in data/blog/ and static-site/build/config.js
+  // Do NOT edit manually, add articles in data/blog/ and static-site/build/config.js
   var SEED_ARTICLES = /*__SEED_ARTICLES__*/[
     {
       internal_slug: 'les-phases-de-la-rupture-chez-l-homme',

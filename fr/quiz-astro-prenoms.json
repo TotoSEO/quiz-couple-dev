@@ -3,7 +3,7 @@
     "badge": "Astrologie & Numérologie",
     "title": "Compatibilité amoureuse par prénom et signe astrologique",
     "highlight": "Compatibilité amoureuse",
-    "description": "Deux prénoms. Deux signes. Et quelque part entre les étoiles et les lettres de vos noms, quelque chose qui ressemble à une réponse. Ce test croise deux lectures millénaires — l'astrologie et la numérologie — pour dessiner une image de votre compatibilité.",
+    "description": "Deux prénoms. Deux signes. Et quelque part entre les étoiles et les lettres de vos noms, quelque chose qui ressemble à une réponse. Ce test croise deux lectures millénaires, l'astrologie et la numérologie, pour dessiner une image de votre compatibilité.",
     "subtitle": "Entrez vos prénoms et vos signes. Le reste appartient aux astres."
   },
   "form": {
@@ -41,21 +41,21 @@
   },
   "section1": {
     "title": "Ce que ce test révèle vraiment",
-    "p1": "La compatibilité amoureuse est l'une des questions les plus anciennes que l'humanité se pose. Avant les applis de rencontre, avant les tests de personnalité, avant même les psychologues — il y avait les astres et les nombres. Deux systèmes de lecture du monde qui, chacun à sa façon, cherchent à comprendre pourquoi certaines personnes s'attirent comme des aimants, et d'autres se heurtent sans jamais vraiment se trouver.",
+    "p1": "La compatibilité amoureuse est l'une des questions les plus anciennes que l'humanité se pose. Avant les applis de rencontre, avant les tests de personnalité, avant même les psychologues, il y avait les astres et les nombres. Deux systèmes de lecture du monde qui, chacun à sa façon, cherchent à comprendre pourquoi certaines personnes s'attirent comme des aimants, et d'autres se heurtent sans jamais vraiment se trouver.",
     "p2": "Ce test réunit les deux. <strong>Pas pour décider à votre place.</strong> Mais pour poser un regard différent sur ce qui se joue entre deux personnes."
   },
   "section2": {
     "title": "La numérologie des prénoms : quand les lettres vibrent",
-    "p1": "En numérologie, chaque lettre de l'alphabet porte un chiffre. A vaut 1, B vaut 2, C vaut 3 — et ainsi de suite jusqu'à 9, puis on recommence. Cette correspondance est l'une des plus anciennes de la tradition ésotérique occidentale, remontant aux travaux de Pythagore au VIe siècle avant notre ère. L'idée est simple mais profonde — <strong>chaque prénom est une fréquence</strong>.",
+    "p1": "En numérologie, chaque lettre de l'alphabet porte un chiffre. A vaut 1, B vaut 2, C vaut 3, et ainsi de suite jusqu'à 9, puis on recommence. Cette correspondance est l'une des plus anciennes de la tradition ésotérique occidentale, remontant aux travaux de Pythagore au VIe siècle avant notre ère. L'idée est simple mais profonde, <strong>chaque prénom est une fréquence</strong>.",
     "p2": "Pour calculer la compatibilité entre deux prénoms, on additionne les valeurs de chaque lettre, on réduit le total à un chiffre entre 1 et 9 (sauf les \"nombres maîtres\" 11 et 22, qui gardent leur puissance propre), et on compare. Le 1 porte l'élan, l'indépendance. Le 2 cherche l'harmonie, la fusion. Le 5 veut la liberté. Deux chiffres qui se complètent créent un couple équilibré.",
-    "tip": "La numérologie des prénoms ne tient pas compte de l'orthographe exacte — elle capte la vibration des sons et des lettres. Si vous utilisez un surnom, testez les deux versions : les résultats peuvent différer."
+    "tip": "La numérologie des prénoms ne tient pas compte de l'orthographe exacte, elle capte la vibration des sons et des lettres. Si vous utilisez un surnom, testez les deux versions : les résultats peuvent différer."
   },
   "section3": {
     "title": "L'astrologie et les signes : l'empreinte du ciel à la naissance",
-    "p1": "Le signe astrologique ne se calcule pas — il s'hérite. C'est la position du Soleil au moment de la naissance qui le détermine. <strong>Douze signes. Quatre éléments.</strong> Le Feu (Bélier, Lion, Sagittaire) — impulsif, passionné. La Terre (Taureau, Vierge, Capricorne) — solide, patient. L'Air (Gémeaux, Balance, Verseau) — vif, communicatif. L'Eau (Cancer, Scorpion, Poissons) — profond, intuitif.",
+    "p1": "Le signe astrologique ne se calcule pas, il s'hérite. C'est la position du Soleil au moment de la naissance qui le détermine. <strong>Douze signes. Quatre éléments.</strong> Le Feu (Bélier, Lion, Sagittaire), impulsif, passionné. La Terre (Taureau, Vierge, Capricorne), solide, patient. L'Air (Gémeaux, Balance, Verseau), vif, communicatif. L'Eau (Cancer, Scorpion, Poissons), profond, intuitif.",
     "p2": "La compatibilité astrologique s'analyse d'abord à travers ces éléments. Un signe Feu et un signe Air se nourrissent mutuellement. Un signe Terre et un signe Eau se comprennent instinctivement. <strong>Mais les opposés attirent aussi.</strong>",
     "subtitle": "Les grandes affinités entre signes",
-    "p3": "Les signes du même élément partagent une compréhension naturelle. Les signes en carré créent de la friction — pas nécessairement destructrice. Les signes en opposition incarnent le paradoxe de l'attraction des contraires : <strong>deux moitiés d'un même axe</strong>."
+    "p3": "Les signes du même élément partagent une compréhension naturelle. Les signes en carré créent de la friction, pas nécessairement destructrice. Les signes en opposition incarnent le paradoxe de l'attraction des contraires : <strong>deux moitiés d'un même axe</strong>."
   },
   "section4": {
     "title": "Pourquoi croiser les deux lectures ?",
@@ -72,10 +72,10 @@
   "faq": {
     "title": "Questions fréquentes",
     "q1": "La compatibilité astrologique est-elle vraiment fiable ?",
-    "a1": "L'astrologie ne prédit pas l'avenir avec précision. Ce qu'elle fait — et ce depuis des millénaires — c'est décrire des tempéraments, des façons d'être, des modes de relation. Que ce soit utile et éclairant pour beaucoup de gens — c'est indéniable.",
+    "a1": "L'astrologie ne prédit pas l'avenir avec précision. Ce qu'elle fait, et ce depuis des millénaires, c'est décrire des tempéraments, des façons d'être, des modes de relation. Que ce soit utile et éclairant pour beaucoup de gens, c'est indéniable.",
     "q2": "Faut-il utiliser son prénom complet ou son surnom ?",
     "a2": "En numérologie, le prénom civil est considéré comme la vibration de fond. Le surnom reflète la vibration sociale. Les deux sont intéressants. Testez les deux et voyez lequel vous parle le plus.",
-    "q3": "Mon signe est \"incompatible\" avec celui de mon partenaire — on est foutus ?",
-    "a3": "Non. Absolument pas. La compatibilité entre signes est une tendance, pas une règle. <strong>Ce sont les gens qui font les relations</strong> — pas les étoiles."
+    "q3": "Mon signe est \"incompatible\" avec celui de mon partenaire, on est foutus ?",
+    "a3": "Non. Absolument pas. La compatibilité entre signes est une tendance, pas une règle. <strong>Ce sont les gens qui font les relations</strong>, pas les étoiles."
   }
 }

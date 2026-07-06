@@ -24,7 +24,7 @@
     "s2_2Item2Label": "Nutzungsdatum:",
     "s2_2Item2Text": "Zur Überprüfung des täglichen Limits",
     "s2_2Important": "Wichtig:",
-    "s2_2ImportantText": "Diese technischen Daten werden maximal 7 Tage aufbewahrt und dann automatisch gelöscht. Der Inhalt Ihrer Beschreibungen und Versionen der Ereignisse wird <strong>niemals</strong> auf unseren Servern gespeichert — er wird nur zur Analyse an die KI übermittelt und dann sofort gelöscht.",
+    "s2_2ImportantText": "Diese technischen Daten werden maximal 7 Tage aufbewahrt und dann automatisch gelöscht. Der Inhalt Ihrer Beschreibungen und Versionen der Ereignisse wird <strong>niemals</strong> auf unseren Servern gespeichert, er wird nur zur Analyse an die KI übermittelt und dann sofort gelöscht.",
     "s2_3Title": "2.3 Über Download-Formulare erfasste Daten",
     "s2_3Intro": "Wenn Sie kostenlose Inhalte anfordern (E-Book, Leitfaden), erfassen wir mit Ihrer ausdrücklichen Einwilligung folgende Informationen:",
     "s2_3Item1Label": "Vorname:",

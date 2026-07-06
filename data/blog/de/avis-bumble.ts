@@ -93,7 +93,7 @@ const article: BlogArticleData = {
     {
       id: 'was-genau-ist-bumble',
       title: `Was genau ist Bumble?`,
-      content: `<p><strong>Bumble entstand aus einer Trennung.</strong> Im Jahr 2014 verließ Whitney Wolfe Herd — eine der Mitbegründerinnen von Tinder — das Unternehmen nach einem internen Machtkampf und beschloss, ihre eigene App zu entwickeln. Ihre Feststellung: Die bestehenden Dating-Apps reproduzieren dieselben Ungleichgewichte wie im echten Leben. Frauen werden mit oft unangebrachten Nachrichten überhäuft. Männer senden Dutzende von Texten ins Leere. Alle sind frustriert.</p>
+      content: `<p><strong>Bumble entstand aus einer Trennung.</strong> Im Jahr 2014 verließ Whitney Wolfe Herd, eine der Mitbegründerinnen von Tinder, das Unternehmen nach einem internen Machtkampf und beschloss, ihre eigene App zu entwickeln. Ihre Feststellung: Die bestehenden Dating-Apps reproduzieren dieselben Ungleichgewichte wie im echten Leben. Frauen werden mit oft unangebrachten Nachrichten überhäuft. Männer senden Dutzende von Texten ins Leere. Alle sind frustriert.</p>
 
 <p>Ihre Lösung: <strong>Die Regel des ersten Schritts umkehren.</strong> Auf Bumble kann nach einem Match nur die Frau das Gespräch beginnen. Der Mann wartet. Und wenn niemand innerhalb von 24 Stunden schreibt, verschwindet das Match. Das ist die Grundregel der App, die sie von allem anderen unterscheidet.</p>
 
@@ -104,17 +104,17 @@ const article: BlogArticleData = {
       title: `Wie funktioniert Bumble konkret?`,
       content: `<p>Der grundlegende Mechanismus ähnelt dem von Tinder: Du erstellst ein Profil mit Fotos (bis zu 6), einer Bio und kannst "Prompts" (Fragen) beantworten, um denjenigen, die dein Profil besuchen, Stoff für Gespräche zu geben. <strong>Du swipst nach rechts oder links</strong>, und wenn sich zwei Personen gegenseitig liken, ist es ein Match.</p>
 
-<p>Hier weicht Bumble ab. Die Frau hat 24 Stunden Zeit, um die erste Nachricht zu senden. Nach Ablauf dieser Frist wird das Match gelöscht. Der Mann kann diese Frist einmal pro Match verlängern — das ist die Funktion "Extend", die in der kostenlosen Version verfügbar, aber begrenzt ist.</p>`,
+<p>Hier weicht Bumble ab. Die Frau hat 24 Stunden Zeit, um die erste Nachricht zu senden. Nach Ablauf dieser Frist wird das Match gelöscht. Der Mann kann diese Frist einmal pro Match verlängern, das ist die Funktion "Extend", die in der kostenlosen Version verfügbar, aber begrenzt ist.</p>`,
       subsections: [
         {
           id: 'der-algorithmus-und-die-sichtbarkeit',
           title: `Der Algorithmus und die Sichtbarkeit`,
-          content: `<p>Bumble kommuniziert nicht offen über seinen Algorithmus, aber <strong>die Erfahrung zeigt einige klare Muster</strong>. Die App bevorzugt vollständige Profile (mehrere Fotos, ausgefüllte Bio, beantwortete Prompts). Sie bestraft massives und zufälliges Swipen — eine bewusste Entscheidung, um "absichtliche" Likes zu fördern. Kürzlich aktive Profile werden wie bei den meisten Apps hervorgehoben.</p>`,
+          content: `<p>Bumble kommuniziert nicht offen über seinen Algorithmus, aber <strong>die Erfahrung zeigt einige klare Muster</strong>. Die App bevorzugt vollständige Profile (mehrere Fotos, ausgefüllte Bio, beantwortete Prompts). Sie bestraft massives und zufälliges Swipen, eine bewusste Entscheidung, um "absichtliche" Likes zu fördern. Kürzlich aktive Profile werden wie bei den meisten Apps hervorgehoben.</p>`,
         },
         {
           id: 'die-24-stunden-regel-gute-idee-schlechte-umsetzung',
           title: `Die 24-Stunden-Regel: gute Idee, schlechte Umsetzung?`,
-          content: `<p><strong>Das ist der Punkt, der am meisten spaltet.</strong> Einerseits erzwingt diese Regel eine gewisse Ernsthaftigkeit — wenn du ein Match mit jemandem hast, musst du schnell handeln und das Match nicht wochenlang herumliegen lassen. Andererseits erzeugt sie einen künstlichen Druck, der nicht der Art und Weise entspricht, wie Menschen wirklich funktionieren. Man schaut nicht immer im richtigen Moment aufs Handy. Ein interessantes Match kann verschwinden, weil man in einem Meeting war, auf Reisen oder einfach offline.</p><aside class="blog-tip-box"><p class="blog-tip-box-title">💡 Tipp</p><p><!--StartFragment-->Für Frauen: Lasst eure Matches nicht durch Untätigkeit verdampfen. Selbst ein einfaches "Hallo, ich habe gesehen, dass du [X] magst" reicht aus, um das Gespräch zu eröffnen. Die erste Nachricht muss nicht perfekt sein — sie muss nur existieren.</p></aside>`,
+          content: `<p><strong>Das ist der Punkt, der am meisten spaltet.</strong> Einerseits erzwingt diese Regel eine gewisse Ernsthaftigkeit, wenn du ein Match mit jemandem hast, musst du schnell handeln und das Match nicht wochenlang herumliegen lassen. Andererseits erzeugt sie einen künstlichen Druck, der nicht der Art und Weise entspricht, wie Menschen wirklich funktionieren. Man schaut nicht immer im richtigen Moment aufs Handy. Ein interessantes Match kann verschwinden, weil man in einem Meeting war, auf Reisen oder einfach offline.</p><aside class="blog-tip-box"><p class="blog-tip-box-title">💡 Tipp</p><p><!--StartFragment-->Für Frauen: Lasst eure Matches nicht durch Untätigkeit verdampfen. Selbst ein einfaches "Hallo, ich habe gesehen, dass du [X] magst" reicht aus, um das Gespräch zu eröffnen. Die erste Nachricht muss nicht perfekt sein, sie muss nur existieren.</p></aside>`,
         },
       ],
     },
@@ -145,7 +145,7 @@ const article: BlogArticleData = {
         {
           id: 'die-bumble-abos-boost-und-premium',
           title: `Die Bumble-Abos: Boost und Premium+`,
-          content: `<p>Kompliziert wird es beim Preis. Bumble ist unseres Wissens <strong>eine der teuersten Dating-Apps auf dem Markt</strong> — eine Tatsache, die von vielen Nutzern in Foren und auf Trustpilot bestätigt wird.</p>
+          content: `<p>Kompliziert wird es beim Preis. Bumble ist unseres Wissens <strong>eine der teuersten Dating-Apps auf dem Markt</strong>, eine Tatsache, die von vielen Nutzern in Foren und auf Trustpilot bestätigt wird.</p>
 
 <div>
 <table>
@@ -184,7 +184,7 @@ const article: BlogArticleData = {
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">💡 Tipp</p>
 
-<p>Wenn du das Abo testen möchtest, nimm lieber einen Boost für eine Woche statt für einen ganzen Monat. Bumble bietet in der App manchmal Blitzangebote mit 50 % Rabatt an — halte die Augen offen, bevor du den vollen Preis zahlst.</p>
+<p>Wenn du das Abo testen möchtest, nimm lieber einen Boost für eine Woche statt für einen ganzen Monat. Bumble bietet in der App manchmal Blitzangebote mit 50 % Rabatt an, halte die Augen offen, bevor du den vollen Preis zahlst.</p>
 </aside>
 
 <p>Was Bumble wirklich gut macht</p>`,
@@ -194,7 +194,7 @@ const article: BlogArticleData = {
           title: `Die Qualität der Interaktionen liegt deutlich über dem Durchschnitt`,
           content: `<p>Das ist das Hauptargument von Bumble, und <strong>es hält stand</strong>. Die Tatsache, dass Frauen das Gespräch initiieren, verändert die Dynamik grundlegend. Männer erhalten nur Nachrichten von Frauen, die wirklich interessiert sind. Frauen müssen sich nicht mehr mit einer Flut unaufgeforderter Nachrichten herumschlagen. Das Ergebnis: Wenn ein Gespräch auf Bumble beginnt, startet es auf einer besseren Grundlage als anderswo.</p>
 
-<p>Wir haben das bei unserem Test direkt festgestellt. <strong>Der Austausch ist ruhiger, weniger überstürzt.</strong> Die Leute, die wir über Bumble kennengelernt haben, hatten im Allgemeinen eine klarere Absicht als auf Tinder — weniger sofortiges Ghosting, mehr echte Gespräche.</p>`,
+<p>Wir haben das bei unserem Test direkt festgestellt. <strong>Der Austausch ist ruhiger, weniger überstürzt.</strong> Die Leute, die wir über Bumble kennengelernt haben, hatten im Allgemeinen eine klarere Absicht als auf Tinder, weniger sofortiges Ghosting, mehr echte Gespräche.</p>`,
         },
         {
           id: 'eine-gepflegte-und-ansprechende-oberflache',
@@ -216,9 +216,9 @@ const article: BlogArticleData = {
         {
           id: 'ein-ungleichgewicht-zwischen-mannern-und-frauen-das-die-mannlichen-ergebnisse-druckt',
           title: `Ein Ungleichgewicht zwischen Männern und Frauen, das die männlichen Ergebnisse drückt`,
-          content: `<p>Das ist das strukturelle Problem von Bumble, und es ist real. <strong>Etwa 76 % der Nutzer sollen Männer sein</strong>, laut verfügbaren Daten. Für Männer bedeutet das harte Konkurrenz — viele Männer für wenige Frauen. Und da die Frau zuerst schreiben muss, hat der Mann buchstäblich keinen Hebel, wenn die Frau sich nicht meldet.</p>
+          content: `<p>Das ist das strukturelle Problem von Bumble, und es ist real. <strong>Etwa 76 % der Nutzer sollen Männer sein</strong>, laut verfügbaren Daten. Für Männer bedeutet das harte Konkurrenz, viele Männer für wenige Frauen. Und da die Frau zuerst schreiben muss, hat der Mann buchstäblich keinen Hebel, wenn die Frau sich nicht meldet.</p>
 
-<p>Wir hatten Matches, die verschwanden, ohne dass eine einzige Zeile geschrieben wurde. Kein Ghosting im engeren Sinne — nur ein 24-Stunden-Fenster, das sich schließt. Es ist frustrierend, besonders wenn das Profil wirklich zu passen schien. <strong>Für Männer erfordert Bumble viel Geduld.</strong></p>`,
+<p>Wir hatten Matches, die verschwanden, ohne dass eine einzige Zeile geschrieben wurde. Kein Ghosting im engeren Sinne, nur ein 24-Stunden-Fenster, das sich schließt. Es ist frustrierend, besonders wenn das Profil wirklich zu passen schien. <strong>Für Männer erfordert Bumble viel Geduld.</strong></p>`,
         },
         {
           id: 'eine-nutzerbasis-die-in-deutschland-noch-zu-schwach-ist',
@@ -249,13 +249,13 @@ const article: BlogArticleData = {
     {
       id: 'bumble-im-vergleich-zur-konkurrenz-2026',
       title: `Bumble im Vergleich zur Konkurrenz 2026`,
-      content: `<p>Bumble nimmt eine besondere Stellung auf dem Markt ein. <strong>Es ist nicht Tinder</strong> — es zielt nicht auf dasselbe Volumen, dieselbe Zielgruppe oder denselben Ansatz beim Dating ab. Es ist eher eine ernsthafte Alternative für alle, die genug von der hektischen Swipe-Kultur haben.</p>
+      content: `<p>Bumble nimmt eine besondere Stellung auf dem Markt ein. <strong>Es ist nicht Tinder</strong>, es zielt nicht auf dasselbe Volumen, dieselbe Zielgruppe oder denselben Ansatz beim Dating ab. Es ist eher eine ernsthafte Alternative für alle, die genug von der hektischen Swipe-Kultur haben.</p>
 
 <p>Gegenüber <strong>Hinge</strong>, das ebenfalls auf Qualität statt auf Quantität setzt, verliert Bumble etwas an Boden. Hinge bietet noch reichhaltigere Profile, einen Algorithmus, der aus deinem Feedback lernt, und eine wirklich wettbewerbsfähige kostenlose Version. Der Hauptunterschied: Auf Hinge kann jeder zuerst schreiben.</p>
 
 <p>Gegenüber <strong>Tinder</strong> gewinnt Bumble eindeutig bei der Qualität des Austauschs und verliert beim Volumen. Das ist eine Entscheidung, die man je nachdem treffen muss, was man sucht.</p>
 
-<p><strong>Lovoo</strong> (eine in Deutschland sehr beliebte Plattform) spielt auf einer etwas anderen Ebene — spielerischer, etwas flirty — spricht aber in einigen Punkten ein ähnliches Publikum an wie Bumble. Je nach persönlichen Vorlieben einen Blick wert.</p>`,
+<p><strong>Lovoo</strong> (eine in Deutschland sehr beliebte Plattform) spielt auf einer etwas anderen Ebene, spielerischer, etwas flirty, spricht aber in einigen Punkten ein ähnliches Publikum an wie Bumble. Je nach persönlichen Vorlieben einen Blick wert.</p>`,
     },
     {
       id: 'fur-wen-ist-bumble-geeignet',
@@ -273,7 +273,7 @@ const article: BlogArticleData = {
       title: `Unsere Endnote`,
       content: `<p class="blog-note-score"><strong>6/10</strong></p>
 
-<p>Bumble hat echte Qualitäten: eine gepflegte Benutzeroberfläche, hochwertigere Interaktionen als anderswo, weniger Bots und eine faire kostenlose Version. Aber <strong>das Ungleichgewicht zwischen Männern und Frauen ist real</strong>, die Abopreise sind übertrieben und die Nutzerbasis in Deutschland bleibt außerhalb der Großstädte unzureichend. Die Idee ist gut — die Umsetzung durchwachsen. Wenn du eine Frau in einer Großstadt bist, ist dies eindeutig eine der besten verfügbaren Optionen. Für andere Profile fällt die Bilanz gemischter aus.</p>`,
+<p>Bumble hat echte Qualitäten: eine gepflegte Benutzeroberfläche, hochwertigere Interaktionen als anderswo, weniger Bots und eine faire kostenlose Version. Aber <strong>das Ungleichgewicht zwischen Männern und Frauen ist real</strong>, die Abopreise sind übertrieben und die Nutzerbasis in Deutschland bleibt außerhalb der Großstädte unzureichend. Die Idee ist gut, die Umsetzung durchwachsen. Wenn du eine Frau in einer Großstadt bist, ist dies eindeutig eine der besten verfügbaren Optionen. Für andere Profile fällt die Bilanz gemischter aus.</p>`,
     },
   ],
 };

@@ -51,7 +51,7 @@ type GroupSize = "solo" | "couple" | "small" | "large";
 
 // ---------------------------------------------------------------------------
 // OSM tag mapping per activity category
-// Each tag is "key=value". Tags may appear in multiple categories — the
+// Each tag is "key=value". Tags may appear in multiple categories, the
 // categoriseElement function resolves conflicts by preferring the user's
 // selected categories.
 // ---------------------------------------------------------------------------
@@ -238,7 +238,7 @@ const SPORT_REGEX =
   "orienteering|triathlon";
 
 // ---------------------------------------------------------------------------
-// Blocked OSM tags — elements with ANY of these key=value pairs are excluded
+// Blocked OSM tags, elements with ANY of these key=value pairs are excluded
 // These cover infrastructure, admin, education, healthcare, residential, etc.
 // ---------------------------------------------------------------------------
 
@@ -328,7 +328,7 @@ const WHITELIST_SHOP = new Set([
 ]);
 
 // ---------------------------------------------------------------------------
-// Name-based blocklist — multilingual keywords to reject by name
+// Name-based blocklist, multilingual keywords to reject by name
 // Covers parking, infrastructure, admin, education, healthcare,
 // residential, commercial, technical facilities, cemeteries, telecom, etc.
 // ---------------------------------------------------------------------------
@@ -880,9 +880,9 @@ function buildOverpassQuery(
 /**
  * Check if an OSM element should be blocked based on its tags.
  * Uses three layers:
- * 1. BLOCKED_TAGS — reject if any blocked key=value is present
- * 2. WHITELIST — accept only if at least one whitelisted tag key is present
- * 3. NAME_BLOCKLIST_PATTERNS — reject if the name matches a blocked keyword
+ * 1. BLOCKED_TAGS, reject if any blocked key=value is present
+ * 2. WHITELIST, accept only if at least one whitelisted tag key is present
+ * 3. NAME_BLOCKLIST_PATTERNS, reject if the name matches a blocked keyword
  */
 function isBlockedElement(tags: Record<string, string>): boolean {
   // Layer 1: check blocked tags
@@ -893,7 +893,7 @@ function isBlockedElement(tags: Record<string, string>): boolean {
     }
   }
 
-  // Layer 2: whitelist check — element must have at least one valid activity tag
+  // Layer 2: whitelist check, element must have at least one valid activity tag
   let hasWhitelistedTag = false;
 
   for (const key of WHITELIST_KEYS) {
@@ -1346,7 +1346,7 @@ serve(async (req) => {
       const elLng: number = el.lon ?? el.center?.lon;
       if (elLat == null || elLng == null) continue;
 
-      // Categorise — pass selected categories so they're checked first
+      // Categorise, pass selected categories so they're checked first
       const { category, subcategory } = categoriseElement(tags, selectedCategories);
 
       // Deduplicate

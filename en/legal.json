@@ -24,7 +24,7 @@
     "s2_2Item2Label": "Date of use:",
     "s2_2Item2Text": "To verify the daily limit",
     "s2_2Important": "Important:",
-    "s2_2ImportantText": "This technical data is kept for a maximum of 7 days then automatically deleted. The content of your descriptions and versions of events is <strong>never stored</strong> on our servers — it is only transmitted to the AI for analysis and then immediately deleted.",
+    "s2_2ImportantText": "This technical data is kept for a maximum of 7 days then automatically deleted. The content of your descriptions and versions of events is <strong>never stored</strong> on our servers, it is only transmitted to the AI for analysis and then immediately deleted.",
     "s2_3Title": "2.3 Data collected via download forms",
     "s2_3Intro": "When you request free content (e-book, guide), we collect the following information with your explicit consent:",
     "s2_3Item1Label": "First name:",

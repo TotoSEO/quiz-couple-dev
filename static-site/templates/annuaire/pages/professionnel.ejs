@@ -73,7 +73,7 @@
 <script type="application/ld+json"><%- JSON.stringify(ld) %></script>
 <% } %>
 
-<!-- Section 1: Hero 50/50 — Identity + Map -->
+<!-- Section 1: Hero 50/50, Identity + Map -->
 <section class="ann-profile-hero">
   <div class="ann-container">
     <nav class="ann-breadcrumb" aria-label="Fil d'Ariane">
@@ -768,7 +768,7 @@
     document.body.style.overflow = '';
   }
 
-  // Click on gallery items (skip video items — they have their own player)
+  // Click on gallery items (skip video items, they have their own player)
   document.addEventListener('click', function(e) {
     var item = e.target.closest('.ann-gallery-item');
     if (item && !item.classList.contains('ann-gallery-video')) {

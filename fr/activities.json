@@ -3,7 +3,7 @@
     "badge": "Gratuit",
     "badgeGeo": "Géolocalisé",
     "title": "Trouvez des activités de couple autour de chez vous !",
-    "subtitle": "Des idées de sorties à deux près de chez vous — ce soir, ce week-end, ou là maintenant.",
+    "subtitle": "Des idées de sorties à deux près de chez vous, ce soir, ce week-end, ou là maintenant.",
     "cta": "Lancer la recherche"
   },
   "intro": {
@@ -97,7 +97,7 @@
     "count": "{count} activités trouvées",
     "countSingular": "1 activité trouvée",
     "noResults": "Aucune activité trouvée. Essayez d'élargir vos critères.",
-    "expandedRadius": "Peu d'activités trouvées dans votre rayon — on a élargi la zone de recherche.",
+    "expandedRadius": "Peu d'activités trouvées dans votre rayon, on a élargi la zone de recherche.",
     "expandedBudgetFree": "Les activités gratuites sont souvent des espaces naturels ou publics, parfois peu référencés. Essayez d'élargir le rayon.",
     "expandedBudgetSmall": "Les activités à petit budget sont plus rares dans certaines zones. On a élargi le rayon pour en trouver davantage.",
     "expandedCategories": "Le type d'activité choisi est peu représenté dans cette zone. On a élargi pour vous proposer des résultats.",
@@ -143,13 +143,13 @@
     "step2Title": "Un moteur qui réfléchit",
     "step2Text": "L'outil ne vous renvoie pas une liste brute. Il calcule ce qui correspond vraiment à votre situation du moment, en tenant compte des horaires d'ouverture, de votre budget et de vos préférences.",
     "step3Title": "Des milliers de lieux référencés",
-    "step3Text": "Parcs, musées, escape games, spas, randonnées, restaurants, bases nautiques, ateliers — des milliers d'activités près de chez vous, y compris celles qui n'apparaissent jamais dans les résultats habituels."
+    "step3Text": "Parcs, musées, escape games, spas, randonnées, restaurants, bases nautiques, ateliers, des milliers d'activités près de chez vous, y compris celles qui n'apparaissent jamais dans les résultats habituels."
   },
   "seoContent": {
     "title": "Trouver des activités autour de soi : pourquoi c'est toujours si compliqué ?",
     "p1": "Il y a un paradoxe que beaucoup de gens vivent sans vraiment le formuler. Ils habitent quelque part depuis des années, ils connaissent leur ville, leurs alentours, et pourtant quand vient la question \"on fait quoi ce week-end ?\", la réponse est toujours la même. Le même restaurant. Le même ciné. La même balade.",
-    "p2": "Ce n'est pas de la flemme. <strong>C'est un problème d'information.</strong> Votre ville regorge d'activités que vous n'avez jamais essayées — simplement parce que rien ne vous les a jamais signalées au bon moment, avec les bons critères.",
-    "quote": "La majorité des activités qui existent autour de vous ne font pas de pub. Elles sont là — vous ne saviez juste pas où chercher.",
+    "p2": "Ce n'est pas de la flemme. <strong>C'est un problème d'information.</strong> Votre ville regorge d'activités que vous n'avez jamais essayées, simplement parce que rien ne vous les a jamais signalées au bon moment, avec les bons critères.",
+    "quote": "La majorité des activités qui existent autour de vous ne font pas de pub. Elles sont là, vous ne saviez juste pas où chercher.",
     "card1Title": "Les activités de base à faire autour de chez soi",
     "card1Text": "<p class='text-sm text-muted-foreground leading-relaxed'>Avant de parler des pépites cachées, il y a des classiques qu'on sous-estime à force de les croire trop ordinaires. Un parc bien fréquenté un dimanche matin. Une piscine municipale par grosse chaleur. Une randonnée balisée qu'on n'a jamais faite malgré quinze ans dans la même ville.</p><p class='text-sm text-muted-foreground leading-relaxed'>Une bibliothèque qui organise des expositions, un marché local qu'on n'a pas pris le temps de vraiment visiter. Ces activités sont gratuites ou presque, accessibles à pied, et elles sont là depuis toujours.</p><p class='text-sm text-muted-foreground leading-relaxed'>Notre outil les référence toutes, et il arrive souvent que le résultat le plus pertinent ne soit pas l'escape game à 30€ par personne, mais le point de vue sur la forêt à douze minutes à vélo que vous n'aviez jamais remarqué sur une carte.</p>",
     "card2Title": "Les activités en couple : sortir du pilote automatique",
@@ -176,13 +176,13 @@
     "f1Title": "Localisation & rayon",
     "f1Text": "Géolocalisation automatique ou saisie manuelle. Rayon de 1 à 5 km. Mode de déplacement : à pied, vélo, voiture, transports.",
     "f2Title": "Composition du groupe",
-    "f2Text": "Solo, couple, famille avec enfants, amis, team building. Si vous avez des enfants, indiquez leur âge — ça change vraiment les suggestions proposées.",
+    "f2Text": "Solo, couple, famille avec enfants, amis, team building. Si vous avez des enfants, indiquez leur âge, ça change vraiment les suggestions proposées.",
     "f3Title": "Budget par personne",
     "f3Text": "Du gratuit à plus de 50€ par personne. L'outil estime les tarifs de chaque activité et filtre en conséquence, avec une tolérance paramétrable.",
     "f4Title": "Ambiance souhaitée",
     "f4Text": "Calme et détente, fun et festif, culturel, adrénaline, romantique, familial. Ce filtre modifie le classement bien plus efficacement qu'un simple filtre par catégorie.",
     "f5Title": "Durée disponible",
-    "f5Text": "Moins d'une heure, une à deux heures, demi-journée, journée entière. L'outil écarte les activités incompatibles avec votre créneau — sans que vous ayez à le vérifier vous-même."
+    "f5Text": "Moins d'une heure, une à deux heures, demi-journée, journée entière. L'outil écarte les activités incompatibles avec votre créneau, sans que vous ayez à le vérifier vous-même."
   },
   "ctaFinal": {
     "title": "Prêt à découvrir ce qui vous attend ?",

@@ -92,7 +92,7 @@ function injectIntoArticle(filePath, signKey, lang, zodiacData) {
 
   // Check if already injected
   if (content.includes(sectionId)) {
-    console.log(`  [skip] ${filePath} — already has detailed section`);
+    console.log(`  [skip] ${filePath}, already has detailed section`);
     return false;
   }
 
@@ -124,7 +124,7 @@ function injectIntoArticle(filePath, signKey, lang, zodiacData) {
   }
 
   if (insertPoint === -1) {
-    console.warn(`  [warn] ${filePath} — could not find discover-more section`);
+    console.warn(`  [warn] ${filePath}, could not find discover-more section`);
     return false;
   }
 

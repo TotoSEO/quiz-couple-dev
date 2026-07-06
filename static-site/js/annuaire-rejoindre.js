@@ -1,5 +1,5 @@
 /**
- * Annuaire — Multi-step registration form
+ * Annuaire, Multi-step registration form
  * Handles: step navigation, validation, char counters, recap,
  *          Supabase auth registration, profile creation, photo upload
  *          Bubble selectors for methods (specialty-specific) and languages

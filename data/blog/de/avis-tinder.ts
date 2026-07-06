@@ -18,7 +18,7 @@ const article: BlogArticleData = {
     `Tinder bleibt die App mit den meisten Nutzern in Deutschland, aber das reicht nicht mehr aus, um die beste zu sein.`,
     `Die kostenlose Version ist absichtlich eingeschränkt: Ohne Abo existierst du kaum.`,
     `Fake-Profile und Bots sind ein echtes Problem und auch 2026 noch ungelöst.`,
-    `Ghosting ist zur kulturellen Norm der App geworden — bereite dich psychologisch darauf vor.`,
+    `Ghosting ist zur kulturellen Norm der App geworden, bereite dich psychologisch darauf vor.`,
     `Wenn du über 40 bist oder außerhalb von Großstädten lebst, lass lieber die Finger davon.`,
     `6 Dates in 1 Jahr mit einem gepflegten Profil in einer Großstadt. Das ist anständig, aber nicht spektakulär.`,
   ],

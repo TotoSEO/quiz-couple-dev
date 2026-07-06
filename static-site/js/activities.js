@@ -210,7 +210,7 @@
           });
         },
         function(err) {
-          // On mobile Safari, high accuracy often fails — retry with low accuracy
+          // On mobile Safari, high accuracy often fails, retry with low accuracy
           if (err && err.code !== 1) {
             navigator.geolocation.getCurrentPosition(
               function(pos) {
@@ -481,7 +481,7 @@
     ));
     rowGrid.appendChild(budgetBlock);
 
-    // Group (composition only — groupSize is derived)
+    // Group (composition only, groupSize is derived)
     var groupBlock = el('div', 'rounded-xl border border-border bg-card/50 p-5 space-y-3');
     var groupTitle = el('h3', 'font-semibold text-sm');
     groupTitle.textContent = tr('form.groupComposition', 'Composition du groupe');
@@ -928,7 +928,7 @@
     if (state.activityTypes.length <= 3 && state.budget !== 'indifferent') {
       return tr('results.expandedGeneric', 'La combinaison de vos filtres est assez restrictive dans cette zone. Essayez d\'assouplir un critere ou d\'elargir le rayon.');
     }
-    return tr('results.expandedRadius', 'Peu d\'activites trouvees dans votre rayon — on a elargi la zone de recherche.');
+    return tr('results.expandedRadius', 'Peu d\'activites trouvees dans votre rayon, on a elargi la zone de recherche.');
   }
 
   // ── Activity card ───────────────────────────────────────────

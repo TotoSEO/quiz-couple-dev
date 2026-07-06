@@ -9,7 +9,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Sitemap XML — Quiz Couple</title>
+  <title>Sitemap XML, Quiz Couple</title>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#faf9fc;color:#1a0d2e;line-height:1.6;padding:2rem}
@@ -27,10 +27,10 @@
 </head>
 <body>
 <div class="container">
-  <h1>Sitemap XML — Quiz Couple</h1>
+  <h1>Sitemap XML, Quiz Couple</h1>
   <xsl:choose>
     <xsl:when test="sitemap:sitemapindex">
-      <p class="info">Sitemap index — <xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/> sitemaps</p>
+      <p class="info">Sitemap index, <xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/> sitemaps</p>
       <table>
         <tr><th>Sitemap</th></tr>
         <xsl:for-each select="sitemap:sitemapindex/sitemap:sitemap">

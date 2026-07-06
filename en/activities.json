@@ -3,7 +3,7 @@
     "badge": "Free",
     "badgeGeo": "Geolocated",
     "title": "Find couple activities near you!",
-    "subtitle": "Date ideas close to you — tonight, this weekend, or right now.",
+    "subtitle": "Date ideas close to you, tonight, this weekend, or right now.",
     "cta": "Start searching"
   },
   "intro": {
@@ -96,7 +96,7 @@
     "count": "{count} activities found",
     "countSingular": "1 activity found",
     "noResults": "No activities found. Try broadening your criteria.",
-    "expandedRadius": "Few activities found within your radius — we've expanded the search area.",
+    "expandedRadius": "Few activities found within your radius, we've expanded the search area.",
     "expandedBudgetFree": "Free activities are often natural or public spaces, sometimes poorly listed. Try expanding the radius.",
     "expandedBudgetSmall": "Low-budget activities are rarer in some areas. We've expanded the radius to find more.",
     "expandedCategories": "The chosen activity type is underrepresented in this area. We've broadened the search to offer you results.",
@@ -142,13 +142,13 @@
     "step2Title": "A smart search engine",
     "step2Text": "The tool doesn't just return a raw list. It calculates what truly matches your current situation, taking into account opening hours, your budget and your preferences.",
     "step3Title": "Thousands of listed venues",
-    "step3Text": "Parks, museums, escape rooms, spas, hiking trails, restaurants, water sports centres, workshops — thousands of activities near you, including those that never show up in the usual search results."
+    "step3Text": "Parks, museums, escape rooms, spas, hiking trails, restaurants, water sports centres, workshops, thousands of activities near you, including those that never show up in the usual search results."
   },
   "seoContent": {
     "title": "Finding activities near you: why is it always so complicated?",
-    "p1": "There's a paradox that many people experience without ever putting it into words. They've lived somewhere for years, they know their city and its surroundings, and yet when the question comes up — \"what shall we do this weekend?\" — the answer is always the same. The same restaurant. The same cinema. The same walk.",
-    "p2": "It's not laziness. <strong>It's an information problem.</strong> Your area is full of activities you've never tried — simply because nothing ever pointed them out to you at the right time, with the right criteria.",
-    "quote": "Most of the activities that exist around you don't advertise. They're there — you just didn't know where to look.",
+    "p1": "There's a paradox that many people experience without ever putting it into words. They've lived somewhere for years, they know their city and its surroundings, and yet when the question comes up, \"what shall we do this weekend?\", the answer is always the same. The same restaurant. The same cinema. The same walk.",
+    "p2": "It's not laziness. <strong>It's an information problem.</strong> Your area is full of activities you've never tried, simply because nothing ever pointed them out to you at the right time, with the right criteria.",
+    "quote": "Most of the activities that exist around you don't advertise. They're there, you just didn't know where to look.",
     "card1Title": "The everyday activities right on your doorstep",
     "card1Text": "<p class='text-sm text-muted-foreground leading-relaxed'>Before we talk about hidden gems, there are classics that we underestimate because we think they're too ordinary. A well-frequented park on a Sunday morning. The local swimming pool on a scorching day. A marked hiking trail you've never done despite fifteen years in the same town.</p><p class='text-sm text-muted-foreground leading-relaxed'>A library that hosts exhibitions, a local market you've never really taken the time to explore. These activities are free or nearly so, accessible on foot, and they've been there all along.</p><p class='text-sm text-muted-foreground leading-relaxed'>Our tool lists them all, and it often turns out that the most relevant result isn't the escape room at 30 euros per person, but the forest viewpoint twelve minutes away by bike that you'd never noticed on a map.</p>",
     "card2Title": "Couple activities: breaking out of autopilot",
@@ -175,17 +175,17 @@
     "f1Title": "Location & radius",
     "f1Text": "Automatic geolocation or manual entry. Radius from 1 to 5 km. Travel mode: walking, cycling, driving, public transport.",
     "f2Title": "Group composition",
-    "f2Text": "Solo, couple, family with children, friends, team building. If you have children, enter their age — it genuinely changes the suggestions.",
+    "f2Text": "Solo, couple, family with children, friends, team building. If you have children, enter their age, it genuinely changes the suggestions.",
     "f3Title": "Budget per person",
     "f3Text": "From free to over 50 euros per person. The tool estimates the price of each activity and filters accordingly, with an adjustable tolerance.",
     "f4Title": "Desired atmosphere",
     "f4Text": "Calm and relaxing, fun and festive, cultural, adrenaline, romantic, family-friendly. This filter adjusts the ranking far more effectively than a simple category filter.",
     "f5Title": "Available time",
-    "f5Text": "Less than an hour, one to two hours, half a day, full day. The tool excludes activities that don't fit your time slot — without you having to check yourself."
+    "f5Text": "Less than an hour, one to two hours, half a day, full day. The tool excludes activities that don't fit your time slot, without you having to check yourself."
   },
   "ctaFinal": {
     "title": "Ready to discover what's waiting for you?",
-    "text": "Most people who use this tool for the first time come away with at least one surprise — a place they didn't know about that matches exactly what they were looking for without knowing how to put it into words. Enter your location, choose your filters, and let the tool do the rest.",
+    "text": "Most people who use this tool for the first time come away with at least one surprise, a place they didn't know about that matches exactly what they were looking for without knowing how to put it into words. Enter your location, choose your filters, and let the tool do the rest.",
     "cta": "Start searching",
     "note": "Free, no sign-up required."
   },

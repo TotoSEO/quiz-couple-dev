@@ -18,7 +18,7 @@ const article: BlogArticleData = {
     `Tinder remains the app with the largest number of users in France, but that is no longer enough to make it the best.`,
     `The free version is intentionally restricted: without a subscription, you barely exist.`,
     `Fake profiles and bots are a real and still unresolved problem in 2026.`,
-    `Ghosting has become the cultural norm of the app — prepare yourself psychologically.`,
+    `Ghosting has become the cultural norm of the app, prepare yourself psychologically.`,
     `If you are over 40 or live outside a major city, move along.`,
     `6 meetings in 1 year with a polished profile in a large city. It is honest, but not spectacular.`,
   ],
@@ -91,9 +91,9 @@ const article: BlogArticleData = {
     {
       id: 'what-tinder-is-for-those-just-arriving',
       title: `What Tinder is, for those just arriving`,
-      content: `<p><strong>Tinder is an app launched in 2012</strong>, acquired by the Match Group (which also owns Meetic, OkCupid, Hinge). Its premise is simple: a profile with a few photos, a short bio, and a swipe system — right if you like the profile, left if you're not interested. When two people like each other, it's a "match" and a conversation can begin.</p>
+      content: `<p><strong>Tinder is an app launched in 2012</strong>, acquired by the Match Group (which also owns Meetic, OkCupid, Hinge). Its premise is simple: a profile with a few photos, a short bio, and a swipe system, right if you like the profile, left if you're not interested. When two people like each other, it's a "match" and a conversation can begin.</p>
 
-<p>This mechanism, at the time, was a brilliant idea. <strong>Before Tinder, dating sites</strong> looked like endless forms. Tinder simplified everything. Too simplified, some might say — but we'll come back to that.</p>
+<p>This mechanism, at the time, was a brilliant idea. <strong>Before Tinder, dating sites</strong> looked like endless forms. Tinder simplified everything. Too simplified, some might say, but we'll come back to that.</p>
 
 <p>The application is available on iOS and Android, <strong>free to download</strong>, with several paid subscription tiers.</p>`,
     },
@@ -149,7 +149,7 @@ const article: BlogArticleData = {
         {
           id: 'tinder-plus-gold-platinum-the-subscription-comparison',
           title: `Tinder Plus, Gold, Platinum: the subscription comparison`,
-          content: `<p><strong>Prices vary by age</strong>, location, and gender — yes, Tinder practices discriminatory pricing based on age, with over-30s paying significantly more. Not very transparent, but it's the reality.</p>
+          content: `<p><strong>Prices vary by age</strong>, location, and gender, yes, Tinder practices discriminatory pricing based on age, with over-30s paying significantly more. Not very transparent, but it's the reality.</p>
 
 <div>
 <table>
@@ -191,12 +191,12 @@ const article: BlogArticleData = {
 </table>
 </div>
 
-<p>Rewind (canceling an accidental swipe) is useful. <strong>Passport can be</strong> if you travel often. Seeing who liked you (Gold)? Now that's clearly the feature that makes the difference — instead of swiping randomly, you directly check the profiles of interested people.</p>
+<p>Rewind (canceling an accidental swipe) is useful. <strong>Passport can be</strong> if you travel often. Seeing who liked you (Gold)? Now that's clearly the feature that makes the difference, instead of swiping randomly, you directly check the profiles of interested people.</p>
 
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">💡 Tip</p>
 
-<p>If you want to test a subscription, start with Gold rather than Platinum. The message before match (Platinum) only has a real impact if you actually write something relevant — and honestly, few people take the time to do that.</p>
+<p>If you want to test a subscription, start with Gold rather than Platinum. The message before match (Platinum) only has a real impact if you actually write something relevant, and honestly, few people take the time to do that.</p>
 </aside>`,
         },
       ],
@@ -209,7 +209,7 @@ const article: BlogArticleData = {
         {
           id: 'the-mass-of-users-matters',
           title: `The mass of users matters`,
-          content: `<p><strong>This is objectively the biggest advantage</strong> of Tinder. With tens of millions of active users worldwide and a strong presence in France, the probability of finding profiles that match what you're looking for is higher than on any other app. In major cities — Paris, Lyon, Bordeaux, Marseille — the user density is high enough to have options.</p>
+          content: `<p><strong>This is objectively the biggest advantage</strong> of Tinder. With tens of millions of active users worldwide and a strong presence in France, the probability of finding profiles that match what you're looking for is higher than on any other app. In major cities, Paris, Lyon, Bordeaux, Marseille, the user density is high enough to have options.</p>
 
 <p><strong>Outside the metropolises, it's a different story.</strong> Tinder loses its appeal in rural areas or small towns, where the pool of profiles is quickly exhausted.</p>`,
         },
@@ -218,12 +218,12 @@ const article: BlogArticleData = {
           title: `Simplicity remains an asset`,
           content: `<p><strong>The swipe hasn't aged a bit</strong> in terms of UX. Tinder's interface is smooth, intuitive, fast. You can use the app on public transport, between two meetings, without needing to spend an hour on it. It's designed for speed, and it works.</p>
 
-<p>Compared to apps like Hinge or Bumble that require more investment in the profile, <strong>Tinder remains the "zero friction" app</strong> — which appeals to those who don't want to spend 45 minutes filling out questionnaires.</p>`,
+<p>Compared to apps like Hinge or Bumble that require more investment in the profile, <strong>Tinder remains the "zero friction" app</strong>, which appeals to those who don't want to spend 45 minutes filling out questionnaires.</p>`,
         },
         {
           id: 'a-universal-community-in-a-good-way',
           title: `A universal community (in a good way)`,
-          content: `<p><strong>All sexual orientations are present</strong> since 2016. Tinder is not focused on a niche. Gay, straight, bi, non-binary, looking for a long-term relationship or something less defined — everyone is there. On more specialized apps, the choice is often more restricted.</p>`,
+          content: `<p><strong>All sexual orientations are present</strong> since 2016. Tinder is not focused on a niche. Gay, straight, bi, non-binary, looking for a long-term relationship or something less defined, everyone is there. On more specialized apps, the choice is often more restricted.</p>`,
         },
       ],
     },
@@ -241,7 +241,7 @@ const article: BlogArticleData = {
           title: `Aggressive monetization`,
           content: `<p><strong>This is our biggest criticism</strong> against Tinder, and it's not a minor one. The app has clearly chosen a model where user frustration is a feature, not a bug. Boosts, super likes sold individually, stacked subscriptions... Tinder generates money by giving you the impression that without paying, you don't exist.</p>
 
-<p>The free version is so depleted in 2026 <strong>that it feels like a restricted demo</strong> to push you to pull out your credit card. And the prices charged — which vary according to your age without it being clearly displayed — are frankly excessive for what it actually brings.</p>`,
+<p>The free version is so depleted in 2026 <strong>that it feels like a restricted demo</strong> to push you to pull out your credit card. And the prices charged, which vary according to your age without it being clearly displayed, are frankly excessive for what it actually brings.</p>`,
         },
         {
           id: 'fake-profiles-and-bots-an-unresolved-problem',
@@ -255,14 +255,14 @@ const article: BlogArticleData = {
           title: `Ghosting elevated to a cultural norm`,
           content: `<p><strong>Tinder has normalized ghosting.</strong> The sheer amount of matches encourages treating conversations as interchangeable. You match with someone, exchange two messages, and then nothing. No explanation, no polite refusal. Just silence.</p>
 
-<p>It's not entirely the app's fault; it's also human behavior. But <strong>the design encourages consumption</strong> — accumulating matches like points. And for many users, it's exhausting.</p>`,
+<p>It's not entirely the app's fault; it's also human behavior. But <strong>the design encourages consumption</strong>, accumulating matches like points. And for many users, it's exhausting.</p>`,
         },
         {
           id: 'tinder-is-not-for-everyone',
           title: `Tinder is not for everyone`,
           content: `<p><strong>Those over 40-45</strong> will have a hard time finding what they're looking for. The user base is massively concentrated between 18 and 35 years old. If you're looking for dates in your age bracket beyond that, you risk swiping for a long time for not much. Other platforms like Meetic or EliteMeetic target these profiles better.</p>
 
-<p>The same goes for those looking for a serious and exclusive relationship. <strong>Tinder is not designed for that.</strong> It happens — there are thousands of couples who met on Tinder — but the app's culture is geared more towards casual dating.</p>`,
+<p>The same goes for those looking for a serious and exclusive relationship. <strong>Tinder is not designed for that.</strong> It happens, there are thousands of couples who met on Tinder, but the app's culture is geared more towards casual dating.</p>`,
         },
       ],
     },
@@ -273,7 +273,7 @@ const article: BlogArticleData = {
 
 <p><strong>Hinge</strong> positions itself as the serious alternative, with more detailed profiles, "prompts" to start conversations, and an algorithm that takes your post-date feedback into account. It's better designed for those looking for a relationship. And it is (still) free in its basic version with decent features.</p>
 
-<p><strong>Bumble</strong> requires women to send the first message — an original concept that reduced harassment on the female side. Less volume than Tinder, but often a more respectful atmosphere.</p>
+<p><strong>Bumble</strong> requires women to send the first message, an original concept that reduced harassment on the female side. Less volume than Tinder, but often a more respectful atmosphere.</p>
 
 <p><strong>Happn</strong> relies on geolocation and "crossing paths" in real life. Useful in the city, a gimmick outside.</p>
 

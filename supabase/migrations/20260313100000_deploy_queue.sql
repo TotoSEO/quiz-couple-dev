@@ -1,5 +1,5 @@
 -- ============================================================
--- DEPLOY QUEUE — Debounced deployment system
+-- DEPLOY QUEUE, Debounced deployment system
 -- Instead of triggering a build on every action, we queue
 -- deploy requests and process them with a cron job every 2 min.
 -- This prevents 50 builds when 50 actions happen simultaneously.

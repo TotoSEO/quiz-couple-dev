@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Mon copain ne fait pas d'effort : que faire vraiment ?",
   metaDescription: "Tu fais tout, lui rien. Ou presque. Pourquoi certains hommes arrêtent de faire des efforts, comment le reconnaître, quoi en penser et quoi faire concrètement.",
   featuredImage: '',
-  featuredImageAlt: "Mon copain ne fait pas d'effort — comprendre et agir",
+  featuredImageAlt: "Mon copain ne fait pas d'effort, comprendre et agir",
   publishedAt: '2026-03-08',
   author: AUTHORS['lucie-courtin'],
   excerpt: "Le déséquilibre d'effort dans un couple est l'une des causes les plus fréquentes de rupture, précisément parce qu'il s'installe progressivement et qu'on a tendance à s'y adapter.",

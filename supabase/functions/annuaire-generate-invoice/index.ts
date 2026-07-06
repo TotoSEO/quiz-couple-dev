@@ -102,12 +102,12 @@ serve(async (req: Request) => {
     let invoiceRecordId: string;
 
     if (existing) {
-      // Record already created by webhook — reuse it
+      // Record already created by webhook, reuse it
       invoiceNumber = existing.invoice_number;
       invoiceRecordId = existing.id;
       console.log(`[invoice] Record already exists: ${invoiceNumber}, generating PDF`);
     } else {
-      // No record yet — create one (fallback if webhook didn't create it)
+      // No record yet, create one (fallback if webhook didn't create it)
       // Generate invoice number (retry RPC up to 3 times to avoid unsafe fallback)
       let rpcAttempts = 0;
       while (rpcAttempts < 3) {
@@ -425,7 +425,7 @@ async function generateInvoicePdf(data: PdfData): Promise<Uint8Array> {
   // Main line item
   const planLabel = PLAN_LABELS[data.plan] || data.plan;
   const periodLabel = data.periodType === 'annual' ? 'annuel' : 'mensuel';
-  const designation = `Abonnement ${periodLabel} — ${planLabel}`;
+  const designation = `Abonnement ${periodLabel}, ${planLabel}`;
   // amountHt is after discount; line item shows pre-discount price
   const lineHt = data.amountHt + data.discountAmount;
 
@@ -506,7 +506,7 @@ async function generateInvoicePdf(data: PdfData): Promise<Uint8Array> {
   line(margin, footerY + 20, width - margin, 0.5, lightGray);
 
   const footerLine0 = 'TVA non applicable, art. 293 B du CGI';
-  const footerLine1 = 'Quiz Couple Annuaire — annuaire.quiz-couple.com';
+  const footerLine1 = 'Quiz Couple Annuaire, annuaire.quiz-couple.com';
   const footerLine2 = 'En cas de question sur cette facture, contactez-nous.';
 
   const f0w = fontBold.widthOfTextAtSize(footerLine0, 8);
@@ -557,7 +557,7 @@ async function sendInvoiceEmail(data: EmailData): Promise<void> {
           </p>
         </div>
         <div style="text-align:center;margin-top:2rem;padding:1rem;">
-          <p style="font-size:0.75rem;color:#999;margin:0;">Quiz Couple — Annuaire des professionnels du couple en France</p>
+          <p style="font-size:0.75rem;color:#999;margin:0;">Quiz Couple, Annuaire des professionnels du couple en France</p>
           <p style="font-size:0.75rem;color:#bbb;margin:0.5rem 0 0;"><a href="https://annuaire.quiz-couple.com" style="color:#bbb;">annuaire.quiz-couple.com</a></p>
         </div>
       </div>
@@ -574,7 +574,7 @@ async function sendInvoiceEmail(data: EmailData): Promise<void> {
     body: JSON.stringify({
       from: 'Annuaire Quiz Couple <annuaire@quiz-couple.com>',
       to: [data.to],
-      subject: `Facture ${data.invoiceNumber} — Annuaire Quiz Couple`,
+      subject: `Facture ${data.invoiceNumber}, Annuaire Quiz Couple`,
       html,
       attachments: [{
         filename: data.pdfFilename,

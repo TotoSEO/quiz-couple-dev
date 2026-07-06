@@ -1,5 +1,5 @@
 /**
- * Annuaire Quiz Couple — Client-side JavaScript
+ * Annuaire Quiz Couple, Client-side JavaScript
  * Handles: dropdowns, mobile menu, theme toggle, map, FAQ, animations
  */
 (function () {
@@ -283,7 +283,7 @@
     return dropdown;
   }
 
-  // Hero search — fills inputs on dropdown click, submits to /recherche/
+  // Hero search, fills inputs on dropdown click, submits to /recherche/
   var heroForm = document.getElementById('hero-search-form');
   if (heroForm) {
     var heroQ = heroForm.querySelector('input[name="q"]');
@@ -408,7 +408,7 @@
       if (!data || !data.access_token) return;
     } catch (e) { return; }
 
-    // User is logged in — swap to "Voir ma fiche"
+    // User is logged in, swap to "Voir ma fiche"
     btns.forEach(function (btn) {
       // Update icon to user profile icon
       var svg = btn.querySelector('svg');

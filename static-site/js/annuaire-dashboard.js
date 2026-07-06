@@ -1,5 +1,5 @@
 /**
- * Annuaire Dashboard — Client-side JavaScript
+ * Annuaire Dashboard, Client-side JavaScript
  * Handles: Auth, Profile CRUD, Photo upload, Stats, Forgot/Reset password
  * Bubble selectors for methods, languages, consultation modes
  */
@@ -1071,7 +1071,7 @@
               currentProfile = res.profile;
               await supabase.auth.updateUser({ data: { has_pending_profile: false } });
             } else if (res.error) {
-              // Profile may already exist (409) — reload it
+              // Profile may already exist (409), reload it
               currentProfile = await loadProfile(session.access_token);
               if (currentProfile) {
                 await supabase.auth.updateUser({ data: { has_pending_profile: false } });
@@ -1489,7 +1489,7 @@
         tr.style.borderBottom = '1px solid hsl(var(--ann-border) / 0.5)';
         var date = new Date(inv.paid_at || inv.created_at).toLocaleDateString('fr-FR');
         var amount = (inv.amount_ttc / 100).toFixed(2).replace('.', ',') + ' €';
-        var plan = (planLabels[inv.plan] || inv.plan) + ' — ' + (periodLabels[inv.period] || inv.period);
+        var plan = (planLabels[inv.plan] || inv.plan) + ', ' + (periodLabels[inv.period] || inv.period);
 
         var pdfCell = '';
         if (inv.pdf_storage_path) {
@@ -1614,7 +1614,7 @@
       statusEl.style.background = 'hsl(40 90% 55% / 0.08)';
       statusEl.style.border = '1px solid hsl(40 90% 55% / 0.25)';
       statusEl.style.color = 'hsl(40 70% 35%)';
-      statusEl.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Informations incomplètes — obligatoires pour souscrire à un abonnement payant';
+      statusEl.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:1rem;height:1rem;flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Informations incomplètes, obligatoires pour souscrire à un abonnement payant';
     }
   }
 
@@ -2097,7 +2097,7 @@
             if (bannerEl) hide(bannerEl);
             try { localStorage.setItem('ann_review_done', '1'); } catch(e) {}
           } else if (res.status === 409 || res.status === 400) {
-            // Duplicate review — already reviewed
+            // Duplicate review, already reviewed
             hide($('review-modal-form-view'));
             show($('review-modal-success-view'));
             $('review-modal-success-view').querySelector('h2').textContent = 'Vous avez deja laisse un avis !';

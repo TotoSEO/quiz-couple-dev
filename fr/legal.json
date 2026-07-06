@@ -24,7 +24,7 @@
     "s2_2Item2Label": "Date d'utilisation :",
     "s2_2Item2Text": "Pour vérifier la limite quotidienne",
     "s2_2Important": "Important :",
-    "s2_2ImportantText": "Ces données techniques sont conservées 7 jours maximum puis automatiquement supprimées. Le contenu de vos descriptions et versions des faits n'est <strong>jamais stocké</strong> sur nos serveurs — il est uniquement transmis à l'IA pour analyse puis immédiatement effacé.",
+    "s2_2ImportantText": "Ces données techniques sont conservées 7 jours maximum puis automatiquement supprimées. Le contenu de vos descriptions et versions des faits n'est <strong>jamais stocké</strong> sur nos serveurs, il est uniquement transmis à l'IA pour analyse puis immédiatement effacé.",
     "s2_3Title": "2.3 Données collectées via les formulaires de téléchargement",
     "s2_3Intro": "Lorsque vous demandez à recevoir un contenu gratuit (e-book, guide), nous collectons les informations suivantes avec votre consentement explicite :",
     "s2_3Item1Label": "Prénom :",

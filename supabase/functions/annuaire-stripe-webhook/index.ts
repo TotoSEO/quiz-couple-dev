@@ -151,7 +151,7 @@ serve(async (req: Request) => {
             : new Date(Date.now() + 30 * 24 * 3600 * 1000).toISOString();
         }
 
-        // Find the professional — try multiple strategies
+        // Find the professional, try multiple strategies
         let professionalId: string | null = null;
         const customerId = invoice.customer
           ? (typeof invoice.customer === 'string' ? invoice.customer : (invoice.customer as unknown as { id: string }).id)
@@ -221,7 +221,7 @@ serve(async (req: Request) => {
         }
 
         if (!professionalId) {
-          // THROW instead of break — Stripe will retry, giving checkout.session.completed time to save IDs
+          // THROW instead of break, Stripe will retry, giving checkout.session.completed time to save IDs
           throw new Error(`invoice.paid: CANNOT find professional. subscription=${subscriptionId}, customer=${customerId}. All 4 lookup strategies failed.`);
         }
 
@@ -273,7 +273,7 @@ serve(async (req: Request) => {
           .single();
 
         if (billingErr || !billingProfile) {
-          // THROW instead of break — this should never fail since we just found this professional
+          // THROW instead of break, this should never fail since we just found this professional
           throw new Error(`invoice.paid: Could not fetch billing profile for ${professionalId}: ${JSON.stringify(billingErr)}`);
         }
 
@@ -338,7 +338,7 @@ serve(async (req: Request) => {
               paid_at: paidAt,
             });
           if (insertErr) {
-            // Log but don't throw — still try to send email
+            // Log but don't throw, still try to send email
             console.error(`[webhook] Invoice INSERT error (code=${insertErr.code}):`, JSON.stringify(insertErr));
           } else {
             console.log(`[webhook] Invoice record created: ${invoiceNumber}`);
@@ -369,7 +369,7 @@ Votre facture PDF sera disponible dans votre <a href="https://annuaire.quiz-coup
 </p>
 </div>
 <div style="text-align:center;margin-top:2rem;">
-<p style="font-size:0.75rem;color:#999;">Quiz Couple — Annuaire des professionnels du couple en France</p>
+<p style="font-size:0.75rem;color:#999;">Quiz Couple, Annuaire des professionnels du couple en France</p>
 </div>
 </div></body></html>`;
 
@@ -383,7 +383,7 @@ Votre facture PDF sera disponible dans votre <a href="https://annuaire.quiz-coup
               body: JSON.stringify({
                 from: 'Annuaire Quiz Couple <annuaire@quiz-couple.com>',
                 to: [clientEmail],
-                subject: `Facture ${invoiceNumber} — Annuaire Quiz Couple`,
+                subject: `Facture ${invoiceNumber}, Annuaire Quiz Couple`,
                 html: emailHtml,
               }),
             });

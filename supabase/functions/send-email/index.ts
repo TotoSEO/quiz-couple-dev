@@ -78,7 +78,7 @@ function wrapInTemplate(content: string): string {
         <!-- Footer -->
         <div style="text-align:center;margin-top:2rem;padding:1rem;">
           <p style="font-size:0.75rem;color:#999;margin:0;">
-            Quiz Couple — Annuaire des professionnels du couple en France
+            Quiz Couple, Annuaire des professionnels du couple en France
           </p>
           <p style="font-size:0.75rem;color:#bbb;margin:0.5rem 0 0;">
             <a href="${SITE_URL}" style="color:#bbb;">annuaire.quiz-couple.com</a>
@@ -95,7 +95,7 @@ function wrapInTemplate(content: string): string {
 function confirmationEmail(email: string, confirmUrl: string): EmailPayload {
   return {
     to: email,
-    subject: 'Confirmez votre adresse email — Annuaire Quiz Couple',
+    subject: 'Confirmez votre adresse email, Annuaire Quiz Couple',
     html: wrapInTemplate(`
       <h1 style="color:#d6336c;font-size:1.5rem;margin:0 0 1rem;">Confirmez votre email</h1>
       <p style="font-size:1rem;line-height:1.6;color:#333;margin:0 0 1rem;">
@@ -120,7 +120,7 @@ function confirmationEmail(email: string, confirmUrl: string): EmailPayload {
 function passwordResetEmail(email: string, resetUrl: string): EmailPayload {
   return {
     to: email,
-    subject: 'Réinitialisation du mot de passe — Annuaire Quiz Couple',
+    subject: 'Réinitialisation du mot de passe, Annuaire Quiz Couple',
     html: wrapInTemplate(`
       <h1 style="color:#d6336c;font-size:1.5rem;margin:0 0 1rem;">Réinitialisation du mot de passe</h1>
       <p style="font-size:1rem;line-height:1.6;color:#333;margin:0 0 1rem;">
@@ -141,7 +141,7 @@ function passwordResetEmail(email: string, resetUrl: string): EmailPayload {
 function magicLinkEmail(email: string, magicUrl: string): EmailPayload {
   return {
     to: email,
-    subject: 'Lien de connexion — Annuaire Quiz Couple',
+    subject: 'Lien de connexion, Annuaire Quiz Couple',
     html: wrapInTemplate(`
       <h1 style="color:#d6336c;font-size:1.5rem;margin:0 0 1rem;">Connexion à votre espace</h1>
       <p style="font-size:1rem;line-height:1.6;color:#333;margin:0 0 1rem;">
@@ -174,7 +174,7 @@ serve(async (req) => {
 
     const body = await req.json();
 
-    // ── Direct email sending (internal use only — requires service role key) ──
+    // ── Direct email sending (internal use only, requires service role key) ──
     // Used by admin-annuaire for approval/rejection notifications.
     if (body.to && body.subject && body.html) {
       const authHeader = req.headers.get('authorization') || '';

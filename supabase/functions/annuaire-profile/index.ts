@@ -634,7 +634,7 @@ function validateProfileData(body: Record<string, unknown>, isUpdate = false): R
     result.billing_address = sanitize(body.billing_address, 500) || null;
   }
 
-  // is_published is admin-only — users cannot set their own publication status
+  // is_published is admin-only, users cannot set their own publication status
 
   return result;
 }

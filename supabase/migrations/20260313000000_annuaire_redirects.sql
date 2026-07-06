@@ -1,5 +1,5 @@
 -- ============================================================
--- ANNUAIRE REDIRECTS — 301 redirects for deleted professionals
+-- ANNUAIRE REDIRECTS, 301 redirects for deleted professionals
 -- When a professional is deleted (account deletion or admin),
 -- store their old URL path so the build can generate _redirects.
 -- ============================================================

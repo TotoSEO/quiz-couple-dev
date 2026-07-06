@@ -30,6 +30,13 @@ let reviewStats = { avg: '0', count: '0' };
 // Map: "internalSlug-lang" → { title, metaTitle, metaDescription, featuredImageAlt, excerpt }
 let articleOverrides = {};
 
+// Site-wide typography rule: no em dashes in visible text, replace with a comma.
+// Applied to content fetched from Supabase, which the repo-wide cleanup can't reach.
+function stripEmDashes(text) {
+  if (typeof text !== 'string') return text;
+  return text.replace(/ — /g, ', ').replace(/(\w)—(\w)/g, '$1, $2');
+}
+
 async function fetchReviewStats() {
   try {
     const res = await fetch(
@@ -44,7 +51,7 @@ async function fetchReviewStats() {
     reviewStats = { avg, count: String(reviews.length) };
     console.log(`[reviews] Fetched ${reviews.length} approved reviews (avg: ${avg})`);
   } catch (e) {
-    console.warn(`[reviews] Could not fetch review stats: ${e.message} — using defaults`);
+    console.warn(`[reviews] Could not fetch review stats: ${e.message}, using defaults`);
   }
 }
 
@@ -64,11 +71,11 @@ async function fetchArticleOverrides() {
         if (tr.title || tr.meta_title || tr.meta_description) {
           const key = `${art.internal_slug}-${tr.lang}`;
           articleOverrides[key] = {
-            title: tr.title || undefined,
-            metaTitle: tr.meta_title || undefined,
-            metaDescription: tr.meta_description || undefined,
-            featuredImageAlt: tr.featured_image_alt || undefined,
-            excerpt: tr.excerpt || undefined,
+            title: stripEmDashes(tr.title) || undefined,
+            metaTitle: stripEmDashes(tr.meta_title) || undefined,
+            metaDescription: stripEmDashes(tr.meta_description) || undefined,
+            featuredImageAlt: stripEmDashes(tr.featured_image_alt) || undefined,
+            excerpt: stripEmDashes(tr.excerpt) || undefined,
             slug: tr.slug || undefined,
             featuredImage: art.featured_image_url || undefined,
           };
@@ -78,7 +85,7 @@ async function fetchArticleOverrides() {
     }
     console.log(`[blog] Fetched ${count} article translation overrides from Supabase (${articles.length} articles)`);
   } catch (e) {
-    console.warn(`[blog] Could not fetch article overrides from Supabase: ${e.message} — using TS files only`);
+    console.warn(`[blog] Could not fetch article overrides from Supabase: ${e.message}, using TS files only`);
   }
 }
 
@@ -89,6 +96,7 @@ function ensureDir(dirPath) {
 }
 
 async function minifyHtml(html) {
+  html = stripEmDashes(html);
   try {
     return await minify(html, {
       collapseWhitespace: true,
@@ -173,21 +181,21 @@ async function generatePage(routeKey, lang) {
     description = blogMeta[lang]?.description || blogMeta.fr.description;
   } else if (routeKey === 'about') {
     const aboutMeta = {
-      fr: { title: 'Qui sommes-nous ? L\'équipe derrière Quiz Couple | notre histoire', description: 'Lucie et Mathieu Courtin, co-fondateurs de Quiz Couple. Pourquoi on a créé ce site, notre mission, et comment on travaille — en toute transparence.' },
-      en: { title: 'About Us — The People Behind Quiz Couple', description: 'Meet Lucie and Mathieu Courtin, co-founders of Quiz Couple. Our mission, our story, and how we work — no sugarcoating.' },
-      es: { title: 'Quiénes Somos — El Equipo de Quiz Couple', description: 'Lucie y Mathieu Courtin, cofundadores de Quiz Couple. Nuestra misión y cómo trabajamos — sin rodeos.' },
-      de: { title: 'Über Uns — Das Team von Quiz Couple', description: 'Lucie und Mathieu Courtin, Gründer von Quiz Couple. Unsere Mission und wie wir arbeiten — ehrlich und direkt.' },
-      it: { title: 'Chi Siamo — Il Team di Quiz Couple', description: 'Lucie e Mathieu Courtin, co-fondatori di Quiz Couple. La nostra missione e come lavoriamo — in trasparenza.' },
+      fr: { title: 'Qui sommes-nous ? L\'équipe derrière Quiz Couple | notre histoire', description: 'Lucie et Mathieu Courtin, co-fondateurs de Quiz Couple. Pourquoi on a créé ce site, notre mission, et comment on travaille, en toute transparence.' },
+      en: { title: 'About Us, The People Behind Quiz Couple', description: 'Meet Lucie and Mathieu Courtin, co-founders of Quiz Couple. Our mission, our story, and how we work, no sugarcoating.' },
+      es: { title: 'Quiénes Somos, El Equipo de Quiz Couple', description: 'Lucie y Mathieu Courtin, cofundadores de Quiz Couple. Nuestra misión y cómo trabajamos, sin rodeos.' },
+      de: { title: 'Über Uns, Das Team von Quiz Couple', description: 'Lucie und Mathieu Courtin, Gründer von Quiz Couple. Unsere Mission und wie wir arbeiten, ehrlich und direkt.' },
+      it: { title: 'Chi Siamo, Il Team di Quiz Couple', description: 'Lucie e Mathieu Courtin, co-fondatori di Quiz Couple. La nostra missione e come lavoriamo, in trasparenza.' },
     };
     title = aboutMeta[lang]?.title || aboutMeta.fr.title;
     description = aboutMeta[lang]?.description || aboutMeta.fr.description;
   } else if (routeKey === 'sitemap') {
     const sitemapMeta = {
-      fr: { title: 'Plan du site | Quiz Couple', description: 'Plan du site Quiz Couple — retrouvez toutes les pages, tests, quiz et articles du blog.' },
-      en: { title: 'Sitemap | Quiz Couple', description: 'Quiz Couple sitemap — find all pages, tests, quizzes and blog articles.' },
-      es: { title: 'Mapa del sitio | Quiz Couple', description: 'Mapa del sitio Quiz Couple — encuentra todas las páginas, tests, quiz y artículos del blog.' },
-      de: { title: 'Seitenverzeichnis | Quiz Couple', description: 'Quiz Couple Seitenverzeichnis — finde alle Seiten, Tests, Quiz und Blog-Artikel.' },
-      it: { title: 'Mappa del sito | Quiz Couple', description: 'Mappa del sito Quiz Couple — trova tutte le pagine, test, quiz e articoli del blog.' },
+      fr: { title: 'Plan du site | Quiz Couple', description: 'Plan du site Quiz Couple, retrouvez toutes les pages, tests, quiz et articles du blog.' },
+      en: { title: 'Sitemap | Quiz Couple', description: 'Quiz Couple sitemap, find all pages, tests, quizzes and blog articles.' },
+      es: { title: 'Mapa del sitio | Quiz Couple', description: 'Mapa del sitio Quiz Couple, encuentra todas las páginas, tests, quiz y artículos del blog.' },
+      de: { title: 'Seitenverzeichnis | Quiz Couple', description: 'Quiz Couple Seitenverzeichnis, finde alle Seiten, Tests, Quiz und Blog-Artikel.' },
+      it: { title: 'Mappa del sito | Quiz Couple', description: 'Mappa del sito Quiz Couple, trova tutte le pagine, test, quiz e articoli del blog.' },
     };
     title = sitemapMeta[lang]?.title || sitemapMeta.fr.title;
     description = sitemapMeta[lang]?.description || sitemapMeta.fr.description;
@@ -260,7 +268,7 @@ async function generatePage(routeKey, lang) {
       image: `${BASE_URL}/og-image.webp`,
       description: description,
     });
-    // AggregateRating — only include if we have real review data
+    // AggregateRating, only include if we have real review data
     const webApp = {
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
@@ -1093,7 +1101,7 @@ async function main() {
         results.push(result);
         const status = result.success ? '✓' : '✗';
         if (!result.success) {
-          console.log(`  ${status} ${result.route} — ${result.error}`);
+          console.log(`  ${status} ${result.route}, ${result.error}`);
         }
       }
     }
@@ -1109,7 +1117,7 @@ async function main() {
         results.push(result);
         const status = result.success ? '✓' : '✗';
         if (!result.success) {
-          console.log(`  ${status} ${result.route} — ${result.error}`);
+          console.log(`  ${status} ${result.route}, ${result.error}`);
         }
       }
     }
