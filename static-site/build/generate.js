@@ -564,8 +564,8 @@ function copyStaticAssets() {
     }
   }
 
-  // Copy public/blog/ and public/authors/ directories
-  for (const dir of ['blog', 'authors']) {
+  // Copy public/blog/, public/authors/ and public/quiz/ directories
+  for (const dir of ['blog', 'authors', 'quiz']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {
