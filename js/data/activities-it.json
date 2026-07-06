@@ -3,7 +3,7 @@
     "badge": "Gratuito",
     "badgeGeo": "Geolocalizzato",
     "title": "Trova attività di coppia vicino a te!",
-    "subtitle": "Idee per uscite a due vicino a te — stasera, questo weekend o adesso.",
+    "subtitle": "Idee per uscite a due vicino a te, stasera, questo weekend o adesso.",
     "cta": "Avvia la ricerca"
   },
   "intro": {
@@ -96,7 +96,7 @@
     "count": "{count} attività trovate",
     "countSingular": "1 attività trovata",
     "noResults": "Nessuna attività trovata. Prova ad ampliare i tuoi criteri.",
-    "expandedRadius": "Poche attività trovate nel tuo raggio — abbiamo ampliato la zona di ricerca.",
+    "expandedRadius": "Poche attività trovate nel tuo raggio, abbiamo ampliato la zona di ricerca.",
     "expandedBudgetFree": "Le attività gratuite sono spesso spazi naturali o pubblici, a volte poco censiti. Prova ad ampliare il raggio.",
     "expandedBudgetSmall": "Le attività a basso budget sono più rare in certe zone. Abbiamo ampliato il raggio per trovarne di più.",
     "expandedCategories": "Il tipo di attività scelto è poco rappresentato in questa zona. Abbiamo ampliato la ricerca per proporti dei risultati.",
@@ -142,13 +142,13 @@
     "step2Title": "Un motore che ragiona",
     "step2Text": "Lo strumento non ti restituisce un elenco grezzo. Calcola ciò che corrisponde davvero alla tua situazione del momento, tenendo conto degli orari di apertura, del tuo budget e delle tue preferenze.",
     "step3Title": "Migliaia di luoghi censiti",
-    "step3Text": "Parchi, musei, escape room, spa, sentieri escursionistici, ristoranti, centri nautici, laboratori — migliaia di attività vicino a te, comprese quelle che non compaiono mai nei risultati di ricerca abituali."
+    "step3Text": "Parchi, musei, escape room, spa, sentieri escursionistici, ristoranti, centri nautici, laboratori, migliaia di attività vicino a te, comprese quelle che non compaiono mai nei risultati di ricerca abituali."
   },
   "seoContent": {
     "title": "Trovare attività vicino a te: perché è sempre così complicato?",
     "p1": "C'è un paradosso che molte persone vivono senza mai riuscire a formularlo. Abitano da qualche parte da anni, conoscono la loro città e i dintorni, eppure quando arriva la domanda «cosa facciamo questo weekend?», la risposta è sempre la stessa. Lo stesso ristorante. Lo stesso cinema. La stessa passeggiata.",
-    "p2": "Non è pigrizia. <strong>È un problema di informazione.</strong> La tua zona è piena di attività che non hai mai provato — semplicemente perché nulla te le ha mai segnalate al momento giusto, con i criteri giusti.",
-    "quote": "La maggior parte delle attività che esistono intorno a te non fa pubblicità. Sono lì — semplicemente non sapevi dove cercare.",
+    "p2": "Non è pigrizia. <strong>È un problema di informazione.</strong> La tua zona è piena di attività che non hai mai provato, semplicemente perché nulla te le ha mai segnalate al momento giusto, con i criteri giusti.",
+    "quote": "La maggior parte delle attività che esistono intorno a te non fa pubblicità. Sono lì, semplicemente non sapevi dove cercare.",
     "card1Title": "Le attività di base a portata di mano",
     "card1Text": "<p class='text-sm text-muted-foreground leading-relaxed'>Prima di parlare di chicche nascoste, ci sono dei classici che sottovalutiamo perché li riteniamo troppo ordinari. Un parco frequentato la domenica mattina. La piscina comunale nelle giornate di gran caldo. Un sentiero segnalato che non hai mai percorso nonostante quindici anni nella stessa città.</p><p class='text-sm text-muted-foreground leading-relaxed'>Una biblioteca che organizza mostre, un mercato locale che non ti sei mai preso il tempo di visitare davvero. Queste attività sono gratuite o quasi, raggiungibili a piedi, e sono lì da sempre.</p><p class='text-sm text-muted-foreground leading-relaxed'>Il nostro strumento le elenca tutte, e spesso il risultato più pertinente non è l'escape room a 30 euro a persona, ma il punto panoramico sulla foresta a dodici minuti in bicicletta che non avevi mai notato su una mappa.</p>",
     "card2Title": "Attività in coppia: uscire dal pilota automatico",
@@ -175,13 +175,13 @@
     "f1Title": "Posizione e raggio",
     "f1Text": "Geolocalizzazione automatica o inserimento manuale. Raggio da 1 a 5 km. Mezzo di spostamento: a piedi, bicicletta, auto, mezzi pubblici.",
     "f2Title": "Composizione del gruppo",
-    "f2Text": "Solo, in coppia, famiglia con bambini, amici, team building. Se hai bambini, indica la loro età — cambia davvero i suggerimenti proposti.",
+    "f2Text": "Solo, in coppia, famiglia con bambini, amici, team building. Se hai bambini, indica la loro età, cambia davvero i suggerimenti proposti.",
     "f3Title": "Budget per persona",
     "f3Text": "Da gratuito a oltre 50 euro a persona. Lo strumento stima le tariffe di ogni attività e filtra di conseguenza, con una tolleranza configurabile.",
     "f4Title": "Atmosfera desiderata",
     "f4Text": "Calma e relax, divertimento e festa, culturale, adrenalina, romantico, familiare. Questo filtro modifica la classifica in modo molto più efficace di un semplice filtro per categoria.",
     "f5Title": "Tempo a disposizione",
-    "f5Text": "Meno di un'ora, da una a due ore, mezza giornata, giornata intera. Lo strumento esclude le attività incompatibili con la tua fascia oraria — senza che tu debba verificarlo da solo."
+    "f5Text": "Meno di un'ora, da una a due ore, mezza giornata, giornata intera. Lo strumento esclude le attività incompatibili con la tua fascia oraria, senza che tu debba verificarlo da solo."
   },
   "ctaFinal": {
     "title": "Pronto a scoprire cosa ti aspetta?",

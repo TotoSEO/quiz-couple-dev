@@ -390,7 +390,7 @@
     var profile = allProfiles.find(function (p) { return p.id === id; });
     var nameEl = document.getElementById('aadm-delete-name');
     if (nameEl && profile) {
-      nameEl.textContent = (profile.first_name || '') + ' ' + (profile.last_name || '') + ' — ' + (SPEC_LABELS[profile.specialty] || profile.specialty || '') + ', ' + (profile.city || '');
+      nameEl.textContent = (profile.first_name || '') + ' ' + (profile.last_name || '') + ', ' + (SPEC_LABELS[profile.specialty] || profile.specialty || '') + ', ' + (profile.city || '');
     }
     pendingDeleteId = id;
     var modal = document.getElementById('aadm-delete-modal');
