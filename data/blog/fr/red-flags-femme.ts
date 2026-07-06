@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Les Red flags chez une Femme : la liste complète",
   metaDescription: "Quelque chose cloche dans ta relation mais tu n'arrives pas à mettre le doigt dessus ? Red flags émotionnels, comportementaux, relationnels chez une femme, la liste complète.",
   featuredImage: '',
-  featuredImageAlt: "Red flags chez une femme — liste complète des signaux d'alarme en couple",
+  featuredImageAlt: "Red flags chez une femme, liste complète des signaux d'alarme en couple",
   publishedAt: '2026-03-07',
   author: AUTHORS['mathieu-courtin'],
   excerpt: "Un red flag, ce n'est pas un défaut de caractère. C'est un pattern relationnel répété qui, sur la durée, rend une relation épuisante, déséquilibrée ou toxique.",

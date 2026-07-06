@@ -120,7 +120,7 @@ async function syncProfessionalReviews(
 
   if (!res.ok) {
     const errBody = await res.text();
-    console.warn(`[sync] Places API (New) failed: ${res.status} — ${errBody}`);
+    console.warn(`[sync] Places API (New) failed: ${res.status}, ${errBody}`);
     // Fallback to legacy Places API
     console.log(`[sync] Trying legacy API for ${googlePlaceId}`);
     const legacyUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${googlePlaceId}&fields=rating,user_ratings_total,reviews&language=fr&key=${GOOGLE_PLACES_API_KEY}`;
@@ -130,7 +130,7 @@ async function syncProfessionalReviews(
     }
     const legacyData = await legacyRes.json();
     if (legacyData.status !== 'OK') {
-      throw new Error(`Google Places API (legacy): ${legacyData.status} — ${legacyData.error_message || ''}`);
+      throw new Error(`Google Places API (legacy): ${legacyData.status}, ${legacyData.error_message || ''}`);
     }
 
     const result = legacyData.result;

@@ -5,20 +5,20 @@ const article: BlogArticleData = {
   slug: 'red-flags-en-un-hombre',
   title: "Red flags en un hombre: lo que tu instinto intenta decirte",
   metaTitle: "Red flags en un hombre: la lista completa",
-  metaDescription: "Algo no cuadra pero no logras definir qué. Red flags emocionales, de comportamiento, relacionales — la lista completa para verlo con claridad.",
+  metaDescription: "Algo no cuadra pero no logras definir qué. Red flags emocionales, de comportamiento, relacionales, la lista completa para verlo con claridad.",
   featuredImage: '',
-  featuredImageAlt: "Red flags en un hombre — lista completa de señales de alerta en pareja",
+  featuredImageAlt: "Red flags en un hombre, lista completa de señales de alerta en pareja",
   publishedAt: '2026-03-05',
   author: AUTHORS['lucie-courtin'],
   excerpt: "Las red flags rara vez son señales de alarma estridentes. Son patrones que minimizas hasta que un día te das cuenta de que llevas meses normalizándolos.",
   introduction: `<p>Sientes algo. Una incomodidad difusa, una tensión que no logras nombrar, una vocecita que vuelve una y otra vez y que haces callar porque "quizás estás exagerando". <strong>Probablemente no estás exagerando.</strong></p>
-<p>Las red flags en un hombre rara vez son señales de alarma estridentes. Son patrones. Cosas que se repiten. Comportamientos que minimizas una vez, dos veces, diez veces — hasta que un día te das cuenta de que llevas meses normalizándolos. Este artículo está aquí para nombrarlos.</p>`,
+<p>Las red flags en un hombre rara vez son señales de alarma estridentes. Son patrones. Cosas que se repiten. Comportamientos que minimizas una vez, dos veces, diez veces, hasta que un día te das cuenta de que llevas meses normalizándolos. Este artículo está aquí para nombrarlos.</p>`,
   quickSummary: [
     "Red flags emocionales: minimiza lo que sientes, te hace responsable de sus estados de ánimo, da frío y calor alternados.",
     "Red flags de comportamiento: sus actos no coinciden con sus palabras, pone a prueba tus límites progresivamente.",
     "En público es perfecto. En privado, es otra historia.",
     "Las red flags relacionales son las más difíciles de ver: aislamiento progresivo, imposibilidad de hablar con él, erosión de tu confianza.",
-    "Uno o dos puntos no bastan — la repetición y la falta de autocuestionamiento son lo que define una red flag real.",
+    "Uno o dos puntos no bastan, la repetición y la falta de autocuestionamiento son lo que define una red flag real.",
   ],
   sections: [
     {
@@ -45,19 +45,19 @@ const article: BlogArticleData = {
         {
           id: 'minimiza-lo-que-sientes',
           title: "Minimiza lo que sientes",
-          content: `<p>Le explicas algo que te ha dolido. Su respuesta: "eres demasiado sensible", "estás dramatizando", "era una broma". Cuando se repite, este patrón se llama <strong>gaslighting</strong> — y funciona exactamente así: haciéndote dudar de tu propia percepción de la realidad. El problema nunca es el comportamiento que te molestó. El problema es que te has atrevido a tener un problema.</p>
+          content: `<p>Le explicas algo que te ha dolido. Su respuesta: "eres demasiado sensible", "estás dramatizando", "era una broma". Cuando se repite, este patrón se llama <strong>gaslighting</strong>, y funciona exactamente así: haciéndote dudar de tu propia percepción de la realidad. El problema nunca es el comportamiento que te molestó. El problema es que te has atrevido a tener un problema.</p>
 <p>Un hombre sano puede no entender de entrada por qué algo te ha afectado. Pero escucha. No te pide que te calles.</p>`,
         },
         {
           id: 'sus-estados-tu-responsabilidad',
           title: "Sus estados de ánimo se convierten en tu responsabilidad",
           content: `<p>Llega de mal humor y, de un modo u otro, andas de puntillas. Cambias lo que ibas a decir. Esperas a que esté "de mejor humor" para hablar de temas importantes. Organizas tu vida alrededor de su estado emocional del momento.</p>
-<p>Gestionas su humor. Él no gestiona el suyo. Esa es una carga mental y emocional que cargas sola — y si lo señalas, siempre estás "quejándote de todo".</p>`,
+<p>Gestionas su humor. Él no gestiona el suyo. Esa es una carga mental y emocional que cargas sola, y si lo señalas, siempre estás "quejándote de todo".</p>`,
         },
         {
           id: 'frio-y-calor',
           title: "Frío y calor, en bucle",
-          content: `<p>Una semana está presente, cariñoso, atento. La siguiente, distante y frío sin explicación. Y tú pasas el tiempo intentando entender qué has hecho para provocar ese cambio. Spoiler: no has hecho nada. Es él quien instala esa inestabilidad, consciente o no. Pero el resultado es el mismo — andas de puntillas, buscas constantemente su aprobación, sientes alivio cuando vuelve en modo "caliente". Ese es el ciclo de apego ansioso que crea. Y una vez dentro, es difícil salir.</p>`,
+          content: `<p>Una semana está presente, cariñoso, atento. La siguiente, distante y frío sin explicación. Y tú pasas el tiempo intentando entender qué has hecho para provocar ese cambio. Spoiler: no has hecho nada. Es él quien instala esa inestabilidad, consciente o no. Pero el resultado es el mismo, andas de puntillas, buscas constantemente su aprobación, sientes alivio cuando vuelve en modo "caliente". Ese es el ciclo de apego ansioso que crea. Y una vez dentro, es difícil salir.</p>`,
         },
         {
           id: 'nunca-se-disculpa',
@@ -69,7 +69,7 @@ const article: BlogArticleData = {
     {
       id: 'red-flags-de-comportamiento',
       title: "Las red flags de comportamiento",
-      content: `<p>Estas son más visibles — si sabes qué buscar. No necesariamente actos violentos o espectaculares. A menudo pequeños comportamientos repetidos que, por separado, parecen inofensivos. Pero los patrones no mienten.</p>`,
+      content: `<p>Estas son más visibles, si sabes qué buscar. No necesariamente actos violentos o espectaculares. A menudo pequeños comportamientos repetidos que, por separado, parecen inofensivos. Pero los patrones no mienten.</p>`,
       subsections: [
         {
           id: 'actos-vs-palabras',
@@ -84,17 +84,17 @@ const article: BlogArticleData = {
         {
           id: 'ex-todas-locas',
           title: "Habla de sus ex como si todas estuvieran locas",
-          content: `<p>Una ex difícil, ocurre. ¿Todas sus ex eran "inestables", "celosas", "posesivas", "una pesadilla"? En algún momento, la única constante en la ecuación es él. No significa necesariamente que esté equivocado en todo — pero alguien que no asume ninguna responsabilidad en sus relaciones pasadas no va a comportarse de forma diferente contigo.</p>`,
+          content: `<p>Una ex difícil, ocurre. ¿Todas sus ex eran "inestables", "celosas", "posesivas", "una pesadilla"? En algún momento, la única constante en la ecuación es él. No significa necesariamente que esté equivocado en todo, pero alguien que no asume ninguna responsabilidad en sus relaciones pasadas no va a comportarse de forma diferente contigo.</p>`,
         },
         {
           id: 'pone-a-prueba-limites',
           title: "Pone a prueba tus límites progresivamente",
-          content: `<p>Empieza pequeño. Un comentario sobre cómo vistes. Una pulla sobre una de tus amigas. Una pregunta sobre con quién estabas ayer. Cada vez que no reaccionas, sube un escalón. Rara vez es brusco al principio — es gradual, casi imperceptible. Y para cuando te das cuenta de hasta dónde ha llegado, la línea lleva tiempo moviéndose.</p>`,
+          content: `<p>Empieza pequeño. Un comentario sobre cómo vistes. Una pulla sobre una de tus amigas. Una pregunta sobre con quién estabas ayer. Cada vez que no reaccionas, sube un escalón. Rara vez es brusco al principio, es gradual, casi imperceptible. Y para cuando te das cuenta de hasta dónde ha llegado, la línea lleva tiempo moviéndose.</p>`,
         },
         {
           id: 'dos-personalidades',
           title: "Dos personalidades: una en público, otra contigo",
-          content: `<p>Todo el mundo lo adora. Encantador, divertido, atento con los demás. Contigo, es crítico, frío o dominante. Esa diferencia no es casual. Significa que sabe controlarse — y elige no hacerlo contigo. Eso no es espontaneidad. Es desprecio.</p>`,
+          content: `<p>Todo el mundo lo adora. Encantador, divertido, atento con los demás. Contigo, es crítico, frío o dominante. Esa diferencia no es casual. Significa que sabe controlarse, y elige no hacerlo contigo. Eso no es espontaneidad. Es desprecio.</p>`,
         },
       ],
     },
@@ -106,12 +106,12 @@ const article: BlogArticleData = {
         {
           id: 'ocupa-todo-el-espacio',
           title: "Ocupa todo el espacio sin dejar ninguno",
-          content: `<p>Sus planes, sus ganas, sus estados de ánimo, sus necesidades — todo eso estructura la relación. Los tuyos van después, y si lo dices, eres "egoísta" o "nunca estás contenta". Con el tiempo, haces cada vez menos cosas para ti. Tienes la sensación de ir desapareciendo. No es una sensación.</p>`,
+          content: `<p>Sus planes, sus ganas, sus estados de ánimo, sus necesidades, todo eso estructura la relación. Los tuyos van después, y si lo dices, eres "egoísta" o "nunca estás contenta". Con el tiempo, haces cada vez menos cosas para ti. Tienes la sensación de ir desapareciendo. No es una sensación.</p>`,
         },
         {
           id: 'no-puedes-hablar',
           title: "No puedes hablar con él de lo que te molesta",
-          content: `<p>Cada intento de conversación termina en una discusión donde él sale victorioso, en un silencio que dura días, o en un giro donde acabas disculpándote por algo que no has hecho. Resultado: evitas las conversaciones importantes. Te lo tragas. Se acumula. Y él nunca sabe nada — porque has aprendido que decírselo no sirve de nada.</p>`,
+          content: `<p>Cada intento de conversación termina en una discusión donde él sale victorioso, en un silencio que dura días, o en un giro donde acabas disculpándote por algo que no has hecho. Resultado: evitas las conversaciones importantes. Te lo tragas. Se acumula. Y él nunca sabe nada, porque has aprendido que decírselo no sirve de nada.</p>`,
         },
         {
           id: 'te-aleja-de-los-tuyos',
@@ -130,7 +130,7 @@ const article: BlogArticleData = {
       title: "Has reconocido varios de estos comportamientos. ¿Y ahora?",
       content: `<p>Primero: el hecho de que estés en este artículo cuenta. Algo en ti buscaba una confirmación, un vocabulario, una referencia. Eso ya es un movimiento.</p>
 <p>Uno o dos puntos en una lista no convierten automáticamente a alguien en mal compañero. Todo el mundo tiene puntos ciegos, comportamientos que trabajar, malas épocas. <strong>Lo que distingue una red flag de un problema ordinario es la repetición y la ausencia de autocuestionamiento.</strong> ¿Reconoce el problema cuando lo señalas? ¿Hace esfuerzos reales, o esfuerzos visibles el tiempo justo para que te calmes? ¿Las cosas cambian de verdad, o vives en la espera permanente de un cambio que no llega?</p>
-<p>Si estás marcando varias casillas y la respuesta honesta a esas preguntas es "no" — confía en lo que sientes. Tu instinto te ha traído hasta aquí. Merece ser escuchado.</p>`,
+<p>Si estás marcando varias casillas y la respuesta honesta a esas preguntas es "no", confía en lo que sientes. Tu instinto te ha traído hasta aquí. Merece ser escuchado.</p>`,
     },
   ],
 };

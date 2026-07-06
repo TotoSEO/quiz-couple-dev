@@ -5,20 +5,20 @@ const article: BlogArticleData = {
   slug: 'red-flags-homme',
   title: "Red flags chez un homme : ce que ton instinct essaie de te dire",
   metaTitle: "Les Red flags chez un Homme : la liste complète",
-  metaDescription: "Quelque chose cloche, mais tu n'arrives pas à mettre le doigt dessus ? Red flags comportementaux, émotionnels, relationnels — la liste complète pour y voir clair.",
+  metaDescription: "Quelque chose cloche, mais tu n'arrives pas à mettre le doigt dessus ? Red flags comportementaux, émotionnels, relationnels, la liste complète pour y voir clair.",
   featuredImage: '',
-  featuredImageAlt: "Red flags chez un homme — liste complète des signaux d'alarme en couple",
+  featuredImageAlt: "Red flags chez un homme, liste complète des signaux d'alarme en couple",
   publishedAt: '2026-03-05',
   author: AUTHORS['lucie-courtin'],
   excerpt: "Les red flags sont rarement des signaux fracassants. Ce sont des patterns qu'on minimise jusqu'au jour où on réalise qu'on les a normalisés.",
   introduction: `<p>Tu ressens quelque chose. Un inconfort vague, une tension que tu n'arrives pas à nommer, une petite voix qui revient régulièrement et que tu fais taire parce que "c'est peut-être toi qui exagères". <strong>Ce n'est probablement pas toi.</strong></p>
-<p>Les red flags chez un homme sont rarement des signaux d'alarme fracassants. Ce sont des patterns. Des choses qui reviennent. Des comportements qu'on minimise une fois, deux fois, dix fois — jusqu'au jour où on réalise qu'on les a normalisés depuis des mois. Cet article est là pour les nommer.</p>`,
+<p>Les red flags chez un homme sont rarement des signaux d'alarme fracassants. Ce sont des patterns. Des choses qui reviennent. Des comportements qu'on minimise une fois, deux fois, dix fois, jusqu'au jour où on réalise qu'on les a normalisés depuis des mois. Cet article est là pour les nommer.</p>`,
   quickSummary: [
     "Les red flags émotionnels : il minimise ce que tu ressens, te rend responsable de ses humeurs, souffle le chaud et le froid.",
     "Les red flags comportementaux : ses actes ne collent pas avec ses mots, il teste tes limites progressivement.",
     "En public il est parfait. Avec toi, c'est une autre histoire.",
     "Les red flags relationnels sont les plus difficiles à voir : isolement progressif, impossibilité de lui parler, érosion de ta confiance en toi.",
-    "Un ou deux points ne suffisent pas — c'est la répétition et l'absence de remise en question qui font le red flag.",
+    "Un ou deux points ne suffisent pas, c'est la répétition et l'absence de remise en question qui font le red flag.",
   ],
   sections: [
     {
@@ -45,19 +45,19 @@ const article: BlogArticleData = {
         {
           id: 'minimise-ce-que-tu-ressens',
           title: "Il minimise ce que tu ressens",
-          content: `<p>Tu lui expliques quelque chose qui t'a blessée. Sa réponse : "tu es trop sensible", "tu dramatises", "c'était une blague". Ce pattern s'appelle le <strong>gaslighting</strong> quand il est répété, et il fonctionne exactement comme ça — en te faisant douter de ta propre perception de la réalité. Le problème n'est jamais le comportement qui t'a posé problème. Le problème, c'est que tu as osé avoir un problème.</p>
+          content: `<p>Tu lui expliques quelque chose qui t'a blessée. Sa réponse : "tu es trop sensible", "tu dramatises", "c'était une blague". Ce pattern s'appelle le <strong>gaslighting</strong> quand il est répété, et il fonctionne exactement comme ça, en te faisant douter de ta propre perception de la réalité. Le problème n'est jamais le comportement qui t'a posé problème. Le problème, c'est que tu as osé avoir un problème.</p>
 <p>Un homme sain peut ne pas comprendre immédiatement pourquoi quelque chose t'a affectée. Mais il écoute. Il ne te demande pas de te taire.</p>`,
         },
         {
           id: 'ses-humeurs-ta-responsabilite',
           title: "Ses humeurs deviennent ta responsabilité",
           content: `<p>Il rentre de mauvaise humeur, et d'une façon ou d'une autre, tu marches sur des œufs. Tu modifies ce que tu allais dire. Tu attends qu'il soit "dans de bonnes dispositions" pour aborder les sujets importants. Tu t'organises autour de son état émotionnel du moment.</p>
-<p>Tu gères son humeur. Il ne gère pas la sienne. C'est une charge mentale et émotionnelle que tu portes seule — et si tu le signales, tu es "toujours à te plaindre".</p>`,
+<p>Tu gères son humeur. Il ne gère pas la sienne. C'est une charge mentale et émotionnelle que tu portes seule, et si tu le signales, tu es "toujours à te plaindre".</p>`,
         },
         {
           id: 'chaud-et-froid',
           title: "Le chaud et le froid, en boucle",
-          content: `<p>Une semaine il est présent, attentionné, doux. La suivante, distant et froid sans explication. Et toi, tu passes ton temps à essayer de comprendre ce que tu as fait pour provoquer ce changement. Spoiler : tu n'as rien fait. C'est lui qui installe cette instabilité, consciemment ou pas. Mais le résultat est le même : tu marches sur des œufs, tu cherches en permanence son approbation, tu te sens soulagée quand il revient en mode "chaud". C'est le cycle d'attachement anxieux qu'il crée — et une fois dedans, il est difficile d'en sortir.</p>`,
+          content: `<p>Une semaine il est présent, attentionné, doux. La suivante, distant et froid sans explication. Et toi, tu passes ton temps à essayer de comprendre ce que tu as fait pour provoquer ce changement. Spoiler : tu n'as rien fait. C'est lui qui installe cette instabilité, consciemment ou pas. Mais le résultat est le même : tu marches sur des œufs, tu cherches en permanence son approbation, tu te sens soulagée quand il revient en mode "chaud". C'est le cycle d'attachement anxieux qu'il crée, et une fois dedans, il est difficile d'en sortir.</p>`,
         },
         {
           id: 'ne-s-excuse-jamais',
@@ -69,7 +69,7 @@ const article: BlogArticleData = {
     {
       id: 'red-flags-comportementaux',
       title: "Les red flags comportementaux",
-      content: `<p>Ceux-là sont plus visibles — à condition de savoir quoi chercher. Pas forcément des actes violents ou spectaculaires. Souvent des petits comportements répétés qui, pris séparément, semblent anodins. Mais les patterns ne mentent pas.</p>`,
+      content: `<p>Ceux-là sont plus visibles, à condition de savoir quoi chercher. Pas forcément des actes violents ou spectaculaires. Souvent des petits comportements répétés qui, pris séparément, semblent anodins. Mais les patterns ne mentent pas.</p>`,
       subsections: [
         {
           id: 'actes-vs-mots',
@@ -84,17 +84,17 @@ const article: BlogArticleData = {
         {
           id: 'ex-toutes-folles',
           title: "Il parle de ses ex comme si elles étaient toutes folles",
-          content: `<p>Une ex difficile, ça arrive. Toutes ses ex étaient "instables", "jalouses", "possessives", "cinglées" ? À un moment, la seule constante dans l'équation, c'est lui. Ce n'est pas forcément qu'il a tort sur tout — mais quelqu'un qui ne prend aucune part de responsabilité dans ses relations passées ne va pas se comporter différemment avec toi.</p>`,
+          content: `<p>Une ex difficile, ça arrive. Toutes ses ex étaient "instables", "jalouses", "possessives", "cinglées" ? À un moment, la seule constante dans l'équation, c'est lui. Ce n'est pas forcément qu'il a tort sur tout, mais quelqu'un qui ne prend aucune part de responsabilité dans ses relations passées ne va pas se comporter différemment avec toi.</p>`,
         },
         {
           id: 'teste-limites-progressivement',
           title: "Il teste tes limites progressivement",
-          content: `<p>Ça commence petit. Une petite remarque sur ta façon de t'habiller. Une blague sur une de tes amies. Une question sur avec qui tu étais hier. Chaque fois que tu ne réagis pas, ça va un cran plus loin. C'est rarement brutal au début — c'est graduel, presque imperceptible. Et le jour où tu réalises jusqu'où c'est allé, ça fait longtemps que la barre a bougé.</p>`,
+          content: `<p>Ça commence petit. Une petite remarque sur ta façon de t'habiller. Une blague sur une de tes amies. Une question sur avec qui tu étais hier. Chaque fois que tu ne réagis pas, ça va un cran plus loin. C'est rarement brutal au début, c'est graduel, presque imperceptible. Et le jour où tu réalises jusqu'où c'est allé, ça fait longtemps que la barre a bougé.</p>`,
         },
         {
           id: 'deux-personnalites',
           title: "Deux personnalités : une en public, une avec toi",
-          content: `<p>Tout le monde l'adore. Charmant, drôle, attentionné avec les autres. Et avec toi, il est critique, froid, ou dominant. Ce décalage n'est pas anodin. Ça veut dire qu'il sait se contrôler — il choisit de ne pas le faire avec toi. Ce n'est pas de la spontanéité. C'est du mépris.</p>`,
+          content: `<p>Tout le monde l'adore. Charmant, drôle, attentionné avec les autres. Et avec toi, il est critique, froid, ou dominant. Ce décalage n'est pas anodin. Ça veut dire qu'il sait se contrôler, il choisit de ne pas le faire avec toi. Ce n'est pas de la spontanéité. C'est du mépris.</p>`,
         },
       ],
     },
@@ -106,12 +106,12 @@ const article: BlogArticleData = {
         {
           id: 'prend-place-sans-laisser',
           title: "Il prend de la place sans en laisser",
-          content: `<p>Ses plans, ses envies, ses humeurs, ses besoins — tout ça structure la relation. Les tiens passent en second, et si tu le signales, tu es "égoïste" ou "jamais contente". Avec le temps, tu fais de moins en moins de choses pour toi. Tu as l'impression de t'effacer. Ce n'est pas une impression.</p>`,
+          content: `<p>Ses plans, ses envies, ses humeurs, ses besoins, tout ça structure la relation. Les tiens passent en second, et si tu le signales, tu es "égoïste" ou "jamais contente". Avec le temps, tu fais de moins en moins de choses pour toi. Tu as l'impression de t'effacer. Ce n'est pas une impression.</p>`,
         },
         {
           id: 'impossible-de-lui-parler',
           title: "Tu ne peux pas lui parler de ce qui te pose problème",
-          content: `<p>Chaque tentative de discussion tourne soit en dispute où il prend le dessus, soit en silence qui dure des jours, soit en retournement où tu finis par t'excuser de quelque chose que tu n'as pas fait. Résultat : tu évites les conversations importantes. Tu avales. Tu accumules. Et lui, il ne sait jamais rien — parce que tu as appris que ça ne sert à rien de lui dire.</p>`,
+          content: `<p>Chaque tentative de discussion tourne soit en dispute où il prend le dessus, soit en silence qui dure des jours, soit en retournement où tu finis par t'excuser de quelque chose que tu n'as pas fait. Résultat : tu évites les conversations importantes. Tu avales. Tu accumules. Et lui, il ne sait jamais rien, parce que tu as appris que ça ne sert à rien de lui dire.</p>`,
         },
         {
           id: 'eloigne-de-tes-proches',
@@ -130,7 +130,7 @@ const article: BlogArticleData = {
       title: "Tu as reconnu plusieurs de ces comportements. Et maintenant ?",
       content: `<p>D'abord : le fait que tu sois sur cet article compte. Quelque chose en toi cherchait une confirmation, un vocabulaire, une grille de lecture. C'est déjà un mouvement.</p>
 <p>Un ou deux points sur une liste ne font pas automatiquement de quelqu'un un mauvais partenaire. Tout le monde a des angles morts, des comportements à travailler, des mauvaises périodes. <strong>Ce qui distingue un red flag d'un problème ordinaire, c'est la répétition et l'absence de remise en question.</strong> Est-ce qu'il reconnaît le problème quand tu le pointes ? Est-ce qu'il fait des efforts réels, ou des efforts visibles le temps que tu te calmes ? Est-ce que les choses changent vraiment, ou tu vis dans l'attente perpétuelle d'un changement qui ne vient pas ?</p>
-<p>Si tu coches plusieurs cases et que la réponse à ces questions est honnêtement "non" — fais confiance à ce que tu ressens. Ton instinct t'a amenée jusqu'ici. Il mérite d'être écouté.</p>
+<p>Si tu coches plusieurs cases et que la réponse à ces questions est honnêtement "non", fais confiance à ce que tu ressens. Ton instinct t'a amenée jusqu'ici. Il mérite d'être écouté.</p>
 <a href="/blog/femme-malheureuse-en-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Comment reconnaître une femme malheureuse en couple</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

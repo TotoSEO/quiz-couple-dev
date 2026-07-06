@@ -3,7 +3,7 @@ name: Scheduled site rebuild
 on:
   schedule:
     # Every 2 hours from 7h to 19h (UTC: 5h-17h for CET, 6h-18h for CEST)
-    # Using CET (winter) times — adjust if needed for summer
+    # Using CET (winter) times, adjust if needed for summer
     - cron: '0 6,8,10,12,14,16 * * *'
     # Once at 3h AM (CET = 2h UTC winter)
     - cron: '0 2 * * *'

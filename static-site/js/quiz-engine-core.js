@@ -109,7 +109,7 @@ var QuizEngine = (function() {
       }
     }
 
-    // 5. Fallback to FR (skipped when nativeOnly — used during option discovery
+    // 5. Fallback to FR (skipped when nativeOnly, used during option discovery
     //    so a non-FR quiz never inherits FR-only options it doesn't actually have,
     //    e.g. the FR distance quiz has 4 options where non-FR natively has 3)
     if (!nativeOnly) {
@@ -374,7 +374,7 @@ var QuizEngine = (function() {
   }
 
   function renderActionButtons(wrap, opts) {
-    // ── Share result — prominent CTA (virality + retention) ──
+    // ── Share result, prominent CTA (virality + retention) ──
     renderShareButton(wrap, opts.shareText);
 
     // ── Action buttons in a clean grid ──
@@ -407,7 +407,7 @@ var QuizEngine = (function() {
     actions.appendChild(homeBtn);
     wrap.appendChild(actions);
 
-    // ── Review CTA — compact inline ──
+    // ── Review CTA, compact inline ──
     var reviewRow = el('div', 'result-review-row mt-6');
     var reviewText = el('span', 'result-review-text', esc(tg('reviews.quizLiked', 'Ce quiz vous a plu ?')));
     var reviewBtn = el('a', 'result-review-btn');

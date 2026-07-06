@@ -388,7 +388,7 @@
 <script>
 (function() {
   // ═══════════════════════════════════════════════════════
-  // ZODIAC COMPATIBILITY DATA — 144 combinations
+  // ZODIAC COMPATIBILITY DATA, 144 combinations
   // ═══════════════════════════════════════════════════════
   var ZODIAC_DATA = <%- zodiacDataJson %>;
 
@@ -511,7 +511,7 @@
     var n2 = getNameNumber(name2);
     var numeroScore = getNumeroCompat(n1, n2);
 
-    // Overall score (weighted: 60% astro, 40% numero) — out of 10
+    // Overall score (weighted: 60% astro, 40% numero), out of 10
     var overall = Math.round((astroScore * 0.6 + numeroScore * 0.4) * 10) / 10;
     var overallPct = Math.round(overall * 10);
 

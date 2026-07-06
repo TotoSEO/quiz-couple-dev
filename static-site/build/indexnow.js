@@ -77,7 +77,7 @@ async function main() {
   console.log(`[indexnow] Total unique URLs: ${totalUrls}`);
 
   if (dryRun) {
-    console.log('[indexnow] Dry run — URLs that would be submitted:');
+    console.log('[indexnow] Dry run, URLs that would be submitted:');
     for (const [host, urls] of Object.entries(urlsByHost)) {
       console.log(`\n  [${host}] (${urls.length} URLs):`);
       urls.forEach(u => console.log(`    ${u}`));

@@ -1,5 +1,5 @@
 -- ============================================================
--- ANNUAIRE QUIZ COUPLE — Schéma complet
+-- ANNUAIRE QUIZ COUPLE, Schéma complet
 -- Tables, RLS, Storage, Triggers, Index
 -- ============================================================
 

@@ -138,7 +138,7 @@ serve(async (req: Request) => {
 
                   <!-- Footer -->
                   <div style="text-align:center;margin-top:2rem;padding:1rem;">
-                    <p style="font-size:0.75rem;color:#999;margin:0;">Quiz Couple — Annuaire des professionnels du couple en France</p>
+                    <p style="font-size:0.75rem;color:#999;margin:0;">Quiz Couple, Annuaire des professionnels du couple en France</p>
                     <p style="font-size:0.75rem;color:#bbb;margin:0.5rem 0 0;"><a href="https://annuaire.quiz-couple.com" style="color:#bbb;">annuaire.quiz-couple.com</a></p>
                   </div>
                 </div>

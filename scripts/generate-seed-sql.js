@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Generates SQL INSERT statements to seed blog articles into Supabase.
- * No network needed — reads TS files and outputs SQL.
+ * No network needed, reads TS files and outputs SQL.
  *
  * Usage: node scripts/generate-seed-sql.js > seed-blog-data.sql
  * Then paste the SQL into Supabase Dashboard > SQL Editor
@@ -82,7 +82,7 @@ const DATA_DIR = path.resolve(__dirname, '../data/blog');
 const sql = [];
 
 sql.push('-- ============================================================');
-sql.push('-- SEED BLOG DATA — Generated from data/blog/ TS files');
+sql.push('-- SEED BLOG DATA, Generated from data/blog/ TS files');
 sql.push('-- Paste this in Supabase Dashboard > SQL Editor > New Query');
 sql.push('-- ============================================================');
 sql.push('');
@@ -119,7 +119,7 @@ for (const meta of ARTICLE_METAS) {
     const filePath = path.join(DATA_DIR, lang, `${meta.internalSlug}.ts`);
     const article = parseArticleTs(filePath);
     if (!article) {
-      console.error(`  [${lang}] ${meta.internalSlug} — not found, skipping`);
+      console.error(`  [${lang}] ${meta.internalSlug}, not found, skipping`);
       continue;
     }
 

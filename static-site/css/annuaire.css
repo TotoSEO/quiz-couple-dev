@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════════════
-   ANNUAIRE QUIZ COUPLE — Professional Directory Styles
-   Design: Flat, clean, professional — related to quiz-couple but more pro
+   ANNUAIRE QUIZ COUPLE, Professional Directory Styles
+   Design: Flat, clean, professional, related to quiz-couple but more pro
    ═══════════════════════════════════════════════════════════════════════ */
 
 /* ── Design Tokens ─────────────────────────────────────────────────── */
@@ -3051,7 +3051,7 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
     grid-template-columns: 1fr;
   }
 
-  /* Pro profile page layout — sidebar below main */
+  /* Pro profile page layout, sidebar below main */
   .ann-profile-layout {
     grid-template-columns: 1fr !important;
     flex-direction: column !important;
@@ -3061,7 +3061,7 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
     order: 1;
   }
 
-  /* Comparison table — reduce padding on mobile */
+  /* Comparison table, reduce padding on mobile */
   .ann-comparison-table th,
   .ann-comparison-table td {
     padding: 0.5rem 0.375rem;
@@ -3209,7 +3209,7 @@ textarea.ann-form-input { resize: vertical; min-height: 7rem; line-height: 1.7; 
   max-height: 11.25rem;
 }
 
-/* Single photo in boost — full width */
+/* Single photo in boost, full width */
 .ann-gallery-mosaic .ann-gallery-item:only-child {
   grid-column: 1 / -1;
   grid-row: 1 / -1;

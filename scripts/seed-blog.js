@@ -201,7 +201,7 @@ async function main() {
     };
 
     if (dryRun) {
-      console.log(`${translations.length} lang(s) — would send`);
+      console.log(`${translations.length} lang(s), would send`);
       continue;
     }
 
@@ -210,7 +210,7 @@ async function main() {
       const result = await seedOneArticle(token, payload);
       if (result.success) {
         const status = result.created > 0 ? 'CREATED' : 'UPDATED';
-        console.log(`${translations.length} lang(s) — ${status}`);
+        console.log(`${translations.length} lang(s), ${status}`);
         if (result.created > 0) created++; else updated++;
       } else {
         console.log(`ERROR: ${result.error}`);

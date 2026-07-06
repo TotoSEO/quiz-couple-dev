@@ -40,7 +40,7 @@ Deno.serve(async (req) => {
     const body = await req.json();
     const { action } = body;
 
-    // Cleanup action — delete session after results
+    // Cleanup action, delete session after results
     if (action === 'cleanup') {
       const { sessionId } = body;
       if (!sessionId || typeof sessionId !== 'string') {

@@ -1,6 +1,6 @@
 /**
  * Scroll-reveal: fade/slide elements with .animate-on-scroll into view.
- * Safe by design — only acts when html.js-reveal is set (added in <head> before
+ * Safe by design, only acts when html.js-reveal is set (added in <head> before
  * paint, and only when motion is allowed). If JS is off or the user prefers
  * reduced motion, the gate class is absent, the CSS never hides anything, and
  * this script no-ops. A timeout safety net also guarantees content is never

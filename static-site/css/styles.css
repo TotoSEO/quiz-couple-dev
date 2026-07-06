@@ -580,7 +580,7 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 @media (min-width: 480px) { .hero-ctas { flex-direction: row; justify-content: center; } }
 @media (min-width: 768px) { .hero-ctas { justify-content: flex-start; } }
 
-/* Hero stats cards — glassmorphism */
+/* Hero stats cards, glassmorphism */
 .hero-stats {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.875rem;
 }
@@ -621,7 +621,7 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 .hero-stat-label { font-size: 0.7rem; color: hsl(var(--muted-foreground)); line-height: 1.3; display: block; }
 @media (max-width: 480px) { .hero-stats { grid-template-columns: 1fr; } .hero-stat-card { justify-content: center; } }
 
-/* Hero floating visual — 3D perspective */
+/* Hero floating visual, 3D perspective */
 .hero-visual {
   display: none;
   position: relative; height: 420px;
@@ -684,7 +684,7 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 .hero-float-card--3 .hero-float-icon { background: hsl(25 95% 60% / 0.12); box-shadow: 0 4px 16px -4px hsl(25 95% 60% / 0.3); }
 .hero-float-card--4 .hero-float-icon { background: hsl(var(--secondary) / 0.1); box-shadow: 0 4px 16px -4px hsl(var(--secondary) / 0.25); }
 
-/* Hero decorative blobs — larger, more vivid */
+/* Hero decorative blobs, larger, more vivid */
 .hero-blob {
   position: absolute; border-radius: 50%;
   filter: blur(100px); pointer-events: none;
@@ -694,7 +694,7 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 .hero-blob--2 { width: 400px; height: 400px; bottom: -10%; right: -5%; background: hsl(var(--secondary) / 0.12); animation-delay: 4s; }
 .hero-blob--3 { width: 250px; height: 250px; top: 35%; right: 15%; background: hsl(25 95% 60% / 0.07); animation-delay: 8s; }
 
-/* How It Works — enhanced steps */
+/* How It Works, enhanced steps */
 .how-it-works-grid {
   display: grid; grid-template-columns: 1fr;
   gap: 2rem; max-width: 4xl; margin: 0 auto;
@@ -719,7 +719,7 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 @media (min-width: 768px) { .how-it-works-connector { display: block; } }
 .how-it-works-icon { font-size: 2rem; margin-bottom: 0.75rem; }
 
-/* Final CTA — gradient card */
+/* Final CTA, gradient card */
 .final-cta-card {
   background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
   background-size: 200% 200%;
@@ -841,7 +841,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* ── Navigation ──────────────────────────────────────────── */
 
-/* Header — compact + glow line */
+/* Header, compact + glow line */
 #site-header {
   position: relative;
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
@@ -1222,7 +1222,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 /* Blog TOC subsections */
 .blog-toc-subsections { list-style: disc; list-style-position: inside; padding-left: 1.5rem; margin-top: 0.25rem; font-size: 0.8125rem; }
 
-/* Breadcrumb (generic — inside hero) */
+/* Breadcrumb (generic, inside hero) */
 .breadcrumb { margin-bottom: 1rem; display: flex; justify-content: center; }
 .breadcrumb ol { display: flex; align-items: center; justify-content: center; gap: 0.5rem; list-style: none; font-size: 0.875rem; color: hsl(var(--muted-foreground)); flex-wrap: wrap; padding: 0; margin: 0; }
 .breadcrumb a { color: hsl(var(--muted-foreground)); text-decoration: none; transition: color 150ms; white-space: nowrap; }
@@ -1754,7 +1754,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 
 /* ══════════════════════════════════════════════════════
-   Astro Prenoms page — Celestial theme
+   Astro Prenoms page, Celestial theme
    ══════════════════════════════════════════════════════ */
 
 /* ── Hero with stars ──────────────────────────────── */
@@ -2105,7 +2105,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .skeleton { background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--muted) / 0.5) 50%, hsl(var(--muted)) 75%); background-size: 200% 100%; animation: shimmer 1.5s ease-in-out infinite; border-radius: calc(var(--radius) - 2px); }
 
 /* ═══════════════════════════════════════════════════════════
-   ACTIVITIES PAGE — Full-page design
+   ACTIVITIES PAGE, Full-page design
    ═══════════════════════════════════════════════════════════ */
 
 /* Tool section */
@@ -2175,7 +2175,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 
 /* ── Bubble cards ── */
-/* ── Quiz Cards — Modern, Premium Design ─────────────────── */
+/* ── Quiz Cards, Modern, Premium Design ─────────────────── */
 
 .quiz-bubble-card {
   position: relative; height: 100%;
@@ -2264,7 +2264,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .quiz-bubble-card--quiz:hover .quiz-bubble-cta--quiz { box-shadow: none; }
 
-/* ── Related Tests Section — Complete Redesign ───────── */
+/* ── Related Tests Section, Complete Redesign ───────── */
 
 .related-tests-section {
   padding: 3rem 0 4rem;
@@ -2625,7 +2625,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
     0 24px 48px -12px rgba(0,0,0,0.4);
 }
 
-/* ── Enhanced Quiz Options — Glassmorphism + Ripple ──── */
+/* ── Enhanced Quiz Options, Glassmorphism + Ripple ──── */
 .quiz-option {
   border: 1.5px solid hsl(var(--border) / 0.8);
   background: hsl(var(--card) / 0.9);
@@ -2698,7 +2698,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   box-shadow: 0 0 12px -2px hsl(var(--primary) / 0.4);
 }
 
-/* ── Enhanced Result Card — Celebration ─────────────── */
+/* ── Enhanced Result Card, Celebration ─────────────── */
 .quiz-result-card {
   padding: 2.5rem 2rem;
   background: linear-gradient(145deg, hsl(var(--primary) / 0.06), hsl(var(--secondary) / 0.08), hsl(var(--primary) / 0.04));
@@ -2825,7 +2825,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   transform: scale(1.1) rotate(-5deg);
 }
 
-/* ── Homepage Quiz Cards — no extra overrides needed, base styles handle it ── */
+/* ── Homepage Quiz Cards, no extra overrides needed, base styles handle it ── */
 
 /* ── Hero Section Enhancement ──────────────────────── */
 .hero-home {
@@ -2882,7 +2882,7 @@ details[open] summary {
   color: hsl(var(--primary));
 }
 
-/* ── Related Tests — styles moved to .related-test-card ── */
+/* ── Related Tests, styles moved to .related-test-card ── */
 
 /* ── Smooth Page Entrance ─────────────────────────── */
 main > section:first-child { animation: pageEnter 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
@@ -2903,7 +2903,7 @@ main > section:first-child { animation: pageEnter 0.6s cubic-bezier(0.22, 1, 0.3
   }
 }
 
-/* ── Enhanced Confetti — More particles, varied shapes ── */
+/* ── Enhanced Confetti, More particles, varied shapes ── */
 .confetti-dot {
   width: 10px; height: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -3007,7 +3007,7 @@ footer .text-sm.font-semibold.uppercase::after {
   background: linear-gradient(90deg, hsl(var(--primary) / 0.5), transparent);
   border-radius: 1px;
 }
-/* Footer links — hover underline animation */
+/* Footer links, hover underline animation */
 footer .flex.flex-col a {
   position: relative;
   padding: 0.25rem 0;

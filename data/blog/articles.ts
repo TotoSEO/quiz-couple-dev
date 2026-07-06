@@ -397,7 +397,7 @@ async function fetchLocalizedSlugs(articleId: string): Promise<Record<string, st
 }
 
 /**
- * Load article by any localized slug — tries database first, then static files.
+ * Load article by any localized slug, tries database first, then static files.
  */
 export async function loadArticleByLocalizedSlug(localizedSlug: string, lang: string): Promise<(BlogArticleData & { localizedSlugs?: Record<string, string> }) | null> {
   // 1. Try database
@@ -447,7 +447,7 @@ export async function loadArticleByLocalizedSlug(localizedSlug: string, lang: st
 }
 
 /**
- * Load all articles for listing — combines database + static.
+ * Load all articles for listing, combines database + static.
  */
 export async function loadAllArticles(lang: string): Promise<BlogArticleData[]> {
   const articles: BlogArticleData[] = [];

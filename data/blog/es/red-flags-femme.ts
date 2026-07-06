@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Red flags en una mujer: la lista completa",
   metaDescription: "Algo no cuadra en tu relación pero no logras definir qué. Red flags emocionales, de comportamiento, relacionales en una mujer, la lista completa.",
   featuredImage: '',
-  featuredImageAlt: "Red flags en una mujer — lista completa de señales de alerta en pareja",
+  featuredImageAlt: "Red flags en una mujer, lista completa de señales de alerta en pareja",
   publishedAt: '2026-03-07',
   author: AUTHORS['mathieu-courtin'],
   excerpt: "Una red flag no es un defecto de carácter. Es un patrón relacional repetido que, con el tiempo, hace que una relación sea agotadora, desequilibrada o tóxica.",

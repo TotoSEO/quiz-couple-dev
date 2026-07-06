@@ -25,7 +25,15 @@ function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
 }
 
+// Site-wide typography rule: no em dashes in visible text, replace with a comma.
+// Applied to the final HTML so content fetched from Supabase is covered too.
+function stripEmDashes(text) {
+  if (typeof text !== 'string') return text;
+  return text.replace(/ — /g, ', ').replace(/(\w)—(\w)/g, '$1, $2');
+}
+
 async function minifyHtml(html) {
+  html = stripEmDashes(html);
   try {
     return await minify(html, {
       collapseWhitespace: true,
@@ -135,7 +143,7 @@ async function fetchLiveProfessionals() {
         'Check that these secrets are configured in GitHub repo settings → Secrets → Actions.'
       );
     }
-    console.log('[annuaire] No SUPABASE_URL/SERVICE_ROLE_KEY — using mock data (local dev)');
+    console.log('[annuaire] No SUPABASE_URL/SERVICE_ROLE_KEY, using mock data (local dev)');
     return null;
   }
 
@@ -155,7 +163,7 @@ async function fetchLiveProfessionals() {
     console.log(`[annuaire] Fetched ${rows.length} published professionals from Supabase`);
 
     if (rows.length === 0) {
-      console.warn('[annuaire] WARNING: 0 published professionals found in Supabase — no professional pages will be generated');
+      console.warn('[annuaire] WARNING: 0 published professionals found in Supabase, no professional pages will be generated');
     }
 
     // Map DB columns to template format
@@ -208,7 +216,7 @@ async function fetchLiveProfessionals() {
     if (isCI) {
       throw new Error(`[annuaire] Supabase fetch FAILED in CI: ${err.message}`);
     }
-    console.warn(`[annuaire] Supabase fetch failed: ${err.message} — using mock data`);
+    console.warn(`[annuaire] Supabase fetch failed: ${err.message}, using mock data`);
     return null;
   }
 }
@@ -433,7 +441,7 @@ async function generateSpecialtyPages() {
   let skipped = 0;
   for (const specialty of SPECIALTIES) {
     const filteredProfessionals = shared.professionals.filter(p => p.specialty === specialty.id);
-    // Skip specialty pages with no professionals — redirect to homepage
+    // Skip specialty pages with no professionals, redirect to homepage
     if (filteredProfessionals.length === 0) {
       emptyRedirects.push({ from: `/${specialty.id}/`, to: '/', status: 302 });
       skipped++;
@@ -467,7 +475,7 @@ async function generateCityPages() {
   let skipped = 0;
   for (const city of CITIES) {
     const filteredProfessionals = filterProfessionalsForCity(shared.professionals, city);
-    // Skip cities with no professionals — redirect to homepage instead
+    // Skip cities with no professionals, redirect to homepage instead
     if (filteredProfessionals.length === 0) {
       emptyRedirects.push({ from: `/${city.id}/`, to: '/', status: 302 });
       skipped++;
@@ -504,7 +512,7 @@ async function generateSpecialtyCityPages() {
         p => p.specialty === specialty.id
       );
 
-      // Skip empty specialty×city combinations — these are pure doorway pages
+      // Skip empty specialty×city combinations, these are pure doorway pages
       // that triggered Google quality penalties. Only generate pages with real
       // professionals listed.
       if (filteredProfessionals.length === 0) {
@@ -615,7 +623,7 @@ function minifyCss(css) {
 // ── Copy static assets ──────────────────────────────────────────────────
 
 function copyAssets() {
-  // CSS — read, minify, then write
+  // CSS, read, minify, then write
   const cssDir = path.join(DIST_DIR, 'css');
   ensureDir(cssDir);
   const cssSrc = path.resolve(__dirname, '../css/annuaire.css');
@@ -694,13 +702,13 @@ function generateSitemap() {
     addUrl(getAnnuaireUrl(`/${specialty.id}/`), 'weekly', '0.9');
   }
 
-  // City pages — only cities that were actually generated (have professionals)
+  // City pages, only cities that were actually generated (have professionals)
   for (const city of CITIES) {
     if (!generatedCityIds.has(city.id)) continue;
     addUrl(getAnnuaireUrl(`/${city.id}/`), 'weekly', '0.8');
   }
 
-  // Specialty x City pages — only combinations actually generated (have professionals)
+  // Specialty x City pages, only combinations actually generated (have professionals)
   for (const pair of generatedSpecialtyCityPairs) {
     addUrl(getAnnuaireUrl(`/${pair}/`), 'weekly', '0.7');
   }
@@ -750,7 +758,7 @@ async function fetchRedirects() {
     console.log(`[annuaire] Fetched ${rows.length} redirects from Supabase`);
     return rows;
   } catch (err) {
-    console.warn(`[annuaire] Redirects fetch failed: ${err.message} — skipping`);
+    console.warn(`[annuaire] Redirects fetch failed: ${err.message}, skipping`);
     return [];
   }
 }
@@ -763,7 +771,7 @@ function generateRedirectsFile(supabaseRedirects) {
     lines.push(`${r.from_path} ${r.to_path} 301`);
   }
 
-  // 302 redirects for empty pages (no professionals yet — will be removed
+  // 302 redirects for empty pages (no professionals yet, will be removed
   // when a professional registers in that specialty/city)
   for (const r of emptyRedirects) {
     lines.push(`${r.from} ${r.to} ${r.status}`);
