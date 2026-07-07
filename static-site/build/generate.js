@@ -203,6 +203,8 @@ async function minifyHtml(html) {
     return await minify(html, {
       collapseWhitespace: true,
       removeComments: true,
+      // Keep important comments (^!) and the homepage verification token
+      ignoreCustomComments: [/^!/, /cf7a42f54f657854c287ed4d2afdf069/],
       minifyCSS: true,
       minifyJS: true,
       removeRedundantAttributes: true,
