@@ -212,39 +212,6 @@
   </div>
 </section>
 
-<%- include('../partials/wave-divider', { variant: 'background', direction: 'up' }) %>
-
-<!-- AI Resolver Section -->
-<section class="section-padding">
-  <div class="container mx-auto px-4">
-    <div class="ai-resolver-card mx-auto max-w-4xl">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <!-- Visual -->
-        <div class="ai-resolver-visual">
-          <div class="ai-resolver-icon">
-            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          </div>
-          <div class="ai-resolver-dots">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="ai-resolver-icon ai-resolver-icon--secondary">
-            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 00-8 8c0 3.36 2.07 6.24 5 7.42V19a1 1 0 001 1h4a1 1 0 001-1v-1.58c2.93-1.18 5-4.06 5-7.42a8 8 0 00-8-8z"/><path d="M10 22h4"/></svg>
-          </div>
-        </div>
-        <!-- Content -->
-        <div>
-          <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('home:aiResolver.title', 'Résolvez vos problèmes de couple') %> <span class="text-gradient"><%= t('home:aiResolver.titleHighlight', 'avec l\'I.A !') %></span></h2>
-          <p class="text-muted-foreground mb-6"><%= t('home:aiResolver.description', '') %> <strong class="text-foreground"><%= t('home:aiResolver.descriptionHighlight', '') %></strong> <%= t('home:aiResolver.descriptionEnd', '') %></p>
-          <a href="<%= getLocalizedUrl('problemResolver', lang) %>" class="btn btn-cta">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            <%= t('home:aiResolver.cta', 'Essayer gratuitement') %>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
 <!-- What Is Quiz Couple -->

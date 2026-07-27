@@ -30,22 +30,6 @@
       "button": "See questions"
     }
   },
-  "aiResolver": {
-    "badge": "New",
-    "title": "Solve your couple problems",
-    "titleHighlight": "with AI!",
-    "description": "Have a dispute to resolve? Our artificial intelligence analyzes your situation in a",
-    "descriptionHighlight": "100% impartial",
-    "descriptionEnd": "way and helps you find a solution.",
-    "cardTitle": "A neutral and objective analysis",
-    "cardDescription": "Describe your situation, each person gives their version of the facts, and the AI provides you with an analysis including the distribution of responsibilities and personalized advice to move forward together.",
-    "features": {
-      "confidential": "100% Confidential",
-      "free": "Free",
-      "impartial": "Impartial AI"
-    },
-    "cta": "Try it now"
-  },
   "whatIs": {
     "title": "What is a",
     "titleHighlight": "couple quiz",

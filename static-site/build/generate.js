@@ -432,7 +432,7 @@ async function generatePage(routeKey, lang) {
 
   // Build visual breadcrumb items for specific page types
   const breadcrumbs = [];
-  if (routeKey.startsWith('test') || routeKey.startsWith('quiz') || routeKey === 'questionsCouple' || routeKey === 'problemResolver' || routeKey === 'activities') {
+  if (routeKey.startsWith('test') || routeKey.startsWith('quiz') || routeKey === 'questionsCouple' || routeKey === 'activities') {
     breadcrumbs.push({ name: bl.home, url: getLocalizedPath('home', lang) });
     breadcrumbs.push({ name: title });
   }
@@ -1061,7 +1061,7 @@ async function generateBlogArticle(articleMeta, lang) {
       'quizMost', 'quizAdo', 'quizGenant', 'quizTuPreferes',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
     sidebarOther: [
-      'questionsCouple', 'problemResolver',
+      'questionsCouple',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
     sidebarArticles: BLOG_ARTICLES
       .filter(a => a.internalSlug !== articleMeta.internalSlug && !(a.frOnly && lang !== 'fr'))
@@ -1243,12 +1243,18 @@ async function main() {
     { from: 'es/test-pareja', to: '/es/test-compatibilidad-pareja/' },
     { from: 'de/gemeinsamkeiten-test-paar', to: '/de/gemeinsamkeiten-test-paare/' },
     { from: 'en/love-quiz-couples', to: '/en/love-quiz/' },
-    { from: 'de/beziehungsproblem-loesen', to: '/de/paar-problem-loesen/' },
+    { from: 'de/beziehungsproblem-loesen', to: '/de/fragen-fuer-paare/' },
     { from: 'it/test-coppia', to: '/it/test-compatibilita-coppia/' },
     { from: 'es/test-cosas-en-comun-pareja', to: '/es/test-puntos-comunes-pareja/' },
     { from: 'en/privacy', to: '/en/privacy-policy/' },
     { from: 'de/beziehungstest', to: '/de/paar-kompatibilitaetstest/' },
     { from: 'de/quiz-wer-kennt-partner-besser', to: '/de/wer-kennt-partner-besser-quiz/' },
+    // Retired AI problem-resolver page → redirect to the sibling "couple questions" tool
+    { from: 'resoudre-probleme-couple', to: '/questions-couple/' },
+    { from: 'en/solve-couple-problem', to: '/en/couple-questions/' },
+    { from: 'es/resolver-problema-pareja', to: '/es/preguntas-pareja/' },
+    { from: 'de/paar-problem-loesen', to: '/de/fragen-fuer-paare/' },
+    { from: 'it/risolvere-problema-coppia', to: '/it/domande-coppia/' },
   ];
   for (const { from, to } of REDIRECTS) {
     const redirectDir = path.join(DIST_DIR, from);

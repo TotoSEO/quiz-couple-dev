@@ -1,8 +1,5 @@
 project_id = "lojvajnnvhatfplevyvy"
 
-[functions.resolve-couple-problem]
-verify_jwt = false
-
 [functions.get-client-ip]
 verify_jwt = false
 

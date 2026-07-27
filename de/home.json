@@ -30,22 +30,6 @@
       "button": "Fragen ansehen"
     }
   },
-  "aiResolver": {
-    "badge": "Neu",
-    "title": "Löse eure Paar-Probleme",
-    "titleHighlight": "mit KI!",
-    "description": "Habt ihr einen Streit zu lösen? Unsere künstliche Intelligenz analysiert eure Situation auf",
-    "descriptionHighlight": "100% unparteiische",
-    "descriptionEnd": "Weise und hilft euch, eine Lösung zu finden.",
-    "cardTitle": "Eine neutrale und objektive Analyse",
-    "cardDescription": "Beschreibt eure Situation, jede Person gibt ihre Version der Fakten, und die KI liefert euch eine Analyse mit der Verteilung der Verantwortlichkeiten und personalisierten Ratschlägen, um gemeinsam voranzukommen.",
-    "features": {
-      "confidential": "100% Vertraulich",
-      "free": "Kostenlos",
-      "impartial": "Unparteiische KI"
-    },
-    "cta": "Jetzt ausprobieren"
-  },
   "whatIs": {
     "title": "Was ist ein",
     "titleHighlight": "Paar-Quiz",
