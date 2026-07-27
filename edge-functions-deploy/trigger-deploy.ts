@@ -8,7 +8,7 @@ const corsHeaders = {
 const TOKEN_MAX_AGE = 86400; // 24 hours
 
 async function verifyAdminToken(token: string): Promise<boolean> {
-  const secret = (Deno.env.get('ANNUAIRE_ADMIN_PASSWORD') || Deno.env.get('ADMIN_PASSWORD') || '').trim();
+  const secret = (Deno.env.get('ADMIN_PASSWORD') || '').trim();
   if (!secret) return false;
   const parts = token.split('.');
   if (parts.length !== 2) return false;
