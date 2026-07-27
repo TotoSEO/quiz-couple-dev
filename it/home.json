@@ -30,22 +30,6 @@
       "button": "Vedi domande"
     }
   },
-  "aiResolver": {
-    "badge": "Nuovo",
-    "title": "Risolvi i tuoi problemi di coppia",
-    "titleHighlight": "con l'I.A!",
-    "description": "Hai una disputa da risolvere? La nostra intelligenza artificiale analizza la tua situazione in modo",
-    "descriptionHighlight": "100% imparziale",
-    "descriptionEnd": "e ti aiuta a trovare una soluzione.",
-    "cardTitle": "Un'analisi neutrale e oggettiva",
-    "cardDescription": "Descrivi la tua situazione, ogni persona dà la sua versione dei fatti, e l'IA ti fornisce un'analisi con la distribuzione delle responsabilità e consigli personalizzati per andare avanti insieme.",
-    "features": {
-      "confidential": "100% Confidenziale",
-      "free": "Gratis",
-      "impartial": "IA imparziale"
-    },
-    "cta": "Prova ora"
-  },
   "whatIs": {
     "title": "Cos'è un",
     "titleHighlight": "quiz per coppie",

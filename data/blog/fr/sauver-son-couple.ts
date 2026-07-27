@@ -78,7 +78,7 @@ const article: BlogArticleData = {
           id: 'ressentiment-non-dit',
           title: "Le ressentiment accumulé : le tueur silencieux",
           content: `<p>Le ressentiment, c'est la colère qu'on n'a pas exprimée et qui fermente. Chaque frustration avalée, chaque besoin ignoré, chaque sacrifice non reconnu, tout ça s'empile. Et un jour, ça déborde. Souvent pour un truc insignifiant, une chaussette par terre, un retard de dix minutes, un ton un peu sec.</p>
-<p>L'autre ne comprend pas. "Mais pourquoi tu réagis comme ça pour si peu ?" Parce que ce n'est pas "si peu". C'est six mois, un an, trois ans de choses non dites qui explosent d'un coup. <strong>Le ressentiment détruit plus de couples que l'infidélité.</strong> Parce qu'il avance masqué et qu'on ne le voit que quand il est déjà trop tard. Si tu sens que cette accumulation est en train de se produire, <a href="/resoudre-probleme-couple/">prendre le temps de résoudre les problèmes de fond</a> est urgent.</p>`,
+<p>L'autre ne comprend pas. "Mais pourquoi tu réagis comme ça pour si peu ?" Parce que ce n'est pas "si peu". C'est six mois, un an, trois ans de choses non dites qui explosent d'un coup. <strong>Le ressentiment détruit plus de couples que l'infidélité.</strong> Parce qu'il avance masqué et qu'on ne le voit que quand il est déjà trop tard. Si tu sens que cette accumulation est en train de se produire, <a href="/questions-couple/">prendre le temps de résoudre les problèmes de fond</a> est urgent.</p>`,
         },
       ],
     },

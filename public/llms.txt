@@ -38,7 +38,6 @@
 
 ### Other Tools
 - [Couple Questions](https://quiz-couple.com/en/couple-questions/): 200+ conversation starters
-- [Solve Couple Problem](https://quiz-couple.com/en/solve-couple-problem/): AI-powered relationship advice
 - [Zodiac Compatibility](https://quiz-couple.com/en/zodiac-signs-names-compatibility/): Astrology + first name analysis
 - [Couple Activities Near Me](https://quiz-couple.com/en/couple-activities-near-me/): Date ideas by location
 
