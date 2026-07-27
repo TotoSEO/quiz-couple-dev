@@ -18,15 +18,6 @@ verify_jwt = false
 [functions.manage-ado-session]
 verify_jwt = false
 
-[functions.annuaire-profile]
-verify_jwt = false
-
-[functions.annuaire-stats]
-verify_jwt = false
-
-[functions.annuaire-track]
-verify_jwt = false
-
 [functions.contact-message]
 verify_jwt = false
 
@@ -42,29 +33,5 @@ verify_jwt = false
 [functions.trigger-deploy]
 verify_jwt = false
 
-[functions.send-email]
-verify_jwt = false
-
-[functions.admin-annuaire]
-verify_jwt = false
-
-[functions.verify-annuaire-admin]
-verify_jwt = false
-
 [functions.ebook-verify]
-verify_jwt = false
-
-[functions.annuaire-stripe-webhook]
-verify_jwt = false
-
-[functions.annuaire-checkout]
-verify_jwt = false
-
-[functions.annuaire-generate-invoice]
-verify_jwt = false
-
-[functions.annuaire-billing-portal]
-verify_jwt = false
-
-[functions.admin-mass-mail]
 verify_jwt = false

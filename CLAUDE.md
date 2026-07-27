@@ -4,8 +4,7 @@
 
 Static site generator (EJS + vanilla JS) deployed to GitHub Pages.
 - **Main site**: quiz-couple.com (GitHub Pages)
-- **Annuaire**: annuaire.quiz-couple.com (Cloudflare Pages) — DISSOCIATED from main site
-- **Backend**: Supabase (blog articles, reviews, professionals)
+- **Backend**: Supabase (blog articles, reviews)
 - **Languages**: FR (primary), EN, ES, DE, IT — frOnly pages should NOT appear in non-FR navigation
 
 ## Build
@@ -14,14 +13,12 @@ Static site generator (EJS + vanilla JS) deployed to GitHub Pages.
 cd static-site
 npm ci
 npm run build          # Main site → dist/
-npm run build:annuaire # Annuaire → dist/annuaire/
 ```
 
 ## Key Files
 
 - `static-site/build/config.js` — Routes, languages, blog articles, helpers
 - `static-site/build/generate.js` — Main site generator
-- `static-site/build/generate-annuaire.js` — Annuaire generator (skip empty pages, 302 redirects)
 - `static-site/templates/base.ejs` — HTML base template (meta, OG, hreflang, JSON-LD)
 - `static-site/templates/pages/quiz-generic.ejs` — Generic quiz page template
 - `static-site/templates/partials/related-tests.ejs` — Related tests internal linking

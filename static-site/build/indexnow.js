@@ -50,9 +50,9 @@ async function submitBatch(urls, host) {
 }
 
 async function main() {
-  // Collect URLs from all language sitemaps + annuaire sitemap
+  // Collect URLs from all language sitemaps
   const allUrls = new Set();
-  const sitemapFiles = ['sitemap-fr.xml', 'sitemap-en.xml', 'sitemap-es.xml', 'sitemap-de.xml', 'sitemap-it.xml', 'annuaire/sitemap.xml'];
+  const sitemapFiles = ['sitemap-fr.xml', 'sitemap-en.xml', 'sitemap-es.xml', 'sitemap-de.xml', 'sitemap-it.xml'];
 
   for (const file of sitemapFiles) {
     const filePath = path.join(DIST_DIR, file);
