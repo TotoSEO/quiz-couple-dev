@@ -94,9 +94,11 @@ export const ROUTE_CONFIG = {
   ebookConfirm: { template: 'ebook-confirm', namespaces: ['common'], frOnly: true },
 };
 
-// Supabase config
-export const SUPABASE_URL = 'https://lojvajnnvhatfplevyvy.supabase.co';
-export const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
+// Supabase config — piloté par les secrets GitHub (SUPABASE_URL / SUPABASE_ANON_KEY)
+// injectés au build par les workflows. La valeur en dur ne sert que de repli local.
+// Ces valeurs (URL + clé anon) sont publiques par nature (embarquées côté client).
+export const SUPABASE_URL = process.env.SUPABASE_URL || 'https://lojvajnnvhatfplevyvy.supabase.co';
+export const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
 
 // Google Analytics
 export const GA_ID = 'G-XZV8V6FEK5';
