@@ -866,6 +866,19 @@ async function copyJs() {
     }
   }
 
+  // Inject the Supabase URL + anon key (resolved from config.js, itself driven by the
+  // SUPABASE_URL / SUPABASE_ANON_KEY GitHub secrets) into the client JS files that hardcode
+  // them (quiz-engine-core, quiz-ado-multiplayer, questions-couple). This makes config.js
+  // the single source of truth so the project can be swapped via the secrets alone.
+  const supaUrlRe = /https:\/\/[a-z0-9]{16,}\.supabase\.co/g;
+  const supaAnonRe = /eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/g;
+  for (const file of fs.readdirSync(destDir).filter(f => f.endsWith('.js'))) {
+    const p = path.join(destDir, file);
+    const before = fs.readFileSync(p, 'utf-8');
+    const after = before.replace(supaUrlRe, SUPABASE_URL).replace(supaAnonRe, SUPABASE_ANON_KEY);
+    if (after !== before) fs.writeFileSync(p, after, 'utf-8');
+  }
+
   console.log('[js] JS files copied to dist/js/');
 
   // Minify JS files
