@@ -417,7 +417,7 @@ async function generatePage(routeKey, lang) {
           slug: localizedSlug,
           title: (oData && oData.title) || article.title,
           excerpt: (oData && oData.excerpt) || article.excerpt || '',
-          featuredImage: (oData && oData.featuredImage) || article.featuredImage || '/placeholder.svg',
+          featuredImage: (oData && oData.featuredImage) || article.featuredImage || articleMeta.featuredImage || '/placeholder.svg',
           featuredImageAlt: (oData && oData.featuredImageAlt) || article.featuredImageAlt || article.title,
           publishedAt: article.publishedAt || articleMeta.publishedAt,
           url: getArticlePath(localizedSlug, lang),
@@ -925,6 +925,12 @@ async function generateBlogArticle(articleMeta, lang) {
   if (!article) {
     console.warn(`[blog] No article data for ${articleMeta.internalSlug} (${lang})`);
     return null;
+  }
+
+  // Featured image is language-independent: fall back to the value declared in
+  // config.js (BLOG_ARTICLES) when the TS file leaves it empty.
+  if (!article.featuredImage && articleMeta.featuredImage) {
+    article.featuredImage = articleMeta.featuredImage;
   }
 
   // Apply Supabase overrides for SEO fields (admin edits take priority)

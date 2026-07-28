@@ -6,7 +6,7 @@ const article: BlogArticleData = {
   title: "Emotional Dependency: When Love Becomes a Survival Need",
   metaTitle: "Emotional Dependency: Signs, Causes & How to Break Free",
   metaDescription: "Feel like you can't live without your partner? Fear of abandonment, constant need for reassurance, loss of identity. A complete guide to emotional dependency.",
-  featuredImage: '/blog/dependance-affective.webp',
+  featuredImage: '/blog/dependance-affective.svg',
   featuredImageAlt: "Couple embracing on a couch illustrating emotional dependency in a relationship",
   publishedAt: '2026-03-24',
   author: AUTHORS['lucie-courtin'],

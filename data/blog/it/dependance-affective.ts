@@ -6,7 +6,7 @@ const article: BlogArticleData = {
   title: "Dipendenza affettiva: quando amare diventa un bisogno vitale",
   metaTitle: "Dipendenza affettiva: segnali, cause e come liberarsene",
   metaDescription: "Hai la sensazione di non poter vivere senza l'altro? Paura dell'abbandono, bisogno costante di rassicurazione, perdita di identità. Guida completa alla dipendenza affettiva.",
-  featuredImage: '/blog/dependance-affective.webp',
+  featuredImage: '/blog/dependance-affective.svg',
   featuredImageAlt: "Coppia abbracciata su un divano che illustra la dipendenza affettiva nella relazione",
   publishedAt: '2026-03-24',
   author: AUTHORS['lucie-courtin'],

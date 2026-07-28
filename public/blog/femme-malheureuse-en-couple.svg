@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#160a1c"/>
+      <stop offset="55%" stop-color="#140820"/>
+      <stop offset="100%" stop-color="#0e0518"/>
+    </linearGradient>
+    <linearGradient id="stem" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4618c"/>
+      <stop offset="100%" stop-color="#8b5cc2"/>
+    </linearGradient>
+    <radialGradient id="glowU" cx="400" cy="210" r="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8b5cc2" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#8b5cc2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <circle cx="400" cy="210" r="240" fill="url(#glowU)"/>
+  <!-- Rain cloud above -->
+  <g opacity="0.8" transform="translate(400,110)">
+    <path d="M-70,10 a34,34 0 0 1 66,-16 a30,30 0 0 1 56,10 a26,26 0 0 1 -6,52 h-108 a30,30 0 0 1 -8,-46 Z"
+          fill="none" stroke="#8b5cc2" stroke-width="2.5" stroke-linejoin="round"/>
+    <line x1="-40" y1="72" x2="-48" y2="96" stroke="#d4618c" stroke-width="2.2" stroke-linecap="round" opacity="0.7"/>
+    <line x1="0" y1="74" x2="-8" y2="100" stroke="#d4618c" stroke-width="2.2" stroke-linecap="round" opacity="0.7"/>
+    <line x1="40" y1="72" x2="32" y2="96" stroke="#d4618c" stroke-width="2.2" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  <!-- Wilting flower -->
+  <g transform="translate(400,250)">
+    <!-- drooping stem -->
+    <path d="M0,120 C0,70 6,50 34,34" fill="none" stroke="url(#stem)" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- leaf -->
+    <path d="M2,88 C-24,80 -34,92 -30,104 C-14,104 2,100 2,88Z" fill="none" stroke="#8b5cc2" stroke-width="2" opacity="0.6"/>
+    <!-- drooping bloom -->
+    <g transform="translate(40,22) rotate(28)">
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#d4618c" stroke-width="2.5"/>
+      <path d="M0,-10 a10,16 0 0 1 0,-2" fill="none"/>
+      <g stroke="#e87d4a" stroke-width="2.4" stroke-linecap="round" opacity="0.85">
+        <path d="M0,-11 C-8,-24 8,-24 0,-11"/>
+        <path d="M10,-2 C24,-8 24,10 10,2"/>
+        <path d="M6,10 C14,22 -2,26 2,12"/>
+        <path d="M-8,6 C-22,10 -22,-8 -8,-2"/>
+      </g>
+    </g>
+    <!-- fallen petal -->
+    <path d="M96,150 C82,142 82,160 96,166 C110,160 110,142 96,150Z" fill="#d4618c" opacity="0.4"/>
+  </g>
+  <!-- Sparks -->
+  <circle cx="250" cy="180" r="2.5" fill="#d4618c" opacity="0.25"/>
+  <circle cx="560" cy="220" r="3" fill="#8b5cc2" opacity="0.25"/>
+  <circle cx="600" cy="330" r="1.5" fill="#e87d4a" opacity="0.2"/>
+</svg>
