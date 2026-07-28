@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a0a1a"/>
+      <stop offset="55%" stop-color="#170820"/>
+      <stop offset="100%" stop-color="#100518"/>
+    </linearGradient>
+    <linearGradient id="big" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e87d4a"/>
+      <stop offset="100%" stop-color="#d4618c"/>
+    </linearGradient>
+    <linearGradient id="small" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4618c"/>
+      <stop offset="100%" stop-color="#8b5cc2"/>
+    </linearGradient>
+    <radialGradient id="glowD" cx="400" cy="225" r="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d4618c" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#d4618c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <circle cx="400" cy="225" r="240" fill="url(#glowD)"/>
+  <!-- Orbit path of the dependent heart around the anchor -->
+  <ellipse cx="320" cy="225" rx="185" ry="120" fill="none" stroke="#8b5cc2" stroke-width="1.5" stroke-dasharray="3,8" opacity="0.35" transform="rotate(-12 320 225)"/>
+  <!-- Anchor heart (big, self-sufficient) -->
+  <path d="M320,215 C320,175 260,175 260,215 C260,258 320,300 320,300 C320,300 380,258 380,215 C380,175 320,175 320,215Z"
+        fill="none" stroke="url(#big)" stroke-width="3.5"/>
+  <!-- Dependent heart (small, tethered, pulled toward anchor) -->
+  <g transform="translate(560,150) scale(0.62)">
+    <path d="M0,10 C0,-24 -46,-24 -46,10 C-46,44 0,80 0,80 C0,80 46,44 46,10 C46,-24 0,-24 0,10Z"
+          fill="none" stroke="url(#small)" stroke-width="5"/>
+  </g>
+  <!-- Chain / cord linking the two (the dependency) -->
+  <path d="M372,205 C440,175 490,170 545,165" fill="none" stroke="#d4618c" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+  <circle cx="410" cy="188" r="4.5" fill="none" stroke="#d4618c" stroke-width="2" opacity="0.6"/>
+  <circle cx="448" cy="178" r="4.5" fill="none" stroke="#d4618c" stroke-width="2" opacity="0.6"/>
+  <circle cx="486" cy="172" r="4.5" fill="none" stroke="#d4618c" stroke-width="2" opacity="0.6"/>
+  <!-- Sparks -->
+  <circle cx="230" cy="140" r="3" fill="#e87d4a" opacity="0.3"/>
+  <circle cx="620" cy="250" r="2.5" fill="#8b5cc2" opacity="0.25"/>
+  <circle cx="300" cy="330" r="2" fill="#d4618c" opacity="0.25"/>
+  <circle cx="520" cy="300" r="1.5" fill="#e87d4a" opacity="0.2"/>
+</svg>
