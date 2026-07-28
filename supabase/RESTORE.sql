@@ -1,67 +1,28 @@
 -- ============================================================================
--- QUIZ COUPLE — SCRIPT DE RESTAURATION COMPLÈTE DE LA BASE SUPABASE
+-- QUIZ COUPLE — SCRIPT DE RESTAURATION DE LA BASE (nouveau projet Supabase)
 -- ============================================================================
--- À exécuter UNE SEULE FOIS sur un NOUVEAU projet Supabase vierge :
+-- À exécuter UNE FOIS sur un NOUVEAU projet Supabase vierge :
 --   Dashboard > SQL Editor > New Query > coller CE fichier en entier > Run
 --
--- Ce fichier reconstruit TOUT le schéma (tables, RLS, storage, triggers, cron)
--- à jour, puis réinjecte les vrais avis clients.
+-- Périmètre : toutes les fonctionnalités CONSERVÉES du site :
+--   • leads                 → capture e-mail e-book (double opt-in)
+--   • messages              → formulaire de contact
+--   • reviews               → avis clients (+ note agrégée / étoiles Google)
+--   • quiz_ado_sessions     → quiz ado multijoueur (temps réel)
+--   • activity_validations  → recherche d'activités
 --
--- ORDRE D'EXÉCUTION GLOBAL DE LA RESTAURATION (voir RECOVERY.md) :
---   1. Ce fichier (RESTORE.sql)        → schéma complet + avis
---   2. seed-blog-data.sql (à la racine) → contenu complet des articles de blog
---      (gardé à part car volumineux : ~2,7 Mo)
+-- NE fait PLUS partie de la base (désormais servi depuis le repo) :
+--   • articles de blog (blog_articles, blog_article_translations)
+--   • images de blog (bucket storage blog-images)
+--   → le blog et ses images vivent maintenant dans data/blog/ et public/blog/
 --
--- Ce script assemble, dans l'ordre correct :
---   • supabase/setup-new-project.sql                         (schéma de base + storage + cron)
---   • supabase/migrations/…_create_messages_table.sql        (formulaire de contact)
---   • supabase/migrations/…_leads_verification.sql           (double opt-in e-book)
---   • seed-reviews-real.sql                                  (11 vrais avis)
+-- Retiré définitivement (fonctionnalités supprimées) :
+--   • problem_resolver_usage (page « résoudre un problème de couple » IA)
+--   • tables annuaire (annuaire.quiz-couple.com)
 -- ============================================================================
 
 
--- ####################  PARTIE 1/4 : SCHÉMA DE BASE  #########################
--- ============================================================
--- SETUP COMPLET SUPABASE - Quiz Couple
--- Exécuter ce script dans : Dashboard > SQL Editor > New Query
--- ============================================================
-
--- ============================================================
--- 1. TABLE: problem_resolver_usage (rate limiting IA)
--- ============================================================
-CREATE TABLE public.problem_resolver_usage (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  ip_address TEXT NOT NULL,
-  used_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);
-
-CREATE INDEX idx_problem_resolver_usage_ip_date
-ON public.problem_resolver_usage(ip_address, used_at);
-
-ALTER TABLE public.problem_resolver_usage ENABLE ROW LEVEL SECURITY;
-
--- ============================================================
--- 1b. TABLE: activity_validations (tracking recherches activités)
--- ============================================================
-CREATE TABLE public.activity_validations (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  ip_address TEXT,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
-);
-
-ALTER TABLE public.activity_validations ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Allow read activity_validations"
-ON public.activity_validations FOR SELECT
-USING (true);
-
-CREATE INDEX idx_activity_validations_created_at
-ON public.activity_validations(created_at DESC);
-
--- ============================================================
--- 2. TABLE: reviews (avis utilisateurs avec modération)
--- ============================================================
+-- ####################  1. AVIS CLIENTS (reviews)  ##########################
 CREATE TABLE public.reviews (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   author_name TEXT NOT NULL,
@@ -82,15 +43,14 @@ CREATE POLICY "Anyone can insert reviews"
 ON public.reviews FOR INSERT
 WITH CHECK (true);
 
--- NOTE: No blanket SELECT policy, admin reads all reviews (including IPs)
--- via the admin-reviews edge function using service_role key.
+-- Pas de policy SELECT globale : l'admin lit tous les avis (IP incluses)
+-- via la fonction edge admin-reviews (service_role).
 
 CREATE INDEX idx_reviews_ip_address ON public.reviews(ip_address);
 CREATE INDEX idx_reviews_approved ON public.reviews(is_approved) WHERE is_approved = true;
 
--- ============================================================
--- 3. TABLE: quiz_ado_sessions (quiz ado multijoueur)
--- ============================================================
+
+-- ####################  2. QUIZ ADO MULTIJOUEUR (temps réel)  ################
 CREATE TABLE public.quiz_ado_sessions (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   code TEXT NOT NULL UNIQUE,
@@ -110,17 +70,15 @@ ALTER TABLE public.quiz_ado_sessions ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "Anyone can read sessions by code"
   ON public.quiz_ado_sessions FOR SELECT USING (true);
-
 CREATE POLICY "Anyone can create sessions"
   ON public.quiz_ado_sessions FOR INSERT WITH CHECK (true);
-
 CREATE POLICY "Anyone can update sessions"
   ON public.quiz_ado_sessions FOR UPDATE USING (true);
 
 CREATE INDEX idx_quiz_ado_sessions_code ON public.quiz_ado_sessions (code);
 CREATE INDEX idx_quiz_ado_sessions_expires ON public.quiz_ado_sessions (expires_at);
 
--- Auto-update updated_at
+-- Auto-update de updated_at
 CREATE OR REPLACE FUNCTION public.update_quiz_ado_updated_at()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -134,112 +92,85 @@ CREATE TRIGGER update_quiz_ado_sessions_updated_at
   FOR EACH ROW
   EXECUTE FUNCTION public.update_quiz_ado_updated_at();
 
--- Enable realtime pour le multijoueur
+-- Realtime pour le multijoueur
 ALTER PUBLICATION supabase_realtime ADD TABLE public.quiz_ado_sessions;
 
--- ============================================================
--- 4. TABLE: blog_articles (articles de blog)
--- ============================================================
-CREATE TABLE public.blog_articles (
-  id UUID NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY,
-  internal_slug TEXT NOT NULL UNIQUE,
-  featured_image_url TEXT,
-  author_id TEXT NOT NULL DEFAULT 'mathieu-courtin',
-  published_at TIMESTAMP WITH TIME ZONE,
-  updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
-  created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
-  status TEXT NOT NULL DEFAULT 'draft'
+
+-- ####################  3. RECHERCHE D'ACTIVITÉS  ###########################
+CREATE TABLE public.activity_validations (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  ip_address TEXT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-ALTER TABLE public.blog_articles ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.activity_validations ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY "Anyone can read published articles"
-ON public.blog_articles FOR SELECT
-USING (status = 'published');
+CREATE POLICY "Allow read activity_validations"
+ON public.activity_validations FOR SELECT
+USING (true);
 
--- ============================================================
--- 5. TABLE: blog_article_translations (traductions)
--- ============================================================
-CREATE TABLE public.blog_article_translations (
-  id UUID NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY,
-  article_id UUID NOT NULL REFERENCES public.blog_articles(id) ON DELETE CASCADE,
-  lang TEXT NOT NULL,
-  slug TEXT NOT NULL,
-  title TEXT NOT NULL DEFAULT '',
-  meta_title TEXT NOT NULL DEFAULT '',
-  meta_description TEXT NOT NULL DEFAULT '',
-  featured_image_alt TEXT NOT NULL DEFAULT '',
-  excerpt TEXT NOT NULL DEFAULT '',
-  introduction TEXT NOT NULL DEFAULT '',
-  quick_summary JSONB NOT NULL DEFAULT '[]'::jsonb,
-  sections JSONB NOT NULL DEFAULT '[]'::jsonb,
-  is_complete BOOLEAN NOT NULL DEFAULT false,
-  created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
-  updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
-  UNIQUE(article_id, lang),
-  UNIQUE(lang, slug)
+CREATE INDEX idx_activity_validations_created_at
+ON public.activity_validations(created_at DESC);
+
+
+-- ####################  4. LEADS (e-book, double opt-in)  ###################
+CREATE TABLE public.leads (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  first_name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  subject TEXT NOT NULL DEFAULT 'Ebook Astro',
+  is_closed BOOLEAN DEFAULT false,
+  verification_token UUID DEFAULT gen_random_uuid(),
+  email_verified BOOLEAN DEFAULT false,
+  verified_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-ALTER TABLE public.blog_article_translations ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.leads ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY "Anyone can read translations of published articles"
-ON public.blog_article_translations FOR SELECT
-USING (
-  EXISTS (
-    SELECT 1 FROM public.blog_articles
-    WHERE id = article_id AND status = 'published'
-  )
+CREATE POLICY "Anyone can submit a lead"
+ON public.leads FOR INSERT
+WITH CHECK (true);
+
+-- Pas de policy SELECT/UPDATE publique : les leads sont accédés via les
+-- fonctions edge admin-leads / ebook-verify (service_role).
+
+CREATE INDEX idx_leads_email ON public.leads(email);
+CREATE INDEX idx_leads_subject ON public.leads(subject);
+CREATE INDEX idx_leads_verification_token ON public.leads(verification_token);
+
+
+-- ####################  5. MESSAGES (formulaire de contact)  ################
+CREATE TABLE public.messages (
+  id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+  last_name text NOT NULL,
+  first_name text NOT NULL,
+  email text NOT NULL,
+  phone text,
+  company text,
+  message text NOT NULL,
+  lang text DEFAULT 'fr',
+  ip text,
+  status text DEFAULT 'new' CHECK (status IN ('new', 'read', 'archived')),
+  created_at timestamptz DEFAULT now()
 );
 
--- ============================================================
--- 6. STORAGE: bucket blog-images
--- ============================================================
-INSERT INTO storage.buckets (id, name, public) VALUES ('blog-images', 'blog-images', true);
+ALTER TABLE public.messages ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY "Blog images are publicly accessible"
-ON storage.objects FOR SELECT
-USING (bucket_id = 'blog-images');
+-- Seul le service_role accède aux messages (via les fonctions edge)
+CREATE POLICY "Service role full access" ON public.messages
+  FOR ALL
+  USING (auth.role() = 'service_role')
+  WITH CHECK (auth.role() = 'service_role');
 
--- Policy pour permettre l'upload via service role (edge functions)
-CREATE POLICY "Service role can upload blog images"
-ON storage.objects FOR INSERT
-WITH CHECK (bucket_id = 'blog-images');
+CREATE INDEX idx_messages_status ON public.messages (status);
+CREATE INDEX idx_messages_created_at ON public.messages (created_at DESC);
 
-CREATE POLICY "Service role can update blog images"
-ON storage.objects FOR UPDATE
-USING (bucket_id = 'blog-images');
 
-CREATE POLICY "Service role can delete blog images"
-ON storage.objects FOR DELETE
-USING (bucket_id = 'blog-images');
-
--- ============================================================
--- 7. TRIGGERS: auto-update updated_at pour blog
--- ============================================================
-CREATE OR REPLACE FUNCTION public.update_blog_updated_at()
-RETURNS TRIGGER AS $$
-BEGIN
-  NEW.updated_at = now();
-  RETURN NEW;
-END;
-$$ LANGUAGE plpgsql SET search_path = public;
-
-CREATE TRIGGER update_blog_articles_updated_at
-BEFORE UPDATE ON public.blog_articles
-FOR EACH ROW
-EXECUTE FUNCTION public.update_blog_updated_at();
-
-CREATE TRIGGER update_blog_translations_updated_at
-BEFORE UPDATE ON public.blog_article_translations
-FOR EACH ROW
-EXECUTE FUNCTION public.update_blog_updated_at();
-
--- ============================================================
--- 8. CRON JOBS: nettoyage automatique
--- ============================================================
+-- ####################  6. CRON : nettoyage automatique  ####################
 CREATE EXTENSION IF NOT EXISTS pg_cron;
 
--- Nettoyage des sessions expirées toutes les 15 min
+-- Sessions ado expirées, toutes les 15 min
 CREATE OR REPLACE FUNCTION cleanup_expired_sessions()
 RETURNS void
 LANGUAGE plpgsql
@@ -257,7 +188,7 @@ SELECT cron.schedule(
   'SELECT cleanup_expired_sessions()'
 );
 
--- Nettoyage des avis non approuvés > 30 jours (tous les jours à 3h)
+-- Avis non approuvés de plus de 30 jours, tous les jours à 3h
 CREATE OR REPLACE FUNCTION cleanup_old_unapproved_reviews()
 RETURNS void
 LANGUAGE plpgsql
@@ -277,87 +208,9 @@ SELECT cron.schedule(
   'SELECT cleanup_old_unapproved_reviews()'
 );
 
--- ============================================================
--- 9. TABLE: leads (capture e-mail lead magnets)
--- ============================================================
-CREATE TABLE public.leads (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  first_name TEXT NOT NULL,
-  email TEXT NOT NULL,
-  subject TEXT NOT NULL DEFAULT 'Ebook Astro',
-  is_closed BOOLEAN DEFAULT false,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
-);
 
-ALTER TABLE public.leads ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Anyone can submit a lead"
-ON public.leads FOR INSERT
-WITH CHECK (true);
-
--- NOTE: No public SELECT/UPDATE policies, leads are accessed via
--- the admin-leads edge function using service_role key.
-
-CREATE INDEX idx_leads_email ON public.leads(email);
-CREATE INDEX idx_leads_subject ON public.leads(subject);
-
--- ============================================================
--- DONE! Toutes les tables, policies, triggers et cron jobs créés.
--- ============================================================
-
-
--- ####################  PARTIE 2/4 : TABLE MESSAGES (contact)  ###############
--- Create messages table for contact form submissions
-CREATE TABLE IF NOT EXISTS public.messages (
-  id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
-  last_name text NOT NULL,
-  first_name text NOT NULL,
-  email text NOT NULL,
-  phone text,
-  company text,
-  message text NOT NULL,
-  lang text DEFAULT 'fr',
-  ip text,
-  status text DEFAULT 'new' CHECK (status IN ('new', 'read', 'archived')),
-  created_at timestamptz DEFAULT now()
-);
-
--- Enable RLS
-ALTER TABLE public.messages ENABLE ROW LEVEL SECURITY;
-
--- Only service role can insert/read/update/delete (edge functions use service role key)
-CREATE POLICY "Service role full access" ON public.messages
-  FOR ALL
-  USING (auth.role() = 'service_role')
-  WITH CHECK (auth.role() = 'service_role');
-
--- Index for admin queries
-CREATE INDEX idx_messages_status ON public.messages (status);
-CREATE INDEX idx_messages_created_at ON public.messages (created_at DESC);
-
-
--- ####################  PARTIE 3/4 : VÉRIFICATION E-MAIL LEADS  ##############
--- ============================================================
--- LEADS: Add email verification + auto ebook delivery
--- ============================================================
-
--- New columns for double opt-in verification
-ALTER TABLE public.leads
-  ADD COLUMN IF NOT EXISTS verification_token UUID DEFAULT gen_random_uuid(),
-  ADD COLUMN IF NOT EXISTS email_verified BOOLEAN DEFAULT false,
-  ADD COLUMN IF NOT EXISTS verified_at TIMESTAMPTZ;
-
-CREATE INDEX IF NOT EXISTS idx_leads_verification_token ON public.leads(verification_token);
-
-
--- ####################  PARTIE 4/4 : RÉINJECTION DES VRAIS AVIS  #############
--- ============================================================
--- RESTORE REAL REVIEWS
--- Paste this in Supabase Dashboard > SQL Editor > New Query
--- ============================================================
-
-BEGIN;
-
+-- ####################  7. RÉINJECTION DES 11 VRAIS AVIS  ###################
+-- (les seuls avis récupérables ; ceux postés après le 28/02/2026 sont perdus)
 INSERT INTO public.reviews (id, author_name, rating, comment, ip_address, is_approved, created_at) VALUES
 ('27277bdb-2824-46e8-a31c-a74338574810', 'Louloudu77', 5, 'Trop génial on s''est bien amusé ! Merci <33', '92.184.140.122', true, '2026-01-24 14:16:52.374362+00'),
 ('2b0f951d-3234-4bfd-9625-07d2237bbfa7', 'Kim _Gabi', 4, 'J''ai beaucoup aimée', '102.244.154.111', true, '2026-01-26 02:39:02.390511+00'),
@@ -372,7 +225,11 @@ INSERT INTO public.reviews (id, author_name, rating, comment, ip_address, is_app
 ('6987f0d1-e707-46c9-9cb1-1504672f2373', 'Pierre', 5, 'Trop cool', '90.3.148.120', true, '2026-02-28 17:26:45.109329+00')
 ON CONFLICT (id) DO NOTHING;
 
-COMMIT;
 
--- Vérification :
-SELECT COUNT(*) AS total, ROUND(AVG(rating), 1) AS avg_rating FROM reviews WHERE is_approved = true;
+-- ####################  VÉRIFICATION  ######################################
+SELECT table_name FROM information_schema.tables
+WHERE table_schema = 'public' ORDER BY table_name;
+-- attendu : activity_validations, leads, messages, quiz_ado_sessions, reviews
+
+SELECT COUNT(*) AS avis, ROUND(AVG(rating), 1) AS note_moyenne
+FROM reviews WHERE is_approved = true;   -- attendu : 11 avis, ~4.9
