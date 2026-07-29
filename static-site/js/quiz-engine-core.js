@@ -514,7 +514,7 @@ var QuizEngine = (function() {
     var icon = el('div', 'text-5xl mb-4', this.labels.icon || '📝');
     var title = el('h2', 'text-2xl font-bold mb-3', tg('playerSetup.readyForTest', 'Prêt pour le test ?'));
     var desc = el('p', 'text-muted-foreground mb-2', this.questions.length + ' ' + tg('meta.questionsWord', 'questions'));
-    var time = el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min') + ' &bull; 🔒 ' + tg('truefalse.freeAnon', 'Gratuit & anonyme'));
+    var time = el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min'));
 
     wrap.appendChild(icon);
     wrap.appendChild(title);
@@ -2616,7 +2616,7 @@ var QuizEngine = (function() {
     wrap.appendChild(el('div', 'text-5xl mb-4', '✅'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', tg('truefalse.ready', 'Prêt pour le vrai ou faux ?')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-2', this.questions.length + ' ' + tg('truefalse.statements', 'affirmations')));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min') + ' \u2022 ' + tg('truefalse.freeAnon', 'Gratuit & anonyme')));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min')));
 
     var infoBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-md mx-auto text-left');
     infoBox.innerHTML = '<p class="text-sm text-muted-foreground mb-2"><strong>' + esc(tg('truefalse.howTitle', 'Comment ça marche ?')) + '</strong></p>' +
@@ -2859,7 +2859,7 @@ var QuizEngine = (function() {
     wrap.appendChild(el('div', 'text-5xl mb-4', this.labels.icon || '🔗'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', tg('attachment.introTitle', 'Quel est votre style d\'attachement ?')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-2', this.questions.length + ' ' + tg('meta.questionsWord', 'questions')));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min') + ' • 🔒 ' + tg('truefalse.freeAnon', 'Gratuit & anonyme')));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min')));
     var btn = el('button', 'btn btn-cta btn-lg', tg('playerSetup.startTest', 'Commencer le test'));
     btn.addEventListener('click', function() {
       self.phase = 'playing'; self.currentQ = 0; self.answers = [];
