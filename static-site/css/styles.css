@@ -3180,138 +3180,245 @@ footer .mt-12.border-t svg.text-primary {
 .quiz-podium-bar-fill { border-radius: 4px; box-shadow: 0 0 8px -2px hsl(var(--primary) / 0.3); }
 
 /* ════════════════════════════════════════════════════════════════════
-   DIRECTION « ÉDITORIAL INTIME » — re-skin (tokens + typo + composants)
-   Override de fin de fichier : ne modifie AUCUNE structure HTML.
-   Recolore via les tokens ; passe les titres & la lecture en serif ;
-   affine les composants existants (sommaire, encadrés, tableaux, FAQ…).
-   Les fils d'Ariane et les composants uniques héritent, rien n'est retiré.
+   DIRECTION « PLAYFUL / GAMIFIÉE » — Phase A : fondations esthétiques
+   Override de fin de fichier : ne modifie AUCUNE structure HTML, aucun
+   contenu, aucun maillage. Recolore via les tokens ; titres en police
+   arrondie ; H2 sans barre (chapitres numérotés) ; sections dé-encadrées ;
+   puces et tableaux retravaillés. Composants uniques et fils d'Ariane
+   héritent, rien n'est retiré.
    ════════════════════════════════════════════════════════════════════ */
 
-/* ── Tokens : palette chaude & contrastée (remplace le lavé pastel) ── */
+/* ── Tokens : palette candy, chaude et contrastée ── */
 :root {
-  --background: 340 33% 98%;
-  --foreground: 330 28% 13%;
-  --card: 340 45% 99%;
-  --card-foreground: 330 28% 13%;
-  --popover: 340 45% 99%;
-  --popover-foreground: 330 28% 13%;
-  --primary: 338 72% 60%;
+  --background: 24 56% 97%;
+  --foreground: 328 30% 13%;
+  --card: 0 0% 100%;
+  --card-foreground: 328 30% 13%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 328 30% 13%;
+  --primary: 338 83% 62%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 262 52% 56%;
+  --secondary: 260 56% 58%;
   --secondary-foreground: 0 0% 100%;
-  --muted: 340 28% 94%;
-  --muted-foreground: 330 14% 40%;
-  --accent: 28 82% 52%;
-  --accent-foreground: 28 90% 20%;
-  --border: 340 24% 90%;
-  --input: 340 24% 90%;
-  --ring: 338 72% 60%;
+  --muted: 22 40% 93%;
+  --muted-foreground: 328 12% 42%;
+  --accent: 37 90% 55%;
+  --accent-foreground: 30 90% 20%;
+  --border: 338 34% 91%;
+  --input: 338 34% 91%;
+  --ring: 338 83% 62%;
 
-  --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
-  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  /* bandes de fond + accents ludiques (Phase B) */
+  --band-peach: 24 90% 93%;
+  --band-rose: 338 80% 95%;
+  --band-plum: 260 65% 95%;
+  --mint: 165 74% 40%;
+  --mint-foreground: 0 0% 100%;
+
+  --font-display: 'Fredoka', 'Baloo 2', ui-rounded, 'Segoe UI', system-ui, sans-serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 .dark {
-  --background: 288 24% 8%;
+  --background: 285 24% 8%;
   --foreground: 330 25% 94%;
   --card: 285 22% 12%;
   --card-foreground: 330 25% 94%;
   --popover: 285 22% 12%;
   --popover-foreground: 330 25% 94%;
-  --primary: 338 80% 67%;
+  --primary: 338 95% 71%;
   --primary-foreground: 300 30% 10%;
-  --secondary: 262 58% 70%;
+  --secondary: 260 62% 72%;
   --secondary-foreground: 300 30% 10%;
-  --muted: 288 18% 16%;
-  --muted-foreground: 326 13% 64%;
-  --accent: 30 80% 58%;
+  --muted: 285 18% 16%;
+  --muted-foreground: 326 13% 66%;
+  --accent: 37 92% 62%;
   --accent-foreground: 30 90% 12%;
-  --border: 292 16% 20%;
-  --input: 292 16% 20%;
-  --ring: 338 80% 67%;
+  --border: 290 16% 22%;
+  --input: 290 16% 22%;
+  --ring: 338 95% 71%;
+
+  --band-peach: 24 30% 12%;
+  --band-rose: 338 30% 12%;
+  --band-plum: 260 30% 14%;
+  --mint: 165 70% 55%;
+  --mint-foreground: 300 30% 10%;
 }
 
-/* ── Typographie : serif éditoriale sur les titres ── */
+/* ── Typographie : police arrondie sur les titres, sans lisible en corps ── */
 h1, h2, h3, h4, h5, h6,
 .font-display {
   font-family: var(--font-display);
-  font-optical-sizing: auto;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.01em;
 }
-.blog-article h2, .seo-content h2,
-.blog-article h3, .seo-content h3 { font-family: var(--font-display); }
-.quiz-table th { font-family: var(--font-sans); }
-
-/* ── Lecture longue : corps en serif + encre foncée (fini le gris délavé) ── */
-.blog-article, .seo-content { font-family: var(--font-serif); }
+.blog-article, .seo-content { font-family: var(--font-sans); }
 .blog-article p, .seo-content p,
 .blog-article li, .seo-content li,
 .seo-rich-content p, .seo-rich-content li {
-  font-size: 1.08rem;
-  line-height: 1.8;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 @media (min-width: 768px) {
   .blog-article p, .seo-content p,
-  .seo-rich-content p { font-size: 1.13rem; }
+  .seo-rich-content p { font-size: 1.08rem; }
 }
-/* Encre de lecture plus soutenue que le muted d'origine */
+/* Encre de lecture soutenue (fini le gris délavé) */
 .blog-article .text-muted-foreground,
 .seo-content .text-muted-foreground,
 .seo-content .space-y-4.text-muted-foreground,
 .seo-rich-content p, .seo-rich-content li {
-  color: hsl(var(--foreground) / 0.86);
+  color: hsl(var(--foreground) / 0.84);
 }
 .blog-article .text-lg { color: hsl(var(--foreground) / 0.9); }
 
-/* Composants "chrome" : on garde le sans (UI) dans la lecture serif */
-.blog-toc, .blog-toc *,
-.blog-share-buttons, .blog-share-btn,
-.blog-sidebar, .blog-category-badge,
-.blog-quick-summary, .blog-tip-box {
-  font-family: var(--font-sans);
-}
-.blog-author-name { font-family: var(--font-display); }
-
-/* ── Titres de section : filet serif dégradé (conservé, affiné) ── */
+/* ── H2 : on supprime la barre latérale partout ── */
+.blog-article h2::before,
+.seo-content h2::before { content: none; }
 .blog-article h2, .seo-content h2 {
+  font-family: var(--font-display);
+  padding-left: 0;
+  line-height: 1.18;
   letter-spacing: -0.01em;
-  line-height: 1.15;
 }
 
-/* ── Blockquote / citation : traitement magazine ── */
+/* ── H2 de section : chapitre numéroté (remplace la barre) ── */
+.seo-content, .blog-article { counter-reset: chap; }
+.seo-content section > h2,
+.blog-article section > h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.seo-content section > h2::before,
+.blog-article section > h2::before {
+  counter-increment: chap;
+  content: counter(chap, decimal-leading-zero);
+  position: static;
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.85rem;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  box-shadow: 0 8px 18px -6px hsl(var(--primary) / 0.5);
+  transform: rotate(-4deg);
+}
+
+/* ── Sections : plus de bloc encadré, le contenu coule ── */
+.seo-content section,
+.seo-content section:nth-of-type(odd),
+.seo-content section:nth-of-type(even) {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.seo-content section:hover { box-shadow: none; }
+
+/* ── Puces retravaillées (listes de contenu simples) ── */
+.seo-rich-content ul,
+.blog-quick-summary ul {
+  list-style: none;
+  padding-left: 0;
+}
+.seo-rich-content ul > li,
+.blog-quick-summary ul > li {
+  position: relative;
+  padding-left: 1.75rem;
+}
+.seo-rich-content ul > li::before,
+.blog-quick-summary ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 0.3rem;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  transform: rotate(-8deg);
+}
+
+/* ── Tableaux : en-tête dégradé, lignes alternées, coins arrondis ── */
+.quiz-table, .seo-rich-content table {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid hsl(var(--border));
+}
+.quiz-table thead,
+.seo-rich-content table thead {
+  background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
+}
+.quiz-table th,
+.seo-rich-content table th {
+  font-family: var(--font-display);
+  color: #fff;
+  border: none;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.quiz-table td,
+.seo-rich-content table td { border: none; border-top: 1px solid hsl(var(--border) / 0.7); }
+.quiz-table tbody tr:nth-child(even),
+.seo-rich-content table tbody tr:nth-child(even) { background: hsl(var(--band-rose) / 0.6); }
+.quiz-table tbody tr:hover td { background: hsl(var(--primary) / 0.06); }
+
+/* Tableaux dans les articles de blog : scroll horizontal (zéro débordement page) + style */
+.blog-article table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin: 1.5rem 0;
+}
+.blog-article table thead { background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary))); }
+.blog-article table th {
+  color: #fff; font-family: var(--font-display); font-weight: 600;
+  text-align: left; padding: 0.7rem 0.95rem; white-space: nowrap;
+}
+.blog-article table td { padding: 0.7rem 0.95rem; border-top: 1px solid hsl(var(--border)); }
+.blog-article table tbody tr:nth-child(even) { background: hsl(var(--band-rose) / 0.6); }
+
+/* ── Encadré "Résumé rapide" ── */
+.blog-quick-summary {
+  border: 1px solid hsl(var(--border));
+  border-left: 4px solid hsl(var(--primary));
+  background: linear-gradient(180deg, hsl(var(--primary) / 0.08), hsl(var(--card)));
+}
+.blog-quick-summary-title {
+  font-family: var(--font-display);
+  font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: hsl(var(--primary)); font-weight: 600;
+}
+
+/* ── Encadré "À savoir" (tip) : accent ambre ── */
+.blog-tip-box {
+  border: 1px solid hsl(var(--accent) / 0.34);
+  background: hsl(var(--accent) / 0.08);
+}
+.blog-tip-box::before { background: hsl(var(--accent)) !important; }
+.blog-tip-box-title { color: hsl(var(--accent-foreground)); letter-spacing: 0.04em; }
+
+/* ── Blockquote : ludique, pas éditorial ── */
 .seo-content blockquote, .blog-article blockquote {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.2rem;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.15rem;
   line-height: 1.5;
   color: hsl(var(--foreground) / 0.95);
 }
 
-/* ── Encadré "Résumé rapide" : carte teintée élevée ── */
-.blog-quick-summary {
-  border: 1px solid hsl(var(--border));
-  border-left: 4px solid hsl(var(--primary));
-  background: linear-gradient(180deg, hsl(var(--primary) / 0.07), hsl(var(--card)));
-  box-shadow: var(--shadow-sm, 0 2px 10px -4px hsl(330 30% 20% / 0.12));
-}
-.blog-quick-summary-title {
-  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
-  color: hsl(var(--primary)); font-weight: 700;
-}
-
-/* ── Encadré "À savoir" (tip) : accent ambre chaud ── */
-.blog-tip-box {
-  border: 1px solid hsl(var(--accent) / 0.32);
-  background: hsl(var(--accent) / 0.07);
-}
-.blog-tip-box::before { background: hsl(var(--accent)) !important; }
-.blog-tip-box-title { color: hsl(var(--accent)); letter-spacing: 0.04em; }
-
-/* ── Sommaire : lisible, accent au survol ── */
 .blog-toc-title { font-family: var(--font-display); letter-spacing: -0.01em; }
-
-/* ── Fil d'Ariane : conservé, juste réchauffé ── */
-.breadcrumb, .blog-breadcrumb ol { background: hsl(var(--muted) / 0.5); }
+.breadcrumb, .blog-breadcrumb ol { background: hsl(var(--muted) / 0.6); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

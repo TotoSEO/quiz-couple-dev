@@ -58,8 +58,8 @@
 
   <!-- Critical CSS (inlined for fast FCP) -->
   <style>
-    :root{--background:340 33% 98%;--foreground:330 28% 13%;--card:340 45% 99%;--primary:338 72% 60%;--primary-foreground:0 0% 100%;--muted:340 28% 94%;--muted-foreground:330 14% 40%;--border:340 24% 90%;--radius:0.875rem}
-    .dark{--background:288 24% 8%;--foreground:330 25% 94%;--card:285 22% 12%;--primary:338 80% 67%;--muted:288 18% 16%;--muted-foreground:326 13% 64%;--border:292 16% 20%}
+    :root{--background:24 56% 97%;--foreground:328 30% 13%;--card:0 0% 100%;--primary:338 83% 62%;--primary-foreground:0 0% 100%;--muted:22 40% 93%;--muted-foreground:328 12% 42%;--border:338 34% 91%;--radius:0.875rem}
+    .dark{--background:285 24% 8%;--foreground:330 25% 94%;--card:285 22% 12%;--primary:338 95% 71%;--muted:285 18% 16%;--muted-foreground:326 13% 66%;--border:290 16% 22%}
     *,::after,::before{box-sizing:border-box;margin:0;padding:0;border:0 solid}
     body{font-family:Inter,system-ui,-apple-system,sans-serif;background-color:hsl(var(--background));color:hsl(var(--foreground));-webkit-font-smoothing:antialiased;line-height:1.5}
     .container{width:100%;max-width:80rem;margin:0 auto;padding:0 1rem}@media(min-width:640px){.container{padding:0 2rem}}
@@ -78,8 +78,8 @@
   <!-- Fonts (non-blocking, reduced weights) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap"></noscript>
 
   <!-- Preload hero image for LCP (home page) -->
   <% if (typeof routeKey !== 'undefined' && routeKey === 'home') { %>
