@@ -3461,6 +3461,10 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: 0 0 0 100vmax hsl(var(--band-rose) / 0.55);
 }
 
+/* ── Méga-menu : tuiles d'icônes colorées par défaut (plus vivant) ── */
+.nav-megamenu-icon { background: hsl(var(--primary) / 0.12); }
+.nav-megamenu-item--quiz .nav-megamenu-icon { background: hsl(var(--secondary) / 0.12); }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
