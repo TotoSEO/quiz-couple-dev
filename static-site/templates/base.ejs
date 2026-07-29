@@ -105,6 +105,9 @@
 
   <main class="relative z-0">
     <%- content %>
+    <% if (typeof routeKey !== 'undefined' && routeKey && /^(test|quiz)/.test(routeKey)) { %>
+    <%- include('partials/quiz-reviews', { lang: lang, t: t, routeKey: routeKey, supabaseUrl: supabaseUrl, supabaseKey: supabaseKey }) %>
+    <% } %>
   </main>
 
   <%- include('partials/footer', { lang, t, getLocalizedUrl }) %>
@@ -116,6 +119,7 @@
   <script src="/js/cookie-consent.js" defer></script>
   <script src="/js/obl.js" defer></script>
   <script src="/js/scroll-reveal.js" defer></script>
+  <script src="/js/quiz-extras.js" defer></script>
 
   <!-- GA (deferred) -->
   <script>
