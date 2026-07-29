@@ -488,6 +488,16 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-05-26',
   },
+  {
+    internalSlug: 'activites-couple-ete',
+    featuredImage: '/blog/activites-couple-ete.webp',
+    category: 'vie-de-couple',
+    frOnly: true,
+    slugs: {
+      fr: 'activites-couple-ete',
+    },
+    publishedAt: '2026-07-29',
+  },
 ];
 
 // Author data
