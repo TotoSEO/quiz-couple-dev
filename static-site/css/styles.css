@@ -3179,3 +3179,141 @@ footer .mt-12.border-t svg.text-primary {
 .quiz-podium-bar { height: 8px; border-radius: 4px; }
 .quiz-podium-bar-fill { border-radius: 4px; box-shadow: 0 0 8px -2px hsl(var(--primary) / 0.3); }
 
+/* ════════════════════════════════════════════════════════════════════
+   DIRECTION « ÉDITORIAL INTIME » — re-skin (tokens + typo + composants)
+   Override de fin de fichier : ne modifie AUCUNE structure HTML.
+   Recolore via les tokens ; passe les titres & la lecture en serif ;
+   affine les composants existants (sommaire, encadrés, tableaux, FAQ…).
+   Les fils d'Ariane et les composants uniques héritent, rien n'est retiré.
+   ════════════════════════════════════════════════════════════════════ */
+
+/* ── Tokens : palette chaude & contrastée (remplace le lavé pastel) ── */
+:root {
+  --background: 340 33% 98%;
+  --foreground: 330 28% 13%;
+  --card: 340 45% 99%;
+  --card-foreground: 330 28% 13%;
+  --popover: 340 45% 99%;
+  --popover-foreground: 330 28% 13%;
+  --primary: 338 72% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 262 52% 56%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 340 28% 94%;
+  --muted-foreground: 330 14% 40%;
+  --accent: 28 82% 52%;
+  --accent-foreground: 28 90% 20%;
+  --border: 340 24% 90%;
+  --input: 340 24% 90%;
+  --ring: 338 72% 60%;
+
+  --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+.dark {
+  --background: 288 24% 8%;
+  --foreground: 330 25% 94%;
+  --card: 285 22% 12%;
+  --card-foreground: 330 25% 94%;
+  --popover: 285 22% 12%;
+  --popover-foreground: 330 25% 94%;
+  --primary: 338 80% 67%;
+  --primary-foreground: 300 30% 10%;
+  --secondary: 262 58% 70%;
+  --secondary-foreground: 300 30% 10%;
+  --muted: 288 18% 16%;
+  --muted-foreground: 326 13% 64%;
+  --accent: 30 80% 58%;
+  --accent-foreground: 30 90% 12%;
+  --border: 292 16% 20%;
+  --input: 292 16% 20%;
+  --ring: 338 80% 67%;
+}
+
+/* ── Typographie : serif éditoriale sur les titres ── */
+h1, h2, h3, h4, h5, h6,
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
+}
+.blog-article h2, .seo-content h2,
+.blog-article h3, .seo-content h3 { font-family: var(--font-display); }
+.quiz-table th { font-family: var(--font-sans); }
+
+/* ── Lecture longue : corps en serif + encre foncée (fini le gris délavé) ── */
+.blog-article, .seo-content { font-family: var(--font-serif); }
+.blog-article p, .seo-content p,
+.blog-article li, .seo-content li,
+.seo-rich-content p, .seo-rich-content li {
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+@media (min-width: 768px) {
+  .blog-article p, .seo-content p,
+  .seo-rich-content p { font-size: 1.13rem; }
+}
+/* Encre de lecture plus soutenue que le muted d'origine */
+.blog-article .text-muted-foreground,
+.seo-content .text-muted-foreground,
+.seo-content .space-y-4.text-muted-foreground,
+.seo-rich-content p, .seo-rich-content li {
+  color: hsl(var(--foreground) / 0.86);
+}
+.blog-article .text-lg { color: hsl(var(--foreground) / 0.9); }
+
+/* Composants "chrome" : on garde le sans (UI) dans la lecture serif */
+.blog-toc, .blog-toc *,
+.blog-share-buttons, .blog-share-btn,
+.blog-sidebar, .blog-category-badge,
+.blog-quick-summary, .blog-tip-box {
+  font-family: var(--font-sans);
+}
+.blog-author-name { font-family: var(--font-display); }
+
+/* ── Titres de section : filet serif dégradé (conservé, affiné) ── */
+.blog-article h2, .seo-content h2 {
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+/* ── Blockquote / citation : traitement magazine ── */
+.seo-content blockquote, .blog-article blockquote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: hsl(var(--foreground) / 0.95);
+}
+
+/* ── Encadré "Résumé rapide" : carte teintée élevée ── */
+.blog-quick-summary {
+  border: 1px solid hsl(var(--border));
+  border-left: 4px solid hsl(var(--primary));
+  background: linear-gradient(180deg, hsl(var(--primary) / 0.07), hsl(var(--card)));
+  box-shadow: var(--shadow-sm, 0 2px 10px -4px hsl(330 30% 20% / 0.12));
+}
+.blog-quick-summary-title {
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: hsl(var(--primary)); font-weight: 700;
+}
+
+/* ── Encadré "À savoir" (tip) : accent ambre chaud ── */
+.blog-tip-box {
+  border: 1px solid hsl(var(--accent) / 0.32);
+  background: hsl(var(--accent) / 0.07);
+}
+.blog-tip-box::before { background: hsl(var(--accent)) !important; }
+.blog-tip-box-title { color: hsl(var(--accent)); letter-spacing: 0.04em; }
+
+/* ── Sommaire : lisible, accent au survol ── */
+.blog-toc-title { font-family: var(--font-display); letter-spacing: -0.01em; }
+
+/* ── Fil d'Ariane : conservé, juste réchauffé ── */
+.breadcrumb, .blog-breadcrumb ol { background: hsl(var(--muted) / 0.5); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
