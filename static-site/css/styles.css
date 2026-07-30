@@ -3583,6 +3583,35 @@ h1, h2, h3, h4, h5, h6,
 .qr-footer { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; align-items: center; padding-top: 1.5rem; margin-top: 0.5rem; border-top: 1px solid hsl(var(--border)); }
 .qr-footer > * { flex: 0 1 auto; margin: 0 !important; }
 @media (max-width: 820px) { .qr-footer { grid-column: auto; } }
+
+/* Variante "decoree" (tous les types sauf SoloTest) : le resultat natif du
+   quiz occupe la colonne gauche elargie + les avis dessous ; la colonne droite
+   accueille "Poursuivez". Les deux colonnes sont encadrees. */
+.quiz-result-2col.qr-decorated { grid-template-columns: minmax(0, 1.32fr) minmax(0, 0.68fr); align-items: start; }
+@media (max-width: 820px) { .quiz-result-2col.qr-decorated { grid-template-columns: 1fr; } }
+.qr-left-wide {
+  display: flex; flex-direction: column; gap: 1.15rem;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.6rem;
+  box-shadow: 0 12px 30px -22px hsl(var(--primary) / 0.35);
+}
+.qr-left-wide > * { margin-top: 0; margin-bottom: 0; }
+.qr-left-wide .qr-review { margin-top: 0.5rem; padding-top: 1.2rem; }
+.qr-decorated .qr-right {
+  background: hsl(var(--muted) / 0.32);
+  border: 1px solid hsl(var(--border));
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.35rem;
+  align-self: start;
+}
+.qr-decorated .qr-right .result-related-section { margin-top: 0; }
+.qr-decorated .qr-right .result-related-section > p { margin-top: 0; }
+@media (max-width: 560px) {
+  .qr-left-wide { padding: 1.35rem 1.1rem; }
+  .qr-decorated .qr-right { padding: 1.25rem 1.1rem; }
+}
 /* On masque : le doublon "Continuez l'aventure" du bas ET le badge redondant du hero (le compteur = la bulle) */
 .quiz-page .related-tests-section { display: none !important; }
 .quiz-page .hero-badge { display: none !important; }
