@@ -446,15 +446,29 @@ var QuizEngine = (function() {
     wrap.appendChild(section);
   }
 
+  // Finisseur d'ecran de resultat, commun a tous les types (sauf SoloTest qui
+  // a sa propre mise en page) : transforme le resultat en 2 colonnes.
+  //   gauche = le resultat deja construit + avis sur CE quiz
+  //   droite = "Poursuivez avec d'autres tests / quiz"
+  //   pied   = UN partage + actions (recommencer, autres questions, joueurs)
   function renderActionButtons(wrap, opts) {
-    // ── Share result, prominent CTA (virality + retention) ──
-    renderShareButton(wrap, opts.shareText);
-
-    // ── Action buttons in a clean grid ──
-    var actions = el('div', 'result-actions-grid mt-8');
-
-    // Only show "other questions" button if quiz has a random pool (pool > totalQ)
     var quizEl = document.getElementById('quiz-engine');
+    var currentKey = quizEl ? quizEl.dataset.quiz : '';
+    var currentLang = quizEl ? (quizEl.dataset.lang || 'fr') : 'fr';
+
+    // Colonne gauche : contenu deja dans wrap + formulaire d'avis
+    var left = el('div', 'qr-col qr-left-wide quiz-reveal-enter');
+    while (wrap.firstChild) left.appendChild(wrap.firstChild);
+    left.appendChild(pcReviewForm(currentLang));
+
+    // Colonne droite : Poursuivez
+    var right = el('div', 'qr-col qr-right quiz-reveal-enter');
+    renderRelatedQuizzes(right, currentKey, currentLang);
+
+    // Pied : partage + actions
+    var footer = el('div', 'qr-footer');
+    renderShareButton(footer, opts.shareText);
+    var actions = el('div', 'result-actions-grid');
     var hasPool = quizEl && quizEl.dataset.hasPool === '1';
     if (opts.newQuestions && hasPool) {
       var newQBtn = el('button', 'result-action-btn result-action-btn--primary');
@@ -474,17 +488,12 @@ var QuizEngine = (function() {
       changeBtn.addEventListener('click', opts.changePlayers);
       actions.appendChild(changeBtn);
     }
-    var homeBtn = el('a', 'result-action-btn');
-    homeBtn.href = '/';
-    homeBtn.innerHTML = '<span class="result-action-icon">🏠</span><span class="result-action-label">' + esc(tg('question.backHome', 'Accueil')) + '</span>';
-    actions.appendChild(homeBtn);
-    wrap.appendChild(actions);
+    footer.appendChild(actions);
 
-    // ── Related quizzes ──
-    var quizEl = document.getElementById('quiz-engine');
-    var currentKey = quizEl ? quizEl.dataset.quiz : '';
-    var currentLang = quizEl ? (quizEl.dataset.lang || 'fr') : 'fr';
-    renderRelatedQuizzes(wrap, currentKey, currentLang);
+    wrap.classList.add('quiz-result-2col', 'qr-decorated');
+    wrap.appendChild(left);
+    wrap.appendChild(right);
+    wrap.appendChild(footer);
   }
 
   function renderGenderButtons(container, selectedGender, onSelect) {
