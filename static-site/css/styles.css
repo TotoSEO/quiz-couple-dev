@@ -3461,9 +3461,13 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: 0 0 0 100vmax hsl(var(--band-rose) / 0.55);
 }
 
-/* ── Méga-menu : tuiles d'icônes colorées par défaut (plus vivant) ── */
+/* ── Méga-menu : tuiles d'icônes SVG colorées (fini les emojis) ── */
 .nav-megamenu-icon { background: hsl(var(--primary) / 0.12); }
 .nav-megamenu-item--quiz .nav-megamenu-icon { background: hsl(var(--secondary) / 0.12); }
+.nav-megamenu-icon svg { width: 1.15rem; height: 1.15rem; color: hsl(var(--primary)); }
+.nav-megamenu-item--quiz .nav-megamenu-icon svg { color: hsl(var(--secondary)); }
+.mobile-nav-item-icon svg { width: 1.15rem; height: 1.15rem; color: hsl(var(--primary)); }
+.mobile-nav-item--quiz .mobile-nav-item-icon svg { color: hsl(var(--secondary)); }
 
 /* ════════════════════════════════════════════════════════════════════
    PHASE C : bloc "avis par quiz" (formulaire progressif) + compteur
@@ -3522,6 +3526,45 @@ h1, h2, h3, h4, h5, h6,
 .pqx-card-top b { font-family: var(--font-display); font-weight: 700; font-size: 0.92rem; }
 .pqx-card p { margin: 0; font-size: 0.9rem; color: hsl(var(--foreground) / 0.82); line-height: 1.5; }
 .pqx-none { color: hsl(var(--muted-foreground)); font-size: 0.95rem; }
+
+/* ── Ecran de resultat en 2 colonnes ── */
+.quiz-result-2col {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 1.5rem;
+  text-align: left;
+  align-items: start;
+  max-width: 60rem;
+  margin-left: auto; margin-right: auto;
+}
+@media (max-width: 760px) { .quiz-result-2col { grid-template-columns: 1fr; gap: 1.25rem; } }
+.qr-col { min-width: 0; }
+.qr-left { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.9rem; }
+@media (min-width: 761px) { .qr-left { border-right: 1px solid hsl(var(--border)); padding-right: 1.5rem; } }
+.qr-score { margin: 0.25rem 0 0; }
+.qr-score-label { font-size: 0.85rem; color: hsl(var(--muted-foreground)); margin: 0; }
+.qr-done { font-size: 0.78rem; font-weight: 700; color: hsl(var(--accent-foreground)); background: hsl(var(--accent) / 0.16); border: 1px solid hsl(var(--accent) / 0.3); border-radius: 999px; padding: 0.3rem 0.8rem; margin: 0; }
+.qr-share { width: 100%; justify-content: center; gap: 0.5rem; }
+.qr-share svg { width: 18px; height: 18px; }
+.qr-review { width: 100%; margin-top: 0.4rem; padding-top: 1rem; border-top: 1px dashed hsl(var(--border)); }
+.qr-review-title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin: 0 0 0.6rem; }
+.qr-review .pqx-input-stars { justify-content: center; }
+.qr-review .pqx-more { margin-top: 0.9rem; display: grid; gap: 0.6rem; }
+.qr-actions { width: 100%; }
+.qr-right { display: flex; flex-direction: column; gap: 1rem; }
+.qr-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.4rem, 3vw, 1.9rem); margin: 0; line-height: 1.15; }
+.qr-desc { color: hsl(var(--foreground) / 0.85); line-height: 1.7; margin: 0; }
+.qr-advice { font-size: 0.95rem; background: hsl(var(--primary) / 0.06); border: 1px solid hsl(var(--primary) / 0.2); border-radius: 1rem; padding: 1rem 1.15rem; }
+.qr-advice strong { display: block; margin-bottom: 0.35rem; color: hsl(var(--primary)); }
+/* bloc "autres tests" reintegre a droite : on neutralise les marges de section */
+.qr-related .related-tests-section, .qr-related .related-articles-section { padding: 0; }
+.qr-related .container { padding: 0; max-width: none; }
+.qr-related .related-tests-grid { grid-template-columns: 1fr; }
+.qr-related .related-tests-header { text-align: left; margin-bottom: 0.75rem; }
+/* quand un resultat 2 colonnes est affiche : masquer les blocs autonomes du bas (repris dans le resultat) */
+body.quiz-has-result #pq-reviews,
+body.quiz-has-result .related-tests-section,
+body.quiz-has-result .related-articles-section { display: none !important; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

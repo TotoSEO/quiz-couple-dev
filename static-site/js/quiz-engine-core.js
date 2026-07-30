@@ -145,6 +145,79 @@ var QuizEngine = (function() {
     return d.innerHTML;
   }
 
+  // ── Phase C : partage + avis par quiz + compteur (ecran de resultat 2 colonnes) ──
+  function pcLabels(lang) {
+    var M = {
+      fr: { share: 'Partager', rate: 'Votre avis sur ce test en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Erreur, réessayez.', doneT: 'Ce test a déjà été réalisé {n} fois', doneQ: 'Ce quiz a déjà été joué {n} fois' },
+      en: { share: 'Share', rate: 'Rate this test in one click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Error, please retry.', doneT: 'This test has been taken {n} times', doneQ: 'This quiz has been played {n} times' },
+      es: { share: 'Compartir', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Una palabra (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Se verá tras la validación.', err: 'Error, inténtalo de nuevo.', doneT: 'Este test se ha realizado {n} veces', doneQ: 'Este quiz se ha jugado {n} veces' },
+      de: { share: 'Teilen', rate: 'Bewertung mit 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Erscheint nach der Prüfung.', err: 'Fehler, bitte erneut.', doneT: 'Dieser Test wurde {n} mal gemacht', doneQ: 'Dieses Quiz wurde {n} mal gespielt' },
+      it: { share: 'Condividi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola (facoltativo)', submit: 'Pubblica', thanks: 'Grazie! Sarà visibile dopo la moderazione.', err: 'Errore, riprova.', doneT: 'Questo test è stato fatto {n} volte', doneQ: 'Questo quiz è stato giocato {n} volte' }
+    };
+    return M[lang] || M.fr;
+  }
+  function pcConfig() {
+    var c = document.getElementById('reviews-config'), pq = document.getElementById('pq-reviews');
+    if (!c || !pq || !c.dataset.url || !c.dataset.key) return null;
+    return { url: c.dataset.url, key: c.dataset.key, slug: pq.dataset.quizSlug };
+  }
+  function pcShare(title) {
+    var url = location.href;
+    if (navigator.share) { navigator.share({ title: title, url: url }).catch(function () {}); }
+    else if (navigator.clipboard) { navigator.clipboard.writeText(url); }
+  }
+  function pcReviewForm(lang) {
+    var box = el('div', 'qr-review');
+    var cfg = pcConfig(); var L = pcLabels(lang);
+    if (!cfg || !cfg.slug) return box;
+    var starsHtml = '';
+    for (var s = 1; s <= 5; s++) starsHtml += '<button type="button" class="pqx-star-btn" data-star="' + s + '" aria-label="' + s + '"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></button>';
+    box.innerHTML = '<p class="qr-review-title">' + esc(L.rate) + '</p><div class="pqx-input-stars">' + starsHtml + '</div>'
+      + '<form class="pqx-form"><div class="pqx-more" hidden><p class="pqx-more-msg">' + esc(L.more) + '</p>'
+      + '<input type="text" class="pqx-name input" maxlength="60" placeholder="' + esc(L.name) + '" autocomplete="off">'
+      + '<textarea class="pqx-comment textarea" rows="2" maxlength="200" placeholder="' + esc(L.comment) + '"></textarea>'
+      + '<button type="submit" class="pqx-submit btn btn-cta">' + esc(L.submit) + '</button>'
+      + '<p class="pqx-msg" aria-live="polite"></p></div></form>';
+    var rating = 0;
+    var starBtns = box.querySelectorAll('.pqx-star-btn');
+    var more = box.querySelector('.pqx-more');
+    var nameI = box.querySelector('.pqx-name');
+    starBtns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        rating = +b.dataset.star;
+        starBtns.forEach(function (x) { x.classList.toggle('on', +x.dataset.star <= rating); });
+        if (more.hidden) more.hidden = false;
+        if (nameI) nameI.focus();
+      });
+    });
+    box.querySelector('.pqx-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var msg = box.querySelector('.pqx-msg');
+      var name = nameI ? nameI.value.trim() : '';
+      if (!rating || !name) { if (msg) { msg.textContent = L.err; msg.className = 'pqx-msg err'; } return; }
+      var sub = box.querySelector('.pqx-submit'); if (sub) sub.disabled = true;
+      var body = { author_name: name.substring(0, 60), rating: rating, quiz_slug: cfg.slug, is_approved: false };
+      var cm = box.querySelector('.pqx-comment').value.trim(); if (cm) body.comment = cm.substring(0, 200);
+      fetch(cfg.url + '/rest/v1/reviews', { method: 'POST', headers: { 'Content-Type': 'application/json', 'apikey': cfg.key, 'Authorization': 'Bearer ' + cfg.key, 'Prefer': 'return=minimal' }, body: JSON.stringify(body) })
+        .then(function (r) { if (r.ok || r.status === 201) { box.querySelector('.pqx-form').innerHTML = '<p class="pqx-thanks">' + esc(L.thanks) + '</p>'; } else throw new Error('x'); })
+        .catch(function () { if (msg) { msg.textContent = L.err; msg.className = 'pqx-msg err'; } if (sub) sub.disabled = false; });
+    });
+    return box;
+  }
+  function pcFillCounter(node, lang) {
+    var cfg = pcConfig(); if (!cfg || !cfg.slug || !node) return;
+    var isQuiz = /^quiz/i.test(cfg.slug);
+    fetch(cfg.url + '/rest/v1/rpc/get_quiz_counts', { method: 'POST', headers: { 'apikey': cfg.key, 'Authorization': 'Bearer ' + cfg.key, 'Content-Type': 'application/json' }, body: '{}' })
+      .then(function (r) { return r.json(); })
+      .then(function (rows) {
+        if (!Array.isArray(rows)) return;
+        var row = rows.filter(function (x) { return x.quiz_slug === cfg.slug; })[0];
+        var n = row ? +row.total : 0;
+        if (n > 0) { var L = pcLabels(lang); node.textContent = (isQuiz ? L.doneQ : L.doneT).replace('{n}', n); node.style.display = ''; }
+      })
+      .catch(function () {});
+  }
+
   function shuffleArray(arr) {
     var shuffled = arr.slice();
     for (var i = shuffled.length - 1; i > 0; i--) {
@@ -502,6 +575,7 @@ var QuizEngine = (function() {
 
   SoloTest.prototype.render = function() {
     this.container.innerHTML = '';
+    document.body.classList.remove('quiz-has-result');
     if (this.phase === 'intro') this.renderIntro();
     else if (this.phase === 'playing') this.renderQuestion();
     else if (this.phase === 'results') this.renderResults();
@@ -675,7 +749,7 @@ var QuizEngine = (function() {
 
   SoloTest.prototype.renderResults = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    var wrap = el('div', 'quiz-engine quiz-result-card quiz-result-2col');
     var result = null;
     for (var i = 0; i < this.results.length; i++) {
       var r = this.results[i];
@@ -686,29 +760,54 @@ var QuizEngine = (function() {
     var maxScore = this.results.length > 0 ? this.results[this.results.length - 1].max : 100;
     var pct = Math.round((this.totalScore / maxScore) * 100);
 
-    // Score ring (SVG animated)
-    var scoreDiv = el('div', 'mb-4');
+    // ── Colonne GAUCHE : score + partage + avis sur ce test ──
+    var left = el('div', 'qr-col qr-left quiz-reveal-enter');
+    var scoreDiv = el('div', 'qr-score');
     scoreDiv.innerHTML = renderScoreRing(pct);
-    wrap.appendChild(scoreDiv);
-    var scoreLabel = el('p', 'text-sm text-muted-foreground mb-6', this.totalScore + '/' + maxScore + ' points');
-    wrap.appendChild(scoreLabel);
+    left.appendChild(scoreDiv);
+    left.appendChild(el('p', 'qr-score-label', this.totalScore + '/' + maxScore + ' ' + esc(tg('meta.pointsWord', 'points'))));
 
-    if (result) {
-      wrap.appendChild(el('h3', 'text-2xl font-bold mb-3 quiz-reveal-enter', esc(result.title)));
-      wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto quiz-reveal-enter', result.description));
-      if (result.advice) {
-        var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto quiz-reveal-enter');
-        advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
-        wrap.appendChild(advice);
-      }
-    }
+    var doneEl = el('p', 'qr-done'); doneEl.style.display = 'none';
+    left.appendChild(doneEl);
 
-    renderActionButtons(wrap, {
+    var L = pcLabels(this.lang);
+    var shareBtn = el('button', 'btn btn-outline qr-share',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg> ' + esc(L.share));
+    shareBtn.addEventListener('click', function() { pcShare(result ? result.title : document.title); });
+    left.appendChild(shareBtn);
+
+    left.appendChild(pcReviewForm(this.lang));
+
+    var actions = el('div', 'qr-actions');
+    renderActionButtons(actions, {
       newQuestions: function() { location.reload(); },
       restart: function() { if (self.hasLocalStorage) { try { localStorage.removeItem('quiz-' + self.prefix); } catch(e) {} } self.phase = 'intro'; self.render(); }
     });
+    left.appendChild(actions);
 
+    // ── Colonne DROITE : explication / conseil + autres tests ──
+    var right = el('div', 'qr-col qr-right quiz-reveal-enter');
+    if (result) {
+      right.appendChild(el('h3', 'qr-title', esc(result.title)));
+      right.appendChild(el('p', 'qr-desc', result.description));
+      if (result.advice) {
+        var advice = el('div', 'qr-advice');
+        advice.innerHTML = '<strong>' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
+        right.appendChild(advice);
+      }
+    }
+    var rel = document.querySelector('.related-tests-section');
+    if (rel) {
+      var relBox = el('div', 'qr-related');
+      relBox.innerHTML = rel.innerHTML;
+      right.appendChild(relBox);
+    }
+
+    wrap.appendChild(left);
+    wrap.appendChild(right);
     this.container.appendChild(wrap);
+    document.body.classList.add('quiz-has-result');
+    pcFillCounter(doneEl, this.lang);
     smoothScroll(wrap, 'center');
   };
 
