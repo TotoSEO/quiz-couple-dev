@@ -180,16 +180,24 @@ var QuizEngine = (function() {
       + '<p class="pqx-msg" aria-live="polite"></p></div></form>';
     var rating = 0;
     var starBtns = box.querySelectorAll('.pqx-star-btn');
+    var starsWrap = box.querySelector('.pqx-input-stars');
     var more = box.querySelector('.pqx-more');
     var nameI = box.querySelector('.pqx-name');
+    function paint(n) { starBtns.forEach(function (x) { x.classList.toggle('on', +x.dataset.star <= n); }); }
     starBtns.forEach(function (b) {
+      b.addEventListener('mouseenter', function () { paint(+b.dataset.star); });
       b.addEventListener('click', function () {
         rating = +b.dataset.star;
-        starBtns.forEach(function (x) { x.classList.toggle('on', +x.dataset.star <= rating); });
-        if (more.hidden) more.hidden = false;
-        if (nameI) nameI.focus();
+        paint(rating);
+        b.classList.remove('just-picked');
+        void b.offsetWidth;
+        b.classList.add('just-picked');
+        // Reveal du formulaire court : une seule etape percue
+        if (more.hidden) { more.hidden = false; more.classList.add('pqx-more-reveal'); }
+        if (nameI) setTimeout(function () { nameI.focus({ preventScroll: true }); }, 80);
       });
     });
+    if (starsWrap) starsWrap.addEventListener('mouseleave', function () { paint(rating); });
     box.querySelector('.pqx-form').addEventListener('submit', function (e) {
       e.preventDefault();
       var msg = box.querySelector('.pqx-msg');
@@ -236,6 +244,25 @@ var QuizEngine = (function() {
     if (!node) return;
     try { node.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: block || 'center' }); }
     catch (e) { try { node.scrollIntoView(); } catch (_) {} }
+  }
+
+  // Stabilise la position d'une question a l'autre : on ramene le haut du quiz
+  // juste sous l'en-tete fixe UNIQUEMENT s'il est passe trop haut (l'utilisateur
+  // a scrolle pour cliquer une reponse basse). On ne "grab" jamais vers le bas :
+  // une question plus longue ou plus courte ne fait donc pas sauter l'ecran.
+  function anchorQuizTop() {
+    if (typeof window === 'undefined' || typeof requestAnimationFrame === 'undefined') return;
+    requestAnimationFrame(function () {
+      var host = document.getElementById('quiz-engine');
+      if (!host) return;
+      var header = document.getElementById('site-header');
+      var offset = (header ? header.offsetHeight : 0) + 16;
+      var top = host.getBoundingClientRect().top;
+      if (top < offset - 2) {
+        var y = window.pageYOffset + top - offset;
+        window.scrollTo(0, y < 0 ? 0 : y);
+      }
+    });
   }
 
   // Tween a percentage value 0→target inside an element (count-up effect)
@@ -332,6 +359,7 @@ var QuizEngine = (function() {
     progressWrap.appendChild(header);
     progressWrap.appendChild(barOuter);
     wrap.appendChild(progressWrap);
+    anchorQuizTop();
     return progressWrap;
   }
 
@@ -498,11 +526,15 @@ var QuizEngine = (function() {
 
   function renderGenderButtons(container, selectedGender, onSelect) {
     var genderWrap = el('div', 'flex gap-2 mt-2');
+    var maleLbl = tg('playerSetup.male', 'Homme');
+    var femaleLbl = tg('playerSetup.female', 'Femme');
     var maleBtn = el('button', 'gender-btn' + (selectedGender === 'homme' ? ' gender-btn-selected gender-btn-male' : ''));
-    maleBtn.innerHTML = '👨 ' + tg('playerSetup.male', 'Homme');
+    maleBtn.innerHTML = '👨<span class="gender-label">' + esc(maleLbl) + '</span>';
+    maleBtn.setAttribute('aria-label', maleLbl);
     maleBtn.addEventListener('click', function() { onSelect('homme'); });
     var femaleBtn = el('button', 'gender-btn' + (selectedGender === 'femme' ? ' gender-btn-selected gender-btn-female' : ''));
-    femaleBtn.innerHTML = '👩 ' + tg('playerSetup.female', 'Femme');
+    femaleBtn.innerHTML = '👩<span class="gender-label">' + esc(femaleLbl) + '</span>';
+    femaleBtn.setAttribute('aria-label', femaleLbl);
     femaleBtn.addEventListener('click', function() { onSelect('femme'); });
     genderWrap.appendChild(maleBtn);
     genderWrap.appendChild(femaleBtn);
@@ -861,8 +893,12 @@ var QuizEngine = (function() {
         var gLabel = el('label', 'block text-sm font-semibold mt-4 mb-2 text-center', tg('playerSetup.gender', 'Genre'));
         card.appendChild(gLabel);
         var gWrap = el('div', 'flex gap-3 justify-center');
-        var maleBtn = el('button', 'gender-btn', '👨 ' + tg('playerSetup.male', 'Homme'));
-        var femaleBtn = el('button', 'gender-btn', '👩 ' + tg('playerSetup.female', 'Femme'));
+        var maleLabel = tg('playerSetup.male', 'Homme');
+        var femaleLabel = tg('playerSetup.female', 'Femme');
+        var maleBtn = el('button', 'gender-btn', '👨<span class="gender-label">' + esc(maleLabel) + '</span>');
+        maleBtn.setAttribute('aria-label', maleLabel);
+        var femaleBtn = el('button', 'gender-btn', '👩<span class="gender-label">' + esc(femaleLabel) + '</span>');
+        femaleBtn.setAttribute('aria-label', femaleLabel);
         maleBtn.addEventListener('click', function() {
           genders[idx] = 'homme';
           maleBtn.className = 'gender-btn gender-btn-selected gender-btn-male';
@@ -2270,8 +2306,12 @@ var QuizEngine = (function() {
         var gLabel = el('label', 'block text-sm font-semibold mt-4 mb-2 text-center', tg('playerSetup.gender', 'Genre'));
         card.appendChild(gLabel);
         var gWrap = el('div', 'flex gap-3 justify-center');
-        var maleBtn = el('button', 'gender-btn', '👨 ' + tg('playerSetup.male', 'Homme'));
-        var femaleBtn = el('button', 'gender-btn', '👩 ' + tg('playerSetup.female', 'Femme'));
+        var maleLabel = tg('playerSetup.male', 'Homme');
+        var femaleLabel = tg('playerSetup.female', 'Femme');
+        var maleBtn = el('button', 'gender-btn', '👨<span class="gender-label">' + esc(maleLabel) + '</span>');
+        maleBtn.setAttribute('aria-label', maleLabel);
+        var femaleBtn = el('button', 'gender-btn', '👩<span class="gender-label">' + esc(femaleLabel) + '</span>');
+        femaleBtn.setAttribute('aria-label', femaleLabel);
         maleBtn.addEventListener('click', function() {
           genders[idx] = 'homme';
           maleBtn.className = 'gender-btn gender-btn-selected gender-btn-male';
