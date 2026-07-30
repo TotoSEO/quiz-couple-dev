@@ -228,6 +228,72 @@
     document.getElementById('admin-dashboard').classList.remove('hidden');
   }
 
+  // ── Stats : completions de quiz (RPC publiques, cle anon) ──
+  var statsCounts = [];
+  function statsRpc(fn, body) {
+    return fetch(SUPABASE_URL + '/rest/v1/rpc/' + fn, {
+      method: 'POST',
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body || {})
+    }).then(function (r) { return r.json(); });
+  }
+  function loadStats() {
+    var totalEl = document.getElementById('admin-stats-total');
+    var listEl = document.getElementById('admin-stats-list');
+    if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
+    statsRpc('get_quiz_total').then(function (v) {
+      var n = Array.isArray(v) ? (v[0] && (v[0].get_quiz_total != null ? v[0].get_quiz_total : v[0])) : v;
+      if (totalEl) totalEl.textContent = (n != null ? n : 0);
+    }).catch(function () { if (totalEl) totalEl.textContent = '?'; });
+    statsRpc('get_quiz_counts').then(function (rows) {
+      if (!Array.isArray(rows)) { if (listEl) listEl.innerHTML = '<p class="text-center text-destructive py-6">Erreur de chargement.</p>'; return; }
+      statsCounts = rows.slice().sort(function (a, b) { return b.total - a.total; });
+      renderStatsList();
+    }).catch(function () { if (listEl) listEl.innerHTML = '<p class="text-center text-destructive py-6">Erreur reseau.</p>'; });
+  }
+  function renderStatsList() {
+    var listEl = document.getElementById('admin-stats-list');
+    if (!listEl) return;
+    if (statsCounts.length === 0) { listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Aucune completion pour le moment.</p>'; return; }
+    var max = statsCounts[0].total || 1;
+    listEl.innerHTML = statsCounts.map(function (r) {
+      var pct = Math.round((r.total / max) * 100);
+      return '<button class="stats-row" data-slug="' + esc(r.quiz_slug) + '" style="display:flex;align-items:center;gap:0.75rem;width:100%;text-align:left;background:none;border:none;padding:0.5rem 0;cursor:pointer;color:inherit;">'
+        + '<span style="flex:0 0 11rem;font-size:0.85rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + esc(r.quiz_slug) + '</span>'
+        + '<span style="flex:1;height:0.6rem;border-radius:9999px;background:hsl(var(--muted));overflow:hidden;"><span style="display:block;height:100%;width:' + pct + '%;background:linear-gradient(90deg,hsl(var(--primary)),hsl(var(--secondary)));"></span></span>'
+        + '<span style="flex:0 0 3rem;text-align:right;font-weight:700;font-variant-numeric:tabular-nums;">' + r.total + '</span>'
+        + '</button>';
+    }).join('');
+    listEl.querySelectorAll('.stats-row').forEach(function (b) {
+      b.addEventListener('click', function () { loadDaily(this.dataset.slug); });
+    });
+  }
+  function loadDaily(slug) {
+    var titleEl = document.getElementById('admin-stats-chart-title');
+    if (titleEl) titleEl.textContent = slug + ' — 30 derniers jours';
+    statsRpc('get_quiz_daily', { p_slug: slug, p_days: 30 }).then(function (rows) {
+      drawChart(Array.isArray(rows) ? rows : []);
+    }).catch(function () { drawChart([]); });
+  }
+  function drawChart(rows) {
+    var cv = document.getElementById('admin-stats-chart');
+    if (!cv) return;
+    var ctx = cv.getContext('2d');
+    var W = cv.width = (cv.clientWidth || 600) * 2, Hh = cv.height = 240;
+    ctx.clearRect(0, 0, W, Hh);
+    if (rows.length === 0) { ctx.fillStyle = 'rgba(150,120,135,0.7)'; ctx.font = '22px sans-serif'; ctx.fillText('Aucune donnee sur la periode', 20, 40); return; }
+    var max = 1; rows.forEach(function (r) { if (r.total > max) max = r.total; });
+    var pad = 30, bw = (W - pad * 2) / rows.length;
+    rows.forEach(function (r, i) {
+      var h = Math.round((r.total / max) * (Hh - pad * 2));
+      var x = pad + i * bw, y = Hh - pad - h;
+      var grad = ctx.createLinearGradient(0, y, 0, Hh - pad);
+      grad.addColorStop(0, '#EF4E88'); grad.addColorStop(1, '#7C5AD0');
+      ctx.fillStyle = grad;
+      ctx.fillRect(x + bw * 0.15, y, Math.max(2, bw * 0.7), h);
+    });
+  }
+
   // ── Tab switching ──
   function switchTab(tab) {
     currentTab = tab;
@@ -238,7 +304,12 @@
     document.getElementById('admin-articles-tab').classList.toggle('hidden', tab !== 'articles');
     document.getElementById('admin-leads-tab').classList.toggle('hidden', tab !== 'leads');
     document.getElementById('admin-messages-tab').classList.toggle('hidden', tab !== 'messages');
+    var statsTab = document.getElementById('admin-stats-tab');
+    if (statsTab) statsTab.classList.toggle('hidden', tab !== 'stats');
 
+    if (tab === 'stats') {
+      loadStats();
+    }
     if (tab === 'articles' && allArticles.length === 0) {
       loadArticles();
     }
@@ -353,7 +424,8 @@
 
       html += '<div class="glass-card rounded-xl p-5 space-y-3">';
       html += '<div class="flex items-center justify-between flex-wrap gap-2">';
-      html += '<div class="flex items-center gap-2"><span class="font-semibold">' + esc(r.author_name || 'Anonyme') + '</span>' + statusBadge + '</div>';
+      var quizBadge = '<span class="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">' + (r.quiz_slug ? esc(r.quiz_slug) : 'Général (home)') + '</span>';
+      html += '<div class="flex items-center gap-2 flex-wrap"><span class="font-semibold">' + esc(r.author_name || 'Anonyme') + '</span>' + statusBadge + quizBadge + '</div>';
       html += '<div class="flex items-center gap-0.5">' + starsHtml(r.rating) + '</div>';
       html += '</div>';
       html += '<p class="text-sm text-muted-foreground">' + formatDate(r.created_at) + '</p>';

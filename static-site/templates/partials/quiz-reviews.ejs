@@ -1,0 +1,55 @@
+<%
+  // Bloc avis par quiz + compteur de completions. Injecte par base.ejs sur les pages test/quiz.
+  // Recoit : lang, t, routeKey (= quiz_slug), supabaseUrl, supabaseKey
+  var _headings = { fr: 'Cet avis compte', en: 'Your review matters', es: 'Tu opinión cuenta', de: 'Deine Meinung zählt', it: 'La tua opinione conta' };
+  var _subs = {
+    fr: 'Vous venez de le faire ? Dites en un mot ce que vous en avez pensé, ça aide les autres couples à se lancer.',
+    en: 'Just took it? Tell us in a word what you thought, it helps other couples take the leap.',
+    es: '¿Acabas de hacerlo? Cuéntanos en una palabra qué te pareció, ayuda a otras parejas a animarse.',
+    de: 'Gerade gemacht? Sag uns in einem Wort, wie es war, das hilft anderen Paaren.',
+    it: 'Appena fatto? Dicci in una parola cosa ne pensi, aiuta le altre coppie a provarci.'
+  };
+  var _heading = _headings[lang] || _headings.fr;
+  var _sub = _subs[lang] || _subs.fr;
+%>
+<section class="pq-reviews-section" aria-label="<%= _heading %>">
+  <div class="container mx-auto px-4">
+    <div id="reviews-config" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>" class="hidden"></div>
+    <div id="pq-reviews" data-quiz-slug="<%= routeKey %>">
+
+      <p id="quiz-done-count" class="pqx-done" style="display:none"></p>
+
+      <div class="pqx-head">
+        <h2 class="pqx-title"><%= _heading %></h2>
+        <div class="pqx-agg" aria-hidden="true"></div>
+      </div>
+      <p class="pqx-sub"><%= _sub %></p>
+
+      <div class="pqx-grid">
+        <!-- Formulaire progressif -->
+        <div class="pqx-form-wrap">
+          <p class="pqx-rate-prompt"></p>
+          <div class="pqx-input-stars" role="group" aria-label="note">
+            <% for (var s = 1; s <= 5; s++) { %>
+            <button type="button" class="pqx-star-btn" data-star="<%= s %>" aria-label="<%= s %>">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </button>
+            <% } %>
+          </div>
+          <form class="pqx-form">
+            <div class="pqx-more" hidden>
+              <p class="pqx-more-msg"></p>
+              <input type="text" class="pqx-name input" maxlength="60" autocomplete="off">
+              <textarea class="pqx-comment textarea" rows="2" maxlength="200"></textarea>
+              <button type="submit" class="pqx-submit btn btn-cta"></button>
+              <p class="pqx-msg" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+
+        <!-- Avis existants pour ce quiz -->
+        <div class="pqx-list"></div>
+      </div>
+    </div>
+  </div>
+</section>
