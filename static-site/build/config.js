@@ -492,9 +492,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'activites-couple-ete',
     featuredImage: '/blog/activites-couple-ete.webp',
     category: 'vie-de-couple',
-    frOnly: true,
     slugs: {
       fr: 'activites-couple-ete',
+      en: 'summer-couple-activities',
+      es: 'actividades-en-pareja-verano',
+      de: 'paar-aktivitaeten-im-sommer',
+      it: 'attivita-di-coppia-in-estate',
     },
     publishedAt: '2026-07-29',
   },
