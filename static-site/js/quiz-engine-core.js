@@ -480,16 +480,6 @@ var QuizEngine = (function() {
     actions.appendChild(homeBtn);
     wrap.appendChild(actions);
 
-    // ── Review CTA, compact inline ──
-    var reviewRow = el('div', 'result-review-row mt-6');
-    var reviewText = el('span', 'result-review-text', esc(tg('reviews.quizLiked', 'Ce quiz vous a plu ?')));
-    var reviewBtn = el('a', 'result-review-btn');
-    reviewBtn.href = '/#avis';
-    reviewBtn.innerHTML = ICONS.heart + ' ' + esc(tg('reviews.leaveReview', 'Laisser un avis'));
-    reviewRow.appendChild(reviewText);
-    reviewRow.appendChild(reviewBtn);
-    wrap.appendChild(reviewRow);
-
     // ── Related quizzes ──
     var quizEl = document.getElementById('quiz-engine');
     var currentKey = quizEl ? quizEl.dataset.quiz : '';
@@ -760,32 +750,17 @@ var QuizEngine = (function() {
     var maxScore = this.results.length > 0 ? this.results[this.results.length - 1].max : 100;
     var pct = Math.round((this.totalScore / maxScore) * 100);
 
-    // ── Colonne GAUCHE : score + partage + avis sur ce test ──
+    var quizEl = document.getElementById('quiz-engine');
+
+    // ── Colonne GAUCHE : score + avis sur CE test ──
     var left = el('div', 'qr-col qr-left quiz-reveal-enter');
     var scoreDiv = el('div', 'qr-score');
     scoreDiv.innerHTML = renderScoreRing(pct);
     left.appendChild(scoreDiv);
     left.appendChild(el('p', 'qr-score-label', this.totalScore + '/' + maxScore + ' ' + esc(tg('meta.pointsWord', 'points'))));
-
-    var doneEl = el('p', 'qr-done'); doneEl.style.display = 'none';
-    left.appendChild(doneEl);
-
-    var L = pcLabels(this.lang);
-    var shareBtn = el('button', 'btn btn-outline qr-share',
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg> ' + esc(L.share));
-    shareBtn.addEventListener('click', function() { pcShare(result ? result.title : document.title); });
-    left.appendChild(shareBtn);
-
     left.appendChild(pcReviewForm(this.lang));
 
-    var actions = el('div', 'qr-actions');
-    renderActionButtons(actions, {
-      newQuestions: function() { location.reload(); },
-      restart: function() { if (self.hasLocalStorage) { try { localStorage.removeItem('quiz-' + self.prefix); } catch(e) {} } self.phase = 'intro'; self.render(); }
-    });
-    left.appendChild(actions);
-
-    // ── Colonne DROITE : explication / conseil + autres tests ──
+    // ── Colonne DROITE : explication / conseil + Poursuivez ──
     var right = el('div', 'qr-col qr-right quiz-reveal-enter');
     if (result) {
       right.appendChild(el('h3', 'qr-title', esc(result.title)));
@@ -796,18 +771,21 @@ var QuizEngine = (function() {
         right.appendChild(advice);
       }
     }
-    var rel = document.querySelector('.related-tests-section');
-    if (rel) {
-      var relBox = el('div', 'qr-related');
-      relBox.innerHTML = rel.innerHTML;
-      right.appendChild(relBox);
-    }
+    renderRelatedQuizzes(right, quizEl ? quizEl.dataset.quiz : '', quizEl ? (quizEl.dataset.lang || 'fr') : 'fr');
+
+    // ── Pied pleine largeur : UN partage + recommencer ──
+    var footer = el('div', 'qr-footer');
+    renderShareButton(footer, result ? result.title : document.title);
+    var restartBtn = el('button', 'result-action-btn');
+    restartBtn.innerHTML = '<span class="result-action-icon">🔄</span><span class="result-action-label">' + esc(tg('result.restartFromBeginning', 'Recommencer')) + '</span>';
+    restartBtn.addEventListener('click', function() { if (self.hasLocalStorage) { try { localStorage.removeItem('quiz-' + self.prefix); } catch(e) {} } self.phase = 'intro'; self.render(); });
+    footer.appendChild(restartBtn);
 
     wrap.appendChild(left);
     wrap.appendChild(right);
+    wrap.appendChild(footer);
     this.container.appendChild(wrap);
     document.body.classList.add('quiz-has-result');
-    pcFillCounter(doneEl, this.lang);
     smoothScroll(wrap, 'center');
   };
 
