@@ -17,7 +17,8 @@
       "couplesLabel": "getestete Paare",
       "quizzes": "12 Quiz",
       "quizzesLabel": "Quiz verfügbar",
-      "testsLabel": "Tests verfügbar"
+      "testsLabel": "Tests verfügbar",
+      "totalLabel": "Quizze & Tests gemacht"
     }
   },
   "quizSection": {
@@ -140,5 +141,12 @@
       "quizKnowledge": "Wer kennt den anderen besser? Fordert euch heraus!",
       "quizMost": "Stimmt ab, wer am meisten... unter euch ist!"
     }
+  },
+  "customQuizPromo": {
+    "badge": "Neu",
+    "title": "Erstelle dein eigenes Quiz",
+    "sub": "Denk dir eigene Fragen aus, wähle das Format und teile dein Quiz mit einem Link mit Freunden oder deinem Partner. 100% kostenlos, ohne Anmeldung.",
+    "cta": "Mein Quiz erstellen",
+    "popularTitle": "Die meistgespielten Quizze der Community"
   }
 }

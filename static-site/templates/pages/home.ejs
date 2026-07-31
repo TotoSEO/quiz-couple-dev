@@ -90,10 +90,10 @@
         <!-- Stats cards -->
         <div class="hero-stats">
           <div class="hero-stat-card">
-            <span class="hero-stat-icon">💕</span>
+            <span class="hero-stat-icon">🎯</span>
             <div>
-              <span class="hero-stat-value"><%= hero.stat1Value %></span>
-              <span class="hero-stat-label"><%= hero.stat1Label %></span>
+              <span class="hero-stat-value" id="home-total-counter" data-baseline="3078">3&nbsp;078</span>
+              <span class="hero-stat-label"><%= t('home:hero.stats.totalLabel', 'quiz &amp; tests réalisés') %></span>
             </div>
           </div>
           <div class="hero-stat-card">
@@ -230,6 +230,30 @@
           </button>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom Quiz Promo -->
+<section class="section-padding home-cq-promo">
+  <div class="container mx-auto px-4">
+    <div class="home-cq-card">
+      <div class="home-cq-text">
+        <span class="home-cq-badge">✨ <%= t('home:customQuizPromo.badge', 'Nouveau') %></span>
+        <h2 class="home-cq-title"><%= t('home:customQuizPromo.title', 'Créez votre propre quiz') %></h2>
+        <p class="home-cq-sub"><%= t('home:customQuizPromo.sub', 'Inventez vos questions, choisissez le format, et partagez votre quiz à vos amis ou votre moitié en un lien. 100% gratuit, sans inscription.') %></p>
+        <a href="<%= getLocalizedUrl('customQuiz', lang) %>" class="btn btn-cta btn-lg home-cq-cta"><%= t('home:customQuizPromo.cta', 'Créer mon quiz') %></a>
+      </div>
+      <div class="home-cq-visual" aria-hidden="true">
+        <span class="home-cq-emoji home-cq-emoji--1">🎯</span>
+        <span class="home-cq-emoji home-cq-emoji--2">✅</span>
+        <span class="home-cq-emoji home-cq-emoji--3">🎉</span>
+        <span class="home-cq-emoji home-cq-emoji--4">🤔</span>
+      </div>
+    </div>
+    <div id="home-popular-quizzes" class="home-popular" data-quiz-base="<%= getLocalizedUrl('customQuiz', lang) %>" hidden>
+      <h3 class="home-popular-title"><%= t('home:customQuizPromo.popularTitle', 'Les quiz de la communauté les plus joués') %></h3>
+      <div class="home-popular-grid"></div>
     </div>
   </div>
 </section>
@@ -444,3 +468,4 @@
 
 
 <script src="/js/quiz-slider.js" defer></script>
+<script src="/js/home-dynamic.js" defer></script>

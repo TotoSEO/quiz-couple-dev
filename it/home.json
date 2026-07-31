@@ -17,7 +17,8 @@
       "couplesLabel": "coppie testate",
       "quizzes": "12 quiz",
       "quizzesLabel": "quiz disponibili",
-      "testsLabel": "test disponibili"
+      "testsLabel": "test disponibili",
+      "totalLabel": "quiz e test svolti"
     }
   },
   "quizSection": {
@@ -140,5 +141,12 @@
       "quizKnowledge": "Chi conosce meglio l'altro? Sfidate voi stessi!",
       "quizMost": "Votate per scoprire chi è il più... tra voi!"
     }
+  },
+  "customQuizPromo": {
+    "badge": "Nuovo",
+    "title": "Crea il tuo quiz",
+    "sub": "Inventa le tue domande, scegli il formato e condividi il tuo quiz con gli amici o il partner con un solo link. 100% gratis, senza registrazione.",
+    "cta": "Crea il mio quiz",
+    "popularTitle": "I quiz della community più giocati"
   }
 }

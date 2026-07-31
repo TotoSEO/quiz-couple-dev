@@ -17,7 +17,8 @@
       "couplesLabel": "parejas probadas",
       "quizzes": "12 quiz",
       "quizzesLabel": "quiz disponibles",
-      "testsLabel": "tests disponibles"
+      "testsLabel": "tests disponibles",
+      "totalLabel": "quiz y tests realizados"
     }
   },
   "quizSection": {
@@ -140,5 +141,12 @@
       "quizKnowledge": "¿Quién conoce mejor al otro? ¡Desafíense!",
       "quizMost": "¡Voten para saber quién es el más... entre ustedes!"
     }
+  },
+  "customQuizPromo": {
+    "badge": "Nuevo",
+    "title": "Crea tu propio quiz",
+    "sub": "Inventa tus preguntas, elige el formato y comparte tu quiz con tus amigos o tu pareja con un solo enlace. 100% gratis, sin registro.",
+    "cta": "Crear mi quiz",
+    "popularTitle": "Los quiz más jugados de la comunidad"
   }
 }

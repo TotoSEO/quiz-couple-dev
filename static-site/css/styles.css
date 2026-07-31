@@ -4404,3 +4404,52 @@ h1, h2, h3, h4, h5, h6,
 .cq-reveal-next { border-radius: 999px; min-width: 12rem; border: 3px solid hsl(var(--ink)); box-shadow: 4px 4px 0 hsl(var(--ink)); font-weight: 800; }
 .cq-reveal-next:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 hsl(var(--ink)); }
 .cq-exp-field { margin-top: .5rem; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   1-click rating on the quiz/test result screen (drives reviews)
+   ═══════════════════════════════════════════════════════════════════ */
+.qr-rate { margin: 1.75rem auto 0; max-width: 30rem; padding: 1.1rem 1rem 1.25rem; border-radius: 1.1rem; text-align: center;
+  background: linear-gradient(135deg, hsl(var(--primary) / .08), hsl(var(--secondary) / .06));
+  border: 2px dashed hsl(var(--primary) / .45); animation: qrIn .45s both; }
+@keyframes qrIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.qr-rate-label { margin: 0 0 .55rem; font-weight: 700; font-size: 1rem; }
+.qr-rate-stars { display: inline-flex; gap: .35rem; }
+.qr-star { background: none; border: none; cursor: pointer; padding: .1rem; line-height: 0; }
+.qr-star svg { width: 2.15rem; height: 2.15rem; fill: hsl(var(--muted-foreground) / .32); transition: transform .12s ease, fill .12s ease; }
+.qr-star:hover svg { transform: scale(1.18); }
+.qr-star.on svg { fill: #f5b301; }
+@media (prefers-reduced-motion: reduce) { .qr-rate { animation: none; } .qr-star svg { transition: none; } }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Home: "create your own quiz" promo + most-played community quizzes
+   ═══════════════════════════════════════════════════════════════════ */
+.home-cq-card { position: relative; overflow: hidden; display: grid; gap: 1.25rem; align-items: center;
+  padding: 2.25rem; border-radius: 1.75rem; color: #fff;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  box-shadow: 0 20px 45px -22px hsl(var(--primary) / .65); }
+@media (min-width: 820px) { .home-cq-card { grid-template-columns: 1.5fr 1fr; padding: 2.75rem 3rem; } }
+.home-cq-badge { display: inline-block; font-weight: 700; font-size: .8rem; padding: .3rem .85rem; border-radius: 999px;
+  background: rgba(255,255,255,.22); margin-bottom: .9rem; }
+.home-cq-title { font-family: 'Poppins','Inter',sans-serif; font-size: clamp(1.5rem,3.5vw,2.1rem); font-weight: 800; margin: 0 0 .6rem; color: #fff; }
+.home-cq-sub { margin: 0 0 1.4rem; font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,.92); max-width: 42rem; }
+.home-cq-cta { background: #fff !important; color: hsl(var(--primary)) !important; font-weight: 800; border: none !important; }
+.home-cq-cta:hover { transform: translateY(-2px); }
+.home-cq-visual { position: relative; min-height: 130px; display: none; }
+@media (min-width: 820px) { .home-cq-visual { display: block; } }
+.home-cq-emoji { position: absolute; font-size: 2.7rem; filter: drop-shadow(0 6px 10px rgba(0,0,0,.22)); animation: cqFloat 4s ease-in-out infinite; }
+.home-cq-emoji--1 { top: 2%; left: 16%; }
+.home-cq-emoji--2 { top: 44%; left: 58%; animation-delay: .6s; }
+.home-cq-emoji--3 { top: 8%; left: 66%; animation-delay: 1.2s; }
+.home-cq-emoji--4 { top: 56%; left: 10%; animation-delay: 1.8s; }
+@keyframes cqFloat { 0%,100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-12px) rotate(4deg); } }
+@media (prefers-reduced-motion: reduce) { .home-cq-emoji { animation: none; } }
+.home-popular { margin-top: 2rem; }
+.home-popular-title { text-align: center; font-family: 'Poppins','Inter',sans-serif; font-weight: 700; font-size: 1.1rem; margin: 0 0 1.1rem; }
+.home-popular-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .home-popular-grid { grid-template-columns: repeat(3, 1fr); } }
+.home-pop-card { display: flex; flex-direction: column; gap: .5rem; padding: 1.1rem 1.2rem; text-decoration: none; color: inherit;
+  border: 1px solid hsl(var(--border)); border-radius: 1.1rem; background: hsl(var(--card)); transition: transform .18s, box-shadow .18s, border-color .18s; }
+.home-pop-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -16px hsl(var(--primary) / .5); border-color: hsl(var(--primary) / .5); }
+.home-pop-ico { font-size: 1.6rem; }
+.home-pop-name { font-weight: 700; font-size: .95rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.home-pop-meta { font-size: .82rem; font-weight: 700; color: hsl(var(--primary)); }
