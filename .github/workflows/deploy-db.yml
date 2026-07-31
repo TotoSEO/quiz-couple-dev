@@ -16,6 +16,7 @@ on:
     paths:
       - 'supabase/migrations/20260731120000_create_custom_quizzes.sql'
       - 'supabase/migrations/20260731130000_custom_quizzes_add_wyr.sql'
+      - 'supabase/migrations/20260731140000_quiz_daily_total.sql'
       - '.github/workflows/deploy-db.yml'
   workflow_dispatch:
 
@@ -37,7 +38,8 @@ jobs:
           fi
           for f in \
             supabase/migrations/20260731120000_create_custom_quizzes.sql \
-            supabase/migrations/20260731130000_custom_quizzes_add_wyr.sql; do
+            supabase/migrations/20260731130000_custom_quizzes_add_wyr.sql \
+            supabase/migrations/20260731140000_quiz_daily_total.sql; do
             echo "Applying $f"
             psql "$SUPABASE_DB_URL" -v ON_ERROR_STOP=1 -f "$f"
           done

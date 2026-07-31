@@ -1646,7 +1646,7 @@ var QuizEngine = (function() {
     iconWrap.innerHTML = ICONS.users;
     wrap.appendChild(iconWrap);
 
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.whoKnowsBest', 'Qui se connait le mieux ?')));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.whoKnowsBest', 'Qui connait l\'autre par cœur ?')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', tg('playerSetup.discoverWhoKnows', 'Découvrez qui connait mieux l\'autre !')));
 
     var form = el('div', 'space-y-4 max-w-md mx-auto');
