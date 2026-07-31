@@ -250,5 +250,38 @@
     "seeResults": "Voir les résultats",
     "correctAnswers": "bonnes réponses",
     "summary": "Résumé de vos réponses"
+  },
+  "coupleLevel": {
+    "heading": "Niveau de votre couple",
+    "bands": [
+      {
+        "min": 0,
+        "max": 39,
+        "tag": "Fragile",
+        "title": "Un couple à protéger",
+        "desc": "Plusieurs fondations (communication, confiance, projets communs) demandent de l'attention. Rien n'est perdu : ce sont justement les sujets à ouvrir ensemble, sans se juger."
+      },
+      {
+        "min": 40,
+        "max": 59,
+        "tag": "À consolider",
+        "title": "Une belle base à renforcer",
+        "desc": "Votre couple tient sur de vraies fondations, avec quelques zones à muscler. Repérez les points où vos réponses divergent, ce sont vos prochains chantiers à deux."
+      },
+      {
+        "min": 60,
+        "max": 79,
+        "tag": "Solide",
+        "title": "Un couple solide",
+        "desc": "Vous avez construit une relation stable et équilibrée. Continuez à entretenir ce qui marche et à parler de ce qui coince avant que ça ne s'installe."
+      },
+      {
+        "min": 80,
+        "max": 100,
+        "tag": "Très solide",
+        "title": "Un couple très solide",
+        "desc": "Communication, confiance et complicité sont au rendez-vous. Une base rare et précieuse : cultivez-la, elle vous portera loin."
+      }
+    ]
   }
 }

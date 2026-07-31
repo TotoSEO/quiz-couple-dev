@@ -250,5 +250,38 @@
     "seeResults": "Ver resultados",
     "correctAnswers": "respuestas correctas",
     "summary": "Resumen de tus respuestas"
+  },
+  "coupleLevel": {
+    "heading": "Nivel de vuestra pareja",
+    "bands": [
+      {
+        "min": 0,
+        "max": 39,
+        "tag": "Frágil",
+        "title": "Una pareja que proteger",
+        "desc": "Varios cimientos (comunicación, confianza, proyectos comunes) necesitan atención. Nada está perdido: son justo los temas que conviene abrir juntos, sin juzgaros."
+      },
+      {
+        "min": 40,
+        "max": 59,
+        "tag": "Por consolidar",
+        "title": "Una buena base por reforzar",
+        "desc": "Vuestra pareja se apoya en cimientos reales, con algunas zonas por fortalecer. Detectad las preguntas en las que vuestras respuestas difieren, son vuestros próximos retos en pareja."
+      },
+      {
+        "min": 60,
+        "max": 79,
+        "tag": "Sólida",
+        "title": "Una pareja sólida",
+        "desc": "Habéis construido una relación estable y equilibrada. Seguid cuidando lo que funciona y hablando de lo que cuesta antes de que se instale."
+      },
+      {
+        "min": 80,
+        "max": 100,
+        "tag": "Muy sólida",
+        "title": "Una pareja muy sólida",
+        "desc": "Comunicación, confianza y complicidad están presentes. Una base rara y valiosa: cuidadla, os llevará lejos."
+      }
+    ]
   }
 }
