@@ -250,5 +250,38 @@
     "seeResults": "Vedi risultati",
     "correctAnswers": "risposte corrette",
     "summary": "Riepilogo delle tue risposte"
+  },
+  "coupleLevel": {
+    "heading": "Il livello della vostra coppia",
+    "bands": [
+      {
+        "min": 0,
+        "max": 39,
+        "tag": "Fragile",
+        "title": "Una coppia da proteggere",
+        "desc": "Diverse fondamenta (comunicazione, fiducia, progetti comuni) hanno bisogno di attenzione. Niente è perduto: sono proprio i temi da aprire insieme, senza giudicarvi."
+      },
+      {
+        "min": 40,
+        "max": 59,
+        "tag": "Da consolidare",
+        "title": "Una buona base da rafforzare",
+        "desc": "La vostra coppia poggia su fondamenta reali, con alcune zone da rafforzare. Individuate le domande in cui le vostre risposte divergono, sono i vostri prossimi cantieri di coppia."
+      },
+      {
+        "min": 60,
+        "max": 79,
+        "tag": "Solida",
+        "title": "Una coppia solida",
+        "desc": "Avete costruito una relazione stabile ed equilibrata. Continuate a curare ciò che funziona e a parlare di ciò che non va prima che si radichi."
+      },
+      {
+        "min": 80,
+        "max": 100,
+        "tag": "Molto solida",
+        "title": "Una coppia molto solida",
+        "desc": "Comunicazione, fiducia e complicità ci sono tutte. Una base rara e preziosa: coltivatela, vi porterà lontano."
+      }
+    ]
   }
 }

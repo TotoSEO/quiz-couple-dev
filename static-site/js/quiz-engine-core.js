@@ -841,6 +841,7 @@ var QuizEngine = (function() {
     this.prefix = config.prefix;
     this.lang = config.lang || 'fr';
     this.needsGender = config.needsGender || false;
+    this.useScoring = config.useScoring || false;
     this.setupTitle = config.setupTitle || '';
     this.setupDesc = config.setupDesc || '';
     this.phase = 'setup';
@@ -1035,7 +1036,21 @@ var QuizEngine = (function() {
     this.container.appendChild(wrap);
   };
 
+  // Bandes de niveau de couple (fallback FR ; surcharge via games-*.json → result.coupleLevel)
+  var COUPLE_LEVEL_FALLBACK = {
+    heading: 'Niveau de votre couple',
+    yourScore: 'Score de {name}',
+    globalScore: 'Score du couple',
+    bands: [
+      { min: 0, max: 39, tag: 'Fragile', title: 'Un couple à protéger', desc: "Plusieurs fondations (communication, confiance, projets communs) demandent de l'attention. Rien n'est perdu : ce sont justement les sujets à ouvrir ensemble, sans se juger." },
+      { min: 40, max: 59, tag: 'À consolider', title: 'Une belle base à renforcer', desc: "Votre couple tient sur de vraies fondations, avec quelques zones à muscler. Identifiez les points où vos réponses divergent, ce sont vos prochains chantiers à deux." },
+      { min: 60, max: 79, tag: 'Solide', title: 'Un couple solide', desc: "Vous avez construit une relation stable et équilibrée. Continuez à entretenir ce qui marche et à parler de ce qui coince avant que ça ne s'installe." },
+      { min: 80, max: 100, tag: 'Très solide', title: 'Un couple très solide', desc: "Communication, confiance et complicité sont au rendez-vous. Une base rare et précieuse : cultivez-la, elle vous portera loin." }
+    ]
+  };
+
   DuoMatchQuiz.prototype.renderResults = function() {
+    if (this.useScoring) { return this.renderScoringResults(); }
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
     var total = this.questions.length;
@@ -1068,6 +1083,86 @@ var QuizEngine = (function() {
         wrap.appendChild(advice);
       }
     }
+
+    renderActionButtons(wrap, {
+      newQuestions: function() { location.reload(); },
+      restart: function() { self.phase = 'setup'; self.render(); }
+    });
+
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  // Resultat scoring (tester-couple) : score par joueur + score global, 3 blocs.
+  DuoMatchQuiz.prototype.renderScoringResults = function() {
+    var self = this;
+    var total = this.questions.length;
+
+    function ptsFor(qi, optId) {
+      var opts = self.questions[qi].options || [];
+      for (var k = 0; k < opts.length; k++) { if (opts[k].id === optId) return (opts[k].points || 0); }
+      return 0;
+    }
+    var scoreA = 0, scoreB = 0, maxTotal = 0;
+    for (var i = 0; i < total; i++) {
+      var opts = this.questions[i].options || [];
+      var qMax = 0;
+      for (var k = 0; k < opts.length; k++) { if ((opts[k].points || 0) > qMax) qMax = opts[k].points || 0; }
+      maxTotal += qMax;
+      scoreA += ptsFor(i, this.answers.p1[i]);
+      scoreB += ptsFor(i, this.answers.p2[i]);
+    }
+    if (maxTotal <= 0) maxTotal = 1;
+    var pctA = Math.round(scoreA / maxTotal * 100);
+    var pctB = Math.round(scoreB / maxTotal * 100);
+    var pctG = Math.round((scoreA + scoreB) / (2 * maxTotal) * 100);
+
+    var cl = tg('coupleLevel', null);
+    if (!cl || !cl.bands || !cl.bands.length) cl = COUPLE_LEVEL_FALLBACK;
+    function bandFor(pct) {
+      for (var j = 0; j < cl.bands.length; j++) { if (pct >= cl.bands[j].min && pct <= cl.bands[j].max) return cl.bands[j]; }
+      return cl.bands[cl.bands.length - 1];
+    }
+    var bG = bandFor(pctG), bA = bandFor(pctA), bB = bandFor(pctB);
+    var nameA = (this.players[0] && this.players[0].name) || tg('playerSetup.player1', 'Joueur 1');
+    var nameB = (this.players[1] && this.players[1].name) || tg('playerSetup.player2', 'Joueur 2');
+    var colorA = this.needsGender ? getPlayerColor(this.players[0], this.players[1], 0) : null;
+    var colorB = this.needsGender ? getPlayerColor(this.players[1], this.players[0], 1) : null;
+
+    var wrap = el('div', 'quiz-engine quiz-result-card');
+    var box = el('div', 'duo-score');
+
+    // Bloc verdict global (commun)
+    var verdict = el('div', 'duo-verdict');
+    verdict.appendChild(el('p', 'duo-verdict-label', esc(cl.heading || 'Niveau de votre couple')));
+    var gRing = el('div', 'duo-verdict-ring');
+    gRing.innerHTML = renderScoreRing(pctG);
+    verdict.appendChild(gRing);
+    verdict.appendChild(el('span', 'duo-tag duo-tag--global', esc(bG.tag || '')));
+    verdict.appendChild(el('h3', 'duo-verdict-title', esc(bG.title || '')));
+    verdict.appendChild(el('p', 'duo-verdict-desc', bG.desc || ''));
+    box.appendChild(verdict);
+
+    // Bloc scores individuels
+    var indivHead = el('p', 'duo-indiv-head', esc(tg('result.discoverScores', 'Découvrez vos scores individuels')));
+    box.appendChild(indivHead);
+    var row = el('div', 'duo-players-scores');
+    function playerCard(name, pct, band, color) {
+      var card = el('div', 'duo-pcard');
+      var nm = el('span', 'duo-pcard-name', esc(name));
+      if (color) nm.style.color = color.bg;
+      card.appendChild(nm);
+      var r = el('div', 'duo-pcard-ring');
+      r.innerHTML = renderScoreRing(pct, 'sm');
+      card.appendChild(r);
+      card.appendChild(el('span', 'duo-tag', esc(band.tag || '')));
+      return card;
+    }
+    row.appendChild(playerCard(nameA, pctA, bA, colorA));
+    row.appendChild(playerCard(nameB, pctB, bB, colorB));
+    box.appendChild(row);
+
+    wrap.appendChild(box);
 
     renderActionButtons(wrap, {
       newQuestions: function() { location.reload(); },

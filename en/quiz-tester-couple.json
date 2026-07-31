@@ -32,7 +32,7 @@
   },
   "section3": {
     "title": "How to interpret your couple test results",
-    "p1": "Your score reflects the <strong>percentage of matching answers</strong> between both partners. But keep in mind: a high score doesn't guarantee a perfect relationship, and a low score doesn't mean your couple is in trouble.",
+    "p1": "Each partner answers the same questions on their own. Every answer earns points based on what it reveals about the health of your relationship (communication, trust, shared plans, and so on). This gives an <strong>individual score for each of you</strong> and an overall <strong>couple score</strong> as a percentage. Keep in mind: a high score doesn't guarantee a perfect relationship, and a low score doesn't mean your relationship is in danger, it's above all a starting point for discussion.",
     "sub1Title": "80–100%: High compatibility",
     "sub1P1": "You're very aligned in your answers. This reflects a <strong>strong mutual understanding</strong> and closely shared values. Keep nurturing that connection!",
     "sub2Title": "60–79%: Good understanding",
@@ -52,7 +52,7 @@
     "sub2P1": "An online test doesn't replace deeper work on your relationship. Think of it as a <strong>conversation starter</strong>, not a clinical diagnosis.",
     "sub3Title": "Comparing with other couples",
     "sub3P1": "Every couple is unique. Comparing your score to your friends' results is pointless. Focus on <strong>your own progress</strong> as a couple.",
-    "tip": "\ud83d\udca1 <strong>Tip:</strong> Retake the test in a few months to track your growth. A couple that grows together is a couple that lasts."
+    "tip": "💡 <strong>Tip:</strong> Retake the test in a few months to track your growth. A couple that grows together is a couple that lasts."
   },
   "section5": {
     "title": "When should you take a couple test?",
@@ -126,14 +126,14 @@
     "step2Title": "Answer in turns",
     "step2Text": "For each question, player 1 answers first, then player 2",
     "step3Title": "Discover your score",
-    "step3Text": "The more matching answers you have, the higher your score!",
+    "step3Text": "Every answer earns points: you each get a score, plus an overall couple score.",
     "faqTitle": "Frequently asked questions about the couple test",
     "faq1Q": "Is the couple test really free?",
     "faq1A": "Yes, our couple test is 100% free with no signup required. You can retake it as many times as you like to track how your relationship evolves.",
     "faq2Q": "How long does the couple test take?",
     "faq2A": "The couple test takes about 5 minutes. It includes 20 questions that both partners answer in turns.",
     "faq3Q": "How is the couple test score calculated?",
-    "faq3A": "The score is based on the number of matching answers between both partners. The more you answer the same way, the higher your compatibility score.",
+    "faq3A": "The score is based on a points system: each answer is worth a certain number of points depending on what it says about the relationship. The points of each partner are added up to give an individual score, then an overall couple score as a percentage.",
     "faq4Q": "My score is low, should I be worried?",
     "faq4A": "Not necessarily! A low score simply means you have different perspectives on certain topics. It's an invitation to talk, not a verdict. The strongest couples are those who know how to discuss their differences.",
     "faq5Q": "Can we retake the couple test multiple times?",

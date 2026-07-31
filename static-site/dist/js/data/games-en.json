@@ -250,5 +250,38 @@
     "seeResults": "See results",
     "correctAnswers": "correct answers",
     "summary": "Your answers summary"
+  },
+  "coupleLevel": {
+    "heading": "Your relationship level",
+    "bands": [
+      {
+        "min": 0,
+        "max": 39,
+        "tag": "Fragile",
+        "title": "A relationship to protect",
+        "desc": "Several foundations (communication, trust, shared plans) need attention. Nothing is lost: these are exactly the topics to open up about together, without judging each other."
+      },
+      {
+        "min": 40,
+        "max": 59,
+        "tag": "To strengthen",
+        "title": "A good base to build on",
+        "desc": "Your relationship rests on real foundations, with a few areas to work on. Spot the questions where your answers differ, those are your next projects as a couple."
+      },
+      {
+        "min": 60,
+        "max": 79,
+        "tag": "Solid",
+        "title": "A solid relationship",
+        "desc": "You've built a stable, balanced relationship. Keep nurturing what works and talking about what stalls before it settles in."
+      },
+      {
+        "min": 80,
+        "max": 100,
+        "tag": "Very solid",
+        "title": "A very solid relationship",
+        "desc": "Communication, trust and closeness are all there. A rare and precious base: nurture it, it will carry you far."
+      }
+    ]
   }
 }
