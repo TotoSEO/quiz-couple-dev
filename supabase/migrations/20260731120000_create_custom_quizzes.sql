@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS public.custom_quizzes (
   title        TEXT NOT NULL,
   description  TEXT NOT NULL DEFAULT '',
   -- Chosen quiz pattern
-  quiz_type    TEXT NOT NULL CHECK (quiz_type IN ('points', 'truefalse', 'fun')),
+  quiz_type    TEXT NOT NULL CHECK (quiz_type IN ('points', 'truefalse', 'fun', 'wyr')),
   lang         TEXT NOT NULL DEFAULT 'fr' CHECK (lang IN ('fr', 'en', 'es', 'de', 'it')),
   -- Full question set, validated server-side before insert
   questions    JSONB NOT NULL,

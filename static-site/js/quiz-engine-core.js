@@ -1210,7 +1210,7 @@ var QuizEngine = (function() {
 
   DistanceQuiz.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
     var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-4');
     iconWrap.innerHTML = ICONS.mapPin;
@@ -1404,7 +1404,7 @@ var QuizEngine = (function() {
 
   CoquinQuiz.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
     var iconWrap = el('div', 'quiz-setup-icon quiz-setup-icon-coquin mx-auto mb-4');
     iconWrap.innerHTML = ICONS.flame;
@@ -1640,7 +1640,7 @@ var QuizEngine = (function() {
 
   KnowledgeQuiz.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
     var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-4');
     iconWrap.innerHTML = ICONS.users;
@@ -1842,7 +1842,7 @@ var QuizEngine = (function() {
 
   DebateQuiz.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
     wrap.appendChild(el('div', 'text-5xl mb-4 text-center', '💕'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.quizForTwo', 'Quiz à Faire en Couple')));
@@ -2007,7 +2007,7 @@ var QuizEngine = (function() {
 
   FunnyQuiz.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
     wrap.appendChild(el('div', 'text-5xl mb-4 text-center', '😂'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyToLaugh', 'Prêts à rire ensemble ?')));
@@ -2132,7 +2132,7 @@ var QuizEngine = (function() {
   MostQuiz.prototype.renderSetup = function() {
     var self = this;
     this.players = [{ name: '', letter: 'A' }, { name: '', letter: 'B' }];
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
     var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-4');
     iconWrap.innerHTML = ICONS.users;
@@ -2620,7 +2620,7 @@ var QuizEngine = (function() {
 
   ParentaliteQuiz.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in');
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
     var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-4');
     iconWrap.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';

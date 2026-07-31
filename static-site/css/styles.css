@@ -4134,13 +4134,20 @@ h1, h2, h3, h4, h5, h6,
 .cq-opt:hover { transform: rotate(0) translate(-2px,-2px); box-shadow: 7px 7px 0 hsl(var(--primary));
   background: linear-gradient(135deg, hsl(var(--primary) / .12), hsl(var(--secondary) / .12)); }
 .cq-result { text-align: center; animation: cqPop .5s both; }
-.cq-trophy { font-size: 3.25rem; display: inline-block; transform: rotate(-6deg); margin-bottom: .5rem; }
-.cq-score-bubble { display: grid; place-items: center; width: 11.5rem; height: 11.5rem; margin: .5rem auto 1.25rem; border-radius: 999px;
-  border: 4px solid hsl(var(--ink)); box-shadow: 8px 8px 0 hsl(var(--ink)); transform: rotate(-3deg);
-  background: linear-gradient(150deg, hsl(var(--primary) / .18), hsl(var(--secondary) / .18)); }
-.cq-score { font-family: 'Poppins','Inter',sans-serif; font-size: 3rem; font-weight: 900; line-height: 1;
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary))); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-.cq-result .cq-created-actions .btn { border: 3px solid hsl(var(--ink)); box-shadow: 4px 4px 0 hsl(var(--ink)); border-radius: 999px; }
+.cq-trophy { font-size: 4rem; display: inline-block; transform: rotate(-6deg); margin-bottom: .25rem;
+  filter: drop-shadow(2px 3px 0 hsl(var(--ink) / .28)); animation: cqBounceIn .6s both; }
+@keyframes cqBounceIn { 0% { opacity: 0; transform: scale(.4) rotate(-6deg); } 60% { transform: scale(1.15) rotate(-6deg); } 100% { opacity: 1; transform: scale(1) rotate(-6deg); } }
+.cq-score-bubble { display: grid; place-items: center; width: 12rem; height: 12rem; margin: .5rem auto 1.5rem; border-radius: 999px;
+  border: 5px solid hsl(var(--ink)); box-shadow: 8px 8px 0 hsl(var(--ink)); transform: rotate(-3deg);
+  background: linear-gradient(150deg, hsl(var(--primary)), hsl(var(--secondary))); }
+.cq-score { font-family: 'Poppins','Inter',sans-serif; font-size: 3.1rem; font-weight: 900; line-height: 1;
+  color: #fff; text-shadow: 2px 2px 0 hsl(var(--ink) / .6); letter-spacing: .01em; }
+.cq-result > .cq-sub { font-family: 'Poppins','Inter',sans-serif; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .09em; font-size: .82rem; color: hsl(var(--secondary)); margin-top: -.5rem; }
+.cq-result .cq-created-actions { margin-top: 1.5rem; }
+.cq-result .cq-created-actions .btn { border: 3px solid hsl(var(--ink)); box-shadow: 4px 4px 0 hsl(var(--ink)); border-radius: 999px; font-weight: 800; }
+.cq-result .cq-created-actions .btn-outline { background: hsl(var(--card)); color: hsl(var(--ink)); }
+.cq-result .cq-created-actions .btn:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 hsl(var(--ink)); }
 
 /* ── Public list — chunky tilted cards ── */
 .cq-public { margin-top: 1.5rem; }
@@ -4256,3 +4263,128 @@ h1, h2, h3, h4, h5, h6,
 .quiz-intro-how-title { display: block; font-family: 'Poppins','Inter',sans-serif; font-weight: 800; font-size: .95rem; margin-bottom: .35rem; color: hsl(var(--primary)); }
 .quiz-intro-how p { margin: 0; font-size: .9rem; line-height: 1.55; color: hsl(var(--muted-foreground)); }
 .quiz-intro-start { min-width: 14rem; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Quiz setup / start screens — chunky "bubble/sticker" makeover
+   (applies to all quiz types incl. the 2-player name-entry screens)
+   ═══════════════════════════════════════════════════════════════════ */
+.quiz-setup-screen {
+  --ink: 268 45% 27%;
+  border: 5px solid hsl(var(--ink)) !important;
+  border-radius: 1.9rem !important;
+  box-shadow: 9px 9px 0 hsl(var(--ink)) !important;
+  background: hsl(var(--card)) !important;
+  backdrop-filter: none !important;
+  text-align: center;
+}
+.dark .quiz-setup-screen { --ink: 265 32% 14%; }
+
+/* Bubble title, highlighted (surligné) but readable */
+.quiz-setup-screen > h2 {
+  display: inline-block; position: relative; z-index: 0;
+  font-family: 'Poppins','Inter',sans-serif; font-weight: 800; letter-spacing: -.01em;
+}
+.quiz-setup-screen > h2::before {
+  content: ''; position: absolute; left: -.35em; right: -.35em; bottom: .04em; height: .5em; z-index: -1;
+  background: hsl(var(--primary) / .38); border-radius: .5em; transform: rotate(-1.5deg);
+}
+.quiz-setup-screen > p { max-width: 34rem; margin-left: auto; margin-right: auto; }
+
+/* Icon becomes a chunky, slightly tilted badge */
+.quiz-setup-screen .quiz-setup-icon {
+  border: 4px solid hsl(var(--ink)) !important;
+  box-shadow: 5px 5px 0 hsl(var(--ink)) !important;
+  transform: rotate(-5deg); animation: none !important;
+}
+/* Player cards: thick borders + a playful tilt */
+.quiz-setup-screen .quiz-player-card {
+  border: 4px solid hsl(var(--ink)) !important;
+  box-shadow: 5px 5px 0 hsl(var(--ink)) !important;
+  background: hsl(var(--card)) !important;
+}
+.quiz-setup-screen .quiz-setup-grid > .quiz-player-card:nth-child(1) { transform: rotate(-1.6deg); }
+.quiz-setup-screen .quiz-setup-grid > .quiz-player-card:nth-child(2) { transform: rotate(1.6deg); }
+.quiz-setup-screen .quiz-player-card:focus-within { transform: rotate(0) translateY(-2px); }
+.quiz-setup-screen .quiz-player-card .input {
+  border: 2.5px solid hsl(var(--ink) / .8) !important; border-radius: .85rem !important; text-align: center;
+}
+.quiz-setup-screen .quiz-player-number { border: 3px solid hsl(var(--ink)); box-shadow: 3px 3px 0 hsl(var(--ink)); }
+
+/* Meta chip + start button, chunky */
+.quiz-setup-screen .quiz-setup-meta {
+  border: 2.5px solid hsl(var(--ink)) !important; border-radius: 999px !important;
+  background: hsl(var(--card)) !important; font-weight: 700;
+}
+.quiz-setup-screen .quiz-setup-start-btn {
+  border: 4px solid hsl(var(--ink)) !important;
+  box-shadow: 6px 6px 0 hsl(var(--ink)) !important;
+  border-radius: 999px !important;
+}
+.quiz-setup-screen .quiz-setup-start-btn:hover {
+  transform: translate(-2px,-2px) !important;
+  box-shadow: 8px 8px 0 hsl(var(--ink)) !important;
+}
+/* Gender buttons chunky too */
+.quiz-setup-screen .gender-btn { border-width: 2.5px !important; }
+
+/* Several engines (distance, coquin, knowledge, debate, funny, most, parentalite)
+   use .glass-card for their inner name-entry cards and a plain .btn-cta start
+   button — give them the same chunky sticker treatment as the DuoMatch screen. */
+.quiz-setup-screen .glass-card {
+  border: 4px solid hsl(var(--ink)) !important;
+  box-shadow: 5px 5px 0 hsl(var(--ink)) !important;
+  background: hsl(var(--card)) !important;
+  backdrop-filter: none !important;
+}
+.quiz-setup-screen .glass-card:nth-child(odd) { transform: rotate(-1.4deg); }
+.quiz-setup-screen .glass-card:nth-child(even) { transform: rotate(1.4deg); }
+.quiz-setup-screen .glass-card:focus-within { transform: rotate(0) translateY(-2px); }
+.quiz-setup-screen .glass-card .input {
+  border: 2.5px solid hsl(var(--ink) / .8) !important; border-radius: .85rem !important; text-align: center;
+}
+.quiz-setup-screen .btn-cta {
+  border: 4px solid hsl(var(--ink)) !important;
+  box-shadow: 6px 6px 0 hsl(var(--ink)) !important;
+  border-radius: 999px !important;
+}
+.quiz-setup-screen .btn-cta:hover {
+  transform: translate(-2px,-2px) !important;
+  box-shadow: 8px 8px 0 hsl(var(--ink)) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-setup-screen .quiz-setup-icon,
+  .quiz-setup-screen .quiz-player-card,
+  .quiz-setup-screen .glass-card { transform: none !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Custom quiz — "Tu préfères" pattern card + true/false reveal screen
+   ═══════════════════════════════════════════════════════════════════ */
+/* 4 pattern cards now: 2×2 on tablet, 4-up on wide */
+@media (min-width: 760px) { .cq-pattern-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .cq-pattern-grid { grid-template-columns: repeat(4, 1fr); } }
+.cq-pattern-card:nth-child(4) { background: linear-gradient(150deg, hsl(200 70% 52%), hsl(255 60% 62%)); transform: rotate(1.5deg); }
+.cq-pattern-card:nth-child(4):hover { transform: rotate(0deg) translateY(-6px) scale(1.02); }
+
+/* True/false reveal (after answering) */
+.cq-reveal { text-align: center; animation: cqPop .35s both; }
+.cq-reveal-badge {
+  width: 4rem; height: 4rem; margin: 0 auto 1rem; display: grid; place-items: center; border-radius: 999px;
+  font-size: 2rem; font-weight: 900; color: #fff; border: 4px solid hsl(var(--ink, 268 45% 27%));
+  box-shadow: 5px 5px 0 hsl(var(--ink, 268 45% 27%));
+}
+.cq-reveal.is-correct .cq-reveal-badge { background: linear-gradient(135deg, hsl(150 66% 45%), hsl(168 66% 42%)); }
+.cq-reveal.is-wrong .cq-reveal-badge { background: linear-gradient(135deg, hsl(0 72% 60%), hsl(20 80% 58%)); }
+.cq-reveal-verdict { font-weight: 800; font-size: 1.05rem; margin: 0 auto 1rem; max-width: 32rem; }
+.cq-reveal-exp {
+  text-align: left; max-width: 32rem; margin: 0 auto 1.5rem; padding: 1rem 1.2rem; border-radius: 1.1rem;
+  background: linear-gradient(135deg, hsl(var(--primary) / .09), hsl(var(--secondary) / .07));
+  border: 3px solid hsl(var(--ink)); box-shadow: 4px 4px 0 hsl(var(--ink)); transform: rotate(-.5deg);
+}
+.cq-reveal-exp-label { display: block; font-family: 'Poppins','Inter',sans-serif; font-weight: 800; font-size: .8rem;
+  text-transform: uppercase; letter-spacing: .04em; color: hsl(var(--primary)); margin-bottom: .3rem; }
+.cq-reveal-exp p { margin: 0; color: hsl(var(--foreground)); line-height: 1.55; }
+.cq-reveal-next { border-radius: 999px; min-width: 12rem; border: 3px solid hsl(var(--ink)); box-shadow: 4px 4px 0 hsl(var(--ink)); font-weight: 800; }
+.cq-reveal-next:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 hsl(var(--ink)); }
+.cq-exp-field { margin-top: .5rem; }

@@ -15,6 +15,7 @@ on:
     branches: [main]
     paths:
       - 'supabase/migrations/20260731120000_create_custom_quizzes.sql'
+      - 'supabase/migrations/20260731130000_custom_quizzes_add_wyr.sql'
       - '.github/workflows/deploy-db.yml'
   workflow_dispatch:
 
@@ -34,6 +35,10 @@ jobs:
             echo "Add the secret, or run supabase/migrations/20260731120000_create_custom_quizzes.sql once in the Supabase SQL editor."
             exit 0
           fi
-          psql "$SUPABASE_DB_URL" -v ON_ERROR_STOP=1 \
-            -f supabase/migrations/20260731120000_create_custom_quizzes.sql
-          echo "Migration applied."
+          for f in \
+            supabase/migrations/20260731120000_create_custom_quizzes.sql \
+            supabase/migrations/20260731130000_custom_quizzes_add_wyr.sql; do
+            echo "Applying $f"
+            psql "$SUPABASE_DB_URL" -v ON_ERROR_STOP=1 -f "$f"
+          done
+          echo "Migrations applied."
