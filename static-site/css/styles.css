@@ -4168,6 +4168,8 @@ h1, h2, h3, h4, h5, h6,
    ═══════════════════════════════════════════════════════════════════ */
 .cookie-banner { position: fixed; bottom: 1rem; left: 1rem; right: 1rem; z-index: 60; display: flex; justify-content: center;
   animation: slideInFromBottom .5s ease-out; }
+/* Must beat `.cookie-banner { display:flex }` so the JS `.hidden` toggle works */
+.cookie-banner.hidden { display: none !important; }
 .cookie-card { display: flex; align-items: center; gap: 1rem; width: 100%; max-width: 44rem;
   padding: 1rem 1.35rem; border-radius: 1.5rem; background: hsl(var(--card));
   border: 2px solid hsl(var(--primary) / .35);
@@ -4225,3 +4227,32 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: 0 14px 30px -12px hsl(var(--primary) / .4), 0 3px 10px rgba(0,0,0,.05);
 }
 .quiz-engine .quiz-option.selected, #quiz-engine .quiz-option.selected { border-width: 2.5px; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Quiz engine — redesigned intro / start screen (real design, no big emoji)
+   ═══════════════════════════════════════════════════════════════════ */
+.quiz-intro { text-align: center; max-width: 34rem; margin: 0 auto; padding: 2.5rem 1.75rem 2.75rem; }
+.quiz-intro-badge {
+  width: 5rem; height: 5rem; margin: 0 auto 1.35rem; display: grid; place-items: center; border-radius: 999px;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary))); color: #fff;
+  box-shadow: 0 16px 34px -12px hsl(var(--primary) / .6);
+}
+.quiz-intro-badge svg { width: 2.4rem; height: 2.4rem; }
+.quiz-intro-title {
+  font-family: 'Poppins','Inter',sans-serif; font-weight: 800; letter-spacing: -.02em;
+  font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.15; margin: 0 0 1.35rem;
+}
+.quiz-intro-meta { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; margin-bottom: 1.6rem; }
+.quiz-meta-chip {
+  display: inline-flex; align-items: center; gap: .45rem; padding: .5rem .95rem; border-radius: 999px;
+  background: hsl(var(--muted) / .55); border: 1.5px solid hsl(var(--border)); font-size: .85rem; font-weight: 700; color: hsl(var(--foreground));
+}
+.quiz-meta-chip svg { width: 1.05rem; height: 1.05rem; color: hsl(var(--primary)); }
+.quiz-intro-how {
+  text-align: left; max-width: 30rem; margin: 0 auto 1.9rem; padding: 1.15rem 1.35rem; border-radius: 1.15rem;
+  background: linear-gradient(135deg, hsl(var(--primary) / .07), hsl(var(--secondary) / .05));
+  border: 1.5px solid hsl(var(--primary) / .18);
+}
+.quiz-intro-how-title { display: block; font-family: 'Poppins','Inter',sans-serif; font-weight: 800; font-size: .95rem; margin-bottom: .35rem; color: hsl(var(--primary)); }
+.quiz-intro-how p { margin: 0; font-size: .9rem; line-height: 1.55; color: hsl(var(--muted-foreground)); }
+.quiz-intro-start { min-width: 14rem; }
