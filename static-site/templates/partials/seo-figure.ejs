@@ -1,0 +1,13 @@
+<%
+  /* Legacy illustration embedded inside the SEO article content.
+     Expects: contentImage (path), contentImageAlt (string), optional contentImageCaption. */
+  var _cImg = (typeof contentImage !== 'undefined') ? contentImage : null;
+  var _cAlt = (typeof contentImageAlt !== 'undefined' && contentImageAlt) ? contentImageAlt : '';
+  var _cCap = (typeof contentImageCaption !== 'undefined' && contentImageCaption) ? contentImageCaption : '';
+%>
+<% if (_cImg) { %>
+<figure class="seo-figure">
+  <img src="<%= _cImg %>" alt="<%= _cAlt %>" width="1000" height="667" loading="lazy" decoding="async">
+  <% if (_cCap) { %><figcaption><%= _cCap %></figcaption><% } %>
+</figure>
+<% } %>
