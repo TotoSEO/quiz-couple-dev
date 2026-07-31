@@ -1,0 +1,39 @@
+name: Apply DB migrations
+
+# Applies idempotent SQL migrations to Supabase automatically on push.
+# Requires ONE repo secret: SUPABASE_DB_URL
+#   Supabase Dashboard → Project Settings → Database → Connection string
+#   (URI, "Session"/direct connection). Format:
+#   postgresql://postgres:[PASSWORD]@db.[REF].supabase.co:5432/postgres
+#
+# The migration file is fully idempotent (CREATE ... IF NOT EXISTS,
+# CREATE OR REPLACE, unschedule-then-schedule) so it is safe to re-run.
+# If the secret is not set, the job skips cleanly without failing.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/migrations/20260731120000_create_custom_quizzes.sql'
+      - '.github/workflows/deploy-db.yml'
+  workflow_dispatch:
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Apply custom_quizzes migration (idempotent)
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          if [ -z "$SUPABASE_DB_URL" ]; then
+            echo "::warning::SUPABASE_DB_URL secret not set — skipping automatic migration."
+            echo "Add the secret, or run supabase/migrations/20260731120000_create_custom_quizzes.sql once in the Supabase SQL editor."
+            exit 0
+          fi
+          psql "$SUPABASE_DB_URL" -v ON_ERROR_STOP=1 \
+            -f supabase/migrations/20260731120000_create_custom_quizzes.sql
+          echo "Migration applied."

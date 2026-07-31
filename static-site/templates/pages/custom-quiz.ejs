@@ -1,0 +1,77 @@
+<%
+  const ns = 'custom-quiz';
+  const P = (k, fb) => t(ns + ':page.' + k, fb);
+  const appStrings = (translations[ns] && translations[ns].app) || {};
+  const canonicalUrl = canonical;
+%>
+<script type="application/ld+json"><%- JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: P('h1', 'Création de quiz en ligne gratuit'),
+  url: canonicalUrl,
+  applicationCategory: 'GameApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+  inLanguage: lang,
+}) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= P('breadcrumb', 'Créer un quiz') %></li>
+        </ol>
+      </nav>
+      <span class="hero-badge mb-5">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4z"/></svg>
+        <%= P('badge', '100% gratuit, sans inscription') %>
+      </span>
+      <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight">
+        <%= P('h1', 'Création de quiz en ligne gratuit') %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl leading-relaxed max-w-2xl mx-auto"><%= P('intro', 'Créez votre propre quiz, personnalisez-le et partagez-le à vos amis ou votre moitié grâce à un simple lien.') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- App (builder / taker / public list rendered by JS) -->
+<section class="custom-quiz-section py-10 md:py-14">
+  <div class="container mx-auto px-4">
+    <div id="custom-quiz-app"
+         data-lang="<%= lang %>"
+         data-supabase-url="<%= supabaseUrl %>"
+         data-supabase-key="<%= supabaseKey %>"
+         data-page-url="<%= canonicalUrl %>">
+      <noscript><p class="text-center text-muted-foreground"><%= P('noscript', 'Activez JavaScript pour créer et jouer aux quiz.') %></p></noscript>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO content -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <section class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= P('seo.s1Title', 'Créez un quiz en ligne en quelques minutes') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-4"><%- P('seo.s1p1', '') %></p>
+      <p class="text-muted-foreground leading-relaxed"><%- P('seo.s1p2', '') %></p>
+    </section>
+    <section class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= P('seo.s2Title', 'Quiz privé ou public : à vous de choisir') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-4"><%- P('seo.s2p1', '') %></p>
+      <p class="text-muted-foreground leading-relaxed"><%- P('seo.s2p2', '') %></p>
+    </section>
+    <section>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= P('seo.s3Title', 'Des quiz pour tous les moments à deux') %></h2>
+      <p class="text-muted-foreground leading-relaxed"><%- P('seo.s3p1', '') %></p>
+    </section>
+  </div>
+</article>
+
+<script>window.CQ_I18N = <%- JSON.stringify(appStrings) %>;</script>
+<script src="/js/custom-quiz.js" defer></script>

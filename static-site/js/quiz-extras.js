@@ -37,7 +37,12 @@
     bubble.className = 'quiz-count-bubble';
     bubble.style.display = 'none';
     bubble.innerHTML = '<span class="qcb-dot"></span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7-4-9.5-8.5C.8 9 2.5 5.5 6 5.5c2 0 3.2 1.2 4 2.4C10.8 6.7 12 5.5 14 5.5c3.5 0 5.2 3.5 3.5 7C19.5 17 12 21 12 21z"/></svg><span class="qcb-text"></span>';
-    bc.parentNode.insertBefore(bubble, bc.nextSibling);
+    // Place the badge on its own line just under the hero intro paragraph
+    // (left-aligned), instead of right under the breadcrumb.
+    var heroBlock = bc.parentNode;
+    var paras = heroBlock ? heroBlock.querySelectorAll('p') : null;
+    var anchor = (paras && paras.length) ? paras[paras.length - 1] : bc;
+    anchor.parentNode.insertBefore(bubble, anchor.nextSibling);
     fetch(URL + '/rest/v1/rpc/get_quiz_counts', { method: 'POST', headers: HJ, body: '{}' })
       .then(function (r) { return r.json(); })
       .then(function (rows) {

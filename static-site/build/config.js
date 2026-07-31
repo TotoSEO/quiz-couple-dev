@@ -50,6 +50,7 @@ export const ROUTE_SLUGS = {
   activities: { fr: 'activites-autours-de-moi', en: 'couple-activities-near-me', es: 'actividades-en-pareja-cerca', de: 'paar-aktivitaeten-in-der-naehe', it: 'attivita-di-coppia-vicino' },
   contact: { fr: 'contact', en: 'contact', es: 'contacto', de: 'kontakt', it: 'contatto' },
   about: { fr: 'qui-sommes-nous', en: 'about-us', es: 'quienes-somos', de: 'ueber-uns', it: 'chi-siamo' },
+  customQuiz: { fr: 'creation-quiz-personnalise', en: 'create-your-own-quiz', es: 'crear-tu-propio-quiz', de: 'eigenes-quiz-erstellen', it: 'crea-il-tuo-quiz' },
   sitemap: { fr: 'plan-du-site', en: 'sitemap', es: 'mapa-del-sitio', de: 'seitenverzeichnis', it: 'mappa-del-sito' },
   ebookConfirm: { fr: 'confirmation-ebook' },
 };
@@ -123,6 +124,7 @@ export const ROUTE_CONFIG = {
   activities: { template: 'activities', namespaces: ['activities', 'common'] },
   contact: { template: 'contact', namespaces: ['contact', 'common'] },
   about: { template: 'about', namespaces: ['common'] },
+  customQuiz: { template: 'custom-quiz', namespaces: ['custom-quiz', 'common'] },
   sitemap: { template: 'sitemap', namespaces: ['common'] },
   ebookConfirm: { template: 'ebook-confirm', namespaces: ['common'], frOnly: true },
 };
