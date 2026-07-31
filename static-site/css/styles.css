@@ -3811,13 +3811,13 @@ h1, h2, h3, h4, h5, h6,
   filter: blur(4px);
 }
 
-/* Desktop: tilt the image and let it bleed off the right edge of the hero */
-@media (min-width: 1024px) {
+/* Desktop: tilt the image on the right, with a clear margin from the viewport edge */
+@media (min-width: 1200px) {
   .quiz-hero-media {
     position: absolute;
     top: 50%;
-    right: clamp(-64px, -3vw, -16px);
-    width: clamp(360px, 40vw, 540px);
+    right: clamp(2rem, 5vw, 5rem);
+    width: clamp(380px, 34vw, 500px);
     margin: 0;
     transform: translateY(-50%);
     z-index: 2;
@@ -3841,7 +3841,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* Banner variant: always a centered image on top (used on themed heroes) */
 .quiz-hero-media--banner { width: min(100% - 2rem, 560px); }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .quiz-hero-media--banner {
     position: relative;
     top: auto; right: auto;
@@ -3979,7 +3979,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ── Mobile: featured hero image appears AFTER the hero text (below the H1) ── */
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .quiz-page-hero,
   .hero-gradient,
   .astro-hero-section { display: flex; flex-direction: column; }
@@ -3987,5 +3987,6 @@ h1, h2, h3, h4, h5, h6,
   .quiz-hero-media--banner {
     order: 99;
     margin: 1.75rem auto 0.25rem;
+    width: min(100% - 2rem, 560px);
   }
 }
