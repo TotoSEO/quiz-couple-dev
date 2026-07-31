@@ -230,6 +230,9 @@
 
   // ── Stats : completions de quiz (RPC publiques, cle anon) ──
   var statsCounts = [];
+  var statsRange = 30;
+  var statsSelectedSlug = null;
+  var _lastTotalSeries = null, _lastQuizSeries = null;
   function statsRpc(fn, body) {
     return fetch(SUPABASE_URL + '/rest/v1/rpc/' + fn, {
       method: 'POST',
@@ -237,61 +240,195 @@
       body: JSON.stringify(body || {})
     }).then(function (r) { return r.json(); });
   }
+
+  // Detect the date field of an RPC row and return a YYYY-MM-DD key.
+  function rowDateKey(row) {
+    var keys = ['day', 'd', 'date', 'created_at', 'created_day', 'jour'];
+    for (var i = 0; i < keys.length; i++) {
+      if (row[keys[i]] != null) return String(row[keys[i]]).slice(0, 10);
+    }
+    return null;
+  }
+  function rowTotal(row) {
+    if (typeof row === 'number') return row;
+    var keys = ['total', 'count', 'n', 'c'];
+    for (var i = 0; i < keys.length; i++) if (row[keys[i]] != null) return Number(row[keys[i]]) || 0;
+    return 0;
+  }
+  // Build a continuous series of the last `days` days: [{date:Date, label, total}]
+  function buildSeries(rows, days) {
+    var map = {};
+    (rows || []).forEach(function (r) {
+      var k = rowDateKey(r);
+      if (k) map[k] = (map[k] || 0) + rowTotal(r);
+    });
+    var out = [], today = new Date();
+    today.setHours(0, 0, 0, 0);
+    for (var i = days - 1; i >= 0; i--) {
+      var dt = new Date(today.getTime() - i * 86400000);
+      var iso = dt.getFullYear() + '-' + String(dt.getMonth() + 1).padStart(2, '0') + '-' + String(dt.getDate()).padStart(2, '0');
+      out.push({ date: dt, label: String(dt.getDate()).padStart(2, '0') + '/' + String(dt.getMonth() + 1).padStart(2, '0'), total: map[iso] || 0 });
+    }
+    return out;
+  }
+
   function loadStats() {
     var totalEl = document.getElementById('admin-stats-total');
     var listEl = document.getElementById('admin-stats-list');
     if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
     statsRpc('get_quiz_total').then(function (v) {
       var n = Array.isArray(v) ? (v[0] && (v[0].get_quiz_total != null ? v[0].get_quiz_total : v[0])) : v;
-      if (totalEl) totalEl.textContent = (n != null ? n : 0);
+      if (totalEl) totalEl.textContent = (n != null ? Number(n).toLocaleString('fr-FR') : 0);
     }).catch(function () { if (totalEl) totalEl.textContent = '?'; });
     statsRpc('get_quiz_counts').then(function (rows) {
       if (!Array.isArray(rows)) { if (listEl) listEl.innerHTML = '<p class="text-center text-destructive py-6">Erreur de chargement.</p>'; return; }
       statsCounts = rows.slice().sort(function (a, b) { return b.total - a.total; });
       renderStatsList();
     }).catch(function () { if (listEl) listEl.innerHTML = '<p class="text-center text-destructive py-6">Erreur reseau.</p>'; });
+    loadTotalDaily(statsRange);
   }
+
+  // Total completions per day. Prefer the dedicated RPC; if it is missing
+  // (not created yet) fall back to summing the per-quiz daily series.
+  function loadTotalDaily(days) {
+    var cv = document.getElementById('admin-stats-total-chart');
+    drawLineChart(cv, null, { loading: true });
+    statsRpc('get_quiz_daily_total', { p_days: days }).then(function (rows) {
+      if (Array.isArray(rows) && !rows.error) { renderTotalDaily(buildSeries(rows, days)); return; }
+      throw new Error('no rpc');
+    }).catch(function () {
+      // Fallback: aggregate every quiz's daily series client-side.
+      var slugs = statsCounts.map(function (r) { return r.quiz_slug; });
+      if (slugs.length === 0) { renderTotalDaily(buildSeries([], days)); return; }
+      Promise.all(slugs.map(function (s) {
+        return statsRpc('get_quiz_daily', { p_slug: s, p_days: days }).then(function (r) { return Array.isArray(r) ? r : []; }).catch(function () { return []; });
+      })).then(function (all) {
+        var merged = [];
+        all.forEach(function (rows) { if (Array.isArray(rows)) merged = merged.concat(rows); });
+        renderTotalDaily(buildSeries(merged, days));
+      });
+    });
+  }
+  function renderTotalDaily(series) {
+    var todayEl = document.getElementById('admin-stats-today');
+    var d30El = document.getElementById('admin-stats-30d');
+    if (todayEl) todayEl.textContent = (series.length ? series[series.length - 1].total : 0).toLocaleString('fr-FR');
+    if (d30El) {
+      var last30 = series.slice(-30).reduce(function (a, b) { return a + b.total; }, 0);
+      d30El.textContent = last30.toLocaleString('fr-FR');
+    }
+    _lastTotalSeries = series;
+    drawLineChart(document.getElementById('admin-stats-total-chart'), series, {});
+  }
+
   function renderStatsList() {
     var listEl = document.getElementById('admin-stats-list');
     if (!listEl) return;
-    if (statsCounts.length === 0) { listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Aucune completion pour le moment.</p>'; return; }
+    if (statsCounts.length === 0) { listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Aucune complétion pour le moment.</p>'; return; }
     var max = statsCounts[0].total || 1;
     listEl.innerHTML = statsCounts.map(function (r) {
       var pct = Math.round((r.total / max) * 100);
-      return '<button class="stats-row" data-slug="' + esc(r.quiz_slug) + '" style="display:flex;align-items:center;gap:0.75rem;width:100%;text-align:left;background:none;border:none;padding:0.5rem 0;cursor:pointer;color:inherit;">'
-        + '<span style="flex:0 0 11rem;font-size:0.85rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + esc(r.quiz_slug) + '</span>'
-        + '<span style="flex:1;height:0.6rem;border-radius:9999px;background:hsl(var(--muted));overflow:hidden;"><span style="display:block;height:100%;width:' + pct + '%;background:linear-gradient(90deg,hsl(var(--primary)),hsl(var(--secondary)));"></span></span>'
-        + '<span style="flex:0 0 3rem;text-align:right;font-weight:700;font-variant-numeric:tabular-nums;">' + r.total + '</span>'
+      return '<button class="stats-row" data-slug="' + esc(r.quiz_slug) + '">'
+        + '<span class="stats-row-name">' + esc(r.quiz_slug) + '</span>'
+        + '<span class="stats-row-bar"><span style="width:' + pct + '%"></span></span>'
+        + '<span class="stats-row-val">' + Number(r.total).toLocaleString('fr-FR') + '</span>'
         + '</button>';
     }).join('');
     listEl.querySelectorAll('.stats-row').forEach(function (b) {
-      b.addEventListener('click', function () { loadDaily(this.dataset.slug); });
+      b.addEventListener('click', function () {
+        listEl.querySelectorAll('.stats-row').forEach(function (x) { x.classList.remove('active'); });
+        this.classList.add('active');
+        loadDaily(this.dataset.slug);
+      });
     });
   }
   function loadDaily(slug) {
+    statsSelectedSlug = slug;
     var titleEl = document.getElementById('admin-stats-chart-title');
     if (titleEl) titleEl.textContent = slug + ' — 30 derniers jours';
+    drawLineChart(document.getElementById('admin-stats-chart'), null, { loading: true });
     statsRpc('get_quiz_daily', { p_slug: slug, p_days: 30 }).then(function (rows) {
-      drawChart(Array.isArray(rows) ? rows : []);
-    }).catch(function () { drawChart([]); });
+      _lastQuizSeries = buildSeries(Array.isArray(rows) ? rows : [], 30);
+      drawLineChart(document.getElementById('admin-stats-chart'), _lastQuizSeries, {});
+    }).catch(function () { _lastQuizSeries = buildSeries([], 30); drawLineChart(document.getElementById('admin-stats-chart'), _lastQuizSeries, {}); });
   }
-  function drawChart(rows) {
-    var cv = document.getElementById('admin-stats-chart');
+
+  // Area + line chart with axes, gridlines and labels. Theme-aware.
+  function drawLineChart(cv, series, opts) {
     if (!cv) return;
+    opts = opts || {};
+    var dark = document.documentElement.classList.contains('dark');
+    var ink = dark ? 'rgba(226,220,240,0.9)' : 'rgba(60,40,80,0.85)';
+    var muted = dark ? 'rgba(190,180,210,0.45)' : 'rgba(90,70,110,0.4)';
+    var grid = dark ? 'rgba(200,190,220,0.12)' : 'rgba(90,70,110,0.12)';
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var cssW = cv.clientWidth || 600, cssH = cv.clientHeight || 200;
+    cv.width = cssW * dpr; cv.height = cssH * dpr;
     var ctx = cv.getContext('2d');
-    var W = cv.width = (cv.clientWidth || 600) * 2, Hh = cv.height = 240;
-    ctx.clearRect(0, 0, W, Hh);
-    if (rows.length === 0) { ctx.fillStyle = 'rgba(150,120,135,0.7)'; ctx.font = '22px sans-serif'; ctx.fillText('Aucune donnee sur la periode', 20, 40); return; }
-    var max = 1; rows.forEach(function (r) { if (r.total > max) max = r.total; });
-    var pad = 30, bw = (W - pad * 2) / rows.length;
-    rows.forEach(function (r, i) {
-      var h = Math.round((r.total / max) * (Hh - pad * 2));
-      var x = pad + i * bw, y = Hh - pad - h;
-      var grad = ctx.createLinearGradient(0, y, 0, Hh - pad);
-      grad.addColorStop(0, '#EF4E88'); grad.addColorStop(1, '#7C5AD0');
-      ctx.fillStyle = grad;
-      ctx.fillRect(x + bw * 0.15, y, Math.max(2, bw * 0.7), h);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, cssW, cssH);
+    ctx.textBaseline = 'middle';
+    ctx.font = '11px Inter, sans-serif';
+
+    if (opts.loading) { ctx.fillStyle = muted; ctx.fillText('Chargement…', 12, cssH / 2); return; }
+    if (!series || series.length === 0 || series.every(function (p) { return p.total === 0; })) {
+      // still draw axes baseline for context
+      ctx.fillStyle = muted; ctx.fillText('Aucune donnée sur la période', 12, cssH / 2); return;
+    }
+
+    var padL = 34, padR = 12, padT = 12, padB = 22;
+    var plotW = cssW - padL - padR, plotH = cssH - padT - padB;
+    var max = 1; series.forEach(function (p) { if (p.total > max) max = p.total; });
+    // round max up to a "nice" number
+    var niceMax = niceCeil(max);
+    var xAt = function (i) { return padL + (series.length === 1 ? plotW / 2 : (i / (series.length - 1)) * plotW); };
+    var yAt = function (v) { return padT + plotH - (v / niceMax) * plotH; };
+
+    // horizontal gridlines + y labels (0, mid, max)
+    var ticks = [0, Math.round(niceMax / 2), niceMax];
+    ctx.strokeStyle = grid; ctx.lineWidth = 1; ctx.fillStyle = muted; ctx.textAlign = 'right';
+    ticks.forEach(function (t) {
+      var y = yAt(t);
+      ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(cssW - padR, y); ctx.stroke();
+      ctx.fillText(String(t), padL - 6, y);
     });
+
+    // area fill
+    var grad = ctx.createLinearGradient(0, padT, 0, padT + plotH);
+    grad.addColorStop(0, 'rgba(239,78,136,0.35)'); grad.addColorStop(1, 'rgba(124,90,208,0.03)');
+    ctx.beginPath();
+    ctx.moveTo(xAt(0), yAt(series[0].total));
+    series.forEach(function (p, i) { ctx.lineTo(xAt(i), yAt(p.total)); });
+    ctx.lineTo(xAt(series.length - 1), padT + plotH);
+    ctx.lineTo(xAt(0), padT + plotH);
+    ctx.closePath(); ctx.fillStyle = grad; ctx.fill();
+
+    // line
+    var lineGrad = ctx.createLinearGradient(padL, 0, cssW - padR, 0);
+    lineGrad.addColorStop(0, '#EF4E88'); lineGrad.addColorStop(1, '#7C5AD0');
+    ctx.beginPath();
+    series.forEach(function (p, i) { var x = xAt(i), y = yAt(p.total); i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y); });
+    ctx.strokeStyle = lineGrad; ctx.lineWidth = 2.5; ctx.lineJoin = 'round'; ctx.stroke();
+
+    // last-point dot
+    var lx = xAt(series.length - 1), ly = yAt(series[series.length - 1].total);
+    ctx.beginPath(); ctx.arc(lx, ly, 3.5, 0, Math.PI * 2); ctx.fillStyle = '#7C5AD0'; ctx.fill();
+    ctx.strokeStyle = dark ? '#1a1524' : '#fff'; ctx.lineWidth = 2; ctx.stroke();
+
+    // x labels: ~6 evenly spaced dates
+    ctx.fillStyle = muted; ctx.textAlign = 'center';
+    var step = Math.max(1, Math.ceil(series.length / 6));
+    for (var i = 0; i < series.length; i += step) {
+      ctx.fillText(series[i].label, xAt(i), cssH - padB / 2 + 2);
+    }
+    ctx.textAlign = 'left';
+  }
+  function niceCeil(n) {
+    if (n <= 5) return 5;
+    var pow = Math.pow(10, Math.floor(Math.log10(n)));
+    var d = n / pow;
+    var nice = d <= 1 ? 1 : d <= 2 ? 2 : d <= 5 ? 5 : 10;
+    return nice * pow;
   }
 
   // ── Tab switching ──
@@ -301,7 +438,6 @@
     document.querySelector('.admin-tab[data-tab="' + tab + '"]').classList.add('active');
 
     document.getElementById('admin-reviews-tab').classList.toggle('hidden', tab !== 'reviews');
-    document.getElementById('admin-articles-tab').classList.toggle('hidden', tab !== 'articles');
     document.getElementById('admin-leads-tab').classList.toggle('hidden', tab !== 'leads');
     document.getElementById('admin-messages-tab').classList.toggle('hidden', tab !== 'messages');
     var statsTab = document.getElementById('admin-stats-tab');
@@ -309,9 +445,6 @@
 
     if (tab === 'stats') {
       loadStats();
-    }
-    if (tab === 'articles' && allArticles.length === 0) {
-      loadArticles();
     }
     if (tab === 'leads' && allLeads.length === 0) {
       loadLeads();
@@ -1254,6 +1387,26 @@
     // Deploy button
     var deployBtn = document.getElementById('admin-deploy');
     if (deployBtn) deployBtn.addEventListener('click', triggerDeploy);
+
+    // Stats range switch (30 / 90 / 365 days)
+    document.querySelectorAll('.stats-range-btn').forEach(function (b) {
+      b.addEventListener('click', function () {
+        document.querySelectorAll('.stats-range-btn').forEach(function (x) { x.classList.remove('active'); });
+        this.classList.add('active');
+        statsRange = parseInt(this.dataset.range, 10) || 30;
+        loadTotalDaily(statsRange);
+      });
+    });
+    // Redraw charts on resize (canvas is width-dependent)
+    var rT;
+    window.addEventListener('resize', function () {
+      clearTimeout(rT);
+      rT = setTimeout(function () {
+        if (currentTab !== 'stats') return;
+        if (_lastTotalSeries) drawLineChart(document.getElementById('admin-stats-total-chart'), _lastTotalSeries, {});
+        if (_lastQuizSeries) drawLineChart(document.getElementById('admin-stats-chart'), _lastQuizSeries, {});
+      }, 180);
+    });
 
     // Articles create
     var createBtn = document.getElementById('articles-create');

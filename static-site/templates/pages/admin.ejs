@@ -38,7 +38,6 @@
           <div class="flex items-center gap-4 flex-wrap">
             <div class="flex rounded-lg border border-border overflow-hidden">
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors active" data-tab="reviews">Avis</button>
-              <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="articles">Articles</button>
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="leads">Leads</button>
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="messages">Messagerie</button>
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="stats">Stats</button>
@@ -122,23 +121,58 @@
 
         <!-- Stats Tab -->
         <div id="admin-stats-tab" class="hidden">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-            <div class="glass-card rounded-xl p-4 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-lg">🎯</div>
+          <!-- KPI cards -->
+          <div class="stats-kpis">
+            <div class="stats-kpi">
+              <div class="stats-kpi-icon" style="background:linear-gradient(135deg,hsl(var(--primary)),hsl(var(--secondary)));">🎯</div>
               <div>
-                <p class="text-2xl font-bold" id="admin-stats-total">-</p>
-                <p class="text-xs text-muted-foreground">Tests &amp; quiz realises (total)</p>
+                <p class="stats-kpi-value" id="admin-stats-total">-</p>
+                <p class="stats-kpi-label">Tests &amp; quiz réalisés (total)</p>
+              </div>
+            </div>
+            <div class="stats-kpi">
+              <div class="stats-kpi-icon" style="background:linear-gradient(135deg,hsl(200 80% 55%),hsl(255 60% 62%));">📅</div>
+              <div>
+                <p class="stats-kpi-value" id="admin-stats-today">-</p>
+                <p class="stats-kpi-label">Aujourd'hui</p>
+              </div>
+            </div>
+            <div class="stats-kpi">
+              <div class="stats-kpi-icon" style="background:linear-gradient(135deg,hsl(150 60% 45%),hsl(190 65% 48%));">📈</div>
+              <div>
+                <p class="stats-kpi-value" id="admin-stats-30d">-</p>
+                <p class="stats-kpi-label">30 derniers jours</p>
               </div>
             </div>
           </div>
-          <div class="glass-card rounded-xl p-5 mb-6">
-            <h2 class="text-lg font-semibold mb-1">Par quiz</h2>
-            <p class="text-sm text-muted-foreground mb-4">Cliquez sur un quiz pour voir la courbe sur 30 jours.</p>
-            <div id="admin-stats-list" class="space-y-1"></div>
+
+          <!-- Total daily evolution curve -->
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Évolution quotidienne</h2>
+                <p class="stats-panel-sub">Nombre total de tests &amp; quiz réalisés chaque jour.</p>
+              </div>
+              <div class="stats-range" role="group" aria-label="Période">
+                <button class="stats-range-btn active" data-range="30">30 j</button>
+                <button class="stats-range-btn" data-range="90">90 j</button>
+                <button class="stats-range-btn" data-range="365">1 an</button>
+              </div>
+            </div>
+            <canvas id="admin-stats-total-chart" class="stats-canvas" style="height:220px;"></canvas>
           </div>
-          <div class="glass-card rounded-xl p-5">
-            <h2 class="text-base font-semibold mb-3" id="admin-stats-chart-title">Selectionnez un quiz ci-dessus</h2>
-            <canvas id="admin-stats-chart" style="width:100%;height:120px;display:block;"></canvas>
+
+          <!-- Per-quiz breakdown -->
+          <div class="stats-panel">
+            <h2 class="stats-panel-title">Par quiz</h2>
+            <p class="stats-panel-sub">Cliquez sur un quiz pour voir sa courbe sur 30 jours.</p>
+            <div id="admin-stats-list" class="stats-list"></div>
+          </div>
+
+          <!-- Selected quiz curve -->
+          <div class="stats-panel">
+            <h2 class="stats-panel-title" id="admin-stats-chart-title" style="font-size:0.95rem;">Sélectionnez un quiz ci-dessus</h2>
+            <canvas id="admin-stats-chart" class="stats-canvas" style="height:180px;"></canvas>
           </div>
         </div>
 
@@ -194,130 +228,35 @@
           </div>
         </div>
 
-        <!-- Articles Tab -->
-        <div id="admin-articles-tab" class="hidden" style="max-width:100%;overflow:hidden;">
-          <!-- Article List View -->
-          <div id="articles-list-view">
-            <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
-              <h2 class="text-lg font-semibold">Articles du blog</h2>
-              <div class="flex items-center gap-2 flex-wrap">
-                <button id="articles-seed" class="btn btn-sm" style="background:hsl(var(--primary)/0.1);color:hsl(var(--primary));border:1px solid hsl(var(--primary)/0.3);">
-                  <svg class="w-4 h-4 inline-block mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9"/></svg>
-                  Synchroniser articles
-                </button>
-                <button id="articles-create" class="btn btn-primary btn-sm">+ Nouvel article</button>
-                <button id="articles-refresh" class="btn btn-outline btn-sm">
-                  <svg class="w-4 h-4 inline-block mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
-                  Actualiser
-                </button>
-              </div>
-            </div>
-            <div id="articles-list" class="space-y-3">
-              <p class="text-center text-muted-foreground py-8">Chargement...</p>
-            </div>
-          </div>
-
-          <!-- Article Editor View -->
-          <div id="article-editor-view" class="hidden" style="max-width:100%;overflow:hidden;">
-            <div class="flex items-center gap-3 mb-6 flex-wrap">
-              <button id="article-back" class="btn btn-outline btn-sm">← Retour</button>
-              <h2 class="text-lg font-semibold" id="article-editor-title" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1;">Modifier l'article</h2>
-              <div class="flex items-center gap-2">
-                <select id="article-status-select" class="input" style="width:auto;font-size:0.875rem;padding:0.25rem 0.5rem;">
-                  <option value="draft">Brouillon</option>
-                  <option value="published">Publié</option>
-                </select>
-                <button id="article-delete" class="btn btn-sm" style="color:hsl(var(--destructive));border:1px solid hsl(var(--destructive)/0.3);background:transparent;">
-                  <svg class="w-4 h-4 inline-block mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
-                  Supprimer
-                </button>
-              </div>
-            </div>
-
-            <!-- Image Upload -->
-            <div class="glass-card rounded-xl p-5 mb-6" style="overflow:hidden;">
-              <h3 class="font-semibold mb-3">Image à la une</h3>
-              <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
-                <div id="article-image-preview" style="width:12rem;height:8rem;border-radius:0.5rem;overflow:hidden;flex-shrink:0;background:hsl(var(--muted));display:flex;align-items:center;justify-content:center;color:hsl(var(--muted-foreground));font-size:0.875rem;">
-                  Aucune image
-                </div>
-                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:0.5rem;">
-                  <input type="file" id="article-image-input" accept="image/webp,image/jpeg,image/png" style="font-size:0.875rem;max-width:100%;overflow:hidden;">
-                  <button id="article-image-upload-btn" class="btn btn-primary btn-sm hidden">Uploader l'image</button>
-                  <p id="article-image-status" class="text-sm text-muted-foreground"></p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Language Tabs -->
-            <div class="flex rounded-lg border border-border overflow-hidden mb-4">
-              <button class="lang-tab px-4 py-2 text-sm font-medium transition-colors active" data-lang="fr">FR</button>
-              <button class="lang-tab px-4 py-2 text-sm font-medium transition-colors" data-lang="en">EN</button>
-              <button class="lang-tab px-4 py-2 text-sm font-medium transition-colors" data-lang="es">ES</button>
-              <button class="lang-tab px-4 py-2 text-sm font-medium transition-colors" data-lang="de">DE</button>
-              <button class="lang-tab px-4 py-2 text-sm font-medium transition-colors" data-lang="it">IT</button>
-            </div>
-
-            <!-- Translation Form -->
-            <div class="glass-card rounded-xl p-5 space-y-4" style="overflow:hidden;">
-              <div>
-                <label class="block text-sm font-medium mb-1">Slug</label>
-                <input type="text" id="article-field-slug" class="input" style="width:100%;max-width:100%;box-sizing:border-box;" placeholder="slug-de-l-article">
-              </div>
-              <div>
-                <label class="block text-sm font-medium mb-1">H1 (Titre principal de la page)</label>
-                <input type="text" id="article-field-title" class="input" style="width:100%;max-width:100%;box-sizing:border-box;" placeholder="Titre H1 de l'article">
-              </div>
-              <div>
-                <label class="block text-sm font-medium mb-1">Title (balise &lt;title&gt;)</label>
-                <input type="text" id="article-field-meta-title" class="input" style="width:100%;max-width:100%;box-sizing:border-box;" placeholder="Balise title pour le SEO">
-                <p class="text-xs text-muted-foreground mt-1">Idéalement 50-60 caractères. <span id="meta-title-count" class="font-medium">0</span>/60</p>
-              </div>
-              <div>
-                <label class="block text-sm font-medium mb-1">Meta description</label>
-                <textarea id="article-field-meta-description" class="input" rows="3" style="width:100%;max-width:100%;box-sizing:border-box;" placeholder="Description pour les moteurs de recherche"></textarea>
-                <p class="text-xs text-muted-foreground mt-1">Idéalement 150-160 caractères. <span id="meta-desc-count" class="font-medium">0</span>/160</p>
-              </div>
-              <div>
-                <label class="block text-sm font-medium mb-1">Alt de l'image à la une</label>
-                <input type="text" id="article-field-alt" class="input" style="width:100%;max-width:100%;box-sizing:border-box;" placeholder="Texte alternatif de l'image">
-              </div>
-              <div class="flex items-center gap-3 pt-2">
-                <button id="article-save-lang" class="btn btn-primary">Enregistrer cette langue</button>
-                <span id="article-save-status" class="text-sm text-muted-foreground"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
 </section>
 
-<!-- Delete Confirmation Modal -->
-<div id="delete-modal" style="display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:rgba(0,0,0,0.5);padding:1rem;">
-  <div class="glass-card rounded-2xl p-6" style="max-width:400px;width:100%;">
-    <h3 class="text-lg font-bold mb-2" style="color:hsl(var(--destructive));">Supprimer l'article ?</h3>
-    <p class="text-sm text-muted-foreground mb-1">Cette action est irréversible. L'article et toutes ses traductions seront supprimés définitivement.</p>
-    <p class="text-sm font-semibold mb-4" id="delete-modal-slug"></p>
-    <div class="flex gap-3 justify-end">
-      <button id="delete-modal-cancel" class="btn btn-outline btn-sm">Annuler</button>
-      <button id="delete-modal-confirm" class="btn btn-sm" style="background:hsl(var(--destructive));color:white;">Oui, supprimer</button>
-    </div>
-  </div>
-</div>
-
-<!-- Seed Status Modal -->
-<div id="seed-modal" style="display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:rgba(0,0,0,0.5);padding:1rem;">
-  <div class="glass-card rounded-2xl p-6" style="max-width:500px;width:100%;">
-    <h3 class="text-lg font-bold mb-3">Synchronisation des articles</h3>
-    <p id="seed-modal-status" class="text-sm text-muted-foreground mb-4">Envoi des articles en cours...</p>
-    <div id="seed-modal-actions" class="flex justify-end hidden">
-      <button id="seed-modal-close" class="btn btn-primary btn-sm">Fermer</button>
-    </div>
-  </div>
-</div>
-
-<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+<style>
+  @keyframes spin{to{transform:rotate(360deg)}}
+  /* ── Stats tab ── */
+  .stats-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem;}
+  .stats-kpi{display:flex;align-items:center;gap:0.9rem;padding:1.1rem 1.25rem;border-radius:1rem;background:hsl(var(--card));border:1px solid hsl(var(--border));box-shadow:0 4px 16px -8px hsl(var(--primary)/0.18);}
+  .stats-kpi-icon{width:2.75rem;height:2.75rem;border-radius:0.85rem;display:flex;align-items:center;justify-content:center;font-size:1.25rem;color:#fff;flex-shrink:0;box-shadow:0 4px 12px -4px hsl(var(--primary)/0.5);}
+  .stats-kpi-value{font-family:'Poppins','Inter',sans-serif;font-size:1.6rem;font-weight:800;line-height:1;font-variant-numeric:tabular-nums;}
+  .stats-kpi-label{font-size:0.72rem;color:hsl(var(--muted-foreground));margin-top:0.25rem;text-transform:uppercase;letter-spacing:0.03em;font-weight:600;}
+  .stats-panel{background:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem;padding:1.35rem 1.4rem;margin-bottom:1.5rem;box-shadow:0 4px 16px -10px hsl(var(--primary)/0.15);}
+  .stats-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;}
+  .stats-panel-title{font-family:'Poppins','Inter',sans-serif;font-size:1.05rem;font-weight:700;margin:0;}
+  .stats-panel-sub{font-size:0.8rem;color:hsl(var(--muted-foreground));margin:0.15rem 0 0;}
+  .stats-range{display:inline-flex;border:1px solid hsl(var(--border));border-radius:999px;overflow:hidden;flex-shrink:0;}
+  .stats-range-btn{padding:0.35rem 0.85rem;font-size:0.8rem;font-weight:600;background:transparent;border:none;cursor:pointer;color:hsl(var(--muted-foreground));transition:background .15s,color .15s;}
+  .stats-range-btn.active{background:hsl(var(--primary));color:#fff;}
+  .stats-canvas{width:100%;display:block;}
+  .stats-list{display:flex;flex-direction:column;gap:0.15rem;}
+  .stats-row{display:flex;align-items:center;gap:0.75rem;width:100%;text-align:left;background:none;border:none;padding:0.5rem 0.4rem;cursor:pointer;color:inherit;border-radius:0.5rem;transition:background .15s;}
+  .stats-row:hover{background:hsl(var(--muted)/0.6);}
+  .stats-row.active{background:hsl(var(--primary)/0.1);}
+  .stats-row-name{flex:0 0 11rem;font-size:0.82rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .stats-row-bar{flex:1;height:0.55rem;border-radius:9999px;background:hsl(var(--muted));overflow:hidden;}
+  .stats-row-bar>span{display:block;height:100%;border-radius:9999px;background:linear-gradient(90deg,hsl(var(--primary)),hsl(var(--secondary)));}
+  .stats-row-val{flex:0 0 3rem;text-align:right;font-weight:700;font-variant-numeric:tabular-nums;font-size:0.9rem;}
+  @media (max-width:520px){.stats-row-name{flex-basis:7rem;}}
+</style>
 <script src="/js/admin.js" defer></script>
