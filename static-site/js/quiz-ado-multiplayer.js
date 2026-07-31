@@ -317,25 +317,21 @@
   // ── Screen: Mode Select ──
   function renderModeSelect() {
     container.innerHTML =
-      '<div class="text-center space-y-8 py-8">' +
-        '<div class="space-y-2">' +
-          '<h2 class="text-2xl font-bold">' + t('modeTitle') + '</h2>' +
-          '<p class="text-muted-foreground">' + t('modeSubtitle') + '</p>' +
+      '<div class="ado-mode-select">' +
+        '<div class="ado-mode-head">' +
+          '<h2 class="ado-mode-title">' + t('modeTitle') + '</h2>' +
+          '<p class="ado-mode-sub">' + t('modeSubtitle') + '</p>' +
         '</div>' +
-        '<div class="grid gap-3 max-w-sm mx-auto px-4">' +
-          '<button id="btn-local" class="btn btn-primary py-4 text-base flex flex-col items-center gap-1 w-full">' +
-            '<span class="flex items-center gap-2">' +
-              '<svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>' +
-              '<span>' + t('localBtn') + '</span>' +
-            '</span>' +
-            '<span class="text-xs opacity-70 font-normal leading-tight">' + t('localDesc') + '</span>' +
+        '<div class="ado-mode-grid">' +
+          '<button id="btn-local" type="button" class="ado-mode-card">' +
+            '<span class="ado-mode-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span>' +
+            '<span class="ado-mode-name">' + t('localBtn') + '</span>' +
+            '<span class="ado-mode-desc">' + t('localDesc') + '</span>' +
           '</button>' +
-          '<button id="btn-online" class="btn btn-outline py-4 text-base flex flex-col items-center gap-1 w-full">' +
-            '<span class="flex items-center gap-2">' +
-              '<svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>' +
-              '<span>' + t('onlineBtn') + '</span>' +
-            '</span>' +
-            '<span class="text-xs opacity-70 font-normal leading-tight">' + t('onlineDesc') + '</span>' +
+          '<button id="btn-online" type="button" class="ado-mode-card ado-mode-card--alt">' +
+            '<span class="ado-mode-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>' +
+            '<span class="ado-mode-name">' + t('onlineBtn') + '</span>' +
+            '<span class="ado-mode-desc">' + t('onlineDesc') + '</span>' +
           '</button>' +
         '</div>' +
       '</div>';

@@ -25,6 +25,7 @@ const DIST_DIR = path.resolve(__dirname, '../dist');
 
 // Review stats fetched from Supabase at build time
 let reviewStats = { avg: '0', count: '0' };
+let reviewStatsByQuiz = {};
 
 // Article SEO overrides fetched from Supabase at build time
 // Map: "internalSlug-lang" → { title, metaTitle, metaDescription, featuredImageAlt, excerpt }
@@ -142,16 +143,29 @@ function injectStaticQuestions(html, tgd, lang) {
 async function fetchReviewStats() {
   try {
     const res = await fetch(
-      `${SUPABASE_URL}/rest/v1/reviews?select=rating&is_approved=eq.true`,
+      `${SUPABASE_URL}/rest/v1/reviews?select=rating,quiz_slug&is_approved=eq.true`,
       { headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` } }
     );
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const reviews = await res.json();
     if (reviews.length === 0) return;
+    // Global aggregate (toutes les pages confondues) → note du site, page d'accueil
     const sum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
     const avg = (sum / reviews.length).toFixed(1);
     reviewStats = { avg, count: String(reviews.length) };
-    console.log(`[reviews] Fetched ${reviews.length} approved reviews (avg: ${avg})`);
+    // Aggregate par quiz/test (quiz_slug) → note propre a chaque page
+    const byQuiz = {};
+    for (const r of reviews) {
+      if (!r.quiz_slug) continue;
+      (byQuiz[r.quiz_slug] = byQuiz[r.quiz_slug] || []).push(r.rating || 0);
+    }
+    reviewStatsByQuiz = {};
+    for (const slug of Object.keys(byQuiz)) {
+      const arr = byQuiz[slug];
+      const s = arr.reduce((a, b) => a + b, 0);
+      reviewStatsByQuiz[slug] = { avg: (s / arr.length).toFixed(1), count: String(arr.length) };
+    }
+    console.log(`[reviews] ${reviews.length} approved reviews (global avg ${avg}); per-quiz ratings: ${Object.keys(reviewStatsByQuiz).length}`);
   } catch (e) {
     console.warn(`[reviews] Could not fetch review stats: ${e.message}, using defaults`);
   }
@@ -349,6 +363,30 @@ async function generatePage(routeKey, lang) {
       breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: title, item: canonical });
     }
     jsonLdItems.push(breadcrumbList);
+  }
+
+  // Per-quiz AggregateRating (dynamique, note propre a chaque quiz/test via quiz_slug).
+  // On n'emet la note structuree que si la page a de vrais avis (>0), jamais de note vide.
+  if (routeKey !== 'home' && /^(test|quiz)/.test(routeKey)) {
+    const qStats = reviewStatsByQuiz[routeKey];
+    if (qStats && parseInt(qStats.count) > 0) {
+      jsonLdItems.push({
+        '@context': 'https://schema.org',
+        '@type': 'WebApplication',
+        name: title,
+        url: canonical,
+        applicationCategory: 'LifestyleApplication',
+        operatingSystem: 'Web',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: qStats.avg,
+          reviewCount: qStats.count,
+          bestRating: '5',
+          worstRating: '1',
+        },
+      });
+    }
   }
 
   // Organization + WebSite schemas for homepage
