@@ -122,11 +122,33 @@
     });
   }
 
+  // ── Incremental builder: DOM is patched in place, never fully re-rendered ──
+  var _qList = null, _qCount = null;
+
+  function refreshQuestions() {
+    if (!_qList) return;
+    var nodes = _qList.querySelectorAll('.cq-q');
+    for (var i = 0; i < nodes.length; i++) {
+      var numEl = nodes[i].querySelector('.cq-q-num');
+      if (numEl) numEl.textContent = T('question', 'Question') + ' ' + (i + 1);
+      var delEl = nodes[i].querySelector('.cq-q-del');
+      if (delEl) delEl.style.display = (nodes.length > 1) ? '' : 'none';
+    }
+    if (_qCount) _qCount.textContent = state.questions.length + '/' + LIMITS.questions;
+  }
+
+  function refreshAnswers(ansWrap) {
+    var rows = ansWrap.querySelectorAll('.cq-answer');
+    for (var i = 0; i < rows.length; i++) {
+      var d = rows[i].querySelector('.cq-del-a');
+      if (d) d.style.display = (rows.length > LIMITS.minAnswers) ? '' : 'none';
+    }
+  }
+
   function renderBuilder() {
     var pat = PATTERNS.filter(function (p) { return p.id === state.type; })[0];
     var wrap = el('div', { class: 'cq-block cq-builder' });
 
-    // header row
     var head = el('div', { class: 'cq-builder-head' }, [
       el('div', {}, [
         el('span', { class: 'cq-pill', text: (pat ? pat.icon + ' ' + pat.title : state.type) }),
@@ -137,7 +159,6 @@
     ]);
     wrap.appendChild(head);
 
-    // title + description
     var titleIn = el('input', { class: 'cq-input', type: 'text', maxlength: LIMITS.title, placeholder: T('ph_title', 'Titre du quiz (ex. Me connais-tu vraiment ?)'), value: state.title });
     var titleCount = counter(titleIn, state.title, LIMITS.title);
     titleIn.addEventListener('input', function () { state.title = titleIn.value; });
@@ -152,36 +173,48 @@
     wrap.appendChild(el('label', { class: 'cq-field' }, [el('span', { class: 'cq-label', text: T('label_title', 'Titre') }), titleIn, titleCount]));
     wrap.appendChild(el('label', { class: 'cq-field' }, [el('span', { class: 'cq-label', text: T('label_desc', 'Description') }), descIn, descCount]));
 
-    // questions
     var qList = el('div', { class: 'cq-questions' });
-    state.questions.forEach(function (q, i) { qList.appendChild(renderQuestionEditor(q, i)); });
+    _qList = qList;
+    state.questions.forEach(function (q) { qList.appendChild(renderQuestionEditor(q)); });
     wrap.appendChild(qList);
 
-    // add question
+    var qCount = el('span', { class: 'cq-counter' });
+    _qCount = qCount;
     var addBtn = el('button', { class: 'cq-add-q', type: 'button', text: '+ ' + T('add_question', 'Ajouter une question'),
       onclick: function () {
         if (state.questions.length >= LIMITS.questions) { alert(T('err_maxq', 'Maximum 30 questions.')); return; }
-        state.questions.push(blankQuestion(state.type)); renderHome();
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        var q = blankQuestion(state.type);
+        state.questions.push(q);
+        var node = renderQuestionEditor(q);
+        qList.appendChild(node);
+        refreshQuestions();
+        var firstInput = node.querySelector('.cq-input');
+        if (firstInput) firstInput.focus();
+        node.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } });
-    wrap.appendChild(el('div', { class: 'cq-add-wrap' }, [addBtn, el('span', { class: 'cq-counter', text: state.questions.length + '/' + LIMITS.questions })]));
+    wrap.appendChild(el('div', { class: 'cq-add-wrap' }, [addBtn, qCount]));
+    refreshQuestions();
 
-    // visibility
     var pubWrap = el('div', { class: 'cq-visibility' });
+    var visCards = [];
     function visCard(pub, icon, title, desc) {
-      return el('button', { type: 'button', class: 'cq-vis-card' + (state.isPublic === pub ? ' is-active' : ''),
-        onclick: function () { state.isPublic = pub; renderHome(); } }, [
+      var b = el('button', { type: 'button', class: 'cq-vis-card' + (state.isPublic === pub ? ' is-active' : '') }, [
         el('span', { class: 'cq-vis-icon', text: icon }),
         el('span', { class: 'cq-vis-title', text: title }),
         el('span', { class: 'cq-vis-desc', text: desc })
       ]);
+      b.addEventListener('click', function () {
+        state.isPublic = pub;
+        visCards.forEach(function (c) { c.el.classList.toggle('is-active', c.pub === state.isPublic); });
+      });
+      visCards.push({ el: b, pub: pub });
+      return b;
     }
     pubWrap.appendChild(visCard(false, '🔒', T('vis_private_t', 'Privé'), T('vis_private_d', 'Accessible seulement via le lien. Gardez-le ! Supprimé après 1 semaine.')));
     pubWrap.appendChild(visCard(true, '🌍', T('vis_public_t', 'Public'), T('vis_public_d', 'Publié sur cette page pour que tout le monde puisse y jouer.')));
     wrap.appendChild(el('h3', { class: 'cq-h3', text: T('vis_title', 'Visibilité') }));
     wrap.appendChild(pubWrap);
 
-    // submit
     var msg = el('div', { class: 'cq-msg', role: 'alert' });
     var submit = el('button', { class: 'btn btn-cta btn-lg cq-submit', type: 'button', text: T('create_btn', 'Créer mon quiz') });
     submit.addEventListener('click', function () { doCreate(submit, msg); });
@@ -190,14 +223,11 @@
     return wrap;
   }
 
-  function renderQuestionEditor(q, idx) {
+  function renderQuestionEditor(q) {
     var box = el('div', { class: 'cq-q' });
-    var header = el('div', { class: 'cq-q-head' }, [
-      el('span', { class: 'cq-q-num', text: T('question', 'Question') + ' ' + (idx + 1) }),
-      state.questions.length > 1 ? el('button', { class: 'cq-del', type: 'button', 'aria-label': T('delete', 'Supprimer'), html: '&times;',
-        onclick: function () { state.questions.splice(idx, 1); renderHome(); } }) : null
-    ]);
-    box.appendChild(header);
+    var delBtn = el('button', { class: 'cq-del cq-q-del', type: 'button', 'aria-label': T('delete', 'Supprimer'), html: '&times;',
+      onclick: function () { var i = state.questions.indexOf(q); if (i >= 0) state.questions.splice(i, 1); box.remove(); refreshQuestions(); } });
+    box.appendChild(el('div', { class: 'cq-q-head' }, [el('span', { class: 'cq-q-num' }), delBtn]));
 
     var qIn = el('input', { class: 'cq-input', type: 'text', maxlength: LIMITS.q, placeholder: T('ph_question', 'Écrivez votre question…'), value: q.q });
     var qCount = counter(qIn, q.q, LIMITS.q);
@@ -207,21 +237,33 @@
 
     if (state.type === 'truefalse') {
       var tfWrap = el('div', { class: 'cq-tf' });
+      var paintTf = function () {
+        var btns = tfWrap.querySelectorAll('.cq-tf-btn');
+        if (btns[0]) btns[0].classList.toggle('is-active', q.c === true);
+        if (btns[1]) btns[1].classList.toggle('is-active', q.c === false);
+      };
       [[true, T('true', 'Vrai')], [false, T('false', 'Faux')]].forEach(function (pair) {
-        tfWrap.appendChild(el('button', { type: 'button', class: 'cq-tf-btn' + (q.c === pair[0] ? ' is-active' : ''),
-          onclick: function () { q.c = pair[0]; renderHome(); } , text: pair[1] }));
+        var b = el('button', { type: 'button', class: 'cq-tf-btn' + (q.c === pair[0] ? ' is-active' : ''), text: pair[1] });
+        b.addEventListener('click', function () { q.c = pair[0]; paintTf(); });
+        tfWrap.appendChild(b);
       });
       box.appendChild(el('div', { class: 'cq-tf-label', text: T('tf_correct', 'Bonne réponse :') }));
       box.appendChild(tfWrap);
       return box;
     }
 
-    // points & fun: answers
     var ansWrap = el('div', { class: 'cq-answers' });
-    q.a.forEach(function (a, ai) { ansWrap.appendChild(renderAnswerEditor(q, a, ai)); });
+    q.a.forEach(function (a) { ansWrap.appendChild(renderAnswerEditor(q, a, ansWrap)); });
     box.appendChild(ansWrap);
+    refreshAnswers(ansWrap);
     var addA = el('button', { class: 'cq-add-a', type: 'button', text: '+ ' + T('add_answer', 'Ajouter une réponse'),
-      onclick: function () { if (q.a.length >= LIMITS.answers) { alert(T('err_answers', 'Maximum 4 réponses.')); return; } q.a.push({ t: '', c: false }); renderHome(); } });
+      onclick: function () {
+        if (q.a.length >= LIMITS.answers) { alert(T('err_answers', 'Maximum 4 réponses.')); return; }
+        var a = { t: '', c: false };
+        q.a.push(a);
+        ansWrap.appendChild(renderAnswerEditor(q, a, ansWrap));
+        refreshAnswers(ansWrap);
+      } });
     box.appendChild(addA);
 
     if (state.type === 'points') {
@@ -233,12 +275,22 @@
     return box;
   }
 
-  function renderAnswerEditor(q, a, ai) {
+  function renderAnswerEditor(q, a, ansWrap) {
     var row = el('div', { class: 'cq-answer' });
     if (state.type === 'points') {
-      row.appendChild(el('button', { type: 'button', class: 'cq-correct' + (a.c ? ' is-correct' : ''), 'aria-label': T('mark_correct', 'Bonne réponse'),
-        title: T('mark_correct', 'Bonne réponse'), html: a.c ? '✓' : '',
-        onclick: function () { q.a.forEach(function (x) { x.c = false; }); a.c = true; renderHome(); } }));
+      var corr = el('button', { type: 'button', class: 'cq-correct' + (a.c ? ' is-correct' : ''), 'aria-label': T('mark_correct', 'Bonne réponse'),
+        title: T('mark_correct', 'Bonne réponse'), html: a.c ? '✓' : '' });
+      corr.addEventListener('click', function () {
+        q.a.forEach(function (x) { x.c = false; });
+        a.c = true;
+        var rows = ansWrap.querySelectorAll('.cq-answer');
+        for (var i = 0; i < rows.length; i++) {
+          var c = rows[i].querySelector('.cq-correct');
+          var on = q.a[i] && q.a[i].c;
+          if (c) { c.classList.toggle('is-correct', !!on); c.innerHTML = on ? '✓' : ''; }
+        }
+      });
+      row.appendChild(corr);
     }
     var aIn = el('input', { class: 'cq-input', type: 'text', maxlength: LIMITS.a, placeholder: T('ph_answer', 'Réponse…'), value: a.t });
     var aCount = counter(aIn, a.t, LIMITS.a);
@@ -246,10 +298,9 @@
     bindCount(aIn, LIMITS.a, aCount);
     row.appendChild(aIn);
     row.appendChild(aCount);
-    if (q.a.length > LIMITS.minAnswers) {
-      row.appendChild(el('button', { class: 'cq-del cq-del-a', type: 'button', 'aria-label': T('delete', 'Supprimer'), html: '&times;',
-        onclick: function () { q.a.splice(ai, 1); renderHome(); } }));
-    }
+    var delA = el('button', { class: 'cq-del cq-del-a', type: 'button', 'aria-label': T('delete', 'Supprimer'), html: '&times;',
+      onclick: function () { var i = q.a.indexOf(a); if (i >= 0) q.a.splice(i, 1); row.remove(); refreshAnswers(ansWrap); } });
+    row.appendChild(delA);
     return row;
   }
 
