@@ -18,6 +18,9 @@ verify_jwt = false
 [functions.manage-ado-session]
 verify_jwt = false
 
+[functions.manage-custom-quiz]
+verify_jwt = false
+
 [functions.contact-message]
 verify_jwt = false
 

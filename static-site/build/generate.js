@@ -327,6 +327,16 @@ async function generatePage(routeKey, lang) {
     };
     title = contactMeta[lang]?.title || contactMeta.fr.title;
     description = contactMeta[lang]?.description || contactMeta.fr.description;
+  } else if (routeKey === 'customQuiz') {
+    const cqMeta = {
+      fr: { title: 'Quiz personnalisé | Créez votre propre questionnaire !', description: 'Créez votre propre quiz en ligne gratuitement et partagez-le à vos amis ou votre couple. Quiz à points, vrai ou faux ou juste pour rire, en quelques clics.' },
+      en: { title: 'Custom Quiz | Create Your Own Questionnaire!', description: 'Create your own online quiz for free and share it with your friends or partner. Points quiz, true or false or just for fun, in a few clicks.' },
+      es: { title: 'Quiz personalizado | ¡Crea tu propio cuestionario!', description: 'Crea tu propio quiz online gratis y compártelo con tus amigos o tu pareja. Quiz de puntos, verdadero o falso o solo por diversión, en unos clics.' },
+      de: { title: 'Eigenes Quiz | Erstelle deinen eigenen Fragebogen!', description: 'Erstelle dein eigenes Online-Quiz kostenlos und teile es mit Freunden oder deinem Partner. Punkte-Quiz, Wahr oder Falsch oder einfach zum Spaß, in wenigen Klicks.' },
+      it: { title: 'Quiz personalizzato | Crea il tuo questionario!', description: 'Crea il tuo quiz online gratis e condividilo con gli amici o il partner. Quiz a punti, vero o falso o solo per divertimento, in pochi clic.' },
+    };
+    title = cqMeta[lang]?.title || cqMeta.fr.title;
+    description = cqMeta[lang]?.description || cqMeta.fr.description;
   } else if (routeKey === 'admin') {
     title = 'Administration - Quiz Couple';
     description = 'Panel d\'administration Quiz Couple';
