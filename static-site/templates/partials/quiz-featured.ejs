@@ -1,0 +1,15 @@
+<%
+  /* Featured hero image for a quiz/test page.
+     Expects: featuredImage (path), featuredImageAlt (string).
+     Mobile: rounded banner above the hero text.
+     Desktop (lg+): tilted, bleeding off the right edge over a soft blob shape. */
+  var _fImg = (typeof featuredImage !== 'undefined') ? featuredImage : null;
+  var _fAlt = (typeof featuredImageAlt !== 'undefined' && featuredImageAlt) ? featuredImageAlt : '';
+  var _fVariant = (typeof variant !== 'undefined' && variant) ? variant : '';
+%>
+<% if (_fImg) { %>
+<figure class="quiz-hero-media<%= _fVariant === 'banner' ? ' quiz-hero-media--banner' : '' %>">
+  <span class="quiz-hero-media__blob" aria-hidden="true"></span>
+  <img class="quiz-hero-media__img" src="<%= _fImg %>" alt="<%= _fAlt %>" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async">
+</figure>
+<% } %>

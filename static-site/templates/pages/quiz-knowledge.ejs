@@ -50,6 +50,7 @@
 
 <!-- Hero -->
 <section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center">
       <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -95,6 +96,7 @@
 <!-- SEO Content -->
 <article class="py-16 md:py-24 seo-content">
   <div class="container mx-auto px-4 max-w-3xl">
+    <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: (typeof quizTitle !== 'undefined' ? quizTitle : (typeof rawTitle !== 'undefined' ? rawTitle : '')) }) %>
 
     <% const howSteps = t(ns + ':howItWorks.steps', []); if (Array.isArray(howSteps) && howSteps.length > 0) { %>
     <section class="mb-16">

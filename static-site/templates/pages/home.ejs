@@ -149,13 +149,20 @@
           <h2 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.testsTitle', 'Nos Tests pour les Couples') %></h2>
           <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.testsDesc', '') %></p>
         </div>
-        <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
-          <% for (let ti = 0; ti < testsFiltered.length; ti++) { const item = testsFiltered[ti]; %>
-          <% const tTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)); %>
-          <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
+        <div class="quiz-slider" data-slider>
+          <button type="button" class="quiz-slider__nav quiz-slider__nav--prev" data-slider-prev aria-label="<%= t('common:buttons.previous', 'Précédent') %>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="quiz-slider__track" data-slider-track>
+          <% for (let ti = 0; ti < testsFiltered.length; ti++) { const item = testsFiltered[ti];
+             const _f = quizFeatured && quizFeatured[item.routeKey];
+             const tTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key));
+             const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
+             const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : tTitle; %>
+          <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--test">
               <div class="quiz-bubble-media">
-                <img src="/quiz/<%= item.img %>.webp" alt="<%= escapeHtml(tTitle) %>" loading="lazy" decoding="async" width="1000" height="667">
+                <img src="<%= fImg %>" alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
                 <span class="quiz-bubble-chip"><%= item.icon %></span>
               </div>
               <div class="quiz-bubble-body">
@@ -169,6 +176,10 @@
             </div>
           </a>
           <% } %>
+          </div>
+          <button type="button" class="quiz-slider__nav quiz-slider__nav--next" data-slider-next aria-label="<%= t('common:buttons.next', 'Suivant') %>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -186,13 +197,20 @@
           <h2 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.quizzesTitle', 'Nos Quiz à Faire en Couple') %></h2>
           <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.quizzesDesc', '') %></p>
         </div>
-        <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto">
-          <% for (let qi = 0; qi < quizzesFiltered.length; qi++) { const item = quizzesFiltered[qi]; %>
-          <% const qTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)); %>
-          <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card no-underline group animate-card-fade-in">
+        <div class="quiz-slider" data-slider>
+          <button type="button" class="quiz-slider__nav quiz-slider__nav--prev" data-slider-prev aria-label="<%= t('common:buttons.previous', 'Précédent') %>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="quiz-slider__track" data-slider-track>
+          <% for (let qi = 0; qi < quizzesFiltered.length; qi++) { const item = quizzesFiltered[qi];
+             const _f = quizFeatured && quizFeatured[item.routeKey];
+             const qTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key));
+             const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
+             const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : qTitle; %>
+          <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--quiz">
               <div class="quiz-bubble-media">
-                <img src="/quiz/<%= item.img %>.webp" alt="<%= escapeHtml(qTitle) %>" loading="lazy" decoding="async" width="1000" height="667">
+                <img src="<%= fImg %>" alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
                 <span class="quiz-bubble-chip quiz-bubble-chip--quiz"><%= item.icon %></span>
               </div>
               <div class="quiz-bubble-body">
@@ -206,6 +224,10 @@
             </div>
           </a>
           <% } %>
+          </div>
+          <button type="button" class="quiz-slider__nav quiz-slider__nav--next" data-slider-next aria-label="<%= t('common:buttons.next', 'Suivant') %>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -420,3 +442,5 @@
   </div>
 </section>
 
+
+<script src="/js/quiz-slider.js" defer></script>

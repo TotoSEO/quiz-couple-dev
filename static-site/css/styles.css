@@ -3778,3 +3778,214 @@ h1, h2, h3, h4, h5, h6,
   html { scroll-behavior: auto; }
 }
 
+
+/* ═══════════════════════════════════════════════════════════════════
+   Quiz/Test featured hero image + SEO content figure
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Featured hero image — mobile: rounded banner above the hero text */
+.quiz-hero-media {
+  position: relative;
+  width: min(100% - 2rem, 520px);
+  margin: 0 auto 2rem;
+}
+.quiz-hero-media__img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  transform: rotate(-2deg);
+  box-shadow: 0 22px 48px -18px hsl(var(--primary) / 0.45),
+              0 8px 20px -10px rgba(0, 0, 0, 0.18);
+}
+.quiz-hero-media__blob {
+  position: absolute;
+  inset: -16% -12% -20% -14%;
+  z-index: 0;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.28), hsl(var(--secondary) / 0.20));
+  border-radius: 42% 58% 55% 45% / 55% 45% 55% 45%;
+  filter: blur(4px);
+}
+
+/* Desktop: tilt the image and let it bleed off the right edge of the hero */
+@media (min-width: 1024px) {
+  .quiz-hero-media {
+    position: absolute;
+    top: 50%;
+    right: clamp(-64px, -3vw, -16px);
+    width: clamp(360px, 40vw, 540px);
+    margin: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+  }
+  .quiz-hero-media__img { transform: rotate(4deg); }
+
+  /* Make room on the right: left-align and cap the hero text width */
+  .quiz-page-hero > .container > .mx-auto,
+  .hero-gradient > .container > .mx-auto {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    max-width: 640px;
+  }
+  .quiz-page-hero > .container > .mx-auto .breadcrumb ol,
+  .hero-gradient > .container > .mx-auto .breadcrumb ol { justify-content: flex-start; }
+  .quiz-page-hero > .container > .mx-auto p,
+  .hero-gradient > .container > .mx-auto p { margin-left: 0; margin-right: 0; }
+}
+
+/* Banner variant: always a centered image on top (used on themed heroes) */
+.quiz-hero-media--banner { width: min(100% - 2rem, 560px); }
+@media (min-width: 1024px) {
+  .quiz-hero-media--banner {
+    position: relative;
+    top: auto; right: auto;
+    width: min(100%, 560px);
+    margin: 0 auto 2rem;
+    transform: none;
+  }
+  .quiz-hero-media--banner .quiz-hero-media__img { transform: rotate(-2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-hero-media__img { transform: none !important; }
+}
+
+/* Legacy illustration inside the SEO article */
+.seo-figure {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.seo-figure img {
+  width: 100%;
+  height: auto;
+  max-width: 640px;
+  aspect-ratio: 1000 / 667;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px -14px rgba(0, 0, 0, 0.22);
+}
+.seo-figure figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Home quiz/test sliders (horizontal carousels)
+   ═══════════════════════════════════════════════════════════════════ */
+.quiz-slider {
+  position: relative;
+  max-width: 78rem;
+  margin: 0 auto;
+}
+.quiz-slider__track {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-left: 0.25rem;
+  padding: 0.5rem 0.25rem 1.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.quiz-slider__track::-webkit-scrollbar { display: none; }
+.quiz-slide {
+  flex: 0 0 auto;
+  width: 82%;
+  max-width: 340px;
+  scroll-snap-align: start;
+}
+@media (min-width: 640px)  { .quiz-slide { width: 46%; } }
+@media (min-width: 900px)  { .quiz-slide { width: 31%; } }
+@media (min-width: 1200px) { .quiz-slide { width: 23.5%; } }
+
+/* Prev / next nav buttons */
+.quiz-slider__nav {
+  position: absolute;
+  top: calc(50% - 0.75rem);
+  transform: translateY(-50%);
+  z-index: 5;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  border: 1px solid hsl(var(--border) / 0.7);
+  background: hsl(var(--card));
+  color: hsl(var(--primary));
+  box-shadow: 0 8px 22px -8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+}
+.quiz-slider__nav svg { width: 1.35rem; height: 1.35rem; }
+.quiz-slider__nav:hover { transform: translateY(-50%) scale(1.08); background: hsl(var(--primary)); color: #fff; }
+.quiz-slider__nav:disabled { opacity: 0; pointer-events: none; }
+.quiz-slider__nav--prev { left: -0.5rem; }
+.quiz-slider__nav--next { right: -0.5rem; }
+@media (min-width: 900px) {
+  .quiz-slider__nav { display: flex; }
+  .quiz-slider__track { padding-left: 0.5rem; padding-right: 0.5rem; }
+}
+@media (min-width: 1320px) {
+  .quiz-slider__nav--prev { left: -1.5rem; }
+  .quiz-slider__nav--next { right: -1.5rem; }
+}
+
+/* Fade hints at the rail edges (desktop) */
+@media (min-width: 900px) {
+  .quiz-slider::before,
+  .quiz-slider::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 1.5rem;
+    width: 2.5rem;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .quiz-slider::before { left: 0; background: linear-gradient(90deg, hsl(var(--background)), transparent); }
+  .quiz-slider::after  { right: 0; background: linear-gradient(270deg, hsl(var(--background)), transparent); }
+  .quiz-slider:not(.is-start)::before { opacity: 1; }
+  .quiz-slider:not(.is-end)::after   { opacity: 1; }
+}
+
+/* ── Slider card refinements: centered content + larger heading font ── */
+.quiz-slide .quiz-bubble-body {
+  text-align: center;
+  align-items: center;
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+.quiz-slide .quiz-bubble-title {
+  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+.quiz-slide .quiz-bubble-desc { font-size: 0.875rem; }
+.quiz-slide .quiz-bubble-cta { justify-content: center; }
+@media (min-width: 900px) {
+  .quiz-slide .quiz-bubble-title { font-size: 1.15rem; }
+}
+
+/* ── Mobile: featured hero image appears AFTER the hero text (below the H1) ── */
+@media (max-width: 1023px) {
+  .quiz-page-hero,
+  .hero-gradient,
+  .astro-hero-section { display: flex; flex-direction: column; }
+  .quiz-hero-media,
+  .quiz-hero-media--banner {
+    order: 99;
+    margin: 1.75rem auto 0.25rem;
+  }
+}

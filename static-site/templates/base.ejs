@@ -85,6 +85,8 @@
   <% if (typeof routeKey !== 'undefined' && routeKey === 'home') { %>
   <link rel="preload" href="/assets/quiz-couple-hero.webp" as="image" type="image/webp">
   <!-- cf7a42f54f657854c287ed4d2afdf069 -->
+  <% } else if (typeof featuredImage !== 'undefined' && featuredImage) { %>
+  <link rel="preload" href="<%= featuredImage %>" as="image" type="image/webp">
   <% } %>
 
   <!-- Full CSS -->

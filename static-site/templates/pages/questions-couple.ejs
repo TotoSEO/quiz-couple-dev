@@ -25,7 +25,8 @@
 <script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
 <% } %>
 
-<section class="hero-gradient py-16 md:py-24">
+<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center">
       <nav class="breadcrumb" aria-label="Breadcrumb">

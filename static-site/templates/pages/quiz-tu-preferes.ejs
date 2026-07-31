@@ -76,6 +76,7 @@
 
 <!-- Hero -->
 <section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center">
       <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -131,6 +132,7 @@
 <!-- SEO Article -->
 <article class="py-16 md:py-24 seo-content">
   <div class="container mx-auto px-4 max-w-3xl">
+    <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: (typeof quizTitle !== 'undefined' ? quizTitle : (typeof rawTitle !== 'undefined' ? rawTitle : '')) }) %>
 
     <% for (var s = 1; s <= sectionCount; s++) {
       var sTitle = tryKeys('section' + s + '.title');

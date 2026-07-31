@@ -13,7 +13,7 @@ import CleanCSS from 'clean-css';
 import {
   BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
-  QUIZ_RELATED_ARTICLES,
+  QUIZ_RELATED_ARTICLES, QUIZ_FEATURED,
   getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
 } from './config.js';
@@ -475,6 +475,9 @@ async function generatePage(routeKey, lang) {
     breadcrumbs.push({ name: title });
   }
 
+  // Featured image config for this quiz/test route (null for non-quiz pages)
+  const featured = QUIZ_FEATURED[routeKey];
+
   // Template data available to all pages
   const data = {
     // Globals
@@ -492,7 +495,13 @@ async function generatePage(routeKey, lang) {
     canonical,
     alternates,
     noindex: isNoindex ? (routeKey === 'admin' ? 'noindex, nofollow' : 'noindex, follow') : false,
-    ogImage: `${BASE_URL}/og-image.webp`,
+    // Per-page featured image (hero + OG share + home card). Falls back to the generic OG image.
+    ogImage: featured ? `${BASE_URL}/quiz/featured/${featured.file}.webp` : `${BASE_URL}/og-image.webp`,
+    featuredImage: featured ? `/quiz/featured/${featured.file}.webp` : null,
+    featuredImageAlt: featured ? (featured.alt[lang] || featured.alt.fr) : '',
+    contentImage: featured && featured.old ? `/quiz/${featured.old}.webp` : null,
+    // Full featured-image map (used by the home page cards)
+    quizFeatured: QUIZ_FEATURED,
     // Navigation/routing
     routeKey,
     pagePath,
