@@ -2833,18 +2833,23 @@ var QuizEngine = (function() {
 
   TruefalseQuiz.prototype.renderIntro = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
-    wrap.appendChild(el('div', 'text-5xl mb-4', '✅'));
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', tg('truefalse.ready', 'Prêt pour le vrai ou faux ?')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-2', this.questions.length + ' ' + tg('truefalse.statements', 'affirmations')));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min')));
-
-    var infoBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-md mx-auto text-left');
-    infoBox.innerHTML = '<p class="text-sm text-muted-foreground mb-2"><strong>' + esc(tg('truefalse.howTitle', 'Comment ça marche ?')) + '</strong></p>' +
-      '<p class="text-sm text-muted-foreground">' + esc(tg('truefalse.howDesc', 'Pour chaque affirmation, choisissez Vrai ou Faux. La bonne réponse et une explication s\'affichent après chaque question.')) + '</p>';
-    wrap.appendChild(infoBox);
-
-    var btn = el('button', 'btn btn-cta btn-lg', esc(tg('playerSetup.startQuiz', 'Commencer le quiz')));
+    var svg = function (p) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' + p + '</svg>'; };
+    var iCheck = svg('<path d="M20 6L9 17l-5-5"/>');
+    var iList = svg('<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/>');
+    var iClock = svg('<circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/>');
+    var wrap = el('div', 'quiz-engine quiz-intro animate-fade-in');
+    wrap.innerHTML =
+      '<div class="quiz-intro-badge">' + iCheck + '</div>' +
+      '<h2 class="quiz-intro-title">' + esc(tg('truefalse.ready', 'Prêt pour le vrai ou faux ?')) + '</h2>' +
+      '<div class="quiz-intro-meta">' +
+        '<span class="quiz-meta-chip">' + iList + '<span>' + this.questions.length + ' ' + esc(tg('truefalse.statements', 'affirmations')) + '</span></span>' +
+        '<span class="quiz-meta-chip">' + iClock + '<span>' + esc(tg('meta.duration', '5 min')) + '</span></span>' +
+      '</div>' +
+      '<div class="quiz-intro-how">' +
+        '<span class="quiz-intro-how-title">' + esc(tg('truefalse.howTitle', 'Comment ça marche ?')) + '</span>' +
+        '<p>' + esc(tg('truefalse.howDesc', 'Pour chaque affirmation, choisissez Vrai ou Faux. La bonne réponse et une explication s\'affichent après chaque question.')) + '</p>' +
+      '</div>';
+    var btn = el('button', 'btn btn-cta btn-lg quiz-intro-start', esc(tg('playerSetup.startQuiz', 'Commencer le quiz')));
     btn.addEventListener('click', function() {
       self.phase = 'playing';
       self.currentQ = 0;
