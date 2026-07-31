@@ -1,1 +1,0 @@
-!function(){var e=document.getElementById("theme-toggle");e&&e.addEventListener("click",function(){var e=document.documentElement;e.classList.contains("dark")?(e.classList.remove("dark"),localStorage.setItem("theme","light")):(e.classList.add("dark"),localStorage.setItem("theme","dark"))})}();

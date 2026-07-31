@@ -1,1 +1,0 @@
-document.addEventListener("click",function(t){var a=t.target.closest(".obl");if(a){var e=a.getAttribute("data-h");if(e)try{window.location.href=atob(e)}catch(t){}}});
