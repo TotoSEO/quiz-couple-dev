@@ -94,7 +94,6 @@
 <!-- SEO Content -->
 <article class="py-16 md:py-24 seo-content">
   <div class="container mx-auto px-4 max-w-3xl">
-    <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: (typeof quizTitle !== 'undefined' ? quizTitle : (typeof rawTitle !== 'undefined' ? rawTitle : '')) }) %>
 
     <% const intro = t(ns + ':seo.intro', ''); if (intro) { %>
     <p class="text-lg text-muted-foreground leading-relaxed mb-12"><%- intro %></p>
@@ -113,6 +112,7 @@
 
     <%/* Section 2: À quoi sert un test de points communs */%>
     <% const s2Title = t(ns + ':seo.s2.title', ''); if (s2Title) { %>
+    <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: (typeof quizTitle !== 'undefined' ? quizTitle : (typeof rawTitle !== 'undefined' ? rawTitle : '')) }) %>
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s2Title %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed">

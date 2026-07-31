@@ -300,7 +300,7 @@
 <!-- SEO Article -->
 <article class="py-16 md:py-24 seo-content">
   <div class="container mx-auto px-4 max-w-3xl">
-    <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: quizTitle }) %>
+    <% let _figShown = false; const _hasRich = !!tryKeys('seo.richContent'); %>
     <% for (let s = 1; s <= sectionCount; s++) {
       const sTitle = getSectionTitle(s);
       if (!sTitle) continue;
@@ -446,6 +446,7 @@
       </blockquote>
       <% } %>
     </section>
+    <% if (!_figShown && !_hasRich) { _figShown = true; %><%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: quizTitle }) %><% } %>
     <% } %>
 
     <%/* Card-based content with icon pictograms */%>
@@ -480,6 +481,7 @@
         <% } %>
       </div>
     </section>
+    <% if (!_figShown && !_hasRich) { _figShown = true; %><%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: quizTitle }) %><% } %>
     <% } %>
 
     <%/* Step-based "how it works" (quiz-tester-couple style) */%>

@@ -138,7 +138,6 @@
 <!-- SEO Article -->
 <article class="py-16 md:py-24 seo-content">
   <div class="container mx-auto px-4 max-w-3xl">
-    <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: (typeof quizTitle !== 'undefined' ? quizTitle : (typeof rawTitle !== 'undefined' ? rawTitle : '')) }) %>
 
     <!-- Section 1: What are the 5 love languages -->
     <section class="mb-16">
@@ -151,6 +150,7 @@
     </section>
 
     <!-- Section 2: The 5 languages explained -->
+    <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: (typeof quizTitle !== 'undefined' ? quizTitle : (typeof rawTitle !== 'undefined' ? rawTitle : '')) }) %>
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
       <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section2.intro', '') %></p>
