@@ -4120,7 +4120,16 @@ h1, h2, h3, h4, h5, h6,
   background: hsl(var(--card)); border: 3px solid hsl(var(--ink)); box-shadow: 8px 8px 0 hsl(var(--ink)); animation: cqPop .45s both; }
 @media (min-width: 720px) { .cq-taker { padding: 2.6rem; } }
 .cq-taker-title { text-align: center; }
-.cq-stage { margin-top: 1.6rem; }
+/* Back-to-listing link, top-left of the taker card */
+.cq-back-link { display: inline-flex; align-items: center; float: left; margin: -.4rem 0 .6rem; padding: .35rem .85rem;
+  font-weight: 700; font-size: .82rem; text-decoration: none; color: hsl(var(--ink)); border: 2px solid hsl(var(--ink));
+  border-radius: 999px; background: hsl(var(--card)); box-shadow: 2px 2px 0 hsl(var(--ink)); transition: transform .15s, box-shadow .15s; }
+.cq-back-link:hover { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 hsl(var(--ink)); }
+/* "played N times" popularity badge */
+.cq-plays-badge { display: inline-flex; align-items: center; gap: .3rem; clear: both; margin: .2rem auto 1.4rem;
+  padding: .35rem .9rem; font-weight: 800; font-size: .85rem; border-radius: 999px;
+  border: 2px solid hsl(var(--ink)); background: hsl(var(--primary) / .12); color: hsl(var(--ink)); box-shadow: 2px 2px 0 hsl(var(--ink)); }
+.cq-stage { margin-top: 1.6rem; clear: both; }
 .cq-progress-bar { height: .8rem; border-radius: 999px; background: hsl(var(--muted)); border: 2px solid hsl(var(--ink)); overflow: hidden; max-width: 26rem; margin: 0 auto 1rem; }
 .cq-progress-fill { height: 100%; background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary))); transition: width .35s cubic-bezier(.4,0,.2,1); }
 .cq-progress { text-align: center; font-size: .85rem; font-weight: 800; color: hsl(var(--primary)); margin-bottom: 1rem; }

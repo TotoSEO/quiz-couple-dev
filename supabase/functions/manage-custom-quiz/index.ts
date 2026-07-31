@@ -94,13 +94,34 @@ function sanitizeText(v: unknown, max: number): string {
     .slice(0, max);
 }
 
-function randomShareId(): string {
+function randomToken(n: number): string {
   const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789';
-  const bytes = new Uint8Array(22);
+  const bytes = new Uint8Array(n);
   crypto.getRandomValues(bytes);
   let out = '';
   for (const b of bytes) out += alphabet[b % alphabet.length];
   return out;
+}
+
+// Turn a title into a URL slug (accents stripped, a-z0-9 only).
+function slugify(s: string): string {
+  return s
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 60)
+    .replace(/-+$/g, '');
+}
+
+// Shareable id = readable title slug + a random token.
+// The token keeps it unique AND unguessable (important for private quizzes),
+// while the slug makes the shared URL reflect the quiz title.
+function makeShareId(title: string): string {
+  const slug = slugify(title);
+  const token = randomToken(10);
+  return slug ? slug + '-' + token : token;
 }
 
 // Validate + normalize the questions payload for a given quiz type.
@@ -215,7 +236,7 @@ Deno.serve(async (req) => {
       let shareId = '';
       let inserted = null;
       for (let attempt = 0; attempt < 4; attempt++) {
-        shareId = randomShareId();
+        shareId = makeShareId(title);
         const { data, error: insErr } = await supabase
           .from('custom_quizzes')
           .insert({
