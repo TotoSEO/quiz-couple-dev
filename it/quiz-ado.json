@@ -1,6 +1,6 @@
 {
   "hero": {
-    "badge": "Quiz coppia adolescenti 🎮",
+    "badge": "Quiz di coppia adolescenti 🎮",
     "title": "Quiz di coppia per adolescenti",
     "description": "State insieme da qualche settimana, qualche mese, forse di più. E inevitabilmente arriva la domanda: è una cosa seria o solo una bella parentesi? Questo quiz non risolverà tutto, ma farà le domande giuste.",
     "feat1": "In coppia, a distanza",
@@ -33,7 +33,7 @@
     "waitingDesc": "Condividi questo codice con il/la tuo/a partner:",
     "shareCode": "Codice da condividere",
     "sharePage": "Condividi la pagina",
-    "sharePageTitle": "Quiz coppia adolescenti",
+    "sharePageTitle": "Quiz di coppia adolescenti",
     "sharePageText": "Unisciti al mio quiz di coppia! Il mio codice: {{code}}",
     "copied": "Copiato!",
     "waitingHint": "La partita inizierà automaticamente quando il/la tuo/a partner si unisce.",
@@ -453,7 +453,7 @@
     "scoreExplanation": "Più il punteggio è alto, più la vostra relazione mostra segni di solidità, comunicazione e complicità. Un punteggio basso non vuol dire che è finita, è un invito a parlarne.",
     "showAnswers": "Vedi tutte le risposte",
     "shareResult": "Condividete il vostro risultato!",
-    "shareTitle": "Quiz coppia adolescenti: {{score}}% di compatibilità!",
+    "shareTitle": "Quiz di coppia adolescenti: {{score}}% di compatibilità!",
     "shareText": "{{name1}} e {{name2}} hanno ottenuto {{score}}% al quiz di coppia adolescenti!",
     "playAgain": "Gioca ancora con nuove domande",
     "r1": {

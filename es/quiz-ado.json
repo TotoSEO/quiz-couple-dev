@@ -33,7 +33,7 @@
     "waitingDesc": "Comparte este código con tu pareja para que se una:",
     "shareCode": "Código para compartir",
     "sharePage": "Compartir la página",
-    "sharePageTitle": "Quiz pareja adolescentes",
+    "sharePageTitle": "Quiz de pareja adolescentes",
     "sharePageText": "¡Únete a mi quiz de pareja! Mi código: {{code}}",
     "copied": "¡Copiado!",
     "waitingHint": "La partida comenzará automáticamente cuando tu pareja se una.",
@@ -453,7 +453,7 @@
     "scoreExplanation": "Cuanto más alta sea la puntuación, más señales de solidez, comunicación y complicidad muestra tu relación. Una puntuación baja no significa que se acabó, es una invitación a hablar.",
     "showAnswers": "Ver todas las respuestas",
     "shareResult": "¡Comparte tu resultado!",
-    "shareTitle": "Quiz pareja adolescentes: ¡{{score}}% de compatibilidad!",
+    "shareTitle": "Quiz de pareja adolescentes: ¡{{score}}% de compatibilidad!",
     "shareText": "{{name1}} y {{name2}} obtuvieron {{score}}% en el quiz de pareja adolescente.",
     "playAgain": "Jugar de nuevo con otras preguntas",
     "r1": {

@@ -1,26 +1,26 @@
 {
   "hero": {
     "badge": "Gratuit • Sans inscription • 5 min",
-    "title": "Test couple : évaluez la solidité de votre relation",
+    "title": "Test de couple : évaluez la solidité de votre relation",
     "description": "20 questions pour découvrir votre niveau de compatibilité. Jouez à tour de rôle et voyez si vous êtes vraiment sur la même longueur d'onde !",
     "duration": "5 minutes",
     "players": "2 joueurs",
     "questions": "20 questions",
     "titleHighlight": "votre relation",
-    "intro1": "Vous vous demandez <strong>où en est votre couple</strong> ? Ce test couple gratuit vous permet de faire le point ensemble, sans tabou. En 20 questions, découvrez vos points forts, vos différences, et les sujets qui méritent votre attention.",
+    "intro1": "Vous vous demandez <strong>où en est votre couple</strong> ? Ce test de couple gratuit vous permet de faire le point ensemble, sans tabou. En 20 questions, découvrez vos points forts, vos différences, et les sujets qui méritent votre attention.",
     "intro2": "Que vous soyez ensemble depuis quelques mois ou depuis des années, un <strong>test de couple</strong> est un excellent moyen de prendre du recul et d'ouvrir le dialogue sur des sujets essentiels."
   },
   "section1": {
-    "title": "Qu'est-ce qu'un test couple et à quoi ça sert ?",
-    "p1": "Un <strong>test couple</strong> est un outil d'évaluation conçu pour mesurer la compatibilité et l'harmonie entre deux partenaires. Contrairement à une simple discussion, il structure les échanges autour de thématiques clés : la communication, la confiance, les valeurs, les projets de vie et l'intimité.",
+    "title": "Qu'est-ce qu'un test de couple et à quoi ça sert ?",
+    "p1": "Un <strong>test de couple</strong> est un outil d'évaluation conçu pour mesurer la compatibilité et l'harmonie entre deux partenaires. Contrairement à une simple discussion, il structure les échanges autour de thématiques clés : la communication, la confiance, les valeurs, les projets de vie et l'intimité.",
     "p2": "L'objectif n'est pas de donner un verdict définitif, mais d'offrir un <strong>miroir objectif de votre relation</strong>. Le score obtenu met en lumière vos forces et identifie les domaines où un effort conjoint pourrait renforcer votre lien.",
-    "p3": "Notre test couple s'appuie sur des <strong>questions concrètes du quotidien</strong>, pas sur des concepts abstraits. C'est ce qui le rend pertinent et accessible, que vous soyez en début de relation ou ensemble depuis des années."
+    "p3": "Notre test de couple s'appuie sur des <strong>questions concrètes du quotidien</strong>, pas sur des concepts abstraits. C'est ce qui le rend pertinent et accessible, que vous soyez en début de relation ou ensemble depuis des années."
   },
   "section2": {
     "title": "Les 5 piliers d'un couple solide",
-    "intro": "Un <strong>test couple</strong> efficace évalue plusieurs dimensions fondamentales. Voici les piliers sur lesquels repose toute relation durable :",
+    "intro": "Un <strong>test de couple</strong> efficace évalue plusieurs dimensions fondamentales. Voici les piliers sur lesquels repose toute relation durable :",
     "pillar1Title": "La communication",
-    "pillar1Text": "Savoir <strong>écouter</strong> et s'exprimer clairement est la base de tout couple sain. Sans communication, les frustrations s'accumulent silencieusement. Découvrez aussi notre <a href=\"/questions-couple/\">générateur de questions couple</a> pour approfondir vos échanges.",
+    "pillar1Text": "Savoir <strong>écouter</strong> et s'exprimer clairement est la base de tout couple sain. Sans communication, les frustrations s'accumulent silencieusement. Découvrez aussi notre <a href=\"/questions-couple/\">générateur de questions de couple</a> pour approfondir vos échanges.",
     "pillar2Title": "La confiance mutuelle",
     "pillar2Text": "La confiance ne se décrète pas, elle se construit au quotidien. Un couple où chacun se sent <strong>en sécurité émotionnelle</strong> est un couple qui dure.",
     "pillar3Title": "Le respect des différences",
@@ -31,7 +31,7 @@
     "pillar5Text": "L'intimité physique et émotionnelle crée un lien unique. La complicité, les rires, les petits rituels, tout cela nourrit la relation au quotidien."
   },
   "section3": {
-    "title": "Comment interpréter le résultat de votre test couple",
+    "title": "Comment interpréter le résultat de votre test de couple",
     "p1": "Chaque partenaire répond de son côté aux mêmes questions. Chaque réponse rapporte des points selon ce qu'elle révèle de la santé de votre relation (communication, confiance, projets communs...). On obtient ainsi un <strong>score individuel pour chacun</strong> et un <strong>score global de couple</strong> en pourcentage. Attention : un score élevé ne garantit pas une relation parfaite, et un score bas ne veut pas dire que votre couple est en danger, c'est avant tout une base de discussion.",
     "sub1Title": "80-100% : Grande compatibilité",
     "sub1P1": "Vous êtes très alignés dans vos réponses. Cela témoigne d'une <strong>bonne compréhension mutuelle</strong> et de valeurs proches. Continuez à entretenir cette connexion !",
@@ -44,8 +44,8 @@
     "quote": "Le score n'est qu'un point de départ. L'essentiel est ce que vous en faites ensemble."
   },
   "section4": {
-    "title": "Les erreurs à éviter quand on fait un test couple",
-    "p1": "Pour que votre <strong>test couple</strong> soit vraiment utile, voici quelques pièges courants :",
+    "title": "Les erreurs à éviter quand on fait un test de couple",
+    "p1": "Pour que votre <strong>test de couple</strong> soit vraiment utile, voici quelques pièges courants :",
     "sub1Title": "Ne pas répondre honnêtement",
     "sub1P1": "Répondre ce que l'autre veut entendre fausse complètement le résultat. Le but est de révéler votre pensée réelle, pas de faire plaisir. La <strong>sincérité</strong> est la clé d'un test pertinent.",
     "sub2Title": "Prendre le score trop au sérieux",
@@ -55,8 +55,8 @@
     "tip": "💡 <strong>Astuce :</strong> Refaites le test dans quelques mois pour mesurer votre évolution. Un couple qui progresse ensemble est un couple qui dure."
   },
   "section5": {
-    "title": "Quand faut-il faire un test couple ?",
-    "p1": "Il n'y a pas de moment parfait, mais certaines situations rendent un <strong>test couple</strong> particulièrement utile :",
+    "title": "Quand faut-il faire un test de couple ?",
+    "p1": "Il n'y a pas de moment parfait, mais certaines situations rendent un <strong>test de couple</strong> particulièrement utile :",
     "p2": "<strong>En début de relation :</strong> pour vérifier que vous êtes alignés sur les sujets importants avant de vous engager davantage.",
     "p3": "<strong>Après une période difficile :</strong> une dispute, un éloignement, une routine installée… Le test aide à faire le point sans jugement.",
     "p4": "<strong>Avant une décision importante :</strong> emménager ensemble, se marier, avoir un enfant. Testez votre alignement avec notre <a href=\"/test-couple-mariage/\">test compatibilité mariage</a>.",
@@ -64,7 +64,7 @@
   },
   "section6": {
     "title": "10 signes que votre couple est sur la bonne voie",
-    "p1": "Au-delà du score du <strong>test couple</strong>, voici les indicateurs concrets d'une relation saine :",
+    "p1": "Au-delà du score du <strong>test de couple</strong>, voici les indicateurs concrets d'une relation saine :",
     "sub1Title": "Vous communiquez ouvertement",
     "sub1P1": "Vous pouvez aborder n'importe quel sujet sans crainte de jugement. Les désaccords se règlent par la <strong>discussion, pas par le silence</strong>.",
     "sub2Title": "Vous vous soutenez mutuellement",
@@ -72,13 +72,13 @@
     "sub3Title": "Vous gardez votre individualité",
     "sub3P1": "Chacun a ses propres amis, passions et moments de solitude. L'<strong>indépendance dans l'interdépendance</strong> est une force.",
     "sub4Title": "Vous riez ensemble",
-    "sub4P1": "L'humour et la complicité sont des ciments puissants. Testez-le avec notre <a href=\"/quiz-couple-marrant/\">quiz couple marrant</a> !",
+    "sub4P1": "L'humour et la complicité sont des ciments puissants. Testez-le avec notre <a href=\"/quiz-couple-marrant/\">quiz de couple marrant</a> !",
     "sub5Title": "Vous avez des projets communs",
     "sub5P1": "Vous vous projetez dans l'avenir ensemble, que ce soit un week-end, un déménagement ou un projet de vie."
   },
   "section7": {
     "title": "Comment améliorer votre score de couple",
-    "p1": "Si votre <strong>test couple</strong> révèle des points d'amélioration, voici des pistes concrètes :",
+    "p1": "Si votre <strong>test de couple</strong> révèle des points d'amélioration, voici des pistes concrètes :",
     "pillar1Title": "Instaurez un temps d'échange hebdomadaire",
     "pillar1Text": "Réservez 30 minutes par semaine pour un <strong>check-in émotionnel</strong>. Parlez de vos ressentis, pas seulement de la logistique du quotidien. Notre <a href=\"/questions-couple/\">générateur de questions</a> peut vous y aider.",
     "pillar2Title": "Pratiquez l'écoute active",
@@ -90,28 +90,28 @@
   },
   "section8": {
     "title": "Nos autres tests et quiz pour votre couple",
-    "p1": "Le <strong>test couple</strong> n'est que le début ! Explorez d'autres dimensions de votre relation :",
-    "pillar1Title": "Test couple toxique",
+    "p1": "Le <strong>test de couple</strong> n'est que le début ! Explorez d'autres dimensions de votre relation :",
+    "pillar1Title": "Test de couple toxique",
     "pillar1Text": "Votre relation est-elle saine ? <a href=\"/test-couple-toxique/\">Identifiez les signaux d'alerte</a> d'une dynamique toxique.",
     "pillar2Title": "Quiz amoureux",
     "pillar2Text": "Testez vos connaissances mutuelles avec notre <a href=\"/quiz-amoureux/\">quiz amoureux</a> : vous connaissez-vous vraiment ?",
-    "pillar3Title": "Quiz couple coquin",
+    "pillar3Title": "Quiz de couple coquin",
     "pillar3Text": "Pimentez votre relation avec notre <a href=\"/quiz-couple-coquin/\">quiz coquin</a> : un moment de complicité garanti.",
     "pillar4Title": "Test distance",
     "pillar4Text": "En relation à distance ? <a href=\"/quiz-couple-distance/\">Testez la solidité de votre lien</a> malgré les kilomètres.",
     "pillar5Title": "Qui connaît mieux l'autre ?",
-    "pillar5Text": "Le classique des quiz couple ! <a href=\"/quiz-qui-connait-mieux-partenaire/\">Qui de vous deux connaît mieux l'autre</a> ?"
+    "pillar5Text": "Le classique des quiz de couple ! <a href=\"/quiz-qui-connait-mieux-partenaire/\">Qui de vous deux connaît mieux l'autre</a> ?"
   },
   "section9": {
     "title": "Ce que les études disent sur les couples heureux",
     "p1": "Les recherches en psychologie du couple montrent que les <strong>couples épanouis</strong> partagent certaines habitudes. Le célèbre chercheur John Gottman a identifié que les couples stables ont un ratio de <strong>5 interactions positives pour 1 négative</strong>.",
     "p2": "Autre constat : ce n'est pas l'absence de conflits qui fait un bon couple, mais la <strong>manière de les gérer</strong>. Les couples qui se parlent avec respect, même pendant une dispute, ont un taux de satisfaction bien plus élevé.",
-    "p3": "Notre <strong>test couple</strong> s'inspire de ces recherches en évaluant des domaines concrets de votre vie à deux. Chaque question a été pensée pour révéler non pas « qui a raison », mais <strong>comment vous fonctionnez ensemble</strong>.",
+    "p3": "Notre <strong>test de couple</strong> s'inspire de ces recherches en évaluant des domaines concrets de votre vie à deux. Chaque question a été pensée pour révéler non pas « qui a raison », mais <strong>comment vous fonctionnez ensemble</strong>.",
     "quote": "Un couple heureux n'est pas un couple sans problèmes. C'est un couple qui sait les traverser ensemble."
   },
   "seo": {
-    "whyTitle": "Pourquoi faire un test couple en ligne ?",
-    "whySubtitle": "Un test couple est bien plus qu'un jeu : c'est un moment de vérité partagé qui peut transformer votre relation.",
+    "whyTitle": "Pourquoi faire un test de couple en ligne ?",
+    "whySubtitle": "Un test de couple est bien plus qu'un jeu : c'est un moment de vérité partagé qui peut transformer votre relation.",
     "card1Title": "Renforcer votre connexion",
     "card1Text": "Découvrez vos <a href=\"/test-points-communs-couples/\">points communs</a> et comprenez mieux les différences qui font la richesse de votre relation.",
     "card2Title": "Ouvrir le dialogue",
@@ -120,23 +120,23 @@
     "card3Text": "Le score vous aide à voir où vous pouvez grandir ensemble et quels aspects de votre relation méritent attention.",
     "card4Title": "S'amuser ensemble",
     "card4Text": "Au-delà du score, c'est un moment ludique et complice à partager à deux.",
-    "howTitle": "Comment fonctionne notre test couple ?",
+    "howTitle": "Comment fonctionne notre test de couple ?",
     "step1Title": "Entrez vos prénoms",
     "step1Text": "Renseignez les prénoms et genres des deux joueurs",
     "step2Title": "Répondez à tour de rôle",
     "step2Text": "Pour chaque question, le joueur 1 répond puis le joueur 2",
     "step3Title": "Découvrez votre score",
     "step3Text": "Chaque réponse rapporte des points : vous obtenez un score chacun et un score global de couple.",
-    "faqTitle": "Questions fréquentes sur le test couple",
-    "faq1Q": "Le test couple est-il vraiment gratuit ?",
-    "faq1A": "Oui, notre test couple est 100% gratuit et sans inscription. Vous pouvez le refaire autant de fois que vous le souhaitez pour suivre l'évolution de votre relation.",
-    "faq2Q": "Combien de temps dure le test couple ?",
-    "faq2A": "Le test couple dure environ 5 minutes. Il comprend 20 questions auxquelles les deux partenaires répondent à tour de rôle.",
-    "faq3Q": "Comment le score du test couple est-il calculé ?",
+    "faqTitle": "Questions fréquentes sur le test de couple",
+    "faq1Q": "Le test de couple est-il vraiment gratuit ?",
+    "faq1A": "Oui, notre test de couple est 100% gratuit et sans inscription. Vous pouvez le refaire autant de fois que vous le souhaitez pour suivre l'évolution de votre relation.",
+    "faq2Q": "Combien de temps dure le test de couple ?",
+    "faq2A": "Le test de couple dure environ 5 minutes. Il comprend 20 questions auxquelles les deux partenaires répondent à tour de rôle.",
+    "faq3Q": "Comment le score du test de couple est-il calculé ?",
     "faq3A": "Le score repose sur un système de points : chaque réponse vaut un certain nombre de points selon ce qu'elle traduit de la relation. On additionne les points de chaque partenaire pour obtenir un score individuel, puis un score global de couple en pourcentage.",
     "faq4Q": "Mon score est bas, dois-je m'inquiéter ?",
     "faq4A": "Pas forcément ! Un score bas signifie simplement que vous avez des perspectives différentes sur certains sujets. C'est une invitation au dialogue, pas un verdict. Les couples les plus solides sont ceux qui savent discuter de leurs différences.",
-    "faq5Q": "Peut-on refaire le test couple plusieurs fois ?",
+    "faq5Q": "Peut-on refaire le test de couple plusieurs fois ?",
     "faq5A": "Absolument ! Nous vous encourageons même à refaire le test régulièrement (tous les 3-6 mois) pour voir comment votre relation évolue."
   }
 }

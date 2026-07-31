@@ -191,7 +191,7 @@
         "a": "Chaque joueur doit deviner les préférences de son partenaire à tour de rôle. Le partenaire valide ensuite si la réponse est correcte. À la fin des 20 questions, on compare les scores pour voir qui connait le mieux l'autre."
       },
       {
-        "q": "Combien de questions contient ce quiz couple ?",
+        "q": "Combien de questions contient ce quiz de couple ?",
         "a": "Chaque partie comporte 20 questions tirées aléatoirement parmi une base de 100 questions. Vous pouvez rejouer autant de fois que vous le souhaitez avec des questions différentes à chaque fois."
       },
       {

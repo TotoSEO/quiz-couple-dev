@@ -1,6 +1,6 @@
 {
   "hero": {
-    "badge": "Quiz couple ado 🎮",
+    "badge": "Quiz de couple ado 🎮",
     "title": "Quiz de couple pour les adolescents",
     "description": "Vous sortez ensemble depuis quelques semaines, quelques mois, peut-être plus. Et forcément, la question finit par arriver : est-ce que c'est du sérieux, ou juste une belle parenthèse ? Ce quiz ne va pas tout résoudre, mais il va poser les vraies questions.",
     "feat1": "À deux, à distance",
@@ -33,8 +33,8 @@
     "waitingDesc": "Partage ce code avec ton/ta partenaire pour qu'il/elle rejoigne la session :",
     "shareCode": "Code à partager",
     "sharePage": "Partager la page",
-    "sharePageTitle": "Quiz couple ado",
-    "sharePageText": "Rejoins-moi sur le quiz couple ado ! Mon code : {{code}}",
+    "sharePageTitle": "Quiz de couple ado",
+    "sharePageText": "Rejoins-moi sur le quiz de couple ado ! Mon code : {{code}}",
     "copied": "Copié !",
     "waitingHint": "La partie commencera automatiquement quand ton/ta partenaire rejoint.",
     "cancel": "Annuler",
@@ -453,8 +453,8 @@
     "scoreExplanation": "Plus le score est élevé, plus votre relation montre des signes de solidité, de communication et de complicité. Un score bas ne veut pas dire que c'est fini, c'est une invitation à en parler.",
     "showAnswers": "Voir toutes les réponses",
     "shareResult": "Partagez votre résultat !",
-    "shareTitle": "Quiz couple ado : {{score}}% de compatibilité !",
-    "shareText": "{{name1}} et {{name2}} ont obtenu {{score}}% au quiz couple ado !",
+    "shareTitle": "Quiz de couple ado : {{score}}% de compatibilité !",
+    "shareText": "{{name1}} et {{name2}} ont obtenu {{score}}% au quiz de couple ado !",
     "playAgain": "Rejouer avec d'autres questions",
     "r1": {
       "title": "Votre relation cherche encore son chemin",
@@ -522,7 +522,7 @@
     "s8P1": "Pas de fausse promesse ici : une rupture, ça fait mal, même quand c'est vous qui avez décidé de partir. Les <a href=\"/blog/les-phases-de-la-rupture-chez-l-homme/\" class=\"text-primary underline\">phases de la rupture</a> sont bien documentées, et les traverser prend du temps, une relation, ça prend de la place dans votre vie.",
     "s8P2": "Ce qui aide, concrètement : ne pas essayer d'effacer l'autre de votre vie trop brutalement, parler à vos amis, ne pas vous juger pour ce que vous ressentez, vous donner du temps, et recommencer à faire les trucs qui vous font du bien.",
     "faqTitle": "Questions fréquentes",
-    "faq1Q": "Comment fonctionne le quiz couple ado ?",
+    "faq1Q": "Comment fonctionne le quiz de couple ado ?",
     "faq1A": "Créez une session, partagez le code avec votre partenaire. Vous répondez chacun de votre côté à 20 questions tirées aléatoirement parmi 80. Les réponses ne sont révélées qu'à la fin pour un résultat sincère.",
     "faq2Q": "Est-ce que c'est vraiment gratuit et sans inscription ?",
     "faq2A": "Oui, totalement gratuit. Pas d'inscription, pas d'email, pas de compte à créer. Vous jouez directement depuis votre navigateur.",

@@ -48,7 +48,7 @@
   },
   "section5": {
     "title": "Les 4 piliers d'une dynamique toxique dans une relation",
-    "intro": "Au-delà du score de ce test couple toxique, il faut comprendre les mécanismes à l'œuvre. Si vous reconnaissez l'un de ces piliers, la relation est en danger.",
+    "intro": "Au-delà du score de ce test de couple toxique, il faut comprendre les mécanismes à l'œuvre. Si vous reconnaissez l'un de ces piliers, la relation est en danger.",
     "pillar1Title": "1. L'invalidation émotionnelle (Gaslighting)",
     "pillar1Text": "C'est nier votre réalité. Si vous dites <em>\"Tu m'as fait mal\"</em>, l'autre répond <em>\"Tu es trop susceptible\"</em>. À force, vous ne faites plus confiance à vos propres émotions. C'est une forme de violence psychologique silencieuse qui détruit l'identité.",
     "pillar2Title": "2. Le contrôle sous masque",
@@ -61,7 +61,7 @@
   "section6": {
     "title": "Mon test indique une toxicité élevée : que faire ?",
     "p1": "Dans un premier temps, sachez que ce test est purement à titre indicatif. Il n'est en rien un résultat exact et précis, et ne doit pas servir à remplacer l'avis d'un professionnel. Si vous estimez que votre relation amoureuse est vraiment toxique, voire dangereuse, contactez de vrais spécialistes.",
-    "p2": "Prendre conscience de la situation est l'étape la plus difficile, et vous venez de la franchir. Un score élevé au test couple toxique ne signifie pas que vous devez faire vos valises dans la minute (sauf en cas de danger physique immédiat), mais cela signifie que le \"statu quo\" n'est plus une option.",
+    "p2": "Prendre conscience de la situation est l'étape la plus difficile, et vous venez de la franchir. Un score élevé au test de couple toxique ne signifie pas que vous devez faire vos valises dans la minute (sauf en cas de danger physique immédiat), mais cela signifie que le \"statu quo\" n'est plus une option.",
     "dontTitle": "Ce qu'il ne faut PAS faire",
     "dont1Title": "Essayer de \"sauver\" l'autre",
     "dont1Text": "Vous ne pouvez pas être le thérapeute de votre partenaire. La toxicité est un mode de fonctionnement que seul l'individu concerné peut décider de changer.",
@@ -77,12 +77,12 @@
   },
   "section7": {
     "title": "Ce qu'il faut retenir : Faire confiance à votre intuition",
-    "p1": "Ce test couple toxique n'est pas un verdict de tribunal, c'est un miroir. Si vous avez répondu à ces questions avec le cœur serré, c'est que votre corps sait déjà ce que votre tête refuse d'admettre.",
+    "p1": "Ce test de couple toxique n'est pas un verdict de tribunal, c'est un miroir. Si vous avez répondu à ces questions avec le cœur serré, c'est que votre corps sait déjà ce que votre tête refuse d'admettre.",
     "p2": "Une relation amoureuse doit être un port d'attache, pas un champ de bataille. Vous avez le droit d'être respecté(e), entendu(e) et en sécurité émotionnelle. La confusion que vous ressentez n'est pas une preuve de votre faiblesse, c'est le signe que vous essayez de vous adapter à une situation anormale.",
     "p3": "Si ce résultat vous inquiète, ne restez pas seul(e) avec ce poids."
   },
   "jsonLd": {
-    "quizName": "Test Couple Toxique",
+    "quizName": "Test de couple Toxique",
     "quizDescription": "Évaluez si votre relation amoureuse présente des signes de toxicité avec ce questionnaire de 25 questions.",
     "faq1Q": "Quelle est la différence entre une relation difficile et une relation toxique ?",
     "faq1A": "Dans un couple sain qui traverse une crise, le conflit vise à résoudre un problème. Dans un couple toxique, le conflit est un mode de fonctionnement qui vise à prendre le pouvoir ou à se décharger sur l'autre.",
