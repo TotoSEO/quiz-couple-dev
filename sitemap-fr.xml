@@ -359,6 +359,18 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/creation-quiz-personnalise/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/creation-quiz-personnalise/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/create-your-own-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/crear-tu-propio-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/eigenes-quiz-erstellen/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/crea-il-tuo-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/creation-quiz-personnalise/"/>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/blog/les-phases-de-la-rupture-chez-l-homme/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/les-phases-de-la-rupture-chez-l-homme/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/breakup-stages-for-men/"/>
