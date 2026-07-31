@@ -122,6 +122,54 @@
     });
   }
 
+  // ── Note rapide 1 clic sur l'ecran de resultat → renvoie vers le bloc avis ──
+  // Le moteur affiche une carte .quiz-result-card a la fin de chaque quiz/test.
+  // On y greffe une rangee d'etoiles ; un clic pre-remplit la note du bloc avis
+  // existant et fait defiler jusqu'au formulaire (plus qu'a mettre son prenom).
+  function resultRating() {
+    var pqStars = document.querySelectorAll('#pq-reviews .pqx-input-stars [data-star]');
+    var formWrap = document.querySelector('#pq-reviews .pqx-form-wrap');
+    if (!pqStars.length || !formWrap) return;
+    function paint(row, n) {
+      var b = row.querySelectorAll('.qr-star');
+      for (var i = 0; i < b.length; i++) b[i].classList.toggle('on', (i + 1) <= n);
+    }
+    function inject(card) {
+      if (card.querySelector('.qr-rate')) return;
+      var box = document.createElement('div');
+      box.className = 'qr-rate';
+      var label = document.createElement('p');
+      label.className = 'qr-rate-label';
+      label.textContent = t.rate;
+      box.appendChild(label);
+      var row = document.createElement('div');
+      row.className = 'qr-rate-stars';
+      row.setAttribute('role', 'group');
+      for (var i = 1; i <= 5; i++) (function (n) {
+        var btn = document.createElement('button');
+        btn.type = 'button'; btn.className = 'qr-star'; btn.setAttribute('aria-label', String(n));
+        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
+        btn.addEventListener('mouseenter', function () { paint(row, n); });
+        btn.addEventListener('click', function () {
+          paint(row, n);
+          if (pqStars[n - 1]) pqStars[n - 1].click();
+          try { formWrap.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (e) {}
+        });
+        row.appendChild(btn);
+      })(i);
+      row.addEventListener('mouseleave', function () { paint(row, 0); });
+      box.appendChild(row);
+      card.appendChild(box);
+    }
+    var existing = document.querySelector('.quiz-result-card');
+    if (existing) inject(existing);
+    var obs = new MutationObserver(function () {
+      var card = document.querySelector('.quiz-result-card');
+      if (card && !card.querySelector('.qr-rate')) inject(card);
+    });
+    obs.observe(document.body, { childList: true, subtree: true });
+  }
+
   function boot() {
     document.body.classList.add('quiz-page');
     var pq = document.getElementById('pq-reviews');
@@ -130,6 +178,7 @@
     countBubble(slug);
     watch(slug);
     initReviews(slug);
+    resultRating();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);

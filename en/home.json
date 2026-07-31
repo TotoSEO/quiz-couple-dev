@@ -17,7 +17,8 @@
       "couplesLabel": "couples tested",
       "quizzes": "12 quizzes",
       "quizzesLabel": "quizzes available",
-      "testsLabel": "tests available"
+      "testsLabel": "tests available",
+      "totalLabel": "quizzes & tests taken"
     }
   },
   "quizSection": {
@@ -140,5 +141,12 @@
       "quizKnowledge": "Who knows the other best? Challenge each other!",
       "quizMost": "Vote to find out who is the most... among you!"
     }
+  },
+  "customQuizPromo": {
+    "badge": "New",
+    "title": "Create your own quiz",
+    "sub": "Make up your own questions, pick the format, and share your quiz with your friends or your partner in one link. 100% free, no sign-up.",
+    "cta": "Create my quiz",
+    "popularTitle": "The community's most-played quizzes"
   }
 }
