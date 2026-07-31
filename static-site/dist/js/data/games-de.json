@@ -250,5 +250,38 @@
     "seeResults": "Ergebnisse anzeigen",
     "correctAnswers": "richtige Antworten",
     "summary": "Zusammenfassung deiner Antworten"
+  },
+  "coupleLevel": {
+    "heading": "Das Niveau eurer Beziehung",
+    "bands": [
+      {
+        "min": 0,
+        "max": 39,
+        "tag": "Fragil",
+        "title": "Eine Beziehung zum Schützen",
+        "desc": "Mehrere Grundlagen (Kommunikation, Vertrauen, gemeinsame Pläne) brauchen Aufmerksamkeit. Nichts ist verloren: Genau das sind die Themen, die ihr gemeinsam ansprechen solltet, ohne euch zu verurteilen."
+      },
+      {
+        "min": 40,
+        "max": 59,
+        "tag": "Ausbaufähig",
+        "title": "Eine gute Basis zum Stärken",
+        "desc": "Eure Beziehung ruht auf echten Grundlagen, mit einigen Bereichen zum Ausbauen. Findet die Fragen, bei denen eure Antworten auseinandergehen, das sind eure nächsten gemeinsamen Baustellen."
+      },
+      {
+        "min": 60,
+        "max": 79,
+        "tag": "Solide",
+        "title": "Eine solide Beziehung",
+        "desc": "Ihr habt eine stabile, ausgewogene Beziehung aufgebaut. Pflegt weiter, was funktioniert, und sprecht an, was hakt, bevor es sich festsetzt."
+      },
+      {
+        "min": 80,
+        "max": 100,
+        "tag": "Sehr solide",
+        "title": "Eine sehr solide Beziehung",
+        "desc": "Kommunikation, Vertrauen und Verbundenheit sind da. Eine seltene und wertvolle Basis: Pflegt sie, sie trägt euch weit."
+      }
+    ]
   }
 }

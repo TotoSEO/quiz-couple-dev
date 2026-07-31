@@ -25,7 +25,7 @@
     'ado':            { prefix: 'ado', engine: 'solo', totalQ: 20, pool: 80, ascending: true, needsName: true },
 
     // ── Duo with gender (2 players + gender selection, answer matching) ──
-    'tester-couple':  { prefix: 'couple', engine: 'duo-match', totalQ: 20, pool: 30, needsGender: true },
+    'tester-couple':  { prefix: 'couple', engine: 'duo-match', totalQ: 20, pool: 30, needsGender: true, useScoring: true },
     'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 30, needsGender: true },
 
     // ── Healthy quiz (2 players + gender, weighted scoring) ──
@@ -317,7 +317,8 @@
       results: results,
       prefix: cfg.prefix,
       lang: lang,
-      needsGender: cfg.needsGender || false
+      needsGender: cfg.needsGender || false,
+      useScoring: cfg.useScoring || false
     });
   }
 
