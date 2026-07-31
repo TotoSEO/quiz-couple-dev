@@ -3757,22 +3757,20 @@ h1, h2, h3, h4, h5, h6,
 
 /* ── Bulle "realise X fois" sous le fil d'Ariane ── */
 .quiz-count-bubble {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  margin: 0.25rem auto 0.5rem; max-width: max-content;
-  padding: 0.45rem 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  width: max-content; max-width: 100%;
+  margin: 1rem auto 0.25rem 0; /* own line under the intro, left-aligned */
+  padding: 0.5rem 1.05rem;
   border-radius: 999px;
   font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700;
   color: hsl(var(--primary));
-  background: hsl(var(--primary) / 0.08);
-  border: 1px solid hsl(var(--primary) / 0.22);
+  background: hsl(var(--primary) / 0.1);
+  border: 2px solid hsl(var(--primary) / 0.28);
   box-shadow: 0 4px 14px -8px hsl(var(--primary) / 0.5);
 }
 .quiz-count-bubble svg { width: 15px; height: 15px; }
 .quiz-count-bubble .qcb-dot { width: 7px; height: 7px; border-radius: 50%; background: hsl(var(--mint)); box-shadow: 0 0 0 0 hsl(var(--mint) / 0.6); animation: qcbPulse 2.4s infinite; }
 @keyframes qcbPulse { 0% { box-shadow: 0 0 0 0 hsl(var(--mint) / 0.55); } 70% { box-shadow: 0 0 0 7px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
-.breadcrumb + .quiz-count-bubble { display: inline-flex; }
-/* la bulle est centree comme le fil d'Ariane */
-.mx-auto.max-w-3xl > .quiz-count-bubble, .quiz-page-hero .quiz-count-bubble { display: flex; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -4164,3 +4162,66 @@ h1, h2, h3, h4, h5, h6,
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .cq-public-meta { font-size: .76rem; color: hsl(var(--muted-foreground)); margin-top: auto; font-weight: 700; }
 .cq-loading { text-align: center; color: hsl(var(--muted-foreground)); padding: 2.5rem; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Cookie banner (redesign) + review CTA emphasis + quiz-option punch
+   ═══════════════════════════════════════════════════════════════════ */
+.cookie-banner { position: fixed; bottom: 1rem; left: 1rem; right: 1rem; z-index: 60; display: flex; justify-content: center;
+  animation: slideInFromBottom .5s ease-out; }
+.cookie-card { display: flex; align-items: center; gap: 1rem; width: 100%; max-width: 44rem;
+  padding: 1rem 1.35rem; border-radius: 1.5rem; background: hsl(var(--card));
+  border: 2px solid hsl(var(--primary) / .35);
+  box-shadow: 0 16px 46px -14px hsl(var(--primary) / .5), 0 4px 14px rgba(0,0,0,.14); }
+.cookie-emoji { font-size: 2rem; flex-shrink: 0; line-height: 1; }
+.cookie-text { flex: 1; margin: 0; font-size: .9rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+.cookie-link { color: hsl(var(--primary)); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.cookie-actions { display: flex; align-items: center; gap: .85rem; flex-shrink: 0; }
+.cookie-refuse { background: none; border: none; color: hsl(var(--muted-foreground) / .8); font-size: .8rem; text-decoration: underline;
+  text-underline-offset: 2px; cursor: pointer; transition: color .2s; }
+.cookie-refuse:hover { color: hsl(var(--foreground)); }
+.cookie-accept { background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary))); color: #fff; border: none;
+  font-weight: 800; font-size: .92rem; padding: .75rem 1.6rem; border-radius: 999px; cursor: pointer; white-space: nowrap;
+  box-shadow: 0 10px 22px -6px hsl(var(--primary) / .6); transition: transform .15s, box-shadow .15s; }
+.cookie-accept:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -6px hsl(var(--primary) / .7); }
+@media (max-width: 640px) {
+  .cookie-card { flex-wrap: wrap; gap: .75rem; padding: 1rem; }
+  .cookie-emoji { font-size: 1.6rem; }
+  .cookie-text { flex: 1 1 calc(100% - 2.5rem); }
+  .cookie-actions { width: 100%; justify-content: space-between; }
+  .cookie-accept { flex: 1; text-align: center; }
+}
+
+/* ── Review CTA: make it impossible to miss ── */
+.pqx-form-wrap {
+  border: 2.5px solid hsl(var(--primary) / .55) !important;
+  border-radius: 1.4rem !important;
+  animation: pqxAttention 2.6s ease-in-out infinite;
+}
+@keyframes pqxAttention {
+  0%, 100% { box-shadow: 0 12px 30px -16px hsl(var(--primary) / .45); border-color: hsl(var(--primary) / .5); }
+  50% { box-shadow: 0 16px 40px -12px hsl(var(--primary) / .7); border-color: hsl(var(--primary) / .95); }
+}
+.pqx-rate-prompt {
+  font-size: 1.3rem !important; font-weight: 800 !important; color: hsl(var(--primary));
+  display: flex; align-items: center; justify-content: center; gap: .4rem;
+}
+.pqx-rate-prompt::after { content: '👇'; font-size: 1.15rem; animation: pqxBounce 1.4s ease-in-out infinite; }
+@keyframes pqxBounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+/* Idle shimmer on the empty stars to invite the click */
+.pqx-input-stars:not(:hover) .pqx-star-btn:not(.on) svg { animation: pqxStarInvite 2.8s ease-in-out infinite; }
+.pqx-input-stars .pqx-star-btn:nth-child(2) svg { animation-delay: .1s; }
+.pqx-input-stars .pqx-star-btn:nth-child(3) svg { animation-delay: .2s; }
+.pqx-input-stars .pqx-star-btn:nth-child(4) svg { animation-delay: .3s; }
+.pqx-input-stars .pqx-star-btn:nth-child(5) svg { animation-delay: .4s; }
+@keyframes pqxStarInvite { 0%,100% { transform: none; } 50% { transform: scale(1.12) rotate(-4deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .pqx-form-wrap, .pqx-rate-prompt::after, .pqx-input-stars .pqx-star-btn svg { animation: none !important; }
+}
+
+/* ── Quiz engine options: a bit more punch (thicker, bolder, springy) ── */
+.quiz-engine .quiz-option, #quiz-engine .quiz-option { border-width: 2.5px; font-weight: 700; }
+.quiz-engine .quiz-option:hover, #quiz-engine .quiz-option:hover {
+  transform: translateY(-3px) scale(1.005);
+  box-shadow: 0 14px 30px -12px hsl(var(--primary) / .4), 0 3px 10px rgba(0,0,0,.05);
+}
+.quiz-engine .quiz-option.selected, #quiz-engine .quiz-option.selected { border-width: 2.5px; }
