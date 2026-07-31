@@ -12,12 +12,13 @@
   var I = window.CQ_I18N || {};
   function T(k, f) { return (I[k] != null && I[k] !== '') ? I[k] : f; }
 
-  var LIMITS = { questions: 30, answers: 4, minAnswers: 2, title: 100, desc: 300, q: 160, a: 100, pts: 100 };
+  var LIMITS = { questions: 30, answers: 4, minAnswers: 2, title: 100, desc: 300, q: 160, a: 100, pts: 100, exp: 200 };
 
   var PATTERNS = [
     { id: 'points', icon: '🎯', title: T('pat_points_t', 'Quiz à points'), desc: T('pat_points_d', 'Chaque question a une bonne réponse et rapporte des points. Score final à la clé.') },
     { id: 'truefalse', icon: '✅', title: T('pat_tf_t', 'Vrai ou Faux'), desc: T('pat_tf_d', 'Des affirmations auxquelles on répond par Vrai ou Faux. On compte les bonnes réponses.') },
-    { id: 'fun', icon: '🎉', title: T('pat_fun_t', 'Fun / sans score'), desc: T('pat_fun_d', 'Juste pour s\'amuser et discuter : pas de bonne réponse, pas de score.') }
+    { id: 'fun', icon: '🎉', title: T('pat_fun_t', 'Fun / sans score'), desc: T('pat_fun_d', 'Juste pour s\'amuser et discuter : pas de bonne réponse, pas de score.') },
+    { id: 'wyr', icon: '🤔', title: T('pat_wyr_t', 'Tu préfères…'), desc: T('pat_wyr_d', 'Deux choix par question, sans bonne réponse. Pour se découvrir.') }
   ];
 
   // ── DOM helper ──────────────────────────────────────────────────────
@@ -63,7 +64,8 @@
   // ── State (builder) ─────────────────────────────────────────────────
   var state = null;
   function blankQuestion(type) {
-    if (type === 'truefalse') return { q: '', c: true };
+    if (type === 'truefalse') return { q: '', c: true, exp: '' };
+    if (type === 'wyr') return { q: '', a: [{ t: '' }, { t: '' }] };
     return { q: '', a: [{ t: '', c: false }, { t: '', c: false }], pts: 1 };
   }
   function newState(type) {
@@ -249,6 +251,13 @@
       });
       box.appendChild(el('div', { class: 'cq-tf-label', text: T('tf_correct', 'Bonne réponse :') }));
       box.appendChild(tfWrap);
+      // Optional explanation, shown to the player after they answer
+      var expIn = el('textarea', { class: 'cq-input cq-textarea', rows: 2, maxlength: LIMITS.exp, placeholder: T('ph_explanation', 'Explication (facultatif) — affichée après la réponse') });
+      expIn.value = q.exp || '';
+      var expCount = counter(expIn, q.exp || '', LIMITS.exp);
+      expIn.addEventListener('input', function () { q.exp = expIn.value; });
+      bindCount(expIn, LIMITS.exp, expCount);
+      box.appendChild(el('div', { class: 'cq-field cq-exp-field' }, [el('span', { class: 'cq-label', text: T('label_explanation', 'Explication') }), expIn, expCount]));
       return box;
     }
 
@@ -264,7 +273,7 @@
         ansWrap.appendChild(renderAnswerEditor(q, a, ansWrap));
         refreshAnswers(ansWrap);
       } });
-    box.appendChild(addA);
+    if (state.type !== 'wyr') box.appendChild(addA); // "tu préfères" is fixed at 2 choices
 
     if (state.type === 'points') {
       var ptsIn = el('input', { class: 'cq-input cq-pts', type: 'number', min: 1, max: LIMITS.pts, value: q.pts || 1 });
@@ -400,33 +409,61 @@
     var stage = el('div', { class: 'cq-stage' });
     wrap.appendChild(stage);
 
-    function renderQ() {
-      stage.innerHTML = '';
+    function progress() {
       var total = quiz.questions.length;
       var pct = Math.round((cur / total) * 100);
       stage.appendChild(el('div', { class: 'cq-progress-bar' }, [el('div', { class: 'cq-progress-fill', style: 'width:' + pct + '%' })]));
       stage.appendChild(el('div', { class: 'cq-progress', text: (cur + 1) + ' / ' + total }));
+    }
+    function advance() { cur++; if (cur >= quiz.questions.length) showResult(); else renderQ(); }
+
+    function renderQ() {
+      stage.innerHTML = '';
+      progress();
       var q = quiz.questions[cur];
       stage.appendChild(el('h3', { class: 'cq-q-text', text: q.q }));
       var opts = el('div', { class: 'cq-opts' });
-      function choose(val) { answers[cur] = val; cur++; if (cur >= total) showResult(); else renderQ(); }
       if (quiz.quiz_type === 'truefalse') {
         [[true, T('true', 'Vrai')], [false, T('false', 'Faux')]].forEach(function (p) {
-          opts.appendChild(el('button', { class: 'cq-opt', type: 'button', text: p[1], onclick: function () { choose(p[0]); } }));
+          opts.appendChild(el('button', { class: 'cq-opt', type: 'button', text: p[1], onclick: function () { answers[cur] = p[0]; revealTf(q); } }));
         });
       } else {
         q.a.forEach(function (a, i) {
-          opts.appendChild(el('button', { class: 'cq-opt', type: 'button', text: a.t, onclick: function () { choose(i); } }));
+          opts.appendChild(el('button', { class: 'cq-opt', type: 'button', text: a.t, onclick: function () { answers[cur] = i; advance(); } }));
         });
       }
       stage.appendChild(opts);
     }
 
+    // True/false: reveal the correct answer + optional explanation before moving on
+    function revealTf(q) {
+      stage.innerHTML = '';
+      progress();
+      var isCorrect = (answers[cur] === q.c);
+      var last = (cur + 1) >= quiz.questions.length;
+      var panel = el('div', { class: 'cq-reveal ' + (isCorrect ? 'is-correct' : 'is-wrong') });
+      panel.appendChild(el('div', { class: 'cq-reveal-badge', text: isCorrect ? '✓' : '✗' }));
+      panel.appendChild(el('h3', { class: 'cq-q-text', text: q.q }));
+      panel.appendChild(el('p', { class: 'cq-reveal-verdict',
+        text: (isCorrect ? T('reveal_correct', 'Bonne réponse !') : T('reveal_wrong', 'Raté !')) + ' ' +
+              T('reveal_answer', 'La réponse était :') + ' ' + (q.c ? T('true', 'Vrai') : T('false', 'Faux')) }));
+      if (q.exp) {
+        panel.appendChild(el('div', { class: 'cq-reveal-exp' }, [
+          el('span', { class: 'cq-reveal-exp-label', text: T('reveal_why', 'Explication') }),
+          el('p', { text: q.exp })
+        ]));
+      }
+      panel.appendChild(el('button', { class: 'btn btn-cta cq-reveal-next', type: 'button',
+        text: last ? T('see_result', 'Voir le résultat') : T('next', 'Question suivante'), onclick: advance }));
+      stage.appendChild(panel);
+    }
+
     function showResult() {
       stage.innerHTML = '';
       var res = el('div', { class: 'cq-result' });
-      res.appendChild(el('div', { class: 'cq-trophy', text: quiz.quiz_type === 'fun' ? '🎉' : '🏆' }));
-      if (quiz.quiz_type === 'fun') {
+      var noScore = (quiz.quiz_type === 'fun' || quiz.quiz_type === 'wyr');
+      res.appendChild(el('div', { class: 'cq-trophy', text: noScore ? '🎉' : '🏆' }));
+      if (noScore) {
         res.appendChild(el('div', { class: 'cq-score-bubble' }, [el('span', { class: 'cq-score', text: '✓' })]));
         res.appendChild(el('h3', { class: 'cq-h2', text: T('fun_done', 'Terminé, merci d\'avoir joué !') }));
       } else {
@@ -450,7 +487,7 @@
 
   // ── PUBLIC LIST ─────────────────────────────────────────────────────
   function patternLabel(type) {
-    var m = { points: T('pat_points_t', 'Quiz à points'), truefalse: T('pat_tf_t', 'Vrai ou Faux'), fun: T('pat_fun_t', 'Fun') };
+    var m = { points: T('pat_points_t', 'Quiz à points'), truefalse: T('pat_tf_t', 'Vrai ou Faux'), fun: T('pat_fun_t', 'Fun'), wyr: T('pat_wyr_t', 'Tu préfères…') };
     return m[type] || type;
   }
   function renderPublicList() {

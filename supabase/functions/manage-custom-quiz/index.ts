@@ -15,10 +15,11 @@ const MAX_DESC = 300;
 const MAX_Q_LEN = 160;
 const MAX_A_LEN = 100;
 const MAX_PTS = 100;
+const MAX_EXP = 200;
 const RATE_LIMIT_PER_DAY = 15;
 const PRIVATE_TTL_DAYS = 7;
 const LIST_PAGE_SIZE = 24;
-const QUIZ_TYPES = ['points', 'truefalse', 'fun'];
+const QUIZ_TYPES = ['points', 'truefalse', 'fun', 'wyr'];
 
 function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), {
@@ -120,14 +121,18 @@ function validateQuestions(quizType: string, raw: unknown): { questions?: unknow
     if (quizType === 'truefalse') {
       const c = (item as any).c;
       if (typeof c !== 'boolean') return { error: 'invalid_truefalse' };
-      out.push({ q, c });
+      const exp = sanitizeText((item as any).exp, MAX_EXP);
+      if (exp) profanityTargets.push(exp);
+      out.push(exp ? { q, c, exp } : { q, c });
       continue;
     }
 
-    // points & fun: array of answers
+    // points / fun / wyr: array of answers
     const rawAnswers = (item as any).a;
     if (!Array.isArray(rawAnswers)) return { error: 'invalid_answers' };
-    if (rawAnswers.length < MIN_ANSWERS || rawAnswers.length > MAX_ANSWERS) {
+    if (quizType === 'wyr') {
+      if (rawAnswers.length !== 2) return { error: 'bad_answer_count' };
+    } else if (rawAnswers.length < MIN_ANSWERS || rawAnswers.length > MAX_ANSWERS) {
       return { error: 'bad_answer_count' };
     }
     const answers: unknown[] = [];
