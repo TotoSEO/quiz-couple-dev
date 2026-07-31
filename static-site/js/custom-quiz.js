@@ -356,7 +356,11 @@
     var wrap = el('div', { class: 'cq-block cq-created' });
     wrap.appendChild(el('div', { class: 'cq-created-icon', text: '🎉' }));
     wrap.appendChild(el('h2', { class: 'cq-h2', text: T('created_title', 'Votre quiz est prêt !') }));
-    wrap.appendChild(el('div', { class: 'cq-warning', html: T('created_warn', '<strong>Gardez ce lien précieusement !</strong> C\'est le seul moyen de retrouver et de partager votre quiz. Sans lui, il sera perdu.') }));
+    // The "keep this link, it's the only way back" warning only makes sense for
+    // PRIVATE quizzes. A public quiz stays online and is always in the list below.
+    if (!isPublic) {
+      wrap.appendChild(el('div', { class: 'cq-warning', html: T('created_warn', '<strong>Gardez ce lien précieusement !</strong> C\'est le seul moyen de retrouver et de partager votre quiz. Sans lui, il sera perdu.') }));
+    }
 
     var linkInput = el('input', { class: 'cq-input cq-link', type: 'text', readonly: 'readonly', value: url });
     var copyBtn = el('button', { class: 'btn btn-cta cq-copy', type: 'button', text: T('copy', 'Copier le lien') });
@@ -404,8 +408,10 @@
     var wrap = el('div', { class: 'cq-block cq-taker' });
     app.appendChild(wrap);
 
+    wrap.appendChild(el('a', { class: 'cq-back-link', href: PAGE_URL, text: T('back_to_quizzes', '← Tous les quiz') }));
     wrap.appendChild(el('h2', { class: 'cq-h2 cq-taker-title', text: quiz.title }));
     if (quiz.description) wrap.appendChild(el('p', { class: 'cq-sub', text: quiz.description }));
+    if (quiz.plays > 0) wrap.appendChild(el('div', { class: 'cq-plays-badge', text: '🔥 ' + T('played_n', 'Joué {n} fois').replace('{n}', quiz.plays) }));
     var stage = el('div', { class: 'cq-stage' });
     wrap.appendChild(stage);
 
@@ -506,7 +512,7 @@
           el('span', { class: 'cq-public-badge', text: patternLabel(qz.quiz_type) }),
           el('span', { class: 'cq-public-name', text: qz.title }),
           qz.description ? el('span', { class: 'cq-public-desc', text: qz.description }) : null,
-          el('span', { class: 'cq-public-meta', text: qz.question_count + ' ' + T('questions_short', 'questions') + ' · ' + (qz.plays || 0) + ' ' + T('plays_short', 'parties') })
+          el('span', { class: 'cq-public-meta', text: qz.question_count + ' ' + T('questions_short', 'questions') + ' · ' + T('played_n', 'Joué {n} fois').replace('{n}', (qz.plays || 0)) })
         ]));
       });
     }).catch(function () { grid.innerHTML = ''; grid.appendChild(el('p', { class: 'cq-muted', text: T('public_empty', 'Aucun quiz public pour le moment.') })); });
