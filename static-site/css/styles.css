@@ -1665,6 +1665,38 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .gender-btn { font-size: 1.1rem; padding: 0.45rem 0.3rem; }
 }
 
+/* ── Quiz ado : selection du mode de jeu (cartes encadrees, gamifiees) ── */
+.ado-mode-select { display: flex; flex-direction: column; gap: 1.75rem; padding: 0.4rem 0; text-align: center; }
+.ado-mode-head { display: flex; flex-direction: column; gap: 0.4rem; }
+.ado-mode-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.4rem, 3.5vw, 1.85rem); margin: 0; }
+.ado-mode-sub { color: hsl(var(--muted-foreground)); margin: 0; font-size: 0.98rem; }
+.ado-mode-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 34rem; margin: 0 auto; width: 100%; }
+@media (max-width: 480px) { .ado-mode-grid { grid-template-columns: 1fr; } }
+.ado-mode-card {
+  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+  padding: 1.65rem 1.1rem; cursor: pointer; text-align: center;
+  background: hsl(var(--card));
+  border: 2.5px solid hsl(var(--border));
+  border-radius: 1.25rem;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.ado-mode-card:hover, .ado-mode-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: hsl(var(--primary) / 0.55);
+  box-shadow: 0 16px 32px -18px hsl(var(--primary) / 0.6);
+  outline: none;
+}
+.ado-mode-icon {
+  width: 60px; height: 60px; border-radius: 18px; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: #fff; box-shadow: 0 10px 22px -8px hsl(var(--primary) / 0.55);
+}
+.ado-mode-card--alt .ado-mode-icon { background: linear-gradient(135deg, #f59e0b, #ec4899); box-shadow: 0 10px 22px -8px rgba(236,72,153,0.55); }
+.ado-mode-icon svg { width: 28px; height: 28px; }
+.ado-mode-name { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
+.ado-mode-desc { color: hsl(var(--muted-foreground)); font-size: 0.85rem; line-height: 1.4; }
+
 /* Gradient CTA button */
 .btn-gradient { background: linear-gradient(135deg, #ec4899, hsl(var(--secondary))) !important; color: #fff !important; border: none; }
 .btn-gradient:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(168, 85, 247, 0.35); }
@@ -1801,6 +1833,11 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .astro-hero-section .text-foreground { color: #fff; }
 .astro-hero-section .text-muted-foreground { color: hsl(280 20% 80%); }
+/* Fil d'Ariane lisible sur le hero sombre (sinon "Quiz Couple" en gris fonce illisible) */
+.astro-hero-section .breadcrumb ol { color: hsl(280 25% 82%); }
+.astro-hero-section .breadcrumb a { color: hsl(280 25% 82%); }
+.astro-hero-section .breadcrumb a:hover { color: #fff; }
+.astro-hero-section .breadcrumb-current { color: #fff; }
 .astro-hero-section .hero-badge {
   background: hsl(280 60% 70% / 0.15);
   border-color: hsl(280 60% 70% / 0.3);
@@ -2320,6 +2357,12 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* ── Related Tests Section, Complete Redesign ───────── */
 
+/* Separateur en vague (entre sections) : assez haut pour lire comme une vague,
+   pas comme une bande droite. */
+.wave-divider { width: 100%; overflow: hidden; line-height: 0; margin: -1px 0; }
+.wave-divider svg { display: block; width: 100%; height: 4.5rem; }
+@media (min-width: 768px) { .wave-divider svg { height: 7rem; } }
+
 .related-tests-section {
   padding: 3rem 0 4rem;
   background: linear-gradient(180deg, transparent, hsl(var(--muted) / 0.3));
@@ -2355,19 +2398,22 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 @media (min-width: 640px) { .related-articles-grid { grid-template-columns: repeat(2, 1fr); } }
 .related-article-card {
-  display: flex; align-items: center; gap: 0.875rem;
-  padding: 1rem 1.25rem; border-radius: 1rem;
-  border: 1px solid hsl(var(--border));
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1.05rem 1.2rem; border-radius: 1.15rem;
+  border: 2px solid hsl(var(--border));
   background: hsl(var(--card)); color: hsl(var(--foreground));
-  text-decoration: none; transition: all 0.2s;
+  text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .related-article-card:hover {
-  border-color: hsl(var(--secondary) / 0.4);
-  background: hsl(var(--secondary) / 0.04);
-  transform: translateY(-2px); box-shadow: 0 6px 16px hsl(var(--secondary) / 0.1);
+  border-color: hsl(var(--secondary) / 0.5);
+  transform: translateY(-3px); box-shadow: 0 14px 28px -16px hsl(var(--secondary) / 0.55);
 }
-.related-article-icon { font-size: 1.5rem; flex-shrink: 0; }
-.related-article-title { flex: 1; font-size: 0.9375rem; font-weight: 600; line-height: 1.35; }
+.related-article-icon {
+  width: 46px; height: 46px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; border-radius: 13px;
+  background: linear-gradient(135deg, hsl(var(--secondary) / 0.16), hsl(var(--primary) / 0.16));
+}
+.related-article-title { flex: 1; font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; line-height: 1.35; }
 .related-article-card:hover .related-article-title { color: hsl(var(--secondary)); }
 .related-article-card .related-test-arrow {
   width: 18px; height: 18px; color: hsl(var(--muted-foreground)); flex-shrink: 0;
@@ -2538,22 +2584,30 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .result-related-card {
   display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-  padding: 1.25rem 0.75rem; border-radius: 1rem;
-  border: 1px solid hsl(var(--border));
+  padding: 1.15rem 0.75rem; border-radius: 1rem;
+  border: 2px solid hsl(var(--border));
   background: hsl(var(--card)); text-decoration: none; color: hsl(var(--foreground));
-  transition: all 0.2s;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .result-related-card:hover {
-  border-color: hsl(var(--primary) / 0.4);
-  transform: translateY(-3px); box-shadow: 0 6px 16px hsl(var(--primary) / 0.1);
+  border-color: hsl(var(--primary) / 0.5);
+  transform: translateY(-3px); box-shadow: 0 12px 24px -14px hsl(var(--primary) / 0.5);
 }
-.result-related-emoji { font-size: 2rem; }
-.result-related-name { font-size: 0.8125rem; font-weight: 600; text-align: center; line-height: 1.3; }
+.result-related-emoji {
+  font-size: 1.7rem; width: 48px; height: 48px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; border-radius: 14px;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.1));
+}
+.result-related-name { font-family: var(--font-display); font-size: 0.86rem; font-weight: 700; text-align: center; line-height: 1.3; }
 .result-related-type {
-  font-size: 0.6875rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;
-  padding: 0.125rem 0.5rem; border-radius: 1rem;
-  background: hsl(var(--muted)); color: hsl(var(--muted-foreground));
+  font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 0.12rem 0.55rem; border-radius: 1rem;
+  background: hsl(var(--primary) / 0.1); color: hsl(var(--primary));
 }
+/* Dans la colonne droite du resultat : liste horizontale plus lisible */
+.qr-right .result-related-card { flex-direction: row; align-items: center; text-align: left; gap: 0.8rem; padding: 0.7rem 0.85rem; }
+.qr-right .result-related-emoji { width: 42px; height: 42px; font-size: 1.45rem; }
+.qr-right .result-related-name { flex: 1; text-align: left; }
 
 /* ── About page: Team photo ring ───────────────────────── */
 .team-photo-ring {

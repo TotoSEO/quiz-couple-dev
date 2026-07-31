@@ -207,67 +207,6 @@
 
 <%- include('../partials/wave-divider', { variant: 'background', direction: 'up' }) %>
 
-<!-- Reviews Section -->
-<section class="py-12 md:py-16 bg-muted/20" id="avis">
-  <div id="reviews-config" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>" class="hidden"></div>
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
-      <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-4">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-        <%= t('common:reviews.badge', 'Avis vérifiés') %>
-      </div>
-      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t('common:reviews.title', 'Ce que les couples') %> <span class="text-gradient"><%= t('common:reviews.titleHighlight', 'en pensent') %></span></h2>
-      <div class="flex items-center gap-3 justify-center mt-4">
-        <div id="reviews-stars-display" class="flex items-center gap-0.5">
-          <% for (var si = 0; si < 5; si++) { %>
-          <svg viewBox="0 0 24 24" class="w-5 h-5 star-filled"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <% } %>
-        </div>
-        <span class="text-2xl font-bold text-foreground" id="reviews-avg">-</span>
-        <span class="text-sm text-muted-foreground" id="reviews-count"></span>
-      </div>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
-      <div class="lg:col-span-2 order-1">
-        <div class="lg:sticky lg:top-24 glass-card rounded-2xl p-6" id="review-form-section">
-          <h3 class="text-lg font-bold mb-5 text-center"><%= t('common:reviews.leaveReview', 'Laissez votre avis') %></h3>
-          <form id="review-form" class="space-y-4">
-            <div>
-              <label class="block text-sm font-medium mb-1.5" for="review-name"><%= t('common:reviews.yourName', 'Votre prénom') %></label>
-              <input type="text" id="review-name" class="input w-full" placeholder="<%= t('common:reviews.namePlaceholder', 'Prénom ou pseudo') %>" maxlength="60" autocomplete="off">
-              <div class="flex justify-end mt-1"><span id="review-name-counter" class="text-xs text-muted-foreground">0/60</span></div>
-            </div>
-            <div>
-              <label class="block text-sm font-medium mb-1.5"><%= t('common:reviews.ratingLabel', 'Votre note') %></label>
-              <div class="flex gap-1" id="review-stars">
-                <% for (var s = 1; s <= 5; s++) { %>
-                <button type="button" data-star="<%= s %>" class="star-btn p-0.5 transition-transform hover:scale-110" aria-label="<%= s %> étoiles">
-                  <svg viewBox="0 0 24 24" class="w-7 h-7 star-empty"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </button>
-                <% } %>
-              </div>
-            </div>
-            <div>
-              <label class="block text-sm font-medium mb-1.5" for="review-comment"><%= t('common:reviews.commentLabel', 'Votre commentaire') %> <span class="text-muted-foreground font-normal">(<%= t('common:reviews.optional', 'optionnel') %>)</span></label>
-              <textarea id="review-comment" class="textarea w-full" rows="3" placeholder="<%= t('common:reviews.commentPlaceholder', 'Partagez votre expérience...') %>" maxlength="200"></textarea>
-              <div class="flex justify-end mt-1"><span id="review-comment-counter" class="text-xs text-muted-foreground">0/200</span></div>
-            </div>
-            <button type="submit" class="btn btn-cta w-full" id="review-submit">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-              <%= t('common:reviews.submit', 'Envoyer mon avis') %>
-            </button>
-            <p id="review-error" class="hidden text-sm text-destructive text-center"></p>
-          </form>
-        </div>
-      </div>
-      <div class="lg:col-span-3 order-2">
-        <div class="space-y-4 max-h-[500px] overflow-y-auto pr-2 scrollbar-thin" id="reviews-grid"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script src="/js/reviews.js" defer></script>
 <div id="route-slugs-data" data-route-slugs="<%- escapeHtml(JSON.stringify(routeSlugs)) %>" hidden></div>
 <script src="/js/quiz-engine-core.js" defer></script>
 <script>
