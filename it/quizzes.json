@@ -159,5 +159,11 @@
     "shortTitle": "Attività di coppia",
     "description": "Trova attività di coppia vicino a te. Strumento gratuito e geolocalizzato: filtra per budget, atmosfera e distanza per uscite a due indimenticabili.",
     "metaDescription": "Trova attività di coppia vicino a te. Strumento gratuito e geolocalizzato: filtra per budget, atmosfera e distanza per uscite a due indimenticabili."
+  },
+  "quizTentation": {
+    "title": "Quiz Temptation Island: sopravvivresti?",
+    "shortTitle": "Quiz Temptation",
+    "description": "12 giorni sull'isola, 30 situazioni di tentazione: resisterai fino al falò finale?",
+    "metaDescription": "Quiz di Temptation Island online e gratuito: 12 giorni sull'isola, una tentazione al giorno e un falò finale. La tua coppia sopravvivrebbe alla prova?"
   }
 }

@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "title": "Sopravvivresti a Temptation Island? Il Quiz",
+    "titleHighlight": "Temptation Island",
+    "description": "12 giorni su un'isola paradisiaca, separato/a dal tuo partner, circondato/a di tentazioni. Fino a dove reggeresti?",
+    "badge": "Quiz non ufficiale • Gratis • 5 min"
+  },
+  "section1": {
+    "title": "Il principio: dodici giorni, un'isola e i tuoi limiti",
+    "p1": "Da oltre vent'anni <strong class=\"text-foreground\">Temptation Island</strong> pone sempre la stessa domanda, la più semplice e la più vertiginosa che ci sia: che cosa resta di una coppia quando la separi, la mandi su una spiaggia da sogno e la circondi di single il cui mestiere è sedurre?",
+    "p2": "Questo quiz ti mette al loro posto. Parti da solo/a sull'isola per un soggiorno di <strong class=\"text-foreground\">12 giorni</strong>. Ogni giornata ti mette davanti a una situazione reale del programma: una cena troppo ravvicinata, una passeggiata al tramonto, una confidenza di troppo, una mano tesa alle 2 di notte. Sta a te scegliere cosa faresti davvero.",
+    "p3": "E come nel programma, alla fine si viene a sapere tutto: ogni quattro giorni il <strong class=\"text-foreground\">falò</strong> mostra le tue immagini al tuo partner. All'ultimo falò arriva il verdetto, e dipende solo da te."
+  },
+  "section2": {
+    "title": "Che cos'è Temptation Island?",
+    "p1": "Temptation Island è nato negli Stati Uniti nel 2001 ed è diventato uno dei format reality più esportati al mondo. In Italia va in onda su Canale 5 dal 2005, prodotto da Fascino PGT e Banijay Italia e condotto da Filippo Bisciglia, con le riprese tradizionalmente ambientate in Sardegna. In Francia si chiama <em>L'Île de la tentation</em>, in Spagna <em>La isla de las tentaciones</em>, in Germania va in onda su RTL.",
+    "p2": "Il meccanismo non è quasi cambiato dall'origine, ed è proprio questa la sua forza:",
+    "healthy": "<strong class=\"text-foreground\">La separazione</strong>: le coppie partono per un villaggio ma vivono divise, le donne circondate da una decina di tentatori, gli uomini da una decina di tentatrici.",
+    "toxic": "<strong class=\"text-foreground\">Il falò</strong>: ogni sera, il rituale più temuto. Ciascuno scopre, su un grande schermo, una selezione di immagini del proprio partner nell'altro villaggio. È lì che cadono le maschere.",
+    "quote": "Sull'isola nessuno finge a lungo: dodici giorni bastano a rivelare ciò che una coppia preferirebbe non guardare in faccia."
+  },
+  "section3": {
+    "title": "Come leggere il tuo punteggio di tentazione",
+    "intro": "Ogni situazione vale da 0 a 3 punti di tentazione. Su 12 giorni, il totale va da 0 a 36: più il punteggio è basso, meglio hai resistito. Il tuo tasso di resistenza compare alla fine, insieme al verdetto dell'ultimo falò.",
+    "headerScore": "Punteggio di tentazione",
+    "headerLevel": "Verdetto del falò",
+    "headerAnalysis": "Cosa dice di te",
+    "row1Score": "0-7 punti",
+    "row1Level": "Incrollabile",
+    "row1Analysis": "L'isola non ha potuto nulla contro di te. Hai posto i tuoi limiti il primo giorno e li hai mantenuti.",
+    "row2Score": "8-15 punti",
+    "row2Level": "Solido",
+    "row2Analysis": "Turbato/a a tratti, ma mai travolto/a. Torneresti con la coscienza pulita.",
+    "row3Score": "16-23 punti",
+    "row3Level": "In pericolo",
+    "row3Analysis": "La linea è diventata sfumata. Niente di irreparabile, ma non hai nemmeno impedito granché.",
+    "row4Score": "24-31 punti",
+    "row4Level": "Il falò farà male",
+    "row4Analysis": "Hai ceduto più volte. Sull'isola ti comporti più da single che da persona impegnata.",
+    "row5Score": "32-36 punti",
+    "row5Level": "Te ne vai da solo/a",
+    "row5Analysis": "Non c'è stata suspense: eri già altrove ancor prima di arrivare sull'isola."
+  },
+  "section4": {
+    "title": "Perché l'isola fa crollare anche le coppie solide",
+    "p1": "Ciò che rende il format così temibile non è la bellezza dei single: è il dispositivo. In dodici giorni l'isola riunisce tutti gli ingredienti che fanno vacillare un legame, ed è esattamente ciò che questo quiz riproduce.",
+    "p2": "Tre meccanismi spiegano la maggior parte degli scivoloni che si vedono in TV:",
+    "pillar1Title": "1. La perdita dei punti di riferimento",
+    "pillar1Text": "Niente quotidiano, niente entourage, niente orari: lontano dalla tua vita torni a essere una versione di te senza testimoni. Quella sensazione di parentesi, « quello che succede sull'isola resta sull'isola », disattiva buona parte dei freni abituali.",
+    "pillar2Title": "2. L'attenzione allo stato puro",
+    "pillar2Text": "Un tentatore non ha piatti da lavare, bollette o stanchezza da condividere. Ha una sola missione: ascoltarti e ammirarti. Contro anni di routine, quell'attenzione concentrata agisce come un rivelatore delle mancanze.",
+    "pillar3Title": "3. Il dubbio fabbricato dalle immagini",
+    "pillar3Text": "Il falò non mostra mai tutto: mostra una selezione. Molti concorrenti cedono non per desiderio ma per ritorsione, dopo aver visto pochi secondi che li hanno feriti. La <a href=\"/it/test-gelosia-coppia/\">gelosia</a> diventa allora il vero motore dello scivolone."
+  },
+  "section5": {
+    "title": "Cosa dice davvero il tuo risultato sulla tua coppia",
+    "intro": "Questo quiz è un gioco, non una diagnosi. Ma il modo in cui rispondi dice spesso più del punteggio stesso. Ecco come interpretare ciò che risale in superficie.",
+    "pillar1Title": "Essere tentati non è tradire",
+    "pillar1Text": "Provare attrazione per qualcun altro è umano e non dice nulla sulla solidità della tua coppia. Conta ciò che ne fai: i limiti che poni e ciò che scegli di raccontare al tuo partner.",
+    "pillar2Title": "La tentazione rivela una mancanza, non la crea",
+    "pillar2Text": "Se hai ceduto sulle domande legate ai complimenti o all'ascolto, non è casuale: è spesso il segno di un bisogno non soddisfatto nella tua relazione. Un bisogno che esiste anche fuori dall'isola, e che si affronta a casa.",
+    "pillar3Title": "La routine è la migliore alleata della tentazione",
+    "pillar3Text": "Le coppie che vacillano prima raramente sono le più infelici: sono le più addormentate. Se questo quiz ti ha messo a disagio, il nostro <a href=\"/it/test-amore-o-abitudine/\">test amore o abitudine</a> è il seguito ideale.",
+    "pillar4Title": "Un punteggio basso non è una garanzia eterna",
+    "pillar4Text": "Resistere dodici giorni non garantisce nulla per i prossimi dieci anni. Una coppia solida non è una coppia al riparo: è una coppia che continua a prendersi cura di sé. È esattamente ciò che misura il nostro <a href=\"/it/test-relazione-sana/\">test della relazione sana</a>."
+  },
+  "section6": {
+    "title": "Come si gioca (e cosa aspettarsi)",
+    "p1": "Il quiz si gioca da soli, in cinque minuti, senza registrazione. Inserisci il tuo nome e quello del tuo partner, poi vivi i tuoi 12 giorni sull'isola. Le 12 situazioni sono sorteggiate tra <strong class=\"text-foreground\">30 scenari diversi</strong>: ogni nuovo soggiorno è quindi un'altra storia.",
+    "p2": "Un consiglio prima di cominciare: gioca con onestà. Rispondere ciò che « bisognerebbe » rispondere dà un punteggio perfetto e un risultato senza alcun interesse. L'esercizio ha valore solo se scegli ciò che faresti davvero, da solo/a, alle 2 di notte, a 8.000 km da casa.",
+    "dontTitle": "Cosa non è questo quiz",
+    "dont1Title": "Un test di fedeltà scientifico",
+    "dont1Text": "Nessun questionario può prevedere un comportamento reale. Questo quiz si ispira al format televisivo per farti riflettere, non per emettere un verdetto sulla tua coppia o su quella di qualcun altro.",
+    "dont2Title": "Un'arma da rivolgere contro il partner",
+    "dont2Text": "Far fare il quiz all'altro per rinfacciargli il punteggio è il modo migliore per trasformare un gioco in un conflitto. Confrontate pure i risultati, ma parlate di ciò che avete provato, non dei punti.",
+    "doTitle": "Il modo giusto di godersela",
+    "do1Title": "Giocate ognuno per conto proprio, poi confrontatevi",
+    "do1Text": "È la versione più interessante: fate il soggiorno separatamente, poi scoprite i vostri due verdetti. Gli scarti tra le risposte sono spesso ottimi spunti di conversazione.",
+    "do2Title": "Rilancia un soggiorno per altre situazioni",
+    "do2Text": "Con 30 scenari per 12 giorni, una seconda partita ti metterà davanti a dilemmi inediti, a volte più difficili dei primi.",
+    "do3Title": "Prosegui con un vero test di coppia",
+    "do3Text": "Se il quiz ha sollevato domande di fondo, prosegui con uno strumento più serio come il nostro <a href=\"/it/test-compatibilita-coppia/\">test di coppia</a>, pensato per misurare la solidità reale della vostra relazione."
+  },
+  "section7": {
+    "title": "Allora, sopravvivresti a Temptation Island?",
+    "p1": "Dal divano tutti si credono incorruttibili. È facile giudicare un concorrente che cede in televisione, molto meno proiettarsi, giorno dopo giorno, nelle stesse situazioni.",
+    "p2": "Questo quiz non vuole tenderti una trappola: vuole una risposta onesta a una domanda che poche coppie osano porsi. Dodici giorni, un'isola, nessuna sorveglianza. Cosa faresti, davvero?",
+    "p3": "Non resta che una cosa da fare: imbarcarsi per l'isola e aspettare l'ultimo falò."
+  },
+  "faqTitle": "Domande frequenti su Temptation Island",
+  "disclaimer": "Quiz indipendente e non ufficiale, proposto a scopo di intrattenimento. Quiz Couple non è affiliato alla produzione di Temptation Island o de L'Île de la tentation, né alle emittenti che trasmettono il programma. I nomi citati appartengono ai rispettivi proprietari.",
+  "jsonLd": {
+    "quizName": "Quiz Temptation Island",
+    "quizDescription": "Quiz ispirato a Temptation Island: 12 giorni sull'isola, 30 situazioni di tentazione e un falò finale che decide tutto.",
+    "faq1Q": "Qual è il principio di Temptation Island?",
+    "faq1A": "Le coppie partono per un villaggio su un'isola ma vivono separate, ciascuna circondata da una decina di single chiamati tentatori e tentatrici. Ogni sera il rituale del falò mostra loro immagini del partner nell'altro villaggio. All'ultimo falò ogni coppia decide se uscire insieme o separatamente.",
+    "faq2Q": "Questo quiz è ufficiale?",
+    "faq2A": "No. È un quiz gratuito e indipendente, ispirato al principio del programma, senza alcun legame con la produzione né con le emittenti che lo trasmettono.",
+    "faq3Q": "Quante domande ha il quiz?",
+    "faq3A": "Ogni soggiorno ti fa vivere 12 giorni, cioè 12 situazioni sorteggiate tra 30 scenari diversi. Puoi quindi rigiocare più volte senza ritrovare gli stessi dilemmi.",
+    "faq4Q": "Dove si guarda Temptation Island?",
+    "faq4A": "In Italia Temptation Island va in onda su Canale 5 e in streaming su Witty TV e Mediaset Infinity. Il format esiste in molti paesi: in Spagna su Telecinco come La isla de las tentaciones, in Germania su RTL e in Francia su W9 con il titolo L'Île de la tentation."
+  }
+}

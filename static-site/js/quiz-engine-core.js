@@ -3632,6 +3632,269 @@ var QuizEngine = (function() {
     node.appendChild(c);
   };
 
+  // ══════════════════════════════════════════════════════════
+  //  TentationQuiz — "Survivrez-vous à l'île de la tentation ?"
+  //  Solo immersive run that mirrors the show's structure: a 12-day stay
+  //  on the island, one tempting situation per day, punctuated by the
+  //  ritual "feu de camp" (bonfire) every 4 days, then a final bonfire
+  //  verdict. Every option carries 0..3 temptation points; the lower the
+  //  total, the better you resisted.
+  //  All UI copy comes from quizGames.json (tentation.*) so the skin works
+  //  in the 5 languages the show actually airs in.
+  // ══════════════════════════════════════════════════════════
+  function TentationQuiz(config) {
+    this.container = config.container;
+    this.pool = config.questions || [];
+    this.results = config.results || [];
+    this.prefix = config.prefix || 'tentation';
+    this.lang = config.lang || 'fr';
+    this.days = Math.min(config.days || 12, this.pool.length);
+    this.bonfireEvery = 4;              // ritual bonfire cadence, as on the show
+    this.phase = 'setup';
+    this.render();
+  }
+
+  TentationQuiz.prototype.tt = function (key, fallback) {
+    return tg('tentation.' + key, fallback);
+  };
+
+  TentationQuiz.prototype.initStay = function () {
+    this.deck = shuffleArray(this.pool.slice()).slice(0, this.days);
+    this.dayIdx = 0;
+    this.score = 0;          // temptation points accumulated
+    this.answers = [];
+    this.maxScore = 0;
+    for (var i = 0; i < this.deck.length; i++) {
+      var best = 0;
+      for (var j = 0; j < this.deck[i].options.length; j++) {
+        if ((this.deck[i].options[j].points || 0) > best) best = this.deck[i].options[j].points || 0;
+      }
+      this.maxScore += best;
+    }
+  };
+
+  TentationQuiz.prototype.qText = function (q) {
+    var t = tgd(this.prefix + '.q' + q.id, q.text) || q.text;
+    return String(t).replace(/\{\{name\}\}/g, this.partner || '');
+  };
+  TentationQuiz.prototype.optText = function (q, opt) {
+    var t = tgd(this.prefix + '.q' + q.id + opt.id, opt.text) || opt.text;
+    return String(t).replace(/\{\{name\}\}/g, this.partner || '');
+  };
+
+  TentationQuiz.prototype.render = function () {
+    this.container.innerHTML = '';
+    document.body.classList.remove('quiz-has-result');
+    if (this.phase === 'results') { this.renderResults(); return; }
+    var island = el('div', 'tentation-island');
+    island.innerHTML =
+      '<span class="tentation-sky" aria-hidden="true"></span>'
+      + '<span class="tentation-moon" aria-hidden="true"></span>'
+      + '<span class="tentation-sea" aria-hidden="true"></span>'
+      + '<span class="tentation-palms" aria-hidden="true"></span>';
+    this.island = island;
+    this.container.appendChild(island);
+    if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'day') this.renderDay();
+    else if (this.phase === 'bonfire') this.renderBonfire();
+  };
+
+  TentationQuiz.prototype._logo = function () {
+    return '<div class="tentation-logo">'
+      + '<span class="tentation-logo-top">' + esc(this.tt('logoTop', "L'île de la")) + '</span>'
+      + '<span class="tentation-logo-main">' + esc(this.tt('logoMain', 'TENTATION')) + '</span>'
+      + '</div>';
+  };
+
+  // Small flame used both as decor and as the bonfire centrepiece.
+  TentationQuiz.prototype._flame = function (cls) {
+    return '<span class="tentation-flame ' + (cls || '') + '" aria-hidden="true">'
+      + '<span class="tentation-flame-core"></span>'
+      + '<span class="tentation-flame-glow"></span>'
+      + '</span>';
+  };
+
+  TentationQuiz.prototype.renderSetup = function () {
+    var self = this;
+    this.island.classList.add('tentation-island--intro');
+    var wrap = el('div', 'tentation-panel animate-fade-in');
+    wrap.innerHTML = this._logo()
+      + '<p class="tentation-tagline">' + esc(this.tt('tagline', '12 jours sur une île paradisiaque, entouré·e de tentations. Y résisterez-vous ?')) + '</p>';
+
+    var form = el('div', 'tentation-setup-form');
+    var fields = [
+      { id: 'tentation-you', lbl: this.tt('yourName', 'Votre prénom'), ph: this.tt('yourNamePh', 'Ex : Camille') },
+      { id: 'tentation-partner', lbl: this.tt('partnerName', 'Le prénom de votre partenaire'), ph: this.tt('partnerNamePh', 'Ex : Alex') }
+    ];
+    fields.forEach(function (f) {
+      var card = el('div', 'tentation-input-card');
+      card.innerHTML = '<label class="tentation-input-lbl" for="' + f.id + '">' + esc(f.lbl) + '</label>';
+      var input = el('input', 'tentation-input');
+      input.type = 'text'; input.maxLength = 18; input.id = f.id; input.placeholder = f.ph;
+      card.appendChild(input);
+      form.appendChild(card);
+    });
+    wrap.appendChild(form);
+
+    var rules = el('div', 'tentation-rules');
+    rules.innerHTML =
+      '<div class="tentation-rule"><span class="tentation-rule-ico">🏝️</span><span>' + esc(this.tt('rule1', 'Vous partez seul·e, séparé·e de votre partenaire')) + '</span></div>'
+      + '<div class="tentation-rule"><span class="tentation-rule-ico">😈</span><span>' + esc(this.tt('rule2', 'Chaque jour, une tentation vous met à l\'épreuve')) + '</span></div>'
+      + '<div class="tentation-rule"><span class="tentation-rule-ico">🔥</span><span>' + esc(this.tt('rule3', 'Tous les 4 jours, le feu de camp révèle tout')) + '</span></div>'
+      + '<div class="tentation-rule"><span class="tentation-rule-ico">💔</span><span>' + esc(this.tt('rule4', 'Au dernier feu de camp, le verdict tombe')) + '</span></div>';
+    wrap.appendChild(rules);
+
+    var btn = el('button', 'tentation-btn tentation-btn--go', '🏝️ ' + esc(this.tt('start', 'Partir sur l\'île')));
+    btn.addEventListener('click', function () {
+      var you = (document.getElementById('tentation-you').value || '').trim();
+      var partner = (document.getElementById('tentation-partner').value || '').trim();
+      self.you = you || self.tt('defaultYou', 'Vous');
+      self.partner = partner || self.tt('defaultPartner', 'votre partenaire');
+      self.initStay();
+      self.phase = 'day';
+      self.render();
+      smoothScroll(self.container, 'start');
+    });
+    wrap.appendChild(btn);
+    this.island.appendChild(wrap);
+  };
+
+  // Day counter + resistance meter shown above each situation.
+  TentationQuiz.prototype._hud = function () {
+    var hud = el('div', 'tentation-hud');
+    var pct = this.maxScore > 0 ? Math.round(100 - (this.score / this.maxScore) * 100) : 100;
+    hud.innerHTML =
+      '<div class="tentation-day-badge">' + esc(this.tt('day', 'Jour')) + ' <strong>' + (this.dayIdx + 1) + '</strong>/' + this.deck.length + '</div>'
+      + '<div class="tentation-meter" role="img" aria-label="' + esc(this.tt('resistance', 'Résistance')) + ' ' + pct + '%">'
+      + '<span class="tentation-meter-fill" style="width:' + pct + '%"></span>'
+      + '</div>'
+      + '<div class="tentation-meter-lbl">' + esc(this.tt('resistance', 'Résistance')) + ' ' + pct + '%</div>';
+    return hud;
+  };
+
+  TentationQuiz.prototype.renderDay = function () {
+    var self = this;
+    var q = this.deck[this.dayIdx];
+    var wrap = el('div', 'tentation-panel tentation-panel--day animate-fade-in');
+    wrap.appendChild(this._hud());
+
+    var card = el('div', 'tentation-situation');
+    card.innerHTML = '<span class="tentation-situation-tag">' + esc(this.tt('situation', 'La situation')) + '</span>'
+      + '<h3 class="tentation-question">' + esc(this.qText(q)) + '</h3>';
+    wrap.appendChild(card);
+
+    var opts = el('div', 'tentation-options');
+    q.options.forEach(function (opt, i) {
+      var b = el('button', 'tentation-option');
+      b.innerHTML = '<span class="tentation-option-letter">' + ['A', 'B', 'C', 'D', 'E'][i] + '</span>'
+        + '<span class="tentation-option-text">' + esc(self.optText(q, opt)) + '</span>';
+      b.style.animationDelay = (i * 70) + 'ms';
+      b.addEventListener('click', function () {
+        if (wrap.dataset.done === '1') return;   // guard against double taps
+        wrap.dataset.done = '1';
+        b.classList.add('is-picked');
+        var all = opts.querySelectorAll('.tentation-option');
+        for (var k = 0; k < all.length; k++) { all[k].style.pointerEvents = 'none'; if (all[k] !== b) all[k].classList.add('is-dimmed'); }
+        self.score += (opt.points || 0);
+        self.answers.push({ id: q.id, points: opt.points || 0 });
+        setTimeout(function () {
+          var day = self.dayIdx + 1;
+          if (day >= self.deck.length) { self.phase = 'bonfire'; self.isFinal = true; }
+          else if (day % self.bonfireEvery === 0) { self.phase = 'bonfire'; self.isFinal = false; }
+          else { self.dayIdx++; }
+          self.render();
+        }, 420);
+      });
+      opts.appendChild(b);
+    });
+    wrap.appendChild(opts);
+    this.island.appendChild(wrap);
+  };
+
+  // The show's signature ritual: a night bonfire where the footage is revealed.
+  TentationQuiz.prototype.renderBonfire = function () {
+    var self = this;
+    this.island.classList.add('tentation-island--night');
+    var wrap = el('div', 'tentation-panel tentation-panel--bonfire animate-fade-in');
+
+    // Temptation ratio so far → which reaction your partner has at the bonfire.
+    var soFarMax = 0;
+    for (var i = 0; i <= this.dayIdx && i < this.deck.length; i++) {
+      var best = 0;
+      for (var j = 0; j < this.deck[i].options.length; j++) {
+        if ((this.deck[i].options[j].points || 0) > best) best = this.deck[i].options[j].points || 0;
+      }
+      soFarMax += best;
+    }
+    var ratio = soFarMax > 0 ? this.score / soFarMax : 0;
+    var mood = ratio < 0.25 ? 'calm' : (ratio < 0.55 ? 'doubt' : 'burn');
+    var moodCopy = {
+      calm: this.tt('bonfireCalm', 'Les images tournent. {{name}} sourit : rien, dans ce que vous avez fait, ne l\'a blessé·e.'),
+      doubt: this.tt('bonfireDoubt', 'Les images tournent. Le sourire de {{name}} se fige. Un doute vient de s\'installer.'),
+      burn: this.tt('bonfireBurn', 'Les images tournent. {{name}} détourne le regard, les mâchoires serrées. Ça brûle.')
+    }[mood];
+
+    var isFinal = !!this.isFinal;
+    wrap.innerHTML =
+      '<div class="tentation-bonfire-head">'
+      + '<span class="tentation-bonfire-kicker">' + esc(isFinal ? this.tt('finalBonfire', 'Dernier feu de camp') : this.tt('bonfire', 'Feu de camp')) + '</span>'
+      + (isFinal ? '' : '<span class="tentation-bonfire-day">' + esc(this.tt('day', 'Jour')) + ' ' + (this.dayIdx + 1) + '</span>')
+      + '</div>'
+      + '<div class="tentation-fire">' + this._flame('tentation-flame--big') + '</div>'
+      + '<p class="tentation-bonfire-text">' + esc(String(moodCopy).replace(/\{\{name\}\}/g, this.partner)) + '</p>';
+
+    var btn = el('button', 'tentation-btn tentation-btn--fire');
+    btn.innerHTML = isFinal
+      ? '💔 ' + esc(this.tt('seeVerdict', 'Découvrir le verdict'))
+      : '🔥 ' + esc(this.tt('continueStay', 'Continuer le séjour'));
+    btn.addEventListener('click', function () {
+      if (isFinal) { self.phase = 'results'; }
+      else { self.dayIdx++; self.phase = 'day'; }
+      self.isFinal = false;
+      self.render();
+      smoothScroll(self.container, 'start');
+    });
+    wrap.appendChild(btn);
+    this.island.appendChild(wrap);
+  };
+
+  TentationQuiz.prototype.renderResults = function () {
+    var self = this;
+    var result = null;
+    for (var i = 0; i < this.results.length; i++) {
+      var r = this.results[i];
+      if (this.score >= r.min && this.score <= r.max) { result = r; break; }
+    }
+    if (!result && this.results.length > 0) result = this.results[this.results.length - 1];
+    var resistance = this.maxScore > 0 ? Math.round(100 - (this.score / this.maxScore) * 100) : 100;
+
+    var wrap = el('div', 'quiz-engine tentation-results quiz-result-card');
+
+    // Self-contained dark island hero: renderActionButtons moves these children
+    // into the light 2-column layout, so the block must carry its own styling.
+    var hero = el('div', 'tentation-results-hero');
+    hero.innerHTML = this._logo()
+      + '<div class="tentation-fire tentation-fire--result">' + this._flame('tentation-flame--big') + '</div>'
+      + '<div class="tentation-results-ring"><span class="tentation-results-pct">' + resistance + '%</span>'
+      + '<span class="tentation-results-ring-lbl">' + esc(this.tt('resistance', 'Résistance')) + '</span></div>'
+      + '<h2 class="tentation-results-title">' + esc(result ? result.title : '') + '</h2>'
+      + '<p class="tentation-results-sub">' + (result ? result.description : '') + '</p>'
+      + (result && result.advice ? '<p class="tentation-results-advice">' + result.advice + '</p>' : '')
+      + '<p class="tentation-results-couple">' + esc(this.tt('scoreLabel', 'Score de tentation')) + ' : <strong>'
+      + this.score + '/' + this.maxScore + '</strong></p>';
+    wrap.appendChild(hero);
+
+    var quizEl = document.getElementById('quiz-engine');
+    var hasPool = quizEl && quizEl.dataset.hasPool === '1';
+    renderActionButtons(wrap, {
+      shareText: this.tt('shareText', 'J\'ai résisté à {{pct}}% sur l\'île de la tentation ! 🏝️🔥').replace(/\{\{pct\}\}/g, resistance),
+      newQuestions: hasPool ? function () { self.initStay(); self.phase = 'day'; self.render(); smoothScroll(self.container, 'start'); } : null,
+      restart: function () { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -3650,6 +3913,7 @@ var QuizEngine = (function() {
     TruefalseQuiz: TruefalseQuiz,
     ProfileQuiz: ProfileQuiz,
     ZamoursQuiz: ZamoursQuiz,
+    TentationQuiz: TentationQuiz,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,

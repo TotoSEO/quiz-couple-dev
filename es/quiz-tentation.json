@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "title": "¿Sobrevivirías a La Isla de las Tentaciones? El Quiz",
+    "titleHighlight": "La Isla de las Tentaciones",
+    "description": "12 días en una isla paradisíaca, separado/a de tu pareja, rodeado/a de tentaciones. ¿Hasta dónde aguantarías?",
+    "badge": "Quiz no oficial • Gratis • 5 min"
+  },
+  "section1": {
+    "title": "El principio: doce días, una isla y tus límites",
+    "p1": "Desde hace más de veinte años, <strong class=\"text-foreground\">La Isla de las Tentaciones</strong> plantea siempre la misma pregunta, la más simple y la más vertiginosa: ¿qué queda de una pareja cuando la separas, la mandas a una playa de ensueño y la rodeas de solteros cuyo trabajo es seducir?",
+    "p2": "Este quiz te pone en su lugar. Partes solo/a a la isla para una estancia de <strong class=\"text-foreground\">12 días</strong>. Cada jornada te enfrenta a una situación real del programa: una cena demasiado cercana, un paseo al atardecer, una confidencia de más, una mano tendida a las 2 de la madrugada. Tú eliges lo que harías de verdad.",
+    "p3": "Y como en el programa, todo acaba sabiéndose: cada cuatro días, la <strong class=\"text-foreground\">hoguera</strong> le muestra tus imágenes a tu pareja. En la hoguera final llega el veredicto, y depende solo de ti."
+  },
+  "section2": {
+    "title": "¿Qué es La Isla de las Tentaciones?",
+    "p1": "La isla de las tentaciones es la adaptación española de <em>Temptation Island</em>, un formato nacido en Estados Unidos en 2001. Se emite en Telecinco desde enero de 2020, se graba en la República Dominicana y ya ha superado las diez ediciones, convirtiéndose en uno de los mayores fenómenos de la televisión española.",
+    "p2": "El dispositivo apenas ha cambiado desde el origen, y eso es justamente su fuerza:",
+    "healthy": "<strong class=\"text-foreground\">La separación</strong>: las parejas viajan a la isla pero viven en dos villas distintas, ellas rodeadas de una decena de tentadores, ellos de una decena de tentadoras.",
+    "toxic": "<strong class=\"text-foreground\">La hoguera</strong>: cada noche, el ritual más temido. Cada uno descubre, en una pantalla gigante, una selección de imágenes de su pareja en la otra villa. Ahí es donde caen las máscaras.",
+    "quote": "En la isla nadie disimula mucho tiempo: doce días bastan para revelar lo que una pareja preferiría no mirar de frente."
+  },
+  "section3": {
+    "title": "Cómo leer tu puntuación de tentación",
+    "intro": "Cada situación vale de 0 a 3 puntos de tentación. En 12 días, el total va de 0 a 36: cuanto más baja sea tu puntuación, mejor has resistido. Tu tasa de resistencia aparece al final, junto con el veredicto de la hoguera final.",
+    "headerScore": "Puntuación de tentación",
+    "headerLevel": "Veredicto de la hoguera",
+    "headerAnalysis": "Qué dice de ti",
+    "row1Score": "0 a 7 puntos",
+    "row1Level": "Inquebrantable",
+    "row1Analysis": "La isla no pudo contigo. Pusiste tus límites el primer día y los mantuviste.",
+    "row2Score": "8 a 15 puntos",
+    "row2Level": "Sólido",
+    "row2Analysis": "Perturbado/a a ratos, pero nunca desbordado/a. Volverías con la conciencia tranquila.",
+    "row3Score": "16 a 23 puntos",
+    "row3Level": "En peligro",
+    "row3Analysis": "La línea se volvió borrosa. Nada irreparable, pero tampoco impediste gran cosa.",
+    "row4Score": "24 a 31 puntos",
+    "row4Level": "La hoguera va a doler",
+    "row4Analysis": "Cediste varias veces. En la isla te comportas más como un soltero que como alguien con pareja.",
+    "row5Score": "32 a 36 puntos",
+    "row5Level": "Te vas solo/a",
+    "row5Analysis": "No hubo suspense: ya estabas en otra parte antes incluso de llegar a la isla."
+  },
+  "section4": {
+    "title": "Por qué la isla hace caer incluso a las parejas sólidas",
+    "p1": "Lo que hace temible el formato no es la belleza de los solteros: es el dispositivo. En doce días, la isla reúne todos los ingredientes que hacen tambalear un vínculo, y eso es exactamente lo que reproduce este quiz.",
+    "p2": "Tres mecanismos explican la mayoría de los deslices que se ven en pantalla:",
+    "pillar1Title": "1. La pérdida de referencias",
+    "pillar1Text": "Sin rutina, sin entorno, sin horarios: lejos de tu vida, vuelves a ser una versión de ti sin testigos. Esa sensación de paréntesis, « lo que pasa en la isla se queda en la isla », desactiva buena parte de los frenos habituales.",
+    "pillar2Title": "2. La atención en estado puro",
+    "pillar2Text": "Un tentador no tiene platos que fregar, ni facturas, ni cansancio que compartir. Solo tiene una misión: escucharte y admirarte. Frente a años de rutina, esa atención concentrada actúa como un revelador de carencias.",
+    "pillar3Title": "3. La duda fabricada por las imágenes",
+    "pillar3Text": "La hoguera nunca lo muestra todo: muestra una selección. Muchos concursantes caen no por deseo, sino por represalia, tras ver unos segundos que les han hecho daño. Los <a href=\"/es/test-celos-pareja/\">celos</a> se convierten entonces en el verdadero motor del desliz."
+  },
+  "section5": {
+    "title": "Lo que tu resultado dice de verdad sobre tu pareja",
+    "intro": "Este quiz es un juego, no un diagnóstico. Pero la forma en que respondes suele decir más que la propia puntuación. Así puedes interpretar lo que sale a la superficie.",
+    "pillar1Title": "Sentir tentación no es traicionar",
+    "pillar1Text": "Sentir atracción por otra persona es humano y no dice nada sobre la solidez de tu relación. Lo que cuenta es qué haces con ello: los límites que pones y lo que decides contarle a tu pareja.",
+    "pillar2Title": "La tentación revela una carencia, no la crea",
+    "pillar2Text": "Si has caído en las preguntas sobre los cumplidos o la escucha, no es casual: suele ser señal de una necesidad no cubierta en tu relación. Una necesidad que existe también fuera de la isla, y que se trata en casa.",
+    "pillar3Title": "La rutina es la mejor aliada de la tentación",
+    "pillar3Text": "Las parejas que se tambalean antes rara vez son las más infelices: son las más dormidas. Si este quiz te ha incomodado, nuestro <a href=\"/es/test-amor-o-costumbre/\">test amor o costumbre</a> es una continuación perfecta.",
+    "pillar4Title": "Una puntuación baja no es un seguro de por vida",
+    "pillar4Text": "Resistir doce días no garantiza nada para los próximos diez años. Una pareja sólida no es una pareja a salvo: es una pareja que se sigue cuidando. Eso es justamente lo que mide nuestro <a href=\"/es/test-relacion-sana/\">test de relación sana</a>."
+  },
+  "section6": {
+    "title": "Cómo jugar (y qué esperar)",
+    "p1": "El quiz se juega en solitario, en cinco minutos, sin registro. Introduces tu nombre y el de tu pareja y vives tus 12 días en la isla. Las 12 situaciones se sortean entre <strong class=\"text-foreground\">30 escenarios diferentes</strong>, así que cada estancia nueva es otra historia.",
+    "p2": "Un consejo antes de empezar: juega con honestidad. Responder lo que « habría que » responder da una puntuación perfecta y un resultado sin ningún interés. El ejercicio solo vale si eliges lo que harías de verdad, solo/a, a las 2 de la madrugada, a 8.000 km de casa.",
+    "dontTitle": "Lo que este quiz no es",
+    "dont1Title": "Un test de fidelidad científico",
+    "dont1Text": "Ningún cuestionario puede predecir un comportamiento real. Este quiz se inspira en el formato televisivo para hacerte reflexionar, no para emitir un veredicto sobre tu relación ni sobre la de nadie.",
+    "dont2Title": "Un arma para usar contra tu pareja",
+    "dont2Text": "Hacer que tu pareja pase el quiz para reprocharle su puntuación es la mejor forma de convertir un juego en un conflicto. Comparad resultados si os apetece, pero hablad de lo que habéis sentido, no de los puntos.",
+    "doTitle": "La forma correcta de disfrutarlo",
+    "do1Title": "Jugad cada uno por vuestro lado y comparad",
+    "do1Text": "Es la versión más interesante: haced la estancia por separado y después descubrid vuestros dos veredictos. Las diferencias suelen dar conversaciones excelentes.",
+    "do2Title": "Lanza otra estancia para vivir otras situaciones",
+    "do2Text": "Con 30 escenarios para 12 días, una segunda partida te enfrentará a dilemas inéditos, a veces más difíciles que los primeros.",
+    "do3Title": "Continúa con un test de pareja de verdad",
+    "do3Text": "Si el quiz te ha planteado preguntas de fondo, sigue con una herramienta más seria como nuestro <a href=\"/es/test-compatibilidad-pareja/\">test de pareja</a>, pensado para medir la solidez real de vuestra relación."
+  },
+  "section7": {
+    "title": "Entonces, ¿sobrevivirías a La Isla de las Tentaciones?",
+    "p1": "Todo el mundo se cree incorruptible desde el sofá. Es fácil juzgar a un concursante que cae en televisión, mucho menos proyectarse, día tras día, en las mismas situaciones.",
+    "p2": "Este quiz no busca tenderte una trampa: busca que respondas con honestidad a una pregunta que pocas parejas se atreven a hacerse. Doce días, una isla, ninguna vigilancia. ¿Qué harías, de verdad?",
+    "p3": "Solo queda una cosa por hacer: embarcar hacia la isla y esperar la hoguera final."
+  },
+  "faqTitle": "Preguntas frecuentes sobre La Isla de las Tentaciones",
+  "disclaimer": "Quiz independiente y no oficial, ofrecido como entretenimiento. Quiz Couple no está afiliado a la producción de La Isla de las Tentaciones ni de Temptation Island, ni a las cadenas que emiten el programa. Los nombres citados pertenecen a sus respectivos propietarios.",
+  "jsonLd": {
+    "quizName": "Quiz La Isla de las Tentaciones",
+    "quizDescription": "Quiz inspirado en La Isla de las Tentaciones: 12 días en la isla, 30 situaciones de tentación y una hoguera final que lo decide todo.",
+    "faq1Q": "¿Cuál es el principio de La Isla de las Tentaciones?",
+    "faq1A": "Las parejas viajan a una isla paradisíaca pero viven separadas, cada una rodeada de una decena de solteros llamados tentadores y tentadoras. Cada noche, el ritual de la hoguera les muestra imágenes de su pareja en la otra villa. En la hoguera final, cada pareja decide si se va junta o por separado.",
+    "faq2Q": "¿Este quiz es oficial?",
+    "faq2A": "No. Es un quiz gratuito e independiente, inspirado en el principio del programa, sin ninguna relación con la producción ni con las cadenas que lo emiten.",
+    "faq3Q": "¿Cuántas preguntas tiene el quiz?",
+    "faq3A": "Cada estancia te hace vivir 12 días, es decir 12 situaciones sorteadas entre 30 escenarios diferentes. Puedes rejugar varias veces sin encontrarte los mismos dilemas.",
+    "faq4Q": "¿Dónde se puede ver La Isla de las Tentaciones?",
+    "faq4A": "La isla de las tentaciones se emite en Telecinco y en Mediaset Infinity desde 2020. El formato existe también en otros países bajo el nombre Temptation Island, especialmente en Italia en Canale 5, en Alemania en RTL y en Francia en W9 con el título L'Île de la tentation."
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "title": "Would you survive Temptation Island? The Quiz",
+    "titleHighlight": "Temptation Island",
+    "description": "12 days on a paradise island, separated from your partner, surrounded by temptation. How long would you last?",
+    "badge": "Unofficial quiz • Free • 5 min"
+  },
+  "section1": {
+    "title": "The premise: twelve days, one island, and your limits",
+    "p1": "For more than twenty years, <strong class=\"text-foreground\">Temptation Island</strong> has asked the same question, the simplest and most vertiginous one there is: what is left of a relationship when you separate it, drop it on a dream beach and surround it with singles whose whole job is to seduce?",
+    "p2": "This quiz puts you in their place. You leave alone for a <strong class=\"text-foreground\">12-day</strong> stay on the island. Each day confronts you with a real situation from the show: a dinner that gets a little too close, a walk at sunset, one confidence too many, a hand held at 2 a.m. It's up to you to choose what you would actually do.",
+    "p3": "And as in the show, everything comes out in the end: every four days, the <strong class=\"text-foreground\">bonfire</strong> reveals your footage to your partner. At the final bonfire, the verdict falls, and it depends on you alone."
+  },
+  "section2": {
+    "title": "What exactly is Temptation Island?",
+    "p1": "Temptation Island was created in the United States in 2001 and became one of the most exported reality formats in the world, with local versions in more than twenty countries: France as <em>L'Île de la tentation</em>, Italy on Canale 5, Spain as <em>La isla de las tentaciones</em>, Germany as <em>Temptation Island: Versuchung im Paradies</em>.",
+    "p2": "The setup has barely changed since the beginning, and that is exactly what makes it work:",
+    "healthy": "<strong class=\"text-foreground\">The separation</strong>: unmarried couples travel to an island but live in two separate villas, the women surrounded by around ten male tempters, the men by around ten temptresses.",
+    "toxic": "<strong class=\"text-foreground\">The bonfire</strong>: every evening, the most dreaded ritual of all. Each person watches, on a big screen, a selection of footage of their partner on the other beach. That is where the masks come off.",
+    "quote": "Nobody fakes it for long on the island: twelve days are enough to reveal what a couple would rather not look at."
+  },
+  "section3": {
+    "title": "How to read your temptation score",
+    "intro": "Each situation is worth 0 to 3 temptation points. Over 12 days, the total runs from 0 to 36: the lower your score, the better you resisted. Your resistance rate is shown at the end, along with the final bonfire verdict.",
+    "headerScore": "Temptation score",
+    "headerLevel": "Bonfire verdict",
+    "headerAnalysis": "What it says about you",
+    "row1Score": "0 to 7 points",
+    "row1Level": "Unshakeable",
+    "row1Analysis": "The island had no hold on you. You set your limits on day one and stuck to them.",
+    "row2Score": "8 to 15 points",
+    "row2Level": "Solid",
+    "row2Analysis": "Unsettled at times, but never overwhelmed. You'd go home with a clear conscience.",
+    "row3Score": "16 to 23 points",
+    "row3Level": "In danger",
+    "row3Analysis": "The line got blurry. Nothing irreparable, but you didn't really stop anything either.",
+    "row4Score": "24 to 31 points",
+    "row4Level": "The bonfire is going to hurt",
+    "row4Analysis": "You gave in several times. On the island you behave more like a single than someone in a relationship.",
+    "row5Score": "32 to 36 points",
+    "row5Level": "You're leaving alone",
+    "row5Analysis": "There was no suspense: you were already elsewhere before you even landed."
+  },
+  "section4": {
+    "title": "Why the island breaks even solid couples",
+    "p1": "What makes the format so devastating isn't how attractive the singles are: it's the setup. In twelve days, the island assembles every ingredient that makes an attachment wobble, and that is precisely what this quiz recreates.",
+    "p2": "Three mechanisms explain most of the slip-ups seen on screen:",
+    "pillar1Title": "1. Losing your bearings",
+    "pillar1Text": "No routine, no friends and family, no schedule: far from your life, you become a version of yourself with no witnesses. That sense of a parenthesis, “what happens on the island stays on the island”, switches off a good part of your usual brakes.",
+    "pillar2Title": "2. Attention in its purest form",
+    "pillar2Text": "A tempter has no dishes, no bills and no tiredness to share with you. They have one mission: to listen to you and admire you. Against years of routine, that concentrated attention acts as a revealer of everything you were missing.",
+    "pillar3Title": "3. The doubt manufactured by the footage",
+    "pillar3Text": "The bonfire never shows everything: it shows a selection. Many contestants give in not out of desire but out of retaliation, after seeing a few seconds that wounded them. <a href=\"/en/jealousy-test-couple/\">Jealousy</a> then becomes the real engine of the slip-up."
+  },
+  "section5": {
+    "title": "What your result really says about your relationship",
+    "intro": "This quiz is a game, not a diagnosis. But how you answer often says more than the score itself. Here's how to interpret what comes to the surface.",
+    "pillar1Title": "Being tempted isn't betrayal",
+    "pillar1Text": "Feeling attracted to someone else is human and says nothing about how solid your relationship is. What counts is what you do with it: the limits you set, and what you choose to tell your partner.",
+    "pillar2Title": "Temptation reveals a need, it doesn't create one",
+    "pillar2Text": "If you gave in on the questions about compliments or being listened to, that matters: it's often the sign of a need going unmet in your relationship. A need that exists off the island too, and that has to be addressed at home.",
+    "pillar3Title": "Routine is temptation's best ally",
+    "pillar3Text": "The couples who wobble fastest are rarely the unhappiest: they're the most asleep. If this quiz made you uncomfortable, our <a href=\"/en/love-or-habit-test/\">love or habit test</a> is a very good follow-up.",
+    "pillar4Title": "A low score isn't a lifetime guarantee",
+    "pillar4Text": "Resisting for twelve days guarantees nothing for the next ten years. A solid couple isn't a couple that is safe: it's a couple that keeps tending to itself. That is exactly what our <a href=\"/en/healthy-relationship-test/\">healthy relationship test</a> measures."
+  },
+  "section6": {
+    "title": "How to play (and what to expect)",
+    "p1": "The quiz is played solo, in five minutes, with no sign-up. You enter your first name and your partner's, then you live your 12 days on the island. The 12 situations are drawn at random from <strong class=\"text-foreground\">30 different scenarios</strong>, so every new stay is a different story.",
+    "p2": "One piece of advice before you start: play honestly. Answering what you “should” answer gives a perfect score and a worthless result. The exercise is only worth something if you pick what you would really do, alone, at 2 a.m., 8,000 km from home.",
+    "dontTitle": "What this quiz is not",
+    "dont1Title": "A scientific fidelity test",
+    "dont1Text": "No questionnaire can predict real behaviour. This quiz borrows from the TV format to make you think, not to pass a verdict on your relationship or on anyone else's.",
+    "dont2Title": "A weapon to use against your partner",
+    "dont2Text": "Making your partner take the quiz so you can hold their score against them is the surest way to turn a game into a conflict. Compare your results if you like, but talk about what you felt, not about the points.",
+    "doTitle": "The right way to enjoy it",
+    "do1Title": "Play separately, then compare",
+    "do1Text": "That's the most interesting version: do the stay each on your own, then reveal your two verdicts. The gaps between your answers usually make excellent conversation.",
+    "do2Title": "Start a new stay for different situations",
+    "do2Text": "With 30 scenarios for 12 days, a second run will confront you with dilemmas you haven't seen, and sometimes harder ones than the first.",
+    "do3Title": "Follow up with a real couple's test",
+    "do3Text": "If the quiz raised deeper questions, move on to a more serious tool such as our <a href=\"/en/couple-compatibility-test/\">couple test</a>, designed to measure how solid your relationship really is."
+  },
+  "section7": {
+    "title": "So, would you survive Temptation Island?",
+    "p1": "Everyone thinks they're incorruptible from the sofa. It's easy to judge a contestant who gives in on television, far harder to picture yourself, day after day, in the same situations.",
+    "p2": "This quiz isn't trying to trap you: it's trying to get an honest answer to a question few couples dare ask. Twelve days, an island, nobody watching. What would you really do?",
+    "p3": "There's only one thing left to do: board for the island and wait for the final bonfire."
+  },
+  "faqTitle": "Frequently asked questions about Temptation Island",
+  "disclaimer": "An independent, unofficial quiz offered purely for entertainment. Quiz Couple is not affiliated with the production of Temptation Island or L'Île de la tentation, nor with the channels that broadcast the programme. All names cited belong to their respective owners.",
+  "jsonLd": {
+    "quizName": "Temptation Island Quiz",
+    "quizDescription": "Quiz inspired by the Temptation Island format: 12 days on the island, 30 tempting situations and a final bonfire that decides everything.",
+    "faq1Q": "What is the premise of Temptation Island?",
+    "faq1A": "Couples travel to a paradise island but live separately, each surrounded by around ten singles known as tempters and temptresses. Every evening, the bonfire ritual shows them footage of their partner on the other beach. At the final bonfire, each couple decides whether they leave together or apart.",
+    "faq2Q": "Is this quiz official?",
+    "faq2A": "No. It is a free, independent quiz inspired by the principle of the show, with no connection to the production or to the channels that broadcast it.",
+    "faq3Q": "How many questions does the quiz have?",
+    "faq3A": "Each stay takes you through 12 days, meaning 12 situations drawn at random from 30 different scenarios. You can replay several times without hitting the same dilemmas.",
+    "faq4Q": "Where can I watch Temptation Island?",
+    "faq4A": "The format aired on Fox and later USA Network in the United States, and exists in many countries: on W9 in France as L'Île de la tentation, on Canale 5 in Italy, on Telecinco in Spain as La isla de las tentaciones and on RTL in Germany."
+  }
+}

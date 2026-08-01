@@ -8,7 +8,7 @@
   "section1": {
     "title": "Amour ou habitude : pourquoi cette question vous traverse-t-elle ?",
     "p1": "Se demander si l'on reste <strong class=\"text-foreground\">par amour ou par habitude</strong> n'a rien d'anodin. Cette question surgit rarement au début d'une histoire : elle apparaît après quelques années, quand la passion des débuts s'est tue et qu'un doute silencieux s'installe. « Est-ce que je l'aime encore vraiment, ou est-ce que je reste parce que c'est confortable ? »",
-    "p2": "La routine n'est pas l'ennemie de l'amour — au contraire, un couple a besoin de repères et de sécurité. Le problème commence quand il ne reste <strong class=\"text-foreground\">que</strong> la routine : quand le désir, la complicité et l'envie de projeter ont laissé place à une simple cohabitation qui tourne toute seule, par automatisme.",
+    "p2": "La routine n'est pas l'ennemie de l'amour : au contraire, un couple a besoin de repères et de sécurité. Le problème commence quand il ne reste <strong class=\"text-foreground\">que</strong> la routine : quand le désir, la complicité et l'envie de projeter ont laissé place à une simple cohabitation qui tourne toute seule, par automatisme.",
     "p3": "Ce test n'est pas un verdict et ne décide pas à votre place. Il vous aide à mettre des mots sur votre ressenti et à distinguer un amour qui a mûri d'une relation qui ne tient plus que par inertie. Si la question d'un vrai tournant se pose, notre <a href=\"/test-dois-je-divorcer/\">test « dois-je divorcer ? »</a> peut prolonger la réflexion."
   },
   "section2": {
@@ -21,7 +21,7 @@
   },
   "section3": {
     "title": "Comment interpréter votre résultat",
-    "intro": "Chaque réponse vaut de 0 à 3 points, pour un total sur 60. Plus votre score est élevé, plus l'habitude prend le pas sur l'amour. Voici comment lire votre résultat — un indicateur pour réfléchir, pas une sentence.",
+    "intro": "Chaque réponse vaut de 0 à 3 points, pour un total sur 60. Plus votre score est élevé, plus l'habitude prend le pas sur l'amour. Voici comment lire votre résultat : un indicateur pour réfléchir, pas une sentence.",
     "headerScore": "Score total",
     "headerLevel": "Ce qui domine",
     "headerAnalysis": "Ce que cela signifie",
@@ -45,13 +45,13 @@
     "pillar1Title": "1. L'usure du quotidien",
     "pillar1Text": "Travail, enfants, tâches, fatigue : la logistique dévore le temps et l'énergie du couple. On finit par gérer une vie commune plutôt que de la vivre, et les moments à deux passent en dernier, après tout le reste.",
     "pillar2Title": "2. La disparition de la nouveauté",
-    "pillar2Text": "Au début, tout est découverte, et le cerveau libère de la dopamine — d'où les fameux papillons. Avec le temps, on croit avoir « fait le tour » de l'autre. Sans nouveauté ni surprise, l'excitation retombe et la routine s'installe.",
+    "pillar2Text": "Au début, tout est découverte, et le cerveau libère de la dopamine : d'où les fameux papillons. Avec le temps, on croit avoir « fait le tour » de l'autre. Sans nouveauté ni surprise, l'excitation retombe et la routine s'installe.",
     "pillar3Title": "3. L'arrêt des efforts et des attentions",
     "pillar3Text": "On se croit « acquis », alors on cesse de séduire, de complimenter, de prendre soin de l'autre. Or l'amour se nourrit précisément de ces petites attentions. Quand elles s'arrêtent, souvent parce que l'un ou l'autre ne fait plus vraiment d'<a href=\"/blog/copain-ne-fait-pas-effort/\">efforts</a>, le lien se refroidit."
   },
   "section5": {
     "title": "Les signes que l'habitude a pris le dessus",
-    "intro": "Au-delà du score, certains signaux ne trompent pas. Si vous en reconnaissez plusieurs, ce n'est pas forcément la fin — mais c'est le moment de réagir avant que la distance ne devienne irréversible.",
+    "intro": "Au-delà du score, certains signaux ne trompent pas. Si vous en reconnaissez plusieurs, ce n'est pas forcément la fin, mais c'est le moment de réagir avant que la distance ne devienne irréversible.",
     "pillar1Title": "Le désir et la tendresse ont disparu",
     "pillar1Text": "Plus de gestes spontanés, plus d'attirance, une intimité devenue rare ou mécanique. Quand on ne se touche plus et qu'on ne se désire plus, c'est souvent l'un des premiers signaux que la flamme faiblit.",
     "pillar2Title": "Les échanges se limitent à l'intendance",
@@ -59,7 +59,7 @@
     "pillar3Title": "Vous restez par peur, pas par envie",
     "pillar3Text": "La peur de la solitude, du regard des autres, de tout recommencer, ou des contraintes matérielles pèse plus lourd que l'envie d'être ensemble. Rester « parce que c'est plus simple » est le marqueur le plus clair d'une relation par habitude.",
     "pillar4Title": "Vous ne vous manquez plus",
-    "pillar4Text": "Quand vous êtes séparés, l'autre ne vous manque pas — parfois, vous savourez même ces moments seul·e. L'indifférence, plus encore que le conflit, est le signe que l'attachement s'est distendu."
+    "pillar4Text": "Quand vous êtes séparés, l'autre ne vous manque pas : parfois, vous savourez même ces moments seul·e. L'indifférence, plus encore que le conflit, est le signe que l'attachement s'est distendu."
   },
   "section6": {
     "title": "Amour ou habitude : que faire de votre résultat ?",
@@ -74,14 +74,14 @@
     "do1Title": "Raviver la flamme, volontairement",
     "do1Text": "Recréez de la nouveauté : sorties, surprises, projets, expériences inédites à deux. Reprenez les petites attentions du début. Il existe de nombreuses façons de <a href=\"/blog/sauver-son-couple/\">raviver un couple</a> qui s'endort, à condition de s'y remettre à deux.",
     "do2Title": "Vous parler vraiment",
-    "do2Text": "Osez la conversation honnête : « Où en es-tu de nous ? De quoi as-tu envie ? ». Redécouvrir la façon dont chacun aime et se sent aimé — par exemple avec notre <a href=\"/test-langage-amour-couple/\">test des langages de l'amour</a> — peut relancer la connexion.",
+    "do2Text": "Osez la conversation honnête : « Où en es-tu de nous ? De quoi as-tu envie ? ». Redécouvrir la façon dont chacun aime et se sent aimé : par exemple avec notre <a href=\"/test-langage-amour-couple/\">test des langages de l'amour</a> : peut relancer la connexion.",
     "do3Title": "Vous accorder un temps de réflexion (ou de l'aide)",
     "do3Text": "Si le doute persiste, prenez le temps de démêler l'amour de la peur. Se demander <a href=\"/blog/comment-savoir-si-cest-le-bon/\">si c'est vraiment le bon</a>, ou consulter un thérapeute de couple, aide à décider en conscience plutôt que de subir."
   },
   "section7": {
     "title": "À retenir : la routine n'est pas une fatalité",
-    "p1": "Se poser la question « amour ou habitude ? » n'est pas le signe que tout est fini — c'est au contraire la preuve que quelque chose en vous tient encore à cette relation et refuse de la laisser s'éteindre en silence.",
-    "p2": "La plupart des couples traversent des phases où l'habitude prend le dessus. Ce qui fait la différence, ce n'est pas d'y échapper, c'est de le remarquer et d'agir. Un amour peut se raviver ; encore faut-il le décider à deux — et c'est aussi ce que mesure notre <a href=\"/test-couple-sain/\">test de couple sain</a>.",
+    "p1": "Se poser la question « amour ou habitude ? » n'est pas le signe que tout est fini : c'est au contraire la preuve que quelque chose en vous tient encore à cette relation et refuse de la laisser s'éteindre en silence.",
+    "p2": "La plupart des couples traversent des phases où l'habitude prend le dessus. Ce qui fait la différence, ce n'est pas d'y échapper, c'est de le remarquer et d'agir. Un amour peut se raviver ; encore faut-il le décider à deux, et c'est aussi ce que mesure notre <a href=\"/test-couple-sain/\">test de couple sain</a>.",
     "p3": "Écoutez ce que ce test réveille en vous. Votre ressenti, plus que votre score, est la meilleure boussole pour savoir ce que vous voulez vraiment vivre."
   },
   "jsonLd": {

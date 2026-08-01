@@ -159,5 +159,11 @@
     "shortTitle": "Couple activities",
     "description": "Find couple activities near you. Free geolocated tool: filter by budget, atmosphere and distance for unforgettable date ideas.",
     "metaDescription": "Find couple activities near you. Free geolocated tool: filter by budget, atmosphere and distance for unforgettable date ideas."
+  },
+  "quizTentation": {
+    "title": "Temptation Island Quiz: Would You Survive It?",
+    "shortTitle": "Temptation Quiz",
+    "description": "12 days on the island, 30 tempting situations: will you last until the final bonfire?",
+    "metaDescription": "Free online Temptation Island quiz: 12 days on the island, a temptation every day and a final bonfire. Would your relationship survive the test?"
   }
 }

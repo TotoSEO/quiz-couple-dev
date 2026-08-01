@@ -50,6 +50,7 @@ export const ROUTE_SLUGS = {
   testInfidelite: { fr: 'test-infidelite-couple' },
   testBebe: { fr: 'test-pret-pour-bebe' },
   zamours: { fr: 'quiz-couple-les-zamours' },
+  quizTentation: { fr: 'quiz-ile-de-la-tentation', en: 'temptation-island-quiz', es: 'quiz-la-isla-de-las-tentaciones', de: 'temptation-island-quiz', it: 'quiz-temptation-island' },
   admin: { fr: 'admin', en: 'admin', es: 'admin', de: 'admin', it: 'admin' },
   activities: { fr: 'activites-autours-de-moi', en: 'couple-activities-near-me', es: 'actividades-en-pareja-cerca', de: 'paar-aktivitaeten-in-der-naehe', it: 'attivita-di-coppia-vicino' },
   contact: { fr: 'contact', en: 'contact', es: 'contacto', de: 'kontakt', it: 'contatto' },
@@ -94,6 +95,7 @@ export const QUIZ_FEATURED = {
   testInfidelite:    { file: 'infidelity-hidden-phone',   old: null,                  alt: { fr: 'Alliance retirée à côté d\'un téléphone au message caché', en: 'A wedding ring removed beside a phone with a hidden message', es: 'Un anillo de boda junto a un teléfono con un mensaje oculto', de: 'Ein abgelegter Ehering neben einem Handy mit versteckter Nachricht', it: 'Una fede tolta accanto a un telefono con un messaggio nascosto' } },
   testBebe:          { file: 'baby-booties-teddy',        old: null,                  alt: { fr: 'Chaussons de bébé, ourson et tétine sur une couverture blanche', en: 'Baby booties, a teddy bear and a pacifier on a white blanket', es: 'Patucos de bebé, un osito y un chupete sobre una manta blanca', de: 'Babyschühchen, ein Teddybär und ein Schnuller auf weißer Decke', it: 'Scarpine, un orsacchiotto e un ciuccio su una coperta bianca' } },
   zamours:           { file: 'conversation-cards',         old: null,                  alt: { fr: 'Cartes de questions en éventail pour jouer aux Z\'Amours en couple', en: 'Fanned-out question cards for playing the Newlywed Game as a couple', es: 'Tarjetas de preguntas en abanico para jugar en pareja', de: 'Aufgefächerte Fragekarten für das Paar-Quizspiel', it: 'Carte con domande a ventaglio per giocare in coppia' } },
+  quizTentation:     { file: 'island-bonfire',              old: null,                  alt: { fr: 'Feu de camp sur une plage tropicale la nuit, avec palmiers et pleine lune', en: 'Bonfire on a tropical beach at night, with palm trees and a full moon', es: 'Hoguera en una playa tropical de noche, con palmeras y luna llena', de: 'Lagerfeuer an einem tropischen Strand bei Nacht, mit Palmen und Vollmond', it: 'Falò su una spiaggia tropicale di notte, con palme e luna piena' } },
 };
 
 // Map route keys to their page template and translation namespaces
@@ -132,6 +134,7 @@ export const ROUTE_CONFIG = {
   testInfidelite: { template: 'quiz-infidelite', namespaces: ['quiz-infidelite', 'quizzes', 'quizGames', 'gd', 'common'], frOnly: true },
   testBebe: { template: 'quiz-bebe', namespaces: ['quiz-bebe', 'quizzes', 'quizGames', 'gd', 'common'], frOnly: true },
   zamours: { template: 'quiz-zamours', namespaces: ['quiz-zamours', 'quizzes', 'quizGames', 'gd', 'common'], frOnly: true },
+  quizTentation: { template: 'quiz-tentation', namespaces: ['quiz-tentation', 'quizzes', 'quizGames', 'gd', 'common'] },
   admin: { template: 'admin', namespaces: ['common'] },
   activities: { template: 'activities', namespaces: ['activities', 'common'] },
   contact: { template: 'contact', namespaces: ['contact', 'common'] },
@@ -635,4 +638,5 @@ export const QUIZ_RELATED_ARTICLES = {
   quizAdo:          ['red-flags-homme', 'red-flags-femme'],
   quizMarrant:      ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
   quizKnowledge:    ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
+  quizTentation:    ['red-flags-homme', 'red-flags-femme', 'choses-pas-accepter-couple', 'les-phases-de-la-rupture-chez-l-homme', 'copain-ne-fait-pas-effort'],
 };

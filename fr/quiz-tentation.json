@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "title": "Survivrez-vous à l'île de la tentation ? Le Quiz",
+    "titleHighlight": "l'île de la tentation",
+    "description": "12 jours sur une île paradisiaque, séparé·e de votre partenaire, entouré·e de tentations. Jusqu'où tiendriez-vous ?",
+    "badge": "Quiz non officiel • Gratuit • 5 min"
+  },
+  "section1": {
+    "title": "Le principe : douze jours, une île, et vos limites",
+    "p1": "Depuis plus de vingt ans, <strong class=\"text-foreground\">L'Île de la tentation</strong> pose toujours la même question, la plus simple et la plus vertigineuse qui soit : que reste-t-il d'un couple quand on le sépare, qu'on l'envoie sur une plage de rêve et qu'on l'entoure de célibataires dont c'est le métier de séduire ?",
+    "p2": "Ce quiz vous met à leur place. Vous partez seul·e sur l'île pour un séjour de <strong class=\"text-foreground\">12 jours</strong>. Chaque journée vous confronte à une situation réelle du programme : un dîner un peu trop rapproché, une balade au coucher du soleil, une confidence de trop, une main tendue à 2 h du matin. À vous de choisir ce que vous feriez vraiment.",
+    "p3": "Et comme dans l'émission, tout finit par se savoir : tous les quatre jours, le <strong class=\"text-foreground\">feu de camp</strong> révèle vos images à votre partenaire. Au dernier feu de camp, le verdict tombe, et il ne dépend que de vous."
+  },
+  "section2": {
+    "title": "C'est quoi, L'Île de la tentation ?",
+    "p1": "L'Île de la tentation est l'adaptation française de <em>Temptation Island</em>, un format né aux États-Unis en 2001. En France, l'émission a été diffusée sur TF1 de 2002 à 2008, avant d'être relancée par le groupe M6 sur W9, avec une nouvelle saison tournée au Mexique, du côté de Tulum.",
+    "p2": "Le dispositif n'a quasiment pas changé depuis l'origine, et c'est ce qui fait sa force :",
+    "healthy": "<strong class=\"text-foreground\">La séparation</strong> : des couples non mariés partent sur une île, mais vivent dans deux villas distinctes : les femmes entourées d'une dizaine de tentateurs, les hommes d'une dizaine de tentatrices.",
+    "toxic": "<strong class=\"text-foreground\">Le feu de camp</strong> : chaque soir, le rituel le plus redouté. Chacun découvre, sur grand écran, une sélection d'images de son/sa partenaire sur l'autre plage. C'est là que les masques tombent.",
+    "quote": "Sur l'île, personne ne triche longtemps : douze jours suffisent à révéler ce qu'un couple préférait ne pas regarder en face."
+  },
+  "section3": {
+    "title": "Comment lire votre score de tentation",
+    "intro": "Chaque situation vaut de 0 à 3 points de tentation. Sur 12 jours, le total va de 0 à 36 : plus votre score est bas, mieux vous avez résisté. Votre taux de résistance est affiché à la fin, avec le verdict du dernier feu de camp.",
+    "headerScore": "Score de tentation",
+    "headerLevel": "Verdict du feu de camp",
+    "headerAnalysis": "Ce que cela dit de vous",
+    "row1Score": "0 à 7 points",
+    "row1Level": "Inébranlable",
+    "row1Analysis": "L'île n'a rien pu contre vous. Vous avez posé vos limites dès le premier jour et vous vous y êtes tenu·e.",
+    "row2Score": "8 à 15 points",
+    "row2Level": "Solide",
+    "row2Analysis": "Troublé·e par moments, mais jamais dépassé·e. Vous rentreriez la conscience tranquille.",
+    "row3Score": "16 à 23 points",
+    "row3Level": "En danger",
+    "row3Analysis": "La ligne est devenue floue. Rien d'irréparable, mais vous n'avez pas vraiment empêché les choses.",
+    "row4Score": "24 à 31 points",
+    "row4Level": "Le feu de camp va faire mal",
+    "row4Analysis": "Vous avez cédé plusieurs fois. Sur l'île, vous vous comportez davantage en célibataire qu'en personne en couple.",
+    "row5Score": "32 à 36 points",
+    "row5Level": "Vous repartez seul·e",
+    "row5Analysis": "Il n'y a pas eu de suspense : vous étiez déjà ailleurs avant même d'arriver sur l'île."
+  },
+  "section4": {
+    "title": "Pourquoi l'île fait craquer même les couples solides",
+    "p1": "Ce qui rend le format aussi redoutable, ce n'est pas la beauté des célibataires : c'est le dispositif. L'île réunit, en douze jours, tous les ingrédients qui font vaciller un attachement, et c'est précisément ce que ce quiz reproduit.",
+    "p2": "Trois mécanismes expliquent la plupart des dérapages vus à l'écran :",
+    "pillar1Title": "1. La rupture des repères",
+    "pillar1Text": "Plus de quotidien, plus d'entourage, plus d'horaires : loin de sa vie, on redevient une version de soi sans témoin. Ce sentiment de parenthèse, « ce qui se passe sur l'île reste sur l'île », désactive une bonne partie des freins habituels.",
+    "pillar2Title": "2. L'attention à l'état pur",
+    "pillar2Text": "Un tentateur n'a ni vaisselle, ni facture, ni fatigue à partager. Il n'a qu'une mission : vous écouter et vous admirer. Face à des années de routine, cette attention concentrée agit comme un révélateur des manques.",
+    "pillar3Title": "3. Le doute fabriqué par les images",
+    "pillar3Text": "Le feu de camp ne montre jamais tout : il montre une sélection. Beaucoup de candidats craquent non pas par désir, mais par représailles, après avoir vu quelques secondes qui les ont blessés. La <a href=\"/test-jalousie-couple/\">jalousie</a> devient alors le vrai moteur du dérapage."
+  },
+  "section5": {
+    "title": "Ce que votre résultat dit vraiment de votre couple",
+    "intro": "Ce quiz est un jeu, pas un diagnostic. Mais la façon dont vous répondez en dit souvent plus long que le score lui-même. Voici comment interpréter ce qui remonte à la surface.",
+    "pillar1Title": "Être tenté·e n'est pas trahir",
+    "pillar1Text": "Ressentir de l'attirance pour quelqu'un d'autre est humain et ne dit rien de la solidité de votre couple. Ce qui compte, c'est ce que vous en faites : les limites que vous posez, et ce que vous choisissez de raconter à votre partenaire.",
+    "pillar2Title": "La tentation révèle un manque, elle ne le crée pas",
+    "pillar2Text": "Si vous avez craqué sur les questions liées aux compliments ou à l'écoute, ce n'est pas anodin : c'est souvent le signe d'un besoin non comblé dans votre relation. Un besoin qui existe aussi hors de l'île, et qui se traite chez vous.",
+    "pillar3Title": "La routine est le meilleur allié de la tentation",
+    "pillar3Text": "Les couples qui vacillent le plus vite sont rarement les plus malheureux : ce sont les plus endormis. Si ce quiz vous a mis mal à l'aise, notre <a href=\"/test-amour-ou-habitude/\">test amour ou habitude</a> prolonge très bien la réflexion.",
+    "pillar4Title": "Un score bas n'est pas un brevet d'éternité",
+    "pillar4Text": "Résister douze jours ne garantit rien pour les dix ans à venir. Un couple solide n'est pas un couple à l'abri : c'est un couple qui continue de s'entretenir. C'est exactement ce que mesure notre <a href=\"/test-couple-sain/\">test de couple sain</a>."
+  },
+  "section6": {
+    "title": "Comment jouer (et à quoi s'attendre)",
+    "p1": "Le quiz se joue seul·e, en cinq minutes, sans inscription. Vous entrez votre prénom et celui de votre partenaire, puis vous vivez vos 12 jours sur l'île. Les 12 situations sont tirées au sort parmi <strong class=\"text-foreground\">30 scénarios différents</strong> : chaque nouveau séjour est donc une autre histoire.",
+    "p2": "Un conseil avant de commencer : jouez honnêtement. Répondre ce qu'il « faudrait » répondre donne un score parfait et un résultat sans intérêt. L'exercice n'a de valeur que si vous choisissez ce que vous feriez vraiment, seul·e, à 2 h du matin, à 8 000 km de chez vous.",
+    "dontTitle": "Ce que ce quiz n'est pas",
+    "dont1Title": "Un test de fidélité scientifique",
+    "dont1Text": "Aucun questionnaire ne peut prédire un comportement réel. Ce quiz s'inspire du format télé pour vous faire réfléchir, pas pour rendre un verdict sur votre couple ou sur celui de quelqu'un d'autre.",
+    "dont2Title": "Une arme à retourner contre votre partenaire",
+    "dont2Text": "Faire passer le quiz à l'autre pour lui reprocher son score est le meilleur moyen de créer un conflit à partir d'un jeu. Comparez vos résultats si vous en avez envie, mais parlez de ce que vous avez ressenti, pas des points.",
+    "doTitle": "La bonne façon d'en profiter",
+    "do1Title": "Jouez chacun de votre côté, puis comparez",
+    "do1Text": "C'est la version la plus intéressante : faites le séjour séparément, puis découvrez vos deux verdicts. Les écarts de réponses sont souvent de très bons sujets de conversation.",
+    "do2Title": "Relancez un séjour pour d'autres situations",
+    "do2Text": "Avec 30 scénarios pour 12 jours, une deuxième partie vous confrontera à des dilemmes inédits, et parfois plus difficiles que les premiers.",
+    "do3Title": "Prolongez avec un vrai test de couple",
+    "do3Text": "Si le quiz a soulevé des questions de fond, enchaînez avec un outil plus sérieux comme notre <a href=\"/tester-son-couple/\">test de couple</a>, pensé pour mesurer la solidité réelle de votre relation."
+  },
+  "section7": {
+    "title": "Alors, survivriez-vous à l'île de la tentation ?",
+    "p1": "Tout le monde se croit incorruptible depuis son canapé. C'est facile de juger un candidat qui craque à la télévision : beaucoup moins de se projeter, jour après jour, dans les mêmes situations.",
+    "p2": "Ce quiz ne cherche pas à vous piéger : il cherche à vous faire répondre honnêtement à une question que peu de couples osent se poser. Douze jours, une île, aucune surveillance. Que feriez-vous, vraiment ?",
+    "p3": "Il ne reste plus qu'une chose à faire : embarquer pour l'île et attendre le dernier feu de camp."
+  },
+  "faqTitle": "Questions fréquentes sur L'Île de la tentation",
+  "disclaimer": "Quiz indépendant et non officiel, proposé à titre de divertissement. Quiz Couple n'est affilié ni à la production de L'Île de la tentation / Temptation Island, ni aux chaînes qui diffusent le programme. Les noms cités appartiennent à leurs propriétaires respectifs.",
+  "jsonLd": {
+    "quizName": "Quiz Île de la Tentation",
+    "quizDescription": "Quiz inspiré de l'émission L'Île de la tentation : 12 jours sur l'île, 30 situations de tentation et un dernier feu de camp qui décide de tout.",
+    "faq1Q": "C'est quoi le principe de L'Île de la tentation ?",
+    "faq1A": "Des couples partent sur une île paradisiaque mais vivent séparément, chacun entouré d'une dizaine de célibataires appelés tentateurs et tentatrices. Tous les soirs, le rituel du feu de camp leur montre des images de leur partenaire sur l'autre plage. Au dernier feu de camp, chaque couple décide s'il repart ensemble ou séparément.",
+    "faq2Q": "Ce quiz est-il officiel ?",
+    "faq2A": "Non. Il s'agit d'un quiz gratuit et indépendant, inspiré du principe de l'émission, sans aucun lien avec la production ni avec les chaînes qui la diffusent.",
+    "faq3Q": "Combien de questions compte le quiz ?",
+    "faq3A": "Chaque séjour vous fait vivre 12 jours, soit 12 situations tirées au sort parmi 30 scénarios différents. Vous pouvez donc rejouer plusieurs fois sans retomber sur les mêmes dilemmes.",
+    "faq4Q": "Où et quand regarder L'Île de la tentation ?",
+    "faq4A": "L'émission a été diffusée sur TF1 de 2002 à 2008, puis relancée sur W9. Le format existe aussi dans de nombreux pays sous le nom Temptation Island, notamment en Italie sur Canale 5, en Espagne sous le titre La isla de las tentaciones et en Allemagne sur RTL."
+  }
+}
