@@ -90,6 +90,13 @@
     "reminderText": "Este test es puramente indicativo. No es de ninguna manera un resultado exacto y preciso, y no debe usarse para reemplazar el consejo profesional. Si crees que tu relación es realmente tóxica o incluso peligrosa, contacta a especialistas reales.",
     "retakeTest": "Repetir el test"
   },
+  "pervers": {
+    "introQuestion": "Te haces esta pregunta:",
+    "introQuote": "«¿Estoy con un narcisista… o estoy exagerando?»",
+    "introDesc": "Si esta pregunta vuelve una y otra vez, nunca es casualidad. El narcisismo perverso no se reconoce por una discusión aislada, sino por patrones repetidos que instalan la duda, la culpa y la pérdida de autoestima.",
+    "disclaimer": "Este test no es ni un diagnóstico ni un juicio.",
+    "disclaimerDesc": "Es una herramienta de reflexión amable para poner palabras a lo que estás viviendo de verdad."
+  },
   "question": {
     "chooseAnswer": "¡elige tu respuesta!",
     "itsTurnOf": "Es el turno de",

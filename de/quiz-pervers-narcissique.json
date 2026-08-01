@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "Bist du mit einem Narzissten zusammen?",
+    "titleHighlight": "Narzissten",
+    "description": "Eine vertrauliche, einfühlsame Selbsteinschätzung, um dem, was du erlebst, Worte zu geben.",
+    "badge": "Narzissten-Test • Kostenlos • 5 Min."
+  },
+  "section1": {
+    "title": "Warum verspürst du das Bedürfnis, diesen Test zu machen?",
+    "p1": "Schon danach zu suchen, nach einem <strong class=\"text-foreground\">Narzissten-Test für die Beziehung</strong>, ist selten Zufall. Man fragt sich nicht, ob man sein Leben mit einem Manipulator teilt, wenn alles gut läuft. Wenn du hier bist, flüstert dir schon länger eine leise Stimme zu, dass etwas nicht stimmt, ohne dass du es wirklich benennen kannst.",
+    "p2": "Der Kern einer Beziehung mit einem Narzissten ist nicht die spektakuläre Gewalt: Es ist der <strong class=\"text-foreground\">ständige Zweifel</strong>. « Bin ich zu empfindlich? Bin ich das Problem? Übertreibe ich? » Dieser mentale Nebel ist kein Zufall: Genau das ist der Effekt, den die Manipulation anstrebt, indem sie nach und nach das Vertrauen in deine eigene Wahrnehmung untergräbt.",
+    "p3": "Du suchst hier einen äußeren, objektiven Blick, weil von innen alles verschwimmt. Dieser Test ersetzt nicht die Einschätzung einer Fachperson, aber er kann dir helfen, klarer zu sehen und eine gewöhnliche <a href=\"/de/toxische-beziehung-test/\">toxische Beziehung</a> von echtem seelischem Missbrauch zu unterscheiden."
+  },
+  "section2": {
+    "title": "Was ist ein Narzisst (oder „narzisstischer Perverser“) eigentlich genau?",
+    "p1": "Der Begriff <em>narzisstischer Perverser</em>, von der Psychiaterin Marie-France Hirigoyen bekannt gemacht, bezeichnet eine Person, die ein narzisstisches Bedürfnis nach Dominanz mit einer perversen Beziehungsweise verbindet: Sie nährt sich vom anderen, saugt dessen Energie und Selbstwert aus, ohne je echte Schuld zu empfinden.",
+    "p2": "Vorsicht jedoch, dieses Etikett nicht zu schnell zu vergeben. Ein Ego zu haben, egoistisch zu sein oder eine schwierige Phase zu durchleben macht niemanden zum Narzissten. Der Unterschied liegt in der <strong class=\"text-foreground\">Absicht</strong> und der <strong class=\"text-foreground\">Wiederholung</strong>:",
+    "healthy": "<strong class=\"text-foreground\">Eine einfach ungeschickte oder selbstbezogene Person</strong> kann verletzen, ohne es zu wollen, aber sie ist fähig, es zu bemerken, sich aufrichtig zu entschuldigen und ihr Verhalten zu ändern.",
+    "toxic": "<strong class=\"text-foreground\">Ein Narzisst</strong> hingegen instrumentalisiert: Die Beziehung ist kein Band unter Gleichen, sondern ein Machtverhältnis, in dem dein Leiden nichts gegen sein Kontrollbedürfnis zählt.",
+    "quote": "Der Narzisst sucht nicht zuerst, geliebt zu werden: Er sucht zu kontrollieren. Und er sorgt dafür, dass du die Verantwortung für das Leid trägst, das er dir zufügt."
+  },
+  "section3": {
+    "title": "So liest du dein Ergebnis",
+    "intro": "Jede Antwort ist 0 bis 3 Punkte wert, insgesamt 60 möglich. So liest du deine Punktzahl. Denk daran: Es ist ein Hinweis auf eine Dynamik, keine Diagnose, aber ein hoher Wert sollte immer ernst genommen werden.",
+    "headerScore": "Gesamtpunktzahl",
+    "headerLevel": "Alarmstufe",
+    "headerAnalysis": "Was das bedeutet",
+    "row1Score": "0 bis 14 Punkte",
+    "row1Level": "Kein besorgniserregendes Anzeichen",
+    "row1Analysis": "Deine Beziehung scheint auf Respekt zu beruhen. Spannungen gibt es überall, aber nicht die Mechanik des Missbrauchs.",
+    "row2Score": "15 bis 29 Punkte",
+    "row2Level": "Signale, die du beobachten solltest",
+    "row2Analysis": "Einige Verhaltensweisen verdienen deine Wachsamkeit. Setze eine klare Grenze und beobachte, wie der andere reagiert.",
+    "row3Score": "30 bis 44 Punkte",
+    "row3Level": "Deutliche Manipulation",
+    "row3Analysis": "Mehrere Kontrollmechanismen sind installiert. Es ist wichtig, dir Hilfe zu holen und anzufangen, dich zu schützen.",
+    "row4Score": "45 bis 60 Punkte",
+    "row4Level": "Stark auf einen Narzissten hindeutend",
+    "row4Analysis": "Das Bild kommt dem narzisstischen Missbrauch nahe. Deine emotionale, sogar körperliche Sicherheit muss Vorrang haben."
+  },
+  "section4": {
+    "title": "Die Mechanik des Missbrauchs: Wie man in die Falle gerät",
+    "p1": "Wenn dein Wert hoch ist, nagt vielleicht eine Frage an dir: <em>« Wie konnte ich das zulassen? »</em>. Diese Schuld ist ungerecht. Man „wählt“ nicht, unter die Kontrolle eines Narzissten zu geraten: Man gleitet hinein, durch einen erschreckend wirksamen Prozess.",
+    "p2": "Der Missbrauch setzt sich fast immer in drei Phasen fest:",
+    "pillar1Title": "1. Das Love Bombing (die ideale Phase)",
+    "pillar1Text": "Am Anfang ist es ein Märchen. Ständige Aufmerksamkeit, Komplimente, Zukunftspläne, das Gefühl, endlich die Seelenverwandte gefunden zu haben. Diese intensive Verführung schafft eine starke Bindung … und eine wunderbare Erinnerung, an die du dich später klammerst, wenn alles schiefgeht.",
+    "pillar2Title": "2. Die schleichende Abwertung",
+    "pillar2Text": "Sobald du gebunden bist, fällt die Maske Stück für Stück. Eine Kritik „zu deinem Besten“, eine als Humor getarnte Spitze, ein demütigender Vergleich. Deine Toleranzschwelle sinkt, ohne dass du es merkst, und du findest am Ende „normal“, was du am Anfang nie akzeptiert hättest.",
+    "pillar3Title": "3. Die intermittierende Verstärkung (die Sucht)",
+    "pillar3Text": "Das ist die stärkste Falle. Ein Narzisst ist nicht zu 100 % unangenehm: Er wechselt zwischen warm und kalt, zwischen Verschmelzungsmomenten und eisigen Trennungen. Diese unvorhersehbaren Zuwendungen wirken wie eine Droge auf das Gehirn und erzeugen eine echte <a href=\"/de/blog/emotionale-abhaengigkeit-in-beziehungen/\">emotionale Abhängigkeit</a>."
+  },
+  "section5": {
+    "title": "Die Anzeichen, die dich wirklich alarmieren sollten",
+    "intro": "Über die Punktzahl hinaus sind es bestimmte präzise Mechanismen, die den narzisstischen Missbrauch verraten. Wenn du mehrere davon wiedererkennst, ist deine Wachsamkeit berechtigt. Viele überschneiden sich übrigens mit den zerstörerischsten <a href=\"/de/blog/red-flags-bei-einem-mann/\">Red Flags</a> einer Beziehung.",
+    "pillar1Title": "Das Gaslighting (das Leugnen deiner Realität)",
+    "pillar1Text": "« Das habe ich nie gesagt », « du erfindest das », « du bist paranoid ». Der Narzisst leugnet Tatsachen, die du erlebt hast, bis du an deinem Gedächtnis und deinem Verstand zweifelst. Es ist eine stille psychische Gewalt, die die Identität angreift.",
+    "pillar2Title": "Die Umkehrung der Schuld",
+    "pillar2Text": "Was auch geschieht, es ist immer deine Schuld. Er gibt sich systematisch als Opfer, wendet deine Vorwürfe gegen dich, und am Ende entschuldigst du dich … für Dinge, die du nicht getan hast.",
+    "pillar3Title": "Die Isolation und die Kontrolle",
+    "pillar3Text": "Nach und nach „verdienen“ deine Freunde dich nicht, deine Familie „mischt sich in alles ein“. Der Narzisst schneidet dich von deinem Rückhalt ab und überwacht deine Zeit, dein Geld oder deine Kontakte, manchmal unter dem Deckmantel von Liebe oder <a href=\"/de/eifersucht-test-paar/\">Eifersucht</a>.",
+    "pillar4Title": "Das Doppelgesicht und die fehlende Empathie",
+    "pillar4Text": "In der Öffentlichkeit charmant, privat verächtlich: « mir würde niemand glauben ». Und deinem Leid gegenüber begegnest du nur einer verstörenden Kühle, manchmal Gereiztheit. Dieses echte Fehlen von Empathie ist die Signatur des Narzissten."
+  },
+  "section6": {
+    "title": "Der Test deutet auf wahrscheinlichen Missbrauch hin: Was tun?",
+    "p1": "Denk zuerst daran, dass dieser Test ein Werkzeug zum Nachdenken ist, kein Urteil. Er ersetzt nie die Einschätzung einer Fachperson. Wenn du glaubst, in einer beherrschenden, sogar gefährlichen Beziehung zu leben, umgib dich mit wirklich kompetenten Menschen.",
+    "p2": "Sich der Situation bewusst zu werden ist der schwierigste Schritt, und du hast ihn gerade getan. Ein hoher Wert bedeutet nicht „geh sofort“ (außer bei unmittelbarer körperlicher Gefahr), aber er bedeutet, dass der Status quo nicht mehr haltbar ist. Hier ist, wo du anfangen kannst.",
+    "dontTitle": "Was du besser vermeidest",
+    "dont1Title": "Ihn „retten“ oder ändern zu wollen",
+    "dont1Text": "Du wirst nie der Therapeut deines Partners sein. Narzisstische Perversion ist ein tiefes Funktionsmuster, an dem nur die betroffene Person selbst arbeiten könnte, was äußerst selten ist. Dich zu erschöpfen, um ihn zu reparieren, wird dich nur weiter beschädigen.",
+    "dont2Title": "Ihn mit diesem Test zu konfrontieren",
+    "dont2Text": "Dieses Ergebnis vorzuhalten wird fast sicher eine Krise, ein Leugnen oder eine Umkehr auslösen („die Manipulatorin bist du“). Behalte es für dich, als inneren Kompass, nicht als Beweis zum Verhandeln.",
+    "doTitle": "Was hilfreich ist",
+    "do1Title": "Die Fakten dokumentieren",
+    "do1Text": "Führe ein sachliches Tagebuch über die Worte und Szenen, die dich verletzen. „In Ruhe“ nachzulesen, was wirklich geschah, ist das beste Gegenmittel gegen den Zweifel, den das Gaslighting in dir sät.",
+    "do2Title": "Die Isolation durchbrechen",
+    "do2Text": "Sprich mit einer Vertrauensperson und möglichst mit einer Fachperson (Psychologe) oder einer auf psychische Gewalt spezialisierten Beratungsstelle. Die Dinge laut auszusprechen nimmt ihnen einen Teil ihrer Macht.",
+    "do3Title": "Eine Grenze setzen und deine Sicherheit vorbereiten",
+    "do3Text": "Setze eine einfache, feste Grenze bei einem inakzeptablen Verhalten und beobachte dann: Ein gesunder Partner passt sich an, ein Narzisst eskaliert. Es gibt <a href=\"/de/blog/grenzen-beziehung-nicht-akzeptieren/\">Dinge, die man nie akzeptieren sollte</a>, und du hast jedes Recht, dich zu schützen."
+  },
+  "section7": {
+    "title": "Zum Mitnehmen: Dein Gefühl ist ein Kompass",
+    "p1": "Dieser Narzissten-Test ist kein Gerichtsurteil: Er ist ein Spiegel. Wenn du diese Fragen mit einem Kloß im Hals beantwortet hast, dann weiß dein Körper bereits, was dein Kopf noch schwer zugeben kann.",
+    "p2": "Eine Liebesbeziehung soll ein Zufluchtsort sein, kein Schlachtfeld, auf dem man auf Eierschalen geht. Die Verwirrung, die du fühlst, ist keine Schwäche: Sie ist das Zeichen, dass du seit viel zu langer Zeit versuchst, dich an eine unnormale Situation anzupassen. Du hast das Recht, respektiert, gehört und sicher zu sein, was auch unser <a href=\"/de/gesunde-beziehung-test/\">Test für eine gesunde Beziehung</a> misst.",
+    "p3": "Wenn dich dieses Ergebnis beunruhigt, trage dieses Gewicht nicht allein. Mit jemandem darüber zu sprechen ist schon ein erster Schritt aus dem Missbrauch heraus."
+  },
+  "jsonLd": {
+    "quizName": "Narzissten-Test",
+    "quizDescription": "Finde mit dieser Selbsteinschätzung aus 20 Fragen heraus, ob dein Partner die Anzeichen eines Narzissten zeigt.",
+    "faq1Q": "Wie erkennt man einen Narzissten in der Beziehung?",
+    "faq1A": "Wiederkehrende Anzeichen sind das Love Bombing am Anfang, die schleichende Abwertung, das Gaslighting (das Leugnen deiner Realität), die Umkehrung der Schuld, die Isolation, die Kontrolle und ein Mangel an Empathie angesichts deines Leids.",
+    "faq2Q": "Was ist der Unterschied zwischen einem Narzissten und einer einfach egoistischen Person?",
+    "faq2A": "Eine egoistische oder ungeschickte Person kann sich hinterfragen, sich entschuldigen und sich ändern. Der Narzisst manipuliert absichtlich und wiederholt, ohne echte Schuld, und instrumentalisiert den anderen.",
+    "faq3Q": "Ist dieser Narzissten-Test zuverlässig?",
+    "faq3A": "Er ist ein Werkzeug zum Nachdenken und zur Selbsteinschätzung, keine medizinische Diagnose. Ein hoher Wert beweist für sich genommen nichts, aber er lädt dazu ein, mit einer Fachperson zu sprechen und dich zu schützen."
+  }
+}

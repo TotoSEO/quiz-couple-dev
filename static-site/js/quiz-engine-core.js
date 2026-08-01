@@ -635,6 +635,15 @@ var QuizEngine = (function() {
       wrap.appendChild(introBox);
     }
 
+    // Special pervers narcissique quiz intro (sensitive topic — reassure + disclaimer)
+    if (this.quizType === 'pervers') {
+      var pnBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-md mx-auto text-left');
+      pnBox.innerHTML = '<p class="text-sm text-muted-foreground mb-2">' + esc(tg('pervers.introQuestion', 'Vous vous posez la question :')) + '</p>' +
+        '<p class="font-semibold text-foreground mb-3 italic">' + esc(tg('pervers.introQuote', '« Est-ce que je vis avec un pervers narcissique… ou est-ce que j\'exagère ? »')) + '</p>' +
+        '<p class="text-sm text-muted-foreground">' + esc(tg('pervers.disclaimer', 'Ce test n\'est ni un diagnostic, ni un jugement. C\'est un outil de réflexion pour mettre des mots sur ce que vous vivez.')) + '</p>';
+      wrap.appendChild(pnBox);
+    }
+
     // Special divorce quiz intro
     if (this.quizType === 'divorce') {
       var disclaimerBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-md mx-auto text-left');

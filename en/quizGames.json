@@ -90,6 +90,13 @@
     "reminderText": "This test is purely indicative. It is by no means an exact and precise result, and should not be used to replace professional advice. If you believe your relationship is truly toxic or even dangerous, contact real specialists.",
     "retakeTest": "Retake the test"
   },
+  "pervers": {
+    "introQuestion": "You keep asking yourself:",
+    "introQuote": "“Am I living with a narcissist… or am I overreacting?”",
+    "introDesc": "If this question keeps coming back, it is never by chance. Narcissistic abuse is not recognised by a single argument, but by repeated patterns that install doubt, guilt and a loss of self-esteem.",
+    "disclaimer": "This test is neither a diagnosis nor a judgement.",
+    "disclaimerDesc": "It is a caring reflection tool to help you put words on what you are really going through."
+  },
   "question": {
     "chooseAnswer": "choose your answer!",
     "itsTurnOf": "It's",

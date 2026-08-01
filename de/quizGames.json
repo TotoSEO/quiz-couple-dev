@@ -90,6 +90,13 @@
     "reminderText": "Dieser Test ist rein indikativ. Er ist keineswegs ein genaues und präzises Ergebnis und sollte nicht professionelle Beratung ersetzen. Wenn du glaubst, dass deine Beziehung wirklich toxisch oder sogar gefährlich ist, kontaktiere echte Spezialisten.",
     "retakeTest": "Test wiederholen"
   },
+  "pervers": {
+    "introQuestion": "Du stellst dir immer wieder die Frage:",
+    "introQuote": "„Lebe ich mit einem Narzissten… oder übertreibe ich?“",
+    "introDesc": "Wenn diese Frage immer wiederkehrt, ist das nie ein Zufall. Narzisstischer Missbrauch zeigt sich nicht an einem einzelnen Streit, sondern an wiederkehrenden Mustern, die Zweifel, Schuldgefühle und den Verlust des Selbstwerts hervorrufen.",
+    "disclaimer": "Dieser Test ist weder eine Diagnose noch ein Urteil.",
+    "disclaimerDesc": "Er ist ein einfühlsames Reflexionswerkzeug, um dem, was du wirklich erlebst, Worte zu geben."
+  },
   "question": {
     "chooseAnswer": "wähle deine Antwort!",
     "itsTurnOf": "Es ist dran:",

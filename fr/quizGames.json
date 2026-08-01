@@ -90,6 +90,13 @@
     "reminderText": "Ce test est purement indicatif. Il n'est en rien un résultat exact et précis, et ne doit pas servir à remplacer l'avis d'un professionnel. Si vous estimez que votre relation amoureuse est vraiment toxique, voire dangereuse, contactez de vrais spécialistes.",
     "retakeTest": "Refaire le test"
   },
+  "pervers": {
+    "introQuestion": "Vous vous posez la question :",
+    "introQuote": "« Est-ce que je vis avec un pervers narcissique… ou est-ce que j'exagère ? »",
+    "introDesc": "Si cette question revient sans cesse, ce n'est jamais un hasard. La perversion narcissique ne se reconnaît pas à une dispute isolée, mais à des mécanismes répétés qui installent le doute, la culpabilité et la perte d'estime de soi.",
+    "disclaimer": "Ce test n'est ni un diagnostic, ni un jugement.",
+    "disclaimerDesc": "C'est un outil de réflexion bienveillant pour mettre des mots sur ce que vous vivez réellement."
+  },
   "question": {
     "chooseAnswer": "choisis ta réponse !",
     "itsTurnOf": "C'est au tour de",
