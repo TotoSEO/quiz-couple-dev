@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "badge": "Para hacer en pareja 💞",
+    "title": "Test de Compatibilidad Amorosa: ¿Estáis hechos el uno para el otro?",
+    "titleHighlight": "Compatibilidad Amorosa",
+    "description": "Responded cada uno a 20 preguntas sobre lo que de verdad importa — vuestros valores, proyectos y estilo de vida — y descubrid vuestro <strong>porcentaje de compatibilidad amorosa</strong>. Un test real en pareja, gratis y sin registro.",
+    "subtitle": "2 jugadores · 20 preguntas · resultado inmediato en %"
+  },
+  "section1": {
+    "title": "¿Qué es la compatibilidad amorosa?",
+    "p1": "La <strong>compatibilidad amorosa</strong> es el grado de alineación entre dos personas en lo que estructura una vida en pareja: valores, proyectos, dinero, estilo de vida, comunicación e intimidad. No es lo mismo que la atracción: se puede sentir una fuerte química teniendo visiones de vida muy distintas.",
+    "p2": "Dos personas compatibles no son clones: no necesitan compartirlo todo, pero sus <strong>pilares apuntan en la misma dirección</strong>. Esa alineación, más que la pasión inicial, es lo que mejor predice la solidez de una relación a largo plazo.",
+    "p3": "Nuestro <strong>test de compatibilidad amorosa</strong> mide precisamente esa alineación: respondéis cada uno por separado y luego comparamos vuestras respuestas para calcular vuestro porcentaje."
+  },
+  "section2": {
+    "title": "¿Cómo funciona nuestro test de compatibilidad amorosa?",
+    "p1": "El test se juega <strong>en pareja</strong>. Cada uno responde, por turnos, a las mismas 20 preguntas sobre las grandes dimensiones de la relación. No hay respuestas buenas ni malas: lo que cuenta es responder con sinceridad.",
+    "p2": "Al final, comparamos vuestras respuestas. Cada respuesta idéntica revela un punto de alineación. Vuestro <strong>porcentaje de compatibilidad</strong> es la proporción de respuestas en las que estáis en la misma onda, con un veredicto y temas para hablar."
+  },
+  "section3": {
+    "title": "Las grandes dimensiones de la compatibilidad",
+    "pillar1Title": "Los valores",
+    "pillar1Text": "Fidelidad, honestidad, libertad, familia: ¿coinciden vuestros pilares?",
+    "pillar2Title": "Los proyectos",
+    "pillar2Text": "Matrimonio, hijos, dónde vivir: ¿os proyectáis en la misma dirección?",
+    "pillar3Title": "El estilo de vida",
+    "pillar3Text": "Caseros o fiesteros, ritmo, vacaciones: ¿encajan vuestros hábitos?",
+    "pillar4Title": "La comunicación",
+    "pillar4Text": "Gestión del conflicto, contarlo todo o no: ¿habláis el mismo idioma?",
+    "pillar5Title": "La intimidad",
+    "pillar5Text": "Ternura, deseo, necesidad de cercanía: ¿coinciden vuestras expectativas?",
+    "pillar6Title": "La independencia",
+    "pillar6Text": "Fusión o autonomía, tiempo juntos o por separado: ¿qué equilibrio?"
+  },
+  "section4": {
+    "title": "Compatibilidad amorosa o química: ¿cuál es la diferencia?",
+    "p1": "La <strong>química</strong> (la atracción) es inmediata, física y emocional: la chispa del principio. La <strong>compatibilidad</strong> se revela con el tiempo, cuando hay que tomar decisiones, gestionar el día a día y ceder.",
+    "p2": "Muchas parejas muy atraídas acaban separándose porque sus pilares no encajan. Al contrario, una compatibilidad sólida ayuda a superar las tormentas. Lo ideal es tener ambas — pero si hay que apostar a largo plazo, la compatibilidad es el mejor indicador."
+  },
+  "section5": {
+    "title": "¿Se puede mejorar la compatibilidad amorosa?",
+    "p1": "En parte, sí. Algunos aspectos son poco negociables (querer o no hijos, por ejemplo), pero muchas diferencias se trabajan: ritmo de vida, dinero, forma de comunicar o de gestionar los conflictos.",
+    "p2": "La clave no es ser idénticos, sino <strong>conocer vuestras diferencias y hablarlas</strong>. Un porcentaje medio no es una condena: es un mapa que muestra dónde estáis alineados y dónde conviene profundizar el diálogo."
+  },
+  "section6": {
+    "title": "¿Cómo interpretar tu porcentaje de compatibilidad?",
+    "p1": "Tu resultado se expresa en porcentaje de respuestas alineadas. Así se lee:<ul><li><strong>80–100 % — Almas gemelas:</strong> vuestros pilares están muy alineados, una base ideal.</li><li><strong>60–80 % — Gran compatibilidad:</strong> coincidís en lo esencial, con algunas diferencias enriquecedoras.</li><li><strong>40–60 % — Compatibilidad por cultivar:</strong> puntos en común reales, pero también temas que aclarar juntos.</li><li><strong>Menos del 40 % — Caminos distintos:</strong> vuestras visiones divergen en varios pilares; el diálogo será valioso.</li></ul>",
+    "p2": "Recuerda: un test no sustituye una conversación real. El mejor uso de tu resultado es hablarlo juntos."
+  },
+  "seo": {
+    "howTitle": "Cómo hacer el test de compatibilidad amorosa en 4 pasos",
+    "step1Title": "Introducid vuestros nombres",
+    "step1Text": "Añadid vuestros dos nombres para personalizar el test.",
+    "step2Title": "Responded por turnos",
+    "step2Text": "Las mismas 20 preguntas se hacen a cada uno, con sinceridad.",
+    "step3Title": "Comparamos las respuestas",
+    "step3Text": "Cada respuesta idéntica revela un punto de alineación entre vosotros.",
+    "step4Title": "Descubrid vuestro porcentaje",
+    "step4Text": "Obtened vuestro porcentaje de compatibilidad, un veredicto y temas para hablar.",
+    "faqTitle": "FAQ — Test de Compatibilidad Amorosa"
+  },
+  "jsonLd": {
+    "faq1Q": "¿Qué es la compatibilidad amorosa?",
+    "faq1A": "Es el grado de alineación entre dos personas en los pilares de una vida en pareja: valores, proyectos, dinero, estilo de vida, comunicación e intimidad. Se diferencia de la atracción, que es inmediata, mientras que la compatibilidad se mide con el tiempo.",
+    "faq2Q": "¿Cómo se calcula el porcentaje de compatibilidad?",
+    "faq2A": "Cada uno responde a las mismas 20 preguntas. El test compara las respuestas: vuestro porcentaje de compatibilidad es la proporción de respuestas idénticas, es decir, los puntos donde estáis alineados.",
+    "faq3Q": "¿Hay que ser dos para hacer el test?",
+    "faq3A": "Sí, es un test en pareja: ambos respondéis por turnos en el mismo dispositivo. Es la comparación de vuestras respuestas la que da el porcentaje de compatibilidad.",
+    "faq4Q": "¿En qué se diferencia del test de compatibilidad por nombres y signos zodiacales?",
+    "faq4A": "El test por nombres y signos es un juego basado en la numerología y la astrología. Este es un cuestionario real de pareja que mide vuestra alineación real en valores, proyectos y día a día.",
+    "faq5Q": "¿Un porcentaje bajo significa que debemos separarnos?",
+    "faq5A": "No. Un porcentaje bajo solo señala diferencias en varios pilares. Muchas se trabajan con diálogo y compromiso. El resultado es sobre todo un punto de partida para hablarlo juntos.",
+    "faq6Q": "¿El test es gratis?",
+    "faq6A": "Sí, nuestro test de compatibilidad amorosa es 100 % gratis, sin registro ni descarga, con resultado inmediato."
+  }
+}

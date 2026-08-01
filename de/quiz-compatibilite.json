@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "badge": "Zu zweit spielen 💞",
+    "title": "Liebeskompatibilitäts-Test: Passt ihr wirklich zusammen?",
+    "titleHighlight": "Liebeskompatibilität",
+    "description": "Beantwortet jeder 20 Fragen zu dem, was wirklich zählt — Werte, Pläne, Lebensstil — und entdeckt euren <strong>Liebeskompatibilitäts-Wert</strong>. Ein echter Test für Paare, kostenlos und ohne Anmeldung.",
+    "subtitle": "2 Spieler · 20 Fragen · sofortiges Ergebnis in %"
+  },
+  "section1": {
+    "title": "Was ist Liebeskompatibilität?",
+    "p1": "<strong>Liebeskompatibilität</strong> beschreibt, wie sehr zwei Partner in den Dingen übereinstimmen, die ein gemeinsames Leben prägen: Werte, Zukunftspläne, Geld, Lebensstil, Kommunikation und Intimität. Sie ist nicht dasselbe wie Anziehung — man kann starke Chemie spüren und dennoch sehr unterschiedliche Lebensvorstellungen haben.",
+    "p2": "Zwei kompatible Menschen sind keine Klone: Sie müssen nicht alles teilen, aber ihre <strong>Grundlagen zeigen in dieselbe Richtung</strong>. Diese Übereinstimmung sagt die Beständigkeit einer Beziehung besser voraus als die anfängliche Leidenschaft.",
+    "p3": "Unser <strong>Liebeskompatibilitäts-Test</strong> misst genau diese Übereinstimmung: Ihr antwortet getrennt, dann vergleichen wir eure Antworten, um euren Wert zu berechnen."
+  },
+  "section2": {
+    "title": "Wie funktioniert unser Liebeskompatibilitäts-Test?",
+    "p1": "Der Test wird <strong>zu zweit</strong> gespielt. Jeder beantwortet abwechselnd dieselben 20 Fragen zu den großen Dimensionen einer Beziehung. Es gibt keine richtigen oder falschen Antworten — wichtig ist, ehrlich zu antworten.",
+    "p2": "Am Ende vergleichen wir eure Antworten. Jede übereinstimmende Antwort zeigt einen Punkt der Übereinstimmung. Euer <strong>Kompatibilitäts-Wert</strong> ist der Prozentsatz der Antworten, bei denen ihr auf einer Wellenlänge seid — mit Verdikt und Gesprächsanstößen."
+  },
+  "section3": {
+    "title": "Die großen Dimensionen der Kompatibilität",
+    "pillar1Title": "Werte",
+    "pillar1Text": "Treue, Ehrlichkeit, Freiheit, Familie: Passen eure Grundwerte zusammen?",
+    "pillar2Title": "Zukunftspläne",
+    "pillar2Text": "Heirat, Kinder, Wohnort: Geht ihr in dieselbe Richtung?",
+    "pillar3Title": "Lebensstil",
+    "pillar3Text": "Häuslich oder feierfreudig, Rhythmus, Urlaub: Passen eure Gewohnheiten?",
+    "pillar4Title": "Kommunikation",
+    "pillar4Text": "Konflikte, alles teilen oder nicht: Sprecht ihr dieselbe Sprache?",
+    "pillar5Title": "Intimität",
+    "pillar5Text": "Zärtlichkeit, Verlangen, Nähe: Treffen sich eure Erwartungen?",
+    "pillar6Title": "Unabhängigkeit",
+    "pillar6Text": "Verschmelzung oder Autonomie, Zeit zu zweit oder für sich: welche Balance?"
+  },
+  "section4": {
+    "title": "Liebeskompatibilität oder Chemie: Was ist der Unterschied?",
+    "p1": "<strong>Chemie</strong> (Anziehung) ist unmittelbar, körperlich und emotional — der anfängliche Funke. <strong>Kompatibilität</strong> zeigt sich mit der Zeit, wenn Entscheidungen anstehen, der Alltag zu bewältigen ist und Kompromisse nötig sind.",
+    "p2": "Viele stark angezogene Paare trennen sich, weil ihre Grundlagen nicht passen. Umgekehrt hilft solide Kompatibilität, Stürme zu überstehen. Ideal ist beides — aber wer auf lange Sicht wetten müsste, setzt auf Kompatibilität."
+  },
+  "section5": {
+    "title": "Kann man seine Liebeskompatibilität verbessern?",
+    "p1": "Teilweise ja. Manches ist kaum verhandelbar (etwa der Kinderwunsch), aber viele Unterschiede lassen sich bearbeiten: Lebensrhythmus, Geld, Art zu kommunizieren oder Konflikte zu lösen.",
+    "p2": "Der Schlüssel ist nicht, identisch zu sein, sondern <strong>eure Unterschiede zu kennen und darüber zu reden</strong>. Ein mittlerer Wert ist kein Urteil: Er ist eine Karte, die zeigt, wo ihr übereinstimmt und wo das Gespräch tiefer gehen sollte."
+  },
+  "section6": {
+    "title": "Wie deutet man seinen Kompatibilitäts-Wert?",
+    "p1": "Euer Ergebnis ist ein Prozentsatz übereinstimmender Antworten. So lest ihr ihn:<ul><li><strong>80–100 % — Seelenverwandte:</strong> eure Grundlagen sind sehr stimmig, eine ideale Basis.</li><li><strong>60–80 % — Große Kompatibilität:</strong> ihr trefft euch im Wesentlichen, mit einigen bereichernden Unterschieden.</li><li><strong>40–60 % — Kompatibilität zum Pflegen:</strong> echte Gemeinsamkeiten, aber auch Themen zum Klären.</li><li><strong>Unter 40 % — Unterschiedliche Wege:</strong> eure Sichtweisen gehen bei mehreren Grundlagen auseinander; das Gespräch ist wertvoll.</li></ul>",
+    "p2": "Denkt daran: Ein Test ersetzt kein echtes Gespräch. Am besten nutzt ihr euer Ergebnis, um gemeinsam darüber zu sprechen."
+  },
+  "seo": {
+    "howTitle": "So macht ihr den Liebeskompatibilitäts-Test in 4 Schritten",
+    "step1Title": "Namen eingeben",
+    "step1Text": "Gebt beide Vornamen ein, um den Test zu personalisieren.",
+    "step2Title": "Abwechselnd antworten",
+    "step2Text": "Dieselben 20 Fragen werden jedem ehrlich gestellt.",
+    "step3Title": "Wir vergleichen eure Antworten",
+    "step3Text": "Jede übereinstimmende Antwort zeigt einen Punkt der Übereinstimmung.",
+    "step4Title": "Wert entdecken",
+    "step4Text": "Erhaltet euren Kompatibilitäts-Prozentsatz, ein Verdikt und Gesprächsanstöße.",
+    "faqTitle": "FAQ — Liebeskompatibilitäts-Test"
+  },
+  "jsonLd": {
+    "faq1Q": "Was ist Liebeskompatibilität?",
+    "faq1A": "Sie beschreibt, wie sehr zwei Partner in den Grundlagen eines gemeinsamen Lebens übereinstimmen: Werte, Pläne, Geld, Lebensstil, Kommunikation und Intimität. Sie unterscheidet sich von der Anziehung, die unmittelbar ist, während Kompatibilität sich über die Zeit zeigt.",
+    "faq2Q": "Wie wird der Kompatibilitäts-Wert berechnet?",
+    "faq2A": "Jeder beantwortet dieselben 20 Fragen. Der Test vergleicht eure Antworten: euer Kompatibilitäts-Wert ist der Prozentsatz identischer Antworten — die Punkte, an denen ihr übereinstimmt.",
+    "faq3Q": "Muss man zu zweit sein, um den Test zu machen?",
+    "faq3A": "Ja, es ist ein Test für Paare: beide antworten abwechselnd auf demselben Gerät. Der Vergleich eurer Antworten ergibt den Kompatibilitäts-Wert.",
+    "faq4Q": "Was ist der Unterschied zum Kompatibilitätstest mit Namen und Sternzeichen?",
+    "faq4A": "Der Test mit Namen und Sternzeichen ist ein Spiel auf Basis von Numerologie und Astrologie. Dieser hier ist ein echter Paar-Fragebogen, der eure tatsächliche Übereinstimmung bei Werten, Plänen und Alltag misst.",
+    "faq5Q": "Bedeutet ein niedriger Wert, dass wir uns trennen sollten?",
+    "faq5A": "Nein. Ein niedriger Wert zeigt nur Unterschiede bei mehreren Grundlagen. Viele davon lassen sich durch Gespräch und Kompromiss bearbeiten. Das Ergebnis ist vor allem ein Ausgangspunkt für ein gemeinsames Gespräch.",
+    "faq6Q": "Ist der Test kostenlos?",
+    "faq6A": "Ja, unser Liebeskompatibilitäts-Test ist 100 % kostenlos, ohne Anmeldung oder Download, mit sofortigem Ergebnis."
+  }
+}

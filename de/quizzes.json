@@ -11,6 +11,12 @@
     "description": "Miss deine Gemeinsamkeiten mit 200 Fragen! Antwortet abwechselnd und entdeckt euren Kompatibilitätsgrad.",
     "metaDescription": "Kostenloser Gemeinsamkeiten-Test für Paare mit 200 Fragen. Antwortet abwechselnd und entdeckt eure Kompatibilität. Ohne Anmeldung!"
   },
+  "testCompatibilite": {
+    "title": "Liebeskompatibilitäts-Test: Passt ihr wirklich zusammen?",
+    "shortTitle": "Liebeskompatibilität",
+    "description": "20 Fragen zu zweit, um eure Liebeskompatibilität zu messen: Werte, Zukunftspläne, Lebensstil. Entdeckt euren Kompatibilitätswert!",
+    "metaDescription": "Passt ihr in der Liebe wirklich zusammen? Beantwortet 20 Fragen zu zweit und erhaltet euren Liebeskompatibilitäts-Wert: Werte, Pläne, Alltag. Kostenlos."
+  },
   "testDistance": {
     "title": "Fernbeziehungs-Quiz - 100 Fragen Kostenlos",
     "shortTitle": "Fernbeziehungs-Quiz",

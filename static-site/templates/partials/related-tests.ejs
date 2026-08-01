@@ -1,7 +1,8 @@
 <%
   const _relatedMap = {
-    testCouple:       ['testCommonPoints', 'testCoupleSain', 'testConfiance', 'testAttachement'],
-    testCommonPoints: ['testCouple', 'testMariage', 'testLangageAmour', 'testEmmenager'],
+    testCouple:       ['testCompatibilite', 'testCommonPoints', 'testCoupleSain', 'testConfiance'],
+    testCommonPoints: ['testCompatibilite', 'testCouple', 'testMariage', 'testLangageAmour'],
+    testCompatibilite:['testCouple', 'testCommonPoints', 'testCoupleSain', 'testMariage'],
     testDistance:     ['testCouple', 'testConfiance', 'testLangageAmour', 'testAttachement'],
     testToxic:        ['testCoupleSain', 'testDivorce', 'testJalousie', 'testAttachement'],
     testCoupleSain:   ['testToxic', 'testCouple', 'testLangageAmour', 'testConfiance'],
@@ -30,7 +31,7 @@
     testCouple: '💕', testCommonPoints: '🎯', testDistance: '🌍', testToxic: '⚠️',
     testCoupleSain: '💚', testMariage: '💒', testDivorce: '⚖️', testParentalite: '👶',
     testEmmenager: '🏠', testAstroPrenoms: '♈', testJalousie: '🫣', testLangageAmour: '💬',
-    testAttachement: '🔗', testConfiance: '🤝',
+    testAttachement: '🔗', testConfiance: '🤝', testCompatibilite: '💘',
     quizAmoureux: '❤️', quizCoquin: '🔥', quizMarrant: '😂', quizKnowledge: '🧠',
     quizMost: '🏆', quizAdo: '🌟', quizGenant: '😳', quizTuPreferes: '🤔', quizVraiFaux: '✅',
     zamours: '📺',

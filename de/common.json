@@ -2,6 +2,7 @@
   "nav": {
     "testCouple": "Beziehungstest",
     "testCommonPoints": "Gemeinsamkeiten-Test",
+    "testCompatibilite": "Liebeskompatibilität",
     "testDistance": "Fernbeziehungs-Test",
     "testToxic": "Toxische Beziehung Test",
     "testCoupleSain": "Gesunde Beziehung Test",
