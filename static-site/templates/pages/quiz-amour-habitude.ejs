@@ -1,0 +1,230 @@
+<%
+  const quizKey = 'testAmourHabitude';
+  const ns = 'quiz-amour-habitude';
+  const quizTitle = t('quizzes:testAmourHabitude.title', 'Test amour ou habitude');
+  const quizDesc = t('quizzes:testAmourHabitude.metaDescription', '');
+
+  // Build hasPart with the real quiz questions using tgd() for proper translations
+  const hasPart = [];
+  const optLetters = ['a', 'b', 'c', 'd', 'e'];
+  for (let qi = 1; qi <= 20; qi++) {
+    const qText = tgd('habitude.q' + qi, '');
+    if (!qText || qText === 'habitude.q' + qi) break;
+    const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
+    const ans = [];
+    for (let oi = 0; oi < optLetters.length; oi++) {
+      const oText = tgd.local('habitude.q' + qi + optLetters[oi], '');
+      if (!oText || oText === 'habitude.q' + qi + optLetters[oi]) break;
+      ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
+    }
+    if (ans.length > 0) qObj.suggestedAnswer = ans;
+    hasPart.push(qObj);
+  }
+
+  const quizSchema = {
+    "@context": "https://schema.org", "@type": "Quiz",
+    "name": quizTitle, "description": quizDesc, "inLanguage": lang,
+    "datePublished": "2026-08-01", "isAccessibleForFree": true,
+    "learningResourceType": "Quiz", "interactivityType": "active",
+    "about": { "@type": "Thing", "name": "romantic relationship" },
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "totalQuestions", "value": 20 },
+      { "@type": "PropertyValue", "name": "audience", "value": "couples" }
+    ]
+  };
+  if (hasPart.length > 0) quizSchema.hasPart = hasPart;
+
+  const jsonLd = [
+    quizSchema,
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [1,2,3].map(function(i) {
+        return {
+          "@type": "Question", "name": t(ns + ':jsonLd.faq' + i + 'Q', ''),
+          "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':jsonLd.faq' + i + 'A', '') }
+        };
+      })
+    }
+  ];
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= quizTitle %></li>
+        </ol>
+      </nav>
+      <% const heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.2l-1.6-1.6a5 5 0 1 0-7.1 7.1L12 21.5l8.8-8.8a5 5 0 0 0 0-7.1z"/></svg>
+        <%= heroBadge %>
+      </span>
+      <% } %>
+      <%
+        const heroTitle = t(ns + ':hero.title', quizTitle);
+        const heroHighlight = t(ns + ':hero.titleHighlight', '');
+      %>
+      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%= t(ns + ':hero.description', '') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Quiz Engine -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div id="quiz-engine" data-quiz="amour-habitude" data-lang="<%= lang %>"><%- include("../partials/quiz-loading", { lang, routeKey }) %></div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- SEO Article -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section1.p1', '') %></p>
+        <p><%- t(ns + ':section1.p2', '') %></p>
+        <p><%- t(ns + ':section1.p3', '') %></p>
+      </div>
+    </section>
+
+    <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: (typeof quizTitle !== 'undefined' ? quizTitle : (typeof rawTitle !== 'undefined' ? rawTitle : '')) }) %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section2.p1', '') %></p>
+        <p><%- t(ns + ':section2.p2', '') %></p>
+        <ul class="space-y-3 ml-4">
+          <li class="flex items-start gap-2"><span class="text-primary font-bold">&bull;</span><span><%- t(ns + ':section2.healthy', '') %></span></li>
+          <li class="flex items-start gap-2"><span class="text-primary font-bold">&bull;</span><span><%- t(ns + ':section2.toxic', '') %></span></li>
+        </ul>
+        <blockquote class="border-l-4 border-primary pl-6 py-2 bg-muted/30 rounded-r-lg my-6">
+          <p class="text-lg italic"><%- t(ns + ':section2.quote', '') %></p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section3.intro', '') %></p>
+      <div class="overflow-x-auto">
+        <table class="quiz-table">
+          <thead><tr>
+            <th><%= t(ns + ':section3.headerScore', 'Score') %></th>
+            <th><%= t(ns + ':section3.headerLevel', 'Niveau') %></th>
+            <th><%= t(ns + ':section3.headerAnalysis', 'Analyse') %></th>
+          </tr></thead>
+          <tbody>
+            <% for (let i = 1; i <= 4; i++) { %>
+            <tr>
+              <td class="font-medium <%= i === 1 ? 'text-emerald-600' : i === 2 ? 'text-amber-600' : i === 3 ? 'text-orange-600' : 'text-rose-600' %>"><%= t(ns + ':section3.row' + i + 'Score', '') %></td>
+              <td><%= t(ns + ':section3.row' + i + 'Level', '') %></td>
+              <td class="text-sm text-muted-foreground"><%= t(ns + ':section3.row' + i + 'Analysis', '') %></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section4.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed mb-8">
+        <p><%- t(ns + ':section4.p1', '') %></p>
+        <p><%- t(ns + ':section4.p2', '') %></p>
+      </div>
+      <div class="space-y-6">
+        <% for (let i = 1; i <= 3; i++) { %>
+        <div class="bg-card border border-border rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-3 text-primary"><%= t(ns + ':section4.pillar' + i + 'Title', '') %></h3>
+          <p class="text-muted-foreground"><%- t(ns + ':section4.pillar' + i + 'Text', '') %></p>
+        </div>
+        <% } %>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section5.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section5.intro', '') %></p>
+      <div class="space-y-6">
+        <% for (let i = 1; i <= 4; i++) { %>
+        <div class="border-l-4 border-secondary pl-6">
+          <h3 class="text-xl font-semibold mb-2"><%= t(ns + ':section5.pillar' + i + 'Title', '') %></h3>
+          <p class="text-muted-foreground"><%- t(ns + ':section5.pillar' + i + 'Text', '') %></p>
+        </div>
+        <% } %>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section6.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed mb-8">
+        <p><%- t(ns + ':section6.p1', '') %></p>
+        <p><%- t(ns + ':section6.p2', '') %></p>
+      </div>
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-destructive"><%= t(ns + ':section6.dontTitle', '') %></h3>
+          <div class="space-y-4">
+            <% for (let i = 1; i <= 2; i++) { %>
+            <div class="flex items-start gap-4 p-4 bg-destructive/10 border border-destructive/20 rounded-lg">
+              <span class="text-destructive font-bold">&#10007;</span>
+              <div>
+                <h4 class="font-semibold mb-1"><%= t(ns + ':section6.dont' + i + 'Title', '') %></h4>
+                <p class="text-muted-foreground"><%- t(ns + ':section6.dont' + i + 'Text', '') %></p>
+              </div>
+            </div>
+            <% } %>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-primary"><%= t(ns + ':section6.doTitle', '') %></h3>
+          <div class="space-y-4">
+            <% for (let i = 1; i <= 3; i++) { %>
+            <div class="flex items-start gap-4 p-4 bg-card border border-border rounded-lg">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex-shrink-0"><%= i %></span>
+              <div>
+                <h4 class="font-semibold mb-1"><%= t(ns + ':section6.do' + i + 'Title', '') %></h4>
+                <p class="text-muted-foreground"><%- t(ns + ':section6.do' + i + 'Text', '') %></p>
+              </div>
+            </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 border border-primary/20">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t(ns + ':section7.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section7.p1', '') %></p>
+        <p><%- t(ns + ':section7.p2', '') %></p>
+        <p class="text-foreground font-semibold"><%- t(ns + ':section7.p3', '') %></p>
+      </div>
+    </section>
+
+  </div>
+</article>
+
+<%- include('../partials/related-tests', { routeKey, lang, t, getLocalizedUrl }) %>
+
+<div id="route-slugs-data" data-route-slugs="<%- escapeHtml(JSON.stringify(routeSlugs)) %>" hidden></div>
+<script src="/js/quiz-engine-core.js" defer></script>
+<script src="/js/quiz-loader.js" defer></script>

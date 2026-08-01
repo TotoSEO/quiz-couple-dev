@@ -1,6 +1,6 @@
 # Quiz Couple
 
-> Quiz Couple is a free online platform offering 24+ relationship quizzes and tests for couples. Available in 5 languages (French, English, Spanish, German, Italian).
+> Quiz Couple is a free online platform offering 25+ relationship quizzes and tests for couples. Available in 5 languages (French, English, Spanish, German, Italian).
 
 ## Main Features
 
@@ -16,6 +16,7 @@
 - [Couple Compatibility Test](https://quiz-couple.com/en/couple-compatibility-test/): 20-question relationship strength assessment
 - [Toxic Relationship Test](https://quiz-couple.com/en/toxic-relationship-test/): Identify unhealthy relationship patterns
 - [Narcissistic Partner Test](https://quiz-couple.com/en/narcissistic-partner-test/): 20 questions to spot narcissistic abuse, manipulation and gaslighting
+- [Love or Habit Test](https://quiz-couple.com/en/love-or-habit-test/): 20 questions to tell whether you stay together out of love or habit
 - [Healthy Relationship Test](https://quiz-couple.com/en/healthy-relationship-test/): Evaluate your couple's wellbeing
 - [Marriage Compatibility Test](https://quiz-couple.com/en/marriage-compatibility-test/): Ready for marriage assessment
 - [Should I Divorce Test](https://quiz-couple.com/en/should-i-divorce-test/): Decision guidance tool
