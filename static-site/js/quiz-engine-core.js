@@ -3216,6 +3216,407 @@ var QuizEngine = (function() {
     smoothScroll(wrap, 'center');
   };
 
+  // ═══════════════════════════════════════════════════════════
+  // LES Z'AMOURS - TV game-show engine
+  // Faithful to the France 2 show: one partner secretly answers, the
+  // other guesses; dramatic reveal, animated TV scoreboard, alternating
+  // rounds ("manches") + a 45-second speed FINALE for the jackpot.
+  // Draws a fresh random subset from the full bank every game.
+  // ═══════════════════════════════════════════════════════════
+  function ZamoursQuiz(config) {
+    this.container = config.container;
+    this.pool = config.questions || [];
+    this.prefix = config.prefix || 'zamours';
+    this.lang = config.lang || 'fr';
+    this.perGame = config.perGame || 14;
+    this.MAIN = 8;                 // main "manches"
+    this.FINAL_MAX = 6;            // finale questions
+    this.finalTarget = 4;          // correct guesses needed for the jackpot
+    this.finalDuration = 45;       // seconds
+    this.players = [null, null];
+    this.phase = 'setup';
+    this._timer = null;
+    this.render();
+  }
+
+  ZamoursQuiz.prototype._clearTimer = function () {
+    if (this._timer) { clearInterval(this._timer); this._timer = null; }
+  };
+
+  ZamoursQuiz.prototype.initGame = function () {
+    var idx = [];
+    for (var i = 0; i < this.pool.length; i++) idx.push(i);
+    idx = shuffleArray(idx).slice(0, this.perGame);
+    var mainN = Math.min(this.MAIN, idx.length);
+    this.rounds = [];
+    for (var r = 0; r < mainN; r++) {
+      var pts = r === 0 ? 10 : (r === mainN - 1 ? 15 : 5);
+      var g = r % 2;
+      this.rounds.push({ qIdx: idx[r], guesser: g, target: g === 0 ? 1 : 0, pts: pts, guess: null, actual: null, correct: null });
+    }
+    this.finalRounds = [];
+    for (var f = mainN; f < idx.length && this.finalRounds.length < this.FINAL_MAX; f++) {
+      var fg = this.finalRounds.length % 2;
+      this.finalRounds.push({ qIdx: idx[f], guesser: fg, target: fg === 0 ? 1 : 0, guess: null, actual: null, correct: null });
+    }
+    this.roundIdx = 0; this.score = 0; this.correct = 0;
+    this.finalIdx = 0; this.finalCorrect = 0; this.finalWon = false; this.finalPlayed = false;
+  };
+
+  ZamoursQuiz.prototype.qText = function (q, targetName) {
+    var t = tgd(this.prefix + '.q' + q.id, q.text) || q.text;
+    return String(t).replace(/\{\{name\}\}/g, targetName).replace(/\bNAME\b/g, targetName);
+  };
+  ZamoursQuiz.prototype.optText = function (q, opt) {
+    return tgd(this.prefix + '.q' + q.id + opt.id, opt.text) || opt.text;
+  };
+
+  ZamoursQuiz.prototype.render = function () {
+    this._clearTimer();
+    this.container.innerHTML = '';
+    if (this.phase === 'results') { this.renderResults(); return; }
+    var stage = el('div', 'zamours-stage');
+    stage.innerHTML = '<span class="zamours-lights" aria-hidden="true"></span>';
+    this.stage = stage;
+    this.container.appendChild(stage);
+    var p = this.phase;
+    if (p === 'setup') this.renderSetup();
+    else if (p === 'guess') this.renderTurn(false);
+    else if (p === 'reveal') this.renderTurn(true);
+    else if (p === 'verdict') this.renderVerdict();
+    else if (p === 'finalIntro') this.renderFinalIntro();
+    else if (p === 'finalGuess') this.renderFinalTurn(false);
+    else if (p === 'finalReveal') this.renderFinalTurn(true);
+    else if (p === 'finalResult') this.renderFinalResult();
+    else if (p === 'results') this.renderResults();
+  };
+
+  // Big TV title lockup
+  ZamoursQuiz.prototype._marquee = function () {
+    return '<div class="zamours-logo"><span class="zamours-logo-heart">💛</span>'
+      + '<span class="zamours-logo-text">Les Z’Amours</span></div>';
+  };
+
+  ZamoursQuiz.prototype._scoreboard = function (roundLabel) {
+    var nameA = esc(this.players[0].name), nameB = esc(this.players[1].name);
+    var sb = el('div', 'zamours-scoreboard');
+    sb.innerHTML =
+      '<div class="zamours-couple"><span class="zamours-couple-name zamours--p1">' + nameA + '</span>'
+      + '<span class="zamours-couple-amp">&amp;</span>'
+      + '<span class="zamours-couple-name zamours--p2">' + nameB + '</span></div>'
+      + '<div class="zamours-score-pill"><span class="zamours-score-num">' + this.score + '</span>'
+      + '<span class="zamours-score-lbl">pts</span></div>'
+      + (roundLabel ? '<div class="zamours-round-lbl">' + roundLabel + '</div>' : '');
+    return sb;
+  };
+
+  ZamoursQuiz.prototype.renderSetup = function () {
+    var self = this, stage = this.stage;
+    stage.classList.add('zamours-stage--intro');
+    var wrap = el('div', 'zamours-panel animate-fade-in');
+    wrap.innerHTML = this._marquee()
+      + '<p class="zamours-tagline">Le jeu culte de l’émission, version couple &mdash; en ligne, gratuit et sans inscription.</p>';
+
+    var form = el('div', 'zamours-setup-form');
+    for (var i = 0; i < 2; i++) {
+      var pc = el('div', 'zamours-input-card zamours--p' + (i + 1));
+      pc.innerHTML = '<label class="zamours-input-lbl">' + (i === 0 ? 'Joueur 1' : 'Joueur 2') + '</label>';
+      var input = el('input', 'zamours-input');
+      input.type = 'text'; input.maxLength = 18;
+      input.placeholder = i === 0 ? 'Ton prénom…' : 'Son prénom…';
+      input.id = 'zamours-p' + i;
+      pc.appendChild(input);
+      form.appendChild(pc);
+    }
+    wrap.appendChild(form);
+
+    var howto = el('div', 'zamours-howto');
+    howto.innerHTML = '<span class="zamours-howto-step">1. L’un devine</span>'
+      + '<span class="zamours-howto-step">2. L’autre révèle</span>'
+      + '<span class="zamours-howto-step">3. Le buzzer tranche 🔔</span>'
+      + '<span class="zamours-howto-step">4. Finale &amp; jackpot 🏆</span>';
+    wrap.appendChild(howto);
+
+    var btn = el('button', 'zamours-btn zamours-btn--go', '🎬 Lancer la partie');
+    btn.addEventListener('click', function () {
+      var n1 = (document.getElementById('zamours-p0').value || '').trim() || 'Joueur 1';
+      var n2 = (document.getElementById('zamours-p1').value || '').trim() || 'Joueur 2';
+      self.players = [{ name: n1 }, { name: n2 }];
+      self.initGame();
+      self.phase = 'guess'; self.render();
+    });
+    wrap.appendChild(btn);
+    stage.appendChild(wrap);
+  };
+
+  // Shared main-round screen. reveal=false → guesser predicts; reveal=true → target reveals.
+  ZamoursQuiz.prototype.renderTurn = function (reveal) {
+    var self = this;
+    var round = this.rounds[this.roundIdx];
+    var q = this.pool[round.qIdx];
+    var guesser = this.players[round.guesser];
+    var target = this.players[round.target];
+    var actor = reveal ? target : guesser;
+    var actorSide = reveal ? round.target : round.guesser;
+
+    var wrap = el('div', 'zamours-panel zamours-question-enter');
+    wrap.appendChild(this._scoreboard('Manche ' + (this.roundIdx + 1) + '/' + this.rounds.length
+      + (round.pts === 15 ? ' &middot; BONUS ×15' : '')));
+
+    var cue = el('div', 'zamours-cue zamours--p' + (actorSide + 1));
+    if (reveal) {
+      cue.innerHTML = '<span class="zamours-cue-pass">📱 Passe le téléphone à</span>'
+        + '<span class="zamours-cue-name">' + esc(target.name) + '</span>'
+        + '<span class="zamours-cue-sub">' + esc(guesser.name) + ', ne regarde pas ! 🙈</span>';
+    } else {
+      cue.innerHTML = '<span class="zamours-cue-pass">À toi de deviner</span>'
+        + '<span class="zamours-cue-name">' + esc(guesser.name) + '</span>'
+        + '<span class="zamours-cue-sub">Que va répondre <strong>' + esc(target.name) + '</strong> ?</span>';
+    }
+    wrap.appendChild(cue);
+
+    wrap.appendChild(el('h3', 'zamours-question', esc(this.qText(q, target.name))));
+    wrap.appendChild(this._options(q, function (opt) {
+      if (reveal) {
+        round.actual = opt.id;
+        round.correct = (round.guess === opt.id);
+        if (round.correct) { self.score += round.pts; self.correct++; }
+        self.phase = 'verdict';
+      } else {
+        round.guess = opt.id;
+        self.phase = 'reveal';
+      }
+      self.render();
+    }));
+    this.stage.appendChild(wrap);
+  };
+
+  // Build an options list; onPick(opt) fires after a short select animation.
+  ZamoursQuiz.prototype._options = function (q, onPick) {
+    var self = this;
+    var box = el('div', 'zamours-options');
+    var letters = ['A', 'B', 'C', 'D', 'E'];
+    var done = false; // guard: a pick is final, ignore any further/duplicate taps
+    q.options.forEach(function (opt, idx) {
+      var b = el('button', 'zamours-opt');
+      b.style.animationDelay = (idx * 55) + 'ms';
+      b.innerHTML = '<span class="zamours-opt-letter">' + (letters[idx] || '') + '</span>'
+        + '<span class="zamours-opt-text">' + esc(self.optText(q, opt)) + '</span>';
+      b.addEventListener('click', function () {
+        if (done) return; done = true;
+        b.classList.add('is-picked');
+        var sib = box.querySelectorAll('.zamours-opt');
+        for (var s = 0; s < sib.length; s++) { sib[s].style.pointerEvents = 'none'; if (sib[s] !== b) sib[s].classList.add('is-dimmed'); }
+        setTimeout(function () { onPick(opt); }, 300);
+      });
+      box.appendChild(b);
+    });
+    return box;
+  };
+
+  ZamoursQuiz.prototype.renderVerdict = function () {
+    var self = this;
+    var round = this.rounds[this.roundIdx];
+    var q = this.pool[round.qIdx];
+    var guesser = this.players[round.guesser];
+    var target = this.players[round.target];
+    var ok = round.correct;
+
+    var wrap = el('div', 'zamours-panel zamours-verdict ' + (ok ? 'is-win' : 'is-miss'));
+    wrap.appendChild(this._scoreboard(null));
+
+    var badge = el('div', 'zamours-verdict-badge ' + (ok ? 'is-win' : 'is-miss'));
+    badge.innerHTML = ok
+      ? '<span class="zamours-verdict-emoji">🔔</span><span class="zamours-verdict-word">Dans le mille !</span><span class="zamours-verdict-pts">+' + round.pts + ' pts</span>'
+      : '<span class="zamours-verdict-emoji">📛</span><span class="zamours-verdict-word">Raté&hellip;</span><span class="zamours-verdict-pts">+0</span>';
+    wrap.appendChild(badge);
+    if (ok) this._confetti(wrap);
+
+    var gOpt = null, aOpt = null;
+    q.options.forEach(function (o) { if (o.id === round.guess) gOpt = o; if (o.id === round.actual) aOpt = o; });
+    var recap = el('div', 'zamours-recap');
+    recap.innerHTML =
+      '<div class="zamours-recap-row"><span class="zamours-recap-who zamours--p' + (round.guesser + 1) + '">' + esc(guesser.name) + ' a deviné</span>'
+      + '<span class="zamours-recap-ans">' + esc(gOpt ? this.optText(q, gOpt) : '—') + '</span></div>'
+      + '<div class="zamours-recap-row"><span class="zamours-recap-who zamours--p' + (round.target + 1) + '">' + esc(target.name) + ' a répondu</span>'
+      + '<span class="zamours-recap-ans is-real">' + esc(aOpt ? this.optText(q, aOpt) : '—') + '</span></div>';
+    wrap.appendChild(recap);
+
+    var last = this.roundIdx + 1 >= this.rounds.length;
+    var btn = el('button', 'zamours-btn', last ? '🏆 Passer à la FINALE' : 'Manche suivante →');
+    btn.addEventListener('click', function () {
+      if (last) { self.phase = 'finalIntro'; }
+      else { self.roundIdx++; self.phase = 'guess'; }
+      self.render();
+    });
+    wrap.appendChild(btn);
+    this.stage.appendChild(wrap);
+  };
+
+  ZamoursQuiz.prototype.renderFinalIntro = function () {
+    var self = this;
+    var wrap = el('div', 'zamours-panel zamours-final-intro animate-fade-in');
+    wrap.innerHTML = '<div class="zamours-final-badge">FINALE</div>'
+      + '<h3 class="zamours-final-h">45 secondes pour décrocher le jackpot 🏆</h3>'
+      + '<p class="zamours-final-p">Enchaînez les questions le plus vite possible. <strong>' + this.finalTarget
+      + ' bonnes réponses</strong> avant la fin du chrono et vous partez (virtuellement) en week-end&nbsp;!</p>'
+      + '<p class="zamours-final-mini">Score des manches : <strong>' + this.score + ' pts</strong></p>';
+    if (!this.finalRounds || this.finalRounds.length === 0) {
+      var skip = el('button', 'zamours-btn zamours-btn--go', 'Voir le résultat');
+      skip.addEventListener('click', function () { self.phase = 'results'; self.render(); });
+      wrap.appendChild(skip);
+      this.stage.appendChild(wrap); return;
+    }
+    var btn = el('button', 'zamours-btn zamours-btn--go', '⏱️ C’est parti !');
+    btn.addEventListener('click', function () {
+      self.finalPlayed = true;
+      self.finalEndTime = Date.now() + self.finalDuration * 1000;
+      self.phase = 'finalGuess'; self.render();
+    });
+    wrap.appendChild(btn);
+    this.stage.appendChild(wrap);
+  };
+
+  ZamoursQuiz.prototype.renderFinalTurn = function (reveal) {
+    var self = this;
+    if (this.finalIdx >= this.finalRounds.length) { this.phase = 'finalResult'; this.render(); return; }
+    var round = this.finalRounds[this.finalIdx];
+    var q = this.pool[round.qIdx];
+    var guesser = this.players[round.guesser];
+    var target = this.players[round.target];
+
+    var wrap = el('div', 'zamours-panel zamours-final-play zamours-question-enter');
+
+    var top = el('div', 'zamours-final-top');
+    top.innerHTML = this._timerRingSVG()
+      + '<div class="zamours-final-tally"><span class="zamours-final-tally-num">' + this.finalCorrect + '</span>'
+      + '<span class="zamours-final-tally-lbl">/ ' + this.finalTarget + '</span></div>';
+    wrap.appendChild(top);
+
+    var actorSide = reveal ? round.target : round.guesser;
+    var cue = el('div', 'zamours-cue zamours-cue--mini zamours--p' + (actorSide + 1));
+    cue.innerHTML = reveal
+      ? '<span class="zamours-cue-name">' + esc(target.name) + '</span><span class="zamours-cue-sub">ta vraie réponse, vite&nbsp;!</span>'
+      : '<span class="zamours-cue-name">' + esc(guesser.name) + '</span><span class="zamours-cue-sub">devine pour ' + esc(target.name) + '</span>';
+    wrap.appendChild(cue);
+
+    wrap.appendChild(el('h3', 'zamours-question zamours-question--mini', esc(this.qText(q, target.name))));
+    wrap.appendChild(this._options(q, function (opt) {
+      if (reveal) {
+        round.actual = opt.id;
+        round.correct = (round.guess === opt.id);
+        if (round.correct) self.finalCorrect++;
+        self.finalIdx++;
+        if (self.finalCorrect >= self.finalTarget) { self.finalWon = true; self.phase = 'finalResult'; }
+        else if (self.finalIdx >= self.finalRounds.length) { self.phase = 'finalResult'; }
+        else { self.phase = 'finalGuess'; }
+      } else {
+        round.guess = opt.id;
+        self.phase = 'finalReveal';
+      }
+      self.render();
+    }));
+    this.stage.appendChild(wrap);
+    this._startFinalTimer();
+  };
+
+  ZamoursQuiz.prototype._timerRingSVG = function () {
+    var R = 34, C = 2 * Math.PI * R;
+    return '<div class="zamours-timer"><svg viewBox="0 0 80 80" class="zamours-timer-svg">'
+      + '<circle cx="40" cy="40" r="' + R + '" class="zamours-timer-track"/>'
+      + '<circle cx="40" cy="40" r="' + R + '" class="zamours-timer-fill" '
+      + 'style="stroke-dasharray:' + C.toFixed(1) + ';stroke-dashoffset:0"/></svg>'
+      + '<span class="zamours-timer-num">' + this.finalDuration + '</span></div>';
+  };
+
+  ZamoursQuiz.prototype._startFinalTimer = function () {
+    var self = this;
+    var R = 34, C = 2 * Math.PI * R;
+    var fill = this.stage.querySelector('.zamours-timer-fill');
+    var num = this.stage.querySelector('.zamours-timer-num');
+    var tick = function () {
+      var remain = Math.max(0, self.finalEndTime - Date.now());
+      var secs = Math.ceil(remain / 1000);
+      if (num) { num.textContent = secs; if (secs <= 10) num.classList.add('is-urgent'); }
+      if (fill) { var frac = remain / (self.finalDuration * 1000); fill.style.strokeDashoffset = ((1 - frac) * C).toFixed(1); }
+      if (remain <= 0) { self._clearTimer(); self.phase = 'finalResult'; self.render(); }
+    };
+    tick();
+    this._timer = setInterval(tick, 100);
+  };
+
+  ZamoursQuiz.prototype.renderFinalResult = function () {
+    var self = this;
+    var won = this.finalWon || this.finalCorrect >= this.finalTarget;
+    var wrap = el('div', 'zamours-panel zamours-final-result animate-fade-in ' + (won ? 'is-win' : 'is-miss'));
+    wrap.innerHTML = won
+      ? '<div class="zamours-jackpot">🏆</div><h3 class="zamours-final-h">JACKPOT&nbsp;!</h3>'
+        + '<p class="zamours-final-p">' + this.finalCorrect + ' bonnes réponses&nbsp;: vous décrochez le séjour en amoureux 🧳❤️</p>'
+      : '<div class="zamours-jackpot">⏰</div><h3 class="zamours-final-h">Si près&nbsp;!</h3>'
+        + '<p class="zamours-final-p">' + this.finalCorrect + '/' + this.finalTarget + ' bonnes réponses. Le séjour sera pour la prochaine&nbsp;!</p>';
+    if (won) this._confetti(wrap);
+    var btn = el('button', 'zamours-btn zamours-btn--go', 'Voir le score final →');
+    btn.addEventListener('click', function () { self.phase = 'results'; self.render(); });
+    wrap.appendChild(btn);
+    this.stage.appendChild(wrap);
+  };
+
+  ZamoursQuiz.prototype._verdictTier = function () {
+    var c = this.correct, n = this.rounds.length;
+    var r = n ? c / n : 0;
+    if (r >= 0.85) return { t: 'Couple en or 🥇', d: 'Vous vous connaissez par cœur. Les Z’Amours n’ont plus de secrets pour vous&nbsp;!' };
+    if (r >= 0.6) return { t: 'Sacrée complicité 💞', d: 'Belle connexion&nbsp;: vous devinez presque tout l’un de l’autre.' };
+    if (r >= 0.35) return { t: 'Encore des secrets 🤔', d: 'Vous vous connaissez bien, mais il reste de belles choses à découvrir.' };
+    return { t: 'À la découverte 🌱', d: 'Le jeu ne fait que commencer&nbsp;: rejouez pour apprendre à mieux vous deviner&nbsp;!' };
+  };
+
+  ZamoursQuiz.prototype.renderResults = function () {
+    var self = this;
+    var tier = this._verdictTier();
+    var wrap = el('div', 'quiz-engine zamours-results quiz-result-card');
+    var jackpot = this.finalPlayed && (this.finalWon || this.finalCorrect >= this.finalTarget);
+
+    // Self-contained dark "TV" hero so it stays readable once renderActionButtons
+    // moves it into the light 2-column results layout.
+    var hero = el('div', 'zamours-results-hero');
+    hero.innerHTML = this._marquee()
+      + '<div class="zamours-results-emoji">' + (jackpot ? '🏆' : '💛') + '</div>'
+      + '<h2 class="zamours-results-title">' + esc(tier.t) + '</h2>'
+      + '<p class="zamours-results-sub">' + tier.d + '</p>'
+      + '<div class="zamours-results-stats">'
+      + '<div class="zamours-stat"><span class="zamours-stat-num">' + this.score + '</span><span class="zamours-stat-lbl">points</span></div>'
+      + '<div class="zamours-stat"><span class="zamours-stat-num">' + this.correct + '/' + this.rounds.length + '</span><span class="zamours-stat-lbl">bonnes manches</span></div>'
+      + (this.finalPlayed ? '<div class="zamours-stat"><span class="zamours-stat-num">' + (jackpot ? '🏆' : this.finalCorrect + '/' + this.finalTarget) + '</span><span class="zamours-stat-lbl">finale</span></div>' : '')
+      + '</div>'
+      + '<p class="zamours-results-couple">Bravo <strong>' + esc(this.players[0].name) + '</strong> &amp; <strong>' + esc(this.players[1].name) + '</strong> !</p>';
+    if (jackpot) this._confetti(hero);
+    wrap.appendChild(hero);
+
+    var quizEl = document.getElementById('quiz-engine');
+    var hasPool = quizEl && quizEl.dataset.hasPool === '1';
+    renderActionButtons(wrap, {
+      shareText: 'On a fait ' + this.score + ' pts au Quiz Les Z’Amours en couple ! 💛',
+      newQuestions: hasPool ? function () { self.initGame(); self.phase = 'guess'; self.render(); smoothScroll(self.container, 'start'); } : null,
+      restart: function () { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  ZamoursQuiz.prototype._confetti = function (node) {
+    var colors = ['#ff4d94', '#a855f7', '#ffd23f', '#22c55e', '#38bdf8'];
+    var html = '<div class="confetti-container" aria-hidden="true">';
+    for (var i = 0; i < 26; i++) {
+      var tx = (Math.random() * 300 - 150).toFixed(0);
+      var ty = (Math.random() * -220 - 60).toFixed(0);
+      html += '<span class="confetti-dot" style="background:' + colors[i % colors.length]
+        + ';--tx:' + tx + 'px;--ty:' + ty + 'px;animation-delay:' + (0.04 * i).toFixed(2) + 's"></span>';
+    }
+    html += '</div>';
+    var c = el('div', 'zamours-confetti', html);
+    node.appendChild(c);
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -3233,6 +3634,7 @@ var QuizEngine = (function() {
     ParentaliteQuiz: ParentaliteQuiz,
     TruefalseQuiz: TruefalseQuiz,
     ProfileQuiz: ProfileQuiz,
+    ZamoursQuiz: ZamoursQuiz,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,
