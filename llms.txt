@@ -1,6 +1,6 @@
 # Quiz Couple
 
-> Quiz Couple is a free online platform offering 25+ relationship quizzes and tests for couples. Available in 5 languages (French, English, Spanish, German, Italian).
+> Quiz Couple is a free online platform offering 26+ relationship quizzes and tests for couples. Available in 5 languages (French, English, Spanish, German, Italian).
 
 ## Main Features
 
@@ -38,6 +38,7 @@
 - [Would You Rather Quiz](https://quiz-couple.com/en/would-you-rather-couple-quiz/): Choice dilemmas
 - [True or False Quiz](https://quiz-couple.com/en/true-or-false-couple-quiz/): Relationship myths
 - [Quiz Les Z'Amours](https://quiz-couple.com/quiz-couple-les-zamours/): Online version of the French TV show "Les Z'Amours" — guess your partner's answers (FR)
+- [Temptation Island Quiz](https://quiz-couple.com/en/temptation-island-quiz/): Unofficial quiz inspired by the Temptation Island format — 12 days on the island, 30 tempting situations and a final bonfire verdict
 
 ### Other Tools
 - [Couple Questions](https://quiz-couple.com/en/couple-questions/): 200+ conversation starters

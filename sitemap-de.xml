@@ -327,6 +327,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/de/temptation-island-quiz/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-ile-de-la-tentation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/temptation-island-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-la-isla-de-las-tentaciones/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/temptation-island-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-temptation-island/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-ile-de-la-tentation/"/>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/de/paar-aktivitaeten-in-der-naehe/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/activites-autours-de-moi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/couple-activities-near-me/"/>
