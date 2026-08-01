@@ -11,6 +11,12 @@
     "description": "Mesurez vos points communs avec 200 questions ! Répondez à tour de rôle et découvrez votre niveau de compatibilité.",
     "metaDescription": "Avez-vous vraiment des choses en commun ? 200 questions à faire à deux pour mesurer vos affinités et découvrir vos points de compatibilité."
   },
+  "testCompatibilite": {
+    "title": "Test de compatibilité amoureuse : êtes-vous faits l'un pour l'autre ?",
+    "shortTitle": "Compatibilité amoureuse",
+    "description": "20 questions à faire à deux pour mesurer votre compatibilité amoureuse : valeurs, projets de vie, mode de vie. Découvrez votre taux de compatibilité !",
+    "metaDescription": "Êtes-vous vraiment compatibles en amour ? Répondez à 20 questions à deux et obtenez votre taux de compatibilité amoureuse : valeurs, projets, quotidien. Gratuit."
+  },
   "testDistance": {
     "title": "Test de couple à distance : votre relation est-elle solide ?",
     "shortTitle": "Test relation à distance",

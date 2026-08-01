@@ -28,6 +28,9 @@
     'tester-couple':  { prefix: 'couple', engine: 'duo-match', totalQ: 20, pool: 30, needsGender: true, useScoring: true },
     'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 30, needsGender: true },
 
+    // ── Love compatibility (2 players, matching = alignment % on core dimensions) ──
+    'compatibilite':  { prefix: 'compatibilite', engine: 'duo-match', totalQ: 20, pool: 20, needsGender: true },
+
     // ── Healthy quiz (2 players + gender, weighted scoring) ──
     'sain':           { prefix: 'healthy', engine: 'healthy', totalQ: 20, pool: 30, needsGender: true },
 

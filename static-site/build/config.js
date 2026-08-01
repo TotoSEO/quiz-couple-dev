@@ -19,6 +19,7 @@ export const ROUTE_SLUGS = {
   home: { fr: '', en: '', es: '', de: '', it: '' },
   testCouple: { fr: 'tester-son-couple', en: 'couple-compatibility-test', es: 'test-compatibilidad-pareja', de: 'paar-kompatibilitaetstest', it: 'test-compatibilita-coppia' },
   testCommonPoints: { fr: 'test-points-communs-couples', en: 'couple-common-points-test', es: 'test-puntos-comunes-pareja', de: 'gemeinsamkeiten-test-paare', it: 'test-punti-comuni-coppia' },
+  testCompatibilite: { fr: 'test-compatibilite-amoureuse', en: 'love-compatibility-test', es: 'test-compatibilidad-amorosa', de: 'liebeskompatibilitaet-test', it: 'test-compatibilita-amorosa' },
   testDistance: { fr: 'quiz-couple-distance', en: 'long-distance-relationship-quiz', es: 'quiz-pareja-distancia', de: 'fernbeziehung-quiz', it: 'quiz-coppia-distanza' },
   testToxic: { fr: 'test-couple-toxique', en: 'toxic-relationship-test', es: 'test-relacion-toxica', de: 'toxische-beziehung-test', it: 'test-relazione-tossica' },
   testCoupleSain: { fr: 'test-couple-sain', en: 'healthy-relationship-test', es: 'test-relacion-sana', de: 'gesunde-beziehung-test', it: 'test-relazione-sana' },
@@ -63,6 +64,7 @@ export const ROUTE_SLUGS = {
 export const QUIZ_FEATURED = {
   testCouple:        { file: 'love-padlock',              old: 'test-couple',         alt: { fr: "Cadenas d'amour doré accroché à un pont au coucher du soleil", en: 'Golden heart love padlock on a bridge at sunset', es: 'Candado del amor dorado en un puente al atardecer', de: 'Goldenes Liebesschloss an einer Brücke bei Sonnenuntergang', it: "Lucchetto dell'amore dorato su un ponte al tramonto" } },
   testCommonPoints:  { file: 'matching-puzzle',           old: 'test-common-points',  alt: { fr: "Deux pièces de puzzle rose et violet qui s'emboîtent parfaitement", en: 'Two matching puzzle pieces fitting perfectly together', es: 'Dos piezas de puzle que encajan perfectamente', de: 'Zwei perfekt zusammenpassende Puzzleteile', it: 'Due tessere di puzzle che si incastrano perfettamente' } },
+  testCompatibilite: { file: 'love-letter-heart',          old: null,                  alt: { fr: "Lettre d'amour et cœur rouge évoquant la compatibilité amoureuse d'un couple", en: 'Love letter and red heart evoking a couple\'s love compatibility', es: 'Carta de amor y corazón rojo que evoca la compatibilidad amorosa', de: 'Liebesbrief und rotes Herz als Sinnbild der Liebeskompatibilität', it: "Lettera d'amore e cuore rosso che evoca la compatibilità amorosa" } },
   testDistance:      { file: 'long-distance-map',         old: 'test-distance',       alt: { fr: 'Carte du monde avec deux épingles reliées par un fil rouge', en: 'World map with two pins linked by a red thread', es: 'Mapa del mundo con dos alfileres unidos por un hilo rojo', de: 'Weltkarte mit zwei durch einen roten Faden verbundenen Nadeln', it: 'Mappa del mondo con due spilli uniti da un filo rosso' } },
   testToxic:         { file: 'wilted-rose',               old: 'test-toxic',          alt: { fr: 'Rose rouge fanée posée sur une surface grise et froide', en: 'Wilted red rose lying on a cold grey surface', es: 'Rosa roja marchita sobre una superficie gris y fría', de: 'Verwelkte rote Rose auf kalter grauer Oberfläche', it: 'Rosa rossa appassita su una fredda superficie grigia' } },
   testCoupleSain:    { file: 'healthy-plant-heart',       old: 'test-couple-sain',    alt: { fr: 'Plante verte luxuriante en forme de cœur près d\'une fenêtre', en: 'Lush green heart-shaped plant by a sunny window', es: 'Planta verde con forma de corazón junto a una ventana', de: 'Üppige herzförmige grüne Pflanze am sonnigen Fenster', it: 'Rigogliosa pianta verde a forma di cuore vicino a una finestra' } },
@@ -95,6 +97,7 @@ export const ROUTE_CONFIG = {
   home: { template: 'home', namespaces: ['home', 'common', 'quizzes'] },
   testCouple: { template: 'quiz-tester-couple', namespaces: ['quiz-tester-couple', 'quizzes', 'quizGames', 'gd', 'common'] },
   testCommonPoints: { template: 'quiz-common-points', namespaces: ['quiz-common-points', 'quizzes', 'quizGames', 'gd', 'common'] },
+  testCompatibilite: { template: 'quiz-compatibilite', namespaces: ['quiz-compatibilite', 'quizzes', 'quizGames', 'gd', 'common'] },
   testDistance: { template: 'quiz-distance', namespaces: ['quiz-distance', 'quizzes', 'quizGames', 'gd', 'common'] },
   testToxic: { template: 'quiz-toxic', namespaces: ['quiz-toxic', 'quizzes', 'quizGames', 'gd', 'common'] },
   testCoupleSain: { template: 'quiz-couple-sain', namespaces: ['quiz-couple-sain', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -603,6 +606,7 @@ export function escapeHtml(str) {
 export const QUIZ_RELATED_ARTICLES = {
   testCouple:       ['comment-savoir-si-cest-le-bon', 'sauver-son-couple', 'manque-communication-couple'],
   testCommonPoints: ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
+  testCompatibilite: ['comment-savoir-si-cest-le-bon', 'sauver-son-couple', 'manque-communication-couple'],
   testDistance:     ['manque-communication-couple', 'sauver-son-couple'],
   testToxic:        ['choses-pas-accepter-couple', 'red-flags-homme', 'red-flags-femme', 'femme-malheureuse-en-couple'],
   testCoupleSain:   ['sauver-son-couple', 'disputes-couple', 'manque-communication-couple'],

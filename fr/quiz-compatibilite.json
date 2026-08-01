@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "badge": "À faire à deux 💞",
+    "title": "Test de compatibilité amoureuse : êtes-vous faits l'un pour l'autre ?",
+    "titleHighlight": "compatibilité amoureuse",
+    "description": "Répondez chacun à 20 questions sur ce qui compte vraiment — vos valeurs, vos projets, votre mode de vie — et découvrez votre <strong>taux de compatibilité amoureuse</strong>. Un vrai test à faire à deux, gratuit et sans inscription.",
+    "subtitle": "2 joueurs · 20 questions · résultat immédiat en %"
+  },
+  "section1": {
+    "title": "Qu'est-ce que la compatibilité amoureuse ?",
+    "p1": "La <strong>compatibilité amoureuse</strong>, c'est le degré d'alignement entre deux partenaires sur les choses qui structurent une vie de couple : les valeurs, les projets de vie, le rapport à l'argent, le mode de vie, la communication et l'intimité. Ce n'est pas la même chose que l'attirance : on peut ressentir une forte alchimie tout en ayant des visions de vie très différentes.",
+    "p2": "Deux personnes compatibles ne sont pas deux clones : elles n'ont pas besoin de tout partager, mais leurs <strong>fondamentaux vont dans la même direction</strong>. C'est cet alignement, plus que la passion des débuts, qui prédit le mieux la solidité d'une relation sur le long terme.",
+    "p3": "Notre <strong>test de compatibilité amoureuse</strong> mesure justement cet alignement : vous répondez chacun de votre côté, puis on compare vos réponses pour en déduire votre taux de compatibilité."
+  },
+  "section2": {
+    "title": "Comment fonctionne notre test de compatibilité amoureuse ?",
+    "p1": "Le test se joue <strong>à deux</strong>. Chacun répond, à tour de rôle, aux mêmes 20 questions sur les grandes dimensions du couple. Il n'y a pas de bonne ou de mauvaise réponse : ce qui compte, c'est de répondre sincèrement.",
+    "p2": "À la fin, on compare vos réponses. Chaque réponse identique révèle un point d'alignement. Votre <strong>taux de compatibilité</strong> correspond au pourcentage de réponses où vous êtes sur la même longueur d'onde, accompagné d'un verdict et de pistes de discussion."
+  },
+  "section3": {
+    "title": "Les grandes dimensions de la compatibilité",
+    "pillar1Title": "Les valeurs",
+    "pillar1Text": "Fidélité, honnêteté, liberté, famille : vos repères de fond sont-ils compatibles ?",
+    "pillar2Title": "Les projets de vie",
+    "pillar2Text": "Mariage, enfants, lieu de vie : vous projetez-vous dans la même direction ?",
+    "pillar3Title": "Le mode de vie",
+    "pillar3Text": "Casaniers ou fêtards, rythme, vacances, quotidien : vos habitudes s'accordent-elles ?",
+    "pillar4Title": "La communication",
+    "pillar4Text": "Gestion des conflits, besoin de tout se dire ou non : parlez-vous le même langage ?",
+    "pillar5Title": "L'intimité",
+    "pillar5Text": "Tendresse, désir, besoin de proximité : vos attentes se rejoignent-elles ?",
+    "pillar6Title": "L'indépendance",
+    "pillar6Text": "Fusion ou autonomie, temps à deux ou chacun de son côté : quel équilibre ?"
+  },
+  "section4": {
+    "title": "Compatibilité amoureuse ou alchimie : quelle différence ?",
+    "p1": "L'<strong>alchimie</strong> (ou l'attirance) est immédiate, physique et émotionnelle : c'est l'étincelle du début. La <strong>compatibilité</strong>, elle, se révèle dans la durée, quand il faut prendre des décisions, gérer le quotidien et faire des compromis.",
+    "p2": "Beaucoup de couples très attirés l'un par l'autre finissent par se séparer parce que leurs fondamentaux ne s'accordent pas. À l'inverse, une compatibilité solide permet de traverser les tempêtes. L'idéal, bien sûr, c'est d'avoir les deux — mais si vous deviez parier sur le long terme, la compatibilité est le meilleur indicateur."
+  },
+  "section5": {
+    "title": "Peut-on améliorer sa compatibilité amoureuse ?",
+    "p1": "En partie, oui. Certains éléments sont peu négociables (vouloir ou non des enfants, par exemple), mais beaucoup de différences se travaillent : rythme de vie, gestion de l'argent, façon de communiquer ou de gérer les conflits.",
+    "p2": "La clé n'est pas d'être identiques, mais de <strong>connaître vos différences et d'en parler</strong>. Un taux de compatibilité moyen n'est pas une condamnation : c'est une carte qui montre où vous êtes alignés et où le dialogue mérite d'être approfondi."
+  },
+  "section6": {
+    "title": "Comment interpréter votre taux de compatibilité ?",
+    "p1": "Votre résultat s'exprime en pourcentage de réponses alignées. Voici comment le lire :<ul><li><strong>80–100 % — Âmes sœurs :</strong> vos fondamentaux sont très alignés, une base idéale pour construire.</li><li><strong>60–80 % — Belle compatibilité :</strong> vous vous rejoignez sur l'essentiel, avec quelques différences enrichissantes.</li><li><strong>40–60 % — Compatibilité à cultiver :</strong> de vrais points communs, mais aussi des sujets à clarifier ensemble.</li><li><strong>Moins de 40 % — Chemins différents :</strong> vos visions divergent sur plusieurs fondamentaux ; le dialogue sera précieux.</li></ul>",
+    "p2": "Rappelez-vous : un test ne remplace pas une vraie conversation. Le meilleur usage de votre score, c'est d'en discuter ensemble."
+  },
+  "seo": {
+    "howTitle": "Comment faire le test de compatibilité amoureuse en 4 étapes",
+    "step1Title": "Entrez vos prénoms",
+    "step1Text": "Indiquez vos deux prénoms pour personnaliser le test.",
+    "step2Title": "Répondez chacun votre tour",
+    "step2Text": "Les 20 mêmes questions vous sont posées à tour de rôle, en toute sincérité.",
+    "step3Title": "On compare vos réponses",
+    "step3Text": "Chaque réponse identique révèle un point d'alignement entre vous.",
+    "step4Title": "Découvrez votre taux",
+    "step4Text": "Obtenez votre pourcentage de compatibilité, un verdict et des pistes de discussion.",
+    "faqTitle": "FAQ — Test de compatibilité amoureuse"
+  },
+  "jsonLd": {
+    "faq1Q": "Qu'est-ce que la compatibilité amoureuse ?",
+    "faq1A": "C'est le degré d'alignement entre deux partenaires sur les fondamentaux d'une vie de couple : valeurs, projets de vie, argent, mode de vie, communication et intimité. Elle diffère de l'attirance, qui est immédiate, alors que la compatibilité se mesure dans la durée.",
+    "faq2Q": "Comment se calcule le taux de compatibilité ?",
+    "faq2A": "Vous répondez chacun aux mêmes 20 questions. Le test compare vos réponses : votre taux de compatibilité correspond au pourcentage de réponses identiques, c'est-à-dire de points où vous êtes alignés.",
+    "faq3Q": "Faut-il être deux pour faire le test ?",
+    "faq3A": "Oui, c'est un test à deux : les deux partenaires répondent à tour de rôle sur le même appareil. C'est la comparaison de vos réponses qui donne le taux de compatibilité.",
+    "faq4Q": "Quelle différence avec le test de compatibilité par les prénoms et signes astrologiques ?",
+    "faq4A": "Le test par les prénoms et signes astrologiques est un jeu basé sur la numérologie et l'astrologie. Ce test-ci est un vrai questionnaire de couple qui mesure votre alignement réel sur les valeurs, les projets et le quotidien.",
+    "faq5Q": "Un faible taux de compatibilité veut-il dire qu'on doit se séparer ?",
+    "faq5A": "Non. Un score bas signale simplement des différences sur plusieurs fondamentaux. Beaucoup de ces différences se travaillent par le dialogue et le compromis. Le résultat est surtout un point de départ pour en discuter ensemble.",
+    "faq6Q": "Le test est-il gratuit ?",
+    "faq6A": "Oui, notre test de compatibilité amoureuse est 100 % gratuit, sans inscription ni téléchargement, avec un résultat immédiat."
+  }
+}

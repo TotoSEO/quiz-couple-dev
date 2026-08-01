@@ -1066,22 +1066,24 @@ var QuizEngine = (function() {
       if (matchCount >= (r.minScore || r.min || 0) && matchCount <= (r.maxScore || r.max || 999)) { result = r; break; }
     }
 
-    var icon = el('div', 'text-5xl mb-4', pct >= 70 ? '🎉' : pct >= 40 ? '😊' : '🤔');
-    wrap.appendChild(icon);
-    var scoreRingDiv = el('div', '');
-    scoreRingDiv.innerHTML = renderScoreRing(pct);
-    wrap.appendChild(scoreRingDiv);
-    var matchLabel = el('p', 'text-muted-foreground mb-6 quiz-reveal-enter', matchCount + '/' + total + ' ' + tg('result.identicalAnswers', 'réponses identiques'));
-    wrap.appendChild(matchLabel);
-
+    // Self-contained, centered "hero" so the result stays centered and styled
+    // once renderActionButtons moves it into the 2-column results layout.
+    var tier = pct >= 70 ? 'high' : pct >= 40 ? 'mid' : 'low';
+    var hero = el('div', 'duo-result-hero duo-result-hero--' + tier);
+    hero.appendChild(el('div', 'duo-result-emoji', pct >= 70 ? '🎉' : pct >= 40 ? '😊' : '🤔'));
+    var ringWrap = el('div', 'duo-result-ring');
+    ringWrap.innerHTML = renderScoreRing(pct);
+    hero.appendChild(ringWrap);
+    hero.appendChild(el('div', 'duo-result-match', matchCount + '/' + total + ' ' + tg('result.identicalAnswers', 'réponses identiques')));
     if (result) {
-      wrap.appendChild(el('h3', 'text-2xl font-bold mb-3', esc(result.title || '')));
-      wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed max-w-lg mx-auto', result.description || ''));
-      if (result.advice) {
-        var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto');
-        advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
-        wrap.appendChild(advice);
-      }
+      hero.appendChild(el('h3', 'duo-result-title', esc(result.title || '')));
+      if (result.description) hero.appendChild(el('p', 'duo-result-desc', result.description));
+    }
+    wrap.appendChild(hero);
+    if (result && result.advice) {
+      var advice = el('div', 'duo-result-advice');
+      advice.innerHTML = '<strong>' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
+      wrap.appendChild(advice);
     }
 
     renderActionButtons(wrap, {
