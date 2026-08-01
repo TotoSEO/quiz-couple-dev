@@ -5,17 +5,21 @@
   const quizDesc = t('quizzes:quizTentation.metaDescription', '');
 
   // Real quiz questions in the Quiz schema, via tgd() so each language ships its own.
+  // The engine swaps {{name}} for the partner's first name at runtime; structured
+  // data has no such name, so fall back to the localized generic wording.
+  const genericPartner = t('quizGames:tentation.defaultPartner', 'votre partenaire');
+  const deName = (s) => String(s).replace(/\{\{name\}\}/g, genericPartner);
   const hasPart = [];
   const optLetters = ['a', 'b', 'c', 'd', 'e'];
   for (let qi = 1; qi <= 30; qi++) {
     const qText = tgd('tentation.q' + qi, '');
     if (!qText || qText === 'tentation.q' + qi) break;
-    const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
+    const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": deName(qText) };
     const ans = [];
     for (let oi = 0; oi < optLetters.length; oi++) {
       const oText = tgd.local('tentation.q' + qi + optLetters[oi], '');
       if (!oText || oText === 'tentation.q' + qi + optLetters[oi]) break;
-      ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
+      ans.push({ "@type": "Answer", "position": oi + 1, "text": deName(oText) });
     }
     if (ans.length > 0) qObj.suggestedAnswer = ans;
     hasPart.push(qObj);
