@@ -4697,6 +4697,16 @@ h1, h2, h3, h4, h5, h6,
 .zamours-confetti { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 3; }
 .zamours-confetti .confetti-container { position: absolute; top: 30%; left: 50%; }
 
+/* Quiz engine loading placeholder (shown until gd-*.json loads) */
+.quiz-engine-loading { display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 1rem; min-height: 18rem; padding: 2.5rem 1rem; text-align: center; }
+.quiz-engine-spinner { width: 2.75rem; height: 2.75rem; border-radius: 50%; flex: none;
+  border: 3px solid hsl(var(--primary) / .2); border-top-color: hsl(var(--primary));
+  animation: quizSpin .8s linear infinite; }
+@keyframes quizSpin { to { transform: rotate(360deg); } }
+.quiz-engine-loading-text { color: hsl(var(--muted-foreground)); font-weight: 600; font-size: 1rem; }
+@media (prefers-reduced-motion: reduce) { .quiz-engine-spinner { animation-duration: 1.6s; } }
+
 /* ═══════════════════════════════════════════════════════════════════
    Duo-match result hero (matching % — compatibilité, points communs)
    ═══════════════════════════════════════════════════════════════════ */
