@@ -87,6 +87,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/test-amour-ou-habitude/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-amour-ou-habitude/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/love-or-habit-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-amor-o-costumbre/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/liebe-oder-gewohnheit-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-amore-o-abitudine/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-amour-ou-habitude/"/>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/test-couple-sain/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-couple-sain/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/healthy-relationship-test/"/>
