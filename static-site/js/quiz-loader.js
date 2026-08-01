@@ -35,7 +35,7 @@
     'distance':       { prefix: 'distance', engine: 'distance', totalQ: 20, pool: 20 },
 
     // ── Coquin quiz (guess & reveal mechanic) ──
-    'coquin':         { prefix: 'coquin', engine: 'coquin', totalQ: 15, pool: 30 },
+    'coquin':         { prefix: 'coquin', engine: 'coquin', totalQ: 30, pool: 60 },
 
     // ── Knowledge quiz (oral validation with ✅/❌) - text only ──
     'knowledge':      { prefix: 'knowledge', engine: 'knowledge', totalQ: 20, pool: 100, textOnly: true },

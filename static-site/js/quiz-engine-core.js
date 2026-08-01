@@ -1388,8 +1388,12 @@ var QuizEngine = (function() {
     this.players = [null, null];
     this.rounds = [];
     this.currentRound = 0;
-    this.totalRounds = 30;
-    this.questionsPerPlayer = 15;
+    // Adapt to however many questions we actually received: each player needs
+    // a distinct set (p1 guesses about p2 and vice-versa), so half the pool
+    // per player. Guards against passing fewer than 30 questions (would have
+    // left half the rounds with an undefined question and crashed).
+    this.questionsPerPlayer = Math.max(1, Math.min(15, Math.floor((this.questions.length || 0) / 2)));
+    this.totalRounds = this.questionsPerPlayer * 2;
     this.render();
   }
 
