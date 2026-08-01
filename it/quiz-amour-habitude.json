@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "Resti per amore o per abitudine?",
+    "titleHighlight": "amore o per abitudine",
+    "description": "Un'autovalutazione sincera per capire cosa vi lega davvero oggi.",
+    "badge": "Test amore • Gratis • 5 min"
+  },
+  "section1": {
+    "title": "Amore o abitudine: perché questa domanda ti perseguita?",
+    "p1": "Chiedersi se si resta <strong class=\"text-foreground\">per amore o per abitudine</strong> non è affatto banale. Questa domanda raramente compare all'inizio di una storia: emerge dopo qualche anno, quando la passione degli inizi si è taciuta e si insinua un dubbio silenzioso. « Lo/la amo ancora davvero, o resto perché è comodo? »",
+    "p2": "La routine non è la nemica dell'amore; al contrario, una coppia ha bisogno di punti di riferimento e di sicurezza. Il problema comincia quando resta <strong class=\"text-foreground\">solo</strong> la routine: quando il desiderio, la complicità e la voglia di progettare hanno lasciato il posto a una semplice convivenza che va avanti da sola, per automatismo.",
+    "p3": "Questo test non è un verdetto e non decide al posto tuo. Ti aiuta a dare parole a ciò che provi e a distinguere un amore che è maturato da una relazione che si regge solo per inerzia. Se si pone la questione di una vera svolta, il nostro <a href=\"/it/test-devo-divorziare/\">test « devo divorziare? »</a> può prolungare la riflessione."
+  },
+  "section2": {
+    "title": "Amore o abitudine: qual è la vera differenza?",
+    "p1": "Il confine è più sottile di quanto sembri, perché l'amore duraturo a volte <em>somiglia</em> all'abitudine: meno farfalle, più tranquillità. La vera differenza non si legge nell'intensità, ma in ciò che ti anima nel profondo.",
+    "p2": "Per vederci chiaro, guarda due cose: il <strong class=\"text-foreground\">desiderio</strong> (hai ancora voglia di questa persona, di sorprenderla, di scoprirla?) e la <strong class=\"text-foreground\">scelta</strong> (resti perché lo vuoi, o perché andartene fa paura?).",
+    "healthy": "<strong class=\"text-foreground\">Un amore che è maturato</strong>: la passione si è placata, ma scegli ancora il tuo partner, lo/la desideri, costruite e ridete insieme.",
+    "toxic": "<strong class=\"text-foreground\">Una relazione per abitudine</strong>: resti soprattutto per comodità, per paura della solitudine o del cambiamento. Il desiderio, la complicità e i progetti comuni si sono spenti.",
+    "quote": "Amare è scegliere l'altro ancora e ancora. L'abitudine è restare perché si è dimenticato di avere una scelta."
+  },
+  "section3": {
+    "title": "Come interpretare il tuo risultato",
+    "intro": "Ogni risposta vale da 0 a 3 punti, per un totale su 60. Più il tuo punteggio è alto, più l'abitudine prevale sull'amore. Ecco come leggere il tuo risultato: un indicatore su cui riflettere, non una sentenza.",
+    "headerScore": "Punteggio totale",
+    "headerLevel": "Cosa prevale",
+    "headerAnalysis": "Cosa significa",
+    "row1Score": "0-14 punti",
+    "row1Level": "Un amore ben vivo",
+    "row1Analysis": "L'amore vince nettamente. La passione è diventata attaccamento profondo, ma il desiderio e la complicità sono ancora lì.",
+    "row2Score": "15-29 punti",
+    "row2Level": "L'amore prevale, la routine si insinua",
+    "row2Analysis": "I sentimenti sono reali, ma la routine rosicchia. Un segnale dolce per reinvestire nella coppia.",
+    "row3Score": "30-44 punti",
+    "row3Level": "L'abitudine prende il sopravvento",
+    "row3Analysis": "Il quotidiano ha preso più spazio dello slancio amoroso. Serve una vera presa di coscienza.",
+    "row4Score": "45-60 punti",
+    "row4Level": "Soprattutto abitudine",
+    "row4Analysis": "Sono il comfort o la paura a trattenerti, più dell'amore. È necessario un tempo di riflessione onesto."
+  },
+  "section4": {
+    "title": "Perché l'amore si trasforma (a volte) in abitudine",
+    "p1": "Se il tuo punteggio pende verso l'abitudine, non colpevolizzarti: questo scivolamento è estremamente comune e ha una spiegazione. L'amore non sparisce di colpo: si addormenta quando si smette di nutrirlo.",
+    "p2": "Tre meccanismi, soprattutto, trasformano poco a poco lo slancio amoroso in semplice convivenza:",
+    "pillar1Title": "1. L'usura del quotidiano",
+    "pillar1Text": "Lavoro, figli, faccende, stanchezza: la logistica divora il tempo e le energie della coppia. Si finisce per gestire una vita comune invece di viverla, e i momenti a due arrivano per ultimi, dopo tutto il resto.",
+    "pillar2Title": "2. La scomparsa della novità",
+    "pillar2Text": "All'inizio è tutto scoperta, e il cervello rilascia dopamina: da qui le famose farfalle. Con il tempo si crede di aver « capito tutto » dell'altro. Senza novità né sorpresa, l'eccitazione cala e la routine si installa.",
+    "pillar3Title": "3. Attenzioni e sforzi si fermano",
+    "pillar3Text": "Ci si crede « conquistati », così si smette di sedurre, di fare complimenti, di prendersi cura dell'altro. Eppure l'amore si nutre proprio di queste piccole attenzioni. Quando si fermano, spesso perché l'uno o l'altro non fa più alcuno <a href=\"/it/blog/ragazzo-non-si-impegna/\">sforzo</a>, il legame si raffredda."
+  },
+  "section5": {
+    "title": "I segnali che l'abitudine ha preso il controllo",
+    "intro": "Oltre al punteggio, alcuni segnali non ingannano. Se ne riconosci diversi, non è per forza la fine, ma è il momento di reagire prima che la distanza diventi irreversibile.",
+    "pillar1Title": "Il desiderio e la tenerezza sono spariti",
+    "pillar1Text": "Niente più gesti spontanei, niente più attrazione, un'intimità diventata rara o meccanica. Quando non ci si tocca e non ci si desidera più, è spesso uno dei primi segnali che la fiamma si indebolisce.",
+    "pillar2Title": "Gli scambi si limitano alla gestione",
+    "pillar2Text": "Le vostre conversazioni ruotano intorno alla spesa, agli impegni e ai figli, ma non più intorno a ciò che provate, ai vostri sogni o ai vostri desideri. Questa mancanza di comunicazione profonda svuota poco a poco la relazione della sua sostanza.",
+    "pillar3Title": "Resti per paura, non per voglia",
+    "pillar3Text": "La paura della solitudine, del giudizio altrui, di ricominciare da zero o dei vincoli materiali pesa più della voglia di stare insieme. Restare « perché è più semplice » è il marcatore più chiaro di una relazione per abitudine.",
+    "pillar4Title": "Non vi mancate più",
+    "pillar4Text": "Quando siete separati, l'altro non ti manca; a volte assapori persino quei momenti da solo/a. L'indifferenza, ancor più del conflitto, è il segno che il legame si è allentato."
+  },
+  "section6": {
+    "title": "Amore o abitudine: cosa fare del tuo risultato?",
+    "p1": "Qualunque sia il tuo punteggio, ricorda una cosa: un risultato non è una decisione. È un punto di partenza per riflettere, prima da solo/a e poi, idealmente, in coppia. La routine si può curare, a patto di nominarla e di voler agire.",
+    "p2": "Se l'abitudine domina, ti attendono due errori opposti: non fare nulla sperando che passi, o buttare tutto all'aria d'impulso. Tra i due c'è una vera via.",
+    "dontTitle": "Ciò che è meglio evitare",
+    "dont1Title": "Subire senza decidere nulla",
+    "dont1Text": "Restare per pura inerzia, aspettando che « torni da solo », è il modo più sicuro per lasciare che la relazione si spenga. L'amore addormentato non si risveglia senza un gesto consapevole da parte tua.",
+    "dont2Title": "Buttare tutto all'aria d'impulso",
+    "dont2Text": "Al contrario, andarsene di colpo per stanchezza può diventare un rimpianto. Un calo del desiderio non è sempre una fine: a volte è un segnale che bisogna reinvestire nella coppia prima di concludere.",
+    "doTitle": "Ciò che è utile fare",
+    "do1Title": "Ravvivare la fiamma, di proposito",
+    "do1Text": "Ricrea novità: uscite, sorprese, progetti, nuove esperienze insieme. Riprendi le piccole attenzioni degli inizi. Ci sono molti modi per rianimare una coppia che si addormenta, a patto di rimettercisi in due.",
+    "do2Title": "Parlarvi davvero",
+    "do2Text": "Osa la conversazione onesta: « A che punto sei con noi? Cosa desideri? ». Riscoprire come ciascuno ama e si sente amato — per esempio con il nostro <a href=\"/it/test-linguaggio-amore-coppia/\">test dei linguaggi dell'amore</a> — può riaccendere la connessione.",
+    "do3Title": "Concederti un tempo di riflessione (o farti aiutare)",
+    "do3Text": "Se il dubbio persiste, prenditi il tempo di separare l'amore dalla paura. Chiederti se è davvero la persona giusta, o rivolgerti a un terapeuta di coppia, aiuta a decidere con consapevolezza invece di subire."
+  },
+  "section7": {
+    "title": "Da ricordare: la routine non è una condanna",
+    "p1": "Porsi la domanda « amore o abitudine? » non è il segno che tutto è finito; al contrario, è la prova che qualcosa in te tiene ancora a questa relazione e si rifiuta di lasciarla spegnere in silenzio.",
+    "p2": "La maggior parte delle coppie attraversa fasi in cui l'abitudine prende il sopravvento. Ciò che fa la differenza non è evitarlo, è accorgersene e agire. Un amore può essere ravvivato; basta deciderlo in due, ed è anche ciò che misura il nostro <a href=\"/it/test-relazione-sana/\">test della relazione sana</a>.",
+    "p3": "Ascolta ciò che questo test risveglia in te. La tua sensazione, più del tuo punteggio, è la bussola migliore per sapere cosa vuoi davvero vivere."
+  },
+  "jsonLd": {
+    "quizName": "Test amore o abitudine",
+    "quizDescription": "Scopri se resti nella coppia per amore o per abitudine con questo test di autovalutazione di 20 domande.",
+    "faq1Q": "Come faccio a sapere se resto per amore o per abitudine?",
+    "faq1A": "Osserva il tuo desiderio e la tua libertà di scelta: provi ancora attrazione, complicità e voglia di progetti comuni, o resti soprattutto per comodità, per paura della solitudine o del cambiamento? Questo test misura proprio questo equilibrio in 20 domande.",
+    "faq2Q": "È grave restare per abitudine?",
+    "faq2A": "Non necessariamente: la routine fa parte di ogni coppia duratura. Diventa un problema quando resta solo l'abitudine, senza desiderio né complicità, e non sei più felice. Allora è un segnale da non ignorare.",
+    "faq3Q": "Ci si può innamorare di nuovo dopo anni di abitudine?",
+    "faq3A": "Sì, molto spesso. Ricreando novità, ristabilendo il dialogo e le attenzioni, e a volte con l'aiuto di un terapeuta di coppia, molte coppie rianimano un amore che si era semplicemente addormentato."
+  }
+}

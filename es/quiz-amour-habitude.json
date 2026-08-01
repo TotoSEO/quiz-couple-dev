@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "¿Sigues por amor o por costumbre?",
+    "titleHighlight": "amor o por costumbre",
+    "description": "Una autoevaluación sincera para entender qué te une de verdad hoy.",
+    "badge": "Test amor • Gratis • 5 min"
+  },
+  "section1": {
+    "title": "Amor o costumbre: ¿por qué te ronda esta pregunta?",
+    "p1": "Preguntarse si uno sigue <strong class=\"text-foreground\">por amor o por costumbre</strong> no es en absoluto banal. Esta pregunta rara vez aparece al principio de una historia: surge después de unos años, cuando la pasión del principio se ha callado y se instala una duda silenciosa. « ¿Le sigo queriendo de verdad, o sigo porque es cómodo? »",
+    "p2": "La rutina no es la enemiga del amor; al contrario, una pareja necesita puntos de referencia y seguridad. El problema empieza cuando <strong class=\"text-foreground\">solo</strong> queda la rutina: cuando el deseo, la complicidad y las ganas de proyectar han dejado paso a una simple convivencia que funciona sola, por automatismo.",
+    "p3": "Este test no es un veredicto y no decide por ti. Te ayuda a poner palabras a lo que sientes y a distinguir un amor que ha madurado de una relación que solo se sostiene por inercia. Si se plantea la cuestión de un verdadero giro, nuestro <a href=\"/es/test-debo-divorciarme/\">test «¿debo divorciarme?»</a> puede prolongar la reflexión."
+  },
+  "section2": {
+    "title": "Amor o costumbre: ¿cuál es la diferencia real?",
+    "p1": "La frontera es más sutil de lo que parece, porque el amor duradero a veces se <em>parece</em> a la costumbre: menos mariposas, más tranquilidad. La verdadera diferencia no se lee en la intensidad, sino en lo que te mueve en el fondo.",
+    "p2": "Para verlo claro, mira dos cosas: el <strong class=\"text-foreground\">deseo</strong> (¿sigues teniendo ganas de esta persona, de sorprenderla, de descubrirla?) y la <strong class=\"text-foreground\">elección</strong> (¿te quedas porque quieres, o porque irte da miedo?).",
+    "healthy": "<strong class=\"text-foreground\">Un amor que ha madurado</strong>: la pasión se ha calmado, pero sigues eligiendo a tu pareja, todavía la deseas, construís y reís juntos.",
+    "toxic": "<strong class=\"text-foreground\">Una relación por costumbre</strong>: te quedas sobre todo por comodidad, por miedo a la soledad o al cambio. El deseo, la complicidad y los proyectos comunes se han apagado.",
+    "quote": "Amar es elegir al otro una y otra vez. La costumbre es quedarse porque has olvidado que podías elegir."
+  },
+  "section3": {
+    "title": "Cómo interpretar tu resultado",
+    "intro": "Cada respuesta vale de 0 a 3 puntos, para un total sobre 60. Cuanto más alta sea tu puntuación, más pesa la costumbre frente al amor. Así puedes leer tu resultado: un indicador para reflexionar, no una sentencia.",
+    "headerScore": "Puntuación total",
+    "headerLevel": "Lo que predomina",
+    "headerAnalysis": "Qué significa",
+    "row1Score": "0 a 14 puntos",
+    "row1Level": "Un amor bien vivo",
+    "row1Analysis": "El amor gana con claridad. La pasión se ha convertido en apego profundo, pero el deseo y la complicidad siguen ahí.",
+    "row2Score": "15 a 29 puntos",
+    "row2Level": "El amor gana, la rutina se instala",
+    "row2Analysis": "Los sentimientos son reales, pero la rutina mordisquea. Una señal suave para volver a invertir en tu pareja.",
+    "row3Score": "30 a 44 puntos",
+    "row3Level": "La costumbre toma la delantera",
+    "row3Analysis": "El día a día ha ocupado más espacio que el impulso amoroso. Hace falta una verdadera toma de conciencia.",
+    "row4Score": "45 a 60 puntos",
+    "row4Level": "Sobre todo costumbre",
+    "row4Analysis": "Es la comodidad o el miedo lo que te retiene, más que el amor. Es necesario un tiempo de reflexión honesto."
+  },
+  "section4": {
+    "title": "Por qué el amor se transforma (a veces) en costumbre",
+    "p1": "Si tu puntuación se inclina hacia la costumbre, no te culpes: este deslizamiento es muy común y tiene explicación. El amor no desaparece de golpe: se duerme cuando dejamos de cuidarlo.",
+    "p2": "Tres mecanismos, sobre todo, transforman poco a poco el impulso amoroso en simple convivencia:",
+    "pillar1Title": "1. El desgaste del día a día",
+    "pillar1Text": "Trabajo, hijos, tareas, cansancio: la logística devora el tiempo y la energía de la pareja. Uno acaba gestionando una vida en común en lugar de vivirla, y los momentos a dos quedan en último lugar, después de todo lo demás.",
+    "pillar2Title": "2. La desaparición de la novedad",
+    "pillar2Text": "Al principio todo es descubrimiento, y el cerebro libera dopamina: de ahí las famosas mariposas. Con el tiempo, uno cree haber « conocido del todo » al otro. Sin novedad ni sorpresa, la emoción decae y se instala la rutina.",
+    "pillar3Title": "3. Se acaban los detalles y los esfuerzos",
+    "pillar3Text": "Uno se cree « conquistado », así que deja de seducir, de halagar, de cuidar al otro. Pero el amor se alimenta precisamente de esos pequeños detalles. Cuando cesan, a menudo porque uno u otro ya no hace ningún <a href=\"/es/blog/novio-no-hace-esfuerzo/\">esfuerzo</a>, el vínculo se enfría."
+  },
+  "section5": {
+    "title": "Las señales de que la costumbre ha tomado el control",
+    "intro": "Más allá de la puntuación, algunas señales no engañan. Si reconoces varias, no es necesariamente el final, pero es el momento de reaccionar antes de que la distancia se vuelva irreversible.",
+    "pillar1Title": "El deseo y la ternura han desaparecido",
+    "pillar1Text": "Ya no hay gestos espontáneos, ni atracción, y una intimidad que se ha vuelto rara o mecánica. Cuando ya no os tocáis ni os deseáis, suele ser una de las primeras señales de que la llama se debilita.",
+    "pillar2Title": "Los intercambios se limitan a la logística",
+    "pillar2Text": "Vuestras conversaciones giran en torno a la compra, la agenda y los hijos, pero ya no en torno a lo que sentís, vuestros sueños o vuestros deseos. Esa falta de comunicación profunda vacía poco a poco la relación de su sustancia.",
+    "pillar3Title": "Te quedas por miedo, no por ganas",
+    "pillar3Text": "El miedo a la soledad, al qué dirán, a empezar de cero o a las cargas materiales pesa más que las ganas de estar juntos. Quedarse « porque es más sencillo » es el marcador más claro de una relación por costumbre.",
+    "pillar4Title": "Ya no os echáis de menos",
+    "pillar4Text": "Cuando estáis separados, no echas de menos al otro; a veces incluso saboreas esos momentos a solas. La indiferencia, aún más que el conflicto, es la señal de que el vínculo se ha aflojado."
+  },
+  "section6": {
+    "title": "Amor o costumbre: ¿qué hacer con tu resultado?",
+    "p1": "Sea cual sea tu puntuación, recuerda una cosa: un resultado no es una decisión. Es un punto de partida para reflexionar, primero a solas y después, idealmente, en pareja. La rutina tiene remedio, siempre que la nombres y quieras actuar.",
+    "p2": "Si la costumbre domina, te acechan dos errores opuestos: no hacer nada esperando que se pase, o romperlo todo por un impulso. Entre ambos hay un verdadero camino.",
+    "dontTitle": "Lo que conviene evitar",
+    "dont1Title": "Dejarte llevar sin decidir nada",
+    "dont1Text": "Quedarte por pura inercia, esperando que « vuelva solo », es la forma más segura de dejar que la relación se apague. El amor dormido no despierta sin un gesto consciente por tu parte.",
+    "dont2Title": "Romperlo todo por un impulso",
+    "dont2Text": "A la inversa, marcharte de golpe por cansancio puede convertirse en un arrepentimiento. Una caída del deseo no siempre es un final: a veces es una señal de que hay que reinvertir en la pareja antes de concluir.",
+    "doTitle": "Lo que sí es útil hacer",
+    "do1Title": "Reavivar la llama, a propósito",
+    "do1Text": "Recrea novedad: salidas, sorpresas, proyectos, nuevas experiencias juntos. Recupera los pequeños detalles del principio. Hay muchas formas de revivir una pareja que se adormece, siempre que os pongáis a ello en pareja.",
+    "do2Title": "Hablaros de verdad",
+    "do2Text": "Atrévete a la conversación honesta: « ¿Cómo estás con lo nuestro? ¿Qué te apetece? ». Redescubrir cómo ama y se siente amado cada uno —por ejemplo con nuestro <a href=\"/es/test-lenguaje-amor-pareja/\">test de los lenguajes del amor</a>— puede reactivar la conexión.",
+    "do3Title": "Concederte un tiempo de reflexión (o pedir ayuda)",
+    "do3Text": "Si la duda persiste, tómate el tiempo de separar el amor del miedo. Preguntarte si es de verdad la persona adecuada, o acudir a un terapeuta de pareja, ayuda a decidir con conciencia en lugar de dejarte llevar."
+  },
+  "section7": {
+    "title": "Para recordar: la rutina no es una fatalidad",
+    "p1": "Preguntarse « ¿amor o costumbre? » no es señal de que todo haya terminado; al contrario, es la prueba de que algo en ti todavía se aferra a esta relación y se niega a dejarla apagarse en silencio.",
+    "p2": "La mayoría de las parejas atraviesan fases en las que la costumbre toma el control. Lo que marca la diferencia no es evitarlo, es darse cuenta y actuar. Un amor puede reavivarse; solo hay que decidirlo en pareja, que es también lo que mide nuestro <a href=\"/es/test-relacion-sana/\">test de relación sana</a>.",
+    "p3": "Escucha lo que este test despierta en ti. Tu sensación, más que tu puntuación, es la mejor brújula para saber qué quieres vivir de verdad."
+  },
+  "jsonLd": {
+    "quizName": "Test amor o costumbre",
+    "quizDescription": "Descubre si sigues en pareja por amor o por costumbre con este test de autoevaluación de 20 preguntas.",
+    "faq1Q": "¿Cómo saber si sigo por amor o por costumbre?",
+    "faq1A": "Observa tu deseo y tu libertad de elección: ¿todavía sientes atracción, complicidad y ganas de proyectos comunes, o te quedas sobre todo por comodidad, por miedo a la soledad o al cambio? Este test mide precisamente ese equilibrio en 20 preguntas.",
+    "faq2Q": "¿Es malo quedarse por costumbre?",
+    "faq2A": "No necesariamente: la rutina forma parte de toda pareja duradera. Se convierte en un problema cuando solo queda la costumbre, sin deseo ni complicidad, y ya no eres feliz. Entonces es una señal que no conviene ignorar.",
+    "faq3Q": "¿Se puede volver a enamorar tras años de costumbre?",
+    "faq3A": "Sí, muy a menudo. Recreando novedad, restableciendo el diálogo y los detalles, y a veces con la ayuda de un terapeuta de pareja, muchas parejas reaniman un amor que simplemente se había dormido."
+  }
+}
