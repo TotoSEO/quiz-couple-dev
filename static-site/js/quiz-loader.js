@@ -75,7 +75,10 @@
     'infidelite':     { prefix: 'infidelite', engine: 'solo', totalQ: 20, pool: 20, quizType: 'infidelite', ascending: true },
 
     // ── Bebe quiz (solo scoring, descending: more ready = higher score) ──
-    'bebe':           { prefix: 'bebe', engine: 'solo', totalQ: 20, pool: 20, quizType: 'bebe' }
+    'bebe':           { prefix: 'bebe', engine: 'solo', totalQ: 20, pool: 20, quizType: 'bebe' },
+
+    // ── Les Z'Amours (TV game-show: guess & reveal + 45s final) ──
+    'zamours':        { prefix: 'zamours', engine: 'zamours', totalQ: 14, pool: 60 }
   };
 
   var config = QUIZ_CONFIG[quizType];
@@ -144,6 +147,9 @@
         break;
       case 'profile':
         initProfileQuiz(config, questions);
+        break;
+      case 'zamours':
+        initZamoursQuiz(config, questions);
         break;
       default:
         showUnavailable(config);
@@ -385,6 +391,20 @@
       questions: questions,
       prefix: cfg.prefix,
       lang: lang
+    });
+  }
+
+  function initZamoursQuiz(cfg, questions) {
+    // Pass the FULL question bank so the engine draws a fresh random subset
+    // every game (and on "other questions"), not just the pre-sliced set.
+    var pool = parseGdQuestions(cfg.prefix, (cfg.pool || 60) + 10);
+    if (!pool || pool.length === 0) pool = questions;
+    new QuizEngine.ZamoursQuiz({
+      container: container,
+      questions: pool,
+      prefix: cfg.prefix,
+      lang: lang,
+      perGame: cfg.totalQ || 14
     });
   }
 

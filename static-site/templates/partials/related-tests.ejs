@@ -17,9 +17,10 @@
     quizAmoureux:     ['quizCoquin', 'quizMarrant', 'testLangageAmour', 'quizTuPreferes'],
     quizCoquin:       ['quizAmoureux', 'testLangageAmour', 'quizGenant', 'quizTuPreferes'],
     quizMarrant:      ['quizGenant', 'quizTuPreferes', 'quizMost', 'quizKnowledge'],
-    quizKnowledge:    ['quizMost', 'quizMarrant', 'quizAmoureux', 'testCommonPoints'],
-    quizMost:         ['quizKnowledge', 'quizMarrant', 'quizGenant', 'quizTuPreferes'],
+    quizKnowledge:    ['zamours', 'quizMost', 'quizMarrant', 'testCommonPoints'],
+    quizMost:         ['quizKnowledge', 'zamours', 'quizMarrant', 'quizTuPreferes'],
     quizAdo:          ['quizAmoureux', 'quizMarrant', 'quizKnowledge', 'testCouple'],
+    zamours:          ['quizKnowledge', 'testCommonPoints', 'quizMarrant', 'quizMost'],
     quizGenant:       ['quizMarrant', 'quizCoquin', 'quizTuPreferes', 'quizMost'],
     quizTuPreferes:   ['quizMarrant', 'quizGenant', 'quizMost', 'quizAmoureux'],
     quizVraiFaux:     ['quizKnowledge', 'quizMarrant', 'testCouple', 'quizMost'],
@@ -32,6 +33,7 @@
     testAttachement: '🔗', testConfiance: '🤝',
     quizAmoureux: '❤️', quizCoquin: '🔥', quizMarrant: '😂', quizKnowledge: '🧠',
     quizMost: '🏆', quizAdo: '🌟', quizGenant: '😳', quizTuPreferes: '🤔', quizVraiFaux: '✅',
+    zamours: '📺',
   };
 
   const _relatedKeys = (_relatedMap[routeKey] || []).filter(function(k) {
