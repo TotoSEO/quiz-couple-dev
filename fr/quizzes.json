@@ -189,5 +189,11 @@
     "shortTitle": "Les Z'Amours",
     "description": "Le jeu culte de l'émission, version couple ! Devinez les réponses de votre moitié, marquez des points et tentez la finale. 60 questions tirées au sort.",
     "metaDescription": "Jouez aux Z'Amours en couple en ligne : devinez les réponses de votre moitié, marquez des points et tentez la finale. 60 questions, gratuit et sans inscription."
+  },
+  "quizTentation": {
+    "title": "Quiz Île de la Tentation en ligne : y résisteriez-vous ?",
+    "shortTitle": "Quiz Tentation",
+    "description": "12 jours sur l'île, 30 situations de tentation : résisterez-vous jusqu'au dernier feu de camp ?",
+    "metaDescription": "Quiz Île de la Tentation en ligne et gratuit : 12 jours sur l'île, des tentations chaque jour et un dernier feu de camp. Survivrez-vous à l'épreuve ?"
   }
 }

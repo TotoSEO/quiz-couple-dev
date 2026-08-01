@@ -159,5 +159,11 @@
     "shortTitle": "Actividades en pareja",
     "description": "Encuentra actividades en pareja cerca de ti. Herramienta gratuita y geolocalizada: filtra por presupuesto, ambiente y distancia para salidas inolvidables.",
     "metaDescription": "Encuentra actividades en pareja cerca de ti. Herramienta gratuita y geolocalizada: filtra por presupuesto, ambiente y distancia para salidas inolvidables."
+  },
+  "quizTentation": {
+    "title": "Quiz La Isla de las Tentaciones: ¿sobrevivirías?",
+    "shortTitle": "Quiz Tentaciones",
+    "description": "12 días en la isla, 30 situaciones de tentación: ¿aguantarás hasta la hoguera final?",
+    "metaDescription": "Quiz de La Isla de las Tentaciones online y gratis: 12 días en la isla, tentaciones cada día y una hoguera final. ¿Sobreviviría tu relación?"
   }
 }

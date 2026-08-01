@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "title": "Würdest du Temptation Island überstehen? Das Quiz",
+    "titleHighlight": "Temptation Island",
+    "description": "12 Tage auf einer Trauminsel, getrennt von deinem Partner, umgeben von Versuchungen. Wie lange würdest du durchhalten?",
+    "badge": "Inoffizielles Quiz • Kostenlos • 5 Min."
+  },
+  "section1": {
+    "title": "Das Prinzip: zwölf Tage, eine Insel und deine Grenzen",
+    "p1": "Seit über zwanzig Jahren stellt <strong class=\"text-foreground\">Temptation Island</strong> immer dieselbe Frage, die einfachste und zugleich schwindelerregendste überhaupt: Was bleibt von einer Beziehung, wenn man sie trennt, an einen Traumstrand schickt und mit Singles umgibt, deren Beruf das Verführen ist?",
+    "p2": "Dieses Quiz versetzt dich an ihre Stelle. Du reist allein auf die Insel, für einen Aufenthalt von <strong class=\"text-foreground\">12 Tagen</strong>. Jeder Tag konfrontiert dich mit einer echten Situation aus der Sendung: ein Abendessen, das zu nah wird, ein Spaziergang im Sonnenuntergang, ein Geständnis zu viel, eine ausgestreckte Hand um 2 Uhr nachts. Du entscheidest, was du wirklich tun würdest.",
+    "p3": "Und wie in der Sendung kommt am Ende alles heraus: Alle vier Tage zeigt das <strong class=\"text-foreground\">Lagerfeuer</strong> deinem Partner die Aufnahmen. Am letzten Lagerfeuer fällt das Urteil, und es hängt allein von dir ab."
+  },
+  "section2": {
+    "title": "Was ist Temptation Island genau?",
+    "p1": "Temptation Island entstand 2001 in den USA und wurde zu einem der meistexportierten Realityformate der Welt, mit Versionen in über zwanzig Ländern. In Deutschland läuft <em>Temptation Island: Versuchung im Paradies</em> seit 2019 bei RTL, produziert von Banijay Productions Germany. In Frankreich heißt das Format <em>L'Île de la tentation</em>, in Spanien <em>La isla de las tentaciones</em>, in Italien läuft es auf Canale 5.",
+    "p2": "Der Aufbau hat sich seit den Anfängen kaum verändert, und genau das macht seine Kraft aus:",
+    "healthy": "<strong class=\"text-foreground\">Die Trennung</strong>: Paare reisen auf eine Insel, leben aber in zwei getrennten Villen, die Frauen umgeben von rund zehn Verführern, die Männer von rund zehn Verführerinnen.",
+    "toxic": "<strong class=\"text-foreground\">Das Lagerfeuer</strong>: jeden Abend das gefürchtetste Ritual. Jeder sieht auf einer großen Leinwand eine Auswahl an Aufnahmen seines Partners am anderen Strand. Dort fallen die Masken.",
+    "quote": "Auf der Insel täuscht niemand lange: Zwölf Tage genügen, um sichtbar zu machen, was ein Paar lieber nicht ansehen würde."
+  },
+  "section3": {
+    "title": "So liest du deine Versuchungs-Punktzahl",
+    "intro": "Jede Situation ist 0 bis 3 Versuchungspunkte wert. Über 12 Tage reicht die Summe von 0 bis 36: Je niedriger dein Wert, desto besser hast du widerstanden. Deine Widerstandsquote erscheint am Ende, zusammen mit dem Urteil des letzten Lagerfeuers.",
+    "headerScore": "Versuchungs-Punktzahl",
+    "headerLevel": "Urteil am Lagerfeuer",
+    "headerAnalysis": "Was das über dich sagt",
+    "row1Score": "0 bis 7 Punkte",
+    "row1Level": "Unerschütterlich",
+    "row1Analysis": "Die Insel konnte dir nichts anhaben. Du hast deine Grenzen am ersten Tag gesetzt und sie gehalten.",
+    "row2Score": "8 bis 15 Punkte",
+    "row2Level": "Standhaft",
+    "row2Analysis": "Zeitweise verunsichert, aber nie überfordert. Du kämst mit reinem Gewissen zurück.",
+    "row3Score": "16 bis 23 Punkte",
+    "row3Level": "In Gefahr",
+    "row3Analysis": "Die Grenze ist verschwommen. Nichts Unwiderrufliches, aber du hast auch nichts verhindert.",
+    "row4Score": "24 bis 31 Punkte",
+    "row4Level": "Das Lagerfeuer wird wehtun",
+    "row4Analysis": "Du hast mehrfach nachgegeben. Auf der Insel verhältst du dich eher wie ein Single als wie jemand in einer Beziehung.",
+    "row5Score": "32 bis 36 Punkte",
+    "row5Level": "Du gehst allein",
+    "row5Analysis": "Es gab keine Spannung: Du warst schon woanders, bevor du überhaupt angekommen bist."
+  },
+  "section4": {
+    "title": "Warum die Insel selbst starke Paare zu Fall bringt",
+    "p1": "Was das Format so gefährlich macht, ist nicht die Schönheit der Singles: Es ist der Aufbau. In zwölf Tagen vereint die Insel alle Zutaten, die eine Bindung ins Wanken bringen, und genau das bildet dieses Quiz nach.",
+    "p2": "Drei Mechanismen erklären die meisten Ausrutscher, die man auf dem Bildschirm sieht:",
+    "pillar1Title": "1. Der Verlust der Bezugspunkte",
+    "pillar1Text": "Kein Alltag, kein Umfeld, keine Termine: fern deines Lebens wirst du wieder eine Version deiner selbst ohne Zeugen. Dieses Gefühl einer Klammer, „was auf der Insel passiert, bleibt auf der Insel“, schaltet einen guten Teil der üblichen Bremsen ab.",
+    "pillar2Title": "2. Aufmerksamkeit in Reinform",
+    "pillar2Text": "Ein Verführer hat weder Abwasch noch Rechnungen noch Müdigkeit zu teilen. Er hat nur eine Aufgabe: dir zuzuhören und dich zu bewundern. Gegen Jahre der Routine wirkt diese gebündelte Aufmerksamkeit wie ein Entwickler für alles, was fehlt.",
+    "pillar3Title": "3. Der von den Bildern erzeugte Zweifel",
+    "pillar3Text": "Das Lagerfeuer zeigt nie alles: Es zeigt eine Auswahl. Viele Kandidaten geben nicht aus Verlangen nach, sondern aus Vergeltung, nachdem sie ein paar verletzende Sekunden gesehen haben. <a href=\"/de/eifersucht-test-paar/\">Eifersucht</a> wird dann zum eigentlichen Motor des Ausrutschers."
+  },
+  "section5": {
+    "title": "Was dein Ergebnis wirklich über deine Beziehung sagt",
+    "intro": "Dieses Quiz ist ein Spiel, keine Diagnose. Aber wie du antwortest, sagt oft mehr aus als der Wert selbst. So kannst du deuten, was an die Oberfläche kommt.",
+    "pillar1Title": "Versucht zu werden ist kein Verrat",
+    "pillar1Text": "Sich zu jemand anderem hingezogen zu fühlen ist menschlich und sagt nichts über die Stabilität deiner Beziehung. Es zählt, was du daraus machst: die Grenzen, die du setzt, und das, was du deinem Partner erzählst.",
+    "pillar2Title": "Versuchung offenbart einen Mangel, sie erzeugt ihn nicht",
+    "pillar2Text": "Wenn du bei den Fragen zu Komplimenten oder zum Zuhören nachgegeben hast, ist das kein Zufall: Oft ist es das Zeichen eines unerfüllten Bedürfnisses in deiner Beziehung. Ein Bedürfnis, das auch außerhalb der Insel besteht und zu Hause behandelt werden muss.",
+    "pillar3Title": "Routine ist der beste Verbündete der Versuchung",
+    "pillar3Text": "Die Paare, die am schnellsten wanken, sind selten die unglücklichsten: Es sind die eingeschlafenen. Wenn dich dieses Quiz unbehaglich gemacht hat, ist unser <a href=\"/de/liebe-oder-gewohnheit-test/\">Test Liebe oder Gewohnheit</a> die passende Fortsetzung.",
+    "pillar4Title": "Ein niedriger Wert ist keine Garantie für immer",
+    "pillar4Text": "Zwölf Tage zu widerstehen garantiert nichts für die nächsten zehn Jahre. Eine starke Beziehung ist keine Beziehung in Sicherheit: Es ist eine Beziehung, die weiter gepflegt wird. Genau das misst unser <a href=\"/de/gesunde-beziehung-test/\">Test für eine gesunde Beziehung</a>."
+  },
+  "section6": {
+    "title": "So spielst du (und was dich erwartet)",
+    "p1": "Das Quiz spielst du allein, in fünf Minuten, ohne Anmeldung. Du gibst deinen Vornamen und den deines Partners ein und erlebst deine 12 Tage auf der Insel. Die 12 Situationen werden aus <strong class=\"text-foreground\">30 verschiedenen Szenarien</strong> ausgelost, jeder neue Aufenthalt ist also eine andere Geschichte.",
+    "p2": "Ein Rat vorab: Spiel ehrlich. Zu antworten, was man „sollte“, ergibt eine perfekte Punktzahl und ein wertloses Ergebnis. Die Übung lohnt sich nur, wenn du wählst, was du wirklich tun würdest, allein, um 2 Uhr nachts, 8.000 km von zu Hause entfernt.",
+    "dontTitle": "Was dieses Quiz nicht ist",
+    "dont1Title": "Ein wissenschaftlicher Treuetest",
+    "dont1Text": "Kein Fragebogen kann echtes Verhalten vorhersagen. Dieses Quiz greift das TV-Format auf, um dich zum Nachdenken zu bringen, nicht um über deine oder irgendeine Beziehung zu urteilen.",
+    "dont2Title": "Eine Waffe gegen deinen Partner",
+    "dont2Text": "Deinen Partner das Quiz machen zu lassen, um ihm seinen Wert vorzuwerfen, ist der sicherste Weg, aus einem Spiel einen Konflikt zu machen. Vergleicht eure Ergebnisse ruhig, aber sprecht über das Gefühl, nicht über die Punkte.",
+    "doTitle": "Wie ihr am meisten davon habt",
+    "do1Title": "Spielt getrennt und vergleicht danach",
+    "do1Text": "Das ist die spannendste Variante: Macht den Aufenthalt jeder für sich und deckt dann eure beiden Urteile auf. Die Unterschiede sind meist ein hervorragender Gesprächsstoff.",
+    "do2Title": "Startet einen neuen Aufenthalt für andere Situationen",
+    "do2Text": "Bei 30 Szenarien für 12 Tage stellt dich eine zweite Runde vor völlig neue Dilemmata, manchmal schwierigere als beim ersten Mal.",
+    "do3Title": "Macht danach einen echten Paartest",
+    "do3Text": "Wenn das Quiz grundlegende Fragen aufgeworfen hat, geht weiter mit einem ernsteren Werkzeug wie unserem <a href=\"/de/paar-kompatibilitaetstest/\">Paartest</a>, der die tatsächliche Stabilität eurer Beziehung misst."
+  },
+  "section7": {
+    "title": "Also, würdest du Temptation Island überstehen?",
+    "p1": "Vom Sofa aus hält sich jeder für unbestechlich. Es ist leicht, einen Kandidaten zu verurteilen, der im Fernsehen nachgibt, und viel schwerer, sich selbst Tag für Tag in dieselben Situationen zu versetzen.",
+    "p2": "Dieses Quiz will dir keine Falle stellen: Es will eine ehrliche Antwort auf eine Frage, die sich wenige Paare zu stellen trauen. Zwölf Tage, eine Insel, keine Aufsicht. Was würdest du wirklich tun?",
+    "p3": "Es bleibt nur eines: an Bord gehen und auf das letzte Lagerfeuer warten."
+  },
+  "faqTitle": "Häufige Fragen zu Temptation Island",
+  "disclaimer": "Unabhängiges, inoffizielles Quiz, das reiner Unterhaltung dient. Quiz Couple steht in keiner Verbindung zur Produktion von Temptation Island oder L'Île de la tentation und auch nicht zu den Sendern, die das Programm ausstrahlen. Die genannten Namen gehören ihren jeweiligen Eigentümern.",
+  "jsonLd": {
+    "quizName": "Temptation Island Quiz",
+    "quizDescription": "Quiz nach dem Vorbild von Temptation Island: 12 Tage auf der Insel, 30 Versuchungssituationen und ein letztes Lagerfeuer, das alles entscheidet.",
+    "faq1Q": "Was ist das Prinzip von Temptation Island?",
+    "faq1A": "Paare reisen auf eine Trauminsel, leben dort aber getrennt, jeder umgeben von rund zehn Singles, den Verführern und Verführerinnen. Jeden Abend zeigt das Lagerfeuer-Ritual Aufnahmen des Partners vom anderen Strand. Am letzten Lagerfeuer entscheidet jedes Paar, ob es gemeinsam oder getrennt abreist.",
+    "faq2Q": "Ist dieses Quiz offiziell?",
+    "faq2A": "Nein. Es ist ein kostenloses, unabhängiges Quiz, das sich am Prinzip der Sendung orientiert, ohne jede Verbindung zur Produktion oder zu den ausstrahlenden Sendern.",
+    "faq3Q": "Wie viele Fragen hat das Quiz?",
+    "faq3A": "Jeder Aufenthalt führt dich durch 12 Tage, also 12 Situationen, ausgelost aus 30 verschiedenen Szenarien. Du kannst also mehrfach spielen, ohne dieselben Dilemmata wiederzusehen.",
+    "faq4Q": "Wo läuft Temptation Island?",
+    "faq4A": "In Deutschland läuft Temptation Island: Versuchung im Paradies bei RTL und RTL+. Das Format gibt es in vielen Ländern, unter anderem in Italien auf Canale 5, in Spanien auf Telecinco als La isla de las tentaciones und in Frankreich auf W9 als L'Île de la tentation."
+  }
+}

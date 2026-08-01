@@ -83,7 +83,8 @@
     'bebe':           { prefix: 'bebe', engine: 'solo', totalQ: 20, pool: 20, quizType: 'bebe' },
 
     // ── Les Z'Amours (TV game-show: guess & reveal + 45s final) ──
-    'zamours':        { prefix: 'zamours', engine: 'zamours', totalQ: 14, pool: 60 }
+    'zamours':        { prefix: 'zamours', engine: 'zamours', totalQ: 14, pool: 60 },
+    'tentation':      { prefix: 'tentation', engine: 'tentation', totalQ: 12, pool: 30, ascending: true }
   };
 
   var config = QUIZ_CONFIG[quizType];
@@ -165,6 +166,9 @@
         break;
       case 'zamours':
         initZamoursQuiz(config, questions);
+        break;
+      case 'tentation':
+        initTentationQuiz(config, questions);
         break;
       default:
         showUnavailable(config);
@@ -421,6 +425,33 @@
       prefix: cfg.prefix,
       lang: lang,
       perGame: cfg.totalQ || 14
+    });
+  }
+
+  function initTentationQuiz(cfg, questions) {
+    // Hand over the FULL bank so each "stay" on the island draws a fresh set
+    // of 12 situations out of the 30 available.
+    var pool = parseGdQuestions(cfg.prefix, (cfg.pool || 30) + 10, cfg.ascending);
+    if (!pool || pool.length === 0) pool = questions;
+    // Tier ranges are computed on one stay (days x max points per situation),
+    // not on the whole bank, so the verdict matches the score actually shown.
+    var days = Math.min(cfg.totalQ || 12, pool.length);
+    var perDayMax = 0;
+    for (var i = 0; i < pool.length; i++) {
+      var best = 0;
+      for (var j = 0; j < pool[i].options.length; j++) {
+        if ((pool[i].options[j].points || 0) > best) best = pool[i].options[j].points || 0;
+      }
+      if (best > perDayMax) perDayMax = best;
+    }
+    var results = parseGdResults(cfg.prefix, days * perDayMax);
+    new QuizEngine.TentationQuiz({
+      container: container,
+      questions: pool,
+      results: results,
+      prefix: cfg.prefix,
+      lang: lang,
+      days: days
     });
   }
 
