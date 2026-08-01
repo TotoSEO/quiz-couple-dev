@@ -29,6 +29,12 @@
     "description": "25 questions pour identifier les signes d'une relation toxique et prendre soin de vous.",
     "metaDescription": "Votre relation est-elle toxique ? Répondez à 25 questions et identifiez les signaux d'alerte d'une relation malsaine. Confidentiel et gratuit."
   },
+  "testPervers": {
+    "title": "Test pervers narcissique : suis-je avec un manipulateur ?",
+    "shortTitle": "Test PN",
+    "description": "20 questions pour repérer les signes d'un pervers narcissique et sortir du doute.",
+    "metaDescription": "Doutez-vous de votre relation ? 20 questions pour reconnaître un pervers narcissique : manipulation, emprise, gaslighting. Test gratuit, confidentiel et immédiat."
+  },
   "quizAmoureux": {
     "title": "Quiz amoureux gratuit en couple : testez votre complicité",
     "shortTitle": "Quiz Amoureux",
