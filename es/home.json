@@ -147,6 +147,9 @@
     "title": "Crea tu propio quiz",
     "sub": "Inventa tus preguntas, elige el formato y comparte tu quiz con tus amigos o tu pareja con un solo enlace. 100% gratis, sin registro.",
     "cta": "Crear mi quiz",
-    "popularTitle": "Los quiz más jugados de la comunidad"
+    "popularTitle": "Los quiz más jugados de la comunidad",
+    "popularEyebrow": "Lo mejor de la comunidad",
+    "popularSub": "Quizzes creados por otras parejas: empieza con un clic.",
+    "popularCta": "Jugar"
   }
 }

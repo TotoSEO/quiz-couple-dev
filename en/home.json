@@ -147,6 +147,9 @@
     "title": "Create your own quiz",
     "sub": "Make up your own questions, pick the format, and share your quiz with your friends or your partner in one link. 100% free, no sign-up.",
     "cta": "Create my quiz",
-    "popularTitle": "The community's most-played quizzes"
+    "popularTitle": "The community's most-played quizzes",
+    "popularEyebrow": "Community favourites",
+    "popularSub": "Quizzes dreamed up by other couples — jump in with one tap.",
+    "popularCta": "Play"
   }
 }

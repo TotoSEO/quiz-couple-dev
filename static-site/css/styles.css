@@ -4443,13 +4443,68 @@ h1, h2, h3, h4, h5, h6,
 .home-cq-emoji--4 { top: 56%; left: 10%; animation-delay: 1.8s; }
 @keyframes cqFloat { 0%,100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-12px) rotate(4deg); } }
 @media (prefers-reduced-motion: reduce) { .home-cq-emoji { animation: none; } }
-.home-popular { margin-top: 2rem; }
-.home-popular-title { text-align: center; font-family: 'Poppins','Inter',sans-serif; font-weight: 700; font-size: 1.1rem; margin: 0 0 1.1rem; }
-.home-popular-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
-@media (min-width: 640px) { .home-popular-grid { grid-template-columns: repeat(3, 1fr); } }
-.home-pop-card { display: flex; flex-direction: column; gap: .5rem; padding: 1.1rem 1.2rem; text-decoration: none; color: inherit;
-  border: 1px solid hsl(var(--border)); border-radius: 1.1rem; background: hsl(var(--card)); transition: transform .18s, box-shadow .18s, border-color .18s; }
-.home-pop-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -16px hsl(var(--primary) / .5); border-color: hsl(var(--primary) / .5); }
-.home-pop-ico { font-size: 1.6rem; }
-.home-pop-name { font-weight: 700; font-size: .95rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.home-pop-meta { font-size: .82rem; font-weight: 700; color: hsl(var(--primary)); }
+.home-popular { margin-top: 3rem; }
+.home-popular-head { text-align: center; max-width: 42rem; margin: 0 auto 1.9rem; }
+.home-popular-eyebrow { display: inline-flex; align-items: center; gap: .4rem; font-weight: 700; font-size: .74rem;
+  letter-spacing: .06em; text-transform: uppercase; color: hsl(var(--primary));
+  background: hsl(var(--primary) / .1); padding: .34rem .85rem; border-radius: 999px; }
+.home-popular-eyebrow::before { content: '🔥'; }
+.home-popular-title { font-family: 'Poppins','Inter',sans-serif; font-weight: 800; font-size: clamp(1.4rem, 3vw, 1.9rem);
+  margin: .85rem 0 .4rem; }
+.home-popular-sub { margin: 0; color: hsl(var(--muted-foreground)); font-size: 1rem; line-height: 1.5; }
+
+.home-popular-grid { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .home-popular-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Per-type accent (hue / saturation / lightness) + readable text lightness */
+.home-pop-card { --pop-h: 340; --pop-s: 70%; --pop-l: 62%; --pop-text-l: calc(var(--pop-l) - 12%); }
+.home-pop-card--points    { --pop-h: 340; --pop-s: 70%; --pop-l: 62%; } /* rose   */
+.home-pop-card--truefalse { --pop-h: 158; --pop-s: 58%; --pop-l: 44%; } /* green  */
+.home-pop-card--fun       { --pop-h: 34;  --pop-s: 92%; --pop-l: 54%; } /* amber  */
+.home-pop-card--wyr       { --pop-h: 268; --pop-s: 48%; --pop-l: 58%; } /* purple */
+.dark .home-pop-card { --pop-text-l: calc(var(--pop-l) + 16%); }
+
+.home-pop-card { position: relative; display: flex; flex-direction: column; gap: .55rem; overflow: hidden;
+  padding: 1.4rem 1.35rem 1.15rem; text-decoration: none; color: inherit;
+  border: 1px solid hsl(var(--border)); border-radius: 1.35rem; background: hsl(var(--card));
+  box-shadow: 0 1px 2px hsl(var(--foreground) / .05);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  animation: popCardIn .5s cubic-bezier(.16,1,.3,1) backwards; animation-delay: calc(var(--pop-i, 0) * 90ms); }
+.home-pop-card::before { content: ''; position: absolute; inset: 0 0 auto; height: 5px;
+  background: linear-gradient(90deg, hsl(var(--pop-h) var(--pop-s) var(--pop-l)),
+                                     hsl(var(--pop-h) var(--pop-s) calc(var(--pop-l) + 12%))); }
+.home-pop-card:hover { transform: translateY(-6px);
+  border-color: hsl(var(--pop-h) var(--pop-s) var(--pop-l) / .55);
+  box-shadow: 0 22px 45px -22px hsl(var(--pop-h) var(--pop-s) var(--pop-l) / .6); }
+
+.home-pop-rank { position: absolute; top: .8rem; right: 1rem; font-size: 1.5rem; line-height: 1;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,.18)); }
+.home-pop-ico { display: inline-flex; align-items: center; justify-content: center; width: 3.1rem; height: 3.1rem;
+  font-size: 1.6rem; border-radius: 1rem; margin-top: .25rem;
+  background: hsl(var(--pop-h) var(--pop-s) var(--pop-l) / .14); }
+.home-pop-badge { align-self: flex-start; font-weight: 700; font-size: .7rem; letter-spacing: .03em;
+  text-transform: uppercase; padding: .26rem .62rem; border-radius: 999px;
+  color: hsl(var(--pop-h) var(--pop-s) var(--pop-text-l));
+  background: hsl(var(--pop-h) var(--pop-s) var(--pop-l) / .14); }
+.home-pop-name { font-family: 'Poppins','Inter',sans-serif; font-weight: 700; font-size: 1.02rem; line-height: 1.3;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.home-pop-desc { font-size: .87rem; line-height: 1.45; color: hsl(var(--muted-foreground));
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.home-pop-foot { margin-top: auto; padding-top: .85rem; display: flex; align-items: center; justify-content: space-between;
+  gap: .5rem; border-top: 1px solid hsl(var(--border) / .7); }
+.home-pop-stats { display: flex; flex-wrap: wrap; gap: .25rem .8rem; }
+.home-pop-stat { display: inline-flex; align-items: center; gap: .32rem; font-size: .8rem; font-weight: 600;
+  color: hsl(var(--muted-foreground)); }
+.home-pop-stat-ico { font-size: .88rem; }
+.home-pop-plays { color: hsl(var(--pop-h) var(--pop-s) var(--pop-text-l)); font-weight: 700; }
+.home-pop-go { display: inline-flex; align-items: center; gap: .3rem; flex: none; font-size: .82rem; font-weight: 700;
+  color: hsl(var(--pop-h) var(--pop-s) var(--pop-text-l));
+  opacity: 0; transform: translateX(-4px); transition: opacity .2s, transform .2s; }
+.home-pop-go svg { width: 1rem; height: 1rem; }
+.home-pop-card:hover .home-pop-go { opacity: 1; transform: translateX(0); }
+@media (hover: none) { .home-pop-go { opacity: 1; transform: none; } }
+@keyframes popCardIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .home-pop-card { animation: none; }
+  .home-pop-card:hover { transform: none; }
+  .home-pop-go { opacity: 1; transform: none; } }

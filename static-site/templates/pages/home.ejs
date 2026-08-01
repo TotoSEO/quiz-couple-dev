@@ -251,8 +251,19 @@
         <span class="home-cq-emoji home-cq-emoji--4">🤔</span>
       </div>
     </div>
-    <div id="home-popular-quizzes" class="home-popular" data-quiz-base="<%= getLocalizedUrl('customQuiz', lang) %>" hidden>
-      <h3 class="home-popular-title"><%= t('home:customQuizPromo.popularTitle', 'Les quiz de la communauté les plus joués') %></h3>
+    <div id="home-popular-quizzes" class="home-popular" data-quiz-base="<%= getLocalizedUrl('customQuiz', lang) %>"
+         data-label-points="<%= t('customQuiz:pat_points_t', 'Quiz à points') %>"
+         data-label-truefalse="<%= t('customQuiz:pat_tf_t', 'Vrai ou Faux') %>"
+         data-label-fun="<%= t('customQuiz:pat_fun_t', 'Fun') %>"
+         data-label-wyr="<%= t('customQuiz:pat_wyr_t', 'Tu préfères…') %>"
+         data-label-questions="<%= t('customQuiz:questions_short', 'questions') %>"
+         data-label-play="<%= t('home:customQuizPromo.popularCta', 'Jouer') %>"
+         hidden>
+      <div class="home-popular-head">
+        <span class="home-popular-eyebrow"><%= t('home:customQuizPromo.popularEyebrow', 'Le top de la communauté') %></span>
+        <h3 class="home-popular-title"><%= t('home:customQuizPromo.popularTitle', 'Les quiz de la communauté les plus joués') %></h3>
+        <p class="home-popular-sub"><%= t('home:customQuizPromo.popularSub', 'Des quiz imaginés par d\'autres couples — lancez-vous en un clic.') %></p>
+      </div>
       <div class="home-popular-grid"></div>
     </div>
   </div>

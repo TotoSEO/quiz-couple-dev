@@ -55,7 +55,20 @@
   var pop = document.getElementById('home-popular-quizzes');
   if (pop && SB_URL && SB_KEY) {
     var base = pop.dataset.quizBase || '';
+    var d = pop.dataset;
     var emoji = { points: '🎯', truefalse: '✅', fun: '🎉', wyr: '🤔' };
+    var typeLabel = {
+      points: d.labelPoints || 'Quiz', truefalse: d.labelTruefalse || 'Quiz',
+      fun: d.labelFun || 'Fun', wyr: d.labelWyr || 'Quiz'
+    };
+    var rankMedal = ['🥇', '🥈', '🥉'];
+    var qWord = d.labelQuestions || 'questions';
+    var playWord = d.labelPlay || 'Jouer';
+    // Compact badge: keep only the first segment before a "/" ("Fun / sans score" → "Fun")
+    var shortLabel = function (t) { return String(t).split('/')[0].trim(); };
+    var arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" '
+      + 'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>';
+
     fetch(SB_URL + '/functions/v1/manage-custom-quiz', {
       method: 'POST',
       headers: { apikey: SB_KEY, Authorization: 'Bearer ' + SB_KEY, 'Content-Type': 'application/json' },
@@ -66,12 +79,27 @@
       list = list.slice(0, 3);
       if (!list.length) return;
       var grid = pop.querySelector('.home-popular-grid');
-      grid.innerHTML = list.map(function (q) {
+      grid.innerHTML = list.map(function (q, i) {
+        var type = q.quiz_type || 'points';
         var href = base + (base.indexOf('?') >= 0 ? '&' : '?') + 'q=' + encodeURIComponent(q.share_id);
-        return '<a class="home-pop-card" href="' + href + '">'
-          + '<span class="home-pop-ico">' + (emoji[q.quiz_type] || '🎯') + '</span>'
+        var plays = Number(q.plays) || 0;
+        var qc = Number(q.question_count) || 0;
+        var desc = q.description
+          ? '<span class="home-pop-desc">' + esc(q.description) + '</span>' : '';
+        var qcStat = qc
+          ? '<span class="home-pop-stat"><span class="home-pop-stat-ico">📝</span>' + qc + ' ' + esc(qWord) + '</span>' : '';
+        return '<a class="home-pop-card home-pop-card--' + esc(type) + '" href="' + href + '" style="--pop-i:' + i + '">'
+          + '<span class="home-pop-rank" aria-hidden="true">' + rankMedal[i] + '</span>'
+          + '<span class="home-pop-ico" aria-hidden="true">' + (emoji[type] || '🎯') + '</span>'
+          + '<span class="home-pop-badge">' + esc(shortLabel(typeLabel[type] || type)) + '</span>'
           + '<span class="home-pop-name">' + esc(q.title) + '</span>'
-          + '<span class="home-pop-meta">🔥 ' + (Number(q.plays) || 0).toLocaleString(locale) + '</span>'
+          + desc
+          + '<span class="home-pop-foot">'
+          +   '<span class="home-pop-stats">' + qcStat
+          +     '<span class="home-pop-stat home-pop-plays"><span class="home-pop-stat-ico">🔥</span>' + plays.toLocaleString(locale) + '</span>'
+          +   '</span>'
+          +   '<span class="home-pop-go">' + esc(playWord) + arrow + '</span>'
+          + '</span>'
           + '</a>';
       }).join('');
       pop.hidden = false;
