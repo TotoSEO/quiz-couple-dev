@@ -1,0 +1,15 @@
+<%
+  /* Loading placeholder shown inside #quiz-engine until the engine's data
+     (gd-*.json) finishes loading. Replaced on the engine's first render.
+     Keeps users and crawlers from seeing an empty area or a misleading
+     "unavailable" message on a page that is actually fine. Needs: lang, routeKey. */
+  var _qlIsTest = typeof routeKey === 'string' && routeKey.indexOf('test') === 0;
+  var _qlLabels = {
+    fr: _qlIsTest ? 'Chargement du test…' : 'Chargement du quiz…',
+    en: _qlIsTest ? 'Loading the test…' : 'Loading the quiz…',
+    es: _qlIsTest ? 'Cargando el test…' : 'Cargando el quiz…',
+    de: _qlIsTest ? 'Test wird geladen…' : 'Quiz wird geladen…',
+    it: _qlIsTest ? 'Caricamento del test…' : 'Caricamento del quiz…'
+  };
+  var _qlLabel = _qlLabels[lang] || _qlLabels.fr;
+%><div class="quiz-engine-loading" role="status" aria-live="polite"><span class="quiz-engine-spinner" aria-hidden="true"></span><span class="quiz-engine-loading-text"><%= _qlLabel %></span></div>

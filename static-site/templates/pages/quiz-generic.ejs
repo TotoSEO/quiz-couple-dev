@@ -291,7 +291,7 @@
 <!-- Quiz Engine -->
 <section class="quiz-engine-section">
   <div class="container mx-auto px-4">
-    <div id="quiz-engine" data-quiz="<%= quizType %>" data-lang="<%= lang %>"></div>
+    <div id="quiz-engine" data-quiz="<%= quizType %>" data-lang="<%= lang %>"><%- include('../partials/quiz-loading', { lang, routeKey }) %></div>
   </div>
 </section>
 

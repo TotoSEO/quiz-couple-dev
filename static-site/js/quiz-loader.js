@@ -91,7 +91,8 @@
   }
 
   // Load translations then initialize
-  QuizEngine.loadTranslations(lang, function() {
+  var _dataAttempt = 0;
+  function initFromData() {
     var textOnly = config.textOnly || false;
     var questions = parseGdQuestions(config.prefix, config.pool + 10, config.ascending, textOnly);
 
@@ -101,6 +102,15 @@
     }
 
     if (questions.length === 0) {
+      // The data (gd-*.json) is likely still loading or a transient fetch
+      // failed. Keep the "loading" placeholder visible and retry a few times
+      // before showing the unavailable fallback — so slow connections and
+      // crawlers never flash "quiz unavailable" on a page that is actually fine.
+      if (_dataAttempt < 3) {
+        _dataAttempt++;
+        setTimeout(function() { QuizEngine.loadTranslations(lang, initFromData); }, 700 * _dataAttempt);
+        return;
+      }
       showUnavailable(config);
       return;
     }
@@ -157,7 +167,8 @@
       default:
         showUnavailable(config);
     }
-  });
+  }
+  QuizEngine.loadTranslations(lang, initFromData);
 
   // ─── Parse questions from gd.json ─────────────────────────
   // Handles multiple key patterns:
@@ -642,11 +653,20 @@
 
   function showUnavailable(cfg) {
     container.innerHTML = '';
+    // Reached only after several failed data-load retries: present it as a
+    // temporary loading hiccup with a retry action, never as unfinished content.
+    var M = {
+      fr: { t: 'Le contenu met du temps à charger', p: 'Vérifiez votre connexion internet, puis réessayez.', b: 'Réessayer' },
+      en: { t: 'This is taking a while to load', p: 'Please check your connection and try again.', b: 'Retry' },
+      es: { t: 'La carga está tardando', p: 'Comprueba tu conexión e inténtalo de nuevo.', b: 'Reintentar' },
+      de: { t: 'Das Laden dauert etwas länger', p: 'Bitte prüfe deine Verbindung und versuche es erneut.', b: 'Erneut versuchen' },
+      it: { t: 'Il caricamento sta impiegando un po\'', p: 'Controlla la connessione e riprova.', b: 'Riprova' }
+    };
+    var m = M[lang] || M.fr;
     var wrap = QuizEngine.el('div', 'quiz-engine animate-fade-in text-center');
-    wrap.innerHTML = '<h2 class="text-2xl font-bold mb-4">' +
-      QuizEngine.esc(QuizEngine.tg('playerSetup.readyForTest', 'Quiz')) + '</h2>' +
-      '<p class="text-muted-foreground mb-6">Ce quiz sera disponible très prochainement.</p>' +
-      '<a href="/" class="btn btn-primary">' + QuizEngine.esc(QuizEngine.tg('question.backHome', 'Retour à l\'accueil')) + '</a>';
+    wrap.innerHTML = '<h2 class="text-2xl font-bold mb-4">' + QuizEngine.esc(m.t) + '</h2>' +
+      '<p class="text-muted-foreground mb-6">' + QuizEngine.esc(m.p) + '</p>' +
+      '<button type="button" class="btn btn-primary" onclick="location.reload()">' + QuizEngine.esc(m.b) + '</button>';
     container.appendChild(wrap);
   }
 })();

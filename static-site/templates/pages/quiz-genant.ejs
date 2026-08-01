@@ -89,7 +89,7 @@
 <!-- Quiz Engine -->
 <section class="py-12 md:py-16">
   <div class="container mx-auto px-4">
-    <div id="quiz-engine" data-quiz="genant" data-lang="<%= lang %>"></div>
+    <div id="quiz-engine" data-quiz="genant" data-lang="<%= lang %>"><%- include("../partials/quiz-loading", { lang, routeKey }) %></div>
   </div>
 </section>
 
