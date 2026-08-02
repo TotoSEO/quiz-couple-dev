@@ -156,7 +156,9 @@
     "neutral": "Neutral",
     "agree": "Algo de acuerdo",
     "stronglyAgree": "Totalmente de acuerdo",
-    "discussTogether": "💬 ¡Comentad juntos vuestras respuestas!"
+    "discussTogether": "💬 ¡Comentad juntos vuestras respuestas!",
+    "question": "Pregunta",
+    "skipQuestion": "Saltar esta pregunta"
   },
   "result": {
     "identicalAnswers": "respuestas idénticas",
@@ -204,13 +206,15 @@
     "medium": "Muchas cosas en común",
     "mediumDesc": "Compartís buena parte de vuestros gustos, con las diferencias justas para seguir sorprendiéndoos. Un equilibrio muy sano.",
     "high": "¡En la misma sintonía!",
-    "highDesc": "Vuestros gustos se parecen muchísimo. Recordad que este porcentaje mide las respuestas idénticas, no la fuerza de vuestro amor, que no cabe en ninguna puntuación."
+    "highDesc": "Vuestros gustos se parecen muchísimo. Recordad que este porcentaje mide las respuestas idénticas, no la fuerza de vuestro amor, que no cabe en ninguna puntuación.",
+    "lowAdvice": "Tomaos el tiempo de hablar de cada tema que os haya sorprendido."
   },
   "meta": {
     "duration": "5 min",
     "players": "2 jugadores",
     "questions": "20 preguntas",
-    "questionsWord": "preguntas"
+    "questionsWord": "preguntas",
+    "pointsWord": "puntos"
   },
   "divorce": {
     "disclaimer": "Este test es una herramienta de reflexión personal. No sustituye en ningún caso la opinión de un profesional."
@@ -327,12 +331,14 @@
     ]
   },
   "ui": {
-    "yourName": "El nombre de tu pareja"
+    "yourName": "El nombre de tu pareja",
+    "namePlaceholder": "Ej.: Lucas"
   },
   "healthy": {
     "gapWarning": "⚠️ La diferencia entre vuestras puntuaciones es significativa. Tomaos el tiempo de hablarlo con calma, sin convertirlo en una competición."
   },
   "attachment": {
-    "yourStyle": "Tu estilo de apego"
+    "yourStyle": "Tu estilo de apego",
+    "introTitle": "¿Cuál es tu estilo de apego?"
   }
 }

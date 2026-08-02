@@ -156,7 +156,9 @@
     "neutral": "Neutrale",
     "agree": "Piuttosto d'accordo",
     "stronglyAgree": "Completamente d'accordo",
-    "discussTogether": "💬 Parlate insieme delle vostre risposte!"
+    "discussTogether": "💬 Parlate insieme delle vostre risposte!",
+    "question": "Domanda",
+    "skipQuestion": "Salta questa domanda"
   },
   "result": {
     "identicalAnswers": "risposte identiche",
@@ -204,13 +206,15 @@
     "medium": "Molte cose in comune",
     "mediumDesc": "Condividete buona parte dei vostri gusti, con abbastanza differenze per continuare a sorprendervi. Un equilibrio molto sano.",
     "high": "Sulla stessa lunghezza d'onda!",
-    "highDesc": "I vostri gusti si somigliano moltissimo. Ricordate che questa percentuale misura le risposte identiche, non la forza del vostro amore, che non sta in nessun punteggio."
+    "highDesc": "I vostri gusti si somigliano moltissimo. Ricordate che questa percentuale misura le risposte identiche, non la forza del vostro amore, che non sta in nessun punteggio.",
+    "lowAdvice": "Prendetevi il tempo di parlare di ogni tema che vi ha sorpreso."
   },
   "meta": {
     "duration": "5 min",
     "players": "2 giocatori",
     "questions": "20 domande",
-    "questionsWord": "domande"
+    "questionsWord": "domande",
+    "pointsWord": "punti"
   },
   "divorce": {
     "disclaimer": "Questo test è uno strumento di riflessione personale. Non sostituisce in alcun caso il parere di un professionista."
@@ -327,12 +331,14 @@
     ]
   },
   "ui": {
-    "yourName": "Il nome del tuo partner"
+    "yourName": "Il nome del tuo partner",
+    "namePlaceholder": "Es.: Lucas"
   },
   "healthy": {
     "gapWarning": "⚠️ Il divario tra i vostri punteggi è significativo. Prendetevi il tempo di parlarne con calma, senza farne una gara."
   },
   "attachment": {
-    "yourStyle": "Il tuo stile di attaccamento"
+    "yourStyle": "Il tuo stile di attaccamento",
+    "introTitle": "Qual è il tuo stile di attaccamento?"
   }
 }

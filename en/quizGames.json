@@ -156,7 +156,9 @@
     "neutral": "Neutral",
     "agree": "Somewhat agree",
     "stronglyAgree": "Strongly agree",
-    "discussTogether": "💬 Talk your answers through together!"
+    "discussTogether": "💬 Talk your answers through together!",
+    "question": "Question",
+    "skipQuestion": "Skip this question"
   },
   "result": {
     "identicalAnswers": "identical answers",
@@ -204,13 +206,15 @@
     "medium": "Plenty in common",
     "mediumDesc": "You share a good part of your tastes, with just enough differences to keep surprising each other. A very healthy balance.",
     "high": "On the same wavelength!",
-    "highDesc": "Your tastes are remarkably alike. Keep in mind that this percentage measures identical answers, not the strength of your love, which no score can capture."
+    "highDesc": "Your tastes are remarkably alike. Keep in mind that this percentage measures identical answers, not the strength of your love, which no score can capture.",
+    "lowAdvice": "Take the time to talk through every topic that surprised you."
   },
   "meta": {
     "duration": "5 min",
     "players": "2 players",
     "questions": "20 questions",
-    "questionsWord": "questions"
+    "questionsWord": "questions",
+    "pointsWord": "points"
   },
   "divorce": {
     "disclaimer": "This test is a personal reflection tool. It does not replace professional advice in any way."
@@ -327,12 +331,14 @@
     ]
   },
   "ui": {
-    "yourName": "Your partner's first name"
+    "yourName": "Your partner's first name",
+    "namePlaceholder": "e.g. Lucas"
   },
   "healthy": {
     "gapWarning": "⚠️ The gap between your scores is significant. Take the time to talk about it calmly, without turning it into a competition."
   },
   "attachment": {
-    "yourStyle": "Your attachment style"
+    "yourStyle": "Your attachment style",
+    "introTitle": "What is your attachment style?"
   }
 }

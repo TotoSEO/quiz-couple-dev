@@ -156,7 +156,9 @@
     "neutral": "Neutral",
     "agree": "Stimme eher zu",
     "stronglyAgree": "Stimme voll zu",
-    "discussTogether": "💬 Sprecht gemeinsam über eure Antworten!"
+    "discussTogether": "💬 Sprecht gemeinsam über eure Antworten!",
+    "question": "Frage",
+    "skipQuestion": "Diese Frage überspringen"
   },
   "result": {
     "identicalAnswers": "identische Antworten",
@@ -204,13 +206,15 @@
     "medium": "Viele Gemeinsamkeiten",
     "mediumDesc": "Ihr teilt einen großen Teil eures Geschmacks, mit genug Unterschieden, um euch weiter zu überraschen. Ein sehr gesundes Gleichgewicht.",
     "high": "Auf einer Wellenlänge!",
-    "highDesc": "Euer Geschmack ähnelt sich außerordentlich. Denkt daran: Dieser Prozentsatz misst identische Antworten, nicht die Stärke eurer Liebe, die in keine Punktzahl passt."
+    "highDesc": "Euer Geschmack ähnelt sich außerordentlich. Denkt daran: Dieser Prozentsatz misst identische Antworten, nicht die Stärke eurer Liebe, die in keine Punktzahl passt.",
+    "lowAdvice": "Nehmt euch Zeit, über jedes Thema zu sprechen, das euch überrascht hat."
   },
   "meta": {
     "duration": "5 Min",
     "players": "2 Spieler",
     "questions": "20 Fragen",
-    "questionsWord": "Fragen"
+    "questionsWord": "Fragen",
+    "pointsWord": "Punkte"
   },
   "divorce": {
     "disclaimer": "Dieser Test ist ein persönliches Reflexionswerkzeug. Er ersetzt in keinem Fall die Meinung eines Fachmanns."
@@ -327,12 +331,14 @@
     ]
   },
   "ui": {
-    "yourName": "Der Vorname deines Partners"
+    "yourName": "Der Vorname deines Partners",
+    "namePlaceholder": "z. B. Lucas"
   },
   "healthy": {
     "gapWarning": "⚠️ Der Abstand zwischen euren Werten ist deutlich. Nehmt euch die Zeit, in Ruhe darüber zu reden, ohne einen Wettbewerb daraus zu machen."
   },
   "attachment": {
-    "yourStyle": "Dein Bindungsstil"
+    "yourStyle": "Dein Bindungsstil",
+    "introTitle": "Was ist dein Bindungsstil?"
   }
 }

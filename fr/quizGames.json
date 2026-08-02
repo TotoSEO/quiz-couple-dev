@@ -155,7 +155,10 @@
     "disagree": "Plutôt pas d'accord",
     "neutral": "Neutre",
     "agree": "Plutôt d'accord",
-    "stronglyAgree": "Tout à fait d'accord"
+    "stronglyAgree": "Tout à fait d'accord",
+    "question": "Question",
+    "skipQuestion": "Passer cette question",
+    "discussTogether": "💬 Discutez de vos réponses ensemble !"
   },
   "result": {
     "identicalAnswers": "réponses identiques",
@@ -203,13 +206,15 @@
     "medium": "Beaucoup de points communs",
     "mediumDesc": "Vous partagez une bonne partie de vos goûts, avec assez de différences pour continuer à vous surprendre. Un équilibre très sain.",
     "high": "Sur la même longueur d'onde !",
-    "highDesc": "Vos goûts se ressemblent énormément. Gardez en tête que ce pourcentage mesure vos réponses identiques, pas la force de votre amour, qui ne tient dans aucun score."
+    "highDesc": "Vos goûts se ressemblent énormément. Gardez en tête que ce pourcentage mesure vos réponses identiques, pas la force de votre amour, qui ne tient dans aucun score.",
+    "lowAdvice": "Prenez le temps de discuter de chaque sujet qui vous a surpris."
   },
   "meta": {
     "duration": "5 min",
     "players": "2 joueurs",
     "questions": "20 questions",
-    "questionsWord": "questions"
+    "questionsWord": "questions",
+    "pointsWord": "points"
   },
   "divorce": {
     "disclaimer": "Ce test est un outil de réflexion personnel. Il ne remplace en aucun cas l'avis d'un professionnel."
@@ -324,5 +329,16 @@
         "desc": "Communication, confiance et complicité sont au rendez-vous. Une base rare et précieuse : cultivez-la, elle vous portera loin."
       }
     ]
+  },
+  "ui": {
+    "namePlaceholder": "Ex : Lucas",
+    "yourName": "Prénom de ton/ta partenaire"
+  },
+  "attachment": {
+    "introTitle": "Quel est votre style d'attachement ?",
+    "yourStyle": "Votre style d'attachement"
+  },
+  "healthy": {
+    "gapWarning": "⚠️ L'écart entre vos scores est significatif. Prenez le temps de discuter de vos perceptions respectives."
   }
 }

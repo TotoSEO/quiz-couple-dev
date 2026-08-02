@@ -342,6 +342,18 @@ var QuizEngine = (function() {
 
   // ─── Common UI Components ─────────────────────────────────
 
+  // Les gestionnaires de réponse neutralisent les options via pointer-events,
+  // ce qui ne bloque que la souris : deux « Entrée » rapprochés au clavier
+  // rejouaient le gestionnaire, comptaient le point en double et sautaient la
+  // question suivante. Ce verrou expire de lui-même, il ne peut donc jamais
+  // figer un moteur si un chemin de code sort par une branche imprévue.
+  function answerLock(obj, ms) {
+    var now = Date.now();
+    if (obj.__answerLockUntil && now < obj.__answerLockUntil) return false;
+    obj.__answerLockUntil = now + (ms || 600);
+    return true;
+  }
+
   function renderProgressBar(wrap, current, total, label) {
     var progress = Math.round((current / total) * 100);
     var progressWrap = el('div', 'quiz-progress-wrapper');
@@ -730,6 +742,7 @@ var QuizEngine = (function() {
         optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
       });
       optBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
         for (var s = 0; s < siblings.length; s++) {
@@ -1015,6 +1028,7 @@ var QuizEngine = (function() {
         optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
       });
       optBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
         for (var s = 0; s < siblings.length; s++) {
@@ -1306,6 +1320,7 @@ var QuizEngine = (function() {
         optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
       });
       optBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
         for (var s = 0; s < siblings.length; s++) {
@@ -1506,6 +1521,7 @@ var QuizEngine = (function() {
         optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
       });
       optBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
         for (var s = 0; s < siblings.length; s++) {
@@ -1551,6 +1567,7 @@ var QuizEngine = (function() {
         optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
       });
       optBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
         for (var s = 0; s < siblings.length; s++) {
@@ -1933,6 +1950,7 @@ var QuizEngine = (function() {
         scaleBtn.innerHTML = '<span class="quiz-scale-number">' + score + '</span> <span class="quiz-scale-emoji">' + scaleEmojis[score - 1] + '</span> <span>' + esc(scaleLabels[score - 1]) + '</span>';
         scaleBtn.style.animationDelay = ((score - 1) * 60) + 'ms';
         scaleBtn.addEventListener('click', function() {
+          if (!answerLock(self)) return;
           scaleBtn.classList.add('selected');
           var siblings = scaleWrap.querySelectorAll('.quiz-option');
           for (var s = 0; s < siblings.length; s++) {
@@ -1972,7 +1990,7 @@ var QuizEngine = (function() {
     wrap.appendChild(el('div', 'text-5xl mb-4', '💕'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('result.loveScore', 'Score d\'amour')));
     wrap.appendChild(el('div', 'quiz-score-circle mx-auto mb-4', pct + '%'));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6', totalScore + '/' + (total * 5) + ' points'));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6', totalScore + '/' + (total * 5) + ' ' + esc(tg('meta.pointsWord', 'points'))));
 
     // Find matching result
     var result = null;
@@ -2249,6 +2267,7 @@ var QuizEngine = (function() {
       var playerBtn = el('button', 'quiz-most-player-btn');
       playerBtn.innerHTML = '<span class="quiz-player-letter-sm">' + esc(p.letter) + '</span><span>' + esc(p.name) + '</span>';
       playerBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
         playerBtn.classList.add('selected');
         var siblings = playersWrap.querySelectorAll('.quiz-most-player-btn');
         for (var s = 0; s < siblings.length; s++) {
@@ -2266,6 +2285,10 @@ var QuizEngine = (function() {
     var nobodyBtn = el('button', 'quiz-most-player-btn quiz-most-nobody-btn');
     nobodyBtn.innerHTML = '<span>🤷</span><span>' + tg('question.nobody', 'Personne') + '</span>';
     nobodyBtn.addEventListener('click', function() {
+      // Ce bouton n'est jamais neutralisé par pointer-events : deux appuis
+      // rapprochés planifiaient deux advanceQuestion() et faisaient sauter
+      // une question entière du quiz.
+      if (!answerLock(self)) return;
       nobodyBtn.classList.add('selected');
       var siblings = playersWrap.querySelectorAll('.quiz-most-player-btn');
       for (var s = 0; s < siblings.length; s++) {
@@ -2507,6 +2530,7 @@ var QuizEngine = (function() {
         optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
       });
       optBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
         for (var s = 0; s < siblings.length; s++) {
@@ -2550,7 +2574,7 @@ var QuizEngine = (function() {
     var mainRingDiv = el('div', '');
     mainRingDiv.innerHTML = renderScoreRing(pct);
     wrap.appendChild(mainRingDiv);
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6 quiz-reveal-enter', Math.round(totalScore) + '/' + maxTotal + ' points'));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6 quiz-reveal-enter', Math.round(totalScore) + '/' + maxTotal + ' ' + esc(tg('meta.pointsWord', 'points'))));
 
     // Individual scores
     var scoresGrid = el('div', 'grid grid-cols-2 gap-4 mb-6');
@@ -2729,6 +2753,7 @@ var QuizEngine = (function() {
         optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
       });
       optBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
         optBtn.classList.add('selected');
         var siblings = optionsWrap.querySelectorAll('.quiz-option');
         for (var s = 0; s < siblings.length; s++) {
@@ -3137,6 +3162,7 @@ var QuizEngine = (function() {
         optBtn.style.setProperty('--ripple-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
       });
       optBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
         optBtn.classList.add('selected');
         var sibs = optionsWrap.querySelectorAll('.quiz-option');
         for (var s = 0; s < sibs.length; s++) { if (sibs[s] !== optBtn) sibs[s].style.opacity = '0.5'; sibs[s].style.pointerEvents = 'none'; }
@@ -3790,6 +3816,7 @@ var QuizEngine = (function() {
         + '<span class="tentation-option-text">' + esc(self.optText(q, opt)) + '</span>';
       b.style.animationDelay = (i * 70) + 'ms';
       b.addEventListener('click', function () {
+        if (!answerLock(self)) return;
         if (wrap.dataset.done === '1') return;   // guard against double taps
         wrap.dataset.done = '1';
         b.classList.add('is-picked');
