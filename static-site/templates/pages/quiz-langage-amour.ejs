@@ -394,6 +394,11 @@
   };
 
   LoveLanguageTest.prototype.selectOption = function(optIdx) {
+    // pointer-events ne bloque que la souris : deux « Entrée » rapprochés au
+    // clavier comptaient le langage en double ET sautaient la question suivante.
+    if (this.locked) return;
+    this.locked = true;
+
     var q = this.questions[this.currentQ];
     var opt = q.options[optIdx];
     // Add score for the corresponding language
@@ -418,6 +423,7 @@
       if (self.currentQ >= self.questions.length) {
         self.phase = 'results';
       }
+      self.locked = false;
       self.render();
     }, 400);
   };

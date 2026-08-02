@@ -380,6 +380,12 @@
   };
 
   WYRGame.prototype.selectOption = function(choice, btn) {
+    // pointer-events ne bloque que la souris : au clavier, deux « Entrée »
+    // rapides déclenchaient deux fois la transition et sautaient le tour du
+    // joueur 2. On verrouille donc explicitement le temps de l'animation.
+    if (this.locked) return;
+    this.locked = true;
+
     // Visual feedback
     var buttons = this.container.querySelectorAll('.wyr-option');
     for (var i = 0; i < buttons.length; i++) {
@@ -408,6 +414,7 @@
         // P2 just answered → show reveal for this question
         self.phase = 'reveal';
       }
+      self.locked = false;
       self.render();
     }, 350);
   };
