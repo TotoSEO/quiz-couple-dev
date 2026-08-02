@@ -260,7 +260,12 @@
     [0,1,2,3,4], // words, acts, gifts, time, touch
     [3,4,0,1,2], // time, touch, words, acts, gifts
     [1,2,3,4,0], // acts, gifts, time, touch, words
-    [4,0,1,2,3], // touch, words, acts, time, gifts
+    // Cette ligne disait [4,0,1,2,3], soit « touch, words, acts, gifts, time »,
+    // en contradiction avec son propre commentaire ET avec les options écrites
+    // dans les 5 langues : en d) on propose du temps de qualité, en e) un cadeau.
+    // Les questions 4, 9, 14, 19, 24 et 29 attribuaient donc « cadeaux » aux
+    // réponses « temps » et inversement, soit 6 questions sur 30 faussées.
+    [4,0,1,3,2], // touch, words, acts, time, gifts
     [2,3,4,0,1]  // gifts, time, touch, words, acts
   ];
 
