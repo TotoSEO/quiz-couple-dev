@@ -155,7 +155,8 @@
     "disagree": "Somewhat disagree",
     "neutral": "Neutral",
     "agree": "Somewhat agree",
-    "stronglyAgree": "Strongly agree"
+    "stronglyAgree": "Strongly agree",
+    "discussTogether": "💬 Talk your answers through together!"
   },
   "result": {
     "identicalAnswers": "identical answers",
@@ -197,7 +198,13 @@
     "shareYourResult": "Share your result!",
     "loveScore": "Love score",
     "shareWithFriends": "Share your result with friends",
-    "totalCoupleScore": "Total couple score"
+    "totalCoupleScore": "Total couple score",
+    "low": "Two worlds to explore",
+    "lowDesc": "Your answers often differ, and that is not a problem: this test compares your tastes, not how solid your relationship is. Above all, you have plenty left to discover about each other.",
+    "medium": "Plenty in common",
+    "mediumDesc": "You share a good part of your tastes, with just enough differences to keep surprising each other. A very healthy balance.",
+    "high": "On the same wavelength!",
+    "highDesc": "Your tastes are remarkably alike. Keep in mind that this percentage measures identical answers, not the strength of your love, which no score can capture."
   },
   "meta": {
     "duration": "5 min",
@@ -318,5 +325,14 @@
         "desc": "Communication, trust and closeness are all there. A rare and precious base: nurture it, it will carry you far."
       }
     ]
+  },
+  "ui": {
+    "yourName": "Your partner's first name"
+  },
+  "healthy": {
+    "gapWarning": "⚠️ The gap between your scores is significant. Take the time to talk about it calmly, without turning it into a competition."
+  },
+  "attachment": {
+    "yourStyle": "Your attachment style"
   }
 }

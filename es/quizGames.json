@@ -155,7 +155,8 @@
     "disagree": "Algo en desacuerdo",
     "neutral": "Neutral",
     "agree": "Algo de acuerdo",
-    "stronglyAgree": "Totalmente de acuerdo"
+    "stronglyAgree": "Totalmente de acuerdo",
+    "discussTogether": "💬 ¡Comentad juntos vuestras respuestas!"
   },
   "result": {
     "identicalAnswers": "respuestas idénticas",
@@ -197,7 +198,13 @@
     "shareYourResult": "¡Comparte tu resultado!",
     "loveScore": "Puntuación de amor",
     "shareWithFriends": "Comparte tu resultado con amigos",
-    "totalCoupleScore": "Puntuación total de la pareja"
+    "totalCoupleScore": "Puntuación total de la pareja",
+    "low": "Dos mundos por descubrir",
+    "lowDesc": "Vuestras respuestas difieren a menudo, y no es ningún problema: este test compara vuestros gustos, no la solidez de vuestra relación. Sobre todo, os queda mucho por descubrir.",
+    "medium": "Muchas cosas en común",
+    "mediumDesc": "Compartís buena parte de vuestros gustos, con las diferencias justas para seguir sorprendiéndoos. Un equilibrio muy sano.",
+    "high": "¡En la misma sintonía!",
+    "highDesc": "Vuestros gustos se parecen muchísimo. Recordad que este porcentaje mide las respuestas idénticas, no la fuerza de vuestro amor, que no cabe en ninguna puntuación."
   },
   "meta": {
     "duration": "5 min",
@@ -318,5 +325,14 @@
         "desc": "Comunicación, confianza y complicidad están presentes. Una base rara y valiosa: cuidadla, os llevará lejos."
       }
     ]
+  },
+  "ui": {
+    "yourName": "El nombre de tu pareja"
+  },
+  "healthy": {
+    "gapWarning": "⚠️ La diferencia entre vuestras puntuaciones es significativa. Tomaos el tiempo de hablarlo con calma, sin convertirlo en una competición."
+  },
+  "attachment": {
+    "yourStyle": "Tu estilo de apego"
   }
 }

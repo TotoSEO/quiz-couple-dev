@@ -197,7 +197,13 @@
     "shareYourResult": "Partagez votre résultat !",
     "loveScore": "Score d'amour",
     "shareWithFriends": "Partagez votre résultat avec vos amis",
-    "totalCoupleScore": "Score total du couple"
+    "totalCoupleScore": "Score total du couple",
+    "low": "Des univers à découvrir",
+    "lowDesc": "Vos réponses divergent souvent, et ce n'est pas un problème : ce test compare vos goûts, pas la solidité de votre couple. Vous avez surtout beaucoup à vous découvrir.",
+    "medium": "Beaucoup de points communs",
+    "mediumDesc": "Vous partagez une bonne partie de vos goûts, avec assez de différences pour continuer à vous surprendre. Un équilibre très sain.",
+    "high": "Sur la même longueur d'onde !",
+    "highDesc": "Vos goûts se ressemblent énormément. Gardez en tête que ce pourcentage mesure vos réponses identiques, pas la force de votre amour, qui ne tient dans aucun score."
   },
   "meta": {
     "duration": "5 min",

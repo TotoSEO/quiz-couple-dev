@@ -155,7 +155,8 @@
     "disagree": "Stimme eher nicht zu",
     "neutral": "Neutral",
     "agree": "Stimme eher zu",
-    "stronglyAgree": "Stimme voll zu"
+    "stronglyAgree": "Stimme voll zu",
+    "discussTogether": "💬 Sprecht gemeinsam über eure Antworten!"
   },
   "result": {
     "identicalAnswers": "identische Antworten",
@@ -197,7 +198,13 @@
     "shareYourResult": "Teile dein Ergebnis!",
     "loveScore": "Liebespunktzahl",
     "shareWithFriends": "Teile dein Ergebnis mit Freunden",
-    "totalCoupleScore": "Gesamtpunktzahl des Paares"
+    "totalCoupleScore": "Gesamtpunktzahl des Paares",
+    "low": "Zwei Welten zum Entdecken",
+    "lowDesc": "Eure Antworten gehen oft auseinander, und das ist kein Problem: Dieser Test vergleicht euren Geschmack, nicht die Stabilität eurer Beziehung. Vor allem habt ihr noch viel voneinander zu entdecken.",
+    "medium": "Viele Gemeinsamkeiten",
+    "mediumDesc": "Ihr teilt einen großen Teil eures Geschmacks, mit genug Unterschieden, um euch weiter zu überraschen. Ein sehr gesundes Gleichgewicht.",
+    "high": "Auf einer Wellenlänge!",
+    "highDesc": "Euer Geschmack ähnelt sich außerordentlich. Denkt daran: Dieser Prozentsatz misst identische Antworten, nicht die Stärke eurer Liebe, die in keine Punktzahl passt."
   },
   "meta": {
     "duration": "5 Min",
@@ -318,5 +325,14 @@
         "desc": "Kommunikation, Vertrauen und Verbundenheit sind da. Eine seltene und wertvolle Basis: Pflegt sie, sie trägt euch weit."
       }
     ]
+  },
+  "ui": {
+    "yourName": "Der Vorname deines Partners"
+  },
+  "healthy": {
+    "gapWarning": "⚠️ Der Abstand zwischen euren Werten ist deutlich. Nehmt euch die Zeit, in Ruhe darüber zu reden, ohne einen Wettbewerb daraus zu machen."
+  },
+  "attachment": {
+    "yourStyle": "Dein Bindungsstil"
   }
 }
