@@ -36,7 +36,9 @@
     "testConfiance": "Test de confianza",
     "testConfianceDesc": "Mide la confianza en vuestra relación",
     "testInfidelite": "Test de infidelidad",
-    "testInfideliteDesc": "Detecta las señales de alerta"
+    "testInfideliteDesc": "Detecta las señales de alerta",
+    "testBebe": "Test listo para un bebé",
+    "testBebeDesc": "Evalúa tu preparación para la crianza"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

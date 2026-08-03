@@ -183,5 +183,11 @@
     "shortTitle": "Test Infidelidad",
     "description": "20 preguntas para detectar las señales de alerta en tu relación: secretismo, distancia emocional, cambios de comportamiento. Resultado inmediato.",
     "metaDescription": "¿Tu pareja te engaña? 20 preguntas para identificar las señales de alerta en tu relación. Gratis, confidencial, resultado inmediato."
+  },
+  "testBebe": {
+    "title": "Test listo para un bebé: ¿estás preparado para ser madre o padre?",
+    "shortTitle": "Test Bebé",
+    "description": "20 preguntas para evaluar tu preparación para la crianza: madurez emocional, economía, pareja, estilo de vida. Resultado inmediato.",
+    "metaDescription": "¿Estás listo para un bebé? 20 preguntas sobre madurez emocional, economía y pareja. Gratis, confidencial, resultado inmediato."
   }
 }

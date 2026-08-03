@@ -183,5 +183,11 @@
     "shortTitle": "Infidelity Test",
     "description": "20 questions to spot the warning signals in your relationship: secrecy, emotional distance, behavioural changes. Instant result.",
     "metaDescription": "Is your partner cheating? 20 questions to identify the warning signs in your relationship. Free, confidential, instant result."
+  },
+  "testBebe": {
+    "title": "Ready for a baby test: are you prepared for parenthood?",
+    "shortTitle": "Baby Ready Test",
+    "description": "20 questions to assess your readiness for parenthood: emotional maturity, finances, relationship, lifestyle. Instant result.",
+    "metaDescription": "Are you ready for a baby? 20 questions on emotional maturity, finances and your relationship. Free, confidential, instant result."
   }
 }

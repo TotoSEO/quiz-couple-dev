@@ -183,5 +183,11 @@
     "shortTitle": "Test Infedeltà",
     "description": "20 domande per individuare i segnali d'allarme nella tua relazione: segretezza, distanza emotiva, cambiamenti di comportamento. Risultato immediato.",
     "metaDescription": "Il tuo partner ti tradisce? 20 domande per individuare i segnali d'allarme nella tua relazione. Gratuito, riservato, risultato immediato."
+  },
+  "testBebe": {
+    "title": "Test pronto per un bambino: sei preparato alla genitorialità?",
+    "shortTitle": "Test Bambino",
+    "description": "20 domande per valutare la tua preparazione alla genitorialità: maturità emotiva, finanze, coppia, stile di vita. Risultato immediato.",
+    "metaDescription": "Sei pronto per un bambino? 20 domande su maturità emotiva, finanze e coppia. Gratuito, riservato, risultato immediato."
   }
 }
