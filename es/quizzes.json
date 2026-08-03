@@ -165,5 +165,11 @@
     "shortTitle": "Quiz Tentaciones",
     "description": "12 días en la isla, 30 situaciones de tentación: ¿aguantarás hasta la hoguera final?",
     "metaDescription": "Quiz de La Isla de las Tentaciones online y gratis: 12 días en la isla, tentaciones cada día y una hoguera final. ¿Sobreviviría tu relación?"
+  },
+  "testAttachement": {
+    "title": "Test de estilo de apego: ¿cuál es el tuyo?",
+    "shortTitle": "Test Apego",
+    "description": "20 preguntas para descubrir tu estilo de apego amoroso: seguro, ansioso, evitativo o desorganizado. Resultado inmediato.",
+    "metaDescription": "¿Seguro, ansioso, evitativo o desorganizado? Descubre tu estilo de apego amoroso en 20 preguntas. Basado en la teoría de Bowlby."
   }
 }

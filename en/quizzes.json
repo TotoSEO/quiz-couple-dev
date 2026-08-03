@@ -165,5 +165,11 @@
     "shortTitle": "Temptation Quiz",
     "description": "12 days on the island, 30 tempting situations: will you last until the final bonfire?",
     "metaDescription": "Free online Temptation Island quiz: 12 days on the island, a temptation every day and a final bonfire. Would your relationship survive the test?"
+  },
+  "testAttachement": {
+    "title": "Attachment style test: what is yours?",
+    "shortTitle": "Attachment Test",
+    "description": "20 questions to discover your romantic attachment style: secure, anxious, avoidant or disorganised. Instant result.",
+    "metaDescription": "Secure, anxious, avoidant or disorganised? Discover your romantic attachment style in 20 questions. Based on Bowlby's theory."
   }
 }

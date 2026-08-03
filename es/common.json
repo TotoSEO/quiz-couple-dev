@@ -30,7 +30,9 @@
     "categoryTests": "Tests de pareja",
     "categoryQuizzes": "Nuestros quiz para parejas",
     "activities": "Actividades cerca",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "testAttachement": "Test de apego",
+    "testAttachementDesc": "Descubre tu estilo de apego"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

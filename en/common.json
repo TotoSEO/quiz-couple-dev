@@ -30,7 +30,9 @@
     "categoryTests": "Couple Tests",
     "categoryQuizzes": "Our Couple Quizzes",
     "activities": "Activities near me",
-    "contact": "Contact"
+    "contact": "Contact",
+    "testAttachement": "Attachment test",
+    "testAttachementDesc": "Discover your attachment style"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",

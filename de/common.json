@@ -30,7 +30,9 @@
     "categoryTests": "Beziehungstests",
     "categoryQuizzes": "Unsere Paar-Quiz",
     "activities": "Aktivitäten in der Nähe",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "testAttachement": "Bindungstest",
+    "testAttachementDesc": "Finde deinen Bindungsstil heraus"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",

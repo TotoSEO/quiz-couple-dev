@@ -165,5 +165,11 @@
     "shortTitle": "Temptation Quiz",
     "description": "12 Tage auf der Insel, 30 Versuchungen: Hältst du bis zum letzten Lagerfeuer durch?",
     "metaDescription": "Kostenloses Temptation Island Quiz online: 12 Tage auf der Insel, jeden Tag eine Versuchung und ein letztes Lagerfeuer. Würde deine Beziehung bestehen?"
+  },
+  "testAttachement": {
+    "title": "Bindungsstil-Test: welcher ist deiner?",
+    "shortTitle": "Bindungstest",
+    "description": "20 Fragen, um deinen Bindungsstil in der Liebe herauszufinden: sicher, ängstlich, vermeidend oder desorganisiert. Ergebnis sofort.",
+    "metaDescription": "Sicher, ängstlich, vermeidend oder desorganisiert? Finde deinen Bindungsstil in 20 Fragen heraus. Nach der Theorie von Bowlby."
   }
 }

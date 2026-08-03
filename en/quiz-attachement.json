@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "badge": "Science-based test",
+    "title": "Attachment Style Test:",
+    "titleHighlight": "what kind of partner are you?",
+    "description": "20 questions to discover your romantic attachment style. Are you <strong>secure, anxious, avoidant or disorganised</strong>? Based on John Bowlby's attachment theory.",
+    "subtitle": "Free, anonymous, instant result, no sign-up"
+  },
+  "section1": {
+    "title": "What is attachment theory?",
+    "intro": "Attachment theory, developed by the British psychiatrist <strong>John Bowlby</strong> in the 1950s, is one of the most scientifically validated frameworks in relationship psychology. It explains how our earliest relationships (above all with our parents) shape the way we love as adults.",
+    "p1": "In practical terms, your attachment style influences how you react inside intimate relationships: how you handle closeness, separation, conflict and emotional vulnerability.",
+    "p2": "The psychologist <strong>Mary Ainsworth</strong> identified three main styles (secure, anxious, avoidant), later completed by a fourth: the disorganised style. These styles are not fixed, they can evolve with awareness and personal work."
+  },
+  "section2": {
+    "title": "The 4 romantic attachment styles",
+    "intro": "Each attachment style reflects a distinct way of experiencing relationships. None of them is \"good\" or \"bad\", they are adaptive strategies developed in response to your relational experiences.",
+    "pillar1Title": "Secure",
+    "pillar1Text": "You are comfortable with both intimacy and independence. You state your needs clearly, you trust your partner and you handle conflict with maturity. Roughly <strong>50-60%</strong> of the population.",
+    "pillar2Title": "Anxious (preoccupied)",
+    "pillar2Text": "You have an intense need for closeness and reassurance. The fear of abandonment can push you to hold on tightly or to over-read signals. Roughly <strong>20-25%</strong> of the population.",
+    "pillar3Title": "Avoidant (dismissive)",
+    "pillar3Text": "You value your independence highly. Emotional intimacy makes you uneasy and you tend to create distance when things get too close. Roughly <strong>15-20%</strong> of the population.",
+    "pillar4Title": "Disorganised (fearful)",
+    "pillar4Text": "You swing between a desire for connection and a fear of intimacy. This style combines anxious and avoidant traits, often linked to complex relational experiences. Roughly <strong>5-10%</strong> of the population."
+  },
+  "section3": {
+    "title": "How your attachment style affects your relationship",
+    "p1": "Your attachment style doesn't only determine how you love, it directly shapes your day-to-day dynamic as a couple. It drives your reactions to conflict, your emotional communication and even your sex life.",
+    "p2": "Researchers have identified a phenomenon called <strong>\"the attachment dance\"</strong>: anxious and avoidant partners often attract each other, creating a pursue-withdraw cycle that can be exhausting for both.",
+    "p3": "The good news: understanding your attachment style is the first step towards a more fulfilling relationship. Studies show that even people with an insecure attachment can develop an \"earned secure\" attachment through therapy or a relationship with a secure partner."
+  },
+  "section4": {
+    "title": "Anxious + Avoidant: the toxic couple trap",
+    "intro": "The most frequent combination, and the most problematic, pairs the anxious partner with the avoidant one. This pattern creates a vicious circle:",
+    "p1": "The <strong>anxious</strong> partner seeks closeness → the <strong>avoidant</strong> partner feels invaded and creates distance → the anxious one panics and holds on harder → the avoidant one withdraws further. This cycle can last months, sometimes years.",
+    "p2": "Breaking the cycle takes awareness on both sides. The anxious partner has to learn to self-soothe and tolerate space. The avoidant partner has to practise staying present and voicing their emotions.",
+    "tip": "If you recognise this pattern in your relationship, it isn't a life sentence. Attachment-focused <strong>couples therapy</strong> (EFT, Emotionally Focused Therapy) has a 70-75% success rate with distressed couples."
+  },
+  "section5": {
+    "title": "Can you change your attachment style?",
+    "p1": "Yes, absolutely. Attachment style isn't set in stone. Neuroscience has shown that the brain is plastic: new positive relational experiences can literally rewire your attachment patterns.",
+    "p2": "Several routes lead towards a more secure attachment:",
+    "sub1Title": "Individual therapy",
+    "sub1P1": "Approaches such as <strong>schema therapy</strong>, EMDR or psychodynamic psychotherapy are particularly effective for working on attachment wounds.",
+    "sub2Title": "A secure relationship",
+    "sub2P1": "Being with a securely attached partner can gradually transform your own style. Healthy love is therapeutic in itself.",
+    "sub3Title": "Mindfulness",
+    "sub3P1": "Learning to observe your automatic reactions without blindly following them. Meditation and mindfulness help create a gap between the trigger and the response."
+  },
+  "section6": {
+    "title": "Why take this attachment test?",
+    "p1": "This test helps you put words to feelings that are often confusing. Understanding your attachment style means understanding why you react the way you do in relationships, and above all, how to move forward.",
+    "pillar1Title": "Understand yourself better",
+    "pillar1Text": "Identify your recurring relational patterns and see where they come from.",
+    "pillar2Title": "Communicate better",
+    "pillar2Text": "Explain your needs to your partner with clear, validated vocabulary.",
+    "pillar3Title": "Break the cycles",
+    "pillar3Text": "Spot toxic dynamics (pursue-withdraw) so you can defuse them.",
+    "pillar4Title": "Grow together",
+    "pillar4Text": "Take the test as a couple and compare your results for better mutual understanding."
+  },
+  "section7": {
+    "title": "What this test does not do",
+    "p1": "This test is a <strong>self-assessment tool</strong>, not a clinical diagnosis. It gives you a general tendency based on your answers, but it doesn't replace an assessment by a mental health professional.",
+    "p2": "Your attachment style can vary with context (friendships, family, romance) and across periods of your life. A single test doesn't capture the full complexity of your relational personality.",
+    "tip": "If your results strike a chord, don't hesitate to discuss them with a psychologist or a couples therapist. It's an excellent starting point for deeper work."
+  },
+  "section8": {
+    "title": "A few figures on attachment in relationships",
+    "headerScore": "Style",
+    "headerLevel": "Prevalence",
+    "headerAnalysis": "Main characteristics",
+    "row1Score": "Secure",
+    "row1Level": "50-60%",
+    "row1Analysis": "Comfortable with intimacy and independence, handles conflict well",
+    "row2Score": "Anxious",
+    "row2Level": "20-25%",
+    "row2Analysis": "Needs reassurance, fears abandonment, relational hyper-vigilance",
+    "row3Score": "Avoidant",
+    "row3Level": "15-20%",
+    "row3Analysis": "Values independence, uncomfortable with emotional closeness",
+    "row4Score": "Disorganised",
+    "row4Level": "5-10%",
+    "row4Analysis": "Swings between a desire for connection and a fear of intimacy"
+  },
+  "seo": {
+    "faq1Q": "What is an attachment style?",
+    "faq1A": "An attachment style is a relational template formed in childhood that influences how you experience intimacy, trust and separation in your romantic relationships. There are 4 main styles: secure, anxious, avoidant and disorganised. The concept comes from the attachment theory of John Bowlby and Mary Ainsworth.",
+    "faq2Q": "Can you change your attachment style?",
+    "faq2A": "Yes. Attachment style is not fixed. Through therapy (notably EFT, schema therapy or EMDR), through secure relationships and through personal work, it is entirely possible to move from an insecure attachment to an \"earned secure\" one. Neuroscience confirms the brain plasticity that makes this change possible.",
+    "faq3Q": "Which attachment style is the most common?",
+    "faq3A": "The secure attachment style is the most widespread, accounting for roughly 50 to 60% of the population. The anxious style concerns about 20-25% of people, the avoidant style 15-20%, and the disorganised style around 5-10%.",
+    "faq4Q": "How can I tell my partner's attachment style?",
+    "faq4A": "Watch how they react to conflict, to separation and to intimacy. An anxious partner will tend to seek reassurance, an avoidant partner will create distance under pressure. The simplest route is still to suggest they take this test and to talk it through together.",
+    "faq5Q": "Can two insecure attachment styles make a happy couple?",
+    "faq5A": "Yes, provided both are aware of it and work on it together. The anxious-avoidant combination is the most problematic because it creates a pursue-withdraw cycle. But with communication, couples therapy and a shared willingness to progress, these couples can absolutely thrive.",
+    "faq6Q": "Is this test scientifically reliable?",
+    "faq6A": "This test is inspired by validated questionnaires (the ECR-R by Fraley and Brennan). It gives a general tendency for your attachment style. For a precise diagnosis, consult a psychologist who can use validated clinical tools and interpret the results in the context of your personal history."
+  }
+}

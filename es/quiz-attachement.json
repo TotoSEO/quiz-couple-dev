@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "badge": "Test con base científica",
+    "title": "Test de Estilo de Apego:",
+    "titleHighlight": "¿qué tipo de pareja eres?",
+    "description": "20 preguntas para descubrir tu estilo de apego amoroso. ¿Eres <strong>seguro, ansioso, evitativo o desorganizado</strong>? Basado en la teoría del apego de John Bowlby.",
+    "subtitle": "Gratis, anónimo, resultado inmediato, sin registro"
+  },
+  "section1": {
+    "title": "¿Qué es la teoría del apego?",
+    "intro": "La teoría del apego, desarrollada por el psiquiatra británico <strong>John Bowlby</strong> en los años 50, es uno de los marcos más validados científicamente en psicología de las relaciones. Explica cómo nuestros primeros vínculos (sobre todo con nuestros padres) moldean nuestra forma de amar en la edad adulta.",
+    "p1": "En la práctica, tu estilo de apego influye en cómo reaccionas dentro de tus relaciones íntimas: cómo gestionas la cercanía, la separación, los conflictos y la vulnerabilidad emocional.",
+    "p2": "La psicóloga <strong>Mary Ainsworth</strong> identificó tres estilos principales (seguro, ansioso, evitativo), completados más tarde por un cuarto: el estilo desorganizado. Estos estilos no son fijos, pueden evolucionar con la toma de conciencia y el trabajo personal."
+  },
+  "section2": {
+    "title": "Los 4 estilos de apego amoroso",
+    "intro": "Cada estilo de apego refleja una forma distinta de vivir las relaciones. Ninguno es \"bueno\" ni \"malo\", son estrategias adaptativas desarrolladas a partir de tus experiencias relacionales.",
+    "pillar1Title": "Seguro",
+    "pillar1Text": "Te sientes cómodo tanto con la intimidad como con la autonomía. Expresas tus necesidades con claridad, confías en tu pareja y gestionas los conflictos con madurez. Alrededor del <strong>50-60%</strong> de la población.",
+    "pillar2Title": "Ansioso (preocupado)",
+    "pillar2Text": "Tienes una necesidad intensa de cercanía y de que te tranquilicen. El miedo al abandono puede llevarte a aferrarte o a sobreinterpretar las señales. Alrededor del <strong>20-25%</strong> de la población.",
+    "pillar3Title": "Evitativo (distanciado)",
+    "pillar3Text": "Valoras mucho tu independencia. La intimidad emocional te incomoda y tiendes a tomar distancia cuando las cosas se vuelven demasiado cercanas. Alrededor del <strong>15-20%</strong> de la población.",
+    "pillar4Title": "Desorganizado (temeroso)",
+    "pillar4Text": "Oscilas entre el deseo de conexión y el miedo a la intimidad. Este estilo combina rasgos ansiosos y evitativos, a menudo ligados a experiencias relacionales complejas. Alrededor del <strong>5-10%</strong> de la población."
+  },
+  "section3": {
+    "title": "Cómo afecta el estilo de apego a tu relación",
+    "p1": "Tu estilo de apego no solo determina cómo amas, influye directamente en la dinámica cotidiana de tu pareja. Moldea tus reacciones ante los conflictos, tu comunicación emocional e incluso tu vida sexual.",
+    "p2": "Los investigadores han identificado un fenómeno llamado <strong>\"la danza del apego\"</strong>: las personas ansiosas y las evitativas suelen atraerse mutuamente, creando un ciclo de persecución y retirada que puede resultar agotador para ambos.",
+    "p3": "La buena noticia: entender tu estilo de apego es el primer paso hacia una relación más plena. Los estudios muestran que incluso las personas con un apego inseguro pueden desarrollar un apego \"seguro adquirido\" gracias a la terapia o a una relación con una pareja segura."
+  },
+  "section4": {
+    "title": "Ansioso + Evitativo: la trampa de la pareja tóxica",
+    "intro": "La combinación más frecuente, y la más problemática, es la de la persona ansiosa con la evitativa. Este esquema crea un círculo vicioso:",
+    "p1": "La persona <strong>ansiosa</strong> busca cercanía → la persona <strong>evitativa</strong> se siente invadida y toma distancia → la ansiosa entra en pánico y se aferra más → la evitativa huye todavía más. Este ciclo puede durar meses, incluso años.",
+    "p2": "Romper el ciclo exige toma de conciencia por ambas partes. La persona ansiosa tiene que aprender a autorregularse y a tolerar el espacio. La evitativa tiene que entrenarse en quedarse presente y expresar sus emociones.",
+    "tip": "Si reconoces este patrón en tu pareja, no es una fatalidad. La <strong>terapia de pareja</strong> centrada en el apego (EFT, Terapia Focalizada en las Emociones) tiene una tasa de éxito del 70-75% en parejas en crisis."
+  },
+  "section5": {
+    "title": "¿Se puede cambiar el estilo de apego?",
+    "p1": "Sí, sin ninguna duda. El estilo de apego no está grabado en piedra. La neurociencia ha demostrado que el cerebro es plástico: nuevas experiencias relacionales positivas pueden literalmente reconfigurar tus esquemas de apego.",
+    "p2": "Hay varias vías para evolucionar hacia un apego más seguro:",
+    "sub1Title": "La terapia individual",
+    "sub1P1": "Enfoques como la <strong>terapia de esquemas</strong>, el EMDR o la psicoterapia de orientación psicodinámica son especialmente eficaces para trabajar las heridas de apego.",
+    "sub2Title": "Una relación segura",
+    "sub2P1": "Estar en pareja con alguien de estilo seguro puede transformar poco a poco tu propio estilo. El amor sano es terapéutico en sí mismo.",
+    "sub3Title": "La atención plena",
+    "sub3P1": "Aprender a observar tus reacciones automáticas sin seguirlas a ciegas. La meditación y el mindfulness ayudan a crear un espacio entre el detonante y la respuesta."
+  },
+  "section6": {
+    "title": "¿Por qué hacer este test de apego?",
+    "p1": "Este test te ayuda a poner palabras a sensaciones que a menudo resultan confusas. Entender tu estilo de apego es entender por qué reaccionas de determinada manera en tus relaciones y, sobre todo, cómo evolucionar.",
+    "pillar1Title": "Entenderte mejor",
+    "pillar1Text": "Identifica tus patrones relacionales recurrentes y comprende de dónde vienen.",
+    "pillar2Title": "Comunicarte mejor",
+    "pillar2Text": "Explica tus necesidades a tu pareja con un vocabulario claro y validado.",
+    "pillar3Title": "Romper los ciclos",
+    "pillar3Text": "Detecta las dinámicas tóxicas (persecución y retirada) para desactivarlas.",
+    "pillar4Title": "Evolucionar juntos",
+    "pillar4Text": "Haced el test los dos y comparad vuestros resultados para entenderos mejor."
+  },
+  "section7": {
+    "title": "Lo que este test no hace",
+    "p1": "Este test es una <strong>herramienta de autoevaluación</strong>, no un diagnóstico clínico. Te da una tendencia general basada en tus respuestas, pero no sustituye la evaluación de un profesional de la salud mental.",
+    "p2": "Tu estilo de apego puede variar según el contexto (amistoso, familiar, amoroso) y según las etapas de tu vida. Un solo test no captura toda la complejidad de tu personalidad relacional.",
+    "tip": "Si tus resultados te remueven algo, no dudes en comentarlo con un psicólogo o un terapeuta de pareja. Es un excelente punto de partida para un trabajo más profundo."
+  },
+  "section8": {
+    "title": "Algunas cifras sobre el apego en la pareja",
+    "headerScore": "Estilo",
+    "headerLevel": "Prevalencia",
+    "headerAnalysis": "Características principales",
+    "row1Score": "Seguro",
+    "row1Level": "50-60%",
+    "row1Analysis": "Cómodo con la intimidad y la autonomía, buena gestión de los conflictos",
+    "row2Score": "Ansioso",
+    "row2Level": "20-25%",
+    "row2Analysis": "Necesidad de reafirmación, miedo al abandono, hipervigilancia relacional",
+    "row3Score": "Evitativo",
+    "row3Level": "15-20%",
+    "row3Analysis": "Valora la independencia, incomodidad con la cercanía emocional",
+    "row4Score": "Desorganizado",
+    "row4Level": "5-10%",
+    "row4Analysis": "Oscilación entre el deseo de conexión y el miedo a la intimidad"
+  },
+  "seo": {
+    "faq1Q": "¿Qué es un estilo de apego?",
+    "faq1A": "El estilo de apego es un modelo relacional que se forma en la infancia y que influye en cómo vives la intimidad, la confianza y la separación en tus relaciones de pareja. Existen 4 estilos principales: seguro, ansioso, evitativo y desorganizado. El concepto procede de la teoría del apego de John Bowlby y Mary Ainsworth.",
+    "faq2Q": "¿Se puede cambiar el estilo de apego?",
+    "faq2A": "Sí. El estilo de apego no es fijo. Gracias a la terapia (en particular la EFT, la terapia de esquemas o el EMDR), a relaciones seguras y al trabajo personal, es perfectamente posible pasar de un apego inseguro a un apego \"seguro adquirido\". La neurociencia confirma la plasticidad cerebral que hace posible ese cambio.",
+    "faq3Q": "¿Cuál es el estilo de apego más común?",
+    "faq3A": "El estilo de apego seguro es el más extendido y representa alrededor del 50 al 60% de la población. El estilo ansioso afecta a cerca del 20-25% de las personas, el evitativo al 15-20% y el desorganizado en torno al 5-10%.",
+    "faq4Q": "¿Cómo saber el estilo de apego de mi pareja?",
+    "faq4A": "Observa sus reacciones ante los conflictos, la separación y la intimidad. Una pareja ansiosa tenderá a buscar reafirmación, una pareja evitativa tomará distancia bajo presión. Lo más sencillo sigue siendo proponerle hacer este test y comentarlo juntos.",
+    "faq5Q": "¿Dos estilos de apego inseguros pueden formar una pareja feliz?",
+    "faq5A": "Sí, siempre que ambos sean conscientes de ello y trabajen juntos. La combinación ansioso-evitativo es la más problemática porque crea un ciclo de persecución y retirada. Pero con comunicación, terapia de pareja y voluntad mutua de avanzar, estas parejas pueden funcionar perfectamente.",
+    "faq6Q": "¿Este test es fiable científicamente?",
+    "faq6A": "Este test está inspirado en cuestionarios validados (el ECR-R de Fraley y Brennan). Ofrece una tendencia general de tu estilo de apego. Para un diagnóstico preciso, consulta a un psicólogo que pueda usar las herramientas clínicas validadas e interpretar los resultados en el contexto de tu historia personal."
+  }
+}

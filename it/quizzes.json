@@ -165,5 +165,11 @@
     "shortTitle": "Quiz Temptation",
     "description": "12 giorni sull'isola, 30 situazioni di tentazione: resisterai fino al falò finale?",
     "metaDescription": "Quiz di Temptation Island online e gratuito: 12 giorni sull'isola, una tentazione al giorno e un falò finale. La tua coppia sopravvivrebbe alla prova?"
+  },
+  "testAttachement": {
+    "title": "Test dello stile di attaccamento: qual è il tuo?",
+    "shortTitle": "Test Attaccamento",
+    "description": "20 domande per scoprire il tuo stile di attaccamento in amore: sicuro, ansioso, evitante o disorganizzato. Risultato immediato.",
+    "metaDescription": "Sicuro, ansioso, evitante o disorganizzato? Scopri il tuo stile di attaccamento in 20 domande. Basato sulla teoria di Bowlby."
   }
 }
