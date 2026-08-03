@@ -34,7 +34,9 @@
     "testAttachement": "Test attaccamento",
     "testAttachementDesc": "Scopri il tuo stile di attaccamento",
     "testConfiance": "Test fiducia",
-    "testConfianceDesc": "Misura la fiducia nella vostra coppia"
+    "testConfianceDesc": "Misura la fiducia nella vostra coppia",
+    "testInfidelite": "Test infedeltà",
+    "testInfideliteDesc": "Individua i segnali d'allarme"
   },
   "footer": {
     "brandDescription": "Metti alla prova la tua compatibilità e scopri la tua connessione amorosa con i nostri quiz gratuiti per coppie.",

@@ -177,5 +177,11 @@
     "shortTitle": "Trust Test",
     "description": "20 questions to measure the mutual trust in your relationship: jealousy, transparency, reliability. Instant result.",
     "metaDescription": "Do you really trust your partner? 20 questions to assess trust in your relationship. Free, confidential, instant result."
+  },
+  "testInfidelite": {
+    "title": "Infidelity test: the signs that don't lie",
+    "shortTitle": "Infidelity Test",
+    "description": "20 questions to spot the warning signals in your relationship: secrecy, emotional distance, behavioural changes. Instant result.",
+    "metaDescription": "Is your partner cheating? 20 questions to identify the warning signs in your relationship. Free, confidential, instant result."
   }
 }

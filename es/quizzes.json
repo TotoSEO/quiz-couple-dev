@@ -177,5 +177,11 @@
     "shortTitle": "Test Confianza",
     "description": "20 preguntas para medir la confianza mutua en vuestra relación: celos, transparencia, fiabilidad. Resultado inmediato.",
     "metaDescription": "¿De verdad te fías de tu pareja? 20 preguntas para evaluar la confianza en vuestra relación. Gratis, confidencial, resultado inmediato."
+  },
+  "testInfidelite": {
+    "title": "Test de infidelidad: las señales que no engañan",
+    "shortTitle": "Test Infidelidad",
+    "description": "20 preguntas para detectar las señales de alerta en tu relación: secretismo, distancia emocional, cambios de comportamiento. Resultado inmediato.",
+    "metaDescription": "¿Tu pareja te engaña? 20 preguntas para identificar las señales de alerta en tu relación. Gratis, confidencial, resultado inmediato."
   }
 }
