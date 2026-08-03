@@ -57,7 +57,7 @@ const article: BlogArticleData = {
         {
           id: 'heiss-und-kalt',
           title: "Mal heiß, mal kalt, im Dauerzyklus",
-          content: `<p>Eine Woche ist er aufmerksam, warm, präsent. In der nächsten ist er distanziert und kalt, ohne Erklärung. Und du verbringst deine Zeit damit, herauszufinden, was du getan hast, um diesen Wechsel auszulösen. Spoiler: du hast nichts getan. Er ist derjenige, der diese Instabilität schafft, bewusst oder nicht. Aber das Ergebnis ist dasselbe, du läufst auf Eierschalen, suchst ständig seine Bestätigung, und fühlst Erleichterung, wenn er wieder im "warmen" Modus zurückkommt. Das ist der ängstliche Bindungszyklus, den er erzeugt. Und wenn man erstmal drin ist, ist es schwer, wieder herauszukommen.</p>`,
+          content: `<p>Eine Woche ist er aufmerksam, warm, präsent. In der nächsten ist er distanziert und kalt, ohne Erklärung. Und du verbringst deine Zeit damit, herauszufinden, was du getan hast, um diesen Wechsel auszulösen. Spoiler: du hast nichts getan. Er ist derjenige, der diese Instabilität schafft, bewusst oder nicht. Aber das Ergebnis ist dasselbe, du läufst auf Eierschalen, suchst ständig seine Bestätigung, und fühlst Erleichterung, wenn er wieder im "warmen" Modus zurückkommt. Das ist der ängstliche Bindungszyklus, den er erzeugt. Und wenn man erstmal drin ist, ist es schwer, wieder herauszukommen. Wenn du dieses Muster erkennst, kann der <a href="/de/toxische-beziehung-test/">Test toxische Beziehung</a> dir helfen zu sehen, wo du wirklich stehst.</p>`,
         },
         {
           id: 'entschuldigt-nie',

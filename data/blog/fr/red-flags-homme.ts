@@ -57,7 +57,7 @@ const article: BlogArticleData = {
         {
           id: 'chaud-et-froid',
           title: "Le chaud et le froid, en boucle",
-          content: `<p>Une semaine il est présent, attentionné, doux. La suivante, distant et froid sans explication. Et toi, tu passes ton temps à essayer de comprendre ce que tu as fait pour provoquer ce changement. Spoiler : tu n'as rien fait. C'est lui qui installe cette instabilité, consciemment ou pas. Mais le résultat est le même : tu marches sur des œufs, tu cherches en permanence son approbation, tu te sens soulagée quand il revient en mode "chaud". C'est le cycle d'attachement anxieux qu'il crée, et une fois dedans, il est difficile d'en sortir.</p>`,
+          content: `<p>Une semaine il est présent, attentionné, doux. La suivante, distant et froid sans explication. Et toi, tu passes ton temps à essayer de comprendre ce que tu as fait pour provoquer ce changement. Spoiler : tu n'as rien fait. C'est lui qui installe cette instabilité, consciemment ou pas. Mais le résultat est le même : tu marches sur des œufs, tu cherches en permanence son approbation, tu te sens soulagée quand il revient en mode "chaud". C'est le cycle d'attachement anxieux qu'il crée, et une fois dedans, il est difficile d'en sortir. Si tu reconnais ce pattern, le <a href="/test-couple-toxique/">test couple toxique</a> peut t'aider à voir où tu en es.</p>`,
         },
         {
           id: 'ne-s-excuse-jamais',

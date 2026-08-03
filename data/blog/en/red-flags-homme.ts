@@ -57,7 +57,7 @@ const article: BlogArticleData = {
         {
           id: 'hot-and-cold',
           title: "Hot and cold, on repeat",
-          content: `<p>One week he's present, warm, attentive. The next, distant and cold with no explanation. And you spend your time trying to figure out what you did to trigger the change. Spoiler: you didn't do anything. He's the one creating this instability, consciously or not. But the result is the same, you walk on eggshells, you constantly seek his approval, you feel relieved when he comes back in "hot" mode. That's the anxious attachment cycle he creates. And once you're in it, getting out is hard.</p>`,
+          content: `<p>One week he's present, warm, attentive. The next, distant and cold with no explanation. And you spend your time trying to figure out what you did to trigger the change. Spoiler: you didn't do anything. He's the one creating this instability, consciously or not. But the result is the same, you walk on eggshells, you constantly seek his approval, you feel relieved when he comes back in "hot" mode. That's the anxious attachment cycle he creates. And once you're in it, getting out is hard. If you recognise this, the <a href="/en/toxic-relationship-test/">toxic relationship test</a> can help you see where things really stand.</p>`,
         },
         {
           id: 'never-apologises',
