@@ -458,6 +458,19 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-03-07',
   },
   {
+    internalSlug: 'love-bombing',
+    featuredImage: '/blog/love-bombing.svg',
+    category: 'vie-de-couple',
+    slugs: {
+      fr: 'love-bombing',
+      en: 'love-bombing-signs',
+      es: 'love-bombing-senales',
+      de: 'love-bombing-anzeichen',
+      it: 'love-bombing-segnali',
+    },
+    publishedAt: '2026-08-02',
+  },
+  {
     internalSlug: 'copain-ne-fait-pas-effort',
     featuredImage: '/blog/copain-ne-fait-pas-effort.svg',
     category: 'vie-de-couple',
