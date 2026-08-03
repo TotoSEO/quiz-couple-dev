@@ -32,7 +32,9 @@
     "activities": "Aktivitäten in der Nähe",
     "contact": "Kontakt",
     "testAttachement": "Bindungstest",
-    "testAttachementDesc": "Finde deinen Bindungsstil heraus"
+    "testAttachementDesc": "Finde deinen Bindungsstil heraus",
+    "testConfiance": "Vertrauenstest",
+    "testConfianceDesc": "Miss das Vertrauen in eurer Beziehung"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",

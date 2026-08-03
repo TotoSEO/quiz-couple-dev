@@ -171,5 +171,11 @@
     "shortTitle": "Bindungstest",
     "description": "20 Fragen, um deinen Bindungsstil in der Liebe herauszufinden: sicher, ängstlich, vermeidend oder desorganisiert. Ergebnis sofort.",
     "metaDescription": "Sicher, ängstlich, vermeidend oder desorganisiert? Finde deinen Bindungsstil in 20 Fragen heraus. Nach der Theorie von Bowlby."
+  },
+  "testConfiance": {
+    "title": "Vertrauenstest für Paare: vertraut ihr einander wirklich?",
+    "shortTitle": "Vertrauenstest",
+    "description": "20 Fragen, um das gegenseitige Vertrauen in eurer Beziehung zu messen: Eifersucht, Offenheit, Verlässlichkeit. Ergebnis sofort.",
+    "metaDescription": "Vertraust du deinem Partner wirklich? 20 Fragen zur Einschätzung des Vertrauens in eurer Beziehung. Kostenlos, vertraulich, sofort."
   }
 }

@@ -171,5 +171,11 @@
     "shortTitle": "Attachment Test",
     "description": "20 questions to discover your romantic attachment style: secure, anxious, avoidant or disorganised. Instant result.",
     "metaDescription": "Secure, anxious, avoidant or disorganised? Discover your romantic attachment style in 20 questions. Based on Bowlby's theory."
+  },
+  "testConfiance": {
+    "title": "Trust test for couples: do you really trust each other?",
+    "shortTitle": "Trust Test",
+    "description": "20 questions to measure the mutual trust in your relationship: jealousy, transparency, reliability. Instant result.",
+    "metaDescription": "Do you really trust your partner? 20 questions to assess trust in your relationship. Free, confidential, instant result."
   }
 }

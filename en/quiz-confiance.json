@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Free test",
+    "title": "Trust Test for Couples:",
+    "titleHighlight": "do you really trust each other?",
+    "description": "20 questions to assess the <strong>mutual trust</strong> in your relationship. Jealousy, transparency, communication: find out where you really stand.",
+    "subtitle": "Free, confidential, instant result"
+  },
+  "section1": {
+    "title": "Why trust is the number one pillar of a relationship",
+    "intro": "Trust isn't a bonus in a relationship, it's the ground everything else stands on. Without it, love, closeness and intimacy are constantly under threat from doubt and fear.",
+    "p1": "Research by the psychologist <strong>John Gottman</strong> shows that trust and commitment are the two strongest predictors of how long a couple lasts. Couples who trust each other have fewer conflicts, less intense ones, and recover from crises faster.",
+    "p2": "Trust is built in the <strong>small everyday moments</strong>: keeping your promises, being on time, answering messages, being open about your emotions. It isn't one grand heroic gesture, it's the sum of thousands of micro-decisions to be reliable."
+  },
+  "section2": {
+    "title": "The 5 dimensions of trust in a relationship",
+    "intro": "Trust isn't one single block. It breaks down into several dimensions, each of which can be solid or weakened independently of the others.",
+    "pillar1Title": "Reliability",
+    "pillar1Text": "Keeping your promises, being on time, honouring your commitments. This is the most concrete dimension: does your partner do what they say?",
+    "pillar2Title": "Transparency",
+    "pillar2Text": "Being honest about your thoughts, your emotions, your actions. No lies, no grey areas, no strategic omissions.",
+    "pillar3Title": "Emotional safety",
+    "pillar3Text": "Feeling free to be vulnerable without fearing judgement or rejection. Being able to voice your fears, your doubts, your weak spots.",
+    "pillar4Title": "Faithfulness",
+    "pillar4Text": "Trusting that your partner respects the boundaries of your relationship, whether sexual, emotional or social.",
+    "pillar5Title": "Goodwill",
+    "pillar5Text": "Believing that your partner acts in your interest and in the couple's interest, even when you disagree."
+  },
+  "section3": {
+    "title": "The signs of a lack of trust",
+    "p1": "A lack of trust doesn't always show up in obvious ways. Sometimes it hides behind behaviours we normalise without noticing.",
+    "p2": "Here are the most common warning signals:",
+    "sub1Title": "Excessive control",
+    "sub1P1": "Checking your partner's phone, demanding an account of every outing, insisting on knowing passwords. Control is often dressed up as \"I worry about you\", but it's a sign of deep mistrust.",
+    "sub2Title": "Hyper-vigilance",
+    "sub2P1": "Analysing every message, every look, every change of routine. When everything becomes a potential clue, you live in a state of permanent stress that poisons the relationship.",
+    "sub3Title": "Emotional avoidance",
+    "sub3P1": "No longer sharing your emotions, your fears or your plans. When trust goes, we protect ourselves by closing up, which paradoxically pushes the partner even further away."
+  },
+  "section4": {
+    "title": "Trust and jealousy: where is the line?",
+    "p1": "A twinge of jealousy can be normal and even flattering. But when it turns obsessive or controlling, it destroys the very relationship it claims to protect.",
+    "p2": "Healthy jealousy says: \"I care about you and I feel a small pang when I see you close to someone else.\" Toxic jealousy says: \"You're not allowed to talk to that person, show me your phone.\"",
+    "p3": "The fundamental difference: healthy jealousy is a <strong>feeling</strong> you manage. Toxic jealousy is a <strong>behaviour</strong> you impose on the other person.",
+    "tip": "If jealousy stops you living calmly, that isn't a couple problem, it's personal work. A therapist can help you identify the roots of that insecurity (often linked to attachment style)."
+  },
+  "section5": {
+    "title": "How to rebuild trust after a betrayal",
+    "p1": "Whether it's a lie, infidelity or an emotional betrayal, rebuilding trust is a long process but a possible one. Here are the key stages:",
+    "sub1Title": "1. A full and sincere admission",
+    "sub1P1": "No half-truths, no playing it down. The person who broke the trust has to own it fully and answer the other's questions honestly. It's painful but essential.",
+    "sub2Title": "2. A period of heightened transparency",
+    "sub2P1": "Temporarily, the person who broke the trust accepts a higher level of transparency: sharing location, access to messages, and so on. This isn't control, it's a transitional bridge back to trust.",
+    "sub3Title": "3. Working on the deeper causes",
+    "sub3P1": "Understanding why the betrayal happened (dissatisfaction, avoidance, addiction) is essential to avoid a repeat. Professional support is strongly recommended at this stage."
+  },
+  "section6": {
+    "title": "The daily rituals that strengthen trust",
+    "intro": "Trust isn't built in a day. It feeds on small repeated actions that tell your partner: \"You can count on me.\"",
+    "pillar1Title": "Keep your promises",
+    "pillar1Text": "Even the smallest ones. Saying \"I'll be there at 7\" and being there at 7 builds trust brick by brick.",
+    "pillar2Title": "Share your emotions",
+    "pillar2Text": "Saying \"I've had a hard day\" instead of shutting down. Shared vulnerability creates a virtuous circle of trust.",
+    "pillar3Title": "Respect privacy",
+    "pillar3Text": "Trusting also means accepting that you won't know everything. Everyone is entitled to a personal space.",
+    "pillar4Title": "Repair quickly",
+    "pillar4Text": "When you make a mistake, apologise sincerely and put it right. Don't let small wounds pile up."
+  },
+  "section7": {
+    "title": "Trust and dependency: don't confuse the two",
+    "p1": "Trusting doesn't mean being naive or dependent. Healthy trust coexists with autonomy and good judgement.",
+    "p2": "Mature trust says: \"I trust you AND I'm able to survive if that trust is broken.\" It's this double footing (trust plus autonomy) that makes a relationship genuinely solid.",
+    "p3": "If you can't imagine your life without your partner, the question may not be \"do I trust them?\" but \"do I trust myself?\"",
+    "quote": "\"Trust is knowing you can weather the storm, alone or together. It's choosing to be with someone, not needing them in order to exist.\""
+  },
+  "section8": {
+    "title": "Trust in relationships, in figures",
+    "headerScore": "Factor",
+    "headerLevel": "Impact",
+    "headerAnalysis": "Detail",
+    "row1Score": "Transparency",
+    "row1Level": "Very strong",
+    "row1Analysis": "85% of happy couples report open and honest communication",
+    "row2Score": "Reliability",
+    "row2Level": "Strong",
+    "row2Analysis": "Keeping promises is cited as the number one criterion of trust",
+    "row3Score": "Infidelity",
+    "row3Level": "Destructive",
+    "row3Analysis": "60-65% of couples don't survive infidelity without professional help",
+    "row4Score": "Excessive jealousy",
+    "row4Level": "Corrosive",
+    "row4Analysis": "Controlling behaviour ranks among the leading causes of breakups"
+  },
+  "seo": {
+    "faq1Q": "How do I know if I lack trust in my relationship?",
+    "faq1A": "The signs include: checking your partner's phone, questioning their outings, reading their actions negatively, needing constant reassurance, or avoiding sharing your emotions for fear of being hurt. This test helps you assess your level of trust objectively.",
+    "faq2Q": "Can trust come back after infidelity?",
+    "faq2A": "Yes, but it's a long process (often 1 to 3 years) that requires sincere commitment from both partners. Heightened transparency, couples therapy and work on the deeper causes are essential. Roughly 35-40% of couples who commit seriously to that process find solid trust again.",
+    "faq3Q": "Is it normal to have doubts in a relationship?",
+    "faq3A": "Absolutely. Occasional doubts are human and normal. What makes the difference is their frequency and intensity. If the doubts are occasional and you can manage them, that's healthy. If they're permanent and overwhelming, that's a signal to take seriously.",
+    "faq4Q": "How can I tell healthy jealousy from toxic jealousy?",
+    "faq4A": "Healthy jealousy is a passing feeling you handle internally. Toxic jealousy shows up as controlling behaviour: going through a phone, forbidding friendships, demanding an account of every activity. The first is something you feel, the second is an action that violates the other person's freedom.",
+    "faq5Q": "Should couples tell each other everything?",
+    "faq5A": "No. Total transparency is neither realistic nor desirable. Everyone is entitled to an inner world (thoughts, journals, private conversations with friends). Trust means not needing to know everything in order to feel safe. What matters is not actively lying, not revealing everything.",
+    "faq6Q": "Is this trust test reliable?",
+    "faq6A": "This test is a self-assessment tool that gives you a general tendency. It doesn't carry the weight of a clinical diagnosis. If your results concern you, we recommend discussing them with a couples therapist who can take the analysis further in the context of your relationship."
+  }
+}

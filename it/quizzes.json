@@ -171,5 +171,11 @@
     "shortTitle": "Test Attaccamento",
     "description": "20 domande per scoprire il tuo stile di attaccamento in amore: sicuro, ansioso, evitante o disorganizzato. Risultato immediato.",
     "metaDescription": "Sicuro, ansioso, evitante o disorganizzato? Scopri il tuo stile di attaccamento in 20 domande. Basato sulla teoria di Bowlby."
+  },
+  "testConfiance": {
+    "title": "Test della fiducia di coppia: vi fidate davvero?",
+    "shortTitle": "Test Fiducia",
+    "description": "20 domande per misurare la fiducia reciproca nella vostra relazione: gelosia, trasparenza, affidabilità. Risultato immediato.",
+    "metaDescription": "Ti fidi davvero del tuo partner? 20 domande per valutare la fiducia nella vostra relazione. Gratuito, riservato, risultato immediato."
   }
 }

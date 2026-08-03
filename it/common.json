@@ -32,7 +32,9 @@
     "activities": "Attività vicino a me",
     "contact": "Contatto",
     "testAttachement": "Test attaccamento",
-    "testAttachementDesc": "Scopri il tuo stile di attaccamento"
+    "testAttachementDesc": "Scopri il tuo stile di attaccamento",
+    "testConfiance": "Test fiducia",
+    "testConfianceDesc": "Misura la fiducia nella vostra coppia"
   },
   "footer": {
     "brandDescription": "Metti alla prova la tua compatibilità e scopri la tua connessione amorosa con i nostri quiz gratuiti per coppie.",

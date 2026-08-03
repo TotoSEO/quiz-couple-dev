@@ -171,5 +171,11 @@
     "shortTitle": "Test Apego",
     "description": "20 preguntas para descubrir tu estilo de apego amoroso: seguro, ansioso, evitativo o desorganizado. Resultado inmediato.",
     "metaDescription": "¿Seguro, ansioso, evitativo o desorganizado? Descubre tu estilo de apego amoroso en 20 preguntas. Basado en la teoría de Bowlby."
+  },
+  "testConfiance": {
+    "title": "Test de confianza en pareja: ¿de verdad os fiáis?",
+    "shortTitle": "Test Confianza",
+    "description": "20 preguntas para medir la confianza mutua en vuestra relación: celos, transparencia, fiabilidad. Resultado inmediato.",
+    "metaDescription": "¿De verdad te fías de tu pareja? 20 preguntas para evaluar la confianza en vuestra relación. Gratis, confidencial, resultado inmediato."
   }
 }
