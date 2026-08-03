@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "badge": "Test gratuito, 20 preguntas",
+    "title": "Test de infidelidad:",
+    "titleHighlight": "las señales que no engañan",
+    "description": "20 preguntas para identificar las <strong>señales de alerta</strong> en tu relación. Cambios de comportamiento, distancia emocional, secretismo: haz balance con total confidencialidad.",
+    "subtitle": "Gratis, confidencial, resultado inmediato"
+  },
+  "section1": {
+    "title": "¿Por qué haces este test hoy?",
+    "p1": "Si estás aquí, es porque algo te ronda la cabeza. Quizá un detalle que te llamó la atención, una acumulación de pequeños cambios, o simplemente una intuición tozuda que no se va. Y en lugar de quedarte a solas con esa duda, buscas una herramienta concreta para ver más claro.",
+    "p2": "Este test no es un detector de mentiras. No pretende demostrar nada. Su función es ayudarte a <strong class=\"text-foreground\">poner palabras a lo que observas</strong>, a ordenar lo que sientes y a evaluar con objetividad si las señales que percibes merecen tomarse en serio o si tienen explicaciones más sencillas.",
+    "p3": "Sea cual sea el resultado, recuerda que buscar entender es un acto de lucidez, no de debilidad. Lo que sientes cuenta, y merece ser escuchado."
+  },
+  "section2": {
+    "title": "Las 7 señales de comportamiento más frecuentes",
+    "intro": "Las investigaciones en psicología de pareja identifican patrones recurrentes cuando uno de los miembros mantiene una relación fuera. Estas señales no son pruebas, pero su acumulación debe ponerte en alerta.",
+    "pillar1Title": "1. El secretismo con el móvil",
+    "pillar1Text": "Código cambiado, pantalla girada, notificaciones desactivadas, mensajes borrados. El móvil se convierte en territorio prohibido cuando antes no lo era. Es una de las señales más citadas tanto en los testimonios como en los estudios clínicos.",
+    "pillar2Title": "2. Los cambios de horarios",
+    "pillar2Text": "Retrasos recurrentes, salidas imprevistas, fines de semana «de trabajo» repentinos. No es el cambio en sí lo que llama la atención, sino que venga acompañado de explicaciones vagas o contradictorias.",
+    "pillar3Title": "3. La distancia emocional progresiva",
+    "pillar3Text": "Menos conversaciones profundas, menos interés por tu día a día, una mirada que parece estar en otra parte. La persona está físicamente presente pero emocionalmente ausente.",
+    "pillar4Title": "4. Los cambios de aspecto",
+    "pillar4Text": "Nuevo estilo de ropa, puesta a punto repentina, otro perfume. Cuando estos cambios no están ligados a un hecho identificable (un puesto nuevo, un cumpleaños), pueden indicar el deseo de gustar a alguien nuevo.",
+    "pillar5Title": "5. La reactividad excesiva",
+    "pillar5Text": "Cualquier pregunta se convierte en una acusación, cualquier comentario provoca una reacción desproporcionada. Esa actitud defensiva permanente suele ser señal de que la persona se siente «pillada» e intenta darle la vuelta a la culpa.",
+    "pillar6Title": "6. Las incoherencias en el relato",
+    "pillar6Text": "Pequeñas mentiras sobre detalles insignificantes, versiones que cambian, horarios que no cuadran. Por separado, cada una parece inocua. Juntas, dibujan un patrón de ocultación.",
+    "pillar7Title": "7. Los cambios en la intimidad",
+    "pillar7Text": "O un retroceso claro (menos ternura, menos deseo), o al contrario un repunte repentino de atención y pasión. Ambos extremos pueden reflejar culpa o una necesidad de compensar."
+  },
+  "section3": {
+    "title": "Infidelidad emocional frente a infidelidad física",
+    "p1": "Cuando se habla de infidelidad, solemos pensar en una relación sexual con un tercero. Pero la realidad es más matizada. Los terapeutas de pareja distinguen dos formas principales que, ambas, pueden ser devastadoras para la relación.",
+    "sub1Title": "La infidelidad emocional",
+    "sub1P1": "Suele empezar con una amistad intensa, confidencias compartidas, un vínculo privilegiado con alguien ajeno a la pareja. Tu pareja le cuenta a esa persona lo que ya no te cuenta a ti. Esta forma es más insidiosa porque no implica necesariamente contacto físico, lo que permite negarla con más facilidad: «Solo somos amigos.»",
+    "sub1P2": "Y sin embargo, la infidelidad emocional puede doler tanto como la física, a veces más. Toca lo que sostiene el vínculo: la intimidad, lo compartido, la complicidad exclusiva.",
+    "sub2Title": "La infidelidad física",
+    "sub2P1": "Más fácil de identificar, implica contacto íntimo con un tercero. Puede ser puntual (un desliz aislado) o prolongada (una doble vida). En ambos casos, lo que duele es la ruptura del pacto de confianza, no solo el acto en sí.",
+    "sub2P2": "Algunos estudios sugieren que los hombres se ven más afectados por la infidelidad física, mientras que las mujeres sufren más con la emocional. Pero esa distinción es una tendencia, no una regla: el dolor depende de cada persona y de cada historia."
+  },
+  "section4": {
+    "title": "La psicología detrás de la infidelidad",
+    "p1": "Entender no significa justificar. Pero para avanzar, tanto si decides quedarte como si decides irte, puede ser útil comprender los mecanismos psicológicos que hay detrás de la infidelidad.",
+    "pillar1Title": "La carencia afectiva no expresada",
+    "pillar1Text": "La causa que más se cita en terapia no es el deseo sexual, es la sensación de ya no ser visto, escuchado ni deseado dentro de la pareja. La infidelidad se convierte entonces en una búsqueda torpe de validación emocional.",
+    "pillar2Title": "El miedo al compromiso o a la rutina",
+    "pillar2Text": "Algunas personas sabotean inconscientemente su relación cuando se vuelve demasiado estable. La novedad de una relación externa les da un subidón que compensa una angustia existencial ante el compromiso duradero.",
+    "pillar3Title": "Los patrones que se repiten",
+    "pillar3Text": "La infidelidad puede ser un patrón que se repite de una relación a otra. En ese caso el problema no es la relación en sí, sino un funcionamiento personal profundo, a menudo ligado al estilo de apego o a la historia familiar. Nuestro <a href=\"/es/test-estilo-apego/\">test de estilo de apego</a> puede arrojar luz sobre esa dimensión.",
+    "pillar4Title": "La crisis de identidad",
+    "pillar4Text": "Cumplir cuarenta, un duelo, la pérdida de un empleo, la llegada de un hijo: esos momentos de fragilidad pueden desencadenar una búsqueda de sentido que se expresa a través de una relación externa. No es una excusa, es un contexto a tener en cuenta."
+  },
+  "section5": {
+    "title": "Qué hacer si sospechas una infidelidad",
+    "p1": "El periodo de duda es de los más duros. La mente oscila entre la necesidad de saber y el miedo a la respuesta. Esto es lo que recomiendan los terapeutas de pareja.",
+    "dontTitle": "Lo que NO hay que hacer",
+    "dont1Title": "Jugar a detective",
+    "dont1Text": "Registrar el móvil, instalar programas espía, seguir a tu pareja. Aunque encuentres algo, ese camino envenena la relación y puede tener consecuencias legales. Además, te encierra en un papel de vigilancia que destruye tu propia serenidad.",
+    "dont2Title": "Lanzar acusaciones sin fundamento",
+    "dont2Text": "Encarar a tu pareja gritando «¡Sé que me engañas!» cuando en realidad no lo sabes provocará o un muro de negación o una escalada. La acusación directa cierra el diálogo en lugar de abrirlo.",
+    "dont3Title": "Contárselo a todo tu entorno",
+    "dont3Text": "Confiarte a una amistad de confianza es sano. Pero exponer la situación a toda tu familia y a tus redes sociales antes de haber aclarado las cosas complica muchísimo una posible reconciliación.",
+    "doTitle": "Lo que sí hay que hacer",
+    "do1Title": "Observa, anota, no reacciones en caliente",
+    "do1Text": "Toma distancia. Anota de forma factual lo que observas (fechas, comportamientos, incoherencias). Te ayudará a distinguir los hechos de tus interpretaciones y a ordenar tus pensamientos.",
+    "do2Title": "Expresa lo que sientes sin acusar",
+    "do2Text": "«Desde hace unas semanas noto una distancia entre nosotros y me preocupa. Necesito que lo hablemos.» Este enfoque abre el diálogo en lugar de cerrarlo. No acusas, compartes una sensación.",
+    "do3Title": "Consulta con un profesional",
+    "do3Text": "Un terapeuta, en individual o en pareja, puede ayudarte a atravesar esta etapa. Te dará un espacio neutral para poner palabras a lo que vives y te guiará hacia la mejor decisión para ti."
+  },
+  "section6": {
+    "title": "¿Se puede reconstruir después de una infidelidad?",
+    "p1": "La respuesta corta: sí, en algunos casos. Los estudios muestran que en torno al 50-60% de las parejas que deciden trabajar sobre una infidelidad consiguen reconstruir una relación satisfactoria. Pero exige una implicación enorme por ambas partes.",
+    "sub1Title": "Las condiciones de la reconstrucción",
+    "sub1P1": "La primera condición es que quien ha sido infiel asuma plenamente su responsabilidad, sin minimizar y sin culpar al otro. La segunda es una transparencia total durante el periodo de reconstrucción: acceso libre a las comunicaciones, respuestas honestas a todas las preguntas. La tercera es un trabajo terapéutico para entender las causas profundas e impedir que se repita.",
+    "sub2Title": "El tiempo necesario",
+    "sub2P1": "Los terapeutas estiman que hacen falta entre 1 y 3 años para que una pareja recupere una confianza estable tras una infidelidad. Los primeros meses son los más duros: el dolor está a flor de piel, la confianza está bajo mínimos y la persona traicionada revive la herida con frecuencia. Es normal, y es esencial que quien ha sido infiel lo entienda sin impacientarse.",
+    "sub3Title": "Cuando la reconstrucción no es posible",
+    "sub3P1": "Si tu pareja niega los hechos pese a las evidencias, se niega a terminar la relación externa, te culpabiliza por sus propias decisiones o reincide, la reconstrucción no es viable. Estas situaciones apuntan a una falta de respeto profunda que va más allá de la infidelidad. Nuestro <a href=\"/es/test-relacion-toxica/\">test de relación tóxica</a> puede ayudarte a valorar la salud global de vuestra relación."
+  },
+  "section7": {
+    "title": "¿Cuándo hay que plantearse irse?",
+    "p1": "Quedarse o irse no es una decisión binaria que se toma en un día. Pero hay señales que indican con claridad que la relación ya no puede funcionar en su forma actual.",
+    "p2": "Es legítimo irse cuando tu pareja rechaza toda responsabilidad y te devuelve la culpa, cuando la infidelidad se repite pese a las promesas, cuando tu salud mental o física se deteriora (ansiedad crónica, problemas de sueño, pérdida de peso), cuando te quedas solo por miedo a la soledad o por obligación.",
+    "p3": "Irse no es un fracaso. A veces es lo más valiente y lo más sano que se puede hacer. Si las <a href=\"/es/blog/red-flags-en-un-hombre/\">red flags en un hombre</a> o las <a href=\"/es/blog/red-flags-en-una-mujer/\">red flags en una mujer</a> se acumulan, fíate de lo que ves.",
+    "quote": "No puedes salvar una relación tú solo. Hacen falta dos para reconstruir, pero basta con uno para decidir protegerse."
+  },
+  "section8": {
+    "title": "Las cifras clave de la infidelidad",
+    "headerScore": "Indicador",
+    "headerLevel": "Cifra",
+    "headerAnalysis": "Fuente / contexto",
+    "row1Score": "Tasa de infidelidad declarada",
+    "row1Level": "20 a 40%",
+    "row1Analysis": "Porcentaje de adultos que declara haber sido infiel al menos una vez, según la encuesta y el país",
+    "row2Score": "Infidelidad emocional",
+    "row2Level": "Al alza",
+    "row2Analysis": "Las aplicaciones de mensajería han facilitado enormemente los vínculos íntimos a distancia",
+    "row3Score": "Parejas que lo superan",
+    "row3Level": "50 a 60%",
+    "row3Analysis": "Entre las parejas que optan por la terapia tras una infidelidad",
+    "row4Score": "Duración de la reconstrucción",
+    "row4Level": "1 a 3 años",
+    "row4Analysis": "Tiempo medio estimado por los terapeutas para recuperar una confianza estable"
+  },
+  "seo": {
+    "faq1Q": "¿Cómo saber si mi marido me engaña?",
+    "faq1A": "Las señales más frecuentes incluyen un cambio repentino de comportamiento con el móvil (código modificado, notificaciones ocultas), horarios inusuales con explicaciones vagas, una distancia emocional creciente y una reactividad excesiva cuando haces preguntas. Ninguna señal aislada constituye una prueba, pero su acumulación debe ponerte en alerta. Este test de 20 preguntas te ayuda a evaluar la situación con objetividad.",
+    "faq2Q": "¿Cuáles son las señales de infidelidad emocional?",
+    "faq2A": "La infidelidad emocional se manifiesta con una complicidad exclusiva con alguien ajeno a la pareja: confidencias, mensajes frecuentes, necesidad de compartir con esa persona en lugar de contigo. Tu pareja puede volverse distante, menos interesada en vuestras conversaciones y más protectora con su móvil. La frase «solo somos amigos» aparece a menudo para restarle importancia.",
+    "faq3Q": "¿Se puede reconstruir una pareja después de una infidelidad?",
+    "faq3A": "Sí, siempre que ambos lo quieran de verdad. Alrededor del 50-60% de las parejas que deciden trabajar sobre una infidelidad lo consiguen. Las condiciones esenciales son la responsabilidad plenamente asumida, una transparencia reforzada y un acompañamiento terapéutico. El proceso suele durar entre 1 y 3 años.",
+    "faq4Q": "Mi pareja se ha vuelto distante, ¿es señal de infidelidad?",
+    "faq4A": "La distancia emocional puede tener muchas causas: estrés laboral, depresión, cansancio, una crisis personal. No significa automáticamente infidelidad. Ahora bien, si esa distancia viene acompañada de otros cambios (secretismo con el móvil, cambios de horarios, reactividad excesiva), el conjunto merece tu atención. Lo mejor sigue siendo hablarlo directamente con tu pareja.",
+    "faq5Q": "¿Hay que registrar el móvil de la pareja cuando hay dudas?",
+    "faq5A": "Los terapeutas lo desaconsejan. Registrar el móvil de tu pareja te encierra en un papel de vigilancia que destruye tu propia serenidad y envenena la relación, encuentres algo o no. Además puede tener implicaciones legales. Lo recomendable es expresar directamente lo que sientes: describe lo que observas, lo que sientes y lo que necesitas, sin acusar."
+  }
+}

@@ -57,7 +57,7 @@ const article: BlogArticleData = {
         {
           id: 'caldo-e-freddo',
           title: "Caldo e freddo, in loop",
-          content: `<p>Una settimana è presente, caldo, attento. Quella dopo, distante e freddo senza spiegazioni. E tu passi il tempo a cercare di capire cosa hai fatto per provocare quel cambiamento. Spoiler: non hai fatto niente. È lui a creare questa instabilità, consapevolmente o meno. Ma il risultato è lo stesso, cammini sulle uova, cerchi costantemente la sua approvazione, ti senti sollevata quando torna in modalità "caldo". È il ciclo di attaccamento ansioso che crea. E una volta dentro, è difficile uscirne.</p>`,
+          content: `<p>Una settimana è presente, caldo, attento. Quella dopo, distante e freddo senza spiegazioni. E tu passi il tempo a cercare di capire cosa hai fatto per provocare quel cambiamento. Spoiler: non hai fatto niente. È lui a creare questa instabilità, consapevolmente o meno. Ma il risultato è lo stesso, cammini sulle uova, cerchi costantemente la sua approvazione, ti senti sollevata quando torna in modalità "caldo". È il ciclo di attaccamento ansioso che crea. E una volta dentro, è difficile uscirne. Se riconosci questo schema, il <a href="/it/test-relazione-tossica/">test coppia tossica</a> può aiutarti a vedere dove stai davvero.</p>`,
         },
         {
           id: 'non-si-scusa-mai',

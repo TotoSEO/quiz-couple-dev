@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "badge": "Kostenloser Test, 20 Fragen",
+    "title": "Untreue-Test:",
+    "titleHighlight": "die Anzeichen, die nicht täuschen",
+    "description": "20 Fragen, um die <strong>Warnsignale</strong> in eurer Beziehung zu erkennen. Verhaltensänderungen, emotionale Distanz, Heimlichkeit: verschaffe dir Klarheit, ganz vertraulich.",
+    "subtitle": "Kostenlos, vertraulich, Ergebnis sofort"
+  },
+  "section1": {
+    "title": "Warum machst du diesen Test heute?",
+    "p1": "Wenn du hier bist, beschäftigt dich etwas. Vielleicht ein Detail, das dir aufgefallen ist, eine Ansammlung kleiner Veränderungen, oder einfach eine hartnäckige Ahnung, die nicht verschwinden will. Und statt mit diesem Zweifel allein zu bleiben, suchst du ein konkretes Werkzeug, um klarer zu sehen.",
+    "p2": "Dieser Test ist kein Lügendetektor. Er will nichts beweisen. Seine Aufgabe ist es, dir zu helfen, <strong class=\"text-foreground\">Worte für das zu finden, was du beobachtest</strong>, deine Empfindungen zu ordnen und nüchtern einzuschätzen, ob die Signale, die du wahrnimmst, ernst genommen werden sollten oder ob es einfachere Erklärungen gibt.",
+    "p3": "Wie es auch ausgeht: Verstehen zu wollen ist ein Akt der Klarheit, nicht der Schwäche. Was du empfindest, zählt, und es verdient Gehör."
+  },
+  "section2": {
+    "title": "Die 7 häufigsten Verhaltenssignale",
+    "intro": "Die Paarpsychologie beschreibt wiederkehrende Muster, wenn ein Partner eine Beziehung nach außen unterhält. Diese Anzeichen sind keine Beweise, aber ihre Häufung sollte dich aufhorchen lassen.",
+    "pillar1Title": "1. Heimlichkeit rund ums Handy",
+    "pillar1Text": "Geänderter Code, umgedrehtes Display, abgeschaltete Benachrichtigungen, gelöschte Nachrichten. Das Handy wird zu verbotenem Gebiet, obwohl es das vorher nicht war. Es ist eines der am häufigsten genannten Signale, in Erfahrungsberichten wie in klinischen Studien.",
+    "pillar2Title": "2. Veränderte Zeiten",
+    "pillar2Text": "Wiederkehrende Verspätungen, spontane Verabredungen, plötzliche \"berufliche\" Wochenenden. Nicht die Veränderung an sich wirft Fragen auf, sondern dass sie mit vagen oder widersprüchlichen Erklärungen einhergeht.",
+    "pillar3Title": "3. Schleichende emotionale Distanz",
+    "pillar3Text": "Weniger tiefe Gespräche, weniger Interesse an deinem Alltag, ein Blick, der woanders zu sein scheint. Die Person ist körperlich anwesend, aber emotional abwesend.",
+    "pillar4Title": "4. Verändertes Äußeres",
+    "pillar4Text": "Neuer Kleidungsstil, plötzlicher Fitnessschub, anderes Parfum. Wenn diese Veränderungen nicht mit einem erkennbaren Ereignis zusammenhängen (neue Stelle, Geburtstag), können sie den Wunsch anzeigen, jemand Neuem zu gefallen.",
+    "pillar5Title": "5. Übermäßige Gereiztheit",
+    "pillar5Text": "Jede Frage wird zur Anklage, jede Bemerkung löst eine unverhältnismäßige Reaktion aus. Diese dauerhafte Abwehrhaltung ist oft ein Zeichen dafür, dass sich die Person \"ertappt\" fühlt und versucht, die Schuld umzudrehen.",
+    "pillar6Title": "6. Widersprüche in den Erzählungen",
+    "pillar6Text": "Kleine Lügen über harmlose Details, wechselnde Versionen, Zeitangaben, die nicht zusammenpassen. Einzeln wirkt jede davon banal. Zusammen ergeben sie ein Muster der Verheimlichung.",
+    "pillar7Title": "7. Veränderungen in der Intimität",
+    "pillar7Text": "Entweder ein deutlicher Rückzug (weniger Zärtlichkeit, weniger Verlangen) oder im Gegenteil ein plötzlicher Schub an Aufmerksamkeit und Leidenschaft. Beide Extreme können Schuldgefühle oder ein Bedürfnis nach Ausgleich ausdrücken."
+  },
+  "section3": {
+    "title": "Emotionale Untreue im Vergleich zu körperlicher Untreue",
+    "p1": "Wenn von Untreue die Rede ist, denken die meisten an eine sexuelle Beziehung mit einer dritten Person. Die Wirklichkeit ist jedoch vielschichtiger. Paartherapeuten unterscheiden zwei Hauptformen, die beide eine Beziehung zerstören können.",
+    "sub1Title": "Die emotionale Untreue",
+    "sub1P1": "Sie beginnt oft mit einer intensiven Freundschaft, geteilten Vertraulichkeiten, einer besonderen Verbindung zu jemandem außerhalb der Beziehung. Dein Partner vertraut dieser Person an, was er dir nicht mehr erzählt. Diese Form ist heimtückischer, weil sie nicht zwingend körperlichen Kontakt einschließt, was das Abstreiten erleichtert: \"Wir sind nur Freunde.\"",
+    "sub1P2": "Dabei kann emotionale Untreue genauso weh tun wie körperliche, manchmal mehr. Sie trifft das, worauf die Verbindung gebaut ist: Nähe, Austausch, exklusive Vertrautheit.",
+    "sub2Title": "Die körperliche Untreue",
+    "sub2P1": "Leichter zu erkennen, schließt sie intimen Kontakt mit einer dritten Person ein. Sie kann einmalig sein (ein einzelner Ausrutscher) oder auf Dauer angelegt (ein Doppelleben). In beiden Fällen schmerzt der Bruch des Vertrauensvertrags, nicht allein die Handlung selbst.",
+    "sub2P2": "Manche Studien legen nahe, dass Männer stärker unter körperlicher Untreue leiden, Frauen dagegen mehr unter emotionaler. Doch diese Unterscheidung ist eine Tendenz, keine Regel: Der Schmerz hängt vom einzelnen Menschen und von der einzelnen Geschichte ab."
+  },
+  "section4": {
+    "title": "Die Psychologie hinter der Untreue",
+    "p1": "Verstehen heißt nicht entschuldigen. Aber um weiterzukommen, ob man bleibt oder geht, kann es helfen, die psychologischen Mechanismen hinter Untreue zu verstehen.",
+    "pillar1Title": "Der unausgesprochene emotionale Mangel",
+    "pillar1Text": "Die in Therapien am häufigsten genannte Ursache ist nicht sexuelles Verlangen, sondern das Gefühl, in der Beziehung nicht mehr gesehen, gehört oder begehrt zu werden. Untreue wird dann zur unbeholfenen Suche nach emotionaler Bestätigung.",
+    "pillar2Title": "Die Angst vor Bindung oder Routine",
+    "pillar2Text": "Manche Menschen sabotieren ihre Beziehung unbewusst, sobald sie zu stabil wird. Die Neuheit einer Beziehung nach außen verschafft ihnen einen Kick, der eine existenzielle Angst vor dauerhafter Bindung ausgleicht.",
+    "pillar3Title": "Sich wiederholende Muster",
+    "pillar3Text": "Untreue kann ein Muster sein, das sich von Beziehung zu Beziehung wiederholt. Dann ist nicht die Beziehung selbst das Problem, sondern eine tief liegende persönliche Funktionsweise, oft verbunden mit dem Bindungsstil oder der Familiengeschichte. Unser <a href=\"/de/bindungsstil-test/\">Bindungsstil-Test</a> kann diese Dimension beleuchten.",
+    "pillar4Title": "Die Identitätskrise",
+    "pillar4Text": "Der Übergang in die Vierziger, ein Trauerfall, ein Jobverlust, die Geburt eines Kindes: Solche fragilen Momente können eine Sinnsuche auslösen, die sich in einer Beziehung nach außen ausdrückt. Das ist keine Entschuldigung, aber ein Kontext, den man berücksichtigen sollte."
+  },
+  "section5": {
+    "title": "Was tun, wenn du Untreue vermutest",
+    "p1": "Die Zeit des Zweifels gehört zu den zermürbendsten. Der Kopf schwankt zwischen dem Bedürfnis zu wissen und der Angst vor der Antwort. Das empfehlen Paartherapeuten.",
+    "dontTitle": "Was du NICHT tun solltest",
+    "dont1Title": "Detektiv spielen",
+    "dont1Text": "Im Handy stöbern, Spionagesoftware installieren, deinem Partner nachgehen. Selbst wenn du etwas findest, vergiftet dieser Weg die Beziehung und kann rechtliche Folgen haben. Außerdem sperrt er dich in eine Überwachungsrolle, die deine eigene Ruhe zerstört.",
+    "dont2Title": "Haltlose Vorwürfe erheben",
+    "dont2Text": "Deinen Partner mit \"Ich weiß, dass du mich betrügst!\" zu konfrontieren, wenn du es gar nicht weißt, führt entweder zu einer Mauer des Leugnens oder zur Eskalation. Der direkte Vorwurf schließt das Gespräch, statt es zu öffnen.",
+    "dont3Title": "Es dem ganzen Umfeld erzählen",
+    "dont3Text": "Sich einer vertrauten Person anzuvertrauen ist gesund. Die Lage aber der ganzen Familie und den sozialen Netzwerken auszubreiten, bevor etwas geklärt ist, erschwert eine mögliche Versöhnung erheblich.",
+    "doTitle": "Was du tun solltest",
+    "do1Title": "Beobachten, notieren, nicht im Affekt reagieren",
+    "do1Text": "Geh auf Abstand. Halte sachlich fest, was du beobachtest (Daten, Verhaltensweisen, Widersprüche). Das hilft dir, Fakten von deinen Deutungen zu trennen und deine Gedanken zu ordnen.",
+    "do2Title": "Sag, was du empfindest, ohne anzuklagen",
+    "do2Text": "\"Seit einigen Wochen spüre ich eine Distanz zwischen uns und das beunruhigt mich. Ich möchte darüber reden.\" Dieser Zugang öffnet das Gespräch, statt es zu schließen. Du klagst nicht an, du teilst ein Empfinden.",
+    "do3Title": "Hol dir professionelle Hilfe",
+    "do3Text": "Eine Therapeutin, einzeln oder als Paar, kann dir durch diese Zeit helfen. Sie gibt dir einen neutralen Raum, um Worte für das Erlebte zu finden, und begleitet dich zu der Entscheidung, die für dich die beste ist."
+  },
+  "section6": {
+    "title": "Kann man nach einer Untreue wieder aufbauen?",
+    "p1": "Die kurze Antwort: ja, in manchen Fällen. Studien zeigen, dass rund 50 bis 60% der Paare, die sich entscheiden, an einer Untreue zu arbeiten, wieder eine erfüllende Beziehung aufbauen. Das erfordert allerdings enormen Einsatz auf beiden Seiten.",
+    "sub1Title": "Die Bedingungen für den Wiederaufbau",
+    "sub1P1": "Die erste Bedingung ist, dass die untreue Person die Verantwortung vollständig übernimmt, ohne zu beschönigen und ohne dem anderen die Schuld zu geben. Die zweite ist völlige Offenheit während der Wiederaufbauphase: freier Zugang zur Kommunikation, ehrliche Antworten auf alle Fragen. Die dritte ist therapeutische Arbeit, um die tieferen Ursachen zu verstehen und eine Wiederholung zu verhindern.",
+    "sub2Title": "Die nötige Zeit",
+    "sub2P1": "Therapeuten schätzen, dass ein Paar nach einer Untreue zwischen 1 und 3 Jahre braucht, um wieder stabiles Vertrauen zu finden. Die ersten Monate sind die schwersten: Der Schmerz ist frisch, das Vertrauen am Tiefpunkt, und die betrogene Person durchlebt die Verletzung immer wieder. Das ist normal, und es ist entscheidend, dass die untreue Person das versteht, ohne ungeduldig zu werden.",
+    "sub3Title": "Wenn Wiederaufbau nicht möglich ist",
+    "sub3P1": "Wenn dein Partner die Tatsachen trotz Beweisen leugnet, sich weigert, die Beziehung nach außen zu beenden, dir für seine eigenen Entscheidungen Schuldgefühle macht oder rückfällig wird, ist ein Wiederaufbau nicht möglich. Diese Situationen zeigen einen tiefen Mangel an Respekt, der über die Frage der Untreue hinausgeht. Unser <a href=\"/de/toxische-beziehung-test/\">Test zur toxischen Beziehung</a> kann dir helfen, den Gesamtzustand eurer Beziehung einzuschätzen."
+  },
+  "section7": {
+    "title": "Wann sollte man ans Gehen denken?",
+    "p1": "Bleiben oder gehen ist keine Ja-Nein-Entscheidung, die man an einem Tag trifft. Aber bestimmte Anzeichen zeigen klar, dass die Beziehung in ihrer jetzigen Form nicht mehr funktionieren kann.",
+    "p2": "Es ist berechtigt zu gehen, wenn dein Partner jede Verantwortung ablehnt und die Schuld auf dich schiebt, wenn sich die Untreue trotz Versprechen wiederholt, wenn deine psychische oder körperliche Gesundheit leidet (chronische Angst, Schlafstörungen, Gewichtsverlust), wenn du nur aus Angst vor dem Alleinsein oder aus Pflichtgefühl bleibst.",
+    "p3": "Gehen ist kein Scheitern. Manchmal ist es das Mutigste und Gesündeste, was man tun kann. Wenn sich die <a href=\"/de/blog/red-flags-bei-einem-mann/\">Red Flags bei einem Mann</a> oder die <a href=\"/de/blog/red-flags-bei-einer-frau/\">Red Flags bei einer Frau</a> häufen, vertraue dem, was du siehst.",
+    "quote": "Du kannst eine Beziehung nicht allein retten. Zum Wiederaufbau braucht es zwei, aber nur einen, um sich zu schützen."
+  },
+  "section8": {
+    "title": "Die wichtigsten Zahlen zur Untreue",
+    "headerScore": "Kennzahl",
+    "headerLevel": "Wert",
+    "headerAnalysis": "Quelle / Kontext",
+    "row1Score": "Selbst berichtete Untreue",
+    "row1Level": "20 bis 40%",
+    "row1Analysis": "Anteil der Erwachsenen, die angeben, mindestens einmal untreu gewesen zu sein, je nach Umfrage und Land",
+    "row2Score": "Emotionale Untreue",
+    "row2Level": "Steigend",
+    "row2Analysis": "Messenger-Apps haben intime Verbindungen über Distanz deutlich erleichtert",
+    "row3Score": "Paare, die es schaffen",
+    "row3Level": "50 bis 60%",
+    "row3Analysis": "Unter den Paaren, die sich nach einer Untreue für eine Therapie entscheiden",
+    "row4Score": "Dauer des Wiederaufbaus",
+    "row4Level": "1 bis 3 Jahre",
+    "row4Analysis": "Von Therapeuten geschätzte durchschnittliche Zeit bis zu stabilem Vertrauen"
+  },
+  "seo": {
+    "faq1Q": "Woran erkenne ich, ob mein Mann mich betrügt?",
+    "faq1A": "Zu den häufigsten Anzeichen zählen ein plötzlich verändertes Verhalten rund ums Handy (geänderter Code, ausgeblendete Benachrichtigungen), ungewöhnliche Zeiten mit vagen Erklärungen, wachsende emotionale Distanz und übermäßige Gereiztheit bei Nachfragen. Kein einzelnes Anzeichen ist ein Beweis, aber ihre Häufung sollte dich aufhorchen lassen. Dieser Test mit 20 Fragen hilft dir, die Lage nüchtern einzuschätzen.",
+    "faq2Q": "Was sind die Anzeichen emotionaler Untreue?",
+    "faq2A": "Emotionale Untreue zeigt sich in einer exklusiven Vertrautheit mit einer Person außerhalb der Beziehung: Vertraulichkeiten, häufige Nachrichten, das Bedürfnis, mit dieser Person statt mit dir zu teilen. Dein Partner kann distanziert werden, weniger Interesse an euren Gesprächen zeigen und sein Handy stärker abschirmen. Der Satz \"wir sind nur Freunde\" fällt oft, um die Lage herunterzuspielen.",
+    "faq3Q": "Kann man eine Beziehung nach einem Seitensprung wieder aufbauen?",
+    "faq3A": "Ja, sofern beide Partner es aufrichtig wollen. Etwa 50 bis 60% der Paare, die sich entscheiden, an einer Untreue zu arbeiten, schaffen es. Die wesentlichen Bedingungen sind vollständig übernommene Verantwortung, erhöhte Offenheit und therapeutische Begleitung. Der Prozess dauert in der Regel 1 bis 3 Jahre.",
+    "faq4Q": "Mein Partner ist distanziert geworden, ist das ein Zeichen für einen Seitensprung?",
+    "faq4A": "Emotionale Distanz kann viele Ursachen haben: beruflicher Stress, Depression, Erschöpfung, eine persönliche Krise. Sie bedeutet nicht automatisch Untreue. Kommen zu dieser Distanz allerdings weitere Veränderungen hinzu (Heimlichkeit rund ums Handy, veränderte Zeiten, übermäßige Gereiztheit), verdient das Gesamtbild deine Aufmerksamkeit. Am besten sprichst du es direkt mit deinem Partner an.",
+    "faq5Q": "Sollte man bei Zweifeln im Handy des Partners nachsehen?",
+    "faq5A": "Therapeuten raten davon ab. Im Handy deines Partners zu stöbern sperrt dich in eine Überwachungsrolle, die deine eigene Ruhe zerstört und die Beziehung vergiftet, ob du etwas findest oder nicht. Zudem kann es rechtliche Folgen haben. Empfohlen wird, direkt auszusprechen, was du empfindest: beschreibe, was du beobachtest, was du fühlst und was du brauchst, ohne anzuklagen."
+  }
+}

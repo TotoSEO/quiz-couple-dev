@@ -30,7 +30,15 @@
     "categoryTests": "Beziehungstests",
     "categoryQuizzes": "Unsere Paar-Quiz",
     "activities": "Aktivitäten in der Nähe",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "testAttachement": "Bindungstest",
+    "testAttachementDesc": "Finde deinen Bindungsstil heraus",
+    "testConfiance": "Vertrauenstest",
+    "testConfianceDesc": "Miss das Vertrauen in eurer Beziehung",
+    "testInfidelite": "Untreue-Test",
+    "testInfideliteDesc": "Erkenne die Warnsignale",
+    "testBebe": "Bereit für ein Baby",
+    "testBebeDesc": "Schätze deine Bereitschaft für die Elternschaft ein"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",

@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Test gratuito",
+    "title": "Test de Confianza en Pareja:",
+    "titleHighlight": "¿de verdad os fiáis el uno del otro?",
+    "description": "20 preguntas para evaluar la <strong>confianza mutua</strong> en vuestra relación. Celos, transparencia, comunicación: descubre en qué punto estáis realmente.",
+    "subtitle": "Gratis, confidencial, resultado inmediato"
+  },
+  "section1": {
+    "title": "Por qué la confianza es el pilar número uno de la pareja",
+    "intro": "La confianza no es un extra en una relación, es el suelo sobre el que se sostiene todo lo demás. Sin ella, el amor, la complicidad y la intimidad están constantemente amenazados por la duda y el miedo.",
+    "p1": "Las investigaciones del psicólogo <strong>John Gottman</strong> muestran que la confianza y el compromiso son los dos factores que mejor predicen la longevidad de una pareja. Las parejas que se fían la una de la otra tienen conflictos menos frecuentes, menos intensos, y se recuperan antes de las crisis.",
+    "p2": "La confianza se construye en los <strong>pequeños momentos cotidianos</strong>: cumplir lo prometido, ser puntual, responder a los mensajes, ser transparente con las propias emociones. No es un gran gesto heroico, es la suma de miles de microdecisiones de fiabilidad."
+  },
+  "section2": {
+    "title": "Las 5 dimensiones de la confianza en pareja",
+    "intro": "La confianza no es un bloque único. Se descompone en varias dimensiones, cada una de las cuales puede estar sólida o debilitada con independencia de las demás.",
+    "pillar1Title": "La fiabilidad",
+    "pillar1Text": "Cumplir lo prometido, ser puntual, respetar los compromisos. Es la dimensión más concreta: ¿tu pareja hace lo que dice?",
+    "pillar2Title": "La transparencia",
+    "pillar2Text": "Ser honesto con lo que piensas, sientes y haces. Sin mentiras, sin zonas grises, sin omisiones estratégicas.",
+    "pillar3Title": "La seguridad emocional",
+    "pillar3Text": "Sentirte libre de ser vulnerable sin temer el juicio o el rechazo. Poder expresar tus miedos, tus dudas, tus debilidades.",
+    "pillar4Title": "La fidelidad",
+    "pillar4Text": "La certeza de que tu pareja respeta los límites de vuestra relación, sean sexuales, emocionales o sociales.",
+    "pillar5Title": "La buena intención",
+    "pillar5Text": "Creer que tu pareja actúa buscando tu bien y el de la relación, incluso cuando no estáis de acuerdo."
+  },
+  "section3": {
+    "title": "Las señales de falta de confianza",
+    "p1": "La falta de confianza no siempre se manifiesta de forma evidente. A veces se esconde detrás de comportamientos que normalizamos sin darnos cuenta.",
+    "p2": "Estas son las señales de alarma más habituales:",
+    "sub1Title": "El control excesivo",
+    "sub1P1": "Mirar el móvil del otro, pedir explicaciones de cada salida, exigir conocer las contraseñas. El control suele disfrazarse de \"me preocupo por ti\", pero es señal de una desconfianza profunda.",
+    "sub2Title": "La hipervigilancia",
+    "sub2P1": "Analizar cada mensaje, cada mirada, cada cambio de costumbre. Cuando todo se convierte en un indicio potencial, vives en un estado de estrés permanente que envenena la relación.",
+    "sub3Title": "La evitación emocional",
+    "sub3P1": "Dejar de compartir emociones, miedos o proyectos. Cuando ya no se confía, nos protegemos cerrándonos, lo cual, paradójicamente, aleja todavía más a la pareja."
+  },
+  "section4": {
+    "title": "Confianza y celos: ¿dónde está el límite?",
+    "p1": "Una pizca de celos puede ser normal e incluso halagadora. Pero cuando se vuelve obsesiva o controladora, destruye la relación que dice proteger.",
+    "p2": "Los celos sanos dicen: \"Me importas y siento una punzada cuando te veo cerca de otra persona.\" Los celos tóxicos dicen: \"No puedes hablar con esa persona, enséñame el móvil.\"",
+    "p3": "La diferencia fundamental: los celos sanos son un <strong>sentimiento</strong> que gestionas. Los celos tóxicos son un <strong>comportamiento</strong> que impones al otro.",
+    "tip": "Si los celos te impiden vivir con calma, no es un problema de pareja, es un trabajo personal. Un terapeuta puede ayudarte a identificar las raíces de esa inseguridad (a menudo ligadas al estilo de apego)."
+  },
+  "section5": {
+    "title": "Cómo reconstruir la confianza después de una traición",
+    "p1": "Ya sea una mentira, una infidelidad o una traición emocional, reconstruir la confianza es un proceso largo pero posible. Estas son las etapas clave:",
+    "sub1Title": "1. La confesión completa y sincera",
+    "sub1P1": "Sin medias verdades, sin minimizar. Quien ha traicionado tiene que asumirlo del todo y responder con honestidad a las preguntas del otro. Duele, pero es imprescindible.",
+    "sub2Title": "2. El periodo de transparencia reforzada",
+    "sub2P1": "Temporalmente, quien ha traicionado acepta un nivel de transparencia mayor: compartir ubicación, acceso a los mensajes, etc. No es control, es un puente de transición hacia la confianza recuperada.",
+    "sub3Title": "3. El trabajo sobre las causas profundas",
+    "sub3P1": "Entender por qué se produjo la traición (insatisfacción, evitación, adicción) es esencial para evitar que se repita. En esta etapa se recomienda encarecidamente un acompañamiento profesional."
+  },
+  "section6": {
+    "title": "Los rituales diarios que refuerzan la confianza",
+    "intro": "La confianza no se construye en un día. Se alimenta de pequeñas acciones repetidas que le dicen a tu pareja: \"Puedes contar conmigo.\"",
+    "pillar1Title": "Cumple lo que prometes",
+    "pillar1Text": "Incluso lo más pequeño. Decir \"estaré a las 19h\" y estar a las 19h es construir la confianza ladrillo a ladrillo.",
+    "pillar2Title": "Comparte tus emociones",
+    "pillar2Text": "Decir \"he tenido un día duro\" en lugar de cerrarte. La vulnerabilidad compartida crea un círculo virtuoso de confianza.",
+    "pillar3Title": "Respeta la intimidad",
+    "pillar3Text": "Confiar es también aceptar que no lo sabrás todo. Cada uno tiene derecho a un espacio personal.",
+    "pillar4Title": "Repara rápido",
+    "pillar4Text": "Cuando te equivoques, pide perdón de verdad y corrígelo. No dejes que las pequeñas heridas se acumulen."
+  },
+  "section7": {
+    "title": "Confianza y dependencia: no las confundas",
+    "p1": "Confiar no significa ser ingenuo ni dependiente. Una confianza sana convive con la autonomía y el criterio propio.",
+    "p2": "La confianza madura dice: \"Confío en ti Y soy capaz de salir adelante si esa confianza se rompe.\" Es esa doble base (confianza más autonomía) la que hace que una relación sea de verdad sólida.",
+    "p3": "Si no puedes imaginar tu vida sin tu pareja, quizá la pregunta no sea \"¿confío en ella?\" sino \"¿confío en mí?\".",
+    "quote": "\"La confianza es saberte capaz de atravesar la tormenta, solo o acompañado. Es elegir estar con el otro, no necesitarlo para existir.\""
+  },
+  "section8": {
+    "title": "Las cifras de la confianza en pareja",
+    "headerScore": "Factor",
+    "headerLevel": "Impacto",
+    "headerAnalysis": "Detalle",
+    "row1Score": "Transparencia",
+    "row1Level": "Muy fuerte",
+    "row1Analysis": "El 85% de las parejas felices declara una comunicación abierta y honesta",
+    "row2Score": "Fiabilidad",
+    "row2Level": "Fuerte",
+    "row2Analysis": "Cumplir lo prometido se cita como criterio número uno de confianza",
+    "row3Score": "Infidelidad",
+    "row3Level": "Destructiva",
+    "row3Analysis": "El 60-65% de las parejas no sobrevive a una infidelidad sin ayuda profesional",
+    "row4Score": "Celos excesivos",
+    "row4Level": "Corrosivos",
+    "row4Analysis": "El control figura entre las principales causas de ruptura"
+  },
+  "seo": {
+    "faq1Q": "¿Cómo saber si me falta confianza en mi relación?",
+    "faq1A": "Las señales incluyen: mirar el móvil de tu pareja, cuestionar sus salidas, interpretar en negativo lo que hace, necesitar reafirmación constante o evitar compartir tus emociones por miedo a salir herido. Este test te ayuda a evaluar objetivamente tu nivel de confianza.",
+    "faq2Q": "¿Puede volver la confianza después de una infidelidad?",
+    "faq2A": "Sí, pero es un proceso largo (a menudo de 1 a 3 años) que exige un compromiso sincero por ambas partes. La transparencia reforzada, la terapia de pareja y el trabajo sobre las causas profundas son esenciales. Alrededor del 35-40% de las parejas que se implican de verdad en ese proceso recuperan una confianza sólida.",
+    "faq3Q": "¿Es normal tener dudas en una relación?",
+    "faq3A": "Totalmente. Las dudas puntuales son humanas y normales. Lo que marca la diferencia es su frecuencia y su intensidad. Si son ocasionales y consigues gestionarlas, es sano. Si son permanentes e invasivas, es una señal que hay que tomarse en serio.",
+    "faq4Q": "¿Cómo distinguir celos sanos de celos tóxicos?",
+    "faq4A": "Los celos sanos son un sentimiento pasajero que gestionas por dentro. Los celos tóxicos se traducen en conductas de control: registrar el móvil, prohibir amistades, exigir explicaciones de cada actividad. Lo primero es algo que sientes, lo segundo es una acción que vulnera la libertad del otro.",
+    "faq5Q": "¿Hay que contárselo todo en pareja?",
+    "faq5A": "No. La transparencia total no es realista ni deseable. Cada uno tiene derecho a un jardín propio (pensamientos, diarios, conversaciones privadas con amistades). Confiar es no necesitar saberlo todo para sentirse seguro. Lo importante es no mentir activamente, no revelarlo todo.",
+    "faq6Q": "¿Es fiable este test de confianza?",
+    "faq6A": "Este test es una herramienta de autoevaluación que te da una tendencia general. No tiene el valor de un diagnóstico clínico. Si tus resultados te preocupan, te recomendamos comentarlos con un terapeuta de pareja que pueda profundizar en el análisis dentro del contexto de vuestra relación."
+  }
+}

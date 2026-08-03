@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "badge": "Wissenschaftlich fundierter Test",
+    "title": "Bindungsstil-Test:",
+    "titleHighlight": "was für ein Partner bist du?",
+    "description": "20 Fragen, um deinen Bindungsstil in der Liebe herauszufinden. Bist du <strong>sicher, ängstlich, vermeidend oder desorganisiert</strong> gebunden? Nach der Bindungstheorie von John Bowlby.",
+    "subtitle": "Kostenlos, anonym, Ergebnis sofort, ohne Anmeldung"
+  },
+  "section1": {
+    "title": "Was ist die Bindungstheorie?",
+    "intro": "Die Bindungstheorie, in den 1950er Jahren vom britischen Psychiater <strong>John Bowlby</strong> entwickelt, gehört zu den wissenschaftlich am besten belegten Modellen der Beziehungspsychologie. Sie erklärt, wie unsere frühesten Beziehungen (vor allem zu unseren Eltern) prägen, wie wir als Erwachsene lieben.",
+    "p1": "Konkret beeinflusst dein Bindungsstil, wie du in engen Beziehungen reagierst: wie du mit Nähe, Trennung, Konflikten und emotionaler Verletzlichkeit umgehst.",
+    "p2": "Die Psychologin <strong>Mary Ainsworth</strong> identifizierte drei Hauptstile (sicher, ängstlich, vermeidend), später ergänzt um einen vierten: den desorganisierten Stil. Diese Stile sind nicht festgeschrieben, sie können sich durch Bewusstwerdung und Arbeit an sich selbst verändern."
+  },
+  "section2": {
+    "title": "Die 4 Bindungsstile in der Liebe",
+    "intro": "Jeder Bindungsstil steht für eine eigene Art, Beziehungen zu erleben. Keiner ist \"gut\" oder \"schlecht\", es sind Anpassungsstrategien, die aus deinen Beziehungserfahrungen entstanden sind.",
+    "pillar1Title": "Sicher",
+    "pillar1Text": "Nähe und Eigenständigkeit sind dir gleichermaßen angenehm. Du sprichst deine Bedürfnisse klar aus, vertraust deinem Partner und gehst reif mit Konflikten um. Rund <strong>50-60%</strong> der Bevölkerung.",
+    "pillar2Title": "Ängstlich (verstrickt)",
+    "pillar2Text": "Du hast ein starkes Bedürfnis nach Nähe und Rückversicherung. Die Angst vor dem Verlassenwerden kann dich klammern oder Signale überinterpretieren lassen. Rund <strong>20-25%</strong> der Bevölkerung.",
+    "pillar3Title": "Vermeidend (distanziert)",
+    "pillar3Text": "Du schätzt deine Unabhängigkeit sehr. Emotionale Nähe ist dir unangenehm, und du neigst dazu, Abstand zu schaffen, wenn es zu eng wird. Rund <strong>15-20%</strong> der Bevölkerung.",
+    "pillar4Title": "Desorganisiert (ängstlich-vermeidend)",
+    "pillar4Text": "Du schwankst zwischen dem Wunsch nach Verbindung und der Angst vor Nähe. Dieser Stil verbindet ängstliche und vermeidende Züge, oft verbunden mit komplexen Beziehungserfahrungen. Rund <strong>5-10%</strong> der Bevölkerung."
+  },
+  "section3": {
+    "title": "Wie der Bindungsstil eure Beziehung prägt",
+    "p1": "Dein Bindungsstil bestimmt nicht nur, wie du liebst, er prägt unmittelbar euren Alltag als Paar. Er formt deine Reaktionen auf Konflikte, deine emotionale Kommunikation und sogar euer Sexleben.",
+    "p2": "Forschende haben ein Phänomen beschrieben, das <strong>\"Bindungstanz\"</strong> genannt wird: Ängstlich und vermeidend gebundene Menschen ziehen einander häufig an und erzeugen einen Verfolgen-Rückzug-Kreislauf, der für beide erschöpfend sein kann.",
+    "p3": "Die gute Nachricht: Den eigenen Bindungsstil zu verstehen ist der erste Schritt zu einer erfüllenderen Beziehung. Studien zeigen, dass selbst unsicher gebundene Menschen eine \"erworbene sichere\" Bindung entwickeln können, durch Therapie oder eine Beziehung mit einem sicher gebundenen Partner."
+  },
+  "section4": {
+    "title": "Ängstlich + Vermeidend: die Falle der toxischen Beziehung",
+    "intro": "Die häufigste und zugleich problematischste Kombination ist die des ängstlichen mit dem vermeidenden Partner. Dieses Muster erzeugt einen Teufelskreis:",
+    "p1": "Der <strong>ängstliche</strong> Partner sucht Nähe → der <strong>vermeidende</strong> Partner fühlt sich bedrängt und geht auf Abstand → der ängstliche gerät in Panik und klammert stärker → der vermeidende zieht sich noch weiter zurück. Dieser Kreislauf kann Monate dauern, manchmal Jahre.",
+    "p2": "Ihn zu durchbrechen erfordert Bewusstsein auf beiden Seiten. Der ängstliche Partner muss lernen, sich selbst zu regulieren und Freiraum auszuhalten. Der vermeidende Partner muss üben, präsent zu bleiben und seine Gefühle auszusprechen.",
+    "tip": "Wenn du dieses Muster in eurer Beziehung wiedererkennst, ist das kein Schicksal. Bindungsorientierte <strong>Paartherapie</strong> (EFT, Emotionsfokussierte Therapie) hat bei Paaren in Krisen eine Erfolgsquote von 70-75%."
+  },
+  "section5": {
+    "title": "Kann man seinen Bindungsstil ändern?",
+    "p1": "Ja, ganz sicher. Der Bindungsstil ist nicht in Stein gemeißelt. Die Neurowissenschaft hat gezeigt, dass das Gehirn plastisch ist: neue positive Beziehungserfahrungen können deine Bindungsmuster buchstäblich neu verdrahten.",
+    "p2": "Mehrere Wege führen zu einer sichereren Bindung:",
+    "sub1Title": "Einzeltherapie",
+    "sub1P1": "Ansätze wie die <strong>Schematherapie</strong>, EMDR oder tiefenpsychologisch fundierte Psychotherapie sind besonders wirksam, um an Bindungsverletzungen zu arbeiten.",
+    "sub2Title": "Eine sichere Beziehung",
+    "sub2P1": "Mit einem sicher gebundenen Partner zusammen zu sein kann deinen eigenen Stil nach und nach verändern. Gesunde Liebe wirkt an sich schon therapeutisch.",
+    "sub3Title": "Achtsamkeit",
+    "sub3P1": "Lernen, deine automatischen Reaktionen zu beobachten, ohne ihnen blind zu folgen. Meditation und Achtsamkeit helfen, einen Zwischenraum zwischen Auslöser und Reaktion zu schaffen."
+  },
+  "section6": {
+    "title": "Warum diesen Bindungstest machen?",
+    "p1": "Dieser Test hilft dir, Worte für oft verwirrende Empfindungen zu finden. Deinen Bindungsstil zu verstehen heißt zu verstehen, warum du in Beziehungen so reagierst, wie du reagierst, und vor allem, wie du dich weiterentwickeln kannst.",
+    "pillar1Title": "Dich besser verstehen",
+    "pillar1Text": "Erkenne deine wiederkehrenden Beziehungsmuster und woher sie kommen.",
+    "pillar2Title": "Besser kommunizieren",
+    "pillar2Text": "Erkläre deinem Partner deine Bedürfnisse mit klarem, fundiertem Vokabular.",
+    "pillar3Title": "Kreisläufe durchbrechen",
+    "pillar3Text": "Erkenne toxische Dynamiken (Verfolgen und Rückzug), um sie zu entschärfen.",
+    "pillar4Title": "Gemeinsam wachsen",
+    "pillar4Text": "Macht den Test zu zweit und vergleicht eure Ergebnisse für mehr gegenseitiges Verständnis."
+  },
+  "section7": {
+    "title": "Was dieser Test nicht leistet",
+    "p1": "Dieser Test ist ein <strong>Selbsteinschätzungsinstrument</strong>, keine klinische Diagnose. Er gibt dir eine allgemeine Tendenz auf Basis deiner Antworten, ersetzt aber nicht die Einschätzung einer Fachperson für psychische Gesundheit.",
+    "p2": "Dein Bindungsstil kann je nach Kontext (Freundschaft, Familie, Liebe) und je nach Lebensphase variieren. Ein einzelner Test bildet nicht die ganze Komplexität deiner Beziehungspersönlichkeit ab.",
+    "tip": "Wenn dich deine Ergebnisse beschäftigen, sprich ruhig mit einer Psychologin oder einem Paartherapeuten darüber. Es ist ein ausgezeichneter Ausgangspunkt für vertiefte Arbeit."
+  },
+  "section8": {
+    "title": "Ein paar Zahlen zur Bindung in Beziehungen",
+    "headerScore": "Stil",
+    "headerLevel": "Verbreitung",
+    "headerAnalysis": "Wichtigste Merkmale",
+    "row1Score": "Sicher",
+    "row1Level": "50-60%",
+    "row1Analysis": "Nähe und Eigenständigkeit angenehm, guter Umgang mit Konflikten",
+    "row2Score": "Ängstlich",
+    "row2Level": "20-25%",
+    "row2Analysis": "Bedürfnis nach Rückversicherung, Verlustangst, hohe Wachsamkeit",
+    "row3Score": "Vermeidend",
+    "row3Level": "15-20%",
+    "row3Analysis": "Schätzt Unabhängigkeit, unwohl bei emotionaler Nähe",
+    "row4Score": "Desorganisiert",
+    "row4Level": "5-10%",
+    "row4Analysis": "Schwankt zwischen Verbindungswunsch und Angst vor Nähe"
+  },
+  "seo": {
+    "faq1Q": "Was ist ein Bindungsstil?",
+    "faq1A": "Ein Bindungsstil ist ein in der Kindheit geprägtes Beziehungsmuster, das beeinflusst, wie du Nähe, Vertrauen und Trennung in deinen Liebesbeziehungen erlebst. Es gibt 4 Hauptstile: sicher, ängstlich, vermeidend und desorganisiert. Das Konzept stammt aus der Bindungstheorie von John Bowlby und Mary Ainsworth.",
+    "faq2Q": "Kann man seinen Bindungsstil ändern?",
+    "faq2A": "Ja. Der Bindungsstil ist nicht festgelegt. Durch Therapie (insbesondere EFT, Schematherapie oder EMDR), durch sichere Beziehungen und durch Arbeit an sich selbst ist es durchaus möglich, von einer unsicheren zu einer \"erworbenen sicheren\" Bindung zu gelangen. Die Neurowissenschaft bestätigt die Plastizität des Gehirns, die diesen Wandel möglich macht.",
+    "faq3Q": "Welcher Bindungsstil ist am häufigsten?",
+    "faq3A": "Der sichere Bindungsstil ist am weitesten verbreitet und macht etwa 50 bis 60% der Bevölkerung aus. Der ängstliche Stil betrifft rund 20-25% der Menschen, der vermeidende 15-20% und der desorganisierte etwa 5-10%.",
+    "faq4Q": "Wie erkenne ich den Bindungsstil meines Partners?",
+    "faq4A": "Beobachte seine Reaktionen auf Konflikte, Trennung und Nähe. Ein ängstlich gebundener Partner sucht eher Rückversicherung, ein vermeidend gebundener geht unter Druck auf Abstand. Am einfachsten ist es weiterhin, ihm diesen Test vorzuschlagen und gemeinsam darüber zu sprechen.",
+    "faq5Q": "Können zwei unsichere Bindungsstile ein glückliches Paar bilden?",
+    "faq5A": "Ja, sofern beide sich dessen bewusst sind und gemeinsam daran arbeiten. Die Kombination ängstlich-vermeidend ist die problematischste, weil sie einen Verfolgen-Rückzug-Kreislauf erzeugt. Aber mit Kommunikation, Paartherapie und beiderseitigem Willen zur Entwicklung können solche Paare durchaus glücklich werden.",
+    "faq6Q": "Ist dieser Test wissenschaftlich zuverlässig?",
+    "faq6A": "Dieser Test ist an validierten Fragebögen orientiert (dem ECR-R von Fraley und Brennan). Er gibt eine allgemeine Tendenz deines Bindungsstils wieder. Für eine präzise Diagnose wende dich an eine Psychologin oder einen Psychologen, die validierte klinische Instrumente einsetzen und die Ergebnisse im Kontext deiner persönlichen Geschichte einordnen können."
+  }
+}

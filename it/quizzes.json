@@ -165,5 +165,29 @@
     "shortTitle": "Quiz Temptation",
     "description": "12 giorni sull'isola, 30 situazioni di tentazione: resisterai fino al falò finale?",
     "metaDescription": "Quiz di Temptation Island online e gratuito: 12 giorni sull'isola, una tentazione al giorno e un falò finale. La tua coppia sopravvivrebbe alla prova?"
+  },
+  "testAttachement": {
+    "title": "Test dello stile di attaccamento: qual è il tuo?",
+    "shortTitle": "Test Attaccamento",
+    "description": "20 domande per scoprire il tuo stile di attaccamento in amore: sicuro, ansioso, evitante o disorganizzato. Risultato immediato.",
+    "metaDescription": "Sicuro, ansioso, evitante o disorganizzato? Scopri il tuo stile di attaccamento in 20 domande. Basato sulla teoria di Bowlby."
+  },
+  "testConfiance": {
+    "title": "Test della fiducia di coppia: vi fidate davvero?",
+    "shortTitle": "Test Fiducia",
+    "description": "20 domande per misurare la fiducia reciproca nella vostra relazione: gelosia, trasparenza, affidabilità. Risultato immediato.",
+    "metaDescription": "Ti fidi davvero del tuo partner? 20 domande per valutare la fiducia nella vostra relazione. Gratuito, riservato, risultato immediato."
+  },
+  "testInfidelite": {
+    "title": "Test infedeltà: i segnali che non ingannano",
+    "shortTitle": "Test Infedeltà",
+    "description": "20 domande per individuare i segnali d'allarme nella tua relazione: segretezza, distanza emotiva, cambiamenti di comportamento. Risultato immediato.",
+    "metaDescription": "Il tuo partner ti tradisce? 20 domande per individuare i segnali d'allarme nella tua relazione. Gratuito, riservato, risultato immediato."
+  },
+  "testBebe": {
+    "title": "Test pronto per un bambino: sei preparato alla genitorialità?",
+    "shortTitle": "Test Bambino",
+    "description": "20 domande per valutare la tua preparazione alla genitorialità: maturità emotiva, finanze, coppia, stile di vita. Risultato immediato.",
+    "metaDescription": "Sei pronto per un bambino? 20 domande su maturità emotiva, finanze e coppia. Gratuito, riservato, risultato immediato."
   }
 }

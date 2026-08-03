@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "badge": "Test su base scientifica",
+    "title": "Test dello Stile di Attaccamento:",
+    "titleHighlight": "che partner sei?",
+    "description": "20 domande per scoprire il tuo stile di attaccamento in amore. Sei <strong>sicuro, ansioso, evitante o disorganizzato</strong>? Basato sulla teoria dell'attaccamento di John Bowlby.",
+    "subtitle": "Gratuito, anonimo, risultato immediato, senza registrazione"
+  },
+  "section1": {
+    "title": "Che cos'è la teoria dell'attaccamento?",
+    "intro": "La teoria dell'attaccamento, sviluppata dallo psichiatra britannico <strong>John Bowlby</strong> negli anni Cinquanta, è uno dei modelli più validati scientificamente nella psicologia delle relazioni. Spiega come i nostri primi legami (soprattutto con i genitori) plasmino il nostro modo di amare da adulti.",
+    "p1": "In concreto, il tuo stile di attaccamento influenza il modo in cui reagisci nelle relazioni intime: come gestisci la vicinanza, la separazione, i conflitti e la vulnerabilità emotiva.",
+    "p2": "La psicologa <strong>Mary Ainsworth</strong> ha individuato tre stili principali (sicuro, ansioso, evitante), ai quali se ne è aggiunto più tardi un quarto: lo stile disorganizzato. Questi stili non sono fissi, possono evolvere con la consapevolezza e il lavoro su di sé."
+  },
+  "section2": {
+    "title": "I 4 stili di attaccamento in amore",
+    "intro": "Ogni stile di attaccamento riflette un modo diverso di vivere le relazioni. Nessuno è \"buono\" o \"cattivo\", sono strategie adattive nate dalle tue esperienze relazionali.",
+    "pillar1Title": "Sicuro",
+    "pillar1Text": "Sei a tuo agio sia con l'intimità sia con l'autonomia. Esprimi i tuoi bisogni con chiarezza, ti fidi del tuo partner e affronti i conflitti con maturità. Circa il <strong>50-60%</strong> della popolazione.",
+    "pillar2Title": "Ansioso (preoccupato)",
+    "pillar2Text": "Hai un bisogno intenso di vicinanza e rassicurazione. La paura dell'abbandono può spingerti ad aggrapparti o a sovrainterpretare i segnali. Circa il <strong>20-25%</strong> della popolazione.",
+    "pillar3Title": "Evitante (distaccato)",
+    "pillar3Text": "Dai molto valore alla tua indipendenza. L'intimità emotiva ti mette a disagio e tendi a prendere le distanze quando le cose diventano troppo strette. Circa il <strong>15-20%</strong> della popolazione.",
+    "pillar4Title": "Disorganizzato (timoroso)",
+    "pillar4Text": "Oscilli tra il desiderio di connessione e la paura dell'intimità. Questo stile unisce tratti ansiosi ed evitanti, spesso legati a esperienze relazionali complesse. Circa il <strong>5-10%</strong> della popolazione."
+  },
+  "section3": {
+    "title": "Come lo stile di attaccamento influenza la coppia",
+    "p1": "Il tuo stile di attaccamento non determina soltanto come ami, incide direttamente sulla dinamica quotidiana della coppia. Plasma le tue reazioni ai conflitti, la tua comunicazione emotiva e persino la tua vita sessuale.",
+    "p2": "I ricercatori hanno individuato un fenomeno chiamato <strong>\"la danza dell'attaccamento\"</strong>: le persone ansiose e quelle evitanti si attraggono spesso a vicenda, creando un ciclo di inseguimento e ritiro che può essere sfiancante per entrambi.",
+    "p3": "La buona notizia: capire il proprio stile di attaccamento è il primo passo verso una relazione più appagante. Gli studi mostrano che anche le persone con un attaccamento insicuro possono sviluppare un attaccamento \"sicuro acquisito\" grazie alla terapia o a una relazione con un partner sicuro."
+  },
+  "section4": {
+    "title": "Ansioso + Evitante: la trappola della coppia tossica",
+    "intro": "La combinazione più frequente, e la più problematica, è quella tra il partner ansioso e quello evitante. Questo schema crea un circolo vizioso:",
+    "p1": "Il partner <strong>ansioso</strong> cerca vicinanza → il partner <strong>evitante</strong> si sente invaso e prende le distanze → l'ansioso va nel panico e si aggrappa di più → l'evitante si allontana ancora. Questo ciclo può durare mesi, a volte anni.",
+    "p2": "Spezzarlo richiede consapevolezza da entrambe le parti. L'ansioso deve imparare ad autoregolarsi e a tollerare lo spazio. L'evitante deve allenarsi a restare presente e a esprimere le proprie emozioni.",
+    "tip": "Se riconosci questo schema nella tua coppia, non è una condanna. La <strong>terapia di coppia</strong> centrata sull'attaccamento (EFT, Terapia Focalizzata sulle Emozioni) ha un tasso di successo del 70-75% con le coppie in crisi."
+  },
+  "section5": {
+    "title": "Si può cambiare il proprio stile di attaccamento?",
+    "p1": "Sì, senza dubbio. Lo stile di attaccamento non è scolpito nella pietra. Le neuroscienze hanno dimostrato che il cervello è plastico: nuove esperienze relazionali positive possono letteralmente riscrivere i tuoi schemi di attaccamento.",
+    "p2": "Diverse strade portano verso un attaccamento più sicuro:",
+    "sub1Title": "La terapia individuale",
+    "sub1P1": "Approcci come la <strong>schema therapy</strong>, l'EMDR o la psicoterapia a orientamento psicodinamico sono particolarmente efficaci per lavorare sulle ferite dell'attaccamento.",
+    "sub2Title": "Una relazione sicura",
+    "sub2P1": "Stare con un partner dallo stile sicuro può trasformare progressivamente il tuo. L'amore sano è terapeutico di per sé.",
+    "sub3Title": "La consapevolezza",
+    "sub3P1": "Imparare a osservare le tue reazioni automatiche senza seguirle ciecamente. La meditazione e la mindfulness aiutano a creare uno spazio tra lo stimolo e la risposta."
+  },
+  "section6": {
+    "title": "Perché fare questo test sull'attaccamento?",
+    "p1": "Questo test ti aiuta a dare un nome a sensazioni spesso confuse. Capire il tuo stile di attaccamento significa capire perché reagisci in un certo modo nelle relazioni e, soprattutto, come evolvere.",
+    "pillar1Title": "Capirti meglio",
+    "pillar1Text": "Individua i tuoi schemi relazionali ricorrenti e capisci da dove arrivano.",
+    "pillar2Title": "Comunicare meglio",
+    "pillar2Text": "Spiega i tuoi bisogni al partner con un vocabolario chiaro e riconosciuto.",
+    "pillar3Title": "Spezzare i cicli",
+    "pillar3Text": "Riconosci le dinamiche tossiche (inseguimento e ritiro) per disinnescarle.",
+    "pillar4Title": "Crescere insieme",
+    "pillar4Text": "Fate il test in due e confrontate i risultati per capirvi meglio a vicenda."
+  },
+  "section7": {
+    "title": "Cosa questo test non fa",
+    "p1": "Questo test è uno <strong>strumento di autovalutazione</strong>, non una diagnosi clinica. Ti dà una tendenza generale basata sulle tue risposte, ma non sostituisce la valutazione di un professionista della salute mentale.",
+    "p2": "Il tuo stile di attaccamento può variare a seconda del contesto (amicale, familiare, amoroso) e delle fasi della tua vita. Un singolo test non coglie tutta la complessità della tua personalità relazionale.",
+    "tip": "Se i tuoi risultati ti colpiscono, non esitare a parlarne con uno psicologo o un terapeuta di coppia. È un ottimo punto di partenza per un lavoro più approfondito."
+  },
+  "section8": {
+    "title": "Qualche cifra sull'attaccamento nella coppia",
+    "headerScore": "Stile",
+    "headerLevel": "Diffusione",
+    "headerAnalysis": "Caratteristiche principali",
+    "row1Score": "Sicuro",
+    "row1Level": "50-60%",
+    "row1Analysis": "A proprio agio con intimità e autonomia, buona gestione dei conflitti",
+    "row2Score": "Ansioso",
+    "row2Level": "20-25%",
+    "row2Analysis": "Bisogno di rassicurazione, paura dell'abbandono, ipervigilanza relazionale",
+    "row3Score": "Evitante",
+    "row3Level": "15-20%",
+    "row3Analysis": "Valorizza l'indipendenza, disagio con la vicinanza emotiva",
+    "row4Score": "Disorganizzato",
+    "row4Level": "5-10%",
+    "row4Analysis": "Oscillazione tra desiderio di connessione e paura dell'intimità"
+  },
+  "seo": {
+    "faq1Q": "Che cos'è uno stile di attaccamento?",
+    "faq1A": "Lo stile di attaccamento è un modello relazionale che si forma nell'infanzia e che influenza il modo in cui vivi l'intimità, la fiducia e la separazione nelle tue relazioni sentimentali. Esistono 4 stili principali: sicuro, ansioso, evitante e disorganizzato. Il concetto nasce dalla teoria dell'attaccamento di John Bowlby e Mary Ainsworth.",
+    "faq2Q": "Si può cambiare il proprio stile di attaccamento?",
+    "faq2A": "Sì. Lo stile di attaccamento non è fisso. Grazie alla terapia (in particolare l'EFT, la schema therapy o l'EMDR), a relazioni sicure e al lavoro su di sé, è del tutto possibile passare da un attaccamento insicuro a un attaccamento \"sicuro acquisito\". Le neuroscienze confermano la plasticità cerebrale che rende possibile questo cambiamento.",
+    "faq3Q": "Qual è lo stile di attaccamento più comune?",
+    "faq3A": "Lo stile di attaccamento sicuro è il più diffuso e rappresenta circa il 50-60% della popolazione. Lo stile ansioso riguarda circa il 20-25% delle persone, quello evitante il 15-20% e quello disorganizzato all'incirca il 5-10%.",
+    "faq4Q": "Come capire lo stile di attaccamento del mio partner?",
+    "faq4A": "Osserva le sue reazioni di fronte ai conflitti, alla separazione e all'intimità. Un partner ansioso tenderà a cercare rassicurazione, un partner evitante prenderà le distanze sotto pressione. La cosa più semplice resta proporgli di fare questo test e parlarne insieme.",
+    "faq5Q": "Due stili di attaccamento insicuri possono formare una coppia felice?",
+    "faq5A": "Sì, a condizione di esserne consapevoli e di lavorarci insieme. La combinazione ansioso-evitante è la più problematica perché crea un ciclo di inseguimento e ritiro. Ma con comunicazione, terapia di coppia e una volontà reciproca di crescere, queste coppie possono funzionare benissimo.",
+    "faq6Q": "Questo test è scientificamente affidabile?",
+    "faq6A": "Questo test è ispirato a questionari validati (l'ECR-R di Fraley e Brennan). Restituisce una tendenza generale del tuo stile di attaccamento. Per una diagnosi precisa, rivolgiti a uno psicologo che possa usare gli strumenti clinici validati e interpretare i risultati nel contesto della tua storia personale."
+  }
+}

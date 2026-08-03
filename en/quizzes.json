@@ -165,5 +165,29 @@
     "shortTitle": "Temptation Quiz",
     "description": "12 days on the island, 30 tempting situations: will you last until the final bonfire?",
     "metaDescription": "Free online Temptation Island quiz: 12 days on the island, a temptation every day and a final bonfire. Would your relationship survive the test?"
+  },
+  "testAttachement": {
+    "title": "Attachment style test: what is yours?",
+    "shortTitle": "Attachment Test",
+    "description": "20 questions to discover your romantic attachment style: secure, anxious, avoidant or disorganised. Instant result.",
+    "metaDescription": "Secure, anxious, avoidant or disorganised? Discover your romantic attachment style in 20 questions. Based on Bowlby's theory."
+  },
+  "testConfiance": {
+    "title": "Trust test for couples: do you really trust each other?",
+    "shortTitle": "Trust Test",
+    "description": "20 questions to measure the mutual trust in your relationship: jealousy, transparency, reliability. Instant result.",
+    "metaDescription": "Do you really trust your partner? 20 questions to assess trust in your relationship. Free, confidential, instant result."
+  },
+  "testInfidelite": {
+    "title": "Infidelity test: the signs that don't lie",
+    "shortTitle": "Infidelity Test",
+    "description": "20 questions to spot the warning signals in your relationship: secrecy, emotional distance, behavioural changes. Instant result.",
+    "metaDescription": "Is your partner cheating? 20 questions to identify the warning signs in your relationship. Free, confidential, instant result."
+  },
+  "testBebe": {
+    "title": "Ready for a baby test: are you prepared for parenthood?",
+    "shortTitle": "Baby Ready Test",
+    "description": "20 questions to assess your readiness for parenthood: emotional maturity, finances, relationship, lifestyle. Instant result.",
+    "metaDescription": "Are you ready for a baby? 20 questions on emotional maturity, finances and your relationship. Free, confidential, instant result."
   }
 }

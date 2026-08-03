@@ -30,7 +30,15 @@
     "categoryTests": "Couple Tests",
     "categoryQuizzes": "Our Couple Quizzes",
     "activities": "Activities near me",
-    "contact": "Contact"
+    "contact": "Contact",
+    "testAttachement": "Attachment test",
+    "testAttachementDesc": "Discover your attachment style",
+    "testConfiance": "Trust test",
+    "testConfianceDesc": "Measure the trust in your relationship",
+    "testInfidelite": "Infidelity test",
+    "testInfideliteDesc": "Spot the warning signs",
+    "testBebe": "Ready for a baby test",
+    "testBebeDesc": "Assess your readiness for parenthood"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",

@@ -57,7 +57,7 @@ const article: BlogArticleData = {
         {
           id: 'frio-y-calor',
           title: "Frío y calor, en bucle",
-          content: `<p>Una semana está presente, cariñoso, atento. La siguiente, distante y frío sin explicación. Y tú pasas el tiempo intentando entender qué has hecho para provocar ese cambio. Spoiler: no has hecho nada. Es él quien instala esa inestabilidad, consciente o no. Pero el resultado es el mismo, andas de puntillas, buscas constantemente su aprobación, sientes alivio cuando vuelve en modo "caliente". Ese es el ciclo de apego ansioso que crea. Y una vez dentro, es difícil salir.</p>`,
+          content: `<p>Una semana está presente, cariñoso, atento. La siguiente, distante y frío sin explicación. Y tú pasas el tiempo intentando entender qué has hecho para provocar ese cambio. Spoiler: no has hecho nada. Es él quien instala esa inestabilidad, consciente o no. Pero el resultado es el mismo, andas de puntillas, buscas constantemente su aprobación, sientes alivio cuando vuelve en modo "caliente". Ese es el ciclo de apego ansioso que crea. Y una vez dentro, es difícil salir. Si reconoces este patrón, el <a href="/es/test-relacion-toxica/">test pareja tóxica</a> puede ayudarte a ver dónde estás realmente.</p>`,
         },
         {
           id: 'nunca-se-disculpa',

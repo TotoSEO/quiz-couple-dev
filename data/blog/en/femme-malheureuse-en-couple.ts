@@ -106,7 +106,7 @@ const article: BlogArticleData = {
       id: 'what-now',
       title: "So What Do You Do Now?",
       content: `<p>Recognizing the signs is one thing. The question that follows is often the hardest: is this still salvageable? And if so, how?</p>
-<p>There's no universal answer. But there are very common mistakes men make at this point, and they systematically make things worse.</p>
+<p>There's no universal answer. A useful starting point is often to answer the same questions separately, which is what the <a href="/en/healthy-relationship-test/">healthy relationship test</a> does: the gap between your two perceptions usually says more than the conversation itself. But there are also very common mistakes men make at this point, and they systematically make things worse.</p>
 <p><strong>Minimizing.</strong> "You're overreacting", "It's all in your head", "You've always been like this." That's the response that shuts every door at once. She may have spent months finding the courage to express something, and if the first reaction is to dismiss it, she won't try again.</p>
 <p><strong>Overreacting.</strong> The opposite, panicking, promising everything will change, pulling out the grand gestures, isn't any better. Because it puts pressure on her to manage your distress on top of her own. And because promises made in a panic rarely have a long shelf life.</p>
 <p>What actually works is simpler to say than to do: <strong>create the conditions for her to really talk.</strong> Not by forcing a "serious discussion" that feels like an interrogation. By being present differently, less time on your phone, more attentive to the small things, able to ask a real question and let her answer without jumping in to defend yourself.</p>
