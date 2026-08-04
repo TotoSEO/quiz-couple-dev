@@ -283,7 +283,7 @@ async function generatePage(routeKey, lang) {
       en: { title: 'Privacy Policy - Quiz Couple', description: 'Quiz Couple privacy policy.' },
       es: { title: 'Política de Privacidad - Quiz Couple', description: 'Política de privacidad de Quiz Couple.' },
       de: { title: 'Datenschutzerklärung - Quiz Couple', description: 'Datenschutzerklärung von Quiz Couple.' },
-      it: { title: 'Privacy Policy - Quiz Couple', description: 'Informativa sulla privacy di Quiz Couple.' },
+      it: { title: 'Informativa sulla Privacy - Quiz Couple', description: 'Informativa sulla privacy di Quiz Couple.' },
     };
     title = privacyMeta[lang]?.title || privacyMeta.fr.title;
     description = privacyMeta[lang]?.description || privacyMeta.fr.description;

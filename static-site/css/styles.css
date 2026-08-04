@@ -4925,3 +4925,35 @@ h1, h2, h3, h4, h5, h6,
   .tentation-sky, .tentation-flame-core, .tentation-flame-glow, .tentation-option { animation: none; }
   .tentation-option:hover { transform: none; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   Garde-fous 360 px
+   Le CLAUDE.md fixe 360 px comme largeur minimale. Trois causes de
+   débordement horizontal ont été relevées sur les pages construites :
+   un mot composé allemand plus large que l'écran, les libellés de
+   bouton maintenus sur une ligne, et un décor en inset négatif.
+   ══════════════════════════════════════════════════════════════ */
+
+/* « Datenschutzerklärung » en text-3xl mesure 370 px : sans césure, un
+   seul mot composé fait déborder toute la page. hyphens s'appuie sur le
+   lang du document, donc la coupure suit les règles de la langue. */
+h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* .btn force white-space: nowrap, ce qui fait sortir de l'écran les
+   libellés longs (« Meinen Standort verwenden », « Commencer le quiz
+   maintenant »). On borne la largeur partout, et on autorise le retour
+   à la ligne seulement sur les écrans étroits, pour ne rien changer
+   au rendu au-delà. */
+.btn { max-width: 100%; }
+@media (max-width: 430px) {
+  .btn { white-space: normal; }
+}
+
+/* Le décor du hero déborde volontairement de son conteneur par un inset
+   négatif ; sous 430 px cette marge sort du viewport. */
+@media (max-width: 430px) {
+  .quiz-hero-media__blob { inset: -10% 0 -12% 0; }
+}
