@@ -207,7 +207,17 @@
     "mediumDesc": "Compartís buena parte de vuestros gustos, con las diferencias justas para seguir sorprendiéndoos. Un equilibrio muy sano.",
     "high": "¡En la misma sintonía!",
     "highDesc": "Vuestros gustos se parecen muchísimo. Recordad que este porcentaje mide las respuestas idénticas, no la fuerza de vuestro amor, que no cabe en ninguna puntuación.",
-    "lowAdvice": "Tomaos el tiempo de hablar de cada tema que os haya sorprendido."
+    "lowAdvice": "Tomaos el tiempo de hablar de cada tema que os haya sorprendido.",
+    "compat": {
+      "t1": "Caminos distintos",
+      "t1d": "Vuestras respuestas divergen en varios pilares: proyectos, ritmo de vida, visión del futuro. No es un veredicto sobre vuestra relación, es un mapa de los temas que merece la pena poner sobre la mesa. Muchas parejas sólidas conviven muy bien con visiones distintas, siempre que hablen de ellas.",
+      "t2": "Una compatibilidad por cultivar",
+      "t2d": "Coincidís en buena parte de lo esencial y divergís en el resto. Fijaos en las preguntas donde vuestras respuestas no encajaron: son exactamente las conversaciones que hacen avanzar a una pareja.",
+      "t3": "Una gran compatibilidad",
+      "t3d": "Estáis alineados en lo esencial, con algunas diferencias que os enriquecen en lugar de enfrentaros. Es el perfil más habitual entre las parejas que duran.",
+      "t4": "Almas gemelas",
+      "t4d": "Vuestros pilares se responden casi en todo: valores, proyectos, ritmo de vida. Una base rara y valiosa. Recordad que este porcentaje mide respuestas alineadas, no la fuerza de vuestro amor."
+    }
   },
   "meta": {
     "duration": "5 min",

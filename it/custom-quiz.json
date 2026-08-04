@@ -40,7 +40,7 @@
     "ph_question": "Scrivi la tua domanda…",
     "tf_correct": "Risposta corretta:",
     "label_explanation": "Spiegazione",
-    "ph_explanation": "Spiegazione (facoltativo) — mostrata dopo la risposta",
+    "ph_explanation": "Spiegazione (facoltativo), mostrata dopo la risposta",
     "true": "Vero",
     "false": "Falso",
     "add_answer": "Aggiungi una risposta",

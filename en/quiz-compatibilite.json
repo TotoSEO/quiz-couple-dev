@@ -3,18 +3,18 @@
     "badge": "Play as a couple 💞",
     "title": "Love Compatibility Test: Are You Really Made for Each Other?",
     "titleHighlight": "Love Compatibility",
-    "description": "Each answer 20 questions about what really matters — your values, your plans, your lifestyle — and discover your <strong>love compatibility score</strong>. A real couple's test, free and no sign-up.",
+    "description": "Each answer 20 questions about what really matters (your values, your plans, your lifestyle) and discover your <strong>love compatibility score</strong>. A real couple's test, free and no sign-up.",
     "subtitle": "2 players · 20 questions · instant result in %"
   },
   "section1": {
     "title": "What is love compatibility?",
-    "p1": "<strong>Love compatibility</strong> is how aligned two partners are on the things that shape a life together: values, life plans, money, lifestyle, communication and intimacy. It is not the same as attraction — you can feel strong chemistry while having very different visions of life.",
+    "p1": "<strong>Love compatibility</strong> is how aligned two partners are on the things that shape a life together: values, life plans, money, lifestyle, communication and intimacy. It is not the same as attraction: you can feel strong chemistry while having very different visions of life.",
     "p2": "Two compatible people are not clones: they don't need to share everything, but their <strong>fundamentals point in the same direction</strong>. That alignment, more than early passion, best predicts how solid a relationship will be over time.",
     "p3": "Our <strong>love compatibility test</strong> measures exactly that alignment: you each answer separately, then we compare your answers to work out your compatibility score."
   },
   "section2": {
     "title": "How does our love compatibility test work?",
-    "p1": "The test is played <strong>as a couple</strong>. Each of you answers the same 20 questions, in turn, about the big dimensions of a relationship. There are no right or wrong answers — what matters is answering honestly.",
+    "p1": "The test is played <strong>as a couple</strong>. Each of you answers the same 20 questions, in turn, about the big dimensions of a relationship. There are no right or wrong answers, what matters is answering honestly.",
     "p2": "At the end, we compare your answers. Each matching answer reveals a point of alignment. Your <strong>compatibility score</strong> is the percentage of answers where you're on the same wavelength, with a verdict and things to talk about."
   },
   "section3": {
@@ -34,8 +34,8 @@
   },
   "section4": {
     "title": "Love compatibility vs chemistry: what's the difference?",
-    "p1": "<strong>Chemistry</strong> (attraction) is immediate, physical and emotional — the early spark. <strong>Compatibility</strong> shows over time, when you have to make decisions, handle everyday life and compromise.",
-    "p2": "Many strongly attracted couples end up splitting because their fundamentals don't fit. Conversely, solid compatibility helps you weather storms. Ideally you have both — but if you had to bet on the long term, compatibility is the better indicator."
+    "p1": "<strong>Chemistry</strong> (attraction) is immediate, physical and emotional, the early spark. <strong>Compatibility</strong> shows over time, when you have to make decisions, handle everyday life and compromise.",
+    "p2": "Many strongly attracted couples end up splitting because their fundamentals don't fit. Conversely, solid compatibility helps you weather storms. Ideally you have both, but if you had to bet on the long term, compatibility is the better indicator."
   },
   "section5": {
     "title": "Can you improve your love compatibility?",
@@ -44,7 +44,7 @@
   },
   "section6": {
     "title": "How to read your compatibility score",
-    "p1": "Your result is a percentage of aligned answers. Here's how to read it:<ul><li><strong>80–100% — Soulmates:</strong> your fundamentals are very aligned, an ideal base to build on.</li><li><strong>60–80% — Great compatibility:</strong> you meet on the essentials, with a few enriching differences.</li><li><strong>40–60% — Compatibility to nurture:</strong> real common ground, but also topics to clarify together.</li><li><strong>Under 40% — Different paths:</strong> your views diverge on several fundamentals; dialogue will be valuable.</li></ul>",
+    "p1": "Your result is a percentage of aligned answers. Here's how to read it:<ul><li><strong>80% and above, soulmates:</strong> your fundamentals are very aligned, an ideal base to build on.</li><li><strong>60 to 79%, great compatibility:</strong> you meet on the essentials, with a few enriching differences.</li><li><strong>40 to 59%, compatibility to nurture:</strong> real common ground, but also topics to clarify together.</li><li><strong>Under 40%, different paths:</strong> your views diverge on several fundamentals, dialogue will be valuable.</li></ul>",
     "p2": "Remember: a test is no substitute for a real conversation. The best use of your score is to talk it through together."
   },
   "seo": {
@@ -57,13 +57,13 @@
     "step3Text": "Each matching answer reveals a point of alignment between you.",
     "step4Title": "Get your score",
     "step4Text": "Receive your compatibility percentage, a verdict and things to discuss.",
-    "faqTitle": "FAQ — Love Compatibility Test"
+    "faqTitle": "FAQ: Love Compatibility Test"
   },
   "jsonLd": {
     "faq1Q": "What is love compatibility?",
     "faq1A": "It's how aligned two partners are on the fundamentals of a life together: values, life plans, money, lifestyle, communication and intimacy. It differs from attraction, which is immediate, whereas compatibility is measured over time.",
     "faq2Q": "How is the compatibility score calculated?",
-    "faq2A": "You each answer the same 20 questions. The test compares your answers: your compatibility score is the percentage of identical answers — the points where you're aligned.",
+    "faq2A": "You each answer the same 20 questions. The test compares your answers: your compatibility score is the percentage of identical answers, the points where you're aligned.",
     "faq3Q": "Do you need two people to take the test?",
     "faq3A": "Yes, it's a couple's test: both partners answer in turn on the same device. It's the comparison of your answers that gives the compatibility score.",
     "faq4Q": "How is it different from the names & zodiac compatibility test?",

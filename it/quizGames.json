@@ -207,7 +207,17 @@
     "mediumDesc": "Condividete buona parte dei vostri gusti, con abbastanza differenze per continuare a sorprendervi. Un equilibrio molto sano.",
     "high": "Sulla stessa lunghezza d'onda!",
     "highDesc": "I vostri gusti si somigliano moltissimo. Ricordate che questa percentuale misura le risposte identiche, non la forza del vostro amore, che non sta in nessun punteggio.",
-    "lowAdvice": "Prendetevi il tempo di parlare di ogni tema che vi ha sorpreso."
+    "lowAdvice": "Prendetevi il tempo di parlare di ogni tema che vi ha sorpreso.",
+    "compat": {
+      "t1": "Percorsi diversi",
+      "t1d": "Le vostre risposte divergono su vari fondamentali: progetti, ritmo di vita, visione del futuro. Non è un verdetto sulla vostra coppia, è una mappa dei temi da mettere sul tavolo. Molte coppie solide convivono benissimo con visioni diverse, a patto di parlarne.",
+      "t2": "Una compatibilità da coltivare",
+      "t2d": "Vi ritrovate su buona parte dell'essenziale e divergete sul resto. Guardate le domande in cui le vostre risposte non coincidevano: sono esattamente le conversazioni che fanno crescere una coppia.",
+      "t3": "Un'ottima compatibilità",
+      "t3d": "Siete allineati sull'essenziale, con qualche differenza che vi arricchisce invece di mettervi l'uno contro l'altro. È il profilo più comune tra le coppie che durano.",
+      "t4": "Anime gemelle",
+      "t4d": "I vostri fondamentali si rispondono quasi ovunque: valori, progetti, ritmo di vita. Una base rara e preziosa. Ricordate che questa percentuale misura risposte allineate, non la forza del vostro amore."
+    }
   },
   "meta": {
     "duration": "5 min",

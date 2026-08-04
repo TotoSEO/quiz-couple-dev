@@ -3,7 +3,7 @@
     "badge": "Para hacer en pareja 💞",
     "title": "Test de Compatibilidad Amorosa: ¿Estáis hechos el uno para el otro?",
     "titleHighlight": "Compatibilidad Amorosa",
-    "description": "Responded cada uno a 20 preguntas sobre lo que de verdad importa — vuestros valores, proyectos y estilo de vida — y descubrid vuestro <strong>porcentaje de compatibilidad amorosa</strong>. Un test real en pareja, gratis y sin registro.",
+    "description": "Responded cada uno a 20 preguntas sobre lo que de verdad importa (vuestros valores, proyectos y estilo de vida) y descubrid vuestro <strong>porcentaje de compatibilidad amorosa</strong>. Un test real en pareja, gratis y sin registro.",
     "subtitle": "2 jugadores · 20 preguntas · resultado inmediato en %"
   },
   "section1": {
@@ -35,7 +35,7 @@
   "section4": {
     "title": "Compatibilidad amorosa o química: ¿cuál es la diferencia?",
     "p1": "La <strong>química</strong> (la atracción) es inmediata, física y emocional: la chispa del principio. La <strong>compatibilidad</strong> se revela con el tiempo, cuando hay que tomar decisiones, gestionar el día a día y ceder.",
-    "p2": "Muchas parejas muy atraídas acaban separándose porque sus pilares no encajan. Al contrario, una compatibilidad sólida ayuda a superar las tormentas. Lo ideal es tener ambas — pero si hay que apostar a largo plazo, la compatibilidad es el mejor indicador."
+    "p2": "Muchas parejas muy atraídas acaban separándose porque sus pilares no encajan. Al contrario, una compatibilidad sólida ayuda a superar las tormentas. Lo ideal es tener ambas, pero si hay que apostar a largo plazo, la compatibilidad es el mejor indicador."
   },
   "section5": {
     "title": "¿Se puede mejorar la compatibilidad amorosa?",
@@ -44,7 +44,7 @@
   },
   "section6": {
     "title": "¿Cómo interpretar tu porcentaje de compatibilidad?",
-    "p1": "Tu resultado se expresa en porcentaje de respuestas alineadas. Así se lee:<ul><li><strong>80–100 % — Almas gemelas:</strong> vuestros pilares están muy alineados, una base ideal.</li><li><strong>60–80 % — Gran compatibilidad:</strong> coincidís en lo esencial, con algunas diferencias enriquecedoras.</li><li><strong>40–60 % — Compatibilidad por cultivar:</strong> puntos en común reales, pero también temas que aclarar juntos.</li><li><strong>Menos del 40 % — Caminos distintos:</strong> vuestras visiones divergen en varios pilares; el diálogo será valioso.</li></ul>",
+    "p1": "Tu resultado se expresa en porcentaje de respuestas alineadas. Así se lee:<ul><li><strong>80 % o más, almas gemelas:</strong> vuestros pilares están muy alineados, una base ideal.</li><li><strong>Del 60 al 79 %, una gran compatibilidad:</strong> coincidís en lo esencial, con algunas diferencias enriquecedoras.</li><li><strong>Del 40 al 59 %, una compatibilidad por cultivar:</strong> puntos en común reales, pero también temas que aclarar juntos.</li><li><strong>Menos del 40 %, caminos distintos:</strong> vuestras visiones divergen en varios pilares, el diálogo será valioso.</li></ul>",
     "p2": "Recuerda: un test no sustituye una conversación real. El mejor uso de tu resultado es hablarlo juntos."
   },
   "seo": {
@@ -57,7 +57,7 @@
     "step3Text": "Cada respuesta idéntica revela un punto de alineación entre vosotros.",
     "step4Title": "Descubrid vuestro porcentaje",
     "step4Text": "Obtened vuestro porcentaje de compatibilidad, un veredicto y temas para hablar.",
-    "faqTitle": "FAQ — Test de Compatibilidad Amorosa"
+    "faqTitle": "FAQ: Test de Compatibilidad Amorosa"
   },
   "jsonLd": {
     "faq1Q": "¿Qué es la compatibilidad amorosa?",

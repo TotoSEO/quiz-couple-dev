@@ -28,10 +28,10 @@
 
     // ── Duo with gender (2 players + gender selection, answer matching) ──
     'tester-couple':  { prefix: 'couple', engine: 'duo-match', totalQ: 20, pool: 30, needsGender: true, useScoring: true },
-    'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 30, needsGender: true },
+    'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 200, needsGender: true },
 
     // ── Love compatibility (2 players, matching = alignment % on core dimensions) ──
-    'compatibilite':  { prefix: 'compatibilite', engine: 'duo-match', totalQ: 20, pool: 20, needsGender: true },
+    'compatibilite':  { prefix: 'compatibilite', engine: 'duo-match', totalQ: 20, pool: 20, needsGender: true, resultSet: 'compat' },
 
     // ── Healthy quiz (2 players + gender, weighted scoring) ──
     'sain':           { prefix: 'healthy', engine: 'healthy', totalQ: 20, pool: 30, needsGender: true },
@@ -237,6 +237,24 @@
             if (t3 && t3 !== prefix + '.q' + i + upper[p3]) opts.push({ id: optLetters[p3], text: t3 });
           }
         }
+        // Pattern 4: vocabulaire d'options partage (commonPoints q31+). La
+        // question porte la liste des identifiants d'options, chaque libelle
+        // vit une seule fois dans prefix.o_{id}. Sans ce pattern, ces
+        // questions n'ont aucune option et sont silencieusement ecartees.
+        if (opts.length === 0) {
+          var ids = QuizEngine.tgd(prefix + '.q' + i + 'opts', null, nativeOnly);
+          if (typeof ids === 'string' && ids && ids !== prefix + '.q' + i + 'opts') {
+            var list = ids.split(',');
+            for (var p4 = 0; p4 < list.length && p4 < optLetters.length; p4++) {
+              var id = list[p4].trim();
+              // Les libelles partages sont cherches sans nativeOnly : une
+              // langue qui aurait oublie un libelle retombe sur le francais
+              // plutot que de perdre l'option.
+              var t4 = QuizEngine.tgd(prefix + '.o_' + id, null);
+              if (t4 && t4 !== prefix + '.o_' + id) opts.push({ id: optLetters[p4], text: t4 });
+            }
+          }
+        }
         return opts;
       };
       var options = findOptions(true);
@@ -336,7 +354,7 @@
 
   function initDuoMatchQuiz(cfg, questions) {
     var total = questions.length;
-    var results = buildDuoResults(total);
+    var results = cfg.resultSet === 'compat' ? buildCompatResults(total) : buildDuoResults(total);
     new QuizEngine.DuoMatchQuiz({
       container: container,
       questions: questions,
@@ -681,6 +699,34 @@
       { minScore: third * 2, maxScore: total, min: third * 2, max: total,
         title: QuizEngine.tg('result.high', 'Incroyable connexion !'),
         description: QuizEngine.tg('result.highDesc', 'Vous êtes sur la même longueur d\'onde !') }
+    ];
+  }
+
+  // Verdicts du test de compatibilite amoureuse. Les paliers generiques de
+  // buildDuoResults sont ecrits pour un quiz de gouts ("vos gouts se
+  // ressemblent") et decoupent le score en tiers, alors que la page annonce
+  // sa propre grille de lecture en pourcentage (80+, 60-79, 40-59, <40).
+  // On construit donc les bornes directement depuis cette grille pour que le
+  // verdict affiche corresponde a ce que la page explique juste en dessous.
+  function buildCompatResults(total) {
+    var at = function(pct) { return Math.ceil(total * pct / 100); };
+    var b40 = at(40), b60 = at(60), b80 = at(80);
+    var fb = [
+      'Des chemins différents', 'Une compatibilité à cultiver',
+      'Une belle compatibilité', 'Âmes sœurs'
+    ];
+    function tier(n, min, max) {
+      return {
+        minScore: min, maxScore: max, min: min, max: max,
+        title: QuizEngine.tg('result.compat.t' + n, fb[n - 1]),
+        description: QuizEngine.tg('result.compat.t' + n + 'd', '')
+      };
+    }
+    return [
+      tier(1, 0, b40 - 1),
+      tier(2, b40, b60 - 1),
+      tier(3, b60, b80 - 1),
+      tier(4, b80, total)
     ];
   }
 
