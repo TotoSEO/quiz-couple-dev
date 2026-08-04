@@ -207,7 +207,17 @@
     "mediumDesc": "Ihr teilt einen großen Teil eures Geschmacks, mit genug Unterschieden, um euch weiter zu überraschen. Ein sehr gesundes Gleichgewicht.",
     "high": "Auf einer Wellenlänge!",
     "highDesc": "Euer Geschmack ähnelt sich außerordentlich. Denkt daran: Dieser Prozentsatz misst identische Antworten, nicht die Stärke eurer Liebe, die in keine Punktzahl passt.",
-    "lowAdvice": "Nehmt euch Zeit, über jedes Thema zu sprechen, das euch überrascht hat."
+    "lowAdvice": "Nehmt euch Zeit, über jedes Thema zu sprechen, das euch überrascht hat.",
+    "compat": {
+      "t1": "Unterschiedliche Wege",
+      "t1d": "Eure Antworten gehen bei mehreren Grundlagen auseinander: Pläne, Lebensrhythmus, Zukunftsvorstellungen. Das ist kein Urteil über eure Beziehung, sondern eine Landkarte der Themen, die auf den Tisch gehören. Viele stabile Paare leben sehr gut mit unterschiedlichen Vorstellungen, solange sie darüber sprechen.",
+      "t2": "Eine Kompatibilität zum Pflegen",
+      "t2d": "Ihr trefft euch bei einem guten Teil des Wesentlichen und geht beim Rest auseinander. Schaut euch die Fragen an, bei denen eure Antworten nicht zusammenpassten: genau das sind die Gespräche, die eine Beziehung weiterbringen.",
+      "t3": "Eine große Kompatibilität",
+      "t3d": "Ihr seid im Wesentlichen auf einer Linie, mit einigen Unterschieden, die euch bereichern statt euch gegeneinander zu stellen. Das ist das häufigste Profil bei Paaren, die lange halten.",
+      "t4": "Seelenverwandte",
+      "t4d": "Eure Grundlagen passen fast überall zusammen: Werte, Pläne, Lebensrhythmus. Eine seltene und wertvolle Basis. Denkt daran: Dieser Prozentsatz misst übereinstimmende Antworten, nicht die Stärke eurer Liebe."
+    }
   },
   "meta": {
     "duration": "5 Min",

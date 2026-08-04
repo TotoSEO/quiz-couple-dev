@@ -387,13 +387,15 @@ var QuizEngine = (function() {
     document.body.appendChild(svg);
   }
 
-  function renderScoreRing(pct, size) {
+  // celebrate : force ou interdit les confettis. Sans lui, le seuil fixe de
+  // 70 % arrose de confettis des paliers que le verdict, lui, ne celebre pas.
+  function renderScoreRing(pct, size, celebrate) {
     ensureScoreGradient();
     var circumference = 283; // 2 * PI * 45
     var offset = circumference - (circumference * pct / 100);
     var sizeClass = size === 'sm' ? ' score-ring-wrap--sm' : '';
     var confetti = '';
-    if (pct >= 70 && size !== 'sm') {
+    if ((celebrate === undefined ? pct >= 70 : celebrate) && size !== 'sm') {
       var colors = ['#ec4899','#a855f7','#f59e0b','#22c55e','#3b82f6','#ef4444','#8b5cf6','#06b6d4'];
       for (var i = 0; i < 8; i++) {
         var angle = (i / 8) * Math.PI * 2;
@@ -1091,11 +1093,17 @@ var QuizEngine = (function() {
 
     // Self-contained, centered "hero" so the result stays centered and styled
     // once renderActionButtons moves it into the 2-column results layout.
-    var tier = pct >= 70 ? 'high' : pct >= 40 ? 'mid' : 'low';
+    // Le palier visuel suit le verdict retenu, pas un seuil de pourcentage
+    // parallele : les deux grilles ne coincidaient pas et un score de 7/20
+    // (35 %) affichait un titre positif sous l'emoji dubitatif du palier bas.
+    var ri = result ? this.results.indexOf(result) : -1;
+    var tier = ri < 0
+      ? (pct >= 70 ? 'high' : pct >= 40 ? 'mid' : 'low')
+      : (ri >= this.results.length - 1 ? 'high' : ri === 0 ? 'low' : 'mid');
     var hero = el('div', 'duo-result-hero duo-result-hero--' + tier);
-    hero.appendChild(el('div', 'duo-result-emoji', pct >= 70 ? '🎉' : pct >= 40 ? '😊' : '🤔'));
+    hero.appendChild(el('div', 'duo-result-emoji', tier === 'high' ? '🎉' : tier === 'mid' ? '😊' : '🤔'));
     var ringWrap = el('div', 'duo-result-ring');
-    ringWrap.innerHTML = renderScoreRing(pct);
+    ringWrap.innerHTML = renderScoreRing(pct, null, tier === 'high');
     hero.appendChild(ringWrap);
     hero.appendChild(el('div', 'duo-result-match', matchCount + '/' + total + ' ' + tg('result.identicalAnswers', 'réponses identiques')));
     if (result) {

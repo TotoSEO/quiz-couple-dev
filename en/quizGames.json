@@ -207,7 +207,17 @@
     "mediumDesc": "You share a good part of your tastes, with just enough differences to keep surprising each other. A very healthy balance.",
     "high": "On the same wavelength!",
     "highDesc": "Your tastes are remarkably alike. Keep in mind that this percentage measures identical answers, not the strength of your love, which no score can capture.",
-    "lowAdvice": "Take the time to talk through every topic that surprised you."
+    "lowAdvice": "Take the time to talk through every topic that surprised you.",
+    "compat": {
+      "t1": "Different paths",
+      "t1d": "Your answers diverge on several fundamentals: plans, pace of life, vision of the future. This is not a verdict on your relationship, it is a map of the topics worth putting on the table. Plenty of solid couples live very well with different visions, as long as they talk about them.",
+      "t2": "Compatibility to nurture",
+      "t2d": "You meet on a good part of the essentials and diverge on the rest. Spot the questions where your answers did not match: those are exactly the conversations that move a relationship forward.",
+      "t3": "Great compatibility",
+      "t3d": "You are aligned on the essentials, with a few differences that enrich you rather than set you against each other. This is the most common profile among couples that last.",
+      "t4": "Soulmates",
+      "t4d": "Your fundamentals answer each other almost everywhere: values, plans, pace of life. A rare and precious base. Keep in mind that this percentage measures aligned answers, not the strength of your love."
+    }
   },
   "meta": {
     "duration": "5 min",

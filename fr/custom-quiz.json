@@ -40,7 +40,7 @@
     "ph_question": "Écrivez votre question…",
     "tf_correct": "Bonne réponse :",
     "label_explanation": "Explication",
-    "ph_explanation": "Explication (facultatif) — affichée après la réponse",
+    "ph_explanation": "Explication (facultatif), affichée après la réponse",
     "true": "Vrai",
     "false": "Faux",
     "add_answer": "Ajouter une réponse",

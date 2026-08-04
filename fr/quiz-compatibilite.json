@@ -3,7 +3,7 @@
     "badge": "À faire à deux 💞",
     "title": "Test de compatibilité amoureuse : êtes-vous faits l'un pour l'autre ?",
     "titleHighlight": "compatibilité amoureuse",
-    "description": "Répondez chacun à 20 questions sur ce qui compte vraiment — vos valeurs, vos projets, votre mode de vie — et découvrez votre <strong>taux de compatibilité amoureuse</strong>. Un vrai test à faire à deux, gratuit et sans inscription.",
+    "description": "Répondez chacun à 20 questions sur ce qui compte vraiment (vos valeurs, vos projets, votre mode de vie) et découvrez votre <strong>taux de compatibilité amoureuse</strong>. Un vrai test à faire à deux, gratuit et sans inscription.",
     "subtitle": "2 joueurs · 20 questions · résultat immédiat en %"
   },
   "section1": {
@@ -35,7 +35,7 @@
   "section4": {
     "title": "Compatibilité amoureuse ou alchimie : quelle différence ?",
     "p1": "L'<strong>alchimie</strong> (ou l'attirance) est immédiate, physique et émotionnelle : c'est l'étincelle du début. La <strong>compatibilité</strong>, elle, se révèle dans la durée, quand il faut prendre des décisions, gérer le quotidien et faire des compromis.",
-    "p2": "Beaucoup de couples très attirés l'un par l'autre finissent par se séparer parce que leurs fondamentaux ne s'accordent pas. À l'inverse, une compatibilité solide permet de traverser les tempêtes. L'idéal, bien sûr, c'est d'avoir les deux — mais si vous deviez parier sur le long terme, la compatibilité est le meilleur indicateur."
+    "p2": "Beaucoup de couples très attirés l'un par l'autre finissent par se séparer parce que leurs fondamentaux ne s'accordent pas. À l'inverse, une compatibilité solide permet de traverser les tempêtes. L'idéal, bien sûr, c'est d'avoir les deux, mais si vous deviez parier sur le long terme, la compatibilité est le meilleur indicateur."
   },
   "section5": {
     "title": "Peut-on améliorer sa compatibilité amoureuse ?",
@@ -44,7 +44,7 @@
   },
   "section6": {
     "title": "Comment interpréter votre taux de compatibilité ?",
-    "p1": "Votre résultat s'exprime en pourcentage de réponses alignées. Voici comment le lire :<ul><li><strong>80–100 % — Âmes sœurs :</strong> vos fondamentaux sont très alignés, une base idéale pour construire.</li><li><strong>60–80 % — Belle compatibilité :</strong> vous vous rejoignez sur l'essentiel, avec quelques différences enrichissantes.</li><li><strong>40–60 % — Compatibilité à cultiver :</strong> de vrais points communs, mais aussi des sujets à clarifier ensemble.</li><li><strong>Moins de 40 % — Chemins différents :</strong> vos visions divergent sur plusieurs fondamentaux ; le dialogue sera précieux.</li></ul>",
+    "p1": "Votre résultat s'exprime en pourcentage de réponses alignées. Voici comment le lire :<ul><li><strong>80 % et plus, âmes sœurs :</strong> vos fondamentaux sont très alignés, une base idéale pour construire.</li><li><strong>60 à 79 %, une belle compatibilité :</strong> vous vous rejoignez sur l'essentiel, avec quelques différences enrichissantes.</li><li><strong>40 à 59 %, une compatibilité à cultiver :</strong> de vrais points communs, mais aussi des sujets à clarifier ensemble.</li><li><strong>Moins de 40 %, des chemins différents :</strong> vos visions divergent sur plusieurs fondamentaux, le dialogue sera précieux.</li></ul>",
     "p2": "Rappelez-vous : un test ne remplace pas une vraie conversation. Le meilleur usage de votre score, c'est d'en discuter ensemble."
   },
   "seo": {
@@ -57,7 +57,7 @@
     "step3Text": "Chaque réponse identique révèle un point d'alignement entre vous.",
     "step4Title": "Découvrez votre taux",
     "step4Text": "Obtenez votre pourcentage de compatibilité, un verdict et des pistes de discussion.",
-    "faqTitle": "FAQ — Test de compatibilité amoureuse"
+    "faqTitle": "FAQ : Test de compatibilité amoureuse"
   },
   "jsonLd": {
     "faq1Q": "Qu'est-ce que la compatibilité amoureuse ?",

@@ -207,7 +207,17 @@
     "mediumDesc": "Vous partagez une bonne partie de vos goûts, avec assez de différences pour continuer à vous surprendre. Un équilibre très sain.",
     "high": "Sur la même longueur d'onde !",
     "highDesc": "Vos goûts se ressemblent énormément. Gardez en tête que ce pourcentage mesure vos réponses identiques, pas la force de votre amour, qui ne tient dans aucun score.",
-    "lowAdvice": "Prenez le temps de discuter de chaque sujet qui vous a surpris."
+    "lowAdvice": "Prenez le temps de discuter de chaque sujet qui vous a surpris.",
+    "compat": {
+      "t1": "Des chemins différents",
+      "t1d": "Vos réponses divergent sur plusieurs fondamentaux : projets, rythme de vie, vision de l'avenir. Ce n'est pas un verdict sur votre couple, c'est une carte des sujets à mettre sur la table. Beaucoup de couples solides vivent très bien avec des visions différentes, à condition d'en parler.",
+      "t2": "Une compatibilité à cultiver",
+      "t2d": "Vous vous retrouvez sur une bonne partie de l'essentiel et vous divergez sur le reste. Repérez les questions où vos réponses ne collaient pas : ce sont exactement les discussions qui font avancer un couple.",
+      "t3": "Une belle compatibilité",
+      "t3d": "Vous êtes alignés sur l'essentiel, avec quelques différences qui vous enrichissent plutôt qu'elles ne vous opposent. C'est le profil le plus courant chez les couples qui durent.",
+      "t4": "Âmes sœurs",
+      "t4d": "Vos fondamentaux se répondent presque partout : valeurs, projets, rythme de vie. Une base rare et précieuse. Gardez en tête que ce pourcentage mesure des réponses alignées, pas la force de votre amour."
+    }
   },
   "meta": {
     "duration": "5 min",

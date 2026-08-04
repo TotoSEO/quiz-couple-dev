@@ -18,9 +18,9 @@
     "p1": "<strong>Le principe :</strong> pendant qu'un partenaire s'isole (ou détourne le regard), l'autre répond à une question sur le couple. Puis les rôles s'échangent, et celui qui s'était isolé doit deviner la réponse donnée. Chaque réponse identique rapporte des points.",
     "p2": "<strong>Le scoring :</strong> à la télévision, la première question vaut 10 points, les suivantes 5 points, et la question bonus 15 points. On additionne les bonnes réponses des deux membres du couple.",
     "p3": "<strong>La finale :</strong> le couple en tête dispose de 45 secondes pour enchaîner un maximum de bonnes réponses. Quelques réponses justes suffisent à remporter le grand prix (un séjour, dans l'émission originale).",
-    "pillar1Title": "Manche 1 — l'un répond",
+    "pillar1Title": "Manche 1 : l'un répond",
     "pillar1Text": "Un partenaire répond, l'autre devine. Chaque réponse concordante marque des points.",
-    "pillar2Title": "Manche 2 — l'autre répond",
+    "pillar2Title": "Manche 2 : l'autre répond",
     "pillar2Text": "Les rôles s'inversent : à l'autre de répondre, et au premier de deviner.",
     "pillar3Title": "La finale à 45 s",
     "pillar3Text": "Un chrono s'enclenche : enchaînez les bonnes réponses pour décrocher le jackpot."
@@ -60,7 +60,7 @@
     "step3Text": "On passe l'écran : l'autre dévoile sa vraie réponse. Le buzzer tranche et les points tombent !",
     "step4Title": "La finale",
     "step4Text": "En tête après les manches ? Tentez la finale à 45 secondes pour le jackpot.",
-    "faqTitle": "FAQ — Quiz Les Z'Amours"
+    "faqTitle": "FAQ : Quiz Les Z'Amours"
   },
   "jsonLd": {
     "faq1Q": "Quelles sont les règles des Z'Amours ?",
