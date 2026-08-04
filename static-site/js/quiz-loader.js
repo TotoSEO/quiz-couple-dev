@@ -34,10 +34,10 @@
     'compatibilite':  { prefix: 'compatibilite', engine: 'duo-match', totalQ: 20, pool: 20, needsGender: true, resultSet: 'compat' },
 
     // ── Healthy quiz (2 players + gender, weighted scoring) ──
-    'sain':           { prefix: 'healthy', engine: 'healthy', totalQ: 20, pool: 30, needsGender: true },
+    'sain':           { prefix: 'healthy', engine: 'healthy', totalQ: 20, pool: 78, needsGender: true },
 
     // ── Distance quiz (2 players, alternating turns, points per option) ──
-    'distance':       { prefix: 'distance', engine: 'distance', totalQ: 20, pool: 20 },
+    'distance':       { prefix: 'distance', engine: 'distance', totalQ: 20, pool: 100 },
 
     // ── Coquin quiz (guess & reveal mechanic) ──
     'coquin':         { prefix: 'coquin', engine: 'coquin', totalQ: 30, pool: 60 },
@@ -52,7 +52,7 @@
     'marrant':        { prefix: 'marrant', engine: 'funny', totalQ: 20, pool: 160, textOnly: true },
 
     // ── Most quiz ("Qui est le plus..." - 2-8 players, vote) - text only ──
-    'most':           { prefix: 'most', engine: 'most', totalQ: 20, pool: 240, textOnly: true },
+    'most':           { prefix: 'most', engine: 'most', totalQ: 20, pool: 245, textOnly: true },
 
     // ── Parentalite quiz (2 players, same questions, explicit point values) ──
     'parentalite':    { prefix: 'parentalite', engine: 'parentalite', totalQ: 20, pool: 20 },

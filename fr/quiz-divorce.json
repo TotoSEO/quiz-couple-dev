@@ -99,7 +99,7 @@
     "introImportant": "Important :",
     "introDisclaimer": "Ce test n'est pas un outil diagnostique médical ou juridique. Il ne remplace pas l'avis d'un thérapeute ou d'un avocat. Vos réponses sont anonymes et ne sont pas enregistrées.",
     "startButton": "Commencer le test",
-    "startMeta": "25 questions · ~10 minutes · Résultat immédiat",
+    "startMeta": "15 questions · ~7 minutes · Résultat immédiat",
     "questionOf": "Question {{current}} sur {{total}}",
     "noAnswer": "Je n'ai pas la réponse",
     "previousQuestion": "Question précédente",
@@ -116,7 +116,7 @@
   "hero": {
     "badge": "Test Divorce • Gratuit • 5 min",
     "title": "Dois-je divorcer ? Test en ligne gratuit",
-    "description": "25 questions pour évaluer objectivement votre situation conjugale et savoir s'il est temps de franchir le pas.",
+    "description": "15 questions pour évaluer objectivement votre situation conjugale et savoir s'il est temps de franchir le pas.",
     "titleHighlight": "divorcer"
   }
 }
