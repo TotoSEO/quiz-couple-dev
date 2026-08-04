@@ -99,7 +99,7 @@
     "introImportant": "Importante:",
     "introDisclaimer": "Questo test non è uno strumento diagnostico medico o legale. Non sostituisce il parere di un terapeuta o avvocato. Le vostre risposte sono anonime e non vengono registrate.",
     "startButton": "Iniziare il test",
-    "startMeta": "25 domande · ~10 minuti · Risultato immediato",
+    "startMeta": "15 domande · ~7 minuti · Risultato immediato",
     "questionOf": "Domanda {{current}} di {{total}}",
     "noAnswer": "Non ho la risposta",
     "previousQuestion": "Domanda precedente",
@@ -116,7 +116,7 @@
   "hero": {
     "badge": "Test Divorzio • Gratuito • 5 min",
     "title": "Devo divorziare? Test online gratuito",
-    "description": "25 domande per valutare oggettivamente la tua situazione coniugale e capire se è il momento di fare il passo.",
+    "description": "15 domande per valutare oggettivamente la tua situazione coniugale e capire se è il momento di fare il passo.",
     "titleHighlight": "divorziare"
   }
 }

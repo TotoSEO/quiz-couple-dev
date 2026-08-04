@@ -99,7 +99,7 @@
     "introImportant": "Wichtig:",
     "introDisclaimer": "Dieser Test ist kein medizinisches oder juristisches Diagnoseinstrument. Er ersetzt nicht die Meinung eines Therapeuten oder Anwalts. Ihre Antworten sind anonym und werden nicht gespeichert.",
     "startButton": "Test starten",
-    "startMeta": "25 Fragen · ~10 Minuten · Sofortiges Ergebnis",
+    "startMeta": "15 Fragen · ~7 Minuten · Sofortiges Ergebnis",
     "questionOf": "Frage {{current}} von {{total}}",
     "noAnswer": "Ich habe keine Antwort",
     "previousQuestion": "Vorherige Frage",
@@ -116,7 +116,7 @@
   "hero": {
     "badge": "Scheidungstest • Kostenlos • 5 Min",
     "title": "Soll ich mich scheiden lassen? Kostenloser Online-Test",
-    "description": "25 Fragen, um Ihre Ehesituation objektiv einzuschätzen und zu wissen, ob es Zeit ist, den Schritt zu wagen.",
+    "description": "15 Fragen, um Ihre Ehesituation objektiv einzuschätzen und zu wissen, ob es Zeit ist, den Schritt zu wagen.",
     "titleHighlight": "scheiden lassen"
   }
 }

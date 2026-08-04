@@ -99,7 +99,7 @@
     "introImportant": "Important:",
     "introDisclaimer": "This test is not a medical or legal diagnostic tool. It does not replace the advice of a therapist or lawyer. Your answers are anonymous and are not recorded.",
     "startButton": "Start the test",
-    "startMeta": "25 questions · ~10 minutes · Instant result",
+    "startMeta": "15 questions · ~7 minutes · Instant result",
     "questionOf": "Question {{current}} of {{total}}",
     "noAnswer": "I don't have the answer",
     "previousQuestion": "Previous question",
@@ -116,7 +116,7 @@
   "hero": {
     "badge": "Divorce Test • Free • 5 min",
     "title": "Should I Get Divorced? Free Online Test",
-    "description": "25 questions to objectively assess your marital situation and know if it's time to take the step.",
+    "description": "15 questions to objectively assess your marital situation and know if it's time to take the step.",
     "titleHighlight": "Divorced"
   }
 }
