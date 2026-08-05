@@ -272,10 +272,20 @@
   // ── Data ──
   var allQData = null;
 
+  // Ce quiz n'a besoin que du préfixe 'ado' : on va chercher son fragment
+  // plutôt que les ~300 Ko du fichier complet, avec repli sur celui-ci.
   function loadQuizData() {
-    return fetch('/js/data/gd-' + lang + '.json')
-      .then(function (r) { return r.json(); })
-      .then(function (d) { allQData = d.ado || {}; });
+    return fetch('/js/data/gd/ado-' + lang + '.json')
+      .then(function (r) { if (!r.ok) throw new Error('fragment absent'); return r.json(); })
+      .then(function (d) {
+        allQData = d.ado || {};
+        if (!Object.keys(allQData).length) throw new Error('fragment vide');
+      })
+      .catch(function () {
+        return fetch('/js/data/gd-' + lang + '.json')
+          .then(function (r) { return r.json(); })
+          .then(function (d) { allQData = d.ado || {}; });
+      });
   }
 
   function selectRandomQuestions() {

@@ -31,24 +31,92 @@ var QuizEngine = (function() {
     'marrant': 'funny'
   };
 
-  function loadTranslations(lang, callback) {
-    var loaded = 0;
-    var total = lang === 'fr' ? 2 : 3;
-    function check() { loaded++; if (loaded >= total && callback) callback(); }
+  // Préfixes déjà chargés, pour qu'une page à deux moteurs (le test de
+  // jalousie en compte deux) ne retélécharge pas ce qu'elle a déjà.
+  var gdPrefixesCharges = {};
 
-    // Always load FR as base fallback
-    if (lang !== 'fr') {
-      fetch('/js/data/gd-fr.json').then(function(r) { return r.json(); })
-        .then(function(d) { gdFrTranslations = d; check(); })
-        .catch(check);
+  function _fusionne(cible, donnees) {
+    for (var k in donnees) if (Object.prototype.hasOwnProperty.call(donnees, k)) cible[k] = donnees[k];
+  }
+
+  // Charge un préfixe isolé dans les deux langues utiles. Un fragment absent
+  // n'est pas une erreur : selon la langue, c'est le préfixe ou son alias qui
+  // existe (couple/testerC, commonPoints/cp), et certains n'existent que d'un
+  // seul côté (healthy hors FR, zamours en FR). C'est le contrôle « aucune
+  // question trouvée » côté chargeur qui décide du repli complet.
+  function _chargeFragment(prefix, lang) {
+    function tente(url) {
+      return fetch(url).then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; });
+    }
+    var att = [tente('/js/data/gd/' + prefix + '-' + lang + '.json')];
+    att.push(lang === 'fr' ? Promise.resolve({}) : tente('/js/data/gd/' + prefix + '-fr.json'));
+    return Promise.all(att);
+  }
+
+  function _chargeComplet(lang) {
+    return fetch('/js/data/gd-' + lang + '.json')
+      .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function(d) {
+        gdTranslations = d;
+        if (lang === 'fr') { gdFrTranslations = d; return null; }
+        return fetch('/js/data/gd-fr.json').then(function(r) { return r.json(); })
+          .then(function(fr) { gdFrTranslations = fr; });
+      })
+      .catch(function() {
+        return fetch('/js/data/gd-fr.json').then(function(r) { return r.json(); })
+          .then(function(d) { gdTranslations = d; gdFrTranslations = d; })
+          .catch(function() {});
+      });
+  }
+
+  // prefixes : liste facultative des préfixes de données dont l'appelant a
+  // besoin. Fournie, seuls ces fragments sont téléchargés au lieu des ~300 Ko
+  // du fichier complet. Absente ou en cas d'échec, on charge tout comme avant.
+  function loadTranslations(lang, callback, prefixes) {
+    function fini() { if (callback) callback(); }
+
+    var jeux = fetch('/js/data/games-' + lang + '.json').then(function(r) { return r.json(); })
+      .then(function(d) { gamesTranslations = d; })
+      .catch(function() {
+        return fetch('/js/data/games-fr.json').then(function(r) { return r.json(); })
+          .then(function(d) { gamesTranslations = d; }).catch(function() {});
+      });
+
+    var gd;
+    if (prefixes && prefixes.length) {
+      var manquants = [];
+      for (var i = 0; i < prefixes.length; i++) {
+        if (prefixes[i] && !gdPrefixesCharges[prefixes[i] + '|' + lang]) manquants.push(prefixes[i]);
+      }
+      if (!manquants.length && gdTranslations) {
+        gd = Promise.resolve();
+      } else {
+        if (!gdTranslations) { gdTranslations = {}; gdFrTranslations = gdFrTranslations || (lang === 'fr' ? gdTranslations : {}); }
+        gd = Promise.all(manquants.map(function(p) {
+          return _chargeFragment(p, lang).then(function(res) {
+            _fusionne(gdTranslations, res[0]);
+            if (lang === 'fr') _fusionne(gdFrTranslations, res[0]);
+            else if (res[1]) _fusionne(gdFrTranslations, res[1]);
+            gdPrefixesCharges[p + '|' + lang] = true;
+          });
+        })).catch(function() {
+          // Un fragment manque : on revient au fichier complet, donc le
+          // comportement est strictement celui d'avant le découpage.
+          gdTranslations = null; gdFrTranslations = null;
+          return _chargeComplet(lang);
+        });
+      }
+    } else {
+      gd = _chargeComplet(lang);
     }
 
-    fetch('/js/data/gd-' + lang + '.json').then(function(r) { return r.json(); })
-      .then(function(d) { gdTranslations = d; if (lang === 'fr') gdFrTranslations = d; check(); })
-      .catch(function() { fetch('/js/data/gd-fr.json').then(function(r) { return r.json(); }).then(function(d) { gdTranslations = d; gdFrTranslations = d; check(); }).catch(check); });
-    fetch('/js/data/games-' + lang + '.json').then(function(r) { return r.json(); })
-      .then(function(d) { gamesTranslations = d; check(); })
-      .catch(function() { fetch('/js/data/games-fr.json').then(function(r) { return r.json(); }).then(function(d) { gamesTranslations = d; check(); }).catch(check); });
+    Promise.all([gd, jeux]).then(fini, fini);
+  }
+
+  // Repli explicite, utilisé quand les fragments chargés ne suffisent pas.
+  function loadAllTranslations(lang, callback) {
+    gdPrefixesCharges = {};
+    _chargeComplet(lang).then(function() { if (callback) callback(); }, function() { if (callback) callback(); });
   }
 
   function _lookup(data, key) {
@@ -3933,6 +4001,7 @@ var QuizEngine = (function() {
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
+    loadAllTranslations: loadAllTranslations,
     tgd: tgd,
     tg: tg,
     SoloTest: SoloTest,

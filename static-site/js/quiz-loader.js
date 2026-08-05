@@ -93,8 +93,24 @@
     return;
   }
 
+  // Préfixes de données dont ce quiz a besoin. tgd ne consulte jamais que le
+  // préfixe demandé et son alias, auxquels s'ajoutent le préfixe de résultats
+  // quand il diffère et le repli 'couple' du quiz sain. Sans cette liste, la
+  // page téléchargeait les trente préfixes du fichier complet.
+  // Les alias ne sont pas listés : le build émet chaque fragment sous les deux
+  // noms, donc une seule requête suffit quelle que soit la langue.
+  function prefixesNecessaires(cfg) {
+    var l = [];
+    function ajoute(p) { if (p && l.indexOf(p) === -1) l.push(p); }
+    ajoute(cfg.prefix);
+    ajoute(cfg.resultPrefix);
+    if (cfg.prefix === 'healthy') ajoute('couple');   // repli du quiz sain en FR
+    return l;
+  }
+
   // Load translations then initialize
   var _dataAttempt = 0;
+  var _repliComplet = false;
   function initFromData() {
     var textOnly = config.textOnly || false;
     var questions = parseGdQuestions(config.prefix, config.pool + 10, config.ascending, textOnly);
@@ -109,9 +125,17 @@
       // failed. Keep the "loading" placeholder visible and retry a few times
       // before showing the unavailable fallback — so slow connections and
       // crawlers never flash "quiz unavailable" on a page that is actually fine.
+      // Premier échec : on recharge le fichier complet. Si le découpage par
+      // préfixe avait laissé passer quelque chose, ce repli le rattrape et le
+      // quiz se comporte exactement comme avant.
+      if (!_repliComplet) {
+        _repliComplet = true;
+        QuizEngine.loadAllTranslations(lang, initFromData);
+        return;
+      }
       if (_dataAttempt < 3) {
         _dataAttempt++;
-        setTimeout(function() { QuizEngine.loadTranslations(lang, initFromData); }, 700 * _dataAttempt);
+        setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt);
         return;
       }
       showUnavailable(config);
@@ -174,7 +198,7 @@
         showUnavailable(config);
     }
   }
-  QuizEngine.loadTranslations(lang, initFromData);
+  QuizEngine.loadTranslations(lang, initFromData, prefixesNecessaires(config));
 
   // ─── Parse questions from gd.json ─────────────────────────
   // Handles multiple key patterns:
