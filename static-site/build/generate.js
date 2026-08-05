@@ -814,6 +814,31 @@ function copyTranslationData() {
 
     fs.writeFileSync(path.join(dataDir, `gd-${lang}.json`), JSON.stringify(gdData), 'utf-8');
 
+    // Une page de quiz n'a besoin que d'un préfixe sur la trentaine que
+    // contient gd-{lang}.json, mais téléchargeait le fichier entier, plus le
+    // français en repli hors FR. On émet donc aussi chaque préfixe isolément :
+    // le chargeur va chercher les deux ou trois dont il a besoin et retombe
+    // sur le fichier complet si l'un d'eux manque.
+    const shardDir = path.join(dataDir, 'gd');
+    if (!fs.existsSync(shardDir)) fs.mkdirSync(shardDir, { recursive: true });
+    for (const [prefix, contenu] of Object.entries(gdData)) {
+      if (!contenu || typeof contenu !== 'object') continue;
+      fs.writeFileSync(path.join(shardDir, `${prefix}-${lang}.json`), JSON.stringify({ [prefix]: contenu }), 'utf-8');
+    }
+    // Certains quiz portent un nom de préfixe en français et un autre ailleurs
+    // (couple/testerC, commonPoints/cp…). Le chargeur demande les deux sans
+    // savoir lequel existe dans la langue courante : on émet donc aussi le
+    // fragment sous le nom de son alias, contenu inchangé, pour lui éviter une
+    // requête en 404. Doit rester aligné sur PREFIX_ALIASES du moteur.
+    const ALIAS = { couple: 'testerC', commonPoints: 'cp', coquin: 'coquinQ', marrant: 'funny' };
+    for (const [a, b] of Object.entries(ALIAS)) {
+      for (const [de, vers] of [[a, b], [b, a]]) {
+        if (gdData[de] && !gdData[vers]) {
+          fs.writeFileSync(path.join(shardDir, `${vers}-${lang}.json`), JSON.stringify({ [de]: gdData[de] }), 'utf-8');
+        }
+      }
+    }
+
     const gamesSrc = path.join(langDir, 'quizGames.json');
     if (fs.existsSync(gamesSrc)) {
       fs.copyFileSync(gamesSrc, path.join(dataDir, `games-${lang}.json`));

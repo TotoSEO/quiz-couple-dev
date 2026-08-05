@@ -365,7 +365,7 @@
         quizType: cfg.quizType || 'solo'
       });
       initialized[testNum] = true;
-    });
+    }, [cfg.prefix]);
   }
 
   // Initialize test 1 on page load

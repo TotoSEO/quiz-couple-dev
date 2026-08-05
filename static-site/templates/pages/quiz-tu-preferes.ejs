@@ -233,7 +233,7 @@
       questions = QuizEngine.shuffleArray(questions);
       if (questions.length > 30) questions = questions.slice(0, 30);
       new WYRGame(container, questions);
-    });
+    }, ['wyr']);
   }
 
   function parseQuestions() {
