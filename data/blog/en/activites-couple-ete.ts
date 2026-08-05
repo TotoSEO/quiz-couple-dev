@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'summer-couple-activities',
   title: "10 Summer Activities to Do as a Couple",
-  metaTitle: "10 Summer Activities to Do as a Couple",
+  metaTitle: "Summer Couple Activities: 10 Simple, Cheap Ideas to Try",
   metaDescription: "Ten summer couple activities that break from the usual outings: a market with no list, river swimming, a night outside, film photos... simple and cheap.",
   featuredImage: '/blog/activites-couple-ete.webp',
   featuredImageAlt: "Summer picnic at sunset with two lemonades, a wicker basket and a bicycle leaning against a tree",

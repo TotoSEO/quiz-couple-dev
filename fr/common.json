@@ -39,7 +39,9 @@
     "testInfidelite": "Test infidélité",
     "testInfideliteDesc": "Détectez les signes d'infidélité",
     "testBebe": "Test bébé",
-    "testBebeDesc": "Êtes-vous prêt(e) pour un enfant ?"
+    "testBebeDesc": "Êtes-vous prêt(e) pour un enfant ?",
+    "testKarmique": "Test relation karmique",
+    "testSuisJeAmoureux": "Suis-je amoureux ?"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",

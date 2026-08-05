@@ -12,7 +12,7 @@
     "metaDescription": "Free common points test for couples with 200 questions. Take turns answering and discover your compatibility percentage. No registration!"
   },
   "testCompatibilite": {
-    "title": "Love Compatibility Test: Are You Really Made for Each Other?",
+    "title": "Love Compatibility Test: Your Score in 20 Questions, Free",
     "shortTitle": "Love Compatibility",
     "description": "20 questions to answer as a couple and measure your love compatibility: values, life plans, lifestyle. Discover your compatibility score!",
     "metaDescription": "Are you truly compatible in love? Answer 20 questions together and get your love compatibility score: values, plans, everyday life. Free, instant result."
@@ -137,7 +137,7 @@
     "metaDescription": "Free 5 love languages test based on Gary Chapman's theory. 30 questions to discover how you express and receive love. Personalized results and couple advice."
   },
   "quizGenant": {
-    "title": "Embarrassing Couple Quiz: How Far Do You Dare to Go?",
+    "title": "Embarrassing Couple Quiz: 15 Questions You Will Blush At",
     "shortTitle": "Embarrassing Quiz",
     "description": "15 questions to find out if your couple is discreet, uninhibited, or downright legendary in public.",
     "metaDescription": "Making out at parties, ordering for your partner at restaurants... How far does your couple go? Fun quiz to test your limits together."
@@ -155,7 +155,7 @@
     "metaDescription": "100 true or false questions about couples: myths, psychology, surprising statistics and common misconceptions. Test your knowledge now."
   },
   "activities": {
-    "title": "Couple Activities Near Me, Find Date Ideas Close to You | Quiz Couple",
+    "title": "Couple Activities Near Me: Find Date Ideas Close to You",
     "shortTitle": "Couple activities",
     "description": "Find couple activities near you. Free geolocated tool: filter by budget, atmosphere and distance for unforgettable date ideas.",
     "metaDescription": "Find couple activities near you. Free geolocated tool: filter by budget, atmosphere and distance for unforgettable date ideas."
@@ -179,7 +179,7 @@
     "metaDescription": "Do you really trust your partner? 20 questions to assess trust in your relationship. Free, confidential, instant result."
   },
   "testInfidelite": {
-    "title": "Infidelity test: the signs that don't lie",
+    "title": "Infidelity Test for Couples: 20 Questions on the Real Signs",
     "shortTitle": "Infidelity Test",
     "description": "20 questions to spot the warning signals in your relationship: secrecy, emotional distance, behavioural changes. Instant result.",
     "metaDescription": "Is your partner cheating? 20 questions to identify the warning signs in your relationship. Free, confidential, instant result."
@@ -189,5 +189,17 @@
     "shortTitle": "Baby Ready Test",
     "description": "20 questions to assess your readiness for parenthood: emotional maturity, finances, relationship, lifestyle. Instant result.",
     "metaDescription": "Are you ready for a baby? 20 questions on emotional maturity, finances and your relationship. Free, confidential, instant result."
+  },
+  "testKarmique": {
+    "title": "Karmic Relationship Test: What Bond Are You Really In?",
+    "shortTitle": "Karmic relationship test",
+    "description": "20 questions to find out whether your bond is karmic, mirror or peaceful.",
+    "metaDescription": "Karmic relationship, twin flame or soulmate? 20 questions to identify your type of bond. Free test, instant result, no sign-up needed."
+  },
+  "testSuisJeAmoureux": {
+    "title": "Am I in Love Test: Love, Crush or Just Attraction?",
+    "shortTitle": "Am I in love?",
+    "description": "20 questions to tell love from a crush and know what you really feel.",
+    "metaDescription": "Am I in love or just attracted? 20 questions to tell real love from a crush. Free test, instant result, no sign-up needed."
   }
 }

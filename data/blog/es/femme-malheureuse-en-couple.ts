@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'mujer-infeliz-en-pareja-senales',
   title: "Cómo reconocer a una mujer infeliz en pareja: las verdaderas señales",
-  metaTitle: "Cómo reconocer a una mujer infeliz en pareja: las verdaderas señales",
+  metaTitle: "Mujer infeliz en pareja: las señales reales que hay que ver",
   metaDescription: "Sigue sonriendo, pero algo ha cambiado. Las señales de que una mujer es infeliz en pareja llevan tiempo ahí. Te explicamos qué mirar.",
   featuredImage: '',
   featuredImageAlt: "Mujer pensativa sentada sola, señales de malestar en la pareja",

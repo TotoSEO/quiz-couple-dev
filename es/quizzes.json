@@ -12,7 +12,7 @@
     "metaDescription": "Test de puntos comunes para parejas con 200 preguntas para medir vuestra compatibilidad. Respondan por turnos. ¡Gratis y sin registro!"
   },
   "testCompatibilite": {
-    "title": "Test de Compatibilidad Amorosa: ¿Estáis hechos el uno para el otro?",
+    "title": "Test de compatibilidad amorosa gratis: vuestro porcentaje real",
     "shortTitle": "Compatibilidad Amorosa",
     "description": "20 preguntas para responder en pareja y medir vuestra compatibilidad amorosa: valores, proyectos, estilo de vida. ¡Descubre tu porcentaje de compatibilidad!",
     "metaDescription": "¿Sois realmente compatibles en el amor? Responded 20 preguntas en pareja y obtened vuestro porcentaje de compatibilidad amorosa: valores, proyectos, día a día."
@@ -125,7 +125,7 @@
     "metaDescription": "¿Listos para dar el paso y vivir juntos? Este test de pareja os ayuda a saber si sois realmente compatibles en el día a día. 2 modos: juntos o por separado."
   },
   "testJalousie": {
-    "title": "Test de celos en pareja: ¿eres celoso/a? Evalúa también a tu pareja",
+    "title": "Test de celos en pareja: ¿eres celoso o celosa? Gratis",
     "shortTitle": "Test Celos",
     "description": "Dos tests de celos para parejas: uno para medir los tuyos, otro para evaluar los de tu pareja. Resultados matizados.",
     "metaDescription": "Dos tests de celos para parejas: uno para medir los tuyos, otro para evaluar los de tu pareja. Preguntas precisas, resultados matizados."
@@ -179,7 +179,7 @@
     "metaDescription": "¿De verdad te fías de tu pareja? 20 preguntas para evaluar la confianza en vuestra relación. Gratis, confidencial, resultado inmediato."
   },
   "testInfidelite": {
-    "title": "Test de infidelidad: las señales que no engañan",
+    "title": "Test de infidelidad: 20 preguntas para salir de dudas",
     "shortTitle": "Test Infidelidad",
     "description": "20 preguntas para detectar las señales de alerta en tu relación: secretismo, distancia emocional, cambios de comportamiento. Resultado inmediato.",
     "metaDescription": "¿Tu pareja te engaña? 20 preguntas para identificar las señales de alerta en tu relación. Gratis, confidencial, resultado inmediato."
@@ -189,5 +189,17 @@
     "shortTitle": "Test Bebé",
     "description": "20 preguntas para evaluar tu preparación para la crianza: madurez emocional, economía, pareja, estilo de vida. Resultado inmediato.",
     "metaDescription": "¿Estás listo para un bebé? 20 preguntas sobre madurez emocional, economía y pareja. Gratis, confidencial, resultado inmediato."
+  },
+  "testKarmique": {
+    "title": "Test de relación kármica: ¿qué vínculo os une de verdad?",
+    "shortTitle": "Test relación kármica",
+    "description": "20 preguntas para saber si tu vínculo es kármico, espejo o sereno.",
+    "metaDescription": "¿Relación kármica, llama gemela o alma gemela? 20 preguntas para identificar tu tipo de vínculo. Test gratis, resultado inmediato y sin registro."
+  },
+  "testSuisJeAmoureux": {
+    "title": "Test ¿estoy enamorado? Amor, capricho o simple atracción",
+    "shortTitle": "¿Estoy enamorado?",
+    "description": "20 preguntas para distinguir el amor del capricho y saber qué sientes.",
+    "metaDescription": "¿Estoy enamorado o solo atraído? 20 preguntas para distinguir el amor del capricho. Test gratis, resultado inmediato y sin registro."
   }
 }

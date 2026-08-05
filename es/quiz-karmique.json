@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "title": "¿Estás viviendo una relación kármica?",
+    "titleHighlight": "relación kármica",
+    "description": "20 preguntas para ponerle nombre al vínculo que os une: kármico, espejo o sereno.",
+    "badge": "Test gratis • 20 preguntas • 5 min"
+  },
+  "section1": {
+    "title": "¿Qué es una relación kármica?",
+    "p1": "En el vocabulario espiritual, una <strong class=\"text-foreground\">relación kármica</strong> designa un vínculo que no estaría ahí para durar, sino para enseñarte algo. La palabra viene del sánscrito <em>karma</em>, que significa « acción »: según esta lectura, dos personas se reencuentran en esta vida porque una historia empezada en otra parte nunca llegó a cerrarse. De ahí que se hable de deuda pendiente, de contrato de almas, de lección por comprender.",
+    "p2": "Lo llamativo no es la definición, sino lo constante que resulta el retrato. Quienes se reconocen en el término describen casi siempre lo mismo: una atracción inmediata y desproporcionada, la inquietante sensación de conocerse ya, y después ciclos de ruptura y reconciliación que se repiten sin que nada se resuelva. Muchísima intensidad y muy poca paz. Una relación kármica nunca es tibia, y eso es precisamente lo que la hace tan difícil de dejar.",
+    "p3": "Digámoslo con claridad: nada demuestra la existencia de las vidas anteriores, y este test no va a zanjar esa cuestión. Lo que sí mide es perfectamente observable: la repetición, el agotamiento, la dificultad para marcharse, la sensación de repetir una escena conocida. Lo llames karma o simplemente patrón relacional, los hechos que describes siguen siendo los mismos. El vocabulario espiritual te da una imagen, el test te da una medida."
+  },
+  "section2": {
+    "title": "Las 7 señales de una relación kármica",
+    "intro": "Ninguna señal basta por sí sola. Es su acumulación la que dibuja lo que se llama un vínculo kármico, y es exactamente lo que el test evalúa pregunta tras pregunta.",
+    "sign1Title": "El reconocimiento inmediato",
+    "sign1Text": "Desde los primeros intercambios tuviste la sensación de conocer a esa persona de toda la vida. Esa familiaridad es la señal más citada, y a menudo la que le da al encuentro su aire de destino.",
+    "sign2Title": "Un comienzo fulgurante",
+    "sign2Text": "Todo fue muy rápido: declaraciones encendidas, planes inmediatos, la sensación de haber encontrado la pieza que faltaba. Ese arranque a toda velocidad se parece mucho a lo que se conoce como <a href=\"/es/blog/love-bombing-senales/\">love bombing</a>, y crea un apego potente antes incluso de haberos conocido de verdad.",
+    "sign3Title": "Rupturas seguidas de vueltas",
+    "sign3Text": "Ya lo habéis dejado una vez, dos, más. Y habéis vuelto, siempre por los mismos motivos, con la misma convicción de que esta vez será distinto. Es el indicio más característico del vínculo kármico.",
+    "sign4Title": "La misma discusión en bucle",
+    "sign4Text": "No es que discutáis mucho: es que discutís siempre igual, con las mismas frases y el mismo final. Nada se resuelve, todo se repite.",
+    "sign5Title": "Un cansancio difícil de explicar",
+    "sign5Text": "Después de un rato juntos te sientes vacío·a en lugar de recargado·a. Nudo en el estómago, noches en vela, el móvil consultado cada cinco minutos: tu cuerpo registra lo que tu cabeza minimiza.",
+    "sign6Title": "La imposibilidad de marcharse",
+    "sign6Text": "Sabes que esta relación te desgasta, ya has intentado dejarla y no lo consigues. Esa impotencia tiene un nombre mucho más terrenal que el karma: se parece bastante a una <a href=\"/es/blog/dependencia-emocional-en-la-pareja/\">dependencia emocional</a>.",
+    "sign7Title": "La sensación de deuda",
+    "sign7Text": "Tienes la impresión de deberle algo a esa persona, sin saber decir el qué. Es ese sentimiento, más que el amor, lo que te retiene. En la lectura kármica, esa es justamente la deuda que habría que saldar."
+  },
+  "section3": {
+    "title": "Cómo leer tu resultado",
+    "intro": "Cada una de las 20 preguntas propone tres lecturas de una misma situación, ligadas a tres ejes: el vínculo sereno, el vínculo espejo y el vínculo kármico. El eje que más aparece determina tu perfil, y los porcentajes finales te muestran la dosis exacta de los tres.",
+    "headerProfile": "Tu perfil",
+    "headerMeaning": "Qué indica",
+    "headerAction": "Qué puedes hacer con ello",
+    "row1Profile": "Vínculo sereno",
+    "row1Meaning": "Tu relación no gira en círculos. Te quedas porque estás bien, no porque no puedas marcharte.",
+    "row1Action": "No confundas la calma con la sosería. Cuida lo que hace segura la relación, empezando por la libertad de decirlo todo.",
+    "row2Profile": "Ecos kármicos",
+    "row2Meaning": "Una parte de vuestra historia se repite, pero el resto de la relación se sostiene y te hace bien.",
+    "row2Action": "Identifica el bucle concreto y háblalo mientras la relación aún sea lo bastante sólida para escucharlo.",
+    "row3Profile": "Vínculo espejo",
+    "row3Meaning": "La relación te sacude y te transforma, pero cada prueba superada te ha dejado más fuerte.",
+    "row3Action": "Comprueba cada seis meses que estás mejor que antes. Mientras sea así, el vínculo está haciendo su trabajo.",
+    "row4Profile": "Relación kármica",
+    "row4Meaning": "Domina la repetición: ciclos de ruptura, la misma discusión, agotamiento, dificultad para irte.",
+    "row4Action": "Anota durante tres semanas cómo te sientes después de cada rato juntos y reléelo luego en frío."
+  },
+  "section4": {
+    "title": "¿Relación kármica, alma gemela o llama gemela?",
+    "intro": "Son los tres términos que aparecen por todas partes y se confunden constantemente. Lo más sencillo para distinguirlos no es preguntarse cuánto os queréis, sino en qué estado sales de la relación.",
+    "headerType": "Tipo de vínculo",
+    "headerFeel": "Qué sientes",
+    "headerEnd": "En qué acaba",
+    "row1Type": "Alma gemela",
+    "row1Feel": "Un alivio. La relación te descansa, te sostiene y te deja más disponible para el resto de tu vida.",
+    "row1End": "Dura, o termina sin destrucción. Se sale intacto.",
+    "row2Type": "Llama gemela",
+    "row2Feel": "Un espejo. La relación te pone frente a lo que evitabas mirar, con separaciones que duelen pero que hacen avanzar.",
+    "row2End": "Transforma. Dure o no, no sales siendo la misma persona.",
+    "row3Type": "Relación kármica",
+    "row3Feel": "Un bucle. La misma escena se repite sin fin, la intensidad permanece, el agotamiento se instala.",
+    "row3End": "Se detiene el día en que uno de los dos deja de alimentar el ciclo. Rara vez antes.",
+    "note": "Estas tres categorías no son diagnósticos ni tienen valor médico. Son imágenes, útiles porque ponen palabras a vivencias muy concretas. Si buscas otra lectura del mismo tema, nuestro <a href=\"/es/test-compatibilidad-amorosa/\">test de compatibilidad amorosa</a> aborda el vínculo desde los valores en lugar de la intensidad."
+  },
+  "section5": {
+    "title": "Qué ve la psicología detrás de esas mismas señales",
+    "p1": "Este es el punto que más interesa a quienes hacen el test: las señales descritas arriba no son imaginarias. De hecho son notablemente estables de un testimonio a otro. La psicología no las niega, las explica de otra manera, y su explicación tiene la ventaja de ser verificable.",
+    "p2": "Tres mecanismos bastan para producir casi todo lo que se atribuye al karma.",
+    "pillar1Title": "El refuerzo intermitente",
+    "pillar1Text": "Una recompensa imprevisible genera un apego mucho más fuerte que una recompensa regular. Es el principio de las máquinas tragaperras. Cuando una relación alterna momentos maravillosos y silencios helados, el apego se refuerza en lugar de apagarse. Es lo que mejor explica por qué las relaciones más inestables son también las más difíciles de dejar.",
+    "pillar2Title": "El estilo de apego",
+    "pillar2Text": "El miedo atroz al abandono, la necesidad de comprobar, la imposibilidad de estar solo·a: esas reacciones no vienen del otro, vienen de cómo aprendiste a vincularte. Dos estilos opuestos que se encuentran producen casi mecánicamente el ciclo de persecución y huida. Nuestro <a href=\"/es/test-estilo-apego/\">test del estilo de apego</a> explora justamente esa pista.",
+    "pillar3Title": "La familiaridad confundida con el destino",
+    "pillar3Text": "El famoso « siento que te conozco de siempre » tiene una explicación sencilla y algo vertiginosa: reconoces un patrón, no un alma. Una dinámica ya vivida, en la infancia o en una relación anterior, te resulta familiar. El cerebro interpreta esa familiaridad como una evidencia, cuando en realidad señala sobre todo que ya sabes interpretar ese papel."
+  },
+  "section6": {
+    "title": "Cómo salir de una relación kármica",
+    "p1": "En la lectura espiritual, una relación kármica termina cuando la lección se comprende. Es una fórmula bonita, pero tiene un defecto: da a entender que habría que quedarse hasta que llegue la comprensión. En la práctica ocurre casi siempre lo contrario. Se entiende después de irse, no antes.",
+    "p2": "Si tu resultado se inclina hacia lo kármico, estas pocas referencias valen más que una larga teoría.",
+    "dontTitle": "Lo que prolonga el bucle",
+    "dont1Title": "Esperar a haberlo entendido",
+    "dont1Text": "Buscar el sentido oculto de la relación es una manera muy elegante de no cambiar nada. Mientras buscas la lección, te quedas, y mientras te quedas, el ciclo sigue girando.",
+    "dont2Title": "Quedar « solo como amigos »",
+    "dont2Text": "Mantener el contacto después de una ruptura alimenta exactamente el apego que intentas deshacer. Es la razón número uno de las vueltas atrás, mucho más que los propios sentimientos.",
+    "doTitle": "Lo que lo cierra",
+    "do1Title": "Escribir hechos, no impresiones",
+    "do1Text": "Anota lo que pasó, lo que se dijo y cómo te sentiste después. Releído en frío, un cuaderno de hechos resiste mucho mejor a la nostalgia que la memoria, que tiene la mala costumbre de guardar solo los buenos momentos.",
+    "do2Title": "Poner un límite claro y observar",
+    "do2Text": "Formula un límite sencillo sobre un comportamiento concreto y mira qué ocurre. Una relación sana se ajusta, una relación en bucle escala o promete sin cambiar nada. La respuesta te enseñará más que diez conversaciones.",
+    "do3Title": "Buscar qué te enganchaba",
+    "do3Text": "La pregunta útil no es « ¿por qué hace eso? » sino « ¿por qué me engancha tanto? ». Es la única parte de la ecuación sobre la que tienes poder, y también la que evitará que vuelvas a empezar con otra persona.",
+    "do4Title": "No quedarte a solas con esto",
+    "do4Text": "Un amigo de confianza, un psicólogo, un grupo de apoyo: da igual el formato, lo importante es salir del círculo cerrado. Un bucle siempre se ve mejor desde fuera que desde dentro."
+  },
+  "section7": {
+    "title": "Para recordar",
+    "p1": "Una relación kármica no es un castigo, y no le debes nada a nadie. Quédate sobre todo con esto: la intensidad no es una prueba de amor, y una lección que te cuesta la salud no es una lección.",
+    "p2": "Este test no es un diagnóstico ni un veredicto. Es un espejo puesto sobre lo que estás viviendo y un vocabulario para hablar de ello. Si el resultado te ha sorprendido, la pregunta más útil sigue siendo la más simple: ¿en qué estado te deja esta relación cuando se cierra la puerta? Nuestro <a href=\"/es/test-relacion-sana/\">test de relación sana</a> plantea lo mismo desde otro ángulo.",
+    "p3": "Y si en tu relación hay miedo, control, humillaciones o violencia, ya no se trata de karma. Nuestros tests sobre la <a href=\"/es/test-relacion-toxica/\">relación tóxica</a> y sobre la <a href=\"/es/test-pareja-narcisista/\">pareja narcisista</a> existen para eso, y hablarlo con un profesional sigue siendo la mejor decisión."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes sobre las relaciones kármicas",
+    "q1": "¿Qué es una relación kármica?",
+    "a1": "Es un término del vocabulario espiritual que designa un vínculo intenso y repetitivo, que existiría para enseñarte algo más que para durar. Se le atribuye un origen en una vida anterior, en forma de deuda pendiente. En concreto, quienes lo viven describen una atracción inmediata, una sensación de déjà vu, ciclos de ruptura y vuelta, y mucho cansancio.",
+    "q2": "¿Cuáles son las señales de una relación kármica?",
+    "a2": "Las siete señales más frecuentes son el reconocimiento inmediato, un comienzo fulgurante, rupturas seguidas de vueltas, la misma discusión en bucle, un cansancio inexplicable, la imposibilidad de marcharse pese al sufrimiento y la sensación de deberle algo al otro. Lo que cuenta es su acumulación, no una señal aislada.",
+    "q3": "¿Qué diferencia hay entre una relación kármica y una llama gemela?",
+    "a3": "Ambos vínculos son intensos, pero no dejan el mismo estado. La llama gemela actúa como un espejo: sacude, transforma, y sales cambiado pero más sólido. La relación kármica se repite sin resolver nada y deja agotado. La pregunta es simple: después de cada prueba, ¿estás mejor o peor que antes?",
+    "q4": "¿Cómo termina una relación kármica?",
+    "a4": "Se detiene el día en que uno de los dos deja de alimentar el ciclo, lo que casi siempre pasa por cortar el contacto de forma clara. La fórmula espiritual dice que acaba « cuando la lección se comprende », pero en la práctica la comprensión llega después de irse, rara vez antes. Quedarse esperando entender es la mejor forma de alargar el bucle.",
+    "q5": "¿Es fiable este test de relación kármica?",
+    "a5": "Es una herramienta de reflexión, no un diagnóstico. No evalúa tus vidas anteriores, mide lo observable en tu relación actual: la repetición, el equilibrio de los esfuerzos, tu estado después de cada rato juntos. El resultado vale por tanto exactamente lo que valen tus respuestas, y conviene releerlo con la cabeza despejada."
+  },
+  "jsonLd": {
+    "quizName": "Test de relación kármica",
+    "quizDescription": "Test gratuito de 20 preguntas para identificar tu tipo de vínculo: relación kármica, vínculo espejo o vínculo sereno."
+  }
+}

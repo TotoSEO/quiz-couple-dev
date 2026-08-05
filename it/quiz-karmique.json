@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "title": "Stai vivendo una relazione karmica?",
+    "titleHighlight": "relazione karmica",
+    "description": "20 domande per dare un nome al legame che vi unisce: karmico, specchio o sereno.",
+    "badge": "Test gratuito • 20 domande • 5 min"
+  },
+  "section1": {
+    "title": "Che cos'è una relazione karmica?",
+    "p1": "Nel vocabolario spirituale, una <strong class=\"text-foreground\">relazione karmica</strong> indica un legame che non sarebbe lì per durare, ma per insegnarti qualcosa. La parola viene dal sanscrito <em>karma</em>, che significa « azione »: secondo questa lettura, due persone si ritrovano in questa vita perché una storia iniziata altrove non è mai stata conclusa. Da qui il parlare di debito da saldare, di contratto tra anime, di lezione da comprendere.",
+    "p2": "Ciò che colpisce non è la definizione, ma quanto sia costante il ritratto. Chi si riconosce in questo termine descrive quasi sempre la stessa cosa: un'attrazione immediata e sproporzionata, la sensazione inquietante di conoscersi già, e poi cicli di rottura e ritorno che si ripetono senza che nulla si risolva. Moltissima intensità, pochissima pace. Una relazione karmica non è mai tiepida, ed è proprio questo a renderla così difficile da lasciare.",
+    "p3": "Diciamolo chiaramente: nulla dimostra l'esistenza delle vite precedenti, e questo test non risolverà la questione. Ciò che invece misura è perfettamente osservabile: la ripetizione, la stanchezza, la difficoltà ad andarsene, la sensazione di rigiocare una scena già nota. Che tu la chiami karma o semplicemente schema relazionale, i fatti che descrivi restano gli stessi. Il vocabolario spirituale ti dà un'immagine, il test ti dà una misura."
+  },
+  "section2": {
+    "title": "I 7 segnali di una relazione karmica",
+    "intro": "Nessun segnale basta da solo. È il loro accumularsi a disegnare quello che si chiama legame karmico, ed è esattamente ciò che il test valuta domanda dopo domanda.",
+    "sign1Title": "Il riconoscimento immediato",
+    "sign1Text": "Fin dai primi scambi hai avuto la sensazione di conoscere questa persona da sempre. Questa familiarità è il segnale più citato in assoluto, e spesso quello che dà all'incontro il suo sapore di destino.",
+    "sign2Title": "Un inizio folgorante",
+    "sign2Text": "È andato tutto velocissimo: dichiarazioni infuocate, progetti immediati, la sensazione di aver trovato il pezzo mancante. Questa partenza a razzo somiglia molto a ciò che si chiama <a href=\"/it/blog/love-bombing-segnali/\">love bombing</a>, e crea un attaccamento potente prima ancora che vi siate davvero conosciuti.",
+    "sign3Title": "Rotture seguite da ritorni",
+    "sign3Text": "Vi siete già lasciati una volta, due, di più. E siete tornati insieme, sempre per gli stessi motivi, con la stessa convinzione che stavolta sarà diverso. È il segno più caratteristico del legame karmico.",
+    "sign4Title": "Lo stesso litigio in loop",
+    "sign4Text": "Non è che litighiate molto: è che litigate sempre allo stesso modo, con le stesse frasi e lo stesso finale. Nulla si risolve, tutto si ripete.",
+    "sign5Title": "Una stanchezza difficile da spiegare",
+    "sign5Text": "Dopo un po' di tempo insieme ti senti svuotato·a invece che ricaricato·a. Nodo allo stomaco, notti in bianco, telefono controllato ogni cinque minuti: il tuo corpo registra ciò che la tua testa minimizza.",
+    "sign6Title": "L'impossibilità di andarsene",
+    "sign6Text": "Sai che questa relazione ti logora, hai già provato a lasciarla e non ci riesci. Questa impotenza ha un nome molto più terreno del karma: assomiglia parecchio a una <a href=\"/it/blog/dipendenza-affettiva-nella-coppia/\">dipendenza affettiva</a>.",
+    "sign7Title": "La sensazione di un debito",
+    "sign7Text": "Hai l'impressione di dover qualcosa a questa persona, senza riuscire a dire cosa. È questa sensazione, più dell'amore, a trattenerti. Nella lettura karmica è proprio il debito che andrebbe saldato."
+  },
+  "section3": {
+    "title": "Come leggere il tuo risultato",
+    "intro": "Ognuna delle 20 domande propone tre letture della stessa situazione, legate a tre assi: il legame sereno, il legame specchio e il legame karmico. È l'asse che emerge più spesso a determinare il tuo profilo, e le percentuali finali ti mostrano il dosaggio esatto dei tre.",
+    "headerProfile": "Il tuo profilo",
+    "headerMeaning": "Che cosa indica",
+    "headerAction": "Che cosa puoi farne",
+    "row1Profile": "Legame sereno",
+    "row1Meaning": "La tua relazione non gira in tondo. Resti perché stai bene, non perché non puoi andartene.",
+    "row1Action": "Non confondere la calma con la banalità. Cura ciò che rende sicura la relazione, a partire dalla libertà di dire tutto.",
+    "row2Profile": "Echi karmici",
+    "row2Meaning": "Una parte della vostra storia si ripete, ma il resto della relazione regge e ti fa bene.",
+    "row2Action": "Individua il circolo preciso e parlane finché la relazione è ancora abbastanza solida da ascoltarlo.",
+    "row3Profile": "Legame specchio",
+    "row3Meaning": "La relazione ti scuote e ti trasforma, ma ogni prova attraversata ti ha lasciato più solido·a.",
+    "row3Action": "Verifica ogni sei mesi di stare meglio di prima. Finché è così, il legame sta facendo il suo lavoro.",
+    "row4Profile": "Relazione karmica",
+    "row4Meaning": "Domina la ripetizione: cicli di rottura, lo stesso litigio, stanchezza, difficoltà ad andarsene.",
+    "row4Action": "Per tre settimane annota come ti senti dopo ogni momento passato insieme, poi rileggi a mente fredda."
+  },
+  "section4": {
+    "title": "Relazione karmica, anima gemella o fiamma gemella?",
+    "intro": "Sono i tre termini che si incontrano ovunque e vengono continuamente confusi. Il modo più semplice per distinguerli non è chiedersi quanto ci si ami, ma in che stato si esce dalla relazione.",
+    "headerType": "Tipo di legame",
+    "headerFeel": "Che cosa provi",
+    "headerEnd": "Come va a finire",
+    "row1Type": "Anima gemella",
+    "row1Feel": "Un sollievo. La relazione ti riposa, ti sostiene e ti rende più disponibile per il resto della tua vita.",
+    "row1End": "Dura, oppure finisce senza distruzione. Se ne esce intatti.",
+    "row2Type": "Fiamma gemella",
+    "row2Feel": "Uno specchio. La relazione ti mette di fronte a ciò che evitavi di guardare, con separazioni che fanno male ma fanno avanzare.",
+    "row2End": "Trasforma. Che duri o no, non ne esci la stessa persona.",
+    "row3Type": "Relazione karmica",
+    "row3Feel": "Un circolo. La stessa scena si ripete all'infinito, l'intensità resta, la stanchezza si installa.",
+    "row3End": "Si ferma il giorno in cui uno dei due smette di alimentare il ciclo. Raramente prima.",
+    "note": "Queste tre categorie non sono diagnosi e non hanno alcun valore medico. Sono immagini, utili perché danno parole a vissuti molto concreti. Se cerchi una lettura diversa dello stesso tema, il nostro <a href=\"/it/test-compatibilita-amorosa/\">test di compatibilità amorosa</a> affronta il legame partendo dai valori invece che dall'intensità."
+  },
+  "section5": {
+    "title": "Che cosa vede la psicologia dietro gli stessi segnali",
+    "p1": "Ecco il punto che interessa di più a chi fa questo test: i segnali descritti sopra non sono immaginari. Anzi, sono notevolmente stabili da una testimonianza all'altra. La psicologia non li nega, li spiega in altro modo, e la sua spiegazione ha il vantaggio di essere verificabile.",
+    "p2": "Tre meccanismi bastano a produrre quasi tutto ciò che viene attribuito al karma.",
+    "pillar1Title": "Il rinforzo intermittente",
+    "pillar1Text": "Una ricompensa imprevedibile crea un attaccamento molto più forte di una ricompensa regolare. È il principio delle slot machine. Quando una relazione alterna momenti meravigliosi e silenzi gelidi, l'attaccamento si rafforza invece di spegnersi. È la spiegazione migliore del perché le relazioni più instabili siano anche le più difficili da lasciare.",
+    "pillar2Title": "Lo stile di attaccamento",
+    "pillar2Text": "La paura tremenda dell'abbandono, il bisogno di controllare, l'impossibilità di stare soli: queste reazioni non vengono dall'altro, vengono dal modo in cui hai imparato ad attaccarti. Due stili opposti che si incontrano producono quasi meccanicamente il ciclo inseguimento e fuga. Il nostro <a href=\"/it/test-stile-attaccamento/\">test dello stile di attaccamento</a> esplora esattamente questa pista.",
+    "pillar3Title": "La familiarità scambiata per destino",
+    "pillar3Text": "Il famoso « mi sembra di conoscerti da sempre » ha una spiegazione semplice e un po' vertiginosa: stai riconoscendo uno schema, non un'anima. Una dinamica già vissuta, nell'infanzia o in una relazione precedente, ti risulta familiare. Il cervello interpreta quella familiarità come un'evidenza, mentre segnala soprattutto che sai già recitare quel ruolo."
+  },
+  "section6": {
+    "title": "Come uscire da una relazione karmica",
+    "p1": "Nella lettura spirituale, una relazione karmica finisce quando la lezione è compresa. È una bella formula, ma ha un difetto: lascia intendere che bisognerebbe restare finché la comprensione arriva. Nei fatti accade quasi sempre il contrario. Si capisce dopo essere andati via, non prima.",
+    "p2": "Se il tuo risultato pende dal lato karmico, questi pochi punti fermi valgono più di una lunga teoria.",
+    "dontTitle": "Ciò che prolunga il circolo",
+    "dont1Title": "Aspettare di aver capito",
+    "dont1Text": "Cercare il senso nascosto della relazione è un modo molto elegante di non cambiare nulla. Finché cerchi la lezione, resti, e finché resti, il ciclo continua a girare.",
+    "dont2Title": "Restare « solo amici »",
+    "dont2Text": "Il contatto mantenuto dopo una rottura alimenta esattamente l'attaccamento che stai cercando di sciogliere. È la ragione numero uno dei ritorni indietro, molto più dei sentimenti stessi.",
+    "doTitle": "Ciò che lo chiude",
+    "do1Title": "Scrivere i fatti, non le impressioni",
+    "do1Text": "Annota che cosa è successo, che cosa è stato detto e come ti sei sentito·a dopo. Riletto a mente fredda, un quaderno di fatti resiste alla nostalgia molto meglio della memoria, che ha la brutta abitudine di conservare solo i momenti belli.",
+    "do2Title": "Porre un limite chiaro e osservare",
+    "do2Text": "Formula un limite semplice su un comportamento preciso, poi guarda che cosa succede. Una relazione sana si aggiusta, una relazione in loop alza il tiro o promette senza cambiare nulla. La risposta ti insegnerà più di dieci conversazioni.",
+    "do3Title": "Cercare che cosa ti attirava",
+    "do3Text": "La domanda utile non è « perché lui o lei fa così? » ma « perché mi prende così tanto? ». È l'unica parte dell'equazione su cui hai potere, ed è anche quella che ti eviterà di ricominciare con qualcun altro.",
+    "do4Title": "Non restare solo·a con questo",
+    "do4Text": "Un amico fidato, uno psicologo, un gruppo di parola: il formato conta poco, l'essenziale è uscire dal circolo chiuso. Un loop si vede sempre meglio da fuori che da dentro."
+  },
+  "section7": {
+    "title": "Da ricordare",
+    "p1": "Una relazione karmica non è una punizione, e non devi nulla a nessuno. Tieni presente soprattutto questo: l'intensità non è una prova d'amore, e una lezione che ti costa la salute non è una lezione.",
+    "p2": "Questo test non è né una diagnosi né un verdetto. È uno specchio posato su ciò che stai vivendo e un vocabolario per parlarne. Se il risultato ti ha sorpreso·a, la domanda più utile resta la più semplice: in che stato ti lascia questa relazione, una volta chiusa la porta? Il nostro <a href=\"/it/test-relazione-sana/\">test della relazione sana</a> pone la stessa domanda da un altro angolo.",
+    "p3": "E se nella tua relazione ci sono paura, controllo, umiliazioni o violenze, non si tratta più di karma. I nostri test sulla <a href=\"/it/test-relazione-tossica/\">relazione tossica</a> e sul <a href=\"/it/test-partner-narcisista/\">partner narcisista</a> servono a questo, e parlarne con un professionista resta la decisione migliore."
+  },
+  "faq": {
+    "title": "Domande frequenti sulle relazioni karmiche",
+    "q1": "Che cos'è una relazione karmica?",
+    "a1": "È un termine del vocabolario spirituale che indica un legame intenso e ripetitivo, che esisterebbe per insegnarti qualcosa più che per durare. Se ne attribuisce l'origine a una vita precedente, sotto forma di debito da saldare. In concreto, chi la vive descrive un'attrazione immediata, una sensazione di déjà vu, cicli di rottura e ritorno e molta stanchezza.",
+    "q2": "Quali sono i segnali di una relazione karmica?",
+    "a2": "I sette segnali più ricorrenti sono il riconoscimento immediato, un inizio folgorante, rotture seguite da ritorni, lo stesso litigio che gira in tondo, una stanchezza inspiegabile, l'impossibilità di andarsene nonostante la sofferenza e la sensazione di dovere qualcosa all'altro. Conta il loro accumularsi, non un segnale isolato.",
+    "q3": "Che differenza c'è tra una relazione karmica e una fiamma gemella?",
+    "a3": "Entrambi i legami sono intensi, ma non lasciano lo stesso stato. La fiamma gemella agisce come uno specchio: scuote, trasforma, e se ne esce cambiati ma più solidi. La relazione karmica si ripete senza risolvere nulla e lascia esausti. La domanda da farsi è semplice: dopo ogni prova, stai meglio o peggio di prima?",
+    "q4": "Come finisce una relazione karmica?",
+    "a4": "Si ferma il giorno in cui uno dei due smette di alimentare il ciclo, il che passa quasi sempre da un taglio netto dei contatti. La formula spirituale dice che finisce « quando la lezione è compresa », ma nei fatti la comprensione arriva dopo la partenza, raramente prima. Restare in attesa di capire è il modo migliore per prolungare il circolo.",
+    "q5": "Questo test sulla relazione karmica è affidabile?",
+    "a5": "È uno strumento di riflessione, non una diagnosi. Non valuta le tue vite precedenti, misura ciò che è osservabile nella tua relazione attuale: la ripetizione, l'equilibrio degli sforzi, il tuo stato dopo ogni momento passato insieme. Il risultato vale quindi esattamente quanto valgono le tue risposte, e conviene rileggerlo a mente riposata."
+  },
+  "jsonLd": {
+    "quizName": "Test relazione karmica",
+    "quizDescription": "Test gratuito di 20 domande per identificare il tuo tipo di legame: relazione karmica, legame specchio o legame sereno."
+  }
+}
