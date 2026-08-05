@@ -279,6 +279,30 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/test-relation-karmique/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-relation-karmique/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/karmic-relationship-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-relacion-karmica/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/karmische-beziehung-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-relazione-karmica/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-relation-karmique/"/>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/test-suis-je-amoureux/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-suis-je-amoureux/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/am-i-in-love-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-estoy-enamorado/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/bin-ich-verliebt-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-sono-innamorato/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-suis-je-amoureux/"/>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/quiz-couple-genant/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-couple-genant/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/embarrassing-couple-quiz/"/>

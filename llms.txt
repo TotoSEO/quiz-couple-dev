@@ -1,6 +1,6 @@
 # Quiz Couple
 
-> Quiz Couple is a free online platform offering 26+ relationship quizzes and tests for couples. Available in 5 languages (French, English, Spanish, German, Italian).
+> Quiz Couple is a free online platform offering 32 relationship quizzes and tests for couples. Available in 5 languages (French, English, Spanish, German, Italian).
 
 ## Main Features
 
@@ -14,6 +14,9 @@
 
 ### Relationship Tests
 - [Couple Compatibility Test](https://quiz-couple.com/en/couple-compatibility-test/): 20-question relationship strength assessment
+- [Love Compatibility Test](https://quiz-couple.com/en/love-compatibility-test/): 20 questions answered by both partners on values, life plans and daily habits, with a compatibility percentage
+- [Am I in Love Test](https://quiz-couple.com/en/am-i-in-love-test/): 20 questions to tell love from a crush, scored so that idealising someone counts for less than knowing them with their flaws
+- [Karmic Relationship Test](https://quiz-couple.com/en/karmic-relationship-test/): typology test sorting your bond into karmic, mirror (twin flame) or peaceful (soulmate), with a psychological reading of the same signs
 - [Toxic Relationship Test](https://quiz-couple.com/en/toxic-relationship-test/): Identify unhealthy relationship patterns
 - [Narcissistic Partner Test](https://quiz-couple.com/en/narcissistic-partner-test/): 20 questions to spot narcissistic abuse, manipulation and gaslighting
 - [Love or Habit Test](https://quiz-couple.com/en/love-or-habit-test/): 20 questions to tell whether you stay together out of love or habit
@@ -41,8 +44,8 @@
 - [Embarrassing Couple Quiz](https://quiz-couple.com/en/embarrassing-couple-quiz/): Awkward questions
 - [Would You Rather Quiz](https://quiz-couple.com/en/would-you-rather-couple-quiz/): Choice dilemmas
 - [True or False Quiz](https://quiz-couple.com/en/true-or-false-couple-quiz/): Relationship myths
-- [Quiz Les Z'Amours](https://quiz-couple.com/quiz-couple-les-zamours/): Online version of the French TV show "Les Z'Amours" — guess your partner's answers (FR)
-- [Temptation Island Quiz](https://quiz-couple.com/en/temptation-island-quiz/): Unofficial quiz inspired by the Temptation Island format — 12 days on the island, 30 tempting situations and a final bonfire verdict
+- [Quiz Les Z'Amours](https://quiz-couple.com/quiz-couple-les-zamours/): Online version of the French TV show "Les Z'Amours", guess your partner's answers (FR)
+- [Temptation Island Quiz](https://quiz-couple.com/en/temptation-island-quiz/): Unofficial quiz inspired by the Temptation Island format, with 12 days on the island, 30 tempting situations and a final bonfire verdict
 
 ### Other Tools
 - [Couple Questions](https://quiz-couple.com/en/couple-questions/): 200+ conversation starters
