@@ -365,8 +365,62 @@ var QuizEngine = (function() {
     share: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>'
   };
 
-  // ── Share result (Web Share API with copy-link fallback) ──
-  function renderShareButton(wrap, shareText) {
+  // ── Message de partage ────────────────────────────────────
+  // Le partage ne doit jamais se resumer a l'URL : on compose une phrase qui
+  // porte le score, le nom du quiz, le verdict obtenu et une invitation.
+  //   { type: 'solo' | 'duo' | 'profil' | 'fun',
+  //     score, total, pct, verdict }
+  // L'emoji vient du quiz et jamais du score : sur les tests ou un score eleve
+  // est un mauvais signe (toxique, PN, divorce), un 🎉 serait deplace.
+  function nomDuQuiz() {
+    var quizEl = document.getElementById('quiz-engine');
+    var cle = quizEl ? quizEl.dataset.quiz : '';
+    var fiche = null;
+    for (var i = 0; i < ALL_QUIZZES_LIST.length; i++) {
+      if (ALL_QUIZZES_LIST[i].key === cle) { fiche = ALL_QUIZZES_LIST[i]; break; }
+    }
+    var nom = '';
+    if (fiche) nom = tg('quizNames.' + fiche.route, '');
+    if (!nom || nom.indexOf('quizNames.') === 0) {
+      var h1 = document.querySelector('h1');
+      nom = h1 ? h1.textContent.replace(/\s+/g, ' ').trim() : document.title;
+    }
+    return { nom: nom, emoji: fiche ? fiche.icon : '💜' };
+  }
+
+  function messagePartage(o) {
+    o = o || {};
+    var q = nomDuQuiz();
+    var type = o.type || 'fun';
+    var phrase;
+    if (type === 'solo' && o.total) phrase = tg('share.soloScore', 'J\'ai obtenu {{score}}/{{total}} au {{quiz}}');
+    else if (type === 'solo') phrase = tg('share.soloPct', 'J\'ai obtenu {{pct}} % au {{quiz}}');
+    else if (type === 'duo' && o.points) phrase = tg('share.duoPoints', 'On a marqué {{score}} points au {{quiz}}');
+    else if (type === 'duo') phrase = tg('share.duoPct', 'On a obtenu {{pct}} % au {{quiz}}');
+    else if (type === 'profil') phrase = tg('share.profil', 'J\'ai fait le {{quiz}}');
+    else phrase = tg('share.fun', 'On vient de faire le {{quiz}}');
+
+    phrase = phrase
+      .replace(/\{\{quiz\}\}/g, q.nom)
+      .replace(/\{\{score\}\}/g, o.score)
+      .replace(/\{\{total\}\}/g, o.total)
+      .replace(/\{\{pct\}\}/g, o.pct);
+
+    if (o.verdict) {
+      phrase += tg('share.verdict', ' : « {{result}} »').replace(/\{\{result\}\}/g, o.verdict);
+    }
+
+    var appel = type === 'solo' ? tg('share.ctaSolo', 'Et vous, vous en êtes où ? Faites le test 👉')
+      : type === 'duo' ? tg('share.ctaDuo', 'Et vous, vous faites combien ? Essayez 👉')
+      : type === 'profil' ? tg('share.ctaProfil', 'Et vous, quel est le vôtre ? 👉')
+      : tg('share.ctaFun', 'À votre tour 👉');
+
+    return q.emoji + ' ' + phrase + '\n' + appel + ' ' + location.href;
+  }
+
+  // ── Share result (Web Share API with copy fallback) ──
+  // `partage` est soit l'objet decrit ci-dessus, soit une chaine deja prete.
+  function renderShareButton(wrap, partage) {
     var shareRow = el('div', 'result-share-row mt-6');
     var btn = el('button', 'result-share-btn');
     var label = tg('result.shareYourResult', 'Partagez votre résultat !');
@@ -375,7 +429,7 @@ var QuizEngine = (function() {
     function flashCopied() {
       var original = btn.innerHTML;
       btn.classList.add('result-share-btn--copied');
-      btn.innerHTML = ICONS.check + '<span>' + esc(tg('share.linkCopied', 'Lien copié ! 💜')) + '</span>';
+      btn.innerHTML = ICONS.check + '<span>' + esc(tg('share.messageCopied', 'Message copié ! 💜')) + '</span>';
       setTimeout(function() {
         btn.innerHTML = original;
         btn.classList.remove('result-share-btn--copied');
@@ -393,14 +447,16 @@ var QuizEngine = (function() {
     }
 
     btn.addEventListener('click', function() {
-      var url = location.href;
-      var text = shareText || document.title;
+      // Le message contient deja l'URL. On ne passe donc pas `url` a
+      // navigator.share : plusieurs applications ne retiennent que ce champ et
+      // laissent tomber le texte, ce qui ne partageait qu'un lien nu.
+      var texte = typeof partage === 'string' ? partage + '\n' + location.href : messagePartage(partage);
       if (navigator.share) {
-        navigator.share({ title: document.title, text: text, url: url }).catch(function() {});
+        navigator.share({ title: tg('share.titre', 'Quiz Couple'), text: texte }).catch(function() {});
       } else if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(flashCopied).catch(function() { fallbackCopy(url); });
+        navigator.clipboard.writeText(texte).then(flashCopied).catch(function() { fallbackCopy(texte); });
       } else {
-        fallbackCopy(url);
+        fallbackCopy(texte);
       }
     });
 
@@ -495,16 +551,32 @@ var QuizEngine = (function() {
   }
 
   // ─── Related quizzes data ────────────────────────────────
+  // `key` = valeur de data-quiz sur la page, `route` = cle de traduction et de
+  // slug. Cette liste sert au bloc « Poursuivez avec d'autres tests » et au nom
+  // du quiz dans le message de partage : une page absente d'ici n'etait jamais
+  // proposee ailleurs et partageait un nom vide.
   var ALL_QUIZZES_LIST = [
     { type: 'test', key: 'tester-couple', icon: '💕', route: 'testCouple' },
     { type: 'test', key: 'common-points', icon: '🎯', route: 'testCommonPoints' },
+    { type: 'test', key: 'compatibilite', icon: '💘', route: 'testCompatibilite' },
+    { type: 'test', key: 'suis-je-amoureux', icon: '💗', route: 'testSuisJeAmoureux' },
     { type: 'test', key: 'distance', icon: '🌍', route: 'testDistance' },
     { type: 'test', key: 'toxic', icon: '⚠️', route: 'testToxic' },
+    { type: 'test', key: 'pervers', icon: '🎭', route: 'testPervers' },
+    { type: 'test', key: 'amour-habitude', icon: '☕', route: 'testAmourHabitude' },
     { type: 'test', key: 'sain', icon: '💚', route: 'testCoupleSain' },
     { type: 'test', key: 'mariage', icon: '💒', route: 'testMariage' },
     { type: 'test', key: 'divorce', icon: '⚖️', route: 'testDivorce' },
     { type: 'test', key: 'parentalite', icon: '👶', route: 'testParentalite' },
-    { type: 'test', key: 'jalousie', icon: '🫣', route: 'testJalousie' },
+    { type: 'test', key: 'emmenager', icon: '🏠', route: 'testEmmenager' },
+    { type: 'test', key: 'bebe', icon: '🍼', route: 'testBebe' },
+    { type: 'test', key: 'karmique', icon: '🔮', route: 'testKarmique' },
+    { type: 'test', key: 'jalousie1', icon: '🫣', route: 'testJalousie' },
+    { type: 'test', key: 'jalousie2', icon: '🫣', route: 'testJalousie' },
+    { type: 'test', key: 'infidelite', icon: '💔', route: 'testInfidelite' },
+    { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
+    { type: 'test', key: 'attachement', icon: '🔗', route: 'testAttachement' },
+    { type: 'test', key: 'confiance', icon: '🤝', route: 'testConfiance' },
     { type: 'quiz', key: 'amoureux', icon: '❤️', route: 'quizAmoureux' },
     { type: 'quiz', key: 'coquin', icon: '🔥', route: 'quizCoquin' },
     { type: 'quiz', key: 'marrant', icon: '😂', route: 'quizMarrant' },
@@ -514,6 +586,8 @@ var QuizEngine = (function() {
     { type: 'quiz', key: 'genant', icon: '😳', route: 'quizGenant' },
     { type: 'quiz', key: 'tu-preferes', icon: '🤔', route: 'quizTuPreferes' },
     { type: 'quiz', key: 'vrai-faux', icon: '✅', route: 'quizVraiFaux' },
+    { type: 'quiz', key: 'zamours', icon: '📺', route: 'zamours' },
+    { type: 'quiz', key: 'tentation', icon: '🏝️', route: 'quizTentation' },
   ];
 
   function getRelatedQuizUrl(routeKey, lang) {
@@ -531,7 +605,19 @@ var QuizEngine = (function() {
   }
 
   function renderRelatedQuizzes(wrap, currentQuizKey, lang) {
-    var others = ALL_QUIZZES_LIST.filter(function(q) { return q.key !== currentQuizKey; });
+    var courant = null;
+    for (var c = 0; c < ALL_QUIZZES_LIST.length; c++) {
+      if (ALL_QUIZZES_LIST[c].key === currentQuizKey) { courant = ALL_QUIZZES_LIST[c].route; break; }
+    }
+    // On ecarte la page courante, les doublons de route (les deux tests de
+    // jalousie) et les pages qui n'existent pas dans cette langue (Z'Amours).
+    var vues = {};
+    var others = ALL_QUIZZES_LIST.filter(function(q) {
+      if (q.route === courant || vues[q.route]) return false;
+      if (getRelatedQuizUrl(q.route, lang) === '/') return false;
+      vues[q.route] = true;
+      return true;
+    });
     var shuffled = shuffleArray(others).slice(0, 3);
     if (shuffled.length === 0) return;
 
@@ -577,7 +663,7 @@ var QuizEngine = (function() {
 
     // Pied : partage + actions
     var footer = el('div', 'qr-footer');
-    renderShareButton(footer, opts.shareText);
+    renderShareButton(footer, opts.share || opts.shareText);
     var actions = el('div', 'result-actions-grid');
     var hasPool = quizEl && quizEl.dataset.hasPool === '1';
     if (opts.newQuestions && hasPool) {
@@ -908,7 +994,7 @@ var QuizEngine = (function() {
 
     // ── Pied pleine largeur : UN partage + recommencer ──
     var footer = el('div', 'qr-footer');
-    renderShareButton(footer, result ? result.title : document.title);
+    renderShareButton(footer, { type: 'solo', score: this.totalScore, total: maxScore, pct: pct, verdict: result ? result.title : '' });
     var restartBtn = el('button', 'result-action-btn');
     restartBtn.innerHTML = '<span class="result-action-icon">🔄</span><span class="result-action-label">' + esc(tg('result.restartFromBeginning', 'Recommencer')) + '</span>';
     restartBtn.addEventListener('click', function() { if (self.hasLocalStorage) { try { localStorage.removeItem('quiz-' + self.prefix); } catch(e) {} } self.phase = 'intro'; self.render(); });
@@ -1186,6 +1272,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
+      share: { type: 'duo', pct: pct, verdict: result ? result.title : '' },
       newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
@@ -1266,6 +1353,7 @@ var QuizEngine = (function() {
     wrap.appendChild(box);
 
     renderActionButtons(wrap, {
+      share: { type: 'duo', pct: pctG, verdict: (bG && bG.title) || '' },
       newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
@@ -1469,6 +1557,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
+      share: { type: 'duo', pct: Math.round(((this.p1Score + this.p2Score) / (this.maxScorePerPlayer * 2)) * 100) },
       newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
@@ -1714,6 +1803,7 @@ var QuizEngine = (function() {
     wrap.appendChild(el('p', 'text-muted-foreground mb-6', score + '/' + this.totalRounds + ' ' + tg('coquin.goodGuesses', 'bonnes devinettes')));
 
     renderActionButtons(wrap, {
+      share: { type: 'duo', pct: pct },
       newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
@@ -1917,6 +2007,7 @@ var QuizEngine = (function() {
     wrap.appendChild(el('p', 'text-lg font-medium mb-4', msg));
 
     renderActionButtons(wrap, {
+      share: { type: 'duo', pct: Math.round(((this.scores[0] + this.scores[1]) / this.questions.length) * 100) },
       newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
@@ -2085,6 +2176,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
+      share: { type: 'duo', pct: pct, verdict: result ? result.title : '' },
       newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
@@ -2207,6 +2299,7 @@ var QuizEngine = (function() {
     wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', tg('result.bestMemories', 'Les meilleurs souvenirs se construisent dans le rire et la complicité 💕')));
 
     renderActionButtons(wrap, {
+      share: { type: 'fun' },
       newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
@@ -2445,6 +2538,7 @@ var QuizEngine = (function() {
     wrap.appendChild(el('p', 'text-lg font-medium mb-4', msg));
 
     renderActionButtons(wrap, {
+      share: { type: 'fun' },
       newQuestions: function() { location.reload(); },
       changePlayers: function() { self.phase = 'setup'; self.render(); }
     });
@@ -2690,6 +2784,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
+      share: { type: 'duo', pct: pct, verdict: result ? result.title : '' },
       newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
@@ -2916,6 +3011,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
+      share: { type: 'duo', pct: pct, verdict: result ? result.title : '' },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -3158,6 +3254,7 @@ var QuizEngine = (function() {
     wrap.appendChild(summaryWrap);
 
     renderActionButtons(wrap, {
+      share: { type: 'duo', score: this.score, total: total, pct: pct, verdict: result ? result.title : '' },
       newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'intro'; self.render(); }
     });
@@ -3342,7 +3439,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
-      shareText: this.resultLabel + ' : ' + (profile.title || ''),
+      share: { type: 'profil', verdict: profile.title || '' },
       restart: function() { self.phase = 'intro'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -3728,7 +3825,7 @@ var QuizEngine = (function() {
     var quizEl = document.getElementById('quiz-engine');
     var hasPool = quizEl && quizEl.dataset.hasPool === '1';
     renderActionButtons(wrap, {
-      shareText: 'On a fait ' + this.score + ' pts au Quiz Les Z’Amours en couple ! 💛',
+      share: { type: 'duo', points: true, score: this.score },
       newQuestions: hasPool ? function () { self.initGame(); self.phase = 'guess'; self.render(); smoothScroll(self.container, 'start'); } : null,
       restart: function () { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     });
@@ -4006,7 +4103,7 @@ var QuizEngine = (function() {
     var quizEl = document.getElementById('quiz-engine');
     var hasPool = quizEl && quizEl.dataset.hasPool === '1';
     renderActionButtons(wrap, {
-      shareText: this.tt('shareText', 'J\'ai résisté à {{pct}}% sur l\'île de la tentation ! 🏝️🔥').replace(/\{\{pct\}\}/g, resistance),
+      share: { type: 'solo', pct: resistance },
       newQuestions: hasPool ? function () { self.initStay(); self.phase = 'day'; self.render(); smoothScroll(self.container, 'start'); } : null,
       restart: function () { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     });
