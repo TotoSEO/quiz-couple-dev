@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'actividades-en-pareja-verano',
   title: "10 actividades para hacer en pareja este verano",
-  metaTitle: "10 actividades para hacer en pareja este verano",
+  metaTitle: "Actividades en pareja en verano: 10 ideas simples y baratas",
   metaDescription: "Diez actividades en pareja en verano que rompen con las salidas de siempre: mercado sin lista, baño en el río, noche al aire libre, fotos analógicas... simples y baratas.",
   featuredImage: '/blog/activites-couple-ete.webp',
   featuredImageAlt: "Pícnic de verano al atardecer con dos limonadas, una cesta de mimbre y una bicicleta apoyada en un árbol",

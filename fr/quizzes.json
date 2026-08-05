@@ -6,13 +6,13 @@
     "metaDescription": "Votre couple est-il solide ? Faites ce test gratuit de 20 questions et obtenez un diagnostic clair de votre relation en quelques minutes."
   },
   "testCommonPoints": {
-    "title": "Test des points communs en couple : 200 questions de compatibilité",
+    "title": "Test des points communs en couple : 200 questions à deux",
     "shortTitle": "Test Points Communs",
     "description": "Mesurez vos points communs avec 200 questions ! Répondez à tour de rôle et découvrez votre niveau de compatibilité.",
     "metaDescription": "Avez-vous vraiment des choses en commun ? 200 questions à faire à deux pour mesurer vos affinités et découvrir vos points de compatibilité."
   },
   "testCompatibilite": {
-    "title": "Test de compatibilité amoureuse : êtes-vous faits l'un pour l'autre ?",
+    "title": "Test de compatibilité amoureuse : votre score en 20 questions",
     "shortTitle": "Compatibilité amoureuse",
     "description": "20 questions à faire à deux pour mesurer votre compatibilité amoureuse : valeurs, projets de vie, mode de vie. Découvrez votre taux de compatibilité !",
     "metaDescription": "Êtes-vous vraiment compatibles en amour ? Répondez à 20 questions à deux et obtenez votre taux de compatibilité amoureuse : valeurs, projets, quotidien. Gratuit."
@@ -195,5 +195,17 @@
     "shortTitle": "Quiz Tentation",
     "description": "12 jours sur l'île, 30 situations de tentation : résisterez-vous jusqu'au dernier feu de camp ?",
     "metaDescription": "Quiz Île de la Tentation en ligne et gratuit : 12 jours sur l'île, des tentations chaque jour et un dernier feu de camp. Survivrez-vous à l'épreuve ?"
+  },
+  "testKarmique": {
+    "title": "Test relation karmique : quel lien vous unit vraiment ?",
+    "shortTitle": "Test relation karmique",
+    "description": "20 questions pour savoir si votre lien est karmique, miroir ou apaisé.",
+    "metaDescription": "Relation karmique, flamme jumelle ou âme sœur ? 20 questions pour identifier votre type de lien. Test gratuit, résultat immédiat, sans inscription."
+  },
+  "testSuisJeAmoureux": {
+    "title": "Test suis-je amoureux ? Amour, béguin ou simple attirance",
+    "shortTitle": "Suis-je amoureux ?",
+    "description": "20 questions pour distinguer l'amour du béguin et savoir ce que vous ressentez.",
+    "metaDescription": "Suis-je amoureux ou juste attiré ? 20 questions pour distinguer l'amour du béguin. Test gratuit, résultat immédiat et sans inscription."
   }
 }

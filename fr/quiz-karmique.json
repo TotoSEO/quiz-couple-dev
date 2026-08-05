@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "title": "Vivez-vous une relation karmique ?",
+    "titleHighlight": "relation karmique",
+    "description": "20 questions pour mettre un nom sur le lien qui vous unit : karmique, miroir ou apaisé.",
+    "badge": "Test gratuit • 20 questions • 5 min"
+  },
+  "section1": {
+    "title": "Qu'est-ce qu'une relation karmique ?",
+    "p1": "Une <strong class=\"text-foreground\">relation karmique</strong> désigne, dans le vocabulaire spirituel, un lien qui ne serait pas là pour durer mais pour vous apprendre quelque chose. Le mot vient du sanskrit <em>karma</em>, qui signifie « action » : selon cette lecture, deux personnes se retrouvent dans cette vie parce qu'une histoire commencée ailleurs n'a jamais été terminée. On parle alors de dette à solder, de contrat d'âme, de leçon à comprendre.",
+    "p2": "Ce qui frappe, ce n'est pas la définition, c'est la constance du portrait. Les personnes qui se reconnaissent dans ce terme décrivent presque toujours la même chose : une attirance immédiate et disproportionnée, l'impression troublante de déjà se connaître, puis des cycles de rupture et de retour qui se répètent sans que rien ne se règle. Beaucoup d'intensité, très peu de paix. Une relation karmique n'est jamais tiède, et c'est précisément ce qui la rend si difficile à quitter.",
+    "p3": "Disons les choses franchement : rien ne prouve l'existence des vies antérieures, et ce test ne tranchera pas cette question. Ce qu'il mesure, en revanche, est parfaitement observable : la répétition, l'épuisement, la difficulté à partir, la sensation de rejouer une scène connue. Que vous appeliez cela du karma ou un simple schéma relationnel, les faits que vous décrivez restent les mêmes. Le vocabulaire spirituel vous donne une image, le test vous donne une mesure."
+  },
+  "section2": {
+    "title": "Les 7 signes d'une relation karmique",
+    "intro": "Aucun de ces signes ne suffit à lui seul. C'est leur accumulation qui dessine ce que l'on appelle un lien karmique, et c'est exactement ce que le test évalue question après question.",
+    "sign1Title": "La reconnaissance immédiate",
+    "sign1Text": "Dès les premiers échanges, vous avez eu l'impression de connaître cette personne depuis toujours. Ce sentiment de familiarité est le signe le plus universellement cité, et souvent celui qui donne à la rencontre son parfum de destin.",
+    "sign2Title": "Un début fulgurant",
+    "sign2Text": "Tout est allé très vite : déclarations enflammées, projets immédiats, sentiment d'avoir trouvé la pièce manquante. Ce démarrage en trombe ressemble beaucoup à ce que l'on appelle le <a href=\"/blog/love-bombing/\">love bombing</a>, et il crée un attachement puissant avant même que vous ayez vraiment appris à vous connaître.",
+    "sign3Title": "Des ruptures suivies de retours",
+    "sign3Text": "Vous vous êtes déjà quittés, une fois, deux fois, davantage. Et vous êtes revenus, toujours pour les mêmes raisons, avec la même conviction que cette fois sera différente. C'est le marqueur le plus caractéristique du lien karmique.",
+    "sign4Title": "La même dispute qui tourne en boucle",
+    "sign4Text": "Ce n'est pas que vous vous disputez beaucoup : c'est que vous vous disputez toujours de la même façon, avec les mêmes phrases et la même issue. Rien ne se résout, tout se rejoue.",
+    "sign5Title": "Une fatigue difficile à expliquer",
+    "sign5Text": "Après un moment ensemble, vous vous sentez vidé·e plutôt que rechargé·e. Boule au ventre, nuits blanches, téléphone consulté toutes les cinq minutes : votre corps encaisse ce que votre tête minimise.",
+    "sign6Title": "L'impossibilité de partir",
+    "sign6Text": "Vous savez que cette relation vous abîme, vous avez déjà essayé de la quitter, et vous n'y arrivez pas. Cette impuissance a un nom bien plus terre à terre que le karma : elle ressemble beaucoup à une <a href=\"/blog/dependance-affective/\">dépendance affective</a>.",
+    "sign7Title": "Le sentiment d'une dette",
+    "sign7Text": "Vous avez l'impression de devoir quelque chose à cette personne, sans arriver à dire quoi. C'est ce sentiment, plus que l'amour, qui vous retient. Dans la lecture karmique, c'est précisément la dette qu'il s'agirait de solder."
+  },
+  "section3": {
+    "title": "Comment lire votre résultat",
+    "intro": "Chacune des 20 questions propose trois lectures d'une même situation, rattachées à trois axes : le lien apaisé, le lien miroir et le lien karmique. C'est l'axe qui ressort le plus souvent qui détermine votre profil, et les pourcentages affichés à la fin vous montrent le dosage exact des trois.",
+    "headerProfile": "Votre profil",
+    "headerMeaning": "Ce qu'il indique",
+    "headerAction": "Ce que vous pouvez en faire",
+    "row1Profile": "Lien apaisé",
+    "row1Meaning": "Votre relation ne tourne pas en boucle. Vous restez parce que vous êtes bien, pas parce que vous ne pouvez pas partir.",
+    "row1Action": "Ne confondez pas le calme avec la fadeur. Entretenez ce qui rend la relation sûre, à commencer par la liberté de tout dire.",
+    "row2Profile": "Échos karmiques",
+    "row2Meaning": "Une partie de votre histoire se répète, mais le reste de la relation tient debout et vous fait du bien.",
+    "row2Action": "Identifiez la boucle précise et parlez-en pendant que la relation est encore assez solide pour l'entendre.",
+    "row3Profile": "Lien miroir",
+    "row3Meaning": "La relation vous bouscule et vous transforme, mais chaque épreuve traversée vous a laissé·e plus solide.",
+    "row3Action": "Vérifiez tous les six mois que vous allez mieux qu'avant. Tant que c'est le cas, le lien fait son travail.",
+    "row4Profile": "Relation karmique",
+    "row4Meaning": "La répétition domine : cycles de rupture, même dispute, épuisement, difficulté à partir.",
+    "row4Action": "Notez pendant trois semaines votre état après chaque moment passé ensemble, puis relisez à froid."
+  },
+  "section4": {
+    "title": "Relation karmique, âme sœur ou flamme jumelle ?",
+    "intro": "Ce sont les trois termes que l'on croise partout, et ils sont constamment confondus. Le plus simple pour les distinguer n'est pas de se demander à quel point on s'aime, mais dans quel état on ressort de la relation.",
+    "headerType": "Type de lien",
+    "headerFeel": "Ce que vous ressentez",
+    "headerEnd": "Ce qu'il devient",
+    "row1Type": "Âme sœur",
+    "row1Feel": "Un apaisement. La relation vous repose, vous soutient et vous rend plus disponible pour le reste de votre vie.",
+    "row1End": "Elle dure, ou elle se termine sans destruction. On en sort intact.",
+    "row2Type": "Flamme jumelle",
+    "row2Feel": "Un miroir. La relation vous met face à ce que vous évitiez de regarder, avec des séparations qui font mal mais qui font avancer.",
+    "row2End": "Elle transforme. Qu'elle dure ou non, vous n'en ressortez pas la même personne.",
+    "row3Type": "Relation karmique",
+    "row3Feel": "Une boucle. La même scène se rejoue indéfiniment, l'intensité reste, l'épuisement s'installe.",
+    "row3End": "Elle s'arrête le jour où l'un des deux cesse d'alimenter le cycle. Rarement avant.",
+    "note": "Ces trois catégories ne sont pas des diagnostics et n'ont aucune valeur médicale. Ce sont des images, utiles parce qu'elles mettent des mots sur des ressentis très concrets. Si vous cherchez une lecture différente du même sujet, notre <a href=\"/test-compatibilite-amoureuse/\">test de compatibilité amoureuse</a> aborde le lien par les valeurs plutôt que par l'intensité."
+  },
+  "section5": {
+    "title": "Ce que la psychologie voit derrière les mêmes signes",
+    "p1": "Voici le point qui intéresse le plus les personnes qui font ce test : les signes décrits plus haut ne sont pas imaginaires. Ils sont même remarquablement stables d'un témoignage à l'autre. La psychologie ne les nie pas, elle les explique autrement, et son explication a l'avantage d'être vérifiable.",
+    "p2": "Trois mécanismes suffisent à produire l'essentiel de ce que l'on attribue au karma.",
+    "pillar1Title": "Le renforcement intermittent",
+    "pillar1Text": "Une récompense imprévisible crée un attachement bien plus fort qu'une récompense régulière. C'est le principe des machines à sous. Quand une relation alterne les moments merveilleux et les silences glaçants, l'attachement se renforce au lieu de s'éteindre. C'est ce qui explique le mieux pourquoi les relations les plus instables sont aussi les plus difficiles à quitter.",
+    "pillar2Title": "Le style d'attachement",
+    "pillar2Text": "La peur panique de l'abandon, le besoin de vérifier, l'impossibilité de rester seul·e : ces réactions ne viennent pas de l'autre, elles viennent de la façon dont on a appris à s'attacher. Deux styles opposés qui se rencontrent produisent presque mécaniquement le cycle poursuite / fuite. Notre <a href=\"/test-style-attachement-couple/\">test du style d'attachement</a> explore précisément cette piste.",
+    "pillar3Title": "La familiarité prise pour du destin",
+    "pillar3Text": "Le fameux « j'ai l'impression de te connaître depuis toujours » a une explication simple et un peu vertigineuse : vous reconnaissez un schéma, pas une âme. Une dynamique déjà vécue, dans l'enfance ou dans une relation précédente, vous est familière. Le cerveau interprète cette familiarité comme une évidence, alors qu'elle signale surtout que vous savez déjà jouer ce rôle."
+  },
+  "section6": {
+    "title": "Comment sortir d'une relation karmique",
+    "p1": "Dans la lecture spirituelle, une relation karmique se termine quand la leçon est comprise. C'est une belle formule, mais elle a un défaut : elle laisse entendre qu'il faudrait rester jusqu'à ce que la compréhension arrive. Or dans les faits, c'est presque toujours l'inverse. On comprend après être parti·e, pas avant.",
+    "p2": "Si votre résultat penche du côté karmique, ces quelques repères valent mieux qu'une longue théorie.",
+    "dontTitle": "Ce qui prolonge la boucle",
+    "dont1Title": "Attendre d'avoir compris",
+    "dont1Text": "Chercher le sens caché de la relation est une manière très élégante de ne rien changer. Tant que vous cherchez la leçon, vous restez, et tant que vous restez, le cycle continue de tourner.",
+    "dont2Title": "Rester « juste amis »",
+    "dont2Text": "Le contact maintenu après une rupture entretient exactement l'attachement que vous essayez de défaire. C'est la raison numéro un des retours en arrière, bien plus que les sentiments eux-mêmes.",
+    "doTitle": "Ce qui la referme",
+    "do1Title": "Écrire les faits, pas les impressions",
+    "do1Text": "Notez ce qui s'est passé, ce qui a été dit, et comment vous vous sentiez après. Relu à froid, un carnet de faits résiste beaucoup mieux à la nostalgie que la mémoire, qui a la fâcheuse habitude de ne garder que les bons moments.",
+    "do2Title": "Poser une limite claire et observer",
+    "do2Text": "Formulez une limite simple sur un comportement précis, puis regardez ce qui se passe. Une relation saine s'ajuste, une relation en boucle escalade ou promet sans rien changer. La réponse vous en apprendra plus que dix conversations.",
+    "do3Title": "Chercher ce qui vous attirait",
+    "do3Text": "La question utile n'est pas « pourquoi fait-il ou fait-elle cela ? » mais « pourquoi est-ce que cela m'accroche autant ? ». C'est la seule partie de l'équation sur laquelle vous avez du pouvoir, et c'est aussi celle qui vous évitera de recommencer avec quelqu'un d'autre.",
+    "do4Title": "Ne pas rester seul·e avec ça",
+    "do4Text": "Un ami de confiance, un psychologue, un groupe de parole : peu importe le format, l'essentiel est de sortir du huis clos. Une boucle se voit toujours mieux de l'extérieur que de l'intérieur."
+  },
+  "section7": {
+    "title": "À retenir",
+    "p1": "Une relation karmique n'est pas une punition, et vous n'avez aucune dette à payer à qui que ce soit. Retenez surtout ceci : l'intensité n'est pas une preuve d'amour, et une leçon qui vous coûte votre santé n'est pas une leçon.",
+    "p2": "Ce test n'est ni un diagnostic ni un verdict. C'est un miroir posé sur ce que vous vivez, et un vocabulaire pour en parler. Si le résultat vous a surpris·e, la question la plus utile reste la plus simple : dans quel état cette relation vous laisse-t-elle, une fois la porte refermée ? Notre <a href=\"/test-couple-sain/\">test de couple sain</a> pose la même question sous un autre angle.",
+    "p3": "Et si votre relation comporte de la peur, du contrôle, des humiliations ou des violences, il ne s'agit plus de karma. Nos tests sur la <a href=\"/test-couple-toxique/\">relation toxique</a> et sur le <a href=\"/test-pervers-narcissique/\">pervers narcissique</a> sont faits pour cela, et en parler à un professionnel reste la meilleure décision."
+  },
+  "faq": {
+    "title": "Questions fréquentes sur les relations karmiques",
+    "q1": "Qu'est-ce qu'une relation karmique ?",
+    "a1": "C'est un terme du vocabulaire spirituel qui désigne un lien intense et répétitif, censé exister pour vous apprendre quelque chose plutôt que pour durer. On lui attribue une origine dans une vie antérieure, sous forme de dette à solder. Concrètement, les personnes concernées décrivent une attirance immédiate, un sentiment de déjà-vu, des cycles de rupture et de retour, et beaucoup de fatigue.",
+    "q2": "Quels sont les signes d'une relation karmique ?",
+    "a2": "Les sept signes qui reviennent le plus souvent sont la reconnaissance immédiate, un début fulgurant, des ruptures suivies de retours, la même dispute qui tourne en boucle, une fatigue inexpliquée, l'impossibilité de partir malgré la souffrance, et le sentiment de devoir quelque chose à l'autre. C'est leur accumulation qui compte, pas un signe isolé.",
+    "q3": "Quelle différence entre une relation karmique et une flamme jumelle ?",
+    "a3": "Les deux liens sont intenses, mais ils ne laissent pas le même état. La flamme jumelle agit comme un miroir : elle bouscule, elle transforme, et on en ressort changé mais plus solide. La relation karmique, elle, se répète sans rien résoudre et laisse épuisé. La question à se poser est simple : après chaque épreuve, allez-vous mieux ou moins bien qu'avant ?",
+    "q4": "Comment se termine une relation karmique ?",
+    "a4": "Elle s'arrête le jour où l'un des deux cesse d'alimenter le cycle, ce qui passe presque toujours par une coupure nette du contact. La formule spirituelle veut qu'elle se termine « quand la leçon est comprise », mais dans les faits la compréhension arrive après le départ, rarement avant. Rester en attendant de comprendre est la meilleure façon de prolonger la boucle.",
+    "q5": "Ce test de relation karmique est-il fiable ?",
+    "a5": "C'est un outil de réflexion, pas un diagnostic. Il n'évalue pas vos vies antérieures, il mesure ce qui est observable dans votre relation actuelle : la répétition, l'équilibre des efforts, votre état après chaque moment passé ensemble. Le résultat vaut donc exactement ce que valent vos réponses, et il gagne à être relu à tête reposée."
+  },
+  "jsonLd": {
+    "quizName": "Test relation karmique",
+    "quizDescription": "Test gratuit de 20 questions pour identifier votre type de lien : relation karmique, lien miroir ou lien apaisé."
+  }
+}

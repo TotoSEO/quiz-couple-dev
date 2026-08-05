@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'donna-infelice-in-coppia-segnali',
   title: "Come riconoscere una donna infelice in coppia: i veri segnali",
-  metaTitle: "Come riconoscere una donna infelice in coppia: i veri segnali",
+  metaTitle: "Donna infelice in coppia: i veri segnali da riconoscere",
   metaDescription: "Sorride ancora, ma qualcosa è cambiato. I segnali che una donna è infelice in coppia spesso ci sono da tempo. Ti spieghiamo cosa osservare.",
   featuredImage: '',
   featuredImageAlt: "Donna pensierosa seduta da sola, segnali di malessere nella coppia",

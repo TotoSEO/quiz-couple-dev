@@ -38,7 +38,9 @@
     "testInfidelite": "Test de infidelidad",
     "testInfideliteDesc": "Detecta las señales de alerta",
     "testBebe": "Test listo para un bebé",
-    "testBebeDesc": "Evalúa tu preparación para la crianza"
+    "testBebeDesc": "Evalúa tu preparación para la crianza",
+    "testKarmique": "Test relación kármica",
+    "testSuisJeAmoureux": "¿Estoy enamorado?"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

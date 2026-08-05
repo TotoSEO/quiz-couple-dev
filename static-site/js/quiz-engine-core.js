@@ -3167,11 +3167,20 @@ var QuizEngine = (function() {
   };
 
   // ═══════════════════════════════════════════════════════════
-  // PROFILE QUIZ - attachement (categorical, not a linear score)
-  // Each option maps to an attachment category (secure/anxious/avoidant).
-  // The dominant pattern yields one of 4 styles: secure, anxious,
-  // avoidant, or disorganized (anxious + avoidant both high).
+  // PROFILE QUIZ - typologie (categorical, not a linear score)
+  // Chaque option est rattachee a un axe ; l'axe dominant designe le
+  // profil. Par defaut : les trois axes du test d'attachement
+  // (secure/anxious/avoidant) et ses quatre styles, disorganized
+  // couvrant le cas ou les deux axes insecures sont eleves.
+  // Un quiz peut fournir ses propres axes (axes + axisLabels) et sa
+  // propre regle de classement (classify), comme le test karmique.
   // ═══════════════════════════════════════════════════════════
+  var PROFILE_AXES_DEFAUT = [
+    { id: 'secure', color: '#22c55e' },
+    { id: 'anxious', color: '#f59e0b' },
+    { id: 'avoidant', color: '#6366f1' }
+  ];
+
   function ProfileQuiz(config) {
     this.container = config.container;
     this.questions = config.questions;
@@ -3180,13 +3189,23 @@ var QuizEngine = (function() {
     this.labels = config.labels || {};
     this.categoryMap = config.categoryMap || { a: 'secure', b: 'secure', c: 'avoidant', d: 'anxious' };
     this.profiles = config.profiles || {};
+    this.axes = config.axes || PROFILE_AXES_DEFAUT;
     this.axisLabels = config.axisLabels || { secure: 'Sécure', anxious: 'Anxieux', avoidant: 'Évitant' };
+    this.classifier = typeof config.classify === 'function' ? config.classify : null;
+    this.introTitle = config.introTitle || tg('attachment.introTitle', 'Quel est votre style d\'attachement ?');
+    this.resultLabel = config.resultLabel || tg('attachment.yourStyle', 'Votre style d\'attachement');
     this.phase = 'intro';
     this.currentQ = 0;
     this.answers = [];
-    this.tally = { secure: 0, anxious: 0, avoidant: 0 };
+    this.tally = this.tallyVierge();
     this.render();
   }
+
+  ProfileQuiz.prototype.tallyVierge = function() {
+    var t = {};
+    for (var i = 0; i < this.axes.length; i++) t[this.axes[i].id] = 0;
+    return t;
+  };
 
   ProfileQuiz.prototype.render = function() {
     this.container.innerHTML = '';
@@ -3199,13 +3218,13 @@ var QuizEngine = (function() {
     var self = this;
     var wrap = el('div', 'quiz-engine animate-fade-in text-center');
     wrap.appendChild(el('div', 'text-5xl mb-4', this.labels.icon || '🔗'));
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', tg('attachment.introTitle', 'Quel est votre style d\'attachement ?')));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', this.introTitle));
     wrap.appendChild(el('p', 'text-muted-foreground mb-2', this.questions.length + ' ' + tg('meta.questionsWord', 'questions')));
     wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min')));
     var btn = el('button', 'btn btn-cta btn-lg', tg('playerSetup.startTest', 'Commencer le test'));
     btn.addEventListener('click', function() {
       self.phase = 'playing'; self.currentQ = 0; self.answers = [];
-      self.tally = { secure: 0, anxious: 0, avoidant: 0 };
+      self.tally = self.tallyVierge();
       self.render();
     });
     wrap.appendChild(btn);
@@ -3273,6 +3292,7 @@ var QuizEngine = (function() {
 
   ProfileQuiz.prototype.classify = function() {
     var n = this.questions.length || 1;
+    if (this.classifier) return this.classifier(this.tally, n);
     var s = this.tally.secure, anx = this.tally.anxious, av = this.tally.avoidant;
     if (s >= Math.ceil(n * 0.45)) return 'secure';
     // Both insecure axes substantial → disorganized (fearful-avoidant)
@@ -3286,23 +3306,19 @@ var QuizEngine = (function() {
     var key = this.classify();
     var profile = this.profiles[key] || {};
     var n = this.questions.length || 1;
-    var pcts = {
-      secure: Math.round(this.tally.secure / n * 100),
-      anxious: Math.round(this.tally.anxious / n * 100),
-      avoidant: Math.round(this.tally.avoidant / n * 100)
-    };
+    var pcts = {};
+    for (var a = 0; a < this.axes.length; a++) {
+      var idA = this.axes[a].id;
+      pcts[idA] = Math.round((this.tally[idA] || 0) / n * 100);
+    }
 
     wrap.appendChild(el('div', 'text-5xl mb-3', this.labels.icon || '🔗'));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-1', tg('attachment.yourStyle', 'Votre style d\'attachement')));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-1', this.resultLabel));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-5 quiz-reveal-enter', esc(profile.title || key)));
 
     // ── Axis breakdown bars ──
     var breakdown = el('div', 'profile-breakdown max-w-md mx-auto mb-6');
-    var axes = [
-      { id: 'secure', color: '#22c55e' },
-      { id: 'anxious', color: '#f59e0b' },
-      { id: 'avoidant', color: '#6366f1' }
-    ];
+    var axes = this.axes;
     axes.forEach(function(ax) {
       var pct = pcts[ax.id];
       var row = el('div', 'profile-axis-row');
@@ -3326,7 +3342,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
-      shareText: tg('attachment.yourStyle', 'Votre style d\'attachement') + ' : ' + (profile.title || ''),
+      shareText: this.resultLabel + ' : ' + (profile.title || ''),
       restart: function() { self.phase = 'intro'; self.render(); }
     });
     this.container.appendChild(wrap);

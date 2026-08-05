@@ -12,7 +12,7 @@
     "metaDescription": "Kostenloser Gemeinsamkeiten-Test für Paare mit 200 Fragen. Antwortet abwechselnd und entdeckt eure Kompatibilität. Ohne Anmeldung!"
   },
   "testCompatibilite": {
-    "title": "Liebeskompatibilitäts-Test: Passt ihr wirklich zusammen?",
+    "title": "Liebeskompatibilität Test: euer Ergebnis in 20 Fragen",
     "shortTitle": "Liebeskompatibilität",
     "description": "20 Fragen zu zweit, um eure Liebeskompatibilität zu messen: Werte, Zukunftspläne, Lebensstil. Entdeckt euren Kompatibilitätswert!",
     "metaDescription": "Passt ihr in der Liebe wirklich zusammen? Beantwortet 20 Fragen zu zweit und erhaltet euren Liebeskompatibilitäts-Wert: Werte, Pläne, Alltag. Kostenlos."
@@ -125,7 +125,7 @@
     "metaDescription": "Bereit für den großen Schritt und zusammenziehen? Dieser Paar-Test hilft euch herauszufinden, ob ihr wirklich alltagstauglich seid. 2 Modi: zusammen oder getrennt."
   },
   "testJalousie": {
-    "title": "Eifersucht-Test für Paare: Bin ich eifersüchtig?",
+    "title": "Eifersucht Test für Paare: 20 Fragen, ein klares Ergebnis",
     "shortTitle": "Eifersucht-Test",
     "description": "Zwei Eifersuchtstests für Paare: einer für deine eigene Eifersucht, einer für die deines Partners. Differenzierte Ergebnisse.",
     "metaDescription": "Zwei Eifersuchtstests für Paare: einer für deine eigene Eifersucht, einer für die deines Partners. Präzise Fragen, differenzierte Ergebnisse."
@@ -173,21 +173,33 @@
     "metaDescription": "Sicher, ängstlich, vermeidend oder desorganisiert? Finde deinen Bindungsstil in 20 Fragen heraus. Nach der Theorie von Bowlby."
   },
   "testConfiance": {
-    "title": "Vertrauenstest für Paare: vertraut ihr einander wirklich?",
+    "title": "Vertrauenstest Paar: wie stabil ist euer Vertrauen? Gratis",
     "shortTitle": "Vertrauenstest",
     "description": "20 Fragen, um das gegenseitige Vertrauen in eurer Beziehung zu messen: Eifersucht, Offenheit, Verlässlichkeit. Ergebnis sofort.",
     "metaDescription": "Vertraust du deinem Partner wirklich? 20 Fragen zur Einschätzung des Vertrauens in eurer Beziehung. Kostenlos, vertraulich, sofort."
   },
   "testInfidelite": {
-    "title": "Untreue-Test: die Anzeichen, die nicht täuschen",
+    "title": "Untreue Test für Paare: 20 Fragen zu den echten Warnsignalen",
     "shortTitle": "Untreue-Test",
     "description": "20 Fragen, um die Warnsignale in eurer Beziehung zu erkennen: Heimlichkeit, emotionale Distanz, Verhaltensänderungen. Ergebnis sofort.",
     "metaDescription": "Betrügt dich dein Partner? 20 Fragen, um die Warnzeichen in eurer Beziehung zu erkennen. Kostenlos, vertraulich, Ergebnis sofort."
   },
   "testBebe": {
-    "title": "Bereit für ein Baby Test: bist du für die Elternschaft vorbereitet?",
+    "title": "Bereit für ein Baby Test: 20 Fragen für werdende Eltern",
     "shortTitle": "Baby-Test",
     "description": "20 Fragen zur Einschätzung deiner Bereitschaft für die Elternschaft: emotionale Reife, Finanzen, Beziehung, Lebensstil. Ergebnis sofort.",
     "metaDescription": "Bist du bereit für ein Baby? 20 Fragen zu emotionaler Reife, Finanzen und Beziehung. Kostenlos, vertraulich, Ergebnis sofort."
+  },
+  "testKarmique": {
+    "title": "Karmische Beziehung Test: Welche Verbindung lebst du?",
+    "shortTitle": "Karmische Beziehung Test",
+    "description": "20 Fragen, ob deine Verbindung karmisch, ein Spiegel oder ruhig ist.",
+    "metaDescription": "Karmische Beziehung, Zwillingsflamme oder Seelenverwandtschaft? 20 Fragen zu deiner Verbindung. Gratis Test, sofortiges Ergebnis, ohne Anmeldung."
+  },
+  "testSuisJeAmoureux": {
+    "title": "Bin ich verliebt? Test: Liebe, Schwärmerei oder Anziehung",
+    "shortTitle": "Bin ich verliebt?",
+    "description": "20 Fragen, die Liebe von Schwärmerei trennen und zeigen, was du fühlst.",
+    "metaDescription": "Bin ich verliebt oder nur angezogen? 20 Fragen, die Liebe von Schwärmerei trennen. Gratis Test, sofortiges Ergebnis, ohne Anmeldung."
   }
 }

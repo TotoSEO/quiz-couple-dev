@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "title": "Lebst du eine karmische Beziehung?",
+    "titleHighlight": "karmische Beziehung",
+    "description": "20 Fragen, um der Verbindung zwischen euch einen Namen zu geben: karmisch, Spiegel oder ruhig.",
+    "badge": "Gratis Test • 20 Fragen • 5 Min."
+  },
+  "section1": {
+    "title": "Was ist eine karmische Beziehung?",
+    "p1": "Im spirituellen Vokabular bezeichnet eine <strong class=\"text-foreground\">karmische Beziehung</strong> eine Verbindung, die nicht da ist, um zu bleiben, sondern um dir etwas beizubringen. Das Wort stammt vom Sanskrit <em>Karma</em>, also « Handlung »: Dieser Lesart nach begegnen sich zwei Menschen in diesem Leben wieder, weil eine anderswo begonnene Geschichte nie zu Ende gebracht wurde. Daher die Rede von offener Schuld, Seelenvertrag und zu verstehender Lektion.",
+    "p2": "Auffällig ist nicht die Definition, sondern wie beständig das Bild bleibt. Wer sich in diesem Begriff wiedererkennt, beschreibt fast immer dasselbe: eine sofortige und unverhältnismäßige Anziehung, das beunruhigende Gefühl, sich bereits zu kennen, und danach Zyklen aus Trennung und Rückkehr, die sich wiederholen, ohne dass sich etwas klärt. Sehr viel Intensität, sehr wenig Frieden. Eine karmische Beziehung ist nie lauwarm, und genau das macht sie so schwer zu verlassen.",
+    "p3": "Sagen wir es offen: Nichts belegt die Existenz früherer Leben, und dieser Test wird diese Frage nicht entscheiden. Was er dagegen misst, ist bestens beobachtbar: die Wiederholung, die Erschöpfung, die Schwierigkeit zu gehen, das Gefühl, eine bekannte Szene erneut zu spielen. Ob du das Karma nennst oder schlicht ein Beziehungsmuster, die Tatsachen, die du beschreibst, bleiben dieselben. Das spirituelle Vokabular gibt dir ein Bild, der Test gibt dir ein Maß."
+  },
+  "section2": {
+    "title": "Die 7 Anzeichen einer karmischen Beziehung",
+    "intro": "Kein Anzeichen genügt für sich allein. Erst ihre Häufung ergibt das, was man eine karmische Verbindung nennt, und genau das wägt der Test Frage für Frage ab.",
+    "sign1Title": "Das sofortige Wiedererkennen",
+    "sign1Text": "Schon bei den ersten Begegnungen hattest du das Gefühl, diesen Menschen seit jeher zu kennen. Diese Vertrautheit ist das am häufigsten genannte Anzeichen und oft das, was der Begegnung ihren Hauch von Schicksal verleiht.",
+    "sign2Title": "Ein rasanter Anfang",
+    "sign2Text": "Alles ging sehr schnell: glühende Erklärungen, sofortige Pläne, das Gefühl, das fehlende Teil gefunden zu haben. Dieser Blitzstart ähnelt stark dem, was als <a href=\"/de/blog/love-bombing-anzeichen/\">Love Bombing</a> bekannt ist, und er erzeugt eine starke Bindung, bevor ihr euch überhaupt richtig kennengelernt habt.",
+    "sign3Title": "Trennungen mit anschließender Rückkehr",
+    "sign3Text": "Ihr habt euch schon einmal getrennt, zweimal, öfter. Und ihr seid zurückgekehrt, immer aus denselben Gründen, mit derselben Überzeugung, dass es diesmal anders wird. Das ist das kennzeichnendste Merkmal der karmischen Verbindung.",
+    "sign4Title": "Derselbe Streit in Dauerschleife",
+    "sign4Text": "Es geht nicht darum, dass ihr viel streitet: Ihr streitet immer auf dieselbe Weise, mit denselben Sätzen und demselben Ausgang. Nichts löst sich, alles wiederholt sich.",
+    "sign5Title": "Eine schwer erklärbare Müdigkeit",
+    "sign5Text": "Nach gemeinsamer Zeit fühlst du dich ausgelaugt statt aufgeladen. Druck im Bauch, schlaflose Nächte, das Handy alle fünf Minuten geprüft: Dein Körper verbucht, was dein Kopf herunterspielt.",
+    "sign6Title": "Die Unmöglichkeit zu gehen",
+    "sign6Text": "Du weißt, dass diese Beziehung dir schadet, du hast bereits versucht zu gehen, und du schaffst es nicht. Diese Ohnmacht hat einen weit bodenständigeren Namen als Karma: Sie ähnelt sehr einer <a href=\"/de/blog/emotionale-abhaengigkeit-in-beziehungen/\">emotionalen Abhängigkeit</a>.",
+    "sign7Title": "Das Gefühl einer Schuld",
+    "sign7Text": "Du hast den Eindruck, diesem Menschen etwas zu schulden, ohne sagen zu können, was. Dieses Gefühl hält dich fest, mehr als die Liebe. In der karmischen Lesart ist genau das die Schuld, die zu begleichen wäre."
+  },
+  "section3": {
+    "title": "Wie du dein Ergebnis liest",
+    "intro": "Jede der 20 Fragen bietet drei Lesarten derselben Situation, verknüpft mit drei Achsen: die ruhige Verbindung, die Spiegelverbindung und die karmische Verbindung. Die Achse, die am häufigsten auftaucht, bestimmt dein Profil, und die Prozentwerte am Ende zeigen dir die genaue Mischung aller drei.",
+    "headerProfile": "Dein Profil",
+    "headerMeaning": "Was es anzeigt",
+    "headerAction": "Was du damit anfangen kannst",
+    "row1Profile": "Ruhige Verbindung",
+    "row1Meaning": "Deine Beziehung dreht sich nicht im Kreis. Du bleibst, weil es dir gut geht, nicht weil du nicht gehen kannst.",
+    "row1Action": "Verwechsle Ruhe nicht mit Fadheit. Pflege, was die Beziehung sicher macht, allen voran die Freiheit, alles sagen zu dürfen.",
+    "row2Profile": "Karmische Echos",
+    "row2Meaning": "Ein Teil eurer Geschichte wiederholt sich, aber der Rest der Beziehung trägt und tut dir gut.",
+    "row2Action": "Benenne die genaue Schleife und sprich sie an, solange die Beziehung stabil genug ist, das auszuhalten.",
+    "row3Profile": "Spiegelverbindung",
+    "row3Meaning": "Die Beziehung rüttelt dich auf und verändert dich, aber jede überstandene Prüfung hat dich stärker gemacht.",
+    "row3Action": "Prüfe alle sechs Monate, ob es dir besser geht als vorher. Solange das gilt, tut die Verbindung ihre Arbeit.",
+    "row4Profile": "Karmische Beziehung",
+    "row4Meaning": "Die Wiederholung überwiegt: Trennungszyklen, derselbe Streit, Erschöpfung, Schwierigkeit zu gehen.",
+    "row4Action": "Halte drei Wochen lang fest, wie du dich nach jedem gemeinsamen Moment fühlst, und lies es dann mit kühlem Kopf."
+  },
+  "section4": {
+    "title": "Karmische Beziehung, Seelenverwandtschaft oder Zwillingsflamme?",
+    "intro": "Das sind die drei Begriffe, die einem überall begegnen, und sie werden ständig verwechselt. Am einfachsten unterscheidet man sie nicht über die Frage, wie sehr man sich liebt, sondern darüber, in welchem Zustand man aus der Beziehung herauskommt.",
+    "headerType": "Art der Verbindung",
+    "headerFeel": "Was du empfindest",
+    "headerEnd": "Was daraus wird",
+    "row1Type": "Seelenverwandtschaft",
+    "row1Feel": "Eine Beruhigung. Die Beziehung erholt dich, trägt dich und macht dich verfügbarer für den Rest deines Lebens.",
+    "row1End": "Sie hält, oder sie endet ohne Zerstörung. Man geht unversehrt daraus hervor.",
+    "row2Type": "Zwillingsflamme",
+    "row2Feel": "Ein Spiegel. Die Beziehung konfrontiert dich mit dem, was du vermieden hast, mit Trennungen, die wehtun, aber weiterbringen.",
+    "row2End": "Sie verwandelt. Ob sie hält oder nicht, du gehst nicht als dieselbe Person daraus hervor.",
+    "row3Type": "Karmische Beziehung",
+    "row3Feel": "Eine Schleife. Dieselbe Szene wiederholt sich endlos, die Intensität bleibt, die Erschöpfung setzt sich fest.",
+    "row3End": "Sie endet an dem Tag, an dem einer von beiden aufhört, den Kreislauf zu nähren. Selten früher.",
+    "note": "Diese drei Kategorien sind keine Diagnosen und haben keinerlei medizinischen Wert. Es sind Bilder, nützlich, weil sie sehr konkreten Empfindungen Worte geben. Wenn du eine andere Lesart desselben Themas suchst: Unser <a href=\"/de/liebeskompatibilitaet-test/\">Test zur Liebeskompatibilität</a> nähert sich der Verbindung über Werte statt über Intensität."
+  },
+  "section5": {
+    "title": "Was die Psychologie hinter denselben Anzeichen sieht",
+    "p1": "Hier kommt der Punkt, der die meisten Testteilnehmer interessiert: Die oben beschriebenen Anzeichen sind nicht eingebildet. Sie sind von Bericht zu Bericht sogar bemerkenswert stabil. Die Psychologie leugnet sie nicht, sie erklärt sie anders, und ihre Erklärung hat den Vorzug, überprüfbar zu sein.",
+    "p2": "Drei Mechanismen genügen, um das meiste hervorzubringen, was dem Karma zugeschrieben wird.",
+    "pillar1Title": "Die intermittierende Verstärkung",
+    "pillar1Text": "Eine unvorhersehbare Belohnung erzeugt eine weit stärkere Bindung als eine regelmäßige. Das ist das Prinzip der Spielautomaten. Wenn eine Beziehung zwischen wunderbaren Momenten und eisigem Schweigen wechselt, verstärkt sich die Bindung, statt zu erlöschen. Das erklärt am besten, warum die instabilsten Beziehungen zugleich die am schwersten zu verlassenden sind.",
+    "pillar2Title": "Der Bindungsstil",
+    "pillar2Text": "Die panische Angst vor dem Verlassenwerden, das Bedürfnis zu kontrollieren, die Unfähigkeit allein zu sein: Diese Reaktionen kommen nicht vom anderen, sie kommen daher, wie du gelernt hast, dich zu binden. Treffen zwei gegensätzliche Stile aufeinander, entsteht der Zyklus aus Verfolgen und Fliehen fast mechanisch. Unser <a href=\"/de/bindungsstil-test/\">Test zum Bindungsstil</a> geht genau dieser Spur nach.",
+    "pillar3Title": "Vertrautheit, die für Schicksal gehalten wird",
+    "pillar3Text": "Das berühmte « Ich habe das Gefühl, dich schon ewig zu kennen » hat eine einfache und leicht schwindelerregende Erklärung: Du erkennst ein Muster wieder, keine Seele. Eine bereits erlebte Dynamik, in der Kindheit oder in einer früheren Beziehung, kommt dir vertraut vor. Das Gehirn deutet diese Vertrautheit als Selbstverständlichkeit, dabei zeigt sie vor allem, dass du diese Rolle bereits zu spielen weißt."
+  },
+  "section6": {
+    "title": "Wie du aus einer karmischen Beziehung herauskommst",
+    "p1": "In der spirituellen Lesart endet eine karmische Beziehung, wenn die Lektion verstanden ist. Eine schöne Formel, die aber einen Haken hat: Sie legt nahe, man solle bleiben, bis das Verstehen eintritt. In der Praxis ist es fast immer umgekehrt. Man versteht, nachdem man gegangen ist, nicht vorher.",
+    "p2": "Wenn dein Ergebnis ins Karmische kippt, sind diese wenigen Anhaltspunkte mehr wert als eine lange Theorie.",
+    "dontTitle": "Was die Schleife verlängert",
+    "dont1Title": "Warten, bis man verstanden hat",
+    "dont1Text": "Den verborgenen Sinn der Beziehung zu suchen, ist eine sehr elegante Art, nichts zu ändern. Solange du die Lektion suchst, bleibst du, und solange du bleibst, dreht sich der Kreislauf weiter.",
+    "dont2Title": "« Nur Freunde » bleiben",
+    "dont2Text": "Der nach einer Trennung aufrechterhaltene Kontakt nährt genau die Bindung, die du auflösen willst. Das ist der häufigste Grund für Rückfälle, weit mehr als die Gefühle selbst.",
+    "doTitle": "Was sie schließt",
+    "do1Title": "Fakten aufschreiben, keine Eindrücke",
+    "do1Text": "Notiere, was passiert ist, was gesagt wurde und wie du dich danach gefühlt hast. Mit kühlem Kopf gelesen, hält ein Faktenheft der Nostalgie weit besser stand als das Gedächtnis, das die unangenehme Angewohnheit hat, nur die guten Momente zu behalten.",
+    "do2Title": "Eine klare Grenze setzen und beobachten",
+    "do2Text": "Formuliere eine einfache Grenze zu einem konkreten Verhalten und sieh dann, was geschieht. Eine gesunde Beziehung passt sich an, eine Beziehung in der Schleife eskaliert oder verspricht, ohne etwas zu ändern. Die Antwort lehrt dich mehr als zehn Gespräche.",
+    "do3Title": "Suchen, was dich angezogen hat",
+    "do3Text": "Die nützliche Frage lautet nicht « warum tut er oder sie das? », sondern « warum packt mich das so sehr? ». Das ist der einzige Teil der Gleichung, über den du Macht hast, und zugleich der, der dich davor bewahrt, mit jemand anderem von vorn anzufangen.",
+    "do4Title": "Nicht allein damit bleiben",
+    "do4Text": "Ein vertrauter Mensch, eine Psychologin, eine Gesprächsgruppe: Das Format ist zweitrangig, entscheidend ist, aus dem geschlossenen Kreis herauszukommen. Eine Schleife sieht man von außen immer besser als von innen."
+  },
+  "section7": {
+    "title": "Zum Mitnehmen",
+    "p1": "Eine karmische Beziehung ist keine Strafe, und du schuldest niemandem etwas. Merk dir vor allem dies: Intensität ist kein Liebesbeweis, und eine Lektion, die dich deine Gesundheit kostet, ist keine Lektion.",
+    "p2": "Dieser Test ist weder eine Diagnose noch ein Urteil. Er ist ein Spiegel für das, was du erlebst, und ein Vokabular, um darüber zu sprechen. Falls dich das Ergebnis überrascht hat, bleibt die nützlichste Frage die einfachste: In welchem Zustand lässt dich diese Beziehung zurück, wenn die Tür zufällt? Unser <a href=\"/de/gesunde-beziehung-test/\">Test zur gesunden Beziehung</a> stellt dieselbe Frage aus einem anderen Blickwinkel.",
+    "p3": "Und wenn zu deiner Beziehung Angst, Kontrolle, Demütigungen oder Gewalt gehören, geht es nicht mehr um Karma. Unsere Tests zur <a href=\"/de/toxische-beziehung-test/\">toxischen Beziehung</a> und zum <a href=\"/de/narzisstischer-partner-test/\">narzisstischen Partner</a> sind dafür da, und mit einer Fachperson zu sprechen bleibt die beste Entscheidung."
+  },
+  "faq": {
+    "title": "Häufige Fragen zu karmischen Beziehungen",
+    "q1": "Was ist eine karmische Beziehung?",
+    "a1": "Es ist ein Begriff aus dem spirituellen Vokabular für eine intensive, sich wiederholende Verbindung, die eher da sein soll, um dir etwas beizubringen, als um zu bleiben. Ihr Ursprung wird einem früheren Leben zugeschrieben, in Form einer offenen Schuld. Konkret beschreiben Betroffene eine sofortige Anziehung, ein Déjà-vu-Gefühl, Zyklen aus Trennung und Rückkehr und viel Müdigkeit.",
+    "q2": "Was sind die Anzeichen einer karmischen Beziehung?",
+    "a2": "Die sieben häufigsten Anzeichen sind das sofortige Wiedererkennen, ein rasanter Anfang, Trennungen mit anschließender Rückkehr, derselbe Streit in Dauerschleife, unerklärliche Müdigkeit, die Unmöglichkeit trotz Leid zu gehen und das Gefühl, dem anderen etwas zu schulden. Entscheidend ist ihre Häufung, nicht ein einzelnes Anzeichen.",
+    "q3": "Was ist der Unterschied zwischen einer karmischen Beziehung und einer Zwillingsflamme?",
+    "a3": "Beide Verbindungen sind intensiv, aber sie hinterlassen nicht denselben Zustand. Die Zwillingsflamme wirkt wie ein Spiegel: Sie rüttelt auf, sie verwandelt, und man geht verändert, aber gefestigt daraus hervor. Die karmische Beziehung wiederholt sich, ohne etwas zu lösen, und lässt erschöpft zurück. Die Frage ist einfach: Geht es dir nach jeder Prüfung besser oder schlechter als vorher?",
+    "q4": "Wie endet eine karmische Beziehung?",
+    "a4": "Sie endet an dem Tag, an dem einer von beiden aufhört, den Kreislauf zu nähren, was fast immer einen klaren Kontaktabbruch bedeutet. Die spirituelle Formel sagt, sie ende, « wenn die Lektion verstanden ist », doch in der Praxis kommt das Verstehen nach dem Gehen, selten davor. Zu bleiben, bis man versteht, ist der sicherste Weg, die Schleife zu verlängern.",
+    "q5": "Ist dieser Test zur karmischen Beziehung zuverlässig?",
+    "a5": "Er ist ein Denkwerkzeug, keine Diagnose. Er bewertet nicht deine früheren Leben, sondern misst, was in deiner aktuellen Beziehung beobachtbar ist: die Wiederholung, das Gleichgewicht des Einsatzes, deinen Zustand nach jedem gemeinsamen Moment. Das Ergebnis ist also genau so viel wert wie deine Antworten, und es gewinnt, wenn man es in Ruhe noch einmal liest."
+  },
+  "jsonLd": {
+    "quizName": "Test karmische Beziehung",
+    "quizDescription": "Gratis Test mit 20 Fragen, um deine Art von Verbindung zu bestimmen: karmische Beziehung, Spiegelverbindung oder ruhige Verbindung."
+  }
+}

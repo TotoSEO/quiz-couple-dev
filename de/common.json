@@ -38,7 +38,9 @@
     "testInfidelite": "Untreue-Test",
     "testInfideliteDesc": "Erkenne die Warnsignale",
     "testBebe": "Bereit für ein Baby",
-    "testBebeDesc": "Schätze deine Bereitschaft für die Elternschaft ein"
+    "testBebeDesc": "Schätze deine Bereitschaft für die Elternschaft ein",
+    "testKarmique": "Karmische Beziehung Test",
+    "testSuisJeAmoureux": "Bin ich verliebt?"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",

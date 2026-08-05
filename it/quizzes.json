@@ -12,7 +12,7 @@
     "metaDescription": "Test di punti comuni per coppie con 200 domande per misurare la vostra compatibilità. Rispondete a turno. Gratis e senza registrazione!"
   },
   "testCompatibilite": {
-    "title": "Test di Compatibilità Amorosa: Siete fatti l'uno per l'altra?",
+    "title": "Test di compatibilità amorosa gratuito: la vostra percentuale",
     "shortTitle": "Compatibilità Amorosa",
     "description": "20 domande da fare in coppia per misurare la vostra compatibilità amorosa: valori, progetti, stile di vita. Scopri la tua percentuale di compatibilità!",
     "metaDescription": "Siete davvero compatibili in amore? Rispondete a 20 domande in coppia e ottenete la vostra percentuale di compatibilità amorosa: valori, progetti, quotidiano."
@@ -155,7 +155,7 @@
     "metaDescription": "100 domande vero o falso sulla coppia: miti, psicologia, cifre sorprendenti e luoghi comuni da sfatare. Metti alla prova le tue conoscenze adesso."
   },
   "activities": {
-    "title": "Attività di coppia vicino a me, Idee per uscite a due | Quiz Couple",
+    "title": "Attività di coppia vicino a me: idee per uscite a due",
     "shortTitle": "Attività di coppia",
     "description": "Trova attività di coppia vicino a te. Strumento gratuito e geolocalizzato: filtra per budget, atmosfera e distanza per uscite a due indimenticabili.",
     "metaDescription": "Trova attività di coppia vicino a te. Strumento gratuito e geolocalizzato: filtra per budget, atmosfera e distanza per uscite a due indimenticabili."
@@ -179,7 +179,7 @@
     "metaDescription": "Ti fidi davvero del tuo partner? 20 domande per valutare la fiducia nella vostra relazione. Gratuito, riservato, risultato immediato."
   },
   "testInfidelite": {
-    "title": "Test infedeltà: i segnali che non ingannano",
+    "title": "Test infedeltà di coppia: 20 domande per togliersi il dubbio",
     "shortTitle": "Test Infedeltà",
     "description": "20 domande per individuare i segnali d'allarme nella tua relazione: segretezza, distanza emotiva, cambiamenti di comportamento. Risultato immediato.",
     "metaDescription": "Il tuo partner ti tradisce? 20 domande per individuare i segnali d'allarme nella tua relazione. Gratuito, riservato, risultato immediato."
@@ -189,5 +189,17 @@
     "shortTitle": "Test Bambino",
     "description": "20 domande per valutare la tua preparazione alla genitorialità: maturità emotiva, finanze, coppia, stile di vita. Risultato immediato.",
     "metaDescription": "Sei pronto per un bambino? 20 domande su maturità emotiva, finanze e coppia. Gratuito, riservato, risultato immediato."
+  },
+  "testKarmique": {
+    "title": "Test relazione karmica: che legame vi unisce davvero?",
+    "shortTitle": "Test relazione karmica",
+    "description": "20 domande per sapere se il tuo legame è karmico, specchio o sereno.",
+    "metaDescription": "Relazione karmica, fiamma gemella o anima gemella? 20 domande per identificare il tuo tipo di legame. Test gratuito e risultato immediato."
+  },
+  "testSuisJeAmoureux": {
+    "title": "Test sono innamorato? Amore, cotta o semplice attrazione",
+    "shortTitle": "Sono innamorato?",
+    "description": "20 domande per distinguere l'amore dalla cotta e capire che cosa provi.",
+    "metaDescription": "Sono innamorato o solo attratto? 20 domande per distinguere l'amore dalla cotta. Test gratuito, risultato immediato, senza registrazione."
   }
 }

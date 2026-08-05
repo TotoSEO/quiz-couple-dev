@@ -1152,15 +1152,18 @@ async function generateBlogArticle(articleMeta, lang) {
     articleCategory: articleMeta.category || null,
     articleCategoryLabel: articleMeta.category && BLOG_CATEGORIES[articleMeta.category] ? BLOG_CATEGORIES[articleMeta.category][lang] || BLOG_CATEGORIES[articleMeta.category].fr : null,
     // Sidebar data
+    // La barre laterale du blog liste tous les tests et tous les quiz : les
+    // pages absentes de cette liste ne recevaient aucun lien depuis le blog.
     sidebarTests: [
-      'testCouple', 'testCommonPoints', 'testDistance', 'testToxic',
-      'testCoupleSain', 'testMariage', 'testDivorce', 'testParentalite', 'testAstroPrenoms',
-      'testJalousie', 'testLangageAmour', 'testAttachement', 'testConfiance',
+      'testCouple', 'testCommonPoints', 'testCompatibilite', 'testSuisJeAmoureux', 'testDistance',
+      'testToxic', 'testPervers', 'testAmourHabitude', 'testCoupleSain', 'testMariage', 'testDivorce',
+      'testParentalite', 'testEmmenager', 'testBebe', 'testAstroPrenoms', 'testKarmique',
+      'testJalousie', 'testInfidelite', 'testLangageAmour', 'testAttachement', 'testConfiance',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarQuizzes: [
-      'quizAmoureux', 'quizCoquin', 'quizMarrant', 'quizKnowledge',
-      'quizMost', 'quizAdo', 'quizGenant', 'quizTuPreferes',
-    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
+      'quizAmoureux', 'quizCoquin', 'quizMarrant', 'quizGenant', 'quizKnowledge',
+      'quizMost', 'quizAdo', 'quizTuPreferes', 'quizVraiFaux', 'zamours', 'quizTentation',
+    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarOther: [
       'questionsCouple',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),

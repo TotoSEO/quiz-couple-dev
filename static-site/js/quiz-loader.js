@@ -73,6 +73,12 @@
     // ── Attachement quiz (categorical: secure/anxious/avoidant → 4 styles) ──
     'attachement':    { prefix: 'attachement', engine: 'profile', totalQ: 20, pool: 20, quizType: 'attachement', categoryMap: { a: 'secure', b: 'secure', c: 'avoidant', d: 'anxious' } },
 
+    // ── Suis-je amoureux (solo, ascendant : plus de signes = plus de points) ──
+    'suis-je-amoureux': { prefix: 'suisjeamoureux', engine: 'solo', totalQ: 20, pool: 20, quizType: 'suisjeamoureux', ascending: true },
+
+    // ── Karmique (typologie du lien : apaisé / miroir / karmique → 4 profils) ──
+    'karmique':       { prefix: 'karmique', engine: 'profile', totalQ: 20, pool: 20, quizType: 'karmique', typologie: 'karmique', categoryMap: { a: 'apaise', b: 'miroir', c: 'karmique' } },
+
     // ── Confiance quiz (solo scoring, trust assessment) ──
     'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
 
@@ -676,9 +682,43 @@
     });
   }
 
+  // Typologies du moteur ProfileQuiz : chaque option est rattachée à un axe,
+  // l'axe dominant désigne le profil. L'attachement reste la typologie par
+  // défaut ; le test karmique classe le lien plutôt que le style.
+  var TYPOLOGIES = {
+    attachement: {
+      icone: '🔗',
+      axes: [
+        { id: 'secure', color: '#22c55e', defaut: 'Sécure' },
+        { id: 'anxious', color: '#f59e0b', defaut: 'Anxieux' },
+        { id: 'avoidant', color: '#6366f1', defaut: 'Évitant' }
+      ],
+      profils: ['secure', 'anxious', 'avoidant', 'disorganized']
+    },
+    karmique: {
+      icone: '🔮',
+      axes: [
+        { id: 'apaise', color: '#22c55e', defaut: 'Lien apaisé' },
+        { id: 'miroir', color: '#8b5cf6', defaut: 'Lien miroir' },
+        { id: 'karmique', color: '#f43f5e', defaut: 'Lien karmique' }
+      ],
+      profils: ['apaise', 'echos', 'karmique', 'miroir'],
+      // Le karmique prime dès qu'il domine nettement : c'est la répétition et
+      // le coût de la relation, pas son intensité, qui font le lien karmique.
+      // Le miroir ne l'emporte que s'il est fort ET plus présent que lui.
+      classify: function(t, n) {
+        var seuil = function(p) { return Math.ceil(n * p); };
+        if (t.karmique >= seuil(0.45)) return 'karmique';
+        if (t.miroir >= seuil(0.40) && t.miroir > t.karmique && t.miroir >= t.apaise) return 'miroir';
+        if (t.apaise >= seuil(0.50) && t.karmique < seuil(0.25)) return 'apaise';
+        if (t.karmique >= seuil(0.25)) return 'echos';
+        return 'apaise';
+      }
+    }
+  };
+
   function initProfileQuiz(cfg, questions) {
-    // Categorical attachment test: each option maps to a style; the dominant
-    // pattern yields secure / anxious / avoidant / disorganized.
+    var typo = TYPOLOGIES[cfg.typologie] || TYPOLOGIES.attachement;
     function prof(key) {
       return {
         title: QuizEngine.tgd(cfg.prefix + '.pf_' + key + '_t', ''),
@@ -686,27 +726,31 @@
         advice: QuizEngine.tgd(cfg.prefix + '.pf_' + key + '_a', '')
       };
     }
-    var profiles = {
-      secure: prof('secure'),
-      anxious: prof('anxious'),
-      avoidant: prof('avoidant'),
-      disorganized: prof('disorganized')
-    };
-    var axisLabels = {
-      secure: QuizEngine.tgd(cfg.prefix + '.pf_axis_secure', 'Sécure'),
-      anxious: QuizEngine.tgd(cfg.prefix + '.pf_axis_anxious', 'Anxieux'),
-      avoidant: QuizEngine.tgd(cfg.prefix + '.pf_axis_avoidant', 'Évitant')
-    };
-    new QuizEngine.ProfileQuiz({
+    var profiles = {}, axisLabels = {}, axes = [];
+    for (var p = 0; p < typo.profils.length; p++) profiles[typo.profils[p]] = prof(typo.profils[p]);
+    for (var a = 0; a < typo.axes.length; a++) {
+      var ax = typo.axes[a];
+      axes.push({ id: ax.id, color: ax.color });
+      axisLabels[ax.id] = QuizEngine.tgd(cfg.prefix + '.pf_axis_' + ax.id, ax.defaut);
+    }
+    var opts = {
       container: container,
       questions: questions,
       prefix: cfg.prefix,
       lang: lang,
-      labels: { icon: '🔗' },
+      labels: { icon: typo.icone },
       categoryMap: cfg.categoryMap,
       profiles: profiles,
+      axes: axes,
       axisLabels: axisLabels
-    });
+    };
+    if (typo.classify) opts.classify = typo.classify;
+    // Intitulés propres au quiz, sinon ceux du test d'attachement.
+    var intro = QuizEngine.tgd(cfg.prefix + '.introTitle', '');
+    var etiquette = QuizEngine.tgd(cfg.prefix + '.linkLabel', '');
+    if (intro && intro !== cfg.prefix + '.introTitle') opts.introTitle = intro;
+    if (etiquette && etiquette !== cfg.prefix + '.linkLabel') opts.resultLabel = etiquette;
+    new QuizEngine.ProfileQuiz(opts);
   }
 
   // ─── Helpers ──────────────────────────────────────────────
