@@ -261,7 +261,20 @@
     "copyError": "Link konnte nicht kopiert werden",
     "shareOnFacebook": "Auf Facebook teilen",
     "shareOnTwitter": "Auf Twitter teilen",
-    "each": "jeweils"
+    "each": "jeweils",
+    "soloScore": "Ich habe {{score}}/{{total}} beim {{quiz}} erreicht",
+    "soloPct": "Ich habe {{pct}} % beim {{quiz}} erreicht",
+    "duoPct": "Wir haben {{pct}} % beim {{quiz}} erreicht",
+    "duoPoints": "Wir haben {{score}} Punkte beim {{quiz}} geholt",
+    "profil": "Ich habe den {{quiz}} gemacht",
+    "fun": "Wir haben gerade den {{quiz}} gespielt",
+    "verdict": ": „{{result}}“",
+    "ctaSolo": "Und du? Mach den Test 👉",
+    "ctaDuo": "Und ihr, wie viel schafft ihr? Probiert es 👉",
+    "ctaProfil": "Und deiner? Mach den Test 👉",
+    "ctaFun": "Ihr seid dran, kostenlos 👉",
+    "messageCopied": "Nachricht kopiert! 💜",
+    "titre": "Quiz Couple"
   },
   "parentalite": {
     "setupDesc": "Beantwortet beide getrennt die gleichen 20 Fragen.",
@@ -287,7 +300,19 @@
     "quizAdo": "Teenager-Quiz",
     "quizGenant": "Peinliches Quiz",
     "quizTuPreferes": "Würdest du lieber Quiz",
-    "quizVraiFaux": "Richtig oder Falsch Quiz"
+    "quizVraiFaux": "Richtig oder Falsch Quiz",
+    "testCompatibilite": "Liebeskompatibilitäts-Test",
+    "testSuisJeAmoureux": "Test „Bin ich verliebt?“",
+    "testPervers": "Narzissten-Test",
+    "testAmourHabitude": "Test Liebe oder Gewohnheit",
+    "testEmmenager": "Zusammenziehen-Test",
+    "testBebe": "Baby-Test",
+    "testKarmique": "Karmische Beziehung Test",
+    "testInfidelite": "Untreue-Test",
+    "testLangageAmour": "Test der Sprachen der Liebe",
+    "testAttachement": "Bindungstest",
+    "testConfiance": "Vertrauenstest",
+    "quizTentation": "Temptation Quiz"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",

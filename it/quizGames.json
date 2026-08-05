@@ -261,7 +261,20 @@
     "copyError": "Impossibile copiare il link",
     "shareOnFacebook": "Condividi su Facebook",
     "shareOnTwitter": "Condividi su Twitter",
-    "each": "ciascuno"
+    "each": "ciascuno",
+    "soloScore": "Ho ottenuto {{score}}/{{total}} al {{quiz}}",
+    "soloPct": "Ho ottenuto il {{pct}} % al {{quiz}}",
+    "duoPct": "Abbiamo ottenuto il {{pct}} % al {{quiz}}",
+    "duoPoints": "Abbiamo fatto {{score}} punti al {{quiz}}",
+    "profil": "Ho fatto il {{quiz}}",
+    "fun": "Abbiamo appena fatto il {{quiz}}",
+    "verdict": ": «{{result}}»",
+    "ctaSolo": "E tu? Fai il test 👉",
+    "ctaDuo": "E voi, quanto fate? Provate 👉",
+    "ctaProfil": "E il tuo qual è? Fai il test 👉",
+    "ctaFun": "Tocca a voi, è gratis 👉",
+    "messageCopied": "Messaggio copiato! 💜",
+    "titre": "Quiz Couple"
   },
   "parentalite": {
     "setupDesc": "Entrambi rispondete separatamente alle stesse 20 domande.",
@@ -287,7 +300,19 @@
     "quizAdo": "Quiz Adolescenti",
     "quizGenant": "Quiz Imbarazzante",
     "quizTuPreferes": "Quiz Preferiresti",
-    "quizVraiFaux": "Quiz Vero o Falso"
+    "quizVraiFaux": "Quiz Vero o Falso",
+    "testCompatibilite": "Test di compatibilità amorosa",
+    "testSuisJeAmoureux": "test sono innamorato",
+    "testPervers": "Test narcisista",
+    "testAmourHabitude": "test amore o abitudine",
+    "testEmmenager": "Test Convivenza",
+    "testBebe": "Test Bambino",
+    "testKarmique": "Test relazione karmica",
+    "testInfidelite": "Test Infedeltà",
+    "testLangageAmour": "test dei linguaggi dell'amore",
+    "testAttachement": "Test Attaccamento",
+    "testConfiance": "Test Fiducia",
+    "quizTentation": "Quiz Temptation"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
