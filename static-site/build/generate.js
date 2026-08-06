@@ -1165,7 +1165,7 @@ async function generateBlogArticle(articleMeta, lang) {
       'quizMost', 'quizAdo', 'quizVraiFaux', 'zamours', 'quizTentation',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarJeux: [
-      'jeuxCouple', 'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot',
+      'jeuxCouple', 'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarOther: [
       'questionsCouple',

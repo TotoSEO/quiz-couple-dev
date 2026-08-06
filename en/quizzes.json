@@ -203,10 +203,16 @@
     "metaDescription": "Am I in love or just attracted? 20 questions to tell real love from a crush. Free test, instant result, no sign-up needed."
   },
   "jeuxCouple": {
-    "title": "Couple Games: 3 Free Online Games, No Sign-Up",
+    "title": "Couple Games: 4 Free Online Games, No Sign-Up",
     "shortTitle": "Couple games",
-    "description": "Three games to play together: would you rather, truth or dare and its dirty version.",
-    "metaDescription": "3 free couple games to play on a single phone: would you rather, truth or dare and its dirty version. No sign-up, the game starts in one tap."
+    "description": "Four games to play together: would you rather, truth or dare, its dirty version and the forfeit wheel.",
+    "metaDescription": "4 free couple games to play on a single phone: would you rather, truth or dare, its dirty version and the forfeit wheel. No sign-up needed."
+  },
+  "jeuGages": {
+    "title": "Couple Forfeits: the Online Wheel, 70 Ideas",
+    "shortTitle": "Forfeit wheel",
+    "description": "A wheel you can spin forever, drawing one forfeit at random out of 70, across seven families.",
+    "metaDescription": "Forfeit wheel for couples: 70 forfeits drawn at random, from a kiss to a confession. Free, no sign-up, spin again as often as you like."
   },
   "jeuActionVerite": {
     "title": "Truth or Dare for Couples: the Online Game, 70 Cards",

@@ -78,6 +78,7 @@
     // qui n'ont ni la même intention de recherche ni le même public.
     'action-ou-verite':        { prefix: 'actionVerite', engine: 'party', totalQ: 0, pool: 0, textOnly: true, ambiances: ['classique', 'marrant'] },
     'action-ou-verite-coquin': { prefix: 'actionVeriteHot', engine: 'party', totalQ: 0, pool: 0, textOnly: true, ambiances: ['coquin', 'hot'] },
+    'gage-couple':             { prefix: 'gageRoue', engine: 'roue', totalQ: 0, pool: 0, textOnly: true, segments: ['bisou', 'massage', 'show', 'aveu', 'grimace', 'photo', 'douceur'] },
 
     // ── Suis-je amoureux (solo, ascendant : plus de signes = plus de points) ──
     'suis-je-amoureux': { prefix: 'suisjeamoureux', engine: 'solo', totalQ: 20, pool: 20, quizType: 'suisjeamoureux', ascending: true },
@@ -124,6 +125,21 @@
   var _dataAttempt = 0;
   var _repliComplet = false;
   function initFromData() {
+    // La roue des gages ne lit pas des questions numérotées mais des familles
+    // de gages : elle vérifie elle-même que ses données sont là.
+    if (config.engine === 'roue') {
+      var sondeR = config.prefix + '.' + (config.segments || ['bisou'])[0] + '1';
+      if (!QuizEngine.tgd(sondeR, null) || QuizEngine.tgd(sondeR, null) === sondeR) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      container.dataset.hasPool = '0';
+      new QuizEngine.WheelGame({ container: container, prefix: config.prefix, lang: lang, segments: config.segments });
+      return;
+    }
+
     // Le moteur de cartes ne lit pas des questions numérotées mais des paquets
     // par ambiance : il vérifie lui-même que ses données sont là.
     if (config.engine === 'party') {

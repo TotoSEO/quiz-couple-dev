@@ -203,10 +203,16 @@
     "metaDescription": "¿Estoy enamorado o solo atraído? 20 preguntas para distinguir el amor del capricho. Test gratis, resultado inmediato y sin registro."
   },
   "jeuxCouple": {
-    "title": "Juegos para parejas: 3 juegos gratis online, sin registro",
+    "title": "Juegos para parejas: 4 juegos gratis online, sin registro",
     "shortTitle": "Juegos para parejas",
-    "description": "Tres juegos para jugar en pareja: preferirías, verdad o reto y su versión picante.",
-    "metaDescription": "3 juegos para parejas gratis en un solo móvil: preferirías, verdad o reto y su versión picante. Sin registro, la partida empieza con un toque."
+    "description": "Cuatro juegos para jugar en pareja: preferirías, verdad o reto, su versión picante y la ruleta de prendas.",
+    "metaDescription": "4 juegos para parejas gratis en un solo móvil: preferirías, verdad o reto, su versión picante y la ruleta de prendas. Sin registro."
+  },
+  "jeuGages": {
+    "title": "Prendas para parejas: la ruleta online, 70 ideas",
+    "shortTitle": "Ruleta de prendas",
+    "description": "Una ruleta que se gira sin parar y saca una prenda al azar entre 70, en siete familias.",
+    "metaDescription": "Ruleta de prendas para parejas: 70 prendas al azar, del beso a la confesión. Gratis, sin registro, se gira de nuevo tantas veces como queráis."
   },
   "jeuActionVerite": {
     "title": "Verdad o reto en pareja: el juego online, 70 cartas",

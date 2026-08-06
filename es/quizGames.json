@@ -318,7 +318,8 @@
     "testConfiance": "Test Confianza",
     "quizTentation": "Quiz Tentaciones",
     "jeuActionVerite": "juego verdad o reto",
-    "jeuActionVeriteHot": "juego verdad o reto picante"
+    "jeuActionVeriteHot": "juego verdad o reto picante",
+    "jeuGages": "la ruleta de prendas"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
@@ -398,5 +399,13 @@
     "recapTexte": "Habéis superado {{releves}} cartas de {{total}}.",
     "recapGages": "{{passes}} prenda(s) por el camino.",
     "rejouer": "Jugar otra vez"
+  },
+  "roue": {
+    "lancer": "Girar la ruleta",
+    "relancer": "Girar otra vez",
+    "enCours": "La ruleta está girando...",
+    "intro": "Pulsad el botón: la ruleta elige la prenda por vosotros.",
+    "compteur": "{{n}} prendas sacadas",
+    "compteur1": "1 prenda sacada"
   }
 }

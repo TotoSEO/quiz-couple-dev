@@ -319,7 +319,8 @@
     "zamours": "Quiz Les Z'Amours",
     "quizTentation": "Quiz Tentation",
     "jeuActionVerite": "Jeu action ou vérité",
-    "jeuActionVeriteHot": "Jeu action ou vérité coquin"
+    "jeuActionVeriteHot": "Jeu action ou vérité coquin",
+    "jeuGages": "la roue des gages"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -399,5 +400,13 @@
     "recapTexte": "Vous avez relevé {{releves}} cartes sur {{total}}.",
     "recapGages": "{{passes}} gage(s) au passage.",
     "rejouer": "Rejouer"
+  },
+  "roue": {
+    "lancer": "Lancer la roue",
+    "relancer": "Relancer la roue",
+    "enCours": "La roue tourne...",
+    "intro": "Appuyez sur le bouton : la roue choisit le gage à votre place.",
+    "compteur": "{{n}} gages tirés",
+    "compteur1": "1 gage tiré"
   }
 }

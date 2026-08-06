@@ -318,7 +318,8 @@
     "testConfiance": "Trust Test",
     "quizTentation": "Temptation Quiz",
     "jeuActionVerite": "truth or dare game",
-    "jeuActionVeriteHot": "dirty truth or dare game"
+    "jeuActionVeriteHot": "dirty truth or dare game",
+    "jeuGages": "forfeit wheel"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -398,5 +399,13 @@
     "recapTexte": "You took on {{releves}} cards out of {{total}}.",
     "recapGages": "{{passes}} forfeit(s) along the way.",
     "rejouer": "Play again"
+  },
+  "roue": {
+    "lancer": "Spin the wheel",
+    "relancer": "Spin again",
+    "enCours": "The wheel is spinning...",
+    "intro": "Press the button: the wheel picks the forfeit for you.",
+    "compteur": "{{n}} forfeits drawn",
+    "compteur1": "1 forfeit drawn"
   }
 }

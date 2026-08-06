@@ -1,15 +1,15 @@
 {
   "hero": {
-    "badge": "3 games • Free • No sign-up",
+    "badge": "4 games • Free • No sign-up",
     "title": "Our games to play together, ready in one tap",
     "titleHighlight": "to play together",
-    "description": "Three games that start on a single phone set down between you, with no account and nothing to install."
+    "description": "Four games that start on a single phone set down between you, with no account and nothing to install."
   },
   "stats": {
-    "jeux": "3",
+    "jeux": "4",
     "jeuxLabel": "games for two",
-    "cartes": "170",
-    "cartesLabel": "cards and dilemmas",
+    "cartes": "240",
+    "cartesLabel": "cards, dilemmas and forfeits",
     "compte": "0",
     "compteLabel": "accounts to create"
   },
@@ -34,13 +34,18 @@
     "actionVeriteHotTagline": "The same rules, two far more direct levels, for when it is just the two of you.",
     "actionVeriteHotJoueurs": "2 players",
     "actionVeriteHotDuree": "No time limit",
-    "actionVeriteHotContenu": "70 cards"
+    "actionVeriteHotContenu": "70 cards",
+    "gagesNom": "The forfeit wheel",
+    "gagesTagline": "A wheel you spin as often as you like, picking the forfeit for you, from a kiss to a confession.",
+    "gagesJoueurs": "2 players",
+    "gagesDuree": "No time limit",
+    "gagesContenu": "70 forfeits"
   },
   "section1": {
     "title": "What a game for two changes about an evening",
     "p1": "A <strong class=\"text-foreground\">couple game</strong> looks like nothing much, and yet it solves a very concrete problem: as a pair, you always end up circling the same subjects. The day, work, what to eat tonight. A game sets a frame, and that frame gives you permission to ask questions you would never ask out of the blue.",
     "p2": "It is also why a game works better than a film night when you want to reconnect. In front of a screen, you are two people side by side looking elsewhere. Around a game, you are two people looking at each other, and you feel the difference within ten minutes.",
-    "p3": "The three games on this page are played online, for free, on a single phone. No account to create, no app to install, nothing to set up: you open the page, you start, and you stop whenever you like."
+    "p3": "The four games on this page are played online, for free, on a single phone. No account to create, no app to install, nothing to set up: you open the page, you start, and you stop whenever you like."
   },
   "section2": {
     "title": "Which game to pick, depending on the moment",
@@ -53,7 +58,9 @@
     "row2Moment": "An evening at home that is fizzling out",
     "row2Pourquoi": "It takes no energy at all to start: a card drops and you answer. Three cards in, the evening is back on its feet.",
     "row3Moment": "A moment that is just the two of you",
-    "row3Pourquoi": "Two separate levels, from suggestive to very direct, with the right to pass on every card."
+    "row3Pourquoi": "Two separate levels, from suggestive to very direct, with the right to pass on every card.",
+    "row4Moment": "A lost bet, an evening to restart",
+    "row4Pourquoi": "Nobody picks the forfeit, so nobody feels targeted. One button, one spin, and it is settled."
   },
   "section3": {
     "title": "Making a games night for two work",
@@ -70,15 +77,15 @@
   "faq": {
     "title": "Frequently asked questions",
     "q1": "Are these couple games really free?",
-    "a1": "Yes, all three, from the first to the last. There is no account to create, no paid version and no content unlocked after payment. You open the game page and you play.",
+    "a1": "Yes, all four, from the first to the last. There is no account to create, no paid version and no content unlocked after payment. You open the game page and you play.",
     "q2": "Do I need to download an app?",
     "a2": "No. Everything is played straight in your browser, on a phone or a computer. That is also what lets you start a game in ten seconds whenever the mood strikes.",
     "q3": "What is the best game to play as a couple at home?",
-    "a3": "It depends on the evening. Truth or dare is the most versatile: it starts fast and it stops whenever you want. Would you rather works better when you feel more like talking than doing. The dirty version is one to save for moments when it is just the two of you.",
+    "a3": "It depends on the evening. Truth or dare is the most versatile: it starts fast and it stops whenever you want. Would you rather works better when you feel more like talking than doing. The forfeit wheel is mostly there to settle a lost bet. And the dirty version is one to save for moments when it is just the two of you.",
     "q4": "Can we play remotely, each at home?",
     "a4": "Yes. One of you opens the game, reads out loud over video and confirms for both. Truths and dilemmas work perfectly at a distance, dares need a bit of adapting.",
     "q5": "Are these games suitable for a couple who have just met?",
-    "a5": "Would you rather and the classic truth or dare, yes: they assume no shared history. The dirty version takes for granted that you already know each other well, and started too early it makes people uncomfortable rather than entertained."
+    "a5": "Would you rather, the forfeit wheel and the classic truth or dare, yes: they assume no shared history. The dirty version takes for granted that you already know each other well, and started too early it makes people uncomfortable rather than entertained."
   },
   "section4": {
     "title": "A game repairs nothing, but it opens doors",

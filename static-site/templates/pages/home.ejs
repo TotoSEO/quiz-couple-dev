@@ -55,6 +55,7 @@
     { routeKey: 'quizTuPreferes', key: 'quizTuPreferes', icon: '🤔', img: 'quiz-tu-preferes' },
     { routeKey: 'jeuActionVerite', key: 'jeuActionVerite', icon: '🎲', img: 'quiz-marrant' },
     { routeKey: 'jeuActionVeriteHot', key: 'jeuActionVeriteHot', icon: '🌶️', img: 'quiz-coquin' },
+    { routeKey: 'jeuGages', key: 'jeuGages', icon: '🎡', img: 'quiz-most' },
   ];
 
   // Filter out tests/quizzes not available in current language
@@ -268,7 +269,7 @@
              const jTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : jTitle;
-             const accents = { quizTuPreferes: '270 45% 58%', jeuActionVerite: '340 65% 62%', jeuActionVeriteHot: '12 78% 56%' }; %>
+             const accents = { quizTuPreferes: '270 45% 58%', jeuActionVerite: '340 65% 62%', jeuActionVeriteHot: '12 78% 56%', jeuGages: '190 60% 45%' }; %>
           <a class="jeu-card" href="<%= getLocalizedUrl(item.routeKey, lang) %>" style="--jeu-accent: <%= accents[item.routeKey] || '340 65% 62%' %>">
             <span class="jeu-card-visuel">
               <img src="<%= fImg %>" alt="<%= escapeHtml(fAlt) %>" width="600" height="315" loading="lazy" decoding="async">

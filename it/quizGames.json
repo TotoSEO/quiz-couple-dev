@@ -318,7 +318,8 @@
     "testConfiance": "Test Fiducia",
     "quizTentation": "Quiz Temptation",
     "jeuActionVerite": "gioco obbligo o verità",
-    "jeuActionVeriteHot": "gioco obbligo o verità piccante"
+    "jeuActionVeriteHot": "gioco obbligo o verità piccante",
+    "jeuGages": "la ruota delle penitenze"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
@@ -398,5 +399,13 @@
     "recapTexte": "Avete superato {{releves}} carte su {{total}}.",
     "recapGages": "{{passes}} penitenza/e lungo il percorso.",
     "rejouer": "Rigiocare"
+  },
+  "roue": {
+    "lancer": "Gira la ruota",
+    "relancer": "Gira di nuovo",
+    "enCours": "La ruota sta girando...",
+    "intro": "Premete il pulsante: la ruota sceglie la penitenza al posto vostro.",
+    "compteur": "{{n}} penitenze estratte",
+    "compteur1": "1 penitenza estratta"
   }
 }

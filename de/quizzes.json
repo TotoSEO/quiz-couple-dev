@@ -203,10 +203,16 @@
     "metaDescription": "Bin ich verliebt oder nur angezogen? 20 Fragen, die Liebe von Schwärmerei trennen. Gratis Test, sofortiges Ergebnis, ohne Anmeldung."
   },
   "jeuxCouple": {
-    "title": "Paarspiele: 3 kostenlose Onlinespiele ohne Anmeldung",
+    "title": "Paarspiele: 4 kostenlose Onlinespiele ohne Anmeldung",
     "shortTitle": "Paarspiele",
-    "description": "Drei Spiele für zu zweit: Was würdest du lieber, Wahrheit oder Pflicht und die versaute Version.",
-    "metaDescription": "3 kostenlose Paarspiele auf einem einzigen Handy: Was würdest du lieber, Wahrheit oder Pflicht und die versaute Version. Ohne Anmeldung, Start in einem Tipp."
+    "description": "Vier Spiele für zu zweit: Was würdest du lieber, Wahrheit oder Pflicht, die versaute Version und das Strafen-Glücksrad.",
+    "metaDescription": "4 kostenlose Paarspiele auf einem einzigen Handy: Was würdest du lieber, Wahrheit oder Pflicht, die versaute Version und das Strafen-Glücksrad."
+  },
+  "jeuGages": {
+    "title": "Strafen für Paare: das Onlinerad mit 70 Ideen",
+    "shortTitle": "Strafen-Rad",
+    "description": "Ein Rad, das sich endlos drehen lässt und eine von 70 Strafen aus sieben Familien zieht.",
+    "metaDescription": "Strafen-Glücksrad für Paare: 70 zufällige Strafen, vom Kuss bis zur Beichte. Gratis, ohne Anmeldung, beliebig oft neu drehbar."
   },
   "jeuActionVerite": {
     "title": "Wahrheit oder Pflicht für Paare: das Onlinespiel, 70 Karten",

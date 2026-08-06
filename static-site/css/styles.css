@@ -5050,9 +5050,13 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 
 .jeux-board {
   display: grid; gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: 1fr;
   max-width: 68rem; margin: 0 auto;
 }
+/* Paliers explicites plutot qu'auto-fit : avec quatre jeux, auto-fit laisse
+   une carte seule sur sa ligne des que la place manque pour la quatrieme. */
+@media (min-width: 640px) { .jeux-board { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .jeux-board { grid-template-columns: repeat(4, 1fr); } }
 .jeu-card {
   --jeu-accent: 340 65% 62%;
   position: relative; display: flex; flex-direction: column;
@@ -5160,3 +5164,65 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .jeux-table tbody tr:last-child th, .jeux-table tbody tr:last-child td { border-bottom: 0; }
 .jeux-table tbody a { color: hsl(var(--primary)); font-weight: 600; text-decoration: none; }
 .jeux-table tbody a:hover { text-decoration: underline; }
+
+/* ─────────────────────────────────────────────
+   Roue des gages : plateau, aiguille et resultat
+   ───────────────────────────────────────────── */
+.roue-jeu { max-width: 34rem; margin: 0 auto; }
+
+.roue-scene {
+  position: relative;
+  width: min(20rem, 82vw); height: min(20rem, 82vw);
+  margin: 0 auto 1.5rem;
+}
+.roue-plateau {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  box-shadow: 0 18px 40px -18px hsl(var(--primary) / 0.55), 0 0 0 6px hsl(var(--card)), 0 0 0 8px hsl(var(--border));
+}
+.roue-svg { display: block; width: 100%; height: 100%; }
+.roue-svg path { stroke: hsl(var(--card)); stroke-width: 1.2; }
+.roue-emoji { font-size: 13px; }
+.roue-label {
+  font-size: 8.5px; font-weight: 700; fill: #fff;
+  letter-spacing: 0.02em;
+  paint-order: stroke; stroke: hsl(0 0% 0% / 0.18); stroke-width: 0.6px;
+}
+.roue-moyeu { fill: hsl(var(--card)); stroke: hsl(var(--border)); stroke-width: 2; }
+
+.roue-fleche {
+  position: absolute; top: -0.35rem; left: 50%; z-index: 2;
+  width: 0; height: 0; transform: translateX(-50%);
+  border-left: 0.7rem solid transparent;
+  border-right: 0.7rem solid transparent;
+  border-top: 1.15rem solid hsl(var(--primary));
+  filter: drop-shadow(0 2px 3px hsl(var(--primary) / 0.5));
+}
+
+.roue-bouton { min-width: 14rem; }
+.roue-bouton[disabled] { opacity: 0.65; cursor: default; }
+
+.roue-resultat { min-height: 6.5rem; margin-top: 1.5rem; }
+.roue-invite { color: hsl(var(--muted-foreground)); }
+.roue-resultat-famille {
+  display: inline-block; margin-bottom: 0.75rem;
+  padding: 0.25rem 0.85rem; border-radius: 999px;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  background: hsl(var(--primary) / 0.12); color: hsl(var(--primary));
+}
+.roue-resultat-texte {
+  font-size: 1.2rem; font-weight: 600; line-height: 1.5;
+  max-width: 28rem; margin: 0 auto;
+  overflow-wrap: break-word;
+  animation: fadeIn 0.35s ease-out both;
+}
+@media (min-width: 640px) { .roue-resultat-texte { font-size: 1.35rem; } }
+.roue-compteur {
+  margin-top: 1.25rem;
+  font-size: 0.8125rem; color: hsl(var(--muted-foreground));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .roue-resultat-texte { animation: none; }
+}

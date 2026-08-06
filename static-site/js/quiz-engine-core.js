@@ -4273,6 +4273,187 @@ var QuizEngine = (function() {
     smoothScroll(wrap, 'center');
   };
 
+  // ═══════════════════════════════════════════════════════════
+  // WHEEL GAME - la roue des gages
+  // Une roue a huit secteurs qu'on relance autant de fois qu'on veut. Chaque
+  // secteur est une famille de gages ; le huitieme, surprise, pioche dans
+  // toutes les autres. Un gage ne retombe pas tant que sa pioche n'est pas
+  // vide. La partie n'a pas de fin : il n'y a que le bouton relancer.
+  // ═══════════════════════════════════════════════════════════
+  var ROUE_COULEURS = [
+    '340 65% 62%', '270 45% 58%', '12 78% 56%', '190 60% 45%',
+    '340 65% 72%', '270 45% 68%', '38 85% 55%', '160 50% 45%'
+  ];
+
+  function WheelGame(config) {
+    this.container = config.container;
+    this.prefix = config.prefix || 'gageRoue';
+    this.lang = config.lang || 'fr';
+    this.secteurs = (config.segments || []).map(function(id, i) {
+      return { id: id, couleur: ROUE_COULEURS[i % ROUE_COULEURS.length] };
+    });
+    // le dernier secteur pioche dans tous les autres
+    this.secteurs.push({ id: 'surprise', couleur: ROUE_COULEURS[this.secteurs.length % ROUE_COULEURS.length], joker: true });
+    this.pioches = {};
+    this.gage = null;
+    this.secteurTire = null;
+    this.tours = 0;
+    this.dernier = -1;
+    this.enCours = false;
+    this.angle = 0;
+    this.render();
+  }
+
+  // Lit les gages d'une famille : gageRoue.bisou1, bisou2...
+  WheelGame.prototype.lireFamille = function(id) {
+    var out = [];
+    for (var i = 1; i <= 40; i++) {
+      var cle = this.prefix + '.' + id + i;
+      var t = tgd(cle, null);
+      if (!t || t === cle) { if (i > 2) break; else continue; }
+      out.push(t);
+    }
+    return out;
+  };
+
+  WheelGame.prototype.piocher = function(id) {
+    // La case surprise n'a pas de pioche a elle : elle emprunte celle d'une
+    // famille reelle, sinon le meme gage pourrait tomber deux fois, une fois
+    // par sa famille et une fois par le joker.
+    if (id === 'surprise') {
+      var reelles = this.secteurs.filter(function(s) { return !s.joker; });
+      if (!reelles.length) return null;
+      var dispo = reelles.filter(function(s) {
+        return !this.pioches[s.id] || this.pioches[s.id].length;
+      }, this);
+      var choix = (dispo.length ? dispo : reelles)[Math.floor(Math.random() * (dispo.length ? dispo.length : reelles.length))];
+      return this.piocher(choix.id);
+    }
+    if (!this.pioches[id] || !this.pioches[id].length) {
+      this.pioches[id] = shuffleArray(this.lireFamille(id));
+    }
+    return this.pioches[id].pop() || null;
+  };
+
+  WheelGame.prototype.nom = function(id) {
+    return tgd(this.prefix + '.seg_' + id, id);
+  };
+
+  WheelGame.prototype.svg = function() {
+    var n = this.secteurs.length;
+    var pas = 360 / n, cx = 100, cy = 100, r = 96;
+    var pt = function(a, rayon) {
+      var rad = (a - 90) * Math.PI / 180;
+      return [(cx + rayon * Math.cos(rad)).toFixed(2), (cy + rayon * Math.sin(rad)).toFixed(2)];
+    };
+    var s = '<svg viewBox="0 0 200 200" class="roue-svg" aria-hidden="true">';
+    for (var i = 0; i < n; i++) {
+      var a1 = i * pas, a2 = (i + 1) * pas, mid = a1 + pas / 2;
+      var p1 = pt(a1, r), p2 = pt(a2, r);
+      s += '<path d="M ' + cx + ' ' + cy + ' L ' + p1[0] + ' ' + p1[1] +
+        ' A ' + r + ' ' + r + ' 0 0 1 ' + p2[0] + ' ' + p2[1] + ' Z" fill="hsl(' + this.secteurs[i].couleur + ')"/>';
+      // Libelles radiaux : ils partent du moyeu vers la jante. C'est la seule
+      // orientation qui reste lisible quelle que soit la rotation de la roue,
+      // alors qu'un texte tangentiel se retrouve a l'envers une fois sur deux.
+      var yEmoji = cy - r * 0.82, yLabel = cy - r * 0.22;
+      s += '<g transform="rotate(' + mid.toFixed(2) + ' ' + cx + ' ' + cy + ')">' +
+        '<text x="' + cx + '" y="' + yLabel.toFixed(2) + '" class="roue-label" text-anchor="start"' +
+        ' transform="rotate(-90 ' + cx + ' ' + yLabel.toFixed(2) + ')">' +
+        esc(this.nom(this.secteurs[i].id)) + '</text>' +
+        '<text x="' + cx + '" y="' + yEmoji.toFixed(2) + '" class="roue-emoji" text-anchor="middle" dominant-baseline="middle">' +
+        esc(SECTEUR_EMOJIS[this.secteurs[i].id] || '🎁') + '</text></g>';
+    }
+    s += '<circle cx="' + cx + '" cy="' + cy + '" r="14" class="roue-moyeu"/></svg>';
+    return s;
+  };
+
+  WheelGame.prototype.render = function() {
+    var self = this;
+    this.container.innerHTML = '';
+    var wrap = el('div', 'quiz-engine roue-jeu animate-fade-in text-center');
+
+    var scene = el('div', 'roue-scene');
+    scene.innerHTML = '<span class="roue-fleche" aria-hidden="true"></span>' +
+      '<div class="roue-plateau">' + this.svg() + '</div>';
+    wrap.appendChild(scene);
+
+    var bouton = el('button', 'btn btn-cta btn-lg roue-bouton',
+      this.tours === 0 ? tg('roue.lancer', 'Lancer la roue') : tg('roue.relancer', 'Relancer la roue'));
+    bouton.type = 'button';
+    wrap.appendChild(bouton);
+
+    var zone = el('div', 'roue-resultat');
+    zone.setAttribute('aria-live', 'polite');
+    if (this.gage) {
+      zone.innerHTML = '<span class="roue-resultat-famille">' +
+        esc((SECTEUR_EMOJIS[this.secteurTire] || '🎁') + ' ' + this.nom(this.secteurTire)) + '</span>' +
+        '<p class="roue-resultat-texte">' + esc(this.gage) + '</p>';
+    } else {
+      zone.innerHTML = '<p class="roue-invite">' + esc(tg('roue.intro', 'Appuyez sur le bouton : la roue choisit le gage à votre place.')) + '</p>';
+    }
+    wrap.appendChild(zone);
+
+    if (this.tours > 0) {
+      var compte = this.tours === 1
+        ? tg('roue.compteur1', '1 gage tiré')
+        : tg('roue.compteur', '{{n}} gages tirés').replace('{{n}}', this.tours);
+      wrap.appendChild(el('p', 'roue-compteur', compte));
+      // Pas de bloc « poursuivez avec » ici : la partie n'a pas de fin, il ne
+      // faut pas transformer chaque tour en ecran de resultat.
+      renderShareButton(wrap, { type: 'fun' });
+    }
+
+    this.container.appendChild(wrap);
+    var plateau = wrap.querySelector('.roue-plateau');
+    plateau.style.transform = 'rotate(' + this.angle + 'deg)';
+    bouton.addEventListener('click', function() { self.lancer(plateau, bouton, zone); });
+  };
+
+  WheelGame.prototype.lancer = function(plateau, bouton, zone) {
+    if (this.enCours) return;
+    var self = this;
+    var n = this.secteurs.length, pas = 360 / n;
+
+    // on evite de retomber deux fois de suite sur le meme secteur
+    var k = Math.floor(Math.random() * n);
+    if (n > 1 && k === this.dernier) k = (k + 1 + Math.floor(Math.random() * (n - 1))) % n;
+    this.dernier = k;
+
+    var gage = this.piocher(this.secteurs[k].id);
+    if (!gage) return;
+
+    var doux = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var cible = 360 - (k * pas + pas / 2) + (Math.random() * (pas * 0.6) - pas * 0.3);
+    var base = this.angle - (this.angle % 360);
+    var fin = base + 360 * (doux ? 1 : 5) + cible;
+    if (fin <= this.angle) fin += 360;
+
+    this.enCours = true;
+    bouton.disabled = true;
+    bouton.textContent = tg('roue.enCours', 'La roue tourne...');
+    zone.innerHTML = '';
+
+    var duree = doux ? 400 : 4200;
+    plateau.style.transition = 'transform ' + duree + 'ms cubic-bezier(0.16, 0.84, 0.28, 1)';
+    // force le navigateur a prendre en compte l'angle courant avant d'animer
+    void plateau.offsetWidth;
+    plateau.style.transform = 'rotate(' + fin + 'deg)';
+
+    window.setTimeout(function() {
+      self.angle = fin;
+      self.gage = gage;
+      self.secteurTire = self.secteurs[k].id;
+      self.tours++;
+      self.enCours = false;
+      self.render();
+    }, duree + 60);
+  };
+
+  var SECTEUR_EMOJIS = {
+    bisou: '💋', massage: '💆', show: '🎤', aveu: '🤫',
+    grimace: '😜', photo: '📸', douceur: '🍫', surprise: '🎁'
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -4294,6 +4475,7 @@ var QuizEngine = (function() {
     ZamoursQuiz: ZamoursQuiz,
     TentationQuiz: TentationQuiz,
     PartyGame: PartyGame,
+    WheelGame: WheelGame,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,

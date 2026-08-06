@@ -1,15 +1,15 @@
 {
   "hero": {
-    "badge": "3 jeux • Gratuits • Sans inscription",
+    "badge": "4 jeux • Gratuits • Sans inscription",
     "title": "Nos jeux à faire en couple, prêts en un clic",
     "titleHighlight": "à faire en couple",
-    "description": "Trois jeux qui se lancent sur un seul téléphone posé entre vous deux, sans compte et sans rien installer."
+    "description": "Quatre jeux qui se lancent sur un seul téléphone posé entre vous deux, sans compte et sans rien installer."
   },
   "stats": {
-    "jeux": "3",
+    "jeux": "4",
     "jeuxLabel": "jeux à deux",
-    "cartes": "170",
-    "cartesLabel": "cartes et dilemmes",
+    "cartes": "240",
+    "cartesLabel": "cartes, dilemmes et gages",
     "compte": "0",
     "compteLabel": "compte à créer"
   },
@@ -34,13 +34,18 @@
     "actionVeriteHotTagline": "Les mêmes règles, deux niveaux nettement plus directs, pour quand vous êtes seuls.",
     "actionVeriteHotJoueurs": "2 joueurs",
     "actionVeriteHotDuree": "Sans limite",
-    "actionVeriteHotContenu": "70 cartes"
+    "actionVeriteHotContenu": "70 cartes",
+    "gagesNom": "La roue des gages",
+    "gagesTagline": "Une roue à relancer à l'infini qui choisit le gage à votre place, du bisou à l'aveu.",
+    "gagesJoueurs": "2 joueurs",
+    "gagesDuree": "Sans limite",
+    "gagesContenu": "70 gages"
   },
   "section1": {
     "title": "Ce qu'un jeu à deux change à une soirée",
     "p1": "Un <strong class=\"text-foreground\">jeu de couple</strong> n'a l'air de rien et pourtant il règle un problème très concret : à deux, on finit toujours par tourner autour des mêmes sujets. La journée, le travail, ce qu'on mange ce soir. Un jeu impose un cadre, et ce cadre donne la permission de poser des questions qu'on ne poserait jamais de but en blanc.",
     "p2": "C'est aussi pour ça qu'un jeu fonctionne mieux qu'une soirée devant un film quand on veut se retrouver. Devant un écran, vous êtes deux personnes côte à côte qui regardent ailleurs. Autour d'un jeu, vous êtes deux personnes qui se regardent, et la différence se sent au bout de dix minutes.",
-    "p3": "Les trois jeux de cette page se jouent en ligne, gratuitement, sur un seul téléphone. Aucun compte à créer, aucune application à installer, aucune partie à préparer : vous ouvrez la page, vous lancez et vous arrêtez quand vous voulez."
+    "p3": "Les quatre jeux de cette page se jouent en ligne, gratuitement, sur un seul téléphone. Aucun compte à créer, aucune application à installer, aucune partie à préparer : vous ouvrez la page, vous lancez et vous arrêtez quand vous voulez."
   },
   "section2": {
     "title": "Quel jeu choisir selon le moment",
@@ -53,7 +58,9 @@
     "row2Moment": "Une soirée qui s'endort à la maison",
     "row2Pourquoi": "Il ne demande aucune énergie pour démarrer : une carte tombe et il faut répondre. En trois cartes, la soirée est relancée.",
     "row3Moment": "Un moment rien qu'à vous deux",
-    "row3Pourquoi": "Deux niveaux séparés, du suggestif au très direct, avec le droit de passer à chaque carte."
+    "row3Pourquoi": "Deux niveaux séparés, du suggestif au très direct, avec le droit de passer à chaque carte.",
+    "row4Moment": "Un pari perdu, une soirée à relancer",
+    "row4Pourquoi": "Personne ne choisit le gage, donc personne ne se sent visé. Un bouton, une roue, et le tour est joué."
   },
   "section3": {
     "title": "Réussir une soirée jeux à deux",
@@ -70,15 +77,15 @@
   "faq": {
     "title": "Questions fréquentes",
     "q1": "Ces jeux de couple sont-ils vraiment gratuits ?",
-    "a1": "Oui, les trois, du premier au dernier. Il n'y a ni compte à créer, ni version payante, ni contenu débloqué après paiement. Vous ouvrez la page du jeu et vous jouez.",
+    "a1": "Oui, les quatre, du premier au dernier. Il n'y a ni compte à créer, ni version payante, ni contenu débloqué après paiement. Vous ouvrez la page du jeu et vous jouez.",
     "q2": "Faut-il télécharger une application ?",
     "a2": "Non. Tout se joue directement dans votre navigateur, sur téléphone comme sur ordinateur. C'est aussi ce qui permet de lancer une partie en dix secondes quand l'envie arrive.",
     "q3": "Quel est le meilleur jeu à faire en couple à la maison ?",
-    "a3": "Cela dépend de la soirée. Action ou vérité est le plus polyvalent : il démarre vite et il s'arrête quand vous voulez. Tu préfères marche mieux quand vous avez envie de parler plus que de faire. La version coquine, elle, est à réserver aux moments où vous êtes seuls tous les deux.",
+    "a3": "Cela dépend de la soirée. Action ou vérité est le plus polyvalent : il démarre vite et il s'arrête quand vous voulez. Tu préfères marche mieux quand vous avez envie de parler plus que de faire. La roue des gages sert surtout à trancher après un pari. Et la version coquine est à réserver aux moments où vous êtes seuls tous les deux.",
     "q4": "Peut-on y jouer à distance, chacun chez soi ?",
     "a4": "Oui. L'un ouvre le jeu, lit à voix haute en visio et valide pour les deux. Les vérités et les dilemmes fonctionnent parfaitement à distance, les actions demandent un peu d'adaptation.",
     "q5": "Ces jeux conviennent-ils à un couple qui vient de se rencontrer ?",
-    "a5": "Tu préfères et la version classique d'action ou vérité, oui : ils ne supposent aucune histoire commune. La version coquine part du principe que vous vous connaissez déjà bien, et lancée trop tôt elle met plus mal à l'aise qu'elle n'amuse."
+    "a5": "Tu préfères, la roue des gages et la version classique d'action ou vérité, oui : ils ne supposent aucune histoire commune. La version coquine part du principe que vous vous connaissez déjà bien, et lancée trop tôt elle met plus mal à l'aise qu'elle n'amuse."
   },
   "section4": {
     "title": "Un jeu ne répare rien, mais il ouvre des portes",

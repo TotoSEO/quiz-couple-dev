@@ -1,15 +1,15 @@
 {
   "hero": {
-    "badge": "3 juegos • Gratis • Sin registro",
+    "badge": "4 juegos • Gratis • Sin registro",
     "title": "Nuestros juegos para jugar en pareja, listos en un toque",
     "titleHighlight": "para jugar en pareja",
-    "description": "Tres juegos que arrancan en un solo móvil apoyado entre los dos, sin cuenta y sin instalar nada."
+    "description": "Cuatro juegos que arrancan en un solo móvil apoyado entre los dos, sin cuenta y sin instalar nada."
   },
   "stats": {
-    "jeux": "3",
+    "jeux": "4",
     "jeuxLabel": "juegos para dos",
-    "cartes": "170",
-    "cartesLabel": "cartas y dilemas",
+    "cartes": "240",
+    "cartesLabel": "cartas, dilemas y prendas",
     "compte": "0",
     "compteLabel": "cuentas que crear"
   },
@@ -34,13 +34,18 @@
     "actionVeriteHotTagline": "Las mismas reglas, dos niveles bastante más directos, para cuando estáis solos.",
     "actionVeriteHotJoueurs": "2 jugadores",
     "actionVeriteHotDuree": "Sin límite",
-    "actionVeriteHotContenu": "70 cartas"
+    "actionVeriteHotContenu": "70 cartas",
+    "gagesNom": "La ruleta de prendas",
+    "gagesTagline": "Una ruleta que se gira sin parar y elige la prenda por vosotros, del beso a la confesión.",
+    "gagesJoueurs": "2 jugadores",
+    "gagesDuree": "Sin límite",
+    "gagesContenu": "70 prendas"
   },
   "section1": {
     "title": "Lo que un juego en pareja cambia en una noche",
     "p1": "Un <strong class=\"text-foreground\">juego de pareja</strong> parece poca cosa y sin embargo resuelve un problema muy concreto: en pareja siempre se acaba dando vueltas a los mismos temas. El día, el trabajo, qué cenamos hoy. Un juego impone un marco, y ese marco da permiso para hacer preguntas que nunca se harían así, de golpe.",
     "p2": "Por eso mismo un juego funciona mejor que una noche de película cuando queréis reencontraros. Delante de una pantalla sois dos personas una al lado de la otra mirando a otra parte. Alrededor de un juego sois dos personas que se miran, y la diferencia se nota a los diez minutos.",
-    "p3": "Los tres juegos de esta página se juegan online, gratis, en un solo móvil. Ninguna cuenta que crear, ninguna aplicación que instalar, nada que preparar: abrís la página, lanzáis la partida y paráis cuando queráis."
+    "p3": "Los cuatro juegos de esta página se juegan online, gratis, en un solo móvil. Ninguna cuenta que crear, ninguna aplicación que instalar, nada que preparar: abrís la página, lanzáis la partida y paráis cuando queráis."
   },
   "section2": {
     "title": "Qué juego elegir según el momento",
@@ -53,7 +58,9 @@
     "row2Moment": "Una noche en casa que se apaga",
     "row2Pourquoi": "No pide ninguna energía para arrancar: cae una carta y hay que responder. En tres cartas, la noche vuelve a levantarse.",
     "row3Moment": "Un momento solo para vosotros dos",
-    "row3Pourquoi": "Dos niveles separados, de lo sugerente a lo muy directo, con derecho a pasar en cada carta."
+    "row3Pourquoi": "Dos niveles separados, de lo sugerente a lo muy directo, con derecho a pasar en cada carta.",
+    "row4Moment": "Una apuesta perdida, una noche que relanzar",
+    "row4Pourquoi": "Nadie elige la prenda, así que nadie se siente señalado. Un botón, un giro, y listo."
   },
   "section3": {
     "title": "Cómo hacer que una noche de juegos en pareja funcione",
@@ -70,15 +77,15 @@
   "faq": {
     "title": "Preguntas frecuentes",
     "q1": "¿Estos juegos de pareja son realmente gratis?",
-    "a1": "Sí, los tres, del primero al último. No hay cuenta que crear, ni versión de pago, ni contenido que se desbloquee tras pagar. Abrís la página del juego y jugáis.",
+    "a1": "Sí, los cuatro, del primero al último. No hay cuenta que crear, ni versión de pago, ni contenido que se desbloquee tras pagar. Abrís la página del juego y jugáis.",
     "q2": "¿Hay que descargar una aplicación?",
     "a2": "No. Todo se juega directamente en el navegador, en el móvil o en el ordenador. Es también lo que permite lanzar una partida en diez segundos cuando surgen las ganas.",
     "q3": "¿Cuál es el mejor juego para hacer en pareja en casa?",
-    "a3": "Depende de la noche. Verdad o reto es el más versátil: arranca rápido y se para cuando queréis. Preferirías funciona mejor cuando os apetece más hablar que hacer. La versión picante conviene reservarla para los momentos en los que estáis solos los dos.",
+    "a3": "Depende de la noche. Verdad o reto es el más versátil: arranca rápido y se para cuando queréis. Preferirías funciona mejor cuando os apetece más hablar que hacer. La ruleta de prendas sirve sobre todo para zanjar una apuesta. Y la versión picante conviene reservarla para los momentos en los que estáis solos los dos.",
     "q4": "¿Se puede jugar a distancia, cada uno en su casa?",
     "a4": "Sí. Uno abre el juego, lee en voz alta por videollamada y valida por los dos. Las verdades y los dilemas funcionan perfectamente a distancia, los retos piden algo de adaptación.",
     "q5": "¿Estos juegos valen para una pareja que acaba de conocerse?",
-    "a5": "Preferirías y la versión clásica de verdad o reto, sí: no dan por supuesta ninguna historia en común. La versión picante da por hecho que ya os conocéis bien, y lanzada demasiado pronto incomoda más que divierte."
+    "a5": "Preferirías, la ruleta de prendas y la versión clásica de verdad o reto, sí: no dan por supuesta ninguna historia en común. La versión picante da por hecho que ya os conocéis bien, y lanzada demasiado pronto incomoda más que divierte."
   },
   "section4": {
     "title": "Un juego no repara nada, pero abre puertas",

@@ -318,7 +318,8 @@
     "testConfiance": "Vertrauenstest",
     "quizTentation": "Temptation Quiz",
     "jeuActionVerite": "Spiel Wahrheit oder Pflicht",
-    "jeuActionVeriteHot": "Spiel Wahrheit oder Pflicht versaut"
+    "jeuActionVeriteHot": "Spiel Wahrheit oder Pflicht versaut",
+    "jeuGages": "Strafen-Glücksrad"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
@@ -398,5 +399,13 @@
     "recapTexte": "Ihr habt {{releves}} von {{total}} Karten geschafft.",
     "recapGages": "{{passes}} Strafe(n) unterwegs.",
     "rejouer": "Nochmal spielen"
+  },
+  "roue": {
+    "lancer": "Rad drehen",
+    "relancer": "Nochmal drehen",
+    "enCours": "Das Rad dreht sich...",
+    "intro": "Drückt den Knopf: Das Rad wählt die Strafe für euch.",
+    "compteur": "{{n}} Strafen gezogen",
+    "compteur1": "1 Strafe gezogen"
   }
 }

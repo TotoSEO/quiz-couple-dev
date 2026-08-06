@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "badge": "Free • No sign-up • Spin as often as you like",
+    "title": "The forfeit wheel to spin as a couple",
+    "titleHighlight": "as a couple",
+    "description": "70 forfeits across seven families. You press, the wheel spins, and it decides instead of you."
+  },
+  "familles": {
+    "bisouNom": "Kiss",
+    "bisouDesc": "Short, affectionate forfeits, from a kiss on the shoulder to an eskimo kiss. The ones that work anywhere, even in company.",
+    "massageNom": "Massage",
+    "massageDesc": "Shoulders, hands, neck, feet: two timed minutes that drop the pressure in one go.",
+    "showNom": "Show",
+    "showDesc": "Sing, dance, impersonate, declaim. The family that is awkward for five seconds and funny for ten minutes.",
+    "aveuNom": "Confess",
+    "aveuDesc": "A question you have to answer properly. This is the family that turns a games night into a real conversation.",
+    "grimaceNom": "Silly",
+    "grimaceDesc": "Owning the ridiculous: an imposed accent, an animal to impersonate, a piece of clothing inside out for three spins.",
+    "photoNom": "Photo",
+    "photoDesc": "Forfeits that leave a trace, from the ugliest possible selfie to a year-old photo you have to recreate exactly.",
+    "douceurNom": "Sweet",
+    "douceurDesc": "Compliments, written notes, a hug that does not let go. The simplest ones, and often the ones you remember."
+  },
+  "section1": {
+    "title": "A forfeit drawn at random beats a forfeit someone invented",
+    "p1": "When a bet ends, someone has to come up with the <strong class=\"text-foreground\">forfeit</strong>. And that is where it falls apart: either nobody has an idea, or the idea is too harsh, or the winner feels obliged to go easy. In all three cases the moment dies.",
+    "p2": "A wheel settles it instantly: nobody chose, so nobody is responsible. That is also what makes it possible to accept a forfeit you would have refused had your partner suggested it, because there is no intention behind it any more, only chance.",
+    "p3": "Seven families sit on the wheel, plus a surprise slot that draws from all the others. You spin as many times as you want: the game has no ending, it stops when you close the page."
+  },
+  "section2": {
+    "title": "What is on the wheel",
+    "intro": "Each family holds its own ten forfeits, written for a couple and playable in a living room. Nothing repeats until the family runs out.",
+    "headerFamille": "The family",
+    "headerContenu": "What it holds"
+  },
+  "section3": {
+    "title": "How to use it",
+    "intro": "There is no rulebook imposed on you: the wheel is a tool, you decide what sets it off.",
+    "regle1Titre": "After a lost bet",
+    "regle1Texte": "The most common use. Whoever loses spins the wheel and does what it lands on, without arguing. It works precisely because they did not choose it.",
+    "regle2Titre": "At the end of another game",
+    "regle2Texte": "A spin at the end of a quiz or a truth or dare relaunches the evening without having to get another game out.",
+    "regle3Titre": "As a game in its own right",
+    "regle3Texte": "Take turns: each of you spins and does what comes up. Ten spins make a full session, and you will not get the same one twice.",
+    "regle4Titre": "With the right to spin again",
+    "regle4Texte": "Agree on one thing before you start: either of you can spin again once per evening without justifying it. That removes the only reason not to play."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "How many forfeits are there?",
+    "a1": "70, split into seven families of ten. The surprise slot draws from all seven, so it adds no forfeits but it changes the way they land.",
+    "q2": "Do the forfeits repeat?",
+    "a2": "Not until the family you landed on runs out. Each family reshuffles once its ten forfeits have come up, which is plenty for an evening without hitting the same one.",
+    "q3": "Is it spicy?",
+    "a3": "No, this wheel is built to be spun anywhere, friends included. The most intimate it gets is a kiss or a massage. For something more direct, our truth or dare games have their own separate deck.",
+    "q4": "Can more than two people play?",
+    "a4": "The forfeits are written for a couple, but nothing stops you passing the phone around a group: half of them work as they are, the other half simply assume there is a partner opposite you.",
+    "q5": "Do I need an account?",
+    "a5": "No, and nothing is recorded. The wheel runs in your browser, on a phone or a computer, and the counter goes back to zero as soon as you reload the page."
+  },
+  "section4": {
+    "title": "A well-chosen forfeit makes nobody uncomfortable",
+    "p1": "The only real risk with a forfeit game is the forfeit that goes too far for one of you. The ones on this wheel are deliberately living-room sized: nothing that asks anyone to undress, nothing that exposes you in front of others, nothing you would regret the next day.",
+    "p2": "The rest is yours to decide, and it is far better that way.",
+    "cta": "See all our couple games"
+  },
+  "jsonLd": {
+    "name": "The couple forfeit wheel"
+  }
+}

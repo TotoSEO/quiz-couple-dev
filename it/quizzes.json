@@ -203,10 +203,16 @@
     "metaDescription": "Sono innamorato o solo attratto? 20 domande per distinguere l'amore dalla cotta. Test gratuito, risultato immediato, senza registrazione."
   },
   "jeuxCouple": {
-    "title": "Giochi di coppia: 3 giochi gratis online, senza registrazione",
+    "title": "Giochi di coppia: 4 giochi gratis online, senza registrazione",
     "shortTitle": "Giochi di coppia",
-    "description": "Tre giochi da fare in due: preferiresti, obbligo o verità e la sua versione piccante.",
-    "metaDescription": "3 giochi di coppia gratis su un solo telefono: preferiresti, obbligo o verità e la sua versione piccante. Senza registrazione, la partita parte con un tocco."
+    "description": "Quattro giochi da fare in due: preferiresti, obbligo o verità, la sua versione piccante e la ruota delle penitenze.",
+    "metaDescription": "4 giochi di coppia gratis su un solo telefono: preferiresti, obbligo o verità, la sua versione piccante e la ruota delle penitenze. Senza registrazione."
+  },
+  "jeuGages": {
+    "title": "Penitenze di coppia: la ruota online, 70 idee",
+    "shortTitle": "Ruota delle penitenze",
+    "description": "Una ruota da rilanciare all'infinito che estrae una penitenza a caso tra 70, in sette famiglie.",
+    "metaDescription": "Ruota delle penitenze di coppia: 70 penitenze estratte a caso, dal bacio alla confessione. Gratis, senza registrazione, si rilancia all'infinito."
   },
   "jeuActionVerite": {
     "title": "Obbligo o verità di coppia: il gioco online, 70 carte",

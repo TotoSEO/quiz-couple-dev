@@ -1,15 +1,15 @@
 {
   "hero": {
-    "badge": "3 Spiele • Gratis • Ohne Anmeldung",
+    "badge": "4 Spiele • Gratis • Ohne Anmeldung",
     "title": "Unsere Spiele für zu zweit, in einem Tipp startklar",
     "titleHighlight": "für zu zweit",
-    "description": "Drei Spiele, die auf einem einzigen Handy zwischen euch starten, ohne Konto und ohne Installation."
+    "description": "Vier Spiele, die auf einem einzigen Handy zwischen euch starten, ohne Konto und ohne Installation."
   },
   "stats": {
-    "jeux": "3",
+    "jeux": "4",
     "jeuxLabel": "Spiele zu zweit",
-    "cartes": "170",
-    "cartesLabel": "Karten und Dilemmas",
+    "cartes": "240",
+    "cartesLabel": "Karten, Dilemmas und Strafen",
     "compte": "0",
     "compteLabel": "Konten anzulegen"
   },
@@ -34,13 +34,18 @@
     "actionVeriteHotTagline": "Dieselben Regeln, zwei deutlich direktere Stufen, für Momente allein zu zweit.",
     "actionVeriteHotJoueurs": "2 Spieler",
     "actionVeriteHotDuree": "Ohne Zeitlimit",
-    "actionVeriteHotContenu": "70 Karten"
+    "actionVeriteHotContenu": "70 Karten",
+    "gagesNom": "Das Strafen-Glücksrad",
+    "gagesTagline": "Ein Rad, das ihr beliebig oft dreht und das die Strafe für euch wählt, vom Kuss bis zur Beichte.",
+    "gagesJoueurs": "2 Spieler",
+    "gagesDuree": "Ohne Zeitlimit",
+    "gagesContenu": "70 Strafen"
   },
   "section1": {
     "title": "Was ein Spiel zu zweit an einem Abend verändert",
     "p1": "Ein <strong class=\"text-foreground\">Paarspiel</strong> sieht nach wenig aus und löst doch ein sehr konkretes Problem: Zu zweit dreht man sich am Ende immer um dieselben Themen. Der Tag, die Arbeit, was es heute Abend zu essen gibt. Ein Spiel setzt einen Rahmen, und dieser Rahmen erlaubt Fragen, die man von sich aus nie stellen würde.",
     "p2": "Genau deshalb funktioniert ein Spiel besser als ein Filmabend, wenn ihr euch wiederfinden wollt. Vor einem Bildschirm seid ihr zwei Menschen nebeneinander, die woanders hinsehen. Um ein Spiel herum seid ihr zwei Menschen, die einander ansehen, und den Unterschied spürt man nach zehn Minuten.",
-    "p3": "Die drei Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy. Kein Konto anzulegen, keine App zu installieren, nichts vorzubereiten: Ihr öffnet die Seite, ihr startet und ihr hört auf, wann ihr wollt."
+    "p3": "Die vier Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy. Kein Konto anzulegen, keine App zu installieren, nichts vorzubereiten: Ihr öffnet die Seite, ihr startet und ihr hört auf, wann ihr wollt."
   },
   "section2": {
     "title": "Welches Spiel zu welchem Moment passt",
@@ -53,7 +58,9 @@
     "row2Moment": "Ein Abend zu Hause, der einschläft",
     "row2Pourquoi": "Es braucht keinerlei Anlauf: Eine Karte fällt und man antwortet. Nach drei Karten steht der Abend wieder.",
     "row3Moment": "Ein Moment nur für euch beide",
-    "row3Pourquoi": "Zwei getrennte Stufen, von andeutend bis sehr direkt, mit dem Recht, bei jeder Karte zu passen."
+    "row3Pourquoi": "Zwei getrennte Stufen, von andeutend bis sehr direkt, mit dem Recht, bei jeder Karte zu passen.",
+    "row4Moment": "Eine verlorene Wette, ein Abend zum Wiederbeleben",
+    "row4Pourquoi": "Niemand wählt die Strafe, also fühlt sich niemand gemeint. Ein Knopf, eine Drehung, erledigt."
   },
   "section3": {
     "title": "Ein Spieleabend zu zweit, der wirklich funktioniert",
@@ -70,15 +77,15 @@
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Sind diese Paarspiele wirklich kostenlos?",
-    "a1": "Ja, alle drei, vom ersten bis zum letzten. Es gibt kein Konto anzulegen, keine Bezahlversion und keine Inhalte, die erst nach Zahlung freigeschaltet werden. Ihr öffnet die Spielseite und spielt.",
+    "a1": "Ja, alle vier, vom ersten bis zum letzten. Es gibt kein Konto anzulegen, keine Bezahlversion und keine Inhalte, die erst nach Zahlung freigeschaltet werden. Ihr öffnet die Spielseite und spielt.",
     "q2": "Muss man eine App herunterladen?",
     "a2": "Nein. Alles läuft direkt im Browser, auf dem Handy wie am Rechner. Genau das erlaubt es, in zehn Sekunden eine Partie zu starten, wenn die Lust da ist.",
     "q3": "Welches Spiel eignet sich zu Hause zu zweit am besten?",
-    "a3": "Das hängt vom Abend ab. Wahrheit oder Pflicht ist das vielseitigste: Es startet schnell und endet, wann ihr wollt. Was würdest du lieber passt besser, wenn ihr eher reden als machen wollt. Die versaute Version hebt man sich für Momente auf, in denen ihr allein zu zweit seid.",
+    "a3": "Das hängt vom Abend ab. Wahrheit oder Pflicht ist das vielseitigste: Es startet schnell und endet, wann ihr wollt. Was würdest du lieber passt besser, wenn ihr eher reden als machen wollt. Das Strafen-Glücksrad dient vor allem dazu, eine verlorene Wette zu klären. Und die versaute Version hebt man sich für Momente auf, in denen ihr allein zu zweit seid.",
     "q4": "Kann man aus der Ferne spielen, jeder bei sich?",
     "a4": "Ja. Einer öffnet das Spiel, liest per Video laut vor und bestätigt für beide. Wahrheiten und Dilemmas funktionieren aus der Ferne bestens, Aufgaben brauchen etwas Anpassung.",
     "q5": "Eignen sich diese Spiele für ein Paar, das sich gerade erst kennengelernt hat?",
-    "a5": "Was würdest du lieber und die klassische Version von Wahrheit oder Pflicht ja, sie setzen keine gemeinsame Geschichte voraus. Die versaute Version geht davon aus, dass ihr euch schon gut kennt, und zu früh gestartet ist sie eher unangenehm als unterhaltsam."
+    "a5": "Was würdest du lieber, das Strafen-Glücksrad und die klassische Version von Wahrheit oder Pflicht ja, sie setzen keine gemeinsame Geschichte voraus. Die versaute Version geht davon aus, dass ihr euch schon gut kennt, und zu früh gestartet ist sie eher unangenehm als unterhaltsam."
   },
   "section4": {
     "title": "Ein Spiel repariert nichts, aber es öffnet Türen",
