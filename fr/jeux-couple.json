@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "badge": "Gratuit • Sans inscription • À deux",
+    "title": "Nos jeux à faire en couple, gratuits et sans inscription",
+    "titleHighlight": "à faire en couple",
+    "description": "{{nb}} jeux à jouer à deux depuis votre téléphone, rangés par envie : rire, se rapprocher, ou pimenter la soirée."
+  },
+  "groupes": {
+    "rireTitre": "Pour rire ensemble",
+    "rireDesc": "Quand la soirée a besoin d'un peu de légèreté et de fous rires.",
+    "rapprocherTitre": "Pour se rapprocher",
+    "rapprocherDesc": "Les jeux qui font parler de ce dont on ne parle jamais.",
+    "pimenterTitre": "Pour pimenter la soirée",
+    "pimenterDesc": "À réserver aux moments où vous êtes seuls tous les deux.",
+    "soireeTitre": "Pour une soirée à plusieurs",
+    "soireeDesc": "Ceux qui marchent aussi avec des amis autour de la table."
+  },
+  "meta": {
+    "joueurs2": "2 joueurs",
+    "joueursPlus": "2 à 8 joueurs",
+    "duree": "{{n}} min"
+  },
+  "section1": {
+    "title": "Pourquoi un jeu à deux marche mieux qu'une soirée film",
+    "p1": "Un <strong class=\"text-foreground\">jeu de couple</strong> n'a l'air de rien, et pourtant il règle un problème très concret : à deux, on finit toujours par se raconter la même journée avec les mêmes mots. Un jeu casse cette mécanique parce qu'il pose les questions à votre place. Personne n'a besoin de trouver le courage de lancer un sujet, c'est la carte qui s'en charge.",
+    "p2": "C'est aussi pour ça qu'un jeu fonctionne mieux qu'une soirée devant un film quand on veut se retrouver. Devant un écran, vous êtes deux personnes côte à côte qui regardent la même chose. Autour d'un jeu, vous êtes deux personnes qui se regardent. La différence paraît mince, elle change tout au bout d'une heure.",
+    "p3": "Tous les jeux de cette page se jouent en ligne, gratuitement, sur un seul téléphone posé entre vous deux. Aucun compte à créer, aucune application à installer, rien à imprimer. Vous choisissez, vous ouvrez, vous jouez."
+  },
+  "section2": {
+    "title": "Quel jeu choisir selon le moment",
+    "intro": "C'est la vraie question, et elle dépend beaucoup moins de vos goûts que du moment que vous êtes en train de passer. Voici comment nous les rangerions.",
+    "headerMoment": "Le moment",
+    "headerJeu": "Le jeu",
+    "headerPourquoi": "Pourquoi celui-là",
+    "row1Moment": "Un long trajet en voiture ou en train",
+    "row1Jeu": "<a href=\"/questions-couple/\">Les questions à se poser</a>",
+    "row1Pourquoi": "Rien à regarder, rien à mimer : ça marche à la voix, sans que le conducteur quitte la route des yeux.",
+    "row2Moment": "Une soirée qui s'endort",
+    "row2Jeu": "<a href=\"/quiz-couple-marrant/\">Le quiz marrant</a>",
+    "row2Pourquoi": "Il ne demande aucune énergie pour démarrer et il fait rire en trois questions.",
+    "row3Moment": "Un dîner à deux à la maison",
+    "row3Jeu": "<a href=\"/quiz-qui-connait-mieux-partenaire/\">Qui connaît le mieux l'autre</a>",
+    "row3Pourquoi": "Le format alterné laisse le temps de manger entre deux questions, et les réponses surprennent toujours.",
+    "row4Moment": "Une soirée avec des amis",
+    "row4Jeu": "<a href=\"/quiz-qui-est-le-plus/\">Qui est le plus</a>",
+    "row4Pourquoi": "Le seul qui monte jusqu'à huit joueurs, et le vote collectif fait tout le sel de la partie.",
+    "row5Moment": "Un moment rien qu'à vous deux",
+    "row5Jeu": "<a href=\"/quiz-couple-coquin/\">Le quiz coquin</a>",
+    "row5Pourquoi": "Il monte progressivement, ce qui laisse à chacun le temps de suivre ou de freiner."
+  },
+  "section3": {
+    "title": "Réussir une soirée jeux à deux",
+    "p1": "Quatre choses font la différence entre une partie qu'on abandonne au bout de dix minutes et une soirée dont on reparle le lendemain.",
+    "conseil1Titre": "Un seul téléphone, posé entre vous",
+    "conseil1Texte": "Deux écrans, deux attentions ailleurs. Tous nos jeux sont conçus pour tourner sur un appareil unique que vous vous passez, et ça change complètement la soirée.",
+    "conseil2Titre": "Le mode avion, vraiment",
+    "conseil2Texte": "Une notification suffit à casser un moment qui commençait à devenir intéressant. C'est le conseil le plus banal de la liste et de loin le plus efficace.",
+    "conseil3Titre": "Le droit de passer son tour",
+    "conseil3Texte": "Un jeu à deux ne fonctionne que si personne ne se sent piégé. Convenez dès le départ que chacun peut refuser une question sans avoir à se justifier, et vous irez paradoxalement beaucoup plus loin.",
+    "conseil4Titre": "Commencer plus doux que prévu",
+    "conseil4Texte": "L'erreur classique est d'ouvrir sur le jeu le plus osé. Commencez par un jeu léger, le reste vient tout seul une fois que le rire est passé."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Ces jeux de couple sont-ils vraiment gratuits ?",
+    "a1": "Oui, tous, du premier au dernier. Il n'y a ni compte à créer, ni version payante, ni contenu débloqué après paiement. Vous ouvrez la page du jeu et vous jouez, depuis un téléphone ou un ordinateur.",
+    "q2": "Faut-il télécharger une application ?",
+    "a2": "Non. Tout se joue directement dans votre navigateur. C'est aussi ce qui permet de lancer une partie en dix secondes quand l'envie arrive, sans passer par un magasin d'applications ni occuper de la mémoire sur votre téléphone.",
+    "q3": "Quel est le meilleur jeu à faire en couple à la maison ?",
+    "a3": "Cela dépend de ce que vous cherchez. Pour rire, le quiz marrant. Pour vous découvrir, les questions à se poser ou le jeu de connaissance mutuelle. Pour pimenter la soirée, le quiz coquin. Le tableau plus haut range les jeux par moment plutôt que par thème, c'est le classement le plus utile en pratique.",
+    "q4": "Peut-on y jouer à distance, chacun chez soi ?",
+    "a4": "Oui, la plupart fonctionnent très bien en visio ou au téléphone : l'un ouvre le jeu, lit à voix haute et note les réponses. Les jeux de questions s'y prêtent particulièrement bien. Nous avons aussi un quiz pensé spécialement pour les couples à distance.",
+    "q5": "Ces jeux conviennent-ils à un couple qui vient de se rencontrer ?",
+    "a5": "Certains sont même faits pour ça. Les questions à se poser et le quiz marrant fonctionnent dès les premières semaines, parce qu'ils ne supposent aucune histoire commune. Les jeux qui demandent de deviner les réponses de l'autre sont en revanche plus amusants après quelques mois."
+  },
+  "section4": {
+    "title": "Un jeu ne répare rien, mais il ouvre des portes",
+    "p1": "Il faut être honnête sur ce qu'un jeu peut faire. Il ne règle pas un désaccord de fond et il ne remplace pas une vraie conversation quand elle est nécessaire. Ce qu'il fait très bien, en revanche, c'est créer l'occasion de cette conversation, dans un cadre léger où personne ne se sent convoqué.",
+    "p2": "Et si vous voulez aller plus loin qu'une soirée, nos tests de couple posent les mêmes sujets avec un résultat à la clé."
+  },
+  "jsonLd": {
+    "name": "Jeux de couple"
+  }
+}

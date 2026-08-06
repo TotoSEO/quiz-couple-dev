@@ -151,5 +151,11 @@
     "popularEyebrow": "Lo mejor de la comunidad",
     "popularSub": "Quizzes creados por otras parejas: empieza con un clic.",
     "popularCta": "Jugar"
+  },
+  "jeuxPromo": {
+    "badge": "Nuevo",
+    "title": "Nuestros juegos en pareja",
+    "sub": "Todos nuestros juegos para jugar en pareja, ordenados por ganas: reír, acercaros o animar la noche. Gratis, sin registro, desde el navegador.",
+    "cta": "Ver todos los juegos"
   }
 }

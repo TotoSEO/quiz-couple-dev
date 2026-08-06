@@ -1,0 +1,217 @@
+<%
+  const ns = 'jeux-couple';
+  const pageTitle = t('quizzes:jeuxCouple.title', 'Jeux de couple');
+
+  // Les jeux sont rangés par moment de soirée, pas par mécanique : c'est une
+  // ambiance qu'on cherche, pas un format. Nom et description viennent de
+  // quizzes.json, déjà traduits, pour ne pas dupliquer le contenu.
+  const groupes = [
+    { id: 'rire', emoji: '😂', jeux: [
+      { key: 'quizMarrant', icon: '😂', joueurs: 2, duree: 15 },
+      { key: 'quizGenant', icon: '😳', joueurs: 2, duree: 10 },
+      { key: 'quizTuPreferes', icon: '🤔', joueurs: 2, duree: 15 },
+    ] },
+    { id: 'rapprocher', emoji: '💗', jeux: [
+      { key: 'questionsCouple', icon: '💬', joueurs: 2, duree: 30 },
+      { key: 'quizKnowledge', icon: '🧠', joueurs: 2, duree: 20 },
+      { key: 'quizAmoureux', icon: '❤️', joueurs: 2, duree: 20 },
+    ] },
+    { id: 'pimenter', emoji: '🔥', jeux: [
+      { key: 'quizCoquin', icon: '🔥', joueurs: 2, duree: 20 },
+      { key: 'quizTentation', icon: '🏝️', joueurs: 2, duree: 15 },
+    ] },
+    { id: 'soiree', emoji: '🏆', jeux: [
+      { key: 'quizMost', icon: '🏆', joueurs: 8, duree: 20 },
+      { key: 'zamours', icon: '📺', joueurs: 2, duree: 20 },
+      { key: 'quizVraiFaux', icon: '✅', joueurs: 2, duree: 15 },
+      { key: 'quizAdo', icon: '🌟', joueurs: 2, duree: 15 },
+    ] },
+  ];
+
+  // Un jeu absent de la langue courante (Z'Amours hors français) disparaît
+  const groupesDispo = groupes
+    .map(g => Object.assign({}, g, { jeux: g.jeux.filter(j => getLocalizedUrl(j.key, lang)) }))
+    .filter(g => g.jeux.length > 0);
+  const nbJeux = groupesDispo.reduce((n, g) => n + g.jeux.length, 0);
+
+  const faqNums = [1, 2, 3, 4, 5];
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "CollectionPage",
+      "name": pageTitle,
+      "description": t('quizzes:jeuxCouple.metaDescription', ''),
+      "inLanguage": lang,
+      "isAccessibleForFree": true,
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": nbJeux,
+        "itemListElement": [].concat.apply([], groupesDispo.map(g => g.jeux)).map(function(j, i) {
+          return {
+            "@type": "ListItem", "position": i + 1,
+            "name": t('quizzes:' + j.key + '.shortTitle', t('quizzes:' + j.key + '.title', j.key)),
+            "url": baseUrl + getLocalizedPath(j.key, lang)
+          };
+        })
+      }
+    },
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqNums.map(function(i) {
+        return {
+          "@type": "Question", "name": t(ns + ':faq.q' + i, ''),
+          "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':faq.a' + i, '') }
+        };
+      })
+    }
+  ];
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= pageTitle %></li>
+        </ol>
+      </nav>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.2"/><circle cx="15.5" cy="15.5" r="1.2"/><circle cx="15.5" cy="8.5" r="1.2"/><circle cx="8.5" cy="15.5" r="1.2"/></svg>
+        <%= t(ns + ':hero.badge', '') %>
+      </span>
+      <%
+        const heroTitle = t(ns + ':hero.title', pageTitle);
+        const heroHighlight = t(ns + ':hero.titleHighlight', '');
+      %>
+      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%= t(ns + ':hero.description', '').replace('{{nb}}', nbJeux) %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Listing des jeux par moment -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4 max-w-5xl">
+    <% for (const g of groupesDispo) { %>
+    <div class="jeux-groupe">
+      <div class="jeux-groupe-entete">
+        <span class="jeux-groupe-emoji" aria-hidden="true"><%= g.emoji %></span>
+        <div>
+          <h2 class="jeux-groupe-titre"><%= t(ns + ':groupes.' + g.id + 'Titre', '') %></h2>
+          <p class="jeux-groupe-desc"><%= t(ns + ':groupes.' + g.id + 'Desc', '') %></p>
+        </div>
+      </div>
+      <div class="jeux-grille">
+        <% for (const j of g.jeux) {
+             const jTitre = t('quizzes:' + j.key + '.shortTitle', t('quizzes:' + j.key + '.title', j.key));
+             const jDesc = t('quizzes:' + j.key + '.description', '');
+             const jUrl = getLocalizedUrl(j.key, lang);
+        %>
+        <a href="<%= jUrl %>" class="jeu-carte no-underline group">
+          <span class="jeu-carte-emoji" aria-hidden="true"><%= j.icon %></span>
+          <span class="jeu-carte-corps">
+            <span class="jeu-carte-titre"><%= jTitre %></span>
+            <span class="jeu-carte-desc"><%= jDesc %></span>
+            <span class="jeu-carte-meta">
+              <span><%= j.joueurs === 8 ? t(ns + ':meta.joueursPlus', '2 à 8 joueurs') : t(ns + ':meta.joueurs2', '2 joueurs') %></span>
+              <span aria-hidden="true">•</span>
+              <span><%= t(ns + ':meta.duree', '{{n}} min').replace('{{n}}', j.duree) %></span>
+            </span>
+          </span>
+          <svg class="jeu-carte-fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+        <% } %>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- Contenu éditorial -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section1.p1', '') %></p>
+        <p><%- t(ns + ':section1.p2', '') %></p>
+        <p><%- t(ns + ':section1.p3', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section2.intro', '') %></p>
+      <div class="overflow-x-auto">
+        <table class="quiz-table">
+          <thead><tr>
+            <th><%= t(ns + ':section2.headerMoment', '') %></th>
+            <th><%= t(ns + ':section2.headerJeu', '') %></th>
+            <th><%= t(ns + ':section2.headerPourquoi', '') %></th>
+          </tr></thead>
+          <tbody>
+            <% for (let i = 1; i <= 5; i++) { %>
+            <tr>
+              <td class="font-medium"><%= t(ns + ':section2.row' + i + 'Moment', '') %></td>
+              <td class="text-sm"><%- t(ns + ':section2.row' + i + 'Jeu', '') %></td>
+              <td class="text-sm text-muted-foreground"><%= t(ns + ':section2.row' + i + 'Pourquoi', '') %></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed mb-8">
+        <p><%- t(ns + ':section3.p1', '') %></p>
+      </div>
+      <div class="space-y-4">
+        <% for (let i = 1; i <= 4; i++) { %>
+        <div class="flex items-start gap-4 p-5 bg-card border border-border rounded-lg">
+          <span class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/15 text-primary font-bold flex-shrink-0"><%= i %></span>
+          <div>
+            <h3 class="font-semibold mb-1"><%= t(ns + ':section3.conseil' + i + 'Titre', '') %></h3>
+            <p class="text-muted-foreground"><%- t(ns + ':section3.conseil' + i + 'Texte', '') %></p>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', '') %></h2>
+      <div class="space-y-4">
+        <% for (const i of faqNums) { %>
+        <details class="bg-card border border-border rounded-lg p-5">
+          <summary class="font-semibold cursor-pointer"><%= t(ns + ':faq.q' + i, '') %></summary>
+          <p class="text-muted-foreground leading-relaxed mt-3"><%- t(ns + ':faq.a' + i, '') %></p>
+        </details>
+        <% } %>
+      </div>
+    </section>
+
+    <section class="mb-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 border border-primary/20">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t(ns + ':section4.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section4.p1', '') %></p>
+        <p class="text-foreground font-semibold"><%- t(ns + ':section4.p2', '') %></p>
+      </div>
+    </section>
+
+  </div>
+</article>

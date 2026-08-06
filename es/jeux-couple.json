@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "badge": "Gratis • Sin registro • En pareja",
+    "title": "Nuestros juegos para hacer en pareja, gratis y sin registro",
+    "titleHighlight": "para hacer en pareja",
+    "description": "{{nb}} juegos para jugar en pareja desde el móvil, ordenados por ganas: reír, acercaros o subir la temperatura."
+  },
+  "groupes": {
+    "rireTitre": "Para reíros juntos",
+    "rireDesc": "Cuando la noche necesita un poco de ligereza.",
+    "rapprocherTitre": "Para acercaros",
+    "rapprocherDesc": "Los juegos que hacen hablar de lo que nunca se habla.",
+    "pimenterTitre": "Para subir la temperatura",
+    "pimenterDesc": "Resérvalos para cuando estéis solos los dos.",
+    "soireeTitre": "Para una noche con amigos",
+    "soireeDesc": "Los que también funcionan con gente alrededor de la mesa."
+  },
+  "meta": {
+    "joueurs2": "2 jugadores",
+    "joueursPlus": "De 2 a 8 jugadores",
+    "duree": "{{n}} min"
+  },
+  "section1": {
+    "title": "Por qué un juego funciona mejor que una noche de peli",
+    "p1": "Un <strong class=\"text-foreground\">juego de pareja</strong> parece poca cosa y sin embargo resuelve un problema muy concreto: en pareja se acaba contando siempre el mismo día con las mismas palabras. Un juego rompe esa mecánica porque hace las preguntas por vosotros. Nadie necesita reunir el valor para sacar un tema, de eso se encarga la carta.",
+    "p2": "También por eso funciona mejor que una película cuando queréis reencontraros. Frente a una pantalla sois dos personas una al lado de la otra mirando lo mismo. Alrededor de un juego sois dos personas que se miran. La diferencia parece pequeña y lo cambia todo al cabo de una hora.",
+    "p3": "Todos los juegos de esta página se juegan en línea, gratis, en un solo móvil apoyado entre los dos. Sin cuenta que crear, sin aplicación que instalar, sin nada que imprimir. Eliges, abres y juegas."
+  },
+  "section2": {
+    "title": "Qué juego elegir según el momento",
+    "intro": "Esa es la verdadera pregunta, y depende mucho menos de vuestros gustos que del momento que estáis viviendo. Así los ordenaríamos.",
+    "headerMoment": "El momento",
+    "headerJeu": "El juego",
+    "headerPourquoi": "Por qué ese",
+    "row1Moment": "Un viaje largo en coche o en tren",
+    "row1Jeu": "<a href=\"/es/preguntas-pareja/\">Las preguntas para haceros</a>",
+    "row1Pourquoi": "Nada que mirar, nada que mimar: funciona con la voz, sin que quien conduce aparte la vista.",
+    "row2Moment": "Una noche que se apaga",
+    "row2Jeu": "<a href=\"/es/quiz-pareja-divertido/\">El quiz divertido</a>",
+    "row2Pourquoi": "No exige ninguna energía para arrancar y hace reír en tres preguntas.",
+    "row3Moment": "Una cena para dos en casa",
+    "row3Jeu": "<a href=\"/es/quiz-quien-conoce-mejor-pareja/\">Quién conoce mejor al otro</a>",
+    "row3Pourquoi": "El formato por turnos deja tiempo para comer entre preguntas, y las respuestas siempre sorprenden.",
+    "row4Moment": "Una noche con amigos",
+    "row4Jeu": "<a href=\"/es/quiz-quien-es-mas/\">Quién es más</a>",
+    "row4Pourquoi": "El único que llega hasta ocho jugadores, y el voto en grupo es lo que le da toda la gracia.",
+    "row5Moment": "Un momento solo para vosotros dos",
+    "row5Jeu": "<a href=\"/es/quiz-pareja-picante/\">El quiz picante</a>",
+    "row5Pourquoi": "Sube poco a poco, lo que da tiempo a cada uno a seguir o a frenar."
+  },
+  "section3": {
+    "title": "Cómo triunfar en una noche de juegos en pareja",
+    "p1": "Cuatro cosas separan una partida que se abandona a los diez minutos de una noche que se recuerda al día siguiente.",
+    "conseil1Titre": "Un solo móvil, apoyado entre los dos",
+    "conseil1Texte": "Dos pantallas son dos atenciones en otra parte. Todos nuestros juegos están pensados para funcionar en un único aparato que os vais pasando, y eso cambia la noche por completo.",
+    "conseil2Titre": "Modo avión, de verdad",
+    "conseil2Texte": "Una notificación basta para romper un momento que empezaba a ponerse interesante. Es el consejo más obvio de la lista y con diferencia el más eficaz.",
+    "conseil3Titre": "El derecho a pasar turno",
+    "conseil3Texte": "Un juego en pareja solo funciona si nadie se siente atrapado. Acordad desde el principio que cualquiera puede rechazar una pregunta sin justificarse, y paradójicamente llegaréis mucho más lejos.",
+    "conseil4Titre": "Empezar más suave de lo previsto",
+    "conseil4Texte": "El error clásico es abrir con el juego más atrevido. Empezad por algo ligero: lo demás llega solo una vez que ha aparecido la risa."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Estos juegos de pareja son realmente gratis?",
+    "a1": "Sí, todos, del primero al último. No hay cuenta que crear, ni versión de pago, ni contenido desbloqueado tras pagar. Abres la página del juego y juegas, desde el móvil o el ordenador.",
+    "q2": "¿Hay que descargar una aplicación?",
+    "a2": "No. Todo se juega directamente en el navegador. Es también lo que permite lanzar una partida en diez segundos cuando surgen las ganas, sin pasar por una tienda de aplicaciones ni ocupar memoria en el móvil.",
+    "q3": "¿Cuál es el mejor juego para hacer en pareja en casa?",
+    "a3": "Depende de lo que busquéis. Para reír, el quiz divertido. Para descubriros, las preguntas para haceros o el juego de conocimiento mutuo. Para animar la noche, el quiz picante. La tabla de arriba ordena los juegos por momento en lugar de por tema, que en la práctica es la clasificación más útil.",
+    "q4": "¿Se puede jugar a distancia, cada uno en su casa?",
+    "a4": "Sí, la mayoría funcionan muy bien por videollamada o por teléfono: uno abre el juego, lee en voz alta y anota las respuestas. Los juegos de preguntas se prestan especialmente. También tenemos un quiz pensado para las parejas a distancia.",
+    "q5": "¿Sirven para una pareja que acaba de conocerse?",
+    "a5": "Algunos están hechos justo para eso. Las preguntas para haceros y el quiz divertido funcionan desde las primeras semanas, porque no dan por supuesta ninguna historia común. Los juegos en los que hay que adivinar las respuestas del otro son más divertidos después de unos meses."
+  },
+  "section4": {
+    "title": "Un juego no arregla nada, pero abre puertas",
+    "p1": "Hay que ser honestos sobre lo que un juego puede hacer. No resuelve un desacuerdo de fondo ni sustituye a una conversación de verdad cuando hace falta. Lo que sí hace muy bien es crear la ocasión de esa conversación, en un marco ligero donde nadie se siente convocado.",
+    "p2": "Y si queréis ir más allá de una noche, nuestros tests de pareja plantean los mismos temas con un resultado al final."
+  },
+  "jsonLd": {
+    "name": "Juegos para parejas"
+  }
+}

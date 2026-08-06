@@ -151,5 +151,11 @@
     "popularEyebrow": "Community favourites",
     "popularSub": "Quizzes dreamed up by other couples, jump in with one tap.",
     "popularCta": "Play"
+  },
+  "jeuxPromo": {
+    "badge": "New",
+    "title": "Our couple games",
+    "sub": "All our games to play together, sorted by mood: laugh, get closer or spice up the night. Free, no sign-up, straight from your browser.",
+    "cta": "See all the games"
   }
 }

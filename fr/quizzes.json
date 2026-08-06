@@ -207,5 +207,11 @@
     "shortTitle": "Suis-je amoureux ?",
     "description": "20 questions pour distinguer l'amour du béguin et savoir ce que vous ressentez.",
     "metaDescription": "Suis-je amoureux ou juste attiré ? 20 questions pour distinguer l'amour du béguin. Test gratuit, résultat immédiat et sans inscription."
+  },
+  "jeuxCouple": {
+    "title": "Jeux de couple gratuits en ligne : à jouer à deux ce soir",
+    "shortTitle": "Jeux de couple",
+    "description": "Tous nos jeux à faire en couple, rangés par envie : rire, se rapprocher, pimenter la soirée.",
+    "metaDescription": "Nos jeux de couple gratuits à jouer à deux en ligne, sans inscription : rire, se rapprocher, pimenter la soirée. Direct depuis votre navigateur."
   }
 }
