@@ -142,7 +142,9 @@
       "quizCoquin": "Erkundet eure Wünsche und würzt eure Beziehung.",
       "quizMarrant": "Lacht zusammen mit witzigen Fragen!",
       "quizKnowledge": "Wer kennt den anderen besser? Fordert euch heraus!",
-      "quizMost": "Stimmt ab, wer am meisten... unter euch ist!"
+      "quizMost": "Stimmt ab, wer am meisten... unter euch ist!",
+      "testAttachement": "Finde deinen Bindungsstil heraus: sicher, ängstlich oder vermeidend?",
+      "testConfiance": "Messt das gegenseitige Vertrauen in eurer Beziehung."
     }
   },
   "customQuizPromo": {
