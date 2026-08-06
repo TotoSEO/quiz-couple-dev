@@ -73,6 +73,9 @@
     // ── Attachement quiz (categorical: secure/anxious/avoidant → 4 styles) ──
     'attachement':    { prefix: 'attachement', engine: 'profile', totalQ: 20, pool: 20, quizType: 'attachement', categoryMap: { a: 'secure', b: 'secure', c: 'avoidant', d: 'anxious' } },
 
+    // ── Action ou vérité (tirage de cartes, sans configuration) ──
+    'action-ou-verite': { prefix: 'actionVerite', engine: 'party', totalQ: 0, pool: 0, textOnly: true },
+
     // ── Suis-je amoureux (solo, ascendant : plus de signes = plus de points) ──
     'suis-je-amoureux': { prefix: 'suisjeamoureux', engine: 'solo', totalQ: 20, pool: 20, quizType: 'suisjeamoureux', ascending: true },
 
@@ -118,6 +121,20 @@
   var _dataAttempt = 0;
   var _repliComplet = false;
   function initFromData() {
+    // Le moteur de cartes ne lit pas des questions numérotées mais des paquets
+    // par ambiance : il vérifie lui-même que ses données sont là.
+    if (config.engine === 'party') {
+      if (!QuizEngine.tgd(config.prefix + '.doux_q1', null) || QuizEngine.tgd(config.prefix + '.doux_q1', null) === config.prefix + '.doux_q1') {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      container.dataset.hasPool = '0';
+      initPartyGame(config);
+      return;
+    }
+
     var textOnly = config.textOnly || false;
     var questions = parseGdQuestions(config.prefix, config.pool + 10, config.ascending, textOnly);
 
@@ -679,6 +696,19 @@
       results: results,
       prefix: cfg.prefix,
       lang: lang
+    });
+  }
+
+  function initPartyGame(cfg) {
+    new QuizEngine.PartyGame({
+      container: container,
+      prefix: cfg.prefix,
+      lang: lang,
+      ambiances: [
+        { id: 'doux', emoji: '💗' },
+        { id: 'marrant', emoji: '😂' },
+        { id: 'coquin', emoji: '🔥' }
+      ]
     });
   }
 

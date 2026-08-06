@@ -4111,6 +4111,161 @@ var QuizEngine = (function() {
     smoothScroll(wrap, 'center');
   };
 
+  // ═══════════════════════════════════════════════════════════
+  // PARTY GAME - le jeu de couple du hub
+  // Aucun ecran de configuration : on choisit une ambiance et on joue. Chaque
+  // tour tire une carte (question ou defi) dans l'ambiance retenue ; refuser
+  // fait piocher un gage. Les cartes ne se repetent pas tant que la pioche
+  // n'est pas epuisee, et la partie n'a pas de fin imposee : c'est le joueur
+  // qui decide de s'arreter, ce qui donne le recapitulatif et le partage.
+  // ═══════════════════════════════════════════════════════════
+  function PartyGame(config) {
+    this.container = config.container;
+    this.prefix = config.prefix || 'jeu';
+    this.lang = config.lang || 'fr';
+    this.ambiances = config.ambiances || [];
+    this.phase = 'choix';
+    this.ambiance = null;
+    this.pioche = [];
+    this.gages = [];
+    this.carte = null;
+    this.tour = 0;
+    this.releves = 0;
+    this.passes = 0;
+    this.render();
+  }
+
+  // Lit toutes les cartes d'un type pour une ambiance : jeu.doux_q1, _q2...
+  PartyGame.prototype.cartes = function(ambiance, type) {
+    var out = [];
+    for (var i = 1; i <= 60; i++) {
+      var cle = this.prefix + '.' + ambiance + '_' + type + i;
+      var t = tgd(cle, null);
+      if (!t || t === cle) { if (i > 3) break; else continue; }
+      out.push({ type: type, texte: t });
+    }
+    return out;
+  };
+
+  PartyGame.prototype.remplirPioche = function() {
+    var q = this.cartes(this.ambiance, 'q');
+    var d = this.cartes(this.ambiance, 'd');
+    this.pioche = shuffleArray(q.concat(d));
+  };
+
+  PartyGame.prototype.render = function() {
+    this.container.innerHTML = '';
+    if (this.phase === 'choix') this.renderChoix();
+    else if (this.phase === 'carte') this.renderCarte();
+    else this.renderRecap();
+  };
+
+  PartyGame.prototype.renderChoix = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-4', '🎲'));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('jeu.introTitle', 'Choisissez votre ambiance')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6', tg('jeu.introDesc', 'Pas d\'inscription, pas de préparation : choisissez une ambiance et la première carte tombe.')));
+
+    var grille = el('div', 'party-ambiances');
+    this.ambiances.forEach(function(a, idx) {
+      var carte = el('button', 'party-ambiance party-ambiance--' + a.id);
+      carte.innerHTML = '<span class="party-ambiance-emoji">' + a.emoji + '</span>' +
+        '<span class="party-ambiance-nom">' + esc(tgd(self.prefix + '.amb_' + a.id, a.id)) + '</span>' +
+        '<span class="party-ambiance-desc">' + esc(tgd(self.prefix + '.ambd_' + a.id, '')) + '</span>';
+      carte.style.animationDelay = (idx * 70) + 'ms';
+      carte.addEventListener('click', function() {
+        self.ambiance = a.id;
+        self.remplirPioche();
+        self.gages = self.cartes(a.id, 'g');
+        if (!self.pioche.length) return;
+        self.releves = 0; self.passes = 0; self.tour = 0;
+        self.piocher();
+      });
+      grille.appendChild(carte);
+    });
+    wrap.appendChild(grille);
+    this.container.appendChild(wrap);
+  };
+
+  PartyGame.prototype.piocher = function() {
+    if (!this.pioche.length) this.remplirPioche();
+    this.carte = this.pioche.pop();
+    this.phase = 'carte';
+    this.render();
+  };
+
+  PartyGame.prototype.renderCarte = function() {
+    var self = this;
+    var c = this.carte;
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+
+    var entete = el('div', 'party-entete');
+    entete.innerHTML = '<span class="party-tour">' + esc(tg('jeu.tourDe', 'Au tour de') + ' ' +
+      tg('playerSetup.player' + (this.tour % 2 + 1), 'Joueur ' + (this.tour % 2 + 1))) + '</span>' +
+      '<button class="party-changer" type="button">' + esc(tg('jeu.arreter', 'Terminer la partie')) + '</button>';
+    wrap.appendChild(entete);
+
+    var badge = c.type === 'q' ? { e: '💬', k: 'question' } : c.type === 'd' ? { e: '🎯', k: 'defi' } : { e: '😈', k: 'gage' };
+    var carte = el('div', 'party-carte party-carte--' + badge.k);
+    carte.innerHTML = '<span class="party-carte-type">' + badge.e + ' ' +
+      esc(tg('jeu.type_' + badge.k, badge.k)) + '</span>' +
+      '<p class="party-carte-texte">' + esc(c.texte) + '</p>';
+    wrap.appendChild(carte);
+
+    var actions = el('div', 'party-actions');
+    if (c.type === 'g') {
+      var fini = el('button', 'btn btn-cta btn-lg', tg('jeu.gageFait', 'Gage accompli !'));
+      fini.addEventListener('click', function() { self.tour++; self.piocher(); });
+      actions.appendChild(fini);
+    } else {
+      var fait = el('button', 'btn btn-cta btn-lg', tg('jeu.fait', 'C\'est fait !'));
+      fait.addEventListener('click', function() { self.releves++; self.tour++; self.piocher(); });
+      var passe = el('button', 'btn btn-outline btn-lg', tg('jeu.passe', 'Je passe'));
+      passe.addEventListener('click', function() {
+        self.passes++;
+        if (!self.gages.length) { self.tour++; self.piocher(); return; }
+        self.carte = shuffleArray(self.gages.slice())[0];
+        self.render();
+      });
+      actions.appendChild(fait);
+      actions.appendChild(passe);
+    }
+    wrap.appendChild(actions);
+
+    var compteur = el('p', 'party-compteur', (this.releves + this.passes) + ' ' + tg('jeu.cartes', 'cartes jouées'));
+    wrap.appendChild(compteur);
+
+    this.container.appendChild(wrap);
+    var arret = wrap.querySelector('.party-changer');
+    if (arret) arret.addEventListener('click', function() { self.phase = 'recap'; self.render(); });
+  };
+
+  PartyGame.prototype.renderRecap = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    var total = this.releves + this.passes;
+    wrap.appendChild(el('div', 'text-5xl mb-3', '🎉'));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-4', tg('jeu.recapTitre', 'Belle partie !')));
+    wrap.appendChild(el('p', 'text-lg mb-2', esc(
+      tg('jeu.recapTexte', 'Vous avez relevé {{releves}} cartes sur {{total}}.')
+        .replace('{{releves}}', this.releves).replace('{{total}}', total))));
+    if (this.passes > 0) {
+      wrap.appendChild(el('p', 'text-muted-foreground mb-4', esc(
+        tg('jeu.recapGages', '{{passes}} gage(s) au passage.').replace('{{passes}}', this.passes))));
+    }
+    var rejouer = el('button', 'btn btn-cta btn-lg mb-2', tg('jeu.rejouer', 'Rejouer'));
+    rejouer.addEventListener('click', function() { self.phase = 'choix'; self.render(); smoothScroll(self.container, 'start'); });
+    wrap.appendChild(rejouer);
+
+    renderActionButtons(wrap, {
+      share: { type: 'duo', points: true, score: this.releves },
+      restart: function() { self.phase = 'choix'; self.render(); smoothScroll(self.container, 'start'); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -4131,6 +4286,7 @@ var QuizEngine = (function() {
     ProfileQuiz: ProfileQuiz,
     ZamoursQuiz: ZamoursQuiz,
     TentationQuiz: TentationQuiz,
+    PartyGame: PartyGame,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,

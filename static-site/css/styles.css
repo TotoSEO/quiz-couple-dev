@@ -4962,3 +4962,70 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 @media (max-width: 430px) {
   .quiz-hero-media__blob { inset: -10% 0 -12% 0; }
 }
+
+/* ── Jeu de couple (moteur PartyGame) ─────────────────────── */
+
+.party-ambiances {
+  display: grid; gap: 0.875rem; margin-top: 0.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) { .party-ambiances { grid-template-columns: repeat(3, 1fr); } }
+
+.party-ambiance {
+  display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
+  padding: 1.5rem 1rem; text-align: center; cursor: pointer;
+  border: 1px solid hsl(var(--border)); border-radius: var(--radius);
+  background: hsl(var(--card));
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out;
+  animation: fadeIn 300ms ease-out both;
+}
+.party-ambiance:hover {
+  transform: translateY(-3px);
+  border-color: hsl(var(--primary) / 0.5);
+  box-shadow: 0 10px 20px -8px hsl(var(--primary) / 0.35);
+}
+.party-ambiance:active { transform: translateY(0); }
+.party-ambiance-emoji { font-size: 2.25rem; line-height: 1; }
+.party-ambiance-nom { font-weight: 700; font-size: 1.05rem; }
+.party-ambiance-desc { font-size: 0.8125rem; color: hsl(var(--muted-foreground)); line-height: 1.35; }
+
+.party-entete {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap;
+}
+.party-tour { font-size: 0.875rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.party-changer {
+  font-size: 0.8125rem; color: hsl(var(--muted-foreground));
+  background: none; border: none; cursor: pointer; text-decoration: underline;
+  padding: 0.25rem;
+}
+.party-changer:hover { color: hsl(var(--primary)); }
+
+.party-carte {
+  border-radius: var(--radius); padding: 2rem 1.5rem; text-align: center;
+  border: 1px solid hsl(var(--border));
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.07), hsl(var(--secondary) / 0.07));
+  animation: fadeIn 260ms ease-out both;
+}
+.party-carte--defi { background: linear-gradient(135deg, hsl(var(--secondary) / 0.12), hsl(var(--primary) / 0.05)); }
+.party-carte--gage { background: linear-gradient(135deg, hsl(0 70% 60% / 0.12), hsl(var(--primary) / 0.06)); }
+
+.party-carte-type {
+  display: inline-block; margin-bottom: 0.875rem;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: hsl(var(--primary));
+}
+.party-carte-texte {
+  font-size: 1.25rem; font-weight: 600; line-height: 1.45;
+  overflow-wrap: break-word;
+}
+@media (min-width: 640px) { .party-carte-texte { font-size: 1.4rem; } }
+
+.party-actions {
+  display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap;
+}
+.party-actions .btn { flex: 1 1 10rem; }
+.party-compteur {
+  margin-top: 1rem; text-align: center;
+  font-size: 0.8125rem; color: hsl(var(--muted-foreground));
+}
