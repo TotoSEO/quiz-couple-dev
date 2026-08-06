@@ -313,7 +313,9 @@
     "testAttachement": "Test Attachement",
     "testConfiance": "Test Confiance",
     "zamours": "Quiz Les Z'Amours",
-    "quizTentation": "Quiz Tentation"
+    "quizTentation": "Quiz Tentation",
+    "jeuActionVerite": "Jeu action ou vérité",
+    "jeuActionVeriteHot": "Jeu action ou vérité coquin"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -376,5 +378,22 @@
   },
   "healthy": {
     "gapWarning": "⚠️ L'écart entre vos scores est significatif. Prenez le temps de discuter de vos perceptions respectives."
+  },
+  "jeu": {
+    "introTitle": "Choisissez votre ambiance",
+    "introDesc": "Pas d'inscription, pas de préparation : choisissez une ambiance et la première carte tombe.",
+    "tourDe": "Au tour de",
+    "arreter": "Terminer la partie",
+    "type_question": "Vérité",
+    "type_defi": "Action",
+    "type_gage": "Gage",
+    "fait": "C'est fait !",
+    "passe": "Je passe",
+    "gageFait": "Gage accompli !",
+    "cartes": "cartes jouées",
+    "recapTitre": "Belle partie !",
+    "recapTexte": "Vous avez relevé {{releves}} cartes sur {{total}}.",
+    "recapGages": "{{passes}} gage(s) au passage.",
+    "rejouer": "Rejouer"
   }
 }

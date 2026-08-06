@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "badge": "Réservé aux adultes • À deux • Gratuit",
+    "title": "Action ou vérité coquin, la version qui ne se retient pas",
+    "titleHighlight": "coquin",
+    "description": "140 cartes pour deux, en coquin ou en hot, sur un seul téléphone et sans rien préparer."
+  },
+  "section1": {
+    "title": "Deux niveaux, parce que tout le monde ne part pas du même endroit",
+    "p1": "Un <strong class=\"text-foreground\">action ou vérité coquin</strong> qui commence trop fort ne marche pas : le premier défi met mal à l'aise et la partie s'arrête avant d'avoir commencé. C'est pour ça que ce jeu a deux niveaux séparés plutôt qu'un seul paquet.",
+    "p2": "L'ambiance <strong class=\"text-foreground\">coquin</strong> reste suggestive : des questions qui font rougir, des défis qui rapprochent, rien qui oblige à se découvrir. L'ambiance <strong class=\"text-foreground\">hot</strong> ne prend plus de précautions, les cartes sont directes et supposent que vous savez tous les deux où vous allez.",
+    "p3": "Commencez par la première même si vous pensez pouvoir sauter l'étape. Le rire des premières cartes fait plus pour la suite de la soirée que n'importe quel défi lancé à froid."
+  },
+  "section2": {
+    "title": "Comment ça se joue",
+    "intro": "Les règles sont les mêmes que la version classique, avec un point supplémentaire qui compte davantage ici.",
+    "regle1Titre": "Choisissez votre niveau",
+    "regle1Texte": "Coquin ou hot. Le jeu ne mélange jamais les deux paquets : ce que vous choisissez au départ est ce que vous obtenez pendant toute la partie.",
+    "regle2Titre": "Une carte à la fois, tirée au hasard",
+    "regle2Texte": "Vérité ou action, vous ne choisissez pas. Vous ne voyez jamais la carte suivante, ce qui empêche de préparer sa réponse ou d'anticiper un défi.",
+    "regle3Titre": "Passer est prévu par le jeu",
+    "regle3Texte": "Refuser une carte fait tomber un gage, et c'est tout. C'est la règle la plus importante de cette version : elle rend le refus banal au lieu d'en faire un aveu.",
+    "regle4Titre": "Vous fixez la limite, pas le jeu",
+    "regle4Texte": "Décidez avant de commencer de ce qui est hors sujet ce soir. Un jeu ne remplace jamais un accord entre vous deux, il se contente de proposer."
+  },
+  "section3": {
+    "title": "Le consentement, dit simplement",
+    "p1": "Ce jeu propose, il n'impose rien. Chaque carte peut être refusée sans explication, autant de fois que nécessaire, et un gage n'est jamais une punition qu'on subit. Si l'un de vous n'a pas envie, la bonne réponse est d'arrêter la partie, pas de négocier.",
+    "p2": "Les cartes sont écrites pour un couple qui joue ensemble, entre adultes consentants. Elles supposent que vous vous connaissez et que vous savez tous les deux quand vous arrêter."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Quelle différence avec la version classique ?",
+    "a1": "Les cartes. La version classique s'adresse à tous les couples et se joue devant n'importe qui. Celle-ci a ses propres paquets, coquin et hot, écrits pour un moment où vous êtes seuls tous les deux.",
+    "q2": "C'est très explicite ?",
+    "a2": "L'ambiance coquin reste suggestive et ne demande jamais de se déshabiller entièrement. L'ambiance hot est nettement plus directe, avec des cartes qui supposent une intimité déjà installée. Vous choisissez le niveau avant de commencer.",
+    "q3": "Combien y a-t-il de cartes ?",
+    "a3": "140 réparties sur les deux niveaux, entre vérités, actions et gages. Elles ne se répètent pas tant que la pioche n'est pas vide, ce qui laisse de quoi tenir plusieurs soirées sans retomber sur les mêmes.",
+    "q4": "Est-ce que ça convient à un couple qui vient de se rencontrer ?",
+    "a4": "L'ambiance coquin, oui, elle fonctionne très bien pour tester le terrain. L'ambiance hot suppose que vous vous connaissez déjà bien : lancée trop tôt, elle met mal à l'aise plutôt qu'elle n'amuse.",
+    "q5": "Faut-il créer un compte ?",
+    "a5": "Non, et rien n'est enregistré. Le jeu tourne dans votre navigateur, vos réponses ne quittent jamais l'appareil et il n'y a aucun historique de partie."
+  },
+  "section4": {
+    "title": "Ce qu'un jeu comme celui-ci peut vraiment faire",
+    "p1": "Il ne va pas transformer votre vie intime, et personne ne devrait le lui demander. Ce qu'il fait bien, c'est donner un cadre à une conversation que beaucoup de couples n'ont jamais vraiment eue, parce que c'est la carte qui pose la question à votre place.",
+    "p2": "Le reste, c'est vous qui le décidez, et c'est très bien ainsi."
+  },
+  "jsonLd": {
+    "name": "Jeu action ou vérité coquin en couple"
+  }
+}

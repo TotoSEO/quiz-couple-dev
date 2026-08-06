@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "badge": "Gratuit • Sans inscription • À deux",
+    "title": "Action ou vérité en couple, sans rien préparer",
+    "titleHighlight": "en couple",
+    "description": "140 cartes tirées au hasard, deux ambiances au choix, et la partie démarre en un clic sur un seul téléphone."
+  },
+  "section1": {
+    "title": "Un action ou vérité qui se joue vraiment, pas une liste à faire défiler",
+    "p1": "La plupart des pages d'<strong class=\"text-foreground\">action ou vérité pour couple</strong> vous donnent cent questions à lire les unes après les autres. Ça marche cinq minutes, puis quelqu'un cherche la suite, quelqu'un d'autre triche en lisant à l'avance, et la partie s'arrête.",
+    "p2": "Ici c'est un jeu : on choisit une ambiance, une carte tombe, et on n'en voit qu'une à la fois. Ni liste, ni ordre connu d'avance, ni possibilité de repérer la suivante. Les cartes ne se répètent pas tant que la pioche n'est pas vide, et refuser une carte fait tomber un gage.",
+    "p3": "Tout se passe sur un seul téléphone posé entre vous deux, sans compte à créer et sans rien installer. La partie n'a pas de fin imposée : vous l'arrêtez quand vous voulez, et le récapitulatif vous dit combien de cartes vous avez relevées."
+  },
+  "section2": {
+    "title": "Les règles, en quatre points",
+    "intro": "Elles tiennent en quelques lignes, ce qui est un peu le principe du jeu.",
+    "regle1Titre": "Choisissez une ambiance",
+    "regle1Texte": "Classique pour les questions et les défis qui vont à tous les couples, marrant pour la version où l'on se charrie. Vous pouvez changer d'ambiance en cours de route en relançant une partie.",
+    "regle2Titre": "Une carte, un joueur",
+    "regle2Texte": "Le jeu annonce à qui c'est le tour et tire une carte, vérité ou action. Vous ne choisissez pas laquelle des deux, c'est le tirage qui décide, et c'est ce qui rend la partie imprévisible.",
+    "regle3Titre": "Vous faites, ou vous passez",
+    "regle3Texte": "Si la carte vous va, vous la relevez et le tour passe à l'autre. Si vous préférez éviter, vous passez et un gage tombe à la place. Personne n'a besoin de se justifier.",
+    "regle4Titre": "Vous arrêtez quand vous voulez",
+    "regle4Texte": "Le bouton pour terminer la partie est disponible à tout moment. Le récapitulatif compte les cartes relevées et les gages ramassés, et vous pouvez le partager."
+  },
+  "section3": {
+    "title": "La règle qui fait la différence : le droit de passer",
+    "p1": "Un action ou vérité à deux tourne mal quand l'un des deux se sent obligé. Le gage existe justement pour ça : il rend le refus normal et prévu par le jeu, au lieu d'en faire un moment gênant qu'il faut expliquer.",
+    "p2": "Convenez d'une chose avant de commencer : chacun peut passer sans donner de raison, autant de fois qu'il le veut. C'est contre-intuitif, mais c'est exactement ce qui permet d'aller plus loin, parce que personne ne joue sur la défensive."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Combien y a-t-il de cartes ?",
+    "a1": "140 au total, réparties entre les deux ambiances : des vérités à répondre, des actions à faire et des gages qui tombent quand on refuse une carte. Elles ne se répètent pas tant que la pioche n'est pas épuisée, ce qui laisse largement de quoi tenir une soirée.",
+    "q2": "Faut-il s'inscrire ou installer quelque chose ?",
+    "a2": "Non, ni l'un ni l'autre. Le jeu tourne directement dans votre navigateur, sur téléphone comme sur ordinateur. Vous ouvrez la page, vous choisissez une ambiance et la première carte tombe.",
+    "q3": "À combien peut-on jouer ?",
+    "a3": "Le jeu est conçu pour deux, avec un tour de rôle annoncé à chaque carte. Rien n'empêche d'y jouer à plusieurs en vous passant le téléphone, mais les cartes sont écrites pour un couple.",
+    "q4": "Y a-t-il une version plus osée ?",
+    "a4": "Oui, nous en avons fait une page séparée avec ses propres cartes, nettement plus directes. Elle porte le nom de version coquine et elle est faite pour les moments où vous êtes vraiment seuls tous les deux.",
+    "q5": "Peut-on y jouer à distance ?",
+    "a5": "Oui. L'un ouvre le jeu, lit la carte à voix haute en visio et valide pour les deux. Les vérités fonctionnent parfaitement à distance, les actions demandent un peu d'adaptation."
+  },
+  "section4": {
+    "title": "Pourquoi ce jeu marche encore après tant d'années",
+    "p1": "Action ou vérité traverse les générations pour une raison simple : il donne la permission de poser une question qu'on n'aurait jamais posée spontanément. Ce n'est pas vous qui demandez, c'est la carte, et cette petite distance change tout.",
+    "p2": "En couple, c'est souvent la seule façon d'aborder certains sujets sans en faire une conversation solennelle."
+  },
+  "jsonLd": {
+    "name": "Jeu action ou vérité en couple"
+  }
+}

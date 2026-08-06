@@ -74,7 +74,10 @@
     'attachement':    { prefix: 'attachement', engine: 'profile', totalQ: 20, pool: 20, quizType: 'attachement', categoryMap: { a: 'secure', b: 'secure', c: 'avoidant', d: 'anxious' } },
 
     // ── Action ou vérité (tirage de cartes, sans configuration) ──
-    'action-ou-verite': { prefix: 'actionVerite', engine: 'party', totalQ: 0, pool: 0, textOnly: true },
+    // Deux pages distinctes : la version grand public et la version coquine,
+    // qui n'ont ni la même intention de recherche ni le même public.
+    'action-ou-verite':        { prefix: 'actionVerite', engine: 'party', totalQ: 0, pool: 0, textOnly: true, ambiances: ['classique', 'marrant'] },
+    'action-ou-verite-coquin': { prefix: 'actionVeriteHot', engine: 'party', totalQ: 0, pool: 0, textOnly: true, ambiances: ['coquin', 'hot'] },
 
     // ── Suis-je amoureux (solo, ascendant : plus de signes = plus de points) ──
     'suis-je-amoureux': { prefix: 'suisjeamoureux', engine: 'solo', totalQ: 20, pool: 20, quizType: 'suisjeamoureux', ascending: true },
@@ -124,7 +127,8 @@
     // Le moteur de cartes ne lit pas des questions numérotées mais des paquets
     // par ambiance : il vérifie lui-même que ses données sont là.
     if (config.engine === 'party') {
-      if (!QuizEngine.tgd(config.prefix + '.doux_q1', null) || QuizEngine.tgd(config.prefix + '.doux_q1', null) === config.prefix + '.doux_q1') {
+      var sonde = config.prefix + '.' + (config.ambiances || ['classique'])[0] + '_q1';
+      if (!QuizEngine.tgd(sonde, null) || QuizEngine.tgd(sonde, null) === sonde) {
         if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
         if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
         showUnavailable(config);
@@ -699,16 +703,16 @@
     });
   }
 
+  var EMOJIS_AMBIANCE = { classique: '💗', marrant: '😂', coquin: '🔥', hot: '🌶️' };
+
   function initPartyGame(cfg) {
     new QuizEngine.PartyGame({
       container: container,
       prefix: cfg.prefix,
       lang: lang,
-      ambiances: [
-        { id: 'doux', emoji: '💗' },
-        { id: 'marrant', emoji: '😂' },
-        { id: 'coquin', emoji: '🔥' }
-      ]
+      ambiances: (cfg.ambiances || ['classique']).map(function(id) {
+        return { id: id, emoji: EMOJIS_AMBIANCE[id] || '🎲' };
+      })
     });
   }
 

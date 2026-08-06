@@ -312,7 +312,9 @@
     "testLangageAmour": "Love Languages test",
     "testAttachement": "Attachment Test",
     "testConfiance": "Trust Test",
-    "quizTentation": "Temptation Quiz"
+    "quizTentation": "Temptation Quiz",
+    "jeuActionVerite": "Truth or Dare game",
+    "jeuActionVeriteHot": "dirty Truth or Dare game"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -375,5 +377,22 @@
   "attachment": {
     "yourStyle": "Your attachment style",
     "introTitle": "What is your attachment style?"
+  },
+  "jeu": {
+    "introTitle": "Pick your mood",
+    "introDesc": "No sign-up, no set-up: pick a mood and the first card drops.",
+    "tourDe": "Turn of",
+    "arreter": "End the game",
+    "type_question": "Truth",
+    "type_defi": "Dare",
+    "type_gage": "Forfeit",
+    "fait": "Done!",
+    "passe": "I pass",
+    "gageFait": "Forfeit done!",
+    "cartes": "cards played",
+    "recapTitre": "Great game!",
+    "recapTexte": "You took on {{releves}} cards out of {{total}}.",
+    "recapGages": "{{passes}} forfeit(s) along the way.",
+    "rejouer": "Play again"
   }
 }

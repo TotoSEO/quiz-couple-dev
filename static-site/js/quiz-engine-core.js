@@ -395,6 +395,7 @@ var QuizEngine = (function() {
     var phrase;
     if (type === 'solo' && o.total) phrase = tg('share.soloScore', 'J\'ai obtenu {{score}}/{{total}} au {{quiz}}');
     else if (type === 'solo') phrase = tg('share.soloPct', 'J\'ai obtenu {{pct}} % au {{quiz}}');
+    else if (type === 'cartes') phrase = tg('share.duoCartes', 'On a relevé {{score}} cartes sur {{total}} au {{quiz}}');
     else if (type === 'duo' && o.points) phrase = tg('share.duoPoints', 'On a marqué {{score}} points au {{quiz}}');
     else if (type === 'duo') phrase = tg('share.duoPct', 'On a obtenu {{pct}} % au {{quiz}}');
     else if (type === 'profil') phrase = tg('share.profil', 'J\'ai fait le {{quiz}}');
@@ -411,7 +412,7 @@ var QuizEngine = (function() {
     }
 
     var appel = type === 'solo' ? tg('share.ctaSolo', 'Et vous, vous en êtes où ? Faites le test 👉')
-      : type === 'duo' ? tg('share.ctaDuo', 'Et vous, vous faites combien ? Essayez 👉')
+      : (type === 'duo' || type === 'cartes') ? tg('share.ctaDuo', 'Et vous, vous faites combien ? Essayez 👉')
       : type === 'profil' ? tg('share.ctaProfil', 'Et vous, quel est le vôtre ? 👉')
       : tg('share.ctaFun', 'À votre tour 👉');
 
@@ -588,6 +589,8 @@ var QuizEngine = (function() {
     { type: 'quiz', key: 'vrai-faux', icon: '✅', route: 'quizVraiFaux' },
     { type: 'quiz', key: 'zamours', icon: '📺', route: 'zamours' },
     { type: 'quiz', key: 'tentation', icon: '🏝️', route: 'quizTentation' },
+    { type: 'quiz', key: 'action-ou-verite', icon: '🎲', route: 'jeuActionVerite' },
+    { type: 'quiz', key: 'action-ou-verite-coquin', icon: '🌶️', route: 'jeuActionVeriteHot' },
   ];
 
   function getRelatedQuizUrl(routeKey, lang) {
@@ -4259,7 +4262,7 @@ var QuizEngine = (function() {
     wrap.appendChild(rejouer);
 
     renderActionButtons(wrap, {
-      share: { type: 'duo', points: true, score: this.releves },
+      share: { type: 'cartes', score: this.releves, total: total },
       restart: function() { self.phase = 'choix'; self.render(); smoothScroll(self.container, 'start'); }
     });
     this.container.appendChild(wrap);

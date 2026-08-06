@@ -207,5 +207,17 @@
     "shortTitle": "Suis-je amoureux ?",
     "description": "20 questions pour distinguer l'amour du béguin et savoir ce que vous ressentez.",
     "metaDescription": "Suis-je amoureux ou juste attiré ? 20 questions pour distinguer l'amour du béguin. Test gratuit, résultat immédiat et sans inscription."
+  },
+  "jeuActionVerite": {
+    "title": "Action ou vérité couple : le jeu en ligne, 140 cartes",
+    "shortTitle": "Action ou vérité",
+    "description": "140 cartes tirées au hasard pour jouer à action ou vérité à deux, sans rien préparer.",
+    "metaDescription": "Jouez à action ou vérité en couple : 140 cartes tirées au hasard, deux ambiances, sur un seul téléphone. Gratuit, sans inscription, une carte à la fois."
+  },
+  "jeuActionVeriteHot": {
+    "title": "Action ou vérité coquin : le jeu hot à deux, gratuit",
+    "shortTitle": "Action ou vérité coquin",
+    "description": "140 cartes coquines et hot pour jouer à deux, avec deux niveaux au choix.",
+    "metaDescription": "Action ou vérité coquin en ligne : 140 cartes, deux niveaux au choix du plus soft au plus hot. Gratuit, sans inscription, à jouer à deux ce soir."
   }
 }

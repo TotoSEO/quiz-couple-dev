@@ -312,7 +312,9 @@
     "testLangageAmour": "test dei linguaggi dell'amore",
     "testAttachement": "Test Attaccamento",
     "testConfiance": "Test Fiducia",
-    "quizTentation": "Quiz Temptation"
+    "quizTentation": "Quiz Temptation",
+    "jeuActionVerite": "gioco obbligo o verità",
+    "jeuActionVeriteHot": "gioco obbligo o verità piccante"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
@@ -375,5 +377,22 @@
   "attachment": {
     "yourStyle": "Il tuo stile di attaccamento",
     "introTitle": "Qual è il tuo stile di attaccamento?"
+  },
+  "jeu": {
+    "introTitle": "Scegliete la vostra atmosfera",
+    "introDesc": "Nessuna registrazione, nessuna preparazione: scegliete un ambiente e cade la prima carta.",
+    "tourDe": "Tocca a",
+    "arreter": "Terminare la partita",
+    "type_question": "Verità",
+    "type_defi": "Obbligo",
+    "type_gage": "Penitenza",
+    "fait": "Fatto!",
+    "passe": "Passo",
+    "gageFait": "Penitenza compiuta!",
+    "cartes": "carte giocate",
+    "recapTitre": "Bella partita!",
+    "recapTexte": "Avete superato {{releves}} carte su {{total}}.",
+    "recapGages": "{{passes}} penitenza/e lungo il percorso.",
+    "rejouer": "Rigiocare"
   }
 }
