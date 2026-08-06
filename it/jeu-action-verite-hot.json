@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "badge": "Solo per adulti • In due • Gratis",
+    "title": "Obbligo o verità piccante, la versione che non si trattiene",
+    "titleHighlight": "piccante",
+    "description": "70 carte per due, in piccante o in hot, su un solo telefono e senza preparare niente."
+  },
+  "section1": {
+    "title": "Due livelli, perché non tutti partono dallo stesso punto",
+    "p1": "Un <strong class=\"text-foreground\">obbligo o verità piccante</strong> che parte troppo forte non funziona: la prima prova mette a disagio e la partita finisce prima di cominciare. Per questo il gioco ha due livelli separati invece di un mazzo unico.",
+    "p2": "L'atmosfera <strong class=\"text-foreground\">piccante</strong> resta allusiva: domande che fanno arrossire, prove che avvicinano, niente che obblighi a spogliarsi. L'atmosfera <strong class=\"text-foreground\">hot</strong> non prende più precauzioni, le carte sono dirette e danno per scontato che sappiate entrambi dove state andando.",
+    "p3": "Cominciate dalla prima anche se pensate di poter saltare il passaggio. La risata delle prime carte fa più per il resto della serata di qualsiasi prova lanciata a freddo."
+  },
+  "section2": {
+    "title": "Come si gioca",
+    "intro": "Le regole sono le stesse della versione classica, con un punto in più che qui pesa di più.",
+    "regle1Titre": "Scegliete il vostro livello",
+    "regle1Texte": "Piccante o hot. Il gioco non mescola mai i due mazzi: quello che scegliete all'inizio è quello che avrete per tutta la partita.",
+    "regle2Titre": "Una carta alla volta, estratta a caso",
+    "regle2Texte": "Verità o obbligo, non scegliete voi. Non vedete mai la carta successiva, il che impedisce di preparare una risposta o di anticipare una prova.",
+    "regle3Titre": "Passare è previsto dal gioco",
+    "regle3Texte": "Rifiutare una carta fa cadere una penitenza, e basta. È la regola più importante di questa versione: rende il rifiuto banale invece di trasformarlo in una confessione.",
+    "regle4Titre": "Il limite lo fissate voi, non il gioco",
+    "regle4Texte": "Decidete prima di iniziare che cosa è fuori discussione stasera. Un gioco non sostituisce mai un accordo tra voi due, si limita a proporre."
+  },
+  "section3": {
+    "title": "Il consenso, detto in modo semplice",
+    "p1": "Questo gioco propone, non impone niente. Ogni carta può essere rifiutata senza spiegazioni, tutte le volte che serve, e una penitenza non è mai una punizione da subire. Se uno dei due non ne ha voglia, la risposta giusta è fermare la partita, non negoziare.",
+    "p2": "Le carte sono scritte per una coppia che gioca insieme, tra adulti consenzienti. Danno per scontato che vi conosciate e che sappiate entrambi quando fermarvi."
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "q1": "Che differenza c'è con la versione classica?",
+    "a1": "Le carte. La versione classica si rivolge a tutte le coppie e si gioca davanti a chiunque. Questa ha i suoi mazzi, piccante e hot, scritti per un momento in cui siete soli voi due.",
+    "q2": "È molto esplicito?",
+    "a2": "L'atmosfera piccante resta allusiva e non chiede mai di spogliarsi del tutto. L'atmosfera hot è nettamente più diretta, con carte che presuppongono un'intimità già consolidata. Il livello lo scegliete prima di iniziare.",
+    "q3": "Quante carte ci sono?",
+    "a3": "70 divise tra i due livelli, cioè 15 verità, 12 obblighi e 8 penitenze per livello. Non si ripetono finché resta mazzo, il che basta per una serata intera senza ricadere sulle stesse.",
+    "q4": "Va bene per una coppia che si è appena conosciuta?",
+    "a4": "L'atmosfera piccante sì, funziona molto bene per tastare il terreno. L'atmosfera hot presuppone che vi conosciate già bene: lanciata troppo presto, mette a disagio più che divertire.",
+    "q5": "Bisogna creare un account?",
+    "a5": "No, e non viene registrato niente. Il gioco gira nel vostro browser, le vostre risposte non lasciano mai il dispositivo e non c'è nessuno storico delle partite."
+  },
+  "section4": {
+    "title": "Che cosa può fare davvero un gioco come questo",
+    "p1": "Non trasformerà la vostra vita intima, e nessuno dovrebbe chiederglielo. Quello che fa bene è dare una cornice a una conversazione che molte coppie non hanno mai avuto davvero, perché è la carta a fare la domanda al posto vostro.",
+    "p2": "Il resto lo decidete voi, ed è giusto così."
+  },
+  "jsonLd": {
+    "name": "Gioco obbligo o verità piccante di coppia"
+  }
+}

@@ -126,6 +126,9 @@
     "testsDesc": "Valutate la vostra relazione con i nostri test di compatibilità e autovalutazione",
     "quizzesTitle": "I Nostri Quiz per Coppie",
     "quizzesDesc": "Giochi interattivi e divertenti da fare insieme per rafforzare la vostra complicità",
+    "jeuxTitle": "I nostri giochi da fare in due",
+    "jeuxDesc": "Tre giochi che partono su un solo telefono, senza registrazione e senza preparare niente.",
+    "jeuxCta": "Vedi tutti i nostri giochi di coppia",
     "cards": {
       "testCouple": "20 domande per valutare la vostra relazione.",
       "testCommonPoints": "Avete cose in comune con il vostro partner?",
@@ -139,7 +142,9 @@
       "quizCoquin": "Esplorate i vostri desideri e aggiungete pepe alla relazione.",
       "quizMarrant": "Ridete insieme con domande esilaranti!",
       "quizKnowledge": "Chi conosce meglio l'altro? Sfidate voi stessi!",
-      "quizMost": "Votate per scoprire chi è il più... tra voi!"
+      "quizMost": "Votate per scoprire chi è il più... tra voi!",
+      "testAttachement": "Scopri il tuo stile di attaccamento: sicuro, ansioso o evitante?",
+      "testConfiance": "Valuta il livello di fiducia reciproca nella vostra coppia."
     }
   },
   "customQuizPromo": {

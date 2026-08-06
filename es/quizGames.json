@@ -196,6 +196,9 @@
     "shareResults": "¡Comparte tus resultados!",
     "changePlayers": "Cambiar jugadores",
     "relatedTitle": "¡Continúa con más tests / quizzes!",
+    "typeTest": "Test",
+    "typeQuiz": "Quiz",
+    "typeJeu": "Juego",
     "commonPoints": "puntos en común",
     "shareYourResult": "¡Comparte tu resultado!",
     "loveScore": "Puntuación de amor",
@@ -266,6 +269,7 @@
     "soloPct": "He sacado un {{pct}} % en el {{quiz}}",
     "duoPct": "Hemos sacado un {{pct}} % en el {{quiz}}",
     "duoPoints": "Hemos hecho {{score}} puntos en el {{quiz}}",
+    "duoCartes": "Hemos superado {{score}} de {{total}} cartas en el {{quiz}}",
     "profil": "He hecho el {{quiz}}",
     "fun": "Acabamos de hacer el {{quiz}}",
     "verdict": ": «{{result}}»",
@@ -312,7 +316,10 @@
     "testLangageAmour": "test de los lenguajes del amor",
     "testAttachement": "Test Apego",
     "testConfiance": "Test Confianza",
-    "quizTentation": "Quiz Tentaciones"
+    "quizTentation": "Quiz Tentaciones",
+    "jeuActionVerite": "juego verdad o reto",
+    "jeuActionVeriteHot": "juego verdad o reto picante",
+    "jeuGages": "la ruleta de prendas"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
@@ -375,5 +382,30 @@
   "attachment": {
     "yourStyle": "Tu estilo de apego",
     "introTitle": "¿Cuál es tu estilo de apego?"
+  },
+  "jeu": {
+    "introTitle": "Elegid vuestro ambiente",
+    "introDesc": "Sin registro y sin preparación: elegid un ambiente y cae la primera carta.",
+    "tourDe": "Turno de",
+    "arreter": "Terminar la partida",
+    "type_question": "Verdad",
+    "type_defi": "Reto",
+    "type_gage": "Prenda",
+    "fait": "¡Hecho!",
+    "passe": "Paso",
+    "gageFait": "¡Prenda cumplida!",
+    "cartes": "cartas jugadas",
+    "recapTitre": "¡Buena partida!",
+    "recapTexte": "Habéis superado {{releves}} cartas de {{total}}.",
+    "recapGages": "{{passes}} prenda(s) por el camino.",
+    "rejouer": "Jugar otra vez"
+  },
+  "roue": {
+    "lancer": "Girar la ruleta",
+    "relancer": "Girar otra vez",
+    "enCours": "La ruleta está girando...",
+    "intro": "Pulsad el botón: la ruleta elige la prenda por vosotros.",
+    "compteur": "{{n}} prendas sacadas",
+    "compteur1": "1 prenda sacada"
   }
 }

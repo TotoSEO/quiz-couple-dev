@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "badge": "Gratis • Sin registro • Para girar sin parar",
+    "title": "La ruleta de prendas para jugar en pareja",
+    "titleHighlight": "en pareja",
+    "description": "70 prendas repartidas en siete familias. Pulsáis, la ruleta gira y decide por vosotros."
+  },
+  "familles": {
+    "bisouNom": "Beso",
+    "bisouDesc": "Prendas cortas y cariñosas, del beso en el hombro al beso esquimal. Las que valen en cualquier sitio, incluso con gente delante.",
+    "massageNom": "Masaje",
+    "massageDesc": "Hombros, manos, nuca, pies: dos minutos cronometrados que bajan la tensión de golpe.",
+    "showNom": "Show",
+    "showDesc": "Cantar, bailar, imitar, declamar. La familia que incomoda cinco segundos y hace reír durante diez minutos.",
+    "aveuNom": "Confesión",
+    "aveuDesc": "Una pregunta a la que hay que responder de verdad. Es la familia que convierte una noche de juegos en una conversación real.",
+    "grimaceNom": "Payasada",
+    "grimaceDesc": "El ridículo asumido: acento impuesto, animal que imitar, una prenda del revés durante tres giros.",
+    "photoNom": "Foto",
+    "photoDesc": "Prendas que dejan huella, del selfie más feo a la foto de hace un año que hay que repetir igual.",
+    "douceurNom": "Ternura",
+    "douceurDesc": "Cumplidos, notas escritas, un abrazo que no se suelta. Las más sencillas y a menudo las que se recuerdan."
+  },
+  "section1": {
+    "title": "Una prenda sacada al azar vale más que una prenda inventada",
+    "p1": "Cuando termina una apuesta, alguien tiene que encontrar la <strong class=\"text-foreground\">prenda</strong>. Y ahí es donde se atasca: o no se te ocurre nada, o se te ocurre algo demasiado duro, o quien ha ganado se siente obligado a ser blando. En los tres casos el momento se cae.",
+    "p2": "Una ruleta lo resuelve de golpe: nadie elige, así que nadie es responsable. Es también lo que permite aceptar una prenda que habríais rechazado si la hubiera propuesto el otro, porque ya no hay intención detrás, solo azar.",
+    "p3": "En la ruleta giran siete familias, más una casilla sorpresa que saca de todas las demás. Giráis tantas veces como queráis: la partida no tiene final, se acaba cuando cerráis la página."
+  },
+  "section2": {
+    "title": "Qué hay en la ruleta",
+    "intro": "Cada familia tiene sus diez prendas, escritas para una pareja y jugables en un salón. Nada se repite mientras quede familia.",
+    "headerFamille": "La familia",
+    "headerContenu": "Qué contiene"
+  },
+  "section3": {
+    "title": "Cómo se usa",
+    "intro": "No hay reglas impuestas: la ruleta es una herramienta, vosotros decidís qué la dispara.",
+    "regle1Titre": "Tras una apuesta perdida",
+    "regle1Texte": "El uso más habitual. Quien pierde gira la ruleta y cumple, sin discutir el resultado. Funciona justamente porque no lo ha elegido.",
+    "regle2Titre": "Al final de otro juego",
+    "regle2Texte": "Un giro al terminar un quiz o un verdad o reto relanza la noche sin tener que sacar otro juego.",
+    "regle3Titre": "Como juego en sí mismo",
+    "regle3Texte": "Por turnos, cada uno gira y cumple la prenda que sale. Diez giros bastan para un rato completo, y no os saldrá dos veces la misma.",
+    "regle4Titre": "Con derecho a volver a girar",
+    "regle4Texte": "Poneos de acuerdo en una cosa antes de empezar: cada uno puede volver a girar una vez por noche sin justificarse. Eso quita la única razón para no jugar."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Cuántas prendas hay?",
+    "a1": "70, repartidas en siete familias de diez. La casilla sorpresa saca de las siete, así que no añade prendas pero cambia la forma en que salen.",
+    "q2": "¿Se repiten las prendas?",
+    "a2": "No mientras quede algo en la familia que ha salido. Cada familia se rebaraja una vez han salido sus diez prendas, lo que da de sobra para una noche sin repetir.",
+    "q3": "¿Es picante?",
+    "a3": "No, la ruleta está pensada para girarla en cualquier sitio, incluso delante de amigos. Lo más íntimo es un beso o un masaje. Para algo más directo, nuestros juegos de verdad o reto tienen su propio mazo aparte.",
+    "q4": "¿Se puede jugar entre más de dos?",
+    "a4": "Las prendas están escritas para una pareja, pero nada impide pasar el móvil en un grupo: la mitad funcionan tal cual, la otra mitad simplemente dan por hecho que hay una pareja enfrente.",
+    "q5": "¿Hay que crear una cuenta?",
+    "a5": "No, y no se guarda nada. La ruleta funciona en vuestro navegador, en el móvil o en el ordenador, y el contador vuelve a cero en cuanto recargáis la página."
+  },
+  "section4": {
+    "title": "Una prenda bien elegida no incomoda a nadie",
+    "p1": "El único riesgo real de un juego de prendas es la prenda que va demasiado lejos para uno de los dos. Las de esta ruleta están hechas a medida de un salón: nada que obligue a desnudarse, nada que os exponga delante de otros, nada de lo que arrepentirse al día siguiente.",
+    "p2": "El resto lo decidís vosotros, y así está mucho mejor.",
+    "cta": "Ver todos nuestros juegos para parejas"
+  },
+  "jsonLd": {
+    "name": "La ruleta de prendas en pareja"
+  }
+}

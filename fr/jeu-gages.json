@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "badge": "Gratuit • Sans inscription • À relancer à l'infini",
+    "title": "La roue des gages à faire en couple",
+    "titleHighlight": "en couple",
+    "description": "70 gages répartis en sept familles. Vous appuyez, la roue tourne, et elle décide à votre place."
+  },
+  "familles": {
+    "bisouNom": "Bisou",
+    "bisouDesc": "Des gages courts et affectueux, du baiser sur l'épaule au bisou esquimau. Ceux qui passent partout, même devant du monde.",
+    "massageNom": "Massage",
+    "massageDesc": "Épaules, mains, nuque, pieds : deux minutes chrono qui font retomber la pression d'un coup.",
+    "showNom": "Show",
+    "showDesc": "Chanter, danser, imiter, déclamer. La famille qui met mal à l'aise cinq secondes et fait rire pendant dix minutes.",
+    "aveuNom": "Aveu",
+    "aveuDesc": "Une question à laquelle il faut répondre pour de vrai. C'est la famille qui change une soirée de jeu en vraie conversation.",
+    "grimaceNom": "Grimace",
+    "grimaceDesc": "Le ridicule assumé : accent imposé, animal à imiter, vêtement à l'envers pendant trois tours.",
+    "photoNom": "Photo",
+    "photoDesc": "Des gages qui laissent une trace, du selfie le plus moche à la photo d'il y a un an qu'il faut refaire à l'identique.",
+    "douceurNom": "Douceur",
+    "douceurDesc": "Compliments, mots écrits, câlin qui ne se lâche pas. Ce sont les plus simples et souvent ceux dont on se souvient."
+  },
+  "section1": {
+    "title": "Un gage tiré au sort vaut mieux qu'un gage inventé",
+    "p1": "Quand un pari se termine, quelqu'un doit trouver le <strong class=\"text-foreground\">gage</strong>. Et c'est là que ça coince : soit on n'a aucune idée, soit on en trouve une trop dure, soit celui qui a gagné se sent obligé d'être gentil. Dans les trois cas, le moment retombe.",
+    "p2": "Une roue règle ça d'un coup : personne ne choisit, donc personne n'est responsable. C'est aussi ce qui permet d'accepter un gage qu'on aurait refusé si l'autre l'avait proposé, parce qu'il n'y a plus d'intention derrière, juste le hasard.",
+    "p3": "Sept familles tournent sur la roue, plus une case surprise qui pioche dans toutes les autres. Vous relancez autant de fois que vous voulez : la partie n'a pas de fin, elle s'arrête quand vous fermez la page."
+  },
+  "section2": {
+    "title": "Ce qu'il y a dans la roue",
+    "intro": "Chaque famille a ses dix gages, écrits pour un couple et jouables dans un salon. Rien ne se répète tant que la famille n'est pas épuisée.",
+    "headerFamille": "La famille",
+    "headerContenu": "Ce qu'elle contient"
+  },
+  "section3": {
+    "title": "Comment on s'en sert",
+    "intro": "Il n'y a pas de règle du jeu imposée : la roue est un outil, vous décidez de ce qui la déclenche.",
+    "regle1Titre": "Après un pari perdu",
+    "regle1Texte": "L'usage le plus courant. Celui qui perd lance la roue et exécute, sans discuter le résultat. C'est justement parce qu'il n'a pas choisi que c'est jouable.",
+    "regle2Titre": "En fin de partie d'un autre jeu",
+    "regle2Texte": "Une roue à la fin d'un quiz ou d'un action ou vérité relance la soirée sans avoir à sortir un nouveau jeu.",
+    "regle3Titre": "Comme jeu à part entière",
+    "regle3Texte": "À tour de rôle, chacun lance et fait le gage tiré. Dix tours suffisent pour un moment complet, et vous n'aurez pas deux fois le même.",
+    "regle4Titre": "Avec le droit de repasser",
+    "regle4Texte": "Convenez d'une chose avant de commencer : chacun peut relancer une fois par soirée sans se justifier. Ça enlève la seule raison de ne pas jouer."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Combien y a-t-il de gages ?",
+    "a1": "70, répartis en sept familles de dix. La case surprise pioche dans les sept, elle n'ajoute donc pas de gages mais elle change la façon dont ils tombent.",
+    "q2": "Est-ce que les gages se répètent ?",
+    "a2": "Pas tant que la famille tirée n'est pas vide. Chaque famille se remélange une fois ses dix gages sortis, ce qui laisse largement de quoi tenir une soirée sans retomber sur le même.",
+    "q3": "Est-ce que c'est coquin ?",
+    "a3": "Non, la roue est faite pour être lancée n'importe où, y compris devant des amis. Le plus intime reste un baiser ou un massage. Pour une version plus directe, nos jeux d'action ou vérité ont un paquet séparé.",
+    "q4": "On peut y jouer à plus de deux ?",
+    "a4": "Les gages sont écrits pour un couple, mais rien n'empêche de faire tourner le téléphone dans un groupe : la moitié fonctionne telle quelle, l'autre suppose simplement qu'il y a un partenaire en face.",
+    "q5": "Faut-il créer un compte ?",
+    "a5": "Non, et rien n'est enregistré. La roue tourne dans votre navigateur, sur téléphone comme sur ordinateur, et le compteur repart à zéro dès que vous rechargez la page."
+  },
+  "section4": {
+    "title": "Un gage bien choisi ne met personne mal à l'aise",
+    "p1": "Le seul vrai risque d'un jeu de gages, c'est le gage qui va trop loin pour l'un des deux. Ceux de cette roue sont volontairement à hauteur d'un salon : rien qui demande de se déshabiller, rien qui expose devant les autres, rien qu'on regretterait le lendemain.",
+    "p2": "Le reste, c'est vous qui le décidez, et c'est bien mieux ainsi.",
+    "cta": "Voir tous nos jeux de couple"
+  },
+  "jsonLd": {
+    "name": "La roue des gages en couple"
+  }
+}

@@ -126,6 +126,9 @@
     "testsDesc": "Evaluate your relationship with our compatibility and self-assessment tests",
     "quizzesTitle": "Our Couple Quizzes",
     "quizzesDesc": "Interactive and fun games to play together and strengthen your bond",
+    "jeuxTitle": "Our games to play together",
+    "jeuxDesc": "Three games that start on a single phone, with no sign-up and nothing to prepare.",
+    "jeuxCta": "See all our couple games",
     "cards": {
       "testCouple": "20 questions to evaluate your relationship.",
       "testCommonPoints": "Do you have things in common with your partner?",
@@ -139,7 +142,9 @@
       "quizCoquin": "Explore your desires and spice up your relationship.",
       "quizMarrant": "Laugh together with hilarious questions!",
       "quizKnowledge": "Who knows the other best? Challenge each other!",
-      "quizMost": "Vote to find out who is the most... among you!"
+      "quizMost": "Vote to find out who is the most... among you!",
+      "testAttachement": "Find out your attachment style: secure, anxious or avoidant?",
+      "testConfiance": "Measure the level of mutual trust in your relationship."
     }
   },
   "customQuizPromo": {

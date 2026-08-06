@@ -32,11 +32,17 @@
     { routeKey: 'quizKnowledge', labelKey: 'nav.quizKnowledge' },
     { routeKey: 'quizMost', labelKey: 'nav.quizMost' },
     { routeKey: 'quizAdo', labelKey: 'nav.quizAdo' },
-    { routeKey: 'quizTuPreferes', labelKey: 'nav.quizTuPreferes' },
     { routeKey: 'quizVraiFaux', labelKey: 'nav.quizVraiFaux' },
     { routeKey: 'zamours', labelKey: 'nav.zamours' },
     { routeKey: 'quizTentation', labelKey: 'nav.quizTentation' },
     { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple' },
+  ];
+  const footerJeuxLinks = [
+    { routeKey: 'jeuxCouple', labelKey: 'nav.jeuxCouple' },
+    { routeKey: 'quizTuPreferes', labelKey: 'nav.quizTuPreferes' },
+    { routeKey: 'jeuActionVerite', labelKey: 'nav.jeuActionVerite' },
+    { routeKey: 'jeuActionVeriteHot', labelKey: 'nav.jeuActionVeriteHot' },
+    { routeKey: 'jeuGages', labelKey: 'nav.jeuGages' },
   ];
   const footerLegalLinks = [
     { routeKey: 'about', labelKey: 'footer.about' },
@@ -54,10 +60,11 @@
   const _filterAvail = (links) => links.filter(l => getLocalizedUrl(l.routeKey, lang));
   const footerTestLinksFiltered = _filterAvail(footerTestLinks);
   const footerQuizLinksFiltered = _filterAvail(footerQuizLinks);
+  const footerJeuxLinksFiltered = _filterAvail(footerJeuxLinks);
 %>
 <footer class="border-t border-border bg-muted/30">
   <div class="container mx-auto px-6 sm:px-8 py-12">
-    <div class="grid gap-10 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="grid gap-10 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
       <!-- Brand -->
       <div class="space-y-4">
         <a href="<%= homeUrl %>" class="flex items-center gap-2 text-xl font-bold no-underline">
@@ -82,6 +89,16 @@
         <span class="block mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:nav.categoryQuizzes', 'Quiz') %></span>
         <div class="flex flex-col gap-2">
           <% for (const link of footerQuizLinksFiltered) { %>
+          <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
+          <% } %>
+        </div>
+      </div>
+
+      <!-- Jeux -->
+      <div>
+        <span class="block mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:nav.categoryJeux', 'Jeux') %></span>
+        <div class="flex flex-col gap-2">
+          <% for (const link of footerJeuxLinksFiltered) { %>
           <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
         </div>

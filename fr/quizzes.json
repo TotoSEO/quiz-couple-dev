@@ -207,5 +207,29 @@
     "shortTitle": "Suis-je amoureux ?",
     "description": "20 questions pour distinguer l'amour du béguin et savoir ce que vous ressentez.",
     "metaDescription": "Suis-je amoureux ou juste attiré ? 20 questions pour distinguer l'amour du béguin. Test gratuit, résultat immédiat et sans inscription."
+  },
+  "jeuxCouple": {
+    "title": "Jeux de couple : 4 jeux gratuits en ligne, sans inscription",
+    "shortTitle": "Jeux de couple",
+    "description": "Quatre jeux à jouer à deux : tu préfères, action ou vérité, sa version coquine et la roue des gages.",
+    "metaDescription": "4 jeux de couple gratuits à jouer sur un seul téléphone : tu préfères, action ou vérité, sa version coquine et la roue des gages. Sans inscription."
+  },
+  "jeuGages": {
+    "title": "Gage couple : la roue des gages en ligne, 70 idées",
+    "shortTitle": "Roue des gages",
+    "description": "Une roue à relancer à l'infini qui tire un gage au hasard parmi 70, en sept familles.",
+    "metaDescription": "Roue des gages pour couple : 70 gages tirés au hasard, du bisou à l'aveu. Gratuit, sans inscription, relançable à l'infini d'un simple bouton."
+  },
+  "jeuActionVerite": {
+    "title": "Action ou vérité couple : le jeu en ligne, 70 cartes",
+    "shortTitle": "Action ou vérité",
+    "description": "70 cartes tirées au hasard pour jouer à action ou vérité à deux, sans rien préparer.",
+    "metaDescription": "Jouez à action ou vérité en couple : 70 cartes tirées au hasard, deux ambiances, sur un seul téléphone. Gratuit, sans inscription, une carte à la fois."
+  },
+  "jeuActionVeriteHot": {
+    "title": "Action ou vérité coquin : le jeu hot à deux, gratuit",
+    "shortTitle": "Action ou vérité coquin",
+    "description": "70 cartes coquines et hot pour jouer à deux, avec deux niveaux au choix.",
+    "metaDescription": "Action ou vérité coquin en ligne : 70 cartes, deux niveaux au choix du plus soft au plus hot. Gratuit, sans inscription, à jouer à deux ce soir."
   }
 }

@@ -196,6 +196,9 @@
     "shareResults": "Teile deine Ergebnisse!",
     "changePlayers": "Spieler wechseln",
     "relatedTitle": "Machen Sie weiter mit anderen Tests / Quizzen!",
+    "typeTest": "Test",
+    "typeQuiz": "Quiz",
+    "typeJeu": "Spiel",
     "commonPoints": "gemeinsame Punkte",
     "shareYourResult": "Teile dein Ergebnis!",
     "loveScore": "Liebespunktzahl",
@@ -266,6 +269,7 @@
     "soloPct": "Ich habe {{pct}} % beim {{quiz}} erreicht",
     "duoPct": "Wir haben {{pct}} % beim {{quiz}} erreicht",
     "duoPoints": "Wir haben {{score}} Punkte beim {{quiz}} geholt",
+    "duoCartes": "Wir haben {{score}} von {{total}} Karten beim {{quiz}} geschafft",
     "profil": "Ich habe den {{quiz}} gemacht",
     "fun": "Wir haben gerade den {{quiz}} gespielt",
     "verdict": ": „{{result}}“",
@@ -312,7 +316,10 @@
     "testLangageAmour": "Test der Sprachen der Liebe",
     "testAttachement": "Bindungstest",
     "testConfiance": "Vertrauenstest",
-    "quizTentation": "Temptation Quiz"
+    "quizTentation": "Temptation Quiz",
+    "jeuActionVerite": "Spiel Wahrheit oder Pflicht",
+    "jeuActionVeriteHot": "Spiel Wahrheit oder Pflicht versaut",
+    "jeuGages": "Strafen-Glücksrad"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
@@ -375,5 +382,30 @@
   "attachment": {
     "yourStyle": "Dein Bindungsstil",
     "introTitle": "Was ist dein Bindungsstil?"
+  },
+  "jeu": {
+    "introTitle": "Wählt eure Stimmung",
+    "introDesc": "Keine Anmeldung, keine Vorbereitung: Stimmung wählen und die erste Karte fällt.",
+    "tourDe": "Am Zug ist",
+    "arreter": "Partie beenden",
+    "type_question": "Wahrheit",
+    "type_defi": "Pflicht",
+    "type_gage": "Strafe",
+    "fait": "Erledigt!",
+    "passe": "Ich passe",
+    "gageFait": "Strafe erfüllt!",
+    "cartes": "Karten gespielt",
+    "recapTitre": "Schöne Partie!",
+    "recapTexte": "Ihr habt {{releves}} von {{total}} Karten geschafft.",
+    "recapGages": "{{passes}} Strafe(n) unterwegs.",
+    "rejouer": "Nochmal spielen"
+  },
+  "roue": {
+    "lancer": "Rad drehen",
+    "relancer": "Nochmal drehen",
+    "enCours": "Das Rad dreht sich...",
+    "intro": "Drückt den Knopf: Das Rad wählt die Strafe für euch.",
+    "compteur": "{{n}} Strafen gezogen",
+    "compteur1": "1 Strafe gezogen"
   }
 }

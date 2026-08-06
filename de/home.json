@@ -126,6 +126,9 @@
     "testsDesc": "Bewertet eure Beziehung mit unseren Kompatibilitäts- und Selbsteinschätzungstests",
     "quizzesTitle": "Unsere Paar-Quiz",
     "quizzesDesc": "Interaktive und lustige Spiele zum gemeinsamen Spielen und Stärken eurer Komplizenschaft",
+    "jeuxTitle": "Unsere Spiele für zu zweit",
+    "jeuxDesc": "Drei Spiele, die auf einem einzigen Handy starten, ohne Anmeldung und ohne Vorbereitung.",
+    "jeuxCta": "Alle unsere Paarspiele ansehen",
     "cards": {
       "testCouple": "20 Fragen, um eure Beziehung zu bewerten.",
       "testCommonPoints": "Habt ihr Gemeinsamkeiten mit eurem Partner?",
@@ -139,7 +142,9 @@
       "quizCoquin": "Erkundet eure Wünsche und würzt eure Beziehung.",
       "quizMarrant": "Lacht zusammen mit witzigen Fragen!",
       "quizKnowledge": "Wer kennt den anderen besser? Fordert euch heraus!",
-      "quizMost": "Stimmt ab, wer am meisten... unter euch ist!"
+      "quizMost": "Stimmt ab, wer am meisten... unter euch ist!",
+      "testAttachement": "Finde deinen Bindungsstil heraus: sicher, ängstlich oder vermeidend?",
+      "testConfiance": "Messt das gegenseitige Vertrauen in eurer Beziehung."
     }
   },
   "customQuizPromo": {

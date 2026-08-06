@@ -1,0 +1,209 @@
+<%
+  // Hub des jeux de couple. Il ne liste que des jeux, pas des quiz ni des tests :
+  // le tableau de selection est le coeur de la page, le contenu vient ensuite.
+  const ns = 'jeux-couple';
+  const pageTitle = t('quizzes:jeuxCouple.title', 'Jeux de couple');
+
+  // Les quatre jeux, dans l'ordre : le plus accessible d'abord, le plus ose en dernier.
+  const jeux = [
+    { routeKey: 'quizTuPreferes',     cle: 'tuPreferes',        emoji: '🤔', accent: '270 45% 58%', img: 'would-you-rather-doors' },
+    { routeKey: 'jeuActionVerite',    cle: 'actionVerite',      emoji: '🎲', accent: '340 65% 62%', img: 'conversation-cards' },
+    { routeKey: 'jeuActionVeriteHot', cle: 'actionVeriteHot',   emoji: '🌶️', accent: '12 78% 56%',  img: 'naughty-date-night', adultes: true },
+    { routeKey: 'jeuGages',           cle: 'gages',            emoji: '🎡', accent: '190 60% 45%', img: 'most-likely-trophy' }
+  ].map(function(j) {
+    j.url = getLocalizedUrl(j.routeKey, lang);
+    const f = quizFeatured && quizFeatured[j.routeKey];
+    j.alt = f ? (f.alt[lang] || f.alt.fr) : '';
+    return j;
+  }).filter(function(j) { return j.url; });
+
+  const faqNums = [1, 2, 3, 4, 5];
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "CollectionPage",
+      "name": t(ns + ':jsonLd.name', 'Jeux de couple'),
+      "description": t('quizzes:jeuxCouple.metaDescription', ''),
+      "inLanguage": lang,
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": jeux.length,
+        "itemListElement": jeux.map(function(j, i) {
+          return {
+            "@type": "ListItem", "position": i + 1,
+            "item": {
+              "@type": "Game",
+              "name": t(ns + ':jeux.' + j.cle + 'Nom', ''),
+              "description": t(ns + ':jeux.' + j.cle + 'Tagline', ''),
+              "url": j.url,
+              "isAccessibleForFree": true,
+              "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 2 }
+            }
+          };
+        })
+      }
+    },
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqNums.map(function(i) {
+        return {
+          "@type": "Question", "name": t(ns + ':faq.q' + i, ''),
+          "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':faq.a' + i, '') }
+        };
+      })
+    }
+  ];
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient py-14 md:py-20">
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb justify-center" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:jeuxCouple.shortTitle', pageTitle) %></li>
+        </ol>
+      </nav>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
+        <%= t(ns + ':hero.badge', '') %>
+      </span>
+      <%
+        const heroTitle = t(ns + ':hero.title', pageTitle);
+        const heroHighlight = t(ns + ':hero.titleHighlight', '');
+      %>
+      <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%= t(ns + ':hero.description', '') %></p>
+
+      <ul class="jeux-stats" aria-label="<%= t(ns + ':board.titre', '') %>">
+        <li class="jeux-stat"><strong><%= t(ns + ':stats.jeux', String(jeux.length)) %></strong><span><%= t(ns + ':stats.jeuxLabel', '') %></span></li>
+        <li class="jeux-stat"><strong><%= t(ns + ':stats.cartes', '') %></strong><span><%= t(ns + ':stats.cartesLabel', '') %></span></li>
+        <li class="jeux-stat"><strong><%= t(ns + ':stats.compte', '') %></strong><span><%= t(ns + ':stats.compteLabel', '') %></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Le plateau de selection -->
+<section class="py-12 md:py-16" id="jeux">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-2xl text-center mb-10">
+      <h2 class="text-2xl md:text-3xl font-bold mb-3"><%= t(ns + ':board.titre', '') %></h2>
+      <p class="text-muted-foreground"><%= t(ns + ':board.intro', '') %></p>
+    </div>
+
+    <div class="jeux-board">
+      <% jeux.forEach(function(j) { %>
+      <a class="jeu-card" href="<%= j.url %>" style="--jeu-accent: <%= j.accent %>">
+        <span class="jeu-card-visuel">
+          <img src="/quiz/featured/<%= j.img %>.webp" alt="<%= escapeHtml(j.alt) %>" width="600" height="315" loading="lazy" decoding="async">
+          <% if (j.adultes) { %><span class="jeu-card-flag"><%= t(ns + ':jeux.adultes', '18+') %></span><% } %>
+        </span>
+        <span class="jeu-card-corps">
+          <span class="jeu-card-emoji" aria-hidden="true"><%= j.emoji %></span>
+          <h3 class="jeu-card-nom"><%= t(ns + ':jeux.' + j.cle + 'Nom', '') %></h3>
+          <p class="jeu-card-tagline"><%= t(ns + ':jeux.' + j.cle + 'Tagline', '') %></p>
+          <ul class="jeu-card-meta">
+            <li><%= t(ns + ':jeux.' + j.cle + 'Joueurs', '') %></li>
+            <li><%= t(ns + ':jeux.' + j.cle + 'Duree', '') %></li>
+            <li><%= t(ns + ':jeux.' + j.cle + 'Contenu', '') %></li>
+          </ul>
+          <span class="jeu-card-cta">
+            <%= t(ns + ':board.jouer', '') %>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </span>
+        </span>
+      </a>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- Contenu -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section1.p1', '') %></p>
+        <p><%- t(ns + ':section1.p2', '') %></p>
+        <p><%- t(ns + ':section1.p3', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section2.intro', '') %></p>
+      <div class="jeux-table-wrap">
+        <table class="jeux-table">
+          <thead>
+            <tr>
+              <th scope="col"><%= t(ns + ':section2.headerMoment', '') %></th>
+              <th scope="col"><%= t(ns + ':section2.headerJeu', '') %></th>
+              <th scope="col"><%= t(ns + ':section2.headerPourquoi', '') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% jeux.forEach(function(j, i) { %>
+            <tr>
+              <th scope="row"><%= t(ns + ':section2.row' + (i + 1) + 'Moment', '') %></th>
+              <td><a href="<%= j.url %>"><%= t(ns + ':jeux.' + j.cle + 'Nom', '') %></a></td>
+              <td><%= t(ns + ':section2.row' + (i + 1) + 'Pourquoi', '') %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section3.p1', '') %></p>
+      <div class="space-y-4">
+        <% for (let i = 1; i <= 4; i++) { %>
+        <div class="flex items-start gap-4 p-5 bg-card border border-border rounded-lg">
+          <span class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/15 text-primary font-bold flex-shrink-0"><%= i %></span>
+          <div>
+            <h3 class="font-semibold mb-1"><%= t(ns + ':section3.conseil' + i + 'Titre', '') %></h3>
+            <p class="text-muted-foreground"><%- t(ns + ':section3.conseil' + i + 'Texte', '') %></p>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', '') %></h2>
+      <div class="space-y-4">
+        <% for (const i of faqNums) { %>
+        <details class="bg-card border border-border rounded-lg p-5">
+          <summary class="font-semibold cursor-pointer"><%= t(ns + ':faq.q' + i, '') %></summary>
+          <p class="text-muted-foreground leading-relaxed mt-3"><%- t(ns + ':faq.a' + i, '') %></p>
+        </details>
+        <% } %>
+      </div>
+    </section>
+
+    <section class="mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 border border-primary/20">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t(ns + ':section4.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section4.p1', '') %></p>
+        <p class="text-foreground font-semibold"><%- t(ns + ':section4.p2', '') %></p>
+      </div>
+      <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-outline mt-6"><%= t(ns + ':section4.cta', '') %></a>
+    </section>
+
+  </div>
+</article>

@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "badge": "Solo adultos • En pareja • Gratis",
+    "title": "Verdad o reto picante, la versión que no se corta",
+    "titleHighlight": "picante",
+    "description": "70 cartas para dos, en picante o en hot, en un solo móvil y sin preparar nada."
+  },
+  "section1": {
+    "title": "Dos niveles, porque no todo el mundo parte del mismo sitio",
+    "p1": "Un <strong class=\"text-foreground\">verdad o reto picante</strong> que empieza demasiado fuerte no funciona: el primer reto incomoda y la partida se acaba antes de empezar. Por eso este juego tiene dos niveles separados en lugar de un solo mazo.",
+    "p2": "El ambiente <strong class=\"text-foreground\">picante</strong> se queda en lo sugerente: preguntas que hacen sonrojar, retos que acercan, nada que obligue a desnudarse. El ambiente <strong class=\"text-foreground\">hot</strong> ya no toma precauciones, las cartas son directas y dan por hecho que los dos sabéis adónde vais.",
+    "p3": "Empezad por el primero aunque penséis que podéis saltaros el paso. La risa de las primeras cartas hace más por el resto de la noche que cualquier reto lanzado en frío."
+  },
+  "section2": {
+    "title": "Cómo se juega",
+    "intro": "Las reglas son las mismas que en la versión clásica, con un punto añadido que aquí pesa más.",
+    "regle1Titre": "Elegid vuestro nivel",
+    "regle1Texte": "Picante o hot. El juego nunca mezcla los dos mazos: lo que elijáis al principio es lo que tendréis durante toda la partida.",
+    "regle2Titre": "Una carta cada vez, sacada al azar",
+    "regle2Texte": "Verdad o reto, no eliges. Nunca ves la carta siguiente, lo que impide preparar una respuesta o anticipar un reto.",
+    "regle3Titre": "Pasar está previsto por el juego",
+    "regle3Texte": "Rechazar una carta hace caer una prenda, y ya está. Es la regla más importante de esta versión: convierte el rechazo en algo corriente en lugar de una confesión.",
+    "regle4Titre": "El límite lo ponéis vosotros, no el juego",
+    "regle4Texte": "Decidid antes de empezar qué queda fuera esta noche. Un juego nunca sustituye a un acuerdo entre los dos, se limita a proponer."
+  },
+  "section3": {
+    "title": "El consentimiento, dicho sin rodeos",
+    "p1": "Este juego propone, no impone nada. Cada carta puede rechazarse sin explicación, tantas veces como haga falta, y una prenda nunca es un castigo que se sufre. Si a uno de los dos no le apetece, la respuesta correcta es parar la partida, no negociar.",
+    "p2": "Las cartas están escritas para una pareja que juega junta, entre adultos que consienten. Dan por hecho que os conocéis y que ambos sabéis cuándo parar."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Qué diferencia hay con la versión clásica?",
+    "a1": "Las cartas. La versión clásica es para cualquier pareja y se juega delante de quien sea. Esta tiene sus propios mazos, picante y hot, escritos para un momento en el que estáis solos los dos.",
+    "q2": "¿Es muy explícito?",
+    "a2": "El ambiente picante se queda en lo sugerente y nunca pide desnudarse del todo. El ambiente hot es bastante más directo, con cartas que dan por supuesta una intimidad ya establecida. El nivel lo elegís antes de empezar.",
+    "q3": "¿Cuántas cartas hay?",
+    "a3": "70 repartidas entre los dos niveles, es decir 15 verdades, 12 retos y 8 prendas por nivel. No se repiten mientras quede mazo, lo que da para una noche entera sin volver a las mismas.",
+    "q4": "¿Sirve para una pareja que acaba de conocerse?",
+    "a4": "El ambiente picante sí, funciona muy bien para tantear el terreno. El ambiente hot da por hecho que ya os conocéis bien: lanzado demasiado pronto, incomoda más que divierte.",
+    "q5": "¿Hay que crear una cuenta?",
+    "a5": "No, y no se guarda nada. El juego funciona en vuestro navegador, vuestras respuestas no salen del aparato y no hay ningún historial de partidas."
+  },
+  "section4": {
+    "title": "Lo que un juego así puede hacer de verdad",
+    "p1": "No va a transformar vuestra vida íntima, y nadie debería pedírselo. Lo que sí hace bien es dar un marco a una conversación que muchas parejas nunca han tenido del todo, porque es la carta la que hace la pregunta en vuestro lugar.",
+    "p2": "El resto lo decidís vosotros, y así está muy bien."
+  },
+  "jsonLd": {
+    "name": "Juego verdad o reto picante en pareja"
+  }
+}

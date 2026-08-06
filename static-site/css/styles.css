@@ -4962,3 +4962,267 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 @media (max-width: 430px) {
   .quiz-hero-media__blob { inset: -10% 0 -12% 0; }
 }
+
+/* ── Jeu de couple (moteur PartyGame) ─────────────────────── */
+
+.party-ambiances {
+  display: grid; gap: 0.875rem; margin-top: 0.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) { .party-ambiances { grid-template-columns: repeat(3, 1fr); } }
+
+.party-ambiance {
+  display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
+  padding: 1.5rem 1rem; text-align: center; cursor: pointer;
+  border: 1px solid hsl(var(--border)); border-radius: var(--radius);
+  background: hsl(var(--card));
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out;
+  animation: fadeIn 300ms ease-out both;
+}
+.party-ambiance:hover {
+  transform: translateY(-3px);
+  border-color: hsl(var(--primary) / 0.5);
+  box-shadow: 0 10px 20px -8px hsl(var(--primary) / 0.35);
+}
+.party-ambiance:active { transform: translateY(0); }
+.party-ambiance-emoji { font-size: 2.25rem; line-height: 1; }
+.party-ambiance-nom { font-weight: 700; font-size: 1.05rem; }
+.party-ambiance-desc { font-size: 0.8125rem; color: hsl(var(--muted-foreground)); line-height: 1.35; }
+
+.party-entete {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap;
+}
+.party-tour { font-size: 0.875rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.party-changer {
+  font-size: 0.8125rem; color: hsl(var(--muted-foreground));
+  background: none; border: none; cursor: pointer; text-decoration: underline;
+  padding: 0.25rem;
+}
+.party-changer:hover { color: hsl(var(--primary)); }
+
+.party-carte {
+  border-radius: var(--radius); padding: 2rem 1.5rem; text-align: center;
+  border: 1px solid hsl(var(--border));
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.07), hsl(var(--secondary) / 0.07));
+  animation: fadeIn 260ms ease-out both;
+}
+.party-carte--defi { background: linear-gradient(135deg, hsl(var(--secondary) / 0.12), hsl(var(--primary) / 0.05)); }
+.party-carte--gage { background: linear-gradient(135deg, hsl(0 70% 60% / 0.12), hsl(var(--primary) / 0.06)); }
+
+.party-carte-type {
+  display: inline-block; margin-bottom: 0.875rem;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: hsl(var(--primary));
+}
+.party-carte-texte {
+  font-size: 1.25rem; font-weight: 600; line-height: 1.45;
+  overflow-wrap: break-word;
+}
+@media (min-width: 640px) { .party-carte-texte { font-size: 1.4rem; } }
+
+.party-actions {
+  display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap;
+}
+.party-actions .btn { flex: 1 1 10rem; }
+.party-compteur {
+  margin-top: 1rem; text-align: center;
+  font-size: 0.8125rem; color: hsl(var(--muted-foreground));
+}
+
+/* ─────────────────────────────────────────────
+   Hub jeux de couple : bandeau de chiffres,
+   plateau de selection et tableau comparatif
+   ───────────────────────────────────────────── */
+.jeux-stats {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 0.625rem; margin: 2rem 0 0; padding: 0; list-style: none;
+}
+.jeux-stat {
+  display: inline-flex; align-items: baseline; gap: 0.4rem;
+  padding: 0.5rem 1rem; border-radius: 999px;
+  background: hsl(var(--card) / 0.75);
+  border: 1px solid hsl(var(--border));
+  backdrop-filter: blur(4px);
+}
+.jeux-stat strong { font-size: 1.05rem; font-weight: 800; color: hsl(var(--primary)); }
+.jeux-stat span { font-size: 0.8125rem; color: hsl(var(--muted-foreground)); }
+
+.jeux-board {
+  display: grid; gap: 1.5rem;
+  grid-template-columns: 1fr;
+  max-width: 68rem; margin: 0 auto;
+}
+/* Paliers explicites plutot qu'auto-fit : avec quatre jeux, auto-fit laisse
+   une carte seule sur sa ligne des que la place manque pour la quatrieme. */
+@media (min-width: 640px) { .jeux-board { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .jeux-board { grid-template-columns: repeat(4, 1fr); } }
+.jeu-card {
+  --jeu-accent: 340 65% 62%;
+  position: relative; display: flex; flex-direction: column;
+  border-radius: calc(var(--radius) + 0.375rem);
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  overflow: hidden; text-decoration: none; color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.jeu-card:hover {
+  transform: translateY(-6px);
+  border-color: hsl(var(--jeu-accent) / 0.55);
+  box-shadow: 0 22px 44px -22px hsl(var(--jeu-accent) / 0.75);
+}
+.jeu-card:focus-visible {
+  outline: 2px solid hsl(var(--jeu-accent));
+  outline-offset: 3px;
+}
+
+.jeu-card-visuel {
+  position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden;
+  /* la ligne de raccord entre l'image et le corps de la carte doit disparaitre */
+  margin-bottom: -1px;
+}
+@media (max-width: 640px) { .jeu-card-visuel { aspect-ratio: 2.4 / 1; } }
+.jeu-card-visuel img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.4s ease;
+}
+.jeu-card:hover .jeu-card-visuel img { transform: scale(1.05); }
+.jeu-card-visuel::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, hsl(var(--card)) 2%, hsl(var(--jeu-accent) / 0.28) 55%, transparent 100%);
+}
+.jeu-card-emoji {
+  position: absolute; left: 1.35rem; top: -1.625rem; z-index: 2;
+  display: grid; place-items: center;
+  width: 3.25rem; height: 3.25rem; font-size: 1.65rem; line-height: 1;
+  border-radius: 1rem;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--jeu-accent) / 0.4);
+  box-shadow: 0 8px 20px -10px hsl(var(--jeu-accent) / 0.9);
+}
+.jeu-card-flag {
+  position: absolute; top: 0.75rem; right: 0.75rem; z-index: 2;
+  padding: 0.2rem 0.55rem; border-radius: 999px;
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.04em;
+  background: hsl(var(--card) / 0.92);
+  border: 1px solid hsl(var(--jeu-accent) / 0.5);
+  color: hsl(var(--jeu-accent));
+}
+
+.jeu-card-corps {
+  position: relative;
+  display: flex; flex-direction: column; flex: 1;
+  padding: 2.25rem 1.35rem 1.35rem;
+}
+.jeu-card-nom { font-size: 1.2rem; font-weight: 700; line-height: 1.25; margin: 0; }
+.jeu-card-tagline {
+  margin: 0.5rem 0 0; flex: 1;
+  font-size: 0.9375rem; line-height: 1.55; color: hsl(var(--muted-foreground));
+}
+.jeu-card-meta {
+  display: flex; flex-wrap: wrap; gap: 0.375rem;
+  margin: 1.1rem 0 0; padding: 0; list-style: none;
+}
+.jeu-card-meta li {
+  padding: 0.2rem 0.6rem; border-radius: 999px;
+  font-size: 0.7rem; font-weight: 600;
+  background: hsl(var(--muted)); color: hsl(var(--muted-foreground));
+}
+.jeu-card-cta {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  margin-top: 1.1rem; font-weight: 700; font-size: 0.9375rem;
+  color: hsl(var(--jeu-accent));
+}
+.jeu-card-cta svg { width: 1rem; height: 1rem; transition: transform 0.25s ease; }
+.jeu-card:hover .jeu-card-cta svg { transform: translateX(4px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .jeu-card, .jeu-card-visuel img, .jeu-card-cta svg { transition: none; }
+  .jeu-card:hover { transform: none; }
+  .jeu-card:hover .jeu-card-visuel img { transform: none; }
+  .jeu-card:hover .jeu-card-cta svg { transform: none; }
+}
+
+.jeux-table-wrap {
+  overflow-x: auto;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+}
+.jeux-table { width: 100%; border-collapse: collapse; min-width: 34rem; }
+.jeux-table th, .jeux-table td {
+  padding: 0.875rem 1rem; text-align: left; vertical-align: top;
+  font-size: 0.9375rem; line-height: 1.5;
+  border-bottom: 1px solid hsl(var(--border));
+}
+.jeux-table thead th {
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  color: hsl(var(--muted-foreground));
+  background: hsl(var(--muted) / 0.55);
+}
+.jeux-table tbody th { font-weight: 600; color: hsl(var(--foreground)); }
+.jeux-table tbody td { color: hsl(var(--muted-foreground)); }
+.jeux-table tbody tr:last-child th, .jeux-table tbody tr:last-child td { border-bottom: 0; }
+.jeux-table tbody a { color: hsl(var(--primary)); font-weight: 600; text-decoration: none; }
+.jeux-table tbody a:hover { text-decoration: underline; }
+
+/* ─────────────────────────────────────────────
+   Roue des gages : plateau, aiguille et resultat
+   ───────────────────────────────────────────── */
+.roue-jeu { max-width: 34rem; margin: 0 auto; }
+
+.roue-scene {
+  position: relative;
+  width: min(20rem, 82vw); height: min(20rem, 82vw);
+  margin: 0 auto 1.5rem;
+}
+.roue-plateau {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  box-shadow: 0 18px 40px -18px hsl(var(--primary) / 0.55), 0 0 0 6px hsl(var(--card)), 0 0 0 8px hsl(var(--border));
+}
+.roue-svg { display: block; width: 100%; height: 100%; }
+.roue-svg path { stroke: hsl(var(--card)); stroke-width: 1.2; }
+.roue-emoji { font-size: 13px; }
+.roue-label {
+  font-size: 8.5px; font-weight: 700; fill: #fff;
+  letter-spacing: 0.02em;
+  paint-order: stroke; stroke: hsl(0 0% 0% / 0.18); stroke-width: 0.6px;
+}
+.roue-moyeu { fill: hsl(var(--card)); stroke: hsl(var(--border)); stroke-width: 2; }
+
+.roue-fleche {
+  position: absolute; top: -0.35rem; left: 50%; z-index: 2;
+  width: 0; height: 0; transform: translateX(-50%);
+  border-left: 0.7rem solid transparent;
+  border-right: 0.7rem solid transparent;
+  border-top: 1.15rem solid hsl(var(--primary));
+  filter: drop-shadow(0 2px 3px hsl(var(--primary) / 0.5));
+}
+
+.roue-bouton { min-width: 14rem; }
+.roue-bouton[disabled] { opacity: 0.65; cursor: default; }
+
+.roue-resultat { min-height: 6.5rem; margin-top: 1.5rem; }
+.roue-invite { color: hsl(var(--muted-foreground)); }
+.roue-resultat-famille {
+  display: inline-block; margin-bottom: 0.75rem;
+  padding: 0.25rem 0.85rem; border-radius: 999px;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  background: hsl(var(--primary) / 0.12); color: hsl(var(--primary));
+}
+.roue-resultat-texte {
+  font-size: 1.2rem; font-weight: 600; line-height: 1.5;
+  max-width: 28rem; margin: 0 auto;
+  overflow-wrap: break-word;
+  animation: fadeIn 0.35s ease-out both;
+}
+@media (min-width: 640px) { .roue-resultat-texte { font-size: 1.35rem; } }
+.roue-compteur {
+  margin-top: 1.25rem;
+  font-size: 0.8125rem; color: hsl(var(--muted-foreground));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .roue-resultat-texte { animation: none; }
+}

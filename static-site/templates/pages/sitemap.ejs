@@ -53,9 +53,13 @@ const i18n = {
 };
 const s = i18n[lang] || i18n.fr;
 
+// Ces trois listes doivent rester alignees sur le pied de page : le plan du
+// site n'a d'interet que s'il mene reellement a toutes les pages.
 const testLinks = [
   { routeKey: 'testCouple', labelKey: 'nav.testCouple' },
   { routeKey: 'testCommonPoints', labelKey: 'nav.testCommonPoints' },
+  { routeKey: 'testCompatibilite', labelKey: 'nav.testCompatibilite' },
+  { routeKey: 'testSuisJeAmoureux', labelKey: 'nav.testSuisJeAmoureux' },
   { routeKey: 'testDistance', labelKey: 'nav.testDistance' },
   { routeKey: 'testToxic', labelKey: 'nav.testToxic' },
   { routeKey: 'testPervers', labelKey: 'nav.testPervers' },
@@ -65,9 +69,14 @@ const testLinks = [
   { routeKey: 'testDivorce', labelKey: 'nav.testDivorce' },
   { routeKey: 'testParentalite', labelKey: 'nav.testParentalite' },
   { routeKey: 'testEmmenager', labelKey: 'nav.testEmmenager' },
+  { routeKey: 'testBebe', labelKey: 'nav.testBebe' },
   { routeKey: 'testAstroPrenoms', labelKey: 'nav.testAstroPrenoms' },
+  { routeKey: 'testKarmique', labelKey: 'nav.testKarmique' },
   { routeKey: 'testJalousie', labelKey: 'nav.testJalousie' },
+  { routeKey: 'testInfidelite', labelKey: 'nav.testInfidelite' },
   { routeKey: 'testLangageAmour', labelKey: 'nav.testLangageAmour' },
+  { routeKey: 'testAttachement', labelKey: 'nav.testAttachement' },
+  { routeKey: 'testConfiance', labelKey: 'nav.testConfiance' },
 ];
 const quizLinks = [
   { routeKey: 'quizAmoureux', labelKey: 'nav.quizAmoureux' },
@@ -77,9 +86,16 @@ const quizLinks = [
   { routeKey: 'quizMost', labelKey: 'nav.quizMost' },
   { routeKey: 'quizAdo', labelKey: 'nav.quizAdo' },
   { routeKey: 'quizGenant', labelKey: 'nav.quizGenant' },
-  { routeKey: 'quizTuPreferes', labelKey: 'nav.quizTuPreferes' },
   { routeKey: 'quizVraiFaux', labelKey: 'nav.quizVraiFaux' },
+  { routeKey: 'zamours', labelKey: 'nav.zamours' },
   { routeKey: 'quizTentation', labelKey: 'nav.quizTentation' },
+];
+const jeuxLinks = [
+  { routeKey: 'jeuxCouple', labelKey: 'nav.jeuxCouple' },
+  { routeKey: 'quizTuPreferes', labelKey: 'nav.quizTuPreferes' },
+  { routeKey: 'jeuActionVerite', labelKey: 'nav.jeuActionVerite' },
+  { routeKey: 'jeuActionVeriteHot', labelKey: 'nav.jeuActionVeriteHot' },
+  { routeKey: 'jeuGages', labelKey: 'nav.jeuGages' },
 ];
 const toolLinks = [
   { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple' },
@@ -92,6 +108,12 @@ const infoLinks = [
   { routeKey: 'legalMentions', labelKey: 'footer.legalMentions' },
   { routeKey: 'privacy', labelKey: 'footer.privacy' },
 ];
+// Une page absente dans la langue courante ne doit pas laisser un lien vide.
+const _dispo = (links) => links.filter(l => getLocalizedUrl(l.routeKey, lang));
+const testLinksDispo = _dispo(testLinks);
+const quizLinksDispo = _dispo(quizLinks);
+const jeuxLinksDispo = _dispo(jeuxLinks);
+const toolLinksDispo = _dispo(toolLinks);
 %>
 
 <!-- ═══════ HERO ═══════ -->
@@ -123,7 +145,7 @@ const infoLinks = [
             <%= s.tests %>
           </h3>
           <ul class="space-y-2">
-            <% for (const link of testLinks) { %>
+            <% for (const link of testLinksDispo) { %>
             <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
             <% } %>
           </ul>
@@ -138,14 +160,28 @@ const infoLinks = [
             <%= s.quizzes %>
           </h3>
           <ul class="space-y-2">
-            <% for (const link of quizLinks) { %>
+            <% for (const link of quizLinksDispo) { %>
             <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
             <% } %>
           </ul>
         </div>
 
-        <!-- Tools + Info -->
+        <!-- Jeux + Tools + Info -->
         <div class="space-y-6">
+          <div class="rounded-2xl border border-border bg-card p-6">
+            <h3 class="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+              <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-sm">
+                <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
+              </span>
+              <%= t('common:nav.categoryJeux', 'Jeux') %>
+            </h3>
+            <ul class="space-y-2">
+              <% for (const link of jeuxLinksDispo) { %>
+              <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
+              <% } %>
+            </ul>
+          </div>
+
           <div class="rounded-2xl border border-border bg-card p-6">
             <h3 class="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
               <span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-sm">
@@ -154,7 +190,7 @@ const infoLinks = [
               <%= s.tools %>
             </h3>
             <ul class="space-y-2">
-              <% for (const link of toolLinks) { %>
+              <% for (const link of toolLinksDispo) { %>
               <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
               <% } %>
             </ul>
