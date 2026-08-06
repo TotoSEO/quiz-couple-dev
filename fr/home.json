@@ -126,6 +126,9 @@
     "testsDesc": "Évaluez votre relation avec nos tests de compatibilité et d'auto-évaluation",
     "quizzesTitle": "Nos Quiz à Faire en Couple",
     "quizzesDesc": "Jeux interactifs et amusants à faire ensemble pour renforcer votre complicité",
+    "jeuxTitle": "Nos jeux à jouer à deux",
+    "jeuxDesc": "Trois jeux qui se lancent sur un seul téléphone, sans inscription et sans rien préparer.",
+    "jeuxCta": "Voir tous nos jeux de couple",
     "cards": {
       "testCouple": "20 questions pour évaluer votre relation.",
       "testCommonPoints": "Avez-vous des points communs avec votre partenaire ?",

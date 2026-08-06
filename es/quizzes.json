@@ -202,16 +202,22 @@
     "description": "20 preguntas para distinguir el amor del capricho y saber qué sientes.",
     "metaDescription": "¿Estoy enamorado o solo atraído? 20 preguntas para distinguir el amor del capricho. Test gratis, resultado inmediato y sin registro."
   },
+  "jeuxCouple": {
+    "title": "Juegos para parejas: 3 juegos gratis online, sin registro",
+    "shortTitle": "Juegos para parejas",
+    "description": "Tres juegos para jugar en pareja: preferirías, verdad o reto y su versión picante.",
+    "metaDescription": "3 juegos para parejas gratis en un solo móvil: preferirías, verdad o reto y su versión picante. Sin registro, la partida empieza con un toque."
+  },
   "jeuActionVerite": {
-    "title": "Verdad o reto en pareja: el juego online, 140 cartas",
+    "title": "Verdad o reto en pareja: el juego online, 70 cartas",
     "shortTitle": "Verdad o reto",
-    "description": "140 cartas al azar para jugar a verdad o reto en pareja, sin preparar nada.",
-    "metaDescription": "Juega a verdad o reto en pareja: 140 cartas al azar, dos ambientes, en un solo móvil. Gratis, sin registro, una carta cada vez."
+    "description": "70 cartas al azar para jugar a verdad o reto en pareja, sin preparar nada.",
+    "metaDescription": "Juega a verdad o reto en pareja: 70 cartas al azar, dos ambientes, en un solo móvil. Gratis, sin registro, una carta cada vez."
   },
   "jeuActionVeriteHot": {
     "title": "Verdad o reto picante: el juego hot para dos, gratis",
     "shortTitle": "Verdad o reto picante",
-    "description": "140 cartas picantes y hot para jugar en pareja, con dos niveles a elegir.",
-    "metaDescription": "Verdad o reto picante online: 140 cartas, dos niveles del más suave al más hot. Gratis, sin registro, para jugar en pareja esta noche."
+    "description": "70 cartas picantes y hot para jugar en pareja, con dos niveles a elegir.",
+    "metaDescription": "Verdad o reto picante online: 70 cartas, dos niveles del más suave al más hot. Gratis, sin registro, para jugar en pareja esta noche."
   }
 }

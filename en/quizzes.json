@@ -202,16 +202,22 @@
     "description": "20 questions to tell love from a crush and know what you really feel.",
     "metaDescription": "Am I in love or just attracted? 20 questions to tell real love from a crush. Free test, instant result, no sign-up needed."
   },
+  "jeuxCouple": {
+    "title": "Couple Games: 3 Free Online Games, No Sign-Up",
+    "shortTitle": "Couple games",
+    "description": "Three games to play together: would you rather, truth or dare and its dirty version.",
+    "metaDescription": "3 free couple games to play on a single phone: would you rather, truth or dare and its dirty version. No sign-up, the game starts in one tap."
+  },
   "jeuActionVerite": {
-    "title": "Truth or Dare for Couples: the Online Game, 140 Cards",
+    "title": "Truth or Dare for Couples: the Online Game, 70 Cards",
     "shortTitle": "Truth or dare",
-    "description": "140 cards drawn at random to play truth or dare for two, with nothing to prepare.",
-    "metaDescription": "Play truth or dare as a couple: 140 cards drawn at random, two moods, on a single phone. Free, no sign-up, one card at a time."
+    "description": "70 cards drawn at random to play truth or dare for two, with nothing to prepare.",
+    "metaDescription": "Play truth or dare as a couple: 70 cards drawn at random, two moods, on a single phone. Free, no sign-up, one card at a time."
   },
   "jeuActionVeriteHot": {
     "title": "Dirty Truth or Dare: the Hot Game for Two, Free",
     "shortTitle": "Dirty truth or dare",
-    "description": "140 spicy and hot cards to play as a couple, with two levels to choose from.",
-    "metaDescription": "Dirty truth or dare online: 140 cards, two levels from the softest to the hottest. Free, no sign-up, to play together tonight."
+    "description": "70 spicy and hot cards to play as a couple, with two levels to choose from.",
+    "metaDescription": "Dirty truth or dare online: 70 cards, two levels from the softest to the hottest. Free, no sign-up, to play together tonight."
   }
 }

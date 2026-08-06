@@ -585,12 +585,13 @@ var QuizEngine = (function() {
     { type: 'quiz', key: 'most', icon: '🏆', route: 'quizMost' },
     { type: 'quiz', key: 'ado', icon: '🌟', route: 'quizAdo' },
     { type: 'quiz', key: 'genant', icon: '😳', route: 'quizGenant' },
-    { type: 'quiz', key: 'tu-preferes', icon: '🤔', route: 'quizTuPreferes' },
     { type: 'quiz', key: 'vrai-faux', icon: '✅', route: 'quizVraiFaux' },
     { type: 'quiz', key: 'zamours', icon: '📺', route: 'zamours' },
     { type: 'quiz', key: 'tentation', icon: '🏝️', route: 'quizTentation' },
-    { type: 'quiz', key: 'action-ou-verite', icon: '🎲', route: 'jeuActionVerite' },
-    { type: 'quiz', key: 'action-ou-verite-coquin', icon: '🌶️', route: 'jeuActionVeriteHot' },
+    // Les jeux forment leur propre categorie, distincte des quiz.
+    { type: 'jeu', key: 'tu-preferes', icon: '🤔', route: 'quizTuPreferes' },
+    { type: 'jeu', key: 'action-ou-verite', icon: '🎲', route: 'jeuActionVerite' },
+    { type: 'jeu', key: 'action-ou-verite-coquin', icon: '🌶️', route: 'jeuActionVeriteHot' },
   ];
 
   function getRelatedQuizUrl(routeKey, lang) {
@@ -635,7 +636,10 @@ var QuizEngine = (function() {
       card.href = getRelatedQuizUrl(q.route, lang);
       var emoji = el('span', 'result-related-emoji', q.icon);
       var name = el('span', 'result-related-name', esc(tg('quizNames.' + q.route, q.key)));
-      var typeLabel = el('span', 'result-related-type', q.type === 'test' ? 'Test' : 'Quiz');
+      var typeLabel = el('span', 'result-related-type',
+        q.type === 'test' ? tg('result.typeTest', 'Test')
+        : q.type === 'jeu' ? tg('result.typeJeu', 'Jeu')
+        : tg('result.typeQuiz', 'Quiz'));
       card.appendChild(emoji);
       card.appendChild(name);
       card.appendChild(typeLabel);

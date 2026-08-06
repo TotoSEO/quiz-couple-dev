@@ -1,6 +1,6 @@
 # Quiz Couple
 
-> Quiz Couple is a free online platform offering 32 relationship quizzes and tests for couples. Available in 5 languages (French, English, Spanish, German, Italian).
+> Quiz Couple is a free online platform offering 34 relationship quizzes, tests and games for couples. Available in 5 languages (French, English, Spanish, German, Italian).
 
 ## Main Features
 
@@ -42,10 +42,15 @@
 - [Who Is Most Likely Quiz](https://quiz-couple.com/en/who-is-most-likely-quiz/): Group voting game
 - [Teen Couple Quiz](https://quiz-couple.com/en/teen-couple-quiz/): For young couples
 - [Embarrassing Couple Quiz](https://quiz-couple.com/en/embarrassing-couple-quiz/): Awkward questions
-- [Would You Rather Quiz](https://quiz-couple.com/en/would-you-rather-couple-quiz/): Choice dilemmas
 - [True or False Quiz](https://quiz-couple.com/en/true-or-false-couple-quiz/): Relationship myths
 - [Quiz Les Z'Amours](https://quiz-couple.com/quiz-couple-les-zamours/): Online version of the French TV show "Les Z'Amours", guess your partner's answers (FR)
 - [Temptation Island Quiz](https://quiz-couple.com/en/temptation-island-quiz/): Unofficial quiz inspired by the Temptation Island format, with 12 days on the island, 30 tempting situations and a final bonfire verdict
+
+### Couple Games
+- [Couple Games Hub](https://quiz-couple.com/en/couple-games/): the three games to play together on a single phone, free and without an account
+- [Would You Rather](https://quiz-couple.com/en/would-you-rather-couple-quiz/): 30 impossible dilemmas, each partner picks on their own, then you compare
+- [Truth or Dare for Couples](https://quiz-couple.com/en/truth-or-dare-couple-game/): 70 cards drawn at random across two moods, classic and funny, with a forfeit when a card is turned down
+- [Dirty Truth or Dare](https://quiz-couple.com/en/dirty-truth-or-dare-couples/): 70 adults-only cards across two levels, spicy and hot, with the right to pass on every card
 
 ### Other Tools
 - [Couple Questions](https://quiz-couple.com/en/couple-questions/): 200+ conversation starters

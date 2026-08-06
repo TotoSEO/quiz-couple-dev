@@ -29,6 +29,7 @@
     "quizTentation": "Quiz Temptation Island",
     "categoryTests": "Test per coppie",
     "categoryQuizzes": "I nostri quiz per coppie",
+    "categoryJeux": "Giochi di coppia",
     "activities": "Attività vicino a me",
     "contact": "Contatto",
     "testAttachement": "Test attaccamento",
@@ -41,6 +42,8 @@
     "testBebeDesc": "Valuta la tua preparazione alla genitorialità",
     "testKarmique": "Test relazione karmica",
     "testSuisJeAmoureux": "Sono innamorato?",
+    "jeuxCouple": "Giochi di coppia",
+    "jeuxCoupleDesc": "I nostri 3 giochi da fare in due",
     "jeuActionVerite": "Obbligo o verità",
     "jeuActionVeriteHot": "Obbligo o verità piccante"
   },
@@ -64,6 +67,7 @@
     "share": "Condividi",
     "seeResults": "Vedi risultati",
     "startQuiz": "Fai il quiz",
+    "startGame": "Gioca",
     "startTest": "Fai il test"
   },
   "quiz": {

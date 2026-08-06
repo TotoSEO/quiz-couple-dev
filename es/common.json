@@ -29,6 +29,7 @@
     "quizTentation": "Quiz La Isla de las Tentaciones",
     "categoryTests": "Tests de pareja",
     "categoryQuizzes": "Nuestros quiz para parejas",
+    "categoryJeux": "Juegos para parejas",
     "activities": "Actividades cerca",
     "contact": "Contacto",
     "testAttachement": "Test de apego",
@@ -41,6 +42,8 @@
     "testBebeDesc": "Evalúa tu preparación para la crianza",
     "testKarmique": "Test relación kármica",
     "testSuisJeAmoureux": "¿Estoy enamorado?",
+    "jeuxCouple": "Juegos para parejas",
+    "jeuxCoupleDesc": "Nuestros 3 juegos para jugar en pareja",
     "jeuActionVerite": "Verdad o reto",
     "jeuActionVeriteHot": "Verdad o reto picante"
   },
@@ -64,6 +67,7 @@
     "share": "Compartir",
     "seeResults": "Ver resultados",
     "startQuiz": "Hacer el quiz",
+    "startGame": "Jugar",
     "startTest": "Hacer el test"
   },
   "quiz": {

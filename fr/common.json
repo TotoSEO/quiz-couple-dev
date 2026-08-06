@@ -34,6 +34,7 @@
     "quizTentation": "Quiz Île de la Tentation",
     "categoryTests": "Tests de couple",
     "categoryQuizzes": "Nos quiz pour couple",
+    "categoryJeux": "Jeux de couple",
     "activities": "Activités autour de moi",
     "contact": "Contact",
     "testInfidelite": "Test infidélité",
@@ -42,6 +43,8 @@
     "testBebeDesc": "Êtes-vous prêt(e) pour un enfant ?",
     "testKarmique": "Test relation karmique",
     "testSuisJeAmoureux": "Suis-je amoureux ?",
+    "jeuxCouple": "Jeux de couple",
+    "jeuxCoupleDesc": "Nos 3 jeux à jouer à deux",
     "jeuActionVerite": "Action ou vérité",
     "jeuActionVeriteHot": "Action ou vérité coquin"
   },
@@ -65,6 +68,7 @@
     "share": "Partager",
     "seeResults": "Voir les résultats",
     "startQuiz": "Faire le quiz",
+    "startGame": "Jouer",
     "startTest": "Faire le test"
   },
   "quiz": {

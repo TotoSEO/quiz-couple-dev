@@ -202,16 +202,22 @@
     "description": "20 domande per distinguere l'amore dalla cotta e capire che cosa provi.",
     "metaDescription": "Sono innamorato o solo attratto? 20 domande per distinguere l'amore dalla cotta. Test gratuito, risultato immediato, senza registrazione."
   },
+  "jeuxCouple": {
+    "title": "Giochi di coppia: 3 giochi gratis online, senza registrazione",
+    "shortTitle": "Giochi di coppia",
+    "description": "Tre giochi da fare in due: preferiresti, obbligo o verità e la sua versione piccante.",
+    "metaDescription": "3 giochi di coppia gratis su un solo telefono: preferiresti, obbligo o verità e la sua versione piccante. Senza registrazione, la partita parte con un tocco."
+  },
   "jeuActionVerite": {
-    "title": "Obbligo o verità di coppia: il gioco online, 140 carte",
+    "title": "Obbligo o verità di coppia: il gioco online, 70 carte",
     "shortTitle": "Obbligo o verità",
-    "description": "140 carte estratte a caso per giocare a obbligo o verità in due, senza preparare niente.",
-    "metaDescription": "Gioca a obbligo o verità in coppia: 140 carte estratte a caso, due atmosfere, su un solo telefono. Gratis, senza registrazione, una carta alla volta."
+    "description": "70 carte estratte a caso per giocare a obbligo o verità in due, senza preparare niente.",
+    "metaDescription": "Gioca a obbligo o verità in coppia: 70 carte estratte a caso, due atmosfere, su un solo telefono. Gratis, senza registrazione, una carta alla volta."
   },
   "jeuActionVeriteHot": {
     "title": "Obbligo o verità piccante: il gioco hot in due, gratis",
     "shortTitle": "Obbligo o verità piccante",
-    "description": "140 carte piccanti e hot da giocare in coppia, con due livelli a scelta.",
-    "metaDescription": "Obbligo o verità piccante online: 140 carte, due livelli dal più soft al più hot. Gratis, senza registrazione, da giocare in due stasera."
+    "description": "70 carte piccanti e hot da giocare in coppia, con due livelli a scelta.",
+    "metaDescription": "Obbligo o verità piccante online: 70 carte, due livelli dal più soft al più hot. Gratis, senza registrazione, da giocare in due stasera."
   }
 }

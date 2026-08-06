@@ -45,6 +45,7 @@ export const ROUTE_SLUGS = {
   testSuisJeAmoureux: { fr: 'test-suis-je-amoureux', en: 'am-i-in-love-test', es: 'test-estoy-enamorado', de: 'bin-ich-verliebt-test', it: 'test-sono-innamorato' },
   jeuActionVerite: { fr: 'jeu-action-ou-verite-couple', en: 'truth-or-dare-couple-game', es: 'juego-verdad-o-reto-pareja', de: 'wahrheit-oder-pflicht-paar', it: 'gioco-obbligo-o-verita-coppia' },
   jeuActionVeriteHot: { fr: 'action-ou-verite-coquin', en: 'dirty-truth-or-dare-couples', es: 'verdad-o-reto-picante-pareja', de: 'wahrheit-oder-pflicht-versaut', it: 'obbligo-o-verita-piccante-coppia' },
+  jeuxCouple: { fr: 'jeux-de-couple', en: 'couple-games', es: 'juegos-para-parejas', de: 'paarspiele', it: 'giochi-di-coppia' },
   quizGenant: { fr: 'quiz-couple-genant', en: 'embarrassing-couple-quiz', es: 'quiz-pareja-vergonzoso', de: 'peinliches-paar-quiz', it: 'quiz-coppia-imbarazzante' },
   testLangageAmour: { fr: 'test-langage-amour-couple', en: 'love-language-test-couple', es: 'test-lenguaje-amor-pareja', de: 'liebessprache-test-paar', it: 'test-linguaggio-amore-coppia' },
   quizTuPreferes: { fr: 'tu-preferes-couple-quiz', en: 'would-you-rather-couple-quiz', es: 'quiz-preferirias-pareja', de: 'was-wuerdest-du-lieber-paar-quiz', it: 'preferiresti-quiz-coppia' },
@@ -103,7 +104,8 @@ export const QUIZ_FEATURED = {
   testInfidelite:    { file: 'infidelity-hidden-phone',   old: null,                  alt: { fr: 'Alliance retirée à côté d\'un téléphone au message caché', en: 'A wedding ring removed beside a phone with a hidden message', es: 'Un anillo de boda junto a un teléfono con un mensaje oculto', de: 'Ein abgelegter Ehering neben einem Handy mit versteckter Nachricht', it: 'Una fede tolta accanto a un telefono con un messaggio nascosto' } },
   testBebe:          { file: 'baby-booties-teddy',        old: null,                  alt: { fr: 'Chaussons de bébé, ourson et tétine sur une couverture blanche', en: 'Baby booties, a teddy bear and a pacifier on a white blanket', es: 'Patucos de bebé, un osito y un chupete sobre una manta blanca', de: 'Babyschühchen, ein Teddybär und ein Schnuller auf weißer Decke', it: 'Scarpine, un orsacchiotto e un ciuccio su una coperta bianca' } },
   zamours:           { file: 'conversation-cards',         old: null,                  alt: { fr: 'Cartes de questions en éventail pour jouer aux Z\'Amours en couple', en: 'Fanned-out question cards for playing the Newlywed Game as a couple', es: 'Tarjetas de preguntas en abanico para jugar en pareja', de: 'Aufgefächerte Fragekarten für das Paar-Quizspiel', it: 'Carte con domande a ventaglio per giocare in coppia' } },
-  quizTentation:     { file: 'island-bonfire',              old: null,                  alt: { fr: 'Feu de camp sur une plage tropicale la nuit, avec palmiers et pleine lune', en: 'Bonfire on a tropical beach at night, with palm trees and a full moon', es: 'Hoguera en una playa tropical de noche, con palmeras y luna llena', de: 'Lagerfeuer an einem tropischen Strand bei Nacht, mit Palmen und Vollmond', it: 'Falò su una spiaggia tropicale di notte, con palme e luna piena' } },
+  jeuxCouple:        { file: 'fun-confetti',              old: null,                  alt: { fr: 'Confettis et ballons colorés pour une soirée jeux à deux', en: 'Confetti and colourful balloons for a games night for two', es: 'Confeti y globos de colores para una noche de juegos en pareja', de: 'Konfetti und bunte Luftballons für einen Spieleabend zu zweit', it: 'Coriandoli e palloncini colorati per una serata di giochi in due' } },
+  quizTentation:     { file: 'island-bonfire',            old: null,                  alt: { fr: 'Feu de camp sur une plage tropicale la nuit, avec palmiers et pleine lune', en: 'Bonfire on a tropical beach at night, with palm trees and a full moon', es: 'Hoguera en una playa tropical de noche, con palmeras y luna llena', de: 'Lagerfeuer an einem tropischen Strand bei Nacht, mit Palmen und Vollmond', it: 'Falò su una spiaggia tropicale di notte, con palme e luna piena' } },
 };
 
 // Map route keys to their page template and translation namespaces
@@ -135,8 +137,7 @@ export const ROUTE_CONFIG = {
   testJalousie: { template: 'quiz-jalousie', namespaces: ['quiz-jalousie', 'quizzes', 'quizGames', 'gd', 'common'] },
   testKarmique: { template: 'quiz-karmique', namespaces: ['quiz-karmique', 'quizzes', 'quizGames', 'gd', 'common'] },
   testSuisJeAmoureux: { template: 'quiz-suis-je-amoureux', namespaces: ['quiz-suis-je-amoureux', 'quizzes', 'quizGames', 'gd', 'common'] },
-  // frOnly le temps que les cartes et le contenu soient traduits : mieux vaut
-  // une page absente qu'une page anglaise avec des cartes en français.
+  jeuxCouple: { template: 'jeux-couple', namespaces: ['jeux-couple', 'quizzes', 'common'] },
   jeuActionVerite: { template: 'jeu-action-verite', namespaces: ['jeu-action-verite', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuActionVeriteHot: { template: 'jeu-action-verite-hot', namespaces: ['jeu-action-verite-hot', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizGenant: { template: 'quiz-genant', namespaces: ['quiz-genant', 'quizzes', 'quizGames', 'gd', 'common'] },
