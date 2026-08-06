@@ -266,6 +266,7 @@
     "soloPct": "He sacado un {{pct}} % en el {{quiz}}",
     "duoPct": "Hemos sacado un {{pct}} % en el {{quiz}}",
     "duoPoints": "Hemos hecho {{score}} puntos en el {{quiz}}",
+    "duoCartes": "Hemos superado {{score}} de {{total}} cartas en el {{quiz}}",
     "profil": "He hecho el {{quiz}}",
     "fun": "Acabamos de hacer el {{quiz}}",
     "verdict": ": «{{result}}»",

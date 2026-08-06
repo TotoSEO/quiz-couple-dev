@@ -43,8 +43,8 @@ export const ROUTE_SLUGS = {
   testJalousie: { fr: 'test-jalousie-couple', en: 'jealousy-test-couple', es: 'test-celos-pareja', de: 'eifersucht-test-paar', it: 'test-gelosia-coppia' },
   testKarmique: { fr: 'test-relation-karmique', en: 'karmic-relationship-test', es: 'test-relacion-karmica', de: 'karmische-beziehung-test', it: 'test-relazione-karmica' },
   testSuisJeAmoureux: { fr: 'test-suis-je-amoureux', en: 'am-i-in-love-test', es: 'test-estoy-enamorado', de: 'bin-ich-verliebt-test', it: 'test-sono-innamorato' },
-  jeuActionVerite: { fr: 'jeu-action-ou-verite-couple' },
-  jeuActionVeriteHot: { fr: 'action-ou-verite-coquin' },
+  jeuActionVerite: { fr: 'jeu-action-ou-verite-couple', en: 'truth-or-dare-couple-game', es: 'juego-verdad-o-reto-pareja', de: 'wahrheit-oder-pflicht-paar', it: 'gioco-obbligo-o-verita-coppia' },
+  jeuActionVeriteHot: { fr: 'action-ou-verite-coquin', en: 'dirty-truth-or-dare-couples', es: 'verdad-o-reto-picante-pareja', de: 'wahrheit-oder-pflicht-versaut', it: 'obbligo-o-verita-piccante-coppia' },
   quizGenant: { fr: 'quiz-couple-genant', en: 'embarrassing-couple-quiz', es: 'quiz-pareja-vergonzoso', de: 'peinliches-paar-quiz', it: 'quiz-coppia-imbarazzante' },
   testLangageAmour: { fr: 'test-langage-amour-couple', en: 'love-language-test-couple', es: 'test-lenguaje-amor-pareja', de: 'liebessprache-test-paar', it: 'test-linguaggio-amore-coppia' },
   quizTuPreferes: { fr: 'tu-preferes-couple-quiz', en: 'would-you-rather-couple-quiz', es: 'quiz-preferirias-pareja', de: 'was-wuerdest-du-lieber-paar-quiz', it: 'preferiresti-quiz-coppia' },
@@ -137,8 +137,8 @@ export const ROUTE_CONFIG = {
   testSuisJeAmoureux: { template: 'quiz-suis-je-amoureux', namespaces: ['quiz-suis-je-amoureux', 'quizzes', 'quizGames', 'gd', 'common'] },
   // frOnly le temps que les cartes et le contenu soient traduits : mieux vaut
   // une page absente qu'une page anglaise avec des cartes en français.
-  jeuActionVerite: { template: 'jeu-action-verite', namespaces: ['jeu-action-verite', 'quizzes', 'quizGames', 'gd', 'common'], frOnly: true },
-  jeuActionVeriteHot: { template: 'jeu-action-verite-hot', namespaces: ['jeu-action-verite-hot', 'quizzes', 'quizGames', 'gd', 'common'], frOnly: true },
+  jeuActionVerite: { template: 'jeu-action-verite', namespaces: ['jeu-action-verite', 'quizzes', 'quizGames', 'gd', 'common'] },
+  jeuActionVeriteHot: { template: 'jeu-action-verite-hot', namespaces: ['jeu-action-verite-hot', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizGenant: { template: 'quiz-genant', namespaces: ['quiz-genant', 'quizzes', 'quizGames', 'gd', 'common'] },
   testLangageAmour: { template: 'quiz-langage-amour', namespaces: ['quiz-langage-amour', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizTuPreferes: { template: 'quiz-tu-preferes', namespaces: ['quiz-tu-preferes', 'quizzes', 'quizGames', 'gd', 'common'] },

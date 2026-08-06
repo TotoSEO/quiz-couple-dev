@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "badge": "Free • No sign-up • For two",
+    "title": "Truth or dare for couples, with nothing to set up",
+    "titleHighlight": "for couples",
+    "description": "140 cards drawn at random, two moods to pick from, and the game starts in one tap on a single phone."
+  },
+  "section1": {
+    "title": "A truth or dare you actually play, not a list you scroll",
+    "p1": "Most <strong class=\"text-foreground\">truth or dare for couples</strong> pages hand you a hundred questions to read one after the other. It works for five minutes, then someone hunts for the next one, someone else cheats by reading ahead, and the game stops.",
+    "p2": "This is a game: you pick a mood, a card drops, and you only ever see one at a time. No list, no order known in advance, no way to spot what is coming. Cards do not repeat until the deck runs out, and turning a card down brings a forfeit.",
+    "p3": "Everything happens on a single phone set down between you, with no account to create and nothing to install. The game has no set ending: you stop when you want, and the recap tells you how many cards you took on."
+  },
+  "section2": {
+    "title": "The rules, in four points",
+    "intro": "They fit in a few lines, which is rather the point of the game.",
+    "regle1Titre": "Pick a mood",
+    "regle1Texte": "Classic for the questions and dares that suit every couple, funny for the version where you tease each other. You can switch mood along the way by starting a new game.",
+    "regle2Titre": "One card, one player",
+    "regle2Texte": "The game announces whose turn it is and draws a card, truth or dare. You do not choose which of the two, the draw decides, and that is what makes the game unpredictable.",
+    "regle3Titre": "You do it, or you pass",
+    "regle3Texte": "If the card suits you, you take it on and the turn moves to the other person. If you would rather skip it, you pass and a forfeit drops instead. Nobody has to justify anything.",
+    "regle4Titre": "You stop whenever you like",
+    "regle4Texte": "The button to end the game is always available. The recap counts the cards you took on and the forfeits you picked up, and you can share it."
+  },
+  "section3": {
+    "title": "The rule that makes the difference: the right to pass",
+    "p1": "Truth or dare for two goes wrong when one of you feels obliged. The forfeit exists precisely for that: it makes refusing normal and built into the game, instead of an awkward moment that needs explaining.",
+    "p2": "Agree on one thing before you start: either of you can pass without giving a reason, as many times as they like. It sounds counterintuitive, and it is exactly what lets you go further, because nobody is playing defensively."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "How many cards are there?",
+    "a1": "140 in total, split across the two moods: truths to answer, dares to do and forfeits that drop when you turn a card down. They do not repeat until the deck is exhausted, which is plenty for a whole evening.",
+    "q2": "Do I need to sign up or install anything?",
+    "a2": "Neither. The game runs directly in your browser, on a phone or a computer. You open the page, pick a mood and the first card drops.",
+    "q3": "How many people can play?",
+    "a3": "The game is built for two, with turns announced on every card. Nothing stops you passing the phone around a bigger group, but the cards are written for a couple.",
+    "q4": "Is there a bolder version?",
+    "a4": "Yes, we gave it its own page with its own, far more direct cards. It is the spicy version and it is made for moments when it really is just the two of you.",
+    "q5": "Can we play remotely?",
+    "a5": "Yes. One of you opens the game, reads the card out loud over video and confirms for both. Truths work perfectly at a distance, dares need a bit of adapting."
+  },
+  "section4": {
+    "title": "Why this game still works after all these years",
+    "p1": "Truth or dare survives generation after generation for a simple reason: it gives you permission to ask a question you would never have asked on your own. You are not the one asking, the card is, and that small distance changes everything.",
+    "p2": "In a couple, it is often the only way to raise certain subjects without turning it into a solemn conversation."
+  },
+  "jsonLd": {
+    "name": "Truth or dare game for couples"
+  }
+}

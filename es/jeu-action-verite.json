@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "badge": "Gratis • Sin registro • En pareja",
+    "title": "Verdad o reto en pareja, sin preparar nada",
+    "titleHighlight": "en pareja",
+    "description": "140 cartas al azar, dos ambientes a elegir y la partida empieza con un toque, en un solo móvil."
+  },
+  "section1": {
+    "title": "Un verdad o reto que se juega de verdad, no una lista que se desliza",
+    "p1": "La mayoría de páginas de <strong class=\"text-foreground\">verdad o reto para parejas</strong> te dan cien preguntas para leer una detrás de otra. Funciona cinco minutos, luego alguien busca la siguiente, otro hace trampa leyendo por delante y la partida se acaba.",
+    "p2": "Esto es un juego: eliges un ambiente, cae una carta y solo ves una cada vez. Ni lista, ni orden conocido de antemano, ni forma de ver lo que viene. Las cartas no se repiten mientras quede mazo, y rechazar una hace caer una prenda.",
+    "p3": "Todo ocurre en un solo móvil apoyado entre los dos, sin cuenta que crear y sin instalar nada. La partida no tiene final impuesto: la paráis cuando queráis y el resumen os dice cuántas cartas habéis superado."
+  },
+  "section2": {
+    "title": "Las reglas, en cuatro puntos",
+    "intro": "Caben en unas líneas, que es un poco la gracia del juego.",
+    "regle1Titre": "Elegid un ambiente",
+    "regle1Texte": "Clásico para las preguntas y retos que valen para cualquier pareja, divertido para la versión en la que os picáis. Podéis cambiar de ambiente por el camino lanzando otra partida.",
+    "regle2Titre": "Una carta, un jugador",
+    "regle2Texte": "El juego anuncia a quién le toca y saca una carta, verdad o reto. No eliges cuál de las dos, lo decide el sorteo, y eso es lo que hace la partida imprevisible.",
+    "regle3Titre": "Lo haces, o pasas",
+    "regle3Texte": "Si la carta te va bien, la superas y el turno pasa al otro. Si prefieres evitarla, pasas y cae una prenda en su lugar. Nadie tiene que justificarse.",
+    "regle4Titre": "Paráis cuando queráis",
+    "regle4Texte": "El botón para terminar la partida está siempre disponible. El resumen cuenta las cartas superadas y las prendas recogidas, y podéis compartirlo."
+  },
+  "section3": {
+    "title": "La regla que marca la diferencia: el derecho a pasar",
+    "p1": "Un verdad o reto en pareja se tuerce cuando uno de los dos se siente obligado. La prenda existe justo para eso: convierte el rechazo en algo normal y previsto por el juego, en lugar de un momento incómodo que hay que explicar.",
+    "p2": "Poneos de acuerdo en una cosa antes de empezar: cada uno puede pasar sin dar motivos, tantas veces como quiera. Parece contradictorio, y es exactamente lo que permite llegar más lejos, porque nadie juega a la defensiva."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Cuántas cartas hay?",
+    "a1": "140 en total, repartidas entre los dos ambientes: verdades que responder, retos que hacer y prendas que caen cuando se rechaza una carta. No se repiten mientras quede mazo, lo que da de sobra para una noche entera.",
+    "q2": "¿Hay que registrarse o instalar algo?",
+    "a2": "Ni lo uno ni lo otro. El juego funciona directamente en el navegador, en el móvil o en el ordenador. Abrís la página, elegís un ambiente y cae la primera carta.",
+    "q3": "¿Cuántos pueden jugar?",
+    "a3": "El juego está pensado para dos, con turnos anunciados en cada carta. Nada impide jugar entre más gente pasándose el móvil, pero las cartas están escritas para una pareja.",
+    "q4": "¿Hay una versión más atrevida?",
+    "a4": "Sí, le hemos hecho una página aparte con sus propias cartas, bastante más directas. Es la versión picante y está pensada para los momentos en los que de verdad estáis solos los dos.",
+    "q5": "¿Se puede jugar a distancia?",
+    "a5": "Sí. Uno abre el juego, lee la carta en voz alta por videollamada y valida por los dos. Las verdades funcionan perfectamente a distancia, los retos piden algo de adaptación."
+  },
+  "section4": {
+    "title": "Por qué este juego sigue funcionando después de tantos años",
+    "p1": "Verdad o reto atraviesa generaciones por una razón sencilla: da permiso para hacer una pregunta que nunca se haría de forma espontánea. No eres tú quien pregunta, es la carta, y esa pequeña distancia lo cambia todo.",
+    "p2": "En pareja, suele ser la única manera de sacar ciertos temas sin convertirlo en una conversación solemne."
+  },
+  "jsonLd": {
+    "name": "Juego verdad o reto en pareja"
+  }
+}

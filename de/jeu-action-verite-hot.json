@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "badge": "Nur für Erwachsene • Zu zweit • Gratis",
+    "title": "Wahrheit oder Pflicht versaut, die Version ohne Zurückhaltung",
+    "titleHighlight": "versaut",
+    "description": "140 Karten für zwei, in pikant oder in hot, auf einem einzigen Handy und ohne Vorbereitung."
+  },
+  "section1": {
+    "title": "Zwei Stufen, weil nicht alle am selben Punkt starten",
+    "p1": "Ein <strong class=\"text-foreground\">versautes Wahrheit oder Pflicht</strong>, das zu hart anfängt, funktioniert nicht: Die erste Aufgabe ist unangenehm und die Partie endet, bevor sie begonnen hat. Deshalb hat dieses Spiel zwei getrennte Stufen statt eines einzigen Stapels.",
+    "p2": "Die Stimmung <strong class=\"text-foreground\">pikant</strong> bleibt andeutend: Fragen, bei denen man rot wird, Aufgaben, die einander näherbringen, nichts, was zum Ausziehen zwingt. Die Stimmung <strong class=\"text-foreground\">hot</strong> nimmt keine Rücksicht mehr, die Karten sind direkt und setzen voraus, dass ihr beide wisst, worauf ihr hinauswollt.",
+    "p3": "Fangt mit der ersten an, auch wenn ihr glaubt, den Schritt überspringen zu können. Das Lachen der ersten Karten bringt für den restlichen Abend mehr als jede Aufgabe, die kalt hingeworfen wird."
+  },
+  "section2": {
+    "title": "So wird gespielt",
+    "intro": "Die Regeln sind dieselben wie in der klassischen Version, mit einem Punkt, der hier stärker zählt.",
+    "regle1Titre": "Wählt eure Stufe",
+    "regle1Texte": "Pikant oder hot. Das Spiel mischt die beiden Stapel nie: Was ihr zu Beginn wählt, bekommt ihr die ganze Partie über.",
+    "regle2Titre": "Eine Karte nach der anderen, zufällig gezogen",
+    "regle2Texte": "Wahrheit oder Pflicht, ihr wählt nicht. Ihr seht die nächste Karte nie, deshalb lässt sich weder eine Antwort vorbereiten noch eine Aufgabe erahnen.",
+    "regle3Titre": "Passen ist im Spiel vorgesehen",
+    "regle3Texte": "Eine Karte abzulehnen lässt eine Strafe fallen, mehr nicht. Das ist die wichtigste Regel dieser Version: Sie macht das Ablehnen alltäglich, statt daraus ein Geständnis zu machen.",
+    "regle4Titre": "Ihr setzt die Grenze, nicht das Spiel",
+    "regle4Texte": "Legt vor dem Start fest, was heute Abend nicht infrage kommt. Ein Spiel ersetzt nie eine Absprache zwischen euch beiden, es macht nur Vorschläge."
+  },
+  "section3": {
+    "title": "Einverständnis, klar gesagt",
+    "p1": "Dieses Spiel schlägt vor, es verlangt nichts. Jede Karte darf ohne Erklärung abgelehnt werden, so oft es nötig ist, und eine Strafe ist nie eine Bestrafung, die man erdulden muss. Wenn einer von euch keine Lust hat, ist die richtige Antwort, die Partie zu beenden, nicht zu verhandeln.",
+    "p2": "Die Karten sind für ein Paar geschrieben, das zusammen spielt, unter einverständigen Erwachsenen. Sie setzen voraus, dass ihr euch kennt und dass ihr beide wisst, wann Schluss ist."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Was ist der Unterschied zur klassischen Version?",
+    "a1": "Die Karten. Die klassische Version richtet sich an alle Paare und lässt sich vor jedem spielen. Diese hier hat eigene Stapel, pikant und hot, geschrieben für einen Moment, in dem ihr allein zu zweit seid.",
+    "q2": "Ist es sehr explizit?",
+    "a2": "Die Stimmung pikant bleibt andeutend und verlangt nie, sich ganz auszuziehen. Die Stimmung hot ist deutlich direkter, mit Karten, die eine bereits vorhandene Vertrautheit voraussetzen. Die Stufe wählt ihr vor dem Start.",
+    "q3": "Wie viele Karten gibt es?",
+    "a3": "140 verteilt auf die beiden Stufen, zwischen Wahrheiten, Aufgaben und Strafen. Sie wiederholen sich nicht, solange der Stapel reicht, was für mehrere Abende genügt, ohne auf dieselben zu stoßen.",
+    "q4": "Passt es für ein Paar, das sich gerade erst kennengelernt hat?",
+    "a4": "Die Stimmung pikant ja, sie eignet sich sehr gut zum Ausloten. Die Stimmung hot setzt voraus, dass ihr euch schon gut kennt: zu früh gestartet, ist sie eher unangenehm als unterhaltsam.",
+    "q5": "Muss man ein Konto anlegen?",
+    "a5": "Nein, und es wird nichts gespeichert. Das Spiel läuft in eurem Browser, eure Antworten verlassen das Gerät nie und es gibt keinen Partieverlauf."
+  },
+  "section4": {
+    "title": "Was ein Spiel wie dieses wirklich leisten kann",
+    "p1": "Es wird euer Intimleben nicht umkrempeln, und das sollte auch niemand von ihm verlangen. Was es gut kann, ist einem Gespräch einen Rahmen geben, das viele Paare nie wirklich geführt haben, weil die Karte die Frage an eurer Stelle stellt.",
+    "p2": "Den Rest entscheidet ihr, und so ist es genau richtig."
+  },
+  "jsonLd": {
+    "name": "Spiel Wahrheit oder Pflicht versaut für Paare"
+  }
+}
