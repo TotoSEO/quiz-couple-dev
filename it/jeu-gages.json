@@ -3,7 +3,7 @@
     "badge": "Gratis • Senza registrazione • Da rilanciare all'infinito",
     "title": "La ruota delle penitenze da fare in coppia",
     "titleHighlight": "in coppia",
-    "description": "140 penitenze divise in sette famiglie. Premete, la ruota gira e decide al posto vostro."
+    "description": "140 penitenze in sette famiglie. Premete, la ruota gira… e decide al posto vostro."
   },
   "familles": {
     "bisouNom": "Bacio",
@@ -23,9 +23,9 @@
   },
   "section1": {
     "title": "Una penitenza estratta a sorte vale più di una inventata",
-    "p1": "Quando finisce una scommessa, qualcuno deve trovare la <strong class=\"text-foreground\">penitenza</strong>. Ed è lì che si inceppa: o non viene in mente niente, o viene in mente qualcosa di troppo duro, o chi ha vinto si sente in dovere di essere buono. In tutti e tre i casi il momento cade.",
-    "p2": "Una ruota risolve tutto in un colpo: nessuno sceglie, quindi nessuno è responsabile. È anche ciò che permette di accettare una penitenza che avreste rifiutato se l'avesse proposta l'altro, perché dietro non c'è più un'intenzione, solo il caso.",
-    "p3": "Sulla ruota girano sette famiglie, più una casella sorpresa che pesca da tutte le altre. Rilanciate quante volte volete: la partita non ha una fine, finisce quando chiudete la pagina."
+    "p1": "Finisce una scommessa, qualcuno ha perso, e adesso bisogna trovare la <strong class=\"text-foreground\">penitenza</strong>. È sempre la stessa storia: o non viene in mente niente a nessuno, o ne salta fuori una troppo dura, o chi ha vinto si sente in dovere di essere gentile. In tutti e tre i casi il momento si sgonfia.",
+    "p2": "Una ruota risolve tutto in un secondo. Nessuno sceglie, quindi nessuno è responsabile.",
+    "p3": "È anche ciò che vi farà accettare una penitenza che avreste rifiutato se fosse arrivata dall'altro: dietro non c'è più un'intenzione, solo il caso. Girano sette famiglie, più una casella sorpresa che pesca da tutte le altre, e rilanciate quante volte volete."
   },
   "section2": {
     "title": "Che cosa c'è sulla ruota",
@@ -35,33 +35,33 @@
   },
   "section3": {
     "title": "Come si usa",
-    "intro": "Non c'è nessun regolamento imposto: la ruota è uno strumento, siete voi a decidere che cosa la fa partire.",
+    "intro": "Non c'è nessuna regola imposta: la ruota è uno strumento, siete voi a decidere cosa la fa scattare.",
     "regle1Titre": "Dopo una scommessa persa",
-    "regle1Texte": "L'uso più comune. Chi perde gira la ruota ed esegue, senza discutere il risultato. Funziona proprio perché non l'ha scelto lui.",
+    "regle1Texte": "L'uso più comune, di gran lunga. Chi perde gira la ruota ed esegue, senza discutere il risultato. Funziona proprio perché non ha scelto nulla.",
     "regle2Titre": "Alla fine di un altro gioco",
-    "regle2Texte": "Un giro alla fine di un quiz o di un obbligo o verità rilancia la serata senza dover tirare fuori un altro gioco.",
+    "regle2Texte": "Una giocata alla fine di un quiz o di un obbligo o verità rilancia la serata senza dover tirare fuori un gioco nuovo.",
     "regle3Titre": "Come gioco a sé",
-    "regle3Texte": "A turno, ognuno gira e fa la penitenza estratta. Dieci giri bastano per un momento completo, e non vi capiterà due volte la stessa.",
+    "regle3Texte": "A turno: si gira e si esegue la penitenza estratta. Dieci giri bastano per un bel momento, e non vi capiterà due volte la stessa.",
     "regle4Titre": "Con il diritto di rigirare",
-    "regle4Texte": "Mettetevi d'accordo su una cosa prima di iniziare: ognuno può rigirare una volta a serata senza giustificarsi. Toglie l'unico motivo per non giocare."
+    "regle4Texte": "Mettetevi d'accordo prima: ciascuno ha diritto a un rilancio per serata, senza giustificarsi. Toglie l'unica buona ragione per non giocare."
   },
   "faq": {
     "title": "Domande frequenti",
     "q1": "Quante penitenze ci sono?",
-    "a1": "140, divise in sette famiglie da venti. La casella sorpresa pesca da tutte e sette, quindi non aggiunge penitenze ma cambia il modo in cui escono.",
+    "a1": "140, divise in sette famiglie da venti. La casella sorpresa pesca da tutte e sette: non aggiunge penitenze, cambia solo il modo in cui escono.",
     "q2": "Le penitenze si ripetono?",
-    "a2": "Non finché la famiglia uscita non è vuota. Ogni famiglia si rimescola una volta uscite le sue venti penitenze, il che basta per più serate senza ricadere mai sulla stessa.",
+    "a2": "Non finché la famiglia estratta non è vuota! Ogni famiglia si rimescola una volta uscite le sue venti penitenze, e questo basta per più serate senza mai ricadere sulla stessa.",
     "q3": "È piccante?",
-    "a3": "No, la ruota è pensata per essere girata ovunque, amici compresi. Il massimo dell'intimità è un bacio o un massaggio. Per qualcosa di più diretto, i nostri giochi di obbligo o verità hanno un mazzo a parte.",
+    "a3": "No. La ruota è fatta per essere girata ovunque, anche davanti agli amici. Il massimo dell'intimità è un bacio o un massaggio. Per qualcosa di nettamente più diretto, i nostri obbligo o verità hanno un mazzo a parte.",
     "q4": "Si può giocare in più di due?",
-    "a4": "Le penitenze sono scritte per una coppia, ma niente vieta di passare il telefono in un gruppo: metà funzionano così come sono, le altre danno semplicemente per scontato che ci sia un partner davanti.",
+    "a4": "Le penitenze sono scritte per una coppia, ma nulla vieta di far girare il telefono in un gruppo: metà funzionano così come sono, le altre presuppongono semplicemente che ci sia un partner davanti.",
     "q5": "Bisogna creare un account?",
-    "a5": "No, e non viene registrato niente. La ruota gira nel vostro browser, su telefono come su computer, e il contatore riparte da zero appena ricaricate la pagina."
+    "a5": "No, e non viene salvato nulla. La ruota gira nel vostro browser, su telefono come su computer, e il contatore riparte da zero appena ricaricate la pagina."
   },
   "section4": {
-    "title": "Una penitenza scelta bene non mette a disagio nessuno",
-    "p1": "L'unico vero rischio di un gioco di penitenze è la penitenza che va troppo oltre per uno dei due. Quelle di questa ruota sono volutamente a misura di salotto: niente che chieda di spogliarsi, niente che vi esponga davanti agli altri, niente di cui pentirsi il giorno dopo.",
-    "p2": "Il resto lo decidete voi, ed è molto meglio così.",
+    "title": "Una buona penitenza non mette a disagio nessuno",
+    "p1": "L'unico vero rischio di un gioco di penitenze è quella che va troppo oltre per uno dei due. Quelle di questa ruota sono volutamente a misura di salotto: niente che chieda di spogliarsi, niente che esponga davanti agli altri, niente di cui pentirsi la mattina dopo.",
+    "p2": "Il resto lo decidete voi. Ed è molto meglio così!",
     "cta": "Vedi tutti i nostri giochi di coppia"
   },
   "jsonLd": {

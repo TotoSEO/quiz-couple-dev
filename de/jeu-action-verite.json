@@ -3,48 +3,48 @@
     "badge": "Gratis • Ohne Anmeldung • Zu zweit",
     "title": "Wahrheit oder Pflicht zu zweit, ganz ohne Vorbereitung",
     "titleHighlight": "zu zweit",
-    "description": "70 zufällig gezogene Karten, Wahrheit oder Pflicht nach Wahl des Spielers, auf einem einzigen Handy zwischen euch."
+    "description": "70 Karten, ein einziges Handy zwischen euch beiden, und ihr sagt an: Wahrheit oder Pflicht."
   },
   "section1": {
     "title": "Ein Wahrheit oder Pflicht, das man wirklich spielt, keine Liste zum Scrollen",
-    "p1": "Die meisten Seiten zu <strong class=\"text-foreground\">Wahrheit oder Pflicht für Paare</strong> geben euch hundert Fragen zum Nacheinanderlesen. Das funktioniert fünf Minuten, dann sucht einer die nächste, ein anderer schummelt und liest vor, und die Partie ist vorbei.",
-    "p2": "Hier ist es ein Spiel: Wer dran ist, sagt Wahrheit oder Pflicht an, eine Karte fällt, und ihr seht immer nur eine. Keine Liste, keine vorher bekannte Reihenfolge, keine Möglichkeit, die nächste zu erspähen. Karten wiederholen sich nicht, solange der Stapel reicht, und wer ablehnt, zieht eine Strafe.",
-    "p3": "Alles läuft auf einem einzigen Handy zwischen euch, ohne Konto und ohne Installation. Die Partie hat kein festes Ende: Ihr hört auf, wann ihr wollt, und die Zusammenfassung sagt euch, wie viele Karten ihr geschafft habt."
+    "p1": "<strong class=\"text-foreground\">Wahrheit oder Pflicht für Paare</strong> hat jeder schon mindestens einmal gespielt. Im Zeltlager, auf einer Party, um zwei Uhr nachts auf dem Sofa… Das Problem ist, was man heute online findet: hundert Fragen hintereinander, die man mit dem Daumen durchwischt. Das hält fünf Minuten. Dann liest jemand vor, jemand anderes sucht „eine bessere“, und die Runde ist tot.",
+    "p2": "Hier ist es ein echtes Spiel. Wer dran ist, sagt seine Seite an, eine Karte fällt, und ihr seht immer nur eine. Keine Liste, keine Reihenfolge, die ihr schon kennt, keine Chance, die nächste zu erspähen. Und keine Karte kommt wieder, solange der Stapel nicht leer ist.",
+    "p3": "Ein Handy zwischen euch beiden, und los geht's!"
   },
   "section2": {
     "title": "Die Regeln in vier Punkten",
-    "intro": "Sie passen in ein paar Zeilen, was ungefähr der Sinn des Spiels ist.",
+    "intro": "Sie passen in ein paar Zeilen… worum es bei diesem Spiel im Grunde geht.",
     "regle1Titre": "Tragt eure beiden Vornamen ein",
-    "regle1Texte": "Das Spiel sagt bei jeder Karte an, wer dran ist: Niemand muss mehr fragen, wer spielt, oder im Kopf mitzählen.",
+    "regle1Texte": "Das Spiel sagt bei jeder Karte an, wer dran ist. Kein Mitzählen im Kopf mehr, kein Gezanke darüber, wer zuletzt gespielt hat.",
     "regle2Titre": "Wahrheit oder Pflicht, ihr entscheidet",
-    "regle2Texte": "In jeder Runde sagt der aufgerufene Spieler seine Seite an. Die Art wählt ihr; den Inhalt der Karte nicht, der wird zufällig aus dem passenden Stapel gezogen.",
+    "regle2Texte": "In jeder Runde sagt der genannte Spieler seine Seite an. Die Art bestimmt ihr. Den Inhalt der Karte nicht: der wird zufällig aus dem passenden Stapel gezogen, und ihr entdeckt ihn gleichzeitig.",
     "regle3Titre": "Ihr macht es, oder ihr passt",
-    "regle3Texte": "Passt die Karte, erfüllt ihr sie und der andere ist dran. Wollt ihr sie lieber vermeiden, passt ihr und stattdessen fällt eine Strafe. Niemand muss sich rechtfertigen.",
+    "regle3Texte": "Passt die Karte? Ihr zieht sie durch und der Zug geht weiter. Keine Lust? Ihr setzt aus, und stattdessen fällt ein Pfand. Niemand muss sich je rechtfertigen.",
     "regle4Titre": "Ihr hört auf, wann ihr wollt",
-    "regle4Texte": "Der Knopf zum Beenden ist jederzeit da. Die Zusammenfassung zählt erfüllte Karten und gesammelte Strafen, und ihr könnt sie teilen."
+    "regle4Texte": "Der Knopf zum Beenden ist jederzeit da. Am Ende zählt die Übersicht eure durchgezogenen Karten und eure gesammelten Pfänder, und ihr könnt sie teilen."
   },
   "section3": {
-    "title": "Die Regel, die den Unterschied macht: das Recht zu passen",
-    "p1": "Wahrheit oder Pflicht zu zweit läuft schief, wenn sich einer verpflichtet fühlt. Genau dafür gibt es die Strafe: Sie macht das Ablehnen normal und im Spiel vorgesehen, statt zu einem unangenehmen Moment, den man erklären muss.",
-    "p2": "Einigt euch vor dem Start auf eines: Jeder darf passen, ohne einen Grund zu nennen, so oft er will. Das klingt widersinnig und ist genau das, was euch weiter kommen lässt, weil niemand defensiv spielt."
+    "title": "Die Regel, die alles ändert: das Recht auszusetzen",
+    "p1": "Ein Wahrheit oder Pflicht zu zweit geht an dem Tag schief, an dem sich einer gedrängt fühlt. Genau dafür gibt es das Pfand: es macht das Aussetzen normal, eingeplant, unauffällig. Statt einer peinlichen Stille, die man erklären muss, ist es einfach eine Karte mehr.",
+    "p2": "Einigt euch vorher darauf: jeder darf aussetzen, ohne einen Grund zu nennen, so oft er will. Das klingt verkehrt herum, und trotzdem bringt euch genau das am weitesten. Weil niemand in der Defensive spielt."
   },
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Wie viele Karten gibt es?",
-    "a1": "70 insgesamt: 30 Wahrheiten, 24 Aufgaben und 16 Strafen in einem einzigen Stapel. Sie wiederholen sich nicht, solange der Stapel reicht, was für einen ganzen Abend genügt.",
+    "a1": "70 insgesamt: 30 Wahrheiten, 24 Pflichten und 16 Pfänder in einem einzigen Stapel. Sie kommen erst wieder, wenn der Stapel leer ist, also reichlich Stoff für einen ganzen Abend.",
     "q2": "Muss man sich anmelden oder etwas installieren?",
-    "a2": "Weder noch. Das Spiel läuft direkt im Browser, auf dem Handy wie am Rechner. Ihr öffnet die Seite, tragt eure Vornamen ein und die erste Karte fällt.",
+    "a2": "Weder noch! Das Spiel läuft direkt im Browser, auf dem Handy wie am Rechner. Seite öffnen, Vornamen eintippen, und die erste Karte fällt.",
     "q3": "Zu wie vielt kann man spielen?",
-    "a3": "Das Spiel ist für zwei gemacht, mit einer Ansage, wer dran ist. Nichts hindert euch daran, das Handy in einer größeren Runde herumzureichen, aber die Karten sind für ein Paar geschrieben.",
+    "a3": "Es ist für zwei gebaut, mit angesagtem Zug bei jeder Karte. Nichts hindert euch daran, das Handy in einer größeren Runde weiterzureichen, aber die Karten sind für ein Paar geschrieben.",
     "q4": "Gibt es eine gewagtere Version?",
-    "a4": "Ja, sie hat eine eigene Seite mit eigenen, deutlich direkteren Karten. Das ist die pikante Version, gemacht für Momente, in denen ihr wirklich allein seid.",
+    "a4": "Ja, auf einer eigenen Seite mit einem deutlich direkteren Stapel. Das ist die versaute Variante, gemacht für die Abende, an denen ihr wirklich allein seid.",
     "q5": "Kann man aus der Ferne spielen?",
-    "a5": "Ja. Einer öffnet das Spiel, liest die Karte per Video laut vor und bestätigt für beide. Wahrheiten funktionieren aus der Ferne bestens, Aufgaben brauchen etwas Anpassung."
+    "a5": "Ja, und es funktioniert besser, als man denkt. Einer öffnet das Spiel, liest die Karte per Video laut vor und bestätigt für beide. Die Wahrheiten passen perfekt, die Pflichten brauchen etwas Fantasie…"
   },
   "section4": {
     "title": "Warum dieses Spiel nach all den Jahren immer noch funktioniert",
-    "p1": "Wahrheit oder Pflicht überdauert Generationen aus einem einfachen Grund: Es gibt die Erlaubnis, eine Frage zu stellen, die man von sich aus nie gestellt hätte. Nicht ihr fragt, sondern die Karte, und dieser kleine Abstand verändert alles.",
-    "p2": "In einer Beziehung ist es oft der einzige Weg, bestimmte Themen anzusprechen, ohne daraus ein feierliches Gespräch zu machen."
+    "p1": "Wahrheit oder Pflicht überlebt Generation für Generation aus einem ganz einfachen Grund: es erlaubt euch eine Frage, die ihr von selbst nie gestellt hättet. Nicht ihr fragt, die Karte fragt. Und dieser winzige Abstand ändert absolut alles.",
+    "p2": "Als Paar ist es oft der einzige Weg, bestimmte Themen anzuschneiden, ohne ein feierliches Gespräch daraus zu machen. Niemand will „wir müssen reden“ hören… aber eine Karte zieht jeder."
   },
   "jsonLd": {
     "name": "Spiel Wahrheit oder Pflicht für Paare"

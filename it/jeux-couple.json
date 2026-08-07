@@ -1,9 +1,9 @@
 {
   "hero": {
-    "badge": "5 giochi • Gratis • Senza registrazione",
+    "badge": "6 giochi • Gratis • Senza registrazione",
     "title": "I nostri giochi da fare in due, pronti con un tocco",
     "titleHighlight": "da fare in due",
-    "description": "Cinque giochi che partono su un solo telefono appoggiato tra voi due, senza account e senza installare niente."
+    "description": "Sei giochi che partono su un solo telefono fra voi due, senza account e senza installare nulla."
   },
   "stats": {
     "jeux": "6",
@@ -31,7 +31,7 @@
     "actionVeriteDuree": "Senza limite",
     "actionVeriteContenu": "70 carte",
     "actionVeriteHotNom": "Obbligo o verità piccante",
-    "actionVeriteHotTagline": "Le stesse regole, due livelli molto più diretti, per quando siete soli voi due.",
+    "actionVeriteHotTagline": "Le stesse regole con un mazzo nettamente più diretto, per quando siete davvero soli.",
     "actionVeriteHotJoueurs": "2 giocatori",
     "actionVeriteHotDuree": "Senza limite",
     "actionVeriteHotContenu": "70 carte",
@@ -53,13 +53,13 @@
   },
   "section1": {
     "title": "Che cosa cambia un gioco in due in una serata",
-    "p1": "Un <strong class=\"text-foreground\">gioco di coppia</strong> sembra poca cosa eppure risolve un problema molto concreto: in due si finisce sempre per girare intorno agli stessi argomenti. La giornata, il lavoro, cosa si mangia stasera. Un gioco impone una cornice, e quella cornice dà il permesso di fare domande che non si farebbero mai di punto in bianco.",
-    "p2": "È anche per questo che un gioco funziona meglio di una serata davanti a un film quando volete ritrovarvi. Davanti a uno schermo siete due persone una accanto all'altra che guardano altrove. Attorno a un gioco siete due persone che si guardano, e la differenza si sente dopo dieci minuti.",
-    "p3": "I quattro giochi di questa pagina si giocano online, gratis, su un solo telefono. Nessun account da creare, nessuna applicazione da installare, niente da preparare: aprite la pagina, lanciate la partita e vi fermate quando volete."
+    "p1": "Un <strong class=\"text-foreground\">gioco di coppia</strong> sembra una sciocchezza. Eppure risolve un problema molto concreto: in due si finisce sempre per girare attorno agli stessi argomenti. La giornata, il lavoro, cosa si mangia stasera… Un gioco impone una cornice, e quella cornice dà il permesso di fare domande che di punto in bianco non si farebbero mai.",
+    "p2": "È anche il motivo per cui un gioco funziona meglio di un film quando volete davvero ritrovarvi. Davanti a uno schermo siete due persone affiancate che guardano altrove. Attorno a un gioco siete due persone che si guardano. La differenza si sente dopo dieci minuti.",
+    "p3": "I sei giochi di questa pagina si giocano online, gratis, su un solo telefono. Niente da creare, niente da installare, niente da preparare."
   },
   "section2": {
     "title": "Quale gioco scegliere a seconda del momento",
-    "intro": "È la vera domanda, e la risposta dipende molto meno dai vostri gusti che dal momento che state passando.",
+    "intro": "È questa la vera domanda. E la risposta dipende molto meno dai vostri gusti che dal momento che state vivendo.",
     "headerMoment": "Il momento",
     "headerJeu": "Il gioco",
     "headerPourquoi": "Perché proprio quello",
@@ -68,7 +68,7 @@
     "row2Moment": "Una serata a casa che si spegne",
     "row2Pourquoi": "Non chiede nessuna energia per partire: cade una carta e bisogna rispondere. Dopo tre carte la serata è di nuovo in piedi.",
     "row3Moment": "Un momento solo per voi due",
-    "row3Pourquoi": "Due livelli separati, dall'allusivo al molto diretto, con il diritto di passare a ogni carta.",
+    "row3Pourquoi": "Un unico mazzo che va dal suggestivo al molto diretto, con il diritto di passare a ogni carta. Il limite lo fissate voi, non il gioco.",
     "row4Moment": "Una scommessa persa, una serata da rilanciare",
     "row4Pourquoi": "Nessuno sceglie la penitenza, quindi nessuno si sente preso di mira. Un pulsante, un giro, e la questione è chiusa.",
     "row5Moment": "Una vera serata in due, senza altri schermi accesi",
@@ -78,33 +78,33 @@
   },
   "section3": {
     "title": "Come far funzionare una serata di giochi in due",
-    "p1": "Quattro cose fanno la differenza tra una partita che si abbandona dopo dieci minuti e una serata di cui si riparla il giorno dopo.",
+    "p1": "Quattro cose fanno la differenza fra una partita abbandonata dopo dieci minuti e una serata di cui parlate ancora il giorno dopo.",
     "conseil1Titre": "Un solo telefono, appoggiato tra voi",
-    "conseil1Texte": "Due schermi significano due attenzioni altrove. I nostri giochi sono pensati per girare su un unico apparecchio che vi passate, e questo cambia completamente l'atmosfera della partita.",
+    "conseil1Texte": "Due schermi vuol dire due attenzioni altrove. I nostri giochi sono fatti per girare su un unico dispositivo che vi passate, e questo cambia completamente l'atmosfera.",
     "conseil2Titre": "Modalità aereo, davvero",
-    "conseil2Texte": "Basta una notifica per rompere un momento che stava diventando interessante. È il consiglio più banale della lista e di gran lunga il più efficace.",
+    "conseil2Texte": "Basta una sola notifica per rompere un momento che stava diventando interessante. È il consiglio più banale dell'elenco… e di gran lunga il più efficace.",
     "conseil3Titre": "Il diritto di passare",
-    "conseil3Texte": "Un gioco in due funziona solo se nessuno si sente in trappola. Mettetevi d'accordo fin dall'inizio che ognuno può rifiutare una carta senza giustificarsi: i due giochi di carte prevedono una penitenza proprio per questo.",
+    "conseil3Texte": "Un gioco in due funziona solo se nessuno si sente in trappola. Mettetevi d'accordo dall'inizio: ciascuno può rifiutare una carta senza giustificarsi, e i due giochi di carte prevedono una penitenza proprio per questo.",
     "conseil4Titre": "Cominciare più piano del previsto",
-    "conseil4Texte": "L'errore classico è aprire con il gioco più spinto. Cominciate con qualcosa di leggero, il resto arriva da solo una volta che la risata ha fatto il suo lavoro."
+    "conseil4Texte": "L'errore classico è aprire con il gioco più spinto. Cominciate leggeri: il resto arriva da solo una volta che sono partite le risate."
   },
   "faq": {
     "title": "Domande frequenti",
     "q1": "Questi giochi di coppia sono davvero gratis?",
-    "a1": "Sì, tutti e quattro, dal primo all'ultimo. Non c'è nessun account da creare, nessuna versione a pagamento e nessun contenuto sbloccato dopo il pagamento. Aprite la pagina del gioco e giocate.",
+    "a1": "Sì, tutti e sei, dal primo all'ultimo. Nessun account da creare, nessuna versione a pagamento, nessun contenuto sbloccato dopo un pagamento. Aprite la pagina del gioco e giocate.",
     "q2": "Bisogna scaricare un'applicazione?",
-    "a2": "No. Tutto si gioca direttamente nel browser, su telefono come su computer. È anche ciò che permette di lanciare una partita in dieci secondi quando arriva la voglia.",
+    "a2": "No. Tutto si gioca direttamente nel browser, su telefono come su computer. È anche ciò che permette di avviare una partita in dieci secondi, proprio quando viene voglia.",
     "q3": "Qual è il gioco migliore da fare in coppia a casa?",
-    "a3": "Dipende dalla serata. Obbligo o verità è il più versatile: parte in fretta e si ferma quando volete. Preferiresti funziona meglio quando avete voglia di parlare più che di fare. La ruota delle penitenze serve soprattutto a chiudere una scommessa. E la versione piccante conviene tenerla per i momenti in cui siete soli voi due.",
+    "a3": "Dipende dalla serata! Obbligo o verità è il più versatile: parte in fretta e si ferma quando volete. Chi di noi due sta in cinque minuti e apre una conversazione ogni volta. Preferiresti funziona meglio quando avete voglia di parlare più che di fare. Il tabellone chiede una mezz'ora vera, ma è l'unico che si vince. La ruota serve soprattutto a chiudere una scommessa. E la versione piccante è da tenere per i momenti in cui siete soli in due.",
     "q4": "Si può giocare a distanza, ognuno a casa propria?",
-    "a4": "Sì. Uno apre il gioco, legge ad alta voce in videochiamata e conferma per entrambi. Le verità e i dilemmi funzionano benissimo a distanza, gli obblighi chiedono qualche adattamento.",
+    "a4": "Sì. Uno apre il gioco, legge ad alta voce in videochiamata e conferma per entrambi. Verità, dilemmi e voti funzionano perfettamente a distanza, gli obblighi chiedono un po' di fantasia.",
     "q5": "Questi giochi vanno bene per una coppia che si è appena conosciuta?",
-    "a5": "Preferiresti, la ruota delle penitenze e la versione classica di obbligo o verità sì: non presuppongono nessuna storia in comune. La versione piccante dà per scontato che vi conosciate già bene, e lanciata troppo presto mette a disagio più che divertire."
+    "a5": "Preferiresti, chi di noi due, la ruota delle penitenze e la versione classica di obbligo o verità: sì, nessuno presuppone una storia in comune. Anche il tabellone, anche se le sue caselle ricordo resteranno un po' scarne all'inizio. La versione piccante, invece, dà per scontato che vi conosciate già bene: giocata troppo presto mette più a disagio di quanto diverta."
   },
   "section4": {
     "title": "Un gioco non ripara niente, ma apre delle porte",
-    "p1": "Bisogna essere onesti su ciò che un gioco può fare. Non risolve un disaccordo di fondo e non sostituisce una conversazione quando serve. Quello che fa molto bene è togliere la solennità: è la carta a fare la domanda, non voi, e questo piccolo spostamento basta spesso a sbloccare un argomento.",
-    "p2": "E se volete andare oltre una serata, i nostri test di coppia affrontano gli stessi temi con un risultato alla fine.",
+    "p1": "Siamo onesti su cosa può fare un gioco. Non risolve un disaccordo di fondo e non sostituisce una conversazione quando serve. Quello che fa benissimo, invece, è togliere la solennità: è la carta a fare la domanda, non voi. Quel piccolo spostamento basta spesso a sbloccare un argomento.",
+    "p2": "E se volete andare oltre una serata, i nostri test di coppia affrontano gli stessi temi con un risultato finale.",
     "cta": "Scoprire i nostri test di coppia"
   },
   "jsonLd": {

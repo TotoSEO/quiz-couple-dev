@@ -3,48 +3,48 @@
     "badge": "Gratis • Sin registro • En pareja",
     "title": "Verdad o reto en pareja, sin preparar nada",
     "titleHighlight": "en pareja",
-    "description": "70 cartas al azar, verdad o reto a elección del jugador, en un solo móvil apoyado entre los dos."
+    "description": "70 cartas, un solo móvil entre los dos, y eres tú quien canta verdad o reto."
   },
   "section1": {
     "title": "Un verdad o reto que se juega de verdad, no una lista que se desliza",
-    "p1": "La mayoría de páginas de <strong class=\"text-foreground\">verdad o reto para parejas</strong> te dan cien preguntas para leer una detrás de otra. Funciona cinco minutos, luego alguien busca la siguiente, otro hace trampa leyendo por delante y la partida se acaba.",
-    "p2": "Esto es un juego: quien tiene el turno canta verdad o reto, cae una carta y solo veis una cada vez. Ni lista, ni orden conocido de antemano, ni forma de ver lo que viene. Las cartas no se repiten mientras quede mazo, y rechazar una hace caer una prenda.",
-    "p3": "Todo ocurre en un solo móvil apoyado entre los dos, sin cuenta que crear y sin instalar nada. La partida no tiene final impuesto: la paráis cuando queráis y el resumen os dice cuántas cartas habéis superado."
+    "p1": "Al <strong class=\"text-foreground\">verdad o reto para parejas</strong> hemos jugado todos alguna vez. En un campamento, en una fiesta, en un sofá a las dos de la mañana… El problema es lo que se encuentra hoy en internet: cien preguntas seguidas que vas deslizando con el pulgar. Aguanta cinco minutos. Luego alguien lee por adelantado, otro busca «una mejor» y la partida se muere.",
+    "p2": "Esto sí es un juego de verdad. El jugador al que le toca canta su lado, cae una carta y solo veis una cada vez. Sin lista, sin un orden que ya conocéis, sin forma de adivinar la siguiente. Y las cartas no vuelven a salir hasta que el mazo se agota.",
+    "p3": "Un móvil entre los dos y a jugar."
   },
   "section2": {
     "title": "Las reglas, en cuatro puntos",
-    "intro": "Caben en unas líneas, que es un poco la gracia del juego.",
+    "intro": "Caben en unas pocas líneas… que es un poco de lo que va el juego.",
     "regle1Titre": "Escribid vuestros dos nombres",
-    "regle1Texte": "El juego anuncia a quién le toca en cada carta: se acabó preguntarse quién juega o llevar la cuenta de memoria.",
+    "regle1Texte": "El juego anuncia a quién le toca en cada carta. Se acabó llevar la cuenta mentalmente y discutir sobre quién jugó el último.",
     "regle2Titre": "Verdad o reto, lo elegís vosotros",
-    "regle2Texte": "En cada turno, el jugador al que le toca canta su bando. El tipo lo decidís vosotros; el contenido de la carta no, se saca al azar del mazo correspondiente.",
+    "regle2Texte": "En cada turno, el jugador señalado canta su lado. El tipo lo decidís vosotros. El contenido de la carta no: sale al azar del mazo correspondiente y lo descubrís a la vez que el otro.",
     "regle3Titre": "Lo haces, o pasas",
-    "regle3Texte": "Si la carta te va bien, la superas y el turno pasa al otro. Si prefieres evitarla, pasas y cae una prenda en su lugar. Nadie tiene que justificarse.",
+    "regle3Texte": "¿La carta te va bien? La cumples y pasa el turno. ¿No te apetece? Pasas y cae una prenda en su lugar. Nadie tiene que justificarse, nunca.",
     "regle4Titre": "Paráis cuando queráis",
-    "regle4Texte": "El botón para terminar la partida está siempre disponible. El resumen cuenta las cartas superadas y las prendas recogidas, y podéis compartirlo."
+    "regle4Texte": "El botón para terminar está siempre ahí. Al final, el resumen cuenta las cartas cumplidas y las prendas recogidas, y podéis compartirlo."
   },
   "section3": {
-    "title": "La regla que marca la diferencia: el derecho a pasar",
-    "p1": "Un verdad o reto en pareja se tuerce cuando uno de los dos se siente obligado. La prenda existe justo para eso: convierte el rechazo en algo normal y previsto por el juego, en lugar de un momento incómodo que hay que explicar.",
-    "p2": "Poneos de acuerdo en una cosa antes de empezar: cada uno puede pasar sin dar motivos, tantas veces como quiera. Parece contradictorio, y es exactamente lo que permite llegar más lejos, porque nadie juega a la defensiva."
+    "title": "La regla que lo cambia todo: el derecho a pasar",
+    "p1": "Un verdad o reto entre dos se tuerce el día en que uno se siente obligado. La prenda existe justo para eso: convierte el pasar en algo normal, previsto, corriente. En lugar de un silencio incómodo que hay que explicar, es simplemente una carta más.",
+    "p2": "Poneos de acuerdo antes de empezar: cualquiera puede pasar sin dar motivos, tantas veces como quiera. Suena al revés y, sin embargo, es lo que os llevará más lejos. Porque nadie juega a la defensiva."
   },
   "faq": {
     "title": "Preguntas frecuentes",
     "q1": "¿Cuántas cartas hay?",
-    "a1": "70 en total: 30 verdades, 24 retos y 16 prendas, todo en un solo mazo. No se repiten mientras quede mazo, lo que da de sobra para una noche entera.",
+    "a1": "70 en total: 30 verdades, 24 retos y 16 prendas, reunidas en un solo mazo. No vuelven a salir hasta que el mazo se agota, así que hay de sobra para una noche entera.",
     "q2": "¿Hay que registrarse o instalar algo?",
-    "a2": "Ni lo uno ni lo otro. El juego funciona directamente en el navegador, en el móvil o en el ordenador. Abrís la página, escribís vuestros nombres y cae la primera carta.",
+    "a2": "¡Ni lo uno ni lo otro! El juego funciona en el navegador, en móvil o en ordenador. Abrís la página, escribís vuestros nombres y cae la primera carta.",
     "q3": "¿Cuántos pueden jugar?",
-    "a3": "El juego está pensado para dos, con turnos anunciados en cada carta. Nada impide jugar entre más gente pasándose el móvil, pero las cartas están escritas para una pareja.",
+    "a3": "Está pensado para dos, con el turno anunciado en cada carta. Nada impide ir pasando el móvil en un grupo, pero las cartas están escritas para una pareja.",
     "q4": "¿Hay una versión más atrevida?",
-    "a4": "Sí, le hemos hecho una página aparte con sus propias cartas, bastante más directas. Es la versión picante y está pensada para los momentos en los que de verdad estáis solos los dos.",
+    "a4": "Sí, en una página aparte y con su propio mazo, bastante más directo. Es la versión picante, hecha para las noches en que estáis realmente solos.",
     "q5": "¿Se puede jugar a distancia?",
-    "a5": "Sí. Uno abre el juego, lee la carta en voz alta por videollamada y valida por los dos. Las verdades funcionan perfectamente a distancia, los retos piden algo de adaptación."
+    "a5": "Sí, y funciona mejor de lo que parece. Uno abre el juego, lee la carta en voz alta por videollamada y valida por los dos. Las verdades salen perfectas, los retos piden algo de imaginación…"
   },
   "section4": {
     "title": "Por qué este juego sigue funcionando después de tantos años",
-    "p1": "Verdad o reto atraviesa generaciones por una razón sencilla: da permiso para hacer una pregunta que nunca se haría de forma espontánea. No eres tú quien pregunta, es la carta, y esa pequeña distancia lo cambia todo.",
-    "p2": "En pareja, suele ser la única manera de sacar ciertos temas sin convertirlo en una conversación solemne."
+    "p1": "Verdad o reto sobrevive generación tras generación por una razón muy simple: te da permiso para hacer una pregunta que nunca habrías hecho por tu cuenta. No preguntas tú, pregunta la carta. Y esa distancia mínima lo cambia absolutamente todo.",
+    "p2": "En pareja suele ser la única forma de abrir ciertos temas sin convertirlos en una conversación solemne. Nadie quiere oír «tenemos que hablar»… pero todo el mundo acepta sacar una carta."
   },
   "jsonLd": {
     "name": "Juego verdad o reto en pareja"

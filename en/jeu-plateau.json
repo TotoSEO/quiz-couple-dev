@@ -3,7 +3,7 @@
     "badge": "Free • No sign-up • Someone actually wins",
     "title": "The couple board game you play on one phone",
     "titleHighlight": "board game",
-    "description": "Forty squares, one dice, two pawns with your names on them. First to the finish wins, and the loser draws a forfeit."
+    "description": "Forty squares, a dice, two pawns with your names on them. First to the finish wins… and the loser draws a forfeit."
   },
   "cases": {
     "veriteNom": "Truth",
@@ -21,45 +21,45 @@
   },
   "section1": {
     "title": "The first of our games that can actually be won",
-    "p1": "Every online <strong class=\"text-foreground\">couple game</strong> looks the same: draw a card, answer, start again. It is pleasant for ten minutes, then it stops because nothing pushes you to carry on. There is no progress, no ending, no reason to want the next card.",
-    "p2": "A board settles that instantly. You see where you are, you see where the other one is, and those three squares between you are enough to make you want to roll again. It is not the content of the cards that changes, it is the reason for drawing them.",
-    "p3": "The board is played on a single phone set down between you, with no account and nothing to install. Count twenty to thirty minutes for a full game, a little less if the dice are generous."
+    "p1": "Online <strong class=\"text-foreground\">couple games</strong> all look the same: draw a card, answer, start again. It's pleasant for ten minutes. Then it stops, because nothing pushes you to carry on. No progression, no ending, not the slightest reason to want the next card.",
+    "p2": "A board fixes that instantly.",
+    "p3": "You can see where you are, you can see where your partner is, and those three squares between you are enough to make you want to roll again. It isn't the content of the cards that changes, it's the reason for drawing them. Reckon on twenty to thirty minutes for a full game, a bit less if the dice are generous."
   },
   "section2": {
     "title": "The six kinds of square",
-    "intro": "The board alternates between challenges so that no two games feel alike. Here is what waits for you behind each colour.",
+    "intro": "The board alternates the challenges so no two games feel alike. Here's what waits behind each colour.",
     "headerFamille": "The square",
     "headerContenu": "What happens on it"
   },
   "section3": {
     "title": "The rules, in four points",
-    "intro": "They fit in one paragraph, and the game handles the rest.",
+    "intro": "They fit in a paragraph, and the game handles the rest.",
     "regle1Titre": "Enter your names and roll the dice",
-    "regle1Texte": "One pawn each, one turn each. The game announces who is playing and moves the pawn to the right square on its own.",
+    "regle1Texte": "One pawn each, one turn each. The game announces who's playing and moves the pawn on its own to the square you rolled.",
     "regle2Titre": "Every square triggers a challenge",
     "regle2Texte": "Truth, dare, duel, memory, forfeit or a stroke of luck. You discover the card once the pawn has landed, never before.",
     "regle3Titre": "Succeed and you move up, refuse and you move back",
-    "regle3Texte": "A truth or a dare taken on earns you one extra square. Refusing costs you one. That is what makes passing possible without making it free.",
+    "regle3Texte": "A truth or a dare taken on gives you one extra square. Refusing costs you one. That's what makes refusing possible without making it free.",
     "regle4Titre": "First to the finish wins",
-    "regle4Texte": "No exact count needed: reaching or passing the last square is enough. The loser then draws one final forfeit, and the game is over."
+    "regle4Texte": "No exact count needed: reaching or passing the last square is enough. The loser then draws one final forfeit, and that's that."
   },
   "faq": {
     "title": "Frequently asked questions",
     "q1": "How long does a game last?",
-    "a1": "Between twenty and thirty minutes as a rule. The number of turns depends on the dice, but also on you: a memory square can take fifteen seconds or spark a ten-minute conversation.",
+    "a1": "Between twenty and thirty minutes as a rule. The number of turns depends on the dice, but mostly on you: a memory square can be dealt with in fifteen seconds… or start a ten-minute conversation.",
     "q2": "Do I need to print anything?",
-    "a2": "No, the board is on screen and the pawns move by themselves. One phone set down between you is enough, and there is nothing to install or create.",
+    "a2": "No! The board is on screen and the pawns move by themselves. One phone between the two of you is all it takes, nothing to install and nothing to create.",
     "q3": "Where do the cards come from?",
-    "a3": "The truths and dares are the ones from our truth or dare game, the forfeits come from the forfeit wheel. The memories, duels and luck squares were written for the board.",
+    "a3": "The truths and dares come from our truth or dare game, the forfeits from the forfeit wheel. The memories, the duels and the luck squares were written specially for the board.",
     "q4": "Can you cheat or skip a challenge?",
-    "a4": "Passing is built in and costs one square, except on a forfeit square where there is no way out. Beyond that, it is a game for two with no referee: nobody will check whether you really answered.",
+    "a4": "Skipping is built in and costs one square, except on a forfeit square where there's no way out. Beyond that it's a two-player game with no referee: nobody is going to check whether you really answered…",
     "q5": "Can more than two people play?",
-    "a5": "The board is built for two pawns and two names. In a bigger group, the simplest option is to play in teams of two and pass the phone around each turn."
+    "a5": "The board is built for two pawns and two first names. With more of you, the simplest thing is to play in teams of two and pass the phone each turn."
   },
   "section4": {
     "title": "Why a board changes everything",
-    "p1": "It is not the content that makes a games night last, it is the stakes. The same question asked at random is forgotten; asked three squares from the finish, with the other one catching up, it becomes a moment. The board does nothing more than that: it gives you a reason to keep going.",
-    "p2": "And at the end there is a winner, a loser and one last forfeit. It is a small thing, and it is exactly what most online couple games are missing.",
+    "p1": "It isn't the content that makes a game night last, it's the stake. The same question asked at random is forgotten; asked three squares from the finish, with your partner catching up, it becomes a moment. The board does nothing more than that: it gives you a reason to carry on.",
+    "p2": "And at the finish there's a winner, a loser and one last forfeit. Next to nothing… and it's exactly what most online couple games are missing.",
     "cta": "See all our couple games"
   },
   "jsonLd": {

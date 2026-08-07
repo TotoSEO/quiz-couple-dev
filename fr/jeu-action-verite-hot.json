@@ -7,17 +7,17 @@
   },
   "section1": {
     "title": "Un paquet qui va du suggestif au très direct",
-    "p1": "Un <strong class=\"text-foreground\">action ou vérité coquin</strong> qui commence trop fort ne marche pas : le premier défi met mal à l'aise et la partie s'arrête avant d'avoir commencé. C'est pour ça que ce paquet monte progressivement plutôt que de taper fort d'entrée.",
-    "p2": "Les cartes les plus douces restent suggestives : des questions qui font rougir, des défis qui rapprochent, rien qui oblige à se découvrir. Les plus directes ne prennent plus de précautions et supposent que vous savez tous les deux où vous allez. Le tirage les mélange, et c'est le droit de passer qui vous laisse la main.",
-    "p3": "Commencez doucement même si vous pensez pouvoir sauter l'étape. Le rire des premières cartes fait plus pour la suite de la soirée que n'importe quel défi lancé à froid."
+    "p1": "Un <strong class=\"text-foreground\">action ou vérité coquin</strong> qui démarre trop fort ne marche jamais. Le premier défi met mal à l'aise, l'un des deux se referme, et la soirée est pliée avant d'avoir commencé. C'est pour ça que ce paquet monte progressivement au lieu de taper fort d'entrée.",
+    "p2": "Les cartes les plus douces restent suggestives : des questions qui font rougir, des défis qui rapprochent, rien qui oblige à se découvrir. Les plus directes, elles, ne prennent plus de gants et supposent que vous savez tous les deux où vous allez. Le tirage les mélange, et c'est le droit de passer qui vous laisse la main.",
+    "p3": "Commencez doucement, même si vous pensez pouvoir sauter l'étape. Le rire des premières cartes fait plus pour la suite de la soirée que n'importe quel défi lancé à froid…"
   },
   "section2": {
     "title": "Comment ça se joue",
-    "intro": "Les règles sont les mêmes que la version classique, avec un point supplémentaire qui compte davantage ici.",
+    "intro": "Les mêmes que la version classique, avec un point de plus qui compte beaucoup ici.",
     "regle1Titre": "Entrez vos deux prénoms",
-    "regle1Texte": "Le jeu annonce à qui c'est le tour à chaque carte, ce qui évite de discuter à chaque fois pour savoir qui joue.",
+    "regle1Texte": "Le jeu annonce à qui c'est le tour à chaque carte, ce qui évite de se demander à chaque fois qui joue.",
     "regle2Titre": "Vérité ou action, c'est vous qui choisissez",
-    "regle2Texte": "Le joueur désigné annonce son camp, et la carte est tirée au hasard dans le paquet correspondant. Vous ne voyez jamais la suivante.",
+    "regle2Texte": "Le joueur désigné annonce son camp, et la carte sort au hasard du paquet correspondant. Vous ne voyez jamais la suivante.",
     "regle3Titre": "Passer est prévu par le jeu",
     "regle3Texte": "Refuser une carte fait tomber un gage, et c'est tout. C'est la règle la plus importante de cette version : elle rend le refus banal au lieu d'en faire un aveu.",
     "regle4Titre": "Vous fixez la limite, pas le jeu",
@@ -25,26 +25,26 @@
   },
   "section3": {
     "title": "Le consentement, dit simplement",
-    "p1": "Ce jeu propose, il n'impose rien. Chaque carte peut être refusée sans explication, autant de fois que nécessaire, et un gage n'est jamais une punition qu'on subit. Si l'un de vous n'a pas envie, la bonne réponse est d'arrêter la partie, pas de négocier.",
-    "p2": "Les cartes sont écrites pour un couple qui joue ensemble, entre adultes consentants. Elles supposent que vous vous connaissez et que vous savez tous les deux quand vous arrêter."
+    "p1": "Ce jeu propose, il n'impose rien. Chaque carte peut être refusée sans explication, autant de fois que nécessaire, et un gage n'est jamais une punition qu'on subit. Si l'un de vous n'a pas envie, la bonne réponse est d'arrêter la partie. Pas de négocier.",
+    "p2": "Les cartes sont écrites pour un couple qui joue ensemble, entre adultes consentants. Elles supposent que vous vous connaissez, et que vous saurez tous les deux quand vous arrêter."
   },
   "faq": {
     "title": "Questions fréquentes",
     "q1": "Quelle différence avec la version classique ?",
-    "a1": "Les cartes. La version classique s'adresse à tous les couples et se joue devant n'importe qui. Celle-ci a son propre paquet, nettement plus direct, écrit pour un moment où vous êtes seuls tous les deux.",
+    "a1": "Les cartes, tout simplement. La version classique s'adresse à tous les couples et se joue devant n'importe qui. Celle-ci a son propre paquet, nettement plus direct, écrit pour un moment où vous êtes seuls tous les deux.",
     "q2": "C'est très explicite ?",
-    "a2": "Ça va du suggestif au très direct. Les cartes les plus douces demandent un compliment ou un baiser, les plus directes supposent une intimité déjà installée. Il n'y a pas de niveau à choisir : c'est le droit de passer qui fixe la limite, à chaque carte.",
+    "a2": "Ça va du suggestif au très direct. Les plus douces demandent un compliment ou un baiser, les plus osées supposent une intimité déjà installée. Il n'y a pas de niveau à choisir : c'est le droit de passer qui fixe la limite, carte après carte.",
     "q3": "Combien y a-t-il de cartes ?",
-    "a3": "70 au total : 30 vérités, 24 actions et 16 gages, réunis dans un seul paquet. Elles ne se répètent pas tant que la pioche n'est pas vide, ce qui laisse de quoi tenir une soirée entière sans retomber sur les mêmes.",
+    "a3": "70 en tout : 30 vérités, 24 actions et 16 gages dans un seul paquet. Elles ne repassent pas tant que la pioche n'est pas vide, donc de quoi tenir une soirée entière sans retomber sur les mêmes.",
     "q4": "Est-ce que ça convient à un couple qui vient de se rencontrer ?",
-    "a4": "Le début du paquet oui, il fonctionne très bien pour tester le terrain. Les cartes les plus directes supposent que vous vous connaissez déjà bien : si elles tombent trop tôt, passez, c'est prévu pour ça.",
+    "a4": "Le début du paquet, oui ! Il marche très bien pour tester le terrain. Les cartes les plus directes supposent que vous vous connaissez déjà bien : si elles tombent trop tôt, passez, c'est prévu pour ça.",
     "q5": "Faut-il créer un compte ?",
-    "a5": "Non, et rien n'est enregistré. Le jeu tourne dans votre navigateur, vos réponses ne quittent jamais l'appareil et il n'y a aucun historique de partie."
+    "a5": "Non, et rien n'est enregistré. Le jeu tourne dans votre navigateur, vos réponses ne quittent jamais l'appareil, et il n'y a aucun historique de partie."
   },
   "section4": {
     "title": "Ce qu'un jeu comme celui-ci peut vraiment faire",
-    "p1": "Il ne va pas transformer votre vie intime, et personne ne devrait le lui demander. Ce qu'il fait bien, c'est donner un cadre à une conversation que beaucoup de couples n'ont jamais vraiment eue, parce que c'est la carte qui pose la question à votre place.",
-    "p2": "Le reste, c'est vous qui le décidez, et c'est très bien ainsi."
+    "p1": "Il ne va pas transformer votre vie intime, et personne ne devrait le lui demander. Ce qu'il fait bien, en revanche, c'est donner un cadre à une conversation que beaucoup de couples n'ont jamais vraiment eue. Parce que c'est la carte qui pose la question à votre place.",
+    "p2": "Le reste, c'est vous qui le décidez. Et c'est très bien ainsi !"
   },
   "jsonLd": {
     "name": "Jeu action ou vérité coquin en couple"
