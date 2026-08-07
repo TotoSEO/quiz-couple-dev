@@ -270,6 +270,7 @@
     "duoPct": "Abbiamo ottenuto il {{pct}} % al {{quiz}}",
     "duoPoints": "Abbiamo fatto {{score}} punti al {{quiz}}",
     "duoCartes": "Abbiamo affrontato {{score}} carte su {{total}} al {{quiz}}",
+    "plateau": "{{nom}} vince la partita in {{score}} turni al {{quiz}}",
     "profil": "Ho fatto il {{quiz}}",
     "fun": "Abbiamo appena fatto il {{quiz}}",
     "verdict": ": «{{result}}»",
@@ -319,7 +320,9 @@
     "quizTentation": "Quiz Temptation",
     "jeuActionVerite": "gioco obbligo o verità",
     "jeuActionVeriteHot": "gioco obbligo o verità piccante",
-    "jeuGages": "la ruota delle penitenze"
+    "jeuGages": "la ruota delle penitenze",
+    "jeuPlateau": "gioco da tavolo di coppia",
+    "jeuQuiDeNous": "Chi di noi due?"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
@@ -384,9 +387,12 @@
     "introTitle": "Qual è il tuo stile di attaccamento?"
   },
   "jeu": {
-    "introTitle": "Scegliete la vostra atmosfera",
-    "introDesc": "Nessuna registrazione, nessuna preparazione: scegliete un ambiente e cade la prima carta.",
+    "setupTitre": "Chi gioca stasera?",
+    "setupDesc": "Inserite i vostri due nomi: il gioco annuncia a chi tocca.",
+    "commencer": "Inizia la partita",
+    "demande": "Verità o obbligo?",
     "tourDe": "Tocca a",
+    "tourDeVoyelle": "Tocca ad",
     "arreter": "Terminare la partita",
     "type_question": "Verità",
     "type_defi": "Obbligo",
@@ -400,6 +406,22 @@
     "recapGages": "{{passes}} penitenza/e lungo il percorso.",
     "rejouer": "Rigiocare"
   },
+  "plateau": {
+    "setupTitre": "Chi prende il via?",
+    "setupDesc": "Inserite i vostri nomi: quaranta caselle vi separano dall'arrivo.",
+    "commencer": "Prendere il via",
+    "lancerDe": "Lancia il dado",
+    "abandonner": "Fermare la partita",
+    "compteur": "{{n}} turni giocati",
+    "ok": "Capito!",
+    "dAccord": "Siamo d'accordo",
+    "pasDAccord": "Non siamo d'accordo",
+    "releve": "Fatto, avanzo",
+    "refuse": "Passo, torno indietro",
+    "victoire": "{{nom}} vince la partita!",
+    "victoireTexte": "Arrivo raggiunto in {{n}} turni.",
+    "gagePerdant": "La penitenza del perdente"
+  },
   "roue": {
     "lancer": "Gira la ruota",
     "relancer": "Gira di nuovo",
@@ -407,5 +429,39 @@
     "intro": "Premete il pulsante: la ruota sceglie la penitenza al posto vostro.",
     "compteur": "{{n}} penitenze estratte",
     "compteur1": "1 penitenza estratta"
+  },
+  "quiDeNous": {
+    "setupTitre": "Chi di noi due?",
+    "setupDesc": "Ognuno vota in segreto, poi le due risposte vengono svelate insieme. Vedrete se vi vedete allo stesso modo…",
+    "commencer": "Si comincia!",
+    "manche": "Round {{n}} / {{total}}",
+    "amorce": "Chi di voi due…",
+    "voteSecret": "{{nom}} vota in segreto",
+    "passeTitre": "Passa il telefono a {{nom}}",
+    "passeDesc": "Niente trucchi: il voto resta nascosto fino alla rivelazione.",
+    "passeCta": "Tocca a me!",
+    "decompte": "Rivelazione tra…",
+    "aDit": "{{nom}} ha detto",
+    "accordTitre": "D'accordo!",
+    "accordTexte": "Avete indicato la stessa persona. Un punto in più.",
+    "clashTitre": "Dibattito!",
+    "clashTexte": "Su questa non la vedete affatto allo stesso modo. Spiegatevi, ne vale la pena!",
+    "combo": "{{n}} di fila!",
+    "suivant": "Round successivo",
+    "voirResultat": "Vedere il nostro punteggio",
+    "arreter": "Interrompere la partita",
+    "finTitre": "Il vostro punteggio di sintonia",
+    "finDetail": "{{n}} accordi su {{total}} round",
+    "finSerie": "Serie migliore: {{n}} di fila",
+    "recapTitre": "Da riparlarne insieme",
+    "rejouer": "Rigiocare con altre domande",
+    "palier1Titre": "Non vi vedete affatto allo stesso modo",
+    "palier1Texte": "Ognuno ha la sua versione, e si somigliano poco. Non è affatto un problema: vuol dire soprattutto che avete cose da raccontarvi. Tornate sui round in cui non eravate d'accordo, è lì che si nascondono le conversazioni migliori.",
+    "palier2Titre": "Un'immagine su due in comune",
+    "palier2Texte": "Su metà delle domande ci prendete, sull'altra metà sbagliate in pieno. È il punteggio più comune e, sinceramente, il più interessante: vi conoscete, ma restano dei punti ciechi. Vale la pena scavare.",
+    "palier3Titre": "Vi conoscete bene",
+    "palier3Texte": "Vedete la vostra coppia più o meno allo stesso modo, e si sente. I pochi disaccordi rimasti riguardano quasi sempre dettagli quotidiani… o chi canta più stonato.",
+    "palier4Titre": "Pensate uguale, quasi sospetto",
+    "palier4Texte": "Avete indicato la stessa persona su quasi tutte le domande. O vi conoscete a memoria, o uno dei due ha sbirciato oltre la spalla dell'altro. Su questo vi lasciamo discutere!"
   }
 }

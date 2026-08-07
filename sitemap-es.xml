@@ -351,6 +351,30 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/es/juego-de-mesa-para-parejas/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/jeu-de-plateau-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/couple-board-game/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/juego-de-mesa-para-parejas/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/brettspiel-fuer-paare/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/gioco-da-tavolo-di-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/jeu-de-plateau-couple/"/>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quien-de-los-dos-pareja/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/qui-de-nous-deux/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/which-one-of-us-couple-game/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quien-de-los-dos-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/wer-von-uns-beiden-paarspiel/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/chi-di-noi-due-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/qui-de-nous-deux/"/>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/es/quiz-pareja-vergonzoso/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-couple-genant/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/embarrassing-couple-quiz/"/>

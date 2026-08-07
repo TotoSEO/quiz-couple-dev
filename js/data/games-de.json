@@ -270,6 +270,7 @@
     "duoPct": "Wir haben {{pct}} % beim {{quiz}} erreicht",
     "duoPoints": "Wir haben {{score}} Punkte beim {{quiz}} geholt",
     "duoCartes": "Wir haben {{score}} von {{total}} Karten beim {{quiz}} geschafft",
+    "plateau": "{{nom}} gewinnt die Partie in {{score}} Runden beim {{quiz}}",
     "profil": "Ich habe den {{quiz}} gemacht",
     "fun": "Wir haben gerade den {{quiz}} gespielt",
     "verdict": ": „{{result}}“",
@@ -319,7 +320,9 @@
     "quizTentation": "Temptation Quiz",
     "jeuActionVerite": "Spiel Wahrheit oder Pflicht",
     "jeuActionVeriteHot": "Spiel Wahrheit oder Pflicht versaut",
-    "jeuGages": "Strafen-Glücksrad"
+    "jeuGages": "Strafen-Glücksrad",
+    "jeuPlateau": "Brettspiel für Paare",
+    "jeuQuiDeNous": "Wer von uns beiden?"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
@@ -384,9 +387,12 @@
     "introTitle": "Was ist dein Bindungsstil?"
   },
   "jeu": {
-    "introTitle": "Wählt eure Stimmung",
-    "introDesc": "Keine Anmeldung, keine Vorbereitung: Stimmung wählen und die erste Karte fällt.",
+    "setupTitre": "Wer spielt heute Abend?",
+    "setupDesc": "Tragt eure beiden Vornamen ein: Das Spiel sagt an, wer dran ist.",
+    "commencer": "Partie starten",
+    "demande": "Wahrheit oder Pflicht?",
     "tourDe": "Am Zug ist",
+    "tourDeVoyelle": "Am Zug ist",
     "arreter": "Partie beenden",
     "type_question": "Wahrheit",
     "type_defi": "Pflicht",
@@ -400,6 +406,22 @@
     "recapGages": "{{passes}} Strafe(n) unterwegs.",
     "rejouer": "Nochmal spielen"
   },
+  "plateau": {
+    "setupTitre": "Wer geht an den Start?",
+    "setupDesc": "Tragt eure Vornamen ein: vierzig Felder trennen euch vom Ziel.",
+    "commencer": "An den Start gehen",
+    "lancerDe": "Würfeln",
+    "abandonner": "Partie beenden",
+    "compteur": "{{n}} Runden gespielt",
+    "ok": "Verstanden!",
+    "dAccord": "Wir sind uns einig",
+    "pasDAccord": "Wir sind uns nicht einig",
+    "releve": "Geschafft, ich rücke vor",
+    "refuse": "Ich passe, ich gehe zurück",
+    "victoire": "{{nom}} gewinnt die Partie!",
+    "victoireTexte": "Ziel erreicht in {{n}} Runden.",
+    "gagePerdant": "Die Strafe des Verlierers"
+  },
   "roue": {
     "lancer": "Rad drehen",
     "relancer": "Nochmal drehen",
@@ -407,5 +429,39 @@
     "intro": "Drückt den Knopf: Das Rad wählt die Strafe für euch.",
     "compteur": "{{n}} Strafen gezogen",
     "compteur1": "1 Strafe gezogen"
+  },
+  "quiDeNous": {
+    "setupTitre": "Wer von uns beiden?",
+    "setupDesc": "Jeder stimmt heimlich ab, danach werden beide Antworten gleichzeitig aufgedeckt. Mal sehen, ob ihr euch gleich seht…",
+    "commencer": "Los geht's!",
+    "manche": "Runde {{n}} / {{total}}",
+    "amorce": "Wer von euch beiden…",
+    "voteSecret": "{{nom}} stimmt heimlich ab",
+    "passeTitre": "Gib das Handy an {{nom}} weiter",
+    "passeDesc": "Nicht spicken: die Stimme bleibt bis zur Auflösung verdeckt.",
+    "passeCta": "Ich bin dran!",
+    "decompte": "Auflösung in…",
+    "aDit": "{{nom}} sagte",
+    "accordTitre": "Einig!",
+    "accordTexte": "Ihr habt dieselbe Person gewählt. Ein Punkt mehr auf dem Konto.",
+    "clashTitre": "Diskussion!",
+    "clashTexte": "Hier seht ihr es überhaupt nicht gleich. Redet darüber, das lohnt sich!",
+    "combo": "{{n}} in Folge!",
+    "suivant": "Nächste Runde",
+    "voirResultat": "Unser Ergebnis ansehen",
+    "arreter": "Spiel beenden",
+    "finTitre": "Euer Harmonie-Wert",
+    "finDetail": "{{n}} Treffer in {{total}} Runden",
+    "finSerie": "Beste Serie: {{n}} in Folge",
+    "recapTitre": "Darüber solltet ihr reden",
+    "rejouer": "Nochmal mit neuen Fragen spielen",
+    "palier1Titre": "Ihr seht die Dinge überhaupt nicht gleich",
+    "palier1Texte": "Jeder hat seine Version, und die passen kaum zusammen. Das ist überhaupt kein Problem: es heißt vor allem, dass ihr euch etwas zu erzählen habt. Geht die Runden nochmal durch, in denen ihr uneinig wart, dort verstecken sich die besten Gespräche.",
+    "palier2Titre": "Jedes zweite Bild stimmt überein",
+    "palier2Texte": "Bei der Hälfte der Fragen liegt ihr richtig, bei der anderen komplett daneben. Das ist das häufigste Ergebnis und ehrlich gesagt das spannendste: ihr kennt euch, aber es bleiben blinde Flecken. Da lohnt sich das Nachhaken.",
+    "palier3Titre": "Ihr kennt euch gut",
+    "palier3Texte": "Ihr seht eure Beziehung ungefähr gleich, und das merkt man. Die wenigen Streitpunkte drehen sich meist um Kleinigkeiten aus dem Alltag… oder darum, wer schiefer singt.",
+    "palier4Titre": "Ihr denkt gleich, fast schon verdächtig",
+    "palier4Texte": "Ihr habt bei fast jeder Frage dieselbe Person gewählt. Entweder kennt ihr euch in- und auswendig, oder einer hat dem anderen über die Schulter geschaut. Das klärt ihr am besten unter euch!"
   }
 }
