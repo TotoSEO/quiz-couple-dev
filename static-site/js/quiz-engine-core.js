@@ -4422,13 +4422,17 @@ var QuizEngine = (function() {
       var p1 = pt(a1, r), p2 = pt(a2, r);
       s += '<path d="M ' + cx + ' ' + cy + ' L ' + p1[0] + ' ' + p1[1] +
         ' A ' + r + ' ' + r + ' 0 0 1 ' + p2[0] + ' ' + p2[1] + ' Z" fill="hsl(' + this.secteurs[i].couleur + ')"/>';
-      // Libelles radiaux : ils partent du moyeu vers la jante. C'est la seule
-      // orientation qui reste lisible quelle que soit la rotation de la roue,
-      // alors qu'un texte tangentiel se retrouve a l'envers une fois sur deux.
+      // Libelles radiaux : ils partent du moyeu vers la jante. Sur la moitie
+      // gauche de la roue, le secteur est tourne de plus de 180 degres et le
+      // texte se retrouverait la tete en bas : on le retourne alors de 180 de
+      // plus et on ancre par la fin, pour qu'il coure toujours vers la jante
+      // tout en restant lisible.
       var yEmoji = cy - r * 0.82, yLabel = cy - r * 0.22;
+      var retourne = mid > 180;
       s += '<g transform="rotate(' + mid.toFixed(2) + ' ' + cx + ' ' + cy + ')">' +
-        '<text x="' + cx + '" y="' + yLabel.toFixed(2) + '" class="roue-label" text-anchor="start"' +
-        ' transform="rotate(-90 ' + cx + ' ' + yLabel.toFixed(2) + ')">' +
+        '<text x="' + cx + '" y="' + yLabel.toFixed(2) + '" class="roue-label"' +
+        ' text-anchor="' + (retourne ? 'end' : 'start') + '"' +
+        ' transform="rotate(' + (retourne ? 90 : -90) + ' ' + cx + ' ' + yLabel.toFixed(2) + ')">' +
         esc(this.nom(this.secteurs[i].id)) + '</text>' +
         '<text x="' + cx + '" y="' + yEmoji.toFixed(2) + '" class="roue-emoji" text-anchor="middle" dominant-baseline="middle">' +
         esc(SECTEUR_EMOJIS[this.secteurs[i].id] || '🎁') + '</text></g>';
@@ -4446,6 +4450,18 @@ var QuizEngine = (function() {
     scene.innerHTML = '<span class="roue-fleche" aria-hidden="true"></span>' +
       '<div class="roue-plateau">' + this.svg() + '</div>';
     wrap.appendChild(scene);
+
+    // Un secteur est une famille, pas un gage : sans cette ligne on compte huit
+    // secteurs et on croit que la roue ne contient que huit gages.
+    var reelles = this.secteurs.filter(function(s) { return !s.joker; });
+    var parFamille = reelles.length ? this.lireFamille(reelles[0].id).length : 0;
+    if (parFamille > 1) {
+      wrap.appendChild(el('p', 'roue-legende', esc(
+        tg('roue.legende', 'Chaque secteur est une famille de {{parFamille}} gages : {{familles}} familles plus une case surprise, soit {{total}} gages en tout.')
+          .replace('{{parFamille}}', parFamille)
+          .replace('{{familles}}', reelles.length)
+          .replace('{{total}}', reelles.length * parFamille))));
+    }
 
     var bouton = el('button', 'btn btn-cta btn-lg roue-bouton',
       this.tours === 0 ? tg('roue.lancer', 'Lancer la roue') : tg('roue.relancer', 'Relancer la roue'));

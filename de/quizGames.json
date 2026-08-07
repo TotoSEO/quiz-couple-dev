@@ -428,7 +428,8 @@
     "enCours": "Das Rad dreht sich...",
     "intro": "Drückt den Knopf: Das Rad wählt die Strafe für euch.",
     "compteur": "{{n}} Strafen gezogen",
-    "compteur1": "1 Strafe gezogen"
+    "compteur1": "1 Strafe gezogen",
+    "legende": "Jedes Feld ist eine Familie mit {{parFamille}} Pfändern: {{familles}} Familien plus ein Überraschungsfeld, macht {{total}} Pfänder insgesamt."
   },
   "quiDeNous": {
     "setupTitre": "Wer von uns beiden?",
