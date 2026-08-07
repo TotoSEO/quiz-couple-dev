@@ -3,48 +3,48 @@
     "badge": "Gratis • Senza registrazione • In due",
     "title": "Obbligo o verità di coppia, senza preparare niente",
     "titleHighlight": "di coppia",
-    "description": "70 carte estratte a caso, verità o obbligo a scelta del giocatore, su un solo telefono appoggiato tra voi due."
+    "description": "70 carte, un solo telefono fra voi due, e siete voi ad annunciare obbligo o verità."
   },
   "section1": {
     "title": "Un obbligo o verità che si gioca davvero, non una lista da scorrere",
-    "p1": "La maggior parte delle pagine di <strong class=\"text-foreground\">obbligo o verità per coppie</strong> vi dà cento domande da leggere una dopo l'altra. Funziona cinque minuti, poi uno cerca la successiva, un altro bara leggendo avanti, e la partita si ferma.",
-    "p2": "Qui è un gioco: chi è di turno annuncia verità o obbligo, cade una carta e ne vedete solo una alla volta. Nessuna lista, nessun ordine noto in anticipo, nessun modo di sbirciare la prossima. Le carte non si ripetono finché il mazzo non finisce, e rifiutarne una fa cadere una penitenza.",
-    "p3": "Tutto avviene su un solo telefono appoggiato tra voi due, senza account da creare e senza installare niente. La partita non ha una fine imposta: la fermate quando volete, e il riepilogo vi dice quante carte avete affrontato."
+    "p1": "All'<strong class=\"text-foreground\">obbligo o verità per coppie</strong> abbiamo giocato tutti almeno una volta. In colonia, a una festa, su un divano alle due di notte… Il problema è quello che si trova oggi online: cento domande di fila da scorrere col pollice. Regge cinque minuti. Poi qualcuno legge in anticipo, un altro ne cerca «una migliore», e la partita muore.",
+    "p2": "Qui è un gioco vero. Chi è di turno annuncia la sua scelta, cade una carta, e ne vedete una alla volta. Nessuna lista, nessun ordine già noto, nessun modo di sbirciare la successiva. E le carte non tornano finché il mazzo non si esaurisce.",
+    "p3": "Un telefono fra voi due e si parte!"
   },
   "section2": {
     "title": "Le regole, in quattro punti",
-    "intro": "Stanno in poche righe, che poi è un po' il senso del gioco.",
+    "intro": "Stanno in poche righe… che è un po' il senso del gioco.",
     "regle1Titre": "Inserite i vostri due nomi",
-    "regle1Texte": "Il gioco annuncia a chi tocca a ogni carta: niente più domande su chi gioca né conti da tenere a mente.",
+    "regle1Texte": "Il gioco annuncia a chi tocca a ogni carta. Basta contare a mente, basta discutere su chi ha giocato per ultimo.",
     "regle2Titre": "Verità o obbligo, scegliete voi",
-    "regle2Texte": "A ogni turno il giocatore chiamato annuncia la sua parte. Il tipo lo decidete voi; il contenuto della carta no, viene estratto a caso dal mazzo corrispondente.",
+    "regle2Texte": "A ogni turno il giocatore indicato annuncia la sua scelta. Il tipo lo decidete voi. Il contenuto della carta no: viene estratto a caso dal mazzo corrispondente e lo scoprite insieme all'altro.",
     "regle3Titre": "O la fai, o passi",
-    "regle3Texte": "Se la carta ti va bene, la affronti e il turno passa all'altro. Se preferisci evitarla, passi e al suo posto cade una penitenza. Nessuno deve giustificarsi.",
+    "regle3Texte": "La carta ti va bene? La porti a termine e il turno passa. Non ti ispira? Passi, e al suo posto cade una penitenza. Nessuno deve mai giustificarsi.",
     "regle4Titre": "Vi fermate quando volete",
-    "regle4Texte": "Il pulsante per chiudere la partita è sempre disponibile. Il riepilogo conta le carte affrontate e le penitenze raccolte, e potete condividerlo."
+    "regle4Texte": "Il pulsante per chiudere è sempre lì. Alla fine il riepilogo conta le carte portate a termine e le penitenze raccolte, e potete condividerlo."
   },
   "section3": {
-    "title": "La regola che fa la differenza: il diritto di passare",
-    "p1": "Un obbligo o verità in due va storto quando uno dei due si sente obbligato. La penitenza esiste proprio per questo: rende il rifiuto normale e previsto dal gioco, invece di trasformarlo in un momento imbarazzante da spiegare.",
-    "p2": "Mettetevi d'accordo su una cosa prima di iniziare: ognuno può passare senza dare spiegazioni, tutte le volte che vuole. Sembra il contrario di quello che serve, ed è esattamente ciò che permette di andare più lontano, perché nessuno gioca sulla difensiva."
+    "title": "La regola che cambia tutto: il diritto di passare",
+    "p1": "Un obbligo o verità in due va storto il giorno in cui uno dei due si sente costretto. La penitenza serve esattamente a questo: rende il passare normale, previsto, banale. Invece di un silenzio imbarazzante da spiegare, è semplicemente una carta in più.",
+    "p2": "Mettetevi d'accordo prima di cominciare: ciascuno può passare senza dare motivi, tutte le volte che vuole. Sembra il contrario di quello che serve, eppure è ciò che vi porterà più lontano. Perché nessuno gioca sulla difensiva."
   },
   "faq": {
     "title": "Domande frequenti",
     "q1": "Quante carte ci sono?",
-    "a1": "70 in totale: 30 verità, 24 obblighi e 16 penitenze, in un unico mazzo. Non si ripetono finché il mazzo non è esaurito, il che basta ampiamente per una serata intera.",
+    "a1": "70 in tutto: 30 verità, 24 obblighi e 16 penitenze, riuniti in un solo mazzo. Non tornano finché il mazzo non si esaurisce, quindi c'è di che riempire una serata.",
     "q2": "Bisogna registrarsi o installare qualcosa?",
-    "a2": "Né l'uno né l'altro. Il gioco funziona direttamente nel browser, su telefono come su computer. Aprite la pagina, inserite i vostri nomi e cade la prima carta.",
+    "a2": "Né l'uno né l'altro! Il gioco gira nel browser, su telefono come su computer. Aprite la pagina, scrivete i vostri nomi e cade la prima carta.",
     "q3": "In quanti si può giocare?",
-    "a3": "Il gioco è pensato per due, con il turno annunciato a ogni carta. Niente vieta di giocare in più persone passandosi il telefono, ma le carte sono scritte per una coppia.",
+    "a3": "È pensato per due, con il turno annunciato a ogni carta. Nulla vi vieta di passare il telefono in un gruppo, ma le carte sono scritte per una coppia.",
     "q4": "Esiste una versione più spinta?",
-    "a4": "Sì, le abbiamo dedicato una pagina a parte con le sue carte, molto più diretta. È la versione piccante ed è fatta per i momenti in cui siete davvero soli voi due.",
+    "a4": "Sì, su una pagina a parte e con un mazzo tutto suo, nettamente più diretto. È la versione piccante, fatta per le sere in cui siete davvero soli.",
     "q5": "Si può giocare a distanza?",
-    "a5": "Sì. Uno apre il gioco, legge la carta ad alta voce in videochiamata e conferma per entrambi. Le verità funzionano benissimo a distanza, gli obblighi chiedono qualche adattamento."
+    "a5": "Sì, e funziona meglio di quanto sembri. Uno apre il gioco, legge la carta ad alta voce in videochiamata e conferma per entrambi. Le verità funzionano benissimo, gli obblighi chiedono un po' di fantasia…"
   },
   "section4": {
-    "title": "Perché questo gioco funziona ancora dopo tanti anni",
-    "p1": "Obbligo o verità attraversa le generazioni per un motivo semplice: dà il permesso di fare una domanda che non si sarebbe mai fatta spontaneamente. Non siete voi a chiedere, è la carta, e questa piccola distanza cambia tutto.",
-    "p2": "In coppia, è spesso l'unico modo di affrontare certi argomenti senza farne una conversazione solenne."
+    "title": "Perché questo gioco funziona ancora, dopo tanti anni",
+    "p1": "Obbligo o verità sopravvive di generazione in generazione per un motivo semplicissimo: dà il permesso di fare una domanda che da soli non avreste mai fatto. Non siete voi a chiedere, è la carta. E quella minima distanza cambia assolutamente tutto.",
+    "p2": "In coppia è spesso l'unico modo di aprire certi argomenti senza farne una conversazione solenne. Nessuno vuole sentirsi dire «dobbiamo parlare»… ma tutti accettano di pescare una carta."
   },
   "jsonLd": {
     "name": "Gioco obbligo o verità di coppia"

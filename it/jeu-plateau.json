@@ -3,7 +3,7 @@
     "badge": "Gratis • Senza registrazione • Qui si vince",
     "title": "Il gioco da tavolo di coppia, su un solo telefono",
     "titleHighlight": "di coppia",
-    "description": "Quaranta caselle, un dado, due pedine con i vostri nomi. Chi arriva primo vince, e chi perde pesca una penitenza."
+    "description": "Quaranta caselle, un dado, due pedine con i vostri nomi. Vince chi arriva per primo… e chi perde pesca una penitenza."
   },
   "cases": {
     "veriteNom": "Verità",
@@ -21,45 +21,45 @@
   },
   "section1": {
     "title": "Il primo dei nostri giochi che si vince",
-    "p1": "Tutti i <strong class=\"text-foreground\">giochi di coppia</strong> online si assomigliano: peschi una carta, rispondi, ricominci. È piacevole per dieci minuti, poi finisce perché niente spinge a continuare. Non c'è progressione, né fine, né motivo di volere la carta successiva.",
-    "p2": "Un tabellone risolve tutto in un colpo. Vedete dove siete, vedete dove è l'altro, e quelle tre caselle di scarto bastano a far venire voglia di rilanciare il dado. Non cambia il contenuto delle carte, cambia il motivo per pescarle.",
-    "p3": "Il tabellone si gioca su un solo telefono appoggiato tra voi due, senza account e senza installare niente. Calcolate venti o trenta minuti per una partita intera, un po' meno se i dadi sono generosi."
+    "p1": "I <strong class=\"text-foreground\">giochi di coppia</strong> online si somigliano tutti: peschi una carta, rispondi, ricominci. Per dieci minuti è piacevole. Poi finisce, perché niente spinge ad andare avanti. Nessuna progressione, nessun finale, nemmeno un motivo per volere la carta successiva.",
+    "p2": "Un tabellone risolve tutto in un colpo.",
+    "p3": "Vedete a che punto siete, vedete a che punto è l'altro, e quelle tre caselle di distacco bastano a farvi venire voglia di rilanciare il dado. Non cambia il contenuto delle carte, cambia il motivo per pescarle. Calcolate venti o trenta minuti per una partita intera, un po' meno se i dadi sono generosi."
   },
   "section2": {
     "title": "I sei tipi di casella",
-    "intro": "Il tabellone alterna le prove perché nessuna partita somigli alla precedente. Ecco che cosa vi aspetta dietro ogni colore.",
+    "intro": "Il tabellone alterna le prove perché nessuna partita somigli alla precedente. Ecco cosa vi aspetta dietro ogni colore.",
     "headerFamille": "La casella",
     "headerContenu": "Che cosa ci succede"
   },
   "section3": {
     "title": "Le regole, in quattro punti",
-    "intro": "Stanno in un paragrafo, del resto si occupa il gioco.",
+    "intro": "Stanno in un paragrafo, al resto pensa il gioco.",
     "regle1Titre": "Inserite i vostri nomi e lanciate il dado",
-    "regle1Texte": "Una pedina a testa, un turno a testa. Il gioco annuncia chi gioca e sposta la pedina da solo fino alla casella giusta.",
+    "regle1Texte": "Ognuno la sua pedina, ognuno il suo turno. Il gioco annuncia chi gioca e sposta la pedina da solo fino alla casella uscita.",
     "regle2Titre": "Ogni casella lancia una prova",
-    "regle2Texte": "Verità, obbligo, duello, ricordo, penitenza o colpo di fortuna. Scoprite la carta quando la pedina è già arrivata, mai prima.",
+    "regle2Texte": "Verità, sfida, duello, ricordo, penitenza o colpo di fortuna. La carta la scoprite a pedina posata, mai prima.",
     "regle3Titre": "Riuscire fa avanzare, rifiutare fa tornare indietro",
-    "regle3Texte": "Una verità o un obbligo portato a termine vale una casella in più. Rifiutare ne costa una. È ciò che rende il passare possibile senza renderlo gratuito.",
+    "regle3Texte": "Una verità o una sfida portata a termine vi dà una casella in più. Rifiutare ne costa una. È questo che rende il rifiuto possibile senza renderlo gratis.",
     "regle4Titre": "Chi arriva primo vince",
-    "regle4Texte": "Non serve il conto esatto: raggiungere o superare l'ultima casella basta. Chi perde pesca allora un'ultima penitenza, e la partita è finita."
+    "regle4Texte": "Non serve il conto esatto: raggiungere o superare l'ultima casella basta. Chi perde pesca allora un'ultima penitenza, e finisce lì."
   },
   "faq": {
     "title": "Domande frequenti",
     "q1": "Quanto dura una partita?",
-    "a1": "In genere tra venti e trenta minuti. Il numero di turni dipende dai dadi, ma anche da voi: una casella ricordo si può chiudere in quindici secondi o aprire una conversazione di dieci minuti.",
+    "a1": "In genere fra venti e trenta minuti. Il numero di turni dipende dai dadi, ma soprattutto da voi: una casella ricordo si può chiudere in quindici secondi… o aprire una conversazione di dieci minuti.",
     "q2": "Bisogna stampare qualcosa?",
-    "a2": "No, il tabellone è sullo schermo e le pedine si muovono da sole. Basta un telefono appoggiato tra voi due, e non c'è niente da installare né da creare.",
+    "a2": "No! Il tabellone è sullo schermo e le pedine si muovono da sole. Basta un telefono fra voi due, niente da installare e niente da creare.",
     "q3": "Da dove vengono le carte?",
-    "a3": "Le verità e gli obblighi sono quelli del nostro gioco obbligo o verità, le penitenze vengono dalla ruota. I ricordi, i duelli e le caselle fortuna sono stati scritti per il tabellone.",
+    "a3": "Le verità e le sfide vengono dal nostro obbligo o verità, le penitenze dalla ruota delle penitenze. I ricordi, i duelli e le caselle fortuna sono stati scritti apposta per il tabellone.",
     "q4": "Si può barare o saltare una prova?",
-    "a4": "Passare è previsto e costa una casella, tranne su una casella penitenza, dove non c'è via di scampo. Per il resto è un gioco in due senza arbitro: nessuno verificherà se avete davvero risposto.",
+    "a4": "Passare è previsto e costa una casella, tranne su una casella penitenza, dove non c'è via d'uscita. Per il resto è un gioco in due senza arbitro: nessuno verificherà se avete risposto davvero…",
     "q5": "Si può giocare in più di due?",
-    "a5": "Il tabellone è fatto per due pedine e due nomi. In gruppo, la cosa più semplice è giocare a squadre di due e passarsi il telefono a ogni turno."
+    "a5": "Il tabellone è fatto per due pedine e due nomi. Se siete di più, la cosa più semplice è giocare a squadre di due e passarvi il telefono a ogni turno."
   },
   "section4": {
     "title": "Perché un tabellone cambia tutto",
-    "p1": "Non è il contenuto a far durare una serata di giochi, è la posta in gioco. La stessa domanda fatta a caso si dimentica; fatta a tre caselle dall'arrivo, con l'altro che vi sta recuperando, diventa un momento. Il tabellone non fa altro che questo: dà un motivo per continuare.",
-    "p2": "E alla fine restano un vincitore, un perdente e un'ultima penitenza. È poca cosa, ed è esattamente ciò che manca alla maggior parte dei giochi di coppia online.",
+    "p1": "Non è il contenuto a far durare una serata di gioco, è la posta. La stessa domanda fatta a caso si dimentica; fatta a tre caselle dall'arrivo, con l'altro che vi sta recuperando, diventa un momento. Il tabellone non fa altro che questo: vi dà un motivo per continuare.",
+    "p2": "E all'arrivo restano un vincitore, uno sconfitto e un'ultima penitenza. Poca cosa… ed è esattamente ciò che manca alla maggior parte dei giochi di coppia online.",
     "cta": "Vedi tutti i nostri giochi di coppia"
   },
   "jsonLd": {

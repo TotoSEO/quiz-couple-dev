@@ -1,9 +1,9 @@
 {
   "hero": {
-    "badge": "5 games • Free • No sign-up",
+    "badge": "6 games • Free • No sign-up",
     "title": "Our games to play together, ready in one tap",
     "titleHighlight": "to play together",
-    "description": "Five games that start on a single phone set down between you, with no account and nothing to install."
+    "description": "Six games that start on a single phone sitting between the two of you, with no account and nothing to install."
   },
   "stats": {
     "jeux": "6",
@@ -31,7 +31,7 @@
     "actionVeriteDuree": "No time limit",
     "actionVeriteContenu": "70 cards",
     "actionVeriteHotNom": "Dirty truth or dare",
-    "actionVeriteHotTagline": "The same rules, two far more direct levels, for when it is just the two of you.",
+    "actionVeriteHotTagline": "The same rules with a noticeably more direct deck, for when it's really just the two of you.",
     "actionVeriteHotJoueurs": "2 players",
     "actionVeriteHotDuree": "No time limit",
     "actionVeriteHotContenu": "70 cards",
@@ -53,13 +53,13 @@
   },
   "section1": {
     "title": "What a game for two changes about an evening",
-    "p1": "A <strong class=\"text-foreground\">couple game</strong> looks like nothing much, and yet it solves a very concrete problem: as a pair, you always end up circling the same subjects. The day, work, what to eat tonight. A game sets a frame, and that frame gives you permission to ask questions you would never ask out of the blue.",
-    "p2": "It is also why a game works better than a film night when you want to reconnect. In front of a screen, you are two people side by side looking elsewhere. Around a game, you are two people looking at each other, and you feel the difference within ten minutes.",
-    "p3": "The four games on this page are played online, for free, on a single phone. No account to create, no app to install, nothing to set up: you open the page, you start, and you stop whenever you like."
+    "p1": "A <strong class=\"text-foreground\">couple game</strong> looks like nothing at all. And yet it solves a very concrete problem: as a pair, you always end up circling the same subjects. The day, work, what's for dinner… A game imposes a frame, and that frame gives you permission to ask questions you'd never ask out of nowhere.",
+    "p2": "It's also why a game works better than a film when you genuinely want to reconnect. In front of a screen you're two people side by side looking elsewhere. Around a game you're two people looking at each other. You feel the difference within ten minutes.",
+    "p3": "The six games on this page run online, free, on one phone. Nothing to create, nothing to install, nothing to prepare."
   },
   "section2": {
     "title": "Which game to pick, depending on the moment",
-    "intro": "That is the real question, and the answer depends far less on your tastes than on the moment you happen to be in.",
+    "intro": "That's the real question. And the answer depends far less on your tastes than on the moment you happen to be in.",
     "headerMoment": "The moment",
     "headerJeu": "The game",
     "headerPourquoi": "Why this one",
@@ -68,7 +68,7 @@
     "row2Moment": "An evening at home that is fizzling out",
     "row2Pourquoi": "It takes no energy at all to start: a card drops and you answer. Three cards in, the evening is back on its feet.",
     "row3Moment": "A moment that is just the two of you",
-    "row3Pourquoi": "Two separate levels, from suggestive to very direct, with the right to pass on every card.",
+    "row3Pourquoi": "A single deck running from suggestive to very direct, with the right to skip on every card. You set the limit, not the game.",
     "row4Moment": "A lost bet, an evening to restart",
     "row4Pourquoi": "Nobody picks the forfeit, so nobody feels targeted. One button, one spin, and it is settled.",
     "row5Moment": "A proper evening for two, with no other screen on",
@@ -78,32 +78,32 @@
   },
   "section3": {
     "title": "Making a games night for two work",
-    "p1": "Four things make the difference between a game you abandon after ten minutes and an evening you are still talking about the next day.",
+    "p1": "Four things separate a game you abandon after ten minutes from an evening you're still talking about the next day.",
     "conseil1Titre": "One phone, set down between you",
-    "conseil1Texte": "Two screens means two minds elsewhere. Our games are built to run on a single device you pass back and forth, and it changes the whole mood of the game.",
+    "conseil1Texte": "Two screens means two attentions elsewhere. Our games are built to run on one device that you pass back and forth, and it completely changes the mood.",
     "conseil2Titre": "Airplane mode, seriously",
-    "conseil2Texte": "One notification is enough to break a moment that was starting to get interesting. It is the most obvious piece of advice on the list and by far the most effective.",
+    "conseil2Texte": "A single notification is enough to break a moment that was just getting interesting. It's the most obvious tip on this list… and by far the most effective.",
     "conseil3Titre": "The right to pass",
-    "conseil3Texte": "A game for two only works if nobody feels cornered. Agree from the start that either of you can turn a card down without justifying it: both card games include a forfeit for exactly that.",
+    "conseil3Texte": "A game for two only works if nobody feels cornered. Agree from the start that either of you can refuse a card without explaining: both card games have a forfeit for exactly that.",
     "conseil4Titre": "Start softer than you planned",
-    "conseil4Texte": "The classic mistake is to open on the boldest game. Start with something light, the rest follows on its own once the laughter has done its work."
+    "conseil4Texte": "The classic mistake is opening with the boldest game. Start light: the rest follows on its own once the laughing has started."
   },
   "faq": {
     "title": "Frequently asked questions",
     "q1": "Are these couple games really free?",
-    "a1": "Yes, all four, from the first to the last. There is no account to create, no paid version and no content unlocked after payment. You open the game page and you play.",
+    "a1": "Yes, all six, from the first to the last. No account to create, no paid tier, no content unlocked after payment. Open the game's page and play.",
     "q2": "Do I need to download an app?",
-    "a2": "No. Everything is played straight in your browser, on a phone or a computer. That is also what lets you start a game in ten seconds whenever the mood strikes.",
+    "a2": "No. Everything runs straight in your browser, on a phone or a computer. That's also what lets you start a game in ten seconds, right when the urge strikes.",
     "q3": "What is the best game to play as a couple at home?",
-    "a3": "It depends on the evening. Truth or dare is the most versatile: it starts fast and it stops whenever you want. Would you rather works better when you feel more like talking than doing. The forfeit wheel is mostly there to settle a lost bet. And the dirty version is one to save for moments when it is just the two of you.",
+    "a3": "It depends on the evening! Truth or dare is the most versatile: it starts fast and stops whenever you want. Which one of us fits in five minutes and starts a conversation every single time. Would you rather works better when you feel like talking more than doing. The board game needs a proper half hour, but it's the only one you can win. The wheel is mostly for settling a bet. And the naughty version is for the moments when it's just the two of you.",
     "q4": "Can we play remotely, each at home?",
-    "a4": "Yes. One of you opens the game, reads out loud over video and confirms for both. Truths and dilemmas work perfectly at a distance, dares need a bit of adapting.",
+    "a4": "Yes. One of you opens the game, reads out loud on video and confirms for both. Truths, dilemmas and votes work perfectly at a distance, dares take a bit of imagination.",
     "q5": "Are these games suitable for a couple who have just met?",
-    "a5": "Would you rather, the forfeit wheel and the classic truth or dare, yes: they assume no shared history. The dirty version takes for granted that you already know each other well, and started too early it makes people uncomfortable rather than entertained."
+    "a5": "Would you rather, which one of us, the forfeit wheel and the classic truth or dare, yes: none of them assume a shared history. The board game too, though its memory squares will feel a little thin early on. The naughty version, though, assumes you already know each other well: played too early it makes people more uncomfortable than amused."
   },
   "section4": {
     "title": "A game repairs nothing, but it opens doors",
-    "p1": "Let us be honest about what a game can do. It does not settle a deep disagreement and it does not replace a conversation when one is needed. What it does very well is take the solemnity out: the card asks the question, not you, and that small shift is often enough to unlock a subject.",
+    "p1": "Let's be honest about what a game can do. It doesn't settle a fundamental disagreement, and it doesn't replace a conversation when one is needed. What it does very well is strip out the solemnity: it's the card asking the question, not you. That small shift is often enough to unlock a subject.",
     "p2": "And if you want to go further than one evening, our couple tests raise the same subjects with a result at the end.",
     "cta": "Discover our couple tests"
   },

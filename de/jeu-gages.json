@@ -3,7 +3,7 @@
     "badge": "Gratis • Ohne Anmeldung • Beliebig oft drehen",
     "title": "Das Strafen-Glücksrad für zu zweit",
     "titleHighlight": "für zu zweit",
-    "description": "140 Strafen in sieben Familien. Ihr drückt, das Rad dreht sich und entscheidet an eurer Stelle."
+    "description": "140 Pfänder in sieben Familien. Ihr drückt, das Rad dreht sich… und es entscheidet für euch."
   },
   "familles": {
     "bisouNom": "Kuss",
@@ -23,45 +23,45 @@
   },
   "section1": {
     "title": "Eine ausgeloste Strafe ist besser als eine ausgedachte",
-    "p1": "Wenn eine Wette endet, muss jemand die <strong class=\"text-foreground\">Strafe</strong> finden. Und genau da hakt es: Entweder fällt niemandem etwas ein, oder das Einfallende ist zu hart, oder der Gewinner fühlt sich verpflichtet, milde zu sein. In allen drei Fällen kippt der Moment.",
-    "p2": "Ein Rad löst das sofort: Niemand hat gewählt, also ist niemand verantwortlich. Genau das erlaubt es auch, eine Strafe anzunehmen, die man abgelehnt hätte, wenn der andere sie vorgeschlagen hätte, denn dahinter steckt keine Absicht mehr, nur Zufall.",
-    "p3": "Auf dem Rad drehen sich sieben Familien, dazu ein Überraschungsfeld, das aus allen anderen zieht. Ihr dreht so oft ihr wollt: Die Partie hat kein Ende, sie hört auf, wenn ihr die Seite schließt."
+    "p1": "Eine Wette endet, jemand hat verloren, und jetzt muss eine <strong class=\"text-foreground\">Strafe</strong> her. Es läuft immer gleich: entweder fällt niemandem etwas ein, oder es kommt eines, das viel zu hart ist, oder der Gewinner fühlt sich verpflichtet, nett zu sein. In allen drei Fällen fällt der Moment in sich zusammen.",
+    "p2": "Ein Rad klärt das in einer Sekunde. Niemand wählt, also ist niemand verantwortlich.",
+    "p3": "Genau das bringt euch dazu, ein Pfand anzunehmen, das ihr vom anderen abgelehnt hättet: es steckt keine Absicht mehr dahinter, nur Zufall. Sieben Familien drehen sich, dazu ein Überraschungsfeld, das aus allen anderen zieht, und ihr dreht so oft ihr wollt."
   },
   "section2": {
     "title": "Was auf dem Rad steht",
-    "intro": "Jede Familie hat ihre zwanzig Strafen, geschrieben für ein Paar und spielbar in einem Wohnzimmer. Nichts wiederholt sich, solange die Familie reicht.",
+    "intro": "Jede Familie hat ihre eigenen zwanzig Pfänder, geschrieben für ein Paar und im Wohnzimmer spielbar. Nichts wiederholt sich, solange die Familie nicht aufgebraucht ist.",
     "headerFamille": "Die Familie",
     "headerContenu": "Was sie enthält"
   },
   "section3": {
     "title": "Wie man es benutzt",
-    "intro": "Es gibt keine vorgeschriebene Spielregel: Das Rad ist ein Werkzeug, ihr entscheidet, was es auslöst.",
+    "intro": "Es gibt keine vorgeschriebene Regel: das Rad ist ein Werkzeug, und ihr entscheidet, was es auslöst.",
     "regle1Titre": "Nach einer verlorenen Wette",
-    "regle1Texte": "Der häufigste Fall. Wer verliert, dreht und führt aus, ohne über das Ergebnis zu diskutieren. Es funktioniert gerade deshalb, weil er es nicht gewählt hat.",
+    "regle1Texte": "Mit Abstand die häufigste Verwendung. Wer verliert, dreht das Rad und macht es, ohne über das Ergebnis zu diskutieren. Es funktioniert gerade deshalb, weil er nichts ausgesucht hat.",
     "regle2Titre": "Am Ende eines anderen Spiels",
-    "regle2Texte": "Eine Drehung nach einem Quiz oder einem Wahrheit oder Pflicht bringt den Abend wieder in Gang, ohne ein neues Spiel herauszuholen.",
+    "regle2Texte": "Eine Drehung am Ende eines Quiz oder eines Wahrheit oder Pflicht bringt den Abend wieder in Gang, ohne ein ganz neues Spiel auspacken zu müssen.",
     "regle3Titre": "Als eigenständiges Spiel",
-    "regle3Texte": "Abwechselnd dreht jeder und erfüllt die gezogene Strafe. Zehn Drehungen ergeben eine ganze Runde, und dieselbe kommt nicht zweimal.",
+    "regle3Texte": "Abwechselnd: einer dreht und erfüllt das gezogene Pfand. Zehn Runden reichen für einen richtigen Moment, und dasselbe bekommt ihr kein zweites Mal.",
     "regle4Titre": "Mit dem Recht, neu zu drehen",
-    "regle4Texte": "Vereinbart eines vor dem Start: Jeder darf einmal pro Abend ohne Begründung neu drehen. Das nimmt den einzigen Grund, nicht mitzumachen."
+    "regle4Texte": "Einigt euch vorher darauf: jeder darf einmal pro Abend neu drehen, ohne sich zu rechtfertigen. Das nimmt den einzigen guten Grund, nicht mitzuspielen."
   },
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Wie viele Strafen gibt es?",
-    "a1": "140, verteilt auf sieben Familien zu je zwanzig. Das Überraschungsfeld zieht aus allen sieben, es fügt also keine Strafen hinzu, verändert aber, wie sie fallen.",
+    "a1": "140, verteilt auf sieben Familien zu zwanzig. Das Überraschungsfeld zieht aus allen sieben: es fügt keine Pfänder hinzu, es ändert nur, wie sie fallen.",
     "q2": "Wiederholen sich die Strafen?",
-    "a2": "Nicht, solange die gezogene Familie noch etwas hergibt. Jede Familie wird neu gemischt, sobald ihre zwanzig Strafen durch sind, was für mehrere Abende reicht, ohne je dieselbe zu bekommen.",
+    "a2": "Nicht, solange die gezogene Familie nicht leer ist! Jede Familie wird neu gemischt, sobald ihre zwanzig Pfänder heraus sind, was für mehrere Abende reicht, ohne je dasselbe zu bekommen.",
     "q3": "Ist es pikant?",
-    "a3": "Nein, dieses Rad ist dafür gemacht, überall gedreht zu werden, auch vor Freunden. Am intimsten wird es bei einem Kuss oder einer Massage. Für etwas Direkteres haben unsere Wahrheit oder Pflicht Spiele einen eigenen Stapel.",
+    "a3": "Nein. Das Rad ist dafür gemacht, überall gedreht zu werden, auch vor Freunden. Am intimsten wird es bei einem Kuss oder einer Massage. Für deutlich Direkteres haben unsere Wahrheit-oder-Pflicht-Spiele einen eigenen Stapel.",
     "q4": "Kann man zu mehr als zweit spielen?",
-    "a4": "Die Strafen sind für ein Paar geschrieben, aber nichts hindert euch daran, das Handy in einer Runde herumzureichen: Die Hälfte funktioniert unverändert, die andere setzt schlicht ein Gegenüber voraus.",
+    "a4": "Die Pfänder sind für ein Paar geschrieben, aber nichts hindert euch daran, das Handy in einer Gruppe weiterzureichen: die Hälfte funktioniert so wie sie ist, die andere setzt einfach voraus, dass jemand gegenüber sitzt.",
     "q5": "Muss man ein Konto anlegen?",
-    "a5": "Nein, und es wird nichts gespeichert. Das Rad läuft in eurem Browser, auf dem Handy wie am Rechner, und der Zähler beginnt wieder bei null, sobald ihr die Seite neu ladet."
+    "a5": "Nein, und es wird nichts gespeichert. Das Rad dreht sich in eurem Browser, auf dem Handy wie am Rechner, und der Zähler startet bei jedem Neuladen wieder bei null."
   },
   "section4": {
-    "title": "Eine gut gewählte Strafe bringt niemanden in Verlegenheit",
-    "p1": "Das einzige echte Risiko bei einem Strafenspiel ist die Strafe, die für einen von beiden zu weit geht. Die auf diesem Rad sind bewusst wohnzimmertauglich: nichts, wofür man sich ausziehen muss, nichts, was euch vor anderen bloßstellt, nichts, was man am nächsten Tag bereut.",
-    "p2": "Den Rest entscheidet ihr, und so ist es weit besser.",
+    "title": "Ein gutes Pfand bringt niemanden in Verlegenheit",
+    "p1": "Das einzige echte Risiko bei einem Pfänderspiel ist das Pfand, das für einen von beiden zu weit geht. Die auf diesem Rad sind bewusst wohnzimmertauglich: nichts, wofür man sich ausziehen muss, nichts, das vor anderen bloßstellt, nichts, das man am nächsten Morgen bereut.",
+    "p2": "Den Rest entscheidet ihr. Und so ist es viel besser!",
     "cta": "Alle unsere Paarspiele ansehen"
   },
   "jsonLd": {

@@ -7,44 +7,44 @@
   },
   "section1": {
     "title": "Ein Stapel, der von andeutend bis sehr direkt reicht",
-    "p1": "Ein <strong class=\"text-foreground\">versautes Wahrheit oder Pflicht</strong>, das zu hart anfängt, funktioniert nicht: Die erste Aufgabe ist unangenehm und die Partie endet, bevor sie begonnen hat. Deshalb steigert sich dieser Stapel, statt gleich zuzuschlagen.",
-    "p2": "Die sanftesten Karten bleiben andeutend: Fragen, bei denen man rot wird, Aufgaben, die einander näherbringen, nichts, was zum Ausziehen zwingt. Die direktesten nehmen keine Rücksicht mehr und setzen voraus, dass ihr beide wisst, worauf ihr hinauswollt. Der Zufall mischt sie, und das Recht zu passen lässt euch die Kontrolle.",
-    "p3": "Fangt ruhig an, auch wenn ihr glaubt, den Schritt überspringen zu können. Das Lachen der ersten Karten bringt für den restlichen Abend mehr als jede Aufgabe, die kalt hingeworfen wird."
+    "p1": "Ein <strong class=\"text-foreground\">versautes Wahrheit oder Pflicht</strong>, das zu hart anfängt, funktioniert nie. Die erste Pflicht ist unangenehm, einer von beiden macht dicht, und der Abend ist vorbei, bevor er begonnen hat. Deshalb steigert sich dieser Stapel langsam, statt gleich mit voller Wucht loszulegen.",
+    "p2": "Die sanftesten Karten bleiben andeutend: Fragen, bei denen man rot wird, Pflichten, die euch näherbringen, nichts, das zum Entblößen zwingt. Die direktesten nehmen kein Blatt mehr vor den Mund und setzen voraus, dass ihr beide wisst, wohin das führt. Die Ziehung mischt sie, und das Recht auszusetzen lässt euch die Kontrolle.",
+    "p3": "Fangt sanft an, auch wenn ihr glaubt, diesen Schritt überspringen zu können. Das Lachen der ersten Karten bringt für den restlichen Abend mehr als jede kalt hingeworfene Pflicht…"
   },
   "section2": {
     "title": "So wird gespielt",
-    "intro": "Die Regeln sind dieselben wie in der klassischen Version, mit einem Punkt, der hier stärker zählt.",
+    "intro": "Dieselben wie in der klassischen Variante, plus ein Punkt, der hier deutlich mehr zählt.",
     "regle1Titre": "Tragt eure beiden Vornamen ein",
-    "regle1Texte": "Das Spiel sagt bei jeder Karte an, wer dran ist, damit niemand darüber diskutieren muss.",
+    "regle1Texte": "Das Spiel sagt bei jeder Karte an, wer dran ist, damit sich niemand fragen muss, wer spielt.",
     "regle2Titre": "Wahrheit oder Pflicht, ihr entscheidet",
-    "regle2Texte": "Der aufgerufene Spieler sagt seine Seite an, und die Karte wird zufällig aus dem passenden Stapel gezogen. Die nächste seht ihr nie.",
+    "regle2Texte": "Der genannte Spieler sagt seine Seite an, und die Karte kommt zufällig aus dem passenden Stapel. Die nächste seht ihr nie.",
     "regle3Titre": "Passen ist im Spiel vorgesehen",
-    "regle3Texte": "Eine Karte abzulehnen lässt eine Strafe fallen, mehr nicht. Das ist die wichtigste Regel dieser Version: Sie macht das Ablehnen alltäglich, statt daraus ein Geständnis zu machen.",
+    "regle3Texte": "Eine Karte abzulehnen lässt ein Pfand fallen, mehr nicht. Das ist die wichtigste Regel dieser Variante: sie macht das Aussetzen unauffällig, statt ein Geständnis daraus zu machen.",
     "regle4Titre": "Ihr setzt die Grenze, nicht das Spiel",
-    "regle4Texte": "Legt vor dem Start fest, was heute Abend nicht infrage kommt. Ein Spiel ersetzt nie eine Absprache zwischen euch beiden, es macht nur Vorschläge."
+    "regle4Texte": "Legt vorher fest, was heute Abend nicht infrage kommt. Ein Spiel ersetzt nie eine Absprache zwischen euch beiden, es macht nur Vorschläge."
   },
   "section3": {
-    "title": "Einverständnis, klar gesagt",
-    "p1": "Dieses Spiel schlägt vor, es verlangt nichts. Jede Karte darf ohne Erklärung abgelehnt werden, so oft es nötig ist, und eine Strafe ist nie eine Bestrafung, die man erdulden muss. Wenn einer von euch keine Lust hat, ist die richtige Antwort, die Partie zu beenden, nicht zu verhandeln.",
-    "p2": "Die Karten sind für ein Paar geschrieben, das zusammen spielt, unter einverständigen Erwachsenen. Sie setzen voraus, dass ihr euch kennt und dass ihr beide wisst, wann Schluss ist."
+    "title": "Einvernehmen, schlicht gesagt",
+    "p1": "Dieses Spiel schlägt vor, es zwingt zu nichts. Jede Karte darf ohne Erklärung abgelehnt werden, so oft wie nötig, und ein Pfand ist nie eine Strafe, die man erdulden muss. Wenn einer von euch keine Lust hat, ist die richtige Antwort, aufzuhören. Nicht zu verhandeln.",
+    "p2": "Die Karten sind für ein Paar geschrieben, das zusammen spielt, unter einvernehmlichen Erwachsenen. Sie setzen voraus, dass ihr euch kennt und beide wisst, wann Schluss ist."
   },
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Was ist der Unterschied zur klassischen Version?",
-    "a1": "Die Karten. Die klassische Version richtet sich an alle Paare und lässt sich vor jedem spielen. Diese hier hat ihren eigenen, deutlich direkteren Stapel, geschrieben für einen Moment, in dem ihr allein zu zweit seid.",
+    "a1": "Die Karten, ganz einfach. Die klassische Variante richtet sich an alle Paare und lässt sich vor jedem spielen. Diese hier hat ihren eigenen, deutlich direkteren Stapel, geschrieben für einen Moment, in dem ihr allein seid.",
     "q2": "Ist es sehr explizit?",
-    "a2": "Es reicht von andeutend bis sehr direkt. Die sanftesten Karten verlangen ein Kompliment oder einen Kuss, die direktesten setzen eine bereits vorhandene Vertrautheit voraus. Es gibt keine Stufe zu wählen: Das Recht zu passen setzt die Grenze, Karte für Karte.",
+    "a2": "Von andeutend bis sehr direkt. Die sanftesten verlangen ein Kompliment oder einen Kuss, die kühnsten setzen eine bereits gewachsene Vertrautheit voraus. Es gibt keine Stufe zu wählen: das Recht auszusetzen zieht die Grenze, Karte für Karte.",
     "q3": "Wie viele Karten gibt es?",
-    "a3": "70 insgesamt: 30 Wahrheiten, 24 Aufgaben und 16 Strafen in einem einzigen Stapel. Sie wiederholen sich nicht, solange der Stapel reicht, was für einen ganzen Abend genügt, ohne auf dieselben zu stoßen.",
+    "a3": "70 insgesamt: 30 Wahrheiten, 24 Pflichten und 16 Pfänder in einem einzigen Stapel. Sie kommen erst wieder, wenn der Stapel leer ist, also genug für einen ganzen Abend ohne Wiederholung.",
     "q4": "Passt es für ein Paar, das sich gerade erst kennengelernt hat?",
-    "a4": "Der sanfte Teil des Stapels ja, er eignet sich sehr gut zum Ausloten. Die direktesten Karten setzen voraus, dass ihr euch schon gut kennt: Fällt eine zu früh, passt einfach, genau dafür ist es da.",
+    "a4": "Der Anfang des Stapels auf jeden Fall! Er eignet sich hervorragend, um das Terrain abzutasten. Die direktesten Karten setzen voraus, dass ihr euch schon gut kennt: fällt eine zu früh, setzt aus, genau dafür ist es da.",
     "q5": "Muss man ein Konto anlegen?",
-    "a5": "Nein, und es wird nichts gespeichert. Das Spiel läuft in eurem Browser, eure Antworten verlassen das Gerät nie und es gibt keinen Partieverlauf."
+    "a5": "Nein, und es wird nichts gespeichert. Das Spiel läuft in eurem Browser, eure Antworten verlassen nie das Gerät, und es gibt keinerlei Spielverlauf."
   },
   "section4": {
     "title": "Was ein Spiel wie dieses wirklich leisten kann",
-    "p1": "Es wird euer Intimleben nicht umkrempeln, und das sollte auch niemand von ihm verlangen. Was es gut kann, ist einem Gespräch einen Rahmen geben, das viele Paare nie wirklich geführt haben, weil die Karte die Frage an eurer Stelle stellt.",
-    "p2": "Den Rest entscheidet ihr, und so ist es genau richtig."
+    "p1": "Es wird euer Intimleben nicht umkrempeln, und das sollte auch niemand von ihm verlangen. Was es gut kann, ist einem Gespräch einen Rahmen geben, das viele Paare nie wirklich geführt haben. Weil die Karte die Frage stellt und nicht ihr.",
+    "p2": "Den Rest entscheidet ihr. Und so soll es auch sein!"
   },
   "jsonLd": {
     "name": "Spiel Wahrheit oder Pflicht versaut für Paare"

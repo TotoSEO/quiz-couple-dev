@@ -3,53 +3,53 @@
     "badge": "Would You Rather • 30 questions • 2 players",
     "title": "Would You Rather? The couple quiz that will surprise you",
     "titleHighlight": "surprise you",
-    "description": "30 questions to make impossible choices together. The Would You Rather couple edition: funny, deep, and always surprising."
+    "description": "30 questions to make impossible choices together. Funny, occasionally deep, and always surprising."
   },
   "intro": {
-    "p1": "The <strong class=\"text-foreground\">Would You Rather game for couples</strong> is one of those rare formats that works every single time. No equipment, no complicated rules, just two people, impossible choices and answers that reveal more than you'd think. This quiz offers 30 carefully selected questions to make you laugh, think, and above all, surprise each other.",
-    "p2": "Whether you've been together for three months or fifteen years, your partner's answers always have the potential to catch you off guard. That's the whole point of the game: it's not a test with right answers, it's a conversation disguised as a quiz."
+    "p1": "The <strong class=\"text-foreground\">would you rather for couples</strong> is one of those rare formats that works every single time. No equipment, no complicated rules, just two people, impossible choices… and answers that say far more than you'd expect.",
+    "p2": "Three months together or fifteen years, it makes no difference: your partner's answers always have the power to surprise you. That's the whole point of it. This isn't a test with right answers, it's a conversation dressed up as a quiz."
   },
   "section1": {
     "title": "How to play \"Would You Rather\" as a couple?",
-    "p1": "The concept is simple, and that's exactly what makes it work. Each person asks the other a question with two options, and the other chooses. No right answer. No wrong one either. Just a choice, and what that choice says about you.",
-    "p2": "What makes the game interesting as a couple is that you already know each other. You think you know what the other will answer. Then a question comes along, and the answer you expected doesn't come out. That's when it becomes a conversation.",
-    "p3": "A few unofficial rules that make the game better: <strong class=\"text-foreground\">ban the \"it depends\"</strong> (it's the answer that kills everything, force the choice even if it's uncomfortable), ask why after each answer (the choice alone doesn't say much, the explanation behind it does), take turns asking questions, and set aside time, a game that starts well can easily last two hours."
+    "p1": "The principle is simple, and that's exactly why it works. One question, two options, the other one chooses. No right answer. No wrong one either. Just a choice, and what that choice says about you.",
+    "p2": "What makes the game genuinely interesting as a couple is that you already know each other. You think you know what they'll say. Then a question lands, the answer you expected doesn't come… and that's when it becomes a conversation.",
+    "p3": "A few unofficial rules that make games far better: <strong class=\"text-foreground\">ban “it depends”</strong> (it's the answer that kills everything, force the choice even when it's uncomfortable), ask “why?” after every answer (the choice alone says little, the reasoning behind it says plenty), take turns asking, and allow time. A game that starts well can easily run two hours!"
   },
   "section2": {
     "title": "What you actually learn about each other by playing",
-    "p1": "On paper, it's a game. In practice, it's one of those rare moments where you ask questions you wouldn't ask in a normal conversation, and the other person answers without having time to overthink what they should say.",
-    "p2": "That's where the \"Would You Rather\" game for couples reveals things. Not big dramatic revelations, but small discoveries: a priority you didn't suspect, a fear that surfaces through an innocent choice, a value that comes first when you thought it would be the other one.",
-    "p3": "Couples who regularly play this kind of quiz often have a better understanding of the little details about each other, not the big life topics, but the subtle preferences, the everyday trade-offs, the things that matter without ever having been put into words. It's actually a great complement for <a href=\"/en/couple-compatibility-test/\">getting to know your partner better</a> on a daily basis."
+    "p1": "On paper it's a game. In practice it's one of the rare moments where you ask questions you'd never ask in a normal conversation, and where the other person answers without time to work out what they ought to say.",
+    "p2": "That's where would you rather starts revealing things as a couple. No dramatic revelations, don't worry. More like small discoveries: a priority you never suspected, a fear surfacing through a trivial choice, a value that comes first when you'd have bet on the other one.",
+    "p3": "Couples who play this kind of quiz regularly often know the small details about each other better. Not the big life subjects, no: the fine preferences, the everyday trade-offs, the things that matter without ever having been said out loud. It's an excellent companion to <a href=\"/en/couple-compatibility-test/\">get to know your partner better day to day</a>."
   },
   "section3": {
     "title": "\"Would You Rather\" variations depending on the mood",
-    "p1": "The basic format is great for getting started, but there are variations that completely change the feel of the game.",
+    "p1": "The basic format is perfect for starting out. But there are variants that completely change the colour of a game.",
     "sub1Title": "The \"think alike\" version",
-    "sub1P1": "Instead of answering for yourself, each person answers as they think the other would answer. Then you compare. The gaps between what you imagined and what actually comes out are often revealing, and often hilarious.",
+    "sub1P1": "Instead of answering for yourself, you each answer as you think the other one will. Then you compare. The gap between what you imagined and what actually comes out is often revealing… and often very funny.",
     "sub2Title": "The speed round version",
-    "sub2P1": "5 seconds to answer, no more. It removes strategic thinking and forces instinctive responses. This is the one that surprises the most.",
+    "sub2P1": "Five seconds to answer, not one more. It removes all strategic thinking and forces the instinctive answer. This is the variant that surprises people most.",
     "sub3Title": "The party version",
-    "sub3P1": "For playing with multiple couples. Everyone bets on the others' answers. Couples who've known each other for a long time often think they'll guess everything, and they get it wrong more often than they believe. If you enjoy <a href=\"/en/who-is-most-likely-quiz/\">group games between couples</a>, this variation is made for you."
+    "sub3P1": "For playing with several couples: everyone bets on how the others will answer. Those who've known each other for years usually think they'll guess everything. They're wrong far more often than they believe! If you enjoy <a href=\"/en/who-is-most-likely-quiz/\">group games between couples</a>, this variant is made for you."
   },
   "section4": {
     "title": "Questions that really make you think (and those that just make you laugh)",
-    "p1": "There are two categories of questions in a good \"Would You Rather\" for couples, and both are useful, but not in the same way.",
-    "p2": "<strong class=\"text-foreground\">Light-hearted questions</strong> serve to put you at ease, to laugh, to set a rhythm. They don't teach anything deep but create the context for the following questions to land better.",
-    "p3": "<strong class=\"text-foreground\">Questions that dig deeper</strong> open something up. They touch on real expectations in the relationship, needs that haven't always been clearly expressed. The right ratio in a game is roughly 60/40: enough lightness to keep it a game, enough depth to make it worth having played."
+    "p1": "There are two categories of question in a good would you rather for couples. Both are useful, but not in the same way.",
+    "p2": "The <strong class=\"text-foreground\">light questions</strong> are there to put you at ease, to make you laugh, to set a rhythm. They teach you nothing profound, but they create the context that makes the next ones land properly.",
+    "p3": "The <strong class=\"text-foreground\">questions that dig</strong> open something up. They touch real expectations, needs that haven't always been clearly put into words. The right balance is roughly 60/40: light enough that it stays a game, deep enough that playing was worth it."
   },
   "section5": {
     "title": "Why this quiz works so well for couples",
-    "p1": "The best questions are those where both options truly have a cost, and where the choice says something real. This format works because it bypasses the usual defences: you're not talking directly about the relationship, but each answer reveals a little more about how you see the couple, daily life, the future.",
-    "p2": "It's also a format that doesn't put anyone in a position of failure. There's no wrong answer, no score to reach. Just two people discovering, question after question, that they might not know each other as well as they thought, and that's exactly what makes the game precious. If you're looking for other <a href=\"/en/funny-couple-quiz/\">fun activities to do as a couple</a>, you'll find other formats just as entertaining."
+    "p1": "The best questions are the ones where both options genuinely cost something, and where the choice says something true. The format works because it goes around the usual defences: you're not talking about the relationship directly, and yet every answer says a little more about how you see your life together, the everyday, the future.",
+    "p2": "It's also a format that puts nobody in a losing position. No wrong answers, no score to hit. Just two people discovering, question after question, that they maybe didn't know each other quite as well as they thought. And that's exactly what makes the game worth playing. And if you're after <a href=\"/en/funny-couple-quiz/\">other things to do together as a couple</a>, there are plenty more to find."
   },
   "faq": {
     "q1": "How many questions does this Would You Rather couple quiz contain?",
-    "a1": "This quiz features 30 \"Would You Rather\" questions specially designed for couples. Each question offers two options with a choice to make. The questions mix humour, reflection and couple topics for a complete and varied game.",
+    "a1": "30 would you rather questions written for couples, each with two options to pick between. The mix of humour, reflection and relationship subjects makes for a full and varied game.",
     "q2": "Is the Would You Rather game suitable for all couples?",
-    "a2": "Yes, the \"Would You Rather\" format works regardless of the couple's age or how long they've been together. The questions are designed to make you laugh and think without ever making anyone uncomfortable. It's an accessible game that requires no preparation.",
+    "a2": "Yes! The format works whatever the couple's age or how long you've been together. The questions are written to make you laugh and think without ever making anyone uncomfortable, and there's nothing to prepare.",
     "q3": "Are there any spicy questions in this quiz?",
-    "a3": "This quiz stays in a fun and reflective register, without explicitly spicy questions. The topics covered touch on values, priorities and everyday choices in the relationship. If you're looking for a more intimate version, spicier variations also exist.",
+    "a3": "This quiz stays in a fun, reflective register, with no explicitly naughty questions. It covers values, priorities and everyday trade-offs. For something more intimate, take a look at our truth or dare games instead.",
     "q4": "Can you play this quiz long-distance?",
-    "a4": "Absolutely! The \"Would You Rather\" format is perfectly suited to playing remotely via video call or even by text. Each person can read the question on their screen and give their answer. It's actually an ideal activity for long-distance couples."
+    "a4": "Absolutely! The format lends itself perfectly to playing at a distance, on video or even by message. Each of you reads the question on your own screen and gives an answer. It's an ideal activity for couples living far apart."
   }
 }
