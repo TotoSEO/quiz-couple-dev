@@ -1110,7 +1110,8 @@ var QuizEngine = (function() {
     form.appendChild(createPlayerCard(0));
     form.appendChild(createPlayerCard(1));
 
-    var info = el('div', 'quiz-setup-meta', '📝 ' + this.questions.length + ' questions &bull; ⏱ ' + tg('meta.duration', '5 min'));
+    var info = el('div', 'quiz-setup-meta', '📝 ' + this.questions.length + ' ' +
+      tg('meta.questionsWord', 'questions') + ' &bull; ⏱ ' + tg('meta.duration', '5 min'));
 
     var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', tg('playerSetup.startQuiz', 'Commencer le quiz'));
     startBtn.addEventListener('click', function() {
@@ -2850,7 +2851,9 @@ var QuizEngine = (function() {
 
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-2 text-center', tg('parentalite.setupDesc', 'Répondez chacun de votre côté aux mêmes 20 questions.')));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6 text-center', '20 questions &bull; ' + tg('meta.duration', '10 min') + ' &bull; ' + tg('parentalite.scoreOn60', 'Score sur 60 par personne')));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6 text-center',
+      this.questions.length + ' ' + tg('meta.questionsWord', 'questions') + ' &bull; ' +
+      tg('meta.duration', '10 min') + ' &bull; ' + tg('parentalite.scoreOn60', 'Score sur 60 par personne')));
 
     var form = el('div', 'quiz-setup-grid max-w-lg mx-auto');
 
