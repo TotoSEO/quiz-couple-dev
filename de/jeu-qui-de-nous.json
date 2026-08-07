@@ -1,0 +1,71 @@
+{
+  "jsonLd": {
+    "name": "Wer von uns beiden?"
+  },
+  "hero": {
+    "badge": "Zu zweit, ein einziges Handy",
+    "title": "Wer von uns beiden? Das Spiel mit der geheimen Stimme",
+    "titleHighlight": "geheimen Stimme",
+    "description": "Jeder stimmt für sich ab, beide Antworten werden gleichzeitig aufgedeckt… und ihr merkt, wie ähnlich ihr die Dinge seht."
+  },
+  "section1": {
+    "title": "Ein albernes Spiel, und trotzdem",
+    "p1": "Das Prinzip kennt ihr längst. Eine Frage, zwei mögliche Antworten und nur eine Wahrheit: du, oder der andere. Nur dass auf einer Party immer derjenige recht hat, der am lautesten antwortet… Hier kann niemand den anderen übertönen. Jeder stimmt für sich ab, im Geheimen, und beide Antworten fallen gleichzeitig.",
+    "p2": "Albern. Funktioniert jedes Mal.",
+    "p3": "Lustig sind nicht die Runden, in denen ihr euch einig seid. Sondern die anderen. Die, in denen ihr euch anschaut und sagt: „Moment mal, du findest wirklich, dass ich im Stau am meisten schimpfe?“",
+    "p4": "Zwölf Runden, vier Minuten, am Ende ein Harmonie-Wert. Und ein Handy, mehr braucht es nicht."
+  },
+  "section2": {
+    "title": "So wird gespielt",
+    "intro": "Nichts Kompliziertes, aber die vier Punkte unten machen den Unterschied.",
+    "etape1Titre": "Zuerst eure Vornamen",
+    "etape1Texte": "Das Spiel benutzt sie überall: auf den Knöpfen, bei der Auflösung, im Endergebnis. Deutlich lebendiger als „Spieler 1“ und „Spieler 2“.",
+    "etape2Titre": "Der Erste stimmt heimlich ab",
+    "etape2Texte": "Die Frage erscheint, und ihr wählt, auf wen von euch beiden sie besser passt. Der andere darf nicht hinschauen… genau darum geht es!",
+    "etape3Titre": "Handy weiterreichen",
+    "etape3Texte": "Das Spiel fordert euch selbst dazu auf. Der Zweite stimmt ab, ohne zu wissen, was der Erste gewählt hat.",
+    "etape4Titre": "Die Auflösung",
+    "etape4Texte": "Ein Countdown, dann drehen sich beide Karten gleichzeitig um. Gleiche Antwort: ein Punkt. Unterschiedliche Antworten: Diskussion.",
+    "apres": "Am Ende bekommt ihr einen Harmonie-Prozentwert, eure beste Serie an Treffern in Folge und die Liste der Fragen, bei denen ihr uneinig wart. Diese Liste ist ehrlich gesagt das Beste am ganzen Spiel."
+  },
+  "section3": {
+    "title": "Die vier Fragenfamilien",
+    "intro": "Insgesamt vierzig Fragen, verteilt auf vier Themen. Jede Partie zieht zwölf davon, gleichmäßig aus jeder Familie: zwölf Fragen übers Abwaschen könnt ihr also nicht bekommen.",
+    "headerTheme": "Thema",
+    "headerExemple": "Eine Beispielfrage",
+    "apres": "Startet eine neue Partie und die zwölf Fragen wechseln. Genug Stoff, um mehrfach wiederzukommen, ohne dass es sich wiederholt."
+  },
+  "themes": {
+    "quotidien": "„…vergisst immer genau das, was gefehlt hat?“",
+    "amour": "„…gibt nach einem Streit zuerst nach?“",
+    "caractere": "„…ist länger nachtragend?“",
+    "drole": "„…singt schiefer?“"
+  },
+  "section4": {
+    "title": "Warum es als Paar so gut funktioniert",
+    "p1": "Eines machen Paartests nie: euch mit dem Bild konfrontieren, das der andere von euch hat. Ein Test liefert ein Ergebnis. Hier erfahrt ihr, dass eure bessere Hälfte euch für den sturersten Teil des Paares hält… und darüber müsst ihr dann auch reden!",
+    "p2": "Genau da fängt der Abend meistens erst richtig an.",
+    "p3": "Und nein, ein niedriger Wert heißt nicht, dass es schlecht läuft. Er heißt vor allem, dass ihr euch diese Fragen nie laut gestellt habt. Paare mit 100 % sind übrigens nicht zwangsläufig die glücklichsten: manchmal erzählen sie sich einfach seit zehn Jahren dieselbe Geschichte."
+  },
+  "faq": {
+    "title": "Was ihr uns oft fragt",
+    "q1": "Wie viele Leute braucht man?",
+    "a1": "Zwei, und ein Handy. Das Spiel ist darauf gebaut, dass ihr euch den Bildschirm weiterreicht, nicht auf getrennten Geräten spielt.",
+    "q2": "Wie lange dauert eine Partie?",
+    "a2": "Vier bis fünf Minuten für die zwölf Runden… sofern ihr nicht bei jedem Streitpunkt anhaltet, um zu diskutieren. Was oft passiert.",
+    "q3": "Ist es kostenlos? Braucht man ein Konto?",
+    "a3": "Kostenlos und ohne Anmeldung. Seite öffnen, Vornamen eintippen, spielen. Nichts wird gespeichert.",
+    "q4": "Kann man mehrmals spielen?",
+    "a4": "Ja. Die zwölf Runden werden zufällig aus vierzig Fragen gezogen, zwei Partien hintereinander gleichen sich also nie.",
+    "q5": "Und wenn wir uns bei nichts einig sind?",
+    "a5": "Das ist ehrlich gesagt der beste Fall. Das Spiel legt euch am Ende die Liste der strittigen Fragen vor, und das ist genau die Art Gespräch, die von allein niemand anfängt.",
+    "q6": "Passt das auch für ein frisches Paar?",
+    "a6": "Ja, aber rechnet mit einem niedrigen Wert und viel Gelächter. Die Fragen aus dem Thema Spaß funktionieren am Anfang hervorragend, die über die Zukunft eher weniger."
+  },
+  "section5": {
+    "title": "Lust auf mehr?",
+    "p1": "Wenn euch die Idee mit der geheimen Stimme gefallen hat: unsere anderen Spiele funktionieren nach demselben Prinzip, sie bringen euch zum Reden, ohne dass es auffällt.",
+    "p2": "Viel Spaß euch beiden!",
+    "cta": "Alle Paarspiele ansehen"
+  }
+}

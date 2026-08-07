@@ -321,7 +321,8 @@
     "jeuActionVerite": "truth or dare game",
     "jeuActionVeriteHot": "dirty truth or dare game",
     "jeuGages": "forfeit wheel",
-    "jeuPlateau": "couple board game"
+    "jeuPlateau": "couple board game",
+    "jeuQuiDeNous": "Which one of us?"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -428,5 +429,39 @@
     "intro": "Press the button: the wheel picks the forfeit for you.",
     "compteur": "{{n}} forfeits drawn",
     "compteur1": "1 forfeit drawn"
+  },
+  "quiDeNous": {
+    "setupTitre": "Which one of us?",
+    "setupDesc": "You each vote in secret, then both answers are revealed at once. Time to find out whether you see things the same way…",
+    "commencer": "Let's go!",
+    "manche": "Round {{n}} / {{total}}",
+    "amorce": "Which one of you…",
+    "voteSecret": "{{nom}} votes in secret",
+    "passeTitre": "Pass the phone to {{nom}}",
+    "passeDesc": "No peeking: the vote stays hidden until the reveal.",
+    "passeCta": "That's me!",
+    "decompte": "Revealing in…",
+    "aDit": "{{nom}} said",
+    "accordTitre": "Match!",
+    "accordTexte": "You both picked the same person. One more point on the board.",
+    "clashTitre": "Clash!",
+    "clashTexte": "You don't see this one the same way at all. Talk it out, it's worth it!",
+    "combo": "{{n}} in a row!",
+    "suivant": "Next round",
+    "voirResultat": "See our score",
+    "arreter": "Stop the game",
+    "finTitre": "Your harmony score",
+    "finDetail": "{{n}} matches out of {{total}} rounds",
+    "finSerie": "Best streak: {{n}} in a row",
+    "recapTitre": "Worth talking about",
+    "rejouer": "Play again with new questions",
+    "palier1Titre": "You really don't see things the same way",
+    "palier1Texte": "Each of you has a version, and they barely overlap. That's not a problem at all: it mostly means you have things to tell each other. Go back over the rounds where you disagreed, that's where the best conversations are hiding.",
+    "palier2Titre": "One picture out of two in common",
+    "palier2Texte": "Half the questions you nail, the other half you miss completely. It's the most common score, and honestly the most interesting one: you know each other, but there are still blind spots. Worth digging into.",
+    "palier3Titre": "You know each other well",
+    "palier3Texte": "You see your relationship in roughly the same way, and it shows. The few disagreements left are usually about small everyday things… or about who sings the most out of tune.",
+    "palier4Titre": "You think alike, almost suspiciously so",
+    "palier4Texte": "You picked the same person on nearly every question. Either you know each other inside out, or one of you peeked over the other's shoulder. We'll let you argue about that one!"
   }
 }

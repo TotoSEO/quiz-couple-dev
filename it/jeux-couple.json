@@ -6,9 +6,9 @@
     "description": "Cinque giochi che partono su un solo telefono appoggiato tra voi due, senza account e senza installare niente."
   },
   "stats": {
-    "jeux": "5",
+    "jeux": "6",
     "jeuxLabel": "giochi in due",
-    "cartes": "350",
+    "cartes": "390",
     "cartesLabel": "carte, penitenze e dilemmi",
     "compte": "0",
     "compteLabel": "account da creare"
@@ -44,7 +44,12 @@
     "plateauTagline": "Quaranta caselle, un dado, due pedine. Chi arriva primo vince e chi perde pesca una penitenza.",
     "plateauJoueurs": "2 giocatori",
     "plateauDuree": "20 a 30 min",
-    "plateauContenu": "40 caselle"
+    "plateauContenu": "40 caselle",
+    "quiDeNousNom": "Chi di noi due?",
+    "quiDeNousTagline": "Ognuno vota in segreto sulla stessa domanda, poi le due risposte escono insieme.",
+    "quiDeNousJoueurs": "2 giocatori",
+    "quiDeNousDuree": "5 min",
+    "quiDeNousContenu": "40 domande"
   },
   "section1": {
     "title": "Che cosa cambia un gioco in due in una serata",
@@ -67,7 +72,9 @@
     "row4Moment": "Una scommessa persa, una serata da rilanciare",
     "row4Pourquoi": "Nessuno sceglie la penitenza, quindi nessuno si sente preso di mira. Un pulsante, un giro, e la questione è chiusa.",
     "row5Moment": "Una vera serata in due, senza altri schermi accesi",
-    "row5Pourquoi": "L'unico che dura trenta minuti e che si vince. Un tabellone, un dado e un motivo per andare fino in fondo."
+    "row5Pourquoi": "L'unico che dura trenta minuti e che si vince. Un tabellone, un dado e un motivo per andare fino in fondo.",
+    "row6Moment": "Una cena in due o l'aperitivo prima che arrivino gli ospiti",
+    "row6Pourquoi": "Bastano cinque minuti, e ogni disaccordo rilancia la conversazione da solo. Il più rapido da tirare fuori."
   },
   "section3": {
     "title": "Come far funzionare una serata di giochi in due",

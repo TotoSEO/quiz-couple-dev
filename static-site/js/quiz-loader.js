@@ -86,6 +86,8 @@
     // cases et dans les paquets deja ecrits pour les cartes et pour la roue,
     // d'ou les prefixes supplementaires a charger.
     'plateau-couple':          { prefix: 'plateau', engine: 'plateau', totalQ: 0, pool: 0, textOnly: true, prefixesExtra: ['actionVerite', 'gageRoue'] },
+    // ── Qui de nous deux : vote secret de chacun puis revelation commune.
+    'qui-de-nous-deux':        { prefix: 'quiDeNous', engine: 'duo-vote', totalQ: 0, pool: 0, textOnly: true },
 
     // ── Suis-je amoureux (solo, ascendant : plus de signes = plus de points) ──
     'suis-je-amoureux': { prefix: 'suisjeamoureux', engine: 'solo', totalQ: 20, pool: 20, quizType: 'suisjeamoureux', ascending: true },
@@ -147,6 +149,25 @@
       }
       container.dataset.hasPool = '0';
       new QuizEngine.BoardGame({ container: container, prefix: config.prefix, lang: lang });
+      return;
+    }
+
+    // Qui de nous deux lit quatre familles de questions : il vérifie la
+    // première de chacune avant de démarrer.
+    if (config.engine === 'duo-vote') {
+      var themes = ['quotidien', 'amour', 'caractere', 'drole'];
+      var absent = themes.some(function(t) {
+        var k = config.prefix + '.' + t + '1';
+        return !QuizEngine.tgd(k, null) || QuizEngine.tgd(k, null) === k;
+      });
+      if (absent) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      container.dataset.hasPool = '0';
+      new QuizEngine.DuoVoteGame({ container: container, prefix: config.prefix, lang: lang });
       return;
     }
 

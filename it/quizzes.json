@@ -203,10 +203,10 @@
     "metaDescription": "Sono innamorato o solo attratto? 20 domande per distinguere l'amore dalla cotta. Test gratuito, risultato immediato, senza registrazione."
   },
   "jeuxCouple": {
-    "title": "Giochi di coppia: 4 giochi gratis online, senza registrazione",
+    "title": "Giochi di coppia online: 6 giochi gratis da fare in due",
     "shortTitle": "Giochi di coppia",
     "description": "Quattro giochi da fare in due: preferiresti, obbligo o verità, la sua versione piccante e la ruota delle penitenze.",
-    "metaDescription": "4 giochi di coppia gratis su un solo telefono: preferiresti, obbligo o verità, la sua versione piccante e la ruota delle penitenze. Senza registrazione."
+    "metaDescription": "6 giochi di coppia gratis su un solo telefono: chi di noi due, preferiresti, obbligo o verità, la versione piccante, la ruota delle penitenze e il gioco da tavolo. Senza registrazione."
   },
   "jeuGages": {
     "title": "Penitenze di coppia: la ruota online, 140 idee",
@@ -231,5 +231,11 @@
     "shortTitle": "Obbligo o verità piccante",
     "description": "70 carte piccanti da giocare in coppia, dall'allusivo al molto diretto.",
     "metaDescription": "Obbligo o verità piccante online: 70 carte dall'allusivo al molto diretto, scegliete voi. Gratis, senza registrazione, da giocare stasera."
+  },
+  "jeuQuiDeNous": {
+    "title": "Chi di noi due? Gioco di coppia gratis da fare in due",
+    "shortTitle": "Chi di noi due",
+    "metaDescription": "Il gioco in cui ognuno vota in segreto prima di scoprire la risposta dell'altro. 40 domande, un punteggio di sintonia e tanti dibattiti. Gratis, senza registrazione.",
+    "description": "Ognuno vota in segreto, le due risposte vengono svelate insieme: 40 domande e un punteggio di sintonia."
   }
 }

@@ -321,7 +321,8 @@
     "jeuActionVerite": "juego verdad o reto",
     "jeuActionVeriteHot": "juego verdad o reto picante",
     "jeuGages": "la ruleta de prendas",
-    "jeuPlateau": "juego de mesa para parejas"
+    "jeuPlateau": "juego de mesa para parejas",
+    "jeuQuiDeNous": "¿Quién de los dos?"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
@@ -428,5 +429,39 @@
     "intro": "Pulsad el botón: la ruleta elige la prenda por vosotros.",
     "compteur": "{{n}} prendas sacadas",
     "compteur1": "1 prenda sacada"
+  },
+  "quiDeNous": {
+    "setupTitre": "¿Quién de los dos?",
+    "setupDesc": "Cada uno vota en secreto y luego se revelan las dos respuestas a la vez. Vais a ver si os veis igual…",
+    "commencer": "¡Empezamos!",
+    "manche": "Ronda {{n}} / {{total}}",
+    "amorce": "¿Quién de los dos…",
+    "voteSecret": "{{nom}} vota en secreto",
+    "passeTitre": "Pasa el móvil a {{nom}}",
+    "passeDesc": "Nada de trampas: el voto queda oculto hasta la revelación.",
+    "passeCta": "¡Me toca!",
+    "decompte": "Revelación en…",
+    "aDit": "{{nom}} dijo",
+    "accordTitre": "¡De acuerdo!",
+    "accordTexte": "Habéis señalado a la misma persona. Un punto más al marcador.",
+    "clashTitre": "¡Debate!",
+    "clashTexte": "En esta no os veis igual para nada. Explicaos, que merece la pena.",
+    "combo": "¡{{n}} seguidas!",
+    "suivant": "Siguiente ronda",
+    "voirResultat": "Ver nuestro resultado",
+    "arreter": "Parar la partida",
+    "finTitre": "Vuestro nivel de sintonía",
+    "finDetail": "{{n}} aciertos de {{total}} rondas",
+    "finSerie": "Mejor racha: {{n}} seguidas",
+    "recapTitre": "Para hablarlo juntos",
+    "rejouer": "Jugar otra vez con otras preguntas",
+    "palier1Titre": "No os veis igual en casi nada",
+    "palier1Texte": "Cada uno tiene su versión y se parecen poco. No pasa absolutamente nada: significa sobre todo que tenéis cosas que contaros. Volved a las rondas en las que no coincidisteis, ahí están las mejores conversaciones.",
+    "palier2Titre": "Una imagen de cada dos en común",
+    "palier2Texte": "En la mitad de las preguntas acertáis y en la otra mitad falláis del todo. Es el resultado más habitual y, sinceramente, el más interesante: os conocéis, pero quedan puntos ciegos. Merece la pena rascar.",
+    "palier3Titre": "Os conocéis bien",
+    "palier3Texte": "Veis vuestra relación más o menos igual, y se nota. Los pocos desacuerdos que quedan suelen ir de detalles del día a día… o de quién canta peor.",
+    "palier4Titre": "Pensáis igual, casi da miedo",
+    "palier4Texte": "Habéis señalado a la misma persona en casi todas las preguntas. O os conocéis de memoria, o alguno ha mirado por encima del hombro del otro. ¡Eso ya lo discutís vosotros!"
   }
 }

@@ -1,0 +1,71 @@
+{
+  "jsonLd": {
+    "name": "Qui de nous deux ?"
+  },
+  "hero": {
+    "badge": "À deux, sur un seul téléphone",
+    "title": "Qui de nous deux ? Le jeu du vote secret",
+    "titleHighlight": "vote secret",
+    "description": "Chacun vote de son côté, on révèle les deux réponses en même temps… et on découvre à quel point vous vous voyez pareil."
+  },
+  "section1": {
+    "title": "Un jeu tout bête, et pourtant",
+    "p1": "Vous connaissez forcément le principe. Une question, deux réponses possibles, et une seule vérité : vous, ou l'autre. Sauf qu'en soirée, celui qui répond le plus fort a toujours raison… Ici, personne ne peut couvrir la voix de l'autre. Chacun vote de son côté, en secret, et les deux réponses tombent en même temps.",
+    "p2": "C'est bête. Ça marche à tous les coups.",
+    "p3": "Ce qui rend le jeu drôle, ce ne sont pas les manches où vous tombez d'accord. Ce sont les autres. Celles où vous vous regardez en vous disant « attends, tu penses vraiment que c'est moi qui râle le plus dans les bouchons ? »",
+    "p4": "Douze manches, quatre minutes montre en main, un score d'harmonie à la fin. Et un téléphone, c'est tout."
+  },
+  "section2": {
+    "title": "Comment on joue",
+    "intro": "Rien de compliqué, mais les quatre points ci-dessous font toute la différence.",
+    "etape1Titre": "Vos prénoms d'abord",
+    "etape1Texte": "Le jeu les utilise partout : sur les boutons, dans la révélation, dans le score final. C'est nettement plus vivant que « joueur 1 » et « joueur 2 ».",
+    "etape2Titre": "Le premier vote en secret",
+    "etape2Texte": "La question s'affiche, vous choisissez qui de vous deux elle décrit le mieux. L'autre ne doit pas regarder… c'est là que tout se joue !",
+    "etape3Titre": "On passe le téléphone",
+    "etape3Texte": "Le jeu vous le demande lui-même. Le second vote sans savoir ce que le premier a choisi.",
+    "etape4Titre": "Révélation",
+    "etape4Texte": "Un décompte, et les deux cartes se retournent en même temps. Même réponse : un point. Réponses différentes : un débat.",
+    "apres": "À la fin, vous récupérez un pourcentage d'harmonie, votre meilleure série d'accords d'affilée, et la liste des questions sur lesquelles vous n'étiez pas d'accord. Cette liste, franchement, c'est le meilleur du jeu."
+  },
+  "section3": {
+    "title": "Les quatre familles de questions",
+    "intro": "Quarante questions au total, réparties en quatre thèmes. Chaque partie en pioche douze, autant dans chaque famille : impossible de tomber sur douze questions sur la vaisselle.",
+    "headerTheme": "Thème",
+    "headerExemple": "Un exemple de question",
+    "apres": "Relancez une partie et les douze questions changent. De quoi y revenir plusieurs fois sans tourner en rond."
+  },
+  "themes": {
+    "quotidien": "« …oublie systématiquement d'acheter ce qu'il fallait ? »",
+    "amour": "« …craque en premier après une dispute ? »",
+    "caractere": "« …garde une rancune le plus longtemps ? »",
+    "drole": "« …chante le plus faux ? »"
+  },
+  "section4": {
+    "title": "Pourquoi ça marche si bien en couple",
+    "p1": "Il y a une chose que les tests de couple ne font jamais : vous mettre face à l'image que l'autre a de vous. Un test vous rend un résultat. Ici, vous découvrez que votre moitié vous voit comme la personne la plus tête de mule du couple… et il va bien falloir en parler !",
+    "p2": "C'est souvent là que la soirée démarre vraiment.",
+    "p3": "Et non, un score bas ne veut pas dire que ça va mal. Ça veut surtout dire que vous ne vous êtes jamais posé ces questions-là à voix haute. Les couples qui font 100 % ne sont d'ailleurs pas forcément les plus heureux : parfois, ils se racontent simplement la même histoire depuis dix ans."
+  },
+  "faq": {
+    "title": "Les questions qu'on nous pose",
+    "q1": "Il faut être combien pour jouer ?",
+    "a1": "Deux, et un seul téléphone. Le jeu est pensé pour se passer l'écran, pas pour jouer chacun dans son coin.",
+    "q2": "Combien de temps dure une partie ?",
+    "a2": "Quatre à cinq minutes pour les douze manches… si vous ne vous arrêtez pas pour débattre à chaque désaccord. Ce qui arrive souvent.",
+    "q3": "C'est gratuit ? Il faut créer un compte ?",
+    "a3": "Gratuit, et sans inscription. Vous ouvrez la page, vous entrez vos prénoms, vous jouez. Rien n'est enregistré.",
+    "q4": "On peut y rejouer plusieurs fois ?",
+    "a4": "Oui. Les douze manches sont tirées au hasard parmi quarante questions, donc deux parties d'affilée ne se ressemblent pas.",
+    "q5": "Et si on n'est d'accord sur rien ?",
+    "a5": "C'est le meilleur scénario, en vrai. Le jeu vous ressort la liste des questions litigieuses à la fin, et c'est exactement le genre de conversation qu'on ne lance jamais tout seul.",
+    "q6": "Ça marche pour un couple qui vient de se rencontrer ?",
+    "a6": "Oui, mais attendez-vous à un score bas et à beaucoup de rires. Les questions du thème rigolade passent très bien en début de relation, celles sur l'avenir un peu moins."
+  },
+  "section5": {
+    "title": "Envie d'enchaîner ?",
+    "p1": "Si le principe du vote secret vous a plu, le reste de nos jeux tourne autour de la même idée : vous faire parler sans en avoir l'air.",
+    "p2": "Bon jeu à vous deux !",
+    "cta": "Voir tous les jeux de couple"
+  }
+}

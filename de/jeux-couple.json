@@ -6,9 +6,9 @@
     "description": "Fünf Spiele, die auf einem einzigen Handy zwischen euch starten, ohne Konto und ohne Installation."
   },
   "stats": {
-    "jeux": "5",
+    "jeux": "6",
     "jeuxLabel": "Spiele zu zweit",
-    "cartes": "350",
+    "cartes": "390",
     "cartesLabel": "Karten, Strafen und Dilemmas",
     "compte": "0",
     "compteLabel": "Konten anzulegen"
@@ -44,7 +44,12 @@
     "plateauTagline": "Vierzig Felder, ein Würfel, zwei Figuren. Wer zuerst ankommt gewinnt, der Verlierer zieht eine Strafe.",
     "plateauJoueurs": "2 Spieler",
     "plateauDuree": "20 bis 30 Min.",
-    "plateauContenu": "40 Felder"
+    "plateauContenu": "40 Felder",
+    "quiDeNousNom": "Wer von uns beiden?",
+    "quiDeNousTagline": "Beide stimmen heimlich über dieselbe Frage ab, dann fallen die zwei Antworten gleichzeitig.",
+    "quiDeNousJoueurs": "2 Spieler",
+    "quiDeNousDuree": "5 Min.",
+    "quiDeNousContenu": "40 Fragen"
   },
   "section1": {
     "title": "Was ein Spiel zu zweit an einem Abend verändert",
@@ -67,7 +72,9 @@
     "row4Moment": "Eine verlorene Wette, ein Abend zum Wiederbeleben",
     "row4Pourquoi": "Niemand wählt die Strafe, also fühlt sich niemand gemeint. Ein Knopf, eine Drehung, erledigt.",
     "row5Moment": "Ein richtiger Abend zu zweit, ohne zweiten Bildschirm",
-    "row5Pourquoi": "Das einzige, das dreißig Minuten dauert und gewonnen werden kann. Ein Brett, ein Würfel und ein Grund, bis zum Ende zu spielen."
+    "row5Pourquoi": "Das einzige, das dreißig Minuten dauert und gewonnen werden kann. Ein Brett, ein Würfel und ein Grund, bis zum Ende zu spielen.",
+    "row6Moment": "Ein Abendessen zu zweit oder der Aperitif vor den Gästen",
+    "row6Pourquoi": "Fünf Minuten reichen, und jeder Streitpunkt bringt das Gespräch von allein wieder in Gang. Am schnellsten ausgepackt."
   },
   "section3": {
     "title": "Ein Spieleabend zu zweit, der wirklich funktioniert",

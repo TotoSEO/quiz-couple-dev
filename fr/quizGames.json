@@ -322,7 +322,8 @@
     "jeuActionVerite": "Jeu action ou vérité",
     "jeuActionVeriteHot": "Jeu action ou vérité coquin",
     "jeuGages": "la roue des gages",
-    "jeuPlateau": "jeu de plateau du couple"
+    "jeuPlateau": "jeu de plateau du couple",
+    "jeuQuiDeNous": "Qui de nous deux ?"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -429,5 +430,39 @@
     "intro": "Appuyez sur le bouton : la roue choisit le gage à votre place.",
     "compteur": "{{n}} gages tirés",
     "compteur1": "1 gage tiré"
+  },
+  "quiDeNous": {
+    "setupTitre": "Qui de nous deux ?",
+    "setupDesc": "Chacun vote en secret, puis on révèle les deux réponses en même temps. Vous allez voir si vous vous voyez pareil…",
+    "commencer": "On commence !",
+    "manche": "Manche {{n}} / {{total}}",
+    "amorce": "Qui de vous deux…",
+    "voteSecret": "{{nom}} vote en secret",
+    "passeTitre": "Passe le téléphone à {{nom}}",
+    "passeDesc": "Pas de triche : le vote reste caché jusqu'à la révélation.",
+    "passeCta": "C'est à moi !",
+    "decompte": "Révélation dans…",
+    "aDit": "{{nom}} a dit",
+    "accordTitre": "D'accord !",
+    "accordTexte": "Vous avez désigné la même personne. Un point de plus au compteur.",
+    "clashTitre": "Débat !",
+    "clashTexte": "Vous ne vous voyez pas pareil sur ce coup-là. Expliquez-vous, ça vaut le détour !",
+    "combo": "{{n}} d'affilée !",
+    "suivant": "Manche suivante",
+    "voirResultat": "Voir notre score",
+    "arreter": "Arrêter la partie",
+    "finTitre": "Votre score d'harmonie",
+    "finDetail": "{{n}} accords sur {{total}} manches",
+    "finSerie": "Meilleure série : {{n}} d'affilée",
+    "recapTitre": "À reparler ensemble",
+    "rejouer": "Rejouer avec d'autres questions",
+    "palier1Titre": "Vous ne vous voyez pas du tout pareil",
+    "palier1Texte": "Chacun a sa version, et elles ne se ressemblent pas beaucoup. Ce n'est pas grave du tout : ça veut surtout dire que vous avez des choses à vous raconter. Reprenez les manches où vous n'étiez pas d'accord, c'est là que se cachent les meilleures discussions.",
+    "palier2Titre": "Une image sur deux en commun",
+    "palier2Texte": "Sur la moitié des questions vous tombez juste, sur l'autre moitié pas du tout. C'est le score le plus courant, et franchement le plus intéressant : vous vous connaissez, mais il reste des angles morts. À creuser.",
+    "palier3Titre": "Vous vous connaissez bien",
+    "palier3Texte": "Vous voyez votre couple à peu près de la même façon, et ça se sent. Les quelques désaccords qui restent portent souvent sur des détails du quotidien… ou sur qui chante le plus faux.",
+    "palier4Titre": "Vous pensez pareil, c'est presque suspect",
+    "palier4Texte": "Vous avez désigné la même personne sur presque toutes les questions. Soit vous vous connaissez par cœur, soit l'un de vous a regardé par-dessus l'épaule de l'autre. On vous laisse en débattre !"
   }
 }

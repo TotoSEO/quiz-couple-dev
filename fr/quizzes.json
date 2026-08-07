@@ -209,10 +209,10 @@
     "metaDescription": "Suis-je amoureux ou juste attiré ? 20 questions pour distinguer l'amour du béguin. Test gratuit, résultat immédiat et sans inscription."
   },
   "jeuxCouple": {
-    "title": "Jeux de couple : 4 jeux gratuits en ligne, sans inscription",
+    "title": "Jeux de couple en ligne : 6 jeux gratuits à jouer à deux",
     "shortTitle": "Jeux de couple",
     "description": "Quatre jeux à jouer à deux : tu préfères, action ou vérité, sa version coquine et la roue des gages.",
-    "metaDescription": "4 jeux de couple gratuits à jouer sur un seul téléphone : tu préfères, action ou vérité, sa version coquine et la roue des gages. Sans inscription."
+    "metaDescription": "6 jeux de couple gratuits sur un seul téléphone : qui de nous deux, tu préfères, action ou vérité, sa version coquine, la roue des gages et le jeu de plateau. Sans inscription."
   },
   "jeuGages": {
     "title": "Gage couple : la roue des gages en ligne, 140 idées",
@@ -237,5 +237,11 @@
     "shortTitle": "Action ou vérité coquin",
     "description": "70 cartes coquines pour jouer à deux, du suggestif au très direct.",
     "metaDescription": "Action ou vérité coquin en ligne : 70 cartes du suggestif au très direct, vérité ou action au choix. Gratuit, sans inscription, à jouer à deux ce soir."
+  },
+  "jeuQuiDeNous": {
+    "title": "Qui de nous deux ? Jeu de couple gratuit à jouer à deux",
+    "shortTitle": "Qui de nous deux",
+    "metaDescription": "Le jeu où chacun vote en secret avant de découvrir la réponse de l'autre. 40 questions, un score d'harmonie et beaucoup de débats. Gratuit, sans inscription.",
+    "description": "Chacun vote en secret, on révèle les deux réponses en même temps : 40 questions et un score d'harmonie."
   }
 }

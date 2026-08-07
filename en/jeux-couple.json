@@ -6,9 +6,9 @@
     "description": "Five games that start on a single phone set down between you, with no account and nothing to install."
   },
   "stats": {
-    "jeux": "5",
+    "jeux": "6",
     "jeuxLabel": "games for two",
-    "cartes": "350",
+    "cartes": "390",
     "cartesLabel": "cards, forfeits and dilemmas",
     "compte": "0",
     "compteLabel": "accounts to create"
@@ -44,7 +44,12 @@
     "plateauTagline": "Forty squares, one dice, two pawns. First to the finish wins and the loser draws a forfeit.",
     "plateauJoueurs": "2 players",
     "plateauDuree": "20 to 30 min",
-    "plateauContenu": "40 squares"
+    "plateauContenu": "40 squares",
+    "quiDeNousNom": "Which one of us?",
+    "quiDeNousTagline": "You both vote in secret on the same question, then the two answers land together.",
+    "quiDeNousJoueurs": "2 players",
+    "quiDeNousDuree": "5 min",
+    "quiDeNousContenu": "40 questions"
   },
   "section1": {
     "title": "What a game for two changes about an evening",
@@ -67,7 +72,9 @@
     "row4Moment": "A lost bet, an evening to restart",
     "row4Pourquoi": "Nobody picks the forfeit, so nobody feels targeted. One button, one spin, and it is settled.",
     "row5Moment": "A proper evening for two, with no other screen on",
-    "row5Pourquoi": "The only one that lasts thirty minutes and can be won. A board, a dice, and a reason to keep going to the end."
+    "row5Pourquoi": "The only one that lasts thirty minutes and can be won. A board, a dice, and a reason to keep going to the end.",
+    "row6Moment": "Dinner for two, or drinks before the guests arrive",
+    "row6Pourquoi": "Five minutes is enough, and every disagreement restarts the conversation on its own. The quickest one to pull out."
   },
   "section3": {
     "title": "Making a games night for two work",

@@ -203,10 +203,10 @@
     "metaDescription": "Bin ich verliebt oder nur angezogen? 20 Fragen, die Liebe von Schwärmerei trennen. Gratis Test, sofortiges Ergebnis, ohne Anmeldung."
   },
   "jeuxCouple": {
-    "title": "Paarspiele: 4 kostenlose Onlinespiele ohne Anmeldung",
+    "title": "Paarspiele online: 6 kostenlose Spiele für zwei",
     "shortTitle": "Paarspiele",
     "description": "Vier Spiele für zu zweit: Was würdest du lieber, Wahrheit oder Pflicht, die versaute Version und das Strafen-Glücksrad.",
-    "metaDescription": "4 kostenlose Paarspiele auf einem einzigen Handy: Was würdest du lieber, Wahrheit oder Pflicht, die versaute Version und das Strafen-Glücksrad."
+    "metaDescription": "6 kostenlose Paarspiele auf einem einzigen Handy: Wer von uns beiden, Was würdest du lieber, Wahrheit oder Pflicht, die versaute Variante, das Pfänderrad und das Brettspiel. Ohne Anmeldung."
   },
   "jeuGages": {
     "title": "Strafen für Paare: das Onlinerad mit 140 Ideen",
@@ -231,5 +231,11 @@
     "shortTitle": "Wahrheit oder Pflicht versaut",
     "description": "70 pikante Karten zum Spielen zu zweit, von andeutend bis sehr direkt.",
     "metaDescription": "Wahrheit oder Pflicht versaut online: 70 Karten von andeutend bis sehr direkt, ihr sagt an. Gratis, ohne Anmeldung, heute Abend zu zweit."
+  },
+  "jeuQuiDeNous": {
+    "title": "Wer von uns beiden? Kostenloses Paarspiel für zwei",
+    "shortTitle": "Wer von uns beiden",
+    "metaDescription": "Das Spiel, bei dem jeder heimlich abstimmt und erst danach die Antwort des anderen sieht. 40 Fragen, ein Harmonie-Wert und viel Diskussionsstoff. Kostenlos, ohne Anmeldung.",
+    "description": "Jeder stimmt heimlich ab, beide Antworten werden gleichzeitig aufgedeckt: 40 Fragen und ein Harmonie-Wert."
   }
 }
