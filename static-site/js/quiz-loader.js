@@ -73,11 +73,13 @@
     // ── Attachement quiz (categorical: secure/anxious/avoidant → 4 styles) ──
     'attachement':    { prefix: 'attachement', engine: 'profile', totalQ: 20, pool: 20, quizType: 'attachement', categoryMap: { a: 'secure', b: 'secure', c: 'avoidant', d: 'anxious' } },
 
-    // ── Action ou vérité (tirage de cartes, sans configuration) ──
+    // ── Action ou vérité (cartes, le joueur choisit vérité ou action) ──
     // Deux pages distinctes : la version grand public et la version coquine,
-    // qui n'ont ni la même intention de recherche ni le même public.
-    'action-ou-verite':        { prefix: 'actionVerite', engine: 'party', totalQ: 0, pool: 0, textOnly: true, ambiances: ['classique', 'marrant'] },
-    'action-ou-verite-coquin': { prefix: 'actionVeriteHot', engine: 'party', totalQ: 0, pool: 0, textOnly: true, ambiances: ['coquin', 'hot'] },
+    // qui n'ont ni la même intention de recherche ni le même public. Les deux
+    // séries d'une page forment un seul paquet, elles ne sont plus proposées
+    // séparément au joueur.
+    'action-ou-verite':        { prefix: 'actionVerite', engine: 'party', totalQ: 0, pool: 0, textOnly: true, series: ['classique', 'marrant'] },
+    'action-ou-verite-coquin': { prefix: 'actionVeriteHot', engine: 'party', totalQ: 0, pool: 0, textOnly: true, series: ['coquin', 'hot'] },
     'gage-couple':             { prefix: 'gageRoue', engine: 'roue', totalQ: 0, pool: 0, textOnly: true, segments: ['bisou', 'massage', 'show', 'aveu', 'grimace', 'photo', 'douceur'] },
 
     // ── Suis-je amoureux (solo, ascendant : plus de signes = plus de points) ──
@@ -143,7 +145,7 @@
     // Le moteur de cartes ne lit pas des questions numérotées mais des paquets
     // par ambiance : il vérifie lui-même que ses données sont là.
     if (config.engine === 'party') {
-      var sonde = config.prefix + '.' + (config.ambiances || ['classique'])[0] + '_q1';
+      var sonde = config.prefix + '.' + (config.series || ['classique'])[0] + '_q1';
       if (!QuizEngine.tgd(sonde, null) || QuizEngine.tgd(sonde, null) === sonde) {
         if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
         if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
@@ -719,16 +721,13 @@
     });
   }
 
-  var EMOJIS_AMBIANCE = { classique: '💗', marrant: '😂', coquin: '🔥', hot: '🌶️' };
 
   function initPartyGame(cfg) {
     new QuizEngine.PartyGame({
       container: container,
       prefix: cfg.prefix,
       lang: lang,
-      ambiances: (cfg.ambiances || ['classique']).map(function(id) {
-        return { id: id, emoji: EMOJIS_AMBIANCE[id] || '🎲' };
-      })
+      series: cfg.series || ['classique']
     });
   }
 

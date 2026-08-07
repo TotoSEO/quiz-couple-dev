@@ -8,7 +8,7 @@
   "stats": {
     "jeux": "4",
     "jeuxLabel": "Spiele zu zweit",
-    "cartes": "240",
+    "cartes": "310",
     "cartesLabel": "Karten, Dilemmas und Strafen",
     "compte": "0",
     "compteLabel": "Konten anzulegen"
@@ -39,7 +39,7 @@
     "gagesTagline": "Ein Rad, das ihr beliebig oft dreht und das die Strafe für euch wählt, vom Kuss bis zur Beichte.",
     "gagesJoueurs": "2 Spieler",
     "gagesDuree": "Ohne Zeitlimit",
-    "gagesContenu": "70 Strafen"
+    "gagesContenu": "140 Strafen"
   },
   "section1": {
     "title": "Was ein Spiel zu zweit an einem Abend verändert",

@@ -384,9 +384,12 @@
     "introTitle": "Qual è il tuo stile di attaccamento?"
   },
   "jeu": {
-    "introTitle": "Scegliete la vostra atmosfera",
-    "introDesc": "Nessuna registrazione, nessuna preparazione: scegliete un ambiente e cade la prima carta.",
+    "setupTitre": "Chi gioca stasera?",
+    "setupDesc": "Inserite i vostri due nomi: il gioco annuncia a chi tocca.",
+    "commencer": "Inizia la partita",
+    "demande": "Verità o obbligo?",
     "tourDe": "Tocca a",
+    "tourDeVoyelle": "Tocca ad",
     "arreter": "Terminare la partita",
     "type_question": "Verità",
     "type_defi": "Obbligo",

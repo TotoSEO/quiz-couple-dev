@@ -8,7 +8,7 @@
   "stats": {
     "jeux": "4",
     "jeuxLabel": "juegos para dos",
-    "cartes": "240",
+    "cartes": "310",
     "cartesLabel": "cartas, dilemas y prendas",
     "compte": "0",
     "compteLabel": "cuentas que crear"
@@ -39,7 +39,7 @@
     "gagesTagline": "Una ruleta que se gira sin parar y elige la prenda por vosotros, del beso a la confesión.",
     "gagesJoueurs": "2 jugadores",
     "gagesDuree": "Sin límite",
-    "gagesContenu": "70 prendas"
+    "gagesContenu": "140 prendas"
   },
   "section1": {
     "title": "Lo que un juego en pareja cambia en una noche",

@@ -3,21 +3,21 @@
     "badge": "Réservé aux adultes • À deux • Gratuit",
     "title": "Action ou vérité coquin, la version qui ne se retient pas",
     "titleHighlight": "coquin",
-    "description": "70 cartes pour deux, en coquin ou en hot, sur un seul téléphone et sans rien préparer."
+    "description": "70 cartes pour deux, du suggestif au très direct, sur un seul téléphone et sans rien préparer."
   },
   "section1": {
-    "title": "Deux niveaux, parce que tout le monde ne part pas du même endroit",
-    "p1": "Un <strong class=\"text-foreground\">action ou vérité coquin</strong> qui commence trop fort ne marche pas : le premier défi met mal à l'aise et la partie s'arrête avant d'avoir commencé. C'est pour ça que ce jeu a deux niveaux séparés plutôt qu'un seul paquet.",
-    "p2": "L'ambiance <strong class=\"text-foreground\">coquin</strong> reste suggestive : des questions qui font rougir, des défis qui rapprochent, rien qui oblige à se découvrir. L'ambiance <strong class=\"text-foreground\">hot</strong> ne prend plus de précautions, les cartes sont directes et supposent que vous savez tous les deux où vous allez.",
-    "p3": "Commencez par la première même si vous pensez pouvoir sauter l'étape. Le rire des premières cartes fait plus pour la suite de la soirée que n'importe quel défi lancé à froid."
+    "title": "Un paquet qui va du suggestif au très direct",
+    "p1": "Un <strong class=\"text-foreground\">action ou vérité coquin</strong> qui commence trop fort ne marche pas : le premier défi met mal à l'aise et la partie s'arrête avant d'avoir commencé. C'est pour ça que ce paquet monte progressivement plutôt que de taper fort d'entrée.",
+    "p2": "Les cartes les plus douces restent suggestives : des questions qui font rougir, des défis qui rapprochent, rien qui oblige à se découvrir. Les plus directes ne prennent plus de précautions et supposent que vous savez tous les deux où vous allez. Le tirage les mélange, et c'est le droit de passer qui vous laisse la main.",
+    "p3": "Commencez doucement même si vous pensez pouvoir sauter l'étape. Le rire des premières cartes fait plus pour la suite de la soirée que n'importe quel défi lancé à froid."
   },
   "section2": {
     "title": "Comment ça se joue",
     "intro": "Les règles sont les mêmes que la version classique, avec un point supplémentaire qui compte davantage ici.",
-    "regle1Titre": "Choisissez votre niveau",
-    "regle1Texte": "Coquin ou hot. Le jeu ne mélange jamais les deux paquets : ce que vous choisissez au départ est ce que vous obtenez pendant toute la partie.",
-    "regle2Titre": "Une carte à la fois, tirée au hasard",
-    "regle2Texte": "Vérité ou action, vous ne choisissez pas. Vous ne voyez jamais la carte suivante, ce qui empêche de préparer sa réponse ou d'anticiper un défi.",
+    "regle1Titre": "Entrez vos deux prénoms",
+    "regle1Texte": "Le jeu annonce à qui c'est le tour à chaque carte, ce qui évite de discuter à chaque fois pour savoir qui joue.",
+    "regle2Titre": "Vérité ou action, c'est vous qui choisissez",
+    "regle2Texte": "Le joueur désigné annonce son camp, et la carte est tirée au hasard dans le paquet correspondant. Vous ne voyez jamais la suivante.",
     "regle3Titre": "Passer est prévu par le jeu",
     "regle3Texte": "Refuser une carte fait tomber un gage, et c'est tout. C'est la règle la plus importante de cette version : elle rend le refus banal au lieu d'en faire un aveu.",
     "regle4Titre": "Vous fixez la limite, pas le jeu",
@@ -31,13 +31,13 @@
   "faq": {
     "title": "Questions fréquentes",
     "q1": "Quelle différence avec la version classique ?",
-    "a1": "Les cartes. La version classique s'adresse à tous les couples et se joue devant n'importe qui. Celle-ci a ses propres paquets, coquin et hot, écrits pour un moment où vous êtes seuls tous les deux.",
+    "a1": "Les cartes. La version classique s'adresse à tous les couples et se joue devant n'importe qui. Celle-ci a son propre paquet, nettement plus direct, écrit pour un moment où vous êtes seuls tous les deux.",
     "q2": "C'est très explicite ?",
-    "a2": "L'ambiance coquin reste suggestive et ne demande jamais de se déshabiller entièrement. L'ambiance hot est nettement plus directe, avec des cartes qui supposent une intimité déjà installée. Vous choisissez le niveau avant de commencer.",
+    "a2": "Ça va du suggestif au très direct. Les cartes les plus douces demandent un compliment ou un baiser, les plus directes supposent une intimité déjà installée. Il n'y a pas de niveau à choisir : c'est le droit de passer qui fixe la limite, à chaque carte.",
     "q3": "Combien y a-t-il de cartes ?",
-    "a3": "70 réparties sur les deux niveaux, soit 15 vérités, 12 actions et 8 gages par niveau. Elles ne se répètent pas tant que la pioche n'est pas vide, ce qui laisse de quoi tenir une soirée entière sans retomber sur les mêmes.",
+    "a3": "70 au total : 30 vérités, 24 actions et 16 gages, réunis dans un seul paquet. Elles ne se répètent pas tant que la pioche n'est pas vide, ce qui laisse de quoi tenir une soirée entière sans retomber sur les mêmes.",
     "q4": "Est-ce que ça convient à un couple qui vient de se rencontrer ?",
-    "a4": "L'ambiance coquin, oui, elle fonctionne très bien pour tester le terrain. L'ambiance hot suppose que vous vous connaissez déjà bien : lancée trop tôt, elle met mal à l'aise plutôt qu'elle n'amuse.",
+    "a4": "Le début du paquet oui, il fonctionne très bien pour tester le terrain. Les cartes les plus directes supposent que vous vous connaissez déjà bien : si elles tombent trop tôt, passez, c'est prévu pour ça.",
     "q5": "Faut-il créer un compte ?",
     "a5": "Non, et rien n'est enregistré. Le jeu tourne dans votre navigateur, vos réponses ne quittent jamais l'appareil et il n'y a aucun historique de partie."
   },

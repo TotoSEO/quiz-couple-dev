@@ -3,7 +3,7 @@
     "badge": "Free • No sign-up • Spin as often as you like",
     "title": "The forfeit wheel to spin as a couple",
     "titleHighlight": "as a couple",
-    "description": "70 forfeits across seven families. You press, the wheel spins, and it decides instead of you."
+    "description": "140 forfeits across seven families. You press, the wheel spins, and it decides instead of you."
   },
   "familles": {
     "bisouNom": "Kiss",
@@ -29,7 +29,7 @@
   },
   "section2": {
     "title": "What is on the wheel",
-    "intro": "Each family holds its own ten forfeits, written for a couple and playable in a living room. Nothing repeats until the family runs out.",
+    "intro": "Each family holds its own twenty forfeits, written for a couple and playable in a living room. Nothing repeats until the family runs out.",
     "headerFamille": "The family",
     "headerContenu": "What it holds"
   },
@@ -48,9 +48,9 @@
   "faq": {
     "title": "Frequently asked questions",
     "q1": "How many forfeits are there?",
-    "a1": "70, split into seven families of ten. The surprise slot draws from all seven, so it adds no forfeits but it changes the way they land.",
+    "a1": "140, split into seven families of twenty. The surprise slot draws from all seven, so it adds no forfeits but it changes the way they land.",
     "q2": "Do the forfeits repeat?",
-    "a2": "Not until the family you landed on runs out. Each family reshuffles once its ten forfeits have come up, which is plenty for an evening without hitting the same one.",
+    "a2": "Not until the family you landed on runs out. Each family reshuffles once its twenty forfeits have come up, which is enough for several evenings without ever hitting the same one.",
     "q3": "Is it spicy?",
     "a3": "No, this wheel is built to be spun anywhere, friends included. The most intimate it gets is a kiss or a massage. For something more direct, our truth or dare games have their own separate deck.",
     "q4": "Can more than two people play?",

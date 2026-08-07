@@ -384,9 +384,12 @@
     "introTitle": "What is your attachment style?"
   },
   "jeu": {
-    "introTitle": "Pick your mood",
-    "introDesc": "No sign-up, no set-up: pick a mood and the first card drops.",
+    "setupTitre": "Who is playing tonight?",
+    "setupDesc": "Enter both first names: the game announces whose turn it is.",
+    "commencer": "Start the game",
+    "demande": "Truth or dare?",
     "tourDe": "Turn of",
+    "tourDeVoyelle": "Turn of",
     "arreter": "End the game",
     "type_question": "Truth",
     "type_defi": "Dare",

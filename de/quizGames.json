@@ -384,9 +384,12 @@
     "introTitle": "Was ist dein Bindungsstil?"
   },
   "jeu": {
-    "introTitle": "Wählt eure Stimmung",
-    "introDesc": "Keine Anmeldung, keine Vorbereitung: Stimmung wählen und die erste Karte fällt.",
+    "setupTitre": "Wer spielt heute Abend?",
+    "setupDesc": "Tragt eure beiden Vornamen ein: Das Spiel sagt an, wer dran ist.",
+    "commencer": "Partie starten",
+    "demande": "Wahrheit oder Pflicht?",
     "tourDe": "Am Zug ist",
+    "tourDeVoyelle": "Am Zug ist",
     "arreter": "Partie beenden",
     "type_question": "Wahrheit",
     "type_defi": "Pflicht",

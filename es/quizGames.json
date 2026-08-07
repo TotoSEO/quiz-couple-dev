@@ -384,9 +384,12 @@
     "introTitle": "¿Cuál es tu estilo de apego?"
   },
   "jeu": {
-    "introTitle": "Elegid vuestro ambiente",
-    "introDesc": "Sin registro y sin preparación: elegid un ambiente y cae la primera carta.",
+    "setupTitre": "¿Quién juega esta noche?",
+    "setupDesc": "Escribid vuestros dos nombres: el juego anuncia a quién le toca.",
+    "commencer": "Empezar la partida",
+    "demande": "¿Verdad o reto?",
     "tourDe": "Turno de",
+    "tourDeVoyelle": "Turno de",
     "arreter": "Terminar la partida",
     "type_question": "Verdad",
     "type_defi": "Reto",

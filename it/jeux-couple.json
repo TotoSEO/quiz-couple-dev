@@ -8,7 +8,7 @@
   "stats": {
     "jeux": "4",
     "jeuxLabel": "giochi in due",
-    "cartes": "240",
+    "cartes": "310",
     "cartesLabel": "carte, dilemmi e penitenze",
     "compte": "0",
     "compteLabel": "account da creare"
@@ -39,7 +39,7 @@
     "gagesTagline": "Una ruota da rilanciare all'infinito che sceglie la penitenza al posto vostro, dal bacio alla confessione.",
     "gagesJoueurs": "2 giocatori",
     "gagesDuree": "Senza limite",
-    "gagesContenu": "70 penitenze"
+    "gagesContenu": "140 penitenze"
   },
   "section1": {
     "title": "Che cosa cambia un gioco in due in una serata",

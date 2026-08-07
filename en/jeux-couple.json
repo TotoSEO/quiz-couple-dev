@@ -8,7 +8,7 @@
   "stats": {
     "jeux": "4",
     "jeuxLabel": "games for two",
-    "cartes": "240",
+    "cartes": "310",
     "cartesLabel": "cards, dilemmas and forfeits",
     "compte": "0",
     "compteLabel": "accounts to create"
@@ -39,7 +39,7 @@
     "gagesTagline": "A wheel you spin as often as you like, picking the forfeit for you, from a kiss to a confession.",
     "gagesJoueurs": "2 players",
     "gagesDuree": "No time limit",
-    "gagesContenu": "70 forfeits"
+    "gagesContenu": "140 forfeits"
   },
   "section1": {
     "title": "What a game for two changes about an evening",

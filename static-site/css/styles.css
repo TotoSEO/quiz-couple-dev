@@ -4965,29 +4965,54 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 
 /* ── Jeu de couple (moteur PartyGame) ─────────────────────── */
 
-.party-ambiances {
-  display: grid; gap: 0.875rem; margin-top: 0.5rem;
-  grid-template-columns: 1fr;
+.party-setup {
+  display: flex; flex-direction: column; gap: 0.75rem;
+  max-width: 22rem; margin: 0 auto;
 }
-@media (min-width: 640px) { .party-ambiances { grid-template-columns: repeat(3, 1fr); } }
+.party-input {
+  width: 100%; padding: 0.75rem 1rem;
+  border-radius: var(--radius); text-align: center;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card)); color: hsl(var(--foreground));
+  font-size: 1rem;
+}
+.party-input:focus-visible {
+  outline: 2px solid hsl(var(--primary)); outline-offset: 2px;
+  border-color: hsl(var(--primary));
+}
 
-.party-ambiance {
-  display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
-  padding: 1.5rem 1rem; text-align: center; cursor: pointer;
-  border: 1px solid hsl(var(--border)); border-radius: var(--radius);
-  background: hsl(var(--card));
-  transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out;
-  animation: fadeIn 300ms ease-out both;
+.party-demande {
+  margin: 1.5rem 0 1rem; text-align: center;
+  font-size: 1.15rem; font-weight: 700;
 }
-.party-ambiance:hover {
+.party-choix {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 26rem; margin: 0 auto;
+}
+.party-choix-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  padding: 1.6rem 1rem; cursor: pointer;
+  border-radius: calc(var(--radius) + 0.25rem);
+  border: 2px solid hsl(var(--border));
+  background: hsl(var(--card)); color: hsl(var(--foreground));
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.party-choix-btn:hover:not([disabled]) {
   transform: translateY(-3px);
-  border-color: hsl(var(--primary) / 0.5);
-  box-shadow: 0 10px 20px -8px hsl(var(--primary) / 0.35);
+  border-color: hsl(var(--primary) / 0.6);
+  box-shadow: 0 14px 28px -16px hsl(var(--primary) / 0.8);
 }
-.party-ambiance:active { transform: translateY(0); }
-.party-ambiance-emoji { font-size: 2.25rem; line-height: 1; }
-.party-ambiance-nom { font-weight: 700; font-size: 1.05rem; }
-.party-ambiance-desc { font-size: 0.8125rem; color: hsl(var(--muted-foreground)); line-height: 1.35; }
+.party-choix-btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+.party-choix-btn--question:hover:not([disabled]) { border-color: hsl(var(--primary) / 0.7); }
+.party-choix-btn--defi:hover:not([disabled]) { border-color: hsl(var(--secondary) / 0.7); }
+.party-choix-emoji { font-size: 2rem; line-height: 1; }
+.party-choix-nom { font-weight: 700; font-size: 1.05rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .party-choix-btn { transition: none; }
+  .party-choix-btn:hover:not([disabled]) { transform: none; }
+}
 
 .party-entete {
   display: flex; align-items: center; justify-content: space-between;

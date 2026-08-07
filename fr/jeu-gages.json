@@ -3,7 +3,7 @@
     "badge": "Gratuit • Sans inscription • À relancer à l'infini",
     "title": "La roue des gages à faire en couple",
     "titleHighlight": "en couple",
-    "description": "70 gages répartis en sept familles. Vous appuyez, la roue tourne, et elle décide à votre place."
+    "description": "140 gages répartis en sept familles. Vous appuyez, la roue tourne, et elle décide à votre place."
   },
   "familles": {
     "bisouNom": "Bisou",
@@ -29,7 +29,7 @@
   },
   "section2": {
     "title": "Ce qu'il y a dans la roue",
-    "intro": "Chaque famille a ses dix gages, écrits pour un couple et jouables dans un salon. Rien ne se répète tant que la famille n'est pas épuisée.",
+    "intro": "Chaque famille a ses vingt gages, écrits pour un couple et jouables dans un salon. Rien ne se répète tant que la famille n'est pas épuisée.",
     "headerFamille": "La famille",
     "headerContenu": "Ce qu'elle contient"
   },
@@ -48,9 +48,9 @@
   "faq": {
     "title": "Questions fréquentes",
     "q1": "Combien y a-t-il de gages ?",
-    "a1": "70, répartis en sept familles de dix. La case surprise pioche dans les sept, elle n'ajoute donc pas de gages mais elle change la façon dont ils tombent.",
+    "a1": "140, répartis en sept familles de vingt. La case surprise pioche dans les sept, elle n'ajoute donc pas de gages mais elle change la façon dont ils tombent.",
     "q2": "Est-ce que les gages se répètent ?",
-    "a2": "Pas tant que la famille tirée n'est pas vide. Chaque famille se remélange une fois ses dix gages sortis, ce qui laisse largement de quoi tenir une soirée sans retomber sur le même.",
+    "a2": "Pas tant que la famille tirée n'est pas vide. Chaque famille se remélange une fois ses vingt gages sortis, ce qui laisse de quoi tenir plusieurs soirées sans jamais retomber sur le même.",
     "q3": "Est-ce que c'est coquin ?",
     "a3": "Non, la roue est faite pour être lancée n'importe où, y compris devant des amis. Le plus intime reste un baiser ou un massage. Pour une version plus directe, nos jeux d'action ou vérité ont un paquet séparé.",
     "q4": "On peut y jouer à plus de deux ?",

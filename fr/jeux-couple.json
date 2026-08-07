@@ -8,7 +8,7 @@
   "stats": {
     "jeux": "4",
     "jeuxLabel": "jeux à deux",
-    "cartes": "240",
+    "cartes": "310",
     "cartesLabel": "cartes, dilemmes et gages",
     "compte": "0",
     "compteLabel": "compte à créer"
@@ -39,7 +39,7 @@
     "gagesTagline": "Une roue à relancer à l'infini qui choisit le gage à votre place, du bisou à l'aveu.",
     "gagesJoueurs": "2 joueurs",
     "gagesDuree": "Sans limite",
-    "gagesContenu": "70 gages"
+    "gagesContenu": "140 gages"
   },
   "section1": {
     "title": "Ce qu'un jeu à deux change à une soirée",

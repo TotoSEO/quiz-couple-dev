@@ -3,7 +3,7 @@
     "badge": "Gratis • Sin registro • Para girar sin parar",
     "title": "La ruleta de prendas para jugar en pareja",
     "titleHighlight": "en pareja",
-    "description": "70 prendas repartidas en siete familias. Pulsáis, la ruleta gira y decide por vosotros."
+    "description": "140 prendas repartidas en siete familias. Pulsáis, la ruleta gira y decide por vosotros."
   },
   "familles": {
     "bisouNom": "Beso",
@@ -29,7 +29,7 @@
   },
   "section2": {
     "title": "Qué hay en la ruleta",
-    "intro": "Cada familia tiene sus diez prendas, escritas para una pareja y jugables en un salón. Nada se repite mientras quede familia.",
+    "intro": "Cada familia tiene sus veinte prendas, escritas para una pareja y jugables en un salón. Nada se repite mientras quede familia.",
     "headerFamille": "La familia",
     "headerContenu": "Qué contiene"
   },
@@ -48,9 +48,9 @@
   "faq": {
     "title": "Preguntas frecuentes",
     "q1": "¿Cuántas prendas hay?",
-    "a1": "70, repartidas en siete familias de diez. La casilla sorpresa saca de las siete, así que no añade prendas pero cambia la forma en que salen.",
+    "a1": "140, repartidas en siete familias de veinte. La casilla sorpresa saca de las siete, así que no añade prendas pero cambia la forma en que salen.",
     "q2": "¿Se repiten las prendas?",
-    "a2": "No mientras quede algo en la familia que ha salido. Cada familia se rebaraja una vez han salido sus diez prendas, lo que da de sobra para una noche sin repetir.",
+    "a2": "No mientras quede algo en la familia que ha salido. Cada familia se rebaraja una vez han salido sus veinte prendas, lo que da para varias noches sin repetir nunca.",
     "q3": "¿Es picante?",
     "a3": "No, la ruleta está pensada para girarla en cualquier sitio, incluso delante de amigos. Lo más íntimo es un beso o un masaje. Para algo más directo, nuestros juegos de verdad o reto tienen su propio mazo aparte.",
     "q4": "¿Se puede jugar entre más de dos?",

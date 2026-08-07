@@ -36,7 +36,11 @@
         <ol>
           <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
           <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
-          <li class="breadcrumb-current" aria-current="page"><%= pageTitle %></li>
+          <% if (getLocalizedUrl('jeuxCouple', lang)) { %>
+          <li><a href="<%= getLocalizedUrl('jeuxCouple', lang) %>"><%= t('quizzes:jeuxCouple.shortTitle', 'Jeux de couple') %></a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <% } %>
+          <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:' + routeKey + '.shortTitle', pageTitle) %></li>
         </ol>
       </nav>
       <span class="hero-badge mb-4">

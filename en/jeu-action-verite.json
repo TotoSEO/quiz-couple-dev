@@ -3,21 +3,21 @@
     "badge": "Free • No sign-up • For two",
     "title": "Truth or dare for couples, with nothing to set up",
     "titleHighlight": "for couples",
-    "description": "70 cards drawn at random, two moods to pick from, and the game starts in one tap on a single phone."
+    "description": "70 cards drawn at random, truth or dare picked by the player, on a single phone set down between you."
   },
   "section1": {
     "title": "A truth or dare you actually play, not a list you scroll",
     "p1": "Most <strong class=\"text-foreground\">truth or dare for couples</strong> pages hand you a hundred questions to read one after the other. It works for five minutes, then someone hunts for the next one, someone else cheats by reading ahead, and the game stops.",
-    "p2": "This is a game: you pick a mood, a card drops, and you only ever see one at a time. No list, no order known in advance, no way to spot what is coming. Cards do not repeat until the deck runs out, and turning a card down brings a forfeit.",
+    "p2": "This is a game: whoever's turn it is calls truth or dare, a card drops, and you only ever see one at a time. No list, no order known in advance, no way to spot what is coming. Cards do not repeat until the deck runs out, and turning a card down brings a forfeit.",
     "p3": "Everything happens on a single phone set down between you, with no account to create and nothing to install. The game has no set ending: you stop when you want, and the recap tells you how many cards you took on."
   },
   "section2": {
     "title": "The rules, in four points",
     "intro": "They fit in a few lines, which is rather the point of the game.",
-    "regle1Titre": "Pick a mood",
-    "regle1Texte": "Classic for the questions and dares that suit every couple, funny for the version where you tease each other. You can switch mood along the way by starting a new game.",
-    "regle2Titre": "One card, one player",
-    "regle2Texte": "The game announces whose turn it is and draws a card, truth or dare. You do not choose which of the two, the draw decides, and that is what makes the game unpredictable.",
+    "regle1Titre": "Enter both first names",
+    "regle1Texte": "The game announces whose turn it is on every card: no more wondering who plays next, and no keeping count in your head.",
+    "regle2Titre": "Truth or dare, you decide",
+    "regle2Texte": "On every turn the player called out picks their side. You choose the type; you do not choose the content, which is drawn at random from the matching deck.",
     "regle3Titre": "You do it, or you pass",
     "regle3Texte": "If the card suits you, you take it on and the turn moves to the other person. If you would rather skip it, you pass and a forfeit drops instead. Nobody has to justify anything.",
     "regle4Titre": "You stop whenever you like",
@@ -31,9 +31,9 @@
   "faq": {
     "title": "Frequently asked questions",
     "q1": "How many cards are there?",
-    "a1": "70 in total, split across the two moods: 15 truths, 12 dares and 8 forfeits on each side. They do not repeat until the deck is exhausted, which is plenty for a whole evening.",
+    "a1": "70 in total: 30 truths, 24 dares and 16 forfeits, all in one deck. They do not repeat until the deck is exhausted, which is plenty for a whole evening.",
     "q2": "Do I need to sign up or install anything?",
-    "a2": "Neither. The game runs directly in your browser, on a phone or a computer. You open the page, pick a mood and the first card drops.",
+    "a2": "Neither. The game runs directly in your browser, on a phone or a computer. You open the page, enter your first names and the first card drops.",
     "q3": "How many people can play?",
     "a3": "The game is built for two, with turns announced on every card. Nothing stops you passing the phone around a bigger group, but the cards are written for a couple.",
     "q4": "Is there a bolder version?",

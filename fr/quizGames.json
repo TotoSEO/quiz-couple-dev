@@ -385,9 +385,12 @@
     "gapWarning": "⚠️ L'écart entre vos scores est significatif. Prenez le temps de discuter de vos perceptions respectives."
   },
   "jeu": {
-    "introTitle": "Choisissez votre ambiance",
-    "introDesc": "Pas d'inscription, pas de préparation : choisissez une ambiance et la première carte tombe.",
+    "setupTitre": "Qui joue ce soir ?",
+    "setupDesc": "Entrez vos deux prénoms : le jeu annonce à qui c'est le tour.",
+    "commencer": "Commencer la partie",
+    "demande": "Vérité ou action ?",
     "tourDe": "Au tour de",
+    "tourDeVoyelle": "Au tour d'",
     "arreter": "Terminer la partie",
     "type_question": "Vérité",
     "type_defi": "Action",
