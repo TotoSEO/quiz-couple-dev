@@ -73,12 +73,21 @@
     // ── Attachement quiz (categorical: secure/anxious/avoidant → 4 styles) ──
     'attachement':    { prefix: 'attachement', engine: 'profile', totalQ: 20, pool: 20, quizType: 'attachement', categoryMap: { a: 'secure', b: 'secure', c: 'avoidant', d: 'anxious' } },
 
-    // ── Action ou vérité (tirage de cartes, sans configuration) ──
+    // ── Action ou vérité (cartes, le joueur choisit vérité ou action) ──
     // Deux pages distinctes : la version grand public et la version coquine,
-    // qui n'ont ni la même intention de recherche ni le même public.
-    'action-ou-verite':        { prefix: 'actionVerite', engine: 'party', totalQ: 0, pool: 0, textOnly: true, ambiances: ['classique', 'marrant'] },
-    'action-ou-verite-coquin': { prefix: 'actionVeriteHot', engine: 'party', totalQ: 0, pool: 0, textOnly: true, ambiances: ['coquin', 'hot'] },
+    // qui n'ont ni la même intention de recherche ni le même public. Les deux
+    // séries d'une page forment un seul paquet, elles ne sont plus proposées
+    // séparément au joueur.
+    'action-ou-verite':        { prefix: 'actionVerite', engine: 'party', totalQ: 0, pool: 0, textOnly: true, series: ['classique', 'marrant'] },
+    'action-ou-verite-coquin': { prefix: 'actionVeriteHot', engine: 'party', totalQ: 0, pool: 0, textOnly: true, series: ['coquin', 'hot'] },
     'gage-couple':             { prefix: 'gageRoue', engine: 'roue', totalQ: 0, pool: 0, textOnly: true, segments: ['bisou', 'massage', 'show', 'aveu', 'grimace', 'photo', 'douceur'] },
+
+    // ── Le plateau : le seul jeu qui se gagne. Il pioche dans ses propres
+    // cases et dans les paquets deja ecrits pour les cartes et pour la roue,
+    // d'ou les prefixes supplementaires a charger.
+    'plateau-couple':          { prefix: 'plateau', engine: 'plateau', totalQ: 0, pool: 0, textOnly: true, prefixesExtra: ['actionVerite', 'gageRoue'] },
+    // ── Qui de nous deux : vote secret de chacun puis revelation commune.
+    'qui-de-nous-deux':        { prefix: 'quiDeNous', engine: 'duo-vote', totalQ: 0, pool: 0, textOnly: true },
 
     // ── Suis-je amoureux (solo, ascendant : plus de signes = plus de points) ──
     'suis-je-amoureux': { prefix: 'suisjeamoureux', engine: 'solo', totalQ: 20, pool: 20, quizType: 'suisjeamoureux', ascending: true },
@@ -117,6 +126,7 @@
     function ajoute(p) { if (p && l.indexOf(p) === -1) l.push(p); }
     ajoute(cfg.prefix);
     ajoute(cfg.resultPrefix);
+    (cfg.prefixesExtra || []).forEach(ajoute);
     if (cfg.prefix === 'healthy') ajoute('couple');   // repli du quiz sain en FR
     return l;
   }
@@ -125,6 +135,42 @@
   var _dataAttempt = 0;
   var _repliComplet = false;
   function initFromData() {
+    // Le plateau vérifie lui aussi ses propres données : ses cases, mais
+    // surtout les paquets empruntés aux autres jeux.
+    if (config.engine === 'plateau') {
+      var sondeP = config.prefix + '.souvenir1';
+      var sondeC = 'actionVerite.classique_q1';
+      var manque = function(k) { return !QuizEngine.tgd(k, null) || QuizEngine.tgd(k, null) === k; };
+      if (manque(sondeP) || manque(sondeC)) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      container.dataset.hasPool = '0';
+      new QuizEngine.BoardGame({ container: container, prefix: config.prefix, lang: lang });
+      return;
+    }
+
+    // Qui de nous deux lit quatre familles de questions : il vérifie la
+    // première de chacune avant de démarrer.
+    if (config.engine === 'duo-vote') {
+      var themes = ['quotidien', 'amour', 'caractere', 'drole'];
+      var absent = themes.some(function(t) {
+        var k = config.prefix + '.' + t + '1';
+        return !QuizEngine.tgd(k, null) || QuizEngine.tgd(k, null) === k;
+      });
+      if (absent) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      container.dataset.hasPool = '0';
+      new QuizEngine.DuoVoteGame({ container: container, prefix: config.prefix, lang: lang });
+      return;
+    }
+
     // La roue des gages ne lit pas des questions numérotées mais des familles
     // de gages : elle vérifie elle-même que ses données sont là.
     if (config.engine === 'roue') {
@@ -143,7 +189,7 @@
     // Le moteur de cartes ne lit pas des questions numérotées mais des paquets
     // par ambiance : il vérifie lui-même que ses données sont là.
     if (config.engine === 'party') {
-      var sonde = config.prefix + '.' + (config.ambiances || ['classique'])[0] + '_q1';
+      var sonde = config.prefix + '.' + (config.series || ['classique'])[0] + '_q1';
       if (!QuizEngine.tgd(sonde, null) || QuizEngine.tgd(sonde, null) === sonde) {
         if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
         if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
@@ -719,16 +765,13 @@
     });
   }
 
-  var EMOJIS_AMBIANCE = { classique: '💗', marrant: '😂', coquin: '🔥', hot: '🌶️' };
 
   function initPartyGame(cfg) {
     new QuizEngine.PartyGame({
       container: container,
       prefix: cfg.prefix,
       lang: lang,
-      ambiances: (cfg.ambiances || ['classique']).map(function(id) {
-        return { id: id, emoji: EMOJIS_AMBIANCE[id] || '🎲' };
-      })
+      series: cfg.series || ['classique']
     });
   }
 

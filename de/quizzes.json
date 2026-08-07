@@ -203,27 +203,39 @@
     "metaDescription": "Bin ich verliebt oder nur angezogen? 20 Fragen, die Liebe von Schwärmerei trennen. Gratis Test, sofortiges Ergebnis, ohne Anmeldung."
   },
   "jeuxCouple": {
-    "title": "Paarspiele: 4 kostenlose Onlinespiele ohne Anmeldung",
+    "title": "Paarspiele online: 6 kostenlose Spiele für zwei",
     "shortTitle": "Paarspiele",
     "description": "Vier Spiele für zu zweit: Was würdest du lieber, Wahrheit oder Pflicht, die versaute Version und das Strafen-Glücksrad.",
-    "metaDescription": "4 kostenlose Paarspiele auf einem einzigen Handy: Was würdest du lieber, Wahrheit oder Pflicht, die versaute Version und das Strafen-Glücksrad."
+    "metaDescription": "6 kostenlose Paarspiele auf einem einzigen Handy: Wer von uns beiden, Was würdest du lieber, Wahrheit oder Pflicht, die versaute Variante, das Pfänderrad und das Brettspiel. Ohne Anmeldung."
   },
   "jeuGages": {
-    "title": "Strafen für Paare: das Onlinerad mit 70 Ideen",
+    "title": "Strafen für Paare: das Onlinerad mit 140 Ideen",
     "shortTitle": "Strafen-Rad",
-    "description": "Ein Rad, das sich endlos drehen lässt und eine von 70 Strafen aus sieben Familien zieht.",
-    "metaDescription": "Strafen-Glücksrad für Paare: 70 zufällige Strafen, vom Kuss bis zur Beichte. Gratis, ohne Anmeldung, beliebig oft neu drehbar."
+    "description": "Ein Rad, das sich endlos drehen lässt und eine von 140 Strafen aus sieben Familien zieht.",
+    "metaDescription": "Strafen-Glücksrad für Paare: 140 zufällige Strafen, vom Kuss bis zur Beichte. Gratis, ohne Anmeldung, beliebig oft neu drehbar."
+  },
+  "jeuPlateau": {
+    "title": "Brettspiel für Paare: 40 Felder, ein Würfel, ein Sieger",
+    "shortTitle": "Brettspiel",
+    "description": "Ein Brett mit 40 Feldern für zu zweit auf einem Handy, mit einem echten Sieger im Ziel.",
+    "metaDescription": "Brettspiel für Paare: 40 Felder, ein Würfel, zwei Figuren. Wahrheiten, Pflichten, Duelle und Strafen. Gratis, ohne Anmeldung, wer zuerst ankommt gewinnt."
   },
   "jeuActionVerite": {
     "title": "Wahrheit oder Pflicht für Paare: das Onlinespiel, 70 Karten",
     "shortTitle": "Wahrheit oder Pflicht",
-    "description": "70 zufällig gezogene Karten für Wahrheit oder Pflicht zu zweit, ganz ohne Vorbereitung.",
-    "metaDescription": "Spielt Wahrheit oder Pflicht als Paar: 70 zufällige Karten, zwei Stimmungen, auf einem einzigen Handy. Gratis, ohne Anmeldung, immer eine Karte."
+    "description": "70 zufällig gezogene Karten für Wahrheit oder Pflicht zu zweit, ihr sagt an.",
+    "metaDescription": "Spielt Wahrheit oder Pflicht als Paar: 70 zufällige Karten, und ihr sagt an, Wahrheit oder Pflicht. Gratis, ohne Anmeldung, auf einem einzigen Handy."
   },
   "jeuActionVeriteHot": {
     "title": "Wahrheit oder Pflicht versaut: das heiße Spiel zu zweit",
     "shortTitle": "Wahrheit oder Pflicht versaut",
-    "description": "70 pikante und heiße Karten zum Spielen zu zweit, mit zwei Stufen zur Auswahl.",
-    "metaDescription": "Wahrheit oder Pflicht versaut online: 70 Karten, zwei Stufen von soft bis hot. Gratis, ohne Anmeldung, heute Abend zu zweit zu spielen."
+    "description": "70 pikante Karten zum Spielen zu zweit, von andeutend bis sehr direkt.",
+    "metaDescription": "Wahrheit oder Pflicht versaut online: 70 Karten von andeutend bis sehr direkt, ihr sagt an. Gratis, ohne Anmeldung, heute Abend zu zweit."
+  },
+  "jeuQuiDeNous": {
+    "title": "Wer von uns beiden? Kostenloses Paarspiel für zwei",
+    "shortTitle": "Wer von uns beiden",
+    "metaDescription": "Das Spiel, bei dem jeder heimlich abstimmt und erst danach die Antwort des anderen sieht. 40 Fragen, ein Harmonie-Wert und viel Diskussionsstoff. Kostenlos, ohne Anmeldung.",
+    "description": "Jeder stimmt heimlich ab, beide Antworten werden gleichzeitig aufgedeckt: 40 Fragen und ein Harmonie-Wert."
   }
 }

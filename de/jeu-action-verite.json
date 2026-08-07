@@ -3,21 +3,21 @@
     "badge": "Gratis • Ohne Anmeldung • Zu zweit",
     "title": "Wahrheit oder Pflicht zu zweit, ganz ohne Vorbereitung",
     "titleHighlight": "zu zweit",
-    "description": "70 zufällig gezogene Karten, zwei Stimmungen zur Auswahl, und die Partie startet mit einem Tipp auf einem einzigen Handy."
+    "description": "70 zufällig gezogene Karten, Wahrheit oder Pflicht nach Wahl des Spielers, auf einem einzigen Handy zwischen euch."
   },
   "section1": {
     "title": "Ein Wahrheit oder Pflicht, das man wirklich spielt, keine Liste zum Scrollen",
     "p1": "Die meisten Seiten zu <strong class=\"text-foreground\">Wahrheit oder Pflicht für Paare</strong> geben euch hundert Fragen zum Nacheinanderlesen. Das funktioniert fünf Minuten, dann sucht einer die nächste, ein anderer schummelt und liest vor, und die Partie ist vorbei.",
-    "p2": "Hier ist es ein Spiel: Ihr wählt eine Stimmung, eine Karte fällt, und ihr seht immer nur eine. Keine Liste, keine vorher bekannte Reihenfolge, keine Möglichkeit, die nächste zu erspähen. Karten wiederholen sich nicht, solange der Stapel reicht, und wer ablehnt, zieht eine Strafe.",
+    "p2": "Hier ist es ein Spiel: Wer dran ist, sagt Wahrheit oder Pflicht an, eine Karte fällt, und ihr seht immer nur eine. Keine Liste, keine vorher bekannte Reihenfolge, keine Möglichkeit, die nächste zu erspähen. Karten wiederholen sich nicht, solange der Stapel reicht, und wer ablehnt, zieht eine Strafe.",
     "p3": "Alles läuft auf einem einzigen Handy zwischen euch, ohne Konto und ohne Installation. Die Partie hat kein festes Ende: Ihr hört auf, wann ihr wollt, und die Zusammenfassung sagt euch, wie viele Karten ihr geschafft habt."
   },
   "section2": {
     "title": "Die Regeln in vier Punkten",
     "intro": "Sie passen in ein paar Zeilen, was ungefähr der Sinn des Spiels ist.",
-    "regle1Titre": "Wählt eine Stimmung",
-    "regle1Texte": "Klassisch für die Fragen und Aufgaben, die zu jedem Paar passen, lustig für die Version, in der ihr euch aufzieht. Ihr könnt unterwegs wechseln, indem ihr eine neue Partie startet.",
-    "regle2Titre": "Eine Karte, ein Spieler",
-    "regle2Texte": "Das Spiel sagt an, wer dran ist, und zieht eine Karte, Wahrheit oder Pflicht. Ihr wählt nicht, welche von beiden, das entscheidet der Zug, und genau das macht die Partie unvorhersehbar.",
+    "regle1Titre": "Tragt eure beiden Vornamen ein",
+    "regle1Texte": "Das Spiel sagt bei jeder Karte an, wer dran ist: Niemand muss mehr fragen, wer spielt, oder im Kopf mitzählen.",
+    "regle2Titre": "Wahrheit oder Pflicht, ihr entscheidet",
+    "regle2Texte": "In jeder Runde sagt der aufgerufene Spieler seine Seite an. Die Art wählt ihr; den Inhalt der Karte nicht, der wird zufällig aus dem passenden Stapel gezogen.",
     "regle3Titre": "Ihr macht es, oder ihr passt",
     "regle3Texte": "Passt die Karte, erfüllt ihr sie und der andere ist dran. Wollt ihr sie lieber vermeiden, passt ihr und stattdessen fällt eine Strafe. Niemand muss sich rechtfertigen.",
     "regle4Titre": "Ihr hört auf, wann ihr wollt",
@@ -31,9 +31,9 @@
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Wie viele Karten gibt es?",
-    "a1": "70 insgesamt, verteilt auf die beiden Stimmungen: 15 Wahrheiten, 12 Aufgaben und 8 Strafen je Seite. Sie wiederholen sich nicht, solange der Stapel reicht, was für einen ganzen Abend genügt.",
+    "a1": "70 insgesamt: 30 Wahrheiten, 24 Aufgaben und 16 Strafen in einem einzigen Stapel. Sie wiederholen sich nicht, solange der Stapel reicht, was für einen ganzen Abend genügt.",
     "q2": "Muss man sich anmelden oder etwas installieren?",
-    "a2": "Weder noch. Das Spiel läuft direkt im Browser, auf dem Handy wie am Rechner. Ihr öffnet die Seite, wählt eine Stimmung und die erste Karte fällt.",
+    "a2": "Weder noch. Das Spiel läuft direkt im Browser, auf dem Handy wie am Rechner. Ihr öffnet die Seite, tragt eure Vornamen ein und die erste Karte fällt.",
     "q3": "Zu wie vielt kann man spielen?",
     "a3": "Das Spiel ist für zwei gemacht, mit einer Ansage, wer dran ist. Nichts hindert euch daran, das Handy in einer größeren Runde herumzureichen, aber die Karten sind für ein Paar geschrieben.",
     "q4": "Gibt es eine gewagtere Version?",

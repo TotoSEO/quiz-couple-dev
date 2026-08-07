@@ -203,27 +203,39 @@
     "metaDescription": "Am I in love or just attracted? 20 questions to tell real love from a crush. Free test, instant result, no sign-up needed."
   },
   "jeuxCouple": {
-    "title": "Couple Games: 4 Free Online Games, No Sign-Up",
+    "title": "Online Couple Games: 6 Free Games to Play Together",
     "shortTitle": "Couple games",
     "description": "Four games to play together: would you rather, truth or dare, its dirty version and the forfeit wheel.",
-    "metaDescription": "4 free couple games to play on a single phone: would you rather, truth or dare, its dirty version and the forfeit wheel. No sign-up needed."
+    "metaDescription": "6 free couple games on a single phone: which one of us, would you rather, truth or dare, its naughty version, the forfeit wheel and the board game. No sign-up."
   },
   "jeuGages": {
-    "title": "Couple Forfeits: the Online Wheel, 70 Ideas",
+    "title": "Couple Forfeits: the Online Wheel, 140 Ideas",
     "shortTitle": "Forfeit wheel",
-    "description": "A wheel you can spin forever, drawing one forfeit at random out of 70, across seven families.",
-    "metaDescription": "Forfeit wheel for couples: 70 forfeits drawn at random, from a kiss to a confession. Free, no sign-up, spin again as often as you like."
+    "description": "A wheel you can spin forever, drawing one forfeit at random out of 140, across seven families.",
+    "metaDescription": "Forfeit wheel for couples: 140 forfeits drawn at random, from a kiss to a confession. Free, no sign-up, spin again as often as you like."
+  },
+  "jeuPlateau": {
+    "title": "Couple Board Game: 40 Squares, One Dice, One Winner",
+    "shortTitle": "Board game",
+    "description": "A 40-square board to play together on one phone, with a real winner at the finish.",
+    "metaDescription": "Board game for couples: 40 squares, one dice, two pawns. Truths, dares, duels and forfeits. Free, no sign-up, first to the finish wins."
   },
   "jeuActionVerite": {
     "title": "Truth or Dare for Couples: the Online Game, 70 Cards",
     "shortTitle": "Truth or dare",
-    "description": "70 cards drawn at random to play truth or dare for two, with nothing to prepare.",
-    "metaDescription": "Play truth or dare as a couple: 70 cards drawn at random, two moods, on a single phone. Free, no sign-up, one card at a time."
+    "description": "70 cards drawn at random to play truth or dare for two, truth or dare is your call.",
+    "metaDescription": "Play truth or dare as a couple: 70 cards drawn at random and you call it, truth or dare. Free, no sign-up, on a single phone."
   },
   "jeuActionVeriteHot": {
     "title": "Dirty Truth or Dare: the Hot Game for Two, Free",
     "shortTitle": "Dirty truth or dare",
-    "description": "70 spicy and hot cards to play as a couple, with two levels to choose from.",
-    "metaDescription": "Dirty truth or dare online: 70 cards, two levels from the softest to the hottest. Free, no sign-up, to play together tonight."
+    "description": "70 spicy cards to play as a couple, from suggestive to very direct.",
+    "metaDescription": "Dirty truth or dare online: 70 cards from suggestive to very direct, truth or dare is your call. Free, no sign-up, to play together tonight."
+  },
+  "jeuQuiDeNous": {
+    "title": "Which One of Us? Free Couple Game to Play Together",
+    "shortTitle": "Which one of us",
+    "metaDescription": "The game where you each vote in secret before seeing your partner's answer. 40 questions, a harmony score and plenty of debate. Free, no sign-up.",
+    "description": "You each vote in secret, both answers are revealed at once: 40 questions and a harmony score."
   }
 }

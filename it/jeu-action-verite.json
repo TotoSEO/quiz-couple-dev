@@ -3,21 +3,21 @@
     "badge": "Gratis • Senza registrazione • In due",
     "title": "Obbligo o verità di coppia, senza preparare niente",
     "titleHighlight": "di coppia",
-    "description": "70 carte estratte a caso, due atmosfere a scelta, e la partita parte con un tocco su un solo telefono."
+    "description": "70 carte estratte a caso, verità o obbligo a scelta del giocatore, su un solo telefono appoggiato tra voi due."
   },
   "section1": {
     "title": "Un obbligo o verità che si gioca davvero, non una lista da scorrere",
     "p1": "La maggior parte delle pagine di <strong class=\"text-foreground\">obbligo o verità per coppie</strong> vi dà cento domande da leggere una dopo l'altra. Funziona cinque minuti, poi uno cerca la successiva, un altro bara leggendo avanti, e la partita si ferma.",
-    "p2": "Qui è un gioco: scegliete un'atmosfera, cade una carta e ne vedete solo una alla volta. Nessuna lista, nessun ordine noto in anticipo, nessun modo di sbirciare la prossima. Le carte non si ripetono finché il mazzo non finisce, e rifiutarne una fa cadere una penitenza.",
+    "p2": "Qui è un gioco: chi è di turno annuncia verità o obbligo, cade una carta e ne vedete solo una alla volta. Nessuna lista, nessun ordine noto in anticipo, nessun modo di sbirciare la prossima. Le carte non si ripetono finché il mazzo non finisce, e rifiutarne una fa cadere una penitenza.",
     "p3": "Tutto avviene su un solo telefono appoggiato tra voi due, senza account da creare e senza installare niente. La partita non ha una fine imposta: la fermate quando volete, e il riepilogo vi dice quante carte avete affrontato."
   },
   "section2": {
     "title": "Le regole, in quattro punti",
     "intro": "Stanno in poche righe, che poi è un po' il senso del gioco.",
-    "regle1Titre": "Scegliete un'atmosfera",
-    "regle1Texte": "Classica per le domande e le prove che vanno bene a ogni coppia, divertente per la versione in cui vi prendete in giro. Potete cambiare atmosfera lungo il percorso lanciando una nuova partita.",
-    "regle2Titre": "Una carta, un giocatore",
-    "regle2Texte": "Il gioco annuncia a chi tocca ed estrae una carta, verità o obbligo. Non scegliete voi quale delle due, decide l'estrazione, ed è questo che rende la partita imprevedibile.",
+    "regle1Titre": "Inserite i vostri due nomi",
+    "regle1Texte": "Il gioco annuncia a chi tocca a ogni carta: niente più domande su chi gioca né conti da tenere a mente.",
+    "regle2Titre": "Verità o obbligo, scegliete voi",
+    "regle2Texte": "A ogni turno il giocatore chiamato annuncia la sua parte. Il tipo lo decidete voi; il contenuto della carta no, viene estratto a caso dal mazzo corrispondente.",
     "regle3Titre": "O la fai, o passi",
     "regle3Texte": "Se la carta ti va bene, la affronti e il turno passa all'altro. Se preferisci evitarla, passi e al suo posto cade una penitenza. Nessuno deve giustificarsi.",
     "regle4Titre": "Vi fermate quando volete",
@@ -31,9 +31,9 @@
   "faq": {
     "title": "Domande frequenti",
     "q1": "Quante carte ci sono?",
-    "a1": "70 in totale, divise tra le due atmosfere: 15 verità, 12 obblighi e 8 penitenze per ciascuna. Non si ripetono finché il mazzo non è esaurito, il che basta ampiamente per una serata intera.",
+    "a1": "70 in totale: 30 verità, 24 obblighi e 16 penitenze, in un unico mazzo. Non si ripetono finché il mazzo non è esaurito, il che basta ampiamente per una serata intera.",
     "q2": "Bisogna registrarsi o installare qualcosa?",
-    "a2": "Né l'uno né l'altro. Il gioco funziona direttamente nel browser, su telefono come su computer. Aprite la pagina, scegliete un'atmosfera e cade la prima carta.",
+    "a2": "Né l'uno né l'altro. Il gioco funziona direttamente nel browser, su telefono come su computer. Aprite la pagina, inserite i vostri nomi e cade la prima carta.",
     "q3": "In quanti si può giocare?",
     "a3": "Il gioco è pensato per due, con il turno annunciato a ogni carta. Niente vieta di giocare in più persone passandosi il telefono, ma le carte sono scritte per una coppia.",
     "q4": "Esiste una versione più spinta?",

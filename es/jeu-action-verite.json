@@ -3,21 +3,21 @@
     "badge": "Gratis • Sin registro • En pareja",
     "title": "Verdad o reto en pareja, sin preparar nada",
     "titleHighlight": "en pareja",
-    "description": "70 cartas al azar, dos ambientes a elegir y la partida empieza con un toque, en un solo móvil."
+    "description": "70 cartas al azar, verdad o reto a elección del jugador, en un solo móvil apoyado entre los dos."
   },
   "section1": {
     "title": "Un verdad o reto que se juega de verdad, no una lista que se desliza",
     "p1": "La mayoría de páginas de <strong class=\"text-foreground\">verdad o reto para parejas</strong> te dan cien preguntas para leer una detrás de otra. Funciona cinco minutos, luego alguien busca la siguiente, otro hace trampa leyendo por delante y la partida se acaba.",
-    "p2": "Esto es un juego: eliges un ambiente, cae una carta y solo ves una cada vez. Ni lista, ni orden conocido de antemano, ni forma de ver lo que viene. Las cartas no se repiten mientras quede mazo, y rechazar una hace caer una prenda.",
+    "p2": "Esto es un juego: quien tiene el turno canta verdad o reto, cae una carta y solo veis una cada vez. Ni lista, ni orden conocido de antemano, ni forma de ver lo que viene. Las cartas no se repiten mientras quede mazo, y rechazar una hace caer una prenda.",
     "p3": "Todo ocurre en un solo móvil apoyado entre los dos, sin cuenta que crear y sin instalar nada. La partida no tiene final impuesto: la paráis cuando queráis y el resumen os dice cuántas cartas habéis superado."
   },
   "section2": {
     "title": "Las reglas, en cuatro puntos",
     "intro": "Caben en unas líneas, que es un poco la gracia del juego.",
-    "regle1Titre": "Elegid un ambiente",
-    "regle1Texte": "Clásico para las preguntas y retos que valen para cualquier pareja, divertido para la versión en la que os picáis. Podéis cambiar de ambiente por el camino lanzando otra partida.",
-    "regle2Titre": "Una carta, un jugador",
-    "regle2Texte": "El juego anuncia a quién le toca y saca una carta, verdad o reto. No eliges cuál de las dos, lo decide el sorteo, y eso es lo que hace la partida imprevisible.",
+    "regle1Titre": "Escribid vuestros dos nombres",
+    "regle1Texte": "El juego anuncia a quién le toca en cada carta: se acabó preguntarse quién juega o llevar la cuenta de memoria.",
+    "regle2Titre": "Verdad o reto, lo elegís vosotros",
+    "regle2Texte": "En cada turno, el jugador al que le toca canta su bando. El tipo lo decidís vosotros; el contenido de la carta no, se saca al azar del mazo correspondiente.",
     "regle3Titre": "Lo haces, o pasas",
     "regle3Texte": "Si la carta te va bien, la superas y el turno pasa al otro. Si prefieres evitarla, pasas y cae una prenda en su lugar. Nadie tiene que justificarse.",
     "regle4Titre": "Paráis cuando queráis",
@@ -31,9 +31,9 @@
   "faq": {
     "title": "Preguntas frecuentes",
     "q1": "¿Cuántas cartas hay?",
-    "a1": "70 en total, repartidas entre los dos ambientes: 15 verdades, 12 retos y 8 prendas en cada uno. No se repiten mientras quede mazo, lo que da de sobra para una noche entera.",
+    "a1": "70 en total: 30 verdades, 24 retos y 16 prendas, todo en un solo mazo. No se repiten mientras quede mazo, lo que da de sobra para una noche entera.",
     "q2": "¿Hay que registrarse o instalar algo?",
-    "a2": "Ni lo uno ni lo otro. El juego funciona directamente en el navegador, en el móvil o en el ordenador. Abrís la página, elegís un ambiente y cae la primera carta.",
+    "a2": "Ni lo uno ni lo otro. El juego funciona directamente en el navegador, en el móvil o en el ordenador. Abrís la página, escribís vuestros nombres y cae la primera carta.",
     "q3": "¿Cuántos pueden jugar?",
     "a3": "El juego está pensado para dos, con turnos anunciados en cada carta. Nada impide jugar entre más gente pasándose el móvil, pero las cartas están escritas para una pareja.",
     "q4": "¿Hay una versión más atrevida?",

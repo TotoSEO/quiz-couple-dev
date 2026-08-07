@@ -1,0 +1,71 @@
+{
+  "jsonLd": {
+    "name": "¿Quién de los dos?"
+  },
+  "hero": {
+    "badge": "Dos jugadores, un solo móvil",
+    "title": "¿Quién de los dos? El juego del voto secreto",
+    "titleHighlight": "voto secreto",
+    "description": "Cada uno vota por su lado, las dos respuestas se revelan a la vez… y descubrís hasta qué punto os veis igual."
+  },
+  "section1": {
+    "title": "Un juego tonto y, sin embargo",
+    "p1": "La idea ya la conocéis. Una pregunta, dos respuestas posibles y una sola verdad: tú, o el otro. El problema es que en una fiesta siempre gana quien responde más fuerte… Aquí nadie puede tapar la voz del otro. Cada uno vota por su lado, en secreto, y las dos respuestas caen al mismo tiempo.",
+    "p2": "Es una tontería. Funciona siempre.",
+    "p3": "Lo divertido del juego no son las rondas en las que coincidís. Son las otras. Esas en las que os miráis y soltáis un «espera, ¿de verdad crees que soy yo quien más protesta en los atascos?»",
+    "p4": "Doce rondas, cuatro minutos reloj en mano y un nivel de sintonía al final. Y un móvil, nada más."
+  },
+  "section2": {
+    "title": "Cómo se juega",
+    "intro": "Nada complicado, pero los cuatro puntos de abajo marcan la diferencia.",
+    "etape1Titre": "Primero, vuestros nombres",
+    "etape1Texte": "El juego los usa en todas partes: en los botones, en la revelación, en el resultado final. Es mucho más vivo que «jugador 1» y «jugador 2».",
+    "etape2Titre": "El primero vota en secreto",
+    "etape2Texte": "Aparece la pregunta y eliges a quién de los dos describe mejor. El otro no debe mirar… ¡ahí está toda la gracia!",
+    "etape3Titre": "Se pasa el móvil",
+    "etape3Texte": "El propio juego os lo pide. El segundo vota sin saber qué ha elegido el primero.",
+    "etape4Titre": "Revelación",
+    "etape4Texte": "Una cuenta atrás y las dos cartas se giran a la vez. Misma respuesta: un punto. Respuestas distintas: debate.",
+    "apres": "Al final os lleváis un porcentaje de sintonía, vuestra mejor racha de aciertos seguidos y la lista de preguntas en las que no coincidisteis. Esa lista, sinceramente, es lo mejor del juego."
+  },
+  "section3": {
+    "title": "Las cuatro familias de preguntas",
+    "intro": "Cuarenta preguntas en total, repartidas en cuatro temas. Cada partida saca doce, las mismas de cada familia: imposible que os toquen doce preguntas sobre los platos.",
+    "headerTheme": "Tema",
+    "headerExemple": "Un ejemplo de pregunta",
+    "apres": "Empezad otra partida y las doce preguntas cambian. Suficiente para volver varias veces sin repetiros."
+  },
+  "themes": {
+    "quotidien": "«…siempre olvida comprar justo lo que hacía falta?»",
+    "amour": "«…cede primero tras una discusión?»",
+    "caractere": "«…guarda rencor más tiempo?»",
+    "drole": "«…canta peor?»"
+  },
+  "section4": {
+    "title": "Por qué funciona tan bien en pareja",
+    "p1": "Hay algo que los tests de pareja no hacen nunca: ponerte delante de la imagen que el otro tiene de ti. Un test te devuelve un resultado. Aquí descubres que tu media naranja te ve como la persona más cabezota de la pareja… ¡y va a tocar hablarlo!",
+    "p2": "Ahí es donde suele empezar de verdad la noche.",
+    "p3": "Y no, un resultado bajo no significa que las cosas vayan mal. Significa sobre todo que nunca os habéis hecho estas preguntas en voz alta. Las parejas que sacan el 100 % tampoco son necesariamente las más felices: a veces simplemente llevan diez años contándose la misma historia."
+  },
+  "faq": {
+    "title": "Lo que nos preguntáis",
+    "q1": "¿Cuántos hacen falta para jugar?",
+    "a1": "Dos, y un solo móvil. El juego está pensado para ir pasándose la pantalla, no para jugar cada uno por su cuenta.",
+    "q2": "¿Cuánto dura una partida?",
+    "a2": "De cuatro a cinco minutos las doce rondas… si no os paráis a discutir en cada desacuerdo. Cosa que pasa bastante.",
+    "q3": "¿Es gratis? ¿Hay que registrarse?",
+    "a3": "Gratis y sin registro. Abrís la página, escribís vuestros nombres y jugáis. No se guarda nada.",
+    "q4": "¿Se puede jugar varias veces?",
+    "a4": "Sí. Las doce rondas salen al azar de entre cuarenta preguntas, así que dos partidas seguidas no se parecen.",
+    "q5": "¿Y si no coincidimos en nada?",
+    "a5": "Es el mejor escenario, de verdad. El juego os devuelve al final la lista de preguntas conflictivas, y es justo el tipo de conversación que nadie arranca por su cuenta.",
+    "q6": "¿Sirve para una pareja que acaba de empezar?",
+    "a6": "Sí, pero contad con un resultado bajo y muchas risas. Las preguntas del tema risas funcionan de maravilla al principio, las del futuro bastante menos."
+  },
+  "section5": {
+    "title": "¿Queréis seguir?",
+    "p1": "Si os ha gustado la idea del voto secreto, el resto de nuestros juegos gira en torno a lo mismo: haceros hablar sin que se note.",
+    "p2": "¡Que lo paséis bien!",
+    "cta": "Ver todos los juegos para parejas"
+  }
+}

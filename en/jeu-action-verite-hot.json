@@ -3,21 +3,21 @@
     "badge": "Adults only • For two • Free",
     "title": "Dirty truth or dare, the version that holds nothing back",
     "titleHighlight": "Dirty truth or dare",
-    "description": "70 cards for two, spicy or hot, on a single phone and with nothing to prepare."
+    "description": "70 cards for two, from suggestive to very direct, on a single phone and with nothing to prepare."
   },
   "section1": {
-    "title": "Two levels, because not everyone starts from the same place",
-    "p1": "A <strong class=\"text-foreground\">dirty truth or dare</strong> that starts too strong does not work: the first dare makes someone uncomfortable and the game ends before it began. That is why this one has two separate levels rather than a single deck.",
-    "p2": "The <strong class=\"text-foreground\">spicy</strong> mood stays suggestive: questions that make you blush, dares that bring you closer, nothing that forces anyone to undress. The <strong class=\"text-foreground\">hot</strong> mood drops the precautions, the cards are direct and they assume you both know where you are going.",
-    "p3": "Start with the first even if you think you can skip a step. The laughter of the early cards does more for the rest of the evening than any dare thrown in cold."
+    "title": "One deck that runs from suggestive to very direct",
+    "p1": "A <strong class=\"text-foreground\">dirty truth or dare</strong> that starts too strong does not work: the first dare makes someone uncomfortable and the game ends before it began. That is why this deck builds up rather than hitting hard from the start.",
+    "p2": "The gentlest cards stay suggestive: questions that make you blush, dares that bring you closer, nothing that forces anyone to undress. The most direct ones drop the precautions and assume you both know where you are going. The draw mixes them, and the right to pass is what keeps you in control.",
+    "p3": "Start gently even if you think you can skip a step. The laughter of the early cards does more for the rest of the evening than any dare thrown in cold."
   },
   "section2": {
     "title": "How it is played",
     "intro": "The rules are the same as the classic version, with one extra point that matters more here.",
-    "regle1Titre": "Pick your level",
-    "regle1Texte": "Spicy or hot. The game never mixes the two decks: what you choose at the start is what you get for the whole game.",
-    "regle2Titre": "One card at a time, drawn at random",
-    "regle2Texte": "Truth or dare, you do not choose. You never see the next card, which makes it impossible to prepare an answer or anticipate a dare.",
+    "regle1Titre": "Enter both first names",
+    "regle1Texte": "The game announces whose turn it is on every card, so nobody has to argue about who plays next.",
+    "regle2Titre": "Truth or dare, you decide",
+    "regle2Texte": "The player called out picks their side, and the card is drawn at random from the matching deck. You never see the next one.",
     "regle3Titre": "Passing is built into the game",
     "regle3Texte": "Turning a card down brings a forfeit, and that is all. It is the most important rule in this version: it makes refusing ordinary instead of an admission.",
     "regle4Titre": "You set the limit, not the game",
@@ -31,13 +31,13 @@
   "faq": {
     "title": "Frequently asked questions",
     "q1": "How is it different from the classic version?",
-    "a1": "The cards. The classic version is for every couple and can be played in front of anyone. This one has its own decks, spicy and hot, written for a moment when it is just the two of you.",
+    "a1": "The cards. The classic version is for every couple and can be played in front of anyone. This one has its own deck, far more direct, written for a moment when it is just the two of you.",
     "q2": "Is it very explicit?",
-    "a2": "The spicy mood stays suggestive and never asks anyone to undress completely. The hot mood is noticeably more direct, with cards that assume an intimacy already in place. You pick the level before you start.",
+    "a2": "It runs from suggestive to very direct. The gentlest cards ask for a compliment or a kiss, the most direct ones assume an intimacy already in place. There is no level to pick: the right to pass is what sets the limit, card by card.",
     "q3": "How many cards are there?",
-    "a3": "70 across the two levels, that is 15 truths, 12 dares and 8 forfeits per level. They do not repeat until the deck runs out, which is enough for a whole evening without landing on the same ones.",
+    "a3": "70 in total: 30 truths, 24 dares and 16 forfeits, all in one deck. They do not repeat until the deck runs out, which is enough for a whole evening without landing on the same ones.",
     "q4": "Is it suitable for a couple who have just met?",
-    "a4": "The spicy mood, yes, it works well for testing the water. The hot mood assumes you already know each other well: started too early, it makes people uncomfortable rather than entertained.",
+    "a4": "The gentler end of the deck, yes, it works well for testing the water. The most direct cards assume you already know each other well: if one lands too early, pass, that is exactly what it is there for.",
     "q5": "Do I need an account?",
     "a5": "No, and nothing is recorded. The game runs in your browser, your answers never leave the device and there is no game history."
   },

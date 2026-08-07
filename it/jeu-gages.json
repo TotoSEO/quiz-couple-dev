@@ -3,7 +3,7 @@
     "badge": "Gratis • Senza registrazione • Da rilanciare all'infinito",
     "title": "La ruota delle penitenze da fare in coppia",
     "titleHighlight": "in coppia",
-    "description": "70 penitenze divise in sette famiglie. Premete, la ruota gira e decide al posto vostro."
+    "description": "140 penitenze divise in sette famiglie. Premete, la ruota gira e decide al posto vostro."
   },
   "familles": {
     "bisouNom": "Bacio",
@@ -29,7 +29,7 @@
   },
   "section2": {
     "title": "Che cosa c'è sulla ruota",
-    "intro": "Ogni famiglia ha le sue dieci penitenze, scritte per una coppia e giocabili in un salotto. Niente si ripete finché la famiglia non è esaurita.",
+    "intro": "Ogni famiglia ha le sue venti penitenze, scritte per una coppia e giocabili in un salotto. Niente si ripete finché la famiglia non è esaurita.",
     "headerFamille": "La famiglia",
     "headerContenu": "Che cosa contiene"
   },
@@ -48,9 +48,9 @@
   "faq": {
     "title": "Domande frequenti",
     "q1": "Quante penitenze ci sono?",
-    "a1": "70, divise in sette famiglie da dieci. La casella sorpresa pesca da tutte e sette, quindi non aggiunge penitenze ma cambia il modo in cui escono.",
+    "a1": "140, divise in sette famiglie da venti. La casella sorpresa pesca da tutte e sette, quindi non aggiunge penitenze ma cambia il modo in cui escono.",
     "q2": "Le penitenze si ripetono?",
-    "a2": "Non finché la famiglia uscita non è vuota. Ogni famiglia si rimescola una volta uscite le sue dieci penitenze, il che basta ampiamente per una serata senza ricadere sulla stessa.",
+    "a2": "Non finché la famiglia uscita non è vuota. Ogni famiglia si rimescola una volta uscite le sue venti penitenze, il che basta per più serate senza ricadere mai sulla stessa.",
     "q3": "È piccante?",
     "a3": "No, la ruota è pensata per essere girata ovunque, amici compresi. Il massimo dell'intimità è un bacio o un massaggio. Per qualcosa di più diretto, i nostri giochi di obbligo o verità hanno un mazzo a parte.",
     "q4": "Si può giocare in più di due?",

@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "badge": "Free • No sign-up • Someone actually wins",
+    "title": "The couple board game you play on one phone",
+    "titleHighlight": "board game",
+    "description": "Forty squares, one dice, two pawns with your names on them. First to the finish wins, and the loser draws a forfeit."
+  },
+  "cases": {
+    "veriteNom": "Truth",
+    "veriteDesc": "A question you have to answer properly. Answer and you move one square forward; pass and you move one back.",
+    "defiNom": "Dare",
+    "defiDesc": "Something to do, right now, in front of the other one. Same rule: done and you move forward, refused and you move back.",
+    "duelNom": "Duel",
+    "duelDesc": "A question starting with \"which of you\". You both point at the same time: if you agree, the player whose turn it is moves two squares.",
+    "souvenirNom": "Memory",
+    "souvenirDesc": "You have to tell the story. A first trip, a first argument, a fit of laughter. The square that slows the game down, and often the one you remember.",
+    "gageNom": "Forfeit",
+    "gageDesc": "No way out on this one: the forfeit drops and it has to be done. It comes from the hundred and forty forfeits on our wheel.",
+    "chanceNom": "Luck",
+    "chanceDesc": "The event that turns everything around: move three forward, two back, roll again, or swap the two pawns."
+  },
+  "section1": {
+    "title": "The first of our games that can actually be won",
+    "p1": "Every online <strong class=\"text-foreground\">couple game</strong> looks the same: draw a card, answer, start again. It is pleasant for ten minutes, then it stops because nothing pushes you to carry on. There is no progress, no ending, no reason to want the next card.",
+    "p2": "A board settles that instantly. You see where you are, you see where the other one is, and those three squares between you are enough to make you want to roll again. It is not the content of the cards that changes, it is the reason for drawing them.",
+    "p3": "The board is played on a single phone set down between you, with no account and nothing to install. Count twenty to thirty minutes for a full game, a little less if the dice are generous."
+  },
+  "section2": {
+    "title": "The six kinds of square",
+    "intro": "The board alternates between challenges so that no two games feel alike. Here is what waits for you behind each colour.",
+    "headerFamille": "The square",
+    "headerContenu": "What happens on it"
+  },
+  "section3": {
+    "title": "The rules, in four points",
+    "intro": "They fit in one paragraph, and the game handles the rest.",
+    "regle1Titre": "Enter your names and roll the dice",
+    "regle1Texte": "One pawn each, one turn each. The game announces who is playing and moves the pawn to the right square on its own.",
+    "regle2Titre": "Every square triggers a challenge",
+    "regle2Texte": "Truth, dare, duel, memory, forfeit or a stroke of luck. You discover the card once the pawn has landed, never before.",
+    "regle3Titre": "Succeed and you move up, refuse and you move back",
+    "regle3Texte": "A truth or a dare taken on earns you one extra square. Refusing costs you one. That is what makes passing possible without making it free.",
+    "regle4Titre": "First to the finish wins",
+    "regle4Texte": "No exact count needed: reaching or passing the last square is enough. The loser then draws one final forfeit, and the game is over."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "How long does a game last?",
+    "a1": "Between twenty and thirty minutes as a rule. The number of turns depends on the dice, but also on you: a memory square can take fifteen seconds or spark a ten-minute conversation.",
+    "q2": "Do I need to print anything?",
+    "a2": "No, the board is on screen and the pawns move by themselves. One phone set down between you is enough, and there is nothing to install or create.",
+    "q3": "Where do the cards come from?",
+    "a3": "The truths and dares are the ones from our truth or dare game, the forfeits come from the forfeit wheel. The memories, duels and luck squares were written for the board.",
+    "q4": "Can you cheat or skip a challenge?",
+    "a4": "Passing is built in and costs one square, except on a forfeit square where there is no way out. Beyond that, it is a game for two with no referee: nobody will check whether you really answered.",
+    "q5": "Can more than two people play?",
+    "a5": "The board is built for two pawns and two names. In a bigger group, the simplest option is to play in teams of two and pass the phone around each turn."
+  },
+  "section4": {
+    "title": "Why a board changes everything",
+    "p1": "It is not the content that makes a games night last, it is the stakes. The same question asked at random is forgotten; asked three squares from the finish, with the other one catching up, it becomes a moment. The board does nothing more than that: it gives you a reason to keep going.",
+    "p2": "And at the end there is a winner, a loser and one last forfeit. It is a small thing, and it is exactly what most online couple games are missing.",
+    "cta": "See all our couple games"
+  },
+  "jsonLd": {
+    "name": "The couple board game"
+  }
+}

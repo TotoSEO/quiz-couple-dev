@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "badge": "Gratuit • Sans inscription • Il y a un gagnant",
+    "title": "Le jeu de plateau du couple, à jouer sur un téléphone",
+    "titleHighlight": "du couple",
+    "description": "Quarante cases, un dé, deux pions à vos prénoms. Le premier arrivé gagne, et le perdant tire un gage."
+  },
+  "cases": {
+    "veriteNom": "Vérité",
+    "veriteDesc": "Une question à laquelle il faut répondre pour de vrai. Vous répondez, vous avancez d'une case ; vous passez, vous reculez d'une.",
+    "defiNom": "Défi",
+    "defiDesc": "Quelque chose à faire, tout de suite, devant l'autre. Même règle : relevé, vous avancez ; refusé, vous reculez.",
+    "duelNom": "Duel",
+    "duelDesc": "Une question qui commence par « qui de vous deux ». Vous désignez en même temps : si vous tombez d'accord, celui qui joue avance de deux cases.",
+    "souvenirNom": "Souvenir",
+    "souvenirDesc": "Il faut raconter. Un premier voyage, une première dispute, un fou rire. C'est la case qui ralentit la partie, et souvent celle dont on se souvient.",
+    "gageNom": "Gage",
+    "gageDesc": "Aucune échappatoire sur cette case : le gage tombe et il faut l'exécuter. Il vient des cent quarante gages de notre roue.",
+    "chanceNom": "Chance",
+    "chanceDesc": "L'événement qui renverse tout : avancer de trois, reculer de deux, rejouer, ou échanger les deux pions de place."
+  },
+  "section1": {
+    "title": "Le premier de nos jeux qui se gagne",
+    "p1": "Tous les <strong class=\"text-foreground\">jeux de couple</strong> en ligne se ressemblent : on tire une carte, on répond, on recommence. C'est agréable dix minutes, puis ça s'arrête parce que rien ne pousse à continuer. Il n'y a ni progression, ni fin, ni raison de vouloir la prochaine carte.",
+    "p2": "Un plateau règle ça d'un coup. Vous voyez où vous en êtes, vous voyez où l'autre en est, et cet écart de trois cases suffit à donner envie de lancer le dé encore une fois. Ce n'est pas le contenu des cartes qui change, c'est la raison de les tirer.",
+    "p3": "Le plateau se joue sur un seul téléphone posé entre vous deux, sans compte et sans rien installer. Comptez vingt à trente minutes pour une partie complète, un peu moins si les dés sont généreux."
+  },
+  "section2": {
+    "title": "Les six types de cases",
+    "intro": "Le plateau alterne les épreuves pour qu'aucune partie ne ressemble à la précédente. Voici ce qui vous attend à chaque couleur.",
+    "headerFamille": "La case",
+    "headerContenu": "Ce qui s'y passe"
+  },
+  "section3": {
+    "title": "Les règles, en quatre points",
+    "intro": "Elles tiennent en un paragraphe, et le jeu s'occupe du reste.",
+    "regle1Titre": "Entrez vos prénoms et lancez le dé",
+    "regle1Texte": "Chacun son pion, chacun son tour. Le jeu annonce qui joue et déplace le pion tout seul jusqu'à la case tirée.",
+    "regle2Titre": "Chaque case déclenche une épreuve",
+    "regle2Texte": "Vérité, défi, duel, souvenir, gage ou coup de chance. Vous découvrez la carte une fois le pion posé, jamais avant.",
+    "regle3Titre": "Réussir fait avancer, refuser fait reculer",
+    "regle3Texte": "Une vérité ou un défi relevé vous donne une case de plus. Refuser en coûte une. C'est ce qui rend le refus possible sans le rendre gratuit.",
+    "regle4Titre": "Le premier à l'arrivée gagne",
+    "regle4Texte": "Il n'y a pas besoin du compte exact : atteindre ou dépasser la dernière case suffit. Le perdant tire alors un dernier gage, et la partie est finie."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Combien de temps dure une partie ?",
+    "a1": "Entre vingt et trente minutes en général. Le nombre de tours dépend des dés, mais aussi de vous : une case souvenir peut se régler en quinze secondes ou lancer une conversation de dix minutes.",
+    "q2": "Faut-il imprimer quelque chose ?",
+    "a2": "Non, le plateau est à l'écran et les pions se déplacent tout seuls. Un téléphone posé entre vous deux suffit, et rien n'est à installer ni à créer.",
+    "q3": "D'où viennent les cartes ?",
+    "a3": "Les vérités et les défis sont ceux de notre jeu action ou vérité, les gages viennent de la roue des gages. Les souvenirs, les duels et les cases chance ont été écrits pour le plateau.",
+    "q4": "Peut-on tricher ou passer une épreuve ?",
+    "a4": "Passer est prévu et coûte une case, sauf sur une case gage où il n'y a pas d'échappatoire. Pour le reste, c'est un jeu à deux sans arbitre : personne ne vérifiera si vous avez vraiment répondu.",
+    "q5": "Est-ce jouable à plus de deux ?",
+    "a5": "Le plateau est fait pour deux pions et deux prénoms. À plusieurs, le plus simple est de jouer en équipes de deux et de vous passer le téléphone à chaque tour."
+  },
+  "section4": {
+    "title": "Pourquoi un plateau change tout",
+    "p1": "Ce n'est pas le contenu qui fait durer une soirée de jeu, c'est l'enjeu. Une même question posée au hasard s'oublie ; posée à trois cases de l'arrivée, avec l'autre qui vous rattrape, elle devient un moment. Le plateau ne fait rien d'autre que ça : il donne une raison de continuer.",
+    "p2": "Et à l'arrivée, il reste un gagnant, un perdant et un dernier gage. C'est peu de chose, et c'est exactement ce qui manque à la plupart des jeux de couple en ligne.",
+    "cta": "Voir tous nos jeux de couple"
+  },
+  "jsonLd": {
+    "name": "Le jeu de plateau du couple"
+  }
+}

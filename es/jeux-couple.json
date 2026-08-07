@@ -1,15 +1,15 @@
 {
   "hero": {
-    "badge": "4 juegos • Gratis • Sin registro",
+    "badge": "5 juegos • Gratis • Sin registro",
     "title": "Nuestros juegos para jugar en pareja, listos en un toque",
     "titleHighlight": "para jugar en pareja",
-    "description": "Cuatro juegos que arrancan en un solo móvil apoyado entre los dos, sin cuenta y sin instalar nada."
+    "description": "Cinco juegos que arrancan en un solo móvil apoyado entre los dos, sin cuenta y sin instalar nada."
   },
   "stats": {
-    "jeux": "4",
+    "jeux": "6",
     "jeuxLabel": "juegos para dos",
-    "cartes": "240",
-    "cartesLabel": "cartas, dilemas y prendas",
+    "cartes": "390",
+    "cartesLabel": "cartas, prendas y dilemas",
     "compte": "0",
     "compteLabel": "cuentas que crear"
   },
@@ -39,7 +39,17 @@
     "gagesTagline": "Una ruleta que se gira sin parar y elige la prenda por vosotros, del beso a la confesión.",
     "gagesJoueurs": "2 jugadores",
     "gagesDuree": "Sin límite",
-    "gagesContenu": "70 prendas"
+    "gagesContenu": "140 prendas",
+    "plateauNom": "El juego de mesa",
+    "plateauTagline": "Cuarenta casillas, un dado, dos fichas. El primero en llegar gana y el que pierde saca una prenda.",
+    "plateauJoueurs": "2 jugadores",
+    "plateauDuree": "20 a 30 min",
+    "plateauContenu": "40 casillas",
+    "quiDeNousNom": "¿Quién de los dos?",
+    "quiDeNousTagline": "Cada uno vota en secreto la misma pregunta y luego las dos respuestas salen a la vez.",
+    "quiDeNousJoueurs": "2 jugadores",
+    "quiDeNousDuree": "5 min",
+    "quiDeNousContenu": "40 preguntas"
   },
   "section1": {
     "title": "Lo que un juego en pareja cambia en una noche",
@@ -60,7 +70,11 @@
     "row3Moment": "Un momento solo para vosotros dos",
     "row3Pourquoi": "Dos niveles separados, de lo sugerente a lo muy directo, con derecho a pasar en cada carta.",
     "row4Moment": "Una apuesta perdida, una noche que relanzar",
-    "row4Pourquoi": "Nadie elige la prenda, así que nadie se siente señalado. Un botón, un giro, y listo."
+    "row4Pourquoi": "Nadie elige la prenda, así que nadie se siente señalado. Un botón, un giro, y listo.",
+    "row5Moment": "Una noche de verdad para los dos, sin otra pantalla encendida",
+    "row5Pourquoi": "El único que dura treinta minutos y que se gana. Un tablero, un dado y un motivo para llegar hasta el final.",
+    "row6Moment": "Una cena en pareja o el aperitivo antes de que lleguen los invitados",
+    "row6Pourquoi": "Con cinco minutos basta, y cada desacuerdo reaviva la conversación solo. El más rápido de sacar."
   },
   "section3": {
     "title": "Cómo hacer que una noche de juegos en pareja funcione",

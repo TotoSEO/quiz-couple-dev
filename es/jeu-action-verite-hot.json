@@ -3,21 +3,21 @@
     "badge": "Solo adultos • En pareja • Gratis",
     "title": "Verdad o reto picante, la versión que no se corta",
     "titleHighlight": "picante",
-    "description": "70 cartas para dos, en picante o en hot, en un solo móvil y sin preparar nada."
+    "description": "70 cartas para dos, de lo sugerente a lo muy directo, en un solo móvil y sin preparar nada."
   },
   "section1": {
-    "title": "Dos niveles, porque no todo el mundo parte del mismo sitio",
-    "p1": "Un <strong class=\"text-foreground\">verdad o reto picante</strong> que empieza demasiado fuerte no funciona: el primer reto incomoda y la partida se acaba antes de empezar. Por eso este juego tiene dos niveles separados en lugar de un solo mazo.",
-    "p2": "El ambiente <strong class=\"text-foreground\">picante</strong> se queda en lo sugerente: preguntas que hacen sonrojar, retos que acercan, nada que obligue a desnudarse. El ambiente <strong class=\"text-foreground\">hot</strong> ya no toma precauciones, las cartas son directas y dan por hecho que los dos sabéis adónde vais.",
-    "p3": "Empezad por el primero aunque penséis que podéis saltaros el paso. La risa de las primeras cartas hace más por el resto de la noche que cualquier reto lanzado en frío."
+    "title": "Un mazo que va de lo sugerente a lo muy directo",
+    "p1": "Un <strong class=\"text-foreground\">verdad o reto picante</strong> que empieza demasiado fuerte no funciona: el primer reto incomoda y la partida se acaba antes de empezar. Por eso este mazo sube poco a poco en lugar de golpear de entrada.",
+    "p2": "Las cartas más suaves se quedan en lo sugerente: preguntas que hacen sonrojar, retos que acercan, nada que obligue a desnudarse. Las más directas ya no toman precauciones y dan por hecho que los dos sabéis adónde vais. El sorteo las mezcla, y el derecho a pasar es lo que os deja el mando.",
+    "p3": "Empezad con calma aunque penséis que podéis saltaros el paso. La risa de las primeras cartas hace más por el resto de la noche que cualquier reto lanzado en frío."
   },
   "section2": {
     "title": "Cómo se juega",
     "intro": "Las reglas son las mismas que en la versión clásica, con un punto añadido que aquí pesa más.",
-    "regle1Titre": "Elegid vuestro nivel",
-    "regle1Texte": "Picante o hot. El juego nunca mezcla los dos mazos: lo que elijáis al principio es lo que tendréis durante toda la partida.",
-    "regle2Titre": "Una carta cada vez, sacada al azar",
-    "regle2Texte": "Verdad o reto, no eliges. Nunca ves la carta siguiente, lo que impide preparar una respuesta o anticipar un reto.",
+    "regle1Titre": "Escribid vuestros dos nombres",
+    "regle1Texte": "El juego anuncia a quién le toca en cada carta, así nadie tiene que discutir quién juega.",
+    "regle2Titre": "Verdad o reto, lo elegís vosotros",
+    "regle2Texte": "El jugador al que le toca canta su bando y la carta se saca al azar del mazo correspondiente. Nunca veis la siguiente.",
     "regle3Titre": "Pasar está previsto por el juego",
     "regle3Texte": "Rechazar una carta hace caer una prenda, y ya está. Es la regla más importante de esta versión: convierte el rechazo en algo corriente en lugar de una confesión.",
     "regle4Titre": "El límite lo ponéis vosotros, no el juego",
@@ -31,13 +31,13 @@
   "faq": {
     "title": "Preguntas frecuentes",
     "q1": "¿Qué diferencia hay con la versión clásica?",
-    "a1": "Las cartas. La versión clásica es para cualquier pareja y se juega delante de quien sea. Esta tiene sus propios mazos, picante y hot, escritos para un momento en el que estáis solos los dos.",
+    "a1": "Las cartas. La versión clásica es para cualquier pareja y se juega delante de quien sea. Esta tiene su propio mazo, bastante más directo, escrito para un momento en el que estáis solos los dos.",
     "q2": "¿Es muy explícito?",
-    "a2": "El ambiente picante se queda en lo sugerente y nunca pide desnudarse del todo. El ambiente hot es bastante más directo, con cartas que dan por supuesta una intimidad ya establecida. El nivel lo elegís antes de empezar.",
+    "a2": "Va de lo sugerente a lo muy directo. Las cartas más suaves piden un cumplido o un beso, las más directas dan por supuesta una intimidad ya establecida. No hay nivel que elegir: el derecho a pasar es lo que fija el límite, carta a carta.",
     "q3": "¿Cuántas cartas hay?",
-    "a3": "70 repartidas entre los dos niveles, es decir 15 verdades, 12 retos y 8 prendas por nivel. No se repiten mientras quede mazo, lo que da para una noche entera sin volver a las mismas.",
+    "a3": "70 en total: 30 verdades, 24 retos y 16 prendas, en un solo mazo. No se repiten mientras quede mazo, lo que da para una noche entera sin volver a las mismas.",
     "q4": "¿Sirve para una pareja que acaba de conocerse?",
-    "a4": "El ambiente picante sí, funciona muy bien para tantear el terreno. El ambiente hot da por hecho que ya os conocéis bien: lanzado demasiado pronto, incomoda más que divierte.",
+    "a4": "La parte suave del mazo sí, funciona muy bien para tantear el terreno. Las cartas más directas dan por hecho que ya os conocéis bien: si sale una demasiado pronto, pasad, para eso está.",
     "q5": "¿Hay que crear una cuenta?",
     "a5": "No, y no se guarda nada. El juego funciona en vuestro navegador, vuestras respuestas no salen del aparato y no hay ningún historial de partidas."
   },

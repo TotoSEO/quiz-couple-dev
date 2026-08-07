@@ -1,17 +1,18 @@
 <%
-  // Gabarit commun aux deux jeux de cartes (version classique et version
-  // coquine). Le type de jeu et le namespace arrivent du gabarit appelant.
-  const pageTitle = t('quizzes:' + routeKey + '.title', 'Action ou vérité');
+  // La roue des gages. Le moteur occupe le haut de la page : c'est un jeu,
+  // pas un article, et il doit etre jouable sans faire defiler.
+  const ns = 'jeu-plateau';
+  const pageTitle = t('quizzes:jeuPlateau.title', 'Gage couple');
 
   const faqNums = [1, 2, 3, 4, 5];
   const jsonLd = [
     {
       "@context": "https://schema.org", "@type": "Game",
-      "name": pageTitle,
-      "description": t('quizzes:' + routeKey + '.metaDescription', ''),
+      "name": t(ns + ':jsonLd.name', pageTitle),
+      "description": t('quizzes:jeuPlateau.metaDescription', ''),
       "inLanguage": lang,
       "isAccessibleForFree": true,
-      "gameItem": { "@type": "Thing", "name": "cards" },
+      "gamePlatform": "Web browser",
       "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 2 }
     },
     {
@@ -28,7 +29,7 @@
 <script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
 
 <!-- Hero -->
-<section class="relative overflow-hidden hero-gradient py-16 md:py-24">
+<section class="relative overflow-hidden hero-gradient py-14 md:py-20">
   <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center">
@@ -40,18 +41,18 @@
           <li><a href="<%= getLocalizedUrl('jeuxCouple', lang) %>"><%= t('quizzes:jeuxCouple.shortTitle', 'Jeux de couple') %></a></li>
           <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
           <% } %>
-          <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:' + routeKey + '.shortTitle', pageTitle) %></li>
+          <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:jeuPlateau.shortTitle', pageTitle) %></li>
         </ol>
       </nav>
       <span class="hero-badge mb-4">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="12" height="17" rx="2"/><path d="M8 21h11a2 2 0 0 0 2-2V8"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.2"/><circle cx="15.5" cy="15.5" r="1.2"/><circle cx="12" cy="12" r="1.2"/></svg>
         <%= t(ns + ':hero.badge', '') %>
       </span>
       <%
         const heroTitle = t(ns + ':hero.title', pageTitle);
         const heroHighlight = t(ns + ':hero.titleHighlight', '');
       %>
-      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+      <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
         <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
           <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
         <% } else { %>
@@ -63,10 +64,10 @@
   </div>
 </section>
 
-<!-- Le jeu -->
-<section class="py-12 md:py-16">
+<!-- La roue -->
+<section class="py-10 md:py-14">
   <div class="container mx-auto px-4">
-    <div id="quiz-engine" data-quiz="<%= quizType %>" data-lang="<%= lang %>"><%- include("../partials/quiz-loading", { lang, routeKey }) %></div>
+    <div id="quiz-engine" data-quiz="plateau-couple" data-lang="<%= lang %>"><%- include("../partials/quiz-loading", { lang, routeKey }) %></div>
   </div>
 </section>
 
@@ -88,24 +89,39 @@
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
       <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section2.intro', '') %></p>
-      <div class="space-y-4">
-        <% for (let i = 1; i <= 4; i++) { %>
-        <div class="flex items-start gap-4 p-5 bg-card border border-border rounded-lg">
-          <span class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/15 text-primary font-bold flex-shrink-0"><%= i %></span>
-          <div>
-            <h3 class="font-semibold mb-1"><%= t(ns + ':section2.regle' + i + 'Titre', '') %></h3>
-            <p class="text-muted-foreground"><%- t(ns + ':section2.regle' + i + 'Texte', '') %></p>
-          </div>
-        </div>
-        <% } %>
+      <div class="jeux-table-wrap">
+        <table class="jeux-table">
+          <thead>
+            <tr>
+              <th scope="col"><%= t(ns + ':section2.headerFamille', '') %></th>
+              <th scope="col"><%= t(ns + ':section2.headerContenu', '') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% ['verite', 'defi', 'duel', 'souvenir', 'gage', 'chance'].forEach(function(c) { %>
+            <tr>
+              <th scope="row"><%= t(ns + ':cases.' + c + 'Nom', '') %></th>
+              <td><%= t(ns + ':cases.' + c + 'Desc', '') %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title', '') %></h2>
-      <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- t(ns + ':section3.p1', '') %></p>
-        <p><%- t(ns + ':section3.p2', '') %></p>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section3.intro', '') %></p>
+      <div class="space-y-4">
+        <% for (let i = 1; i <= 4; i++) { %>
+        <div class="flex items-start gap-4 p-5 bg-card border border-border rounded-lg">
+          <span class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/15 text-primary font-bold flex-shrink-0"><%= i %></span>
+          <div>
+            <h3 class="font-semibold mb-1"><%= t(ns + ':section3.regle' + i + 'Titre', '') %></h3>
+            <p class="text-muted-foreground"><%- t(ns + ':section3.regle' + i + 'Texte', '') %></p>
+          </div>
+        </div>
+        <% } %>
       </div>
     </section>
 
@@ -121,12 +137,15 @@
       </div>
     </section>
 
-    <section class="mb-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 border border-primary/20">
+    <section class="mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 border border-primary/20">
       <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t(ns + ':section4.title', '') %></h2>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
         <p><%- t(ns + ':section4.p1', '') %></p>
         <p class="text-foreground font-semibold"><%- t(ns + ':section4.p2', '') %></p>
       </div>
+      <% if (getLocalizedUrl('jeuxCouple', lang)) { %>
+      <a href="<%= getLocalizedUrl('jeuxCouple', lang) %>" class="btn btn-outline mt-6"><%= t(ns + ':section4.cta', '') %></a>
+      <% } %>
     </section>
 
   </div>

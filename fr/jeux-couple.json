@@ -1,15 +1,15 @@
 {
   "hero": {
-    "badge": "4 jeux • Gratuits • Sans inscription",
+    "badge": "5 jeux • Gratuits • Sans inscription",
     "title": "Nos jeux à faire en couple, prêts en un clic",
     "titleHighlight": "à faire en couple",
-    "description": "Quatre jeux qui se lancent sur un seul téléphone posé entre vous deux, sans compte et sans rien installer."
+    "description": "Cinq jeux qui se lancent sur un seul téléphone posé entre vous deux, sans compte et sans rien installer."
   },
   "stats": {
-    "jeux": "4",
+    "jeux": "6",
     "jeuxLabel": "jeux à deux",
-    "cartes": "240",
-    "cartesLabel": "cartes, dilemmes et gages",
+    "cartes": "390",
+    "cartesLabel": "cartes, gages et dilemmes",
     "compte": "0",
     "compteLabel": "compte à créer"
   },
@@ -39,7 +39,17 @@
     "gagesTagline": "Une roue à relancer à l'infini qui choisit le gage à votre place, du bisou à l'aveu.",
     "gagesJoueurs": "2 joueurs",
     "gagesDuree": "Sans limite",
-    "gagesContenu": "70 gages"
+    "gagesContenu": "140 gages",
+    "plateauNom": "Le jeu de plateau",
+    "plateauTagline": "Quarante cases, un dé, deux pions. Le premier arrivé gagne et le perdant tire un gage.",
+    "plateauJoueurs": "2 joueurs",
+    "plateauDuree": "20 à 30 min",
+    "plateauContenu": "40 cases",
+    "quiDeNousNom": "Qui de nous deux ?",
+    "quiDeNousTagline": "Chacun vote en secret sur la même question, puis les deux réponses tombent en même temps.",
+    "quiDeNousJoueurs": "2 joueurs",
+    "quiDeNousDuree": "5 min",
+    "quiDeNousContenu": "40 questions"
   },
   "section1": {
     "title": "Ce qu'un jeu à deux change à une soirée",
@@ -60,7 +70,11 @@
     "row3Moment": "Un moment rien qu'à vous deux",
     "row3Pourquoi": "Deux niveaux séparés, du suggestif au très direct, avec le droit de passer à chaque carte.",
     "row4Moment": "Un pari perdu, une soirée à relancer",
-    "row4Pourquoi": "Personne ne choisit le gage, donc personne ne se sent visé. Un bouton, une roue, et le tour est joué."
+    "row4Pourquoi": "Personne ne choisit le gage, donc personne ne se sent visé. Un bouton, une roue, et le tour est joué.",
+    "row5Moment": "Une vraie soirée à deux, sans écran allumé à côté",
+    "row5Pourquoi": "C'est le seul qui dure trente minutes et qui se gagne. Un plateau, un dé, et une raison de continuer jusqu'au bout.",
+    "row6Moment": "Un dîner à deux, ou l'apéro avant les invités",
+    "row6Pourquoi": "Cinq minutes suffisent, et chaque désaccord relance la conversation tout seul. Le jeu le plus rapide à sortir."
   },
   "section3": {
     "title": "Réussir une soirée jeux à deux",

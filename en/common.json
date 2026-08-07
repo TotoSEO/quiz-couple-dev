@@ -44,9 +44,11 @@
     "testSuisJeAmoureux": "Am I in love?",
     "jeuxCouple": "Couple games",
     "jeuGages": "Forfeit wheel",
+    "jeuPlateau": "Board game",
     "jeuxCoupleDesc": "Our 3 games to play together",
     "jeuActionVerite": "Truth or dare",
-    "jeuActionVeriteHot": "Dirty truth or dare"
+    "jeuActionVeriteHot": "Dirty truth or dare",
+    "jeuQuiDeNous": "Which one of us"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",

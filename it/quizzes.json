@@ -203,27 +203,39 @@
     "metaDescription": "Sono innamorato o solo attratto? 20 domande per distinguere l'amore dalla cotta. Test gratuito, risultato immediato, senza registrazione."
   },
   "jeuxCouple": {
-    "title": "Giochi di coppia: 4 giochi gratis online, senza registrazione",
+    "title": "Giochi di coppia online: 6 giochi gratis da fare in due",
     "shortTitle": "Giochi di coppia",
     "description": "Quattro giochi da fare in due: preferiresti, obbligo o verità, la sua versione piccante e la ruota delle penitenze.",
-    "metaDescription": "4 giochi di coppia gratis su un solo telefono: preferiresti, obbligo o verità, la sua versione piccante e la ruota delle penitenze. Senza registrazione."
+    "metaDescription": "6 giochi di coppia gratis su un solo telefono: chi di noi due, preferiresti, obbligo o verità, la versione piccante, la ruota delle penitenze e il gioco da tavolo. Senza registrazione."
   },
   "jeuGages": {
-    "title": "Penitenze di coppia: la ruota online, 70 idee",
+    "title": "Penitenze di coppia: la ruota online, 140 idee",
     "shortTitle": "Ruota delle penitenze",
-    "description": "Una ruota da rilanciare all'infinito che estrae una penitenza a caso tra 70, in sette famiglie.",
-    "metaDescription": "Ruota delle penitenze di coppia: 70 penitenze estratte a caso, dal bacio alla confessione. Gratis, senza registrazione, si rilancia all'infinito."
+    "description": "Una ruota da rilanciare all'infinito che estrae una penitenza a caso tra 140, in sette famiglie.",
+    "metaDescription": "Ruota delle penitenze di coppia: 140 penitenze estratte a caso, dal bacio alla confessione. Gratis, senza registrazione, si rilancia all'infinito."
+  },
+  "jeuPlateau": {
+    "title": "Gioco da tavolo di coppia: 40 caselle e un vincitore",
+    "shortTitle": "Gioco da tavolo",
+    "description": "Un tabellone di 40 caselle da giocare in due su un telefono, con un vero vincitore.",
+    "metaDescription": "Gioco da tavolo di coppia: 40 caselle, un dado, due pedine. Verità, obblighi, duelli e penitenze. Gratis, senza registrazione, vince chi arriva primo."
   },
   "jeuActionVerite": {
     "title": "Obbligo o verità di coppia: il gioco online, 70 carte",
     "shortTitle": "Obbligo o verità",
-    "description": "70 carte estratte a caso per giocare a obbligo o verità in due, senza preparare niente.",
-    "metaDescription": "Gioca a obbligo o verità in coppia: 70 carte estratte a caso, due atmosfere, su un solo telefono. Gratis, senza registrazione, una carta alla volta."
+    "description": "70 carte estratte a caso per giocare a obbligo o verità in due, scegliete voi.",
+    "metaDescription": "Gioca a obbligo o verità in coppia: 70 carte estratte a caso e siete voi a scegliere, verità o obbligo. Gratis, senza registrazione, su un solo telefono."
   },
   "jeuActionVeriteHot": {
     "title": "Obbligo o verità piccante: il gioco hot in due, gratis",
     "shortTitle": "Obbligo o verità piccante",
-    "description": "70 carte piccanti e hot da giocare in coppia, con due livelli a scelta.",
-    "metaDescription": "Obbligo o verità piccante online: 70 carte, due livelli dal più soft al più hot. Gratis, senza registrazione, da giocare in due stasera."
+    "description": "70 carte piccanti da giocare in coppia, dall'allusivo al molto diretto.",
+    "metaDescription": "Obbligo o verità piccante online: 70 carte dall'allusivo al molto diretto, scegliete voi. Gratis, senza registrazione, da giocare stasera."
+  },
+  "jeuQuiDeNous": {
+    "title": "Chi di noi due? Gioco di coppia gratis da fare in due",
+    "shortTitle": "Chi di noi due",
+    "metaDescription": "Il gioco in cui ognuno vota in segreto prima di scoprire la risposta dell'altro. 40 domande, un punteggio di sintonia e tanti dibattiti. Gratis, senza registrazione.",
+    "description": "Ognuno vota in segreto, le due risposte vengono svelate insieme: 40 domande e un punteggio di sintonia."
   }
 }
