@@ -4,12 +4,13 @@
   const ns = 'jeux-couple';
   const pageTitle = t('quizzes:jeuxCouple.title', 'Jeux de couple');
 
-  // Les quatre jeux, dans l'ordre : le plus accessible d'abord, le plus ose en dernier.
+  // Les cinq jeux, dans l'ordre : le plus accessible d'abord, le plus ose en dernier.
   const jeux = [
     { routeKey: 'quizTuPreferes',     cle: 'tuPreferes',        emoji: '🤔', accent: '270 45% 58%', img: 'would-you-rather-doors' },
     { routeKey: 'jeuActionVerite',    cle: 'actionVerite',      emoji: '🎲', accent: '340 65% 62%', img: 'conversation-cards' },
     { routeKey: 'jeuActionVeriteHot', cle: 'actionVeriteHot',   emoji: '🌶️', accent: '12 78% 56%',  img: 'naughty-date-night', adultes: true },
-    { routeKey: 'jeuGages',           cle: 'gages',            emoji: '🎡', accent: '190 60% 45%', img: 'most-likely-trophy' }
+    { routeKey: 'jeuGages',           cle: 'gages',            emoji: '🎡', accent: '190 60% 45%', img: 'most-likely-trophy' },
+    { routeKey: 'jeuPlateau',         cle: 'plateau',          emoji: '🎲', accent: '160 50% 42%', img: 'matching-puzzle' }
   ].map(function(j) {
     j.url = getLocalizedUrl(j.routeKey, lang);
     const f = quizFeatured && quizFeatured[j.routeKey];

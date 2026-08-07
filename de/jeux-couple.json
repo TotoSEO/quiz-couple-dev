@@ -1,15 +1,15 @@
 {
   "hero": {
-    "badge": "4 Spiele • Gratis • Ohne Anmeldung",
+    "badge": "5 Spiele • Gratis • Ohne Anmeldung",
     "title": "Unsere Spiele für zu zweit, in einem Tipp startklar",
     "titleHighlight": "für zu zweit",
-    "description": "Vier Spiele, die auf einem einzigen Handy zwischen euch starten, ohne Konto und ohne Installation."
+    "description": "Fünf Spiele, die auf einem einzigen Handy zwischen euch starten, ohne Konto und ohne Installation."
   },
   "stats": {
-    "jeux": "4",
+    "jeux": "5",
     "jeuxLabel": "Spiele zu zweit",
-    "cartes": "310",
-    "cartesLabel": "Karten, Dilemmas und Strafen",
+    "cartes": "350",
+    "cartesLabel": "Karten, Strafen und Dilemmas",
     "compte": "0",
     "compteLabel": "Konten anzulegen"
   },
@@ -39,7 +39,12 @@
     "gagesTagline": "Ein Rad, das ihr beliebig oft dreht und das die Strafe für euch wählt, vom Kuss bis zur Beichte.",
     "gagesJoueurs": "2 Spieler",
     "gagesDuree": "Ohne Zeitlimit",
-    "gagesContenu": "140 Strafen"
+    "gagesContenu": "140 Strafen",
+    "plateauNom": "Das Brettspiel",
+    "plateauTagline": "Vierzig Felder, ein Würfel, zwei Figuren. Wer zuerst ankommt gewinnt, der Verlierer zieht eine Strafe.",
+    "plateauJoueurs": "2 Spieler",
+    "plateauDuree": "20 bis 30 Min.",
+    "plateauContenu": "40 Felder"
   },
   "section1": {
     "title": "Was ein Spiel zu zweit an einem Abend verändert",
@@ -60,7 +65,9 @@
     "row3Moment": "Ein Moment nur für euch beide",
     "row3Pourquoi": "Zwei getrennte Stufen, von andeutend bis sehr direkt, mit dem Recht, bei jeder Karte zu passen.",
     "row4Moment": "Eine verlorene Wette, ein Abend zum Wiederbeleben",
-    "row4Pourquoi": "Niemand wählt die Strafe, also fühlt sich niemand gemeint. Ein Knopf, eine Drehung, erledigt."
+    "row4Pourquoi": "Niemand wählt die Strafe, also fühlt sich niemand gemeint. Ein Knopf, eine Drehung, erledigt.",
+    "row5Moment": "Ein richtiger Abend zu zweit, ohne zweiten Bildschirm",
+    "row5Pourquoi": "Das einzige, das dreißig Minuten dauert und gewonnen werden kann. Ein Brett, ein Würfel und ein Grund, bis zum Ende zu spielen."
   },
   "section3": {
     "title": "Ein Spieleabend zu zweit, der wirklich funktioniert",

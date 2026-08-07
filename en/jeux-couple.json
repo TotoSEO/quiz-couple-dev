@@ -1,15 +1,15 @@
 {
   "hero": {
-    "badge": "4 games • Free • No sign-up",
+    "badge": "5 games • Free • No sign-up",
     "title": "Our games to play together, ready in one tap",
     "titleHighlight": "to play together",
-    "description": "Four games that start on a single phone set down between you, with no account and nothing to install."
+    "description": "Five games that start on a single phone set down between you, with no account and nothing to install."
   },
   "stats": {
-    "jeux": "4",
+    "jeux": "5",
     "jeuxLabel": "games for two",
-    "cartes": "310",
-    "cartesLabel": "cards, dilemmas and forfeits",
+    "cartes": "350",
+    "cartesLabel": "cards, forfeits and dilemmas",
     "compte": "0",
     "compteLabel": "accounts to create"
   },
@@ -39,7 +39,12 @@
     "gagesTagline": "A wheel you spin as often as you like, picking the forfeit for you, from a kiss to a confession.",
     "gagesJoueurs": "2 players",
     "gagesDuree": "No time limit",
-    "gagesContenu": "140 forfeits"
+    "gagesContenu": "140 forfeits",
+    "plateauNom": "The board game",
+    "plateauTagline": "Forty squares, one dice, two pawns. First to the finish wins and the loser draws a forfeit.",
+    "plateauJoueurs": "2 players",
+    "plateauDuree": "20 to 30 min",
+    "plateauContenu": "40 squares"
   },
   "section1": {
     "title": "What a game for two changes about an evening",
@@ -60,7 +65,9 @@
     "row3Moment": "A moment that is just the two of you",
     "row3Pourquoi": "Two separate levels, from suggestive to very direct, with the right to pass on every card.",
     "row4Moment": "A lost bet, an evening to restart",
-    "row4Pourquoi": "Nobody picks the forfeit, so nobody feels targeted. One button, one spin, and it is settled."
+    "row4Pourquoi": "Nobody picks the forfeit, so nobody feels targeted. One button, one spin, and it is settled.",
+    "row5Moment": "A proper evening for two, with no other screen on",
+    "row5Pourquoi": "The only one that lasts thirty minutes and can be won. A board, a dice, and a reason to keep going to the end."
   },
   "section3": {
     "title": "Making a games night for two work",

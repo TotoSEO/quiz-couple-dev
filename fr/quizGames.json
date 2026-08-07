@@ -270,6 +270,7 @@
     "duoPct": "On a obtenu {{pct}} % au {{quiz}}",
     "duoPoints": "On a marqué {{score}} points au {{quiz}}",
     "duoCartes": "On a relevé {{score}} cartes sur {{total}} au {{quiz}}",
+    "plateau": "{{nom}} gagne la partie en {{score}} tours au {{quiz}}",
     "profil": "J'ai fait le {{quiz}}",
     "fun": "On vient de faire le {{quiz}}",
     "verdict": " : « {{result}} »",
@@ -320,7 +321,8 @@
     "quizTentation": "Quiz Tentation",
     "jeuActionVerite": "Jeu action ou vérité",
     "jeuActionVeriteHot": "Jeu action ou vérité coquin",
-    "jeuGages": "la roue des gages"
+    "jeuGages": "la roue des gages",
+    "jeuPlateau": "jeu de plateau du couple"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -403,6 +405,22 @@
     "recapTexte": "Vous avez relevé {{releves}} cartes sur {{total}}.",
     "recapGages": "{{passes}} gage(s) au passage.",
     "rejouer": "Rejouer"
+  },
+  "plateau": {
+    "setupTitre": "Qui prend le départ ?",
+    "setupDesc": "Entrez vos prénoms : quarante cases vous séparent de l'arrivée.",
+    "commencer": "Prendre le départ",
+    "lancerDe": "Lancer le dé",
+    "abandonner": "Arrêter la partie",
+    "compteur": "{{n}} tours joués",
+    "ok": "Compris !",
+    "dAccord": "On est d'accord",
+    "pasDAccord": "Pas d'accord",
+    "releve": "Relevé, j'avance",
+    "refuse": "Je passe, je recule",
+    "victoire": "{{nom}} gagne la partie !",
+    "victoireTexte": "Arrivée atteinte en {{n}} tours.",
+    "gagePerdant": "Le gage du perdant"
   },
   "roue": {
     "lancer": "Lancer la roue",

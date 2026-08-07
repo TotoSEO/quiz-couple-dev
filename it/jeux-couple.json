@@ -1,15 +1,15 @@
 {
   "hero": {
-    "badge": "4 giochi • Gratis • Senza registrazione",
+    "badge": "5 giochi • Gratis • Senza registrazione",
     "title": "I nostri giochi da fare in due, pronti con un tocco",
     "titleHighlight": "da fare in due",
-    "description": "Quattro giochi che partono su un solo telefono appoggiato tra voi due, senza account e senza installare niente."
+    "description": "Cinque giochi che partono su un solo telefono appoggiato tra voi due, senza account e senza installare niente."
   },
   "stats": {
-    "jeux": "4",
+    "jeux": "5",
     "jeuxLabel": "giochi in due",
-    "cartes": "310",
-    "cartesLabel": "carte, dilemmi e penitenze",
+    "cartes": "350",
+    "cartesLabel": "carte, penitenze e dilemmi",
     "compte": "0",
     "compteLabel": "account da creare"
   },
@@ -39,7 +39,12 @@
     "gagesTagline": "Una ruota da rilanciare all'infinito che sceglie la penitenza al posto vostro, dal bacio alla confessione.",
     "gagesJoueurs": "2 giocatori",
     "gagesDuree": "Senza limite",
-    "gagesContenu": "140 penitenze"
+    "gagesContenu": "140 penitenze",
+    "plateauNom": "Il gioco da tavolo",
+    "plateauTagline": "Quaranta caselle, un dado, due pedine. Chi arriva primo vince e chi perde pesca una penitenza.",
+    "plateauJoueurs": "2 giocatori",
+    "plateauDuree": "20 a 30 min",
+    "plateauContenu": "40 caselle"
   },
   "section1": {
     "title": "Che cosa cambia un gioco in due in una serata",
@@ -60,7 +65,9 @@
     "row3Moment": "Un momento solo per voi due",
     "row3Pourquoi": "Due livelli separati, dall'allusivo al molto diretto, con il diritto di passare a ogni carta.",
     "row4Moment": "Una scommessa persa, una serata da rilanciare",
-    "row4Pourquoi": "Nessuno sceglie la penitenza, quindi nessuno si sente preso di mira. Un pulsante, un giro, e la questione è chiusa."
+    "row4Pourquoi": "Nessuno sceglie la penitenza, quindi nessuno si sente preso di mira. Un pulsante, un giro, e la questione è chiusa.",
+    "row5Moment": "Una vera serata in due, senza altri schermi accesi",
+    "row5Pourquoi": "L'unico che dura trenta minuti e che si vince. Un tabellone, un dado e un motivo per andare fino in fondo."
   },
   "section3": {
     "title": "Come far funzionare una serata di giochi in due",

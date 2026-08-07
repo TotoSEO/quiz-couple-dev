@@ -5251,3 +5251,94 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 @media (prefers-reduced-motion: reduce) {
   .roue-resultat-texte { animation: none; }
 }
+
+/* ─────────────────────────────────────────────
+   Plateau du couple : grille en serpentin,
+   pions animes, de et cases d'epreuve
+   ───────────────────────────────────────────── */
+.plateau-jeu { max-width: 40rem; margin: 0 auto; }
+
+.plateau-scene { position: relative; margin: 1.25rem 0 1rem; }
+.plateau-grille {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.4rem;
+}
+@media (min-width: 480px) { .plateau-grille { gap: 0.5rem; } }
+
+.plateau-case {
+  position: relative;
+  aspect-ratio: 1;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 0.1rem;
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.5);
+}
+.plateau-case-emoji { font-size: 1.15rem; line-height: 1; }
+@media (min-width: 480px) { .plateau-case-emoji { font-size: 1.45rem; } }
+.plateau-case-num {
+  font-size: 0.5rem; font-weight: 700;
+  color: hsl(var(--muted-foreground));
+}
+.plateau-case--verite   { background: hsl(var(--primary) / 0.14);   border-color: hsl(var(--primary) / 0.3); }
+.plateau-case--defi     { background: hsl(var(--secondary) / 0.16); border-color: hsl(var(--secondary) / 0.3); }
+.plateau-case--duel     { background: hsl(190 60% 45% / 0.16);      border-color: hsl(190 60% 45% / 0.35); }
+.plateau-case--souvenir { background: hsl(38 85% 55% / 0.18);       border-color: hsl(38 85% 55% / 0.35); }
+.plateau-case--gage     { background: hsl(12 78% 56% / 0.16);       border-color: hsl(12 78% 56% / 0.35); }
+.plateau-case--chance   { background: hsl(160 50% 45% / 0.16);      border-color: hsl(160 50% 45% / 0.35); }
+.plateau-case--depart,
+.plateau-case--arrivee {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.3), hsl(var(--secondary) / 0.3));
+  border-color: hsl(var(--primary) / 0.5);
+}
+
+.plateau-pion {
+  position: absolute; top: 0; left: 0; z-index: 3;
+  display: grid; place-items: center;
+  width: 26px; height: 26px; border-radius: 50%;
+  font-size: 0.75rem; font-weight: 800; color: #fff;
+  border: 2px solid hsl(var(--card));
+  box-shadow: 0 3px 8px -2px hsl(0 0% 0% / 0.4);
+  transition: transform 0.55s cubic-bezier(0.34, 1.2, 0.5, 1);
+}
+.plateau-pion--1 { background: hsl(var(--primary)); }
+.plateau-pion--2 { background: hsl(var(--secondary)); }
+
+.plateau-legende {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem;
+  margin: 0 0 1.25rem; padding: 0; list-style: none;
+}
+.plateau-legende-item {
+  font-size: 0.7rem; padding: 0.2rem 0.55rem; border-radius: 999px;
+  background: hsl(var(--muted)); color: hsl(var(--muted-foreground));
+}
+
+.plateau-action { display: flex; flex-direction: column; align-items: center; gap: 0.9rem; }
+.plateau-de {
+  display: grid; place-items: center;
+  width: 4rem; height: 4rem; border-radius: 1rem;
+  font-size: 1.9rem; font-weight: 800;
+  background: hsl(var(--card));
+  border: 2px solid hsl(var(--primary) / 0.4);
+  box-shadow: 0 10px 22px -14px hsl(var(--primary) / 0.9);
+}
+.plateau-de--roule { animation: plateauDe 0.28s linear infinite; }
+@keyframes plateauDe {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(8deg) scale(1.06); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.plateau-epreuve { margin-top: 0.5rem; }
+.plateau-gage-final {
+  margin: 1.25rem auto 0; max-width: 26rem; padding: 1.25rem;
+  border-radius: var(--radius);
+  background: hsl(12 78% 56% / 0.1);
+  border: 1px solid hsl(12 78% 56% / 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plateau-pion { transition: none; }
+  .plateau-de--roule { animation: none; }
+}

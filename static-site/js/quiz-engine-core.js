@@ -396,6 +396,7 @@ var QuizEngine = (function() {
     if (type === 'solo' && o.total) phrase = tg('share.soloScore', 'J\'ai obtenu {{score}}/{{total}} au {{quiz}}');
     else if (type === 'solo') phrase = tg('share.soloPct', 'J\'ai obtenu {{pct}} % au {{quiz}}');
     else if (type === 'cartes') phrase = tg('share.duoCartes', 'On a relevé {{score}} cartes sur {{total}} au {{quiz}}');
+    else if (type === 'plateau') phrase = tg('share.plateau', '{{nom}} gagne la partie en {{score}} tours au {{quiz}}');
     else if (type === 'duo' && o.points) phrase = tg('share.duoPoints', 'On a marqué {{score}} points au {{quiz}}');
     else if (type === 'duo') phrase = tg('share.duoPct', 'On a obtenu {{pct}} % au {{quiz}}');
     else if (type === 'profil') phrase = tg('share.profil', 'J\'ai fait le {{quiz}}');
@@ -403,6 +404,7 @@ var QuizEngine = (function() {
 
     phrase = phrase
       .replace(/\{\{quiz\}\}/g, q.nom)
+      .replace(/\{\{nom\}\}/g, o.nom)
       .replace(/\{\{score\}\}/g, o.score)
       .replace(/\{\{total\}\}/g, o.total)
       .replace(/\{\{pct\}\}/g, o.pct);
@@ -412,7 +414,7 @@ var QuizEngine = (function() {
     }
 
     var appel = type === 'solo' ? tg('share.ctaSolo', 'Et vous, vous en êtes où ? Faites le test 👉')
-      : (type === 'duo' || type === 'cartes') ? tg('share.ctaDuo', 'Et vous, vous faites combien ? Essayez 👉')
+      : (type === 'duo' || type === 'cartes' || type === 'plateau') ? tg('share.ctaDuo', 'Et vous, vous faites combien ? Essayez 👉')
       : type === 'profil' ? tg('share.ctaProfil', 'Et vous, quel est le vôtre ? 👉')
       : tg('share.ctaFun', 'À votre tour 👉');
 
@@ -592,6 +594,8 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'tu-preferes', icon: '🤔', route: 'quizTuPreferes' },
     { type: 'jeu', key: 'action-ou-verite', icon: '🎲', route: 'jeuActionVerite' },
     { type: 'jeu', key: 'action-ou-verite-coquin', icon: '🌶️', route: 'jeuActionVeriteHot' },
+    { type: 'jeu', key: 'gage-couple', icon: '🎡', route: 'jeuGages' },
+    { type: 'jeu', key: 'plateau-couple', icon: '🎲', route: 'jeuPlateau' },
   ];
 
   function getRelatedQuizUrl(routeKey, lang) {
@@ -4519,6 +4523,384 @@ var QuizEngine = (function() {
     grimace: '😜', photo: '📸', douceur: '🍫', surprise: '🎁'
   };
 
+  // ═══════════════════════════════════════════════════════════
+  // BOARD GAME - le plateau du couple
+  // Le seul de nos jeux qui se gagne : deux pions, un de, quarante cases et
+  // une arrivee. Chaque case declenche une epreuve (verite, defi, gage,
+  // souvenir, duel) ou un evenement qui deplace les pions. Les cartes et les
+  // gages viennent des paquets deja ecrits pour les autres jeux, le plateau
+  // n'apporte que ses souvenirs, ses duels et ses cases chance.
+  // ═══════════════════════════════════════════════════════════
+  var PLATEAU_CASES = [
+    'depart',   'verite', 'defi',     'souvenir', 'duel',
+    'chance',   'verite', 'defi',     'gage',     'souvenir',
+    'duel',     'verite', 'defi',     'chance',   'souvenir',
+    'verite',   'duel',   'defi',     'gage',     'verite',
+    'souvenir', 'defi',   'chance',   'verite',   'duel',
+    'defi',     'souvenir', 'verite', 'gage',     'chance',
+    'defi',     'duel',   'verite',   'souvenir', 'defi',
+    'verite',   'gage',   'duel',     'souvenir', 'arrivee'
+  ];
+  var PLATEAU_EMOJIS = {
+    depart: '🚩', arrivee: '🏁', verite: '💬', defi: '🎯',
+    gage: '😈', souvenir: '💭', duel: '⚔️', chance: '🍀'
+  };
+  // Chaque evenement de la case chance a son effet et son texte.
+  var PLATEAU_CHANCES = [
+    { id: 'avance3', pas: 3 },
+    { id: 'avance2', pas: 2 },
+    { id: 'recule2', pas: -2 },
+    { id: 'recule1', pas: -1 },
+    { id: 'rejoue', pas: 0, rejoue: true },
+    { id: 'echange', pas: 0, echange: true }
+  ];
+
+  function BoardGame(config) {
+    this.container = config.container;
+    this.prefix = config.prefix || 'plateau';
+    this.prefixCartes = config.prefixCartes || 'actionVerite';
+    this.prefixGages = config.prefixGages || 'gageRoue';
+    this.lang = config.lang || 'fr';
+    this.cases = PLATEAU_CASES;
+    this.phase = 'setup';
+    this.noms = ['', ''];
+    this.pos = [0, 0];
+    this.tour = 0;
+    this.tours = 0;
+    this.de = null;
+    this.epreuve = null;
+    this.gagnant = null;
+    this.piles = {};
+    this.render();
+  }
+
+  // Lit une serie numerotee sous un prefixe : plateau.souvenir1, souvenir2...
+  BoardGame.prototype.lire = function(prefixe, cle) {
+    var out = [];
+    for (var i = 1; i <= 60; i++) {
+      var k = prefixe + '.' + cle + i;
+      var t = tgd(k, null);
+      if (!t || t === k) { if (i > 2) break; else continue; }
+      out.push(t);
+    }
+    return out;
+  };
+
+  // Les cartes verite et defi viennent des deux series du jeu de cartes.
+  BoardGame.prototype.lireCartes = function(type) {
+    var out = [];
+    var series = ['classique', 'marrant'];
+    for (var s = 0; s < series.length; s++) {
+      out = out.concat(this.lire(this.prefixCartes, series[s] + '_' + type));
+    }
+    return out;
+  };
+
+  BoardGame.prototype.piocher = function(type) {
+    if (!this.piles[type] || !this.piles[type].length) {
+      var source;
+      if (type === 'verite') source = this.lireCartes('q');
+      else if (type === 'defi') source = this.lireCartes('d');
+      else if (type === 'gage') source = this.lireGages();
+      else source = this.lire(this.prefix, type);
+      this.piles[type] = shuffleArray(source);
+    }
+    return this.piles[type].pop() || null;
+  };
+
+  BoardGame.prototype.lireGages = function() {
+    var familles = ['bisou', 'massage', 'show', 'aveu', 'grimace', 'photo', 'douceur'];
+    var out = [];
+    for (var i = 0; i < familles.length; i++) out = out.concat(this.lire(this.prefixGages, familles[i]));
+    return out;
+  };
+
+  BoardGame.prototype.joueur = function(i) {
+    var n = typeof i === 'number' ? i : this.tour;
+    return this.noms[n] || tg('playerSetup.player' + (n + 1), 'Joueur ' + (n + 1));
+  };
+
+  BoardGame.prototype.annonce = function() {
+    var nom = this.joueur();
+    var voyelle = /^[aeiouyàâäéèêëîïôöùûüh]/i.test(nom);
+    var prefixe = voyelle ? tg('jeu.tourDeVoyelle', tg('jeu.tourDe', 'Au tour de')) : tg('jeu.tourDe', 'Au tour de');
+    return /['’]$/.test(prefixe) ? prefixe + nom : prefixe + ' ' + nom;
+  };
+
+  BoardGame.prototype.render = function() {
+    this.container.innerHTML = '';
+    if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'fin') this.renderFin();
+    else this.renderPlateau();
+  };
+
+  BoardGame.prototype.renderSetup = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-4', '🎲'));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('plateau.setupTitre', 'Qui prend le départ ?')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6', tg('plateau.setupDesc', 'Entrez vos prénoms : quarante cases vous séparent de l\'arrivée.')));
+
+    var form = el('form', 'party-setup');
+    form.innerHTML =
+      '<input type="text" class="party-input" id="plateau-nom1" maxlength="20" autocomplete="off" placeholder="' +
+      esc(tg('playerSetup.player1Placeholder', 'Prénom du joueur 1')) + '" aria-label="' +
+      esc(tg('playerSetup.firstFirstName', 'Premier prénom')) + '">' +
+      '<input type="text" class="party-input" id="plateau-nom2" maxlength="20" autocomplete="off" placeholder="' +
+      esc(tg('playerSetup.player2Placeholder', 'Prénom du joueur 2')) + '" aria-label="' +
+      esc(tg('playerSetup.secondFirstName', 'Deuxième prénom')) + '">' +
+      '<button type="submit" class="btn btn-cta btn-lg">' + esc(tg('plateau.commencer', 'Prendre le départ')) + '</button>';
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      self.noms = [
+        form.querySelector('#plateau-nom1').value.trim() || tg('playerSetup.player1', 'Joueur 1'),
+        form.querySelector('#plateau-nom2').value.trim() || tg('playerSetup.player2', 'Joueur 2')
+      ];
+      self.pos = [0, 0]; self.tour = 0; self.tours = 0;
+      self.piles = {}; self.de = null; self.epreuve = null; self.gagnant = null;
+      self.phase = 'jeu';
+      self.render();
+      smoothScroll(self.container, 'start');
+    });
+    wrap.appendChild(form);
+    this.container.appendChild(wrap);
+  };
+
+  BoardGame.prototype.renderPlateau = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine plateau-jeu');
+
+    // barre de tour
+    var entete = el('div', 'party-entete');
+    entete.innerHTML = '<span class="party-tour">' + esc(this.annonce()) + '</span>' +
+      '<button class="party-changer" type="button">' + esc(tg('plateau.abandonner', 'Arrêter la partie')) + '</button>';
+    wrap.appendChild(entete);
+
+    // plateau : cinq colonnes sur mobile, huit sur ecran large, sinon le
+    // serpentin devient une colonne interminable a faire defiler.
+    var cols = this.colonnes = window.innerWidth >= 640 ? 8 : 5;
+    var scene = el('div', 'plateau-scene');
+    var grille = el('div', 'plateau-grille');
+    grille.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
+    this.cases.forEach(function(type, i) {
+      var ligne = Math.floor(i / cols);
+      var col = ligne % 2 === 0 ? (i % cols) + 1 : cols - (i % cols);
+      var c = el('div', 'plateau-case plateau-case--' + type);
+      c.style.gridRow = String(ligne + 1);
+      c.style.gridColumn = String(col);
+      c.innerHTML = '<span class="plateau-case-emoji" aria-hidden="true">' + PLATEAU_EMOJIS[type] + '</span>' +
+        '<span class="plateau-case-num">' + (i + 1) + '</span>';
+      grille.appendChild(c);
+    });
+    scene.appendChild(grille);
+    [0, 1].forEach(function(j) {
+      var pion = el('span', 'plateau-pion plateau-pion--' + (j + 1));
+      pion.textContent = (self.noms[j] || '?').charAt(0).toUpperCase();
+      pion.title = self.joueur(j);
+      scene.appendChild(pion);
+    });
+    wrap.appendChild(scene);
+
+    // legende
+    var legende = el('ul', 'plateau-legende');
+    ['verite', 'defi', 'duel', 'souvenir', 'gage', 'chance'].forEach(function(t) {
+      var li = el('li', 'plateau-legende-item');
+      li.innerHTML = '<span aria-hidden="true">' + PLATEAU_EMOJIS[t] + '</span> ' + esc(tgd(self.prefix + '.type_' + t, t));
+      legende.appendChild(li);
+    });
+    wrap.appendChild(legende);
+
+    if (this.phase === 'jeu') {
+      var zone = el('div', 'plateau-action');
+      var deAff = el('div', 'plateau-de', this.de ? String(this.de) : '?');
+      zone.appendChild(deAff);
+      var lancer = el('button', 'btn btn-cta btn-lg', tg('plateau.lancerDe', 'Lancer le dé'));
+      lancer.type = 'button';
+      lancer.addEventListener('click', function() { self.lancerDe(lancer, deAff); });
+      zone.appendChild(lancer);
+      wrap.appendChild(zone);
+    } else {
+      wrap.appendChild(this.carteEpreuve());
+    }
+
+    wrap.appendChild(el('p', 'party-compteur', tg('plateau.compteur', '{{n}} tours joués').replace('{{n}}', this.tours)));
+    this.container.appendChild(wrap);
+
+    var arret = wrap.querySelector('.party-changer');
+    if (arret) arret.addEventListener('click', function() { self.phase = 'setup'; self.render(); });
+    this.placerPions();
+    this.suivreRedimensionnement();
+  };
+
+  // Les pions sont positionnes en pixels : il faut les replacer quand la
+  // largeur change, et refaire le plateau si le nombre de colonnes bascule.
+  BoardGame.prototype.suivreRedimensionnement = function() {
+    var self = this;
+    if (this._resize) return;
+    this._resize = function() {
+      if (self.phase === 'setup' || self.phase === 'fin') return;
+      var cols = window.innerWidth >= 640 ? 8 : 5;
+      if (cols !== self.colonnes) self.render(); else self.placerPions();
+    };
+    window.addEventListener('resize', this._resize);
+  };
+
+  BoardGame.prototype.placerPions = function() {
+    var self = this;
+    var grille = this.container.querySelector('.plateau-grille');
+    if (!grille) return;
+    [0, 1].forEach(function(j) {
+      var pion = self.container.querySelector('.plateau-pion--' + (j + 1));
+      var c = grille.children[Math.min(self.pos[j], self.cases.length - 1)];
+      if (!pion || !c) return;
+      var dx = c.offsetLeft + c.offsetWidth / 2 - 13 + (j === 0 ? -9 : 9);
+      var dy = c.offsetTop + c.offsetHeight / 2 - 13;
+      pion.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
+    });
+  };
+
+  BoardGame.prototype.lancerDe = function(bouton, deAff) {
+    var self = this;
+    bouton.disabled = true;
+    var doux = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var valeur = 1 + Math.floor(Math.random() * 6);
+    var tours = doux ? 0 : 8, n = 0;
+    deAff.classList.add('plateau-de--roule');
+    var timer = setInterval(function() {
+      n++;
+      deAff.textContent = String(1 + Math.floor(Math.random() * 6));
+      if (n >= tours) {
+        clearInterval(timer);
+        deAff.textContent = String(valeur);
+        deAff.classList.remove('plateau-de--roule');
+        self.de = valeur;
+        self.avancer(valeur);
+      }
+    }, doux ? 1 : 70);
+  };
+
+  BoardGame.prototype.avancer = function(pas) {
+    var self = this;
+    var j = this.tour;
+    this.pos[j] = Math.max(0, Math.min(this.cases.length - 1, this.pos[j] + pas));
+    this.placerPions();
+    var doux = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setTimeout(function() {
+      if (self.pos[j] >= self.cases.length - 1) { self.gagnant = j; self.phase = 'fin'; self.render(); return; }
+      self.ouvrirCase();
+    }, doux ? 60 : 620);
+  };
+
+  BoardGame.prototype.ouvrirCase = function() {
+    var type = this.cases[this.pos[this.tour]];
+    if (type === 'chance') {
+      var ev = PLATEAU_CHANCES[Math.floor(Math.random() * PLATEAU_CHANCES.length)];
+      this.epreuve = { type: 'chance', evenement: ev, texte: tgd(this.prefix + '.chance_' + ev.id, '') };
+    } else {
+      this.epreuve = { type: type, texte: this.piocher(type) };
+    }
+    this.phase = 'epreuve';
+    this.render();
+  };
+
+  BoardGame.prototype.carteEpreuve = function() {
+    var self = this;
+    var e = this.epreuve;
+    var bloc = el('div', 'plateau-epreuve');
+    var carte = el('div', 'party-carte party-carte--' + (e.type === 'defi' ? 'defi' : e.type === 'gage' ? 'gage' : 'question'));
+    carte.innerHTML = '<span class="party-carte-type">' + PLATEAU_EMOJIS[e.type] + ' ' +
+      esc(tgd(this.prefix + '.type_' + e.type, e.type)) + '</span>' +
+      '<p class="party-carte-texte">' + esc(e.texte || '') + '</p>';
+    bloc.appendChild(carte);
+
+    var actions = el('div', 'party-actions');
+    if (e.type === 'chance') {
+      var ok = el('button', 'btn btn-cta btn-lg', tg('plateau.ok', 'Compris !'));
+      ok.addEventListener('click', function() { self.appliquerChance(e.evenement); });
+      actions.appendChild(ok);
+    } else if (e.type === 'duel') {
+      var accord = el('button', 'btn btn-cta btn-lg', tg('plateau.dAccord', 'On est d\'accord'));
+      accord.addEventListener('click', function() { self.finTour(2); });
+      var desaccord = el('button', 'btn btn-outline btn-lg', tg('plateau.pasDAccord', 'Pas d\'accord'));
+      desaccord.addEventListener('click', function() { self.finTour(0); });
+      actions.appendChild(accord);
+      actions.appendChild(desaccord);
+    } else if (e.type === 'gage') {
+      var fini = el('button', 'btn btn-cta btn-lg', tg('jeu.gageFait', 'Gage accompli !'));
+      fini.addEventListener('click', function() { self.finTour(0); });
+      actions.appendChild(fini);
+    } else {
+      var fait = el('button', 'btn btn-cta btn-lg', tg('plateau.releve', 'Relevé, j\'avance'));
+      fait.addEventListener('click', function() { self.finTour(1); });
+      var passe = el('button', 'btn btn-outline btn-lg', tg('plateau.refuse', 'Je passe, je recule'));
+      passe.addEventListener('click', function() { self.finTour(-1); });
+      actions.appendChild(fait);
+      actions.appendChild(passe);
+    }
+    bloc.appendChild(actions);
+    return bloc;
+  };
+
+  BoardGame.prototype.appliquerChance = function(ev) {
+    var j = this.tour;
+    if (ev.echange) { var t = this.pos[0]; this.pos[0] = this.pos[1]; this.pos[1] = t; }
+    else if (ev.pas) this.pos[j] = Math.max(0, Math.min(this.cases.length - 1, this.pos[j] + ev.pas));
+    this.tours++;
+    if (this.pos[j] >= this.cases.length - 1) { this.gagnant = j; this.phase = 'fin'; this.render(); return; }
+    if (this.pos[1 - j] >= this.cases.length - 1) { this.gagnant = 1 - j; this.phase = 'fin'; this.render(); return; }
+    if (!ev.rejoue) this.tour = 1 - this.tour;
+    this.de = null;
+    this.phase = 'jeu';
+    this.render();
+  };
+
+  // bonus : nombre de cases gagnees (ou perdues) une fois l'epreuve resolue
+  BoardGame.prototype.finTour = function(bonus) {
+    var j = this.tour;
+    if (bonus) this.pos[j] = Math.max(0, Math.min(this.cases.length - 1, this.pos[j] + bonus));
+    this.tours++;
+    if (this.pos[j] >= this.cases.length - 1) { this.gagnant = j; this.phase = 'fin'; this.render(); return; }
+    this.tour = 1 - this.tour;
+    this.de = null;
+    this.phase = 'jeu';
+    this.render();
+  };
+
+  BoardGame.prototype.renderFin = function() {
+    var self = this;
+    var g = this.gagnant, p = 1 - this.gagnant;
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-3', '🏆'));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', esc(
+      tg('plateau.victoire', '{{nom}} gagne la partie !').replace('{{nom}}', this.joueur(g)))));
+    wrap.appendChild(el('p', 'text-lg mb-4', esc(
+      tg('plateau.victoireTexte', 'Arrivée atteinte en {{n}} tours.').replace('{{n}}', this.tours))));
+
+    var gage = this.piocher('gage');
+    if (gage) {
+      var bloc = el('div', 'plateau-gage-final');
+      bloc.innerHTML = '<span class="party-carte-type">😈 ' +
+        esc(tg('plateau.gagePerdant', 'Le gage du perdant').replace('{{nom}}', this.joueur(p))) + '</span>' +
+        '<p class="party-carte-texte">' + esc(gage) + '</p>';
+      wrap.appendChild(bloc);
+    }
+
+    var rejouer = el('button', 'btn btn-cta btn-lg mt-6 mb-2', tg('jeu.rejouer', 'Rejouer'));
+    rejouer.addEventListener('click', function() {
+      self.pos = [0, 0]; self.tour = 0; self.tours = 0; self.piles = {};
+      self.de = null; self.epreuve = null; self.gagnant = null;
+      self.phase = 'jeu'; self.render(); smoothScroll(self.container, 'start');
+    });
+    wrap.appendChild(rejouer);
+
+    renderActionButtons(wrap, {
+      share: { type: 'plateau', nom: this.joueur(g), score: this.tours },
+      restart: function() { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -4541,6 +4923,7 @@ var QuizEngine = (function() {
     TentationQuiz: TentationQuiz,
     PartyGame: PartyGame,
     WheelGame: WheelGame,
+    BoardGame: BoardGame,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,

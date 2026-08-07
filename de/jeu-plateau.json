@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "badge": "Gratis • Ohne Anmeldung • Hier gewinnt jemand",
+    "title": "Das Brettspiel für Paare, auf einem einzigen Handy",
+    "titleHighlight": "für Paare",
+    "description": "Vierzig Felder, ein Würfel, zwei Figuren mit euren Vornamen. Wer zuerst im Ziel ist, gewinnt, und der Verlierer zieht eine Strafe."
+  },
+  "cases": {
+    "veriteNom": "Wahrheit",
+    "veriteDesc": "Eine Frage, die wirklich beantwortet werden muss. Antwortest du, rückst du ein Feld vor; passt du, gehst du eines zurück.",
+    "defiNom": "Pflicht",
+    "defiDesc": "Etwas zu tun, sofort, vor dem anderen. Gleiche Regel: erledigt heißt vorrücken, abgelehnt heißt zurückgehen.",
+    "duelNom": "Duell",
+    "duelDesc": "Eine Frage, die mit \"wer von euch beiden\" beginnt. Ihr zeigt gleichzeitig: Seid ihr euch einig, rückt der Spieler am Zug zwei Felder vor.",
+    "souvenirNom": "Erinnerung",
+    "souvenirDesc": "Hier wird erzählt. Eine erste Reise, ein erster Streit, ein Lachanfall. Das Feld, das die Partie bremst, und oft das, an das man sich erinnert.",
+    "gageNom": "Strafe",
+    "gageDesc": "Auf diesem Feld gibt es kein Entkommen: Die Strafe fällt und wird ausgeführt. Sie stammt aus den hundertvierzig Strafen unseres Rades.",
+    "chanceNom": "Glück",
+    "chanceDesc": "Das Ereignis, das alles umwirft: drei vor, zwei zurück, noch einmal würfeln oder die beiden Figuren tauschen."
+  },
+  "section1": {
+    "title": "Das erste unserer Spiele, das man gewinnen kann",
+    "p1": "Alle <strong class=\"text-foreground\">Paarspiele</strong> im Netz gleichen sich: Karte ziehen, antworten, von vorn. Zehn Minuten macht das Spaß, dann hört es auf, weil nichts zum Weitermachen drängt. Es gibt keinen Fortschritt, kein Ende, keinen Grund, die nächste Karte zu wollen.",
+    "p2": "Ein Brett löst das sofort. Ihr seht, wo ihr steht, ihr seht, wo der andere steht, und diese drei Felder Abstand genügen, um noch einmal würfeln zu wollen. Nicht der Inhalt der Karten ändert sich, sondern der Grund, sie zu ziehen.",
+    "p3": "Das Brett läuft auf einem einzigen Handy zwischen euch, ohne Konto und ohne Installation. Rechnet mit zwanzig bis dreißig Minuten für eine ganze Partie, etwas weniger, wenn die Würfel es gut mit euch meinen."
+  },
+  "section2": {
+    "title": "Die sechs Arten von Feldern",
+    "intro": "Das Brett wechselt die Aufgaben ab, damit keine Partie der vorherigen gleicht. Das erwartet euch hinter jeder Farbe.",
+    "headerFamille": "Das Feld",
+    "headerContenu": "Was dort passiert"
+  },
+  "section3": {
+    "title": "Die Regeln in vier Punkten",
+    "intro": "Sie passen in einen Absatz, um den Rest kümmert sich das Spiel.",
+    "regle1Titre": "Tragt eure Vornamen ein und würfelt",
+    "regle1Texte": "Jeder seine Figur, jeder seinen Zug. Das Spiel sagt an, wer dran ist, und zieht die Figur von selbst auf das richtige Feld.",
+    "regle2Titre": "Jedes Feld löst eine Aufgabe aus",
+    "regle2Texte": "Wahrheit, Pflicht, Duell, Erinnerung, Strafe oder ein Glücksfall. Die Karte seht ihr erst, wenn die Figur steht, nie vorher.",
+    "regle3Titre": "Wer besteht, rückt vor, wer ablehnt, geht zurück",
+    "regle3Texte": "Eine erfüllte Wahrheit oder Pflicht bringt ein Feld extra. Ablehnen kostet eines. Genau das macht das Passen möglich, ohne es kostenlos zu machen.",
+    "regle4Titre": "Wer zuerst im Ziel ist, gewinnt",
+    "regle4Texte": "Die genaue Zahl ist nicht nötig: Das letzte Feld zu erreichen oder zu überschreiten genügt. Der Verlierer zieht dann eine letzte Strafe, und die Partie ist vorbei."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Wie lange dauert eine Partie?",
+    "a1": "In der Regel zwanzig bis dreißig Minuten. Die Zahl der Runden hängt von den Würfeln ab, aber auch von euch: Ein Erinnerungsfeld ist in fünfzehn Sekunden erledigt oder startet ein Gespräch von zehn Minuten.",
+    "q2": "Muss man etwas ausdrucken?",
+    "a2": "Nein, das Brett ist auf dem Bildschirm und die Figuren bewegen sich von selbst. Ein Handy zwischen euch genügt, es gibt nichts zu installieren und nichts anzulegen.",
+    "q3": "Woher kommen die Karten?",
+    "a3": "Die Wahrheiten und Pflichten sind die aus unserem Wahrheit oder Pflicht Spiel, die Strafen kommen vom Strafen-Glücksrad. Erinnerungen, Duelle und Glücksfelder wurden für das Brett geschrieben.",
+    "q4": "Kann man schummeln oder eine Aufgabe überspringen?",
+    "a4": "Passen ist vorgesehen und kostet ein Feld, außer auf einem Strafenfeld, wo es kein Entkommen gibt. Ansonsten ist es ein Spiel zu zweit ohne Schiedsrichter: Niemand prüft nach, ob ihr wirklich geantwortet habt.",
+    "q5": "Kann man zu mehr als zweit spielen?",
+    "a5": "Das Brett ist für zwei Figuren und zwei Vornamen gemacht. In größerer Runde spielt ihr am einfachsten in Zweierteams und reicht das Handy jede Runde weiter."
+  },
+  "section4": {
+    "title": "Warum ein Brett alles verändert",
+    "p1": "Nicht der Inhalt lässt einen Spieleabend dauern, sondern der Einsatz. Dieselbe Frage, zufällig gestellt, ist vergessen; drei Felder vor dem Ziel gestellt, während der andere aufholt, wird sie zu einem Moment. Mehr macht das Brett nicht: Es gibt einen Grund weiterzumachen.",
+    "p2": "Und am Ende bleiben ein Gewinner, ein Verlierer und eine letzte Strafe. Das ist wenig, und genau das fehlt den meisten Paarspielen im Netz.",
+    "cta": "Alle unsere Paarspiele ansehen"
+  },
+  "jsonLd": {
+    "name": "Das Brettspiel für Paare"
+  }
+}

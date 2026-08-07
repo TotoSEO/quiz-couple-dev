@@ -270,6 +270,7 @@
     "duoPct": "Abbiamo ottenuto il {{pct}} % al {{quiz}}",
     "duoPoints": "Abbiamo fatto {{score}} punti al {{quiz}}",
     "duoCartes": "Abbiamo affrontato {{score}} carte su {{total}} al {{quiz}}",
+    "plateau": "{{nom}} vince la partita in {{score}} turni al {{quiz}}",
     "profil": "Ho fatto il {{quiz}}",
     "fun": "Abbiamo appena fatto il {{quiz}}",
     "verdict": ": «{{result}}»",
@@ -319,7 +320,8 @@
     "quizTentation": "Quiz Temptation",
     "jeuActionVerite": "gioco obbligo o verità",
     "jeuActionVeriteHot": "gioco obbligo o verità piccante",
-    "jeuGages": "la ruota delle penitenze"
+    "jeuGages": "la ruota delle penitenze",
+    "jeuPlateau": "gioco da tavolo di coppia"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
@@ -402,6 +404,22 @@
     "recapTexte": "Avete superato {{releves}} carte su {{total}}.",
     "recapGages": "{{passes}} penitenza/e lungo il percorso.",
     "rejouer": "Rigiocare"
+  },
+  "plateau": {
+    "setupTitre": "Chi prende il via?",
+    "setupDesc": "Inserite i vostri nomi: quaranta caselle vi separano dall'arrivo.",
+    "commencer": "Prendere il via",
+    "lancerDe": "Lancia il dado",
+    "abandonner": "Fermare la partita",
+    "compteur": "{{n}} turni giocati",
+    "ok": "Capito!",
+    "dAccord": "Siamo d'accordo",
+    "pasDAccord": "Non siamo d'accordo",
+    "releve": "Fatto, avanzo",
+    "refuse": "Passo, torno indietro",
+    "victoire": "{{nom}} vince la partita!",
+    "victoireTexte": "Arrivo raggiunto in {{n}} turni.",
+    "gagePerdant": "La penitenza del perdente"
   },
   "roue": {
     "lancer": "Gira la ruota",

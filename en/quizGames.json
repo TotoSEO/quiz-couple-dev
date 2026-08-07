@@ -270,6 +270,7 @@
     "duoPct": "We scored {{pct}}% on the {{quiz}}",
     "duoPoints": "We scored {{score}} points on the {{quiz}}",
     "duoCartes": "We took on {{score}} out of {{total}} cards in the {{quiz}}",
+    "plateau": "{{nom}} wins the game in {{score}} turns of the {{quiz}}",
     "profil": "I took the {{quiz}}",
     "fun": "We just played the {{quiz}}",
     "verdict": ": “{{result}}”",
@@ -319,7 +320,8 @@
     "quizTentation": "Temptation Quiz",
     "jeuActionVerite": "truth or dare game",
     "jeuActionVeriteHot": "dirty truth or dare game",
-    "jeuGages": "forfeit wheel"
+    "jeuGages": "forfeit wheel",
+    "jeuPlateau": "couple board game"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -402,6 +404,22 @@
     "recapTexte": "You took on {{releves}} cards out of {{total}}.",
     "recapGages": "{{passes}} forfeit(s) along the way.",
     "rejouer": "Play again"
+  },
+  "plateau": {
+    "setupTitre": "Who is lining up?",
+    "setupDesc": "Enter your first names: forty squares stand between you and the finish.",
+    "commencer": "Line up",
+    "lancerDe": "Roll the dice",
+    "abandonner": "Stop the game",
+    "compteur": "{{n}} turns played",
+    "ok": "Got it!",
+    "dAccord": "We agree",
+    "pasDAccord": "We disagree",
+    "releve": "Done, I move on",
+    "refuse": "I pass, I move back",
+    "victoire": "{{nom}} wins the game!",
+    "victoireTexte": "Finish line reached in {{n}} turns.",
+    "gagePerdant": "The loser's forfeit"
   },
   "roue": {
     "lancer": "Spin the wheel",

@@ -270,6 +270,7 @@
     "duoPct": "Wir haben {{pct}} % beim {{quiz}} erreicht",
     "duoPoints": "Wir haben {{score}} Punkte beim {{quiz}} geholt",
     "duoCartes": "Wir haben {{score}} von {{total}} Karten beim {{quiz}} geschafft",
+    "plateau": "{{nom}} gewinnt die Partie in {{score}} Runden beim {{quiz}}",
     "profil": "Ich habe den {{quiz}} gemacht",
     "fun": "Wir haben gerade den {{quiz}} gespielt",
     "verdict": ": „{{result}}“",
@@ -319,7 +320,8 @@
     "quizTentation": "Temptation Quiz",
     "jeuActionVerite": "Spiel Wahrheit oder Pflicht",
     "jeuActionVeriteHot": "Spiel Wahrheit oder Pflicht versaut",
-    "jeuGages": "Strafen-Glücksrad"
+    "jeuGages": "Strafen-Glücksrad",
+    "jeuPlateau": "Brettspiel für Paare"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
@@ -402,6 +404,22 @@
     "recapTexte": "Ihr habt {{releves}} von {{total}} Karten geschafft.",
     "recapGages": "{{passes}} Strafe(n) unterwegs.",
     "rejouer": "Nochmal spielen"
+  },
+  "plateau": {
+    "setupTitre": "Wer geht an den Start?",
+    "setupDesc": "Tragt eure Vornamen ein: vierzig Felder trennen euch vom Ziel.",
+    "commencer": "An den Start gehen",
+    "lancerDe": "Würfeln",
+    "abandonner": "Partie beenden",
+    "compteur": "{{n}} Runden gespielt",
+    "ok": "Verstanden!",
+    "dAccord": "Wir sind uns einig",
+    "pasDAccord": "Wir sind uns nicht einig",
+    "releve": "Geschafft, ich rücke vor",
+    "refuse": "Ich passe, ich gehe zurück",
+    "victoire": "{{nom}} gewinnt die Partie!",
+    "victoireTexte": "Ziel erreicht in {{n}} Runden.",
+    "gagePerdant": "Die Strafe des Verlierers"
   },
   "roue": {
     "lancer": "Rad drehen",

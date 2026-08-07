@@ -220,6 +220,12 @@
     "description": "Une roue à relancer à l'infini qui tire un gage au hasard parmi 140, en sept familles.",
     "metaDescription": "Roue des gages pour couple : 140 gages tirés au hasard, du bisou à l'aveu. Gratuit, sans inscription, relançable à l'infini d'un simple bouton."
   },
+  "jeuPlateau": {
+    "title": "Jeu de plateau couple : 40 cases, un dé, un gagnant",
+    "shortTitle": "Jeu de plateau",
+    "description": "Un plateau de 40 cases à jouer à deux sur un téléphone, avec un vrai gagnant à l'arrivée.",
+    "metaDescription": "Jeu de plateau pour couple : 40 cases, un dé, deux pions. Vérités, défis, duels et gages. Gratuit, sans inscription, le premier arrivé gagne."
+  },
   "jeuActionVerite": {
     "title": "Action ou vérité couple : le jeu en ligne, 70 cartes",
     "shortTitle": "Action ou vérité",

@@ -1,6 +1,6 @@
 # Quiz Couple
 
-> Quiz Couple is a free online platform offering 35 relationship quizzes, tests and games for couples. Available in 5 languages (French, English, Spanish, German, Italian).
+> Quiz Couple is a free online platform offering 36 relationship quizzes, tests and games for couples. Available in 5 languages (French, English, Spanish, German, Italian).
 
 ## Main Features
 
@@ -47,11 +47,12 @@
 - [Temptation Island Quiz](https://quiz-couple.com/en/temptation-island-quiz/): Unofficial quiz inspired by the Temptation Island format, with 12 days on the island, 30 tempting situations and a final bonfire verdict
 
 ### Couple Games
-- [Couple Games Hub](https://quiz-couple.com/en/couple-games/): the four games to play together on a single phone, free and without an account
+- [Couple Games Hub](https://quiz-couple.com/en/couple-games/): the five games to play together on a single phone, free and without an account
 - [Would You Rather](https://quiz-couple.com/en/would-you-rather-couple-quiz/): 30 impossible dilemmas, each partner picks on their own, then you compare
 - [Truth or Dare for Couples](https://quiz-couple.com/en/truth-or-dare-couple-game/): 70 cards in one deck, the player calls truth or dare, with a forfeit when a card is turned down
 - [Dirty Truth or Dare](https://quiz-couple.com/en/dirty-truth-or-dare-couples/): 70 adults-only cards from suggestive to very direct, with the right to pass on every card
 - [Couple Forfeit Wheel](https://quiz-couple.com/en/couple-forfeits-wheel/): a spinning wheel with eight slots and 140 forfeits, from a kiss to a confession, spun again as often as you like
+- [Couple Board Game](https://quiz-couple.com/en/couple-board-game/): a 40-square board with a dice and two pawns, mixing truths, dares, duels, memories, forfeits and luck squares, with a winner at the finish
 
 ### Other Tools
 - [Couple Questions](https://quiz-couple.com/en/couple-questions/): 200+ conversation starters

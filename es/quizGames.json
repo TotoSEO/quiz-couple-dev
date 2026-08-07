@@ -270,6 +270,7 @@
     "duoPct": "Hemos sacado un {{pct}} % en el {{quiz}}",
     "duoPoints": "Hemos hecho {{score}} puntos en el {{quiz}}",
     "duoCartes": "Hemos superado {{score}} de {{total}} cartas en el {{quiz}}",
+    "plateau": "{{nom}} gana la partida en {{score}} turnos al {{quiz}}",
     "profil": "He hecho el {{quiz}}",
     "fun": "Acabamos de hacer el {{quiz}}",
     "verdict": ": «{{result}}»",
@@ -319,7 +320,8 @@
     "quizTentation": "Quiz Tentaciones",
     "jeuActionVerite": "juego verdad o reto",
     "jeuActionVeriteHot": "juego verdad o reto picante",
-    "jeuGages": "la ruleta de prendas"
+    "jeuGages": "la ruleta de prendas",
+    "jeuPlateau": "juego de mesa para parejas"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
@@ -402,6 +404,22 @@
     "recapTexte": "Habéis superado {{releves}} cartas de {{total}}.",
     "recapGages": "{{passes}} prenda(s) por el camino.",
     "rejouer": "Jugar otra vez"
+  },
+  "plateau": {
+    "setupTitre": "¿Quién toma la salida?",
+    "setupDesc": "Escribid vuestros nombres: cuarenta casillas os separan de la meta.",
+    "commencer": "Tomar la salida",
+    "lancerDe": "Tirar el dado",
+    "abandonner": "Parar la partida",
+    "compteur": "{{n}} turnos jugados",
+    "ok": "¡Entendido!",
+    "dAccord": "Estamos de acuerdo",
+    "pasDAccord": "No estamos de acuerdo",
+    "releve": "Hecho, avanzo",
+    "refuse": "Paso, retrocedo",
+    "victoire": "¡{{nom}} gana la partida!",
+    "victoireTexte": "Meta alcanzada en {{n}} turnos.",
+    "gagePerdant": "La prenda del perdedor"
   },
   "roue": {
     "lancer": "Girar la ruleta",

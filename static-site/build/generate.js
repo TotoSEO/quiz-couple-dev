@@ -369,7 +369,7 @@ async function generatePage(routeKey, lang) {
     };
     // Les jeux passent par le hub : le fil d'Ariane balise doit refleter
     // la navigation reelle de la page.
-    const ROUTES_JEUX = ['quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages'];
+    const ROUTES_JEUX = ['quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages', 'jeuPlateau'];
     if (routeKey === 'blog') {
       breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: bl.blog, item: canonical });
     } else if (ROUTES_JEUX.includes(routeKey) && getLocalizedUrl('jeuxCouple', lang)) {
@@ -1175,7 +1175,7 @@ async function generateBlogArticle(articleMeta, lang) {
       'quizMost', 'quizAdo', 'quizVraiFaux', 'zamours', 'quizTentation',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarJeux: [
-      'jeuxCouple', 'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
+      'jeuxCouple', 'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages', 'jeuPlateau',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarOther: [
       'questionsCouple',
