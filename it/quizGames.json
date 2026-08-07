@@ -428,7 +428,8 @@
     "enCours": "La ruota sta girando...",
     "intro": "Premete il pulsante: la ruota sceglie la penitenza al posto vostro.",
     "compteur": "{{n}} penitenze estratte",
-    "compteur1": "1 penitenza estratta"
+    "compteur1": "1 penitenza estratta",
+    "legende": "Ogni settore è una famiglia di {{parFamille}} penitenze: {{familles}} famiglie più una casella sorpresa, cioè {{total}} penitenze in tutto."
   },
   "quiDeNous": {
     "setupTitre": "Chi di noi due?",

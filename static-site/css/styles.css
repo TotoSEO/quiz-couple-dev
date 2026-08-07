@@ -5568,3 +5568,11 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .qdn-confettis { display: none; }
   .qdn-barre > span, .qdn-anneau-jauge, .qdn-choix-btn { transition: none; }
 }
+
+/* La roue ne montre que ses huit secteurs : cette ligne rappelle que chacun
+   est une famille de vingt gages, pas un gage isole. */
+.roue-legende {
+  max-width: 30rem; margin: 0.25rem auto 1.1rem;
+  font-size: 0.8rem; line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}

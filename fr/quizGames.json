@@ -429,7 +429,8 @@
     "enCours": "La roue tourne...",
     "intro": "Appuyez sur le bouton : la roue choisit le gage à votre place.",
     "compteur": "{{n}} gages tirés",
-    "compteur1": "1 gage tiré"
+    "compteur1": "1 gage tiré",
+    "legende": "Chaque secteur est une famille de {{parFamille}} gages : {{familles}} familles plus une case surprise, soit {{total}} gages en tout."
   },
   "quiDeNous": {
     "setupTitre": "Qui de nous deux ?",

@@ -428,7 +428,8 @@
     "enCours": "La ruleta está girando...",
     "intro": "Pulsad el botón: la ruleta elige la prenda por vosotros.",
     "compteur": "{{n}} prendas sacadas",
-    "compteur1": "1 prenda sacada"
+    "compteur1": "1 prenda sacada",
+    "legende": "Cada sector es una familia de {{parFamille}} prendas: {{familles}} familias más una casilla sorpresa, o sea {{total}} prendas en total."
   },
   "quiDeNous": {
     "setupTitre": "¿Quién de los dos?",
