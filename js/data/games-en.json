@@ -428,7 +428,8 @@
     "enCours": "The wheel is spinning...",
     "intro": "Press the button: the wheel picks the forfeit for you.",
     "compteur": "{{n}} forfeits drawn",
-    "compteur1": "1 forfeit drawn"
+    "compteur1": "1 forfeit drawn",
+    "legende": "Each slice is a family of {{parFamille}} forfeits: {{familles}} families plus a surprise slot, so {{total}} forfeits in all."
   },
   "quiDeNous": {
     "setupTitre": "Which one of us?",
