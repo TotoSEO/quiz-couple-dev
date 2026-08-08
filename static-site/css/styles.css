@@ -1807,6 +1807,47 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .quiz-tf-btn--false:active, .quiz-tf-btn--false.selected { border-color: hsl(0 84% 60%); background: hsl(0 84% 60% / 0.15); box-shadow: 0 0 0 3px hsl(0 84% 60% / 0.2); }
 .quiz-tf-btn--false .quiz-tf-icon { color: hsl(0 84% 60%); }
 
+/* Verdict de la réponse. L'ancien badge s'appuyait sur des classes
+   utilitaires (bg-green-500/15, text-red-600…) qui n'existent nulle part dans
+   cette feuille : il s'affichait donc sans la moindre couleur, et on ne
+   voyait pas d'un coup d'oeil si on avait bon. */
+.quiz-verdict {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.65rem 1.35rem; border-radius: 9999px;
+  font-size: 1.0625rem; font-weight: 800;
+  border: 2px solid transparent;
+}
+.quiz-verdict svg { width: 1.25rem; height: 1.25rem; }
+.quiz-verdict--juste {
+  color: hsl(142 71% 32%); background: hsl(142 71% 45% / 0.16); border-color: hsl(142 71% 45% / 0.4);
+}
+.quiz-verdict--faux {
+  color: hsl(0 74% 45%); background: hsl(0 84% 60% / 0.14); border-color: hsl(0 84% 60% / 0.4);
+}
+.dark .quiz-verdict--juste { color: hsl(142 65% 62%); }
+.dark .quiz-verdict--faux { color: hsl(0 85% 72%); }
+
+/* Rappel des deux boutons sur l'écran de révélation : le bon est cerclé de
+   vert, celui qu'on a choisi à tort de rouge, l'autre s'efface. */
+.quiz-tf-btn--bonne {
+  border-color: hsl(142 71% 45%); background: hsl(142 71% 45% / 0.16);
+  box-shadow: 0 0 0 3px hsl(142 71% 45% / 0.22);
+}
+.quiz-tf-btn--mauvaise {
+  border-color: hsl(0 84% 60%); background: hsl(0 84% 60% / 0.14);
+  box-shadow: 0 0 0 3px hsl(0 84% 60% / 0.2);
+}
+.quiz-tf-btn--eteint { opacity: 0.42; }
+.quiz-tf-btn--bonne:hover, .quiz-tf-btn--mauvaise:hover, .quiz-tf-btn--eteint:hover {
+  transform: none; box-shadow: none;
+}
+.quiz-tf-btn--bonne:hover { box-shadow: 0 0 0 3px hsl(142 71% 45% / 0.22); }
+.quiz-tf-btn--mauvaise:hover { box-shadow: 0 0 0 3px hsl(0 84% 60% / 0.2); }
+.quiz-tf-vous {
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: hsl(var(--muted-foreground));
+}
+
 /* ── Admin styles ────────────────────────────────────────── */
 
 .admin-tab.active, .admin-filter.active, .lang-tab.active { background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
@@ -5663,3 +5704,195 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   font-size: 0.8rem; line-height: 1.5;
   color: hsl(var(--muted-foreground));
 }
+
+/* « Comment jouer ? » repliable sous le moteur. Fermé par défaut : celui qui
+   a compris ne le voit pas, celui qui hésite l'ouvre. */
+.quiz-howto { max-width: 48rem; margin: 1rem auto 0; }
+.quiz-howto-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.6rem 1.15rem; border-radius: 9999px; cursor: pointer;
+  font-size: 0.9375rem; font-weight: 700; list-style: none;
+  color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.08);
+  border: 1px solid hsl(var(--primary) / 0.25);
+  transition: background 150ms ease;
+}
+.quiz-howto-btn::-webkit-details-marker { display: none; }
+.quiz-howto-btn:hover { background: hsl(var(--primary) / 0.14); }
+.quiz-howto-btn svg { width: 1.1rem; height: 1.1rem; }
+.quiz-howto[open] .quiz-howto-btn { border-radius: 1rem 1rem 0 0; }
+.quiz-howto-corps {
+  margin-top: -1px; padding: 1.35rem 1.5rem;
+  border: 1px solid hsl(var(--border)); border-radius: 0 1rem 1rem 1rem;
+  background: hsl(var(--card));
+  animation: fadeIn 180ms ease-out both;
+}
+.quiz-howto-corps ol {
+  margin: 0; padding-left: 1.35rem; display: grid; gap: 0.65rem;
+  color: hsl(var(--muted-foreground)); line-height: 1.6;
+}
+.quiz-howto-corps ol li::marker { color: hsl(var(--primary)); font-weight: 800; }
+.quiz-howto-fin { margin: 1rem 0 0; font-size: 0.9375rem; color: hsl(var(--muted-foreground)); }
+@media (prefers-reduced-motion: reduce) { .quiz-howto-corps { animation: none; } }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Quiz marrant : familles annoncées à l'accueil, carte de question,
+   et renvoi vers « Qui de nous deux » sous le moteur
+   ═══════════════════════════════════════════════════════════════════ */
+.funny-familles {
+  display: flex; flex-wrap: wrap; gap: .45rem; justify-content: center;
+  max-width: 30rem; margin: 0 auto;
+}
+.funny-famille {
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding: .35rem .75rem; border-radius: 999px;
+  font-size: .8rem; font-weight: 700; line-height: 1.2;
+  color: hsl(var(--foreground));
+  background: hsl(var(--muted) / .55);
+  border: 2px solid hsl(var(--ink, 268 45% 27%) / .28);
+}
+.funny-famille-emoji { font-size: .95rem; }
+
+/* La carte de question : l'écran ne montrait qu'un titre nu au milieu
+   du vide. Elle annonce la famille, porte la question et rappelle la
+   consigne. Chaque famille a sa teinte. */
+.funny-carte {
+  --fc-h: 340; --fc-s: 70%; --fc-l: 62%;
+  position: relative; overflow: hidden;
+  max-width: 36rem; margin: 0 auto 1.5rem;
+  padding: 2.5rem 1.6rem 1.9rem; text-align: center;
+  border-radius: 1.6rem;
+  border: 3px solid hsl(var(--fc-h) var(--fc-s) var(--fc-l) / .55);
+  background: linear-gradient(160deg,
+    hsl(var(--fc-h) var(--fc-s) var(--fc-l) / .12),
+    hsl(var(--fc-h) var(--fc-s) var(--fc-l) / .03) 60%,
+    hsl(var(--card)));
+  box-shadow: 0 18px 40px -24px hsl(var(--fc-h) var(--fc-s) var(--fc-l) / .8);
+  animation: funnyCarteIn .35s cubic-bezier(.16, 1, .3, 1) both;
+}
+.funny-carte::before {
+  content: ''; position: absolute; inset: 0 0 auto; height: 6px;
+  background: linear-gradient(90deg,
+    hsl(var(--fc-h) var(--fc-s) var(--fc-l)),
+    hsl(var(--fc-h) var(--fc-s) calc(var(--fc-l) + 14%)));
+}
+.funny-carte--debuts    { --fc-h: 340; --fc-s: 72%; --fc-l: 62%; }
+.funny-carte--genant    { --fc-h: 22;  --fc-s: 88%; --fc-l: 56%; }
+.funny-carte--quotidien { --fc-h: 196; --fc-s: 66%; --fc-l: 50%; }
+.funny-carte--betises   { --fc-h: 44;  --fc-s: 92%; --fc-l: 52%; }
+.funny-carte--avoue     { --fc-h: 268; --fc-s: 52%; --fc-l: 60%; }
+.funny-carte--siOn      { --fc-h: 158; --fc-s: 54%; --fc-l: 44%; }
+/* Second format du quiz gênant */
+.funny-carte--corps     { --fc-h: 196; --fc-s: 66%; --fc-l: 50%; }
+.funny-carte--avant     { --fc-h: 340; --fc-s: 72%; --fc-l: 62%; }
+.funny-carte--entourage { --fc-h: 268; --fc-s: 52%; --fc-l: 60%; }
+.funny-carte--verite    { --fc-h: 22;  --fc-s: 88%; --fc-l: 56%; }
+
+.funny-carte-etiquette {
+  display: inline-flex; align-items: center; gap: .4rem;
+  margin-bottom: 1.1rem; padding: .34rem .85rem; border-radius: 999px;
+  font-size: .74rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase;
+  color: #fff; background: hsl(var(--fc-h) var(--fc-s) calc(var(--fc-l) - 6%));
+  box-shadow: 0 6px 16px -8px hsl(var(--fc-h) var(--fc-s) var(--fc-l));
+}
+.funny-carte-question {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800;
+  font-size: clamp(1.25rem, 4.4vw, 1.6rem); line-height: 1.28;
+  letter-spacing: -.015em; margin: 0 0 1.1rem; text-wrap: balance;
+  color: hsl(var(--foreground));
+}
+.funny-carte-consigne {
+  margin: 0; font-size: .875rem; line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+.funny-carte-consigne::before { content: '💬 '; }
+
+.funny-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: .75rem; max-width: 36rem; margin: 0 auto;
+}
+.funny-nav-suivante { flex: 1 1 auto; max-width: 20rem; margin-left: auto; }
+.funny-nav-retour { flex: none; font-size: .875rem; }
+/* Sur un telephone etroit, « Question suivante » et « Precedent » cote a cote
+   forcaient le libelle du bouton principal a passer sur deux lignes. On empile :
+   l'action va sur toute la largeur, le retour discret dessous. */
+@media (max-width: 460px) {
+  .funny-nav { flex-direction: column-reverse; gap: .5rem; }
+  .funny-nav > div:empty { display: none; }
+  .funny-nav-suivante { width: 100%; max-width: none; margin-left: 0; }
+  .funny-nav-retour { align-self: center; }
+}
+
+@keyframes funnyCarteIn { from { opacity: 0; transform: translateY(12px) scale(.985); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .funny-carte { animation: none; } }
+
+/* Renvoi vers l'autre format, sous le moteur */
+.quiz-croise {
+  max-width: 48rem; margin: 1.5rem auto 0; padding: 1.35rem 1.5rem;
+  border-radius: 1.25rem; text-align: center;
+  border: 2px dashed hsl(var(--secondary) / .45);
+  background: linear-gradient(135deg, hsl(var(--secondary) / .08), hsl(var(--primary) / .05));
+}
+.quiz-croise-titre {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800;
+  font-size: 1.05rem; margin: 0 0 .35rem;
+}
+.quiz-croise-texte {
+  margin: 0 0 1rem; font-size: .9375rem; line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+}
+.quiz-croise-btn { display: inline-flex; align-items: center; gap: .45rem; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Choix du format, sur les pages qui répondent à deux intentions
+   ═══════════════════════════════════════════════════════════════════ */
+.quiz-modes-liste { display: grid; gap: .9rem; width: 100%; max-width: 30rem; margin: 0 auto; }
+.quiz-mode-carte {
+  --qm-h: 340; --qm-s: 70%; --qm-l: 62%;
+  display: grid; grid-template-columns: auto 1fr auto; align-items: start; gap: .9rem;
+  width: 100%; padding: 1.05rem 1.15rem; text-align: left; cursor: pointer;
+  border: 3px solid hsl(var(--ink, 268 45% 27%)); border-radius: 1.25rem;
+  background: hsl(var(--card)); box-shadow: 5px 5px 0 hsl(var(--ink, 268 45% 27%));
+  transition: transform .18s cubic-bezier(.34, 1.56, .64, 1), box-shadow .18s ease;
+}
+.quiz-mode-carte:hover, .quiz-mode-carte:focus-visible {
+  transform: translate(-2px, -2px); box-shadow: 7px 7px 0 hsl(var(--ink, 268 45% 27%));
+}
+.quiz-mode-carte--jeu { --qm-h: 22; --qm-s: 88%; --qm-l: 56%; }
+.quiz-mode-emoji {
+  display: grid; place-items: center; width: 3rem; height: 3rem; flex: none;
+  font-size: 1.5rem; border-radius: .9rem;
+  background: hsl(var(--qm-h) var(--qm-s) var(--qm-l) / .16);
+}
+.quiz-mode-corps { display: grid; gap: .15rem; min-width: 0; }
+.quiz-mode-titre {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: 1.02rem;
+  line-height: 1.25; color: hsl(var(--foreground));
+}
+.quiz-mode-desc { font-size: .875rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+.quiz-mode-meta {
+  margin-top: .3rem; font-size: .74rem; font-weight: 700; letter-spacing: .03em;
+  text-transform: uppercase; color: hsl(var(--qm-h) var(--qm-s) calc(var(--qm-l) - 12%));
+}
+.dark .quiz-mode-meta { color: hsl(var(--qm-h) var(--qm-s) calc(var(--qm-l) + 14%)); }
+.quiz-mode-fleche {
+  align-self: center; font-size: 1.2rem; font-weight: 800;
+  color: hsl(var(--qm-h) var(--qm-s) var(--qm-l));
+}
+@media (prefers-reduced-motion: reduce) { .quiz-mode-carte { transition: none; } }
+@media (max-width: 420px) {
+  .quiz-mode-carte { gap: .7rem; padding: .9rem 1rem; }
+  .quiz-mode-emoji { width: 2.5rem; height: 2.5rem; font-size: 1.25rem; }
+  .quiz-mode-fleche { display: none; }
+}
+
+/* Retour au choix : posé à côté du moteur, qui vide son conteneur à chaque écran */
+.quiz-modes-retour {
+  display: inline-flex; align-items: center; gap: .35rem; margin: 1rem auto 0;
+  padding: .5rem 1rem; border-radius: 999px; cursor: pointer;
+  font-size: .85rem; font-weight: 700; color: hsl(var(--muted-foreground));
+  background: hsl(var(--muted) / .5); border: 1.5px solid hsl(var(--border));
+  transition: color .15s ease, border-color .15s ease;
+}
+.quiz-modes-retour:hover { color: hsl(var(--foreground)); border-color: hsl(var(--primary) / .5); }
+#quiz-engine + .quiz-modes-retour { display: flex; width: fit-content; }

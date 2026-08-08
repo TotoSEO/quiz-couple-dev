@@ -3,30 +3,38 @@
     "badge": "Quiz für Paare",
     "title": "Liebes-Quiz:",
     "titleHighlight": "Liebes-Quiz",
-    "description": "20 Aussagen, um die Stärke eurer Liebe zu messen. Diskutiert gemeinsam, findet eine Einigung und entdeckt euer Kompatibilitätsergebnis!",
-    "statements": "20 Aussagen",
-    "score": "Punktzahl von 100",
-    "results": "Sofortige Ergebnisse"
+    "description": "20 Fragen über eure Geschichte. Jeder antwortet für sich, danach wird verglichen: Wie oft landet ihr auf derselben Antwort, ohne euch abzusprechen?",
+    "statements": "20 Fragen",
+    "score": "Antworten im Vergleich",
+    "results": "Sofortiges Ergebnis"
+  },
+  "howTo": {
+    "title": "Wie wird gespielt?",
+    "step1": "Tragt eure beiden Vornamen ein. Ein Handy reicht, legt es zwischen euch.",
+    "step2": "Der erste beantwortet alle 20 Fragen, ohne den Bildschirm zu zeigen, und gibt das Gerät weiter.",
+    "step3": "Der zweite beantwortet dieselben Fragen, ohne zu wissen, was der andere gewählt hat.",
+    "step4": "Das Spiel vergleicht eure beiden Antworten, Frage für Frage.",
+    "outro": "Richtige Antworten gibt es hier nicht. Spannend sind die Fragen, bei denen ihr euch unterscheidet: genau da gibt es etwas zu erzählen."
   },
   "seo": {
     "whyTitle": "Warum dieses Liebes-Quiz zusammen machen?",
     "whySubtitle": "Ein Quiz, das darauf ausgelegt ist, eure Komplizenschaft zu stärken und euch besser zu verstehen.",
     "card1Title": "Öffnet den Dialog",
     "card1Text": "Jede Aussage ist eine Gelegenheit zur Diskussion. Drückt eure Gefühle aus und hört die eures Partners.",
-    "card2Title": "Messt eure Liebe",
-    "card2Text": "Entdeckt objektiv, wo ihr in eurer Beziehung steht, und identifiziert die Stärken eures Paares.",
+    "card2Title": "Vergleicht eure Antworten",
+    "card2Text": "Jeder antwortet, ohne den anderen zu sehen. Am Ende stellt das Spiel eure beiden Antworten nebeneinander, Frage für Frage. Genau da wird es spannend.",
     "card3Title": "Stärkt eure Bindung",
     "card3Text": "Allein dieses Quiz zusammen zu machen zeigt euer Engagement für die Beziehung. Das ist bereits ein Liebesbeweis!",
     "card4Title": "Feiert eure Beziehung",
     "card4Text": "Egal welches Ergebnis, dieses Quiz ermöglicht es euch, eure Geschichte zu feiern und euch daran zu erinnern, warum ihr zusammen seid.",
     "faqTitle": "Häufig gestellte Fragen",
-    "faq1Q": "Wie funktioniert dieses Liebes-Quiz?",
-    "faq1A": "Ihr beantwortet gemeinsam 20 Aussagen, indem ihr euer Zustimmungsniveau von 1 bis 5 bewertet. Diskutiert falls nötig, um einen Konsens zu finden!",
+    "faq1Q": "Wie wird dieses Liebes-Quiz gespielt?",
+    "faq1A": "Zu zweit, auf einem Handy. Der erste beantwortet alle 20 Fragen, gibt das Gerät weiter, der zweite beantwortet dieselben. Danach vergleicht das Spiel eure Antworten einzeln.",
     "faq2Q": "Wie lange dauert das Quiz?",
-    "faq2A": "Etwa 10 bis 15 Minuten, je nachdem wie viel Zeit ihr für die Diskussion jeder Aussage braucht. Nehmt euch Zeit!",
+    "faq2A": "Etwa zehn Minuten zu zweit. Nichts läuft gegen die Uhr, und die Fragen, über die ihr reden wollt, sind den Umweg wert.",
     "faq3Q": "Ist das Quiz wirklich kostenlos?",
     "faq3A": "Ja, 100% kostenlos und ohne Anmeldung. Eure Antworten werden nicht gespeichert, ihr könnt das Quiz beliebig oft wiederholen.",
     "faq4Q": "Was bedeutet unser Ergebnis?",
-    "faq4A": "Euer Ergebnis spiegelt euer Zustimmungsniveau bei wichtigen Aspekten der Beziehung wider. Ein hohes Ergebnis zeigt starke Harmonie, aber es ist nur ein spielerischer Indikator!"
+    "faq4A": "Die Punktzahl zählt die Fragen, bei denen ihr ohne Absprache dasselbe gewählt habt. Eine niedrige Punktzahl sagt wenig über eure Beziehung; vor allem sagt sie, dass ihr euch noch einiges zu erzählen habt."
   }
 }

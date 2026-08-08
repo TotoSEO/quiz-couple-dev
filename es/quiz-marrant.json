@@ -1,10 +1,10 @@
 {
   "hero": {
     "badge": "Quiz Divertido e Interactivo",
-    "title": "Quiz Divertido para Parejas: Descubre más de 150 preguntas fun",
-    "description": "Un quiz ligero y divertido para reírse juntos, provocarse y fortalecer vuestra complicidad. ¡Sin puntuación, solo diversión!",
-    "questions": "150+ preguntas",
-    "players": "Dos jugadores",
+    "title": "Quiz de pareja divertido: 150 preguntas para haceros",
+    "description": "Las preguntas que nunca os atrevéis a haceros, en seis familias: vuestros inicios, vuestros momentos vergonzosos, el día a día, vuestras tonterías, vuestras confesiones y unos «y si…» completamente absurdos.",
+    "questions": "150 preguntas",
+    "players": "En pareja, con un móvil",
     "duration": "~10 minutos",
     "titleHighlight": "Divertido"
   },
@@ -16,8 +16,8 @@
   },
   "section2": {
     "title": "¿Qué es exactamente un quiz divertido para parejas?",
-    "p1": "Un <strong class=\"text-foreground\">quiz divertido para parejas</strong> es un juego de preguntas para dos cuyo objetivo principal no es evaluar conocimientos, sino provocar reacciones, risas e intercambios.",
-    "p2": "A diferencia de un quiz clásico, no hay respuestas correctas o incorrectas. El corazón del juego radica en la percepción que cada uno tiene del otro.",
+    "p1": "Un <strong class=\"text-foreground\">quiz de pareja divertido</strong> es un juego de preguntas para dos cuyo objetivo no es poner a prueba conocimientos, sino arrancar la conversación. Aparece una pregunta, la leéis en voz alta y respondéis uno detrás del otro. Nada más.",
+    "p2": "No hay respuesta correcta ni puntuación. Lo que hace reír es la respuesta en sí: lo que el otro pensaba de ti en la primera cita, el momento más vergonzoso que habéis vivido juntos, o qué haría si le tocara la lotería mañana por la mañana.",
     "p3": "Este formato es particularmente apreciado porque permite hablar de la relación sin pesadez y reforzar la comunicación en la pareja."
   },
   "section3": {
@@ -30,8 +30,8 @@
   "section4": {
     "title": "¿Cómo se juega un quiz divertido para parejas?",
     "sub1Title": "El principio del juego",
-    "sub1P1": "El principio es deliberadamente simple para que sea accesible a todos. Los jugadores alternan turnos y responden preguntas sobre su pareja.",
-    "sub1P2": "Esta mecánica crea naturalmente discusiones, carcajadas y a veces debates amistosos.",
+    "sub1P1": "El principio es deliberadamente simple. Aparece una pregunta, alguien la lee en voz alta y respondéis los dos. Luego se pasa a la siguiente. Veinte preguntas, unos diez minutos, sin preparar nada.",
+    "sub1P2": "Las preguntas se reparten a partes iguales entre las seis familias del juego, así que una partida nunca se queda atascada en el mismo registro: se pasa de vuestros inicios a los momentos vergonzosos, del día a día a las confesiones. Volved a empezar y saldrán veinte preguntas distintas.",
     "sub2Title": "La actitud correcta",
     "sub2P1": "Para que el quiz funcione plenamente, la actitud es esencial. Es importante jugar con amabilidad, humor y apertura.",
     "sub2P2": "Aceptar equivocarse, reírse de uno mismo y del otro forma parte integral de la experiencia."
@@ -50,7 +50,7 @@
   },
   "section7": {
     "title": "Quiz divertido y comunicación en la pareja",
-    "p1": "Más allá del aspecto lúdico, el <strong class=\"text-foreground\">quiz divertido para parejas</strong> juega un papel interesante en la comunicación.",
+    "p1": "Más allá del aspecto lúdico, el <strong class=\"text-foreground\">quiz divertido para parejas</strong> juega un papel interesante en la comunicación. Contar vuestra primera cita, el momento en el que más vergüenza pasasteis o lo que nunca os atrevisteis a decir es compartir cosas que una conversación normal nunca va a buscar.",
     "p2": "Puede abrir la puerta a discusiones constructivas, siempre en un marco relajado.",
     "p3": "Usado regularmente, puede convertirse en una verdadera herramienta de complicidad y conexión emocional."
   },
@@ -68,7 +68,7 @@
   "faq": {
     "title": "FAQ – Quiz Divertido para Parejas",
     "q1": "¿Cuánto dura un quiz divertido para parejas?",
-    "a1": "La duración depende del número de preguntas elegidas. Con nuestro formato de 20 preguntas, cuenta con unos 10 a 15 minutos de juego.",
+    "a1": "El juego saca 20 preguntas por partida, lo que lleva unos diez minutos. No hay cronómetro: las preguntas de las que de verdad queréis hablar bien merecen la parada.",
     "q2": "¿Se necesitan reglas estrictas para jugar?",
     "a2": "No, el quiz divertido para parejas se quiere flexible. Las reglas se adaptan según vuestros deseos. ¡Lo importante es divertirse juntos!",
     "q3": "¿Es un juego serio o solo divertido?",
@@ -78,5 +78,18 @@
     "title": "Conclusión – Por qué adoptar el quiz divertido para parejas",
     "p1": "El <strong class=\"text-foreground\">quiz divertido para parejas</strong> es una actividad simple, accesible e increíblemente eficaz para fortalecer los lazos en una relación.",
     "p2": "Ya sea para una noche improvisada, una ocasión especial o simplemente para romper la rutina, merece ser adoptado como un imprescindible de los juegos para hacer en pareja."
+  },
+  "crossLink": {
+    "title": "¿No es lo vuestro este formato?",
+    "text": "Probad Quién de los dos, el juego de pareja: cada uno vota en secreto y se revela a la vez.",
+    "button": "Jugar a Quién de los dos"
+  },
+  "howTo": {
+    "title": "¿Cómo se juega?",
+    "step1": "Poneos los dos delante del mismo móvil, no hay nada que descargar.",
+    "step2": "Aparece una pregunta con su familia (inicios, vergüenza, día a día, tonterías, confesiones, y si…).",
+    "step3": "Leedla en voz alta y responded uno detrás del otro, en el orden que queráis.",
+    "step4": "Pasad a la siguiente cuando hayáis terminado de reíros. Veinte preguntas y vuelta a empezar.",
+    "outro": "Sin puntos y sin ganador: la única regla es responder con sinceridad, o negarse asumiéndolo."
   }
 }

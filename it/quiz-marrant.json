@@ -1,10 +1,10 @@
 {
   "hero": {
     "badge": "Quiz Divertente e Interattivo",
-    "title": "Quiz di coppia Divertente: Scopri oltre 150 domande fun",
-    "description": "Un quiz leggero e divertente per ridere insieme, stuzzicarvi e rafforzare la vostra complicità. Nessun punteggio, solo divertimento!",
-    "questions": "150+ domande",
-    "players": "Due giocatori",
+    "title": "Quiz di coppia divertente: 150 domande da farvi",
+    "description": "Le domande che non osate mai farvi, in sei famiglie: i vostri inizi, i vostri momenti imbarazzanti, la vita di tutti i giorni, le vostre sciocchezze, le vostre confessioni e degli «e se…» completamente assurdi.",
+    "questions": "150 domande",
+    "players": "In due, su un telefono",
     "duration": "~10 minuti",
     "titleHighlight": "Divertente"
   },
@@ -16,8 +16,8 @@
   },
   "section2": {
     "title": "Cos'è esattamente un quiz divertente per coppie?",
-    "p1": "Un <strong class=\"text-foreground\">quiz divertente per coppie</strong> è un gioco di domande per due il cui obiettivo principale non è testare le conoscenze, ma provocare reazioni, risate e scambi.",
-    "p2": "A differenza di un quiz classico, non ci sono risposte giuste o sbagliate. Il cuore del gioco sta nella percezione che ciascuno ha dell'altro.",
+    "p1": "Un <strong class=\"text-foreground\">quiz di coppia divertente</strong> è un gioco di domande in due il cui scopo non è mettere alla prova le conoscenze, ma far partire la conversazione. Appare una domanda, la leggete ad alta voce e rispondete uno dopo l'altro. Tutto qui.",
+    "p2": "Non c'è risposta giusta né punteggio. A far ridere è la risposta stessa: cosa pensava davvero di te al primo appuntamento, il momento più imbarazzante che avete vissuto insieme, o cosa farebbe se vincesse alla lotteria domani mattina.",
     "p3": "Questo formato è particolarmente apprezzato perché permette di parlare della relazione senza pesantezza e rafforzare la comunicazione."
   },
   "section3": {
@@ -30,8 +30,8 @@
   "section4": {
     "title": "Come si gioca un quiz divertente per coppie?",
     "sub1Title": "Il principio del gioco",
-    "sub1P1": "Il principio è volutamente semplice. I giocatori si alternano e rispondono a domande sul proprio partner.",
-    "sub1P2": "Questa meccanica crea naturalmente discussioni, scoppi di risa e talvolta dibattiti amichevoli.",
+    "sub1P1": "Il principio è volutamente semplice. Appare una domanda, qualcuno la legge ad alta voce e rispondete entrambi. Poi si passa alla successiva. Venti domande, una decina di minuti, niente da preparare.",
+    "sub1P2": "Le domande vengono pescate in parti uguali dalle sei famiglie del gioco, così una partita non resta mai bloccata sullo stesso registro: si passa dai vostri inizi ai momenti imbarazzanti, dalla vita quotidiana alle confessioni. Ricominciate e ne usciranno venti diverse.",
     "sub2Title": "L'atteggiamento giusto",
     "sub2P1": "Per funzionare al meglio, l'atteggiamento è essenziale. È importante giocare con gentilezza, umorismo e apertura.",
     "sub2P2": "Accettare di sbagliare e ridere di sé stessi e dell'altro fa parte integrante dell'esperienza."
@@ -50,7 +50,7 @@
   },
   "section7": {
     "title": "Quiz divertente e comunicazione nella coppia",
-    "p1": "Al di là dell'aspetto ludico, il <strong class=\"text-foreground\">quiz divertente per coppie</strong> gioca un ruolo interessante nella comunicazione.",
+    "p1": "Al di là dell'aspetto ludico, il <strong class=\"text-foreground\">quiz divertente per coppie</strong> gioca un ruolo interessante nella comunicazione. Raccontare il vostro primo appuntamento, il momento in cui vi siete vergognati di più o quello che non avete mai osato dire significa condividere cose che una conversazione ordinaria non va mai a cercare.",
     "p2": "Può aprire la porta a discussioni costruttive, sempre in un contesto rilassato.",
     "p3": "Usato regolarmente, può diventare un vero strumento di complicità e connessione emotiva."
   },
@@ -68,7 +68,7 @@
   "faq": {
     "title": "FAQ – Quiz Divertente per Coppie",
     "q1": "Quanto dura un quiz divertente per coppie?",
-    "a1": "La durata dipende dal numero di domande scelte. Con il nostro formato da 20 domande, conta circa 10-15 minuti di gioco.",
+    "a1": "Il gioco pesca 20 domande a partita, il che richiede una decina di minuti. Niente è cronometrato: le domande di cui volete davvero parlare meritano la sosta.",
     "q2": "Servono regole rigide per giocare?",
     "a2": "No, il quiz divertente per coppie vuole essere flessibile. Le regole si adattano ai vostri desideri. L'importante è divertirsi insieme!",
     "q3": "È un gioco serio o solo divertente?",
@@ -78,5 +78,18 @@
     "title": "Conclusione – Perché adottare il quiz divertente per coppie",
     "p1": "Il <strong class=\"text-foreground\">quiz divertente per coppie</strong> è un'attività semplice, accessibile e incredibilmente efficace per rafforzare i legami.",
     "p2": "Che sia per una serata improvvisata, un'occasione speciale o semplicemente per rompere la routine, merita di essere adottato come gioco imprescindibile da fare in due."
+  },
+  "crossLink": {
+    "title": "Non fa per voi questo formato?",
+    "text": "Provate Chi di noi due, il gioco di coppia: ognuno vota in segreto e si svela allo stesso momento.",
+    "button": "Giocare a Chi di noi due"
+  },
+  "howTo": {
+    "title": "Come si gioca?",
+    "step1": "Mettetevi in due davanti allo stesso telefono, non c'è niente da scaricare.",
+    "step2": "Appare una domanda con la sua famiglia (inizi, imbarazzo, quotidiano, sciocchezze, confessioni, e se…).",
+    "step3": "Leggetela ad alta voce e rispondete uno dopo l'altro, nell'ordine che preferite.",
+    "step4": "Passate alla successiva quando avete finito di riderci su. Venti domande, poi si ricomincia.",
+    "outro": "Nessun punteggio, nessun vincitore: l'unica regola è rispondere sinceramente, o rifiutare assumendosene la responsabilità."
   }
 }

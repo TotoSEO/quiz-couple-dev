@@ -3,8 +3,8 @@
     "title": "Quiz di coppia imbarazzante: fino a dove osate arrivare a due?",
     "description": "Pomiciare in pubblico, ordinare al posto dell'altro, chiamare il/la vostro/a partner \"ciccio patatino\" davanti ai suoi colleghi... Ogni coppia ha le sue cosette un po' imbarazzanti. La domanda è: quante ne avete, e le assumete?",
     "titleHighlight": "imbarazzante",
-    "badge": "Quiz Fun • Gratuito • 5 min",
-    "subtitle": "Questo quiz è qui per mettere i piedi nel piatto. Quindici situazioni concrete, quattro risposte possibili, un profilo di coppia alla chiave. Rispondete onestamente, è molto più divertente."
+    "badge": "Due formati • Gratis • Senza registrazione",
+    "subtitle": "Due modi di giocare, a scelta. Il test: quindici situazioni concrete e un verdetto sull'imbarazzo che vi assumete. Il gioco: venti domande imbarazzanti da farvi ad alta voce, senza rete."
   },
   "section1": {
     "title": "Cos'è esattamente una coppia \"imbarazzante\"?",
@@ -31,6 +31,12 @@
     "p2": "Se il/la vostro/a partner e voi ridete delle stesse situazioni a posteriori, è un buon segno. Se uno di voi deve regolarmente \"gestire\" le ricadute sociali di quello che l'altro ha fatto, c'è uno squilibrio da guardare.",
     "p3": "Se i vostri amici vi invitano ancora, è che non avete superato la soglia di tolleranza. È un indicatore concreto e sottovalutato.",
     "p4": "E se avete fatto questo quiz insieme e avete ottenuto punteggi molto diversi, prendetevi cinque minuti per confrontare le vostre risposte domanda per domanda. Le differenze sono spesso più interessanti del punteggio finale."
+  },
+  "section5": {
+    "title": "E se preferiste farvi voi le domande imbarazzanti?",
+    "p1": "Cercare «quiz imbarazzante» significa due cose molto diverse a seconda di chi cerca. Alcuni vogliono sapere se sono la coppia che si bacia davanti ai genitori. Altri cercano <strong class=\"text-foreground\">domande imbarazzanti da farsi in due</strong>, quelle che nessuno tira fuori un martedì sera davanti a una serie.",
+    "p2": "Il secondo formato serve a questo: venti domande pescate da quattro famiglie. Senza filtri, per tutto quello che riguarda il corpo e la quotidianità che non si mostra a nessuno. Prima di noi, per gli ex e la prima volta. La tua famiglia, i miei amici, per tutto quello che si pensa delle persone dell'altro senza dirlo mai. E la verità che brucia, dove finalmente si chiede quello che non si è mai chiesto.",
+    "p3": "Non c'è punteggio né vincitore. Si legge la domanda ad alta voce, si risponde a turno, e si può passare una volta a partita. È un gioco in due su un solo telefono, meglio la sera, meglio quando siete pronti a sentire la risposta."
   },
   "jsonLd": {
     "faq1Q": "Cos'è una coppia imbarazzante?",

@@ -238,9 +238,47 @@ var QuizEngine = (function() {
   }
 
   // Pastille « N questions • 5 min », commune a tous les ecrans de depart.
-  function pastilleMeta(n, mot) {
+  // La duree par defaut vaut pour les tests courts. Les jeux qui durent
+  // vraiment plus longtemps passent la leur, pour ne pas annoncer cinq minutes
+  // sur une page qui en promet dix juste en dessous.
+  function pastilleMeta(n, mot, duree) {
     return '📝 ' + n + ' ' + esc(mot || tg('meta.questionsWord', 'questions')) +
-      ' &bull; ⏱ ' + esc(tg('meta.duration', '5 min'));
+      ' &bull; ⏱ ' + esc(duree || tg('meta.duration', '5 min'));
+  }
+
+  // ─── Choix du format, quand une page en propose deux ──────
+  // Certaines pages repondent a deux intentions differentes sous le meme mot.
+  // « Quiz genant » par exemple : une partie des visiteurs veut savoir si son
+  // couple est genant, l'autre veut se poser des questions genantes. Plutot que
+  // de trancher pour tout le monde, on demande.
+  //   titre / desc : l'accroche commune
+  //   modes        : [{ id, emoji, titre, desc, meta }]
+  //   onChoix      : recoit l'identifiant du mode retenu
+  function ecranModes(o) {
+    var wrap = el('div', 'quiz-engine quiz-setup-screen quiz-modes animate-fade-in');
+    var badge = el('div', 'quiz-setup-icon quiz-setup-icon--emoji mx-auto mb-6');
+    badge.innerHTML = esc(o.icone || '🎲');
+    wrap.appendChild(badge);
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center', esc(o.titre || '')));
+    if (o.desc) wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(o.desc)));
+
+    var liste = el('div', 'quiz-modes-liste');
+    (o.modes || []).forEach(function(m) {
+      var carte = el('button', 'quiz-mode-carte quiz-mode-carte--' + m.id);
+      carte.type = 'button';
+      carte.innerHTML =
+        '<span class="quiz-mode-emoji" aria-hidden="true">' + esc(m.emoji || '▶') + '</span>' +
+        '<span class="quiz-mode-corps">' +
+          '<span class="quiz-mode-titre">' + esc(m.titre || '') + '</span>' +
+          '<span class="quiz-mode-desc">' + esc(m.desc || '') + '</span>' +
+          (m.meta ? '<span class="quiz-mode-meta">' + esc(m.meta) + '</span>' : '') +
+        '</span>' +
+        '<span class="quiz-mode-fleche" aria-hidden="true">→</span>';
+      carte.addEventListener('click', function() { if (o.onChoix) o.onChoix(m.id); });
+      liste.appendChild(carte);
+    });
+    wrap.appendChild(liste);
+    return wrap;
   }
 
   // Les deux cartes de prenoms des tests a deux, reutilisees par les jeux qui
@@ -2133,7 +2171,6 @@ var QuizEngine = (function() {
     var iconWrap = el('div', 'quiz-setup-icon quiz-setup-icon--emoji mx-auto mb-4', '💬');
     wrap.appendChild(iconWrap);
 
-    wrap.appendChild(el('div', 'text-5xl mb-4 text-center', '💕'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.quizForTwo', 'Quiz à Faire en Couple')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-4 text-center', tg('playerSetup.quizTogetherDesc', 'Ce quiz se joue ensemble. Discutez et notez de 1 à 5.')));
 
@@ -2141,10 +2178,10 @@ var QuizEngine = (function() {
     var howBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-md mx-auto text-left');
     howBox.innerHTML = '<p class="font-semibold mb-3">' + esc(tg('playerSetup.howItWorks', 'Comment ça marche ?')) + '</p>' +
       '<ol class="space-y-2 text-sm text-muted-foreground">' +
-      '<li>1️⃣ ' + esc(tg('playerSetup.step1', 'Lisez chaque affirmation ensemble')) + '</li>' +
-      '<li>2️⃣ ' + esc(tg('playerSetup.step2', 'Discutez et débattez si nécessaire')) + '</li>' +
-      '<li>3️⃣ ' + esc(tg('playerSetup.step3', 'Choisissez un score de 1 à 5')) + '</li>' +
-      '<li>4️⃣ ' + esc(tg('playerSetup.step4', 'Découvrez votre score d\'amour !')) + '</li></ol>';
+      '<li>' + esc(tg('playerSetup.step1', 'Lisez chaque affirmation ensemble')) + '</li>' +
+      '<li>' + esc(tg('playerSetup.step2', 'Discutez et débattez si nécessaire')) + '</li>' +
+      '<li>' + esc(tg('playerSetup.step3', 'Choisissez un score de 1 à 5')) + '</li>' +
+      '<li>' + esc(tg('playerSetup.step4', 'Découvrez votre score d\'amour !')) + '</li></ol>';
     wrap.appendChild(howBox);
 
     var form = el('div', 'space-y-4 max-w-md mx-auto');
@@ -2276,19 +2313,70 @@ var QuizEngine = (function() {
   };
 
   // ═══════════════════════════════════════════════════════════
-  // FUNNY QUIZ - marrant (discussion only, no scoring)
-  // Both players read question aloud, discuss, then "Next"
+  // FUNNY QUIZ - marrant : des questions qu'on se pose l'un a
+  // l'autre, a voix haute. Rien a compter, rien a deviner.
+  //
+  // Le moteur demandait deux prenoms qu'il n'utilisait ensuite
+  // nulle part, puis affichait la question seule au milieu de
+  // l'ecran. Il tire maintenant ses questions lui-meme, autant
+  // dans chacune des six familles, et les presente sur une carte
+  // qui annonce de quoi on parle.
   // ═══════════════════════════════════════════════════════════
+  // Les familles ne sont pas ecrites ici : chaque page qui utilise ce moteur
+  // apporte les siennes. Le quiz marrant en a six, le second format du quiz
+  // genant en a quatre.
+  var FUNNY_FAMILLES = [
+    { id: 'debuts',    emoji: '💘' },
+    { id: 'genant',    emoji: '😬' },
+    { id: 'quotidien', emoji: '🏠' },
+    { id: 'betises',   emoji: '🤣' },
+    { id: 'avoue',     emoji: '🙈' },
+    { id: 'siOn',      emoji: '🎬' }
+  ];
+  var FUNNY_TOTAL = 20;
+
   function FunnyQuiz(config) {
     this.container = config.container;
-    this.questions = config.questions;
-    this.prefix = config.prefix;
+    this.prefix = config.prefix || 'marrant';
     this.lang = config.lang || 'fr';
+    this.familles = (config.familles && config.familles.length) ? config.familles : FUNNY_FAMILLES;
+    this.total = config.total || FUNNY_TOTAL;
     this.phase = 'setup';
-    this.players = [null, null];
     this.currentQ = 0;
+    this.questions = [];
+    this.tirer();
     this.render();
   }
+
+  FunnyQuiz.prototype.lireFamille = function(id) {
+    var out = [];
+    for (var i = 1; i <= 60; i++) {
+      var k = this.prefix + '.' + id + i;
+      var t = tgd(k, null);
+      if (!t || t === k) { if (i > 2) break; else continue; }
+      out.push({ id: id + i, famille: id, text: t });
+    }
+    return out;
+  };
+
+  // On pioche autant de questions dans chaque famille : une partie passe
+  // toujours par les debuts, le quotidien, les moments genants et le reste,
+  // au lieu de tomber sur vingt questions de la meme veine.
+  FunnyQuiz.prototype.tirer = function() {
+    var parFamille = Math.ceil(this.total / this.familles.length);
+    var lot = [];
+    this.familles.forEach(function(f) {
+      lot = lot.concat(shuffleArray(this.lireFamille(f.id)).slice(0, parFamille));
+    }, this);
+    this.questions = shuffleArray(lot).slice(0, this.total);
+  };
+
+  FunnyQuiz.prototype.emojiFamille = function(id) {
+    for (var i = 0; i < this.familles.length; i++) {
+      if (this.familles[i].id === id) return this.familles[i].emoji;
+    }
+    return '💬';
+  };
 
   FunnyQuiz.prototype.render = function() {
     this.container.innerHTML = '';
@@ -2299,44 +2387,29 @@ var QuizEngine = (function() {
 
   FunnyQuiz.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
-    var iconWrap = el('div', 'quiz-setup-icon quiz-setup-icon--emoji mx-auto mb-4', '😂');
-    wrap.appendChild(iconWrap);
-
-    wrap.appendChild(el('div', 'text-5xl mb-4 text-center', '😂'));
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyToLaugh', 'Prêts à rire ensemble ?')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', tg('playerSetup.enterNamesFun', 'Entrez vos prénoms pour commencer le quiz fun !')));
-
-    var form = el('div', 'space-y-4 max-w-md mx-auto');
-    for (var i = 0; i < 2; i++) {
-      (function(idx) {
-        var card = el('div', 'glass-card rounded-xl p-4');
-        var labelWrap = el('div', 'flex items-center gap-2 mb-2');
-        var heartSpan = el('span', idx === 0 ? 'text-pink-500' : 'text-blue-500');
-        heartSpan.innerHTML = ICONS.heart;
-        labelWrap.appendChild(heartSpan);
-        labelWrap.appendChild(el('span', 'text-sm font-medium', tg('playerSetup.player' + (idx + 1), 'Joueur ' + (idx + 1))));
-        card.appendChild(labelWrap);
-        var input = el('input', 'input w-full');
-        input.type = 'text'; input.placeholder = tg('playerSetup.firstName', 'Prénom'); input.maxLength = 20;
-        input.id = 'funny-player-' + idx;
-        card.appendChild(input);
-        form.appendChild(card);
-      })(i);
-    }
-
-    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', '😂 ' + tg('playerSetup.startQuiz', 'Commencer le quiz'));
-    startBtn.addEventListener('click', function() {
-      var n1 = document.getElementById('funny-player-0').value.trim() || tg('playerSetup.player1', 'Joueur 1');
-      var n2 = document.getElementById('funny-player-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
-      self.players = [{ name: n1 }, { name: n2 }];
-      self.currentQ = 0;
-      self.phase = 'playing'; self.render();
+    // Les six familles annoncees des l'accueil : on sait a quoi s'attendre
+    // avant de commencer.
+    var familles = el('div', 'funny-familles');
+    this.familles.forEach(function(f) {
+      var puce = el('span', 'funny-famille');
+      puce.innerHTML = '<span class="funny-famille-emoji" aria-hidden="true">' + f.emoji + '</span>' +
+        '<span>' + esc(tgd(self.prefix + '.theme_' + f.id, f.id)) + '</span>';
+      familles.appendChild(puce);
     });
-    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
-    form.appendChild(startBtn);
-    wrap.appendChild(form);
-    this.container.appendChild(wrap);
+
+    var ecran = ecranDepart({
+      // le marrant rit, le gênant grimace : chaque page apporte son emoji
+      icone: tgd(this.prefix + '.icone', '😂'),
+      titre: tgd(this.prefix + '.setupTitre', tg('playerSetup.readyToLaugh', 'Prêts à rire ensemble ?')),
+      desc: tgd(this.prefix + '.setupDesc', ''),
+      corps: [familles],
+      meta: pastilleMeta(this.questions.length,
+        tgd(this.prefix + '.questionsMot', tg('meta.questionsWord', 'questions')),
+        tgd(this.prefix + '.duree', null)),
+      bouton: tgd(this.prefix + '.setupBouton', tg('playerSetup.startQuiz', 'Commencer')),
+      onStart: function() { self.currentQ = 0; self.phase = 'playing'; self.render(); }
+    });
+    this.container.appendChild(ecran.wrap);
   };
 
   FunnyQuiz.prototype.renderQuestion = function() {
@@ -2347,34 +2420,35 @@ var QuizEngine = (function() {
     var wrap = el('div', 'quiz-engine quiz-question-enter');
     renderProgressBar(wrap, this.currentQ, total);
 
-    var qText = tgd(this.prefix + '.q' + q.id, q.text);
-    wrap.appendChild(el('h3', 'text-xl font-semibold mb-4 text-center', esc(qText)));
+    var carte = el('div', 'funny-carte funny-carte--' + q.famille);
+    var etiquette = el('div', 'funny-carte-etiquette');
+    etiquette.innerHTML = '<span aria-hidden="true">' + this.emojiFamille(q.famille) + '</span>' +
+      '<span>' + esc(tgd(this.prefix + '.theme_' + q.famille, '')) + '</span>';
+    carte.appendChild(etiquette);
+    carte.appendChild(el('h3', 'funny-carte-question', esc(q.text)));
+    carte.appendChild(el('p', 'funny-carte-consigne',
+      esc(tgd(this.prefix + '.consigne', tg('question.discussTogether', 'Discutez de vos réponses ensemble !')))));
+    wrap.appendChild(carte);
 
-    // Options displayed as conversation starters (read-only)
-    var optionsWrap = el('div', 'space-y-2 mb-6');
-    q.options.forEach(function(opt) {
-      var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
-      var optEl = el('div', 'quiz-option-display');
-      optEl.textContent = optText;
-      optionsWrap.appendChild(optEl);
-    });
-    wrap.appendChild(optionsWrap);
-
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground text-center mb-4', tg('question.discussTogether', '💬 Discutez de vos réponses ensemble !')));
-
-    // Navigation
-    var navWrap = el('div', 'flex justify-between items-center mt-4');
+    var navWrap = el('div', 'funny-nav');
     if (this.currentQ > 0) {
-      var backBtn = el('button', 'btn btn-ghost text-sm', '&larr; ' + tg('question.previousQuestion', 'Précédent'));
+      var backBtn = el('button', 'btn btn-ghost funny-nav-retour');
+      backBtn.type = 'button';
+      backBtn.innerHTML = '&larr; ' + esc(tgd(this.prefix + '.precedente', tg('question.previousQuestion', 'Précédent')));
       backBtn.addEventListener('click', function() { self.currentQ--; self.render(); });
       navWrap.appendChild(backBtn);
     } else {
       navWrap.appendChild(el('div'));
     }
 
-    var nextBtn = el('button', 'btn btn-cta', tg('question.nextQuestionBtn', 'Question suivante !') + ' →');
+    var nextBtn = el('button', 'btn btn-cta funny-nav-suivante');
+    nextBtn.type = 'button';
+    var dernier = this.currentQ === total - 1;
+    nextBtn.innerHTML = esc(dernier
+      ? tgd(this.prefix + '.derniere', tg('result.seeResults', 'Voir le résultat'))
+      : tgd(this.prefix + '.suivante', tg('question.nextQuestionBtn', 'Question suivante'))) + ' &rarr;';
     nextBtn.addEventListener('click', function() {
-      if (self.currentQ < total - 1) { self.currentQ++; self.render(); }
+      if (!dernier) { self.currentQ++; self.render(); }
       else { self.phase = 'results'; self.render(); }
     });
     navWrap.appendChild(nextBtn);
@@ -2387,14 +2461,14 @@ var QuizEngine = (function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
     wrap.appendChild(el('div', 'text-5xl mb-4', '🎉'));
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', tg('result.bravo', 'Bravo') + ' ' + esc(this.players[0].name) + ' & ' + esc(this.players[1].name) + ' !'));
-    wrap.appendChild(el('p', 'text-lg text-muted-foreground mb-2', tg('result.completedQuestions', 'Vous avez terminé les 20 questions !')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-4', tg('result.sharedMoment', 'Vous avez partagé un super moment ensemble !')));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', tg('result.bestMemories', 'Les meilleurs souvenirs se construisent dans le rire et la complicité 💕')));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3',
+      esc(tgd(this.prefix + '.finTitre', tg('result.bravo', 'Bravo') + ' !'))));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6',
+      esc(tgd(this.prefix + '.finTexte', tg('result.sharedMoment', 'Vous avez partagé un super moment ensemble !')))));
 
     renderActionButtons(wrap, {
       share: { type: 'fun' },
-      newQuestions: function() { location.reload(); },
+      newQuestions: function() { self.tirer(); self.currentQ = 0; self.phase = 'playing'; self.render(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -3143,32 +3217,28 @@ var QuizEngine = (function() {
 
   TruefalseQuiz.prototype.renderIntro = function() {
     var self = this;
-    var svg = function (p) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' + p + '</svg>'; };
-    var iCheck = svg('<path d="M20 6L9 17l-5-5"/>');
-    var iList = svg('<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/>');
-    var iClock = svg('<circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/>');
-    var wrap = el('div', 'quiz-engine quiz-intro animate-fade-in');
-    wrap.innerHTML =
-      '<div class="quiz-intro-badge">' + iCheck + '</div>' +
-      '<h2 class="quiz-intro-title">' + esc(tg('truefalse.ready', 'Prêt pour le vrai ou faux ?')) + '</h2>' +
-      '<div class="quiz-intro-meta">' +
-        '<span class="quiz-meta-chip">' + iList + '<span>' + this.questions.length + ' ' + esc(tg('truefalse.statements', 'affirmations')) + '</span></span>' +
-        '<span class="quiz-meta-chip">' + iClock + '<span>' + esc(tg('meta.duration', '5 min')) + '</span></span>' +
-      '</div>' +
-      '<div class="quiz-intro-how">' +
-        '<span class="quiz-intro-how-title">' + esc(tg('truefalse.howTitle', 'Comment ça marche ?')) + '</span>' +
-        '<p>' + esc(tg('truefalse.howDesc', 'Pour chaque affirmation, choisissez Vrai ou Faux. La bonne réponse et une explication s\'affichent après chaque question.')) + '</p>' +
-      '</div>';
-    var btn = el('button', 'btn btn-cta btn-lg quiz-intro-start', esc(tg('playerSetup.startQuiz', 'Commencer le quiz')));
-    btn.addEventListener('click', function() {
-      self.phase = 'playing';
-      self.currentQ = 0;
-      self.score = 0;
-      self.answers = [];
-      self.render();
+    // Ce quiz avait son propre habillage d'introduction, un troisieme apres
+    // celui des tests et celui des jeux. Il reprend l'ecran commun ; son
+    // encadre « comment ca marche » reste, c'est lui qui pose la regle.
+    var comment = el('div', 'quiz-setup-note');
+    comment.innerHTML = '<p class="quiz-setup-note-intro">' + esc(tg('truefalse.howTitle', 'Comment ça marche ?')) + '</p>' +
+      '<p class="quiz-setup-note-fin">' + esc(tg('truefalse.howDesc', 'Pour chaque affirmation, choisissez Vrai ou Faux. La bonne réponse et une explication s\'affichent après chaque question.')) + '</p>';
+
+    var ecran = ecranDepart({
+      icone: '✅',
+      titre: tg('truefalse.ready', 'Prêt pour le vrai ou faux ?'),
+      corps: [comment],
+      meta: pastilleMeta(this.questions.length, tg('truefalse.statements', 'affirmations')),
+      bouton: tg('playerSetup.startQuiz', 'Commencer le quiz'),
+      onStart: function() {
+        self.phase = 'playing';
+        self.currentQ = 0;
+        self.score = 0;
+        self.answers = [];
+        self.render();
+      }
     });
-    wrap.appendChild(btn);
-    this.container.appendChild(wrap);
+    this.container.appendChild(ecran.wrap);
   };
 
   TruefalseQuiz.prototype.renderQuestion = function() {
@@ -3246,15 +3316,11 @@ var QuizEngine = (function() {
 
     // Result badge with revealSlide animation
     var badge = el('div', 'text-center mb-4 quiz-reveal-enter');
-    if (isCorrect) {
-      badge.innerHTML = '<span class="inline-flex items-center gap-2 text-base font-bold bg-green-500/15 text-green-600 dark:text-green-400 rounded-full px-5 py-2.5 shadow-sm">' +
-        '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>' +
-        esc(tg('truefalse.correct', 'Bonne réponse !')) + '</span>';
-    } else {
-      badge.innerHTML = '<span class="inline-flex items-center gap-2 text-base font-bold bg-red-500/15 text-red-600 dark:text-red-400 rounded-full px-5 py-2.5 shadow-sm">' +
-        '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
-        esc(tg('truefalse.wrong', 'Mauvaise réponse')) + '</span>';
-    }
+    badge.innerHTML = '<span class="quiz-verdict quiz-verdict--' + (isCorrect ? 'juste' : 'faux') + '">' +
+      (isCorrect
+        ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>'
+        : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>') +
+      esc(isCorrect ? tg('truefalse.correct', 'Bonne réponse !') : tg('truefalse.wrong', 'Mauvaise réponse')) + '</span>';
     wrap.appendChild(badge);
 
     // Statement
@@ -3262,12 +3328,19 @@ var QuizEngine = (function() {
     var qEl = el('h3', 'text-lg font-semibold mb-4 text-center', esc(qText));
     wrap.appendChild(qEl);
 
-    // Correct answer display
-    var answerLabel = correctAnswer === 'true' ? tg('truefalse.true', 'Vrai') : tg('truefalse.false', 'Faux');
-    var answerBox = el('div', 'text-center mb-4');
-    answerBox.innerHTML = '<span class="text-sm text-muted-foreground">' + esc(tg('truefalse.correctAnswer', 'La réponse :')) +
-      '</span> <span class="font-bold text-primary">' + esc(answerLabel) + '</span>';
-    wrap.appendChild(answerBox);
+    // Les deux boutons rejoues, marques : on retrouve le sien et le bon au
+    // meme endroit qu'au moment du choix, plutot qu'une ligne de texte.
+    var rappel = el('div', 'grid grid-cols-2 gap-4 max-w-md mx-auto mb-5');
+    ['true', 'false'].forEach(function(valeur) {
+      var etat = valeur === correctAnswer ? ' quiz-tf-btn--bonne'
+        : (valeur === lastAnswer.userAnswer ? ' quiz-tf-btn--mauvaise' : ' quiz-tf-btn--eteint');
+      var b = el('div', 'quiz-tf-btn quiz-tf-btn--' + (valeur === 'true' ? 'true' : 'false') + etat);
+      b.innerHTML = '<span class="quiz-tf-icon">' + (valeur === 'true' ? '✓' : '✗') + '</span>' +
+        '<span class="quiz-tf-label">' + esc(valeur === 'true' ? tg('truefalse.true', 'Vrai') : tg('truefalse.false', 'Faux')) + '</span>' +
+        (valeur === lastAnswer.userAnswer ? '<span class="quiz-tf-vous">' + esc(tg('truefalse.yourAnswer', 'votre réponse')) + '</span>' : '');
+      rappel.appendChild(b);
+    });
+    wrap.appendChild(rappel);
 
     // Explanation
     var expText = tgd(this.prefix + '.q' + q.id + 'exp', '');
@@ -5482,6 +5555,9 @@ var QuizEngine = (function() {
     // Exposé pour les moteurs écrits directement dans un gabarit de page,
     // qui doivent partager le même bouton et le même message que les autres.
     renderShareButton: renderShareButton,
+    // Exposé pour le chargeur, qui pose l'écran de choix avant de savoir quel
+    // moteur il va instancier.
+    ecranModes: ecranModes,
     SUPABASE_URL: SUPABASE_URL,
     SUPABASE_KEY: SUPABASE_KEY,
   };

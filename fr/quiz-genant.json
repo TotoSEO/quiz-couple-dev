@@ -3,8 +3,8 @@
     "title": "Quiz de couple gênant : jusqu'où osez-vous aller à deux ?",
     "description": "Se faire des bisous en public, commander à la place de l'autre, appeler votre partenaire \"chéri papounet\" devant ses collègues... Chaque couple a ses trucs un peu gênants. La question, c'est : vous en avez combien, et est-ce que vous assumez ?",
     "titleHighlight": "gênant",
-    "badge": "Quiz Fun • Gratuit • 5 min",
-    "subtitle": "Ce quiz est là pour mettre les pieds dans le plat. Quinze situations concrètes, quatre réponses possibles, un profil de couple à la clé. Répondez honnêtement, c'est beaucoup plus drôle."
+    "badge": "Deux formats • Gratuit • Sans inscription",
+    "subtitle": "Deux façons de jouer, au choix. Le test : quinze situations concrètes et un verdict sur votre niveau de gêne assumée. Le jeu : vingt questions gênantes à se poser à deux, à voix haute, sans filet."
   },
   "section1": {
     "title": "C'est quoi exactement un couple \"gênant\" ?",
@@ -31,6 +31,12 @@
     "p2": "Si votre partenaire et vous riez des mêmes situations après coup, c'est bon signe. Si l'un d'entre vous doit régulièrement \"gérer\" les retombées sociales de ce que l'autre a fait, il y a un déséquilibre à regarder.",
     "p3": "Si vos amis vous invitent encore, c'est que vous n'avez pas dépassé le seuil de tolérance. C'est un indicateur concret et sous-estimé.",
     "p4": "Et si vous avez fait ce quiz ensemble et que vous avez eu des scores très différents, prenez cinq minutes pour comparer vos réponses question par question. Les écarts sont souvent plus intéressants que le score final."
+  },
+  "section5": {
+    "title": "Et si vous préfériez vous poser les questions gênantes ?",
+    "p1": "Chercher « quiz gênant », ça veut dire deux choses très différentes selon les gens. Certains veulent savoir si leur couple est du genre à se rouler des pelles devant les parents. D'autres cherchent des <strong class=\"text-foreground\">questions gênantes à poser à deux</strong>, celles qu'on n'ose pas lancer un mardi soir devant une série.",
+    "p2": "Le second format est là pour ça : vingt questions tirées dans quatre familles. Sans filtre, pour tout ce qui touche au corps et au quotidien qu'on ne montre à personne. Avant nous, pour les ex et la première fois. Ta famille, mes amis, pour tout ce qu'on pense de l'entourage de l'autre sans jamais le dire. Et la vérité qui pique, où l'on demande enfin ce qu'on n'a jamais demandé.",
+    "p3": "Il n'y a ni score ni gagnant. On lit la question à voix haute, on répond chacun son tour, et on a le droit de passer une fois dans la partie. C'est un jeu à faire à deux sur un seul téléphone, plutôt le soir, plutôt quand on est prêts à entendre la réponse."
   },
   "jsonLd": {
     "faq1Q": "C'est quoi un couple gênant ?",

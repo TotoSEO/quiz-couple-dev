@@ -3,30 +3,38 @@
     "badge": "Quiz for couples",
     "title": "Love Quiz:",
     "titleHighlight": "Love",
-    "description": "20 statements to measure the strength of your love. Debate together, find agreement and discover your compatibility score!",
-    "statements": "20 statements",
-    "score": "Score out of 100",
-    "results": "Instant results"
+    "description": "20 questions about your story. You each answer on your own, then compare: how many times will you land on the same answer without discussing it?",
+    "statements": "20 questions",
+    "score": "Answers compared",
+    "results": "Instant result"
+  },
+  "howTo": {
+    "title": "How do you play?",
+    "step1": "Enter your two first names. One phone is enough, put it between you.",
+    "step2": "The first answers all 20 questions without showing the screen, then hands the phone over.",
+    "step3": "The second answers the same questions, without knowing what the other picked.",
+    "step4": "The game compares your two answers, question by question.",
+    "outro": "There are no right answers here. The questions where you answered differently are the interesting ones: that's where there's something to talk about."
   },
   "seo": {
     "whyTitle": "Why Take This Love Quiz Together?",
     "whySubtitle": "A quiz designed to strengthen your bond and understand each other better.",
     "card1Title": "Open the Dialogue",
     "card1Text": "Every statement is an opportunity for discussion. Express your feelings and listen to your partner's.",
-    "card2Title": "Measure Your Love",
-    "card2Text": "Objectively discover where you stand in your relationship and identify your couple's strengths.",
+    "card2Title": "Compare your answers",
+    "card2Text": "You each answer without seeing the other. At the end, the game puts your two answers side by side, question by question. That's where it gets interesting.",
     "card3Title": "Strengthen Your Bond",
     "card3Text": "Simply taking this quiz together shows your commitment to the relationship. That's already a proof of love!",
     "card4Title": "Celebrate Your Couple",
     "card4Text": "Whatever your score, this quiz allows you to celebrate your story and remember why you're together.",
     "faqTitle": "Frequently Asked Questions",
-    "faq1Q": "How does this love quiz work?",
-    "faq1A": "You answer together 20 statements by rating your level of agreement from 1 to 5. Debate if necessary to find a consensus!",
+    "faq1Q": "How is this love quiz played?",
+    "faq1A": "Two players, one phone. The first answers all 20 questions, hands the phone over, and the second answers the same ones. The game then compares your answers one by one.",
     "faq2Q": "How long does the quiz take?",
-    "faq2A": "About 10 to 15 minutes, depending on how much time you take to discuss each statement. Take your time!",
+    "faq2A": "About ten minutes together. Nothing is timed, and the questions you want to talk about deserve the detour.",
     "faq3Q": "Is the quiz really free?",
     "faq3A": "Yes, 100% free and no registration required. Your answers are not saved, you can retake the quiz as many times as you want.",
     "faq4Q": "What does our score mean?",
-    "faq4A": "Your score reflects your level of agreement on key aspects of the relationship. A high score indicates strong harmony, but it's just a fun indicator!"
+    "faq4A": "The score counts the questions where you picked the same answer without discussing it. A low score says very little about your relationship; mostly it says you have things to tell each other."
   }
 }

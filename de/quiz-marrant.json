@@ -1,10 +1,10 @@
 {
   "hero": {
     "badge": "Lustiges & Interaktives Quiz",
-    "title": "Lustiges Paar-Quiz: Entdecke 150+ witzige Fragen",
-    "description": "Ein lustiges und leichtes Quiz, um zusammen zu lachen, sich zu necken und eure Komplizenschaft zu stärken. Keine Punkte, nur Spaß zu zweit!",
-    "questions": "150+ Fragen",
-    "players": "Zwei Spieler",
+    "title": "Lustiges Paar-Quiz: 150 Fragen, die ihr euch stellt",
+    "description": "Die Fragen, die ihr euch nie zu stellen traut, in sechs Familien: eure Anfänge, eure peinlichen Momente, euer Alltag, euer Blödsinn, eure Geständnisse und völlig absurde „Was wäre, wenn…“.",
+    "questions": "150 Fragen",
+    "players": "Zu zweit, auf einem Handy",
     "duration": "~10 Minuten",
     "titleHighlight": "Lustiges"
   },
@@ -16,8 +16,8 @@
   },
   "section2": {
     "title": "Was genau ist ein lustiges Paar-Quiz?",
-    "p1": "Ein <strong class=\"text-foreground\">lustiges Paar-Quiz</strong> ist ein Fragespiel für zwei, dessen Hauptziel nicht das Testen von Wissen ist, sondern Reaktionen, Lachen und Austausch auszulösen.",
-    "p2": "Anders als bei einem klassischen Quiz gibt es keine richtigen oder falschen Antworten. Der Kern des Spiels liegt in der Wahrnehmung, die man vom anderen hat.",
+    "p1": "Ein <strong class=\"text-foreground\">lustiges Paar-Quiz</strong> ist ein Fragespiel zu zweit, das kein Wissen abfragt, sondern ein Gespräch in Gang bringt. Eine Frage erscheint, ihr lest sie laut vor und antwortet nacheinander. Mehr ist es nicht.",
+    "p2": "Es gibt keine richtige Antwort und keine Punkte. Zum Lachen bringt euch die Antwort selbst: was der andere beim ersten Date wirklich von dir dachte, der peinlichste Moment, den ihr zusammen erlebt habt, oder was er morgen früh mit einem Lottogewinn anstellen würde.",
     "p3": "Dieses Format ist besonders beliebt, weil es erlaubt, über die Beziehung ohne Schwere zu sprechen und die Kommunikation zu stärken."
   },
   "section3": {
@@ -30,8 +30,8 @@
   "section4": {
     "title": "Wie spielt man ein lustiges Paar-Quiz?",
     "sub1Title": "Das Spielprinzip",
-    "sub1P1": "Das Prinzip ist absichtlich einfach. Die Spieler wechseln sich ab und beantworten Fragen über ihren Partner.",
-    "sub1P2": "Diese Mechanik schafft natürlich Diskussionen, Lachausbrüche und manchmal gutmütige Debatten.",
+    "sub1P1": "Das Prinzip ist bewusst einfach. Eine Frage erscheint, jemand liest sie laut vor, und ihr antwortet beide. Dann geht es weiter. Zwanzig Fragen, rund zehn Minuten, kein Aufbau.",
+    "sub1P2": "Die Fragen werden zu gleichen Teilen aus den sechs Familien des Spiels gezogen, damit eine Runde nie in einer einzigen Tonlage hängen bleibt: von euren Anfängen zu den peinlichen Momenten, vom Alltag zu den Geständnissen. Startet neu, und ihr bekommt zwanzig andere Fragen.",
     "sub2Title": "Die richtige Einstellung",
     "sub2P1": "Damit das Quiz voll funktioniert, ist die Einstellung entscheidend. Es ist wichtig, mit Wohlwollen, Humor und Offenheit zu spielen.",
     "sub2P2": "Fehler zu akzeptieren und über sich selbst und den anderen zu lachen ist ein integraler Teil der Erfahrung."
@@ -50,7 +50,7 @@
   },
   "section7": {
     "title": "Lustiges Paar-Quiz und Kommunikation",
-    "p1": "Über den spielerischen Aspekt hinaus spielt das <strong class=\"text-foreground\">lustige Paar-Quiz</strong> eine interessante Rolle in der Kommunikation.",
+    "p1": "Über den spielerischen Aspekt hinaus spielt das <strong class=\"text-foreground\">lustige Paar-Quiz</strong> eine interessante Rolle in der Kommunikation. Vom ersten Date zu erzählen, vom peinlichsten Moment oder von dem, was ihr euch nie zu sagen getraut habt, heißt Dinge zu teilen, nach denen ein gewöhnliches Gespräch nie sucht.",
     "p2": "Es kann die Tür zu konstruktiven Gesprächen öffnen, immer in einem entspannten Rahmen.",
     "p3": "Regelmäßig genutzt, kann es zu einem echten Werkzeug für Komplizenschaft und emotionale Verbindung werden."
   },
@@ -68,7 +68,7 @@
   "faq": {
     "title": "FAQ – Lustiges Paar-Quiz",
     "q1": "Wie lange dauert ein lustiges Paar-Quiz?",
-    "a1": "Die Dauer hängt von der Anzahl der gewählten Fragen ab. Mit unserem 20-Fragen-Format rechne mit etwa 10 bis 15 Minuten Spielzeit.",
+    "a1": "Das Spiel zieht 20 Fragen pro Runde, das dauert etwa zehn Minuten. Nichts läuft gegen die Uhr: die Fragen, über die ihr wirklich reden wollt, sind den Umweg wert.",
     "q2": "Braucht man strenge Regeln zum Spielen?",
     "a2": "Nein, das lustige Paar-Quiz soll flexibel sein. Die Regeln können nach euren Wünschen angepasst werden. Das Wichtigste ist, zusammen Spaß zu haben!",
     "q3": "Ist das ein ernstes Spiel oder nur lustig?",
@@ -78,5 +78,18 @@
     "title": "Fazit – Warum das lustige Paar-Quiz übernehmen",
     "p1": "Das <strong class=\"text-foreground\">lustige Paar-Quiz</strong> ist eine einfache, zugängliche und unglaublich effektive Aktivität zur Stärkung der Bindung.",
     "p2": "Ob für einen spontanen Abend, einen besonderen Anlass oder einfach um die Routine zu durchbrechen – es verdient es, als unverzichtbares Paarspiel übernommen zu werden."
+  },
+  "crossLink": {
+    "title": "Nicht euer Format?",
+    "text": "Probiert Wer von uns beiden, das Paarspiel: jeder stimmt heimlich ab, aufgedeckt wird gleichzeitig.",
+    "button": "Wer von uns beiden spielen"
+  },
+  "howTo": {
+    "title": "Wie wird gespielt?",
+    "step1": "Setzt euch zu zweit vor dasselbe Handy, es gibt nichts herunterzuladen.",
+    "step2": "Eine Frage erscheint mit ihrer Familie (Anfänge, peinlich, Alltag, Blödsinn, Geständnisse, was wäre wenn…).",
+    "step3": "Lest sie laut vor und antwortet nacheinander, in der Reihenfolge, die euch passt.",
+    "step4": "Weiter zur nächsten, sobald ihr ausgelacht habt. Zwanzig Fragen, dann fangt ihr neu an.",
+    "outro": "Keine Punkte, kein Gewinner: die einzige Regel ist, ehrlich zu antworten oder die Frage offen abzulehnen."
   }
 }

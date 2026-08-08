@@ -340,7 +340,8 @@
     "next": "Siguiente pregunta",
     "seeResults": "Ver resultados",
     "correctAnswers": "respuestas correctas",
-    "summary": "Resumen de tus respuestas"
+    "summary": "Resumen de tus respuestas",
+    "yourAnswer": "tu respuesta"
   },
   "coupleLevel": {
     "heading": "Nivel de vuestra pareja",

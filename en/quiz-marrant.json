@@ -1,10 +1,10 @@
 {
   "hero": {
     "badge": "Fun & Interactive Quiz",
-    "title": "Funny Couples Quiz: Discover 150+ Fun Questions",
-    "description": "A lighthearted quiz to laugh together, tease each other and strengthen your bond. No scores, just fun for two!",
-    "questions": "150+ questions",
-    "players": "Two players",
+    "title": "Funny couple quiz: 150 questions to ask each other",
+    "description": "The questions you never dare ask, in six families: how you started, your cringe moments, everyday life, your nonsense, your confessions, and completely absurd “what if we…” scenarios.",
+    "questions": "150 questions",
+    "players": "Two players, one phone",
     "duration": "~10 minutes",
     "titleHighlight": "Funny"
   },
@@ -16,8 +16,8 @@
   },
   "section2": {
     "title": "What exactly is a funny couples quiz?",
-    "p1": "A <strong class=\"text-foreground\">funny couples quiz</strong> is a two-player question game whose main goal isn't to test knowledge but to provoke reactions, laughter, and exchanges. The unique aspect is that each player often answers on behalf of their partner, which naturally creates funny and sometimes unexpected situations.",
-    "p2": "Unlike a classic quiz, there are no right or wrong answers. The heart of the game lies in the perception each person has of the other: their habits, reactions, tastes, and little quirks. It's the gap between what you think and what the other confirms (or doesn't) that makes it funny.",
+    "p1": "A <strong class=\"text-foreground\">funny couple quiz</strong> is a two-player question game whose point is not to test knowledge but to start a conversation. A question appears, you read it out loud, and you each answer in turn. That is all there is to it.",
+    "p2": "There is no right answer and no score. What makes you laugh is the answer itself: what they really thought of you on the first date, the most embarrassing moment you have lived through together, or what they would do if they won the lottery tomorrow morning.",
     "p3": "This format is particularly appreciated because it allows discussing the relationship without heaviness, addressing everyday topics with humor, and strengthening communication within the couple."
   },
   "section3": {
@@ -30,8 +30,8 @@
   "section4": {
     "title": "How is a funny couples quiz played?",
     "sub1Title": "The game principle",
-    "sub1P1": "The principle of the funny couples quiz is deliberately simple so it remains accessible to everyone. Players take turns and answer questions about their partner. The other then reacts, confirms, or contradicts the answer.",
-    "sub1P2": "This mechanic naturally creates discussions, bursts of laughter, and sometimes good-natured debates. The game doesn't follow a scoring logic, which allows you to stay focused on the exchange rather than performance.",
+    "sub1P1": "The principle is deliberately simple. A question appears, someone reads it out loud, and you both answer it. Then you move on. Twenty questions, about ten minutes, nothing to set up.",
+    "sub1P2": "Questions are drawn evenly from the six families of the game, so a round never gets stuck in one register: you go from your beginnings to your cringe moments, from everyday life to confessions. Start again and you get twenty different questions.",
     "sub2Title": "The right mindset",
     "sub2P1": "For the funny couples quiz to work fully, mindset is essential. It's important to play with kindness, humor, and openness. Answers should never be taken as reproaches but as opportunities to understand each other better.",
     "sub2P2": "Accepting being wrong, laughing at yourself and at each other is an integral part of the experience. It's precisely this lightness that makes the game enjoyable."
@@ -50,7 +50,7 @@
   },
   "section7": {
     "title": "Funny couples quiz and couple communication",
-    "p1": "Beyond the playful aspect, the <strong class=\"text-foreground\">funny couples quiz</strong> plays an interesting role in communication. By answering questions about the other, you implicitly express what you think, observe, and feel.",
+    "p1": "Beyond the playful aspect, the <strong class=\"text-foreground\">funny couples quiz</strong> plays an interesting role in communication. Telling the story of your first date, of the moment you were most embarrassed, or of what you never dared say, means sharing things an ordinary conversation never goes looking for.",
     "p2": "This can open the door to constructive discussions, always in a relaxed setting. The game allows addressing certain topics without tension and better understanding each other's expectations and perceptions.",
     "p3": "Used regularly, the funny couples quiz can become a real tool for complicity and emotional connection."
   },
@@ -68,7 +68,7 @@
   "faq": {
     "title": "FAQ – Funny Couples Quiz",
     "q1": "How long does a funny couples quiz last?",
-    "a1": "The duration depends entirely on the number of questions chosen and the couple's dynamic. With our 20-question format, expect about 10 to 15 minutes of play.",
+    "a1": "The game draws 20 questions per round, which takes about ten minutes. Nothing is timed: the questions you really want to talk about deserve the detour.",
     "q2": "Are strict rules needed to play?",
     "a2": "No, the funny couples quiz is meant to be flexible. Rules can be adapted according to your desires and mood. The important thing is to have fun together!",
     "q3": "Is this a serious game or purely funny?",
@@ -78,5 +78,18 @@
     "title": "Conclusion – Why adopt the funny couples quiz",
     "p1": "The <strong class=\"text-foreground\">funny couples quiz</strong> is a simple, accessible, and incredibly effective activity for strengthening bonds in a relationship. It allows you to laugh together, rediscover each other, and create moments of authentic complicity.",
     "p2": "Whether for an impromptu evening, a special occasion, or simply to break the routine, the funny couples quiz has its place in every couple's life. Easy to set up, adaptable, and always fun, it clearly deserves to be adopted as an essential game to play together."
+  },
+  "crossLink": {
+    "title": "Not your kind of format?",
+    "text": "Try Which One of Us, the couple game: you each vote in secret and reveal at the same time.",
+    "button": "Play Which One of Us"
+  },
+  "howTo": {
+    "title": "How do you play?",
+    "step1": "Sit down together in front of the same phone, there is nothing to download.",
+    "step2": "A question appears with its family (beginnings, cringe, everyday, nonsense, confessions, what if…).",
+    "step3": "Read it out loud and answer one after the other, in whichever order you like.",
+    "step4": "Move on once you have finished laughing about it. Twenty questions, then you start over.",
+    "outro": "No score, no winner: the only rule is to answer honestly, or to refuse and own it."
   }
 }
