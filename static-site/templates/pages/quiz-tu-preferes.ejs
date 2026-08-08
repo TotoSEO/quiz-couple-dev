@@ -1,7 +1,8 @@
 <%
   var quizType = 'tu-preferes';
   var ns = 'quiz-tu-preferes';
-  var totalQ = 30;
+  // Le pool compte 100 dilemmes ; une partie en tire PAR_PARTIE au hasard.
+  var PAR_PARTIE = 30;
   var sectionCount = 5;
 
   const quizTitle = t('quizzes:quizTuPreferes.title', 'Tu Préfères Couple');
@@ -16,8 +17,9 @@
   }
 
   // ── JSON-LD ──
+  // On n'expose qu'un échantillon dans le balisage : la taille d'une partie.
   const hasPart = [];
-  for (var qi = 1; qi <= 40; qi++) {
+  for (var qi = 1; qi <= PAR_PARTIE; qi++) {
     var qText = tgd('wyr.q' + qi, '');
     if (!qText || qText === 'wyr.q' + qi) break;
     var questionObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
@@ -38,7 +40,8 @@
       "learningResourceType": "Quiz", "interactivityType": "active",
       "about": { "@type": "Thing", "name": "would you rather couple" },
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "totalQuestions", "value": 30 },
+        { "@type": "PropertyValue", "name": "totalQuestions", "value": PAR_PARTIE },
+        { "@type": "PropertyValue", "name": "questionPool", "value": 100 },
         { "@type": "PropertyValue", "name": "audience", "value": "couples" }
       ]
     }
@@ -233,16 +236,18 @@
         container.innerHTML = '<p class="text-center text-muted-foreground py-8">Loading...</p>';
         return;
       }
-      // Shuffle and pick 30
+      // Le pool complet est mélangé, la partie n'en garde qu'un extrait :
+      // deux parties de suite ne tombent pas sur les mêmes dilemmes.
+      var parPartie = <%= PAR_PARTIE %>;
       questions = QuizEngine.shuffleArray(questions);
-      if (questions.length > 30) questions = questions.slice(0, 30);
+      if (questions.length > parPartie) questions = questions.slice(0, parPartie);
       new WYRGame(container, questions);
     }, ['wyr']);
   }
 
   function parseQuestions() {
     var questions = [];
-    for (var i = 1; i <= 50; i++) {
+    for (var i = 1; i <= 100; i++) {
       var qText = QuizEngine.tgd('wyr.q' + i, null);
       if (!qText || qText === 'wyr.q' + i) {
         if (questions.length > 0 && i > questions[questions.length - 1].id + 3) break;

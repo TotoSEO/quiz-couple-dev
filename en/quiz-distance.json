@@ -1,12 +1,12 @@
 {
   "hero": {
     "badge": "Long-Distance Compatibility Test",
-    "title": "Long-Distance Couples Quiz - Can You Keep Your Relationship Strong from Afar?",
+    "title": "Long-distance couples: the questions to ask, and the test that answers",
     "description": "Find out if you and your partner are ready for the adventure of long-distance love. An interactive quiz with personalized results for each of you.",
     "questions": "100 questions",
     "players": "Quiz for two",
     "duration": "~10 minutes",
-    "titleHighlight": "Long-Distance"
+    "titleHighlight": "questions to ask"
   },
   "intro": {
     "p1": "Can love really survive the miles? In 2026, this question has never been more relevant. With the rise of remote work, international student mobility, and dating apps that connect us across the globe, the boundaries of love have exploded.",
@@ -197,5 +197,16 @@
     "moderateDesc": "You have a foundation but some areas need work.",
     "readyTitle": "Ready for distance",
     "readyDesc": "You have the qualities needed to manage the distance."
+  },
+  "section10": {
+    "title": "18 questions to ask each other on a video call",
+    "intro": "The test above gives you a verdict. This list is for something else: pulling it out on a night when the call is running out of steam, when you've already covered your day and there are twenty minutes left to fill. Pick one at random.",
+    "sub1Title": "The everyday you never get to see",
+    "sub1Text": "<ul><li>Describe yesterday to me, but only the five most ordinary minutes of it.</li><li>What do I have absolutely no idea about in your flat?</li><li>Who have you seen this week that I've never met?</li><li>What do you do in the evenings when we're not on a call?</li><li>What habit have you picked up since we've been apart?</li><li>What makes you think of me on an ordinary day?</li></ul>",
+    "sub2Title": "What's missing, and what holds",
+    "sub2Text": "<ul><li>What do you miss most, apart from actually seeing me?</li><li>Which moment of the week is the hardest?</li><li>Is there a subject you avoid bringing up on the phone?</li><li>What has the distance made easier between us?</li><li>When did you doubt this, even for five minutes?</li><li>What do I do that reassures you without me realising it?</li></ul>",
+    "sub3Title": "What comes after",
+    "sub3Text": "<ul><li>The first thing we do when we see each other again: you choose.</li><li>Honestly, how much longer before we're in the same city?</li><li>What would make you say this isn't worth it any more?</li><li>What are you dreading about the day we live together?</li><li>Which single-person habit are you not willing to give up?</li><li>If one of us had to move for the other, who would it be?</li></ul>",
+    "outro": "One rule if you want this to work: answer first, ask second. Otherwise one of you ends up sitting through a job interview."
   }
 }

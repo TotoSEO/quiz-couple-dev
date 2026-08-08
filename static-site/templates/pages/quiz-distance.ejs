@@ -103,6 +103,30 @@
     </div>
     <% } %>
 
+    <%/* Section 10: les questions à se poser en visio (cartes + listes) */%>
+    <% const s10Title = t(ns + ':section10.title', ''); if (s10Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= s10Title %></h2>
+      <% const s10Intro = t(ns + ':section10.intro', ''); if (s10Intro) { %>
+      <p class="text-muted-foreground leading-relaxed mb-6"><%- s10Intro %></p>
+      <% } %>
+      <div class="space-y-4">
+        <% for (let qi = 1; qi <= 3; qi++) {
+          const qTitle = t(ns + ':section10.sub' + qi + 'Title', '');
+          if (!qTitle) continue;
+          const qText = t(ns + ':section10.sub' + qi + 'Text', ''); %>
+        <div class="bg-card border border-border rounded-lg p-5">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= qTitle %></h3>
+          <% if (qText) { %><div class="seo-rich-content"><%- qText %></div><% } %>
+        </div>
+        <% } %>
+      </div>
+      <% const s10Outro = t(ns + ':section10.outro', ''); if (s10Outro) { %>
+      <p class="text-muted-foreground leading-relaxed mt-6"><%- s10Outro %></p>
+      <% } %>
+    </section>
+    <% } %>
+
     <%/* Section 1: Qu'est-ce qu'une relation à distance */%>
     <% const s1Title = t(ns + ':section1.title', ''); if (s1Title) { %>
     <section class="mb-16">

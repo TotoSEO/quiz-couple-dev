@@ -1,12 +1,12 @@
 {
   "hero": {
     "badge": "Test de compatibilité à distance",
-    "title": "Quiz de couples à distance - Êtes vous capable de garder une relation loin de l'autre ?",
+    "title": "Couple à distance : les questions à se poser, et le test qui répond",
     "description": "Découvrez si vous et votre partenaire êtes prêts pour l'aventure de l'amour à distance. Un quiz interactif avec des résultats personnalisés pour chacun.",
     "questions": "100 questions",
     "players": "Quiz à deux",
     "duration": "~10 minutes",
-    "titleHighlight": "à distance"
+    "titleHighlight": "questions à se poser"
   },
   "intro": {
     "p1": "Est-ce que l'amour peut vraiment survivre aux kilomètres ? En 2026, cette question n'a jamais été aussi pertinente. Entre la généralisation du télétravail, la mobilité étudiante internationale et les applications de rencontre qui nous connectent d'un bout à l'autre de la planète, les frontières de l'amour ont explosé.",
@@ -197,5 +197,16 @@
     "moderateDesc": "Vous avez des bases mais certains points restent à travailler.",
     "readyTitle": "Prêts pour la distance",
     "readyDesc": "Vous avez les qualités nécessaires pour gérer la distance."
+  },
+  "section10": {
+    "title": "18 questions à se poser en visio quand on est loin",
+    "intro": "Le test ci-dessus vous donne un verdict. Cette liste sert à autre chose : la sortir un soir où l'appel s'essouffle, où vous avez déjà raconté votre journée et où il reste vingt minutes à tenir. Piochez-en une, au hasard.",
+    "sub1Title": "Le quotidien qu'on ne voit pas",
+    "sub1Text": "<ul><li>Décris-moi ta journée d'hier, mais uniquement les cinq minutes les plus banales.</li><li>Qu'est-ce que j'ignore complètement de ton appartement ?</li><li>Qui as-tu vu cette semaine que je ne connais pas ?</li><li>Qu'est-ce que tu fais le soir quand on ne s'appelle pas ?</li><li>Quelle habitude as-tu prise depuis qu'on est loin ?</li><li>Qu'est-ce qui te fait penser à moi dans une journée normale ?</li></ul>",
+    "sub2Title": "Ce qui manque, et ce qui tient",
+    "sub2Text": "<ul><li>Qu'est-ce qui te manque le plus, à part le fait de me voir ?</li><li>Quel moment de la semaine est le plus dur ?</li><li>Y a-t-il un sujet que tu évites de me raconter au téléphone ?</li><li>Qu'est-ce que la distance a rendu plus facile entre nous ?</li><li>À quel moment as-tu douté, même cinq minutes ?</li><li>Qu'est-ce que je fais qui te rassure sans que je le sache ?</li></ul>",
+    "sub3Title": "L'après, et les retrouvailles",
+    "sub3Text": "<ul><li>La première chose qu'on fait quand on se revoit, tu la choisis.</li><li>Combien de temps encore, honnêtement, avant qu'on soit dans la même ville ?</li><li>Qu'est-ce qui te ferait dire que ça ne vaut plus le coup ?</li><li>Qu'est-ce que tu appréhendes le jour où on vivra ensemble ?</li><li>Quelle habitude de célibataire tu ne veux pas perdre ?</li><li>Si l'un de nous devait déménager pour l'autre, ce serait qui ?</li></ul>",
+    "outro": "Une règle si vous voulez que ça marche : on répond en premier, on demande ensuite. Sinon l'un des deux se retrouve à passer un entretien d'embauche."
   }
 }
