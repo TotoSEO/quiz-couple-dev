@@ -404,7 +404,8 @@
     "recapTitre": "Bella partita!",
     "recapTexte": "Avete superato {{releves}} carte su {{total}}.",
     "recapGages": "{{passes}} penitenza/e lungo il percorso.",
-    "rejouer": "Rigiocare"
+    "rejouer": "Rigiocare",
+    "cartesMot": "carte"
   },
   "plateau": {
     "setupTitre": "Chi prende il via?",
@@ -412,6 +413,8 @@
     "commencer": "Prendere il via",
     "lancerDe": "Lancia il dado",
     "abandonner": "Fermare la partita",
+    "regles": "Vedi le regole",
+    "reglesFermer": "Nascondi le regole",
     "compteur": "{{n}} turni giocati",
     "ok": "Capito!",
     "dAccord": "Siamo d'accordo",
@@ -420,7 +423,8 @@
     "refuse": "Passo, torno indietro",
     "victoire": "{{nom}} vince la partita!",
     "victoireTexte": "Arrivo raggiunto in {{n}} turni.",
-    "gagePerdant": "La penitenza del perdente"
+    "gagePerdant": "La penitenza del perdente",
+    "casesMot": "caselle"
   },
   "roue": {
     "lancer": "Gira la ruota",
@@ -463,6 +467,7 @@
     "palier3Titre": "Vi conoscete bene",
     "palier3Texte": "Vedete la vostra coppia più o meno allo stesso modo, e si sente. I pochi disaccordi rimasti riguardano quasi sempre dettagli quotidiani… o chi canta più stonato.",
     "palier4Titre": "Pensate uguale, quasi sospetto",
-    "palier4Texte": "Avete indicato la stessa persona su quasi tutte le domande. O vi conoscete a memoria, o uno dei due ha sbirciato oltre la spalla dell'altro. Su questo vi lasciamo discutere!"
+    "palier4Texte": "Avete indicato la stessa persona su quasi tutte le domande. O vi conoscete a memoria, o uno dei due ha sbirciato oltre la spalla dell'altro. Su questo vi lasciamo discutere!",
+    "manchesMot": "round"
   }
 }
