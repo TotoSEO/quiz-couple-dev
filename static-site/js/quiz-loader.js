@@ -54,8 +54,12 @@
     // servent enfin, dans le moteur à deux qui compare vos choix.
     'amoureux':       { prefix: 'amoureux', engine: 'duo-match', totalQ: 20, pool: 30 },
 
-    // ── Funny quiz (marrant - discussion only, no scoring) - text only ──
-    'marrant':        { prefix: 'marrant', engine: 'funny', totalQ: 20, pool: 160, textOnly: true },
+    // ── Quiz marrant : des questions qu'on se pose l'un à l'autre ──
+    // Six familles de vingt-cinq questions. Le moteur pioche lui-même, à parts
+    // égales dans chaque famille : les prénoms qu'on demandait avant ne
+    // servaient à rien, ils ont disparu.
+    'marrant':        { prefix: 'marrant', engine: 'funny', totalQ: 20, pool: 0, textOnly: true,
+                        familles: ['debuts', 'genant', 'quotidien', 'betises', 'avoue', 'siOn'] },
 
     // ── Most quiz ("Qui est le plus..." - 2-8 players, vote) - text only ──
     'most':           { prefix: 'most', engine: 'most', totalQ: 20, pool: 245, textOnly: true },
@@ -177,6 +181,29 @@
       return;
     }
 
+    // Le quiz marrant tire lui-même ses questions, autant dans chacune de ses
+    // six familles, pour qu'une partie ne tombe pas vingt fois sur la même
+    // veine. Il vérifie la première question de chaque famille avant de
+    // démarrer.
+    if (config.engine === 'funny') {
+      var familles = config.familles || [];
+      var manquante = familles.some(function(f) {
+        var k = config.prefix + '.' + f + '1';
+        return !QuizEngine.tgd(k, null) || QuizEngine.tgd(k, null) === k;
+      });
+      if (manquante) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      // le réservoir est bien plus grand qu'une partie : « autres questions »
+      // a un sens sur l'écran de fin
+      container.dataset.hasPool = '1';
+      new QuizEngine.FunnyQuiz({ container: container, prefix: config.prefix, lang: lang });
+      return;
+    }
+
     // La roue des gages ne lit pas des questions numérotées mais des familles
     // de gages : elle vérifie elle-même que ses données sont là.
     if (config.engine === 'roue') {
@@ -267,9 +294,6 @@
         break;
       case 'debate':
         initDebateQuiz(config, questions);
-        break;
-      case 'funny':
-        initFunnyQuiz(config, questions);
         break;
       case 'most':
         initMostQuiz(config, questions);
@@ -666,15 +690,6 @@
       container: container,
       questions: debateQuestions,
       results: results,
-      prefix: cfg.prefix,
-      lang: lang
-    });
-  }
-
-  function initFunnyQuiz(cfg, questions) {
-    new QuizEngine.FunnyQuiz({
-      container: container,
-      questions: questions,
       prefix: cfg.prefix,
       lang: lang
     });

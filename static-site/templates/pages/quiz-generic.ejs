@@ -316,6 +316,19 @@
       </div>
     </details>
     <% } %>
+
+    <%/* Renvoi vers un jeu au format voisin, pour qui n'accroche pas avec
+         celui-ci. Ne s'affiche que si la page nomme sa destination. */%>
+    <% const croiseRoute = typeof crossRoute !== 'undefined' ? crossRoute : null;
+       const croiseTitre = croiseRoute ? t(ns + ':crossLink.title', '') : ''; if (croiseTitre) { %>
+    <div class="quiz-croise">
+      <p class="quiz-croise-titre"><%= croiseTitre %></p>
+      <p class="quiz-croise-texte"><%= t(ns + ':crossLink.text', '') %></p>
+      <a class="btn btn-outline quiz-croise-btn" href="<%= getLocalizedUrl(croiseRoute, lang) %>">
+        <span aria-hidden="true">🎲</span><%= t(ns + ':crossLink.button', '') %>
+      </a>
+    </div>
+    <% } %>
   </div>
 </section>
 

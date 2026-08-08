@@ -5734,3 +5734,106 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .quiz-howto-corps ol li::marker { color: hsl(var(--primary)); font-weight: 800; }
 .quiz-howto-fin { margin: 1rem 0 0; font-size: 0.9375rem; color: hsl(var(--muted-foreground)); }
 @media (prefers-reduced-motion: reduce) { .quiz-howto-corps { animation: none; } }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Quiz marrant : familles annoncées à l'accueil, carte de question,
+   et renvoi vers « Qui de nous deux » sous le moteur
+   ═══════════════════════════════════════════════════════════════════ */
+.funny-familles {
+  display: flex; flex-wrap: wrap; gap: .45rem; justify-content: center;
+  max-width: 30rem; margin: 0 auto;
+}
+.funny-famille {
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding: .35rem .75rem; border-radius: 999px;
+  font-size: .8rem; font-weight: 700; line-height: 1.2;
+  color: hsl(var(--foreground));
+  background: hsl(var(--muted) / .55);
+  border: 2px solid hsl(var(--ink, 268 45% 27%) / .28);
+}
+.funny-famille-emoji { font-size: .95rem; }
+
+/* La carte de question : l'écran ne montrait qu'un titre nu au milieu
+   du vide. Elle annonce la famille, porte la question et rappelle la
+   consigne. Chaque famille a sa teinte. */
+.funny-carte {
+  --fc-h: 340; --fc-s: 70%; --fc-l: 62%;
+  position: relative; overflow: hidden;
+  max-width: 36rem; margin: 0 auto 1.5rem;
+  padding: 2.5rem 1.6rem 1.9rem; text-align: center;
+  border-radius: 1.6rem;
+  border: 3px solid hsl(var(--fc-h) var(--fc-s) var(--fc-l) / .55);
+  background: linear-gradient(160deg,
+    hsl(var(--fc-h) var(--fc-s) var(--fc-l) / .12),
+    hsl(var(--fc-h) var(--fc-s) var(--fc-l) / .03) 60%,
+    hsl(var(--card)));
+  box-shadow: 0 18px 40px -24px hsl(var(--fc-h) var(--fc-s) var(--fc-l) / .8);
+  animation: funnyCarteIn .35s cubic-bezier(.16, 1, .3, 1) both;
+}
+.funny-carte::before {
+  content: ''; position: absolute; inset: 0 0 auto; height: 6px;
+  background: linear-gradient(90deg,
+    hsl(var(--fc-h) var(--fc-s) var(--fc-l)),
+    hsl(var(--fc-h) var(--fc-s) calc(var(--fc-l) + 14%)));
+}
+.funny-carte--debuts    { --fc-h: 340; --fc-s: 72%; --fc-l: 62%; }
+.funny-carte--genant    { --fc-h: 22;  --fc-s: 88%; --fc-l: 56%; }
+.funny-carte--quotidien { --fc-h: 196; --fc-s: 66%; --fc-l: 50%; }
+.funny-carte--betises   { --fc-h: 44;  --fc-s: 92%; --fc-l: 52%; }
+.funny-carte--avoue     { --fc-h: 268; --fc-s: 52%; --fc-l: 60%; }
+.funny-carte--siOn      { --fc-h: 158; --fc-s: 54%; --fc-l: 44%; }
+
+.funny-carte-etiquette {
+  display: inline-flex; align-items: center; gap: .4rem;
+  margin-bottom: 1.1rem; padding: .34rem .85rem; border-radius: 999px;
+  font-size: .74rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase;
+  color: #fff; background: hsl(var(--fc-h) var(--fc-s) calc(var(--fc-l) - 6%));
+  box-shadow: 0 6px 16px -8px hsl(var(--fc-h) var(--fc-s) var(--fc-l));
+}
+.funny-carte-question {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800;
+  font-size: clamp(1.25rem, 4.4vw, 1.6rem); line-height: 1.28;
+  letter-spacing: -.015em; margin: 0 0 1.1rem; text-wrap: balance;
+  color: hsl(var(--foreground));
+}
+.funny-carte-consigne {
+  margin: 0; font-size: .875rem; line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+.funny-carte-consigne::before { content: '💬 '; }
+
+.funny-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: .75rem; max-width: 36rem; margin: 0 auto;
+}
+.funny-nav-suivante { flex: 1 1 auto; max-width: 20rem; margin-left: auto; }
+.funny-nav-retour { flex: none; font-size: .875rem; }
+/* Sur un telephone etroit, « Question suivante » et « Precedent » cote a cote
+   forcaient le libelle du bouton principal a passer sur deux lignes. On empile :
+   l'action va sur toute la largeur, le retour discret dessous. */
+@media (max-width: 460px) {
+  .funny-nav { flex-direction: column-reverse; gap: .5rem; }
+  .funny-nav > div:empty { display: none; }
+  .funny-nav-suivante { width: 100%; max-width: none; margin-left: 0; }
+  .funny-nav-retour { align-self: center; }
+}
+
+@keyframes funnyCarteIn { from { opacity: 0; transform: translateY(12px) scale(.985); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .funny-carte { animation: none; } }
+
+/* Renvoi vers l'autre format, sous le moteur */
+.quiz-croise {
+  max-width: 48rem; margin: 1.5rem auto 0; padding: 1.35rem 1.5rem;
+  border-radius: 1.25rem; text-align: center;
+  border: 2px dashed hsl(var(--secondary) / .45);
+  background: linear-gradient(135deg, hsl(var(--secondary) / .08), hsl(var(--primary) / .05));
+}
+.quiz-croise-titre {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800;
+  font-size: 1.05rem; margin: 0 0 .35rem;
+}
+.quiz-croise-texte {
+  margin: 0 0 1rem; font-size: .9375rem; line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+}
+.quiz-croise-btn { display: inline-flex; align-items: center; gap: .45rem; }

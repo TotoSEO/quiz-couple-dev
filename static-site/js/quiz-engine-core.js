@@ -238,9 +238,12 @@ var QuizEngine = (function() {
   }
 
   // Pastille « N questions • 5 min », commune a tous les ecrans de depart.
-  function pastilleMeta(n, mot) {
+  // La duree par defaut vaut pour les tests courts. Les jeux qui durent
+  // vraiment plus longtemps passent la leur, pour ne pas annoncer cinq minutes
+  // sur une page qui en promet dix juste en dessous.
+  function pastilleMeta(n, mot, duree) {
     return '📝 ' + n + ' ' + esc(mot || tg('meta.questionsWord', 'questions')) +
-      ' &bull; ⏱ ' + esc(tg('meta.duration', '5 min'));
+      ' &bull; ⏱ ' + esc(duree || tg('meta.duration', '5 min'));
   }
 
   // Les deux cartes de prenoms des tests a deux, reutilisees par les jeux qui
@@ -2275,19 +2278,65 @@ var QuizEngine = (function() {
   };
 
   // ═══════════════════════════════════════════════════════════
-  // FUNNY QUIZ - marrant (discussion only, no scoring)
-  // Both players read question aloud, discuss, then "Next"
+  // FUNNY QUIZ - marrant : des questions qu'on se pose l'un a
+  // l'autre, a voix haute. Rien a compter, rien a deviner.
+  //
+  // Le moteur demandait deux prenoms qu'il n'utilisait ensuite
+  // nulle part, puis affichait la question seule au milieu de
+  // l'ecran. Il tire maintenant ses questions lui-meme, autant
+  // dans chacune des six familles, et les presente sur une carte
+  // qui annonce de quoi on parle.
   // ═══════════════════════════════════════════════════════════
+  var FUNNY_FAMILLES = [
+    { id: 'debuts',    emoji: '💘' },
+    { id: 'genant',    emoji: '😬' },
+    { id: 'quotidien', emoji: '🏠' },
+    { id: 'betises',   emoji: '🤣' },
+    { id: 'avoue',     emoji: '🙈' },
+    { id: 'siOn',      emoji: '🎬' }
+  ];
+  var FUNNY_TOTAL = 20;
+
   function FunnyQuiz(config) {
     this.container = config.container;
-    this.questions = config.questions;
-    this.prefix = config.prefix;
+    this.prefix = config.prefix || 'marrant';
     this.lang = config.lang || 'fr';
     this.phase = 'setup';
-    this.players = [null, null];
     this.currentQ = 0;
+    this.questions = [];
+    this.tirer();
     this.render();
   }
+
+  FunnyQuiz.prototype.lireFamille = function(id) {
+    var out = [];
+    for (var i = 1; i <= 60; i++) {
+      var k = this.prefix + '.' + id + i;
+      var t = tgd(k, null);
+      if (!t || t === k) { if (i > 2) break; else continue; }
+      out.push({ id: id + i, famille: id, text: t });
+    }
+    return out;
+  };
+
+  // On pioche autant de questions dans chaque famille : une partie passe
+  // toujours par les debuts, le quotidien, les moments genants et le reste,
+  // au lieu de tomber sur vingt questions de la meme veine.
+  FunnyQuiz.prototype.tirer = function() {
+    var parFamille = Math.ceil(FUNNY_TOTAL / FUNNY_FAMILLES.length);
+    var lot = [];
+    FUNNY_FAMILLES.forEach(function(f) {
+      lot = lot.concat(shuffleArray(this.lireFamille(f.id)).slice(0, parFamille));
+    }, this);
+    this.questions = shuffleArray(lot).slice(0, FUNNY_TOTAL);
+  };
+
+  FunnyQuiz.prototype.emojiFamille = function(id) {
+    for (var i = 0; i < FUNNY_FAMILLES.length; i++) {
+      if (FUNNY_FAMILLES[i].id === id) return FUNNY_FAMILLES[i].emoji;
+    }
+    return '💬';
+  };
 
   FunnyQuiz.prototype.render = function() {
     this.container.innerHTML = '';
@@ -2298,44 +2347,28 @@ var QuizEngine = (function() {
 
   FunnyQuiz.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
-    var iconWrap = el('div', 'quiz-setup-icon quiz-setup-icon--emoji mx-auto mb-4', '😂');
-    wrap.appendChild(iconWrap);
-
-    wrap.appendChild(el('div', 'text-5xl mb-4 text-center', '😂'));
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyToLaugh', 'Prêts à rire ensemble ?')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', tg('playerSetup.enterNamesFun', 'Entrez vos prénoms pour commencer le quiz fun !')));
-
-    var form = el('div', 'space-y-4 max-w-md mx-auto');
-    for (var i = 0; i < 2; i++) {
-      (function(idx) {
-        var card = el('div', 'glass-card rounded-xl p-4');
-        var labelWrap = el('div', 'flex items-center gap-2 mb-2');
-        var heartSpan = el('span', idx === 0 ? 'text-pink-500' : 'text-blue-500');
-        heartSpan.innerHTML = ICONS.heart;
-        labelWrap.appendChild(heartSpan);
-        labelWrap.appendChild(el('span', 'text-sm font-medium', tg('playerSetup.player' + (idx + 1), 'Joueur ' + (idx + 1))));
-        card.appendChild(labelWrap);
-        var input = el('input', 'input w-full');
-        input.type = 'text'; input.placeholder = tg('playerSetup.firstName', 'Prénom'); input.maxLength = 20;
-        input.id = 'funny-player-' + idx;
-        card.appendChild(input);
-        form.appendChild(card);
-      })(i);
-    }
-
-    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', '😂 ' + tg('playerSetup.startQuiz', 'Commencer le quiz'));
-    startBtn.addEventListener('click', function() {
-      var n1 = document.getElementById('funny-player-0').value.trim() || tg('playerSetup.player1', 'Joueur 1');
-      var n2 = document.getElementById('funny-player-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
-      self.players = [{ name: n1 }, { name: n2 }];
-      self.currentQ = 0;
-      self.phase = 'playing'; self.render();
+    // Les six familles annoncees des l'accueil : on sait a quoi s'attendre
+    // avant de commencer.
+    var familles = el('div', 'funny-familles');
+    FUNNY_FAMILLES.forEach(function(f) {
+      var puce = el('span', 'funny-famille');
+      puce.innerHTML = '<span class="funny-famille-emoji" aria-hidden="true">' + f.emoji + '</span>' +
+        '<span>' + esc(tgd(self.prefix + '.theme_' + f.id, f.id)) + '</span>';
+      familles.appendChild(puce);
     });
-    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
-    form.appendChild(startBtn);
-    wrap.appendChild(form);
-    this.container.appendChild(wrap);
+
+    var ecran = ecranDepart({
+      icone: '😂',
+      titre: tgd(this.prefix + '.setupTitre', tg('playerSetup.readyToLaugh', 'Prêts à rire ensemble ?')),
+      desc: tgd(this.prefix + '.setupDesc', ''),
+      corps: [familles],
+      meta: pastilleMeta(this.questions.length,
+        tgd(this.prefix + '.questionsMot', tg('meta.questionsWord', 'questions')),
+        tgd(this.prefix + '.duree', null)),
+      bouton: tgd(this.prefix + '.setupBouton', tg('playerSetup.startQuiz', 'Commencer')),
+      onStart: function() { self.currentQ = 0; self.phase = 'playing'; self.render(); }
+    });
+    this.container.appendChild(ecran.wrap);
   };
 
   FunnyQuiz.prototype.renderQuestion = function() {
@@ -2346,34 +2379,35 @@ var QuizEngine = (function() {
     var wrap = el('div', 'quiz-engine quiz-question-enter');
     renderProgressBar(wrap, this.currentQ, total);
 
-    var qText = tgd(this.prefix + '.q' + q.id, q.text);
-    wrap.appendChild(el('h3', 'text-xl font-semibold mb-4 text-center', esc(qText)));
+    var carte = el('div', 'funny-carte funny-carte--' + q.famille);
+    var etiquette = el('div', 'funny-carte-etiquette');
+    etiquette.innerHTML = '<span aria-hidden="true">' + this.emojiFamille(q.famille) + '</span>' +
+      '<span>' + esc(tgd(this.prefix + '.theme_' + q.famille, '')) + '</span>';
+    carte.appendChild(etiquette);
+    carte.appendChild(el('h3', 'funny-carte-question', esc(q.text)));
+    carte.appendChild(el('p', 'funny-carte-consigne',
+      esc(tgd(this.prefix + '.consigne', tg('question.discussTogether', 'Discutez de vos réponses ensemble !')))));
+    wrap.appendChild(carte);
 
-    // Options displayed as conversation starters (read-only)
-    var optionsWrap = el('div', 'space-y-2 mb-6');
-    q.options.forEach(function(opt) {
-      var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
-      var optEl = el('div', 'quiz-option-display');
-      optEl.textContent = optText;
-      optionsWrap.appendChild(optEl);
-    });
-    wrap.appendChild(optionsWrap);
-
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground text-center mb-4', tg('question.discussTogether', '💬 Discutez de vos réponses ensemble !')));
-
-    // Navigation
-    var navWrap = el('div', 'flex justify-between items-center mt-4');
+    var navWrap = el('div', 'funny-nav');
     if (this.currentQ > 0) {
-      var backBtn = el('button', 'btn btn-ghost text-sm', '&larr; ' + tg('question.previousQuestion', 'Précédent'));
+      var backBtn = el('button', 'btn btn-ghost funny-nav-retour');
+      backBtn.type = 'button';
+      backBtn.innerHTML = '&larr; ' + esc(tgd(this.prefix + '.precedente', tg('question.previousQuestion', 'Précédent')));
       backBtn.addEventListener('click', function() { self.currentQ--; self.render(); });
       navWrap.appendChild(backBtn);
     } else {
       navWrap.appendChild(el('div'));
     }
 
-    var nextBtn = el('button', 'btn btn-cta', tg('question.nextQuestionBtn', 'Question suivante !') + ' →');
+    var nextBtn = el('button', 'btn btn-cta funny-nav-suivante');
+    nextBtn.type = 'button';
+    var dernier = this.currentQ === total - 1;
+    nextBtn.innerHTML = esc(dernier
+      ? tgd(this.prefix + '.derniere', tg('result.seeResults', 'Voir le résultat'))
+      : tgd(this.prefix + '.suivante', tg('question.nextQuestionBtn', 'Question suivante'))) + ' &rarr;';
     nextBtn.addEventListener('click', function() {
-      if (self.currentQ < total - 1) { self.currentQ++; self.render(); }
+      if (!dernier) { self.currentQ++; self.render(); }
       else { self.phase = 'results'; self.render(); }
     });
     navWrap.appendChild(nextBtn);
@@ -2386,14 +2420,14 @@ var QuizEngine = (function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
     wrap.appendChild(el('div', 'text-5xl mb-4', '🎉'));
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', tg('result.bravo', 'Bravo') + ' ' + esc(this.players[0].name) + ' & ' + esc(this.players[1].name) + ' !'));
-    wrap.appendChild(el('p', 'text-lg text-muted-foreground mb-2', tg('result.completedQuestions', 'Vous avez terminé les 20 questions !')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-4', tg('result.sharedMoment', 'Vous avez partagé un super moment ensemble !')));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', tg('result.bestMemories', 'Les meilleurs souvenirs se construisent dans le rire et la complicité 💕')));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3',
+      esc(tgd(this.prefix + '.finTitre', tg('result.bravo', 'Bravo') + ' !'))));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6',
+      esc(tgd(this.prefix + '.finTexte', tg('result.sharedMoment', 'Vous avez partagé un super moment ensemble !')))));
 
     renderActionButtons(wrap, {
       share: { type: 'fun' },
-      newQuestions: function() { location.reload(); },
+      newQuestions: function() { self.tirer(); self.currentQ = 0; self.phase = 'playing'; self.render(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);

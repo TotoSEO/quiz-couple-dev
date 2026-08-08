@@ -1,2 +1,5 @@
-<% var quizType = 'marrant'; var ns = 'quiz-marrant'; var totalQ = 20; var sectionCount = 10; %>
-<%- include('quiz-generic', { quizType, ns, totalQ, sectionCount, t, lang, routeKey, getLocalizedUrl, canonical, JSON }) %>
+<% var quizType = 'marrant'; var ns = 'quiz-marrant'; var totalQ = 20; var sectionCount = 10;
+   /* Les questions au format « qui de nous deux » ont quitté ce quiz pour le
+      jeu du même nom : on renvoie vers lui ceux que ce format-là attirait. */
+   var crossRoute = 'jeuQuiDeNous'; %>
+<%- include('quiz-generic', { quizType, ns, totalQ, sectionCount, crossRoute, t, lang, routeKey, getLocalizedUrl, canonical, JSON }) %>
