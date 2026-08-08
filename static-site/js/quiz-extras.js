@@ -153,6 +153,10 @@
     }
     function inject(card) {
       if (card.querySelector('.qr-rate')) return;
+      // Les ecrans de resultat portent deja un formulaire d'avis complet, avec
+      // ses propres etoiles. Y ajouter le raccourci donnait deux blocs de
+      // notation dans la meme carte, a quelques centimetres l'un de l'autre.
+      if (card.querySelector('.qr-review .pqx-input-stars')) return;
       var box = document.createElement('div');
       box.className = 'qr-rate';
       var label = document.createElement('p');

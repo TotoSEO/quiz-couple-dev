@@ -6,7 +6,7 @@
     "badge": "Zu zweit, ein einziges Handy",
     "title": "Wer von uns beiden? Das Spiel mit der geheimen Stimme",
     "titleHighlight": "geheimen Stimme",
-    "description": "Jeder stimmt für sich ab, beide Antworten werden gleichzeitig aufgedeckt… und ihr merkt, wie ähnlich ihr die Dinge seht."
+    "description": "Zwei Arten zu spielen: jeder stimmt heimlich ab und ihr deckt gleichzeitig auf, oder ihr benennt jemanden gemeinsam, laut. So oder so findet ihr heraus, wie ähnlich ihr euch seht."
   },
   "section1": {
     "title": "Ein albernes Spiel, und trotzdem",
@@ -20,17 +20,17 @@
     "intro": "Nichts Kompliziertes, aber die vier Punkte unten machen den Unterschied.",
     "etape1Titre": "Zuerst eure Vornamen",
     "etape1Texte": "Das Spiel benutzt sie überall: auf den Knöpfen, bei der Auflösung, im Endergebnis. Deutlich lebendiger als „Spieler 1“ und „Spieler 2“.",
-    "etape2Titre": "Der Erste stimmt heimlich ab",
-    "etape2Texte": "Die Frage erscheint, und ihr wählt, auf wen von euch beiden sie besser passt. Der andere darf nicht hinschauen… genau darum geht es!",
-    "etape3Titre": "Handy weiterreichen",
-    "etape3Texte": "Das Spiel fordert euch selbst dazu auf. Der Zweite stimmt ab, ohne zu wissen, was der Erste gewählt hat.",
-    "etape4Titre": "Die Auflösung",
-    "etape4Texte": "Ein Countdown, dann drehen sich beide Karten gleichzeitig um. Gleiche Antwort: ein Punkt. Unterschiedliche Antworten: Diskussion.",
-    "apres": "Am Ende bekommt ihr einen Harmonie-Prozentwert, eure beste Serie an Treffern in Folge und die Liste der Fragen, bei denen ihr uneinig wart. Diese Liste ist ehrlich gesagt das Beste am ganzen Spiel."
+    "etape2Titre": "Dann eure Spielweise",
+    "etape2Texte": "Jeder stimmt heimlich ab und ihr diskutiert danach, oder ihr benennt jemanden gemeinsam laut. Der erste Modus dauert länger und sorgt für mehr Gespräche; der zweite geht doppelt so schnell.",
+    "etape3Titre": "Die Abstimmung",
+    "etape3Texte": "Die Frage erscheint, ihr wählt, wen von euch beiden sie besser beschreibt. Im Geheimmodus reicht ihr das Handy weiter und der andere darf nicht hinsehen. Und wenn eine Frage nicht passt: „Wissen wir nicht“ ist immer da.",
+    "etape4Titre": "Auflösung, und Ende der Diskussion",
+    "etape4Texte": "Beide Karten drehen sich gleichzeitig um. Gleiche Antwort: ein Punkt. Verschiedene Antworten: das Spiel fragt, ob die Diskussion etwas gebracht hat, und wenn ja, auf welchen Namen.",
+    "apres": "Am Ende bekommt ihr einen Harmonie-Prozentwert, eure beste Serie an Übereinstimmungen, die entschiedenen Diskussionen und die Liste der offen gebliebenen Fragen. Diese Liste ist ehrlich gesagt das Beste am Spiel."
   },
   "section3": {
     "title": "Die vier Fragenfamilien",
-    "intro": "Insgesamt vierzig Fragen, verteilt auf vier Themen. Jede Partie zieht zwölf davon, gleichmäßig aus jeder Familie: zwölf Fragen übers Abwaschen könnt ihr also nicht bekommen.",
+    "intro": "Insgesamt achtzig Fragen, verteilt auf vier Themen. Jede Partie zieht aus jedem gleich viele, damit zwölf Runden am Stück nicht in derselben Tonlage bleiben.",
     "headerTheme": "Thema",
     "headerExemple": "Eine Beispielfrage",
     "apres": "Startet eine neue Partie und die zwölf Fragen wechseln. Genug Stoff, um mehrfach wiederzukommen, ohne dass es sich wiederholt."
@@ -56,11 +56,13 @@
     "q3": "Ist es kostenlos? Braucht man ein Konto?",
     "a3": "Kostenlos und ohne Anmeldung. Seite öffnen, Vornamen eintippen, spielen. Nichts wird gespeichert.",
     "q4": "Kann man mehrmals spielen?",
-    "a4": "Ja. Die zwölf Runden werden zufällig aus vierzig Fragen gezogen, zwei Partien hintereinander gleichen sich also nie.",
+    "a4": "Ja. Die zwölf Runden werden zufällig aus achtzig Fragen gezogen, zwei Partien hintereinander gleichen sich also nie. Und ihr könnt zwischen zwei Partien die Spielweise wechseln.",
     "q5": "Und wenn wir uns bei nichts einig sind?",
     "a5": "Das ist ehrlich gesagt der beste Fall. Das Spiel legt euch am Ende die Liste der strittigen Fragen vor, und das ist genau die Art Gespräch, die von allein niemand anfängt.",
     "q6": "Passt das auch für ein frisches Paar?",
-    "a6": "Ja, aber rechnet mit einem niedrigen Wert und viel Gelächter. Die Fragen aus dem Thema Spaß funktionieren am Anfang hervorragend, die über die Zukunft eher weniger."
+    "a6": "Ja, aber rechnet mit einem niedrigen Wert und viel Gelächter. Die Fragen aus dem Thema Spaß funktionieren am Anfang hervorragend, die über die Zukunft eher weniger.",
+    "q7": "Und wenn wir keine Antwort wissen?",
+    "a7": "In jeder Runde gibt es einen Knopf „Wissen wir nicht“. Die Runde wird dann beiseitegelegt: sie zählt weder für noch gegen euch und taucht am Ende in der Liste der Fragen zum Nachhaken wieder auf."
   },
   "section5": {
     "title": "Lust auf mehr?",
