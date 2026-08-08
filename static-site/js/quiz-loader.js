@@ -59,7 +59,11 @@
     // égales dans chaque famille : les prénoms qu'on demandait avant ne
     // servaient à rien, ils ont disparu.
     'marrant':        { prefix: 'marrant', engine: 'funny', totalQ: 20, pool: 0, textOnly: true,
-                        familles: ['debuts', 'genant', 'quotidien', 'betises', 'avoue', 'siOn'] },
+                        familles: [
+                          { id: 'debuts', emoji: '💘' }, { id: 'genant', emoji: '😬' },
+                          { id: 'quotidien', emoji: '🏠' }, { id: 'betises', emoji: '🤣' },
+                          { id: 'avoue', emoji: '🙈' }, { id: 'siOn', emoji: '🎬' }
+                        ] },
 
     // ── Most quiz ("Qui est le plus..." - 2-8 players, vote) - text only ──
     'most':           { prefix: 'most', engine: 'most', totalQ: 20, pool: 245, textOnly: true },
@@ -74,8 +78,19 @@
     'jalousie1':      { prefix: 'jalousie1', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie1', ascending: true },
     'jalousie2':      { prefix: 'jalousie2', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie2', ascending: true },
 
-    // ── Genant quiz (solo scoring, embarrassing couple behaviors) ──
-    'genant':         { prefix: 'genant', engine: 'solo', totalQ: 15, pool: 15, quizType: 'genant' },
+    // ── Quiz gênant : la page répond à deux intentions ──
+    // « Sommes-nous un couple gênant ? » est un test à score, et c'est le seul
+    // format qu'on exploitait. Mais on cherche aussi « questions gênantes à
+    // poser à son copain » : ça, c'est un jeu à deux, pas un test. Les deux
+    // vivent sur la même page, le visiteur choisit en arrivant.
+    'genant':         { modes: [
+      { id: 'test', emoji: '📊', prefix: 'genant', engine: 'solo', totalQ: 15, pool: 15, quizType: 'genant' },
+      { id: 'jeu',  emoji: '😳', prefix: 'genantJeu', engine: 'funny', totalQ: 20, pool: 0, textOnly: true,
+        familles: [
+          { id: 'corps', emoji: '🚽' }, { id: 'avant', emoji: '💔' },
+          { id: 'entourage', emoji: '👀' }, { id: 'verite', emoji: '😳' }
+        ] }
+    ] },
 
     // ── Vrai/Faux quiz (true/false with correct answer reveal) ──
     'vrai-faux':      { prefix: 'vraifaux', engine: 'truefalse', totalQ: 30, pool: 100, textOnly: true },
@@ -131,20 +146,91 @@
   // page téléchargeait les trente préfixes du fichier complet.
   // Les alias ne sont pas listés : le build émet chaque fragment sous les deux
   // noms, donc une seule requête suffit quelle que soit la langue.
+  // Une page à deux formats a besoin des données des deux : le choix se fait
+  // après le chargement, on ne peut pas attendre de savoir lequel sera retenu.
   function prefixesNecessaires(cfg) {
     var l = [];
     function ajoute(p) { if (p && l.indexOf(p) === -1) l.push(p); }
-    ajoute(cfg.prefix);
-    ajoute(cfg.resultPrefix);
-    (cfg.prefixesExtra || []).forEach(ajoute);
-    if (cfg.prefix === 'healthy') ajoute('couple');   // repli du quiz sain en FR
+    (cfg.modes || [cfg]).forEach(function(m) {
+      ajoute(m.prefix);
+      ajoute(m.resultPrefix);
+      (m.prefixesExtra || []).forEach(ajoute);
+      if (m.prefix === 'healthy') ajoute('couple');   // repli du quiz sain en FR
+    });
     return l;
+  }
+
+  // ─── Pages à deux formats ────────────────────────────────
+  // Les libellés du choix vivent avec les questions, sous le préfixe du quiz :
+  // « genant.modeTestTitre », « genant.modeJeuDesc »…
+  function texteMode(cfg, id, champ, repli) {
+    var cle = cfg.prefix + '.mode' + id.charAt(0).toUpperCase() + id.slice(1) + champ;
+    var v = QuizEngine.tgd(cle, null);
+    return (v && v !== cle) ? v : repli;
+  }
+
+  function afficherChoixDeMode(racine) {
+    var base = racine.modes[0].prefix;
+    var lu = function(champ, repli) {
+      var cle = base + '.' + champ;
+      var v = QuizEngine.tgd(cle, null);
+      return (v && v !== cle) ? v : repli;
+    };
+    container.innerHTML = '';
+    container.appendChild(QuizEngine.ecranModes({
+      icone: lu('modesIcone', '😳'),
+      titre: lu('modesTitre', ''),
+      desc: lu('modesDesc', ''),
+      modes: racine.modes.map(function(m) {
+        return {
+          id: m.id, emoji: m.emoji,
+          titre: texteMode(racine.modes[0], m.id, 'Titre', m.id),
+          desc: texteMode(racine.modes[0], m.id, 'Desc', ''),
+          meta: texteMode(racine.modes[0], m.id, 'Meta', '')
+        };
+      }),
+      onChoix: function(id) {
+        for (var i = 0; i < racine.modes.length; i++) {
+          if (racine.modes[i].id !== id) continue;
+          config = racine.modes[i];
+          poserRetourAuxModes(racine, lu('modesRetour', 'Changer de format'));
+          initFromData();
+          return;
+        }
+      }
+    }));
+  }
+
+  // Le bouton de retour est posé à côté du moteur, pas dedans : les moteurs
+  // vident leur conteneur à chaque écran, il n'y survivrait pas.
+  function poserRetourAuxModes(racine, libelle) {
+    var ancien = document.getElementById('quiz-modes-retour');
+    if (ancien) ancien.remove();
+    var b = document.createElement('button');
+    b.id = 'quiz-modes-retour';
+    b.type = 'button';
+    b.className = 'quiz-modes-retour';
+    b.innerHTML = '<span aria-hidden="true">&larr;</span> ' + libelle;
+    b.addEventListener('click', function() {
+      b.remove();
+      config = racine;
+      initFromData();
+    });
+    container.parentNode.insertBefore(b, container.nextSibling);
   }
 
   // Load translations then initialize
   var _dataAttempt = 0;
   var _repliComplet = false;
   function initFromData() {
+    // Une page à deux formats commence par demander lequel. Le mode retenu
+    // remplace la configuration : tout ce qui suit se déroule ensuite comme
+    // pour un quiz ordinaire.
+    if (config.modes) {
+      afficherChoixDeMode(config);
+      return;
+    }
+
     // Le plateau vérifie lui aussi ses propres données : ses cases, mais
     // surtout les paquets empruntés aux autres jeux.
     if (config.engine === 'plateau') {
@@ -188,7 +274,7 @@
     if (config.engine === 'funny') {
       var familles = config.familles || [];
       var manquante = familles.some(function(f) {
-        var k = config.prefix + '.' + f + '1';
+        var k = config.prefix + '.' + f.id + '1';
         return !QuizEngine.tgd(k, null) || QuizEngine.tgd(k, null) === k;
       });
       if (manquante) {
@@ -200,7 +286,8 @@
       // le réservoir est bien plus grand qu'une partie : « autres questions »
       // a un sens sur l'écran de fin
       container.dataset.hasPool = '1';
-      new QuizEngine.FunnyQuiz({ container: container, prefix: config.prefix, lang: lang });
+      new QuizEngine.FunnyQuiz({ container: container, prefix: config.prefix, lang: lang,
+        familles: familles, total: config.totalQ });
       return;
     }
 

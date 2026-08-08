@@ -3,8 +3,8 @@
     "title": "Embarrassing Couple Quiz: How Far Do You Dare to Go?",
     "description": "Kissing in public, ordering for your partner, calling them \"snuggle bear pumpkin\" in front of their colleagues... Every couple has their slightly embarrassing habits. The question is: how many do you have, and do you own them?",
     "titleHighlight": "Embarrassing",
-    "badge": "Fun Quiz • Free • 5 min",
-    "subtitle": "This quiz is here to stir the pot. Fifteen real-life situations, four possible answers, a couple profile at the end. Answer honestly, it's way more fun that way."
+    "badge": "Two formats • Free • No sign-up",
+    "subtitle": "Two ways to play, your pick. The test: fifteen real-life situations and a verdict on how much cringe you own up to. The game: twenty awkward questions to ask each other out loud, no safety net."
   },
   "section1": {
     "title": "What exactly is an \"embarrassing\" couple?",
@@ -31,6 +31,12 @@
     "p2": "If you and your partner laugh about the same situations afterwards, that's a good sign. If one of you regularly has to \"manage\" the social fallout of what the other did, there's an imbalance worth looking at.",
     "p3": "If your friends still invite you over, it means you haven't crossed the tolerance threshold. That's a concrete and underestimated indicator.",
     "p4": "And if you took this quiz together and got very different scores, take five minutes to compare your answers question by question. The gaps are often more interesting than the final score."
+  },
+  "section5": {
+    "title": "What if you would rather ask the awkward questions?",
+    "p1": "Searching for an “awkward couple quiz” means two very different things depending on who is asking. Some want to know whether they are the couple that makes out in front of the parents. Others are looking for <strong class=\"text-foreground\">awkward questions to ask each other</strong>, the ones nobody brings up on a Tuesday night in front of a series.",
+    "p2": "That is what the second format is for: twenty questions drawn from four families. No filter, for everything about bodies and the daily life nobody else sees. Before us, for exes and first times. Your family, my friends, for everything you think about the other's people and never say. And the truth that stings, where you finally ask what you never asked.",
+    "p3": "There is no score and no winner. You read the question out loud, you answer one after the other, and you get to skip once per round. It is a two-player game on a single phone, better at night, better when you are ready to hear the answer."
   },
   "jsonLd": {
     "faq1Q": "What is an embarrassing couple?",

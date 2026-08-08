@@ -5782,6 +5782,11 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .funny-carte--betises   { --fc-h: 44;  --fc-s: 92%; --fc-l: 52%; }
 .funny-carte--avoue     { --fc-h: 268; --fc-s: 52%; --fc-l: 60%; }
 .funny-carte--siOn      { --fc-h: 158; --fc-s: 54%; --fc-l: 44%; }
+/* Second format du quiz gênant */
+.funny-carte--corps     { --fc-h: 196; --fc-s: 66%; --fc-l: 50%; }
+.funny-carte--avant     { --fc-h: 340; --fc-s: 72%; --fc-l: 62%; }
+.funny-carte--entourage { --fc-h: 268; --fc-s: 52%; --fc-l: 60%; }
+.funny-carte--verite    { --fc-h: 22;  --fc-s: 88%; --fc-l: 56%; }
 
 .funny-carte-etiquette {
   display: inline-flex; align-items: center; gap: .4rem;
@@ -5837,3 +5842,57 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   color: hsl(var(--muted-foreground));
 }
 .quiz-croise-btn { display: inline-flex; align-items: center; gap: .45rem; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Choix du format, sur les pages qui répondent à deux intentions
+   ═══════════════════════════════════════════════════════════════════ */
+.quiz-modes-liste { display: grid; gap: .9rem; width: 100%; max-width: 30rem; margin: 0 auto; }
+.quiz-mode-carte {
+  --qm-h: 340; --qm-s: 70%; --qm-l: 62%;
+  display: grid; grid-template-columns: auto 1fr auto; align-items: start; gap: .9rem;
+  width: 100%; padding: 1.05rem 1.15rem; text-align: left; cursor: pointer;
+  border: 3px solid hsl(var(--ink, 268 45% 27%)); border-radius: 1.25rem;
+  background: hsl(var(--card)); box-shadow: 5px 5px 0 hsl(var(--ink, 268 45% 27%));
+  transition: transform .18s cubic-bezier(.34, 1.56, .64, 1), box-shadow .18s ease;
+}
+.quiz-mode-carte:hover, .quiz-mode-carte:focus-visible {
+  transform: translate(-2px, -2px); box-shadow: 7px 7px 0 hsl(var(--ink, 268 45% 27%));
+}
+.quiz-mode-carte--jeu { --qm-h: 22; --qm-s: 88%; --qm-l: 56%; }
+.quiz-mode-emoji {
+  display: grid; place-items: center; width: 3rem; height: 3rem; flex: none;
+  font-size: 1.5rem; border-radius: .9rem;
+  background: hsl(var(--qm-h) var(--qm-s) var(--qm-l) / .16);
+}
+.quiz-mode-corps { display: grid; gap: .15rem; min-width: 0; }
+.quiz-mode-titre {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: 1.02rem;
+  line-height: 1.25; color: hsl(var(--foreground));
+}
+.quiz-mode-desc { font-size: .875rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+.quiz-mode-meta {
+  margin-top: .3rem; font-size: .74rem; font-weight: 700; letter-spacing: .03em;
+  text-transform: uppercase; color: hsl(var(--qm-h) var(--qm-s) calc(var(--qm-l) - 12%));
+}
+.dark .quiz-mode-meta { color: hsl(var(--qm-h) var(--qm-s) calc(var(--qm-l) + 14%)); }
+.quiz-mode-fleche {
+  align-self: center; font-size: 1.2rem; font-weight: 800;
+  color: hsl(var(--qm-h) var(--qm-s) var(--qm-l));
+}
+@media (prefers-reduced-motion: reduce) { .quiz-mode-carte { transition: none; } }
+@media (max-width: 420px) {
+  .quiz-mode-carte { gap: .7rem; padding: .9rem 1rem; }
+  .quiz-mode-emoji { width: 2.5rem; height: 2.5rem; font-size: 1.25rem; }
+  .quiz-mode-fleche { display: none; }
+}
+
+/* Retour au choix : posé à côté du moteur, qui vide son conteneur à chaque écran */
+.quiz-modes-retour {
+  display: inline-flex; align-items: center; gap: .35rem; margin: 1rem auto 0;
+  padding: .5rem 1rem; border-radius: 999px; cursor: pointer;
+  font-size: .85rem; font-weight: 700; color: hsl(var(--muted-foreground));
+  background: hsl(var(--muted) / .5); border: 1.5px solid hsl(var(--border));
+  transition: color .15s ease, border-color .15s ease;
+}
+.quiz-modes-retour:hover { color: hsl(var(--foreground)); border-color: hsl(var(--primary) / .5); }
+#quiz-engine + .quiz-modes-retour { display: flex; width: fit-content; }

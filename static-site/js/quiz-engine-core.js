@@ -246,6 +246,41 @@ var QuizEngine = (function() {
       ' &bull; ⏱ ' + esc(duree || tg('meta.duration', '5 min'));
   }
 
+  // ─── Choix du format, quand une page en propose deux ──────
+  // Certaines pages repondent a deux intentions differentes sous le meme mot.
+  // « Quiz genant » par exemple : une partie des visiteurs veut savoir si son
+  // couple est genant, l'autre veut se poser des questions genantes. Plutot que
+  // de trancher pour tout le monde, on demande.
+  //   titre / desc : l'accroche commune
+  //   modes        : [{ id, emoji, titre, desc, meta }]
+  //   onChoix      : recoit l'identifiant du mode retenu
+  function ecranModes(o) {
+    var wrap = el('div', 'quiz-engine quiz-setup-screen quiz-modes animate-fade-in');
+    var badge = el('div', 'quiz-setup-icon quiz-setup-icon--emoji mx-auto mb-6');
+    badge.innerHTML = esc(o.icone || '🎲');
+    wrap.appendChild(badge);
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center', esc(o.titre || '')));
+    if (o.desc) wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(o.desc)));
+
+    var liste = el('div', 'quiz-modes-liste');
+    (o.modes || []).forEach(function(m) {
+      var carte = el('button', 'quiz-mode-carte quiz-mode-carte--' + m.id);
+      carte.type = 'button';
+      carte.innerHTML =
+        '<span class="quiz-mode-emoji" aria-hidden="true">' + esc(m.emoji || '▶') + '</span>' +
+        '<span class="quiz-mode-corps">' +
+          '<span class="quiz-mode-titre">' + esc(m.titre || '') + '</span>' +
+          '<span class="quiz-mode-desc">' + esc(m.desc || '') + '</span>' +
+          (m.meta ? '<span class="quiz-mode-meta">' + esc(m.meta) + '</span>' : '') +
+        '</span>' +
+        '<span class="quiz-mode-fleche" aria-hidden="true">→</span>';
+      carte.addEventListener('click', function() { if (o.onChoix) o.onChoix(m.id); });
+      liste.appendChild(carte);
+    });
+    wrap.appendChild(liste);
+    return wrap;
+  }
+
   // Les deux cartes de prenoms des tests a deux, reutilisees par les jeux qui
   // se contentaient de deux champs de saisie alignes.
   function cartesDeuxJoueurs(idPrefixe) {
@@ -2287,6 +2322,9 @@ var QuizEngine = (function() {
   // dans chacune des six familles, et les presente sur une carte
   // qui annonce de quoi on parle.
   // ═══════════════════════════════════════════════════════════
+  // Les familles ne sont pas ecrites ici : chaque page qui utilise ce moteur
+  // apporte les siennes. Le quiz marrant en a six, le second format du quiz
+  // genant en a quatre.
   var FUNNY_FAMILLES = [
     { id: 'debuts',    emoji: '💘' },
     { id: 'genant',    emoji: '😬' },
@@ -2301,6 +2339,8 @@ var QuizEngine = (function() {
     this.container = config.container;
     this.prefix = config.prefix || 'marrant';
     this.lang = config.lang || 'fr';
+    this.familles = (config.familles && config.familles.length) ? config.familles : FUNNY_FAMILLES;
+    this.total = config.total || FUNNY_TOTAL;
     this.phase = 'setup';
     this.currentQ = 0;
     this.questions = [];
@@ -2323,17 +2363,17 @@ var QuizEngine = (function() {
   // toujours par les debuts, le quotidien, les moments genants et le reste,
   // au lieu de tomber sur vingt questions de la meme veine.
   FunnyQuiz.prototype.tirer = function() {
-    var parFamille = Math.ceil(FUNNY_TOTAL / FUNNY_FAMILLES.length);
+    var parFamille = Math.ceil(this.total / this.familles.length);
     var lot = [];
-    FUNNY_FAMILLES.forEach(function(f) {
+    this.familles.forEach(function(f) {
       lot = lot.concat(shuffleArray(this.lireFamille(f.id)).slice(0, parFamille));
     }, this);
-    this.questions = shuffleArray(lot).slice(0, FUNNY_TOTAL);
+    this.questions = shuffleArray(lot).slice(0, this.total);
   };
 
   FunnyQuiz.prototype.emojiFamille = function(id) {
-    for (var i = 0; i < FUNNY_FAMILLES.length; i++) {
-      if (FUNNY_FAMILLES[i].id === id) return FUNNY_FAMILLES[i].emoji;
+    for (var i = 0; i < this.familles.length; i++) {
+      if (this.familles[i].id === id) return this.familles[i].emoji;
     }
     return '💬';
   };
@@ -2350,7 +2390,7 @@ var QuizEngine = (function() {
     // Les six familles annoncees des l'accueil : on sait a quoi s'attendre
     // avant de commencer.
     var familles = el('div', 'funny-familles');
-    FUNNY_FAMILLES.forEach(function(f) {
+    this.familles.forEach(function(f) {
       var puce = el('span', 'funny-famille');
       puce.innerHTML = '<span class="funny-famille-emoji" aria-hidden="true">' + f.emoji + '</span>' +
         '<span>' + esc(tgd(self.prefix + '.theme_' + f.id, f.id)) + '</span>';
@@ -2358,7 +2398,8 @@ var QuizEngine = (function() {
     });
 
     var ecran = ecranDepart({
-      icone: '😂',
+      // le marrant rit, le gênant grimace : chaque page apporte son emoji
+      icone: tgd(this.prefix + '.icone', '😂'),
       titre: tgd(this.prefix + '.setupTitre', tg('playerSetup.readyToLaugh', 'Prêts à rire ensemble ?')),
       desc: tgd(this.prefix + '.setupDesc', ''),
       corps: [familles],
@@ -5514,6 +5555,9 @@ var QuizEngine = (function() {
     // Exposé pour les moteurs écrits directement dans un gabarit de page,
     // qui doivent partager le même bouton et le même message que les autres.
     renderShareButton: renderShareButton,
+    // Exposé pour le chargeur, qui pose l'écran de choix avant de savoir quel
+    // moteur il va instancier.
+    ecranModes: ecranModes,
     SUPABASE_URL: SUPABASE_URL,
     SUPABASE_KEY: SUPABASE_KEY,
   };
