@@ -405,7 +405,8 @@
     "recapTitre": "Belle partie !",
     "recapTexte": "Vous avez relevé {{releves}} cartes sur {{total}}.",
     "recapGages": "{{passes}} gage(s) au passage.",
-    "rejouer": "Rejouer"
+    "rejouer": "Rejouer",
+    "cartesMot": "cartes"
   },
   "plateau": {
     "setupTitre": "Qui prend le départ ?",
@@ -423,7 +424,8 @@
     "refuse": "Je passe, je recule",
     "victoire": "{{nom}} gagne la partie !",
     "victoireTexte": "Arrivée atteinte en {{n}} tours.",
-    "gagePerdant": "Le gage du perdant"
+    "gagePerdant": "Le gage du perdant",
+    "casesMot": "cases"
   },
   "roue": {
     "lancer": "Lancer la roue",
@@ -466,6 +468,7 @@
     "palier3Titre": "Vous vous connaissez bien",
     "palier3Texte": "Vous voyez votre couple à peu près de la même façon, et ça se sent. Les quelques désaccords qui restent portent souvent sur des détails du quotidien… ou sur qui chante le plus faux.",
     "palier4Titre": "Vous pensez pareil, c'est presque suspect",
-    "palier4Texte": "Vous avez désigné la même personne sur presque toutes les questions. Soit vous vous connaissez par cœur, soit l'un de vous a regardé par-dessus l'épaule de l'autre. On vous laisse en débattre !"
+    "palier4Texte": "Vous avez désigné la même personne sur presque toutes les questions. Soit vous vous connaissez par cœur, soit l'un de vous a regardé par-dessus l'épaule de l'autre. On vous laisse en débattre !",
+    "manchesMot": "manches"
   }
 }

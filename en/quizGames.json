@@ -404,7 +404,8 @@
     "recapTitre": "Great game!",
     "recapTexte": "You took on {{releves}} cards out of {{total}}.",
     "recapGages": "{{passes}} forfeit(s) along the way.",
-    "rejouer": "Play again"
+    "rejouer": "Play again",
+    "cartesMot": "cards"
   },
   "plateau": {
     "setupTitre": "Who is lining up?",
@@ -422,7 +423,8 @@
     "refuse": "I pass, I move back",
     "victoire": "{{nom}} wins the game!",
     "victoireTexte": "Finish line reached in {{n}} turns.",
-    "gagePerdant": "The loser's forfeit"
+    "gagePerdant": "The loser's forfeit",
+    "casesMot": "squares"
   },
   "roue": {
     "lancer": "Spin the wheel",
@@ -465,6 +467,7 @@
     "palier3Titre": "You know each other well",
     "palier3Texte": "You see your relationship in roughly the same way, and it shows. The few disagreements left are usually about small everyday things… or about who sings the most out of tune.",
     "palier4Titre": "You think alike, almost suspiciously so",
-    "palier4Texte": "You picked the same person on nearly every question. Either you know each other inside out, or one of you peeked over the other's shoulder. We'll let you argue about that one!"
+    "palier4Texte": "You picked the same person on nearly every question. Either you know each other inside out, or one of you peeked over the other's shoulder. We'll let you argue about that one!",
+    "manchesMot": "rounds"
   }
 }

@@ -1597,6 +1597,10 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .quiz-setup-icon-coquin { background: linear-gradient(135deg, #ef4444, #f97316); box-shadow: 0 12px 28px -6px rgba(239, 68, 68, 0.5); }
 .quiz-setup-icon svg { width: 34px; height: 34px; transform: rotate(5deg); }
+/* Les tests solo ont un emoji propre à chaque test plutôt qu'une icône
+   dessinée : il prend la place du SVG dans le même badge. */
+.quiz-setup-icon--emoji { font-size: 2.1rem; line-height: 1; }
+.quiz-setup-icon--emoji > * { transform: rotate(5deg); display: block; }
 @keyframes quizIconBob { 0%, 100% { transform: rotate(-5deg) translateY(0); } 50% { transform: rotate(-5deg) translateY(-5px); } }
 @media (prefers-reduced-motion: reduce) { .quiz-setup-icon { animation: none; } }
 
@@ -1615,6 +1619,28 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   padding: 1.05rem 2rem !important; font-size: 1.0625rem !important;
   border-radius: 1rem !important;
 }
+
+/* Encart de mise en garde des tests sensibles (toxique, pervers narcissique,
+   divorce), et champ prénom du test ado : ils vivent dans l'écran de départ,
+   entre la description et la pastille. */
+.quiz-setup-note {
+  width: 100%; max-width: 26rem; margin: 0 auto 0.25rem; padding: 1.1rem 1.25rem;
+  border-radius: 1rem; text-align: left;
+  background: hsl(var(--muted) / 0.55);
+  border: 1px solid hsl(var(--border));
+}
+.quiz-setup-note-intro { font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.4rem; }
+.quiz-setup-note-cite { font-weight: 600; font-style: italic; color: hsl(var(--foreground)); margin-bottom: 0.6rem; }
+.quiz-setup-note-fin { font-size: 0.875rem; color: hsl(var(--muted-foreground)); }
+.quiz-setup-note-fin:only-child { margin: 0; }
+
+.quiz-setup-nom { width: 100%; max-width: 22rem; margin: 0 auto; }
+.quiz-setup-nom-label {
+  display: block; font-size: 0.875rem; font-weight: 600;
+  margin-bottom: 0.5rem; text-align: center;
+}
+.quiz-setup-nom .input { text-align: center; font-weight: 600; }
+.input--erreur { border-color: hsl(var(--destructive)) !important; }
 
 /* Setup grid : deux joueurs cote a cote, meme sur mobile (tout visible d'un coup) */
 .quiz-setup-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; width: 100%; }

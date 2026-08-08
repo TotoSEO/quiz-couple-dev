@@ -404,7 +404,8 @@
     "recapTitre": "¡Buena partida!",
     "recapTexte": "Habéis superado {{releves}} cartas de {{total}}.",
     "recapGages": "{{passes}} prenda(s) por el camino.",
-    "rejouer": "Jugar otra vez"
+    "rejouer": "Jugar otra vez",
+    "cartesMot": "cartas"
   },
   "plateau": {
     "setupTitre": "¿Quién toma la salida?",
@@ -422,7 +423,8 @@
     "refuse": "Paso, retrocedo",
     "victoire": "¡{{nom}} gana la partida!",
     "victoireTexte": "Meta alcanzada en {{n}} turnos.",
-    "gagePerdant": "La prenda del perdedor"
+    "gagePerdant": "La prenda del perdedor",
+    "casesMot": "casillas"
   },
   "roue": {
     "lancer": "Girar la ruleta",
@@ -465,6 +467,7 @@
     "palier3Titre": "Os conocéis bien",
     "palier3Texte": "Veis vuestra relación más o menos igual, y se nota. Los pocos desacuerdos que quedan suelen ir de detalles del día a día… o de quién canta peor.",
     "palier4Titre": "Pensáis igual, casi da miedo",
-    "palier4Texte": "Habéis señalado a la misma persona en casi todas las preguntas. O os conocéis de memoria, o alguno ha mirado por encima del hombro del otro. ¡Eso ya lo discutís vosotros!"
+    "palier4Texte": "Habéis señalado a la misma persona en casi todas las preguntas. O os conocéis de memoria, o alguno ha mirado por encima del hombro del otro. ¡Eso ya lo discutís vosotros!",
+    "manchesMot": "rondas"
   }
 }
