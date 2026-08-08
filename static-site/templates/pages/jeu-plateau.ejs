@@ -64,10 +64,35 @@
   </div>
 </section>
 
-<!-- La roue -->
+<!-- Le plateau -->
 <section class="py-10 md:py-14">
   <div class="container mx-auto px-4">
     <div id="quiz-engine" data-quiz="plateau-couple" data-lang="<%= lang %>"><%- include("../partials/quiz-loading", { lang, routeKey }) %></div>
+
+    <%/* Regles depliables depuis le jeu. Le texte est celui, deja traduit, des
+         sections de la page : le moteur ne fait que devoiler ce bloc. */%>
+    <div id="plateau-regles" class="plateau-regles" hidden>
+      <h2 class="plateau-regles-titre"><%= t(ns + ':section3.title', '') %></h2>
+      <ol class="plateau-regles-liste">
+        <% for (let i = 1; i <= 4; i++) {
+          const rt = t(ns + ':section3.regle' + i + 'Titre', '');
+          if (!rt) continue; %>
+        <li>
+          <strong><%= rt %></strong>
+          <span><%- t(ns + ':section3.regle' + i + 'Texte', '') %></span>
+        </li>
+        <% } %>
+      </ol>
+      <h3 class="plateau-regles-titre plateau-regles-titre--sous"><%= t(ns + ':section2.title', '') %></h3>
+      <ul class="plateau-regles-cases">
+        <% for (const c of ['verite', 'defi', 'duel', 'souvenir', 'gage', 'chance']) { %>
+        <li>
+          <strong><%= t(ns + ':cases.' + c + 'Nom', '') %></strong>
+          <span><%= t(ns + ':cases.' + c + 'Desc', '') %></span>
+        </li>
+        <% } %>
+      </ul>
+    </div>
   </div>
 </section>
 

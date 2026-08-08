@@ -413,6 +413,8 @@
     "commencer": "Prendre le départ",
     "lancerDe": "Lancer le dé",
     "abandonner": "Arrêter la partie",
+    "regles": "Voir les règles",
+    "reglesFermer": "Masquer les règles",
     "compteur": "{{n}} tours joués",
     "ok": "Compris !",
     "dAccord": "On est d'accord",

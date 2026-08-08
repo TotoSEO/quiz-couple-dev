@@ -412,6 +412,8 @@
     "commencer": "Tomar la salida",
     "lancerDe": "Tirar el dado",
     "abandonner": "Parar la partida",
+    "regles": "Ver las reglas",
+    "reglesFermer": "Ocultar las reglas",
     "compteur": "{{n}} turnos jugados",
     "ok": "¡Entendido!",
     "dAccord": "Estamos de acuerdo",

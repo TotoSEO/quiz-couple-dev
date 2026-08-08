@@ -412,6 +412,8 @@
     "commencer": "Line up",
     "lancerDe": "Roll the dice",
     "abandonner": "Stop the game",
+    "regles": "See the rules",
+    "reglesFermer": "Hide the rules",
     "compteur": "{{n}} turns played",
     "ok": "Got it!",
     "dAccord": "We agree",

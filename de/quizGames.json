@@ -412,6 +412,8 @@
     "commencer": "An den Start gehen",
     "lancerDe": "Würfeln",
     "abandonner": "Partie beenden",
+    "regles": "Regeln anzeigen",
+    "reglesFermer": "Regeln ausblenden",
     "compteur": "{{n}} Runden gespielt",
     "ok": "Verstanden!",
     "dAccord": "Wir sind uns einig",

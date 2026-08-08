@@ -199,6 +199,17 @@ var QuizEngine = (function() {
     return (val !== undefined && val !== null) ? val : (fallback || key);
   }
 
+  // Badge de tour partage par les jeux a deux. L'ancien libelle etait une
+  // ligne grise de la taille du texte courant : sur un telephone pose entre
+  // deux personnes, on ne voyait plus a qui c'etait. La pastille reprend la
+  // couleur et l'initiale du pion, pour que le lien avec le plateau soit
+  // immediat.
+  function badgeDeTour(nom, phrase, indice) {
+    return '<span class="party-tour party-tour--j' + (indice + 1) + '">' +
+      '<span class="party-tour-pion" aria-hidden="true">' + esc(String(nom || '?').charAt(0).toUpperCase()) + '</span>' +
+      '<span class="party-tour-texte">' + esc(phrase) + '</span></span>';
+  }
+
   // ─── Utility ──────────────────────────────────────────────
   function el(tag, cls, html) {
     var e = document.createElement(tag);
@@ -4227,7 +4238,7 @@ var QuizEngine = (function() {
   PartyGame.prototype.entete = function(wrap) {
     var self = this;
     var entete = el('div', 'party-entete');
-    entete.innerHTML = '<span class="party-tour">' + esc(this.annonce()) + '</span>' +
+    entete.innerHTML = badgeDeTour(this.joueur(), this.annonce(), this.tour) +
       '<button class="party-changer" type="button">' + esc(tg('jeu.arreter', 'Terminer la partie')) + '</button>';
     wrap.appendChild(entete);
     entete.querySelector('.party-changer').addEventListener('click', function() {
@@ -4698,8 +4709,18 @@ var QuizEngine = (function() {
 
     // barre de tour
     var entete = el('div', 'party-entete');
-    entete.innerHTML = '<span class="party-tour">' + esc(this.annonce()) + '</span>' +
-      '<button class="party-changer" type="button">' + esc(tg('plateau.abandonner', 'Arrêter la partie')) + '</button>';
+    // Le plateau se redessine a chaque tour : le libelle du bouton doit
+    // repartir de l'etat reel du bloc, sinon il annonce « voir » alors que
+    // les regles sont deja ouvertes.
+    var blocRegles = document.getElementById('plateau-regles');
+    var reglesOuvertes = !!blocRegles && !blocRegles.hasAttribute('hidden');
+    entete.innerHTML = badgeDeTour(this.joueur(), this.annonce(), this.tour) +
+      '<span class="party-entete-actions">' +
+      (blocRegles ? '<button class="party-changer party-regles-btn" type="button" aria-expanded="' + (reglesOuvertes ? 'true' : 'false') +
+        '" aria-controls="plateau-regles">' +
+        esc(reglesOuvertes ? tg('plateau.reglesFermer', 'Masquer les règles') : tg('plateau.regles', 'Voir les règles')) + '</button>' : '') +
+      '<button class="party-changer party-arreter-btn" type="button">' + esc(tg('plateau.abandonner', 'Arrêter la partie')) + '</button>' +
+      '</span>';
     wrap.appendChild(entete);
 
     // plateau : cinq colonnes sur mobile, huit sur ecran large, sinon le
@@ -4720,7 +4741,9 @@ var QuizEngine = (function() {
     });
     scene.appendChild(grille);
     [0, 1].forEach(function(j) {
-      var pion = el('span', 'plateau-pion plateau-pion--' + (j + 1));
+      // Le pion de celui qui joue est cercle : c'est le second rappel du tour,
+      // celui qu'on lit sur le plateau sans remonter a l'entete.
+      var pion = el('span', 'plateau-pion plateau-pion--' + (j + 1) + (j === self.tour ? ' plateau-pion--actif' : ''));
       pion.textContent = (self.noms[j] || '?').charAt(0).toUpperCase();
       pion.title = self.joueur(j);
       scene.appendChild(pion);
@@ -4752,10 +4775,25 @@ var QuizEngine = (function() {
     wrap.appendChild(el('p', 'party-compteur', tg('plateau.compteur', '{{n}} tours joués').replace('{{n}}', this.tours)));
     this.container.appendChild(wrap);
 
-    var arret = wrap.querySelector('.party-changer');
+    var regles = wrap.querySelector('.party-regles-btn');
+    if (regles) regles.addEventListener('click', function() { self.basculerRegles(regles); });
+    var arret = wrap.querySelector('.party-arreter-btn');
     if (arret) arret.addEventListener('click', function() { self.phase = 'setup'; self.render(); });
-    this.placerPions();
+    this.placerPions(true);
     this.suivreRedimensionnement();
+  };
+
+  // Les regles sont deja ecrites et traduites dans la page : le bouton
+  // devoile ce bloc au lieu d'en dupliquer une version dans le moteur.
+  BoardGame.prototype.basculerRegles = function(bouton) {
+    var bloc = document.getElementById('plateau-regles');
+    if (!bloc) return;
+    var ouvert = !bloc.hasAttribute('hidden');
+    if (ouvert) { bloc.setAttribute('hidden', ''); }
+    else { bloc.removeAttribute('hidden'); smoothScroll(bloc, 'start'); }
+    bouton.textContent = ouvert ? tg('plateau.regles', 'Voir les règles')
+                                : tg('plateau.reglesFermer', 'Masquer les règles');
+    bouton.setAttribute('aria-expanded', ouvert ? 'false' : 'true');
   };
 
   // Les pions sont positionnes en pixels : il faut les replacer quand la
@@ -4771,7 +4809,9 @@ var QuizEngine = (function() {
     window.addEventListener('resize', this._resize);
   };
 
-  BoardGame.prototype.placerPions = function() {
+  // immediat : place sans animer. Un pion vient d'etre recree par un rendu,
+  // il doit apparaitre a sa place et non y glisser depuis le coin du plateau.
+  BoardGame.prototype.placerPions = function(immediat) {
     var self = this;
     var grille = this.container.querySelector('.plateau-grille');
     if (!grille) return;
@@ -4785,8 +4825,27 @@ var QuizEngine = (function() {
       var ecart = ensemble ? (j === 0 ? -14 : 14) : 0;
       var dx = c.offsetLeft + c.offsetWidth / 2 - 13 + ecart;
       var dy = c.offsetTop + c.offsetHeight / 2 - 13;
+      if (immediat) pion.style.transition = 'none';
       pion.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
+      if (immediat) { void pion.offsetWidth; pion.style.transition = ''; }
     });
+  };
+
+  // Le pion doit finir de bouger tant que c'est encore le tour de celui qui
+  // joue. Le bonus d'une epreuve etait applique en meme temps que le passage
+  // de main : on voyait donc son pion arriver sur l'ecran du joueur suivant.
+  BoardGame.prototype.deplacerPuis = function(bouge, suite) {
+    if (!bouge) return suite();
+    this.placerPions();
+    var doux = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setTimeout(suite, doux ? 60 : 620);
+  };
+
+  // Pendant ce deplacement la carte reste a l'ecran : sans cela, un deuxieme
+  // clic sur « relevé » relancerait la resolution une fois le verrou expire.
+  BoardGame.prototype.figerActions = function() {
+    var b = this.container.querySelectorAll('.party-actions button');
+    for (var i = 0; i < b.length; i++) b[i].disabled = true;
   };
 
   // Un clic resolu verrouille brievement le plateau : sans cela un double-clic
@@ -4884,29 +4943,39 @@ var QuizEngine = (function() {
 
   BoardGame.prototype.appliquerChance = function(ev) {
     if (this.verrouille()) return;
+    var self = this;
     var j = this.tour;
+    var avant = [this.pos[0], this.pos[1]];
     if (ev.echange) { var t = this.pos[0]; this.pos[0] = this.pos[1]; this.pos[1] = t; }
     else if (ev.pas) this.pos[j] = Math.max(0, Math.min(this.cases.length - 1, this.pos[j] + ev.pas));
     this.tours++;
-    if (this.pos[j] >= this.cases.length - 1) { this.gagnant = j; this.phase = 'fin'; this.render(); return; }
-    if (this.pos[1 - j] >= this.cases.length - 1) { this.gagnant = 1 - j; this.phase = 'fin'; this.render(); return; }
-    if (!ev.rejoue) this.tour = 1 - this.tour;
-    this.de = null;
-    this.phase = 'jeu';
-    this.render();
+    this.figerActions();
+    this.deplacerPuis(this.pos[0] !== avant[0] || this.pos[1] !== avant[1], function() {
+      if (self.pos[j] >= self.cases.length - 1) { self.gagnant = j; self.phase = 'fin'; self.render(); return; }
+      if (self.pos[1 - j] >= self.cases.length - 1) { self.gagnant = 1 - j; self.phase = 'fin'; self.render(); return; }
+      if (!ev.rejoue) self.tour = 1 - self.tour;
+      self.de = null;
+      self.phase = 'jeu';
+      self.render();
+    });
   };
 
   // bonus : nombre de cases gagnees (ou perdues) une fois l'epreuve resolue
   BoardGame.prototype.finTour = function(bonus) {
     if (this.verrouille()) return;
+    var self = this;
     var j = this.tour;
+    var avant = this.pos[j];
     if (bonus) this.pos[j] = Math.max(0, Math.min(this.cases.length - 1, this.pos[j] + bonus));
     this.tours++;
-    if (this.pos[j] >= this.cases.length - 1) { this.gagnant = j; this.phase = 'fin'; this.render(); return; }
-    this.tour = 1 - this.tour;
-    this.de = null;
-    this.phase = 'jeu';
-    this.render();
+    this.figerActions();
+    this.deplacerPuis(this.pos[j] !== avant, function() {
+      if (self.pos[j] >= self.cases.length - 1) { self.gagnant = j; self.phase = 'fin'; self.render(); return; }
+      self.tour = 1 - self.tour;
+      self.de = null;
+      self.phase = 'jeu';
+      self.render();
+    });
   };
 
   BoardGame.prototype.renderFin = function() {
