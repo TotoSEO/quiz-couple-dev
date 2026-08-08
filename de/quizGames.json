@@ -404,7 +404,8 @@
     "recapTitre": "Schöne Partie!",
     "recapTexte": "Ihr habt {{releves}} von {{total}} Karten geschafft.",
     "recapGages": "{{passes}} Strafe(n) unterwegs.",
-    "rejouer": "Nochmal spielen"
+    "rejouer": "Nochmal spielen",
+    "cartesMot": "Karten"
   },
   "plateau": {
     "setupTitre": "Wer geht an den Start?",
@@ -412,6 +413,8 @@
     "commencer": "An den Start gehen",
     "lancerDe": "Würfeln",
     "abandonner": "Partie beenden",
+    "regles": "Regeln anzeigen",
+    "reglesFermer": "Regeln ausblenden",
     "compteur": "{{n}} Runden gespielt",
     "ok": "Verstanden!",
     "dAccord": "Wir sind uns einig",
@@ -420,7 +423,8 @@
     "refuse": "Ich passe, ich gehe zurück",
     "victoire": "{{nom}} gewinnt die Partie!",
     "victoireTexte": "Ziel erreicht in {{n}} Runden.",
-    "gagePerdant": "Die Strafe des Verlierers"
+    "gagePerdant": "Die Strafe des Verlierers",
+    "casesMot": "Felder"
   },
   "roue": {
     "lancer": "Rad drehen",
@@ -463,6 +467,7 @@
     "palier3Titre": "Ihr kennt euch gut",
     "palier3Texte": "Ihr seht eure Beziehung ungefähr gleich, und das merkt man. Die wenigen Streitpunkte drehen sich meist um Kleinigkeiten aus dem Alltag… oder darum, wer schiefer singt.",
     "palier4Titre": "Ihr denkt gleich, fast schon verdächtig",
-    "palier4Texte": "Ihr habt bei fast jeder Frage dieselbe Person gewählt. Entweder kennt ihr euch in- und auswendig, oder einer hat dem anderen über die Schulter geschaut. Das klärt ihr am besten unter euch!"
+    "palier4Texte": "Ihr habt bei fast jeder Frage dieselbe Person gewählt. Entweder kennt ihr euch in- und auswendig, oder einer hat dem anderen über die Schulter geschaut. Das klärt ihr am besten unter euch!",
+    "manchesMot": "Runden"
   }
 }

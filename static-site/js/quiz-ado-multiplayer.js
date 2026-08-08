@@ -327,7 +327,7 @@
   // ── Screen: Mode Select ──
   function renderModeSelect() {
     container.innerHTML =
-      '<div class="ado-mode-select">' +
+      '<div class="quiz-engine ado-mode-select">' +
         '<div class="ado-mode-head">' +
           '<h2 class="ado-mode-title">' + t('modeTitle') + '</h2>' +
           '<p class="ado-mode-sub">' + t('modeSubtitle') + '</p>' +
@@ -361,7 +361,7 @@
   // ── Screen: Name Input (Local mode) ──
   function renderNameInputLocal() {
     container.innerHTML =
-      '<div class="max-w-md mx-auto py-8 space-y-6">' +
+      '<div class="quiz-engine max-w-md mx-auto space-y-6">' +
         backBtn() +
         '<div class="space-y-4">' +
           '<div>' +
@@ -407,7 +407,7 @@
   // ── Screen: Name Input (Online mode) ──
   function renderNameInputOnline() {
     container.innerHTML =
-      '<div class="max-w-md mx-auto py-8 space-y-6">' +
+      '<div class="quiz-engine max-w-md mx-auto space-y-6">' +
         backBtn() +
         '<div class="grid gap-3 mb-4">' +
           '<button id="btn-create" class="btn ' + (state.onlineRole === 'create' ? 'btn-primary' : 'btn-outline') + ' py-3 text-sm flex flex-col items-center gap-0.5 w-full">' +
@@ -650,7 +650,7 @@
     var partnerProgress = state.partnerAnswers.length;
 
     container.innerHTML =
-      '<div class="max-w-md mx-auto py-8 space-y-6">' +
+      '<div class="quiz-engine max-w-md mx-auto space-y-6">' +
         // Dual progress bars
         '<div class="space-y-2">' +
           '<div class="flex items-center gap-2 text-xs">' +
@@ -679,7 +679,7 @@
     var myName = getMyName();
     var pAnswers = state.partnerAnswers || [];
     container.innerHTML =
-      '<div class="max-w-md mx-auto py-8 space-y-6">' +
+      '<div class="quiz-engine max-w-md mx-auto space-y-6">' +
         // Dual progress bars
         '<div class="space-y-2">' +
           '<div class="flex items-center gap-2 text-xs">' +
@@ -743,7 +743,7 @@
     // Ce moteur a son propre ecran de resultat, sans .quiz-result-card : la
     // page ne remontait donc aucune partie a l'admin.
     container.innerHTML =
-      '<div class="max-w-lg mx-auto py-8 space-y-8" data-quiz-done="1">' +
+      '<div class="quiz-engine max-w-lg mx-auto space-y-8" data-quiz-done="1">' +
         '<div class="text-center space-y-4">' +
           adoScoreRing(pct) +
           '<p class="text-sm text-muted-foreground">' + matches + '/' + totalQ + ' ' + t('identical') + '</p>' +

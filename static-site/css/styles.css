@@ -1597,6 +1597,10 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .quiz-setup-icon-coquin { background: linear-gradient(135deg, #ef4444, #f97316); box-shadow: 0 12px 28px -6px rgba(239, 68, 68, 0.5); }
 .quiz-setup-icon svg { width: 34px; height: 34px; transform: rotate(5deg); }
+/* Les tests solo ont un emoji propre à chaque test plutôt qu'une icône
+   dessinée : il prend la place du SVG dans le même badge. */
+.quiz-setup-icon--emoji { font-size: 2.1rem; line-height: 1; }
+.quiz-setup-icon--emoji > * { transform: rotate(5deg); display: block; }
 @keyframes quizIconBob { 0%, 100% { transform: rotate(-5deg) translateY(0); } 50% { transform: rotate(-5deg) translateY(-5px); } }
 @media (prefers-reduced-motion: reduce) { .quiz-setup-icon { animation: none; } }
 
@@ -1615,6 +1619,28 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   padding: 1.05rem 2rem !important; font-size: 1.0625rem !important;
   border-radius: 1rem !important;
 }
+
+/* Encart de mise en garde des tests sensibles (toxique, pervers narcissique,
+   divorce), et champ prénom du test ado : ils vivent dans l'écran de départ,
+   entre la description et la pastille. */
+.quiz-setup-note {
+  width: 100%; max-width: 26rem; margin: 0 auto 0.25rem; padding: 1.1rem 1.25rem;
+  border-radius: 1rem; text-align: left;
+  background: hsl(var(--muted) / 0.55);
+  border: 1px solid hsl(var(--border));
+}
+.quiz-setup-note-intro { font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.4rem; }
+.quiz-setup-note-cite { font-weight: 600; font-style: italic; color: hsl(var(--foreground)); margin-bottom: 0.6rem; }
+.quiz-setup-note-fin { font-size: 0.875rem; color: hsl(var(--muted-foreground)); }
+.quiz-setup-note-fin:only-child { margin: 0; }
+
+.quiz-setup-nom { width: 100%; max-width: 22rem; margin: 0 auto; }
+.quiz-setup-nom-label {
+  display: block; font-size: 0.875rem; font-weight: 600;
+  margin-bottom: 0.5rem; text-align: center;
+}
+.quiz-setup-nom .input { text-align: center; font-weight: 600; }
+.input--erreur { border-color: hsl(var(--destructive)) !important; }
 
 /* Setup grid : deux joueurs cote a cote, meme sur mobile (tout visible d'un coup) */
 .quiz-setup-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; width: 100%; }
@@ -5035,7 +5061,27 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   display: flex; align-items: center; justify-content: space-between;
   gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap;
 }
-.party-tour { font-size: 0.875rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+/* Badge de tour : sur un téléphone posé entre deux personnes, une ligne grise
+   ne suffisait pas à dire qui joue. La pastille reprend la couleur et
+   l'initiale du pion pour faire le lien avec le plateau. */
+.party-tour {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.375rem 0.875rem 0.375rem 0.375rem;
+  border-radius: 999px; font-size: 1rem; font-weight: 700;
+  color: hsl(var(--foreground));
+  background: hsl(var(--muted));
+  border: 1px solid hsl(var(--border));
+}
+.party-tour-pion {
+  display: grid; place-items: center;
+  width: 1.75rem; height: 1.75rem; border-radius: 50%;
+  font-size: 0.8125rem; font-weight: 800; color: #fff;
+  background: hsl(var(--primary));
+}
+.party-tour--j1 { background: hsl(var(--primary) / 0.12); border-color: hsl(var(--primary) / 0.35); }
+.party-tour--j2 { background: hsl(var(--secondary) / 0.12); border-color: hsl(var(--secondary) / 0.35); }
+.party-tour--j2 .party-tour-pion { background: hsl(var(--secondary)); }
+.party-entete-actions { display: inline-flex; align-items: center; gap: 0.75rem; }
 .party-changer {
   font-size: 0.8125rem; color: hsl(var(--muted-foreground));
   background: none; border: none; cursor: pointer; text-decoration: underline;
@@ -5216,6 +5262,13 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   position: relative;
   width: min(20rem, 82vw); height: min(20rem, 82vw);
   margin: 0 auto 1.5rem;
+  /* La roue est un carré auquel on applique une rotation : sa boîte
+     englobante déborde du carré dès qu'elle tourne, et jusqu'à 40 % de sa
+     largeur à 45°. Sur un téléphone, la page se mettait donc à défiler
+     latéralement pendant le lancer, d'une quantité qui dépendait de l'angle
+     d'arrêt. On coupe à l'horizontale seulement : la flèche dépasse en haut
+     et doit rester visible. */
+  overflow-x: clip;
 }
 .roue-plateau {
   width: 100%; height: 100%;
@@ -5321,6 +5374,37 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 .plateau-pion--1 { background: hsl(var(--primary)); }
 .plateau-pion--2 { background: hsl(var(--secondary)); }
+/* Le pion de celui qui joue : un halo qui bat doucement, pour retrouver son
+   tour d'un coup d'oeil au plateau sans relire l'entête. */
+.plateau-pion--actif {
+  z-index: 4;
+  box-shadow: 0 3px 8px -2px hsl(0 0% 0% / 0.4), 0 0 0 3px hsl(var(--card)), 0 0 0 5px currentColor;
+  animation: plateauPionActif 1.8s ease-in-out infinite;
+}
+.plateau-pion--1.plateau-pion--actif { color: hsl(var(--primary)); }
+.plateau-pion--2.plateau-pion--actif { color: hsl(var(--secondary)); }
+@keyframes plateauPionActif {
+  0%, 100% { box-shadow: 0 3px 8px -2px hsl(0 0% 0% / 0.4), 0 0 0 3px hsl(var(--card)), 0 0 0 5px currentColor; }
+  50%      { box-shadow: 0 3px 8px -2px hsl(0 0% 0% / 0.4), 0 0 0 3px hsl(var(--card)), 0 0 0 9px transparent; }
+}
+
+/* Règles dépliables depuis le jeu */
+.plateau-regles {
+  max-width: 46rem; margin: 1.5rem auto 0; padding: 1.5rem;
+  border-radius: var(--radius);
+  background: hsl(var(--card)); border: 1px solid hsl(var(--border));
+  animation: fadeIn 200ms ease-out both;
+}
+.plateau-regles-titre { font-size: 1.125rem; font-weight: 700; margin: 0 0 0.875rem; }
+.plateau-regles-titre--sous { margin-top: 1.75rem; }
+.plateau-regles-liste { margin: 0; padding-left: 1.25rem; display: grid; gap: 0.75rem; }
+.plateau-regles-liste li { line-height: 1.6; }
+.plateau-regles-cases { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.625rem; }
+.plateau-regles-cases li { line-height: 1.6; }
+.plateau-regles-liste strong,
+.plateau-regles-cases strong { display: block; color: hsl(var(--foreground)); }
+.plateau-regles-liste span,
+.plateau-regles-cases span { color: hsl(var(--muted-foreground)); font-size: 0.9375rem; }
 
 .plateau-legende {
   display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem;
@@ -5358,6 +5442,8 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 @media (prefers-reduced-motion: reduce) {
   .plateau-pion { transition: none; }
   .plateau-de--roule { animation: none; }
+  .plateau-pion--actif { animation: none; }
+  .plateau-regles { animation: none; }
 }
 
 /* ─── Qui de nous deux ─────────────────────────────────────

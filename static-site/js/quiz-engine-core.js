@@ -199,6 +199,85 @@ var QuizEngine = (function() {
     return (val !== undefined && val !== null) ? val : (fallback || key);
   }
 
+  // ─── Ecran de depart commun ───────────────────────────────
+  // La direction artistique des tests a deux (badge en degrade, titre, pastille
+  // d'informations, gros bouton pleine largeur) n'avait jamais ete reportee sur
+  // les tests solo ni sur les jeux : ils gardaient une intro plate, un emoji nu
+  // et un bouton de taille ordinaire. Ce constructeur donne le meme cadre a
+  // tout le monde, chaque moteur n'apportant que son contenu.
+  //   icone     : emoji affiche dans le badge (ignore si iconeSvg est fourni)
+  //   iconeSvg  : markup SVG, pour les moteurs qui ont deja une icone dessinee
+  //   titre     : titre de l'ecran
+  //   desc      : sous-titre, facultatif
+  //   corps     : noeuds inseres entre la description et la pastille
+  //   meta      : contenu de la pastille, en HTML deja construit
+  //   bouton    : libelle du bouton de depart
+  //   onStart   : ce que fait ce bouton
+  function ecranDepart(o) {
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
+    var badge = el('div', 'quiz-setup-icon' + (o.iconeSvg ? '' : ' quiz-setup-icon--emoji') + ' mx-auto mb-6');
+    badge.innerHTML = o.iconeSvg || esc(o.icone || '📝');
+    wrap.appendChild(badge);
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center', esc(o.titre || '')));
+    if (o.desc) wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(o.desc)));
+    (o.corps || []).forEach(function(n) { if (n) wrap.appendChild(n); });
+    if (o.meta) wrap.appendChild(el('div', 'quiz-setup-meta', o.meta));
+    var btn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', esc(o.bouton || ''));
+    btn.type = 'button';
+    if (o.onStart) btn.addEventListener('click', o.onStart);
+    wrap.appendChild(btn);
+    // Les jeux saisissaient leurs prenoms dans un <form> : la touche Entree
+    // lancait la partie. L'ecran commun n'a pas de formulaire, on rebranche
+    // donc le raccourci sur chaque champ.
+    wrap.querySelectorAll('input[type="text"]').forEach(function(champ) {
+      champ.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') { e.preventDefault(); btn.click(); }
+      });
+    });
+    return { wrap: wrap, bouton: btn };
+  }
+
+  // Pastille « N questions • 5 min », commune a tous les ecrans de depart.
+  function pastilleMeta(n, mot) {
+    return '📝 ' + n + ' ' + esc(mot || tg('meta.questionsWord', 'questions')) +
+      ' &bull; ⏱ ' + esc(tg('meta.duration', '5 min'));
+  }
+
+  // Les deux cartes de prenoms des tests a deux, reutilisees par les jeux qui
+  // se contentaient de deux champs de saisie alignes.
+  function cartesDeuxJoueurs(idPrefixe) {
+    var grille = el('div', 'quiz-setup-grid max-w-lg mx-auto');
+    [0, 1].forEach(function(i) {
+      var carte = el('div', 'quiz-player-card');
+      var numero = el('div', 'quiz-player-number', String(i + 1));
+      carte.appendChild(numero);
+      var libelle = el('label', 'block text-sm font-semibold mb-2 text-center',
+        esc(tg('playerSetup.player' + (i + 1), 'Joueur ' + (i + 1))));
+      libelle.setAttribute('for', idPrefixe + (i + 1));
+      var champ = el('input', 'input w-full');
+      champ.type = 'text';
+      champ.id = idPrefixe + (i + 1);
+      champ.maxLength = 20;
+      champ.autocomplete = 'off';
+      champ.placeholder = tg('playerSetup.firstName', 'Prénom');
+      carte.appendChild(libelle);
+      carte.appendChild(champ);
+      grille.appendChild(carte);
+    });
+    return grille;
+  }
+
+  // Badge de tour partage par les jeux a deux. L'ancien libelle etait une
+  // ligne grise de la taille du texte courant : sur un telephone pose entre
+  // deux personnes, on ne voyait plus a qui c'etait. La pastille reprend la
+  // couleur et l'initiale du pion, pour que le lien avec le plateau soit
+  // immediat.
+  function badgeDeTour(nom, phrase, indice) {
+    return '<span class="party-tour party-tour--j' + (indice + 1) + '">' +
+      '<span class="party-tour-pion" aria-hidden="true">' + esc(String(nom || '?').charAt(0).toUpperCase()) + '</span>' +
+      '<span class="party-tour-texte">' + esc(phrase) + '</span></span>';
+  }
+
   // ─── Utility ──────────────────────────────────────────────
   function el(tag, cls, html) {
     var e = document.createElement(tag);
@@ -796,80 +875,71 @@ var QuizEngine = (function() {
 
   SoloTest.prototype.renderIntro = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
+    var corps = [];
 
-    var icon = el('div', 'text-5xl mb-4', this.labels.icon || '📝');
-    var title = el('h2', 'text-2xl font-bold mb-3', tg('playerSetup.readyForTest', 'Prêt pour le test ?'));
-    var desc = el('p', 'text-muted-foreground mb-2', this.questions.length + ' ' + tg('meta.questionsWord', 'questions'));
-    var time = el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min'));
-
-    wrap.appendChild(icon);
-    wrap.appendChild(title);
-    wrap.appendChild(desc);
-    wrap.appendChild(time);
-
-    // Special toxic quiz intro
+    // Encart de mise en garde : trois tests touchent des sujets sensibles et
+    // doivent poser le cadre avant la premiere question.
+    function encart(html) {
+      var b = el('div', 'quiz-setup-note');
+      b.innerHTML = html;
+      return b;
+    }
     if (this.quizType === 'toxic') {
-      var introBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-md mx-auto text-left');
-      introBox.innerHTML = '<p class="text-sm text-muted-foreground mb-2">' + esc(tg('toxic.introQuestion', 'Vous vous posez la question :')) + '</p>' +
-        '<p class="font-semibold text-foreground mb-3 italic">' + esc(tg('toxic.introQuote', '« Est-ce que mon couple est toxique… ou est-ce que je dramatise ? »')) + '</p>' +
-        '<p class="text-sm text-muted-foreground">' + esc(tg('toxic.disclaimer', 'Ce test n\'est ni un diagnostic médical, ni un jugement.')) + '</p>';
-      wrap.appendChild(introBox);
+      corps.push(encart('<p class="quiz-setup-note-intro">' + esc(tg('toxic.introQuestion', 'Vous vous posez la question :')) + '</p>' +
+        '<p class="quiz-setup-note-cite">' + esc(tg('toxic.introQuote', '« Est-ce que mon couple est toxique… ou est-ce que je dramatise ? »')) + '</p>' +
+        '<p class="quiz-setup-note-fin">' + esc(tg('toxic.disclaimer', 'Ce test n\'est ni un diagnostic médical, ni un jugement.')) + '</p>'));
     }
-
-    // Special pervers narcissique quiz intro (sensitive topic — reassure + disclaimer)
     if (this.quizType === 'pervers') {
-      var pnBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-md mx-auto text-left');
-      pnBox.innerHTML = '<p class="text-sm text-muted-foreground mb-2">' + esc(tg('pervers.introQuestion', 'Vous vous posez la question :')) + '</p>' +
-        '<p class="font-semibold text-foreground mb-3 italic">' + esc(tg('pervers.introQuote', '« Est-ce que je vis avec un pervers narcissique… ou est-ce que j\'exagère ? »')) + '</p>' +
-        '<p class="text-sm text-muted-foreground">' + esc(tg('pervers.disclaimer', 'Ce test n\'est ni un diagnostic, ni un jugement. C\'est un outil de réflexion pour mettre des mots sur ce que vous vivez.')) + '</p>';
-      wrap.appendChild(pnBox);
+      corps.push(encart('<p class="quiz-setup-note-intro">' + esc(tg('pervers.introQuestion', 'Vous vous posez la question :')) + '</p>' +
+        '<p class="quiz-setup-note-cite">' + esc(tg('pervers.introQuote', '« Est-ce que je vis avec un pervers narcissique… ou est-ce que j\'exagère ? »')) + '</p>' +
+        '<p class="quiz-setup-note-fin">' + esc(tg('pervers.disclaimer', 'Ce test n\'est ni un diagnostic, ni un jugement. C\'est un outil de réflexion pour mettre des mots sur ce que vous vivez.')) + '</p>'));
     }
-
-    // Special divorce quiz intro
     if (this.quizType === 'divorce') {
-      var disclaimerBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-md mx-auto text-left');
-      disclaimerBox.innerHTML = '<p class="text-sm text-muted-foreground">💡 ' + esc(tg('divorce.disclaimer', 'Ce test est un outil de réflexion personnel. Il ne remplace en aucun cas l\'avis d\'un professionnel.')) + '</p>';
-      wrap.appendChild(disclaimerBox);
+      corps.push(encart('<p class="quiz-setup-note-fin">💡 ' + esc(tg('divorce.disclaimer', 'Ce test est un outil de réflexion personnel. Il ne remplace en aucun cas l\'avis d\'un professionnel.')) + '</p>'));
     }
 
-    // Name input for ado quiz
+    // Le test ado demande le prenom du/de la partenaire avant de commencer.
     var nameInput = null;
     if (this.needsName) {
-      var nameWrap = el('div', 'max-w-sm mx-auto mb-6');
-      var nameLabel = el('label', 'block text-sm font-medium text-foreground mb-2');
+      var nameWrap = el('div', 'quiz-setup-nom');
+      var nameLabel = el('label', 'quiz-setup-nom-label');
       nameLabel.textContent = tg('ui.yourName', 'Prénom de ton/ta partenaire');
-      nameInput = el('input', 'w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground text-center text-lg focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none');
+      nameInput = el('input', 'input');
       nameInput.type = 'text';
       nameInput.placeholder = tg('ui.namePlaceholder', 'Ex : Lucas');
       nameInput.maxLength = 30;
+      nameLabel.setAttribute('for', 'solo-nom');
+      nameInput.id = 'solo-nom';
       nameWrap.appendChild(nameLabel);
       nameWrap.appendChild(nameInput);
-      wrap.appendChild(nameWrap);
+      corps.push(nameWrap);
     }
 
-    var startLabel = this.labels.start || tg('playerSetup.startTest', 'Commencer le test');
-    var btn = el('button', 'btn btn-cta btn-lg', esc(startLabel));
-    btn.addEventListener('click', function() {
-      if (self.needsName && nameInput) {
-        var name = nameInput.value.trim();
-        if (!name) {
-          nameInput.style.borderColor = '#ef4444';
-          nameInput.focus();
-          return;
+    var ecran = ecranDepart({
+      icone: this.labels.icon || '📝',
+      titre: tg('playerSetup.readyForTest', 'Prêt pour le test ?'),
+      corps: corps,
+      meta: pastilleMeta(this.questions.length),
+      bouton: this.labels.start || tg('playerSetup.startTest', 'Commencer le test'),
+      onStart: function() {
+        if (self.needsName && nameInput) {
+          var name = nameInput.value.trim();
+          if (!name) {
+            nameInput.classList.add('input--erreur');
+            nameInput.focus();
+            return;
+          }
+          self.playerName = name;
         }
-        self.playerName = name;
+        self.phase = 'playing';
+        self.currentQ = 0;
+        self.answers = [];
+        self.totalScore = 0;
+        self.skippedCount = 0;
+        self.render();
       }
-      self.phase = 'playing';
-      self.currentQ = 0;
-      self.answers = [];
-      self.totalScore = 0;
-      self.skippedCount = 0;
-      self.render();
     });
-
-    wrap.appendChild(btn);
-    this.container.appendChild(wrap);
+    this.container.appendChild(ecran.wrap);
   };
 
   SoloTest.prototype.renderQuestion = function() {
@@ -1444,7 +1514,7 @@ var QuizEngine = (function() {
       })(i);
     }
 
-    var startBtn = el('button', 'btn btn-cta btn-gradient w-full mt-4', tg('playerSetup.startTest', 'Commencer le test'));
+    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', tg('playerSetup.startTest', 'Commencer le test'));
     startBtn.addEventListener('click', function() {
       var n1 = document.getElementById('distance-player-0').value.trim() || tg('playerSetup.player1', 'Joueur 1');
       var n2 = document.getElementById('distance-player-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
@@ -1452,6 +1522,7 @@ var QuizEngine = (function() {
       self.currentQ = 0; self.currentPlayer = 0; self.p1Score = 0; self.p2Score = 0;
       self.phase = 'privacy'; self.render();
     });
+    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
     form.appendChild(startBtn);
     wrap.appendChild(form);
     this.container.appendChild(wrap);
@@ -1642,7 +1713,7 @@ var QuizEngine = (function() {
 
     form.appendChild(el('p', 'text-xs text-muted-foreground text-center mt-2', tg('coquin.randomQuestions', '🎲 15 questions aléatoires parmi 30 à découvrir !')));
 
-    var startBtn = el('button', 'btn btn-cta btn-gradient w-full mt-4', '🔥 ' + tg('coquin.lightTheFlame', 'Allumer la flamme'));
+    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', '🔥 ' + tg('coquin.lightTheFlame', 'Allumer la flamme'));
     startBtn.addEventListener('click', function() {
       var n1 = document.getElementById('coquin-player-0').value.trim() || tg('playerSetup.player1', 'Joueur 1');
       var n2 = document.getElementById('coquin-player-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
@@ -1650,6 +1721,7 @@ var QuizEngine = (function() {
       self.initRounds();
       self.phase = 'guessing'; self.render();
     });
+    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
     form.appendChild(startBtn);
     wrap.appendChild(form);
     this.container.appendChild(wrap);
@@ -1882,7 +1954,7 @@ var QuizEngine = (function() {
 
     var info = el('p', 'text-xs text-muted-foreground text-center mt-3', tg('playerSetup.questionsCount', '20 questions • Répondez chacun votre tour • Résultats individuels'));
 
-    var startBtn = el('button', 'btn btn-cta btn-gradient w-full mt-4', tg('playerSetup.startQuiz', 'Commencer le quiz'));
+    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', tg('playerSetup.startQuiz', 'Commencer le quiz'));
     startBtn.addEventListener('click', function() {
       var n1 = document.getElementById('knowledge-player-0').value.trim() || tg('playerSetup.player1', 'Joueur 1');
       var n2 = document.getElementById('knowledge-player-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
@@ -1891,6 +1963,7 @@ var QuizEngine = (function() {
       self.phase = 'question'; self.render();
     });
     form.appendChild(info);
+    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
     form.appendChild(startBtn);
     wrap.appendChild(form);
     this.container.appendChild(wrap);
@@ -2057,6 +2130,8 @@ var QuizEngine = (function() {
   DebateQuiz.prototype.renderSetup = function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
+    var iconWrap = el('div', 'quiz-setup-icon quiz-setup-icon--emoji mx-auto mb-4', '💬');
+    wrap.appendChild(iconWrap);
 
     wrap.appendChild(el('div', 'text-5xl mb-4 text-center', '💕'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.quizForTwo', 'Quiz à Faire en Couple')));
@@ -2090,7 +2165,7 @@ var QuizEngine = (function() {
       })(i);
     }
 
-    var startBtn = el('button', 'btn btn-cta btn-gradient w-full mt-4', tg('playerSetup.startQuiz', 'Commencer le quiz'));
+    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', tg('playerSetup.startQuiz', 'Commencer le quiz'));
     startBtn.addEventListener('click', function() {
       var n1 = document.getElementById('debate-player-0').value.trim() || tg('playerSetup.player1', 'Joueur 1');
       var n2 = document.getElementById('debate-player-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
@@ -2098,6 +2173,7 @@ var QuizEngine = (function() {
       self.currentQ = 0; self.scores = [];
       self.phase = 'playing'; self.render();
     });
+    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
     form.appendChild(startBtn);
     wrap.appendChild(form);
     this.container.appendChild(wrap);
@@ -2224,6 +2300,8 @@ var QuizEngine = (function() {
   FunnyQuiz.prototype.renderSetup = function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
+    var iconWrap = el('div', 'quiz-setup-icon quiz-setup-icon--emoji mx-auto mb-4', '😂');
+    wrap.appendChild(iconWrap);
 
     wrap.appendChild(el('div', 'text-5xl mb-4 text-center', '😂'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyToLaugh', 'Prêts à rire ensemble ?')));
@@ -2247,7 +2325,7 @@ var QuizEngine = (function() {
       })(i);
     }
 
-    var startBtn = el('button', 'btn btn-cta btn-gradient w-full mt-4', '😂 ' + tg('playerSetup.startQuiz', 'Commencer le quiz'));
+    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', '😂 ' + tg('playerSetup.startQuiz', 'Commencer le quiz'));
     startBtn.addEventListener('click', function() {
       var n1 = document.getElementById('funny-player-0').value.trim() || tg('playerSetup.player1', 'Joueur 1');
       var n2 = document.getElementById('funny-player-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
@@ -2255,6 +2333,7 @@ var QuizEngine = (function() {
       self.currentQ = 0;
       self.phase = 'playing'; self.render();
     });
+    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
     form.appendChild(startBtn);
     wrap.appendChild(form);
     this.container.appendChild(wrap);
@@ -2402,7 +2481,7 @@ var QuizEngine = (function() {
 
     renderPlayersList();
 
-    var startBtn = el('button', 'btn btn-cta btn-gradient w-full mt-8 max-w-md mx-auto');
+    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn');
     startBtn.id = 'most-start-btn';
     startBtn.textContent = tg('playerSetup.startQuiz', 'Commencer le quiz');
     startBtn.addEventListener('click', function() {
@@ -2429,6 +2508,7 @@ var QuizEngine = (function() {
     });
 
     wrap.appendChild(playersContainer);
+    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
     wrap.appendChild(startBtn);
     this.container.appendChild(wrap);
   };
@@ -2660,6 +2740,7 @@ var QuizEngine = (function() {
     });
 
     wrap.appendChild(form);
+    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
     wrap.appendChild(startBtn);
     this.container.appendChild(wrap);
   };
@@ -2853,9 +2934,9 @@ var QuizEngine = (function() {
 
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-2 text-center', tg('parentalite.setupDesc', 'Répondez chacun de votre côté aux mêmes 20 questions.')));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6 text-center',
-      this.questions.length + ' ' + tg('meta.questionsWord', 'questions') + ' &bull; ' +
-      tg('meta.duration', '10 min') + ' &bull; ' + tg('parentalite.scoreOn60', 'Score sur 60 par personne')));
+    wrap.appendChild(el('div', 'quiz-setup-meta',
+      '📝 ' + this.questions.length + ' ' + esc(tg('meta.questionsWord', 'questions')) + ' &bull; ⏱ ' +
+      esc(tg('meta.duration', '10 min')) + ' &bull; ' + esc(tg('parentalite.scoreOn60', 'Score sur 60 par personne'))));
 
     var form = el('div', 'quiz-setup-grid max-w-lg mx-auto');
 
@@ -2875,7 +2956,7 @@ var QuizEngine = (function() {
       })(i);
     }
 
-    var startBtn = el('button', 'btn btn-cta btn-gradient w-full mt-4', tg('playerSetup.startTest', 'Commencer le test'));
+    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', tg('playerSetup.startTest', 'Commencer le test'));
     startBtn.addEventListener('click', function() {
       var n1 = document.getElementById('parentalite-player-0').value.trim() || tg('playerSetup.player1', 'Joueur 1');
       var n2 = document.getElementById('parentalite-player-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
@@ -3330,19 +3411,18 @@ var QuizEngine = (function() {
 
   ProfileQuiz.prototype.renderIntro = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
-    wrap.appendChild(el('div', 'text-5xl mb-4', this.labels.icon || '🔗'));
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', this.introTitle));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-2', this.questions.length + ' ' + tg('meta.questionsWord', 'questions')));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6', '⏱ ' + tg('meta.duration', '5 min')));
-    var btn = el('button', 'btn btn-cta btn-lg', tg('playerSetup.startTest', 'Commencer le test'));
-    btn.addEventListener('click', function() {
-      self.phase = 'playing'; self.currentQ = 0; self.answers = [];
-      self.tally = self.tallyVierge();
-      self.render();
+    var ecran = ecranDepart({
+      icone: this.labels.icon || '🔗',
+      titre: this.introTitle,
+      meta: pastilleMeta(this.questions.length),
+      bouton: tg('playerSetup.startTest', 'Commencer le test'),
+      onStart: function() {
+        self.phase = 'playing'; self.currentQ = 0; self.answers = [];
+        self.tally = self.tallyVierge();
+        self.render();
+      }
     });
-    wrap.appendChild(btn);
-    this.container.appendChild(wrap);
+    this.container.appendChild(ecran.wrap);
   };
 
   ProfileQuiz.prototype.renderQuestion = function() {
@@ -3562,7 +3642,7 @@ var QuizEngine = (function() {
     stage.classList.add('zamours-stage--intro');
     var wrap = el('div', 'zamours-panel animate-fade-in');
     wrap.innerHTML = this._marquee()
-      + '<p class="zamours-tagline">Le jeu culte de l’émission, version couple &mdash; en ligne, gratuit et sans inscription.</p>';
+      + '<p class="zamours-tagline">Le jeu culte de l’émission, version couple : en ligne, gratuit et sans inscription.</p>';
 
     var form = el('div', 'zamours-setup-form');
     for (var i = 0; i < 2; i++) {
@@ -4183,40 +4263,33 @@ var QuizEngine = (function() {
 
   PartyGame.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
-    wrap.appendChild(el('div', 'text-5xl mb-4', '🎲'));
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('jeu.setupTitre', 'Qui joue ce soir ?')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6', tg('jeu.setupDesc', 'Entrez vos deux prénoms : le jeu annonce à qui c\'est le tour.')));
-
-    var form = el('form', 'party-setup');
-    form.innerHTML =
-      '<input type="text" class="party-input" id="party-nom1" maxlength="20" autocomplete="off" placeholder="' +
-      esc(tg('playerSetup.player1Placeholder', 'Prénom du joueur 1')) + '" aria-label="' +
-      esc(tg('playerSetup.firstFirstName', 'Premier prénom')) + '">' +
-      '<input type="text" class="party-input" id="party-nom2" maxlength="20" autocomplete="off" placeholder="' +
-      esc(tg('playerSetup.player2Placeholder', 'Prénom du joueur 2')) + '" aria-label="' +
-      esc(tg('playerSetup.secondFirstName', 'Deuxième prénom')) + '">' +
-      '<button type="submit" class="btn btn-cta btn-lg">' + esc(tg('jeu.commencer', 'Commencer la partie')) + '</button>';
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var n1 = form.querySelector('#party-nom1').value.trim();
-      var n2 = form.querySelector('#party-nom2').value.trim();
-      self.noms = [n1 || tg('playerSetup.player1', 'Joueur 1'), n2 || tg('playerSetup.player2', 'Joueur 2')];
-      self.piocheQ = shuffleArray(self.cartes('q'));
-      self.piocheD = shuffleArray(self.cartes('d'));
-      self.gages = self.cartes('g');
-      if (!self.piocheQ.length && !self.piocheD.length) return;
-      self.tour = 0; self.releves = 0; self.passes = 0;
-      self.phase = 'choix';
-      self.render();
-      smoothScroll(self.container, 'start');
+    var grille = cartesDeuxJoueurs('party-nom');
+    var ecran = ecranDepart({
+      icone: '🎲',
+      titre: tg('jeu.setupTitre', 'Qui joue ce soir ?'),
+      desc: tg('jeu.setupDesc', 'Entrez vos deux prénoms : le jeu annonce à qui c\'est le tour.'),
+      corps: [grille],
+      meta: pastilleMeta(this.cartes('q').length + this.cartes('d').length + this.cartes('g').length,
+        tg('jeu.cartesMot', 'cartes')),
+      bouton: tg('jeu.commencer', 'Commencer la partie'),
+      onStart: function() {
+        self.noms = [
+          grille.querySelector('#party-nom1').value.trim() || tg('playerSetup.player1', 'Joueur 1'),
+          grille.querySelector('#party-nom2').value.trim() || tg('playerSetup.player2', 'Joueur 2')
+        ];
+        self.piocheQ = shuffleArray(self.cartes('q'));
+        self.piocheD = shuffleArray(self.cartes('d'));
+        self.gages = self.cartes('g');
+        if (!self.piocheQ.length && !self.piocheD.length) return;
+        self.tour = 0; self.releves = 0; self.passes = 0;
+        self.phase = 'choix';
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
     });
-    wrap.appendChild(form);
-    this.container.appendChild(wrap);
+    this.container.appendChild(ecran.wrap);
   };
 
-  // « Au tour de Léa » mais « Au tour d'Alex » : la forme elidee est une cle a
-  // part, et une cle qui se termine par une apostrophe se colle au prenom.
   PartyGame.prototype.annonce = function() {
     var nom = this.joueur();
     var voyelle = /^[aeiouyàâäéèêëîïôöùûüh]/i.test(nom);
@@ -4227,7 +4300,7 @@ var QuizEngine = (function() {
   PartyGame.prototype.entete = function(wrap) {
     var self = this;
     var entete = el('div', 'party-entete');
-    entete.innerHTML = '<span class="party-tour">' + esc(this.annonce()) + '</span>' +
+    entete.innerHTML = badgeDeTour(this.joueur(), this.annonce(), this.tour) +
       '<button class="party-changer" type="button">' + esc(tg('jeu.arreter', 'Terminer la partie')) + '</button>';
     wrap.appendChild(entete);
     entete.querySelector('.party-changer').addEventListener('click', function() {
@@ -4662,34 +4735,27 @@ var QuizEngine = (function() {
 
   BoardGame.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
-    wrap.appendChild(el('div', 'text-5xl mb-4', '🎲'));
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('plateau.setupTitre', 'Qui prend le départ ?')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6', tg('plateau.setupDesc', 'Entrez vos prénoms : quarante cases vous séparent de l\'arrivée.')));
-
-    var form = el('form', 'party-setup');
-    form.innerHTML =
-      '<input type="text" class="party-input" id="plateau-nom1" maxlength="20" autocomplete="off" placeholder="' +
-      esc(tg('playerSetup.player1Placeholder', 'Prénom du joueur 1')) + '" aria-label="' +
-      esc(tg('playerSetup.firstFirstName', 'Premier prénom')) + '">' +
-      '<input type="text" class="party-input" id="plateau-nom2" maxlength="20" autocomplete="off" placeholder="' +
-      esc(tg('playerSetup.player2Placeholder', 'Prénom du joueur 2')) + '" aria-label="' +
-      esc(tg('playerSetup.secondFirstName', 'Deuxième prénom')) + '">' +
-      '<button type="submit" class="btn btn-cta btn-lg">' + esc(tg('plateau.commencer', 'Prendre le départ')) + '</button>';
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      self.noms = [
-        form.querySelector('#plateau-nom1').value.trim() || tg('playerSetup.player1', 'Joueur 1'),
-        form.querySelector('#plateau-nom2').value.trim() || tg('playerSetup.player2', 'Joueur 2')
-      ];
-      self.pos = [0, 0]; self.tour = 0; self.tours = 0;
-      self.piles = {}; self.de = null; self.epreuve = null; self.gagnant = null;
-      self.phase = 'jeu';
-      self.render();
-      smoothScroll(self.container, 'start');
+    var grille = cartesDeuxJoueurs('plateau-nom');
+    var ecran = ecranDepart({
+      icone: '🎲',
+      titre: tg('plateau.setupTitre', 'Qui prend le départ ?'),
+      desc: tg('plateau.setupDesc', 'Entrez vos prénoms : quarante cases vous séparent de l\'arrivée.'),
+      corps: [grille],
+      meta: pastilleMeta(this.cases.length, tg('plateau.casesMot', 'cases')),
+      bouton: tg('plateau.commencer', 'Prendre le départ'),
+      onStart: function() {
+        self.noms = [
+          grille.querySelector('#plateau-nom1').value.trim() || tg('playerSetup.player1', 'Joueur 1'),
+          grille.querySelector('#plateau-nom2').value.trim() || tg('playerSetup.player2', 'Joueur 2')
+        ];
+        self.pos = [0, 0]; self.tour = 0; self.tours = 0;
+        self.piles = {}; self.de = null; self.epreuve = null; self.gagnant = null;
+        self.phase = 'jeu';
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
     });
-    wrap.appendChild(form);
-    this.container.appendChild(wrap);
+    this.container.appendChild(ecran.wrap);
   };
 
   BoardGame.prototype.renderPlateau = function() {
@@ -4698,8 +4764,18 @@ var QuizEngine = (function() {
 
     // barre de tour
     var entete = el('div', 'party-entete');
-    entete.innerHTML = '<span class="party-tour">' + esc(this.annonce()) + '</span>' +
-      '<button class="party-changer" type="button">' + esc(tg('plateau.abandonner', 'Arrêter la partie')) + '</button>';
+    // Le plateau se redessine a chaque tour : le libelle du bouton doit
+    // repartir de l'etat reel du bloc, sinon il annonce « voir » alors que
+    // les regles sont deja ouvertes.
+    var blocRegles = document.getElementById('plateau-regles');
+    var reglesOuvertes = !!blocRegles && !blocRegles.hasAttribute('hidden');
+    entete.innerHTML = badgeDeTour(this.joueur(), this.annonce(), this.tour) +
+      '<span class="party-entete-actions">' +
+      (blocRegles ? '<button class="party-changer party-regles-btn" type="button" aria-expanded="' + (reglesOuvertes ? 'true' : 'false') +
+        '" aria-controls="plateau-regles">' +
+        esc(reglesOuvertes ? tg('plateau.reglesFermer', 'Masquer les règles') : tg('plateau.regles', 'Voir les règles')) + '</button>' : '') +
+      '<button class="party-changer party-arreter-btn" type="button">' + esc(tg('plateau.abandonner', 'Arrêter la partie')) + '</button>' +
+      '</span>';
     wrap.appendChild(entete);
 
     // plateau : cinq colonnes sur mobile, huit sur ecran large, sinon le
@@ -4720,7 +4796,9 @@ var QuizEngine = (function() {
     });
     scene.appendChild(grille);
     [0, 1].forEach(function(j) {
-      var pion = el('span', 'plateau-pion plateau-pion--' + (j + 1));
+      // Le pion de celui qui joue est cercle : c'est le second rappel du tour,
+      // celui qu'on lit sur le plateau sans remonter a l'entete.
+      var pion = el('span', 'plateau-pion plateau-pion--' + (j + 1) + (j === self.tour ? ' plateau-pion--actif' : ''));
       pion.textContent = (self.noms[j] || '?').charAt(0).toUpperCase();
       pion.title = self.joueur(j);
       scene.appendChild(pion);
@@ -4752,10 +4830,25 @@ var QuizEngine = (function() {
     wrap.appendChild(el('p', 'party-compteur', tg('plateau.compteur', '{{n}} tours joués').replace('{{n}}', this.tours)));
     this.container.appendChild(wrap);
 
-    var arret = wrap.querySelector('.party-changer');
+    var regles = wrap.querySelector('.party-regles-btn');
+    if (regles) regles.addEventListener('click', function() { self.basculerRegles(regles); });
+    var arret = wrap.querySelector('.party-arreter-btn');
     if (arret) arret.addEventListener('click', function() { self.phase = 'setup'; self.render(); });
-    this.placerPions();
+    this.placerPions(true);
     this.suivreRedimensionnement();
+  };
+
+  // Les regles sont deja ecrites et traduites dans la page : le bouton
+  // devoile ce bloc au lieu d'en dupliquer une version dans le moteur.
+  BoardGame.prototype.basculerRegles = function(bouton) {
+    var bloc = document.getElementById('plateau-regles');
+    if (!bloc) return;
+    var ouvert = !bloc.hasAttribute('hidden');
+    if (ouvert) { bloc.setAttribute('hidden', ''); }
+    else { bloc.removeAttribute('hidden'); smoothScroll(bloc, 'start'); }
+    bouton.textContent = ouvert ? tg('plateau.regles', 'Voir les règles')
+                                : tg('plateau.reglesFermer', 'Masquer les règles');
+    bouton.setAttribute('aria-expanded', ouvert ? 'false' : 'true');
   };
 
   // Les pions sont positionnes en pixels : il faut les replacer quand la
@@ -4771,7 +4864,9 @@ var QuizEngine = (function() {
     window.addEventListener('resize', this._resize);
   };
 
-  BoardGame.prototype.placerPions = function() {
+  // immediat : place sans animer. Un pion vient d'etre recree par un rendu,
+  // il doit apparaitre a sa place et non y glisser depuis le coin du plateau.
+  BoardGame.prototype.placerPions = function(immediat) {
     var self = this;
     var grille = this.container.querySelector('.plateau-grille');
     if (!grille) return;
@@ -4785,8 +4880,27 @@ var QuizEngine = (function() {
       var ecart = ensemble ? (j === 0 ? -14 : 14) : 0;
       var dx = c.offsetLeft + c.offsetWidth / 2 - 13 + ecart;
       var dy = c.offsetTop + c.offsetHeight / 2 - 13;
+      if (immediat) pion.style.transition = 'none';
       pion.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
+      if (immediat) { void pion.offsetWidth; pion.style.transition = ''; }
     });
+  };
+
+  // Le pion doit finir de bouger tant que c'est encore le tour de celui qui
+  // joue. Le bonus d'une epreuve etait applique en meme temps que le passage
+  // de main : on voyait donc son pion arriver sur l'ecran du joueur suivant.
+  BoardGame.prototype.deplacerPuis = function(bouge, suite) {
+    if (!bouge) return suite();
+    this.placerPions();
+    var doux = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setTimeout(suite, doux ? 60 : 620);
+  };
+
+  // Pendant ce deplacement la carte reste a l'ecran : sans cela, un deuxieme
+  // clic sur « relevé » relancerait la resolution une fois le verrou expire.
+  BoardGame.prototype.figerActions = function() {
+    var b = this.container.querySelectorAll('.party-actions button');
+    for (var i = 0; i < b.length; i++) b[i].disabled = true;
   };
 
   // Un clic resolu verrouille brievement le plateau : sans cela un double-clic
@@ -4884,29 +4998,39 @@ var QuizEngine = (function() {
 
   BoardGame.prototype.appliquerChance = function(ev) {
     if (this.verrouille()) return;
+    var self = this;
     var j = this.tour;
+    var avant = [this.pos[0], this.pos[1]];
     if (ev.echange) { var t = this.pos[0]; this.pos[0] = this.pos[1]; this.pos[1] = t; }
     else if (ev.pas) this.pos[j] = Math.max(0, Math.min(this.cases.length - 1, this.pos[j] + ev.pas));
     this.tours++;
-    if (this.pos[j] >= this.cases.length - 1) { this.gagnant = j; this.phase = 'fin'; this.render(); return; }
-    if (this.pos[1 - j] >= this.cases.length - 1) { this.gagnant = 1 - j; this.phase = 'fin'; this.render(); return; }
-    if (!ev.rejoue) this.tour = 1 - this.tour;
-    this.de = null;
-    this.phase = 'jeu';
-    this.render();
+    this.figerActions();
+    this.deplacerPuis(this.pos[0] !== avant[0] || this.pos[1] !== avant[1], function() {
+      if (self.pos[j] >= self.cases.length - 1) { self.gagnant = j; self.phase = 'fin'; self.render(); return; }
+      if (self.pos[1 - j] >= self.cases.length - 1) { self.gagnant = 1 - j; self.phase = 'fin'; self.render(); return; }
+      if (!ev.rejoue) self.tour = 1 - self.tour;
+      self.de = null;
+      self.phase = 'jeu';
+      self.render();
+    });
   };
 
   // bonus : nombre de cases gagnees (ou perdues) une fois l'epreuve resolue
   BoardGame.prototype.finTour = function(bonus) {
     if (this.verrouille()) return;
+    var self = this;
     var j = this.tour;
+    var avant = this.pos[j];
     if (bonus) this.pos[j] = Math.max(0, Math.min(this.cases.length - 1, this.pos[j] + bonus));
     this.tours++;
-    if (this.pos[j] >= this.cases.length - 1) { this.gagnant = j; this.phase = 'fin'; this.render(); return; }
-    this.tour = 1 - this.tour;
-    this.de = null;
-    this.phase = 'jeu';
-    this.render();
+    this.figerActions();
+    this.deplacerPuis(this.pos[j] !== avant, function() {
+      if (self.pos[j] >= self.cases.length - 1) { self.gagnant = j; self.phase = 'fin'; self.render(); return; }
+      self.tour = 1 - self.tour;
+      self.de = null;
+      self.phase = 'jeu';
+      self.render();
+    });
   };
 
   BoardGame.prototype.renderFin = function() {
@@ -5035,30 +5159,23 @@ var QuizEngine = (function() {
 
   DuoVoteGame.prototype.renderSetup = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
-    wrap.appendChild(el('div', 'qdn-setup-emoji', '👀'));
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', esc(tg('quiDeNous.setupTitre', 'Qui de nous deux ?'))));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6', esc(tg('quiDeNous.setupDesc', 'Chacun vote en secret, on révèle les deux réponses en même temps.'))));
-
-    var form = el('form', 'party-setup');
-    form.innerHTML =
-      '<input type="text" class="party-input" id="qdn-nom1" maxlength="20" autocomplete="off" placeholder="' +
-      esc(tg('playerSetup.player1Placeholder', 'Prénom du joueur 1')) + '" aria-label="' +
-      esc(tg('playerSetup.firstFirstName', 'Premier prénom')) + '">' +
-      '<input type="text" class="party-input" id="qdn-nom2" maxlength="20" autocomplete="off" placeholder="' +
-      esc(tg('playerSetup.player2Placeholder', 'Prénom du joueur 2')) + '" aria-label="' +
-      esc(tg('playerSetup.secondFirstName', 'Deuxième prénom')) + '">' +
-      '<button type="submit" class="btn btn-cta btn-lg">' + esc(tg('quiDeNous.commencer', 'On commence !')) + '</button>';
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      self.noms = [
-        form.querySelector('#qdn-nom1').value.trim() || tg('playerSetup.player1', 'Joueur 1'),
-        form.querySelector('#qdn-nom2').value.trim() || tg('playerSetup.player2', 'Joueur 2')
-      ];
-      self.nouvellePartie();
+    var grille = cartesDeuxJoueurs('qdn-nom');
+    var ecran = ecranDepart({
+      icone: '👀',
+      titre: tg('quiDeNous.setupTitre', 'Qui de nous deux ?'),
+      desc: tg('quiDeNous.setupDesc', 'Chacun vote en secret, on révèle les deux réponses en même temps.'),
+      corps: [grille],
+      meta: pastilleMeta(QDN_MANCHES, tg('quiDeNous.manchesMot', 'manches')),
+      bouton: tg('quiDeNous.commencer', 'On commence !'),
+      onStart: function() {
+        self.noms = [
+          grille.querySelector('#qdn-nom1').value.trim() || tg('playerSetup.player1', 'Joueur 1'),
+          grille.querySelector('#qdn-nom2').value.trim() || tg('playerSetup.player2', 'Joueur 2')
+        ];
+        self.nouvellePartie();
+      }
     });
-    wrap.appendChild(form);
-    this.container.appendChild(wrap);
+    this.container.appendChild(ecran.wrap);
   };
 
   DuoVoteGame.prototype.nouvellePartie = function() {
