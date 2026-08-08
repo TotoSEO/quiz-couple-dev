@@ -4450,6 +4450,10 @@ var QuizEngine = (function() {
     var self = this;
     this.container.innerHTML = '';
     var wrap = el('div', 'quiz-engine roue-jeu animate-fade-in text-center');
+    // La roue n'a pas de fin : le premier gage tire vaut partie jouee. On le
+    // marque ici plutot qu'avec .quiz-result-card, dont le style ne convient
+    // pas a un panneau qui se rejoue a chaque tour.
+    if (this.gage) wrap.setAttribute('data-quiz-done', '1');
 
     var scene = el('div', 'roue-scene');
     scene.innerHTML = '<span class="roue-fleche" aria-hidden="true"></span>' +

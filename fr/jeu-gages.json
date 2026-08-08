@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "Gratuit • Sans inscription • À relancer à l'infini",
-    "title": "La roue des gages à faire en couple",
-    "titleHighlight": "en couple",
+    "title": "La roue des gages, un jeu de couple à relancer à l'infini",
+    "titleHighlight": "jeu de couple",
     "description": "140 gages en sept familles. Vous appuyez, la roue tourne… et elle décide à votre place."
   },
   "familles": {
@@ -34,7 +34,7 @@
     "headerContenu": "Ce qu'elle contient"
   },
   "section3": {
-    "title": "Comment on s'en sert",
+    "title": "Comment jouer à la roue des gages",
     "intro": "Il n'y a pas de règle imposée : la roue est un outil, c'est vous qui décidez de ce qui la déclenche.",
     "regle1Titre": "Après un pari perdu",
     "regle1Texte": "L'usage le plus courant, et de loin. Celui qui perd lance la roue et exécute, sans discuter le résultat. C'est justement parce qu'il n'a rien choisi que ça passe.",

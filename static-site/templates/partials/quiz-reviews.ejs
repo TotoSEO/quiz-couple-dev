@@ -1,21 +1,30 @@
 <%
-  // Bloc avis par quiz + compteur de completions. Injecte par base.ejs sur les pages test/quiz.
-  // Recoit : lang, t, routeKey (= quiz_slug), supabaseUrl, supabaseKey
+  // Bloc avis + compteur de parties. Injecte par base.ejs sur toute page jouable.
+  // Recoit : lang, t, routeKey (= quiz_slug), genrePage ('jeu' | 'quiz' | 'test'),
+  // supabaseUrl, supabaseKey
+  var _genre = typeof genrePage !== 'undefined' && genrePage ? genrePage : 'test';
   var _headings = { fr: 'Cet avis compte', en: 'Your review matters', es: 'Tu opinión cuenta', de: 'Deine Meinung zählt', it: 'La tua opinione conta' };
+  // Un jeu se joue, un test se fait : la relance change de verbe.
   var _subs = {
-    fr: 'Vous venez de le faire ? Dites en un mot ce que vous en avez pensé, ça aide les autres couples à se lancer.',
-    en: 'Just took it? Tell us in a word what you thought, it helps other couples take the leap.',
-    es: '¿Acabas de hacerlo? Cuéntanos en una palabra qué te pareció, ayuda a otras parejas a animarse.',
-    de: 'Gerade gemacht? Sag uns in einem Wort, wie es war, das hilft anderen Paaren.',
-    it: 'Appena fatto? Dicci in una parola cosa ne pensi, aiuta le altre coppie a provarci.'
+    fr: { jeu: 'Vous venez d\'y jouer ? Dites en un mot ce que vous en avez pensé, ça aide les autres couples à se lancer.',
+          autre: 'Vous venez de le faire ? Dites en un mot ce que vous en avez pensé, ça aide les autres couples à se lancer.' },
+    en: { jeu: 'Just played it? Tell us in a word what you thought, it helps other couples take the leap.',
+          autre: 'Just took it? Tell us in a word what you thought, it helps other couples take the leap.' },
+    es: { jeu: '¿Acabáis de jugarlo? Contadnos en una palabra qué os pareció, ayuda a otras parejas a animarse.',
+          autre: '¿Acabas de hacerlo? Cuéntanos en una palabra qué te pareció, ayuda a otras parejas a animarse.' },
+    de: { jeu: 'Gerade gespielt? Sagt uns in einem Wort, wie es war, das hilft anderen Paaren.',
+          autre: 'Gerade gemacht? Sag uns in einem Wort, wie es war, das hilft anderen Paaren.' },
+    it: { jeu: 'Appena giocato? Diteci in una parola cosa ne pensate, aiuta le altre coppie a provarci.',
+          autre: 'Appena fatto? Dicci in una parola cosa ne pensi, aiuta le altre coppie a provarci.' }
   };
   var _heading = _headings[lang] || _headings.fr;
-  var _sub = _subs[lang] || _subs.fr;
+  var _bloc = _subs[lang] || _subs.fr;
+  var _sub = _genre === 'jeu' ? _bloc.jeu : _bloc.autre;
 %>
 <section class="pq-reviews-section" aria-label="<%= _heading %>">
   <div class="container mx-auto px-4">
     <div id="reviews-config" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>" class="hidden"></div>
-    <div id="pq-reviews" data-quiz-slug="<%= routeKey %>">
+    <div id="pq-reviews" data-quiz-slug="<%= routeKey %>" data-quiz-kind="<%= _genre %>">
 
       <p id="quiz-done-count" class="pqx-done" style="display:none"></p>
 

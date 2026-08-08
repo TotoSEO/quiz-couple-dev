@@ -16,11 +16,11 @@
   var HJ = { apikey: KEY, 'Authorization': 'Bearer ' + KEY, 'Content-Type': 'application/json' };
 
   var UI = {
-    fr: { rate: 'Votre avis en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot sur votre expérience (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Une erreur est survenue, réessayez.', none: 'Soyez les premiers à donner votre avis !', based: 'avis', doneTest: 'Ce test a déjà été réalisé {n} fois', doneQuiz: 'Ce quiz a déjà été joué {n} fois' },
-    en: { rate: 'Your review in 1 click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word about your experience (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Something went wrong, please retry.', none: 'Be the first to leave a review!', based: 'reviews', doneTest: 'This test has been taken {n} times', doneQuiz: 'This quiz has been played {n} times' },
-    es: { rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Unas palabras sobre tu experiencia (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Tu opinión se verá tras la validación.', err: 'Ha ocurrido un error, inténtalo de nuevo.', none: '¡Sé el primero en opinar!', based: 'opiniones', doneTest: 'Este test se ha realizado {n} veces', doneQuiz: 'Este quiz se ha jugado {n} veces' },
-    de: { rate: 'Deine Bewertung in 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort zu deiner Erfahrung (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Deine Bewertung erscheint nach der Prüfung.', err: 'Ein Fehler ist aufgetreten, bitte erneut versuchen.', none: 'Sei der Erste mit einer Bewertung!', based: 'Bewertungen', doneTest: 'Dieser Test wurde {n} mal gemacht', doneQuiz: 'Dieses Quiz wurde {n} mal gespielt' },
-    it: { rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola sulla tua esperienza (facoltativo)', submit: 'Pubblica la mia recensione', thanks: 'Grazie! La recensione sarà visibile dopo la moderazione.', err: 'Si è verificato un errore, riprova.', none: 'Sii il primo a lasciare una recensione!', based: 'recensioni', doneTest: 'Questo test è stato fatto {n} volte', doneQuiz: 'Questo quiz è stato giocato {n} volte' }
+    fr: { rate: 'Votre avis en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot sur votre expérience (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Une erreur est survenue, réessayez.', none: 'Soyez les premiers à donner votre avis !', based: 'avis', doneTest: 'Ce test a déjà été réalisé {n} fois', doneQuiz: 'Ce quiz a déjà été joué {n} fois', doneGame: 'Ce jeu a déjà été joué {n} fois' },
+    en: { rate: 'Your review in 1 click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word about your experience (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Something went wrong, please retry.', none: 'Be the first to leave a review!', based: 'reviews', doneTest: 'This test has been taken {n} times', doneQuiz: 'This quiz has been played {n} times', doneGame: 'This game has been played {n} times' },
+    es: { rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Unas palabras sobre tu experiencia (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Tu opinión se verá tras la validación.', err: 'Ha ocurrido un error, inténtalo de nuevo.', none: '¡Sé el primero en opinar!', based: 'opiniones', doneTest: 'Este test se ha realizado {n} veces', doneQuiz: 'Este quiz se ha jugado {n} veces', doneGame: 'Este juego se ha jugado {n} veces' },
+    de: { rate: 'Deine Bewertung in 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort zu deiner Erfahrung (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Deine Bewertung erscheint nach der Prüfung.', err: 'Ein Fehler ist aufgetreten, bitte erneut versuchen.', none: 'Sei der Erste mit einer Bewertung!', based: 'Bewertungen', doneTest: 'Dieser Test wurde {n} mal gemacht', doneQuiz: 'Dieses Quiz wurde {n} mal gespielt', doneGame: 'Dieses Spiel wurde {n} mal gespielt' },
+    it: { rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola sulla tua esperienza (facoltativo)', submit: 'Pubblica la mia recensione', thanks: 'Grazie! La recensione sarà visibile dopo la moderazione.', err: 'Si è verificato un errore, riprova.', none: 'Sii il primo a lasciare una recensione!', based: 'recensioni', doneTest: 'Questo test è stato fatto {n} volte', doneQuiz: 'Questo quiz è stato giocato {n} volte', doneGame: 'Questo gioco è stato giocato {n} volte' }
   };
   var t = UI[lang] || UI.fr;
   function fmt(n) { try { return Number(n).toLocaleString(lang); } catch (e) { return '' + n; } }
@@ -28,10 +28,9 @@
   function stars(r) { var h = ''; for (var i = 1; i <= 5; i++) h += '<svg viewBox="0 0 24 24" class="pqx-star ' + (i <= r ? 'on' : '') + '"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'; return h; }
 
   // ── Bulle "realise X fois" juste sous le fil d'Ariane ──
-  function countBubble(slug) {
+  function countBubble(slug, genre) {
     var bc = document.querySelector('.breadcrumb');
     if (!bc || document.getElementById('quiz-count-bubble')) return;
-    var isQuiz = /^quiz/i.test(slug);
     var bubble = document.createElement('div');
     bubble.id = 'quiz-count-bubble';
     bubble.className = 'quiz-count-bubble';
@@ -49,23 +48,41 @@
         if (!Array.isArray(rows)) return;
         var row = rows.filter(function (x) { return x.quiz_slug === slug; })[0];
         var n = row ? +row.total : 0;
-        if (n > 0) { bubble.querySelector('.qcb-text').textContent = (isQuiz ? t.doneQuiz : t.doneTest).replace('{n}', fmt(n)); bubble.style.display = ''; }
+        var phrase = genre === 'jeu' ? t.doneGame : genre === 'quiz' ? t.doneQuiz : t.doneTest;
+        if (n > 0) { bubble.querySelector('.qcb-text').textContent = phrase.replace('{n}', fmt(n)); bubble.style.display = ''; }
       })
       .catch(function () {});
   }
 
   // ── Suivi des completions (une fois par session/quiz) ──
+  // On observait #quiz-engine, que trois pages n'ont pas : leur moteur est
+  // ecrit dans leur propre gabarit, avec un conteneur a elles. Elles ne
+  // remontaient donc aucune partie. On observe maintenant le document entier.
+  //
+  // Deux precautions vont avec. D'abord la visibilite : la page prenom+signe
+  // porte sa carte de resultat dans le HTML, masquee jusqu'au calcul, et la
+  // compter au chargement inventerait une partie a chaque visite. Ensuite
+  // data-quiz-done, pour les fins de partie qui n'ont pas de carte de
+  // resultat (la roue, l'ado, tu preferes, les langages de l'amour) : leur
+  // ecran final est trop different pour porter le style de .quiz-result-card.
   function watch(slug) {
-    var engine = document.getElementById('quiz-engine');
-    if (!engine) return;
     var key = 'qc-done-' + slug;
+    function visible(n) { return !!(n && (n.offsetWidth || n.offsetHeight || n.getClientRects().length)); }
+    function fini() {
+      // querySelector ne rend que la premiere carte : une carte cachee placee
+      // avant la vraie suffirait a masquer la fin de partie. On les passe
+      // toutes en revue.
+      var n = document.querySelectorAll('.quiz-result-card, [data-quiz-done]');
+      for (var i = 0; i < n.length; i++) if (visible(n[i])) return true;
+      return false;
+    }
     function check() {
-      if (!engine.querySelector('.quiz-result-card') || sessionStorage.getItem(key)) return;
+      if (sessionStorage.getItem(key) || !fini()) return;
       try { sessionStorage.setItem(key, '1'); } catch (e) {}
       fetch(URL + '/rest/v1/quiz_completions', { method: 'POST', headers: Object.assign({ 'Prefer': 'return=minimal' }, HJ), body: JSON.stringify({ quiz_slug: slug, lang: lang }) }).catch(function () {});
     }
     check();
-    new MutationObserver(check).observe(engine, { childList: true, subtree: true });
+    new MutationObserver(check).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class', 'style', 'data-quiz-done'] });
   }
 
   // ── Bloc avis par quiz (liste + formulaire progressif) ──
@@ -175,7 +192,7 @@
     var pq = document.getElementById('pq-reviews');
     var slug = pq ? pq.dataset.quizSlug : null;
     if (!slug) return;
-    countBubble(slug);
+    countBubble(slug, pq.dataset.quizKind || 'test');
     watch(slug);
     initReviews(slug);
     resultRating();

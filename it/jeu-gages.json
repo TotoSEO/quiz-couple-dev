@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "Gratis • Senza registrazione • Da rilanciare all'infinito",
-    "title": "La ruota delle penitenze da fare in coppia",
-    "titleHighlight": "in coppia",
+    "title": "La ruota delle penitenze, un gioco di coppia infinito",
+    "titleHighlight": "gioco di coppia",
     "description": "140 penitenze in sette famiglie. Premete, la ruota gira… e decide al posto vostro."
   },
   "familles": {
@@ -34,7 +34,7 @@
     "headerContenu": "Che cosa contiene"
   },
   "section3": {
-    "title": "Come si usa",
+    "title": "Come giocare alla ruota delle penitenze",
     "intro": "Non c'è nessuna regola imposta: la ruota è uno strumento, siete voi a decidere cosa la fa scattare.",
     "regle1Titre": "Dopo una scommessa persa",
     "regle1Texte": "L'uso più comune, di gran lunga. Chi perde gira la ruota ed esegue, senza discutere il risultato. Funziona proprio perché non ha scelto nulla.",

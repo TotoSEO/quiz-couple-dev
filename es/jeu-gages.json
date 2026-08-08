@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "Gratis • Sin registro • Para girar sin parar",
-    "title": "La ruleta de prendas para jugar en pareja",
-    "titleHighlight": "en pareja",
+    "title": "La ruleta de prendas, un juego de pareja para girar sin fin",
+    "titleHighlight": "juego de pareja",
     "description": "140 prendas en siete familias. Pulsáis, la ruleta gira… y decide por vosotros."
   },
   "familles": {
@@ -34,7 +34,7 @@
     "headerContenu": "Qué contiene"
   },
   "section3": {
-    "title": "Cómo se usa",
+    "title": "Cómo jugar a la ruleta de prendas",
     "intro": "No hay ninguna regla impuesta: la ruleta es una herramienta y vosotros decidís qué la dispara.",
     "regle1Titre": "Tras una apuesta perdida",
     "regle1Texte": "El uso más habitual, de largo. Quien pierde tira de la ruleta y cumple, sin discutir el resultado. Funciona precisamente porque no ha elegido nada.",

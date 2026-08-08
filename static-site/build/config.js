@@ -177,6 +177,29 @@ export const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIU
 // Google Analytics
 export const GA_ID = 'G-XZV8V6FEK5';
 
+// Pages jouables. Elles portent le bloc d'avis, le compteur de parties et,
+// des qu'elles ont de vrais avis, la note structuree. Les tests et les quiz
+// se reconnaissent a leur cle ; les jeux, non, il faut donc les nommer.
+// Sans cette liste, les six jeux ne remontaient aucune partie a l'admin.
+const ROUTES_JEUX = [
+  'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
+  'jeuPlateau', 'jeuQuiDeNous',
+];
+
+export function estPageJouable(routeKey) {
+  if (!routeKey || routeKey === 'home') return false;
+  return /^(test|quiz)/.test(routeKey) || routeKey === 'zamours' || ROUTES_JEUX.includes(routeKey);
+}
+
+// « Ce jeu a deja ete joue » / « ce quiz a deja ete joue » / « ce test a deja
+// ete realise » : le mot depend du genre de page, pas du prefixe de la cle.
+// Les Z'Amours porte la cle « zamours » mais reste un quiz.
+export function genrePageJouable(routeKey) {
+  if (ROUTES_JEUX.includes(routeKey)) return 'jeu';
+  if (routeKey === 'zamours' || /^quiz/.test(routeKey)) return 'quiz';
+  return 'test';
+}
+
 // Helper functions
 export function getLocalizedPath(routeKey, lang) {
   const slug = ROUTE_SLUGS[routeKey]?.[lang];
