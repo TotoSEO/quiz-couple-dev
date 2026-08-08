@@ -107,8 +107,8 @@
 
   <main class="relative z-0">
     <%- content %>
-    <% if (typeof routeKey !== 'undefined' && routeKey && /^(test|quiz)/.test(routeKey)) { %>
-    <%- include('partials/quiz-reviews', { lang: lang, t: t, routeKey: routeKey, supabaseUrl: supabaseUrl, supabaseKey: supabaseKey }) %>
+    <% if (typeof pageJouable !== 'undefined' && pageJouable) { %>
+    <%- include('partials/quiz-reviews', { lang: lang, t: t, routeKey: routeKey, genrePage: (typeof genrePage !== 'undefined' ? genrePage : 'test'), supabaseUrl: supabaseUrl, supabaseKey: supabaseKey }) %>
     <% } %>
   </main>
 

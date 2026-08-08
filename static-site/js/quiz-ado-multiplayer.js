@@ -740,8 +740,10 @@
         '</tr>';
     }
 
+    // Ce moteur a son propre ecran de resultat, sans .quiz-result-card : la
+    // page ne remontait donc aucune partie a l'admin.
     container.innerHTML =
-      '<div class="max-w-lg mx-auto py-8 space-y-8">' +
+      '<div class="max-w-lg mx-auto py-8 space-y-8" data-quiz-done="1">' +
         '<div class="text-center space-y-4">' +
           adoScoreRing(pct) +
           '<p class="text-sm text-muted-foreground">' + matches + '/' + totalQ + ' ' + t('identical') + '</p>' +

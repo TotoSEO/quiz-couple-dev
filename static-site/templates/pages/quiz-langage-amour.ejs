@@ -466,7 +466,9 @@
     var secondaryResult = this.results[secondary];
     var dominantPct = Math.round((this.scores[dominant] / total) * 100);
 
-    var html = '<div class="glass-card rounded-xl p-6">';
+    // data-quiz-done signale la fin de partie au suivi des completions : cet
+    // ecran a son propre habillage et ne peut pas porter .quiz-result-card.
+    var html = '<div class="glass-card rounded-xl p-6" data-quiz-done="1">';
 
     // Dominant language hero
     html += '<div class="text-center mb-8">';

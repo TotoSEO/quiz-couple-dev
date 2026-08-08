@@ -16,6 +16,7 @@ import {
   QUIZ_RELATED_ARTICLES, QUIZ_FEATURED,
   getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
+  estPageJouable, genrePageJouable,
 } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
 
@@ -387,7 +388,7 @@ async function generatePage(routeKey, lang) {
 
   // Per-quiz AggregateRating (dynamique, note propre a chaque quiz/test via quiz_slug).
   // On n'emet la note structuree que si la page a de vrais avis (>0), jamais de note vide.
-  if (routeKey !== 'home' && /^(test|quiz)/.test(routeKey)) {
+  if (estPageJouable(routeKey)) {
     const qStats = reviewStatsByQuiz[routeKey];
     if (qStats && parseInt(qStats.count) > 0) {
       jsonLdItems.push({
@@ -524,6 +525,8 @@ async function generatePage(routeKey, lang) {
     quizFeatured: QUIZ_FEATURED,
     // Navigation/routing
     routeKey,
+    pageJouable: estPageJouable(routeKey),
+    genrePage: genrePageJouable(routeKey),
     pagePath,
     routeSlugs: ROUTE_SLUGS,
     languages: LANGUAGES,

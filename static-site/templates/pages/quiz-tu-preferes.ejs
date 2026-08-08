@@ -498,7 +498,9 @@
     var pct = Math.round((matches / this.totalQ) * 100);
     var emoji = pct >= 80 ? '🔥' : pct >= 60 ? '💕' : pct >= 40 ? '😄' : '🤷';
 
-    var html = '<div class="glass-card rounded-xl p-6 animate-fade-in">';
+    // data-quiz-done signale la fin de partie au suivi des completions : cet
+    // ecran a son propre habillage et ne peut pas porter .quiz-result-card.
+    var html = '<div class="glass-card rounded-xl p-6 animate-fade-in" data-quiz-done="1">';
 
     // Score hero
     html += '<div class="text-center mb-8">';
