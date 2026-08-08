@@ -1,38 +1,38 @@
 {
   "hero": {
     "badge": "Astrologie & Numerologie",
-    "title": "Liebeskompatibilit\u00e4t nach Vorname und Sternzeichen",
-    "highlight": "Liebeskompatibilit\u00e4t",
-    "description": "Zwei Vornamen. Zwei Sternzeichen. Und irgendwo zwischen den Sternen und den Buchstaben eurer Namen etwas, das einer Antwort \u00e4hnelt. Dieser Test vereint zwei jahrtausendealte Deutungen \u2014 die Astrologie und die Numerologie \u2014 um ein Bild eurer Kompatibilit\u00e4t zu zeichnen.",
-    "subtitle": "Gebt eure Vornamen und eure Sternzeichen ein. Den Rest \u00fcberlasst den Sternen."
+    "title": "Liebeskompatibilität nach Vorname und Sternzeichen",
+    "highlight": "Liebeskompatibilität",
+    "description": "Zwei Vornamen. Zwei Sternzeichen. Und irgendwo zwischen den Sternen und den Buchstaben eurer Namen etwas, das einer Antwort ähnelt. Dieser Test vereint zwei jahrtausendealte Deutungen, die Astrologie und die Numerologie, um ein Bild eurer Kompatibilität zu zeichnen.",
+    "subtitle": "Gebt eure Vornamen und eure Sternzeichen ein. Den Rest überlasst den Sternen."
   },
   "form": {
     "name1Placeholder": "Vorname von Person 1",
     "name2Placeholder": "Vorname von Person 2",
     "sign1Label": "Sternzeichen",
     "sign2Label": "Sternzeichen",
-    "selectSign": "Sternzeichen w\u00e4hlen",
-    "submitButton": "Kompatibilit\u00e4t pr\u00fcfen",
+    "selectSign": "Sternzeichen wählen",
+    "submitButton": "Kompatibilität prüfen",
     "signs": {
-      "belier": "Widder \u2648",
-      "taureau": "Stier \u2649",
-      "gemeaux": "Zwillinge \u264a",
-      "cancer": "Krebs \u264b",
-      "lion": "L\u00f6we \u264c",
-      "vierge": "Jungfrau \u264d",
-      "balance": "Waage \u264e",
-      "scorpion": "Skorpion \u264f",
-      "sagittaire": "Sch\u00fctze \u2650",
-      "capricorne": "Steinbock \u2651",
-      "verseau": "Wassermann \u2652",
-      "poissons": "Fische \u2653"
+      "belier": "Widder ♈",
+      "taureau": "Stier ♉",
+      "gemeaux": "Zwillinge ♊",
+      "cancer": "Krebs ♋",
+      "lion": "Löwe ♌",
+      "vierge": "Jungfrau ♍",
+      "balance": "Waage ♎",
+      "scorpion": "Skorpion ♏",
+      "sagittaire": "Schütze ♐",
+      "capricorne": "Steinbock ♑",
+      "verseau": "Wassermann ♒",
+      "poissons": "Fische ♓"
     }
   },
   "results": {
-    "title": "Eure Kompatibilit\u00e4t",
+    "title": "Eure Kompatibilität",
     "overall": "Gesamtergebnis",
-    "astroScore": "Astrale Kompatibilit\u00e4t",
-    "numeroScore": "Vornamen-Kompatibilit\u00e4t",
+    "astroScore": "Astrale Kompatibilität",
+    "numeroScore": "Vornamen-Kompatibilität",
     "astroLabel": "Astrologie",
     "numeroLabel": "Numerologie",
     "detailTitle": "Detaillierte Analyse eurer Sternzeichen",
@@ -40,42 +40,42 @@
     "tryAgain": "Ein anderes Paar testen"
   },
   "section1": {
-    "title": "Was dieser Test wirklich verr\u00e4t",
-    "p1": "Die Liebeskompatibilit\u00e4t ist eine der \u00e4ltesten Fragen, die sich die Menschheit stellt. Vor den Dating-Apps, vor den Pers\u00f6nlichkeitstests, noch vor den Psychologen \u2014 gab es die Sterne und die Zahlen. Zwei Systeme zur Deutung der Welt, die auf ihre jeweils eigene Art versuchen zu verstehen, warum sich manche Menschen wie Magnete anziehen und andere aneinanderprallen, ohne sich je wirklich zu finden.",
-    "p2": "Dieser Test vereint beide. <strong>Nicht um f\u00fcr euch zu entscheiden.</strong> Sondern um einen anderen Blick auf das zu werfen, was zwischen zwei Menschen geschieht."
+    "title": "Was dieser Test wirklich verrät",
+    "p1": "Die Liebeskompatibilität ist eine der ältesten Fragen, die sich die Menschheit stellt. Vor den Dating-Apps, vor den Persönlichkeitstests, noch vor den Psychologen, gab es die Sterne und die Zahlen. Zwei Systeme zur Deutung der Welt, die auf ihre jeweils eigene Art versuchen zu verstehen, warum sich manche Menschen wie Magnete anziehen und andere aneinanderprallen, ohne sich je wirklich zu finden.",
+    "p2": "Dieser Test vereint beide. <strong>Nicht um für euch zu entscheiden.</strong> Sondern um einen anderen Blick auf das zu werfen, was zwischen zwei Menschen geschieht."
   },
   "section2": {
     "title": "Die Numerologie der Vornamen: Wenn Buchstaben schwingen",
-    "p1": "In der Numerologie tr\u00e4gt jeder Buchstabe des Alphabets eine Zahl. A steht f\u00fcr 1, B f\u00fcr 2, C f\u00fcr 3 \u2014 und so weiter bis 9, dann beginnt es von vorn. Diese Zuordnung ist eine der \u00e4ltesten der westlichen esoterischen Tradition und geht auf die Arbeiten von Pythagoras im 6. Jahrhundert v. Chr. zur\u00fcck. Die Idee ist einfach, aber tiefgr\u00fcndig: <strong>Jeder Vorname ist eine Frequenz</strong>.",
-    "p2": "Um die Kompatibilit\u00e4t zwischen zwei Vornamen zu berechnen, addiert man die Werte jedes Buchstabens, reduziert die Summe auf eine einzelne Ziffer zwischen 1 und 9 (au\u00dfer den \u201eMeisterzahlen\u201c 11 und 22, die ihre eigene Kraft behalten) und vergleicht. Die 1 tr\u00e4gt Antrieb und Unabh\u00e4ngigkeit. Die 2 sucht Harmonie und Verschmelzung. Die 5 will Freiheit. Zwei Zahlen, die sich erg\u00e4nzen, schaffen ein ausgewogenes Paar.",
-    "tip": "Die Numerologie der Vornamen h\u00e4ngt nicht von der genauen Schreibweise ab \u2014 sie erfasst die Schwingung der Kl\u00e4nge und Buchstaben. Wenn ihr einen Spitznamen verwendet, testet beide Versionen: Die Ergebnisse k\u00f6nnen unterschiedlich ausfallen."
+    "p1": "In der Numerologie trägt jeder Buchstabe des Alphabets eine Zahl. A steht für 1, B für 2, C für 3, und so weiter bis 9, dann beginnt es von vorn. Diese Zuordnung ist eine der ältesten der westlichen esoterischen Tradition und geht auf die Arbeiten von Pythagoras im 6. Jahrhundert v. Chr. zurück. Die Idee ist einfach, aber tiefgründig: <strong>Jeder Vorname ist eine Frequenz</strong>.",
+    "p2": "Um die Kompatibilität zwischen zwei Vornamen zu berechnen, addiert man die Werte jedes Buchstabens, reduziert die Summe auf eine einzelne Ziffer zwischen 1 und 9 (außer den „Meisterzahlen“ 11 und 22, die ihre eigene Kraft behalten) und vergleicht. Die 1 trägt Antrieb und Unabhängigkeit. Die 2 sucht Harmonie und Verschmelzung. Die 5 will Freiheit. Zwei Zahlen, die sich ergänzen, schaffen ein ausgewogenes Paar.",
+    "tip": "Die Numerologie der Vornamen hängt nicht von der genauen Schreibweise ab, sie erfasst die Schwingung der Klänge und Buchstaben. Wenn ihr einen Spitznamen verwendet, testet beide Versionen: Die Ergebnisse können unterschiedlich ausfallen."
   },
   "section3": {
     "title": "Astrologie und die Sternzeichen: Der Abdruck des Himmels bei der Geburt",
-    "p1": "Das Sternzeichen wird nicht berechnet \u2014 es wird vererbt. Es wird durch die Position der Sonne zum Zeitpunkt der Geburt bestimmt. <strong>Zw\u00f6lf Zeichen. Vier Elemente.</strong> Feuer (Widder, L\u00f6we, Sch\u00fctze) \u2014 impulsiv, leidenschaftlich. Erde (Stier, Jungfrau, Steinbock) \u2014 best\u00e4ndig, geduldig. Luft (Zwillinge, Waage, Wassermann) \u2014 lebhaft, kommunikativ. Wasser (Krebs, Skorpion, Fische) \u2014 tiefgr\u00fcndig, intuitiv.",
-    "p2": "Die astrologische Kompatibilit\u00e4t wird zun\u00e4chst \u00fcber diese Elemente analysiert. Ein Feuerzeichen und ein Luftzeichen n\u00e4hren sich gegenseitig. Ein Erdzeichen und ein Wasserzeichen verstehen sich instinktiv. <strong>Aber auch Gegens\u00e4tze ziehen sich an.</strong>",
-    "subtitle": "Die gro\u00dfen Affinit\u00e4ten zwischen den Sternzeichen",
-    "p3": "Sternzeichen desselben Elements teilen ein nat\u00fcrliches Verst\u00e4ndnis. Zeichen im Quadrat erzeugen Reibung \u2014 nicht unbedingt zerst\u00f6rerische. Zeichen in Opposition verk\u00f6rpern das Paradox der Anziehung der Gegens\u00e4tze: <strong>zwei H\u00e4lften derselben Achse</strong>."
+    "p1": "Das Sternzeichen wird nicht berechnet, es wird vererbt. Es wird durch die Position der Sonne zum Zeitpunkt der Geburt bestimmt. <strong>Zwölf Zeichen. Vier Elemente.</strong> Feuer (Widder, Löwe, Schütze), impulsiv, leidenschaftlich. Erde (Stier, Jungfrau, Steinbock), beständig, geduldig. Luft (Zwillinge, Waage, Wassermann), lebhaft, kommunikativ. Wasser (Krebs, Skorpion, Fische), tiefgründig, intuitiv.",
+    "p2": "Die astrologische Kompatibilität wird zunächst über diese Elemente analysiert. Ein Feuerzeichen und ein Luftzeichen nähren sich gegenseitig. Ein Erdzeichen und ein Wasserzeichen verstehen sich instinktiv. <strong>Aber auch Gegensätze ziehen sich an.</strong>",
+    "subtitle": "Die großen Affinitäten zwischen den Sternzeichen",
+    "p3": "Sternzeichen desselben Elements teilen ein natürliches Verständnis. Zeichen im Quadrat erzeugen Reibung, nicht unbedingt zerstörerische. Zeichen in Opposition verkörpern das Paradox der Anziehung der Gegensätze: <strong>zwei Hälften derselben Achse</strong>."
   },
   "section4": {
     "title": "Warum beide Deutungen kombinieren?",
-    "p1": "Die Astrologie spricht von dem, was man bei der Geburt mitbekommen hat. Die Numerologie spricht von dem, was man in seinem Vornamen tr\u00e4gt. <strong>Die beiden Deutungen erg\u00e4nzen sich, weil sie nicht dasselbe sagen.</strong>",
-    "p2": "Euer Sonnenzeichen sagt, wie ihr liebt, in der Tiefe. Eure Vornamenzahl sagt, wie ihr euch verbindet. Ein L\u00f6we, dessen Vorname die Zahl 2 tr\u00e4gt, wird sich stark von einem L\u00f6wen unterscheiden, dessen Vorname die 1 tr\u00e4gt. Das Zeichen gibt den Charakter; der Vorname nuanciert, wie sich dieser Charakter in einer Beziehung entfaltet.",
+    "p1": "Die Astrologie spricht von dem, was man bei der Geburt mitbekommen hat. Die Numerologie spricht von dem, was man in seinem Vornamen trägt. <strong>Die beiden Deutungen ergänzen sich, weil sie nicht dasselbe sagen.</strong>",
+    "p2": "Euer Sonnenzeichen sagt, wie ihr liebt, in der Tiefe. Eure Vornamenzahl sagt, wie ihr euch verbindet. Ein Löwe, dessen Vorname die Zahl 2 trägt, wird sich stark von einem Löwen unterscheiden, dessen Vorname die 1 trägt. Das Zeichen gibt den Charakter; der Vorname nuanciert, wie sich dieser Charakter in einer Beziehung entfaltet.",
     "tip": "Ein hoher Wert garantiert keine einfache Beziehung. Ein niedrigerer Wert ist kein Urteil: Er ist eine Einladung zu verstehen, wo sich Einsatz lohnen wird."
   },
   "section5": {
-    "title": "Was diese Zahlen nicht sagen k\u00f6nnen",
-    "p1": "Weder die Numerologie noch die Astrologie k\u00f6nnen vorhersagen, ob eine Beziehung Bestand haben wird. <strong>Sie bieten Orientierung.</strong> Einen Deutungsrahmen. Eine M\u00f6glichkeit, das zu benennen, was man manchmal sp\u00fcrt, ohne es erkl\u00e4ren zu k\u00f6nnen.",
-    "p2": "Dieser Test ist ein Ausgangspunkt, kein Urteil. Er kann ein Gespr\u00e4ch er\u00f6ffnen, eine Intuition best\u00e4tigen oder einfach ein paar Minuten Vergn\u00fcgen bereiten.",
-    "tip": "Wenn ihr diesen Test mit eurem Partner macht, k\u00f6nnen die Ergebnisse ein hervorragender Ausgangspunkt f\u00fcr ein Gespr\u00e4ch \u00fcber eure Unterschiede und Erg\u00e4nzungen sein."
+    "title": "Was diese Zahlen nicht sagen können",
+    "p1": "Weder die Numerologie noch die Astrologie können vorhersagen, ob eine Beziehung Bestand haben wird. <strong>Sie bieten Orientierung.</strong> Einen Deutungsrahmen. Eine Möglichkeit, das zu benennen, was man manchmal spürt, ohne es erklären zu können.",
+    "p2": "Dieser Test ist ein Ausgangspunkt, kein Urteil. Er kann ein Gespräch eröffnen, eine Intuition bestätigen oder einfach ein paar Minuten Vergnügen bereiten.",
+    "tip": "Wenn ihr diesen Test mit eurem Partner macht, können die Ergebnisse ein hervorragender Ausgangspunkt für ein Gespräch über eure Unterschiede und Ergänzungen sein."
   },
   "faq": {
-    "title": "H\u00e4ufig gestellte Fragen",
-    "q1": "Ist die astrologische Kompatibilit\u00e4t wirklich zuverl\u00e4ssig?",
-    "a1": "Die Astrologie sagt die Zukunft nicht pr\u00e4zise voraus. Was sie tut \u2014 und das seit Jahrtausenden \u2014 ist Temperamente, Seinsweisen und Beziehungsmuster zu beschreiben. Dass sie f\u00fcr viele Menschen n\u00fctzlich und erhellend ist, l\u00e4sst sich nicht leugnen.",
-    "q2": "Soll man den vollst\u00e4ndigen Vornamen oder den Spitznamen verwenden?",
-    "a2": "In der Numerologie gilt der b\u00fcrgerliche Vorname als Grundschwingung. Der Spitzname spiegelt die soziale Schwingung wider. Beide sind aufschlussreich. Testet beide und schaut, welcher euch mehr anspricht.",
-    "q3": "Mein Sternzeichen ist \u201einkompatibel\u201c mit dem meines Partners \u2014 sind wir verloren?",
-    "a3": "Nein. Ganz und gar nicht. Die Kompatibilit\u00e4t zwischen Sternzeichen ist eine Tendenz, keine Regel. <strong>Es sind die Menschen, die Beziehungen gestalten</strong> \u2014 nicht die Sterne."
+    "title": "Häufig gestellte Fragen",
+    "q1": "Ist die astrologische Kompatibilität wirklich zuverlässig?",
+    "a1": "Die Astrologie sagt die Zukunft nicht präzise voraus. Was sie tut, und das seit Jahrtausenden, ist Temperamente, Seinsweisen und Beziehungsmuster zu beschreiben. Dass sie für viele Menschen nützlich und erhellend ist, lässt sich nicht leugnen.",
+    "q2": "Soll man den vollständigen Vornamen oder den Spitznamen verwenden?",
+    "a2": "In der Numerologie gilt der bürgerliche Vorname als Grundschwingung. Der Spitzname spiegelt die soziale Schwingung wider. Beide sind aufschlussreich. Testet beide und schaut, welcher euch mehr anspricht.",
+    "q3": "Mein Sternzeichen ist „inkompatibel“ mit dem meines Partners, sind wir verloren?",
+    "a3": "Nein. Ganz und gar nicht. Die Kompatibilität zwischen Sternzeichen ist eine Tendenz, keine Regel. <strong>Es sind die Menschen, die Beziehungen gestalten</strong>, nicht die Sterne."
   }
 }

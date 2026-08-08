@@ -373,7 +373,9 @@ var QuizEngine = (function() {
   // L'emoji vient du quiz et jamais du score : sur les tests ou un score eleve
   // est un mauvais signe (toxique, PN, divorce), un 🎉 serait deplace.
   function nomDuQuiz() {
-    var quizEl = document.getElementById('quiz-engine');
+    // Deux pages portent leur moteur dans un conteneur a elles : sans ce
+    // repli, le partage retombait sur le H1 entier et sur l'emoji par defaut.
+    var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
     var cle = quizEl ? quizEl.dataset.quiz : '';
     var fiche = null;
     for (var i = 0; i < ALL_QUIZZES_LIST.length; i++) {
@@ -5356,6 +5358,9 @@ var QuizEngine = (function() {
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,
+    // Exposé pour les moteurs écrits directement dans un gabarit de page,
+    // qui doivent partager le même bouton et le même message que les autres.
+    renderShareButton: renderShareButton,
     SUPABASE_URL: SUPABASE_URL,
     SUPABASE_KEY: SUPABASE_KEY,
   };

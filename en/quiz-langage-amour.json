@@ -1,8 +1,8 @@
 {
   "hero": {
-    "badge": "5 Languages \u2022 30 questions \u2022 5 min",
-    "title": "Discover your love language with this free test",
-    "titleHighlight": "love language",
+    "badge": "5 Languages • 30 questions • 5 min",
+    "title": "The 5 love languages: find yours in 30 questions",
+    "titleHighlight": "5 love languages",
     "description": "30 questions to identify how you express and receive love. A test based on Gary Chapman's 5 Love Languages theory."
   },
   "intro": {
@@ -82,6 +82,18 @@
     "p1": "This test is based on Gary Chapman's 5 Love Languages theory, which has been translated into over 50 languages and read by tens of millions of people worldwide. This approach is used daily by <strong class=\"text-foreground\">couples therapists and marriage counselors</strong> as a tool for mediation and mutual understanding.",
     "p2": "It's important to keep in mind that this test is a tool for reflection and dialogue, not a clinical diagnosis. It doesn't replace couples therapy or professional support. Your results may shift depending on the phase of your life, your stress level, or the maturity of your relationship.",
     "p3": "The goal isn't to put a permanent label on how you love, but to open a conversation with your partner. Take the test separately, compare your results, and use them as a starting point to <strong class=\"text-foreground\">build a more attentive and fulfilling relationship</strong>."
+  },
+  "section8": {
+    "title": "The questions people ask once they've taken the test",
+    "sub1Title": "How to work out your partner's love language without making them take the test",
+    "sub1Text": "Listen to what they ask for. People almost always ask for whatever they're short of… \"You never say anything nice to me\" points at words of affirmation; \"we don't do anything together any more\" points at quality time. The second clue is even more reliable: look at what they give you. People give spontaneously in their own language. Someone who makes you a coffee without being asked speaks acts of service, even if they have never once said so out loud.",
+    "sub2Title": "Which love language is the most common? And the rarest?",
+    "sub2Text": "Across the tens of thousands of questionnaires Chapman went through, two patterns keep coming back: quality time and words of affirmation come out on top, and receiving gifts trails at the bottom almost everywhere. Which says nothing about you, by the way. Being the only person you know who runs on gifts doesn't make your need any less serious. It just makes it less often understood.",
+    "sub3Title": "Can two languages come out tied?",
+    "sub3Text": "Yes, and it happens more often than people think. It means both genuinely reach you, not that the test got it wrong. When it does, use one very simple question: if you had to give up one of the two for good, which one would you miss more after a month? That one is your dominant language.",
+    "sub4Title": "Does your love language change over time?",
+    "sub4Text": "It does shift. Not overnight, but the big life stages move it. A first child usually pushes acts of service right up: when you no longer have an hour to yourself, someone emptying the dishwasher becomes a declaration. Living apart pushes words of affirmation up instead, because words are more or less all that fits down a phone line. Retaking the test every two or three years is not a silly idea.",
+    "outro": "One last piece of advice, and it's the one that changes the most: take the test separately, then compare the two charts. On your own it tells you something about yourself. Together it becomes an instruction manual."
   },
   "jsonLd": {
     "quizName": "5 Love Languages Test",
