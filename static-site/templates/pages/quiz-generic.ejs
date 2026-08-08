@@ -292,6 +292,30 @@
 <section class="quiz-engine-section">
   <div class="container mx-auto px-4">
     <div id="quiz-engine" data-quiz="<%= quizType %>" data-lang="<%= lang %>"><%- include('../partials/quiz-loading', { lang, routeKey }) %></div>
+
+    <%/* « Comment jouer ? » repliable. Ne s'affiche que si la page fournit ses
+         étapes : les règles n'ont pas à encombrer l'écran de celui qui a déjà
+         compris, mais elles doivent rester à portée de clic. */%>
+    <% const jouerTitre = t(ns + ':howTo.title', ''); if (jouerTitre) { %>
+    <details class="quiz-howto">
+      <summary class="quiz-howto-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 015.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+        <span><%= jouerTitre %></span>
+      </summary>
+      <div class="quiz-howto-corps">
+        <ol>
+          <% for (let hi = 1; hi <= 4; hi++) {
+            const etape = t(ns + ':howTo.step' + hi, '');
+            if (!etape) continue; %>
+          <li><%- etape %></li>
+          <% } %>
+        </ol>
+        <% const jouerFin = t(ns + ':howTo.outro', ''); if (jouerFin) { %>
+        <p class="quiz-howto-fin"><%- jouerFin %></p>
+        <% } %>
+      </div>
+    </details>
+    <% } %>
   </div>
 </section>
 

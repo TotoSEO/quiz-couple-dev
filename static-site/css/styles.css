@@ -1807,6 +1807,47 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .quiz-tf-btn--false:active, .quiz-tf-btn--false.selected { border-color: hsl(0 84% 60%); background: hsl(0 84% 60% / 0.15); box-shadow: 0 0 0 3px hsl(0 84% 60% / 0.2); }
 .quiz-tf-btn--false .quiz-tf-icon { color: hsl(0 84% 60%); }
 
+/* Verdict de la réponse. L'ancien badge s'appuyait sur des classes
+   utilitaires (bg-green-500/15, text-red-600…) qui n'existent nulle part dans
+   cette feuille : il s'affichait donc sans la moindre couleur, et on ne
+   voyait pas d'un coup d'oeil si on avait bon. */
+.quiz-verdict {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.65rem 1.35rem; border-radius: 9999px;
+  font-size: 1.0625rem; font-weight: 800;
+  border: 2px solid transparent;
+}
+.quiz-verdict svg { width: 1.25rem; height: 1.25rem; }
+.quiz-verdict--juste {
+  color: hsl(142 71% 32%); background: hsl(142 71% 45% / 0.16); border-color: hsl(142 71% 45% / 0.4);
+}
+.quiz-verdict--faux {
+  color: hsl(0 74% 45%); background: hsl(0 84% 60% / 0.14); border-color: hsl(0 84% 60% / 0.4);
+}
+.dark .quiz-verdict--juste { color: hsl(142 65% 62%); }
+.dark .quiz-verdict--faux { color: hsl(0 85% 72%); }
+
+/* Rappel des deux boutons sur l'écran de révélation : le bon est cerclé de
+   vert, celui qu'on a choisi à tort de rouge, l'autre s'efface. */
+.quiz-tf-btn--bonne {
+  border-color: hsl(142 71% 45%); background: hsl(142 71% 45% / 0.16);
+  box-shadow: 0 0 0 3px hsl(142 71% 45% / 0.22);
+}
+.quiz-tf-btn--mauvaise {
+  border-color: hsl(0 84% 60%); background: hsl(0 84% 60% / 0.14);
+  box-shadow: 0 0 0 3px hsl(0 84% 60% / 0.2);
+}
+.quiz-tf-btn--eteint { opacity: 0.42; }
+.quiz-tf-btn--bonne:hover, .quiz-tf-btn--mauvaise:hover, .quiz-tf-btn--eteint:hover {
+  transform: none; box-shadow: none;
+}
+.quiz-tf-btn--bonne:hover { box-shadow: 0 0 0 3px hsl(142 71% 45% / 0.22); }
+.quiz-tf-btn--mauvaise:hover { box-shadow: 0 0 0 3px hsl(0 84% 60% / 0.2); }
+.quiz-tf-vous {
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: hsl(var(--muted-foreground));
+}
+
 /* ── Admin styles ────────────────────────────────────────── */
 
 .admin-tab.active, .admin-filter.active, .lang-tab.active { background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
@@ -5663,3 +5704,33 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   font-size: 0.8rem; line-height: 1.5;
   color: hsl(var(--muted-foreground));
 }
+
+/* « Comment jouer ? » repliable sous le moteur. Fermé par défaut : celui qui
+   a compris ne le voit pas, celui qui hésite l'ouvre. */
+.quiz-howto { max-width: 48rem; margin: 1rem auto 0; }
+.quiz-howto-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.6rem 1.15rem; border-radius: 9999px; cursor: pointer;
+  font-size: 0.9375rem; font-weight: 700; list-style: none;
+  color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.08);
+  border: 1px solid hsl(var(--primary) / 0.25);
+  transition: background 150ms ease;
+}
+.quiz-howto-btn::-webkit-details-marker { display: none; }
+.quiz-howto-btn:hover { background: hsl(var(--primary) / 0.14); }
+.quiz-howto-btn svg { width: 1.1rem; height: 1.1rem; }
+.quiz-howto[open] .quiz-howto-btn { border-radius: 1rem 1rem 0 0; }
+.quiz-howto-corps {
+  margin-top: -1px; padding: 1.35rem 1.5rem;
+  border: 1px solid hsl(var(--border)); border-radius: 0 1rem 1rem 1rem;
+  background: hsl(var(--card));
+  animation: fadeIn 180ms ease-out both;
+}
+.quiz-howto-corps ol {
+  margin: 0; padding-left: 1.35rem; display: grid; gap: 0.65rem;
+  color: hsl(var(--muted-foreground)); line-height: 1.6;
+}
+.quiz-howto-corps ol li::marker { color: hsl(var(--primary)); font-weight: 800; }
+.quiz-howto-fin { margin: 1rem 0 0; font-size: 0.9375rem; color: hsl(var(--muted-foreground)); }
+@media (prefers-reduced-motion: reduce) { .quiz-howto-corps { animation: none; } }

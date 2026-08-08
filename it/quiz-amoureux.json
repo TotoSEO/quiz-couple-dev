@@ -3,30 +3,38 @@
     "badge": "Quiz da fare in coppia",
     "title": "Quiz Romantico:",
     "titleHighlight": "Romantico",
-    "description": "20 affermazioni per misurare la forza del vostro amore. Dibattete insieme, trovate un accordo e scoprite il vostro punteggio di compatibilità!",
-    "statements": "20 affermazioni",
-    "score": "Punteggio su 100",
-    "results": "Risultati immediati"
+    "description": "20 domande sulla vostra storia. Ognuno risponde per conto suo, poi si confronta: quante volte sceglierete la stessa risposta senza mettervi d'accordo?",
+    "statements": "20 domande",
+    "score": "Risposte a confronto",
+    "results": "Risultato immediato"
+  },
+  "howTo": {
+    "title": "Come si gioca?",
+    "step1": "Scrivete i vostri due nomi. Basta un telefono, mettetelo in mezzo a voi.",
+    "step2": "Il primo risponde a tutte e 20 le domande senza mostrare lo schermo, poi passa il telefono.",
+    "step3": "Il secondo risponde alle stesse domande, senza sapere cosa ha scelto l'altro.",
+    "step4": "Il gioco confronta le vostre due risposte, domanda per domanda.",
+    "outro": "Qui non ci sono risposte giuste. Le domande in cui avete risposto diversamente sono le più interessanti: è lì che c'è qualcosa da raccontarsi."
   },
   "seo": {
     "whyTitle": "Perché fare questo quiz romantico insieme?",
     "whySubtitle": "Un quiz pensato per rafforzare la vostra complicità e capirvi meglio.",
     "card1Title": "Aprite il dialogo",
     "card1Text": "Ogni affermazione è un'opportunità di discussione. Esprimete i vostri sentimenti e ascoltate quelli del vostro partner.",
-    "card2Title": "Misurate il vostro amore",
-    "card2Text": "Scoprite oggettivamente a che punto siete nella vostra relazione e identificate i punti di forza della vostra coppia.",
+    "card2Title": "Confrontate le vostre risposte",
+    "card2Text": "Ognuno risponde senza vedere l'altro. Alla fine il gioco mette le vostre due risposte una accanto all'altra, domanda per domanda. È lì che diventa interessante.",
     "card3Title": "Rafforzate il vostro legame",
     "card3Text": "Il semplice fatto di fare questo quiz insieme dimostra il vostro impegno nella relazione. È già una prova d'amore!",
     "card4Title": "Celebrate la vostra coppia",
     "card4Text": "Qualunque sia il vostro punteggio, questo quiz vi permette di celebrare la vostra storia e ricordare perché state insieme.",
     "faqTitle": "Domande frequenti",
-    "faq1Q": "Come funziona questo quiz romantico?",
-    "faq1A": "Rispondete insieme a 20 affermazioni valutando il vostro livello di accordo da 1 a 5. Dibattete se necessario per trovare un consenso!",
+    "faq1Q": "Come si gioca a questo quiz per innamorati?",
+    "faq1A": "In due, con un solo telefono. Il primo risponde a tutte e 20 le domande, passa il telefono, e il secondo risponde alle stesse. Poi il gioco confronta le vostre risposte una a una.",
     "faq2Q": "Quanto dura il quiz?",
-    "faq2A": "Circa 10-15 minuti, a seconda del tempo che dedicate alla discussione di ogni affermazione. Prendetevi il vostro tempo!",
+    "faq2A": "Una decina di minuti in due. Niente è cronometrato, e le domande di cui volete parlare meritano la sosta.",
     "faq3Q": "Il quiz è davvero gratuito?",
     "faq3A": "Sì, 100% gratuito e senza registrazione. Le vostre risposte non vengono salvate, potete rifare il quiz tutte le volte che volete.",
     "faq4Q": "Cosa significa il nostro punteggio?",
-    "faq4A": "Il vostro punteggio riflette il vostro livello di accordo su aspetti chiave della relazione. Un punteggio alto indica una forte armonia, ma è solo un indicatore ludico!"
+    "faq4A": "Il punteggio conta le domande in cui avete scelto la stessa risposta senza consultarvi. Un punteggio basso dice poco della vostra coppia; dice soprattutto che avete cose da raccontarvi."
   }
 }

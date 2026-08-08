@@ -46,7 +46,13 @@
     'knowledge':      { prefix: 'knowledge', engine: 'knowledge', totalQ: 20, pool: 100, textOnly: true },
 
     // ── Debate quiz (amoureux - 1-5 scale, together) - text only for debate ──
-    'amoureux':       { prefix: 'amoureux', engine: 'debate', totalQ: 20, pool: 30 },
+    // Les trente entrées « amoureux » sont des questions ouvertes sur votre
+    // histoire, chacune avec quatre réponses écrites. Le moteur « debate »
+    // ignorait ces réponses et affichait à la place une échelle « pas du tout
+    // d'accord → tout à fait d'accord » : on demandait donc son niveau
+    // d'accord avec « Quel est mon plat préféré ? ». Ces cent vingt réponses
+    // servent enfin, dans le moteur à deux qui compare vos choix.
+    'amoureux':       { prefix: 'amoureux', engine: 'duo-match', totalQ: 20, pool: 30 },
 
     // ── Funny quiz (marrant - discussion only, no scoring) - text only ──
     'marrant':        { prefix: 'marrant', engine: 'funny', totalQ: 20, pool: 160, textOnly: true },

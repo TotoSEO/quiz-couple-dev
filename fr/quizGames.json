@@ -341,7 +341,8 @@
     "next": "Question suivante",
     "seeResults": "Voir les résultats",
     "correctAnswers": "bonnes réponses",
-    "summary": "Résumé de vos réponses"
+    "summary": "Résumé de vos réponses",
+    "yourAnswer": "votre réponse"
   },
   "coupleLevel": {
     "heading": "Niveau de votre couple",

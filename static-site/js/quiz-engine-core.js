@@ -2133,7 +2133,6 @@ var QuizEngine = (function() {
     var iconWrap = el('div', 'quiz-setup-icon quiz-setup-icon--emoji mx-auto mb-4', '💬');
     wrap.appendChild(iconWrap);
 
-    wrap.appendChild(el('div', 'text-5xl mb-4 text-center', '💕'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.quizForTwo', 'Quiz à Faire en Couple')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-4 text-center', tg('playerSetup.quizTogetherDesc', 'Ce quiz se joue ensemble. Discutez et notez de 1 à 5.')));
 
@@ -2141,10 +2140,10 @@ var QuizEngine = (function() {
     var howBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-md mx-auto text-left');
     howBox.innerHTML = '<p class="font-semibold mb-3">' + esc(tg('playerSetup.howItWorks', 'Comment ça marche ?')) + '</p>' +
       '<ol class="space-y-2 text-sm text-muted-foreground">' +
-      '<li>1️⃣ ' + esc(tg('playerSetup.step1', 'Lisez chaque affirmation ensemble')) + '</li>' +
-      '<li>2️⃣ ' + esc(tg('playerSetup.step2', 'Discutez et débattez si nécessaire')) + '</li>' +
-      '<li>3️⃣ ' + esc(tg('playerSetup.step3', 'Choisissez un score de 1 à 5')) + '</li>' +
-      '<li>4️⃣ ' + esc(tg('playerSetup.step4', 'Découvrez votre score d\'amour !')) + '</li></ol>';
+      '<li>' + esc(tg('playerSetup.step1', 'Lisez chaque affirmation ensemble')) + '</li>' +
+      '<li>' + esc(tg('playerSetup.step2', 'Discutez et débattez si nécessaire')) + '</li>' +
+      '<li>' + esc(tg('playerSetup.step3', 'Choisissez un score de 1 à 5')) + '</li>' +
+      '<li>' + esc(tg('playerSetup.step4', 'Découvrez votre score d\'amour !')) + '</li></ol>';
     wrap.appendChild(howBox);
 
     var form = el('div', 'space-y-4 max-w-md mx-auto');
@@ -3143,32 +3142,28 @@ var QuizEngine = (function() {
 
   TruefalseQuiz.prototype.renderIntro = function() {
     var self = this;
-    var svg = function (p) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' + p + '</svg>'; };
-    var iCheck = svg('<path d="M20 6L9 17l-5-5"/>');
-    var iList = svg('<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/>');
-    var iClock = svg('<circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/>');
-    var wrap = el('div', 'quiz-engine quiz-intro animate-fade-in');
-    wrap.innerHTML =
-      '<div class="quiz-intro-badge">' + iCheck + '</div>' +
-      '<h2 class="quiz-intro-title">' + esc(tg('truefalse.ready', 'Prêt pour le vrai ou faux ?')) + '</h2>' +
-      '<div class="quiz-intro-meta">' +
-        '<span class="quiz-meta-chip">' + iList + '<span>' + this.questions.length + ' ' + esc(tg('truefalse.statements', 'affirmations')) + '</span></span>' +
-        '<span class="quiz-meta-chip">' + iClock + '<span>' + esc(tg('meta.duration', '5 min')) + '</span></span>' +
-      '</div>' +
-      '<div class="quiz-intro-how">' +
-        '<span class="quiz-intro-how-title">' + esc(tg('truefalse.howTitle', 'Comment ça marche ?')) + '</span>' +
-        '<p>' + esc(tg('truefalse.howDesc', 'Pour chaque affirmation, choisissez Vrai ou Faux. La bonne réponse et une explication s\'affichent après chaque question.')) + '</p>' +
-      '</div>';
-    var btn = el('button', 'btn btn-cta btn-lg quiz-intro-start', esc(tg('playerSetup.startQuiz', 'Commencer le quiz')));
-    btn.addEventListener('click', function() {
-      self.phase = 'playing';
-      self.currentQ = 0;
-      self.score = 0;
-      self.answers = [];
-      self.render();
+    // Ce quiz avait son propre habillage d'introduction, un troisieme apres
+    // celui des tests et celui des jeux. Il reprend l'ecran commun ; son
+    // encadre « comment ca marche » reste, c'est lui qui pose la regle.
+    var comment = el('div', 'quiz-setup-note');
+    comment.innerHTML = '<p class="quiz-setup-note-intro">' + esc(tg('truefalse.howTitle', 'Comment ça marche ?')) + '</p>' +
+      '<p class="quiz-setup-note-fin">' + esc(tg('truefalse.howDesc', 'Pour chaque affirmation, choisissez Vrai ou Faux. La bonne réponse et une explication s\'affichent après chaque question.')) + '</p>';
+
+    var ecran = ecranDepart({
+      icone: '✅',
+      titre: tg('truefalse.ready', 'Prêt pour le vrai ou faux ?'),
+      corps: [comment],
+      meta: pastilleMeta(this.questions.length, tg('truefalse.statements', 'affirmations')),
+      bouton: tg('playerSetup.startQuiz', 'Commencer le quiz'),
+      onStart: function() {
+        self.phase = 'playing';
+        self.currentQ = 0;
+        self.score = 0;
+        self.answers = [];
+        self.render();
+      }
     });
-    wrap.appendChild(btn);
-    this.container.appendChild(wrap);
+    this.container.appendChild(ecran.wrap);
   };
 
   TruefalseQuiz.prototype.renderQuestion = function() {
@@ -3246,15 +3241,11 @@ var QuizEngine = (function() {
 
     // Result badge with revealSlide animation
     var badge = el('div', 'text-center mb-4 quiz-reveal-enter');
-    if (isCorrect) {
-      badge.innerHTML = '<span class="inline-flex items-center gap-2 text-base font-bold bg-green-500/15 text-green-600 dark:text-green-400 rounded-full px-5 py-2.5 shadow-sm">' +
-        '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>' +
-        esc(tg('truefalse.correct', 'Bonne réponse !')) + '</span>';
-    } else {
-      badge.innerHTML = '<span class="inline-flex items-center gap-2 text-base font-bold bg-red-500/15 text-red-600 dark:text-red-400 rounded-full px-5 py-2.5 shadow-sm">' +
-        '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
-        esc(tg('truefalse.wrong', 'Mauvaise réponse')) + '</span>';
-    }
+    badge.innerHTML = '<span class="quiz-verdict quiz-verdict--' + (isCorrect ? 'juste' : 'faux') + '">' +
+      (isCorrect
+        ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>'
+        : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>') +
+      esc(isCorrect ? tg('truefalse.correct', 'Bonne réponse !') : tg('truefalse.wrong', 'Mauvaise réponse')) + '</span>';
     wrap.appendChild(badge);
 
     // Statement
@@ -3262,12 +3253,19 @@ var QuizEngine = (function() {
     var qEl = el('h3', 'text-lg font-semibold mb-4 text-center', esc(qText));
     wrap.appendChild(qEl);
 
-    // Correct answer display
-    var answerLabel = correctAnswer === 'true' ? tg('truefalse.true', 'Vrai') : tg('truefalse.false', 'Faux');
-    var answerBox = el('div', 'text-center mb-4');
-    answerBox.innerHTML = '<span class="text-sm text-muted-foreground">' + esc(tg('truefalse.correctAnswer', 'La réponse :')) +
-      '</span> <span class="font-bold text-primary">' + esc(answerLabel) + '</span>';
-    wrap.appendChild(answerBox);
+    // Les deux boutons rejoues, marques : on retrouve le sien et le bon au
+    // meme endroit qu'au moment du choix, plutot qu'une ligne de texte.
+    var rappel = el('div', 'grid grid-cols-2 gap-4 max-w-md mx-auto mb-5');
+    ['true', 'false'].forEach(function(valeur) {
+      var etat = valeur === correctAnswer ? ' quiz-tf-btn--bonne'
+        : (valeur === lastAnswer.userAnswer ? ' quiz-tf-btn--mauvaise' : ' quiz-tf-btn--eteint');
+      var b = el('div', 'quiz-tf-btn quiz-tf-btn--' + (valeur === 'true' ? 'true' : 'false') + etat);
+      b.innerHTML = '<span class="quiz-tf-icon">' + (valeur === 'true' ? '✓' : '✗') + '</span>' +
+        '<span class="quiz-tf-label">' + esc(valeur === 'true' ? tg('truefalse.true', 'Vrai') : tg('truefalse.false', 'Faux')) + '</span>' +
+        (valeur === lastAnswer.userAnswer ? '<span class="quiz-tf-vous">' + esc(tg('truefalse.yourAnswer', 'votre réponse')) + '</span>' : '');
+      rappel.appendChild(b);
+    });
+    wrap.appendChild(rappel);
 
     // Explanation
     var expText = tgd(this.prefix + '.q' + q.id + 'exp', '');
