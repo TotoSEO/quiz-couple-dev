@@ -1,9 +1,9 @@
 {
   "hero": {
-    "badge": "Cosa Preferiresti • 30 domande • 2 giocatori",
+    "badge": "Cosa Preferiresti • 100 domande • 2 giocatori",
     "title": "Cosa Preferiresti? Il quiz di coppia che vi sorprenderà",
     "titleHighlight": "vi sorprenderà",
-    "description": "30 domande per fare scelte impossibili insieme. Divertente, a volte profondo e sempre sorprendente."
+    "description": "100 dilemmi scritti per le coppie, 30 estratti a caso a ogni partita. Divertente, a volte profondo e mai uguale due volte."
   },
   "intro": {
     "p1": "Il <strong class=\"text-foreground\">preferiresti in coppia</strong> è uno dei pochi formati che funzionano ogni volta. Nessun materiale, nessuna regola complicata, solo due persone, scelte impossibili… e risposte che dicono molto più di quanto sembri.",
@@ -43,8 +43,8 @@
     "p2": "È anche un formato che non mette nessuno in posizione di fallimento. Nessuna risposta sbagliata, nessun punteggio da raggiungere. Solo due persone che scoprono, domanda dopo domanda, che forse non si conoscevano così bene. Ed è esattamente questo a rendere prezioso il gioco. E se cercate <a href=\"/it/quiz-coppia-divertente/\">altre attività da fare in coppia</a>, ne troverete molte altre."
   },
   "faq": {
-    "q1": "Quante domande contiene questo quiz Cosa Preferiresti per coppie?",
-    "a1": "30 domande preferiresti scritte per le coppie, ognuna con due opzioni fra cui scegliere. Il mix di umorismo, riflessione e temi di coppia dà una partita completa e varia.",
+    "q1": "Quante domande contiene questo gioco Cosa Preferiresti per coppie?",
+    "a1": "Il gioco contiene 100 domande preferiresti scritte per le coppie, ognuna con due opzioni fra cui scegliere. Ogni partita ne estrae 30 a caso, quindi potete rigiocare senza ritrovare le stesse.",
     "q2": "Il gioco Cosa Preferiresti è adatto a tutte le coppie?",
     "a2": "Sì! Il formato funziona qualunque sia l'età della coppia o la durata della relazione. Le domande sono scritte per far ridere e riflettere senza mai mettere a disagio, e non c'è nulla da preparare.",
     "q3": "Ci sono domande piccanti in questo quiz?",

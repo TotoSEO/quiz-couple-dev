@@ -1,12 +1,12 @@
 {
   "hero": {
     "badge": "Fernbeziehungs-Kompatibilitätstest",
-    "title": "Fernbeziehungs-Quiz - Können Sie Ihre Beziehung auf Distanz aufrechterhalten?",
+    "title": "Fernbeziehung: die Fragen, die ihr euch stellen solltet, und der Test dazu",
     "description": "Finden Sie heraus, ob Sie und Ihr Partner bereit für das Abenteuer der Fernliebe sind. Ein interaktives Quiz mit personalisierten Ergebnissen.",
     "questions": "100 Fragen",
     "players": "Quiz zu zweit",
     "duration": "~10 Minuten",
-    "titleHighlight": "Fernbeziehungs-Quiz"
+    "titleHighlight": "Fragen, die ihr euch stellen solltet"
   },
   "intro": {
     "p1": "Kann Liebe wirklich die Kilometer überstehen? Im Jahr 2026 war diese Frage noch nie so relevant.",
@@ -197,5 +197,16 @@
     "moderateDesc": "Ihr habt Grundlagen, aber einige Punkte müssen noch bearbeitet werden.",
     "readyTitle": "Bereit für die Distanz",
     "readyDesc": "Ihr habt die nötigen Qualitäten, um die Distanz zu bewältigen."
+  },
+  "section10": {
+    "title": "18 Fragen für den nächsten Videoanruf",
+    "intro": "Der Test oben gibt euch ein Urteil. Diese Liste ist für etwas anderes gedacht: für den Abend, an dem das Gespräch einschläft, ihr euren Tag längst erzählt habt und noch zwanzig Minuten übrig sind. Greift einfach eine heraus.",
+    "sub1Title": "Der Alltag, den man nicht mitbekommt",
+    "sub1Text": "<ul><li>Erzähl mir von gestern, aber nur die fünf banalsten Minuten.</li><li>Wovon in deiner Wohnung habe ich überhaupt keine Ahnung?</li><li>Wen hast du diese Woche getroffen, den ich nicht kenne?</li><li>Was machst du abends, wenn wir nicht telefonieren?</li><li>Welche Gewohnheit hast du dir angeeignet, seit wir weit weg sind?</li><li>Was erinnert dich an einem ganz normalen Tag an mich?</li></ul>",
+    "sub2Title": "Was fehlt und was hält",
+    "sub2Text": "<ul><li>Was fehlt dir am meisten, außer mich zu sehen?</li><li>Welcher Moment der Woche ist am schwersten?</li><li>Gibt es ein Thema, das du am Telefon vermeidest?</li><li>Was hat die Entfernung zwischen uns leichter gemacht?</li><li>Wann hast du gezweifelt, und sei es fünf Minuten lang?</li><li>Was tue ich, das dich beruhigt, ohne dass ich es merke?</li></ul>",
+    "sub3Title": "Das Danach",
+    "sub3Text": "<ul><li>Das Erste, was wir machen, wenn wir uns wiedersehen: du entscheidest.</li><li>Ehrlich: wie lange noch, bis wir in derselben Stadt sind?</li><li>Was würde dich sagen lassen, dass es sich nicht mehr lohnt?</li><li>Wovor hast du Respekt, wenn wir zusammenziehen?</li><li>Welche Single-Gewohnheit willst du auf keinen Fall aufgeben?</li><li>Wenn einer für den anderen umziehen müsste, wer wäre es?</li></ul>",
+    "outro": "Eine Regel, damit es funktioniert: erst antworten, dann fragen. Sonst sitzt einer von euch am Ende in einem Bewerbungsgespräch."
   }
 }

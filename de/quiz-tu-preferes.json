@@ -1,9 +1,9 @@
 {
   "hero": {
-    "badge": "Was Würdest Du Eher • 30 Fragen • 2 Spieler",
+    "badge": "Was Würdest Du Eher • 100 Fragen • 2 Spieler",
     "title": "Was Würdest Du Eher? Das Paar-Quiz, das euch überraschen wird",
     "titleHighlight": "überraschen wird",
-    "description": "30 Fragen, um gemeinsam unmögliche Entscheidungen zu treffen. Lustig, manchmal tiefgründig und immer überraschend."
+    "description": "100 Dilemmas für Paare, 30 davon werden pro Runde zufällig gezogen. Lustig, manchmal tiefgründig und nie zweimal gleich."
   },
   "intro": {
     "p1": "Das <strong class=\"text-foreground\">Was würdest du lieber für Paare</strong> ist eines der wenigen Formate, die jedes Mal funktionieren. Kein Material, keine komplizierten Regeln, nur zwei Menschen, unmögliche Entscheidungen… und Antworten, die weit mehr verraten, als man denkt.",
@@ -43,8 +43,8 @@
     "p2": "Es ist außerdem ein Format, das niemanden ins Scheitern schickt. Keine falschen Antworten, kein Punktestand, den man erreichen muss. Nur zwei Menschen, die Frage für Frage entdecken, dass sie sich vielleicht doch nicht so gut kannten. Und genau das macht das Spiel wertvoll. Und wenn ihr <a href=\"/de/lustiges-paar-quiz/\">andere Aktivitäten zu zweit</a> sucht, findet ihr davon noch viele mehr."
   },
   "faq": {
-    "q1": "Wie viele Fragen enthält dieses Was-Würdest-Du-Eher-Paar-Quiz?",
-    "a1": "30 Was-würdest-du-lieber-Fragen für Paare, jede mit zwei Optionen zur Wahl. Die Mischung aus Humor, Nachdenklichkeit und Beziehungsthemen ergibt eine vollständige und abwechslungsreiche Partie.",
+    "q1": "Wie viele Fragen enthält dieses Was-Würdest-Du-Eher-Spiel für Paare?",
+    "a1": "Das Spiel enthält 100 Was-würdest-du-lieber-Fragen für Paare, jede mit zwei Optionen zur Wahl. Eine Runde zieht 30 davon zufällig, ihr könnt also mehrmals spielen, ohne dieselben wiederzubekommen.",
     "q2": "Ist das Was-Würdest-Du-Eher-Spiel für alle Paare geeignet?",
     "a2": "Ja! Das Format funktioniert unabhängig vom Alter des Paares oder der Dauer der Beziehung. Die Fragen sollen zum Lachen und zum Nachdenken bringen, ohne je unangenehm zu werden, und es gibt nichts vorzubereiten.",
     "q3": "Gibt es pikante Fragen in diesem Quiz?",

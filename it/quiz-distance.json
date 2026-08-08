@@ -1,12 +1,12 @@
 {
   "hero": {
     "badge": "Test di compatibilità a distanza",
-    "title": "Quiz di coppie a distanza - Siete capaci di mantenere una relazione lontani?",
+    "title": "Coppia a distanza: le domande da farsi e il test che risponde",
     "description": "Scopri se tu e il tuo partner siete pronti per l'avventura dell'amore a distanza. Un quiz interattivo con risultati personalizzati.",
     "questions": "100 domande",
     "players": "Quiz per due",
     "duration": "~10 minuti",
-    "titleHighlight": "a distanza"
+    "titleHighlight": "domande da farsi"
   },
   "intro": {
     "p1": "L'amore può davvero sopravvivere ai chilometri? Nel 2026, questa domanda non è mai stata così pertinente.",
@@ -197,5 +197,16 @@
     "moderateDesc": "Avete delle basi ma alcuni punti devono essere lavorati.",
     "readyTitle": "Pronti per la distanza",
     "readyDesc": "Avete le qualità necessarie per gestire la distanza."
+  },
+  "section10": {
+    "title": "18 domande da farsi in videochiamata",
+    "intro": "Il test qui sopra vi dà un verdetto. Questa lista serve ad altro: tirarla fuori in una sera in cui la chiamata si spegne, quando vi siete già raccontati la giornata e restano venti minuti da riempire. Pescatene una a caso.",
+    "sub1Title": "Il quotidiano che non si vede",
+    "sub1Text": "<ul><li>Raccontami ieri, ma solo i cinque minuti più banali.</li><li>Cosa non so assolutamente di casa tua?</li><li>Chi hai visto questa settimana che io non conosco?</li><li>Cosa fai la sera quando non ci sentiamo?</li><li>Che abitudine hai preso da quando siamo lontani?</li><li>Cosa ti fa pensare a me in una giornata normale?</li></ul>",
+    "sub2Title": "Cosa manca e cosa tiene",
+    "sub2Text": "<ul><li>Cosa ti manca di più, a parte vedermi?</li><li>Qual è il momento più duro della settimana?</li><li>C'è un argomento che eviti di raccontarmi al telefono?</li><li>Cosa ha reso più facile la distanza fra noi?</li><li>In che momento hai dubitato, anche solo per cinque minuti?</li><li>Cosa faccio che ti rassicura senza che io lo sappia?</li></ul>",
+    "sub3Title": "Il dopo e i ritrovarsi",
+    "sub3Text": "<ul><li>La prima cosa che facciamo quando ci rivediamo: scegli tu.</li><li>Sinceramente, quanto manca prima di stare nella stessa città?</li><li>Cosa ti farebbe dire che non ne vale più la pena?</li><li>Cosa temi del giorno in cui vivremo insieme?</li><li>Quale abitudine da single non vuoi perdere?</li><li>Se uno dovesse trasferirsi per l'altro, chi sarebbe?</li></ul>",
+    "outro": "Una regola perché funzioni: prima si risponde, poi si chiede. Altrimenti uno dei due finisce a fare un colloquio di lavoro."
   }
 }

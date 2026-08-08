@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "5 Sprachen • 30 Fragen • 5 Min.",
-    "title": "Entdecke deine Sprache der Liebe mit diesem kostenlosen Test",
-    "titleHighlight": "Sprache der Liebe",
+    "title": "Die 5 Sprachen der Liebe: finde deine in 30 Fragen",
+    "titleHighlight": "5 Sprachen der Liebe",
     "description": "30 Fragen, um herauszufinden, wie du Liebe ausdrückst und empfängst. Ein Test basierend auf der Theorie der 5 Sprachen der Liebe von Gary Chapman."
   },
   "intro": {
@@ -82,6 +82,18 @@
     "p1": "Dieser Test basiert auf der Theorie der 5 Sprachen der Liebe von Gary Chapman, die in über 50 Sprachen übersetzt und von Millionen Menschen weltweit gelesen wurde. Dieser Ansatz wird täglich von <strong class=\"text-foreground\">Paartherapeuten und Eheberatern</strong> als Werkzeug für Mediation und gegenseitiges Verständnis eingesetzt.",
     "p2": "Es ist wichtig zu beachten, dass dieser Test ein Werkzeug zur Reflexion und zum Dialog ist, keine klinische Diagnose. Er ersetzt keine Paartherapie oder professionelle Unterstützung. Deine Ergebnisse können sich je nach Lebensphase, Stressniveau oder Reife deiner Beziehung verändern.",
     "p3": "Das Ziel ist nicht, deiner Art zu lieben ein dauerhaftes Etikett aufzudrücken, sondern ein Gespräch mit deinem Partner zu eröffnen. Macht den Test getrennt, vergleicht eure Ergebnisse und nutzt sie als Ausgangspunkt, um eine <strong class=\"text-foreground\">aufmerksamere und erfülltere Beziehung</strong> aufzubauen."
+  },
+  "section8": {
+    "title": "Die Fragen, die nach dem Test aufkommen",
+    "sub1Title": "Wie du die Sprache deines Partners erkennst, ohne ihn den Test machen zu lassen",
+    "sub1Text": "Hör darauf, was er oder sie einfordert. Man fordert fast immer das ein, wovon man zu wenig bekommt… „Du sagst mir nie etwas Nettes“ deutet auf Lob und Anerkennung hin, „wir machen gar nichts mehr zusammen“ auf Zweisamkeit. Der zweite Hinweis ist noch verlässlicher: Schau, was er dir gibt. Geschenkt wird spontan immer in der eigenen Sprache. Wer dir ungefragt einen Kaffee macht, spricht Hilfsbereitschaft, auch wenn er es nie mit Worten gesagt hat.",
+    "sub2Title": "Welche Sprache ist am häufigsten? Und welche am seltensten?",
+    "sub2Text": "Aus den Zehntausenden Fragebögen, die Chapman ausgewertet hat, ergeben sich zwei klare Tendenzen: Zweisamkeit und Lob liegen vorn, Geschenke bilden fast überall das Schlusslicht. Was übrigens nichts über dich aussagt. Der Einzige im Umfeld zu sein, der über Geschenke funktioniert, macht dieses Bedürfnis nicht oberflächlicher. Es wird nur seltener verstanden.",
+    "sub3Title": "Können zwei Sprachen gleichauf liegen?",
+    "sub3Text": "Ja, und das kommt häufiger vor, als man denkt. Es heißt, dass dich beide wirklich erreichen, nicht dass der Test danebenlag. Wenn es passiert, hilft eine ganz simple Frage: Müsstest du auf eine der beiden für immer verzichten, welche würde dir nach einem Monat mehr fehlen? Das ist deine dominante Sprache.",
+    "sub4Title": "Verändert sich die Sprache der Liebe mit der Zeit?",
+    "sub4Text": "Sie verschiebt sich, ja. Nicht über Nacht, aber die großen Lebensabschnitte bewegen sie. Das erste Kind treibt meist die Hilfsbereitschaft nach oben: Wenn keine freie Stunde mehr bleibt, ist jemand, der die Spülmaschine ausräumt, eine Liebeserklärung. Eine Fernbeziehung hebt dagegen das Lob, weil kaum etwas anderes durchs Telefon passt. Den Test alle zwei, drei Jahre zu wiederholen ist also keine dumme Idee.",
+    "outro": "Ein letzter Rat, und es ist der wirkungsvollste: Macht den Test getrennt und vergleicht danach eure beiden Diagramme. Allein sagt er dir etwas über dich. Zu zweit wird er zur Bedienungsanleitung."
   },
   "jsonLd": {
     "quizName": "Test der 5 Sprachen der Liebe",

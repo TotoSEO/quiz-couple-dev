@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "5 Lenguajes • 30 preguntas • 5 min",
-    "title": "Descubre tu lenguaje del amor con este test gratuito",
-    "titleHighlight": "lenguaje del amor",
+    "title": "Los 5 lenguajes del amor: descubre el tuyo en 30 preguntas",
+    "titleHighlight": "5 lenguajes del amor",
     "description": "30 preguntas para identificar cómo expresas y recibes el amor. Un test basado en la teoría de los 5 lenguajes del amor de Gary Chapman."
   },
   "intro": {
@@ -82,6 +82,18 @@
     "p1": "Este test se basa en la teoría de los 5 lenguajes del amor de Gary Chapman, traducida a más de 50 idiomas y leída por decenas de millones de personas en todo el mundo. Este enfoque lo utilizan a diario <strong class=\"text-foreground\">terapeutas de pareja y consejeros matrimoniales</strong> como herramienta de mediación y comprensión mutua.",
     "p2": "Es importante tener en cuenta que este test es una herramienta de reflexión y diálogo, no un diagnóstico clínico. No sustituye ni una terapia de pareja ni un acompañamiento profesional. Tu resultado puede evolucionar según las etapas de tu vida, tu nivel de estrés o la madurez de tu relación.",
     "p3": "Lo esencial no es poner una etiqueta definitiva a tu forma de querer, sino abrir una conversación con tu pareja. Haced el test cada uno por vuestro lado, comparad los resultados y usadlos como punto de partida para <strong class=\"text-foreground\">construir una relación más atenta y plena</strong>."
+  },
+  "section8": {
+    "title": "Las preguntas que surgen una vez hecho el test",
+    "sub1Title": "Cómo adivinar el lenguaje del amor de tu pareja sin hacerle el test",
+    "sub1Text": "Escucha lo que reclama. Casi siempre se reclama aquello que falta… «Nunca me dices nada bonito» apunta a las palabras de afirmación; «ya no hacemos nada juntos» apunta al tiempo de calidad. La segunda pista es aún más fiable: mira lo que te da a ti. Cada uno regala espontáneamente en su propio idioma. Quien te prepara un café sin que se lo pidas habla el lenguaje de los actos de servicio, aunque no te lo haya dicho nunca con palabras.",
+    "sub2Title": "¿Cuál es el lenguaje más común? ¿Y el más raro?",
+    "sub2Text": "De las decenas de miles de cuestionarios que analizó Chapman salen dos tendencias claras: el tiempo de calidad y las palabras de afirmación encabezan la lista, y los regalos cierran la marcha en casi todas partes. Lo cual no dice nada de ti, por cierto. Ser el único de tu entorno que funciona con regalos no vuelve tu necesidad más frívola. Solo hace que la entiendan menos a menudo.",
+    "sub3Title": "¿Pueden empatar dos lenguajes?",
+    "sub3Text": "Sí, y pasa más de lo que se cree. Significa que los dos te llegan de verdad, no que el test se haya equivocado. Cuando ocurre, tira de una pregunta muy simple: si tuvieras que renunciar para siempre a uno de los dos, ¿cuál echarías más de menos al cabo de un mes? Ese es tu lenguaje dominante.",
+    "sub4Title": "¿El lenguaje del amor cambia con el tiempo?",
+    "sub4Text": "Se mueve, sí. No de un día para otro, pero las grandes etapas lo desplazan. La llegada de un hijo suele disparar los actos de servicio: cuando ya no te queda una hora libre, alguien que vacía el lavavajillas está haciendo una declaración. La distancia, en cambio, sube las palabras de afirmación, porque es más o menos lo único que cabe en una llamada. Repetir el test cada dos o tres años no tiene nada de absurdo.",
+    "outro": "Un último consejo, y es el que más cambia las cosas: haced el test por separado y luego comparad los dos gráficos. Solo, te dice algo sobre ti. En pareja, se convierte en un manual de instrucciones."
   },
   "jsonLd": {
     "quizName": "Test de los 5 Lenguajes del Amor",

@@ -1,8 +1,8 @@
 {
   "hero": {
-    "badge": "5 linguaggi \u2022 30 domande \u2022 5 min",
-    "title": "Scopri il tuo linguaggio dell'amore con questo test gratuito",
-    "titleHighlight": "linguaggio dell'amore",
+    "badge": "5 linguaggi • 30 domande • 5 min",
+    "title": "I 5 linguaggi dell'amore: scopri il tuo in 30 domande",
+    "titleHighlight": "5 linguaggi dell'amore",
     "description": "30 domande per identificare come esprimi e ricevi l'amore. Un test basato sulla teoria dei 5 Linguaggi dell'Amore di Gary Chapman."
   },
   "intro": {
@@ -82,6 +82,18 @@
     "p1": "Questo test si basa sulla teoria dei 5 Linguaggi dell'Amore di Gary Chapman, tradotta in oltre 50 lingue e letta da decine di milioni di persone in tutto il mondo. Questo approccio viene utilizzato quotidianamente da <strong class=\"text-foreground\">terapeuti di coppia e consulenti matrimoniali</strong> come strumento di mediazione e comprensione reciproca.",
     "p2": "È importante tenere presente che questo test è uno strumento di riflessione e dialogo, non una diagnosi clinica. Non sostituisce la terapia di coppia né il supporto professionale. I tuoi risultati possono variare a seconda della fase della tua vita, del tuo livello di stress o della maturità della tua relazione.",
     "p3": "L'obiettivo non è apporre un'etichetta permanente al tuo modo di amare, ma aprire una conversazione con il tuo partner. Fate il test separatamente, confrontate i risultati e usateli come punto di partenza per <strong class=\"text-foreground\">costruire una relazione più attenta e appagante</strong>."
+  },
+  "section8": {
+    "title": "Le domande che vengono dopo aver fatto il test",
+    "sub1Title": "Come capire il linguaggio del partner senza fargli fare il test",
+    "sub1Text": "Ascolta quello che reclama. Si reclama quasi sempre ciò che manca… «Non mi dici mai niente di carino» punta alle parole di conferma, «non facciamo più niente insieme» punta al tempo di qualità. Il secondo indizio è ancora più affidabile: guarda cosa dà a te. Ognuno regala spontaneamente nella propria lingua. Chi ti prepara un caffè senza che tu lo chieda parla il linguaggio dei gesti di servizio, anche se non te l'ha mai detto a parole.",
+    "sub2Title": "Qual è il linguaggio più diffuso? E il più raro?",
+    "sub2Text": "Dalle decine di migliaia di questionari analizzati da Chapman emergono due tendenze nette: il tempo di qualità e le parole di conferma stanno in testa, i regali chiudono la fila quasi ovunque. Cosa che, fra parentesi, non dice niente su di te. Essere l'unico fra i tuoi a funzionare con i regali non rende quel bisogno più frivolo. Lo rende solo meno spesso capito.",
+    "sub3Title": "Due linguaggi possono arrivare a pari merito?",
+    "sub3Text": "Sì, e succede più di quanto si creda. Vuol dire che tutti e due ti arrivano davvero, non che il test abbia sbagliato. In quel caso affidati a una domanda semplicissima: se dovessi rinunciare per sempre a uno dei due, quale ti mancherebbe di più dopo un mese? Quello è il tuo dominante.",
+    "sub4Title": "Il linguaggio dell'amore cambia con il tempo?",
+    "sub4Text": "Si sposta, sì. Non da un giorno all'altro, ma le grandi tappe lo muovono. L'arrivo di un figlio fa in genere schizzare i gesti di servizio: quando non ti resta più un'ora libera, qualcuno che svuota la lavastoviglie sta facendo una dichiarazione. La distanza invece fa risalire le parole di conferma, perché è più o meno l'unica cosa che passa dal telefono. Rifare il test ogni due o tre anni non è affatto assurdo.",
+    "outro": "Un ultimo consiglio, ed è quello che cambia di più: fate il test ognuno per conto suo, poi confrontate i due grafici. Da solo ti dice qualcosa su di te. In due diventa un manuale di istruzioni."
   },
   "jsonLd": {
     "quizName": "Test dei 5 Linguaggi dell'Amore",

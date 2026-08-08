@@ -1,9 +1,9 @@
 {
   "hero": {
-    "badge": "¿Qué Prefieres? • 30 preguntas • 2 jugadores",
+    "badge": "¿Qué Prefieres? • 100 preguntas • 2 jugadores",
     "title": "¿Qué Prefieres? El quiz de pareja que te sorprenderá",
     "titleHighlight": "te sorprenderá",
-    "description": "30 preguntas para tomar decisiones imposibles juntos. Divertido, a veces profundo y siempre sorprendente."
+    "description": "100 dilemas escritos para parejas, 30 sacados al azar en cada partida. Divertido, a veces profundo y nunca igual dos veces."
   },
   "intro": {
     "p1": "El <strong class=\"text-foreground\">preferirías en pareja</strong> es uno de esos pocos formatos que funcionan siempre. Sin material, sin reglas complicadas, solo dos personas, elecciones imposibles… y respuestas que dicen mucho más de lo que parece.",
@@ -43,8 +43,8 @@
     "p2": "Es además un formato que no pone a nadie en situación de fracaso. Sin respuestas malas, sin puntuación que alcanzar. Solo dos personas que descubren, pregunta tras pregunta, que quizá no se conocían tan bien como creían. Y eso es justo lo que hace valioso el juego. Y si buscáis <a href=\"/es/quiz-pareja-divertido/\">otras actividades para hacer en pareja</a>, encontraréis muchas más."
   },
   "faq": {
-    "q1": "¿Cuántas preguntas contiene este quiz ¿Qué Prefieres? para parejas?",
-    "a1": "30 preguntas de preferirías escritas para parejas, cada una con dos opciones que hay que elegir. La mezcla de humor, reflexión y temas de pareja da una partida completa y variada.",
+    "q1": "¿Cuántas preguntas contiene este juego de ¿Qué Prefieres? para parejas?",
+    "a1": "El juego contiene 100 preguntas de preferirías escritas para parejas, cada una con dos opciones que hay que elegir. Cada partida saca 30 al azar, así que podéis volver a jugar sin repetir las mismas.",
     "q2": "¿El juego ¿Qué Prefieres? es adecuado para todas las parejas?",
     "a2": "¡Sí! El formato funciona sea cual sea la edad de la pareja o el tiempo que lleváis juntos. Las preguntas están escritas para hacer reír y pensar sin incomodar nunca, y no hay nada que preparar.",
     "q3": "¿Hay preguntas picantes en este quiz?",

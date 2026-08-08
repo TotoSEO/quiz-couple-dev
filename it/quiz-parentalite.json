@@ -1,83 +1,75 @@
 {
   "hero": {
-    "badge": "Gratuito \u2022 Senza registrazione \u2022 10 min",
+    "badge": "Gratuito • Senza registrazione • 10 min",
     "title": "Test online | Siete pronti ad avere figli?",
-    "titleHighlight": "genitorialit\u00e0",
-    "intro1": "Ci pensate da qualche settimana. Forse qualche mese. L\u2019idea di un figlio torna nelle vostre conversazioni, anche nei vostri silenzi. E poi un giorno la domanda arriva davvero: siamo pronti per davvero?",
-    "intro2": "Questo test di genitorialit\u00e0 non vi dar\u00e0 una risposta binaria (nessuno pu\u00f2 farlo). Ma vi costringer\u00e0, entrambi, a guardare le cose in faccia. 20 domande oneste sulla vostra coppia, le vostre finanze, il vostro stile di vita, le vostre paure. Rispondete ognuno per conto proprio, poi confrontatevi. Spesso \u00e8 nello scarto tra le vostre risposte che si nascondono le vere discussioni da affrontare."
+    "titleHighlight": "genitorialità",
+    "intro1": "Ci pensate da qualche settimana. Forse qualche mese. L’idea di un figlio torna nelle vostre conversazioni, anche nei vostri silenzi. E poi un giorno la domanda arriva davvero: siamo pronti per davvero?",
+    "intro2": "Questo test di genitorialità non vi darà una risposta binaria (nessuno può farlo). Ma vi costringerà, entrambi, a guardare le cose in faccia. 20 domande oneste sulla vostra coppia, le vostre finanze, il vostro stile di vita, le vostre paure. Rispondete ognuno per conto proprio, poi confrontatevi. Spesso è nello scarto tra le vostre risposte che si nascondono le vere discussioni da affrontare."
   },
   "quiz": {
-    "sectionTitle": "Fate il test di genitorialit\u00e0 qui!"
+    "sectionTitle": "Fate il test di genitorialità qui!"
   },
   "seo": {
-    "s1Title": "Domande di coppia prima di un figlio: perch\u00e9 \u00e8 cos\u00ec importante parlarne",
-    "s1p1": "Conosciamo tutti una coppia che ha fatto un bambino \"per vedere\". Spoiler: raramente va come previsto. Ed \u00e8 logico. Un figlio non mette la coppia in pausa, preme il tasto accelera. Quello che andava bene va meglio, quello che gi\u00e0 grattava un po\u2019 diventa una ferita aperta.",
-    "s1p2": "Le <strong>domande da porsi prima di avere figli</strong> non servono a raffreddare la vostra voglia. Anzi, il contrario. Servono a garantire che la vostra voglia si basi su qualcosa di concreto, non su un\u2019immagine da Instagram con tutine pastello e culle in vimini. La realt\u00e0 di un neonato sono 3 ore di sonno a notte, pannolini alle 2 di mattina e una libido che va in vacanza (lunga).",
-    "s1p3": "Secondo uno studio pubblicato sul <em>Journal of Family Psychology</em>, circa il 67% delle coppie sperimenta un calo di soddisfazione coniugale nei primi 3 anni dopo la nascita di un figlio. Questo dato non \u00e8 qui per spaventarvi. \u00c8 qui per dire una cosa semplice: <strong>le coppie che se la cavano meglio sono quelle che avevano anticipato le difficolt\u00e0</strong>. Non quelle con pi\u00f9 soldi o l\u2019appartamento pi\u00f9 grande. Quelle che avevano parlato. Davvero parlato.",
-
+    "s1Title": "Domande di coppia prima di un figlio: perché è così importante parlarne",
+    "s1p1": "Conosciamo tutti una coppia che ha fatto un bambino \"per vedere\". Spoiler: raramente va come previsto. Ed è logico. Un figlio non mette la coppia in pausa, preme il tasto accelera. Quello che andava bene va meglio, quello che già grattava un po’ diventa una ferita aperta.",
+    "s1p2": "Le <strong>domande da porsi prima di avere figli</strong> non servono a raffreddare la vostra voglia. Anzi, il contrario. Servono a garantire che la vostra voglia si basi su qualcosa di concreto, non su un’immagine da Instagram con tutine pastello e culle in vimini. La realtà di un neonato sono 3 ore di sonno a notte, pannolini alle 2 di mattina e una libido che va in vacanza (lunga).",
+    "s1p3": "Secondo uno studio pubblicato sul <em>Journal of Family Psychology</em>, circa il 67% delle coppie sperimenta un calo di soddisfazione coniugale nei primi 3 anni dopo la nascita di un figlio. Questo dato non è qui per spaventarvi. È qui per dire una cosa semplice: <strong>le coppie che se la cavano meglio sono quelle che avevano anticipato le difficoltà</strong>. Non quelle con più soldi o l’appartamento più grande. Quelle che avevano parlato. Davvero parlato.",
     "s2Title": "I 5 argomenti che ogni coppia dovrebbe affrontare prima di avere un bambino",
     "s2r1Title": "I soldi",
-    "s2r1Text": "Un figlio costa in media tra 500 e 800 \u20ac al mese nel primo anno. Pannolini, latte, asilo nido, vestitini che porta 3 settimane prima che diventino troppo piccoli\u2026 Avere un cuscinetto finanziario, anche modesto, cambia tutto. La precariet\u00e0 economica \u00e8 uno dei primi fattori di tensione nelle giovani famiglie.",
+    "s2r1Text": "Un figlio costa in media tra 500 e 800 € al mese nel primo anno. Pannolini, latte, asilo nido, vestitini che porta 3 settimane prima che diventino troppo piccoli… Avere un cuscinetto finanziario, anche modesto, cambia tutto. La precarietà economica è uno dei primi fattori di tensione nelle giovani famiglie.",
     "s2r2Title": "Il carico genitoriale",
-    "s2r2Text": "\u00c8 IL tema che fa o disfa le coppie dopo l\u2019arrivo di un bambino. Chi si alza la notte? Chi gestisce le visite mediche? Secondo i dati ISTAT, le donne si fanno ancora carico di oltre il 70% del lavoro domestico e di cura. Parlarne <strong>prima</strong> non \u00e8 negoziabile.",
+    "s2r2Text": "È IL tema che fa o disfa le coppie dopo l’arrivo di un bambino. Chi si alza la notte? Chi gestisce le visite mediche? Secondo i dati ISTAT, le donne si fanno ancora carico di oltre il 70% del lavoro domestico e di cura. Parlarne <strong>prima</strong> non è negoziabile.",
     "s2r3Title": "Lo stile educativo",
-    "s2r3Text": "Genitori severi vs famiglia rilassata dove tutto si negoziava? Queste differenze diventano linee di frattura quando bisogna decidere se mettere regole rigide o lasciare libert\u00e0. Parlatene adesso.",
-    "s2r4Title": "L\u2019impatto sulla coppia",
-    "s2r4Text": "L\u2019amore da solo non basta ad assorbire lo shock dei primi mesi. Servono anche organizzazione, pazienza e la capacit\u00e0 di vedersi nel momento peggiore senza che questo distrugga tutto.",
+    "s2r3Text": "Genitori severi vs famiglia rilassata dove tutto si negoziava? Queste differenze diventano linee di frattura quando bisogna decidere se mettere regole rigide o lasciare libertà. Parlatene adesso.",
+    "s2r4Title": "L’impatto sulla coppia",
+    "s2r4Text": "L’amore da solo non basta ad assorbire lo shock dei primi mesi. Servono anche organizzazione, pazienza e la capacità di vedersi nel momento peggiore senza che questo distrugga tutto.",
     "s2r5Title": "Le paure",
-    "s2r5Text": "Paura di non essere all\u2019altezza. Paura di ripetere gli errori dei genitori. Paura di perdere la propria libert\u00e0. Queste paure sono normali. Quello che non \u00e8 normale \u00e8 ignorarle. Una paura espressa perde met\u00e0 del suo potere.",
-    "s2Tip": "Esercizio: ognuno scriva le proprie 3 principali preoccupazioni sulla genitorialit\u00e0, poi confrontatele. Le differenze spesso rivelano le conversazioni pi\u00f9 importanti da affrontare.",
-
-    "s3Title": "Come capire se si \u00e8 pronti ad avere un figlio: i veri segnali",
-    "s3p1": "Spoiler: il \"momento perfetto\" non esiste. Se aspettate di avere tutto allineato (finanze, carriera, casa, maturit\u00e0 emotiva, luna crescente e Mercurio retrogrado), non ci arriverete mai. Ma ci sono comunque segnali che non mentono.",
-    "s3p2": "Siete probabilmente pronti se la vostra coppia \u00e8 in una buona dinamica, se riuscite a gestire i conflitti senza distruggervi a vicenda, se la voglia viene da entrambi (e non dalla pressione sociale), e se avete almeno discusso degli argomenti menzionati sopra. Al contrario, se la vostra coppia batte in testa, se sperate che un bambino aggiusti tutto, o se uno di voi non \u00e8 davvero convinto\u2026 aspettate.",
-    "s3p3": "Un test di genitorialit\u00e0 come quello che avete appena fatto non sostituisce un vero lavoro di introspezione (e tanto meno un accompagnamento professionale se necessario). Ma \u00e8 un buon punto di partenza per aprire il dialogo.",
-
-    "s3Quote": "Essere pronti non significa non avere pi\u00f9 paura. Significa avere abbastanza fiducia nella coppia per andare avanti nonostante la paura.",
-
-    "s4Title": "L\u2019errore che il 90% delle coppie fa: non parlare del \"dopo\"",
-    "s4p1": "Si parla molto del \"facciamo un bambino?\", si parla della gravidanza, del parto, del nome. E poi il bambino arriva. E l\u00ec \u00e8 il buco nero. Nessuno aveva previsto che la quotidianit\u00e0 sarebbe stata cos\u00ec.",
-    "s4p2": "Il \"dopo\" sono i primi 6 mesi in cui funzionerete in modalit\u00e0 sopravvivenza. \u00c8 la madre che si sente sola anche se il padre \u00e8 l\u00ec. \u00c8 il padre che non sa cosa fare perch\u00e9 nessuno glielo ha insegnato. Sono i litigi alle 3 di notte perch\u00e9 il bambino piange e tutti sono allo stremo.",
-    "s4p3": "Non lo diciamo per drammatizzare. Lo diciamo perch\u00e9 le coppie che ne parlano <strong>prima</strong> attraversano questo periodo con pi\u00f9 serenit\u00e0. Chiedetevi: chi far\u00e0 cosa durante il congedo di maternit\u00e0? Il co-genitore prender\u00e0 un congedo parentale? Come si gestiscono le visite dei parenti? Ci si concede di chiedere aiuto? Tutte queste <strong>domande da porsi in coppia prima di un figlio</strong> sembrano banali sulla carta. In pratica, fanno un\u2019enorme differenza.",
-    "s4p4": "Se <a href=\"/it/test-compatibilita-coppia/\">la vostra coppia \u00e8 solida</a>, queste sfide saranno prove che attraverserete insieme. Altrimenti, \u00e8 il momento di rafforzare le basi prima di aggiungere un bambino all\u2019equazione.",
-
-    "s4Tip": "Esercizio pratico: passate un\u2019intera giornata con un neonato (nipote, figlio di amici). Non per giocare alla famiglia perfetta, ma per osservare come gestite insieme la stanchezza, gli imprevisti e la divisione dei compiti.",
-
-    "s5Title": "La questione del tempismo: esiste un\u2019et\u00e0 ideale?",
-    "s5p1": "Dal punto di vista medico, la fertilit\u00e0 femminile inizia a diminuire significativamente dopo i 35 anni. \u00c8 un dato biologico, non un giudizio. Sul versante maschile, anche la qualit\u00e0 dello sperma cala con l\u2019et\u00e0, anche se se ne parla meno.",
-    "s5p2": "Ma il tempismo non \u00e8 solo biologia. \u00c8 anche la vostra stabilit\u00e0 emotiva, la vostra maturit\u00e0 relazionale, la vostra situazione materiale. Alcune coppie di 25 anni sono pi\u00f9 pronte di altre a 38. Essere genitori giovani significa avere l\u2019energia fisica ma a volte meno distacco. Essere genitori pi\u00f9 tardi \u00e8 il contrario. Non c\u2019\u00e8 una formula magica.",
-    "s5p3": "Quello che sappiamo con certezza \u00e8 che le coppie che fanno un figlio perch\u00e9 lo vogliono davvero (e non \"prima che sia troppo tardi\", non \"perch\u00e9 lo fanno tutti\") vivono meglio la transizione alla genitorialit\u00e0. Il desiderio sincero e condiviso \u00e8 il miglior segnale di tutti.",
-
-    "s6Title": "Rifare il test tra 6 mesi: perch\u00e9 \u00e8 una buona idea",
-    "s6p1": "Il vostro punteggio di oggi \u00e8 una foto in un istante T. Le vostre risposte evolveranno. Le vostre finanze cambieranno forse, la vostra situazione professionale anche. La vostra coppia attraverser\u00e0 nuove prove (o al contrario si rafforzer\u00e0). Ecco perch\u00e9 vi consigliamo di rifare questo test di genitorialit\u00e0 tra qualche mese.",
-    "s6p2": "L\u2019idea non \u00e8 aspettare il punteggio perfetto. \u00c8 vedere se le vostre risposte si muovono nella direzione giusta. Se gli argomenti che bloccavano si sbloccano. E soprattutto, se la voglia cresce o si affievolisce \u2014 perch\u00e9 entrambe le cose sono valide.",
-    "s6p3": "Nel frattempo, la genitorialit\u00e0 \u00e8 anche una questione di compatibilit\u00e0 quotidiana. Sapere se avete <a href=\"/it/test-punti-comuni-coppia/\">abbastanza punti in comune</a> per costruire un progetto cos\u00ec grande conta. E se anche il matrimonio fa parte della riflessione, vale la pena verificare che siate <a href=\"/it/test-compatibilita-matrimonio/\">allineati anche su questo fronte</a>.",
-
-    "faqTitle": "Domande frequenti sulla genitorialit\u00e0 e la coppia",
+    "s2r5Text": "Paura di non essere all’altezza. Paura di ripetere gli errori dei genitori. Paura di perdere la propria libertà. Queste paure sono normali. Quello che non è normale è ignorarle. Una paura espressa perde metà del suo potere.",
+    "s2Tip": "Esercizio: ognuno scriva le proprie 3 principali preoccupazioni sulla genitorialità, poi confrontatele. Le differenze spesso rivelano le conversazioni più importanti da affrontare.",
+    "s3Title": "Come capire se si è pronti ad avere un figlio: i veri segnali",
+    "s3p1": "Spoiler: il \"momento perfetto\" non esiste. Se aspettate di avere tutto allineato (finanze, carriera, casa, maturità emotiva, luna crescente e Mercurio retrogrado), non ci arriverete mai. Ma ci sono comunque segnali che non mentono.",
+    "s3p2": "Siete probabilmente pronti se la vostra coppia è in una buona dinamica, se riuscite a gestire i conflitti senza distruggervi a vicenda, se la voglia viene da entrambi (e non dalla pressione sociale), e se avete almeno discusso degli argomenti menzionati sopra. Al contrario, se la vostra coppia batte in testa, se sperate che un bambino aggiusti tutto, o se uno di voi non è davvero convinto… aspettate.",
+    "s3p3": "Un test di genitorialità come quello che avete appena fatto non sostituisce un vero lavoro di introspezione (e tanto meno un accompagnamento professionale se necessario). Ma è un buon punto di partenza per aprire il dialogo.",
+    "s3Quote": "Essere pronti non significa non avere più paura. Significa avere abbastanza fiducia nella coppia per andare avanti nonostante la paura.",
+    "s4Title": "L’errore che il 90% delle coppie fa: non parlare del \"dopo\"",
+    "s4p1": "Si parla molto del \"facciamo un bambino?\", si parla della gravidanza, del parto, del nome. E poi il bambino arriva. E lì è il buco nero. Nessuno aveva previsto che la quotidianità sarebbe stata così.",
+    "s4p2": "Il \"dopo\" sono i primi 6 mesi in cui funzionerete in modalità sopravvivenza. È la madre che si sente sola anche se il padre è lì. È il padre che non sa cosa fare perché nessuno glielo ha insegnato. Sono i litigi alle 3 di notte perché il bambino piange e tutti sono allo stremo.",
+    "s4p3": "Non lo diciamo per drammatizzare. Lo diciamo perché le coppie che ne parlano <strong>prima</strong> attraversano questo periodo con più serenità. Chiedetevi: chi farà cosa durante il congedo di maternità? Il co-genitore prenderà un congedo parentale? Come si gestiscono le visite dei parenti? Ci si concede di chiedere aiuto? Tutte queste <strong>domande da porsi in coppia prima di un figlio</strong> sembrano banali sulla carta. In pratica, fanno un’enorme differenza.",
+    "s4p4": "Se <a href=\"/it/test-compatibilita-coppia/\">la vostra coppia è solida</a>, queste sfide saranno prove che attraverserete insieme. Altrimenti, è il momento di rafforzare le basi prima di aggiungere un bambino all’equazione.",
+    "s4Tip": "Esercizio pratico: passate un’intera giornata con un neonato (nipote, figlio di amici). Non per giocare alla famiglia perfetta, ma per osservare come gestite insieme la stanchezza, gli imprevisti e la divisione dei compiti.",
+    "s5Title": "La questione del tempismo: esiste un’età ideale?",
+    "s5p1": "Dal punto di vista medico, la fertilità femminile inizia a diminuire significativamente dopo i 35 anni. È un dato biologico, non un giudizio. Sul versante maschile, anche la qualità dello sperma cala con l’età, anche se se ne parla meno.",
+    "s5p2": "Ma il tempismo non è solo biologia. È anche la vostra stabilità emotiva, la vostra maturità relazionale, la vostra situazione materiale. Alcune coppie di 25 anni sono più pronte di altre a 38. Essere genitori giovani significa avere l’energia fisica ma a volte meno distacco. Essere genitori più tardi è il contrario. Non c’è una formula magica.",
+    "s5p3": "Quello che sappiamo con certezza è che le coppie che fanno un figlio perché lo vogliono davvero (e non \"prima che sia troppo tardi\", non \"perché lo fanno tutti\") vivono meglio la transizione alla genitorialità. Il desiderio sincero e condiviso è il miglior segnale di tutti.",
+    "s6Title": "Rifare il test tra 6 mesi: perché è una buona idea",
+    "s6p1": "Il vostro punteggio di oggi è una foto in un istante T. Le vostre risposte evolveranno. Le vostre finanze cambieranno forse, la vostra situazione professionale anche. La vostra coppia attraverserà nuove prove (o al contrario si rafforzerà). Ecco perché vi consigliamo di rifare questo test di genitorialità tra qualche mese.",
+    "s6p2": "L’idea non è aspettare il punteggio perfetto. È vedere se le vostre risposte si muovono nella direzione giusta. Se gli argomenti che bloccavano si sbloccano. E soprattutto, se la voglia cresce o si affievolisce, perché entrambe le cose sono valide.",
+    "s6p3": "Nel frattempo, la genitorialità è anche una questione di compatibilità quotidiana. Sapere se avete <a href=\"/it/test-punti-comuni-coppia/\">abbastanza punti in comune</a> per costruire un progetto così grande conta. E se anche il matrimonio fa parte della riflessione, vale la pena verificare che siate <a href=\"/it/test-compatibilita-matrimonio/\">allineati anche su questo fronte</a>.",
+    "faqTitle": "Domande frequenti sulla genitorialità e la coppia",
     "faq": [
       {
-        "q": "\u00c8 normale avere paura di avere un figlio?",
-        "a": "S\u00ec, assolutamente. Avere paura non significa non essere pronti. Significa che state misurando la portata di ci\u00f2 che vi aspetta, ed \u00e8 piuttosto sano. Il vero problema non \u00e8 avere paura. \u00c8 non poterne parlare con il vostro partner."
+        "q": "È normale avere paura di avere un figlio?",
+        "a": "Sì, assolutamente. Avere paura non significa non essere pronti. Significa che state misurando la portata di ciò che vi aspetta, ed è piuttosto sano. Il vero problema non è avere paura. È non poterne parlare con il vostro partner."
       },
       {
-        "q": "Il mio partner non vuole figli e io s\u00ec, come fare?",
-        "a": "\u00c8 uno dei disaccordi pi\u00f9 dolorosi in una coppia, perch\u00e9 non esiste un compromesso ovvio. Il primo passo \u00e8 capire il perch\u00e9. \u00c8 un \"non adesso\" o un \"mai\"? Parlatene senza pressione, idealmente con l\u2019aiuto di un terapeuta di coppia."
+        "q": "Il mio partner non vuole figli e io sì, come fare?",
+        "a": "È uno dei disaccordi più dolorosi in una coppia, perché non esiste un compromesso ovvio. Il primo passo è capire il perché. È un \"non adesso\" o un \"mai\"? Parlatene senza pressione, idealmente con l’aiuto di un terapeuta di coppia."
       },
       {
-        "q": "Un bambino pu\u00f2 salvare una coppia in crisi?",
-        "a": "No. \u00c8 un mito pericoloso. Un bambino amplifica le dinamiche esistenti. Se la vostra coppia va bene, un figlio probabilmente rafforzer\u00e0 il vostro legame. Se la vostra coppia \u00e8 in difficolt\u00e0, un bambino aggiunger\u00e0 stress. Prima di pensare a un bambino, verificate che <a href=\"/it/test-relazione-tossica/\">la vostra relazione non abbia tratti tossici</a>."
+        "q": "Un bambino può salvare una coppia in crisi?",
+        "a": "No. È un mito pericoloso. Un bambino amplifica le dinamiche esistenti. Se la vostra coppia va bene, un figlio probabilmente rafforzerà il vostro legame. Se la vostra coppia è in difficoltà, un bambino aggiungerà stress. Prima di pensare a un bambino, verificate che <a href=\"/it/test-relazione-tossica/\">la vostra relazione non abbia tratti tossici</a>."
       },
       {
-        "q": "A che et\u00e0 si \u00e8 troppo vecchi per avere un figlio?",
-        "a": "Non esiste una risposta universale. La medicina riproduttiva ha spostato i limiti biologici (PMA, congelamento degli ovociti\u2026), ma le gravidanze tardive comportano statisticamente pi\u00f9 rischi. Ci\u00f2 che conta \u00e8 prendere questa decisione con il vostro medico e il vostro partner."
+        "q": "A che età si è troppo vecchi per avere un figlio?",
+        "a": "Non esiste una risposta universale. La medicina riproduttiva ha spostato i limiti biologici (PMA, congelamento degli ovociti…), ma le gravidanze tardive comportano statisticamente più rischi. Ciò che conta è prendere questa decisione con il vostro medico e il vostro partner."
       },
       {
         "q": "Come affrontare il discorso figli con il/la partner?",
-        "a": "Evitate il \"dobbiamo parlare\" drammatico la domenica sera. Portate l\u2019argomento naturalmente, in un momento tranquillo. Potete anche usare questo test come pretesto: \"Ehi, ho trovato un test di genitorialit\u00e0 online, lo facciamo insieme?\"."
+        "a": "Evitate il \"dobbiamo parlare\" drammatico la domenica sera. Portate l’argomento naturalmente, in un momento tranquillo. Potete anche usare questo test come pretesto: \"Ehi, ho trovato un test di genitorialità online, lo facciamo insieme?\"."
       },
       {
         "q": "Quanto costa un figlio nel primo anno in Italia?",
-        "a": "In media, calcolate tra 6.000 e 10.000 \u20ac il primo anno, escluse le spese per il nido (che possono facilmente raddoppiare il conto). Le voci pi\u00f9 pesanti: pannolini (circa 600-800 \u20ac/anno), alimentazione, vestiti, attrezzatura e spese mediche non coperte dal SSN."
+        "a": "In media, calcolate tra 6.000 e 10.000 € il primo anno, escluse le spese per il nido (che possono facilmente raddoppiare il conto). Le voci più pesanti: pannolini (circa 600-800 €/anno), alimentazione, vestiti, attrezzatura e spese mediche non coperte dal SSN."
       }
     ]
   }

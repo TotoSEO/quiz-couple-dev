@@ -18,10 +18,10 @@
     "metaDescription": "Êtes-vous vraiment compatibles en amour ? Répondez à 20 questions à deux et obtenez votre taux de compatibilité amoureuse : valeurs, projets, quotidien. Gratuit."
   },
   "testDistance": {
-    "title": "Test de couple à distance : votre relation est-elle solide ?",
+    "title": "Questions couple à distance : quoi se dire en visio, et un quiz",
     "shortTitle": "Test relation à distance",
     "description": "100 questions pour évaluer la solidité de votre relation à distance et renforcer votre lien.",
-    "metaDescription": "En couple à distance ? 100 questions pour évaluer votre connexion et savoir si votre relation longue distance va tenir. Résultat immédiat."
+    "metaDescription": "Loin l'un de l'autre ? 18 questions à se poser en visio quand l'appel s'essouffle, et un test de 100 questions pour voir où en est votre couple. Gratuit."
   },
   "testToxic": {
     "title": "Test de couple toxique gratuit : 25 questions pour le savoir",
@@ -66,10 +66,10 @@
     "metaDescription": "Qui de vous deux connait le mieux l'autre ? 100 questions pour tester vos connaissances mutuelles. Alternez et découvrez le score."
   },
   "quizMost": {
-    "title": "Quiz qui est le plus en couple : 240+ questions pour voter",
+    "title": "Qui est le plus ? 240 questions à jouer de 2 à 8 joueurs",
     "shortTitle": "Qui est le plus ?",
     "description": "De 2 à 8 joueurs, votez ensemble pour découvrir qui est le plus drôle, bavard, romantique... 240+ questions fun !",
-    "metaDescription": "Qui est le plus romantique, le plus têtu, le plus drôle ? 240+ questions fun pour 2 à 8 joueurs. Votez et rigolez ensemble !"
+    "metaDescription": "Qui est le plus romantique, le plus tête en l'air, le plus jaloux ? 240 questions à voter ensemble, en couple ou entre amis. Gratuit, sans inscription."
   },
   "questionsCouple": {
     "title": "120 questions pour couple à se poser : les meilleures en 2026",
@@ -113,10 +113,10 @@
     "metaDescription": "Êtes-vous prêts à devenir parents ? 20 questions pour évaluer votre préparation en couple avant d'accueillir un bébé. Test gratuit."
   },
   "testAstroPrenoms": {
-    "title": "Compatibilité amoureuse : prénoms et signes astrologiques",
+    "title": "Compatibilité amoureuse prénom et signe astrologique, gratuit",
     "shortTitle": "Compatibilité Astro",
     "description": "Découvrez la compatibilité amoureuse entre vos prénoms et vos signes astrologiques. Numérologie et astrologie réunies.",
-    "metaDescription": "Entrez vos prénoms et signes astro. Notre algorithme croise numérologie et astrologie pour calculer votre compatibilité amoureuse."
+    "metaDescription": "Entrez vos deux prénoms et vos signes astro : le calcul croise numérologie et astrologie et vous donne votre compatibilité amoureuse en un clic."
   },
   "testEmmenager": {
     "title": "Test emménager ensemble : êtes-vous prêts à vivre à deux ?",
@@ -143,10 +143,10 @@
     "metaDescription": "Êtes-vous le couple le plus gênant de votre entourage ? 15 questions pour le savoir. Rires garantis, résultats surprenants."
   },
   "quizTuPreferes": {
-    "title": "Tu préfères en couple : 30 dilemmes impossibles entre amoureux",
+    "title": "Tu préfères en couple : 100 questions pour jouer à deux",
     "shortTitle": "Tu Préfères",
-    "description": "30 questions \"tu préfères\" pour jouer en couple. Des choix impossibles qui font rire et réfléchir.",
-    "metaDescription": "Tu préfères version couple ! 30 dilemmes impossibles pour rire, débattre et découvrir des choses surprenantes sur l'autre."
+    "description": "100 questions \"tu préfères\" pour jouer en couple. Des choix impossibles qui font rire, débattre et parfois hésiter longtemps.",
+    "metaDescription": "Le jeu du tu préfères version couple : 100 dilemmes impossibles, 30 par partie, à jouer sur un seul téléphone. Gratuit, sans inscription."
   },
   "quizVraiFaux": {
     "title": "Quiz vrai ou faux spécial couple : 100 questions insolites",
@@ -185,10 +185,10 @@
     "metaDescription": "Prêt(e) pour un bébé ? 20 questions sur votre situation financière, émotionnelle et relationnelle. Test gratuit, résultat immédiat."
   },
   "zamours": {
-    "title": "Quiz Couple les Z'Amours - Jouer en ligne",
+    "title": "Quiz Les Z'Amours en couple : 60 questions comme à la télé",
     "shortTitle": "Les Z'Amours",
     "description": "Le jeu culte de l'émission, version couple ! Devinez les réponses de votre moitié, marquez des points et tentez la finale. 60 questions tirées au sort.",
-    "metaDescription": "Jouez aux Z'Amours en couple en ligne : devinez les réponses de votre moitié, marquez des points et tentez la finale. 60 questions, gratuit et sans inscription."
+    "metaDescription": "Jouez aux Z'Amours à deux : devinez les réponses de votre moitié, marquez des points et tentez la finale. 60 questions, gratuit et sans inscription."
   },
   "quizTentation": {
     "title": "Quiz Île de la Tentation en ligne : y résisteriez-vous ?",

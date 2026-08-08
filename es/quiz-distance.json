@@ -1,12 +1,12 @@
 {
   "hero": {
     "badge": "Test de compatibilidad a distancia",
-    "title": "Quiz para parejas a distancia - ¿Puedes mantener tu relación lejos del otro?",
+    "title": "Pareja a distancia: las preguntas que haceros y el test que responde",
     "description": "Descubre si tú y tu pareja estáis preparados para la aventura del amor a distancia. Un quiz interactivo con resultados personalizados.",
     "questions": "100 preguntas",
     "players": "Quiz para dos",
     "duration": "~10 minutos",
-    "titleHighlight": "a distancia"
+    "titleHighlight": "preguntas que haceros"
   },
   "intro": {
     "p1": "¿Puede el amor realmente sobrevivir a los kilómetros? En 2026, esta pregunta nunca ha sido tan pertinente.",
@@ -197,5 +197,16 @@
     "moderateDesc": "Tenéis bases pero algunos puntos necesitan trabajo.",
     "readyTitle": "Preparados para la distancia",
     "readyDesc": "Tenéis las cualidades necesarias para gestionar la distancia."
+  },
+  "section10": {
+    "title": "18 preguntas para haceros en videollamada",
+    "intro": "El test de arriba os da un veredicto. Esta lista sirve para otra cosa: sacarla una noche en que la llamada se apaga, cuando ya os habéis contado el día y quedan veinte minutos por delante. Elegid una al azar.",
+    "sub1Title": "El día a día que no se ve",
+    "sub1Text": "<ul><li>Cuéntame el día de ayer, pero solo los cinco minutos más normales.</li><li>¿Qué es lo que no tengo ni idea de tu casa?</li><li>¿A quién has visto esta semana que yo no conozca?</li><li>¿Qué haces por la noche cuando no hablamos?</li><li>¿Qué costumbre has cogido desde que estamos lejos?</li><li>¿Qué te hace pensar en mí en un día cualquiera?</li></ul>",
+    "sub2Title": "Lo que falta y lo que aguanta",
+    "sub2Text": "<ul><li>¿Qué es lo que más echas de menos, aparte de verme?</li><li>¿Cuál es el momento más duro de la semana?</li><li>¿Hay algún tema que evitas contarme por teléfono?</li><li>¿Qué ha hecho más fácil la distancia entre nosotros?</li><li>¿En qué momento dudaste, aunque fueran cinco minutos?</li><li>¿Qué hago que te tranquiliza sin que yo lo sepa?</li></ul>",
+    "sub3Title": "El después y los reencuentros",
+    "sub3Text": "<ul><li>Lo primero que hacemos al vernos: eliges tú.</li><li>Sinceramente, ¿cuánto queda para estar en la misma ciudad?</li><li>¿Qué te haría decir que ya no merece la pena?</li><li>¿Qué te da miedo del día en que vivamos juntos?</li><li>¿Qué costumbre de soltero no piensas soltar?</li><li>Si uno tuviera que mudarse por el otro, ¿quién sería?</li></ul>",
+    "outro": "Una regla si queréis que funcione: primero se responde, después se pregunta. Si no, uno de los dos acaba en una entrevista de trabajo."
   }
 }

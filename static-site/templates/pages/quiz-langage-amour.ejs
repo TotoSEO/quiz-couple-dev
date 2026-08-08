@@ -128,7 +128,7 @@
 <section class="py-12 md:py-16">
   <div class="container mx-auto px-4">
     <div class="max-w-3xl mx-auto">
-      <div id="love-language-quiz" data-lang="<%= lang %>"></div>
+      <div id="love-language-quiz" data-quiz="langage-amour" data-lang="<%= lang %>"></div>
     </div>
   </div>
 </section>
@@ -238,6 +238,27 @@
         <p class="text-foreground font-semibold"><%- t(ns + ':section7.p3', '') %></p>
       </div>
     </section>
+
+    <!-- Section 8: ce qu'on se demande après le test -->
+    <% const s8Title = t(ns + ':section8.title', ''); if (s8Title) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= s8Title %></h2>
+      <div class="space-y-4">
+        <% for (let si = 1; si <= 4; si++) {
+          const sTitle = t(ns + ':section8.sub' + si + 'Title', '');
+          if (!sTitle) continue;
+          const sText = t(ns + ':section8.sub' + si + 'Text', ''); %>
+        <div class="bg-card border border-border rounded-lg p-6">
+          <h3 class="text-lg font-semibold mb-2 text-primary"><%= sTitle %></h3>
+          <% if (sText) { %><p class="text-muted-foreground leading-relaxed"><%- sText %></p><% } %>
+        </div>
+        <% } %>
+      </div>
+      <% const s8Outro = t(ns + ':section8.outro', ''); if (s8Outro) { %>
+      <p class="text-muted-foreground leading-relaxed mt-6"><%- s8Outro %></p>
+      <% } %>
+    </section>
+    <% } %>
 
   </div>
 </article>
@@ -501,6 +522,14 @@
 
     html += '</div>';
     this.container.innerHTML = html;
+
+    // Ce test etait le seul ecran de resultat du site sans bouton de partage,
+    // alors que c'est justement celui qu'on veut envoyer a son/sa partenaire.
+    if (QuizEngine.renderShareButton) {
+      // On partage le nom du langage seul : le titre complet du resultat
+      // repete deja le nom du test, que la phrase de partage porte aussi.
+      QuizEngine.renderShareButton(this.container.firstChild, { type: 'profil', verdict: LANG_NAMES[dominant] });
+    }
 
     // Retake button
     document.getElementById('ll-retake').addEventListener('click', function() {
