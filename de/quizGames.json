@@ -138,10 +138,9 @@
     "nextQuestionBtn": "Nächste Frage!",
     "toAnswer": "muss antworten!",
     "itsYourTurnToGuess": "du bist dran mit Raten!",
-    "sayAnswerOutLoud": "Sag deine Antwort laut,",
-    "validates": "bestätigt!",
-    "found": "hat richtig geraten!",
-    "wasMistaken": "hat falsch geraten!",
+    "roleInstruction": "{{guesser}}, sag deine Antwort laut, {{target}} bestätigt!",
+    "guesserFound": "{{name}} hat richtig geraten!",
+    "guesserMissed": "{{name}} hat falsch geraten!",
     "voteInstruction": "Stimmt gemeinsam ab! Wer passt am besten zu dieser Beschreibung?",
     "nobody": "Niemand",
     "nextQuestionTransition": "Nächste Frage!",
@@ -158,7 +157,10 @@
     "stronglyAgree": "Stimme voll zu",
     "discussTogether": "💬 Sprecht gemeinsam über eure Antworten!",
     "question": "Frage",
-    "skipQuestion": "Diese Frage überspringen"
+    "skipQuestion": "Diese Frage überspringen",
+    "roleGuess": "Muss raten",
+    "roleValidate": "Bestätigt",
+    "aboutPerson": "Frage über"
   },
   "result": {
     "identicalAnswers": "identische Antworten",
