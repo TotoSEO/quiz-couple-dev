@@ -274,6 +274,16 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-02-21',
   },
   {
+    internalSlug: 'cadeau-mariage-combien-donner',
+    category: 'vie-de-couple',
+    frOnly: true,
+    featuredImage: '/blog/cadeau-mariage.webp',
+    slugs: {
+      fr: 'cadeau-mariage-combien-donner',
+    },
+    publishedAt: '2026-08-09',
+  },
+  {
     internalSlug: 'avis-gleese',
     category: 'apps-rencontre',
     frOnly: true,
