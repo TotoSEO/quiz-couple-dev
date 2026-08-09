@@ -10,12 +10,9 @@
     "titleHighlight": "couple quizzes",
     "description": "Discover your level of compatibility, explore your connection and have fun together with our interactive quizzes.",
     "descriptionHighlight": "Instant results and personalized advice!",
-    "cta": "Start the quiz",
-    "ctaSecondary": "See questions",
+    "cta": "Discover our quizzes",
+    "ctaSecondary": "Test your relationship",
     "stats": {
-      "couples": "1000+",
-      "couplesLabel": "couples tested",
-      "quizzes": "12 quizzes",
       "quizzesLabel": "quizzes available",
       "testsLabel": "tests available",
       "totalLabel": "quizzes & tests taken"
@@ -113,8 +110,7 @@
     "description": "Choose your favorite quiz and discover what makes your couple unique. It's free, no registration required, and it only takes a few minutes!",
     "button": "Start now",
     "socialProof": "Already",
-    "socialProofCount": "1000+ couples",
-    "socialProofEnd": "have tested their bond 💕"
+    "socialProofEnd": "quizzes and tests taken by couples like you 💕"
   },
   "latestArticles": {
     "title": "Latest articles",
@@ -127,7 +123,7 @@
     "quizzesTitle": "Our Couple Quizzes",
     "quizzesDesc": "Interactive and fun games to play together and strengthen your bond",
     "jeuxTitle": "Our games to play together",
-    "jeuxDesc": "Three games that start on a single phone, with no sign-up and nothing to prepare.",
+    "jeuxDesc": "{{n}} games that start on a single phone, with no sign-up and nothing to prepare.",
     "jeuxCta": "See all our couple games",
     "cards": {
       "testCouple": "20 questions to evaluate your relationship.",
@@ -145,7 +141,10 @@
       "quizMost": "Vote to find out who is the most... among you!",
       "testAttachement": "Find out your attachment style: secure, anxious or avoidant?",
       "testConfiance": "Measure the level of mutual trust in your relationship."
-    }
+    },
+    "testsEyebrow": "The tests",
+    "quizzesEyebrow": "The quizzes",
+    "jeuxEyebrow": "The games"
   },
   "customQuizPromo": {
     "badge": "New",
@@ -156,5 +155,19 @@
     "popularEyebrow": "Community favourites",
     "popularSub": "Quizzes dreamed up by other couples, jump in with one tap.",
     "popularCta": "Play"
+  },
+  "marquee": {
+    "item1": "💕 Test your relationship",
+    "item2": "🔥 Naughty questions",
+    "item3": "😂 Laughs guaranteed",
+    "item4": "🎯 What you have in common",
+    "item5": "💬 Real conversations",
+    "item6": "🎲 Made for two",
+    "item7": "✨ 100% free",
+    "item8": "🚀 No sign-up",
+    "item9": "🌙 Date night at home",
+    "item10": "🧠 How well do you know each other?",
+    "item11": "👀 Which one of us?",
+    "item12": "⚡ Instant results"
   }
 }

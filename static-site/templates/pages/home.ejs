@@ -8,11 +8,15 @@
     descriptionHighlight: t('home:hero.descriptionHighlight', ''),
     cta1: t('home:hero.cta', 'Découvrir nos quiz'),
     cta2: t('home:hero.ctaSecondary', 'Tester son couple'),
-    stat1Value: t('home:hero.stats.couples', '1000+'),
-    stat1Label: t('home:hero.stats.couplesLabel', 'couples testés'),
-    stat2Value: t('home:hero.stats.quizzes', '12'),
-    stat2Label: t('home:hero.stats.quizzesLabel', 'quiz disponibles'),
   };
+
+  // Bandeau décoratif de la ligne de flottaison. Purement visuel : il est
+  // masqué aux lecteurs d'écran et ne contient aucun lien.
+  const marqueeItems = [];
+  for (let mi = 1; mi <= 12; mi++) {
+    const txt = t('home:marquee.item' + mi, '');
+    if (txt) marqueeItems.push(txt);
+  }
 
   // Quiz grid data
   const tests = [
@@ -106,28 +110,19 @@
           <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-outline btn-lg"><%= hero.cta2 %></a>
         </div>
 
-        <!-- Stats cards -->
+        <!-- Compteurs : le total joué domine, l'inventaire du catalogue suit -->
         <div class="hero-stats">
-          <div class="hero-stat-card">
-            <span class="hero-stat-icon">🎯</span>
-            <div>
-              <span class="hero-stat-value" id="home-total-counter" data-baseline="3078">3&nbsp;078</span>
-              <span class="hero-stat-label"><%= t('home:hero.stats.totalLabel', 'quiz &amp; tests réalisés') %></span>
-            </div>
+          <div class="hero-stat hero-stat--phare">
+            <span class="hero-stat-nb" id="home-total-counter" data-total-counter data-baseline="3078">3&nbsp;078</span>
+            <span class="hero-stat-txt"><%= t('home:hero.stats.totalLabel', 'quiz &amp; tests réalisés') %></span>
           </div>
-          <div class="hero-stat-card">
-            <span class="hero-stat-icon">📝</span>
-            <div>
-              <span class="hero-stat-value"><%= testsFiltered.length %></span>
-              <span class="hero-stat-label"><%= t('home:hero.stats.testsLabel', 'tests disponibles') %></span>
-            </div>
+          <div class="hero-stat">
+            <span class="hero-stat-nb"><%= testsFiltered.length %></span>
+            <span class="hero-stat-txt"><%= t('home:hero.stats.testsLabel', 'tests disponibles') %></span>
           </div>
-          <div class="hero-stat-card">
-            <span class="hero-stat-icon">🎮</span>
-            <div>
-              <span class="hero-stat-value"><%= quizzesFiltered.length %></span>
-              <span class="hero-stat-label"><%= t('home:hero.stats.quizzesLabel', 'quiz à faire en couple') %></span>
-            </div>
+          <div class="hero-stat">
+            <span class="hero-stat-nb"><%= quizzesFiltered.length %></span>
+            <span class="hero-stat-txt"><%= t('home:hero.stats.quizzesLabel', 'quiz disponibles') %></span>
           </div>
         </div>
       </div>
@@ -155,6 +150,22 @@
   </div>
 </section>
 
+<!-- Bandeau décoratif, posé sur la ligne de flottaison. Aucun contenu utile
+     n'y est enfermé : il est masqué aux lecteurs d'écran et la piste est
+     dupliquée pour que la boucle se referme sans saut visible. -->
+<% if (marqueeItems.length) { %>
+<div class="ruban" aria-hidden="true">
+  <div class="ruban-piste">
+    <% for (let copie = 0; copie < 2; copie++) { %>
+      <% marqueeItems.forEach(function(item) { %>
+      <span class="ruban-item"><%= item %></span>
+      <span class="ruban-sep">•</span>
+      <% }) %>
+    <% } %>
+  </div>
+</div>
+<% } %>
+
 <!-- Quiz Section -->
 <section id="quiz-section" class="section-padding bg-muted/20">
   <div class="container mx-auto px-4">
@@ -164,9 +175,11 @@
     <!-- Tests block -->
     <div class="quiz-section-block quiz-section-tests">
       <div class="quiz-section-block-inner">
-        <div class="text-center mb-6">
-          <h2 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.testsTitle', 'Nos Tests pour les Couples') %></h2>
-          <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.testsDesc', '') %></p>
+        <div class="bloc-entete">
+          <span class="bloc-pastille">📝 <%= t('home:quizGrid.testsEyebrow', 'Les tests') %></span>
+          <h2 class="bloc-titre"><%= t('home:quizGrid.testsTitle', 'Nos Tests pour les Couples') %></h2>
+          <span class="bloc-trait" aria-hidden="true"></span>
+          <p class="bloc-sous-titre"><%= t('home:quizGrid.testsDesc', '') %></p>
         </div>
         <div class="quiz-slider" data-slider>
           <button type="button" class="quiz-slider__nav quiz-slider__nav--prev" data-slider-prev aria-label="<%= t('common:buttons.previous', 'Précédent') %>">
@@ -212,9 +225,11 @@
     <!-- Quizzes block -->
     <div class="quiz-section-block quiz-section-quizzes">
       <div class="quiz-section-block-inner">
-        <div class="text-center mb-6">
-          <h2 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.quizzesTitle', 'Nos Quiz à Faire en Couple') %></h2>
-          <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.quizzesDesc', '') %></p>
+        <div class="bloc-entete">
+          <span class="bloc-pastille">🎮 <%= t('home:quizGrid.quizzesEyebrow', 'Les quiz') %></span>
+          <h2 class="bloc-titre"><%= t('home:quizGrid.quizzesTitle', 'Nos Quiz à Faire en Couple') %></h2>
+          <span class="bloc-trait" aria-hidden="true"></span>
+          <p class="bloc-sous-titre"><%= t('home:quizGrid.quizzesDesc', '') %></p>
         </div>
         <div class="quiz-slider" data-slider>
           <button type="button" class="quiz-slider__nav quiz-slider__nav--prev" data-slider-prev aria-label="<%= t('common:buttons.previous', 'Précédent') %>">
@@ -261,9 +276,11 @@
     <!-- Games block -->
     <div class="quiz-section-block quiz-section-jeux">
       <div class="quiz-section-block-inner">
-        <div class="text-center mb-6">
-          <h2 class="text-xl md:text-2xl font-bold"><%= t('home:quizGrid.jeuxTitle', 'Nos jeux à jouer à deux') %></h2>
-          <p class="mt-2 text-muted-foreground max-w-lg mx-auto"><%= t('home:quizGrid.jeuxDesc', '') %></p>
+        <div class="bloc-entete">
+          <span class="bloc-pastille">🎲 <%= t('home:quizGrid.jeuxEyebrow', 'Les jeux') %></span>
+          <h2 class="bloc-titre"><%= t('home:quizGrid.jeuxTitle', 'Nos jeux à jouer à deux') %></h2>
+          <span class="bloc-trait" aria-hidden="true"></span>
+          <p class="bloc-sous-titre"><%= t('home:quizGrid.jeuxDesc', '').replace('{{n}}', jeuxFiltered.length) %></p>
         </div>
         <div class="jeux-board jeux-board--home">
           <% jeuxFiltered.forEach(function(item) {
@@ -530,12 +547,16 @@
 <section class="section-padding">
   <div class="container mx-auto px-4">
     <div class="final-cta-card mx-auto max-w-2xl text-center rounded-3xl p-8 md:p-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white"><%= t('home:finalCTA.title', 'Prêts à tester votre') %> <span class="final-cta-highlight"><%= t('home:finalCTA.titleHighlight', 'complicité') %></span></h2>
-      <p class="text-white/80 mb-8"><%= t('home:finalCTA.description', '') %></p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-lg" style="background: #fff; color: hsl(var(--primary)); font-weight: 700;"><%= t('home:finalCTA.button', 'Commencer maintenant') %></a>
-        <a href="#quiz-section" class="btn btn-lg" style="border: 2px solid rgba(255,255,255,0.4); color: #fff; background: transparent;"><%= t('home:finalCTA.socialProof', 'Déjà') %> <%= t('home:finalCTA.socialProofCount', '1000+ couples') %></a>
-      </div>
+      <h2 class="final-cta-titre"><%= t('home:finalCTA.title', 'Prêts à tester votre') %> <span class="final-cta-highlight"><%= t('home:finalCTA.titleHighlight', 'complicité') %></span></h2>
+      <p class="final-cta-desc"><%= t('home:finalCTA.description', '') %></p>
+      <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-lg final-cta-bouton"><%= t('home:finalCTA.button', 'Commencer maintenant') %></a>
+      <!-- Preuve sociale : une phrase, pas un bouton, et le chiffre est le
+           compteur réel du site, pas un « 1000+ » écrit en dur. -->
+      <p class="final-cta-preuve">
+        <%= t('home:finalCTA.socialProof', 'Déjà') %>
+        <strong data-total-counter data-baseline="3078">3&nbsp;078</strong>
+        <%= t('home:finalCTA.socialProofEnd', 'quiz et tests réalisés par des couples comme vous 💕') %>
+      </p>
     </div>
   </div>
 </section>

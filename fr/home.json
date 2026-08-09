@@ -10,12 +10,9 @@
     "titleHighlight": "quiz spécial couples",
     "description": "Découvrez votre niveau de complicité, explorez votre compatibilité et amusez-vous ensemble avec nos quiz interactifs.",
     "descriptionHighlight": "Résultats instantanés et conseils personnalisés !",
-    "cta": "Commencer le quiz",
-    "ctaSecondary": "Voir les questions",
+    "cta": "Découvrir nos quiz",
+    "ctaSecondary": "Tester son couple",
     "stats": {
-      "couples": "1000+",
-      "couplesLabel": "couples testés",
-      "quizzes": "12 quiz",
       "quizzesLabel": "quiz disponibles",
       "testsLabel": "tests disponibles",
       "totalLabel": "quiz & tests réalisés"
@@ -113,8 +110,7 @@
     "description": "Choisissez votre quiz préféré et découvrez ce qui rend votre couple unique. C'est gratuit, sans inscription, et ça ne prend que quelques minutes !",
     "button": "Commencer maintenant",
     "socialProof": "Déjà",
-    "socialProofCount": "1000+ couples",
-    "socialProofEnd": "ont testé leurs liens 💕"
+    "socialProofEnd": "quiz et tests réalisés par des couples comme vous 💕"
   },
   "latestArticles": {
     "title": "Les derniers articles",
@@ -127,7 +123,7 @@
     "quizzesTitle": "Nos Quiz à Faire en Couple",
     "quizzesDesc": "Jeux interactifs et amusants à faire ensemble pour renforcer votre complicité",
     "jeuxTitle": "Nos jeux à jouer à deux",
-    "jeuxDesc": "Trois jeux qui se lancent sur un seul téléphone, sans inscription et sans rien préparer.",
+    "jeuxDesc": "{{n}} jeux qui se lancent sur un seul téléphone, sans inscription et sans rien préparer.",
     "jeuxCta": "Voir tous nos jeux de couple",
     "cards": {
       "testCouple": "20 questions pour évaluer votre relation.",
@@ -145,7 +141,10 @@
       "quizMarrant": "Riez ensemble avec des questions hilarantes !",
       "quizKnowledge": "Qui connaît le mieux l'autre ? Défiez-vous !",
       "quizMost": "Votez pour savoir qui est le plus... entre vous !"
-    }
+    },
+    "testsEyebrow": "Les tests",
+    "quizzesEyebrow": "Les quiz",
+    "jeuxEyebrow": "Les jeux"
   },
   "customQuizPromo": {
     "badge": "Nouveau",
@@ -156,5 +155,19 @@
     "popularEyebrow": "Le top de la communauté",
     "popularSub": "Des quiz imaginés par d'autres couples, lancez-vous en un clic.",
     "popularCta": "Jouer"
+  },
+  "marquee": {
+    "item1": "💕 Testez votre couple",
+    "item2": "🔥 Questions coquines",
+    "item3": "😂 Fous rires garantis",
+    "item4": "🎯 Vos points communs",
+    "item5": "💬 De vraies conversations",
+    "item6": "🎲 À jouer à deux",
+    "item7": "✨ 100% gratuit",
+    "item8": "🚀 Sans inscription",
+    "item9": "🌙 Soirée en amoureux",
+    "item10": "🧠 Vous connaissez-vous vraiment ?",
+    "item11": "👀 Qui de nous deux ?",
+    "item12": "⚡ Résultats immédiats"
   }
 }
