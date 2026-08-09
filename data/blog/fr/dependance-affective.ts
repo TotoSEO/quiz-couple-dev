@@ -75,7 +75,7 @@ const article: BlogArticleData = {
         {
           id: 'attachement-insecure',
           title: "Le style d'attachement anxieux",
-          content: `<p>La théorie de l'attachement est claire là-dessus : les personnes qui ont développé un <strong>attachement anxieux</strong> dans l'enfance sont les plus susceptibles de vivre de la dépendance affective. Le pattern est reconnaissable : hypervigilance aux signaux de l'autre, besoin constant de proximité, interprétation catastrophiste du moindre signe de distance.</p>
+          content: `<p>La théorie de l'attachement est claire là-dessus : les personnes qui ont développé un <strong><a href="/test-style-attachement-couple/">attachement anxieux</a></strong> dans l'enfance sont les plus susceptibles de vivre de la dépendance affective. Le pattern est reconnaissable : hypervigilance aux signaux de l'autre, besoin constant de proximité, interprétation catastrophiste du moindre signe de distance.</p>
 <p>Ce n'est pas de la paranoïa. C'est un système nerveux qui a été câblé pour détecter la menace d'abandon, parce qu'à un moment, cette menace était réelle.</p>`,
         },
         {

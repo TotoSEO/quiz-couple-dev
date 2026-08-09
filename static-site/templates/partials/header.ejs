@@ -35,9 +35,18 @@
     { routeKey: 'zamours', labelKey: 'nav.zamours', icon: '📺', descKey: 'nav.zamoursDesc' },
     { routeKey: 'quizTentation', labelKey: 'nav.quizTentation', icon: '🏝️', descKey: 'nav.quizTentationDesc' },
   ];
+  // Les sept jeux, dans l'ordre du hub. Le lien direct vers le hub ne suffisait
+  // pas : personne n'ouvrait la page, donc personne ne trouvait les jeux.
+  const jeuLinks = [
+    { routeKey: 'quizTuPreferes', labelKey: 'nav.quizTuPreferes' },
+    { routeKey: 'jeuActionVerite', labelKey: 'nav.jeuActionVerite' },
+    { routeKey: 'jeuActionVeriteHot', labelKey: 'nav.jeuActionVeriteHot' },
+    { routeKey: 'jeuGages', labelKey: 'nav.jeuGages' },
+    { routeKey: 'jeuPlateau', labelKey: 'nav.jeuPlateau' },
+    { routeKey: 'jeuQuiDeNous', labelKey: 'nav.jeuQuiDeNous' },
+    { routeKey: 'jeuDilemmes', labelKey: 'nav.jeuDilemmes' },
+  ];
   const directLinks = [
-    // Les jeux ont leur propre hub : un lien direct plutot qu'un troisieme menu.
-    { routeKey: 'jeuxCouple', labelKey: 'nav.jeuxCouple' },
     { routeKey: 'customQuiz', labelKey: 'nav.customQuiz' },
     { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple' },
     { routeKey: 'blog', labelKey: 'Blog' },
@@ -48,7 +57,9 @@
   const filterAvailable = (links) => links.filter(link => getLocalizedUrl(link.routeKey, lang));
   const testLinksFiltered = filterAvailable(testLinks);
   const quizLinksFiltered = filterAvailable(quizLinks);
+  const jeuLinksFiltered = filterAvailable(jeuLinks);
   const directLinksFiltered = filterAvailable(directLinks);
+  const urlJeux = getLocalizedUrl('jeuxCouple', lang);
 
   // Language names for selector
   const langNames = { fr: 'FR', en: 'EN', es: 'ES', de: 'DE', it: 'IT' };
@@ -86,6 +97,12 @@
     quizAdo: _svg('<path d="M12 3l2.3 5.5L20 9l-4.5 3.8L17 19l-5-3-5 3 1.5-6.2L4 9l5.7-.5z"/>'),
     quizGenant: _svg('<circle cx="12" cy="12" r="9"/><path d="M8.5 15.5s1-1 3.5-1 3.5 1 3.5 1"/><path d="M9 9h.01M15 9h.01"/>'),
     quizTuPreferes: _svg('<path d="M6 3v6a3 3 0 0 0 3 3h6a3 3 0 0 1 3 3v6"/><path d="M3 6l3-3 3 3"/><path d="M15 15l3 3 3-3"/>'),
+    jeuActionVerite: _svg('<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1"/><circle cx="15.5" cy="14.5" r="1"/><path d="M8 16l8-8"/>'),
+    jeuActionVeriteHot: _svg('<path d="M12 3c1.5 3 4.5 4.2 4.5 8a4.5 4.5 0 0 1-9 0C7.5 8.5 9 6 12 3z"/><path d="M12 21v-3"/>'),
+    jeuGages: _svg('<circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/>'),
+    jeuPlateau: _svg('<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>'),
+    jeuQuiDeNous: _svg('<circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 20c0-2.5 2.2-4 5-4M21 20c0-2.5-2.2-4-5-4"/>'),
+    jeuDilemmes: _svg('<path d="M12 4v16M7 20h10"/><path d="M4 8h16"/><path d="M4 8l-2 5a3 3 0 0 0 6 0z"/><path d="M20 8l2 5a3 3 0 0 1-6 0z"/>'),
     quizVraiFaux: _svg('<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 12l2.5 2.5L16 9"/>'),
     zamours: _svg('<rect x="2" y="7" width="20" height="13" rx="2"/><path d="M8 3l4 4 4-4"/>'),
     quizTentation: _svg('<path d="M12 3c3 3.5 4.5 6 4.5 8.5a4.5 4.5 0 0 1-9 0C7.5 9 9 6.5 12 3z"/><path d="M2 20c2.2-1.4 4.4-1.4 6.6 0 2.2 1.4 4.6 1.4 6.8 0 2.2-1.4 4.4-1.4 6.6 0"/>')
@@ -149,6 +166,40 @@
               <div class="nav-megamenu-grid">
                 <% for (const link of quizLinksFiltered) { %>
                 <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item nav-megamenu-item--quiz">
+                  <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
+                  <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                </a>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jeux Mega Menu -->
+        <!-- Le declencheur est scinde : le libelle est un vrai lien vers le hub,
+             la fleche est un bouton qui ne fait qu'ouvrir le sous-menu. Cliquer
+             le mot ne doit jamais se contenter d'ouvrir un panneau. -->
+        <div class="nav-dropdown nav-dropdown--scinde relative" data-megamenu>
+          <div class="nav-link nav-trigger-scinde">
+            <a href="<%= urlJeux %>" class="nav-trigger-lien">
+              <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
+              <%= t('common:nav.jeuxCouple', 'Jeux de couple') %>
+            </a>
+            <button type="button" class="nav-trigger-fleche" aria-expanded="false"
+                    aria-label="<%= t('common:nav.deployerJeux', 'Voir tous les jeux') %>">
+              <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="nav-megamenu nav-dropdown-content hidden">
+            <div class="nav-megamenu-inner">
+              <div class="nav-megamenu-header nav-megamenu-header--jeu">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
+                <span><%= t('common:nav.jeuxCouple', 'Jeux de couple') %></span>
+                <span class="nav-megamenu-count"><%= jeuLinksFiltered.length %></span>
+              </div>
+              <div class="nav-megamenu-grid">
+                <% for (const link of jeuLinksFiltered) { %>
+                <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item nav-megamenu-item--jeu">
                   <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
                   <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
                 </a>
@@ -246,6 +297,33 @@
             <div class="mobile-nav-grid">
               <% for (const link of quizLinksFiltered) { %>
               <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item mobile-nav-item--quiz">
+                <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
+                <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
+              </a>
+              <% } %>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jeux accordion -->
+        <!-- Meme principe qu'en version bureau : le libelle mene au hub, seule
+             la fleche deplie la liste. -->
+        <div class="mobile-accordion mobile-accordion--scinde">
+          <div class="mobile-accordion-trigger mobile-trigger-scinde">
+            <a href="<%= urlJeux %>" class="mobile-trigger-lien">
+              <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
+              <%= t('common:nav.jeuxCouple', 'Jeux de couple') %>
+              <span class="mobile-nav-count"><%= jeuLinksFiltered.length %></span>
+            </a>
+            <button type="button" class="mobile-trigger-fleche" aria-expanded="false"
+                    aria-label="<%= t('common:nav.deployerJeux', 'Voir tous les jeux') %>">
+              <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="mobile-accordion-content hidden">
+            <div class="mobile-nav-grid">
+              <% for (const link of jeuLinksFiltered) { %>
+              <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item mobile-nav-item--jeu">
                 <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
                 <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
               </a>

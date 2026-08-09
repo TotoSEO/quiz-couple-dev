@@ -39,7 +39,7 @@
     "regle1Titre": "Après un pari perdu",
     "regle1Texte": "L'usage le plus courant, et de loin. Celui qui perd lance la roue et exécute, sans discuter le résultat. C'est justement parce qu'il n'a rien choisi que ça passe.",
     "regle2Titre": "En fin de partie d'un autre jeu",
-    "regle2Texte": "Une roue à la fin d'un quiz ou d'un action ou vérité relance la soirée sans avoir à sortir un nouveau jeu.",
+    "regle2Texte": "Une roue à la fin d'un quiz ou d'un <a href=\"/jeu-action-ou-verite-couple/\">action ou vérité</a> relance la soirée sans avoir à sortir un nouveau jeu.",
     "regle3Titre": "Comme jeu à part entière",
     "regle3Texte": "Chacun son tour : on lance, on fait le gage tiré. Dix tours suffisent pour un vrai moment, et vous n'aurez pas deux fois le même.",
     "regle4Titre": "Avec le droit de repasser",

@@ -5969,18 +5969,10 @@ var QuizEngine = (function() {
     return c;
   };
 
-  DilemmeGame.prototype.barreProgression = function () {
-    var b = el('div', 'dil-progres');
-    b.innerHTML = '<span class="dil-progres-num">' + (this.idx + 1) + '</span>' +
-      '<span class="dil-progres-tot">/ ' + this.dilemmes.length + '</span>';
-    return b;
-  };
-
   DilemmeGame.prototype.renderVote = function () {
     var self = this;
     var d = this.dilemmeCourant();
     var wrap = el('div', 'quiz-engine dil-jeu quiz-question-enter');
-    wrap.appendChild(this.barreProgression());
     wrap.appendChild(this.carte(d));
 
     // Un dilemme deja tranche depuis ce navigateur : on montre directement le
@@ -6059,7 +6051,6 @@ var QuizEngine = (function() {
     var pctNon = 100 - pctOk;
 
     var wrap = el('div', 'quiz-engine dil-jeu dil-jeu--resultat quiz-question-enter');
-    wrap.appendChild(this.barreProgression());
     wrap.appendChild(this.carte(d));
 
     // La phrase entiere vient de la traduction : l'espace avant le deux-points
@@ -6097,12 +6088,13 @@ var QuizEngine = (function() {
     wrap.appendChild(el('p', 'dil-total', esc(phraseTotal)));
 
     var suite = el('div', 'dil-suite');
+    var dernier = this.idx + 1 >= this.dilemmes.length;
     var suivant = el('button', 'btn btn-cta dil-suivant',
-      esc(this.idx + 1 >= this.dilemmes.length ? this.tg('voirBilan', 'Voir notre bilan') : this.tg('suivant', 'Dilemme suivant')));
+      esc(dernier ? this.tg('voirBilan', 'Voir notre bilan') : this.tg('suivant', 'Dilemme suivant')));
     suivant.type = 'button';
     suivant.addEventListener('click', function () { self.suivant(); });
     suite.appendChild(suivant);
-    if (this.historique.length >= 3 && this.idx + 1 < this.dilemmes.length) {
+    if (this.historique.length >= 3 && !dernier) {
       var arret = el('button', 'dil-arret', esc(this.tg('arreter', 'Arrêter et voir notre bilan')));
       arret.type = 'button';
       arret.addEventListener('click', function () { self.phase = 'fin'; self.render(); });
@@ -6128,11 +6120,25 @@ var QuizEngine = (function() {
     smoothScroll(this.container, 'start');
   };
 
+  // Le bilan porte sur tous les votes enregistres par ce navigateur, pas sur
+  // la seule session en cours : quelqu'un qui revient finir les derniers
+  // dilemmes verrait sinon « 1 OK sur 1 », et n'aurait jamais les
+  // felicitations puisqu'il n'en aurait tranche qu'un aujourd'hui.
+  DilemmeGame.prototype.bilan = function () {
+    var self = this, n = 0, oks = 0;
+    this.dilemmes.forEach(function (d) {
+      var v = self.dejaVotes[d.id];
+      if (!v) return;
+      n++;
+      if (v === DIL_OK) oks++;
+    });
+    return { n: n, oks: oks, pct: n ? Math.round((oks / n) * 100) : 0 };
+  };
+
   DilemmeGame.prototype.renderFin = function () {
     var self = this;
-    var n = this.historique.length;
-    var oks = this.historique.filter(function (h) { return h.choix === DIL_OK; }).length;
-    var pct = n ? Math.round((oks / n) * 100) : 0;
+    var b = this.bilan();
+    var n = b.n, oks = b.oks, pct = b.pct;
     var palier = pct >= 75 ? 4 : pct >= 50 ? 3 : pct >= 25 ? 2 : 1;
 
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
@@ -6145,6 +6151,26 @@ var QuizEngine = (function() {
       esc(this.tg('bilanDetail', '{{ok}} OK sur {{n}} dilemmes tranchés')
         .replace('{{ok}}', oks).replace('{{n}}', n))));
     resultat.appendChild(entete);
+
+    // Etre alle au bout des cent merite d'etre dit, et c'est le seul moment
+    // ou le nombre total a un sens : pendant la partie, personne ne joue pour
+    // atteindre un compteur.
+    var toutFait = n >= this.dilemmes.length;
+    if (toutFait) {
+      var bravo = el('div', 'dil-bravo');
+      bravo.appendChild(el('span', 'dil-bravo-emoji', '🎉'));
+      bravo.appendChild(el('p', 'dil-bravo-titre', esc(this.tg('bravoTitre', 'Bravo, et merci !'))));
+      bravo.appendChild(el('p', 'dil-bravo-texte',
+        esc(this.tg('bravoTexte', 'Vous avez répondu à tous les dilemmes. Vos votes comptent maintenant dans les pourcentages que verront les prochains couples.'))));
+      var urlWyr = getRelatedQuizUrl('quizTuPreferes', this.lang);
+      if (urlWyr && urlWyr !== '/') {
+        var lien = el('a', 'btn btn-outline dil-bravo-suite', esc(this.tg('bravoSuite', 'Essayez le tu préfères')));
+        lien.href = urlWyr;
+        bravo.appendChild(lien);
+      }
+      resultat.appendChild(bravo);
+    }
+
     resultat.appendChild(el('h3', 'qr-title', esc(this.tg('palier' + palier + 'Titre', ''))));
     resultat.appendChild(el('p', 'qr-desc', esc(this.tg('palier' + palier + 'Texte', ''))));
 
