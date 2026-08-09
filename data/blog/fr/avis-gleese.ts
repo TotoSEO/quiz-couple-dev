@@ -15,12 +15,7 @@ const article: BlogArticleData = {
 
 <p>Et puis j'ai créé un profil. Et là, <strong>il s'est passé un truc que je n'avais pas anticipé</strong> : il ne s'est rien passé. Pas de déferlante, pas de harcèlement, pas de bots. Juste une interface propre, quelques messages, et surtout un fonctionnement qui, visiblement, a été pensé par des gens qui savent exactement ce qui ne va pas ailleurs.</p>
 
-<p>Alors voilà mon avis sur Gleese, après l'avoir vraiment utilisé. Ce que j'ai aimé, ce qui m'a agacée, et surtout <strong>à qui je le conseille et à qui je ne le conseille pas</strong>. Parce que ce n'est clairement pas fait pour tout le monde.</p>
-
-<aside class="blog-tip-box">
-<p class="blog-tip-box-title">🔍 Transparence</p>
-<p>Cet article contient des liens partenaires. Si vous vous inscrivez via l'un d'eux, on touche une commission, sans que ça vous coûte un centime de plus. Ça ne change rien à ce qu'on écrit : les critiques plus bas sont les nôtres, et on les a laissées telles quelles.</p>
-</aside>`,
+<p>Alors voilà mon avis sur Gleese, après l'avoir vraiment utilisé. Ce que j'ai aimé, ce qui m'a agacée, et surtout <strong>à qui je le conseille et à qui je ne le conseille pas</strong>. Parce que ce n'est clairement pas fait pour tout le monde.</p>`,
   quickSummary: [
     `Gleese est un réseau libertin français lancé en octobre 2024, donc récent, et ça se sent dans les deux sens.`,
     `Le filtre anti-harcèlement (un seul message tant que la personne n'a pas répondu) change complètement l'ambiance côté féminin.`,
@@ -81,8 +76,8 @@ const article: BlogArticleData = {
 <p>Pour situer tout de suite : <strong>on met 9,5/10</strong>, et ce n'est pas une note de complaisance. C'est la note d'une plateforme qui fait presque tout bien sur le plan de l'expérience, et à qui il manque surtout du monde. Le détail du raisonnement est plus bas.</p>`,
     },
     {
-      id: 'gleese-c-est-quoi-exactement',
-      title: `Gleese, c'est quoi exactement ?`,
+      id: 'qu-est-ce-que-gleese',
+      title: `Qu'est-ce que Gleese ?`,
       content: `<p><strong>Gleese est un réseau social libertin français, lancé en octobre 2024.</strong> Il s'adresse aux couples et aux célibataires majeurs qui veulent explorer l'échangisme, le candaulisme, les plans à trois, ou simplement discuter de ces sujets sans se faire juger.</p>
 
 <p>La différence avec un Tinder ou un Bumble, ce n'est pas juste le thème. C'est la <strong>structure même du produit</strong>. Là où les applis de rencontre classiques sont construites autour du swipe (une photo, un jugement d'une demi-seconde, on passe), Gleese ressemble beaucoup plus à un réseau social : il y a un fil, des stories, des publications, des discussions de groupe. On n'est pas dans le catalogue, on est dans la communauté.</p>
@@ -105,7 +100,12 @@ const article: BlogArticleData = {
 <p>Écrivez votre profil à deux si vous êtes en couple, et mettez vos limites noir sur blanc dès le départ. Ça vous évitera 80 % des conversations qui ne mènent nulle part, et ça vous forcera surtout à avoir la discussion entre vous avant de l'avoir avec quelqu'un d'autre.</p>
 </aside>
 
-<p class="blog-affil-cta"><a href="https://gleese.com/?ae=103" target="_blank" rel="sponsored noopener">Créer un profil gratuitement sur Gleese</a></p>`,
+<div class="blog-cta">
+<p class="blog-cta-titre">Envie de vous faire votre propre idée ?</p>
+<p class="blog-cta-texte">L'inscription prend deux minutes, sans carte bancaire. Vous pouvez déjà voir s'il y a du monde autour de chez vous avant de décider quoi que ce soit.</p>
+<a class="blog-cta-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored noopener">Créer mon profil gratuitement</a>
+<p class="blog-cta-note">Inscription gratuite &middot; Sans carte bancaire &middot; Réservé aux majeurs</p>
+</div>`,
     },
     {
       id: 'les-fonctionnalites-qu-on-a-testees',
@@ -182,16 +182,21 @@ const article: BlogArticleData = {
 
 <p>Mon avis sur le prix : <strong>c'est honnête.</strong> À 7,50 € par mois sur l'année, on est très loin des 35 € mensuels que peut coûter un Tinder au maximum de ses options. Et surtout, ici, vous savez ce que vous achetez. Il n'y a pas de boost à l'unité, pas de super-piment vendu 3 €, pas de mécanique de frustration conçue pour vous faire sortir la carte tous les trois jours. Vous payez, vous avez tout. C'est reposant.</p>
 
-<p class="blog-affil-cta"><a href="https://gleese.com/?ae=103" target="_blank" rel="sponsored noopener">Tester Gleese gratuitement, sans carte bancaire</a></p>`,
+<div class="blog-cta">
+<p class="blog-cta-titre">Testez avant de payer quoi que ce soit</p>
+<p class="blog-cta-texte">La version gratuite suffit pour juger de l'ambiance et du nombre de profils dans votre région. Aucune carte bancaire n'est demandée à l'inscription.</p>
+<a class="blog-cta-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored noopener">Essayer Gleese gratuitement</a>
+<p class="blog-cta-note">Inscription gratuite &middot; Sans carte bancaire &middot; Réservé aux majeurs</p>
+</div>`,
     },
     {
       id: 'ce-qui-nous-a-plu',
       title: `Ce qui nous a plu`,
-      content: `<p><strong>L'ambiance générale.</strong> C'est le point que je retiens le plus. Les échanges sont posés, les gens se présentent, on vous demande ce que vous cherchez avant de vous proposer quoi que ce soit. Sur un site libertin, ce n'est pas la norme, croyez-moi.</p>
+      content: `<p><strong>L'ambiance générale :</strong> C'est le point que je retiens le plus. Les échanges sont posés, les gens se présentent, on vous demande ce que vous cherchez avant de vous proposer quoi que ce soit. Sur un site libertin, ce n'est pas la norme, croyez-moi.</p>
 
-<p><strong>Le fait qu'on puisse y aller doucement.</strong> Entre le fil, les stories, les piments et la limite d'un message, la plateforme est construite pour la progression. Vous n'êtes jamais obligée d'aller plus vite que ce que vous voulez, et surtout personne ne peut vous y pousser techniquement.</p>
+<p><strong>Le fait qu'on puisse y aller doucement :</strong> Entre le fil, les stories, les piments et la limite d'un message, la plateforme est construite pour la progression. Vous n'êtes jamais obligée d'aller plus vite que ce que vous voulez, et surtout personne ne peut vous y pousser techniquement.</p>
 
-<p><strong>Le design.</strong> Ça a l'air superficiel, ça ne l'est pas. Beaucoup de sites libertins ont une esthétique restée bloquée en 2008, avec des bannières clignotantes et une impression permanente d'être au mauvais endroit. Gleese a une interface propre, moderne, qu'on n'a pas honte d'ouvrir. Pour des gens qui font déjà une démarche intimidante, ce détail compte énormément.</p>
+<p><strong>Le design :</strong> Ça a l'air superficiel, ça ne l'est pas. Beaucoup de sites libertins ont une esthétique restée bloquée en 2008, avec des bannières clignotantes et une impression permanente d'être au mauvais endroit. Gleese a une interface propre, moderne, qu'on n'a pas honte d'ouvrir. Pour des gens qui font déjà une démarche intimidante, ce détail compte énormément.</p>
 
 <p><strong>Le rapport qualité-prix</strong>, dont je viens de parler, et l'absence totale de mécanique prédatrice sur le portefeuille.</p>`,
     },
@@ -200,13 +205,13 @@ const article: BlogArticleData = {
       title: `Ce qui nous a moins plu`,
       content: `<p>Il faut bien qu'il y ait des choses, sinon je ne serais pas crédible.</p>
 
-<p><strong>La taille de la communauté, c'est le vrai sujet.</strong> Gleese a moins de deux ans. Dans les grandes villes, ça vit, il y a du monde, des publications, des profils actifs. Dès qu'on s'éloigne, ça se vide. Si vous habitez une ville moyenne ou une zone rurale, <strong>vous allez devoir composer avec peu de profils</strong>, et il n'y a pas de miracle là-dessus. C'est la faiblesse structurelle de toute plateforme récente, et c'est la seule raison pour laquelle je ne mets pas 10.</p>
+<p><strong>La taille de la communauté :</strong> c'est le vrai sujet. Gleese a moins de deux ans. Dans les grandes villes, ça vit, il y a du monde, des publications, des profils actifs. Dès qu'on s'éloigne, ça se vide. Si vous habitez une ville moyenne ou une zone rurale, <strong>vous allez devoir composer avec peu de profils</strong>, et il n'y a pas de miracle là-dessus. C'est la faiblesse structurelle de toute plateforme récente, et c'est la seule raison pour laquelle je ne mets pas 10.</p>
 
-<p><strong>La recherche avec des filtres très précis</strong> vous renverra parfois une page vide, pour la même raison. Élargissez le périmètre, vous n'avez pas le choix pour l'instant.</p>
+<p><strong>La recherche trop fine :</strong> avec des filtres très précis, elle vous renverra parfois une page vide, pour la même raison. Élargissez le périmètre, vous n'avez pas le choix pour l'instant.</p>
 
-<p><strong>Le message unique en gratuit est à double tranchant.</strong> Je défends le principe, il est excellent pour l'ambiance. Mais concrètement, si vous testez en gratuit et que personne ne vous répond, vous êtes bloquée. C'est évidemment volontaire, c'est le levier commercial de la maison, et c'est de bonne guerre. Ça reste une friction.</p>
+<p><strong>Le message unique en gratuit :</strong> il est à double tranchant. Je défends le principe, il est excellent pour l'ambiance. Mais concrètement, si vous testez en gratuit et que personne ne vous répond, vous êtes bloquée. C'est évidemment volontaire, c'est le levier commercial de la maison, et c'est de bonne guerre. Ça reste une friction.</p>
 
-<p><strong>Et un point qui n'engage que moi</strong> : les lives et le côté « réseau social » peuvent donner l'impression d'être sur une plateforme de divertissement plutôt que de rencontre. Si vous venez pour rencontrer vraiment, il faut aller chercher les gens, pas se laisser porter par le fil.</p>`,
+<p><strong>Un point qui n'engage que moi :</strong> les lives et le côté « réseau social » peuvent donner l'impression d'être sur une plateforme de divertissement plutôt que de rencontre. Si vous venez pour rencontrer vraiment, il faut aller chercher les gens, pas se laisser porter par le fil.</p>`,
     },
     {
       id: 'ce-que-disent-les-autres-utilisateurs',
@@ -231,9 +236,26 @@ const article: BlogArticleData = {
     {
       id: 'a-qui-on-recommande-gleese',
       title: `À qui on recommande Gleese (et à qui on le déconseille)`,
-      content: `<p><strong>On le recommande</strong> aux couples qui commencent à parler de libertinage sans avoir encore franchi le pas, parce que le cadre est rassurant et qu'on peut y aller par étapes. Aux femmes, seules ou en couple, qui en ont assez d'être noyées de messages non désirés, parce que le filtre change radicalement la donne. Aux gens qui vivent en agglomération, où la communauté existe déjà. Et à ceux pour qui la confidentialité est une condition non négociable : les albums à durée limitée sont, à ma connaissance, ce qui se fait de mieux sur ce point.</p>
-
-<p><strong>On le déconseille</strong> si vous habitez loin des grandes villes et que vous voulez du volume tout de suite, vous serez déçu. Si vous cherchez une relation amoureuse exclusive, ce n'est simplement pas l'endroit. Et si vous n'avez pas envie de faire l'effort d'écrire un vrai profil, laissez tomber, ici ça ne pardonne pas.</p>
+      content: `<div class="blog-verdict">
+<div class="blog-verdict-col blog-verdict-col--oui">
+<p class="blog-verdict-titre"><span aria-hidden="true">👍</span> On vous le recommande si…</p>
+<ul>
+<li><strong>Vous commencez à en parler à deux</strong> sans avoir encore franchi le pas. Le cadre est rassurant et on avance par étapes.</li>
+<li><strong>Vous êtes une femme</strong>, seule ou en couple, et vous en avez assez des messages non désirés. Le filtre change radicalement la donne.</li>
+<li><strong>Vous vivez en agglomération</strong>, là où la communauté existe déjà vraiment.</li>
+<li><strong>La confidentialité est non négociable</strong> pour vous. Les albums à durée limitée sont ce qui se fait de mieux sur ce point.</li>
+</ul>
+</div>
+<div class="blog-verdict-col blog-verdict-col--non">
+<p class="blog-verdict-titre"><span aria-hidden="true">👎</span> Passez votre chemin si…</p>
+<ul>
+<li><strong>Vous habitez loin des grandes villes</strong> et vous voulez du volume tout de suite. Vous serez déçu, et je préfère vous le dire.</li>
+<li><strong>Vous cherchez une relation exclusive.</strong> Ce n'est simplement pas l'endroit, et ce n'est pas ce que la plateforme prétend être.</li>
+<li><strong>Vous n'avez pas envie d'écrire un vrai profil.</strong> Ici, ça ne pardonne pas.</li>
+<li><strong>Vous voulez des résultats en trois jours.</strong> Ce n'est pas le rythme de cette communauté.</li>
+</ul>
+</div>
+</div>
 
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">💬 Avant de vous lancer à deux</p>
@@ -245,7 +267,11 @@ const article: BlogArticleData = {
     {
       id: 'notre-note-finale',
       title: `Notre note finale`,
-      content: `<p class="blog-note-score"><strong>9,5/10</strong></p>
+      content: `<div class="blog-note-score">
+<strong>9,5<small>/10</small></strong>
+<span class="blog-note-etoiles" aria-hidden="true">★★★★★</span>
+<span class="blog-note-verdict">Une des meilleures plateformes libertines du moment, à qui il ne manque que du monde</span>
+</div>
 
 <p>Gleese fait quelque chose que très peu de plateformes font : <strong>elle a été pensée en partant des problèmes réels des utilisateurs</strong>, et pas de ce qui rapporte le plus vite. Le message unique, la modération avant publication, les albums qui expirent, l'absence de mécanique de frustration payante. Chacune de ces décisions coûte de l'argent à court terme et construit de la confiance à long terme.</p>
 
@@ -253,7 +279,14 @@ const article: BlogArticleData = {
 
 <p>En attendant, <strong>c'est la plateforme que je conseille en premier</strong> à un couple qui veut découvrir le libertinage sans se faire brutaliser dès la première connexion. Et ça, ça vaut largement le déplacement.</p>
 
-<p class="blog-affil-cta"><a href="https://gleese.com/?ae=103" target="_blank" rel="sponsored noopener">Découvrir Gleese gratuitement</a></p>`,
+<div class="blog-cta">
+<p class="blog-cta-titre">Notre recommandation, en un clic</p>
+<p class="blog-cta-texte">Si le libertinage vous intrigue à deux et que vous cherchez un endroit où avancer sans pression, c'est par là que je commencerais.</p>
+<a class="blog-cta-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored noopener">Découvrir Gleese</a>
+<p class="blog-cta-note">Inscription gratuite &middot; Sans carte bancaire &middot; Réservé aux majeurs</p>
+</div>
+
+<p class="blog-affil-mention">Nous pouvons percevoir des commissions d'affiliation avec Gleese.</p>`,
     },
   ],
 };

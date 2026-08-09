@@ -1273,20 +1273,119 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .blog-quick-summary ul { list-style: disc; list-style-position: inside; font-size: 0.875rem; }
 
 /* Blog tip box */
-/* Appel à l'action partenaire dans un article. Volontairement identifiable
-   comme un bouton commercial : le lecteur doit voir qu'il sort du site. */
-.blog-affil-cta { margin: 2rem 0; text-align: center; }
-.blog-affil-cta a {
-  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
-  padding: .95rem 2rem; border-radius: 9999px;
-  background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--secondary)));
-  color: #fff !important; font-weight: 700; text-decoration: none !important;
-  box-shadow: 0 14px 32px -16px hsl(var(--primary) / .8);
-  transition: transform .18s ease, box-shadow .18s ease;
+/* ── Bloc d'appel à l'action partenaire ────────────────────
+   Un lien souligné se perd dans le corps du texte. Le bloc s'arrête
+   franchement sur la page, annonce ce qu'on propose, et assume qu'il
+   envoie vers un partenaire. */
+.blog-cta {
+  margin: 2.5rem 0; padding: 1.75rem 1.5rem; border-radius: 1.5rem; text-align: center;
+  display: grid; gap: .55rem; justify-items: center;
+  border: 2px solid hsl(var(--primary) / .3);
+  background:
+    radial-gradient(130% 100% at 50% 0%, hsl(var(--primary) / .14), transparent 65%),
+    hsl(var(--card));
+  box-shadow: 0 24px 50px -34px hsl(var(--primary) / .85);
 }
-.blog-affil-cta a::after { content: '↗'; font-weight: 400; opacity: .85; }
-.blog-affil-cta a:hover { transform: translateY(-2px); box-shadow: 0 18px 38px -16px hsl(var(--primary) / .9); }
-@media (prefers-reduced-motion: reduce) { .blog-affil-cta a:hover { transform: none; } }
+.blog-cta-titre {
+  font-family: var(--font-display); font-size: 1.2rem; font-weight: 800;
+  line-height: 1.25; margin: 0; color: hsl(var(--foreground)); text-wrap: balance;
+}
+.blog-cta-texte {
+  margin: 0; max-width: 30rem; font-size: .93rem; line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+}
+.blog-cta a.blog-cta-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+  margin-top: .5rem; padding: 1rem 2.25rem; border-radius: 9999px;
+  background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: #fff !important; font-weight: 800; font-size: 1.02rem;
+  text-decoration: none !important; border: 0;
+  box-shadow: 0 16px 34px -14px hsl(var(--primary) / .9);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.blog-cta a.blog-cta-btn::after { content: '→'; font-weight: 400; transition: transform .18s ease; }
+.blog-cta a.blog-cta-btn:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 22px 42px -14px hsl(var(--primary) / 1); }
+.blog-cta a.blog-cta-btn:hover::after { transform: translateX(4px); }
+.blog-cta-note {
+  margin: .35rem 0 0; font-size: .74rem; letter-spacing: .02em;
+  color: hsl(var(--muted-foreground) / .85);
+}
+@media (max-width: 480px) {
+  .blog-cta { padding: 1.5rem 1.1rem; }
+  .blog-cta a.blog-cta-btn { width: 100%; padding-inline: 1rem; font-size: .95rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .blog-cta a.blog-cta-btn:hover { transform: none; }
+  .blog-cta a.blog-cta-btn:hover::after { transform: none; }
+}
+
+/* Mention de partenariat, en pied d'article. Discrète mais lisible : elle
+   n'a pas à interrompre la lecture, seulement à être là.
+   Le sélecteur est qualifié parce que .blog-article p impose 1,08rem à tous
+   les paragraphes de l'article et gagnerait sur une classe seule. */
+.blog-article p.blog-affil-mention,
+.blog-affil-mention {
+  margin: 2.5rem 0 0; padding-top: 1rem;
+  border-top: 1px solid hsl(var(--border));
+  font-size: .78rem; line-height: 1.5; text-align: center;
+  color: hsl(var(--muted-foreground) / .85);
+}
+
+/* ── Verdict en deux colonnes : pour qui, pas pour qui ───── */
+.blog-verdict {
+  display: grid; gap: 1rem; margin: 1.75rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.blog-verdict-col {
+  padding: 1.35rem 1.4rem; border-radius: 1.25rem;
+  border: 2px solid hsl(var(--verdict) / .3);
+  background: hsl(var(--verdict) / .06);
+}
+.blog-verdict-col--oui { --verdict: 152 55% 42%; }
+.blog-verdict-col--non { --verdict: 6 70% 52%; }
+.blog-verdict-titre {
+  display: flex; align-items: center; gap: .5rem; margin: 0 0 .85rem;
+  font-family: var(--font-display); font-size: 1.02rem; font-weight: 800;
+  color: hsl(var(--verdict));
+}
+.dark .blog-verdict-col--oui { --verdict: 152 55% 62%; }
+.dark .blog-verdict-col--non { --verdict: 6 78% 68%; }
+.blog-verdict-col ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .55rem; }
+.blog-verdict-col li { font-size: .93rem; line-height: 1.55; }
+.blog-verdict-col li::marker { color: hsl(var(--verdict)); }
+
+/* ── Note finale d'un article d'avis ──────────────────────
+   La classe existait mais n'avait aucun style : le verdict d'un test
+   arrivait en gras dans un paragraphe, comme n'importe quelle phrase. */
+.blog-note-score {
+  display: grid; justify-items: center; gap: .1rem;
+  margin: 2rem auto; padding: 1.6rem 2.5rem; max-width: 22rem;
+  border-radius: 1.75rem; text-align: center;
+  border: 2px solid hsl(var(--primary) / .32);
+  background:
+    radial-gradient(130% 100% at 50% 0%, hsl(var(--primary) / .16), transparent 68%),
+    hsl(var(--card));
+  box-shadow: 0 24px 52px -32px hsl(var(--primary) / .9);
+}
+.blog-note-score::before {
+  content: 'Verdict';
+  font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+.blog-note-score strong {
+  font-family: var(--font-display); font-weight: 800; line-height: 1;
+  font-size: clamp(2.8rem, 9vw, 3.75rem);
+  background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--secondary)));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+.blog-note-score strong small { font-size: .38em; font-weight: 700; }
+.blog-note-etoiles { font-size: 1.15rem; letter-spacing: .18em; color: #f5b301; margin-top: .3rem; }
+.blog-note-verdict {
+  margin-top: .5rem; font-size: .88rem; line-height: 1.45; text-wrap: balance;
+  color: hsl(var(--muted-foreground));
+}
+.blog-note-score br { display: none; }
 
 .blog-tip-box { border-radius: calc(var(--radius) + 8px); border: 1px solid hsl(var(--secondary) / 0.3); background-color: hsl(var(--secondary) / 0.05); padding: 1.25rem; margin: 1.5rem 0; }
 .blog-tip-box-title { font-size: 0.875rem; font-weight: 700; color: hsl(var(--secondary)); margin-bottom: 0.5rem; }
