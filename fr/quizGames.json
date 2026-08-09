@@ -513,7 +513,7 @@
     "ok": "OK",
     "pasok": "PAS OK",
     "passer": "Passer ce dilemme",
-    "votreReponse": "Votre réponse",
+    "votreReponse": "Votre réponse : {{r}}",
     "voix": "voix",
     "surTotal": "{{n}} couples ont tranché ce dilemme",
     "suivant": "Dilemme suivant",

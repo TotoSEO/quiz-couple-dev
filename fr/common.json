@@ -46,10 +46,11 @@
     "jeuxCouple": "Jeux de couple",
     "jeuGages": "Roue des gages",
     "jeuPlateau": "Jeu de plateau",
-    "jeuxCoupleDesc": "Nos 3 jeux à jouer à deux",
+    "jeuxCoupleDesc": "Tous nos jeux à jouer à deux",
     "jeuActionVerite": "Action ou vérité",
     "jeuActionVeriteHot": "Action ou vérité coquin",
-    "jeuQuiDeNous": "Qui de nous deux"
+    "jeuQuiDeNous": "Qui de nous deux",
+    "jeuDilemmes": "Dilemmes de couple"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",

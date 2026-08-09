@@ -237,5 +237,11 @@
     "shortTitle": "Wer von uns beiden",
     "metaDescription": "Das Spiel, bei dem jeder heimlich abstimmt und erst danach die Antwort des anderen sieht. 40 Fragen, ein Harmonie-Wert und viel Diskussionsstoff. Kostenlos, ohne Anmeldung.",
     "description": "Jeder stimmt heimlich ab, beide Antworten werden gleichzeitig aufgedeckt: 40 Fragen und ein Harmonie-Wert."
+  },
+  "jeuDilemmes": {
+    "title": "Dilemmata für Paare zum gemeinsamen Beantworten | 100 Situationen",
+    "shortTitle": "Paar-Dilemmata",
+    "metaDescription": "100 Dilemmata, die ihr zu zweit entscheidet: ein Vorteil, ein ABER, und ihr sagt OK oder auf keinen Fall. Danach seht ihr, wie alle anderen Paare abgestimmt haben. Kostenlos, ohne Anmeldung.",
+    "description": "Ein Vorteil, ein Haken, und ihr entscheidet gemeinsam. Danach seht ihr die Stimmen aller anderen Paare."
   }
 }

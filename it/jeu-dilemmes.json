@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "badge": "Gioco di coppia",
+    "title": "100 dilemmi di coppia da risolvere insieme + quante persone hanno votato!",
+    "titleHighlight": "dilemmi di coppia",
+    "description": "Un vantaggio che fa gola, un MA che brucia. Rispondete OK o neanche per sogno in due, poi scoprite da che parte pendono tutte le altre coppie."
+  },
+  "jsonLd": {
+    "name": "Dilemmi di coppia"
+  },
+  "section1": {
+    "title": "Un dilemma non è un « preferiresti »",
+    "p1": "La differenza sta in una frase. In un <strong>preferiresti</strong> vi si propongono due opzioni e ne scegliete una: il mare o la montagna, la colazione a letto o dormire fino a tardi. C'è sempre una risposta, e rifiutare non è previsto.",
+    "p2": "Un <strong>dilemma</strong> vi propone una cosa sola: un patto. Vi si offre un vantaggio netto, spesso smisurato, e la contropartita arriva subito dopo. Vincete dieci milioni di euro, ma non mettete più piede in un ristorante. Vi resta una sola decisione da prendere, ed è binaria: firmate, oppure lasciate perdere.",
+    "p3": "È questo che fa parlare. In un preferiresti ognuno dice la sua e si passa oltre. In un dilemma bisogna mettersi d'accordo in due, ed è lì che si complica: uno trova il prezzo ridicolo, l'altro trova che gli si chieda di rinunciare alla propria vita. Raramente si impara tanto su qualcuno come guardandolo rifiutare dieci milioni.",
+    "p4": "Le cento situazioni escono in un ordine diverso a ogni partita. Potete deciderne tre prima di cena o farle tutte di fila, nessuno vi cronometra."
+  },
+  "section2": {
+    "title": "Come si gioca",
+    "intro": "Un telefono, due persone, nessuna registrazione. La partita comincia appena premete il pulsante.",
+    "etape1Titre": "Leggete la situazione ad alta voce",
+    "etape1Texte": "Prima il vantaggio, poi il MA, poi la contropartita. Lasciate il silenzio dopo la contropartita: è lì che parte la discussione vera.",
+    "etape2Titre": "Decidete insieme, non ognuno per conto suo",
+    "etape2Texte": "Il gioco aspetta una risposta di coppia. Se non siete d'accordo, discutetene: è tutto il senso della cosa. Il pulsante non scappa.",
+    "etape3Titre": "Rispondete OK o neanche per sogno",
+    "etape3Texte": "OK, accettate il patto così com'è scritto. Neanche per sogno, la contropartita costa troppo e lasciate il vantaggio a qualcun altro.",
+    "etape4Titre": "Scoprite lo schieramento maggioritario",
+    "etape4Texte": "Il vostro voto si somma a quello di tutte le altre coppie, e la barra vi mostra subito i due schieramenti, in numero di voti e in percentuale.",
+    "apres": "Alla fine ottenete il vostro bilancio: la percentuale di patti che avete accettato. Certe coppie firmano quasi tutto, altre non cedono su niente. Nessuno dei due profili ha ragione, ma entrambi dicono qualcosa."
+  },
+  "section3": {
+    "title": "Cosa c'è nei 100 dilemmi",
+    "intro": "Le situazioni cambiano terreno di continuo, e le due metà di un dilemma non hanno sempre a che fare l'una con l'altra. È voluto: una contropartita che arriva dal nulla è molto più difficile da valutare di una contropartita logica.",
+    "headerTheme": "Terreno",
+    "headerExemple": "Un esempio",
+    "apres": "Nessuna situazione tocca la malattia, il lutto o il tradimento. È un gioco da serata, non una prova di resistenza: vogliamo farvi discutere, non rovinarvi la fine della cena."
+  },
+  "familles": {
+    "argentTitre": "Soldi e comodità",
+    "argentExemple": "Non pagate mai più né affitto né mutuo, MA casa vostra misura venticinque metri quadrati, per sempre.",
+    "voyageTitre": "Viaggi",
+    "voyageExemple": "Fate il giro del mondo per un anno, tutto pagato, MA non potete scattare nemmeno una foto, nemmeno un video, niente.",
+    "familleTitre": "Famiglia e suoceri",
+    "familleExemple": "I vostri suoceri sono i migliori del mondo e vi adorano, MA dovete pagare il pranzo ogni volta che li vedete.",
+    "quotidienTitre": "Vita di tutti i giorni",
+    "quotidienExemple": "Non lavate più i piatti per il resto della vostra vita, MA dovete cucinare tutti i pasti, tutti i giorni, senza eccezioni.",
+    "amourTitre": "Amore e coppia",
+    "amourExemple": "Non litigate mai più, MA non potete nemmeno più fare pace dopo un litigio."
+  },
+  "section4": {
+    "title": "I voti delle altre coppie",
+    "p1": "Ogni dilemma mostra il risultato reale di tutti i voti ricevuti, aggiornato in diretta: il numero di voti di ciascun lato, la percentuale e una barra tagliata in due che rende il rapporto di forze evidente a colpo d'occhio. Il vostro schieramento è incorniciato, così vedete subito se state con la maggioranza o contro.",
+    "p2": "Un voto per dilemma e per famiglia. Ricaricare la pagina non permette di votare due volte: il gioco ricorda quello che avete già deciso e vi rimostra la vostra risposta invece di accettarne una nuova. È questo che tiene oneste le percentuali, ed è anche il motivo per cui vale la pena guardarle.",
+    "p3": "Il contatore in cima alla pagina non indica il numero di partite giocate ma il <strong>numero totale di voti</strong> depositati su tutti i dilemmi. È la misura che ha senso qui: una partita può valere tre voti come cento."
+  },
+  "section5": {
+    "title": "Cosa giocare dopo i dilemmi",
+    "p1": "Se i dilemmi vi hanno fatto venire voglia di continuare a parlare, il resto dei giochi di coppia prende il testimone: alcuni fanno indovinare, altri votare, altri semplicemente ridere.",
+    "p2": "È tutto gratis, senza registrazione, e si gioca su un solo telefono.",
+    "cta": "Vedi tutti i giochi di coppia"
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "q1": "Qual è la differenza con il gioco « preferiresti »?",
+    "a1": "Un preferiresti vi fa scegliere tra due opzioni: A o B. Un dilemma ne propone una sola, con una contropartita attaccata, e voi decidete se accettarla o rifiutarla. Sono due giochi diversi, con discussioni molto diverse.",
+    "q2": "Quanti dilemmi contiene il gioco?",
+    "a2": "Cento, estratti in un ordine diverso a ogni partita. Non dovete farli tutti: potete fermarvi quando volete e vedere il vostro bilancio.",
+    "q3": "Bisogna essere in due per giocare?",
+    "a3": "Il gioco è scritto per una coppia, su un solo telefono, con una risposta comune. Nulla vi impedisce di giocare da soli, ma perderete la parte più interessante: la trattativa.",
+    "q4": "Le percentuali mostrate sono reali?",
+    "a4": "Sì. Sono i voti delle persone che hanno giocato prima di voi, contati in diretta. Niente è simulato e nessuna cifra è arrotondata per eccesso.",
+    "q5": "Si può votare più volte lo stesso dilemma?",
+    "a5": "No. Viene tenuto un voto per dilemma e per famiglia. Se ricaricate la pagina, il gioco vi rimostra la risposta che avevate dato invece di registrarne una nuova.",
+    "q6": "Bisogna creare un account?",
+    "a6": "Mai. Nessuna registrazione, nessun indirizzo email, nemmeno un nome. Aprite la pagina e giocate.",
+    "q7": "Il gioco è gratuito?",
+    "a7": "Del tutto, e resterà così. Tutti e cento i dilemmi sono accessibili senza limiti e senza pubblicità in mezzo alla partita."
+  }
+}

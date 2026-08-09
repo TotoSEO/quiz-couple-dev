@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "badge": "Couple game",
+    "title": "100 Couple Dilemmas to Solve Together + how many people voted!",
+    "titleHighlight": "Couple Dilemmas",
+    "description": "A prize that tempts you, a BUT that stings. You answer OK or NOT OK as a couple, then you find out which way every other couple leaned."
+  },
+  "jsonLd": {
+    "name": "Couple dilemmas"
+  },
+  "section1": {
+    "title": "A dilemma is not a would-you-rather",
+    "p1": "The difference fits in one sentence. A <strong>would-you-rather</strong> hands you two options and you pick one: the beach or the mountains, breakfast in bed or a lie-in. There is always an answer, and refusing is not on the table.",
+    "p2": "A <strong>dilemma</strong> offers you one single thing: a deal. You are handed a prize, often an absurd one, and the catch comes right behind it. You win ten million, but you never set foot in a restaurant again. There is only one decision left to make, and it is binary: you sign, or you walk away.",
+    "p3": "That is what makes the game talkative. In a would-you-rather, each of you states a preference and you move on. In a dilemma, the two of you have to agree, and that is where it gets complicated: one of you thinks the price is nothing, the other thinks they are being asked to give up their life. You rarely learn as much about someone as when you watch them turn down ten million.",
+    "p4": "The hundred situations come up in a different order every time you play. You can settle three before dinner or run through all of them in one sitting, nobody is timing you."
+  },
+  "section2": {
+    "title": "How to play",
+    "intro": "One phone, two people, no sign-up. The game starts the moment you press the button.",
+    "etape1Titre": "Read the situation out loud",
+    "etape1Texte": "The prize first, then the BUT, then the catch. Let the silence sit after the catch, that is where the real discussion starts.",
+    "etape2Titre": "Decide together, not separately",
+    "etape2Texte": "The game expects one answer from the couple. If you disagree, argue it out: that is the whole point. The button is not going anywhere.",
+    "etape3Titre": "Answer OK or NOT OK",
+    "etape3Texte": "OK, you accept the deal exactly as written. NOT OK, the catch costs too much and you leave the prize to someone else.",
+    "etape4Titre": "See which side won",
+    "etape4Texte": "Your vote joins every other couple's, and the bar shows you both camps straight away, in votes and in percentages.",
+    "apres": "At the end you get your verdict: the share of deals you accepted. Some couples sign almost everything, others give up nothing. Neither profile is right, but both say something."
+  },
+  "section3": {
+    "title": "What the 100 dilemmas cover",
+    "intro": "The situations keep changing ground, and the two halves of a dilemma do not always have anything to do with each other. That is deliberate: a catch that comes out of nowhere is far harder to weigh up than a logical one.",
+    "headerTheme": "Ground",
+    "headerExemple": "An example",
+    "apres": "Nothing here touches illness, grief or cheating. This is a party game, not an endurance test: we want to get you talking, not to flatten the end of your evening."
+  },
+  "familles": {
+    "argentTitre": "Money and comfort",
+    "argentExemple": "You never pay rent or a mortgage again, BUT your home is twenty-five square metres, forever.",
+    "voyageTitre": "Travel",
+    "voyageExemple": "You travel the world for a year, all expenses paid, BUT you cannot take a single photo, a single video, nothing.",
+    "familleTitre": "Family and in-laws",
+    "familleExemple": "Both sets of in-laws are the best in the world and adore you, BUT you have to pay for the meal every single time you see them.",
+    "quotidienTitre": "Everyday life",
+    "quotidienExemple": "You never wash up again for the rest of your life, BUT you have to cook every meal, every day, without exception.",
+    "amourTitre": "Love and relationships",
+    "amourExemple": "You never argue again, BUT you can never make up after an argument again either."
+  },
+  "section4": {
+    "title": "What the other couples voted",
+    "p1": "Every dilemma shows the real result of all the votes received, updated live: the number of votes on each side, the percentage, and a bar split in two so you can read the balance of power at a glance. Your own side is outlined, so you can see immediately whether you are with the majority or against it.",
+    "p2": "One vote per dilemma, per household. Reloading the page does not let you vote twice: the game remembers what you already settled and shows you your answer instead of accepting a new one. That is what keeps the percentages honest, and it is also why they are worth looking at.",
+    "p3": "The counter at the top of the page does not show how many games have been played but the <strong>total number of votes</strong> cast across all the dilemmas. That is the measure that means something here: one session can be worth three votes or a hundred."
+  },
+  "section5": {
+    "title": "What to play after the dilemmas",
+    "p1": "If the dilemmas got you talking, the rest of the couple games take over: some make you guess, some make you vote, some just make you laugh.",
+    "p2": "Everything is free, needs no sign-up, and works on a single phone.",
+    "cta": "See all couple games"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "What is the difference with the would-you-rather game?",
+    "a1": "A would-you-rather makes you choose between two options: A or B. A dilemma offers only one, with a catch attached, and you decide whether to accept it or refuse it. They are two different games, with very different conversations.",
+    "q2": "How many dilemmas does the game contain?",
+    "a2": "A hundred, drawn in a different order every time. You do not have to go through them all: you can stop whenever you like and see your verdict.",
+    "q3": "Do you need to be two to play?",
+    "a3": "The game is written for a couple, on a single phone, with one shared answer. Nothing stops you playing alone, but you will lose the most interesting part: the negotiation.",
+    "q4": "Are the percentages shown real?",
+    "a4": "Yes. They are the votes cast by the people who played before you, counted live. Nothing is simulated and no figure is rounded up.",
+    "q5": "Can you vote more than once on the same dilemma?",
+    "a5": "No. One vote is kept per dilemma and per household. If you reload the page, the game shows you the answer you gave instead of recording a new one.",
+    "q6": "Do you need an account?",
+    "a6": "Never. No sign-up, no email address, not even a first name. You open the page and you play.",
+    "q7": "Is the game free?",
+    "a7": "Entirely, and it will stay that way. All hundred dilemmas are available without limits and without adverts in the middle of the game."
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "badge": "Paarspiel",
+    "title": "100 Paar-Dilemmata zum gemeinsamen Lösen + wie viele Leute abgestimmt haben!",
+    "titleHighlight": "Paar-Dilemmata",
+    "description": "Ein Vorteil, der lockt, ein ABER, das wehtut. Ihr antwortet zu zweit mit OK oder auf keinen Fall und seht danach, wohin sich alle anderen Paare geneigt haben."
+  },
+  "jsonLd": {
+    "name": "Paar-Dilemmata"
+  },
+  "section1": {
+    "title": "Ein Dilemma ist kein « Was wäre dir lieber? »",
+    "p1": "Der Unterschied passt in einen Satz. Bei einem <strong>Was wäre dir lieber?</strong> bekommt ihr zwei Optionen und wählt eine davon: Meer oder Berge, Frühstück im Bett oder Ausschlafen. Es gibt immer eine Antwort, und Ablehnen ist nicht vorgesehen.",
+    "p2": "Ein <strong>Dilemma</strong> bietet euch nur eine einzige Sache an: einen Handel. Ihr bekommt einen klaren, oft maßlosen Vorteil, und der Haken kommt gleich hinterher. Ihr gewinnt zehn Millionen, aber ihr betretet nie wieder ein Restaurant. Es bleibt nur eine Entscheidung, und die ist binär: ihr unterschreibt, oder ihr lasst es.",
+    "p3": "Genau das macht das Spiel gesprächig. Bei einem Was wäre dir lieber? nennt jeder seine Vorliebe und weiter geht es. Bei einem Dilemma müsst ihr euch zu zweit einigen, und da wird es kompliziert: der eine findet den Preis lächerlich, der andere findet, man verlange von ihm sein halbes Leben. Man lernt selten so viel über jemanden, wie wenn man ihm dabei zusieht, wie er zehn Millionen ausschlägt.",
+    "p4": "Die hundert Situationen kommen in jeder Partie in einer anderen Reihenfolge. Ihr könnt drei vor dem Abendessen entscheiden oder alle am Stück durchgehen, niemand stoppt die Zeit."
+  },
+  "section2": {
+    "title": "So wird gespielt",
+    "intro": "Ein Handy, zwei Personen, keine Anmeldung. Die Partie beginnt, sobald ihr auf den Knopf drückt.",
+    "etape1Titre": "Lest die Situation laut vor",
+    "etape1Texte": "Erst den Vorteil, dann das ABER, dann den Haken. Lasst nach dem Haken die Stille stehen, dort beginnt die eigentliche Diskussion.",
+    "etape2Titre": "Entscheidet gemeinsam, nicht jeder für sich",
+    "etape2Texte": "Das Spiel erwartet eine Antwort vom Paar. Wenn ihr uneins seid, streitet es aus: genau darum geht es. Der Knopf läuft nicht weg.",
+    "etape3Titre": "Antwortet OK oder auf keinen Fall",
+    "etape3Texte": "OK, ihr nehmt den Handel genau so an, wie er dasteht. Auf keinen Fall, der Haken ist zu teuer und ihr überlasst den Vorteil jemand anderem.",
+    "etape4Titre": "Seht, welche Seite gewinnt",
+    "etape4Texte": "Eure Stimme kommt zu der aller anderen Paare, und der Balken zeigt euch sofort beide Lager, in Stimmen und in Prozent.",
+    "apres": "Am Ende bekommt ihr euer Fazit: den Anteil der Handel, die ihr angenommen habt. Manche Paare unterschreiben fast alles, andere geben nichts her. Keines der beiden Profile hat recht, aber beide sagen etwas aus."
+  },
+  "section3": {
+    "title": "Was in den 100 Dilemmata steckt",
+    "intro": "Die Situationen wechseln ständig das Terrain, und die beiden Hälften eines Dilemmas haben nicht immer etwas miteinander zu tun. Das ist Absicht: ein Haken, der aus dem Nichts kommt, ist viel schwerer abzuwägen als ein logischer.",
+    "headerTheme": "Terrain",
+    "headerExemple": "Ein Beispiel",
+    "apres": "Keine Situation berührt Krankheit, Trauer oder Untreue. Das ist ein Abendspiel, kein Belastungstest: wir wollen euch zum Reden bringen, nicht den Abend verderben."
+  },
+  "familles": {
+    "argentTitre": "Geld und Komfort",
+    "argentExemple": "Ihr zahlt nie wieder Miete oder Kredit, ABER eure Wohnung hat fünfundzwanzig Quadratmeter, für immer.",
+    "voyageTitre": "Reisen",
+    "voyageExemple": "Ihr reist ein Jahr lang um die Welt, alles bezahlt, ABER ihr dürft kein einziges Foto machen, kein Video, nichts.",
+    "familleTitre": "Familie und Schwiegereltern",
+    "familleExemple": "Eure beiden Schwiegerfamilien sind die besten der Welt und lieben euch, ABER ihr müsst jedes Mal das Essen bezahlen, wenn ihr sie seht.",
+    "quotidienTitre": "Alltag",
+    "quotidienExemple": "Ihr spült nie wieder in eurem Leben ab, ABER ihr müsst jede Mahlzeit selbst kochen, jeden Tag, ohne Ausnahme.",
+    "amourTitre": "Liebe und Beziehung",
+    "amourExemple": "Ihr streitet euch nie wieder, ABER ihr könnt euch nach einem Streit auch nie wieder versöhnen."
+  },
+  "section4": {
+    "title": "Wie die anderen Paare abgestimmt haben",
+    "p1": "Jedes Dilemma zeigt das echte Ergebnis aller eingegangenen Stimmen, live aktualisiert: die Zahl der Stimmen auf jeder Seite, den Prozentwert und einen zweigeteilten Balken, an dem ihr das Kräfteverhältnis auf einen Blick ablest. Eure eigene Seite ist umrandet, damit ihr sofort seht, ob ihr mit der Mehrheit stimmt oder dagegen.",
+    "p2": "Eine Stimme pro Dilemma und pro Haushalt. Die Seite neu zu laden erlaubt keine zweite Stimme: das Spiel merkt sich, was ihr schon entschieden habt, und zeigt euch eure Antwort, statt eine neue anzunehmen. Das hält die Prozentwerte ehrlich, und deshalb lohnt es sich überhaupt, sie anzusehen.",
+    "p3": "Der Zähler oben auf der Seite zeigt nicht, wie viele Partien gespielt wurden, sondern die <strong>Gesamtzahl der abgegebenen Stimmen</strong> über alle Dilemmata hinweg. Das ist hier die sinnvolle Größe: eine Partie kann drei Stimmen wert sein oder hundert."
+  },
+  "section5": {
+    "title": "Was ihr nach den Dilemmata spielen könnt",
+    "p1": "Wenn die Dilemmata euch Lust auf mehr Gespräche gemacht haben, übernimmt der Rest der Paarspiele: manche lassen euch raten, manche abstimmen, manche einfach nur lachen.",
+    "p2": "Alles ist kostenlos, ohne Anmeldung, und läuft auf einem einzigen Handy.",
+    "cta": "Alle Paarspiele ansehen"
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Was ist der Unterschied zum Spiel « Was wäre dir lieber? »",
+    "a1": "Bei einem Was wäre dir lieber? wählt ihr zwischen zwei Optionen: A oder B. Ein Dilemma bietet nur eine an, mit einem Haken dran, und ihr entscheidet, ob ihr sie annehmt oder ablehnt. Das sind zwei verschiedene Spiele mit sehr verschiedenen Gesprächen.",
+    "q2": "Wie viele Dilemmata enthält das Spiel?",
+    "a2": "Hundert, in jeder Partie in einer anderen Reihenfolge. Ihr müsst nicht alle durchgehen: ihr könnt jederzeit aufhören und euer Fazit ansehen.",
+    "q3": "Muss man zu zweit sein?",
+    "a3": "Das Spiel ist für ein Paar geschrieben, auf einem einzigen Handy, mit einer gemeinsamen Antwort. Nichts hindert euch daran, allein zu spielen, aber dann fehlt der interessanteste Teil: das Verhandeln.",
+    "q4": "Sind die angezeigten Prozentwerte echt?",
+    "a4": "Ja. Es sind die Stimmen der Leute, die vor euch gespielt haben, live gezählt. Nichts ist simuliert und keine Zahl wird aufgerundet.",
+    "q5": "Kann man mehrfach über dasselbe Dilemma abstimmen?",
+    "a5": "Nein. Pro Dilemma und pro Haushalt wird eine Stimme behalten. Wenn ihr die Seite neu ladet, zeigt euch das Spiel eure Antwort, statt eine neue zu speichern.",
+    "q6": "Braucht man ein Konto?",
+    "a6": "Nie. Keine Anmeldung, keine E-Mail-Adresse, nicht einmal ein Vorname. Ihr öffnet die Seite und spielt.",
+    "q7": "Ist das Spiel kostenlos?",
+    "a7": "Vollständig, und das bleibt so. Alle hundert Dilemmata sind ohne Begrenzung zugänglich und ohne Werbung mitten in der Partie."
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "badge": "Juego de pareja",
+    "title": "100 dilemas de pareja para resolver juntos + ¡cuánta gente ha votado!",
+    "titleHighlight": "dilemas de pareja",
+    "description": "Una ventaja que da envidia, un PERO que escuece. Respondéis OK o NI HABLAR en pareja y después descubrís hacia qué lado se inclinan todas las demás."
+  },
+  "jsonLd": {
+    "name": "Dilemas de pareja"
+  },
+  "section1": {
+    "title": "Un dilema no es un « ¿qué preferirías? »",
+    "p1": "La diferencia cabe en una frase. En un <strong>¿qué preferirías?</strong> os plantean dos opciones y elegís una: el mar o la montaña, el desayuno en la cama o dormir hasta tarde. Siempre hay respuesta, y negarse no está previsto.",
+    "p2": "Un <strong>dilema</strong> solo os propone una cosa: un trato. Os ofrecen una ventaja clara, a menudo desmedida, y os anuncian la contrapartida justo después. Ganáis diez millones de euros, pero no volvéis a pisar un restaurante. Solo os queda una decisión que tomar, y es binaria: firmáis o dejáis pasar.",
+    "p3": "Eso es lo que hace hablar. En un ¿qué preferirías?, cada uno da su preferencia y se pasa a lo siguiente. En un dilema hay que poneros de acuerdo los dos, y ahí es donde se complica: uno piensa que el precio es ridículo, el otro piensa que le están pidiendo que renuncie a su vida. Pocas veces se aprende tanto de alguien como viéndolo rechazar diez millones.",
+    "p4": "Las cien situaciones salen en un orden distinto en cada partida. Podéis resolver tres antes de cenar o hacerlas todas de una tirada, nadie os cronometra."
+  },
+  "section2": {
+    "title": "Cómo se juega",
+    "intro": "Un móvil, dos personas, sin registro. La partida empieza en cuanto pulsáis el botón.",
+    "etape1Titre": "Leed la situación en voz alta",
+    "etape1Texte": "Primero la ventaja, luego el PERO, luego la contrapartida. Dejad el silencio después de la contrapartida: ahí es donde arranca la discusión de verdad.",
+    "etape2Titre": "Decidid juntos, no cada uno por su lado",
+    "etape2Texte": "El juego espera una respuesta de pareja. Si no estáis de acuerdo, argumentad: de eso se trata. El botón no se va a ir solo.",
+    "etape3Titre": "Responded OK o NI HABLAR",
+    "etape3Texte": "OK, aceptáis el trato tal y como está escrito. NI HABLAR, la contrapartida es demasiado cara y le dejáis la ventaja a otro.",
+    "etape4Titre": "Descubrid el bando mayoritario",
+    "etape4Texte": "Vuestro voto se suma al de todas las demás parejas y la barra os muestra al instante los dos bandos, en número de votos y en porcentaje.",
+    "apres": "Al final obtenéis vuestro balance: la proporción de tratos que habéis aceptado. Algunas parejas firman casi todo, otras no ceden en nada. Ninguno de los dos perfiles tiene razón, pero los dos dicen algo."
+  },
+  "section3": {
+    "title": "Qué hay en los 100 dilemas",
+    "intro": "Las situaciones cambian de terreno constantemente, y las dos mitades de un dilema no siempre tienen relación entre sí. Es a propósito: una contrapartida que sale de la nada es mucho más difícil de valorar que una contrapartida lógica.",
+    "headerTheme": "Terreno",
+    "headerExemple": "Un ejemplo",
+    "apres": "Ninguna situación toca la enfermedad, el duelo o la infidelidad. Es un juego de sobremesa, no una prueba de resistencia: queremos que habléis, no hundiros el final de la cena."
+  },
+  "familles": {
+    "argentTitre": "Dinero y comodidad",
+    "argentExemple": "No volvéis a pagar alquiler ni hipoteca nunca más, PERO vuestra casa mide veinticinco metros cuadrados, para siempre.",
+    "voyageTitre": "Viajes",
+    "voyageExemple": "Dais la vuelta al mundo durante un año, con todo pagado, PERO no podéis hacer ni una foto, ni un vídeo, nada.",
+    "familleTitre": "Familia y suegros",
+    "familleExemple": "Vuestros suegros son los mejores del mundo y os adoran, PERO tenéis que pagar la comida cada vez que los veis.",
+    "quotidienTitre": "Día a día",
+    "quotidienExemple": "No volvéis a fregar los platos en toda vuestra vida, PERO tenéis que cocinar todas las comidas, todos los días, sin excepción.",
+    "amourTitre": "Amor y pareja",
+    "amourExemple": "No volvéis a discutir nunca más, PERO tampoco podéis volver a reconciliaros después de una discusión."
+  },
+  "section4": {
+    "title": "Los votos de las demás parejas",
+    "p1": "Cada dilema muestra el resultado real de todos los votos recibidos, actualizado en directo: el número de votos de cada lado, el porcentaje y una barra partida en dos que enseña la relación de fuerzas de un vistazo. Vuestro propio bando aparece enmarcado, para que veáis enseguida si estáis con la mayoría o en contra.",
+    "p2": "Un voto por dilema y por hogar. Recargar la página no permite votar dos veces: el juego recuerda lo que ya habéis decidido y os enseña vuestra respuesta en lugar de aceptar una nueva. Eso es lo que mantiene honestos los porcentajes, y también por eso merecen la pena.",
+    "p3": "El contador de la parte superior no indica cuántas partidas se han jugado, sino el <strong>número total de votos</strong> depositados en el conjunto de los dilemas. Es la medida que tiene sentido aquí: una partida puede valer tres votos o cien."
+  },
+  "section5": {
+    "title": "Qué jugar después de los dilemas",
+    "p1": "Si los dilemas os han dado ganas de seguir hablando, el resto de los juegos de pareja toma el relevo: unos hacen adivinar, otros votar, otros simplemente reír.",
+    "p2": "Todo es gratis, sin registro, y se juega en un solo móvil.",
+    "cta": "Ver todos los juegos de pareja"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Qué diferencia hay con el juego « ¿qué preferirías? »?",
+    "a1": "Un ¿qué preferirías? os hace elegir entre dos opciones: A o B. Un dilema solo propone una, con una contrapartida incluida, y decidís si la aceptáis o la rechazáis. Son dos juegos distintos, con conversaciones muy distintas.",
+    "q2": "¿Cuántos dilemas tiene el juego?",
+    "a2": "Cien, en un orden distinto en cada partida. No hace falta hacerlos todos: podéis parar cuando queráis y ver vuestro balance.",
+    "q3": "¿Hay que ser dos para jugar?",
+    "a3": "El juego está escrito para una pareja, en un solo móvil, con una respuesta común. Nada os impide jugar solos, pero perderéis la parte más interesante: la negociación.",
+    "q4": "¿Los porcentajes son reales?",
+    "a4": "Sí. Son los votos de las personas que han jugado antes que vosotros, contados en directo. Nada está simulado y ninguna cifra se redondea al alza.",
+    "q5": "¿Se puede votar varias veces el mismo dilema?",
+    "a5": "No. Se guarda un voto por dilema y por hogar. Si recargáis la página, el juego os enseña la respuesta que disteis en lugar de registrar una nueva.",
+    "q6": "¿Hay que crear una cuenta?",
+    "a6": "Nunca. Sin registro, sin correo electrónico, sin ni siquiera un nombre. Abrís la página y jugáis.",
+    "q7": "¿El juego es gratis?",
+    "a7": "Del todo, y seguirá siéndolo. Los cien dilemas están disponibles sin límite y sin publicidad en mitad de la partida."
+  }
+}

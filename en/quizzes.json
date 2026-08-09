@@ -237,5 +237,11 @@
     "shortTitle": "Which one of us",
     "metaDescription": "The game where you each vote in secret before seeing your partner's answer. 40 questions, a harmony score and plenty of debate. Free, no sign-up.",
     "description": "You each vote in secret, both answers are revealed at once: 40 questions and a harmony score."
+  },
+  "jeuDilemmes": {
+    "title": "Couple Dilemmas to Answer Together | 100 Situations",
+    "shortTitle": "Couple dilemmas",
+    "metaDescription": "100 dilemmas to settle as a couple: a prize, a BUT, and you decide OK or NOT OK. Then see how every other couple voted. Free, no sign-up.",
+    "description": "A prize, a catch, and you decide together. Then you see how every other couple voted."
   }
 }
