@@ -237,5 +237,11 @@
     "shortTitle": "Chi di noi due",
     "metaDescription": "Il gioco in cui ognuno vota in segreto prima di scoprire la risposta dell'altro. 40 domande, un punteggio di sintonia e tanti dibattiti. Gratis, senza registrazione.",
     "description": "Ognuno vota in segreto, le due risposte vengono svelate insieme: 40 domande e un punteggio di sintonia."
+  },
+  "jeuDilemmes": {
+    "title": "Dilemmi di coppia da risolvere insieme | 100 situazioni",
+    "shortTitle": "Dilemmi di coppia",
+    "metaDescription": "100 dilemmi da risolvere in due: un vantaggio, un MA, e decidete OK o neanche per sogno. Poi scoprite come hanno votato tutte le altre coppie. Gratis, senza registrazione.",
+    "description": "Un vantaggio, una contropartita, e decidete insieme. Poi vedete il voto di tutte le altre coppie."
   }
 }

@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "6 juegos • Gratis • Sin registro",
+    "badge": "7 juegos • Gratis • Sin registro",
     "title": "Nuestros juegos para jugar en pareja, listos en un toque",
     "titleHighlight": "para jugar en pareja",
-    "description": "Seis juegos que arrancan en un solo móvil entre los dos, sin cuenta y sin instalar nada."
+    "description": "Siete juegos que arrancan en un solo móvil entre los dos, sin cuenta y sin instalar nada."
   },
   "stats": {
-    "jeux": "6",
+    "jeux": "7",
     "jeuxLabel": "juegos para dos",
     "cartes": "390",
     "cartesLabel": "cartas, prendas y dilemas",
@@ -49,13 +49,18 @@
     "quiDeNousTagline": "Cada uno vota en secreto la misma pregunta y luego las dos respuestas salen a la vez.",
     "quiDeNousJoueurs": "2 jugadores",
     "quiDeNousDuree": "5 min",
-    "quiDeNousContenu": "40 preguntas"
+    "quiDeNousContenu": "40 preguntas",
+    "dilemmesNom": "Dilemas de pareja",
+    "dilemmesTagline": "Una ventaja, un PERO, y decidís los dos",
+    "dilemmesJoueurs": "2 jugadores",
+    "dilemmesDuree": "10 min",
+    "dilemmesContenu": "100 dilemas y el voto de todas las demás parejas"
   },
   "section1": {
     "title": "Lo que un juego en pareja cambia en una noche",
     "p1": "Un <strong class=\"text-foreground\">juego de pareja</strong> no parece gran cosa. Y sin embargo resuelve un problema muy concreto: entre dos siempre se acaba dando vueltas a los mismos temas. El día, el trabajo, qué se cena… Un juego impone un marco, y ese marco da permiso para hacer preguntas que nunca se harían de golpe.",
     "p2": "Por eso también un juego funciona mejor que una película cuando de verdad queréis reencontraros. Delante de una pantalla sois dos personas una al lado de la otra mirando a otro sitio. Alrededor de un juego sois dos personas que se miran. La diferencia se nota a los diez minutos.",
-    "p3": "Los seis juegos de esta página se juegan online, gratis, en un solo móvil. Nada que crear, nada que instalar, nada que preparar."
+    "p3": "Los siete juegos de esta página se juegan online, gratis, en un solo móvil. Nada que crear, nada que instalar, nada que preparar."
   },
   "section2": {
     "title": "Qué juego elegir según el momento",
@@ -91,7 +96,7 @@
   "faq": {
     "title": "Preguntas frecuentes",
     "q1": "¿Estos juegos de pareja son realmente gratis?",
-    "a1": "Sí, los seis, del primero al último. Ni cuenta que crear, ni versión de pago, ni contenido desbloqueado tras pagar. Abrís la página del juego y jugáis.",
+    "a1": "Sí, los siete, del primero al último. Ni cuenta que crear, ni versión de pago, ni contenido desbloqueado tras pagar. Abrís la página del juego y jugáis.",
     "q2": "¿Hay que descargar una aplicación?",
     "a2": "No. Todo se juega directamente en el navegador, en móvil o en ordenador. Es también lo que permite empezar una partida en diez segundos, justo cuando entran las ganas.",
     "q3": "¿Cuál es el mejor juego para hacer en pareja en casa?",

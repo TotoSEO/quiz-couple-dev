@@ -45,7 +45,7 @@
     // Les dilemmes ne comptent pas des parties mais des votes : une partie
     // peut en valoir trois comme cent, et c'est le total des votes qui a un
     // sens sur cette page. Ils ont donc leur propre compteur.
-    if (slug === 'dilemmes') {
+    if (slug === 'jeuDilemmes') {
       fetch(URL + '/rest/v1/rpc/get_dilemme_total', { method: 'POST', headers: HJ, body: '{}' })
         .then(function (r) { return r.json(); })
         .then(function (n) {

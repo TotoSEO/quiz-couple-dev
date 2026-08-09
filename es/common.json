@@ -45,10 +45,11 @@
     "jeuxCouple": "Juegos para parejas",
     "jeuGages": "Ruleta de prendas",
     "jeuPlateau": "Juego de mesa",
-    "jeuxCoupleDesc": "Nuestros 3 juegos para jugar en pareja",
+    "jeuxCoupleDesc": "Todos nuestros juegos para jugar en pareja",
     "jeuActionVerite": "Verdad o reto",
     "jeuActionVeriteHot": "Verdad o reto picante",
-    "jeuQuiDeNous": "Quién de los dos"
+    "jeuQuiDeNous": "Quién de los dos",
+    "jeuDilemmes": "Dilemas de pareja"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

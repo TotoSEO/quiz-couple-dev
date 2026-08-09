@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "6 Spiele • Kostenlos • Ohne Anmeldung",
+    "badge": "7 Spiele • Kostenlos • Ohne Anmeldung",
     "title": "Unsere Spiele für zu zweit, in einem Tipp startklar",
     "titleHighlight": "für zu zweit",
-    "description": "Sechs Spiele, die auf einem einzigen Handy zwischen euch beiden starten, ohne Konto und ohne Installation."
+    "description": "Sieben Spiele, die auf einem einzigen Handy zwischen euch beiden starten, ohne Konto und ohne Installation."
   },
   "stats": {
-    "jeux": "6",
+    "jeux": "7",
     "jeuxLabel": "Spiele zu zweit",
     "cartes": "390",
     "cartesLabel": "Karten, Strafen und Dilemmas",
@@ -49,13 +49,18 @@
     "quiDeNousTagline": "Beide stimmen heimlich über dieselbe Frage ab, dann fallen die zwei Antworten gleichzeitig.",
     "quiDeNousJoueurs": "2 Spieler",
     "quiDeNousDuree": "5 Min.",
-    "quiDeNousContenu": "40 Fragen"
+    "quiDeNousContenu": "40 Fragen",
+    "dilemmesNom": "Paar-Dilemmata",
+    "dilemmesTagline": "Ein Vorteil, ein ABER, und ihr entscheidet zu zweit",
+    "dilemmesJoueurs": "2 Spieler",
+    "dilemmesDuree": "10 Min.",
+    "dilemmesContenu": "100 Dilemmata und die Stimmen aller anderen Paare"
   },
   "section1": {
     "title": "Was ein Spiel zu zweit an einem Abend verändert",
     "p1": "Ein <strong class=\"text-foreground\">Paarspiel</strong> sieht nach nichts aus. Und doch löst es ein sehr konkretes Problem: zu zweit dreht man sich am Ende immer um dieselben Themen. Der Tag, die Arbeit, was es heute Abend gibt… Ein Spiel setzt einen Rahmen, und dieser Rahmen erlaubt Fragen, die man aus dem Nichts heraus nie stellen würde.",
     "p2": "Deshalb funktioniert ein Spiel auch besser als ein Film, wenn ihr euch wirklich wiederfinden wollt. Vor einem Bildschirm seid ihr zwei Menschen nebeneinander, die woanders hinschauen. Um ein Spiel herum seid ihr zwei Menschen, die einander anschauen. Den Unterschied spürt man nach zehn Minuten.",
-    "p3": "Die sechs Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten."
+    "p3": "Die sieben Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten."
   },
   "section2": {
     "title": "Welches Spiel zu welchem Moment passt",
@@ -91,7 +96,7 @@
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Sind diese Paarspiele wirklich kostenlos?",
-    "a1": "Ja, alle sechs, vom ersten bis zum letzten. Kein Konto anzulegen, keine Bezahlversion, keine Inhalte, die erst nach Zahlung freigeschaltet werden. Ihr öffnet die Seite des Spiels und spielt.",
+    "a1": "Ja, alle sieben, vom ersten bis zum letzten. Kein Konto anzulegen, keine Bezahlversion, keine Inhalte, die erst nach Zahlung freigeschaltet werden. Ihr öffnet die Seite des Spiels und spielt.",
     "q2": "Muss man eine App herunterladen?",
     "a2": "Nein. Alles läuft direkt im Browser, auf dem Handy wie am Rechner. Genau deshalb startet eine Partie in zehn Sekunden, genau dann, wenn die Lust kommt.",
     "q3": "Welches Spiel eignet sich zu Hause zu zweit am besten?",

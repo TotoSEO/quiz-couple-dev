@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "6 jeux • Gratuits • Sans inscription",
+    "badge": "7 jeux • Gratuits • Sans inscription",
     "title": "Nos jeux à faire en couple, prêts en un clic",
     "titleHighlight": "à faire en couple",
-    "description": "Six jeux qui se lancent sur un seul téléphone posé entre vous deux, sans compte et sans rien installer."
+    "description": "Sept jeux qui se lancent sur un seul téléphone posé entre vous deux, sans compte et sans rien installer."
   },
   "stats": {
-    "jeux": "6",
+    "jeux": "7",
     "jeuxLabel": "jeux à deux",
     "cartes": "390",
     "cartesLabel": "cartes, gages et dilemmes",
@@ -49,13 +49,18 @@
     "quiDeNousTagline": "Chacun vote en secret sur la même question, puis les deux réponses tombent en même temps.",
     "quiDeNousJoueurs": "2 joueurs",
     "quiDeNousDuree": "5 min",
-    "quiDeNousContenu": "40 questions"
+    "quiDeNousContenu": "40 questions",
+    "dilemmesNom": "Dilemmes de couple",
+    "dilemmesTagline": "Un avantage, un MAIS, et vous tranchez à deux",
+    "dilemmesJoueurs": "2 joueurs",
+    "dilemmesDuree": "10 min",
+    "dilemmesContenu": "100 dilemmes et le vote de tous les autres couples"
   },
   "section1": {
     "title": "Ce qu'un jeu à deux change à une soirée",
     "p1": "Un <strong class=\"text-foreground\">jeu de couple</strong> n'a l'air de rien. Et pourtant il règle un problème très concret : à deux, on finit toujours par tourner autour des mêmes sujets. La journée, le boulot, ce qu'on mange ce soir… Un jeu impose un cadre, et ce cadre donne la permission de poser des questions qu'on ne poserait jamais de but en blanc.",
     "p2": "C'est aussi pour ça qu'un jeu marche mieux qu'un film quand vous voulez vraiment vous retrouver. Devant un écran, vous êtes deux personnes côte à côte qui regardent ailleurs. Autour d'un jeu, vous êtes deux personnes qui se regardent. La différence se sent au bout de dix minutes.",
-    "p3": "Les six jeux de cette page se jouent en ligne, gratuitement, sur un seul téléphone. Rien à créer, rien à installer, rien à préparer."
+    "p3": "Les sept jeux de cette page se jouent en ligne, gratuitement, sur un seul téléphone. Rien à créer, rien à installer, rien à préparer."
   },
   "section2": {
     "title": "Quel jeu choisir selon le moment",
@@ -91,7 +96,7 @@
   "faq": {
     "title": "Questions fréquentes",
     "q1": "Ces jeux de couple sont-ils vraiment gratuits ?",
-    "a1": "Oui, les six, du premier au dernier. Ni compte à créer, ni version payante, ni contenu débloqué après paiement. Vous ouvrez la page du jeu et vous jouez.",
+    "a1": "Oui, les sept, du premier au dernier. Ni compte à créer, ni version payante, ni contenu débloqué après paiement. Vous ouvrez la page du jeu et vous jouez.",
     "q2": "Faut-il télécharger une application ?",
     "a2": "Non. Tout se joue directement dans votre navigateur, sur téléphone comme sur ordinateur. C'est aussi ce qui permet de lancer une partie en dix secondes, pile au moment où l'envie arrive.",
     "q3": "Quel est le meilleur jeu à faire en couple à la maison ?",

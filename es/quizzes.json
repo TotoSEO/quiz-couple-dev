@@ -237,5 +237,11 @@
     "shortTitle": "Quién de los dos",
     "metaDescription": "El juego en el que cada uno vota en secreto antes de ver la respuesta del otro. 40 preguntas, un nivel de sintonía y mucho debate. Gratis y sin registro.",
     "description": "Cada uno vota en secreto y las dos respuestas se revelan a la vez: 40 preguntas y un nivel de sintonía."
+  },
+  "jeuDilemmes": {
+    "title": "Dilemas de pareja para responder juntos | 100 situaciones",
+    "shortTitle": "Dilemas de pareja",
+    "metaDescription": "100 dilemas para resolver en pareja: una ventaja, un PERO, y decidís OK o NI HABLAR. Después descubrís cómo han votado las demás parejas. Gratis y sin registro.",
+    "description": "Una ventaja, una contrapartida, y decidís juntos. Después veis el voto de todas las demás parejas."
   }
 }

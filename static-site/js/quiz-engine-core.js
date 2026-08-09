@@ -733,6 +733,7 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'gage-couple', icon: '🎡', route: 'jeuGages' },
     { type: 'jeu', key: 'plateau-couple', icon: '🎲', route: 'jeuPlateau' },
     { type: 'jeu', key: 'qui-de-nous-deux', icon: '👀', route: 'jeuQuiDeNous' },
+    { type: 'jeu', key: 'dilemmes', icon: '⚖️', route: 'jeuDilemmes' },
   ];
 
   function getRelatedQuizUrl(routeKey, lang) {
@@ -6061,9 +6062,12 @@ var QuizEngine = (function() {
     wrap.appendChild(this.barreProgression());
     wrap.appendChild(this.carte(d));
 
+    // La phrase entiere vient de la traduction : l'espace avant le deux-points
+    // est une regle francaise, l'anglais, l'espagnol, l'allemand et l'italien
+    // ne la suivent pas et recollaient un espace en trop.
     wrap.appendChild(el('p', 'dil-votre-choix',
-      esc(this.tg('votreReponse', 'Votre réponse')) + ' : <strong>' +
-      esc(this.choix === DIL_OK ? this.tg('ok', 'OK') : this.tg('pasok', 'PAS OK')) + '</strong>'));
+      esc(this.tg('votreReponse', 'Votre réponse : {{r}}'))
+        .replace('{{r}}', '<strong>' + esc(this.choix === DIL_OK ? this.tg('ok', 'OK') : this.tg('pasok', 'PAS OK')) + '</strong>')));
 
     // Les deux camps. Une seule barre coupee en deux, chaque cote portant son
     // nombre de voix et son pourcentage : on voit d'un coup d'oeil de quel

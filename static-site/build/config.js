@@ -58,7 +58,7 @@ export const ROUTE_SLUGS = {
   testInfidelite: { fr: 'test-infidelite-couple', en: 'infidelity-test-couple', es: 'test-infidelidad-pareja', de: 'untreue-test-paar', it: 'test-infedelta-coppia' },
   testBebe: { fr: 'test-pret-pour-bebe', en: 'ready-for-a-baby-test', es: 'test-listo-para-un-bebe', de: 'bereit-fuer-ein-baby-test', it: 'test-pronto-per-un-bambino' },
   zamours: { fr: 'quiz-couple-les-zamours' },
-  jeuDilemmes: { fr: 'dilemmes-couple' },
+  jeuDilemmes: { fr: 'dilemmes-couple', en: 'couple-dilemmas-game', es: 'dilemas-de-pareja', de: 'dilemmata-fuer-paare', it: 'dilemmi-di-coppia' },
   quizTentation: { fr: 'quiz-ile-de-la-tentation', en: 'temptation-island-quiz', es: 'quiz-la-isla-de-las-tentaciones', de: 'temptation-island-quiz', it: 'quiz-temptation-island' },
   admin: { fr: 'admin', en: 'admin', es: 'admin', de: 'admin', it: 'admin' },
   activities: { fr: 'activites-autours-de-moi', en: 'couple-activities-near-me', es: 'actividades-en-pareja-cerca', de: 'paar-aktivitaeten-in-der-naehe', it: 'attivita-di-coppia-vicino' },
@@ -111,6 +111,7 @@ export const QUIZ_FEATURED = {
   jeuPlateau:        { file: 'matching-puzzle',            old: null,                  alt: { fr: 'Deux pièces de puzzle emboîtées, comme deux pions sur un plateau', en: 'Two interlocking puzzle pieces, like two pawns on a board', es: 'Dos piezas de puzle encajadas, como dos fichas en un tablero', de: 'Zwei ineinandergreifende Puzzleteile, wie zwei Figuren auf einem Brett', it: 'Due tessere di puzzle incastrate, come due pedine su un tabellone' } },
   jeuQuiDeNous:      { file: 'two-mugs-heart',              old: null,                  alt: { fr: 'Deux tasses face à face formant un cœur, comme deux points de vue qui se rejoignent', en: 'Two mugs facing each other forming a heart, like two points of view meeting', es: 'Dos tazas enfrentadas que forman un corazón, como dos puntos de vista que se encuentran', de: 'Zwei Tassen, die einander gegenüberstehen und ein Herz bilden, wie zwei Sichtweisen, die sich treffen', it: 'Due tazze una di fronte all\'altra che formano un cuore, come due punti di vista che si incontrano' } },
   jeuGages:          { file: 'most-likely-trophy',        old: null,                  alt: { fr: 'Trophée doré et confettis pour une soirée de gages en couple', en: 'Golden trophy and confetti for a couple forfeit night', es: 'Trofeo dorado y confeti para una noche de prendas en pareja', de: 'Goldener Pokal und Konfetti für einen Abend mit Strafen zu zweit', it: 'Trofeo dorato e coriandoli per una serata di penitenze in coppia' } },
+  jeuDilemmes:       { file: 'dilemma-scales-choice',    old: null,                  alt: { fr: 'Une balance en équilibre : un cadeau rose d\'un côté, un poids violet de l\'autre', en: 'A balanced scale: a pink gift on one side, a purple weight on the other', es: 'Una balanza en equilibrio: un regalo rosa a un lado, una pesa morada al otro', de: 'Eine Waage im Gleichgewicht: ein rosa Geschenk auf der einen Seite, ein violettes Gewicht auf der anderen', it: 'Una bilancia in equilibrio: un regalo rosa da un lato, un peso viola dall\'altro' } },
   jeuxCouple:        { file: 'fun-confetti',            old: null,                  alt: { fr: 'Confettis et ballons colorés pour une soirée jeux à deux', en: 'Confetti and colourful balloons for a games night for two', es: 'Confeti y globos de colores para una noche de juegos en pareja', de: 'Konfetti und bunte Luftballons für einen Spieleabend zu zweit', it: 'Coriandoli e palloncini colorati per una serata di giochi in due' } },
   quizTentation:     { file: 'island-bonfire',            old: null,                  alt: { fr: 'Feu de camp sur une plage tropicale la nuit, avec palmiers et pleine lune', en: 'Bonfire on a tropical beach at night, with palm trees and a full moon', es: 'Hoguera en una playa tropical de noche, con palmeras y luna llena', de: 'Lagerfeuer an einem tropischen Strand bei Nacht, mit Palmen und Vollmond', it: 'Falò su una spiaggia tropicale di notte, con palme e luna piena' } },
 };
@@ -159,7 +160,7 @@ export const ROUTE_CONFIG = {
   testInfidelite: { template: 'quiz-infidelite', namespaces: ['quiz-infidelite', 'quizzes', 'quizGames', 'gd', 'common'] },
   testBebe: { template: 'quiz-bebe', namespaces: ['quiz-bebe', 'quizzes', 'quizGames', 'gd', 'common'] },
   zamours: { template: 'quiz-zamours', namespaces: ['quiz-zamours', 'quizzes', 'quizGames', 'gd', 'common'], frOnly: true },
-  jeuDilemmes: { template: 'jeu-dilemmes', namespaces: ['jeu-dilemmes', 'quizzes', 'quizGames', 'gd', 'common'], frOnly: true },
+  jeuDilemmes: { template: 'jeu-dilemmes', namespaces: ['jeu-dilemmes', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizTentation: { template: 'quiz-tentation', namespaces: ['quiz-tentation', 'quizzes', 'quizGames', 'gd', 'common'] },
   admin: { template: 'admin', namespaces: ['common'] },
   activities: { template: 'activities', namespaces: ['activities', 'common'] },
@@ -185,7 +186,7 @@ export const GA_ID = 'G-XZV8V6FEK5';
 // Sans cette liste, les six jeux ne remontaient aucune partie a l'admin.
 const ROUTES_JEUX = [
   'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
-  'jeuPlateau', 'jeuQuiDeNous',
+  'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes',
 ];
 
 export function estPageJouable(routeKey) {
