@@ -19,11 +19,19 @@
   }
 
   // ── Cumulative counter ─────────────────────────────────────────────
-  var counterEl = document.getElementById('home-total-counter');
+  // Le chiffre est affiche a deux endroits (le hero et la preuve sociale du
+  // dernier bloc) : on met a jour toutes les cibles d'un coup plutot que le
+  // seul element porteur de l'id.
+  var counterEls = [].slice.call(document.querySelectorAll('[data-total-counter]'));
+  var counterEl = counterEls[0] || document.getElementById('home-total-counter');
   if (counterEl) {
+    if (!counterEls.length) counterEls = [counterEl];
     var baseline = parseInt(counterEl.dataset.baseline, 10) || 0;
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var setCounter = function (n) { counterEl.textContent = Number(n).toLocaleString(locale); };
+    var setCounter = function (n) {
+      var txt = Number(n).toLocaleString(locale);
+      for (var i = 0; i < counterEls.length; i++) counterEls[i].textContent = txt;
+    };
     var animateTo = function (target) {
       if (reduce || target <= 0) { setCounter(target); return; }
       var start = Math.max(0, Math.round(target * 0.8)), t0 = null, dur = 1400;

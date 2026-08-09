@@ -10,12 +10,9 @@
     "titleHighlight": "quiz per coppie",
     "description": "Scopri il vostro livello di complicità, esplora la vostra compatibilità e divertitevi insieme con i nostri quiz interattivi.",
     "descriptionHighlight": "Risultati istantanei e consigli personalizzati!",
-    "cta": "Inizia il quiz",
-    "ctaSecondary": "Vedi domande",
+    "cta": "Scopri i nostri quiz",
+    "ctaSecondary": "Testa la tua coppia",
     "stats": {
-      "couples": "1000+",
-      "couplesLabel": "coppie testate",
-      "quizzes": "12 quiz",
       "quizzesLabel": "quiz disponibili",
       "testsLabel": "test disponibili",
       "totalLabel": "quiz e test svolti"
@@ -113,8 +110,7 @@
     "description": "Scegliete il vostro quiz preferito e scoprite cosa rende unica la vostra coppia. È gratis, senza registrazione, e ci vogliono solo pochi minuti!",
     "button": "Inizia ora",
     "socialProof": "Già",
-    "socialProofCount": "1000+ coppie",
-    "socialProofEnd": "hanno testato i loro legami 💕"
+    "socialProofEnd": "quiz e test svolti da coppie come voi 💕"
   },
   "latestArticles": {
     "title": "Gli ultimi articoli",
@@ -127,7 +123,7 @@
     "quizzesTitle": "I Nostri Quiz per Coppie",
     "quizzesDesc": "Giochi interattivi e divertenti da fare insieme per rafforzare la vostra complicità",
     "jeuxTitle": "I nostri giochi da fare in due",
-    "jeuxDesc": "Tre giochi che partono su un solo telefono, senza registrazione e senza preparare niente.",
+    "jeuxDesc": "{{n}} giochi che partono su un solo telefono, senza registrazione e senza preparare niente.",
     "jeuxCta": "Vedi tutti i nostri giochi di coppia",
     "cards": {
       "testCouple": "20 domande per valutare la vostra relazione.",
@@ -145,7 +141,10 @@
       "quizMost": "Votate per scoprire chi è il più... tra voi!",
       "testAttachement": "Scopri il tuo stile di attaccamento: sicuro, ansioso o evitante?",
       "testConfiance": "Valuta il livello di fiducia reciproca nella vostra coppia."
-    }
+    },
+    "testsEyebrow": "I test",
+    "quizzesEyebrow": "I quiz",
+    "jeuxEyebrow": "I giochi"
   },
   "customQuizPromo": {
     "badge": "Nuovo",
@@ -156,5 +155,19 @@
     "popularEyebrow": "I preferiti della community",
     "popularSub": "Quiz creati da altre coppie: inizia con un clic.",
     "popularCta": "Gioca"
+  },
+  "marquee": {
+    "item1": "💕 Testate la vostra coppia",
+    "item2": "🔥 Domande piccanti",
+    "item3": "😂 Risate assicurate",
+    "item4": "🎯 Le vostre cose in comune",
+    "item5": "💬 Conversazioni vere",
+    "item6": "🎲 Da giocare in due",
+    "item7": "✨ 100% gratis",
+    "item8": "🚀 Senza registrazione",
+    "item9": "🌙 Serata di coppia",
+    "item10": "🧠 Vi conoscete davvero?",
+    "item11": "👀 Chi di noi due?",
+    "item12": "⚡ Risultati immediati"
   }
 }

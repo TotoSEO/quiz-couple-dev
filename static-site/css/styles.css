@@ -579,47 +579,71 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 .hero-ctas .btn-outline { padding: 1rem 2.5rem; font-size: 1.0625rem; }
 @media (min-width: 480px) { .hero-ctas { flex-direction: row; justify-content: center; } }
 @media (min-width: 768px) { .hero-ctas { justify-content: flex-start; } }
+/* Le contour par défaut est un rose très pâle : posé sur le dégradé du hero,
+   le second bouton se voyait à peine à côté du premier. */
+.hero-ctas .btn-outline {
+  border: 2px solid hsl(var(--primary) / .35);
+  background-color: hsl(var(--card) / .75);
+  color: hsl(var(--primary));
+  font-weight: 600;
+}
+.hero-ctas .btn-outline:hover {
+  border-color: hsl(var(--primary) / .6);
+  background-color: hsl(var(--card));
+  color: hsl(var(--primary));
+}
 
-/* Hero stats cards, glassmorphism */
+/* ── Compteurs du hero ─────────────────────────────────────
+   Trois cartes identiques mettaient sur le même plan un compteur vivant et
+   deux inventaires, chacune avec un gros emoji et un fond quasi invisible.
+   On garde un seul contenant, on sépare les trois chiffres par un filet, et
+   on donne au total joué la taille qui va avec son rôle. */
 .hero-stats {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.875rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0;
+  padding: 1rem .5rem;
+  border-radius: 1.25rem;
+  border: 1px solid hsl(var(--border) / .7);
+  background: hsl(var(--card) / .72);
+  backdrop-filter: blur(18px) saturate(1.3);
+  box-shadow: 0 14px 34px -26px hsl(var(--primary) / .55);
 }
-.hero-stat-card {
-  display: flex; align-items: center; gap: 0.75rem;
-  padding: 1rem 0.875rem;
-  border-radius: var(--radius);
-  background: hsl(var(--card) / 0.5);
-  backdrop-filter: blur(20px) saturate(1.4);
-  border: 1px solid hsl(var(--border) / 0.4);
-  box-shadow:
-    0 1px 2px rgba(0,0,0,0.04),
-    0 4px 16px -4px rgba(0,0,0,0.06),
-    inset 0 1px 0 hsl(0 0% 100% / 0.06);
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+.hero-stat {
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+  gap: .15rem; padding: .25rem .5rem; text-align: center; min-width: 0;
 }
-.hero-stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 8px 32px -8px hsl(var(--primary) / 0.2),
-    0 2px 8px rgba(0,0,0,0.06),
-    inset 0 1px 0 hsl(0 0% 100% / 0.1);
-  border-color: hsl(var(--primary) / 0.25);
+.hero-stat + .hero-stat { border-left: 1px solid hsl(var(--border) / .6); }
+.hero-stat-nb {
+  font-family: var(--font-display);
+  font-size: 1.45rem; font-weight: 800; line-height: 1.05;
+  color: hsl(var(--foreground));
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
-.dark .hero-stat-card {
-  background: hsl(var(--card) / 0.4);
-  border-color: hsl(var(--border) / 0.3);
-  box-shadow:
-    0 1px 2px rgba(0,0,0,0.2),
-    0 4px 16px -4px rgba(0,0,0,0.3),
-    inset 0 1px 0 hsl(0 0% 100% / 0.04);
+.hero-stat--phare .hero-stat-nb {
+  font-size: 1.9rem;
+  background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--secondary)));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-.hero-stat-icon {
-  font-size: 1.75rem; flex-shrink: 0;
-  filter: drop-shadow(0 2px 8px hsl(var(--primary) / 0.3));
+.hero-stat-txt {
+  font-size: .7rem; line-height: 1.25; font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  text-wrap: balance;
 }
-.hero-stat-value { font-size: 1.375rem; font-weight: 800; color: hsl(var(--primary)); display: block; }
-.hero-stat-label { font-size: 0.7rem; color: hsl(var(--muted-foreground)); line-height: 1.3; display: block; }
-@media (max-width: 480px) { .hero-stats { grid-template-columns: 1fr; } .hero-stat-card { justify-content: center; } }
+@media (min-width: 768px) {
+  .hero-stats { justify-items: start; padding: 1.1rem .75rem; }
+  .hero-stat { align-items: flex-start; text-align: left; padding-inline: .9rem; }
+  .hero-stat-nb { font-size: 1.6rem; }
+  .hero-stat--phare .hero-stat-nb { font-size: 2.1rem; }
+  .hero-stat-txt { font-size: .75rem; }
+}
+@media (max-width: 359px) {
+  .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: .9rem; }
+  .hero-stat--phare { grid-column: 1 / -1; }
+  .hero-stat--phare + .hero-stat { border-left: 0; }
+}
 
 /* Hero floating visual, 3D perspective */
 .hero-visual {
@@ -732,6 +756,35 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
   background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 50%);
   pointer-events: none;
 }
+/* Le bloc s'appuyait sur des classes utilitaires (text-white, text-white/80)
+   qui n'existent pas dans cette feuille : le texte restait donc en couleur de
+   corps, presque noir sur un dégradé saturé. */
+.final-cta-titre {
+  position: relative; z-index: 1;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.15rem); font-weight: 800; line-height: 1.2;
+  margin: 0 0 .85rem; color: #fff;
+}
+.final-cta-desc {
+  position: relative; z-index: 1;
+  margin: 0 auto 1.75rem; max-width: 34rem;
+  color: rgba(255, 255, 255, .9); line-height: 1.65;
+}
+/* .btn est déclaré plus bas dans la feuille avec background:transparent ;
+   à spécificité égale il gagnait et le bouton devenait invisible sur le
+   dégradé. On le qualifie par son conteneur pour reprendre la main. */
+.final-cta-card .final-cta-bouton {
+  position: relative; z-index: 1;
+  background: #fff; color: hsl(var(--primary)); font-weight: 700;
+  box-shadow: 0 12px 28px -14px rgba(0, 0, 0, .5);
+}
+.final-cta-card .final-cta-bouton:hover { background: #fff; transform: translateY(-2px); }
+.final-cta-preuve {
+  position: relative; z-index: 1;
+  margin: 1.25rem auto 0; max-width: 30rem;
+  font-size: .9rem; line-height: 1.5; color: rgba(255, 255, 255, .88);
+}
+.final-cta-preuve strong { font-weight: 800; color: #fff; font-variant-numeric: tabular-nums; }
 .final-cta-highlight { color: rgba(255,255,255,0.95); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.4); text-underline-offset: 4px; }
 @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 
@@ -2286,34 +2339,107 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .jalousie-tab { padding: 0.75rem 0.5rem; font-size: 0.8rem; gap: 0.375rem; }
 }
 
-/* ── Quiz section blocks ── */
-.quiz-section-block {
+/* ── Ruban décoratif de la ligne de flottaison ─────────────
+   Deux copies de la même liste défilent d'un demi-tour de piste : quand la
+   première sort par la gauche, la seconde est exactement à sa place et la
+   boucle ne montre aucune couture. */
+.ruban {
   position: relative;
-  border-radius: 1.5rem;
-  padding: 2.5rem 2rem;
+  overflow: hidden;
+  padding: .85rem 0;
+  border-block: 1px solid hsl(var(--border) / .8);
+  background: linear-gradient(90deg, hsl(var(--primary) / .10), hsl(var(--secondary) / .10));
+  user-select: none;
 }
-.quiz-section-tests {
-  background: hsl(var(--background));
-  border: 1px solid hsl(var(--border) / 0.5);
-  box-shadow: 0 2px 24px -8px hsl(var(--primary) / 0.06);
+.ruban::before, .ruban::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 5rem; z-index: 2; pointer-events: none;
 }
-.quiz-section-quizzes {
-  background: hsl(var(--background));
-  border: 1px solid hsl(var(--border) / 0.5);
-  box-shadow: 0 2px 24px -8px hsl(var(--secondary) / 0.06);
+.ruban::before { left: 0; background: linear-gradient(90deg, hsl(var(--background)), transparent); }
+.ruban::after { right: 0; background: linear-gradient(270deg, hsl(var(--background)), transparent); }
+.ruban-piste {
+  display: flex; align-items: center; gap: 1.25rem;
+  width: max-content;
+  animation: rubanDefile 42s linear infinite;
+}
+.ruban-item {
+  font-family: var(--font-display);
+  font-size: .9rem; font-weight: 600; white-space: nowrap;
+  color: hsl(var(--foreground) / .78);
+}
+.ruban-sep { color: hsl(var(--primary) / .55); font-size: .85rem; }
+@keyframes rubanDefile {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ruban-piste { animation: none; }
+  /* Sans défilement, la piste doublée déborderait : on la laisse glisser
+     au doigt plutôt que de la figer sur une moitié invisible. */
+  .ruban { overflow-x: auto; scrollbar-width: none; }
+  .ruban::-webkit-scrollbar { display: none; }
 }
 @media (max-width: 640px) {
-  .quiz-section-block { padding: 1.5rem 0.75rem; border-radius: 1rem; }
+  .ruban { padding: .7rem 0; }
+  .ruban-item { font-size: .8rem; }
+  .ruban::before, .ruban::after { width: 2.5rem; }
 }
 
-/* Section badges */
-.quiz-section-badge {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  padding: 0.375rem 1rem; border-radius: 9999px;
-  font-size: 0.8125rem; font-weight: 600;
+/* ── Quiz section blocks ──────────────────────────────────
+   Le fond du bloc était --background sur une section --muted/20 : en clair,
+   deux crèmes presque identiques, donc aucun encadré visible. Chaque bloc
+   porte maintenant sa propre couleur d'accent, une bordure franche et un
+   liseré haut qui l'annonce. */
+.quiz-section-block {
+  position: relative;
+  border-radius: 1.75rem;
+  padding: 2.75rem 2rem 2.25rem;
+  border: 2px solid hsl(var(--bloc-accent) / .28);
+  background:
+    radial-gradient(130% 90% at 50% 0%, hsl(var(--bloc-accent) / .13), transparent 62%),
+    hsl(var(--card));
+  box-shadow: 0 26px 54px -38px hsl(var(--bloc-accent) / .75);
+  overflow: hidden;
 }
-.quiz-section-badge--tests { background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); }
-.quiz-section-badge--quizzes { background: hsl(var(--secondary) / 0.1); color: hsl(var(--secondary)); }
+.quiz-section-block::before {
+  content: ''; position: absolute; inset: 0 0 auto; height: 5px;
+  background: linear-gradient(90deg, hsl(var(--bloc-accent)), hsl(var(--bloc-accent) / .2));
+}
+.quiz-section-tests { --bloc-accent: 340 65% 60%; }
+.quiz-section-quizzes { --bloc-accent: 270 45% 55%; }
+.quiz-section-jeux { --bloc-accent: 160 48% 40%; }
+@media (max-width: 640px) {
+  .quiz-section-block { padding: 2rem .85rem 1.5rem; border-radius: 1.25rem; }
+}
+
+/* En-tête de bloc : pastille, titre, filet, sous-titre */
+.bloc-entete { text-align: center; margin-bottom: 1.75rem; }
+.bloc-pastille {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .35rem .95rem; margin-bottom: .75rem;
+  border-radius: 9999px;
+  font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  color: hsl(var(--bloc-accent));
+  background: hsl(var(--bloc-accent) / .12);
+  border: 1px solid hsl(var(--bloc-accent) / .28);
+}
+.bloc-titre {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4.5vw, 2.35rem);
+  font-weight: 800; line-height: 1.15; margin: 0;
+  color: hsl(var(--foreground));
+}
+.bloc-trait {
+  display: block; width: 4.5rem; height: 4px; margin: .85rem auto 0;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, hsl(var(--bloc-accent)), hsl(var(--bloc-accent) / .25));
+}
+.bloc-sous-titre {
+  margin: .9rem auto 0; max-width: 34rem;
+  color: hsl(var(--muted-foreground)); line-height: 1.6;
+}
+.bloc-sous-titre:empty { display: none; }
+.dark .quiz-section-block { border-color: hsl(var(--bloc-accent) / .38); }
+.dark .bloc-pastille { color: hsl(var(--bloc-accent) / .95); background: hsl(var(--bloc-accent) / .18); }
 
 /* Divider between tests and quizzes */
 .quiz-section-divider {
@@ -3055,14 +3181,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .hero-stats {
   position: relative;
-}
-.hero-stat-card {
-  position: relative;
-}
-.hero-stat-value {
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* ── Blog Cards Enhancement ────────────────────────── */
@@ -4024,6 +4142,18 @@ h1, h2, h3, h4, h5, h6,
   width: 82%;
   max-width: 340px;
   scroll-snap-align: start;
+}
+/* .homepage-quiz-card portait height:100% : dans une piste flex de hauteur
+   automatique le pourcentage n'a rien à quoi se rapporter, il retombait sur
+   auto et chaque carte prenait la hauteur de son texte. On étire les cartes
+   par le flex, et la description est bornée pour qu'une fiche bavarde
+   n'allonge pas les vingt autres (le texte reste dans le DOM). */
+.quiz-slider__track { align-items: stretch; }
+.quiz-slider__track > .quiz-slide { display: flex; height: auto; }
+.quiz-slider__track > .quiz-slide > .quiz-bubble-card { flex: 1; height: auto; }
+.quiz-slider__track .quiz-bubble-desc {
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 @media (min-width: 640px)  { .quiz-slide { width: 46%; } }
 @media (min-width: 900px)  { .quiz-slide { width: 31%; } }

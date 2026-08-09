@@ -10,12 +10,9 @@
     "titleHighlight": "Paar-Quiz",
     "description": "Entdecke euer Niveau der Verbundenheit, erkunde eure Kompatibilität und habt gemeinsam Spaß mit unseren interaktiven Quiz.",
     "descriptionHighlight": "Sofortige Ergebnisse und personalisierte Ratschläge!",
-    "cta": "Quiz starten",
-    "ctaSecondary": "Fragen ansehen",
+    "cta": "Unsere Quiz entdecken",
+    "ctaSecondary": "Eure Beziehung testen",
     "stats": {
-      "couples": "1000+",
-      "couplesLabel": "getestete Paare",
-      "quizzes": "12 Quiz",
       "quizzesLabel": "Quiz verfügbar",
       "testsLabel": "Tests verfügbar",
       "totalLabel": "Quizze & Tests gemacht"
@@ -113,8 +110,7 @@
     "description": "Wählt euer Lieblings-Quiz und entdeckt, was euer Paar einzigartig macht. Es ist kostenlos, ohne Anmeldung, und dauert nur wenige Minuten!",
     "button": "Jetzt starten",
     "socialProof": "Bereits",
-    "socialProofCount": "1000+ Paare",
-    "socialProofEnd": "haben ihre Verbindung getestet 💕"
+    "socialProofEnd": "Quizze und Tests von Paaren wie euch gemacht 💕"
   },
   "latestArticles": {
     "title": "Die neuesten Artikel",
@@ -127,7 +123,7 @@
     "quizzesTitle": "Unsere Paar-Quiz",
     "quizzesDesc": "Interaktive und lustige Spiele zum gemeinsamen Spielen und Stärken eurer Komplizenschaft",
     "jeuxTitle": "Unsere Spiele für zu zweit",
-    "jeuxDesc": "Drei Spiele, die auf einem einzigen Handy starten, ohne Anmeldung und ohne Vorbereitung.",
+    "jeuxDesc": "{{n}} Spiele, die auf einem einzigen Handy starten, ohne Anmeldung und ohne Vorbereitung.",
     "jeuxCta": "Alle unsere Paarspiele ansehen",
     "cards": {
       "testCouple": "20 Fragen, um eure Beziehung zu bewerten.",
@@ -145,7 +141,10 @@
       "quizMost": "Stimmt ab, wer am meisten... unter euch ist!",
       "testAttachement": "Finde deinen Bindungsstil heraus: sicher, ängstlich oder vermeidend?",
       "testConfiance": "Messt das gegenseitige Vertrauen in eurer Beziehung."
-    }
+    },
+    "testsEyebrow": "Die Tests",
+    "quizzesEyebrow": "Die Quiz",
+    "jeuxEyebrow": "Die Spiele"
   },
   "customQuizPromo": {
     "badge": "Neu",
@@ -156,5 +155,19 @@
     "popularEyebrow": "Community-Favoriten",
     "popularSub": "Quizze von anderen Paaren – leg mit einem Klick los.",
     "popularCta": "Spielen"
+  },
+  "marquee": {
+    "item1": "💕 Testet eure Beziehung",
+    "item2": "🔥 Freche Fragen",
+    "item3": "😂 Lachen garantiert",
+    "item4": "🎯 Eure Gemeinsamkeiten",
+    "item5": "💬 Echte Gespräche",
+    "item6": "🎲 Zu zweit spielen",
+    "item7": "✨ 100% kostenlos",
+    "item8": "🚀 Ohne Anmeldung",
+    "item9": "🌙 Abend zu zweit",
+    "item10": "🧠 Kennt ihr euch wirklich?",
+    "item11": "👀 Wer von uns beiden?",
+    "item12": "⚡ Sofort Ergebnisse"
   }
 }
