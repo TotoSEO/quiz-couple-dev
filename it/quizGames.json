@@ -138,10 +138,9 @@
     "nextQuestionBtn": "Prossima domanda!",
     "toAnswer": "deve rispondere!",
     "itsYourTurnToGuess": "tocca a te indovinare!",
-    "sayAnswerOutLoud": "Dì la tua risposta ad alta voce,",
-    "validates": "conferma!",
-    "found": "ha indovinato!",
-    "wasMistaken": "ha sbagliato!",
+    "roleInstruction": "{{guesser}}, dì la tua risposta ad alta voce, {{target}} conferma!",
+    "guesserFound": "{{name}} ha indovinato!",
+    "guesserMissed": "{{name}} ha sbagliato!",
     "voteInstruction": "Votate tutti insieme! Chi corrisponde meglio a questa descrizione?",
     "nobody": "Nessuno",
     "nextQuestionTransition": "Prossima domanda!",
@@ -158,7 +157,10 @@
     "stronglyAgree": "Completamente d'accordo",
     "discussTogether": "💬 Parlate insieme delle vostre risposte!",
     "question": "Domanda",
-    "skipQuestion": "Salta questa domanda"
+    "skipQuestion": "Salta questa domanda",
+    "roleGuess": "Deve indovinare",
+    "roleValidate": "Conferma",
+    "aboutPerson": "Domanda su"
   },
   "result": {
     "identicalAnswers": "risposte identiche",

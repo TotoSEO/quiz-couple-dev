@@ -246,6 +246,23 @@ var QuizEngine = (function() {
       ' &bull; ⏱ ' + esc(duree || tg('meta.duration', '5 min'));
   }
 
+  // ─── Prenom injecte dans le texte d'une question ──────────
+  // Chaque langue a ete ecrite avec son propre jeton : NAME en anglais et en
+  // allemand, NOMBRE en espagnol, NOME en italien. Le moteur ne remplacait que
+  // NAME, si bien que l'espagnol et l'italien affichaient le mot du jeton en
+  // clair au joueur, sur 160 questions chacun. On les traite tous au meme
+  // endroit pour que le prochain jeton ajoute ne reparte pas dans l'oubli.
+  // Le « s » optionnel est le genitif allemand : dix-huit questions sont
+  // ecrites « NAMEs Lieblingsgericht », et une frontiere de mot apres NAME ne
+  // les attrapait pas. On le capture pour le recoller derriere le prenom.
+  var JETONS_PRENOM = /\{\{name\}\}|\b(?:NAME|NOMBRE|NOME|PRENOM|PRÉNOM)(s)?\b/g;
+  function injecterPrenom(texte, prenom) {
+    if (texte == null) return '';
+    return String(texte).replace(JETONS_PRENOM, function(_, genitif) {
+      return (prenom || '') + (genitif || '');
+    });
+  }
+
   // ─── Choix du format, quand une page en propose deux ──────
   // Certaines pages repondent a deux intentions differentes sous le meme mot.
   // « Quiz genant » par exemple : une partie des visiteurs veut savoir si son
@@ -1837,7 +1854,7 @@ var QuizEngine = (function() {
 
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
     // Replace NAME/{{name}} with target player's name
-    qText = qText.replace(/\bNAME\b/g, target.name).replace(/\{\{name\}\}/g, target.name);
+    qText = injecterPrenom(qText, target.name);
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
 
     var optionsWrap = el('div', 'space-y-2');
@@ -1882,7 +1899,7 @@ var QuizEngine = (function() {
     renderPlayerBadge(wrap, target.name + ', ' + tg('coquin.revealAnswer', 'révèle ta vraie réponse !'));
 
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
-    qText = qText.replace(/\bNAME\b/g, target.name).replace(/\{\{name\}\}/g, target.name);
+    qText = injecterPrenom(qText, target.name);
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-4 text-center', esc(qText)));
     wrap.appendChild(el('p', 'text-sm text-muted-foreground text-center mb-4', tg('coquin.beHonest', 'Soyez honnête, c\'est plus fun !')));
 
@@ -2064,14 +2081,37 @@ var QuizEngine = (function() {
     var wrap = el('div', 'quiz-engine quiz-question-enter');
     renderProgressBar(wrap, this.currentQ, total);
 
-    // Instructions
-    wrap.appendChild(el('div', 'text-center mb-2 text-sm font-medium', esc(guesser.name) + ', ' + tg('question.sayAnswerOutLoud', 'dis ta réponse à voix haute,')));
-    wrap.appendChild(el('div', 'text-center mb-4 text-sm text-muted-foreground', esc(target.name) + ' ' + tg('question.validates', 'valide !')));
+    // Qui fait quoi. Deux lignes de petit texte gris ne suffisaient pas : on
+    // ne savait pas qui devait parler, et la question elle-meme ne disait pas
+    // de qui elle parlait. Les deux roles sont maintenant nommes et separes.
+    var roles = el('div', 'kq-roles');
+    function carteRole(cls, libelle, nom) {
+      var c = el('div', 'kq-role kq-role--' + cls);
+      c.appendChild(el('span', 'kq-role-label', esc(libelle)));
+      c.appendChild(el('span', 'kq-role-nom', esc(nom)));
+      return c;
+    }
+    roles.appendChild(carteRole('devine', tg('question.roleGuess', 'Doit deviner'), guesser.name));
+    roles.appendChild(el('span', 'kq-roles-sep', '→'));
+    roles.appendChild(carteRole('valide', tg('question.roleValidate', 'Valide'), target.name));
+    wrap.appendChild(roles);
+
+    // La consigne est une phrase entiere a jetons plutot que des morceaux
+    // recolles : chaque langue garde sa ponctuation, et l'espagnol peut poser
+    // son « ¡ » devant le sujet au lieu de le recevoir derriere.
+    wrap.appendChild(el('p', 'kq-consigne',
+      tg('question.roleInstruction', '{{guesser}}, dis ta réponse à voix haute, {{target}} valide !')
+        .replace('{{guesser}}', esc(guesser.name))
+        .replace('{{target}}', esc(target.name))));
 
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
-    // Replace NAME/{{name}} placeholder with target player's name
-    qText = qText.replace(/\bNAME\b/g, target.name).replace(/\{\{name\}\}/g, target.name);
-    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
+    // Le prenom de la personne visee est injecte dans le texte : sans lui, une
+    // question comme « quel est son plat prefere » ne dit pas de qui on parle.
+    qText = injecterPrenom(qText, target.name);
+    var carte = el('div', 'kq-question');
+    carte.appendChild(el('span', 'kq-question-sur', esc(tg('question.aboutPerson', 'Question sur') + ' ' + target.name)));
+    carte.appendChild(el('h3', 'kq-question-texte', esc(qText)));
+    wrap.appendChild(carte);
 
     // Show options as reference (read-only display)
     if (q.options && q.options.length > 0) {
@@ -2084,17 +2124,23 @@ var QuizEngine = (function() {
     }
 
     // ✅ / ❌ validation buttons
-    var validationWrap = el('div', 'flex justify-center gap-4 mt-4');
+    // Deux colonnes sur large, deux lignes en dessous de 30rem : avec le prenom
+    // dessus les libelles sont trop longs pour tenir cote a cote sur mobile.
+    var validationWrap = el('div', 'kq-actions');
 
+    // Les boutons disaient « a trouvé ! » sans sujet : on ne savait pas de qui
+    // on parlait au moment de valider. Le prénom est désormais dessus.
     var correctBtn = el('button', 'quiz-validate-btn quiz-validate-correct');
-    correctBtn.innerHTML = ICONS.check + ' <span>' + tg('question.found', 'a trouvé !') + '</span>';
+    correctBtn.innerHTML = ICONS.check + ' <span>' +
+      tg('question.guesserFound', '{{name}} a trouvé !').replace('{{name}}', esc(guesser.name)) + '</span>';
     correctBtn.addEventListener('click', function() {
       self.scores[guesserIdx]++;
       self.advance();
     });
 
     var wrongBtn = el('button', 'quiz-validate-btn quiz-validate-wrong');
-    wrongBtn.innerHTML = ICONS.cross + ' <span>' + tg('question.wasMistaken', 's\'est trompé(e) !') + '</span>';
+    wrongBtn.innerHTML = ICONS.cross + ' <span>' +
+      tg('question.guesserMissed', '{{name}} s\'est trompé(e) !').replace('{{name}}', esc(guesser.name)) + '</span>';
     wrongBtn.addEventListener('click', function() {
       self.advance();
     });
@@ -3707,7 +3753,7 @@ var QuizEngine = (function() {
 
   ZamoursQuiz.prototype.qText = function (q, targetName) {
     var t = tgd(this.prefix + '.q' + q.id, q.text) || q.text;
-    return String(t).replace(/\{\{name\}\}/g, targetName).replace(/\bNAME\b/g, targetName);
+    return injecterPrenom(t, targetName);
   };
   ZamoursQuiz.prototype.optText = function (q, opt) {
     return tgd(this.prefix + '.q' + q.id + opt.id, opt.text) || opt.text;

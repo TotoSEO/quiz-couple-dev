@@ -138,10 +138,9 @@
     "nextQuestionBtn": "Question suivante !",
     "toAnswer": "doit répondre !",
     "itsYourTurnToGuess": "c'est à toi de deviner !",
-    "sayAnswerOutLoud": "Dis ta réponse à voix haute,",
-    "validates": "valide !",
-    "found": "a trouvé !",
-    "wasMistaken": "s'est trompé(e) !",
+    "roleInstruction": "{{guesser}}, dis ta réponse à voix haute, {{target}} valide !",
+    "guesserFound": "{{name}} a trouvé !",
+    "guesserMissed": "{{name}} s'est trompé(e) !",
     "voteInstruction": "Votez tous ensemble ! Qui correspond le mieux à cette description ?",
     "nobody": "Personne",
     "nextQuestionTransition": "Question suivante !",
@@ -158,7 +157,10 @@
     "stronglyAgree": "Tout à fait d'accord",
     "question": "Question",
     "skipQuestion": "Passer cette question",
-    "discussTogether": "💬 Discutez de vos réponses ensemble !"
+    "discussTogether": "💬 Discutez de vos réponses ensemble !",
+    "roleGuess": "Doit deviner",
+    "roleValidate": "Valide",
+    "aboutPerson": "Question sur"
   },
   "result": {
     "identicalAnswers": "réponses identiques",

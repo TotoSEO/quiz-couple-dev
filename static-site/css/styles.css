@@ -1273,6 +1273,82 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .blog-quick-summary ul { list-style: disc; list-style-position: inside; font-size: 0.875rem; }
 
 /* Blog tip box */
+/* ── Quiz « qui connaît le mieux » : les rôles du tour ─────
+   Le jeu se joue à l'oral, sur un seul téléphone. Si on ne voit pas d'un
+   coup d'œil qui doit deviner et qui valide, la partie s'arrête à chaque
+   question pour se le demander. */
+.kq-roles {
+  display: flex; align-items: stretch; justify-content: center; gap: .6rem;
+  margin: 0 auto 0.75rem; max-width: 30rem;
+}
+.kq-role {
+  flex: 1 1 0; min-width: 0; display: grid; gap: .15rem; justify-items: center;
+  padding: .7rem .6rem; border-radius: 1rem; text-align: center;
+  border: 2px solid hsl(var(--border));
+  background: hsl(var(--muted) / .4);
+}
+.kq-role-label {
+  font-size: .64rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+.kq-role-nom {
+  font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+.kq-role--devine {
+  border-color: hsl(var(--primary) / .55);
+  background: hsl(var(--primary) / .1);
+}
+.kq-role--devine .kq-role-label { color: hsl(var(--primary)); }
+.kq-role--devine .kq-role-nom { color: hsl(var(--primary)); font-size: 1.2rem; }
+.kq-roles-sep { align-self: center; color: hsl(var(--muted-foreground) / .7); font-size: 1.1rem; flex: 0 0 auto; }
+.kq-consigne {
+  margin: 0 auto 1.25rem; max-width: 30rem; text-align: center;
+  font-size: .82rem; line-height: 1.45; color: hsl(var(--muted-foreground));
+}
+
+/* La question, avec le rappel de qui elle concerne */
+.kq-question {
+  display: grid; gap: .5rem; justify-items: center; text-align: center;
+  margin: 0 auto 1.5rem; max-width: 34rem; padding: 1.25rem 1.2rem;
+  border-radius: 1.25rem;
+  border: 2px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: 0 16px 36px -30px hsl(var(--primary) / .7);
+}
+.kq-question-sur {
+  font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: hsl(var(--secondary));
+  padding: .2rem .7rem; border-radius: 9999px; background: hsl(var(--secondary) / .12);
+}
+.kq-question-texte {
+  margin: 0; font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(1.15rem, 3.6vw, 1.45rem); line-height: 1.3; text-wrap: balance;
+}
+/* Les deux boutons de validation. Ils portent maintenant le prénom de celui
+   qui devine, donc un libellé bien plus long : côte à côte avec le padding
+   d'origine, « Camille a trouvé ! » se cassait sur quatre lignes. Grille à une
+   colonne sur mobile, deux dès qu'il y a la place. */
+.kq-actions {
+  display: grid; grid-template-columns: 1fr; gap: .6rem;
+  margin: 1.25rem auto 0; max-width: 30rem;
+}
+.kq-actions .quiz-validate-btn {
+  width: 100%; justify-content: center; text-align: center;
+  padding: .85rem 1rem; font-size: .95rem; line-height: 1.25;
+  text-wrap: balance;
+}
+.kq-actions .quiz-validate-btn svg { flex: 0 0 auto; }
+@media (min-width: 30rem) {
+  .kq-actions { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 420px) {
+  .kq-roles { gap: .4rem; }
+  .kq-role { padding: .6rem .4rem; }
+  .kq-role-nom { font-size: .95rem; }
+  .kq-role--devine .kq-role-nom { font-size: 1.05rem; }
+}
+
 /* ── Bloc d'appel à l'action partenaire ────────────────────
    Un lien souligné se perd dans le corps du texte. Le bloc s'arrête
    franchement sur la page, annonce ce qu'on propose, et assume qu'il
