@@ -1,0 +1,169 @@
+<%
+  // Dilemmes de couple : le jeu passe avant l'article, on doit pouvoir voter
+  // sur le premier dilemme sans faire defiler la page.
+  const ns = 'jeu-dilemmes';
+  const pageTitle = t('quizzes:jeuDilemmes.title', 'Dilemmes de couple');
+
+  const familles = ['argent', 'voyage', 'famille', 'quotidien', 'amour'];
+  const faqNums = [1, 2, 3, 4, 5, 6, 7];
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "Game",
+      "name": t(ns + ':jsonLd.name', pageTitle),
+      "description": t('quizzes:jeuDilemmes.metaDescription', ''),
+      "inLanguage": lang,
+      "isAccessibleForFree": true,
+      "gamePlatform": "Web browser",
+      "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 2 }
+    },
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqNums.map(function(i) {
+        return {
+          "@type": "Question", "name": t(ns + ':faq.q' + i, ''),
+          "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':faq.a' + i, '') }
+        };
+      })
+    }
+  ];
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient py-14 md:py-20">
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <% if (getLocalizedUrl('jeuxCouple', lang)) { %>
+          <li><a href="<%= getLocalizedUrl('jeuxCouple', lang) %>"><%= t('quizzes:jeuxCouple.shortTitle', 'Jeux de couple') %></a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <% } %>
+          <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:jeuDilemmes.shortTitle', pageTitle) %></li>
+        </ol>
+      </nav>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.5"/></svg>
+        <%= t(ns + ':hero.badge', '') %>
+      </span>
+      <%
+        const heroTitle = t(ns + ':hero.title', pageTitle);
+        const heroHighlight = t(ns + ':hero.titleHighlight', '');
+      %>
+      <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%= t(ns + ':hero.description', '') %></p>
+    </div>
+  </div>
+</section>
+
+<!-- Le jeu -->
+<section class="py-10 md:py-14">
+  <div class="container mx-auto px-4">
+    <div id="quiz-engine" data-quiz="dilemmes" data-lang="<%= lang %>"><%- include("../partials/quiz-loading", { lang, routeKey }) %></div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- Contenu -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section1.p1', '') %></p>
+        <p><%- t(ns + ':section1.p2', '') %></p>
+        <p><%- t(ns + ':section1.p3', '') %></p>
+        <p><%- t(ns + ':section1.p4', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section2.intro', '') %></p>
+      <div class="space-y-4">
+        <% for (let i = 1; i <= 4; i++) { %>
+        <div class="flex items-start gap-4 p-5 bg-card border border-border rounded-lg">
+          <span class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/15 text-primary font-bold flex-shrink-0"><%= i %></span>
+          <div>
+            <h3 class="font-semibold mb-1"><%= t(ns + ':section2.etape' + i + 'Titre', '') %></h3>
+            <p class="text-muted-foreground"><%- t(ns + ':section2.etape' + i + 'Texte', '') %></p>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <p class="text-muted-foreground leading-relaxed mt-8"><%- t(ns + ':section2.apres', '') %></p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section3.intro', '') %></p>
+      <div class="jeux-table-wrap">
+        <table class="jeux-table">
+          <thead>
+            <tr>
+              <th scope="col"><%= t(ns + ':section3.headerTheme', '') %></th>
+              <th scope="col"><%= t(ns + ':section3.headerExemple', '') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% familles.forEach(function(f) { %>
+            <tr>
+              <th scope="row"><%= t(ns + ':familles.' + f + 'Titre', '') %></th>
+              <td><%= t(ns + ':familles.' + f + 'Exemple', '') %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-muted-foreground leading-relaxed mt-8"><%- t(ns + ':section3.apres', '') %></p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section4.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section4.p1', '') %></p>
+        <p><%- t(ns + ':section4.p2', '') %></p>
+        <p><%- t(ns + ':section4.p3', '') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', '') %></h2>
+      <div class="space-y-4">
+        <% for (const i of faqNums) { %>
+        <details class="bg-card border border-border rounded-lg p-5">
+          <summary class="font-semibold cursor-pointer"><%= t(ns + ':faq.q' + i, '') %></summary>
+          <p class="text-muted-foreground leading-relaxed mt-3"><%- t(ns + ':faq.a' + i, '') %></p>
+        </details>
+        <% } %>
+      </div>
+    </section>
+
+    <section class="mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg p-8 border border-primary/20">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4"><%= t(ns + ':section5.title', '') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section5.p1', '') %></p>
+        <p class="text-foreground font-semibold"><%- t(ns + ':section5.p2', '') %></p>
+      </div>
+      <% if (getLocalizedUrl('jeuxCouple', lang)) { %>
+      <a href="<%= getLocalizedUrl('jeuxCouple', lang) %>" class="btn btn-outline mt-6"><%= t(ns + ':section5.cta', '') %></a>
+      <% } %>
+    </section>
+
+  </div>
+</article>
+
+<div id="route-slugs-data" data-route-slugs="<%- escapeHtml(JSON.stringify(routeSlugs)) %>" hidden></div>
+<script src="/js/quiz-engine-core.js" defer></script>
+<script src="/js/quiz-loader.js" defer></script>

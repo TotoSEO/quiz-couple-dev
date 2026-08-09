@@ -114,6 +114,11 @@
     // ── Qui de nous deux : vote secret de chacun puis revelation commune.
     'qui-de-nous-deux':        { prefix: 'quiDeNous', engine: 'duo-vote', totalQ: 0, pool: 0, textOnly: true },
 
+    // ── Dilemmes : on accepte ou on refuse un marché, et on voit le score
+    // des autres couples. Rien à voir avec « tu préfères », qui fait choisir
+    // entre deux options : ici il n'y a qu'une proposition sur la table. ──
+    'dilemmes':                { prefix: 'dilemmes', engine: 'dilemme', totalQ: 0, pool: 0, textOnly: true },
+
     // ── Suis-je amoureux (solo, ascendant : plus de signes = plus de points) ──
     'suis-je-amoureux': { prefix: 'suisjeamoureux', engine: 'solo', totalQ: 20, pool: 20, quizType: 'suisjeamoureux', ascending: true },
 
@@ -264,6 +269,29 @@
       }
       container.dataset.hasPool = '0';
       new QuizEngine.DuoVoteGame({ container: container, prefix: config.prefix, lang: lang });
+      return;
+    }
+
+    // Les dilemmes sont stockés par paires : d{N} porte l'avantage, d{N}_mais
+    // la contrepartie. Un dilemme sans sa contrepartie n'a pas de sens, on
+    // n'en garde donc que les paires complètes.
+    if (config.engine === 'dilemme') {
+      var dilemmes = [];
+      for (var di = 1; di <= 300; di++) {
+        var haut = QuizEngine.tgd(config.prefix + '.d' + di, null);
+        var bas = QuizEngine.tgd(config.prefix + '.d' + di + '_mais', null);
+        if (!haut || haut === config.prefix + '.d' + di) continue;
+        if (!bas || bas === config.prefix + '.d' + di + '_mais') continue;
+        dilemmes.push({ id: di, haut: haut, bas: bas });
+      }
+      if (dilemmes.length === 0) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      container.dataset.hasPool = '0';
+      new QuizEngine.DilemmeGame({ container: container, prefix: config.prefix, lang: lang, dilemmes: dilemmes });
       return;
     }
 

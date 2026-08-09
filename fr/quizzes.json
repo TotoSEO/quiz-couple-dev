@@ -243,5 +243,11 @@
     "shortTitle": "Qui de nous deux",
     "metaDescription": "Le jeu où chacun vote en secret avant de découvrir la réponse de l'autre. 40 questions, un score d'harmonie et beaucoup de débats. Gratuit, sans inscription.",
     "description": "Chacun vote en secret, on révèle les deux réponses en même temps : 40 questions et un score d'harmonie."
+  },
+  "jeuDilemmes": {
+    "title": "Dilemme à répondre en couple | 100 situations",
+    "shortTitle": "Dilemmes de couple",
+    "metaDescription": "100 dilemmes à trancher à deux : un avantage, un MAIS, et vous décidez OK ou PAS OK. Découvrez ensuite comment les autres couples ont voté. Gratuit, sans inscription.",
+    "description": "Un avantage, une contrepartie, et vous tranchez ensemble. Puis vous voyez le vote de tous les autres couples."
   }
 }

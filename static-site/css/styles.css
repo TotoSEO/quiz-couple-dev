@@ -1349,6 +1349,121 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .kq-role--devine .kq-role-nom { font-size: 1.05rem; }
 }
 
+/* ── Dilemmes de couple ────────────────────────────────────
+   Le marché tient en trois temps qui doivent se lire dans cet ordre sans
+   effort : ce qu'on gagne, le MAIS, ce qu'on paie. Le « MAIS » est le pivot
+   de la carte, il chevauche donc la ligne de séparation entre les deux. */
+.dil-jeu { display: grid; justify-items: center; }
+.dil-progres {
+  display: inline-flex; align-items: baseline; gap: .15rem;
+  margin-bottom: 1rem; padding: .3rem .85rem; border-radius: 9999px;
+  background: hsl(var(--muted) / .6); color: hsl(var(--muted-foreground));
+  font-size: .8rem; font-weight: 700;
+}
+.dil-progres-num { color: hsl(var(--primary)); font-size: 1rem; }
+
+.dil-carte {
+  position: relative; width: 100%; max-width: 34rem;
+  display: grid; justify-items: center; text-align: center;
+  border-radius: 1.5rem; border: 2px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: 0 20px 44px -34px hsl(var(--primary) / .8);
+  overflow: hidden;
+}
+.dil-haut, .dil-bas {
+  margin: 0; padding: 1.6rem 1.25rem;
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(1.02rem, 3.3vw, 1.2rem); line-height: 1.4; text-wrap: balance;
+}
+.dil-haut { background: hsl(var(--primary) / .08); padding-bottom: 1.9rem; }
+.dil-bas { padding-top: 1.9rem; color: hsl(var(--foreground)); }
+.dil-mais {
+  position: relative; z-index: 1; margin: -0.9rem 0;
+  padding: .3rem 1.1rem; border-radius: 9999px;
+  font-size: .72rem; font-weight: 900; letter-spacing: .14em;
+  color: hsl(var(--primary-foreground));
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  box-shadow: 0 0 0 5px hsl(var(--card));
+}
+
+.dil-consigne {
+  margin: 1.1rem 0 .8rem; text-align: center;
+  font-size: .85rem; color: hsl(var(--muted-foreground));
+}
+.dil-choix {
+  display: grid; grid-template-columns: 1fr 1fr; gap: .7rem;
+  width: 100%; max-width: 34rem;
+}
+.dil-choix-btn {
+  display: grid; justify-items: center; gap: .2rem;
+  padding: 1.05rem .6rem; border-radius: 1.15rem; cursor: pointer;
+  border: 2px solid hsl(var(--border)); background: hsl(var(--card));
+  font-family: var(--font-display); font-weight: 800; font-size: 1.05rem;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+.dil-choix-emoji { font-size: 1.6rem; line-height: 1; }
+.dil-choix-btn--ok { border-color: hsl(145 60% 45% / .5); color: hsl(145 60% 32%); }
+.dil-choix-btn--pasok { border-color: hsl(0 70% 55% / .5); color: hsl(0 68% 45%); }
+.dil-choix-btn--ok:hover { background: hsl(145 60% 45% / .1); transform: translateY(-2px); }
+.dil-choix-btn--pasok:hover { background: hsl(0 70% 55% / .1); transform: translateY(-2px); }
+.dil-choix-btn.est-choisi { transform: scale(.97); }
+.dil-passer {
+  margin-top: .9rem; padding: .35rem .6rem; border: 0; background: none; cursor: pointer;
+  font-size: .82rem; color: hsl(var(--muted-foreground)); text-decoration: underline;
+}
+
+/* Le verdict des autres couples : deux camps, puis une seule barre coupée en
+   deux pour que le rapport de force se voie sans lire les chiffres. */
+.dil-votre-choix { margin: 1.1rem 0 .9rem; font-size: .95rem; color: hsl(var(--muted-foreground)); }
+.dil-votre-choix strong { color: hsl(var(--foreground)); }
+.dil-camps {
+  display: grid; grid-template-columns: 1fr 1fr; gap: .7rem;
+  width: 100%; max-width: 34rem;
+}
+.dil-camp {
+  display: grid; justify-items: center; gap: .1rem;
+  padding: .8rem .5rem; border-radius: 1rem;
+  border: 2px solid transparent; background: hsl(var(--muted) / .5);
+}
+.dil-camp-lbl { font-size: .75rem; font-weight: 800; letter-spacing: .05em; }
+.dil-camp-pct { font-family: var(--font-display); font-weight: 900; font-size: 1.8rem; line-height: 1.1; }
+.dil-camp-nb { font-size: .78rem; color: hsl(var(--muted-foreground)); }
+.dil-camp--ok { background: hsl(145 60% 45% / .12); color: hsl(145 55% 34%); }
+.dil-camp--pasok { background: hsl(0 70% 55% / .12); color: hsl(0 66% 46%); }
+.dil-camp-pct, .dil-camp-lbl { color: inherit; }
+/* Le cadre du camp choisi reprend la couleur du camp. Sans « color » posé sur
+   la carte elle-meme, currentColor retombait sur le noir du texte courant. */
+.dil-camp.est-le-votre { border-color: currentColor; }
+
+.dil-barre {
+  display: flex; width: 100%; max-width: 34rem; height: .75rem;
+  margin-top: .7rem; border-radius: 9999px; overflow: hidden;
+  background: hsl(var(--muted));
+}
+.dil-barre-ok { background: hsl(145 58% 45%); transition: width 800ms cubic-bezier(.22,1,.36,1); }
+.dil-barre-pasok { background: hsl(0 68% 57%); transition: width 800ms cubic-bezier(.22,1,.36,1); }
+.dil-total { margin-top: .6rem; font-size: .82rem; color: hsl(var(--muted-foreground)); text-align: center; }
+
+.dil-suite { display: grid; justify-items: center; gap: .5rem; margin-top: 1.4rem; width: 100%; max-width: 34rem; }
+.dil-suivant { width: 100%; justify-content: center; }
+.dil-arret {
+  border: 0; background: none; cursor: pointer;
+  font-size: .82rem; color: hsl(var(--muted-foreground)); text-decoration: underline;
+}
+
+/* En mode sombre les deux verts et les deux rouges doivent s'éclaircir, sinon
+   ils disparaissent dans le fond. */
+.dark .dil-choix-btn--ok, .dark .dil-camp--ok { color: hsl(145 65% 62%); }
+.dark .dil-choix-btn--pasok, .dark .dil-camp--pasok { color: hsl(0 78% 70%); }
+
+@media (max-width: 380px) {
+  .dil-choix, .dil-camps { grid-template-columns: 1fr; }
+  .dil-camp-pct { font-size: 1.55rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dil-barre-ok, .dil-barre-pasok, .dil-choix-btn { transition: none; }
+}
+
 /* ── Bloc d'appel à l'action partenaire ────────────────────
    Un lien souligné se perd dans le corps du texte. Le bloc s'arrête
    franchement sur la page, annonce ce qu'on propose, et assume qu'il
@@ -6015,14 +6130,21 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .qdn-anneau circle { fill: none; stroke-width: 10; stroke-linecap: round; }
 .qdn-anneau-fond { stroke: hsl(var(--muted)); }
 .qdn-anneau-jauge { stroke: hsl(var(--primary)); transition: stroke-dashoffset 1.15s cubic-bezier(0.22, 1, 0.36, 1); }
+/* Le score au milieu de l'anneau. En flex, « align-items: baseline » aligne
+   bien le nombre et son « % » entre eux, mais colle la ligne entière en haut
+   de la boîte : le nombre se retrouvait 48 px au-dessus du centre du cercle,
+   à cheval sur le titre juste au-dessus. La grille règle les deux d'un coup,
+   « place-content » centre la ligne dans le cercle et « align-items » garde
+   le pourcentage sur la ligne de base du nombre. */
 .qdn-anneau-valeur {
   position: absolute; inset: 0;
-  display: flex; align-items: baseline; justify-content: center; gap: 0.1rem;
+  display: grid; grid-auto-flow: column; align-items: baseline;
+  place-content: center; gap: 0.1rem;
   font-size: 2rem; font-weight: 800; color: hsl(var(--foreground));
 }
 .qdn-anneau-valeur small { font-size: 1rem; }
 /* Le nombre et son « % » ne doivent jamais se retrouver sur deux lignes. */
-.qdn-anneau-valeur { flex-wrap: nowrap; white-space: nowrap; }
+.qdn-anneau-valeur { white-space: nowrap; }
 .qdn-anneau-nb { font-variant-numeric: tabular-nums; }
 
 .qdn-fin-detail { font-size: 1.05rem; font-weight: 600; }

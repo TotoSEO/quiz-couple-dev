@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "badge": "Jeu de couple",
+    "title": "100 Dilemmes de couple à résoudre ensemble + combien de personnes ont voté !",
+    "titleHighlight": "Dilemmes de couple",
+    "description": "Un avantage qui fait envie, un MAIS qui fait grincer. Vous répondez OK ou PAS OK à deux, puis vous découvrez de quel côté penchent tous les autres couples."
+  },
+  "jsonLd": {
+    "name": "Dilemmes de couple"
+  },
+  "section1": {
+    "title": "Un dilemme, ce n'est pas un « tu préfères »",
+    "p1": "La différence tient en une phrase. Dans un <strong>tu préfères</strong>, on vous pose deux options et vous en désignez une : la mer ou la montagne, le petit-déjeuner au lit ou la grasse matinée. Il y a toujours une réponse, et refuser n'est pas prévu.",
+    "p2": "Un <strong>dilemme</strong> ne vous propose qu'une chose : un marché. On vous offre un avantage franc, souvent démesuré, et on vous annonce la contrepartie dans la foulée. Vous gagnez dix millions d'euros, mais vous ne remettez plus jamais les pieds au restaurant. Vous n'avez plus qu'une décision à prendre, et elle est binaire : vous signez, ou vous laissez passer.",
+    "p3": "C'est ce qui rend le jeu bavard. Sur un tu préfères, chacun donne sa préférence et on passe. Sur un dilemme, il faut se mettre d'accord à deux, et c'est là que ça se complique : l'un trouve le prix ridicule, l'autre trouve qu'on lui demande de renoncer à sa vie. Vous apprenez rarement autant sur quelqu'un qu'en le regardant refuser dix millions d'euros.",
+    "p4": "Les cent situations sortent dans un ordre différent à chaque partie. Vous pouvez en trancher trois avant le dîner ou les faire toutes d'une traite, personne ne vous chronomètre."
+  },
+  "section2": {
+    "title": "Comment on joue",
+    "intro": "Un téléphone, deux personnes, aucune inscription. La partie commence dès que vous appuyez sur le bouton.",
+    "etape1Titre": "Lisez la situation à voix haute",
+    "etape1Texte": "L'avantage d'abord, puis le MAIS, puis la contrepartie. Laissez le silence après la contrepartie, c'est là que la vraie discussion démarre.",
+    "etape2Titre": "Décidez ensemble, pas chacun de son côté",
+    "etape2Texte": "Le jeu attend une réponse de couple. Si vous n'êtes pas d'accord, argumentez : c'est tout l'intérêt. Le bouton ne part pas tout seul.",
+    "etape3Titre": "Répondez OK ou PAS OK",
+    "etape3Texte": "OK, vous acceptez le marché tel qu'il est écrit. PAS OK, la contrepartie est trop chère et vous laissez l'avantage à quelqu'un d'autre.",
+    "etape4Titre": "Découvrez le camp majoritaire",
+    "etape4Texte": "Votre vote s'ajoute à celui de tous les autres couples, et la barre vous montre immédiatement les deux camps, en nombre de voix et en pourcentage.",
+    "apres": "À la fin, vous obtenez votre bilan : la proportion de marchés que vous avez acceptés. Certains couples signent presque tout, d'autres ne cèdent sur rien. Aucun des deux profils n'a raison, mais les deux disent quelque chose."
+  },
+  "section3": {
+    "title": "Ce qu'on trouve dans les 100 dilemmes",
+    "intro": "Les situations changent de terrain en permanence, et les deux moitiés d'un dilemme n'ont pas toujours de rapport entre elles. C'est voulu : une contrepartie qui sort de nulle part est bien plus difficile à évaluer qu'une contrepartie logique.",
+    "headerTheme": "Terrain",
+    "headerExemple": "Un exemple",
+    "apres": "Aucune situation ne touche à la maladie, au deuil ou à l'infidélité. C'est un jeu de soirée, pas un test de résistance : on veut vous faire discuter, pas vous plomber la fin de repas."
+  },
+  "familles": {
+    "argentTitre": "Argent et confort",
+    "argentExemple": "Vous n'avez plus jamais de loyer ni de crédit à payer, MAIS votre logement fait vingt-cinq mètres carrés, pour toujours.",
+    "voyageTitre": "Voyages",
+    "voyageExemple": "Vous faites le tour du monde pendant un an, tous frais payés, MAIS vous ne pouvez prendre aucune photo, aucune vidéo, rien.",
+    "familleTitre": "Famille et belle-famille",
+    "familleExemple": "Vos beaux-parents respectifs sont les meilleurs du monde et vous adorent, MAIS vous devez payer le repas à chaque fois que vous les voyez.",
+    "quotidienTitre": "Quotidien",
+    "quotidienExemple": "Vous ne faites plus jamais la vaisselle de votre vie, MAIS vous devez cuisiner tous les repas, tous les jours, sans exception.",
+    "amourTitre": "Amour et couple",
+    "amourExemple": "Vous ne vous disputez plus jamais, MAIS vous ne pouvez plus jamais vous réconcilier après une dispute non plus."
+  },
+  "section4": {
+    "title": "Les votes des autres couples",
+    "p1": "Chaque dilemme affiche le résultat réel de tous les votes reçus, mis à jour en direct : le nombre de voix de chaque côté, le pourcentage, et une barre coupée en deux qui montre le rapport de force d'un coup d'œil. Votre propre camp est encadré, pour que vous voyiez tout de suite si vous êtes avec la majorité ou contre elle.",
+    "p2": "Un vote par dilemme et par foyer. Recharger la page ne permet pas de voter deux fois : le jeu retient ce que vous avez déjà tranché et vous remontre votre réponse au lieu d'en accepter une nouvelle. C'est ce qui garde les pourcentages honnêtes, et c'est aussi pour ça qu'ils valent la peine d'être regardés.",
+    "p3": "Le compteur en haut de page n'indique pas le nombre de parties jouées mais le <strong>nombre total de votes</strong> déposés sur l'ensemble des dilemmes. C'est la mesure qui a du sens ici : une partie peut valoir trois votes comme cent."
+  },
+  "section5": {
+    "title": "À enchaîner après les dilemmes",
+    "p1": "Si les dilemmes vous ont donné envie de continuer à parler, le reste des jeux de couple prend le relais : certains font deviner, d'autres font voter, d'autres encore font simplement rire.",
+    "p2": "Tout est gratuit, sans inscription, et se joue sur un seul téléphone.",
+    "cta": "Voir tous les jeux de couple"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Quelle est la différence avec le jeu « tu préfères » ?",
+    "a1": "Un tu préfères vous fait choisir entre deux options : A ou B. Un dilemme ne vous en propose qu'une seule, assortie d'une contrepartie, et vous décidez de l'accepter ou de la refuser. Ce sont deux jeux différents, avec des discussions très différentes.",
+    "q2": "Combien de dilemmes contient le jeu ?",
+    "a2": "Cent, tirés dans un ordre différent à chaque partie. Vous n'avez pas besoin de tous les faire : vous pouvez vous arrêter quand vous voulez et voir votre bilan.",
+    "q3": "Faut-il être deux pour jouer ?",
+    "a3": "Le jeu est écrit pour un couple, sur un seul téléphone, avec une réponse commune. Rien ne vous empêche d'y jouer seul, mais vous perdrez la partie la plus intéressante : la négociation.",
+    "q4": "Les pourcentages affichés sont-ils réels ?",
+    "a4": "Oui. Ce sont les votes déposés par les personnes qui ont joué avant vous, comptés en direct. Rien n'est simulé et aucun chiffre n'est arrondi à la hausse.",
+    "q5": "Peut-on voter plusieurs fois sur le même dilemme ?",
+    "a5": "Non. Un vote est retenu par dilemme et par foyer. Si vous rechargez la page, le jeu vous remontre la réponse que vous aviez donnée au lieu d'en enregistrer une nouvelle.",
+    "q6": "Faut-il créer un compte ?",
+    "a6": "Non, jamais. Aucune inscription, aucune adresse e-mail, aucun prénom demandé. Vous ouvrez la page et vous jouez.",
+    "q7": "Le jeu est-il gratuit ?",
+    "a7": "Entièrement, et il le restera. Les cent dilemmes sont accessibles sans limite et sans publicité au milieu de la partie."
+  }
+}
