@@ -71,7 +71,10 @@
       <!-- Brand -->
       <div class="space-y-4">
         <a href="<%= homeUrl %>" class="flex items-center gap-2 text-xl font-bold no-underline">
-          <img src="/assets/logo-quiz-couple.png" alt="Quiz Couple" class="h-10 w-auto" width="40" height="40" loading="lazy">
+          <picture>
+            <source srcset="/assets/logo-quiz-couple.webp" type="image/webp">
+            <img src="/assets/logo-quiz-couple.png" alt="Quiz Couple" class="h-10 w-auto" width="40" height="40" loading="lazy">
+          </picture>
           Quiz Couple
         </a>
         <p class="text-sm text-muted-foreground max-w-xs"><%= t('common:footer.brandDescription', 'Des quiz gratuits pour mieux se connaître et renforcer votre couple.') %></p>
