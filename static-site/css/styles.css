@@ -6015,14 +6015,21 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .qdn-anneau circle { fill: none; stroke-width: 10; stroke-linecap: round; }
 .qdn-anneau-fond { stroke: hsl(var(--muted)); }
 .qdn-anneau-jauge { stroke: hsl(var(--primary)); transition: stroke-dashoffset 1.15s cubic-bezier(0.22, 1, 0.36, 1); }
+/* Le score au milieu de l'anneau. En flex, « align-items: baseline » aligne
+   bien le nombre et son « % » entre eux, mais colle la ligne entière en haut
+   de la boîte : le nombre se retrouvait 48 px au-dessus du centre du cercle,
+   à cheval sur le titre juste au-dessus. La grille règle les deux d'un coup,
+   « place-content » centre la ligne dans le cercle et « align-items » garde
+   le pourcentage sur la ligne de base du nombre. */
 .qdn-anneau-valeur {
   position: absolute; inset: 0;
-  display: flex; align-items: baseline; justify-content: center; gap: 0.1rem;
+  display: grid; grid-auto-flow: column; align-items: baseline;
+  place-content: center; gap: 0.1rem;
   font-size: 2rem; font-weight: 800; color: hsl(var(--foreground));
 }
 .qdn-anneau-valeur small { font-size: 1rem; }
 /* Le nombre et son « % » ne doivent jamais se retrouver sur deux lignes. */
-.qdn-anneau-valeur { flex-wrap: nowrap; white-space: nowrap; }
+.qdn-anneau-valeur { white-space: nowrap; }
 .qdn-anneau-nb { font-variant-numeric: tabular-nums; }
 
 .qdn-fin-detail { font-size: 1.05rem; font-weight: 600; }
