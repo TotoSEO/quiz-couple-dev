@@ -442,9 +442,16 @@
     document.getElementById('admin-messages-tab').classList.toggle('hidden', tab !== 'messages');
     var statsTab = document.getElementById('admin-stats-tab');
     if (statsTab) statsTab.classList.toggle('hidden', tab !== 'stats');
+    var afTab = document.getElementById('admin-affiliation-tab');
+    if (afTab) afTab.classList.toggle('hidden', tab !== 'affiliation');
 
     if (tab === 'stats') {
       loadStats();
+    }
+    // L'onglet affiliation vit dans son propre module : il gere son jeton et
+    // ne parle qu'a Affilae, sans rien partager avec le reste de l'admin.
+    if (tab === 'affiliation' && window.AdminAffiliation) {
+      window.AdminAffiliation.ouvrir();
     }
     if (tab === 'leads' && allLeads.length === 0) {
       loadLeads();

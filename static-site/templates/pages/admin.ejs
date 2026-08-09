@@ -41,6 +41,7 @@
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="leads">Leads</button>
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="messages">Messagerie</button>
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="stats">Stats</button>
+            <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="affiliation">Affiliation</button>
             </div>
             <button id="admin-deploy" class="btn btn-sm" style="background:hsl(var(--primary));color:white;display:flex;align-items:center;gap:0.5rem;">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -228,6 +229,132 @@
           </div>
         </div>
 
+        <!-- Affiliation Tab -->
+        <div id="admin-affiliation-tab" class="hidden">
+
+          <!-- Saisie du jeton. Il n'est jamais écrit dans le dépôt : le site
+               est statique et public, tout ce qui est construit est lisible
+               par n'importe qui. Il reste dans ce navigateur. -->
+          <div id="afl-gate" class="afl-gate hidden">
+            <div class="afl-gate-card">
+              <span class="afl-gate-icon" aria-hidden="true">🔑</span>
+              <h2 class="afl-gate-title">Connecter Affilae</h2>
+              <p class="afl-gate-text">Collez votre jeton d'API Affilae. Il est enregistré dans ce navigateur uniquement, jamais sur le site.</p>
+              <input type="password" id="afl-token-input" class="input w-full" placeholder="eyJhbGciOi..." autocomplete="off" spellcheck="false">
+              <p id="afl-gate-error" class="afl-gate-error hidden"></p>
+              <button id="afl-token-save" class="btn btn-primary w-full">Connecter</button>
+              <p class="afl-gate-hint">Le jeton se crée dans Affilae, menu « Jetons d'API ». Il peut être révoqué à tout moment.</p>
+            </div>
+          </div>
+
+          <div id="afl-board" class="hidden">
+
+            <!-- Barre de contrôle -->
+            <div class="afl-bar">
+              <div class="afl-bar-left">
+                <select id="afl-profile" class="afl-select" aria-label="Site"></select>
+                <div class="afl-range" role="group" aria-label="Période">
+                  <button class="afl-range-btn" data-days="7">7 j</button>
+                  <button class="afl-range-btn active" data-days="30">30 j</button>
+                  <button class="afl-range-btn" data-days="90">90 j</button>
+                  <button class="afl-range-btn" data-days="365">1 an</button>
+                </div>
+              </div>
+              <div class="afl-bar-right">
+                <span id="afl-updated" class="afl-updated"></span>
+                <button id="afl-refresh" class="afl-icon-btn" title="Actualiser" aria-label="Actualiser">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 11-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+                </button>
+                <button id="afl-forget" class="afl-icon-btn afl-icon-btn--danger" title="Oublier le jeton" aria-label="Oublier le jeton">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <p id="afl-error" class="afl-error hidden"></p>
+
+            <!-- Indicateurs -->
+            <div class="afl-kpis">
+              <div class="afl-kpi"><span class="afl-kpi-label">Clics</span><span class="afl-kpi-value" id="afl-kpi-clicks">&mdash;</span></div>
+              <div class="afl-kpi"><span class="afl-kpi-label">Conversions</span><span class="afl-kpi-value" id="afl-kpi-conv">&mdash;</span></div>
+              <div class="afl-kpi afl-kpi--phare"><span class="afl-kpi-label">Commissions</span><span class="afl-kpi-value" id="afl-kpi-commissions">&mdash;</span></div>
+              <div class="afl-kpi"><span class="afl-kpi-label">Gain par clic</span><span class="afl-kpi-value" id="afl-kpi-epc">&mdash;</span></div>
+            </div>
+
+            <!-- Partenariats -->
+            <section class="afl-panel">
+              <div class="afl-panel-head">
+                <div>
+                  <h2 class="afl-panel-title">Partenariats</h2>
+                  <p class="afl-panel-sub" id="afl-part-sub">&nbsp;</p>
+                </div>
+                <div class="afl-chips" role="group" aria-label="Filtrer par statut">
+                  <button class="afl-chip active" data-statut="tous">Tous</button>
+                  <button class="afl-chip" data-statut="active">Acceptés</button>
+                  <button class="afl-chip" data-statut="pending">En attente</button>
+                </div>
+              </div>
+              <div class="afl-tablewrap">
+                <table class="afl-table">
+                  <thead>
+                    <tr>
+                      <th class="afl-sort" data-tri="nom">Programme</th>
+                      <th>Statut</th>
+                      <th class="afl-hide-sm">Rémunération</th>
+                      <th class="afl-num afl-sort" data-tri="clics">Clics</th>
+                      <th class="afl-num afl-sort" data-tri="conv">Conv.</th>
+                      <th class="afl-num afl-sort" data-tri="gains">Gains</th>
+                    </tr>
+                  </thead>
+                  <tbody id="afl-part-body"></tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- Générateur de liens -->
+            <section class="afl-panel">
+              <div class="afl-panel-head">
+                <div>
+                  <h2 class="afl-panel-title">Générer un lien tracké</h2>
+                  <p class="afl-panel-sub">Choisissez le programme, la page de destination et un identifiant pour savoir d'où vient le clic.</p>
+                </div>
+              </div>
+              <div class="afl-gen">
+                <label class="afl-field">
+                  <span>Programme</span>
+                  <select id="afl-gen-part" class="afl-select afl-select--full"></select>
+                </label>
+                <label class="afl-field">
+                  <span>Page de destination <em>(optionnel)</em></span>
+                  <input type="url" id="afl-gen-url" class="input" placeholder="https://exemple.com/une-page" autocomplete="off" spellcheck="false">
+                </label>
+                <label class="afl-field">
+                  <span>D'où vient le clic <em>(optionnel)</em></span>
+                  <input type="text" id="afl-gen-sub" class="input" placeholder="guide-cadeaux" autocomplete="off" spellcheck="false">
+                </label>
+                <button id="afl-gen-btn" class="btn btn-primary afl-gen-btn">Générer</button>
+              </div>
+              <div id="afl-gen-out" class="afl-gen-out hidden">
+                <code id="afl-gen-link"></code>
+                <button id="afl-gen-copy" class="afl-copy">Copier</button>
+              </div>
+              <p id="afl-gen-note" class="afl-gen-note hidden"></p>
+            </section>
+
+            <!-- Dernières conversions -->
+            <section class="afl-panel">
+              <div class="afl-panel-head">
+                <div>
+                  <h2 class="afl-panel-title">Dernières conversions</h2>
+                  <p class="afl-panel-sub" id="afl-conv-sub">&nbsp;</p>
+                </div>
+              </div>
+              <div id="afl-conv-list" class="afl-conv-list"></div>
+            </section>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -258,5 +385,156 @@
   .stats-row-bar>span{display:block;height:100%;border-radius:9999px;background:linear-gradient(90deg,hsl(var(--primary)),hsl(var(--secondary)));}
   .stats-row-val{flex:0 0 3rem;text-align:right;font-weight:700;font-variant-numeric:tabular-nums;font-size:0.9rem;}
   @media (max-width:520px){.stats-row-name{flex-basis:7rem;}}
+
+  /* Les groupes de boutons segmentés (onglets, filtres avis, filtres messages)
+     sont des .flex qui ne rétrécissent pas : sur téléphone ils dépassaient de
+     la vue et décalaient toute la page vers la droite, quel que soit l'onglet
+     affiché. On les borne à la largeur disponible et on les laisse défiler. */
+  @media (max-width:520px){
+    div:has(> .admin-filter),
+    div:has(> .messages-filter),
+    div:has(> .admin-tab){
+      max-width:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+    }
+    div:has(> .admin-filter)::-webkit-scrollbar,
+    div:has(> .messages-filter)::-webkit-scrollbar,
+    div:has(> .admin-tab)::-webkit-scrollbar{display:none;}
+    .admin-filter,.messages-filter,.admin-tab{white-space:nowrap;flex-shrink:0;}
+    .admin-filter,.messages-filter{padding-left:.65rem;padding-right:.65rem;font-size:.8rem;}
+    /* Un élément flex a min-width:auto par défaut et refuse donc de descendre
+       sous la largeur de son contenu : sans cette ligne le conteneur des
+       onglets reste plus large que l'écran et le défilement interne ne sert
+       à rien. */
+    div:has(> div > .admin-tab){min-width:0;}
+    .admin-tab{padding-left:.7rem;padding-right:.7rem;}
+  }
+
+  /* ═══ Onglet Affiliation ═══════════════════════════════════
+     Tableau de bord dense mais calme : on lit d'abord les quatre
+     chiffres, ensuite le détail par partenaire. Tout passe par les
+     variables du site, donc le mode sombre suit sans règle en plus. */
+
+  /* .hidden vaut display:none dans la feuille principale, mais ce bloc-ci est
+     chargé après elle : à spécificité égale mes display:flex et display:grid
+     gagnaient, et les éléments masqués restaient à l'écran. On rend donc la
+     classe prioritaire pour tout l'onglet. */
+  #admin-affiliation-tab .hidden{display:none !important;}
+
+  /* Écran de connexion au jeton */
+  .afl-gate{display:flex;justify-content:center;padding:2rem 0 3rem;}
+  .afl-gate-card{width:100%;max-width:26rem;display:grid;gap:.85rem;padding:2rem 1.75rem;border-radius:1.25rem;
+    background:hsl(var(--card));border:1px solid hsl(var(--border));box-shadow:0 20px 48px -32px hsl(var(--primary)/.5);text-align:center;}
+  .afl-gate-icon{font-size:2rem;line-height:1;}
+  .afl-gate-title{font-family:'Poppins','Inter',sans-serif;font-size:1.2rem;font-weight:700;margin:0;}
+  .afl-gate-text{font-size:.88rem;color:hsl(var(--muted-foreground));margin:0;line-height:1.55;}
+  .afl-gate-hint{font-size:.75rem;color:hsl(var(--muted-foreground));margin:0;}
+  .afl-gate-error{font-size:.82rem;color:hsl(var(--destructive));margin:0;}
+
+  /* Barre de contrôle */
+  .afl-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap;margin-bottom:1.25rem;}
+  .afl-bar-left,.afl-bar-right{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+  .afl-select{appearance:none;padding:.45rem 2rem .45rem .8rem;border-radius:.65rem;border:1px solid hsl(var(--border));
+    background:hsl(var(--card));color:hsl(var(--foreground));font-size:.85rem;font-weight:600;cursor:pointer;
+    background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+    background-position:calc(100% - 1rem) 55%,calc(100% - .7rem) 55%;background-size:.3rem .3rem,.3rem .3rem;background-repeat:no-repeat;}
+  .afl-select--full{width:100%;}
+  .afl-range{display:inline-flex;border:1px solid hsl(var(--border));border-radius:999px;overflow:hidden;background:hsl(var(--card));}
+  .afl-range-btn{padding:.4rem .8rem;font-size:.8rem;font-weight:600;background:transparent;border:none;cursor:pointer;
+    color:hsl(var(--muted-foreground));transition:background .15s,color .15s;}
+  .afl-range-btn:hover{color:hsl(var(--foreground));}
+  .afl-range-btn.active{background:hsl(var(--primary));color:#fff;}
+  .afl-updated{font-size:.72rem;color:hsl(var(--muted-foreground));font-variant-numeric:tabular-nums;}
+  .afl-icon-btn{width:2.1rem;height:2.1rem;display:inline-flex;align-items:center;justify-content:center;border-radius:.6rem;
+    border:1px solid hsl(var(--border));background:hsl(var(--card));color:hsl(var(--muted-foreground));cursor:pointer;transition:all .15s;}
+  .afl-icon-btn svg{width:1rem;height:1rem;}
+  .afl-icon-btn:hover{color:hsl(var(--primary));border-color:hsl(var(--primary)/.4);}
+  .afl-icon-btn--danger:hover{color:hsl(var(--destructive));border-color:hsl(var(--destructive)/.4);}
+  .afl-icon-btn.tourne svg{animation:spin .7s linear infinite;}
+  .afl-error{padding:.75rem 1rem;border-radius:.75rem;background:hsl(var(--destructive)/.1);
+    border:1px solid hsl(var(--destructive)/.3);color:hsl(var(--destructive));font-size:.85rem;margin-bottom:1rem;}
+
+  /* Indicateurs */
+  .afl-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.75rem;margin-bottom:1.5rem;}
+  .afl-kpi{display:grid;gap:.3rem;padding:1.1rem 1.2rem;border-radius:1rem;background:hsl(var(--card));
+    border:1px solid hsl(var(--border));box-shadow:0 4px 16px -12px hsl(var(--primary)/.4);}
+  .afl-kpi-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:hsl(var(--muted-foreground));}
+  .afl-kpi-value{font-family:'Poppins','Inter',sans-serif;font-size:1.55rem;font-weight:800;line-height:1.05;
+    font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .afl-kpi--phare{border-color:hsl(var(--primary)/.35);background:hsl(var(--primary)/.05);}
+  .afl-kpi--phare .afl-kpi-value{color:hsl(var(--primary));}
+
+  /* Panneaux */
+  .afl-panel{background:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem;
+    padding:1.35rem 1.4rem;margin-bottom:1.25rem;box-shadow:0 4px 16px -12px hsl(var(--primary)/.3);}
+  .afl-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;}
+  .afl-panel-title{font-family:'Poppins','Inter',sans-serif;font-size:1.05rem;font-weight:700;margin:0;}
+  .afl-panel-sub{font-size:.8rem;color:hsl(var(--muted-foreground));margin:.15rem 0 0;}
+  .afl-chips{display:inline-flex;gap:.35rem;flex-wrap:wrap;}
+  .afl-chip{padding:.3rem .75rem;border-radius:999px;border:1px solid hsl(var(--border));background:transparent;
+    font-size:.78rem;font-weight:600;color:hsl(var(--muted-foreground));cursor:pointer;transition:all .15s;}
+  .afl-chip:hover{color:hsl(var(--foreground));}
+  .afl-chip.active{background:hsl(var(--primary));border-color:hsl(var(--primary));color:#fff;}
+
+  /* Tableau */
+  .afl-tablewrap{overflow-x:auto;margin:0 -.4rem;}
+  .afl-table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:32rem;}
+  .afl-table th{text-align:left;padding:.5rem .55rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;
+    font-weight:700;color:hsl(var(--muted-foreground));border-bottom:1px solid hsl(var(--border));white-space:nowrap;}
+  .afl-table td{padding:.65rem .55rem;border-bottom:1px solid hsl(var(--border)/.6);vertical-align:middle;}
+  .afl-table tbody tr:last-child td{border-bottom:0;}
+  .afl-table tbody tr{transition:background .15s;}
+  .afl-table tbody tr:hover{background:hsl(var(--muted)/.5);}
+  .afl-num{text-align:right;font-variant-numeric:tabular-nums;}
+  .afl-sort{cursor:pointer;user-select:none;}
+  .afl-sort:hover{color:hsl(var(--primary));}
+  .afl-sort.tri::after{content:'';display:inline-block;margin-left:.3rem;border-left:.25rem solid transparent;
+    border-right:.25rem solid transparent;border-top:.3rem solid currentColor;vertical-align:middle;}
+  .afl-sort.tri.asc::after{border-top:0;border-bottom:.3rem solid currentColor;}
+  .afl-prog{font-weight:600;}
+  .afl-remu{font-size:.78rem;color:hsl(var(--muted-foreground));}
+  .afl-vide{padding:2rem .5rem;text-align:center;color:hsl(var(--muted-foreground));font-size:.85rem;}
+  .afl-statut{display:inline-block;padding:.16rem .55rem;border-radius:999px;font-size:.68rem;font-weight:700;
+    text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;}
+  .afl-statut--active{background:hsl(152 55% 45%/.16);color:hsl(152 60% 32%);}
+  .dark .afl-statut--active{color:hsl(152 60% 62%);}
+  .afl-statut--pending{background:hsl(38 85% 50%/.16);color:hsl(32 75% 38%);}
+  .dark .afl-statut--pending{color:hsl(38 85% 65%);}
+  .afl-statut--autre{background:hsl(var(--muted));color:hsl(var(--muted-foreground));}
+
+  /* Générateur */
+  .afl-gen{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.85rem;align-items:end;}
+  .afl-field{display:grid;gap:.3rem;min-width:0;}
+  .afl-field>span{font-size:.75rem;font-weight:600;color:hsl(var(--muted-foreground));}
+  .afl-field>span em{font-style:normal;font-weight:400;opacity:.75;}
+  .afl-gen-btn{height:2.6rem;}
+  .afl-gen-out{display:flex;align-items:center;gap:.6rem;margin-top:1rem;padding:.7rem .9rem;border-radius:.75rem;
+    background:hsl(var(--muted)/.6);border:1px solid hsl(var(--border));}
+  .afl-gen-out code{flex:1;min-width:0;font-size:.8rem;word-break:break-all;font-family:ui-monospace,Menlo,Consolas,monospace;}
+  .afl-copy{flex-shrink:0;padding:.35rem .8rem;border-radius:.5rem;border:1px solid hsl(var(--primary)/.35);
+    background:hsl(var(--primary)/.1);color:hsl(var(--primary));font-size:.78rem;font-weight:700;cursor:pointer;transition:all .15s;}
+  .afl-copy:hover{background:hsl(var(--primary));color:#fff;}
+  .afl-gen-note{margin:.7rem 0 0;font-size:.78rem;color:hsl(var(--muted-foreground));}
+
+  /* Conversions */
+  .afl-conv-list{display:grid;gap:.5rem;}
+  .afl-conv{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.7rem .85rem;
+    border-radius:.7rem;background:hsl(var(--muted)/.45);}
+  .afl-conv-nom{font-weight:600;font-size:.87rem;}
+  .afl-conv-meta{font-size:.73rem;color:hsl(var(--muted-foreground));margin-top:.1rem;}
+  .afl-conv-gain{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap;}
+
+  @media (max-width:640px){
+    .afl-hide-sm{display:none;}
+    .afl-table td:nth-child(3){display:none;}
+    .afl-panel{padding:1.1rem .95rem;}
+    .afl-bar{gap:.5rem;}
+    .afl-bar-left{width:100%;}
+    .afl-select{flex:1;}
+    .afl-kpi-value{font-size:1.35rem;}
+    .afl-gen-out{flex-direction:column;align-items:stretch;}
+    .afl-copy{width:100%;}
+  }
+  @media (prefers-reduced-motion:reduce){.afl-icon-btn.tourne svg{animation:none;}}
 </style>
 <script src="/js/admin.js" defer></script>
+<script src="/js/admin-affiliation.js" defer></script>
