@@ -6,7 +6,7 @@
     "badge": "À deux, sur un seul téléphone",
     "title": "Qui de nous deux ? Le jeu du vote secret",
     "titleHighlight": "vote secret",
-    "description": "Chacun vote de son côté, on révèle les deux réponses en même temps… et on découvre à quel point vous vous voyez pareil."
+    "description": "Deux façons de jouer : chacun vote en cachette et on révèle en même temps, ou vous désignez quelqu'un ensemble à voix haute. Dans les deux cas, on découvre à quel point vous vous voyez pareil."
   },
   "section1": {
     "title": "Un jeu tout bête, et pourtant",
@@ -20,17 +20,17 @@
     "intro": "Rien de compliqué, mais les quatre points ci-dessous font toute la différence.",
     "etape1Titre": "Vos prénoms d'abord",
     "etape1Texte": "Le jeu les utilise partout : sur les boutons, dans la révélation, dans le score final. C'est nettement plus vivant que « joueur 1 » et « joueur 2 ».",
-    "etape2Titre": "Le premier vote en secret",
-    "etape2Texte": "La question s'affiche, vous choisissez qui de vous deux elle décrit le mieux. L'autre ne doit pas regarder… c'est là que tout se joue !",
-    "etape3Titre": "On passe le téléphone",
-    "etape3Texte": "Le jeu vous le demande lui-même. Le second vote sans savoir ce que le premier a choisi.",
-    "etape4Titre": "Révélation",
-    "etape4Texte": "Un décompte, et les deux cartes se retournent en même temps. Même réponse : un point. Réponses différentes : un débat.",
-    "apres": "À la fin, vous récupérez un pourcentage d'harmonie, votre meilleure série d'accords d'affilée, et la liste des questions sur lesquelles vous n'étiez pas d'accord. Cette liste, franchement, c'est le meilleur du jeu."
+    "etape2Titre": "Puis votre façon de jouer",
+    "etape2Texte": "Chacun vote en cachette et vous débattez ensuite, ou vous désignez quelqu'un ensemble à voix haute. Le premier mode dure plus longtemps et provoque plus de discussions ; le second va deux fois plus vite.",
+    "etape3Titre": "Le vote",
+    "etape3Texte": "La question s'affiche, vous choisissez qui de vous deux elle décrit le mieux. En mode secret, on se passe le téléphone et l'autre ne doit pas regarder. Et si la question ne vous parle pas, « on ne sait pas » est toujours là.",
+    "etape4Titre": "Révélation, et fin du débat",
+    "etape4Texte": "Les deux cartes se retournent en même temps. Même réponse : un point. Réponses différentes : le jeu vous demande si le débat a abouti, et si oui, sur quel nom.",
+    "apres": "À la fin, vous récupérez un pourcentage d'harmonie, votre meilleure série d'accords, les débats que vous avez tranchés, et la liste des questions restées en suspens. Cette liste, franchement, c'est le meilleur du jeu."
   },
   "section3": {
     "title": "Les quatre familles de questions",
-    "intro": "Quarante questions au total, réparties en quatre thèmes. Chaque partie en pioche douze, autant dans chaque famille : impossible de tomber sur douze questions sur la vaisselle.",
+    "intro": "Quatre-vingts questions au total, réparties en quatre thèmes. Chaque partie en pioche autant dans chacun, pour que douze manches d'affilée ne restent pas sur le même registre.",
     "headerTheme": "Thème",
     "headerExemple": "Un exemple de question",
     "apres": "Relancez une partie et les douze questions changent. De quoi y revenir plusieurs fois sans tourner en rond."
@@ -56,11 +56,13 @@
     "q3": "C'est gratuit ? Il faut créer un compte ?",
     "a3": "Gratuit, et sans inscription. Vous ouvrez la page, vous entrez vos prénoms, vous jouez. Rien n'est enregistré.",
     "q4": "On peut y rejouer plusieurs fois ?",
-    "a4": "Oui. Les douze manches sont tirées au hasard parmi quarante questions, donc deux parties d'affilée ne se ressemblent pas.",
+    "a4": "Oui. Les douze manches sont tirées au hasard parmi quatre-vingts questions, donc deux parties d'affilée ne se ressemblent pas. Et vous pouvez changer de façon de jouer entre deux parties.",
     "q5": "Et si on n'est d'accord sur rien ?",
     "a5": "C'est le meilleur scénario, en vrai. Le jeu vous ressort la liste des questions litigieuses à la fin, et c'est exactement le genre de conversation qu'on ne lance jamais tout seul.",
     "q6": "Ça marche pour un couple qui vient de se rencontrer ?",
-    "a6": "Oui, mais attendez-vous à un score bas et à beaucoup de rires. Les questions du thème rigolade passent très bien en début de relation, celles sur l'avenir un peu moins."
+    "a6": "Oui, mais attendez-vous à un score bas et à beaucoup de rires. Les questions du thème rigolade passent très bien en début de relation, celles sur l'avenir un peu moins.",
+    "q7": "Et si on ne sait pas quoi répondre ?",
+    "a7": "Un bouton « on ne sait pas » est présent à chaque manche. Elle est alors mise de côté : elle ne compte ni pour ni contre vous, et elle réapparaît dans la liste des questions à reprendre à la fin."
   },
   "section5": {
     "title": "Envie d'enchaîner ?",

@@ -6,7 +6,7 @@
     "badge": "In due, con un solo telefono",
     "title": "Chi di noi due? Il gioco del voto segreto",
     "titleHighlight": "voto segreto",
-    "description": "Ognuno vota per conto suo, le due risposte vengono svelate insieme… e scoprite quanto vi vedete allo stesso modo."
+    "description": "Due modi di giocare: ognuno vota di nascosto e si svela insieme, oppure indicate qualcuno insieme, ad alta voce. In entrambi i casi scoprite quanto vi vedete allo stesso modo."
   },
   "section1": {
     "title": "Un gioco sciocco, eppure",
@@ -17,20 +17,20 @@
   },
   "section2": {
     "title": "Come si gioca",
-    "intro": "Niente di complicato, ma i quattro punti qui sotto fanno la differenza.",
+    "intro": "Niente di complicato, ma i quattro punti qui sotto fanno tutta la differenza.",
     "etape1Titre": "Prima i vostri nomi",
     "etape1Texte": "Il gioco li usa ovunque: sui pulsanti, nella rivelazione, nel punteggio finale. Molto più vivo di «giocatore 1» e «giocatore 2».",
-    "etape2Titre": "Il primo vota in segreto",
-    "etape2Texte": "Appare la domanda e scegliete chi di voi due descrive meglio. L'altro non deve guardare… è tutto lì il bello!",
-    "etape3Titre": "Si passa il telefono",
-    "etape3Texte": "È il gioco stesso a chiedervelo. Il secondo vota senza sapere cosa ha scelto il primo.",
-    "etape4Titre": "La rivelazione",
-    "etape4Texte": "Un conto alla rovescia e le due carte si girano insieme. Stessa risposta: un punto. Risposte diverse: si discute.",
-    "apres": "Alla fine vi portate a casa una percentuale di sintonia, la vostra serie migliore di accordi consecutivi e l'elenco delle domande su cui non eravate d'accordo. Quell'elenco, sinceramente, è il meglio del gioco."
+    "etape2Titre": "Poi il vostro modo di giocare",
+    "etape2Texte": "Ognuno vota di nascosto e poi si discute, oppure indicate qualcuno insieme ad alta voce. Il primo modo dura di più e fa nascere più discussioni; il secondo va il doppio più veloce.",
+    "etape3Titre": "Il voto",
+    "etape3Texte": "Appare la domanda e scegliete chi di voi due descrive meglio. In modalità segreta vi passate il telefono e l'altro non deve guardare. E se la domanda non vi riguarda, «non lo sappiamo» c'è sempre.",
+    "etape4Titre": "Rivelazione, e fine della discussione",
+    "etape4Texte": "Le due carte si girano insieme. Stessa risposta: un punto. Risposte diverse: il gioco chiede se la discussione ha funzionato e, in tal caso, su quale nome.",
+    "apres": "Alla fine ottenete una percentuale di armonia, la vostra serie migliore di accordi, le discussioni che avete deciso e l'elenco delle domande rimaste in sospeso. Quell'elenco, sinceramente, è la parte migliore del gioco."
   },
   "section3": {
     "title": "Le quattro famiglie di domande",
-    "intro": "Quaranta domande in tutto, divise in quattro temi. Ogni partita ne pesca dodici, in parti uguali da ogni famiglia: impossibile ritrovarsi con dodici domande sui piatti da lavare.",
+    "intro": "Ottanta domande in tutto, divise in quattro temi. Ogni partita ne pesca altrettante da ciascuno, così dodici round di fila non restano sullo stesso registro.",
     "headerTheme": "Tema",
     "headerExemple": "Un esempio di domanda",
     "apres": "Ricominciate una partita e le dodici domande cambiano. Abbastanza per tornarci più volte senza girare a vuoto."
@@ -56,11 +56,13 @@
     "q3": "È gratis? Serve un account?",
     "a3": "Gratis e senza registrazione. Aprite la pagina, scrivete i vostri nomi e giocate. Non viene salvato nulla.",
     "q4": "Si può rigiocare più volte?",
-    "a4": "Sì. I dodici round vengono estratti a caso fra quaranta domande, quindi due partite di fila non si somigliano.",
+    "a4": "Sì. I dodici round sono estratti a caso tra ottanta domande, quindi due partite di fila non si somigliano. E potete cambiare modo di giocare tra una partita e l'altra.",
     "q5": "E se non siamo d'accordo su niente?",
     "a5": "È lo scenario migliore, davvero. Alla fine il gioco vi ripropone l'elenco delle domande contestate, ed è esattamente il tipo di conversazione che da soli non si comincia mai.",
     "q6": "Va bene per una coppia appena nata?",
-    "a6": "Sì, ma aspettatevi un punteggio basso e molte risate. Le domande del tema risate funzionano benissimo all'inizio, quelle sul futuro un po' meno."
+    "a6": "Sì, ma aspettatevi un punteggio basso e molte risate. Le domande del tema risate funzionano benissimo all'inizio, quelle sul futuro un po' meno.",
+    "q7": "E se non sappiamo cosa rispondere?",
+    "a7": "C'è un pulsante «non lo sappiamo» a ogni round. Il round viene messo da parte: non conta né a favore né contro, e ricompare nell'elenco delle domande da riprendere alla fine."
   },
   "section5": {
     "title": "Voglia di continuare?",

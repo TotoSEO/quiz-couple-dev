@@ -6,7 +6,7 @@
     "badge": "Dos jugadores, un solo móvil",
     "title": "¿Quién de los dos? El juego del voto secreto",
     "titleHighlight": "voto secreto",
-    "description": "Cada uno vota por su lado, las dos respuestas se revelan a la vez… y descubrís hasta qué punto os veis igual."
+    "description": "Dos formas de jugar: cada uno vota a escondidas y se revela a la vez, o señaláis a alguien juntos en voz alta. En ambos casos descubrís hasta qué punto os veis igual."
   },
   "section1": {
     "title": "Un juego tonto y, sin embargo",
@@ -20,17 +20,17 @@
     "intro": "Nada complicado, pero los cuatro puntos de abajo marcan la diferencia.",
     "etape1Titre": "Primero, vuestros nombres",
     "etape1Texte": "El juego los usa en todas partes: en los botones, en la revelación, en el resultado final. Es mucho más vivo que «jugador 1» y «jugador 2».",
-    "etape2Titre": "El primero vota en secreto",
-    "etape2Texte": "Aparece la pregunta y eliges a quién de los dos describe mejor. El otro no debe mirar… ¡ahí está toda la gracia!",
-    "etape3Titre": "Se pasa el móvil",
-    "etape3Texte": "El propio juego os lo pide. El segundo vota sin saber qué ha elegido el primero.",
-    "etape4Titre": "Revelación",
-    "etape4Texte": "Una cuenta atrás y las dos cartas se giran a la vez. Misma respuesta: un punto. Respuestas distintas: debate.",
-    "apres": "Al final os lleváis un porcentaje de sintonía, vuestra mejor racha de aciertos seguidos y la lista de preguntas en las que no coincidisteis. Esa lista, sinceramente, es lo mejor del juego."
+    "etape2Titre": "Luego vuestra forma de jugar",
+    "etape2Texte": "Cada uno vota a escondidas y luego debatís, o señaláis a alguien juntos en voz alta. El primer modo dura más y provoca más discusiones; el segundo va el doble de rápido.",
+    "etape3Titre": "El voto",
+    "etape3Texte": "Aparece la pregunta y elegís a quién de los dos describe mejor. En modo secreto os pasáis el móvil y el otro no debe mirar. Y si la pregunta no os encaja, «no lo sabemos» siempre está ahí.",
+    "etape4Titre": "Revelación y final del debate",
+    "etape4Texte": "Las dos cartas se giran a la vez. Misma respuesta: un punto. Respuestas distintas: el juego pregunta si el debate ha servido y, en tal caso, con qué nombre.",
+    "apres": "Al final recibís un porcentaje de armonía, vuestra mejor racha de acuerdos, los debates que habéis zanjado y la lista de preguntas que quedaron en el aire. Esa lista, sinceramente, es lo mejor del juego."
   },
   "section3": {
     "title": "Las cuatro familias de preguntas",
-    "intro": "Cuarenta preguntas en total, repartidas en cuatro temas. Cada partida saca doce, las mismas de cada familia: imposible que os toquen doce preguntas sobre los platos.",
+    "intro": "Ochenta preguntas en total, repartidas en cuatro temas. Cada partida saca la misma cantidad de cada uno, para que doce rondas seguidas no se queden en el mismo registro.",
     "headerTheme": "Tema",
     "headerExemple": "Un ejemplo de pregunta",
     "apres": "Empezad otra partida y las doce preguntas cambian. Suficiente para volver varias veces sin repetiros."
@@ -56,11 +56,13 @@
     "q3": "¿Es gratis? ¿Hay que registrarse?",
     "a3": "Gratis y sin registro. Abrís la página, escribís vuestros nombres y jugáis. No se guarda nada.",
     "q4": "¿Se puede jugar varias veces?",
-    "a4": "Sí. Las doce rondas salen al azar de entre cuarenta preguntas, así que dos partidas seguidas no se parecen.",
+    "a4": "Sí. Las doce rondas se sacan al azar de ochenta preguntas, así que dos partidas seguidas no se parecen. Y podéis cambiar de forma de jugar entre partidas.",
     "q5": "¿Y si no coincidimos en nada?",
     "a5": "Es el mejor escenario, de verdad. El juego os devuelve al final la lista de preguntas conflictivas, y es justo el tipo de conversación que nadie arranca por su cuenta.",
     "q6": "¿Sirve para una pareja que acaba de empezar?",
-    "a6": "Sí, pero contad con un resultado bajo y muchas risas. Las preguntas del tema risas funcionan de maravilla al principio, las del futuro bastante menos."
+    "a6": "Sí, pero contad con un resultado bajo y muchas risas. Las preguntas del tema risas funcionan de maravilla al principio, las del futuro bastante menos.",
+    "q7": "¿Y si no sabemos qué responder?",
+    "a7": "Hay un botón «no lo sabemos» en cada ronda. La ronda se aparta: no cuenta ni a favor ni en contra, y reaparece en la lista de preguntas para retomar al final."
   },
   "section5": {
     "title": "¿Queréis seguir?",

@@ -5152,11 +5152,18 @@ var QuizEngine = (function() {
   ];
   var QDN_MANCHES = 12;
 
+  // Un vote vaut 0 ou 1 (le joueur designe), NSP quand on ne sait pas, et null
+  // tant que personne n'a repondu.
+  var QDN_NSP = -1;
+
   function DuoVoteGame(config) {
     this.container = config.container;
     this.prefix = config.prefix || 'quiDeNous';
     this.lang = config.lang || 'fr';
     this.phase = 'setup';
+    // « secret » : chacun vote de son cote, on revele en meme temps.
+    // « ensemble » : on designe quelqu'un a voix haute, sans se cacher.
+    this.mode = 'secret';
     this.noms = ['', ''];
     this.manches = [];
     this.idx = 0;
@@ -5164,6 +5171,8 @@ var QuizEngine = (function() {
     this.accords = 0;
     this.serie = 0;
     this.meilleureSerie = 0;
+    this.designations = [0, 0];   // combien de fois chacun a été désigné
+    this.debatsGagnes = 0;        // désaccords que le débat a tranchés
     this.historique = [];
     this.minuteurs = [];
     this.render();
@@ -5223,11 +5232,37 @@ var QuizEngine = (function() {
   DuoVoteGame.prototype.render = function() {
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'mode') this.renderMode();
     else if (this.phase === 'passe') this.renderPasse();
     else if (this.phase === 'decompte') this.renderDecompte();
     else if (this.phase === 'reveal') this.renderReveal();
+    else if (this.phase === 'debat') this.renderDebat();
     else if (this.phase === 'fin') this.renderFin();
     else this.renderVote();
+  };
+
+  // Le vote secret puis le debat est un bon principe, mais il oblige a se
+  // cacher l'ecran et a se passer le telephone douze fois. Certains veulent
+  // juste designer quelqu'un a voix haute. On demande, apres les prenoms.
+  DuoVoteGame.prototype.renderMode = function() {
+    var self = this;
+    this.container.appendChild(ecranModes({
+      icone: '🎲',
+      titre: tg('quiDeNous.modeTitre', 'Comment voulez-vous jouer ?'),
+      desc: tg('quiDeNous.modeDesc', 'Les deux façons donnent une partie différente. Vous pourrez changer entre deux parties.'),
+      modes: [
+        { id: 'secret', emoji: '🤫',
+          titre: tg('quiDeNous.modeSecretTitre', 'Chacun vote en cachette, puis on débat'),
+          desc: tg('quiDeNous.modeSecretDesc', 'On se passe le téléphone, on révèle les deux votes en même temps, et on discute quand ils ne collent pas.'),
+          meta: tg('quiDeNous.modeSecretMeta', 'Le format d\'origine') },
+        { id: 'ensemble', emoji: '🗣️',
+          titre: tg('quiDeNous.modeEnsembleTitre', 'On choisit l\'un des deux ensemble'),
+          desc: tg('quiDeNous.modeEnsembleDesc', 'Pas de cachotteries : on lit la question à voix haute et on désigne quelqu\'un d\'un commun accord.'),
+          meta: tg('quiDeNous.modeEnsembleMeta', 'Plus rapide, sans passer le téléphone') }
+      ],
+      onChoix: function(id) { self.mode = id; self.nouvellePartie(); }
+    }));
+    smoothScroll(this.container, 'start');
   };
 
   DuoVoteGame.prototype.renderSetup = function() {
@@ -5245,7 +5280,8 @@ var QuizEngine = (function() {
           grille.querySelector('#qdn-nom1').value.trim() || tg('playerSetup.player1', 'Joueur 1'),
           grille.querySelector('#qdn-nom2').value.trim() || tg('playerSetup.player2', 'Joueur 2')
         ];
-        self.nouvellePartie();
+        self.phase = 'mode';
+        self.render();
       }
     });
     this.container.appendChild(ecran.wrap);
@@ -5256,6 +5292,7 @@ var QuizEngine = (function() {
     this.tirerManches();
     this.idx = 0; this.votes = [null, null];
     this.accords = 0; this.serie = 0; this.meilleureSerie = 0;
+    this.designations = [0, 0]; this.debatsGagnes = 0;
     this.historique = [];
     this.tour = 0;
     this.phase = 'vote';
@@ -5293,30 +5330,46 @@ var QuizEngine = (function() {
       '<p class="qdn-question">' + esc(m.texte) + '</p>';
     wrap.appendChild(carte);
 
-    var secret = el('p', 'qdn-secret');
-    secret.innerHTML = '🤫 ' + esc(tg('quiDeNous.voteSecret', '{{nom}} vote en secret').replace('{{nom}}', this.joueur(j)));
-    wrap.appendChild(secret);
+    var ensemble = this.mode === 'ensemble';
+    var consigne = el('p', 'qdn-secret');
+    consigne.innerHTML = ensemble
+      ? '🗣️ ' + esc(tg('quiDeNous.voteEnsemble', 'Décidez ensemble, à voix haute.'))
+      : '🤫 ' + esc(tg('quiDeNous.voteSecret', '{{nom}} vote en secret').replace('{{nom}}', this.joueur(j)));
+    wrap.appendChild(consigne);
 
     var choix = el('div', 'qdn-choix');
+    // Un vote enregistre puis, selon le mode, on passe le telephone ou on
+    // enchaine directement sur la revelation.
+    function poser(valeur, bouton) {
+      if (self.votes[j] !== null) return;
+      self.votes[j] = valeur;
+      if (bouton) bouton.classList.add('qdn-choix-btn--pris');
+      choix.classList.add('qdn-choix--verrouille');
+      self.attendre(420, function() {
+        if (ensemble) { self.votes[1] = valeur; self.phase = 'reveal'; }
+        else if (j === 0) { self.tour = 1; self.phase = 'passe'; }
+        else { self.phase = 'decompte'; }
+        self.render();
+      });
+    }
+
     [0, 1].forEach(function(cible) {
       var b = el('button', 'qdn-choix-btn qdn-choix-btn--' + (cible + 1));
       b.type = 'button';
       b.innerHTML = '<span class="qdn-choix-pastille">' + esc(self.joueur(cible).charAt(0).toUpperCase()) + '</span>' +
         '<span class="qdn-choix-nom">' + esc(self.joueur(cible)) + '</span>';
-      b.addEventListener('click', function() {
-        if (self.votes[j] !== null) return;
-        self.votes[j] = cible;
-        b.classList.add('qdn-choix-btn--pris');
-        choix.classList.add('qdn-choix--verrouille');
-        self.attendre(420, function() {
-          if (j === 0) { self.tour = 1; self.phase = 'passe'; }
-          else { self.phase = 'decompte'; }
-          self.render();
-        });
-      });
+      b.addEventListener('click', function() { poser(cible, b); });
       choix.appendChild(b);
     });
     wrap.appendChild(choix);
+
+    // Personne n'est oblige de trancher : certaines questions ne s'appliquent
+    // tout simplement pas au couple qui joue.
+    var nsp = el('button', 'qdn-nsp', esc(tg('quiDeNous.nsp', 'On ne sait pas')));
+    nsp.type = 'button';
+    nsp.addEventListener('click', function() { poser(QDN_NSP, null); });
+    wrap.appendChild(nsp);
+
     wrap.appendChild(this.boutonArret());
     this.container.appendChild(wrap);
   };
@@ -5371,16 +5424,22 @@ var QuizEngine = (function() {
   DuoVoteGame.prototype.renderReveal = function() {
     var self = this;
     var m = this.manches[this.idx];
-    var accord = this.votes[0] === this.votes[1];
+    var ensemble = this.mode === 'ensemble';
+    // « On ne sait pas » des deux cotes n'est pas un accord : c'est une manche
+    // qu'on met de cote, sans point ni debat.
+    var passe = this.votes[0] === QDN_NSP || this.votes[1] === QDN_NSP;
+    var accord = !passe && this.votes[0] === this.votes[1];
 
     // Le score n'est comptabilise qu'une fois, meme si l'ecran est redessine.
     if (!this.historique[this.idx]) {
-      this.historique[this.idx] = { texte: m.texte, theme: m.theme, votes: this.votes.slice(), accord: accord };
+      this.historique[this.idx] = { texte: m.texte, theme: m.theme, votes: this.votes.slice(),
+                                    accord: accord, passe: passe, tranche: null };
       if (accord) {
         this.accords++;
         this.serie++;
         if (this.serie > this.meilleureSerie) this.meilleureSerie = this.serie;
-      } else this.serie = 0;
+        if (this.votes[0] >= 0) this.designations[this.votes[0]]++;
+      } else if (!passe) this.serie = 0;
     }
 
     var wrap = el('div', 'quiz-engine qdn-jeu text-center');
@@ -5389,46 +5448,88 @@ var QuizEngine = (function() {
     // fragment (« change d'avis toutes les cinq minutes ? »).
     wrap.appendChild(el('p', 'qdn-rappel', esc(tg('quiDeNous.amorce', 'Qui de vous deux…') + ' ' + m.texte)));
 
-    var duo = el('div', 'qdn-reveal');
-    [0, 1].forEach(function(j) {
+    var duo = el('div', 'qdn-reveal' + (ensemble ? ' qdn-reveal--seul' : ''));
+    (ensemble ? [0] : [0, 1]).forEach(function(j) {
+      var v = self.votes[j];
       var c = el('div', 'qdn-reveal-carte');
       c.style.animationDelay = (j * 0.18) + 's';
+      var entete = ensemble
+        ? tg('quiDeNous.vousAvezDit', 'Vous avez désigné')
+        : tg('quiDeNous.aDit', '{{nom}} a dit').replace('{{nom}}', self.joueur(j));
       c.innerHTML =
-        '<span class="qdn-reveal-qui">' + esc(tg('quiDeNous.aDit', '{{nom}} a dit').replace('{{nom}}', self.joueur(j))) + '</span>' +
-        '<span class="qdn-reveal-pastille qdn-reveal-pastille--' + (self.votes[j] + 1) + '">' +
-          esc(self.joueur(self.votes[j]).charAt(0).toUpperCase()) + '</span>' +
-        '<span class="qdn-reveal-nom">' + esc(self.joueur(self.votes[j])) + '</span>';
+        '<span class="qdn-reveal-qui">' + esc(entete) + '</span>' +
+        (v === QDN_NSP
+          ? '<span class="qdn-reveal-pastille qdn-reveal-pastille--nsp">?</span>' +
+            '<span class="qdn-reveal-nom">' + esc(tg('quiDeNous.nsp', 'On ne sait pas')) + '</span>'
+          : '<span class="qdn-reveal-pastille qdn-reveal-pastille--' + (v + 1) + '">' +
+              esc(self.joueur(v).charAt(0).toUpperCase()) + '</span>' +
+            '<span class="qdn-reveal-nom">' + esc(self.joueur(v)) + '</span>');
       duo.appendChild(c);
     });
     wrap.appendChild(duo);
 
-    var verdict = el('div', 'qdn-verdict ' + (accord ? 'qdn-verdict--accord' : 'qdn-verdict--clash'));
+    var etat = passe ? 'passe' : (accord ? 'accord' : 'clash');
+    var verdict = el('div', 'qdn-verdict qdn-verdict--' + etat);
+    var titres = { accord: '✅ ' + tg('quiDeNous.accordTitre', 'D\'accord !'),
+                   clash: '⚡ ' + tg('quiDeNous.clashTitre', 'Débat !'),
+                   passe: '🤷 ' + tg('quiDeNous.passeVerdictTitre', 'Manche mise de côté') };
+    var textes = { accord: ensemble
+                     ? tg('quiDeNous.ensembleTexte', 'Un nom de plus au compteur.')
+                     : tg('quiDeNous.accordTexte', 'Vous avez désigné la même personne. Un point de plus.'),
+                   clash: tg('quiDeNous.clashTexte', 'Vous ne vous voyez pas pareil sur ce coup-là. Expliquez-vous !'),
+                   passe: tg('quiDeNous.passeVerdictTexte', 'Personne n\'a voulu trancher, et c\'est très bien. On passe à la suivante.') };
     verdict.innerHTML =
-      '<span class="qdn-verdict-titre">' + (accord ? '✅ ' : '⚡ ') +
-        esc(accord ? tg('quiDeNous.accordTitre', 'D\'accord !') : tg('quiDeNous.clashTitre', 'Débat !')) + '</span>' +
-      '<p class="qdn-verdict-texte">' + esc(accord
-        ? tg('quiDeNous.accordTexte', 'Vous avez désigné la même personne. Un point de plus.')
-        : tg('quiDeNous.clashTexte', 'Vous ne vous voyez pas pareil sur ce coup-là. Expliquez-vous !')) + '</p>';
-    if (accord && this.serie >= 3) {
+      '<span class="qdn-verdict-titre">' + esc(titres[etat]) + '</span>' +
+      '<p class="qdn-verdict-texte">' + esc(textes[etat]) + '</p>';
+    if (accord && !ensemble && this.serie >= 3) {
       verdict.innerHTML += '<p class="qdn-combo">🔥 ' +
         esc(tg('quiDeNous.combo', '{{n}} d\'affilée !').replace('{{n}}', this.serie)) + '</p>';
     }
     wrap.appendChild(verdict);
 
-    if (accord && !this.doux()) wrap.appendChild(this.confettis());
+    if (accord && !ensemble && !this.doux()) wrap.appendChild(this.confettis());
 
-    var suivant = el('button', 'btn btn-cta btn-lg mt-6', esc(
-      this.idx + 1 >= this.manches.length ? tg('quiDeNous.voirResultat', 'Voir notre score') : tg('quiDeNous.suivant', 'Manche suivante')));
-    suivant.type = 'button';
-    suivant.addEventListener('click', function() {
-      self.idx++;
-      self.votes = [null, null];
-      self.tour = 0;
-      self.phase = self.idx >= self.manches.length ? 'fin' : 'vote';
-      self.render();
-      smoothScroll(self.container, 'start');
-    });
-    wrap.appendChild(suivant);
+    // Un desaccord ne se contentait pas d'un « expliquez-vous » : la manche se
+    // terminait sans qu'on sache si le debat avait mene quelque part. On le
+    // demande, et s'il a abouti on note qui l'a emporte.
+    var h = this.historique[this.idx];
+    if (!accord && !passe && h.tranche === null) {
+      var demande = el('div', 'qdn-debat');
+      demande.innerHTML = '<p class="qdn-debat-question">' +
+        esc(tg('quiDeNous.debatQuestion', 'Débat réussi ?')) + '</p>';
+      var reponses = el('div', 'qdn-debat-choix');
+      var oui = el('button', 'btn btn-cta qdn-debat-oui', esc(tg('quiDeNous.debatOui', 'Oui, on s\'est mis d\'accord')));
+      oui.type = 'button';
+      oui.addEventListener('click', function() { self.phase = 'debat'; self.render(); });
+      var non = el('button', 'btn btn-outline qdn-debat-non', esc(tg('quiDeNous.debatNon', 'Non, chacun campe sur ses positions')));
+      non.type = 'button';
+      non.addEventListener('click', function() { h.tranche = false; self.render(); });
+      reponses.appendChild(oui); reponses.appendChild(non);
+      demande.appendChild(reponses);
+      wrap.appendChild(demande);
+    } else if (!accord && !passe) {
+      var issue = el('div', 'qdn-debat qdn-debat--fait');
+      issue.innerHTML = h.tranche === false
+        ? '<p class="qdn-debat-issue">🤝 ' + esc(tg('quiDeNous.debatEchecTexte', 'Chacun reste sur sa position. Ça arrive, et ça fera une histoire à raconter.')) + '</p>'
+        : '<p class="qdn-debat-issue">🏆 ' + esc(tg('quiDeNous.debatReussiTexte', 'Débat tranché : {{nom}}.').replace('{{nom}}', this.joueur(h.tranche))) + '</p>';
+      wrap.appendChild(issue);
+    }
+
+    // Tant que le débat n'a pas d'issue, on ne propose pas la manche suivante.
+    if (accord || passe || h.tranche !== null) {
+      var suivant = el('button', 'btn btn-cta btn-lg mt-6', esc(
+        this.idx + 1 >= this.manches.length ? tg('quiDeNous.voirResultat', 'Voir notre score') : tg('quiDeNous.suivant', 'Manche suivante')));
+      suivant.type = 'button';
+      suivant.addEventListener('click', function() {
+        self.idx++;
+        self.votes = [null, null];
+        self.tour = 0;
+        self.phase = self.idx >= self.manches.length ? 'fin' : 'vote';
+        self.render();
+        smoothScroll(self.container, 'start');
+      });
+      wrap.appendChild(suivant);
+    }
     wrap.appendChild(this.boutonArret());
     this.container.appendChild(wrap);
   };
@@ -5448,6 +5549,50 @@ var QuizEngine = (function() {
     return box;
   };
 
+  // Le debat a abouti : reste a savoir sur quel nom. Ce choix-la compte, il
+  // alimente le decompte final au meme titre qu'un accord immediat.
+  DuoVoteGame.prototype.renderDebat = function() {
+    var self = this;
+    var m = this.manches[this.idx];
+    var wrap = el('div', 'quiz-engine qdn-jeu text-center');
+    wrap.appendChild(this.barre());
+    wrap.appendChild(el('p', 'qdn-rappel', esc(tg('quiDeNous.amorce', 'Qui de vous deux…') + ' ' + m.texte)));
+
+    var bloc = el('div', 'qdn-debat qdn-debat--tranche');
+    bloc.innerHTML = '<p class="qdn-debat-question">' +
+      esc(tg('quiDeNous.debatQui', 'Alors, c\'est qui au final ?')) + '</p>';
+    var choix = el('div', 'qdn-choix');
+    [0, 1].forEach(function(cible) {
+      var b = el('button', 'qdn-choix-btn qdn-choix-btn--' + (cible + 1));
+      b.type = 'button';
+      b.innerHTML = '<span class="qdn-choix-pastille">' + esc(self.joueur(cible).charAt(0).toUpperCase()) + '</span>' +
+        '<span class="qdn-choix-nom">' + esc(self.joueur(cible)) + '</span>';
+      b.addEventListener('click', function() {
+        var h = self.historique[self.idx];
+        if (h.tranche !== null) return;
+        h.tranche = cible;
+        self.designations[cible]++;
+        self.debatsGagnes++;
+        self.phase = 'reveal';
+        self.render();
+      });
+      choix.appendChild(b);
+    });
+    bloc.appendChild(choix);
+    wrap.appendChild(bloc);
+
+    var retour = el('button', 'btn btn-ghost mt-4', esc(tg('quiDeNous.debatRetour', 'Finalement non, on n\'est pas d\'accord')));
+    retour.type = 'button';
+    retour.addEventListener('click', function() {
+      self.historique[self.idx].tranche = false;
+      self.phase = 'reveal';
+      self.render();
+    });
+    wrap.appendChild(retour);
+    wrap.appendChild(this.boutonArret());
+    this.container.appendChild(wrap);
+  };
+
   DuoVoteGame.prototype.boutonArret = function() {
     var self = this;
     var b = el('button', 'qdn-arret', esc(tg('quiDeNous.arreter', 'Arrêter la partie')));
@@ -5458,15 +5603,52 @@ var QuizEngine = (function() {
 
   DuoVoteGame.prototype.renderFin = function() {
     var self = this;
+    var ensemble = this.mode === 'ensemble';
+    // Les manches mises de cote ne comptent pas contre vous : le score se
+    // calcule sur celles ou quelqu'un a bien ete designe.
+    var jouees = this.historique.filter(function(h) { return h && !h.passe; }).length;
     var total = this.manches.length;
-    var pct = Math.round((this.accords / total) * 100);
+    var base = jouees || total;
+    var pct = Math.round((this.accords / base) * 100);
     var palier = pct >= 80 ? 4 : pct >= 60 ? 3 : pct >= 40 ? 2 : 1;
 
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+
+    // En mode « on choisit ensemble » il n'y a pas d'accord a mesurer : le
+    // resultat, c'est qui a ete designe le plus souvent.
+    if (ensemble) {
+      var d = this.designations;
+      var vainqueur = d[0] === d[1] ? -1 : (d[0] > d[1] ? 0 : 1);
+      wrap.appendChild(el('div', 'text-5xl mb-3', vainqueur === -1 ? '🤝' : '👑'));
+      wrap.appendChild(el('h2', 'text-2xl font-bold mb-4', esc(vainqueur === -1
+        ? tg('quiDeNous.finEgaliteTitre', 'Parfaitement à égalité')
+        : tg('quiDeNous.finVainqueurTitre', '{{nom}}, c\'est vous').replace('{{nom}}', this.joueur(vainqueur)))));
+
+      var duel = el('div', 'qdn-duel');
+      [0, 1].forEach(function(j) {
+        var c = el('div', 'qdn-duel-carte' + (vainqueur === j ? ' qdn-duel-carte--gagne' : ''));
+        c.innerHTML =
+          '<span class="qdn-duel-pastille qdn-duel-pastille--' + (j + 1) + '">' +
+            esc(self.joueur(j).charAt(0).toUpperCase()) + '</span>' +
+          '<span class="qdn-duel-nom">' + esc(self.joueur(j)) + '</span>' +
+          '<span class="qdn-duel-score">' + d[j] + '</span>';
+        duel.appendChild(c);
+      });
+      wrap.appendChild(duel);
+      wrap.appendChild(el('p', 'qdn-fin-detail', esc(
+        tg('quiDeNous.finEnsembleDetail', '{{n}} manches désignées sur {{total}}')
+          .replace('{{n}}', d[0] + d[1]).replace('{{total}}', total))));
+      this.finCommun(wrap, pct, tg('quiDeNous.finVerdictEnsemble', ''));
+      return;
+    }
+
     wrap.appendChild(el('div', 'text-5xl mb-3', ['🙈', '🤔', '💞', '🧠'][palier - 1]));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-4', esc(tg('quiDeNous.finTitre', 'Votre score d\'harmonie'))));
 
     // Anneau : le pourcentage se remplit tout seul a l'affichage.
+    // Le « % » etait dans un <small> separe du nombre : sur un ecran etroit il
+    // passait a la ligne tout seul. Il reste sur la meme ligne, quoi qu'il
+    // arrive.
     var anneau = el('div', 'qdn-anneau');
     var circ = 2 * Math.PI * 52;
     anneau.innerHTML =
@@ -5475,12 +5657,20 @@ var QuizEngine = (function() {
         '<circle class="qdn-anneau-jauge" cx="60" cy="60" r="52" stroke-dasharray="' + circ.toFixed(1) + '" ' +
           'stroke-dashoffset="' + circ.toFixed(1) + '"></circle>' +
       '</svg>' +
-      '<span class="qdn-anneau-valeur">' + pct + '<small>%</small></span>';
+      '<span class="qdn-anneau-valeur"><span class="qdn-anneau-nb">' + pct + '</span><small>%</small></span>';
     wrap.appendChild(anneau);
 
     wrap.appendChild(el('p', 'qdn-fin-detail', esc(
       tg('quiDeNous.finDetail', '{{n}} accords sur {{total}} manches')
-        .replace('{{n}}', this.accords).replace('{{total}}', total))));
+        .replace('{{n}}', this.accords).replace('{{total}}', jouees || total))));
+    if (jouees < total) {
+      wrap.appendChild(el('p', 'qdn-fin-passees', esc(
+        tg('quiDeNous.finPassees', '{{n}} manche(s) mise(s) de côté').replace('{{n}}', total - jouees))));
+    }
+    if (this.debatsGagnes) {
+      wrap.appendChild(el('p', 'qdn-fin-debats', '🏆 ' + esc(
+        tg('quiDeNous.finDebats', '{{n}} débat(s) tranché(s)').replace('{{n}}', this.debatsGagnes))));
+    }
     if (this.meilleureSerie >= 2) {
       wrap.appendChild(el('p', 'qdn-fin-serie', '🔥 ' + esc(
         tg('quiDeNous.finSerie', 'Meilleure série : {{n}} d\'affilée').replace('{{n}}', this.meilleureSerie))));
@@ -5491,14 +5681,30 @@ var QuizEngine = (function() {
     bloc.innerHTML = '<h3>' + esc(verdict) + '</h3><p>' + esc(tg('quiDeNous.palier' + palier + 'Texte', '')) + '</p>';
     wrap.appendChild(bloc);
 
-    // Recapitulatif : on relit les manches ou vous n'etiez pas d'accord.
-    var clashs = this.historique.filter(function(h) { return !h.accord; });
-    if (clashs.length) {
+    this.finCommun(wrap, pct, verdict);
+
+    // Le remplissage part apres le premier rendu, sinon il n'y a pas de transition.
+    var jauge = anneau.querySelector('.qdn-anneau-jauge');
+    this.attendre(120, function() {
+      jauge.style.strokeDashoffset = String(circ * (1 - pct / 100));
+    });
+  };
+
+  // Le bas de l'ecran de fin est le meme quel que soit le mode : ce dont il
+  // faut reparler, rejouer, partager.
+  DuoVoteGame.prototype.finCommun = function(wrap, pct, verdict) {
+    var self = this;
+
+    // Recapitulatif : les manches sans accord, et celles qu'on a mises de côté.
+    var aReparler = this.historique.filter(function(h) {
+      return h && (h.passe || (!h.accord && h.tranche === false));
+    });
+    if (aReparler.length) {
       var liste = el('div', 'qdn-recap');
       var lignes = '<h3 class="qdn-recap-titre">⚡ ' +
         esc(tg('quiDeNous.recapTitre', 'À reparler ensemble')) + '</h3><ul>';
       var amorce = tg('quiDeNous.amorce', 'Qui de vous deux…');
-      clashs.forEach(function(h) {
+      aReparler.forEach(function(h) {
         lignes += '<li><span aria-hidden="true">' + self.emojiTheme(h.theme) + '</span> ' +
           '<span><em class="qdn-recap-amorce">' + esc(amorce) + '</em> ' + esc(h.texte) + '</span></li>';
       });
@@ -5511,17 +5717,19 @@ var QuizEngine = (function() {
     rejouer.addEventListener('click', function() { self.nouvellePartie(); });
     wrap.appendChild(rejouer);
 
+    // On peut refaire une partie dans l'autre mode sans repasser par les prenoms.
+    var autreMode = el('button', 'btn btn-outline mb-2', esc(tg('quiDeNous.changerMode', 'Changer de façon de jouer')));
+    autreMode.type = 'button';
+    autreMode.addEventListener('click', function() {
+      self.stopper(); self.phase = 'mode'; self.render();
+    });
+    wrap.appendChild(autreMode);
+
     renderActionButtons(wrap, {
       share: { type: 'duo', pct: pct, verdict: verdict },
       restart: function() { self.stopper(); self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     });
     this.container.appendChild(wrap);
-
-    // Le remplissage part apres le premier rendu, sinon il n'y a pas de transition.
-    var jauge = anneau.querySelector('.qdn-anneau-jauge');
-    this.attendre(120, function() {
-      jauge.style.strokeDashoffset = String(circ * (1 - pct / 100));
-    });
     smoothScroll(wrap, 'center');
   };
 
