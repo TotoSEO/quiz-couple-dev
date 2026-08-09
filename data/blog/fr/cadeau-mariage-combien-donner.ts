@@ -124,7 +124,7 @@ const article: BlogArticleData = {
 <div class="blog-cta">
 <p class="blog-cta-titre">Vous organisez la cagnotte pour le groupe ?</p>
 <p class="blog-cta-texte">Créer une cagnotte commune prend deux minutes, chacun met ce qu'il veut de son côté, et les mariés reçoivent un seul montant sans savoir qui a mis quoi. C'est ce qui règle le plus de gêne pour le moins d'effort.</p>
-<a class="blog-cta-btn" href="https://www.onparticipe.fr/?ae=355&amp;aev=cadeau-mariage" target="_blank" rel="sponsored noopener">Créer une cagnotte de mariage</a>
+<a class="blog-cta-btn" href="https://c3po.link/Qkq3VF6M7a" target="_blank" rel="sponsored noopener">Créer une cagnotte de mariage</a>
 <p class="blog-cta-note">Gratuit pour l'organisateur &middot; Sans commission sur les participants</p>
 </div>`,
     },
@@ -180,7 +180,7 @@ const article: BlogArticleData = {
 <div class="blog-cta">
 <p class="blog-cta-titre">Vous vous y mettez à plusieurs ?</p>
 <p class="blog-cta-texte">Une cagnotte commune, une date limite, un montant indicatif, et chacun participe de son côté. Les mariés reçoivent un seul montant et un message du groupe.</p>
-<a class="blog-cta-btn" href="https://www.onparticipe.fr/?ae=355&amp;aev=cadeau-mariage" target="_blank" rel="sponsored noopener">Ouvrir une cagnotte</a>
+<a class="blog-cta-btn" href="https://c3po.link/Qkq3VF6M7a" target="_blank" rel="sponsored noopener">Ouvrir une cagnotte</a>
 <p class="blog-cta-note">Gratuit pour l'organisateur &middot; Sans commission sur les participants</p>
 </div>
 

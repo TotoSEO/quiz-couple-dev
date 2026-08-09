@@ -17,17 +17,46 @@
     if (closeIcon) closeIcon.classList.toggle('hidden');
   });
 
-  // Mobile accordions
-  var accordions = document.querySelectorAll('.mobile-accordion-trigger');
-  accordions.forEach(function(trigger) {
-    trigger.addEventListener('click', function() {
-      var content = this.nextElementSibling;
-      var isOpen = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', !isOpen);
-      if (content) {
-        content.classList.toggle('open');
-        content.classList.toggle('hidden');
-      }
+  // Accordeons mobiles. Deux formes coexistent : le declencheur classique,
+  // qui est un bouton pleine largeur, et le declencheur scinde des jeux, ou
+  // le libelle est un lien vers le hub et seule la fleche deplie la liste.
+  function basculer(bouton, contenu) {
+    var ouvert = bouton.getAttribute('aria-expanded') === 'true';
+    bouton.setAttribute('aria-expanded', ouvert ? 'false' : 'true');
+    if (contenu) {
+      contenu.classList.toggle('open');
+      contenu.classList.toggle('hidden');
+    }
+  }
+  document.querySelectorAll('.mobile-accordion-trigger').forEach(function(trigger) {
+    var contenu = trigger.nextElementSibling;
+    var fleche = trigger.querySelector('.mobile-trigger-fleche');
+    if (fleche) { fleche.addEventListener('click', function() { basculer(fleche, contenu); }); return; }
+    trigger.addEventListener('click', function() { basculer(trigger, contenu); });
+  });
+
+  // Menu des jeux en version bureau : le panneau s'ouvre au survol par le CSS,
+  // mais il faut aussi qu'un clic sur la fleche l'ouvre, sinon l'ecran tactile
+  // et le clavier n'ont aucun moyen d'y acceder.
+  document.querySelectorAll('.nav-dropdown--scinde').forEach(function(bloc) {
+    var fleche = bloc.querySelector('.nav-trigger-fleche');
+    if (!fleche) return;
+    fleche.addEventListener('click', function(e) {
+      e.preventDefault();
+      var ouvert = bloc.classList.toggle('est-ouvert');
+      fleche.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
+    });
+    // Un clic ailleurs, ou la touche d'echappement, referme le panneau.
+    document.addEventListener('click', function(e) {
+      if (bloc.contains(e.target)) return;
+      bloc.classList.remove('est-ouvert');
+      fleche.setAttribute('aria-expanded', 'false');
+    });
+    bloc.addEventListener('keydown', function(e) {
+      if (e.key !== 'Escape') return;
+      bloc.classList.remove('est-ouvert');
+      fleche.setAttribute('aria-expanded', 'false');
+      fleche.focus();
     });
   });
 

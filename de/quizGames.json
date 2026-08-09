@@ -528,6 +528,9 @@
     "palier3Titre": "Bereit zu verhandeln",
     "palier3Texte": "Ihr zahlt den Preis, wenn die Sache es wert ist. Eine gute Balance zwischen Lust und Verstand.",
     "palier4Titre": "Ihr sagt zu fast allem Ja",
-    "palier4Texte": "Solange es etwas zu gewinnen gibt, unterschreibt ihr. Das ist eine schöne Energie zu zweit, aber lest ab und zu doch mal das Kleingedruckte."
+    "palier4Texte": "Solange es etwas zu gewinnen gibt, unterschreibt ihr. Das ist eine schöne Energie zu zweit, aber lest ab und zu doch mal das Kleingedruckte.",
+    "bravoTitre": "Bravo, und danke!",
+    "bravoTexte": "Ihr habt alle Dilemmata beantwortet. Eure Stimmen zählen jetzt in den Prozentwerten, die die nächsten Paare sehen.",
+    "bravoSuite": "Probiert Was wäre dir lieber?"
   }
 }

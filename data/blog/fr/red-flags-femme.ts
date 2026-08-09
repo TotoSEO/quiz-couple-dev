@@ -45,7 +45,7 @@ const article: BlogArticleData = {
         {
           id: 'chaud-et-froid',
           title: "Elle souffle le chaud et le froid",
-          content: `<p>Une semaine elle est là, présente, affectueuse, entière. La suivante, distante, froide, absente sans explication. Et toi, tu passes ton temps à analyser ce que tu as fait de travers. Spoiler : souvent rien. Ce cycle crée une forme de dépendance, parce que le soulagement quand ça "revient au beau" est proportionnel à l'anxiété qu'il a fallu traverser. C'est le schéma de l'attachement anxieux, et une fois dedans, c'est difficile d'en sortir. Si tu reconnais ce pattern, l'article sur le <a href="/test-couple-toxique/">test couple toxique</a> peut t'aider à voir où tu en es.</p>`,
+          content: `<p>Une semaine elle est là, présente, affectueuse, entière. La suivante, distante, froide, absente sans explication. Et toi, tu passes ton temps à analyser ce que tu as fait de travers. Spoiler : souvent rien. Ce cycle crée une forme de dépendance, parce que le soulagement quand ça "revient au beau" est proportionnel à l'anxiété qu'il a fallu traverser. C'est le schéma de l'<a href="/test-style-attachement-couple/">attachement anxieux</a>, et une fois dedans, c'est difficile d'en sortir. Si tu reconnais ce pattern, l'article sur le <a href="/test-couple-toxique/">test couple toxique</a> peut t'aider à voir où tu en es.</p>`,
         },
         {
           id: 'son-humeur-ta-responsabilite',
