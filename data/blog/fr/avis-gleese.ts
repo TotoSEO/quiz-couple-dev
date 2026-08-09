@@ -15,12 +15,7 @@ const article: BlogArticleData = {
 
 <p>Et puis j'ai créé un profil. Et là, <strong>il s'est passé un truc que je n'avais pas anticipé</strong> : il ne s'est rien passé. Pas de déferlante, pas de harcèlement, pas de bots. Juste une interface propre, quelques messages, et surtout un fonctionnement qui, visiblement, a été pensé par des gens qui savent exactement ce qui ne va pas ailleurs.</p>
 
-<p>Alors voilà mon avis sur Gleese, après l'avoir vraiment utilisé. Ce que j'ai aimé, ce qui m'a agacée, et surtout <strong>à qui je le conseille et à qui je ne le conseille pas</strong>. Parce que ce n'est clairement pas fait pour tout le monde.</p>
-
-<aside class="blog-tip-box">
-<p class="blog-tip-box-title">🔍 Transparence</p>
-<p>Cet article contient des liens partenaires. Si vous vous inscrivez via l'un d'eux, on touche une commission, sans que ça vous coûte un centime de plus. Ça ne change rien à ce qu'on écrit : les critiques plus bas sont les nôtres, et on les a laissées telles quelles.</p>
-</aside>`,
+<p>Alors voilà mon avis sur Gleese, après l'avoir vraiment utilisé. Ce que j'ai aimé, ce qui m'a agacée, et surtout <strong>à qui je le conseille et à qui je ne le conseille pas</strong>. Parce que ce n'est clairement pas fait pour tout le monde.</p>`,
   quickSummary: [
     `Gleese est un réseau libertin français lancé en octobre 2024, donc récent, et ça se sent dans les deux sens.`,
     `Le filtre anti-harcèlement (un seul message tant que la personne n'a pas répondu) change complètement l'ambiance côté féminin.`,
@@ -109,7 +104,7 @@ const article: BlogArticleData = {
 <p class="blog-cta-titre">Envie de vous faire votre propre idée ?</p>
 <p class="blog-cta-texte">L'inscription prend deux minutes, sans carte bancaire. Vous pouvez déjà voir s'il y a du monde autour de chez vous avant de décider quoi que ce soit.</p>
 <a class="blog-cta-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored noopener">Créer mon profil gratuitement</a>
-<p class="blog-cta-note">Lien partenaire &middot; Inscription gratuite &middot; Réservé aux majeurs</p>
+<p class="blog-cta-note">Inscription gratuite &middot; Sans carte bancaire &middot; Réservé aux majeurs</p>
 </div>`,
     },
     {
@@ -191,7 +186,7 @@ const article: BlogArticleData = {
 <p class="blog-cta-titre">Testez avant de payer quoi que ce soit</p>
 <p class="blog-cta-texte">La version gratuite suffit pour juger de l'ambiance et du nombre de profils dans votre région. Aucune carte bancaire n'est demandée à l'inscription.</p>
 <a class="blog-cta-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored noopener">Essayer Gleese gratuitement</a>
-<p class="blog-cta-note">Lien partenaire &middot; Inscription gratuite &middot; Réservé aux majeurs</p>
+<p class="blog-cta-note">Inscription gratuite &middot; Sans carte bancaire &middot; Réservé aux majeurs</p>
 </div>`,
     },
     {
@@ -288,8 +283,10 @@ const article: BlogArticleData = {
 <p class="blog-cta-titre">Notre recommandation, en un clic</p>
 <p class="blog-cta-texte">Si le libertinage vous intrigue à deux et que vous cherchez un endroit où avancer sans pression, c'est par là que je commencerais.</p>
 <a class="blog-cta-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored noopener">Découvrir Gleese</a>
-<p class="blog-cta-note">Lien partenaire &middot; Inscription gratuite &middot; Réservé aux majeurs</p>
-</div>`,
+<p class="blog-cta-note">Inscription gratuite &middot; Sans carte bancaire &middot; Réservé aux majeurs</p>
+</div>
+
+<p class="blog-affil-mention">Nous pouvons percevoir des commissions d'affiliation avec Gleese.</p>`,
     },
   ],
 };

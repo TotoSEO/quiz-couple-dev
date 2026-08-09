@@ -1319,6 +1319,18 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .blog-cta a.blog-cta-btn:hover::after { transform: none; }
 }
 
+/* Mention de partenariat, en pied d'article. Discrète mais lisible : elle
+   n'a pas à interrompre la lecture, seulement à être là.
+   Le sélecteur est qualifié parce que .blog-article p impose 1,08rem à tous
+   les paragraphes de l'article et gagnerait sur une classe seule. */
+.blog-article p.blog-affil-mention,
+.blog-affil-mention {
+  margin: 2.5rem 0 0; padding-top: 1rem;
+  border-top: 1px solid hsl(var(--border));
+  font-size: .78rem; line-height: 1.5; text-align: center;
+  color: hsl(var(--muted-foreground) / .85);
+}
+
 /* ── Verdict en deux colonnes : pour qui, pas pour qui ───── */
 .blog-verdict {
   display: grid; gap: 1rem; margin: 1.75rem 0;
