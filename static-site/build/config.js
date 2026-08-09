@@ -274,6 +274,16 @@ export const BLOG_ARTICLES = [
     publishedAt: '2026-02-21',
   },
   {
+    internalSlug: 'avis-gleese',
+    category: 'apps-rencontre',
+    frOnly: true,
+    featuredImage: '/blog/avis-gleese.webp',
+    slugs: {
+      fr: 'avis-gleese',
+    },
+    publishedAt: '2026-08-09',
+  },
+  {
     internalSlug: 'avis-tinder',
     category: 'apps-rencontre',
     slugs: {
