@@ -138,10 +138,9 @@
     "nextQuestionBtn": "Next question!",
     "toAnswer": "must answer!",
     "itsYourTurnToGuess": "it's your turn to guess!",
-    "sayAnswerOutLoud": "Say your answer out loud,",
-    "validates": "validates!",
-    "found": "got it right!",
-    "wasMistaken": "got it wrong!",
+    "roleInstruction": "{{guesser}}, say your answer out loud, {{target}} confirms!",
+    "guesserFound": "{{name}} got it right!",
+    "guesserMissed": "{{name}} got it wrong!",
     "voteInstruction": "Vote together! Who fits this description best?",
     "nobody": "Nobody",
     "nextQuestionTransition": "Next question!",
@@ -158,7 +157,10 @@
     "stronglyAgree": "Strongly agree",
     "discussTogether": "💬 Talk your answers through together!",
     "question": "Question",
-    "skipQuestion": "Skip this question"
+    "skipQuestion": "Skip this question",
+    "roleGuess": "Has to guess",
+    "roleValidate": "Confirms",
+    "aboutPerson": "Question about"
   },
   "result": {
     "identicalAnswers": "identical answers",
