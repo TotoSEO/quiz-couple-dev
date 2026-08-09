@@ -5821,6 +5821,358 @@ var QuizEngine = (function() {
     smoothScroll(wrap, 'center');
   };
 
+  // ═══════════════════════════════════════════════════════════
+  // DILEMMES DE COUPLE - on accepte ou on refuse un marche
+  // Cent situations « tel avantage MAIS telle contrepartie », tirees dans un
+  // ordre different a chaque partie. Le couple repond OK ou PAS OK, puis
+  // decouvre comment les autres couples ont tranche : deux camps, un nombre
+  // de voix et un pourcentage de chaque cote.
+  //
+  // A ne pas confondre avec « tu preferes », qui fait choisir entre deux
+  // options : ici il n'y a qu'une proposition, on la prend ou on la laisse.
+  // ═══════════════════════════════════════════════════════════
+  var DIL_OK = 'ok', DIL_NON = 'pasok';
+  var DIL_CLE_VOTES = 'dilemmes-votes';     // ce que ce navigateur a deja vote
+
+  function DilemmeGame(config) {
+    this.container = config.container;
+    this.dilemmes = shuffleArray(config.dilemmes.slice());
+    this.prefix = config.prefix || 'dilemmes';
+    this.lang = config.lang || 'fr';
+    this.idx = 0;
+    this.choix = null;          // le vote du tour en cours
+    this.compte = null;         // { ok: n, pasok: n } renvoye par le serveur
+    this.envoiEnCours = false;
+    this.historique = [];
+    this.totaux = null;         // comptes de tous les dilemmes, charges une fois
+    this.dejaVotes = lireVotesLocaux();
+    this.phase = 'intro';
+    this.render();
+  }
+
+  // Les votes deja emis par ce navigateur. Ils servent a deux choses : ne pas
+  // recompter quelqu'un qui recharge la page, et lui remontrer son propre
+  // choix quand il retombe sur un dilemme qu'il a deja tranche.
+  function lireVotesLocaux() {
+    try { return JSON.parse(localStorage.getItem(DIL_CLE_VOTES) || '{}') || {}; }
+    catch (e) { return {}; }
+  }
+  function ecrireVoteLocal(id, choix) {
+    try {
+      var v = lireVotesLocaux(); v[id] = choix;
+      localStorage.setItem(DIL_CLE_VOTES, JSON.stringify(v));
+    } catch (e) {}
+  }
+
+  // Identifiant de votant. Le localStorage seul ne resiste pas a une fenetre
+  // privee, alors on le combine a l'adresse IP vue par le serveur, hachee
+  // avant d'etre envoyee pour qu'aucune adresse ne soit stockee en clair.
+  // C'est la contrainte d'unicite en base qui fait foi, pas ce fichier.
+  var _votant = null;
+  function identifiantVotant() {
+    if (_votant) return Promise.resolve(_votant);
+    var local;
+    try {
+      local = localStorage.getItem('dilemmes-votant');
+      if (!local) {
+        local = (Date.now().toString(36) + Math.random().toString(36).slice(2, 10));
+        localStorage.setItem('dilemmes-votant', local);
+      }
+    } catch (e) { local = 'x' + Math.random().toString(36).slice(2, 10); }
+
+    return fetch(SUPABASE_URL + '/functions/v1/get-client-ip', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json' }
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { return d && d.ip ? d.ip : local; })
+      .catch(function () { return local; })
+      .then(hacher)
+      .then(function (h) { _votant = h; return h; });
+  }
+  function hacher(texte) {
+    var sel = 'quiz-couple-dilemmes:';
+    if (!(window.crypto && window.crypto.subtle && window.TextEncoder)) {
+      // Repli sans SubtleCrypto (contexte non securise) : un hachage court
+      // suffit, il ne protege rien d'autre que la lisibilite.
+      var h = 0, s = sel + texte;
+      for (var i = 0; i < s.length; i++) { h = ((h << 5) - h + s.charCodeAt(i)) | 0; }
+      return Promise.resolve('f' + (h >>> 0).toString(36));
+    }
+    return window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(sel + texte))
+      .then(function (buf) {
+        var o = '', v = new Uint8Array(buf);
+        for (var i = 0; i < 16; i++) o += ('0' + v[i].toString(16)).slice(-2);
+        return o;
+      });
+  }
+
+  DilemmeGame.prototype.render = function () {
+    this.container.innerHTML = '';
+    if (this.phase === 'intro') this.renderIntro();
+    else if (this.phase === 'vote') this.renderVote();
+    else if (this.phase === 'resultat') this.renderResultat();
+    else if (this.phase === 'fin') this.renderFin();
+  };
+
+  DilemmeGame.prototype.tg = function (cle, repli) { return tg('dilemme.' + cle, repli); };
+
+  DilemmeGame.prototype.renderIntro = function () {
+    var self = this;
+    var ecran = ecranDepart({
+      icone: '⚖️',
+      titre: this.tg('introTitre', 'Prêts à trancher ?'),
+      desc: this.tg('introTexte', 'Cent situations à prendre ou à laisser, à deux. Répondez ensemble, puis découvrez ce que les autres couples ont choisi.'),
+      meta: '⚖️ ' + this.dilemmes.length + ' ' + this.tg('metaDilemmes', 'dilemmes') + ' &bull; ⏱ ' + this.tg('metaDuree', 'sans limite'),
+      bouton: this.tg('commencer', 'Premier dilemme'),
+      onStart: function () { self.phase = 'vote'; self.render(); }
+    });
+    this.container.appendChild(ecran.wrap);
+    // Les totaux servent a afficher les deux camps sans attendre apres chaque
+    // vote : on les charge une seule fois, pendant que l'ecran d'intro est la.
+    this.chargerTotaux();
+  };
+
+  DilemmeGame.prototype.chargerTotaux = function () {
+    var self = this;
+    if (this._chargement) return this._chargement;
+    this._chargement = fetch(SUPABASE_URL + '/rest/v1/rpc/get_dilemme_counts', {
+      method: 'POST',
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json' },
+      body: '{}'
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (lignes) {
+        var t = {};
+        if (Array.isArray(lignes)) {
+          lignes.forEach(function (l) {
+            t[l.dilemme_id] = { ok: +l.ok || 0, pasok: +l.pasok || 0 };
+          });
+        }
+        self.totaux = t;
+        return t;
+      })
+      .catch(function () { self.totaux = {}; return {}; });
+    return this._chargement;
+  };
+
+  DilemmeGame.prototype.dilemmeCourant = function () { return this.dilemmes[this.idx]; };
+
+  // La carte, identique sur l'ecran de vote et sur celui du resultat : la
+  // situation, le « MAIS » bien detache, puis la contrepartie.
+  DilemmeGame.prototype.carte = function (d) {
+    var c = el('div', 'dil-carte');
+    c.appendChild(el('p', 'dil-haut', esc(d.haut)));
+    c.appendChild(el('span', 'dil-mais', esc(this.tg('mais', 'MAIS'))));
+    c.appendChild(el('p', 'dil-bas', esc(d.bas)));
+    return c;
+  };
+
+  DilemmeGame.prototype.barreProgression = function () {
+    var b = el('div', 'dil-progres');
+    b.innerHTML = '<span class="dil-progres-num">' + (this.idx + 1) + '</span>' +
+      '<span class="dil-progres-tot">/ ' + this.dilemmes.length + '</span>';
+    return b;
+  };
+
+  DilemmeGame.prototype.renderVote = function () {
+    var self = this;
+    var d = this.dilemmeCourant();
+    var wrap = el('div', 'quiz-engine dil-jeu quiz-question-enter');
+    wrap.appendChild(this.barreProgression());
+    wrap.appendChild(this.carte(d));
+
+    // Un dilemme deja tranche depuis ce navigateur : on montre directement le
+    // resultat plutot que de laisser voter une deuxieme fois.
+    if (this.dejaVotes[d.id]) {
+      this.choix = this.dejaVotes[d.id];
+      this.phase = 'resultat';
+      this.render();
+      return;
+    }
+
+    wrap.appendChild(el('p', 'dil-consigne', esc(this.tg('consigne', 'Décidez ensemble, à voix haute.'))));
+
+    var choix = el('div', 'dil-choix');
+    [[DIL_OK, this.tg('ok', 'OK'), '👍'], [DIL_NON, this.tg('pasok', 'PAS OK'), '👎']].forEach(function (c) {
+      var b = el('button', 'dil-choix-btn dil-choix-btn--' + c[0]);
+      b.type = 'button';
+      b.innerHTML = '<span class="dil-choix-emoji">' + c[2] + '</span><span class="dil-choix-txt">' + esc(c[1]) + '</span>';
+      b.addEventListener('click', function () { self.voter(c[0], b); });
+      choix.appendChild(b);
+    });
+    wrap.appendChild(choix);
+
+    var passer = el('button', 'dil-passer', esc(this.tg('passer', 'Passer ce dilemme')));
+    passer.type = 'button';
+    passer.addEventListener('click', function () { self.suivant(); });
+    wrap.appendChild(passer);
+
+    this.container.appendChild(wrap);
+  };
+
+  DilemmeGame.prototype.voter = function (choix, bouton) {
+    var self = this;
+    if (this.envoiEnCours) return;
+    this.envoiEnCours = true;
+    var d = this.dilemmeCourant();
+    if (bouton) bouton.classList.add('est-choisi');
+    this.choix = choix;
+    this.historique.push({ id: d.id, choix: choix });
+    ecrireVoteLocal(d.id, choix);
+    this.dejaVotes[d.id] = choix;
+
+    // On compte le vote localement tout de suite : l'ecran de resultat ne doit
+    // pas attendre le reseau, et un envoi qui echoue ne doit pas bloquer le jeu.
+    if (!this.totaux) this.totaux = {};
+    if (!this.totaux[d.id]) this.totaux[d.id] = { ok: 0, pasok: 0 };
+    this.totaux[d.id][choix]++;
+
+    identifiantVotant().then(function (votant) {
+      return fetch(SUPABASE_URL + '/rest/v1/dilemme_votes', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json', 'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ dilemme_id: d.id, choix: choix, lang: self.lang, votant: votant })
+      });
+    }).catch(function () {});
+
+    setTimeout(function () {
+      self.envoiEnCours = false;
+      self.phase = 'resultat';
+      self.render();
+    }, 320);
+  };
+
+  DilemmeGame.prototype.renderResultat = function () {
+    var self = this;
+    var d = this.dilemmeCourant();
+    var c = (this.totaux && this.totaux[d.id]) || { ok: 0, pasok: 0 };
+    var total = c.ok + c.pasok;
+    // Sans aucun vote connu, le sien compte quand meme : la barre ne doit
+    // jamais s'afficher vide sous les yeux de celui qui vient de voter.
+    if (total === 0) { c = { ok: this.choix === DIL_OK ? 1 : 0, pasok: this.choix === DIL_NON ? 1 : 0 }; total = 1; }
+    var pctOk = Math.round((c.ok / total) * 100);
+    var pctNon = 100 - pctOk;
+
+    var wrap = el('div', 'quiz-engine dil-jeu dil-jeu--resultat quiz-question-enter');
+    wrap.appendChild(this.barreProgression());
+    wrap.appendChild(this.carte(d));
+
+    wrap.appendChild(el('p', 'dil-votre-choix',
+      esc(this.tg('votreReponse', 'Votre réponse')) + ' : <strong>' +
+      esc(this.choix === DIL_OK ? this.tg('ok', 'OK') : this.tg('pasok', 'PAS OK')) + '</strong>'));
+
+    // Les deux camps. Une seule barre coupee en deux, chaque cote portant son
+    // nombre de voix et son pourcentage : on voit d'un coup d'oeil de quel
+    // cote penche la majorite, et si on est avec elle.
+    var camps = el('div', 'dil-camps');
+    camps.innerHTML =
+      '<div class="dil-camp dil-camp--ok' + (this.choix === DIL_OK ? ' est-le-votre' : '') + '">' +
+        '<span class="dil-camp-lbl">👍 ' + esc(this.tg('ok', 'OK')) + '</span>' +
+        '<span class="dil-camp-pct">' + pctOk + '%</span>' +
+        '<span class="dil-camp-nb">' + fmtNombre(c.ok, this.lang) + ' ' + esc(c.ok === 1 ? this.tg('voix1', 'voix') : this.tg('voix', 'voix')) + '</span>' +
+      '</div>' +
+      '<div class="dil-camp dil-camp--pasok' + (this.choix === DIL_NON ? ' est-le-votre' : '') + '">' +
+        '<span class="dil-camp-lbl">👎 ' + esc(this.tg('pasok', 'PAS OK')) + '</span>' +
+        '<span class="dil-camp-pct">' + pctNon + '%</span>' +
+        '<span class="dil-camp-nb">' + fmtNombre(c.pasok, this.lang) + ' ' + esc(c.pasok === 1 ? this.tg('voix1', 'voix') : this.tg('voix', 'voix')) + '</span>' +
+      '</div>';
+    wrap.appendChild(camps);
+
+    var barre = el('div', 'dil-barre');
+    barre.innerHTML = '<div class="dil-barre-ok" style="width:0%"></div><div class="dil-barre-pasok" style="width:0%"></div>';
+    wrap.appendChild(barre);
+
+    // Un seul votant, c'est le sien : la phrase doit rester au singulier.
+    var phraseTotal = total === 1
+      ? this.tg('surTotal1', 'Vous êtes le premier couple à trancher ce dilemme')
+      : this.tg('surTotal', '{{n}} couples ont tranché ce dilemme').replace('{{n}}', fmtNombre(total, this.lang));
+    wrap.appendChild(el('p', 'dil-total', esc(phraseTotal)));
+
+    var suite = el('div', 'dil-suite');
+    var suivant = el('button', 'btn btn-cta dil-suivant',
+      esc(this.idx + 1 >= this.dilemmes.length ? this.tg('voirBilan', 'Voir notre bilan') : this.tg('suivant', 'Dilemme suivant')));
+    suivant.type = 'button';
+    suivant.addEventListener('click', function () { self.suivant(); });
+    suite.appendChild(suivant);
+    if (this.historique.length >= 3 && this.idx + 1 < this.dilemmes.length) {
+      var arret = el('button', 'dil-arret', esc(this.tg('arreter', 'Arrêter et voir notre bilan')));
+      arret.type = 'button';
+      arret.addEventListener('click', function () { self.phase = 'fin'; self.render(); });
+      suite.appendChild(arret);
+    }
+    wrap.appendChild(suite);
+
+    this.container.appendChild(wrap);
+    // Le remplissage part apres le premier rendu, sinon il n'y a pas d'animation.
+    setTimeout(function () {
+      var o = barre.querySelector('.dil-barre-ok'), p = barre.querySelector('.dil-barre-pasok');
+      if (o) o.style.width = pctOk + '%';
+      if (p) p.style.width = pctNon + '%';
+    }, 60);
+  };
+
+  DilemmeGame.prototype.suivant = function () {
+    if (this.idx + 1 >= this.dilemmes.length) { this.phase = 'fin'; this.render(); return; }
+    this.idx++;
+    this.choix = null;
+    this.phase = 'vote';
+    this.render();
+    smoothScroll(this.container, 'start');
+  };
+
+  DilemmeGame.prototype.renderFin = function () {
+    var self = this;
+    var n = this.historique.length;
+    var oks = this.historique.filter(function (h) { return h.choix === DIL_OK; }).length;
+    var pct = n ? Math.round((oks / n) * 100) : 0;
+    var palier = pct >= 75 ? 4 : pct >= 50 ? 3 : pct >= 25 ? 2 : 1;
+
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    var resultat = el('div', 'quiz-reveal-enter');
+    var entete = el('div', 'qr-entete');
+    var anneau = el('div', 'qr-score');
+    anneau.innerHTML = renderScoreRing(pct);
+    entete.appendChild(anneau);
+    entete.appendChild(el('p', 'qr-score-label',
+      esc(this.tg('bilanDetail', '{{ok}} OK sur {{n}} dilemmes tranchés')
+        .replace('{{ok}}', oks).replace('{{n}}', n))));
+    resultat.appendChild(entete);
+    resultat.appendChild(el('h3', 'qr-title', esc(this.tg('palier' + palier + 'Titre', ''))));
+    resultat.appendChild(el('p', 'qr-desc', esc(this.tg('palier' + palier + 'Texte', ''))));
+
+    var avis = el('div', 'quiz-reveal-enter');
+    avis.appendChild(pcReviewForm(this.lang));
+    var quizEl = document.getElementById('quiz-engine');
+    var suite = el('div', 'qr-right quiz-reveal-enter');
+    renderRelatedQuizzes(suite, quizEl ? quizEl.dataset.quiz : '', this.lang);
+
+    dispositionResultat(wrap, {
+      resultat: resultat,
+      actions: zoneActions({
+        share: { type: 'solo', score: oks, total: n, pct: pct, verdict: this.tg('palier' + palier + 'Titre', '') },
+        restart: function () {
+          self.dilemmes = shuffleArray(self.dilemmes);
+          self.idx = 0; self.choix = null; self.historique = [];
+          self.phase = 'intro'; self.render(); smoothScroll(self.container, 'start');
+        }
+      }),
+      avis: avis,
+      suite: suite
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  // Un nombre lisible : 1 240 plutot que 1240.
+  function fmtNombre(n, lang) {
+    try { return Number(n).toLocaleString(lang === 'en' ? 'en-US' : lang); }
+    catch (e) { return String(n); }
+  }
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -5845,6 +6197,7 @@ var QuizEngine = (function() {
     WheelGame: WheelGame,
     BoardGame: BoardGame,
     DuoVoteGame: DuoVoteGame,
+    DilemmeGame: DilemmeGame,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,
