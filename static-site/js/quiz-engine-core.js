@@ -778,49 +778,84 @@ var QuizEngine = (function() {
   //   gauche = le resultat deja construit + avis sur CE quiz
   //   droite = "Poursuivez avec d'autres tests / quiz"
   //   pied   = UN partage + actions (recommencer, autres questions, joueurs)
+  // ─── Disposition commune des ecrans de resultat ───────────
+  // L'ordre du DOM etait : resultat + formulaire d'avis, puis les autres quiz,
+  // puis seulement le partage et le rejouer. Sur telephone, ou tout s'empile,
+  // on demandait donc une note avant meme d'avoir lu son verdict, et les deux
+  // actions qu'on veut vraiment faire apres un resultat arrivaient tout en bas,
+  // derriere une liste de six autres tests.
+  //
+  // Un resultat se lit maintenant toujours dans le meme ordre : ce que j'ai
+  // obtenu, ce que je peux en faire, ce que j'en pense, ou aller ensuite. Le
+  // DOM suit cet ordre (donc le telephone aussi) et la mise en colonnes sur
+  // grand ecran se fait par zones, sans reordonner quoi que ce soit.
+  function dispositionResultat(wrap, zones) {
+    wrap.classList.add('qr-plan');
+    ['resultat', 'actions', 'avis', 'suite'].forEach(function(nom) {
+      var z = zones[nom];
+      if (!z) return;
+      z.classList.add('qr-zone', 'qr-zone--' + nom);
+      wrap.appendChild(z);
+    });
+    if (zones.resultat) alignerLaProse(zones.resultat);
+  }
+
+  // Les verdicts sont centres, ce qui va tres bien a « Un couple tres solide »
+  // et beaucoup moins a un paragraphe de douze lignes sur un telephone : le
+  // bord gauche devient irregulier et l'oeil perd la ligne suivante. On ne
+  // change donc l'alignement que des paragraphes reellement longs, quel que
+  // soit le moteur qui les a produits.
+  var PROSE_MIN = 160;
+  function alignerLaProse(zone) {
+    var blocs = zone.querySelectorAll('p, li');
+    for (var i = 0; i < blocs.length; i++) {
+      if ((blocs[i].textContent || '').trim().length >= PROSE_MIN) blocs[i].classList.add('qr-prose');
+    }
+  }
+
+  // Les actions d'apres-resultat : partager en premier, puis rejouer.
+  function zoneActions(opts) {
+    var quizEl = document.getElementById('quiz-engine');
+    var zone = el('div', 'quiz-reveal-enter');
+    renderShareButton(zone, opts.share || opts.shareText);
+
+    var actions = el('div', 'result-actions-grid');
+    var hasPool = quizEl && quizEl.dataset.hasPool === '1';
+    function bouton(icone, libelle, action, principal) {
+      var b = el('button', 'result-action-btn' + (principal ? ' result-action-btn--primary' : ''));
+      b.type = 'button';
+      b.innerHTML = '<span class="result-action-icon">' + icone + '</span>' +
+        '<span class="result-action-label">' + esc(libelle) + '</span>';
+      b.addEventListener('click', action);
+      actions.appendChild(b);
+    }
+    if (opts.newQuestions && hasPool) {
+      bouton('🎲', tg('result.restartOtherQuestions', 'Autres questions'), opts.newQuestions, true);
+    }
+    if (opts.restart) bouton('🔄', tg('result.restartFromBeginning', 'Recommencer'), opts.restart);
+    if (opts.changePlayers) bouton('👥', tg('result.changePlayers', 'Changer de joueurs'), opts.changePlayers);
+    if (actions.childNodes.length) zone.appendChild(actions);
+    return zone;
+  }
+
   function renderActionButtons(wrap, opts) {
     var quizEl = document.getElementById('quiz-engine');
     var currentKey = quizEl ? quizEl.dataset.quiz : '';
     var currentLang = quizEl ? (quizEl.dataset.lang || 'fr') : 'fr';
 
-    // Colonne gauche : contenu deja dans wrap + formulaire d'avis
-    var left = el('div', 'qr-col qr-left-wide quiz-reveal-enter');
-    while (wrap.firstChild) left.appendChild(wrap.firstChild);
-    left.appendChild(pcReviewForm(currentLang));
+    // Ce que le moteur a déjà produit devient la zone « résultat ».
+    var resultat = el('div', 'quiz-reveal-enter');
+    while (wrap.firstChild) resultat.appendChild(wrap.firstChild);
 
-    // Colonne droite : Poursuivez
-    var right = el('div', 'qr-col qr-right quiz-reveal-enter');
-    renderRelatedQuizzes(right, currentKey, currentLang);
+    var avis = el('div', 'quiz-reveal-enter');
+    avis.appendChild(pcReviewForm(currentLang));
 
-    // Pied : partage + actions
-    var footer = el('div', 'qr-footer');
-    renderShareButton(footer, opts.share || opts.shareText);
-    var actions = el('div', 'result-actions-grid');
-    var hasPool = quizEl && quizEl.dataset.hasPool === '1';
-    if (opts.newQuestions && hasPool) {
-      var newQBtn = el('button', 'result-action-btn result-action-btn--primary');
-      newQBtn.innerHTML = '<span class="result-action-icon">🎲</span><span class="result-action-label">' + esc(tg('result.restartOtherQuestions', 'Autres questions')) + '</span>';
-      newQBtn.addEventListener('click', opts.newQuestions);
-      actions.appendChild(newQBtn);
-    }
-    if (opts.restart) {
-      var restartBtn = el('button', 'result-action-btn');
-      restartBtn.innerHTML = '<span class="result-action-icon">🔄</span><span class="result-action-label">' + esc(tg('result.restartFromBeginning', 'Recommencer')) + '</span>';
-      restartBtn.addEventListener('click', opts.restart);
-      actions.appendChild(restartBtn);
-    }
-    if (opts.changePlayers) {
-      var changeBtn = el('button', 'result-action-btn');
-      changeBtn.innerHTML = '<span class="result-action-icon">👥</span><span class="result-action-label">' + esc(tg('result.changePlayers', 'Changer de joueurs')) + '</span>';
-      changeBtn.addEventListener('click', opts.changePlayers);
-      actions.appendChild(changeBtn);
-    }
-    footer.appendChild(actions);
+    var suite = el('div', 'qr-right quiz-reveal-enter');
+    renderRelatedQuizzes(suite, currentKey, currentLang);
 
-    wrap.classList.add('quiz-result-2col', 'qr-decorated');
-    wrap.appendChild(left);
-    wrap.appendChild(right);
-    wrap.appendChild(footer);
+    dispositionResultat(wrap, {
+      resultat: resultat, actions: zoneActions(opts), avis: avis, suite: suite
+    });
   }
 
   function renderGenderButtons(container, selectedGender, onSelect) {
@@ -1080,7 +1115,7 @@ var QuizEngine = (function() {
 
   SoloTest.prototype.renderResults = function() {
     var self = this;
-    var wrap = el('div', 'quiz-engine quiz-result-card quiz-result-2col');
+    var wrap = el('div', 'quiz-engine quiz-result-card');
     var result = null;
     for (var i = 0; i < this.results.length; i++) {
       var r = this.results[i];
@@ -1093,38 +1128,45 @@ var QuizEngine = (function() {
 
     var quizEl = document.getElementById('quiz-engine');
 
-    // ── Colonne GAUCHE : score + avis sur CE test ──
-    var left = el('div', 'qr-col qr-left quiz-reveal-enter');
+    // ── Le résultat : le score, puis tout de suite ce qu'il veut dire.
+    // L'anneau et le verdict vivaient dans deux colonnes différentes : sur
+    // téléphone, où elles s'empilent, le formulaire d'avis de la colonne
+    // gauche venait donc s'intercaler entre le score et son explication.
+    var resultat = el('div', 'quiz-reveal-enter');
+    var entete = el('div', 'qr-entete');
     var scoreDiv = el('div', 'qr-score');
     scoreDiv.innerHTML = renderScoreRing(pct);
-    left.appendChild(scoreDiv);
-    left.appendChild(el('p', 'qr-score-label', this.totalScore + '/' + maxScore + ' ' + esc(tg('meta.pointsWord', 'points'))));
-    left.appendChild(pcReviewForm(this.lang));
-
-    // ── Colonne DROITE : explication / conseil + Poursuivez ──
-    var right = el('div', 'qr-col qr-right quiz-reveal-enter');
+    entete.appendChild(scoreDiv);
+    entete.appendChild(el('p', 'qr-score-label', this.totalScore + '/' + maxScore + ' ' + esc(tg('meta.pointsWord', 'points'))));
+    resultat.appendChild(entete);
     if (result) {
-      right.appendChild(el('h3', 'qr-title', esc(result.title)));
-      right.appendChild(el('p', 'qr-desc', result.description));
+      resultat.appendChild(el('h3', 'qr-title', esc(result.title)));
+      resultat.appendChild(el('p', 'qr-desc', result.description));
       if (result.advice) {
         var advice = el('div', 'qr-advice');
         advice.innerHTML = '<strong>' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
-        right.appendChild(advice);
+        resultat.appendChild(advice);
       }
     }
-    renderRelatedQuizzes(right, quizEl ? quizEl.dataset.quiz : '', quizEl ? (quizEl.dataset.lang || 'fr') : 'fr');
 
-    // ── Pied pleine largeur : UN partage + recommencer ──
-    var footer = el('div', 'qr-footer');
-    renderShareButton(footer, { type: 'solo', score: this.totalScore, total: maxScore, pct: pct, verdict: result ? result.title : '' });
-    var restartBtn = el('button', 'result-action-btn');
-    restartBtn.innerHTML = '<span class="result-action-icon">🔄</span><span class="result-action-label">' + esc(tg('result.restartFromBeginning', 'Recommencer')) + '</span>';
-    restartBtn.addEventListener('click', function() { if (self.hasLocalStorage) { try { localStorage.removeItem('quiz-' + self.prefix); } catch(e) {} } self.phase = 'intro'; self.render(); });
-    footer.appendChild(restartBtn);
+    var avis = el('div', 'quiz-reveal-enter');
+    avis.appendChild(pcReviewForm(this.lang));
 
-    wrap.appendChild(left);
-    wrap.appendChild(right);
-    wrap.appendChild(footer);
+    var suite = el('div', 'qr-right quiz-reveal-enter');
+    renderRelatedQuizzes(suite, quizEl ? quizEl.dataset.quiz : '', quizEl ? (quizEl.dataset.lang || 'fr') : 'fr');
+
+    dispositionResultat(wrap, {
+      resultat: resultat,
+      actions: zoneActions({
+        share: { type: 'solo', score: this.totalScore, total: maxScore, pct: pct, verdict: result ? result.title : '' },
+        restart: function() {
+          if (self.hasLocalStorage) { try { localStorage.removeItem('quiz-' + self.prefix); } catch (e) {} }
+          self.phase = 'intro'; self.render();
+        }
+      }),
+      avis: avis,
+      suite: suite
+    });
     this.container.appendChild(wrap);
     document.body.classList.add('quiz-has-result');
     smoothScroll(wrap, 'center');
