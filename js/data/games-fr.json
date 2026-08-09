@@ -529,6 +529,9 @@
     "palier4Titre": "Vous dites oui à presque tout",
     "palier4Texte": "Tant qu'il y a quelque chose à gagner, vous signez. C'est une belle énergie à deux, mais relisez quand même les petites lignes de temps en temps.",
     "surTotal1": "Vous êtes le premier couple à trancher ce dilemme",
-    "voix1": "voix"
+    "voix1": "voix",
+    "bravoTitre": "Bravo, et merci !",
+    "bravoTexte": "Vous avez répondu à tous les dilemmes. Vos votes comptent maintenant dans les pourcentages que verront les prochains couples.",
+    "bravoSuite": "Essayez le tu préfères"
   }
 }

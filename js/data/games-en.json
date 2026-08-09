@@ -528,6 +528,9 @@
     "palier3Titre": "Willing to negotiate",
     "palier3Texte": "You accept the price when the prize is worth it. A good balance between wanting things and thinking them through.",
     "palier4Titre": "You say yes to almost anything",
-    "palier4Texte": "As long as there is something to gain, you sign. That is a great energy to share, but do read the small print once in a while."
+    "palier4Texte": "As long as there is something to gain, you sign. That is a great energy to share, but do read the small print once in a while.",
+    "bravoTitre": "Well done, and thank you!",
+    "bravoTexte": "You have answered every single dilemma. Your votes now count towards the percentages the next couples will see.",
+    "bravoSuite": "Try would you rather"
   }
 }
