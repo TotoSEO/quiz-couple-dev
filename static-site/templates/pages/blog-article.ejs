@@ -59,11 +59,22 @@
       <div class="mb-4"><span class="blog-category-badge"><%= articleCategoryLabel %></span></div>
       <% } %>
 
-      <!-- Published date -->
+      <!-- Date de publication et signature de l'auteur -->
       <div class="mb-8">
-        <time datetime="<%= isoDate %>" class="text-sm text-muted-foreground">
-          <%= publishedOnLabel %> <%= formattedDate %>
-        </time>
+        <div class="blog-signature">
+          <time datetime="<%= isoDate %>" class="blog-signature-date">
+            <%= publishedOnLabel %> <%= formattedDate %>
+          </time>
+          <% if (article.author && article.author.name) { %>
+          <span class="blog-signature-sep" aria-hidden="true">|</span>
+          <a href="<%= getLocalizedUrl('about', lang) %>" rel="nofollow" class="blog-signature-auteur">
+            <% if (article.author.avatar) { %>
+            <img src="<%= article.author.avatar %>" alt="" class="blog-signature-photo" width="28" height="28" loading="lazy" decoding="async">
+            <% } %>
+            <span><%= article.author.name %></span>
+          </a>
+          <% } %>
+        </div>
       </div>
 
       <!-- Featured image -->

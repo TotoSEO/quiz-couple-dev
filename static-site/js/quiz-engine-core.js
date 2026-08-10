@@ -3946,9 +3946,9 @@ var QuizEngine = (function() {
     var recap = el('div', 'zamours-recap');
     recap.innerHTML =
       '<div class="zamours-recap-row"><span class="zamours-recap-who zamours--p' + (round.guesser + 1) + '">' + esc(guesser.name) + ' a deviné</span>'
-      + '<span class="zamours-recap-ans">' + esc(gOpt ? this.optText(q, gOpt) : '—') + '</span></div>'
+      + '<span class="zamours-recap-ans">' + esc(gOpt ? this.optText(q, gOpt) : '-') + '</span></div>'
       + '<div class="zamours-recap-row"><span class="zamours-recap-who zamours--p' + (round.target + 1) + '">' + esc(target.name) + ' a répondu</span>'
-      + '<span class="zamours-recap-ans is-real">' + esc(aOpt ? this.optText(q, aOpt) : '—') + '</span></div>';
+      + '<span class="zamours-recap-ans is-real">' + esc(aOpt ? this.optText(q, aOpt) : '-') + '</span></div>';
     wrap.appendChild(recap);
 
     var last = this.roundIdx + 1 >= this.rounds.length;
@@ -4127,7 +4127,7 @@ var QuizEngine = (function() {
   };
 
   // ══════════════════════════════════════════════════════════
-  //  TentationQuiz — "Survivrez-vous à l'île de la tentation ?"
+  //  TentationQuiz - "Survivrez-vous à l'île de la tentation ?"
   //  Solo immersive run that mirrors the show's structure: a 12-day stay
   //  on the island, one tempting situation per day, punctuated by the
   //  ritual "feu de camp" (bonfire) every 4 days, then a final bonfire

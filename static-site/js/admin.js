@@ -345,7 +345,7 @@
   function loadDaily(slug) {
     statsSelectedSlug = slug;
     var titleEl = document.getElementById('admin-stats-chart-title');
-    if (titleEl) titleEl.textContent = slug + ' — 30 derniers jours';
+    if (titleEl) titleEl.textContent = slug + ' · 30 derniers jours';
     drawLineChart(document.getElementById('admin-stats-chart'), null, { loading: true });
     statsRpc('get_quiz_daily', { p_slug: slug, p_days: 30 }).then(function (rows) {
       _lastQuizSeries = buildSeries(Array.isArray(rows) ? rows : [], 30);
