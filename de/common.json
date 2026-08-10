@@ -52,7 +52,8 @@
     "jeuDilemmes": "Paar-Dilemmata",
     "deployerJeux": "Alle Spiele anzeigen",
     "testDateNaissance": "Geburtsdatum-Kompatibilität",
-    "testCouche": "Mit jemand anderem geschlafen?"
+    "testCouche": "Mit jemand anderem geschlafen?",
+    "testSecret": "Liebt er mich heimlich?"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",

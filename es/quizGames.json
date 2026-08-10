@@ -326,7 +326,8 @@
     "jeuPlateau": "juego de mesa para parejas",
     "jeuQuiDeNous": "¿Quién de los dos?",
     "testDateNaissance": "Test de compatibilidad por fecha de nacimiento",
-    "testCouche": "Test se ha acostado con otra persona"
+    "testCouche": "Test se ha acostado con otra persona",
+    "testSecret": "Test me quiere en secreto"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
@@ -539,5 +540,10 @@
     "introQuestion": "Te estás preguntando:",
     "introQuote": "«¿Se ha acostado con otra persona… o me estoy montando una película?»",
     "disclaimer": "Este test no prueba nada ni acusa a nadie. Ordena lo que has observado, para que sepas qué hacer con ello."
+  },
+  "secret": {
+    "introQuestion": "Te estás preguntando:",
+    "introQuote": "«¿Me quiere en secreto… o me estoy montando una historia?»",
+    "disclaimer": "Piensa en una persona concreta antes de empezar, y responde solo sobre ella."
   }
 }

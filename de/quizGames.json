@@ -326,7 +326,8 @@
     "jeuPlateau": "Brettspiel für Paare",
     "jeuQuiDeNous": "Wer von uns beiden?",
     "testDateNaissance": "Kompatibilitätstest nach Geburtsdatum",
-    "testCouche": "Test mit jemand anderem geschlafen"
+    "testCouche": "Test mit jemand anderem geschlafen",
+    "testSecret": "Test liebt er oder sie mich heimlich"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
@@ -539,5 +540,10 @@
     "introQuestion": "Du fragst dich:",
     "introQuote": "« Hat er oder sie mit jemand anderem geschlafen… oder bilde ich mir das ein? »",
     "disclaimer": "Dieser Test beweist nichts und beschuldigt niemanden. Er ordnet, was du beobachtet hast, damit du weißt, was du damit anfangen sollst."
+  },
+  "secret": {
+    "introQuestion": "Du fragst dich:",
+    "introQuote": "« Liebt er oder sie mich heimlich… oder erzähle ich mir eine Geschichte? »",
+    "disclaimer": "Denk vor dem Start an eine ganz bestimmte Person und antworte nur über sie."
   }
 }

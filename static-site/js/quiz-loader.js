@@ -136,6 +136,15 @@
     // pas de la cosmétique, deux des quinze questions n'ont de sens que pour
     // l'un ou pour l'autre, et les accords français ne se devinent pas. Les
     // deux séries partagent leurs paliers de résultat, sous « couche ».
+    // ── « M'aime-t-il / m'aime-t-elle en secret » ──
+    // Même mécanique que le test précédent : on demande d'abord à qui on
+    // pense, puis on charge la série correspondante. Dix questions seulement,
+    // le sujet ne supporte pas la longueur.
+    'secret':         { modes: [
+      { id: 'homme', emoji: '👨', prefix: 'secretH', engine: 'solo', totalQ: 10, pool: 10, quizType: 'secret', ascending: true, resultPrefix: 'secret' },
+      { id: 'femme', emoji: '👩', prefix: 'secretF', engine: 'solo', totalQ: 10, pool: 10, quizType: 'secret', ascending: true, resultPrefix: 'secret' }
+    ] },
+
     'couche':         { modes: [
       { id: 'homme', emoji: '👨', prefix: 'coucheH', engine: 'solo', totalQ: 15, pool: 15, quizType: 'couche', ascending: true, resultPrefix: 'couche' },
       { id: 'femme', emoji: '👩', prefix: 'coucheF', engine: 'solo', totalQ: 15, pool: 15, quizType: 'couche', ascending: true, resultPrefix: 'couche' }

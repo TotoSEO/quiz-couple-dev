@@ -326,7 +326,8 @@
     "jeuPlateau": "gioco da tavolo di coppia",
     "jeuQuiDeNous": "Chi di noi due?",
     "testDateNaissance": "Test di compatibilità per data di nascita",
-    "testCouche": "Test è andato a letto con un'altra persona"
+    "testCouche": "Test è andato a letto con un'altra persona",
+    "testSecret": "Test mi ama in segreto"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
@@ -539,5 +540,10 @@
     "introQuestion": "Ti stai chiedendo:",
     "introQuote": "«È andato o andata a letto con un'altra persona… o mi sto facendo un film?»",
     "disclaimer": "Questo test non prova nulla e non accusa nessuno. Mette ordine in ciò che hai osservato, perché tu sappia cosa farne."
+  },
+  "secret": {
+    "introQuestion": "Ti stai chiedendo:",
+    "introQuote": "«Mi ama in segreto… o mi sto raccontando una storia?»",
+    "disclaimer": "Pensa a una persona precisa prima di iniziare, e rispondi solo su di lei."
   }
 }

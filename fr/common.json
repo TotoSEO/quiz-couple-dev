@@ -53,7 +53,8 @@
     "jeuDilemmes": "Dilemmes de couple",
     "deployerJeux": "Voir tous les jeux",
     "testDateNaissance": "Compatibilité date de naissance",
-    "testCouche": "A couché avec un(e) autre ?"
+    "testCouche": "A couché avec un(e) autre ?",
+    "testSecret": "M'aime-t-il en secret ?"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",

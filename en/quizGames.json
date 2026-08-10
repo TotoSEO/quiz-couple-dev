@@ -326,7 +326,8 @@
     "jeuPlateau": "couple board game",
     "jeuQuiDeNous": "Which one of us?",
     "testDateNaissance": "Birth date compatibility test",
-    "testCouche": "Has he or she slept with someone else test"
+    "testCouche": "Has he or she slept with someone else test",
+    "testSecret": "Does he or she secretly love me test"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -539,5 +540,10 @@
     "introQuestion": "You're asking yourself:",
     "introQuote": "« Has he or she slept with someone else… or am I making this up? »",
     "disclaimer": "This test proves nothing and accuses nobody. It puts order into what you have observed, so you know what to do with it."
+  },
+  "secret": {
+    "introQuestion": "You're asking yourself:",
+    "introQuote": "« Do they secretly love me… or am I telling myself a story? »",
+    "disclaimer": "Think of one specific person before you start, and answer about them only."
   }
 }

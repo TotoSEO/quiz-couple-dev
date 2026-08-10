@@ -327,7 +327,8 @@
     "jeuPlateau": "jeu de plateau du couple",
     "jeuQuiDeNous": "Qui de nous deux ?",
     "testDateNaissance": "Test compatibilité date de naissance",
-    "testCouche": "Test « a-t-il ou a-t-elle couché avec quelqu'un d'autre »"
+    "testCouche": "Test « a-t-il ou a-t-elle couché avec quelqu'un d'autre »",
+    "testSecret": "Test m'aime-t-il ou m'aime-t-elle en secret"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -540,5 +541,10 @@
     "introQuestion": "Vous vous posez la question :",
     "introQuote": "« Est-ce qu'il ou elle a couché avec quelqu'un d'autre… ou est-ce que je me fais un film ? »",
     "disclaimer": "Ce test ne prouve rien et n'accuse personne. Il met de l'ordre dans ce que vous avez observé, pour que vous sachiez quoi en faire."
+  },
+  "secret": {
+    "introQuestion": "Vous vous posez la question :",
+    "introQuote": "« Est-ce qu'il ou elle m'aime en secret… ou est-ce que je me raconte une histoire ? »",
+    "disclaimer": "Pensez à une personne précise avant de commencer, et répondez sur elle uniquement."
   }
 }

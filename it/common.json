@@ -52,7 +52,8 @@
     "jeuDilemmes": "Dilemmi di coppia",
     "deployerJeux": "Vedi tutti i giochi",
     "testDateNaissance": "Compatibilità data di nascita",
-    "testCouche": "È andato/a a letto con un altro?"
+    "testCouche": "È andato/a a letto con un altro?",
+    "testSecret": "Mi ama in segreto?"
   },
   "footer": {
     "brandDescription": "Metti alla prova la tua compatibilità e scopri la tua connessione amorosa con i nostri quiz gratuiti per coppie.",
