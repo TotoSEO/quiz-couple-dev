@@ -387,7 +387,7 @@
     if (questions.length === 0) {
       // The data (gd-*.json) is likely still loading or a transient fetch
       // failed. Keep the "loading" placeholder visible and retry a few times
-      // before showing the unavailable fallback — so slow connections and
+      // before showing the unavailable fallback - so slow connections and
       // crawlers never flash "quiz unavailable" on a page that is actually fine.
       // Premier échec : on recharge le fichier complet. Si le découpage par
       // préfixe avait laissé passer quelque chose, ce repli le rattrape et le

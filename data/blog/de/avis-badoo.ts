@@ -61,7 +61,7 @@ const article: BlogArticleData = {
 <tr>
 <td>Preis</td>
 
-<td>Kostenlos · Credits zum Kauf · Badoo Premium ~8–15 €/Monat</td>
+<td>Kostenlos · Credits zum Kauf · Badoo Premium ~8-15 €/Monat</td>
 </tr>
 
 <tr>
@@ -173,7 +173,7 @@ const article: BlogArticleData = {
 
 <p>Allerdings. Die App bietet „Credits" zum Kauf spezieller Funktionen an: das Spotlight (das eigene Profil 30 Minuten lang hervorheben), die Superkräfte (sehen, wer einen geliked hat, in den Ergebnissen aufsteigen) oder kostenpflichtige Verifizierungsbadges. Und diese Credits sind eine ausgeklügelte Mechanik. Man kauft ein paar zum Testen, sieht eine leichte Verbesserung der Sichtbarkeit und kauft prompt nach. <strong>Das ist exakt das Modell von Freemium-Spielen.</strong> Kein festes Abo, aber Mikrokäufe, die sich schnell summieren, wenn man nicht aufpasst.</p>
 
-<p>Zur Information: Das Spotlight kostet etwa 3 Credits, und ein Paket von 100 Credits liegt bei rund 15–20 €. Wenn man das Spotlight zwei- oder dreimal pro Woche nutzt, was verlockend ist, wenn man die Ergebnisse sieht, kommt man schnell auf 30–40 € pro Monat, ohne ein einziges Abo abgeschlossen zu haben.</p>
+<p>Zur Information: Das Spotlight kostet etwa 3 Credits, und ein Paket von 100 Credits liegt bei rund 15-20 €. Wenn man das Spotlight zwei- oder dreimal pro Woche nutzt, was verlockend ist, wenn man die Ergebnisse sieht, kommt man schnell auf 30-40 € pro Monat, ohne ein einziges Abo abgeschlossen zu haben.</p>
 
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">💡 Tipp</p>

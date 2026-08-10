@@ -727,8 +727,8 @@
     for (var j = 0; j < totalQ; j++) {
       var q = questions[j];
       var same = a1[j] === a2[j];
-      var c1 = (q[a1[j]] || '–').replace(/\{\{name\}\}/g, n2);
-      var c2 = (q[a2[j]] || '–').replace(/\{\{name\}\}/g, n1);
+      var c1 = (q[a1[j]] || '-').replace(/\{\{name\}\}/g, n2);
+      var c2 = (q[a2[j]] || '-').replace(/\{\{name\}\}/g, n1);
       if (c1.length > 35) c1 = c1.substring(0, 32) + '…';
       if (c2.length > 35) c2 = c2.substring(0, 32) + '…';
       compRows +=

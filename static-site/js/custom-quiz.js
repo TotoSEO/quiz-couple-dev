@@ -252,7 +252,7 @@
       box.appendChild(el('div', { class: 'cq-tf-label', text: T('tf_correct', 'Bonne réponse :') }));
       box.appendChild(tfWrap);
       // Optional explanation, shown to the player after they answer
-      var expIn = el('textarea', { class: 'cq-input cq-textarea', rows: 2, maxlength: LIMITS.exp, placeholder: T('ph_explanation', 'Explication (facultatif) — affichée après la réponse') });
+      var expIn = el('textarea', { class: 'cq-input cq-textarea', rows: 2, maxlength: LIMITS.exp, placeholder: T('ph_explanation', 'Explication (facultatif), affichée après la réponse') });
       expIn.value = q.exp || '';
       var expCount = counter(expIn, q.exp || '', LIMITS.exp);
       expIn.addEventListener('input', function () { q.exp = expIn.value; });

@@ -243,7 +243,7 @@
       return '<tr>' +
         '<td><span class="afl-prog">' + esc(p.nom) + '</span></td>' +
         '<td><span class="afl-statut afl-statut--' + s.cls + '">' + esc(s.txt) + '</span></td>' +
-        '<td class="afl-hide-sm"><span class="afl-remu">' + esc(p.groupe || '—') + '</span></td>' +
+        '<td class="afl-hide-sm"><span class="afl-remu">' + esc(p.groupe || '-') + '</span></td>' +
         '<td class="afl-num">' + nombre(p.clics) + '</td>' +
         '<td class="afl-num">' + nombre(p.conv) + '</td>' +
         '<td class="afl-num">' + euros(p.gains) + '</td>' +
