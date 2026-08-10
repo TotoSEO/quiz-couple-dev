@@ -88,7 +88,7 @@
     <% for (let i = 6; i <= 9; i++) { %>
     <section class="mb-10">
       <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('legal:privacy.s' + i + 'Title', '') %></h2>
-      <p class="text-foreground"><%= t('legal:privacy.s' + i + 'Text', '') %><% if (i === 9) { %> <a href="mailto:service@quiz-couple.com" class="text-primary hover:underline">service@quiz-couple.com</a><% } %></p>
+      <p class="text-foreground"><%= t('legal:privacy.s' + i + 'Text', '') %><% if (i === 9) { %><a href="<%= getLocalizedUrl('contact', lang) %>" class="text-primary hover:underline"><%= t('legal:privacy.s9Lien', 'contact') %></a><%= t('legal:privacy.s9Fin', '.') %><% } %></p>
     </section>
     <% } %>
 

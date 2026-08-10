@@ -7009,3 +7009,50 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   padding: 0.875rem 2.5rem; font-size: 1rem; width: 100%;
 }
 @media (min-width: 640px) { .cf-bouton { width: auto; min-width: 16rem; } }
+
+/* ── Page « questions de couple » : la liste visible ──────
+   Les 120 questions étaient uniquement accessibles derrière un bouton
+   « suivante », donc absentes du HTML : Googlebot n'en voyait aucune, alors
+   que toutes les pages qui se positionnent sur cette requête sont des listes.
+   Elles sont désormais écrites dans la page, le tirage au sort reste en
+   complément au-dessus. */
+.qc-liste { padding-top: 0.5rem; }
+.qc-liste-titre { font-size: clamp(1.5rem, 3.2vw, 2rem); font-weight: 800; color: hsl(var(--foreground)); margin-bottom: 0.75rem; }
+.qc-liste-intro { color: hsl(var(--muted-foreground)); line-height: 1.7; margin-bottom: 1.5rem; }
+
+.qc-sommaire { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+.qc-sommaire-lien {
+  display: inline-flex; align-items: center;
+  padding: 0.4375rem 0.875rem; border-radius: 9999px;
+  border: 1px solid hsl(var(--border)); background: hsl(var(--card));
+  font-size: 0.8125rem; font-weight: 600; color: hsl(var(--foreground));
+  text-decoration: none; transition: all 0.15s ease;
+}
+.qc-sommaire-lien:hover { border-color: hsl(var(--primary)); color: hsl(var(--primary)); }
+
+.qc-theme { margin-bottom: 2.75rem; scroll-margin-top: 5.5rem; }
+.qc-theme-titre {
+  font-size: 1.25rem; font-weight: 700; color: hsl(var(--foreground));
+  padding-left: 0.75rem; border-left: 4px solid hsl(var(--primary));
+  margin-bottom: 0.625rem;
+}
+.qc-theme-intro { color: hsl(var(--muted-foreground)); line-height: 1.7; margin-bottom: 1.25rem; font-size: 0.9375rem; }
+
+.qc-questions { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+@media (min-width: 900px) { .qc-questions { grid-template-columns: 1fr 1fr; gap: 0.5rem 1.25rem; } }
+.qc-question {
+  display: flex; align-items: baseline; gap: 0.75rem;
+  padding: 0.6875rem 0.875rem; border-radius: 0.75rem;
+  background: hsl(var(--card)); border: 1px solid hsl(var(--border));
+  line-height: 1.6; color: hsl(var(--foreground)); font-size: 0.9375rem;
+}
+.qc-numero {
+  flex-shrink: 0; min-width: 1.75rem;
+  font-size: 0.75rem; font-weight: 800; color: hsl(var(--primary));
+  font-variant-numeric: tabular-nums;
+}
+.qc-conclusion {
+  border-radius: 1.25rem; padding: 1.5rem 1.75rem;
+  border: 1px solid hsl(var(--primary) / 0.2); background: hsl(var(--primary) / 0.05);
+}
+.qc-conclusion p { color: hsl(var(--foreground)); line-height: 1.75; margin: 0; }

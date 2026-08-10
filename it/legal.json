@@ -73,7 +73,9 @@
     "s8Title": "8. Modifiche a questa politica",
     "s8Text": "Ci riserviamo il diritto di modificare questa informativa sulla privacy in qualsiasi momento. Ogni modifica verrà pubblicata su questa pagina con una data di aggiornamento. Vi incoraggiamo a consultare regolarmente questa pagina.",
     "s9Title": "9. Contatto",
-    "s9Text": "Per qualsiasi domanda riguardante questa informativa sulla privacy o per esercitare i vostri diritti, potete contattarci al seguente indirizzo:"
+    "s9Text": "Per qualsiasi domanda o richiesta di informazioni sul sito, usa il nostro ",
+    "s9Lien": "modulo di contatto",
+    "s9Fin": "."
   },
   "mentions": {
     "seoTitle": "Note Legali | Quiz Couple",
@@ -122,7 +124,9 @@
     "s9Title": "9. Legge applicabile",
     "s9Text": "Le presenti note legali sono disciplinate dal diritto francese. In caso di controversia, i tribunali francesi saranno gli unici competenti.",
     "s10Title": "10. Contatto",
-    "s10Text": "Per qualsiasi domanda o richiesta di informazioni riguardante il sito, potete contattarci al seguente indirizzo:",
-    "lastUpdated": "Ultimo aggiornamento: Marzo 2026"
+    "s10Text": "Per qualsiasi domanda o richiesta di informazioni sul sito, usa il nostro ",
+    "lastUpdated": "Ultimo aggiornamento: Marzo 2026",
+    "s10Lien": "modulo di contatto",
+    "s10Fin": "."
   }
 }

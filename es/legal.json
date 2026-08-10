@@ -73,7 +73,9 @@
     "s8Title": "8. Modificaciones de esta política",
     "s8Text": "Nos reservamos el derecho de modificar esta política de privacidad en cualquier momento. Cualquier modificación se publicará en esta página con una fecha de actualización. Le animamos a consultar esta página regularmente.",
     "s9Title": "9. Contacto",
-    "s9Text": "Para cualquier pregunta sobre esta política de privacidad o para ejercer sus derechos, puede contactarnos en la siguiente dirección:"
+    "s9Text": "Para cualquier pregunta o solicitud de información sobre el sitio, utiliza nuestro ",
+    "s9Lien": "formulario de contacto",
+    "s9Fin": "."
   },
   "mentions": {
     "seoTitle": "Aviso Legal | Quiz Couple",
@@ -122,7 +124,9 @@
     "s9Title": "9. Legislación aplicable",
     "s9Text": "El presente aviso legal se rige por la legislación francesa. En caso de litigio, los tribunales franceses serán los únicos competentes.",
     "s10Title": "10. Contacto",
-    "s10Text": "Para cualquier pregunta o solicitud de información sobre el sitio, puede contactarnos en la siguiente dirección:",
-    "lastUpdated": "Última actualización: Marzo 2026"
+    "s10Text": "Para cualquier pregunta o solicitud de información sobre el sitio, utiliza nuestro ",
+    "lastUpdated": "Última actualización: Marzo 2026",
+    "s10Lien": "formulario de contacto",
+    "s10Fin": "."
   }
 }

@@ -73,7 +73,9 @@
     "s8Title": "8. Changes to This Policy",
     "s8Text": "We reserve the right to modify this privacy policy at any time. Any changes will be posted on this page with an update date. We encourage you to check this page regularly.",
     "s9Title": "9. Contact",
-    "s9Text": "For any questions about this privacy policy or to exercise your rights, you can contact us at the following address:"
+    "s9Text": "For any question or request for information about the site, please use our ",
+    "s9Lien": "contact form",
+    "s9Fin": "."
   },
   "mentions": {
     "seoTitle": "Legal Notice | Quiz Couple",
@@ -122,7 +124,9 @@
     "s9Title": "9. Applicable Law",
     "s9Text": "These legal notices are governed by French law. In the event of a dispute, French courts shall have sole jurisdiction.",
     "s10Title": "10. Contact",
-    "s10Text": "For any questions or requests for information regarding the site, you can contact us at the following address:",
-    "lastUpdated": "Last updated: March 2026"
+    "s10Text": "For any question or request for information about the site, please use our ",
+    "lastUpdated": "Last updated: March 2026",
+    "s10Lien": "contact form",
+    "s10Fin": "."
   }
 }

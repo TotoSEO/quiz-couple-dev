@@ -61,13 +61,42 @@
 <section class="container mx-auto px-4 py-8 md:py-12">
   <div class="mx-auto max-w-4xl space-y-10">
 
-    <!-- Questions loaded via JS from data file -->
-    <div id="questions-container">
-      <div class="text-center py-8">
-        <div class="spinner mx-auto mb-4"></div>
-        <p class="text-muted-foreground"><%= t(ns + ':random.button', 'Chargement...') %></p>
+    <!-- Tirage au sort, alimente par la liste ci-dessous -->
+    <div id="questions-container"></div>
+
+    <%
+      // Les 120 questions sont ecrites dans le HTML, pas chargees en
+      // JavaScript apres coup : c'est la liste elle-meme que les moteurs de
+      // recherche doivent pouvoir lire, et c'est ce que font les pages qui se
+      // positionnent sur cette requete.
+      const liste = t(ns + ':liste', {});
+      const themes = Object.keys(liste || {});
+    %>
+    <% if (themes.length) { %>
+    <section class="qc-liste" id="liste-questions">
+      <h2 class="qc-liste-titre"><%= t(ns + ':liste_titre', '') %></h2>
+      <p class="qc-liste-intro"><%= t(ns + ':liste_intro', '') %></p>
+
+      <nav class="qc-sommaire" aria-label="<%= t(ns + ':liste_titre', '') %>">
+        <% themes.forEach(function (cle) { %>
+        <a href="#theme-<%= cle %>" class="qc-sommaire-lien"><%= liste[cle].titre %></a>
+        <% }); %>
+      </nav>
+
+      <% let numero = 0; %>
+      <% themes.forEach(function (cle) { %>
+      <div class="qc-theme" id="theme-<%= cle %>">
+        <h3 class="qc-theme-titre"><%= liste[cle].titre %></h3>
+        <p class="qc-theme-intro"><%= liste[cle].intro %></p>
+        <ol class="qc-questions">
+          <% liste[cle].questions.forEach(function (q) { numero++; %>
+          <li class="qc-question"><span class="qc-numero"><%= numero %></span><span><%= q %></span></li>
+          <% }); %>
+        </ol>
       </div>
-    </div>
+      <% }); %>
+    </section>
+    <% } %>
 
     <!-- SEO Article -->
     <article class="space-y-10 pt-10 border-t border-border seo-content">
@@ -77,7 +106,7 @@
         <div class="space-y-4 text-muted-foreground leading-relaxed">
           <p><%= t(ns + ':seo.s1.p1', '') %></p>
           <p><%= t(ns + ':seo.s1.p2', '') %></p>
-          <p><%= t(ns + ':seo.s1.p3', '') %></p>
+          <p><%- t(ns + ':seo.s1.p3', '') %></p>
         </div>
       </section>
 
@@ -111,7 +140,7 @@
 
       <section>
         <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s3.title', '') %></h2>
-        <p class="text-muted-foreground mb-4 leading-relaxed"><%= t(ns + ':seo.s3.intro', '') %></p>
+        <p class="text-muted-foreground mb-4 leading-relaxed"><%- t(ns + ':seo.s3.intro', '') %></p>
         <ul class="space-y-4">
           <% for (const item of whenItems) { %>
           <li><h3 class="text-lg font-semibold mb-1"><%= item.title %></h3><p class="text-muted-foreground leading-relaxed"><%= item.desc %></p></li>
@@ -131,12 +160,13 @@
 
       <section>
         <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s5.title', '') %></h2>
-        <p class="text-muted-foreground mb-4 leading-relaxed"><%= t(ns + ':seo.s5.p1', '') %></p>
+        <p class="text-muted-foreground mb-4 leading-relaxed"><%- t(ns + ':seo.s5.p1', '') %></p>
         <ul class="space-y-3">
           <% for (const aud of audiences) { %>
           <li><strong><%= aud.title %></strong> : <span class="text-muted-foreground"><%= aud.desc %></span></li>
           <% } %>
         </ul>
+        <p class="text-muted-foreground mt-4 leading-relaxed"><%- t(ns + ':seo.s5.outro', '') %></p>
       </section>
 
       <section>
@@ -159,6 +189,13 @@
           </details>
           <% } %>
         </div>
+      </section>
+      <% } %>
+
+    
+      <% if (t(ns + ':conclusion', '')) { %>
+      <section class="qc-conclusion">
+        <p><%- t(ns + ':conclusion', '') %></p>
       </section>
       <% } %>
 
