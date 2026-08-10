@@ -60,6 +60,40 @@
     });
   });
 
+  // Megamenu bureau : le panneau est ancre sur le bord gauche de son onglet,
+  // pour qu'il reste sous lui et que la souris puisse y descendre sans que le
+  // menu se referme. Sur les onglets de droite, un panneau large sortirait de
+  // l'ecran : on le recule alors du strict necessaire, jamais au-dela du bord
+  // gauche de la fenetre, et jamais au point de ne plus couvrir son onglet.
+  var megamenus = document.querySelectorAll('[data-megamenu]');
+  function caleMegamenu(bloc) {
+    var pan = bloc.querySelector('.nav-megamenu');
+    if (!pan) return;
+    pan.style.transform = '';
+    var rp = pan.getBoundingClientRect();
+    if (!rp.width) return;
+    var ro = bloc.getBoundingClientRect();
+    var marge = 12;
+    var debord = rp.right - (window.innerWidth - marge);
+    if (debord <= 0) return;
+    var recul = Math.min(debord, rp.left - marge, rp.width - ro.width - 8);
+    if (recul > 0) pan.style.transform = 'translateX(' + (-Math.round(recul)) + 'px)';
+  }
+  megamenus.forEach(function(bloc) {
+    bloc.addEventListener('mouseenter', function() { caleMegamenu(bloc); });
+    bloc.addEventListener('focusin', function() { caleMegamenu(bloc); });
+  });
+  var minuteurCale;
+  window.addEventListener('resize', function() {
+    clearTimeout(minuteurCale);
+    minuteurCale = setTimeout(function() {
+      megamenus.forEach(function(bloc) {
+        var pan = bloc.querySelector('.nav-megamenu');
+        if (pan) pan.style.transform = '';
+      });
+    }, 150);
+  });
+
   // Close mobile menu when clicking a link
   menu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', function() {

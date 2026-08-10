@@ -1104,17 +1104,15 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* ── Mega Menu ──────────────────────────────────────────── */
 
-/* Le panneau se cale sur la colonne de contenu, pas sur son onglet. Attaché à
-   l'onglet, il sortait forcément de l'écran d'un côté ou de l'autre : il fait
-   800 px de large alors que les onglets sont répartis sur toute la barre.
-   Centré sur l'onglet, celui des tests perdait 45 px à gauche à 1440 px ;
-   aligné à gauche, celui des jeux dépassait à droite ; aligné à droite, il
-   dépassait à gauche. Le repère est donc la barre elle-même, qui tient
-   toujours dans l'écran. */
-.nav-barre { position: relative; }
+/* Le panneau s'ouvre sous son onglet, aligné sur son bord gauche. Il doit
+   rester sous l'onglet : détaché, la souris quitte l'onglet sans jamais entrer
+   dans le panneau et le menu se referme avant qu'on ait pu cliquer.
+   Un panneau large déborderait de l'écran sur les onglets de droite : c'est le
+   script de navigation qui le recule alors du strict nécessaire, en gardant le
+   recouvrement avec l'onglet. */
 .nav-megamenu {
   position: absolute; left: 0; top: 100%; z-index: 50;
-  width: max-content; max-width: 100%;
+  width: max-content; max-width: min(51rem, calc(100vw - 1.5rem));
   padding-top: 0.625rem;
 }
 .nav-megamenu-inner {
