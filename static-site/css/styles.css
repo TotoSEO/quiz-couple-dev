@@ -6939,3 +6939,122 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 @media (prefers-reduced-motion: reduce) {
   .dn-anneau-trait, .dn-axe-jauge { transition: none; }
 }
+
+/* ── Formulaire de contact ────────────────────────────────
+   Le champ message portait la classe .input, dont le height: 2.5rem écrasait
+   la zone de texte à la hauteur d'une ligne : on ne voyait jamais plus d'une
+   phrase de ce qu'on écrivait, malgré son rows="5". Il a maintenant sa propre
+   classe, une hauteur de départ franche et un redimensionnement vertical. */
+
+.cf-carte {
+  border-radius: 1.5rem; padding: 1.75rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: 0 24px 60px -32px rgb(0 0 0 / 0.28);
+}
+@media (min-width: 768px) { .cf-carte { padding: 2.75rem; } }
+
+.cf-bloc { margin-bottom: 1.25rem; }
+.cf-duo { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+@media (min-width: 640px) { .cf-duo { grid-template-columns: 1fr 1fr; } }
+
+.cf-label {
+  display: block; margin-bottom: 0.4375rem;
+  font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.01em;
+  color: hsl(var(--foreground));
+}
+
+.cf-champ, .cf-textarea {
+  display: block; width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--input));
+  background: hsl(var(--background));
+  padding: 0.75rem 0.875rem;
+  font: inherit; font-size: 0.9375rem;
+  color: hsl(var(--foreground));
+  transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+.cf-champ { height: 2.875rem; }
+.cf-textarea {
+  min-height: 11rem;          /* environ huit lignes, visibles d'emblée */
+  line-height: 1.65;
+  resize: vertical;           /* la personne peut agrandir si elle écrit long */
+}
+.cf-champ::placeholder, .cf-textarea::placeholder { color: hsl(var(--muted-foreground) / 0.75); }
+.cf-champ:hover, .cf-textarea:hover { border-color: hsl(var(--primary) / 0.45); }
+.cf-champ:focus, .cf-textarea:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.16);
+  background: hsl(var(--background));
+}
+.cf-champ[aria-invalid="true"], .cf-textarea[aria-invalid="true"] { border-color: hsl(var(--destructive)); }
+
+.cf-erreur { margin-top: 0.375rem; font-size: 0.8125rem; color: hsl(var(--destructive)); }
+.cf-compteur { margin-top: 0.4375rem; font-size: 0.75rem; color: hsl(var(--muted-foreground)); text-align: right; }
+
+.cf-bloc--rgpd { margin-top: 1.5rem; margin-bottom: 1.75rem; }
+.cf-rgpd {
+  display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer;
+  border-radius: 0.875rem; padding: 0.875rem 1rem;
+  background: hsl(var(--muted) / 0.5); border: 1px solid hsl(var(--border));
+}
+.cf-rgpd:hover { border-color: hsl(var(--primary) / 0.35); }
+.cf-case { margin-top: 0.1875rem; width: 1.0625rem; height: 1.0625rem; accent-color: hsl(var(--primary)); flex-shrink: 0; }
+.cf-rgpd-texte { font-size: 0.875rem; line-height: 1.6; color: hsl(var(--muted-foreground)); }
+
+.cf-envoi { display: flex; justify-content: center; }
+.cf-bouton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 0.875rem 2.5rem; font-size: 1rem; width: 100%;
+}
+@media (min-width: 640px) { .cf-bouton { width: auto; min-width: 16rem; } }
+
+/* ── Page « questions de couple » : la liste visible ──────
+   Les 120 questions étaient uniquement accessibles derrière un bouton
+   « suivante », donc absentes du HTML : Googlebot n'en voyait aucune, alors
+   que toutes les pages qui se positionnent sur cette requête sont des listes.
+   Elles sont désormais écrites dans la page, le tirage au sort reste en
+   complément au-dessus. */
+.qc-liste { padding-top: 0.5rem; }
+.qc-liste-titre { font-size: clamp(1.5rem, 3.2vw, 2rem); font-weight: 800; color: hsl(var(--foreground)); margin-bottom: 0.75rem; }
+.qc-liste-intro { color: hsl(var(--muted-foreground)); line-height: 1.7; margin-bottom: 1.5rem; }
+
+.qc-sommaire { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+.qc-sommaire-lien {
+  display: inline-flex; align-items: center;
+  padding: 0.4375rem 0.875rem; border-radius: 9999px;
+  border: 1px solid hsl(var(--border)); background: hsl(var(--card));
+  font-size: 0.8125rem; font-weight: 600; color: hsl(var(--foreground));
+  text-decoration: none; transition: all 0.15s ease;
+}
+.qc-sommaire-lien:hover { border-color: hsl(var(--primary)); color: hsl(var(--primary)); }
+
+.qc-theme { margin-bottom: 2.75rem; scroll-margin-top: 5.5rem; }
+.qc-theme-titre {
+  font-size: 1.25rem; font-weight: 700; color: hsl(var(--foreground));
+  padding-left: 0.75rem; border-left: 4px solid hsl(var(--primary));
+  margin-bottom: 0.625rem;
+}
+.qc-theme-intro { color: hsl(var(--muted-foreground)); line-height: 1.7; margin-bottom: 1.25rem; font-size: 0.9375rem; }
+
+/* Une seule colonne : la numerotation court de 1 a 120 sans interruption, et
+   sur deux colonnes l'oeil ne sait plus dans quel ordre lire. */
+.qc-questions { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.qc-question {
+  display: flex; align-items: baseline; gap: 0.875rem;
+  padding: 0.8125rem 0.25rem;
+  border-bottom: 1px solid hsl(var(--border));
+  line-height: 1.65; color: hsl(var(--foreground)); font-size: 1rem;
+}
+.qc-question:last-child { border-bottom: 0; }
+.qc-numero {
+  flex-shrink: 0; min-width: 2.25rem;
+  font-size: 1rem; font-weight: 800; color: hsl(var(--primary));
+  font-variant-numeric: tabular-nums;
+}
+.qc-conclusion {
+  border-radius: 1.25rem; padding: 1.5rem 1.75rem;
+  border: 1px solid hsl(var(--primary) / 0.2); background: hsl(var(--primary) / 0.05);
+}
+.qc-conclusion p { color: hsl(var(--foreground)); line-height: 1.75; margin: 0; }

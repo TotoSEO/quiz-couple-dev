@@ -73,7 +73,9 @@
     "s8Title": "8. Änderungen dieser Richtlinie",
     "s8Text": "Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu ändern. Alle Änderungen werden auf dieser Seite mit einem Aktualisierungsdatum veröffentlicht. Wir empfehlen Ihnen, diese Seite regelmäßig zu besuchen.",
     "s9Title": "9. Kontakt",
-    "s9Text": "Bei Fragen zu dieser Datenschutzerklärung oder zur Ausübung Ihrer Rechte können Sie uns unter folgender Adresse kontaktieren:"
+    "s9Text": "Für Fragen oder Auskunftswünsche zur Seite nutze bitte unser ",
+    "s9Lien": "Kontaktformular",
+    "s9Fin": "."
   },
   "mentions": {
     "seoTitle": "Impressum | Quiz Couple",
@@ -122,7 +124,9 @@
     "s9Title": "9. Anwendbares Recht",
     "s9Text": "Dieses Impressum unterliegt dem französischen Recht. Im Falle eines Rechtsstreits sind ausschließlich die französischen Gerichte zuständig.",
     "s10Title": "10. Kontakt",
-    "s10Text": "Bei Fragen oder Informationsanfragen zur Website können Sie uns unter folgender Adresse kontaktieren:",
-    "lastUpdated": "Letzte Aktualisierung: März 2026"
+    "s10Text": "Für Fragen oder Auskunftswünsche zur Seite nutze bitte unser ",
+    "lastUpdated": "Letzte Aktualisierung: März 2026",
+    "s10Lien": "Kontaktformular",
+    "s10Fin": "."
   }
 }

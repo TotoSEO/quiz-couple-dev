@@ -21,69 +21,24 @@
   };
   var t = labels[lang] || labels.fr;
 
-  // Load questions from translation file
-  fetch('/js/data/games-' + lang + '.json')
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      // Try to extract questions from quizGames data
-      var questions = extractQuestions(data);
-      if (questions.length > 0) {
-        renderQuestions(questions);
-      } else {
-        renderFallback();
-      }
-    })
-    .catch(function() {
-      renderFallback();
-    });
-
-  function extractQuestions(data) {
-    var questions = [];
-    // Look for question-like patterns in the data
-    var categories = [
-      { key: 'connaissance', label: 'Se connaître', emoji: '🧠' },
-      { key: 'futur', label: 'Projets futurs', emoji: '🚀' },
-      { key: 'intime', label: 'Intimité', emoji: '💕' },
-      { key: 'fun', label: 'Fun', emoji: '😄' },
-      { key: 'profond', label: 'Questions profondes', emoji: '💭' }
-    ];
-
-    // Try to find questions in the data structure
-    if (data && data.questionsCouple) {
-      var qData = data.questionsCouple;
-      for (var key in qData) {
-        if (typeof qData[key] === 'string') {
-          questions.push({ text: qData[key], category: 'general' });
-        }
-      }
+  // Les questions sont deja dans la page, ecrites en dur par le gabarit.
+  // On les relit depuis le DOM plutot que de retelecharger un fichier : c'est
+  // la meme source pour l'affichage et pour le tirage, donc aucun risque que
+  // les deux divergent. L'ancien code cherchait une cle « questionsCouple »
+  // qui n'a jamais existe, et retombait sur douze questions codees en dur,
+  // servies en francais y compris sur les pages espagnole, allemande et
+  // italienne.
+  var questions = [];
+  document.querySelectorAll('#liste-questions .qc-question').forEach(function (li) {
+    var texte = li.querySelector('span:last-child');
+    var theme = li.closest('.qc-theme');
+    var titre = theme ? theme.querySelector('.qc-theme-titre') : null;
+    if (texte && texte.textContent.trim()) {
+      questions.push({ text: texte.textContent.trim(), category: titre ? titre.textContent.trim() : '' });
     }
-
-    // If no structured data, create sample questions
-    if (questions.length === 0) {
-      var sampleQuestions = {
-        fr: [
-          'Quel est mon plat préféré ?', 'Quelle est ma plus grande peur ?', 'Quel est mon souvenir d\'enfance préféré ?',
-          'Où te vois-tu dans 5 ans ?', 'Quel est ton rêve de voyage ultime ?', 'Qu\'est-ce qui t\'attire le plus chez moi ?',
-          'Si on était des animaux, lesquels serions-nous ?', 'Quelle est la chose la plus embarrassante que tu aies faite ?',
-          'Quel est le moment où tu as été le plus fier de nous ?', 'Si tu pouvais changer une chose dans notre routine, ce serait quoi ?',
-          'Quel est ton langage de l\'amour ?', 'Comment imagines-tu notre vie dans 10 ans ?'
-        ],
-        en: [
-          'What is my favorite dish?', 'What is my biggest fear?', 'What is my favorite childhood memory?',
-          'Where do you see yourself in 5 years?', 'What is your ultimate travel dream?', 'What attracts you most about me?',
-          'If we were animals, which would we be?', 'What\'s the most embarrassing thing you\'ve done?',
-          'When were you proudest of us?', 'If you could change one thing in our routine, what would it be?',
-          'What is your love language?', 'How do you imagine our life in 10 years?'
-        ]
-      };
-      var qs = sampleQuestions[lang] || sampleQuestions.fr;
-      for (var i = 0; i < qs.length; i++) {
-        questions.push({ text: qs[i], category: 'general' });
-      }
-    }
-
-    return questions;
-  }
+  });
+  if (questions.length > 0) renderQuestions(questions);
+  else if (container) container.innerHTML = '';
 
   function renderQuestions(questions) {
     container.innerHTML = '';
