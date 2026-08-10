@@ -6939,3 +6939,73 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 @media (prefers-reduced-motion: reduce) {
   .dn-anneau-trait, .dn-axe-jauge { transition: none; }
 }
+
+/* ── Formulaire de contact ────────────────────────────────
+   Le champ message portait la classe .input, dont le height: 2.5rem écrasait
+   la zone de texte à la hauteur d'une ligne : on ne voyait jamais plus d'une
+   phrase de ce qu'on écrivait, malgré son rows="5". Il a maintenant sa propre
+   classe, une hauteur de départ franche et un redimensionnement vertical. */
+
+.cf-carte {
+  border-radius: 1.5rem; padding: 1.75rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: 0 24px 60px -32px rgb(0 0 0 / 0.28);
+}
+@media (min-width: 768px) { .cf-carte { padding: 2.75rem; } }
+
+.cf-bloc { margin-bottom: 1.25rem; }
+.cf-duo { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
+@media (min-width: 640px) { .cf-duo { grid-template-columns: 1fr 1fr; } }
+
+.cf-label {
+  display: block; margin-bottom: 0.4375rem;
+  font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.01em;
+  color: hsl(var(--foreground));
+}
+
+.cf-champ, .cf-textarea {
+  display: block; width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--input));
+  background: hsl(var(--background));
+  padding: 0.75rem 0.875rem;
+  font: inherit; font-size: 0.9375rem;
+  color: hsl(var(--foreground));
+  transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+.cf-champ { height: 2.875rem; }
+.cf-textarea {
+  min-height: 11rem;          /* environ huit lignes, visibles d'emblée */
+  line-height: 1.65;
+  resize: vertical;           /* la personne peut agrandir si elle écrit long */
+}
+.cf-champ::placeholder, .cf-textarea::placeholder { color: hsl(var(--muted-foreground) / 0.75); }
+.cf-champ:hover, .cf-textarea:hover { border-color: hsl(var(--primary) / 0.45); }
+.cf-champ:focus, .cf-textarea:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.16);
+  background: hsl(var(--background));
+}
+.cf-champ[aria-invalid="true"], .cf-textarea[aria-invalid="true"] { border-color: hsl(var(--destructive)); }
+
+.cf-erreur { margin-top: 0.375rem; font-size: 0.8125rem; color: hsl(var(--destructive)); }
+.cf-compteur { margin-top: 0.4375rem; font-size: 0.75rem; color: hsl(var(--muted-foreground)); text-align: right; }
+
+.cf-bloc--rgpd { margin-top: 1.5rem; margin-bottom: 1.75rem; }
+.cf-rgpd {
+  display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer;
+  border-radius: 0.875rem; padding: 0.875rem 1rem;
+  background: hsl(var(--muted) / 0.5); border: 1px solid hsl(var(--border));
+}
+.cf-rgpd:hover { border-color: hsl(var(--primary) / 0.35); }
+.cf-case { margin-top: 0.1875rem; width: 1.0625rem; height: 1.0625rem; accent-color: hsl(var(--primary)); flex-shrink: 0; }
+.cf-rgpd-texte { font-size: 0.875rem; line-height: 1.6; color: hsl(var(--muted-foreground)); }
+
+.cf-envoi { display: flex; justify-content: center; }
+.cf-bouton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 0.875rem 2.5rem; font-size: 1rem; width: 100%;
+}
+@media (min-width: 640px) { .cf-bouton { width: auto; min-width: 16rem; } }

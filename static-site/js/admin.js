@@ -223,9 +223,52 @@
     document.getElementById('admin-dashboard').classList.add('hidden');
   }
 
+  // ── Pastilles d'alerte sur les onglets ──
+  // Un avis en attente de moderation, un message jamais ouvert, un lead arrive
+  // depuis la derniere fois qu'on a regarde l'onglet. Les leads n'ont pas de
+  // drapeau « lu » cote base : on retient donc la date de derniere consultation
+  // dans le navigateur, ce qui suffit pour signaler ce qui est nouveau.
+  function derniereVue(onglet) {
+    return Number(localStorage.getItem('admin-vu-' + onglet) || 0);
+  }
+  function marqueVu(onglet) {
+    localStorage.setItem('admin-vu-' + onglet, String(Date.now()));
+  }
+  function poseePastille(onglet, nombre, intitule) {
+    var el = document.querySelector('.admin-pastille[data-notif="' + onglet + '"]');
+    if (!el) return;
+    if (nombre > 0) {
+      el.textContent = nombre > 99 ? '99+' : String(nombre);
+      el.title = nombre + ' ' + intitule;
+      el.setAttribute('aria-label', nombre + ' ' + intitule);
+      el.classList.remove('hidden');
+    } else {
+      el.classList.add('hidden');
+      el.removeAttribute('title');
+      el.removeAttribute('aria-label');
+    }
+  }
+  function majPastilles() {
+    poseePastille('reviews',
+      allReviews.filter(function (r) { return !r.is_approved; }).length,
+      'avis en attente de moderation');
+    poseePastille('messages',
+      allMessages.filter(function (m) { return m.status === 'new'; }).length,
+      'message(s) non lu(s)');
+    var vu = derniereVue('leads');
+    poseePastille('leads',
+      allLeads.filter(function (l) { return new Date(l.created_at).getTime() > vu; }).length,
+      'nouveau(x) lead(s)');
+  }
+
   function showDashboard() {
     document.getElementById('admin-login').classList.add('hidden');
     document.getElementById('admin-dashboard').classList.remove('hidden');
+    // Les pastilles doivent etre justes des l'arrivee : on interroge les trois
+    // sources tout de suite, meme si l'affichage de chaque onglet reste
+    // paresseux.
+    if (allLeads.length === 0) loadLeads();
+    if (allMessages.length === 0) loadMessages();
   }
 
   // ── Stats : completions de quiz (RPC publiques, cle anon) ──
@@ -422,7 +465,78 @@
       ctx.fillText(series[i].label, xAt(i), cssH - padB / 2 + 2);
     }
     ctx.textAlign = 'left';
+
+    // On garde de quoi retrouver le point sous le curseur, et on branche
+    // l'infobulle une seule fois par canevas.
+    cv._geo = { series: series, padL: padL, padR: padR, plotW: plotW, xAt: xAt, yAt: yAt, cssW: cssW };
+    brancheInfobulle(cv);
   }
+
+  // ── Infobulle du graphique ──
+  // Passer la souris sur la courbe affiche la date et le nombre exact de
+  // parties de ce jour-la. Sans elle, on ne pouvait que deviner une valeur
+  // entre deux graduations.
+  function brancheInfobulle(cv) {
+    if (cv._infobulleBranchee) return;
+    cv._infobulleBranchee = true;
+    var parent = cv.parentElement;
+    if (parent && getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
+
+    var bulle = document.createElement('div');
+    bulle.className = 'stats-infobulle';
+    bulle.setAttribute('role', 'status');
+    bulle.classList.add('est-cachee');
+    (parent || document.body).appendChild(bulle);
+
+    var reperePoint = null;
+
+    function pointLePlusProche(clientX) {
+      var g = cv._geo;
+      if (!g || !g.series.length) return null;
+      var r = cv.getBoundingClientRect();
+      var x = clientX - r.left;
+      var n = g.series.length;
+      var i = n === 1 ? 0 : Math.round(((x - g.padL) / g.plotW) * (n - 1));
+      i = Math.max(0, Math.min(n - 1, i));
+      return { i: i, p: g.series[i], x: g.xAt(i), y: g.yAt(g.series[i].total) };
+    }
+
+    function montre(e) {
+      var pt = pointLePlusProche(e.clientX);
+      if (!pt) return;
+      var mot = pt.p.total === 1 ? 'partie' : 'parties';
+      bulle.innerHTML = '<span class="stats-infobulle-date">' + esc(pt.p.label) + '</span>'
+        + '<span class="stats-infobulle-val">' + pt.p.total + ' ' + mot + '</span>';
+      bulle.classList.remove('est-cachee');
+      var larg = bulle.offsetWidth;
+      var g = cv._geo;
+      var dx = cv.offsetLeft, dy = cv.offsetTop;
+      var gauche = Math.max(dx, Math.min(dx + pt.x - larg / 2, dx + g.cssW - larg));
+      bulle.style.left = gauche + 'px';
+      bulle.style.top = Math.max(0, dy + pt.y - bulle.offsetHeight - 12) + 'px';
+
+      if (!reperePoint) {
+        reperePoint = document.createElement('span');
+        reperePoint.className = 'stats-repere est-cachee';
+        (parent || document.body).appendChild(reperePoint);
+      }
+      reperePoint.classList.remove('est-cachee');
+      reperePoint.style.left = (cv.offsetLeft + pt.x) + 'px';
+      reperePoint.style.top = (cv.offsetTop + pt.y) + 'px';
+    }
+    function cache() {
+      bulle.classList.add('est-cachee');
+      if (reperePoint) reperePoint.classList.add('est-cachee');
+    }
+
+    cv.addEventListener('mousemove', montre);
+    cv.addEventListener('mouseleave', cache);
+    cv.addEventListener('touchmove', function (e) {
+      if (e.touches && e.touches[0]) montre(e.touches[0]);
+    }, { passive: true });
+    cv.addEventListener('touchend', cache);
+  }
+
   function niceCeil(n) {
     if (n <= 5) return 5;
     var pow = Math.pow(10, Math.floor(Math.log10(n)));
@@ -453,8 +567,11 @@
     if (tab === 'affiliation' && window.AdminAffiliation) {
       window.AdminAffiliation.ouvrir();
     }
-    if (tab === 'leads' && allLeads.length === 0) {
-      loadLeads();
+    if (tab === 'leads') {
+      if (allLeads.length === 0) loadLeads();
+      // Consulter l'onglet vaut prise de connaissance : la pastille retombe.
+      marqueVu('leads');
+      setTimeout(majPastilles, 0);
     }
     if (tab === 'messages' && allMessages.length === 0) {
       loadMessages();
@@ -481,6 +598,7 @@
       var reviews = Array.isArray(data) ? data : (data && data.reviews ? data.reviews : (data && data.data ? data.data : null));
       if (reviews && Array.isArray(reviews)) {
         allReviews = reviews;
+        majPastilles();
         updateStats();
         renderReviews();
       } else {
@@ -495,6 +613,8 @@
       .then(function (reviews) {
         if (Array.isArray(reviews)) {
           allReviews = reviews;
+          majPastilles();
+        majPastilles();
           updateStats();
           renderReviews();
         } else {
@@ -613,6 +733,7 @@
     .then(function (data) {
       if (data.success && Array.isArray(data.leads)) {
         allLeads = data.leads;
+        majPastilles();
         renderLeads();
       } else {
         tbody.innerHTML = '<tr><td colspan="6" style="padding:2rem;text-align:center;color:hsl(var(--destructive));">Erreur de chargement.</td></tr>';
@@ -689,6 +810,7 @@
     .then(function (data) {
       if (data.success && Array.isArray(data.messages)) {
         allMessages = data.messages;
+        majPastilles();
         renderMessages();
       } else {
         listEl.innerHTML = '<p class="text-center text-destructive py-8">Erreur de chargement.</p>';
@@ -779,6 +901,7 @@
           }).then(function () {
             var msg = allMessages.find(function (m) { return m.id === id; });
             if (msg) msg.status = action;
+            majPastilles();
             renderMessages();
           });
         }

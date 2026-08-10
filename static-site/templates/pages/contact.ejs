@@ -17,56 +17,56 @@
 <!-- ═══════ FORM ═══════ -->
 <section class="py-16 md:py-24">
   <div class="container mx-auto px-4 max-w-2xl">
-    <div id="contact-form-wrapper" class="rounded-2xl border border-border bg-card p-6 md:p-10 space-y-6">
+    <div id="contact-form-wrapper" class="cf-carte">
       <form id="contact-form" novalidate>
         <!-- Nom + Prénom -->
-        <div class="grid md:grid-cols-2 gap-4 mb-4">
+        <div class="cf-duo">
           <div>
-            <label for="contact-lastname" class="block text-sm font-semibold mb-1"><%= t(ns + ':form.lastName', 'Nom') %> <span class="text-destructive">*</span></label>
-            <input type="text" id="contact-lastname" class="input w-full" maxlength="100" required placeholder="<%= t(ns + ':form.lastNamePlaceholder', 'Votre nom') %>">
-            <p class="text-xs text-destructive mt-1 hidden" id="contact-lastname-error"></p>
+            <label for="contact-lastname" class="cf-label"><%= t(ns + ':form.lastName', 'Nom') %> <span class="text-destructive">*</span></label>
+            <input type="text" id="contact-lastname" class="cf-champ" maxlength="100" required placeholder="<%= t(ns + ':form.lastNamePlaceholder', 'Votre nom') %>">
+            <p class="cf-erreur hidden" id="contact-lastname-error"></p>
           </div>
           <div>
-            <label for="contact-firstname" class="block text-sm font-semibold mb-1"><%= t(ns + ':form.firstName', 'Prénom') %> <span class="text-destructive">*</span></label>
-            <input type="text" id="contact-firstname" class="input w-full" maxlength="100" required placeholder="<%= t(ns + ':form.firstNamePlaceholder', 'Votre prénom') %>">
-            <p class="text-xs text-destructive mt-1 hidden" id="contact-firstname-error"></p>
+            <label for="contact-firstname" class="cf-label"><%= t(ns + ':form.firstName', 'Prénom') %> <span class="text-destructive">*</span></label>
+            <input type="text" id="contact-firstname" class="cf-champ" maxlength="100" required placeholder="<%= t(ns + ':form.firstNamePlaceholder', 'Votre prénom') %>">
+            <p class="cf-erreur hidden" id="contact-firstname-error"></p>
           </div>
         </div>
 
         <!-- Email -->
-        <div class="mb-4">
-          <label for="contact-email" class="block text-sm font-semibold mb-1"><%= t(ns + ':form.email', 'Adresse e-mail') %> <span class="text-destructive">*</span></label>
-          <input type="email" id="contact-email" class="input w-full" maxlength="254" required placeholder="<%= t(ns + ':form.emailPlaceholder', 'votre@email.com') %>">
-          <p class="text-xs text-destructive mt-1 hidden" id="contact-email-error"></p>
+        <div class="cf-bloc">
+          <label for="contact-email" class="cf-label"><%= t(ns + ':form.email', 'Adresse e-mail') %> <span class="text-destructive">*</span></label>
+          <input type="email" id="contact-email" class="cf-champ" maxlength="254" required placeholder="<%= t(ns + ':form.emailPlaceholder', 'votre@email.com') %>">
+          <p class="cf-erreur hidden" id="contact-email-error"></p>
         </div>
 
         <!-- Téléphone (optional) -->
-        <div class="mb-4">
-          <label for="contact-phone" class="block text-sm font-semibold mb-1"><%= t(ns + ':form.phone', 'Téléphone') %> <span class="text-muted-foreground text-xs">(<%= t(ns + ':form.optional', 'optionnel') %>)</span></label>
-          <input type="tel" id="contact-phone" class="input w-full" maxlength="20" placeholder="<%= t(ns + ':form.phonePlaceholder', '+33 6 12 34 56 78') %>">
+        <div class="cf-bloc">
+          <label for="contact-phone" class="cf-label"><%= t(ns + ':form.phone', 'Téléphone') %> <span class="text-muted-foreground text-xs">(<%= t(ns + ':form.optional', 'optionnel') %>)</span></label>
+          <input type="tel" id="contact-phone" class="cf-champ" maxlength="20" placeholder="<%= t(ns + ':form.phonePlaceholder', '+33 6 12 34 56 78') %>">
         </div>
 
         <!-- Entreprise (optional) -->
-        <div class="mb-4">
-          <label for="contact-company" class="block text-sm font-semibold mb-1"><%= t(ns + ':form.company', 'Entreprise') %> <span class="text-muted-foreground text-xs">(<%= t(ns + ':form.optional', 'optionnel') %>)</span></label>
-          <input type="text" id="contact-company" class="input w-full" maxlength="150" placeholder="<%= t(ns + ':form.companyPlaceholder', 'Nom de votre entreprise') %>">
+        <div class="cf-bloc">
+          <label for="contact-company" class="cf-label"><%= t(ns + ':form.company', 'Entreprise') %> <span class="text-muted-foreground text-xs">(<%= t(ns + ':form.optional', 'optionnel') %>)</span></label>
+          <input type="text" id="contact-company" class="cf-champ" maxlength="150" placeholder="<%= t(ns + ':form.companyPlaceholder', 'Nom de votre entreprise') %>">
         </div>
 
         <!-- Message -->
-        <div class="mb-4">
-          <label for="contact-message" class="block text-sm font-semibold mb-1"><%= t(ns + ':form.message', 'Message') %> <span class="text-destructive">*</span></label>
-          <textarea id="contact-message" class="input w-full" rows="5" maxlength="3000" required placeholder="<%= t(ns + ':form.messagePlaceholder', 'Votre message...') %>"></textarea>
-          <p class="text-xs text-muted-foreground mt-1"><span id="contact-char-count">0</span>/3000</p>
-          <p class="text-xs text-destructive mt-1 hidden" id="contact-message-error"></p>
+        <div class="cf-bloc">
+          <label for="contact-message" class="cf-label"><%= t(ns + ':form.message', 'Message') %> <span class="text-destructive">*</span></label>
+          <textarea id="contact-message" class="cf-textarea" rows="8" maxlength="3000" required placeholder="<%= t(ns + ':form.messagePlaceholder', 'Votre message...') %>"></textarea>
+          <p class="cf-compteur"><span id="contact-char-count">0</span>/3000</p>
+          <p class="cf-erreur hidden" id="contact-message-error"></p>
         </div>
 
         <!-- RGPD -->
-        <div class="mb-6">
-          <label class="flex items-start gap-3 cursor-pointer">
-            <input type="checkbox" id="contact-rgpd" class="mt-1 accent-primary" required>
-            <span class="text-sm text-muted-foreground leading-relaxed"><%- t(ns + ':form.rgpd', 'J\'accepte que mes données soient traitées conformément à la <a href=\"/confidentialite/\" class=\"text-primary hover:underline\">politique de confidentialité</a> de Quiz Couple.') %></span>
+        <div class="cf-bloc cf-bloc--rgpd">
+          <label class="cf-rgpd">
+            <input type="checkbox" id="contact-rgpd" class="cf-case" required>
+            <span class="cf-rgpd-texte"><%- t(ns + ':form.rgpd', 'J\'accepte que mes données soient traitées conformément à la <a href=\"/confidentialite/\" class=\"text-primary hover:underline\">politique de confidentialité</a> de Quiz Couple.') %></span>
           </label>
-          <p class="text-xs text-destructive mt-1 hidden" id="contact-rgpd-error"></p>
+          <p class="cf-erreur hidden" id="contact-rgpd-error"></p>
         </div>
 
         <!-- Honeypot (anti-spam) -->
@@ -75,8 +75,8 @@
         </div>
 
         <!-- Submit -->
-        <div class="text-center">
-          <button type="submit" id="contact-submit" class="btn btn-cta inline-flex items-center gap-2 px-10 py-3 text-base">
+        <div class="cf-envoi">
+          <button type="submit" id="contact-submit" class="btn btn-cta cf-bouton">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             <%= t(ns + ':form.submit', 'Envoyer') %>
           </button>
@@ -106,10 +106,28 @@
 
   var charCount = document.getElementById('contact-char-count');
   var msgField = document.getElementById('contact-message');
-  if (msgField && charCount) {
+  // La zone de message grandit avec ce qu'on y écrit, pour qu'on relise
+  // toujours l'intégralité de son message avant de l'envoyer. Au-delà d'une
+  // hauteur raisonnable elle se remet à défiler, sinon le bouton d'envoi
+  // finirait hors de l'écran.
+  var MAX_MSG = Math.round(window.innerHeight * 0.6);
+  function ajusteHauteur() {
+    if (!msgField) return;
+    msgField.style.height = 'auto';
+    var voulue = msgField.scrollHeight;
+    msgField.style.height = Math.min(voulue, MAX_MSG) + 'px';
+    msgField.style.overflowY = voulue > MAX_MSG ? 'auto' : 'hidden';
+  }
+  if (msgField) {
     msgField.addEventListener('input', function() {
-      charCount.textContent = msgField.value.length;
+      if (charCount) charCount.textContent = msgField.value.length;
+      ajusteHauteur();
     });
+    window.addEventListener('resize', function() {
+      MAX_MSG = Math.round(window.innerHeight * 0.6);
+      ajusteHauteur();
+    });
+    ajusteHauteur();
   }
 
   form.addEventListener('submit', function(e) {
