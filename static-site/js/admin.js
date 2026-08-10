@@ -299,18 +299,25 @@
     return 0;
   }
   // Build a continuous series of the last `days` days: [{date:Date, label, total}]
-  function buildSeries(rows, days) {
+  // `enUTC` sert quand la base a groupe en UTC faute de connaitre le fuseau :
+  // les colonnes sont alors construites en UTC elles aussi, pour que les deux
+  // cotes parlent des memes journees. Mieux vaut un decalage assume qu'une
+  // colonne du jour vide alors que des parties ont bien ete jouees.
+  function buildSeries(rows, days, enUTC) {
     var map = {};
     (rows || []).forEach(function (r) {
       var k = rowDateKey(r);
       if (k) map[k] = (map[k] || 0) + rowTotal(r);
     });
     var out = [], today = new Date();
-    today.setHours(0, 0, 0, 0);
+    if (enUTC) today.setUTCHours(0, 0, 0, 0); else today.setHours(0, 0, 0, 0);
     for (var i = days - 1; i >= 0; i--) {
       var dt = new Date(today.getTime() - i * 86400000);
-      var iso = dt.getFullYear() + '-' + String(dt.getMonth() + 1).padStart(2, '0') + '-' + String(dt.getDate()).padStart(2, '0');
-      out.push({ date: dt, label: String(dt.getDate()).padStart(2, '0') + '/' + String(dt.getMonth() + 1).padStart(2, '0'), total: map[iso] || 0 });
+      var an = enUTC ? dt.getUTCFullYear() : dt.getFullYear();
+      var mo = (enUTC ? dt.getUTCMonth() : dt.getMonth()) + 1;
+      var jo = enUTC ? dt.getUTCDate() : dt.getDate();
+      var iso = an + '-' + String(mo).padStart(2, '0') + '-' + String(jo).padStart(2, '0');
+      out.push({ date: dt, label: String(jo).padStart(2, '0') + '/' + String(mo).padStart(2, '0'), total: map[iso] || 0 });
     }
     return out;
   }
@@ -333,18 +340,43 @@
 
   // Total completions per day. Prefer the dedicated RPC; if it is missing
   // (not created yet) fall back to summing the per-quiz daily series.
+  // Le fuseau de la personne qui regarde. La base groupe les completions par
+  // jour ; sans cette information elle le fait en UTC, et le graphique compare
+  // alors des jours UTC a des colonnes construites en heure locale. En France
+  // l'ete, entre minuit et deux heures, la colonne du jour affichait donc zero
+  // pendant que la barre de la veille absorbait la soiree en cours.
+  function fuseau() {
+    try { return Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC'; }
+    catch (e) { return 'UTC'; }
+  }
+
   function loadTotalDaily(days) {
     var cv = document.getElementById('admin-stats-total-chart');
     drawLineChart(cv, null, { loading: true });
-    statsRpc('get_quiz_daily_total', { p_days: days }).then(function (rows) {
+    var tz = fuseau();
+    statsRpc('get_quiz_daily_total', { p_days: days, p_tz: tz }).then(function (rows) {
       if (Array.isArray(rows) && !rows.error) { renderTotalDaily(buildSeries(rows, days)); return; }
       throw new Error('no rpc');
     }).catch(function () {
-      // Fallback: aggregate every quiz's daily series client-side.
+      // La fonction avec fuseau n'est peut-etre pas encore deployee : on
+      // retente sans, et les jours recus sont alors des jours UTC.
+      return statsRpc('get_quiz_daily_total', { p_days: days }).then(function (rows) {
+        if (Array.isArray(rows) && !rows.error) { renderTotalDaily(buildSeries(rows, days, true)); return; }
+        throw new Error('no rpc');
+      });
+    }).catch(function () {
+      // Dernier recours : on additionne la courbe de chaque quiz.
       var slugs = statsCounts.map(function (r) { return r.quiz_slug; });
       if (slugs.length === 0) { renderTotalDaily(buildSeries([], days)); return; }
       Promise.all(slugs.map(function (s) {
-        return statsRpc('get_quiz_daily', { p_slug: s, p_days: days }).then(function (r) { return Array.isArray(r) ? r : []; }).catch(function () { return []; });
+        return statsRpc('get_quiz_daily', { p_slug: s, p_days: days, p_tz: tz })
+          .then(function (r) { return Array.isArray(r) && !r.error ? r : null; })
+          .catch(function () { return null; })
+          .then(function (r) {
+            if (r) return r;
+            return statsRpc('get_quiz_daily', { p_slug: s, p_days: days })
+              .then(function (r2) { return Array.isArray(r2) ? r2 : []; }).catch(function () { return []; });
+          });
       })).then(function (all) {
         var merged = [];
         all.forEach(function (rows) { if (Array.isArray(rows)) merged = merged.concat(rows); });
