@@ -118,6 +118,12 @@
     "description": "Discover your love compatibility through your names and zodiac signs. Numerology and astrology combined.",
     "metaDescription": "Enter your names and zodiac signs. Our test combines numerology and astrology to reveal what the stars and your names say about your compatibility."
   },
+  "testDateNaissance": {
+    "title": "Love Compatibility Test by Date of Birth | Free",
+    "shortTitle": "Birth date compatibility",
+    "description": "Two birth dates are all it takes. We work out your life paths, your star signs and your Chinese signs, then cross all three readings.",
+    "metaDescription": "Are you compatible according to your birth dates? Life path, star sign and Chinese sign crossed in a single calculation. Free, no sign-up needed."
+  },
   "testEmmenager": {
     "title": "Ready to Move In Together? Couples Test",
     "shortTitle": "Moving In Test",

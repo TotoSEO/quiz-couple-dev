@@ -6539,3 +6539,120 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 .qdn-duel-carte:nth-child(2) .qdn-duel-score { color: hsl(var(--secondary)); }
 .qdn-fin-passees, .qdn-fin-debats { margin-top: .3rem; font-size: .9rem; color: hsl(var(--muted-foreground)); }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Compatibilité par date de naissance
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Les jeux de l'accueil défilent désormais dans le même carrousel que les
+   tests et les quiz. La carte de jeu est elle-même le lien, donc elle porte
+   directement la classe de diapositive. Pas de troncature du descriptif ici :
+   les cartes s'alignent déjà par la piste, et -webkit-line-clamp ne tient pas
+   sur un élément flex (le navigateur reblockifie l'affichage). */
+.quiz-slider__track > .jeu-card { flex-direction: column; }
+
+.dn-personne { margin-bottom: 1.25rem; }
+.dn-personne-titre {
+  display: flex; align-items: center; gap: 0.6rem;
+  margin: 0 0 0.75rem; font-weight: 700; font-size: 1rem;
+}
+.dn-personne-num {
+  display: grid; place-items: center; width: 1.75rem; height: 1.75rem;
+  border-radius: 50%; font-size: 0.875rem; font-weight: 800; color: #fff;
+  background: hsl(var(--primary));
+}
+.dn-personne-num-2 { background: hsl(var(--secondary)); }
+.dn-champs { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 0.6rem; }
+@media (max-width: 400px) { .dn-champs { grid-template-columns: 1fr; } }
+
+.dn-erreur {
+  margin-top: 1rem; padding: 0.75rem 1rem; border-radius: var(--radius);
+  background: hsl(var(--destructive) / 0.1); color: hsl(var(--destructive));
+  border: 1px solid hsl(var(--destructive) / 0.3); font-size: 0.9rem;
+}
+
+.dn-verdict { text-align: center; padding: 0.5rem 0 1.5rem; }
+.dn-anneau-boite {
+  position: relative; width: 9rem; height: 9rem; margin: 0 auto 1.25rem;
+}
+.dn-anneau { width: 100%; height: 100%; transform: rotate(-90deg); }
+.dn-anneau-fond {
+  fill: none; stroke: hsl(var(--muted)); stroke-width: 10;
+}
+.dn-anneau-trait {
+  fill: none; stroke: hsl(var(--primary)); stroke-width: 10; stroke-linecap: round;
+  transition: stroke-dashoffset 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* Le pourcentage se cale au centre exact de l'anneau : une grille en colonne
+   avec place-content:center, sinon le « % » décale le chiffre. */
+.dn-anneau-valeur {
+  position: absolute; inset: 0;
+  display: grid; grid-auto-flow: column; align-items: baseline;
+  place-content: center; gap: 0.1rem;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 2.25rem; font-weight: 800; color: hsl(var(--foreground));
+}
+.dn-anneau-valeur small { font-size: 1.1rem; font-weight: 700; }
+.dn-verdict-titre { font-size: 1.5rem; font-weight: 800; margin: 0 0 0.75rem; }
+.dn-verdict-texte {
+  max-width: 34rem; margin: 0 auto; color: hsl(var(--muted-foreground)); line-height: 1.65;
+}
+
+.dn-fiches { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; margin-bottom: 2rem; }
+@media (max-width: 520px) { .dn-fiches { grid-template-columns: 1fr; } }
+.dn-fiche {
+  padding: 1rem 1.1rem; border-radius: var(--radius);
+  border: 1px solid hsl(var(--border)); background: hsl(var(--card));
+  border-top: 3px solid hsl(var(--primary));
+}
+.dn-fiche-2 { border-top-color: hsl(var(--secondary)); }
+.dn-fiche-date { margin: 0 0 0.6rem; font-weight: 700; font-size: 0.95rem; }
+.dn-fiche-liste { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 0.75rem; margin: 0; }
+.dn-fiche-liste dt { font-size: 0.8rem; color: hsl(var(--muted-foreground)); }
+.dn-fiche-liste dd { margin: 0; font-size: 0.875rem; font-weight: 600; text-align: right; }
+
+.dn-axes { display: grid; gap: 1.1rem; margin-bottom: 2rem; }
+.dn-axe-tete { display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; }
+.dn-axe-nom { font-weight: 700; font-size: 0.95rem; }
+.dn-axe-note {
+  font-weight: 800; font-variant-numeric: tabular-nums; color: hsl(var(--primary));
+}
+.dn-axe-piste {
+  display: block; height: 0.55rem; margin: 0.4rem 0 0.35rem;
+  border-radius: 999px; background: hsl(var(--muted)); overflow: hidden;
+}
+.dn-axe-jauge {
+  display: block; height: 100%; border-radius: 999px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
+  transition: width 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.dn-axe-valeur { margin: 0; font-size: 0.85rem; color: hsl(var(--muted-foreground)); }
+
+.dn-bloc {
+  padding: 1.25rem 1.35rem; margin-bottom: 1rem;
+  border-radius: var(--radius); border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.4);
+}
+.dn-bloc-titre { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.6rem; }
+.dn-bloc p { margin: 0 0 0.6rem; color: hsl(var(--muted-foreground)); line-height: 1.65; }
+.dn-bloc p:last-child { margin-bottom: 0; }
+.dn-bloc-couple {
+  border-color: hsl(var(--primary) / 0.35);
+  background: hsl(var(--primary) / 0.06);
+}
+
+.dn-suite-carte {
+  margin-top: 2rem; padding: 1.5rem; text-align: center;
+  border-radius: calc(var(--radius) + 0.25rem);
+  border: 1px solid hsl(var(--secondary) / 0.35);
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.07), hsl(var(--secondary) / 0.1));
+}
+.dn-suite-titre { font-size: 1.2rem; font-weight: 800; margin: 0 0 0.6rem; }
+.dn-suite-texte {
+  max-width: 34rem; margin: 0 auto 1.25rem;
+  color: hsl(var(--muted-foreground)); line-height: 1.6; font-size: 0.95rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dn-anneau-trait, .dn-axe-jauge { transition: none; }
+}

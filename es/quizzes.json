@@ -118,6 +118,12 @@
     "description": "Descubre la compatibilidad amorosa entre vuestros nombres y signos zodiacales. Numerología y astrología combinadas.",
     "metaDescription": "Introduce vuestros nombres y signos zodiacales. Nuestro test combina numerología y astrología para revelar lo que las estrellas dicen de vuestra compatibilidad."
   },
+  "testDateNaissance": {
+    "title": "Fecha de nacimiento | Test de compatibilidad amorosa",
+    "shortTitle": "Compatibilidad por fecha de nacimiento",
+    "description": "Bastan dos fechas de nacimiento. Sacamos vuestros caminos de vida, vuestros signos astrológicos y vuestros signos chinos, y cruzamos las tres lecturas.",
+    "metaDescription": "¿Sois compatibles según vuestras fechas de nacimiento? Camino de vida, signo astral y signo chino cruzados en un solo cálculo. Gratis y sin registro."
+  },
   "testEmmenager": {
     "title": "¿Preparados para vivir juntos? Test para parejas",
     "shortTitle": "Test Convivencia",

@@ -118,6 +118,12 @@
     "description": "Découvrez la compatibilité amoureuse entre vos prénoms et vos signes astrologiques. Numérologie et astrologie réunies.",
     "metaDescription": "Entrez vos deux prénoms et vos signes astro : le calcul croise numérologie et astrologie et vous donne votre compatibilité amoureuse en un clic."
   },
+  "testDateNaissance": {
+    "title": "Date de naissance | Test de compatibilité amoureuse",
+    "shortTitle": "Compatibilité date de naissance",
+    "description": "Deux dates de naissance suffisent. On en tire vos chemins de vie, vos signes astrologiques et vos signes chinois, puis on croise les trois lectures.",
+    "metaDescription": "Êtes-vous compatibles selon vos dates de naissance ? Chemin de vie, signe astro et signe chinois croisés en un seul calcul. Gratuit et sans inscription."
+  },
   "testEmmenager": {
     "title": "Test emménager ensemble : êtes-vous prêts à vivre à deux ?",
     "shortTitle": "Test Emménager",
