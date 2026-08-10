@@ -7039,7 +7039,8 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .qc-theme-intro { color: hsl(var(--muted-foreground)); line-height: 1.7; margin-bottom: 1.25rem; font-size: 0.9375rem; }
 
 /* Une seule colonne : la numerotation court de 1 a 120 sans interruption, et
-   sur deux colonnes l'oeil ne sait plus dans quel ordre lire. */
+   sur deux colonnes l'oeil ne sait plus dans quel ordre lire.
+ */
 .qc-questions { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .qc-question {
   display: flex; align-items: baseline; gap: 0.875rem;
@@ -7053,6 +7054,16 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   font-size: 1rem; font-weight: 800; color: hsl(var(--primary));
   font-variant-numeric: tabular-nums;
 }
+
+/* Les points de « quand », « comment » et « pour qui » etaient des puces d'une
+   seule ligne, ce qui ne donne aucune structure a Google ni au lecteur. Ce
+   sont des sous-titres. */
+.qc-points { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 1.5rem; }
+.qc-point-titre {
+  font-size: 1.0625rem; font-weight: 700; color: hsl(var(--foreground));
+  margin: 0 0 0.375rem;
+}
+.qc-point-texte { color: hsl(var(--muted-foreground)); line-height: 1.75; margin: 0; }
 .qc-conclusion {
   border-radius: 1.25rem; padding: 1.5rem 1.75rem;
   border: 1px solid hsl(var(--primary) / 0.2); background: hsl(var(--primary) / 0.05);
