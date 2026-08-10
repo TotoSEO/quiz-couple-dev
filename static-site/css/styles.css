@@ -1104,10 +1104,17 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* ── Mega Menu ──────────────────────────────────────────── */
 
+/* Le panneau se cale sur la colonne de contenu, pas sur son onglet. Attaché à
+   l'onglet, il sortait forcément de l'écran d'un côté ou de l'autre : il fait
+   800 px de large alors que les onglets sont répartis sur toute la barre.
+   Centré sur l'onglet, celui des tests perdait 45 px à gauche à 1440 px ;
+   aligné à gauche, celui des jeux dépassait à droite ; aligné à droite, il
+   dépassait à gauche. Le repère est donc la barre elle-même, qui tient
+   toujours dans l'écran. */
+.nav-barre { position: relative; }
 .nav-megamenu {
-  position: absolute; left: 50%; top: 100%; z-index: 50;
-  transform: translateX(-50%);
-  width: max-content; max-width: 42rem;
+  position: absolute; left: 0; top: 100%; z-index: 50;
+  width: max-content; max-width: 100%;
   padding-top: 0.625rem;
 }
 .nav-megamenu-inner {
@@ -1142,8 +1149,11 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .nav-megamenu-header--quiz .nav-megamenu-count { background: hsl(var(--secondary) / 0.1); color: hsl(var(--secondary)); }
 
+/* minmax(0, 1fr) et non 1fr : sinon chaque colonne garde pour plancher la
+   largeur du plus long libellé, les pistes réclament plus que le panneau et
+   l'overflow du cadre rogne la colonne de droite. */
 .nav-megamenu-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   padding: 0.625rem;
   gap: 2px;
 }
@@ -1153,9 +1163,11 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   border-radius: calc(var(--radius) - 0.25rem);
   font-size: 0.8125rem; font-weight: 500; color: hsl(var(--foreground));
   transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
-  white-space: nowrap;
   position: relative;
 }
+/* Si la place vient à manquer, le libellé passe à la ligne au lieu d'être
+   tronqué par le cadre. */
+.nav-megamenu-label { min-width: 0; overflow-wrap: anywhere; }
 .nav-megamenu-item::before {
   content: '';
   position: absolute;
@@ -1197,8 +1209,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .nav-megamenu-label { line-height: 1.2; }
 
 @media (max-width: 1280px) {
-  .nav-megamenu-grid { grid-template-columns: repeat(2, 1fr); }
-  .nav-megamenu { max-width: 32rem; }
+  .nav-megamenu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* ── Mobile Navigation ─────────────────────────────────── */

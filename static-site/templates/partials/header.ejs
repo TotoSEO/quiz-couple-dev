@@ -118,7 +118,7 @@
   function navIcon(rk) { return navIcons[rk] || _svg('<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5z"/><path d="M14 2v6h6"/>'); }
 %>
 <header class="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80" id="site-header">
-  <nav class="container mx-auto px-4" aria-label="<%= lang === 'fr' ? 'Navigation principale' : 'Main navigation' %>">
+  <nav class="container mx-auto px-4 nav-barre" aria-label="<%= lang === 'fr' ? 'Navigation principale' : 'Main navigation' %>">
     <div class="flex h-16 items-center justify-between">
       <!-- Logo -->
       <a href="<%= homeUrl %>" class="flex items-center gap-2.5 text-xl font-bold transition-colors hover:opacity-80 flex-shrink-0" aria-label="Quiz Couple - <%= lang === 'fr' ? 'Accueil' : 'Home' %>">
@@ -132,7 +132,7 @@
       <!-- Desktop Navigation -->
       <div class="hidden lg:flex lg:items-center lg:gap-1">
         <!-- Tests Mega Menu -->
-        <div class="nav-dropdown relative" data-megamenu>
+        <div class="nav-dropdown" data-megamenu>
           <button class="nav-link nav-dropdown-trigger" aria-expanded="false">
             <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
             <%= t('common:nav.categoryTests', 'Tests') %>
@@ -158,7 +158,7 @@
         </div>
 
         <!-- Quiz Mega Menu -->
-        <div class="nav-dropdown relative" data-megamenu>
+        <div class="nav-dropdown" data-megamenu>
           <button class="nav-link nav-dropdown-trigger" aria-expanded="false">
             <svg class="w-4 h-4 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
             <%= t('common:nav.categoryQuizzes', 'Quiz') %>
@@ -187,7 +187,7 @@
         <!-- Le declencheur est scinde : le libelle est un vrai lien vers le hub,
              la fleche est un bouton qui ne fait qu'ouvrir le sous-menu. Cliquer
              le mot ne doit jamais se contenter d'ouvrir un panneau. -->
-        <div class="nav-dropdown nav-dropdown--scinde relative" data-megamenu>
+        <div class="nav-dropdown nav-dropdown--scinde" data-megamenu>
           <div class="nav-link nav-trigger-scinde">
             <a href="<%= urlJeux %>" class="nav-trigger-lien">
               <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
