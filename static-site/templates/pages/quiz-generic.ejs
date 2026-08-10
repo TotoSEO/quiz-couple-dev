@@ -181,7 +181,15 @@
     // reprend celle qui est chargée par défaut.
     'couche': 'coucheH', 'secret': 'secretH', 'distance-aime': 'distanceAime'
   };
-  const gdPrefix = gdPrefixMap[quizType] || quizType;
+  let gdPrefix = gdPrefixMap[quizType] || quizType;
+  // Le test de couple sain n'a de questions propres que hors français ; en
+  // français le moteur retombe sur la série « couple » (voir initHealthyQuiz
+  // dans quiz-loader.js). Sans ce repli, la page française publiait un bloc
+  // Quiz sans la moindre question, alors qu'elle en pose vingt.
+  if (quizType === 'sain') {
+    const natif = tgd.local(gdPrefix + '.q1', '');
+    if (!natif || natif === gdPrefix + '.q1') gdPrefix = 'couple';
+  }
 
   // Build hasPart with actual quiz questions from gd.json using tgd() for proper translations
   const hasPart = [];

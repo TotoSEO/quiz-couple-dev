@@ -31,7 +31,35 @@
     const a = t(ns + ':faq.a' + i, '');
     if (q && a) faqEntrees.push({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } });
   }
+
+  // Balisage Quiz, comme les autres pages de test. Il n'y a volontairement pas
+  // de hasPart : cette page ne pose pas de questions à choix, elle demande deux
+  // dates et calcule. Inventer des couples question / réponse pour remplir le
+  // schéma décrirait une page qui n'existe pas.
+  const baseUrl = 'https://quiz-couple.com';
+  const imageDN = (typeof featuredImage !== 'undefined' && featuredImage) ? baseUrl + featuredImage : baseUrl + '/og-image.webp';
+  const quizDN = {
+    '@context': 'https://schema.org', '@type': 'Quiz',
+    name: quizTitle,
+    description: t('quizzes:testDateNaissance.metaDescription', t('quizzes:testDateNaissance.description', '')),
+    inLanguage: lang,
+    url: canonical,
+    isAccessibleForFree: true,
+    datePublished: '2026-03-01',
+    learningResourceType: 'Quiz',
+    interactivityType: 'active',
+    image: imageDN,
+    author: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl },
+    publisher: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl, logo: { '@type': 'ImageObject', url: baseUrl + '/apple-touch-icon.png' } },
+    about: { '@type': 'Thing', name: 'couple' },
+    additionalProperty: [
+      { '@type': 'PropertyValue', name: 'audience', value: 'couples' },
+      { '@type': 'PropertyValue', name: 'input', value: 'two birth dates' },
+      { '@type': 'PropertyValue', name: 'method', value: 'numerology life path, sun sign, Chinese zodiac' }
+    ]
+  };
 %>
+<script type="application/ld+json"><%- JSON.stringify(quizDN) %></script>
 <% if (faqEntrees.length) { %>
 <script type="application/ld+json"><%- JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqEntrees }) %></script>
 <% } %>
