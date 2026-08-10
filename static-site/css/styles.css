@@ -7038,17 +7038,19 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 .qc-theme-intro { color: hsl(var(--muted-foreground)); line-height: 1.7; margin-bottom: 1.25rem; font-size: 0.9375rem; }
 
-.qc-questions { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
-@media (min-width: 900px) { .qc-questions { grid-template-columns: 1fr 1fr; gap: 0.5rem 1.25rem; } }
+/* Une seule colonne : la numerotation court de 1 a 120 sans interruption, et
+   sur deux colonnes l'oeil ne sait plus dans quel ordre lire. */
+.qc-questions { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .qc-question {
-  display: flex; align-items: baseline; gap: 0.75rem;
-  padding: 0.6875rem 0.875rem; border-radius: 0.75rem;
-  background: hsl(var(--card)); border: 1px solid hsl(var(--border));
-  line-height: 1.6; color: hsl(var(--foreground)); font-size: 0.9375rem;
+  display: flex; align-items: baseline; gap: 0.875rem;
+  padding: 0.8125rem 0.25rem;
+  border-bottom: 1px solid hsl(var(--border));
+  line-height: 1.65; color: hsl(var(--foreground)); font-size: 1rem;
 }
+.qc-question:last-child { border-bottom: 0; }
 .qc-numero {
-  flex-shrink: 0; min-width: 1.75rem;
-  font-size: 0.75rem; font-weight: 800; color: hsl(var(--primary));
+  flex-shrink: 0; min-width: 2.25rem;
+  font-size: 1rem; font-weight: 800; color: hsl(var(--primary));
   font-variant-numeric: tabular-nums;
 }
 .qc-conclusion {

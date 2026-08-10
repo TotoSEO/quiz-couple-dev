@@ -13,7 +13,7 @@
       "title": "¿Por qué hacerse preguntas en pareja?",
       "p1": "La comunicación es el pilar de una relación plena. Hacerse preguntas permite mantener una conexión auténtica y evitar la rutina que a veces se instala en las parejas. Incluso después de años juntos, siempre quedan cosas por descubrir del otro.",
       "p2": "Estudios de psicología relacional demuestran que las parejas que intercambian regularmente sobre sus emociones, deseos y proyectos desarrollan una mejor comprensión mutua. Estos intercambios fortalecen la complicidad, crean recuerdos compartidos y permiten comprender mejor las necesidades, los sueños y las preocupaciones de vuestra pareja.",
-      "p3": "Hacer preguntas a tu pareja es también una forma de mostrar interés genuino más allá del día a día. Es un acto de escucha activa que nutre la confianza y la intimidad emocional. Ya sea al inicio de la relación o juntos desde hace mucho, estos momentos de intercambio son esenciales para mantener viva vuestra relación."
+      "p3": "Hacer preguntas a tu pareja es también una forma de mostrar interés genuino más allá del día a día. Es un acto de escucha activa que nutre la confianza y la intimidad emocional. Ya sea al inicio de la relación o juntos desde hace mucho, estos momentos de intercambio son esenciales para mantener viva vuestra relación. Si buscas algo más pautado, nuestro <a href=\"/es/test-compatibilidad-pareja/\">test de pareja</a> plantea veinte preguntas puntuadas, y el <a href=\"/es/test-puntos-comunes-pareja/\">test de puntos en común</a> compara vuestras respuestas."
     },
     "s2": {
       "title": "Las 5 categorías de preguntas para parejas",
@@ -26,31 +26,31 @@
       },
       "rows": [
         {
-          "cat": "🧠 Conocerse",
+          "cat": "Conocerse",
           "goal": "Profundizar el conocimiento mutuo más allá de lo evidente",
           "example": "¿Qué decisión pasada te cambió más?",
           "count": "24"
         },
         {
-          "cat": "🚀 Proyectos futuros",
+          "cat": "Proyectos futuros",
           "goal": "Alinear visiones y construir juntos",
           "example": "¿Dónde te ves en 5 años?",
           "count": "24"
         },
         {
-          "cat": "💕 Intimidad",
+          "cat": "Intimidad",
           "goal": "Reforzar el vínculo emocional y afectivo",
           "example": "¿Qué te hace sentir más amado/a?",
           "count": "24"
         },
         {
-          "cat": "😄 Diversión",
+          "cat": "Diversión",
           "goal": "Aportar ligereza y risas a vuestra relación",
           "example": "Si nuestra pareja fuera una película, ¿cuál sería el título?",
           "count": "24"
         },
         {
-          "cat": "💭 Preguntas profundas",
+          "cat": "Preguntas profundas",
           "goal": "Explorar valores, miedos y filosofía de vida",
           "example": "¿Qué le da sentido a tu vida?",
           "count": "24"
@@ -60,7 +60,7 @@
     },
     "s3": {
       "title": "¿Cuándo usar estas preguntas de pareja?",
-      "intro": "No hay mal momento para hacerse preguntas en pareja. Aquí están las situaciones donde estas preguntas son particularmente útiles:",
+      "intro": "No hay mal momento para hacerse preguntas en pareja. Aquí están las situaciones donde estas preguntas son particularmente útiles: Para las noches en las que sobre todo apetece reír, nuestros <a href=\"/es/juegos-para-parejas/\">juegos para parejas</a> hacen el trabajo por vosotros.",
       "items": [
         {
           "title": "Al inicio de la relación",
@@ -89,27 +89,27 @@
       "intro": "Para sacar el máximo provecho de estas preguntas y convertirlas en un verdadero momento de calidad, aquí van nuestras recomendaciones concretas:",
       "tips": [
         {
-          "emoji": "🎯",
+          "emoji": "",
           "title": "Limitaos a 3-5 preguntas por sesión",
           "desc": "Un intercambio de calidad vale más que un interrogatorio. Haced algunas preguntas y tomaos el tiempo de escuchar realmente las respuestas. Dejad que la conversación fluya naturalmente."
         },
         {
-          "emoji": "👂",
+          "emoji": "",
           "title": "Practicad la escucha activa",
           "desc": "No penséis en vuestra próxima pregunta mientras el otro habla. Escuchad de verdad, haced preguntas de seguimiento, mostrad que la respuesta os interesa sinceramente."
         },
         {
-          "emoji": "🛑",
+          "emoji": "",
           "title": "Respetad los límites",
           "desc": "Si una pregunta incomoda a vuestra pareja, pasad a la siguiente sin insistir. Cada uno tiene su ritmo y sus zonas de confort. El objetivo es acercaros, no forzar confidencias."
         },
         {
-          "emoji": "💖",
+          "emoji": "",
           "title": "Cread un clima acogedor",
           "desc": "Sin juicios ni burlas. Un espacio seguro donde cada uno pueda expresarse libremente es la condición esencial para que estas preguntas den sus frutos."
         },
         {
-          "emoji": "🔄",
+          "emoji": "",
           "title": "Responded también a las preguntas",
           "desc": "El intercambio debe ser recíproco. Después de escuchar la respuesta de vuestra pareja, compartid la vuestra. Es esta reciprocidad la que crea la verdadera conexión."
         }
@@ -135,7 +135,8 @@
           "title": "Parejas en reconexión",
           "desc": "Después de un período difícil o demasiada rutina, estas preguntas ayudan a reencontrar el camino del diálogo."
         }
-      ]
+      ],
+      "outro": "Las parejas separadas por la distancia encontrarán preguntas más adaptadas a su situación en nuestro <a href=\"/es/quiz-pareja-distancia/\">quiz de pareja a distancia</a>, y quienes se preguntan por la solidez de su vínculo en el <a href=\"/es/test-relacion-sana/\">test de relación sana</a>."
     },
     "s6": {
       "title": "Los beneficios comprobados de la comunicación en pareja",
@@ -175,6 +176,160 @@
       }
     ]
   },
-  "conclusion": "Estas 120 preguntas están aquí para ayudaros a crear momentos de intercambio sincero con vuestra pareja. Tomaos tiempo para escucharos, descubriros y fortalecer vuestra conexión.",
-  "scrollTop": "Empezar con una pregunta aleatoria"
+  "conclusion": "Estas 120 preguntas están aquí para ayudaros a crear momentos de intercambio sincero con vuestra pareja. Tomaos tiempo para escucharos, descubriros y fortalecer vuestra conexión. Y si una de estas preguntas abre un tema más pesado de lo previsto, el <a href=\"/es/test-amor-o-costumbre/\">test amor o costumbre</a> suele ayudar a aclararse.",
+  "scrollTop": "Empezar con una pregunta aleatoria",
+  "liste": {
+    "connaissance": {
+      "titre": "Preguntas para conoceros mejor",
+      "intro": "Estas van por debajo de lo evidente. Creemos conocer a alguien porque conocemos sus costumbres; estas veinticuatro preguntas se interesan por lo que las fabricó.",
+      "questions": [
+        "¿Qué decisión de tu pasado te cambió más, y te dabas cuenta en ese momento?",
+        "¿Qué te transmitieron tus padres sin decírtelo nunca de forma explícita?",
+        "¿Qué cumplido te llega de verdad, y cuál te incomoda?",
+        "¿De qué estabas seguro a los veinte años y ya no te crees en absoluto?",
+        "¿Qué se te da realmente bien y casi nadie nota?",
+        "¿Qué recuerdo de infancia te vuelve más a menudo, sin motivo concreto?",
+        "¿Qué te cansa de los demás, cuando parece que a nadie más le molesta?",
+        "¿Qué amistad te construyó más, y cómo está hoy?",
+        "¿En qué tipo de situación te sientes verdaderamente tú?",
+        "¿Qué crítica te marcó tanto que todavía piensas en ella?",
+        "¿Qué harías con tus días si el dinero dejara de contar?",
+        "¿Qué rasgo de carácter heredaste y sigues intentando corregir?",
+        "¿Qué entiende mal la gente sobre ti, más o menos siempre?",
+        "¿Qué fracaso te resultó más útil, con perspectiva?",
+        "¿Cuándo fue la última vez que cambiaste de opinión sobre algo importante?",
+        "¿Qué te enfada, cuando preferirías que te diera igual?",
+        "¿Qué lugar te hace bien nada más llegar?",
+        "¿Qué no le has contado nunca a nadie, no por vergüenza, sino porque nunca surgió?",
+        "¿Qué cualidad admiras más, y no tienes?",
+        "¿Qué te tranquiliza cuando todo va mal?",
+        "¿Qué costumbre has adoptado hace poco, y qué la provocó?",
+        "Si tuvieras que describirte en una frase que jamás dirías en una entrevista de trabajo, ¿cuál sería?",
+        "¿Qué talento te encantaría tener, sin haber sacado nunca tiempo para aprenderlo?",
+        "¿Qué ha cambiado en ti desde que estamos juntos, sin que yo me diera cuenta?"
+      ]
+    },
+    "futur": {
+      "titre": "Preguntas sobre vuestros planes y vuestro futuro",
+      "intro": "Las parejas rara vez se separan por un desacuerdo de fondo; se separan porque ese desacuerdo nunca se puso en palabras. Estas preguntas lo ponen, mientras aún da tiempo a hablarlo.",
+      "questions": [
+        "¿Cómo es un día normal de nuestra vida dentro de cinco años, en tu cabeza?",
+        "¿Qué es lo único que no quieres que le pase a nuestra relación?",
+        "¿Dónde querrías vivir si nada nos retuviera donde estamos?",
+        "¿Qué deberíamos haber hecho juntos antes de los cincuenta?",
+        "¿Cómo te imaginas que llevaremos el dinero dentro de diez años?",
+        "¿Qué papel quieres que ocupe tu trabajo en tu vida más adelante?",
+        "¿Qué te haría decir, dentro de veinte años, que acertamos con nuestra relación?",
+        "¿Hay algún proyecto que hayas dejado de lado por nuestra relación?",
+        "¿Cómo quieres que estén presentes nuestras familias en nuestra vida?",
+        "¿Qué es lo que más miedo te da de envejecer en pareja?",
+        "Si tuviéramos que empezar de cero en otro sitio mañana, ¿te irías o te quedarías?",
+        "¿Qué sitio quieres dejarles a tus amigos en los próximos años?",
+        "¿Cómo te gustaría que tomáramos las decisiones importantes?",
+        "¿Qué quieres transmitirle a alguien algún día, sin falta?",
+        "¿Cuál sería el buen momento para la siguiente gran etapa de lo nuestro?",
+        "¿Hay algo que esperas de mí y que nunca has pedido?",
+        "¿Cómo quieres que nos organicemos si uno de los dos tiene que dejar de trabajar?",
+        "¿Qué costumbre te gustaría que adoptáramos juntos y mantuviéramos mucho tiempo?",
+        "¿Qué deberíamos dejar de aplazar?",
+        "¿Cómo sabríamos que toca cambiar algo en nuestra vida?",
+        "¿Qué concesión estás dispuesto a hacer, y cuál no harás nunca?",
+        "¿Qué te gustaría que conserváramos exactamente como está hoy?",
+        "Si tuviéramos un año entero libre, ¿qué haríamos con él?",
+        "¿Qué esperas que se diga de nosotros dentro de treinta años?"
+      ]
+    },
+    "intime": {
+      "titre": "Preguntas sobre la intimidad y los sentimientos",
+      "intro": "La intimidad no se limita al cuerpo. Estas preguntas van sobre lo que hace que os sintáis cerca, o no, y sobre lo que rara vez se dice en voz alta.",
+      "questions": [
+        "¿Qué te hace sentir más querido en el día a día?",
+        "¿En qué momento te has sentido más cerca de mí?",
+        "¿Qué echas de menos cuando no estoy?",
+        "¿Cómo sabes que estoy mal, antes incluso de que lo diga?",
+        "¿Qué es lo que más confianza te da de mí?",
+        "¿Hay algún gesto que te gustaría que hiciera más a menudo?",
+        "¿Qué te quita las ganas de estar cerca, cuando no es cansancio?",
+        "¿Cómo prefieres que te consuelen cuando estás mal?",
+        "¿Qué no te atreves a pedirme?",
+        "¿En qué momento del día te sientes mejor conmigo?",
+        "¿Qué te da celos, sinceramente?",
+        "¿Cómo supiste que yo te importaba de verdad?",
+        "¿Qué ha cambiado en nuestra intimidad desde el principio?",
+        "¿Hay algo que yo haga y que te llegue sin que yo lo sepa?",
+        "¿Qué te ayuda a sentirte deseado?",
+        "¿Cuándo te sientes más vulnerable conmigo?",
+        "¿Qué te gustaría que nos atreviéramos a hacer más juntos?",
+        "¿Cómo te gustaría que nos reencontráramos después de una discusión?",
+        "¿Qué te hace gracia de mí, y yo tomo por un defecto?",
+        "¿Qué necesitas cuando estás cansado y no dices nada?",
+        "¿Qué es lo que más te ha sorprendido de mí desde que nos conocemos?",
+        "¿Hay algún tema que los dos evitemos sin habérnoslo dicho?",
+        "¿Qué te da ganas de confiarte a mí y no a otra persona?",
+        "¿Qué te gustaría que entendiera sin tener que explicarlo?"
+      ]
+    },
+    "fun": {
+      "titre": "Preguntas divertidas y ligeras",
+      "intro": "No todas las conversaciones tienen que ser profundas. Estas veinticuatro sirven para pasarlo bien, en el coche, en la mesa o una noche en la que ya nadie tiene ideas.",
+      "questions": [
+        "Si lo nuestro fuera una película, ¿qué título y qué cartel tendría?",
+        "¿Cuál es la cosa más ridícula por la que hemos discutido?",
+        "¿Qué personaje de serie se te parece más, y por qué te fastidia?",
+        "¿Qué talento completamente inútil te encantaría dominar?",
+        "¿Cuál es la peor pinta que me has visto llevar?",
+        "Si intercambiáramos trabajos mañana, ¿cómo saldría la cosa?",
+        "¿Cuál es tu placer culpable que defenderías hasta el final?",
+        "¿Qué canción te hace pensar en nosotros al instante, aunque sea mala?",
+        "Si nos tocara la lotería esta noche, ¿cuál sería la primera tontería que haríamos?",
+        "¿Qué animal serías tú, y qué animal sería yo?",
+        "¿Cuál es la cosa más vergonzosa que has hecho en público?",
+        "¿Qué plato podrías comer todos los días sin cansarte?",
+        "Si tuviéramos un grupo de música, ¿qué estilo y qué nombre?",
+        "¿Qué manía tuya sabes perfectamente que me irrita?",
+        "¿Qué superpoder elegirías, sabiendo que yo elegiría el contrario?",
+        "¿Cuál es la peor idea de plan que hemos tenido juntos?",
+        "Si nuestra vida se filmara, ¿qué escena entraría en el montaje final?",
+        "¿Cuál es la mentira más inofensiva que me has dicho?",
+        "¿Qué época habrías odiado vivir, y por qué?",
+        "Si tuvieras que venderme a un desconocido con tres argumentos, ¿qué dirías?",
+        "¿Cuál es la cosa más inútil que has comprado?",
+        "¿Quién de los dos aguantaría más tiempo sin móvil?",
+        "¿Qué mote no quieres que use jamás en público?",
+        "Si escribiéramos un libro sobre nosotros, ¿cómo se titularía el primer capítulo?"
+      ]
+    },
+    "profond": {
+      "titre": "Preguntas profundas sobre los valores y la vida",
+      "intro": "Estas piden algo de calma y algo de tiempo. Van sobre lo que os guía, y ahí es donde suelen aparecer las diferencias de verdad.",
+      "questions": [
+        "¿Qué le da sentido a tu vida ahora mismo?",
+        "¿De qué te costaría más recuperarte?",
+        "¿Qué consideras imperdonable?",
+        "¿Qué injusticia te enfada de verdad?",
+        "¿Qué te habría gustado tener el valor de hacer?",
+        "¿Qué significa el éxito para ti, con tus propias palabras?",
+        "¿Qué valor no vas a negociar nunca?",
+        "¿A qué le tienes más miedo, aparte de a la muerte?",
+        "¿Qué has perdonado sin olvidarlo nunca?",
+        "¿Qué idea heredada sobre la vida en pareja te parece falsa?",
+        "¿Qué te haría cuestionarte la vida entera?",
+        "¿Crees que de verdad elegimos a quién queremos?",
+        "¿Qué te gustaría que se recordara de ti?",
+        "¿Qué persona te enseñó más, sin pretenderlo?",
+        "¿Qué no entiendes de la gente de tu generación?",
+        "¿Qué te enorgullece de ti, y no te atreves a decir?",
+        "¿Qué es lo más difícil que has tenido que aceptar?",
+        "¿Qué lamentas no haberle dicho a alguien?",
+        "¿En qué notas que una relación merece la pena salvarse?",
+        "¿Qué harías si supieras que te queda un año?",
+        "¿Qué verdad sobre ti mismo tardaste mucho en aceptar?",
+        "¿Qué esperas de un amor, más allá del sentimiento?",
+        "¿Cuál es el límite que nadie tiene derecho a cruzar contigo?",
+        "¿Qué quieres que te recuerde los días en que se te olvida?"
+      ]
+    }
+  },
+  "liste_titre": "Las 120 preguntas, ordenadas por tema",
+  "liste_intro": "Aquí tienes la lista completa. Cada tema tiene veinticuatro preguntas, para leer en orden o para elegir al azar."
 }

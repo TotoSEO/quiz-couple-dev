@@ -13,7 +13,7 @@
       "title": "Warum sich als Paar Fragen stellen?",
       "p1": "Kommunikation ist die Säule einer erfüllten Beziehung. Sich Fragen zu stellen hilft, eine authentische Verbindung aufrechtzuerhalten und die Routine zu vermeiden, die sich manchmal in Beziehungen einschleicht. Selbst nach Jahren des Zusammenlebens gibt es immer noch Neues am anderen zu entdecken.",
       "p2": "Studien der Beziehungspsychologie zeigen, dass Paare, die regelmäßig über ihre Emotionen, Wünsche und Pläne sprechen, ein tieferes gegenseitiges Verständnis entwickeln. Diese Gespräche stärken die Komplizenschaft, schaffen gemeinsame Erinnerungen und helfen, die Bedürfnisse, Träume und Sorgen des Partners besser zu verstehen.",
-      "p3": "Seinem Partner Fragen zu stellen bedeutet auch, echtes Interesse über den Alltag hinaus zu zeigen. Es ist ein Akt des aktiven Zuhörens, der Vertrauen und emotionale Intimität nährt. Ob am Anfang der Beziehung oder seit Jahren zusammen, diese Momente des Austauschs sind entscheidend, um die Beziehung lebendig zu halten."
+      "p3": "Seinem Partner Fragen zu stellen bedeutet auch, echtes Interesse über den Alltag hinaus zu zeigen. Es ist ein Akt des aktiven Zuhörens, der Vertrauen und emotionale Intimität nährt. Ob am Anfang der Beziehung oder seit Jahren zusammen, diese Momente des Austauschs sind entscheidend, um die Beziehung lebendig zu halten. Wenn du etwas Strukturierteres suchst: Unser <a href=\"/de/paar-kompatibilitaetstest/\">Paartest</a> stellt zwanzig bewertete Fragen, und der <a href=\"/de/gemeinsamkeiten-test-paare/\">Gemeinsamkeiten-Test</a> vergleicht eure Antworten zu zweit."
     },
     "s2": {
       "title": "Die 5 Kategorien der Paar-Fragen",
@@ -26,31 +26,31 @@
       },
       "rows": [
         {
-          "cat": "🧠 Sich kennenlernen",
+          "cat": "Sich kennenlernen",
           "goal": "Das gegenseitige Wissen über das Offensichtliche hinaus vertiefen",
           "example": "Welche vergangene Entscheidung hat dich am meisten verändert?",
           "count": "24"
         },
         {
-          "cat": "🚀 Zukunftspläne",
+          "cat": "Zukunftspläne",
           "goal": "Visionen abstimmen und gemeinsam aufbauen",
           "example": "Wo siehst du dich in 5 Jahren?",
           "count": "24"
         },
         {
-          "cat": "💕 Intimität",
+          "cat": "Intimität",
           "goal": "Die emotionale und affektive Bindung stärken",
           "example": "Was gibt dir das Gefühl, am meisten geliebt zu werden?",
           "count": "24"
         },
         {
-          "cat": "😄 Spaß",
+          "cat": "Spaß",
           "goal": "Leichtigkeit und Lachen in eure Beziehung bringen",
           "example": "Wenn unser Paar ein Film wäre, wie hieße er?",
           "count": "24"
         },
         {
-          "cat": "💭 Tiefgründige Fragen",
+          "cat": "Tiefgründige Fragen",
           "goal": "Werte, Ängste und Lebensphilosophie erkunden",
           "example": "Was gibt deinem Leben Sinn?",
           "count": "24"
@@ -60,7 +60,7 @@
     },
     "s3": {
       "title": "Wann diese Paar-Fragen verwenden?",
-      "intro": "Es gibt keinen falschen Zeitpunkt, um sich als Paar Fragen zu stellen. Hier sind Situationen, in denen diese Fragen besonders nützlich sind:",
+      "intro": "Es gibt keinen falschen Zeitpunkt, um sich als Paar Fragen zu stellen. Hier sind Situationen, in denen diese Fragen besonders nützlich sind: Für Abende, an denen ihr vor allem lachen wollt, übernehmen unsere <a href=\"/de/paarspiele/\">Paarspiele</a> die Arbeit.",
       "items": [
         {
           "title": "Am Beziehungsbeginn",
@@ -89,27 +89,27 @@
       "intro": "Um das Beste aus diesen Fragen herauszuholen und sie zu einem echten Qualitätsmoment zu machen, hier unsere praktischen Empfehlungen:",
       "tips": [
         {
-          "emoji": "🎯",
+          "emoji": "",
           "title": "Beschränkt euch auf 3-5 Fragen pro Sitzung",
           "desc": "Ein qualitativ hochwertiger Austausch ist besser als ein Verhör. Stellt einige Fragen und nehmt euch die Zeit, die Antworten wirklich zu hören. Lasst das Gespräch natürlich fließen."
         },
         {
-          "emoji": "👂",
+          "emoji": "",
           "title": "Übt aktives Zuhören",
           "desc": "Denkt nicht an eure nächste Frage, während der andere spricht. Hört wirklich zu, stellt Nachfragen, zeigt, dass euch die Antwort aufrichtig interessiert."
         },
         {
-          "emoji": "🛑",
+          "emoji": "",
           "title": "Respektiert die Grenzen",
           "desc": "Wenn eine Frage euren Partner unangenehm berührt, wechselt ohne Druck zur nächsten. Jeder hat sein eigenes Tempo und seine Komfortzonen. Das Ziel ist Nähe, nicht erzwungene Geständnisse."
         },
         {
-          "emoji": "💖",
+          "emoji": "",
           "title": "Schafft ein wohlwollendes Klima",
           "desc": "Kein Urteil, kein Spott. Ein sicherer Raum, in dem sich jeder frei ausdrücken kann, ist die wesentliche Voraussetzung dafür, dass diese Fragen Früchte tragen."
         },
         {
-          "emoji": "🔄",
+          "emoji": "",
           "title": "Beantwortet die Fragen auch selbst",
           "desc": "Der Austausch sollte gegenseitig sein. Nachdem ihr die Antwort eures Partners gehört habt, teilt eure eigene. Diese Gegenseitigkeit schafft die wahre Verbindung."
         }
@@ -135,7 +135,8 @@
           "title": "Paare in Wiederverbindung",
           "desc": "Nach einer schwierigen Phase oder zu viel Routine helfen diese Fragen, den Weg zum Dialog wiederzufinden."
         }
-      ]
+      ],
+      "outro": "Paare, die die Entfernung trennt, finden passendere Fragen in unserem <a href=\"/de/fernbeziehung-quiz/\">Fernbeziehungs-Quiz</a>, und wer sich fragt, wie belastbar die Verbindung ist, im <a href=\"/de/gesunde-beziehung-test/\">Test für eine gesunde Beziehung</a>."
     },
     "s6": {
       "title": "Die bewiesenen Vorteile der Paarkommunikation",
@@ -175,6 +176,160 @@
       }
     ]
   },
-  "conclusion": "Diese 120 Fragen sind da, um euch zu helfen, Momente des aufrichtigen Austauschs mit eurem Partner zu schaffen. Nehmt euch Zeit zum Zuhören, Entdecken und Stärken eurer Verbindung.",
-  "scrollTop": "Mit einer Zufallsfrage beginnen"
+  "conclusion": "Diese 120 Fragen sind da, um euch zu helfen, Momente des aufrichtigen Austauschs mit eurem Partner zu schaffen. Nehmt euch Zeit zum Zuhören, Entdecken und Stärken eurer Verbindung. Und wenn eine dieser Fragen ein schwereres Thema öffnet als gedacht, hilft der <a href=\"/de/liebe-oder-gewohnheit-test/\">Test Liebe oder Gewohnheit</a> oft weiter.",
+  "scrollTop": "Mit einer Zufallsfrage beginnen",
+  "liste": {
+    "connaissance": {
+      "titre": "Fragen, um sich besser kennenzulernen",
+      "intro": "Diese gehen unter das Offensichtliche. Man glaubt jemanden zu kennen, weil man seine Gewohnheiten kennt; diese vierundzwanzig Fragen interessieren sich für das, was sie geformt hat.",
+      "questions": [
+        "Welche Entscheidung aus deiner Vergangenheit hat dich am meisten verändert, und hast du es damals gemerkt?",
+        "Was haben dir deine Eltern weitergegeben, ohne es je auszusprechen?",
+        "Welches Kompliment erreicht dich wirklich, und welches macht dich verlegen?",
+        "Wovon warst du mit zwanzig überzeugt und glaubst es heute überhaupt nicht mehr?",
+        "Was kannst du wirklich gut, und fast niemand bemerkt es?",
+        "Welche Kindheitserinnerung kommt dir am häufigsten, ohne besonderen Anlass?",
+        "Was ermüdet dich an anderen, obwohl es sonst niemanden zu stören scheint?",
+        "Welche Freundschaft hat dich am meisten geprägt, und wo steht sie heute?",
+        "In welcher Art von Situation fühlst du dich wirklich wie du selbst?",
+        "Welche Kritik hat dich so getroffen, dass du noch daran denkst?",
+        "Was würdest du mit deinen Tagen anfangen, wenn Geld keine Rolle mehr spielte?",
+        "Welchen Charakterzug hast du geerbt und versuchst ihn zu korrigieren?",
+        "Was verstehen die Leute an dir ziemlich zuverlässig falsch?",
+        "Welches Scheitern war im Rückblick am nützlichsten?",
+        "Wann hast du zuletzt deine Meinung zu etwas Wichtigem geändert?",
+        "Was macht dich wütend, obwohl es dich eigentlich kaltlassen sollte?",
+        "Welcher Ort tut dir sofort gut, sobald du ankommst?",
+        "Was hast du noch nie jemandem erzählt, nicht aus Scham, sondern weil sich die Gelegenheit nie ergab?",
+        "Welche Eigenschaft bewunderst du am meisten und hast sie nicht?",
+        "Was beruhigt dich, wenn alles schiefläuft?",
+        "Welche Gewohnheit hast du dir zuletzt zugelegt, und was hat sie ausgelöst?",
+        "Wenn du dich in einem Satz beschreiben müsstest, den du in keinem Bewerbungsgespräch sagen würdest, wie hieße er?",
+        "Welches Talent hättest du gern, ohne dir je die Zeit genommen zu haben, es zu lernen?",
+        "Was hat sich an dir verändert, seit wir zusammen sind, ohne dass ich es bemerkt habe?"
+      ]
+    },
+    "futur": {
+      "titre": "Fragen zu euren Plänen und eurer Zukunft",
+      "intro": "Paare trennen sich selten an einer grundsätzlichen Meinungsverschiedenheit; sie trennen sich, weil sie nie ausgesprochen wurde. Diese Fragen sprechen sie aus, solange noch Zeit ist, darüber zu reden.",
+      "questions": [
+        "Wie sieht ein gewöhnlicher Tag unseres Lebens in fünf Jahren aus, in deinem Kopf?",
+        "Was ist das Einzige, das unserer Beziehung auf keinen Fall passieren soll?",
+        "Wo würdest du leben wollen, wenn uns nichts hier hielte?",
+        "Was sollten wir zusammen getan haben, bevor wir fünfzig sind?",
+        "Wie stellst du dir vor, dass wir in zehn Jahren mit Geld umgehen?",
+        "Welche Rolle soll deine Arbeit später in deinem Leben spielen?",
+        "Was würde dich in zwanzig Jahren sagen lassen, dass wir es als Paar richtig gemacht haben?",
+        "Gibt es ein Vorhaben, das du wegen unserer Beziehung zurückgestellt hast?",
+        "Wie präsent sollen unsere Familien in unserem Leben sein?",
+        "Was macht dir am meisten Angst daran, zu zweit älter zu werden?",
+        "Wenn wir morgen woanders neu anfangen müssten, würdest du gehen oder bleiben?",
+        "Wie viel Platz willst du deinen Freunden in den nächsten Jahren lassen?",
+        "Wie sollen wir deiner Meinung nach die wichtigen Entscheidungen treffen?",
+        "Was willst du unbedingt eines Tages an jemanden weitergeben?",
+        "Wann wäre der richtige Moment für unseren nächsten großen Schritt?",
+        "Gibt es etwas, das du von mir erwartest und nie eingefordert hast?",
+        "Wie sollen wir uns organisieren, wenn einer von uns aufhören muss zu arbeiten?",
+        "Welche Gewohnheit hättest du gern, dass wir sie gemeinsam annehmen und lange behalten?",
+        "Was sollten wir aufhören aufzuschieben?",
+        "Woran würden wir merken, dass es Zeit ist, etwas in unserem Leben zu ändern?",
+        "Welchen Kompromiss bist du bereit einzugehen, und welchen nie?",
+        "Was möchtest du genau so behalten, wie es heute ist?",
+        "Wenn wir ein ganzes Jahr frei hätten, was würden wir damit machen?",
+        "Was hoffst du, dass man in dreißig Jahren über uns sagt?"
+      ]
+    },
+    "intime": {
+      "titre": "Fragen zu Nähe und Gefühlen",
+      "intro": "Nähe ist nicht nur körperlich. Diese Fragen drehen sich darum, was euch nah sein lässt, oder eben nicht, und um das, was selten laut gesagt wird.",
+      "questions": [
+        "Was lässt dich im Alltag am meisten geliebt fühlen?",
+        "In welchem Moment hast du dich mir am nächsten gefühlt?",
+        "Was fehlt dir, wenn ich nicht da bin?",
+        "Woran merkst du, dass es mir schlecht geht, bevor ich es sage?",
+        "Was gibt dir bei mir am meisten Sicherheit?",
+        "Gibt es eine Geste, die ich öfter machen sollte?",
+        "Was nimmt dir die Lust auf Nähe, wenn es nicht Müdigkeit ist?",
+        "Wie möchtest du getröstet werden, wenn es dir schlecht geht?",
+        "Was traust du dich nicht, mich zu fragen?",
+        "Zu welcher Tageszeit fühlst du dich am wohlsten mit mir?",
+        "Was macht dich eifersüchtig, ehrlich gesagt?",
+        "Woran hast du gemerkt, dass ich dir wirklich wichtig bin?",
+        "Was hat sich an unserer Nähe seit dem Anfang verändert?",
+        "Gibt es etwas, das ich tue und das dich berührt, ohne dass ich es weiß?",
+        "Was hilft dir, dich begehrt zu fühlen?",
+        "Wann fühlst du dich mir gegenüber am verletzlichsten?",
+        "Was sollten wir gemeinsam mehr wagen?",
+        "Wie möchtest du, dass wir nach einem Streit wieder zueinanderfinden?",
+        "Was findest du komisch an mir, und ich halte es für einen Fehler?",
+        "Was brauchst du, wenn du müde bist und nichts sagst?",
+        "Was hat dich an mir am meisten überrascht, seit wir uns kennen?",
+        "Gibt es ein Thema, das wir beide meiden, ohne es je abgesprochen zu haben?",
+        "Was bringt dich dazu, dich eher mir anzuvertrauen als jemand anderem?",
+        "Was möchtest du, dass ich verstehe, ohne es erklären zu müssen?"
+      ]
+    },
+    "fun": {
+      "titre": "Lustige und leichte Fragen",
+      "intro": "Nicht jedes Gespräch muss tief sein. Diese vierundzwanzig sind für einen guten Abend da, im Auto, am Tisch oder wenn niemandem mehr etwas einfällt.",
+      "questions": [
+        "Wenn wir ein Film wären, wie hießen Titel und Plakat?",
+        "Worüber haben wir uns am lächerlichsten gestritten?",
+        "Welche Serienfigur ähnelt dir am meisten, und warum nervt dich das?",
+        "Welche völlig nutzlose Fähigkeit hättest du gern perfekt drauf?",
+        "Was ist das schlimmste Outfit, in dem du mich je gesehen hast?",
+        "Wenn wir morgen die Jobs tauschen müssten, wie liefe das?",
+        "Was ist dein heimliches Vergnügen, das du bis zum Schluss verteidigen würdest?",
+        "Welches Lied lässt dich sofort an uns denken, auch wenn es schlecht ist?",
+        "Wenn wir heute Abend im Lotto gewännen, was wäre die erste Dummheit?",
+        "Welches Tier wärst du, und welches wäre ich?",
+        "Was ist das Peinlichste, das du in der Öffentlichkeit getan hast?",
+        "Welches Gericht könntest du jeden Tag essen, ohne es leid zu werden?",
+        "Wenn wir eine Band hätten, welcher Stil und welcher Name?",
+        "Welche deiner Marotten geht mir, wie du genau weißt, auf die Nerven?",
+        "Welche Superkraft nähmest du, wenn du wüsstest, dass ich die gegenteilige nehme?",
+        "Was war unsere schlechteste gemeinsame Ausgehidee?",
+        "Wenn unser Leben gefilmt würde, welche Szene käme in den Endschnitt?",
+        "Was ist die harmloseste Lüge, die du mir erzählt hast?",
+        "In welcher Epoche hättest du ungern gelebt, und warum?",
+        "Wenn du mich einem Fremden mit drei Argumenten verkaufen müsstest, was sagtest du?",
+        "Was ist das Nutzloseste, das du je gekauft hast?",
+        "Wer von uns beiden hielte länger ohne Handy durch?",
+        "Welchen Spitznamen soll ich in der Öffentlichkeit auf keinen Fall benutzen?",
+        "Wenn wir ein Buch über uns schrieben, wie hieße das erste Kapitel?"
+      ]
+    },
+    "profond": {
+      "titre": "Tiefe Fragen zu Werten und Leben",
+      "intro": "Diese brauchen etwas Ruhe und etwas Zeit. Sie handeln davon, was euch leitet, und genau dort zeigen sich meist die echten Unterschiede.",
+      "questions": [
+        "Was gibt deinem Leben gerade Sinn?",
+        "Wovon würdest du dich am schwersten erholen?",
+        "Was hältst du für unverzeihlich?",
+        "Welche Ungerechtigkeit macht dich wirklich wütend?",
+        "Wozu hättest du gern den Mut gehabt?",
+        "Was bedeutet Erfolg für dich, in deinen eigenen Worten?",
+        "Welchen Wert wirst du nie verhandeln?",
+        "Wovor hast du am meisten Angst, abgesehen vom Tod?",
+        "Was hast du verziehen, ohne es je zu vergessen?",
+        "Welche verbreitete Vorstellung vom Paarleben hältst du für falsch?",
+        "Was würde dich dein ganzes Leben infrage stellen lassen?",
+        "Glaubst du, dass man wirklich wählt, wen man liebt?",
+        "Was soll man von dir in Erinnerung behalten?",
+        "Welche Person hat dir am meisten beigebracht, ohne es zu wollen?",
+        "Was verstehst du an den Leuten deiner Generation nicht?",
+        "Worauf bist du stolz und traust dich nicht, es zu sagen?",
+        "Was war das Schwierigste, das du akzeptieren musstest?",
+        "Was bereust du, jemandem nicht gesagt zu haben?",
+        "Woran erkennst du, dass eine Beziehung es wert ist, gerettet zu werden?",
+        "Was würdest du tun, wenn du wüsstest, dass dir ein Jahr bleibt?",
+        "Welche Wahrheit über dich selbst hast du lange gebraucht zu akzeptieren?",
+        "Was erwartest du von Liebe, über das Gefühl hinaus?",
+        "Welche Grenze darf niemand bei dir überschreiten?",
+        "Woran soll ich dich erinnern, an den Tagen, an denen du es vergisst?"
+      ]
+    }
+  },
+  "liste_titre": "Die 120 Fragen, nach Themen sortiert",
+  "liste_intro": "Hier ist die vollständige Liste. Jedes Thema hat vierundzwanzig Fragen, zum Durchlesen oder zum zufälligen Herausgreifen."
 }

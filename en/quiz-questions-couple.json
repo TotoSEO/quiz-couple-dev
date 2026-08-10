@@ -13,7 +13,7 @@
       "title": "Why ask questions as a couple?",
       "p1": "Communication is the cornerstone of a fulfilling relationship. Asking each other questions helps maintain an authentic connection and avoid the routine that sometimes creeps into relationships. Even after years together, there are always new things to discover about each other.",
       "p2": "Studies in relationship psychology show that couples who regularly discuss their emotions, desires, and plans develop a deeper mutual understanding. These exchanges strengthen complicity, create shared memories, and help you better understand your partner's needs, dreams, and concerns.",
-      "p3": "Asking your partner questions is also a way of showing genuine interest beyond day-to-day life. It's an act of active listening that nurtures trust and emotional intimacy. Whether you're at the beginning of your relationship or have been together for years, these moments of exchange are essential to keeping your relationship alive."
+      "p3": "Asking your partner questions is also a way of showing genuine interest beyond day-to-day life. It's an act of active listening that nurtures trust and emotional intimacy. Whether you're at the beginning of your relationship or have been together for years, these moments of exchange are essential to keeping your relationship alive. If you want something more structured, our <a href=\"/en/couple-compatibility-test/\">couple test</a> asks twenty scored questions, and the <a href=\"/en/couple-common-points-test/\">common points test</a> compares your answers as a pair."
     },
     "s2": {
       "title": "The 5 categories of couple questions",
@@ -26,31 +26,31 @@
       },
       "rows": [
         {
-          "cat": "🧠 Getting to know each other",
+          "cat": "Getting to know each other",
           "goal": "Deepen your mutual knowledge beyond the obvious",
           "example": "What past decision changed you the most?",
           "count": "24"
         },
         {
-          "cat": "🚀 Future plans",
+          "cat": "Future plans",
           "goal": "Align your visions and build together",
           "example": "Where do you see yourself in 5 years?",
           "count": "24"
         },
         {
-          "cat": "💕 Intimacy",
+          "cat": "Intimacy",
           "goal": "Strengthen your emotional and affective bond",
           "example": "What makes you feel most loved?",
           "count": "24"
         },
         {
-          "cat": "😄 Fun",
+          "cat": "Fun",
           "goal": "Bring lightness and laughter to your relationship",
           "example": "If our couple were a movie, what would its title be?",
           "count": "24"
         },
         {
-          "cat": "💭 Deep questions",
+          "cat": "Deep questions",
           "goal": "Explore your values, fears, and philosophy of life",
           "example": "What gives meaning to your life?",
           "count": "24"
@@ -60,7 +60,7 @@
     },
     "s3": {
       "title": "When to use these couple questions?",
-      "intro": "There's no wrong time to ask questions as a couple. Here are situations where these questions are particularly useful:",
+      "intro": "There's no wrong time to ask questions as a couple. Here are situations where these questions are particularly useful: For evenings when you mainly want to laugh, our <a href=\"/en/couple-games/\">couple games</a> do the work for you.",
       "items": [
         {
           "title": "At the start of a relationship",
@@ -89,27 +89,27 @@
       "intro": "To get the most out of these questions and make them a real quality moment, here are our practical recommendations:",
       "tips": [
         {
-          "emoji": "🎯",
+          "emoji": "",
           "title": "Limit yourself to 3-5 questions per session",
           "desc": "A quality exchange is better than an interrogation. Ask a few questions and take time to really listen to the answers. Let the conversation flow naturally."
         },
         {
-          "emoji": "👂",
+          "emoji": "",
           "title": "Practice active listening",
           "desc": "Don't think about your next question while the other is speaking. Really listen, ask follow-up questions, show that you genuinely care about the answer."
         },
         {
-          "emoji": "🛑",
+          "emoji": "",
           "title": "Respect boundaries",
           "desc": "If a question makes your partner uncomfortable, move to the next one without insisting. Everyone has their own pace and comfort zones. The goal is to grow closer, not to force confessions."
         },
         {
-          "emoji": "💖",
+          "emoji": "",
           "title": "Create a caring atmosphere",
           "desc": "No judgment, no mockery. A safe space where everyone can express themselves freely is the essential condition for these questions to bear fruit."
         },
         {
-          "emoji": "🔄",
+          "emoji": "",
           "title": "Answer the questions too",
           "desc": "The exchange should be reciprocal. After listening to your partner's answer, share yours. It's this reciprocity that creates the real connection."
         }
@@ -135,7 +135,8 @@
           "title": "Reconnecting couples",
           "desc": "After a difficult period or too much routine, these questions help find the path back to dialogue."
         }
-      ]
+      ],
+      "outro": "Couples separated by distance will find questions better suited to their situation in our <a href=\"/en/long-distance-relationship-quiz/\">long distance quiz</a>, and those wondering how solid their bond is in the <a href=\"/en/healthy-relationship-test/\">healthy relationship test</a>."
     },
     "s6": {
       "title": "The proven benefits of couple communication",
@@ -175,6 +176,160 @@
       }
     ]
   },
-  "conclusion": "These 120 questions are here to help you create moments of sincere exchange with your partner. Take time to listen, discover each other, and strengthen your connection. The key to a fulfilling relationship is communication.",
-  "scrollTop": "Start with a random question"
+  "conclusion": "These 120 questions are here to help you create moments of sincere exchange with your partner. Take time to listen, discover each other, and strengthen your connection. The key to a fulfilling relationship is communication. And if one of these questions opens something heavier than expected, the <a href=\"/en/love-or-habit-test/\">love or habit test</a> often helps to see clearly.",
+  "scrollTop": "Start with a random question",
+  "liste": {
+    "connaissance": {
+      "titre": "Questions to get to know each other better",
+      "intro": "These dig underneath the obvious. We think we know someone because we know their habits; these twenty-four questions are about what shaped them.",
+      "questions": [
+        "Which decision from your past changed you the most, and did you realise it at the time?",
+        "What did your parents pass on to you without ever saying it out loud?",
+        "Which compliment genuinely lands with you, and which one makes you uncomfortable?",
+        "What were you certain of at twenty that you no longer believe at all?",
+        "What are you genuinely good at that almost nobody notices?",
+        "Which childhood memory comes back to you most often, for no particular reason?",
+        "What tires you out in other people, when it seems to bother no one else?",
+        "Which friendship shaped you the most, and where is it now?",
+        "In what kind of situation do you feel most like yourself?",
+        "Which criticism stuck with you enough that you still think about it?",
+        "What would you do with your days if money stopped being part of the equation?",
+        "Which trait did you inherit and are still trying to correct?",
+        "What do people get wrong about you, more or less systematically?",
+        "Which failure turned out to be the most useful, looking back?",
+        "When was the last time you changed your mind about something that mattered?",
+        "What makes you angry, when you wish it left you cold?",
+        "Which place makes you feel better the moment you arrive?",
+        "What have you never told anyone, not out of shame, but because the moment never came?",
+        "Which quality do you admire most, and don't have?",
+        "What reassures you when everything is going wrong?",
+        "Which habit have you picked up recently, and what set it off?",
+        "If you had to describe yourself in one sentence you would never use in a job interview, what would it be?",
+        "Which skill would you love to have, without ever having taken the time to learn it?",
+        "What has changed in you since we've been together, without my noticing?"
+      ]
+    },
+    "futur": {
+      "titre": "Questions about your plans and your future",
+      "intro": "Couples rarely split over a fundamental disagreement; they split because it was never put into words. These questions put it into words, while there is still time to talk about it.",
+      "questions": [
+        "What does an ordinary day of our life five years from now look like, in your head?",
+        "What is the one thing you really don't want to see happen to us?",
+        "Where would you want to live if nothing kept us where we are?",
+        "What should we have done together before we turn fifty?",
+        "How do you picture us handling money in ten years?",
+        "What role do you want work to play in your life later on?",
+        "In twenty years, what would make you say we got our relationship right?",
+        "Is there a plan you set aside because of our relationship?",
+        "How present do you want our families to be in our life?",
+        "What frightens you most about growing old as a couple?",
+        "If we had to start over somewhere else tomorrow, would you go or stay?",
+        "What room do you want to leave for your friends in the years ahead?",
+        "How would you like us to make the big decisions?",
+        "What do you absolutely want to pass on to someone one day?",
+        "When would be the right moment for the next big step for us?",
+        "Is there something you expect from me that you have never actually asked for?",
+        "How do you want us to organise ourselves if one of us has to stop working?",
+        "Which habit would you like us to take up together and keep for a long time?",
+        "What should we stop putting off?",
+        "How would we know it's time to change something in our life?",
+        "Which compromise are you willing to make, and which one will you never make?",
+        "What would you want us to keep exactly as it is today?",
+        "If we had a whole year free, what would we do with it?",
+        "What do you hope people will say about us in thirty years?"
+      ]
+    },
+    "intime": {
+      "titre": "Questions about intimacy and feelings",
+      "intro": "Intimacy is not only physical. These questions are about what makes you feel close, or not, and about what rarely gets said out loud.",
+      "questions": [
+        "What makes you feel most loved day to day?",
+        "When did you feel closest to me?",
+        "What do you miss when I'm not there?",
+        "How do you know I'm not doing well, before I even say it?",
+        "What gives you the most confidence in me?",
+        "Is there a gesture you wish I made more often?",
+        "What kills your desire to be close, when it isn't tiredness?",
+        "How do you prefer to be comforted when things are hard?",
+        "What don't you dare ask me for?",
+        "Which time of day do you feel best with me?",
+        "What makes you jealous, honestly?",
+        "How did you know you really cared about me?",
+        "What has changed in our intimacy since the beginning?",
+        "Is there something I do that moves you without my knowing?",
+        "What helps you feel wanted?",
+        "When do you feel most vulnerable with me?",
+        "What would you like us to dare more of, together?",
+        "How would you like us to find each other again after an argument?",
+        "What makes you laugh about me, that I take for a flaw?",
+        "What do you need when you're tired and say nothing?",
+        "What has surprised you most about me since we met?",
+        "Is there a subject we both avoid without ever having agreed to?",
+        "What makes you want to confide in me rather than in someone else?",
+        "What would you like me to understand without having to explain it?"
+      ]
+    },
+    "fun": {
+      "titre": "Funny and light questions",
+      "intro": "Not every conversation has to be deep. These twenty-four are there for a good time, in the car, at the table, or on an evening when nobody has any ideas left.",
+      "questions": [
+        "If we were a film, what would the title and the poster be?",
+        "What is the most ridiculous thing we have ever argued about?",
+        "Which TV character is most like you, and why does that annoy you?",
+        "Which completely useless skill would you love to master?",
+        "What is the worst outfit you have ever seen me wear?",
+        "If we swapped jobs tomorrow, how would that go?",
+        "What is your guilty pleasure that you would defend to the end?",
+        "Which song immediately makes you think of us, even if it's terrible?",
+        "If we won the lottery tonight, what would be the first stupid thing we did?",
+        "Which animal would you be, and which one would I be?",
+        "What is the most embarrassing thing you have done in public?",
+        "Which dish could you eat every day without ever tiring of it?",
+        "If we had a band, what would the style and the name be?",
+        "Which of your habits do you know perfectly well irritates me?",
+        "Which superpower would you take, knowing I would take the opposite?",
+        "What is the worst outing idea we have ever had together?",
+        "If our life were filmed, which scene would make the final cut?",
+        "What is the most harmless lie you have told me?",
+        "Which era would you have hated to live in, and why?",
+        "If you had to sell me to a stranger in three arguments, what would you say?",
+        "What is the most useless thing you have ever bought?",
+        "Which of us would last longer without a phone?",
+        "Which nickname do you absolutely never want me to use in public?",
+        "If we wrote a book about us, what would the first chapter be called?"
+      ]
+    },
+    "profond": {
+      "titre": "Deep questions about values and life",
+      "intro": "These need a little calm and a little time. They are about what guides you, and that is often where the real differences show up.",
+      "questions": [
+        "What gives your life meaning right now?",
+        "What would you have the hardest time recovering from?",
+        "What do you consider unforgivable?",
+        "Which injustice genuinely makes you angry?",
+        "What do you wish you'd had the courage to do?",
+        "What does success mean to you, in your own words?",
+        "Which value will you never negotiate?",
+        "What are you most afraid of, apart from dying?",
+        "What have you forgiven without ever forgetting?",
+        "Which received idea about couple life do you find false?",
+        "What would make you question your whole life?",
+        "Do you believe we really choose who we love?",
+        "What would you want people to remember about you?",
+        "Which person taught you the most, without meaning to?",
+        "What don't you understand about people of your own generation?",
+        "What makes you proud of yourself, and that you don't dare say?",
+        "What is the hardest thing you have had to accept?",
+        "What do you regret not having said to someone?",
+        "How do you tell that a relationship is worth saving?",
+        "What would you do if you knew you had one year left?",
+        "Which truth about yourself took you a long time to accept?",
+        "What do you expect from love, beyond the feeling?",
+        "Which line is nobody allowed to cross with you?",
+        "What do you want me to remind you of, on the days you forget it?"
+      ]
+    }
+  },
+  "liste_titre": "The 120 questions, sorted by theme",
+  "liste_intro": "Here is the full list. Each theme has twenty-four questions, to read in order or to pick at random."
 }
