@@ -325,7 +325,10 @@
     "jeuGages": "forfeit wheel",
     "jeuPlateau": "couple board game",
     "jeuQuiDeNous": "Which one of us?",
-    "testDateNaissance": "Birth date compatibility test"
+    "testDateNaissance": "Birth date compatibility test",
+    "testCouche": "Has he or she slept with someone else test",
+    "testSecret": "Does he or she secretly love me test",
+    "testDistanceAime": "Long distance does he still love me test"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -533,5 +536,20 @@
     "bravoTitre": "Well done, and thank you!",
     "bravoTexte": "You have answered every single dilemma. Your votes now count towards the percentages the next couples will see.",
     "bravoSuite": "Try would you rather"
+  },
+  "couche": {
+    "introQuestion": "You're asking yourself:",
+    "introQuote": "« Has he or she slept with someone else… or am I making this up? »",
+    "disclaimer": "This test proves nothing and accuses nobody. It puts order into what you have observed, so you know what to do with it."
+  },
+  "secret": {
+    "introQuestion": "You're asking yourself:",
+    "introQuote": "« Do they secretly love me… or am I telling myself a story? »",
+    "disclaimer": "Think of one specific person before you start, and answer about them only."
+  },
+  "distanceAime": {
+    "introQuestion": "You're asking yourself:",
+    "introQuote": "« Do they still love me… or is it just the distance? »",
+    "disclaimer": "Answer on the last few weeks, not on the start of your story."
   }
 }
