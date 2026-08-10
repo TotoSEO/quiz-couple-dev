@@ -6905,7 +6905,7 @@
     "r4_a": "Du brauchst keine weiteren Hinweise, du brauchst ein Gespräch. Stell die Frage direkt, sag, was du beobachtet hast, ohne es aufzublasen, und hör dir die Antwort an. Bleibt sie aus oder ändert sie sich dreimal, ist auch das eine Information."
   },
   "secretH": {
-    "q1": "Was machen seine oder ihre Augen, wenn ihr im selben Raum seid?",
+    "q1": "Was machen seine Augen, wenn ihr im selben Raum seid?",
     "q1a": "Nichts Besonderes, er sieht mich an wie alle anderen.",
     "q1b": "Unsere Blicke treffen sich ab und zu, wie bei jedem.",
     "q1c": "Ich ertappe ihn oft dabei, wie er mich ansieht, und er schaut weg.",
@@ -6940,7 +6940,7 @@
     "q7b": "Zuhören, ohne besondere Reaktion.",
     "q7c": "Er wechselt das Thema oder wird plötzlich sehr still.",
     "q7d": "Er kritisiert die Person oder findet jedes Mal einen Makel.",
-    "q8": "Wie verhält sich sein oder ihr Umfeld, wenn du auftauchst?",
+    "q8": "Wie verhält sich sein Umfeld, wenn du auftauchst?",
     "q8a": "Normal, ich kenne die Freunde kaum.",
     "q8b": "Wie bei allen anderen auch.",
     "q8c": "Es gibt schiefe Blicke oder ein Schweigen, wenn ich dazukomme.",
@@ -6967,7 +6967,7 @@
     "modeFemmeMeta": "10 Fragen"
   },
   "secretF": {
-    "q1": "Was machen seine oder ihre Augen, wenn ihr im selben Raum seid?",
+    "q1": "Was machen ihre Augen, wenn ihr im selben Raum seid?",
     "q1a": "Nichts Besonderes, sie sieht mich an wie alle anderen.",
     "q1b": "Unsere Blicke treffen sich ab und zu, wie bei jedem.",
     "q1c": "Ich ertappe sie oft dabei, wie sie mich ansieht, und sie schaut weg.",
@@ -7002,7 +7002,7 @@
     "q7b": "Zuhören, ohne besondere Reaktion.",
     "q7c": "Sie wechselt das Thema oder wird plötzlich sehr still.",
     "q7d": "Sie kritisiert die Person oder findet jedes Mal einen Makel.",
-    "q8": "Wie verhält sich sein oder ihr Umfeld, wenn du auftauchst?",
+    "q8": "Wie verhält sich ihr Umfeld, wenn du auftauchst?",
     "q8a": "Normal, ich kenne die Freunde kaum.",
     "q8b": "Wie bei allen anderen auch.",
     "q8c": "Es gibt schiefe Blicke oder ein Schweigen, wenn ich dazukomme.",

@@ -77,7 +77,7 @@
     "sub2Text": "Interroger ses amis met tout le monde dans une position impossible et vous revient toujours aux oreilles, en général déformé. Vous perdez l'effet de surprise, vous gagnez une réputation, et vous n'obtenez pas de réponse.",
     "sub3Title": "Accuser sans rien poser",
     "sub3Text": "« Je sais que tu me trompes » ne produit jamais un aveu. Ça produit une contre-attaque, et ça vous met en position de devoir prouver. Si vous accusez sans élément, vous avez perdu la discussion avant de l'avoir commencée.",
-    "tip": "Si vous êtes tenté par un logiciel de surveillance ou une balise de géolocalisation, sachez qu'installer ça sur le téléphone de quelqu'un sans son accord est un délit en France, puni par la loi. Au-delà du risque juridique, c'est exactement le genre d'acte qui vous fera perdre le bénéfice de la vérité si elle finit par sortir."
+    "tip": "Si l'idée d'un logiciel de surveillance ou d'une balise de géolocalisation vous traverse l'esprit, sachez qu'installer ça sur le téléphone de quelqu'un sans son accord est un délit en France, puni par la loi. Au-delà du risque juridique, c'est exactement le genre d'acte qui vous fera perdre le bénéfice de la vérité si elle finit par sortir."
   },
   "section6": {
     "title": "Comment poser la question, concrètement",
@@ -102,13 +102,13 @@
     "q1": "Peut-on vraiment savoir si quelqu'un a couché avec une autre personne avec un test ?",
     "a1": "Non, et aucun test sérieux ne le prétendra. Ce que ce test mesure, c'est la cohérence et la densité de ce que vous avez observé. Il transforme quinze impressions éparses en une lecture d'ensemble. La certitude, elle, ne vient jamais d'un questionnaire : elle vient d'une conversation, d'un aveu, ou d'un élément concret.",
     "q2": "Pourquoi demander si mon partenaire est un homme ou une femme ?",
-    "a2": "Parce que deux des quinze questions n'ont de sens que pour l'un ou pour l'autre, et parce qu'une question écrite au masculin quand on parle d'une femme se lit mal. Le choix ne modifie ni le barème ni les niveaux de résultat : les treize autres questions sont identiques, seule la formulation suit.",
+    "a2": "Parce qu'une des quinze questions ne peut se poser que dans un seul des deux cas, et parce qu'une question écrite au masculin quand on parle d'une femme se lit mal. Le choix ne modifie ni le barème ni les niveaux de résultat : les quatorze autres questions sont identiques, seule la formulation suit.",
     "q3": "Mon score est élevé, est-ce que ça veut dire qu'il ou elle m'a trompé ?",
     "a3": "Non. Un score élevé veut dire que beaucoup de signaux se sont accumulés sur la même période. Une dépression non dite, un licenciement caché, une dette, un problème de santé tenu secret ou une addiction produisent exactement le même profil de réponses. C'est pour cette raison que le résultat vous oriente vers une conversation, pas vers une conclusion.",
     "q4": "Mon score est bas mais j'ai toujours un doute, c'est normal ?",
     "a4": "Oui, et c'est fréquent. Le doute ne vient pas toujours de l'autre. Une trahison ancienne, dans cette relation ou dans une précédente, laisse une vigilance qui se réveille sans raison actuelle. Si le doute persiste alors que rien ne le nourrit, c'est de ce côté-là qu'il faut regarder, et en parler reste la meilleure porte de sortie.",
     "q5": "Est-ce que je peux faire ce test avec mon partenaire ?",
-    "a5": "Ce n'est pas prévu pour, et ce serait une mauvaise idée : les quinze questions décrivent des soupçons, et les faire lire à quelqu'un qu'on soupçonne revient à l'accuser question par question. Faites-le seul, puis parlez, avec vos mots à vous.",
+    "a5": "Ce n'est pas prévu pour, et ce serait une mauvaise idée : les quinze questions décrivent des soupçons, et les faire lire à quelqu'un qu'on soupçonne revient à l'accuser question par question. Faites-le de votre côté, puis parlez, avec vos mots à vous.",
     "q6": "Mes réponses sont-elles enregistrées ?",
     "a6": "Non. Tout se passe dans votre navigateur, aucune réponse n'est envoyée ni conservée, et il n'y a ni compte ni adresse e-mail à donner. Fermez la page et il n'en reste rien."
   }

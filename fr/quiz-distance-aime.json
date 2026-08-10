@@ -8,7 +8,7 @@
   },
   "howTo": {
     "title": "Comment fonctionne ce test ?",
-    "step1": "Vous répondez seul, sur votre relation actuelle. Rien n'est envoyé, personne ne verra vos réponses.",
+    "step1": "Vous répondez de votre côté, sur votre relation actuelle. Rien n'est envoyé, personne ne verra vos réponses.",
     "step2": "Pensez aux <strong>dernières semaines</strong> et non au début de votre histoire. Une relation à distance change de rythme plusieurs fois, ce qui compte est la période en cours.",
     "step3": "Les réponses vont du signe le plus inquiétant au plus rassurant, de 0 à 3 points.",
     "step4": "Le résultat vous dit si ce que vous vivez ressemble à une usure de la distance ou à autre chose.",
@@ -88,7 +88,7 @@
     "sub1Title": "En visio, jamais par écrit",
     "sub1Text": "Un message long sur ce sujet est presque toujours mal reçu, parce que le ton n'existe pas à l'écrit et que l'autre le relit dix fois. Si la visio n'est pas possible, un appel vaut encore mieux qu'un texte.",
     "sub2Title": "Décrivez un manque, pas un reproche",
-    "sub2Text": "« Je me sens seul dans cette histoire depuis quelques semaines » ouvre une conversation. « Tu ne fais plus aucun effort » la referme. Le contenu est le même, l'issue ne l'est pas du tout.",
+    "sub2Text": "« J'ai l'impression de porter cette histoire à bout de bras depuis quelques semaines » ouvre une conversation. « Tu ne fais plus aucun effort » la referme. Le contenu est le même, l'issue ne l'est pas du tout.",
     "sub3Title": "Posez la question de l'échéance en premier",
     "sub3Text": "Avant de parler des sentiments, parlez de la date. C'est plus concret, moins menaçant, et la réponse vous en apprendra souvent plus que n'importe quelle déclaration. Quelqu'un qui veut vous garder cherche une solution ; quelqu'un qui a lâché repousse.",
     "sub4Title": "Acceptez de ne pas tout régler en un appel",
@@ -96,7 +96,7 @@
   },
   "section7": {
     "title": "Quand la distance n'est plus le vrai sujet",
-    "p1": "Il arrive un moment où la question change. Si vous avez posé une date trois fois et qu'elle a reculé trois fois, si les conversations sont vides depuis des mois, si vous êtes seul à faire vivre la relation, alors le problème n'est plus géographique.",
+    "p1": "Il arrive un moment où la question change. Si vous avez posé une date trois fois et qu'elle a reculé trois fois, si les conversations sont vides depuis des mois, si vous êtes la seule personne à faire vivre la relation, alors le problème n'est plus géographique.",
     "p2": "Une relation à distance ne se juge pas à la souffrance qu'elle coûte, mais à la réciprocité de l'effort. Beaucoup de gens tiennent des années dans une situation à sens unique en se disant que c'est la faute des kilomètres. Les kilomètres n'écrivent pas les messages.",
     "p3": "Pour faire le point autrement, le <a href=\"/test-amour-ou-habitude/\">test amour ou habitude</a> pose la question sous un autre angle, et le <a href=\"/test-confiance-couple/\">test de confiance</a> est utile si ce qui vous ronge est surtout l'incertitude sur ce qui se passe là-bas.",
     "tip": "Une relation à distance qui fonctionne demande beaucoup d'organisation et peu de sacrifices. Si vous avez l'impression de l'inverse, ce n'est probablement pas un problème de logistique."
@@ -111,7 +111,7 @@
     "q4": "Combien de temps une relation à distance peut-elle tenir ?",
     "a4": "La durée compte moins que l'existence d'une fin connue. Des couples tiennent trois ans sans difficulté parce qu'ils savent quand ça s'arrête, et d'autres craquent en six mois parce que l'horizon recule à chaque conversation. Si vous ne deviez travailler qu'un seul point, c'est celui-là.",
     "q5": "Faut-il faire ce test à deux ?",
-    "a5": "Celui-ci est conçu pour être fait seul, parce qu'il porte sur ce que vous observez et sur ce que vous ressentez. Si vous voulez comparer vos réponses avec celles de votre partenaire, notre quiz couple à distance est fait pour ça et se joue à deux.",
+    "a5": "Celui-ci est conçu pour être fait en solo, parce qu'il porte sur ce que vous observez et sur ce que vous ressentez. Si vous voulez comparer vos réponses avec celles de votre partenaire, notre quiz couple à distance est fait pour ça et se joue à deux.",
     "q6": "Mes réponses sont-elles enregistrées ?",
     "a6": "Non. Tout se passe dans votre navigateur, aucune réponse n'est envoyée ni conservée, et il n'y a ni compte ni adresse e-mail à donner. Vous pouvez refaire le test dans un mois pour comparer, mais rien ne sera gardé entre-temps."
   }

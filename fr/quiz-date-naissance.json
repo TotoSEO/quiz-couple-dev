@@ -173,11 +173,11 @@
     "tip": "Deux chemins de vie identiques ne garantissent rien du tout. Deux 5 ensemble, c'est deux personnes qui veulent partir, et parfois pas dans la même direction."
   },
   "section3": {
-    "title": "Le signe astrologique, le ciel du jour où vous êtes né",
+    "title": "Le signe astrologique, le ciel du jour de votre naissance",
     "p1": "Votre signe solaire dépend du jour et du mois, pas de l'année. C'est la position du Soleil au moment de votre naissance, et c'est de très loin la donnée astrologique la plus connue. Elle décrit une façon d'aimer : ce qui vous rassure, ce qui vous fait fuir, la manière dont vous dites les choses quand elles sont difficiles.",
     "sub1Title": "Les quatre éléments, la vraie clé de lecture",
     "sub1Text": "Avant même de comparer signe par signe, on regarde les éléments. Le <strong>Feu</strong> (Bélier, Lion, Sagittaire) fonce. La <strong>Terre</strong> (Taureau, Vierge, Capricorne) construit. L'<strong>Air</strong> (Gémeaux, Balance, Verseau) échange. L'<strong>Eau</strong> (Cancer, Scorpion, Poissons) ressent. Le Feu et l'Air s'alimentent, la Terre et l'Eau se comprennent, et les couples qui mélangent deux familles éloignées ont plus à traduire l'un pour l'autre.",
-    "p2": "Attention aux dates charnières. Si vous êtes né un 20 ou un 21, vous êtes peut-être du signe d'avant : les bornes bougent légèrement d'une année à l'autre. Notre calcul utilise les dates de référence les plus courantes, celles que vous trouverez dans la quasi-totalité des almanachs.",
+    "p2": "Attention aux dates charnières. Si votre date tombe un 20 ou un 21, vous êtes peut-être du signe d'avant : les bornes bougent légèrement d'une année à l'autre. Notre calcul utilise les dates de référence les plus courantes, celles que vous trouverez dans la quasi-totalité des almanachs.",
     "p3": "Si votre signe vous intéresse en particulier, on a écrit un article complet pour chacun des douze. Celui sur la <a href=\"/blog/compatibilite-amoureuse-balance/\">compatibilité amoureuse de la Balance</a> ou celui sur le <a href=\"/blog/compatibilite-amoureuse-scorpion/\">Scorpion</a> entrent bien plus dans le détail que ce que peut afficher un calculateur."
   },
   "section4": {
@@ -206,7 +206,7 @@
     "title": "Et si le score est bas ?",
     "p1": "Alors il ne se passe rien. Vraiment. Aucun de ces trois systèmes n'a jamais prédit une rupture, et aucun n'a jamais empêché une histoire de durer trente ans. Ce que dit un score bas, c'est que vos deux tempéraments ne s'accordent pas spontanément, donc que vous devrez mettre en mots ce que d'autres couples se transmettent sans y penser.",
     "p2": "Beaucoup de gens arrivent sur ce genre de page avec une question derrière la tête, et ce n'est pas vraiment une question d'astrologie. Si c'est votre cas, le <a href=\"/test-couple-sain/\">test de couple sain</a> ou le <a href=\"/test-amour-ou-habitude/\">test amour ou habitude</a> parlent de ce qui se passe entre vous aujourd'hui, pas de ce que disaient les astres le jour de votre naissance.",
-    "tip": "Faites le test à deux plutôt que seul. Le résultat compte moins que la conversation qu'il déclenche, et c'est vrai pour à peu près tous les tests de ce site."
+    "tip": "Faites le test à deux plutôt que chacun dans son coin. Le résultat compte moins que la conversation qu'il déclenche, et c'est vrai pour à peu près tous les tests de ce site."
   },
   "faq": {
     "title": "Vos questions sur la compatibilité par date de naissance",
@@ -215,7 +215,7 @@
     "q2": "Faut-il connaître l'heure de naissance ?",
     "a2": "Non, et c'est volontaire. L'heure sert à calculer l'ascendant et les maisons astrologiques, ce qui relève du thème natal complet et demande une lecture professionnelle. Ici, la date seule suffit pour les trois systèmes utilisés. Personne n'a besoin d'aller chercher un extrait d'acte de naissance.",
     "q3": "Mon signe chinois n'est pas celui que je croyais, pourquoi ?",
-    "a3": "Parce que vous êtes probablement né en janvier ou début février. L'année chinoise commence au nouvel an lunaire, entre le 21 janvier et le 21 février. Quelqu'un né le 20 janvier 1990 appartient encore à l'année du Serpent 1989, pas à celle du Cheval. Notre calcul intègre la date exacte du nouvel an pour chaque année.",
+    "a3": "Parce que la date concernée tombe probablement en janvier ou début février. L'année chinoise commence au nouvel an lunaire, entre le 21 janvier et le 21 février. Quelqu'un né le 20 janvier 1990 appartient encore à l'année du Serpent 1989, pas à celle du Cheval. Notre calcul intègre la date exacte du nouvel an pour chaque année.",
     "q4": "Un score de 40 % veut dire qu'on va se séparer ?",
     "a4": "Non. Ce chiffre mesure un accord entre deux tempéraments symboliques, pas la solidité d'une relation. Il ne connaît ni votre histoire, ni vos efforts, ni ce que vous avez traversé ensemble. Prenez-le comme une grille de lecture qui montre où l'entente est naturelle et où elle se travaille.",
     "q5": "Quelle différence avec votre test prénom et signe astrologique ?",
