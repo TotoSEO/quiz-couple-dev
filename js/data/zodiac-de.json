@@ -1,0 +1,578 @@
+{
+  "belier_belier": {
+    "score": 8,
+    "text": "Zwei Widder (zwei vom Mars beherrschte Feuerzeichen) bilden ein extrem leidenschaftliches Duo. Ihre Beziehung ist sehr „leidenschaftlich und explosiv“, voller Energie und Spontanität. Sie leben ihre Liebe intensiv, aber ihre Impulsivität und ihr ähnliches Ego führen häufig zu Konflikten. Ihre Verbindung ist aufregend, aber sie müssen lernen, ihr Temperament zu zügeln, damit die Beziehung von Dauer ist."
+  },
+  "belier_taureau": {
+    "score": 5,
+    "text": "Widder (kardinales Feuer) und Stier (festes Erdzeichen) haben gegensätzliche Temperamente. Der Widder ist impulsiv und eilig (beherrscht vom Mars), während der Stier stabil und geduldig ist (beherrscht von der Venus). Dieser elementare Unterschied (Feuer vs. Erde) führt zu täglichen Reibereien: Der Stier empfindet den Widder als leichtsinnig, und der Widder hält den Stier für zu langsam. Ihre Anziehungskraft entsteht aus dieser Komplementarität (Energie vs. Stabilität), aber ihre Harmonie erfordert große Kompromisse und gegenseitiges Verständnis."
+  },
+  "belier_gemeaux": {
+    "score": 8,
+    "text": "Widder (Feuer) und Zwillinge (Luft) bilden ein sehr lebendiges und dynamisches Paar. Beide teilen den Durst nach Freiheit und Abenteuer. Der Widder handelt mit Leidenschaft, und der neugierige, anpassungsfähige Zwilling stimuliert den Widder ständig mit seiner geistigen Lebendigkeit. Ihre Beziehung ist voller gemeinsamer Projekte: Der Widder bringt die Tatkraft, der Zwilling neue Ideen. Sie vermeiden Routine und verstehen sich gut, müssen aber darauf achten, die Impulsivität des Widders angesichts der gelegentlichen Unentschlossenheit des Zwillings zu zügeln."
+  },
+  "belier_cancer": {
+    "score": 4,
+    "text": "Widder (Feuer) und Krebs (Wasser) haben Schwierigkeiten, sich aufeinander abzustimmen. Ihre Kompatibilität ist gering, da sie nicht dasselbe Element teilen. Der Krebs blickt in die Zukunft und sucht emotionale Sicherheit, während der Widder im Moment lebt. Der Krebs fühlt sich vom ungestümen Widder oft ignoriert, und der Widder ist genervt von der Sensibilität des Krebses. Ihre Beziehung kann tiefgründig sein, wenn wahre Liebe sie verbindet, aber sie müssen große Kompromisse eingehen: Der Krebs lehrt den Widder, Rücksicht auf Gefühle zu nehmen, und der Widder lehrt den Krebs, dem Impuls des Augenblicks zu vertrauen."
+  },
+  "belier_lion": {
+    "score": 9,
+    "text": "Widder (Feuer) und Löwe (Feuer) teilen eine starke elementare Affinität. Ihre Verbindung ist sehr intensiv und leidenschaftlich. Beide sind stolz und energiegeladen: Widder und Löwe erschaffen eine Beziehung voller Kraft und Feuer. Sie stimulieren sich gegenseitig und es wird nie langweilig, können aber in Konkurrenz zueinander geraten (beide wollen glänzen). Wenn jeder den Stolz des anderen respektiert, ist ihre Partnerschaft sehr stark und körperlich."
+  },
+  "belier_vierge": {
+    "score": 4,
+    "text": "Widder (Feuer) und Jungfrau (Erde) haben nicht denselben Lebensrhythmus. Die Jungfrau denkt lange nach, bevor sie handelt, während der Widder mit dem Kopf durch die Wand will. Der Widder mag die Regeln und die Strenge nicht, die die Jungfrau auferlegt, was zu Konflikten führt. Umgekehrt bewundert die Jungfrau den Mut des Widders, ist aber von seinem Leichtsinn irritiert. Ihre Beziehung ist daher angespannt: Die fehlende elementare Affinität (Feuer vs. Erde) erschwert die Kompatibilität. Damit es funktioniert, müssen sie sich stark aneinander anpassen."
+  },
+  "belier_balance": {
+    "score": 9,
+    "text": "Widder (Feuer) und Waage (Luft) stehen sich im Tierkreis gegenüber, was eine sehr starke Ergänzung schafft. Die ruhige, diplomatische Waage dämpft die Impulsivität des Widders, und der leidenschaftliche Widder erwärmt das Herz der Waage. Es ist eine „perfekte“ Kombination in der Liebe: Die Waage bringt Harmonie und Beherrschung für den Widder, der ihr im Gegenzug Energie und Offenheit verleiht. Gemeinsam vereinen sie ihre Unterschiede zu einem soliden Gleichgewicht."
+  },
+  "belier_scorpion": {
+    "score": 6,
+    "text": "Widder (Feuer) und Skorpion (Wasser) führen eine sehr intensive und komplexe Beziehung. Der Skorpion (fest, beherrscht von Mars/Pluto) ist rätselhaft und leidenschaftlich, während der Widder (kardinales Feuer) direkt und energisch ist. Ihr Paar kann eine ungezügelte Leidenschaft erleben: Der Skorpion nährt die Kraft des Widders, und der Widder energetisiert den Skorpion. Aber sie haben widersprüchliche Impulse (der Skorpion testet gerne, der Widder stürmt voran), die zu gefährlichen Konflikten führen können. Sie können die „ultimative Liebe ihres Lebens“ erleben oder heftige Streitigkeiten erleiden, wenn keiner seine Intensität kanalisiert."
+  },
+  "belier_sagittaire": {
+    "score": 9,
+    "text": "Widder (Feuer) und Schütze (Feuer) teilen eine große Affinität. Der optimistische und ruhige Schütze ermutigt den Widder, vor dem Handeln nachzudenken. Zusammen erschaffen sie eine süße und dynamische Beziehung. Beide sind abenteuerlustig: Je geduldiger der Schütze ist, desto mehr öffnet sich der Widder für seine Ratschläge, und ihr gemeinsames Leben ist erfüllt von Reisen und Entdeckungen. Sie lehren sich gegenseitig die Freude am Kampf und am Abenteuer, was ihr Paar sehr eng zusammenschweißt."
+  },
+  "belier_capricorne": {
+    "score": 5,
+    "text": "Widder (Feuer) und Steinbock (Erde) sind zwei gegensätzliche kardinale Zeichen. Der kalte, gefasste Steinbock wirkt wie eine „Eiswand“ gegen die Leidenschaft des Widders. Der Widder bringt Enthusiasmus; der Steinbock bringt Stabilität. Sie können eine ausgewogene langfristige Beziehung aufbauen (sie teilen Ehrgeiz und Willenskraft), aber ihre Verbindung erfordert Anstrengung: Der Widder lehrt den Steinbock Geduld und einen Sinn für die Zukunft, während der Steinbock den Widder lehrt, vor dem Stürmen nachzudenken. Ihre Verbindung ist solide, gelegentlich unterbrochen von intensiven Leidenschaften."
+  },
+  "belier_verseau": {
+    "score": 8,
+    "text": "Widder (Feuer) und Wassermann (Luft) verstehen sich sehr gut dank ihres gemeinsamen Bedürfnisses nach Freiheit. Beide respektieren die Unabhängigkeit des anderen und kommunizieren harmonisch. Ihre Beziehung ist nicht mit übermäßigen Forderungen belastet: Sie verstehen die Träume und Visionen des anderen. Der distanziertere Wassermann gleicht den leidenschaftlicheren Widder aus. Es ist eines der glücklichsten Paare im Tierkreis, auch wenn sie darauf achten müssen, sich nicht gegenseitig zu verletzen (z.B. durch Unterschiede in der Intimität)."
+  },
+  "belier_poissons": {
+    "score": 6,
+    "text": "Widder (Feuer) und Fische (Wasser) bilden eine zutiefst emotionale Kombination. Zusammen können sie große Leidenschaft und gegenseitige Hingabe erleben. Der sonst so aggressive Widder lässt sich von der Hingabe des Fisches erweichen, der sich völlig investiert. Sie können eine intensive Chemie erzeugen: Der Fisch tröstet den Widder, der im Gegenzug Lebendigkeit bringt. Da ihre Elemente jedoch gegensätzlich sind (Feuer vs. Wasser), erfordert die Beziehung viel Verständnis: Ohne wahre Liebe können ihre Unterschiede (die Eile des Widders vs. die Träumerei des Fisches) zu Spannungen führen."
+  },
+  "taureau_belier": {
+    "score": 5,
+    "text": "Stier (Erde, Venus) und Widder (Feuer, Mars) haben sehr gegensätzliche Temperamente. Der Stier liebt Stabilität und einfache Freuden; der Widder sucht sofortige Action. Dieser elementare Gegensatz führt zu täglichen Reibereien: Der Stier fühlt sich von der Impulsivität des Widders gedrängt, und der Widder fühlt sich vom gemächlichen Tempo des Stiers erstickt. Dennoch können sie ein Gleichgewicht finden: Der Widder lässt sich von der Beständigkeit des Stiers verführen, und der Stier vom Feuer des Widders. Ihre Beziehung beruht stark auf Kompromissen und gegenseitigem Respekt."
+  },
+  "taureau_taureau": {
+    "score": 9,
+    "text": "Zwei Stiere zusammen (feste Erde, beherrscht von Venus) teilen eine sehr große Affinität. Beide lieben materiellen Komfort, Sanftmut und Loyalität. Das Stier-Stier-Paar baut ein solides Zuhause auf: Jeder versteht die Bedürfnisse des anderen (finanzielle Sicherheit, körperliche Zärtlichkeit, Stabilität). Ihre gegenseitige Sturheit kann zu Konflikten führen, aber ihre Geduld gleicht diese Nachgiebigkeit oft aus. Letztendlich finden sie Trost beieinander und bilden eine sehr stabile und dauerhafte Bindung."
+  },
+  "taureau_gemeaux": {
+    "score": 3,
+    "text": "Stier (Erde) und Zwillinge (Luft) haben gegensätzliche Bedürfnisse. Der Stier ist auf Sicherheit und Routine fixiert; der Zwilling sucht Vielfalt und Bewegung. Ihre Kompatibilität ist gering: Ihre Kommunikationsstile (pragmatischer Stier vs. gesprächiger Zwilling) unterscheiden sich radikal. Der Stier schätzt tiefgründigen, verlässlichen Austausch, während der Zwilling zwischen Themen hin und her springt, was den Stier irritieren kann. Sie müssen bereit sein, sich trotz dieser starken Unterschiede zu verstehen."
+  },
+  "taureau_cancer": {
+    "score": 9,
+    "text": "Stier (Erde) und Krebs (Wasser) bilden ein harmonisches und solides Paar. Ihre Harmonie basiert auf dem gemeinsamen Ziel von Sicherheit und Komfort. Der pragmatische Stier beruhigt den treuen Krebs, während sich der sehr anhängliche Krebs vom Stier gut unterstützt fühlt. Sie bauen zusammen ein warmes Zuhause auf. Nur ihre unterschiedliche Art, Emotionen auszudrücken (der Krebs braucht beruhigende Worte, der Stier bevorzugt konkrete Taten), erfordert möglicherweise gegenseitige Anpassungen."
+  },
+  "taureau_lion": {
+    "score": 4,
+    "text": "Stier (Erde) und Löwe (Feuer) haben oft gegensätzliche Werte. Der geerdete Stier liebt Ruhe und Sicherheit; der extravagante Löwe sucht Bewunderung und Luxus. Anfangs kann eine starke Anziehungskraft bestehen (der Stier bewundert die Präsenz des Löwen und umgekehrt), aber ihre Unterschiede treten schnell zutage. Der Stier kann sich von der Ausgelassenheit des Löwen überrumpelt fühlen, und der Löwe könnte den Stier für zu bescheiden halten. Ihre Beziehung erfordert große Anstrengungen, um die Stabilität des Stiers mit der Leidenschaft des Löwen in Einklang zu bringen."
+  },
+  "taureau_vierge": {
+    "score": 9,
+    "text": "Stier (Erde) und Jungfrau (Erde) sind beide sehr pragmatisch. Ihre elementare Affinität sorgt dafür, dass sie sich perfekt verstehen. Sie teilen die gleichen Werte: Sinn für das Konkrete, Loyalität und Verantwortungsbewusstsein. Der Stier bringt Komfort und Beständigkeit für die Jungfrau, während die Jungfrau dem Stier Strenge und Liebe zum Detail bringt. Zusammen bilden sie ein sehr harmonisches Paar, das in Stabilität und Weitsicht lebt."
+  },
+  "taureau_balance": {
+    "score": 5,
+    "text": "Stier (Erde) und Waage (Luft) werden beide von der Venus beherrscht, unterscheiden sich aber grundlegend. Der Stier sucht materielle und emotionale Sicherheit; die Waage sucht Beziehungsbalance und ästhetische Freuden. Sie können sich über einen gemeinsamen Sinn für Eleganz und stabile Beziehungen verbinden, aber der Stier findet die Waage oft unentschlossen, und die Waage hält den Stier für zu materialistisch. Diese Kombination erfordert Geduld: Die Waage bringt Sanftmut, der Stier Loyalität, aber sie müssen hart arbeiten, um Erde und Luft in Einklang zu bringen."
+  },
+  "taureau_scorpion": {
+    "score": 8,
+    "text": "Stier (Erde) und Skorpion (Wasser) stehen sich im Tierkreis gegenüber, was eine starke magnetische Anziehungskraft erzeugt. Der stabile Stier lässt sich von der emotionalen Tiefe des Skorpions verführen, und der Skorpion wird von der Zuverlässigkeit des Stiers angezogen. Zusammen bilden sie ein starkes Gleichgewicht: emotionale Sicherheit für den Skorpion, geteilte Leidenschaft für den Stier. Ihre Beziehung ist geprägt von gegenseitiger Loyalität und Hingabe. Die Intimität ist intensiv (ein gemeinsamer Sinn für Sinnlichkeit), aber ihre jeweilige Sturheit erfordert gutes Zuhören, um die Harmonie zu wahren."
+  },
+  "taureau_sagittaire": {
+    "score": 3,
+    "text": "Stier (Erde) und Schütze (Feuer) haben sehr wenig gemeinsam. Der rigorose Stier liebt Gewohnheiten, während der abenteuerlustige Schütze ständig nach neuen Erfahrungen sucht. Ihre Elemente kollidieren (Erde vs. Feuer), was eine Komplizenschaft erschwert. Der Stier könnte dem Schützen seine Unberechenbarkeit vorwerfen, und der Schütze findet den Stier zu konservativ. Ihre Beziehung erfordert große Zugeständnisse oder droht schnell zu versanden."
+  },
+  "taureau_capricorne": {
+    "score": 9,
+    "text": "Stier (Erde) und Steinbock (Erde) teilen eine starke elementare Kompatibilität. Beide sind fleißig, loyal und pragmatisch. Der Stier schätzt die finanzielle Stabilität, die der Steinbock anstrebt, und der Steinbock bewundert die Beständigkeit des Stiers. Zusammen bauen sie ein solides Leben auf: Sie planen die Zukunft (Haus, Karriere) gemeinsam. Ihre Beziehung ist dank dieses gemeinsamen Ziels der materiellen Sicherheit sehr zuverlässig."
+  },
+  "taureau_verseau": {
+    "score": 3,
+    "text": "Stier (Erde) und Wassermann (Luft) haben stark abweichende Bedürfnisse. Der Stier sucht Routine und Sicherheit; der Wassermann liebt das Unkonventionelle und die Unabhängigkeit. Diese grundlegenden Unterschiede erschweren ihre Harmonie: Der Stier findet den Wassermann vielleicht distanziert, und der Wassermann empfindet den Stier als besitzergreifend. Ihre Beziehung erfordert erhebliche Kompromisse, um zu funktionieren."
+  },
+  "taureau_poissons": {
+    "score": 8,
+    "text": "Stier (Erde) und Fische (Wasser) ergänzen sich gut. Der solide Stier beruhigt den sensiblen Fisch, der im Gegenzug Poesie und Zärtlichkeit zum Stier bringt. Sie teilen eine tiefe Liebe für Komfort und Sanftmut: Die Beziehung ist oft sehr liebevoll. Der Stier stabilisiert die Träume des Fisches, und der Fisch erweitert die Vorstellungskraft des Stiers. Zusammen können sie einen sehr harmonischen emotionalen Kokon aufbauen."
+  },
+  "gemeaux_belier": {
+    "score": 8,
+    "text": "Zwillinge (Luft) und Widder (Feuer) bilden ein hochdynamisches Tandem. Der Zwilling ist schnell und anpassungsfähig; der Widder ist impulsiv und mutig. Gemeinsam machen sie den Alltag zu einem Abenteuer: Der Widder drängt den Zwilling zum Handeln, und der Zwilling stimuliert den Widder mit neuen Ideen. Sie teilen Enthusiasmus und vermeiden Langeweile. Ihre Beziehung ist lebhaft und leidenschaftlich, obwohl der Widder manchmal seine Direktheit dämpfen muss, um den Zwilling nicht zu verletzen."
+  },
+  "gemeaux_taureau": {
+    "score": 3,
+    "text": "Zwillinge (Luft) und Stier (Erde) haben gegensätzliche Bedürfnisse. Der Zwilling liebt Veränderung und Kommunikation; der Stier sucht Stabilität und greifbare Freuden. Ihre Kompatibilität ist gering: Der Stier könnte den Zwilling als oberflächlich empfinden, und der Zwilling hält den Stier für zu routiniert. Ohne große Anstrengungen, ihre Unterschiede zu respektieren, fehlt es ihrer Beziehung an Tiefe und Verbundenheit."
+  },
+  "gemeaux_gemeaux": {
+    "score": 8,
+    "text": "Zwei Zwillinge zusammen haben viele Gemeinsamkeiten. Als bewegliche Luftzeichen lieben sie es zu diskutieren, Ideen auszutauschen und neue Erfahrungen zu machen. Ihre Kompatibilität ist hoch, da sie den Durst des anderen nach Freiheit und Neuheit verstehen. Sie beleben ihre Partnerschaft durch Humor und Kreativität. Achtung: Sie müssen darauf achten, sich gelegentlich zu erden, damit die Beziehung nicht zu oberflächlich bleibt."
+  },
+  "gemeaux_cancer": {
+    "score": 4,
+    "text": "Zwillinge (Luft) und Krebs (Wasser) haben Schwierigkeiten, sich zu verstehen. Der Krebs träumt von emotionaler Sicherheit, während der Zwilling intellektuelle Vielfalt sucht. Der Zwilling mag dem Krebs zu distanziert erscheinen, der den Zwilling wiederum für unzuverlässig hält. Ihre Beziehung basiert auf Anstrengung: Der Zwilling muss Geduld mit der Sensibilität des Krebses haben, und der Krebs muss das Unabhängigkeitsbedürfnis des Zwillings akzeptieren."
+  },
+  "gemeaux_lion": {
+    "score": 8,
+    "text": "Zwillinge (Luft) und Löwe (Feuer) bilden ein lustiges und anregendes Paar. Der charismatische Löwe schätzt die geistige Schnelligkeit des Zwillings, und der Zwilling genießt die Wärme und Großzügigkeit des Löwen. Beide lieben das gesellschaftliche Leben und teilen Optimismus sowie Tatendrang. Ihre Beziehung ist voller guter Laune und gemeinsamer Abenteuer, auch wenn der Löwe manchmal die unbeständige Natur des Zwillings akzeptieren muss."
+  },
+  "gemeaux_vierge": {
+    "score": 4,
+    "text": "Zwillinge (Luft) und Jungfrau (Erde) stehen sich auf der beweglichen Achse gegenüber. Obwohl sie den Planeten Merkur teilen, unterscheiden sich ihre Ansätze. Der Zwilling liebt Vielseitigkeit und Leichtigkeit; die Jungfrau liebt Ordnung und Akribie. Ihre Kompatibilität ist gering: Der Zwilling mag die Jungfrau als zu streng beurteilen, und die Jungfrau findet den Zwilling zu zerstreut. Die Beziehung erfordert, dass jeder den analytischen Rhythmus des anderen respektiert."
+  },
+  "gemeaux_balance": {
+    "score": 9,
+    "text": "Zwillinge (Luft) und Waage (Luft) teilen das gleiche Element. Beide lieben es zu reden, Ideen auszutauschen und von Menschen umgeben zu sein. Die diplomatische Waage bringt Gleichgewicht in die Gedanken des Zwillings, der wiederum die Waage mit seiner Vorstellungskraft bereichert. Ihre Beziehung ist sehr harmonisch: Sie verstehen sich fast instinktiv, und ihre intellektuelle Verbundenheit ist stark."
+  },
+  "gemeaux_scorpion": {
+    "score": 4,
+    "text": "Zwillinge (Luft) und Skorpion (Wasser) haben wenig natürliche Affinität. Der intensive und geheimnisvolle Skorpion kann den geselligen, offenen Zwilling verwirren. Die Neugier des Zwillings reicht möglicherweise nicht aus, um die Geheimnisse des Skorpions zu ergründen. Ihre Beziehung erfordert erhebliche Kommunikationsanstrengungen: Der Zwilling muss die emotionale Tiefe des Skorpions akzeptieren, und der Skorpion die wechselhafte Leichtigkeit des Zwillings."
+  },
+  "gemeaux_sagittaire": {
+    "score": 9,
+    "text": "Zwillinge (Luft) und Schütze (Feuer) sind gegensätzliche bewegliche Zeichen, was eine natürliche Anziehungskraft erzeugt. Beide teilen die Begeisterung für Abenteuer und Freiheit. Der unerschrockene Schütze erregt den neugierigen Geist des Zwillings, und der Zwilling bringt seine Vielseitigkeit in den Schützen ein. Sie erleben ihre Beziehung als eine große intellektuelle und persönliche Entdeckungsreise."
+  },
+  "gemeaux_capricorne": {
+    "score": 4,
+    "text": "Zwillinge (Luft) und Steinbock (Erde) haben sehr unterschiedliche Prioritäten. Der ernsthafte, organisierte Steinbock findet den Zwilling vielleicht zu unberechenbar, und der Zwilling findet den Steinbock starr. Ihrer Beziehung fehlt die natürliche Flüssigkeit: Ohne Kompromisse haben sie wenig Gemeinsamkeiten, und ihre Kompatibilität ist begrenzt."
+  },
+  "gemeaux_verseau": {
+    "score": 9,
+    "text": "Zwillinge (Luft) und Wassermann (Luft) teilen eine starke elementare Affinität. Beide lieben Kommunikation, innovative Ideen und Freiheit. Sie stimulieren sich intellektuell und lieben es, über Projekte und Konzepte zu diskutieren. Ihre Beziehung ist sehr freundschaftlich und erfinderisch: Sie bilden ein dynamisches Tandem, das begierig auf gemeinsame kulturelle oder humanitäre Projekte ist."
+  },
+  "gemeaux_poissons": {
+    "score": 4,
+    "text": "Zwillinge (Luft) und Fische (Wasser) passen nur schwer zusammen. Der verträumte, introvertierte Fisch kann sich von der Energie des Zwillings überwältigt fühlen, und der Zwilling empfindet den Fisch möglicherweise als zu emotional. Ihre Beziehung erfordert große Einfühlungsvermögen: Der Zwilling muss dem Fisch mit mehr Tiefe zuhören, und der Fisch muss das Bedürfnis des Zwillings nach Abwechslung akzeptieren."
+  },
+  "cancer_belier": {
+    "score": 4,
+    "text": "Krebs (Wasser, kardinal) und Widder (Feuer, kardinal) wollen beide Dinge initiieren, aber auf unterschiedliche Weise. Der sensible Krebs erwartet emotionale Sicherheit, während der Widder ohne zu schauen vorprescht. Ihre Kompatibilität ist gering, weil sich ihre Elemente stark unterscheiden. Der Krebs kann sich durch die Impulsivität des Widders verletzt fühlen, und der Widder wird der Sensibilität des Krebses überdrüssig. Ihr Paar erfordert Geduld: Der Krebs muss nachsichtiger mit der Ungeduld des Widders sein, und der Widder muss lernen, vorsichtig mit dem Herzen des Krebses umzugehen."
+  },
+  "cancer_taureau": {
+    "score": 9,
+    "text": "Wie bereits erwähnt, bilden Stier (Erde) und Krebs (Wasser) eine sehr harmonische Allianz. Der emotionale Krebs und der pragmatische Stier haben die gleichen Ziele: ein stabiles, liebevolles Zuhause zu schaffen. Der beschützende Krebs findet im Stier einen verlässlichen Partner, und der treue Stier beruhigt den Krebs durch seine Beständigkeit. Ihre Beziehung ist geprägt von Zärtlichkeit und emotionaler Stabilität. Nur ihre unterschiedliche Art, Emotionen auszudrücken, erfordert möglicherweise Anpassungen."
+  },
+  "cancer_gemeaux": {
+    "score": 4,
+    "text": "Krebs (Wasser) und Zwillinge (Luft) haben wenig spontane Affinität. Der Krebs sucht emotionale Sicherheit, während der Zwilling Leichtigkeit und Vielfalt sucht. Der Krebs findet den Zwilling vielleicht zu instabil; der Zwilling findet den Krebs zu bedürftig. Ihre Beziehung basiert auf Anstrengung: Der Krebs muss das Bedürfnis des Zwillings nach Freiraum verstehen, und der Zwilling das Bindungsbedürfnis des Krebses."
+  },
+  "cancer_lion": {
+    "score": 3,
+    "text": "Krebs (Wasser) und Löwe (Feuer) haben sehr unterschiedliche Temperamente. Der introvertierte, beschützende Krebs kann von der Ausgelassenheit des Löwen überwältigt werden. Der Löwe, der im Mittelpunkt stehen will, kann die emotionale Sicherheit gefährden, die der Krebs sucht. Ihre Beziehung erfordert ein Gleichgewicht: Der Löwe muss seine dominante Natur zügeln, und der Krebs muss sich mehr für die Geselligkeit des Löwen öffnen."
+  },
+  "cancer_vierge": {
+    "score": 8,
+    "text": "Krebs (Wasser) und Jungfrau (Erde) bilden ein warmes, verlässliches Paar. Der empathische Krebs findet bei der Jungfrau ein offenes, verlässliches Ohr, und die Jungfrau fühlt sich durch die mütterliche Seite des Krebses unterstützt. Sie teilen die Liebe zum Detail und Sensibilität: Der Krebs beruhigt die Jungfrau mit Zuneigung, und die Jungfrau entlastet den Krebs mit praktischer Hilfe."
+  },
+  "cancer_balance": {
+    "score": 4,
+    "text": "Krebs (Wasser) und Waage (Luft) haben oft Schwierigkeiten, zueinander zu finden. Die Waage sucht soziale Harmonie und mag dem Krebs, der sich nach emotionaler Tiefe sehnt, sorglos erscheinen. Umgekehrt kann der leidenschaftliche Krebs zu intensiv für die gleichgewichtsliebende Waage sein. Sie müssen große Anstrengungen unternehmen, um ihre Sensibilität und Leichtigkeit in Einklang zu bringen."
+  },
+  "cancer_scorpion": {
+    "score": 9,
+    "text": "Krebs (Wasser) und Skorpion (Wasser) teilen eine sehr starke elementare Affinität. Beide sind zutiefst sensibel und loyal und verstehen einander intuitiv. Der beschützende Krebs beruhigt den intensiven Skorpion, und der leidenschaftliche Skorpion unterstützt den Krebs. Sie bauen gemeinsam eine tiefe Intimität auf, die von Vertrauen und gegenseitigem Verständnis geprägt ist."
+  },
+  "cancer_sagittaire": {
+    "score": 4,
+    "text": "Krebs (Wasser) und Schütze (Feuer) haben gegensätzliche Erwartungen. Der Krebs möchte sich niederlassen, während der Schütze ständig die Welt erkunden will. Ihre Beziehung ist schwierig: Der Krebs fühlt sich oft vernachlässigt, und der Schütze erstickt. Sie können voneinander lernen, aber die Grundkompatibilität bleibt gering."
+  },
+  "cancer_capricorne": {
+    "score": 9,
+    "text": "Krebs (Wasser) und Steinbock (Erde) sind Gegensätze, was ein sehr starkes Band knüpft. Der emotional gebende Krebs findet materielle Sicherheit beim Steinbock, und der ehrgeizige Steinbock findet ein beschützendes Zuhause beim Krebs. Sie teilen langfristige Werte (Familie, Stabilität) und balancieren Emotion und Organisation perfekt aus."
+  },
+  "cancer_verseau": {
+    "score": 2,
+    "text": "Krebs (Wasser) und Wassermann (Luft) haben sehr unterschiedliche Sichtweisen auf die Welt. Der innovative, distanzierte Wassermann kann dem emotionalen Krebs kalt erscheinen. Der Krebs will sich binden; der Wassermann priorisiert Freiheit. Ohne kolossale Anstrengungen laufen sie Gefahr, keine emotionale Verbindung herzustellen."
+  },
+  "cancer_poissons": {
+    "score": 8,
+    "text": "Krebs (Wasser) und Fische (Wasser) verstehen sich sehr gut. Beide Wasserzeichen teilen tiefe Empathie und Sanftmut. Der mütterliche Krebs bringt dem Fisch Halt und Trost, und der einfallsreiche, altruistische Fisch bringt Romantik und Hingabe. Sie bilden ein eng verbundenes, beschützendes Paar."
+  },
+  "lion_belier": {
+    "score": 9,
+    "text": "Löwe (Feuer) und Widder (Feuer) haben eine natürliche Komplizenschaft. Ihre Beziehung ist leidenschaftlich und mutig, und beide ermutigen einander zu glänzen. Sie teilen Enthusiasmus und starke Führungsqualitäten. Sie müssen ihre gemeinsamen Egos (beide wollen die Hauptrolle) managen, aber insgesamt ist ihre Verbindung hochgradig lebendig und intensiv."
+  },
+  "lion_taureau": {
+    "score": 4,
+    "text": "Löwe (Feuer) und Stier (Erde) unterscheiden sich in vielen Punkten. Der strahlende Löwe will Bewunderung und Action, während der Stier in Ruhe und Komfort verankert ist. Anfangs kann eine starke Anziehung entstehen, weil der Stier die Ausstrahlung des Löwen bewundert und umgekehrt, doch die Unterschiede treten schnell hervor. Der Stier kann den Löwen für zu auftrumpfend halten, und der Löwe den Stier für zu bieder. Diese Beziehung verlangt erhebliche Kompromisse."
+  },
+  "lion_gemeaux": {
+    "score": 8,
+    "text": "Löwe (Feuer) und Zwillinge (Luft) teilen die Liebe zum gesellschaftlichen Leben und zum Neuen. Der gesellige, großzügige Löwe schätzt den Charme der Zwillinge, und die Zwillinge lassen sich vom Selbstvertrauen des Löwen einnehmen. Ihre Beziehung ist unterhaltsam und anregend: Sie tauschen sich viel aus und teilen zahlreiche Interessen. Sie bilden ein lebendiges, kreatives Paar, sofern sie das Bedürfnis des anderen respektieren, auch einmal das Wort zu führen oder sich zu zeigen."
+  },
+  "lion_cancer": {
+    "score": 3,
+    "text": "Löwe (Feuer) und Krebs (Wasser) finden schwer eine gemeinsame Basis. Der schüchterne, fürsorgliche Krebs kann vom ständigen Bedürfnis des Löwen nach Bewunderung erdrückt werden. Der extrovertierte Löwe kann den Krebs unter Druck setzen. Damit die Beziehung funktioniert, muss der Löwe dem Krebs mehr Sanftheit entgegenbringen, und der Krebs sich frei fühlen, seine Gefühle ohne Zurückhaltung zu zeigen."
+  },
+  "lion_vierge": {
+    "score": 4,
+    "text": "Löwe (Feuer) und Jungfrau (Erde) können auf Schwierigkeiten stoßen. Die zurückhaltende, perfektionistische Jungfrau kann den Löwen für zu theatralisch halten, und der Löwe die Jungfrau für zu kritisch. Ihre gegensätzlichen Arten zu funktionieren, Überschwang gegen Bescheidenheit, verlangen große Anpassungen: Die Jungfrau muss die ausladende Natur des Löwen annehmen, und der Löwe die Strenge der Jungfrau, sonst bleibt die Verträglichkeit mittelmäßig."
+  },
+  "lion_balance": {
+    "score": 8,
+    "text": "Löwe (Feuer) und Waage (Luft) bilden oft ein harmonisches Paar. Die ausgeglichene, gesellige Waage schätzt die Großzügigkeit und das Charisma des Löwen. Der Löwe wiederum bewundert die Freundlichkeit und die Eleganz der Waage. Sie teilen die Liebe zu schönen Dingen und zum Leben zu zweit. Die Beziehung ist ausgewogen: Der Löwe bringt Wärme und Leidenschaft, die Waage bringt Zuhören und Diplomatie, für ein schönes Einvernehmen in der Liebe."
+  },
+  "lion_scorpion": {
+    "score": 4,
+    "text": "Löwe (Feuer) und Skorpion (Wasser) sind sehr gegensätzlich. Der offene, dominante Löwe kann mit der Eifersucht und der Tiefe des Skorpions zusammenstoßen. Der intensive Skorpion kann den Löwen für zu oberflächlich halten. Ihre Beziehung verlangt große Kompromisse: Der Löwe muss mehr Verständnis zeigen, und der Skorpion mehr Leichtigkeit, damit die Liebe standhält."
+  },
+  "lion_sagittaire": {
+    "score": 9,
+    "text": "Löwe (Feuer) und Schütze (Feuer) haben eine große Affinität. Beide leidenschaftlich und begeisterungsfähig, teilen sie die Lebensfreude und die Liebe zum Abenteuer. Sie spornen sich gegenseitig an: Der Löwe bringt Glanz in das Leben des Schützen, und der Schütze bringt dem Löwen Optimismus und neue Erfahrungen. Ihre Verbundenheit ist stark und das Einvernehmen sehr gut, weil sie Freundschaft und Romantik in der Beziehung gleichermaßen schätzen."
+  },
+  "lion_capricorne": {
+    "score": 3,
+    "text": "Löwe (Feuer) und Steinbock (Erde) haben wenig gemeinsam. Der ehrgeizige, zurückhaltende Steinbock kann den extrovertierten, theatralischen Löwen reizen. Der Löwe, der Liebesbeweise braucht, kann den Steinbock als zu distanziert empfinden. Die Beziehung verlangt viele Anpassungen: Sie müssen lernen, die Bedürfnisse des anderen zu respektieren, die Anerkennung für den Löwen und die Stabilität für den Steinbock."
+  },
+  "lion_verseau": {
+    "score": 8,
+    "text": "Löwe (Feuer) und Wassermann (Luft) sind gegenüberliegende Zeichen, was oft eine starke Anziehung erzeugt. Der unabhängige Wassermann bewundert die Kraft und die Großzügigkeit des Löwen, und der Löwe ist von der Originalität des Wassermanns fasziniert. Gemeinsam können sie ehrgeizige soziale oder kreative Projekte verwirklichen. Ihre Ergänzung beruht auf dem gegenseitigen Respekt vor der Freiheit: Der Wassermann unterstützt den Löwen ohne Besitzanspruch, und der Löwe bestärkt die eigenständigen Ideen des Wassermanns."
+  },
+  "lion_poissons": {
+    "score": 4,
+    "text": "Löwe (Feuer) und Fische (Wasser) haben sehr unterschiedliche Zugänge zur Liebe. Der strahlende Löwe kann die empfindsamen Fische überwältigen. Die Fische wiederum können dem Löwen zu beeinflussbar oder zu distanziert erscheinen. Damit diese Beziehung funktioniert, muss der Löwe mehr Sanftheit zeigen und die Fische mehr Selbstsicherheit. Ohne diese Anpassungen bleibt die Verträglichkeit begrenzt."
+  },
+  "vierge_belier": {
+    "score": 4,
+    "text": "Jungfrau (Erde) und Widder (Feuer) teilen das Element nicht. Die methodische, vorsichtige Jungfrau findet den Widder zu schroff, und der Widder hält die Jungfrau für zu kritisch. Sie treffen Entscheidungen auf gegensätzliche Weise, was Toleranz verlangt. Die Beziehung kann gelingen, wenn beide lernen, von den Stärken des anderen zu profitieren: Die Jungfrau mildert die Impulsivität des Widders, und der Widder hilft der Jungfrau, mehr zu wagen."
+  },
+  "vierge_taureau": {
+    "score": 9,
+    "text": "Jungfrau (Erde) und Stier (Erde) haben eine sehr hohe Verträglichkeit. Ihre bodenständige, realistische Art verbindet sie. Beide suchen Sicherheit und Komfort. Die gewissenhafte Jungfrau bringt ihre Sorgfalt in das Leben des Stiers ein, und der Stier stützt die Jungfrau mit seiner Treue und seiner Sanftheit. Sie teilen dieselben Werte auf praktischer Ebene, was sie sehr harmonisch macht."
+  },
+  "vierge_gemeaux": {
+    "score": 4,
+    "text": "Jungfrau (Erde) und Zwillinge (Luft) stehen sich auf der veränderlichen Achse gegenüber. Die Jungfrau sucht Ordnung und Präzision, während die Zwillinge Abwechslung und Vielfalt lieben. Der Beziehung fehlen gemeinsame Elemente: Die Zwillinge können die Jungfrau für zu pingelig halten, und die Jungfrau die Zwillinge für zu zerstreut. Sie müssen hart daran arbeiten, eine Verständigungsbasis zu finden, sonst bleiben sie einander fremd."
+  },
+  "vierge_cancer": {
+    "score": 8,
+    "text": "Jungfrau (Erde) und Krebs (Wasser) bilden ein sehr ergänzendes Duo. Der einfühlsame Krebs findet in der Jungfrau ein aufmerksames, verlässliches Gegenüber, und die Jungfrau fühlt sich von der mütterlichen Seite des Krebses getragen. Sie teilen das Bedürfnis, für andere zu sorgen: Die Jungfrau organisiert die praktischen Details, der Krebs bringt die affektive Wärme. Gemeinsam bauen sie ein stabiles Zuhause und planen gern das Leben zu zweit, was ihr Einvernehmen sehr tragfähig macht."
+  },
+  "vierge_lion": {
+    "score": 4,
+    "text": "Jungfrau (Erde) und Löwe (Feuer) sind sehr verschieden. Die zurückhaltende Jungfrau kann vom Bedürfnis des Löwen, Gefühle offen zu zeigen, irritiert sein, und der Löwe kann die Jungfrau für zu rational halten. Die Beziehung verlangt Zugeständnisse: Der Löwe muss seinen Überschwang zügeln, um die Jungfrau nicht zu verschrecken, und die Jungfrau spontaner auf den Löwen zugehen. Ohne gegenseitige Anpassung bleibt die Verträglichkeit mittelmäßig."
+  },
+  "vierge_vierge": {
+    "score": 8,
+    "text": "Zwei Jungfrauen verstehen sich ganz natürlich. Sie teilen den Sinn für Organisation und einen kritischen Geist, den sie konstruktiv einzusetzen versuchen. Ihr Paar ist sehr strukturiert und verlässlich. Sie planen gern die gemeinsame Zukunft und arbeiten hart daran. Einziges Risiko: Ihre beiderseitige Neigung zur Analyse kann sie dazu bringen, einander zu kritisieren. Dennoch machen die gegenseitige Unterstützung und Hingabe die Beziehung sehr stabil."
+  },
+  "vierge_balance": {
+    "score": 4,
+    "text": "Jungfrau (Erde) und Waage (Luft) funktionieren nicht gleich. Die Waage sucht Harmonie und Ästhetik, während die Jungfrau Präzision und Effizienz sucht. Ihre Interessen überschneiden sich wenig. Die Waage kann die Jungfrau für zu pingelig halten, die Jungfrau die Waage für zu oberflächlich. Sie müssen sich anstrengen, einander zu ergänzen: Die Jungfrau kann der Waage helfen, ihre Ideale umzusetzen, und die Waage die Strenge der Jungfrau mildern."
+  },
+  "vierge_scorpion": {
+    "score": 9,
+    "text": "Jungfrau (Erde) und Skorpion (Wasser) verstehen sich sehr gut. Der leidenschaftliche Skorpion findet in der Jungfrau eine verlässliche Partnerin, und die Jungfrau schätzt die Tiefe des Skorpions. Ihre Beziehung beruht auf Verbindlichkeit: Keiner von beiden lässt sich zufällig darauf ein. Der Skorpion bringt der Jungfrau emotionale Intensität, und die Jungfrau bringt dem Skorpion Pragmatismus und Methode. Gemeinsam bilden sie ein loyales, ausdauerndes Paar."
+  },
+  "vierge_sagittaire": {
+    "score": 4,
+    "text": "Jungfrau (Erde) und Schütze (Feuer) haben wenig gemeinsam. Der abenteuerlustige, optimistische Schütze kann die vorsichtige, pragmatische Jungfrau frustrieren und umgekehrt. Die Beziehung ist meist schwierig, weil der Schütze Risiken sucht, während die Jungfrau Sicherheit vorzieht. Damit es gelingt, sind enorme Kompromisse nötig: Der Schütze kann lernen, seine Impulse abzuwägen, und die Jungfrau, mehr Begeisterung zu zeigen."
+  },
+  "vierge_capricorne": {
+    "score": 9,
+    "text": "Jungfrau (Erde) und Steinbock (Erde) haben eine sehr starke Verträglichkeit. Sie teilen Ehrgeiz und Pflichtbewusstsein. Die Jungfrau unterstützt den Steinbock bei der Umsetzung seiner Vorhaben, indem sie auf die Details achtet, und der Steinbock schätzt die Jungfrau für ihre Verlässlichkeit. Die Beziehung ist ernsthaft und pragmatisch: Gemeinsam bauen sie geduldig ihre Zukunft auf, was für schöne Harmonie sorgt."
+  },
+  "vierge_verseau": {
+    "score": 2,
+    "text": "Jungfrau (Erde) und Wassermann (Luft) sind schwer in Einklang zu bringen. Der originelle, unabhängige Wassermann kann mit der strukturierten, traditionellen Art der Jungfrau kollidieren. Sie haben wenige gemeinsame Interessen. Die Elemente passen nicht zusammen, was die Verträglichkeit ohne grundlegende Veränderung sehr gering macht."
+  },
+  "vierge_poissons": {
+    "score": 8,
+    "text": "Jungfrau (Erde) und Fische (Wasser) stehen sich gegenüber, doch diese Polarität schafft eine schöne Ergänzung. Die verträumten, empfindsamen Fische versüßen den Alltag der Jungfrau, die ihnen im Gegenzug einen soliden, konkreten Rückhalt bietet. Sie teilen großen gegenseitigen Respekt. Die Fische bringen Vorstellungskraft in die Pläne der Jungfrau, und die Jungfrau hilft den Fischen, ihre Träume zu ordnen. Ihre Verbindung kann sehr harmonisch sein, wenn jeder den anderen wertschätzt."
+  },
+  "balance_belier": {
+    "score": 8,
+    "text": "Waage (Luft) und Widder (Feuer) sind gegensätzlich, was eine besondere Alchemie erzeugt. Die ausgeglichene Waage mildert die Ungestümheit des Widders, und der Widder weckt die Waage zur Tat. Gemeinsam bringen sie ihre Unterschiede ins Gleichgewicht: Der Widder bringt Leidenschaft und Offenheit, die Waage bringt Diplomatie und Romantik. Es ist eine dynamische Beziehung, in der jeder die Stärken des anderen schätzt."
+  },
+  "balance_taureau": {
+    "score": 5,
+    "text": "Waage (Luft) und Stier (Erde) teilen den Planeten Venus, unterscheiden sich aber im Wesentlichen. Die gesellige, ästhetische Waage liebt das Gespräch, der Stier liebt die Ruhe und die handfesten Freuden. Sie können sich über den gemeinsamen Sinn für Komfort verständigen, von Kleidung bis Einrichtung, doch der Stier kann die Waage für zu unentschlossen halten und die Waage den Stier für zu besitzergreifend. Ihre Verträglichkeit hängt davon ab, ob sie geistige Harmonie und materielle Stabilität vereinen können."
+  },
+  "balance_gemeaux": {
+    "score": 9,
+    "text": "Waage (Luft) und Zwillinge (Luft) teilen dasselbe Element. Beide sind dem anderen zugewandt und lieben es zu kommunizieren. Die Waage bringt ihre Diplomatie und ihren Gerechtigkeitssinn in die neugierigen Zwillinge ein, und die Zwillinge bereichern die Waage mit ihrer geistigen Lebendigkeit. Ihre Beziehung ist leicht, gebildet und sehr harmonisch, weil beide Gespräch und gesellschaftliche Harmonie gleichermaßen schätzen."
+  },
+  "balance_cancer": {
+    "score": 4,
+    "text": "Waage (Luft) und Krebs (Wasser) finden oft schwer ins Gleichgewicht. Der sehr gefühlsbetonte Krebs kann die Waage für zu oberflächlich oder distanziert halten, während die Waage den Krebs für zu besitzergreifend oder launisch hält. Ihre Erwartungen gehen auseinander: Der Krebs sucht ein warmes, tiefes Zuhause, die Waage sucht Harmonie und geistigen Austausch. Sie müssen am gegenseitigen Verständnis arbeiten, damit die Beziehung trägt."
+  },
+  "balance_lion": {
+    "score": 8,
+    "text": "Waage (Luft) und Löwe (Feuer) können sich sehr gut verstehen. Die friedliebende Waage besänftigt den impulsiven Löwen, während der königliche Löwe der Waage Leidenschaft und Anerkennung bringt. Beide sind gern unter Menschen und genießen das Leben. Ihre Beziehung ist oft schön und kreativ: Die Waage bewundert das Charisma des Löwen, und der Löwe ist von der Eleganz der Waage eingenommen."
+  },
+  "balance_vierge": {
+    "score": 4,
+    "text": "Waage (Luft) und Jungfrau (Erde) denken gegensätzlich. Die Waage sucht Leichtigkeit und Schönheit, die Jungfrau Präzision und Effizienz. Ihre Werte gehen auseinander: Die Waage kann die Jungfrau für zu pingelig und reserviert halten, die Jungfrau die Waage für zu unentschlossen. Sie müssen diese Unterschiede achten: Die Waage lehrt die Jungfrau, sich nicht zu ernst zu nehmen, und die Jungfrau lehrt die Waage, ihre Ideen umzusetzen."
+  },
+  "balance_scorpion": {
+    "score": 4,
+    "text": "Waage (Luft) und Skorpion (Wasser) sind emotional sehr verschieden. Der intensive, eifersüchtige Skorpion kann die Waage verunsichern, und die Waage kann dem leidenschaftlichen Skorpion oberflächlich erscheinen. Ihre Beziehung verlangt Kompromisse: Die Waage muss die Tiefe des Skorpions annehmen, und der Skorpion mehr gesellschaftliche Beweglichkeit zeigen, damit ein Gleichgewicht entsteht."
+  },
+  "balance_sagittaire": {
+    "score": 7,
+    "text": "Waage (Luft) und Schütze (Feuer) verstehen sich in der Regel gut. Die harmoniesuchende Waage schätzt den Optimismus des Schützen, und der Schütze fühlt sich vom Charme und der Diplomatie der Waage angezogen. Beide lieben Gedankenreisen: Sie sprechen gern über Weltanschauungen und Vorhaben. Ihre Beziehung beruht auf schöner geistiger Verbundenheit und einer positiven Lebenshaltung, auch wenn sie gelegentlich prüfen müssen, ob sie auf derselben Wellenlänge liegen."
+  },
+  "balance_capricorne": {
+    "score": 3,
+    "text": "Waage (Luft) und Steinbock (Erde) haben sehr unterschiedliche Interessen. Der ehrgeizige, realistische Steinbock kann der Waage zu streng erscheinen, die das Ideal und die Schönheit bevorzugt. Ihre Sicht auf das Leben geht auseinander: Die Waage sucht Ausgleich im Hier und Jetzt, der Steinbock plant langfristig. Ohne größere Kompromisse bleibt die Verträglichkeit begrenzt."
+  },
+  "balance_verseau": {
+    "score": 9,
+    "text": "Waage (Luft) und Wassermann (Luft) teilen eine starke Elementaffinität. Beide Zeichen sind freigeistig und weltoffen. Sie diskutieren gern neue Ideen und setzen sich für Anliegen ein, die ihnen am Herzen liegen. Ihre Beziehung ist sehr fließend und geistig: Sie regen einander an und bewahren ein schönes Einvernehmen dank ihrer fortschrittlichen Sicht und ihres geteilten Gerechtigkeitssinns."
+  },
+  "balance_poissons": {
+    "score": 4,
+    "text": "Waage (Luft) und Fische (Wasser) haben unterschiedliche Erwartungen an Zuneigung. Der ausgeglichenen Waage fällt es schwer, die sehr gefühlsbetonte Natur der Fische zu verstehen. Die verträumten Fische können die Waage für zu rational oder zögerlich halten. Die Beziehung gelingt, wenn beide nachgeben: Die Waage muss mehr Einfühlung zeigen, und die Fische lernen, ihre Bedürfnisse deutlicher zu benennen."
+  },
+  "scorpion_belier": {
+    "score": 6,
+    "text": "Skorpion (Wasser) und Widder (Feuer) leben eine sehr intensive Beziehung. Der Skorpion ist leidenschaftlich und zutiefst von der Kraft des Widders angezogen, und der mutige Widder ist vom geheimnisvollen Skorpion fasziniert. Ihr Zusammenleben ist eine Sache starker Temperamente: Sie erleben Momente überbordender Leidenschaft. Doch diese wechselseitige Intensität kann in Rivalität umschlagen, weil jeder dominieren will. Sie können eine große Liebesgeschichte erleben, wenn beide ihre Impulse zügeln, sonst erschweren die Unterschiede zwischen Konfrontation und Vertrauen ihr Einvernehmen."
+  },
+  "scorpion_taureau": {
+    "score": 8,
+    "text": "Skorpion (Wasser) und Stier (Erde) stehen sich im Tierkreis gegenüber, was eine sehr starke Anziehung erzeugt. Der intensive Skorpion fühlt sich von der Stabilität des Stiers angezogen, und der Stier ist von der Tiefe des Skorpions eingenommen. Ihr Paar ist ausgewogen: Der Stier gibt dem Skorpion Sicherheit, und der Skorpion macht den Stier ausdrucksstärker. Sie teilen Werte von Treue und Verbindlichkeit. Die Intimität ist leidenschaftlich, weil der Skorpion Intensität und der Stier Sinnlichkeit einbringt, und gemeinsam können sie eine tragfähige Beziehung aufbauen, wenn jeder den anderen achtet."
+  },
+  "scorpion_gemeaux": {
+    "score": 4,
+    "text": "Skorpion (Wasser) und Zwillinge (Luft) haben wenig gemeinsam. Der dunkle, eifersüchtige Skorpion kann die nach Leichtigkeit strebenden Zwillinge stören. Die redseligen, wechselhaften Zwillinge können dem Skorpion zu oberflächlich erscheinen. Ohne viel gegenseitiges Verständnis bleibt die Verträglichkeit gering. Sie müssen sich Mühe geben, einander wirklich zu entdecken: Die Zwillinge müssen die Vielschichtigkeit des Skorpions annehmen, und der Skorpion lernen, die Dinge leichter zu nehmen."
+  },
+  "scorpion_cancer": {
+    "score": 9,
+    "text": "Skorpion (Wasser) und Krebs (Wasser) teilen eine sehr starke natürliche Affinität. Beide Wasserzeichen verstehen einander zutiefst und verständigen sich ohne Worte. Der Skorpion fühlt sich von der Treue und Sanftheit des Krebses angezogen, und der Krebs findet Halt in der schützenden Kraft des Skorpions. Ihre Beziehung ist sehr innig und emotional: Sie stützen einander in schweren Zeiten. Gemeinsam bauen sie eine dauerhafte Bindung auf, die auf Vertrauen und Hingabe beruht."
+  },
+  "scorpion_lion": {
+    "score": 4,
+    "text": "Skorpion (Wasser) und Löwe (Feuer) sind sehr verschieden. Der strahlende, extrovertierte Löwe kann den empfindsamen Skorpion dominieren. Der Skorpion wiederum kann den Löwen für zu oberflächlich und selbstbezogen halten. Ihre Beziehung verlangt Toleranz: Der Löwe muss dem Skorpion mehr emotionalen Raum lassen, und der Skorpion dem Löwen mehr Wärme entgegenbringen. Ohne diese Anstrengungen bleibt die Verträglichkeit gering."
+  },
+  "scorpion_vierge": {
+    "score": 9,
+    "text": "Skorpion (Wasser) und Jungfrau (Erde) verstehen sich sehr gut. Die zurückhaltende, loyale Jungfrau bietet dem Skorpion verlässlichen Rückhalt, und der Skorpion bringt Leidenschaft und Intensität in das Leben der Jungfrau. Ihre Verbindung ist ernsthaft und tief: Beide schätzen Treue und Verbindlichkeit. Sie arbeiten Seite an Seite auf gemeinsame Ziele hin, was ihre Beziehung dauerhaft und tragfähig macht."
+  },
+  "scorpion_balance": {
+    "score": 4,
+    "text": "Skorpion (Wasser) und Waage (Luft) sind schwer verträglich. Die friedliebende, gesellige Waage kann mit der emotionalen Tiefe des Skorpions kollidieren. Der Skorpion wiederum kann die Waage für zu oberflächlich und zögerlich halten. Ihre Beziehung verlangt viele Zugeständnisse: Die Waage muss bereit sein, hinter die Fassade zu blicken, und der Skorpion lernen, schneller Vertrauen zu schenken."
+  },
+  "scorpion_scorpion": {
+    "score": 8,
+    "text": "Zwei Skorpione leben eine ausgesprochen intensive Beziehung. Sie verstehen sich natürlich und teilen dieselben Leidenschaften und Geheimnisse. Ihre Verbundenheit ist groß, denn sie scheuen sich nicht, tief in die Gefühle des anderen einzutauchen. Doch die beiderseitige Eifersucht und Sturheit kann heftige Konflikte erzeugen. Wenn es ihnen gelingt, offen zu sprechen und Toleranz zu zeigen, kann die Verbindung sehr stark sein, doch sie müssen aufpassen, sich nicht von Misstrauen und Wettstreit überwältigen zu lassen."
+  },
+  "scorpion_sagittaire": {
+    "score": 4,
+    "text": "Skorpion (Wasser) und Schütze (Feuer) funktionieren unterschiedlich. Der Skorpion sucht emotionale Intensität und Verbindlichkeit, während der Schütze Freiheit und Abenteuer will. Ohne Zugeständnisse ist die Beziehung schwierig: Der Schütze kann den Skorpion für zu besitzergreifend halten, und der Skorpion den Schützen für zu sorglos. Sie müssen viel miteinander sprechen, um einen Mittelweg zwischen der Tiefe des Skorpions und der Leichtigkeit des Schützen zu finden."
+  },
+  "scorpion_capricorne": {
+    "score": 8,
+    "text": "Skorpion (Wasser) und Steinbock (Erde) können ein tragfähiges Paar bilden. Der leidenschaftliche Skorpion und der ehrgeizige Steinbock teilen den Sinn für Anstrengung und Disziplin. Der Steinbock bringt dem Skorpion Struktur und praktischen Sinn, und der Skorpion gibt dem Steinbock emotionalen Rückhalt und Intensität. Beide schätzen Treue und eine ernsthafte Zukunftsplanung. Ihre Beziehung ist ernst und dauerhaft, mit starker Verbundenheit, wenn die Verbindung im Gleichgewicht ist."
+  },
+  "scorpion_verseau": {
+    "score": 3,
+    "text": "Skorpion (Wasser) und Wassermann (Luft) haben sehr gegensätzliche Sichtweisen. Der fortschrittliche, distanzierte Wassermann kann dem intensiven, gefühlsbetonten Skorpion unverständlich erscheinen. Der Beziehung fehlt gemeinsamer Boden: Der Skorpion will leidenschaftliche Echtheit, der Wassermann setzt auf Vernunft. Sie müssen sehr viel lernen, einander zuzuhören und die Welt des anderen anzunehmen, sonst bleibt die Verträglichkeit gering."
+  },
+  "scorpion_poissons": {
+    "score": 8,
+    "text": "Skorpion (Wasser) und Fische (Wasser) teilen eine schöne emotionale Verbundenheit. Beide Wasserzeichen erfassen die Gefühle des anderen intuitiv. Die beruhigenden, einfühlsamen Fische geben dem Skorpion moralischen Halt, und der Skorpion bietet den Fischen Sicherheit und Leidenschaft. Ihre Beziehung ist sehr innig: Sie können eine verschmelzende Verbindung schaffen, die die Tiefe des Skorpions mit der Sanftheit der Fische vereint."
+  },
+  "sagittaire_belier": {
+    "score": 9,
+    "text": "Schütze (Feuer) und Widder (Feuer) sind sehr verträglich, denn sie teilen dieselbe Leidenschaft und Energie. Der optimistische Schütze und der impulsive Widder spornen einander an. Der Schütze bringt Weitsicht und Nachdenklichkeit, der Widder Kampfgeist. Ihr Paar ist dem Abenteuer zugewandt: Gemeinsam brechen sie auf, die Welt zu entdecken, und treiben einander zum Wachsen an."
+  },
+  "sagittaire_taureau": {
+    "score": 3,
+    "text": "Schütze (Feuer) und Stier (Erde) haben wenig gemeinsam. Der Schütze liebt Freiheit und Unvorhergesehenes, der Stier bevorzugt Routine und Sicherheit. Ihre Prioritäten gehen auseinander: Der Stier kann sich vom sprunghaften Schützen vernachlässigt fühlen, und der Schütze vom besitzergreifenden Stier eingeengt. Ihre Beziehung verlangt viele Anstrengungen, um Abenteuer und Stabilität zu verbinden."
+  },
+  "sagittaire_gemeaux": {
+    "score": 9,
+    "text": "Schütze (Feuer) und Zwillinge (Luft) bilden oft ein hervorragendes Gespann. Sie teilen geistige Neugier und Abenteuerlust. Der ausgreifende Schütze und die mitteilsamen Zwillinge entzünden einander den Geist. Ihre Beziehung beruht auf Freiheit und Entdeckung: Sie reisen gern gemeinsam, erkunden neue Ideen und wachsen aneinander."
+  },
+  "sagittaire_cancer": {
+    "score": 4,
+    "text": "Schütze (Feuer) und Krebs (Wasser) haben sehr unterschiedliche Bedürfnisse. Der Krebs sucht emotionale Sicherheit, während der Schütze Abenteuer will. Ihre Beziehung ist oft konfliktreich: Der Krebs kann den Schützen für zu sorglos halten, und der Schütze den Krebs für zu häuslich. Sie werden viel miteinander sprechen müssen, um so ausgeprägte Unterschiede zu vereinbaren."
+  },
+  "sagittaire_lion": {
+    "score": 9,
+    "text": "Schütze (Feuer) und Löwe (Feuer) teilen eine natürliche Begeisterung. Der gesellige Löwe und der optimistische Schütze haben dieselbe Lust, in vollen Zügen zu leben. Beide gehen gern kalkulierte Risiken ein und helfen einander, ihre Ziele zu erreichen. Ihr Paar ist dynamisch und sehr verbunden: wenige Konflikte, weil sie einander anspornen und die Ehrlichkeit des anderen schätzen."
+  },
+  "sagittaire_vierge": {
+    "score": 4,
+    "text": "Schütze (Feuer) und Jungfrau (Erde) unterscheiden sich auf vielen Ebenen. Der abenteuerlustige, ungestüme Schütze kann die rationale, vorsichtige Jungfrau nervös machen und umgekehrt. Ihre Zugänge zum Leben sind gegensätzlich: Die Jungfrau plant jedes Detail, der Schütze handelt aus dem Bauch. Sie müssen zahlreiche Kompromisse schließen, um sich zu verständigen."
+  },
+  "sagittaire_capricorne": {
+    "score": 3,
+    "text": "Schütze (Feuer) und Steinbock (Erde) finden schwer eine Verständigungsbasis. Der sorglose, ungeduldige Schütze kann den arbeitsamen, organisierten Steinbock reizen und umgekehrt. Der Schütze will den Augenblick leben, der Steinbock baut langfristig auf. Ihre Beziehung verlangt Geduld: Jeder muss das Tempo des anderen annehmen, damit es Bestand hat."
+  },
+  "sagittaire_balance": {
+    "score": 7,
+    "text": "Schütze (Feuer) und Waage (Luft) teilen einen philosophischen Geist. Die harmoniesuchende Waage achtet den Optimismus des Schützen, und der Schütze bewundert die Diplomatie der Waage. Gemeinsam sprechen sie gern über große Vorhaben und neue Ideen. Ihre Beziehung ist meist positiv und ausgewogen: Sie regen sich geistig an, auch wenn es hin und wieder Zugeständnisse an die schonungslose Aufrichtigkeit des Schützen braucht."
+  },
+  "sagittaire_scorpion": {
+    "score": 4,
+    "text": "Schütze (Feuer) und Skorpion (Wasser) haben auseinanderlaufende Bedürfnisse. Der Schütze will nach außen erkunden und sich vergnügen, der Skorpion will in Intimität und innere Wandlung eintauchen. Ihre Prioritäten machen es ihnen schwer, einander zu verstehen. Sie müssen lernen, die emotionalen Unterschiede zu achten: Der Schütze mehr Tiefe zu zeigen, und der Skorpion sich auf den Optimismus des Schützen einzulassen."
+  },
+  "sagittaire_verseau": {
+    "score": 8,
+    "text": "Schütze (Feuer) und Wassermann (Luft) bilden ein sehr verbundenes Paar. Beide sind der Zukunft zugewandt und teilen das Bedürfnis nach Freiheit. Sie lernen und übertreffen sich gern gemeinsam, vor allem auf Reisen oder in kulturellen Projekten. Ihre Verbindung ist geistig und optimistisch: Der Geist des Schützen ergänzt die visionären Ideen des Wassermanns. Gemeinsam bauen sie eine Beziehung auf, die auf Freundschaft und Vertrauen beruht."
+  },
+  "sagittaire_poissons": {
+    "score": 3,
+    "text": "Schütze (Feuer) und Fische (Wasser) haben wenig natürliche Verträglichkeit. Der offene, extrovertierte Schütze kann die hochempfindsamen Fische verletzen, und die sehr verträumten Fische können dem Schützen passiv erscheinen. Ihre Beziehung verlangt große Kompromissbereitschaft, weil die gegensätzlichen Stile, Erkundung gegen Innenschau, leicht Missverständnisse erzeugen."
+  },
+  "capricorne_belier": {
+    "score": 5,
+    "text": "Steinbock (Erde) und Widder (Feuer) können ein ehrgeiziges, aber spannungsreiches Gespann bilden. Der geduldige Steinbock wirkt wie eine „Eiswand“ gegenüber dem Feuer des Widders. Der Widder gibt dem Paar Schwung, der Steinbock gibt ihm Struktur. Gemeinsam teilen sie Ehrgeiz, von der Arbeit bis zum Erfolg, und können Tragfähiges aufbauen. Sie müssen voneinander lernen: der Widder zu planen und der Steinbock den Augenblick zu nutzen. Ihre Beziehung ist stabil, wenn diese Kompromisse gefunden werden."
+  },
+  "capricorne_taureau": {
+    "score": 9,
+    "text": "Steinbock (Erde) und Stier (Erde) haben eine sehr hohe Verträglichkeit. Sie teilen dieselben pragmatischen Werte: harte Arbeit, Stabilität, Loyalität. Der Stier stützt den Ehrgeiz des Steinbocks mit seiner Beständigkeit, und der Steinbock beruhigt den Stier durch seine Verlässlichkeit. Gemeinsam ordnen sie ihr Leben handfest, von den Finanzen bis zum Zuhause, und stützen einander. Ihre Beziehung ist tragfähig und auf Dauer gebaut."
+  },
+  "capricorne_gemeaux": {
+    "score": 4,
+    "text": "Steinbock (Erde) und Zwillinge (Luft) haben wenig gemeinsam. Der ehrgeizige, disziplinierte Steinbock findet die Zwillinge zu oberflächlich, und die Zwillinge finden den Steinbock zu ernst. Der Beziehung fehlt eine natürliche Verständigung. Sie müssen sich anstrengen, die Ernsthaftigkeit des Steinbocks mit der Leichtigkeit der Zwillinge zu vereinen und ein Gleichgewicht zu finden."
+  },
+  "capricorne_cancer": {
+    "score": 9,
+    "text": "Steinbock (Erde) und Krebs (Wasser) bilden ein sehr ergänzendes Paar. Der warmherzige, fürsorgliche Krebs gibt dem Steinbock Halt und baut ein liebevolles Zuhause. Der ehrgeizige, stabile Steinbock bietet dem Krebs die Sicherheit und Struktur, die er braucht. Gemeinsam richten sie ihre Energie auf dieselben familiären und materiellen Ziele. Ihre Beziehung ist ausgewogen und beruht auf gegenseitigem Vertrauen und Loyalität."
+  },
+  "capricorne_lion": {
+    "score": 3,
+    "text": "Steinbock (Erde) und Löwe (Feuer) haben gegensätzliche Werte. Der auf die Karriere ausgerichtete Steinbock kann den Löwen für zu selbstbezogen oder verschwenderisch halten. Der Löwe wiederum kann den Steinbock für zu starr halten. Ihre Beziehung verlangt große Anpassung: Jeder muss die Prioritäten des anderen verstehen und achten."
+  },
+  "capricorne_vierge": {
+    "score": 9,
+    "text": "Steinbock (Erde) und Jungfrau (Erde) teilen dieselbe pragmatische Energie. Das Paar zielt auf Wirksamkeit: Die sorgfältige Jungfrau unterstützt die Vorhaben des Steinbocks mit Präzision, und der Steinbock schätzt die Verlässlichkeit der Jungfrau. Beide haben Pflichtbewusstsein und Organisationstalent. Ihre Beziehung beruht auf gegenseitigem Respekt für gute Arbeit, was sie sehr verträglich macht."
+  },
+  "capricorne_balance": {
+    "score": 3,
+    "text": "Steinbock (Erde) und Waage (Luft) finden schwer eine Verständigungsbasis. Der arbeitsame Steinbock kann der Waage langweilig erscheinen, die mehr Genuss und Harmonie will. Die Waage wiederum kann dem Steinbock zu unbekümmert vorkommen. Ohne größere Zugeständnisse droht der Beziehung die Verbundenheit zu fehlen."
+  },
+  "capricorne_scorpion": {
+    "score": 8,
+    "text": "Steinbock (Erde) und Skorpion (Wasser) können sich sehr gut verstehen. Der ehrgeizige Steinbock bringt dem Skorpion Struktur und praktischen Sinn, und der Skorpion bringt dem Steinbock emotionale Intensität und Loyalität. Beide sind entschlossen und ernsthaft in ihren Bindungen. Gemeinsam bilden sie ein starkes Paar: Der Steinbock stabilisiert den Skorpion, der Skorpion spornt den Steinbock an. Ihre Beziehung ist auf affektiver und praktischer Ebene sehr stark."
+  },
+  "capricorne_sagittaire": {
+    "score": 3,
+    "text": "Steinbock (Erde) und Schütze (Feuer) haben wenig gemeinsam. Der realistische, vorsichtige Steinbock kann den optimistischen, sorglosen Schützen frustrieren und umgekehrt. Der Schütze lebt im Augenblick, der Steinbock plant die Zukunft. Ihre Lebensziele gehen zu weit auseinander für ein großes Einvernehmen ohne sehr weitreichende Kompromisse."
+  },
+  "capricorne_capricorne": {
+    "score": 8,
+    "text": "Zwei Steinböcke verstehen sich hervorragend. Sie haben dieselben Ziele und Methoden: Arbeit, Organisation und Disziplin stehen im Zentrum des Paares. Sie unterstützen einander beim Erreichen langfristiger Ziele. Ihre Beziehung ist sehr tragfähig, auch wenn ihr Spontaneität fehlen kann. Sie müssen darauf achten, sich Momente der Muße zu gönnen, damit das Leben zu zweit im Gleichgewicht bleibt."
+  },
+  "capricorne_verseau": {
+    "score": 2,
+    "text": "Steinbock (Erde) und Wassermann (Luft) haben eine sehr geringe Verträglichkeit. Der rebellische, aufs Kollektiv ausgerichtete Wassermann kann dem ehrgeizigen, traditionellen Steinbock zu distanziert erscheinen. Ihre Prioritäten decken sich nicht: Der Steinbock zielt auf Sicherheit und Status, der Wassermann setzt auf Innovation und Freiheit. Dieser Unterschied macht die Beziehung ohne enorme Zugeständnisse schwierig."
+  },
+  "capricorne_poissons": {
+    "score": 8,
+    "text": "Steinbock (Erde) und Fische (Wasser) ergänzen sich gut. Der pragmatische Steinbock gibt den Träumen der Fische Bodenhaftung, während die Fische dem Steinbock Mitgefühl und Vorstellungskraft bringen. Sie teilen ein tiefes Verantwortungsgefühl für Familie und Pflichten. Ihre Beziehung verbindet den Realismus des Steinbocks mit der Sanftheit der Fische zu einem schützenden, ausgewogenen Band."
+  },
+  "verseau_belier": {
+    "score": 8,
+    "text": "Wassermann (Luft) und Widder (Feuer) bilden ein sehr freies, innovatives Paar. Beide schätzen Unabhängigkeit und lieben die Herausforderung. Der Widder bringt dem Wassermann Begeisterung, und der Wassermann bringt dem Widder Originalität. Ihr Einvernehmen beruht auf großem gegenseitigem Vertrauen: Jeder unterstützt die verrückten Ideen des anderen. Sie haben gemeinsam Spaß, erweitern ihren Blick auf die Welt und profitieren vom gegenseitigen Respekt vor ihren Unterschieden."
+  },
+  "verseau_taureau": {
+    "score": 3,
+    "text": "Wassermann (Luft) und Stier (Erde) haben sehr unterschiedliche Erwartungen. Der Wassermann liebt gesellschaftliche Neuerung und Exzentrik, während der Stier Tradition und Stabilität sucht. Der Wassermann kann den Stier für zu konservativ halten, und der Stier den Wassermann für zu unberechenbar. Ihre Beziehung verlangt große Kompromisse, um zu funktionieren."
+  },
+  "verseau_gemeaux": {
+    "score": 9,
+    "text": "Wassermann (Luft) und Zwillinge (Luft) teilen dasselbe Element, was ihre Verträglichkeit stärkt. Beide Zeichen sind mitteilsam und originell. Sie haben großen Appetit auf geistigen Austausch: Gespräche, visionäre Ideen und wegweisende Vorhaben. Ihre Beziehung beruht auf Freundschaft und geistiger Anregung. Sie verstehen sich hervorragend und achten die Freiheit des anderen."
+  },
+  "verseau_cancer": {
+    "score": 2,
+    "text": "Wassermann (Luft) und Krebs (Wasser) finden schwer zueinander. Der unabhängige, zukunftsgewandte Wassermann kann dem empfindsamen, häuslichen Krebs kalt erscheinen. Der Krebs sucht eine emotionale Sicherheit, die der distanziertere Wassermann nur schwer beständig bieten kann. Ohne große Kompromissarbeit bleibt die Verträglichkeit gering."
+  },
+  "verseau_lion": {
+    "score": 8,
+    "text": "Wassermann (Luft) und Löwe (Feuer) stehen sich gegenüber, was eine starke Anziehung erzeugt. Der gesellige Löwe liebt die Originalität des Wassermanns, und der Wassermann bewundert die Größe des Löwen. Gemeinsam können sie ehrgeizige kreative oder soziale Vorhaben verwirklichen. Ihre Beziehung ist oft mitreißend: Der Wassermann bringt dem Löwen neue Ideen, und der Löwe gibt dem Wassermann Wärme und Selbstsicherheit."
+  },
+  "verseau_vierge": {
+    "score": 2,
+    "text": "Wassermann (Luft) und Jungfrau (Erde) sind wenig verträglich. Der idealistische Wassermann kann die Jungfrau für zu bodenständig halten, und die Jungfrau den Wassermann für zu wirklichkeitsfremd. Ihnen fehlt eine offensichtliche gemeinsame Vision. Ihre Beziehung verlangt große Anpassungen, um wirklich zueinanderzufinden."
+  },
+  "verseau_balance": {
+    "score": 9,
+    "text": "Wassermann (Luft) und Waage (Luft) teilen eine große Elementaffinität. Beide sind dem Abstrakten, der Freundschaft und humanitären Anliegen zugewandt. Sie sind visionär und sprechen gern über philosophische Fragen. Ihre Beziehung ist geistig sehr ausgewogen: Sie verstehen sich schnell und regen einander den Verstand an."
+  },
+  "verseau_scorpion": {
+    "score": 3,
+    "text": "Wassermann (Luft) und Skorpion (Wasser) haben sehr gegensätzliche Naturen. Der unabhängige, rationale Wassermann kann dem leidenschaftlichen, besitzergreifenden Skorpion gleichgültig erscheinen. Sie müssen sich bemühen, einander zu entdecken: der Wassermann, den Gefühlen des Skorpions zuzuhören, und der Skorpion, die Distanz des Wassermanns anzunehmen. Ohne diese Anstrengung bleibt die Verträglichkeit gering."
+  },
+  "verseau_sagittaire": {
+    "score": 8,
+    "text": "Wassermann (Luft) und Schütze (Feuer) verstehen sich sehr gut, denn beide lieben Freiheit und Neuerung. Sie teilen Optimismus und Weltoffenheit. Ihre Beziehung beruht auf Freundschaft: Sie ermutigen einander, neue Erfahrungen zu machen und für ihre Ideale einzutreten. Gemeinsam können sie viele Vorhaben verwirklichen, wobei jeder seine Originalität einbringt."
+  },
+  "verseau_capricorne": {
+    "score": 2,
+    "text": "Wassermann (Luft) und Steinbock (Erde) sind fast unvereinbar. Der ehrgeizige, traditionelle Steinbock versteht den exzentrischen, zukunftsgewandten Wassermann nicht immer. Der Wassermann wiederum kann den Steinbock für zu streng halten. Ihre Beziehung verlangt einen großen Kompromiss, der schwer zu erreichen ist."
+  },
+  "verseau_poissons": {
+    "score": 2,
+    "text": "Wassermann (Luft) und Fische (Wasser) funktionieren unterschiedlich. Die verträumten Fische können den Wassermann für zu kopflastig halten, und der Wassermann die Fische als zu gefühlsbetont empfinden. Ihr Einvernehmen verlangt erhebliche Anstrengungen: Der Wassermann muss der Vorstellungskraft der Fische zuhören, und die Fische müssen mehr Sachlichkeit zeigen, um verstanden zu werden."
+  },
+  "poissons_belier": {
+    "score": 5,
+    "text": "Fische (Wasser) und Widder (Feuer) ergeben eine überraschende Kombination. Der kühne Widder und die empfindsamen Fische können eine tiefe Leidenschaft erleben. Die Fische führen den Widder dazu, seine gefühlvolle Seite zu erkunden, und der Widder ermutigt die Fische, ins Handeln zu kommen. Ihre Beziehung ist auf der intimen Ebene sehr intensiv. Doch die Unterschiede zwischen dem direkten Widder und den verträumten Fischen verlangen Verständnis und Ausgleich: Die Fische müssen ihre Bedürfnisse aussprechen, und der Widder muss zuhören lernen."
+  },
+  "poissons_taureau": {
+    "score": 8,
+    "text": "Fische (Wasser) und Stier (Erde) ergänzen sich gut. Die einfühlsamen, fantasievollen Fische finden im Stier Stabilität und Komfort. Der bodenständige Stier ist von der Sanftheit und Selbstlosigkeit der Fische berührt. Sie teilen die Liebe zum Zuhause und zum sinnlichen Wohlbefinden. Ihre Beziehung ist zärtlich und beruhigend: Der Stier gibt den Träumen der Fische Wirklichkeit, und die Fische geben dem Leben des Stiers Poesie."
+  },
+  "poissons_gemeaux": {
+    "score": 4,
+    "text": "Fische (Wasser) und Zwillinge (Luft) haben nicht dasselbe Tempo. Die mitteilsamen Zwillinge können den verträumten Fischen oberflächlich erscheinen. Umgekehrt können die Fische den pragmatischen Zwillingen zu empfindsam vorkommen. Ihre Beziehung verlangt Anpassung: Die Zwillinge müssen feinfühliger zuhören, und die Fische etwas Leichtigkeit zulassen."
+  },
+  "poissons_cancer": {
+    "score": 9,
+    "text": "Fische (Wasser) und Krebs (Wasser) bilden eine sehr sanfte, einfühlsame Verbindung. Die beiden Wasserzeichen haben dieselbe Empfindsamkeit. Die verträumten Fische finden im Krebs einen schützenden Partner, und der Krebs erhält von den Fischen das emotionale Verständnis, das er sucht. Ihre Beziehung ist sehr verschmelzend: Sie teilen denselben Traum vom Ideal und stützen einander in Zuneigung."
+  },
+  "poissons_lion": {
+    "score": 4,
+    "text": "Fische (Wasser) und Löwe (Feuer) haben sehr auseinanderlaufende Zugänge. Der strahlende Löwe kann die introvertierten Fische erdrücken. Die zu empfindsamen Fische können sich von der Direktheit des Löwen verletzt fühlen. Damit die Beziehung funktioniert, muss der Löwe viel Sanftheit und Geduld zeigen, und die Fische müssen lernen, sich zu behaupten."
+  },
+  "poissons_vierge": {
+    "score": 8,
+    "text": "Fische (Wasser) und Jungfrau (Erde) stehen sich gegenüber, doch das schafft eine schöne Ergänzung. Die bodenständige Jungfrau ordnet das Leben der Fische, die der Jungfrau Inspiration und Zärtlichkeit bringen. Sie gleichen einander aus: Die Fische helfen der Jungfrau, mitfühlender zu werden, und die Jungfrau hilft den Fischen, ihre Träume zu ordnen. Ihre Beziehung lebt von Solidarität und Hingabe, weil jeder einbringt, was dem anderen fehlt."
+  },
+  "poissons_balance": {
+    "score": 4,
+    "text": "Fische (Wasser) und Waage (Luft) haben unterschiedliche Erwartungen. Die romantischen, gefühlsbetonten Fische können sich von der kopflastigen Waage unverstanden fühlen. Die pragmatische Waage kann die Fische für zu unentschlossen halten. Ihre Beziehung verlangt Zugeständnisse: Sie müssen lernen, die Vorstellungswelt der Fische mit der Vernunft der Waage in Einklang zu bringen."
+  },
+  "poissons_scorpion": {
+    "score": 8,
+    "text": "Fische (Wasser) und Skorpion (Wasser) ergänzen sich sehr gut. Sie teilen ein tiefes emotionales Verstehen. Der intensive Skorpion beschützt den Traum der Fische, und die Fische besänftigen die Kraft des Skorpions. Ihre Verbundenheit ist groß: Beide schätzen Loyalität und gegenseitige Hingabe. Ihre Beziehung ist reich an Leidenschaft und Zärtlichkeit, geprägt von der Hingabe beider."
+  },
+  "poissons_sagittaire": {
+    "score": 3,
+    "text": "Fische (Wasser) und Schütze (Feuer) sind sehr verschieden. Der begeisterte Schütze kann den Fischen wenig feinfühlig erscheinen, und die Fische dem Schützen zu nachgiebig. Ihre Beziehung verlangt Verständnisarbeit: Der Schütze muss den Gefühlen der Fische zuhören, und die Fische müssen lernen, dem Schwung des Schützen zu folgen."
+  },
+  "poissons_capricorne": {
+    "score": 8,
+    "text": "Fische (Wasser) und Steinbock (Erde) verstehen sich gut. Der strukturierte Steinbock gibt den Fischen die feste Grundlage, die sie brauchen, und die Fische bringen dem Steinbock Mitgefühl und Kreativität. Sie bilden ein ausgewogenes Paar: Der Steinbock gibt den Idealen der Fische Bodenhaftung, und die Fische mildern die Strenge des Steinbocks. Gemeinsam können sie Schönes verwirklichen, indem sie Traum und Realismus verbinden."
+  },
+  "poissons_verseau": {
+    "score": 2,
+    "text": "Fische (Wasser) und Wassermann (Luft) verstehen einander schwer. Der unabhängige, rationale Wassermann kann den Fischen gefühllos erscheinen, und die Fische dem Wassermann zu intuitiv. Der Beziehung fehlen gemeinsame Elemente: Die Fische träumen von einer tiefen emotionalen Bindung, der Wassermann schätzt Freundschaft und Abstraktion. Wenig natürliche Verträglichkeit ohne große Kompromisse."
+  },
+  "cancer_cancer": {
+    "score": 8,
+    "text": "Zwei Krebse bilden einen sehr starken emotionalen Kokon. Sie teilen dasselbe Bedürfnis nach affektiver Sicherheit, Zärtlichkeit und Zuhause. Ihre gemeinsame Empfindsamkeit macht sie einander gegenüber sehr einfühlsam: Sie erahnen die Bedürfnisse des anderen, ohne dass er sie aussprechen muss. Ihre Beziehung ist sanft und schützend. Doch die geteilte Gefühlsstärke kann sie gleichzeitigen Stimmungsschwankungen aussetzen. Wenn sie lernen, sich nicht gemeinsam in ihr Schneckenhaus zurückzuziehen, ist ihre Verbindung zutiefst liebevoll und dauerhaft."
+  },
+  "lion_lion": {
+    "score": 7,
+    "text": "Zwei Löwen bilden ein strahlendes, theatralisches Paar. Sie teilen dieselbe Leidenschaft, denselben Stolz und dasselbe Bedürfnis nach Anerkennung. Ihre Beziehung ist intensiv und spektakulär: Sie bewundern einander und leben die Liebe mit großer Geste. Doch ihr starkes Ego kann zu Machtkämpfen führen, weil jeder König oder Königin des Paares sein will. Wenn sie lernen, das Rampenlicht zu teilen und einander ohne Wettstreit zu bewundern, ist ihre Verbindung großartig und voller Wärme."
+  },
+  "balance_balance": {
+    "score": 8,
+    "text": "Zwei Waagen bilden ein sehr harmonisches, ästhetisches Paar. Sie teilen dieselbe Liebe zu Ausgleich, Schönheit und Diplomatie. Ihre Beziehung ist sanft und feinsinnig: Sie meiden Konflikte und suchen stets den Kompromiss. Doch dieses ständige Streben nach Harmonie kann sie daran hindern, echte Probleme anzugehen. Auch die gemeinsame Unentschlossenheit kann wichtige Entscheidungen verzögern. Überwinden sie diese Neigung, gehört ihr Paar zu den angenehmsten und elegantesten des Tierkreises."
+  },
+  "sagittaire_sagittaire": {
+    "score": 8,
+    "text": "Zwei Schützen erleben eine Beziehung voller Abenteuer und Optimismus. Sie teilen denselben Durst nach Freiheit, Reisen und Entdeckungen. Ihr Paar ist nach außen gerichtet: Sie erkunden gemeinsam die Welt mit Begeisterung und guter Laune. Doch das gemeinsame Bedürfnis nach Unabhängigkeit kann sie voneinander entfernen, wenn sie sich nicht die Zeit nehmen, echte Nähe aufzubauen. Finden sie das Gleichgewicht zwischen Abenteuer und Verbindlichkeit, ist ihre Beziehung fröhlich und anregend."
+  },
+  "verseau_verseau": {
+    "score": 8,
+    "text": "Zwei Wassermänner bilden ein sehr originelles, geistiges Paar. Sie teilen dieselbe fortschrittliche Weltsicht, dasselbe Freiheitsbedürfnis und dieselbe Neugier. Ihre Beziehung beruht auf Freundschaft und auf dem Respekt vor der Eigenständigkeit des anderen. Doch die gemeinsame Neigung zur emotionalen Distanz kann affektive Kälte erzeugen. Lernen sie, ihre Gefühle jenseits des Verstandes auszudrücken, ist ihre Verbindung einzigartig, innovativ und zutiefst respektvoll."
+  },
+  "poissons_poissons": {
+    "score": 7,
+    "text": "Zwei Fische schaffen eine sehr gefühlvolle, intuitive Beziehung. Sie verstehen einander zutiefst und teilen eine reiche, empfindsame Innenwelt. Ihr Paar ist von Romantik, Kreativität und gegenseitigem Mitgefühl geprägt. Doch ihre extreme Empfindsamkeit kann sie verletzlich machen: Ohne konkrete Verankerung droht ihnen, sich gemeinsam in Träumen oder Gefühlen zu verlieren. Finden sie ein Gleichgewicht zwischen Innenwelt und Wirklichkeit, ist ihre Verbindung magisch und zutiefst verbunden."
+  }
+}

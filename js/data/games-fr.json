@@ -325,7 +325,8 @@
     "jeuActionVeriteHot": "Jeu action ou vérité coquin",
     "jeuGages": "la roue des gages",
     "jeuPlateau": "jeu de plateau du couple",
-    "jeuQuiDeNous": "Qui de nous deux ?"
+    "jeuQuiDeNous": "Qui de nous deux ?",
+    "testDateNaissance": "Test compatibilité date de naissance"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
