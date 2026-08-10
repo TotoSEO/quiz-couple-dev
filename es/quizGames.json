@@ -324,7 +324,8 @@
     "jeuActionVeriteHot": "juego verdad o reto picante",
     "jeuGages": "la ruleta de prendas",
     "jeuPlateau": "juego de mesa para parejas",
-    "jeuQuiDeNous": "¿Quién de los dos?"
+    "jeuQuiDeNous": "¿Quién de los dos?",
+    "testDateNaissance": "Test de compatibilidad por fecha de nacimiento"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",

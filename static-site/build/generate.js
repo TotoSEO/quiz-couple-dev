@@ -861,6 +861,16 @@ function copyTranslationData() {
     if (fs.existsSync(activitiesSrc)) {
       fs.copyFileSync(activitiesSrc, path.join(dataDir, `activities-${lang}.json`));
     }
+
+    // Les 144 duos de signes pesent 70 Ko : le test par date de naissance va
+    // les chercher seulement quand quelqu'un lance le calcul, jamais au
+    // chargement de la page.
+    const zodiacSrc = path.resolve(__dirname, `zodiac-data-${lang}.json`);
+    const zodiacFallback = path.resolve(__dirname, 'zodiac-data.json');
+    const zodiacFile = fs.existsSync(zodiacSrc) ? zodiacSrc : zodiacFallback;
+    if (fs.existsSync(zodiacFile)) {
+      fs.copyFileSync(zodiacFile, path.join(dataDir, `zodiac-${lang}.json`));
+    }
   }
   console.log('[data] Translation data files copied to dist/js/data/');
 }
@@ -1170,7 +1180,7 @@ async function generateBlogArticle(articleMeta, lang) {
     sidebarTests: [
       'testCouple', 'testCommonPoints', 'testCompatibilite', 'testSuisJeAmoureux', 'testDistance',
       'testToxic', 'testPervers', 'testAmourHabitude', 'testCoupleSain', 'testMariage', 'testDivorce',
-      'testParentalite', 'testEmmenager', 'testBebe', 'testAstroPrenoms', 'testKarmique',
+      'testParentalite', 'testEmmenager', 'testBebe', 'testAstroPrenoms', 'testDateNaissance', 'testKarmique',
       'testJalousie', 'testInfidelite', 'testLangageAmour', 'testAttachement', 'testConfiance',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarQuizzes: [

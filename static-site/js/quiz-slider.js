@@ -17,12 +17,18 @@
     }
 
     function update() {
+      // La piste porte un scroll-padding : au repos scrollLeft vaut déjà
+      // quelques pixels, jamais zéro. Sans cette marge la flèche « précédent »
+      // restait affichée dès le chargement et mordait sur la première carte.
+      var MARGE = 8;
       var maxScroll = track.scrollWidth - track.clientWidth - 1;
       var x = track.scrollLeft;
-      if (prev) prev.disabled = x <= 0;
-      if (next) next.disabled = x >= maxScroll;
-      root.classList.toggle('is-start', x <= 0);
-      root.classList.toggle('is-end', x >= maxScroll);
+      var debut = x <= MARGE;
+      var fin = x >= maxScroll - MARGE;
+      if (prev) prev.disabled = debut;
+      if (next) next.disabled = fin;
+      root.classList.toggle('is-start', debut);
+      root.classList.toggle('is-end', fin);
     }
 
     if (prev) prev.addEventListener('click', function () {

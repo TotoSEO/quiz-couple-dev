@@ -118,6 +118,12 @@
     "description": "Scopri la compatibilità amorosa tra i vostri nomi e segni zodiacali. Numerologia e astrologia combinate.",
     "metaDescription": "Inserisci i vostri nomi e segni zodiacali. Il nostro test combina numerologia e astrologia per rivelare cosa dicono le stelle sulla vostra compatibilità."
   },
+  "testDateNaissance": {
+    "title": "Data di nascita | Test di compatibilità amorosa",
+    "shortTitle": "Compatibilità per data di nascita",
+    "description": "Bastano due date di nascita. Ne ricaviamo i vostri cammini di vita, i vostri segni zodiacali e i vostri segni cinesi, poi incrociamo le tre letture.",
+    "metaDescription": "Siete compatibili secondo le vostre date di nascita? Cammino di vita, segno zodiacale e segno cinese incrociati in un solo calcolo. Gratis, senza registrazione."
+  },
   "testEmmenager": {
     "title": "Pronti ad andare a vivere insieme? Test per coppie",
     "shortTitle": "Test Convivenza",

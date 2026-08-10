@@ -1,0 +1,226 @@
+{
+  "hero": {
+    "badge": "Numérologie, astrologie et zodiaque chinois",
+    "title": "Êtes-vous compatible selon votre date de naissance ?",
+    "highlight": "date de naissance",
+    "description": "Deux dates, et tout se déduit : votre chemin de vie, votre signe solaire, votre signe chinois. Trois lectures différentes du même jour, croisées pour dessiner ce qui vous relie et ce qui vous demande un peu de travail.",
+    "subtitle": "Aucune inscription, aucun e-mail. Le résultat s'affiche tout de suite."
+  },
+  "form": {
+    "titre": "Vos deux dates de naissance",
+    "personne1": "Vous",
+    "personne2": "Votre partenaire",
+    "jour": "Jour",
+    "moisLabel": "Mois",
+    "annee": "Année",
+    "mois": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+    "moisDate": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+    "dateAffichee": "{{j}} {{mois}} {{a}}",
+    "lancer": "Calculer notre compatibilité",
+    "erreur": "Une des deux dates n'existe pas. Vérifiez le jour et le mois choisis.",
+    "aide": "Le jour et le mois donnent le signe astrologique, l'année donne le signe chinois, et les trois ensemble donnent le chemin de vie."
+  },
+  "signes": {
+    "belier": "Bélier ♈",
+    "taureau": "Taureau ♉",
+    "gemeaux": "Gémeaux ♊",
+    "cancer": "Cancer ♋",
+    "lion": "Lion ♌",
+    "vierge": "Vierge ♍",
+    "balance": "Balance ♎",
+    "scorpion": "Scorpion ♏",
+    "sagittaire": "Sagittaire ♐",
+    "capricorne": "Capricorne ♑",
+    "verseau": "Verseau ♒",
+    "poissons": "Poissons ♓"
+  },
+  "animaux": {
+    "rat": "Rat",
+    "buffle": "Buffle",
+    "tigre": "Tigre",
+    "lapin": "Lapin",
+    "dragon": "Dragon",
+    "serpent": "Serpent",
+    "cheval": "Cheval",
+    "chevre": "Chèvre",
+    "singe": "Singe",
+    "coq": "Coq",
+    "chien": "Chien",
+    "cochon": "Cochon"
+  },
+  "elements": {
+    "bois": "Bois",
+    "feu": "Feu",
+    "terre": "Terre",
+    "metal": "Métal",
+    "eau": "Eau"
+  },
+  "cheminsTraits": {
+    "1": "l'élan et l'initiative",
+    "2": "la douceur et l'écoute",
+    "3": "la fantaisie et les mots",
+    "4": "la solidité et la parole tenue",
+    "5": "le mouvement et la liberté",
+    "6": "le soin et la famille",
+    "7": "la réflexion et le retrait",
+    "8": "l'ambition et la maîtrise",
+    "9": "le don de soi et l'ouverture",
+    "11": "l'intuition et l'idéal",
+    "22": "la construction patiente",
+    "33": "l'amour donné sans compter"
+  },
+  "bandesVie": {
+    "haute": "Vos deux chiffres vont dans le même sens. Vous n'avez pas besoin de vous expliquer longtemps pour être compris, et vos besoins de fond ne se contredisent presque jamais. Le risque, avec ce genre d'accord, c'est plutôt l'ennui : pensez à vous surprendre de temps en temps.",
+    "moyenne": "Vos deux chiffres se complètent plus qu'ils ne se ressemblent. Ce que l'un ne voit pas, l'autre le remarque. Ça marche très bien tant que vous acceptez de ne pas fonctionner de la même façon, et ça grince le jour où l'un des deux veut convertir l'autre.",
+    "basse": "Vos deux chiffres ne parlent pas le même langage. Ce n'est pas une condamnation, c'est un mode d'emploi : il faut expliciter ce qui, ailleurs, va de soi. Beaucoup de couples solides vivent exactement là, à condition de ne pas prendre la différence pour un désamour.",
+    "tendue": "Vos deux chiffres tirent franchement dans des directions opposées. L'attirance est souvent très forte au début, précisément parce que l'autre a ce qui vous manque. La suite dépend d'une seule chose : votre capacité à négocier au lieu de vouloir avoir raison."
+  },
+  "nombresCouple": {
+    "1": "Votre couple vibre sur le 1 : c'est une relation de conquête. Vous avancez, vous décidez, vous n'aimez ni l'attente ni les demi-mesures. Attention à ne pas transformer chaque discussion en bras de fer, il n'y a pas de place pour deux capitaines sur le même bateau.",
+    "2": "Votre couple vibre sur le 2 : c'est une relation de tendresse. Le lien passe par les petits gestes, les attentions, la présence silencieuse. Votre force est la douceur, votre point faible aussi : à force de vouloir éviter le conflit, vous risquez de ne plus rien dire du tout.",
+    "3": "Votre couple vibre sur le 3 : c'est une relation qui parle et qui rit. Vous racontez, vous inventez, vous avez besoin de gens autour de vous. Le danger, c'est la légèreté qui devient une façon d'éviter les vrais sujets.",
+    "4": "Votre couple vibre sur le 4 : c'est une relation qui construit. Un logement, un projet, une routine qui tient. Vous êtes le couple sur qui tout le monde compte. Veillez seulement à ce que le quotidien ne finisse pas par prendre toute la place.",
+    "5": "Votre couple vibre sur le 5 : c'est une relation qui bouge. Voyages, changements d'avis, décisions prises un vendredi soir. Vous vous ennuyez très vite. Votre travail à deux, c'est d'apprendre que la stabilité n'est pas l'ennemie du désir.",
+    "6": "Votre couple vibre sur le 6 : c'est une relation qui prend soin. Vous vous occupez l'un de l'autre, souvent des autres aussi. C'est chaleureux et rassurant, à condition que l'un des deux n'endosse pas tout seul le rôle de parent.",
+    "7": "Votre couple vibre sur le 7 : c'est une relation qui cherche. Vous parlez de sujets que les autres trouvent bizarres, vous avez besoin de silence, et vous vous comprenez souvent sans mots. Le piège, c'est de s'enfermer à deux et de couper le lien avec le reste du monde.",
+    "8": "Votre couple vibre sur le 8 : c'est une relation qui vise haut. Réussite, argent, statut, ambition partagée. Vous avancez vite. Pensez juste à vérifier régulièrement que vous construisez encore la même chose, et pas deux carrières côte à côte.",
+    "9": "Votre couple vibre sur le 9 : c'est une relation qui donne. Vous êtes tournés vers les autres, sensibles à ce qui dépasse votre petite histoire. C'est beau et généreux. Faites attention à ne pas oublier votre propre couple dans l'affaire.",
+    "11": "Votre couple vibre sur le 11 : c'est une relation d'intuition. Vous ressentez les choses avant de les comprendre, parfois avant même de les vivre. L'intensité est réelle, la fatigue nerveuse aussi. Redescendez régulièrement sur terre, ensemble.",
+    "22": "Votre couple vibre sur le 22 : c'est une relation de bâtisseurs. Vous ne faites rien à moitié et vous pensez en années, pas en semaines. Un couple de fond, très solide, qui doit juste se rappeler que tout ne se planifie pas.",
+    "33": "Votre couple vibre sur le 33 : c'est une relation qui protège. Vous donnez énormément, à l'autre et souvent autour de vous. La générosité est votre marque de fabrique. Vérifiez seulement que l'un des deux ne se vide pas pour remplir l'autre."
+  },
+  "relations": {
+    "trine": "{{a1}} et {{a2}} font partie du même triangle d'affinité, l'un des liens les plus recherchés dans le zodiaque chinois. Vous partagez le même rythme et la même façon d'aborder les choses, ce qui rend les décisions communes étonnamment simples.",
+    "harmonie": "{{a1}} et {{a2}} forment l'une des six paires dites d'harmonie. La tradition les appelle les amis secrets : deux signes qui couvrent naturellement les angles morts de l'autre, sans avoir besoin de se ressembler.",
+    "meme": "Vous êtes tous les deux {{a1}}. Vous vous reconnaissez immédiatement, avec les qualités et les travers qui vont avec. C'est confortable, et c'est aussi un miroir : ce qui vous agace chez l'autre est souvent ce que vous n'aimez pas chez vous.",
+    "neutre": "{{a1}} et {{a2}} n'ont ni affinité particulière ni tension marquée dans le zodiaque chinois. Rien ne vous porte automatiquement, rien ne vous freine non plus : cet axe-là laisse la main aux deux autres.",
+    "nuisance": "{{a1}} et {{a2}} font partie des paires que la tradition chinoise dit de nuisance. Ce n'est pas une incompatibilité franche, c'est plutôt une usure : de petits agacements répétés qui, sans mots posés dessus, finissent par peser.",
+    "opposition": "{{a1}} et {{a2}} sont face à face sur la roue chinoise, à six signes d'écart. C'est l'axe le plus tendu du zodiaque, et souvent le plus magnétique. Vous vous attirez précisément parce que vous ne vous ressemblez pas, et c'est exactement ce qui vous fatigue au bout de trois ans."
+  },
+  "elementsRelation": {
+    "meme": "Vous partagez le même élément, le {{e1}}. Vous réagissez aux événements avec la même énergie, ce qui simplifie beaucoup la vie commune et double l'intensité des mauvais jours.",
+    "nourrit": "Vos éléments s'alimentent : entre le {{e1}} et le {{e2}}, il y a un cycle qui donne plutôt qu'il ne retire. L'un pousse l'autre à sortir de sa zone sans le brusquer.",
+    "controle": "Vos éléments se contrarient : le {{e1}} et le {{e2}} appartiennent au cycle de contrôle, celui où l'un tempère l'autre. Utile pour éviter les excès, épuisant si personne ne lâche jamais."
+  },
+  "paliers": {
+    "fusion": {
+      "titre": "Vos deux dates se répondent",
+      "texte": "Les trois lectures vont dans le même sens, et ça n'arrive pas si souvent. Vous avez la même façon d'avancer, les mêmes besoins de fond, et une entente qui ne demande pas d'explication. Le seul travail qui vous attend, c'est de ne pas confondre évidence et acquis."
+    },
+    "belle": {
+      "titre": "Une belle mécanique, avec un grain de sable",
+      "texte": "L'essentiel est là. Deux des trois lectures s'accordent nettement, la troisième introduit une différence qui vous oblige à discuter. C'est souvent le profil des couples qui durent : assez de points communs pour se sentir chez soi, assez d'écart pour ne pas s'ennuyer."
+    },
+    "travail": {
+      "titre": "Un couple qui se construit",
+      "texte": "Rien ne va de soi entre vous, et ce n'est pas un mauvais signe. Les lectures se contredisent partiellement : ce qui coule tout seul chez d'autres couples, vous devrez le mettre en mots. Beaucoup d'histoires très solides ressemblent exactement à ça, à condition d'accepter de ne pas fonctionner pareil."
+    },
+    "contraires": {
+      "titre": "Deux mondes à relier",
+      "texte": "Les trois lectures pointent des tempéraments franchement différents. Ça ne dit rien de vos sentiments, ça dit que vos modes d'emploi ne se ressemblent pas. Les couples qui tiennent avec ce profil sont ceux qui ont arrêté d'attendre que l'autre devienne comme eux."
+    }
+  },
+  "resultat": {
+    "signe": "Signe astrologique",
+    "chemin": "Chemin de vie",
+    "chinois": "Signe chinois",
+    "chinoisValeur": "{{a}} de {{e}}",
+    "axeVie": "Chemins de vie",
+    "axeAstro": "Signes astrologiques",
+    "axeChinois": "Zodiaque chinois",
+    "axeVieValeur": "Chemin de vie {{n1}} et chemin de vie {{n2}}",
+    "axeAstroValeur": "{{s1}} et {{s2}}",
+    "axeChinoisValeur": "{{a1}} de {{e1}} et {{a2}} de {{e2}}",
+    "titreVie": "Ce que vos chemins de vie racontent",
+    "introVie": "Vous êtes sur un chemin de vie {{n1}}, celui de {{t1}}. Votre partenaire est sur un chemin de vie {{n2}}, celui de {{t2}}.",
+    "titreAstro": "{{s1}} et {{s2}} : ce que dit le ciel",
+    "titreChinois": "Ce que dit le zodiaque chinois",
+    "titreCouple": "Le nombre de votre couple : {{n}}",
+    "refaire": "Tester deux autres dates"
+  },
+  "suite": {
+    "titre": "Allez plus loin avec vos prénoms",
+    "texte": "Votre date de naissance dit ce que vous avez reçu en arrivant. Votre prénom, lui, dit comment vous vous reliez aux autres au quotidien. C'est la deuxième moitié de la lecture, et elle change souvent l'interprétation du résultat que vous venez d'obtenir.",
+    "bouton": "Faire le test prénom et signe astrologique"
+  },
+  "section1": {
+    "title": "Ce qu'une date de naissance peut vraiment dire d'un couple",
+    "p1": "Vous connaissez la date de naissance de votre partenaire par cœur. C'est probablement l'une des rares informations que vous n'oublierez jamais. Et pourtant, la plupart des gens ne s'en servent que pour souffler des bougies une fois par an, alors que trois traditions différentes y lisent, chacune à sa façon, un tempérament complet.",
+    "p2": "La numérologie y voit un chiffre, le <strong>chemin de vie</strong>, qui résume la manière dont une personne avance. L'astrologie occidentale y lit un signe solaire, donc une façon d'aimer. L'astrologie chinoise y lit une année lunaire, donc un rythme. Ces trois lectures ne disent pas la même chose, et c'est précisément pour ça qu'on les croise ici plutôt que d'en choisir une seule.",
+    "p3": "Résultat : un score global, trois scores détaillés, et surtout des explications qui vous concernent tous les deux. Si vous cherchez plutôt un questionnaire à remplir à deux, le <a href=\"/test-compatibilite-amoureuse/\">test de compatibilité amoureuse</a> en vingt questions répond à la même envie par un tout autre chemin."
+  },
+  "section2": {
+    "title": "Le chemin de vie, le chiffre caché dans votre date de naissance",
+    "p1": "C'est le calcul le plus simple de toute la numérologie, et vous pouvez le refaire à la main pendant que vous lisez. On additionne <strong>tous les chiffres</strong> de la date, puis on réduit le total jusqu'à obtenir un seul chiffre. Une exception : si on tombe sur 11, 22 ou 33, on s'arrête là. Ce sont les nombres maîtres, ils ne se réduisent pas.",
+    "sub1Title": "Un exemple en trente secondes",
+    "sub1Text": "Prenons le 14 mars 1990. On additionne : 1 + 4 + 0 + 3 + 1 + 9 + 9 + 0 = 27. On réduit : 2 + 7 = 9. Chemin de vie 9. Autre exemple, le 29 décembre 1990 : 2 + 9 + 1 + 2 + 1 + 9 + 9 + 0 = 33. On s'arrête, c'est un nombre maître.",
+    "sub2Title": "Ce que chaque chemin de vie cherche en amour",
+    "tableHeaders": ["Chemin", "Mot-clé", "Ce qu'il attend d'une relation"],
+    "tableRows": [
+      ["1", "L'élan", "De l'admiration et de l'espace pour décider"],
+      ["2", "La douceur", "De la présence, de la tendresse, peu de conflits"],
+      ["3", "Les mots", "Qu'on rie avec lui et qu'on l'écoute raconter"],
+      ["4", "La solidité", "Des promesses tenues et un cadre clair"],
+      ["5", "Le mouvement", "De la nouveauté et surtout pas de laisse"],
+      ["6", "Le soin", "Un foyer, des habitudes, quelqu'un à protéger"],
+      ["7", "La réflexion", "Du silence, de la profondeur, pas de bavardage"],
+      ["8", "L'ambition", "Un partenaire qui avance à la même vitesse"],
+      ["9", "Le don", "Du sens, de la générosité, une cause commune"],
+      ["11", "L'intuition", "Qu'on prenne ses ressentis au sérieux"],
+      ["22", "La construction", "Un projet de vie à long terme, pas un flirt"],
+      ["33", "L'amour donné", "Qu'on l'aime pour lui, pas pour ce qu'il donne"]
+    ],
+    "tip": "Deux chemins de vie identiques ne garantissent rien du tout. Deux 5 ensemble, c'est deux personnes qui veulent partir, et parfois pas dans la même direction."
+  },
+  "section3": {
+    "title": "Le signe astrologique, le ciel du jour où vous êtes né",
+    "p1": "Votre signe solaire dépend du jour et du mois, pas de l'année. C'est la position du Soleil au moment de votre naissance, et c'est de très loin la donnée astrologique la plus connue. Elle décrit une façon d'aimer : ce qui vous rassure, ce qui vous fait fuir, la manière dont vous dites les choses quand elles sont difficiles.",
+    "sub1Title": "Les quatre éléments, la vraie clé de lecture",
+    "sub1Text": "Avant même de comparer signe par signe, on regarde les éléments. Le <strong>Feu</strong> (Bélier, Lion, Sagittaire) fonce. La <strong>Terre</strong> (Taureau, Vierge, Capricorne) construit. L'<strong>Air</strong> (Gémeaux, Balance, Verseau) échange. L'<strong>Eau</strong> (Cancer, Scorpion, Poissons) ressent. Le Feu et l'Air s'alimentent, la Terre et l'Eau se comprennent, et les couples qui mélangent deux familles éloignées ont plus à traduire l'un pour l'autre.",
+    "p2": "Attention aux dates charnières. Si vous êtes né un 20 ou un 21, vous êtes peut-être du signe d'avant : les bornes bougent légèrement d'une année à l'autre. Notre calcul utilise les dates de référence les plus courantes, celles que vous trouverez dans la quasi-totalité des almanachs.",
+    "p3": "Si votre signe vous intéresse en particulier, on a écrit un article complet pour chacun des douze. Celui sur la <a href=\"/blog/compatibilite-amoureuse-balance/\">compatibilité amoureuse de la Balance</a> ou celui sur le <a href=\"/blog/compatibilite-amoureuse-scorpion/\">Scorpion</a> entrent bien plus dans le détail que ce que peut afficher un calculateur."
+  },
+  "section4": {
+    "title": "Le signe chinois, celui que presque personne ne calcule correctement",
+    "p1": "Ici, c'est l'année qui parle. Douze animaux, un par année, et un cycle qui recommence. Sauf que l'année chinoise ne commence pas le 1er janvier : elle démarre au nouvel an lunaire, qui tombe entre le 21 janvier et le 21 février selon les années. Toutes les personnes nées en janvier et dans la première moitié de février appartiennent donc à l'animal de l'année précédente.",
+    "p2": "C'est l'erreur la plus fréquente des calculateurs en ligne, et elle concerne près d'un dixième de la population. Notre outil utilise les <strong>vraies dates du nouvel an chinois</strong>, année par année, de 1924 à 2043. Quelqu'un né le 1er janvier 2000 n'est pas Dragon, il est Lapin de Terre.",
+    "sub1Title": "Les quatre triangles d'affinité",
+    "tableHeaders": ["Triangle", "Les trois signes", "Ce qui les réunit"],
+    "tableRows": [
+      ["Le triangle de l'action", "Rat, Dragon, Singe", "L'énergie, l'audace, le goût du risque"],
+      ["Le triangle de la méthode", "Buffle, Serpent, Coq", "La patience, la stratégie, le sens du détail"],
+      ["Le triangle de l'indépendance", "Tigre, Cheval, Chien", "La liberté, la loyauté, la franchise"],
+      ["Le triangle de la douceur", "Lapin, Chèvre, Cochon", "La sensibilité, le calme, le goût du confort"]
+    ],
+    "sub2Title": "Et l'élément dans tout ça ?",
+    "sub2Text": "Chaque animal revient tous les douze ans, mais avec un élément différent : Bois, Feu, Terre, Métal ou Eau. Un Dragon de Bois et un Dragon de Feu ne se ressemblent pas vraiment. Ces cinq éléments s'enchaînent en cycles, l'un nourrissant le suivant ou le tempérant, et c'est ce qui affine le score chinois de votre résultat.",
+    "tip": "Six paires sont dites d'harmonie dans la tradition chinoise, les fameux amis secrets : Rat et Buffle, Tigre et Cochon, Lapin et Chien, Dragon et Coq, Serpent et Singe, Cheval et Chèvre. Elles ne sont dans aucun triangle, et elles fonctionnent pourtant très bien."
+  },
+  "section5": {
+    "title": "Pourquoi croiser trois lectures au lieu d'une seule",
+    "p1": "Parce qu'aucune des trois ne suffit. Le signe solaire est trop populaire pour être précis : douze cases pour huit milliards de personnes, ça fait des cases très larges. Le chemin de vie est plus fin mais il ignore complètement le tempérament. Le signe chinois donne un rythme, pas une façon d'aimer.",
+    "p2": "Croisées, elles se corrigent. Deux signes solaires réputés incompatibles peuvent avoir des chemins de vie qui s'emboîtent parfaitement, et vous le verrez tout de suite dans les trois barres du résultat. C'est aussi pour ça qu'on affiche le détail plutôt qu'un pourcentage seul : le chiffre global ne vaut rien sans ce qui le compose.",
+    "tip": "Un score élevé sur un axe et bas sur un autre est le cas le plus fréquent, et souvent le plus intéressant à lire. C'est là que se logent les vraies dynamiques de couple."
+  },
+  "section6": {
+    "title": "Et si le score est bas ?",
+    "p1": "Alors il ne se passe rien. Vraiment. Aucun de ces trois systèmes n'a jamais prédit une rupture, et aucun n'a jamais empêché une histoire de durer trente ans. Ce que dit un score bas, c'est que vos deux tempéraments ne s'accordent pas spontanément, donc que vous devrez mettre en mots ce que d'autres couples se transmettent sans y penser.",
+    "p2": "Beaucoup de gens arrivent sur ce genre de page avec une question derrière la tête, et ce n'est pas vraiment une question d'astrologie. Si c'est votre cas, le <a href=\"/test-couple-sain/\">test de couple sain</a> ou le <a href=\"/test-amour-ou-habitude/\">test amour ou habitude</a> parlent de ce qui se passe entre vous aujourd'hui, pas de ce que disaient les astres le jour de votre naissance.",
+    "tip": "Faites le test à deux plutôt que seul. Le résultat compte moins que la conversation qu'il déclenche, et c'est vrai pour à peu près tous les tests de ce site."
+  },
+  "faq": {
+    "title": "Vos questions sur la compatibilité par date de naissance",
+    "q1": "Comment calculer la compatibilité amoureuse avec une date de naissance ?",
+    "a1": "Il y a trois calculs différents, et notre outil fait les trois. Le chemin de vie s'obtient en additionnant tous les chiffres de la date puis en réduisant le total. Le signe astrologique se lit sur le jour et le mois. Le signe chinois se lit sur l'année lunaire, qui ne commence pas le 1er janvier. On compare ensuite les deux profils sur chacun de ces trois axes.",
+    "q2": "Faut-il connaître l'heure de naissance ?",
+    "a2": "Non, et c'est volontaire. L'heure sert à calculer l'ascendant et les maisons astrologiques, ce qui relève du thème natal complet et demande une lecture professionnelle. Ici, la date seule suffit pour les trois systèmes utilisés. Personne n'a besoin d'aller chercher un extrait d'acte de naissance.",
+    "q3": "Mon signe chinois n'est pas celui que je croyais, pourquoi ?",
+    "a3": "Parce que vous êtes probablement né en janvier ou début février. L'année chinoise commence au nouvel an lunaire, entre le 21 janvier et le 21 février. Quelqu'un né le 20 janvier 1990 appartient encore à l'année du Serpent 1989, pas à celle du Cheval. Notre calcul intègre la date exacte du nouvel an pour chaque année.",
+    "q4": "Un score de 40 % veut dire qu'on va se séparer ?",
+    "a4": "Non. Ce chiffre mesure un accord entre deux tempéraments symboliques, pas la solidité d'une relation. Il ne connaît ni votre histoire, ni vos efforts, ni ce que vous avez traversé ensemble. Prenez-le comme une grille de lecture qui montre où l'entente est naturelle et où elle se travaille.",
+    "q5": "Quelle différence avec votre test prénom et signe astrologique ?",
+    "a5": "Celui-ci part uniquement des dates et croise trois systèmes. L'autre part des prénoms et du signe que vous choisissez vous-même, et lit la numérologie des lettres. Les deux se complètent bien : la date dit ce que vous avez reçu, le prénom dit comment vous vous présentez aux autres. Faire les deux prend cinq minutes en tout.",
+    "q6": "Les résultats sont-ils enregistrés quelque part ?",
+    "a6": "Non. Tout le calcul se fait dans votre navigateur, les dates ne partent nulle part et rien n'est conservé après la fermeture de la page. Vous pouvez refaire le test autant de fois que vous voulez, avec autant de dates que vous voulez."
+  }
+}

@@ -34,6 +34,7 @@
     { routeKey: 'testEmmenager', key: 'testEmmenager', icon: '🏠', img: 'test-couple' },
     { routeKey: 'testBebe', key: 'testBebe', icon: '🍼', img: 'test-parentalite' },
     { routeKey: 'testAstroPrenoms', key: 'testAstroPrenoms', icon: '♈', img: 'test-astro-prenoms' },
+    { routeKey: 'testDateNaissance', key: 'testDateNaissance', icon: '📅', img: 'test-astro-prenoms' },
     { routeKey: 'testKarmique', key: 'testKarmique', icon: '🔮', img: 'test-astro-prenoms' },
     { routeKey: 'testSuisJeAmoureux', key: 'testSuisJeAmoureux', icon: '💗', img: 'quiz-amoureux' },
     { routeKey: 'testJalousie', key: 'testJalousie', icon: '🫣', img: 'test-jalousie' },
@@ -283,14 +284,18 @@
           <span class="bloc-trait" aria-hidden="true"></span>
           <p class="bloc-sous-titre"><%= t('home:quizGrid.jeuxDesc', '').replace('{{n}}', jeuxFiltered.length) %></p>
         </div>
-        <div class="jeux-board jeux-board--home">
+        <div class="quiz-slider" data-slider>
+          <button type="button" class="quiz-slider__nav quiz-slider__nav--prev" data-slider-prev aria-label="<%= t('common:buttons.previous', 'Précédent') %>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="quiz-slider__track" data-slider-track>
           <% jeuxFiltered.forEach(function(item) {
              const _f = quizFeatured && quizFeatured[item.routeKey];
              const jTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : jTitle;
              const accents = { quizTuPreferes: '270 45% 58%', jeuActionVerite: '340 65% 62%', jeuActionVeriteHot: '12 78% 56%', jeuGages: '190 60% 45%', jeuPlateau: '160 50% 42%', jeuQuiDeNous: '210 60% 52%', jeuDilemmes: '38 85% 52%' }; %>
-          <a class="jeu-card" href="<%= getLocalizedUrl(item.routeKey, lang) %>" style="--jeu-accent: <%= accents[item.routeKey] || '340 65% 62%' %>">
+          <a class="jeu-card quiz-slide" href="<%= getLocalizedUrl(item.routeKey, lang) %>" style="--jeu-accent: <%= accents[item.routeKey] || '340 65% 62%' %>">
             <span class="jeu-card-visuel">
               <img src="<%= fImg %>" alt="<%= escapeHtml(fAlt) %>" width="600" height="315" loading="lazy" decoding="async">
             </span>
@@ -305,6 +310,10 @@
             </span>
           </a>
           <% }) %>
+          </div>
+          <button type="button" class="quiz-slider__nav quiz-slider__nav--next" data-slider-next aria-label="<%= t('common:buttons.next', 'Suivant') %>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
         </div>
         <div class="text-center mt-8">
           <a href="<%= getLocalizedUrl('jeuxCouple', lang) %>" class="btn btn-outline"><%= t('home:quizGrid.jeuxCta', '') %></a>

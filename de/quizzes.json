@@ -118,6 +118,12 @@
     "description": "Entdecke die Liebeskompatibilität eurer Vornamen und Sternzeichen. Numerologie und Astrologie vereint.",
     "metaDescription": "Gebt eure Vornamen und Sternzeichen ein. Unser Test kombiniert Numerologie und Astrologie, um zu enthüllen, was die Sterne über eure Kompatibilität sagen."
   },
+  "testDateNaissance": {
+    "title": "Geburtsdatum | Test der Liebeskompatibilität",
+    "shortTitle": "Kompatibilität nach Geburtsdatum",
+    "description": "Zwei Geburtsdaten genügen. Daraus ergeben sich eure Lebenszahlen, eure Sternzeichen und eure chinesischen Tierkreiszeichen, und alle drei werden verknüpft.",
+    "metaDescription": "Passt ihr laut eurem Geburtsdatum zusammen? Lebenszahl, Sternzeichen und chinesisches Zeichen in einer Berechnung verknüpft. Kostenlos, ohne Anmeldung."
+  },
   "testEmmenager": {
     "title": "Bereit zum Zusammenziehen? Test für Paare",
     "shortTitle": "Zusammenziehen-Test",

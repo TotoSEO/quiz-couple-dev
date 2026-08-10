@@ -1,0 +1,324 @@
+{
+  "hero": {
+    "badge": "Numerology, astrology and Chinese zodiac",
+    "title": "Are you compatible according to your birth dates?",
+    "highlight": "birth dates",
+    "description": "Two dates, and everything else follows: your life path, your star sign, your Chinese sign. Three different readings of the same day, crossed to show what binds you and what takes a bit of work.",
+    "subtitle": "No sign-up, no email. The result appears straight away."
+  },
+  "form": {
+    "titre": "Your two birth dates",
+    "personne1": "You",
+    "personne2": "Your partner",
+    "jour": "Day",
+    "moisLabel": "Month",
+    "annee": "Year",
+    "mois": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "moisDate": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "dateAffichee": "{{mois}} {{j}}, {{a}}",
+    "lancer": "Calculate our compatibility",
+    "erreur": "One of the two dates does not exist. Check the day and month you picked.",
+    "aide": "The day and month give the star sign, the year gives the Chinese sign, and all three together give the life path."
+  },
+  "signes": {
+    "belier": "Aries ♈",
+    "taureau": "Taurus ♉",
+    "gemeaux": "Gemini ♊",
+    "cancer": "Cancer ♋",
+    "lion": "Leo ♌",
+    "vierge": "Virgo ♍",
+    "balance": "Libra ♎",
+    "scorpion": "Scorpio ♏",
+    "sagittaire": "Sagittarius ♐",
+    "capricorne": "Capricorn ♑",
+    "verseau": "Aquarius ♒",
+    "poissons": "Pisces ♓"
+  },
+  "animaux": {
+    "rat": "Rat",
+    "buffle": "Ox",
+    "tigre": "Tiger",
+    "lapin": "Rabbit",
+    "dragon": "Dragon",
+    "serpent": "Snake",
+    "cheval": "Horse",
+    "chevre": "Goat",
+    "singe": "Monkey",
+    "coq": "Rooster",
+    "chien": "Dog",
+    "cochon": "Pig"
+  },
+  "elements": {
+    "bois": "Wood",
+    "feu": "Fire",
+    "terre": "Earth",
+    "metal": "Metal",
+    "eau": "Water"
+  },
+  "cheminsTraits": {
+    "1": "drive and initiative",
+    "2": "gentleness and listening",
+    "3": "imagination and words",
+    "4": "solidity and keeping your word",
+    "5": "movement and freedom",
+    "6": "care and family",
+    "7": "reflection and retreat",
+    "8": "ambition and control",
+    "9": "giving and openness",
+    "11": "intuition and ideals",
+    "22": "patient building",
+    "33": "love given without counting"
+  },
+  "bandesVie": {
+    "haute": "Your two numbers pull in the same direction. You don't need long explanations to be understood, and your deeper needs almost never contradict each other. The risk with that kind of agreement is boredom, so remember to surprise each other now and then.",
+    "moyenne": "Your two numbers complement each other more than they resemble each other. What one misses, the other notices. It works beautifully as long as you accept that you don't operate the same way, and it grates the day one of you tries to convert the other.",
+    "basse": "Your two numbers don't speak the same language. That isn't a sentence, it's an instruction manual: you have to spell out what other couples take for granted. Plenty of solid relationships live exactly there, provided you don't mistake difference for a lack of love.",
+    "tendue": "Your two numbers pull in openly opposite directions. The attraction is often very strong at the start, precisely because the other one has what you lack. What happens next depends on one thing only: your ability to negotiate instead of needing to be right."
+  },
+  "nombresCouple": {
+    "1": "Your couple vibrates on 1: this is a relationship of conquest. You move, you decide, you have no patience for waiting or half measures. Careful not to turn every conversation into an arm wrestle, there is no room for two captains on the same ship.",
+    "2": "Your couple vibrates on 2: this is a relationship of tenderness. The bond travels through small gestures, attention, silent presence. Softness is your strength and also your weak spot: by trying so hard to avoid conflict, you risk saying nothing at all.",
+    "3": "Your couple vibrates on 3: this is a relationship that talks and laughs. You tell stories, you invent, you need people around you. The danger is lightness turning into a way of dodging the real subjects.",
+    "4": "Your couple vibrates on 4: this is a relationship that builds. A home, a project, a routine that holds. You're the couple everyone else relies on. Just make sure daily life doesn't end up taking all the space.",
+    "5": "Your couple vibrates on 5: this is a relationship that moves. Trips, changes of mind, decisions made on a Friday night. You get bored very fast. Your work as a pair is learning that stability isn't the enemy of desire.",
+    "6": "Your couple vibrates on 6: this is a relationship that takes care. You look after each other, and often after others too. It's warm and reassuring, as long as one of you doesn't end up playing parent alone.",
+    "7": "Your couple vibrates on 7: this is a relationship that searches. You discuss things other people find strange, you need silence, and you often understand each other without words. The trap is shutting yourselves in and cutting the link with the rest of the world.",
+    "8": "Your couple vibrates on 8: this is a relationship that aims high. Success, money, status, shared ambition. You move fast. Just check in regularly that you're still building the same thing, and not two careers side by side.",
+    "9": "Your couple vibrates on 9: this is a relationship that gives. You're turned towards others, sensitive to what goes beyond your own small story. It's generous and beautiful. Take care not to forget your own couple along the way.",
+    "11": "Your couple vibrates on 11: this is a relationship of intuition. You feel things before you understand them, sometimes before you even live them. The intensity is real, so is the nervous exhaustion. Come back down to earth regularly, together.",
+    "22": "Your couple vibrates on 22: this is a relationship of builders. You do nothing by halves and you think in years, not weeks. A deep, very solid couple, which simply needs reminding that not everything can be planned.",
+    "33": "Your couple vibrates on 33: this is a relationship that protects. You give enormously, to each other and often to those around you. Generosity is your trademark. Just check that one of you isn't emptying themselves to fill the other."
+  },
+  "relations": {
+    "trine": "{{a1}} and {{a2}} belong to the same affinity triangle, one of the most sought-after bonds in the Chinese zodiac. You share the same rhythm and the same way of approaching things, which makes joint decisions surprisingly easy.",
+    "harmonie": "{{a1}} and {{a2}} form one of the six so-called harmony pairs. Tradition calls them secret friends: two signs that naturally cover each other's blind spots, without needing to be alike.",
+    "meme": "You are both {{a1}}. You recognise each other instantly, with the qualities and the flaws that come with it. It's comfortable, and it's also a mirror: what irritates you in the other is often what you dislike in yourself.",
+    "neutre": "{{a1}} and {{a2}} have neither particular affinity nor marked tension in the Chinese zodiac. Nothing carries you automatically, and nothing holds you back either: on this axis, the other two do the talking.",
+    "nuisance": "{{a1}} and {{a2}} are one of the pairs Chinese tradition calls harmful. It isn't outright incompatibility, it's more like wear and tear: small repeated irritations that, if never named, end up weighing.",
+    "opposition": "{{a1}} and {{a2}} sit face to face on the Chinese wheel, six signs apart. It's the most strained axis of the zodiac, and often the most magnetic. You attract each other precisely because you're nothing alike, and that's exactly what tires you out after three years."
+  },
+  "elementsRelation": {
+    "meme": "You share the same element, {{e1}}. You react to events with the same energy, which makes life together much simpler and doubles the intensity of the bad days.",
+    "nourrit": "Your elements feed each other: between {{e1}} and {{e2}} there's a cycle that gives rather than takes. One pushes the other out of their comfort zone without forcing it.",
+    "controle": "Your elements work against each other: {{e1}} and {{e2}} belong to the control cycle, where one tempers the other. Useful for avoiding excess, exhausting if neither of you ever gives way."
+  },
+  "paliers": {
+    "fusion": {
+      "titre": "Your two dates answer each other",
+      "texte": "All three readings point the same way, and that doesn't happen often. You move through life the same way, you have the same deep needs, and an understanding that requires no explaining. The only work ahead of you is not to confuse obvious with guaranteed."
+    },
+    "belle": {
+      "titre": "A fine machine, with one grain of sand",
+      "texte": "The essentials are there. Two of the three readings clearly agree, the third introduces a difference that forces you to talk. That's often the profile of couples who last: enough in common to feel at home, enough distance not to get bored."
+    },
+    "travail": {
+      "titre": "A couple under construction",
+      "texte": "Nothing between you is automatic, and that isn't a bad sign. The readings partly contradict each other: what flows naturally for other couples, you'll have to put into words. Many very solid stories look exactly like this, provided you accept that you don't work the same way."
+    },
+    "contraires": {
+      "titre": "Two worlds to connect",
+      "texte": "All three readings point to markedly different temperaments. That says nothing about your feelings, it says your instruction manuals don't match. The couples who last with this profile are the ones who stopped waiting for the other to become like them."
+    }
+  },
+  "resultat": {
+    "signe": "Star sign",
+    "chemin": "Life path",
+    "chinois": "Chinese sign",
+    "chinoisValeur": "{{e}} {{a}}",
+    "axeVie": "Life paths",
+    "axeAstro": "Star signs",
+    "axeChinois": "Chinese zodiac",
+    "axeVieValeur": "Life path {{n1}} and life path {{n2}}",
+    "axeAstroValeur": "{{s1}} and {{s2}}",
+    "axeChinoisValeur": "{{e1}} {{a1}} and {{e2}} {{a2}}",
+    "titreVie": "What your life paths say",
+    "introVie": "You're on life path {{n1}}, the one of {{t1}}. Your partner is on life path {{n2}}, the one of {{t2}}.",
+    "titreAstro": "{{s1}} and {{s2}}: what the sky says",
+    "titreChinois": "What the Chinese zodiac says",
+    "titreCouple": "Your couple's number: {{n}}",
+    "refaire": "Try two other dates"
+  },
+  "suite": {
+    "titre": "Go further with your first names",
+    "texte": "Your birth date says what you received on arrival. Your first name says how you connect with others day to day. It's the second half of the reading, and it often changes how the result you've just seen should be interpreted.",
+    "bouton": "Take the first name and star sign test"
+  },
+  "section1": {
+    "title": "What a birth date can really tell you about a couple",
+    "p1": "You know your partner's birth date by heart. It's probably one of the few pieces of information you'll never forget. And yet most people only use it to blow out candles once a year, while three different traditions each read a complete temperament in it.",
+    "p2": "Numerology sees a number there, the <strong>life path</strong>, which sums up the way a person moves through life. Western astrology reads a sun sign, so a way of loving. Chinese astrology reads a lunar year, so a rhythm. These three readings don't say the same thing, and that's precisely why we cross them here rather than picking just one.",
+    "p3": "The result: an overall score, three detailed scores, and above all explanations that are about the two of you. If you'd rather fill in a questionnaire together, the <a href=\"/en/love-compatibility-test/\">love compatibility test</a> in twenty questions answers the same urge by a completely different route."
+  },
+  "section2": {
+    "title": "The life path, the number hidden in your birth date",
+    "p1": "It's the simplest calculation in all of numerology, and you can redo it by hand while you read. You add up <strong>every digit</strong> of the date, then reduce the total to a single digit. One exception: if you land on 11, 22 or 33, you stop there. Those are the master numbers, they don't reduce.",
+    "sub1Title": "An example in thirty seconds",
+    "sub1Text": "Take 14 March 1990. Add: 1 + 4 + 0 + 3 + 1 + 9 + 9 + 0 = 27. Reduce: 2 + 7 = 9. Life path 9. Another example, 29 December 1990: 2 + 9 + 1 + 2 + 1 + 9 + 9 + 0 = 33. Stop there, it's a master number.",
+    "sub2Title": "What each life path looks for in love",
+    "tableHeaders": [
+      "Path",
+      "Keyword",
+      "What it wants from a relationship"
+    ],
+    "tableRows": [
+      [
+        "1",
+        "Drive",
+        "Admiration, and room to decide"
+      ],
+      [
+        "2",
+        "Gentleness",
+        "Presence, tenderness, few conflicts"
+      ],
+      [
+        "3",
+        "Words",
+        "To be laughed with and listened to"
+      ],
+      [
+        "4",
+        "Solidity",
+        "Promises kept and a clear framework"
+      ],
+      [
+        "5",
+        "Movement",
+        "Novelty, and definitely no leash"
+      ],
+      [
+        "6",
+        "Care",
+        "A home, habits, someone to protect"
+      ],
+      [
+        "7",
+        "Reflection",
+        "Silence, depth, no small talk"
+      ],
+      [
+        "8",
+        "Ambition",
+        "A partner moving at the same speed"
+      ],
+      [
+        "9",
+        "Giving",
+        "Meaning, generosity, a shared cause"
+      ],
+      [
+        "11",
+        "Intuition",
+        "To have their feelings taken seriously"
+      ],
+      [
+        "22",
+        "Building",
+        "A life project, not a fling"
+      ],
+      [
+        "33",
+        "Love given",
+        "To be loved for themselves, not for what they give"
+      ]
+    ],
+    "tip": "Two identical life paths guarantee nothing at all. Two 5s together means two people who want to leave, and sometimes not in the same direction."
+  },
+  "section3": {
+    "title": "The star sign, the sky on the day you were born",
+    "p1": "Your sun sign depends on the day and the month, not the year. It's the position of the Sun at the moment of your birth, and it's by far the best-known astrological piece of data. It describes a way of loving: what reassures you, what makes you run, the way you say things when they're difficult.",
+    "sub1Title": "The four elements, the real key",
+    "sub1Text": "Before comparing sign by sign, you look at the elements. <strong>Fire</strong> (Aries, Leo, Sagittarius) charges ahead. <strong>Earth</strong> (Taurus, Virgo, Capricorn) builds. <strong>Air</strong> (Gemini, Libra, Aquarius) exchanges. <strong>Water</strong> (Cancer, Scorpio, Pisces) feels. Fire and Air feed each other, Earth and Water understand each other, and couples mixing two distant families have more translating to do for one another.",
+    "p2": "Watch out for the cusp dates. If you were born on the 20th or 21st, you might belong to the previous sign: the boundaries shift slightly from one year to the next. Our calculation uses the most common reference dates, the ones you'll find in almost every almanac.",
+    "p3": "If your sign interests you in particular, we've written a full article for each of the twelve. The one on <a href=\"/en/blog/libra-love-compatibility/\">Libra love compatibility</a> or the one on <a href=\"/en/blog/scorpio-love-compatibility/\">Scorpio</a> go into far more detail than any calculator can display."
+  },
+  "section4": {
+    "title": "The Chinese sign, the one almost nobody calculates correctly",
+    "p1": "Here it's the year that speaks. Twelve animals, one per year, and a cycle that starts over. Except the Chinese year doesn't begin on 1 January: it starts at the lunar new year, which falls between 21 January and 21 February depending on the year. Everyone born in January and the first half of February therefore belongs to the previous year's animal.",
+    "p2": "This is the most frequent mistake made by online calculators, and it affects nearly a tenth of the population. Our tool uses the <strong>real Chinese new year dates</strong>, year by year, from 1924 to 2043. Someone born on 1 January 2000 is not a Dragon, they're an Earth Rabbit.",
+    "sub1Title": "The four affinity triangles",
+    "tableHeaders": [
+      "Triangle",
+      "The three signs",
+      "What unites them"
+    ],
+    "tableRows": [
+      [
+        "The action triangle",
+        "Rat, Dragon, Monkey",
+        "Energy, daring, a taste for risk"
+      ],
+      [
+        "The method triangle",
+        "Ox, Snake, Rooster",
+        "Patience, strategy, an eye for detail"
+      ],
+      [
+        "The independence triangle",
+        "Tiger, Horse, Dog",
+        "Freedom, loyalty, straight talking"
+      ],
+      [
+        "The gentleness triangle",
+        "Rabbit, Goat, Pig",
+        "Sensitivity, calm, a taste for comfort"
+      ]
+    ],
+    "sub2Title": "And where does the element fit in?",
+    "sub2Text": "Each animal comes back every twelve years, but with a different element: Wood, Fire, Earth, Metal or Water. A Wood Dragon and a Fire Dragon aren't really alike. These five elements chain together in cycles, one feeding the next or tempering it, and that's what fine-tunes the Chinese score in your result.",
+    "tip": "Six pairs are called harmony pairs in Chinese tradition, the famous secret friends: Rat and Ox, Tiger and Pig, Rabbit and Dog, Dragon and Rooster, Snake and Monkey, Horse and Goat. They belong to no triangle, and yet they work extremely well."
+  },
+  "section5": {
+    "title": "Why cross three readings instead of one",
+    "p1": "Because none of the three is enough on its own. The sun sign is too popular to be precise: twelve boxes for eight billion people makes for very wide boxes. The life path is finer but ignores temperament entirely. The Chinese sign gives a rhythm, not a way of loving.",
+    "p2": "Crossed, they correct each other. Two sun signs said to be incompatible can have life paths that fit together perfectly, and you'll see it straight away in the three bars of the result. That's also why we show the detail rather than a lone percentage: the overall figure is worth nothing without what makes it up.",
+    "tip": "A high score on one axis and a low one on another is the most common case, and often the most interesting to read. That's where the real relationship dynamics live."
+  },
+  "section6": {
+    "title": "And if the score is low?",
+    "p1": "Then nothing happens. Really. None of these three systems has ever predicted a break-up, and none has ever stopped a story lasting thirty years. What a low score says is that your two temperaments don't align spontaneously, so you'll have to put into words what other couples pass between them without thinking.",
+    "p2": "Plenty of people land on a page like this with a question at the back of their mind, and it isn't really an astrology question. If that's you, the <a href=\"/en/healthy-relationship-test/\">healthy relationship test</a> or the <a href=\"/en/love-or-habit-test/\">love or habit test</a> talk about what's going on between you today, not about what the stars were saying on the day you were born.",
+    "tip": "Take the test together rather than alone. The result matters less than the conversation it starts, and that's true of just about every test on this site."
+  },
+  "faq": {
+    "title": "Your questions about birth date compatibility",
+    "q1": "How do you calculate love compatibility from a birth date?",
+    "a1": "There are three different calculations, and our tool does all three. The life path comes from adding every digit of the date then reducing the total. The star sign is read from the day and the month. The Chinese sign is read from the lunar year, which doesn't begin on 1 January. The two profiles are then compared on each of these three axes.",
+    "q2": "Do you need to know the time of birth?",
+    "a2": "No, and that's deliberate. The time is used to calculate the rising sign and the astrological houses, which belong to a full natal chart and call for a professional reading. Here, the date alone is enough for the three systems used. Nobody needs to dig out a birth certificate.",
+    "q3": "My Chinese sign isn't the one I thought, why?",
+    "a3": "Because you were probably born in January or early February. The Chinese year begins at the lunar new year, between 21 January and 21 February. Someone born on 20 January 1990 still belongs to the Snake year of 1989, not to the Horse year. Our calculation builds in the exact new year date for every year.",
+    "q4": "Does a score of 40% mean we're going to split up?",
+    "a4": "No. That figure measures agreement between two symbolic temperaments, not the strength of a relationship. It knows nothing of your history, your efforts, or what you've been through together. Take it as a reading grid that shows where understanding comes naturally and where it has to be worked at.",
+    "q5": "How is this different from your first name and star sign test?",
+    "a5": "This one starts from the dates alone and crosses three systems. The other starts from first names and the sign you pick yourself, and reads the numerology of the letters. The two work well together: the date says what you received, the first name says how you present yourself to others. Doing both takes five minutes in total.",
+    "q6": "Are the results stored anywhere?",
+    "a6": "No. The whole calculation runs in your browser, the dates go nowhere and nothing is kept once you close the page. You can redo the test as often as you like, with as many dates as you like."
+  }
+}

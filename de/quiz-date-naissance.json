@@ -1,0 +1,226 @@
+{
+  "hero": {
+    "badge": "Numerologie, Astrologie und chinesisches Tierkreiszeichen",
+    "title": "Passt ihr laut eurem Geburtsdatum zusammen?",
+    "highlight": "Geburtsdatum",
+    "description": "Zwei Daten, und alles andere ergibt sich daraus: eure Lebenszahl, euer Sternzeichen, euer chinesisches Zeichen. Drei verschiedene Lesarten desselben Tages, verknüpft, um zu zeigen, was euch verbindet und was etwas Arbeit verlangt.",
+    "subtitle": "Keine Anmeldung, keine E-Mail. Das Ergebnis erscheint sofort."
+  },
+  "form": {
+    "titre": "Eure beiden Geburtsdaten",
+    "personne1": "Du",
+    "personne2": "Dein Partner",
+    "jour": "Tag",
+    "moisLabel": "Monat",
+    "annee": "Jahr",
+    "mois": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+    "moisDate": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+    "dateAffichee": "{{j}}. {{mois}} {{a}}",
+    "lancer": "Unsere Übereinstimmung berechnen",
+    "erreur": "Eines der beiden Daten gibt es nicht. Prüft den gewählten Tag und Monat.",
+    "aide": "Tag und Monat ergeben das Sternzeichen, das Jahr ergibt das chinesische Zeichen, und alle drei zusammen ergeben die Lebenszahl."
+  },
+  "signes": {
+    "belier": "Widder ♈",
+    "taureau": "Stier ♉",
+    "gemeaux": "Zwillinge ♊",
+    "cancer": "Krebs ♋",
+    "lion": "Löwe ♌",
+    "vierge": "Jungfrau ♍",
+    "balance": "Waage ♎",
+    "scorpion": "Skorpion ♏",
+    "sagittaire": "Schütze ♐",
+    "capricorne": "Steinbock ♑",
+    "verseau": "Wassermann ♒",
+    "poissons": "Fische ♓"
+  },
+  "animaux": {
+    "rat": "Ratte",
+    "buffle": "Büffel",
+    "tigre": "Tiger",
+    "lapin": "Hase",
+    "dragon": "Drache",
+    "serpent": "Schlange",
+    "cheval": "Pferd",
+    "chevre": "Ziege",
+    "singe": "Affe",
+    "coq": "Hahn",
+    "chien": "Hund",
+    "cochon": "Schwein"
+  },
+  "elements": {
+    "bois": "Holz",
+    "feu": "Feuer",
+    "terre": "Erde",
+    "metal": "Metall",
+    "eau": "Wasser"
+  },
+  "cheminsTraits": {
+    "1": "Antrieb und Initiative",
+    "2": "Sanftheit und Zuhören",
+    "3": "Fantasie und Worte",
+    "4": "Verlässlichkeit und das gegebene Wort",
+    "5": "Bewegung und Freiheit",
+    "6": "Fürsorge und Familie",
+    "7": "Nachdenken und Rückzug",
+    "8": "Ehrgeiz und Kontrolle",
+    "9": "Hingabe und Offenheit",
+    "11": "Intuition und Ideale",
+    "22": "geduldiges Aufbauen",
+    "33": "Liebe, die nicht rechnet"
+  },
+  "bandesVie": {
+    "haute": "Eure beiden Zahlen ziehen in dieselbe Richtung. Ihr braucht keine langen Erklärungen, um verstanden zu werden, und eure tiefen Bedürfnisse widersprechen sich fast nie. Das Risiko bei dieser Art von Einklang ist eher Langeweile: überrascht euch ab und zu gegenseitig.",
+    "moyenne": "Eure beiden Zahlen ergänzen sich mehr, als dass sie sich ähneln. Was der eine übersieht, bemerkt die andere. Das funktioniert sehr gut, solange ihr akzeptiert, dass ihr nicht gleich tickt, und es knirscht an dem Tag, an dem eine Seite die andere bekehren will.",
+    "basse": "Eure beiden Zahlen sprechen nicht dieselbe Sprache. Das ist kein Urteil, das ist eine Gebrauchsanweisung: Ihr müsst aussprechen, was anderswo selbstverständlich ist. Viele stabile Paare leben genau dort, sofern sie Verschiedenheit nicht mit fehlender Liebe verwechseln.",
+    "tendue": "Eure beiden Zahlen ziehen deutlich in entgegengesetzte Richtungen. Die Anziehung ist am Anfang oft sehr stark, gerade weil die andere Seite hat, was einem fehlt. Wie es weitergeht, hängt nur von einem ab: von eurer Fähigkeit zu verhandeln, statt recht behalten zu wollen."
+  },
+  "nombresCouple": {
+    "1": "Euer Paar schwingt auf der 1: eine Beziehung der Eroberung. Ihr geht voran, ihr entscheidet, ihr mögt weder Warten noch halbe Sachen. Achtet darauf, nicht jedes Gespräch in ein Kräftemessen zu verwandeln, für zwei Kapitäne ist auf demselben Schiff kein Platz.",
+    "2": "Euer Paar schwingt auf der 2: eine Beziehung der Zärtlichkeit. Die Bindung läuft über kleine Gesten, Aufmerksamkeiten, stille Anwesenheit. Sanftheit ist eure Stärke und zugleich eure Schwachstelle: Wer Konflikte um jeden Preis vermeidet, sagt am Ende gar nichts mehr.",
+    "3": "Euer Paar schwingt auf der 3: eine Beziehung, die redet und lacht. Ihr erzählt, ihr erfindet, ihr braucht Menschen um euch herum. Die Gefahr ist, dass Leichtigkeit zur Methode wird, den echten Themen auszuweichen.",
+    "4": "Euer Paar schwingt auf der 4: eine Beziehung, die aufbaut. Eine Wohnung, ein Projekt, ein Alltag, der trägt. Ihr seid das Paar, auf das sich alle verlassen. Achtet nur darauf, dass der Alltag am Ende nicht den ganzen Platz einnimmt.",
+    "5": "Euer Paar schwingt auf der 5: eine Beziehung in Bewegung. Reisen, Meinungsänderungen, Entscheidungen an einem Freitagabend. Ihr langweilt euch sehr schnell. Eure gemeinsame Aufgabe ist zu lernen, dass Stabilität kein Feind der Lust ist.",
+    "6": "Euer Paar schwingt auf der 6: eine Beziehung, die sorgt. Ihr kümmert euch umeinander, oft auch um andere. Das ist warm und beruhigend, solange nicht eine Seite allein die Elternrolle übernimmt.",
+    "7": "Euer Paar schwingt auf der 7: eine Beziehung, die sucht. Ihr sprecht über Themen, die andere seltsam finden, ihr braucht Stille, und ihr versteht euch oft ohne Worte. Die Falle ist, sich zu zweit einzuschließen und den Draht zur übrigen Welt zu kappen.",
+    "8": "Euer Paar schwingt auf der 8: eine Beziehung, die hoch hinauswill. Erfolg, Geld, Status, gemeinsamer Ehrgeiz. Ihr kommt schnell voran. Prüft nur regelmäßig, ob ihr noch dasselbe baut und nicht zwei Karrieren nebeneinander.",
+    "9": "Euer Paar schwingt auf der 9: eine Beziehung, die gibt. Ihr seid anderen zugewandt, empfindsam für das, was über eure eigene Geschichte hinausgeht. Das ist schön und großzügig. Passt nur auf, euer eigenes Paar dabei nicht zu vergessen.",
+    "11": "Euer Paar schwingt auf der 11: eine Beziehung der Intuition. Ihr spürt Dinge, bevor ihr sie versteht, manchmal bevor ihr sie erlebt. Die Intensität ist echt, die nervliche Erschöpfung auch. Kommt regelmäßig gemeinsam auf den Boden zurück.",
+    "22": "Euer Paar schwingt auf der 22: eine Beziehung von Baumeistern. Ihr macht nichts halb und denkt in Jahren, nicht in Wochen. Ein grundsolides Paar, das sich nur daran erinnern muss, dass sich nicht alles planen lässt.",
+    "33": "Euer Paar schwingt auf der 33: eine Beziehung, die beschützt. Ihr gebt enorm viel, einander und oft auch den Menschen um euch herum. Großzügigkeit ist euer Markenzeichen. Prüft nur, dass sich nicht eine Seite leert, um die andere zu füllen."
+  },
+  "relations": {
+    "trine": "{{a1}} und {{a2}} gehören zum selben Dreieck der Verbundenheit, einer der begehrtesten Verbindungen im chinesischen Tierkreis. Ihr teilt denselben Rhythmus und dieselbe Herangehensweise, was gemeinsame Entscheidungen erstaunlich einfach macht.",
+    "harmonie": "{{a1}} und {{a2}} bilden eines der sechs sogenannten Harmoniepaare. Die Tradition nennt sie heimliche Freunde: zwei Zeichen, die einander ganz selbstverständlich die blinden Flecken abdecken, ohne sich ähneln zu müssen.",
+    "meme": "Ihr seid beide {{a1}}. Ihr erkennt euch sofort, mit allen Stärken und Marotten, die dazugehören. Das ist bequem, und es ist zugleich ein Spiegel: Was euch am anderen stört, ist oft das, was ihr an euch selbst nicht mögt.",
+    "neutre": "{{a1}} und {{a2}} haben im chinesischen Tierkreis weder besondere Verbundenheit noch ausgeprägte Spannung. Nichts trägt euch automatisch, nichts bremst euch: Auf dieser Achse haben die beiden anderen das Wort.",
+    "nuisance": "{{a1}} und {{a2}} gehören zu den Paaren, die die chinesische Tradition als schädlich bezeichnet. Das ist keine klare Unvereinbarkeit, eher ein Abrieb: kleine, wiederkehrende Ärgernisse, die schwer wiegen, wenn sie nie ausgesprochen werden.",
+    "opposition": "{{a1}} und {{a2}} stehen sich auf dem chinesischen Rad gegenüber, sechs Zeichen voneinander entfernt. Es ist die gespannteste Achse des Tierkreises und oft die magnetischste. Ihr zieht euch gerade deshalb an, weil ihr euch nicht ähnelt, und genau das ermüdet euch nach drei Jahren."
+  },
+  "elementsRelation": {
+    "meme": "Ihr teilt dasselbe Element, {{e1}}. Ihr reagiert auf Ereignisse mit derselben Energie, was das Zusammenleben stark vereinfacht und die Intensität schlechter Tage verdoppelt.",
+    "nourrit": "Eure Elemente nähren einander: Zwischen {{e1}} und {{e2}} wirkt ein Kreislauf, der eher gibt als nimmt. Das eine treibt das andere aus seiner Zone, ohne es zu überrumpeln.",
+    "controle": "Eure Elemente arbeiten gegeneinander: {{e1}} und {{e2}} gehören zum Kontrollkreislauf, in dem eines das andere bremst. Nützlich gegen Übertreibungen, zermürbend, wenn nie jemand nachgibt."
+  },
+  "paliers": {
+    "fusion": {
+      "titre": "Eure beiden Daten antworten einander",
+      "texte": "Alle drei Lesarten zeigen in dieselbe Richtung, und das kommt nicht oft vor. Ihr geht auf dieselbe Art durchs Leben, habt dieselben tiefen Bedürfnisse und ein Einvernehmen, das keine Erklärung braucht. Die einzige Arbeit, die vor euch liegt: Selbstverständlichkeit nicht mit Sicherheit zu verwechseln."
+    },
+    "belle": {
+      "titre": "Ein gutes Räderwerk mit einem Sandkorn",
+      "texte": "Das Wesentliche stimmt. Zwei der drei Lesarten stimmen deutlich überein, die dritte bringt einen Unterschied hinein, der euch zum Reden zwingt. Das ist oft das Profil der Paare, die halten: genug Gemeinsames, um sich zu Hause zu fühlen, genug Abstand, um sich nicht zu langweilen."
+    },
+    "travail": {
+      "titre": "Ein Paar im Aufbau",
+      "texte": "Zwischen euch versteht sich nichts von selbst, und das ist kein schlechtes Zeichen. Die Lesarten widersprechen sich teilweise: Was bei anderen Paaren von allein läuft, müsst ihr in Worte fassen. Viele sehr stabile Geschichten sehen genau so aus, sofern ihr akzeptiert, nicht gleich zu funktionieren."
+    },
+    "contraires": {
+      "titre": "Zwei Welten, die es zu verbinden gilt",
+      "texte": "Alle drei Lesarten deuten auf deutlich verschiedene Temperamente. Das sagt nichts über eure Gefühle, es sagt, dass eure Gebrauchsanweisungen nicht zusammenpassen. Die Paare, die mit diesem Profil halten, sind jene, die aufgehört haben zu warten, dass die andere Seite so wird wie sie."
+    }
+  },
+  "resultat": {
+    "signe": "Sternzeichen",
+    "chemin": "Lebenszahl",
+    "chinois": "Chinesisches Zeichen",
+    "chinoisValeur": "{{a}} ({{e}})",
+    "axeVie": "Lebenszahlen",
+    "axeAstro": "Sternzeichen",
+    "axeChinois": "Chinesischer Tierkreis",
+    "axeVieValeur": "Lebenszahl {{n1}} und Lebenszahl {{n2}}",
+    "axeAstroValeur": "{{s1}} und {{s2}}",
+    "axeChinoisValeur": "{{a1}} ({{e1}}) und {{a2}} ({{e2}})",
+    "titreVie": "Was eure Lebenszahlen erzählen",
+    "introVie": "Du bist auf der Lebenszahl {{n1}}, der von {{t1}}. Dein Partner ist auf der Lebenszahl {{n2}}, der von {{t2}}.",
+    "titreAstro": "{{s1}} und {{s2}}: was der Himmel sagt",
+    "titreChinois": "Was der chinesische Tierkreis sagt",
+    "titreCouple": "Die Zahl eures Paares: {{n}}",
+    "refaire": "Zwei andere Daten testen"
+  },
+  "suite": {
+    "titre": "Geht weiter mit euren Vornamen",
+    "texte": "Euer Geburtsdatum sagt, was ihr bei eurer Ankunft mitbekommen habt. Euer Vorname sagt, wie ihr euch im Alltag mit anderen verbindet. Das ist die zweite Hälfte der Lesung, und sie verändert oft die Deutung des Ergebnisses, das ihr gerade erhalten habt.",
+    "bouton": "Den Test mit Vorname und Sternzeichen machen"
+  },
+  "section1": {
+    "title": "Was ein Geburtsdatum wirklich über ein Paar sagen kann",
+    "p1": "Ihr kennt das Geburtsdatum eures Partners auswendig. Es ist wahrscheinlich eine der wenigen Angaben, die ihr nie vergessen werdet. Und doch nutzen die meisten Menschen es nur, um einmal im Jahr Kerzen auszupusten, während drei verschiedene Traditionen darin jeweils ein vollständiges Temperament lesen.",
+    "p2": "Die Numerologie sieht darin eine Zahl, die <strong>Lebenszahl</strong>, die zusammenfasst, wie ein Mensch vorangeht. Die westliche Astrologie liest ein Sonnenzeichen, also eine Art zu lieben. Die chinesische Astrologie liest ein Mondjahr, also einen Rhythmus. Diese drei Lesarten sagen nicht dasselbe, und genau deshalb verknüpfen wir sie hier, statt eine einzige auszuwählen.",
+    "p3": "Das Ergebnis: eine Gesamtwertung, drei Einzelwertungen und vor allem Erklärungen, die euch beide betreffen. Wenn ihr lieber einen Fragebogen zu zweit ausfüllt, beantwortet der <a href=\"/de/liebeskompatibilitaet-test/\">Liebeskompatibilitätstest</a> mit zwanzig Fragen dasselbe Bedürfnis auf einem ganz anderen Weg."
+  },
+  "section2": {
+    "title": "Die Lebenszahl, die verborgene Zahl in eurem Geburtsdatum",
+    "p1": "Es ist die einfachste Rechnung der ganzen Numerologie, und ihr könnt sie beim Lesen von Hand nachvollziehen. Man addiert <strong>alle Ziffern</strong> des Datums und reduziert die Summe dann auf eine einzige Ziffer. Eine Ausnahme: Kommt 11, 22 oder 33 heraus, hört man dort auf. Das sind die Meisterzahlen, sie werden nicht reduziert.",
+    "sub1Title": "Ein Beispiel in dreißig Sekunden",
+    "sub1Text": "Nehmen wir den 14. März 1990. Addieren: 1 + 4 + 0 + 3 + 1 + 9 + 9 + 0 = 27. Reduzieren: 2 + 7 = 9. Lebenszahl 9. Noch ein Beispiel, der 29. Dezember 1990: 2 + 9 + 1 + 2 + 1 + 9 + 9 + 0 = 33. Hier hört man auf, es ist eine Meisterzahl.",
+    "sub2Title": "Was jede Lebenszahl in der Liebe sucht",
+    "tableHeaders": ["Zahl", "Schlüsselwort", "Was sie von einer Beziehung erwartet"],
+    "tableRows": [
+      ["1", "Antrieb", "Bewunderung und Raum zum Entscheiden"],
+      ["2", "Sanftheit", "Nähe, Zärtlichkeit, wenig Konflikte"],
+      ["3", "Worte", "Dass man mitlacht und beim Erzählen zuhört"],
+      ["4", "Verlässlichkeit", "Gehaltene Versprechen und einen klaren Rahmen"],
+      ["5", "Bewegung", "Neues, und bloß keine Leine"],
+      ["6", "Fürsorge", "Ein Zuhause, Gewohnheiten, jemanden zum Beschützen"],
+      ["7", "Nachdenken", "Stille, Tiefe, kein Geplauder"],
+      ["8", "Ehrgeiz", "Jemanden, der im selben Tempo vorangeht"],
+      ["9", "Hingabe", "Sinn, Großzügigkeit, eine gemeinsame Sache"],
+      ["11", "Intuition", "Dass man ihr Empfinden ernst nimmt"],
+      ["22", "Aufbau", "Ein Lebensprojekt, keinen Flirt"],
+      ["33", "Gegebene Liebe", "Für sich selbst geliebt zu werden, nicht für das Geben"]
+    ],
+    "tip": "Zwei identische Lebenszahlen garantieren überhaupt nichts. Zwei Fünfen zusammen, das sind zwei Menschen, die losziehen wollen, und manchmal nicht in dieselbe Richtung."
+  },
+  "section3": {
+    "title": "Das Sternzeichen, der Himmel am Tag eurer Geburt",
+    "p1": "Euer Sonnenzeichen hängt vom Tag und vom Monat ab, nicht vom Jahr. Es ist der Stand der Sonne im Moment eurer Geburt und mit Abstand die bekannteste astrologische Angabe. Es beschreibt eine Art zu lieben: was euch beruhigt, was euch fliehen lässt, wie ihr Dinge sagt, wenn sie schwierig werden.",
+    "sub1Title": "Die vier Elemente, der eigentliche Schlüssel",
+    "sub1Text": "Noch bevor man Zeichen für Zeichen vergleicht, schaut man auf die Elemente. Das <strong>Feuer</strong> (Widder, Löwe, Schütze) prescht vor. Die <strong>Erde</strong> (Stier, Jungfrau, Steinbock) baut auf. Die <strong>Luft</strong> (Zwillinge, Waage, Wassermann) tauscht sich aus. Das <strong>Wasser</strong> (Krebs, Skorpion, Fische) fühlt. Feuer und Luft nähren einander, Erde und Wasser verstehen sich, und Paare aus zwei weit entfernten Familien müssen einander mehr übersetzen.",
+    "p2": "Achtung bei den Grenzdaten. Wer am 20. oder 21. geboren ist, gehört womöglich zum vorherigen Zeichen: Die Grenzen verschieben sich von Jahr zu Jahr leicht. Unsere Berechnung nutzt die gängigsten Referenzdaten, die in nahezu jedem Kalender stehen.",
+    "p3": "Wenn euch euer Zeichen besonders interessiert, haben wir zu jedem der zwölf einen ausführlichen Artikel geschrieben. Der Artikel zur <a href=\"/de/blog/liebeskompatibilitaet-waage/\">Liebeskompatibilität der Waage</a> oder der zum <a href=\"/de/blog/liebeskompatibilitaet-skorpion/\">Skorpion</a> gehen weit mehr ins Detail als ein Rechner es anzeigen kann."
+  },
+  "section4": {
+    "title": "Das chinesische Zeichen, das fast niemand richtig berechnet",
+    "p1": "Hier spricht das Jahr. Zwölf Tiere, eines pro Jahr, und ein Zyklus, der von vorn beginnt. Nur beginnt das chinesische Jahr nicht am 1. Januar: Es startet am Mondneujahr, das je nach Jahr zwischen dem 21. Januar und dem 21. Februar liegt. Alle im Januar und in der ersten Februarhälfte Geborenen gehören daher zum Tier des Vorjahres.",
+    "p2": "Das ist der häufigste Fehler von Online-Rechnern, und er betrifft fast ein Zehntel der Bevölkerung. Unser Werkzeug nutzt die <strong>echten Daten des chinesischen Neujahrs</strong>, Jahr für Jahr, von 1924 bis 2043. Wer am 1. Januar 2000 geboren wurde, ist kein Drache, sondern ein Hase mit dem Element Erde.",
+    "sub1Title": "Die vier Dreiecke der Verbundenheit",
+    "tableHeaders": ["Dreieck", "Die drei Zeichen", "Was sie verbindet"],
+    "tableRows": [
+      ["Das Dreieck der Tat", "Ratte, Drache, Affe", "Energie, Wagemut, Lust am Risiko"],
+      ["Das Dreieck der Methode", "Büffel, Schlange, Hahn", "Geduld, Strategie, Sinn fürs Detail"],
+      ["Das Dreieck der Unabhängigkeit", "Tiger, Pferd, Hund", "Freiheit, Treue, Offenheit"],
+      ["Das Dreieck der Sanftheit", "Hase, Ziege, Schwein", "Feinfühligkeit, Ruhe, Sinn für Behaglichkeit"]
+    ],
+    "sub2Title": "Und wo bleibt das Element?",
+    "sub2Text": "Jedes Tier kehrt alle zwölf Jahre wieder, aber mit einem anderen Element: Holz, Feuer, Erde, Metall oder Wasser. Ein Drache mit Holz und ein Drache mit Feuer ähneln sich kaum. Diese fünf Elemente greifen in Zyklen ineinander, eines nährt das nächste oder bremst es, und genau das verfeinert die chinesische Wertung in eurem Ergebnis.",
+    "tip": "Sechs Paare gelten in der chinesischen Tradition als Harmoniepaare, die berühmten heimlichen Freunde: Ratte und Büffel, Tiger und Schwein, Hase und Hund, Drache und Hahn, Schlange und Affe, Pferd und Ziege. Sie stehen in keinem Dreieck und funktionieren trotzdem hervorragend."
+  },
+  "section5": {
+    "title": "Warum drei Lesarten statt einer einzigen",
+    "p1": "Weil keine der drei allein genügt. Das Sonnenzeichen ist zu populär, um genau zu sein: zwölf Schubladen für acht Milliarden Menschen ergeben sehr breite Schubladen. Die Lebenszahl ist feiner, ignoriert aber das Temperament völlig. Das chinesische Zeichen gibt einen Rhythmus, keine Art zu lieben.",
+    "p2": "Verknüpft korrigieren sie einander. Zwei angeblich unvereinbare Sonnenzeichen können Lebenszahlen haben, die perfekt ineinandergreifen, und ihr seht es sofort an den drei Balken des Ergebnisses. Auch deshalb zeigen wir die Aufschlüsselung statt eines einzelnen Prozentwerts: Die Gesamtzahl ist nichts wert ohne das, woraus sie besteht.",
+    "tip": "Ein hoher Wert auf einer Achse und ein niedriger auf einer anderen ist der häufigste Fall und oft der interessanteste. Genau dort sitzen die echten Paardynamiken."
+  },
+  "section6": {
+    "title": "Und wenn die Wertung niedrig ist?",
+    "p1": "Dann passiert nichts. Wirklich. Keines dieser drei Systeme hat je eine Trennung vorhergesagt, und keines hat je verhindert, dass eine Geschichte dreißig Jahre hält. Eine niedrige Wertung sagt, dass eure Temperamente nicht von selbst zusammenpassen, ihr also in Worte fassen müsst, was andere Paare unausgesprochen weitergeben.",
+    "p2": "Viele Menschen landen mit einer Frage im Hinterkopf auf so einer Seite, und es ist eigentlich keine Frage der Astrologie. Wenn das auf euch zutrifft: Der <a href=\"/de/gesunde-beziehung-test/\">Test für eine gesunde Beziehung</a> oder der <a href=\"/de/liebe-oder-gewohnheit-test/\">Test Liebe oder Gewohnheit</a> sprechen über das, was heute zwischen euch passiert, nicht über das, was die Sterne am Tag eurer Geburt sagten.",
+    "tip": "Macht den Test lieber zu zweit als allein. Das Ergebnis zählt weniger als das Gespräch, das es auslöst, und das gilt für so gut wie jeden Test auf dieser Seite."
+  },
+  "faq": {
+    "title": "Eure Fragen zur Kompatibilität nach Geburtsdatum",
+    "q1": "Wie berechnet man Liebeskompatibilität aus einem Geburtsdatum?",
+    "a1": "Es gibt drei verschiedene Rechnungen, und unser Werkzeug macht alle drei. Die Lebenszahl entsteht, indem man alle Ziffern des Datums addiert und die Summe dann reduziert. Das Sternzeichen liest man an Tag und Monat ab. Das chinesische Zeichen liest man am Mondjahr ab, das nicht am 1. Januar beginnt. Anschließend werden die beiden Profile auf jeder dieser drei Achsen verglichen.",
+    "q2": "Muss man die Geburtsstunde kennen?",
+    "a2": "Nein, und das ist Absicht. Die Uhrzeit dient dazu, den Aszendenten und die astrologischen Häuser zu berechnen, was zum vollständigen Geburtshoroskop gehört und eine fachkundige Deutung verlangt. Hier genügt das Datum allein für die drei verwendeten Systeme. Niemand muss eine Geburtsurkunde heraussuchen.",
+    "q3": "Mein chinesisches Zeichen ist nicht das, das ich dachte, warum?",
+    "a3": "Weil ihr vermutlich im Januar oder Anfang Februar geboren seid. Das chinesische Jahr beginnt am Mondneujahr, zwischen dem 21. Januar und dem 21. Februar. Wer am 20. Januar 1990 geboren wurde, gehört noch zum Schlangenjahr 1989 und nicht zum Pferdejahr. Unsere Berechnung berücksichtigt das genaue Neujahrsdatum jedes Jahres.",
+    "q4": "Bedeutet eine Wertung von 40 %, dass wir uns trennen werden?",
+    "a4": "Nein. Diese Zahl misst die Übereinstimmung zweier symbolischer Temperamente, nicht die Stabilität einer Beziehung. Sie kennt weder eure Geschichte noch eure Mühe noch das, was ihr gemeinsam durchgestanden habt. Nehmt sie als Raster, das zeigt, wo Verständnis von selbst entsteht und wo daran gearbeitet wird.",
+    "q5": "Worin unterscheidet sich das von eurem Test mit Vorname und Sternzeichen?",
+    "a5": "Dieser hier geht allein von den Daten aus und verknüpft drei Systeme. Der andere geht von den Vornamen und dem Zeichen aus, das ihr selbst wählt, und liest die Numerologie der Buchstaben. Beide ergänzen sich gut: Das Datum sagt, was ihr mitbekommen habt, der Vorname sagt, wie ihr euch anderen zeigt. Beide zusammen dauern fünf Minuten.",
+    "q6": "Werden die Ergebnisse irgendwo gespeichert?",
+    "a6": "Nein. Die gesamte Berechnung läuft in eurem Browser, die Daten gehen nirgendwohin und nach dem Schließen der Seite bleibt nichts erhalten. Ihr könnt den Test so oft wiederholen, wie ihr wollt, mit so vielen Daten, wie ihr wollt."
+  }
+}
