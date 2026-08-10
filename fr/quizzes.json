@@ -184,6 +184,24 @@
     "description": "20 questions pour identifier les signes d'infidélité dans votre couple. Résultat immédiat, gratuit et confidentiel.",
     "metaDescription": "Votre partenaire vous trompe-t-il ? 20 questions pour déceler les signes d'infidélité. Test gratuit, résultat immédiat et confidentiel."
   },
+  "testCouche": {
+    "title": "Savoir s'il/elle a couché avec un autre | Test 15 questions",
+    "shortTitle": "A-t-il/elle couché ailleurs ?",
+    "description": "15 questions pour faire le tri entre ce que vous avez vraiment observé et ce que le doute a rajouté par-dessus.",
+    "metaDescription": "A-t-il ou a-t-elle couché avec quelqu'un d'autre ? 15 questions adaptées au genre de votre partenaire. Test gratuit, anonyme, résultat immédiat."
+  },
+  "testSecret": {
+    "title": "Test : m'aime-t-il/elle en secret ? Gratuit en ligne",
+    "shortTitle": "M'aime-t-il/elle en secret ?",
+    "description": "10 questions sur son comportement envers vous, pour distinguer une amitié attentive d'un sentiment qui ne se dit pas.",
+    "metaDescription": "Est-ce qu'il ou elle m'aime en secret ? 10 questions sur le regard, la mémoire des détails et les occasions provoquées. Test gratuit et immédiat."
+  },
+  "testDistanceAime": {
+    "title": "Relation à distance - Test savoir s'il/elle m'aime encore",
+    "shortTitle": "M'aime-t-il/elle encore ?",
+    "description": "15 questions pour distinguer ce qui relève de la distance de ce qui relève du sentiment. Test solo, résultat immédiat.",
+    "metaDescription": "Est-ce qu'il ou elle m'aime encore malgré la distance ? 15 questions sur les appels, les projets et les silences. Test gratuit et anonyme."
+  },
   "testBebe": {
     "title": "Test : êtes-vous prêt(e) pour un bébé ? 20 questions essentielles",
     "shortTitle": "Test Bébé",

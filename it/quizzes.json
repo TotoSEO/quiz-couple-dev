@@ -190,6 +190,24 @@
     "description": "20 domande per individuare i segnali d'allarme nella tua relazione: segretezza, distanza emotiva, cambiamenti di comportamento. Risultato immediato.",
     "metaDescription": "Il tuo partner ti tradisce? 20 domande per individuare i segnali d'allarme nella tua relazione. Gratuito, riservato, risultato immediato."
   },
+  "testCouche": {
+    "title": "È andato/a a letto con un altro? Test 15 domande",
+    "shortTitle": "È andato/a a letto con un altro?",
+    "description": "15 domande per distinguere ciò che avete davvero osservato da ciò che il dubbio ci ha aggiunto sopra.",
+    "metaDescription": "È andato o andata a letto con un'altra persona? 15 domande adattate al genere del partner. Test gratuito, anonimo, risultato immediato."
+  },
+  "testSecret": {
+    "title": "Test: mi ama in segreto? Gratis online",
+    "shortTitle": "Mi ama in segreto?",
+    "description": "10 domande sul suo comportamento con te, per distinguere un'amicizia attenta da un sentimento che non si dice.",
+    "metaDescription": "Mi ama in segreto? 10 domande su sguardo, memoria dei dettagli e occasioni provocate. Test gratuito, risultato immediato, senza registrazione."
+  },
+  "testDistanceAime": {
+    "title": "Relazione a distanza: mi ama ancora? Test online",
+    "shortTitle": "Mi ama ancora?",
+    "description": "15 domande per distinguere ciò che dipende dalla distanza da ciò che dipende dal sentimento. Test individuale, risultato immediato.",
+    "metaDescription": "Mi ama ancora nonostante la distanza? 15 domande su chiamate, progetti e silenzi. Test gratuito, anonimo, risultato immediato."
+  },
   "testBebe": {
     "title": "Test pronto per un bambino: sei preparato alla genitorialità?",
     "shortTitle": "Test Bambino",

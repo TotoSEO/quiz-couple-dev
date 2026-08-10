@@ -21,7 +21,20 @@
     paliers: t(ns + ':paliers', {}),
     resultat: t(ns + ':resultat', {}),
   };
+
+  // La page ne passe pas par le gabarit générique, elle doit donc émettre
+  // elle-même le balisage de sa FAQ. Sans lui, six questions et réponses
+  // restent invisibles pour les résultats enrichis.
+  const faqEntrees = [];
+  for (let i = 1; i <= 6; i++) {
+    const q = t(ns + ':faq.q' + i, '');
+    const a = t(ns + ':faq.a' + i, '');
+    if (q && a) faqEntrees.push({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } });
+  }
 %>
+<% if (faqEntrees.length) { %>
+<script type="application/ld+json"><%- JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqEntrees }) %></script>
+<% } %>
 
 <!-- Hero -->
 <section class="relative overflow-hidden astro-hero-section py-16 md:py-24">

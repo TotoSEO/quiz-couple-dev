@@ -190,6 +190,24 @@
     "description": "20 Fragen, um die Warnsignale in eurer Beziehung zu erkennen: Heimlichkeit, emotionale Distanz, Verhaltensänderungen. Ergebnis sofort.",
     "metaDescription": "Betrügt dich dein Partner? 20 Fragen, um die Warnzeichen in eurer Beziehung zu erkennen. Kostenlos, vertraulich, Ergebnis sofort."
   },
+  "testCouche": {
+    "title": "Hat er/sie mit jemand anderem geschlafen? Test",
+    "shortTitle": "Mit jemand anderem geschlafen?",
+    "description": "15 Fragen, um das, was ihr wirklich beobachtet habt, von dem zu trennen, was der Zweifel hinzugefügt hat.",
+    "metaDescription": "Hat er oder sie mit jemand anderem geschlafen? 15 Fragen, angepasst an das Geschlecht deines Partners. Kostenlos, anonym, sofortiges Ergebnis."
+  },
+  "testSecret": {
+    "title": "Test: Liebt er/sie mich heimlich? Kostenlos online",
+    "shortTitle": "Liebt er/sie mich heimlich?",
+    "description": "10 Fragen zum Verhalten dir gegenüber, um aufmerksame Freundschaft von einem unausgesprochenen Gefühl zu unterscheiden.",
+    "metaDescription": "Liebt er oder sie mich heimlich? 10 Fragen zu Blicken, Detailgedächtnis und herbeigeführten Gelegenheiten. Kostenlos, Ergebnis sofort."
+  },
+  "testDistanceAime": {
+    "title": "Fernbeziehung: Liebt er/sie mich noch? Test",
+    "shortTitle": "Liebt er/sie mich noch?",
+    "description": "15 Fragen, um zu trennen, was von der Entfernung kommt und was vom Gefühl. Einzeltest, Ergebnis sofort.",
+    "metaDescription": "Liebt er oder sie mich trotz der Entfernung noch? 15 Fragen zu Anrufen, Plänen und Funkstillen. Kostenlos, anonym, Ergebnis sofort."
+  },
   "testBebe": {
     "title": "Bereit für ein Baby Test: 20 Fragen für werdende Eltern",
     "shortTitle": "Baby-Test",

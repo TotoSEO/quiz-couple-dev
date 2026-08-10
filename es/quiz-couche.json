@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "badge": "Test gratuito, 15 preguntas",
+    "title": "¿Se ha acostado con otra persona?",
+    "titleHighlight": "acostado con otra persona",
+    "description": "15 preguntas para ordenar lo que has observado. Empezamos preguntándote de quién hablamos, porque las preguntas no son las mismas.",
+    "subtitle": "Gratis, anónimo, resultado inmediato"
+  },
+  "howTo": {
+    "title": "¿Cómo funciona este test?",
+    "step1": "Indicas si tu pareja es un hombre o una mujer. Las quince preguntas se adaptan, y dos de ellas cambian por completo.",
+    "step2": "Responde pensando en las <strong>últimas semanas</strong>, no en toda vuestra historia. Una señal vale por el cambio que representa, no por existir.",
+    "step3": "Cada respuesta vale de 0 a 3 puntos. El total te sitúa en uno de los cuatro niveles de lectura.",
+    "step4": "El resultado te dice cuánto pesan juntas tus observaciones, y qué es razonable hacer con ellas.",
+    "outro": "Responde con sinceridad, incluso cuando la respuesta sincera es «no lo sé». Un resultado tranquilizador conseguido limando esquinas no sirve de nada."
+  },
+  "crossLink": {
+    "title": "¿No es exactamente tu pregunta?",
+    "text": "Si tu duda tiene más que ver con una relación demasiado cercana, mensajes ambiguos o una complicidad que te incomoda, el otro test es el que buscas.",
+    "button": "Hacer el test de infidelidad completo"
+  },
+  "section1": {
+    "title": "Esa pregunta que da vueltas sin parar",
+    "p1": "Puede que no se lo hayas contado a nadie. Vuelve por la noche, en el coche, cuando la conversación se apaga. <strong>¿Se ha acostado con otra persona?</strong> Y justo detrás, una segunda pregunta, a menudo más dolorosa: ¿me estoy volviendo loco, o tengo razón?",
+    "p2": "La duda tiene esa particularidad de alimentarse sola. Un retraso se convierte en mentira, un móvil boca abajo se convierte en prueba, un silencio se convierte en confesión. Y al día siguiente todo parece normal y te reprochas haberlo pensado. Ese vaivén agota, y daña la relación tanto como aquello que temes.",
+    "p3": "Este test no va a decidir por ti, y sería deshonesto pretenderlo. Lo que hace es poner una al lado de otra las cosas que realmente has observado, separar las señales que pesan de las que no pesan nada, y devolverte una lectura de conjunto en lugar de quince detalles dando vueltas en tu cabeza."
+  },
+  "section2": {
+    "title": "Las señales que cuentan y las que no prueban nada",
+    "intro": "Ninguna de estas señales vale por sí sola. Lo que cuenta es el cambio reciente, y el hecho de que aparezcan varias a la vez.",
+    "pillar1Title": "El móvil que cambia de estatus",
+    "pillar1Text": "La señal no es «protege el móvil», es «lo protege desde hace poco». Código nuevo, pantalla girada, notificaciones silenciadas, conversación archivada. Alguien reservado de toda la vida no dice absolutamente nada.",
+    "pillar2Title": "Las versiones que no se sostienen",
+    "pillar2Text": "Es la señal más pesada de todas, porque se puede verificar. Una noche contada dos veces con dos lugares distintos, una explicación corregida después. La mentira sobre el lugar pesa más que la mentira sobre la hora.",
+    "pillar3Title": "La intimidad que se desequilibra",
+    "pillar3Text": "En los dos sentidos. El corte brusco alerta, pero un cambio de naturaleza también: hábitos nuevos que salen de la nada plantean tantas preguntas como un desierto repentino.",
+    "pillar4Title": "La acusación devuelta",
+    "pillar4Text": "Haces una pregunta y acabas justificándote. Cuando alguien acusa a su pareja de infidelidad sin que nada lo anunciara, los terapeutas lo llaman proyección. No es una prueba, pero es destacable.",
+    "pillar5Title": "El dinero deja rastro",
+    "pillar5Text": "Una doble vida cuesta cara. Retiradas en efectivo inhabituales, gastos de restaurante u hotel invisibles en el presupuesto común, una cuenta abierta sin decir nada. La cuenta bancaria miente peor que las personas.",
+    "pillar6Title": "El entorno que se vuelve raro",
+    "pillar6Text": "Un silencio cuando llegas, un amigo que te esquiva, una frase a medias. Los allegados suelen saberlo antes, y llevan mal saberlo. Su incomodidad es una señal indirecta, y se nota.",
+    "tip": "Dos señales casi nunca bastan. La palabra que usan los investigadores es «conjunto de indicios»: lo que cambia la lectura es la convergencia de varios en el mismo periodo, no su número bruto."
+  },
+  "section3": {
+    "title": "Lo que dice tu puntuación y lo que no dice",
+    "p1": "El test se puntúa sobre 45. Los cuatro niveles siguientes no son veredictos, son formas de leer lo que has respondido. Una puntuación alta describe un comportamiento, nunca un hecho.",
+    "headerScore": "Puntuación",
+    "headerLevel": "Nivel",
+    "headerAnalysis": "Lo que significa",
+    "row1Score": "0 a 11",
+    "row1Level": "Nada en ese sentido",
+    "row1Analysis": "Ninguna de las señales habituales. Si la duda persiste, probablemente venga de otro sitio y no de su comportamiento.",
+    "row2Score": "12 a 23",
+    "row2Level": "Señales ambiguas",
+    "row2Analysis": "Hay cambios, sí. Pero el estrés, el cansancio y una fase de retirada producen exactamente los mismos síntomas.",
+    "row3Score": "24 a 35",
+    "row3Level": "Un conjunto real",
+    "row3Analysis": "Demasiadas cosas convergen para ser casualidad. Ojo: una depresión o un problema oculto dan el mismo perfil.",
+    "row4Score": "36 a 45",
+    "row4Level": "Muchas señales",
+    "row4Analysis": "Opacidad, incoherencias verificadas, retirada de la intimidad. Sigue sin probar nada, pero pide una respuesta.",
+    "tip": "Una puntuación de 40 no es una prueba, y una de 8 no es una garantía. Las dos te dicen sobre todo cuánto vale tu observación hoy, con los elementos de que dispones."
+  },
+  "section4": {
+    "title": "Acostarse fuera y encariñarse fuera no son la misma pregunta",
+    "p1": "Mucha gente llega aquí con una pregunta concreta: <strong>¿ha habido un acto físico?</strong> Es una pregunta distinta de «¿está mi relación en peligro?», y pide otras señales. La infidelidad física deja rastros materiales: ausencias, gastos, incoherencias sobre lugares, a veces un cambio en la intimidad.",
+    "p2": "La infidelidad emocional, en cambio, casi no deja nada material. Se ve en la atención que se desplaza, en las confidencias que se van a otro sitio, en una complicidad nueva con alguien de quien nunca se habla delante de ti. Puede doler igual, y durar más, sin que se haya pasado ni una noche fuera.",
+    "p3": "Este test se centra en la primera pregunta. Si tu duda tiene más que ver con la segunda, nuestro <a href=\"/es/test-infidelidad-pareja/\">test de infidelidad en pareja</a> cubre las dos formas en veinte preguntas. Y si lo que te reconcome son sobre todo los celos, sin nada concreto, el <a href=\"/es/test-celos-pareja/\">test de celos</a> encaja mejor."
+  },
+  "section5": {
+    "title": "Lo que no hay que hacer ahora bajo ningún concepto",
+    "p1": "La duda empuja a actuar, y casi todas las acciones que inspira empeoran la situación. Estas son las tres más frecuentes.",
+    "sub1Title": "Registrar el móvil",
+    "sub1Text": "Es la primera idea y la peor. En el mejor de los casos no encuentras nada, y la duda sigue intacta porque «lo habrá borrado». En el peor, encuentras algo ambiguo que ya nunca podrás olvidar ni verificar. Y en los dos casos, ahora tú también tienes algo que esconder.",
+    "sub2Title": "Investigar a través de su entorno",
+    "sub2Text": "Preguntar a sus amigos pone a todo el mundo en una posición imposible y siempre acaba llegándole, normalmente deformado. Pierdes el efecto sorpresa, ganas una reputación y no obtienes ninguna respuesta.",
+    "sub3Title": "Acusar sin poner nada sobre la mesa",
+    "sub3Text": "«Sé que me estás engañando» no produce jamás una confesión. Produce un contraataque, y te coloca en la posición de tener que demostrar algo. Si acusas sin elementos, has perdido la conversación antes de empezarla.",
+    "tip": "Si te tienta un programa espía o un localizador, ten en cuenta que instalar eso en el móvil de alguien sin su consentimiento es un delito en España y en la mayoría de países. Más allá del riesgo legal, es justo el tipo de acto que te quitará la razón si la verdad acaba saliendo."
+  },
+  "section6": {
+    "title": "Cómo hacer la pregunta, en concreto",
+    "p1": "No existe una fórmula mágica, pero sí existen condiciones que aumentan claramente tus posibilidades de obtener una respuesta de verdad en lugar de un reflejo defensivo.",
+    "sub1Title": "Elige el momento, no el impulso",
+    "sub1Text": "No a medianoche después de una fiesta, no cuando uno de los dos se va a trabajar, no delante de los niños. Un momento en el que nadie tenga escapatoria ni una cita en veinte minutos.",
+    "sub2Title": "Describe, no etiquetes",
+    "sub2Text": "«Volviste a las tres el sábado y me dijiste que estabas en casa de Tomás, que me ha dicho lo contrario» es difícil de esquivar. «Me mientes todo el rato» se esquiva en una frase. Quédate en los hechos que realmente has constatado, sin inflarlos.",
+    "sub3Title": "Di lo que buscas",
+    "sub3Text": "Anunciar «prefiero saberlo, aunque duela, antes que seguir así» cambia a menudo la conversación. Mucha gente no miente por gusto sino por miedo a la reacción. Quitar parte de ese miedo puede bastar.",
+    "sub4Title": "Escucha también lo que no se dice",
+    "sub4Text": "Una respuesta que tarda diez segundos en llegar no es una prueba. Una respuesta que cambia de versión entre el martes y el jueves, sí. Lo que buscas no es una reacción, es una coherencia en el tiempo."
+  },
+  "section7": {
+    "title": "¿Y si la respuesta es sí?",
+    "p1": "Entonces entras en otra pregunta, y no tienes que responderla esa misma noche. Lo primero que conviene saber es que la decisión de quedarse o marcharse no se toma en los días siguientes a la revelación. El aturdimiento es mal consejero, en un sentido y en el otro.",
+    "p2": "Lo que determina después el desenlace depende de pocas cosas: si la persona lo asume sin minimizar, si corta el contacto, si acepta tus preguntas durante meses sin cansarse. Sin esas tres, una reconstrucción rara vez aguanta. Con ellas es posible, y suele llevar entre uno y tres años.",
+    "p3": "Y si luego quieres hacer balance de lo que queda, el <a href=\"/es/test-relacion-sana/\">test de relación sana</a> y el <a href=\"/es/test-confianza-pareja/\">test de confianza</a> hablan de lo que viene después, no del golpe.",
+    "tip": "Si la situación te pone en peligro, si tienes miedo de la reacción de tu pareja cuando haces una pregunta, esto ya no es un problema de infidelidad. En España, el 016 es gratuito, confidencial y está abierto todos los días."
+  },
+  "faq": {
+    "q1": "¿De verdad se puede saber con un test si alguien se ha acostado con otra persona?",
+    "a1": "No, y ningún test serio lo pretenderá. Lo que este test mide es la coherencia y la densidad de lo que has observado. Convierte quince impresiones sueltas en una lectura de conjunto. La certeza no llega nunca de un cuestionario: llega de una conversación, de una confesión o de un elemento concreto.",
+    "q2": "¿Por qué preguntáis si mi pareja es un hombre o una mujer?",
+    "a2": "Porque una de las quince preguntas solo tiene sentido en uno de los dos casos, y porque una pregunta escrita en masculino se lee mal cuando se habla de una mujer. La elección no cambia ni la puntuación ni los niveles de resultado: las otras catorce preguntas son idénticas, solo cambia la formulación.",
+    "q3": "Mi puntuación es alta, ¿significa que me ha engañado?",
+    "a3": "No. Una puntuación alta significa que se han acumulado muchas señales en el mismo periodo. Una depresión callada, un despido oculto, una deuda, un problema de salud guardado en secreto o una adicción producen exactamente el mismo perfil de respuestas. Por eso el resultado te orienta hacia una conversación y no hacia una conclusión.",
+    "q4": "Mi puntuación es baja pero sigo teniendo dudas, ¿es normal?",
+    "a4": "Sí, y es frecuente. La duda no siempre viene del otro. Una traición antigua, en esta relación o en una anterior, deja una vigilancia que se despierta sin motivo actual. Si la duda persiste sin que nada la alimente, hay que mirar por ese lado, y hablarlo sigue siendo la mejor salida.",
+    "q5": "¿Puedo hacer este test con mi pareja?",
+    "a5": "No está pensado para eso y sería mala idea: las quince preguntas describen sospechas, y hacérselas leer a alguien de quien sospechas equivale a acusarle pregunta a pregunta. Hazlo a solas y luego habla, con tus propias palabras.",
+    "q6": "¿Se guardan mis respuestas?",
+    "a6": "No. Todo ocurre en tu navegador, no se envía ni se conserva ninguna respuesta, y no hay ni cuenta ni correo electrónico que dar. Cierras la página y no queda nada."
+  }
+}

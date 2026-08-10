@@ -326,7 +326,10 @@
     "jeuGages": "la roue des gages",
     "jeuPlateau": "jeu de plateau du couple",
     "jeuQuiDeNous": "Qui de nous deux ?",
-    "testDateNaissance": "Test compatibilité date de naissance"
+    "testDateNaissance": "Test compatibilité date de naissance",
+    "testCouche": "Test « a-t-il ou a-t-elle couché avec quelqu'un d'autre »",
+    "testSecret": "Test m'aime-t-il ou m'aime-t-elle en secret",
+    "testDistanceAime": "Test m'aime-t-il encore à distance"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -534,5 +537,20 @@
     "bravoTitre": "Bravo, et merci !",
     "bravoTexte": "Vous avez répondu à tous les dilemmes. Vos votes comptent maintenant dans les pourcentages que verront les prochains couples.",
     "bravoSuite": "Essayez le tu préfères"
+  },
+  "couche": {
+    "introQuestion": "Vous vous posez la question :",
+    "introQuote": "« Est-ce qu'il ou elle a couché avec quelqu'un d'autre… ou est-ce que je me fais un film ? »",
+    "disclaimer": "Ce test ne prouve rien et n'accuse personne. Il met de l'ordre dans ce que vous avez observé, pour que vous sachiez quoi en faire."
+  },
+  "secret": {
+    "introQuestion": "Vous vous posez la question :",
+    "introQuote": "« Est-ce qu'il ou elle m'aime en secret… ou est-ce que je me raconte une histoire ? »",
+    "disclaimer": "Pensez à une personne précise avant de commencer, et répondez sur elle uniquement."
+  },
+  "distanceAime": {
+    "introQuestion": "Vous vous posez la question :",
+    "introQuote": "« Est-ce qu'il ou elle m'aime encore… ou est-ce que c'est juste la distance ? »",
+    "disclaimer": "Répondez sur les dernières semaines, pas sur le début de votre histoire."
   }
 }

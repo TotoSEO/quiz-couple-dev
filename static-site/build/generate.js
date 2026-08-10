@@ -1181,7 +1181,7 @@ async function generateBlogArticle(articleMeta, lang) {
       'testCouple', 'testCommonPoints', 'testCompatibilite', 'testSuisJeAmoureux', 'testDistance',
       'testToxic', 'testPervers', 'testAmourHabitude', 'testCoupleSain', 'testMariage', 'testDivorce',
       'testParentalite', 'testEmmenager', 'testBebe', 'testAstroPrenoms', 'testDateNaissance', 'testKarmique',
-      'testJalousie', 'testInfidelite', 'testLangageAmour', 'testAttachement', 'testConfiance',
+      'testJalousie', 'testInfidelite', 'testCouche', 'testSecret', 'testDistanceAime', 'testLangageAmour', 'testAttachement', 'testConfiance',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarQuizzes: [
       'quizAmoureux', 'quizCoquin', 'quizMarrant', 'quizGenant', 'quizKnowledge',

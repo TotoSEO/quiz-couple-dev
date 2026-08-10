@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "badge": "Test gratuito, 15 domande",
+    "title": "Mi ama ancora?",
+    "titleHighlight": "ancora",
+    "description": "Speciale relazione a distanza. 15 domande per separare ciò che dipende dai chilometri da ciò che dipende dal sentimento, perché le due cose non si vedono allo stesso modo.",
+    "subtitle": "Test individuale, gratuito e anonimo"
+  },
+  "howTo": {
+    "title": "Come funziona questo test?",
+    "step1": "Rispondi per conto tuo, sulla tua relazione attuale. Non viene inviato nulla, nessuno vedrà le tue risposte.",
+    "step2": "Pensa alle <strong>ultime settimane</strong> e non all'inizio della vostra storia. Una relazione a distanza cambia ritmo più volte, conta il periodo in corso.",
+    "step3": "Le risposte vanno dal segnale più preoccupante al più rassicurante, da 0 a 3 punti.",
+    "step4": "Il risultato ti dice se quello che vivi somiglia a un'usura della distanza o a qualcos'altro.",
+    "outro": "Rispondi a mente fredda, non subito dopo un litigio o due giorni di silenzio. Le relazioni a distanza hanno cali che, presi da soli, non significano nulla."
+  },
+  "crossLink": {
+    "title": "Preferisci farlo in due?",
+    "text": "Il nostro quiz speciale coppia a distanza si gioca in due e confronta le vostre risposte, invece di valutare la relazione da un solo punto di vista.",
+    "button": "Vedi il quiz coppia a distanza"
+  },
+  "section1": {
+    "title": "La distanza rende tutto illeggibile, ed è questo il vero problema",
+    "p1": "In una coppia che vive nello stesso posto, il disamore si vede. Ci sono silenzi a tavola, serate ciascuno per conto proprio, una mano che non si prende più. A distanza tutti questi segnali spariscono, e restano solo messaggi, chiamate e settimane di attesa.",
+    "p2": "Il problema è che <strong>la stanchezza della distanza e il disamore producono esattamente gli stessi sintomi</strong>: meno chiamate, conversazioni più corte, meno voglia di progettare. Due cause molto diverse, una sola apparenza. Ecco perché si gira in tondo per mesi.",
+    "p3": "Questo test non può leggere nel pensiero del tuo partner. Quello che fa è dividere le tue osservazioni in due famiglie: quelle che si spiegano con i chilometri e quelle che si spiegano solo con un ritiro. Non sono la stessa cosa, e non chiedono la stessa reazione."
+  },
+  "section2": {
+    "title": "I cinque segnali che contano davvero a distanza",
+    "intro": "Gli indizi abituali delle coppie qui non funzionano. Questi mantengono il loro valore quando non vi vedete.",
+    "pillar1Title": "Chi comincia il contatto",
+    "pillar1Text": "Il segnale più affidabile di tutti, e il più semplice da osservare. La frequenza dei messaggi cala con il tempo per chiunque, ma l'equilibrio tra chi scrive e chi risponde non si muove finché c'è la voglia. Scrivere sempre per primo per settimane è il vero campanello d'allarme.",
+    "pillar2Title": "Di cosa sono fatte le conversazioni",
+    "pillar2Text": "Passare da vere discussioni a scambi di logistica è la china naturale di ogni relazione a distanza. Diventa preoccupante quando gli argomenti difficili spariscono del tutto: non si litiga più, non ci si racconta più niente, si gestisce.",
+    "pillar3Title": "L'esistenza di un progetto con una data",
+    "pillar3Text": "È il miglior predittore conosciuto della sopravvivenza di una coppia a distanza. Non l'amore dichiarato, non la frequenza delle chiamate: sapere quando finisce. Un progetto che slitta all'infinito finisce per valere un no, anche se nessuno l'ha formulato.",
+    "pillar4Title": "Il tuo posto nella sua vita là",
+    "pillar4Text": "Essere presentato, essere nominato, esistere nelle conversazioni quotidiane. Chi ti tiene fuori dal proprio quotidiano spesso ti tiene fuori anche dal proprio futuro, e questo segnale dice molto più di un messaggio senza risposta.",
+    "pillar5Title": "Cosa succede quando vi ritrovate",
+    "pillar5Text": "Un tempo di riadattamento di qualche ora è normale e documentato. Un imbarazzo che dura giorni, o dei ritrovi che diventano tesi, dicono molto più di tre settimane di chiamate diradate.",
+    "tip": "Una cosa non conta, al contrario di quello che si crede: la velocità di risposta ai messaggi. Dipende dal lavoro, dal fuso orario e dal carattere molto più che dal sentimento."
+  },
+  "section3": {
+    "title": "Cosa dice il tuo punteggio",
+    "p1": "Il test si valuta su 45 punti. Qui un punteggio alto è una buona notizia: le risposte vanno dal segnale più preoccupante al più rassicurante.",
+    "headerScore": "Punteggio",
+    "headerLevel": "Livello",
+    "headerAnalysis": "Cosa significa",
+    "row1Score": "Da 0 a 11",
+    "row1Level": "Il legame si è allentato",
+    "row1Analysis": "Quello che descrivi va oltre la stanchezza dei chilometri. Lo sforzo non sembra più condiviso.",
+    "row2Score": "Da 12 a 23",
+    "row2Level": "La distanza sta vincendo",
+    "row2Analysis": "I sentimenti probabilmente ci sono, ma la manutenzione del legame è crollata. Ora è reversibile.",
+    "row3Score": "Da 24 a 35",
+    "row3Level": "Il legame regge",
+    "row3Analysis": "I punti deboli descritti sono quelli di quasi tutte le coppie a distanza. Niente di allarmante.",
+    "row4Score": "Da 36 a 45",
+    "row4Level": "Sì, e si vede",
+    "row4Analysis": "Contatto equilibrato, conversazioni vere, progetto con una data. La distanza non cambia granché.",
+    "tip": "Non fare questo test il giorno dopo un litigio. Una coppia a distanza ha cali di qualche giorno che non significano niente, e che farebbero scendere il tuo punteggio di dieci punti senza che sia cambiato davvero nulla."
+  },
+  "section4": {
+    "title": "Cosa uccide davvero le coppie a distanza, e non è quello che si crede",
+    "p1": "Si immagina che la distanza finisca in un tradimento o in un raffreddamento dei sentimenti. Nei fatti è quasi sempre altro, e quell'altro si vede arrivare da lontano.",
+    "sub1Title": "L'assenza di una scadenza",
+    "sub1Text": "Una distanza con una fine nota si sopporta benissimo, anche lunga. Una distanza senza orizzonte logora tutti, perché ogni settimana diventa una settimana in più in un tunnel di cui nessuno conosce la lunghezza. È il fattore numero uno, davanti a tutti gli altri.",
+    "sub2Title": "L'impoverimento degli scambi",
+    "sub2Text": "A forza di voler proteggere i rari momenti di chiamata, ci si mette dentro solo buone notizie. Si evitano gli argomenti spinosi, si tacciono le preoccupazioni, si riassume la giornata. Dopo qualche mese, due persone che si amano non sanno più niente l'una dell'altra.",
+    "sub3Title": "Le vite parallele",
+    "sub3Text": "Ognuno costruisce un quotidiano in cui l'altro non esiste. Nuovi amici, nuove abitudini, nuove battute. Non è un tradimento, è meccanico, e diventa un problema solo se nessuno fa entrare l'altro in quel nuovo scenario.",
+    "tip": "Se ti riconosci in questi tre paragrafi, non è una cattiva notizia. Sono i soli tre punti su cui si può agire senza che l'altro debba cambiare personalità."
+  },
+  "section5": {
+    "title": "Cosa fanno le coppie a distanza che reggono",
+    "p1": "Le tre abitudini qui sotto tornano sistematicamente in chi attraversa un lungo periodo di distanza senza perderci la coppia. Nessuna chiede più sentimento, solo più organizzazione.",
+    "sub1Title": "Una data, non un'intenzione",
+    "sub1Text": "Non «ci vediamo presto» ma un biglietto prenotato. La differenza di solidità tra le due cose è enorme, perché una data trasforma l'attesa in un conto alla rovescia. E appena una visita è finita, si fissa la prossima prima di salutarsi.",
+    "sub2Title": "Un appuntamento che non dipenda dall'umore",
+    "sub2Text": "Uno spazio regolare, anche breve, che esiste che se ne abbia voglia o no. Le coppie che si chiamano solo quando ne hanno voglia finiscono per non chiamarsi più, perché la voglia cala sempre allo stesso tempo in entrambi.",
+    "sub3Title": "Condividere il banale, non solo l'importante",
+    "sub3Text": "Una foto del pranzo, una battuta stupida, la faccia del collega insopportabile. Sono queste inezie a ricreare la sensazione di vivere insieme, molto più delle lunghe conversazioni sulla relazione. Il quotidiano condiviso è la prima cosa che la distanza toglie.",
+    "tip": "E una cosa da non fare assolutamente: compensare la distanza con la sorveglianza. Chiedere prove, chiamare all'improvviso per verificare, spulciare i social. Questo stanca una coppia a distanza più in fretta della lontananza stessa."
+  },
+  "section6": {
+    "title": "Come fare la domanda senza provocare una rottura al telefono",
+    "p1": "È la difficoltà propria della distanza: non si può avere questa conversazione guardandosi, e una chiamata che deraglia non si recupera abbracciando l'altro. Qualche precauzione cambia molte cose.",
+    "sub1Title": "In videochiamata, mai per iscritto",
+    "sub1Text": "Un messaggio lungo su questo tema è quasi sempre accolto male, perché il tono per iscritto non esiste e l'altro lo rilegge dieci volte. Se la videochiamata non è possibile, una telefonata resta meglio di un testo.",
+    "sub2Title": "Descrivi una mancanza, non un rimprovero",
+    "sub2Text": "«Ho l'impressione che questa storia la porti avanti solo io, da qualche settimana» apre una conversazione. «Non fai più nessuno sforzo» la chiude. Il contenuto è lo stesso, l'esito per niente.",
+    "sub3Title": "Chiedi prima della scadenza",
+    "sub3Text": "Prima di parlare di sentimenti, parla della data. È più concreto, meno minaccioso, e la risposta ti insegnerà spesso più di qualsiasi dichiarazione. Chi vuole tenerti cerca una soluzione; chi ha mollato rimanda.",
+    "sub4Title": "Accetta di non risolvere tutto in una chiamata",
+    "sub4Text": "Queste conversazioni si fanno in più volte. Volere una risposta definitiva nei quaranta minuti prima che l'altro esca per andare al lavoro è il modo migliore per ottenerne una falsa."
+  },
+  "section7": {
+    "title": "Quando la distanza non è più il vero argomento",
+    "p1": "Arriva un momento in cui la domanda cambia. Se hai fissato una data tre volte e tre volte è slittata, se le conversazioni sono vuote da mesi, se sei l'unica persona che tiene in vita la relazione, allora il problema non è più geografico.",
+    "p2": "Una relazione a distanza non si giudica dalla sofferenza che costa, ma dalla reciprocità dello sforzo. Molte persone reggono per anni in una situazione a senso unico dicendosi che è colpa dei chilometri. I chilometri non scrivono i messaggi.",
+    "p3": "Per fare il punto da un altro angolo, il <a href=\"/it/test-amore-o-abitudine/\">test amore o abitudine</a> pone la domanda in un altro modo, e il <a href=\"/it/test-fiducia-coppia/\">test di fiducia</a> è utile se quello che ti rode è soprattutto l'incertezza su cosa succede là.",
+    "tip": "Una relazione a distanza che funziona chiede molta organizzazione e pochi sacrifici. Se hai l'impressione del contrario, probabilmente non è un problema di logistica."
+  },
+  "faq": {
+    "q1": "Come capire se mi ama ancora a distanza?",
+    "a1": "I segni classici non funzionano quando non vi vedete. Quello che resta osservabile è l'equilibrio del contatto, di cosa sono fatte le conversazioni, l'esistenza di un progetto con una data, il tuo posto nella vita sociale dell'altro e come vanno i ritrovi. Sono questi cinque punti che il test misura.",
+    "q2": "Un calo delle chiamate vuol dire per forza qualcosa?",
+    "a2": "No, ed è l'errore più frequente. La frequenza degli scambi cala in tutte le relazioni a distanza dopo i primi mesi, sia nelle coppie che durano sia nelle altre. Quello che cambia è chi scrive per primo e cosa vi dite. Il volume da solo non è un indicatore.",
+    "q3": "Il mio punteggio è basso, vuol dire che è finita?",
+    "a3": "No. Un punteggio basso vuol dire che la manutenzione del legame è crollata, che non è la stessa cosa di un disamore. Nella maggior parte dei casi, una data di incontro e una chiamata regolare bastano a risalire. Quello che non si recupera è uno squilibrio di sforzo che dura da anni.",
+    "q4": "Quanto può durare una relazione a distanza?",
+    "a4": "La durata conta meno dell'esistenza di una fine nota. Ci sono coppie che reggono tre anni senza difficoltà perché sanno quando finisce, e altre che crollano in sei mesi perché l'orizzonte si allontana a ogni conversazione. Se dovessi lavorare su un solo punto, sarebbe questo.",
+    "q5": "Bisogna fare questo test in due?",
+    "a5": "Questo è pensato per essere fatto da soli, perché riguarda quello che osservi e quello che senti. Se vuoi confrontare le vostre risposte, il nostro quiz coppia a distanza è fatto apposta e si gioca in due.",
+    "q6": "Le mie risposte vengono salvate?",
+    "a6": "No. Tutto avviene nel tuo browser, nessuna risposta viene inviata o conservata, e non c'è né un account né un indirizzo email da fornire. Puoi rifare il test tra un mese per confrontare, ma nel frattempo non verrà salvato nulla."
+  }
+}

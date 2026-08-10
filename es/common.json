@@ -51,7 +51,10 @@
     "jeuQuiDeNous": "Quién de los dos",
     "jeuDilemmes": "Dilemas de pareja",
     "deployerJeux": "Ver todos los juegos",
-    "testDateNaissance": "Compatibilidad fecha nacimiento"
+    "testDateNaissance": "Compatibilidad fecha nacimiento",
+    "testCouche": "¿Se ha acostado con otro/a?",
+    "testSecret": "¿Me quiere en secreto?",
+    "testDistanceAime": "¿Me sigue queriendo?"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

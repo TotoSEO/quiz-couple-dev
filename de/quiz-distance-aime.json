@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "badge": "Kostenloser Test, 15 Fragen",
+    "title": "Liebt er oder sie mich noch?",
+    "titleHighlight": "mich noch",
+    "description": "Speziell für Fernbeziehungen. 15 Fragen, um zu trennen, was von den Kilometern kommt und was vom Gefühl, denn beides sieht nicht gleich aus.",
+    "subtitle": "Einzeltest, kostenlos und anonym"
+  },
+  "howTo": {
+    "title": "Wie funktioniert dieser Test?",
+    "step1": "Du antwortest allein, über deine aktuelle Beziehung. Nichts wird gesendet, niemand sieht deine Antworten.",
+    "step2": "Denk an die <strong>letzten Wochen</strong>, nicht an den Anfang eurer Geschichte. Eine Fernbeziehung wechselt mehrfach den Rhythmus, es zählt der laufende Abschnitt.",
+    "step3": "Die Antworten reichen vom beunruhigendsten bis zum beruhigendsten Zeichen, von 0 bis 3 Punkten.",
+    "step4": "Das Ergebnis sagt dir, ob das, was du erlebst, nach Erschöpfung durch Entfernung aussieht oder nach etwas anderem.",
+    "outro": "Antworte mit kühlem Kopf, nicht direkt nach einem Streit oder zwei Tagen Funkstille. Fernbeziehungen haben Täler, die für sich genommen nichts bedeuten."
+  },
+  "crossLink": {
+    "title": "Lieber zu zweit?",
+    "text": "Unser Quiz für Fernbeziehungen wird zu zweit gespielt und vergleicht eure Antworten, statt die Beziehung aus einer einzigen Perspektive zu bewerten.",
+    "button": "Zum Fernbeziehungs-Quiz"
+  },
+  "section1": {
+    "title": "Entfernung macht alles unlesbar, und genau das ist das Problem",
+    "p1": "In einem Paar, das am selben Ort lebt, sieht man erkaltende Liebe. Es gibt Schweigen am Tisch, Abende jeder für sich, eine Hand, die nicht mehr genommen wird. Auf Distanz verschwinden all diese Signale, und es bleiben nur Nachrichten, Anrufe und Wochen des Wartens.",
+    "p2": "Das Problem: <strong>Erschöpfung durch Entfernung und erkaltende Liebe erzeugen genau dieselben Symptome</strong>: weniger Anrufe, kürzere Gespräche, weniger Lust zu planen. Zwei sehr verschiedene Ursachen, ein einziges Erscheinungsbild. Deshalb dreht man sich monatelang im Kreis.",
+    "p3": "Dieser Test kann die Gedanken deines Partners nicht lesen. Was er tut: er sortiert deine Beobachtungen in zwei Familien, die durch die Kilometer erklärbaren und die, die sich nur durch einen Rückzug erklären lassen. Das ist nicht dasselbe, und es verlangt nicht dieselbe Reaktion."
+  },
+  "section2": {
+    "title": "Die fünf Signale, die auf Distanz wirklich zählen",
+    "intro": "Die üblichen Paarhinweise funktionieren hier nicht. Diese behalten ihren Wert, wenn man sich nicht sieht.",
+    "pillar1Title": "Wer den Kontakt beginnt",
+    "pillar1Text": "Das verlässlichste Signal überhaupt und das am leichtesten zu beobachtende. Die Nachrichtenfrequenz sinkt mit der Zeit bei allen, aber das Gleichgewicht zwischen dem, der schreibt, und dem, der antwortet, verschiebt sich nicht, solange die Lust da ist. Wochenlang immer zuerst zu schreiben ist der echte Alarm.",
+    "pillar2Title": "Woraus die Gespräche bestehen",
+    "pillar2Text": "Von echten Gesprächen zu reinem Organisatorischen zu rutschen ist die natürliche Neigung jeder Fernbeziehung. Beunruhigend wird es, wenn die schwierigen Themen ganz verschwinden: man streitet nicht mehr, man erzählt nichts mehr, man verwaltet.",
+    "pillar3Title": "Ob es einen Plan mit Datum gibt",
+    "pillar3Text": "Der beste bekannte Prädiktor für das Überleben einer Fernbeziehung. Nicht die erklärte Liebe, nicht die Anrufhäufigkeit: zu wissen, wann es endet. Ein Plan, der sich endlos verschiebt, wird irgendwann zu einer Absage, auch wenn niemand sie ausgesprochen hat.",
+    "pillar4Title": "Dein Platz im dortigen Leben",
+    "pillar4Text": "Vorgestellt werden, erwähnt werden, in den täglichen Gesprächen vorkommen. Wer dich aus seinem Alltag heraushält, hält dich oft auch aus seiner Zukunft heraus, und dieses Signal sagt weit mehr als eine unbeantwortete Nachricht.",
+    "pillar5Title": "Was beim Wiedersehen passiert",
+    "pillar5Text": "Ein paar Stunden Wiederannäherung sind normal und gut belegt. Eine Befangenheit, die tagelang anhält, oder Wiedersehen, die angespannt werden, sagen mehr als drei Wochen seltener Anrufe.",
+    "tip": "Eines zählt nicht, anders als viele denken: die Antwortgeschwindigkeit. Sie hängt weit mehr von Arbeit, Zeitverschiebung und Charakter ab als vom Gefühl."
+  },
+  "section3": {
+    "title": "Was deine Punktzahl sagt",
+    "p1": "Der Test wird auf 45 Punkte gerechnet. Hier ist eine hohe Punktzahl eine gute Nachricht: die Antworten reichen vom beunruhigendsten zum beruhigendsten Zeichen.",
+    "headerScore": "Punkte",
+    "headerLevel": "Stufe",
+    "headerAnalysis": "Was das heißt",
+    "row1Score": "0 bis 11",
+    "row1Level": "Die Verbindung ist dünn geworden",
+    "row1Analysis": "Was du beschreibst, geht über Kilometer-Erschöpfung hinaus. Die Mühe wirkt nicht mehr geteilt.",
+    "row2Score": "12 bis 23",
+    "row2Level": "Die Entfernung gewinnt",
+    "row2Analysis": "Die Gefühle sind wahrscheinlich da, aber die Pflege der Verbindung ist eingebrochen. Jetzt ist es umkehrbar.",
+    "row3Score": "24 bis 35",
+    "row3Level": "Die Verbindung hält",
+    "row3Analysis": "Die beschriebenen Schwachstellen haben fast alle Fernbeziehungen. Nichts Alarmierendes.",
+    "row4Score": "36 bis 45",
+    "row4Level": "Ja, und man sieht es",
+    "row4Analysis": "Ausgewogener Kontakt, echte Gespräche, ein Plan mit Datum. Die Entfernung ändert daran wenig.",
+    "tip": "Mach diesen Test nicht am Tag nach einem Streit. Eine Fernbeziehung hat Täler von wenigen Tagen, die nichts bedeuten und deine Punktzahl um zehn Punkte drücken würden, ohne dass sich wirklich etwas geändert hätte."
+  },
+  "section4": {
+    "title": "Woran Fernbeziehungen wirklich scheitern, und es ist nicht das Erwartete",
+    "p1": "Man stellt sich vor, Entfernung ende in einer Affäre oder im Erkalten der Gefühle. In der Praxis ist es fast immer etwas anderes, und dieses andere kündigt sich lange vorher an.",
+    "sub1Title": "Kein Enddatum",
+    "sub1Text": "Eine Entfernung mit bekanntem Ende lässt sich sehr gut aushalten, auch eine lange. Eine Entfernung ohne Horizont zermürbt alle, weil jede Woche eine weitere Woche in einem Tunnel unbekannter Länge ist. Das ist Faktor Nummer eins, vor allen anderen.",
+    "sub2Title": "Verarmende Gespräche",
+    "sub2Text": "Weil man die seltenen Telefonate schützen will, packt man am Ende nur noch gute Nachrichten hinein. Man umgeht heikle Themen, verschweigt Sorgen, fasst den Tag zusammen. Nach ein paar Monaten wissen zwei Menschen, die sich lieben, nichts mehr voneinander.",
+    "sub3Title": "Parallele Leben",
+    "sub3Text": "Jeder baut einen Alltag auf, in dem die andere Person nicht vorkommt. Neue Freunde, neue Gewohnheiten, neue Insider-Witze. Das ist kein Verrat, das ist Mechanik, und es wird nur zum Problem, wenn niemand den anderen in diese neue Kulisse hereinholt.",
+    "tip": "Wenn du dich in diesen drei Absätzen wiedererkennst, ist das keine schlechte Nachricht. Es sind die einzigen drei Punkte, an denen man arbeiten kann, ohne dass jemand seine Persönlichkeit ändern muss."
+  },
+  "section5": {
+    "title": "Was Fernbeziehungen tun, die halten",
+    "p1": "Die drei folgenden Gewohnheiten tauchen systematisch bei denen auf, die eine lange Distanzphase überstehen, ohne die Beziehung zu verlieren. Keine verlangt mehr Gefühl, nur mehr Organisation.",
+    "sub1Title": "Ein Datum, keine Absicht",
+    "sub1Text": "Nicht « wir sehen uns bald », sondern ein gebuchtes Ticket. Der Unterschied in der Tragfähigkeit ist enorm, weil ein Datum das Warten in einen Countdown verwandelt. Und sobald ein Besuch vorbei ist, wird der nächste festgelegt, bevor man auseinandergeht.",
+    "sub2Title": "Ein Termin, der nicht von der Laune abhängt",
+    "sub2Text": "Ein fester Zeitpunkt, auch ein kurzer, der existiert, ob man Lust hat oder nicht. Paare, die nur anrufen, wenn sie Lust haben, rufen irgendwann gar nicht mehr an, weil die Lust bei beiden immer gleichzeitig sinkt.",
+    "sub3Title": "Das Banale teilen, nicht nur das Wichtige",
+    "sub3Text": "Ein Foto vom Mittagessen, eine dumme Bemerkung, das Gesicht des unerträglichen Kollegen. Diese Nichtigkeiten stellen das Gefühl wieder her, zusammen zu leben, weit mehr als lange Gespräche über die Beziehung. Der geteilte Alltag ist das Erste, was die Entfernung wegnimmt.",
+    "tip": "Und eines auf keinen Fall: Entfernung mit Kontrolle ausgleichen. Beweise verlangen, unangekündigt anrufen, um zu prüfen, soziale Netzwerke durchkämmen. Das erschöpft eine Fernbeziehung schneller als die Trennung selbst."
+  },
+  "section6": {
+    "title": "Wie man die Frage stellt, ohne eine Trennung am Telefon auszulösen",
+    "p1": "Das ist die besondere Schwierigkeit der Distanz: man kann dieses Gespräch nicht im Blickkontakt führen, und ein Anruf, der entgleist, lässt sich nicht durch eine Umarmung retten. Ein paar Vorsichtsmaßnahmen ändern viel.",
+    "sub1Title": "Per Video, nie schriftlich",
+    "sub1Text": "Eine lange Nachricht zu diesem Thema kommt fast immer schlecht an, weil der Ton schriftlich nicht existiert und die andere Person sie zehnmal liest. Wenn Video nicht geht, ist ein Anruf immer noch besser als ein Text.",
+    "sub2Title": "Beschreibe einen Mangel, keinen Vorwurf",
+    "sub2Text": "« Ich fühle mich seit ein paar Wochen allein in dieser Geschichte » öffnet ein Gespräch. « Du gibst dir keine Mühe mehr » beendet es. Der Inhalt ist derselbe, der Ausgang überhaupt nicht.",
+    "sub3Title": "Frag zuerst nach dem Zeitpunkt",
+    "sub3Text": "Bevor du über Gefühle sprichst, sprich über das Datum. Das ist konkreter, weniger bedrohlich, und die Antwort verrät dir oft mehr als jede Erklärung. Wer dich halten will, sucht eine Lösung; wer losgelassen hat, verschiebt.",
+    "sub4Title": "Akzeptiere, dass ein Anruf nicht alles klärt",
+    "sub4Text": "Solche Gespräche laufen in mehreren Etappen. Eine endgültige Antwort in den vierzig Minuten vor dem Aufbruch zur Arbeit zu verlangen, ist der sicherste Weg zu einer falschen Antwort."
+  },
+  "section7": {
+    "title": "Wenn die Entfernung nicht mehr das eigentliche Thema ist",
+    "p1": "Es kommt ein Punkt, an dem sich die Frage ändert. Wenn du dreimal ein Datum gesetzt hast und es dreimal verschoben wurde, wenn die Gespräche seit Monaten leer sind, wenn du allein die Beziehung am Leben hältst, dann ist das Problem nicht mehr geografisch.",
+    "p2": "Eine Fernbeziehung misst sich nicht am Leid, das sie kostet, sondern an der Gegenseitigkeit der Mühe. Viele halten jahrelang in einer einseitigen Lage aus und sagen sich, es liege an den Kilometern. Kilometer schreiben keine Nachrichten.",
+    "p3": "Um aus einem anderen Blickwinkel Bilanz zu ziehen: der <a href=\"/de/liebe-oder-gewohnheit-test/\">Test Liebe oder Gewohnheit</a> stellt die Frage anders, und der <a href=\"/de/vertrauenstest-paar/\">Vertrauenstest</a> hilft, wenn dich vor allem die Ungewissheit über das Dortige beschäftigt.",
+    "tip": "Eine funktionierende Fernbeziehung verlangt viel Organisation und wenig Opfer. Wenn du den Eindruck vom Gegenteil hast, ist es wahrscheinlich kein Organisationsproblem."
+  },
+  "faq": {
+    "q1": "Wie erkenne ich, ob er oder sie mich auf Distanz noch liebt?",
+    "a1": "Die klassischen Zeichen funktionieren nicht, wenn man sich nicht sieht. Beobachtbar bleiben das Gleichgewicht des Kontakts, der Inhalt der Gespräche, die Existenz eines Plans mit Datum, dein Platz im sozialen Leben der anderen Person und der Verlauf der Wiedersehen. Genau diese fünf Punkte misst der Test.",
+    "q2": "Bedeutet weniger Anrufe zwangsläufig etwas?",
+    "a2": "Nein, und das ist der häufigste Irrtum. Die Häufigkeit sinkt in jeder Fernbeziehung nach den ersten Monaten, bei den Paaren, die halten, genauso wie bei den anderen. Was sich ändert, ist, wer zuerst schreibt und was ihr euch sagt. Die Menge allein ist kein Indikator.",
+    "q3": "Meine Punktzahl ist niedrig, heißt das, es ist vorbei?",
+    "a3": "Nein. Eine niedrige Punktzahl heißt, dass die Pflege der Verbindung eingebrochen ist, und das ist nicht dasselbe wie erkaltete Liebe. In den meisten Fällen genügen ein Wiedersehenstermin und ein regelmäßiger Anruf, um wieder hochzukommen. Nicht aufholbar ist ein Ungleichgewicht der Mühe, das seit Jahren besteht.",
+    "q4": "Wie lange kann eine Fernbeziehung halten?",
+    "a4": "Die Dauer zählt weniger als ein bekanntes Ende. Manche Paare halten drei Jahre mühelos durch, weil sie wissen, wann es aufhört, andere zerbrechen in sechs Monaten, weil sich der Horizont mit jedem Gespräch entfernt. Wenn du nur an einem Punkt arbeiten könntest, wäre es dieser.",
+    "q5": "Soll man diesen Test zu zweit machen?",
+    "a5": "Dieser ist dafür gedacht, allein gemacht zu werden, weil es um das geht, was du beobachtest und was du fühlst. Wenn du eure Antworten vergleichen willst, ist unser Fernbeziehungs-Quiz dafür gemacht und wird zu zweit gespielt.",
+    "q6": "Werden meine Antworten gespeichert?",
+    "a6": "Nein. Alles läuft in deinem Browser, keine Antwort wird gesendet oder aufbewahrt, und es gibt weder ein Konto noch eine E-Mail-Adresse anzugeben. Du kannst den Test in einem Monat zum Vergleich wiederholen, gespeichert wird dazwischen nichts."
+  }
+}
