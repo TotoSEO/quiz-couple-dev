@@ -327,7 +327,8 @@
     "jeuQuiDeNous": "Which one of us?",
     "testDateNaissance": "Birth date compatibility test",
     "testCouche": "Has he or she slept with someone else test",
-    "testSecret": "Does he or she secretly love me test"
+    "testSecret": "Does he or she secretly love me test",
+    "testDistanceAime": "Long distance does he still love me test"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -545,5 +546,10 @@
     "introQuestion": "You're asking yourself:",
     "introQuote": "« Do they secretly love me… or am I telling myself a story? »",
     "disclaimer": "Think of one specific person before you start, and answer about them only."
+  },
+  "distanceAime": {
+    "introQuestion": "You're asking yourself:",
+    "introQuote": "« Do they still love me… or is it just the distance? »",
+    "disclaimer": "Answer on the last few weeks, not on the start of your story."
   }
 }

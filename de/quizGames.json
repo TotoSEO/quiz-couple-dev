@@ -327,7 +327,8 @@
     "jeuQuiDeNous": "Wer von uns beiden?",
     "testDateNaissance": "Kompatibilitätstest nach Geburtsdatum",
     "testCouche": "Test mit jemand anderem geschlafen",
-    "testSecret": "Test liebt er oder sie mich heimlich"
+    "testSecret": "Test liebt er oder sie mich heimlich",
+    "testDistanceAime": "Test liebt er mich noch Fernbeziehung"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
@@ -545,5 +546,10 @@
     "introQuestion": "Du fragst dich:",
     "introQuote": "« Liebt er oder sie mich heimlich… oder erzähle ich mir eine Geschichte? »",
     "disclaimer": "Denk vor dem Start an eine ganz bestimmte Person und antworte nur über sie."
+  },
+  "distanceAime": {
+    "introQuestion": "Du fragst dich:",
+    "introQuote": "« Liebt er oder sie mich noch… oder ist es nur die Entfernung? »",
+    "disclaimer": "Antworte mit Blick auf die letzten Wochen, nicht auf den Anfang eurer Geschichte."
   }
 }

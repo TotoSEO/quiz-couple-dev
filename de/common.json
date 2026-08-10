@@ -53,7 +53,8 @@
     "deployerJeux": "Alle Spiele anzeigen",
     "testDateNaissance": "Geburtsdatum-Kompatibilität",
     "testCouche": "Mit jemand anderem geschlafen?",
-    "testSecret": "Liebt er mich heimlich?"
+    "testSecret": "Liebt er mich heimlich?",
+    "testDistanceAime": "Liebt er mich noch?"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",

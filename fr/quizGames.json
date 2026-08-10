@@ -328,7 +328,8 @@
     "jeuQuiDeNous": "Qui de nous deux ?",
     "testDateNaissance": "Test compatibilité date de naissance",
     "testCouche": "Test « a-t-il ou a-t-elle couché avec quelqu'un d'autre »",
-    "testSecret": "Test m'aime-t-il ou m'aime-t-elle en secret"
+    "testSecret": "Test m'aime-t-il ou m'aime-t-elle en secret",
+    "testDistanceAime": "Test m'aime-t-il encore à distance"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -546,5 +547,10 @@
     "introQuestion": "Vous vous posez la question :",
     "introQuote": "« Est-ce qu'il ou elle m'aime en secret… ou est-ce que je me raconte une histoire ? »",
     "disclaimer": "Pensez à une personne précise avant de commencer, et répondez sur elle uniquement."
+  },
+  "distanceAime": {
+    "introQuestion": "Vous vous posez la question :",
+    "introQuote": "« Est-ce qu'il ou elle m'aime encore… ou est-ce que c'est juste la distance ? »",
+    "disclaimer": "Répondez sur les dernières semaines, pas sur le début de votre histoire."
   }
 }

@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "badge": "Test gratuito, 15 preguntas",
+    "title": "¿Me sigue queriendo?",
+    "titleHighlight": "sigue queriendo",
+    "description": "Especial relación a distancia. 15 preguntas para separar lo que viene de los kilómetros de lo que viene del sentimiento, porque no se ven igual.",
+    "subtitle": "Test individual, gratuito y anónimo"
+  },
+  "howTo": {
+    "title": "¿Cómo funciona este test?",
+    "step1": "Respondes tú solo, sobre tu relación actual. No se envía nada, nadie verá tus respuestas.",
+    "step2": "Piensa en las <strong>últimas semanas</strong> y no en el principio de vuestra historia. Una relación a distancia cambia de ritmo varias veces, lo que cuenta es el periodo actual.",
+    "step3": "Las respuestas van de la señal más preocupante a la más tranquilizadora, de 0 a 3 puntos.",
+    "step4": "El resultado te dice si lo que vives se parece a un desgaste de la distancia o a otra cosa.",
+    "outro": "Responde en frío, no justo después de una discusión o de dos días de silencio. Las relaciones a distancia tienen bajones que, aislados, no significan nada."
+  },
+  "crossLink": {
+    "title": "¿Prefieres hacerlo en pareja?",
+    "text": "Nuestro quiz especial pareja a distancia se juega entre dos y compara vuestras respuestas, en vez de evaluar la relación desde un solo punto de vista.",
+    "button": "Ver el quiz pareja a distancia"
+  },
+  "section1": {
+    "title": "La distancia lo vuelve todo ilegible, y ese es el verdadero problema",
+    "p1": "En una pareja que vive en el mismo sitio, el desamor se ve. Hay silencios en la mesa, noches por separado, una mano que ya no se coge. A distancia, todas esas señales desaparecen, y solo quedan mensajes, llamadas y semanas de espera.",
+    "p2": "El problema es que <strong>el cansancio de la distancia y el desamor producen exactamente los mismos síntomas</strong>: menos llamadas, conversaciones más cortas, menos ganas de proyectar. Dos causas muy distintas, una sola apariencia. Por eso se dan vueltas durante meses.",
+    "p3": "Este test no puede leer el pensamiento de tu pareja. Lo que hace es clasificar tus observaciones en dos familias: las que se explican por los kilómetros y las que solo se explican por una retirada. No son lo mismo, y no piden la misma reacción."
+  },
+  "section2": {
+    "title": "Las cinco señales que cuentan de verdad a distancia",
+    "intro": "Los indicios habituales de las parejas no funcionan aquí. Estos son los que conservan su valor cuando no os veis.",
+    "pillar1Title": "Quién inicia el contacto",
+    "pillar1Text": "La señal más fiable de todas, y la más fácil de observar. La frecuencia de los mensajes baja en todo el mundo con el tiempo, pero el equilibrio entre quien escribe y quien responde no se mueve mientras haya ganas. Escribir siempre primero durante semanas es la verdadera alarma.",
+    "pillar2Title": "De qué están hechas las conversaciones",
+    "pillar2Text": "Pasar de discusiones de verdad a intercambios de logística es la pendiente natural de toda relación a distancia. Se vuelve preocupante cuando los temas difíciles desaparecen del todo: ya no se discute, ya no se cuenta nada, se gestiona.",
+    "pillar3Title": "La existencia de un plan con fecha",
+    "pillar3Text": "Es el mejor predictor conocido de la supervivencia de una pareja a distancia. No el amor declarado, no la frecuencia de las llamadas: saber cuándo se acaba. Un plan que se aplaza indefinidamente acaba equivaliendo a un no, aunque nadie lo haya formulado.",
+    "pillar4Title": "Tu lugar en su vida de allí",
+    "pillar4Text": "Que te presenten, que te mencionen, existir en sus conversaciones diarias. Quien te mantiene fuera de su día a día suele mantenerte también fuera de su futuro, y esa señal dice mucho más que un mensaje sin responder.",
+    "pillar5Title": "Lo que pasa en los reencuentros",
+    "pillar5Text": "Un tiempo de readaptación de unas horas es normal y está documentado. Una incomodidad que dura días, o unos reencuentros que se vuelven tensos, dicen mucho más que tres semanas de llamadas espaciadas.",
+    "tip": "Hay algo que no cuenta, al contrario de lo que se cree: la velocidad de respuesta a los mensajes. Depende del trabajo, del huso horario y del carácter mucho más que del sentimiento."
+  },
+  "section3": {
+    "title": "Lo que dice tu puntuación",
+    "p1": "El test se puntúa sobre 45. Aquí una puntuación alta es una buena noticia: las respuestas van de la señal más preocupante a la más tranquilizadora.",
+    "headerScore": "Puntuación",
+    "headerLevel": "Nivel",
+    "headerAnalysis": "Lo que significa",
+    "row1Score": "0 a 11",
+    "row1Level": "El vínculo se ha aflojado",
+    "row1Analysis": "Lo que describes va más allá del cansancio de los kilómetros. El esfuerzo ya no parece compartido.",
+    "row2Score": "12 a 23",
+    "row2Level": "La distancia está ganando",
+    "row2Analysis": "Los sentimientos probablemente están, pero el mantenimiento del vínculo se ha hundido. Ahora es reversible.",
+    "row3Score": "24 a 35",
+    "row3Level": "El vínculo aguanta",
+    "row3Analysis": "Los puntos débiles descritos son los de casi todas las parejas a distancia. Nada alarmante.",
+    "row4Score": "36 a 45",
+    "row4Level": "Sí, y se nota",
+    "row4Analysis": "Contacto equilibrado, conversaciones de verdad, plan con fecha. La distancia no cambia gran cosa.",
+    "tip": "No hagas este test al día siguiente de una discusión. Una pareja a distancia tiene bajones de unos días que no significan nada, y que te bajarían diez puntos sin que haya cambiado nada de verdad."
+  },
+  "section4": {
+    "title": "Lo que mata a las parejas a distancia, y no es lo que se piensa",
+    "p1": "Se imagina que la distancia acaba en una infidelidad o en un enfriamiento de los sentimientos. En la práctica, casi siempre es otra cosa, y esa otra cosa se ve venir de lejos.",
+    "sub1Title": "La ausencia de plazo",
+    "sub1Text": "Una distancia con un final conocido se soporta muy bien, aunque sea larga. Una distancia sin horizonte desgasta a todo el mundo, porque cada semana es una semana más en un túnel cuya longitud nadie conoce. Es el factor número uno, por delante de todos los demás.",
+    "sub2Title": "El empobrecimiento de los intercambios",
+    "sub2Text": "De tanto querer proteger los pocos ratos de llamada, solo se meten buenas noticias. Se evitan los temas espinosos, se callan las preocupaciones, se resume el día. Al cabo de unos meses, dos personas que se quieren ya no saben nada la una de la otra.",
+    "sub3Title": "Las vidas paralelas",
+    "sub3Text": "Cada uno construye un día a día donde el otro no existe. Nuevos amigos, nuevas costumbres, nuevas bromas. No es una traición, es mecánico, y solo se convierte en problema si nadie hace entrar al otro en ese decorado nuevo.",
+    "tip": "Si te reconoces en esos tres párrafos, no es una mala noticia. Son los tres únicos puntos sobre los que se puede actuar sin que el otro tenga que cambiar de personalidad."
+  },
+  "section5": {
+    "title": "Lo que hacen las parejas a distancia que aguantan",
+    "p1": "Las tres costumbres siguientes aparecen sistemáticamente en quienes atraviesan un periodo largo de distancia sin dejarse la pareja por el camino. Ninguna pide más sentimiento, solo más organización.",
+    "sub1Title": "Una fecha, no una intención",
+    "sub1Text": "No «nos vemos pronto» sino un billete reservado. La diferencia de solidez entre ambas cosas es enorme, porque una fecha convierte la espera en una cuenta atrás. Y en cuanto pasa una visita, se cierra la siguiente antes de despedirse.",
+    "sub2Title": "Una cita que no dependa del humor",
+    "sub2Text": "Un hueco regular, aunque sea corto, que existe se tengan ganas o no. Las parejas que se llaman solo cuando les apetece acaban por no llamarse nunca, porque las ganas siempre bajan a la vez en los dos.",
+    "sub3Title": "Compartir lo banal, no solo lo importante",
+    "sub3Text": "Una foto de la comida, un comentario tonto, la cara del compañero insoportable. Son esas naderías las que recrean la sensación de vivir juntos, mucho más que las largas conversaciones sobre la relación. Lo cotidiano compartido es lo primero que quita la distancia.",
+    "tip": "Y una cosa que no hay que hacer bajo ningún concepto: compensar la distancia con vigilancia. Pedir pruebas, llamar de improviso para comprobar, revisar las redes. Eso cansa a una pareja a distancia más rápido que la propia separación."
+  },
+  "section6": {
+    "title": "Cómo hacer la pregunta sin provocar una ruptura por teléfono",
+    "p1": "Es la dificultad propia de la distancia: no se puede tener esa conversación mirándose, y una llamada que se tuerce no se arregla abrazando al otro. Unas cuantas precauciones cambian muchas cosas.",
+    "sub1Title": "En videollamada, nunca por escrito",
+    "sub1Text": "Un mensaje largo sobre este tema casi siempre se recibe mal, porque el tono no existe por escrito y el otro lo relee diez veces. Si la videollamada no es posible, una llamada sigue siendo mejor que un texto.",
+    "sub2Title": "Describe una falta, no un reproche",
+    "sub2Text": "«Me siento solo en esta historia desde hace unas semanas» abre una conversación. «Ya no haces ningún esfuerzo» la cierra. El contenido es el mismo, el desenlace no lo es en absoluto.",
+    "sub3Title": "Pregunta primero por el plazo",
+    "sub3Text": "Antes de hablar de sentimientos, habla de la fecha. Es más concreto, menos amenazante, y la respuesta te enseñará a menudo más que cualquier declaración. Quien quiere conservarte busca una solución; quien ya lo ha soltado lo aplaza.",
+    "sub4Title": "Acepta no resolverlo todo en una llamada",
+    "sub4Text": "Estas conversaciones se hacen en varias veces. Querer una respuesta definitiva en los cuarenta minutos antes de que el otro se vaya a trabajar es la mejor forma de obtener una respuesta falsa."
+  },
+  "section7": {
+    "title": "Cuando la distancia ya no es el verdadero tema",
+    "p1": "Llega un momento en que la pregunta cambia. Si has puesto una fecha tres veces y tres veces se ha movido, si las conversaciones llevan meses vacías, si eres el único que mantiene viva la relación, entonces el problema ya no es geográfico.",
+    "p2": "Una relación a distancia no se juzga por el sufrimiento que cuesta, sino por la reciprocidad del esfuerzo. Mucha gente aguanta años en una situación de sentido único diciéndose que es culpa de los kilómetros. Los kilómetros no escriben los mensajes.",
+    "p3": "Para hacer balance desde otro ángulo, el <a href=\"/es/test-amor-o-costumbre/\">test de amor o costumbre</a> plantea la pregunta de otra forma, y el <a href=\"/es/test-confianza-pareja/\">test de confianza</a> es útil si lo que te reconcome es sobre todo la incertidumbre sobre lo que pasa allí.",
+    "tip": "Una relación a distancia que funciona pide mucha organización y pocos sacrificios. Si tienes la impresión de lo contrario, probablemente no sea un problema de logística."
+  },
+  "faq": {
+    "q1": "¿Cómo saber si me sigue queriendo a distancia?",
+    "a1": "Los signos clásicos no funcionan cuando no os veis. Lo que sigue siendo observable es el equilibrio del contacto, de qué están hechas las conversaciones, la existencia de un plan con fecha, tu lugar en la vida social del otro y cómo se dan los reencuentros. Esos cinco puntos son los que mide el test.",
+    "q2": "¿Una bajada de llamadas significa forzosamente algo?",
+    "a2": "No, y es el error más frecuente. La frecuencia de los intercambios baja en todas las relaciones a distancia pasados los primeros meses, tanto en las parejas que duran como en las demás. Lo que cambia es quién escribe primero y qué os decís. El volumen por sí solo no es un indicador.",
+    "q3": "Mi puntuación es baja, ¿significa que se acabó?",
+    "a3": "No. Una puntuación baja significa que el mantenimiento del vínculo se ha hundido, que no es lo mismo que un desamor. En la mayoría de los casos, una fecha de reencuentro y una llamada regular bastan para remontar. Lo que no se recupera es un desequilibrio de esfuerzo que dura desde hace años.",
+    "q4": "¿Cuánto puede durar una relación a distancia?",
+    "a4": "La duración cuenta menos que la existencia de un final conocido. Hay parejas que aguantan tres años sin dificultad porque saben cuándo se acaba, y otras que se rompen en seis meses porque el horizonte se aleja en cada conversación. Si solo pudieras trabajar un punto, sería ese.",
+    "q5": "¿Hay que hacer este test en pareja?",
+    "a5": "Este está pensado para hacerse a solas, porque trata de lo que tú observas y de lo que tú sientes. Si quieres comparar vuestras respuestas, nuestro quiz de pareja a distancia está hecho para eso y se juega entre dos.",
+    "q6": "¿Se guardan mis respuestas?",
+    "a6": "No. Todo ocurre en tu navegador, no se envía ni se conserva ninguna respuesta, y no hay ni cuenta ni correo electrónico que dar. Puedes repetir el test dentro de un mes para comparar, pero no se guardará nada mientras tanto."
+  }
+}

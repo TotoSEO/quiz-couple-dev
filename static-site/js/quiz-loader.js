@@ -140,6 +140,14 @@
     // Même mécanique que le test précédent : on demande d'abord à qui on
     // pense, puis on charge la série correspondante. Dix questions seulement,
     // le sujet ne supporte pas la longueur.
+    // ── « M'aime-t-il / m'aime-t-elle encore », spécial distance ──
+    // Une seule série ici : les questions sont écrites autour de « votre
+    // partenaire » et sans adjectif accordé, le genre n'a donc pas à être
+    // demandé. Barème inversé par rapport aux deux tests de doute : la
+    // dernière réponse est la plus rassurante, un score haut est une bonne
+    // nouvelle.
+    'distance-aime':  { prefix: 'distanceAime', engine: 'solo', totalQ: 15, pool: 15, quizType: 'distanceAime', ascending: true },
+
     'secret':         { modes: [
       { id: 'homme', emoji: '👨', prefix: 'secretH', engine: 'solo', totalQ: 10, pool: 10, quizType: 'secret', ascending: true, resultPrefix: 'secret' },
       { id: 'femme', emoji: '👩', prefix: 'secretF', engine: 'solo', totalQ: 10, pool: 10, quizType: 'secret', ascending: true, resultPrefix: 'secret' }

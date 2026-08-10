@@ -327,7 +327,8 @@
     "jeuQuiDeNous": "Chi di noi due?",
     "testDateNaissance": "Test di compatibilità per data di nascita",
     "testCouche": "Test è andato a letto con un'altra persona",
-    "testSecret": "Test mi ama in segreto"
+    "testSecret": "Test mi ama in segreto",
+    "testDistanceAime": "Test mi ama ancora a distanza"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
@@ -545,5 +546,10 @@
     "introQuestion": "Ti stai chiedendo:",
     "introQuote": "«Mi ama in segreto… o mi sto raccontando una storia?»",
     "disclaimer": "Pensa a una persona precisa prima di iniziare, e rispondi solo su di lei."
+  },
+  "distanceAime": {
+    "introQuestion": "Ti stai chiedendo:",
+    "introQuote": "«Mi ama ancora… o è solo la distanza?»",
+    "disclaimer": "Rispondi pensando alle ultime settimane, non all'inizio della vostra storia."
   }
 }

@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "badge": "Free test, 15 questions",
+    "title": "Do they still love me?",
+    "titleHighlight": "still love me",
+    "description": "Made for long-distance relationships. 15 questions to separate what comes from the miles from what comes from the feelings, because the two don't look the same.",
+    "subtitle": "Solo test, free and anonymous"
+  },
+  "howTo": {
+    "title": "How does this test work?",
+    "step1": "You answer alone, about your current relationship. Nothing is sent, nobody will see your answers.",
+    "step2": "Think about the <strong>last few weeks</strong>, not the start of your story. A long-distance relationship changes rhythm several times; what counts is the current stretch.",
+    "step3": "Answers run from the most worrying sign to the most reassuring one, from 0 to 3 points.",
+    "step4": "The result tells you whether what you're living through looks like distance fatigue or something else.",
+    "outro": "Answer with a clear head, not right after an argument or two days of silence. Long-distance relationships have dips that mean nothing on their own."
+  },
+  "crossLink": {
+    "title": "Would you rather do it together?",
+    "text": "Our long-distance couple quiz is played by two and compares your answers, instead of assessing the relationship from a single point of view.",
+    "button": "See the long-distance couple quiz"
+  },
+  "section1": {
+    "title": "Distance makes everything unreadable, and that's the real problem",
+    "p1": "In a couple living in the same place, falling out of love shows. There are silences at the table, evenings spent apart, a hand that isn't taken any more. At a distance, all those signals disappear, and all that's left are messages, calls and weeks of waiting.",
+    "p2": "The trouble is that <strong>distance fatigue and falling out of love produce exactly the same symptoms</strong>: fewer calls, shorter conversations, less appetite for making plans. Two very different causes, one single appearance. That's why people go round in circles for months.",
+    "p3": "This test can't read your partner's mind. What it does is sort your observations into two families: those explained by the miles, and those that can only be explained by withdrawal. They aren't the same, and they don't call for the same response."
+  },
+  "section2": {
+    "title": "The five signals that really count at a distance",
+    "intro": "The usual couple clues don't work here. These are the ones that keep their value when you can't see each other.",
+    "pillar1Title": "Who starts the contact",
+    "pillar1Text": "The most reliable signal of all, and the easiest to observe. Message frequency drops for everyone over time, but the balance between who writes and who replies doesn't move while the desire is there. Always writing first for weeks on end is the real alarm.",
+    "pillar2Title": "What the conversations are made of",
+    "pillar2Text": "Going from real discussions to logistics is the natural slope of every long-distance relationship. It becomes worrying when the difficult subjects vanish completely: you no longer argue, you no longer tell each other anything, you just manage.",
+    "pillar3Title": "Whether there's a dated plan",
+    "pillar3Text": "The best known predictor of a long-distance couple's survival. Not declared love, not call frequency: knowing when it ends. A plan that keeps sliding eventually amounts to a refusal, even when nobody has said so.",
+    "pillar4Title": "Your place in their life over there",
+    "pillar4Text": "Being introduced, being mentioned, existing in their daily conversations. Someone who keeps you out of their local life often keeps you out of their future too, and that signal says far more than an unanswered message.",
+    "pillar5Title": "What happens at reunions",
+    "pillar5Text": "A few hours of readjustment is normal and well documented. An awkwardness that lasts days, or reunions that turn tense, tells you far more than three weeks of spaced-out calls.",
+    "tip": "One thing doesn't count, contrary to what people think: reply speed. It depends on work, on time zones and on character far more than on feelings."
+  },
+  "section3": {
+    "title": "What your score says",
+    "p1": "The test is scored out of 45. Here a high score is good news: the answers run from the most worrying sign to the most reassuring one.",
+    "headerScore": "Score",
+    "headerLevel": "Level",
+    "headerAnalysis": "What it means",
+    "row1Score": "0 to 11",
+    "row1Level": "The bond has stretched thin",
+    "row1Analysis": "What you describe goes beyond mileage fatigue. The effort no longer looks shared.",
+    "row2Score": "12 to 23",
+    "row2Level": "Distance is winning",
+    "row2Analysis": "The feelings are probably there, but the upkeep of the bond has collapsed. It's reversible now.",
+    "row3Score": "24 to 35",
+    "row3Level": "The bond holds",
+    "row3Analysis": "The weak points described are those of nearly every long-distance couple. Nothing alarming.",
+    "row4Score": "36 to 45",
+    "row4Level": "Yes, and it shows",
+    "row4Analysis": "Balanced contact, real conversations, a dated plan. Distance doesn't change much here.",
+    "tip": "Don't take this test the day after an argument. A long-distance couple has dips of a few days that mean nothing, and that would knock ten points off your score without anything having really changed."
+  },
+  "section4": {
+    "title": "What actually kills long-distance couples, and it isn't what people think",
+    "p1": "People imagine distance ends in an affair or in feelings fading. In practice it's almost always something else, and that something else can be seen coming from a long way off.",
+    "sub1Title": "No deadline",
+    "sub1Text": "A distance with a known end is bearable, even a long one. A distance with no horizon wears everyone down, because each week becomes one more week in a tunnel of unknown length. It's factor number one, ahead of all the others.",
+    "sub2Title": "Conversations that get thinner",
+    "sub2Text": "In trying to protect the rare moments on the phone, you end up putting only good news into them. You avoid the awkward subjects, you keep your worries quiet, you summarise your day. After a few months, two people who love each other know nothing about each other.",
+    "sub3Title": "Parallel lives",
+    "sub3Text": "Each builds a daily life in which the other doesn't exist. New friends, new habits, new in-jokes. It isn't a betrayal, it's mechanical, and it only becomes a problem if nobody lets the other into that new setting.",
+    "tip": "If you recognise yourself in those three paragraphs, that isn't bad news. They're the only three points you can act on without the other person having to change their personality."
+  },
+  "section5": {
+    "title": "What long-distance couples who last actually do",
+    "p1": "The three habits below come up systematically among those who get through a long stretch of distance without losing the relationship. None of them requires more feeling, only more organisation.",
+    "sub1Title": "A date, not an intention",
+    "sub1Text": "Not \"we'll see each other soon\" but a booked ticket. The difference in solidity between the two is enormous, because a date turns waiting into a countdown. And as soon as one visit is over, the next one gets set before you part.",
+    "sub2Title": "A slot that doesn't depend on mood",
+    "sub2Text": "A regular time, even a short one, that exists whether you feel like it or not. Couples who only call when they feel like it end up not calling at all, because the appetite always drops at the same time for both.",
+    "sub3Title": "Share the ordinary, not only the important",
+    "sub3Text": "A photo of your lunch, a silly remark, the face your unbearable colleague pulled. Those nothings are what recreate the feeling of living together, far more than long conversations about the relationship. Shared ordinariness is the first thing distance takes away.",
+    "tip": "And one thing to avoid at all costs: compensating for distance with surveillance. Asking for proof, calling unannounced to check, combing through social media. It exhausts a long-distance couple faster than the separation itself."
+  },
+  "section6": {
+    "title": "How to ask the question without triggering a break-up by phone",
+    "p1": "This is the difficulty specific to distance: you can't have this conversation face to face, and a call that goes wrong can't be rescued by putting your arms around someone. A few precautions change a great deal.",
+    "sub1Title": "On video, never in writing",
+    "sub1Text": "A long message on this subject is almost always badly received, because tone doesn't exist in writing and the other person reads it ten times over. If video isn't possible, a call is still better than a text.",
+    "sub2Title": "Describe a lack, not a grievance",
+    "sub2Text": "\"I've felt alone in this relationship for a few weeks\" opens a conversation. \"You don't make any effort any more\" closes it. The content is the same, the outcome is not at all.",
+    "sub3Title": "Ask about the deadline first",
+    "sub3Text": "Before talking about feelings, talk about the date. It's more concrete, less threatening, and the answer will often teach you more than any declaration. Someone who wants to keep you looks for a solution; someone who has let go pushes it back.",
+    "sub4Title": "Accept that one call won't settle everything",
+    "sub4Text": "These conversations happen in several instalments. Wanting a definitive answer in the forty minutes before the other person leaves for work is the surest way to get a false one."
+  },
+  "section7": {
+    "title": "When distance is no longer the real subject",
+    "p1": "There comes a point where the question changes. If you've set a date three times and it has slipped three times, if the conversations have been empty for months, if you're the only one keeping the relationship alive, then the problem isn't geographical any more.",
+    "p2": "A long-distance relationship isn't judged by the pain it costs, but by whether the effort goes both ways. Plenty of people hold on for years in a one-way situation by telling themselves it's the miles' fault. Miles don't write the messages.",
+    "p3": "To take stock from another angle, the <a href=\"/en/love-or-habit-test/\">love or habit test</a> asks the question differently, and the <a href=\"/en/trust-test-couple/\">trust test</a> is useful if what eats at you is mostly uncertainty about what happens over there.",
+    "tip": "A long-distance relationship that works asks for a lot of organisation and few sacrifices. If you feel it's the other way round, it probably isn't a logistics problem."
+  },
+  "faq": {
+    "q1": "How can I tell whether they still love me at a distance?",
+    "a1": "The classic signs don't work when you can't see each other. What stays observable is the balance of contact, what the conversations are made of, whether a dated plan exists, your place in the other's social life and how reunions go. Those five points are what this test measures.",
+    "q2": "Does a drop in calls necessarily mean something?",
+    "a2": "No, and that's the most common mistake. Exchange frequency drops in every long-distance relationship after the first months, in couples that last as much as in the others. What changes is who writes first and what you say to each other. Volume alone isn't an indicator.",
+    "q3": "My score is low, does that mean it's over?",
+    "a3": "No. A low score means the upkeep of the bond has collapsed, which isn't the same as falling out of love. In most cases, a reunion date and a regular call are enough to climb back up. What can't be recovered is an imbalance of effort that has lasted for years.",
+    "q4": "How long can a long-distance relationship last?",
+    "a4": "The duration matters less than having a known end. Some couples hold on for three years without difficulty because they know when it stops, and others break in six months because the horizon slips with every conversation. If you only worked on one point, that would be it.",
+    "q5": "Should this test be taken together?",
+    "a5": "This one is designed to be taken alone, because it's about what you observe and what you feel. If you want to compare your answers with your partner's, our long-distance couple quiz is made for that and is played by two.",
+    "q6": "Are my answers stored?",
+    "a6": "No. Everything happens in your browser, no answer is sent or kept, and there is no account and no email address to give. You can retake the test in a month to compare, but nothing will be saved in the meantime."
+  }
+}
