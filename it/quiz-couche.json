@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "badge": "Test gratuito, 15 domande",
+    "title": "È andato o andata a letto con un altro?",
+    "titleHighlight": "a letto con un altro",
+    "description": "15 domande per mettere ordine in ciò che hai osservato. Si parte chiedendoti di chi stiamo parlando, perché le domande non sono le stesse.",
+    "subtitle": "Gratis, anonimo, risultato immediato"
+  },
+  "howTo": {
+    "title": "Come funziona questo test?",
+    "step1": "Indichi se il tuo partner è un uomo o una donna. Le quindici domande si adattano, e due cambiano completamente.",
+    "step2": "Rispondi pensando alle <strong>ultime settimane</strong>, non a tutta la vostra storia. Un segnale conta per il cambiamento che rappresenta, non perché esiste.",
+    "step3": "Ogni risposta vale da 0 a 3 punti. Il totale ti colloca in uno dei quattro livelli di lettura.",
+    "step4": "Il risultato ti dice quanto pesano insieme le tue osservazioni, e cosa è ragionevole farne.",
+    "outro": "Rispondi con sincerità, anche quando la risposta sincera è «non lo so». Un risultato rassicurante ottenuto smussando gli angoli non serve a niente."
+  },
+  "crossLink": {
+    "title": "Non è esattamente la tua domanda?",
+    "text": "Se il tuo dubbio riguarda piuttosto un rapporto troppo stretto, messaggi ambigui o una complicità che ti mette a disagio, l'altro test è quello che fa per te.",
+    "button": "Fare il test infedeltà completo"
+  },
+  "section1": {
+    "title": "Quella domanda che gira in tondo",
+    "p1": "Forse non l'hai detto a nessuno. Torna la sera, in macchina, quando la conversazione si spegne. <strong>È andato o andata a letto con un'altra persona?</strong> E subito dietro, una seconda domanda, spesso più dolorosa: sto impazzendo, o ho ragione?",
+    "p2": "Il dubbio ha questa particolarità di nutrirsi da solo. Un ritardo diventa una bugia, un telefono girato diventa una prova, un silenzio diventa una confessione. Poi il giorno dopo tutto sembra normale e ti rimproveri di averci pensato. Questo andirivieni sfianca, e danneggia la relazione tanto quanto ciò che temi.",
+    "p3": "Questo test non deciderà al posto tuo, e sarebbe disonesto pretenderlo. Quello che fa è mettere una accanto all'altra le cose che hai davvero osservato, separare i segnali che pesano da quelli che non pesano nulla, e restituirti una lettura d'insieme invece di quindici dettagli che ti girano in testa."
+  },
+  "section2": {
+    "title": "I segnali che contano e quelli che non provano niente",
+    "intro": "Nessuno di questi segnali vale da solo. Conta il cambiamento recente, e il fatto che ne compaiano diversi nello stesso periodo.",
+    "pillar1Title": "Il telefono che cambia statuto",
+    "pillar1Text": "Il segnale non è «protegge il telefono», è «lo protegge da poco». Codice nuovo, schermo girato, notifiche silenziate, conversazione archiviata. Chi è sempre stato riservato non dice assolutamente nulla.",
+    "pillar2Title": "Le versioni che non reggono",
+    "pillar2Text": "È il segnale più pesante di tutti, perché è verificabile. Una serata raccontata due volte con due luoghi diversi, una spiegazione corretta a posteriori. La bugia sul luogo pesa più della bugia sull'orario.",
+    "pillar3Title": "L'intimità che cambia rotta",
+    "pillar3Text": "In entrambi i sensi. L'interruzione brusca allarma, ma anche un cambio di natura: abitudini nuove spuntate dal nulla sollevano tante domande quanto un deserto improvviso.",
+    "pillar4Title": "L'accusa rovesciata",
+    "pillar4Text": "Fai una domanda e ti ritrovi a giustificarti. Quando qualcuno accusa il partner di infedeltà senza che nulla lo lasciasse presagire, i terapeuti la chiamano proiezione. Non è una prova, ma è notevole.",
+    "pillar5Title": "I soldi lasciano tracce",
+    "pillar5Text": "Una doppia vita costa cara. Prelievi in contanti insoliti, spese di ristorante o hotel invisibili nel bilancio comune, un conto aperto senza dire nulla. Il conto in banca mente peggio delle persone.",
+    "pillar6Title": "Il giro che diventa strano",
+    "pillar6Text": "Un silenzio quando arrivi, un amico che ti evita, una frase a metà. I vicini spesso sanno prima, e sopportano male di sapere. Il loro disagio è un segnale indiretto, e si nota.",
+    "tip": "Due segnali non bastano quasi mai. La parola che usano gli investigatori è «quadro indiziario»: è la convergenza di più indizi nello stesso periodo a cambiare la lettura, non il loro numero grezzo."
+  },
+  "section3": {
+    "title": "Cosa dice il tuo punteggio e cosa non dice",
+    "p1": "Il test si valuta su 45 punti. I quattro livelli qui sotto non sono verdetti, sono modi di leggere quello che hai risposto. Un punteggio alto descrive un comportamento, mai un fatto.",
+    "headerScore": "Punteggio",
+    "headerLevel": "Livello",
+    "headerAnalysis": "Cosa significa",
+    "row1Score": "Da 0 a 11",
+    "row1Level": "Niente in quella direzione",
+    "row1Analysis": "Nessuno dei segnali abituali. Se il dubbio resta, probabilmente viene da altrove e non dal suo comportamento.",
+    "row2Score": "Da 12 a 23",
+    "row2Level": "Segnali ambigui",
+    "row2Analysis": "Cambiamenti, sì. Ma lo stress, la stanchezza e una fase di ritiro producono esattamente gli stessi sintomi.",
+    "row3Score": "Da 24 a 35",
+    "row3Level": "Un quadro reale",
+    "row3Analysis": "Troppe cose convergono perché sia un caso. Attenzione: una depressione o un problema nascosto danno lo stesso profilo.",
+    "row4Score": "Da 36 a 45",
+    "row4Level": "Molti segnali",
+    "row4Analysis": "Chiusura, incoerenze verificate, ritiro dall'intimità. Non prova ancora nulla, ma chiede una risposta.",
+    "tip": "Un punteggio di 40 non è una prova, e uno di 8 non è una garanzia. Entrambi ti dicono soprattutto quanto vale la tua osservazione oggi, con gli elementi che hai."
+  },
+  "section4": {
+    "title": "Andare a letto altrove e affezionarsi altrove non sono la stessa domanda",
+    "p1": "Molti arrivano qui con una domanda precisa: <strong>c'è stato un atto fisico?</strong> È una domanda diversa da «la mia relazione è in pericolo», e richiede altri segnali. L'infedeltà fisica lascia tracce materiali: assenze, spese, incoerenze sui luoghi, a volte un cambiamento nell'intimità.",
+    "p2": "L'infedeltà emotiva, invece, non lascia quasi nulla di materiale. Si vede nell'attenzione che si sposta, nelle confidenze che vanno altrove, in una complicità nuova con qualcuno di cui davanti a te non si parla mai. Può fare altrettanto male, e durare più a lungo, senza che sia stata passata una sola notte fuori.",
+    "p3": "Questo test si concentra sulla prima domanda. Se il tuo dubbio riguarda piuttosto la seconda, il nostro <a href=\"/it/test-infedelta-coppia/\">test infedeltà di coppia</a> copre entrambe le forme in venti domande. E se ciò che ti rode è soprattutto la gelosia, senza elementi concreti, il <a href=\"/it/test-gelosia-coppia/\">test di gelosia</a> è più adatto."
+  },
+  "section5": {
+    "title": "Cosa non fare assolutamente adesso",
+    "p1": "Il dubbio spinge ad agire, e quasi tutte le azioni che ispira peggiorano la situazione. Ecco le tre più frequenti.",
+    "sub1Title": "Frugare nel telefono",
+    "sub1Text": "È la prima idea, ed è la peggiore. Nel migliore dei casi non trovi niente, e il dubbio resta intatto perché «avrà cancellato». Nel peggiore trovi qualcosa di ambiguo che non potrai più dimenticare né verificare. E in entrambi i casi, adesso anche tu hai qualcosa da nascondere.",
+    "sub2Title": "Indagare tra i suoi amici",
+    "sub2Text": "Interrogare gli amici mette tutti in una posizione impossibile e torna sempre alle sue orecchie, di solito deformato. Perdi l'effetto sorpresa, guadagni una reputazione e non ottieni alcuna risposta.",
+    "sub3Title": "Accusare senza mettere nulla sul tavolo",
+    "sub3Text": "«So che mi tradisci» non produce mai una confessione. Produce un contrattacco, e ti mette nella posizione di dover dimostrare. Se accusi senza elementi, hai perso la discussione prima di iniziarla.",
+    "tip": "Se sei tentato da un software spia o da un localizzatore, sappi che installarlo sul telefono di qualcuno senza il suo consenso è un reato in Italia e nella maggior parte dei paesi. Al di là del rischio legale, è esattamente il tipo di gesto che ti toglierà il beneficio della verità se poi verrà a galla."
+  },
+  "section6": {
+    "title": "Come fare la domanda, concretamente",
+    "p1": "Non esiste una formula magica, ma esistono condizioni che aumentano nettamente le probabilità di ottenere una risposta vera invece di un riflesso difensivo.",
+    "sub1Title": "Scegli il momento, non l'impulso",
+    "sub1Text": "Non a mezzanotte dopo una serata, non mentre uno dei due esce per andare al lavoro, non davanti ai bambini. Un momento in cui nessuno abbia una via di fuga o un appuntamento fra venti minuti.",
+    "sub2Title": "Descrivi, non etichettare",
+    "sub2Text": "«Sabato sei rientrato alle tre e mi hai detto che eri da Tommaso, che mi ha detto il contrario» è difficile da liquidare. «Mi menti in continuazione» si liquida in una frase. Resta sui fatti che hai davvero constatato, senza gonfiarli.",
+    "sub3Title": "Di' cosa stai cercando",
+    "sub3Text": "Annunciare «preferisco sapere, anche se fa male, piuttosto che continuare così» cambia spesso la conversazione. Molte persone non mentono per gusto della bugia ma per paura della reazione. Togliere una parte di quella paura può bastare.",
+    "sub4Title": "Ascolta anche quello che non viene detto",
+    "sub4Text": "Una risposta che ci mette dieci secondi ad arrivare non è una prova. Una risposta che cambia versione tra martedì e giovedì, sì. Quello che cerchi non è una reazione, è una coerenza nel tempo."
+  },
+  "section7": {
+    "title": "E se la risposta è sì?",
+    "p1": "Allora entri in un'altra domanda, e non devi rispondere quella sera stessa. La prima cosa da sapere è che la decisione di restare o andarsene non si prende nei giorni successivi alla rivelazione. Lo shock è un cattivo consigliere, in un senso come nell'altro.",
+    "p2": "Ciò che poi determina il seguito dipende da poche cose: se la persona se ne assume la responsabilità senza minimizzare, se taglia i contatti, se accetta le tue domande per mesi senza stancarsi. Senza queste tre, una ricostruzione regge di rado. Con queste è possibile, e in genere richiede da uno a tre anni.",
+    "p3": "E se poi vuoi fare il punto su quello che resta, il <a href=\"/it/test-relazione-sana/\">test della relazione sana</a> e il <a href=\"/it/test-fiducia-coppia/\">test di fiducia</a> parlano del dopo più che del colpo.",
+    "tip": "Se la situazione ti mette in pericolo, se hai paura della reazione del tuo partner quando fai una domanda, non è più un problema di infedeltà. In Italia il 1522 è gratuito, anonimo e attivo tutti i giorni."
+  },
+  "faq": {
+    "q1": "Si può davvero sapere con un test se qualcuno è andato a letto con un'altra persona?",
+    "a1": "No, e nessun test serio lo pretenderà. Quello che questo test misura è la coerenza e la densità di ciò che hai osservato. Trasforma quindici impressioni sparse in una lettura d'insieme. La certezza non arriva mai da un questionario: arriva da una conversazione, da una confessione o da un elemento concreto.",
+    "q2": "Perché chiedete se il mio partner è un uomo o una donna?",
+    "a2": "Perché due delle quindici domande hanno senso solo per l'uno o per l'altra, e perché una domanda scritta al maschile si legge male quando si parla di una donna. La scelta non modifica né il punteggio né i livelli di risultato: le altre tredici domande sono identiche, cambia solo la formulazione.",
+    "q3": "Il mio punteggio è alto, vuol dire che mi ha tradito?",
+    "a3": "No. Un punteggio alto vuol dire che si sono accumulati molti segnali nello stesso periodo. Una depressione taciuta, un licenziamento nascosto, un debito, un problema di salute tenuto segreto o una dipendenza producono esattamente lo stesso profilo di risposte. È per questo che il risultato ti orienta verso una conversazione e non verso una conclusione.",
+    "q4": "Il mio punteggio è basso ma il dubbio resta, è normale?",
+    "a4": "Sì, ed è frequente. Il dubbio non viene sempre dall'altro. Un tradimento vecchio, in questa relazione o in una precedente, lascia una vigilanza che si risveglia senza una ragione attuale. Se il dubbio persiste mentre nulla lo alimenta, è da quella parte che bisogna guardare, e parlarne resta la migliore via d'uscita.",
+    "q5": "Posso fare questo test insieme al mio partner?",
+    "a5": "Non è pensato per questo, e sarebbe una cattiva idea: le quindici domande descrivono dei sospetti, e farle leggere a chi si sospetta equivale ad accusarlo domanda per domanda. Fallo da solo, poi parla, con parole tue.",
+    "q6": "Le mie risposte vengono salvate?",
+    "a6": "No. Tutto avviene nel tuo browser, nessuna risposta viene inviata o conservata, e non c'è né un account né un indirizzo email da fornire. Chiudi la pagina e non resta nulla."
+  }
+}

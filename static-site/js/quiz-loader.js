@@ -131,6 +131,16 @@
     // ── Infidelite quiz (solo scoring, ascending: more signs = higher score) ──
     'infidelite':     { prefix: 'infidelite', engine: 'solo', totalQ: 20, pool: 20, quizType: 'infidelite', ascending: true },
 
+    // ── « A-t-il / a-t-elle couché avec quelqu'un d'autre » ──
+    // Le genre du partenaire est demandé avant la première question : ce n'est
+    // pas de la cosmétique, deux des quinze questions n'ont de sens que pour
+    // l'un ou pour l'autre, et les accords français ne se devinent pas. Les
+    // deux séries partagent leurs paliers de résultat, sous « couche ».
+    'couche':         { modes: [
+      { id: 'homme', emoji: '👨', prefix: 'coucheH', engine: 'solo', totalQ: 15, pool: 15, quizType: 'couche', ascending: true, resultPrefix: 'couche' },
+      { id: 'femme', emoji: '👩', prefix: 'coucheF', engine: 'solo', totalQ: 15, pool: 15, quizType: 'couche', ascending: true, resultPrefix: 'couche' }
+    ] },
+
     // ── Bebe quiz (solo scoring, descending: more ready = higher score) ──
     'bebe':           { prefix: 'bebe', engine: 'solo', totalQ: 20, pool: 20, quizType: 'bebe' },
 

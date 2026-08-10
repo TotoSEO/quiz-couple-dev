@@ -1,6 +1,6 @@
 # Quiz Couple
 
-> Quiz Couple is a free online platform offering 39 relationship quizzes, tests and games for couples. Available in 5 languages (French, English, Spanish, German, Italian).
+> Quiz Couple is a free online platform offering 40 relationship quizzes, tests and games for couples. Available in 5 languages (French, English, Spanish, German, Italian).
 
 ## Main Features
 
@@ -28,6 +28,7 @@
 - [Attachment Style Test](https://quiz-couple.com/en/attachment-style-test/): Secure, anxious, avoidant or disorganised, based on Bowlby's attachment theory
 - [Trust Test for Couples](https://quiz-couple.com/en/trust-test-couple/): 20 questions on jealousy, transparency and reliability in your relationship
 - [Infidelity Test](https://quiz-couple.com/en/infidelity-test-couple/): 20 questions on the warning signs of cheating, emotional and physical
+- [Has He or She Slept With Someone Else](https://quiz-couple.com/en/has-he-she-slept-with-someone-else-test/): 15 questions focused on physical infidelity, with two question sets depending on the partner's gender
 - [Long Distance Relationship Quiz](https://quiz-couple.com/en/long-distance-relationship-quiz/): Distance couple assessment
 - [Common Points Test](https://quiz-couple.com/en/couple-common-points-test/): Find what you share
 - [Parenthood Readiness Test](https://quiz-couple.com/en/parenthood-readiness-test/): Are you ready for a baby?

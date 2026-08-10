@@ -184,6 +184,12 @@
     "description": "20 questions pour identifier les signes d'infidélité dans votre couple. Résultat immédiat, gratuit et confidentiel.",
     "metaDescription": "Votre partenaire vous trompe-t-il ? 20 questions pour déceler les signes d'infidélité. Test gratuit, résultat immédiat et confidentiel."
   },
+  "testCouche": {
+    "title": "Savoir s'il/elle a couché avec un autre | Test 15 questions",
+    "shortTitle": "A-t-il/elle couché ailleurs ?",
+    "description": "15 questions pour faire le tri entre ce que vous avez vraiment observé et ce que le doute a rajouté par-dessus.",
+    "metaDescription": "A-t-il ou a-t-elle couché avec quelqu'un d'autre ? 15 questions adaptées au genre de votre partenaire. Test gratuit, anonyme, résultat immédiat."
+  },
   "testBebe": {
     "title": "Test : êtes-vous prêt(e) pour un bébé ? 20 questions essentielles",
     "shortTitle": "Test Bébé",

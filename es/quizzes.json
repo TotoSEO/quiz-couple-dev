@@ -190,6 +190,12 @@
     "description": "20 preguntas para detectar las señales de alerta en tu relación: secretismo, distancia emocional, cambios de comportamiento. Resultado inmediato.",
     "metaDescription": "¿Tu pareja te engaña? 20 preguntas para identificar las señales de alerta en tu relación. Gratis, confidencial, resultado inmediato."
   },
+  "testCouche": {
+    "title": "¿Se ha acostado con otra persona? Test de 15 preguntas",
+    "shortTitle": "¿Se ha acostado con otro/a?",
+    "description": "15 preguntas para separar lo que habéis observado de verdad de lo que la duda ha añadido por encima.",
+    "metaDescription": "¿Se ha acostado con otra persona? 15 preguntas adaptadas al género de tu pareja. Test gratuito, anónimo y con resultado inmediato."
+  },
   "testBebe": {
     "title": "Test listo para un bebé: ¿estás preparado para ser madre o padre?",
     "shortTitle": "Test Bebé",

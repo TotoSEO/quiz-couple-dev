@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "badge": "Test gratuit, 15 questions",
+    "title": "A-t-il/elle couché avec un/une autre ?",
+    "titleHighlight": "couché avec un/une autre",
+    "description": "15 questions pour mettre de l'ordre dans ce que vous avez observé. On commence par vous demander de qui on parle, parce que les questions ne sont pas les mêmes.",
+    "subtitle": "Gratuit, anonyme, résultat immédiat"
+  },
+  "howTo": {
+    "title": "Comment fonctionne ce test ?",
+    "step1": "Vous indiquez si votre partenaire est un homme ou une femme. Les quinze questions s'adaptent, et deux d'entre elles changent complètement.",
+    "step2": "Vous répondez en pensant aux <strong>dernières semaines</strong>, pas à toute votre histoire. Un signe vaut par son changement, pas par son existence.",
+    "step3": "Chaque réponse vaut de 0 à 3 points. Le total vous place dans l'un des quatre niveaux de lecture.",
+    "step4": "Le résultat vous dit ce que vos observations pèsent ensemble, et ce qu'il est raisonnable d'en faire.",
+    "outro": "Répondez honnêtement, y compris quand la réponse honnête est « je ne sais pas ». Un test rassurant obtenu en arrondissant les angles ne sert à rien."
+  },
+  "crossLink": {
+    "title": "Ce n'est pas tout à fait votre question ?",
+    "text": "Si votre doute porte plutôt sur une relation trop proche, des messages ambigus ou une complicité qui vous met mal à l'aise, c'est l'autre test qu'il vous faut.",
+    "button": "Faire le test infidélité complet"
+  },
+  "section1": {
+    "title": "Cette question qui tourne en boucle",
+    "p1": "Vous ne l'avez peut-être dite à personne. Elle revient le soir, dans la voiture, quand la conversation retombe. <strong>Est-ce qu'il ou elle a couché avec quelqu'un d'autre ?</strong> Et juste derrière, une deuxième question, souvent plus douloureuse : est-ce que je deviens fou, ou est-ce que j'ai raison ?",
+    "p2": "Le doute a ceci de particulier qu'il se nourrit tout seul. Un retard devient un mensonge, un téléphone retourné devient une preuve, un silence devient un aveu. Puis le lendemain, tout paraît normal et vous vous en voulez d'y avoir pensé. Ce va-et-vient est épuisant, et il abîme la relation aussi sûrement que ce que vous craignez.",
+    "p3": "Ce test ne va pas trancher à votre place, et il serait malhonnête de le prétendre. Ce qu'il fait, c'est mettre côte à côte ce que vous avez réellement observé, séparer les signaux qui pèsent de ceux qui ne pèsent rien, et vous rendre une lecture d'ensemble au lieu de quinze détails qui tournent dans votre tête."
+  },
+  "section2": {
+    "title": "Les signes qui comptent, et ceux qui ne prouvent rien",
+    "intro": "Aucun de ces signes ne vaut isolément. Ce qui compte, c'est le changement récent, et le fait que plusieurs apparaissent en même temps.",
+    "pillar1Title": "Le téléphone qui change de statut",
+    "pillar1Text": "Le signal n'est pas « il protège son téléphone », c'est « il le protège depuis peu ». Nouveau code, écran retourné, notifications coupées, conversation archivée. Quelqu'un de discret depuis toujours ne dit rien du tout.",
+    "pillar2Title": "Les versions qui ne tiennent pas",
+    "pillar2Text": "C'est le signal le plus lourd de tous, parce qu'il est vérifiable. Une soirée racontée deux fois avec deux lieux différents, une explication corrigée après coup. Le mensonge sur le lieu pèse davantage que le mensonge sur l'heure.",
+    "pillar3Title": "L'intimité qui bascule",
+    "pillar3Text": "Dans les deux sens. L'arrêt brutal alerte, mais un changement de nature aussi : de nouvelles habitudes qui sortent de nulle part interrogent autant qu'un désert soudain.",
+    "pillar4Title": "L'accusation retournée",
+    "pillar4Text": "Vous posez une question, vous vous retrouvez à vous justifier. Quand quelqu'un accuse son partenaire d'infidélité alors que rien ne le laissait prévoir, les thérapeutes appellent ça une projection. Ce n'est pas une preuve, mais c'est notable.",
+    "pillar5Title": "L'argent qui laisse des traces",
+    "pillar5Text": "Une double vie coûte cher. Retraits en liquide inhabituels, dépenses de restaurant ou d'hôtel invisibles dans le budget commun, compte ouvert sans en parler. Le compte bancaire ment moins bien que les gens.",
+    "pillar6Title": "L'entourage qui devient bizarre",
+    "pillar6Text": "Un blanc quand vous arrivez, un ami qui vous évite, une phrase à demi-mot. Les proches savent souvent avant, et ils supportent mal de savoir. Leur malaise est un signal indirect, et il se remarque.",
+    "tip": "Deux signes ne suffisent presque jamais. Le mot que les enquêteurs emploient est « faisceau » : c'est la convergence de plusieurs indices sur la même période qui change la lecture, pas leur nombre brut."
+  },
+  "section3": {
+    "title": "Ce que dit votre score, et ce qu'il ne dit pas",
+    "p1": "Le test est noté sur 45 points. Les quatre niveaux ci-dessous ne sont pas des verdicts, ce sont des façons de lire ce que vous avez répondu. Un score élevé décrit un comportement, jamais un fait.",
+    "headerScore": "Score",
+    "headerLevel": "Niveau",
+    "headerAnalysis": "Ce que ça veut dire",
+    "row1Score": "0 à 11",
+    "row1Level": "Rien dans ce sens",
+    "row1Analysis": "Aucun des signaux habituels. Si le doute persiste, il vient probablement d'ailleurs que de son comportement.",
+    "row2Score": "12 à 23",
+    "row2Level": "Des signes ambigus",
+    "row2Analysis": "Du changement, oui. Mais le stress, la fatigue et une phase de retrait produisent exactement les mêmes symptômes.",
+    "row3Score": "24 à 35",
+    "row3Level": "Un faisceau réel",
+    "row3Analysis": "Trop de choses convergent pour que ce soit le hasard. Attention : une dépression ou un problème caché donnent le même profil.",
+    "row4Score": "36 à 45",
+    "row4Level": "Beaucoup de signaux",
+    "row4Analysis": "Opacité, incohérences vérifiées, retrait de l'intimité. Cela ne prouve toujours rien, mais cela demande une réponse.",
+    "tip": "Un score de 40 n'est pas une preuve, et un score de 8 n'est pas une garantie. Les deux vous disent surtout ce que votre observation vaut aujourd'hui, avec les éléments dont vous disposez."
+  },
+  "section4": {
+    "title": "Coucher ailleurs ou s'attacher ailleurs, ce n'est pas la même question",
+    "p1": "Beaucoup de gens arrivent ici avec une question précise : <strong>est-ce qu'il y a eu un acte physique ?</strong> C'est une question différente de « est-ce que mon couple est en danger », et elle appelle d'autres signes. L'infidélité physique laisse des traces matérielles : des absences, des dépenses, des incohérences de lieu, parfois un changement dans l'intimité.",
+    "p2": "L'infidélité émotionnelle, elle, ne laisse presque rien de matériel. Elle se voit dans l'attention qui se déplace, dans les confidences qui partent ailleurs, dans une complicité nouvelle avec quelqu'un dont on ne parle jamais devant vous. Elle peut faire aussi mal, et durer plus longtemps, sans qu'aucune nuit n'ait été passée dehors.",
+    "p3": "Ce test-ci se concentre sur la première question. Si votre doute porte plutôt sur la seconde, notre <a href=\"/test-infidelite-couple/\">test infidélité couple</a> couvre les deux formes en vingt questions. Et si ce qui vous ronge est surtout la jalousie, sans élément concret, le <a href=\"/test-jalousie-couple/\">test de jalousie</a> est plus adapté."
+  },
+  "section5": {
+    "title": "Ce qu'il ne faut surtout pas faire maintenant",
+    "p1": "Le doute pousse à agir, et presque toutes les actions qu'il inspire aggravent la situation. Voici les trois plus fréquentes.",
+    "sub1Title": "Fouiller le téléphone",
+    "sub1Text": "C'est la première idée, et c'est la pire. Dans le meilleur des cas vous ne trouvez rien, et le doute reste intact parce que « il a dû effacer ». Dans le pire, vous trouvez quelque chose d'ambigu que vous ne pourrez plus jamais oublier ni vérifier. Et dans les deux cas, vous avez maintenant quelque chose à cacher vous aussi.",
+    "sub2Title": "Enquêter auprès de son entourage",
+    "sub2Text": "Interroger ses amis met tout le monde dans une position impossible et vous revient toujours aux oreilles, en général déformé. Vous perdez l'effet de surprise, vous gagnez une réputation, et vous n'obtenez pas de réponse.",
+    "sub3Title": "Accuser sans rien poser",
+    "sub3Text": "« Je sais que tu me trompes » ne produit jamais un aveu. Ça produit une contre-attaque, et ça vous met en position de devoir prouver. Si vous accusez sans élément, vous avez perdu la discussion avant de l'avoir commencée.",
+    "tip": "Si vous êtes tenté par un logiciel de surveillance ou une balise de géolocalisation, sachez qu'installer ça sur le téléphone de quelqu'un sans son accord est un délit en France, puni par la loi. Au-delà du risque juridique, c'est exactement le genre d'acte qui vous fera perdre le bénéfice de la vérité si elle finit par sortir."
+  },
+  "section6": {
+    "title": "Comment poser la question, concrètement",
+    "p1": "Il n'existe pas de formulation magique, mais il existe des conditions qui augmentent nettement vos chances d'obtenir une vraie réponse plutôt qu'un réflexe de défense.",
+    "sub1Title": "Choisissez le moment, pas l'impulsion",
+    "sub1Text": "Pas à minuit après une soirée, pas au moment où l'un des deux part travailler, pas devant les enfants. Un moment où personne n'a d'échappatoire ni de rendez-vous dans vingt minutes.",
+    "sub2Title": "Décrivez, ne qualifiez pas",
+    "sub2Text": "« Tu es rentré à trois heures samedi et tu m'as dit que tu étais chez Thomas, qui m'a dit le contraire » est difficile à balayer. « Tu me mens tout le temps » se balaye en une phrase. Restez sur les faits que vous avez réellement constatés, sans les gonfler.",
+    "sub3Title": "Dites ce que vous cherchez",
+    "sub3Text": "Annoncer « je préfère savoir, même si ça fait mal, plutôt que continuer comme ça » change souvent la conversation. Beaucoup de gens ne mentent pas par goût du mensonge mais par peur de la réaction. Retirer une partie de cette peur peut suffire.",
+    "sub4Title": "Écoutez aussi ce qui n'est pas dit",
+    "sub4Text": "Une réponse qui met dix secondes à venir n'est pas une preuve. Une réponse qui change de version entre le mardi et le jeudi, si. Ce que vous cherchez, ce n'est pas une réaction, c'est une cohérence dans le temps."
+  },
+  "section7": {
+    "title": "Et si la réponse est oui ?",
+    "p1": "Alors vous entrez dans une autre question, et vous n'avez pas à y répondre le soir même. La première chose à savoir, c'est que la décision de rester ou de partir ne se prend pas dans les jours qui suivent la révélation. La sidération est un mauvais conseiller, dans un sens comme dans l'autre.",
+    "p2": "Ce qui détermine ensuite la suite tient à peu de choses : est-ce que la personne assume sans minimiser, est-ce qu'elle coupe le contact, est-ce qu'elle accepte vos questions pendant des mois sans se lasser. Sans ces trois-là, une reconstruction tient rarement. Avec, elle est possible, et elle prend en général entre un et trois ans.",
+    "p3": "Et si vous voulez faire le point ensuite sur ce qui reste, le <a href=\"/test-couple-sain/\">test de couple sain</a> et le <a href=\"/test-confiance-couple/\">test de confiance</a> parlent de la suite plutôt que du choc.",
+    "tip": "Si la situation vous met en danger, si vous avez peur de la réaction de votre partenaire quand vous posez une question, ce n'est plus un problème d'infidélité. En France, le 3919 est gratuit, anonyme et ouvert tous les jours."
+  },
+  "faq": {
+    "q1": "Peut-on vraiment savoir si quelqu'un a couché avec une autre personne avec un test ?",
+    "a1": "Non, et aucun test sérieux ne le prétendra. Ce que ce test mesure, c'est la cohérence et la densité de ce que vous avez observé. Il transforme quinze impressions éparses en une lecture d'ensemble. La certitude, elle, ne vient jamais d'un questionnaire : elle vient d'une conversation, d'un aveu, ou d'un élément concret.",
+    "q2": "Pourquoi demander si mon partenaire est un homme ou une femme ?",
+    "a2": "Parce que deux des quinze questions n'ont de sens que pour l'un ou pour l'autre, et parce qu'une question écrite au masculin quand on parle d'une femme se lit mal. Le choix ne modifie ni le barème ni les niveaux de résultat : les treize autres questions sont identiques, seule la formulation suit.",
+    "q3": "Mon score est élevé, est-ce que ça veut dire qu'il ou elle m'a trompé ?",
+    "a3": "Non. Un score élevé veut dire que beaucoup de signaux se sont accumulés sur la même période. Une dépression non dite, un licenciement caché, une dette, un problème de santé tenu secret ou une addiction produisent exactement le même profil de réponses. C'est pour cette raison que le résultat vous oriente vers une conversation, pas vers une conclusion.",
+    "q4": "Mon score est bas mais j'ai toujours un doute, c'est normal ?",
+    "a4": "Oui, et c'est fréquent. Le doute ne vient pas toujours de l'autre. Une trahison ancienne, dans cette relation ou dans une précédente, laisse une vigilance qui se réveille sans raison actuelle. Si le doute persiste alors que rien ne le nourrit, c'est de ce côté-là qu'il faut regarder, et en parler reste la meilleure porte de sortie.",
+    "q5": "Est-ce que je peux faire ce test avec mon partenaire ?",
+    "a5": "Ce n'est pas prévu pour, et ce serait une mauvaise idée : les quinze questions décrivent des soupçons, et les faire lire à quelqu'un qu'on soupçonne revient à l'accuser question par question. Faites-le seul, puis parlez, avec vos mots à vous.",
+    "q6": "Mes réponses sont-elles enregistrées ?",
+    "a6": "Non. Tout se passe dans votre navigateur, aucune réponse n'est envoyée ni conservée, et il n'y a ni compte ni adresse e-mail à donner. Fermez la page et il n'en reste rien."
+  }
+}

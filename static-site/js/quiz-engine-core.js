@@ -714,6 +714,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'jalousie1', icon: '🫣', route: 'testJalousie' },
     { type: 'test', key: 'jalousie2', icon: '🫣', route: 'testJalousie' },
     { type: 'test', key: 'infidelite', icon: '💔', route: 'testInfidelite' },
+    { type: 'test', key: 'couche', icon: '🛏️', route: 'testCouche' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
     { type: 'test', key: 'attachement', icon: '🔗', route: 'testAttachement' },
     { type: 'test', key: 'confiance', icon: '🤝', route: 'testConfiance' },
@@ -988,6 +989,22 @@ var QuizEngine = (function() {
     }
     if (this.quizType === 'divorce') {
       corps.push(encart('<p class="quiz-setup-note-fin">💡 ' + esc(tg('divorce.disclaimer', 'Ce test est un outil de réflexion personnel. Il ne remplace en aucun cas l\'avis d\'un professionnel.')) + '</p>'));
+    }
+    // Les tests ajoutés depuis n'ont plus besoin de leur propre branche : il
+    // leur suffit de déclarer leurs textes sous une clé portant le nom de leur
+    // quizType, comme les trois du dessus.
+    if (['toxic', 'pervers', 'divorce'].indexOf(this.quizType) === -1) {
+      var lu = function (champ) {
+        var v = tg(self.quizType + '.' + champ, '');
+        return (v && v.indexOf(self.quizType + '.') !== 0) ? v : '';
+      };
+      var nQ = lu('introQuestion'), nC = lu('introQuote'), nD = lu('disclaimer');
+      if (nQ || nC || nD) {
+        corps.push(encart(
+          (nQ ? '<p class="quiz-setup-note-intro">' + esc(nQ) + '</p>' : '') +
+          (nC ? '<p class="quiz-setup-note-cite">' + esc(nC) + '</p>' : '') +
+          (nD ? '<p class="quiz-setup-note-fin">' + esc(nD) + '</p>' : '')));
+      }
     }
 
     // Le test ado demande le prenom du/de la partenaire avant de commencer.

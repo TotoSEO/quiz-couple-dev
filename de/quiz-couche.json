@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "badge": "Kostenloser Test, 15 Fragen",
+    "title": "Hat er oder sie mit jemand anderem geschlafen?",
+    "titleHighlight": "mit jemand anderem geschlafen",
+    "description": "15 Fragen, um Ordnung in das zu bringen, was du beobachtet hast. Zuerst fragen wir, von wem die Rede ist, denn die Fragen sind nicht dieselben.",
+    "subtitle": "Kostenlos, anonym, Ergebnis sofort"
+  },
+  "howTo": {
+    "title": "Wie funktioniert dieser Test?",
+    "step1": "Du gibst an, ob dein Partner ein Mann oder eine Frau ist. Die fünfzehn Fragen passen sich an, zwei davon ändern sich komplett.",
+    "step2": "Antworte mit Blick auf die <strong>letzten Wochen</strong>, nicht auf eure ganze Geschichte. Ein Zeichen zählt durch die Veränderung, nicht dadurch, dass es existiert.",
+    "step3": "Jede Antwort ist 0 bis 3 Punkte wert. Die Summe ordnet dich einer von vier Lesarten zu.",
+    "step4": "Das Ergebnis sagt dir, was deine Beobachtungen zusammen wiegen und was vernünftigerweise daraus folgt.",
+    "outro": "Antworte ehrlich, auch wenn die ehrliche Antwort « ich weiß es nicht » lautet. Ein beruhigendes Ergebnis, das man sich zurechtbiegt, bringt nichts."
+  },
+  "crossLink": {
+    "title": "Nicht ganz deine Frage?",
+    "text": "Wenn dein Zweifel eher einer zu engen Beziehung gilt, zweideutigen Nachrichten oder einer Vertrautheit, die dir unangenehm ist, dann brauchst du den anderen Test.",
+    "button": "Den vollständigen Untreue-Test machen"
+  },
+  "section1": {
+    "title": "Diese Frage, die sich immer wieder dreht",
+    "p1": "Vielleicht hast du es niemandem erzählt. Sie kommt abends wieder, im Auto, wenn das Gespräch verstummt. <strong>Hat er oder sie mit jemand anderem geschlafen?</strong> Und gleich dahinter eine zweite, oft schmerzhaftere Frage: werde ich verrückt, oder habe ich recht?",
+    "p2": "Der Zweifel hat die Eigenart, sich selbst zu nähren. Eine Verspätung wird zur Lüge, ein umgedrehtes Handy zum Beweis, ein Schweigen zum Geständnis. Am nächsten Tag wirkt alles normal und du machst dir Vorwürfe, überhaupt daran gedacht zu haben. Dieses Hin und Her zermürbt und beschädigt die Beziehung genauso sicher wie das, was du befürchtest.",
+    "p3": "Dieser Test entscheidet nicht für dich, und etwas anderes zu behaupten wäre unredlich. Was er tut: er legt nebeneinander, was du tatsächlich beobachtet hast, trennt die Signale mit Gewicht von denen ohne, und gibt dir ein Gesamtbild statt fünfzehn Details, die dir im Kopf kreisen."
+  },
+  "section2": {
+    "title": "Die Zeichen, die zählen, und die, die nichts beweisen",
+    "intro": "Keines dieser Zeichen bedeutet für sich genommen etwas. Es zählt die jüngste Veränderung und die Tatsache, dass mehrere gleichzeitig auftreten.",
+    "pillar1Title": "Das Handy, das seinen Status wechselt",
+    "pillar1Text": "Das Signal ist nicht « er schützt sein Handy », sondern « er schützt es seit Kurzem ». Neuer Code, umgedrehtes Display, stummgeschaltete Benachrichtigungen, ein archivierter Chat. Wer schon immer verschlossen war, sagt damit gar nichts aus.",
+    "pillar2Title": "Versionen, die nicht halten",
+    "pillar2Text": "Das schwerste Signal überhaupt, weil es überprüfbar ist. Ein Abend zweimal erzählt mit zwei verschiedenen Orten, eine nachträglich korrigierte Erklärung. Die Lüge über den Ort wiegt schwerer als die über die Uhrzeit.",
+    "pillar3Title": "Die Intimität, die kippt",
+    "pillar3Text": "In beide Richtungen. Ein abrupter Stopp alarmiert, aber ein Wechsel der Art ebenso: neue Gewohnheiten aus dem Nichts werfen so viele Fragen auf wie eine plötzliche Wüste.",
+    "pillar4Title": "Der umgedrehte Vorwurf",
+    "pillar4Text": "Du stellst eine Frage und rechtfertigst am Ende dich selbst. Wenn jemand seinem Partner Untreue vorwirft, obwohl nichts darauf hindeutete, nennen Therapeuten das Projektion. Kein Beweis, aber bemerkenswert.",
+    "pillar5Title": "Geld hinterlässt Spuren",
+    "pillar5Text": "Ein Doppelleben ist teuer. Ungewöhnliche Barabhebungen, Restaurant- oder Hotelausgaben, die im gemeinsamen Budget unsichtbar sind, ein stillschweigend eröffnetes Konto. Kontoauszüge lügen schlechter als Menschen.",
+    "pillar6Title": "Das Umfeld, das seltsam wird",
+    "pillar6Text": "Eine Pause, wenn du dazukommst, ein Freund, der dir ausweicht, ein halber Satz. Die Nahestehenden wissen es oft zuerst und ertragen es schlecht. Ihr Unbehagen ist ein indirektes Signal, und es fällt auf.",
+    "tip": "Zwei Zeichen reichen fast nie. Das Wort, das Ermittler benutzen, ist « Indizienbündel »: die Lesart ändert sich durch das Zusammentreffen mehrerer Hinweise im selben Zeitraum, nicht durch ihre bloße Anzahl."
+  },
+  "section3": {
+    "title": "Was deine Punktzahl sagt und was nicht",
+    "p1": "Der Test wird auf 45 Punkte gerechnet. Die vier Stufen unten sind keine Urteile, sondern Lesarten dessen, was du geantwortet hast. Eine hohe Punktzahl beschreibt ein Verhalten, nie eine Tatsache.",
+    "headerScore": "Punkte",
+    "headerLevel": "Stufe",
+    "headerAnalysis": "Was das heißt",
+    "row1Score": "0 bis 11",
+    "row1Level": "Nichts in diese Richtung",
+    "row1Analysis": "Keines der üblichen Signale. Bleibt der Zweifel, kommt er vermutlich von woanders als vom Verhalten der Person.",
+    "row2Score": "12 bis 23",
+    "row2Level": "Mehrdeutige Zeichen",
+    "row2Analysis": "Veränderung, ja. Aber Stress, Erschöpfung und eine Rückzugsphase erzeugen genau dieselben Symptome.",
+    "row3Score": "24 bis 35",
+    "row3Level": "Ein echtes Bündel",
+    "row3Analysis": "Zu vieles trifft zusammen, als dass es Zufall wäre. Achtung: eine Depression oder ein verborgenes Problem ergibt dasselbe Bild.",
+    "row4Score": "36 bis 45",
+    "row4Level": "Viele Signale",
+    "row4Analysis": "Verschlossenheit, geprüfte Widersprüche, Rückzug aus der Intimität. Bewiesen ist weiterhin nichts, aber es verlangt eine Antwort.",
+    "tip": "40 Punkte sind kein Beweis, und 8 Punkte sind keine Garantie. Beide sagen vor allem, was deine Beobachtung heute wert ist, mit dem, was du in der Hand hast."
+  },
+  "section4": {
+    "title": "Woanders schlafen und sich woanders binden sind nicht dieselbe Frage",
+    "p1": "Viele kommen mit einer präzisen Frage hierher: <strong>gab es einen körperlichen Akt?</strong> Das ist eine andere Frage als « ist meine Beziehung in Gefahr », und sie verlangt andere Zeichen. Körperliche Untreue hinterlässt materielle Spuren: Abwesenheiten, Ausgaben, Widersprüche über Orte, manchmal eine Veränderung der Intimität.",
+    "p2": "Emotionale Untreue hinterlässt fast nichts Materielles. Sie zeigt sich in Aufmerksamkeit, die sich verschiebt, in Vertraulichkeiten, die woandershin gehen, in einer neuen Nähe zu jemandem, von dem vor dir nie die Rede ist. Sie kann genauso weh tun und länger dauern, ohne dass eine einzige Nacht auswärts verbracht wurde.",
+    "p3": "Dieser Test konzentriert sich auf die erste Frage. Geht dein Zweifel eher um die zweite, deckt unser <a href=\"/de/untreue-test-paar/\">Untreue-Test für Paare</a> beide Formen in zwanzig Fragen ab. Und wenn dich vor allem Eifersucht umtreibt, ohne konkreten Anhaltspunkt, passt der <a href=\"/de/eifersucht-test-paar/\">Eifersuchtstest</a> besser."
+  },
+  "section5": {
+    "title": "Was du jetzt auf keinen Fall tun solltest",
+    "p1": "Zweifel drängt zum Handeln, und fast jede Handlung, die er eingibt, verschlimmert die Lage. Hier die drei häufigsten.",
+    "sub1Title": "Das Handy durchsuchen",
+    "sub1Text": "Der erste Einfall und der schlechteste. Im besten Fall findest du nichts, und der Zweifel bleibt unversehrt, weil « er wird es gelöscht haben ». Im schlimmsten findest du etwas Mehrdeutiges, das du nie mehr vergessen und nie mehr überprüfen kannst. Und in beiden Fällen hast du jetzt auch etwas zu verbergen.",
+    "sub2Title": "Im Umfeld ermitteln",
+    "sub2Text": "Die Freunde auszufragen bringt alle in eine unmögliche Lage und kommt immer zurück, meist verzerrt. Du verlierst den Überraschungseffekt, gewinnst einen Ruf und bekommst keine Antwort.",
+    "sub3Title": "Beschuldigen, ohne etwas hinzulegen",
+    "sub3Text": "« Ich weiß, dass du mich betrügst » erzeugt nie ein Geständnis. Es erzeugt einen Gegenangriff und bringt dich in die Lage, etwas beweisen zu müssen. Wer ohne Anhaltspunkt beschuldigt, hat das Gespräch verloren, bevor es begonnen hat.",
+    "tip": "Falls dich Spionagesoftware oder ein Ortungsgerät reizt: das ohne Einwilligung auf dem Handy eines anderen zu installieren ist in Deutschland und den meisten Ländern strafbar. Über das rechtliche Risiko hinaus ist es genau die Art von Handlung, die dir den Vorteil der Wahrheit nimmt, falls sie ans Licht kommt."
+  },
+  "section6": {
+    "title": "Wie man die Frage konkret stellt",
+    "p1": "Es gibt keine magische Formulierung, aber es gibt Bedingungen, die deine Chancen auf eine echte Antwort statt eines Abwehrreflexes deutlich erhöhen.",
+    "sub1Title": "Wähle den Moment, nicht den Impuls",
+    "sub1Text": "Nicht um Mitternacht nach einem Abend aus, nicht wenn eine Person gerade zur Arbeit aufbricht, nicht vor den Kindern. Ein Moment, in dem niemand einen Fluchtweg oder in zwanzig Minuten einen Termin hat.",
+    "sub2Title": "Beschreibe, statt zu etikettieren",
+    "sub2Text": "« Du kamst am Samstag um drei nach Hause und sagtest, du wärst bei Thomas gewesen, der mir das Gegenteil gesagt hat » lässt sich schwer abtun. « Du lügst mich ständig an » wird in einem Satz abgetan. Bleib bei den Tatsachen, die du wirklich festgestellt hast, ohne sie aufzublasen.",
+    "sub3Title": "Sag, was du suchst",
+    "sub3Text": "Der Satz « mir ist es lieber, es zu wissen, auch wenn es weh tut, als so weiterzumachen » verändert das Gespräch oft. Viele lügen nicht aus Lust am Lügen, sondern aus Angst vor der Reaktion. Einen Teil dieser Angst wegzunehmen kann genügen.",
+    "sub4Title": "Hör auch auf das, was nicht gesagt wird",
+    "sub4Text": "Eine Antwort, die zehn Sekunden braucht, ist kein Beweis. Eine Antwort, die zwischen Dienstag und Donnerstag die Version wechselt, schon. Du suchst keine Reaktion, du suchst Stimmigkeit über die Zeit."
+  },
+  "section7": {
+    "title": "Und wenn die Antwort ja lautet?",
+    "p1": "Dann beginnt eine andere Frage, und du musst sie nicht am selben Abend beantworten. Zuerst gilt: die Entscheidung zu bleiben oder zu gehen fällt nicht in den Tagen nach der Offenbarung. Der Schock ist ein schlechter Ratgeber, in beide Richtungen.",
+    "p2": "Was danach den Verlauf bestimmt, hängt an wenigem: übernimmt die Person Verantwortung, ohne zu verharmlosen, bricht sie den Kontakt ab, hält sie deine Fragen monatelang aus, ohne genervt zu sein. Ohne diese drei hält ein Wiederaufbau selten. Mit ihnen ist er möglich und dauert in der Regel ein bis drei Jahre.",
+    "p3": "Und wenn du danach Bilanz ziehen willst, sprechen der <a href=\"/de/gesunde-beziehung-test/\">Test für eine gesunde Beziehung</a> und der <a href=\"/de/vertrauenstest-paar/\">Vertrauenstest</a> über das Danach statt über den Schlag.",
+    "tip": "Wenn die Lage dich gefährdet, wenn du Angst vor der Reaktion deines Partners hast, sobald du eine Frage stellst, geht es nicht mehr um Untreue. In Deutschland ist das Hilfetelefon unter 116 016 kostenlos, vertraulich und täglich erreichbar."
+  },
+  "faq": {
+    "q1": "Kann ein Test wirklich sagen, ob jemand mit einer anderen Person geschlafen hat?",
+    "a1": "Nein, und kein seriöser Test wird das behaupten. Dieser Test misst die Stimmigkeit und die Dichte dessen, was du beobachtet hast. Er macht aus fünfzehn verstreuten Eindrücken eine Gesamtlesart. Gewissheit kommt nie aus einem Fragebogen: sie kommt aus einem Gespräch, einem Eingeständnis oder etwas Konkretem.",
+    "q2": "Warum wird gefragt, ob mein Partner ein Mann oder eine Frau ist?",
+    "a2": "Weil zwei der fünfzehn Fragen nur für das eine oder das andere Sinn ergeben, und weil eine für einen Mann geschriebene Frage schlecht zu lesen ist, wenn man an eine Frau denkt. Die Wahl ändert weder die Punkte noch die Ergebnisstufen: die anderen dreizehn Fragen sind identisch, nur die Formulierung folgt.",
+    "q3": "Meine Punktzahl ist hoch, heißt das, dass er oder sie mich betrogen hat?",
+    "a3": "Nein. Eine hohe Punktzahl heißt, dass sich im selben Zeitraum viele Signale angesammelt haben. Eine verschwiegene Depression, eine verheimlichte Kündigung, Schulden, ein geheim gehaltenes Gesundheitsproblem oder eine Sucht erzeugen genau dasselbe Antwortmuster. Deshalb weist dich das Ergebnis auf ein Gespräch hin und nicht auf einen Schluss.",
+    "q4": "Meine Punktzahl ist niedrig, aber ich zweifle weiter, ist das normal?",
+    "a4": "Ja, und das kommt häufig vor. Zweifel kommt nicht immer von der anderen Person. Ein alter Verrat, in dieser oder einer früheren Beziehung, hinterlässt eine Wachsamkeit, die ohne aktuellen Anlass erwacht. Bleibt der Zweifel, obwohl ihn nichts nährt, lohnt der Blick in diese Richtung, und darüber zu sprechen bleibt der beste Ausweg.",
+    "q5": "Kann ich diesen Test mit meinem Partner zusammen machen?",
+    "a5": "Dafür ist er nicht gedacht, und es wäre keine gute Idee: die fünfzehn Fragen beschreiben Verdachtsmomente, und sie jemandem zu lesen zu geben, den man verdächtigt, heißt, ihn Frage für Frage zu beschuldigen. Mach ihn allein und sprich danach, mit deinen eigenen Worten.",
+    "q6": "Werden meine Antworten gespeichert?",
+    "a6": "Nein. Alles läuft in deinem Browser, keine Antwort wird gesendet oder aufbewahrt, und es gibt weder ein Konto noch eine E-Mail-Adresse anzugeben. Seite schließen und es bleibt nichts übrig."
+  }
+}

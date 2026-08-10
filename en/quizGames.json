@@ -325,7 +325,8 @@
     "jeuGages": "forfeit wheel",
     "jeuPlateau": "couple board game",
     "jeuQuiDeNous": "Which one of us?",
-    "testDateNaissance": "Birth date compatibility test"
+    "testDateNaissance": "Birth date compatibility test",
+    "testCouche": "Has he or she slept with someone else test"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -533,5 +534,10 @@
     "bravoTitre": "Well done, and thank you!",
     "bravoTexte": "You have answered every single dilemma. Your votes now count towards the percentages the next couples will see.",
     "bravoSuite": "Try would you rather"
+  },
+  "couche": {
+    "introQuestion": "You're asking yourself:",
+    "introQuote": "« Has he or she slept with someone else… or am I making this up? »",
+    "disclaimer": "This test proves nothing and accuses nobody. It puts order into what you have observed, so you know what to do with it."
   }
 }
