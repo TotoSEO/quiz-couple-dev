@@ -8,7 +8,7 @@
       <div class="bg-card rounded-lg p-6 border border-border">
         <ul class="list-none space-y-2 text-foreground">
           <li><strong><%= t('legal:privacy.s1Name', '') %></strong> <%= t('legal:privacy.s1NameValue', '') %></li>
-          <li><strong><%= t('legal:privacy.s1Email', '') %></strong> <a href="mailto:contact@neksin.com" class="text-primary hover:underline">contact@neksin.com</a></li>
+          <li><strong><%= t('legal:privacy.s1Email', '') %></strong> <a href="mailto:service@quiz-couple.com" class="text-primary hover:underline">service@quiz-couple.com</a></li>
           <li><strong><%= t('legal:privacy.s1Website', '') %></strong> quiz-couple.com</li>
         </ul>
       </div>
@@ -52,59 +52,43 @@
     <section class="mb-10">
       <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('legal:privacy.s3Title', '') %></h2>
       <p class="text-foreground mb-4"><%= t('legal:privacy.s3Intro', '') %></p>
-      <h3 class="text-xl font-medium text-foreground mb-3"><%= t('legal:privacy.s3_1Title', '') %></h3>
-      <ul class="list-disc pl-6 space-y-2 text-foreground mb-4">
-        <li><%= t('legal:privacy.s3_1Item1', '') %></li>
-        <li><%= t('legal:privacy.s3_1Item2', '') %></li>
-        <li><%= t('legal:privacy.s3_1Item3', '') %></li>
-        <li><%= t('legal:privacy.s3_1Item4', '') %></li>
+      <ul class="list-disc pl-6 space-y-2 text-foreground">
+        <li><strong><%= t('legal:privacy.s3Item1', '') %></strong></li>
+        <li><strong><%= t('legal:privacy.s3Item2', '') %></strong></li>
+        <li><strong><%= t('legal:privacy.s3Item3', '') %></strong></li>
+        <li><strong><%= t('legal:privacy.s3Item4', '') %></strong></li>
       </ul>
-      <h3 class="text-xl font-medium text-foreground mb-3"><%= t('legal:privacy.s3_2Title', '') %></h3>
-      <div class="bg-primary/10 rounded-lg p-4 border border-primary/20 mb-4">
-        <p class="text-foreground text-sm"><%= t('legal:privacy.s3_2Warning', '') %></p>
-      </div>
+      <p class="text-foreground mt-4"><%- t('legal:privacy.s3Outro', '') %></p>
     </section>
 
     <section class="mb-10">
       <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('legal:privacy.s4Title', '') %></h2>
       <p class="text-foreground mb-4"><%= t('legal:privacy.s4Intro', '') %></p>
       <ul class="list-disc pl-6 space-y-2 text-foreground">
-        <li><strong><%= t('legal:privacy.s4Item1', '') %></strong></li>
-        <li><strong><%= t('legal:privacy.s4Item2', '') %></strong></li>
-        <li><strong><%= t('legal:privacy.s4Item3', '') %></strong></li>
-        <li><strong><%= t('legal:privacy.s4Item4', '') %></strong></li>
+        <li><strong><%= t('legal:privacy.s4Item1Label', '') %></strong> <%= t('legal:privacy.s4Item1Text', '') %></li>
+        <li><strong><%= t('legal:privacy.s4Item2Label', '') %></strong> <%= t('legal:privacy.s4Item2Text', '') %></li>
+        <li><strong><%= t('legal:privacy.s4Item3Label', '') %></strong> <%= t('legal:privacy.s4Item3Text', '') %></li>
+        <li><strong><%= t('legal:privacy.s4Item4Label', '') %></strong> <%= t('legal:privacy.s4Item4Text', '') %></li>
       </ul>
-      <p class="text-foreground mt-4"><%- t('legal:privacy.s4Outro', '') %></p>
     </section>
 
     <section class="mb-10">
       <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('legal:privacy.s5Title', '') %></h2>
       <p class="text-foreground mb-4"><%= t('legal:privacy.s5Intro', '') %></p>
-      <ul class="list-disc pl-6 space-y-2 text-foreground">
+      <ul class="list-disc pl-6 space-y-2 text-foreground mb-4">
         <li><strong><%= t('legal:privacy.s5Item1Label', '') %></strong> <%= t('legal:privacy.s5Item1Text', '') %></li>
         <li><strong><%= t('legal:privacy.s5Item2Label', '') %></strong> <%= t('legal:privacy.s5Item2Text', '') %></li>
         <li><strong><%= t('legal:privacy.s5Item3Label', '') %></strong> <%= t('legal:privacy.s5Item3Text', '') %></li>
         <li><strong><%= t('legal:privacy.s5Item4Label', '') %></strong> <%= t('legal:privacy.s5Item4Text', '') %></li>
+        <li><strong><%= t('legal:privacy.s5Item5Label', '') %></strong> <%= t('legal:privacy.s5Item5Text', '') %></li>
       </ul>
+      <p class="text-foreground"><%= t('legal:privacy.s5Outro', '') %></p>
     </section>
 
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('legal:privacy.s6Title', '') %></h2>
-      <p class="text-foreground mb-4"><%= t('legal:privacy.s6Intro', '') %></p>
-      <ul class="list-disc pl-6 space-y-2 text-foreground mb-4">
-        <li><strong><%= t('legal:privacy.s6Item1Label', '') %></strong> <%= t('legal:privacy.s6Item1Text', '') %></li>
-        <li><strong><%= t('legal:privacy.s6Item2Label', '') %></strong> <%= t('legal:privacy.s6Item2Text', '') %></li>
-        <li><strong><%= t('legal:privacy.s6Item3Label', '') %></strong> <%= t('legal:privacy.s6Item3Text', '') %></li>
-        <li><strong><%= t('legal:privacy.s6Item4Label', '') %></strong> <%= t('legal:privacy.s6Item4Text', '') %></li>
-        <li><strong><%= t('legal:privacy.s6Item5Label', '') %></strong> <%= t('legal:privacy.s6Item5Text', '') %></li>
-      </ul>
-      <p class="text-foreground"><%= t('legal:privacy.s6Outro', '') %></p>
-    </section>
-
-    <% for (let i = 7; i <= 10; i++) { %>
+    <% for (let i = 6; i <= 9; i++) { %>
     <section class="mb-10">
       <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('legal:privacy.s' + i + 'Title', '') %></h2>
-      <p class="text-foreground"><%= t('legal:privacy.s' + i + 'Text', '') %><% if (i === 10) { %> <a href="mailto:contact@neksin.com" class="text-primary hover:underline">contact@neksin.com</a><% } %></p>
+      <p class="text-foreground"><%= t('legal:privacy.s' + i + 'Text', '') %><% if (i === 9) { %> <a href="mailto:service@quiz-couple.com" class="text-primary hover:underline">service@quiz-couple.com</a><% } %></p>
     </section>
     <% } %>
 
