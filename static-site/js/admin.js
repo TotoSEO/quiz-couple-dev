@@ -422,10 +422,19 @@
     var titleEl = document.getElementById('admin-stats-chart-title');
     if (titleEl) titleEl.textContent = slug + ' · 30 derniers jours';
     drawLineChart(document.getElementById('admin-stats-chart'), null, { loading: true });
-    statsRpc('get_quiz_daily', { p_slug: slug, p_days: 30 }).then(function (rows) {
-      _lastQuizSeries = buildSeries(Array.isArray(rows) ? rows : [], 30);
+    // Meme decoupage que la courbe totale : sans fuseau, la base groupe en UTC
+    // et la colonne du jour reste vide jusqu'a deux heures du matin.
+    function trace(rows, enUTC) {
+      _lastQuizSeries = buildSeries(Array.isArray(rows) ? rows : [], 30, enUTC);
       drawLineChart(document.getElementById('admin-stats-chart'), _lastQuizSeries, {});
-    }).catch(function () { _lastQuizSeries = buildSeries([], 30); drawLineChart(document.getElementById('admin-stats-chart'), _lastQuizSeries, {}); });
+    }
+    statsRpc('get_quiz_daily', { p_slug: slug, p_days: 30, p_tz: fuseau() }).then(function (rows) {
+      if (Array.isArray(rows) && !rows.error) { trace(rows); return; }
+      throw new Error('no rpc');
+    }).catch(function () {
+      return statsRpc('get_quiz_daily', { p_slug: slug, p_days: 30 })
+        .then(function (rows) { trace(rows, true); });
+    }).catch(function () { trace([]); });
   }
 
   // Area + line chart with axes, gridlines and labels. Theme-aware.

@@ -17,6 +17,7 @@ on:
       - 'supabase/migrations/20260731120000_create_custom_quizzes.sql'
       - 'supabase/migrations/20260731130000_custom_quizzes_add_wyr.sql'
       - 'supabase/migrations/20260731140000_quiz_daily_total.sql'
+      - 'supabase/migrations/20260811000000_quiz_daily_total_timezone.sql'
       - '.github/workflows/deploy-db.yml'
   workflow_dispatch:
 
