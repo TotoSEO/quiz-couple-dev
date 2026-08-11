@@ -748,8 +748,11 @@ function copyStaticAssets() {
     }
   }
 
-  // Copy public/blog/, public/authors/ and public/quiz/ directories
-  for (const dir of ['blog', 'authors', 'quiz']) {
+  // Copy public/blog/, public/authors/, public/quiz/ and public/partenaires/
+  // (visuels des partenaires d'affiliation, hébergés chez nous et non appelés
+  // sur le serveur du partenaire : une image distante qui change ou disparaît
+  // casserait l'encart sans prévenir).
+  for (const dir of ['blog', 'authors', 'quiz', 'partenaires']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {

@@ -881,8 +881,17 @@ var QuizEngine = (function() {
     coquin: {
       fr: {
         url: 'https://www.passagedudesir.fr/?utm_source=affilae&utm_medium=medias-blogs-influence&utm_campaign=quiz-couple-com&ae=1325',
+        // Visuels de la marque, copies chez nous a la construction. Appeler
+        // le serveur du partenaire exposerait l'encart a une image qui change
+        // ou disparait sans prevenir, et ferait fuiter la visite de nos
+        // lecteurs vers un domaine tiers avant meme qu'ils cliquent.
+        image: '/partenaires/passage-du-desir.webp',
+        imageAlt: 'Mannequin en lingerie de dentelle, campagne Le Passage du Désir',
+        logo: '/partenaires/passage-du-desir-logo.svg',
+        marque: 'Le Passage du Désir',
+        surtitre: 'Notre partenaire',
         titre: 'Envie de découvrir des jouets pour adultes ? 🤭',
-        texte: 'Notre partenaire Le Passage du Désir a de quoi prolonger la soirée.',
+        texte: 'Lingerie, jeux et accessoires : de quoi prolonger la soirée bien après la dernière question.',
         bouton: 'Voir la boutique',
         mention: 'Lien partenaire. Le prix que vous payez reste le même.'
       }
@@ -894,21 +903,38 @@ var QuizEngine = (function() {
     var p = jeu && jeu[lang || 'fr'];
     if (!p) return;
 
-    // Toute la carte est cliquable, pas seulement le bouton : c'est l'offre
-    // entière qui est le lien. Un span fait office de bouton, un <button>
-    // dans un <a> ne serait pas du HTML valide.
-    var a = el('a', 'partenaire-encart');
+    // Toute la banniere est cliquable, pas seulement le bouton : c'est
+    // l'offre entiere qui est le lien. Un span fait office de bouton, un
+    // <button> dans un <a> ne serait pas du HTML valide.
+    // La bannière vit dans la carte de résultat, dont la largeur dépend de la
+    // présence de la colonne des tests voisins : à 1024 px de fenêtre elle ne
+    // dispose que de 520 px. Elle doit donc réagir à sa propre largeur et non
+    // à celle de l'écran, d'où le conteneur de requête. Sans prise en charge,
+    // elle reste empilée, ce qui est la disposition sûre.
+    var zone = el('div', 'partenaire-zone');
+    var a = el('a', 'partenaire-banniere');
     a.href = p.url;
     a.target = '_blank';
     a.rel = 'sponsored nofollow noopener';
+    a.setAttribute('aria-label', p.titre + ' - ' + p.marque);
     a.innerHTML =
-      '<span class="partenaire-titre">' + esc(p.titre) + '</span>' +
-      '<span class="partenaire-texte">' + esc(p.texte) + '</span>' +
-      '<span class="partenaire-btn">' + esc(p.bouton) +
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>' +
+      '<span class="partenaire-visuel">' +
+        '<img src="' + p.image + '" alt="' + esc(p.imageAlt) + '" loading="lazy" decoding="async" width="480" height="480">' +
       '</span>' +
-      '<span class="partenaire-mention">' + esc(p.mention) + '</span>';
-    wrap.appendChild(a);
+      '<span class="partenaire-corps">' +
+        '<span class="partenaire-marque">' +
+          '<img class="partenaire-logo" src="' + p.logo + '" alt="' + esc(p.marque) + '" loading="lazy" decoding="async">' +
+        '</span>' +
+        '<span class="partenaire-surtitre">' + esc(p.surtitre) + '</span>' +
+        '<span class="partenaire-titre">' + esc(p.titre) + '</span>' +
+        '<span class="partenaire-texte">' + esc(p.texte) + '</span>' +
+        '<span class="partenaire-btn">' + esc(p.bouton) +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>' +
+        '</span>' +
+        '<span class="partenaire-mention">' + esc(p.mention) + '</span>' +
+      '</span>';
+    zone.appendChild(a);
+    wrap.appendChild(zone);
   }
 
   function renderActionButtons(wrap, opts) {
@@ -1840,8 +1866,50 @@ var QuizEngine = (function() {
     // left half the rounds with an undefined question and crashed).
     this.questionsPerPlayer = Math.max(1, Math.min(15, Math.floor((this.questions.length || 0) / 2)));
     this.totalRounds = this.questionsPerPlayer * 2;
+    // Trente questions décourageaient : beaucoup arrivaient sur la page sans
+    // aller au bout. On joue donc la moitié par défaut, et on propose de
+    // prolonger une fois qu'on y a pris goût. `limite` est le nombre de
+    // manches réellement à jouer ; `rounds` en contient toujours le maximum,
+    // ce qui garantit qu'une question déjà posée ne revient pas à la rallonge.
+    this.limite = Math.min(this.demiPartie(), this.totalRounds);
     this.render();
   }
+
+  // La moitié de la partie, arrondie au supérieur : sur trente manches, la
+  // version courte en fait quinze.
+  CoquinQuiz.prototype.demiPartie = function() {
+    return Math.max(1, Math.ceil(this.totalRounds / 2));
+  };
+
+  // Manches effectivement jouées. Sert de dénominateur au score : celui qui
+  // s'arrête à quinze doit lire « sur 15 », pas « sur 30 ».
+  CoquinQuiz.prototype.jouees = function() {
+    return this.rounds.filter(function(r) { return r.correct !== null; }).length;
+  };
+
+  // Score en toutes lettres, au singulier ou au pluriel. « bonne(s)
+  // réponse(s) » est une facilité d'écriture, pas du français ; et l'anglais
+  // dirait « 1 correct answers ». Chaque langue fournit ses deux formes.
+  // `avecNombre` distingue la phrase complète de l'étiquette d'une pastille,
+  // qui affiche déjà le nombre dans sa puce.
+  CoquinQuiz.prototype.texteScore = function(bonnes, total, avecNombre) {
+    var un = bonnes <= 1;
+    var cle = avecNombre
+      ? (un ? 'coquin.scoreUn' : 'coquin.scorePluriel')
+      : (un ? 'coquin.etiquetteUn' : 'coquin.etiquettePluriel');
+    var repli = avecNombre
+      ? (un ? '{{bonnes}} bonne réponse sur {{total}}' : '{{bonnes}} bonnes réponses sur {{total}}')
+      : (un ? 'bonne réponse sur {{total}}' : 'bonnes réponses sur {{total}}');
+    return tg(cle, repli).replace('{{bonnes}}', bonnes).replace('{{total}}', total);
+  };
+
+  // Pastille de l'écran de départ, accordée au nombre de manches choisi.
+  // Une manche demande deux réponses et un passage de téléphone : compter
+  // vingt secondes est plus honnête que d'annoncer cinq minutes pour trente.
+  CoquinQuiz.prototype.metaLongueur = function() {
+    var minutes = Math.max(3, Math.round(this.limite * 20 / 60));
+    return pastilleMeta(this.limite, null, minutes + ' min');
+  };
 
   CoquinQuiz.prototype.render = function() {
     this.container.innerHTML = '';
@@ -1849,6 +1917,7 @@ var QuizEngine = (function() {
     else if (this.phase === 'guessing') this.renderGuessing();
     else if (this.phase === 'revealing') this.renderRevealing();
     else if (this.phase === 'feedback') this.renderFeedback();
+    else if (this.phase === 'palier') this.renderPalier();
     else if (this.phase === 'results') this.renderResults();
   };
 
@@ -1880,7 +1949,40 @@ var QuizEngine = (function() {
       })(i);
     }
 
-    form.appendChild(el('p', 'text-xs text-muted-foreground text-center mt-2', tg('coquin.randomQuestions', '🎲 15 questions aléatoires parmi 30 à découvrir !')));
+    // La pastille annonçait les trente questions du réservoir alors qu'on en
+    // joue quinze par défaut. Elle suit maintenant le choix.
+    var metaEl = el('div', 'quiz-setup-meta');
+    metaEl.innerHTML = this.metaLongueur();
+
+    // Choix de la longueur. La version courte est présélectionnée : c'est
+    // l'engagement le plus facile à prendre, et on peut prolonger à la fin.
+    var court = this.demiPartie();
+    var longueurs = [
+      { n: court, libelle: tg('coquin.longueurCourt', 'Version rapide') },
+      { n: this.totalRounds, libelle: tg('coquin.longueurLong', 'Version complète') }
+    ];
+    var choixWrap = el('div', 'coquin-longueur');
+    choixWrap.appendChild(el('p', 'coquin-longueur-titre', tg('coquin.longueurTitre', 'Vous jouez en combien de questions ?')));
+    var boutonsWrap = el('div', 'coquin-longueur-choix');
+    longueurs.forEach(function(o) {
+      var b = el('button', 'coquin-longueur-btn' + (o.n === self.limite ? ' active' : ''));
+      b.type = 'button';
+      b.setAttribute('aria-pressed', o.n === self.limite ? 'true' : 'false');
+      b.innerHTML = '<span class="coquin-longueur-nb">' + o.n + '</span>' +
+        '<span class="coquin-longueur-unite">' + esc(tg('coquin.longueurUnite', 'questions')) + '</span>' +
+        '<span class="coquin-longueur-libelle">' + esc(o.libelle) + '</span>';
+      b.addEventListener('click', function() {
+        self.limite = o.n;
+        boutonsWrap.querySelectorAll('.coquin-longueur-btn').forEach(function(x) {
+          x.classList.remove('active'); x.setAttribute('aria-pressed', 'false');
+        });
+        b.classList.add('active'); b.setAttribute('aria-pressed', 'true');
+        if (metaEl) metaEl.innerHTML = self.metaLongueur();
+      });
+      boutonsWrap.appendChild(b);
+    });
+    choixWrap.appendChild(boutonsWrap);
+    form.appendChild(choixWrap);
 
     var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', '🔥 ' + tg('coquin.lightTheFlame', 'Allumer la flamme'));
     startBtn.addEventListener('click', function() {
@@ -1890,7 +1992,7 @@ var QuizEngine = (function() {
       self.initRounds();
       self.phase = 'guessing'; self.render();
     });
-    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
+    wrap.appendChild(metaEl);
     form.appendChild(startBtn);
     wrap.appendChild(form);
     this.container.appendChild(wrap);
@@ -1919,7 +2021,7 @@ var QuizEngine = (function() {
     var target = this.players[round.target];
 
     var wrap = el('div', 'quiz-engine quiz-question-enter');
-    renderProgressBar(wrap, this.currentRound, this.totalRounds, tg('question.roundXofY', 'Manche {{current}} sur {{total}}').replace('{{current}}', this.currentRound + 1).replace('{{total}}', this.totalRounds));
+    renderProgressBar(wrap, this.currentRound, this.limite, tg('question.roundXofY', 'Manche {{current}} sur {{total}}').replace('{{current}}', this.currentRound + 1).replace('{{total}}', this.limite));
 
     wrap.appendChild(el('div', 'text-center mb-2 text-sm text-muted-foreground', esc(guesser.name) + ' ' + tg('coquin.guessFor', 'devine pour') + ' ' + esc(target.name)));
     renderPlayerBadge(wrap, guesser.name + ' ' + tg('question.itsYourTurnToGuess', 'c\'est à toi de deviner !'));
@@ -1965,7 +2067,7 @@ var QuizEngine = (function() {
     var target = this.players[round.target];
 
     var wrap = el('div', 'quiz-engine quiz-question-enter');
-    renderProgressBar(wrap, this.currentRound, this.totalRounds, tg('question.roundXofY', 'Manche {{current}} sur {{total}}').replace('{{current}}', this.currentRound + 1).replace('{{total}}', this.totalRounds));
+    renderProgressBar(wrap, this.currentRound, this.limite, tg('question.roundXofY', 'Manche {{current}} sur {{total}}').replace('{{current}}', this.currentRound + 1).replace('{{total}}', this.limite));
 
     wrap.appendChild(el('div', 'text-center mb-2', '📱 ' + tg('coquin.passPhone', 'Passez le téléphone à') + ' ' + esc(target.name)));
     renderPlayerBadge(wrap, target.name + ', ' + tg('coquin.revealAnswer', 'révèle ta vraie réponse !'));
@@ -2011,52 +2113,123 @@ var QuizEngine = (function() {
     var q = this.questions[round.qIdx];
     var guesser = this.players[round.guesser];
     var target = this.players[round.target];
-    var score = this.rounds.filter(function(r) { return r.correct === true; }).length;
+    var bonnes = this.rounds.filter(function(r) { return r.correct === true; }).length;
+    var jouees = this.jouees();
 
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
+    var wrap = el('div', 'quiz-engine coquin-verdict animate-fade-in text-center'
+      + (round.correct ? ' est-juste' : ' est-rate'));
 
-    if (round.correct) {
-      wrap.appendChild(el('div', 'text-5xl mb-4', '✅'));
-      wrap.appendChild(el('h2', 'text-xl font-bold mb-3 text-green-500', tg('coquin.correctGuess', 'Bien deviné !')));
-    } else {
-      wrap.appendChild(el('div', 'text-5xl mb-4', '❌'));
-      wrap.appendChild(el('h2', 'text-xl font-bold mb-3 text-red-500', tg('coquin.wrongGuess', 'Raté !')));
-    }
+    // Le verdict tenait en un emoji et une ligne de texte gris. Il porte
+    // maintenant la couleur de l'ecran : c'est le moment fort de la manche.
+    var halo = el('div', 'coquin-verdict-halo');
+    halo.innerHTML = '<span>' + (round.correct ? '🔥' : '🙈') + '</span>';
+    wrap.appendChild(halo);
+    wrap.appendChild(el('h2', 'coquin-verdict-titre', round.correct
+      ? tg('coquin.correctGuess', 'Bien devine !')
+      : tg('coquin.wrongGuess', 'Rate !')));
 
-    // Show what was guessed vs actual
     var guessOpt = q.options.find(function(o) { return o.id === round.guess; });
     var actualOpt = q.options.find(function(o) { return o.id === round.actual; });
-    if (guessOpt) {
-      var guessText = tgd(self.prefix + '.q' + q.id + guessOpt.id, guessOpt.text);
-      wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-1', esc(guesser.name) + ' ' + tg('coquin.guessed', 'a deviné :') + ' ' + esc(guessText)));
-    }
-    if (actualOpt) {
-      var actualText = tgd(self.prefix + '.q' + q.id + actualOpt.id, actualOpt.text);
-      wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-4', tg('coquin.realAnswer', 'La vraie réponse de') + ' ' + esc(target.name) + ' : ' + esc(actualText)));
+    var texteDevine = guessOpt ? tgd(self.prefix + '.q' + q.id + guessOpt.id, guessOpt.text) : '';
+    var texteVrai = actualOpt ? tgd(self.prefix + '.q' + q.id + actualOpt.id, actualOpt.text) : '';
+
+    if (round.correct) {
+      // Les deux reponses sont identiques : les afficher deux fois n'apprend
+      // rien. Une seule carte, qui dit ce qu'ils ont en commun.
+      var accord = el('div', 'coquin-carte coquin-carte--accord');
+      accord.innerHTML =
+        '<span class="coquin-carte-etiquette">' + esc(tg('coquin.verdictAccord', 'Vous avez dit la meme chose')) + '</span>' +
+        '<span class="coquin-carte-reponse">' + esc(texteVrai || texteDevine) + '</span>';
+      wrap.appendChild(accord);
+    } else {
+      // Rate : c'est l'ecart entre les deux qui est interessant, on les met
+      // face a face plutot qu'en deux lignes grises l'une sous l'autre.
+      var duel = el('div', 'coquin-duel');
+      var carteD = el('div', 'coquin-carte coquin-carte--devine');
+      carteD.innerHTML =
+        '<span class="coquin-carte-etiquette">' + esc(guesser.name) + ' ' + esc(tg('coquin.verdictDevine', 'a devine')) + '</span>' +
+        '<span class="coquin-carte-reponse">' + esc(texteDevine) + '</span>';
+      var carteV = el('div', 'coquin-carte coquin-carte--vraie');
+      carteV.innerHTML =
+        '<span class="coquin-carte-etiquette">' + esc(tg('coquin.verdictVraie', 'La vraie reponse de {{nom}}').replace('{{nom}}', target.name)) + '</span>' +
+        '<span class="coquin-carte-reponse">' + esc(texteVrai) + '</span>';
+      duel.appendChild(carteD);
+      duel.appendChild(el('div', 'coquin-duel-vs', 'vs'));
+      duel.appendChild(carteV);
+      wrap.appendChild(duel);
     }
 
-    wrap.appendChild(el('p', 'text-sm font-medium mb-6', tg('coquin.currentScore', 'Score actuel') + ' : ' + score + ' ' + tg('coquin.correctAnswers', 'bonnes réponses')));
+    // Le score devient une pastille, avec le total reellement joue.
+    var pastille = el('div', 'coquin-score-pastille');
+    pastille.innerHTML = '<span class="coquin-score-nb">' + bonnes + '</span>' +
+      '<span class="coquin-score-texte">' + esc(this.texteScore(bonnes, jouees, false)) + '</span>';
+    wrap.appendChild(pastille);
 
-    var nextBtn = el('button', 'btn btn-cta', tg('coquin.nextRound', 'Manche suivante'));
+    var suivant = this.currentRound + 1;
+    var nextBtn = el('button', 'btn btn-cta btn-lg coquin-suivant', tg('coquin.nextRound', 'Manche suivante'));
     nextBtn.addEventListener('click', function() {
-      if (self.currentRound + 1 >= self.totalRounds) { self.phase = 'results'; }
-      else { self.currentRound++; self.phase = 'guessing'; }
+      if (suivant >= self.limite) {
+        // Palier atteint. On ne propose la rallonge que s'il reste vraiment
+        // des questions non posees, sinon on va droit aux resultats.
+        self.phase = (self.limite < self.totalRounds) ? 'palier' : 'results';
+      } else {
+        self.currentRound = suivant; self.phase = 'guessing';
+      }
       self.render();
     });
     wrap.appendChild(nextBtn);
     this.container.appendChild(wrap);
   };
 
+  // Palier : la version courte est finie, on continue ou on s'arrete.
+  // Celui qui vient de jouer quinze manches a montre qu'il accrochait. Lui
+  // proposer la suite ici convertit mieux que de l'annoncer au depart, ou
+  // trente questions faisaient reculer.
+  CoquinQuiz.prototype.renderPalier = function() {
+    var self = this;
+    var restant = this.totalRounds - this.limite;
+    var bonnes = this.rounds.filter(function(r) { return r.correct === true; }).length;
+
+    var wrap = el('div', 'quiz-engine coquin-palier animate-fade-in text-center');
+    wrap.appendChild(el('div', 'coquin-palier-icone', '🔥'));
+    wrap.appendChild(el('h2', 'coquin-palier-titre',
+      tg('coquin.palierTitre', 'Vous avez repondu aux {{n}} questions !').replace('{{n}}', this.limite)));
+    wrap.appendChild(el('p', 'coquin-palier-score', esc(this.texteScore(bonnes, this.jouees(), true))));
+    wrap.appendChild(el('p', 'coquin-palier-texte',
+      tg('coquin.palierTexte', 'Vous pouvez vous arreter la ou enchainer.')));
+
+    var choix = el('div', 'coquin-palier-choix');
+    var continuer = el('button', 'btn btn-cta btn-lg',
+      tg('coquin.palierContinuer', 'Jouer {{n}} questions de plus').replace('{{n}}', restant));
+    continuer.addEventListener('click', function() {
+      self.limite = self.totalRounds;
+      self.currentRound = self.currentRound + 1;
+      self.phase = 'guessing';
+      self.render();
+      smoothScroll(self.container, 'start');
+    });
+    var arreter = el('button', 'btn btn-outline', tg('coquin.palierResultats', 'Voir nos resultats'));
+    arreter.addEventListener('click', function() { self.phase = 'results'; self.render(); });
+    choix.appendChild(continuer);
+    choix.appendChild(arreter);
+    wrap.appendChild(choix);
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   CoquinQuiz.prototype.renderResults = function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
     var score = this.rounds.filter(function(r) { return r.correct === true; }).length;
-    var pct = Math.round((score / this.totalRounds) * 100);
+    // Le dénominateur est le nombre de manches réellement jouées : celui qui
+    // s'arrête à quinze verrait sinon son score divisé par trente.
+    var jouees = Math.max(1, this.jouees());
+    var pct = Math.round((score / jouees) * 100);
 
     wrap.appendChild(el('div', 'text-5xl mb-4', '🔥'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('coquin.resultsOf', 'Résultats de') + ' ' + esc(this.players[0].name) + ' & ' + esc(this.players[1].name)));
     wrap.appendChild(el('div', 'quiz-score-circle mx-auto mb-4', pct + '%'));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6', score + '/' + this.totalRounds + ' ' + tg('coquin.goodGuesses', 'bonnes devinettes')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6', score + '/' + jouees + ' ' + tg('coquin.goodGuesses', 'bonnes devinettes')));
 
     blocPartenaire(wrap, 'coquin', this.lang);
 
