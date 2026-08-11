@@ -842,7 +842,6 @@ var QuizEngine = (function() {
     renderShareButton(zone, opts.share || opts.shareText);
 
     var actions = el('div', 'result-actions-grid');
-    var hasPool = quizEl && quizEl.dataset.hasPool === '1';
     function bouton(icone, libelle, action, principal) {
       var b = el('button', 'result-action-btn' + (principal ? ' result-action-btn--primary' : ''));
       b.type = 'button';
@@ -851,10 +850,10 @@ var QuizEngine = (function() {
       b.addEventListener('click', action);
       actions.appendChild(b);
     }
-    if (opts.newQuestions && hasPool) {
-      bouton('🎲', tg('result.restartOtherQuestions', 'Autres questions'), opts.newQuestions, true);
-    }
-    if (opts.restart) bouton('🔄', tg('result.restartFromBeginning', 'Recommencer'), opts.restart);
+    // « Autres questions » et « Recommencer » faisaient la même promesse à un
+    // tirage près, côte à côte, au moment où il fallait au contraire une seule
+    // sortie évidente. Il ne reste que la reprise depuis le début.
+    if (opts.restart) bouton('🔄', tg('result.restartFromBeginning', 'Recommencer'), opts.restart, true);
     if (opts.changePlayers) bouton('👥', tg('result.changePlayers', 'Changer de joueurs'), opts.changePlayers);
     if (actions.childNodes.length) zone.appendChild(actions);
     return zone;
@@ -1564,7 +1563,6 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { type: 'duo', pct: pct, verdict: result ? result.title : '' },
-      newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
 
@@ -1645,7 +1643,6 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { type: 'duo', pct: pctG, verdict: (bG && bG.title) || '' },
-      newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
 
@@ -1850,7 +1847,6 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { type: 'duo', pct: Math.round(((this.p1Score + this.p2Score) / (this.maxScorePerPlayer * 2)) * 100) },
-      newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -2246,7 +2242,6 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { type: 'duo', pct: pct },
-      newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -2480,7 +2475,6 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { type: 'duo', pct: Math.round(((this.scores[0] + this.scores[1]) / this.questions.length) * 100) },
-      newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -2651,7 +2645,6 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { type: 'duo', pct: pct, verdict: result ? result.title : '' },
-      newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -2814,7 +2807,6 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { type: 'fun' },
-      newQuestions: function() { self.tirer(); self.currentQ = 0; self.phase = 'playing'; self.render(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -3052,9 +3044,19 @@ var QuizEngine = (function() {
     else msg = tg('result.nobodyDominated', 'Égalité ! Vous êtes tous uniques !');
     wrap.appendChild(el('p', 'text-lg font-medium mb-4', msg));
 
+    // Ce quiz n'offrait que « Autres questions » et « Changer de joueurs » :
+    // en retirant le premier, il ne serait plus resté aucune façon de rejouer
+    // avec la même équipe. La reprise depuis le début rejoue donc ici aussi,
+    // en repartant des mêmes joueurs et en remettant les compteurs à zéro.
     renderActionButtons(wrap, {
       share: { type: 'fun' },
-      newQuestions: function() { location.reload(); },
+      restart: function() {
+        self.currentQ = 0;
+        self.designations = {};
+        self.phase = 'question';
+        self.render();
+        smoothScroll(self.container, 'start');
+      },
       changePlayers: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -3301,7 +3303,6 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { type: 'duo', pct: pct, verdict: result ? result.title : '' },
-      newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -3772,7 +3773,6 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { type: 'duo', score: this.score, total: total, pct: pct, verdict: result ? result.title : '' },
-      newQuestions: function() { location.reload(); },
       restart: function() { self.phase = 'intro'; self.render(); }
     });
 
@@ -4348,11 +4348,8 @@ var QuizEngine = (function() {
     if (jackpot) this._confetti(hero);
     wrap.appendChild(hero);
 
-    var quizEl = document.getElementById('quiz-engine');
-    var hasPool = quizEl && quizEl.dataset.hasPool === '1';
     renderActionButtons(wrap, {
       share: { type: 'duo', points: true, score: this.score },
-      newQuestions: hasPool ? function () { self.initGame(); self.phase = 'guess'; self.render(); smoothScroll(self.container, 'start'); } : null,
       restart: function () { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     });
     this.container.appendChild(wrap);
@@ -4626,11 +4623,8 @@ var QuizEngine = (function() {
       + this.score + '/' + this.maxScore + '</strong></p>';
     wrap.appendChild(hero);
 
-    var quizEl = document.getElementById('quiz-engine');
-    var hasPool = quizEl && quizEl.dataset.hasPool === '1';
     renderActionButtons(wrap, {
       share: { type: 'solo', pct: resistance },
-      newQuestions: hasPool ? function () { self.initStay(); self.phase = 'day'; self.render(); smoothScroll(self.container, 'start'); } : null,
       restart: function () { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     });
     this.container.appendChild(wrap);
