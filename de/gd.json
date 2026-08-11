@@ -3932,6 +3932,13 @@
     "modeJeuMeta": "Spiel zu zweit • 20 Fragen • 10 Min."
   },
   "loveLanguage": {
+    "introTitle": "Dein Liebesprofil",
+    "linkLabel": "Deine dominante Sprache",
+    "pf_axis_words": "Worte der Bestätigung",
+    "pf_axis_acts": "Hilfsbereitschaft",
+    "pf_axis_gifts": "Geschenke",
+    "pf_axis_time": "Zweisamkeit",
+    "pf_axis_touch": "Körperliche Nähe",
     "q1": "Nach einem langen, anstrengenden Tag, was von deinem Partner/deiner Partnerin würde dir am meisten guttun?",
     "q1a": "Dass er/sie sagt: „Ich bin so stolz auf dich, du machst das richtig gut\"",
     "q1b": "Dass er/sie das Abendessen vorbereitet und die Wohnung aufgeräumt hat, ohne dass ich darum bitten musste",

@@ -3932,6 +3932,13 @@
     "modeJeuMeta": "Juego en pareja • 20 preguntas • 10 min"
   },
   "loveLanguage": {
+    "introTitle": "Tu perfil amoroso",
+    "linkLabel": "Tu lenguaje dominante",
+    "pf_axis_words": "Palabras de afirmación",
+    "pf_axis_acts": "Actos de servicio",
+    "pf_axis_gifts": "Regalos",
+    "pf_axis_time": "Tiempo de calidad",
+    "pf_axis_touch": "Contacto físico",
     "q1": "Tras un largo y duro dia, que es lo que mas os reconfortaria por parte de vuestra pareja?",
     "q1a": "Que me dijera: \"Estoy muy orgulloso/a de ti, lo llevas genial\"",
     "q1b": "Que hubiera preparado la cena y recogido la casa sin que yo se lo pidiera",

@@ -122,13 +122,20 @@ function buildStaticQuestionsSection(quizType, tgd, lang) {
   return out;
 }
 
-// Inject the static questions section right after the (empty) quiz mount div.
-// Handles the generic engine (#quiz-engine data-quiz=…) and the two bespoke
-// mounts (tu-préfères → #wyr-quiz, love languages → #love-language-quiz).
+// Inject the static questions section right after the quiz mount div.
+// Handles the generic engine (#quiz-engine data-quiz=…) and the bespoke
+// tu-préfères mount (#wyr-quiz).
+//
+// Le point de montage n'est pas toujours vide : depuis que l'écran d'attente
+// y est posé, il contient un bloc de chargement. Les motifs n'acceptaient que
+// la forme vide, si bien que ce bloc de questions ne sortait plus que sur les
+// rares pages restées sans écran d'attente. Le contenu intérieur est donc
+// désormais facultatif. Il tient sur un seul niveau de div, la partielle
+// n'imbriquant que des span : le motif reste sûr.
+const MONTAGE_INTERIEUR = '(?:\\s*<div class="quiz-engine-loading"[\\s\\S]*?<\\/div>\\s*)?';
 const QUIZ_MOUNT_MATCHERS = [
-  { re: /<div id="quiz-engine" data-quiz="([^"]+)"[^>]*><\/div>/, type: (m) => m[1] },
-  { re: /<div id="wyr-quiz"[^>]*><\/div>/, type: () => 'tu-preferes' },
-  { re: /<div id="love-language-quiz"[^>]*><\/div>/, type: () => 'langage-amour' },
+  { re: new RegExp('<div id="quiz-engine" data-quiz="([^"]+)"[^>]*>' + MONTAGE_INTERIEUR + '<\\/div>'), type: (m) => m[1] },
+  { re: new RegExp('<div id="wyr-quiz"[^>]*>' + MONTAGE_INTERIEUR + '<\\/div>'), type: () => 'tu-preferes' },
 ];
 function injectStaticQuestions(html, tgd, lang) {
   for (const matcher of QUIZ_MOUNT_MATCHERS) {

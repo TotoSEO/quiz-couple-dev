@@ -3932,6 +3932,13 @@
     "modeJeuMeta": "Two-player game • 20 questions • 10 min"
   },
   "loveLanguage": {
+    "introTitle": "Your love profile",
+    "linkLabel": "Your dominant language",
+    "pf_axis_words": "Words of Affirmation",
+    "pf_axis_acts": "Acts of Service",
+    "pf_axis_gifts": "Receiving Gifts",
+    "pf_axis_time": "Quality Time",
+    "pf_axis_touch": "Physical Touch",
     "q1": "After a long, tough day, what would feel best coming from your partner?",
     "q1a": "Hearing them say: \"I'm so proud of you, you handle everything so well\"",
     "q1b": "Coming home to find dinner ready and the house tidied up without having to ask",
