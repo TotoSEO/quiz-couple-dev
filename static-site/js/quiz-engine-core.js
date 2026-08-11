@@ -890,8 +890,16 @@ var QuizEngine = (function() {
         logo: '/partenaires/passage-du-desir-logo.svg',
         marque: 'Le Passage du Désir',
         surtitre: 'Notre partenaire',
-        titre: 'Envie de découvrir des jouets pour adultes ? 🤭',
+        titre: 'Envie de découvrir les jouets pour adultes les plus discrets ? 🤭',
         texte: 'Lingerie, jeux et accessoires : de quoi prolonger la soirée bien après la dernière question.',
+        // Deux arguments qui lèvent le frein réel de cet achat : ce qui arrive
+        // dans la boîte aux lettres, et la confiance qu'on peut faire au
+        // vendeur. Chiffre Trustpilot confirmé par l'éditeur du site ; il
+        // évolue, à revoir si l'écart devient visible.
+        atouts: [
+          { icone: '📦', texte: 'Emballage neutre et discret' },
+          { icone: '⭐', texte: '4,8/5 sur Trustpilot' }
+        ],
         bouton: 'Voir la boutique',
         mention: 'Lien partenaire. Le prix que vous payez reste le même.'
       }
@@ -928,6 +936,9 @@ var QuizEngine = (function() {
         '<span class="partenaire-surtitre">' + esc(p.surtitre) + '</span>' +
         '<span class="partenaire-titre">' + esc(p.titre) + '</span>' +
         '<span class="partenaire-texte">' + esc(p.texte) + '</span>' +
+        (p.atouts ? '<span class="partenaire-atouts">' + p.atouts.map(function(x) {
+          return '<span class="partenaire-atout"><span aria-hidden="true">' + x.icone + '</span>' + esc(x.texte) + '</span>';
+        }).join('') + '</span>' : '') +
         '<span class="partenaire-btn">' + esc(p.bouton) +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>' +
         '</span>' +
