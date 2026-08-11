@@ -7069,3 +7069,51 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   border: 1px solid hsl(var(--primary) / 0.2); background: hsl(var(--primary) / 0.05);
 }
 .qc-conclusion p { color: hsl(var(--foreground)); line-height: 1.75; margin: 0; }
+
+/* ── Encart partenaire (écrans de fin coquin et action ou vérité hot) ──
+   Toute la carte est un lien. Elle doit se voir sans ressembler à une
+   bannière publicitaire collée par-dessus la page : mêmes variables de
+   couleur, même rayon, même bouton que le reste du site. La mention de
+   partenariat reste lisible, en dessous du bouton et non en gris pâle. */
+.partenaire-encart {
+  display: block; text-align: center; text-decoration: none;
+  margin: 1.75rem auto 0.5rem; max-width: 32rem; padding: 1.5rem 1.25rem;
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid hsl(var(--primary) / 0.28);
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.08), hsl(var(--secondary) / 0.08));
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+.partenaire-encart:hover,
+.partenaire-encart:focus-visible {
+  transform: translateY(-2px);
+  border-color: hsl(var(--primary) / 0.5);
+  box-shadow: 0 12px 30px -12px hsl(var(--primary) / 0.45);
+}
+.partenaire-titre {
+  display: block; font-family: Poppins, Inter, sans-serif;
+  font-size: 1.125rem; font-weight: 700; line-height: 1.35;
+  color: hsl(var(--foreground)); margin-bottom: 0.5rem;
+}
+.partenaire-texte {
+  display: block; font-size: 0.9375rem; line-height: 1.6;
+  color: hsl(var(--muted-foreground)); margin-bottom: 1.125rem;
+}
+.partenaire-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.75rem 1.5rem; border-radius: var(--radius);
+  background-color: hsl(var(--primary)); color: hsl(var(--primary-foreground));
+  font-size: 0.9375rem; font-weight: 600;
+  box-shadow: 0 0 24px -6px hsl(var(--primary) / 0.55);
+  transition: background-color 200ms ease;
+}
+.partenaire-btn svg { width: 1rem; height: 1rem; }
+.partenaire-encart:hover .partenaire-btn { background-color: hsl(var(--primary) / 0.9); }
+.partenaire-mention {
+  display: block; margin-top: 0.875rem;
+  font-size: 0.75rem; line-height: 1.5; color: hsl(var(--muted-foreground));
+}
+@media (max-width: 480px) {
+  .partenaire-encart { padding: 1.25rem 1rem; }
+  .partenaire-titre { font-size: 1.0625rem; }
+  .partenaire-btn { width: 100%; justify-content: center; }
+}

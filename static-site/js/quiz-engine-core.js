@@ -860,6 +860,57 @@ var QuizEngine = (function() {
     return zone;
   }
 
+  // ── Encart partenaire ──────────────────────────────────────
+  // Posé sur les seuls écrans de fin dont le contenu est déjà pour adultes :
+  // le quiz coquin et la version hot d'action ou vérité. Ailleurs il n'aurait
+  // rien à faire.
+  //
+  // Le lien est un lien d'affiliation. Trois précautions, qui ne coûtent rien
+  // au taux de clic :
+  //   • rel="sponsored nofollow" : Google l'exige pour un lien rémunéré, et
+  //     sans lui c'est le référencement du site qui est exposé ;
+  //   • target="_blank" avec noopener : la partie en cours n'est pas perdue,
+  //     et celui qui revient retrouve son écran de résultat ;
+  //   • une mention visible sous le bouton. La section 8 des mentions légales
+  //     existe déjà, mais elle est à deux clics d'ici : l'information doit
+  //     être là où le lien est.
+  //
+  // Boutique française, textes français : l'encart ne sort qu'en français.
+  // Le proposer aux autres langues gâcherait l'emplacement sans rapporter.
+  var PARTENAIRES = {
+    coquin: {
+      fr: {
+        url: 'https://www.passagedudesir.fr/?utm_source=affilae&utm_medium=medias-blogs-influence&utm_campaign=quiz-couple-com&ae=1325',
+        titre: 'Envie de découvrir des jouets pour adultes ? 🤭',
+        texte: 'Notre partenaire Le Passage du Désir a de quoi prolonger la soirée.',
+        bouton: 'Voir la boutique',
+        mention: 'Lien partenaire. Le prix que vous payez reste le même.'
+      }
+    }
+  };
+
+  function blocPartenaire(wrap, cle, lang) {
+    var jeu = PARTENAIRES[cle];
+    var p = jeu && jeu[lang || 'fr'];
+    if (!p) return;
+
+    // Toute la carte est cliquable, pas seulement le bouton : c'est l'offre
+    // entière qui est le lien. Un span fait office de bouton, un <button>
+    // dans un <a> ne serait pas du HTML valide.
+    var a = el('a', 'partenaire-encart');
+    a.href = p.url;
+    a.target = '_blank';
+    a.rel = 'sponsored nofollow noopener';
+    a.innerHTML =
+      '<span class="partenaire-titre">' + esc(p.titre) + '</span>' +
+      '<span class="partenaire-texte">' + esc(p.texte) + '</span>' +
+      '<span class="partenaire-btn">' + esc(p.bouton) +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>' +
+      '</span>' +
+      '<span class="partenaire-mention">' + esc(p.mention) + '</span>';
+    wrap.appendChild(a);
+  }
+
   function renderActionButtons(wrap, opts) {
     var quizEl = document.getElementById('quiz-engine');
     var currentKey = quizEl ? quizEl.dataset.quiz : '';
@@ -2006,6 +2057,8 @@ var QuizEngine = (function() {
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('coquin.resultsOf', 'Résultats de') + ' ' + esc(this.players[0].name) + ' & ' + esc(this.players[1].name)));
     wrap.appendChild(el('div', 'quiz-score-circle mx-auto mb-4', pct + '%'));
     wrap.appendChild(el('p', 'text-muted-foreground mb-6', score + '/' + this.totalRounds + ' ' + tg('coquin.goodGuesses', 'bonnes devinettes')));
+
+    blocPartenaire(wrap, 'coquin', this.lang);
 
     renderActionButtons(wrap, {
       share: { type: 'duo', pct: pct },
@@ -4604,6 +4657,10 @@ var QuizEngine = (function() {
       self.phase = 'choix'; self.render(); smoothScroll(self.container, 'start');
     });
     wrap.appendChild(rejouer);
+
+    // Ce moteur sert aussi la version tout public d'action ou vérité, qui ne
+    // doit surtout pas porter cet encart. Seul le préfixe hot le déclenche.
+    if (this.prefix === 'actionVeriteHot') blocPartenaire(wrap, 'coquin', this.lang);
 
     renderActionButtons(wrap, {
       share: { type: 'cartes', score: this.releves, total: total },
