@@ -3121,36 +3121,50 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 /* auto-fit plutôt qu'un nombre de colonnes figé : avec un seul bouton, la
    piste vide disparaît et le bouton prend toute la largeur au lieu de rester
    orphelin sur une demi-ligne. */
+/* Il ne reste qu'une reprise, parfois accompagnée du changement de joueurs.
+   La grille en colonnes n'a plus lieu d'être : les boutons se suivent, larges
+   et centrés, au lieu d'être coupés en deux vignettes carrées. */
 .result-actions-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 0.75rem;
-  max-width: 28rem; margin-left: auto; margin-right: auto;
-}
-/* Deux colonnes sur téléphone : un nombre impair laisserait le dernier bouton
-   à moitié de ligne, on lui fait occuper la largeur. */
-@media (max-width: 639px) {
-  .result-actions-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
-}
-@media (min-width: 640px) {
-  .result-actions-grid { max-width: 36rem; }
+  display: flex; flex-direction: column; align-items: center; gap: 0.625rem;
+  max-width: 22rem; margin-left: auto; margin-right: auto;
 }
 .result-action-btn {
-  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-  padding: 1rem 0.5rem; border-radius: 1rem;
-  border: 1px solid hsl(var(--border));
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem;
+  width: 100%; padding: 0.9375rem 1.5rem; border-radius: 999px;
+  border: 1.5px solid hsl(var(--border));
   background: hsl(var(--card)); color: hsl(var(--foreground));
-  cursor: pointer; transition: all 0.2s; text-decoration: none;
-  font-size: 0.8125rem; font-weight: 500; text-align: center;
+  cursor: pointer; text-decoration: none;
+  font-size: 0.9375rem; font-weight: 600; text-align: center; line-height: 1.2;
+  transition: border-color 200ms ease, background-color 200ms ease,
+              transform 200ms ease, box-shadow 200ms ease;
 }
-.result-action-btn:hover {
-  border-color: hsl(var(--primary) / 0.4);
-  background: hsl(var(--primary) / 0.05);
-  transform: translateY(-2px); box-shadow: 0 4px 12px hsl(var(--primary) / 0.1);
+.result-action-btn:hover,
+.result-action-btn:focus-visible {
+  border-color: hsl(var(--primary) / 0.55);
+  background: hsl(var(--primary) / 0.07);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -12px hsl(var(--primary) / 0.55);
 }
+.result-action-btn:active { transform: translateY(0); }
+/* La reprise est le geste principal : bordure et fond marqués, sans lui
+   donner l'aplat plein du bouton de partage, qui reste au-dessus. */
 .result-action-btn--primary {
-  border-color: hsl(var(--primary) / 0.3);
-  background: hsl(var(--primary) / 0.06);
+  border-color: hsl(var(--primary) / 0.5);
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.10), hsl(var(--secondary) / 0.10));
+  color: hsl(var(--foreground));
 }
-.result-action-icon { font-size: 1.5rem; }
+.result-action-btn--primary:hover,
+.result-action-btn--primary:focus-visible {
+  border-color: hsl(var(--primary));
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.16), hsl(var(--secondary) / 0.16));
+}
+/* L'icône tourne d'un quart de tour au survol : le geste de reprise se lit
+   avant même la lecture du libellé. */
+.result-action-icon {
+  font-size: 1.125rem; line-height: 1;
+  transition: transform 320ms cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+.result-action-btn:hover .result-action-icon { transform: rotate(-90deg); }
 .result-action-label { line-height: 1.2; }
 
 /* ── Result share button (primary virality CTA) ───────────── */

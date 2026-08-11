@@ -297,7 +297,6 @@
         showUnavailable(config);
         return;
       }
-      container.dataset.hasPool = '0';
       new QuizEngine.BoardGame({ container: container, prefix: config.prefix, lang: lang });
       return;
     }
@@ -316,7 +315,6 @@
         showUnavailable(config);
         return;
       }
-      container.dataset.hasPool = '0';
       new QuizEngine.DuoVoteGame({ container: container, prefix: config.prefix, lang: lang });
       return;
     }
@@ -339,7 +337,6 @@
         showUnavailable(config);
         return;
       }
-      container.dataset.hasPool = '0';
       new QuizEngine.DilemmeGame({ container: container, prefix: config.prefix, lang: lang, dilemmes: dilemmes });
       return;
     }
@@ -362,7 +359,6 @@
       }
       // le réservoir est bien plus grand qu'une partie : « autres questions »
       // a un sens sur l'écran de fin
-      container.dataset.hasPool = '1';
       new QuizEngine.FunnyQuiz({ container: container, prefix: config.prefix, lang: lang,
         familles: familles, total: config.totalQ });
       return;
@@ -378,7 +374,6 @@
         showUnavailable(config);
         return;
       }
-      container.dataset.hasPool = '0';
       new QuizEngine.WheelGame({ container: container, prefix: config.prefix, lang: lang, segments: config.segments });
       return;
     }
@@ -393,7 +388,6 @@
         showUnavailable(config);
         return;
       }
-      container.dataset.hasPool = '0';
       initPartyGame(config);
       return;
     }
@@ -430,7 +424,6 @@
 
     // Randomly select totalQ questions from pool if pool > totalQ
     var hasRandomPool = questions.length > config.totalQ;
-    container.dataset.hasPool = hasRandomPool ? '1' : '0';
     if (hasRandomPool) {
       questions = QuizEngine.shuffleArray(questions).slice(0, config.totalQ);
     } else {
