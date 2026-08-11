@@ -15,9 +15,25 @@
 -- On accepte désormais un fuseau et on caste dedans. Le paramètre a une
 -- valeur par défaut, donc les appels existants continuent de fonctionner.
 --
--- À coller une fois dans Supabase > SQL Editor > New Query.
+-- Déploiement : le workflow « Apply DB migrations » applique ce fichier
+-- automatiquement, mais uniquement si le secret SUPABASE_DB_URL existe. Il
+-- n'est pas renseigné aujourd'hui, donc le job se contente d'un avertissement
+-- et ne touche à rien. Tant que le secret n'est pas ajouté, coller ce fichier
+-- une fois dans Supabase > SQL Editor > New Query.
+--
 -- Idempotent, réexécutable sans risque.
 -- ============================================================
+
+-- Ajouter un paramètre ne remplace pas l'ancienne fonction : PostgreSQL la
+-- considère comme une signature différente, et les deux coexisteraient.
+-- PostgREST choisit la fonction d'après les noms d'arguments reçus ; un appel
+-- ne portant que p_days correspondrait alors aux deux et serait rejeté
+-- (PGRST203, « could not choose the best candidate function »). On supprime
+-- donc explicitement les anciennes signatures avant de créer les nouvelles.
+-- Les appels existants continuent de passer : le nouveau paramètre a une
+-- valeur par défaut, donc une seule fonction reste candidate.
+DROP FUNCTION IF EXISTS public.get_quiz_daily_total(integer);
+DROP FUNCTION IF EXISTS public.get_quiz_daily(text, integer);
 
 CREATE OR REPLACE FUNCTION public.get_quiz_daily_total(
   p_days integer DEFAULT 30,
