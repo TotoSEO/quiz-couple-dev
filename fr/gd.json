@@ -3671,6 +3671,13 @@
     "modeJeuMeta": "Jeu à deux • 20 questions • 10 min"
   },
   "loveLanguage": {
+    "introTitle": "Votre profil amoureux",
+    "linkLabel": "Votre langage dominant",
+    "pf_axis_words": "Paroles valorisantes",
+    "pf_axis_acts": "Services rendus",
+    "pf_axis_gifts": "Cadeaux",
+    "pf_axis_time": "Moments de qualité",
+    "pf_axis_touch": "Toucher physique",
     "q1": "Après une longue journée difficile, qu'est-ce qui vous ferait le plus de bien de la part de votre partenaire ?",
     "q1a": "Qu'il/elle me dise : \"Je suis fier(e) de toi, tu gères tellement bien\"",
     "q1b": "Qu'il/elle ait préparé le dîner et rangé la maison sans que je demande",

@@ -125,6 +125,28 @@
     // ── Karmique (typologie du lien : apaisé / miroir / karmique → 4 profils) ──
     'karmique':       { prefix: 'karmique', engine: 'profile', totalQ: 20, pool: 20, quizType: 'karmique', typologie: 'karmique', categoryMap: { a: 'apaise', b: 'miroir', c: 'karmique' } },
 
+    // ── Les 5 langages de l'amour (typologie à cinq axes) ──
+    // Le sens des lettres tourne d'une question à l'autre : cinq permutations
+    // qui se répètent tous les cinq questions, pour que chaque langage soit
+    // proposé autant de fois à chaque position et qu'on ne puisse pas répondre
+    // « toujours a » sans lire. La table est donc une fonction, pas un tableau.
+    'langage-amour':  { prefix: 'loveLanguage', engine: 'profile', totalQ: 30, pool: 30, quizType: 'langage-amour', typologie: 'langageAmour',
+      categoryMap: (function() {
+        var LANGS = ['words', 'acts', 'gifts', 'time', 'touch'];
+        var PERMS = [
+          [0, 1, 2, 3, 4], // words, acts,  gifts, time,  touch
+          [3, 4, 0, 1, 2], // time,  touch, words, acts,  gifts
+          [1, 2, 3, 4, 0], // acts,  gifts, time,  touch, words
+          [4, 0, 1, 3, 2], // touch, words, acts,  time,  gifts
+          [2, 3, 4, 0, 1]  // gifts, time,  touch, words, acts
+        ];
+        return function(optId, questionId) {
+          var col = ['a', 'b', 'c', 'd', 'e'].indexOf(optId);
+          if (col < 0) return null;
+          return LANGS[PERMS[(questionId - 1) % 5][col]];
+        };
+      })() },
+
     // ── Confiance quiz (solo scoring, trust assessment) ──
     'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
 
@@ -970,16 +992,42 @@
         if (t.karmique >= seuil(0.25)) return 'echos';
         return 'apaise';
       }
+    },
+    // Les cinq langages de Gary Chapman. Pas de profil composite ici : le
+    // langage le plus choisi est le résultat, les cinq barres montrent le
+    // reste du profil.
+    langageAmour: {
+      icone: '💕',
+      axes: [
+        { id: 'words', color: '#6366f1', defaut: 'Paroles valorisantes' },
+        { id: 'acts',  color: '#10b981', defaut: 'Services rendus' },
+        { id: 'gifts', color: '#f59e0b', defaut: 'Cadeaux' },
+        { id: 'time',  color: '#3b82f6', defaut: 'Moments de qualité' },
+        { id: 'touch', color: '#ec4899', defaut: 'Toucher physique' }
+      ],
+      profils: ['words', 'acts', 'gifts', 'time', 'touch'],
+      // Les textes de résultat de ce test sont rangés sous r_<clé>_… et non
+      // sous pf_<clé>_… comme les deux typologies précédentes.
+      cleProfil: 'r_',
+      classify: function(t) {
+        var ordre = ['words', 'acts', 'gifts', 'time', 'touch'];
+        var tete = ordre[0];
+        for (var i = 1; i < ordre.length; i++) {
+          if ((t[ordre[i]] || 0) > (t[tete] || 0)) tete = ordre[i];
+        }
+        return tete;
+      }
     }
   };
 
   function initProfileQuiz(cfg, questions) {
     var typo = TYPOLOGIES[cfg.typologie] || TYPOLOGIES.attachement;
+    var cp = typo.cleProfil || 'pf_';
     function prof(key) {
       return {
-        title: QuizEngine.tgd(cfg.prefix + '.pf_' + key + '_t', ''),
-        description: QuizEngine.tgd(cfg.prefix + '.pf_' + key + '_d', ''),
-        advice: QuizEngine.tgd(cfg.prefix + '.pf_' + key + '_a', '')
+        title: QuizEngine.tgd(cfg.prefix + '.' + cp + key + '_t', ''),
+        description: QuizEngine.tgd(cfg.prefix + '.' + cp + key + '_d', ''),
+        advice: QuizEngine.tgd(cfg.prefix + '.' + cp + key + '_a', '')
       };
     }
     var profiles = {}, axisLabels = {}, axes = [];

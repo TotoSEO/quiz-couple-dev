@@ -3932,6 +3932,13 @@
     "modeJeuMeta": "Gioco in due • 20 domande • 10 min"
   },
   "loveLanguage": {
+    "introTitle": "Il tuo profilo amoroso",
+    "linkLabel": "Il tuo linguaggio dominante",
+    "pf_axis_words": "Parole di affermazione",
+    "pf_axis_acts": "Atti di servizio",
+    "pf_axis_gifts": "Regali",
+    "pf_axis_time": "Tempo di qualità",
+    "pf_axis_touch": "Contatto fisico",
     "q1": "Dopo una lunga giornata difficile, cosa vi farebbe più piacere da parte del vostro partner?",
     "q1a": "Che mi dicesse: \"Sono fiero/a di te, sai gestire tutto alla grande\"",
     "q1b": "Che avesse preparato la cena e riordinato casa senza che io lo chiedessi",

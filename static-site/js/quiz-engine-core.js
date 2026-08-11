@@ -3584,6 +3584,16 @@ var QuizEngine = (function() {
     return t;
   };
 
+  // Quel axe marque cette réponse. La plupart des typologies rattachent une
+  // lettre à un axe une fois pour toutes. Certaines font tourner ce sens d'une
+  // question à l'autre, pour qu'on ne puisse pas répondre « toujours a » sans
+  // lire : celles-là fournissent une fonction plutôt qu'une table figée.
+  ProfileQuiz.prototype.axePour = function(optId, questionId) {
+    return typeof this.categoryMap === 'function'
+      ? this.categoryMap(optId, questionId)
+      : this.categoryMap[optId];
+  };
+
   ProfileQuiz.prototype.render = function() {
     this.container.innerHTML = '';
     if (this.phase === 'intro') this.renderIntro();
@@ -3637,7 +3647,7 @@ var QuizEngine = (function() {
         optBtn.classList.add('selected');
         var sibs = optionsWrap.querySelectorAll('.quiz-option');
         for (var s = 0; s < sibs.length; s++) { if (sibs[s] !== optBtn) sibs[s].style.opacity = '0.5'; sibs[s].style.pointerEvents = 'none'; }
-        var cat = self.categoryMap[opt.id];
+        var cat = self.axePour(opt.id, q.id);
         self.answers[self.currentQ] = cat;
         if (cat && self.tally[cat] !== undefined) self.tally[cat]++;
         setTimeout(function() {
