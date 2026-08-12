@@ -740,6 +740,97 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'dilemmes', icon: '⚖️', route: 'jeuDilemmes' },
   ];
 
+  // Suggestions de fin de partie, choisies une par une pour chaque page.
+  //
+  // Avant, on tirait trois pages au hasard dans la liste ci-dessus. Ça donnait
+  // des enchaînements absurdes : le quiz coquin ne proposait jamais action ou
+  // vérité coquin, et un test sur l'emprise pouvait enchaîner sur un jeu de
+  // gages. Ici chaque liste répond à une seule question : ces personnes-là,
+  // à cet instant précis, dans cet état d'esprit, ont envie de quoi ensuite ?
+  //
+  // Deux règles ont guidé tous les choix :
+  //   1. Le nombre de joueurs doit suivre. Quelqu'un qui vient de faire seul
+  //      un test sur l'infidélité n'a personne à côté de lui : lui proposer un
+  //      jeu à deux, c'est lui proposer une porte fermée.
+  //   2. Le ton doit suivre. Après un test lourd on enchaîne sur ce qui répond
+  //      à la question suivante, jamais sur du divertissement.
+  //
+  // Les listes comptent parfois quatre entrées : on garde les trois premières
+  // qui existent dans la langue affichée. Seul Les Z'Amours est limité au
+  // français, d'où les doublures là où il apparaît.
+  var SUGGESTIONS_PAR_QUIZ = {
+    // ── Tests à deux, ambiance posée ────────────────────────────────────
+    // Ils viennent de mesurer leur couple ensemble, le téléphone passe de
+    // main en main. On reste à deux.
+    'tester-couple':   ['testCompatibilite', 'quizKnowledge', 'testCoupleSain'],
+    'common-points':   ['jeuQuiDeNous', 'quizKnowledge', 'testCompatibilite'],
+    'compatibilite':   ['testCouple', 'testMariage', 'testEmmenager'],
+    'sain':            ['testConfiance', 'testCouple', 'testCompatibilite'],
+    'distance':        ['testDistanceAime', 'quizKnowledge', 'testCouple'],
+
+    // ── Tests de projet de vie ──────────────────────────────────────────
+    // Une étape validée donne envie de regarder la suivante.
+    'mariage':         ['testEmmenager', 'testParentalite', 'testCompatibilite'],
+    'emmenager':       ['testParentalite', 'testMariage', 'testCompatibilite'],
+    'parentalite':     ['testBebe', 'testEmmenager', 'testMariage'],
+    'bebe':            ['testParentalite', 'testEmmenager', 'testCouple'],
+
+    // ── Tests d'alerte, faits seul ──────────────────────────────────────
+    // Personne ne fait ces tests pour s'amuser. On enchaîne sur la question
+    // d'après, jamais sur un jeu.
+    'toxic':           ['testPervers', 'testDivorce', 'testCoupleSain'],
+    'pervers':         ['testToxic', 'testJalousie', 'testDivorce'],
+    'divorce':         ['testAmourHabitude', 'testToxic', 'testCoupleSain'],
+    'amour-habitude':  ['testSuisJeAmoureux', 'testDivorce', 'testCoupleSain'],
+
+    // ── Tests de doute et de soupçon, faits seul ────────────────────────
+    // Le soupçon appelle toujours une deuxième vérification.
+    'infidelite':      ['testCouche', 'testConfiance', 'testJalousie'],
+    'couche':          ['testInfidelite', 'testConfiance', 'testToxic'],
+    'jalousie1':       ['testConfiance', 'testInfidelite', 'testToxic'],
+    'jalousie2':       ['testConfiance', 'testInfidelite', 'testToxic'],
+    'confiance':       ['testJalousie', 'testCoupleSain', 'testInfidelite'],
+
+    // ── Tests d'introspection, faits seul ───────────────────────────────
+    // « Ce que je ressens » appelle « ce qu'il ou elle ressent ».
+    'suis-je-amoureux': ['testSecret', 'testAttachement', 'testLangageAmour'],
+    'secret':          ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement'],
+    'distance-aime':   ['testDistance', 'testSecret', 'testAttachement'],
+    'langage-amour':   ['testAttachement', 'testCouple', 'quizKnowledge'],
+    'attachement':     ['testLangageAmour', 'testConfiance', 'testSuisJeAmoureux'],
+
+    // ── Tests à lecture symbolique ──────────────────────────────────────
+    // On enchaîne sur l'autre lecture symbolique avant de revenir au concret.
+    'karmique':        ['testDateNaissance', 'testAttachement', 'testSuisJeAmoureux'],
+    'date-naissance':  ['testKarmique', 'testCompatibilite', 'testCouple'],
+
+    // ── Quiz à deux, ambiance légère ────────────────────────────────────
+    'amoureux':        ['jeuDilemmes', 'quizTuPreferes', 'quizKnowledge'],
+    'marrant':         ['quizGenant', 'quizMost', 'jeuActionVerite'],
+    'genant':          ['quizMarrant', 'jeuActionVerite', 'quizMost'],
+    'knowledge':       ['jeuQuiDeNous', 'zamours', 'testCommonPoints', 'quizMost'],
+    'most':            ['jeuActionVerite', 'quizMarrant', 'quizTuPreferes'],
+    'vrai-faux':       ['quizKnowledge', 'zamours', 'quizMarrant', 'jeuDilemmes'],
+    'zamours':         ['quizKnowledge', 'jeuQuiDeNous', 'quizMost'],
+    'ado':             ['quizMarrant', 'quizTuPreferes', 'testCouple'],
+
+    // ── Le fil chaud ────────────────────────────────────────────────────
+    // Deux personnes seules, l'ambiance est montée d'un cran. C'est le
+    // moment où elles sont le plus disposées à enchaîner : on garde le ton.
+    'coquin':                  ['jeuActionVeriteHot', 'jeuGages', 'quizTentation'],
+    'action-ou-verite-coquin': ['quizCoquin', 'jeuGages', 'quizTentation'],
+    'tentation':               ['testInfidelite', 'quizCoquin', 'testConfiance'],
+
+    // ── Jeux ────────────────────────────────────────────────────────────
+    // Un jeu fini appelle un autre jeu, et surtout pas un test.
+    'tu-preferes':      ['jeuDilemmes', 'jeuActionVerite', 'quizMost'],
+    'action-ou-verite': ['jeuActionVeriteHot', 'jeuGages', 'jeuPlateau'],
+    'gage-couple':      ['jeuActionVerite', 'jeuActionVeriteHot', 'jeuPlateau'],
+    'plateau-couple':   ['jeuActionVerite', 'jeuQuiDeNous', 'jeuDilemmes'],
+    'qui-de-nous-deux': ['quizKnowledge', 'jeuDilemmes', 'zamours', 'quizMost'],
+    'dilemmes':         ['quizTuPreferes', 'jeuQuiDeNous', 'quizMost'],
+  };
+
   function getRelatedQuizUrl(routeKey, lang) {
     // Build localized URL from ROUTE_SLUGS-like data embedded in page
     var slugEl = document.querySelector('[data-route-slugs]');
@@ -759,16 +850,42 @@ var QuizEngine = (function() {
     for (var c = 0; c < ALL_QUIZZES_LIST.length; c++) {
       if (ALL_QUIZZES_LIST[c].key === currentQuizKey) { courant = ALL_QUIZZES_LIST[c].route; break; }
     }
-    // On ecarte la page courante, les doublons de route (les deux tests de
-    // jalousie) et les pages qui n'existent pas dans cette langue (Z'Amours).
+
+    function ficheParRoute(route) {
+      for (var i = 0; i < ALL_QUIZZES_LIST.length; i++) {
+        if (ALL_QUIZZES_LIST[i].route === route) return ALL_QUIZZES_LIST[i];
+      }
+      return null;
+    }
+
+    var choisis = [];
     var vues = {};
-    var others = ALL_QUIZZES_LIST.filter(function(q) {
-      if (q.route === courant || vues[q.route]) return false;
-      if (getRelatedQuizUrl(q.route, lang) === '/') return false;
-      vues[q.route] = true;
-      return true;
-    });
-    var shuffled = shuffleArray(others).slice(0, 3);
+    var voulus = SUGGESTIONS_PAR_QUIZ[currentQuizKey];
+    if (voulus) {
+      for (var v = 0; v < voulus.length && choisis.length < 3; v++) {
+        var route = voulus[v];
+        // On ecarte la page courante, les doublons, et les pages qui n'existent
+        // pas dans cette langue : Les Z'Amours n'a pas de version traduite.
+        if (route === courant || vues[route]) continue;
+        if (getRelatedQuizUrl(route, lang) === '/') continue;
+        var fiche = ficheParRoute(route);
+        if (!fiche) continue;
+        vues[route] = true;
+        choisis.push(fiche);
+      }
+    }
+    // Filet de securite si une cle n'a pas encore sa liste : on complete au
+    // hasard plutot que de n'afficher aucune suggestion.
+    if (choisis.length < 3) {
+      var restants = shuffleArray(ALL_QUIZZES_LIST.filter(function(q) {
+        if (q.route === courant || vues[q.route]) return false;
+        if (getRelatedQuizUrl(q.route, lang) === '/') return false;
+        vues[q.route] = true;
+        return true;
+      }));
+      choisis = choisis.concat(restants.slice(0, 3 - choisis.length));
+    }
+    var shuffled = choisis;
     if (shuffled.length === 0) return;
 
     var section = el('div', 'result-related-section mt-10');
@@ -837,7 +954,7 @@ var QuizEngine = (function() {
 
   // Les actions d'apres-resultat : partager en premier, puis rejouer.
   function zoneActions(opts) {
-    var quizEl = document.getElementById('quiz-engine');
+    var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
     var zone = el('div', 'quiz-reveal-enter');
     renderShareButton(zone, opts.share || opts.shareText);
 
@@ -948,7 +1065,7 @@ var QuizEngine = (function() {
   }
 
   function renderActionButtons(wrap, opts) {
-    var quizEl = document.getElementById('quiz-engine');
+    var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
     var currentKey = quizEl ? quizEl.dataset.quiz : '';
     var currentLang = quizEl ? (quizEl.dataset.lang || 'fr') : 'fr';
 
@@ -1251,7 +1368,7 @@ var QuizEngine = (function() {
     var maxScore = this.results.length > 0 ? this.results[this.results.length - 1].max : 100;
     var pct = Math.round((this.totalScore / maxScore) * 100);
 
-    var quizEl = document.getElementById('quiz-engine');
+    var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
 
     // ── Le résultat : le score, puis tout de suite ce qu'il veut dire.
     // L'anneau et le verdict vivaient dans deux colonnes différentes : sur
@@ -6441,7 +6558,7 @@ var QuizEngine = (function() {
 
     var avis = el('div', 'quiz-reveal-enter');
     avis.appendChild(pcReviewForm(this.lang));
-    var quizEl = document.getElementById('quiz-engine');
+    var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
     var suite = el('div', 'qr-right quiz-reveal-enter');
     renderRelatedQuizzes(suite, quizEl ? quizEl.dataset.quiz : '', this.lang);
 
