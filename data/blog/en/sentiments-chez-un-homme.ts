@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'the-short-answer',
-      title: `The short answer`,
+      title: `The real order in which it happens`,
       content: `<p>For most men the sequence looks like this: <strong>fast attraction, curious interest, comfort, habit, absence, attachment.</strong> The absence is the tipping point. Until it hurts to be apart, there is pleasure but not yet feeling.</p>
 
 <p>This is why many women feel that "nothing is happening" for weeks, and then that everything changes at once. Except nothing changed at once! Something changed slowly… and it became visible at once.</p>`,
@@ -129,7 +129,7 @@ The conversations that move things are almost never "where do we stand". Startin
     },
     {
       id: 'to-finish',
-      title: `To finish`,
+      title: `Where the feelings actually show`,
       content: `<p>Feelings in a man rarely appear where you look for them… Not in the words, not in the grand gestures, but in becoming a habit, and then an absence.</p>
 
 <p><strong>If you have got as far as counting the signs</strong>, the real question may not be where he stands, but whether the pace he sets suits you. Those are two different questions, and the second one is entirely yours.</p>`,

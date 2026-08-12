@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'die-kurze-antwort',
-      title: `Die kurze Antwort`,
+      title: `Warum der Urlaub hochholt, was schon da war`,
       content: `<p>Paare streiten nicht, weil sie in den Urlaub fahren. <strong>Sie streiten, weil der Urlaub auf einen Schlag die drei Dinge entfernt, die das Problem den Rest des Jahres verdeckt haben</strong>: die Arbeit, die versetzten Zeitpläne und die getrennten Zimmer.</p>
 
 <p>Elf Monate lang können zwei Menschen, die sich beim Organisieren nicht besonders einig sind, problemlos zusammenleben: Jeder regelt seinen Tag, man trifft sich abends, es bleibt keine Zeit, darüber zu sprechen. Im Urlaub fällt dieser Puffer weg. Ihr seid sechzehn Stunden am Tag zusammen, auf engerem Raum als zu Hause, mit Entscheidungen alle zwei Stunden.</p>
@@ -61,13 +61,23 @@ const article: BlogArticleData = {
     {
       id: 'nicht-das-reiseziel',
       title: `Der Auslöser ist fast nie das Reiseziel`,
-      content: `<p>Das ist das häufigste Missverständnis. Man glaubt, man streite, weil der eine ans Meer und die andere in die Berge wollte… aber in der IFOP-Umfrage betrifft die Uneinigkeit über das Reiseziel nur <strong>26 % der Befragten</strong>, Männer und Frauen zusammen. Sie ist real, kommt aber weit hinten.</p>
+      content: `<p>Das ist das häufigste Missverständnis, und es kostet: Solange man das Problem in der Hotelwahl sucht, findet man es nicht.</p>`,
+      subsections: [
+        {
+          id: 'reiseziel-erst-an-vierter-stelle',
+          title: `Das Reiseziel kommt erst an vierter Stelle`,
+          content: `<p>Man glaubt, man streite, weil der eine ans Meer und die andere in die Berge wollte… aber in der IFOP-Umfrage betrifft die Uneinigkeit über das Reiseziel nur <strong>26 % der Befragten</strong>, Männer und Frauen zusammen. Sie ist real, kommt aber weit hinten.</p>
 
-<p>Der Grund Nummer eins, genannt von <strong>40 % der Frauen</strong>, ist die fehlende Beteiligung des Partners. Nicht «du hast den falschen Ort ausgesucht», sondern «ich habe alles allein gemacht».</p>
+<p>Der Grund Nummer eins, genannt von <strong>40 % der Frauen</strong>, ist die fehlende Beteiligung des Partners. Nicht «du hast den falschen Ort ausgesucht», sondern «ich habe alles allein gemacht».</p>`,
+        },
+        {
+          id: 'eine-sichtbare-aufgabe-gegen-zehn-unsichtbare',
+          title: `Eine sehr sichtbare Aufgabe gegen zehn, die niemand sieht`,
+          content: `<p>Wenn man sich die Aufgaben im Detail ansieht, versteht man, warum es irgendwann herauskommt. Im Familienurlaub geben mehrheitlich die Frauen an, die Organisation anzustoßen (56 % gegenüber 31 %), die Unterkunft zu buchen (48 % gegenüber 26 %), vor Ort zu kochen (54 % gegenüber 24 %) und die Koffer der Kinder zu packen, mit fast 80 % gegenüber etwa 10 %. Die Männer fahren: 58 % gegenüber 18 %.</p>
 
-<p>Und wenn man sich die Aufgaben im Detail ansieht, versteht man, warum es irgendwann herauskommt. Im Familienurlaub geben mehrheitlich die Frauen an, die Organisation anzustoßen (56 % gegenüber 31 %), die Unterkunft zu buchen (48 % gegenüber 26 %), vor Ort zu kochen (54 % gegenüber 24 %) und die Koffer der Kinder zu packen, mit fast 80 % gegenüber etwa 10 %. Die Männer fahren: 58 % gegenüber 18 %.</p>
-
-<p>Also eine einzige sehr sichtbare Aufgabe auf der einen Seite und rund zehn unsichtbare auf der anderen. Das ist genau der Boden, auf dem eine nie ausgesprochene Uneinigkeit irgendwann an einer winzigen Sache hochkommt, meistens an der Maut oder am Navi.</p>`,
+<p>Fahren sieht man. An das Impfheft und die Wechselschuhe gedacht zu haben, nicht. Das ist genau der Boden, auf dem eine nie ausgesprochene Uneinigkeit irgendwann an einer winzigen Sache hochkommt, meistens an der Maut oder am Navi.</p>`,
+        },
+      ],
     },
     {
       id: 'das-paradox',
@@ -104,30 +114,57 @@ const article: BlogArticleData = {
     {
       id: 'was-entschaerft',
       title: `Was entschärft, und es ist nicht «besser reden»`,
-      content: `<p>Die übliche Antwort auf so einen Artikel lautet «redet miteinander». Nur zeigen die Zahlen woandershin, und das ist deutlich leichter umzusetzen.</p>
+      content: `<p>Die übliche Antwort auf so einen Artikel lautet «redet miteinander». Nur zeigen die Zahlen woandershin, und das ist deutlich leichter umzusetzen.</p>`,
+      subsections: [
+        {
+          id: 'zwei-stunden-taeglich-getrennt',
+          title: `Zwei Stunden am Tag, jeder für sich`,
+          content: `<p>In der Talker-Research-Umfrage sagen 77 % der Befragten, persönlicher Raum baue Spannungen ab, und 68 %, Zeit allein lasse sie sich ihrer Reisegruppe <em>näher</em> fühlen. Der mittlere Bedarf liegt bei etwa zwei Stunden am Tag.</p>
 
-<p><strong>Zeit getrennt, vorher eingeplant:</strong> In der Talker-Research-Umfrage sagen 77 % der Befragten, persönlicher Raum baue Spannungen ab, und 68 %, Zeit allein lasse sie sich ihrer Reisegruppe <em>näher</em> fühlen. Der mittlere Bedarf liegt bei etwa zwei Stunden am Tag. Zwei Stunden sind kein separates Schlafzimmer: Das ist ein Kaffee, während der andere Mittagsschlaf hält.</p>
+<p>Zwei Stunden sind kein separates Schlafzimmer und keine getrennte Reise: Das ist ein Kaffee, während der andere Mittagsschlaf hält. Und es steht vorher im Plan, sonst nimmt es sich niemand.</p>`,
+        },
+        {
+          id: 'neues-statt-bequemes',
+          title: `Neues statt Bequemes`,
+          content: `<p>Eine 2024 in <em>Annals of Tourism Research Empirical Insights</em> veröffentlichte Studie begleitete 238 Personen in Beziehungen und danach 102 Paare, die tatsächlich zusammen verreisten. Die Forschenden maßen, wie viele neue, interessante oder leicht fordernde Erfahrungen während der Reise vorkamen.</p>
 
-<p><strong>Neues statt Bequemes:</strong> Eine 2024 in <em>Annals of Tourism Research Empirical Insights</em> veröffentlichte Studie begleitete 238 Personen in Beziehungen und danach 102 Paare, die tatsächlich zusammen verreisten. Die Forschenden maßen, wie viele neue, interessante oder leicht fordernde Erfahrungen während der Reise vorkamen. Ergebnis: Je mehr davon, desto höher Leidenschaft, Beziehungszufriedenheit und körperliche Nähe <em>nach</em> der Rückkehr. Und der Effekt hing nicht davon ab, wie lange das Paar zusammen war.</p>
+<p>Ergebnis: Je mehr davon, desto höher Leidenschaft, Beziehungszufriedenheit und körperliche Nähe <em>nach</em> der Rückkehr. Und der Effekt hing nicht davon ab, wie lange das Paar zusammen war, von einem Jahr bis über dreißig.</p>`,
+        },
+        {
+          id: 'zwei-aufgeschriebene-listen',
+          title: `Zwei aufgeschriebene Listen statt eines «hilf mir»`,
+          content: `<p>«Hilf mir» lässt das Verteilen bei der Person, die es ohnehin schon trägt: Sie muss immer noch entscheiden, was sie abgibt, es erklären und danach nachsehen. Zwei getrennte, aufgeschriebene Listen mit einem Namen vor jeder Zeile streichen diesen unsichtbaren Schritt.</p>
 
-<p><strong>Eine ausdrückliche Aufteilung der Vorbereitung:</strong> nicht «hilf mir», was das Verteilen bei der Person lässt, die es ohnehin schon trägt. Lieber zwei getrennte, aufgeschriebene Listen mit einem Namen vor jeder Zeile.</p>
-
-<p>Und für die Fahrt ist die Lösung fast albern: den Beifahrer beschäftigen. Wenn im Auto die Spannung steigt, <strong>wählen 40 % der Paare das Schweigen</strong>, was nichts löst und zwei Stunden Kälte installiert. Ein <a href="/de/dilemmata-fuer-paare/">Dilemma-Spiel, das auf ein einziges Handy passt</a>, schlägt die Playlist, weil es zwei Menschen ohne Thema ein neutrales zurückgibt.</p>`,
+<p>Und für die Fahrt ist die Lösung fast albern: den Beifahrer beschäftigen. Wenn im Auto die Spannung steigt, <strong>wählen 40 % der Paare das Schweigen</strong>, was nichts löst und bis zur nächsten Raststätte zwei Stunden Kälte installiert.</p>`,
+        },
+      ],
     },
     {
       id: 'mit-kindern',
       title: `Mit Kindern ist es nicht mehr dieselbe Gleichung`,
-      content: `<p>Ehrlich an diesem Punkt: Ich habe keine seriöse Umfrage gefunden, mit der sich behaupten ließe «X % der Paare mit Kindern streiten, gegenüber Y % ohne». Die Zahlen, die dazu kursieren, sind nicht überprüfbar.</p>
+      content: `<p>Das ist die Stelle, an der die meisten Artikel eine Zahl erfinden. Ich mache es umgekehrt.</p>`,
+      subsections: [
+        {
+          id: 'was-sich-nicht-behaupten-laesst',
+          title: `Was keine seriöse Umfrage zu behaupten erlaubt`,
+          content: `<p>Ich habe keine belastbaren Daten gefunden, mit denen sich schreiben ließe «X % der Paare mit Kindern streiten, gegenüber Y % ohne». Die Zahlen, die dazu kursieren, stammen aus kommerziellen Umfragen ohne veröffentlichte Methodik, und ich lasse das Feld lieber leer.</p>
 
-<p>Dokumentiert ist dagegen, dass sich die Last verschiebt. Der Koffer der Kinder, die Reiseapotheke, die Wahl passender Kleidung und die Aktivitäten liegen je nach Aufgabe zu 75 bis 86 % bei den Frauen. Das ist kein Streit an sich, das ist das Reservoir, aus dem der Streit schöpfen wird.</p>
+<p>Dasselbe gilt für Reiseziele: Nichts belegt, dass ein Land mehr Streit erzeugt als ein anderes. Wer das irgendwo liest, sollte nach der Stichprobengröße fragen!</p>`,
+        },
+        {
+          id: 'was-dokumentiert-ist',
+          title: `Was dokumentiert ist: Die Last verschiebt sich`,
+          content: `<p>Der Koffer der Kinder, die Reiseapotheke, die Wahl passender Kleidung und die Aktivitäten liegen je nach Aufgabe zu 75 bis 86 % bei den Frauen. Das ist kein Streit an sich, das ist das Reservoir, aus dem der Streit schöpfen wird.</p>
 
 <p>Bei der Unterkunft ändert sich der Bedarf ebenfalls: 70 % der Eltern, die mit ihren Kindern verreisen, halten mehrere Schlafzimmer für unverzichtbar, gegenüber 58 % aller Reisenden. Das ist kein Luxus, das ist die einzige Möglichkeit, die oben genannten zwei Stunden zurückzubekommen.</p>
 
-<p>Wenn die Aufteilung jedes Jahr identisch wiederkehrt, geht sie vermutlich weit über den Urlaub hinaus. Genau das misst <a href="/de/elternschafts-bereitschaftstest/">ein Fragebogen dazu, wie ihr die elterliche Last verteilt</a>, und die Antworten sagen außerhalb einer Abreise oft mehr.</p>`,
+<p>Wenn das Thema jedes Jahr identisch wiederkehrt, ist nicht der Urlaub das Problem: Es ist <a href="/de/elternschafts-bereitschaftstest/">die Verteilung der elterlichen Last</a> im Rest des Jahres, die sich nur nicht mehr ignorieren lässt, sobald ihr zu viert auf vierzig Quadratmetern sitzt.</p>`,
+        },
+      ],
     },
     {
       id: 'haeufige-fragen',
-      title: `Die Fragen, die immer wiederkommen`,
+      title: `Was Paare fragen, bevor sie buchen`,
       content: `<p><strong>Ist Streit im Urlaub ein schlechtes Zeichen?</strong><br>
 Nein, für sich genommen nicht. Es zählen das Thema und das Ende. Ein Streit übers Navi, der an der Raststätte aufhört, hat nichts mit einem Streit über Beteiligung zu tun, der seit sechs Jahren jeden Sommer wiederkehrt. Der zweite spricht vom Rest des Jahres.</p>
 
@@ -135,22 +172,21 @@ Nein, für sich genommen nicht. Es zählen das Thema und das Ende. Ein Streit ü
 Das ist keine dumme Idee, und es ist kein Eingeständnis des Scheiterns. Aber bevor es so weit kommt, ist die günstigste Option, dieselbe Reise zu behalten und Zeit getrennt einzubauen. Der Unterschied zwischen zwei Menschen, die ersticken, und zwei Menschen, denen es gut geht, liegt oft bei zwei Stunden am Tag.</p>
 
 <p><strong>Wie merken wir, ob wir denselben Urlaub wollen?</strong><br>
-Indem ihr getrennt antwortet, bevor ihr darüber sprecht, statt laut zu verhandeln. Geschriebene Antworten zu vergleichen nimmt viel Schärfe heraus: Es ist nicht mehr du gegen den anderen, sondern ihr beide vor einem gemessenen Abstand. Ein <a href="/de/gemeinsamkeiten-test-paare/">Fragebogen, der eure Vorlieben Punkt für Punkt vergleicht</a>, erledigt das gut und ist in zehn Minuten ausgefüllt.</p>
+Indem ihr getrennt antwortet, bevor ihr darüber sprecht, statt laut zu verhandeln. Geschriebene Antworten zu vergleichen nimmt viel Schärfe heraus: Es ist nicht mehr du gegen den anderen, sondern ihr beide vor <a href="/de/gemeinsamkeiten-test-paare/">euren tatsächlichen Gemeinsamkeiten</a>, gemessen statt vermutet.</p>
 
 <p><strong>Und wenn der Urlaub wirklich schlecht geendet hat?</strong><br>
 Eine schwierige Woche sagt wenig. Eine schwierige Woche, die den elf Monaten davor ähnelt, sehr wohl. Dann lautet die nützliche Frage nicht «warum haben wir auf Sardinien gestritten», sondern <a href="/de/gesunde-beziehung-test/">was eine Beziehung im Alltag lebbar macht</a>.</p>
 
 <p><strong>Womit fangen wir vor der nächsten Abreise an?</strong><br>
-Mit einem Gespräch, das nicht von Logistik handelt. Das klingt verkehrt herum, aber die meisten Spannungen im Juli werden im März vorbereitet, wenn niemand etwas sagt. Von <a href="/de/fragen-fuer-paare/">einer offenen Frage danach, was jeder von der Reise erwartet</a>, auszugehen erspart die Entdeckung bei der Ankunft, dass einer sich ausruhen und die andere alles sehen wollte.</p>`,
+Mit einem Gespräch, das nicht von Logistik handelt. Das klingt verkehrt herum, aber die meisten Spannungen im Juli werden im März vorbereitet, wenn niemand etwas sagt. Den anderen zu fragen, was er sich von der Reise erwartet, erspart die Entdeckung bei der Ankunft, dass einer sich ausruhen und die andere alles sehen wollte.</p>`,
     },
     {
       id: 'zum-schluss',
-      title: `Zum Schluss`,
+      title: `Drei Dinge, die vor dem Zuklappen des Kofferraums geklärt gehören`,
       content: `<p>Es gibt kein Paar, das im Urlaub nie streitet, und es gibt kein magisches Reiseziel. Was es gibt, ist eine ziemlich vorhersehbare Abfolge: eine unausgewogene Vorbereitung, eine Fahrt, bei der eine Person alles entscheidet, und eine Unterkunft, in der niemand einen eigenen Platz hat.</p>
 
 <p><strong>Die gute Nachricht</strong>: Alle drei lassen sich vor der Abreise beheben, an der Küchenecke, in zwanzig Minuten. Was sich vor Ort nicht beheben lässt, ist der Vorwurf, den du seit März mit dir herumträgst. Der muss raus, bevor der Kofferraum zugeht.</p>
 
-<p>Und wenn du wissen willst, wo ihr beide wirklich steht, bevor sich die Frage auf einem Autobahnrastplatz stellt, gibt es einen <a href="/de/paar-kompatibilitaetstest/">Fragebogen, den ihr getrennt ausfüllt</a> und der eure Antworten vergleicht und die Abstände sichtbar macht.</p>
 
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📚 Die zitierten Quellen</p>

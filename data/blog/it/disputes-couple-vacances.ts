@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'la-risposta-breve',
-      title: `La risposta breve`,
+      title: `Perché le vacanze fanno riemergere quello che dormiva`,
       content: `<p>Le coppie non litigano perché partono in vacanza. <strong>Litigano perché le vacanze eliminano di colpo le tre cose che nascondevano il problema per tutto il resto dell'anno</strong>: il lavoro, gli orari sfasati e le stanze separate.</p>
 
 <p>Per undici mesi, due persone che non vanno molto d'accordo sull'organizzazione possono convivere benissimo: ognuno gestisce la sua giornata, ci si incrocia la sera, non c'è tempo per parlarne. In vacanza quel cuscinetto sparisce. Siete insieme sedici ore al giorno, in uno spazio più piccolo di casa vostra, con decisioni da prendere ogni due ore.</p>
@@ -61,13 +61,23 @@ const article: BlogArticleData = {
     {
       id: 'non-la-destinazione',
       title: `L'innesco non è quasi mai la destinazione`,
-      content: `<p>È il fraintendimento più frequente. Si crede di litigare perché uno voleva il mare e l'altra la montagna… ma nell'indagine IFOP il disaccordo sulla destinazione riguarda solo il <strong>26 % degli intervistati</strong>, uomini e donne insieme. È reale, ma arriva molto più indietro.</p>
+      content: `<p>È il fraintendimento più frequente, e costa caro: finché si cerca il problema nella scelta dell'hotel, non lo si trova.</p>`,
+      subsections: [
+        {
+          id: 'la-destinazione-arriva-quarta',
+          title: `La destinazione arriva solo al quarto posto`,
+          content: `<p>Si crede di litigare perché uno voleva il mare e l'altra la montagna… ma nell'indagine IFOP il disaccordo sulla destinazione riguarda solo il <strong>26 % degli intervistati</strong>, uomini e donne insieme. È reale, ma arriva molto più indietro.</p>
 
-<p>Il motivo numero uno, citato dal <strong>40 % delle donne</strong>, è la scarsa partecipazione del partner. Non «hai scelto il posto sbagliato», ma «ho fatto tutto da sola».</p>
+<p>Il motivo numero uno, citato dal <strong>40 % delle donne</strong>, è la scarsa partecipazione del partner. Non «hai scelto il posto sbagliato», ma «ho fatto tutto da sola».</p>`,
+        },
+        {
+          id: 'un-compito-visibile-contro-dieci-invisibili',
+          title: `Un compito molto visibile contro dieci che non si vedono`,
+          content: `<p>Quando si guarda il dettaglio dei compiti si capisce perché finisce per uscire. Nelle vacanze in famiglia sono le donne a dichiarare in maggioranza di avviare l'organizzazione (56 % contro 31 %), prenotare l'alloggio (48 % contro 26 %), preparare i pasti sul posto (54 % contro 24 %) e fare la valigia dei bambini, a quasi l'80 % contro circa il 10 %. Gli uomini guidano: 58 % contro 18 %.</p>
 
-<p>E quando si guarda il dettaglio dei compiti si capisce perché finisce per uscire. Nelle vacanze in famiglia sono le donne a dichiarare in maggioranza di avviare l'organizzazione (56 % contro 31 %), prenotare l'alloggio (48 % contro 26 %), preparare i pasti sul posto (54 % contro 24 %) e fare la valigia dei bambini, a quasi l'80 % contro circa il 10 %. Gli uomini guidano: 58 % contro 18 %.</p>
-
-<p>In altre parole, un solo compito molto visibile da un lato e una decina di compiti invisibili dall'altro. È esattamente il terreno su cui un disaccordo che non si dice mai finisce per uscire su una cosa minuscola, di solito il casello o il navigatore.</p>`,
+<p>Guidare si vede. Aver pensato al libretto sanitario e alle scarpe di ricambio, no. È esattamente il terreno su cui un disaccordo che non si dice mai finisce per uscire su una cosa minuscola, di solito il casello o il navigatore.</p>`,
+        },
+      ],
     },
     {
       id: 'il-paradosso',
@@ -104,30 +114,57 @@ const article: BlogArticleData = {
     {
       id: 'cosa-disinnesca',
       title: `Cosa disinnesca, e non è «comunicare meglio»`,
-      content: `<p>La risposta abituale a questo tipo di articolo è «parlatevi». Solo che i numeri puntano altrove, ed è nettamente più facile da applicare.</p>
+      content: `<p>La risposta abituale a questo tipo di articolo è «parlatevi». Solo che i numeri puntano altrove, ed è nettamente più facile da applicare.</p>`,
+      subsections: [
+        {
+          id: 'due-ore-al-giorno-separati',
+          title: `Due ore al giorno, ognuno per conto proprio`,
+          content: `<p>Nell'indagine Talker Research, il 77 % degli intervistati dice che avere uno spazio personale allenta le tensioni, e il 68 % che il tempo da soli li fa sentire <em>più</em> vicini al proprio gruppo di viaggio. Il bisogno mediano si aggira sulle due ore al giorno.</p>
 
-<p><strong>Del tempo separato, previsto in anticipo:</strong> nell'indagine Talker Research, il 77 % degli intervistati dice che avere uno spazio personale allenta le tensioni, e il 68 % che il tempo da soli li fa sentire <em>più</em> vicini al proprio gruppo di viaggio. Il bisogno mediano si aggira sulle due ore al giorno. Due ore non sono una camera separata: sono un caffè mentre l'altro fa la siesta.</p>
+<p>Due ore non sono una camera separata né una vacanza a parte: sono un caffè mentre l'altro fa la siesta. E vanno messe in programma prima, altrimenti non se le prende nessuno.</p>`,
+        },
+        {
+          id: 'novita-invece-che-comodita',
+          title: `Novità invece che comodità`,
+          content: `<p>Uno studio pubblicato nel 2024 su <em>Annals of Tourism Research Empirical Insights</em> ha seguito 238 persone in coppia, poi 102 coppie che viaggiavano davvero insieme. I ricercatori hanno misurato quante esperienze nuove, interessanti o un po' impegnative si erano vissute durante il soggiorno.</p>
 
-<p><strong>Novità, non comodità:</strong> uno studio pubblicato nel 2024 su <em>Annals of Tourism Research Empirical Insights</em> ha seguito 238 persone in coppia, poi 102 coppie che viaggiavano davvero insieme. I ricercatori hanno misurato quante esperienze nuove, interessanti o un po' impegnative si erano vissute durante il soggiorno. Risultato: più ce n'erano, più erano alte la passione, la soddisfazione relazionale e l'intimità fisica <em>dopo</em> il rientro. E l'effetto non dipendeva da quanto durava la relazione.</p>
+<p>Risultato: più ce n'erano, più erano alte la passione, la soddisfazione relazionale e l'intimità fisica <em>dopo</em> il rientro. E l'effetto non dipendeva da quanto durava la relazione, da un anno a più di trenta.</p>`,
+        },
+        {
+          id: 'due-liste-scritte',
+          title: `Due liste scritte, non un «aiutami»`,
+          content: `<p>«Aiutami» lascia il compito di distribuire a chi già lo porta: bisogna comunque decidere cosa delegare, spiegarlo e poi verificare. Due liste separate, scritte, con un nome davanti a ogni riga, cancellano questo passaggio invisibile.</p>
 
-<p><strong>Una divisione esplicita della preparazione:</strong> non «aiutami», che lascia il compito di distribuire a chi già lo porta. Meglio due liste separate, scritte, con un nome davanti a ogni riga.</p>
-
-<p>E per il tragitto la soluzione è quasi sciocca: occupare il copilota. Quando la tensione sale in auto, <strong>il 40 % delle coppie sceglie il silenzio</strong>, che non risolve niente e installa due ore di gelo. Un <a href="/it/dilemmi-di-coppia/">gioco di dilemmi che sta su un solo telefono</a> batte la playlist, perché restituisce un argomento neutro a due persone che non ne hanno più.</p>`,
+<p>E per il tragitto la soluzione è quasi sciocca: occupare il copilota. Quando la tensione sale in auto, <strong>il 40 % delle coppie sceglie il silenzio</strong>, che non risolve niente e installa due ore di gelo fino al prossimo autogrill.</p>`,
+        },
+      ],
     },
     {
       id: 'con-i-figli',
       title: `Con i figli non è più la stessa equazione`,
-      content: `<p>Su questo punto va detta la verità: non ho trovato nessuna indagine seria che permetta di affermare «il X % delle coppie con figli litiga contro il Y % senza figli». I numeri che circolano al riguardo sono inverificabili.</p>
+      content: `<p>Questa è la parte in cui la maggior parte degli articoli si inventa un numero. Io faccio il contrario.</p>`,
+      subsections: [
+        {
+          id: 'cosa-non-si-puo-affermare',
+          title: `Cosa nessuna indagine seria permette di affermare`,
+          content: `<p>Non ho trovato nessun dato affidabile che permetta di scrivere «il X % delle coppie con figli litiga contro il Y % senza figli». I numeri che circolano vengono da sondaggi commerciali senza metodologia pubblicata, e preferisco lasciare la casella vuota.</p>
 
-<p>Quello che invece è documentato è che il carico si sposta. La valigia dei bambini, il kit di pronto soccorso, la scelta dei vestiti adatti e le attività ricadono sulle donne nel 75-86 % dei casi a seconda del compito. Non è un litigio in sé, è il serbatoio da cui il litigio attingerà.</p>
+<p>Stessa cosa per le destinazioni: niente dimostra che un paese faccia litigare più di un altro. Se lo leggete da qualche parte, chiedete la dimensione del campione!</p>`,
+        },
+        {
+          id: 'cosa-e-documentato',
+          title: `Cosa è documentato: il carico si sposta`,
+          content: `<p>La valigia dei bambini, il kit di pronto soccorso, la scelta dei vestiti adatti e le attività ricadono sulle donne nel 75-86 % dei casi a seconda del compito. Non è un litigio in sé, è il serbatoio da cui il litigio attingerà.</p>
 
 <p>E sull'alloggio il bisogno cambia natura: il 70 % dei genitori che viaggiano con i figli considera indispensabili più camere, contro il 58 % dei viaggiatori in generale. Non è lusso, è l'unico modo di recuperare le due ore di cui si parlava sopra.</p>
 
-<p>Se la ripartizione torna identica ogni anno, con ogni probabilità va ben oltre le vacanze. È tipicamente ciò che misura <a href="/it/test-genitorialita-coppia/">un questionario su come vi dividete il carico genitoriale</a>, e le risposte dicono spesso di più fuori dal contesto di una partenza.</p>`,
+<p>Se il tema torna identico ogni anno, non sono le vacanze il problema: è <a href="/it/test-genitorialita-coppia/">la divisione del carico genitoriale</a> nel resto dell'anno, che diventa semplicemente impossibile da ignorare quando siete chiusi in quattro in quaranta metri quadri.</p>`,
+        },
+      ],
     },
     {
       id: 'domande-frequenti',
-      title: `Le domande che tornano sempre`,
+      title: `Cosa chiedono le coppie prima di prenotare`,
       content: `<p><strong>Litigare in vacanza è un brutto segno?</strong><br>
 No, non di per sé. Contano l'argomento e il finale. Un litigio sul navigatore che finisce all'autogrill non ha niente a che vedere con un litigio sulla partecipazione che torna ogni estate da sei anni. Il secondo parla del resto dell'anno.</p>
 
@@ -135,22 +172,21 @@ No, non di per sé. Contano l'argomento e il finale. Un litigio sul navigatore c
 Non è un'idea stupida, e non è ammettere un fallimento. Ma prima di arrivarci, l'opzione meno costosa resta tenere lo stesso soggiorno inserendoci del tempo separato. La differenza tra due persone che soffocano e due persone che stanno bene spesso è di due ore al giorno.</p>
 
 <p><strong>Come capire se vogliamo davvero le stesse vacanze?</strong><br>
-Rispondendo ognuno per conto proprio prima di parlarne, invece di negoziare ad alta voce. Confrontare risposte scritte disinnesca molto: non è più tu contro l'altro, siete voi due davanti a uno scarto misurato. Un <a href="/it/test-punti-comuni-coppia/">questionario che confronta i vostri gusti punto per punto</a> fa benissimo questo lavoro, e si compila in dieci minuti.</p>
+Rispondendo ognuno per conto proprio prima di parlarne, invece di negoziare ad alta voce. Confrontare risposte scritte disinnesca molto: non è più tu contro l'altro, siete voi due davanti ai <a href="/it/test-punti-comuni-coppia/">vostri punti in comune reali</a>, misurati invece che supposti.</p>
 
 <p><strong>E se le vacanze sono finite davvero male?</strong><br>
 Una settimana difficile dice poco. Una settimana difficile che assomiglia agli undici mesi precedenti, invece sì. In quel caso la domanda utile non è «perché abbiamo litigato in Sardegna», ma <a href="/it/test-relazione-sana/">cosa rende una relazione vivibile nel quotidiano</a>.</p>
 
 <p><strong>Da cosa cominciare prima della prossima partenza?</strong><br>
-Da una conversazione che non riguardi la logistica. Sembra al contrario, ma la maggior parte delle tensioni di luglio si prepara a marzo, quando nessuno dice niente. Partire da <a href="/it/domande-coppia/">una domanda aperta su cosa ciascuno si aspetta dal soggiorno</a> evita di scoprire all'arrivo che uno voleva riposare e l'altra visitare tutto.</p>`,
+Da una conversazione che non riguardi la logistica. Sembra al contrario, ma la maggior parte delle tensioni di luglio si prepara a marzo, quando nessuno dice niente. Chiedere all'altro cosa si aspetta dal soggiorno evita di scoprire all'arrivo che uno voleva riposare e l'altra visitare tutto.</p>`,
     },
     {
       id: 'per-finire',
-      title: `Per finire`,
+      title: `Tre cose da sistemare prima di chiudere il bagagliaio`,
       content: `<p>Non esiste una coppia che non litighi mai in vacanza, e non esiste una destinazione magica. Quello che esiste è una sequenza abbastanza prevedibile: una preparazione squilibrata, un tragitto in cui decide una sola persona e un alloggio in cui nessuno ha un angolo suo.</p>
 
 <p><strong>La buona notizia</strong> è che tutte e tre si correggono prima di partire, all'angolo di un tavolo, in venti minuti. Quello che invece non si corregge sul posto è il rimprovero che ti porti dietro da marzo. Quello va tirato fuori prima di chiudere il bagagliaio.</p>
 
-<p>E se vuoi sapere a che punto siete davvero tutti e due, prima che la domanda arrivi in un autogrill, esiste un <a href="/it/test-compatibilita-coppia/">questionario da compilare ognuno per conto proprio</a> che confronta le vostre risposte e mette in evidenza gli scarti.</p>
 
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📚 Le fonti citate</p>

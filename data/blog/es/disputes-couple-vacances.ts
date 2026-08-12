@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'la-respuesta-corta',
-      title: `La respuesta corta`,
+      title: `Por qué las vacaciones sacan lo que ya estaba ahí`,
       content: `<p>Las parejas no discuten porque se vayan de vacaciones. <strong>Discuten porque las vacaciones eliminan de golpe las tres cosas que tapaban el problema el resto del año</strong>: el trabajo, los horarios desfasados y las habitaciones separadas.</p>
 
 <p>Durante once meses, dos personas que no se entienden demasiado bien en la organización pueden convivir perfectamente: cada uno gestiona su día, os cruzáis por la noche, no hay tiempo de hablarlo. En vacaciones ese colchón desaparece. Estáis juntos dieciséis horas al día, en un espacio más pequeño que vuestra casa, con decisiones que tomar cada dos horas.</p>
@@ -61,13 +61,23 @@ const article: BlogArticleData = {
     {
       id: 'no-es-el-destino',
       title: `El detonante casi nunca es el destino`,
-      content: `<p>Es el malentendido más frecuente. Se cree que se discute porque uno quería playa y el otro montaña… pero en la encuesta del IFOP, el desacuerdo sobre el destino solo afecta al <strong>26 % de las personas entrevistadas</strong>, hombres y mujeres juntos. Es real, pero llega muy por detrás.</p>
+      content: `<p>Es el malentendido más frecuente, y sale caro: mientras se busque el problema en la elección del hotel, no se encuentra.</p>`,
+      subsections: [
+        {
+          id: 'el-destino-llega-cuarto',
+          title: `El destino solo llega en cuarto lugar`,
+          content: `<p>Se cree que se discute porque uno quería playa y el otro montaña… pero en la encuesta del IFOP, el desacuerdo sobre el destino solo afecta al <strong>26 % de las personas entrevistadas</strong>, hombres y mujeres juntos. Es real, pero llega muy por detrás.</p>
 
-<p>El motivo número uno, citado por el <strong>40 % de las mujeres</strong>, es la falta de implicación de la pareja. No «elegiste mal el sitio», sino «lo he hecho todo yo sola».</p>
+<p>El motivo número uno, citado por el <strong>40 % de las mujeres</strong>, es la falta de implicación de la pareja. No «elegiste mal el sitio», sino «lo he hecho todo yo sola».</p>`,
+        },
+        {
+          id: 'una-tarea-visible-contra-diez-invisibles',
+          title: `Una tarea muy visible contra diez que no se ven`,
+          content: `<p>Cuando se mira el detalle de las tareas se entiende por qué acaba saliendo. En las vacaciones familiares, son ellas quienes declaran mayoritariamente arrancar la organización (56 % frente a 31 %), reservar el alojamiento (48 % frente a 26 %), preparar las comidas allí (54 % frente a 24 %) y hacer la maleta de los niños, cerca del 80 % frente a un 10 % aproximadamente. Ellos conducen: 58 % frente a 18 %.</p>
 
-<p>Y cuando se mira el detalle de las tareas se entiende por qué acaba saliendo. En las vacaciones familiares, son ellas quienes declaran mayoritariamente arrancar la organización (56 % frente a 31 %), reservar el alojamiento (48 % frente a 26 %), preparar las comidas allí (54 % frente a 24 %) y hacer la maleta de los niños, cerca del 80 % frente a un 10 % aproximadamente. Ellos conducen: 58 % frente a 18 %.</p>
-
-<p>Es decir, una sola tarea muy visible por un lado y una decena de tareas invisibles por el otro. Ese es exactamente el terreno en el que un desacuerdo que nunca se dice acaba saliendo por un asunto minúsculo, normalmente el peaje o el GPS.</p>`,
+<p>Conducir se ve. Haber pensado en la cartilla médica y en los zapatos de repuesto, no. Ese es exactamente el terreno en el que un desacuerdo que nunca se dice acaba saliendo por un asunto minúsculo, normalmente el peaje o el GPS.</p>`,
+        },
+      ],
     },
     {
       id: 'la-paradoja',
@@ -104,30 +114,57 @@ const article: BlogArticleData = {
     {
       id: 'lo-que-desactiva',
       title: `Lo que lo desactiva, y no es «comunicarse mejor»`,
-      content: `<p>La respuesta habitual a este tipo de artículo es «hablad». Solo que las cifras apuntan a otra cosa, y bastante más fácil de aplicar.</p>
+      content: `<p>La respuesta habitual a este tipo de artículo es «hablad». Solo que las cifras apuntan a otra cosa, y bastante más fácil de aplicar.</p>`,
+      subsections: [
+        {
+          id: 'dos-horas-al-dia-por-separado',
+          title: `Dos horas al día cada uno por su lado`,
+          content: `<p>En la encuesta de Talker Research, el 77 % de los entrevistados dice que disponer de espacio personal calma las tensiones, y el 68 % que el tiempo a solas les hace sentirse <em>más</em> cerca de su grupo de viaje. La necesidad mediana ronda las dos horas al día.</p>
 
-<p><strong>Tiempo por separado, previsto de antemano:</strong> en la encuesta de Talker Research, el 77 % de los entrevistados dice que disponer de espacio personal calma las tensiones, y el 68 % que el tiempo a solas les hace sentirse <em>más</em> cerca de su grupo de viaje. La necesidad mediana ronda las dos horas al día. Dos horas no es una habitación separada: es un café mientras el otro duerme la siesta.</p>
+<p>Dos horas no es una habitación separada ni un viaje aparte: es un café mientras el otro duerme la siesta. Y va previsto de antemano, porque si no nunca se coge.</p>`,
+        },
+        {
+          id: 'novedad-en-vez-de-comodidad',
+          title: `Novedad en vez de comodidad`,
+          content: `<p>Un estudio publicado en 2024 en <em>Annals of Tourism Research Empirical Insights</em> siguió a 238 personas en pareja y después a 102 parejas que viajaban realmente juntas. Los investigadores midieron la cantidad de experiencias nuevas, interesantes o algo exigentes vividas durante la estancia.</p>
 
-<p><strong>Novedad, no comodidad:</strong> un estudio publicado en 2024 en <em>Annals of Tourism Research Empirical Insights</em> siguió a 238 personas en pareja y después a 102 parejas que viajaban realmente juntas. Los investigadores midieron la cantidad de experiencias nuevas, interesantes o algo exigentes vividas durante la estancia. Resultado: cuantas más había, mayores eran la pasión, la satisfacción con la relación y la intimidad física <em>después</em> de volver. Y el efecto no dependía de la antigüedad de la pareja.</p>
+<p>Resultado: cuantas más había, mayores eran la pasión, la satisfacción con la relación y la intimidad física <em>después</em> de volver. Y el efecto no dependía de la antigüedad de la pareja, de un año a más de treinta.</p>`,
+        },
+        {
+          id: 'dos-listas-escritas',
+          title: `Dos listas escritas, no un «ayúdame»`,
+          content: `<p>«Ayúdame» deja la tarea de repartir a quien ya la lleva: todavía hay que decidir qué delegar, explicarlo y luego comprobarlo. Dos listas separadas, escritas, con un nombre delante de cada línea, eliminan ese paso invisible.</p>
 
-<p><strong>Un reparto explícito de la preparación:</strong> no «ayúdame», que deja la tarea de repartir a quien ya la lleva. Mejor dos listas separadas, escritas, con un nombre delante de cada línea.</p>
-
-<p>Y para el trayecto, la solución es casi tonta: ocupar al copiloto. Cuando sube la tensión en el coche, <strong>el 40 % de las parejas opta por el silencio</strong>, que no arregla nada e instala dos horas de frío. Un <a href="/es/dilemas-de-pareja/">juego de dilemas que cabe en un solo móvil</a> funciona mejor que la playlist, porque devuelve un tema neutro a dos personas que ya no tienen ninguno.</p>`,
+<p>Y para el trayecto, la solución es casi tonta: ocupar al copiloto. Cuando sube la tensión en el coche, <strong>el 40 % de las parejas opta por el silencio</strong>, que no arregla nada e instala dos horas de frío hasta la siguiente área de servicio.</p>`,
+        },
+      ],
     },
     {
       id: 'con-hijos',
       title: `Con hijos, la ecuación cambia`,
-      content: `<p>Hay que ser honestos en esto: no he encontrado ninguna encuesta seria que permita afirmar «el X % de las parejas con hijos discute frente al Y % sin hijos». Las cifras que circulan al respecto son inverificables.</p>
+      content: `<p>Esta es la parte en la que la mayoría de los artículos se inventa una cifra. Voy a hacer lo contrario.</p>`,
+      subsections: [
+        {
+          id: 'lo-que-no-se-puede-afirmar',
+          title: `Lo que ninguna encuesta seria permite afirmar`,
+          content: `<p>No he encontrado ningún dato fiable que permita escribir «el X % de las parejas con hijos discute frente al Y % sin hijos». Las cifras que circulan salen de sondeos comerciales sin metodología publicada, y prefiero dejar la casilla vacía.</p>
 
-<p>Lo que sí está documentado es que la carga se desplaza. La maleta de los niños, el botiquín, la elección de ropa adecuada y las actividades recaen en las mujeres en el 75 a 86 % de los casos según la tarea. No es una discusión en sí, es el depósito del que la discusión va a tirar.</p>
+<p>Lo mismo con los destinos: nada demuestra que un país haga discutir más que otro. Si lees eso en algún sitio, ¡pregunta por el tamaño de la muestra!</p>`,
+        },
+        {
+          id: 'lo-que-si-esta-documentado',
+          title: `Lo que sí está documentado: la carga se desplaza`,
+          content: `<p>La maleta de los niños, el botiquín, la elección de ropa adecuada y las actividades recaen en las mujeres en el 75 a 86 % de los casos según la tarea. No es una discusión en sí, es el depósito del que la discusión va a tirar.</p>
 
 <p>Y en el alojamiento, la necesidad cambia de naturaleza: el 70 % de los padres que viajan con sus hijos considera imprescindibles varias habitaciones, frente al 58 % del conjunto de viajeros. No es lujo, es la única forma de recuperar las dos horas de las que hablábamos antes.</p>
 
-<p>Si el reparto vuelve idéntico cada año, seguramente desborda con creces las vacaciones. Es justo lo que mide <a href="/es/test-parentalidad-pareja/">un cuestionario sobre cómo os repartís la carga parental</a>, y las respuestas suelen decir más fuera del contexto de una salida.</p>`,
+<p>Si el tema vuelve idéntico cada año, no son las vacaciones lo que falla: es <a href="/es/test-parentalidad-pareja/">el reparto de la carga parental</a> el resto del año, que sencillamente se vuelve imposible de ignorar cuando estáis encerrados a cuatro en cuarenta metros cuadrados.</p>`,
+        },
+      ],
     },
     {
       id: 'preguntas-frecuentes',
-      title: `Las preguntas que se repiten`,
+      title: `Lo que las parejas preguntan antes de reservar`,
       content: `<p><strong>¿Discutir en vacaciones es mala señal?</strong><br>
 No, no en sí mismo. Lo que cuenta es el tema y el final. Una discusión por el GPS que se acaba en el área de servicio no tiene nada que ver con una discusión sobre la implicación que vuelve cada verano desde hace seis años. La segunda habla del resto del año.</p>
 
@@ -135,22 +172,21 @@ No, no en sí mismo. Lo que cuenta es el tema y el final. Una discusión por el 
 No es una tontería, y no es reconocer un fracaso. Pero antes de llegar ahí, la opción más barata es mantener el mismo viaje e insertarle tiempo por separado. La diferencia entre dos personas que se ahogan y dos personas que están bien suele ser de dos horas al día.</p>
 
 <p><strong>¿Cómo saber si queremos las mismas vacaciones?</strong><br>
-Respondiendo cada uno por su lado antes de hablarlo, en lugar de negociar en voz alta. Comparar respuestas escritas desactiva mucho: deja de ser tú contra el otro y pasa a ser los dos frente a una diferencia medida. Un <a href="/es/test-puntos-comunes-pareja/">cuestionario que compara vuestros gustos punto por punto</a> hace muy bien ese trabajo, y se rellena en diez minutos.</p>
+Respondiendo cada uno por su lado antes de hablarlo, en lugar de negociar en voz alta. Comparar respuestas escritas desactiva mucho: deja de ser tú contra el otro y pasa a ser los dos frente a <a href="/es/test-puntos-comunes-pareja/">vuestros puntos en común reales</a>, medidos en lugar de supuestos.</p>
 
 <p><strong>¿Y si las vacaciones acabaron realmente mal?</strong><br>
 Una semana difícil no dice gran cosa. Una semana difícil que se parece a los once meses anteriores, sí. En ese caso la pregunta útil no es «por qué discutimos en Cerdeña», sino <a href="/es/test-relacion-sana/">qué hace que una relación sea vivible en el día a día</a>.</p>
 
 <p><strong>¿Por dónde empezar antes del próximo viaje?</strong><br>
-Por una conversación que no vaya de logística. Suena al revés, pero la mayoría de las tensiones de julio se preparan en marzo, cuando nadie dice nada. Partir de <a href="/es/preguntas-pareja/">una pregunta abierta sobre lo que cada uno espera del viaje</a> evita descubrir al llegar que uno quería descansar y el otro verlo todo.</p>`,
+Por una conversación que no vaya de logística. Suena al revés, pero la mayoría de las tensiones de julio se preparan en marzo, cuando nadie dice nada. Preguntarle al otro qué espera del viaje evita descubrir al llegar que uno quería descansar y el otro verlo todo.</p>`,
     },
     {
       id: 'para-terminar',
-      title: `Para terminar`,
+      title: `Tres cosas que arreglar antes de cerrar el maletero`,
       content: `<p>No hay pareja que no discuta nunca en vacaciones, y no hay destino mágico. Lo que hay es un encadenamiento bastante previsible: una preparación desequilibrada, un trayecto donde decide una sola persona y un alojamiento donde nadie tiene un rincón propio.</p>
 
 <p><strong>La buena noticia</strong> es que los tres se corrigen antes de salir, en una esquina de la mesa, en veinte minutos. Lo que no se corrige allí, en cambio, es el reproche que arrastras desde marzo. Ese hay que sacarlo antes de cerrar el maletero.</p>
 
-<p>Y si quieres saber dónde estáis realmente los dos, antes de que la pregunta surja en un área de servicio, existe un <a href="/es/test-compatibilidad-pareja/">cuestionario para rellenar cada uno por su lado</a> que compara vuestras respuestas y pone las diferencias por delante.</p>
 
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📚 Las fuentes citadas</p>

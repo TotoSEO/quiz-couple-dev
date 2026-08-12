@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'la-respuesta-corta',
-      title: `La respuesta corta, antes de los matices`,
+      title: `Lo que separa una relación que se salva de una acabada`,
       content: `<p>Una relación merece continuar cuando atraviesa una dificultad <strong>que tiene nombre</strong>: un duelo, una mudanza, un agotamiento laboral, la llegada de un hijo, una traición que estáis reparando. La pareja sufre, pero sufre por algo.</p>
 
 <p>Una relación merece terminar cuando la dificultad es la relación misma. Cuando no puedes nombrar lo que va mal porque <strong>lo que va mal es todo</strong>, de forma permanente, desde hace tanto que ya no recuerdas cómo era antes.</p>
@@ -242,7 +242,7 @@ Son una razón para hacer las cosas bien, no necesariamente para quedarse. La in
     },
     {
       id: 'para-terminar',
-      title: `Para terminar`,
+      title: `La única pregunta que solo tú puedes responder`,
       content: `<p>No existe un umbral a partir del cual haya que irse. Ni una puntuación, ni un porcentaje, y desde luego no en un artículo. Lo que existe son señales, y una pregunta que solo tú puedes responder con honestidad: <strong>¿estoy atravesando algo o me estoy instalando en ello?</strong></p>
 
 <p>La mayoría de la gente ya conoce la respuesta cuando llega aquí… Lo que busca es que alguien se la confirme. Si es tu caso, tómalo como la confirmación.</p>`,

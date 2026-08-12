@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'la-reponse-courte',
-      title: `La réponse courte, avant les nuances`,
+      title: `Ce qui sépare une relation à sauver d'une relation finie`,
       content: `<p>Une relation mérite qu'on continue quand elle traverse une difficulté <strong>qui a un nom</strong> : un deuil, un déménagement, un burn-out, l'arrivée d'un enfant, une trahison qu'on est en train de réparer. Le couple souffre, mais il souffre de quelque chose.</p>
 
 <p>Une relation mérite qu'on l'arrête quand la difficulté, c'est la relation elle-même. Quand vous ne pouvez pas nommer ce qui ne va pas parce que <strong>ce qui ne va pas, c'est tout</strong>, en permanence, depuis si longtemps que vous ne savez plus à quoi ressemblait l'avant.</p>
@@ -242,7 +242,7 @@ Ce sont une raison de bien faire les choses, pas forcément de rester. La recher
     },
     {
       id: 'pour-finir',
-      title: `Pour finir`,
+      title: `La seule question à laquelle vous êtes seul à pouvoir répondre`,
       content: `<p>Il n'existe pas de seuil au-delà duquel il faut partir. Pas de score, pas de pourcentage, et surtout pas dans un article. Ce qui existe, ce sont des signaux, et une question à laquelle vous êtes le seul à pouvoir répondre honnêtement : <strong>est-ce que je suis en train de traverser quelque chose, ou est-ce que je suis en train de m'installer dedans ?</strong></p>
 
 <p>La plupart des gens connaissent déjà la réponse en arrivant ici… Ils cherchent surtout quelqu'un pour la leur confirmer. Si c'est votre cas, prenez ça comme la confirmation.</p>`,

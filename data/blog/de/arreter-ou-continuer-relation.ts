@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'die-kurze-antwort',
-      title: `Die kurze Antwort, vor allen Nuancen`,
+      title: `Was eine rettbare Beziehung von einer beendeten trennt`,
       content: `<p>Eine Beziehung verdient es weiterzugehen, wenn sie durch eine Schwierigkeit geht, <strong>die einen Namen hat</strong>: ein Trauerfall, ein Umzug, ein Burn-out, die Geburt eines Kindes, ein Vertrauensbruch, an dessen Reparatur ihr gerade arbeitet. Das Paar leidet, aber es leidet an etwas.</p>
 
 <p>Eine Beziehung verdient es zu enden, wenn die Schwierigkeit die Beziehung selbst ist. Wenn du nicht benennen kannst, was nicht stimmt, weil <strong>alles nicht stimmt</strong>, dauerhaft, seit so langer Zeit, dass du nicht mehr weißt, wie das Davor aussah.</p>
@@ -242,7 +242,7 @@ Sie sind ein Grund, es gut zu machen, nicht unbedingt zu bleiben. Die Forschung 
     },
     {
       id: 'zum-schluss',
-      title: `Zum Schluss`,
+      title: `Die eine Frage, die nur du beantworten kannst`,
       content: `<p>Es gibt keine Schwelle, ab der man gehen muss. Keinen Punktestand, keinen Prozentsatz, und schon gar nicht in einem Artikel. Was es gibt, sind Signale und eine Frage, die nur du ehrlich beantworten kannst: <strong>Gehe ich gerade durch etwas hindurch, oder richte ich mich darin ein?</strong></p>
 
 <p>Die meisten kennen die Antwort schon, wenn sie hier ankommen… Sie suchen vor allem jemanden, der sie ihnen bestätigt. Falls du dazugehörst, nimm das hier als Bestätigung.</p>`,
