@@ -136,7 +136,7 @@
     <div class="max-w-3xl mx-auto">
       <%# data-quiz sert au moteur a retrouver ses suggestions de fin de partie.
           Sans lui, cette page etait la seule a retomber sur un tirage au hasard. %>
-      <div id="wyr-quiz" data-quiz="tu-preferes" data-lang="<%= lang %>"></div>
+      <div id="wyr-quiz" class="wyr-jeu" data-quiz="tu-preferes" data-lang="<%= lang %>"></div>
     </div>
   </div>
 </section>
@@ -311,13 +311,15 @@
     var long = this.questions.length;
     var choisi = court;
 
-    var html = '<div class="glass-card rounded-xl p-8 text-center animate-fade-in">';
-    html += '<div class="text-5xl mb-4">🤔</div>';
-    html += '<h2 class="text-2xl font-bold mb-2">' + UI.or + '...</h2>';
-    html += '<p class="text-muted-foreground mb-6">' + UI.intro + '</p>';
-    html += '<div class="max-w-xs mx-auto space-y-3 mb-6">';
-    html += '<input type="text" id="wyr-p1" class="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground text-center" placeholder="' + UI.name1 + ', ' + UI.namePlaceholder + '" maxlength="20" />';
-    html += '<input type="text" id="wyr-p2" class="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground text-center" placeholder="' + UI.name2 + ', ' + UI.namePlaceholder + '" maxlength="20" />';
+    // « OU… » était un h2 : un titre de niveau deux vide de sens au milieu
+    // d'une page qui a déjà sa hiérarchie. C'est une accroche, pas un titre.
+    var html = '<div class="wyr-carte wyr-carte--depart">';
+    html += '<div class="wyr-macaron" aria-hidden="true"><span>🤔</span></div>';
+    html += '<p class="wyr-accroche">' + UI.or + '…</p>';
+    html += '<p class="wyr-intro">' + UI.intro + '</p>';
+    html += '<div class="wyr-champs">';
+    html += '<input type="text" id="wyr-p1" class="wyr-champ" placeholder="' + UI.name1 + ', ' + UI.namePlaceholder + '" maxlength="20" />';
+    html += '<input type="text" id="wyr-p2" class="wyr-champ" placeholder="' + UI.name2 + ', ' + UI.namePlaceholder + '" maxlength="20" />';
     html += '</div>';
 
     if (long > court) {
@@ -334,7 +336,7 @@
       html += '</div>';
     }
 
-    html += '<button type="button" class="btn btn-cta" id="wyr-start">' + UI.startGame + '</button>';
+    html += '<button type="button" class="wyr-cta" id="wyr-start">' + UI.startGame + '</button>';
     html += '</div>';
     this.container.innerHTML = html;
 
@@ -421,37 +423,28 @@
     var progress = Math.round((doneSteps / totalSteps) * 100);
     var name = this.currentPlayer === 1 ? this.p1Name : this.p2Name;
 
-    var html = '<div class="glass-card rounded-xl p-6 animate-fade-in">';
+    var html = '<div class="wyr-carte wyr-carte--question">';
 
-    // Player indicator + progress
-    html += '<div class="mb-5">';
-    html += '<div class="flex justify-between items-center text-sm text-muted-foreground mb-2">';
-    html += '<span class="font-medium" style="color: var(--primary)">' + QuizEngine.esc(name) + '</span>';
-    html += '<span>' + (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.limite + '</span>';
+    html += '<div class="wyr-entete">';
+    html += '<span class="wyr-joueur">' + QuizEngine.esc(name) + '</span>';
+    html += '<span class="wyr-compteur">' + (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.limite + '</span>';
     html += '</div>';
-    html += '<div class="w-full bg-muted rounded-full h-1.5">';
-    html += '<div class="bg-primary h-1.5 rounded-full transition-all duration-500" style="width:' + progress + '%"></div>';
-    html += '</div></div>';
+    html += '<div class="wyr-barre" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + progress + '">';
+    html += '<span style="width:' + progress + '%"></span></div>';
 
-    // Question
-    html += '<h3 class="text-lg md:text-xl font-semibold mb-8 text-foreground text-center leading-relaxed">' + q.text + '</h3>';
+    html += '<h3 class="wyr-question">' + q.text + '</h3>';
 
-    // Options A/B with VS divider
     html += '<div class="wyr-options">';
-
-    // Option A
-    html += '<button type="button" class="wyr-option wyr-option-a" data-choice="a">';
-    html += '<span class="wyr-option-label">A</span>';
-    html += '<span class="wyr-option-text">' + q.a + '</span>';
+    html += '<button type="button" class="wyr-option wyr-option--a" data-choice="a">';
+    html += '<span class="wyr-option-lettre">A</span>';
+    html += '<span class="wyr-option-texte">' + q.a + '</span>';
     html += '</button>';
-
-    // VS divider
-    html += '<div class="wyr-vs"><span>' + UI.or + '</span></div>';
-
-    // Option B
-    html += '<button type="button" class="wyr-option wyr-option-b" data-choice="b">';
-    html += '<span class="wyr-option-label">B</span>';
-    html += '<span class="wyr-option-text">' + q.b + '</span>';
+    // Le médaillon « OU » chevauche les deux cartes : c'est lui qui fait lire
+    // le duel comme un duel plutôt que comme une liste de deux réponses.
+    html += '<div class="wyr-ou" aria-hidden="true"><span>' + UI.or + '</span></div>';
+    html += '<button type="button" class="wyr-option wyr-option--b" data-choice="b">';
+    html += '<span class="wyr-option-lettre">B</span>';
+    html += '<span class="wyr-option-texte">' + q.b + '</span>';
     html += '</button>';
 
     html += '</div></div>';
@@ -484,9 +477,9 @@
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].style.pointerEvents = 'none';
       if (buttons[i] === btn) {
-        buttons[i].classList.add('wyr-selected');
+        buttons[i].classList.add('wyr-option--pris');
       } else {
-        buttons[i].classList.add('wyr-not-selected');
+        buttons[i].classList.add('wyr-option--ecarte');
       }
     }
 
@@ -520,32 +513,30 @@
     var p2 = this.p2Answers[this.currentQ];
     var same = p1 === p2;
 
-    var html = '<div class="glass-card rounded-xl p-6 text-center animate-fade-in">';
-    html += '<div class="text-4xl mb-3">' + (same ? '🎉' : '😅') + '</div>';
-    html += '<h3 class="text-lg font-semibold mb-1">' + (same ? UI.sameChoice : UI.diffChoice) + '</h3>';
-    html += '<p class="text-sm text-muted-foreground mb-6">' + (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.limite + '</p>';
+    // Accord et désaccord se lisaient au vert et au rouge de Tailwind, en
+    // dur, sans équivalent sombre. Ils passent par les deux jetons du jeu.
+    var ton = same ? 'ok' : 'non';
 
-    // Question text
-    html += '<p class="text-base text-muted-foreground mb-5">' + q.text + '</p>';
+    var html = '<div class="wyr-carte wyr-carte--reveal wyr-carte--' + ton + '">';
+    html += '<div class="wyr-macaron wyr-macaron--' + ton + '" aria-hidden="true"><span>' + (same ? '🎉' : '😅') + '</span></div>';
+    html += '<p class="wyr-verdict">' + (same ? UI.sameChoice : UI.diffChoice) + '</p>';
+    html += '<p class="wyr-compteur-seul">' + (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.limite + '</p>';
+    html += '<p class="wyr-rappel">' + q.text + '</p>';
 
-    // Show both answers side by side
-    html += '<div class="grid grid-cols-2 gap-3 mb-6">';
-
-    html += '<div class="p-3 rounded-lg ' + (same ? 'bg-green-500/10 border border-green-500/20' : 'bg-muted') + '">';
-    html += '<p class="text-xs font-medium text-muted-foreground mb-1">' + QuizEngine.esc(this.p1Name) + '</p>';
-    html += '<p class="text-sm font-semibold text-foreground">' + (p1 === 'a' ? q.a : q.b) + '</p>';
+    html += '<div class="wyr-duel">';
+    html += '<div class="wyr-duel-cote wyr-duel-cote--' + ton + '">';
+    html += '<span class="wyr-duel-nom">' + QuizEngine.esc(this.p1Name) + '</span>';
+    html += '<span class="wyr-duel-choix">' + (p1 === 'a' ? q.a : q.b) + '</span>';
     html += '</div>';
-
-    html += '<div class="p-3 rounded-lg ' + (same ? 'bg-green-500/10 border border-green-500/20' : 'bg-muted') + '">';
-    html += '<p class="text-xs font-medium text-muted-foreground mb-1">' + QuizEngine.esc(this.p2Name) + '</p>';
-    html += '<p class="text-sm font-semibold text-foreground">' + (p2 === 'a' ? q.a : q.b) + '</p>';
+    html += '<div class="wyr-duel-cote wyr-duel-cote--' + ton + '">';
+    html += '<span class="wyr-duel-nom">' + QuizEngine.esc(this.p2Name) + '</span>';
+    html += '<span class="wyr-duel-choix">' + (p2 === 'a' ? q.a : q.b) + '</span>';
     html += '</div>';
-
     html += '</div>';
 
     // Next button
     var isLast = this.currentQ >= this.limite - 1;
-    html += '<button type="button" class="btn btn-cta" id="wyr-next">' + (isLast ? UI.done : UI.next) + '</button>';
+    html += '<button type="button" class="wyr-cta" id="wyr-next">' + (isLast ? UI.done : UI.next) + '</button>';
     html += '</div>';
 
     this.container.innerHTML = html;
@@ -584,61 +575,48 @@
 
     // data-quiz-done signale la fin de partie au suivi des completions : cet
     // ecran a son propre habillage et ne peut pas porter .quiz-result-card.
-    var html = '<div class="glass-card rounded-xl p-6 animate-fade-in" data-quiz-done="1">';
+    var html = '<div class="wyr-carte wyr-carte--resultat" data-quiz-done="1">';
 
-    // Score hero
-    html += '<div class="text-center mb-8">';
-    html += '<div class="text-5xl mb-3">' + emoji + '</div>';
-    html += '<p class="text-sm text-muted-foreground mb-2">' + UI.matchRate + '</p>';
-    html += '<h2 class="text-4xl md:text-5xl font-bold text-primary mb-1">' + pct + '%</h2>';
-    html += '<p class="text-muted-foreground">' + matches + '/' + this.limite + ' ' + UI.agree + '</p>';
-    html += '</div>';
+    html += '<div class="wyr-macaron" aria-hidden="true"><span>' + emoji + '</span></div>';
+    html += '<p class="wyr-score-label">' + UI.matchRate + '</p>';
+    html += '<p class="wyr-score-nb">' + pct + '<span class="wyr-score-pct">%</span></p>';
+    html += '<p class="wyr-score-sub">' + matches + '/' + this.limite + ' ' + UI.agree + '</p>';
 
-    // Agreement bar
-    html += '<div class="mb-8">';
-    html += '<div class="w-full bg-muted rounded-full h-4 overflow-hidden">';
-    html += '<div class="h-4 rounded-full transition-all duration-1000" style="width:' + pct + '%;background:linear-gradient(90deg, hsl(340,65%,65%), hsl(270,40%,70%))"></div>';
-    html += '</div></div>';
+    html += '<div class="wyr-jauge" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '">';
+    html += '<span style="width:' + pct + '%"></span></div>';
 
     // Proposition de prolonger, avant le détail : c'est la seule chose sur
     // laquelle on veut que l'œil tombe juste après le score.
     html += this.blocProlonger();
 
     // Question-by-question breakdown
-    html += '<div class="space-y-3 mb-8">';
+    html += '<div class="wyr-detail">';
     for (var d = 0; d < details.length; d++) {
       var det = details[d];
-      var matchIcon = det.match ? '✅' : '❌';
-      var matchClass = det.match ? 'border-green-500/30 bg-green-500/5' : 'border-red-500/30 bg-red-500/5';
+      var ton = det.match ? 'ok' : 'non';
 
-      html += '<details class="border rounded-lg ' + matchClass + '">';
-      html += '<summary class="p-3 cursor-pointer flex items-center gap-2 text-sm">';
-      html += '<span>' + matchIcon + '</span>';
-      html += '<span class="font-medium text-foreground flex-1">' + (d + 1) + '. ' + det.q.text + '</span>';
+      html += '<details class="wyr-ligne wyr-ligne--' + ton + '">';
+      html += '<summary class="wyr-ligne-tete">';
+      html += '<span class="wyr-ligne-pastille" aria-hidden="true">' + (det.match ? '✓' : '✗') + '</span>';
+      html += '<span class="wyr-ligne-texte">' + (d + 1) + '. ' + det.q.text + '</span>';
       html += '</summary>';
-      html += '<div class="px-3 pb-3 grid grid-cols-2 gap-2 text-sm">';
+      html += '<div class="wyr-duel wyr-duel--compact">';
 
-      // P1 choice
-      html += '<div class="p-2 rounded-lg ' + (det.p1 === 'a' ? 'bg-primary/10 border border-primary/20' : 'bg-muted') + '">';
-      html += '<p class="font-medium text-xs text-muted-foreground mb-1">' + QuizEngine.esc(this.p1Name) + '</p>';
-      html += '<p class="text-foreground">' + (det.p1 === 'a' ? det.q.a : det.q.b) + '</p>';
+      html += '<div class="wyr-duel-cote wyr-duel-cote--' + ton + '">';
+      html += '<span class="wyr-duel-nom">' + QuizEngine.esc(this.p1Name) + '</span>';
+      html += '<span class="wyr-duel-choix">' + (det.p1 === 'a' ? det.q.a : det.q.b) + '</span>';
       html += '</div>';
 
-      // P2 choice
-      html += '<div class="p-2 rounded-lg ' + (det.p2 === 'a' ? 'bg-primary/10 border border-primary/20' : 'bg-muted') + '">';
-      html += '<p class="font-medium text-xs text-muted-foreground mb-1">' + QuizEngine.esc(this.p2Name) + '</p>';
-      html += '<p class="text-foreground">' + (det.p2 === 'a' ? det.q.a : det.q.b) + '</p>';
+      html += '<div class="wyr-duel-cote wyr-duel-cote--' + ton + '">';
+      html += '<span class="wyr-duel-nom">' + QuizEngine.esc(this.p2Name) + '</span>';
+      html += '<span class="wyr-duel-choix">' + (det.p2 === 'a' ? det.q.a : det.q.b) + '</span>';
       html += '</div>';
 
       html += '</div></details>';
     }
     html += '</div>';
 
-    // Retake
-    html += '<div class="text-center">';
-    html += '<button type="button" class="btn btn-outline" id="wyr-retake">' + UI.retake + '</button>';
-    html += '</div>';
-
+    html += '<button type="button" class="wyr-relance" id="wyr-retake">' + UI.retake + '</button>';
     html += '</div>';
     this.container.innerHTML = html;
 
@@ -689,135 +667,97 @@
 </script>
 
 <style>
-.wyr-options {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  position: relative;
+/* ══ Habillage du jeu « tu préfères » ═══════════════════════════════════════
+   Cette feuille écrivait var(--border), var(--card) et var(--foreground),
+   alors que ces variables ne contiennent que des composantes HSL
+   (« 280 20% 88% »). Le navigateur ignorait donc ces déclarations : le
+   moteur s'affichait sans bordures, sur des cartes de verre héritées de
+   l'ancienne direction artistique. Tout passe ici par hsl(var(--x)) et par
+   la grammaire de la charte : bordure épaisse, ombre dure sans flou,
+   éléments légèrement de travers, macaron qui déborde du cadre. */
+.wyr-jeu {
+  --ink: 268 45% 27%;
+  --wyr-ok: 158 58% 38%;
+  --wyr-non: 12 76% 55%;
 }
-.wyr-option {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  text-align: left;
-  padding: 1.25rem 1.5rem;
-  border: 2px solid var(--border);
-  background: var(--card);
-  cursor: pointer;
-  transition: all 0.25s ease;
-  color: var(--foreground);
-}
-.wyr-option-a {
-  border-radius: 0.75rem 0.75rem 0 0;
-  border-bottom: 1px solid var(--border);
-}
-.wyr-option-b {
-  border-radius: 0 0 0.75rem 0.75rem;
-  border-top: 1px solid var(--border);
-}
-.wyr-option:hover {
-  border-color: var(--primary);
-  background: hsl(340 65% 65% / 0.05);
-  transform: scale(1.01);
-}
-.wyr-option-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
-  background: var(--muted);
-  font-weight: 700;
-  font-size: 0.875rem;
-  color: var(--muted-foreground);
-  flex-shrink: 0;
-  transition: all 0.25s ease;
-}
-.wyr-option:hover .wyr-option-label {
-  background: var(--primary);
-  color: white;
-}
-.wyr-option-text {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-.wyr-vs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  height: 0;
-  z-index: 2;
-}
-.wyr-vs span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background: var(--primary);
-  color: white;
-  font-weight: 800;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  box-shadow: 0 2px 8px hsl(340 65% 65% / 0.3);
-}
-.wyr-selected {
-  border-color: var(--primary) !important;
-  background: hsl(340 65% 65% / 0.1) !important;
-  transform: scale(1.02);
-}
-.wyr-selected .wyr-option-label {
-  background: var(--primary);
-  color: white;
-}
-.wyr-not-selected {
-  opacity: 0.4;
-  transform: scale(0.98);
-}
-@media (min-width: 640px) {
-  .wyr-options {
-    flex-direction: row;
-    gap: 0;
-  }
-  .wyr-option {
-    flex: 1;
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1.5rem;
-    min-height: 140px;
-    justify-content: center;
-  }
-  .wyr-option-a {
-    border-radius: 0.75rem 0 0 0.75rem;
-    border-bottom: 2px solid var(--border);
-    border-right: 1px solid var(--border);
-  }
-  .wyr-option-b {
-    border-radius: 0 0.75rem 0.75rem 0;
-    border-top: 2px solid var(--border);
-    border-left: 1px solid var(--border);
-  }
-  .wyr-vs {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-    height: auto;
-  }
-}
-.animate-fade-in {
-  animation: fadeIn 0.3s ease-out;
+.dark .wyr-jeu {
+  --ink: 270 30% 62%;
+  --wyr-ok: 158 52% 52%;
+  --wyr-non: 12 78% 62%;
 }
 
-/* ── Choix de la longueur de partie ────────────────────────────────────────
-   Trente dilemmes joués à deux, c'est soixante réponses : la page recevait
-   180 clics pour 13 parties terminées. La partie courte est proposée d'abord
-   et sélectionnée par défaut, la longue reste à un clic pour qui la veut. */
+/* ── Le cadre commun aux quatre écrans ───────────────────────────────────── */
+.wyr-carte {
+  position: relative;
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 2.4rem 1.15rem 1.6rem;
+  border-radius: 1.8rem;
+  border: 3px solid hsl(var(--ink));
+  background: hsl(var(--card));
+  box-shadow: 7px 8px 0 hsl(var(--ink));
+  text-align: center;
+  animation: wyrEntree 320ms cubic-bezier(.34, 1.42, .64, 1) both;
+}
+.wyr-carte--depart, .wyr-carte--reveal { transform: rotate(-0.7deg); }
+.wyr-carte--question { transform: rotate(0.4deg); }
+.wyr-carte--resultat { transform: rotate(-0.4deg); }
+
+@keyframes wyrEntree {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+}
+
+/* Le macaron déborde du cadre : c'est lui qui casse le rectangle et fait
+   lire l'écran comme un objet posé sur la page. */
+.wyr-macaron {
+  position: absolute; top: -1.4rem; left: -0.9rem;
+  width: 3.6rem; height: 3.6rem;
+  display: grid; place-items: center;
+  font-size: 1.7rem; line-height: 1;
+  border-radius: 999px;
+  border: 3px solid hsl(var(--ink));
+  background: linear-gradient(150deg, hsl(338 84% 64%), hsl(16 92% 60%));
+  box-shadow: 4px 4px 0 hsl(var(--ink));
+  transform: rotate(-12deg);
+}
+.wyr-macaron > span { display: block; transform: rotate(12deg); }
+.wyr-macaron--ok  { background: linear-gradient(150deg, hsl(var(--wyr-ok)), hsl(170 60% 45%)); }
+.wyr-macaron--non { background: linear-gradient(150deg, hsl(var(--wyr-non)), hsl(38 92% 58%)); }
+
+/* ── Écran de départ ─────────────────────────────────────────────────────── */
+.wyr-accroche {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 2rem; font-weight: 800; letter-spacing: 0.04em;
+  color: hsl(var(--primary));
+  margin: 0 0 0.5rem;
+}
+.wyr-intro {
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 1.5rem; font-size: 0.95rem; line-height: 1.55;
+  text-wrap: pretty;
+}
+.wyr-champs {
+  display: flex; flex-direction: column; gap: 0.7rem;
+  max-width: 20rem; margin: 0 auto 1.6rem;
+}
+.wyr-champ {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font: inherit; text-align: center;
+  border-radius: 1rem;
+  border: 2.5px solid hsl(var(--ink) / 0.8);
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+.wyr-champ::placeholder { color: hsl(var(--muted-foreground)); }
+.wyr-champ:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 4px 4px 0 hsl(var(--primary) / 0.45);
+}
+
+/* ── Choix de la longueur de partie ──────────────────────────────────────── */
 .wyr-format-titre {
   font-family: 'Poppins', 'Inter', sans-serif;
   font-weight: 700; font-size: 0.95rem;
@@ -827,23 +767,23 @@
 .wyr-formats {
   display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;
   align-items: stretch;
-  max-width: 24rem; margin: 0 auto 1.75rem;
+  max-width: 22rem; margin: 0 auto 1.7rem;
 }
 .wyr-format {
   display: flex; flex-direction: column; align-items: center;
   justify-content: center; gap: 0.15rem;
   padding: 0.9rem 0.5rem;
   border-radius: 1.1rem;
-  border: 2.5px solid hsl(var(--border));
-  background: hsl(var(--card));
+  border: 2.5px solid hsl(var(--ink) / 0.55);
+  background: hsl(var(--background));
   color: hsl(var(--foreground));
   cursor: pointer;
-  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  transition: border-color 170ms ease, box-shadow 170ms ease, transform 170ms ease;
 }
 .wyr-format:hover { border-color: hsl(var(--primary)); }
 .wyr-format--actif {
   border-color: hsl(var(--primary));
-  box-shadow: 4px 4px 0 hsl(340 65% 65% / 0.55);
+  box-shadow: 4px 4px 0 hsl(var(--primary) / 0.55);
   transform: translate(-1px, -1px);
 }
 .wyr-format:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 2px; }
@@ -851,29 +791,281 @@
   font-family: 'Poppins', 'Inter', sans-serif;
   font-size: 1.6rem; font-weight: 800; line-height: 1;
   color: hsl(var(--muted-foreground));
-  transition: color 180ms ease;
+  transition: color 170ms ease;
 }
 .wyr-format--actif .wyr-format-nb { color: hsl(var(--primary)); }
 .wyr-format-nom { font-weight: 700; font-size: 0.86rem; line-height: 1.25; text-wrap: balance; }
 .wyr-format-sub { font-size: 0.72rem; line-height: 1.3; color: hsl(var(--muted-foreground)); }
 
-/* ── Prolongation, sur l'écran de résultat ─────────────────────────────────
-   Encadré volontairement de travers et posé sur une ombre dure : c'est le
-   seul bloc de cet écran qui doit accrocher l'œil après le score. */
+/* ── Bouton d'action, commun aux écrans ──────────────────────────────────── */
+.wyr-cta, .wyr-relance {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 100%; max-width: 20rem;
+  padding: 0.9rem 1.6rem;
+  font: inherit; font-weight: 800;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  border-radius: 1rem;
+  border: 3px solid hsl(var(--ink));
+  box-shadow: 5px 5px 0 hsl(var(--ink));
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+.wyr-cta {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: hsl(var(--primary-foreground));
+}
+.wyr-relance {
+  margin-top: 0.4rem;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+.wyr-cta:hover, .wyr-relance:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 hsl(var(--ink)); }
+.wyr-cta:active, .wyr-relance:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 hsl(var(--ink)); }
+.wyr-cta:focus-visible, .wyr-relance:focus-visible { outline: 3px solid hsl(var(--ink)); outline-offset: 3px; }
+
+/* ── Écran de question ───────────────────────────────────────────────────── */
+.wyr-entete {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 0.75rem; margin-bottom: 0.5rem;
+}
+.wyr-joueur {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 800; font-size: 0.95rem;
+  color: hsl(var(--primary));
+}
+.wyr-compteur {
+  font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+.wyr-barre {
+  height: 0.55rem;
+  border-radius: 999px;
+  border: 2px solid hsl(var(--ink));
+  background: hsl(var(--muted));
+  overflow: hidden;
+  margin-bottom: 1.7rem;
+}
+.wyr-barre > span {
+  display: block; height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
+  transition: width 420ms ease;
+}
+.wyr-question {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.15rem; font-weight: 700; line-height: 1.4;
+  color: hsl(var(--foreground));
+  margin: 0 0 2rem;
+  text-wrap: balance;
+}
+
+/* Les deux options forment un duel : elles se touchent, et le médaillon
+   « OU » les chevauche au point de contact. */
+/* L'ombre est portée par le duel entier, pas par chaque option : les deux
+   cartes se touchent, deux ombres séparées les auraient décollées l'une de
+   l'autre et cassé la lecture du duel. */
+.wyr-options {
+  display: flex; flex-direction: column; gap: 0;
+  position: relative;
+  border-radius: 1.3rem;
+  box-shadow: 6px 7px 0 hsl(var(--ink));
+}
+.wyr-option {
+  display: flex; align-items: center; gap: 0.9rem;
+  width: 100%;
+  text-align: left;
+  padding: 1.15rem 1.2rem;
+  border: 3px solid hsl(var(--ink));
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, opacity 180ms ease;
+}
+.wyr-option--a { border-radius: 1.3rem 1.3rem 0 0; border-bottom-width: 1.5px; }
+.wyr-option--b { border-radius: 0 0 1.3rem 1.3rem; border-top-width: 1.5px; }
+.wyr-option:hover { background: hsl(var(--primary) / 0.08); }
+.wyr-option:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 3px; }
+.wyr-option-lettre {
+  display: grid; place-items: center;
+  width: 2.3rem; height: 2.3rem; flex-shrink: 0;
+  border-radius: 999px;
+  border: 2.5px solid hsl(var(--ink));
+  background: hsl(var(--card));
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 800; font-size: 0.9rem;
+  color: hsl(var(--muted-foreground));
+  transition: background 180ms ease, color 180ms ease;
+}
+.wyr-option:hover .wyr-option-lettre {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: hsl(var(--primary-foreground));
+}
+.wyr-option-texte { font-size: 1rem; line-height: 1.45; text-wrap: pretty; }
+
+.wyr-ou {
+  display: flex; align-items: center; justify-content: center;
+  position: relative; height: 0; z-index: 2;
+  pointer-events: none;
+}
+.wyr-ou > span {
+  display: grid; place-items: center;
+  /* Le parent est en largeur nulle sur grand écran pour se poser pile sur la
+     jointure : sans flex-shrink: 0 le médaillon s'écrase en ovale. */
+  width: 2.9rem; height: 2.9rem; flex-shrink: 0;
+  border-radius: 999px;
+  border: 3px solid hsl(var(--ink));
+  background: linear-gradient(150deg, hsl(338 84% 64%), hsl(16 92% 60%));
+  box-shadow: 3px 3px 0 hsl(var(--ink));
+  color: #fff;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 800; font-size: 0.7rem; letter-spacing: 0.06em;
+  transform: rotate(-8deg);
+}
+
+.wyr-option--pris {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.16), hsl(var(--secondary) / 0.16));
+  box-shadow: 5px 5px 0 hsl(var(--primary) / 0.5);
+  transform: translate(-2px, -2px);
+}
+.wyr-option--pris .wyr-option-lettre {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: hsl(var(--primary-foreground));
+}
+.wyr-option--ecarte { opacity: 0.38; }
+
+/* ── Écran de révélation ─────────────────────────────────────────────────── */
+.wyr-carte--ok  { box-shadow: 7px 8px 0 hsl(var(--wyr-ok)); border-color: hsl(var(--wyr-ok)); }
+.wyr-carte--non { box-shadow: 7px 8px 0 hsl(var(--wyr-non)); border-color: hsl(var(--wyr-non)); }
+.wyr-carte--ok .wyr-macaron, .wyr-carte--non .wyr-macaron { border-color: hsl(var(--ink)); }
+
+.wyr-verdict {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.35rem; font-weight: 800; line-height: 1.25;
+  margin: 0 0 0.25rem;
+  color: hsl(var(--foreground));
+  text-wrap: balance;
+}
+.wyr-compteur-seul {
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 1.2rem;
+}
+.wyr-rappel {
+  font-size: 0.95rem; line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 1.3rem;
+  text-wrap: pretty;
+}
+
+.wyr-duel {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem;
+  margin-bottom: 1.4rem;
+}
+.wyr-duel-cote {
+  display: flex; flex-direction: column; gap: 0.3rem;
+  padding: 0.8rem 0.7rem;
+  border-radius: 1rem;
+  border: 2.5px solid hsl(var(--ink) / 0.4);
+  background: hsl(var(--background));
+  text-align: left;
+}
+.wyr-duel-cote--ok  { border-color: hsl(var(--wyr-ok) / 0.75); background: hsl(var(--wyr-ok) / 0.09); }
+.wyr-duel-cote--non { border-color: hsl(var(--wyr-non) / 0.6); background: hsl(var(--wyr-non) / 0.07); }
+.wyr-duel-nom {
+  font-size: 0.7rem; font-weight: 800;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+.wyr-duel-choix {
+  font-size: 0.9rem; font-weight: 600; line-height: 1.4;
+  color: hsl(var(--foreground));
+  text-wrap: pretty;
+}
+
+/* ── Écran de résultat ───────────────────────────────────────────────────── */
+.wyr-score-label {
+  font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 0.2rem;
+}
+/* Le pourcentage et son signe restent solidaires : sur un petit écran le
+   « % » partait à la ligne tout seul. */
+.wyr-score-nb {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 3.4rem; font-weight: 800; line-height: 1;
+  color: hsl(var(--primary));
+  margin: 0 0 0.3rem;
+  white-space: nowrap;
+}
+.wyr-score-pct { font-size: 0.5em; margin-left: 0.05em; }
+.wyr-score-sub {
+  font-size: 0.9rem; color: hsl(var(--muted-foreground));
+  margin: 0 0 1.2rem;
+}
+.wyr-jauge {
+  height: 0.9rem;
+  border-radius: 999px;
+  border: 2.5px solid hsl(var(--ink));
+  background: hsl(var(--muted));
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+}
+.wyr-jauge > span {
+  display: block; height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
+  transition: width 900ms ease;
+}
+
+.wyr-detail {
+  display: flex; flex-direction: column; gap: 0.6rem;
+  margin-bottom: 1.6rem; text-align: left;
+}
+.wyr-ligne {
+  border-radius: 1rem;
+  border: 2.5px solid hsl(var(--ink) / 0.35);
+  background: hsl(var(--background));
+  overflow: hidden;
+}
+.wyr-ligne--ok  { border-color: hsl(var(--wyr-ok) / 0.6); }
+.wyr-ligne--non { border-color: hsl(var(--wyr-non) / 0.5); }
+.wyr-ligne-tete {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.88rem;
+  list-style: none;
+}
+.wyr-ligne-tete::-webkit-details-marker { display: none; }
+.wyr-ligne-pastille {
+  display: grid; place-items: center;
+  width: 1.5rem; height: 1.5rem; flex-shrink: 0;
+  border-radius: 999px;
+  font-size: 0.8rem; font-weight: 800;
+  color: #fff;
+}
+.wyr-ligne--ok  .wyr-ligne-pastille { background: hsl(var(--wyr-ok)); }
+.wyr-ligne--non .wyr-ligne-pastille { background: hsl(var(--wyr-non)); }
+.wyr-ligne-texte { flex: 1; font-weight: 600; color: hsl(var(--foreground)); line-height: 1.4; }
+.wyr-duel--compact { padding: 0 0.8rem 0.8rem; margin-bottom: 0; gap: 0.5rem; }
+.wyr-duel--compact .wyr-duel-cote { padding: 0.6rem; }
+
+/* ── Prolongation, sur l'écran de résultat ───────────────────────────────── */
 .wyr-palier {
-  --ink: 268 45% 27%;
   position: relative;
   max-width: 26rem;
-  margin: 0 auto 2rem;
-  padding: 2rem 1.4rem 1.5rem;
-  border-radius: 1.6rem;
+  margin: 0 auto 1.8rem;
+  padding: 2rem 1.3rem 1.4rem;
+  border-radius: 1.5rem;
   border: 3px solid hsl(var(--ink));
   background: hsl(var(--card));
-  box-shadow: 7px 8px 0 hsl(var(--ink));
+  box-shadow: 6px 7px 0 hsl(var(--ink));
   text-align: center;
-  transform: rotate(-1deg);
+  transform: rotate(1deg);
 }
-.dark .wyr-palier { --ink: 270 30% 62%; }
 .wyr-palier-macaron {
   position: absolute; top: -1.3rem; left: -0.8rem;
   width: 3.2rem; height: 3.2rem;
@@ -888,32 +1080,59 @@
 .wyr-palier-macaron > span { display: block; transform: rotate(12deg); }
 .wyr-palier-titre {
   font-family: 'Poppins', 'Inter', sans-serif;
-  font-size: 1.2rem; font-weight: 800; line-height: 1.3;
+  font-size: 1.15rem; font-weight: 800; line-height: 1.3;
   margin: 0 0 0.5rem;
+  color: hsl(var(--foreground));
   text-wrap: balance;
 }
 .wyr-palier-texte {
-  font-size: 0.88rem; line-height: 1.55;
+  font-size: 0.87rem; line-height: 1.55;
   color: hsl(var(--muted-foreground));
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.2rem;
   text-wrap: pretty;
 }
 .wyr-palier-btn {
-  width: 100%; justify-content: center;
-  border: 3px solid hsl(var(--ink)) !important;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 100%;
+  padding: 0.85rem 1.4rem;
+  font: inherit; font-weight: 800;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  border-radius: 1rem;
+  border: 3px solid hsl(var(--ink));
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: hsl(var(--primary-foreground));
   box-shadow: 4px 4px 0 hsl(var(--ink));
+  cursor: pointer;
   transition: transform 140ms ease, box-shadow 140ms ease;
 }
 .wyr-palier-btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 hsl(var(--ink)); }
 .wyr-palier-btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 hsl(var(--ink)); }
+.wyr-palier-btn:focus-visible { outline: 3px solid hsl(var(--ink)); outline-offset: 3px; }
 
-@media (min-width: 480px) {
-  .wyr-palier { padding: 2.3rem 2rem 1.7rem; }
-  .wyr-palier-titre { font-size: 1.35rem; }
-  .wyr-palier-btn { width: auto; min-width: 15rem; }
+/* ── À partir de 640 px : le duel passe côte à côte ──────────────────────── */
+@media (min-width: 640px) {
+  .wyr-carte { padding: 2.8rem 2rem 1.9rem; }
+  .wyr-macaron { width: 4.2rem; height: 4.2rem; font-size: 2rem; top: -1.7rem; left: -1.2rem; }
+  .wyr-accroche { font-size: 2.4rem; }
+  .wyr-question { font-size: 1.35rem; }
+  .wyr-verdict { font-size: 1.5rem; }
+  .wyr-score-nb { font-size: 4rem; }
+  .wyr-cta, .wyr-relance { width: auto; min-width: 16rem; }
+
+  .wyr-options { flex-direction: row; }
+  .wyr-option {
+    flex: 1; flex-direction: column; justify-content: center;
+    text-align: center; gap: 0.8rem;
+    padding: 1.9rem 1.3rem; min-height: 10rem;
+  }
+  .wyr-option--a { border-radius: 1.3rem 0 0 1.3rem; border-bottom-width: 3px; border-right-width: 1.5px; }
+  .wyr-option--b { border-radius: 0 1.3rem 1.3rem 0; border-top-width: 3px; border-left-width: 1.5px; }
+  .wyr-ou { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 0; height: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .wyr-format, .wyr-palier-btn { transition: none; }
+  .wyr-carte { animation: none; }
+  .wyr-option, .wyr-format, .wyr-cta, .wyr-relance, .wyr-palier-btn,
+  .wyr-barre > span, .wyr-jauge > span { transition: none; }
 }
 </style>
