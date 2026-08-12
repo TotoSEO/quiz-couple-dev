@@ -142,8 +142,8 @@
     "shareText": "¡He resistido un {{pct}}% en La isla de las tentaciones! 🏝️🔥"
   },
   "question": {
-    "chooseAnswer": "¡elige tu respuesta!",
     "itsTurnOf": "Es el turno de",
+    "turnToAnswer": "¡Le toca responder a {{name}}!",
     "dontLookAnswer": "¡no miréis la respuesta!",
     "passPhoneOrLookAway": "Pasad el teléfono o mirad hacia otro lado",
     "turnOfToGuess": "Es hora de adivinar:",
@@ -328,7 +328,6 @@
     "testPervers": "Test narcisista",
     "testAmourHabitude": "test amor o costumbre",
     "testEmmenager": "Test Convivencia",
-    "testBebe": "Test Bebé",
     "testKarmique": "Test relación kármica",
     "testInfidelite": "Test Infidelidad",
     "testLangageAmour": "test de los lenguajes del amor",
@@ -464,9 +463,7 @@
     "manche": "Ronda {{n}} / {{total}}",
     "amorce": "¿Quién de los dos…",
     "voteSecret": "{{nom}} vota en secreto",
-    "passeTitre": "Pasa el móvil a {{nom}}",
     "passeDesc": "Nada de trampas: el voto queda oculto hasta la revelación.",
-    "passeCta": "¡Me toca!",
     "decompte": "Revelación en…",
     "aDit": "{{nom}} dijo",
     "accordTitre": "¡De acuerdo!",

@@ -142,8 +142,8 @@
     "shareText": "I resisted {{pct}}% on Temptation Island! 🏝️🔥"
   },
   "question": {
-    "chooseAnswer": "choose your answer!",
     "itsTurnOf": "It's",
+    "turnToAnswer": "{{name}}'s turn to answer!",
     "dontLookAnswer": "don't look at the answer!",
     "passPhoneOrLookAway": "Pass the phone or look away",
     "turnOfToGuess": "It's time to guess:",
@@ -328,7 +328,6 @@
     "testPervers": "Narcissist Test",
     "testAmourHabitude": "Love or Habit test",
     "testEmmenager": "Moving In Test",
-    "testBebe": "Baby Ready Test",
     "testKarmique": "Karmic relationship test",
     "testInfidelite": "Infidelity Test",
     "testLangageAmour": "Love Languages test",
@@ -464,9 +463,7 @@
     "manche": "Round {{n}} / {{total}}",
     "amorce": "Which one of you…",
     "voteSecret": "{{nom}} votes in secret",
-    "passeTitre": "Pass the phone to {{nom}}",
     "passeDesc": "No peeking: the vote stays hidden until the reveal.",
-    "passeCta": "That's me!",
     "decompte": "Revealing in…",
     "aDit": "{{nom}} said",
     "accordTitre": "Match!",
