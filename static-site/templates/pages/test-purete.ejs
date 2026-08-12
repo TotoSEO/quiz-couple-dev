@@ -10,23 +10,77 @@
   var titreHero = T('hero.titre', 'Test de pureté');
   var accentHero = T('hero.titreAccent', 'spécial couple');
 
+  // Les liens contextuels sont écrits dans le contenu sous forme de jetons
+  // {{routeKey}}, résolus ici. Les slugs restent ainsi au même endroit que
+  // partout ailleurs, et un lien vers une page retirée devient inoffensif :
+  // l'ancre reste, l'attribut href disparaît.
+  function liens(html) {
+    if (!html) return '';
+    return String(html).replace(/\{\{(\w+)\}\}/g, function (_, cle) {
+      return getLocalizedUrl(cle, lang) || '#';
+    });
+  }
+
   // ── Sections ──
+  // Une section peut porter, en plus de ses paragraphes : un chapô, une
+  // rangée de chiffres, un tableau, un comparatif à deux colonnes, des
+  // listes et un encart. Un mur de paragraphes ne se lit pas.
   var sections = [];
   for (var si = 1; si <= 5; si++) {
     var base = 'sections.s' + si + '.';
     var st = T(base + 'titre');
     if (!st) continue;
     var paras = [];
-    for (var pi = 1; pi <= 3; pi++) { var pv = T(base + 'p' + pi); if (pv) paras.push(pv); }
+    for (var pi = 1; pi <= 3; pi++) { var pv = T(base + 'p' + pi); if (pv) paras.push(liens(pv)); }
     var sous = [];
     for (var bi = 1; bi <= 2; bi++) {
       var bt = T(base + 'sub' + bi + 'Titre');
       if (!bt) continue;
+      var bl = t(ns + ':' + base + 'liste' + bi, null);
       var bp = [];
-      for (var bj = 1; bj <= 2; bj++) { var bv = T(base + 'sub' + bi + 'P' + bj); if (bv) bp.push(bv); }
-      sous.push({ titre: bt, paras: bp });
+      for (var bj = 1; bj <= 2; bj++) { var bv = T(base + 'sub' + bi + 'P' + bj); if (bv) bp.push(liens(bv)); }
+      sous.push({ titre: bt, liste: Array.isArray(bl) ? bl.map(liens) : [], paras: bp });
     }
-    sections.push({ titre: st, paras: paras, sous: sous });
+    sections.push({
+      titre: st,
+      lead: liens(T(base + 'lead')),
+      citation: T(base + 'citation'),
+      paras: paras,
+      sous: sous,
+      chiffres: t(ns + ':' + base + 'chiffres', null),
+      tableau: t(ns + ':' + base + 'tableau', null),
+      comparatif: t(ns + ':' + base + 'comparatif', null),
+      encart: t(ns + ':' + base + 'encart', null)
+    });
+  }
+
+  // Une sous-section rend sa liste si elle en a une, ses paragraphes sinon.
+  // Sans ce choix, un titre sans liste posait un <ul> vide dans la page.
+  function rendSous(b) {
+    if (!b) return '';
+    var out = '<h3 class="pu-h3">' + escapeHtml(b.titre) + '</h3>';
+    if (b.liste && b.liste.length) {
+      out += '<ul class="pu-liste">' + b.liste.map(function (li) { return '<li>' + li + '</li>'; }).join('') + '</ul>';
+    }
+    (b.paras || []).forEach(function (p) { out += '<p class="pu-p">' + p + '</p>'; });
+    return out;
+  }
+
+  // ── Maillage interne, en dur dans le HTML ──
+  // Les suggestions de fin de partie sont posées par le moteur : elles
+  // n'existent pas pour un robot, qui ne trouvait donc aucun lien sortant
+  // sur cette page en dehors de l'en-tête et du pied de page.
+  var suiteBloc = t(ns + ':suite', null);
+  var suiteLiens = [];
+  if (suiteBloc && Array.isArray(suiteBloc.liens)) {
+    suiteBloc.liens.forEach(function (item) {
+      var url = getLocalizedUrl(item.cle, lang);
+      if (!url) return;
+      suiteLiens.push({
+        url: url, emoji: item.emoji, texte: item.texte,
+        nom: t('quizzes:' + item.cle + '.shortTitle', t('quizzes:' + item.cle + '.title', item.cle))
+      });
+    });
   }
 
 
@@ -143,14 +197,72 @@
 <!-- ══ Contenu ═══════════════════════════════════════════════════════════ -->
 <article class="pu-section pu-article">
   <div class="pu-largeur">
-    <% sections.forEach(function (s) { %>
+    <% sections.forEach(function (s, idx) { %>
     <section class="pu-bloc-texte">
       <h2 class="pu-h2"><%= s.titre %></h2>
-      <% s.paras.forEach(function (p) { %><p class="pu-p"><%- p %></p><% }); %>
-      <% s.sous.forEach(function (b) { %>
-      <h3 class="pu-h3"><%= b.titre %></h3>
-      <% b.paras.forEach(function (p) { %><p class="pu-p"><%- p %></p><% }); %>
-      <% }); %>
+
+      <% if (s.lead) { %><p class="pu-lead"><%- s.lead %></p><% } %>
+      <% if (s.citation) { %>
+      <blockquote class="pu-citation"><p><%- s.citation %></p></blockquote>
+      <% } %>
+
+      <% if (s.paras[0]) { %><p class="pu-p"><%- s.paras[0] %></p><% } %>
+
+      <% if (s.chiffres) { %>
+      <div class="pu-chiffres">
+        <% s.chiffres.forEach(function (c) { %>
+        <div class="pu-chiffre">
+          <span class="pu-chiffre-val"><%= c.val %></span>
+          <span class="pu-chiffre-lib"><%= c.lib %></span>
+        </div>
+        <% }); %>
+      </div>
+      <% } %>
+
+      <% if (s.tableau) { %>
+      <figure class="pu-tableau-boite">
+        <figcaption class="pu-tableau-titre"><%= s.tableau.titre %></figcaption>
+        <div class="pu-tableau-defile">
+          <table class="pu-tableau">
+            <thead><tr><% s.tableau.entete.forEach(function (h) { %><th><%= h %></th><% }); %></tr></thead>
+            <tbody>
+              <% s.tableau.lignes.forEach(function (l) { %>
+              <tr><% l.forEach(function (c, i) { %><td<%= i ? ' class="pu-tableau-pts"' : '' %>><%= c %></td><% }); %></tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+        <% if (s.tableau.note) { %><p class="pu-tableau-note"><%= s.tableau.note %></p><% } %>
+      </figure>
+      <% } %>
+
+      <% if (s.comparatif) { %>
+      <div class="pu-comparatif">
+        <% s.comparatif.forEach(function (c) { %>
+        <div class="pu-comparatif-carte">
+          <span class="pu-comparatif-emoji" aria-hidden="true"><%= c.emoji %></span>
+          <h3 class="pu-comparatif-titre"><%= c.titre %></h3>
+          <p class="pu-comparatif-texte"><%- c.texte %></p>
+        </div>
+        <% }); %>
+      </div>
+      <% } %>
+
+      <%# Ordre fixe et lisible : le reste des paragraphes, puis les
+          sous-sections, chacune avec sa liste et son commentaire. L'ancien
+          entrelacement plaçait un titre de niveau trois au milieu d'une idée. %>
+      <% s.paras.slice(1).forEach(function (p) { %><p class="pu-p"><%- p %></p><% }); %>
+      <% s.sous.forEach(function (b) { %><%- rendSous(b) %><% }); %>
+
+      <% if (s.encart) { %>
+      <aside class="pu-encart">
+        <span class="pu-encart-puce" aria-hidden="true">💡</span>
+        <div>
+          <p class="pu-encart-titre"><%= s.encart.titre %></p>
+          <p class="pu-encart-texte"><%- s.encart.texte %></p>
+        </div>
+      </aside>
+      <% } %>
     </section>
     <% }); %>
 
@@ -163,6 +275,22 @@
           <summary class="pu-faq-q"><%= f.q %></summary>
           <div class="pu-faq-a"><%- f.a %></div>
         </details>
+        <% }); %>
+      </div>
+    </section>
+    <% } %>
+
+    <% if (suiteLiens.length) { %>
+    <section class="pu-bloc-texte pu-suite-seo">
+      <h2 class="pu-h2"><%= suiteBloc.titre %></h2>
+      <p class="pu-p"><%= suiteBloc.sous %></p>
+      <div class="pu-suite-grille">
+        <% suiteLiens.forEach(function (l) { %>
+        <a class="pu-suite-carte no-underline" href="<%= l.url %>">
+          <span class="pu-suite-carte-emoji" aria-hidden="true"><%= l.emoji %></span>
+          <span class="pu-suite-carte-nom"><%= l.nom %></span>
+          <span class="pu-suite-carte-texte"><%= l.texte %></span>
+        </a>
         <% }); %>
       </div>
     </section>
@@ -308,23 +436,64 @@
 .pu-lien:hover { color: hsl(var(--primary)); }
 
 /* ── Choix du mode et de l'âge ──────────────────────────────────────────── */
-.pu-modes { display: grid; gap: .85rem; }
+/* Les deux cartes de mode ne se lisaient pas comme des boutons : bordure
+   fine, fond identique à la carte parente, et un survol qui n'existe pas au
+   doigt. Elles ont maintenant un liseré coloré, une ombre portée, un
+   chevron et une mention d'action, plus un état pressé bien marqué. */
+.pu-modes { display: grid; gap: .9rem; }
 .pu-mode {
-  display: flex; flex-direction: column; gap: .3rem;
-  padding: 1.15rem 1.1rem; text-align: left;
-  border-radius: 1.15rem; border: 2px solid hsl(var(--border));
-  background: hsl(var(--background)); color: hsl(var(--foreground));
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; gap: .35rem;
+  padding: 1.25rem 1.15rem 1.25rem 1.3rem; text-align: left;
+  border-radius: 1.15rem;
+  border: 2px solid hsl(var(--primary) / .35);
+  background:
+    linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+    linear-gradient(140deg, hsl(338 72% 62% / .5), hsl(265 60% 56% / .5)) border-box;
+  color: hsl(var(--foreground));
   cursor: pointer; font: inherit;
-  transition: border-color 170ms ease, transform 170ms ease, box-shadow 170ms ease;
+  box-shadow: 0 6px 18px hsl(338 72% 40% / .12);
+  transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
 }
-.pu-mode:hover {
-  border-color: hsl(var(--primary)); transform: translateY(-2px);
-  box-shadow: 0 10px 26px hsl(338 72% 50% / .18);
+/* Liseré vertical : la première chose que l'œil accroche sur la carte. */
+.pu-mode::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
+  background: linear-gradient(hsl(338 72% 62%), hsl(265 60% 56%));
 }
-.pu-mode:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 2px; }
-.pu-mode-emoji { font-size: 1.6rem; line-height: 1; }
-.pu-mode-nom { font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: 1.02rem; }
+/* Chevron toujours visible, y compris au doigt où il n'y a pas de survol. */
+.pu-mode::after {
+  content: '›';
+  position: absolute; right: 1.05rem; bottom: 1.05rem;
+  display: grid; place-items: center;
+  width: 1.75rem; height: 1.75rem; border-radius: 999px;
+  background: linear-gradient(135deg, hsl(338 72% 62%), hsl(18 88% 58%));
+  color: #fff; font-size: 1.15rem; font-weight: 800; line-height: 0;
+  padding-bottom: .18em;
+  box-shadow: 0 4px 12px hsl(338 72% 50% / .4);
+  transition: transform 170ms ease;
+}
+.pu-mode:hover { transform: translateY(-3px); box-shadow: 0 14px 30px hsl(338 72% 40% / .24); }
+.pu-mode:hover::after { transform: translateX(3px); }
+.pu-mode:active { transform: translateY(0); box-shadow: 0 4px 12px hsl(338 72% 40% / .18); }
+.pu-mode:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 3px; }
+.pu-mode-emoji { font-size: 1.7rem; line-height: 1; }
+.pu-mode-nom { font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: 1.05rem; }
 .pu-mode-desc { font-size: .85rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+.pu-mode-action {
+  margin-top: .45rem; padding-right: 2.4rem;
+  font-size: .74rem; font-weight: 800;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: hsl(var(--primary));
+}
+
+/* Même traitement, en plus sobre, pour le portail d'âge. */
+.pu-age { position: relative; padding-right: 2.2rem; }
+.pu-age::after {
+  content: '›'; position: absolute; right: .9rem; top: 50%;
+  transform: translateY(-50%); color: hsl(var(--primary));
+  font-size: 1.3rem; font-weight: 800; line-height: 0; padding-bottom: .12em;
+}
+.pu-age:active { transform: translateY(0); }
 
 .pu-ages { display: grid; gap: .7rem; }
 .pu-age {
@@ -522,6 +691,151 @@
 .pu-faq-item[open] .pu-faq-q::after { content: '−'; }
 .pu-faq-a { padding: 0 1.1rem 1.05rem; font-size: .93rem; line-height: 1.65; color: hsl(var(--muted-foreground)); }
 
+/* ── Blocs du contenu rédactionnel ──────────────────────────────────────── */
+/* La page était un mur de paragraphes gris. Chaque section porte désormais
+   au moins un objet qui casse la colonne : chapô, chiffres, tableau,
+   comparatif, liste ou encart. */
+.pu-lead {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.12rem; font-weight: 700; line-height: 1.55;
+  color: hsl(var(--foreground));
+  margin: 0 0 1.1rem; padding-left: 1rem;
+  border-left: 4px solid hsl(var(--primary));
+  text-wrap: pretty;
+}
+.pu-citation {
+  margin: 0 0 1.2rem; padding: 1.1rem 1.2rem;
+  border-radius: 1.1rem;
+  border: 1px solid hsl(var(--primary) / .3);
+  background: linear-gradient(135deg, hsl(338 72% 62% / .08), hsl(265 60% 56% / .08));
+}
+.pu-citation p {
+  margin: 0; font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.08rem; font-weight: 700; line-height: 1.5;
+  color: hsl(var(--foreground)); text-wrap: pretty;
+}
+
+/* Lien contextuel : souligné franc et couleur de marque, pour qu'on le voie
+   au milieu d'un paragraphe sans avoir à passer la souris dessus. */
+.pu-lien-int {
+  color: hsl(var(--primary)); font-weight: 700;
+  text-decoration: underline; text-decoration-thickness: 2px;
+  text-underline-offset: .18em;
+  text-decoration-color: hsl(var(--primary) / .4);
+  transition: text-decoration-color 150ms ease;
+}
+.pu-lien-int:hover { text-decoration-color: hsl(var(--primary)); }
+
+.pu-chiffres {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: .7rem;
+  margin: 1.4rem 0;
+}
+.pu-chiffre {
+  padding: .95rem .7rem; text-align: center;
+  border-radius: 1rem; border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+.pu-chiffre-val {
+  display: block; font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.75rem; font-weight: 800; line-height: 1;
+  background: linear-gradient(120deg, hsl(338 72% 62%), hsl(18 88% 58%));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.pu-chiffre-lib {
+  display: block; margin-top: .25rem;
+  font-size: .74rem; font-weight: 700; line-height: 1.3;
+  letter-spacing: .02em; color: hsl(var(--muted-foreground));
+}
+
+.pu-tableau-boite {
+  margin: 1.4rem 0; padding: 1.1rem;
+  border-radius: 1.2rem; border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+.pu-tableau-titre {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 800; font-size: .95rem; margin-bottom: .8rem;
+  color: hsl(var(--foreground));
+}
+.pu-tableau-defile { overflow-x: auto; }
+.pu-tableau { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.pu-tableau th {
+  text-align: left; padding: .5rem .6rem;
+  font-size: .7rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+  border-bottom: 2px solid hsl(var(--border));
+}
+.pu-tableau td {
+  padding: .7rem .6rem; line-height: 1.45;
+  border-bottom: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+.pu-tableau tr:last-child td { border-bottom: none; }
+.pu-tableau-pts {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 800; color: hsl(var(--primary)); white-space: nowrap;
+}
+.pu-tableau-note {
+  margin: .8rem 0 0; font-size: .8rem; line-height: 1.5;
+  color: hsl(var(--muted-foreground)); font-style: italic;
+}
+
+.pu-comparatif { display: grid; gap: .8rem; margin: 1.4rem 0; }
+.pu-comparatif-carte {
+  padding: 1.15rem; border-radius: 1.1rem;
+  border: 1px solid hsl(var(--border)); background: hsl(var(--card));
+}
+.pu-comparatif-emoji { font-size: 1.7rem; line-height: 1; }
+.pu-comparatif-titre {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1rem; font-weight: 800; margin: .4rem 0 .35rem;
+  color: hsl(var(--foreground));
+}
+.pu-comparatif-texte { margin: 0; font-size: .89rem; line-height: 1.6; color: hsl(var(--muted-foreground)); }
+
+.pu-liste { list-style: none; margin: 0 0 1.2rem; padding: 0; display: grid; gap: .5rem; }
+.pu-liste li {
+  padding: .65rem .85rem; border-radius: .85rem;
+  border: 1px solid hsl(var(--border)); background: hsl(var(--card));
+  font-size: .89rem; line-height: 1.5; color: hsl(var(--muted-foreground));
+}
+.pu-liste li strong { color: hsl(var(--foreground)); }
+
+.pu-encart {
+  display: flex; gap: .85rem; align-items: flex-start;
+  margin: 1.4rem 0; padding: 1.1rem 1.15rem;
+  border-radius: 1.1rem;
+  border: 1px dashed hsl(var(--primary) / .5);
+  background: hsl(var(--primary) / .05);
+}
+.pu-encart-puce { font-size: 1.25rem; line-height: 1.2; flex-shrink: 0; }
+.pu-encart-titre {
+  margin: 0 0 .3rem; font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 800; font-size: .95rem; color: hsl(var(--foreground));
+}
+.pu-encart-texte { margin: 0; font-size: .88rem; line-height: 1.6; color: hsl(var(--muted-foreground)); }
+
+/* ── Maillage de fin d'article ──────────────────────────────────────────── */
+.pu-suite-grille { display: grid; gap: .7rem; margin-top: 1.2rem; }
+.pu-suite-carte {
+  display: grid; grid-template-columns: auto 1fr; gap: .3rem .85rem;
+  padding: .95rem 1rem; border-radius: 1rem;
+  border: 1px solid hsl(var(--border)); background: hsl(var(--card));
+  color: hsl(var(--foreground)); text-decoration: none;
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+.pu-suite-carte:hover {
+  border-color: hsl(var(--primary)); transform: translateY(-2px);
+  box-shadow: 0 8px 20px hsl(338 72% 40% / .15);
+}
+.pu-suite-carte-emoji { grid-row: 1 / 3; font-size: 1.5rem; line-height: 1.2; }
+.pu-suite-carte-nom {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: .95rem;
+  color: hsl(var(--primary));
+}
+.pu-suite-carte-texte { font-size: .82rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+.pu-suite-carte:hover .pu-suite-carte-nom { text-decoration: underline; text-underline-offset: .18em; }
+
 /* ── À partir de 640 px ─────────────────────────────────────────────────── */
 @media (min-width: 640px) {
   .pu-hero { padding: 6rem 1.5rem 5rem; }
@@ -531,6 +845,10 @@
   .pu-ages { grid-template-columns: 1fr 1fr; }
   .pu-question { font-size: 1.5rem; }
   .pu-partages { grid-template-columns: repeat(4, 1fr); }
+  .pu-chiffres { grid-template-columns: repeat(4, 1fr); }
+  .pu-comparatif { grid-template-columns: 1fr 1fr; }
+  .pu-suite-grille { grid-template-columns: 1fr 1fr; }
+  .pu-lead { font-size: 1.2rem; }
   .pu-suites { grid-template-columns: 1fr 1fr; }
   .pu-partage--natif { grid-column: 1 / -1; }
   .pu-section { padding: 4rem 0; }
