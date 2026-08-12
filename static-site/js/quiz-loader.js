@@ -28,7 +28,7 @@
 
     // ── Duo with gender (2 players + gender selection, answer matching) ──
     'tester-couple':  { prefix: 'couple', engine: 'duo-match', totalQ: 20, pool: 30, needsGender: true, useScoring: true },
-    'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 200, needsGender: true },
+    'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 153, needsGender: true },
 
     // ── Love compatibility (2 players, matching = alignment % on core dimensions) ──
     'compatibilite':  { prefix: 'compatibilite', engine: 'duo-match', totalQ: 20, pool: 20, needsGender: true, resultSet: 'compat' },

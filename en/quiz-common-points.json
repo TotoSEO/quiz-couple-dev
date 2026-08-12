@@ -1,8 +1,8 @@
 {
   "hero": {
-    "badge": "200 questions • Free • No registration",
+    "badge": "153 questions • Free • No registration",
     "title": "Couple Common Points Test: Are You Really Compatible?",
-    "description": "Discover your affinities, shared tastes, and common values with this interactive test. 20 random questions from 200 for a unique experience every time!",
+    "description": "Discover your affinities, shared tastes, and common values with this interactive test. 20 random questions from 153 for a unique experience every time!",
     "duration": "5 minutes",
     "players": "2 players",
     "questions": "20 questions / session",
@@ -38,8 +38,8 @@
       ]
     },
     "s4": {
-      "title": "Couple common points test: 200 questions",
-      "p1": "Our database contains 200 carefully selected questions covering all aspects of life together. Each session, 20 questions are randomly drawn for a constantly renewed experience.",
+      "title": "Couple common points test: 153 questions",
+      "p1": "Our database contains 153 carefully selected questions covering all aspects of life together. Each session, 20 questions are randomly drawn for a constantly renewed experience.",
       "categories": [
         {
           "title": "Personality and character",
@@ -93,7 +93,7 @@
     "faq": [
       {
         "q": "How does the common points test work?",
-        "a": "Enter both your names, then take turns answering 20 random questions from 200. Each identical answer counts as a common point. At the end, discover your compatibility score!"
+        "a": "Enter both your names, then take turns answering 20 random questions from 153. Each identical answer counts as a common point. At the end, discover your compatibility score!"
       },
       {
         "q": "Do you need many common points to be compatible?",
@@ -101,7 +101,7 @@
       },
       {
         "q": "Can you retake the test with different questions?",
-        "a": "Yes! At the end of the test, you can restart with a new draw of 20 questions from the 200 available. Each session is unique."
+        "a": "Yes! At the end of the test, you can restart with a new draw of 20 questions from the 153 available. Each session is unique."
       }
     ]
   },

@@ -1,8 +1,8 @@
 {
   "hero": {
-    "badge": "200 Fragen • Kostenlos • Ohne Anmeldung",
+    "badge": "153 Fragen • Kostenlos • Ohne Anmeldung",
     "title": "Gemeinsamkeiten-Test für Paare: Seid ihr wirklich kompatibel?",
-    "description": "Entdeckt eure Affinitäten, geteilten Geschmäcker und gemeinsamen Werte mit diesem interaktiven Test. 20 zufällige Fragen aus 200 für ein einzigartiges Erlebnis jedes Mal!",
+    "description": "Entdeckt eure Affinitäten, geteilten Geschmäcker und gemeinsamen Werte mit diesem interaktiven Test. 20 zufällige Fragen aus 153 für ein einzigartiges Erlebnis jedes Mal!",
     "duration": "5 Minuten",
     "players": "2 Spieler",
     "questions": "20 Fragen / Sitzung",
@@ -38,8 +38,8 @@
       ]
     },
     "s4": {
-      "title": "Paar-Gemeinsamkeiten-Test: 200 Fragen",
-      "p1": "Unsere Datenbank enthält 200 sorgfältig ausgewählte Fragen, die alle Aspekte des Zusammenlebens abdecken.",
+      "title": "Paar-Gemeinsamkeiten-Test: 153 Fragen",
+      "p1": "Unsere Datenbank enthält 153 sorgfältig ausgewählte Fragen, die alle Aspekte des Zusammenlebens abdecken.",
       "categories": [
         {
           "title": "Persönlichkeit und Charakter",
@@ -93,7 +93,7 @@
     "faq": [
       {
         "q": "Wie funktioniert der Gemeinsamkeiten-Test?",
-        "a": "Gebt eure Namen ein, antwortet dann abwechselnd auf die 20 zufälligen Fragen aus 200. Jede identische Antwort zählt als Gemeinsamkeit. Am Ende entdeckt ihr euren Kompatibilitätswert!"
+        "a": "Gebt eure Namen ein, antwortet dann abwechselnd auf die 20 zufälligen Fragen aus 153. Jede identische Antwort zählt als Gemeinsamkeit. Am Ende entdeckt ihr euren Kompatibilitätswert!"
       },
       {
         "q": "Braucht man viele Gemeinsamkeiten, um kompatibel zu sein?",
@@ -101,7 +101,7 @@
       },
       {
         "q": "Kann man den Test mit anderen Fragen wiederholen?",
-        "a": "Ja! Am Ende des Tests könnt ihr mit einer neuen Auswahl von 20 Fragen aus den 200 verfügbaren neu beginnen."
+        "a": "Ja! Am Ende des Tests könnt ihr mit einer neuen Auswahl von 20 Fragen aus den 153 verfügbaren neu beginnen."
       }
     ]
   },
