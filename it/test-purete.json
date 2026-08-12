@@ -1,0 +1,243 @@
+{
+  "hero": {
+    "badge": "50 domande · gratis · senza registrazione",
+    "titre": "Test di purezza",
+    "titreAccent": "per coppie",
+    "accroche": "Fin dove siete arrivati davvero?",
+    "description": "Cinquanta domande, un punteggio su 899 e una risposta che non avrete per forza voglia di mostrare ai vostri genitori. Fatelo da soli, poi mandate il punteggio al partner per confrontarvi."
+  },
+  "cta": "Inizia il test",
+  "sections": {
+    "s1": {
+      "titre": "Cos'è esattamente un test di purezza?",
+      "lead": "Un lungo elenco di cose che la gente fa. Spuntate quelle che avete già fatto. Più spuntate, più il punteggio sale e meno siete « puri ».",
+      "p1": "Il formato gira nei campus americani da decenni ed è esploso sui social, perché produce esattamente quello che tutti cercano in un <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">gioco da serata</a>: un numero da confrontare. Nessuna interpretazione, nessun profilo psicologico, solo una cifra da buttare in una conversazione.",
+      "p2": "La versione che avete davanti è scritta per le coppie. Niente domande su confraternite o lezioni saltate: qui si parla di ex, di bugie, di serate finite male, di cose nascoste al partner e di cose fatte in due.",
+      "chiffres": [
+        {
+          "val": "50",
+          "lib": "domande per modalità"
+        },
+        {
+          "val": "899",
+          "lib": "punti massimi"
+        },
+        {
+          "val": "7",
+          "lib": "categorie valutate"
+        },
+        {
+          "val": "2",
+          "lib": "modalità di gioco"
+        }
+      ],
+      "sub1Titre": "Perché funziona così bene in due",
+      "sub1P1": "Perché un punteggio si confronta. Fate il test per conto vostro, mandate il risultato e la conversazione parte da sola. Nove volte su dieci il vero discorso non riguarda il punteggio, ma la domanda che ha fatto storcere il naso, e da lì si finisce presto su <a class=\"pu-lien-int\" href=\"{{questionsCouple}}\">domande che non ci si fa mai</a>."
+    },
+    "s2": {
+      "titre": "Come si calcola il punteggio",
+      "p1": "Non tutte le domande valgono lo stesso numero di punti, ed è proprio questo il punto. Un criterio piatto in cui ogni casella vale uno dà a tutti lo stesso risultato: un grosso mucchio al centro, nessuno agli estremi e una cifra che non dice niente.",
+      "tableau": {
+        "titre": "Tre risposte, tre pesi",
+        "entete": [
+          "La risposta",
+          "Quanto costa"
+        ],
+        "lignes": [
+          [
+            "Andarsene da una festa senza avvisare nessuno",
+            "8 punti"
+          ],
+          [
+            "Averlo fatto in pubblico, dove potevano vedervi",
+            "26 punti"
+          ],
+          [
+            "Aver guidato dopo aver bevuto",
+            "27 punti"
+          ]
+        ],
+        "note": "Una sciocchezza da serata e una cosa che può ammazzare qualcuno non devono pesare allo stesso modo."
+      },
+      "p2": "Ogni domanda propone inoltre da tre a cinque gradi invece di un sì o un no. « Hai mai tradito qualcuno? » non chiede la stessa risposta se si tratta di un bacio a una festa o di una doppia vita di sei mesi, e il criterio fa la differenza.",
+      "encart": {
+        "titre": "Il massimo cambia con la versione",
+        "texte": "La versione completa arriva a 899 punti in solitaria e a 927 in coppia. La versione per tutti, servita a chi dichiara meno di 16 anni, toglie le domande esplicite e ha quindi un tetto più basso. Il verdetto è calcolato come percentuale del massimo davvero giocato, altrimenti la versione corta sarebbe condannata a restare da brava gente."
+      }
+    },
+    "s3": {
+      "titre": "Da soli o in due: cosa cambia",
+      "p1": "Le due modalità non fanno le stesse domande e non valutano la stessa cosa. Scegliete prima di iniziare, non si può cambiare a metà strada.",
+      "comparatif": [
+        {
+          "emoji": "🙋",
+          "titre": "Ognuno per conto suo",
+          "texte": "Le domande riguardano te. Il tuo passato, i tuoi ex, quello che hai nascosto, quello che non hai mai raccontato. È la modalità da scegliere se vuoi mandare il tuo punteggio e sfidare qualcuno a fare altrettanto."
+        },
+        {
+          "emoji": "💞",
+          "titre": "In due, come coppia",
+          "texte": "Qui non si valutano più due persone, si valuta una storia: quello che avete fatto insieme, dove l'avete fatto e quello che vi siete nascosti. Le risposte si dicono ad alta voce, il che rende questa modalità nettamente più pericolosa."
+        }
+      ],
+      "p2": "La modalità in coppia e il <a class=\"pu-lien-int\" href=\"{{testCouple}}\">test di coppia classico</a> non si pestano i piedi: uno misura quello che avete fatto, l'altro a che punto è la relazione oggi. Farli di seguito dà due letture molto diverse della stessa coppia.",
+      "encart": {
+        "titre": "Un consiglio prima di lanciare la modalità in coppia",
+        "texte": "Alcune domande chiedono di dire ad alta voce cose che non sono mai state dette. Se l'argomento è ancora caldo tra voi, fate la modalità in solitaria ciascuno per conto proprio e confrontate solo i punteggi. La cifra basta ad avviare il discorso senza obbligare nessuno a entrare nei dettagli."
+      }
+    },
+    "s4": {
+      "titre": "Cosa guarda davvero il test",
+      "p1": "Le domande sono divise in categorie, e il risultato dettaglia il punteggio in ognuna. È spesso lì che arriva la sorpresa: uno si crede a posto perché il totale è nella media, e scopre di sfiorare il 90 % in una sola famiglia.",
+      "sub1Titre": "Le sette categorie della modalità in solitaria",
+      "liste1": [
+        "🔥 <strong>Sesso</strong> — body count, prime volte, esperienze, luoghi",
+        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Infedeltà</a></strong> — dal bacio a una festa alla doppia vita",
+        "🎭 <strong>Bugie</strong> — quello che avete aggiustato, omesso, cancellato",
+        "🍸 <strong>Alcol e affini</strong> — serate, eccessi e quello che ne consegue",
+        "👪 <strong>Famiglia</strong> — suoceri, genitori, feste subite",
+        "📱 <strong>Vita digitale</strong> — foto intime, profili segreti, messaggi al risveglio",
+        "🚨 <strong>Vietato</strong> — furti, sciocchezze, colti sul fatto"
+      ],
+      "sub1P1": "La categoria che fa più male non è quasi mai quella che ci si aspetta. Sono le bugie a far salire più punteggi, non il sesso.",
+      "sub2Titre": "Le sei categorie della modalità in coppia",
+      "liste2": [
+        "🔥 <strong>Sesso</strong> — quello che avete provato, e dove",
+        "👀 <strong>Esibizione</strong> — il rischio di essere visti, assunto o meno",
+        "💫 <strong>Libertinaggio</strong> — triangoli, scambio, relazione aperta",
+        "🍸 <strong>Sostanze</strong> — serate, effetti, il giorno dopo",
+        "🚨 <strong>Trasgressione</strong> — casinò, luoghi vietati, bugie a due",
+        "🤐 <strong>Segreti</strong> — quello che l'altro ancora non sa"
+      ],
+      "sub2P1": "È la categoria dei segreti a separare le coppie. Due coppie con esattamente lo stesso passato possono finire a cento punti di distanza, solo per quello che si sono dette."
+    },
+    "s5": {
+      "titre": "Un punteggio alto è grave?",
+      "citation": "Un punteggio alto non dice che siete brave o cattive persone. Dice che avete fatto delle cose.",
+      "p1": "Alcune sono ricordi di serata, altre sono errori, e il test non fa distinzione: conta, tutto qui. La lettura la fate voi.",
+      "p2": "Il risultato diventa interessante quando due persone lo confrontano. Trecento punti di scarto tra due partner non sono un problema di per sé, ma spesso spiegano tensioni che non si riuscivano a nominare. Al contrario, due punteggi molto vicini rassicurano più di qualsiasi <a class=\"pu-lien-int\" href=\"{{testCompatibilite}}\">test di compatibilità</a>.",
+      "encart": {
+        "titre": "E se il punteggio dell'altro fa male",
+        "texte": "Capita. Il test parla di tutto un passato, gran parte del quale si è svolta prima di voi. Quello che conta non è la cifra, è quello che la persona accetta di raccontarvi dietro."
+      }
+    }
+  },
+  "faq": {
+    "titre": "Le domande che ci fanno",
+    "q1": "Il test di purezza è gratuito?",
+    "a1": "Sì, del tutto. Nessun account da creare, nessuna email da lasciare, nessuna versione a pagamento che sblocchi il vero risultato. Rispondete, avete il punteggio, finito.",
+    "q2": "Le mie risposte vengono salvate da qualche parte?",
+    "a2": "No. Nessuna risposta singola viene conservata. Viene registrato solo il punteggio finale, senza nulla che permetta di risalire a voi, e serve unicamente a calcolare la media e la curva mostrate sulla pagina.",
+    "q3": "Quanto tempo ci vuole?",
+    "a3": "Dai cinque ai sette minuti per le cinquanta domande in solitaria. In coppia è più lungo, perché vi fermerete a parlare almeno tre volte, e un po' è proprio quello lo scopo.",
+    "q4": "Qual è un buon punteggio?",
+    "a4": "Non esiste. La maggior parte si colloca tra il 25 e il 40 % del massimo, quindi un risultato intorno ai 250-350 punti. Sotto siete molto a posto, sopra avete dei precedenti, ma nessuno dei due è meglio dell'altro.",
+    "q5": "Si può giocare in più di due?",
+    "a5": "La modalità in coppia è pensata per due. Niente impedisce però a un gruppo intero di fare la modalità in solitaria ciascuno per conto proprio e confrontare i punteggi dopo: è anzi l'uso migliore del test quando siete in tanti.",
+    "q6": "Da che età?",
+    "a6": "Il test chiede la vostra età prima di iniziare. Sotto i 16 anni viene servita una versione per tutti: toglie le domande sul sesso esplicito e sulle droghe e tiene tutto quello che riguarda le bugie, la famiglia, le serate e i segreti."
+  },
+  "suite": {
+    "titre": "Da fare subito dopo",
+    "sous": "Il punteggio è arrivato, la serata non è finita.",
+    "liens": [
+      {
+        "cle": "quizCoquin",
+        "emoji": "🔥",
+        "texte": "Trenta domande per vedere se i vostri desideri coincidono."
+      },
+      {
+        "cle": "testCouple",
+        "emoji": "💕",
+        "texte": "Venti domande in due sullo stato reale della vostra relazione."
+      },
+      {
+        "cle": "jeuActionVerite",
+        "emoji": "🎲",
+        "texte": "Penitenze e verità, quando c'è gente."
+      },
+      {
+        "cle": "testInfidelite",
+        "emoji": "💔",
+        "texte": "I segnali che tornano più spesso, valutati."
+      },
+      {
+        "cle": "quizTuPreferes",
+        "emoji": "🤔",
+        "texte": "Cento dilemmi impossibili, quindici o trenta a partita."
+      },
+      {
+        "cle": "testCompatibilite",
+        "emoji": "💘",
+        "texte": "I vostri valori e i vostri progetti, confrontati domanda per domanda."
+      }
+    ]
+  },
+  "moteur": {
+    "noscript": "Questo test ha bisogno di JavaScript per funzionare. Attivatelo e ricaricate la pagina.",
+    "etape1": "Passo 1 di 2",
+    "etape2": "Passo 2 di 2",
+    "modes_titre": "Scegliete la modalità del test di purezza: in coppia o da soli?",
+    "modes_sous": "50 domande in entrambi i casi. La modalità cambia cosa viene valutato.",
+    "mode_action": "Scegli questa modalità",
+    "mode_solo_nom": "Ognuno per conto suo",
+    "mode_solo_desc": "Su di te: il tuo passato, i tuoi scheletri.",
+    "mode_couple_nom": "In due, come coppia",
+    "mode_couple_desc": "Su voi due: quello che avete fatto insieme.",
+    "age_titre_solo": "Hai più di 16 anni?",
+    "age_titre_couple": "Avete più di 16 anni?",
+    "age_sous": "La risposta cambia solo le domande poste. La versione per tutti toglie tutto quello che riguarda il sesso esplicito e le droghe, e tiene le bugie, la famiglia, le serate e i segreti.",
+    "age_oui": "Sì, 16 anni o più",
+    "age_oui_sous": "Versione completa, senza filtri",
+    "age_non": "No, meno di 16 anni",
+    "age_non_sous": "Versione per tutti",
+    "chargement": "Stiamo preparando le domande…",
+    "calcul": "Stiamo calcolando il punteggio…",
+    "erreur_sous": "Controllate la connessione e riprovate.",
+    "reessayer": "Riprova",
+    "precedente": "Torna alla domanda precedente",
+    "quitter": "Uscire dal test? Le risposte andranno perse.",
+    "refaire": "Rifai il test",
+    "score_solo": "Il tuo punteggio: <strong>{score}</strong> punti",
+    "score_couple": "Il vostro punteggio: <strong>{score}</strong> punti",
+    "resultat_max_solo": "Il massimo di questa versione è {max} punti. Più il punteggio è alto, meno sei puro.",
+    "resultat_max_couple": "Il massimo di questa versione è {max} punti. Più il punteggio è alto, meno siete puri.",
+    "courbe_titre_solo": "Dove ti collochi",
+    "courbe_titre_couple": "Dove vi collocate",
+    "courbe_sous_solo": "Su <strong>{n}</strong> test, sei meno puro del <strong>{devant}%</strong> delle persone. La media è a <strong>{moyenne}</strong> punti.",
+    "courbe_sous_couple": "Su <strong>{n}</strong> test, siete meno puri del <strong>{devant}%</strong> delle persone. La media è a <strong>{moyenne}</strong> punti.",
+    "courbe_aria": "Distribuzione dei punteggi, il vostro è al {pct} per cento del massimo",
+    "categories_titre": "Il dettaglio, categoria per categoria",
+    "categories_sous_solo": "È qui che si vede cosa ti frega davvero. Una barra piena è un ambito in cui hai spuntato tutto.",
+    "categories_sous_couple": "È qui che si vede cosa vi frega davvero. Una barra piena è un ambito in cui avete spuntato tutto.",
+    "partage_titre_solo": "Manda il tuo punteggio a qualcuno",
+    "partage_titre_couple": "Mandate il vostro punteggio a qualcuno",
+    "partage_sous_solo": "Il bello è confrontarsi. Manda questo al partner o agli amici e aspetta il loro punteggio.",
+    "partage_sous_couple": "Mandate il punteggio della vostra coppia agli amici e sfidateli a fare meglio. O peggio.",
+    "partage_msg_solo": "Ho fatto {score} punti al test di purezza ({pct}% di impurità). Tocca a te: ",
+    "partage_msg_couple": "Abbiamo fatto {score} punti al test di purezza di coppia ({pct}% di impurità). Tocca a voi: ",
+    "partage_sujet": "Test di purezza",
+    "partage_envoyer": "Invia",
+    "partage_sms": "SMS",
+    "partage_copie": "Copiato",
+    "hero_compteur": "Questo test è già stato fatto {n} volte",
+    "hero_moyenne": "Punteggio medio: {n} punti",
+    "suites_sous_solo": "Hai il punteggio, ti manca il seguito. Ecco da dove ripartire.",
+    "suites_sous_couple": "Siete già in due davanti allo schermo, tanto vale approfittarne.",
+    "suite_solo_1": "Trenta domande per vedere se i vostri desideri coincidono.",
+    "suite_solo_2": "Il dubbio ha un nome. Venti domande per dirlo.",
+    "suite_solo_3": "Il test di base, da fare in due, sulla vostra coppia.",
+    "suite_solo_4": "Penitenze e verità, quando c'è gente.",
+    "suite_couple_1": "Siete lanciati? Tanto vale continuare su questo terreno.",
+    "suite_couple_2": "La versione che non fa domande facili.",
+    "suite_couple_3": "La ruota gira, uno di voi esegue.",
+    "suite_couple_4": "Scendiamo di un gradino: a che punto è la vostra coppia?",
+    "suites_titre": "E adesso?",
+    "partage_poster": "Pubblica",
+    "partage_copier": "Copia il messaggio"
+  },
+  "meta": {
+    "titre": "Test di purezza per coppie | Online e gratis",
+    "description": "Test di purezza di coppia: 50 domande, un punteggio su 899 e il dettaglio per categoria. Fatelo da soli o in due, poi confrontatevi con il partner. Gratis, senza registrazione."
+  }
+}

@@ -380,7 +380,7 @@
     if (!liste.length) return null;
 
     var bloc = el('section', 'pu-bloc pu-bloc--suites');
-    bloc.appendChild(el('h3', 'pu-bloc-titre', 'Et maintenant ?'));
+    bloc.appendChild(el('h3', 'pu-bloc-titre', T('suites_titre', 'Et maintenant ?')));
     bloc.appendChild(el('p', 'pu-bloc-sous',
       mode === 'solo'
         ? T('suites_sous_solo', 'Tu as le score, il te manque la suite. Voilà par quoi enchaîner.')
@@ -496,14 +496,15 @@
     bouton('pu-partage--sms', '✉️ ' + T('partage_sms', 'SMS'), function () {
       location.href = 'sms:?&body=' + encodeURIComponent(complet);
     });
-    bouton('pu-partage--x', '𝕏 Poster', function () {
+    bouton('pu-partage--x', '𝕏 ' + T('partage_poster', 'Poster'), function () {
       window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(texte) +
         '&url=' + encodeURIComponent(lien), '_blank', 'noopener');
     });
-    var copie = bouton('pu-partage--copie', '🔗 Copier le message', function () {
+    var libelleCopie = '🔗 ' + T('partage_copier', 'Copier le message');
+    var copie = bouton('pu-partage--copie', libelleCopie, function () {
       var fini = function () {
         copie.textContent = '✅ ' + T('partage_copie', 'Copié');
-        setTimeout(function () { copie.textContent = '🔗 Copier le message'; }, 2200);
+        setTimeout(function () { copie.textContent = libelleCopie; }, 2200);
       };
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(complet).then(fini).catch(function () {});

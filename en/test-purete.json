@@ -1,0 +1,243 @@
+{
+  "hero": {
+    "badge": "50 questions · free · no sign-up",
+    "titre": "Purity test",
+    "titreAccent": "for couples",
+    "accroche": "How far have you actually gone?",
+    "description": "Fifty questions, a score out of 899, and an answer you won't necessarily want to show your parents. Take it alone, then send your score to your partner and compare."
+  },
+  "cta": "Start the test",
+  "sections": {
+    "s1": {
+      "titre": "What is a purity test, exactly?",
+      "lead": "A long list of things people do. You tick the ones you've already done. The more you tick, the higher the score, and the less « pure » you are.",
+      "p1": "The format has been floating around American campuses for decades and it exploded on social media, because it produces exactly what everyone is after in a <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">party game</a>: a number to compare. No interpretation, no psychological profile, just a figure you can drop into a conversation.",
+      "p2": "The version in front of you is written for couples. No questions about fraternities or skipped lectures: this is about exes, lies, nights that got out of hand, things hidden from a partner, and things done together.",
+      "chiffres": [
+        {
+          "val": "50",
+          "lib": "questions per mode"
+        },
+        {
+          "val": "899",
+          "lib": "maximum points"
+        },
+        {
+          "val": "7",
+          "lib": "scored categories"
+        },
+        {
+          "val": "2",
+          "lib": "game modes"
+        }
+      ],
+      "sub1Titre": "Why it works so well as a pair",
+      "sub1P1": "Because a score gets compared. You take the test on your own, you send your result, and the conversation starts by itself. Nine times out of ten the real discussion isn't about the score but about the one question that made someone pause, and from there you end up on <a class=\"pu-lien-int\" href=\"{{questionsCouple}}\">questions you never ask each other</a>."
+    },
+    "s2": {
+      "titre": "How your score is calculated",
+      "p1": "Not every question is worth the same number of points, and that's the whole point. A flat scale where each tick counts for one gives everybody the same result: a big cluster in the middle, nobody at the extremes, and a figure that says nothing.",
+      "tableau": {
+        "titre": "Three answers, three weights",
+        "entete": [
+          "The answer",
+          "What it costs"
+        ],
+        "lignes": [
+          [
+            "Leaving a party without telling anyone",
+            "8 points"
+          ],
+          [
+            "Doing it in public, where you could have been seen",
+            "26 points"
+          ],
+          [
+            "Driving after drinking",
+            "27 points"
+          ]
+        ],
+        "note": "A daft moment at a party and something that can kill someone shouldn't weigh the same."
+      },
+      "p2": "Each question also offers three to five degrees instead of a yes or a no. « Have you ever cheated on someone? » doesn't call for the same answer depending on whether it was a kiss at a party or a six-month double life, and the scale reflects that.",
+      "encart": {
+        "titre": "The maximum changes with the version",
+        "texte": "The full version reaches 899 points solo and 927 as a couple. The all-audiences version, served to anyone who says they're under 16, drops the explicit questions and therefore caps lower. The verdict is worked out as a percentage of the maximum actually played, otherwise the shorter version would be condemned to stay tame."
+      }
+    },
+    "s3": {
+      "titre": "Solo or together: what changes",
+      "p1": "The two modes don't ask the same questions and don't score the same thing. Choose before you start, you can't switch halfway.",
+      "comparatif": [
+        {
+          "emoji": "🙋",
+          "titre": "Each on your own",
+          "texte": "The questions are about you. Your past, your exes, what you hid, what you never told anyone. This is the mode to pick if you want to send your score and dare someone to match it."
+        },
+        {
+          "emoji": "💞",
+          "titre": "Together, as a couple",
+          "texte": "It's no longer two people being scored, it's one story: what you did together, where you did it, and what you kept from each other. Answers are said out loud, which makes this mode considerably more dangerous."
+        }
+      ],
+      "p2": "The couple mode and the <a class=\"pu-lien-int\" href=\"{{testCouple}}\">standard couple test</a> don't tread on each other: one measures what you've done, the other where the relationship stands today. Taking them back to back gives two very different readings of the same couple.",
+      "encart": {
+        "titre": "One piece of advice before starting couple mode",
+        "texte": "Some questions ask you to say out loud things that have never been said. If the subject is still raw between you, take the solo mode separately and compare nothing but the scores. The number is enough to start the discussion without forcing anyone into detail."
+      }
+    },
+    "s4": {
+      "titre": "What the test really looks at",
+      "p1": "Questions are split into categories, and the result breaks your score down for each one. That's usually where the surprise turns up: you think you're well behaved because the total is average, and you discover you're at 90% in a single family.",
+      "sub1Titre": "The seven solo categories",
+      "liste1": [
+        "🔥 <strong>Sex</strong> — body count, firsts, experiences, places",
+        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Cheating</a></strong> — from a kiss at a party to a double life",
+        "🎭 <strong>Lies</strong> — what you tidied up, left out, deleted",
+        "🍸 <strong>Booze & co</strong> — nights out, excess, and what comes with it",
+        "👪 <strong>Family</strong> — in-laws, parents, holidays endured",
+        "📱 <strong>Online life</strong> — nudes, secret accounts, morning-after messages",
+        "🚨 <strong>Off limits</strong> — theft, stupidity, getting caught"
+      ],
+      "sub1P1": "The category that hurts most is almost never the expected one. It's lies that push the most scores up, not sex.",
+      "sub2Titre": "The six couple categories",
+      "liste2": [
+        "🔥 <strong>Sex</strong> — what you've tried, and where",
+        "👀 <strong>Getting caught</strong> — the risk of being seen, owned or not",
+        "💫 <strong>Open stuff</strong> — threesomes, swapping, open relationships",
+        "🍸 <strong>Substances</strong> — nights out, being under the influence, the morning after",
+        "🚨 <strong>Crossing lines</strong> — casinos, off-limits places, lies told together",
+        "🤐 <strong>Secrets</strong> — what the other one still doesn't know"
+      ],
+      "sub2P1": "It's the secrets category that separates couples. Two couples with exactly the same past can end up a hundred points apart, purely on what they told each other."
+    },
+    "s5": {
+      "titre": "Is a high score bad?",
+      "citation": "A high score doesn't say you're a good person or a bad one. It says you've done things.",
+      "p1": "Some of them are memories from a night out, others are mistakes, and the test doesn't tell them apart: it counts, that's all. The reading is yours to do.",
+      "p2": "Where the result gets interesting is when two people compare it. Three hundred points between two partners isn't a problem in itself, but it often explains tensions nobody could name. The other way round, two very close scores are more reassuring than any <a class=\"pu-lien-int\" href=\"{{testCompatibilite}}\">compatibility test</a>.",
+      "encart": {
+        "titre": "And if the other person's score hurts",
+        "texte": "It happens. The test covers a whole past, most of which happened before you. What counts isn't the figure, it's what the person agrees to tell you behind it."
+      }
+    }
+  },
+  "faq": {
+    "titre": "The questions we get asked",
+    "q1": "Is the purity test free?",
+    "a1": "Yes, entirely. No account to create, no email to hand over, no paid version that unlocks the real result. You answer, you get your score, that's it.",
+    "q2": "Are my answers stored somewhere?",
+    "a2": "No. No individual answer is kept. Only the final score is recorded, with nothing that could point back to you, and it only serves to work out the average and the curve shown on the page.",
+    "q3": "How long does it take?",
+    "a3": "Five to seven minutes for the fifty solo questions. As a couple it takes longer, because you'll stop to talk at least three times, and that's rather the point.",
+    "q4": "What counts as a good score?",
+    "a4": "There isn't one. Most people land between 25 and 40% of the maximum, so a result around 250 to 350 points. Below that you're very well behaved, above it you have a history, but neither is better than the other.",
+    "q5": "Can more than two people play?",
+    "a5": "Couple mode is built for two. Nothing stops a whole group from taking the solo mode separately and comparing scores afterwards though: that's the best use of the test when there are several of you.",
+    "q6": "What's the minimum age?",
+    "a6": "The test asks your age before it starts. Under 16, an all-audiences version is served: it removes the explicit sex and drug questions and keeps everything about lies, family, nights out and secrets."
+  },
+  "suite": {
+    "titre": "Do this next",
+    "sous": "The score is in, the evening isn't over.",
+    "liens": [
+      {
+        "cle": "quizCoquin",
+        "emoji": "🔥",
+        "texte": "Thirty questions to see whether your desires line up."
+      },
+      {
+        "cle": "testCouple",
+        "emoji": "💕",
+        "texte": "Twenty questions for two on the real state of your relationship."
+      },
+      {
+        "cle": "jeuActionVerite",
+        "emoji": "🎲",
+        "texte": "Dares and truths, for when there's a crowd."
+      },
+      {
+        "cle": "testInfidelite",
+        "emoji": "💔",
+        "texte": "The signs that come up most often, scored."
+      },
+      {
+        "cle": "quizTuPreferes",
+        "emoji": "🤔",
+        "texte": "A hundred impossible dilemmas, fifteen or thirty per round."
+      },
+      {
+        "cle": "testCompatibilite",
+        "emoji": "💘",
+        "texte": "Your values and your plans, compared question by question."
+      }
+    ]
+  },
+  "moteur": {
+    "noscript": "This test needs JavaScript to run. Turn it on and reload the page.",
+    "etape1": "Step 1 of 2",
+    "etape2": "Step 2 of 2",
+    "modes_titre": "Choose your purity test mode: as a couple or on your own?",
+    "modes_sous": "50 questions either way. The mode changes what gets scored.",
+    "mode_action": "Choose this mode",
+    "mode_solo_nom": "Each on your own",
+    "mode_solo_desc": "About you: your past, your skeletons.",
+    "mode_couple_nom": "Together as a couple",
+    "mode_couple_desc": "About the two of you: what you've done together.",
+    "age_titre_solo": "Are you over 16?",
+    "age_titre_couple": "Are you both over 16?",
+    "age_sous": "Your answer only changes which questions get asked. The all-audiences version drops everything about explicit sex and drugs, and keeps lies, family, nights out and secrets.",
+    "age_oui": "Yes, 16 or over",
+    "age_oui_sous": "Full version, unfiltered",
+    "age_non": "No, under 16",
+    "age_non_sous": "All-audiences version",
+    "chargement": "Getting the questions ready…",
+    "calcul": "Working out your score…",
+    "erreur_sous": "Check your connection and try again.",
+    "reessayer": "Try again",
+    "precedente": "Back to the previous question",
+    "quitter": "Leave the test? Your answers will be lost.",
+    "refaire": "Take the test again",
+    "score_solo": "Your score: <strong>{score}</strong> points",
+    "score_couple": "Your score: <strong>{score}</strong> points",
+    "resultat_max_solo": "The maximum for this version is {max} points. The higher the score, the less pure you are.",
+    "resultat_max_couple": "The maximum for this version is {max} points. The higher the score, the less pure you are.",
+    "courbe_titre_solo": "Where you land",
+    "courbe_titre_couple": "Where you land",
+    "courbe_sous_solo": "Out of <strong>{n}</strong> tests, you're less pure than <strong>{devant}%</strong> of people. The average sits at <strong>{moyenne}</strong> points.",
+    "courbe_sous_couple": "Out of <strong>{n}</strong> tests, you're less pure than <strong>{devant}%</strong> of people. The average sits at <strong>{moyenne}</strong> points.",
+    "courbe_aria": "Distribution of scores, yours is at {pct} per cent of the maximum",
+    "categories_titre": "The breakdown, category by category",
+    "categories_sous_solo": "This is where you see what really costs you. A full bar is an area where you ticked everything.",
+    "categories_sous_couple": "This is where you see what really costs you. A full bar is an area where you ticked everything.",
+    "partage_titre_solo": "Send your score to someone",
+    "partage_titre_couple": "Send your score to someone",
+    "partage_sous_solo": "The fun part is comparing. Send this to your partner or your mates, and wait for their score.",
+    "partage_sous_couple": "Send your couple's score to your friends, and dare them to do better. Or worse.",
+    "partage_msg_solo": "I got {score} points on the purity test ({pct}% impure). Your turn: ",
+    "partage_msg_couple": "We got {score} points on the couple purity test ({pct}% impure). Your turn: ",
+    "partage_sujet": "Purity test",
+    "partage_envoyer": "Send",
+    "partage_sms": "SMS",
+    "partage_copie": "Copied",
+    "hero_compteur": "This test has been taken {n} times",
+    "hero_moyenne": "Average score: {n} points",
+    "suites_sous_solo": "You've got the score, now you need what comes next. Start here.",
+    "suites_sous_couple": "You're already both in front of the screen, may as well make the most of it.",
+    "suite_solo_1": "Thirty questions to see whether your desires line up.",
+    "suite_solo_2": "The doubt has a name. Twenty questions to put it into words.",
+    "suite_solo_3": "The basic test, for two, about your relationship.",
+    "suite_solo_4": "Dares and truths, for when there's a crowd.",
+    "suite_couple_1": "You're warmed up? May as well keep going on that ground.",
+    "suite_couple_2": "The version that doesn't ask easy questions.",
+    "suite_couple_3": "The wheel spins, one of you carries it out.",
+    "suite_couple_4": "Down a gear: where does your relationship actually stand?",
+    "suites_titre": "What now?",
+    "partage_poster": "Post",
+    "partage_copier": "Copy the message"
+  },
+  "meta": {
+    "titre": "Purity test for couples | Online & free",
+    "description": "Couple purity test: 50 questions, a score out of 899, and the breakdown by category. Take it alone or together, then compare with your partner. Free, no sign-up."
+  }
+}
