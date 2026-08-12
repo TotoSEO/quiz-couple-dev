@@ -32,17 +32,19 @@ const DIST_DIR = path.resolve(__dirname, '../dist');
 // alimente aussi le balisage Quiz de sa page : sans hasPart, Google n'a rien
 // à se mettre sous la dent, alors que toutes les autres pages de test le
 // remplissent. Lu une seule fois pour toute la construction.
-let _pureteCache;
-function pureteQuestions() {
-  if (_pureteCache !== undefined) return _pureteCache;
+const _pureteCache = new Map();
+function pureteQuestions(lang) {
+  const cle = lang || 'fr';
+  if (_pureteCache.has(cle)) return _pureteCache.get(cle);
+  let data = null;
   try {
-    const f = path.resolve(__dirname, '../../fr/purete.json');
-    _pureteCache = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf-8')) : null;
+    const f = path.resolve(__dirname, `../../${cle}/purete.json`);
+    data = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf-8')) : null;
   } catch (e) {
-    console.warn(`[purete] questions illisibles : ${e.message}`);
-    _pureteCache = null;
+    console.warn(`[purete] questions ${cle} illisibles : ${e.message}`);
   }
-  return _pureteCache;
+  _pureteCache.set(cle, data);
+  return data;
 }
 
 const PUBLIC_DIR = path.resolve(__dirname, '../../public');
@@ -609,7 +611,7 @@ async function generatePage(routeKey, lang) {
     routeKey,
     pageJouable: estPageJouable(routeKey),
     genrePage: genrePageJouable(routeKey),
-    pureteQuestions: routeKey === 'testPurete' ? pureteQuestions() : null,
+    pureteQuestions: routeKey === 'testPurete' ? pureteQuestions(lang) : null,
     pagePath,
     routeSlugs: ROUTE_SLUGS,
     languages: LANGUAGES,

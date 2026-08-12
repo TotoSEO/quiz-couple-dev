@@ -1,0 +1,243 @@
+{
+  "hero": {
+    "badge": "50 Fragen · gratis · ohne Anmeldung",
+    "titre": "Reinheitstest",
+    "titreAccent": "für Paare",
+    "accroche": "Wie weit seid ihr wirklich gegangen?",
+    "description": "Fünfzig Fragen, eine Punktzahl von maximal 899, und eine Antwort, die ihr euren Eltern nicht unbedingt zeigen wollt. Macht ihn allein und schickt eure Punktzahl dann an eure Partnerin oder euren Partner zum Vergleichen."
+  },
+  "cta": "Test starten",
+  "sections": {
+    "s1": {
+      "titre": "Was ist ein Reinheitstest genau?",
+      "lead": "Eine lange Liste mit Dingen, die Menschen tun. Ihr kreuzt an, was ihr schon gemacht habt. Je mehr Kreuze, desto höher die Punktzahl und desto weniger « rein » seid ihr.",
+      "p1": "Das Format geistert seit Jahrzehnten über amerikanische Campus und ist in den sozialen Netzwerken explodiert, weil es genau das liefert, was alle an einem <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">Partyspiel</a> suchen: eine Zahl zum Vergleichen. Keine Deutung, kein psychologisches Profil, nur eine Zahl, die man in ein Gespräch werfen kann.",
+      "p2": "Die Version vor euch ist für Paare geschrieben. Keine Fragen zu Studentenverbindungen oder geschwänzten Vorlesungen: hier geht es um Ex-Partner, Lügen, Abende, die entglitten sind, Dinge, die man verschwiegen hat, und Dinge, die man zu zweit gemacht hat.",
+      "chiffres": [
+        {
+          "val": "50",
+          "lib": "Fragen pro Modus"
+        },
+        {
+          "val": "899",
+          "lib": "Punkte maximal"
+        },
+        {
+          "val": "7",
+          "lib": "bewertete Kategorien"
+        },
+        {
+          "val": "2",
+          "lib": "Spielmodi"
+        }
+      ],
+      "sub1Titre": "Warum es zu zweit so gut funktioniert",
+      "sub1P1": "Weil eine Punktzahl verglichen wird. Ihr macht den Test für euch, schickt euer Ergebnis, und das Gespräch beginnt von allein. In neun von zehn Fällen dreht sich das eigentliche Gespräch nicht um die Punktzahl, sondern um die eine Frage, bei der jemand gestockt hat, und von da landet man schnell bei <a class=\"pu-lien-int\" href=\"{{questionsCouple}}\">Fragen, die man sich sonst nie stellt</a>."
+    },
+    "s2": {
+      "titre": "Wie eure Punktzahl berechnet wird",
+      "p1": "Nicht jede Frage ist gleich viele Punkte wert, und darin liegt der ganze Sinn. Eine flache Skala, bei der jedes Kreuz einen Punkt gibt, liefert allen dasselbe Ergebnis: ein dicker Haufen in der Mitte, niemand an den Rändern, und eine Zahl, die nichts aussagt.",
+      "tableau": {
+        "titre": "Drei Antworten, drei Gewichte",
+        "entete": [
+          "Die Antwort",
+          "Was sie kostet"
+        ],
+        "lignes": [
+          [
+            "Eine Party verlassen, ohne jemandem Bescheid zu sagen",
+            "8 Punkte"
+          ],
+          [
+            "Es in der Öffentlichkeit getan haben, wo man euch sehen konnte",
+            "26 Punkte"
+          ],
+          [
+            "Nach dem Trinken gefahren sein",
+            "27 Punkte"
+          ]
+        ],
+        "note": "Eine Dummheit auf einer Party und etwas, das jemanden töten kann, dürfen nicht gleich schwer wiegen."
+      },
+      "p2": "Jede Frage bietet außerdem drei bis fünf Abstufungen statt eines Ja oder Nein. « Hast du schon mal jemanden betrogen? » verlangt nicht dieselbe Antwort, je nachdem ob es ein Kuss auf einer Party oder ein halbes Jahr Doppelleben war, und die Skala macht diesen Unterschied.",
+      "encart": {
+        "titre": "Das Maximum ändert sich je nach Version",
+        "texte": "Die vollständige Version reicht bis 899 Punkte allein und 927 als Paar. Die Version für alle, die jeder bekommt, der weniger als 16 Jahre angibt, lässt die expliziten Fragen weg und liegt deshalb niedriger. Das Urteil wird als Prozentsatz des tatsächlich gespielten Maximums berechnet, sonst wäre die kurze Version dazu verdammt, brav zu bleiben."
+      }
+    },
+    "s3": {
+      "titre": "Allein oder zu zweit: was sich ändert",
+      "p1": "Die beiden Modi stellen nicht dieselben Fragen und bewerten nicht dasselbe. Wählt vor dem Start, mitten im Test lässt sich nicht wechseln.",
+      "comparatif": [
+        {
+          "emoji": "🙋",
+          "titre": "Jeder für sich",
+          "texte": "Die Fragen drehen sich um dich. Deine Vergangenheit, deine Ex-Partner, was du verschwiegen hast, was du nie erzählt hast. Dieser Modus ist der richtige, wenn du deine Punktzahl verschicken und jemanden herausfordern willst."
+        },
+        {
+          "emoji": "💞",
+          "titre": "Zu zweit, als Paar",
+          "texte": "Hier werden nicht mehr zwei Menschen bewertet, sondern eine Geschichte: was ihr zusammen gemacht habt, wo ihr es gemacht habt, und was ihr voreinander verschwiegen habt. Die Antworten werden laut gesagt, was diesen Modus deutlich gefährlicher macht."
+        }
+      ],
+      "p2": "Der Paarmodus und der <a class=\"pu-lien-int\" href=\"{{testCouple}}\">klassische Paartest</a> kommen sich nicht in die Quere: der eine misst, was ihr getan habt, der andere, wo die Beziehung heute steht. Beide hintereinander ergeben zwei sehr verschiedene Lesarten desselben Paares.",
+      "encart": {
+        "titre": "Ein Rat vor dem Start des Paarmodus",
+        "texte": "Manche Fragen verlangen, Dinge laut auszusprechen, die nie gesagt wurden. Wenn das Thema zwischen euch noch heiß ist, macht den Solomodus jeder für sich und vergleicht nur die Punktzahlen. Die Zahl reicht, um das Gespräch zu starten, ohne jemanden zu Details zu zwingen."
+      }
+    },
+    "s4": {
+      "titre": "Worauf der Test wirklich schaut",
+      "p1": "Die Fragen sind in Kategorien aufgeteilt, und das Ergebnis schlüsselt eure Punktzahl für jede einzelne auf. Genau dort kommt meist die Überraschung: man hält sich für brav, weil die Gesamtzahl mittelmäßig ist, und entdeckt, dass man in einer einzigen Kategorie bei 90 % liegt.",
+      "sub1Titre": "Die sieben Kategorien im Solomodus",
+      "liste1": [
+        "🔥 <strong>Sex</strong> — Body Count, erste Male, Erfahrungen, Orte",
+        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Untreue</a></strong> — vom Kuss auf einer Party bis zum Doppelleben",
+        "🎭 <strong>Lügen</strong> — was ihr zurechtgelegt, weggelassen, gelöscht habt",
+        "🍸 <strong>Alkohol & Co</strong> — Partys, Exzesse und was dazugehört",
+        "👪 <strong>Familie</strong> — Schwiegerfamilie, Eltern, durchgestandene Feiertage",
+        "📱 <strong>Digitales Leben</strong> — Nacktfotos, geheime Accounts, Nachrichten beim Aufwachen",
+        "🚨 <strong>Verbotenes</strong> — Diebstahl, Dummheiten, Erwischtwerden"
+      ],
+      "sub1P1": "Die Kategorie, die am meisten wehtut, ist fast nie die erwartete. Es sind die Lügen, die die meisten Punktzahlen hochtreiben, nicht der Sex.",
+      "sub2Titre": "Die sechs Kategorien im Paarmodus",
+      "liste2": [
+        "🔥 <strong>Sex</strong> — was ihr versucht habt, und wo",
+        "👀 <strong>Erwischtwerden</strong> — das Risiko, gesehen zu werden, bewusst oder nicht",
+        "💫 <strong>Offene Spiele</strong> — Dreier, Partnertausch, offene Beziehung",
+        "🍸 <strong>Substanzen</strong> — Partys, Rausch, der Morgen danach",
+        "🚨 <strong>Grenzüberschreitung</strong> — Casino, verbotene Orte, gemeinsame Lügen",
+        "🤐 <strong>Geheimnisse</strong> — was die andere Person immer noch nicht weiß"
+      ],
+      "sub2P1": "Es ist die Kategorie der Geheimnisse, die Paare unterscheidet. Zwei Paare mit exakt derselben Vergangenheit können hundert Punkte auseinanderliegen, allein danach, was sie sich gesagt haben."
+    },
+    "s5": {
+      "titre": "Ist eine hohe Punktzahl schlimm?",
+      "citation": "Eine hohe Punktzahl sagt nicht, dass ihr gute oder schlechte Menschen seid. Sie sagt, dass ihr Dinge getan habt.",
+      "p1": "Manche davon sind Partyerinnerungen, andere sind Fehler, und der Test unterscheidet nicht: er zählt, mehr nicht. Die Deutung überlässt er euch.",
+      "p2": "Interessant wird das Ergebnis, wenn zwei Menschen es vergleichen. Dreihundert Punkte Abstand zwischen zwei Partnern sind an sich kein Problem, erklären aber oft Spannungen, die sich vorher nicht benennen ließen. Umgekehrt beruhigen zwei sehr ähnliche Punktzahlen mehr als jeder <a class=\"pu-lien-int\" href=\"{{testCompatibilite}}\">Kompatibilitätstest</a>.",
+      "encart": {
+        "titre": "Und wenn die Punktzahl der anderen Person wehtut",
+        "texte": "Das kommt vor. Der Test spricht von einer ganzen Vergangenheit, die größtenteils vor euch stattgefunden hat. Was zählt, ist nicht die Zahl, sondern was die Person euch dahinter zu erzählen bereit ist."
+      }
+    }
+  },
+  "faq": {
+    "titre": "Die Fragen, die uns gestellt werden",
+    "q1": "Ist der Reinheitstest kostenlos?",
+    "a1": "Ja, vollständig. Kein Konto anzulegen, keine E-Mail anzugeben, keine Bezahlversion, die das echte Ergebnis freischaltet. Ihr antwortet, ihr bekommt eure Punktzahl, fertig.",
+    "q2": "Werden meine Antworten irgendwo gespeichert?",
+    "a2": "Nein. Keine einzelne Antwort wird gespeichert. Nur die Endpunktzahl wird erfasst, ohne irgendetwas, das zu euch zurückführt, und sie dient allein dazu, den Durchschnitt und die Kurve auf der Seite zu berechnen.",
+    "q3": "Wie lange dauert das?",
+    "a3": "Fünf bis sieben Minuten für die fünfzig Fragen im Solomodus. Zu zweit dauert es länger, weil ihr mindestens dreimal anhalten und reden werdet, und darum geht es ja auch ein bisschen.",
+    "q4": "Was ist eine gute Punktzahl?",
+    "a4": "Es gibt keine. Die meisten liegen zwischen 25 und 40 % des Maximums, also bei etwa 250 bis 350 Punkten. Darunter seid ihr sehr brav, darüber habt ihr eine Vorgeschichte, aber keines von beiden ist besser.",
+    "q5": "Kann man zu mehr als zweit spielen?",
+    "a5": "Der Paarmodus ist für zwei gedacht. Nichts hindert eine ganze Runde daran, den Solomodus jeder für sich zu machen und die Punktzahlen danach zu vergleichen: das ist sogar die beste Verwendung des Tests, wenn ihr zu mehreren seid.",
+    "q6": "Ab welchem Alter?",
+    "a6": "Der Test fragt vor dem Start nach eurem Alter. Unter 16 Jahren wird eine Version für alle ausgeliefert: sie lässt die Fragen zu explizitem Sex und Drogen weg und behält alles, was mit Lügen, Familie, Partys und Geheimnissen zu tun hat."
+  },
+  "suite": {
+    "titre": "Direkt danach",
+    "sous": "Die Punktzahl steht, der Abend ist noch nicht vorbei.",
+    "liens": [
+      {
+        "cle": "quizCoquin",
+        "emoji": "🔥",
+        "texte": "Dreißig Fragen, um zu sehen, ob eure Wünsche zusammenpassen."
+      },
+      {
+        "cle": "testCouple",
+        "emoji": "💕",
+        "texte": "Zwanzig Fragen zu zweit über den echten Zustand eurer Beziehung."
+      },
+      {
+        "cle": "jeuActionVerite",
+        "emoji": "🎲",
+        "texte": "Aufgaben und Wahrheiten, wenn Leute da sind."
+      },
+      {
+        "cle": "testInfidelite",
+        "emoji": "💔",
+        "texte": "Die Anzeichen, die am häufigsten auftauchen, bewertet."
+      },
+      {
+        "cle": "quizTuPreferes",
+        "emoji": "🤔",
+        "texte": "Hundert unmögliche Dilemmata, fünfzehn oder dreißig pro Runde."
+      },
+      {
+        "cle": "testCompatibilite",
+        "emoji": "💘",
+        "texte": "Eure Werte und Pläne, Frage für Frage verglichen."
+      }
+    ]
+  },
+  "moteur": {
+    "noscript": "Dieser Test braucht JavaScript. Aktiviert es und ladet die Seite neu.",
+    "etape1": "Schritt 1 von 2",
+    "etape2": "Schritt 2 von 2",
+    "modes_titre": "Wählt euren Modus für den Reinheitstest: als Paar oder allein?",
+    "modes_sous": "50 Fragen in beiden Fällen. Der Modus ändert, was bewertet wird.",
+    "mode_action": "Diesen Modus wählen",
+    "mode_solo_nom": "Jeder für sich",
+    "mode_solo_desc": "Über dich: deine Vergangenheit, deine Leichen im Keller.",
+    "mode_couple_nom": "Zu zweit als Paar",
+    "mode_couple_desc": "Über euch beide: was ihr zusammen gemacht habt.",
+    "age_titre_solo": "Bist du über 16?",
+    "age_titre_couple": "Seid ihr über 16?",
+    "age_sous": "Die Antwort ändert nur, welche Fragen gestellt werden. Die Version für alle lässt alles rund um expliziten Sex und Drogen weg und behält Lügen, Familie, Partys und Geheimnisse.",
+    "age_oui": "Ja, 16 oder älter",
+    "age_oui_sous": "Vollständige Version, ungefiltert",
+    "age_non": "Nein, unter 16",
+    "age_non_sous": "Version für alle",
+    "chargement": "Die Fragen werden vorbereitet…",
+    "calcul": "Die Punktzahl wird berechnet…",
+    "erreur_sous": "Prüft eure Verbindung und versucht es erneut.",
+    "reessayer": "Erneut versuchen",
+    "precedente": "Zurück zur vorherigen Frage",
+    "quitter": "Test verlassen? Die Antworten gehen verloren.",
+    "refaire": "Test wiederholen",
+    "score_solo": "Deine Punktzahl: <strong>{score}</strong> Punkte",
+    "score_couple": "Eure Punktzahl: <strong>{score}</strong> Punkte",
+    "resultat_max_solo": "Das Maximum dieser Version liegt bei {max} Punkten. Je höher die Punktzahl, desto weniger rein bist du.",
+    "resultat_max_couple": "Das Maximum dieser Version liegt bei {max} Punkten. Je höher die Punktzahl, desto weniger rein seid ihr.",
+    "courbe_titre_solo": "Wo du stehst",
+    "courbe_titre_couple": "Wo ihr steht",
+    "courbe_sous_solo": "Von <strong>{n}</strong> Tests bist du weniger rein als <strong>{devant}%</strong> der Leute. Der Durchschnitt liegt bei <strong>{moyenne}</strong> Punkten.",
+    "courbe_sous_couple": "Von <strong>{n}</strong> Tests seid ihr weniger rein als <strong>{devant}%</strong> der Leute. Der Durchschnitt liegt bei <strong>{moyenne}</strong> Punkten.",
+    "courbe_aria": "Verteilung der Punktzahlen, eure liegt bei {pct} Prozent des Maximums",
+    "categories_titre": "Die Aufschlüsselung, Kategorie für Kategorie",
+    "categories_sous_solo": "Hier sieht man, was dich wirklich verrät. Ein voller Balken ist ein Bereich, in dem du alles angekreuzt hast.",
+    "categories_sous_couple": "Hier sieht man, was euch wirklich verrät. Ein voller Balken ist ein Bereich, in dem ihr alles angekreuzt habt.",
+    "partage_titre_solo": "Schick deine Punktzahl an jemanden",
+    "partage_titre_couple": "Schickt eure Punktzahl an jemanden",
+    "partage_sous_solo": "Das Beste daran ist der Vergleich. Schick das an deine Partnerin, deinen Partner oder deine Leute und warte auf ihre Punktzahl.",
+    "partage_sous_couple": "Schickt die Punktzahl eures Paares an eure Freunde und fordert sie heraus, es besser zu machen. Oder schlimmer.",
+    "partage_msg_solo": "Ich habe {score} Punkte im Reinheitstest ({pct}% unrein). Jetzt du: ",
+    "partage_msg_couple": "Wir haben {score} Punkte im Paar-Reinheitstest ({pct}% unrein). Jetzt ihr: ",
+    "partage_sujet": "Reinheitstest",
+    "partage_envoyer": "Senden",
+    "partage_sms": "SMS",
+    "partage_copie": "Kopiert",
+    "hero_compteur": "Dieser Test wurde schon {n} Mal gemacht",
+    "hero_moyenne": "Durchschnittliche Punktzahl: {n} Punkte",
+    "suites_sous_solo": "Die Punktzahl steht, jetzt fehlt der Rest. Hier geht es weiter.",
+    "suites_sous_couple": "Ihr sitzt ohnehin schon zu zweit vor dem Bildschirm, nutzt das aus.",
+    "suite_solo_1": "Dreißig Fragen, um zu sehen, ob eure Wünsche zusammenpassen.",
+    "suite_solo_2": "Der Zweifel hat einen Namen. Zwanzig Fragen, um ihn auszusprechen.",
+    "suite_solo_3": "Der Basistest, zu zweit, über eure Beziehung.",
+    "suite_solo_4": "Aufgaben und Wahrheiten, wenn Leute da sind.",
+    "suite_couple_1": "Ihr seid in Fahrt? Dann bleibt gleich auf diesem Terrain.",
+    "suite_couple_2": "Die Version, die keine einfachen Fragen stellt.",
+    "suite_couple_3": "Das Rad dreht sich, einer von euch führt aus.",
+    "suite_couple_4": "Einen Gang zurück: wo steht eure Beziehung eigentlich?",
+    "suites_titre": "Und jetzt?",
+    "partage_poster": "Posten",
+    "partage_copier": "Nachricht kopieren"
+  },
+  "meta": {
+    "titre": "Reinheitstest für Paare | Online & kostenlos",
+    "description": "Reinheitstest für Paare: 50 Fragen, eine Punktzahl von maximal 899 und die Aufschlüsselung nach Kategorie. Allein oder zu zweit, dann mit dem Partner vergleichen. Gratis, ohne Anmeldung."
+  }
+}

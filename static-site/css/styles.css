@@ -1053,16 +1053,21 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
    complètement différent, fond teinté et liseré à gauche, et l'entrée ne
    ressemblait pas du tout à celle du menu large. Seule la forme change,
    ligne pleine largeur au lieu d'une pastille, l'anneau est le même. */
+/* La pastille se cale sur son texte, pas sur la largeur du menu : un anneau
+   lumineux qui court sur toute la ligne ne se lit plus comme un bouton.
+   `inline-flex` avec `width: fit-content` la fait tenir à son contenu, et
+   elle garde la même forme que sur le bureau. */
 .mobile-nav-vedette {
   position: relative; isolation: isolate;
-  display: flex; align-items: center; gap: 0.6rem;
-  padding: 0.875rem 1rem; border-radius: 0.75rem;
+  display: inline-flex; width: fit-content; align-self: flex-start;
+  align-items: center; gap: 0.5rem;
+  padding: 0.7rem 1.05rem; border-radius: 9999px;
   font-size: 0.9375rem; font-weight: 700;
   --nv-angle: 0deg;
 }
 .mobile-nav-vedette::before {
   content: ''; position: absolute; z-index: -2; inset: -1px;
-  border-radius: 0.8rem;
+  border-radius: 9999px;
   background: conic-gradient(
     from var(--nv-angle),
     hsl(var(--primary) / 0.16) 0deg,
@@ -1078,12 +1083,14 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .mobile-nav-vedette::after {
   content: ''; position: absolute; z-index: -1; inset: 1.5px;
-  border-radius: 0.7rem;
+  border-radius: 9999px;
   background: linear-gradient(100deg, hsl(var(--primary) / 0.1), hsl(265 60% 58% / 0.08)), hsl(var(--background));
 }
 .mobile-nav-vedette-emoji { font-size: 1.15rem; line-height: 1; }
+/* Plus de `flex: 1` : il étirait le texte pour remplir la ligne, ce qui
+   ramenait la pastille à toute la largeur du menu. */
 .mobile-nav-vedette-texte {
-  flex: 1;
+  white-space: nowrap;
   background: linear-gradient(120deg, hsl(var(--primary)), hsl(265 60% 58%));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
@@ -1239,8 +1246,10 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .nav-megamenu-inner {
   border-radius: var(--radius); border: 1px solid hsl(var(--border) / 0.7);
-  background: hsl(var(--popover) / 0.95);
-  backdrop-filter: blur(24px) saturate(1.4);
+  /* Le fond laissait trop passer la page derrière : les titres du contenu
+     remontaient à travers le panneau et gênaient la lecture des entrées. */
+  background: hsl(var(--popover) / 0.99);
+  backdrop-filter: blur(28px) saturate(1.25);
   box-shadow:
     0 24px 80px -16px rgb(0 0 0 / 0.22),
     0 8px 24px -4px rgb(0 0 0 / 0.06),
@@ -1248,7 +1257,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   overflow: hidden;
 }
 .dark .nav-megamenu-inner {
-  background: hsl(var(--popover) / 0.9);
+  background: hsl(var(--popover) / 0.98);
   box-shadow:
     0 24px 80px -16px rgb(0 0 0 / 0.5),
     0 8px 24px -4px rgb(0 0 0 / 0.3),
