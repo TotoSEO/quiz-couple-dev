@@ -265,6 +265,19 @@ export const BLOG_CATEGORIES = {
 // Blog article metadata
 export const BLOG_ARTICLES = [
   {
+    internalSlug: 'arreter-ou-continuer-relation',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/arreter-ou-continuer-relation.webp',
+    slugs: {
+      fr: 'arreter-ou-continuer-relation',
+      en: 'stay-or-leave-relationship-signs',
+      es: 'dejarlo-o-seguir-pareja',
+      de: 'beziehung-beenden-oder-weitermachen',
+      it: 'lasciarsi-o-continuare-coppia',
+    },
+    publishedAt: '2026-08-11',
+  },
+  {
     internalSlug: 'les-phases-de-la-rupture-chez-l-homme',
     category: 'vie-de-couple',
     slugs: {
