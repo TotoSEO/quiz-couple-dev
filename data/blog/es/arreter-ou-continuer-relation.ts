@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: `La mayoría de quienes se hacen esta pregunta llevan meses dando vueltas. Esto es lo que distingue un mal momento de un callejón sin salida, y cómo decidir sin mentirse.`,
   introduction: `<p>Si buscas la respuesta corta, aquí está: <strong>se deja cuando la relación te pide renunciar a quien eres, y se sigue cuando solo te pide trabajar en ella.</strong> Todo lo demás en este artículo sirve para saber en cuál de los dos casos estás.</p>
 
-<p>Porque nadie se hace esta pregunta un martes por la mañana por curiosidad. Cuando llega, lleva ya mucho tiempo rondando. Has pensado en ello en la ducha, en el coche, mirando dormir a tu pareja. Puede que incluso hayas abierto este artículo esperando que alguien te diera permiso para irte. O para quedarte.</p>
+<p>Porque nadie se hace esta pregunta un martes por la mañana por curiosidad. Cuando llega, lleva ya mucho tiempo rondando. Has pensado en ello en la ducha, en el coche, mirando dormir a tu pareja… Puede que incluso hayas abierto este artículo esperando que alguien te diera permiso para irte. ¿O para quedarte?</p>
 
 <p>No voy a hacer eso. <strong>Nadie desde fuera puede decidir por ti</strong>, y desconfía de quien pretenda lo contrario en ocho puntos. Lo que sí existe son señales que se repiten, tanto en las parejas que se separaron como en las que aguantaron. Conocerlas no decide por ti, pero te evita dar vueltas dos años más.</p>`,
   quickSummary: [
@@ -32,58 +32,63 @@ const article: BlogArticleData = {
 
 <p>Una relación merece terminar cuando la dificultad es la relación misma. Cuando no puedes nombrar lo que va mal porque <strong>lo que va mal es todo</strong>, de forma permanente, desde hace tanto que ya no recuerdas cómo era antes.</p>
 
-<p>Entre ambas hay una zona gris enorme. Ahí viven casi todos los que se hacen esta pregunta. El resto del artículo sirve para salir de ella.</p>`,
+<p>Entre ambas hay una zona gris enorme… y ahí viven casi todos los que se hacen esta pregunta. El resto del artículo sirve para salir de ella.</p>`,
     },
     {
       id: 'once-senales-dejarlo',
       title: `Las 11 señales que dicen que hay que dejarlo`,
-      content: `<p>Ninguna de estas señales basta por sí sola. Lo que cuenta es su acumulación y, sobre todo, su duración. Un mes de desprecio dentro de un año difícil no es lo mismo que tres años de desprecio ordinario.</p>
+      content: `<p>¡Ninguna de estas señales basta por sí sola! Lo que cuenta es su acumulación y, sobre todo, su duración. Un mes de desprecio dentro de un año difícil no es lo mismo que tres años de desprecio ordinario…</p>
+
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">📌 Conviene saberlo</p>
+<p>Lo que mejor predice una separación en la investigación sobre pareja no es la frecuencia de las discusiones: es el desprecio. Dos personas pueden gritarse durante treinta años y aguantar. Dos personas que ponen los ojos en blanco, mucho menos.</p>
+</aside>
 
 <ol>
-<li><p><strong>El desprecio ha sustituido a la rabia.</strong> Es la señal más documentada por la investigación sobre pareja, y la peor. La rabia dice «me importas lo bastante como para pelear». El desprecio dice «ya no vales la pena». Los ojos en blanco, la risita, la imitación burlona: no son detalles, son el veneno.</p></li>
+<li><p><strong>El desprecio ha sustituido a la rabia:</strong> es la señal más documentada por la investigación sobre pareja, y la peor. La rabia dice «me importas lo bastante como para pelear». El desprecio dice «ya no vales la pena». Los ojos en blanco, la risita, la imitación burlona: no son detalles, son el veneno.</p></li>
 
-<li><p><strong>Ya nadie repara.</strong> En una pareja que aguanta, después de la discusión alguien vuelve. Una mano en el hombro, una broma, un café servido sin decir nada. Cuando esos gestos desaparecen y cada discusión termina con dos personas en dos habitaciones, el vínculo deja de recoserse.</p></li>
+<li><p><strong>Ya nadie repara:</strong> en una pareja que aguanta, después de la discusión alguien vuelve. Una mano en el hombro, una broma, un café servido sin decir nada. Cuando esos gestos desaparecen y cada discusión termina con dos personas en dos habitaciones, el vínculo deja de recoserse.</p></li>
 
-<li><p><strong>Te vigilas.</strong> Mides tus frases antes de hablar. Anticipas el humor del otro. Ordenas antes de que llegue para evitar el comentario. Eso no es delicadeza, es miedo, y el miedo no pinta nada en una pareja.</p></li>
+<li><p><strong>Te vigilas:</strong> mides tus frases antes de hablar. Anticipas el humor del otro. Ordenas antes de que llegue para evitar el comentario. Eso no es delicadeza, es miedo, y el miedo no pinta nada en una pareja.</p></li>
 
-<li><p><strong>Tus amigos han desaparecido.</strong> No de golpe: uno a uno, cada uno por una buena razón. Aquel era «raro», aquella «te calentaba la cabeza». El aislamiento progresivo es una de las marcas más reconocibles de una <a href="/es/test-relacion-toxica/">relación que se ha vuelto tóxica</a>, y también la que menos se ve desde dentro.</p></li>
+<li><p><strong>Tus amigos han desaparecido:</strong> no de golpe: uno a uno, cada uno por una buena razón. Aquel era «raro», aquella «te calentaba la cabeza». El aislamiento progresivo es una de las marcas más reconocibles de una <a href="/es/test-relacion-toxica/">relación que se ha vuelto tóxica</a>, y también la que menos se ve desde dentro.</p></li>
 
-<li><p><strong>Mientes sobre cosas sin importancia.</strong> El precio de un jersey. Haber comido con un compañero. Cuando mentir resulta más fácil que decir la verdad sobre tonterías, es que la verdad sale demasiado cara.</p></li>
+<li><p><strong>Mientes sobre cosas sin importancia:</strong> el precio de un jersey. Haber comido con un compañero. Cuando mentir resulta más fácil que decir la verdad sobre tonterías, es que la verdad sale demasiado cara.</p></li>
 
-<li><p><strong>El respeto ha abandonado las discusiones.</strong> Se puede discutir fuerte y seguir siendo correcto. El día que entran los insultos, el día que lo más frágil que el otro te confió se usa como arma, se ha cruzado una frontera.</p></li>
+<li><p><strong>El respeto ha abandonado las discusiones:</strong> se puede discutir fuerte y seguir siendo correcto. El día que entran los insultos, el día que lo más frágil que el otro te confió se usa como arma, se ha cruzado una frontera.</p></li>
 
-<li><p><strong>Imaginas tu vida sin la otra persona, y respiras.</strong> No la fantasía de venganza, no la rabia. Esa imagen tranquila de un piso para ti, de un domingo para ti. Si vuelve a menudo y te calma, te está diciendo algo.</p></li>
+<li><p><strong>Imaginas tu vida sin la otra persona, y respiras:</strong> no la fantasía de venganza, no la rabia. Esa imagen tranquila de un piso para ti, de un domingo para ti. Si vuelve a menudo y te calma, te está diciendo algo.</p></li>
 
-<li><p><strong>Los planes se han acabado.</strong> Ya no habláis del verano que viene. Ya no compráis juntos nada que dure más de dos años. Una pareja con futuro lo menciona sin pensarlo; una pareja sin futuro evita el tema sin decírselo.</p></li>
+<li><p><strong>Los planes se han acabado:</strong> ya no habláis del verano que viene. Ya no compráis juntos nada que dure más de dos años. Una pareja con futuro lo menciona sin pensarlo; una pareja sin futuro evita el tema sin decírselo.</p></li>
 
-<li><p><strong>Te quedas por razones que no son la persona.</strong> El alquiler, los hijos, el qué dirán, el miedo a empezar de nuevo a los cuarenta. Son razones reales y pesan mucho. Pero ninguna habla de tu pareja.</p></li>
+<li><p><strong>Te quedas por razones que no son la persona:</strong> el alquiler, los hijos, el qué dirán, el miedo a empezar de nuevo a los cuarenta. Son razones reales y pesan mucho. Pero ninguna habla de tu pareja.</p></li>
 
-<li><p><strong>Ya lo has dicho todo, varias veces, y nada se ha movido.</strong> No una conversación difícil: diez. Las mismas. Con las mismas promesas y la misma vuelta al punto de partida tres semanas después.</p></li>
+<li><p><strong>Ya lo has dicho todo, varias veces, y nada se ha movido:</strong> no una conversación difícil: diez. Las mismas. Con las mismas promesas y la misma vuelta al punto de partida tres semanas después.</p></li>
 
-<li><p><strong>Ya no te reconoces.</strong> Te has vuelto alguien más pequeño, más prudente, menos divertido. Tus allegados te lo han dicho y tú has defendido a tu pareja. Es la señal que resume todas las demás.</p></li>
+<li><p><strong>Ya no te reconoces:</strong> te has vuelto alguien más pequeño, más prudente, menos divertido. Tus allegados te lo han dicho y tú has defendido a tu pareja. Es la señal que resume todas las demás.</p></li>
 </ol>
 
-<p>Si has marcado más de seis líneas, la pregunta probablemente ya no es si hay que dejarlo. Es por qué todavía no lo has hecho, y esa es otra pregunta, a menudo más difícil.</p>`,
+<p>Si has marcado más de seis líneas… la pregunta probablemente ya no es si hay que dejarlo, sino por qué todavía no lo has hecho. Y esa es otra pregunta, a menudo mucho más difícil.</p>`,
     },
     {
       id: 'siete-senales-seguir',
       title: `Las 7 señales de que merece la pena seguir`,
-      content: `<p>Son menos espectaculares, y justo por eso se olvidan cuando se está mal.</p>
+      content: `<p>Son mucho menos espectaculares que las anteriores. Y justo por eso se olvidan cuando se está mal…</p>
 
 <ol>
-<li><p><strong>Todavía discutís de verdad.</strong> Contraintuitivo pero sólido: discutir cuesta energía, y solo la gastamos en lo que importa. Lo contrario de una pareja que aguanta no es una pareja que grita, es una pareja que ya no dice nada.</p></li>
+<li><p><strong>Todavía discutís de verdad:</strong> contraintuitivo pero sólido: discutir cuesta energía, y solo la gastamos en lo que importa. Lo contrario de una pareja que aguanta no es una pareja que grita, es una pareja que ya no dice nada.</p></li>
 
-<li><p><strong>Quedan momentos sencillos.</strong> Una carcajada imprevista, una serie vista sin tocaros pero a gusto. No son migajas: son la prueba de que el vínculo funciona cuando baja la presión.</p></li>
+<li><p><strong>Quedan momentos sencillos:</strong> una carcajada imprevista, una serie vista sin tocaros pero a gusto. No son migajas: son la prueba de que el vínculo funciona cuando baja la presión.</p></li>
 
-<li><p><strong>Sabes nombrar el problema.</strong> «Desde que cambió de trabajo.» «Desde el aborto.» Un problema con fecha de inicio suele tener salida.</p></li>
+<li><p><strong>Sabes nombrar el problema:</strong> «Desde que cambió de trabajo.» «Desde el aborto.» Un problema con fecha de inicio suele tener salida.</p></li>
 
-<li><p><strong>La otra persona también se preocupa.</strong> Dos personas preguntándose si aguantará son dos personas a quienes les importa que aguante. El peor escenario es aquel en que uno se debate y el otro se encoge de hombros.</p></li>
+<li><p><strong>La otra persona también se preocupa:</strong> dos personas preguntándose si aguantará son dos personas a quienes les importa que aguante. El peor escenario es aquel en que uno se debate y el otro se encoge de hombros.</p></li>
 
-<li><p><strong>Admiras algo de la otra persona.</strong> Su forma de estar con sus padres, su valentía en el trabajo, su paciencia. El amor puede dormirse; la admiración mucho menos.</p></li>
+<li><p><strong>Admiras algo de la otra persona:</strong> su forma de estar con sus padres, su valentía en el trabajo, su paciencia. El amor puede dormirse; la admiración mucho menos.</p></li>
 
-<li><p><strong>Lo que falta es tiempo y atención, no voluntad.</strong> Muchas parejas no se están muriendo: están cansadas, y hace dos años que dejaron de hacerse <a href="/es/preguntas-pareja/">preguntas que no fueran logísticas</a>.</p></li>
+<li><p><strong>Lo que falta es tiempo y atención, no voluntad:</strong> muchas parejas no se están muriendo: están cansadas, y hace dos años que dejaron de hacerse <a href="/es/preguntas-pareja/">preguntas que no fueran logísticas</a>.</p></li>
 
-<li><p><strong>Todavía os proyectáis, aunque sea vagamente.</strong> Un viaje, un piso, un perro. Si el futuro sigue conteniendo a dos personas, no se ha acabado.</p></li>
+<li><p><strong>Todavía os proyectáis, aunque sea vagamente:</strong> un viaje, un piso, un perro. Si el futuro sigue conteniendo a dos personas, no se ha acabado.</p></li>
 </ol>`,
     },
     {
@@ -135,22 +140,43 @@ const article: BlogArticleData = {
 
 <p><strong>La mejor prueba cabe en una frase:</strong> imagina que el problema actual desaparece mañana por la mañana, de golpe. El trabajo se calma, entra el dinero, la suegra se calla. ¿Eres feliz con esta persona?</p>
 
-<p>Si la respuesta es sí, estás atravesando algo. Si la respuesta es «no lo sé», o peor, «no, pero al menos sería más sencillo», el problema nunca fue el problema.</p>`,
+<p>Si la respuesta es sí, estás atravesando algo. Si la respuesta es «no lo sé»… o peor, «no, pero al menos sería más sencillo», entonces el problema nunca fue el problema.</p>`,
     },
     {
       id: 'lo-que-no-es-motivo',
       title: `Lo que no es motivo de ruptura, aunque se crea lo contrario`,
       content: `<p>Buena parte de quienes se separan lo hacen por cosas que se reparan. No todas, ni mucho menos. Pero estas aparecen tan a menudo que merecen nombrarse.</p>
 
-<p><strong>La bajada del deseo.</strong> Pasados unos años, el deseo espontáneo deja paso al deseo reactivo: ya no llega solo, llega cuando se crean las condiciones. No es una avería, es un cambio de mecánica, y muchas parejas se dejan creyendo que es irreversible.</p>
+<p><strong>La bajada del deseo:</strong> pasados unos años, el deseo espontáneo deja paso al deseo reactivo: ya no llega solo, llega cuando se crean las condiciones. No es una avería, es un cambio de mecánica, y muchas parejas se dejan creyendo que es irreversible.</p>
 
-<p><strong>La sensación de vivir como compañeros de piso.</strong> Es real y duele. Pero entre <a href="/es/test-amor-o-costumbre/">quedarse por amor y quedarse por costumbre</a> la frontera es menos nítida de lo que parece: a veces la costumbre es amor que ha dejado de decirse, y eso se relanza.</p>
+<p><strong>La sensación de vivir como compañeros de piso:</strong> es real y duele. Pero entre <a href="/es/test-amor-o-costumbre/">quedarse por amor y quedarse por costumbre</a> la frontera es menos nítida de lo que parece: a veces la costumbre es amor que ha dejado de decirse, y eso se relanza.</p>
 
-<p><strong>Las discusiones frecuentes.</strong> Lo que predice la separación no es la frecuencia de los conflictos, es su contenido y cómo terminan. Quienes discuten tres veces por semana y reparan aguantan mejor que quienes nunca discuten y se evitan.</p>
+<p><strong>Las discusiones frecuentes:</strong> lo que predice la separación no es la frecuencia de los conflictos, es su contenido y cómo terminan. Quienes discuten tres veces por semana y reparan aguantan mejor que quienes nunca discuten y se evitan.</p>
 
-<p><strong>Dejar de contárselo todo.</strong> Nadie lo cuenta todo. El problema empieza cuando lo que se calla es justamente lo que importa.</p>
+<p><strong>Dejar de contárselo todo:</strong> nadie lo cuenta todo. El problema empieza cuando lo que se calla es justamente lo que importa.</p>
 
-<p>Ahora bien, si el silencio se ha instalado en todas partes y ninguna conversación llega a ningún sitio, ya no es pudor: algo estructural se ha roto, y eso no se arregla solo.</p>`,
+<p>Ahora bien, si el silencio se ha instalado en todas partes y ninguna conversación llega a ningún sitio, ya no es pudor: algo estructural se ha roto, y eso no se arregla solo.</p>
+
+<div class="blog-verdict">
+<div class="blog-verdict-col blog-verdict-col--oui">
+<p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Esto se repara</p>
+<ul>
+<li><strong>La rutina y el aburrimiento</strong>, cuando los dos os quejáis de ellos. Son dos personas que todavía quieren otra cosa.</li>
+<li><strong>Una bajada del deseo</strong> instalada desde hace unos años, sin reproche detrás.</li>
+<li><strong>Discusiones frecuentes pero que terminan</strong>, con alguien que vuelve después.</li>
+<li><strong>Una crisis con fecha</strong>: un duelo, una mudanza, un agotamiento laboral, la llegada de un hijo.</li>
+</ul>
+</div>
+<div class="blog-verdict-col blog-verdict-col--non">
+<p class="blog-verdict-titre"><span aria-hidden="true">👎</span> Esto no se repara solo</p>
+<ul>
+<li><strong>El desprecio ordinario</strong>, ese que ya ni se nota.</li>
+<li><strong>El miedo</strong>, en todas sus formas, incluida la versión educada.</li>
+<li><strong>El aislamiento</strong>, cuando tus amigos se han ido apagando uno a uno.</li>
+<li><strong>El mismo tema retomado diez veces</strong>, con las mismas promesas y cero cambios.</li>
+</ul>
+</div>
+</div>`,
     },
     {
       id: 'cuando-la-pregunta-cambia',
@@ -159,24 +185,27 @@ const article: BlogArticleData = {
 
 <p><strong>Si hay violencia física</strong>, en cualquier grado, una sola vez. No es un problema de pareja, es un delito, y la pregunta pasa a ser tu seguridad.</p>
 
-<p><strong>Si hay miedo.</strong> No la aprensión ante una conversación difícil: miedo. Si adaptas tu comportamiento para no desencadenar una reacción, ya no vives una relación, gestionas un riesgo.</p>
+<p><strong>Si hay miedo:</strong> no la aprensión ante una conversación difícil: miedo. Si adaptas tu comportamiento para no desencadenar una reacción, ya no vives una relación, gestionas un riesgo.</p>
 
-<p><strong>Si hay dominación.</strong> Avanza disfrazada: empieza con atención excesiva, sigue con celos presentados como amor y acaba con control sobre el dinero, la ropa y las personas. Los mecanismos de una <a href="/es/test-pareja-narcisista/">relación con una pareja narcisista</a> son lo bastante concretos como para reconocerse, y reconocerlos suele ser el primer paso.</p>
+<p><strong>Si hay dominación:</strong> avanza disfrazada: empieza con atención excesiva, sigue con celos presentados como amor y acaba con control sobre el dinero, la ropa y las personas. Los mecanismos de una <a href="/es/test-pareja-narcisista/">relación con una pareja narcisista</a> son lo bastante concretos como para reconocerse, y reconocerlos suele ser el primer paso.</p>
 
-<p>En estos tres casos, no lo pienses en soledad ni lo pienses en internet. En España, el 016 es gratuito, no deja rastro en la factura y atiende las 24 horas. Un médico, un abogado o una asociación valen más que todos los artículos del mundo, este incluido.</p>`,
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ No le des vueltas a esto tú solo</p>
+<p>En estos tres casos, tampoco lo pienses en internet. En España, el 016 es gratuito, no deja rastro en la factura y atiende las 24 horas. ¡Un médico, un abogado o una asociación valen más que todos los artículos del mundo, este incluido!</p>
+</aside>`,
     },
     {
       id: 'como-decidir',
       title: `Cómo decidir sin mentirse`,
-      content: `<p>Una vez puestas las señales sobre la mesa, queda decidir. Esto es lo que funciona, y no tiene nada de espectacular.</p>
+      content: `<p>Una vez puestas las señales sobre la mesa, queda decidir. Esto es lo que funciona de verdad… y no tiene nada de espectacular.</p>
 
-<p><strong>Ponte un plazo.</strong> No «ya veremos». Una fecha. Tres meses, seis meses. Una decisión sin plazo no es una decisión, es una espera, y la espera desgasta más que la ruptura.</p>
+<p><strong>Ponte un plazo:</strong> no «ya veremos». Una fecha. Tres meses, seis meses. Una decisión sin plazo no es una decisión, es una espera, y la espera desgasta más que la ruptura.</p>
 
-<p><strong>Decide qué estás probando.</strong> Durante esos tres meses, ¿qué cambia concretamente? Una terapia, dos noches por semana sin móviles, una conversación cada domingo. Si no cambia nada, no estás probando nada: estás esperando a que pase.</p>
+<p><strong>Decide qué estás probando:</strong> durante esos tres meses, ¿qué cambia concretamente? Una terapia, dos noches por semana sin móviles, una conversación cada domingo. Si no cambia nada, no estás probando nada: estás esperando a que pase.</p>
 
-<p><strong>Escribe.</strong> El día que va mal solo recuerdas lo malo; el día que va bien lo borras todo. Tres líneas cada noche durante un mes dan una imagen mucho más justa que tu memoria.</p>
+<p><strong>Escribe:</strong> el día que va mal solo recuerdas lo malo; el día que va bien lo borras todo. Tres líneas cada noche durante un mes dan una imagen mucho más justa que tu memoria.</p>
 
-<p><strong>Habla con alguien que no te quiera demasiado.</strong> Tus mejores amigos te dirán lo que quieres oír. Un terapeuta, un hermano algo brusco, cualquiera sin intereses en la historia te será más útil.</p>
+<p><strong>Habla con alguien que no te quiera demasiado:</strong> tus mejores amigos te dirán lo que quieres oír. Un terapeuta, un hermano algo brusco, cualquiera sin intereses en la historia te será más útil.</p>
 
 <p><strong>Y si no sabes por dónde empezar la conversación</strong>, lo más sencillo es un cuestionario que rellenéis cada uno por separado antes de hablarlo. Responder aparte y luego comparar desactiva muchas cosas: deja de ser tú contra el otro y pasa a ser los dos frente a una diferencia medida. Existe un <a href="/es/test-compatibilidad-pareja/">cuestionario para rellenar en pareja</a> que compara vuestras respuestas, y otro que mide con más precisión <a href="/es/test-relacion-sana/">qué hace que una relación sea sana</a>.</p>
 
@@ -187,7 +216,7 @@ const article: BlogArticleData = {
       title: `Y si decides seguir`,
       content: `<p>Seguir no es no hacer nada. Es justo lo contrario, y es la razón por la que tantas parejas que «deciden seguir» se separan dieciocho meses después: decidieron quedarse, no cambiar.</p>
 
-<p>Seguir significa nombrar una cosa que reparar y mantenerse en ella. Una sola. La mayoría de las parejas fracasan porque quieren rehacerlo todo a la vez, y a las tres semanas gana el cansancio.</p>
+<p>Seguir significa nombrar una cosa que reparar y mantenerse en ella. ¡Una sola! La mayoría de las parejas fracasan porque quieren rehacerlo todo a la vez, y a las tres semanas gana el cansancio.</p>
 
 <p>Significa también aceptar que la relación de después no se parecerá a la de antes. No se vuelve al principio. Se construye otra cosa, con personas que han cambiado. Las parejas que salen adelante no son las que recuperan su relación antigua, son las que aceptan una nueva.</p>
 
@@ -216,7 +245,7 @@ Son una razón para hacer las cosas bien, no necesariamente para quedarse. La in
       title: `Para terminar`,
       content: `<p>No existe un umbral a partir del cual haya que irse. Ni una puntuación, ni un porcentaje, y desde luego no en un artículo. Lo que existe son señales, y una pregunta que solo tú puedes responder con honestidad: <strong>¿estoy atravesando algo o me estoy instalando en ello?</strong></p>
 
-<p>La mayoría de la gente ya conoce la respuesta cuando llega aquí. Lo que busca es que alguien se la confirme. Si es tu caso, tómalo como la confirmación.</p>`,
+<p>La mayoría de la gente ya conoce la respuesta cuando llega aquí… Lo que busca es que alguien se la confirme. Si es tu caso, tómalo como la confirmación.</p>`,
     },
   ],
 };

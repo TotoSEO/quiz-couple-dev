@@ -265,6 +265,19 @@ export const BLOG_CATEGORIES = {
 // Blog article metadata
 export const BLOG_ARTICLES = [
   {
+    internalSlug: 'sentiments-chez-un-homme',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/sentiments-chez-un-homme.webp',
+    slugs: {
+      fr: 'sentiments-chez-un-homme',
+      en: 'how-men-develop-feelings',
+      es: 'como-nacen-los-sentimientos-en-un-hombre',
+      de: 'wie-gefuehle-bei-einem-mann-entstehen',
+      it: 'come-nascono-i-sentimenti-in-un-uomo',
+    },
+    publishedAt: '2026-08-12',
+  },
+  {
     internalSlug: 'arreter-ou-continuer-relation',
     category: 'vie-de-couple',
     featuredImage: '/blog/arreter-ou-continuer-relation.webp',
