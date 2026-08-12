@@ -8,8 +8,11 @@
   <link rel="dns-prefetch" href="<%= supabaseUrl %>">
   <title><%= rawTitle %></title>
   <meta name="description" content="<%= rawDescription %>">
-  <% if (typeof noindex !== 'undefined' && noindex) { %><meta name="robots" content="<%= noindex %>">
-  <% } %><link rel="canonical" href="<%= canonical %>">
+  <%# max-image-preview:large is what lets Google Discover and Search show the
+      full-width image card instead of a thumbnail. Without it the featured
+      image is capped at 100px and the page is effectively invisible in Discover. %>
+  <meta name="robots" content="<%= typeof noindex !== 'undefined' && noindex ? noindex : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' %>">
+  <link rel="canonical" href="<%= canonical %>">
   <% for (const alt of alternates) { %>
   <link rel="alternate" hreflang="<%= alt.hreflang %>" href="<%= alt.href %>">
   <% } %>
@@ -22,8 +25,8 @@
   <meta property="og:url" content="<%= canonical %>">
   <meta property="og:locale" content="<%= locale %>">
   <meta property="og:image" content="<%= ogImage %>">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="<%= typeof ogImageWidth !== 'undefined' ? ogImageWidth : 1200 %>">
+  <meta property="og:image:height" content="<%= typeof ogImageHeight !== 'undefined' ? ogImageHeight : 630 %>">
   <% if (typeof ogType !== 'undefined' && ogType === 'article') { %>
   <meta property="article:published_time" content="<%= typeof articlePublishedTime !== 'undefined' ? articlePublishedTime : '' %>">
   <meta property="article:modified_time" content="<%= typeof articleModifiedTime !== 'undefined' ? articleModifiedTime : '' %>">
