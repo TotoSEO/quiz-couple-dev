@@ -916,8 +916,32 @@
       btn.addEventListener('click', function () {
         var id = this.dataset.id;
         var action = this.dataset.action;
+        // Aucune de ces deux requêtes ne regardait sa réponse : un jeton
+        // expiré, un refus du serveur ou un blocage du navigateur passaient
+        // pour un succès, la ligne disparaissait de l'écran et revenait au
+        // rechargement suivant. On lit désormais l'issue avant de toucher à
+        // la liste, et on le dit quand ça échoue.
+        var bouton = this;
+        bouton.disabled = true;
+
+        function echec(raison) {
+          bouton.disabled = false;
+          alert('Action impossible : ' + raison + '\n\nRechargez la page si le problème persiste.');
+        }
+
+        function lisReponse(res) {
+          return res.json()
+            .catch(function () { return { success: res.ok }; })
+            .then(function (data) {
+              if (!res.ok || !data || data.success === false) {
+                throw new Error((data && data.error) || ('réponse ' + res.status));
+              }
+              return data;
+            });
+        }
+
         if (action === 'delete') {
-          if (!confirm('Supprimer ce message ?')) return;
+          if (!confirm('Supprimer ce message ?')) { bouton.disabled = false; return; }
           fetch(SUPABASE_URL + '/functions/v1/admin-messages', {
             method: 'DELETE',
             headers: {
@@ -926,10 +950,14 @@
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({ id: id })
-          }).then(function () {
+          })
+          .then(lisReponse)
+          .then(function () {
             allMessages = allMessages.filter(function (m) { return m.id !== id; });
+            majPastilles();
             renderMessages();
-          });
+          })
+          .catch(function (err) { echec(err.message || 'erreur inconnue'); });
         } else {
           fetch(SUPABASE_URL + '/functions/v1/admin-messages', {
             method: 'POST',
@@ -939,12 +967,15 @@
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({ id: id, status: action })
-          }).then(function () {
+          })
+          .then(lisReponse)
+          .then(function () {
             var msg = allMessages.find(function (m) { return m.id === id; });
             if (msg) msg.status = action;
             majPastilles();
             renderMessages();
-          });
+          })
+          .catch(function (err) { echec(err.message || 'erreur inconnue'); });
         }
       });
     });

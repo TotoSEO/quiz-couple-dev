@@ -1,9 +1,16 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
+// Access-Control-Allow-Methods manquait, et cette fonction est la seule de
+// l'admin à répondre à un vrai DELETE. Sans cet en-tete, le navigateur
+// n'autorise apres la requete preliminaire que les methodes de la liste sure
+// (GET, HEAD, POST) : le DELETE etait bloque cote navigateur et n'arrivait
+// jamais ici. « Marquer lu » et « Archiver », qui passent en POST, ont
+// toujours fonctionne, ce qui rendait la panne difficile a lire.
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-admin-token',
+  'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
 };
 
 const TOKEN_MAX_AGE = 86400; // 24 hours
