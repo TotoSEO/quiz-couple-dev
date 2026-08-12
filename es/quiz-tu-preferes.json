@@ -3,7 +3,7 @@
     "badge": "¿Qué Prefieres? • 100 preguntas • 2 jugadores",
     "title": "¿Qué Prefieres? El quiz de pareja que te sorprenderá",
     "titleHighlight": "te sorprenderá",
-    "description": "100 dilemas escritos para parejas, 30 sacados al azar en cada partida. Divertido, a veces profundo y nunca igual dos veces."
+    "description": "100 dilemas escritos para parejas, 15 o 30 sacados al azar en cada partida, como prefiráis. Divertido, a veces profundo y nunca igual dos veces."
   },
   "intro": {
     "p1": "El <strong class=\"text-foreground\">preferirías en pareja</strong> es uno de esos pocos formatos que funcionan siempre. Sin material, sin reglas complicadas, solo dos personas, elecciones imposibles… y respuestas que dicen mucho más de lo que parece.",
@@ -44,7 +44,7 @@
   },
   "faq": {
     "q1": "¿Cuántas preguntas contiene este juego de ¿Qué Prefieres? para parejas?",
-    "a1": "El juego contiene 100 preguntas de preferirías escritas para parejas, cada una con dos opciones que hay que elegir. Cada partida saca 30 al azar, así que podéis volver a jugar sin repetir las mismas.",
+    "a1": "El juego contiene 100 preguntas de preferirías escritas para parejas, cada una con dos opciones que hay que elegir. Al empezar elegís una partida rápida de 15 dilemas o una partida completa de 30, sacados al azar, así que podéis volver a jugar sin repetir las mismas. Y si los 15 primeros os han gustado, la pantalla de resultados os propone seguir con los 15 siguientes.",
     "q2": "¿El juego ¿Qué Prefieres? es adecuado para todas las parejas?",
     "a2": "¡Sí! El formato funciona sea cual sea la edad de la pareja o el tiempo que lleváis juntos. Las preguntas están escritas para hacer reír y pensar sin incomodar nunca, y no hay nada que preparar.",
     "q3": "¿Hay preguntas picantes en este quiz?",

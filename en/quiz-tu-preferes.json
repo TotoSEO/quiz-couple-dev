@@ -3,7 +3,7 @@
     "badge": "Would You Rather • 100 questions • 2 players",
     "title": "Would You Rather? The couple quiz that will surprise you",
     "titleHighlight": "surprise you",
-    "description": "100 dilemmas written for couples, 30 drawn at random each game. Funny, occasionally deep, and never the same twice."
+    "description": "100 dilemmas written for couples, 15 or 30 drawn at random each game, whichever you prefer. Funny, occasionally deep, and never the same twice."
   },
   "intro": {
     "p1": "The <strong class=\"text-foreground\">would you rather for couples</strong> is one of those rare formats that works every single time. No equipment, no complicated rules, just two people, impossible choices… and answers that say far more than you'd expect.",
@@ -44,7 +44,7 @@
   },
   "faq": {
     "q1": "How many questions does this Would You Rather couple game contain?",
-    "a1": "The game contains 100 would you rather questions written for couples, each with two options to pick between. A single game draws 30 at random, so you can play again without landing on the same ones.",
+    "a1": "The game contains 100 would you rather questions written for couples, each with two options to pick between. When you start, you choose a quick game of 15 dilemmas or a full game of 30, drawn at random, so you can play again without landing on the same ones. And if you enjoyed the first 15, the results screen offers to carry on with the next 15.",
     "q2": "Is the Would You Rather game suitable for all couples?",
     "a2": "Yes! The format works whatever the couple's age or how long you've been together. The questions are written to make you laugh and think without ever making anyone uncomfortable, and there's nothing to prepare.",
     "q3": "Are there any spicy questions in this quiz?",

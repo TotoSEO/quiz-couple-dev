@@ -3,7 +3,7 @@
     "badge": "Tu Préfères • 100 questions • 2 joueurs",
     "title": "Tu Préfères ? Le quiz de couple qui vous surprendra",
     "titleHighlight": "vous surprendra",
-    "description": "100 dilemmes écrits pour les couples, 30 tirés au hasard à chaque partie. Drôle, parfois profond, et jamais deux fois pareil."
+    "description": "100 dilemmes écrits pour les couples, 15 ou 30 tirés au hasard à chaque partie, comme vous voulez. Drôle, parfois profond, et jamais deux fois pareil."
   },
   "intro": {
     "p1": "Le <strong class=\"text-foreground\">tu préfères en couple</strong> est l'un des rares formats qui marche à tous les coups. Pas de matériel, pas de règles compliquées, juste deux personnes, des choix impossibles… et des réponses qui en disent bien plus qu'on ne le croit.",
@@ -44,7 +44,7 @@
   },
   "faq": {
     "q1": "Combien de questions contient ce jeu tu préfères couple ?",
-    "a1": "Le jeu contient 100 questions tu préfères écrites pour les couples, chacune avec deux options à trancher. Une partie en tire 30 au hasard : vous pouvez donc rejouer plusieurs fois sans retomber sur les mêmes.",
+    "a1": "Le jeu contient 100 questions tu préfères écrites pour les couples, chacune avec deux options à trancher. Au lancement, vous choisissez une partie rapide de 15 dilemmes ou une partie complète de 30, tirés au hasard : vous pouvez donc rejouer plusieurs fois sans retomber sur les mêmes. Et si les 15 premiers vous ont plu, l'écran de résultat vous propose d'enchaîner sur les 15 suivants.",
     "q2": "Le jeu tu préfères est-il adapté à tous les couples ?",
     "a2": "Oui ! Le format marche quel que soit l'âge du couple ou la durée de la relation. Les questions sont écrites pour faire rire et réfléchir sans jamais mettre mal à l'aise, et il n'y a rien à préparer.",
     "q3": "Y a-t-il des questions coquines dans ce quiz ?",
