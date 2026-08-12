@@ -271,6 +271,108 @@
     if (allMessages.length === 0) loadMessages();
   }
 
+  // ── Noms lisibles des quiz ──
+  // La base stocke le slug technique pose sur #quiz-engine (data-quiz). Ca se
+  // lit tres mal dans un tableau : « knowledge », « jalousie1 », « sain ».
+  // On traduit a l'affichage seulement, jamais en base, sinon les anciennes
+  // lignes ne correspondraient plus.
+  var NOMS_QUIZ = {
+    'action-ou-verite': 'Action ou vérité',
+    'action-ou-verite-coquin': 'Action ou vérité hot',
+    'ado': 'Couple ado',
+    'amour-habitude': 'Amour ou habitude',
+    'amoureux': 'Quiz amoureux',
+    'attachement': "Style d'attachement",
+    'common-points': 'Points communs',
+    'compatibilite': 'Compatibilité',
+    'confiance': 'Confiance',
+    'coquin': 'Quiz coquin',
+    'couche': "A-t-il/elle couché ailleurs",
+    'dilemmes': 'Dilemmes',
+    'distance': 'Couple à distance',
+    'distance-aime': "M'aime-t-il/elle à distance",
+    'divorce': 'Risque de divorce',
+    'emmenager': 'Emménager ensemble',
+    'gage-couple': 'Jeu des gages',
+    'genant': 'Questions gênantes',
+    'infidelite': 'Infidélité',
+    'jalousie1': 'Jalousie (ma jalousie)',
+    'jalousie2': 'Jalousie (sa jalousie)',
+    'karmique': 'Relation karmique',
+    'knowledge': 'Qui connaît le mieux',
+    'langage-amour': "Langage de l'amour",
+    'mariage': 'Prêts pour le mariage',
+    'marrant': 'Quiz marrant',
+    'most': 'Qui est le plus',
+    'parentalite': 'Parentalité',
+    'pervers': 'Pervers narcissique',
+    'plateau-couple': 'Jeu de plateau',
+    'purete': 'Test de pureté',
+    'qui-de-nous-deux': 'Qui de nous deux',
+    'sain': 'Couple sain',
+    'secret': "M'aime-t-il/elle en secret",
+    'suis-je-amoureux': 'Suis-je amoureux',
+    'tentation': 'Tentation',
+    'tester-couple': 'Test de couple',
+    'toxic': 'Couple toxique',
+    'tu-preferes': 'Tu préfères',
+    'vrai-faux': 'Vrai ou faux',
+    'zamours': "Les Z'Amours",
+
+    // Les avis n'utilisent pas le meme identifiant que les completions : ils
+    // enregistrent la cle de route (#pq-reviews data-quiz-slug), pas le
+    // data-quiz du moteur. Les deux jeux de cles cohabitent donc ici.
+    testCouple: 'Test de couple',
+    testCommonPoints: 'Points communs',
+    testCompatibilite: 'Compatibilité',
+    testDistance: 'Couple à distance',
+    testToxic: 'Couple toxique',
+    testPervers: 'Pervers narcissique',
+    testAmourHabitude: 'Amour ou habitude',
+    testCoupleSain: 'Couple sain',
+    testMariage: 'Prêts pour le mariage',
+    testDivorce: 'Risque de divorce',
+    quizAmoureux: 'Quiz amoureux',
+    quizCoquin: 'Quiz coquin',
+    quizMarrant: 'Quiz marrant',
+    quizKnowledge: 'Qui connaît le mieux',
+    quizMost: 'Qui est le plus',
+    quizAdo: 'Couple ado',
+    testParentalite: 'Parentalité',
+    testEmmenager: 'Emménager ensemble',
+    testAstroPrenoms: 'Compatibilité des prénoms',
+    testDateNaissance: 'Compatibilité par date de naissance',
+    testJalousie: 'Jalousie',
+    testKarmique: 'Relation karmique',
+    testSuisJeAmoureux: 'Suis-je amoureux',
+    jeuGages: 'Jeu des gages',
+    jeuPlateau: 'Jeu de plateau',
+    jeuQuiDeNous: 'Qui de nous deux',
+    jeuActionVerite: 'Action ou vérité',
+    jeuActionVeriteHot: 'Action ou vérité hot',
+    quizGenant: 'Questions gênantes',
+    testLangageAmour: "Langage de l'amour",
+    quizTuPreferes: 'Tu préfères',
+    quizVraiFaux: 'Vrai ou faux',
+    testAttachement: "Style d'attachement",
+    testConfiance: 'Confiance',
+    testInfidelite: 'Infidélité',
+    testCouche: 'A-t-il/elle couché ailleurs',
+    testSecret: "M'aime-t-il/elle en secret",
+    testDistanceAime: "M'aime-t-il/elle à distance",
+    // 'zamours' est deja plus haut : c'est le seul identifiant identique dans
+    // les deux nommages, une seule entree suffit.
+    jeuDilemmes: 'Dilemmes',
+    quizTentation: 'Tentation',
+    testPurete: 'Test de pureté'
+  };
+  // Un slug inconnu (nouveau quiz pas encore reference ici) reste affiche tel
+  // quel plutot que de disparaitre : la ligne existe en base, elle doit se voir.
+  function nomQuiz(slug) {
+    if (!slug) return '';
+    return NOMS_QUIZ[slug] || slug;
+  }
+
   // ── Stats : completions de quiz (RPC publiques, cle anon) ──
   var statsCounts = [];
   var statsRange = 30;
@@ -403,8 +505,8 @@
     var max = statsCounts[0].total || 1;
     listEl.innerHTML = statsCounts.map(function (r) {
       var pct = Math.round((r.total / max) * 100);
-      return '<button class="stats-row" data-slug="' + esc(r.quiz_slug) + '">'
-        + '<span class="stats-row-name">' + esc(r.quiz_slug) + '</span>'
+      return '<button class="stats-row" data-slug="' + esc(r.quiz_slug) + '" title="' + esc(r.quiz_slug) + '">'
+        + '<span class="stats-row-name">' + esc(nomQuiz(r.quiz_slug)) + '</span>'
         + '<span class="stats-row-bar"><span style="width:' + pct + '%"></span></span>'
         + '<span class="stats-row-val">' + Number(r.total).toLocaleString('fr-FR') + '</span>'
         + '</button>';
@@ -420,7 +522,7 @@
   function loadDaily(slug) {
     statsSelectedSlug = slug;
     var titleEl = document.getElementById('admin-stats-chart-title');
-    if (titleEl) titleEl.textContent = slug + ' · 30 derniers jours';
+    if (titleEl) titleEl.textContent = nomQuiz(slug) + ' · 30 derniers jours';
     drawLineChart(document.getElementById('admin-stats-chart'), null, { loading: true });
     // Meme decoupage que la courbe totale : sans fuseau, la base groupe en UTC
     // et la colonne du jour reste vide jusqu'a deux heures du matin.
@@ -725,7 +827,7 @@
 
       html += '<div class="glass-card rounded-xl p-5 space-y-3">';
       html += '<div class="flex items-center justify-between flex-wrap gap-2">';
-      var quizBadge = '<span class="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">' + (r.quiz_slug ? esc(r.quiz_slug) : 'Général (home)') + '</span>';
+      var quizBadge = '<span class="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">' + (r.quiz_slug ? esc(nomQuiz(r.quiz_slug)) : 'Général (home)') + '</span>';
       html += '<div class="flex items-center gap-2 flex-wrap"><span class="font-semibold">' + esc(r.author_name || 'Anonyme') + '</span>' + statusBadge + quizBadge + '</div>';
       html += '<div class="flex items-center gap-0.5">' + starsHtml(r.rating) + '</div>';
       html += '</div>';

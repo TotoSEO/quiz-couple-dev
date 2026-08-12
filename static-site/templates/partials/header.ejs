@@ -52,7 +52,9 @@
   const directLinks = [
     // Le test de pureté vise un mot-clé très concurrentiel : il lui faut une
     // entrée de premier niveau, pas une ligne perdue dans le menu des tests.
-    { routeKey: 'testPurete', labelKey: 'nav.testPurete' },
+    // « vedette » lui donne en plus un traitement à part, distinct du bouton
+    // des activités pour qu'on ne lise pas deux fois le même appel à l'action.
+    { routeKey: 'testPurete', labelKey: 'nav.testPurete', vedette: true, emoji: '🌡️' },
     { routeKey: 'customQuiz', labelKey: 'nav.customQuiz' },
     { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple' },
     { routeKey: 'blog', labelKey: 'Blog' },
@@ -218,12 +220,20 @@
           </div>
         </div>
 
-        <!-- Separator -->
-        <div class="nav-separator"></div>
+        <%# Le séparateur sautait juste avant la pastille du test de pureté :
+            son néon marque déjà la coupure, et la barre est trop chargée pour
+            se payer un trait décoratif de plus. %>
 
         <!-- Direct links -->
         <% for (const link of directLinksFiltered) { %>
+        <% if (link.vedette) { %>
+        <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-vedette">
+          <span class="nav-vedette-emoji" aria-hidden="true"><%= link.emoji %></span>
+          <span class="nav-vedette-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
+        </a>
+        <% } else { %>
         <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-link"><%= t('common:' + link.labelKey, link.labelKey) %></a>
+        <% } %>
         <% } %>
 
         <!-- Activities CTA -->
@@ -346,7 +356,15 @@
 
         <!-- Direct links -->
         <% for (const link of directLinksFiltered) { %>
+        <% if (link.vedette) { %>
+        <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-vedette">
+          <span class="mobile-nav-vedette-emoji" aria-hidden="true"><%= link.emoji %></span>
+          <span class="mobile-nav-vedette-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
+          <span class="mobile-nav-vedette-point" aria-hidden="true"></span>
+        </a>
+        <% } else { %>
         <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-link"><%= t('common:' + link.labelKey, link.labelKey) %></a>
+        <% } %>
         <% } %>
 
         <!-- Activities CTA (mobile) -->
