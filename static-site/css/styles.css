@@ -6430,15 +6430,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   100% { transform: scale(1); }
 }
 
-.qdn-passe { padding: 2rem 1rem; }
-.qdn-passe-tel { font-size: 3.2rem; animation: qdnPasse 1.6s ease-in-out infinite; }
-@keyframes qdnPasse {
-  0%, 100% { transform: translateX(-16px) rotate(-8deg); }
-  50% { transform: translateX(16px) rotate(8deg); }
-}
-.qdn-passe-titre { font-size: 1.35rem; font-weight: 700; margin: 0.75rem 0 0.4rem; }
-.qdn-passe-desc { color: hsl(var(--muted-foreground)); font-size: 0.9rem; }
-
 .qdn-decompte { padding: 3rem 1rem; }
 .qdn-decompte-nb {
   font-size: 5rem; font-weight: 800; line-height: 1;
@@ -6562,7 +6553,7 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .qdn-recap-amorce { font-style: normal; opacity: 0.65; }
 
 @media (prefers-reduced-motion: reduce) {
-  .qdn-setup-emoji, .qdn-serie, .qdn-passe-tel, .qdn-combo,
+  .qdn-setup-emoji, .qdn-serie, .qdn-combo,
   .qdn-decompte-nb, .qdn-decompte-nb--pop, .qdn-reveal-carte,
   .qdn-verdict--clash, .qdn-choix--verrouille .qdn-choix-btn--pris { animation: none; }
   .qdn-confettis { display: none; }
@@ -7425,4 +7416,105 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .qc-panneau-fond, .qc-panneau, .qc-panneau-btn { transition: none; }
   .qc-panneau { transform: rotate(-1.4deg); opacity: 1; }
   .qc-panneau-fond--visible .qc-panneau { transform: rotate(-1.4deg); }
+}
+
+/* ── Relais entre les deux joueurs ─────────────────────────────────────────
+   Remplace l'ancien écran « passe le téléphone » et son bouton « Répondre »,
+   qui coûtait quarante clics sur un quiz de vingt questions joué à deux et
+   cassait la lancée à chaque réponse. Le bandeau annonce qui répond, laisse
+   le temps de tendre le téléphone, puis s'efface tout seul. La jauge du bas
+   est ce qui rend l'attente lisible : sans elle on croit l'écran figé et on
+   tape dessus. Même grammaire que le reste de la charte, bordure épaisse,
+   ombre dure sans flou et carte légèrement de travers. */
+.qc-relais {
+  --ink: 268 45% 27%;
+  position: relative;
+  max-width: 25rem;
+  margin: 0 auto;
+  padding: 2.3rem 1.4rem 1.5rem;
+  border-radius: 1.9rem;
+  border: 3px solid hsl(var(--ink));
+  background: hsl(var(--card));
+  box-shadow: 8px 9px 0 hsl(var(--ink));
+  text-align: center;
+  cursor: pointer;
+  transform: rotate(-1.2deg);
+  animation: qcRelaisEntree 300ms cubic-bezier(.34, 1.42, .64, 1) both;
+}
+.dark .qc-relais { --ink: 270 30% 62%; }
+
+@keyframes qcRelaisEntree {
+  from { transform: rotate(-1.2deg) translateY(16px) scale(0.94); opacity: 0; }
+  to   { transform: rotate(-1.2deg); opacity: 1; }
+}
+
+/* Le macaron déborde du cadre : c'est lui qui casse le rectangle et fait
+   lire le bandeau comme un objet posé sur la page. */
+.qc-relais-macaron {
+  position: absolute; top: -1.4rem; left: -0.9rem;
+  width: 3.6rem; height: 3.6rem;
+  display: grid; place-items: center;
+  font-size: 1.7rem; line-height: 1;
+  border-radius: 999px;
+  border: 3px solid hsl(var(--ink));
+  background: linear-gradient(150deg, hsl(338 84% 64%), hsl(16 92% 60%));
+  box-shadow: 4px 4px 0 hsl(var(--ink));
+  transform: rotate(-12deg);
+}
+.qc-relais-macaron > span { display: block; transform: rotate(12deg); }
+
+/* Un paragraphe et non un titre : la page a déjà sa hiérarchie, et ce
+   bandeau vit moins de deux secondes. */
+.qc-relais-annonce {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.3rem; font-weight: 800; line-height: 1.3;
+  color: hsl(var(--foreground));
+  margin: 0 0 0.5rem;
+  text-wrap: balance;
+}
+.qc-relais-nom {
+  display: inline-block;
+  color: hsl(var(--primary));
+  transform: rotate(1.5deg);
+}
+
+.qc-relais-note {
+  font-size: 0.85rem; line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 0.35rem;
+  text-wrap: pretty;
+}
+
+.qc-relais-etape {
+  font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground) / 0.8);
+  margin: 0 0 1.1rem;
+}
+
+.qc-relais-piste {
+  height: 0.55rem;
+  border-radius: 999px;
+  border: 2px solid hsl(var(--ink));
+  background: hsl(var(--muted));
+  overflow: hidden;
+}
+.qc-relais-jauge {
+  height: 100%; width: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, hsl(338 84% 64%), hsl(266 62% 60%));
+  animation: qcRelaisJauge linear both;
+}
+@keyframes qcRelaisJauge { from { width: 0; } to { width: 100%; } }
+
+@media (min-width: 480px) {
+  .qc-relais { max-width: 27rem; padding: 2.7rem 2rem 1.7rem; }
+  .qc-relais-annonce { font-size: 1.5rem; }
+  .qc-relais-macaron { width: 4.2rem; height: 4.2rem; font-size: 2rem; top: -1.7rem; left: -1.2rem; }
+}
+
+/* La jauge reste : elle ne bouge pas l'écran, et c'est la seule chose qui
+   dit combien de temps il reste avant que la question arrive. */
+@media (prefers-reduced-motion: reduce) {
+  .qc-relais { animation: none; transform: rotate(-1.2deg); }
 }

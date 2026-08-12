@@ -109,7 +109,7 @@ const GD_QUESTION_PREFIXES = {
   jalousie1: ['jalousie1'], jalousie2: ['jalousie2'],
   genant: ['genant'], 'vrai-faux': ['vraifaux'],
   attachement: ['attachement'], confiance: ['confiance'],
-  infidelite: ['infidelite'], bebe: ['bebe'],
+  infidelite: ['infidelite'],
   'tu-preferes': ['wyr'], 'langage-amour': ['loveLanguage'],
 };
 // Quiz types whose answers aren't meaningful multiple-choice options to list.
@@ -1258,7 +1258,7 @@ async function generateBlogArticle(articleMeta, lang) {
     sidebarTests: [
       'testCouple', 'testCommonPoints', 'testCompatibilite', 'testSuisJeAmoureux', 'testDistance',
       'testToxic', 'testPervers', 'testAmourHabitude', 'testCoupleSain', 'testMariage', 'testDivorce',
-      'testParentalite', 'testEmmenager', 'testBebe', 'testAstroPrenoms', 'testDateNaissance', 'testKarmique',
+      'testParentalite', 'testEmmenager', 'testAstroPrenoms', 'testDateNaissance', 'testKarmique',
       'testJalousie', 'testInfidelite', 'testCouche', 'testSecret', 'testDistanceAime', 'testLangageAmour', 'testAttachement', 'testConfiance',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarQuizzes: [
@@ -1457,6 +1457,15 @@ async function main() {
     { from: 'en/privacy', to: '/en/privacy-policy/' },
     { from: 'de/beziehungstest', to: '/de/paar-kompatibilitaetstest/' },
     { from: 'de/quiz-wer-kennt-partner-besser', to: '/de/wer-kennt-partner-besser-quiz/' },
+    // Le test « prêt pour bébé » faisait doublon avec le test de parentalité,
+    // qui est plus ancien, mieux positionné et déjà en place. Les quatre
+    // questions qu'il avait en propre ont été reprises dans le test de
+    // parentalité, la page est retirée et son adresse renvoie dessus.
+    { from: 'test-pret-pour-bebe', to: '/test-parentalite-couple/' },
+    { from: 'en/ready-for-a-baby-test', to: '/en/parenthood-readiness-test/' },
+    { from: 'es/test-listo-para-un-bebe', to: '/es/test-parentalidad-pareja/' },
+    { from: 'de/bereit-fuer-ein-baby-test', to: '/de/elternschafts-bereitschaftstest/' },
+    { from: 'it/test-pronto-per-un-bambino', to: '/it/test-genitorialita-coppia/' },
     // Retired AI problem-resolver page → redirect to the sibling "couple questions" tool
     { from: 'resoudre-probleme-couple', to: '/questions-couple/' },
     { from: 'en/solve-couple-problem', to: '/en/couple-questions/' },

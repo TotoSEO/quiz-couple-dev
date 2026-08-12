@@ -1,8 +1,8 @@
 {
   "hero": {
-    "badge": "200 preguntas • Gratis • Sin registro",
+    "badge": "153 preguntas • Gratis • Sin registro",
     "title": "Test de puntos comunes en pareja: ¿sois realmente compatibles?",
-    "description": "Descubre vuestras afinidades, gustos compartidos y valores comunes con este test interactivo. ¡20 preguntas al azar entre 200 para una experiencia única cada vez!",
+    "description": "Descubre vuestras afinidades, gustos compartidos y valores comunes con este test interactivo. ¡20 preguntas al azar entre 153 para una experiencia única cada vez!",
     "duration": "5 minutos",
     "players": "2 jugadores",
     "questions": "20 preguntas / sesión",
@@ -38,8 +38,8 @@
       ]
     },
     "s4": {
-      "title": "Test de puntos comunes en pareja: 200 preguntas",
-      "p1": "Nuestra base de datos contiene 200 preguntas cuidadosamente seleccionadas, cubriendo todos los aspectos de la vida en pareja.",
+      "title": "Test de puntos comunes en pareja: 153 preguntas",
+      "p1": "Nuestra base de datos contiene 153 preguntas cuidadosamente seleccionadas, cubriendo todos los aspectos de la vida en pareja.",
       "categories": [
         {
           "title": "Personalidad y carácter",
@@ -101,7 +101,7 @@
       },
       {
         "q": "¿Se puede repetir el test con otras preguntas?",
-        "a": "¡Sí! Al final del test, podéis empezar de nuevo con una nueva selección de 20 preguntas entre las 200 disponibles."
+        "a": "¡Sí! Al final del test, podéis empezar de nuevo con una nueva selección de 20 preguntas entre las 153 disponibles."
       }
     ]
   },

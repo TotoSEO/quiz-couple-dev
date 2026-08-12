@@ -1,8 +1,8 @@
 {
   "hero": {
-    "badge": "200 domande • Gratuito • Senza registrazione",
+    "badge": "153 domande • Gratuito • Senza registrazione",
     "title": "Test punti in comune in coppia: siete davvero compatibili?",
-    "description": "Scoprite le vostre affinità, i gusti condivisi e i valori comuni con questo test interattivo. 20 domande casuali tra 200 per un'esperienza unica ogni volta!",
+    "description": "Scoprite le vostre affinità, i gusti condivisi e i valori comuni con questo test interattivo. 20 domande casuali tra 153 per un'esperienza unica ogni volta!",
     "duration": "5 minuti",
     "players": "2 giocatori",
     "questions": "20 domande / sessione",
@@ -38,8 +38,8 @@
       ]
     },
     "s4": {
-      "title": "Test dei punti in comune di coppia: 200 domande",
-      "p1": "Il nostro database contiene 200 domande accuratamente selezionate, che coprono tutti gli aspetti della vita di coppia.",
+      "title": "Test dei punti in comune di coppia: 153 domande",
+      "p1": "Il nostro database contiene 153 domande accuratamente selezionate, che coprono tutti gli aspetti della vita di coppia.",
       "categories": [
         {
           "title": "Personalità e carattere",
@@ -93,7 +93,7 @@
     "faq": [
       {
         "q": "Come funziona il test dei punti in comune?",
-        "a": "Inserite i vostri nomi, poi rispondete a turno alle 20 domande casuali tra 200. Ogni risposta identica conta come un punto in comune. Alla fine, scoprite il vostro punteggio di compatibilità!"
+        "a": "Inserite i vostri nomi, poi rispondete a turno alle 20 domande casuali tra 153. Ogni risposta identica conta come un punto in comune. Alla fine, scoprite il vostro punteggio di compatibilità!"
       },
       {
         "q": "Servono molti punti in comune per essere compatibili?",
@@ -101,7 +101,7 @@
       },
       {
         "q": "Si può rifare il test con altre domande?",
-        "a": "Sì! Alla fine del test, potete ricominciare con una nuova selezione di 20 domande tra le 200 disponibili."
+        "a": "Sì! Alla fine del test, potete ricominciare con una nuova selezione di 20 domande tra le 153 disponibili."
       }
     ]
   },

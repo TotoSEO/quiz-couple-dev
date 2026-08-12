@@ -1,8 +1,8 @@
 {
   "hero": {
-    "badge": "200 questions • Gratuit • Sans inscription",
+    "badge": "153 questions • Gratuit • Sans inscription",
     "title": "Test de points communs en couple : êtes-vous vraiment compatibles ?",
-    "description": "Découvrez vos affinités, vos goûts partagés et vos valeurs communes avec ce test interactif. 20 questions tirées au hasard parmi 200 pour une expérience unique à chaque fois !",
+    "description": "Découvrez vos affinités, vos goûts partagés et vos valeurs communes avec ce test interactif. 20 questions tirées au hasard parmi 153 pour une expérience unique à chaque fois !",
     "duration": "5 minutes",
     "players": "2 joueurs",
     "questions": "20 questions / session",
@@ -38,8 +38,8 @@
       ]
     },
     "s4": {
-      "title": "Test des points communs en couple : 200 questions",
-      "p1": "Notre base de données contient 200 questions soigneusement sélectionnées, couvrant tous les aspects de la vie à deux. À chaque session, 20 questions sont tirées au hasard pour une expérience toujours renouvelée.",
+      "title": "Test des points communs en couple : 153 questions",
+      "p1": "Notre base de données contient 153 questions soigneusement sélectionnées, couvrant tous les aspects de la vie à deux. À chaque session, 20 questions sont tirées au hasard pour une expérience toujours renouvelée.",
       "categories": [
         {
           "title": "Personnalité et caractère",
@@ -93,7 +93,7 @@
     "faq": [
       {
         "q": "Comment fonctionne le test de points communs ?",
-        "a": "Entrez vos deux prénoms, puis répondez à tour de rôle aux 20 questions tirées au hasard parmi 200. Chaque réponse identique compte comme un point commun. À la fin, découvrez votre score de compatibilité !"
+        "a": "Entrez vos deux prénoms, puis répondez à tour de rôle aux 20 questions tirées au hasard parmi 153. Chaque réponse identique compte comme un point commun. À la fin, découvrez votre score de compatibilité !"
       },
       {
         "q": "Faut-il beaucoup de points communs pour être compatibles ?",
@@ -101,7 +101,7 @@
       },
       {
         "q": "Peut-on refaire le test avec d'autres questions ?",
-        "a": "Oui ! À la fin du test, vous pouvez recommencer avec un nouveau tirage de 20 questions parmi les 200 disponibles. Chaque session est unique."
+        "a": "Oui ! À la fin du test, vous pouvez recommencer avec un nouveau tirage de 20 questions parmi les 153 disponibles. Chaque session est unique."
       }
     ]
   },

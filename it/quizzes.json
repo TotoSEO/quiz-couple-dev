@@ -6,10 +6,10 @@
     "metaDescription": "Test di compatibilità di coppia gratuito: 20 domande per valutare la tua relazione. Scopri i punti di forza e le aree da migliorare. Senza registrazione!"
   },
   "testCommonPoints": {
-    "title": "Test Punti Comuni per Coppie - 200 Domande | Gratis",
+    "title": "Test Punti Comuni per Coppie - 153 Domande | Gratis",
     "shortTitle": "Test Punti Comuni",
-    "description": "Misura i tuoi punti comuni con 200 domande! Rispondete a turno e scoprite il vostro livello di compatibilità.",
-    "metaDescription": "Test di punti comuni per coppie con 200 domande per misurare la vostra compatibilità. Rispondete a turno. Gratis e senza registrazione!"
+    "description": "Misura i tuoi punti comuni con 153 domande! Rispondete a turno e scoprite il vostro livello di compatibilità.",
+    "metaDescription": "Test di punti comuni per coppie con 153 domande per misurare la vostra compatibilità. Rispondete a turno. Gratis e senza registrazione!"
   },
   "testCompatibilite": {
     "title": "Test di compatibilità amorosa gratuito: la vostra percentuale",
@@ -109,8 +109,8 @@
   "testParentalite": {
     "title": "Domande da porsi prima di avere figli: Test",
     "shortTitle": "Test Genitorialità",
-    "description": "20 domande oneste per valutare la vostra preparazione di coppia prima di avere un figlio. Test gratuito, risultato immediato.",
-    "metaDescription": "Siete davvero pronti a diventare genitori? 20 domande oneste per valutare la vostra preparazione di coppia prima di avere un figlio. Test gratuito, risultato immediato."
+    "description": "24 domande oneste per valutare la vostra preparazione di coppia prima di avere un figlio. Test gratuito, risultato immediato.",
+    "metaDescription": "Siete davvero pronti a diventare genitori? 24 domande oneste per valutare la vostra preparazione di coppia prima di avere un figlio. Test gratuito, risultato immediato."
   },
   "testAstroPrenoms": {
     "title": "Compatibilità amorosa: Nomi e segni zodiacali | Test gratuito",
@@ -207,12 +207,6 @@
     "shortTitle": "Mi ama ancora?",
     "description": "15 domande per distinguere ciò che dipende dalla distanza da ciò che dipende dal sentimento. Test individuale, risultato immediato.",
     "metaDescription": "Mi ama ancora nonostante la distanza? 15 domande su chiamate, progetti e silenzi. Test gratuito, anonimo, risultato immediato."
-  },
-  "testBebe": {
-    "title": "Test pronto per un bambino: sei preparato alla genitorialità?",
-    "shortTitle": "Test Bambino",
-    "description": "20 domande per valutare la tua preparazione alla genitorialità: maturità emotiva, finanze, coppia, stile di vita. Risultato immediato.",
-    "metaDescription": "Sei pronto per un bambino? 20 domande su maturità emotiva, finanze e coppia. Gratuito, riservato, risultato immediato."
   },
   "testKarmique": {
     "title": "Test relazione karmica: che legame vi unisce davvero?",

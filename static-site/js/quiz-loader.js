@@ -28,7 +28,7 @@
 
     // ── Duo with gender (2 players + gender selection, answer matching) ──
     'tester-couple':  { prefix: 'couple', engine: 'duo-match', totalQ: 20, pool: 30, needsGender: true, useScoring: true },
-    'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 200, needsGender: true },
+    'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 153, needsGender: true },
 
     // ── Love compatibility (2 players, matching = alignment % on core dimensions) ──
     'compatibilite':  { prefix: 'compatibilite', engine: 'duo-match', totalQ: 20, pool: 20, needsGender: true, resultSet: 'compat' },
@@ -69,7 +69,7 @@
     'most':           { prefix: 'most', engine: 'most', totalQ: 20, pool: 245, textOnly: true },
 
     // ── Parentalite quiz (2 players, same questions, explicit point values) ──
-    'parentalite':    { prefix: 'parentalite', engine: 'parentalite', totalQ: 20, pool: 20 },
+    'parentalite':    { prefix: 'parentalite', engine: 'parentalite', totalQ: 24, pool: 24 },
 
     // ── Emmenager quiz (same engine as parentalite) ──
     'emmenager':      { prefix: 'emmenager', engine: 'parentalite', totalQ: 20, pool: 20 },
@@ -181,7 +181,6 @@
     ] },
 
     // ── Bebe quiz (solo scoring, descending: more ready = higher score) ──
-    'bebe':           { prefix: 'bebe', engine: 'solo', totalQ: 20, pool: 20, quizType: 'bebe' },
 
     // ── Les Z'Amours (TV game-show: guess & reveal + 45s final) ──
     'zamours':        { prefix: 'zamours', engine: 'zamours', totalQ: 14, pool: 60 },

@@ -6,10 +6,10 @@
     "metaDescription": "Votre couple est-il solide ? Faites ce test gratuit de 20 questions et obtenez un diagnostic clair de votre relation en quelques minutes."
   },
   "testCommonPoints": {
-    "title": "Test des points communs en couple : 200 questions à deux",
+    "title": "Test des points communs en couple : 153 questions à deux",
     "shortTitle": "Test Points Communs",
-    "description": "Mesurez vos points communs avec 200 questions ! Répondez à tour de rôle et découvrez votre niveau de compatibilité.",
-    "metaDescription": "Avez-vous vraiment des choses en commun ? 200 questions à faire à deux pour mesurer vos affinités et découvrir vos points de compatibilité."
+    "description": "Mesurez vos points communs avec 153 questions ! Répondez à tour de rôle et découvrez votre niveau de compatibilité.",
+    "metaDescription": "Avez-vous vraiment des choses en commun ? 153 questions à faire à deux pour mesurer vos affinités et découvrir vos points de compatibilité."
   },
   "testCompatibilite": {
     "title": "Test de compatibilité amoureuse : votre score en 20 questions",
@@ -109,8 +109,8 @@
   "testParentalite": {
     "title": "Test parentalité en couple : êtes-vous prêts pour bébé ?",
     "shortTitle": "Test Parentalité",
-    "description": "20 questions honnêtes pour évaluer votre préparation en couple avant d'avoir un enfant. Test gratuit, résultat immédiat.",
-    "metaDescription": "Êtes-vous prêts à devenir parents ? 20 questions pour évaluer votre préparation en couple avant d'accueillir un bébé. Test gratuit."
+    "description": "24 questions honnêtes pour évaluer votre préparation en couple avant d'avoir un enfant. Test gratuit, résultat immédiat.",
+    "metaDescription": "Êtes-vous prêts à devenir parents ? 24 questions pour évaluer votre préparation en couple avant d'accueillir un bébé. Test gratuit."
   },
   "testAstroPrenoms": {
     "title": "Compatibilité amoureuse prénom et signe astrologique, gratuit",
@@ -201,12 +201,6 @@
     "shortTitle": "M'aime-t-il/elle encore ?",
     "description": "15 questions pour distinguer ce qui relève de la distance de ce qui relève du sentiment. Test solo, résultat immédiat.",
     "metaDescription": "Est-ce qu'il ou elle m'aime encore malgré la distance ? 15 questions sur les appels, les projets et les silences. Test gratuit et anonyme."
-  },
-  "testBebe": {
-    "title": "Test : êtes-vous prêt(e) pour un bébé ? 20 questions essentielles",
-    "shortTitle": "Test Bébé",
-    "description": "20 questions pour savoir si vous êtes vraiment prêt(e) à avoir un enfant. Financier, émotionnel, relationnel : on fait le point.",
-    "metaDescription": "Prêt(e) pour un bébé ? 20 questions sur votre situation financière, émotionnelle et relationnelle. Test gratuit, résultat immédiat."
   },
   "zamours": {
     "title": "Quiz Les Z'Amours en couple : 60 questions comme à la télé",
