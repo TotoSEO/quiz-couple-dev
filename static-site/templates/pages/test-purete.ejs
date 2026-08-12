@@ -122,9 +122,30 @@
   }
 
   // ── Données structurées ──
-  // Un Quiz plutôt qu'un article : la page est un outil. On n'expose pas les
-  // questions, elles n'ont aucun intérêt hors du barème et alourdiraient le
-  // balisage de quarante kilo-octets.
+  // Un Quiz plutôt qu'un article : la page est un outil.
+  //
+  // hasPart était vide, alors que toutes les autres pages de test le
+  // remplissent : c'est la propriété sur laquelle Google construit son
+  // résultat enrichi de questions, et cette page était la seule à ne rien
+  // lui donner. On n'y met pas les cent questions, ce serait vingt-cinq
+  // kilo-octets de balisage, mais un échantillon pris dans le pool tout
+  // public : ce sont les seules qu'on veut voir citées dans un résultat de
+  // recherche, et elles décrivent le test aussi bien que les autres.
+  var ECHANTILLON = 12;
+  var hasPart = [];
+  var pureteData = typeof pureteQuestions !== 'undefined' ? pureteQuestions : null;
+  if (pureteData && pureteData.solo && Array.isArray(pureteData.solo.questions)) {
+    pureteData.solo.questions.filter(function (q) { return q.ado; }).slice(0, ECHANTILLON)
+      .forEach(function (q, i) {
+        hasPart.push({
+          "@type": "Question", "position": i + 1, "name": q.q,
+          "suggestedAnswer": q.r.map(function (r, j) {
+            return { "@type": "Answer", "position": j + 1, "text": r.t };
+          })
+        });
+      });
+  }
+
   var jsonLd = [{
     "@context": "https://schema.org", "@type": "Quiz",
     "name": titreHero + ' ' + accentHero,
@@ -142,6 +163,7 @@
       { "@type": "PropertyValue", "name": "audience", "value": "couples" }
     ]
   }];
+  if (hasPart.length) jsonLd[0].hasPart = hasPart;
   if (faq.length) {
     jsonLd.push({
       "@context": "https://schema.org", "@type": "FAQPage",

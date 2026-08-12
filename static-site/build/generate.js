@@ -28,6 +28,23 @@ const DIST_DIR = path.resolve(__dirname, '../dist');
 // Google Discover only serves the large card when the image is at least
 // 1200px wide, and it checks the file, not the meta tag. Announcing 1200x630
 // for a file that is 1100x733 costs the card, so we read the header instead.
+// Les cent questions du test de pureté servent au moteur, mais un échantillon
+// alimente aussi le balisage Quiz de sa page : sans hasPart, Google n'a rien
+// à se mettre sous la dent, alors que toutes les autres pages de test le
+// remplissent. Lu une seule fois pour toute la construction.
+let _pureteCache;
+function pureteQuestions() {
+  if (_pureteCache !== undefined) return _pureteCache;
+  try {
+    const f = path.resolve(__dirname, '../../fr/purete.json');
+    _pureteCache = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf-8')) : null;
+  } catch (e) {
+    console.warn(`[purete] questions illisibles : ${e.message}`);
+    _pureteCache = null;
+  }
+  return _pureteCache;
+}
+
 const PUBLIC_DIR = path.resolve(__dirname, '../../public');
 const OG_FALLBACK = { width: 1200, height: 630 };
 const ogSizeCache = new Map();
@@ -592,6 +609,7 @@ async function generatePage(routeKey, lang) {
     routeKey,
     pageJouable: estPageJouable(routeKey),
     genrePage: genrePageJouable(routeKey),
+    pureteQuestions: routeKey === 'testPurete' ? pureteQuestions() : null,
     pagePath,
     routeSlugs: ROUTE_SLUGS,
     languages: LANGUAGES,
