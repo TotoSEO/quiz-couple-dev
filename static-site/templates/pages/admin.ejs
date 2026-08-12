@@ -43,9 +43,15 @@
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="stats">Stats</button>
             <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="affiliation">Affiliation</button>
             </div>
-            <button id="admin-deploy" class="btn btn-sm" style="background:hsl(var(--primary));color:white;display:flex;align-items:center;gap:0.5rem;">
+            <%# Le site est statique : ce qui est saisi ici vit dans Supabase et
+                n'apparaît en ligne qu'après une reconstruction. Elle a lieu
+                toute seule toutes les deux heures ; ce bouton la déclenche
+                tout de suite. L'intitulé seul ne le disait pas. %>
+            <button id="admin-deploy" class="btn btn-sm"
+                    title="Reconstruit le site tout de suite pour publier les articles et avis enregistrés ici. Sans ça, la mise en ligne se fait toute seule dans les deux heures."
+                    style="background:hsl(var(--primary));color:white;display:flex;align-items:center;gap:0.5rem;">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              Deployer
+              Publier maintenant
             </button>
             <button id="admin-logout" class="text-sm text-destructive hover:text-destructive/80 transition-colors">Deconnexion</button>
           </div>
