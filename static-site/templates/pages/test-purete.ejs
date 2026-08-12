@@ -153,6 +153,7 @@
     "inLanguage": "fr",
     "datePublished": "2026-08-12",
     "isAccessibleForFree": true,
+    "image": (typeof featuredImage !== 'undefined' && featuredImage) ? baseUrl + featuredImage : baseUrl + '/og-image.webp',
     "learningResourceType": "Quiz",
     "interactivityType": "active",
     "educationalLevel": "adulte",
@@ -180,10 +181,6 @@
   <div class="pu-hero-lueur" aria-hidden="true"></div>
   <div class="pu-hero-inner">
 
-    <%# Les deux compteurs restent masqués tant que la base n'a pas répondu :
-        un emplacement vide vaut mieux qu'un chiffre inventé. %>
-    <p class="pu-hero-compteur" id="purete-compteur" hidden></p>
-
     <h1 class="pu-h1">
       <span class="pu-h1-mot"><%= titreHero %></span>
       <span class="pu-h1-bloc"><%= accentHero %> <span aria-hidden="true">🌡️</span></span>
@@ -191,6 +188,11 @@
 
     <p class="pu-hero-accroche"><%= T('hero.accroche') %></p>
     <p class="pu-hero-desc"><%= T('hero.description') %></p>
+
+    <%# Les deux compteurs restent masqués tant que la base n'a pas répondu :
+        un emplacement vide vaut mieux qu'un chiffre inventé. Le nombre de
+        parties est collé au bouton, c'est là qu'il sert à quelque chose. %>
+    <p class="pu-hero-compteur" id="purete-compteur" hidden></p>
 
     <a href="#purete" class="pu-cta pu-cta--hero" id="purete-demarrer">
       <%= T('cta', 'Commencer le test') %>
@@ -229,6 +231,16 @@
       <% } %>
 
       <% if (s.paras[0]) { %><p class="pu-p"><%- s.paras[0] %></p><% } %>
+
+      <%# L'image à la une n'est pas dans le hero : elle porte déjà le titre du
+          test, elle ferait doublon avec le H1 juste au-dessus. Elle illustre
+          la première section, une fois le sujet posé. %>
+      <% if (idx === 0 && typeof featuredImage !== 'undefined' && featuredImage) { %>
+      <figure class="pu-figure">
+        <img src="<%= featuredImage %>" alt="<%= featuredImageAlt %>"
+             width="1200" height="630" loading="lazy" decoding="async">
+      </figure>
+      <% } %>
 
       <% if (s.chiffres) { %>
       <div class="pu-chiffres">
@@ -360,9 +372,11 @@
   backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
   font-size: .82rem; font-weight: 700; letter-spacing: .01em;
   color: hsl(0 0% 100% / .92);
-  margin: 0 0 1.4rem;
 }
-.pu-hero-moyenne { margin: 1.6rem 0 0; }
+/* Le compteur est collé au bouton, la moyenne le suit juste en dessous :
+   les deux chiffres encadrent l'appel à l'action au lieu de flotter en haut. */
+.pu-hero-compteur { margin: 0 0 1.15rem; }
+.pu-hero-moyenne { margin: 1.5rem 0 0; }
 .pu-hero-compteur[hidden], .pu-hero-moyenne[hidden] { display: none; }
 
 .pu-h1 {
@@ -704,6 +718,13 @@
   margin: 1.6rem 0 .6rem; color: hsl(var(--foreground));
 }
 .pu-p { font-size: 1rem; line-height: 1.75; color: hsl(var(--muted-foreground)); margin: 0 0 1rem; text-wrap: pretty; }
+
+.pu-figure { margin: 1.6rem 0 1.8rem; }
+.pu-figure img {
+  display: block; width: 100%; height: auto;
+  border-radius: 1.15rem;
+  border: 1px solid hsl(var(--border));
+}
 
 .pu-faq { display: flex; flex-direction: column; gap: .6rem; }
 .pu-faq-item { border: 1px solid hsl(var(--border)); border-radius: 1rem; background: hsl(var(--card)); overflow: hidden; }

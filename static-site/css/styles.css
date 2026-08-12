@@ -979,6 +979,119 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .nav-link:hover { background: hsl(var(--primary) / 0.06); color: hsl(var(--primary)); }
 .nav-chevron { width: 0.625rem; height: 0.625rem; transition: transform 0.2s ease; flex-shrink: 0; }
+/* ── Entrée de menu mise en avant ──────────────────────────────────────────
+   Le test de pureté doit sortir du lot sans devenir un second bouton rose :
+   le menu en a déjà un, celui des activités, et deux appels à l'action de la
+   même couleur se neutralisent. On prend donc le contre-pied : une pastille
+   cerclée d'un néon dont le point lumineux tourne autour.
+
+   Coût : deux pseudo-éléments, aucun JS, aucune image, un seul dégradé
+   conique sur une boîte de 130 x 32 pixels. On anime l'angle du dégradé et
+   non une rotation d'élément : une rotation obligerait à dessiner un carré
+   bien plus grand que la pastille pour ne pas laisser d'angles morts, et ce
+   carré, une fois flouté, baverait de partout au lieu de border le contour. */
+@property --nv-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  /* Hérité, pour que la valeur posée sur la pastille atteigne son ::before,
+     qui est celui qui dessine l'anneau. */
+  inherits: true;
+}
+.nav-vedette {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  height: 2rem; padding: 0 0.7rem 0 0.6rem; margin-left: 0.125rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem; font-weight: 700;
+  white-space: nowrap;
+  position: relative; isolation: isolate;
+  /* Valeur posée en dur aussi : sans @property (navigateurs anciens) le
+     dégradé reste figé à zéro degré au lieu de disparaître entièrement. */
+  --nv-angle: 0deg;
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* Le néon : un arc lumineux sur un anneau éteint, calé exactement sur le
+   contour de la pastille. Le flou est court, il ne sert qu'à empêcher le
+   liseré d'être net comme un trait de crayon. */
+.nav-vedette::before {
+  content: ''; position: absolute; z-index: -2; inset: -1px;
+  border-radius: 9999px;
+  background: conic-gradient(
+    from var(--nv-angle),
+    hsl(var(--primary) / 0.16) 0deg,
+    hsl(var(--primary) / 0.16) 170deg,
+    hsl(265 60% 58%) 245deg,
+    hsl(var(--primary)) 295deg,
+    hsl(340 95% 80%) 320deg,
+    hsl(var(--primary)) 345deg,
+    hsl(var(--primary) / 0.16) 360deg
+  );
+  filter: blur(1.5px);
+  animation: navVedetteTour 3.2s linear infinite;
+}
+/* Le fond de la pastille recouvre le centre : il ne laisse du dégradé qu'un
+   anneau de deux pixels, dont la portion vive fait le tour. */
+.nav-vedette::after {
+  content: ''; position: absolute; z-index: -1; inset: 1.5px;
+  border-radius: 9999px;
+  background: hsl(var(--background));
+}
+@keyframes navVedetteTour { to { --nv-angle: 360deg; } }
+.nav-vedette-texte {
+  background: linear-gradient(120deg, hsl(var(--primary)), hsl(265 60% 58%));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.nav-vedette-emoji { font-size: 0.9rem; line-height: 1; }
+/* Le point qui bat n'existe plus que sur mobile, où il n'y a pas de néon :
+   sur le bureau les deux faisaient doublon, et la barre n'a pas la place. */
+.mobile-nav-vedette-point {
+  width: 0.45rem; height: 0.45rem; border-radius: 9999px; flex-shrink: 0;
+  background: hsl(var(--primary));
+  box-shadow: 0 0 0 0 hsl(var(--primary) / 0.6);
+  animation: navVedettePouls 2.4s ease-out infinite;
+}
+@keyframes navVedettePouls {
+  0%   { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.55); }
+  70%  { box-shadow: 0 0 0 0.4rem hsl(var(--primary) / 0); }
+  100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0); }
+}
+.nav-vedette:hover { transform: translateY(-1px); }
+/* Au survol le néon accélère et déborde un peu plus : c'est la seule
+   récompense visuelle, la couleur de fond ne bouge pas. */
+.nav-vedette:hover::before { animation-duration: 1.6s; filter: blur(2.5px); inset: -2px; }
+.nav-vedette:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 2px; }
+
+/* Version mobile : la ligne garde la hauteur des autres, mais reçoit un fond
+   teinté et un liseré à gauche, seule façon de ressortir dans une pile de
+   lignes toutes identiques. */
+.mobile-nav-vedette {
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.875rem 1rem 0.875rem 1.15rem; border-radius: 0.75rem;
+  font-size: 0.9375rem; font-weight: 700;
+  background: linear-gradient(100deg, hsl(var(--primary) / 0.12), hsl(265 60% 58% / 0.1));
+  border: 1px solid hsl(var(--primary) / 0.3);
+  transition: background 0.2s ease;
+}
+.mobile-nav-vedette::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: linear-gradient(hsl(var(--primary)), hsl(265 60% 58%));
+}
+.mobile-nav-vedette:hover { background: linear-gradient(100deg, hsl(var(--primary) / 0.18), hsl(265 60% 58% / 0.15)); }
+.mobile-nav-vedette-emoji { font-size: 1.15rem; line-height: 1; }
+.mobile-nav-vedette-texte {
+  flex: 1;
+  background: linear-gradient(120deg, hsl(var(--primary)), hsl(265 60% 58%));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-vedette-point, .mobile-nav-vedette-point { animation: none; }
+  .nav-vedette { transition: none; }
+  /* Le néon s'arrête sur une position lisible : la pastille garde son
+     contour lumineux, il ne tourne simplement plus. */
+  .nav-vedette::before, .nav-vedette:hover::before { animation: none; --nv-angle: 60deg; }
+}
+
 .nav-separator { width: 1px; height: 1rem; background: linear-gradient(to bottom, transparent, hsl(var(--border)), transparent); margin: 0 0.375rem; }
 
 /* Nav action buttons */
@@ -1005,20 +1118,29 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .mobile-menu-btn:hover { background: hsl(var(--primary) / 0.06); border-color: hsl(var(--primary) / 0.25); color: hsl(var(--primary)); }
 @media (min-width: 1024px) { .mobile-menu-btn { display: none !important; } }
 
-/* La barre complete (deux mega-menus, quatre liens directs, le bouton
-   activites, la langue et le theme) demande environ 1300px : sous 1280px elle
-   depassait la fenetre et faisait defiler toute la page horizontalement.
-   Le menu burger reprend donc la main jusqu'a 1280px, et la barre est
-   resserree entre 1280 et 1440px, ou elle tient sans compression. */
-@media (max-width: 1279.98px) {
+/* Largeurs mesurees dans le navigateur, barre complete (deux mega-menus, la
+   pastille du test de purete, trois liens directs, le bouton activites, la
+   langue et le theme) :
+     - telle quelle          : 1511px de fenetre
+     - version resserree     : 1448px
+   La pastille pese 111px a elle seule : elle est la neuvieme entree, et la
+   barre etait deja limite avant elle. Le seuil du menu burger passe donc a
+   1450px, sinon les boutons de langue et de theme sortent de l'ecran et
+   toute la page defile horizontalement.
+   La forme resserree n'a plus de borne haute : elle tient a toutes les
+   largeurs et l'ecart avec la version aeree est d'un demi-point de police.
+   Une borne haute obligeait a deviner ou le conteneur Tailwind change de
+   palier, et chaque valeur essayee laissait une bande qui debordait. */
+@media (max-width: 1449.98px) {
   header .hidden.lg\:flex { display: none; }
   .mobile-menu-btn { display: inline-flex !important; }
 }
-@media (min-width: 1280px) and (max-width: 1439.98px) {
+@media (min-width: 1450px) {
   header .lg\:gap-1 { gap: 0.125rem; }
   header .nav-link { padding: 0 0.5rem; font-size: 0.78125rem; }
   header .nav-separator { margin: 0 0.25rem; }
   header .nav-cta-btn { padding: 0 0.75rem; margin-left: 0.25rem; font-size: 0.78125rem; }
+  header .nav-vedette { padding: 0 0.55rem 0 0.45rem; font-size: 0.78125rem; }
 }
 
 /* Nav CTA button */
