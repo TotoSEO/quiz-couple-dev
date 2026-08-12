@@ -175,11 +175,44 @@
   }
 
   // ── Load approved reviews ──
+  //
+  // Deux requetes, et pas une seule, parce qu'elles ne servent pas a la meme
+  // chose. La premiere ramene les vingt derniers avis a afficher. La seconde
+  // ne ramene que la colonne note, pour tous les avis approuves : c'est elle
+  // qui donne le vrai total et la vraie moyenne.
+  //
+  // Avant, le total et la moyenne etaient calcules sur les vingt lignes
+  // affichees. Le compteur restait donc bloque a « 20 avis » quel qu'en soit
+  // le nombre reel, la moyenne ne portait que sur les vingt plus recents, et
+  // ces deux valeurs fausses partaient aussi dans l'AggregateRating envoye a
+  // Google.
   function loadReviews() {
     if (!reviewsGrid) return;
 
+    var entetes = { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY };
+
+    // Le total exact vient de l'en-tete Content-Range renvoye par PostgREST,
+    // au format « 0-999/25 ». La moyenne se calcule sur les notes ramenees ;
+    // au-dela d'un millier d'avis elle porterait sur un echantillon, ce qui
+    // ne change rien a une moyenne, alors que le total resterait exact.
+    var stats = fetch(SUPABASE_URL + '/rest/v1/reviews?select=rating&is_approved=eq.true&limit=1000', {
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Prefer': 'count=exact' }
+    }).then(function (res) {
+      var plage = res.headers.get('Content-Range') || '';
+      var exact = parseInt((plage.split('/')[1] || ''), 10);
+      return res.json().then(function (notes) {
+        if (!Array.isArray(notes) || notes.length === 0) return null;
+        var s = 0;
+        notes.forEach(function (n) { s += n.rating || 0; });
+        return {
+          total: isNaN(exact) ? notes.length : exact,
+          avg: (s / notes.length).toFixed(1),
+        };
+      });
+    }).catch(function () { return null; });
+
     fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&is_approved=eq.true&order=created_at.desc&limit=20', {
-      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+      headers: entetes
     })
     .then(function (res) { return res.json(); })
     .then(function (reviews) {
@@ -189,12 +222,14 @@
         return;
       }
 
-      // Update stats
-      var total = reviews.length;
-      var sum = 0;
-      reviews.forEach(function (r) { sum += r.rating || 0; });
-      var avg = total > 0 ? (sum / total).toFixed(1) : '0';
-      updateStats(avg, total);
+      // Si la requete de statistiques echoue, on retombe sur l'ancien calcul
+      // plutot que de n'afficher aucune note.
+      stats.then(function (s) {
+        if (s) return updateStats(s.avg, s.total);
+        var sum = 0;
+        reviews.forEach(function (r) { sum += r.rating || 0; });
+        updateStats((sum / reviews.length).toFixed(1), reviews.length);
+      });
 
       // Render cards
       var html = '';

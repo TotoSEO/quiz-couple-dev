@@ -250,13 +250,34 @@
     var commentI = root.querySelector('.pqx-comment'); if (commentI) commentI.placeholder = t.comment;
     var submitB = root.querySelector('.pqx-submit'); if (submitB) submitB.textContent = t.submit;
 
+    // Comme sur la page d'accueil, le compte et la moyenne ne peuvent pas se
+    // deduire des douze avis affiches : le compteur resterait bloque a douze
+    // des que le quiz depasse ce nombre. On demande donc a part la colonne
+    // note pour tous les avis de ce quiz, avec le total exact renvoye par
+    // PostgREST dans l'en-tete Content-Range.
+    var stats = fetch(URL + '/rest/v1/reviews?select=rating&is_approved=eq.true&quiz_slug=eq.' + encodeURIComponent(slug) + '&limit=1000',
+      { headers: { apikey: KEY, 'Authorization': 'Bearer ' + KEY, 'Prefer': 'count=exact' } })
+      .then(function (r) {
+        var plage = r.headers.get('Content-Range') || '';
+        var exact = parseInt((plage.split('/')[1] || ''), 10);
+        return r.json().then(function (notes) {
+          if (!Array.isArray(notes) || notes.length === 0) return null;
+          var s = 0; notes.forEach(function (n) { s += n.rating || 0; });
+          return { total: isNaN(exact) ? notes.length : exact, avg: (s / notes.length).toFixed(1) };
+        });
+      }).catch(function () { return null; });
+
     fetch(URL + '/rest/v1/reviews?select=author_name,rating,comment,created_at&is_approved=eq.true&quiz_slug=eq.' + encodeURIComponent(slug) + '&order=created_at.desc&limit=12', { headers: H })
       .then(function (r) { return r.json(); })
       .then(function (rows) {
         if (!Array.isArray(rows) || rows.length === 0) { if (listEl) listEl.innerHTML = '<p class="pqx-none">' + t.none + '</p>'; return; }
-        var sum = 0; rows.forEach(function (x) { sum += x.rating || 0; });
-        var avg = (sum / rows.length).toFixed(1);
-        if (aggEl) aggEl.innerHTML = '<span class="pqx-avg">' + avg + '</span><span class="pqx-stars">' + stars(Math.round(avg)) + '</span><span class="pqx-count">' + rows.length + ' ' + t.based + '</span>';
+        stats.then(function (s) {
+          if (!s) {
+            var sum = 0; rows.forEach(function (x) { sum += x.rating || 0; });
+            s = { total: rows.length, avg: (sum / rows.length).toFixed(1) };
+          }
+          if (aggEl) aggEl.innerHTML = '<span class="pqx-avg">' + s.avg + '</span><span class="pqx-stars">' + stars(Math.round(s.avg)) + '</span><span class="pqx-count">' + s.total + ' ' + t.based + '</span>';
+        });
         if (listEl) listEl.innerHTML = rows.map(function (x) { return '<div class="pqx-card"><div class="pqx-card-top"><b>' + esc(x.author_name) + '</b><span class="pqx-stars">' + stars(x.rating) + '</span></div>' + (x.comment ? '<p>' + esc(x.comment) + '</p>' : '') + '</div>'; }).join('');
       })
       .catch(function () { if (listEl) listEl.innerHTML = ''; });
