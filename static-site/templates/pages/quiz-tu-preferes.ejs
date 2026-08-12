@@ -659,7 +659,24 @@
       self.container.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
-    this.container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Panneau d'avant-résultats. Les moteurs partagés le déclenchent depuis
+    // dispositionResultat ; ce jeu construit son propre écran de résultat et
+    // ne passait donc jamais par là, c'était la seule page à ne pas l'avoir.
+    // Le résultat est déjà en place derrière le panneau, il n'y a rien à
+    // recalculer à la fermeture. Le panneau ne s'affiche qu'une fois par
+    // session et par jeu, donc prolonger jusqu'à trente ne le redonne pas.
+    var self2 = this;
+    if (typeof window.qcPanneauAvantResultats === 'function') {
+      window.qcPanneauAvantResultats({
+        lang: this.container.dataset.lang || document.documentElement.lang || 'fr',
+        onContinue: function () {
+          try { self2.container.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+          catch (e) { self2.container.scrollIntoView(); }
+        },
+      });
+    } else {
+      this.container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   // Initialize
