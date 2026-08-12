@@ -617,6 +617,83 @@ var QuizEngine = (function() {
     return true;
   }
 
+  // ─── Relais entre les deux joueurs ────────────────────────────────────────
+  // L'écran « passe le téléphone » demandait un clic sur « Répondre » avant
+  // chaque question : quarante clics sur un quiz de vingt questions joué à
+  // deux, pour une information que l'écran suivant redonne de toute façon
+  // dans son bandeau de joueur. On garde l'annonce, on retire le clic : le
+  // bandeau s'affiche, laisse le temps de tendre le téléphone, puis s'efface
+  // seul. Un appui sur le bandeau coupe l'attente pour qui va plus vite.
+  var RELAIS_DUREE = 1300;
+  // Après le passage automatique, les options restent sourdes un court
+  // instant : sans ce délai, un doigt déjà en route vers le bandeau retombe
+  // sur une réponse et la valide à la place du joueur.
+  var RELAIS_GARDE = 280;
+
+  function relaisJoueur(moteur, options) {
+    var opts = options || {};
+    var suite = opts.suite || function () {};
+
+    // Un relais chasse le précédent : sans cela, un retour arrière ou un
+    // « rejouer » lancé pendant l'attente laisserait deux minuteries vivantes
+    // et ferait sauter une question.
+    if (moteur.__relaisTimer) { clearTimeout(moteur.__relaisTimer); moteur.__relaisTimer = null; }
+
+    var carte = el('div', 'qc-relais');
+    carte.setAttribute('role', 'status');
+    carte.setAttribute('aria-live', 'polite');
+
+    var macaron = el('div', 'qc-relais-macaron');
+    macaron.innerHTML = '<span>' + (opts.emoji || '📱') + '</span>';
+    macaron.setAttribute('aria-hidden', 'true');
+    carte.appendChild(macaron);
+
+    // Volontairement un paragraphe : la page a déjà sa hiérarchie de titres,
+    // et ce bandeau vit moins de deux secondes.
+    var annonce = el('p', 'qc-relais-annonce');
+    annonce.innerHTML = tg('question.turnToAnswer', 'À {{name}} de répondre !')
+      .replace('{{name}}', '<span class="qc-relais-nom">' + esc(opts.nom || '') + '</span>');
+    carte.appendChild(annonce);
+
+    carte.appendChild(el('p', 'qc-relais-note',
+      esc(opts.note || tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard'))));
+
+    if (opts.etape) carte.appendChild(el('p', 'qc-relais-etape', esc(opts.etape)));
+
+    var piste = el('div', 'qc-relais-piste');
+    var jauge = el('div', 'qc-relais-jauge');
+    jauge.style.animationDuration = RELAIS_DUREE + 'ms';
+    piste.appendChild(jauge);
+    carte.appendChild(piste);
+
+    // La couleur du joueur teinte le prénom et la jauge, pas le macaron : ce
+    // dégradé est celui de la charte, et l'écran de question qui suit reprend
+    // la même couleur sur son badge, donc l'association reste lisible.
+    if (opts.couleur) {
+      var nom = annonce.querySelector('.qc-relais-nom');
+      if (nom) nom.style.color = opts.couleur;
+      jauge.style.background = opts.couleur;
+    }
+
+    var parti = false;
+    function partir() {
+      if (parti) return;
+      parti = true;
+      if (moteur.__relaisTimer) { clearTimeout(moteur.__relaisTimer); moteur.__relaisTimer = null; }
+      moteur.__answerLockUntil = Date.now() + RELAIS_GARDE;
+      suite();
+    }
+
+    carte.addEventListener('click', partir);
+    // Si un autre écran a pris la place entre-temps (résultats, rejouer), le
+    // bandeau n'est plus dans la page et n'a plus rien à enchaîner.
+    moteur.__relaisTimer = setTimeout(function() {
+      if (carte.isConnected) partir();
+    }, RELAIS_DUREE);
+
+    return carte;
+  }
+
   function renderProgressBar(wrap, current, total, label) {
     var progress = Math.round((current / total) * 100);
     var progressWrap = el('div', 'quiz-progress-wrapper');
@@ -1554,21 +1631,14 @@ var QuizEngine = (function() {
   DuoMatchQuiz.prototype.renderHandoff = function() {
     var self = this;
     var player = this.players[this.currentPlayer];
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
+    var color = this.needsGender ? getPlayerColor(player, this.players[this.currentPlayer === 0 ? 1 : 0], this.currentPlayer) : null;
 
-    var icon = el('div', 'text-5xl mb-4', '📱');
-    var title = el('h2', 'text-xl font-bold mb-3');
-    title.textContent = tg('question.itsTurnOf', 'C\'est au tour de') + ' ' + player.name + ' !';
-    var desc = el('p', 'text-muted-foreground mb-6', tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard'));
-
-    var btn = el('button', 'btn btn-cta', tg('question.chooseAnswer', 'Choisir ma réponse'));
-    btn.addEventListener('click', function() { self.phase = 'playing'; self.render(); });
-
-    wrap.appendChild(icon);
-    wrap.appendChild(title);
-    wrap.appendChild(desc);
-    wrap.appendChild(btn);
-    this.container.appendChild(wrap);
+    this.container.appendChild(relaisJoueur(this, {
+      nom: player.name,
+      couleur: color ? color.bg : null,
+      etape: tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + this.questions.length,
+      suite: function() { self.phase = 'playing'; self.render(); }
+    }));
   };
 
   DuoMatchQuiz.prototype.renderQuestion = function() {
@@ -1871,15 +1941,13 @@ var QuizEngine = (function() {
   DistanceQuiz.prototype.renderPrivacy = function() {
     var self = this;
     var player = this.players[this.currentPlayer];
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
-    wrap.appendChild(el('div', 'text-5xl mb-4', '🔒'));
-    wrap.appendChild(el('h2', 'text-xl font-bold mb-3', tg('question.itsTurnOf', 'C\'est au tour de') + ' ' + esc(player.name) + ' !'));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6', tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard')));
 
-    var btn = el('button', 'btn btn-cta', tg('question.chooseAnswer', 'Répondre'));
-    btn.addEventListener('click', function() { self.phase = 'playing'; self.render(); });
-    wrap.appendChild(btn);
-    this.container.appendChild(wrap);
+    this.container.appendChild(relaisJoueur(this, {
+      nom: player.name,
+      emoji: '🔒',
+      etape: tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + this.questions.length,
+      suite: function() { self.phase = 'playing'; self.render(); }
+    }));
   };
 
   DistanceQuiz.prototype.renderQuestion = function() {
@@ -3308,18 +3376,13 @@ var QuizEngine = (function() {
     var self = this;
     var player = this.players[this.currentPlayer];
     var color = getPlayerColor(player, this.players[this.currentPlayer === 0 ? 1 : 0], this.currentPlayer);
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
-    wrap.appendChild(el('div', 'text-5xl mb-4', '📱'));
-    var t = el('h2', 'text-xl font-bold mb-3');
-    t.textContent = tg('question.itsTurnOf', 'C\'est au tour de') + ' ' + player.name + ' !';
-    wrap.appendChild(t);
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6', tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard')));
 
-    var btn = el('button', 'btn btn-cta', tg('question.chooseAnswer', 'Répondre'));
-    btn.style.background = color.bg;
-    btn.addEventListener('click', function() { self.phase = 'playing'; self.render(); });
-    wrap.appendChild(btn);
-    this.container.appendChild(wrap);
+    this.container.appendChild(relaisJoueur(this, {
+      nom: player.name,
+      couleur: color.bg,
+      etape: tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + this.questions.length,
+      suite: function() { self.phase = 'playing'; self.render(); }
+    }));
   };
 
   HealthyQuiz.prototype.renderQuestion = function() {
@@ -3531,20 +3594,14 @@ var QuizEngine = (function() {
   ParentaliteQuiz.prototype.renderHandoff = function() {
     var self = this;
     var player = this.players[this.currentPlayer];
-    var colors = [{ bg: '#ec4899', text: '#fff' }, { bg: '#3b82f6', text: '#fff' }];
-    var color = colors[this.currentPlayer];
-    var wrap = el('div', 'quiz-engine animate-fade-in text-center');
-    wrap.appendChild(el('div', 'text-5xl mb-4', '📱'));
-    var heading = el('h2', 'text-xl font-bold mb-3');
-    heading.textContent = tg('question.itsTurnOf', 'C\'est au tour de') + ' ' + player.name + ' !';
-    wrap.appendChild(heading);
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6', tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard')));
+    var colors = ['#ec4899', '#3b82f6'];
 
-    var btn = el('button', 'btn btn-cta', tg('question.chooseAnswer', 'Répondre'));
-    btn.style.background = color.bg;
-    btn.addEventListener('click', function() { self.phase = 'playing'; self.render(); });
-    wrap.appendChild(btn);
-    this.container.appendChild(wrap);
+    this.container.appendChild(relaisJoueur(this, {
+      nom: player.name,
+      couleur: colors[this.currentPlayer],
+      etape: tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + this.questions.length,
+      suite: function() { self.phase = 'playing'; self.render(); }
+    }));
   };
 
   ParentaliteQuiz.prototype.renderQuestion = function() {
@@ -5832,6 +5889,9 @@ var QuizEngine = (function() {
     // Un vote enregistre puis, selon le mode, on passe le telephone ou on
     // enchaine directement sur la revelation.
     function poser(valeur, bouton) {
+      // Le relais vient de s'effacer seul : sans ce délai, un doigt déjà parti
+      // vers le bandeau retombe sur un nom et vote à la place du joueur.
+      if (self.__answerLockUntil && Date.now() < self.__answerLockUntil) return;
       if (self.votes[j] !== null) return;
       self.votes[j] = valeur;
       if (bouton) bouton.classList.add('qdn-choix-btn--pris');
@@ -5865,21 +5925,21 @@ var QuizEngine = (function() {
     this.container.appendChild(wrap);
   };
 
+  // Même relais que les tests à deux : l'écran s'annonçait puis attendait un
+  // clic sur « C'est à moi ! » à chaque manche, soit une trentaine de clics
+  // par partie en mode secret. Le bouton « arrêter » reste sous le bandeau,
+  // et il est de toute façon présent sur l'écran de vote qui suit.
   DuoVoteGame.prototype.renderPasse = function() {
     var self = this;
     var wrap = el('div', 'quiz-engine qdn-jeu text-center');
     wrap.appendChild(this.barre());
-    var bloc = el('div', 'qdn-passe animate-fade-in');
-    bloc.innerHTML =
-      '<div class="qdn-passe-tel" aria-hidden="true">📱</div>' +
-      '<h3 class="qdn-passe-titre">' + esc(tg('quiDeNous.passeTitre', 'Passe le téléphone à {{nom}}')
-        .replace('{{nom}}', this.joueur(1))) + '</h3>' +
-      '<p class="qdn-passe-desc">' + esc(tg('quiDeNous.passeDesc', 'Pas de triche : le vote reste caché jusqu\'à la révélation.')) + '</p>';
-    var b = el('button', 'btn btn-cta btn-lg mt-4', esc(tg('quiDeNous.passeCta', 'C\'est à moi !')));
-    b.type = 'button';
-    b.addEventListener('click', function() { self.phase = 'vote'; self.render(); });
-    bloc.appendChild(b);
-    wrap.appendChild(bloc);
+    wrap.appendChild(relaisJoueur(this, {
+      nom: this.joueur(1),
+      // Pas d'étape ici : le bandeau du jeu, juste au-dessus, affiche déjà le
+      // numéro de manche.
+      note: tg('quiDeNous.passeDesc', 'Pas de triche : le vote reste caché jusqu\'à la révélation.'),
+      suite: function() { self.phase = 'vote'; self.render(); }
+    }));
     wrap.appendChild(this.boutonArret());
     this.container.appendChild(wrap);
   };
@@ -6639,6 +6699,9 @@ var QuizEngine = (function() {
     // Exposé pour le chargeur, qui pose l'écran de choix avant de savoir quel
     // moteur il va instancier.
     ecranModes: ecranModes,
+    // Exposé pour les moteurs écrits dans un gabarit de page, qui doivent
+    // annoncer le changement de joueur exactement comme les autres.
+    relaisJoueur: relaisJoueur,
     SUPABASE_URL: SUPABASE_URL,
     SUPABASE_KEY: SUPABASE_KEY,
   };

@@ -142,8 +142,8 @@
     "shareText": "J'ai résisté à {{pct}}% sur l'île de la tentation ! 🏝️🔥"
   },
   "question": {
-    "chooseAnswer": "choisis ta réponse !",
     "itsTurnOf": "C'est au tour de",
+    "turnToAnswer": "À {{name}} de répondre !",
     "dontLookAnswer": "ne regardez pas la réponse !",
     "passPhoneOrLookAway": "Passez le téléphone ou détournez le regard",
     "turnOfToGuess": "C'est au tour de deviner :",
@@ -464,9 +464,7 @@
     "manche": "Manche {{n}} / {{total}}",
     "amorce": "Qui de vous deux…",
     "voteSecret": "{{nom}} vote en secret",
-    "passeTitre": "Passe le téléphone à {{nom}}",
     "passeDesc": "Pas de triche : le vote reste caché jusqu'à la révélation.",
-    "passeCta": "C'est à moi !",
     "decompte": "Révélation dans…",
     "aDit": "{{nom}} a dit",
     "accordTitre": "D'accord !",

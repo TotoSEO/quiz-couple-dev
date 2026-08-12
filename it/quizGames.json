@@ -142,8 +142,8 @@
     "shareText": "Ho resistito al {{pct}}% a Temptation Island! 🏝️🔥"
   },
   "question": {
-    "chooseAnswer": "scegli la tua risposta!",
     "itsTurnOf": "È il turno di",
+    "turnToAnswer": "Tocca a {{name}} rispondere!",
     "dontLookAnswer": "non guardate la risposta!",
     "passPhoneOrLookAway": "Passate il telefono o guardate altrove",
     "turnOfToGuess": "Tocca indovinare:",
@@ -463,9 +463,7 @@
     "manche": "Round {{n}} / {{total}}",
     "amorce": "Chi di voi due…",
     "voteSecret": "{{nom}} vota in segreto",
-    "passeTitre": "Passa il telefono a {{nom}}",
     "passeDesc": "Niente trucchi: il voto resta nascosto fino alla rivelazione.",
-    "passeCta": "Tocca a me!",
     "decompte": "Rivelazione tra…",
     "aDit": "{{nom}} ha detto",
     "accordTitre": "D'accordo!",
