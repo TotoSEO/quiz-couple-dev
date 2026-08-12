@@ -1041,42 +1041,46 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .nav-vedette-emoji { font-size: 0.9rem; line-height: 1; }
-/* Le point qui bat n'existe plus que sur mobile, où il n'y a pas de néon :
-   sur le bureau les deux faisaient doublon, et la barre n'a pas la place. */
-.mobile-nav-vedette-point {
-  width: 0.45rem; height: 0.45rem; border-radius: 9999px; flex-shrink: 0;
-  background: hsl(var(--primary));
-  box-shadow: 0 0 0 0 hsl(var(--primary) / 0.6);
-  animation: navVedettePouls 2.4s ease-out infinite;
-}
-@keyframes navVedettePouls {
-  0%   { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.55); }
-  70%  { box-shadow: 0 0 0 0.4rem hsl(var(--primary) / 0); }
-  100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0); }
-}
+/* Le point qui battait a disparu des deux côtés : il faisait doublon avec le
+   néon, qui accroche l'œil bien mieux que lui. */
 .nav-vedette:hover { transform: translateY(-1px); }
 /* Au survol le néon accélère et déborde un peu plus : c'est la seule
    récompense visuelle, la couleur de fond ne bouge pas. */
 .nav-vedette:hover::before { animation-duration: 1.6s; filter: blur(2.5px); inset: -2px; }
 .nav-vedette:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 2px; }
 
-/* Version mobile : la ligne garde la hauteur des autres, mais reçoit un fond
-   teinté et un liseré à gauche, seule façon de ressortir dans une pile de
-   lignes toutes identiques. */
+/* Version mobile : même néon que sur le bureau. Elle avait un traitement
+   complètement différent, fond teinté et liseré à gauche, et l'entrée ne
+   ressemblait pas du tout à celle du menu large. Seule la forme change,
+   ligne pleine largeur au lieu d'une pastille, l'anneau est le même. */
 .mobile-nav-vedette {
-  position: relative; overflow: hidden;
+  position: relative; isolation: isolate;
   display: flex; align-items: center; gap: 0.6rem;
-  padding: 0.875rem 1rem 0.875rem 1.15rem; border-radius: 0.75rem;
+  padding: 0.875rem 1rem; border-radius: 0.75rem;
   font-size: 0.9375rem; font-weight: 700;
-  background: linear-gradient(100deg, hsl(var(--primary) / 0.12), hsl(265 60% 58% / 0.1));
-  border: 1px solid hsl(var(--primary) / 0.3);
-  transition: background 0.2s ease;
+  --nv-angle: 0deg;
 }
 .mobile-nav-vedette::before {
-  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
-  background: linear-gradient(hsl(var(--primary)), hsl(265 60% 58%));
+  content: ''; position: absolute; z-index: -2; inset: -1px;
+  border-radius: 0.8rem;
+  background: conic-gradient(
+    from var(--nv-angle),
+    hsl(var(--primary) / 0.16) 0deg,
+    hsl(var(--primary) / 0.16) 170deg,
+    hsl(265 60% 58%) 245deg,
+    hsl(var(--primary)) 295deg,
+    hsl(340 95% 80%) 320deg,
+    hsl(var(--primary)) 345deg,
+    hsl(var(--primary) / 0.16) 360deg
+  );
+  filter: blur(1.5px);
+  animation: navVedetteTour 3.2s linear infinite;
 }
-.mobile-nav-vedette:hover { background: linear-gradient(100deg, hsl(var(--primary) / 0.18), hsl(265 60% 58% / 0.15)); }
+.mobile-nav-vedette::after {
+  content: ''; position: absolute; z-index: -1; inset: 1.5px;
+  border-radius: 0.7rem;
+  background: linear-gradient(100deg, hsl(var(--primary) / 0.1), hsl(265 60% 58% / 0.08)), hsl(var(--background));
+}
 .mobile-nav-vedette-emoji { font-size: 1.15rem; line-height: 1; }
 .mobile-nav-vedette-texte {
   flex: 1;
@@ -1085,14 +1089,12 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .nav-vedette-point, .mobile-nav-vedette-point { animation: none; }
   .nav-vedette { transition: none; }
-  /* Le néon s'arrête sur une position lisible : la pastille garde son
-     contour lumineux, il ne tourne simplement plus. */
-  .nav-vedette::before, .nav-vedette:hover::before { animation: none; --nv-angle: 60deg; }
+  /* Le néon s'arrête sur une position lisible : l'entrée garde son contour
+     lumineux, il ne tourne simplement plus. */
+  .nav-vedette::before, .nav-vedette:hover::before,
+  .mobile-nav-vedette::before { animation: none; --nv-angle: 60deg; }
 }
-
-.nav-separator { width: 1px; height: 1rem; background: linear-gradient(to bottom, transparent, hsl(var(--border)), transparent); margin: 0 0.375rem; }
 
 /* Nav action buttons */
 .nav-action-btn {
@@ -1138,7 +1140,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 @media (min-width: 1450px) {
   header .lg\:gap-1 { gap: 0.125rem; }
   header .nav-link { padding: 0 0.5rem; font-size: 0.78125rem; }
-  header .nav-separator { margin: 0 0.25rem; }
   header .nav-cta-btn { padding: 0 0.75rem; margin-left: 0.25rem; font-size: 0.78125rem; }
   header .nav-vedette { padding: 0 0.55rem 0 0.45rem; font-size: 0.78125rem; }
 }
@@ -1157,7 +1158,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .nav-cta-btn:hover { box-shadow: 0 6px 20px -4px hsl(var(--primary) / 0.5), inset 0 1px 0 hsl(0 0% 100% / 0.2); transform: translateY(-1px); }
 
 /* Language flag */
-.nav-lang-flag { font-size: 1rem; line-height: 1; }
 
 /* Dropdown mechanics */
 /* ── Déclencheur scindé du menu des jeux ───────────────────
@@ -4884,18 +4884,21 @@ h1, h2, h3, h4, h5, h6,
   }
   .quiz-hero-media__img { transform: rotate(4deg); }
 
-  /* Make room on the right: left-align and cap the hero text width */
-  .quiz-page-hero > .container > .mx-auto,
-  .hero-gradient > .container > .mx-auto {
+  /* Make room on the right: left-align and cap the hero text width.
+     Conditionne a la presence de l'image : la regle detourne l'utilitaire
+     .mx-auto, et sur un hero sans image a droite (creation de quiz par
+     exemple) elle decalait tout le contenu a gauche sans rien y mettre. */
+  .quiz-page-hero:has(.quiz-hero-media) > .container > .mx-auto,
+  .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto {
     margin-left: 0;
     margin-right: 0;
     text-align: left;
     max-width: 640px;
   }
-  .quiz-page-hero > .container > .mx-auto .breadcrumb ol,
-  .hero-gradient > .container > .mx-auto .breadcrumb ol { justify-content: flex-start; }
-  .quiz-page-hero > .container > .mx-auto p,
-  .hero-gradient > .container > .mx-auto p { margin-left: 0; margin-right: 0; }
+  .quiz-page-hero:has(.quiz-hero-media) > .container > .mx-auto .breadcrumb ol,
+  .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto .breadcrumb ol { justify-content: flex-start; }
+  .quiz-page-hero:has(.quiz-hero-media) > .container > .mx-auto p,
+  .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto p { margin-left: 0; margin-right: 0; }
 }
 
 /* Banner variant: always a centered image on top (used on themed heroes) */
@@ -5069,6 +5072,45 @@ h1, h2, h3, h4, h5, h6,
 .dark .custom-quiz-section { --ink: 270 30% 62%; }
 .cq-block { max-width: 58rem; margin: 0 auto 3.5rem; text-align: center; }
 @keyframes cqPop { from { opacity: 0; transform: translateY(16px) scale(.96); } to { opacity: 1; transform: none; } }
+
+/* ── Compteurs communautaires du hero ────────────────────────────────── */
+/* Ils reprennent le motif du site : bordure épaisse, ombre portée nette,
+   légère rotation. Ils sont dans le hero, donc les couleurs viennent des
+   variables de la page, pas de --ink qui n'est défini que plus bas. */
+.cq-totaux {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+  margin: 2.25rem auto 0;
+}
+.cq-totaux[hidden], .cq-merci[hidden] { display: none; }
+.cq-total {
+  display: flex; flex-direction: column; align-items: center; gap: .15rem;
+  min-width: 9.5rem; padding: 1rem 1.4rem;
+  border-radius: 1.15rem;
+  border: 3px solid hsl(268 45% 27%);
+  background: hsl(var(--card));
+  box-shadow: 5px 6px 0 hsl(268 45% 27%);
+}
+.cq-total:first-child { transform: rotate(-1.4deg); }
+.cq-total:last-child { transform: rotate(1.2deg); }
+.dark .cq-total { border-color: hsl(270 30% 62%); box-shadow: 5px 6px 0 hsl(270 30% 62%); }
+.cq-total-val {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 2.1rem; font-weight: 800; line-height: 1;
+  color: hsl(var(--primary));
+  font-variant-numeric: tabular-nums;
+}
+.cq-total-lib {
+  font-size: .8rem; font-weight: 700; letter-spacing: .02em;
+  color: hsl(var(--muted-foreground)); text-align: center;
+}
+.cq-merci {
+  margin: 1.15rem auto 0; max-width: 34rem;
+  font-size: .95rem; font-weight: 600;
+  color: hsl(var(--muted-foreground)); text-wrap: balance;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cq-total:first-child, .cq-total:last-child { transform: none; }
+}
 
 /* Bubble titles — centred, highlighted (surligné) */
 .cq-h2 { display: inline-block; position: relative; z-index: 0; font-family: 'Poppins','Inter',sans-serif;

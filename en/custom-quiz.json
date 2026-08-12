@@ -14,7 +14,10 @@
       "s2p2": "You can also make your quiz public: it then appears in the community quiz list on this page, and anyone can play it. Public quizzes are kept.",
       "s3Title": "Quizzes for every moment together",
       "s3p1": "Whether it's to find out if your partner really knows you, for a night with friends or just for laughs, custom quiz creation fits every mood. Let your imagination run wild!"
-    }
+    },
+    "total_prives": "private quizzes created",
+    "total_publics": "public quizzes created",
+    "total_merci": "Thanks to the Quiz Couple community for keeping this place alive ❤️"
   },
   "app": {
     "pat_points_t": "Points quiz",

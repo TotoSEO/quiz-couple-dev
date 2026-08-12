@@ -1,0 +1,2562 @@
+{
+  "cats": {
+    "sexe": {
+      "nom": "Sex",
+      "emoji": "🔥"
+    },
+    "infidelite": {
+      "nom": "Cheating",
+      "emoji": "💔"
+    },
+    "mensonge": {
+      "nom": "Lies",
+      "emoji": "🎭"
+    },
+    "substances": {
+      "nom": "Booze & co",
+      "emoji": "🍸"
+    },
+    "famille": {
+      "nom": "Family",
+      "emoji": "👪"
+    },
+    "numerique": {
+      "nom": "Online life",
+      "emoji": "📱"
+    },
+    "interdit": {
+      "nom": "Off limits",
+      "emoji": "🚨"
+    },
+    "exhibition": {
+      "nom": "Getting caught",
+      "emoji": "👀"
+    },
+    "libertinage": {
+      "nom": "Open stuff",
+      "emoji": "💫"
+    },
+    "transgression": {
+      "nom": "Crossing lines",
+      "emoji": "🚨"
+    },
+    "secrets": {
+      "nom": "Secrets",
+      "emoji": "🤐"
+    }
+  },
+  "solo": {
+    "questions": [
+      {
+        "id": 1,
+        "cat": "sexe",
+        "ado": false,
+        "q": "What's your body count?",
+        "r": [
+          {
+            "t": "0",
+            "p": 0
+          },
+          {
+            "t": "1 to 3",
+            "p": 5
+          },
+          {
+            "t": "4 to 10",
+            "p": 11
+          },
+          {
+            "t": "11 to 30",
+            "p": 17
+          },
+          {
+            "t": "More than 30",
+            "p": 22
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever slept with someone on the first night?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Once",
+            "p": 8
+          },
+          {
+            "t": "A few times",
+            "p": 13
+          },
+          {
+            "t": "It's kind of my thing",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever had a regular hookup?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "One, over fast",
+            "p": 7
+          },
+          {
+            "t": "One that lasted months",
+            "p": 13
+          },
+          {
+            "t": "Several at the same time",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever slept with someone whose name you forgot?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "I hesitated but I had it",
+            "p": 6
+          },
+          {
+            "t": "Yes, once",
+            "p": 14
+          },
+          {
+            "t": "More than once",
+            "p": 20
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever faked it in bed?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Once, to wrap things up",
+            "p": 6
+          },
+          {
+            "t": "Fairly often",
+            "p": 11
+          },
+          {
+            "t": "Almost every time",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever had sex somewhere other than a bed?",
+        "r": [
+          {
+            "t": "No",
+            "p": 0
+          },
+          {
+            "t": "Does a sofa count?",
+            "p": 5
+          },
+          {
+            "t": "Car, shower, kitchen",
+            "p": 10
+          },
+          {
+            "t": "Outside, with the risk",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever used a toy, alone or with someone?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "On my own",
+            "p": 6
+          },
+          {
+            "t": "With someone, once",
+            "p": 10
+          },
+          {
+            "t": "We have a drawer for it",
+            "p": 14
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever watched porn with someone?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "By accident, channel hopping",
+            "p": 4
+          },
+          {
+            "t": "Yes, on purpose",
+            "p": 9
+          },
+          {
+            "t": "It became a habit",
+            "p": 13
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever had an experience with someone of the same sex?",
+        "r": [
+          {
+            "t": "No",
+            "p": 0
+          },
+          {
+            "t": "A kiss at a party",
+            "p": 7
+          },
+          {
+            "t": "Yes, once",
+            "p": 13
+          },
+          {
+            "t": "Yes, several times",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever had a threesome?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "We talked about it, never did it",
+            "p": 6
+          },
+          {
+            "t": "Once",
+            "p": 18
+          },
+          {
+            "t": "Several times",
+            "p": 24
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever had sex knowing someone could hear?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "At friends' place, in silence",
+            "p": 8
+          },
+          {
+            "t": "At my parents' place",
+            "p": 13
+          },
+          {
+            "t": "And we didn't even pretend",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever slept with someone just for revenge or to prove something?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "I thought about it",
+            "p": 5
+          },
+          {
+            "t": "Yes, once",
+            "p": 15
+          },
+          {
+            "t": "Yes, and I'd do it again",
+            "p": 21
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "cat": "infidelite",
+        "ado": false,
+        "q": "Have you ever cheated on someone?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A kiss, nothing more",
+            "p": 12
+          },
+          {
+            "t": "Yes, once",
+            "p": 22
+          },
+          {
+            "t": "Yes, several times",
+            "p": 28
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "cat": "infidelite",
+        "ado": true,
+        "q": "Have you ever kissed someone else at a party and never mentioned it?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A peck doesn't count",
+            "p": 8
+          },
+          {
+            "t": "Yes, and I hid it",
+            "p": 16
+          },
+          {
+            "t": "Yes, several times",
+            "p": 21
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "cat": "infidelite",
+        "ado": false,
+        "q": "Have you ever been someone's secret while they were taken?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "I found out afterwards",
+            "p": 8
+          },
+          {
+            "t": "Yes, knowingly",
+            "p": 20
+          },
+          {
+            "t": "Yes, several times",
+            "p": 25
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "cat": "infidelite",
+        "ado": true,
+        "q": "Have you ever stayed in touch with an ex while in a relationship?",
+        "r": [
+          {
+            "t": "No",
+            "p": 0
+          },
+          {
+            "t": "A birthday once a year",
+            "p": 4
+          },
+          {
+            "t": "We talked often",
+            "p": 11
+          },
+          {
+            "t": "Behind their back, yes",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "cat": "infidelite",
+        "ado": false,
+        "q": "Have you ever reinstalled a dating app while in a relationship?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Just to look",
+            "p": 10
+          },
+          {
+            "t": "I chatted with people",
+            "p": 17
+          },
+          {
+            "t": "I met up with someone",
+            "p": 25
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "cat": "infidelite",
+        "ado": true,
+        "q": "Have you ever been too close to someone without anything physical happening?",
+        "r": [
+          {
+            "t": "No",
+            "p": 0
+          },
+          {
+            "t": "A slightly blurry friendship",
+            "p": 6
+          },
+          {
+            "t": "We said things we shouldn't have",
+            "p": 13
+          },
+          {
+            "t": "It was an affair, minus the body",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "cat": "infidelite",
+        "ado": false,
+        "q": "Have you ever secretly met up with an ex?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A coffee, nothing else",
+            "p": 8
+          },
+          {
+            "t": "Yes, and something happened",
+            "p": 20
+          },
+          {
+            "t": "Several times",
+            "p": 24
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "cat": "infidelite",
+        "ado": true,
+        "q": "Have you ever flirted at work or in class while taken?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A bit, for the game",
+            "p": 7
+          },
+          {
+            "t": "Enough to ask myself questions",
+            "p": 13
+          },
+          {
+            "t": "It ended up going too far",
+            "p": 19
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "cat": "infidelite",
+        "ado": true,
+        "q": "Have you ever deleted a conversation before your partner could see it?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Once, nothing serious",
+            "p": 7
+          },
+          {
+            "t": "Regularly",
+            "p": 14
+          },
+          {
+            "t": "I have a second phone",
+            "p": 20
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Have you ever lied about your romantic past?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "I rounded a number down",
+            "p": 5
+          },
+          {
+            "t": "I hid a whole relationship",
+            "p": 12
+          },
+          {
+            "t": "My official version is nowhere near the truth",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Have you ever pretended to be down to get attention?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A little, without meaning to",
+            "p": 5
+          },
+          {
+            "t": "Yes, knowingly",
+            "p": 11
+          },
+          {
+            "t": "It's a reflex with me",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Have you ever talked badly about your partner to people close to you?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A normal vent",
+            "p": 4
+          },
+          {
+            "t": "I shared private things",
+            "p": 10
+          },
+          {
+            "t": "I said genuinely ugly things",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Have you ever lied about where you were?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "To avoid an argument",
+            "p": 5
+          },
+          {
+            "t": "To hide someone",
+            "p": 13
+          },
+          {
+            "t": "Often, it became a system",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Have you ever pretended to love a gift?",
+        "r": [
+          {
+            "t": "No, I say what I think",
+            "p": 0
+          },
+          {
+            "t": "Yes, out of politeness",
+            "p": 3
+          },
+          {
+            "t": "Yes, and I resold it",
+            "p": 8
+          },
+          {
+            "t": "Yes, and I threw it out",
+            "p": 11
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Have you ever gone through someone's phone?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "I looked at a lit screen",
+            "p": 6
+          },
+          {
+            "t": "Yes, behind their back",
+            "p": 13
+          },
+          {
+            "t": "Regularly",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Have you ever ghosted someone overnight?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "After one or two dates",
+            "p": 5
+          },
+          {
+            "t": "After several months",
+            "p": 13
+          },
+          {
+            "t": "After a real relationship",
+            "p": 19
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Have you ever hidden something serious from your partner?",
+        "r": [
+          {
+            "t": "Nothing serious",
+            "p": 0
+          },
+          {
+            "t": "A flirt, one dance too many",
+            "p": 8
+          },
+          {
+            "t": "A kiss",
+            "p": 15
+          },
+          {
+            "t": "Far worse than that",
+            "p": 22
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "cat": "substances",
+        "ado": true,
+        "q": "Have you ever been drunk enough to lose part of the night?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Once",
+            "p": 7
+          },
+          {
+            "t": "Several times",
+            "p": 13
+          },
+          {
+            "t": "Too often to count",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "cat": "substances",
+        "ado": false,
+        "q": "Have you ever smoked a joint?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "One drag to try",
+            "p": 6
+          },
+          {
+            "t": "Several times",
+            "p": 12
+          },
+          {
+            "t": "Regularly",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "cat": "substances",
+        "ado": false,
+        "q": "Have you ever taken anything harder than a joint?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Once, at a party",
+            "p": 14
+          },
+          {
+            "t": "Several times",
+            "p": 21
+          },
+          {
+            "t": "Regularly",
+            "p": 26
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "cat": "substances",
+        "ado": true,
+        "q": "Have you ever run a night straight through to breakfast?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Once",
+            "p": 4
+          },
+          {
+            "t": "Several times",
+            "p": 8
+          },
+          {
+            "t": "It's my favourite format",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "cat": "substances",
+        "ado": false,
+        "q": "Have you ever had sex under the influence?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A bit tipsy",
+            "p": 7
+          },
+          {
+            "t": "Genuinely under the influence",
+            "p": 15
+          },
+          {
+            "t": "With no clear memory of it",
+            "p": 21
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "cat": "substances",
+        "ado": true,
+        "q": "Have you ever driven after drinking?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "One glass, a long time ago",
+            "p": 11
+          },
+          {
+            "t": "Yes, more than once",
+            "p": 21
+          },
+          {
+            "t": "Yes, and it scared me",
+            "p": 27
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "cat": "substances",
+        "ado": true,
+        "q": "Have you ever been sick at a party in front of everyone?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Discreetly",
+            "p": 4
+          },
+          {
+            "t": "With witnesses",
+            "p": 8
+          },
+          {
+            "t": "On someone",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "cat": "famille",
+        "ado": true,
+        "q": "Have you ever thought your in-laws were a bit much?",
+        "r": [
+          {
+            "t": "I love them",
+            "p": 0
+          },
+          {
+            "t": "One or two irritations",
+            "p": 4
+          },
+          {
+            "t": "Yes, honestly",
+            "p": 8
+          },
+          {
+            "t": "I avoid them when I can",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "cat": "famille",
+        "ado": true,
+        "q": "Have you ever lied to your parents about a relationship?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "I left out details",
+            "p": 4
+          },
+          {
+            "t": "I hid someone completely",
+            "p": 10
+          },
+          {
+            "t": "I invented a whole other life",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "cat": "famille",
+        "ado": true,
+        "q": "Have you ever introduced someone to your parents knowing it wouldn't last?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "I had doubts",
+            "p": 4
+          },
+          {
+            "t": "I knew perfectly well",
+            "p": 9
+          },
+          {
+            "t": "Several times",
+            "p": 13
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "cat": "famille",
+        "ado": true,
+        "q": "Have you ever spent the holidays with someone you'd stopped loving?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "One meal",
+            "p": 5
+          },
+          {
+            "t": "The whole holidays",
+            "p": 10
+          },
+          {
+            "t": "And I played along completely",
+            "p": 14
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "cat": "famille",
+        "ado": true,
+        "q": "Have you ever picked a night out over something important with family?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Once",
+            "p": 4
+          },
+          {
+            "t": "Several times",
+            "p": 8
+          },
+          {
+            "t": "It's a classic with me",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "cat": "numerique",
+        "ado": false,
+        "q": "Have you ever sent a naked photo of yourself?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Without my face",
+            "p": 8
+          },
+          {
+            "t": "Yes, with my face",
+            "p": 14
+          },
+          {
+            "t": "To several people",
+            "p": 19
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "cat": "numerique",
+        "ado": false,
+        "q": "Have you ever sexted from work or from class?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A few messages",
+            "p": 7
+          },
+          {
+            "t": "Way more than that",
+            "p": 12
+          },
+          {
+            "t": "And I nearly got caught",
+            "p": 16
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "cat": "numerique",
+        "ado": true,
+        "q": "Have you ever had a secret account on social media?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "An account just to look",
+            "p": 6
+          },
+          {
+            "t": "An account to talk to people",
+            "p": 13
+          },
+          {
+            "t": "An account nobody knows about",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "cat": "numerique",
+        "ado": true,
+        "q": "Have you ever stalked an ex or their new partner?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A quick scroll",
+            "p": 4
+          },
+          {
+            "t": "Regularly",
+            "p": 9
+          },
+          {
+            "t": "I went back through years of photos",
+            "p": 13
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "cat": "numerique",
+        "ado": true,
+        "q": "Have you ever sent a message you regretted the next morning?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "An awkward message",
+            "p": 4
+          },
+          {
+            "t": "A message I had to explain",
+            "p": 9
+          },
+          {
+            "t": "A message that broke everything",
+            "p": 14
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "cat": "interdit",
+        "ado": true,
+        "q": "Have you ever stolen something?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A sweet, as a kid",
+            "p": 5
+          },
+          {
+            "t": "Something of real value",
+            "p": 14
+          },
+          {
+            "t": "Several times",
+            "p": 19
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "cat": "interdit",
+        "ado": true,
+        "q": "Have you ever skipped class or work to stay with someone?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "One morning",
+            "p": 4
+          },
+          {
+            "t": "A whole day",
+            "p": 8
+          },
+          {
+            "t": "Several days",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "cat": "interdit",
+        "ado": true,
+        "q": "Have you ever done something properly illegal to impress someone?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A harmless stunt",
+            "p": 7
+          },
+          {
+            "t": "Something serious",
+            "p": 17
+          },
+          {
+            "t": "And I got in trouble",
+            "p": 23
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "cat": "interdit",
+        "ado": true,
+        "q": "Have you ever been caught red-handed by someone?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A friend",
+            "p": 6
+          },
+          {
+            "t": "My parents",
+            "p": 12
+          },
+          {
+            "t": "Strangers",
+            "p": 17
+          }
+        ]
+      }
+    ],
+    "paliers": [
+      {
+        "min": 0,
+        "max": 9,
+        "titre": "Clean record",
+        "emoji": "😇",
+        "texte": "On paper, you have nothing to answer for. Either you're genuinely well behaved or you lie very well, and nobody will ever know which."
+      },
+      {
+        "min": 9,
+        "max": 22,
+        "titre": "Well behaved, not naive",
+        "emoji": "🌱",
+        "texte": "You've done a few silly things, the ones everyone does. Nothing that would stop you looking your parents in the eye over Christmas dinner."
+      },
+      {
+        "min": 22,
+        "max": 38,
+        "titre": "You've lived, without going overboard",
+        "emoji": "🙂",
+        "texte": "You have stories to tell, but you save the best ones for people you trust. This is the most common score, and it's a decent sign."
+      },
+      {
+        "min": 38,
+        "max": 54,
+        "titre": "The file is getting thicker",
+        "emoji": "😏",
+        "texte": "Now we're getting somewhere. You've crossed a few lines, you know it, and you clearly don't regret it all that much."
+      },
+      {
+        "min": 54,
+        "max": 70,
+        "titre": "You're well past the line",
+        "emoji": "🔥",
+        "texte": "At this level it's no longer a run of accidents, it's a lifestyle. You've done things half of people wouldn't even dare tick."
+      },
+      {
+        "min": 70,
+        "max": 85,
+        "titre": "Your record is frightening",
+        "emoji": "😈",
+        "texte": "You're right up at the top. There are few boxes left unticked, and the ones that remain, you've probably already considered."
+      },
+      {
+        "min": 85,
+        "max": 101,
+        "titre": "Off the charts",
+        "emoji": "👑",
+        "texte": "You've ticked just about everything there was to tick. At this stage the question isn't what you've done, it's what you have left to do."
+      }
+    ]
+  },
+  "couple": {
+    "questions": [
+      {
+        "id": 1,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever done it in public?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Somewhere deserted",
+            "p": 10
+          },
+          {
+            "t": "Where someone could have seen us",
+            "p": 19
+          },
+          {
+            "t": "Someone did see us",
+            "p": 26
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever done it in a car?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Parked, out of sight",
+            "p": 8
+          },
+          {
+            "t": "In a car park",
+            "p": 14
+          },
+          {
+            "t": "While it was moving",
+            "p": 20
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever done it at someone else's place during a party?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "In the spare room",
+            "p": 8
+          },
+          {
+            "t": "In the bathroom",
+            "p": 14
+          },
+          {
+            "t": "Nobody saw a thing, we think",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever filmed or photographed yourselves?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Photos, deleted since",
+            "p": 9
+          },
+          {
+            "t": "Photos we kept",
+            "p": 15
+          },
+          {
+            "t": "Videos",
+            "p": 20
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever tried a toy together?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "We've talked about it",
+            "p": 5
+          },
+          {
+            "t": "Once",
+            "p": 10
+          },
+          {
+            "t": "We have a small collection",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever role played, costume and all?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Words only",
+            "p": 5
+          },
+          {
+            "t": "An outfit, once",
+            "p": 11
+          },
+          {
+            "t": "We have a recurring scenario",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever watched porn together?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Once, laughing",
+            "p": 5
+          },
+          {
+            "t": "On purpose, for the mood",
+            "p": 10
+          },
+          {
+            "t": "It's a habit",
+            "p": 13
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever done it knowing someone could hear?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "In complete silence",
+            "p": 8
+          },
+          {
+            "t": "At one of our parents' place",
+            "p": 14
+          },
+          {
+            "t": "And we made no effort",
+            "p": 19
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever used handcuffs, a blindfold, or more?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A scarf over the eyes",
+            "p": 8
+          },
+          {
+            "t": "Handcuffs",
+            "p": 14
+          },
+          {
+            "t": "We have a whole kit",
+            "p": 20
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Has one of you ever tried something the other regretted?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "An awkward moment",
+            "p": 6
+          },
+          {
+            "t": "Yes, we talked about it after",
+            "p": 12
+          },
+          {
+            "t": "Yes, and it hurt",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "cat": "sexe",
+        "ado": true,
+        "q": "Have you ever gone a long stretch with nothing at all?",
+        "r": [
+          {
+            "t": "Never more than a few days",
+            "p": 0
+          },
+          {
+            "t": "Two or three weeks",
+            "p": 4
+          },
+          {
+            "t": "Several months",
+            "p": 8
+          },
+          {
+            "t": "More than a year",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Have you ever done it in the morning at one of your parents' place?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Very discreetly",
+            "p": 8
+          },
+          {
+            "t": "While they were awake",
+            "p": 14
+          },
+          {
+            "t": "And we ran into someone afterwards",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "cat": "exhibition",
+        "ado": true,
+        "q": "Have you ever kissed to the point of making other people uncomfortable?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A bit too long",
+            "p": 4
+          },
+          {
+            "t": "Someone pointed it out",
+            "p": 9
+          },
+          {
+            "t": "Often",
+            "p": 13
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "cat": "exhibition",
+        "ado": false,
+        "q": "Have you ever sent each other a racy photo in the middle of a work day?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A suggestive message",
+            "p": 6
+          },
+          {
+            "t": "A photo",
+            "p": 12
+          },
+          {
+            "t": "And someone nearly saw it",
+            "p": 16
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "cat": "exhibition",
+        "ado": true,
+        "q": "Have you ever left a party without telling anyone?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "We told one person",
+            "p": 3
+          },
+          {
+            "t": "We vanished without a word",
+            "p": 8
+          },
+          {
+            "t": "And nobody understood why",
+            "p": 11
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "cat": "exhibition",
+        "ado": false,
+        "q": "Have you ever slipped off to the toilets of a bar or restaurant?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Just to kiss",
+            "p": 7
+          },
+          {
+            "t": "For more than that",
+            "p": 15
+          },
+          {
+            "t": "And we kept people waiting",
+            "p": 19
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "cat": "exhibition",
+        "ado": false,
+        "q": "Have you ever been walked in on?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A friend, laughing",
+            "p": 7
+          },
+          {
+            "t": "A family member",
+            "p": 15
+          },
+          {
+            "t": "A stranger",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "cat": "exhibition",
+        "ado": false,
+        "q": "Have you ever tried something in an enclosed public place?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "An empty cinema",
+            "p": 9
+          },
+          {
+            "t": "A train, a plane",
+            "p": 17
+          },
+          {
+            "t": "And we nearly got caught",
+            "p": 22
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "cat": "exhibition",
+        "ado": true,
+        "q": "Have you ever swum with nothing on?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "In a private pool",
+            "p": 6
+          },
+          {
+            "t": "In a lake or the sea",
+            "p": 11
+          },
+          {
+            "t": "Somewhere with people around",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "cat": "exhibition",
+        "ado": true,
+        "q": "Have you ever sent a very private message to a group chat by mistake?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "An ambiguous message",
+            "p": 5
+          },
+          {
+            "t": "An explicit message",
+            "p": 11
+          },
+          {
+            "t": "A photo",
+            "p": 16
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Have you ever had a threesome?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "We've talked about it seriously",
+            "p": 7
+          },
+          {
+            "t": "Once",
+            "p": 20
+          },
+          {
+            "t": "Several times",
+            "p": 26
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Have you ever done a two on two?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "We've thought about it",
+            "p": 7
+          },
+          {
+            "t": "Once",
+            "p": 22
+          },
+          {
+            "t": "Several times",
+            "p": 28
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Have you ever swapped with another couple?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "We chatted with a couple",
+            "p": 8
+          },
+          {
+            "t": "Once",
+            "p": 23
+          },
+          {
+            "t": "It became regular",
+            "p": 29
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Have you ever been to a swingers club?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "To watch",
+            "p": 12
+          },
+          {
+            "t": "And we joined in",
+            "p": 22
+          },
+          {
+            "t": "We go back",
+            "p": 27
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Have you ever had an open relationship, even for a few weeks?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "We've talked about it",
+            "p": 6
+          },
+          {
+            "t": "A few weeks",
+            "p": 17
+          },
+          {
+            "t": "Several months",
+            "p": 23
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Has one of you ever kissed someone else in front of the other, by mutual agreement?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A dare at a party",
+            "p": 9
+          },
+          {
+            "t": "Yes, fully owned",
+            "p": 16
+          },
+          {
+            "t": "Several times",
+            "p": 21
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Have you ever shared a fantasy involving someone else?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Vaguely",
+            "p": 5
+          },
+          {
+            "t": "With names attached",
+            "p": 11
+          },
+          {
+            "t": "And we started arranging it",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Have you ever used an app as a couple to meet someone?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "We made the profile without using it",
+            "p": 8
+          },
+          {
+            "t": "We chatted with people",
+            "p": 15
+          },
+          {
+            "t": "We met someone",
+            "p": 24
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "cat": "substances",
+        "ado": false,
+        "q": "Have you ever smoked together?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Once",
+            "p": 8
+          },
+          {
+            "t": "Several times",
+            "p": 14
+          },
+          {
+            "t": "It's regular",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "cat": "substances",
+        "ado": false,
+        "q": "Have you ever taken anything harder together?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Once at a party",
+            "p": 15
+          },
+          {
+            "t": "Several times",
+            "p": 22
+          },
+          {
+            "t": "Regularly",
+            "p": 27
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "cat": "substances",
+        "ado": false,
+        "q": "Have you ever had sex both of you under the influence?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A bit tipsy",
+            "p": 7
+          },
+          {
+            "t": "Genuinely under the influence",
+            "p": 16
+          },
+          {
+            "t": "With no clear memory",
+            "p": 22
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "cat": "substances",
+        "ado": true,
+        "q": "Have you ever run a night through to dawn without sleeping?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Once",
+            "p": 4
+          },
+          {
+            "t": "Several times",
+            "p": 8
+          },
+          {
+            "t": "It's our format",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "cat": "substances",
+        "ado": true,
+        "q": "Have you ever argued because one of you had drunk too much?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A bit of tension",
+            "p": 4
+          },
+          {
+            "t": "A proper row",
+            "p": 9
+          },
+          {
+            "t": "Several times",
+            "p": 14
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "cat": "substances",
+        "ado": true,
+        "q": "Have you both ever lost part of the same night?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Gaps here and there",
+            "p": 6
+          },
+          {
+            "t": "A whole night",
+            "p": 12
+          },
+          {
+            "t": "Several times",
+            "p": 16
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "cat": "substances",
+        "ado": true,
+        "q": "Have you ever cancelled something important because of the night before?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A low stakes appointment",
+            "p": 5
+          },
+          {
+            "t": "A family thing",
+            "p": 10
+          },
+          {
+            "t": "A work thing",
+            "p": 14
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Have you ever been to a casino together?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "To watch",
+            "p": 4
+          },
+          {
+            "t": "We played a small budget",
+            "p": 9
+          },
+          {
+            "t": "We lost far more than planned",
+            "p": 14
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Have you ever bet something serious against each other?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "The washing up",
+            "p": 3
+          },
+          {
+            "t": "Money",
+            "p": 8
+          },
+          {
+            "t": "A forfeit we won't forget",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Have you ever been thrown out of somewhere?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Out of a bar, politely",
+            "p": 7
+          },
+          {
+            "t": "Out of a public place",
+            "p": 13
+          },
+          {
+            "t": "By security",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Have you ever sneaked into somewhere off limits?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A hotel pool",
+            "p": 7
+          },
+          {
+            "t": "A rooftop, a building site",
+            "p": 13
+          },
+          {
+            "t": "And we got caught",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Has one of you ever driven after drinking with the other on board?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "One glass, a long time ago",
+            "p": 11
+          },
+          {
+            "t": "More than once",
+            "p": 22
+          },
+          {
+            "t": "And we were badly scared",
+            "p": 28
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Have you ever lied together to your families about something important?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A slightly tidied up version",
+            "p": 5
+          },
+          {
+            "t": "A real lie",
+            "p": 12
+          },
+          {
+            "t": "A lie that's still running",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Have you ever left with nothing booked, no idea where you'd sleep?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "One night",
+            "p": 4
+          },
+          {
+            "t": "A whole weekend",
+            "p": 8
+          },
+          {
+            "t": "An entire trip",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Is there something one of you still doesn't know?",
+        "r": [
+          {
+            "t": "No, we tell each other everything",
+            "p": 0
+          },
+          {
+            "t": "An unimportant detail",
+            "p": 6
+          },
+          {
+            "t": "Something that matters",
+            "p": 15
+          },
+          {
+            "t": "Something that would hurt",
+            "p": 22
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Have you ever gone through each other's phone?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A lit screen, by chance",
+            "p": 5
+          },
+          {
+            "t": "Yes, behind their back",
+            "p": 12
+          },
+          {
+            "t": "Regularly",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Does one of you still have an ex in their contacts?",
+        "r": [
+          {
+            "t": "No",
+            "p": 0
+          },
+          {
+            "t": "A number never used",
+            "p": 4
+          },
+          {
+            "t": "We write sometimes",
+            "p": 10
+          },
+          {
+            "t": "And the other doesn't know",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Have you ever taken a break in your relationship?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "A few days",
+            "p": 5
+          },
+          {
+            "t": "Several weeks",
+            "p": 11
+          },
+          {
+            "t": "And things happened during it",
+            "p": 20
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "cat": "secrets",
+        "ado": false,
+        "q": "Has one of you ever reinstalled a dating app during the relationship?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "Out of curiosity, talking to nobody",
+            "p": 10
+          },
+          {
+            "t": "There were conversations",
+            "p": 18
+          },
+          {
+            "t": "There was a meeting",
+            "p": 26
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Have you ever hidden a money problem from the other?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "An embarrassing purchase",
+            "p": 5
+          },
+          {
+            "t": "A real sum",
+            "p": 12
+          },
+          {
+            "t": "An entire debt",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Have you ever got back together after a breakup?",
+        "r": [
+          {
+            "t": "Never broke up",
+            "p": 0
+          },
+          {
+            "t": "Once",
+            "p": 5
+          },
+          {
+            "t": "Twice",
+            "p": 9
+          },
+          {
+            "t": "We've stopped counting",
+            "p": 13
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Have you ever sworn something you didn't keep?",
+        "r": [
+          {
+            "t": "Never",
+            "p": 0
+          },
+          {
+            "t": "An everyday promise",
+            "p": 4
+          },
+          {
+            "t": "A promise that mattered",
+            "p": 10
+          },
+          {
+            "t": "A promise that changed everything",
+            "p": 16
+          }
+        ]
+      }
+    ],
+    "paliers": [
+      {
+        "min": 0,
+        "max": 9,
+        "titre": "Postcard couple",
+        "emoji": "😇",
+        "texte": "You're the couple you introduce to your grandmother without breaking a sweat. Everything is neat, tidy, and a little too quiet to be entirely honest."
+      },
+      {
+        "min": 9,
+        "max": 22,
+        "titre": "Well behaved, with a memory or two",
+        "emoji": "🌱",
+        "texte": "You have your small slips, the ones that make you smile when they come up. Nothing that puts the relationship at risk."
+      },
+      {
+        "min": 22,
+        "max": 38,
+        "titre": "A normal couple, basically",
+        "emoji": "🙂",
+        "texte": "You've done some things, missed out on others, and had a good laugh. This is the most common score, and honestly it's a good place to be."
+      },
+      {
+        "min": 38,
+        "max": 54,
+        "titre": "You're not that well behaved",
+        "emoji": "😏",
+        "texte": "There's a real list behind you. You know exactly what we're talking about, and you're probably looking at each other reading this."
+      },
+      {
+        "min": 54,
+        "max": 70,
+        "titre": "You have history",
+        "emoji": "🔥",
+        "texte": "You've tried things most couples are content to imagine. This isn't curiosity any more, it's a habit."
+      },
+      {
+        "min": 70,
+        "max": 85,
+        "titre": "Nothing stops you",
+        "emoji": "😈",
+        "texte": "There are very few empty boxes left in your file. You're the couple whose friends say \"I'd rather not know\"."
+      },
+      {
+        "min": 85,
+        "max": 101,
+        "titre": "Off the charts",
+        "emoji": "👑",
+        "texte": "You've ticked just about everything. This test has little left to teach you, it just puts the score down in writing."
+      }
+    ]
+  }
+}

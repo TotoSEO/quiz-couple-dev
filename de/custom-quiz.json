@@ -14,7 +14,10 @@
       "s2p2": "Du kannst dein Quiz auch öffentlich machen: Es erscheint dann in der Community-Liste auf dieser Seite und jeder kann es spielen. Öffentliche Quizze bleiben erhalten.",
       "s3Title": "Quizze für jeden Moment zu zweit",
       "s3p1": "Ob um herauszufinden, ob dein Partner dich wirklich kennt, für einen Abend mit Freunden oder einfach zum Lachen: Das Erstellen eigener Quizze passt zu jeder Stimmung. Lass deiner Fantasie freien Lauf!"
-    }
+    },
+    "total_prives": "private Quiz erstellt",
+    "total_publics": "öffentliche Quiz erstellt",
+    "total_merci": "Danke an die Quiz-Couple-Community, die diese Seite am Leben hält ❤️"
   },
   "app": {
     "pat_points_t": "Punkte-Quiz",
