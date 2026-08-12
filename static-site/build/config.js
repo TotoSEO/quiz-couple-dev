@@ -265,6 +265,19 @@ export const BLOG_CATEGORIES = {
 // Blog article metadata
 export const BLOG_ARTICLES = [
   {
+    internalSlug: 'disputes-couple-vacances',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/disputes-couple-vacances.webp',
+    slugs: {
+      fr: 'disputes-couple-vacances',
+      en: 'couples-arguing-on-holiday',
+      es: 'discusiones-pareja-vacaciones',
+      de: 'streit-im-paar-im-urlaub',
+      it: 'litigi-di-coppia-in-vacanza',
+    },
+    publishedAt: '2026-08-12',
+  },
+  {
     internalSlug: 'sentiments-chez-un-homme',
     category: 'vie-de-couple',
     featuredImage: '/blog/sentiments-chez-un-homme.webp',

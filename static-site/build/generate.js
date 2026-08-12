@@ -24,6 +24,58 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TEMPLATES_DIR = path.resolve(__dirname, '../templates');
 const DIST_DIR = path.resolve(__dirname, '../dist');
 
+// Real pixel size of the og:image, read from disk at build time.
+// Google Discover only serves the large card when the image is at least
+// 1200px wide, and it checks the file, not the meta tag. Announcing 1200x630
+// for a file that is 1100x733 costs the card, so we read the header instead.
+const PUBLIC_DIR = path.resolve(__dirname, '../../public');
+const OG_FALLBACK = { width: 1200, height: 630 };
+const ogSizeCache = new Map();
+
+function readImageSize(buf) {
+  // WebP: RIFF container, then VP8 / VP8L / VP8X
+  if (buf.length > 30 && buf.toString('ascii', 0, 4) === 'RIFF' && buf.toString('ascii', 8, 12) === 'WEBP') {
+    const kind = buf.toString('ascii', 12, 16);
+    if (kind === 'VP8X') return { width: (buf.readUIntLE(24, 3) & 0xffffff) + 1, height: (buf.readUIntLE(27, 3) & 0xffffff) + 1 };
+    if (kind === 'VP8L') {
+      const b = buf.readUInt32LE(21);
+      return { width: (b & 0x3fff) + 1, height: ((b >> 14) & 0x3fff) + 1 };
+    }
+    if (kind === 'VP8 ') return { width: buf.readUInt16LE(26) & 0x3fff, height: buf.readUInt16LE(28) & 0x3fff };
+  }
+  // PNG: IHDR is always the first chunk
+  if (buf.length > 24 && buf.readUInt32BE(0) === 0x89504e47) {
+    return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+  }
+  // JPEG: walk the segments to the SOFn frame header
+  if (buf.length > 4 && buf[0] === 0xff && buf[1] === 0xd8) {
+    let i = 2;
+    while (i < buf.length - 9) {
+      if (buf[i] !== 0xff) { i++; continue; }
+      const marker = buf[i + 1];
+      if (marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc) {
+        return { width: buf.readUInt16BE(i + 7), height: buf.readUInt16BE(i + 5) };
+      }
+      i += 2 + buf.readUInt16BE(i + 2);
+    }
+  }
+  return null;
+}
+
+function ogImageSize(ogImageUrl) {
+  if (!ogImageUrl || !ogImageUrl.startsWith(BASE_URL)) return OG_FALLBACK;
+  const rel = ogImageUrl.slice(BASE_URL.length).split('?')[0];
+  if (ogSizeCache.has(rel)) return ogSizeCache.get(rel);
+  let size = OG_FALLBACK;
+  try {
+    size = readImageSize(fs.readFileSync(path.join(PUBLIC_DIR, rel))) || OG_FALLBACK;
+  } catch {
+    // Image not on disk yet (Supabase-hosted or generated later): keep the default.
+  }
+  ogSizeCache.set(rel, size);
+  return size;
+}
+
 // Review stats fetched from Supabase at build time
 let reviewStats = { avg: '0', count: '0' };
 let reviewStatsByQuiz = {};
@@ -243,6 +295,12 @@ function renderTemplate(templateName, data) {
   if (!fs.existsSync(templatePath)) {
     console.warn(`[render] Template not found: ${templatePath}`);
     return `<!-- Template ${templateName} not found -->`;
+  }
+  // Announce the real og:image dimensions rather than a hardcoded guess.
+  if (data && data.ogImage && data.ogImageWidth === undefined) {
+    const size = ogImageSize(data.ogImage);
+    data.ogImageWidth = size.width;
+    data.ogImageHeight = size.height;
   }
   return ejs.renderFile(templatePath, data, {
     views: [TEMPLATES_DIR],
@@ -1111,16 +1169,26 @@ async function generateBlogArticle(articleMeta, lang) {
       ).join(' ');
       const wc = text.replace(/<[^>]+>/g, '').split(/\s+/).filter(Boolean).length;
       const schemaType = articleMeta.frOnly ? 'NewsArticle' : 'Article';
+      const imageUrl = article.featuredImage
+        ? (article.featuredImage.startsWith('http') ? article.featuredImage : `${BASE_URL}${article.featuredImage}`)
+        : `${BASE_URL}/og-image.webp`;
+      const imageSize = ogImageSize(imageUrl);
+      // Discover reads datePublished; a bare date is treated as midnight UTC,
+      // which back-dates every article by up to two hours in Paris time.
+      const withTime = (d) => (d && /^\d{4}-\d{2}-\d{2}$/.test(d) ? `${d}T08:00:00+02:00` : d);
       return {
         '@context': 'https://schema.org',
         '@type': schemaType,
         headline: article.metaTitle || article.title,
         description: article.metaDescription || article.excerpt,
-        image: article.featuredImage
-          ? (article.featuredImage.startsWith('http') ? article.featuredImage : `${BASE_URL}${article.featuredImage}`)
-          : `${BASE_URL}/og-image.webp`,
-        datePublished: article.publishedAt,
-        dateModified: article.modifiedAt || article.publishedAt,
+        image: {
+          '@type': 'ImageObject',
+          url: imageUrl,
+          width: imageSize.width,
+          height: imageSize.height,
+        },
+        datePublished: withTime(article.publishedAt),
+        dateModified: withTime(article.modifiedAt || article.publishedAt),
         inLanguage: lang,
         wordCount: wc,
         author: {
