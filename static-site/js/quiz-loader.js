@@ -69,7 +69,7 @@
     'most':           { prefix: 'most', engine: 'most', totalQ: 20, pool: 245, textOnly: true },
 
     // ── Parentalite quiz (2 players, same questions, explicit point values) ──
-    'parentalite':    { prefix: 'parentalite', engine: 'parentalite', totalQ: 20, pool: 20 },
+    'parentalite':    { prefix: 'parentalite', engine: 'parentalite', totalQ: 24, pool: 24 },
 
     // ── Emmenager quiz (same engine as parentalite) ──
     'emmenager':      { prefix: 'emmenager', engine: 'parentalite', totalQ: 20, pool: 20 },
@@ -181,7 +181,6 @@
     ] },
 
     // ── Bebe quiz (solo scoring, descending: more ready = higher score) ──
-    'bebe':           { prefix: 'bebe', engine: 'solo', totalQ: 20, pool: 20, quizType: 'bebe' },
 
     // ── Les Z'Amours (TV game-show: guess & reveal + 45s final) ──
     'zamours':        { prefix: 'zamours', engine: 'zamours', totalQ: 14, pool: 60 },

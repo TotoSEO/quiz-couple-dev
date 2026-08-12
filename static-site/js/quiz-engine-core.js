@@ -708,7 +708,6 @@ var QuizEngine = (function() {
     { type: 'test', key: 'divorce', icon: '⚖️', route: 'testDivorce' },
     { type: 'test', key: 'parentalite', icon: '👶', route: 'testParentalite' },
     { type: 'test', key: 'emmenager', icon: '🏠', route: 'testEmmenager' },
-    { type: 'test', key: 'bebe', icon: '🍼', route: 'testBebe' },
     { type: 'test', key: 'karmique', icon: '🔮', route: 'testKarmique' },
     { type: 'test', key: 'date-naissance', icon: '📅', route: 'testDateNaissance' },
     { type: 'test', key: 'jalousie1', icon: '🫣', route: 'testJalousie' },
@@ -772,8 +771,7 @@ var QuizEngine = (function() {
     // Une étape validée donne envie de regarder la suivante.
     'mariage':         ['testEmmenager', 'testParentalite', 'testCompatibilite'],
     'emmenager':       ['testParentalite', 'testMariage', 'testCompatibilite'],
-    'parentalite':     ['testBebe', 'testEmmenager', 'testMariage'],
-    'bebe':            ['testParentalite', 'testEmmenager', 'testCouple'],
+    'parentalite':     ['testEmmenager', 'testMariage'],
 
     // ── Tests d'alerte, faits seul ──────────────────────────────────────
     // Personne ne fait ces tests pour s'amuser. On enchaîne sur la question
