@@ -772,6 +772,7 @@ var QuizEngine = (function() {
   // du quiz dans le message de partage : une page absente d'ici n'etait jamais
   // proposee ailleurs et partageait un nom vide.
   var ALL_QUIZZES_LIST = [
+    { type: 'test', key: 'purete', icon: '🌡️', route: 'testPurete' },
     { type: 'test', key: 'tester-couple', icon: '💕', route: 'testCouple' },
     { type: 'test', key: 'common-points', icon: '🎯', route: 'testCommonPoints' },
     { type: 'test', key: 'compatibilite', icon: '💘', route: 'testCompatibilite' },

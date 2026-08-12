@@ -53,7 +53,8 @@
     "testDateNaissance": "Compatibilité date de naissance",
     "testCouche": "A couché avec un(e) autre ?",
     "testSecret": "M'aime-t-il en secret ?",
-    "testDistanceAime": "M'aime-t-il encore à distance ?"
+    "testDistanceAime": "M'aime-t-il encore à distance ?",
+    "testPurete": "Test de pureté"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",
