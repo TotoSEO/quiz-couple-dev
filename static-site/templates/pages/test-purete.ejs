@@ -99,20 +99,18 @@
       emoji: emoji
     };
   }
-  var suites = {
-    solo: [
-      suite('quizCoquin', '🔥', 'Trente questions pour voir si vos envies collent.'),
-      suite('testInfidelite', '💔', 'Le doute a un nom. Vingt questions pour le poser.'),
-      suite('testCouple', '💕', 'Le test de base, à faire à deux, sur votre couple.'),
-      suite('jeuActionVerite', '🎲', 'Des gages et des vérités, pour quand il y a du monde.')
-    ].filter(Boolean),
-    couple: [
-      suite('quizCoquin', '🔥', 'Vous êtes lancés ? Autant continuer sur ce terrain.'),
-      suite('jeuActionVeriteHot', '🌶️', 'La version qui ne pose pas de questions faciles.'),
-      suite('jeuGages', '🎡', 'La roue tourne, l\'un de vous exécute.'),
-      suite('testCouple', '💕', 'On redescend d\'un cran : où en est votre couple ?')
-    ].filter(Boolean)
+  // Les accroches viennent du fichier de langue : elles étaient en dur ici,
+  // ce qui rendait la page intraduisible sans toucher au gabarit.
+  var suitesDef = {
+    solo: [['quizCoquin', '🔥'], ['testInfidelite', '💔'], ['testCouple', '💕'], ['jeuActionVerite', '🎲']],
+    couple: [['quizCoquin', '🔥'], ['jeuActionVeriteHot', '🌶️'], ['jeuGages', '🎡'], ['testCouple', '💕']]
   };
+  var suites = {};
+  Object.keys(suitesDef).forEach(function (m) {
+    suites[m] = suitesDef[m].map(function (d, i) {
+      return suite(d[0], d[1], T('moteur.suite_' + m + '_' + (i + 1), ''));
+    }).filter(Boolean);
+  });
 
   // ── FAQ ──
   var faq = [];
@@ -150,7 +148,7 @@
     "@context": "https://schema.org", "@type": "Quiz",
     "name": titreHero + ' ' + accentHero,
     "description": T('meta.description'),
-    "inLanguage": "fr",
+    "inLanguage": lang,
     "datePublished": "2026-08-12",
     "isAccessibleForFree": true,
     "image": (typeof featuredImage !== 'undefined' && featuredImage) ? baseUrl + featuredImage : baseUrl + '/og-image.webp',
@@ -174,6 +172,10 @@
     });
   }
 %>
+<%# Libellés du moteur. Ils voyagent dans la page plutôt que dans le
+    fichier de données des questions : le moteur en a besoin dès le premier
+    écran, avant tout appel réseau. %>
+<script>window.PU_I18N = <%- JSON.stringify(t(ns + ':moteur', {}) || {}) %>;</script>
 <script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
 
 <!-- ══ Hero ══════════════════════════════════════════════════════════════ -->
@@ -208,11 +210,12 @@
   <div class="pu-largeur">
     <div id="purete"
          data-quiz="purete"
+         data-lang="<%= lang %>"
          data-supabase-url="<%= supabaseUrl %>"
          data-supabase-key="<%= supabaseKey %>"
          data-suites="<%- escapeHtml(JSON.stringify(suites)) %>">
       <noscript>
-        <p class="pu-noscript">Ce test a besoin de JavaScript pour fonctionner. Activez-le puis rechargez la page.</p>
+        <p class="pu-noscript"><%= T('moteur.noscript', 'Ce test a besoin de JavaScript pour fonctionner. Activez-le puis rechargez la page.') %></p>
       </noscript>
     </div>
   </div>
@@ -302,7 +305,7 @@
 
     <% if (faq.length) { %>
     <section class="pu-bloc-texte">
-      <h2 class="pu-h2">Les questions qu'on nous pose</h2>
+      <h2 class="pu-h2"><%= T('faq.titre', "Les questions qu'on nous pose") %></h2>
       <div class="pu-faq">
         <% faq.forEach(function (f) { %>
         <details class="pu-faq-item">

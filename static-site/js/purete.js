@@ -8,8 +8,13 @@
  * que la fonction d'échappement n'aurait servi à rien, sur une page dont la
  * légèreté est justement l'argument.
  *
- * Les questions vivent dans /js/data/purete-fr.json, chargé seulement quand
- * quelqu'un lance le test. La page elle-même reste vide de données.
+ * Les questions vivent dans /js/data/purete-<langue>.json, chargé seulement
+ * quand quelqu'un lance le test. La page elle-même reste vide de données.
+ *
+ * Les libellés de l'interface arrivent par window.PU_I18N, posé par le
+ * gabarit depuis <langue>/test-purete.json. Les valeurs françaises restent
+ * en dur comme repli : une clé oubliée dans une traduction affiche du
+ * français plutôt qu'un trou.
  */
 (function () {
   'use strict';
@@ -19,8 +24,28 @@
 
   var SUPABASE_URL = RACINE.dataset.supabaseUrl || '';
   var SUPABASE_KEY = RACINE.dataset.supabaseKey || '';
-  var URL_DONNEES = '/js/data/purete-fr.json';
+  var LANGUE = RACINE.dataset.lang || 'fr';
+  var URL_DONNEES = '/js/data/purete-' + LANGUE + '.json';
   var MIN_ECHANTILLON = 30; // en dessous, une courbe de répartition ne veut rien dire
+
+  var I18N = window.PU_I18N || {};
+  function T(cle, repli) {
+    var v = I18N[cle];
+    return (v != null && v !== '') ? v : repli;
+  }
+  // Beaucoup de phrases changent selon le mode : en solo on tutoie une seule
+  // personne, en couple on s'adresse aux deux. Deux clés plutôt qu'une règle
+  // grammaticale, parce que la bascule ne se fait pas au même endroit d'une
+  // langue à l'autre.
+  function TV(cleSolo, cleCouple, repliSolo, repliCouple) {
+    return mode === 'solo' ? T(cleSolo, repliSolo) : T(cleCouple, repliCouple);
+  }
+  // Les gabarits portent {score}, {max}, {pct}, {n} ou {lien}.
+  function fmt(chaine, valeurs) {
+    return String(chaine).replace(/\{(\w+)\}/g, function (tout, cle) {
+      return valeurs[cle] != null ? valeurs[cle] : tout;
+    });
+  }
 
   // ─── Utilitaires ────────────────────────────────────────────────────────
   function esc(s) {
@@ -28,8 +53,9 @@
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
+  var LOCALES = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' };
   function nb(n) {
-    try { return Number(n).toLocaleString('fr-FR'); } catch (e) { return String(n); }
+    try { return Number(n).toLocaleString(LOCALES[LANGUE] || 'fr-FR'); } catch (e) { return String(n); }
   }
   function el(tag, cls, html) {
     var n = document.createElement(tag);
@@ -109,26 +135,20 @@
     }).catch(function () {});
   }
 
-  // Le mode solo s'adresse à une personne, le mode couple à deux. Les
-  // questions respectaient déjà cette règle ; l'interface, elle, vouvoyait
-  // partout, si bien que le verdict tutoyait au milieu d'un écran qui
-  // vouvoyait. V() choisit la bonne formulation selon le mode en cours.
-  function V(siSolo, siCouple) { return mode === 'solo' ? siSolo : siCouple; }
-
   // ─── Écran 1 : choix du mode ────────────────────────────────────────────
   function ecranModes() {
     var w = el('div', 'pu-carte pu-carte--modes');
     w.appendChild(el('div', 'pu-macaron', '<span>🌡️</span>'));
-    w.appendChild(el('p', 'pu-kicker', 'Étape 1 sur 2'));
-    w.appendChild(el('h2', 'pu-titre', 'Choisissez votre mode du test de pureté : en couple ou seul ?'));
-    w.appendChild(el('p', 'pu-sous', '50 questions dans les deux cas. Le mode change ce qu\'on note.'));
+    w.appendChild(el('p', 'pu-kicker', T('etape1', 'Étape 1 sur 2')));
+    w.appendChild(el('h2', 'pu-titre', T('modes_titre', 'Choisissez votre mode du test de pureté : en couple ou seul ?')));
+    w.appendChild(el('p', 'pu-sous', T('modes_sous', '50 questions dans les deux cas. Le mode change ce qu\'on note.')));
 
     var grille = el('div', 'pu-modes');
     [
-      { k: 'solo', emoji: '🙋', nom: 'Chacun de son côté', action: 'Choisir ce mode',
-        desc: 'Sur vous : votre passé, vos casseroles.' },
-      { k: 'couple', emoji: '💞', nom: 'À deux en couple', action: 'Choisir ce mode',
-        desc: 'Sur vous deux : ce que vous avez fait ensemble.' }
+      { k: 'solo', emoji: '🙋', nom: T('mode_solo_nom', 'Chacun de son côté'), action: T('mode_action', 'Choisir ce mode'),
+        desc: T('mode_solo_desc', 'Sur vous : votre passé, vos casseroles.') },
+      { k: 'couple', emoji: '💞', nom: T('mode_couple_nom', 'À deux en couple'), action: T('mode_action', 'Choisir ce mode'),
+        desc: T('mode_couple_desc', 'Sur vous deux : ce que vous avez fait ensemble.') }
     ].forEach(function (m) {
       var b = el('button', 'pu-mode');
       b.type = 'button';
@@ -151,15 +171,15 @@
   function ecranAge() {
     var w = el('div', 'pu-carte pu-carte--age');
     w.appendChild(el('div', 'pu-macaron', '<span>🔞</span>'));
-    w.appendChild(el('p', 'pu-kicker', 'Étape 2 sur 2'));
-    w.appendChild(el('h2', 'pu-titre', V('Tu as plus de 16 ans ?', 'Vous avez plus de 16 ans ?')));
+    w.appendChild(el('p', 'pu-kicker', T('etape2', 'Étape 2 sur 2')));
+    w.appendChild(el('h2', 'pu-titre', TV('age_titre_solo', 'age_titre_couple', 'Tu as plus de 16 ans ?', 'Vous avez plus de 16 ans ?')));
     w.appendChild(el('p', 'pu-sous',
-      'La réponse ne change que les questions posées. La version tout public retire tout ce qui touche au sexe explicite et aux drogues, et garde les mensonges, la famille, les soirées et les secrets.'));
+      T('age_sous', 'La réponse ne change que les questions posées. La version tout public retire tout ce qui touche au sexe explicite et aux drogues, et garde les mensonges, la famille, les soirées et les secrets.')));
 
     var choix = el('div', 'pu-ages');
     [
-      { ok: true, nom: 'Oui, 16 ans ou plus', sous: 'Version complète, sans filtre' },
-      { ok: false, nom: 'Non, moins de 16 ans', sous: 'Version tout public' }
+      { ok: true, nom: T('age_oui', 'Oui, 16 ans ou plus'), sous: T('age_oui_sous', 'Version complète, sans filtre') },
+      { ok: false, nom: T('age_non', 'Non, moins de 16 ans'), sous: T('age_non_sous', 'Version tout public') }
     ].forEach(function (a) {
       var b = el('button', 'pu-age' + (a.ok ? ' pu-age--oui' : ''));
       b.type = 'button';
@@ -181,7 +201,7 @@
   function demarre() {
     rend(function () {
       var w = el('div', 'pu-carte pu-carte--chargement');
-      w.appendChild(el('p', 'pu-sous', 'On prépare les questions…'));
+      w.appendChild(el('p', 'pu-sous', T('chargement', 'On prépare les questions…')));
       return w;
     });
     charge().then(function () {
@@ -195,8 +215,8 @@
       rend(function () {
         var w = el('div', 'pu-carte');
         w.appendChild(el('h2', 'pu-titre', 'Les questions n\'ont pas voulu se charger'));
-        w.appendChild(el('p', 'pu-sous', 'Vérifiez votre connexion et réessayez.'));
-        var b = el('button', 'pu-cta', 'Réessayer');
+        w.appendChild(el('p', 'pu-sous', T('erreur_sous', 'Vérifiez votre connexion et réessayez.')));
+        var b = el('button', 'pu-cta', T('reessayer', 'Réessayer'));
         b.type = 'button';
         b.addEventListener('click', demarre);
         w.appendChild(b);
@@ -220,7 +240,7 @@
     var barre = el('div', 'pu-barre-zone');
     var precedent = el('button', 'pu-rond', '↺');
     precedent.type = 'button';
-    precedent.setAttribute('aria-label', 'Revenir à la question précédente');
+    precedent.setAttribute('aria-label', T('precedente', 'Revenir à la question précédente'));
     precedent.disabled = index === 0;
     precedent.addEventListener('click', function () {
       if (index === 0) return;
@@ -238,7 +258,7 @@
     quitter.type = 'button';
     quitter.setAttribute('aria-label', 'Quitter le test');
     quitter.addEventListener('click', function () {
-      if (confirm('Quitter le test ? Les réponses seront perdues.')) rend(ecranModes);
+      if (confirm(T('quitter', 'Quitter le test ? Les réponses seront perdues.'))) rend(ecranModes);
     });
 
     barre.appendChild(precedent);
@@ -286,7 +306,7 @@
 
     rend(function () {
       var w = el('div', 'pu-carte pu-carte--chargement');
-      w.appendChild(el('p', 'pu-sous', 'On calcule votre score…'));
+      w.appendChild(el('p', 'pu-sous', T('calcul', 'On calcule votre score…')));
       return w;
     });
 
@@ -323,9 +343,11 @@
     tete.appendChild(el('h2', 'pu-verdict-titre',
       esc(p.titre) + ' <span class="pu-verdict-emoji" aria-hidden="true">' + p.emoji + '</span>'));
     tete.appendChild(el('p', 'pu-score-pastille',
-      V('Ton score : <strong>', 'Votre score : <strong>') + nb(score) + '</strong> points'));
+      fmt(TV('score_solo', 'score_couple', 'Ton score : <strong>{score}</strong> points', 'Votre score : <strong>{score}</strong> points'), { score: nb(score) })));
     tete.appendChild(el('p', 'pu-score-note',
-      'Le maximum de cette version est ' + nb(scoreMax) + ' points. Plus le score est haut, ' + V('moins tu es pur.', 'moins vous êtes purs.')));
+      fmt(TV('resultat_max_solo', 'resultat_max_couple',
+        'Le maximum de cette version est {max} points. Plus le score est haut, moins tu es pur.',
+        'Le maximum de cette version est {max} points. Plus le score est haut, moins vous êtes purs.'), { max: nb(scoreMax) })));
     tete.appendChild(el('p', 'pu-verdict-texte', esc(p.texte)));
     w.appendChild(tete);
 
@@ -361,8 +383,8 @@
     bloc.appendChild(el('h3', 'pu-bloc-titre', 'Et maintenant ?'));
     bloc.appendChild(el('p', 'pu-bloc-sous',
       mode === 'solo'
-        ? 'Tu as le score, il te manque la suite. Voilà par quoi enchaîner.'
-        : 'Vous êtes déjà à deux devant l\'écran, autant en profiter.'));
+        ? T('suites_sous_solo', 'Tu as le score, il te manque la suite. Voilà par quoi enchaîner.')
+        : T('suites_sous_couple', 'Vous êtes déjà à deux devant l\'écran, autant en profiter.')));
 
     var grille = el('div', 'pu-suites');
     liste.forEach(function (s) {
@@ -384,7 +406,7 @@
   function bloCourbe(pct) {
     var s = statsGlobales;
     var bloc = el('section', 'pu-bloc pu-bloc--courbe');
-    bloc.appendChild(el('h3', 'pu-bloc-titre', V('Où tu te situes', 'Où vous vous situez')));
+    bloc.appendChild(el('h3', 'pu-bloc-titre', TV('courbe_titre_solo', 'courbe_titre_couple', 'Où tu te situes', 'Où vous vous situez')));
 
     // Part des parties dont le score est plus bas que le vôtre. « Moins pur
     // que X % » était juste mais se lisait de travers : on formule dans le
@@ -393,8 +415,10 @@
     s.tranches.forEach(function (n, i) { total += n; if (i * 5 + 5 <= pct) enDessous += n; });
     var devant = total ? Math.round((enDessous / total) * 100) : 50;
     bloc.appendChild(el('p', 'pu-bloc-sous',
-      'Sur <strong>' + nb(s.total) + '</strong> tests, ' + V('tu fais moins pur que <strong>', 'vous faites moins purs que <strong>') +
-      devant + '%</strong> des gens. La moyenne est à <strong>' + nb(s.moyenne) + '</strong> points.'));
+      fmt(TV('courbe_sous_solo', 'courbe_sous_couple',
+        'Sur <strong>{n}</strong> tests, tu fais moins pur que <strong>{devant}%</strong> des gens. La moyenne est à <strong>{moyenne}</strong> points.',
+        'Sur <strong>{n}</strong> tests, vous faites moins purs que <strong>{devant}%</strong> des gens. La moyenne est à <strong>{moyenne}</strong> points.'),
+        { n: nb(s.total), devant: devant, moyenne: nb(s.moyenne) })));
 
     // Courbe lissée en SVG. Les vingt tranches deviennent une polyligne
     // adoucie ; le trait vertical marque le score de la personne.
@@ -412,7 +436,7 @@
     var x = gauche + ((droite - gauche) * pct) / 100;
 
     var svg = '<svg class="pu-courbe" viewBox="0 0 ' + L + ' ' + H + '" role="img" ' +
-      'aria-label="Répartition des scores, le vôtre est à ' + pct + ' pour cent du maximum">' +
+      'aria-label="' + esc(fmt(T('courbe_aria', 'Répartition des scores, le vôtre est à {pct} pour cent du maximum'), { pct: pct })) + '">' +
       '<defs><linearGradient id="puAire" x1="0" y1="0" x2="0" y2="1">' +
       '<stop offset="0%" stop-color="hsl(338 72% 62% / .38)"/>' +
       '<stop offset="100%" stop-color="hsl(338 72% 62% / 0)"/></linearGradient></defs>' +
@@ -437,16 +461,16 @@
   // ─── Partage ────────────────────────────────────────────────────────────
   function blocPartage(score, pct) {
     var bloc = el('section', 'pu-bloc pu-bloc--partage');
-    bloc.appendChild(el('h3', 'pu-bloc-titre', V('Envoie ton score à quelqu\'un', 'Envoyez votre score à quelqu\'un')));
+    bloc.appendChild(el('h3', 'pu-bloc-titre', TV('partage_titre_solo', 'partage_titre_couple', 'Envoie ton score à quelqu\'un', 'Envoyez votre score à quelqu\'un')));
     bloc.appendChild(el('p', 'pu-bloc-sous',
       mode === 'solo'
-        ? 'Le plus drôle, c\'est de comparer. Envoie ça à ton/ta partenaire ou à tes potes, et attends leur score.'
-        : 'Envoyez le score de votre couple à vos amis, et mettez-les au défi de faire mieux. Ou pire.'));
+        ? T('partage_sous_solo', 'Le plus drôle, c\'est de comparer. Envoie ça à ton/ta partenaire ou à tes potes, et attends leur score.')
+        : T('partage_sous_couple', 'Envoyez le score de votre couple à vos amis, et mettez-les au défi de faire mieux. Ou pire.')));
 
     var lien = location.origin + location.pathname;
     var texte = mode === 'solo'
-      ? 'J\'ai eu ' + score + ' points au test de pureté (' + pct + '% d\'impureté). À toi maintenant : '
-      : 'On a eu ' + score + ' points au test de pureté en couple (' + pct + '% d\'impureté). À vous maintenant : ';
+      ? fmt(T('partage_msg_solo', 'J\'ai eu {score} points au test de pureté ({pct}% d\'impureté). À toi maintenant : '), { score: score, pct: pct })
+      : fmt(T('partage_msg_couple', 'On a eu {score} points au test de pureté en couple ({pct}% d\'impureté). À vous maintenant : '), { score: score, pct: pct });
     var complet = texte + lien;
 
     var grille = el('div', 'pu-partages');
@@ -462,14 +486,14 @@
     // Le partage natif ouvre directement la liste de contacts sur mobile,
     // c'est le chemin le plus court vers « je l'envoie à mon copain ».
     if (navigator.share) {
-      bouton('pu-partage--natif', '📤 Envoyer', function () {
-        navigator.share({ title: 'Test de pureté', text: texte, url: lien }).catch(function () {});
+      bouton('pu-partage--natif', '📤 ' + T('partage_envoyer', 'Envoyer'), function () {
+        navigator.share({ title: T('partage_sujet', 'Test de pureté'), text: texte, url: lien }).catch(function () {});
       });
     }
     bouton('pu-partage--wa', '💬 WhatsApp', function () {
       window.open('https://wa.me/?text=' + encodeURIComponent(complet), '_blank', 'noopener');
     });
-    bouton('pu-partage--sms', '✉️ SMS', function () {
+    bouton('pu-partage--sms', '✉️ ' + T('partage_sms', 'SMS'), function () {
       location.href = 'sms:?&body=' + encodeURIComponent(complet);
     });
     bouton('pu-partage--x', '𝕏 Poster', function () {
@@ -478,7 +502,7 @@
     });
     var copie = bouton('pu-partage--copie', '🔗 Copier le message', function () {
       var fini = function () {
-        copie.textContent = '✅ Copié';
+        copie.textContent = '✅ ' + T('partage_copie', 'Copié');
         setTimeout(function () { copie.textContent = '🔗 Copier le message'; }, 2200);
       };
       if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -507,9 +531,11 @@
     });
 
     var bloc = el('section', 'pu-bloc pu-bloc--cats');
-    bloc.appendChild(el('h3', 'pu-bloc-titre', 'Le détail, catégorie par catégorie'));
+    bloc.appendChild(el('h3', 'pu-bloc-titre', T('categories_titre', 'Le détail, catégorie par catégorie')));
     bloc.appendChild(el('p', 'pu-bloc-sous',
-      V('C\'est là qu\'on voit ce qui te perd vraiment. Une barre pleine, c\'est un domaine où tu as tout coché.', 'C\'est là qu\'on voit ce qui vous perd vraiment. Une barre pleine, c\'est un domaine où vous avez tout coché.')));
+      TV('categories_sous_solo', 'categories_sous_couple',
+        'C\'est là qu\'on voit ce qui te perd vraiment. Une barre pleine, c\'est un domaine où tu as tout coché.',
+        'C\'est là qu\'on voit ce qui vous perd vraiment. Une barre pleine, c\'est un domaine où vous avez tout coché.')));
 
     var liste = el('div', 'pu-cats');
     Object.keys(totaux)
@@ -534,7 +560,7 @@
 
   function blocReprendre() {
     var bloc = el('div', 'pu-reprise');
-    var b = el('button', 'pu-cta pu-cta--fantome', 'Refaire le test');
+    var b = el('button', 'pu-cta pu-cta--fantome', T('refaire', 'Refaire le test'));
     b.type = 'button';
     b.addEventListener('click', function () { rend(ecranModes); versLeHaut(RACINE); });
     bloc.appendChild(b);
@@ -566,12 +592,12 @@
       if (!s) return;
       var cpt = document.getElementById('purete-compteur');
       if (cpt && s.total > 0) {
-        cpt.textContent = 'Ce test a déjà été fait ' + nb(s.total) + ' fois';
+        cpt.textContent = fmt(T('hero_compteur', 'Ce test a déjà été fait {n} fois'), { n: nb(s.total) });
         cpt.hidden = false;
       }
       var moy = document.getElementById('purete-moyenne');
       if (moy && s.assez) {
-        moy.textContent = 'Score moyen : ' + nb(s.moyenne) + ' points';
+        moy.textContent = fmt(T('hero_moyenne', 'Score moyen : {n} points'), { n: nb(s.moyenne) });
         moy.hidden = false;
       }
     });
