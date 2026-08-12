@@ -1096,8 +1096,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .mobile-nav-vedette::before { animation: none; --nv-angle: 60deg; }
 }
 
-.nav-separator { width: 1px; height: 1rem; background: linear-gradient(to bottom, transparent, hsl(var(--border)), transparent); margin: 0 0.375rem; }
-
 /* Nav action buttons */
 .nav-action-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem;
@@ -1142,7 +1140,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 @media (min-width: 1450px) {
   header .lg\:gap-1 { gap: 0.125rem; }
   header .nav-link { padding: 0 0.5rem; font-size: 0.78125rem; }
-  header .nav-separator { margin: 0 0.25rem; }
   header .nav-cta-btn { padding: 0 0.75rem; margin-left: 0.25rem; font-size: 0.78125rem; }
   header .nav-vedette { padding: 0 0.55rem 0 0.45rem; font-size: 0.78125rem; }
 }
@@ -1161,7 +1158,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .nav-cta-btn:hover { box-shadow: 0 6px 20px -4px hsl(var(--primary) / 0.5), inset 0 1px 0 hsl(0 0% 100% / 0.2); transform: translateY(-1px); }
 
 /* Language flag */
-.nav-lang-flag { font-size: 1rem; line-height: 1; }
 
 /* Dropdown mechanics */
 /* ── Déclencheur scindé du menu des jeux ───────────────────
