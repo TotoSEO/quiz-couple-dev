@@ -343,7 +343,8 @@
     "testDateNaissance": "Test compatibilité date de naissance",
     "testCouche": "Test « a-t-il ou a-t-elle couché avec quelqu'un d'autre »",
     "testSecret": "Test m'aime-t-il ou m'aime-t-elle en secret",
-    "testDistanceAime": "Test m'aime-t-il encore à distance"
+    "testDistanceAime": "Test m'aime-t-il encore à distance",
+    "testPurete": "Test de pureté"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
