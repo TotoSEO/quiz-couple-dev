@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "badge": "50 questions · gratuit · sans inscription",
+    "titre": "Test de pureté",
+    "titreAccent": "spécial couple",
+    "accroche": "Jusqu'où vous êtes allés, vraiment ?",
+    "description": "Cinquante questions, un score sur 899, et une réponse que vous n'aurez pas forcément envie de montrer à vos parents. Faites-le seul, puis envoyez votre score à votre partenaire pour comparer."
+  },
+  "cta": "Commencer le test",
+  "sections": {
+    "s1": {
+      "titre": "C'est quoi un test de pureté, concrètement ?",
+      "p1": "Le principe tient en une phrase : on vous pose une longue liste de choses que les gens font, et vous cochez celles que vous avez déjà faites. Plus vous cochez, plus votre score monte, moins vous êtes « pur ». C'est un format qui traîne sur les campus américains depuis des décennies et qui a explosé sur les réseaux, parce qu'il produit exactement ce que tout le monde cherche dans un jeu de soirée : un chiffre à comparer.",
+      "p2": "La version que vous avez sous les yeux est écrite pour les couples. Pas de questions sur les fraternités ni sur les cours séchés à la fac : on parle d'ex, de mensonges, de soirées qui ont dérapé, de choses cachées au partenaire et de trucs faits à deux. Cinquante questions dans chaque mode, et un barème qui ne met pas tout au même niveau.",
+      "sub1Titre": "Pourquoi ça marche aussi bien à deux",
+      "sub1P1": "Parce qu'un score, ça se compare. Vous faites le test dans votre coin, vous envoyez votre résultat, et la conversation démarre toute seule. Dans neuf cas sur dix, la vraie discussion ne porte pas sur le score mais sur la question qui a fait tiquer."
+    },
+    "s2": {
+      "titre": "Comment votre score est calculé",
+      "p1": "Toutes les questions ne valent pas le même nombre de points, et c'est tout l'intérêt. Partir d'une soirée sans prévenir, ça coûte quelques points. Le faire en public, ça en coûte quatre fois plus. Reprendre le volant après avoir bu, c'est parmi les réponses les plus lourdes du test, parce que ce n'est pas une bêtise de jeunesse, c'est un truc qui peut tuer quelqu'un.",
+      "p2": "Chaque question propose aussi plusieurs degrés au lieu d'un oui ou d'un non. « T'as déjà trompé quelqu'un ? » n'a pas la même réponse selon qu'il s'agisse d'un baiser en soirée ou d'une double vie de six mois, et le barème fait la différence. C'est ce qui évite le résultat plat où tout le monde finit au milieu.",
+      "sub1Titre": "Le score maximum change selon la version",
+      "sub1P1": "La version complète va jusqu'à 899 points en solo et 927 en couple. La version tout public, proposée à celles et ceux qui déclarent moins de 16 ans, retire les questions explicites et descend donc plus bas. Dans les deux cas le verdict est calculé en pourcentage du maximum réellement joué, sinon la version courte serait condamnée à rester sage."
+    },
+    "s3": {
+      "titre": "Solo ou à deux : ce que ça change",
+      "p1": "En solo, les questions portent sur vous. Votre passé, vos ex, ce que vous avez caché, ce que vous n'avez jamais raconté. C'est le mode à choisir si vous voulez envoyer votre score à quelqu'un et le mettre au défi de faire pareil.",
+      "p2": "En couple, on change complètement de sujet. On ne note plus deux personnes, on note une histoire : ce que vous avez fait ensemble, où vous l'avez fait, ce que vous vous êtes caché, et jusqu'où vous êtes allés à deux. Les questions se répondent à voix haute, ce qui rend le mode nettement plus dangereux.",
+      "sub1Titre": "Un conseil avant de lancer le mode couple",
+      "sub1P1": "Certaines questions demandent de dire tout haut des choses qui n'ont jamais été dites. Si vous sentez que le sujet est encore chaud entre vous, faites le mode solo chacun de votre côté et comparez seulement les scores. Le chiffre suffit largement à lancer la discussion, sans obliger personne à détailler."
+    },
+    "s4": {
+      "titre": "Ce que le test regarde vraiment",
+      "p1": "Les questions sont réparties en catégories, et le résultat détaille votre score dans chacune. C'est souvent là que la surprise arrive : on se croit sage parce que le total est moyen, et on découvre qu'on est à 90 % sur les mensonges pendant qu'on est à 10 % sur le reste.",
+      "sub1Titre": "En mode solo",
+      "sub1P1": "Sexe, infidélité, mensonges, alcool et substances, famille, vie numérique, interdits. Sept familles, et celle qui fait le plus mal n'est presque jamais celle qu'on attend : la catégorie mensonges fait grimper plus de scores que la catégorie sexe.",
+      "sub2Titre": "En mode couple",
+      "sub2P1": "Sexe, exhibition, libertinage, substances, transgression et secrets. C'est la catégorie secrets qui départage les couples : deux couples avec exactement le même passé peuvent finir à cent points d'écart selon ce qu'ils se sont dit."
+    },
+    "s5": {
+      "titre": "Un score élevé, c'est grave ?",
+      "p1": "Non. Un score haut ne dit pas que vous êtes quelqu'un de bien ou de mal, il dit que vous avez fait des choses. Certaines sont des souvenirs de soirée, d'autres sont des erreurs, et le test ne fait pas la différence entre les deux : il compte, c'est tout.",
+      "p2": "Là où le résultat devient intéressant, c'est quand deux personnes le comparent. Un écart de trois cents points entre deux partenaires, ce n'est pas un problème en soi, mais ça explique souvent des tensions qu'on n'arrivait pas à nommer. À l'inverse, deux scores très proches, ça rassure plus que n'importe quel test de compatibilité.",
+      "sub1Titre": "Et si le score de l'autre fait mal",
+      "sub1P1": "Ça arrive. Rappelez-vous que le test parle de tout un passé, dont la plus grande partie s'est déroulée avant vous. Ce qui compte, ce n'est pas le chiffre, c'est ce que la personne accepte de vous raconter derrière."
+    }
+  },
+  "faq": {
+    "q1": "Le test de pureté est gratuit ?",
+    "a1": "Oui, entièrement. Pas de compte à créer, pas d'e-mail à donner, pas de version payante qui débloquerait le vrai résultat. Vous répondez, vous avez votre score, et c'est fini.",
+    "q2": "Mes réponses sont enregistrées quelque part ?",
+    "a2": "Non. Aucune réponse individuelle n'est stockée. Seul le score final est enregistré, sans rien qui permette de remonter à vous, et il ne sert qu'à calculer la moyenne et la courbe affichées sur la page.",
+    "q3": "Combien de temps ça prend ?",
+    "a3": "Comptez cinq à sept minutes pour les cinquante questions en solo. En couple c'est plus long, parce que vous allez vous arrêter pour discuter au moins trois fois, et c'est un peu le but.",
+    "q4": "C'est quoi un bon score ?",
+    "a4": "Il n'y en a pas. La majorité des gens se situent entre 25 et 40 % du maximum, ce qui donne un résultat autour de 250 à 350 points. En dessous vous êtes très sage, au-dessus vous avez un passif, mais aucun des deux n'est mieux que l'autre.",
+    "q5": "On peut le faire à plus de deux ?",
+    "a5": "Le mode couple est prévu pour deux. En revanche rien n'empêche toute une bande de faire le mode solo chacun de son côté et de comparer les scores après, c'est même le meilleur usage du test en soirée.",
+    "q6": "À partir de quel âge ?",
+    "a6": "Le test demande votre âge avant de commencer. En dessous de 16 ans, une version tout public est servie : elle retire les questions sur le sexe explicite et les drogues, et garde tout ce qui touche aux mensonges, à la famille, aux soirées et aux secrets."
+  },
+  "meta": {
+    "titre": "Test de pureté spécial couple | En ligne & gratuit",
+    "description": "Test de pureté couple : 50 questions, un score sur 899, et le détail par catégorie. Faites-le seul ou à deux, puis comparez avec votre partenaire. Gratuit, sans inscription."
+  }
+}

@@ -5,6 +5,12 @@
     "description": "Répondez à 20 questions pour évaluer la solidité de votre relation et découvrir vos points forts.",
     "metaDescription": "Votre couple est-il solide ? Faites ce test gratuit de 20 questions et obtenez un diagnostic clair de votre relation en quelques minutes."
   },
+  "testPurete": {
+    "title": "Test de pureté spécial couple | En ligne & gratuit",
+    "shortTitle": "Test de pureté",
+    "description": "50 questions pour savoir jusqu'où vous êtes allés. Seul ou à deux, avec un score à comparer.",
+    "metaDescription": "Test de pureté couple : 50 questions, un score détaillé par catégorie, et le classement face aux autres. Faites-le seul ou à deux. Gratuit, sans inscription."
+  },
   "testCommonPoints": {
     "title": "Test des points communs en couple : 153 questions à deux",
     "shortTitle": "Test Points Communs",

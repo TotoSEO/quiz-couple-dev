@@ -925,6 +925,14 @@ function copyTranslationData() {
       fs.copyFileSync(gamesSrc, path.join(dataDir, `games-${lang}.json`));
     }
 
+    // Les cent questions du test de pureté ne sont chargées que lorsque
+    // quelqu'un lance le test, jamais à l'ouverture de la page : c'est ce qui
+    // permet au gabarit de rester quasiment vide, ce que la page vise.
+    const pureteSrc = path.join(langDir, 'purete.json');
+    if (fs.existsSync(pureteSrc)) {
+      fs.copyFileSync(pureteSrc, path.join(dataDir, `purete-${lang}.json`));
+    }
+
     const activitiesSrc = path.join(langDir, 'activities.json');
     if (fs.existsSync(activitiesSrc)) {
       fs.copyFileSync(activitiesSrc, path.join(dataDir, `activities-${lang}.json`));
