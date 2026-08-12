@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "Quiz à faire en couple",
-    "title": "Quiz Amoureux :",
-    "titleHighlight": "Amoureux",
+    "title": "Quiz amoureux : 20 questions, et on voit si vous répondez pareil",
+    "titleHighlight": "amoureux",
     "description": "20 questions sur votre histoire. Chacun répond de son côté, puis on compare : combien de fois tomberez-vous d'accord sans vous concerter ?",
     "statements": "20 questions",
     "score": "Réponses comparées",

@@ -2,7 +2,12 @@
   var quizType = 'tu-preferes';
   var ns = 'quiz-tu-preferes';
   // Le pool compte 100 dilemmes ; une partie en tire PAR_PARTIE au hasard.
+  // PAR_PARTIE est la partie longue, celle que le balisage annonce. Au
+  // lancement on propose aussi la partie courte : la page recevait 180 clics
+  // pour seulement 13 parties terminées, trente dilemmes à deux, soit
+  // soixante réponses, faisaient reculer avant même la première question.
   var PAR_PARTIE = 30;
+  var PARTIE_COURTE = 15;
   var sectionCount = 5;
 
   const quizTitle = t('quizzes:quizTuPreferes.title', 'Tu Préfères Couple');
@@ -58,11 +63,11 @@
 
   // UI labels
   var uiLabels = {
-    fr: { start: 'Commencer', qOf: 'sur', or: 'OU', match: 'En accord !', diff: 'Avis différents !', next: 'Question suivante', done: 'Voir les résultats', agree: 'En accord', disagree: 'Pas d\'accord', result: 'Votre compatibilité', retake: 'Rejouer', p1Turn: 'C\'est au tour de', p2Turn: 'C\'est au tour de', chooseA: 'Option A', chooseB: 'Option B', yourChoice: 'Votre choix', partnerChoice: 'Son choix', matchRate: 'Taux d\'accord', name1: 'Joueur 1', name2: 'Joueur 2', namePlaceholder: 'Prénom', both: 'Vous deux', intro: 'Un choix, deux réponses, zéro bonne réponse.', startGame: 'Lancer le jeu', sameChoice: 'Même choix !', diffChoice: 'Choix différent !' },
-    en: { start: 'Start', qOf: 'of', or: 'OR', match: 'You agree!', diff: 'Different picks!', next: 'Next question', done: 'See results', agree: 'Agree', disagree: 'Disagree', result: 'Your compatibility', retake: 'Play again', p1Turn: 'It\'s your turn,', p2Turn: 'It\'s your turn,', chooseA: 'Option A', chooseB: 'Option B', yourChoice: 'Your choice', partnerChoice: 'Their choice', matchRate: 'Agreement rate', name1: 'Player 1', name2: 'Player 2', namePlaceholder: 'First name', both: 'Both of you', intro: 'One choice, two answers, zero right answers.', startGame: 'Start the game', sameChoice: 'Same choice!', diffChoice: 'Different choice!' },
-    es: { start: 'Empezar', qOf: 'de', or: 'O', match: '¡De acuerdo!', diff: '¡Opiniones diferentes!', next: 'Siguiente pregunta', done: 'Ver resultados', agree: 'De acuerdo', disagree: 'En desacuerdo', result: 'Vuestra compatibilidad', retake: 'Volver a jugar', p1Turn: 'Es tu turno,', p2Turn: 'Es tu turno,', chooseA: 'Opción A', chooseB: 'Opción B', yourChoice: 'Tu elección', partnerChoice: 'Su elección', matchRate: 'Tasa de acuerdo', name1: 'Jugador 1', name2: 'Jugador 2', namePlaceholder: 'Nombre', both: 'Los dos', intro: 'Una elección, dos respuestas, cero respuestas correctas.', startGame: 'Empezar el juego', sameChoice: '¡Misma elección!', diffChoice: '¡Elección diferente!' },
-    de: { start: 'Starten', qOf: 'von', or: 'ODER', match: 'Einig!', diff: 'Unterschiedlich!', next: 'Nächste Frage', done: 'Ergebnisse anzeigen', agree: 'Einig', disagree: 'Uneinig', result: 'Eure Kompatibilität', retake: 'Nochmal spielen', p1Turn: 'Du bist dran,', p2Turn: 'Du bist dran,', chooseA: 'Option A', chooseB: 'Option B', yourChoice: 'Deine Wahl', partnerChoice: 'Seine/ihre Wahl', matchRate: 'Übereinstimmungsrate', name1: 'Spieler 1', name2: 'Spieler 2', namePlaceholder: 'Vorname', both: 'Ihr beide', intro: 'Eine Wahl, zwei Antworten, null richtige Antworten.', startGame: 'Spiel starten', sameChoice: 'Gleiche Wahl!', diffChoice: 'Andere Wahl!' },
-    it: { start: 'Inizia', qOf: 'di', or: 'O', match: 'D\'accordo!', diff: 'Opinioni diverse!', next: 'Prossima domanda', done: 'Vedi risultati', agree: 'D\'accordo', disagree: 'In disaccordo', result: 'La vostra compatibilità', retake: 'Rigioca', p1Turn: 'Tocca a te,', p2Turn: 'Tocca a te,', chooseA: 'Opzione A', chooseB: 'Opzione B', yourChoice: 'La tua scelta', partnerChoice: 'La sua scelta', matchRate: 'Tasso di accordo', name1: 'Giocatore 1', name2: 'Giocatore 2', namePlaceholder: 'Nome', both: 'Entrambi', intro: 'Una scelta, due risposte, zero risposte giuste.', startGame: 'Inizia il gioco', sameChoice: 'Stessa scelta!', diffChoice: 'Scelta diversa!' }
+    fr: { start: 'Commencer', qOf: 'sur', or: 'OU', match: 'En accord !', diff: 'Avis différents !', next: 'Question suivante', done: 'Voir les résultats', agree: 'En accord', disagree: 'Pas d\'accord', result: 'Votre compatibilité', retake: 'Rejouer', p1Turn: 'C\'est au tour de', p2Turn: 'C\'est au tour de', chooseA: 'Option A', chooseB: 'Option B', yourChoice: 'Votre choix', partnerChoice: 'Son choix', matchRate: 'Taux d\'accord', name1: 'Joueur 1', name2: 'Joueur 2', namePlaceholder: 'Prénom', both: 'Vous deux', intro: 'Un choix, deux réponses, zéro bonne réponse.', startGame: 'Lancer le jeu', sameChoice: 'Même choix !', diffChoice: 'Choix différent !', formatTitre: 'Vous jouez combien de dilemmes ?', formatCourtNom: 'Partie rapide', formatCourtSub: 'environ 5 min', formatLongNom: 'Partie complète', formatLongSub: 'environ 10 min', palierTitre: 'Les 15 premiers sont pliés !', palierTexte: 'Vous pouvez vous arrêter là ou enchaîner sur les 15 suivants.', palierContinuer: 'Jouer 15 de plus' },
+    en: { start: 'Start', qOf: 'of', or: 'OR', match: 'You agree!', diff: 'Different picks!', next: 'Next question', done: 'See results', agree: 'Agree', disagree: 'Disagree', result: 'Your compatibility', retake: 'Play again', p1Turn: 'It\'s your turn,', p2Turn: 'It\'s your turn,', chooseA: 'Option A', chooseB: 'Option B', yourChoice: 'Your choice', partnerChoice: 'Their choice', matchRate: 'Agreement rate', name1: 'Player 1', name2: 'Player 2', namePlaceholder: 'First name', both: 'Both of you', intro: 'One choice, two answers, zero right answers.', startGame: 'Start the game', sameChoice: 'Same choice!', diffChoice: 'Different choice!', formatTitre: 'How many dilemmas are you playing?', formatCourtNom: 'Quick game', formatCourtSub: 'about 5 min', formatLongNom: 'Full game', formatLongSub: 'about 10 min', palierTitre: 'First 15 done!', palierTexte: 'You can stop here or carry on with the next 15.', palierContinuer: 'Play 15 more' },
+    es: { start: 'Empezar', qOf: 'de', or: 'O', match: '¡De acuerdo!', diff: '¡Opiniones diferentes!', next: 'Siguiente pregunta', done: 'Ver resultados', agree: 'De acuerdo', disagree: 'En desacuerdo', result: 'Vuestra compatibilidad', retake: 'Volver a jugar', p1Turn: 'Es tu turno,', p2Turn: 'Es tu turno,', chooseA: 'Opción A', chooseB: 'Opción B', yourChoice: 'Tu elección', partnerChoice: 'Su elección', matchRate: 'Tasa de acuerdo', name1: 'Jugador 1', name2: 'Jugador 2', namePlaceholder: 'Nombre', both: 'Los dos', intro: 'Una elección, dos respuestas, cero respuestas correctas.', startGame: 'Empezar el juego', sameChoice: '¡Misma elección!', diffChoice: '¡Elección diferente!', formatTitre: '¿Cuántos dilemas vais a jugar?', formatCourtNom: 'Partida rápida', formatCourtSub: 'unos 5 min', formatLongNom: 'Partida completa', formatLongSub: 'unos 10 min', palierTitre: '¡Los 15 primeros están hechos!', palierTexte: 'Podéis parar aquí o seguir con los 15 siguientes.', palierContinuer: 'Jugar 15 más' },
+    de: { start: 'Starten', qOf: 'von', or: 'ODER', match: 'Einig!', diff: 'Unterschiedlich!', next: 'Nächste Frage', done: 'Ergebnisse anzeigen', agree: 'Einig', disagree: 'Uneinig', result: 'Eure Kompatibilität', retake: 'Nochmal spielen', p1Turn: 'Du bist dran,', p2Turn: 'Du bist dran,', chooseA: 'Option A', chooseB: 'Option B', yourChoice: 'Deine Wahl', partnerChoice: 'Seine/ihre Wahl', matchRate: 'Übereinstimmungsrate', name1: 'Spieler 1', name2: 'Spieler 2', namePlaceholder: 'Vorname', both: 'Ihr beide', intro: 'Eine Wahl, zwei Antworten, null richtige Antworten.', startGame: 'Spiel starten', sameChoice: 'Gleiche Wahl!', diffChoice: 'Andere Wahl!', formatTitre: 'Wie viele Dilemmas wollt ihr spielen?', formatCourtNom: 'Kurze Runde', formatCourtSub: 'etwa 5 Min.', formatLongNom: 'Ganze Runde', formatLongSub: 'etwa 10 Min.', palierTitre: 'Die ersten 15 sind geschafft!', palierTexte: 'Ihr könnt hier aufhören oder mit den nächsten 15 weitermachen.', palierContinuer: '15 weitere spielen' },
+    it: { start: 'Inizia', qOf: 'di', or: 'O', match: 'D\'accordo!', diff: 'Opinioni diverse!', next: 'Prossima domanda', done: 'Vedi risultati', agree: 'D\'accordo', disagree: 'In disaccordo', result: 'La vostra compatibilità', retake: 'Rigioca', p1Turn: 'Tocca a te,', p2Turn: 'Tocca a te,', chooseA: 'Opzione A', chooseB: 'Opzione B', yourChoice: 'La tua scelta', partnerChoice: 'La sua scelta', matchRate: 'Tasso di accordo', name1: 'Giocatore 1', name2: 'Giocatore 2', namePlaceholder: 'Nome', both: 'Entrambi', intro: 'Una scelta, due risposte, zero risposte giuste.', startGame: 'Inizia il gioco', sameChoice: 'Stessa scelta!', diffChoice: 'Scelta diversa!', formatTitre: 'Quanti dilemmi volete giocare?', formatCourtNom: 'Partita veloce', formatCourtSub: 'circa 5 min', formatLongNom: 'Partita completa', formatLongSub: 'circa 10 min', palierTitre: 'I primi 15 sono fatti!', palierTexte: 'Potete fermarvi qui o continuare con i 15 successivi.', palierContinuer: 'Gioca altri 15' }
   };
   var ui = uiLabels[lang] || uiLabels.fr;
 
@@ -241,7 +246,9 @@
         return;
       }
       // Le pool complet est mélangé, la partie n'en garde qu'un extrait :
-      // deux parties de suite ne tombent pas sur les mêmes dilemmes.
+      // deux parties de suite ne tombent pas sur les mêmes dilemmes. On tire
+      // toujours la longueur maximale, la partie courte s'arrête simplement
+      // plus tôt : c'est ce qui permet de prolonger sans retirer au sort.
       var parPartie = <%= PAR_PARTIE %>;
       questions = QuizEngine.shuffleArray(questions);
       if (questions.length > parPartie) questions = questions.slice(0, parPartie);
@@ -270,7 +277,10 @@
   function WYRGame(container, questions) {
     this.container = container;
     this.questions = questions;
-    this.totalQ = questions.length;
+    // Nombre de dilemmes réellement joués. Il vaut 15 ou 30 selon le format
+    // choisi au départ, et peut passer de 15 à 30 au palier. this.questions
+    // en contient toujours 30 : prolonger ne retire donc rien au sort.
+    this.limite = Math.min(<%= PARTIE_COURTE %>, questions.length);
     this.currentQ = 0;
     this.p1Name = '';
     this.p2Name = '';
@@ -292,8 +302,15 @@
   };
 
   // ── Setup: enter names ──
+  // Le choix de la longueur est posé ici, avec les prénoms, plutôt que sur un
+  // écran de plus : la page perd déjà largement au moment du lancement, il
+  // n'était pas question d'y ajouter une étape.
   WYRGame.prototype.renderSetup = function() {
     var self = this;
+    var court = Math.min(<%= PARTIE_COURTE %>, this.questions.length);
+    var long = this.questions.length;
+    var choisi = court;
+
     var html = '<div class="glass-card rounded-xl p-8 text-center animate-fade-in">';
     html += '<div class="text-5xl mb-4">🤔</div>';
     html += '<h2 class="text-2xl font-bold mb-2">' + UI.or + '...</h2>';
@@ -302,17 +319,80 @@
     html += '<input type="text" id="wyr-p1" class="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground text-center" placeholder="' + UI.name1 + ', ' + UI.namePlaceholder + '" maxlength="20" />';
     html += '<input type="text" id="wyr-p2" class="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground text-center" placeholder="' + UI.name2 + ', ' + UI.namePlaceholder + '" maxlength="20" />';
     html += '</div>';
+
+    if (long > court) {
+      html += '<p class="wyr-format-titre">' + UI.formatTitre + '</p>';
+      html += '<div class="wyr-formats" role="radiogroup" aria-label="' + UI.formatTitre + '">';
+      html += '<button type="button" class="wyr-format wyr-format--actif" data-taille="' + court + '" role="radio" aria-checked="true">' +
+        '<span class="wyr-format-nb">' + court + '</span>' +
+        '<span class="wyr-format-nom">' + UI.formatCourtNom + '</span>' +
+        '<span class="wyr-format-sub">' + UI.formatCourtSub + '</span></button>';
+      html += '<button type="button" class="wyr-format" data-taille="' + long + '" role="radio" aria-checked="false">' +
+        '<span class="wyr-format-nb">' + long + '</span>' +
+        '<span class="wyr-format-nom">' + UI.formatLongNom + '</span>' +
+        '<span class="wyr-format-sub">' + UI.formatLongSub + '</span></button>';
+      html += '</div>';
+    }
+
     html += '<button type="button" class="btn btn-cta" id="wyr-start">' + UI.startGame + '</button>';
     html += '</div>';
     this.container.innerHTML = html;
 
+    var chips = this.container.querySelectorAll('.wyr-format');
+    for (var i = 0; i < chips.length; i++) {
+      chips[i].addEventListener('click', function() {
+        choisi = parseInt(this.getAttribute('data-taille'), 10) || court;
+        for (var j = 0; j < chips.length; j++) {
+          var actif = chips[j] === this;
+          chips[j].classList.toggle('wyr-format--actif', actif);
+          chips[j].setAttribute('aria-checked', actif ? 'true' : 'false');
+        }
+      });
+    }
+
     document.getElementById('wyr-start').addEventListener('click', function() {
       self.p1Name = (document.getElementById('wyr-p1').value || '').trim() || UI.name1;
       self.p2Name = (document.getElementById('wyr-p2').value || '').trim() || UI.name2;
+      self.limite = choisi;
       self.currentPlayer = 1;
       self.currentQ = 0;
       self.phase = 'handoff';
       self.render();
+    });
+  };
+
+  // ── Prolongation, proposée sur l'écran de résultat ──
+  // Le palier n'est pas un écran de plus avant les résultats : la partie
+  // courte va jusqu'au bout, le couple voit son score, et c'est seulement
+  // ensuite qu'on propose la suite. Celui qui vient d'enchaîner quinze
+  // dilemmes a montré qu'il accrochait, l'offre tombe donc au bon moment, et
+  // aucun bouton ne promet un écran qu'il ne donne pas.
+  WYRGame.prototype.blocProlonger = function() {
+    var restant = this.questions.length - this.limite;
+    if (restant <= 0) return '';
+    var html = '<div class="wyr-palier">';
+    html += '<div class="wyr-palier-macaron" aria-hidden="true"><span>🔥</span></div>';
+    html += '<p class="wyr-palier-titre">' + UI.palierTitre + '</p>';
+    html += '<p class="wyr-palier-texte">' + UI.palierTexte + '</p>';
+    html += '<button type="button" class="btn btn-cta wyr-palier-btn" id="wyr-plus">' +
+      UI.palierContinuer.replace('15', restant) + '</button>';
+    html += '</div>';
+    return html;
+  };
+
+  WYRGame.prototype.brancheProlonger = function() {
+    var self = this;
+    var btn = document.getElementById('wyr-plus');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      // Les réponses déjà données sont conservées : la prolongation reprend
+      // le dilemme suivant du même tirage, elle ne relance pas une partie.
+      self.limite = self.questions.length;
+      self.currentQ++;
+      self.currentPlayer = 1;
+      self.phase = 'handoff';
+      self.render();
+      self.container.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   };
 
@@ -327,7 +407,7 @@
     this.container.appendChild(QuizEngine.relaisJoueur(this, {
       nom: this.currentPlayer === 1 ? this.p1Name : this.p2Name,
       emoji: this.currentPlayer === 1 ? '👋' : '🫣',
-      etape: (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.totalQ,
+      etape: (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.limite,
       suite: function() { self.phase = 'playing'; self.render(); }
     }));
   };
@@ -336,7 +416,7 @@
   WYRGame.prototype.renderQuestion = function() {
     var self = this;
     var q = this.questions[this.currentQ];
-    var totalSteps = this.totalQ * 2;
+    var totalSteps = this.limite * 2;
     var doneSteps = this.currentQ * 2 + (this.currentPlayer === 2 ? 1 : 0);
     var progress = Math.round((doneSteps / totalSteps) * 100);
     var name = this.currentPlayer === 1 ? this.p1Name : this.p2Name;
@@ -347,7 +427,7 @@
     html += '<div class="mb-5">';
     html += '<div class="flex justify-between items-center text-sm text-muted-foreground mb-2">';
     html += '<span class="font-medium" style="color: var(--primary)">' + QuizEngine.esc(name) + '</span>';
-    html += '<span>' + (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.totalQ + '</span>';
+    html += '<span>' + (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.limite + '</span>';
     html += '</div>';
     html += '<div class="w-full bg-muted rounded-full h-1.5">';
     html += '<div class="bg-primary h-1.5 rounded-full transition-all duration-500" style="width:' + progress + '%"></div>';
@@ -443,7 +523,7 @@
     var html = '<div class="glass-card rounded-xl p-6 text-center animate-fade-in">';
     html += '<div class="text-4xl mb-3">' + (same ? '🎉' : '😅') + '</div>';
     html += '<h3 class="text-lg font-semibold mb-1">' + (same ? UI.sameChoice : UI.diffChoice) + '</h3>';
-    html += '<p class="text-sm text-muted-foreground mb-6">' + (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.totalQ + '</p>';
+    html += '<p class="text-sm text-muted-foreground mb-6">' + (this.currentQ + 1) + ' ' + UI.qOf + ' ' + this.limite + '</p>';
 
     // Question text
     html += '<p class="text-base text-muted-foreground mb-5">' + q.text + '</p>';
@@ -464,7 +544,7 @@
     html += '</div>';
 
     // Next button
-    var isLast = this.currentQ >= this.totalQ - 1;
+    var isLast = this.currentQ >= this.limite - 1;
     html += '<button type="button" class="btn btn-cta" id="wyr-next">' + (isLast ? UI.done : UI.next) + '</button>';
     html += '</div>';
 
@@ -488,7 +568,7 @@
     var matches = 0;
     var details = [];
 
-    for (var i = 0; i < this.totalQ; i++) {
+    for (var i = 0; i < this.limite; i++) {
       var same = this.p1Answers[i] === this.p2Answers[i];
       if (same) matches++;
       details.push({
@@ -499,7 +579,7 @@
       });
     }
 
-    var pct = Math.round((matches / this.totalQ) * 100);
+    var pct = Math.round((matches / this.limite) * 100);
     var emoji = pct >= 80 ? '🔥' : pct >= 60 ? '💕' : pct >= 40 ? '😄' : '🤷';
 
     // data-quiz-done signale la fin de partie au suivi des completions : cet
@@ -511,7 +591,7 @@
     html += '<div class="text-5xl mb-3">' + emoji + '</div>';
     html += '<p class="text-sm text-muted-foreground mb-2">' + UI.matchRate + '</p>';
     html += '<h2 class="text-4xl md:text-5xl font-bold text-primary mb-1">' + pct + '%</h2>';
-    html += '<p class="text-muted-foreground">' + matches + '/' + this.totalQ + ' ' + UI.agree + '</p>';
+    html += '<p class="text-muted-foreground">' + matches + '/' + this.limite + ' ' + UI.agree + '</p>';
     html += '</div>';
 
     // Agreement bar
@@ -519,6 +599,10 @@
     html += '<div class="w-full bg-muted rounded-full h-4 overflow-hidden">';
     html += '<div class="h-4 rounded-full transition-all duration-1000" style="width:' + pct + '%;background:linear-gradient(90deg, hsl(340,65%,65%), hsl(270,40%,70%))"></div>';
     html += '</div></div>';
+
+    // Proposition de prolonger, avant le détail : c'est la seule chose sur
+    // laquelle on veut que l'œil tombe juste après le score.
+    html += this.blocProlonger();
 
     // Question-by-question breakdown
     html += '<div class="space-y-3 mb-8">';
@@ -558,18 +642,41 @@
     html += '</div>';
     this.container.innerHTML = html;
 
+    this.brancheProlonger();
+
     document.getElementById('wyr-retake').addEventListener('click', function() {
       self.p1Answers = [];
       self.p2Answers = [];
       self.currentQ = 0;
       self.currentPlayer = 1;
+      // On revient à l'écran de départ, donc au choix de la longueur : la
+      // limite est remise à la partie courte pour que les deux cases soient
+      // dans le même état qu'à la première partie.
+      self.limite = Math.min(<%= PARTIE_COURTE %>, self.questions.length);
       self.questions = QuizEngine.shuffleArray(self.questions);
       self.phase = 'setup';
       self.render();
       self.container.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
-    this.container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Panneau d'avant-résultats. Les moteurs partagés le déclenchent depuis
+    // dispositionResultat ; ce jeu construit son propre écran de résultat et
+    // ne passait donc jamais par là, c'était la seule page à ne pas l'avoir.
+    // Le résultat est déjà en place derrière le panneau, il n'y a rien à
+    // recalculer à la fermeture. Le panneau ne s'affiche qu'une fois par
+    // session et par jeu, donc prolonger jusqu'à trente ne le redonne pas.
+    var self2 = this;
+    if (typeof window.qcPanneauAvantResultats === 'function') {
+      window.qcPanneauAvantResultats({
+        lang: this.container.dataset.lang || document.documentElement.lang || 'fr',
+        onContinue: function () {
+          try { self2.container.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+          catch (e) { self2.container.scrollIntoView(); }
+        },
+      });
+    } else {
+      this.container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   // Initialize
@@ -705,5 +812,108 @@
 }
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out;
+}
+
+/* ── Choix de la longueur de partie ────────────────────────────────────────
+   Trente dilemmes joués à deux, c'est soixante réponses : la page recevait
+   180 clics pour 13 parties terminées. La partie courte est proposée d'abord
+   et sélectionnée par défaut, la longue reste à un clic pour qui la veut. */
+.wyr-format-titre {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 700; font-size: 0.95rem;
+  color: hsl(var(--foreground));
+  margin: 0 0 0.75rem;
+}
+.wyr-formats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;
+  align-items: stretch;
+  max-width: 24rem; margin: 0 auto 1.75rem;
+}
+.wyr-format {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 0.15rem;
+  padding: 0.9rem 0.5rem;
+  border-radius: 1.1rem;
+  border: 2.5px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+.wyr-format:hover { border-color: hsl(var(--primary)); }
+.wyr-format--actif {
+  border-color: hsl(var(--primary));
+  box-shadow: 4px 4px 0 hsl(340 65% 65% / 0.55);
+  transform: translate(-1px, -1px);
+}
+.wyr-format:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 2px; }
+.wyr-format-nb {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.6rem; font-weight: 800; line-height: 1;
+  color: hsl(var(--muted-foreground));
+  transition: color 180ms ease;
+}
+.wyr-format--actif .wyr-format-nb { color: hsl(var(--primary)); }
+.wyr-format-nom { font-weight: 700; font-size: 0.86rem; line-height: 1.25; text-wrap: balance; }
+.wyr-format-sub { font-size: 0.72rem; line-height: 1.3; color: hsl(var(--muted-foreground)); }
+
+/* ── Prolongation, sur l'écran de résultat ─────────────────────────────────
+   Encadré volontairement de travers et posé sur une ombre dure : c'est le
+   seul bloc de cet écran qui doit accrocher l'œil après le score. */
+.wyr-palier {
+  --ink: 268 45% 27%;
+  position: relative;
+  max-width: 26rem;
+  margin: 0 auto 2rem;
+  padding: 2rem 1.4rem 1.5rem;
+  border-radius: 1.6rem;
+  border: 3px solid hsl(var(--ink));
+  background: hsl(var(--card));
+  box-shadow: 7px 8px 0 hsl(var(--ink));
+  text-align: center;
+  transform: rotate(-1deg);
+}
+.dark .wyr-palier { --ink: 270 30% 62%; }
+.wyr-palier-macaron {
+  position: absolute; top: -1.3rem; left: -0.8rem;
+  width: 3.2rem; height: 3.2rem;
+  display: grid; place-items: center;
+  font-size: 1.5rem; line-height: 1;
+  border-radius: 999px;
+  border: 3px solid hsl(var(--ink));
+  background: linear-gradient(150deg, hsl(338 84% 64%), hsl(16 92% 60%));
+  box-shadow: 3px 3px 0 hsl(var(--ink));
+  transform: rotate(-12deg);
+}
+.wyr-palier-macaron > span { display: block; transform: rotate(12deg); }
+.wyr-palier-titre {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 1.2rem; font-weight: 800; line-height: 1.3;
+  margin: 0 0 0.5rem;
+  text-wrap: balance;
+}
+.wyr-palier-texte {
+  font-size: 0.88rem; line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 1.25rem;
+  text-wrap: pretty;
+}
+.wyr-palier-btn {
+  width: 100%; justify-content: center;
+  border: 3px solid hsl(var(--ink)) !important;
+  box-shadow: 4px 4px 0 hsl(var(--ink));
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+.wyr-palier-btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 hsl(var(--ink)); }
+.wyr-palier-btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 hsl(var(--ink)); }
+
+@media (min-width: 480px) {
+  .wyr-palier { padding: 2.3rem 2rem 1.7rem; }
+  .wyr-palier-titre { font-size: 1.35rem; }
+  .wyr-palier-btn { width: auto; min-width: 15rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wyr-format, .wyr-palier-btn { transition: none; }
 }
 </style>

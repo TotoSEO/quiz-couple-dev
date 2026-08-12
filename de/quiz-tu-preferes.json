@@ -3,7 +3,7 @@
     "badge": "Was Würdest Du Eher • 100 Fragen • 2 Spieler",
     "title": "Was Würdest Du Eher? Das Paar-Quiz, das euch überraschen wird",
     "titleHighlight": "überraschen wird",
-    "description": "100 Dilemmas für Paare, 30 davon werden pro Runde zufällig gezogen. Lustig, manchmal tiefgründig und nie zweimal gleich."
+    "description": "100 Dilemmas für Paare, 15 oder 30 davon werden pro Runde zufällig gezogen, ganz wie ihr wollt. Lustig, manchmal tiefgründig und nie zweimal gleich."
   },
   "intro": {
     "p1": "Das <strong class=\"text-foreground\">Was würdest du lieber für Paare</strong> ist eines der wenigen Formate, die jedes Mal funktionieren. Kein Material, keine komplizierten Regeln, nur zwei Menschen, unmögliche Entscheidungen… und Antworten, die weit mehr verraten, als man denkt.",
@@ -44,7 +44,7 @@
   },
   "faq": {
     "q1": "Wie viele Fragen enthält dieses Was-Würdest-Du-Eher-Spiel für Paare?",
-    "a1": "Das Spiel enthält 100 Was-würdest-du-lieber-Fragen für Paare, jede mit zwei Optionen zur Wahl. Eine Runde zieht 30 davon zufällig, ihr könnt also mehrmals spielen, ohne dieselben wiederzubekommen.",
+    "a1": "Das Spiel enthält 100 Was-würdest-du-lieber-Fragen für Paare, jede mit zwei Optionen zur Wahl. Zu Beginn wählt ihr eine kurze Runde mit 15 Dilemmas oder eine ganze Runde mit 30, zufällig gezogen, ihr könnt also mehrmals spielen, ohne dieselben wiederzubekommen. Und wenn euch die ersten 15 gefallen haben, bietet euch der Ergebnisbildschirm die nächsten 15 an.",
     "q2": "Ist das Was-Würdest-Du-Eher-Spiel für alle Paare geeignet?",
     "a2": "Ja! Das Format funktioniert unabhängig vom Alter des Paares oder der Dauer der Beziehung. Die Fragen sollen zum Lachen und zum Nachdenken bringen, ohne je unangenehm zu werden, und es gibt nichts vorzubereiten.",
     "q3": "Gibt es pikante Fragen in diesem Quiz?",

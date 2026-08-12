@@ -3,7 +3,7 @@
     "badge": "Cosa Preferiresti • 100 domande • 2 giocatori",
     "title": "Cosa Preferiresti? Il quiz di coppia che vi sorprenderà",
     "titleHighlight": "vi sorprenderà",
-    "description": "100 dilemmi scritti per le coppie, 30 estratti a caso a ogni partita. Divertente, a volte profondo e mai uguale due volte."
+    "description": "100 dilemmi scritti per le coppie, 15 o 30 estratti a caso a ogni partita, come preferite. Divertente, a volte profondo e mai uguale due volte."
   },
   "intro": {
     "p1": "Il <strong class=\"text-foreground\">preferiresti in coppia</strong> è uno dei pochi formati che funzionano ogni volta. Nessun materiale, nessuna regola complicata, solo due persone, scelte impossibili… e risposte che dicono molto più di quanto sembri.",
@@ -44,7 +44,7 @@
   },
   "faq": {
     "q1": "Quante domande contiene questo gioco Cosa Preferiresti per coppie?",
-    "a1": "Il gioco contiene 100 domande preferiresti scritte per le coppie, ognuna con due opzioni fra cui scegliere. Ogni partita ne estrae 30 a caso, quindi potete rigiocare senza ritrovare le stesse.",
+    "a1": "Il gioco contiene 100 domande preferiresti scritte per le coppie, ognuna con due opzioni fra cui scegliere. All'inizio scegliete una partita veloce da 15 dilemmi o una partita completa da 30, estratti a caso, quindi potete rigiocare senza ritrovare le stesse. E se i primi 15 vi sono piaciuti, la schermata dei risultati vi propone di continuare con i 15 successivi.",
     "q2": "Il gioco Cosa Preferiresti è adatto a tutte le coppie?",
     "a2": "Sì! Il formato funziona qualunque sia l'età della coppia o la durata della relazione. Le domande sono scritte per far ridere e riflettere senza mai mettere a disagio, e non c'è nulla da preparare.",
     "q3": "Ci sono domande piccanti in questo quiz?",
