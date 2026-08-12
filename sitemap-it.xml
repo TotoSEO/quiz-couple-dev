@@ -591,6 +591,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/it/blog/litigi-di-coppia-in-vacanza/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/disputes-couple-vacances/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/couples-arguing-on-holiday/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/discusiones-pareja-vacaciones/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/streit-im-paar-im-urlaub/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/litigi-di-coppia-in-vacanza/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/disputes-couple-vacances/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/it/blog/come-nascono-i-sentimenti-in-un-uomo/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/sentiments-chez-un-homme/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/how-men-develop-feelings/"/>
