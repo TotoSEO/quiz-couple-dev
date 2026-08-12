@@ -349,6 +349,14 @@
     el('dn-formulaire').classList.add('hidden');
     el('dn-suite').classList.remove('hidden');
 
+    // Ce moteur ne passe pas par le moteur commun : on appelle donc le
+    // panneau d'avant-resultats nous-memes, sinon cette page serait la seule
+    // a ne pas l'afficher. Absent du DOM ? On ne fait rien et le resultat
+    // s'affiche normalement.
+    if (typeof window.qcPanneauAvantResultats === 'function') {
+      window.qcPanneauAvantResultats({ lang: document.documentElement.lang || 'fr' });
+    }
+
     var haut = racine.getBoundingClientRect().top + window.pageYOffset - 80;
     window.scrollTo({ top: haut, behavior: 'smooth' });
   }

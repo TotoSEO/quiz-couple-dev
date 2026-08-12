@@ -937,6 +937,28 @@ var QuizEngine = (function() {
       wrap.appendChild(z);
     });
     if (zones.resultat) alignerLaProse(zones.resultat);
+    // Tous les moteurs finissent ici, y compris SoloTest et le jeu de
+    // dilemmes qui ont leur propre mise en page : c'est donc le seul endroit
+    // ou brancher le panneau d'avant-resultats pour qu'il couvre tout.
+    panneauAvantResultats(wrap);
+  }
+
+  // Le resultat est deja construit derriere le panneau : il n'y a rien a
+  // attendre ni a recalculer a la fermeture, on remonte juste dessus. Si le
+  // fichier qui porte le panneau n'a pas ete charge, on ne fait rien et le
+  // resultat s'affiche normalement.
+  function panneauAvantResultats(wrap) {
+    if (typeof window.qcPanneauAvantResultats !== 'function') return;
+    var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
+    window.qcPanneauAvantResultats({
+      lang: quizEl ? (quizEl.dataset.lang || 'fr') : 'fr',
+      onContinue: function () {
+        if (wrap && wrap.scrollIntoView) {
+          try { wrap.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+          catch (e) { wrap.scrollIntoView(); }
+        }
+      },
+    });
   }
 
   // Les verdicts sont centres, ce qui va tres bien a « Un couple tres solide »

@@ -1,4 +1,149 @@
 /**
+ * Panneau affiche juste avant les resultats, quand la personne vient de
+ * cliquer sur « voir les resultats ». Elle a fini de repondre, elle attend
+ * quelque chose : c'est le seul moment de la partie ou elle lit vraiment.
+ *
+ * Ce bloc vit ici et pas dans le moteur parce que quiz-extras.js est charge
+ * sur toutes les pages, y compris les deux moteurs autonomes (quiz ado et
+ * compatibilite par date de naissance) qui n'embarquent pas le moteur commun.
+ * Il n'expose qu'une fonction et ne fait rien tant qu'on ne l'appelle pas.
+ *
+ * Une seule fois par quiz et par session : le message demande un avis sur CE
+ * quiz, donc il a du sens sur un quiz suivant, mais pas quand on rejoue le
+ * meme dans la foulee.
+ */
+(function () {
+  'use strict';
+
+  var TEXTES = {
+    fr: {
+      titre: 'Pensez à nous laisser un avis et à consulter les autres tests & quiz ! 🙏',
+      note: 'Quiz Couple est une plateforme gratuite entretenue aux frais de ses détenteurs. Faite avec passion et par amour ❤️',
+      bouton: 'Voir les résultats',
+      fermer: 'Fermer',
+    },
+    en: {
+      titre: 'Do think of leaving us a review, and of trying the other tests & quizzes! 🙏',
+      note: "Quiz Couple is a free platform, paid for out of its owners' own pockets. Made with passion, and out of love ❤️",
+      bouton: 'See the results',
+      fermer: 'Close',
+    },
+    es: {
+      titre: '¡Acuérdate de dejarnos una reseña y de probar los demás tests y quiz! 🙏',
+      note: 'Quiz Couple es una plataforma gratuita mantenida a costa de sus propietarios. Hecha con pasión y por amor ❤️',
+      bouton: 'Ver los resultados',
+      fermer: 'Cerrar',
+    },
+    de: {
+      titre: 'Denk daran, uns eine Bewertung zu hinterlassen und die anderen Tests & Quiz auszuprobieren! 🙏',
+      note: 'Quiz Couple ist eine kostenlose Plattform, die ihre Betreiber aus eigener Tasche bezahlen. Mit Leidenschaft und aus Liebe gemacht ❤️',
+      bouton: 'Ergebnisse ansehen',
+      fermer: 'Schließen',
+    },
+    it: {
+      titre: 'Ricordati di lasciarci una recensione e di provare gli altri test e quiz! 🙏',
+      note: 'Quiz Couple è una piattaforma gratuita mantenuta a spese dei suoi proprietari. Fatta con passione e per amore ❤️',
+      bouton: 'Vedi i risultati',
+      fermer: 'Chiudi',
+    },
+  };
+
+  var ouvert = false;
+
+  window.qcPanneauAvantResultats = function (options) {
+    var opts = options || {};
+    var lang = opts.lang || document.documentElement.lang || 'fr';
+    var t = TEXTES[lang] || TEXTES.fr;
+    var suite = typeof opts.onContinue === 'function' ? opts.onContinue : function () {};
+
+    // Deux panneaux superposes seraient un piege : on ignore le second appel.
+    if (ouvert) { suite(); return; }
+
+    var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
+    var cle = 'qc-panneau-' + ((quizEl && quizEl.dataset.quiz) || location.pathname);
+    try {
+      if (sessionStorage.getItem(cle)) { suite(); return; }
+      sessionStorage.setItem(cle, '1');
+    } catch (e) {
+      // Navigation privee ou stockage refuse : on affiche quand meme, une fois
+      // de trop vaut mieux qu'un plantage.
+    }
+
+    ouvert = true;
+    var scrollBloque = document.body.style.overflow;
+
+    var fond = document.createElement('div');
+    fond.className = 'qc-panneau-fond';
+    fond.setAttribute('role', 'dialog');
+    fond.setAttribute('aria-modal', 'true');
+    fond.setAttribute('aria-label', t.titre);
+
+    var carte = document.createElement('div');
+    carte.className = 'qc-panneau';
+
+    // Macaron decoratif qui deborde du cadre : purement visuel, donc masque
+    // aux lecteurs d'ecran qui liraient sinon un emoji sans contexte.
+    var macaron = document.createElement('div');
+    macaron.className = 'qc-panneau-macaron';
+    macaron.setAttribute('aria-hidden', 'true');
+    var macaronEmoji = document.createElement('span');
+    macaronEmoji.textContent = '💌';
+    macaron.appendChild(macaronEmoji);
+
+    // Volontairement un paragraphe et non un titre : la page a deja sa
+    // hierarchie, un h2 ici la casserait pour les lecteurs d'ecran.
+    var titre = document.createElement('p');
+    titre.className = 'qc-panneau-titre';
+    titre.textContent = t.titre;
+
+    var note = document.createElement('p');
+    note.className = 'qc-panneau-note';
+    note.textContent = t.note;
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'btn btn-cta qc-panneau-btn';
+    btn.textContent = t.bouton;
+
+    carte.appendChild(macaron);
+    carte.appendChild(titre);
+    carte.appendChild(note);
+    carte.appendChild(btn);
+    fond.appendChild(carte);
+
+    function fermer() {
+      if (!ouvert) return;
+      ouvert = false;
+      document.removeEventListener('keydown', surTouche);
+      document.body.style.overflow = scrollBloque;
+      fond.classList.add('qc-panneau-fond--sortie');
+      var fini = false;
+      function retirer() {
+        if (fini) return;
+        fini = true;
+        if (fond.parentNode) fond.parentNode.removeChild(fond);
+        suite();
+      }
+      fond.addEventListener('transitionend', retirer);
+      // Filet si la transition ne part pas (onglet en arriere-plan, motion
+      // reduite) : sans lui le panneau resterait colle a l'ecran.
+      setTimeout(retirer, 400);
+    }
+
+    function surTouche(e) { if (e.key === 'Escape' || e.key === 'Esc') fermer(); }
+
+    btn.addEventListener('click', fermer);
+    fond.addEventListener('click', function (e) { if (e.target === fond) fermer(); });
+    document.addEventListener('keydown', surTouche);
+
+    document.body.appendChild(fond);
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(function () { fond.classList.add('qc-panneau-fond--visible'); });
+    try { btn.focus({ preventScroll: true }); } catch (e) { btn.focus(); }
+  };
+})();
+
+/**
  * Quiz extras : compteur "realise X fois" (bulle sous le fil d'Ariane),
  * suivi des completions, et bloc avis par quiz (liste + formulaire).
  * Degrade proprement si Supabase est injoignable.
