@@ -120,20 +120,23 @@
     var w = el('div', 'pu-carte pu-carte--modes');
     w.appendChild(el('div', 'pu-macaron', '<span>🌡️</span>'));
     w.appendChild(el('p', 'pu-kicker', 'Étape 1 sur 2'));
-    w.appendChild(el('h2', 'pu-titre', 'Vous jouez comment ?'));
+    w.appendChild(el('h2', 'pu-titre', 'Choisissez votre mode'));
     w.appendChild(el('p', 'pu-sous',
       'Faites le test dans votre coin, puis envoyez votre score à votre partenaire ou à vos potes pour comparer. Ou répondez à deux, et notez le couple entier.'));
 
     var grille = el('div', 'pu-modes');
     [
-      { k: 'solo', emoji: '🙋', nom: 'Chacun de son côté', desc: '50 questions sur vous, votre passé, vos casseroles. À la fin, vous envoyez votre score à qui vous voulez.' },
-      { k: 'couple', emoji: '💞', nom: 'À deux, sur le couple', desc: '50 questions sur ce que vous avez fait ensemble. Vous répondez à voix haute, et vous assumez.' }
+      { k: 'solo', emoji: '🙋', nom: 'Chacun de son côté', action: 'Choisir ce mode',
+        desc: '50 questions sur vous, votre passé, vos casseroles. À la fin, vous envoyez votre score à qui vous voulez.' },
+      { k: 'couple', emoji: '💞', nom: 'À deux, sur le couple', action: 'Choisir ce mode',
+        desc: '50 questions sur ce que vous avez fait ensemble. Vous répondez à voix haute, et vous assumez.' }
     ].forEach(function (m) {
       var b = el('button', 'pu-mode');
       b.type = 'button';
       b.innerHTML = '<span class="pu-mode-emoji" aria-hidden="true">' + m.emoji + '</span>' +
         '<span class="pu-mode-nom">' + esc(m.nom) + '</span>' +
-        '<span class="pu-mode-desc">' + esc(m.desc) + '</span>';
+        '<span class="pu-mode-desc">' + esc(m.desc) + '</span>' +
+        '<span class="pu-mode-action">' + esc(m.action) + '</span>';
       b.addEventListener('click', function () { mode = m.k; rend(ecranAge); });
       grille.appendChild(b);
     });
