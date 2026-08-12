@@ -364,8 +364,13 @@
 }
 .pu-hero-inner { max-width: 44rem; margin: 0 auto; }
 
+/* `inline-flex` mettait la pastille sur la même ligne que le bouton dès que
+   la place le permettait : sur mobile ça passait à la ligne tout seul, sur
+   PC les deux se retrouvaient côte à côte. `flex` est de niveau bloc, donc
+   la pastille occupe sa propre ligne, et `width: fit-content` avec des
+   marges automatiques la garde centrée sans s'étirer sur toute la largeur. */
 .pu-hero-compteur, .pu-hero-moyenne {
-  display: inline-flex; align-items: center; gap: .45rem;
+  display: flex; width: fit-content; align-items: center; gap: .45rem;
   padding: .45rem 1rem; border-radius: 999px;
   border: 1px solid hsl(0 0% 100% / .22);
   background: hsl(0 0% 100% / .07);
@@ -375,8 +380,8 @@
 }
 /* Le compteur est collé au bouton, la moyenne le suit juste en dessous :
    les deux chiffres encadrent l'appel à l'action au lieu de flotter en haut. */
-.pu-hero-compteur { margin: 0 0 1.15rem; }
-.pu-hero-moyenne { margin: 1.5rem 0 0; }
+.pu-hero-compteur { margin: 0 auto 1.15rem; }
+.pu-hero-moyenne { margin: 1.5rem auto 0; }
 .pu-hero-compteur[hidden], .pu-hero-moyenne[hidden] { display: none; }
 
 .pu-h1 {
@@ -479,8 +484,8 @@
 .pu-modes { display: grid; gap: .9rem; }
 .pu-mode {
   position: relative; overflow: hidden;
-  display: flex; flex-direction: column; gap: .35rem;
-  padding: 1.25rem 1.15rem 1.25rem 1.3rem; text-align: left;
+  display: flex; flex-direction: column; align-items: center; gap: .35rem;
+  padding: 1.35rem 1.15rem 1.3rem; text-align: center;
   border-radius: 1.15rem;
   border: 2px solid hsl(var(--primary) / .35);
   background:
@@ -491,36 +496,36 @@
   box-shadow: 0 6px 18px hsl(338 72% 40% / .12);
   transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
 }
-/* Liseré vertical : la première chose que l'œil accroche sur la carte. */
+/* Liseré horizontal en haut de carte : le liseré vertical ne marchait qu'avec
+   un texte aligné à gauche, il déséquilibrait une carte centrée. */
 .pu-mode::before {
-  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
-  background: linear-gradient(hsl(338 72% 62%), hsl(265 60% 56%));
-}
-/* Chevron toujours visible, y compris au doigt où il n'y a pas de survol. */
-.pu-mode::after {
-  content: '›';
-  position: absolute; right: 1.05rem; bottom: 1.05rem;
-  display: grid; place-items: center;
-  width: 1.75rem; height: 1.75rem; border-radius: 999px;
-  background: linear-gradient(135deg, hsl(338 72% 62%), hsl(18 88% 58%));
-  color: #fff; font-size: 1.15rem; font-weight: 800; line-height: 0;
-  padding-bottom: .18em;
-  box-shadow: 0 4px 12px hsl(338 72% 50% / .4);
-  transition: transform 170ms ease;
+  content: ''; position: absolute; left: 0; right: 0; top: 0; height: 4px;
+  background: linear-gradient(90deg, hsl(338 72% 62%), hsl(265 60% 56%));
 }
 .pu-mode:hover { transform: translateY(-3px); box-shadow: 0 14px 30px hsl(338 72% 40% / .24); }
-.pu-mode:hover::after { transform: translateX(3px); }
 .pu-mode:active { transform: translateY(0); box-shadow: 0 4px 12px hsl(338 72% 40% / .18); }
 .pu-mode:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 3px; }
 .pu-mode-emoji { font-size: 1.7rem; line-height: 1; }
 .pu-mode-nom { font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: 1.05rem; }
-.pu-mode-desc { font-size: .85rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+.pu-mode-desc { font-size: .85rem; line-height: 1.5; color: hsl(var(--muted-foreground)); max-width: 17rem; margin-bottom: .7rem; }
+/* La mention d'action devient une vraie pastille : c'est elle qui dit que la
+   carte se clique, le chevron flottant en coin ne suffisait pas. */
+/* `auto` plutôt qu'une marge fixe : la description de droite tient sur deux
+   lignes, celle de gauche sur une, et les deux pastilles se retrouvaient à
+   des hauteurs différentes. */
 .pu-mode-action {
-  margin-top: .45rem; padding-right: 2.4rem;
+  margin-top: auto; padding-top: 0;
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding: .45rem 1rem; border-radius: 999px;
   font-size: .74rem; font-weight: 800;
   letter-spacing: .06em; text-transform: uppercase;
-  color: hsl(var(--primary));
+  background: linear-gradient(135deg, hsl(338 72% 62%), hsl(18 88% 58%));
+  color: #fff;
+  box-shadow: 0 4px 12px hsl(338 72% 50% / .35);
+  transition: transform 170ms ease;
 }
+.pu-mode-action::after { content: '›'; font-size: 1.05rem; line-height: 0; padding-bottom: .1em; }
+.pu-mode:hover .pu-mode-action { transform: translateX(2px); }
 
 /* Même traitement, en plus sobre, pour le portail d'âge. */
 .pu-age { position: relative; padding-right: 2.2rem; }

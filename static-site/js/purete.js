@@ -120,16 +120,15 @@
     var w = el('div', 'pu-carte pu-carte--modes');
     w.appendChild(el('div', 'pu-macaron', '<span>🌡️</span>'));
     w.appendChild(el('p', 'pu-kicker', 'Étape 1 sur 2'));
-    w.appendChild(el('h2', 'pu-titre', 'Choisissez votre mode'));
-    w.appendChild(el('p', 'pu-sous',
-      'Faites le test dans votre coin, puis envoyez votre score à votre partenaire ou à vos potes pour comparer. Ou répondez à deux, et notez le couple entier.'));
+    w.appendChild(el('h2', 'pu-titre', 'Choisissez votre mode du test de pureté : en couple ou seul ?'));
+    w.appendChild(el('p', 'pu-sous', '50 questions dans les deux cas. Le mode change ce qu\'on note.'));
 
     var grille = el('div', 'pu-modes');
     [
       { k: 'solo', emoji: '🙋', nom: 'Chacun de son côté', action: 'Choisir ce mode',
-        desc: '50 questions sur vous, votre passé, vos casseroles. À la fin, vous envoyez votre score à qui vous voulez.' },
-      { k: 'couple', emoji: '💞', nom: 'À deux, sur le couple', action: 'Choisir ce mode',
-        desc: '50 questions sur ce que vous avez fait ensemble. Vous répondez à voix haute, et vous assumez.' }
+        desc: 'Sur vous : votre passé, vos casseroles.' },
+      { k: 'couple', emoji: '💞', nom: 'À deux en couple', action: 'Choisir ce mode',
+        desc: 'Sur vous deux : ce que vous avez fait ensemble.' }
     ].forEach(function (m) {
       var b = el('button', 'pu-mode');
       b.type = 'button';

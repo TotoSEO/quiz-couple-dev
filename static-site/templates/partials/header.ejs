@@ -360,7 +360,6 @@
         <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-vedette">
           <span class="mobile-nav-vedette-emoji" aria-hidden="true"><%= link.emoji %></span>
           <span class="mobile-nav-vedette-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-          <span class="mobile-nav-vedette-point" aria-hidden="true"></span>
         </a>
         <% } else { %>
         <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-link"><%= t('common:' + link.labelKey, link.labelKey) %></a>

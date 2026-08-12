@@ -519,5 +519,37 @@
     return wrap;
   }
 
+  // ── Compteurs communautaires du hero ────────────────────────────────
+  // Ils vivent dans le gabarit, pas dans l'application : le constructeur se
+  // redessine à chaque frappe, un bloc rendu ici clignoterait et referait un
+  // appel réseau à chaque fois. Un seul appel au chargement suffit.
+  //
+  // Le cumul vient de custom_quiz_totaux, alimentée par un déclencheur, et
+  // non d'un comptage de custom_quizzes : les quiz privés expirent au bout
+  // d'une semaine, un comptage direct reculerait tout seul.
+  function chargeTotaux() {
+    var boite = document.getElementById('cq-totaux');
+    if (!boite || !SUPABASE_URL || !SUPABASE_KEY) return;
+    fetch(SUPABASE_URL + '/rest/v1/rpc/get_custom_quiz_totaux', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY },
+      body: '{}'
+    }).then(function (r) { return r.ok ? r.json() : null; }).then(function (rows) {
+      var d = Array.isArray(rows) ? rows[0] : rows;
+      if (!d) return;
+      var prives = Number(d.prives) || 0, publics = Number(d.publics) || 0;
+      // Rien à annoncer tant que personne n'a rien créé : mieux vaut un hero
+      // plus court que deux zéros.
+      if (prives + publics <= 0) return;
+      var fmt = function (n) { return n.toLocaleString(LANG === 'en' ? 'en-GB' : LANG); };
+      document.getElementById('cq-total-prives').textContent = fmt(prives);
+      document.getElementById('cq-total-publics').textContent = fmt(publics);
+      boite.hidden = false;
+      var merci = document.getElementById('cq-merci');
+      if (merci) merci.hidden = false;
+    }).catch(function () { /* la fonction n'existe pas encore : on n'affiche rien */ });
+  }
+
   route();
+  chargeTotaux();
 })();

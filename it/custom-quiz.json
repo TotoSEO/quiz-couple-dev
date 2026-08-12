@@ -14,7 +14,10 @@
       "s2p2": "Puoi anche rendere pubblico il tuo quiz: apparirà allora nell'elenco dei quiz della community su questa pagina e chiunque potrà giocarci. I quiz pubblici vengono conservati.",
       "s3Title": "Quiz per ogni momento di coppia",
       "s3p1": "Che sia per scoprire se il partner ti conosce davvero, per una serata tra amici o solo per ridere, la creazione di quiz personalizzati si adatta a ogni voglia. Dai libero sfogo alla fantasia!"
-    }
+    },
+    "total_prives": "quiz privati creati",
+    "total_publics": "quiz pubblici creati",
+    "total_merci": "Grazie alla community di Quiz Couple per tenere vivo il sito ❤️"
   },
   "app": {
     "pat_points_t": "Quiz a punti",
