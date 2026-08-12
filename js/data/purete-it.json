@@ -1,0 +1,2562 @@
+{
+  "cats": {
+    "sexe": {
+      "nom": "Sesso",
+      "emoji": "🔥"
+    },
+    "infidelite": {
+      "nom": "Infedeltà",
+      "emoji": "💔"
+    },
+    "mensonge": {
+      "nom": "Bugie",
+      "emoji": "🎭"
+    },
+    "substances": {
+      "nom": "Alcol e affini",
+      "emoji": "🍸"
+    },
+    "famille": {
+      "nom": "Famiglia",
+      "emoji": "👪"
+    },
+    "numerique": {
+      "nom": "Vita digitale",
+      "emoji": "📱"
+    },
+    "interdit": {
+      "nom": "Vietato",
+      "emoji": "🚨"
+    },
+    "exhibition": {
+      "nom": "Esibizione",
+      "emoji": "👀"
+    },
+    "libertinage": {
+      "nom": "Libertinaggio",
+      "emoji": "💫"
+    },
+    "transgression": {
+      "nom": "Trasgressione",
+      "emoji": "🚨"
+    },
+    "secrets": {
+      "nom": "Segreti",
+      "emoji": "🤐"
+    }
+  },
+  "solo": {
+    "questions": [
+      {
+        "id": 1,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Qual è il tuo body count?",
+        "r": [
+          {
+            "t": "0",
+            "p": 0
+          },
+          {
+            "t": "Da 1 a 3",
+            "p": 5
+          },
+          {
+            "t": "Da 4 a 10",
+            "p": 11
+          },
+          {
+            "t": "Da 11 a 30",
+            "p": 17
+          },
+          {
+            "t": "Più di 30",
+            "p": 22
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Sei mai andato a letto con qualcuno la prima sera?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una volta sola",
+            "p": 8
+          },
+          {
+            "t": "Qualche volta",
+            "p": 13
+          },
+          {
+            "t": "È un po' la mia specialità",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Hai mai avuto una storia solo fisica ma fissa?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una, finita subito",
+            "p": 7
+          },
+          {
+            "t": "Una che è durata mesi",
+            "p": 13
+          },
+          {
+            "t": "Diverse in contemporanea",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Sei mai andato a letto con qualcuno di cui hai dimenticato il nome?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Ho esitato ma ce l'avevo",
+            "p": 6
+          },
+          {
+            "t": "Sì, una volta",
+            "p": 14
+          },
+          {
+            "t": "Più di una volta",
+            "p": 20
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Hai mai finto a letto?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una volta, per abbreviare",
+            "p": 6
+          },
+          {
+            "t": "Abbastanza spesso",
+            "p": 11
+          },
+          {
+            "t": "Quasi sempre",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "cat": "sexe",
+        "ado": false,
+        "q": "L'hai mai fatto altrove che in un letto?",
+        "r": [
+          {
+            "t": "No",
+            "p": 0
+          },
+          {
+            "t": "Un divano vale?",
+            "p": 5
+          },
+          {
+            "t": "Auto, doccia, cucina",
+            "p": 10
+          },
+          {
+            "t": "Fuori, con tutto il rischio",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Hai mai provato un giocattolo, da solo o in due?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Da solo",
+            "p": 6
+          },
+          {
+            "t": "In due, una volta",
+            "p": 10
+          },
+          {
+            "t": "Abbiamo un cassetto dedicato",
+            "p": 14
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Hai mai guardato un porno con qualcuno?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Per caso, facendo zapping",
+            "p": 4
+          },
+          {
+            "t": "Sì, di proposito",
+            "p": 9
+          },
+          {
+            "t": "È diventata un'abitudine",
+            "p": 13
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Hai mai avuto un'esperienza con una persona dello stesso sesso?",
+        "r": [
+          {
+            "t": "No",
+            "p": 0
+          },
+          {
+            "t": "Un bacio a una festa",
+            "p": 7
+          },
+          {
+            "t": "Sì, una volta",
+            "p": 13
+          },
+          {
+            "t": "Sì, più volte",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Hai mai fatto un triangolo?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Ne abbiamo parlato, mai fatto",
+            "p": 6
+          },
+          {
+            "t": "Una volta",
+            "p": 18
+          },
+          {
+            "t": "Più volte",
+            "p": 24
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "cat": "sexe",
+        "ado": false,
+        "q": "L'hai mai fatto sapendo che qualcuno poteva sentire?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "A casa di amici, in silenzio",
+            "p": 8
+          },
+          {
+            "t": "A casa dei miei",
+            "p": 13
+          },
+          {
+            "t": "E non abbiamo nemmeno finto",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Sei mai andato a letto con qualcuno solo per vendetta o per dimostrare qualcosa?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Ci ho pensato",
+            "p": 5
+          },
+          {
+            "t": "Sì, una volta",
+            "p": 15
+          },
+          {
+            "t": "Sì, e lo rifarei",
+            "p": 21
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "cat": "infidelite",
+        "ado": false,
+        "q": "Hai mai tradito qualcuno?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un bacio, niente di più",
+            "p": 12
+          },
+          {
+            "t": "Sì, una volta",
+            "p": 22
+          },
+          {
+            "t": "Sì, più volte",
+            "p": 28
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "cat": "infidelite",
+        "ado": true,
+        "q": "Hai mai baciato qualcun altro a una festa senza dirlo mai?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un bacetto non conta",
+            "p": 8
+          },
+          {
+            "t": "Sì, e l'ho nascosto",
+            "p": 16
+          },
+          {
+            "t": "Sì, più volte",
+            "p": 21
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "cat": "infidelite",
+        "ado": false,
+        "q": "Sei mai stato la storia nascosta di qualcuno impegnato?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "L'ho scoperto dopo",
+            "p": 8
+          },
+          {
+            "t": "Sì, sapendolo",
+            "p": 20
+          },
+          {
+            "t": "Sì, più volte",
+            "p": 25
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "cat": "infidelite",
+        "ado": true,
+        "q": "Hai mai tenuto i contatti con un ex mentre stavi con qualcuno?",
+        "r": [
+          {
+            "t": "No",
+            "p": 0
+          },
+          {
+            "t": "Un compleanno all'anno",
+            "p": 4
+          },
+          {
+            "t": "Ci sentivamo spesso",
+            "p": 11
+          },
+          {
+            "t": "Di nascosto, sì",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "cat": "infidelite",
+        "ado": false,
+        "q": "Hai mai reinstallato un'app di incontri mentre stavi con qualcuno?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Solo per guardare",
+            "p": 10
+          },
+          {
+            "t": "Ho chattato con delle persone",
+            "p": 17
+          },
+          {
+            "t": "Ho visto qualcuno",
+            "p": 25
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "cat": "infidelite",
+        "ado": true,
+        "q": "Hai mai avuto un rapporto troppo stretto con qualcuno, senza niente di fisico?",
+        "r": [
+          {
+            "t": "No",
+            "p": 0
+          },
+          {
+            "t": "Un'amicizia un po' ambigua",
+            "p": 6
+          },
+          {
+            "t": "Ci dicevamo cose che non andavano dette",
+            "p": 13
+          },
+          {
+            "t": "Era una storia, senza il corpo",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "cat": "infidelite",
+        "ado": false,
+        "q": "Hai mai rivisto un ex di nascosto?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un caffè, nient'altro",
+            "p": 8
+          },
+          {
+            "t": "Sì, ed è successo qualcosa",
+            "p": 20
+          },
+          {
+            "t": "Più volte",
+            "p": 24
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "cat": "infidelite",
+        "ado": true,
+        "q": "Hai mai flirtato al lavoro o a lezione mentre stavi con qualcuno?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un po', per gioco",
+            "p": 7
+          },
+          {
+            "t": "Abbastanza da farmi delle domande",
+            "p": 13
+          },
+          {
+            "t": "È finita per degenerare",
+            "p": 19
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "cat": "infidelite",
+        "ado": true,
+        "q": "Hai mai cancellato una conversazione prima che il tuo partner la vedesse?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una volta, niente di grave",
+            "p": 7
+          },
+          {
+            "t": "Regolarmente",
+            "p": 14
+          },
+          {
+            "t": "Ho un secondo telefono",
+            "p": 20
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Hai mai mentito sul tuo passato sentimentale?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Ho arrotondato un numero",
+            "p": 5
+          },
+          {
+            "t": "Ho nascosto un'intera storia",
+            "p": 12
+          },
+          {
+            "t": "La mia versione ufficiale è lontanissima da quella vera",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Hai mai finto di stare male per avere attenzioni?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un po', senza volerlo",
+            "p": 5
+          },
+          {
+            "t": "Sì, consapevolmente",
+            "p": 11
+          },
+          {
+            "t": "È un riflesso in me",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Hai mai parlato male del tuo partner con i tuoi cari?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Uno sfogo normale",
+            "p": 4
+          },
+          {
+            "t": "Ho raccontato cose intime",
+            "p": 10
+          },
+          {
+            "t": "Ho detto cose davvero brutte",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Hai mai mentito su dove ti trovavi?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Per evitare una discussione",
+            "p": 5
+          },
+          {
+            "t": "Per coprire qualcuno",
+            "p": 13
+          },
+          {
+            "t": "Spesso, è diventato un sistema",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Hai mai finto di adorare un regalo?",
+        "r": [
+          {
+            "t": "No, dico quello che penso",
+            "p": 0
+          },
+          {
+            "t": "Sì, per educazione",
+            "p": 3
+          },
+          {
+            "t": "Sì, e l'ho rivenduto",
+            "p": 8
+          },
+          {
+            "t": "Sì, e l'ho buttato",
+            "p": 11
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Hai mai frugato nel telefono di qualcuno?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Ho guardato uno schermo acceso",
+            "p": 6
+          },
+          {
+            "t": "Sì, di nascosto",
+            "p": 13
+          },
+          {
+            "t": "Regolarmente",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Hai mai fatto ghosting a qualcuno da un giorno all'altro?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Dopo uno o due appuntamenti",
+            "p": 5
+          },
+          {
+            "t": "Dopo diversi mesi",
+            "p": 13
+          },
+          {
+            "t": "Dopo una relazione vera",
+            "p": 19
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "cat": "mensonge",
+        "ado": true,
+        "q": "Hai mai nascosto qualcosa di grave al tuo partner?",
+        "r": [
+          {
+            "t": "Niente di grave",
+            "p": 0
+          },
+          {
+            "t": "Un flirt, un ballo di troppo",
+            "p": 8
+          },
+          {
+            "t": "Un bacio",
+            "p": 15
+          },
+          {
+            "t": "Molto peggio di così",
+            "p": 22
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "cat": "substances",
+        "ado": true,
+        "q": "Sei mai stato ubriaco al punto di dimenticare una parte della serata?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una volta",
+            "p": 7
+          },
+          {
+            "t": "Più volte",
+            "p": 13
+          },
+          {
+            "t": "Troppe per contarle",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "cat": "substances",
+        "ado": false,
+        "q": "Hai mai fumato una canna?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un tiro per provare",
+            "p": 6
+          },
+          {
+            "t": "Più volte",
+            "p": 12
+          },
+          {
+            "t": "Regolarmente",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "cat": "substances",
+        "ado": false,
+        "q": "Hai mai preso qualcosa di più pesante di una canna?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una volta, a una festa",
+            "p": 14
+          },
+          {
+            "t": "Più volte",
+            "p": 21
+          },
+          {
+            "t": "Regolarmente",
+            "p": 26
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "cat": "substances",
+        "ado": true,
+        "q": "Hai mai tirato una serata fino a colazione?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una volta",
+            "p": 4
+          },
+          {
+            "t": "Più volte",
+            "p": 8
+          },
+          {
+            "t": "È il mio formato preferito",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "cat": "substances",
+        "ado": false,
+        "q": "Hai mai avuto un rapporto sotto effetto di alcol o altro?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un po' brillo",
+            "p": 7
+          },
+          {
+            "t": "Davvero fatto",
+            "p": 15
+          },
+          {
+            "t": "Senza ricordi chiari",
+            "p": 21
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "cat": "substances",
+        "ado": true,
+        "q": "Ti sei mai messo alla guida dopo aver bevuto?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un bicchiere, tanto tempo fa",
+            "p": 11
+          },
+          {
+            "t": "Sì, più di una volta",
+            "p": 21
+          },
+          {
+            "t": "Sì, e ho avuto paura",
+            "p": 27
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "cat": "substances",
+        "ado": true,
+        "q": "Ti è mai venuto da star male a una festa davanti a tutti?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Con discrezione",
+            "p": 4
+          },
+          {
+            "t": "Davanti a testimoni",
+            "p": 8
+          },
+          {
+            "t": "Addosso a qualcuno",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "cat": "famille",
+        "ado": true,
+        "q": "Hai mai pensato che i tuoi suoceri fossero un po' troppo?",
+        "r": [
+          {
+            "t": "Li adoro",
+            "p": 0
+          },
+          {
+            "t": "Uno o due fastidi",
+            "p": 4
+          },
+          {
+            "t": "Sì, francamente",
+            "p": 8
+          },
+          {
+            "t": "Li evito quando posso",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "cat": "famille",
+        "ado": true,
+        "q": "Hai mai mentito ai tuoi genitori su una relazione?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Ho omesso dei dettagli",
+            "p": 4
+          },
+          {
+            "t": "Ho nascosto qualcuno del tutto",
+            "p": 10
+          },
+          {
+            "t": "Mi sono inventato un'altra vita",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "cat": "famille",
+        "ado": true,
+        "q": "Hai mai presentato qualcuno ai tuoi sapendo che non sarebbe durata?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Avevo dei dubbi",
+            "p": 4
+          },
+          {
+            "t": "Lo sapevo benissimo",
+            "p": 9
+          },
+          {
+            "t": "Più volte",
+            "p": 13
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "cat": "famille",
+        "ado": true,
+        "q": "Hai mai passato le feste con qualcuno che non amavi più?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un pranzo",
+            "p": 5
+          },
+          {
+            "t": "Tutte le feste",
+            "p": 10
+          },
+          {
+            "t": "E ho recitato fino in fondo",
+            "p": 14
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "cat": "famille",
+        "ado": true,
+        "q": "Hai mai scelto una serata invece di qualcosa di importante in famiglia?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una volta",
+            "p": 4
+          },
+          {
+            "t": "Più volte",
+            "p": 8
+          },
+          {
+            "t": "È un classico per me",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "cat": "numerique",
+        "ado": false,
+        "q": "Hai mai mandato una tua foto senza vestiti?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Senza il viso",
+            "p": 8
+          },
+          {
+            "t": "Sì, con il viso",
+            "p": 14
+          },
+          {
+            "t": "A più persone",
+            "p": 19
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "cat": "numerique",
+        "ado": false,
+        "q": "Hai mai fatto sexting dal lavoro o dall'aula?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Qualche messaggio",
+            "p": 7
+          },
+          {
+            "t": "Molto più di così",
+            "p": 12
+          },
+          {
+            "t": "E per poco non mi beccavano",
+            "p": 16
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "cat": "numerique",
+        "ado": true,
+        "q": "Hai mai avuto un account segreto sui social?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un account solo per guardare",
+            "p": 6
+          },
+          {
+            "t": "Un account per parlare con la gente",
+            "p": 13
+          },
+          {
+            "t": "Un account che non conosce nessuno",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "cat": "numerique",
+        "ado": true,
+        "q": "Hai mai stalkerato un ex o la sua nuova storia?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un giro veloce",
+            "p": 4
+          },
+          {
+            "t": "Regolarmente",
+            "p": 9
+          },
+          {
+            "t": "Ho risalito anni di foto",
+            "p": 13
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "cat": "numerique",
+        "ado": true,
+        "q": "Hai mai mandato un messaggio di cui ti sei pentito al risveglio?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un messaggio imbarazzante",
+            "p": 4
+          },
+          {
+            "t": "Un messaggio che ho dovuto spiegare",
+            "p": 9
+          },
+          {
+            "t": "Un messaggio che ha rotto tutto",
+            "p": 14
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "cat": "interdit",
+        "ado": true,
+        "q": "Hai mai rubato qualcosa?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una caramella, da bambino",
+            "p": 5
+          },
+          {
+            "t": "Qualcosa di valore vero",
+            "p": 14
+          },
+          {
+            "t": "Più volte",
+            "p": 19
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "cat": "interdit",
+        "ado": true,
+        "q": "Hai mai saltato lezione o lavoro per restare con qualcuno?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una mattinata",
+            "p": 4
+          },
+          {
+            "t": "Un giorno intero",
+            "p": 8
+          },
+          {
+            "t": "Più giorni",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "cat": "interdit",
+        "ado": true,
+        "q": "Hai mai fatto qualcosa di apertamente illegale per impressionare qualcuno?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una sciocchezza senza conseguenze",
+            "p": 7
+          },
+          {
+            "t": "Qualcosa di serio",
+            "p": 17
+          },
+          {
+            "t": "E ho avuto dei guai",
+            "p": 23
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "cat": "interdit",
+        "ado": true,
+        "q": "Ti hanno mai colto sul fatto?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un amico",
+            "p": 6
+          },
+          {
+            "t": "I miei genitori",
+            "p": 12
+          },
+          {
+            "t": "Degli sconosciuti",
+            "p": 17
+          }
+        ]
+      }
+    ],
+    "paliers": [
+      {
+        "min": 0,
+        "max": 9,
+        "titre": "Fedina pulita",
+        "emoji": "😇",
+        "texte": "Sulla carta non hai niente da rimproverarti. O sei davvero a posto o menti molto bene, e nessuno saprà mai quale delle due."
+      },
+      {
+        "min": 9,
+        "max": 22,
+        "titre": "Bravo, ma non ingenuo",
+        "emoji": "🌱",
+        "texte": "Hai fatto qualche sciocchezza, quelle che fanno tutti. Niente che ti impedisca di guardare i tuoi negli occhi al pranzo di Natale."
+      },
+      {
+        "min": 22,
+        "max": 38,
+        "titre": "Hai vissuto, senza esagerare",
+        "emoji": "🙂",
+        "texte": "Hai storie da raccontare, ma le migliori le tieni per le persone di cui ti fidi. È il punteggio più comune, ed è un buon segno."
+      },
+      {
+        "min": 38,
+        "max": 54,
+        "titre": "Il fascicolo si ingrossa",
+        "emoji": "😏",
+        "texte": "Qui iniziamo ad avere materiale. Hai superato qualche linea, lo sai, e a quanto pare non te ne penti più di tanto."
+      },
+      {
+        "min": 54,
+        "max": 70,
+        "titre": "Hai chiaramente superato la linea",
+        "emoji": "🔥",
+        "texte": "A questo livello non è più una serie di incidenti, è uno stile di vita. Hai fatto cose che metà delle persone non osa nemmeno spuntare."
+      },
+      {
+        "min": 70,
+        "max": 85,
+        "titre": "Il tuo fascicolo fa paura",
+        "emoji": "😈",
+        "texte": "Sei nella fascia altissima. Restano poche caselle da spuntare, e quelle che restano le hai già pensate di sicuro."
+      },
+      {
+        "min": 85,
+        "max": 101,
+        "titre": "Fuori categoria",
+        "emoji": "👑",
+        "texte": "Hai spuntato praticamente tutto quello che c'era. A questo punto la domanda non è cosa hai fatto, ma cosa ti resta da fare."
+      }
+    ]
+  },
+  "couple": {
+    "questions": [
+      {
+        "id": 1,
+        "cat": "sexe",
+        "ado": false,
+        "q": "L'avete mai fatto in pubblico?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "In un posto deserto",
+            "p": 10
+          },
+          {
+            "t": "Dove potevano vederci",
+            "p": 19
+          },
+          {
+            "t": "Ci hanno visti",
+            "p": 26
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "cat": "sexe",
+        "ado": false,
+        "q": "L'avete mai fatto in macchina?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Parcheggiati, al riparo",
+            "p": 8
+          },
+          {
+            "t": "In un parcheggio",
+            "p": 14
+          },
+          {
+            "t": "Mentre era in movimento",
+            "p": 20
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "cat": "sexe",
+        "ado": false,
+        "q": "L'avete mai fatto a casa di qualcun altro durante una festa?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Nella camera degli ospiti",
+            "p": 8
+          },
+          {
+            "t": "In bagno",
+            "p": 14
+          },
+          {
+            "t": "Non ha visto niente nessuno, crediamo",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Vi siete mai filmati o fotografati?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Foto, poi cancellate",
+            "p": 9
+          },
+          {
+            "t": "Foto che abbiamo tenuto",
+            "p": 15
+          },
+          {
+            "t": "Video",
+            "p": 20
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Avete mai provato un giocattolo insieme?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Ne abbiamo parlato",
+            "p": 5
+          },
+          {
+            "t": "Una volta",
+            "p": 10
+          },
+          {
+            "t": "Abbiamo una piccola collezione",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Avete mai giocato di ruolo, con costume e tutto?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Solo a parole",
+            "p": 5
+          },
+          {
+            "t": "Un completo, una volta",
+            "p": 11
+          },
+          {
+            "t": "Abbiamo uno scenario ricorrente",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Avete mai guardato un porno insieme?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una volta, ridendo",
+            "p": 5
+          },
+          {
+            "t": "Di proposito, per l'atmosfera",
+            "p": 10
+          },
+          {
+            "t": "È un'abitudine",
+            "p": 13
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "cat": "sexe",
+        "ado": false,
+        "q": "L'avete mai fatto sapendo che qualcuno poteva sentire?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "In silenzio totale",
+            "p": 8
+          },
+          {
+            "t": "A casa dei genitori di uno di noi",
+            "p": 14
+          },
+          {
+            "t": "E non ci siamo nemmeno sforzati",
+            "p": 19
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Avete mai usato manette, una benda o altro?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un foulard sugli occhi",
+            "p": 8
+          },
+          {
+            "t": "Le manette",
+            "p": 14
+          },
+          {
+            "t": "Abbiamo tutto un armamentario",
+            "p": 20
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "cat": "sexe",
+        "ado": false,
+        "q": "Uno di voi ha mai tentato qualcosa di cui l'altro si è pentito?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un momento imbarazzante",
+            "p": 6
+          },
+          {
+            "t": "Sì, ne abbiamo riparlato",
+            "p": 12
+          },
+          {
+            "t": "Sì, e ha fatto male",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "cat": "sexe",
+        "ado": true,
+        "q": "Avete mai attraversato un lungo periodo senza niente?",
+        "r": [
+          {
+            "t": "Mai più di qualche giorno",
+            "p": 0
+          },
+          {
+            "t": "Due o tre settimane",
+            "p": 4
+          },
+          {
+            "t": "Diversi mesi",
+            "p": 8
+          },
+          {
+            "t": "Più di un anno",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "cat": "sexe",
+        "ado": false,
+        "q": "L'avete mai fatto la mattina a casa dei genitori di uno dei due?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Con grande discrezione",
+            "p": 8
+          },
+          {
+            "t": "Mentre erano svegli",
+            "p": 14
+          },
+          {
+            "t": "E dopo abbiamo incrociato qualcuno",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "cat": "exhibition",
+        "ado": true,
+        "q": "Vi siete mai baciati al punto da mettere gli altri a disagio?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un po' troppo a lungo",
+            "p": 4
+          },
+          {
+            "t": "Ce l'hanno fatto notare",
+            "p": 9
+          },
+          {
+            "t": "Spesso",
+            "p": 13
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "cat": "exhibition",
+        "ado": false,
+        "q": "Vi siete mai mandati una foto spinta in piena giornata di lavoro?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un messaggio osé",
+            "p": 6
+          },
+          {
+            "t": "Una foto",
+            "p": 12
+          },
+          {
+            "t": "E per poco non la vedeva qualcuno",
+            "p": 16
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "cat": "exhibition",
+        "ado": true,
+        "q": "Ve ne siete mai andati da una festa senza avvisare nessuno?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Abbiamo avvisato una persona",
+            "p": 3
+          },
+          {
+            "t": "Siamo spariti senza dire niente",
+            "p": 8
+          },
+          {
+            "t": "E nessuno ha capito perché",
+            "p": 11
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "cat": "exhibition",
+        "ado": false,
+        "q": "Vi siete mai chiusi nel bagno di un bar o di un ristorante?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Solo per baciarci",
+            "p": 7
+          },
+          {
+            "t": "Per qualcosa in più",
+            "p": 15
+          },
+          {
+            "t": "E ci hanno aspettati",
+            "p": 19
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "cat": "exhibition",
+        "ado": false,
+        "q": "Vi ha mai sorpresi qualcuno?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un amico, ridendo",
+            "p": 7
+          },
+          {
+            "t": "Un familiare",
+            "p": 15
+          },
+          {
+            "t": "Uno sconosciuto",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "cat": "exhibition",
+        "ado": false,
+        "q": "Avete mai tentato qualcosa in un luogo pubblico chiuso?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un cinema vuoto",
+            "p": 9
+          },
+          {
+            "t": "Un treno, un aereo",
+            "p": 17
+          },
+          {
+            "t": "E per poco non ci beccavano",
+            "p": 22
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "cat": "exhibition",
+        "ado": true,
+        "q": "Avete mai fatto il bagno senza niente addosso?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "In una piscina privata",
+            "p": 6
+          },
+          {
+            "t": "In un lago o al mare",
+            "p": 11
+          },
+          {
+            "t": "Dove c'era gente",
+            "p": 15
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "cat": "exhibition",
+        "ado": true,
+        "q": "Avete mai mandato per errore un messaggio molto privato in un gruppo?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un messaggio ambiguo",
+            "p": 5
+          },
+          {
+            "t": "Un messaggio esplicito",
+            "p": 11
+          },
+          {
+            "t": "Una foto",
+            "p": 16
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Avete mai fatto un triangolo?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Ne abbiamo parlato seriamente",
+            "p": 7
+          },
+          {
+            "t": "Una volta",
+            "p": 20
+          },
+          {
+            "t": "Più volte",
+            "p": 26
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Avete mai fatto un due contro due?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Ci abbiamo pensato",
+            "p": 7
+          },
+          {
+            "t": "Una volta",
+            "p": 22
+          },
+          {
+            "t": "Più volte",
+            "p": 28
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Avete mai fatto scambio con un'altra coppia?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Abbiamo parlato con una coppia",
+            "p": 8
+          },
+          {
+            "t": "Una volta",
+            "p": 23
+          },
+          {
+            "t": "È diventato regolare",
+            "p": 29
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Siete mai andati in un club per scambisti?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Per guardare",
+            "p": 12
+          },
+          {
+            "t": "E abbiamo partecipato",
+            "p": 22
+          },
+          {
+            "t": "Ci torniamo",
+            "p": 27
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Avete mai avuto una relazione aperta, anche solo qualche settimana?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Ne abbiamo parlato",
+            "p": 6
+          },
+          {
+            "t": "Qualche settimana",
+            "p": 17
+          },
+          {
+            "t": "Diversi mesi",
+            "p": 23
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Uno di voi ha mai baciato qualcun altro davanti all'altro, di comune accordo?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una sfida a una festa",
+            "p": 9
+          },
+          {
+            "t": "Sì, in modo consapevole",
+            "p": 16
+          },
+          {
+            "t": "Più volte",
+            "p": 21
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Avete mai condiviso una fantasia che coinvolge qualcun altro?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Vagamente",
+            "p": 5
+          },
+          {
+            "t": "Con nomi e cognomi",
+            "p": 11
+          },
+          {
+            "t": "E abbiamo iniziato a organizzarla",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "cat": "libertinage",
+        "ado": false,
+        "q": "Avete mai usato un'app in due per conoscere qualcuno?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Abbiamo creato il profilo senza usarlo",
+            "p": 8
+          },
+          {
+            "t": "Abbiamo chattato con delle persone",
+            "p": 15
+          },
+          {
+            "t": "Abbiamo incontrato qualcuno",
+            "p": 24
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "cat": "substances",
+        "ado": false,
+        "q": "Avete mai fumato insieme?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una volta",
+            "p": 8
+          },
+          {
+            "t": "Più volte",
+            "p": 14
+          },
+          {
+            "t": "È regolare",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "cat": "substances",
+        "ado": false,
+        "q": "Avete mai preso qualcosa di più pesante insieme?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una volta a una festa",
+            "p": 15
+          },
+          {
+            "t": "Più volte",
+            "p": 22
+          },
+          {
+            "t": "Regolarmente",
+            "p": 27
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "cat": "substances",
+        "ado": false,
+        "q": "Avete mai avuto un rapporto entrambi sotto effetto?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un po' brilli",
+            "p": 7
+          },
+          {
+            "t": "Davvero fatti",
+            "p": 16
+          },
+          {
+            "t": "Senza ricordi chiari",
+            "p": 22
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "cat": "substances",
+        "ado": true,
+        "q": "Avete mai finito una serata all'alba senza dormire?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una volta",
+            "p": 4
+          },
+          {
+            "t": "Più volte",
+            "p": 8
+          },
+          {
+            "t": "È il nostro formato",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "cat": "substances",
+        "ado": true,
+        "q": "Avete mai litigato perché uno aveva bevuto troppo?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una piccola tensione",
+            "p": 4
+          },
+          {
+            "t": "Un litigio vero",
+            "p": 9
+          },
+          {
+            "t": "Più volte",
+            "p": 14
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "cat": "substances",
+        "ado": true,
+        "q": "Avete mai dimenticato entrambi una parte della stessa serata?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Qualche buco qua e là",
+            "p": 6
+          },
+          {
+            "t": "Una serata intera",
+            "p": 12
+          },
+          {
+            "t": "Più volte",
+            "p": 16
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "cat": "substances",
+        "ado": true,
+        "q": "Avete mai annullato qualcosa di importante per colpa della sera prima?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un appuntamento senza peso",
+            "p": 5
+          },
+          {
+            "t": "Una cosa di famiglia",
+            "p": 10
+          },
+          {
+            "t": "Una cosa di lavoro",
+            "p": 14
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Siete mai andati al casinò insieme?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Per guardare",
+            "p": 4
+          },
+          {
+            "t": "Abbiamo giocato un piccolo budget",
+            "p": 9
+          },
+          {
+            "t": "Abbiamo perso molto più del previsto",
+            "p": 14
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Avete mai scommesso qualcosa di serio l'uno contro l'altro?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "I piatti da lavare",
+            "p": 3
+          },
+          {
+            "t": "Dei soldi",
+            "p": 8
+          },
+          {
+            "t": "Una penitenza che non si dimentica",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Vi hanno mai cacciati da un posto?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Da un bar, con gentilezza",
+            "p": 7
+          },
+          {
+            "t": "Da un luogo pubblico",
+            "p": 13
+          },
+          {
+            "t": "Dalla sicurezza",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Vi siete mai intrufolati in un posto vietato?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "La piscina di un hotel",
+            "p": 7
+          },
+          {
+            "t": "Un rooftop, un cantiere",
+            "p": 13
+          },
+          {
+            "t": "E ci hanno beccati",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Uno di voi ha mai guidato dopo aver bevuto, con l'altro a bordo?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Un bicchiere, tanto tempo fa",
+            "p": 11
+          },
+          {
+            "t": "Più di una volta",
+            "p": 22
+          },
+          {
+            "t": "E abbiamo avuto molta paura",
+            "p": 28
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Avete mai mentito insieme alle vostre famiglie su qualcosa di importante?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una versione un po' aggiustata",
+            "p": 5
+          },
+          {
+            "t": "Una bugia vera",
+            "p": 12
+          },
+          {
+            "t": "Una bugia che dura ancora",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "cat": "transgression",
+        "ado": true,
+        "q": "Siete mai partiti senza prenotare niente, senza sapere dove dormire?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una notte",
+            "p": 4
+          },
+          {
+            "t": "Un intero fine settimana",
+            "p": 8
+          },
+          {
+            "t": "Un viaggio intero",
+            "p": 12
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "cat": "secrets",
+        "ado": true,
+        "q": "C'è qualcosa che uno di voi ancora non sa?",
+        "r": [
+          {
+            "t": "No, ci diciamo tutto",
+            "p": 0
+          },
+          {
+            "t": "Un dettaglio senza importanza",
+            "p": 6
+          },
+          {
+            "t": "Qualcosa che conta",
+            "p": 15
+          },
+          {
+            "t": "Qualcosa che farebbe male",
+            "p": 22
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Vi siete mai frugati nel telefono?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Uno schermo acceso, per caso",
+            "p": 5
+          },
+          {
+            "t": "Sì, di nascosto",
+            "p": 12
+          },
+          {
+            "t": "Regolarmente",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Uno di voi ha ancora un ex fra i contatti?",
+        "r": [
+          {
+            "t": "No",
+            "p": 0
+          },
+          {
+            "t": "Un numero mai usato",
+            "p": 4
+          },
+          {
+            "t": "Ci scriviamo a volte",
+            "p": 10
+          },
+          {
+            "t": "E l'altro non lo sa",
+            "p": 17
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Vi siete mai presi una pausa nella relazione?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Qualche giorno",
+            "p": 5
+          },
+          {
+            "t": "Diverse settimane",
+            "p": 11
+          },
+          {
+            "t": "E nel frattempo sono successe cose",
+            "p": 20
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "cat": "secrets",
+        "ado": false,
+        "q": "Uno di voi ha mai reinstallato un'app di incontri durante la relazione?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Per curiosità, senza parlare con nessuno",
+            "p": 10
+          },
+          {
+            "t": "Ci sono state delle conversazioni",
+            "p": 18
+          },
+          {
+            "t": "C'è stato un incontro",
+            "p": 26
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Avete mai nascosto all'altro un problema di soldi?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una spesa imbarazzante",
+            "p": 5
+          },
+          {
+            "t": "Una cifra vera",
+            "p": 12
+          },
+          {
+            "t": "Un debito intero",
+            "p": 18
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Vi siete mai rimessi insieme dopo una rottura?",
+        "r": [
+          {
+            "t": "Mai lasciati",
+            "p": 0
+          },
+          {
+            "t": "Una volta",
+            "p": 5
+          },
+          {
+            "t": "Due volte",
+            "p": 9
+          },
+          {
+            "t": "Abbiamo smesso di contare",
+            "p": 13
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "cat": "secrets",
+        "ado": true,
+        "q": "Avete mai giurato qualcosa che non avete mantenuto?",
+        "r": [
+          {
+            "t": "Mai",
+            "p": 0
+          },
+          {
+            "t": "Una promessa di tutti i giorni",
+            "p": 4
+          },
+          {
+            "t": "Una promessa che contava",
+            "p": 10
+          },
+          {
+            "t": "Una promessa che ha cambiato tutto",
+            "p": 16
+          }
+        ]
+      }
+    ],
+    "paliers": [
+      {
+        "min": 0,
+        "max": 9,
+        "titre": "Coppia da cartolina",
+        "emoji": "😇",
+        "texte": "Siete la coppia che si presenta alla nonna senza sudare. Tutto è pulito, in ordine e un po' troppo tranquillo per essere del tutto sincero."
+      },
+      {
+        "min": 9,
+        "max": 22,
+        "titre": "Bravi, con uno o due ricordi",
+        "emoji": "🌱",
+        "texte": "Avete le vostre piccole scivolate, quelle che fanno sorridere quando tornano nei discorsi. Niente che metta a rischio la relazione."
+      },
+      {
+        "min": 22,
+        "max": 38,
+        "titre": "Una coppia normale, insomma",
+        "emoji": "🙂",
+        "texte": "Avete fatto delle cose, altre ve le siete perse, e vi siete fatti delle gran risate. È il punteggio più frequente e, francamente, va benissimo così."
+      },
+      {
+        "min": 38,
+        "max": 54,
+        "titre": "Non siete così bravi",
+        "emoji": "😏",
+        "texte": "Dietro di voi c'è una lista vera. Sapete benissimo di cosa stiamo parlando, e probabilmente vi state guardando mentre leggete."
+      },
+      {
+        "min": 54,
+        "max": 70,
+        "titre": "Avete dei precedenti",
+        "emoji": "🔥",
+        "texte": "Avete provato cose che la maggior parte delle coppie si limita a immaginare. Non è più curiosità, è abitudine."
+      },
+      {
+        "min": 70,
+        "max": 85,
+        "titre": "Non vi ferma niente",
+        "emoji": "😈",
+        "texte": "Nel vostro fascicolo restano pochissime caselle vuote. Siete quelli di cui gli amici dicono «preferisco non sapere»."
+      },
+      {
+        "min": 85,
+        "max": 101,
+        "titre": "Fuori categoria",
+        "emoji": "👑",
+        "texte": "Avete spuntato praticamente tutto. Questo test non ha più molto da insegnarvi, serve solo a mettere il punteggio nero su bianco."
+      }
+    ]
+  }
+}
