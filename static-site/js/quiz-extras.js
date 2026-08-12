@@ -20,31 +20,26 @@
       titre: 'Pensez à nous laisser un avis et à consulter les autres tests & quiz ! 🙏',
       note: 'Quiz Couple est une plateforme gratuite entretenue aux frais de ses détenteurs. Faite avec passion et par amour ❤️',
       bouton: 'Voir les résultats',
-      fermer: 'Fermer',
     },
     en: {
-      titre: 'Do think of leaving us a review, and of trying the other tests & quizzes! 🙏',
+      titre: "Don't forget to leave us a review, and to try the other tests & quizzes! 🙏",
       note: "Quiz Couple is a free platform, paid for out of its owners' own pockets. Made with passion, and out of love ❤️",
       bouton: 'See the results',
-      fermer: 'Close',
     },
     es: {
       titre: '¡Acuérdate de dejarnos una reseña y de probar los demás tests y quiz! 🙏',
-      note: 'Quiz Couple es una plataforma gratuita mantenida a costa de sus propietarios. Hecha con pasión y por amor ❤️',
+      note: 'Quiz Couple es una plataforma gratuita, costeada por sus propietarios. Hecha con pasión y por amor ❤️',
       bouton: 'Ver los resultados',
-      fermer: 'Cerrar',
     },
     de: {
       titre: 'Denk daran, uns eine Bewertung zu hinterlassen und die anderen Tests & Quiz auszuprobieren! 🙏',
       note: 'Quiz Couple ist eine kostenlose Plattform, die ihre Betreiber aus eigener Tasche bezahlen. Mit Leidenschaft und aus Liebe gemacht ❤️',
       bouton: 'Ergebnisse ansehen',
-      fermer: 'Schließen',
     },
     it: {
       titre: 'Ricordati di lasciarci una recensione e di provare gli altri test e quiz! 🙏',
       note: 'Quiz Couple è una piattaforma gratuita mantenuta a spese dei suoi proprietari. Fatta con passione e per amore ❤️',
       bouton: 'Vedi i risultati',
-      fermer: 'Chiudi',
     },
   };
 
