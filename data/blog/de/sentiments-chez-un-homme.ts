@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'die-kurze-antwort',
-      title: `Die kurze Antwort`,
+      title: `Die tatsächliche Reihenfolge`,
       content: `<p>Bei den meisten Männern sieht die Abfolge so aus: <strong>schnelle Anziehung, neugieriges Interesse, Wohlgefühl, Gewohnheit, Vermissen, Bindung.</strong> Das Vermissen ist der Kipppunkt. Solange die Abwesenheit nicht wehtut, gibt es Vergnügen, aber noch kein Gefühl.</p>
 
 <p>Deshalb haben viele Frauen den Eindruck, dass wochenlang «nichts passiert» und sich dann alles auf einmal ändert. Nur hat sich nichts auf einmal geändert! Es hat sich langsam etwas geändert… und es wurde auf einmal sichtbar.</p>`,
@@ -129,7 +129,7 @@ Die Gespräche, die etwas bewegen, sind fast nie «Was sind wir eigentlich?». V
     },
     {
       id: 'zum-schluss',
-      title: `Zum Schluss`,
+      title: `Wo sich Gefühle wirklich zeigen`,
       content: `<p>Gefühle entstehen bei einem Mann selten dort, wo man sie sucht… Nicht in den Worten, nicht in den großen Gesten, sondern darin, zur Gewohnheit zu werden und danach zum Vermissten.</p>
 
 <p><strong>Wenn du so weit bist, Anzeichen zu zählen</strong>, ist die eigentliche Frage vielleicht nicht, wo er steht, sondern ob dir das Tempo passt, das er vorgibt. Das sind zwei verschiedene Fragen, und die zweite gehört ganz dir.</p>`,

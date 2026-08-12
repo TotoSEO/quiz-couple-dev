@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'la-reponse-courte',
-      title: `La réponse courte`,
+      title: `L'ordre réel dans lequel ça se passe`,
       content: `<p>Chez une majorité d'hommes, la séquence ressemble à ceci : <strong>attirance rapide, intérêt curieux, confort, habitude, manque, attachement.</strong> Le manque est le point de bascule. Tant qu'il n'y a pas de manque, il y a du plaisir, mais pas encore de sentiment.</p>
 
 <p>C'est pour ça que beaucoup de femmes ont l'impression que « rien ne se passe » pendant des semaines, puis que tout change d'un coup. Sauf qu'il ne s'est rien passé d'un coup ! Il s'est passé quelque chose lentement… et c'est devenu visible d'un coup.</p>`,
@@ -129,7 +129,7 @@ Les conversations qui font avancer ne sont presque jamais « où en es-tu avec m
     },
     {
       id: 'pour-finir',
-      title: `Pour finir`,
+      title: `Là où les sentiments se voient vraiment`,
       content: `<p>Les sentiments chez un homme naissent rarement là où on les cherche… Pas dans les mots, pas dans les grands gestes, mais dans le fait de devenir une habitude, puis un manque.</p>
 
 <p><strong>Si vous en êtes à compter les signes</strong>, la vraie question n'est peut-être pas de savoir où il en est, mais si le rythme qu'il impose vous convient. Ce sont deux questions différentes, et la seconde vous appartient entièrement.</p>`,

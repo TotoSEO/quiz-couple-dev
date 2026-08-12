@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'the-short-answer',
-      title: `The short answer, before the nuance`,
+      title: `What separates a relationship worth saving from one that is over`,
       content: `<p>A relationship deserves to continue when it is going through a difficulty <strong>that has a name</strong>: a bereavement, a move, burnout, a new baby, a betrayal you are actively repairing. The couple is suffering, but it is suffering from something.</p>
 
 <p>A relationship deserves to end when the difficulty is the relationship itself. When you cannot name what is wrong because <strong>what is wrong is everything</strong>, permanently, for so long that you no longer remember what before looked like.</p>
@@ -242,7 +242,7 @@ They are a reason to do things properly, not necessarily to stay. The research i
     },
     {
       id: 'to-finish',
-      title: `To finish`,
+      title: `The one question only you can answer`,
       content: `<p>There is no threshold beyond which you must leave. No score, no percentage, and certainly not in an article. What exists are signals, and one question only you can answer honestly: <strong>am I going through something, or am I settling into it?</strong></p>
 
 <p>Most people already know the answer when they arrive here… What they are looking for is someone to confirm it. If that is you, take this as the confirmation.</p>`,

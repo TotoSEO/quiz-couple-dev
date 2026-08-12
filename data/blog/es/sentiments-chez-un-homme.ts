@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'la-respuesta-corta',
-      title: `La respuesta corta`,
+      title: `El orden real en el que ocurre`,
       content: `<p>En la mayoría de los hombres la secuencia se parece a esto: <strong>atracción rápida, interés curioso, comodidad, costumbre, falta, apego.</strong> La falta es el punto de inflexión. Mientras no duela la ausencia, hay placer pero todavía no sentimiento.</p>
 
 <p>Por eso muchas mujeres tienen la impresión de que «no pasa nada» durante semanas y de que luego todo cambia de golpe. ¡Pero no cambió nada de golpe! Algo cambió despacio… y se volvió visible de golpe.</p>`,
@@ -129,7 +129,7 @@ Las conversaciones que hacen avanzar casi nunca son «¿qué somos?». Partir de
     },
     {
       id: 'para-terminar',
-      title: `Para terminar`,
+      title: `Dónde se ven de verdad los sentimientos`,
       content: `<p>Los sentimientos en un hombre rara vez nacen donde se los busca… No en las palabras, no en los grandes gestos, sino en convertirse en costumbre y luego en falta.</p>
 
 <p><strong>Si has llegado a contar las señales</strong>, la verdadera pregunta quizá no sea dónde está él, sino si el ritmo que impone te conviene. Son dos preguntas distintas, y la segunda te pertenece por completo.</p>`,

@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'la-risposta-breve',
-      title: `La risposta breve, prima delle sfumature`,
+      title: `Cosa separa una relazione da salvare da una finita`,
       content: `<p>Una relazione merita di continuare quando attraversa una difficoltà <strong>che ha un nome</strong>: un lutto, un trasloco, un esaurimento da lavoro, l'arrivo di un figlio, un tradimento che state riparando. La coppia soffre, ma soffre di qualcosa.</p>
 
 <p>Una relazione merita di finire quando la difficoltà è la relazione stessa. Quando non riesci a dire cosa non va perché <strong>quello che non va è tutto</strong>, in modo permanente, da così tanto tempo che non ricordi più com'era prima.</p>
@@ -242,7 +242,7 @@ Sono un motivo per fare le cose bene, non necessariamente per restare. La ricerc
     },
     {
       id: 'per-finire',
-      title: `Per finire`,
+      title: `L'unica domanda a cui solo tu puoi rispondere`,
       content: `<p>Non esiste una soglia oltre la quale bisogna andarsene. Nessun punteggio, nessuna percentuale, e di certo non in un articolo. Quello che esiste sono dei segnali, e una domanda a cui solo tu puoi rispondere onestamente: <strong>sto attraversando qualcosa, o mi ci sto installando?</strong></p>
 
 <p>La maggior parte delle persone conosce già la risposta quando arriva qui… Cerca soprattutto qualcuno che gliela confermi. Se è il tuo caso, prendilo come la conferma.</p>`,

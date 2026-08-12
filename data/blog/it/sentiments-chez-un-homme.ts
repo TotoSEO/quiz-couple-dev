@@ -27,7 +27,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'la-risposta-breve',
-      title: `La risposta breve`,
+      title: `L'ordine reale in cui succede`,
       content: `<p>Nella maggior parte degli uomini la sequenza è questa: <strong>attrazione rapida, interesse curioso, agio, abitudine, mancanza, attaccamento.</strong> La mancanza è il punto di svolta. Finché l'assenza non fa male, c'è piacere ma non ancora sentimento.</p>
 
 <p>Per questo molte donne hanno l'impressione che «non succeda niente» per settimane e poi che tutto cambi all'improvviso. Solo che non è cambiato niente all'improvviso! Qualcosa è cambiato lentamente… ed è diventato visibile all'improvviso.</p>`,
@@ -129,7 +129,7 @@ Le conversazioni che fanno avanzare non sono quasi mai «cosa siamo». Partire d
     },
     {
       id: 'per-finire',
-      title: `Per finire`,
+      title: `Dove i sentimenti si vedono davvero`,
       content: `<p>I sentimenti in un uomo nascono raramente dove li si cerca… Non nelle parole, non nei grandi gesti, ma nel diventare un'abitudine e poi una mancanza.</p>
 
 <p><strong>Se sei arrivata a contare i segnali</strong>, la vera domanda forse non è a che punto sia lui, ma se il ritmo che impone ti va bene. Sono due domande diverse, e la seconda appartiene interamente a te.</p>`,
