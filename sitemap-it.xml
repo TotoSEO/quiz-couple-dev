@@ -531,6 +531,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/it/gioco-pro-o-contro-coppia/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-pour-contre-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/for-or-against-couple-game/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/juego-a-favor-o-en-contra-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/dafuer-oder-dagegen-paarspiel/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/gioco-pro-o-contro-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-pour-contre-couple/"/>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/it/quiz-temptation-island/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-ile-de-la-tentation/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/temptation-island-quiz/"/>
