@@ -531,6 +531,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/it/test-amore-o-amicizia/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-amour-ou-amitie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/love-or-friendship-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-amor-o-amistad/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/liebe-oder-freundschaft-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-amore-o-amicizia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-amour-ou-amitie/"/>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/it/test-e-la-fine-della-mia-relazione/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-est-ce-la-fin-de-mon-couple/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/is-my-relationship-over-test/"/>
