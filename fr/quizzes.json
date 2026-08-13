@@ -285,5 +285,11 @@
     "shortTitle": "Est-ce la fin de mon couple ?",
     "metaDescription": "24 questions factuelles et pondérées pour savoir si votre relation touche à sa fin. Résultat sur 8 paliers, sans vous rassurer à tort. Gratuit, sans inscription.",
     "description": "Vingt-quatre questions factuelles, un barème pondéré selon la gravité de chaque signe, et un verdict qui ne cherche pas à vous ménager."
+  },
+  "testAmourAmitie": {
+    "title": "Amour ou amitié ? Test en ligne gratuit",
+    "shortTitle": "Amour ou amitié ?",
+    "metaDescription": "20 questions pondérées pour savoir si ce que vous ressentez pour cette personne est de l'amour ou de l'amitié. Verdict sur 6 paliers. Gratuit, sans inscription.",
+    "description": "Vingt questions pondérées et un verdict sur six paliers, pour mettre enfin un mot sur ce que vous ressentez."
   }
 }

@@ -56,7 +56,9 @@
     "testPurete": "Purity test",
     "pourContre": "For or against",
     "testFinCouple": "Is it over?",
-    "testFinCoupleDesc": "Where your relationship really stands"
+    "testFinCoupleDesc": "Where your relationship really stands",
+    "testAmourAmitie": "Love or friendship?",
+    "testAmourAmitieDesc": "Put a name on what you feel"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",

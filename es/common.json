@@ -56,7 +56,9 @@
     "testPurete": "Test de pureza",
     "pourContre": "A favor o en contra",
     "testFinCouple": "¿Es el final?",
-    "testFinCoupleDesc": "En qué punto está de verdad tu relación"
+    "testFinCoupleDesc": "En qué punto está de verdad tu relación",
+    "testAmourAmitie": "¿Amor o amistad?",
+    "testAmourAmitieDesc": "Ponle nombre a lo que sientes"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

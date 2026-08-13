@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "badge": "20 preguntas · Baremo ponderado · Gratis",
+    "title": "¿Es amor o amistad? 20 preguntas",
+    "titleHighlight": "amor o amistad",
+    "description": "Veinte preguntas sobre lo que haces de verdad, no sobre lo que crees sentir. Al final, un veredicto en seis niveles, del gran amigo al amor que no dice su nombre."
+  },
+  "jsonLd": {
+    "name": "Test: ¿amor o amistad?",
+    "about": "Distinguir el amor de la amistad"
+  },
+  "section1": {
+    "title": "Lo que este test mide de verdad",
+    "p1": "Hay una persona en tu vida de la que hablas demasiado a menudo, y alguien acabó soltando la pregunta incómoda: « ¿seguro que es solo un amigo? ». Desde entonces, la pregunta da vueltas. Este test existe exactamente para ese momento.",
+    "p2": "El problema es que el amor y la amistad comparten casi todo: el gusto de estar juntos, la confianza, las confidencias, los ataques de risa. Preguntarse « ¿le quiero? » mirando lo que compartís no lleva a ningún sitio, porque todo eso también existe en una gran amistad.",
+    "p3": "Así que el test no mira lo que compartís, mira lo que desborda: lo que haces, lo que escondes, lo que te pincha cuando esta persona menciona a otra. Ahí, y solo ahí, se separan los dos vínculos.",
+    "resumeTitre": "Resumen rápido",
+    "resume1": "Veinte preguntas sobre tu comportamiento real, no sobre tus sentimientos declarados.",
+    "resume2": "Cada pregunta tiene su propio peso: querer besarle vale hasta diez puntos, disfrutar de su compañía vale cinco, porque eso también pasa entre amigos.",
+    "resume3": "La puntuación va de 0 a 146, en seis niveles, de la amistad pura al amor que todavía no se reconoce.",
+    "resume4": "El test dice lo que sientes tú. Lo que siente la otra persona es otra pregunta, y no pretende responderla.",
+    "resume5": "Gratis, anónimo, sin registro, cinco minutos."
+  },
+  "section2": {
+    "title": "Las señales que separan el amor de la amistad",
+    "intro": "No todas las señales valen lo mismo, y por eso las preguntas no dan todas los mismos puntos. Una señal que también existe en la amistad pesa poco. Una señal que solo existe en el amor pesa mucho.",
+    "headerSigne": "Lo que se mide",
+    "headerPoids": "Peso",
+    "headerPourquoi": "Por qué ese peso",
+    "row1Signe": "Las ganas de besarle",
+    "row1Poids": "10 puntos",
+    "row1Pourquoi": "El marcador más nítido que existe. Con un amigo se puede compartir todo, menos eso: esas ganas no tienen versión amistosa.",
+    "row2Signe": "Un « te quiero » dicho esta noche",
+    "row2Poids": "9 puntos",
+    "row2Pourquoi": "La reacción imaginada a esa frase lo decide todo. Un amigo contesta « yo también » sin pensarlo. Si el corazón se te dispara con la idea, ya ha contestado por ti.",
+    "row3Signe": "Los celos de sus citas",
+    "row3Poids": "9 puntos",
+    "row3Pourquoi": "A un amigo se le aconseja encantado sobre sus citas. Cuando preferirías no oír hablar de ellas, ya no son consejos lo que quieres dar.",
+    "row4Signe": "Imaginarle en pareja dentro de un año",
+    "row4Poids": "9 puntos",
+    "row4Pourquoi": "La proyección delata lo que el presente disimula. Alegrarse por un amigo es un reflejo; el estómago encogido es una respuesta.",
+    "row5Signe": "La palabra « amigo » que suena falsa",
+    "row5Poids": "8 puntos",
+    "row5Pourquoi": "Cuando la palabra que usas para presentar a alguien te duele, es que ya no es la palabra correcta.",
+    "row6Signe": "El tiempo que vuela juntos",
+    "row6Poids": "5 puntos",
+    "row6Pourquoi": "Señal real, pero débil: el tiempo también vuela con un amigo excelente. Solo cuenta al acumularse con las demás.",
+    "apres": "El máximo es de 146 puntos. Las preguntas de poco peso son el fondo del cuadro, las pesadas dictan el veredicto: se puede adorar pasar tiempo con alguien y quedarse en 30 puntos, basta con que nada del resto acompañe."
+  },
+  "section3": {
+    "title": "Cómo leer tu puntuación",
+    "intro": "Seis niveles de veinticinco puntos. Los dos primeros describen una amistad, los dos últimos describen un amor, y los dos del medio describen lo que seguramente has venido a buscar: la zona donde bascula.",
+    "headerScore": "Puntuación",
+    "headerPalier": "Nivel",
+    "headerSens": "Qué significa",
+    "row1Score": "0 a 24",
+    "row1Palier": "Es amistad, de la buena",
+    "row1Sens": "Nada se sale del marco, y eso ya es valioso.",
+    "row2Score": "25 a 49",
+    "row2Palier": "Una amistad, con un algo",
+    "row2Sens": "Dos o tres respuestas asoman, nada que obligue a una conversación.",
+    "row3Score": "50 a 74",
+    "row3Palier": "La confusión ya está instalada",
+    "row3Sens": "El vocabulario es de amistad, las reacciones ya no.",
+    "row4Score": "75 a 99",
+    "row4Palier": "Te inclinas claramente hacia el amor",
+    "row4Sens": "La mayoría de tus respuestas ya no se explica por la amistad.",
+    "row5Score": "100 a 124",
+    "row5Palier": "Es amor, solo faltan las palabras",
+    "row5Sens": "Cualquiera desde fuera ya lo llamaría de otra manera.",
+    "row6Score": "125 a 146",
+    "row6Palier": "Lo sabías antes de hacer clic",
+    "row6Sens": "No has venido a por una respuesta, sino a por un permiso.",
+    "apres": "Un detalle que importa: este test mide lo que sientes tú. Una puntuación de 130 no dice absolutamente nada de lo que siente la otra persona, y ese es el primer error a evitar al salir de aquí."
+  },
+  "section4": {
+    "title": "Por qué se confunden tan fácilmente",
+    "p1": "Porque la frontera no está donde se busca. Creemos que el amor se reconoce por la intensidad: pienso mucho en esta persona, así que será amor. Solo que también piensas mucho en un amigo que atraviesa una tormenta, y nadie llama a eso pasión. La intensidad no decide nada, y es el mismo callejón sin salida que <a href=\"/es/test-estoy-enamorado/\">preguntarse si uno está enamorado a secas</a>: sin mirar los comportamientos, se dan vueltas en círculo.",
+    "p2": "Lo que decide es la exclusividad. La amistad se comparte sin problema: tu mejor amigo puede tener otros mejores amigos y no te quita nada. El día en que la idea de que esta persona se convierta en « la persona » de otro te resulta desagradable, has salido del compartir, y por tanto de la amistad.",
+    "p3": "Y está la comodidad de la palabra. « Amigo » es una palabra sin riesgo: permite conservar a la persona, la complicidad, las noches, sin exponerse nunca a un no. Mucha gente no confunde el amor con la amistad: elige la confusión porque protege. Este test solo retira esa protección durante cinco minutos."
+  },
+  "section5": {
+    "title": "¿Y con la respuesta en la mano?",
+    "p1": "Si el veredicto dice amistad, créetelo. No hay nada que forzar ni nada que lamentar: una amistad en la que corres a contar tus buenas noticias es una de las mejores cosas que puede contener una vida, y no vale menos que una historia de amor.",
+    "p2": "Si el veredicto dice amor, la siguiente pregunta no es « qué hago » sino « ¿y la otra persona? ». No lo sabes, y las pistas que llevas acumuladas merecen algo mejor que suposiciones: las <a href=\"/es/test-me-quiere-en-secreto/\">señales de que alguien te quiere en secreto</a> se pueden listar, y se comprueban mejor de lo que se adivinan.",
+    "p3": "Y si ya estás en pareja con esta persona y la pregunta te ha cruzado en el otro sentido, la de un amor tan cómodo que parece amistad, eso es otra mecánica distinta: la del <a href=\"/es/test-amor-o-costumbre/\">test amor o costumbre</a>, pensado exactamente para esa duda."
+  },
+  "section6": {
+    "title": "Cinco minutos de sinceridad",
+    "p1": "Este test vale lo que valgan tus respuestas. Contesta lo que es verdad, no lo que es cómodo: nadie lee por encima de tu hombro, y el resultado no se guarda en ningún sitio.",
+    "p2": "Y si la puntuación confirma lo que ya sabías, quédate con una cosa: la pregunta que llevas semanas haciéndote, puede que la otra persona también se la esté haciendo."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Cómo saber si es amor o amistad?",
+    "a1": "Mirando lo que solo existe en el amor: la atracción por el contacto físico, los celos cuando la persona habla de sus citas, la palabra « amigo » que se vuelve desagradable de pronunciar, la comparación sistemática con la gente que te gusta. Todo lo demás, la complicidad, la confianza, el tiempo que vuela, existe en los dos. Eso es exactamente lo que este test separa, pregunta a pregunta.",
+    "q2": "¿Por qué las preguntas no valen los mismos puntos?",
+    "a2": "Porque una señal compartida por el amor y la amistad no prueba nada. Disfrutar de la compañía de alguien da pocos puntos; querer besarle da muchos, porque esa señal no tiene explicación amistosa. Sin esta ponderación, un muy buen amigo sacaría la misma puntuación que un amor naciente.",
+    "q3": "¿Se puede estar enamorado de tu mejor amigo sin darte cuenta?",
+    "a3": "Es incluso el caso más frecuente entre quienes hacen este test. La cercanía diaria instala las señales una a una, tan despacio que ninguna dispara la alarma. Suele ser un comentario externo, o una cita de la otra persona, lo que lo hace subir todo de golpe.",
+    "q4": "¿Funciona el test si ya salimos juntos en el pasado?",
+    "a4": "Sí, pero lee el resultado con prudencia. Después de una historia, los gestos y los recuerdos emborronan las señales: una puntuación media puede reflejar lo que queda de antes y no lo que existe hoy. Repítelo en dos meses, la tendencia entre las dos puntuaciones es más fiable que cada una por separado.",
+    "q5": "¿Y si saco una puntuación intermedia, ni amor ni amistad?",
+    "a5": "Es el resultado más útil del test, aunque sea el menos cómodo. La zona intermedia significa que la confusión es real y está instalada. En ese punto crece o se desgasta, pero no se queda quieta: repetir el test en unas semanas te dirá hacia dónde se inclina.",
+    "q6": "¿Este test dice si la otra persona también me quiere?",
+    "a6": "No, y desconfía de cualquier test que lo pretenda. Mide lo que sientes tú, a partir de tu propio comportamiento. Lo que siente la otra persona se lee en el suyo, y es otro ejercicio.",
+    "q7": "¿El test es gratuito y anónimo?",
+    "a7": "Sí a las dos cosas. Sin cuenta, sin correo, y tus respuestas no se guardan. Solo se cuenta el número de tests realizados."
+  }
+}

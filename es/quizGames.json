@@ -345,7 +345,8 @@
     "testDistanceAime": "Test me sigue queriendo a distancia",
     "pourContre": "A favor o en contra",
     "jeuDilemmes": "Dilemas de pareja",
-    "testFinCouple": "¿Es el final de mi relación?"
+    "testFinCouple": "¿Es el final de mi relación?",
+    "testAmourAmitie": "¿Amor o amistad?"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
