@@ -344,7 +344,8 @@
     "testSecret": "Test mi ama in segreto",
     "testDistanceAime": "Test mi ama ancora a distanza",
     "pourContre": "Pro o contro",
-    "jeuDilemmes": "Dilemmi di coppia"
+    "jeuDilemmes": "Dilemmi di coppia",
+    "testFinCouple": "È la fine della mia relazione?"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
@@ -597,5 +598,14 @@
     "bravoTitre": "Bravi, e grazie!",
     "bravoTexte": "Avete deciso tutte e sessanta le proposte. I vostri voti contano ora nelle percentuali che vedranno le prossime coppie.",
     "bravoSuite": "Continuate con i dilemmi"
+  },
+  "finCouple": {
+    "orientationTitre": "Quello che questo test non ti ha chiesto",
+    "orient_couche_nom": "È andato o andata a letto con un'altra persona?",
+    "orient_couche_raison": "Quindici domande sui segnali concreti, quando il dubbio riguarda un'altra persona.",
+    "orient_distance_nom": "A distanza: mi ama ancora?",
+    "orient_distance_raison": "Hai risposto che vivete a distanza. Lì i segnali non hanno lo stesso significato.",
+    "orient_toxique_nom": "La mia relazione è tossica?",
+    "orient_toxique_raison": "Una relazione può finire perché si spegne, o perché fa male. Non è la stessa cosa."
   }
 }

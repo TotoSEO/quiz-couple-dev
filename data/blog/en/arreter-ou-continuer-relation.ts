@@ -140,7 +140,9 @@ const article: BlogArticleData = {
 
 <p><strong>The best test fits in one sentence:</strong> imagine the current problem vanishes tomorrow morning, with a wave of a wand. Work calms down, money comes in, the mother-in-law goes quiet. Are you happy with this person?</p>
 
-<p>If the answer is yes, you are going through something. If the answer is "I do not know"… or worse, "no, but at least it would be simpler", then the problem was never the problem.</p>`,
+<p>If the answer is yes, you are going through something. If the answer is "I do not know"… or worse, "no, but at least it would be simpler", then the problem was never the problem.</p>
+
+<p>A hunch is not enough to answer that question. A <a href="/en/is-my-relationship-over-test/">questionnaire that weighs each sign of an ending by how serious it is</a> gives you a result that is harder to wave away than the memory of your last argument.</p>`,
     },
     {
       id: 'not-actually-grounds',

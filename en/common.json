@@ -54,7 +54,9 @@
     "testSecret": "Secretly in love with me?",
     "testDistanceAime": "Do they still love me?",
     "testPurete": "Purity test",
-    "pourContre": "For or against"
+    "pourContre": "For or against",
+    "testFinCouple": "Is it over?",
+    "testFinCoupleDesc": "Where your relationship really stands"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",

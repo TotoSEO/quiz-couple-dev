@@ -344,7 +344,8 @@
     "testSecret": "Does he or she secretly love me test",
     "testDistanceAime": "Long distance does he still love me test",
     "pourContre": "For or against",
-    "jeuDilemmes": "Couple dilemmas"
+    "jeuDilemmes": "Couple dilemmas",
+    "testFinCouple": "Is my relationship over?"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -597,5 +598,14 @@
     "bravoTitre": "Well done, and thank you!",
     "bravoTexte": "You have settled all sixty statements. Your votes now count towards the percentages the next couples will see.",
     "bravoSuite": "Move on to the dilemmas"
+  },
+  "finCouple": {
+    "orientationTitre": "What this test did not ask you",
+    "orient_couche_nom": "Has he or she slept with someone else?",
+    "orient_couche_raison": "Fifteen questions on the concrete signs, when the doubt is about another person.",
+    "orient_distance_nom": "Long distance: does he or she still love me?",
+    "orient_distance_raison": "You said you live far apart. The signals do not mean the same thing there.",
+    "orient_toxique_nom": "Is my relationship toxic?",
+    "orient_toxique_raison": "A relationship can end because it fades, or because it damages you. Those are not the same."
   }
 }

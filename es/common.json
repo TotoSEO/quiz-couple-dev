@@ -54,7 +54,9 @@
     "testSecret": "¿Me quiere en secreto?",
     "testDistanceAime": "¿Me sigue queriendo?",
     "testPurete": "Test de pureza",
-    "pourContre": "A favor o en contra"
+    "pourContre": "A favor o en contra",
+    "testFinCouple": "¿Es el final?",
+    "testFinCoupleDesc": "En qué punto está de verdad tu relación"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

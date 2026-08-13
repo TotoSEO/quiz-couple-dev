@@ -60,7 +60,9 @@ const article: BlogArticleData = {
     {
       id: 'pourquoi-les-couples-se-perdent',
       title: "Pourquoi les couples se perdent",
-      content: `<p>Les couples ne se brisent pas en un jour. Il n'y a presque jamais un événement unique qui explique tout. C'est une accumulation, un glissement progressif, une succession de micro-renoncements qui finissent par créer un fossé. Comprendre les mécanismes, c'est le premier pas pour ne plus les subir.</p>`,
+      content: `<p>Les couples ne se brisent pas en un jour. Il n'y a presque jamais un événement unique qui explique tout. C'est une accumulation, un glissement progressif, une succession de micro-renoncements qui finissent par créer un fossé. Comprendre les mécanismes, c'est le premier pas pour ne plus les subir.</p>
+
+<p>Reste à savoir si le glissement est encore réversible. Un <a href="/test-est-ce-la-fin-de-mon-couple/">questionnaire qui pèse chaque signe selon sa gravité et situe la relation sur huit paliers</a> répond plus honnêtement à cette question que l'humeur du jour où on se la pose.</p>`,
       subsections: [
         {
           id: 'routine-tue-desir',

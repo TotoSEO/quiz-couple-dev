@@ -140,7 +140,9 @@ const article: BlogArticleData = {
 
 <p><strong>Le meilleur test tient en une phrase :</strong> imaginez que le problème actuel disparaisse demain matin, d'un coup de baguette. Le travail redevient calme, l'argent rentre, la belle-mère se tait. Est-ce que vous êtes heureux avec cette personne ?</p>
 
-<p>Si la réponse est oui, vous traversez quelque chose. Si la réponse est « je ne sais pas »… ou pire, « non, mais au moins ce serait plus simple », alors le problème n'était pas le problème.</p>`,
+<p>Si la réponse est oui, vous traversez quelque chose. Si la réponse est « je ne sais pas »… ou pire, « non, mais au moins ce serait plus simple », alors le problème n'était pas le problème.</p>
+
+<p>Une intuition ne suffit pas à répondre à cette question. Un <a href="/test-est-ce-la-fin-de-mon-couple/">questionnaire qui pèse chaque signe de fin de relation selon sa gravité</a> donne un résultat plus difficile à balayer que le souvenir de la dernière dispute.</p>`,
     },
     {
       id: 'ce-qui-nest-pas-un-motif',

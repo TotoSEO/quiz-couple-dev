@@ -1699,6 +1699,58 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .dil-bravo-texte { margin: 0; font-size: .92rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
 .dil-bravo-suite { margin-top: .4rem; }
 
+/* ── Résumé rapide d'article ───────────────────────────────
+   Le bloc de puces qui ouvre un contenu long, repris du blog : quelqu'un qui
+   vient de faire un test veut la réponse courte avant d'accepter de lire. */
+.quiz-resume {
+  border-radius: 1.1rem; padding: 1.4rem 1.4rem 1.2rem;
+  border: 1px solid hsl(var(--primary) / .28);
+  background: linear-gradient(150deg, hsl(var(--primary) / .07), hsl(var(--secondary) / .07));
+}
+.quiz-resume-titre {
+  margin: 0 0 .7rem; font-family: var(--font-display);
+  font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  color: hsl(var(--primary));
+}
+.quiz-resume ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .6rem; }
+.quiz-resume li {
+  position: relative; padding-left: 1.5rem;
+  font-size: .95rem; line-height: 1.55; color: hsl(var(--muted-foreground)); text-wrap: pretty;
+}
+.quiz-resume li::before {
+  content: ''; position: absolute; left: .3rem; top: .58em;
+  width: .45rem; height: .45rem; border-radius: 50%;
+  background: hsl(var(--primary));
+}
+
+/* ── Pistes proposées en fin de test ───────────────────────
+   Le score dit où en est la relation, il ne dit pas pourquoi. Chaque piste
+   répond à une question que le test lui-même ne pose pas. */
+.qr-orientation {
+  display: grid; gap: .55rem; margin: 1.5rem auto 0; max-width: 34rem; text-align: left;
+}
+.qr-orientation-titre {
+  margin: 0 0 .2rem; text-align: center;
+  font-size: .74rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+.qr-orientation-lien {
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: .3rem .8rem;
+  padding: .85rem 1rem; border-radius: 1rem; text-decoration: none;
+  border: 1px solid hsl(var(--border)); background: hsl(var(--card));
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+.qr-orientation-lien:hover { border-color: hsl(var(--primary) / .6); transform: translateY(-1px); }
+.qr-orientation-nom { font-weight: 700; font-size: .95rem; color: hsl(var(--foreground)); }
+.qr-orientation-raison {
+  grid-column: 1; font-size: .84rem; line-height: 1.45; color: hsl(var(--muted-foreground));
+}
+.qr-orientation-fleche {
+  grid-row: 1 / span 2; grid-column: 2;
+  font-size: 1.1rem; color: hsl(var(--primary));
+}
+@media (prefers-reduced-motion: reduce) { .qr-orientation-lien { transition: none; } }
+
 /* ── Pour ou contre ────────────────────────────────────────
    La carte tient en une ligne, contrairement aux dilemmes : un thème en
    petit, l'amorce « Pour ou contre », puis la proposition en gros. Les deux

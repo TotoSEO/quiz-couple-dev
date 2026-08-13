@@ -55,7 +55,9 @@
     "testSecret": "M'aime-t-il en secret ?",
     "testDistanceAime": "M'aime-t-il encore à distance ?",
     "testPurete": "Test de pureté",
-    "pourContre": "Pour ou contre"
+    "pourContre": "Pour ou contre",
+    "testFinCouple": "Fin de couple ?",
+    "testFinCoupleDesc": "Où en est vraiment votre relation"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",

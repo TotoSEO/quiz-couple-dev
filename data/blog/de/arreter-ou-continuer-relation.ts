@@ -140,7 +140,9 @@ const article: BlogArticleData = {
 
 <p><strong>Der beste Test passt in einen Satz:</strong> Stell dir vor, das aktuelle Problem verschwindet morgen früh, mit einem Fingerschnippen. Die Arbeit wird ruhig, das Geld kommt rein, die Schwiegermutter schweigt. Bist du glücklich mit diesem Menschen?</p>
 
-<p>Wenn die Antwort ja lautet, gehst du durch etwas hindurch. Wenn die Antwort «Ich weiß nicht» lautet… oder schlimmer «Nein, aber es wäre wenigstens einfacher», dann war das Problem nie das Problem.</p>`,
+<p>Wenn die Antwort ja lautet, gehst du durch etwas hindurch. Wenn die Antwort «Ich weiß nicht» lautet… oder schlimmer «Nein, aber es wäre wenigstens einfacher», dann war das Problem nie das Problem.</p>
+
+<p>Ein Bauchgefühl reicht für diese Frage nicht. Ein <a href="/de/ist-meine-beziehung-am-ende-test/">Fragebogen, der jedes Anzeichen eines Endes nach seinem Gewicht bewertet</a>, liefert ein Ergebnis, das sich schwerer beiseiteschieben lässt als die Erinnerung an den letzten Streit.</p>`,
     },
     {
       id: 'kein-trennungsgrund',

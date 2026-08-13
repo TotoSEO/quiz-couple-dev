@@ -346,7 +346,8 @@
     "testDistanceAime": "Test m'aime-t-il encore à distance",
     "testPurete": "Test de pureté",
     "pourContre": "Pour ou contre",
-    "jeuDilemmes": "Dilemmes de couple"
+    "jeuDilemmes": "Dilemmes de couple",
+    "testFinCouple": "Est-ce la fin de mon couple ?"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -599,5 +600,14 @@
     "bravoTitre": "Bravo, et merci !",
     "bravoTexte": "Vous avez tranché les soixante propositions. Vos votes comptent maintenant dans les pourcentages que verront les prochains couples.",
     "bravoSuite": "Enchaînez sur les dilemmes"
+  },
+  "finCouple": {
+    "orientationTitre": "Ce que ce test ne vous a pas demandé",
+    "orient_couche_nom": "S'il ou elle a couché avec quelqu'un d'autre",
+    "orient_couche_raison": "Quinze questions sur les signes concrets, quand le doute porte sur une autre personne.",
+    "orient_distance_nom": "À distance : m'aime-t-il ou m'aime-t-elle encore ?",
+    "orient_distance_raison": "Vous avez répondu que vous vivez à distance. Les signaux n'y ont pas le même sens.",
+    "orient_toxique_nom": "Est-ce que mon couple est toxique ?",
+    "orient_toxique_raison": "Une relation peut finir parce qu'elle s'éteint, ou parce qu'elle abîme. Ce n'est pas la même chose."
   }
 }

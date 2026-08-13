@@ -140,7 +140,9 @@ const article: BlogArticleData = {
 
 <p><strong>Il test migliore sta in una frase:</strong> immagina che il problema attuale sparisca domani mattina, di colpo. Il lavoro si calma, i soldi entrano, la suocera tace. Sei felice con questa persona?</p>
 
-<p>Se la risposta è sì, stai attraversando qualcosa. Se la risposta è «non lo so»… o peggio «no, ma almeno sarebbe più semplice», allora il problema non era il problema.</p>`,
+<p>Se la risposta è sì, stai attraversando qualcosa. Se la risposta è «non lo so»… o peggio «no, ma almeno sarebbe più semplice», allora il problema non era il problema.</p>
+
+<p>Un'intuizione non basta a rispondere a questa domanda. Un <a href="/it/test-e-la-fine-della-mia-relazione/">questionario che pesa ogni segnale di fine secondo la sua gravità</a> dà un risultato più difficile da liquidare del ricordo dell'ultimo litigio.</p>`,
     },
     {
       id: 'non-e-un-motivo',
