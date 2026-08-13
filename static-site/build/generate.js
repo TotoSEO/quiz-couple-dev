@@ -11,7 +11,7 @@ import { minify } from 'html-minifier-terser';
 import { minify as minifyJs } from 'terser';
 import CleanCSS from 'clean-css';
 import {
-  BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
+  BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID, ADSENSE_CLIENT,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, QUIZ_FEATURED,
   getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
@@ -652,6 +652,7 @@ async function generatePage(routeKey, lang) {
     locale: LOCALES[lang],
     baseUrl: BASE_URL,
     gaId: GA_ID,
+    adsenseClient: ADSENSE_CLIENT,
     supabaseUrl: SUPABASE_URL,
     supabaseKey: SUPABASE_ANON_KEY,
     // SEO
@@ -880,7 +881,7 @@ function copyStaticAssets() {
   const assetsDir = path.resolve(__dirname, '../../assets');
 
   // Copy public/ files
-  const publicFiles = ['favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'og-image.webp', 'robots.txt', 'site.webmanifest', 'placeholder.svg', 'sitemap.xsl', 'f4b78b7e6bfeaefe7290b5ce249449a8.txt', 'llms.txt'];
+  const publicFiles = ['favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'og-image.webp', 'robots.txt', 'site.webmanifest', 'placeholder.svg', 'sitemap.xsl', 'f4b78b7e6bfeaefe7290b5ce249449a8.txt', 'llms.txt', 'ads.txt'];
   for (const file of publicFiles) {
     const src = path.join(publicDir, file);
     if (fs.existsSync(src)) {
@@ -1309,6 +1310,7 @@ async function generateBlogArticle(articleMeta, lang) {
     locale: LOCALES[lang],
     baseUrl: BASE_URL,
     gaId: GA_ID,
+    adsenseClient: ADSENSE_CLIENT,
     supabaseUrl: SUPABASE_URL,
     supabaseKey: SUPABASE_ANON_KEY,
     title: escapeHtml(title),
@@ -1426,6 +1428,7 @@ async function generate404Pages() {
       locale: LOCALES[lang],
       baseUrl: BASE_URL,
       gaId: GA_ID,
+      adsenseClient: ADSENSE_CLIENT,
       supabaseUrl: SUPABASE_URL,
       supabaseKey: SUPABASE_ANON_KEY,
       title: title404[lang] || title404.fr,

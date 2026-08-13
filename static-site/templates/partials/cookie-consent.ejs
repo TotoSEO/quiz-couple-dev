@@ -1,10 +1,15 @@
 <%
+  // Le message ne parlait que de mesure d'audience. Depuis qu'un clic sur
+  // « Accepter » accorde aussi les trois signaux publicitaires, il doit dire
+  // que la publicité personnalisée en fait partie : un consentement que la
+  // personne n'a pas pu comprendre ne vaut rien, ni juridiquement, ni pour
+  // Google, qui redescend alors sur des annonces non personnalisées.
   const cookieTranslations = {
-    fr: { message: 'Ce site utilise des cookies pour analyser le trafic et améliorer votre expérience.', accept: 'Accepter', refuse: 'Refuser', privacy: 'Politique de confidentialité', privacyLink: '/confidentialite/' },
-    en: { message: 'This site uses cookies to analyze traffic and improve your experience.', accept: 'Accept', refuse: 'Decline', privacy: 'Privacy policy', privacyLink: '/en/privacy-policy/' },
-    es: { message: 'Este sitio utiliza cookies para analizar el tráfico y mejorar su experiencia.', accept: 'Aceptar', refuse: 'Rechazar', privacy: 'Política de privacidad', privacyLink: '/es/politica-privacidad/' },
-    de: { message: 'Diese Website verwendet Cookies, um den Datenverkehr zu analysieren und Ihr Erlebnis zu verbessern.', accept: 'Akzeptieren', refuse: 'Ablehnen', privacy: 'Datenschutz', privacyLink: '/de/datenschutz/' },
-    it: { message: 'Questo sito utilizza cookie per analizzare il traffico e migliorare la tua esperienza.', accept: 'Accetta', refuse: 'Rifiuta', privacy: 'Privacy', privacyLink: '/it/privacy/' },
+    fr: { message: 'Ce site utilise des cookies pour mesurer son audience et afficher des publicités personnalisées.', accept: 'Accepter', refuse: 'Refuser', privacy: 'Politique de confidentialité', privacyLink: '/confidentialite/' },
+    en: { message: 'This site uses cookies to measure its audience and show personalised ads.', accept: 'Accept', refuse: 'Decline', privacy: 'Privacy policy', privacyLink: '/en/privacy-policy/' },
+    es: { message: 'Este sitio utiliza cookies para medir su audiencia y mostrar anuncios personalizados.', accept: 'Aceptar', refuse: 'Rechazar', privacy: 'Política de privacidad', privacyLink: '/es/politica-privacidad/' },
+    de: { message: 'Diese Website verwendet Cookies, um ihre Reichweite zu messen und personalisierte Werbung anzuzeigen.', accept: 'Akzeptieren', refuse: 'Ablehnen', privacy: 'Datenschutz', privacyLink: '/de/datenschutz/' },
+    it: { message: 'Questo sito utilizza cookie per misurare il proprio pubblico e mostrare annunci personalizzati.', accept: 'Accetta', refuse: 'Rifiuta', privacy: 'Privacy', privacyLink: '/it/privacy/' },
   };
   const ct = cookieTranslations[lang] || cookieTranslations.fr;
 %>
