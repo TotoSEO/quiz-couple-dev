@@ -238,6 +238,8 @@
     "suite_couple_4": "On redescend d'un cran : où en est votre couple ?",
     "suites_titre": "Et maintenant ?",
     "partage_poster": "Poster",
-    "partage_copier": "Copier le message"
+    "partage_copier": "Copier le message",
+    "statique_titre": "Prêts pour le test ?",
+    "statique_intro": "Un aperçu des questions du test. Lancez-le ci-dessus pour obtenir votre score."
   }
 }

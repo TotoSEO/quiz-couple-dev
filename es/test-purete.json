@@ -234,7 +234,9 @@
     "suite_couple_4": "Bajamos un punto: ¿cómo está vuestra relación?",
     "suites_titre": "¿Y ahora qué?",
     "partage_poster": "Publicar",
-    "partage_copier": "Copiar el mensaje"
+    "partage_copier": "Copiar el mensaje",
+    "statique_titre": "¿Listos para el test?",
+    "statique_intro": "Un vistazo a las preguntas del test. Inícialo arriba para obtener tu puntuación."
   },
   "meta": {
     "titre": "Test de pureza para parejas | Online y gratis",

@@ -234,7 +234,9 @@
     "suite_couple_4": "Scendiamo di un gradino: a che punto è la vostra coppia?",
     "suites_titre": "E adesso?",
     "partage_poster": "Pubblica",
-    "partage_copier": "Copia il messaggio"
+    "partage_copier": "Copia il messaggio",
+    "statique_titre": "Pronti per il test?",
+    "statique_intro": "Uno sguardo alle domande del test. Avvialo qui sopra per ottenere il tuo punteggio."
   },
   "meta": {
     "titre": "Test di purezza per coppie | Online e gratis",
