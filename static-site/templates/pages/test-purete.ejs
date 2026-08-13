@@ -645,32 +645,86 @@
 
 /* ── Résultat ───────────────────────────────────────────────────────────── */
 .pu-resultat { animation: puEntree 340ms ease both; }
-.pu-verdict { text-align: center; margin-bottom: 2rem; }
+
+/* Le verdict devient une vraie carte, avec un bandeau dégradé en haut.
+   Auparavant c'était du texte posé sur le fond de la page : la section la
+   plus importante de l'écran ne se démarquait de rien. */
+.pu-verdict {
+  position: relative; overflow: hidden;
+  text-align: center; margin-bottom: 1.1rem;
+  padding: 2.2rem 1.25rem 1.9rem;
+  border-radius: 1.5rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: 0 18px 44px -28px hsl(338 72% 40% / .5);
+}
+.pu-verdict::before {
+  content: ''; position: absolute; left: 0; right: 0; top: 0; height: 6px;
+  background: linear-gradient(90deg, hsl(338 72% 62%), hsl(18 88% 58%), hsl(265 60% 56%));
+}
+.pu-verdict-kicker {
+  font-size: .7rem; font-weight: 800; letter-spacing: .12em;
+  text-transform: uppercase; color: hsl(var(--primary));
+  margin: 0 0 .5rem;
+}
 .pu-verdict-titre {
   font-family: 'Poppins', 'Inter', sans-serif;
   font-size: clamp(1.6rem, 6vw, 2.4rem); font-weight: 800; line-height: 1.12;
-  margin: 0 0 .9rem; text-wrap: balance;
+  margin: 0 0 1.3rem; text-wrap: balance;
   background: linear-gradient(120deg, hsl(338 72% 62%), hsl(18 88% 58%));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .pu-verdict-emoji { -webkit-text-fill-color: initial; color: initial; }
-.pu-score-pastille {
-  display: inline-block; padding: .5rem 1.1rem; border-radius: 999px;
-  background: linear-gradient(135deg, hsl(338 72% 62% / .16), hsl(18 88% 58% / .16));
-  border: 1px solid hsl(338 72% 62% / .4);
-  font-size: 1.02rem; color: hsl(var(--foreground)); margin: 0 0 .5rem;
+
+/* Le score : un libellé discret, le chiffre en très gros, le maximum en
+   dessous. Trois lignes de tailles franchement différentes valent mieux
+   qu'une phrase dont chaque morceau se disputait l'attention. */
+.pu-score { display: flex; flex-direction: column; align-items: center; gap: .1rem; margin-bottom: 1.4rem; }
+.pu-score-lib {
+  font-size: .78rem; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: hsl(var(--muted-foreground));
 }
-.pu-score-pastille strong { font-family: 'Poppins', 'Inter', sans-serif; font-size: 1.35rem; color: hsl(var(--primary)); }
-.pu-score-note { font-size: .8rem; color: hsl(var(--muted-foreground)); margin: 0 0 1.1rem; }
+.pu-score-val {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: clamp(3.2rem, 14vw, 4.6rem); font-weight: 800; line-height: 1;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(120deg, hsl(338 72% 62%), hsl(18 88% 58%));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.pu-score-max { font-size: .84rem; color: hsl(var(--muted-foreground)); }
+
+/* Jauge de position, toujours affichée */
+.pu-jauge { margin: 0 auto 1.5rem; max-width: 34rem; }
+.pu-jauge-boite { position: relative; padding-top: 1.5rem; }
+.pu-jauge-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.pu-jauge-axes {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-top: .3rem; padding: 0 .1rem;
+  font-size: .72rem; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: hsl(var(--muted-foreground));
+}
+.pu-jauge-ici {
+  position: absolute; top: 0; transform: translateX(-50%);
+  padding: .2rem .6rem; border-radius: 999px;
+  background: hsl(var(--foreground)); color: hsl(var(--background));
+  font-size: .68rem; font-weight: 800; white-space: nowrap;
+}
+.pu-jauge-sous {
+  margin: .5rem 0 0; font-size: .85rem; line-height: 1.5;
+  color: hsl(var(--muted-foreground)); text-wrap: pretty;
+}
+.pu-jauge-sous strong { color: hsl(var(--foreground)); }
+
 .pu-verdict-texte {
-  font-size: .98rem; line-height: 1.65; color: hsl(var(--muted-foreground));
+  font-size: 1rem; line-height: 1.7; color: hsl(var(--muted-foreground));
   max-width: 34rem; margin: 0 auto; text-wrap: pretty;
 }
 
-.pu-colonnes { display: grid; gap: 1.1rem; margin-bottom: 1.1rem; }
 .pu-bloc {
   border-radius: 1.3rem; border: 1px solid hsl(var(--border));
   background: hsl(var(--card)); padding: 1.4rem 1.15rem;
+  margin-bottom: 1.1rem;
 }
 .pu-bloc-titre {
   font-family: 'Poppins', 'Inter', sans-serif;
@@ -683,31 +737,23 @@
 }
 .pu-bloc-sous strong { color: hsl(var(--primary)); }
 
-/* Courbe de répartition */
-.pu-courbe-boite { position: relative; }
-.pu-courbe { width: 100%; height: auto; display: block; color: hsl(var(--muted-foreground)); overflow: visible; }
-.pu-courbe-axe { font-size: 11px; fill: hsl(var(--muted-foreground)); }
-.pu-courbe-repere {
-  position: absolute; top: -.2rem; transform: translateX(-50%);
-  padding: .18rem .55rem; border-radius: 999px;
-  background: hsl(var(--foreground)); color: hsl(var(--background));
-  font-size: .68rem; font-weight: 800; white-space: nowrap;
-}
-
-/* Partage */
-.pu-partages { display: grid; grid-template-columns: repeat(2, 1fr); gap: .55rem; }
-.pu-partage {
-  padding: .8rem .7rem; border-radius: .85rem; cursor: pointer;
-  border: 1px solid hsl(var(--border)); background: hsl(var(--background));
-  color: hsl(var(--foreground)); font: inherit; font-size: .87rem; font-weight: 700;
-  transition: border-color 150ms ease, transform 150ms ease;
-}
-.pu-partage:hover { border-color: hsl(var(--primary)); transform: translateY(-2px); }
-.pu-partage--natif, .pu-partage--copie { grid-column: 1 / -1; }
-.pu-partage--natif {
+/* Partage : le bloc est centré, titre compris, et ne porte plus qu'un
+   bouton. Cinq boutons pour une seule action, c'était un mur de choix. */
+.pu-bloc--partage { text-align: center; }
+.pu-bloc--partage .pu-bloc-sous { max-width: 30rem; margin-left: auto; margin-right: auto; }
+.pu-partage--seul {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: min(100%, 16rem); padding: .95rem 1.8rem;
+  border-radius: 999px; border: none; cursor: pointer;
+  font: inherit; font-size: 1rem; font-weight: 800;
   background: linear-gradient(135deg, hsl(338 72% 62%), hsl(18 88% 58%));
-  border-color: transparent; color: #fff;
+  color: #fff;
+  box-shadow: 0 10px 26px -10px hsl(338 72% 50% / .7);
+  transition: transform 150ms ease, box-shadow 150ms ease;
 }
+.pu-partage--seul:hover { transform: translateY(-2px); box-shadow: 0 14px 32px -10px hsl(338 72% 50% / .8); }
+.pu-partage--seul:active { transform: translateY(0); }
+.pu-partage--seul:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 3px; }
 
 /* Catégories */
 .pu-bloc--cats { margin-bottom: 1.6rem; }
@@ -924,17 +970,14 @@
   .pu-modes { grid-template-columns: 1fr 1fr; }
   .pu-ages { grid-template-columns: 1fr 1fr; }
   .pu-question { font-size: 1.5rem; }
-  .pu-partages { grid-template-columns: repeat(4, 1fr); }
   .pu-chiffres { grid-template-columns: repeat(4, 1fr); }
   .pu-comparatif { grid-template-columns: 1fr 1fr; }
   .pu-suite-grille { grid-template-columns: 1fr 1fr; }
   .pu-lead { font-size: 1.2rem; }
   .pu-suites { grid-template-columns: 1fr 1fr; }
-  .pu-partage--natif { grid-column: 1 / -1; }
   .pu-section { padding: 4rem 0; }
 }
 @media (min-width: 900px) {
-  .pu-colonnes { grid-template-columns: 1.45fr 1fr; align-items: start; }
 }
 
 @media (prefers-reduced-motion: reduce) {

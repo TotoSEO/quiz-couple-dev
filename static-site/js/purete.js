@@ -338,28 +338,31 @@
     var w = el('div', 'pu-resultat');
     w.setAttribute('data-quiz-done', '1');
 
-    // Verdict
+    // Le verdict est une carte à part entière : titre, score, jauge, texte.
+    // Auparavant les trois blocs de texte s'empilaient à des tailles
+    // différentes sans rien pour les tenir ensemble, et la section entière se
+    // fondait dans la page.
     var tete = el('div', 'pu-verdict');
+    tete.appendChild(el('p', 'pu-verdict-kicker', T('verdict_kicker', 'Votre résultat')));
     tete.appendChild(el('h2', 'pu-verdict-titre',
       esc(p.titre) + ' <span class="pu-verdict-emoji" aria-hidden="true">' + p.emoji + '</span>'));
-    tete.appendChild(el('p', 'pu-score-pastille',
-      fmt(TV('score_solo', 'score_couple', 'Ton score : <strong>{score}</strong> points', 'Votre score : <strong>{score}</strong> points'), { score: nb(score) })));
-    tete.appendChild(el('p', 'pu-score-note',
-      fmt(TV('resultat_max_solo', 'resultat_max_couple',
-        'Le maximum de cette version est {max} points. Plus le score est haut, moins tu es pur.',
-        'Le maximum de cette version est {max} points. Plus le score est haut, moins vous êtes purs.'), { max: nb(scoreMax) })));
+
+    // Le score, en gros, seul sur sa ligne. Le libellé passe au-dessus en
+    // petit : c'est le chiffre qu'on vient chercher, pas la phrase.
+    var bloc = el('div', 'pu-score');
+    bloc.appendChild(el('span', 'pu-score-lib', TV('score_lib_solo', 'score_lib_couple', 'Ton score', 'Votre score')));
+    bloc.appendChild(el('span', 'pu-score-val', nb(score)));
+    bloc.appendChild(el('span', 'pu-score-max', fmt(T('score_sur', 'sur {max} points'), { max: nb(scoreMax) })));
+    tete.appendChild(bloc);
+
+    // La jauge vient juste sous le score, avant tout texte : c'est ce que la
+    // personne veut voir en premier.
+    tete.appendChild(blocJauge(score, pct));
+
     tete.appendChild(el('p', 'pu-verdict-texte', esc(p.texte)));
     w.appendChild(tete);
 
-    var colonnes = el('div', 'pu-colonnes');
-
-    // Courbe de répartition, seulement si la base a de quoi la dessiner.
-    if (statsGlobales && statsGlobales.assez) {
-      colonnes.appendChild(bloCourbe(pct));
-    }
-    colonnes.appendChild(blocPartage(score, pct));
-    w.appendChild(colonnes);
-
+    w.appendChild(blocPartage(score, pct));
     w.appendChild(blocCategories());
     var suites = blocSuites();
     if (suites) w.appendChild(suites);
@@ -402,109 +405,191 @@
     return bloc;
   }
 
-  // Courbe des scores réellement enregistrés, avec un repère sur le vôtre.
-  function bloCourbe(pct) {
+  // ─── Jauge de position ──────────────────────────────────────────────────
+  // Elle s'affiche toujours. L'ancienne courbe attendait trente parties
+  // enregistrées avant d'apparaître, ce qui était juste statistiquement mais
+  // laissait le résultat sans aucun repère visuel pendant tout le lancement
+  // du test : le chiffre tombait sans qu'on sache s'il est haut ou bas.
+  //
+  // La jauge, elle, ne dépend d'aucune donnée extérieure : c'est l'échelle du
+  // test, de zéro au maximum, avec les paliers en fond et un curseur sur le
+  // score. La courbe des scores réellement enregistrés vient se poser
+  // par-dessus quand il y a de quoi la dessiner, sans rien déplacer.
+  function blocJauge(score, pct) {
+    var boite = el('div', 'pu-jauge');
     var s = statsGlobales;
-    var bloc = el('section', 'pu-bloc pu-bloc--courbe');
-    bloc.appendChild(el('h3', 'pu-bloc-titre', TV('courbe_titre_solo', 'courbe_titre_couple', 'Où tu te situes', 'Où vous vous situez')));
+    var avecCourbe = !!(s && s.assez);
 
-    // Part des parties dont le score est plus bas que le vôtre. « Moins pur
-    // que X % » était juste mais se lisait de travers : on formule dans le
-    // sens du score, qui monte avec l'impureté.
-    var enDessous = 0, total = 0;
-    s.tranches.forEach(function (n, i) { total += n; if (i * 5 + 5 <= pct) enDessous += n; });
-    var devant = total ? Math.round((enDessous / total) * 100) : 50;
-    bloc.appendChild(el('p', 'pu-bloc-sous',
-      fmt(TV('courbe_sous_solo', 'courbe_sous_couple',
-        'Sur <strong>{n}</strong> tests, tu fais moins pur que <strong>{devant}%</strong> des gens. La moyenne est à <strong>{moyenne}</strong> points.',
-        'Sur <strong>{n}</strong> tests, vous faites moins purs que <strong>{devant}%</strong> des gens. La moyenne est à <strong>{moyenne}</strong> points.'),
-        { n: nb(s.total), devant: devant, moyenne: nb(s.moyenne) })));
-
-    // Courbe lissée en SVG. Les vingt tranches deviennent une polyligne
-    // adoucie ; le trait vertical marque le score de la personne.
-    var L = 640, H = 220, bas = H - 28, gauche = 8, droite = L - 8;
-    var maxT = Math.max.apply(null, s.tranches) || 1;
-    var pts = s.tranches.map(function (n, i) {
-      return [gauche + ((droite - gauche) * (i + 0.5)) / 20, bas - (n / maxT) * (bas - 16)];
-    });
-    var d = 'M' + pts[0][0].toFixed(1) + ',' + pts[0][1].toFixed(1);
-    for (var i = 0; i < pts.length - 1; i++) {
-      var a = pts[i], b = pts[i + 1], mx = (a[0] + b[0]) / 2;
-      d += ' C' + mx.toFixed(1) + ',' + a[1].toFixed(1) + ' ' + mx.toFixed(1) + ',' + b[1].toFixed(1) +
-        ' ' + b[0].toFixed(1) + ',' + b[1].toFixed(1);
-    }
+    // Deux hauteurs. Sans courbe, la jauge reste une réglette fine. Avec la
+    // courbe, tout monte : un graphique écrasé sur vingt-cinq pixels de haut
+    // pour six cents de large se lit comme une droite, quelles que soient les
+    // données. Il faut de l'amplitude pour qu'une répartition ressemble à une
+    // répartition.
+    var L = 640, gauche = 8, droite = L - 8;
+    var courbeHaut = 14, courbeBas = 122;
+    var bandeHaut = avecCourbe ? 134 : 34, bandeBas = bandeHaut + 26;
+    var H = bandeBas + 8;
     var x = gauche + ((droite - gauche) * pct) / 100;
+    var svg = '', ySurCourbe = null;
 
-    var svg = '<svg class="pu-courbe" viewBox="0 0 ' + L + ' ' + H + '" role="img" ' +
-      'aria-label="' + esc(fmt(T('courbe_aria', 'Répartition des scores, le vôtre est à {pct} pour cent du maximum'), { pct: pct })) + '">' +
-      '<defs><linearGradient id="puAire" x1="0" y1="0" x2="0" y2="1">' +
-      '<stop offset="0%" stop-color="hsl(338 72% 62% / .38)"/>' +
-      '<stop offset="100%" stop-color="hsl(338 72% 62% / 0)"/></linearGradient></defs>' +
-      '<path d="' + d + ' L' + droite + ',' + bas + ' L' + gauche + ',' + bas + ' Z" fill="url(#puAire)"/>' +
-      '<path d="' + d + '" fill="none" stroke="hsl(338 72% 62%)" stroke-width="3" stroke-linecap="round"/>' +
-      '<line x1="' + x.toFixed(1) + '" y1="8" x2="' + x.toFixed(1) + '" y2="' + bas + '" ' +
-      'stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/>' +
-      '<circle cx="' + x.toFixed(1) + '" cy="' + bas + '" r="5" fill="hsl(338 72% 62%)"/>' +
-      '<text x="0" y="' + (H - 8) + '" class="pu-courbe-axe">0</text>' +
-      '<text x="' + (L / 2) + '" y="' + (H - 8) + '" class="pu-courbe-axe" text-anchor="middle">' +
-      Math.round(scoreMax / 2) + '</text>' +
-      '<text x="' + L + '" y="' + (H - 8) + '" class="pu-courbe-axe" text-anchor="end">' + scoreMax + '</text>' +
-      '</svg>';
-    var boite = el('div', 'pu-courbe-boite', svg);
-    var etiq = el('span', 'pu-courbe-repere', 'Vous');
+    // Fond : les paliers du test, du plus sage au plus chargé. La teinte
+    // glisse du rose clair au rose profond, donc la position se lit même
+    // sans regarder les chiffres.
+    var paliers = (D && D[mode] && D[mode].paliers) || [];
+    paliers.forEach(function (pal) {
+      var x1 = gauche + ((droite - gauche) * pal.min) / 100;
+      var x2 = gauche + ((droite - gauche) * Math.min(pal.max, 100)) / 100;
+      var t = pal.min / 100;
+      svg += '<rect x="' + x1.toFixed(1) + '" y="' + bandeHaut + '" width="' + Math.max(0, x2 - x1).toFixed(1) +
+        '" height="' + (bandeBas - bandeHaut) + '" rx="3" fill="hsl(' + Math.round(338 - t * 70) +
+        ' 72% ' + Math.round(86 - t * 26) + '%)"/>';
+    });
+
+    // La courbe des scores enregistrés, si la base en a assez.
+    if (avecCourbe) {
+      // Lissage [1,2,1] avant le tracé. Vingt tranches brutes donnent des
+      // dents de scie, et une courbe de répartition se lit comme une
+      // tendance, pas comme un histogramme dont on aurait relié les sommets.
+      var brut = s.tranches;
+      var lisse = brut.map(function (n, i) {
+        var g = i > 0 ? brut[i - 1] : n, d = i < brut.length - 1 ? brut[i + 1] : n;
+        return (g + 2 * n + d) / 4;
+      });
+      var maxL = Math.max.apply(null, lisse) || 1;
+      var amp = courbeBas - courbeHaut;
+      var pts = lisse.map(function (n, i) {
+        return [gauche + ((droite - gauche) * (i + 0.5)) / 20, courbeBas - (n / maxL) * amp];
+      });
+      // Prolongée jusqu'aux bords, sinon la surface sous la courbe s'arrête à
+      // un vingtième de chaque côté et le remplissage a l'air coupé net.
+      pts.unshift([gauche, pts[0][1]]);
+      pts.push([droite, pts[pts.length - 1][1]]);
+
+      // Tangentes de Catmull-Rom, remises à plat sur les extrema locaux. Sans
+      // cette mise à plat la courbe dépasse au-dessus des sommets et sous les
+      // creux, donc elle invente des bosses qui ne sont pas dans les données ;
+      // avec, les sommets sont ronds et rien ne déborde.
+      var tang = pts.map(function (p, i) {
+        var a = i > 0 ? pts[i - 1] : p, b = i < pts.length - 1 ? pts[i + 1] : p;
+        var mg = p[1] - a[1], md = b[1] - p[1];
+        return [(b[0] - a[0]) / 6, mg * md <= 0 ? 0 : (b[1] - a[1]) / 6];
+      });
+      var trace = 'M' + pts[0][0].toFixed(1) + ',' + pts[0][1].toFixed(1);
+      for (var i = 0; i < pts.length - 1; i++) {
+        var p1 = pts[i], p2 = pts[i + 1], t1 = tang[i], t2 = tang[i + 1];
+        trace += ' C' + (p1[0] + t1[0]).toFixed(1) + ',' + (p1[1] + t1[1]).toFixed(1) +
+          ' ' + (p2[0] - t2[0]).toFixed(1) + ',' + (p2[1] - t2[1]).toFixed(1) +
+          ' ' + p2[0].toFixed(1) + ',' + p2[1].toFixed(1);
+      }
+
+      // Où la courbe passe-t-elle à l'abscisse du score ? La réponse sert à
+      // poser le point exactement dessus, et pas à flotter au-dessus : sur un
+      // graphique, « vous êtes ici » veut dire ici, sur la ligne.
+      ySurCourbe = (function (cible) {
+        var be = function (c, t) {
+          var u = 1 - t;
+          return u * u * u * c[0] + 3 * u * u * t * c[1] + 3 * u * t * t * c[2] + t * t * t * c[3];
+        };
+        for (var j = 0; j < pts.length - 1; j++) {
+          if (cible < pts[j][0] || cible > pts[j + 1][0]) continue;
+          var q1 = pts[j], q2 = pts[j + 1], u1 = tang[j], u2 = tang[j + 1];
+          var cx = [q1[0], q1[0] + u1[0], q2[0] - u2[0], q2[0]];
+          var cy = [q1[1], q1[1] + u1[1], q2[1] - u2[1], q2[1]];
+          var lo = 0, hi = 1, t = 0.5;
+          for (var k = 0; k < 24; k++) { t = (lo + hi) / 2; if (be(cx, t) < cible) lo = t; else hi = t; }
+          return be(cy, (lo + hi) / 2);
+        }
+        return null;
+      })(x);
+
+      svg += '<defs><linearGradient id="puJaugeAire" x1="0" y1="0" x2="0" y2="1">' +
+        '<stop offset="0" stop-color="hsl(265 60% 56%)" stop-opacity=".30"/>' +
+        '<stop offset="1" stop-color="hsl(265 60% 56%)" stop-opacity="0"/>' +
+        '</linearGradient></defs>' +
+        '<path d="' + trace + ' L' + droite + ',' + courbeBas + ' L' + gauche + ',' + courbeBas +
+        ' Z" fill="url(#puJaugeAire)"/>' +
+        '<line x1="' + gauche + '" y1="' + courbeBas + '" x2="' + droite + '" y2="' + courbeBas +
+        '" stroke="hsl(var(--border))" stroke-width="1.5"/>' +
+        '<path d="' + trace + '" fill="none" stroke="hsl(265 60% 56%)" stroke-width="3" ' +
+        'stroke-linecap="round" stroke-linejoin="round"/>';
+    }
+
+    // Le curseur, et lui seul, marque la position. Le trait descend depuis
+    // l'étiquette jusque sous les paliers ; le point se pose sur la courbe
+    // quand il y en a une, en haut du trait sinon.
+    svg += '<line x1="' + x.toFixed(1) + '" y1="6" x2="' + x.toFixed(1) + '" y2="' + (bandeBas + 4) +
+      '" stroke="hsl(var(--foreground))" stroke-width="2.5" stroke-linecap="round"/>';
+    svg += ySurCourbe == null
+      ? '<circle cx="' + x.toFixed(1) + '" cy="6" r="6" fill="hsl(var(--foreground))"/>'
+      : '<circle cx="' + x.toFixed(1) + '" cy="' + ySurCourbe.toFixed(1) +
+        '" r="6.5" fill="hsl(var(--foreground))" stroke="hsl(var(--card))" stroke-width="3.5"/>';
+
+    var aria = fmt(T('jauge_aria', 'Votre score de {score} points sur {max}'), { score: nb(score), max: nb(scoreMax) });
+    // Les repères d'axe sont en HTML et non dans le SVG : le viewBox met le
+    // texte à l'échelle, et sur un téléphone onze unités tombaient à six
+    // pixels réels. En HTML ils gardent leur taille quelle que soit la largeur.
+    boite.innerHTML = '<div class="pu-jauge-boite"><svg class="pu-jauge-svg" viewBox="0 0 ' + L + ' ' + H +
+      '" role="img" aria-label="' + esc(aria) + '">' + svg + '</svg></div>' +
+      '<div class="pu-jauge-axes"><span>0</span><span>' + esc(nb(scoreMax)) + '</span></div>';
+
+    var etiq = el('span', 'pu-jauge-ici', T('jauge_ici', 'Vous êtes ici'));
     etiq.style.left = ((x / L) * 100).toFixed(2) + '%';
-    boite.appendChild(etiq);
-    bloc.appendChild(boite);
-    return bloc;
+    boite.firstChild.appendChild(etiq);
+
+    // Sous la jauge : la comparaison si elle existe, sinon le rappel du sens
+    // de lecture. Jamais les deux, jamais rien.
+    var sous;
+    if (s && s.assez) {
+      var enDessous = 0, total = 0;
+      s.tranches.forEach(function (n, i) { total += n; if (i * 5 + 5 <= pct) enDessous += n; });
+      var devant = total ? Math.round((enDessous / total) * 100) : 50;
+      sous = fmt(TV('jauge_compare_solo', 'jauge_compare_couple',
+        'Sur <strong>{n}</strong> tests, tu fais moins pur que <strong>{devant}%</strong> des gens.',
+        'Sur <strong>{n}</strong> tests, vous faites moins purs que <strong>{devant}%</strong> des gens.'),
+        { n: nb(s.total), devant: devant });
+    } else {
+      sous = TV('jauge_sans_solo', 'jauge_sans_couple',
+        'Plus le curseur est à droite, moins tu es pur.',
+        'Plus le curseur est à droite, moins vous êtes purs.');
+    }
+    boite.appendChild(el('p', 'pu-jauge-sous', sous));
+    return boite;
   }
 
   // ─── Partage ────────────────────────────────────────────────────────────
   function blocPartage(score, pct) {
     var bloc = el('section', 'pu-bloc pu-bloc--partage');
-    bloc.appendChild(el('h3', 'pu-bloc-titre', TV('partage_titre_solo', 'partage_titre_couple', 'Envoie ton score à quelqu\'un', 'Envoyez votre score à quelqu\'un')));
+    bloc.appendChild(el('h3', 'pu-bloc-titre', TV('partage_titre_solo', 'partage_titre_couple', 'Envoie ton score \u00e0 quelqu\'un', 'Envoyez votre score \u00e0 quelqu\'un')));
     bloc.appendChild(el('p', 'pu-bloc-sous',
       mode === 'solo'
-        ? T('partage_sous_solo', 'Le plus drôle, c\'est de comparer. Envoie ça à ton/ta partenaire ou à tes potes, et attends leur score.')
-        : T('partage_sous_couple', 'Envoyez le score de votre couple à vos amis, et mettez-les au défi de faire mieux. Ou pire.')));
+        ? T('partage_sous_solo', 'Le plus dr\u00f4le, c\'est de comparer. Envoie \u00e7a \u00e0 ton/ta partenaire ou \u00e0 tes potes, et attends leur score.')
+        : T('partage_sous_couple', 'Envoyez le score de votre couple \u00e0 vos amis, et mettez-les au d\u00e9fi de faire mieux. Ou pire.')));
 
     var lien = location.origin + location.pathname;
     var texte = mode === 'solo'
-      ? fmt(T('partage_msg_solo', 'J\'ai eu {score} points au test de pureté ({pct}% d\'impureté). À toi maintenant : '), { score: score, pct: pct })
-      : fmt(T('partage_msg_couple', 'On a eu {score} points au test de pureté en couple ({pct}% d\'impureté). À vous maintenant : '), { score: score, pct: pct });
+      ? fmt(T('partage_msg_solo', 'J\'ai eu {score} points au test de puret\u00e9 ({pct}% d\'impuret\u00e9). \u00c0 toi maintenant : '), { score: score, pct: pct })
+      : fmt(T('partage_msg_couple', 'On a eu {score} points au test de puret\u00e9 en couple ({pct}% d\'impuret\u00e9). \u00c0 vous maintenant : '), { score: score, pct: pct });
     var complet = texte + lien;
 
-    var grille = el('div', 'pu-partages');
-
-    function bouton(cls, libelle, action) {
-      var b = el('button', 'pu-partage ' + cls, libelle);
-      b.type = 'button';
-      b.addEventListener('click', action);
-      grille.appendChild(b);
-      return b;
-    }
-
-    // Le partage natif ouvre directement la liste de contacts sur mobile,
-    // c'est le chemin le plus court vers « je l'envoie à mon copain ».
-    if (navigator.share) {
-      bouton('pu-partage--natif', '📤 ' + T('partage_envoyer', 'Envoyer'), function () {
-        navigator.share({ title: T('partage_sujet', 'Test de pureté'), text: texte, url: lien }).catch(function () {});
-      });
-    }
-    bouton('pu-partage--wa', '💬 WhatsApp', function () {
-      window.open('https://wa.me/?text=' + encodeURIComponent(complet), '_blank', 'noopener');
-    });
-    bouton('pu-partage--sms', '✉️ ' + T('partage_sms', 'SMS'), function () {
-      location.href = 'sms:?&body=' + encodeURIComponent(complet);
-    });
-    bouton('pu-partage--x', '𝕏 ' + T('partage_poster', 'Poster'), function () {
-      window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(texte) +
-        '&url=' + encodeURIComponent(lien), '_blank', 'noopener');
-    });
-    var libelleCopie = '🔗 ' + T('partage_copier', 'Copier le message');
-    var copie = bouton('pu-partage--copie', libelleCopie, function () {
+    // Un seul bouton. Les cinq d'avant (natif, WhatsApp, SMS, X, copier)
+    // faisaient un mur de choix pour une action unique, et quatre d'entre eux
+    // ne servaient qu'\u00e0 contourner l'absence du partage natif.
+    //
+    // Sur mobile, ce bouton ouvre la feuille de partage du syst\u00e8me, qui
+    // contient d\u00e9j\u00e0 WhatsApp, les SMS et le reste. Sur ordinateur, o\u00f9
+    // navigator.share n'existe pas, il copie le message : c'est la seule
+    // chose qui marche partout, et elle a besoin d'un retour visible.
+    var libelle = '\ud83d\udce4 ' + T('partage_envoyer', 'Envoyer');
+    var b = el('button', 'pu-partage pu-partage--seul', libelle);
+    b.type = 'button';
+    b.addEventListener('click', function () {
+      if (navigator.share) {
+        navigator.share({ title: T('partage_sujet', 'Test de puret\u00e9'), text: texte, url: lien }).catch(function () {});
+        return;
+      }
       var fini = function () {
-        copie.textContent = '✅ ' + T('partage_copie', 'Copié');
-        setTimeout(function () { copie.textContent = libelleCopie; }, 2200);
+        b.textContent = '\u2705 ' + T('partage_copie_msg', 'Message copi\u00e9, collez-le o\u00f9 vous voulez');
+        setTimeout(function () { b.textContent = libelle; }, 2600);
       };
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(complet).then(fini).catch(function () {});
@@ -515,8 +600,7 @@
         document.body.removeChild(z);
       }
     });
-
-    bloc.appendChild(grille);
+    bloc.appendChild(b);
     return bloc;
   }
 
