@@ -100,14 +100,16 @@
     window.dataLayer=window.dataLayer||[];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
-    if(localStorage.getItem('cookie-consent')==='accepted'){gtag('consent','update',{analytics_storage:'granted'});}
+    if(localStorage.getItem('cookie-consent')==='accepted'){gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});}
   </script>
 
   <%# AdSense. Il vient après le bloc ci-dessus, et pas avant : le mode
       consentement doit être posé quand le script se charge, sinon AdSense
-      démarre sans connaître l'état du consentement. Les quatre signaux
-      publicitaires restent refusés tant que personne n'a accepté, ce qui
-      donne des annonces non personnalisées plutôt qu'aucune annonce. %>
+      démarre sans connaître l'état du consentement.
+      Tant que personne n'a répondu au bandeau, les quatre signaux restent
+      refusés et les annonces sont non personnalisées. Un clic sur
+      « Accepter » les accorde tous les quatre, ce que le bandeau annonce
+      explicitement. %>
   <% if (typeof adsenseClient !== 'undefined' && adsenseClient) { %>
   <meta name="google-adsense-account" content="<%= adsenseClient %>">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= adsenseClient %>" crossorigin="anonymous"></script>
