@@ -363,6 +363,7 @@
     // 'zamours' est deja plus haut : c'est le seul identifiant identique dans
     // les deux nommages, une seule entree suffit.
     jeuDilemmes: 'Dilemmes',
+    pourContre: 'Pour ou contre',
     quizTentation: 'Tentation',
     testPurete: 'Test de pureté'
   };

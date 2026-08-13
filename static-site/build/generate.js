@@ -147,8 +147,26 @@ const GD_QUESTION_PREFIXES = {
   'qui-de-nous-deux': ['quiDeNous.quotidien'],
   dilemmes: ['dilemmes.d'],
 };
+// Le pour ou contre est le seul à poser toutes ses propositions pendant une
+// partie tout en les rangeant par famille : prendre la première famille n'en
+// montrerait que douze sur soixante. Il déclare donc ses familles ici, elles
+// sont parcourues à la suite. L'amorce « Pour ou contre » vit dans le moteur
+// et non dans les données ; il faut la remettre devant chaque titre pour que
+// le H3 se lise comme la carte que le joueur verra.
+const GD_QUESTION_FAMILLES = {
+  'pour-contre': {
+    prefixes: ['pourContre.projets', 'pourContre.vacances', 'pourContre.couple',
+               'pourContre.quotidien', 'pourContre.moments', 'pourContre.discuter'],
+    amorce: { fr: 'Pour ou contre : ', en: 'For or against: ', es: 'A favor o en contra: ',
+              de: 'Dafür oder dagegen: ', it: 'Pro o contro: ' },
+    // La proposition est écrite avec une majuscule parce qu'elle est seule sur
+    // sa carte. Derrière un deux-points elle ne doit plus en porter, sauf en
+    // allemand où les noms communs gardent la leur.
+    minuscule: ['fr', 'en', 'es', 'it'],
+  },
+};
 // Quiz types whose answers aren't meaningful multiple-choice options to list.
-const NO_OPTION_TYPES = new Set(['most', 'knowledge', 'marrant', 'vrai-faux']);
+const NO_OPTION_TYPES = new Set(['most', 'knowledge', 'marrant', 'vrai-faux', 'pour-contre']);
 // Le bloc s'intitulait « Aperçu des questions », ce qui le faisait lire comme
 // une annexe alors qu'il porte les questions elles-mêmes. Il reprend
 // désormais le titre que le moteur affiche sur son écran de départ : le
@@ -169,11 +187,13 @@ const STATIC_Q_HEADINGS = {
   marrant: { fr: 'Prêts à rire ensemble ?', en: 'Ready to laugh together?', es: '¿Listos para reíros juntos?', de: 'Bereit, zusammen zu lachen?', it: 'Pronti a ridere insieme?' },
   'vrai-faux': { fr: 'Prêt pour le vrai ou faux ?', en: 'Ready for true or false?', es: '¿Listo para el verdadero o falso?', de: 'Bereit für Wahr oder Falsch?', it: 'Pronto per il vero o falso?' },
   'tu-preferes': { fr: 'Prêts à trancher ?', en: 'Ready to choose?', es: '¿Listos para decidir?', de: 'Bereit, euch zu entscheiden?', it: 'Pronti a scegliere?' },
+  'pour-contre': { fr: 'Prêts à vous prononcer ?', en: 'Ready to take a side?', es: '¿Listos para posicionaros?', de: 'Bereit, Stellung zu beziehen?', it: 'Pronti a schierarvi?' },
 };
 
 function buildStaticQuestionsSection(quizType, tgd, lang) {
+  const multi = GD_QUESTION_FAMILLES[quizType];
   const candidates = GD_QUESTION_PREFIXES[quizType];
-  if (!candidates) return '';
+  if (!multi && !candidates) return '';
 
   const has = (key) => { const v = tgd(key, ''); return v && v !== key ? v : ''; };
 
@@ -184,11 +204,19 @@ function buildStaticQuestionsSection(quizType, tgd, lang) {
   const formes = (c, i) => [c + '.q' + i, c + '.' + i, c + '_q' + i, c + i];
   const premiere = (c) => formes(c, 1).some(has);
 
-  let prefix = '';
-  for (const c of candidates) {
-    if (premiere(c)) { prefix = c; break; }
+  // Un seul préfixe dans le cas courant, plusieurs pour les jeux qui rangent
+  // par famille et posent tout leur paquet.
+  let prefixes = [], amorce = '', abaisser = false;
+  if (multi) {
+    prefixes = multi.prefixes.filter(premiere);
+    amorce = (multi.amorce && (multi.amorce[lang] || multi.amorce.fr)) || '';
+    abaisser = !!(multi.minuscule && multi.minuscule.includes(lang));
+  } else {
+    for (const c of candidates) {
+      if (premiere(c)) { prefixes = [c]; break; }
+    }
   }
-  if (!prefix) return '';
+  if (!prefixes.length) return '';
 
   // Le plafond était à 24, ce qui coupait la plupart des tests au milieu.
   // Un test de 20 questions les pose toutes : la page doit toutes les
@@ -199,20 +227,30 @@ function buildStaticQuestionsSection(quizType, tgd, lang) {
   const showOptions = !NO_OPTION_TYPES.has(quizType);
   const optLetters = ['a', 'b', 'c', 'd', 'e'];
   const items = [];
-  let misses = 0;
-  for (let i = 1; i <= 300 && items.length < CAP; i++) {
-    let qText = '';
-    for (const forme of formes(prefix, i)) { qText = has(forme); if (qText) break; }
-    if (!qText) { if (items.length > 0 && ++misses >= 8) break; continue; }
-    misses = 0;
-    const opts = [];
-    if (showOptions) {
-      for (const L of optLetters) {
-        const o = has(prefix + '.q' + i + L) || has(prefix + '_q' + i + L);
-        if (o) opts.push(o);
+  // Vrai seulement si la table contenait encore des questions au moment où le
+  // plafond est tombé. Le comparer au plafond ne suffit pas : un réservoir qui
+  // fait exactement soixante était annoncé comme un extrait, et la page disait
+  // que le moteur en tirait d'autres alors qu'elle les montrait toutes.
+  let tronque = false;
+  for (const prefix of prefixes) {
+    let misses = 0;
+    for (let i = 1; i <= 300; i++) {
+      let qText = '';
+      for (const forme of formes(prefix, i)) { qText = has(forme); if (qText) break; }
+      if (!qText) { if (items.length > 0 && ++misses >= 8) break; continue; }
+      misses = 0;
+      if (items.length >= CAP) { tronque = true; break; }
+      const opts = [];
+      if (showOptions) {
+        for (const L of optLetters) {
+          const o = has(prefix + '.q' + i + L) || has(prefix + '_q' + i + L);
+          if (o) opts.push(o);
+        }
       }
+      const corps = abaisser ? qText.charAt(0).toLowerCase() + qText.slice(1) : qText;
+      items.push({ q: amorce + corps, opts });
     }
-    items.push({ q: qText, opts });
+    if (tronque) break;
   }
   if (items.length < 3) return '';
 
@@ -222,7 +260,6 @@ function buildStaticQuestionsSection(quizType, tgd, lang) {
   let out = '<section class="quiz-static-questions"><div class="container mx-auto px-4 max-w-3xl">';
   out += `<h2 class="quiz-static-title">${escapeHtml(titre)}</h2>`;
   // On ne dit « les N questions » que si ce sont bien toutes les questions.
-  const tronque = items.length >= CAP;
   const phrase = tronque
     ? (L.introExtrait || L.intro).replace('{n}', items.length)
     : L.intro.replace('{n}', items.length);
@@ -503,7 +540,7 @@ async function generatePage(routeKey, lang) {
     };
     // Les jeux passent par le hub : le fil d'Ariane balise doit refleter
     // la navigation reelle de la page.
-    const ROUTES_JEUX = ['quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages', 'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes'];
+    const ROUTES_JEUX = ['quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages', 'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre'];
     if (routeKey === 'blog') {
       breadcrumbList.itemListElement.push({ '@type': 'ListItem', position: 2, name: bl.blog, item: canonical });
     } else if (ROUTES_JEUX.includes(routeKey) && getLocalizedUrl('jeuxCouple', lang)) {
@@ -1358,7 +1395,7 @@ async function generateBlogArticle(articleMeta, lang) {
       'quizMost', 'quizAdo', 'quizVraiFaux', 'zamours', 'quizTentation',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarJeux: [
-      'jeuxCouple', 'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages', 'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes',
+      'jeuxCouple', 'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages', 'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarOther: [
       'questionsCouple',

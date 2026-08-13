@@ -342,7 +342,9 @@
     "testDateNaissance": "Birth date compatibility test",
     "testCouche": "Has he or she slept with someone else test",
     "testSecret": "Does he or she secretly love me test",
-    "testDistanceAime": "Long distance does he still love me test"
+    "testDistanceAime": "Long distance does he still love me test",
+    "pourContre": "For or against",
+    "jeuDilemmes": "Couple dilemmas"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -563,5 +565,37 @@
     "introQuestion": "You're asking yourself:",
     "introQuote": "« Do they still love me… or is it just the distance? »",
     "disclaimer": "Answer on the last few weeks, not on the start of your story."
+  },
+  "pourContre": {
+    "introTitre": "For or against?",
+    "introTexte": "Sixty statements to settle as a pair. Answer together, then find out how other couples voted.",
+    "metaQuestions": "statements",
+    "metaDuree": "no time limit",
+    "commencer": "First statement",
+    "amorce": "For or against",
+    "consigne": "Decide together, out loud.",
+    "pour": "FOR",
+    "contre": "AGAINST",
+    "passer": "Skip this statement",
+    "votreReponse": "Your answer: {{r}}",
+    "voix": "votes",
+    "voix1": "vote",
+    "surTotal": "{{n}} couples have settled this statement",
+    "surTotal1": "You are the first couple to settle this statement",
+    "suivant": "Next statement",
+    "voirBilan": "See our summary",
+    "arreter": "Stop and see our summary",
+    "bilanDetail": "{{pour}} FOR out of {{n}} statements settled",
+    "palier1Titre": "You say no to almost everything",
+    "palier1Texte": "Nearly every statement went straight back where it came from. You know what you do not want, and that is already a clear answer about the life you feel like living.",
+    "palier2Titre": "Hard to convince",
+    "palier2Texte": "It takes a lot to get a yes out of you. You prefer what you already know, which spares you a fair few nasty surprises.",
+    "palier3Titre": "Fairly up for it",
+    "palier3Texte": "You say yes more often than no, without signing with your eyes shut. A good balance between wanting to try and being practical.",
+    "palier4Titre": "You say yes to almost everything",
+    "palier4Texte": "A pet, a house, a move abroad: you are in. That is lovely energy between two people, as long as you read the small print now and then.",
+    "bravoTitre": "Well done, and thank you!",
+    "bravoTexte": "You have settled all sixty statements. Your votes now count towards the percentages the next couples will see.",
+    "bravoSuite": "Move on to the dilemmas"
   }
 }

@@ -815,6 +815,7 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'plateau-couple', icon: '🎲', route: 'jeuPlateau' },
     { type: 'jeu', key: 'qui-de-nous-deux', icon: '👀', route: 'jeuQuiDeNous' },
     { type: 'jeu', key: 'dilemmes', icon: '⚖️', route: 'jeuDilemmes' },
+    { type: 'jeu', key: 'pour-contre', icon: '👍', route: 'pourContre' },
   ];
 
   // Suggestions de fin de partie, choisies une par une pour chaque page.
@@ -899,12 +900,13 @@ var QuizEngine = (function() {
 
     // ── Jeux ────────────────────────────────────────────────────────────
     // Un jeu fini appelle un autre jeu, et surtout pas un test.
-    'tu-preferes':      ['jeuDilemmes', 'jeuActionVerite', 'quizMost'],
+    'tu-preferes':      ['jeuDilemmes', 'pourContre', 'jeuActionVerite'],
     'action-ou-verite': ['jeuActionVeriteHot', 'jeuGages', 'jeuPlateau'],
     'gage-couple':      ['jeuActionVerite', 'jeuActionVeriteHot', 'jeuPlateau'],
     'plateau-couple':   ['jeuActionVerite', 'jeuQuiDeNous', 'jeuDilemmes'],
     'qui-de-nous-deux': ['quizKnowledge', 'jeuDilemmes', 'zamours', 'quizMost'],
-    'dilemmes':         ['quizTuPreferes', 'jeuQuiDeNous', 'quizMost'],
+    'dilemmes':         ['pourContre', 'quizTuPreferes', 'jeuQuiDeNous'],
+    'pour-contre':      ['jeuDilemmes', 'quizTuPreferes', 'jeuQuiDeNous'],
   };
 
   function getRelatedQuizUrl(routeKey, lang) {
@@ -6309,22 +6311,27 @@ var QuizEngine = (function() {
     this.envoiEnCours = false;
     this.historique = [];
     this.totaux = null;         // comptes de tous les dilemmes, charges une fois
-    this.dejaVotes = lireVotesLocaux();
+    this.dejaVotes = lireVotesLocaux(DIL_CLE_VOTES);
     this.phase = 'intro';
     this.render();
   }
 
+  // ─── Infrastructure de vote, partagee par les jeux qui comptent les voix ──
+  // Les dilemmes et le pour ou contre posent la meme question au navigateur :
+  // qu'as-tu deja vote, et qui es-tu ? Les deux jeux tiennent chacun leur
+  // propre cle de stockage et leur propre sel, ils ne se melangent donc pas.
+
   // Les votes deja emis par ce navigateur. Ils servent a deux choses : ne pas
   // recompter quelqu'un qui recharge la page, et lui remontrer son propre
-  // choix quand il retombe sur un dilemme qu'il a deja tranche.
-  function lireVotesLocaux() {
-    try { return JSON.parse(localStorage.getItem(DIL_CLE_VOTES) || '{}') || {}; }
+  // choix quand il retombe sur une carte qu'il a deja tranchee.
+  function lireVotesLocaux(cle) {
+    try { return JSON.parse(localStorage.getItem(cle) || '{}') || {}; }
     catch (e) { return {}; }
   }
-  function ecrireVoteLocal(id, choix) {
+  function ecrireVoteLocal(cle, id, choix) {
     try {
-      var v = lireVotesLocaux(); v[id] = choix;
-      localStorage.setItem(DIL_CLE_VOTES, JSON.stringify(v));
+      var v = lireVotesLocaux(cle); v[id] = choix;
+      localStorage.setItem(cle, JSON.stringify(v));
     } catch (e) {}
   }
 
@@ -6332,15 +6339,18 @@ var QuizEngine = (function() {
   // privee, alors on le combine a l'adresse IP vue par le serveur, hachee
   // avant d'etre envoyee pour qu'aucune adresse ne soit stockee en clair.
   // C'est la contrainte d'unicite en base qui fait foi, pas ce fichier.
-  var _votant = null;
-  function identifiantVotant() {
-    if (_votant) return Promise.resolve(_votant);
+  //
+  // Le sel differe d'un jeu a l'autre, donc le meme visiteur ne porte pas le
+  // meme identifiant des deux cotes : rien ne permet de recouper ses votes.
+  var _votants = {};
+  function identifiantVotant(cleLocale, sel) {
+    if (_votants[sel]) return Promise.resolve(_votants[sel]);
     var local;
     try {
-      local = localStorage.getItem('dilemmes-votant');
+      local = localStorage.getItem(cleLocale);
       if (!local) {
         local = (Date.now().toString(36) + Math.random().toString(36).slice(2, 10));
-        localStorage.setItem('dilemmes-votant', local);
+        localStorage.setItem(cleLocale, local);
       }
     } catch (e) { local = 'x' + Math.random().toString(36).slice(2, 10); }
 
@@ -6351,11 +6361,10 @@ var QuizEngine = (function() {
       .then(function (r) { return r.json(); })
       .then(function (d) { return d && d.ip ? d.ip : local; })
       .catch(function () { return local; })
-      .then(hacher)
-      .then(function (h) { _votant = h; return h; });
+      .then(function (texte) { return hacher(sel, texte); })
+      .then(function (h) { _votants[sel] = h; return h; });
   }
-  function hacher(texte) {
-    var sel = 'quiz-couple-dilemmes:';
+  function hacher(sel, texte) {
     if (!(window.crypto && window.crypto.subtle && window.TextEncoder)) {
       // Repli sans SubtleCrypto (contexte non securise) : un hachage court
       // suffit, il ne protege rien d'autre que la lisibilite.
@@ -6369,6 +6378,39 @@ var QuizEngine = (function() {
         for (var i = 0; i < 16; i++) o += ('0' + v[i].toString(16)).slice(-2);
         return o;
       });
+  }
+
+  // Les deux camps sous forme de barre coupee en deux, chaque cote portant son
+  // nombre de voix et son pourcentage. Le remplissage part apres le premier
+  // rendu, sinon la barre arrive deja pleine et il n'y a pas d'animation.
+  // opts.prefixe donne les classes : {p}-camps, {p}-camp, {p}-camp--{suffixe},
+  // {p}-barre, {p}-barre-{suffixe}. Chaque jeu garde ainsi sa propre feuille
+  // de style sans que le balisage soit ecrit deux fois.
+  function blocDeuxCamps(opts) {
+    var p = opts.prefixe;
+    var camps = el('div', p + '-camps');
+    function cote(c) {
+      return '<div class="' + p + '-camp ' + p + '-camp--' + c.suffixe +
+          (c.sien ? ' est-le-votre' : '') + '">' +
+        '<span class="' + p + '-camp-lbl">' + c.emoji + ' ' + esc(c.libelle) + '</span>' +
+        '<span class="' + p + '-camp-pct">' + c.pct + '%</span>' +
+        '<span class="' + p + '-camp-nb">' + fmtNombre(c.voix, opts.lang) + ' ' +
+          esc(c.voix === 1 ? opts.voix1 : opts.voix) + '</span>' +
+      '</div>';
+    }
+    camps.innerHTML = cote(opts.a) + cote(opts.b);
+
+    var barre = el('div', p + '-barre');
+    barre.innerHTML = '<div class="' + p + '-barre-' + opts.a.suffixe + '" style="width:0%"></div>' +
+      '<div class="' + p + '-barre-' + opts.b.suffixe + '" style="width:0%"></div>';
+    setTimeout(function () {
+      var ea = barre.querySelector('.' + p + '-barre-' + opts.a.suffixe);
+      var eb = barre.querySelector('.' + p + '-barre-' + opts.b.suffixe);
+      if (ea) ea.style.width = opts.a.pct + '%';
+      if (eb) eb.style.width = opts.b.pct + '%';
+    }, 60);
+
+    return { camps: camps, barre: barre };
   }
 
   DilemmeGame.prototype.render = function () {
@@ -6475,7 +6517,7 @@ var QuizEngine = (function() {
     if (bouton) bouton.classList.add('est-choisi');
     this.choix = choix;
     this.historique.push({ id: d.id, choix: choix });
-    ecrireVoteLocal(d.id, choix);
+    ecrireVoteLocal(DIL_CLE_VOTES, d.id, choix);
     this.dejaVotes[d.id] = choix;
 
     // On compte le vote localement tout de suite : l'ecran de resultat ne doit
@@ -6484,7 +6526,7 @@ var QuizEngine = (function() {
     if (!this.totaux[d.id]) this.totaux[d.id] = { ok: 0, pasok: 0 };
     this.totaux[d.id][choix]++;
 
-    identifiantVotant().then(function (votant) {
+    identifiantVotant('dilemmes-votant', 'quiz-couple-dilemmes:').then(function (votant) {
       return fetch(SUPABASE_URL + '/rest/v1/dilemme_votes', {
         method: 'POST',
         headers: {
@@ -6526,23 +6568,16 @@ var QuizEngine = (function() {
     // Les deux camps. Une seule barre coupee en deux, chaque cote portant son
     // nombre de voix et son pourcentage : on voit d'un coup d'oeil de quel
     // cote penche la majorite, et si on est avec elle.
-    var camps = el('div', 'dil-camps');
-    camps.innerHTML =
-      '<div class="dil-camp dil-camp--ok' + (this.choix === DIL_OK ? ' est-le-votre' : '') + '">' +
-        '<span class="dil-camp-lbl">👍 ' + esc(this.tg('ok', 'OK')) + '</span>' +
-        '<span class="dil-camp-pct">' + pctOk + '%</span>' +
-        '<span class="dil-camp-nb">' + fmtNombre(c.ok, this.lang) + ' ' + esc(c.ok === 1 ? this.tg('voix1', 'voix') : this.tg('voix', 'voix')) + '</span>' +
-      '</div>' +
-      '<div class="dil-camp dil-camp--pasok' + (this.choix === DIL_NON ? ' est-le-votre' : '') + '">' +
-        '<span class="dil-camp-lbl">👎 ' + esc(this.tg('pasok', 'PAS OK')) + '</span>' +
-        '<span class="dil-camp-pct">' + pctNon + '%</span>' +
-        '<span class="dil-camp-nb">' + fmtNombre(c.pasok, this.lang) + ' ' + esc(c.pasok === 1 ? this.tg('voix1', 'voix') : this.tg('voix', 'voix')) + '</span>' +
-      '</div>';
-    wrap.appendChild(camps);
-
-    var barre = el('div', 'dil-barre');
-    barre.innerHTML = '<div class="dil-barre-ok" style="width:0%"></div><div class="dil-barre-pasok" style="width:0%"></div>';
-    wrap.appendChild(barre);
+    var duo = blocDeuxCamps({
+      prefixe: 'dil', lang: this.lang,
+      voix: this.tg('voix', 'voix'), voix1: this.tg('voix1', 'voix'),
+      a: { suffixe: 'ok', emoji: '👍', libelle: this.tg('ok', 'OK'),
+           pct: pctOk, voix: c.ok, sien: this.choix === DIL_OK },
+      b: { suffixe: 'pasok', emoji: '👎', libelle: this.tg('pasok', 'PAS OK'),
+           pct: pctNon, voix: c.pasok, sien: this.choix === DIL_NON }
+    });
+    wrap.appendChild(duo.camps);
+    wrap.appendChild(duo.barre);
 
     // Un seul votant, c'est le sien : la phrase doit rester au singulier.
     var phraseTotal = total === 1
@@ -6566,12 +6601,6 @@ var QuizEngine = (function() {
     wrap.appendChild(suite);
 
     this.container.appendChild(wrap);
-    // Le remplissage part apres le premier rendu, sinon il n'y a pas d'animation.
-    setTimeout(function () {
-      var o = barre.querySelector('.dil-barre-ok'), p = barre.querySelector('.dil-barre-pasok');
-      if (o) o.style.width = pctOk + '%';
-      if (p) p.style.width = pctNon + '%';
-    }, 60);
   };
 
   DilemmeGame.prototype.suivant = function () {
@@ -6660,6 +6689,309 @@ var QuizEngine = (function() {
     smoothScroll(wrap, 'center');
   };
 
+  // ═══════════════════════════════════════════════════════════
+  // POUR OU CONTRE
+  //
+  // Une proposition par carte, le couple tranche ensemble, et decouvre juste
+  // apres combien de couples ont dit pour et combien ont dit contre.
+  //
+  // A ne pas confondre avec les dilemmes, qui posent un marche en deux temps
+  // (« vous gagnez ceci MAIS vous perdez cela ») : ici la proposition tient en
+  // une ligne, et il n'y a rien a mettre en balance a part son propre avis.
+  // Les deux jeux partagent l'infrastructure de vote, pas leurs donnees.
+  // ═══════════════════════════════════════════════════════════
+  var PC_POUR = 'pour', PC_CONTRE = 'contre';
+  var PC_CLE_VOTES = 'pour-contre-votes';
+
+  function PourContreGame(config) {
+    this.container = config.container;
+    this.questions = shuffleArray(config.questions.slice());
+    this.lang = config.lang || 'fr';
+    this.idx = 0;
+    this.choix = null;
+    this.envoiEnCours = false;
+    this.historique = [];
+    this.totaux = null;         // comptes de toutes les cartes, charges une fois
+    this.dejaVotes = lireVotesLocaux(PC_CLE_VOTES);
+    this.phase = 'intro';
+    this.render();
+  }
+
+  PourContreGame.prototype.render = function () {
+    this.container.innerHTML = '';
+    if (this.phase === 'intro') this.renderIntro();
+    else if (this.phase === 'vote') this.renderVote();
+    else if (this.phase === 'resultat') this.renderResultat();
+    else if (this.phase === 'fin') this.renderFin();
+  };
+
+  PourContreGame.prototype.tg = function (cle, repli) { return tg('pourContre.' + cle, repli); };
+
+  PourContreGame.prototype.renderIntro = function () {
+    var self = this;
+    var ecran = ecranDepart({
+      icone: '👍',
+      titre: this.tg('introTitre', 'Pour ou contre ?'),
+      desc: this.tg('introTexte', 'Une proposition à la fois. Répondez ensemble, puis voyez ce que les autres couples en pensent.'),
+      meta: '🗳️ ' + this.questions.length + ' ' + this.tg('metaQuestions', 'propositions') +
+        ' &bull; ⏱ ' + this.tg('metaDuree', 'sans limite'),
+      bouton: this.tg('commencer', 'Première proposition'),
+      onStart: function () { self.phase = 'vote'; self.render(); }
+    });
+    this.container.appendChild(ecran.wrap);
+    // Les totaux servent a afficher les deux camps sans attendre apres chaque
+    // vote : on les charge une seule fois, pendant que l'ecran d'intro est la.
+    this.chargerTotaux();
+  };
+
+  PourContreGame.prototype.chargerTotaux = function () {
+    var self = this;
+    if (this._chargement) return this._chargement;
+    this._chargement = fetch(SUPABASE_URL + '/rest/v1/rpc/get_pour_contre_counts', {
+      method: 'POST',
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json' },
+      body: '{}'
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (lignes) {
+        var t = {};
+        if (Array.isArray(lignes)) {
+          lignes.forEach(function (l) {
+            t[l.question_id] = { pour: +l.pour || 0, contre: +l.contre || 0 };
+          });
+        }
+        self.totaux = t;
+        return t;
+      })
+      .catch(function () { self.totaux = {}; return {}; });
+    return this._chargement;
+  };
+
+  PourContreGame.prototype.questionCourante = function () { return this.questions[this.idx]; };
+
+  // La carte, identique sur l'ecran de vote et sur celui du resultat : le
+  // theme en petit, « Pour ou contre » en amorce, puis la proposition. Le
+  // « pour ou contre » n'est pas dans les donnees, il serait recopie soixante
+  // fois par langue pour rien.
+  PourContreGame.prototype.carte = function (q) {
+    var c = el('div', 'pc-carte');
+    if (q.theme) c.appendChild(el('span', 'pc-theme', esc(q.theme)));
+    c.appendChild(el('span', 'pc-amorce', esc(this.tg('amorce', 'Pour ou contre'))));
+    c.appendChild(el('p', 'pc-texte', esc(q.texte)));
+    return c;
+  };
+
+  PourContreGame.prototype.renderVote = function () {
+    var self = this;
+    var q = this.questionCourante();
+
+    // Une proposition deja tranchee depuis ce navigateur : on montre
+    // directement le resultat plutot que de laisser voter une deuxieme fois.
+    if (this.dejaVotes[q.id]) {
+      this.choix = this.dejaVotes[q.id];
+      this.phase = 'resultat';
+      this.render();
+      return;
+    }
+
+    var wrap = el('div', 'quiz-engine pc-jeu quiz-question-enter');
+    wrap.appendChild(this.carte(q));
+    wrap.appendChild(el('p', 'pc-consigne', esc(this.tg('consigne', 'Décidez ensemble, à voix haute.'))));
+
+    var choix = el('div', 'pc-choix');
+    [[PC_POUR, this.tg('pour', 'POUR'), '👍'], [PC_CONTRE, this.tg('contre', 'CONTRE'), '👎']].forEach(function (c) {
+      var b = el('button', 'pc-choix-btn pc-choix-btn--' + c[0]);
+      b.type = 'button';
+      b.innerHTML = '<span class="pc-choix-emoji">' + c[2] + '</span><span class="pc-choix-txt">' + esc(c[1]) + '</span>';
+      b.addEventListener('click', function () { self.voter(c[0], b); });
+      choix.appendChild(b);
+    });
+    wrap.appendChild(choix);
+
+    var passer = el('button', 'pc-passer', esc(this.tg('passer', 'Passer cette proposition')));
+    passer.type = 'button';
+    passer.addEventListener('click', function () { self.suivant(); });
+    wrap.appendChild(passer);
+
+    this.container.appendChild(wrap);
+  };
+
+  PourContreGame.prototype.voter = function (choix, bouton) {
+    var self = this;
+    if (this.envoiEnCours) return;
+    this.envoiEnCours = true;
+    var q = this.questionCourante();
+    if (bouton) bouton.classList.add('est-choisi');
+    this.choix = choix;
+    this.historique.push({ id: q.id, choix: choix });
+    ecrireVoteLocal(PC_CLE_VOTES, q.id, choix);
+    this.dejaVotes[q.id] = choix;
+
+    // On compte le vote localement tout de suite : l'ecran de resultat ne doit
+    // pas attendre le reseau, et un envoi qui echoue ne doit pas bloquer le jeu.
+    if (!this.totaux) this.totaux = {};
+    if (!this.totaux[q.id]) this.totaux[q.id] = { pour: 0, contre: 0 };
+    this.totaux[q.id][choix]++;
+
+    identifiantVotant('pour-contre-votant', 'quiz-couple-pour-contre:').then(function (votant) {
+      return fetch(SUPABASE_URL + '/rest/v1/pour_contre_votes', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json', 'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ question_id: q.id, choix: choix, lang: self.lang, votant: votant })
+      });
+    }).catch(function () {});
+
+    setTimeout(function () {
+      self.envoiEnCours = false;
+      self.phase = 'resultat';
+      self.render();
+    }, 320);
+  };
+
+  PourContreGame.prototype.renderResultat = function () {
+    var self = this;
+    var q = this.questionCourante();
+    var c = (this.totaux && this.totaux[q.id]) || { pour: 0, contre: 0 };
+    var total = c.pour + c.contre;
+    // Sans aucun vote connu, le sien compte quand meme : la barre ne doit
+    // jamais s'afficher vide sous les yeux de celui qui vient de voter.
+    if (total === 0) { c = { pour: this.choix === PC_POUR ? 1 : 0, contre: this.choix === PC_CONTRE ? 1 : 0 }; total = 1; }
+    var pctPour = Math.round((c.pour / total) * 100);
+    var pctContre = 100 - pctPour;
+
+    var wrap = el('div', 'quiz-engine pc-jeu pc-jeu--resultat quiz-question-enter');
+    wrap.appendChild(this.carte(q));
+
+    // La phrase entiere vient de la traduction : l'espace avant le deux-points
+    // est une regle francaise, l'anglais, l'espagnol, l'allemand et l'italien
+    // ne la suivent pas et recollaient un espace en trop.
+    wrap.appendChild(el('p', 'pc-votre-choix',
+      esc(this.tg('votreReponse', 'Votre réponse : {{r}}'))
+        .replace('{{r}}', '<strong>' + esc(this.choix === PC_POUR ? this.tg('pour', 'POUR') : this.tg('contre', 'CONTRE')) + '</strong>')));
+
+    var duo = blocDeuxCamps({
+      prefixe: 'pc', lang: this.lang,
+      voix: this.tg('voix', 'voix'), voix1: this.tg('voix1', 'voix'),
+      a: { suffixe: 'pour', emoji: '👍', libelle: this.tg('pour', 'POUR'),
+           pct: pctPour, voix: c.pour, sien: this.choix === PC_POUR },
+      b: { suffixe: 'contre', emoji: '👎', libelle: this.tg('contre', 'CONTRE'),
+           pct: pctContre, voix: c.contre, sien: this.choix === PC_CONTRE }
+    });
+    wrap.appendChild(duo.camps);
+    wrap.appendChild(duo.barre);
+
+    // Un seul votant, c'est le sien : la phrase doit rester au singulier.
+    var phraseTotal = total === 1
+      ? this.tg('surTotal1', 'Vous êtes le premier couple à trancher cette proposition')
+      : this.tg('surTotal', '{{n}} couples ont tranché cette proposition').replace('{{n}}', fmtNombre(total, this.lang));
+    wrap.appendChild(el('p', 'pc-total', esc(phraseTotal)));
+
+    var suite = el('div', 'pc-suite');
+    var dernier = this.idx + 1 >= this.questions.length;
+    var suivant = el('button', 'btn btn-cta pc-suivant',
+      esc(dernier ? this.tg('voirBilan', 'Voir notre bilan') : this.tg('suivant', 'Proposition suivante')));
+    suivant.type = 'button';
+    suivant.addEventListener('click', function () { self.suivant(); });
+    suite.appendChild(suivant);
+    if (this.historique.length >= 3 && !dernier) {
+      var arret = el('button', 'pc-arret', esc(this.tg('arreter', 'Arrêter et voir notre bilan')));
+      arret.type = 'button';
+      arret.addEventListener('click', function () { self.phase = 'fin'; self.render(); });
+      suite.appendChild(arret);
+    }
+    wrap.appendChild(suite);
+
+    this.container.appendChild(wrap);
+  };
+
+  PourContreGame.prototype.suivant = function () {
+    if (this.idx + 1 >= this.questions.length) { this.phase = 'fin'; this.render(); return; }
+    this.idx++;
+    this.choix = null;
+    this.phase = 'vote';
+    this.render();
+    smoothScroll(this.container, 'start');
+  };
+
+  // Le bilan porte sur tous les votes enregistres par ce navigateur, pas sur
+  // la seule session en cours : quelqu'un qui revient finir les dernieres
+  // propositions verrait sinon « 1 POUR sur 1 ».
+  PourContreGame.prototype.bilan = function () {
+    var self = this, n = 0, pours = 0;
+    this.questions.forEach(function (q) {
+      var v = self.dejaVotes[q.id];
+      if (!v) return;
+      n++;
+      if (v === PC_POUR) pours++;
+    });
+    return { n: n, pours: pours, pct: n ? Math.round((pours / n) * 100) : 0 };
+  };
+
+  PourContreGame.prototype.renderFin = function () {
+    var self = this;
+    var b = this.bilan();
+    var n = b.n, pours = b.pours, pct = b.pct;
+    var palier = pct >= 75 ? 4 : pct >= 50 ? 3 : pct >= 25 ? 2 : 1;
+
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    var resultat = el('div', 'quiz-reveal-enter');
+    var entete = el('div', 'qr-entete');
+    var anneau = el('div', 'qr-score');
+    anneau.innerHTML = renderScoreRing(pct);
+    entete.appendChild(anneau);
+    entete.appendChild(el('p', 'qr-score-label',
+      esc(this.tg('bilanDetail', '{{pour}} POUR sur {{n}} propositions tranchées')
+        .replace('{{pour}}', pours).replace('{{n}}', n))));
+    resultat.appendChild(entete);
+
+    // Etre alle au bout des soixante merite d'etre dit, et c'est le seul
+    // moment ou le nombre total a un sens : pendant la partie, personne ne
+    // joue pour atteindre un compteur.
+    var toutFait = n >= this.questions.length;
+    if (toutFait) {
+      var bravo = el('div', 'pc-bravo');
+      bravo.appendChild(el('span', 'pc-bravo-emoji', '🎉'));
+      bravo.appendChild(el('p', 'pc-bravo-titre', esc(this.tg('bravoTitre', 'Bravo, et merci !'))));
+      bravo.appendChild(el('p', 'pc-bravo-texte',
+        esc(this.tg('bravoTexte', 'Vous avez tranché toutes les propositions. Vos votes comptent maintenant dans les pourcentages que verront les prochains couples.'))));
+      var urlSuite = getRelatedQuizUrl('jeuDilemmes', this.lang);
+      if (urlSuite && urlSuite !== '/') {
+        var lien = el('a', 'btn btn-outline pc-bravo-suite', esc(this.tg('bravoSuite', 'Enchaînez sur les dilemmes')));
+        lien.href = urlSuite;
+        bravo.appendChild(lien);
+      }
+      resultat.appendChild(bravo);
+    }
+
+    resultat.appendChild(el('h3', 'qr-title', esc(this.tg('palier' + palier + 'Titre', ''))));
+    resultat.appendChild(el('p', 'qr-desc', esc(this.tg('palier' + palier + 'Texte', ''))));
+
+    var avis = el('div', 'quiz-reveal-enter');
+    avis.appendChild(pcReviewForm(this.lang));
+    var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
+    var apres = el('div', 'qr-right quiz-reveal-enter');
+    renderRelatedQuizzes(apres, quizEl ? quizEl.dataset.quiz : '', this.lang);
+
+    dispositionResultat(wrap, {
+      resultat: resultat,
+      actions: zoneActions({
+        share: { type: 'solo', score: pours, total: n, pct: pct, verdict: this.tg('palier' + palier + 'Titre', '') },
+        restart: function () {
+          self.questions = shuffleArray(self.questions);
+          self.idx = 0; self.choix = null; self.historique = [];
+          self.phase = 'intro'; self.render(); smoothScroll(self.container, 'start');
+        }
+      }),
+      avis: avis,
+      suite: apres
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   // Un nombre lisible : 1 240 plutot que 1240.
   function fmtNombre(n, lang) {
     try { return Number(n).toLocaleString(lang === 'en' ? 'en-US' : lang); }
@@ -6691,6 +7023,7 @@ var QuizEngine = (function() {
     BoardGame: BoardGame,
     DuoVoteGame: DuoVoteGame,
     DilemmeGame: DilemmeGame,
+    PourContreGame: PourContreGame,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,

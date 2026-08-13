@@ -221,10 +221,10 @@
     "metaDescription": "Bin ich verliebt oder nur angezogen? 20 Fragen, die Liebe von Schwärmerei trennen. Gratis Test, sofortiges Ergebnis, ohne Anmeldung."
   },
   "jeuxCouple": {
-    "title": "Paarspiele online: 7 kostenlose Spiele für zu zweit",
+    "title": "Paarspiele online: 8 kostenlose Spiele für zu zweit",
     "shortTitle": "Paarspiele",
-    "description": "Sieben Spiele für zu zweit: Wer von uns beiden, Was würdest du lieber, die Dilemmas, Wahrheit oder Pflicht, die versaute Version, das Pfänderrad und das Brettspiel.",
-    "metaDescription": "7 kostenlose Paarspiele auf einem einzigen Handy: Wer von uns beiden, Was würdest du lieber, die Dilemmas, Wahrheit oder Pflicht, das Pfänderrad und das Brettspiel. Ohne Anmeldung."
+    "description": "Acht Spiele für zu zweit: Dafür oder dagegen, Wer von uns beiden, Was würdest du lieber, die Dilemmas, Wahrheit oder Pflicht, die pikante Version, das Strafenrad und das Brettspiel.",
+    "metaDescription": "8 kostenlose Paarspiele auf einem Handy: Dafür oder dagegen, Wer von uns beiden, Was würdest du lieber, die Dilemmas und Wahrheit oder Pflicht. Ohne Anmeldung."
   },
   "jeuGages": {
     "title": "Strafen für Paare: das Glücksrad-Spiel mit 140 Strafen",
@@ -261,5 +261,11 @@
     "shortTitle": "Paar-Dilemmata",
     "metaDescription": "100 Dilemmata, die ihr zu zweit entscheidet: ein Vorteil, ein ABER, und ihr sagt OK oder auf keinen Fall. Danach seht ihr, wie alle anderen Paare abgestimmt haben. Kostenlos, ohne Anmeldung.",
     "description": "Ein Vorteil, ein Haken, und ihr entscheidet gemeinsam. Danach seht ihr die Stimmen aller anderen Paare."
+  },
+  "pourContre": {
+    "title": "Dafür oder dagegen als Paar | Kostenloses Onlinespiel",
+    "shortTitle": "Dafür oder dagegen",
+    "metaDescription": "60 Aussagen für Paare: Haustier, Haus, Hochzeit, Urlaub. Ihr antwortet DAFÜR oder DAGEGEN und seht, wie andere Paare abgestimmt haben. Kostenlos.",
+    "description": "Eine Aussage, zwei Lager. Ihr entscheidet gemeinsam und erfahrt danach, wie andere Paare abgestimmt haben."
   }
 }

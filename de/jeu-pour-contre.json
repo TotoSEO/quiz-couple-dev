@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "badge": "Zu zweit · 60 Aussagen",
+    "title": "Dafür oder dagegen: das Paarspiel",
+    "titleHighlight": "Dafür oder dagegen",
+    "description": "Sechzig Aussagen, die ihr gemeinsam entscheidet, vom Abendessen heute bis zum Hauskauf. Ihr antwortet DAFÜR oder DAGEGEN und seht danach, wie andere Paare abgestimmt haben."
+  },
+  "jsonLd": {
+    "name": "Dafür oder dagegen: das Paarspiel"
+  },
+  "section1": {
+    "title": "Die Regeln des Spiels dafür oder dagegen für Paare",
+    "intro": "Es gibt nichts vorzubereiten und nichts zu installieren. Eine Aussage erscheint, ihr beide entscheidet, und weiter geht es zur nächsten.",
+    "etape1Titre": "Setzt euch nebeneinander",
+    "etape1Texte": "Es wird immer nur eine Aussage angezeigt, auf einem einzigen Handy. Lest sie laut vor, damit die Frage bei euch beiden im selben Moment ankommt.",
+    "etape2Titre": "Entscheidet gemeinsam",
+    "etape2Texte": "Ihr stimmt nicht getrennt ab: Ziel ist eine gemeinsame Antwort, DAFÜR oder DAGEGEN. Das Gespräch auf dem Weg dorthin ist das eigentliche Spiel.",
+    "etape3Titre": "Seht, wie die anderen abgestimmt haben",
+    "etape3Texte": "Sobald ihr entschieden habt, erscheinen beide Lager mit Prozentzahl und Stimmenzahl. Ihr wisst sofort, ob ihr auf der Seite der Mehrheit steht.",
+    "etape4Titre": "Weitermachen oder aufhören",
+    "etape4Texte": "Die nächste Aussage kommt sofort. Ihr könnt jederzeit aufhören und eure Bilanz ansehen, oder bis zur sechzigsten durchziehen.",
+    "apres": "Es läuft wie bei den anderen <a href=\"/de/paarspiele/\">Paarspielen</a> auf der Seite: nichts installieren, nichts anlegen, Seite öffnen und spielen. Eure Antwort wird ohne euren Namen gespeichert, ausschließlich für die Prozentzahlen, die das nächste Paar sieht."
+  },
+  "section2": {
+    "title": "Warum ist dieses Spiel gut?",
+    "p1": "Ganz einfach, weil es euch vor Situationen stellt, die euch wirklich begegnen werden. Vielleicht kauft ihr eines Tages ein Haus. Oder eben nicht, weil ihr Wohnungsmenschen seid, und ihr habt das gerade in dreißig Sekunden herausgefunden statt in fünf Jahren darüber zu reden.",
+    "p2": "Ein Haustier, ein gemeinsames Konto, ein Umzug, eine Hochzeit: Das sind die Themen, die man vor sich herschiebt, weil es nie einen guten Moment gibt, sie anzuschneiden. Eine zufällig gezogene Aussage übernimmt das für euch, und keiner von beiden sieht so aus, als hätte er das Thema absichtlich aufgebracht.",
+    "p3": "Und weil die Stimmen der anderen Paare direkt nach eurer erscheinen, seht ihr, ob eure Antwort die übliche ist oder ob ihr die Einzigen seid, die so denken. Das allein ist oft ein zweites Gespräch wert."
+  },
+  "section3": {
+    "title": "Von leichten Themen bis zu den großen Entscheidungen",
+    "intro": "Manche Aussagen sind zum Lachen da oder um zu klären, was ihr heute Abend macht. Andere landen auf deutlich schwererem Boden: Urlaub, Wohnen, Geld, Heiraten, Kinder, Haustiere, gemeinsame Pläne. Für jedes Paar und jede Phase einer Beziehung ist etwas dabei.",
+    "headerTheme": "Thema",
+    "headerExemple": "Beispielaussage",
+    "apres": "Wenn eine Aussage euch beide zögern lässt, fehlt meist der Preis dahinter: Die <a href=\"/de/dilemmata-fuer-paare/\">Dilemmata für Paare</a> stellen den Vorteil und seinen Preis auf dieselbe Karte."
+  },
+  "familles": {
+    "projetsTitre": "Pläne und Zukunft",
+    "projetsExemple": "Ein Haus kaufen",
+    "vacancesTitre": "Urlaub und Ausflüge",
+    "vacancesExemple": "Reisen, ohne alles zu planen",
+    "coupleTitre": "Leben als Paar",
+    "coupleExemple": "Die Passwörter teilen",
+    "quotidienTitre": "Alltag",
+    "quotidienExemple": "Heute Abend Essen bestellen statt zu kochen",
+    "momentsTitre": "Momente zu zweit",
+    "momentsExemple": "Das erste Date noch einmal nachspielen",
+    "discuterTitre": "Themen, die Diskussionen auslösen",
+    "discuterExemple": "Den Ex in den Kontakten behalten"
+  },
+  "section4": {
+    "title": "Was tun, wenn ihr euch nicht einig seid?",
+    "p1": "Nichts Besonderes. Uneinigkeit bei einer Aussage ist kein Beziehungsproblem, sondern eine Information. Ihr habt gerade etwas erfahren, das ihr besser jetzt wisst als in drei Jahren, vor einem Notar oder einem Koffer.",
+    "p2": "Der nützliche Reflex ist, nach dem Warum zu fragen, bevor man die eigene Position verteidigt. «Dagegen» heißt nicht dasselbe, je nachdem ob jemand Angst vor dem Kredit hat, seine Stadt nicht verlassen will oder schlicht nie einen Hund hatte. Der Grund ist immer interessanter als die Antwort.",
+    "p3": "Und wenn ein Thema wirklich hochkocht, überspringt die Aussage und kommt später darauf zurück. Das Spiel verlangt keine echte Entscheidung. Wenn dieselbe Uneinigkeit immer wieder auftaucht, bringt eine Runde <a href=\"/de/fragen-fuer-paare/\">Fragen, die man sich als Paar stellt</a> oft ans Licht, was darunter klemmt."
+  },
+  "section5": {
+    "title": "Eine Runde, dann noch eine",
+    "p1": "Dafür oder dagegen funktioniert auf dem Sofa an einem Sonntagabend genauso gut wie im Auto oder im Wartezimmer. Eine Aussage dauert zehn Sekunden, eine ganze Runde so lange, wie ihr ihr geben wollt.",
+    "p2": "Und wenn ihr alle sechzig entschieden habt, bleibt noch alles andere.",
+    "cta": "Alle Paarspiele ansehen"
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Wie spielt man dafür oder dagegen als Paar?",
+    "a1": "Eine Aussage erscheint, zum Beispiel «ein Haustier anschaffen». Ihr beide besprecht sie und antwortet gemeinsam DAFÜR oder DAGEGEN, auf demselben Handy. Direkt danach erscheint die Prozentzahl der anderen Paare, dann geht es zur nächsten Aussage.",
+    "q2": "Wie viele Aussagen gibt es?",
+    "a2": "Sechzig, verteilt auf sechs Themen: Pläne und Zukunft, Urlaub und Ausflüge, Leben als Paar, Alltag, Momente zu zweit, und eine Reihe von Themen, die wirklich Diskussionen auslösen. Sie kommen in jeder Runde in anderer Reihenfolge.",
+    "q3": "Muss man zu zweit sein?",
+    "a3": "Es ist für zwei gemacht, ja. Das Spiel fragt nie, wer antwortet: Ihr entscheidet gemeinsam, und genau das bringt die Gespräche hervor. Nichts hindert euch daran, die Aussagen allein durchzusehen, aber der Sinn geht dabei verloren.",
+    "q4": "Ist das Spiel kostenlos?",
+    "a4": "Ja, vollständig, ohne Konto und ohne Installation. Ihr öffnet die Seite und spielt.",
+    "q5": "Woher kommen die angezeigten Prozentzahlen?",
+    "a5": "Von den Paaren, die vor euch gespielt haben. Jede Antwort wird ohne jede persönliche Angabe gespeichert, nur um die Verteilung zwischen DAFÜR und DAGEGEN zu berechnen. Ein Paar kann pro Aussage nur einmal abstimmen.",
+    "q6": "Kann man mehrmals spielen?",
+    "a6": "Ja. Die Aussagen werden in jeder Runde in anderer Reihenfolge gezogen. Die bereits entschiedenen zeigen euch direkt das Ergebnis, statt euch zweimal abstimmen zu lassen.",
+    "q7": "Eignet sich das Spiel für ein Paar, das sich gerade erst kennengelernt hat?",
+    "a7": "Sogar sehr gut. Die Themen zu Alltag und Ausflügen lassen sich beantworten, ohne sich zu irgendetwas zu verpflichten, und die großen Entscheidungen geben ein ziemlich klares Bild davon, was sich jeder vorstellt. Das sagt oft mehr als ein langes Gespräch über die Zukunft."
+  }
+}

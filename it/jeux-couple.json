@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "7 giochi • Gratis • Senza registrazione",
+    "badge": "8 giochi • Gratis • Senza registrazione",
     "title": "I nostri giochi da fare in due, pronti con un tocco",
     "titleHighlight": "da fare in due",
-    "description": "Sette giochi che partono su un solo telefono fra voi due, senza account e senza installare nulla."
+    "description": "Otto giochi che partono su un solo telefono fra voi due, senza account e senza installare nulla."
   },
   "stats": {
-    "jeux": "7",
+    "jeux": "8",
     "jeuxLabel": "giochi in due",
     "cartes": "390",
     "cartesLabel": "carte, penitenze e dilemmi",
@@ -54,13 +54,18 @@
     "dilemmesTagline": "Un vantaggio, un MA, e decidete in due",
     "dilemmesJoueurs": "2 giocatori",
     "dilemmesDuree": "10 min",
-    "dilemmesContenu": "100 dilemmi e il voto di tutte le altre coppie"
+    "dilemmesContenu": "100 dilemmi e il voto di tutte le altre coppie",
+    "pourContreNom": "Pro o contro",
+    "pourContreTagline": "Una proposta, decidete, vedete il voto degli altri",
+    "pourContreJoueurs": "2 giocatori",
+    "pourContreDuree": "10 min",
+    "pourContreContenu": "60 proposte e il voto di tutte le altre coppie"
   },
   "section1": {
     "title": "Che cosa cambia un gioco in due in una serata",
     "p1": "Un <strong class=\"text-foreground\">gioco di coppia</strong> sembra una sciocchezza. Eppure risolve un problema molto concreto: in due si finisce sempre per girare attorno agli stessi argomenti. La giornata, il lavoro, cosa si mangia stasera… Un gioco impone una cornice, e quella cornice dà il permesso di fare domande che di punto in bianco non si farebbero mai.",
     "p2": "È anche il motivo per cui un gioco funziona meglio di un film quando volete davvero ritrovarvi. Davanti a uno schermo siete due persone affiancate che guardano altrove. Attorno a un gioco siete due persone che si guardano. La differenza si sente dopo dieci minuti.",
-    "p3": "I sette giochi di questa pagina si giocano online, gratis, su un solo telefono. Niente da creare, niente da installare, niente da preparare."
+    "p3": "Gli otto giochi di questa pagina si giocano online, gratis, su un solo telefono. Niente da creare, niente da installare, niente da preparare."
   },
   "section2": {
     "title": "Quale gioco scegliere a seconda del momento",
@@ -79,7 +84,11 @@
     "row5Moment": "Una vera serata in due, senza altri schermi accesi",
     "row5Pourquoi": "L'unico che dura trenta minuti e che si vince. Un tabellone, un dado e un motivo per andare fino in fondo.",
     "row6Moment": "Una cena in due o l'aperitivo prima che arrivino gli ospiti",
-    "row6Pourquoi": "Bastano cinque minuti, e ogni disaccordo rilancia la conversazione da solo. Il più rapido da tirare fuori."
+    "row6Pourquoi": "Bastano cinque minuti, e ogni disaccordo rilancia la conversazione da solo. Il più rapido da tirare fuori.",
+    "row7Moment": "Un tema serio, senza pesantezza",
+    "row7Pourquoi": "Ogni scambio mette un guadagno contro un prezzo, quindi non c'è mai una risposta giusta. È lì che si scopre quanto l'altro è disposto a pagare.",
+    "row8Moment": "Una decisione che rimandate da mesi",
+    "row8Pourquoi": "Le proposte vanno dalla cena di stasera all'acquisto di una casa. Il tema arriva da solo, nessuno dei due ha dovuto sollevarlo."
   },
   "section3": {
     "title": "Come far funzionare una serata di giochi in due",

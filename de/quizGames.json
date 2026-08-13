@@ -342,7 +342,9 @@
     "testDateNaissance": "Kompatibilitätstest nach Geburtsdatum",
     "testCouche": "Test mit jemand anderem geschlafen",
     "testSecret": "Test liebt er oder sie mich heimlich",
-    "testDistanceAime": "Test liebt er mich noch Fernbeziehung"
+    "testDistanceAime": "Test liebt er mich noch Fernbeziehung",
+    "pourContre": "Dafür oder dagegen",
+    "jeuDilemmes": "Paar-Dilemmata"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
@@ -563,5 +565,37 @@
     "introQuestion": "Du fragst dich:",
     "introQuote": "« Liebt er oder sie mich noch… oder ist es nur die Entfernung? »",
     "disclaimer": "Antworte mit Blick auf die letzten Wochen, nicht auf den Anfang eurer Geschichte."
+  },
+  "pourContre": {
+    "introTitre": "Dafür oder dagegen?",
+    "introTexte": "Sechzig Aussagen, die ihr zu zweit entscheidet. Antwortet gemeinsam und seht danach, wie andere Paare abgestimmt haben.",
+    "metaQuestions": "Aussagen",
+    "metaDuree": "ohne Zeitlimit",
+    "commencer": "Erste Aussage",
+    "amorce": "Dafür oder dagegen",
+    "consigne": "Entscheidet gemeinsam, laut ausgesprochen.",
+    "pour": "DAFÜR",
+    "contre": "DAGEGEN",
+    "passer": "Diese Aussage überspringen",
+    "votreReponse": "Eure Antwort: {{r}}",
+    "voix": "Stimmen",
+    "voix1": "Stimme",
+    "surTotal": "{{n}} Paare haben diese Aussage entschieden",
+    "surTotal1": "Ihr seid das erste Paar, das diese Aussage entscheidet",
+    "suivant": "Nächste Aussage",
+    "voirBilan": "Unsere Bilanz ansehen",
+    "arreter": "Aufhören und Bilanz ansehen",
+    "bilanDetail": "{{pour}} mal DAFÜR bei {{n}} entschiedenen Aussagen",
+    "palier1Titre": "Ihr sagt zu fast allem Nein",
+    "palier1Texte": "Fast jede Aussage ist dorthin zurück, wo sie herkam. Ihr wisst, was ihr nicht wollt, und das ist bereits eine klare Antwort auf die Frage, wie ihr leben möchtet.",
+    "palier2Titre": "Schwer zu überzeugen",
+    "palier2Texte": "Es braucht viel, um euch ein Ja zu entlocken. Ihr bevorzugt, was ihr schon kennt, und das erspart euch so manche böse Überraschung.",
+    "palier3Titre": "Eher dabei",
+    "palier3Texte": "Ihr sagt öfter Ja als Nein, ohne mit geschlossenen Augen zu unterschreiben. Ein gutes Gleichgewicht zwischen Lust auf Neues und Bodenhaftung.",
+    "palier4Titre": "Ihr sagt zu fast allem Ja",
+    "palier4Texte": "Ein Haustier, ein Haus, ein Umzug ins Ausland: Ihr seid dabei. Das ist eine schöne Energie zu zweit, solange ihr ab und zu das Kleingedruckte lest.",
+    "bravoTitre": "Bravo, und danke!",
+    "bravoTexte": "Ihr habt alle sechzig Aussagen entschieden. Eure Stimmen zählen jetzt in den Prozentzahlen, die die nächsten Paare sehen.",
+    "bravoSuite": "Weiter zu den Dilemmata"
   }
 }

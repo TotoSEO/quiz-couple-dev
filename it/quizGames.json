@@ -342,7 +342,9 @@
     "testDateNaissance": "Test di compatibilità per data di nascita",
     "testCouche": "Test è andato a letto con un'altra persona",
     "testSecret": "Test mi ama in segreto",
-    "testDistanceAime": "Test mi ama ancora a distanza"
+    "testDistanceAime": "Test mi ama ancora a distanza",
+    "pourContre": "Pro o contro",
+    "jeuDilemmes": "Dilemmi di coppia"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
@@ -563,5 +565,37 @@
     "introQuestion": "Ti stai chiedendo:",
     "introQuote": "«Mi ama ancora… o è solo la distanza?»",
     "disclaimer": "Rispondi pensando alle ultime settimane, non all'inizio della vostra storia."
+  },
+  "pourContre": {
+    "introTitre": "Pro o contro?",
+    "introTexte": "Sessanta proposte da decidere in due. Rispondete insieme, poi scoprite come hanno votato le altre coppie.",
+    "metaQuestions": "proposte",
+    "metaDuree": "senza limiti",
+    "commencer": "Prima proposta",
+    "amorce": "Pro o contro",
+    "consigne": "Decidete insieme, ad alta voce.",
+    "pour": "PRO",
+    "contre": "CONTRO",
+    "passer": "Salta questa proposta",
+    "votreReponse": "La vostra risposta: {{r}}",
+    "voix": "voti",
+    "voix1": "voto",
+    "surTotal": "{{n}} coppie hanno deciso questa proposta",
+    "surTotal1": "Siete la prima coppia a decidere questa proposta",
+    "suivant": "Proposta successiva",
+    "voirBilan": "Vedi il nostro bilancio",
+    "arreter": "Fermarsi e vedere il bilancio",
+    "bilanDetail": "{{pour}} PRO su {{n}} proposte decise",
+    "palier1Titre": "Dite di no a quasi tutto",
+    "palier1Texte": "Quasi tutte le proposte sono tornate da dove venivano. Sapete cosa non volete, ed è già una risposta chiara sulla vita che avete voglia di fare.",
+    "palier2Titre": "Difficili da convincere",
+    "palier2Texte": "Ci vuole molto per farvi dire sì. Preferite quello che conoscete già, e questo vi evita parecchie brutte sorprese.",
+    "palier3Titre": "Piuttosto disponibili",
+    "palier3Texte": "Dite sì più spesso di no, senza firmare a occhi chiusi. Un buon equilibrio tra la voglia di provare e il senso pratico.",
+    "palier4Titre": "Dite di sì a quasi tutto",
+    "palier4Texte": "Un animale, una casa, una partenza all'estero: ci state. È una bella energia in due, a patto di rileggere le clausole ogni tanto.",
+    "bravoTitre": "Bravi, e grazie!",
+    "bravoTexte": "Avete deciso tutte e sessanta le proposte. I vostri voti contano ora nelle percentuali che vedranno le prossime coppie.",
+    "bravoSuite": "Continuate con i dilemmi"
   }
 }

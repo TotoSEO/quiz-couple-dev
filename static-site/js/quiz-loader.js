@@ -119,6 +119,18 @@
     // entre deux options : ici il n'y a qu'une proposition sur la table. ──
     'dilemmes':                { prefix: 'dilemmes', engine: 'dilemme', totalQ: 0, pool: 0, textOnly: true },
 
+    // ── Pour ou contre : une proposition, deux camps, et les pourcentages
+    // des couples qui sont passés avant. Les familles sont déclarées ici avec
+    // leur effectif parce que l'identifiant envoyé en base est la position
+    // dans cette liste : la première proposition de « projets » est la n° 1,
+    // la dernière de « discuter » est la n° 60, et ça ne doit pas bouger. ──
+    'pour-contre':             { prefix: 'pourContre', engine: 'pour-contre', totalQ: 0, pool: 0, textOnly: true,
+                                 familles: [
+                                   { id: 'projets', n: 12 }, { id: 'vacances', n: 10 },
+                                   { id: 'couple', n: 10 }, { id: 'quotidien', n: 10 },
+                                   { id: 'moments', n: 8 }, { id: 'discuter', n: 10 }
+                                 ] },
+
     // ── Suis-je amoureux (solo, ascendant : plus de signes = plus de points) ──
     'suis-je-amoureux': { prefix: 'suisjeamoureux', engine: 'solo', totalQ: 20, pool: 20, quizType: 'suisjeamoureux', ascending: true },
 
@@ -337,6 +349,35 @@
         return;
       }
       new QuizEngine.DilemmeGame({ container: container, prefix: config.prefix, lang: lang, dilemmes: dilemmes });
+      return;
+    }
+
+    // Pour ou contre : les propositions sont rangées par famille, mais leur
+    // identifiant est leur rang global, indépendant de la famille. Il est
+    // incrémenté avant la vérification du texte pour qu'une traduction
+    // manquante décale les votes de personne.
+    if (config.engine === 'pour-contre') {
+      var famillesPC = config.familles || [];
+      var propositions = [], rang = 0;
+      famillesPC.forEach(function(f) {
+        var cleTheme = config.prefix + '.theme_' + f.id;
+        var theme = QuizEngine.tgd(cleTheme, null);
+        if (!theme || theme === cleTheme) theme = '';
+        for (var pi = 1; pi <= f.n; pi++) {
+          rang++;
+          var clePC = config.prefix + '.' + f.id + pi;
+          var textePC = QuizEngine.tgd(clePC, null);
+          if (!textePC || textePC === clePC) continue;
+          propositions.push({ id: rang, texte: textePC, theme: theme });
+        }
+      });
+      if (propositions.length === 0) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      new QuizEngine.PourContreGame({ container: container, prefix: config.prefix, lang: lang, questions: propositions });
       return;
     }
 

@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "7 Spiele • Kostenlos • Ohne Anmeldung",
+    "badge": "8 Spiele • Kostenlos • Ohne Anmeldung",
     "title": "Unsere Spiele für zu zweit, in einem Tipp startklar",
     "titleHighlight": "für zu zweit",
-    "description": "Sieben Spiele, die auf einem einzigen Handy zwischen euch beiden starten, ohne Konto und ohne Installation."
+    "description": "Acht Spiele, die auf einem einzigen Handy zwischen euch beiden starten, ohne Konto und ohne Installation."
   },
   "stats": {
-    "jeux": "7",
+    "jeux": "8",
     "jeuxLabel": "Spiele zu zweit",
     "cartes": "390",
     "cartesLabel": "Karten, Strafen und Dilemmas",
@@ -54,13 +54,18 @@
     "dilemmesTagline": "Ein Vorteil, ein ABER, und ihr entscheidet zu zweit",
     "dilemmesJoueurs": "2 Spieler",
     "dilemmesDuree": "10 Min.",
-    "dilemmesContenu": "100 Dilemmata und die Stimmen aller anderen Paare"
+    "dilemmesContenu": "100 Dilemmata und die Stimmen aller anderen Paare",
+    "pourContreNom": "Dafür oder dagegen",
+    "pourContreTagline": "Eine Aussage, ihr entscheidet, ihr seht die Stimmen der anderen",
+    "pourContreJoueurs": "2 Spieler",
+    "pourContreDuree": "10 Min.",
+    "pourContreContenu": "60 Aussagen und die Stimmen aller anderen Paare"
   },
   "section1": {
     "title": "Was ein Spiel zu zweit an einem Abend verändert",
     "p1": "Ein <strong class=\"text-foreground\">Paarspiel</strong> sieht nach nichts aus. Und doch löst es ein sehr konkretes Problem: zu zweit dreht man sich am Ende immer um dieselben Themen. Der Tag, die Arbeit, was es heute Abend gibt… Ein Spiel setzt einen Rahmen, und dieser Rahmen erlaubt Fragen, die man aus dem Nichts heraus nie stellen würde.",
     "p2": "Deshalb funktioniert ein Spiel auch besser als ein Film, wenn ihr euch wirklich wiederfinden wollt. Vor einem Bildschirm seid ihr zwei Menschen nebeneinander, die woanders hinschauen. Um ein Spiel herum seid ihr zwei Menschen, die einander anschauen. Den Unterschied spürt man nach zehn Minuten.",
-    "p3": "Die sieben Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten."
+    "p3": "Die acht Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten."
   },
   "section2": {
     "title": "Welches Spiel zu welchem Moment passt",
@@ -79,7 +84,11 @@
     "row5Moment": "Ein richtiger Abend zu zweit, ohne zweiten Bildschirm",
     "row5Pourquoi": "Das einzige, das dreißig Minuten dauert und gewonnen werden kann. Ein Brett, ein Würfel und ein Grund, bis zum Ende zu spielen.",
     "row6Moment": "Ein Abendessen zu zweit oder der Aperitif vor den Gästen",
-    "row6Pourquoi": "Fünf Minuten reichen, und jeder Streitpunkt bringt das Gespräch von allein wieder in Gang. Am schnellsten ausgepackt."
+    "row6Pourquoi": "Fünf Minuten reichen, und jeder Streitpunkt bringt das Gespräch von allein wieder in Gang. Am schnellsten ausgepackt.",
+    "row7Moment": "Ein ernstes Thema, ohne Schwere",
+    "row7Pourquoi": "Jeder Handel stellt einen Gewinn gegen einen Preis, es gibt also nie eine richtige Antwort. Genau da zeigt sich, was der andere zu zahlen bereit ist.",
+    "row8Moment": "Eine Entscheidung, die ihr seit Monaten aufschiebt",
+    "row8Pourquoi": "Die Aussagen reichen vom Abendessen heute bis zum Hauskauf. Das Thema kommt von selbst, keiner musste es ansprechen."
   },
   "section3": {
     "title": "Ein Spieleabend zu zweit, der wirklich funktioniert",

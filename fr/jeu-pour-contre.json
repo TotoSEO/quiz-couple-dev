@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "badge": "À deux · 60 propositions",
+    "title": "Jeu pour ou contre spécial couple",
+    "titleHighlight": "pour ou contre",
+    "description": "Soixante propositions à trancher ensemble, du dîner de ce soir à l'achat d'une maison. Vous répondez POUR ou CONTRE, puis vous voyez ce que les autres couples ont voté."
+  },
+  "jsonLd": {
+    "name": "Jeu pour ou contre spécial couple"
+  },
+  "section1": {
+    "title": "Les règles du jeu pour ou contre à faire en couple",
+    "intro": "Il n'y a rien à préparer et rien à installer. Une proposition s'affiche, vous décidez tous les deux, et vous passez à la suivante.",
+    "etape1Titre": "Installez-vous côte à côte",
+    "etape1Texte": "Une seule proposition s'affiche à la fois, sur un seul téléphone. Lisez-la à voix haute pour que la question tombe en même temps pour les deux.",
+    "etape2Titre": "Décidez ensemble",
+    "etape2Texte": "Vous ne votez pas chacun dans votre coin : le but est d'arriver à une réponse commune, POUR ou CONTRE. C'est la discussion pour y arriver qui fait tout l'intérêt du jeu.",
+    "etape3Titre": "Voyez le vote des autres",
+    "etape3Texte": "Dès que vous avez tranché, les deux camps s'affichent avec leur pourcentage et leur nombre de voix. Vous savez tout de suite si vous êtes avec la majorité.",
+    "etape4Titre": "Enchaînez ou arrêtez-vous",
+    "etape4Texte": "La proposition suivante arrive aussitôt. Vous pouvez vous arrêter quand vous voulez pour voir votre bilan, ou aller jusqu'à la soixantième.",
+    "apres": "Le principe est le même que sur les autres <a href=\"/jeux-de-couple/\">jeux de couple</a> du site : rien à installer, rien à créer, vous ouvrez la page et vous jouez. Votre réponse est enregistrée sans votre nom, uniquement pour alimenter les pourcentages que verra le couple suivant."
+  },
+  "section2": {
+    "title": "Pourquoi ce jeu est bien ?",
+    "p1": "Tout simplement parce qu'il vous met devant des situations que vous rencontrerez pour de vrai. Un jour vous achèterez peut-être une maison. Ou pas, parce que vous êtes plutôt appartement, et vous venez de l'apprendre en trente secondes au lieu d'en parler dans cinq ans.",
+    "p2": "Un animal, un compte commun, un déménagement, un mariage : ce sont des sujets qu'on repousse parce qu'il n'y a jamais de bon moment pour les lancer. Une proposition qui tombe au hasard fait le travail à votre place, et personne n'a l'impression d'avoir amené le sujet exprès.",
+    "p3": "Et comme le vote des autres couples s'affiche juste après le vôtre, vous voyez si votre réponse est la plus courante ou si vous êtes les seuls à penser comme ça. Ça vaut souvent une deuxième discussion."
+  },
+  "section3": {
+    "title": "Des sujets légers aux grandes décisions",
+    "intro": "Certaines propositions sont là pour rire ou pour décider de ce que vous allez faire ce soir. D'autres touchent à des sujets nettement plus lourds : vacances, logement, argent, mariage, enfants, animaux, projets à deux. Il y en a pour tous les couples et pour toutes les étapes d'une relation.",
+    "headerTheme": "Thème",
+    "headerExemple": "Exemple de proposition",
+    "apres": "Quand une proposition vous laisse hésitants, c'est souvent qu'il manque la contrepartie : les <a href=\"/dilemmes-couple/\">dilemmes de couple</a> posent justement l'avantage et son prix dans la même carte."
+  },
+  "familles": {
+    "projetsTitre": "Projets et avenir",
+    "projetsExemple": "Acheter une maison",
+    "vacancesTitre": "Vacances et sorties",
+    "vacancesExemple": "Voyager sans tout planifier",
+    "coupleTitre": "Vie de couple",
+    "coupleExemple": "Partager ses mots de passe",
+    "quotidienTitre": "Quotidien",
+    "quotidienExemple": "Commander à manger plutôt que cuisiner ce soir",
+    "momentsTitre": "Moments à deux",
+    "momentsExemple": "Refaire son premier rendez-vous",
+    "discuterTitre": "Sujets qui font discuter",
+    "discuterExemple": "Garder son ex dans ses contacts"
+  },
+  "section4": {
+    "title": "Que faire si vous n'êtes pas d'accord ?",
+    "p1": "Rien de spécial. Un désaccord sur une proposition n'est pas un problème de couple, c'est une information. Vous venez d'apprendre quelque chose qu'il valait mieux savoir maintenant que dans trois ans, devant un notaire ou une valise.",
+    "p2": "Le réflexe utile est de demander pourquoi avant de défendre son camp. « Contre » ne veut pas dire la même chose selon qu'on a peur du crédit, qu'on ne veut pas quitter sa ville, ou qu'on n'a simplement jamais eu de chien. La raison est toujours plus intéressante que la réponse.",
+    "p3": "Et si le sujet chauffe vraiment, passez la proposition et revenez-y plus tard. Le jeu ne vous demande pas de décider pour de vrai. Quand un désaccord revient plusieurs fois sur le même thème, une série de <a href=\"/questions-couple/\">questions à se poser en couple</a> fait souvent remonter ce qui coince en dessous."
+  },
+  "section5": {
+    "title": "Une partie, puis une autre",
+    "p1": "Le pour ou contre marche aussi bien sur un canapé un dimanche soir qu'en voiture ou en salle d'attente. Une proposition prend dix secondes, une partie complète prend le temps que vous voulez y mettre.",
+    "p2": "Et quand vous aurez tranché les soixante, il reste tout le reste.",
+    "cta": "Voir tous les jeux de couple"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment joue-t-on au pour ou contre en couple ?",
+    "a1": "Une proposition s'affiche, par exemple « avoir un animal ». Vous en discutez tous les deux et vous répondez POUR ou CONTRE ensemble, sur le même téléphone. Le pourcentage des autres couples apparaît juste après, puis vous passez à la proposition suivante.",
+    "q2": "Combien y a-t-il de propositions ?",
+    "a2": "Soixante, réparties en six thèmes : projets et avenir, vacances et sorties, vie de couple, quotidien, moments à deux, et une série de sujets qui font vraiment discuter. Elles arrivent dans un ordre différent à chaque partie.",
+    "q3": "Faut-il être deux pour jouer ?",
+    "a3": "C'est fait pour deux, oui. Le jeu ne demande pas de désigner qui répond : vous tranchez ensemble, et c'est justement ce qui fait sortir les discussions. Rien ne vous empêche d'y jouer seul pour voir les propositions, mais l'intérêt tombe.",
+    "q4": "Le jeu est-il gratuit ?",
+    "a4": "Oui, entièrement, sans compte à créer et sans installation. Vous ouvrez la page et vous jouez.",
+    "q5": "D'où viennent les pourcentages affichés ?",
+    "a5": "Des votes des couples qui ont joué avant vous. Chaque réponse est enregistrée sans aucune donnée personnelle, uniquement pour calculer la répartition entre POUR et CONTRE. Un couple ne peut voter qu'une fois par proposition.",
+    "q6": "Peut-on rejouer plusieurs fois ?",
+    "a6": "Oui. Les propositions sont retirées dans un autre ordre à chaque partie. Celles que vous avez déjà tranchées vous montrent directement le résultat plutôt que de vous faire voter deux fois.",
+    "q7": "Le jeu convient-il à un couple qui vient de se rencontrer ?",
+    "a7": "Très bien, même. Les thèmes du quotidien et des sorties se répondent sans rien engager, et les grandes décisions donnent une idée assez claire de ce que chacun projette. C'est souvent plus parlant qu'une longue conversation sur l'avenir."
+  }
+}

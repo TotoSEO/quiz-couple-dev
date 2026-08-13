@@ -233,10 +233,10 @@
     "metaDescription": "Suis-je amoureux ou juste attiré ? 20 questions pour distinguer l'amour du béguin. Test gratuit, résultat immédiat et sans inscription."
   },
   "jeuxCouple": {
-    "title": "Jeux de couple en ligne : 7 jeux gratuits à jouer à deux",
+    "title": "Jeux de couple en ligne : 8 jeux gratuits à jouer à deux",
     "shortTitle": "Jeux de couple",
-    "description": "Sept jeux à jouer à deux : qui de nous deux, tu préfères, les dilemmes, action ou vérité, sa version coquine, la roue des gages et le plateau.",
-    "metaDescription": "7 jeux de couple gratuits sur un seul téléphone : qui de nous deux, tu préfères, les dilemmes, action ou vérité, la roue des gages et le jeu de plateau. Sans inscription."
+    "description": "Huit jeux à jouer à deux : pour ou contre, qui de nous deux, tu préfères, les dilemmes, action ou vérité, sa version coquine, la roue des gages et le plateau.",
+    "metaDescription": "8 jeux de couple gratuits sur un seul téléphone : pour ou contre, qui de nous deux, tu préfères, les dilemmes, action ou vérité et la roue des gages. Sans inscription."
   },
   "jeuGages": {
     "title": "Gage couple : le jeu de la roue, 140 gages tirés au hasard",
@@ -273,5 +273,11 @@
     "shortTitle": "Dilemmes de couple",
     "metaDescription": "100 dilemmes à trancher à deux : un avantage, un MAIS, et vous décidez OK ou PAS OK. Découvrez ensuite comment les autres couples ont voté. Gratuit, sans inscription.",
     "description": "Un avantage, une contrepartie, et vous tranchez ensemble. Puis vous voyez le vote de tous les autres couples."
+  },
+  "pourContre": {
+    "title": "Pour ou contre à faire en couple | Jeu en ligne",
+    "shortTitle": "Pour ou contre",
+    "metaDescription": "60 propositions à trancher à deux : animal, maison, mariage, vacances. Vous répondez POUR ou CONTRE, puis vous voyez le vote des autres couples. Gratuit.",
+    "description": "Une proposition, deux camps. Vous tranchez ensemble, puis vous découvrez ce que les autres couples ont voté."
   }
 }

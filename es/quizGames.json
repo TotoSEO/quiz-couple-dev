@@ -342,7 +342,9 @@
     "testDateNaissance": "Test de compatibilidad por fecha de nacimiento",
     "testCouche": "Test se ha acostado con otra persona",
     "testSecret": "Test me quiere en secreto",
-    "testDistanceAime": "Test me sigue queriendo a distancia"
+    "testDistanceAime": "Test me sigue queriendo a distancia",
+    "pourContre": "A favor o en contra",
+    "jeuDilemmes": "Dilemas de pareja"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
@@ -563,5 +565,37 @@
     "introQuestion": "Te estás preguntando:",
     "introQuote": "«¿Me sigue queriendo… o es solo la distancia?»",
     "disclaimer": "Responde pensando en las últimas semanas, no en el principio de vuestra historia."
+  },
+  "pourContre": {
+    "introTitre": "¿A favor o en contra?",
+    "introTexte": "Sesenta propuestas para decidir en pareja. Responded juntos y descubrid lo que han votado las demás parejas.",
+    "metaQuestions": "propuestas",
+    "metaDuree": "sin límite",
+    "commencer": "Primera propuesta",
+    "amorce": "A favor o en contra",
+    "consigne": "Decidid juntos, en voz alta.",
+    "pour": "A FAVOR",
+    "contre": "EN CONTRA",
+    "passer": "Saltar esta propuesta",
+    "votreReponse": "Vuestra respuesta: {{r}}",
+    "voix": "votos",
+    "voix1": "voto",
+    "surTotal": "{{n}} parejas han decidido esta propuesta",
+    "surTotal1": "Sois la primera pareja en decidir esta propuesta",
+    "suivant": "Siguiente propuesta",
+    "voirBilan": "Ver nuestro balance",
+    "arreter": "Parar y ver nuestro balance",
+    "bilanDetail": "{{pour}} A FAVOR de {{n}} propuestas decididas",
+    "palier1Titre": "Decís que no a casi todo",
+    "palier1Texte": "Casi todas las propuestas se han vuelto por donde vinieron. Sabéis lo que no queréis, y eso ya es una respuesta clara sobre la vida que os apetece llevar.",
+    "palier2Titre": "Difíciles de convencer",
+    "palier2Texte": "Hace falta mucho para sacaros un sí. Preferís lo que ya conocéis, y eso os ahorra unas cuantas sorpresas desagradables.",
+    "palier3Titre": "Más bien dispuestos",
+    "palier3Texte": "Decís que sí más a menudo que que no, sin firmar con los ojos cerrados. Buen equilibrio entre las ganas de probar y el sentido práctico.",
+    "palier4Titre": "Decís que sí a casi todo",
+    "palier4Texte": "Una mascota, una casa, irse al extranjero: os apuntáis. Es una energía estupenda entre dos, siempre que leáis la letra pequeña de vez en cuando.",
+    "bravoTitre": "¡Enhorabuena y gracias!",
+    "bravoTexte": "Habéis decidido las sesenta propuestas. Vuestros votos ya cuentan en los porcentajes que verán las próximas parejas.",
+    "bravoSuite": "Seguid con los dilemas"
   }
 }
