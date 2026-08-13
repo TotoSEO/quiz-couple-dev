@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "badge": "20 questions · Barème pondéré · Gratuit",
+    "title": "Est-ce de l'amour ou de l'amitié ? 20 questions",
+    "titleHighlight": "de l'amour ou de l'amitié",
+    "description": "Vingt questions sur ce que vous faites vraiment, pas sur ce que vous croyez ressentir. À la fin, un verdict sur six paliers, du grand ami à l'amour qui ne dit pas son nom."
+  },
+  "jsonLd": {
+    "name": "Test : amour ou amitié ?",
+    "about": "Distinguer l'amour de l'amitié"
+  },
+  "section1": {
+    "title": "Ce que ce test mesure vraiment",
+    "p1": "Il y a une personne dans votre vie dont vous parlez un peu trop souvent, et quelqu'un a fini par poser la question qui fâche : « tu es sûr que c'est juste un ami ? ». Depuis, la question tourne. C'est exactement pour ce moment-là que ce test existe.",
+    "p2": "Le problème, c'est que l'amour et l'amitié partagent presque tout : le plaisir d'être ensemble, la confiance, les confidences, les fous rires. Se demander « est-ce que je l'aime » en regardant ce qu'on partage ne mène nulle part, puisque tout ça existe aussi dans une grande amitié.",
+    "p3": "Le test ne regarde donc pas ce que vous partagez, il regarde ce qui déborde : ce que vous faites, ce que vous cachez, ce qui vous pince quand cette personne parle de quelqu'un d'autre. C'est là, et seulement là, que les deux liens se séparent.",
+    "resumeTitre": "Résumé rapide",
+    "resume1": "Vingt questions sur vos comportements réels, pas sur vos sentiments déclarés.",
+    "resume2": "Chaque question a son propre poids : l'envie de l'embrasser vaut jusqu'à dix points, le plaisir d'être ensemble en vaut cinq, parce qu'il existe aussi entre amis.",
+    "resume3": "Le score va de 0 à 146, sur six paliers, de l'amitié pure à l'amour qui s'ignore encore.",
+    "resume4": "Le test dit ce que vous ressentez. Ce que ressent l'autre est une autre question, et il ne prétend pas y répondre.",
+    "resume5": "Gratuit, anonyme, sans inscription, cinq minutes."
+  },
+  "section2": {
+    "title": "Les signes qui séparent l'amour de l'amitié",
+    "intro": "Tous les signes ne se valent pas, et c'est pour ça que les questions ne rapportent pas toutes le même nombre de points. Un signe qui existe aussi dans l'amitié pèse peu. Un signe qui n'existe que dans l'amour pèse lourd.",
+    "headerSigne": "Ce qui est mesuré",
+    "headerPoids": "Poids",
+    "headerPourquoi": "Pourquoi ce poids",
+    "row1Signe": "L'envie de l'embrasser",
+    "row1Poids": "10 points",
+    "row1Pourquoi": "C'est le marqueur le plus net qui soit. On peut tout partager avec un ami, sauf ça : cette envie-là n'a pas de version amicale.",
+    "row2Signe": "Un « je t'aime » dit ce soir",
+    "row2Poids": "9 points",
+    "row2Pourquoi": "La réaction imaginée à cette phrase départage tout. Un ami répond « moi aussi » sans y penser. Si votre cœur s'emballe à l'idée, il a déjà répondu pour vous.",
+    "row3Signe": "La jalousie de ses rencards",
+    "row3Poids": "9 points",
+    "row3Pourquoi": "On conseille volontiers un ami sur ses rencontres. Quand on préférerait ne pas en entendre parler, ce n'est plus du conseil qu'on a envie de donner.",
+    "row4Signe": "L'imaginer en couple dans un an",
+    "row4Poids": "9 points",
+    "row4Pourquoi": "La projection trahit ce que le présent maquille. Être heureux pour un ami est un réflexe ; avoir le ventre serré est une réponse.",
+    "row5Signe": "Le mot « ami » qui sonne faux",
+    "row5Poids": "8 points",
+    "row5Pourquoi": "Quand le mot que vous employez pour présenter quelqu'un vous fait mal, c'est que ce n'est plus le bon mot.",
+    "row6Signe": "Le temps qui file ensemble",
+    "row6Poids": "5 points",
+    "row6Pourquoi": "Signe réel, mais faible : le temps file aussi avec un excellent ami. Il ne compte que par accumulation avec les autres.",
+    "apres": "Le maximum est de 146 points. Les questions à faible poids servent de fond de tableau, les questions lourdes font le verdict : on peut adorer passer du temps avec quelqu'un et rester à 30 points, il suffit que rien du reste ne suive."
+  },
+  "section3": {
+    "title": "Comment lire votre score",
+    "intro": "Six paliers de vingt-cinq points. Les deux premiers décrivent une amitié, les deux derniers décrivent un amour, et les deux du milieu décrivent ce que vous êtes sans doute venu chercher : la zone où ça bascule.",
+    "headerScore": "Score",
+    "headerPalier": "Palier",
+    "headerSens": "Ce que ça veut dire",
+    "row1Score": "0 à 24",
+    "row1Palier": "C'est de l'amitié, une vraie",
+    "row1Sens": "Rien ne déborde du cadre amical, et c'est déjà précieux.",
+    "row2Score": "25 à 49",
+    "row2Palier": "Une amitié, avec un petit quelque chose",
+    "row2Sens": "Deux ou trois réponses dépassent, rien qui impose une conversation.",
+    "row3Score": "50 à 74",
+    "row3Palier": "Le trouble est installé",
+    "row3Sens": "Le vocabulaire est amical, les réactions ne le sont plus.",
+    "row4Score": "75 à 99",
+    "row4Palier": "Vous penchez nettement du côté de l'amour",
+    "row4Sens": "La majorité de vos réponses ne s'explique plus par l'amitié.",
+    "row5Score": "100 à 124",
+    "row5Palier": "C'est de l'amour, il ne manque que les mots",
+    "row5Sens": "N'importe qui d'extérieur l'appellerait déjà autrement.",
+    "row6Score": "125 à 146",
+    "row6Palier": "Vous le saviez avant de cliquer",
+    "row6Sens": "Vous n'êtes pas venu chercher une réponse, mais une permission.",
+    "apres": "Un détail qui compte : ce test mesure ce que vous ressentez, vous. Un score de 130 ne dit strictement rien de ce que l'autre ressent, et c'est la première erreur à ne pas faire en sortant d'ici."
+  },
+  "section4": {
+    "title": "Pourquoi on confond si facilement les deux",
+    "p1": "Parce que la frontière n'est pas où on la cherche. On croit que l'amour se reconnaît à l'intensité : on pense beaucoup à la personne, donc ce serait de l'amour. Sauf qu'on pense aussi beaucoup à un ami en pleine tempête, et personne n'appelle ça une passion. L'intensité ne départage rien, et c'est d'ailleurs la même impasse que <a href=\"/test-suis-je-amoureux/\">se demander si l'on est amoureux tout court</a> : sans regarder les comportements, on tourne en rond.",
+    "p2": "Ce qui départage, c'est l'exclusivité. L'amitié se partage sans problème : votre meilleur ami peut avoir d'autres meilleurs amis, ça ne vous enlève rien. Le jour où l'idée que cette personne devienne « la personne » de quelqu'un d'autre vous est désagréable, vous êtes sorti du partage, donc de l'amitié.",
+    "p3": "Et il y a le confort du mot. « Ami » est un mot sans risque : il permet de garder la personne, la complicité, les soirées, sans jamais s'exposer à un refus. Beaucoup de gens ne confondent pas l'amour et l'amitié, ils choisissent la confusion parce qu'elle protège. Ce test ne fait que retirer cette protection cinq minutes."
+  },
+  "section5": {
+    "title": "Et une fois la réponse en main ?",
+    "p1": "Si le verdict dit amitié, croyez-le. Il n'y a rien à forcer et rien à regretter : une amitié où l'on se précipite pour raconter ses bonnes nouvelles est une des meilleures choses qu'une vie puisse contenir, et elle ne vaut pas moins qu'une histoire d'amour.",
+    "p2": "Si le verdict dit amour, la question suivante n'est pas « que faire » mais « et l'autre ? ». Vous n'en savez rien, et les indices que vous avez accumulés méritent mieux que des suppositions : les <a href=\"/test-m-aime-t-il-elle-en-secret/\">signes que quelqu'un vous aime en secret</a> se listent, et ils se vérifient mieux qu'ils ne se devinent.",
+    "p3": "Et si vous êtes déjà en couple avec cette personne et que la question vous a traversé dans l'autre sens, celle d'un amour devenu confortable au point de ressembler à de l'amitié, c'est une autre mécanique qui se mesure : celle du <a href=\"/test-amour-ou-habitude/\">test amour ou habitude</a>, pensé exactement pour ce doute-là."
+  },
+  "section6": {
+    "title": "Cinq minutes de sincérité",
+    "p1": "Ce test ne vaut que ce que valent vos réponses. Répondez ce qui est vrai, pas ce qui est confortable : personne ne lit par-dessus votre épaule, et le résultat n'est enregistré nulle part.",
+    "p2": "Et si le score confirme ce que vous saviez déjà, dites-vous une chose : la question que vous vous posez depuis des semaines, l'autre se la pose peut-être aussi."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment savoir si c'est de l'amour ou de l'amitié ?",
+    "a1": "En regardant ce qui n'existe que dans l'amour : l'envie du contact physique, la jalousie quand la personne parle de ses rencontres, le mot « ami » qui devient désagréable à prononcer, la comparaison systématique avec les gens qui vous plaisent. Tout le reste, la complicité, la confiance, le temps qui file, existe dans les deux. C'est exactement ce que ce test trie, question par question.",
+    "q2": "Pourquoi les questions n'ont-elles pas toutes le même poids ?",
+    "a2": "Parce qu'un signe partagé par l'amour et l'amitié ne prouve rien. Adorer passer du temps avec quelqu'un rapporte peu de points ; vouloir l'embrasser en rapporte beaucoup, parce que ce signe-là n'a pas d'explication amicale. Sans cette pondération, un très bon ami obtiendrait le même score qu'un amour naissant.",
+    "q3": "Peut-on être amoureux de son meilleur ami sans s'en rendre compte ?",
+    "a3": "C'est même le cas le plus fréquent chez les gens qui font ce test. La proximité quotidienne installe les signes un par un, si lentement qu'aucun ne déclenche d'alarme. C'est souvent une remarque extérieure, ou un rencard de l'autre, qui fait tout remonter d'un coup.",
+    "q4": "Le test marche-t-il si nous sommes déjà sortis ensemble ?",
+    "a4": "Oui, mais lisez le résultat avec prudence. Après une histoire, les gestes et les souvenirs brouillent les signaux : un score moyen peut refléter ce qui reste d'avant plutôt que ce qui existe aujourd'hui. Refaites-le dans deux mois, la tendance entre les deux scores sera plus fiable que chaque score pris seul.",
+    "q5": "Et si j'obtiens un score au milieu, ni amour ni amitié ?",
+    "a5": "C'est le résultat le plus utile du test, même si c'est le moins confortable. La zone du milieu veut dire que le trouble est réel et installé. À ce stade il grandit ou il s'use, mais il ne reste pas immobile : refaire le test dans quelques semaines vous dira dans quel sens ça penche.",
+    "q6": "Ce test dit-il si l'autre personne m'aime aussi ?",
+    "a6": "Non, et méfiez-vous de tout test qui le prétendrait. Il mesure ce que vous ressentez, à partir de vos comportements à vous. Ce que l'autre ressent se lit dans ses comportements à lui ou à elle, et c'est une autre démarche.",
+    "q7": "Le test est-il gratuit et anonyme ?",
+    "a7": "Oui aux deux. Pas de compte, pas d'adresse mail, et vos réponses ne sont pas conservées. Seul le nombre de tests réalisés est compté."
+  }
+}

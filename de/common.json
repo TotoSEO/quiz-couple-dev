@@ -56,7 +56,9 @@
     "testPurete": "Reinheitstest",
     "pourContre": "Dafür oder dagegen",
     "testFinCouple": "Ist es vorbei?",
-    "testFinCoupleDesc": "Wo eure Beziehung wirklich steht"
+    "testFinCoupleDesc": "Wo eure Beziehung wirklich steht",
+    "testAmourAmitie": "Liebe oder Freundschaft?",
+    "testAmourAmitieDesc": "Einen Namen für dein Gefühl finden"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",

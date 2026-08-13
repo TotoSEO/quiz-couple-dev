@@ -25,6 +25,10 @@
     // relation. Les 23 autres n'ont pas le même poids, le barème est donc
     // écrit à la main dans gd.json plutôt que déduit du rang des réponses.
     'fin-couple':     { prefix: 'finCouple', engine: 'solo', totalQ: 24, pool: 24, quizType: 'fin-couple', ascending: true, ptsExplicites: true },
+    // Amour ou amitié : le score monte vers l'amour. Les signaux forts
+    // (l'envie d'embrasser, la jalousie des rencards) pèsent bien plus que
+    // ce qui est commun aux deux liens, d'où le barème explicite.
+    'amour-amitie':   { prefix: 'amourAmitie', engine: 'solo', totalQ: 20, pool: 20, quizType: 'amour-amitie', ascending: true, ptsExplicites: true },
     'amour-habitude': { prefix: 'habitude', engine: 'solo', totalQ: 20, pool: 20, quizType: 'amour-habitude', ascending: true, resultPrefix: 'habitude' },
     'divorce':        { prefix: 'divorce', engine: 'solo', totalQ: 15, pool: 25, quizType: 'divorce', hasSkip: true, ascending: true },
     'mariage':        { prefix: 'marriage', engine: 'solo', totalQ: 30, pool: 30, hasSkip: true, hasLocalStorage: true },

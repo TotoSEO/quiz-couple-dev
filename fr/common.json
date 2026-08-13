@@ -57,7 +57,9 @@
     "testPurete": "Test de pureté",
     "pourContre": "Pour ou contre",
     "testFinCouple": "Fin de couple ?",
-    "testFinCoupleDesc": "Où en est vraiment votre relation"
+    "testFinCoupleDesc": "Où en est vraiment votre relation",
+    "testAmourAmitie": "Amour ou amitié ?",
+    "testAmourAmitieDesc": "Mettre un mot sur ce que vous ressentez"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",

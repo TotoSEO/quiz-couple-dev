@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "badge": "20 questions · Weighted scoring · Free",
+    "title": "Is it love or friendship? 20 questions",
+    "titleHighlight": "love or friendship",
+    "description": "Twenty questions about what you actually do, not what you think you feel. At the end, a six-tier verdict, from great friend to a love that won't say its name."
+  },
+  "jsonLd": {
+    "name": "Test: love or friendship?",
+    "about": "Telling love apart from friendship"
+  },
+  "section1": {
+    "title": "What this test actually measures",
+    "p1": "There is someone in your life you talk about a little too often, and somebody finally asked the awkward question: \"are you sure they're just a friend?\". The question has been circling ever since. That is exactly the moment this test was built for.",
+    "p2": "The trouble is that love and friendship share almost everything: the pleasure of being together, the trust, the confidences, the laughing fits. Asking \"do I love them\" by looking at what you share leads nowhere, because all of that exists in a great friendship too.",
+    "p3": "So the test does not look at what you share, it looks at what spills over: what you do, what you hide, what stings when this person mentions someone else. That is where, and only where, the two bonds part ways.",
+    "resumeTitre": "Quick summary",
+    "resume1": "Twenty questions about your actual behaviour, not your declared feelings.",
+    "resume2": "Each question carries its own weight: wanting to kiss them is worth up to ten points, enjoying their company is worth five, because friends enjoy each other's company too.",
+    "resume3": "The score runs from 0 to 146, across six tiers, from pure friendship to a love that hasn't admitted itself yet.",
+    "resume4": "The test tells you what you feel. What the other person feels is a different question, and it does not pretend to answer it.",
+    "resume5": "Free, anonymous, no sign-up, five minutes."
+  },
+  "section2": {
+    "title": "The signs that separate love from friendship",
+    "intro": "Not all signs are worth the same, which is why the questions do not all award the same points. A sign that also exists in friendship weighs little. A sign that only exists in love weighs a lot.",
+    "headerSigne": "What is measured",
+    "headerPoids": "Weight",
+    "headerPourquoi": "Why that weight",
+    "row1Signe": "Wanting to kiss them",
+    "row1Poids": "10 points",
+    "row1Pourquoi": "The sharpest marker there is. You can share everything with a friend except this: that desire has no friendship version.",
+    "row2Signe": "An \"I love you\" said tonight",
+    "row2Poids": "9 points",
+    "row2Pourquoi": "Your imagined reaction to that sentence settles everything. A friend answers \"me too\" without thinking. If your heart races at the idea, it has already answered for you.",
+    "row3Signe": "Jealousy over their dates",
+    "row3Poids": "9 points",
+    "row3Pourquoi": "People happily give friends advice about their dating life. When you would rather not hear about it at all, advice is no longer what you want to give.",
+    "row4Signe": "Picturing them in a couple a year from now",
+    "row4Poids": "9 points",
+    "row4Pourquoi": "Projection betrays what the present disguises. Being happy for a friend is a reflex; a knotted stomach is an answer.",
+    "row5Signe": "The word \"friend\" ringing false",
+    "row5Poids": "8 points",
+    "row5Pourquoi": "When the word you use to introduce someone hurts you, it is no longer the right word.",
+    "row6Signe": "Time flying when you're together",
+    "row6Poids": "5 points",
+    "row6Pourquoi": "A real sign, but a weak one: time flies with an excellent friend too. It only counts as it accumulates with the others.",
+    "apres": "The maximum is 146 points. The low-weight questions are the backdrop, the heavy ones deliver the verdict: you can love spending time with someone and stay at 30 points, as long as nothing else follows."
+  },
+  "section3": {
+    "title": "How to read your score",
+    "intro": "Six tiers of twenty-five points. The first two describe a friendship, the last two describe a love, and the two in the middle describe what you probably came here for: the zone where it tips over.",
+    "headerScore": "Score",
+    "headerPalier": "Tier",
+    "headerSens": "What it means",
+    "row1Score": "0 to 24",
+    "row1Palier": "It's friendship, the real thing",
+    "row1Sens": "Nothing spills over the edges, and that is already precious.",
+    "row2Score": "25 to 49",
+    "row2Palier": "A friendship, with a little something",
+    "row2Sens": "Two or three answers stick out, nothing that demands a conversation.",
+    "row3Score": "50 to 74",
+    "row3Palier": "The confusion has settled in",
+    "row3Sens": "The vocabulary is friendly, the reactions no longer are.",
+    "row4Score": "75 to 99",
+    "row4Palier": "You lean clearly towards love",
+    "row4Sens": "Most of your answers can no longer be explained by friendship.",
+    "row5Score": "100 to 124",
+    "row5Palier": "It's love, only the words are missing",
+    "row5Sens": "Anyone on the outside would already call it something else.",
+    "row6Score": "125 to 146",
+    "row6Palier": "You knew before you clicked",
+    "row6Sens": "You didn't come for an answer, you came for permission.",
+    "apres": "One detail that matters: this test measures what you feel. A score of 130 says strictly nothing about what the other person feels, and that is the first mistake to avoid on your way out."
+  },
+  "section4": {
+    "title": "Why the two are so easily confused",
+    "p1": "Because the border is not where people look for it. We think love is recognised by intensity: I think about this person a lot, so it must be love. Except you also think a lot about a friend going through a storm, and nobody calls that passion. Intensity settles nothing, and it is the same dead end as <a href=\"/en/am-i-in-love-test/\">asking whether you are in love at all</a>: without looking at behaviour, you go in circles.",
+    "p2": "What settles it is exclusivity. Friendship shares without a problem: your best friend can have other best friends, it takes nothing from you. The day the idea of this person becoming somebody else's person feels unpleasant, you have left sharing behind, and with it friendship.",
+    "p3": "And there is the comfort of the word. \"Friend\" is a risk-free word: it lets you keep the person, the closeness, the evenings, without ever exposing yourself to a no. Many people do not confuse love and friendship, they choose the confusion because it protects them. All this test does is remove that protection for five minutes."
+  },
+  "section5": {
+    "title": "And once you have the answer?",
+    "p1": "If the verdict says friendship, believe it. There is nothing to force and nothing to mourn: a friendship where you rush to share your good news is one of the best things a life can hold, and it is worth no less than a love story.",
+    "p2": "If the verdict says love, the next question is not \"what do I do\" but \"what about them?\". You don't know, and the clues you have been collecting deserve better than guesswork: the <a href=\"/en/does-he-she-secretly-love-me-test/\">signs that someone secretly loves you</a> can be listed, and they are better checked than guessed.",
+    "p3": "And if you are already in a couple with this person and the question crossed your mind in the other direction, a love grown so comfortable it feels like friendship, that is a different mechanism to measure: the <a href=\"/en/love-or-habit-test/\">love or habit test</a> was built exactly for that doubt."
+  },
+  "section6": {
+    "title": "Five minutes of honesty",
+    "p1": "This test is only worth what your answers are worth. Answer what is true, not what is comfortable: nobody is reading over your shoulder, and the result is not stored anywhere.",
+    "p2": "And if the score confirms what you already knew, keep one thing in mind: the question you have been asking yourself for weeks, the other person might be asking it too."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "How do you know if it's love or friendship?",
+    "a1": "By looking at what only exists in love: the pull towards physical contact, the jealousy when the person talks about their dates, the word \"friend\" becoming unpleasant to say, the systematic comparison with people who catch your eye. Everything else, the closeness, the trust, the time flying by, exists in both. That is exactly what this test sorts, question by question.",
+    "q2": "Why don't the questions all carry the same weight?",
+    "a2": "Because a sign shared by love and friendship proves nothing. Loving someone's company earns few points; wanting to kiss them earns many, because that sign has no friendly explanation. Without this weighting, a very good friend would score the same as a budding love.",
+    "q3": "Can you be in love with your best friend without realising it?",
+    "a3": "It is even the most common case among people who take this test. Daily closeness installs the signs one by one, so slowly that none of them sets off an alarm. It is often an outside remark, or the other person's date, that brings everything up at once.",
+    "q4": "Does the test work if we used to date?",
+    "a4": "Yes, but read the result carefully. After a history together, gestures and memories blur the signals: a middling score can reflect what is left from before rather than what exists today. Take it again in two months, the trend between the two scores is more reliable than either one alone.",
+    "q5": "What if I score in the middle, neither love nor friendship?",
+    "a5": "That is the most useful result of the test, even if it is the least comfortable. The middle zone means the confusion is real and settled in. At that point it grows or it wears out, but it does not stand still: retaking the test in a few weeks will tell you which way it is tipping.",
+    "q6": "Does this test say whether the other person loves me too?",
+    "a6": "No, and beware of any test that claims to. It measures what you feel, from your own behaviour. What the other person feels shows in their behaviour, and that is a different exercise.",
+    "q7": "Is the test free and anonymous?",
+    "a7": "Yes to both. No account, no email address, and your answers are not stored. Only the number of tests taken is counted."
+  }
+}

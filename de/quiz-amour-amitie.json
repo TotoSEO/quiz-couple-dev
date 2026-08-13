@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "badge": "20 Fragen · Gewichtete Wertung · Kostenlos",
+    "title": "Ist es Liebe oder Freundschaft? 20 Fragen",
+    "titleHighlight": "Liebe oder Freundschaft",
+    "description": "Zwanzig Fragen zu dem, was du wirklich tust, nicht zu dem, was du zu fühlen glaubst. Am Ende ein Urteil in sechs Stufen, vom großartigen Freund bis zur Liebe, die ihren Namen nicht sagt."
+  },
+  "jsonLd": {
+    "name": "Test: Liebe oder Freundschaft?",
+    "about": "Liebe von Freundschaft unterscheiden"
+  },
+  "section1": {
+    "title": "Was dieser Test wirklich misst",
+    "p1": "Es gibt da jemanden in deinem Leben, von dem du ein bisschen zu oft erzählst, und irgendwann kam die unbequeme Frage: „Bist du sicher, dass das nur ein Freund ist?“ Seitdem kreist die Frage. Genau für diesen Moment gibt es diesen Test.",
+    "p2": "Das Problem: Liebe und Freundschaft teilen fast alles. Die Freude am Zusammensein, das Vertrauen, die Vertraulichkeiten, die Lachanfälle. Sich zu fragen „liebe ich sie oder ihn“ und dabei auf das Gemeinsame zu schauen, führt nirgendwohin, denn all das gibt es in einer großen Freundschaft auch.",
+    "p3": "Der Test schaut deshalb nicht auf das, was ihr teilt, sondern auf das, was überläuft: was du tust, was du versteckst, was in dir sticht, wenn diese Person von jemand anderem erzählt. Dort, und nur dort, trennen sich die beiden Bindungen.",
+    "resumeTitre": "Kurz zusammengefasst",
+    "resume1": "Zwanzig Fragen zu deinem tatsächlichen Verhalten, nicht zu deinen erklärten Gefühlen.",
+    "resume2": "Jede Frage hat ihr eigenes Gewicht: der Wunsch, sie oder ihn zu küssen, bringt bis zu zehn Punkte, die Freude an der Gesellschaft fünf, weil es die auch unter Freunden gibt.",
+    "resume3": "Die Punktzahl reicht von 0 bis 146, in sechs Stufen, von reiner Freundschaft bis zur Liebe, die sich noch nicht eingestanden ist.",
+    "resume4": "Der Test sagt, was du fühlst. Was die andere Person fühlt, ist eine andere Frage, und er behauptet nicht, sie zu beantworten.",
+    "resume5": "Kostenlos, anonym, ohne Anmeldung, fünf Minuten."
+  },
+  "section2": {
+    "title": "Die Zeichen, die Liebe von Freundschaft trennen",
+    "intro": "Nicht alle Zeichen sind gleich viel wert, und deshalb bringen die Fragen nicht alle dieselben Punkte. Ein Zeichen, das es auch in der Freundschaft gibt, wiegt wenig. Ein Zeichen, das es nur in der Liebe gibt, wiegt schwer.",
+    "headerSigne": "Was gemessen wird",
+    "headerPoids": "Gewicht",
+    "headerPourquoi": "Warum dieses Gewicht",
+    "row1Signe": "Der Wunsch, sie oder ihn zu küssen",
+    "row1Poids": "10 Punkte",
+    "row1Pourquoi": "Der schärfste Marker überhaupt. Mit einem Freund kann man alles teilen, außer das: Dieses Verlangen hat keine freundschaftliche Version.",
+    "row2Signe": "Ein „ich liebe dich“ heute Abend",
+    "row2Poids": "9 Punkte",
+    "row2Pourquoi": "Die vorgestellte Reaktion auf diesen Satz entscheidet alles. Ein Freund antwortet „ich dich auch“, ohne nachzudenken. Wenn dein Herz bei dem Gedanken rast, hat es schon für dich geantwortet.",
+    "row3Signe": "Eifersucht auf ihre oder seine Dates",
+    "row3Poids": "9 Punkte",
+    "row3Pourquoi": "Einen Freund berät man gern bei seinen Bekanntschaften. Wenn man lieber gar nicht davon hören will, ist es kein Rat mehr, den man geben möchte.",
+    "row4Signe": "Sie oder ihn in einem Jahr als Paar vorstellen",
+    "row4Poids": "9 Punkte",
+    "row4Pourquoi": "Die Projektion verrät, was die Gegenwart überschminkt. Sich für einen Freund freuen ist ein Reflex; ein zugeschnürter Magen ist eine Antwort.",
+    "row5Signe": "Das Wort „Freund“, das falsch klingt",
+    "row5Poids": "8 Punkte",
+    "row5Pourquoi": "Wenn das Wort, mit dem du jemanden vorstellst, dir wehtut, ist es nicht mehr das richtige Wort.",
+    "row6Signe": "Die Zeit, die zu zweit verfliegt",
+    "row6Poids": "5 Punkte",
+    "row6Pourquoi": "Ein echtes Zeichen, aber ein schwaches: Mit einem hervorragenden Freund verfliegt die Zeit auch. Es zählt nur in der Summe mit den anderen.",
+    "apres": "Das Maximum liegt bei 146 Punkten. Die leichten Fragen sind der Hintergrund, die schweren fällen das Urteil: Man kann es lieben, Zeit mit jemandem zu verbringen, und bei 30 Punkten bleiben, solange nichts vom Rest dazukommt."
+  },
+  "section3": {
+    "title": "Wie du deine Punktzahl liest",
+    "intro": "Sechs Stufen zu je fünfundzwanzig Punkten. Die ersten beiden beschreiben eine Freundschaft, die letzten beiden eine Liebe, und die beiden in der Mitte beschreiben das, wofür du vermutlich hier bist: die Zone, in der es kippt.",
+    "headerScore": "Punkte",
+    "headerPalier": "Stufe",
+    "headerSens": "Was das heißt",
+    "row1Score": "0 bis 24",
+    "row1Palier": "Es ist Freundschaft, eine echte",
+    "row1Sens": "Nichts sprengt den Rahmen, und das ist schon kostbar.",
+    "row2Score": "25 bis 49",
+    "row2Palier": "Eine Freundschaft, mit einem gewissen Etwas",
+    "row2Sens": "Zwei, drei Antworten ragen heraus, nichts, das ein Gespräch erzwingt.",
+    "row3Score": "50 bis 74",
+    "row3Palier": "Die Verwirrung hat sich eingerichtet",
+    "row3Sens": "Das Vokabular ist freundschaftlich, die Reaktionen nicht mehr.",
+    "row4Score": "75 bis 99",
+    "row4Palier": "Du neigst deutlich zur Liebe",
+    "row4Sens": "Die Mehrheit deiner Antworten erklärt sich nicht mehr mit Freundschaft.",
+    "row5Score": "100 bis 124",
+    "row5Palier": "Es ist Liebe, nur die Worte fehlen",
+    "row5Sens": "Jeder Außenstehende würde es längst anders nennen.",
+    "row6Score": "125 bis 146",
+    "row6Palier": "Du wusstest es, bevor du geklickt hast",
+    "row6Sens": "Du bist nicht für eine Antwort gekommen, sondern für eine Erlaubnis.",
+    "apres": "Ein Detail, das zählt: Dieser Test misst, was du fühlst. Eine Punktzahl von 130 sagt rein gar nichts darüber, was die andere Person fühlt, und genau das ist der erste Fehler, den es beim Rausgehen zu vermeiden gilt."
+  },
+  "section4": {
+    "title": "Warum man die beiden so leicht verwechselt",
+    "p1": "Weil die Grenze nicht dort verläuft, wo man sie sucht. Wir glauben, Liebe erkenne man an der Intensität: Ich denke viel an diese Person, also muss es Liebe sein. Nur denkt man auch viel an einen Freund, der durch einen Sturm geht, und niemand nennt das Leidenschaft. Intensität entscheidet nichts, und es ist dieselbe Sackgasse wie die Frage, <a href=\"/de/bin-ich-verliebt-test/\">ob man überhaupt verliebt ist</a>: Ohne auf das Verhalten zu schauen, dreht man sich im Kreis.",
+    "p2": "Was entscheidet, ist die Exklusivität. Freundschaft lässt sich problemlos teilen: Dein bester Freund darf andere beste Freunde haben, es nimmt dir nichts. An dem Tag, an dem der Gedanke, diese Person könnte „der Mensch“ von jemand anderem werden, dir unangenehm ist, hast du das Teilen verlassen, und damit die Freundschaft.",
+    "p3": "Und da ist die Bequemlichkeit des Wortes. „Freund“ ist ein risikofreies Wort: Es erlaubt, die Person zu behalten, die Vertrautheit, die Abende, ohne sich je einem Nein auszusetzen. Viele Menschen verwechseln Liebe und Freundschaft nicht, sie wählen die Verwechslung, weil sie schützt. Dieser Test nimmt diesen Schutz nur für fünf Minuten weg."
+  },
+  "section5": {
+    "title": "Und mit der Antwort in der Hand?",
+    "p1": "Wenn das Urteil Freundschaft lautet, glaube ihm. Es gibt nichts zu erzwingen und nichts zu betrauern: Eine Freundschaft, in der man losrennt, um seine guten Neuigkeiten zu erzählen, gehört zum Besten, was ein Leben enthalten kann, und sie ist nicht weniger wert als eine Liebesgeschichte.",
+    "p2": "Wenn das Urteil Liebe lautet, ist die nächste Frage nicht „was tue ich“, sondern „und die andere Person?“. Du weißt es nicht, und die Hinweise, die du gesammelt hast, verdienen mehr als Mutmaßungen: Die <a href=\"/de/liebt-er-sie-mich-heimlich-test/\">Zeichen, dass dich jemand heimlich liebt</a>, lassen sich auflisten, und sie lassen sich besser überprüfen als erraten.",
+    "p3": "Und wenn du mit dieser Person bereits zusammen bist und die Frage dich in der anderen Richtung gestreift hat, die einer Liebe, die so bequem geworden ist, dass sie sich wie Freundschaft anfühlt, dann ist das eine andere Mechanik: die des <a href=\"/de/liebe-oder-gewohnheit-test/\">Tests Liebe oder Gewohnheit</a>, gebaut genau für diesen Zweifel."
+  },
+  "section6": {
+    "title": "Fünf Minuten Ehrlichkeit",
+    "p1": "Dieser Test ist nur so viel wert wie deine Antworten. Antworte, was wahr ist, nicht, was bequem ist: Niemand liest über deine Schulter, und das Ergebnis wird nirgendwo gespeichert.",
+    "p2": "Und wenn die Punktzahl bestätigt, was du längst wusstest, behalte eines im Kopf: Die Frage, die du dir seit Wochen stellst, stellt sich die andere Person vielleicht auch."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Woran erkennt man, ob es Liebe oder Freundschaft ist?",
+    "a1": "An dem, was es nur in der Liebe gibt: der Zug zum Körperkontakt, die Eifersucht, wenn die Person von ihren Dates erzählt, das Wort „Freund“, das unangenehm auszusprechen wird, der ständige Vergleich mit Menschen, die dir gefallen. Alles andere, die Vertrautheit, das Vertrauen, die verfliegende Zeit, gibt es in beiden. Genau das sortiert dieser Test, Frage für Frage.",
+    "q2": "Warum bringen die Fragen nicht alle gleich viele Punkte?",
+    "a2": "Weil ein Zeichen, das Liebe und Freundschaft teilen, nichts beweist. Die Gesellschaft von jemandem zu genießen bringt wenige Punkte; ihn küssen zu wollen bringt viele, weil dieses Zeichen keine freundschaftliche Erklärung hat. Ohne diese Gewichtung käme ein sehr guter Freund auf dieselbe Punktzahl wie eine beginnende Liebe.",
+    "q3": "Kann man in seinen besten Freund verliebt sein, ohne es zu merken?",
+    "a3": "Es ist sogar der häufigste Fall unter denen, die diesen Test machen. Die tägliche Nähe installiert die Zeichen eines nach dem anderen, so langsam, dass keines Alarm schlägt. Oft ist es eine Bemerkung von außen, oder ein Date der anderen Person, das alles auf einmal hochholt.",
+    "q4": "Funktioniert der Test, wenn wir früher zusammen waren?",
+    "a4": "Ja, aber lies das Ergebnis mit Vorsicht. Nach einer gemeinsamen Geschichte verwischen Gesten und Erinnerungen die Signale: Eine mittlere Punktzahl kann widerspiegeln, was von früher übrig ist, statt dessen, was heute existiert. Wiederhole ihn in zwei Monaten, der Trend zwischen den beiden Werten ist verlässlicher als jeder einzelne.",
+    "q5": "Und wenn ich in der Mitte lande, weder Liebe noch Freundschaft?",
+    "a5": "Das ist das nützlichste Ergebnis des Tests, auch wenn es das unbequemste ist. Die mittlere Zone heißt, dass die Verwirrung real ist und sich eingerichtet hat. An diesem Punkt wächst sie oder nutzt sich ab, aber sie bleibt nicht stehen: Den Test in ein paar Wochen zu wiederholen sagt dir, in welche Richtung es kippt.",
+    "q6": "Sagt dieser Test, ob die andere Person mich auch liebt?",
+    "a6": "Nein, und hüte dich vor jedem Test, der das behauptet. Er misst, was du fühlst, anhand deines eigenen Verhaltens. Was die andere Person fühlt, zeigt sich in ihrem Verhalten, und das ist eine andere Übung.",
+    "q7": "Ist der Test kostenlos und anonym?",
+    "a7": "Ja, beides. Kein Konto, keine E-Mail-Adresse, und deine Antworten werden nicht gespeichert. Gezählt wird nur, wie oft der Test gemacht wurde."
+  }
+}

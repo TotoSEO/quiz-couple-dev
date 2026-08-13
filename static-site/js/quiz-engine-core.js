@@ -780,6 +780,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'distance', icon: '🌍', route: 'testDistance' },
     { type: 'test', key: 'toxic', icon: '⚠️', route: 'testToxic' },
     { type: 'test', key: 'fin-couple', icon: '🪢', route: 'testFinCouple' },
+    { type: 'test', key: 'amour-amitie', icon: '🧭', route: 'testAmourAmitie' },
     { type: 'test', key: 'pervers', icon: '🎭', route: 'testPervers' },
     { type: 'test', key: 'amour-habitude', icon: '☕', route: 'testAmourHabitude' },
     { type: 'test', key: 'sain', icon: '💚', route: 'testCoupleSain' },
@@ -872,7 +873,8 @@ var QuizEngine = (function() {
 
     // ── Tests d'introspection, faits seul ───────────────────────────────
     // « Ce que je ressens » appelle « ce qu'il ou elle ressent ».
-    'suis-je-amoureux': ['testSecret', 'testAttachement', 'testLangageAmour'],
+    'suis-je-amoureux': ['testAmourAmitie', 'testSecret', 'testAttachement'],
+    'amour-amitie':    ['testSecret', 'testSuisJeAmoureux', 'testAmourHabitude'],
     'secret':          ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement'],
     'distance-aime':   ['testDistance', 'testSecret', 'testAttachement'],
     'langage-amour':   ['testAttachement', 'testCouple', 'quizKnowledge'],

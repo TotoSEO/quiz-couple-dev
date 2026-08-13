@@ -128,7 +128,7 @@ const GD_QUESTION_PREFIXES = {
   jalousie1: ['jalousie1'], jalousie2: ['jalousie2'],
   genant: ['genant'], 'vrai-faux': ['vraifaux'],
   attachement: ['attachement'], confiance: ['confiance'],
-  infidelite: ['infidelite'], 'fin-couple': ['finCouple'],
+  infidelite: ['infidelite'], 'fin-couple': ['finCouple'], 'amour-amitie': ['amourAmitie'],
   'tu-preferes': ['wyr'], 'langage-amour': ['loveLanguage'],
   // Ajouts : ces tests sont arrivés après la table, qui n'a pas suivi. Leurs
   // questions existaient dans gd.json depuis le début, elles n'étaient
@@ -187,6 +187,7 @@ const STATIC_Q_HEADINGS = {
   marrant: { fr: 'Prêts à rire ensemble ?', en: 'Ready to laugh together?', es: '¿Listos para reíros juntos?', de: 'Bereit, zusammen zu lachen?', it: 'Pronti a ridere insieme?' },
   'vrai-faux': { fr: 'Prêt pour le vrai ou faux ?', en: 'Ready for true or false?', es: '¿Listo para el verdadero o falso?', de: 'Bereit für Wahr oder Falsch?', it: 'Pronto per il vero o falso?' },
   'tu-preferes': { fr: 'Prêts à trancher ?', en: 'Ready to choose?', es: '¿Listos para decidir?', de: 'Bereit, euch zu entscheiden?', it: 'Pronti a scegliere?' },
+  'amour-amitie': { fr: 'Prêt à mettre un mot dessus ?', en: 'Ready to put a name on it?', es: '¿Listo para ponerle nombre?', de: 'Bereit, es beim Namen zu nennen?', it: 'Pronto a dargli un nome?' },
   'fin-couple': { fr: 'Prêt à regarder les choses en face ?', en: 'Ready to face it?', es: '¿Listo para mirarlo de frente?', de: 'Bereit, hinzusehen?', it: 'Pronto a guardarlo in faccia?' },
   'pour-contre': { fr: 'Prêts à vous prononcer ?', en: 'Ready to take a side?', es: '¿Listos para posicionaros?', de: 'Bereit, Stellung zu beziehen?', it: 'Pronti a schierarvi?' },
 };
@@ -1389,7 +1390,7 @@ async function generateBlogArticle(articleMeta, lang) {
       'testCouple', 'testCommonPoints', 'testCompatibilite', 'testSuisJeAmoureux', 'testDistance',
       'testToxic', 'testPervers', 'testAmourHabitude', 'testCoupleSain', 'testMariage', 'testDivorce',
       'testParentalite', 'testEmmenager', 'testAstroPrenoms', 'testDateNaissance', 'testKarmique',
-      'testJalousie', 'testInfidelite', 'testCouche', 'testSecret', 'testDistanceAime', 'testLangageAmour', 'testAttachement', 'testConfiance', 'testFinCouple',
+      'testJalousie', 'testInfidelite', 'testCouche', 'testSecret', 'testDistanceAime', 'testLangageAmour', 'testAttachement', 'testConfiance', 'testFinCouple', 'testAmourAmitie',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarQuizzes: [
       'quizAmoureux', 'quizCoquin', 'quizMarrant', 'quizGenant', 'quizKnowledge',

@@ -35,8 +35,9 @@
     testConfiance:    ['testJalousie', 'testCoupleSain', 'testInfidelite', 'testAttachement'],
 
     // Introspection
-    testSuisJeAmoureux: ['testSecret', 'testAttachement', 'testLangageAmour', 'testAmourHabitude'],
-    testSecret:       ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement', 'testCompatibilite'],
+    testSuisJeAmoureux: ['testAmourAmitie', 'testSecret', 'testAttachement', 'testLangageAmour'],
+    testAmourAmitie:  ['testSecret', 'testSuisJeAmoureux', 'testAmourHabitude', 'testCouple'],
+    testSecret:       ['testSuisJeAmoureux', 'testAmourAmitie', 'testLangageAmour', 'testAttachement'],
     testDistanceAime: ['testDistance', 'testFinCouple', 'testSecret', 'testAttachement'],
     testLangageAmour: ['testAttachement', 'testCouple', 'quizKnowledge', 'testCoupleSain'],
     testAttachement:  ['testLangageAmour', 'testConfiance', 'testSuisJeAmoureux', 'testKarmique'],
@@ -77,7 +78,7 @@
     testCoupleSain: '💚', testMariage: '💒', testDivorce: '⚖️', testParentalite: '👶',
     testEmmenager: '🏠', testAstroPrenoms: '♈', testDateNaissance: '📅', testJalousie: '🫣', testLangageAmour: '💬',
     testAttachement: '🔗', testConfiance: '🤝', testCompatibilite: '💘', testPervers: '🎭', testAmourHabitude: '☕',
-    testFinCouple: '🪢', testKarmique: '🔮', testInfidelite: '💔', testCouche: '🛏️', testSecret: '💌', testDistanceAime: '📞', testSuisJeAmoureux: '💗',
+    testFinCouple: '🪢', testAmourAmitie: '🧭', testKarmique: '🔮', testInfidelite: '💔', testCouche: '🛏️', testSecret: '💌', testDistanceAime: '📞', testSuisJeAmoureux: '💗',
     quizAmoureux: '❤️', quizCoquin: '🔥', quizMarrant: '😂', quizKnowledge: '🧠',
     quizMost: '🏆', quizAdo: '🌟', quizGenant: '😳', quizTuPreferes: '🤔', quizVraiFaux: '✅',
     zamours: '📺', quizTentation: '🏝️',

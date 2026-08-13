@@ -347,7 +347,8 @@
     "testPurete": "Test de pureté",
     "pourContre": "Pour ou contre",
     "jeuDilemmes": "Dilemmes de couple",
-    "testFinCouple": "Est-ce la fin de mon couple ?"
+    "testFinCouple": "Est-ce la fin de mon couple ?",
+    "testAmourAmitie": "Amour ou amitié ?"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
