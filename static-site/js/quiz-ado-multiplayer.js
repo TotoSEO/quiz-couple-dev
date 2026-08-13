@@ -274,15 +274,23 @@
 
   // Ce quiz n'a besoin que du préfixe 'ado' : on va chercher son fragment
   // plutôt que les ~300 Ko du fichier complet, avec repli sur celui-ci.
+  // Empreinte de la construction, posée par le générateur dans l'en-tête de la
+  // page : les données sont demandées avec elle pour qu'aucun cache ne réponde
+  // avec celles d'une version antérieure du site.
+  function _v(url) {
+    var v = (typeof window !== 'undefined' && window.__QCV) || '';
+    return v ? url + '?v=' + v : url;
+  }
+
   function loadQuizData() {
-    return fetch('/js/data/gd/ado-' + lang + '.json')
+    return fetch(_v('/js/data/gd/ado-' + lang + '.json'))
       .then(function (r) { if (!r.ok) throw new Error('fragment absent'); return r.json(); })
       .then(function (d) {
         allQData = d.ado || {};
         if (!Object.keys(allQData).length) throw new Error('fragment vide');
       })
       .catch(function () {
-        return fetch('/js/data/gd-' + lang + '.json')
+        return fetch(_v('/js/data/gd-' + lang + '.json'))
           .then(function (r) { return r.json(); })
           .then(function (d) { allQData = d.ado || {}; });
       });

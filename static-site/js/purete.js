@@ -25,7 +25,11 @@
   var SUPABASE_URL = RACINE.dataset.supabaseUrl || '';
   var SUPABASE_KEY = RACINE.dataset.supabaseKey || '';
   var LANGUE = RACINE.dataset.lang || 'fr';
-  var URL_DONNEES = '/js/data/purete-' + LANGUE + '.json';
+  // L'empreinte de la construction, posée par le générateur dans l'en-tête de
+  // la page, accompagne la demande : aucun cache ne peut répondre avec les
+  // questions d'une version antérieure du site.
+  var URL_DONNEES = '/js/data/purete-' + LANGUE + '.json'
+    + (window.__QCV ? '?v=' + window.__QCV : '');
   var MIN_ECHANTILLON = 30; // en dessous, une courbe de répartition ne veut rien dire
 
   var I18N = window.PU_I18N || {};

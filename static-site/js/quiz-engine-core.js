@@ -39,6 +39,15 @@ var QuizEngine = (function() {
     for (var k in donnees) if (Object.prototype.hasOwnProperty.call(donnees, k)) cible[k] = donnees[k];
   }
 
+  // Empreinte de la construction, posée par le générateur dans l'en-tête de la
+  // page. Les fichiers de questions sont demandés avec elle : un cache qui
+  // garderait la version d'avant ne peut plus répondre à la place du serveur,
+  // et une page dont le quiz vient de naître trouve toujours ses données.
+  function _v(url) {
+    var v = (typeof window !== 'undefined' && window.__QCV) || '';
+    return v ? url + '?v=' + v : url;
+  }
+
   // Charge un préfixe isolé dans les deux langues utiles. Un fragment absent
   // n'est pas une erreur : selon la langue, c'est le préfixe ou son alias qui
   // existe (couple/testerC, commonPoints/cp), et certains n'existent que d'un
@@ -48,22 +57,22 @@ var QuizEngine = (function() {
     function tente(url) {
       return fetch(url).then(function(r) { return r.ok ? r.json() : {}; }).catch(function() { return {}; });
     }
-    var att = [tente('/js/data/gd/' + prefix + '-' + lang + '.json')];
-    att.push(lang === 'fr' ? Promise.resolve({}) : tente('/js/data/gd/' + prefix + '-fr.json'));
+    var att = [tente(_v('/js/data/gd/' + prefix + '-' + lang + '.json'))];
+    att.push(lang === 'fr' ? Promise.resolve({}) : tente(_v('/js/data/gd/' + prefix + '-fr.json')));
     return Promise.all(att);
   }
 
   function _chargeComplet(lang) {
-    return fetch('/js/data/gd-' + lang + '.json')
+    return fetch(_v('/js/data/gd-' + lang + '.json'))
       .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function(d) {
         gdTranslations = d;
         if (lang === 'fr') { gdFrTranslations = d; return null; }
-        return fetch('/js/data/gd-fr.json').then(function(r) { return r.json(); })
+        return fetch(_v('/js/data/gd-fr.json')).then(function(r) { return r.json(); })
           .then(function(fr) { gdFrTranslations = fr; });
       })
       .catch(function() {
-        return fetch('/js/data/gd-fr.json').then(function(r) { return r.json(); })
+        return fetch(_v('/js/data/gd-fr.json')).then(function(r) { return r.json(); })
           .then(function(d) { gdTranslations = d; gdFrTranslations = d; })
           .catch(function() {});
       });
@@ -75,10 +84,10 @@ var QuizEngine = (function() {
   function loadTranslations(lang, callback, prefixes) {
     function fini() { if (callback) callback(); }
 
-    var jeux = fetch('/js/data/games-' + lang + '.json').then(function(r) { return r.json(); })
+    var jeux = fetch(_v('/js/data/games-' + lang + '.json')).then(function(r) { return r.json(); })
       .then(function(d) { gamesTranslations = d; })
       .catch(function() {
-        return fetch('/js/data/games-fr.json').then(function(r) { return r.json(); })
+        return fetch(_v('/js/data/games-fr.json')).then(function(r) { return r.json(); })
           .then(function(d) { gamesTranslations = d; }).catch(function() {});
       });
 

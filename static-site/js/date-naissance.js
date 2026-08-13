@@ -166,9 +166,17 @@
 
   // ── Chargement des 144 duos de signes ─────────────────────
   var zodiaque = null;
+  // Empreinte de la construction, posée par le générateur dans l'en-tête de la
+  // page : les données sont demandées avec elle pour qu'aucun cache ne réponde
+  // avec celles d'une version antérieure du site.
+  function _v(url) {
+    var v = (typeof window !== 'undefined' && window.__QCV) || '';
+    return v ? url + '?v=' + v : url;
+  }
+
   function chargerZodiaque() {
     if (zodiaque) return Promise.resolve(zodiaque);
-    return fetch('/js/data/zodiac-' + LANG + '.json')
+    return fetch(_v('/js/data/zodiac-' + LANG + '.json'))
       .then(function (r) { return r.ok ? r.json() : {}; })
       .catch(function () { return {}; })
       .then(function (d) { zodiaque = d; return d; });
