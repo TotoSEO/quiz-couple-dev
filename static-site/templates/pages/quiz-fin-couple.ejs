@@ -7,15 +7,48 @@
   const poids = [1, 2, 3, 4, 5, 6];
   const paliers = [1, 2, 3, 4, 5, 6, 7, 8];
   const faqNums = [1, 2, 3, 4, 5, 6, 7];
+
+  // Les vingt-quatre questions et leurs réponses, reprises de gd.json, comme
+  // sur les autres pages de test : sans hasPart, le balisage Quiz annonce un
+  // test dont il ne montre aucune question. Les intitulés des réponses passent
+  // par tgd.local pour qu'une traduction absente laisse un trou plutôt que du
+  // français au milieu d'une page allemande.
+  const hasPart = [];
+  const lettres = ['a', 'b', 'c', 'd'];
+  for (let qi = 1; qi <= 24; qi++) {
+    const cle = 'finCouple.q' + qi;
+    const qText = tgd(cle, '');
+    if (!qText || qText === cle) break;
+    const question = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
+    const reponses = [];
+    for (let oi = 0; oi < lettres.length; oi++) {
+      const cleOpt = cle + lettres[oi];
+      const oText = tgd.local(cleOpt, '');
+      if (!oText || oText === cleOpt) break;
+      reponses.push({ "@type": "Answer", "position": oi + 1, "text": oText });
+    }
+    if (reponses.length) question.suggestedAnswer = reponses;
+    hasPart.push(question);
+  }
+
+  const quizSchema = {
+    "@context": "https://schema.org", "@type": "Quiz",
+    "name": t(ns + ':jsonLd.name', pageTitle),
+    "description": t('quizzes:testFinCouple.metaDescription', ''),
+    "about": { "@type": "Thing", "name": t(ns + ':jsonLd.about', 'Fin de relation amoureuse') },
+    "educationalLevel": "beginner",
+    "learningResourceType": "Quiz",
+    "interactivityType": "active",
+    "inLanguage": lang,
+    "isAccessibleForFree": true,
+    "additionalProperty": [
+      { "@type": "PropertyValue", "name": "totalQuestions", "value": 24 }
+    ]
+  };
+  if (hasPart.length) quizSchema.hasPart = hasPart;
+
   const jsonLd = [
-    {
-      "@context": "https://schema.org", "@type": "Quiz",
-      "name": t(ns + ':jsonLd.name', pageTitle),
-      "about": { "@type": "Thing", "name": t(ns + ':jsonLd.about', 'Fin de relation amoureuse') },
-      "educationalLevel": "beginner",
-      "inLanguage": lang,
-      "isAccessibleForFree": true
-    },
+    quizSchema,
     {
       "@context": "https://schema.org", "@type": "FAQPage",
       "mainEntity": faqNums.map(function(i) {

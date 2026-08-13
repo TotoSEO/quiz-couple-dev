@@ -95,6 +95,13 @@
   <!-- Full CSS -->
   <link rel="stylesheet" href="/css/styles.css">
 
+  <%# Empreinte de la construction. Le générateur remplace le jeton ci-dessous
+      par la même empreinte que celle ajoutée aux scripts et à la feuille de
+      style. Les scripts s'en servent pour demander leurs fichiers de
+      questions : sans elle, un cache peut répondre avec les données d'une
+      version du site où le quiz de la page n'existait pas encore. %>
+  <script>window.__QCV="EMPREINTE_RESSOURCES";</script>
+
   <!-- Google Analytics with Consent Mode v2 -->
   <script>
     window.dataLayer=window.dataLayer||[];

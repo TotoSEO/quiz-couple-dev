@@ -5,6 +5,7 @@
  */
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 import ejs from 'ejs';
 import { minify } from 'html-minifier-terser';
@@ -23,6 +24,51 @@ import { createT, createTgd, loadTranslations } from './i18n.js';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TEMPLATES_DIR = path.resolve(__dirname, '../templates');
 const DIST_DIR = path.resolve(__dirname, '../dist');
+
+// ── Empreinte des ressources ────────────────────────────────────────────────
+// Les scripts, la feuille de style et les fichiers de questions étaient servis
+// sous une adresse fixe. Un cache qui garde une de ces adresses garde donc une
+// version du site, et un nouveau quiz n'existe pour lui nulle part : le moteur
+// se charge, ne trouve pas ses questions et affiche son écran d'erreur. C'est
+// ce qu'a vu le robot de Google sur le test amour ou amitié, dont le fichier
+// de questions venait de naître alors que le gros fichier commun dormait dans
+// son cache depuis des semaines.
+// L'empreinte ci-dessous est ajoutée à toutes ces adresses. Elle ne bouge que
+// si un fichier bouge, donc une construction sans changement ne jette rien,
+// et une construction qui ajoute un quiz change l'adresse de tout ce dont ce
+// quiz a besoin.
+function empreinteRessources() {
+  const racines = [
+    path.resolve(__dirname, '../js'),
+    path.resolve(__dirname, '../css'),
+    ...LANGUAGES.map(l => path.resolve(__dirname, `../../${l}`)),
+  ];
+  const h = crypto.createHash('sha1');
+  const parcours = (dir) => {
+    if (!fs.existsSync(dir)) return;
+    for (const nom of fs.readdirSync(dir).sort()) {
+      const p = path.join(dir, nom);
+      const st = fs.statSync(p);
+      if (st.isDirectory()) { parcours(p); continue; }
+      if (!/\.(js|css|json)$/.test(nom)) continue;
+      h.update(path.relative(__dirname, p));
+      h.update(fs.readFileSync(p));
+    }
+  };
+  racines.forEach(parcours);
+  return h.digest('hex').slice(0, 8);
+}
+const ASSET_V = empreinteRessources();
+
+// Ajoute l'empreinte aux ressources internes d'une page. Les adresses
+// extérieures (AdSense, Google) et celles qui portent déjà une requête ne sont
+// pas touchées.
+function versionneRessources(html) {
+  return html
+    .replace(/(\s(?:src|href)=")(\/(?:js|css)\/[^"?#]+\.(?:js|css))"/g,
+      (_, avant, url) => `${avant}${url}?v=${ASSET_V}"`)
+    .replace(/EMPREINTE_RESSOURCES/g, ASSET_V);
+}
 
 // Real pixel size of the og:image, read from disk at build time.
 // Google Discover only serves the large card when the image is at least
@@ -380,6 +426,7 @@ function ensureDir(dirPath) {
 
 async function minifyHtml(html) {
   html = stripEmDashes(html);
+  html = versionneRessources(html);
   try {
     return await minify(html, {
       collapseWhitespace: true,
