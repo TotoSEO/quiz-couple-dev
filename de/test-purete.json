@@ -234,7 +234,9 @@
     "suite_couple_4": "Einen Gang zurück: wo steht eure Beziehung eigentlich?",
     "suites_titre": "Und jetzt?",
     "partage_poster": "Posten",
-    "partage_copier": "Nachricht kopieren"
+    "partage_copier": "Nachricht kopieren",
+    "statique_titre": "Bereit für den Test?",
+    "statique_intro": "Ein Blick auf die Fragen des Tests. Startet ihn oben, um eure Punktzahl zu bekommen."
   },
   "meta": {
     "titre": "Reinheitstest für Paare | Online & kostenlos",

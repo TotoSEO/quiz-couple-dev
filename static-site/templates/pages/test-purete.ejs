@@ -131,7 +131,11 @@
   // recherche, et elles décrivent le test aussi bien que les autres.
   var ECHANTILLON = 12;
   var hasPart = [];
+  var questionsStatiques = [];
   var pureteData = typeof pureteQuestions !== 'undefined' ? pureteQuestions : null;
+  if (pureteData && pureteData.solo && Array.isArray(pureteData.solo.questions)) {
+    questionsStatiques = pureteData.solo.questions.filter(function (q) { return q.ado; });
+  }
   if (pureteData && pureteData.solo && Array.isArray(pureteData.solo.questions)) {
     pureteData.solo.questions.filter(function (q) { return q.ado; }).slice(0, ECHANTILLON)
       .forEach(function (q, i) {
@@ -220,6 +224,31 @@
     </div>
   </div>
 </section>
+
+<%# Les questions en dur, pour un robot. Le moteur les pose en JavaScript,
+    donc sans ce bloc la page ne montrait aucune question à l'indexation,
+    contrairement à toutes les autres pages de test.
+    On ne publie que le pool tout public : ce sont les seules qu'on veut voir
+    ressortir dans un résultat de recherche. Les explicites restent dans le
+    test, elles ne sont simplement pas affichées ici. %>
+<% if (questionsStatiques.length) { %>
+<section class="quiz-static-questions">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <h2 class="quiz-static-title"><%= T('moteur.statique_titre', 'Prêts pour le test ?') %></h2>
+    <p class="quiz-static-intro"><%= T('moteur.statique_intro', 'Un aperçu des questions du test. Lancez-le ci-dessus pour obtenir votre score.') %></p>
+    <ol class="quiz-static-list">
+      <% questionsStatiques.forEach(function (q) { %>
+      <li class="quiz-static-item">
+        <h3 class="quiz-static-q"><%= q.q %></h3>
+        <ul class="quiz-static-opts">
+          <% q.r.forEach(function (r) { %><li><%= r.t %></li><% }); %>
+        </ul>
+      </li>
+      <% }); %>
+    </ol>
+  </div>
+</section>
+<% } %>
 
 <!-- ══ Contenu ═══════════════════════════════════════════════════════════ -->
 <article class="pu-section pu-article">

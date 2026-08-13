@@ -130,15 +130,45 @@ const GD_QUESTION_PREFIXES = {
   attachement: ['attachement'], confiance: ['confiance'],
   infidelite: ['infidelite'],
   'tu-preferes': ['wyr'], 'langage-amour': ['loveLanguage'],
+  // Ajouts : ces tests sont arrivés après la table, qui n'a pas suivi. Leurs
+  // questions existaient dans gd.json depuis le début, elles n'étaient
+  // simplement jamais rendues en dur, donc invisibles pour un robot.
+  compatibilite: ['compatibilite'], pervers: ['pervers'],
+  'amour-habitude': ['habitude'], tentation: ['tentation'],
+  karmique: ['karmique'], 'suis-je-amoureux': ['suisjeamoureux'],
+  'distance-aime': ['distanceAime'], zamours: ['zamours'],
+  // Ces deux-là déclinent leurs questions au masculin et au féminin ; le
+  // premier candidat qui répond gagne, les deux jeux se valent pour un robot.
+  couche: ['coucheH', 'coucheF'], secret: ['secretH', 'secretF'],
+  // Les jeux rangent leurs cartes par ambiance ou par thème : on prend la
+  // première famille, elle suffit à montrer de quoi le jeu est fait.
+  'action-ou-verite': ['actionVerite.classique'],
+  'action-ou-verite-coquin': ['actionVeriteHot.coquin'],
+  'qui-de-nous-deux': ['quiDeNous.quotidien'],
+  dilemmes: ['dilemmes.d'],
 };
 // Quiz types whose answers aren't meaningful multiple-choice options to list.
 const NO_OPTION_TYPES = new Set(['most', 'knowledge', 'marrant', 'vrai-faux']);
+// Le bloc s'intitulait « Aperçu des questions », ce qui le faisait lire comme
+// une annexe alors qu'il porte les questions elles-mêmes. Il reprend
+// désormais le titre que le moteur affiche sur son écran de départ : le
+// visiteur voit la même phrase que le robot, et le bloc annonce le test au
+// lieu de le résumer.
 const STATIC_Q_LABELS = {
-  fr: { heading: 'Aperçu des questions', intro: 'Voici un aperçu des questions abordées. Lancez le test ci-dessus pour obtenir votre résultat personnalisé.' },
-  en: { heading: 'Questions preview', intro: 'Here is a preview of the questions covered. Start the quiz above to get your personalized result.' },
-  es: { heading: 'Vista previa de las preguntas', intro: 'Aquí tienes una vista previa de las preguntas. Inicia el test arriba para obtener tu resultado personalizado.' },
-  de: { heading: 'Vorschau der Fragen', intro: 'Hier ist eine Vorschau der behandelten Fragen. Starte den Test oben, um dein persönliches Ergebnis zu erhalten.' },
-  it: { heading: 'Anteprima delle domande', intro: 'Ecco un\'anteprima delle domande trattate. Avvia il test qui sopra per ottenere il tuo risultato personalizzato.' },
+  fr: { heading: 'Prêts pour le test ?', intro: 'Les {n} questions, dans l\'ordre. Lancez le test ci-dessus pour obtenir votre résultat.', introExtrait: '{n} des questions posées. Le moteur en tire de nouvelles à chaque partie : lancez le test ci-dessus.' },
+  en: { heading: 'Ready for the test?', intro: 'All {n} questions, in order. Start the test above to get your result.', introExtrait: '{n} of the questions asked. The engine draws new ones every round: start the test above.' },
+  es: { heading: '¿Listos para el test?', intro: 'Las {n} preguntas, en orden. Inicia el test arriba para obtener tu resultado.', introExtrait: '{n} de las preguntas planteadas. El motor saca otras en cada partida: inicia el test arriba.' },
+  de: { heading: 'Bereit für den Test?', intro: 'Alle {n} Fragen, der Reihe nach. Startet den Test oben, um euer Ergebnis zu bekommen.', introExtrait: '{n} der gestellten Fragen. Der Motor zieht bei jeder Runde neue: startet den Test oben.' },
+  it: { heading: 'Pronti per il test?', intro: 'Le {n} domande, in ordine. Avvia il test qui sopra per ottenere il tuo risultato.', introExtrait: '{n} delle domande poste. Il motore ne pesca di nuove ogni partita: avvia il test qui sopra.' },
+};
+// Quelques moteurs ouvrent sur une autre phrase que « Prêts pour le test ? ».
+// Le bloc statique reprend la leur, sinon le titre en dur ne correspondrait
+// pas à ce que la personne lit une fois le moteur chargé.
+const STATIC_Q_HEADINGS = {
+  coquin: { fr: 'Prêts à pimenter ?', en: 'Ready to spice things up?', es: '¿Listos para darle picante?', de: 'Bereit für etwas Würze?', it: 'Pronti a pepare la serata?' },
+  marrant: { fr: 'Prêts à rire ensemble ?', en: 'Ready to laugh together?', es: '¿Listos para reíros juntos?', de: 'Bereit, zusammen zu lachen?', it: 'Pronti a ridere insieme?' },
+  'vrai-faux': { fr: 'Prêt pour le vrai ou faux ?', en: 'Ready for true or false?', es: '¿Listo para el verdadero o falso?', de: 'Bereit für Wahr oder Falsch?', it: 'Pronto per il vero o falso?' },
+  'tu-preferes': { fr: 'Prêts à trancher ?', en: 'Ready to choose?', es: '¿Listos para decidir?', de: 'Bereit, euch zu entscheiden?', it: 'Pronti a scegliere?' },
 };
 
 function buildStaticQuestionsSection(quizType, tgd, lang) {
@@ -147,26 +177,38 @@ function buildStaticQuestionsSection(quizType, tgd, lang) {
 
   const has = (key) => { const v = tgd(key, ''); return v && v !== key ? v : ''; };
 
-  // Pick the first candidate prefix that actually has a first question.
+  // Quatre formes de nommage cohabitent dans gd.json selon l'époque du
+  // fichier : prefixe.q1, prefixe.1, prefixe_q1 et prefixe1. Les deux
+  // dernières n'étaient pas reconnues, ce qui écartait en silence les jeux
+  // qui rangent leurs entrées par ambiance ou par thème.
+  const formes = (c, i) => [c + '.q' + i, c + '.' + i, c + '_q' + i, c + i];
+  const premiere = (c) => formes(c, 1).some(has);
+
   let prefix = '';
   for (const c of candidates) {
-    if (has(c + '.q1') || has(c + '.1')) { prefix = c; break; }
+    if (premiere(c)) { prefix = c; break; }
   }
   if (!prefix) return '';
 
-  const CAP = 24;
+  // Le plafond était à 24, ce qui coupait la plupart des tests au milieu.
+  // Un test de 20 questions les pose toutes : la page doit toutes les
+  // montrer. Les gros réservoirs, eux, ne sont jamais joués en entier, le
+  // moteur y pioche à chaque partie, donc en publier soixante suffit à
+  // décrire le test sans transformer la page en annuaire de 244 titres.
+  const CAP = 60;
   const showOptions = !NO_OPTION_TYPES.has(quizType);
   const optLetters = ['a', 'b', 'c', 'd', 'e'];
   const items = [];
   let misses = 0;
   for (let i = 1; i <= 300 && items.length < CAP; i++) {
-    const qText = has(prefix + '.q' + i) || has(prefix + '.' + i);
+    let qText = '';
+    for (const forme of formes(prefix, i)) { qText = has(forme); if (qText) break; }
     if (!qText) { if (items.length > 0 && ++misses >= 8) break; continue; }
     misses = 0;
     const opts = [];
     if (showOptions) {
       for (const L of optLetters) {
-        const o = has(prefix + '.q' + i + L);
+        const o = has(prefix + '.q' + i + L) || has(prefix + '_q' + i + L);
         if (o) opts.push(o);
       }
     }
@@ -175,9 +217,16 @@ function buildStaticQuestionsSection(quizType, tgd, lang) {
   if (items.length < 3) return '';
 
   const L = STATIC_Q_LABELS[lang] || STATIC_Q_LABELS.fr;
+  const specifique = STATIC_Q_HEADINGS[quizType];
+  const titre = (specifique && (specifique[lang] || specifique.fr)) || L.heading;
   let out = '<section class="quiz-static-questions"><div class="container mx-auto px-4 max-w-3xl">';
-  out += `<h2 class="quiz-static-title">${escapeHtml(L.heading)}</h2>`;
-  out += `<p class="quiz-static-intro">${escapeHtml(L.intro)}</p>`;
+  out += `<h2 class="quiz-static-title">${escapeHtml(titre)}</h2>`;
+  // On ne dit « les N questions » que si ce sont bien toutes les questions.
+  const tronque = items.length >= CAP;
+  const phrase = tronque
+    ? (L.introExtrait || L.intro).replace('{n}', items.length)
+    : L.intro.replace('{n}', items.length);
+  out += `<p class="quiz-static-intro">${escapeHtml(phrase)}</p>`;
   out += '<ol class="quiz-static-list">';
   for (const it of items) {
     out += '<li class="quiz-static-item">';
@@ -470,28 +519,41 @@ async function generatePage(routeKey, lang) {
     jsonLdItems.push(breadcrumbList);
   }
 
-  // Per-quiz AggregateRating (dynamique, note propre a chaque quiz/test via quiz_slug).
-  // On n'emet la note structuree que si la page a de vrais avis (>0), jamais de note vide.
+  // Balisage WebApplication de chaque page jouable.
+  //
+  // Le bloc entier était enfermé dans la condition « cette page a des avis ».
+  // Conséquence : une page sans avis ne déclarait pas non plus son prix, alors
+  // qu'elle est gratuite avec ou sans avis. Or c'est cette déclaration à zéro
+  // qui fait apparaître la mention « gratuit » dans un résultat de recherche.
+  // Sur les quarante-deux pages jouables, une seule avait des avis, donc une
+  // seule annonçait son prix.
+  //
+  // Le bloc est donc toujours émis, et seule la note reste conditionnée à de
+  // vrais avis : une note vide ou inventée est une faute que Google sanctionne.
   if (estPageJouable(routeKey)) {
+    const app = {
+      '@context': 'https://schema.org',
+      '@type': 'WebApplication',
+      name: title,
+      url: canonical,
+      applicationCategory: 'LifestyleApplication',
+      operatingSystem: 'Web',
+      // isAccessibleForFree double la déclaration de prix : les deux
+      // propriétés disent la même chose, Google lit l'une ou l'autre.
+      isAccessibleForFree: true,
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+    };
     const qStats = reviewStatsByQuiz[routeKey];
     if (qStats && parseInt(qStats.count) > 0) {
-      jsonLdItems.push({
-        '@context': 'https://schema.org',
-        '@type': 'WebApplication',
-        name: title,
-        url: canonical,
-        applicationCategory: 'LifestyleApplication',
-        operatingSystem: 'Web',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: qStats.avg,
-          reviewCount: qStats.count,
-          bestRating: '5',
-          worstRating: '1',
-        },
-      });
+      app.aggregateRating = {
+        '@type': 'AggregateRating',
+        ratingValue: qStats.avg,
+        reviewCount: qStats.count,
+        bestRating: '5',
+        worstRating: '1',
+      };
     }
+    jsonLdItems.push(app);
   }
 
   // Organization + WebSite schemas for homepage
