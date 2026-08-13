@@ -156,11 +156,11 @@
   var HJ = { apikey: KEY, 'Authorization': 'Bearer ' + KEY, 'Content-Type': 'application/json' };
 
   var UI = {
-    fr: { rate: 'Votre avis en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot sur votre expérience (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Une erreur est survenue, réessayez.', none: 'Soyez les premiers à donner votre avis !', based: 'avis', doneTest: 'Ce test a déjà été réalisé {n} fois', doneQuiz: 'Ce quiz a déjà été joué {n} fois', doneGame: 'Ce jeu a déjà été joué {n} fois', votesTotal: '{n} votes déposés sur ces dilemmes' },
-    en: { rate: 'Your review in 1 click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word about your experience (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Something went wrong, please retry.', none: 'Be the first to leave a review!', based: 'reviews', doneTest: 'This test has been taken {n} times', doneQuiz: 'This quiz has been played {n} times', doneGame: 'This game has been played {n} times', votesTotal: '{n} votes cast on these dilemmas' },
-    es: { rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Unas palabras sobre tu experiencia (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Tu opinión se verá tras la validación.', err: 'Ha ocurrido un error, inténtalo de nuevo.', none: '¡Sé el primero en opinar!', based: 'opiniones', doneTest: 'Este test se ha realizado {n} veces', doneQuiz: 'Este quiz se ha jugado {n} veces', doneGame: 'Este juego se ha jugado {n} veces', votesTotal: '{n} votos emitidos en estos dilemas' },
-    de: { rate: 'Deine Bewertung in 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort zu deiner Erfahrung (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Deine Bewertung erscheint nach der Prüfung.', err: 'Ein Fehler ist aufgetreten, bitte erneut versuchen.', none: 'Sei der Erste mit einer Bewertung!', based: 'Bewertungen', doneTest: 'Dieser Test wurde {n} mal gemacht', doneQuiz: 'Dieses Quiz wurde {n} mal gespielt', doneGame: 'Dieses Spiel wurde {n} mal gespielt', votesTotal: '{n} abgegebene Stimmen zu diesen Dilemmata' },
-    it: { rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola sulla tua esperienza (facoltativo)', submit: 'Pubblica la mia recensione', thanks: 'Grazie! La recensione sarà visibile dopo la moderazione.', err: 'Si è verificato un errore, riprova.', none: 'Sii il primo a lasciare una recensione!', based: 'recensioni', doneTest: 'Questo test è stato fatto {n} volte', doneQuiz: 'Questo quiz è stato giocato {n} volte', doneGame: 'Questo gioco è stato giocato {n} volte', votesTotal: '{n} voti espressi su questi dilemmi' }
+    fr: { rate: 'Votre avis en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot sur votre expérience (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Une erreur est survenue, réessayez.', none: 'Soyez les premiers à donner votre avis !', based: 'avis', doneTest: 'Ce test a déjà été réalisé {n} fois', doneQuiz: 'Ce quiz a déjà été joué {n} fois', doneGame: 'Ce jeu a déjà été joué {n} fois', votesTotal: '{n} votes déposés sur ces dilemmes', votesTotalPC: '{n} votes déposés sur ces propositions' },
+    en: { rate: 'Your review in 1 click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word about your experience (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Something went wrong, please retry.', none: 'Be the first to leave a review!', based: 'reviews', doneTest: 'This test has been taken {n} times', doneQuiz: 'This quiz has been played {n} times', doneGame: 'This game has been played {n} times', votesTotal: '{n} votes cast on these dilemmas', votesTotalPC: '{n} votes cast on these statements' },
+    es: { rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Unas palabras sobre tu experiencia (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Tu opinión se verá tras la validación.', err: 'Ha ocurrido un error, inténtalo de nuevo.', none: '¡Sé el primero en opinar!', based: 'opiniones', doneTest: 'Este test se ha realizado {n} veces', doneQuiz: 'Este quiz se ha jugado {n} veces', doneGame: 'Este juego se ha jugado {n} veces', votesTotal: '{n} votos emitidos en estos dilemas', votesTotalPC: '{n} votos emitidos en estas propuestas' },
+    de: { rate: 'Deine Bewertung in 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort zu deiner Erfahrung (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Deine Bewertung erscheint nach der Prüfung.', err: 'Ein Fehler ist aufgetreten, bitte erneut versuchen.', none: 'Sei der Erste mit einer Bewertung!', based: 'Bewertungen', doneTest: 'Dieser Test wurde {n} mal gemacht', doneQuiz: 'Dieses Quiz wurde {n} mal gespielt', doneGame: 'Dieses Spiel wurde {n} mal gespielt', votesTotal: '{n} abgegebene Stimmen zu diesen Dilemmata', votesTotalPC: '{n} abgegebene Stimmen zu diesen Aussagen' },
+    it: { rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola sulla tua esperienza (facoltativo)', submit: 'Pubblica la mia recensione', thanks: 'Grazie! La recensione sarà visibile dopo la moderazione.', err: 'Si è verificato un errore, riprova.', none: 'Sii il primo a lasciare una recensione!', based: 'recensioni', doneTest: 'Questo test è stato fatto {n} volte', doneQuiz: 'Questo quiz è stato giocato {n} volte', doneGame: 'Questo gioco è stato giocato {n} volte', votesTotal: '{n} voti espressi su questi dilemmi', votesTotalPC: '{n} voti espressi su queste proposte' }
   };
   var t = UI[lang] || UI.fr;
   function fmt(n) { try { return Number(n).toLocaleString(lang); } catch (e) { return '' + n; } }
@@ -185,12 +185,21 @@
     // Les dilemmes ne comptent pas des parties mais des votes : une partie
     // peut en valoir trois comme cent, et c'est le total des votes qui a un
     // sens sur cette page. Ils ont donc leur propre compteur.
-    if (slug === 'jeuDilemmes') {
-      fetch(URL + '/rest/v1/rpc/get_dilemme_total', { method: 'POST', headers: HJ, body: '{}' })
+    // Idem pour le pour ou contre : une partie peut valoir trois votes comme
+    // soixante, et il faut aller jusqu'au bilan pour qu'elle soit comptée.
+    // Le compteur générique restait donc à zéro alors que les votes, eux,
+    // partaient bien en base.
+    var COMPTEURS_DE_VOTES = {
+      jeuDilemmes: { rpc: 'get_dilemme_total', libelle: 'votesTotal' },
+      pourContre:  { rpc: 'get_pour_contre_total', libelle: 'votesTotalPC' }
+    };
+    var cv = COMPTEURS_DE_VOTES[slug];
+    if (cv) {
+      fetch(URL + '/rest/v1/rpc/' + cv.rpc, { method: 'POST', headers: HJ, body: '{}' })
         .then(function (r) { return r.json(); })
         .then(function (n) {
           n = +n || 0;
-          if (n > 0) { bubble.querySelector('.qcb-text').textContent = t.votesTotal.replace('{n}', fmt(n)); bubble.style.display = ''; }
+          if (n > 0) { bubble.querySelector('.qcb-text').textContent = t[cv.libelle].replace('{n}', fmt(n)); bubble.style.display = ''; }
         })
         .catch(function () {});
       return;
