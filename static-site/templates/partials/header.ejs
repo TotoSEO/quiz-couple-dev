@@ -126,257 +126,314 @@
   };
   function navIcon(rk) { return navIcons[rk] || _svg('<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5z"/><path d="M14 2v6h6"/>'); }
 %>
+
+<%# ── En-tête à deux niveaux ─────────────────────────────────────────────
+    Niveau 1 : l'identité et l'outillage (logo, liens directs, langue, thème).
+    Niveau 2 : la navigation de fond (Tests, Quiz, Jeux) avec ses panneaux.
+    Au défilement, chaque écran replie le niveau qui lui sert le moins :
+    le bureau replie le niveau 1 et fait apparaître un petit logo dans le
+    niveau 2 ; le mobile replie la rangée de puces du niveau 2 et fait
+    glisser le logo, centré en haut de page, vers la gauche. %>
 <header class="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80" id="site-header">
-  <nav class="container mx-auto px-4" aria-label="<%= lang === 'fr' ? 'Navigation principale' : 'Main navigation' %>">
-    <div class="flex h-16 items-center justify-between">
-      <!-- Logo -->
-      <a href="<%= homeUrl %>" class="flex items-center gap-2.5 text-xl font-bold transition-colors hover:opacity-80 flex-shrink-0" aria-label="Quiz Couple - <%= lang === 'fr' ? 'Accueil' : 'Home' %>">
-        <picture>
-          <source srcset="/assets/logo-quiz-couple.webp" type="image/webp">
-          <img src="/assets/logo-quiz-couple.png" alt="Quiz Couple" class="h-10 w-auto" width="40" height="42" loading="eager" fetchpriority="high">
-        </picture>
-        <span class="hidden sm:inline font-bold">Quiz Couple</span>
-      </a>
+  <nav aria-label="<%= lang === 'fr' ? 'Navigation principale' : 'Main navigation' %>">
 
-      <!-- Desktop Navigation -->
-      <div class="hidden lg:flex lg:items-center lg:gap-1">
-        <!-- Tests Mega Menu -->
-        <div class="nav-dropdown relative" data-megamenu>
-          <button class="nav-link nav-dropdown-trigger" aria-expanded="false">
-            <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-            <%= t('common:nav.categoryTests', 'Tests') %>
-            <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="nav-megamenu nav-dropdown-content hidden">
-            <div class="nav-megamenu-inner">
-              <div class="nav-megamenu-header">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-                <span><%= t('common:nav.categoryTests', 'Tests') %></span>
-                <span class="nav-megamenu-count"><%= testLinksFiltered.length %></span>
-              </div>
-              <div class="nav-megamenu-grid">
-                <% for (const link of testLinksFiltered) { %>
-                <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item">
-                  <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
-                  <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                </a>
-                <% } %>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- Niveau 1 -->
+    <div class="entete-n1">
+      <div class="container mx-auto px-4">
+        <div class="entete-n1-inner">
+          <a href="<%= homeUrl %>" class="entete-logo" aria-label="Quiz Couple - <%= lang === 'fr' ? 'Accueil' : 'Home' %>">
+            <picture>
+              <source srcset="/assets/logo-quiz-couple.webp" type="image/webp">
+              <img src="/assets/logo-quiz-couple.png" alt="Quiz Couple" width="40" height="42" loading="eager" fetchpriority="high">
+            </picture>
+            <span class="entete-logo-nom">Quiz Couple</span>
+          </a>
 
-        <!-- Quiz Mega Menu -->
-        <div class="nav-dropdown relative" data-megamenu>
-          <button class="nav-link nav-dropdown-trigger" aria-expanded="false">
-            <svg class="w-4 h-4 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-            <%= t('common:nav.categoryQuizzes', 'Quiz') %>
-            <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="nav-megamenu nav-dropdown-content hidden">
-            <div class="nav-megamenu-inner">
-              <div class="nav-megamenu-header nav-megamenu-header--quiz">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-                <span><%= t('common:nav.categoryQuizzes', 'Quiz') %></span>
-                <span class="nav-megamenu-count"><%= quizLinksFiltered.length %></span>
-              </div>
-              <div class="nav-megamenu-grid">
-                <% for (const link of quizLinksFiltered) { %>
-                <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item nav-megamenu-item--quiz">
-                  <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
-                  <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                </a>
-                <% } %>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Jeux Mega Menu -->
-        <!-- Le declencheur est scinde : le libelle est un vrai lien vers le hub,
-             la fleche est un bouton qui ne fait qu'ouvrir le sous-menu. Cliquer
-             le mot ne doit jamais se contenter d'ouvrir un panneau. -->
-        <div class="nav-dropdown nav-dropdown--scinde relative" data-megamenu>
-          <div class="nav-link nav-trigger-scinde">
-            <a href="<%= urlJeux %>" class="nav-trigger-lien">
-              <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
-              <%= t('common:nav.jeuxCouple', 'Jeux de couple') %>
-            </a>
-            <button type="button" class="nav-trigger-fleche" aria-expanded="false"
-                    aria-label="<%= t('common:nav.deployerJeux', 'Voir tous les jeux') %>">
-              <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </button>
-          </div>
-          <div class="nav-megamenu nav-dropdown-content hidden">
-            <div class="nav-megamenu-inner">
-              <div class="nav-megamenu-header nav-megamenu-header--jeu">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
-                <span><%= t('common:nav.jeuxCouple', 'Jeux de couple') %></span>
-                <span class="nav-megamenu-count"><%= jeuLinksFiltered.length %></span>
-              </div>
-              <div class="nav-megamenu-grid">
-                <% for (const link of jeuLinksFiltered) { %>
-                <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item nav-megamenu-item--jeu">
-                  <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
-                  <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-                </a>
-                <% } %>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <%# Le séparateur sautait juste avant la pastille du test de pureté :
-            son néon marque déjà la coupure, et la barre est trop chargée pour
-            se payer un trait décoratif de plus. %>
-
-        <!-- Direct links -->
-        <% for (const link of directLinksFiltered) { %>
-        <% if (link.vedette) { %>
-        <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-vedette">
-          <span class="nav-vedette-emoji" aria-hidden="true"><%= link.emoji %></span>
-          <span class="nav-vedette-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-        </a>
-        <% } else { %>
-        <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-link"><%= t('common:' + link.labelKey, link.labelKey) %></a>
-        <% } %>
-        <% } %>
-
-        <!-- Activities CTA -->
-        <a href="<%= getLocalizedUrl('activities', lang) %>" class="nav-cta-btn">
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <%= t('common:nav.activities', 'Activities') %>
-        </a>
-      </div>
-
-      <!-- Actions -->
-      <div class="flex items-center gap-2">
-        <!-- Language Selector -->
-        <div class="nav-dropdown relative">
-          <button class="nav-dropdown-trigger nav-action-btn" aria-label="<%= lang === 'fr' ? 'Changer de langue' : 'Change language' %>">
-            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-            <span class="text-xs font-semibold"><%= langNames[lang] %></span>
-            <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="nav-dropdown-content nav-lang-dropdown hidden">
-            <% for (const l of ['fr','en','es','de','it']) { %>
-            <a href="<%= getLocalizedUrl(typeof routeKey !== 'undefined' ? routeKey : 'home', l) || getLocalizedUrl('home', l) %>" class="nav-lang-option <%= l === lang ? 'nav-lang-option--active' : '' %>"<%- l === lang ? ' aria-current="true"' : '' %>>
-              <span class="text-xs font-bold uppercase w-6"><%= langNames[l] %></span>
-              <span><%= langFullNames[l] %></span>
-              <% if (l === lang) { %><svg class="w-4 h-4 text-primary ml-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><% } %>
-            </a>
+          <div class="entete-n1-liens">
+            <% for (const link of directLinksFiltered) { if (link.vedette) continue; %>
+            <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="n1-lien"><%= t('common:' + link.labelKey, link.labelKey) %></a>
             <% } %>
           </div>
+
+          <div class="entete-actions">
+            <!-- Langue -->
+            <div class="nav-dropdown relative">
+              <button class="nav-dropdown-trigger nav-action-btn" aria-expanded="false" aria-label="<%= lang === 'fr' ? 'Changer de langue' : 'Change language' %>">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                <span class="text-xs font-semibold"><%= langNames[lang] %></span>
+                <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </button>
+              <div class="nav-dropdown-content nav-lang-dropdown hidden">
+                <% for (const l of ['fr','en','es','de','it']) { %>
+                <a href="<%= getLocalizedUrl(typeof routeKey !== 'undefined' ? routeKey : 'home', l) || getLocalizedUrl('home', l) %>" class="nav-lang-option <%= l === lang ? 'nav-lang-option--active' : '' %>"<%- l === lang ? ' aria-current="true"' : '' %>>
+                  <span class="text-xs font-bold uppercase w-6"><%= langNames[l] %></span>
+                  <span><%= langFullNames[l] %></span>
+                  <% if (l === lang) { %><svg class="w-4 h-4 text-primary ml-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><% } %>
+                </a>
+                <% } %>
+              </div>
+            </div>
+
+            <!-- Thème -->
+            <button id="theme-toggle" class="nav-action-btn" aria-label="<%= lang === 'fr' ? 'Changer le thème' : 'Toggle theme' %>">
+              <svg class="h-4 w-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+              <svg class="h-4 w-4 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </button>
+
+            <!-- Burger -->
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+              <svg class="h-5 w-5 menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+              <svg class="h-5 w-5 close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
         </div>
-
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="nav-action-btn" aria-label="<%= lang === 'fr' ? 'Changer le thème' : 'Toggle theme' %>">
-          <svg class="h-4 w-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-          <svg class="h-4 w-4 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </button>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
-          <svg class="h-5 w-5 menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-          <svg class="h-5 w-5 close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
       </div>
     </div>
 
-    <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="hidden lg:hidden animate-fade-in">
-      <div class="mobile-nav-inner">
-        <!-- Tests accordion -->
-        <div class="mobile-accordion">
-          <button class="mobile-accordion-trigger" aria-expanded="false">
-            <span class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-              <%= t('common:nav.categoryTests', 'Tests') %>
-              <span class="mobile-nav-count"><%= testLinksFiltered.length %></span>
-            </span>
-            <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="mobile-accordion-content hidden">
-            <div class="mobile-nav-grid">
-              <% for (const link of testLinksFiltered) { %>
-              <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item">
-                <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
-                <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
-              </a>
-              <% } %>
-            </div>
-          </div>
-        </div>
+    <!-- Niveau 2 -->
+    <div class="entete-n2">
+      <div class="container mx-auto px-4">
+        <div class="entete-n2-inner">
+          <%# Petit logo du mode collé (bureau) : simple raccourci visuel,
+              le vrai lien d'accueil reste celui du niveau 1. %>
+          <a href="<%= homeUrl %>" class="entete-logo-mini" tabindex="-1" aria-hidden="true">
+            <img src="/assets/logo-quiz-couple.webp" alt="" width="40" height="42" loading="eager">
+          </a>
 
-        <!-- Quiz accordion -->
-        <div class="mobile-accordion">
-          <button class="mobile-accordion-trigger" aria-expanded="false">
-            <span class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-              <%= t('common:nav.categoryQuizzes', 'Quiz') %>
-              <span class="mobile-nav-count"><%= quizLinksFiltered.length %></span>
-            </span>
-            <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="mobile-accordion-content hidden">
-            <div class="mobile-nav-grid">
-              <% for (const link of quizLinksFiltered) { %>
-              <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item mobile-nav-item--quiz">
-                <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
-                <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
-              </a>
-              <% } %>
+          <!-- Onglets bureau -->
+          <div class="entete-onglets">
+            <!-- Tests -->
+            <div class="nav-dropdown n2-famille relative" data-megamenu style="--cat: var(--primary)">
+              <button class="n2-onglet nav-dropdown-trigger" aria-expanded="false">
+                <span class="n2-onglet-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></span>
+                <%= t('common:nav.categoryTests', 'Tests') %>
+                <span class="n2-onglet-nb"><%= testLinksFiltered.length %></span>
+                <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </button>
+              <div class="nav-megamenu nav-megamenu--tests nav-dropdown-content hidden">
+                <div class="nav-megamenu-inner">
+                  <div class="nav-megamenu-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                    <span><%= t('common:nav.categoryTests', 'Tests') %></span>
+                    <span class="nav-megamenu-count"><%= testLinksFiltered.length %></span>
+                  </div>
+                  <div class="nav-megamenu-grid">
+                    <% for (const link of testLinksFiltered) { %>
+                    <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item">
+                      <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
+                      <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                    </a>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Jeux accordion -->
-        <!-- Meme principe qu'en version bureau : le libelle mene au hub, seule
-             la fleche deplie la liste. -->
-        <div class="mobile-accordion mobile-accordion--scinde">
-          <div class="mobile-accordion-trigger mobile-trigger-scinde">
-            <a href="<%= urlJeux %>" class="mobile-trigger-lien">
-              <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
-              <%= t('common:nav.jeuxCouple', 'Jeux de couple') %>
-              <span class="mobile-nav-count"><%= jeuLinksFiltered.length %></span>
+            <!-- Quiz -->
+            <div class="nav-dropdown n2-famille relative" data-megamenu style="--cat: var(--secondary)">
+              <button class="n2-onglet nav-dropdown-trigger" aria-expanded="false">
+                <span class="n2-onglet-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>
+                <%= t('common:nav.categoryQuizzes', 'Quiz') %>
+                <span class="n2-onglet-nb"><%= quizLinksFiltered.length %></span>
+                <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </button>
+              <div class="nav-megamenu nav-megamenu--quiz nav-dropdown-content hidden">
+                <div class="nav-megamenu-inner">
+                  <div class="nav-megamenu-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                    <span><%= t('common:nav.categoryQuizzes', 'Quiz') %></span>
+                    <span class="nav-megamenu-count"><%= quizLinksFiltered.length %></span>
+                  </div>
+                  <div class="nav-megamenu-grid">
+                    <% for (const link of quizLinksFiltered) { %>
+                    <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item">
+                      <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
+                      <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                    </a>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Jeux : le libellé est un vrai lien vers le hub, la flèche seule
+                 déplie le panneau. Cliquer le mot doit mener quelque part. -->
+            <div class="nav-dropdown n2-famille nav-dropdown--scinde relative" data-megamenu style="--cat: 27 90% 52%">
+              <div class="n2-onglet n2-onglet--scinde">
+                <a href="<%= urlJeux %>" class="nav-trigger-lien">
+                  <span class="n2-onglet-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg></span>
+                  <%= t('common:nav.jeuxCouple', 'Jeux de couple') %>
+                  <span class="n2-onglet-nb"><%= jeuLinksFiltered.length %></span>
+                </a>
+                <button type="button" class="nav-trigger-fleche" aria-expanded="false"
+                        aria-label="<%= t('common:nav.deployerJeux', 'Voir tous les jeux') %>">
+                  <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+              <div class="nav-megamenu nav-megamenu--jeux nav-dropdown-content hidden">
+                <div class="nav-megamenu-inner">
+                  <div class="nav-megamenu-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
+                    <span><%= t('common:nav.jeuxCouple', 'Jeux de couple') %></span>
+                    <span class="nav-megamenu-count"><%= jeuLinksFiltered.length %></span>
+                  </div>
+                  <div class="nav-megamenu-grid">
+                    <% for (const link of jeuLinksFiltered) { %>
+                    <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item">
+                      <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
+                      <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                    </a>
+                    <% } %>
+                  </div>
+                  <a href="<%= urlJeux %>" class="nav-megamenu-pied">
+                    <%= t('common:nav.deployerJeux', 'Voir tous les jeux') %>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vedette : test de pureté -->
+            <% for (const link of directLinksFiltered) { if (!link.vedette) continue; %>
+            <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-vedette">
+              <span class="nav-vedette-emoji" aria-hidden="true"><%= link.emoji %></span>
+              <span class="nav-vedette-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
             </a>
-            <button type="button" class="mobile-trigger-fleche" aria-expanded="false"
-                    aria-label="<%= t('common:nav.deployerJeux', 'Voir tous les jeux') %>">
+            <% } %>
+
+            <span class="entete-n2-ressort" aria-hidden="true"></span>
+
+            <!-- Activités -->
+            <a href="<%= getLocalizedUrl('activities', lang) %>" class="nav-cta-btn">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <%= t('common:nav.activities', 'Activities') %>
+            </a>
+          </div>
+
+          <!-- Puces mobiles : les trois familles ouvrent le menu déplié sur la
+               bonne section, les deux dernières sont des liens directs. -->
+          <div class="entete-chips">
+            <button type="button" class="chip" data-cible="tests" aria-controls="mobile-menu" style="--cat: var(--primary)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              <%= t('common:nav.categoryTests', 'Tests') %>
+              <span class="chip-nb"><%= testLinksFiltered.length %></span>
+            </button>
+            <button type="button" class="chip" data-cible="quiz" aria-controls="mobile-menu" style="--cat: var(--secondary)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+              <%= t('common:nav.categoryQuizzes', 'Quiz') %>
+              <span class="chip-nb"><%= quizLinksFiltered.length %></span>
+            </button>
+            <button type="button" class="chip" data-cible="jeux" aria-controls="mobile-menu" style="--cat: 27 90% 52%">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
+              <%= t('common:nav.jeuxCouple', 'Jeux de couple') %>
+              <span class="chip-nb"><%= jeuLinksFiltered.length %></span>
+            </button>
+            <% for (const link of directLinksFiltered) { if (!link.vedette) continue; %>
+            <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="chip chip--vedette">
+              <span aria-hidden="true"><%= link.emoji %></span>
+              <span class="chip-vedette-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
+            </a>
+            <% } %>
+            <a href="<%= getLocalizedUrl('activities', lang) %>" class="chip chip--cta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <%= t('common:nav.activities', 'Activities') %>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu mobile déplié -->
+    <div id="mobile-menu" class="hidden lg:hidden">
+      <div class="container mx-auto px-4">
+        <div class="mobile-nav-inner">
+          <!-- Tests -->
+          <div class="mobile-accordion" data-accordeon="tests" style="--cat: var(--primary)">
+            <button class="mobile-accordion-trigger" aria-expanded="false">
+              <span class="m-acc-titre">
+                <span class="m-acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></span>
+                <%= t('common:nav.categoryTests', 'Tests') %>
+                <span class="mobile-nav-count"><%= testLinksFiltered.length %></span>
+              </span>
               <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             </button>
-          </div>
-          <div class="mobile-accordion-content hidden">
-            <div class="mobile-nav-grid">
-              <% for (const link of jeuLinksFiltered) { %>
-              <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item mobile-nav-item--jeu">
-                <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
-                <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
-              </a>
-              <% } %>
+            <div class="mobile-accordion-content hidden">
+              <div class="mobile-nav-grid">
+                <% for (const link of testLinksFiltered) { %>
+                <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item">
+                  <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
+                  <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                </a>
+                <% } %>
+              </div>
             </div>
           </div>
+
+          <!-- Quiz -->
+          <div class="mobile-accordion" data-accordeon="quiz" style="--cat: var(--secondary)">
+            <button class="mobile-accordion-trigger" aria-expanded="false">
+              <span class="m-acc-titre">
+                <span class="m-acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>
+                <%= t('common:nav.categoryQuizzes', 'Quiz') %>
+                <span class="mobile-nav-count"><%= quizLinksFiltered.length %></span>
+              </span>
+              <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+            <div class="mobile-accordion-content hidden">
+              <div class="mobile-nav-grid">
+                <% for (const link of quizLinksFiltered) { %>
+                <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item">
+                  <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
+                  <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                </a>
+                <% } %>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jeux : le libellé mène au hub, la flèche déplie. -->
+          <div class="mobile-accordion mobile-accordion--scinde" data-accordeon="jeux" style="--cat: 27 90% 52%">
+            <div class="mobile-accordion-trigger mobile-trigger-scinde">
+              <a href="<%= urlJeux %>" class="mobile-trigger-lien">
+                <span class="m-acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg></span>
+                <%= t('common:nav.jeuxCouple', 'Jeux de couple') %>
+                <span class="mobile-nav-count"><%= jeuLinksFiltered.length %></span>
+              </a>
+              <button type="button" class="mobile-trigger-fleche" aria-expanded="false"
+                      aria-label="<%= t('common:nav.deployerJeux', 'Voir tous les jeux') %>">
+                <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <div class="mobile-accordion-content hidden">
+              <div class="mobile-nav-grid">
+                <% for (const link of jeuLinksFiltered) { %>
+                <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item">
+                  <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
+                  <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                </a>
+                <% } %>
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile-nav-divider"></div>
+
+          <% for (const link of directLinksFiltered) { %>
+          <% if (link.vedette) { %>
+          <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-vedette">
+            <span class="mobile-nav-vedette-emoji" aria-hidden="true"><%= link.emoji %></span>
+            <span class="mobile-nav-vedette-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
+          </a>
+          <% } else { %>
+          <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-link"><%= t('common:' + link.labelKey, link.labelKey) %></a>
+          <% } %>
+          <% } %>
+
+          <a href="<%= getLocalizedUrl('activities', lang) %>" class="mobile-nav-cta">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <%= t('common:nav.activities', 'Activities') %>
+          </a>
         </div>
-
-        <!-- Divider -->
-        <div class="mobile-nav-divider"></div>
-
-        <!-- Direct links -->
-        <% for (const link of directLinksFiltered) { %>
-        <% if (link.vedette) { %>
-        <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-vedette">
-          <span class="mobile-nav-vedette-emoji" aria-hidden="true"><%= link.emoji %></span>
-          <span class="mobile-nav-vedette-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-        </a>
-        <% } else { %>
-        <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-link"><%= t('common:' + link.labelKey, link.labelKey) %></a>
-        <% } %>
-        <% } %>
-
-        <!-- Activities CTA (mobile) -->
-        <a href="<%= getLocalizedUrl('activities', lang) %>" class="mobile-nav-cta">
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <%= t('common:nav.activities', 'Activities') %>
-        </a>
       </div>
     </div>
   </nav>

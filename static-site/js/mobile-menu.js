@@ -1,70 +1,131 @@
 /**
- * Mobile menu toggle + accordion navigation
+ * En-tête à deux niveaux : état collé, menu mobile, accordéons, panneaux.
  */
 (function() {
+  var entete = document.getElementById('site-header');
+
+  // ── État collé ──────────────────────────────────────────
+  // La classe est-collee replie le niveau qui sert le moins : le niveau 1 sur
+  // bureau, la rangée de puces sur mobile. L'hystérésis (48 px pour coller,
+  // 12 px pour décoller) évite que la barre batte des ailes autour du seuil
+  // pendant que sa propre hauteur change.
+  if (entete) {
+    var collee = false;
+    var poserEtat = function() {
+      var y = window.scrollY || document.documentElement.scrollTop || 0;
+      if (!collee && y > 48) { collee = true; entete.classList.add('est-collee'); }
+      else if (collee && y < 12) { collee = false; entete.classList.remove('est-collee'); }
+    };
+    window.addEventListener('scroll', poserEtat, { passive: true });
+    poserEtat();
+  }
+
+  // ── Menu mobile ─────────────────────────────────────────
   var menuBtn = document.getElementById('mobile-menu-btn');
   var menu = document.getElementById('mobile-menu');
-  if (!menuBtn || !menu) return;
 
-  var menuIcon = menuBtn.querySelector('.menu-icon');
-  var closeIcon = menuBtn.querySelector('.close-icon');
+  function poserTiroir(ouvert) {
+    if (!menuBtn || !menu) return;
+    menu.classList.toggle('hidden', !ouvert);
+    menuBtn.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
+    var menuIcon = menuBtn.querySelector('.menu-icon');
+    var closeIcon = menuBtn.querySelector('.close-icon');
+    if (menuIcon) menuIcon.classList.toggle('hidden', ouvert);
+    if (closeIcon) closeIcon.classList.toggle('hidden', !ouvert);
+  }
 
-  menuBtn.addEventListener('click', function() {
-    var isOpen = menu.classList.contains('hidden');
-    menu.classList.toggle('hidden');
-    menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    if (menuIcon) menuIcon.classList.toggle('hidden');
-    if (closeIcon) closeIcon.classList.toggle('hidden');
-  });
+  if (menuBtn && menu) {
+    menuBtn.addEventListener('click', function() {
+      poserTiroir(menu.classList.contains('hidden'));
+    });
+    // Suivre un lien du menu le referme.
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() { poserTiroir(false); });
+    });
+  }
 
-  // Accordeons mobiles. Deux formes coexistent : le declencheur classique,
-  // qui est un bouton pleine largeur, et le declencheur scinde des jeux, ou
-  // le libelle est un lien vers le hub et seule la fleche deplie la liste.
-  function basculer(bouton, contenu) {
+  // ── Accordéons du menu mobile ───────────────────────────
+  // Deux formes : le déclencheur classique (bouton pleine largeur) et le
+  // déclencheur scindé des jeux (le libellé est un lien vers le hub, seule
+  // la flèche déplie la liste).
+  function basculerAccordeon(bouton, contenu, forcerOuvert) {
     var ouvert = bouton.getAttribute('aria-expanded') === 'true';
-    bouton.setAttribute('aria-expanded', ouvert ? 'false' : 'true');
+    var cible = (forcerOuvert === undefined) ? !ouvert : forcerOuvert;
+    if (cible === ouvert) return;
+    bouton.setAttribute('aria-expanded', cible ? 'true' : 'false');
     if (contenu) {
-      contenu.classList.toggle('open');
-      contenu.classList.toggle('hidden');
+      contenu.classList.toggle('open', cible);
+      contenu.classList.toggle('hidden', !cible);
     }
   }
   document.querySelectorAll('.mobile-accordion-trigger').forEach(function(trigger) {
     var contenu = trigger.nextElementSibling;
     var fleche = trigger.querySelector('.mobile-trigger-fleche');
-    if (fleche) { fleche.addEventListener('click', function() { basculer(fleche, contenu); }); return; }
-    trigger.addEventListener('click', function() { basculer(trigger, contenu); });
+    if (fleche) { fleche.addEventListener('click', function() { basculerAccordeon(fleche, contenu); }); return; }
+    trigger.addEventListener('click', function() { basculerAccordeon(trigger, contenu); });
   });
 
-  // Menu des jeux en version bureau : le panneau s'ouvre au survol par le CSS,
-  // mais il faut aussi qu'un clic sur la fleche l'ouvre, sinon l'ecran tactile
-  // et le clavier n'ont aucun moyen d'y acceder.
-  document.querySelectorAll('.nav-dropdown--scinde').forEach(function(bloc) {
-    var fleche = bloc.querySelector('.nav-trigger-fleche');
-    if (!fleche) return;
-    fleche.addEventListener('click', function(e) {
+  // ── Puces du niveau 2 (mobile) ──────────────────────────
+  // Une puce de famille ouvre le menu déplié sur la bonne section, déjà
+  // dépliée, et l'amène à l'écran.
+  document.querySelectorAll('.chip[data-cible]').forEach(function(puce) {
+    puce.addEventListener('click', function() {
+      var bloc = document.querySelector('.mobile-accordion[data-accordeon="' + puce.getAttribute('data-cible') + '"]');
+      poserTiroir(true);
+      if (!bloc) return;
+      var declencheur = bloc.querySelector('.mobile-trigger-fleche') || bloc.querySelector('.mobile-accordion-trigger');
+      var contenu = bloc.querySelector('.mobile-accordion-content');
+      basculerAccordeon(declencheur, contenu, true);
+      bloc.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    });
+  });
+
+  // ── Menus déroulants (bureau) ───────────────────────────
+  // Les panneaux s'ouvrent au survol par le CSS ; le clic pose la classe
+  // est-ouvert pour l'écran tactile et le clavier. Sur les familles, le
+  // déclencheur est le bouton d'onglet ; sur les jeux, seule la flèche
+  // (le libellé est un lien) ; sur la langue, le bouton d'action.
+  var deroulants = Array.prototype.slice.call(document.querySelectorAll('#site-header .nav-dropdown'));
+  function fermerDeroulants(sauf) {
+    deroulants.forEach(function(bloc) {
+      if (bloc === sauf) return;
+      bloc.classList.remove('est-ouvert');
+      var d = bloc.querySelector('[aria-expanded]');
+      if (d) d.setAttribute('aria-expanded', 'false');
+    });
+  }
+  deroulants.forEach(function(bloc) {
+    var declencheur = bloc.querySelector('.nav-trigger-fleche') || bloc.querySelector('.nav-dropdown-trigger');
+    if (!declencheur) return;
+    declencheur.addEventListener('click', function(e) {
       e.preventDefault();
       var ouvert = bloc.classList.toggle('est-ouvert');
-      fleche.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
-    });
-    // Un clic ailleurs, ou la touche d'echappement, referme le panneau.
-    document.addEventListener('click', function(e) {
-      if (bloc.contains(e.target)) return;
-      bloc.classList.remove('est-ouvert');
-      fleche.setAttribute('aria-expanded', 'false');
+      declencheur.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
+      if (ouvert) { fermerDeroulants(bloc); caleMegamenu(bloc); }
     });
     bloc.addEventListener('keydown', function(e) {
       if (e.key !== 'Escape') return;
       bloc.classList.remove('est-ouvert');
-      fleche.setAttribute('aria-expanded', 'false');
-      fleche.focus();
+      declencheur.setAttribute('aria-expanded', 'false');
+      declencheur.focus();
+    });
+  });
+  document.addEventListener('click', function(e) {
+    deroulants.forEach(function(bloc) {
+      if (bloc.contains(e.target)) return;
+      if (!bloc.classList.contains('est-ouvert')) return;
+      bloc.classList.remove('est-ouvert');
+      var d = bloc.querySelector('[aria-expanded]');
+      if (d) d.setAttribute('aria-expanded', 'false');
     });
   });
 
-  // Megamenu bureau : le panneau est ancre sur le bord gauche de son onglet,
-  // pour qu'il reste sous lui et que la souris puisse y descendre sans que le
-  // menu se referme. Sur les onglets de droite, un panneau large sortirait de
-  // l'ecran : on le recule alors du strict necessaire, jamais au-dela du bord
-  // gauche de la fenetre, et jamais au point de ne plus couvrir son onglet.
+  // ── Calage des méga-panneaux ────────────────────────────
+  // Le panneau est ancré sur le bord gauche de son onglet, pour rester sous
+  // lui et que la souris puisse y descendre sans que le menu se referme. Sur
+  // les onglets de droite, un panneau large sortirait de l'écran : on le
+  // recule alors du strict nécessaire, jamais au-delà du bord gauche de la
+  // fenêtre, et jamais au point de ne plus couvrir son onglet.
   var megamenus = document.querySelectorAll('[data-megamenu]');
   function caleMegamenu(bloc) {
     var pan = bloc.querySelector('.nav-megamenu');
@@ -92,15 +153,5 @@
         if (pan) pan.style.transform = '';
       });
     }, 150);
-  });
-
-  // Close mobile menu when clicking a link
-  menu.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      menu.classList.add('hidden');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      if (menuIcon) menuIcon.classList.remove('hidden');
-      if (closeIcon) closeIcon.classList.add('hidden');
-    });
   });
 })();
