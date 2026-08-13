@@ -65,26 +65,12 @@
     trigger.addEventListener('click', function() { basculerAccordeon(trigger, contenu); });
   });
 
-  // ── Puces du niveau 2 (mobile) ──────────────────────────
-  // Une puce de famille ouvre le menu déplié sur la bonne section, déjà
-  // dépliée, et l'amène à l'écran.
-  document.querySelectorAll('.chip[data-cible]').forEach(function(puce) {
-    puce.addEventListener('click', function() {
-      var bloc = document.querySelector('.mobile-accordion[data-accordeon="' + puce.getAttribute('data-cible') + '"]');
-      poserTiroir(true);
-      if (!bloc) return;
-      var declencheur = bloc.querySelector('.mobile-trigger-fleche') || bloc.querySelector('.mobile-accordion-trigger');
-      var contenu = bloc.querySelector('.mobile-accordion-content');
-      basculerAccordeon(declencheur, contenu, true);
-      bloc.scrollIntoView({ block: 'start', behavior: 'smooth' });
-    });
-  });
-
   // ── Menus déroulants (bureau) ───────────────────────────
-  // Les panneaux s'ouvrent au survol par le CSS ; le clic pose la classe
-  // est-ouvert pour l'écran tactile et le clavier. Sur les familles, le
-  // déclencheur est le bouton d'onglet ; sur les jeux, seule la flèche
-  // (le libellé est un lien) ; sur la langue, le bouton d'action.
+  // Les panneaux des familles s'ouvrent au survol (et à la tabulation par le
+  // CSS), jamais au clic : un panneau qui reste planté après un clic sur
+  // l'onglet gêne plus qu'il n'aide. Seuls gardent un clic les déclencheurs
+  // qui n'ont pas d'équivalent au survol tactile : la flèche du menu des
+  // jeux (le libellé est un lien, il navigue) et le sélecteur de langue.
   var deroulants = Array.prototype.slice.call(document.querySelectorAll('#site-header .nav-dropdown'));
   function fermerDeroulants(sauf) {
     deroulants.forEach(function(bloc) {
@@ -95,7 +81,8 @@
     });
   }
   deroulants.forEach(function(bloc) {
-    var declencheur = bloc.querySelector('.nav-trigger-fleche') || bloc.querySelector('.nav-dropdown-trigger');
+    var declencheur = bloc.querySelector('.nav-trigger-fleche') ||
+      (bloc.hasAttribute('data-megamenu') ? null : bloc.querySelector('.nav-dropdown-trigger'));
     if (!declencheur) return;
     declencheur.addEventListener('click', function(e) {
       e.preventDefault();

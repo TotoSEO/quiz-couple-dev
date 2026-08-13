@@ -1170,90 +1170,24 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 /* ── Niveau 1 mobile : logo centré, puis à gauche une fois collé ───────── */
 
 @media (max-width: 1023.98px) {
-  .entete-n1-inner { position: relative; height: 3.5rem; }
-  .est-collee .entete-n1-inner { height: 3rem; }
+  .entete-n1-inner { position: relative; height: 3.75rem; }
+  .est-collee .entete-n1-inner { height: 3.25rem; }
   .entete-logo {
     position: absolute; left: 50%; top: 50%;
     transform: translate(-50%, -50%);
+    /* Une petite marge interne agrandit la zone de toucher sans bouger le dessin. */
+    padding: 0.25rem;
     transition: left 0.35s cubic-bezier(0.22, 1, 0.36, 1), transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .est-collee .entete-logo { left: 0; transform: translate(0, -50%); }
-  .entete-logo img { height: 2rem; }
+  .entete-logo img { height: 2.75rem; transition: height 0.3s ease; }
+  .est-collee .entete-logo img { height: 2.4rem; }
   .entete-actions { margin-left: auto; }
 
-  /* La rangée de puces se replie une fois l'en-tête collé. */
-  .entete-n2 {
-    max-height: 3.6rem;
-    transition: max-height 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
-  }
-  .est-collee .entete-n2 { max-height: 0; opacity: 0; overflow: hidden; pointer-events: none; }
+  /* Le niveau 2 est une affaire de bureau : sur mobile, le menu déplié du
+     burger donne déjà accès à tout, une rangée de plus ferait doublon. */
+  .entete-n2 { display: none; }
 }
-
-/* ── Puces mobiles du niveau 2 ────────────────────────────── */
-
-.entete-chips {
-  display: flex; align-items: center; gap: 0.5rem;
-  padding: 0.3rem 0 0.7rem;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
-.entete-chips::-webkit-scrollbar { display: none; }
-@media (min-width: 1024px) { .entete-chips { display: none; } }
-.chip {
-  flex: 0 0 auto;
-  display: inline-flex; align-items: center; gap: 0.45rem;
-  height: 2.25rem; padding: 0 0.9rem; border-radius: 9999px;
-  border: 1px solid hsl(var(--border) / 0.8); background: hsl(var(--card) / 0.7);
-  font-size: 0.8125rem; font-weight: 600; color: hsl(var(--foreground));
-  cursor: pointer; white-space: nowrap;
-  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
-}
-.chip:active { transform: scale(0.96); }
-.chip > svg { width: 0.95rem; height: 0.95rem; color: hsl(var(--cat, var(--primary))); flex-shrink: 0; }
-.chip-nb {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-width: 1.05rem; height: 1.05rem; padding: 0 0.25rem;
-  border-radius: 9999px; font-size: 0.65rem; font-weight: 700;
-  background: hsl(var(--cat) / 0.12); color: hsl(var(--cat));
-}
-/* Puce vedette : même anneau néon que la pastille bureau, en version fixe. */
-.chip--vedette {
-  position: relative; isolation: isolate;
-  border: none; --nv-angle: 60deg;
-  font-weight: 700;
-}
-.chip--vedette::before {
-  content: ''; position: absolute; z-index: -2; inset: -1px;
-  border-radius: 9999px;
-  background: conic-gradient(
-    from var(--nv-angle),
-    hsl(var(--primary) / 0.16) 0deg,
-    hsl(var(--primary) / 0.16) 170deg,
-    hsl(265 60% 58%) 245deg,
-    hsl(var(--primary)) 295deg,
-    hsl(340 95% 80%) 320deg,
-    hsl(var(--primary)) 345deg,
-    hsl(var(--primary) / 0.16) 360deg
-  );
-  filter: blur(1.5px);
-}
-.chip--vedette::after {
-  content: ''; position: absolute; z-index: -1; inset: 1.5px;
-  border-radius: 9999px;
-  background: linear-gradient(100deg, hsl(var(--primary) / 0.1), hsl(265 60% 58% / 0.08)), hsl(var(--background));
-}
-.chip-vedette-texte {
-  background: linear-gradient(120deg, hsl(var(--primary)), hsl(265 60% 58%));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.chip--cta {
-  border: none;
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.85));
-  color: hsl(var(--primary-foreground));
-  box-shadow: 0 2px 8px -2px hsl(var(--primary) / 0.4);
-}
-.chip--cta > svg { color: hsl(var(--primary-foreground)); }
 
 /* ── Entrée vedette (bureau) : anneau néon rotatif ─────────
    Le test de pureté doit sortir du lot sans devenir un second bouton rose :
@@ -1363,6 +1297,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .nav-dropdown-content { padding-top: 0.6rem; }
 .nav-dropdown:hover > .nav-dropdown-content,
 .nav-dropdown.est-ouvert > .nav-dropdown-content,
+.nav-dropdown:has(:focus-visible) > .nav-dropdown-content,
 .nav-dropdown-content:hover { display: block; }
 .nav-dropdown:hover .nav-chevron,
 .nav-dropdown.est-ouvert .nav-chevron { transform: rotate(180deg); }
@@ -1423,29 +1358,11 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 /* Lavis de couleur en tête de panneau, dans la teinte de la famille. */
 .nav-megamenu-inner::before {
-  content: ''; position: absolute; inset: 0 0 auto 0; height: 5.5rem;
+  content: ''; position: absolute; inset: 0 0 auto 0; height: 4rem;
   pointer-events: none;
   background:
     radial-gradient(28rem 7rem at 12% 0%, hsl(var(--cat, var(--primary)) / 0.13), transparent 65%),
     radial-gradient(20rem 6rem at 85% 0%, hsl(var(--cat, var(--primary)) / 0.06), transparent 70%);
-}
-.nav-megamenu-header {
-  position: relative;
-  display: flex; align-items: center; gap: 0.6rem;
-  padding: 0.9rem 1.15rem 0.75rem;
-  font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
-  color: hsl(var(--cat, var(--primary)));
-}
-.nav-megamenu-header::after {
-  content: ''; position: absolute; left: 1.15rem; right: 1.15rem; bottom: 0; height: 1px;
-  background: linear-gradient(90deg, hsl(var(--cat, var(--primary)) / 0.35), transparent);
-}
-.nav-megamenu-header svg { width: 1.05rem; height: 1.05rem; }
-.nav-megamenu-count {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-width: 1.25rem; height: 1.25rem; padding: 0 0.375rem;
-  border-radius: 9999px; font-size: 0.6875rem; font-weight: 700;
-  background: hsl(var(--cat, var(--primary)) / 0.1); color: hsl(var(--cat, var(--primary)));
 }
 /* minmax(0, 1fr) et non 1fr : sinon chaque colonne garde pour plancher la
    largeur du plus long libellé et l'overflow rogne la colonne de droite. */
@@ -1473,12 +1390,12 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .nav-megamenu-icon {
   display: flex; align-items: center; justify-content: center;
   width: 2rem; height: 2rem; border-radius: 0.6rem; flex-shrink: 0;
-  background: hsl(var(--muted) / 0.6); color: hsl(var(--muted-foreground));
+  background: hsl(var(--cat, var(--primary)) / 0.1); color: hsl(var(--cat, var(--primary)));
   transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 .nav-megamenu-icon svg { width: 1.05rem; height: 1.05rem; }
 .nav-megamenu-item:hover .nav-megamenu-icon {
-  background: hsl(var(--cat, var(--primary)) / 0.14);
+  background: hsl(var(--cat, var(--primary)) / 0.18);
   color: hsl(var(--cat, var(--primary)));
   transform: scale(1.07);
   box-shadow: 0 3px 10px -3px hsl(var(--cat, var(--primary)) / 0.4);
@@ -1556,10 +1473,10 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .mobile-nav-item-icon {
   display: flex; align-items: center; justify-content: center;
   width: 1.9rem; height: 1.9rem; border-radius: 0.5rem; flex-shrink: 0;
-  background: hsl(var(--muted) / 0.55); color: hsl(var(--muted-foreground));
+  background: hsl(var(--cat, var(--primary)) / 0.1); color: hsl(var(--cat, var(--primary)));
 }
 .mobile-nav-item-icon svg { width: 1rem; height: 1rem; }
-.mobile-nav-item:hover .mobile-nav-item-icon { background: hsl(var(--cat, var(--primary)) / 0.13); color: hsl(var(--cat, var(--primary))); }
+.mobile-nav-item:hover .mobile-nav-item-icon { background: hsl(var(--cat, var(--primary)) / 0.18); }
 
 /* Variante scindée du déclencheur (jeux) */
 .mobile-trigger-scinde { display: flex; align-items: center; justify-content: space-between; gap: 0; }
@@ -4988,13 +4905,13 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: 0 0 0 100vmax hsl(var(--band-rose) / 0.55);
 }
 
-/* ── Méga-menu : tuiles d'icônes SVG colorées (fini les emojis) ── */
-.nav-megamenu-icon { background: hsl(var(--primary) / 0.12); }
-.nav-megamenu-item--quiz .nav-megamenu-icon { background: hsl(var(--secondary) / 0.12); }
-.nav-megamenu-icon svg { width: 1.15rem; height: 1.15rem; color: hsl(var(--primary)); }
-.nav-megamenu-item--quiz .nav-megamenu-icon svg { color: hsl(var(--secondary)); }
-.mobile-nav-item-icon svg { width: 1.15rem; height: 1.15rem; color: hsl(var(--primary)); }
-.mobile-nav-item--quiz .mobile-nav-item-icon svg { color: hsl(var(--secondary)); }
+/* ── Méga-menu : tuiles d'icônes SVG colorées (fini les emojis) ──
+   Les couleurs vivent désormais dans la variable --cat, posée par famille
+   dans le gabarit ; l'ancien bloc rose/violet d'ici écrasait la teinte de
+   chaque sous-menu (les jeux et les quiz redevenaient roses). Seules les
+   tailles restent. */
+.nav-megamenu-icon svg { width: 1.15rem; height: 1.15rem; }
+.mobile-nav-item-icon svg { width: 1.15rem; height: 1.15rem; }
 
 /* ════════════════════════════════════════════════════════════════════
    PHASE C : bloc "avis par quiz" (formulaire progressif) + compteur
