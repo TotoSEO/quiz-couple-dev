@@ -221,10 +221,10 @@
     "metaDescription": "Sono innamorato o solo attratto? 20 domande per distinguere l'amore dalla cotta. Test gratuito, risultato immediato, senza registrazione."
   },
   "jeuxCouple": {
-    "title": "Giochi di coppia online: 7 giochi gratis da fare in due",
+    "title": "Giochi di coppia online: 8 giochi gratis da fare in due",
     "shortTitle": "Giochi di coppia",
-    "description": "Sette giochi da fare in due: chi di noi due, preferiresti, i dilemmi, obbligo o verità, la versione piccante, la ruota delle penitenze e il gioco da tavolo.",
-    "metaDescription": "7 giochi di coppia gratis su un solo telefono: chi di noi due, preferiresti, i dilemmi, obbligo o verità, la ruota delle penitenze e il gioco da tavolo. Senza registrazione."
+    "description": "Otto giochi da fare in due: pro o contro, chi di noi due, preferiresti, i dilemmi, obbligo o verità, la versione piccante, la ruota delle penitenze e il tabellone.",
+    "metaDescription": "8 giochi di coppia gratis su un solo telefono: pro o contro, chi di noi due, preferiresti, i dilemmi, obbligo o verità e la ruota delle penitenze. Senza registrazione."
   },
   "jeuGages": {
     "title": "Penitenze di coppia: il gioco della ruota, 140 penitenze",
@@ -261,5 +261,11 @@
     "shortTitle": "Dilemmi di coppia",
     "metaDescription": "100 dilemmi da risolvere in due: un vantaggio, un MA, e decidete OK o neanche per sogno. Poi scoprite come hanno votato tutte le altre coppie. Gratis, senza registrazione.",
     "description": "Un vantaggio, una contropartita, e decidete insieme. Poi vedete il voto di tutte le altre coppie."
+  },
+  "pourContre": {
+    "title": "Pro o contro in coppia | Gioco online gratuito",
+    "shortTitle": "Pro o contro",
+    "metaDescription": "60 proposte da decidere in coppia: animale, casa, matrimonio, vacanze. Rispondete PRO o CONTRO, poi vedete il voto delle altre coppie. Gratis.",
+    "description": "Una proposta, due schieramenti. Decidete insieme, poi scoprite come hanno votato le altre coppie."
   }
 }

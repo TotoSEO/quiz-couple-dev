@@ -1699,6 +1699,140 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .dil-bravo-texte { margin: 0; font-size: .92rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
 .dil-bravo-suite { margin-top: .4rem; }
 
+/* ── Pour ou contre ────────────────────────────────────────
+   La carte tient en une ligne, contrairement aux dilemmes : un thème en
+   petit, l'amorce « Pour ou contre », puis la proposition en gros. Les deux
+   camps ne sont pas vert et rouge comme là-bas : « pour » et « contre » sont
+   des avis, pas une bonne et une mauvaise réponse. Le rose et le violet de
+   la charte disent la même chose sans juger personne. */
+.pc-jeu { display: grid; justify-items: center; }
+
+.pc-carte {
+  position: relative; width: 100%; max-width: 34rem;
+  display: grid; justify-items: center; text-align: center; gap: .55rem;
+  padding: 2rem 1.4rem 2.2rem;
+  border-radius: 1.5rem; border: 2px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: 0 20px 44px -34px hsl(var(--primary) / .8);
+  overflow: hidden;
+}
+/* Le liseré du haut reprend les deux couleurs des camps : la carte annonce
+   le choix avant même qu'on lise la proposition. */
+.pc-carte::before {
+  content: ''; position: absolute; inset: 0 0 auto; height: 5px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
+}
+.pc-theme {
+  padding: .25rem .8rem; border-radius: 9999px;
+  font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground)); background: hsl(var(--muted) / .7);
+}
+.pc-amorce {
+  font-size: .74rem; font-weight: 900; letter-spacing: .16em; text-transform: uppercase;
+  color: hsl(var(--primary));
+}
+.pc-texte {
+  margin: 0; font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(1.25rem, 4.6vw, 1.65rem); line-height: 1.32; text-wrap: balance;
+  color: hsl(var(--foreground));
+}
+
+.pc-consigne {
+  margin: 1.1rem 0 .8rem; text-align: center;
+  font-size: .85rem; color: hsl(var(--muted-foreground));
+}
+.pc-choix {
+  display: grid; grid-template-columns: 1fr 1fr; gap: .7rem;
+  width: 100%; max-width: 34rem;
+}
+.pc-choix-btn {
+  display: grid; justify-items: center; gap: .2rem;
+  padding: 1.05rem .6rem; border-radius: 1.15rem; cursor: pointer;
+  border: 2px solid hsl(var(--border)); background: hsl(var(--card));
+  font-family: var(--font-display); font-weight: 800; font-size: 1.05rem;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+.pc-choix-emoji { font-size: 1.6rem; line-height: 1; }
+.pc-choix-btn--pour { border-color: hsl(338 72% 62% / .55); color: hsl(338 68% 46%); }
+.pc-choix-btn--contre { border-color: hsl(265 55% 58% / .55); color: hsl(265 52% 46%); }
+.pc-choix-btn--pour:hover { background: hsl(338 72% 62% / .1); transform: translateY(-2px); }
+.pc-choix-btn--contre:hover { background: hsl(265 55% 58% / .1); transform: translateY(-2px); }
+.pc-choix-btn.est-choisi { transform: scale(.97); }
+.pc-passer {
+  margin-top: .9rem; padding: .35rem .6rem; border: 0; background: none; cursor: pointer;
+  font-size: .82rem; color: hsl(var(--muted-foreground)); text-decoration: underline;
+}
+
+/* Le verdict des autres couples : deux camps, puis une seule barre coupée en
+   deux pour que le rapport de force se voie sans lire les chiffres. */
+.pc-votre-choix { margin: 1.1rem 0 .9rem; font-size: .95rem; color: hsl(var(--muted-foreground)); }
+.pc-votre-choix strong { color: hsl(var(--foreground)); }
+.pc-camps {
+  display: grid; grid-template-columns: 1fr 1fr; gap: .7rem;
+  width: 100%; max-width: 34rem;
+}
+.pc-camp {
+  display: grid; justify-items: center; gap: .1rem;
+  padding: .8rem .5rem; border-radius: 1rem;
+  border: 2px solid transparent; background: hsl(var(--muted) / .5);
+}
+.pc-camp-lbl { font-size: .75rem; font-weight: 800; letter-spacing: .05em; }
+.pc-camp-pct { font-family: var(--font-display); font-weight: 900; font-size: 1.8rem; line-height: 1.1; }
+.pc-camp-nb { font-size: .78rem; color: hsl(var(--muted-foreground)); }
+.pc-camp--pour { background: hsl(338 72% 62% / .13); color: hsl(338 68% 44%); }
+.pc-camp--contre { background: hsl(265 55% 58% / .13); color: hsl(265 50% 45%); }
+.pc-camp-pct, .pc-camp-lbl { color: inherit; }
+/* Le cadre du camp choisi reprend la couleur du camp. Sans « color » posé sur
+   la carte elle-même, currentColor retombait sur le noir du texte courant. */
+.pc-camp.est-le-votre { border-color: currentColor; }
+
+.pc-barre {
+  display: flex; width: 100%; max-width: 34rem; height: .75rem;
+  margin-top: .7rem; border-radius: 9999px; overflow: hidden;
+  background: hsl(var(--muted));
+}
+.pc-barre-pour { background: hsl(338 72% 60%); transition: width 800ms cubic-bezier(.22,1,.36,1); }
+.pc-barre-contre { background: hsl(265 55% 60%); transition: width 800ms cubic-bezier(.22,1,.36,1); }
+.pc-total { margin-top: .6rem; font-size: .82rem; color: hsl(var(--muted-foreground)); text-align: center; }
+
+.pc-suite { display: grid; justify-items: center; gap: .5rem; margin-top: 1.4rem; width: 100%; max-width: 34rem; }
+.pc-suivant { width: 100%; justify-content: center; }
+.pc-arret {
+  border: 0; background: none; cursor: pointer;
+  font-size: .82rem; color: hsl(var(--muted-foreground)); text-decoration: underline;
+}
+
+/* En mode sombre les deux teintes doivent s'éclaircir, sinon elles
+   disparaissent dans le fond. */
+.dark .pc-choix-btn--pour, .dark .pc-camp--pour { color: hsl(338 85% 72%); }
+.dark .pc-choix-btn--contre, .dark .pc-camp--contre { color: hsl(265 75% 74%); }
+
+@media (max-width: 380px) {
+  .pc-choix, .pc-camps { grid-template-columns: 1fr; }
+  .pc-camp-pct { font-size: 1.55rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pc-barre-pour, .pc-barre-contre, .pc-choix-btn { transition: none; }
+}
+
+/* Le bloc qui salue une partie menée jusqu'au bout. Il n'apparaît qu'une
+   fois les soixante propositions tranchées, c'est le seul endroit du jeu où
+   le total compte. */
+.pc-bravo {
+  display: grid; justify-items: center; gap: .5rem;
+  margin: 0 auto 1.5rem; max-width: 32rem; padding: 1.4rem 1.25rem;
+  border-radius: 1.25rem; text-align: center;
+  border: 2px solid hsl(var(--primary) / .3);
+  background: linear-gradient(150deg, hsl(var(--primary) / .12), hsl(var(--secondary) / .12));
+}
+.pc-bravo-emoji { font-size: 2.2rem; line-height: 1; }
+.pc-bravo-titre {
+  margin: 0; font-family: var(--font-display); font-weight: 800;
+  font-size: 1.25rem; color: hsl(var(--primary));
+}
+.pc-bravo-texte { margin: 0; font-size: .92rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+.pc-bravo-suite { margin-top: .4rem; }
+
 /* ── Bloc d'appel à l'action partenaire ────────────────────
    Un lien souligné se perd dans le corps du texte. Le bloc s'arrête
    franchement sur la page, annonce ce qu'on propose, et assume qu'il

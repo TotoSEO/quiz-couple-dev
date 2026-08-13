@@ -62,12 +62,13 @@
     quizTentation:    ['testInfidelite', 'quizCoquin', 'testConfiance', 'testJalousie'],
 
     // Jeux
-    quizTuPreferes:   ['jeuDilemmes', 'jeuActionVerite', 'quizMost', 'quizMarrant'],
+    quizTuPreferes:   ['jeuDilemmes', 'pourContre', 'jeuActionVerite', 'quizMost'],
     jeuActionVerite:  ['jeuActionVeriteHot', 'jeuGages', 'jeuPlateau', 'quizTuPreferes'],
     jeuGages:         ['jeuActionVerite', 'jeuActionVeriteHot', 'jeuPlateau', 'quizMost'],
     jeuPlateau:       ['jeuActionVerite', 'jeuQuiDeNous', 'jeuDilemmes', 'quizKnowledge'],
-    jeuQuiDeNous:     ['quizKnowledge', 'jeuDilemmes', 'zamours', 'quizMost'],
-    jeuDilemmes:      ['quizTuPreferes', 'jeuQuiDeNous', 'quizMost', 'quizAmoureux'],
+    jeuQuiDeNous:     ['quizKnowledge', 'jeuDilemmes', 'pourContre', 'zamours'],
+    jeuDilemmes:      ['pourContre', 'quizTuPreferes', 'jeuQuiDeNous', 'quizMost'],
+    pourContre:       ['jeuDilemmes', 'quizTuPreferes', 'jeuQuiDeNous', 'testCommonPoints'],
   };
 
   const _relatedIcons = {
@@ -80,7 +81,7 @@
     quizMost: '🏆', quizAdo: '🌟', quizGenant: '😳', quizTuPreferes: '🤔', quizVraiFaux: '✅',
     zamours: '📺', quizTentation: '🏝️',
     jeuActionVerite: '🎲', jeuActionVeriteHot: '🌶️', jeuGages: '🎡',
-    jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️',
+    jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍',
   };
 
   const _relatedKeys = (_relatedMap[routeKey] || []).filter(function(k) {

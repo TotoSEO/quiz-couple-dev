@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "badge": "En pareja · 60 propuestas",
+    "title": "Juego a favor o en contra para parejas",
+    "titleHighlight": "a favor o en contra",
+    "description": "Sesenta propuestas para decidir juntos, desde la cena de esta noche hasta comprar una casa. Respondéis A FAVOR o EN CONTRA y después veis lo que han votado las demás parejas."
+  },
+  "jsonLd": {
+    "name": "Juego a favor o en contra para parejas"
+  },
+  "section1": {
+    "title": "Las reglas del juego a favor o en contra en pareja",
+    "intro": "No hay nada que preparar ni nada que instalar. Aparece una propuesta, decidís los dos y pasáis a la siguiente.",
+    "etape1Titre": "Poneos uno al lado del otro",
+    "etape1Texte": "Solo se muestra una propuesta cada vez, en un único móvil. Leedla en voz alta para que la pregunta os llegue a la vez a los dos.",
+    "etape2Titre": "Decidid juntos",
+    "etape2Texte": "No votáis cada uno por su lado: la idea es llegar a una respuesta común, A FAVOR o EN CONTRA. La conversación que hace falta para llegar ahí es todo el juego.",
+    "etape3Titre": "Ved cómo han votado los demás",
+    "etape3Texte": "En cuanto lo habéis decidido, aparecen los dos bandos con su porcentaje y su número de votos. Sabéis al instante si estáis con la mayoría.",
+    "etape4Titre": "Seguid o parad",
+    "etape4Texte": "La siguiente propuesta llega enseguida. Podéis parar cuando queráis para ver vuestro balance, o llegar hasta la sexagésima.",
+    "apres": "Funciona igual que el resto de <a href=\"/es/juegos-para-parejas/\">juegos para parejas</a> de la web: nada que instalar, nada que registrar, abrís la página y jugáis. Vuestra respuesta se guarda sin vuestro nombre, solo para alimentar los porcentajes que verá la siguiente pareja."
+  },
+  "section2": {
+    "title": "¿Por qué está bien este juego?",
+    "p1": "Sencillamente porque os pone delante de situaciones que os vais a encontrar de verdad. Puede que algún día compréis una casa. O puede que no, porque sois más de piso, y lo acabáis de descubrir en treinta segundos en vez de hablarlo dentro de cinco años.",
+    "p2": "Una mascota, una cuenta común, una mudanza, una boda: son temas que se van dejando para más adelante porque nunca hay un buen momento para sacarlos. Una propuesta que sale al azar hace el trabajo por vosotros, y ninguno de los dos parece haberlo sacado a propósito.",
+    "p3": "Y como el voto de las demás parejas aparece justo después del vuestro, veis si vuestra respuesta es la más común o si sois los únicos que pensáis así. Eso solo ya da para una segunda conversación."
+  },
+  "section3": {
+    "title": "De los temas ligeros a las grandes decisiones",
+    "intro": "Algunas propuestas están ahí para reírse o para decidir qué vais a hacer esta noche. Otras tocan terreno bastante más serio: vacaciones, vivienda, dinero, boda, hijos, mascotas, proyectos en común. Hay para todas las parejas y para todas las etapas de una relación.",
+    "headerTheme": "Tema",
+    "headerExemple": "Ejemplo de propuesta",
+    "apres": "Cuando una propuesta os deja dudando, casi siempre es porque falta la contrapartida: los <a href=\"/es/dilemas-de-pareja/\">dilemas de pareja</a> ponen la ventaja y su precio en la misma carta."
+  },
+  "familles": {
+    "projetsTitre": "Planes y futuro",
+    "projetsExemple": "Comprar una casa",
+    "vacancesTitre": "Vacaciones y salidas",
+    "vacancesExemple": "Viajar sin planificarlo todo",
+    "coupleTitre": "Vida en pareja",
+    "coupleExemple": "Compartir las contraseñas",
+    "quotidienTitre": "Día a día",
+    "quotidienExemple": "Pedir comida en lugar de cocinar esta noche",
+    "momentsTitre": "Momentos para dos",
+    "momentsExemple": "Repetir la primera cita",
+    "discuterTitre": "Temas que dan que hablar",
+    "discuterExemple": "Conservar al ex en los contactos"
+  },
+  "section4": {
+    "title": "¿Y si no estáis de acuerdo?",
+    "p1": "Nada en especial. No estar de acuerdo en una propuesta no es un problema de pareja, es información. Acabáis de descubrir algo que era mejor saber ahora que dentro de tres años, delante de un notario o de una maleta.",
+    "p2": "El reflejo útil es preguntar por qué antes de defender la propia postura. «En contra» no significa lo mismo si a uno le da miedo la hipoteca, si no quiere irse de su ciudad o si simplemente nunca ha tenido perro. El motivo siempre es más interesante que la respuesta.",
+    "p3": "Y si el tema se calienta de verdad, saltad la propuesta y volved luego. El juego no os pide decidir de verdad. Cuando el desacuerdo vuelve una y otra vez sobre lo mismo, una tanda de <a href=\"/es/preguntas-pareja/\">preguntas para hacerse en pareja</a> suele sacar lo que hay debajo."
+  },
+  "section5": {
+    "title": "Una partida y luego otra",
+    "p1": "El a favor o en contra funciona igual de bien en el sofá un domingo por la noche que en el coche o en una sala de espera. Una propuesta lleva diez segundos, una partida entera dura lo que le queráis dedicar.",
+    "p2": "Y cuando hayáis decidido las sesenta, queda todo lo demás.",
+    "cta": "Ver todos los juegos para parejas"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Cómo se juega a a favor o en contra en pareja?",
+    "a1": "Aparece una propuesta, por ejemplo «tener una mascota». Los dos lo habláis y respondéis A FAVOR o EN CONTRA juntos, en el mismo móvil. El porcentaje de las demás parejas sale justo después y pasáis a la siguiente propuesta.",
+    "q2": "¿Cuántas propuestas hay?",
+    "a2": "Sesenta, repartidas en seis temas: planes y futuro, vacaciones y salidas, vida en pareja, día a día, momentos para dos, y una tanda de temas que dan de verdad que hablar. Salen en un orden distinto en cada partida.",
+    "q3": "¿Hace falta ser dos para jugar?",
+    "a3": "Está pensado para dos, sí. El juego nunca pregunta quién responde: lo decidís juntos, y eso es justamente lo que hace salir las conversaciones. Nada impide mirar las propuestas a solas, pero pierde toda la gracia.",
+    "q4": "¿El juego es gratis?",
+    "a4": "Sí, del todo, sin cuenta que crear y sin instalar nada. Abrís la página y jugáis.",
+    "q5": "¿De dónde salen los porcentajes?",
+    "a5": "De las parejas que han jugado antes que vosotros. Cada respuesta se guarda sin ningún dato personal, solo para calcular el reparto entre A FAVOR y EN CONTRA. Una pareja solo puede votar una vez por propuesta.",
+    "q6": "¿Se puede jugar varias veces?",
+    "a6": "Sí. Las propuestas salen en otro orden en cada partida. Las que ya habéis decidido os enseñan directamente el resultado en vez de haceros votar dos veces.",
+    "q7": "¿Sirve para una pareja que se acaba de conocer?",
+    "a7": "Muy bien, de hecho. Los temas del día a día y de las salidas se responden sin comprometerse a nada, y las grandes decisiones dan una idea bastante clara de lo que se imagina cada uno. Suele decir más que una larga conversación sobre el futuro."
+  }
+}

@@ -63,6 +63,7 @@ export const ROUTE_SLUGS = {
   testDistanceAime: { fr: 'relation-a-distance-m-aime-t-il-encore', en: 'long-distance-does-he-she-still-love-me-test', es: 'relacion-a-distancia-me-sigue-queriendo', de: 'fernbeziehung-liebt-er-sie-mich-noch', it: 'relazione-a-distanza-mi-ama-ancora' },
   zamours: { fr: 'quiz-couple-les-zamours' },
   jeuDilemmes: { fr: 'dilemmes-couple', en: 'couple-dilemmas-game', es: 'dilemas-de-pareja', de: 'dilemmata-fuer-paare', it: 'dilemmi-di-coppia' },
+  pourContre: { fr: 'quiz-pour-contre-couple', en: 'for-or-against-couple-game', es: 'juego-a-favor-o-en-contra-pareja', de: 'dafuer-oder-dagegen-paarspiel', it: 'gioco-pro-o-contro-coppia' },
   quizTentation: { fr: 'quiz-ile-de-la-tentation', en: 'temptation-island-quiz', es: 'quiz-la-isla-de-las-tentaciones', de: 'temptation-island-quiz', it: 'quiz-temptation-island' },
   admin: { fr: 'admin', en: 'admin', es: 'admin', de: 'admin', it: 'admin' },
   activities: { fr: 'activites-autours-de-moi', en: 'couple-activities-near-me', es: 'actividades-en-pareja-cerca', de: 'paar-aktivitaeten-in-der-naehe', it: 'attivita-di-coppia-vicino' },
@@ -121,6 +122,7 @@ export const QUIZ_FEATURED = {
   jeuGages:          { file: 'most-likely-trophy',        old: null,                  alt: { fr: 'Trophée doré et confettis pour une soirée de gages en couple', en: 'Golden trophy and confetti for a couple forfeit night', es: 'Trofeo dorado y confeti para una noche de prendas en pareja', de: 'Goldener Pokal und Konfetti für einen Abend mit Strafen zu zweit', it: 'Trofeo dorato e coriandoli per una serata di penitenze in coppia' } },
   jeuDilemmes:       { file: 'dilemma-scales-choice',    old: null,                  alt: { fr: 'Une balance en équilibre : un cadeau rose d\'un côté, un poids violet de l\'autre', en: 'A balanced scale: a pink gift on one side, a purple weight on the other', es: 'Una balanza en equilibrio: un regalo rosa a un lado, una pesa morada al otro', de: 'Eine Waage im Gleichgewicht: ein rosa Geschenk auf der einen Seite, ein violettes Gewicht auf der anderen', it: 'Una bilancia in equilibrio: un regalo rosa da un lato, un peso viola dall\'altro' } },
   jeuxCouple:        { file: 'fun-confetti',            old: null,                  alt: { fr: 'Confettis et ballons colorés pour une soirée jeux à deux', en: 'Confetti and colourful balloons for a games night for two', es: 'Confeti y globos de colores para una noche de juegos en pareja', de: 'Konfetti und bunte Luftballons für einen Spieleabend zu zweit', it: 'Coriandoli e palloncini colorati per una serata di giochi in due' } },
+  pourContre:        { file: 'pour-contre-pouces',       old: null,                  alt: { fr: 'Un pouce levé rose et un pouce baissé violet séparés par un cœur, pour le jeu pour ou contre en couple', en: 'A pink thumbs-up and a purple thumbs-down separated by a heart, for the for or against couple game', es: 'Un pulgar hacia arriba rosa y uno hacia abajo morado separados por un corazón, para el juego a favor o en contra en pareja', de: 'Ein rosa Daumen hoch und ein violetter Daumen runter, getrennt durch ein Herz, für das Paarspiel dafür oder dagegen', it: 'Un pollice in su rosa e un pollice in giù viola separati da un cuore, per il gioco pro o contro in coppia' } },
   quizTentation:     { file: 'island-bonfire',            old: null,                  alt: { fr: 'Feu de camp sur une plage tropicale la nuit, avec palmiers et pleine lune', en: 'Bonfire on a tropical beach at night, with palm trees and a full moon', es: 'Hoguera en una playa tropical de noche, con palmeras y luna llena', de: 'Lagerfeuer an einem tropischen Strand bei Nacht, mit Palmen und Vollmond', it: 'Falò su una spiaggia tropicale di notte, con palme e luna piena' } },
 };
 
@@ -172,6 +174,7 @@ export const ROUTE_CONFIG = {
   testDistanceAime: { template: 'quiz-distance-aime', namespaces: ['quiz-distance-aime', 'quizzes', 'quizGames', 'gd', 'common'] },
   zamours: { template: 'quiz-zamours', namespaces: ['quiz-zamours', 'quizzes', 'quizGames', 'gd', 'common'], frOnly: true },
   jeuDilemmes: { template: 'jeu-dilemmes', namespaces: ['jeu-dilemmes', 'quizzes', 'quizGames', 'gd', 'common'] },
+  pourContre: { template: 'jeu-pour-contre', namespaces: ['jeu-pour-contre', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizTentation: { template: 'quiz-tentation', namespaces: ['quiz-tentation', 'quizzes', 'quizGames', 'gd', 'common'] },
   testPurete: { template: 'test-purete', namespaces: ['test-purete', 'quizzes', 'common'] },
   admin: { template: 'admin', namespaces: ['common'] },
@@ -202,7 +205,7 @@ export const ADSENSE_CLIENT = 'ca-pub-3699606544344200';
 // Sans cette liste, les six jeux ne remontaient aucune partie a l'admin.
 const ROUTES_JEUX = [
   'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
-  'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes',
+  'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre',
 ];
 
 export function estPageJouable(routeKey) {

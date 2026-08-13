@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "badge": "For two · 60 statements",
+    "title": "For or against: the couple game",
+    "titleHighlight": "For or against",
+    "description": "Sixty statements to settle together, from tonight's dinner to buying a house. You answer FOR or AGAINST, then you see how other couples voted."
+  },
+  "jsonLd": {
+    "name": "For or against: the couple game"
+  },
+  "section1": {
+    "title": "The rules of the for or against couple game",
+    "intro": "There is nothing to set up and nothing to install. A statement appears, the two of you decide, and you move on to the next one.",
+    "etape1Titre": "Sit down side by side",
+    "etape1Texte": "One statement shows at a time, on one phone. Read it out loud so the question lands on both of you at the same moment.",
+    "etape2Titre": "Decide together",
+    "etape2Texte": "You are not voting separately: the point is to reach one shared answer, FOR or AGAINST. The conversation you have getting there is the whole game.",
+    "etape3Titre": "See how the others voted",
+    "etape3Texte": "As soon as you have settled it, both camps appear with their percentage and their number of votes. You know straight away whether you are with the majority.",
+    "etape4Titre": "Keep going, or stop",
+    "etape4Texte": "The next statement comes up right away. You can stop whenever you like to see your summary, or carry on to the sixtieth.",
+    "apres": "It works like the rest of the <a href=\"/en/couple-games/\">couple games</a> on the site: nothing to install, nothing to sign up for, you open the page and you play. Your answer is stored without your name, purely to feed the percentages the next couple will see."
+  },
+  "section2": {
+    "title": "Why is this game any good?",
+    "p1": "Simply because it puts you in front of situations you will genuinely run into. One day you might buy a house. Or not, because you are flat people, and you just found that out in thirty seconds instead of discussing it five years from now.",
+    "p2": "A pet, a joint account, moving city, getting married: these are the subjects everyone puts off, because there is never a good moment to bring them up. A statement drawn at random does the job for you, and neither of you looks like they raised it on purpose.",
+    "p3": "And because the other couples' vote shows up right after yours, you can see whether your answer is the common one or whether you are the only ones who think that way. That alone is often worth a second conversation."
+  },
+  "section3": {
+    "title": "From light subjects to the big decisions",
+    "intro": "Some statements are there for a laugh, or to settle what you are doing tonight. Others land on far heavier ground: holidays, where you live, money, marriage, children, pets, plans for two. There is something for every couple and every stage of a relationship.",
+    "headerTheme": "Theme",
+    "headerExemple": "Example statement",
+    "apres": "When a statement leaves you both hesitating, it is usually because the trade-off is missing: the <a href=\"/en/couple-dilemmas-game/\">couple dilemmas</a> put the upside and its price on the same card."
+  },
+  "familles": {
+    "projetsTitre": "Plans and future",
+    "projetsExemple": "Buying a house",
+    "vacancesTitre": "Holidays and outings",
+    "vacancesExemple": "Travelling without planning everything",
+    "coupleTitre": "Life as a couple",
+    "coupleExemple": "Sharing your passwords",
+    "quotidienTitre": "Everyday life",
+    "quotidienExemple": "Ordering food instead of cooking tonight",
+    "momentsTitre": "Moments for two",
+    "momentsExemple": "Recreating your first date",
+    "discuterTitre": "Topics that spark debate",
+    "discuterExemple": "Keeping your ex in your contacts"
+  },
+  "section4": {
+    "title": "What if you disagree?",
+    "p1": "Nothing in particular. Disagreeing on a statement is not a problem with your relationship, it is information. You have just learned something it was better to know now than in three years, standing in front of a solicitor or a suitcase.",
+    "p2": "The useful reflex is to ask why before defending your side. \"Against\" does not mean the same thing depending on whether someone is afraid of the mortgage, does not want to leave their city, or has simply never had a dog. The reason is always more interesting than the answer.",
+    "p3": "And if a subject really heats up, skip it and come back later. The game is not asking you to decide for real. When the same theme causes friction again and again, a run of <a href=\"/en/couple-questions/\">questions to ask each other</a> often brings up what is actually stuck underneath."
+  },
+  "section5": {
+    "title": "One round, then another",
+    "p1": "For or against works just as well on a sofa on a Sunday evening as it does in a car or a waiting room. One statement takes ten seconds, a full round takes however long you want to give it.",
+    "p2": "And once you have settled all sixty, there is everything else.",
+    "cta": "See all the couple games"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "How do you play for or against as a couple?",
+    "a1": "A statement appears, for example \"getting a pet\". The two of you talk it over and answer FOR or AGAINST together, on the same phone. The percentage from other couples shows up right after, then you move on to the next statement.",
+    "q2": "How many statements are there?",
+    "a2": "Sixty, split across six themes: plans and future, holidays and outings, life as a couple, everyday life, moments for two, and a run of topics that genuinely spark debate. They come up in a different order every round.",
+    "q3": "Do you need to be two to play?",
+    "a3": "It is built for two, yes. The game never asks who answers: you settle it together, and that is exactly what pulls the conversations out. Nothing stops you browsing the statements on your own, but the point of it disappears.",
+    "q4": "Is the game free?",
+    "a4": "Yes, entirely, with no account to create and nothing to install. You open the page and you play.",
+    "q5": "Where do the percentages come from?",
+    "a5": "From the couples who played before you. Every answer is stored without any personal data, purely to work out the split between FOR and AGAINST. One couple can only vote once per statement.",
+    "q6": "Can you play more than once?",
+    "a6": "Yes. The statements are drawn in a different order every round. The ones you have already settled show you the result directly rather than making you vote twice.",
+    "q7": "Does the game suit a couple who have just met?",
+    "a7": "It suits them very well. The everyday and outings themes can be answered without committing to anything, and the big decisions give a fairly clear idea of what each person is picturing. It is often more revealing than a long conversation about the future."
+  }
+}

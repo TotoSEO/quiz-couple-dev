@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "badge": "In due · 60 proposte",
+    "title": "Gioco pro o contro per coppie",
+    "titleHighlight": "pro o contro",
+    "description": "Sessanta proposte da decidere insieme, dalla cena di stasera all'acquisto di una casa. Rispondete PRO o CONTRO, poi vedete come hanno votato le altre coppie."
+  },
+  "jsonLd": {
+    "name": "Gioco pro o contro per coppie"
+  },
+  "section1": {
+    "title": "Le regole del gioco pro o contro da fare in coppia",
+    "intro": "Non c'è niente da preparare e niente da installare. Compare una proposta, decidete in due, e si passa alla successiva.",
+    "etape1Titre": "Mettetevi uno accanto all'altro",
+    "etape1Texte": "Si vede una proposta alla volta, su un solo telefono. Leggetela ad alta voce, così la domanda arriva nello stesso momento a tutti e due.",
+    "etape2Titre": "Decidete insieme",
+    "etape2Texte": "Non votate ognuno per conto suo: l'obiettivo è arrivare a una risposta comune, PRO o CONTRO. La discussione per arrivarci è tutto il gioco.",
+    "etape3Titre": "Guardate come hanno votato gli altri",
+    "etape3Texte": "Appena avete deciso, compaiono i due schieramenti con la loro percentuale e il numero di voti. Sapete subito se siete con la maggioranza.",
+    "etape4Titre": "Andate avanti o fermatevi",
+    "etape4Texte": "La proposta successiva arriva subito. Potete fermarvi quando volete per vedere il vostro bilancio, o arrivare fino alla sessantesima.",
+    "apres": "Funziona come gli altri <a href=\"/it/giochi-di-coppia/\">giochi di coppia</a> del sito: niente da installare, niente da registrare, aprite la pagina e giocate. La vostra risposta viene salvata senza il vostro nome, solo per alimentare le percentuali che vedrà la coppia successiva."
+  },
+  "section2": {
+    "title": "Perché questo gioco funziona?",
+    "p1": "Semplicemente perché vi mette davanti a situazioni che incontrerete davvero. Un giorno magari comprerete una casa. O magari no, perché siete più da appartamento, e l'avete appena scoperto in trenta secondi invece di parlarne fra cinque anni.",
+    "p2": "Un animale, un conto in comune, un trasloco, un matrimonio: sono argomenti che si rimandano perché non c'è mai un buon momento per tirarli fuori. Una proposta che esce a caso fa il lavoro al posto vostro, e nessuno dei due sembra averla sollevata apposta.",
+    "p3": "E siccome il voto delle altre coppie compare subito dopo il vostro, vedete se la vostra risposta è quella più comune o se siete gli unici a pensarla così. Da solo, questo vale spesso una seconda discussione."
+  },
+  "section3": {
+    "title": "Dai temi leggeri alle grandi decisioni",
+    "intro": "Alcune proposte sono lì per ridere o per decidere cosa fare stasera. Altre toccano un terreno decisamente più pesante: vacanze, casa, soldi, matrimonio, figli, animali, progetti in due. Ce n'è per tutte le coppie e per tutte le fasi di una relazione.",
+    "headerTheme": "Tema",
+    "headerExemple": "Esempio di proposta",
+    "apres": "Quando una proposta vi lascia in dubbio, di solito è perché manca il prezzo da pagare: i <a href=\"/it/dilemmi-di-coppia/\">dilemmi di coppia</a> mettono il vantaggio e il suo costo sulla stessa carta."
+  },
+  "familles": {
+    "projetsTitre": "Progetti e futuro",
+    "projetsExemple": "Comprare una casa",
+    "vacancesTitre": "Vacanze e uscite",
+    "vacancesExemple": "Viaggiare senza pianificare tutto",
+    "coupleTitre": "Vita di coppia",
+    "coupleExemple": "Condividere le password",
+    "quotidienTitre": "Quotidiano",
+    "quotidienExemple": "Ordinare da mangiare invece di cucinare stasera",
+    "momentsTitre": "Momenti a due",
+    "momentsExemple": "Rifare il primo appuntamento",
+    "discuterTitre": "Temi che fanno discutere",
+    "discuterExemple": "Tenere l'ex nei contatti"
+  },
+  "section4": {
+    "title": "Cosa fare se non siete d'accordo?",
+    "p1": "Niente di particolare. Non essere d'accordo su una proposta non è un problema di coppia, è un'informazione. Avete appena scoperto qualcosa che era meglio sapere adesso che fra tre anni, davanti a un notaio o a una valigia.",
+    "p2": "Il riflesso utile è chiedere perché prima di difendere la propria posizione. «Contro» non vuol dire la stessa cosa se uno ha paura del mutuo, se non vuole lasciare la sua città, o se semplicemente non ha mai avuto un cane. Il motivo è sempre più interessante della risposta.",
+    "p3": "E se un tema si scalda davvero, saltate la proposta e tornateci più tardi. Il gioco non vi chiede di decidere sul serio. Quando lo stesso disaccordo torna più volte, un giro di <a href=\"/it/domande-coppia/\">domande da farsi in coppia</a> fa spesso emergere quello che si è bloccato sotto."
+  },
+  "section5": {
+    "title": "Una partita, poi un'altra",
+    "p1": "Il pro o contro funziona bene sul divano una domenica sera quanto in macchina o in sala d'attesa. Una proposta richiede dieci secondi, una partita intera dura quanto le volete dedicare.",
+    "p2": "E quando avrete deciso tutte e sessanta, resta tutto il resto.",
+    "cta": "Vedi tutti i giochi di coppia"
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "q1": "Come si gioca a pro o contro in coppia?",
+    "a1": "Compare una proposta, per esempio «prendere un animale». Ne parlate in due e rispondete PRO o CONTRO insieme, sullo stesso telefono. La percentuale delle altre coppie appare subito dopo, poi si passa alla proposta successiva.",
+    "q2": "Quante proposte ci sono?",
+    "a2": "Sessanta, divise in sei temi: progetti e futuro, vacanze e uscite, vita di coppia, quotidiano, momenti a due, e una serie di temi che fanno davvero discutere. Escono in ordine diverso a ogni partita.",
+    "q3": "Bisogna essere in due per giocare?",
+    "a3": "È pensato per due, sì. Il gioco non chiede mai chi risponde: decidete insieme, ed è proprio questo che fa uscire le discussioni. Niente vi impedisce di guardare le proposte da soli, ma il senso si perde.",
+    "q4": "Il gioco è gratuito?",
+    "a4": "Sì, del tutto, senza account da creare e senza installare niente. Aprite la pagina e giocate.",
+    "q5": "Da dove vengono le percentuali?",
+    "a5": "Dalle coppie che hanno giocato prima di voi. Ogni risposta viene salvata senza alcun dato personale, solo per calcolare la ripartizione fra PRO e CONTRO. Una coppia può votare una sola volta per proposta.",
+    "q6": "Si può giocare più volte?",
+    "a6": "Sì. Le proposte escono in un altro ordine a ogni partita. Quelle che avete già deciso vi mostrano direttamente il risultato invece di farvi votare due volte.",
+    "q7": "Il gioco va bene per una coppia che si è appena conosciuta?",
+    "a7": "Anzi, benissimo. I temi del quotidiano e delle uscite si rispondono senza impegnarsi a niente, e le grandi decisioni danno un'idea abbastanza chiara di quello che ognuno immagina. Spesso dice più di una lunga conversazione sul futuro."
+  }
+}

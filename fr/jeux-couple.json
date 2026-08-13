@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "7 jeux • Gratuits • Sans inscription",
+    "badge": "8 jeux • Gratuits • Sans inscription",
     "title": "Nos jeux à faire en couple, prêts en un clic",
     "titleHighlight": "à faire en couple",
-    "description": "Sept jeux qui se lancent sur un seul téléphone posé entre vous deux, sans compte et sans rien installer."
+    "description": "Huit jeux qui se lancent sur un seul téléphone posé entre vous deux, sans compte et sans rien installer."
   },
   "stats": {
-    "jeux": "7",
+    "jeux": "8",
     "jeuxLabel": "jeux à deux",
     "cartes": "390",
     "cartesLabel": "cartes, gages et dilemmes",
@@ -54,13 +54,18 @@
     "dilemmesTagline": "Un avantage, un MAIS, et vous tranchez à deux",
     "dilemmesJoueurs": "2 joueurs",
     "dilemmesDuree": "10 min",
-    "dilemmesContenu": "100 dilemmes et le vote de tous les autres couples"
+    "dilemmesContenu": "100 dilemmes et le vote de tous les autres couples",
+    "pourContreNom": "Pour ou contre",
+    "pourContreTagline": "Une proposition, vous tranchez, vous voyez le vote des autres",
+    "pourContreJoueurs": "2 joueurs",
+    "pourContreDuree": "10 min",
+    "pourContreContenu": "60 propositions et le vote de tous les autres couples"
   },
   "section1": {
     "title": "Ce qu'un jeu à deux change à une soirée",
     "p1": "Un <strong class=\"text-foreground\">jeu de couple</strong> n'a l'air de rien. Et pourtant il règle un problème très concret : à deux, on finit toujours par tourner autour des mêmes sujets. La journée, le boulot, ce qu'on mange ce soir… Un jeu impose un cadre, et ce cadre donne la permission de poser des questions qu'on ne poserait jamais de but en blanc.",
     "p2": "C'est aussi pour ça qu'un jeu marche mieux qu'un film quand vous voulez vraiment vous retrouver. Devant un écran, vous êtes deux personnes côte à côte qui regardent ailleurs. Autour d'un jeu, vous êtes deux personnes qui se regardent. La différence se sent au bout de dix minutes.",
-    "p3": "Les sept jeux de cette page se jouent en ligne, gratuitement, sur un seul téléphone. Rien à créer, rien à installer, rien à préparer."
+    "p3": "Les huit jeux de cette page se jouent en ligne, gratuitement, sur un seul téléphone. Rien à créer, rien à installer, rien à préparer."
   },
   "section2": {
     "title": "Quel jeu choisir selon le moment",
@@ -79,7 +84,11 @@
     "row5Moment": "Une vraie soirée à deux, sans écran allumé à côté",
     "row5Pourquoi": "C'est le seul qui dure trente minutes et qui se gagne. Un plateau, un dé, et une raison de continuer jusqu'au bout.",
     "row6Moment": "Un dîner à deux, ou l'apéro avant les invités",
-    "row6Pourquoi": "Cinq minutes suffisent, et chaque désaccord relance la conversation tout seul. Le jeu le plus rapide à sortir."
+    "row6Pourquoi": "Cinq minutes suffisent, et chaque désaccord relance la conversation tout seul. Le jeu le plus rapide à sortir.",
+    "row7Moment": "Un sujet de fond, sans se prendre la tête",
+    "row7Pourquoi": "Chaque marché oppose un gain à une contrepartie, donc il n'y a jamais de bonne réponse. C'est là qu'on découvre ce que l'autre est prêt à payer.",
+    "row8Moment": "Une décision qui traîne depuis des mois",
+    "row8Pourquoi": "Les propositions vont du dîner de ce soir à l'achat d'une maison. Le sujet arrive tout seul, personne n'a eu à le lancer."
   },
   "section3": {
     "title": "Réussir une soirée jeux à deux",

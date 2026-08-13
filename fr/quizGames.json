@@ -344,7 +344,9 @@
     "testCouche": "Test « a-t-il ou a-t-elle couché avec quelqu'un d'autre »",
     "testSecret": "Test m'aime-t-il ou m'aime-t-elle en secret",
     "testDistanceAime": "Test m'aime-t-il encore à distance",
-    "testPurete": "Test de pureté"
+    "testPurete": "Test de pureté",
+    "pourContre": "Pour ou contre",
+    "jeuDilemmes": "Dilemmes de couple"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -565,5 +567,37 @@
     "introQuestion": "Vous vous posez la question :",
     "introQuote": "« Est-ce qu'il ou elle m'aime encore… ou est-ce que c'est juste la distance ? »",
     "disclaimer": "Répondez sur les dernières semaines, pas sur le début de votre histoire."
+  },
+  "pourContre": {
+    "introTitre": "Pour ou contre ?",
+    "introTexte": "Soixante propositions à trancher à deux. Répondez ensemble, puis découvrez ce que les autres couples ont voté.",
+    "metaQuestions": "propositions",
+    "metaDuree": "sans limite",
+    "commencer": "Première proposition",
+    "amorce": "Pour ou contre",
+    "consigne": "Décidez ensemble, à voix haute.",
+    "pour": "POUR",
+    "contre": "CONTRE",
+    "passer": "Passer cette proposition",
+    "votreReponse": "Votre réponse : {{r}}",
+    "voix": "voix",
+    "voix1": "voix",
+    "surTotal": "{{n}} couples ont tranché cette proposition",
+    "surTotal1": "Vous êtes le premier couple à trancher cette proposition",
+    "suivant": "Proposition suivante",
+    "voirBilan": "Voir notre bilan",
+    "arreter": "Arrêter et voir notre bilan",
+    "bilanDetail": "{{pour}} POUR sur {{n}} propositions tranchées",
+    "palier1Titre": "Vous dites non à presque tout",
+    "palier1Texte": "Presque toutes les propositions sont reparties d'où elles venaient. Vous savez ce dont vous ne voulez pas, et c'est déjà une réponse claire sur la vie que vous avez envie de mener.",
+    "palier2Titre": "Difficiles à convaincre",
+    "palier2Texte": "Il en faut beaucoup pour vous faire dire oui. Vous préférez ce que vous connaissez déjà, ce qui vous évite pas mal de mauvaises surprises.",
+    "palier3Titre": "Plutôt partants",
+    "palier3Texte": "Vous dites oui plus souvent que non, sans signer les yeux fermés. Un bon équilibre entre l'envie d'essayer et le sens pratique.",
+    "palier4Titre": "Vous dites oui à presque tout",
+    "palier4Texte": "Un animal, une maison, un départ à l'étranger : vous êtes partants. C'est une belle énergie à deux, à condition de relire les petites lignes de temps en temps.",
+    "bravoTitre": "Bravo, et merci !",
+    "bravoTexte": "Vous avez tranché les soixante propositions. Vos votes comptent maintenant dans les pourcentages que verront les prochains couples.",
+    "bravoSuite": "Enchaînez sur les dilemmes"
   }
 }

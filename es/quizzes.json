@@ -221,10 +221,10 @@
     "metaDescription": "¿Estoy enamorado o solo atraído? 20 preguntas para distinguir el amor del capricho. Test gratis, resultado inmediato y sin registro."
   },
   "jeuxCouple": {
-    "title": "Juegos para parejas online: 7 juegos gratis para jugar en pareja",
+    "title": "Juegos para parejas online: 8 juegos gratis para jugar en pareja",
     "shortTitle": "Juegos para parejas",
-    "description": "Siete juegos para jugar en pareja: quién de los dos, preferirías, los dilemas, verdad o reto, su versión picante, la ruleta de prendas y el juego de mesa.",
-    "metaDescription": "7 juegos para parejas gratis en un solo móvil: quién de los dos, preferirías, los dilemas, verdad o reto, la ruleta de prendas y el juego de mesa. Sin registro."
+    "description": "Ocho juegos para jugar en pareja: a favor o en contra, quién de los dos, preferirías, los dilemas, verdad o reto, su versión picante, la ruleta de prendas y el tablero.",
+    "metaDescription": "8 juegos para parejas gratis en un solo móvil: a favor o en contra, quién de los dos, preferirías, los dilemas, verdad o reto y la ruleta de prendas. Sin registro."
   },
   "jeuGages": {
     "title": "Prendas para parejas: el juego de la ruleta, 140 prendas",
@@ -261,5 +261,11 @@
     "shortTitle": "Dilemas de pareja",
     "metaDescription": "100 dilemas para resolver en pareja: una ventaja, un PERO, y decidís OK o NI HABLAR. Después descubrís cómo han votado las demás parejas. Gratis y sin registro.",
     "description": "Una ventaja, una contrapartida, y decidís juntos. Después veis el voto de todas las demás parejas."
+  },
+  "pourContre": {
+    "title": "A favor o en contra en pareja | Juego online gratis",
+    "shortTitle": "A favor o en contra",
+    "metaDescription": "60 propuestas para decidir en pareja: mascota, casa, boda, vacaciones. Respondéis A FAVOR o EN CONTRA y veis el voto de las demás parejas. Gratis.",
+    "description": "Una propuesta, dos bandos. Lo decidís juntos y después descubrís lo que han votado las demás parejas."
   }
 }

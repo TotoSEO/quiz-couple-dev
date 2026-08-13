@@ -221,10 +221,10 @@
     "metaDescription": "Am I in love or just attracted? 20 questions to tell real love from a crush. Free test, instant result, no sign-up needed."
   },
   "jeuxCouple": {
-    "title": "Online games for couples: 7 free games to play together",
+    "title": "Online games for couples: 8 free games to play together",
     "shortTitle": "Couple games",
-    "description": "Seven games to play together: which one of us, would you rather, dilemmas, truth or dare, its naughty version, the forfeit wheel and the board game.",
-    "metaDescription": "7 free couple games on a single phone: which one of us, would you rather, dilemmas, truth or dare, the forfeit wheel and the board game. No sign-up."
+    "description": "Eight games to play together: for or against, which one of us, would you rather, dilemmas, truth or dare, its naughty version, the forfeit wheel and the board game.",
+    "metaDescription": "8 free couple games on a single phone: for or against, which one of us, would you rather, dilemmas, truth or dare and the forfeit wheel. No sign-up."
   },
   "jeuGages": {
     "title": "Couple Forfeits: the Wheel Game, 140 Random Forfeits",
@@ -261,5 +261,11 @@
     "shortTitle": "Couple dilemmas",
     "metaDescription": "100 dilemmas to settle as a couple: a prize, a BUT, and you decide OK or NOT OK. Then see how every other couple voted. Free, no sign-up.",
     "description": "A prize, a catch, and you decide together. Then you see how every other couple voted."
+  },
+  "pourContre": {
+    "title": "For or Against Couple Game | 60 Things to Decide",
+    "shortTitle": "For or against",
+    "metaDescription": "60 statements to settle as a couple: pets, houses, marriage, holidays. Answer FOR or AGAINST, then see how other couples voted. Free, no sign-up.",
+    "description": "One statement, two camps. You settle it together, then you find out how other couples voted."
   }
 }

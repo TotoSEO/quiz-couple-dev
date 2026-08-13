@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "7 games • Free • No sign-up",
+    "badge": "8 games • Free • No sign-up",
     "title": "Our games to play together, ready in one tap",
     "titleHighlight": "to play together",
-    "description": "Seven games that start on a single phone sitting between the two of you, with no account and nothing to install."
+    "description": "Eight games that start on a single phone sitting between the two of you, with no account and nothing to install."
   },
   "stats": {
-    "jeux": "7",
+    "jeux": "8",
     "jeuxLabel": "games for two",
     "cartes": "390",
     "cartesLabel": "cards, forfeits and dilemmas",
@@ -54,13 +54,18 @@
     "dilemmesTagline": "A prize, a BUT, and the two of you decide",
     "dilemmesJoueurs": "2 players",
     "dilemmesDuree": "10 min",
-    "dilemmesContenu": "100 dilemmas and every other couple's vote"
+    "dilemmesContenu": "100 dilemmas and every other couple's vote",
+    "pourContreNom": "For or against",
+    "pourContreTagline": "One statement, you settle it, you see how the others voted",
+    "pourContreJoueurs": "2 players",
+    "pourContreDuree": "10 min",
+    "pourContreContenu": "60 statements and the vote of every other couple"
   },
   "section1": {
     "title": "What a game for two changes about an evening",
     "p1": "A <strong class=\"text-foreground\">couple game</strong> looks like nothing at all. And yet it solves a very concrete problem: as a pair, you always end up circling the same subjects. The day, work, what's for dinner… A game imposes a frame, and that frame gives you permission to ask questions you'd never ask out of nowhere.",
     "p2": "It's also why a game works better than a film when you genuinely want to reconnect. In front of a screen you're two people side by side looking elsewhere. Around a game you're two people looking at each other. You feel the difference within ten minutes.",
-    "p3": "The seven games on this page run online, free, on one phone. Nothing to create, nothing to install, nothing to prepare."
+    "p3": "The eight games on this page run online, free, on one phone. Nothing to create, nothing to install, nothing to prepare."
   },
   "section2": {
     "title": "Which game to pick, depending on the moment",
@@ -79,7 +84,11 @@
     "row5Moment": "A proper evening for two, with no other screen on",
     "row5Pourquoi": "The only one that lasts thirty minutes and can be won. A board, a dice, and a reason to keep going to the end.",
     "row6Moment": "Dinner for two, or drinks before the guests arrive",
-    "row6Pourquoi": "Five minutes is enough, and every disagreement restarts the conversation on its own. The quickest one to pull out."
+    "row6Pourquoi": "Five minutes is enough, and every disagreement restarts the conversation on its own. The quickest one to pull out.",
+    "row7Moment": "A serious subject, without the heaviness",
+    "row7Pourquoi": "Every deal sets a gain against a price, so there is never a right answer. That is where you find out what the other one is willing to pay.",
+    "row8Moment": "A decision you have been putting off for months",
+    "row8Pourquoi": "The statements run from tonight's dinner to buying a house. The subject turns up on its own, neither of you had to raise it."
   },
   "section3": {
     "title": "Making a games night for two work",
