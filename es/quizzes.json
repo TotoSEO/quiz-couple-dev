@@ -267,5 +267,11 @@
     "shortTitle": "A favor o en contra",
     "metaDescription": "60 propuestas para decidir en pareja: mascota, casa, boda, vacaciones. Respondéis A FAVOR o EN CONTRA y veis el voto de las demás parejas. Gratis.",
     "description": "Una propuesta, dos bandos. Lo decidís juntos y después descubrís lo que han votado las demás parejas."
+  },
+  "testFinCouple": {
+    "title": "Test ¿es el final de tu relación? | 24 preguntas",
+    "shortTitle": "¿Es el final de mi relación?",
+    "metaDescription": "24 preguntas factuales y ponderadas para saber si tu relación está llegando a su fin. Resultado en 8 niveles, sin tranquilizarte en falso. Gratis, sin registro.",
+    "description": "Veinticuatro preguntas factuales, un baremo ponderado según la gravedad de cada señal, y un veredicto que no intenta protegerte."
   }
 }

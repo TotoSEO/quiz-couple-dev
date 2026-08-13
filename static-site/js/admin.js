@@ -327,6 +327,7 @@
     testCompatibilite: 'Compatibilité',
     testDistance: 'Couple à distance',
     testToxic: 'Couple toxique',
+    testFinCouple: 'Fin de couple',
     testPervers: 'Pervers narcissique',
     testAmourHabitude: 'Amour ou habitude',
     testCoupleSain: 'Couple sain',

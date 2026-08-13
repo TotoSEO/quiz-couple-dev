@@ -779,6 +779,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'suis-je-amoureux', icon: '💗', route: 'testSuisJeAmoureux' },
     { type: 'test', key: 'distance', icon: '🌍', route: 'testDistance' },
     { type: 'test', key: 'toxic', icon: '⚠️', route: 'testToxic' },
+    { type: 'test', key: 'fin-couple', icon: '🪢', route: 'testFinCouple' },
     { type: 'test', key: 'pervers', icon: '🎭', route: 'testPervers' },
     { type: 'test', key: 'amour-habitude', icon: '☕', route: 'testAmourHabitude' },
     { type: 'test', key: 'sain', icon: '💚', route: 'testCoupleSain' },
@@ -857,13 +858,14 @@ var QuizEngine = (function() {
     // d'après, jamais sur un jeu.
     'toxic':           ['testPervers', 'testDivorce', 'testCoupleSain'],
     'pervers':         ['testToxic', 'testJalousie', 'testDivorce'],
-    'divorce':         ['testAmourHabitude', 'testToxic', 'testCoupleSain'],
+    'divorce':         ['testFinCouple', 'testAmourHabitude', 'testToxic'],
+    'fin-couple':      ['testCouche', 'testToxic', 'testDivorce'],
     'amour-habitude':  ['testSuisJeAmoureux', 'testDivorce', 'testCoupleSain'],
 
     // ── Tests de doute et de soupçon, faits seul ────────────────────────
     // Le soupçon appelle toujours une deuxième vérification.
     'infidelite':      ['testCouche', 'testConfiance', 'testJalousie'],
-    'couche':          ['testInfidelite', 'testConfiance', 'testToxic'],
+    'couche':          ['testInfidelite', 'testFinCouple', 'testConfiance'],
     'jalousie1':       ['testConfiance', 'testInfidelite', 'testToxic'],
     'jalousie2':       ['testConfiance', 'testInfidelite', 'testToxic'],
     'confiance':       ['testJalousie', 'testCoupleSain', 'testInfidelite'],
@@ -1411,6 +1413,13 @@ var QuizEngine = (function() {
         if (self.quizType === 'divorce' && q.id === 10) {
           self.hasChildren = (opt.id === 'b');
         }
+        // Fin de couple : la premiere question situe la relation et ne rapporte
+        // aucun point. Sa reponse decide seulement des pistes proposees a la
+        // fin, un couple qui vit a distance n'ayant pas les memes questions a
+        // se poser qu'un couple qui vit sous le meme toit.
+        if (self.quizType === 'fin-couple' && q.id === 1) {
+          self.aDistance = (opt.id === 'c');
+        }
         self.saveState();
         setTimeout(function() {
           if (self.currentQ < total - 1) { self.currentQ++; self.render(); }
@@ -1488,6 +1497,39 @@ var QuizEngine = (function() {
         var advice = el('div', 'qr-advice');
         advice.innerHTML = '<strong>' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
         resultat.appendChild(advice);
+      }
+    }
+
+    // Fin de couple : le score dit ou en est la relation, il ne dit pas
+    // pourquoi. Les trois pistes ci-dessous repondent chacune a une question
+    // precise que ce test-la ne pose pas, et la piste « a distance » ne
+    // s'affiche que pour ceux qui ont declare vivre a distance.
+    if (this.quizType === 'fin-couple') {
+      var pistes = [
+        { route: 'testCouche', cle: 'couche', si: true },
+        { route: 'testDistanceAime', cle: 'distance', si: !!this.aDistance },
+        { route: 'testToxic', cle: 'toxique', si: true }
+      ].filter(function (p) {
+        if (!p.si) return false;
+        p.url = getRelatedQuizUrl(p.route, self.lang);
+        return p.url && p.url !== '/';
+      });
+      if (pistes.length) {
+        var orient = el('div', 'qr-orientation');
+        orient.appendChild(el('p', 'qr-orientation-titre',
+          esc(tg('finCouple.orientationTitre', 'Ce que ce test ne vous a pas demandé'))));
+        pistes.forEach(function (p) {
+          var a = document.createElement('a');
+          a.className = 'qr-orientation-lien';
+          a.href = p.url;
+          a.innerHTML = '<span class="qr-orientation-nom">' +
+            esc(tg('finCouple.orient_' + p.cle + '_nom', '')) + '</span>' +
+            '<span class="qr-orientation-raison">' +
+            esc(tg('finCouple.orient_' + p.cle + '_raison', '')) + '</span>' +
+            '<span class="qr-orientation-fleche" aria-hidden="true">→</span>';
+          orient.appendChild(a);
+        });
+        resultat.appendChild(orient);
       }
     }
 

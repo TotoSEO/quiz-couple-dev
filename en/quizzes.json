@@ -267,5 +267,11 @@
     "shortTitle": "For or against",
     "metaDescription": "60 statements to settle as a couple: pets, houses, marriage, holidays. Answer FOR or AGAINST, then see how other couples voted. Free, no sign-up.",
     "description": "One statement, two camps. You settle it together, then you find out how other couples voted."
+  },
+  "testFinCouple": {
+    "title": "Is My Relationship Over? Test | 24 Questions",
+    "shortTitle": "Is my relationship over?",
+    "metaDescription": "24 factual, weighted questions to find out whether your relationship is coming to an end. An 8-tier result that will not reassure you for the sake of it. Free, no sign-up.",
+    "description": "Twenty-four factual questions, a scale weighted by how serious each sign really is, and a verdict that does not try to spare you."
   }
 }

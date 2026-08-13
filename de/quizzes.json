@@ -267,5 +267,11 @@
     "shortTitle": "Dafür oder dagegen",
     "metaDescription": "60 Aussagen für Paare: Haustier, Haus, Hochzeit, Urlaub. Ihr antwortet DAFÜR oder DAGEGEN und seht, wie andere Paare abgestimmt haben. Kostenlos.",
     "description": "Eine Aussage, zwei Lager. Ihr entscheidet gemeinsam und erfahrt danach, wie andere Paare abgestimmt haben."
+  },
+  "testFinCouple": {
+    "title": "Test: Ist meine Beziehung am Ende? | 24 Fragen",
+    "shortTitle": "Ist meine Beziehung am Ende?",
+    "metaDescription": "24 sachliche, gewichtete Fragen, um herauszufinden, ob eure Beziehung zu Ende geht. Ergebnis in 8 Stufen, ohne falsche Beruhigung. Kostenlos, ohne Anmeldung.",
+    "description": "Vierundzwanzig sachliche Fragen, ein nach dem Gewicht jedes Signals abgestuftes Punktesystem, und ein Urteil, das euch nichts erspart."
   }
 }

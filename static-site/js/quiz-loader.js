@@ -21,6 +21,10 @@
     // ── Solo scoring (single player, points-based) ──
     'toxic':          { prefix: 'divorce', engine: 'solo', totalQ: 25, pool: 25, quizType: 'toxic', ascending: true, resultPrefix: 'toxic' },
     'pervers':        { prefix: 'pervers', engine: 'solo', totalQ: 20, pool: 20, quizType: 'pervers', ascending: true, resultPrefix: 'pervers' },
+    // Fin de couple : 24 questions dont la première ne sert qu'à situer la
+    // relation. Les 23 autres n'ont pas le même poids, le barème est donc
+    // écrit à la main dans gd.json plutôt que déduit du rang des réponses.
+    'fin-couple':     { prefix: 'finCouple', engine: 'solo', totalQ: 24, pool: 24, quizType: 'fin-couple', ascending: true, ptsExplicites: true },
     'amour-habitude': { prefix: 'habitude', engine: 'solo', totalQ: 20, pool: 20, quizType: 'amour-habitude', ascending: true, resultPrefix: 'habitude' },
     'divorce':        { prefix: 'divorce', engine: 'solo', totalQ: 15, pool: 25, quizType: 'divorce', hasSkip: true, ascending: true },
     'mariage':        { prefix: 'marriage', engine: 'solo', totalQ: 30, pool: 30, hasSkip: true, hasLocalStorage: true },
@@ -668,6 +672,14 @@
   // ─── Initializers ─────────────────────────────────────────
 
   function initSoloQuiz(cfg, questions) {
+    // Barème explicite : par défaut un test solo donne 0, 1, 2, 3 points selon
+    // le rang de la réponse, ce qui met toutes les questions sur le même pied.
+    // Un test dont les questions n'ont pas la même gravité déclare
+    // ptsExplicites et range ses points dans gd.json, comme la parentalité :
+    // prefix.q{N}{lettre}_pts. Le maximum réel se recalcule tout seul en
+    // dessous, donc les paliers suivent le barème sans être écrits à la main.
+    if (cfg.ptsExplicites) appliquePointsExplicites(cfg.prefix, questions);
+
     // Calculate real achievable max score (sum of max points per question)
     var realMaxScore = 0;
     for (var i = 0; i < questions.length; i++) {
@@ -901,20 +913,26 @@
     });
   }
 
-  function initParentaliteQuiz(cfg, questions) {
-    // Parentalite quiz: each answer has explicit point values stored in gd.json
-    // Format: parentalite.q{N}a_pts, parentalite.q{N}b_pts etc.
-    // Points are encoded in the options data
+  // Chaque réponse porte son propre nombre de points, rangé dans gd.json sous
+  // prefix.q{N}{lettre}_pts. Une clé absente laisse le point calculé par
+  // défaut : une question sans barème explicite reste jouable.
+  function appliquePointsExplicites(prefix, questions) {
     for (var i = 0; i < questions.length; i++) {
       var q = questions[i];
       for (var j = 0; j < q.options.length; j++) {
-        var ptsKey = cfg.prefix + '.q' + q.id + q.options[j].id + '_pts';
+        var ptsKey = prefix + '.q' + q.id + q.options[j].id + '_pts';
         var pts = QuizEngine.tgd(ptsKey, null);
         if (pts !== null && pts !== ptsKey) {
           q.options[j].points = parseInt(pts, 10) || 0;
         }
       }
     }
+  }
+
+  function initParentaliteQuiz(cfg, questions) {
+    // Parentalite quiz: each answer has explicit point values stored in gd.json
+    // Format: parentalite.q{N}a_pts, parentalite.q{N}b_pts etc.
+    appliquePointsExplicites(cfg.prefix, questions);
 
     // Parse results from gd.json
     var results = [];

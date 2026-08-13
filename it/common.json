@@ -54,7 +54,9 @@
     "testSecret": "Mi ama in segreto?",
     "testDistanceAime": "Mi ama ancora?",
     "testPurete": "Test di purezza",
-    "pourContre": "Pro o contro"
+    "pourContre": "Pro o contro",
+    "testFinCouple": "È la fine?",
+    "testFinCoupleDesc": "A che punto è davvero la tua relazione"
   },
   "footer": {
     "brandDescription": "Metti alla prova la tua compatibilità e scopri la tua connessione amorosa con i nostri quiz gratuiti per coppie.",

@@ -279,5 +279,11 @@
     "shortTitle": "Pour ou contre",
     "metaDescription": "60 propositions à trancher à deux : animal, maison, mariage, vacances. Vous répondez POUR ou CONTRE, puis vous voyez le vote des autres couples. Gratuit.",
     "description": "Une proposition, deux camps. Vous tranchez ensemble, puis vous découvrez ce que les autres couples ont voté."
+  },
+  "testFinCouple": {
+    "title": "Test est-ce la fin de votre couple ? | 24 questions",
+    "shortTitle": "Est-ce la fin de mon couple ?",
+    "metaDescription": "24 questions factuelles et pondérées pour savoir si votre relation touche à sa fin. Résultat sur 8 paliers, sans vous rassurer à tort. Gratuit, sans inscription.",
+    "description": "Vingt-quatre questions factuelles, un barème pondéré selon la gravité de chaque signe, et un verdict qui ne cherche pas à vous ménager."
   }
 }

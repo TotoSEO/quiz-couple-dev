@@ -140,7 +140,9 @@ const article: BlogArticleData = {
 
 <p><strong>La mejor prueba cabe en una frase:</strong> imagina que el problema actual desaparece mañana por la mañana, de golpe. El trabajo se calma, entra el dinero, la suegra se calla. ¿Eres feliz con esta persona?</p>
 
-<p>Si la respuesta es sí, estás atravesando algo. Si la respuesta es «no lo sé»… o peor, «no, pero al menos sería más sencillo», entonces el problema nunca fue el problema.</p>`,
+<p>Si la respuesta es sí, estás atravesando algo. Si la respuesta es «no lo sé»… o peor, «no, pero al menos sería más sencillo», entonces el problema nunca fue el problema.</p>
+
+<p>Una intuición no basta para responder a esa pregunta. Un <a href="/es/test-es-el-final-de-mi-relacion/">cuestionario que pesa cada señal de final según su gravedad</a> da un resultado más difícil de descartar que el recuerdo de la última discusión.</p>`,
     },
     {
       id: 'lo-que-no-es-motivo',
