@@ -116,6 +116,14 @@
         <div class="hero-ctas">
           <a href="#quiz-section" class="btn btn-cta btn-lg"><%= hero.cta1 %></a>
           <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-outline btn-lg"><%= hero.cta2 %></a>
+          <%# Le test de pureté a droit à sa place dans le hero : même anneau
+              néon que sa pastille du menu, pour qu'on le reconnaisse. %>
+          <% if (getLocalizedUrl('testPurete', lang)) { %>
+          <a href="<%= getLocalizedUrl('testPurete', lang) %>" class="btn btn-purete btn-lg">
+            <span class="btn-purete-emoji" aria-hidden="true">🌡️</span>
+            <span class="btn-purete-texte"><%= t('quizzes:testPurete.shortTitle', 'Test de pureté') %></span>
+          </a>
+          <% } %>
         </div>
 
         <!-- Compteurs : le total joué domine, l'inventaire du catalogue suit -->
