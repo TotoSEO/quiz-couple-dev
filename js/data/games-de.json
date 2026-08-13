@@ -344,7 +344,8 @@
     "testSecret": "Test liebt er oder sie mich heimlich",
     "testDistanceAime": "Test liebt er mich noch Fernbeziehung",
     "pourContre": "Dafür oder dagegen",
-    "jeuDilemmes": "Paar-Dilemmata"
+    "jeuDilemmes": "Paar-Dilemmata",
+    "testFinCouple": "Ist meine Beziehung am Ende?"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
@@ -597,5 +598,14 @@
     "bravoTitre": "Bravo, und danke!",
     "bravoTexte": "Ihr habt alle sechzig Aussagen entschieden. Eure Stimmen zählen jetzt in den Prozentzahlen, die die nächsten Paare sehen.",
     "bravoSuite": "Weiter zu den Dilemmata"
+  },
+  "finCouple": {
+    "orientationTitre": "Was dieser Test nicht gefragt hat",
+    "orient_couche_nom": "Hat er oder sie mit jemand anderem geschlafen?",
+    "orient_couche_raison": "Fünfzehn Fragen zu den konkreten Anzeichen, wenn der Zweifel einer anderen Person gilt.",
+    "orient_distance_nom": "Fernbeziehung: liebt er oder sie mich noch?",
+    "orient_distance_raison": "Ihr habt angegeben, getrennt zu wohnen. Dort bedeuten dieselben Signale etwas anderes.",
+    "orient_toxique_nom": "Ist meine Beziehung toxisch?",
+    "orient_toxique_raison": "Eine Beziehung kann enden, weil sie erlischt, oder weil sie schadet. Das ist nicht dasselbe."
   }
 }

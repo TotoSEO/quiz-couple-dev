@@ -539,6 +539,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/test-est-ce-la-fin-de-mon-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-est-ce-la-fin-de-mon-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/is-my-relationship-over-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-es-el-final-de-mi-relacion/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/ist-meine-beziehung-am-ende-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-e-la-fine-della-mia-relazione/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-est-ce-la-fin-de-mon-couple/"/>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/quiz-pour-contre-couple/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-pour-contre-couple/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/for-or-against-couple-game/"/>

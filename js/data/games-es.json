@@ -344,7 +344,8 @@
     "testSecret": "Test me quiere en secreto",
     "testDistanceAime": "Test me sigue queriendo a distancia",
     "pourContre": "A favor o en contra",
-    "jeuDilemmes": "Dilemas de pareja"
+    "jeuDilemmes": "Dilemas de pareja",
+    "testFinCouple": "¿Es el final de mi relación?"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
@@ -597,5 +598,14 @@
     "bravoTitre": "¡Enhorabuena y gracias!",
     "bravoTexte": "Habéis decidido las sesenta propuestas. Vuestros votos ya cuentan en los porcentajes que verán las próximas parejas.",
     "bravoSuite": "Seguid con los dilemas"
+  },
+  "finCouple": {
+    "orientationTitre": "Lo que este test no te ha preguntado",
+    "orient_couche_nom": "¿Se ha acostado con otra persona?",
+    "orient_couche_raison": "Quince preguntas sobre las señales concretas, cuando la duda es sobre otra persona.",
+    "orient_distance_nom": "A distancia: ¿me sigue queriendo?",
+    "orient_distance_raison": "Has dicho que vivís a distancia. Ahí las señales no significan lo mismo.",
+    "orient_toxique_nom": "¿Mi relación es tóxica?",
+    "orient_toxique_raison": "Una relación puede acabar porque se apaga, o porque hace daño. No es lo mismo."
   }
 }
