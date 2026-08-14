@@ -190,7 +190,7 @@
     a.rel = 'sponsored nofollow noopener';
     a.innerHTML =
       '<div class="va-carte-visuel">' +
-        '<img src="' + esc(p.image) + '" alt="Couple dans un dôme insolite au coucher du soleil" loading="lazy" decoding="async" width="600" height="500">' +
+        '<img src="' + esc(p.image) + '" alt="Couple dans un dôme insolite au coucher du soleil" loading="lazy" decoding="async" width="640" height="360">' +
         '<span class="va-carte-nuits">1 à 2 nuits</span>' +
       '</div>' +
       '<div class="va-carte-corps">' +
@@ -211,7 +211,11 @@
     else if (reponses.rythme === 'aventure' || reponses.decor === 'montagne') cles = ['sportdecouverte', 'abracadaroom', 'samboat'];
 
     var zone = el('section', 'va-selection');
-    zone.appendChild(el('h3', 'va-selection-titre', 'La sélection idée de voyage de Quiz Couple'));
+    zone.innerHTML =
+      '<span class="va-selection-pastille">✨ Testé et approuvé</span>' +
+      '<h3 class="va-selection-titre">La <span class="va-selection-accent">sélection idée de voyage</span> de Quiz Couple</h3>' +
+      '<span class="va-selection-trait" aria-hidden="true"></span>' +
+      '<p class="va-selection-sous">Trois pépites pour passer de l\'idée à la réservation, sans y laisser le budget.</p>';
     var liste = el('div', 'va-selection-liste');
     cles.forEach(function (cle) {
       var p = d.partenaires[cle];
@@ -222,10 +226,16 @@
       a.rel = 'sponsored nofollow noopener';
       a.setAttribute('aria-label', p.titre);
       a.innerHTML =
-        '<span class="va-partenaire-visuel"><img src="' + esc(p.image) + '" alt="' + esc(p.alt) + '" loading="lazy" decoding="async"></span>' +
+        '<span class="va-partenaire-visuel">' +
+          '<img src="' + esc(p.image) + '" alt="' + esc(p.alt) + '" loading="lazy" decoding="async" width="640" height="360">' +
+          (p.badge ? '<span class="va-partenaire-badge">' + esc(p.badge) + '</span>' : '') +
+        '</span>' +
         '<span class="va-partenaire-corps">' +
           '<span class="va-partenaire-titre">' + esc(p.titre) + '</span>' +
           '<span class="va-partenaire-texte">' + esc(p.texte) + '</span>' +
+          (p.puces ? '<span class="va-partenaire-puces">' + p.puces.map(function (x) {
+            return '<span class="va-partenaire-puce">' + esc(x) + '</span>';
+          }).join('') + '</span>' : '') +
           '<span class="va-partenaire-cta">' + esc(p.bouton) +
             '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>' +
         '</span>';
