@@ -1109,7 +1109,10 @@ var QuizEngine = (function() {
   var PARTENAIRES = {
     coquin: {
       fr: {
-        url: 'https://www.passagedudesir.fr/?utm_source=affilae&utm_medium=medias-blogs-influence&utm_campaign=quiz-couple-com&ae=1325',
+        // Lien de suivi Affilae. L'adresse directe de la boutique avec les
+        // paramètres ne comptait aucun clic : c'est le redirecteur c3po.link
+        // qui enregistre le passage avant de renvoyer vers la boutique.
+        url: 'https://c3po.link/Quyean9abC',
         // Visuels de la marque, copies chez nous a la construction. Appeler
         // le serveur du partenaire exposerait l'encart a une image qui change
         // ou disparait sans prevenir, et ferait fuiter la visite de nos
