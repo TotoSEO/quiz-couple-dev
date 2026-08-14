@@ -978,8 +978,9 @@ function copyStaticAssets() {
   // Copy public/blog/, public/authors/, public/quiz/ and public/partenaires/
   // (visuels des partenaires d'affiliation, hébergés chez nous et non appelés
   // sur le serveur du partenaire : une image distante qui change ou disparaît
-  // casserait l'encart sans prévenir).
-  for (const dir of ['blog', 'authors', 'quiz', 'partenaires']) {
+  // casserait l'encart sans prévenir). Le dossier vacances porte les 200
+  // photos de destinations du test « où partir en vacances ? ».
+  for (const dir of ['blog', 'authors', 'quiz', 'partenaires', 'vacances']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {
@@ -1100,6 +1101,13 @@ function copyTranslationData() {
     const pureteSrc = path.join(langDir, 'purete.json');
     if (fs.existsSync(pureteSrc)) {
       fs.copyFileSync(pureteSrc, path.join(dataDir, `purete-${lang}.json`));
+    }
+
+    // Les 200 destinations du test « où partir en vacances ? » ne se
+    // chargent que quand quelqu'un lance le questionnaire.
+    const vacancesSrc = path.join(langDir, 'vacances.json');
+    if (fs.existsSync(vacancesSrc)) {
+      fs.copyFileSync(vacancesSrc, path.join(dataDir, `vacances-${lang}.json`));
     }
 
     const activitiesSrc = path.join(langDir, 'activities.json');

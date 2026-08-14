@@ -367,7 +367,8 @@
     jeuDilemmes: 'Dilemmes',
     pourContre: 'Pour ou contre',
     quizTentation: 'Tentation',
-    testPurete: 'Test de pureté'
+    testPurete: 'Test de pureté',
+    testVacances: 'Test où partir en vacances'
   };
   // Un slug inconnu (nouveau quiz pas encore reference ici) reste affiche tel
   // quel plutot que de disparaitre : la ligne existe en base, elle doit se voir.
