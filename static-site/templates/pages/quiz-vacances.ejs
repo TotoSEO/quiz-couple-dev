@@ -16,7 +16,7 @@
   ];
   const faq = [
     { q: 'Comment le test choisit-il les destinations proposées ?',
-      a: "Chacune des 200 destinations de notre base est décrite précisément : durées réalistes sur place, niveau de budget par personne transport compris, bonnes saisons, décor et rythme. Vos réponses servent de filtres, et seules les destinations qui les respectent toutes ressortent. Quand une combinaison est trop exigeante, le test élargit un critère à la fois et vous le dit, plutôt que de proposer n'importe quoi." },
+      a: "Chacune des 244 destinations de notre base est décrite précisément : durées réalistes sur place, niveau de budget par personne transport compris, bonnes saisons, décor et rythme. Vos réponses servent de filtres, et seules les destinations qui les respectent toutes ressortent. Quand une combinaison est trop exigeante, le test élargit un critère à la fois et vous le dit, plutôt que de proposer n'importe quoi." },
     { q: 'Pourquoi certaines propositions sont-elles des circuits et pas une seule ville ?',
       a: "Parce qu'une durée change la nature du voyage. Amsterdam se savoure en deux à cinq nuits ; pour huit jours et plus, le test propose les Pays-Bas avec plusieurs étapes, jamais huit jours au même endroit. Toutes les destinations longues portent leurs étapes conseillées." },
     { q: 'Les budgets affichés sont-ils réalistes ?',
@@ -92,34 +92,132 @@
 <div class="seo-content">
 <section>
   <div class="container mx-auto px-4 max-w-3xl">
-    <h2 class="text-2xl md:text-3xl font-bold mb-4">Un questionnaire, deux cents destinations, zéro généralité</h2>
-    <p class="mb-4">Demandez autour de vous où partir en couple et vous obtiendrez toujours les trois mêmes réponses : Rome, les Maldives, et « ça dépend ». Les deux premières ne tiennent pas compte de vos dates ni de votre budget, la troisième ne sert à rien. Ce test a été construit pour remplacer le « ça dépend » par une vraie réponse.</p>
-    <p class="mb-4">Le principe tient en une phrase : chacune des destinations de notre base est décrite comme un conseiller de voyage le ferait. Combien de nuits elle mérite, ni plus ni moins. Ce qu'elle coûte réellement par personne, transport compris. Ses bonnes saisons, pas celles des brochures. Son décor, son rythme, son ambiance. Vos huit réponses traversent cette base comme un filtre, et ce qui en sort colle à ce que vous avez répondu.</p>
-    <p class="mb-4">Et quand une combinaison est trop pointue, le test ne triche pas : il élargit un critère à la fois, dans un ordre fixe, et vous dit lequel il a élargi. Une nuit à l'autre bout du monde n'existe pas ; plutôt que de l'inventer, on vous propose trois nuits et on vous le dit.</p>
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Un test qui remplace le fameux « ça dépend »</h2>
+    <p class="mb-4">Demandez autour de vous où partir en couple et vous obtiendrez toujours les trois mêmes réponses : Rome, les Maldives, et « ça dépend ». Les deux premières ignorent vos dates et votre budget, la troisième ne sert à rien. Ce test a été construit pour transformer le « ça dépend » en une <strong>liste courte de destinations qui collent vraiment à vos réponses</strong>.</p>
+    <p class="mb-3">Pour y arriver, chacune des <strong>244 destinations de notre base</strong> est décrite comme un conseiller de voyage le ferait :</p>
+    <ul class="list-disc pl-6 space-y-2 mb-4">
+      <li><strong>La durée juste :</strong> une fourchette de nuits réaliste, ni l'aller-retour express en Corse, ni la semaine de trop à Amsterdam.</li>
+      <li><strong>Le vrai budget :</strong> un niveau de prix par personne, transport compris, pas le tarif d'appel d'une brochure.</li>
+      <li><strong>Les bonnes saisons :</strong> les fenêtres où la destination se montre sous son meilleur jour, pas celles où elle se vend le mieux.</li>
+      <li><strong>Le décor et le rythme :</strong> mer, montagne, île, ville ou grands espaces, et ce qu'on y fait vraiment, du transat à l'aventure.</li>
+      <li><strong>Les étapes des formats longs :</strong> au-delà d'une semaine, chaque proposition devient un itinéraire avec ses villes-étapes.</li>
+    </ul>
+    <p class="mb-4">Vos huit réponses traversent cette base comme un filtre. Et quand une combinaison est trop pointue, le test ne triche pas : il <strong>élargit un critère à la fois et vous dit lequel</strong>, plutôt que d'inventer une nuit à l'autre bout du monde.</p>
   </div>
 </section>
 
 <section>
   <div class="container mx-auto px-4 max-w-3xl">
-    <h2 class="text-2xl md:text-3xl font-bold mb-4">Pourquoi la durée change tout</h2>
-    <p class="mb-4">C'est le filtre que tous les classements de destinations ignorent, et c'est pourtant le premier qui compte. Amsterdam est une merveille pendant trois jours et une punition au bout de huit : la ville se traverse à vélo en vingt minutes. À l'inverse, la Corse en deux nuits, c'est un aller-retour d'aéroport avec vue.</p>
-    <p class="mb-4">Le test raisonne donc en nuits réalistes. Chaque destination porte sa fourchette, et vous ne verrez jamais une ville de week-end sur un format de dix jours. Pour les longs séjours, la règle va plus loin : au-delà d'une semaine au même endroit, la proposition devient un itinéraire. Huit jours aux Pays-Bas, ce n'est pas huit jours à Amsterdam, c'est Amsterdam, Haarlem, Utrecht et La Haye, avec les moulins de Kinderdijk sur la route. Toutes nos destinations longues sont livrées avec leurs étapes.</p>
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Où partir selon le temps devant vous</h2>
+    <p class="mb-4">C'est le filtre que tous les classements ignorent, et c'est pourtant le premier qui compte : <strong>une durée change la nature du voyage</strong>. Voici comment le test raisonne, avec des exemples tirés de la base :</p>
+    <div class="quiz-table-wrap">
+      <table class="quiz-table">
+        <thead>
+          <tr><th>Votre format</th><th>Ce que le test propose</th><th>Exemples de la base</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>1 à 2 nuits</strong></td><td>Une échappée proche, zéro temps perdu en transport</td><td>Honfleur, Colmar, Gérardmer</td></tr>
+          <tr><td><strong>3 nuits</strong></td><td>Une capitale européenne prise à la bonne dose</td><td>Amsterdam, Rome, Porto</td></tr>
+          <tr><td><strong>4 à 7 jours</strong></td><td>Une région entière, avec le temps de s'y poser</td><td>Andalousie, Sicile, Tenerife</td></tr>
+          <tr><td><strong>8 à 12 jours</strong></td><td>Un circuit à 3 ou 4 étapes, jamais huit jours au même endroit</td><td>Pays-Bas : Amsterdam, Haarlem, Utrecht, La Haye</td></tr>
+          <tr><td><strong>2 semaines et plus</strong></td><td>Le grand voyage, itinéraire complet fourni</td><td>Tour d'Islande, Thaïlande, Polynésie française</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mb-4">La règle Amsterdam résume tout : <strong>trois nuits sur place, c'est une merveille ; huit jours, c'est une punition</strong>, la ville se traverse à vélo en vingt minutes. Sur un format long, le test bascule donc automatiquement sur le circuit Pays-Bas, moulins de Kinderdijk compris.</p>
   </div>
 </section>
 
 <section>
   <div class="container mx-auto px-4 max-w-3xl">
-    <h2 class="text-2xl md:text-3xl font-bold mb-4">Budget et saison : les deux filtres que tout le monde oublie</h2>
-    <p class="mb-4">Un budget de voyage qui ne compte pas le transport est un mensonge commode. Ici, les quatre niveaux de budget s'entendent par personne, vols ou essence compris. Répondez « moins de 300 € » et vous verrez des trésors accessibles en train ou en voiture ; répondez « plus de 1500 € » et la Polynésie entre dans la danse. Aucune proposition ne dépassera jamais ce que vous avez déclaré pouvoir mettre.</p>
-    <p class="mb-4">La saison est traitée avec la même rigueur, parce qu'elle fait ou défait un voyage. La Thaïlande sous la mousson, les Cyclades en janvier ou la Laponie en juillet sont trois erreurs qui se réservent en deux clics sur n'importe quel comparateur. Notre base connaît les bonnes fenêtres de chaque destination, et les très saisonnières, le ski, les aurores boréales, les fjords, ne sortent jamais de la leur.</p>
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">La bonne destination au bon moment</h2>
+    <p class="mb-4">La saison fait ou défait un voyage, et les pires erreurs se réservent en deux clics sur n'importe quel comparateur. Notre base connaît les fenêtres de chaque destination, et les plus saisonnières, le ski, les aurores, les fjords, <strong>ne sortent jamais de la leur</strong> :</p>
+    <div class="quiz-table-wrap">
+      <table class="quiz-table">
+        <thead>
+          <tr><th>Saison</th><th>Les valeurs sûres de la base</th><th>L'erreur qu'on vous évite</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Printemps</strong></td><td>Cyclades avant la foule, Andalousie encore douce, Amsterdam en fleurs</td><td>La montagne entre deux saisons, ni ski ni sentiers</td></tr>
+          <tr><td><strong>Été</strong></td><td>Fjords de Norvège, Bretagne, lacs alpins</td><td>La Thaïlande en pleine mousson</td></tr>
+          <tr><td><strong>Automne</strong></td><td>Rome sans la canicule, vignobles en vendanges, Istanbul</td><td>Les îles grecques qui ferment peu à peu</td></tr>
+          <tr><td><strong>Hiver</strong></td><td>Les Trois Vallées, Laponie finlandaise, Tenerife au soleil</td><td>Réserver la Laponie... pour juillet</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container mx-auto px-4 max-w-3xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Combien prévoir, transport compris</h2>
+    <p class="mb-4">Un budget de voyage qui ne compte pas le transport est un mensonge commode. Ici, les quatre niveaux s'entendent <strong>par personne, vols ou essence compris</strong>, et aucune proposition ne dépassera jamais ce que vous avez déclaré :</p>
+    <div class="grid md:grid-cols-2 gap-4 mb-4">
+      <div class="card p-5">
+        <h3 class="font-bold mb-2">Moins de 300 €</h3>
+        <p class="text-muted-foreground">Le week-end malin, accessible en train ou en voiture : Honfleur, Gérardmer, les lacs, les vignobles. La France regorge de trésors à ce prix.</p>
+      </div>
+      <div class="card p-5">
+        <h3 class="font-bold mb-2">300 à 800 €</h3>
+        <p class="text-muted-foreground">L'Europe s'ouvre en vols courts : Porto, Rome, Amsterdam, les Cyclades hors été, et les plus beaux formats d'une semaine en France.</p>
+      </div>
+      <div class="card p-5">
+        <h3 class="font-bold mb-2">800 à 1500 €</h3>
+        <p class="text-muted-foreground">Le soleil lointain et les circuits : Tenerife, l'Islande, le Monténégro, la Thaïlande en s'y prenant tôt, les grands itinéraires européens.</p>
+      </div>
+      <div class="card p-5">
+        <h3 class="font-bold mb-2">Plus de 1500 €</h3>
+        <p class="text-muted-foreground">Le voyage d'une vie : Polynésie, Maldives, Bali, Japon, safaris. Les propositions affichent leurs étapes et leurs vraies durées.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container mx-auto px-4 max-w-3xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Cinq façons de bien utiliser le test</h2>
+    <ol class="list-decimal pl-6 space-y-2 mb-4">
+      <li><strong>Fixez vos dates avant tout :</strong> la saison est le filtre le plus impitoyable de la base, autant lui donner la bonne information dès le départ.</li>
+      <li><strong>Soyez honnêtes sur le budget :</strong> il inclut le transport, l'hébergement et la vie sur place. Un budget sincère donne une liste réservable, pas une liste de rêves.</li>
+      <li><strong>Jouez-le deux fois :</strong> changez un seul critère entre les deux parties, la durée ou le budget, et regardez la sélection se transformer du tout au tout.</li>
+      <li><strong>Répondez chacun de votre côté :</strong> comparez ensuite vos deux listes. Les destinations présentes dans les deux sont votre réponse.</li>
+      <li><strong>Gardez les étapes proposées :</strong> sur les formats longs, l'itinéraire affiché est prêt à poser sur un carnet de réservation, ville par ville.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="container mx-auto px-4 max-w-3xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Week-end ou vraies vacances : deux logiques opposées</h2>
+    <p class="mb-4">C'est le vieux débat du couple, et il se tranche mieux quand on admet que <strong>les deux formats ne répondent pas aux mêmes règles</strong> :</p>
+    <div class="grid md:grid-cols-2 gap-4 mb-4">
+      <div class="card p-5">
+        <h3 class="font-bold mb-3">🥐 Le week-end qui fait du bien</h3>
+        <ul class="list-disc pl-5 space-y-2 text-muted-foreground">
+          <li>Moins de trois heures de route ou de train, sinon le transport mange le séjour</li>
+          <li>Un seul plaisir central : un spa, une grande table, un marché, une balade</li>
+          <li>Deux nuits plutôt qu'une dès que possible, la vraie coupure commence au deuxième réveil</li>
+          <li>L'insolite fait des merveilles : une cabane ou une bulle transforme 36 heures en souvenir durable</li>
+        </ul>
+      </div>
+      <div class="card p-5">
+        <h3 class="font-bold mb-3">🧳 Les vacances qui comptent</h3>
+        <ul class="list-disc pl-5 space-y-2 text-muted-foreground">
+          <li>Une région plutôt qu'un point sur la carte, pour changer de décor sans refaire sa valise chaque soir</li>
+          <li>La saison se choisit avant la destination, jamais l'inverse</li>
+          <li>Un rythme en deux temps : la découverte d'abord, le repos pour finir</li>
+          <li>Le budget se calcule transport compris dès le premier jour, c'est lui qui décide du rayon d'action</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="container mx-auto px-4 max-w-3xl">
     <h2 class="text-2xl md:text-3xl font-bold mb-4">Ce que vous obtenez à la fin</h2>
-    <p class="mb-4">Une liste courte, six à huit propositions, chacune avec sa photo, sa fourchette de nuits, son niveau de budget et une phrase qui dit pourquoi elle vaut le détour. Les longs formats affichent leurs étapes conseillées. Selon vos réponses, la sélection de voyage Quiz Couple vous met aussi sur la piste de séjours insolites, d'expériences à sensations ou d'une journée en mer.</p>
-    <p class="mb-4">Ensuite, refaites-le. Changez un seul critère, la durée, le budget ou la saison, et regardez la liste se transformer. C'est la meilleure façon d'arbitrer le vieux débat du couple : week-end ou vraies vacances, montagne ou mer, cette année on choisit ensemble et on a les arguments.</p>
+    <p class="mb-4">Une liste courte, <strong>quatre à huit propositions</strong>, chacune avec sa photo, sa fourchette de nuits, son niveau de budget et une phrase qui dit pourquoi elle vaut le détour. Les longs formats affichent leurs étapes conseillées, et la sélection de voyage Quiz Couple complète le tout avec des pistes concrètes pour réserver.</p>
+    <p class="mb-4">Ensuite, refaites-le. Changez un seul critère et regardez la liste changer : c'est la meilleure façon d'arbitrer le débat montagne ou mer avec des arguments plutôt qu'avec de la mauvaise foi.</p>
     <p class="mb-4">Et si la question du moment est moins la destination que l'état de la relation, le <a href="<%= getLocalizedUrl('testCouple', 'fr') %>">test de couple en 20 questions</a> reste la meilleure porte d'entrée, et une <a href="<%= getLocalizedUrl('testDistance', 'fr') %>">relation à distance se teste aussi</a> avant de réserver à deux.</p>
   </div>
 </section>
