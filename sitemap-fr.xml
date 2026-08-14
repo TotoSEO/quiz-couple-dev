@@ -527,6 +527,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/test-ou-partir-en-vacances/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-ou-partir-en-vacances/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-ou-partir-en-vacances/"/>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/dilemmes-couple/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/dilemmes-couple/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/couple-dilemmas-game/"/>
