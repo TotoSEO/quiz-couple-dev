@@ -1,0 +1,150 @@
+<%
+  // Test « où partir en vacances ? ». Page française uniquement : les
+  // partenaires voyage mis en avant ne servent que le marché français.
+  // Le questionnaire et ses 200 destinations vivent dans vacances.js et
+  // /js/data/vacances-fr.json : la page reste légère, les données ne se
+  // chargent que quand quelqu'un joue.
+  const questionsTest = [
+    { q: 'Pour commencer : vos âges ?', o: ['18 à 25 ans', '26 à 35 ans', '36 à 45 ans', '46 ans et plus'] },
+    { q: 'Week-end en amoureux ou vraies vacances ?', o: ['Un week-end en amoureux', 'De vraies vacances'] },
+    { q: 'Combien de temps partez-vous ?', o: ['Une nuit', 'Deux nuits', 'Trois nuits', '4 à 7 jours', '8 à 12 jours', 'Deux semaines ou plus'] },
+    { q: 'On part où ?', o: ['En France', 'En Europe', 'Plus loin', 'Surprenez-nous'] },
+    { q: 'Le décor de vos rêves ?', o: ['La mer', 'La montagne', 'Une île paradisiaque', 'Une ville à explorer', 'Nature et grands espaces'] },
+    { q: 'Le budget par personne, transport compris ?', o: ['Moins de 300 €', '300 à 800 €', '800 à 1500 €', 'Plus de 1500 €'] },
+    { q: 'Vous partiriez plutôt...', o: ['Au printemps', 'En été', 'En automne', 'En hiver'] },
+    { q: 'Et sur place, le programme ?', o: ['Farniente et transats', 'Découverte et visites', 'Aventure et sensations'] }
+  ];
+  const faq = [
+    { q: 'Comment le test choisit-il les destinations proposées ?',
+      a: "Chacune des 200 destinations de notre base est décrite précisément : durées réalistes sur place, niveau de budget par personne transport compris, bonnes saisons, décor et rythme. Vos réponses servent de filtres, et seules les destinations qui les respectent toutes ressortent. Quand une combinaison est trop exigeante, le test élargit un critère à la fois et vous le dit, plutôt que de proposer n'importe quoi." },
+    { q: 'Pourquoi certaines propositions sont-elles des circuits et pas une seule ville ?',
+      a: "Parce qu'une durée change la nature du voyage. Amsterdam se savoure en deux à cinq nuits ; pour huit jours et plus, le test propose les Pays-Bas avec plusieurs étapes, jamais huit jours au même endroit. Toutes les destinations longues portent leurs étapes conseillées." },
+    { q: 'Les budgets affichés sont-ils réalistes ?',
+      a: "Ils incluent le transport depuis la France, l'hébergement et la vie sur place, par personne. Une semaine aux Maldives ne s'affichera jamais dans un budget de 300 €, et un week-end à Gérardmer ne vous demandera pas 1500 €." },
+    { q: 'Le test tient-il compte de la saison ?',
+      a: "Oui, strictement. Le ski ne sort qu'en hiver, la Laponie aussi, les fjords norvégiens en été, la Thaïlande pendant la saison sèche. Une destination très saisonnière ne sortira jamais de sa fenêtre, même quand le test élargit les autres critères." },
+    { q: 'Faut-il créer un compte ou payer ?',
+      a: "Non. Le test est gratuit, sans inscription, et vos réponses ne sont pas conservées. Seul le nombre de tests réalisés est compté." },
+    { q: 'Peut-on refaire le test avec d\'autres critères ?',
+      a: "Bien sûr, et c'est même conseillé : changez la durée ou le budget et la sélection change du tout au tout. Beaucoup de couples le font à deux, chacun ses réponses, pour comparer les deux listes." }
+  ];
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "Quiz",
+      "name": "Test : où partir en vacances en couple ?",
+      "description": rawDescription,
+      "about": { "@type": "Thing", "name": "Choisir une destination de vacances en couple" },
+      "educationalLevel": "beginner",
+      "learningResourceType": "Quiz",
+      "interactivityType": "active",
+      "inLanguage": "fr",
+      "isAccessibleForFree": true,
+      "hasPart": questionsTest.map((x, i) => ({
+        "@type": "Question", "position": i + 1, "name": x.q,
+        "suggestedAnswer": x.o.map((o, j) => ({ "@type": "Answer", "position": j + 1, "text": o }))
+      }))
+    },
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faq.map(x => ({
+        "@type": "Question", "name": x.q,
+        "acceptedAnswer": { "@type": "Answer", "text": x.a }
+      }))
+    }
+  ];
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient py-14 md:py-20">
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li aria-current="page">Test où partir en vacances ?</li>
+        </ol>
+      </nav>
+      <span class="badge badge-primary mb-4">8 questions · Plus de 200 destinations · Gratuit</span>
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">
+        Où partir en vacances en couple ? <span class="text-gradient">Notre test le trouve pour vous</span>
+      </h1>
+      <p class="text-lg text-muted-foreground mb-2">
+        Huit questions sur vos envies, votre budget et vos dates. En face, plus de deux cents destinations décrites une par une, avec leurs vraies durées, leurs vraies saisons et leurs vrais prix. Le test croise les deux et vous rend une liste courte, cohérente, dans laquelle vous n'avez plus qu'à choisir.
+      </p>
+      <div class="mt-6">
+        <a href="#vacances-racine" class="btn btn-cta btn-lg" id="vacances-demarrer">Trouver notre destination 🧭</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Questionnaire -->
+<section class="py-10 md:py-14">
+  <div class="container mx-auto px-4">
+    <div id="vacances-racine" class="va-racine" data-lang="fr"></div>
+  </div>
+</section>
+
+<!-- Contenu SEO -->
+<div class="seo-content">
+<section>
+  <div class="container mx-auto px-4 max-w-3xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Un questionnaire, deux cents destinations, zéro généralité</h2>
+    <p class="mb-4">Demandez autour de vous où partir en couple et vous obtiendrez toujours les trois mêmes réponses : Rome, les Maldives, et « ça dépend ». Les deux premières ne tiennent pas compte de vos dates ni de votre budget, la troisième ne sert à rien. Ce test a été construit pour remplacer le « ça dépend » par une vraie réponse.</p>
+    <p class="mb-4">Le principe tient en une phrase : chacune des destinations de notre base est décrite comme un conseiller de voyage le ferait. Combien de nuits elle mérite, ni plus ni moins. Ce qu'elle coûte réellement par personne, transport compris. Ses bonnes saisons, pas celles des brochures. Son décor, son rythme, son ambiance. Vos huit réponses traversent cette base comme un filtre, et ce qui en sort colle à ce que vous avez répondu.</p>
+    <p class="mb-4">Et quand une combinaison est trop pointue, le test ne triche pas : il élargit un critère à la fois, dans un ordre fixe, et vous dit lequel il a élargi. Une nuit à l'autre bout du monde n'existe pas ; plutôt que de l'inventer, on vous propose trois nuits et on vous le dit.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container mx-auto px-4 max-w-3xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Pourquoi la durée change tout</h2>
+    <p class="mb-4">C'est le filtre que tous les classements de destinations ignorent, et c'est pourtant le premier qui compte. Amsterdam est une merveille pendant trois jours et une punition au bout de huit : la ville se traverse à vélo en vingt minutes. À l'inverse, la Corse en deux nuits, c'est un aller-retour d'aéroport avec vue.</p>
+    <p class="mb-4">Le test raisonne donc en nuits réalistes. Chaque destination porte sa fourchette, et vous ne verrez jamais une ville de week-end sur un format de dix jours. Pour les longs séjours, la règle va plus loin : au-delà d'une semaine au même endroit, la proposition devient un itinéraire. Huit jours aux Pays-Bas, ce n'est pas huit jours à Amsterdam, c'est Amsterdam, Haarlem, Utrecht et La Haye, avec les moulins de Kinderdijk sur la route. Toutes nos destinations longues sont livrées avec leurs étapes.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container mx-auto px-4 max-w-3xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Budget et saison : les deux filtres que tout le monde oublie</h2>
+    <p class="mb-4">Un budget de voyage qui ne compte pas le transport est un mensonge commode. Ici, les quatre niveaux de budget s'entendent par personne, vols ou essence compris. Répondez « moins de 300 € » et vous verrez des trésors accessibles en train ou en voiture ; répondez « plus de 1500 € » et la Polynésie entre dans la danse. Aucune proposition ne dépassera jamais ce que vous avez déclaré pouvoir mettre.</p>
+    <p class="mb-4">La saison est traitée avec la même rigueur, parce qu'elle fait ou défait un voyage. La Thaïlande sous la mousson, les Cyclades en janvier ou la Laponie en juillet sont trois erreurs qui se réservent en deux clics sur n'importe quel comparateur. Notre base connaît les bonnes fenêtres de chaque destination, et les très saisonnières, le ski, les aurores boréales, les fjords, ne sortent jamais de la leur.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container mx-auto px-4 max-w-3xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Ce que vous obtenez à la fin</h2>
+    <p class="mb-4">Une liste courte, six à huit propositions, chacune avec sa photo, sa fourchette de nuits, son niveau de budget et une phrase qui dit pourquoi elle vaut le détour. Les longs formats affichent leurs étapes conseillées. Selon vos réponses, la sélection de voyage Quiz Couple vous met aussi sur la piste de séjours insolites, d'expériences à sensations ou d'une journée en mer.</p>
+    <p class="mb-4">Ensuite, refaites-le. Changez un seul critère, la durée, le budget ou la saison, et regardez la liste se transformer. C'est la meilleure façon d'arbitrer le vieux débat du couple : week-end ou vraies vacances, montagne ou mer, cette année on choisit ensemble et on a les arguments.</p>
+    <p class="mb-4">Et si la question du moment est moins la destination que l'état de la relation, le <a href="<%= getLocalizedUrl('testCouple', 'fr') %>">test de couple en 20 questions</a> reste la meilleure porte d'entrée, et une <a href="<%= getLocalizedUrl('testDistance', 'fr') %>">relation à distance se teste aussi</a> avant de réserver à deux.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container mx-auto px-4 max-w-3xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Questions fréquentes</h2>
+    <div class="space-y-4">
+      <% for (const f of faq) { %>
+      <div class="card p-5">
+        <h3 class="font-bold mb-2"><%= f.q %></h3>
+        <p class="text-muted-foreground"><%= f.a %></p>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+</div>
+
+<%# La mention d'affiliation vit tout en bas de la page, discrète mais
+    complète : l'information légale est là, sans coller une étiquette sous
+    chaque bouton. %>
+<div class="container mx-auto px-4 max-w-3xl">
+  <p class="va-mention-affiliation">Certaines propositions de destinations peuvent être alimentées par des liens d'affiliation qui redirigent vers des partenaires de confiance. Nous pouvons toucher une commission sur vos réservations, ce qui nous permet de continuer à faire vivre le site ❤️</p>
+</div>
+
+<script src="/js/vacances-moteur.js" defer></script>
+<script src="/js/vacances.js" defer></script>

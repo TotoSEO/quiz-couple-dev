@@ -7985,3 +7985,214 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 @media (prefers-reduced-motion: reduce) {
   .qc-relais { animation: none; transform: rotate(-1.2deg); }
 }
+
+/* ── Test « où partir en vacances ? » ─────────────────────────
+   Questionnaire plein cadre, cartes de destinations avec photo, sélection
+   des partenaires voyage. La page vit en français seulement. */
+
+.va-racine { max-width: 46rem; margin: 0 auto; scroll-margin-top: 6rem; }
+
+.va-progression {
+  height: 0.4rem; border-radius: 9999px; overflow: hidden;
+  background: hsl(var(--muted)); margin-bottom: 0.9rem;
+}
+.va-progression-barre {
+  height: 100%; border-radius: 9999px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.va-etape { font-size: 0.75rem; font-weight: 700; color: hsl(var(--muted-foreground)); margin-bottom: 0.4rem; letter-spacing: 0.04em; }
+.va-titre-question { font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem; }
+.va-sous-question { font-size: 0.9rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.5rem; }
+
+.va-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; margin-top: 1.1rem; }
+@media (max-width: 560px) { .va-options { grid-template-columns: 1fr; } }
+.va-option {
+  display: flex; align-items: center; gap: 0.75rem; text-align: left;
+  padding: 0.9rem 1rem; border-radius: 1rem;
+  border: 1.5px solid hsl(var(--border)); background: hsl(var(--card) / 0.8);
+  font-size: 0.95rem; font-weight: 600; color: hsl(var(--foreground));
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+.va-option:hover {
+  border-color: hsl(var(--primary) / 0.55); background: hsl(var(--primary) / 0.05);
+  transform: translateY(-1px); box-shadow: 0 6px 18px -8px hsl(var(--primary) / 0.35);
+}
+.va-option-emoji {
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+  width: 2.5rem; height: 2.5rem; border-radius: 0.8rem; font-size: 1.35rem;
+  background: hsl(var(--primary) / 0.09);
+}
+.va-option-texte { display: flex; flex-direction: column; line-height: 1.25; }
+.va-option-texte small { font-weight: 500; color: hsl(var(--muted-foreground)); }
+
+.va-retour {
+  margin-top: 1.1rem; padding: 0.4rem 0.6rem; border: 0; background: none; cursor: pointer;
+  font-size: 0.85rem; font-weight: 600; color: hsl(var(--muted-foreground)); border-radius: 0.5rem;
+}
+.va-retour:hover { color: hsl(var(--primary)); background: hsl(var(--primary) / 0.06); }
+
+.va-analyse { text-align: center; padding: 3rem 1rem; }
+.va-analyse-globe { font-size: 3rem; animation: vaTangue 1.2s ease-in-out infinite; }
+@keyframes vaTangue { 0%, 100% { transform: rotate(-12deg); } 50% { transform: rotate(12deg); } }
+.va-analyse-texte { margin-top: 0.9rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.va-erreur { text-align: center; color: hsl(var(--muted-foreground)); padding: 2rem 1rem; }
+
+/* Résultats */
+.va-resultats-titre { font-size: 1.5rem; font-weight: 800; text-align: center; margin-bottom: 0.9rem; }
+.va-recap { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin-bottom: 1rem; }
+.va-recap-puce {
+  padding: 0.3rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700;
+  background: hsl(var(--primary) / 0.1); color: hsl(var(--primary));
+}
+.va-note-elargi {
+  text-align: center; font-size: 0.85rem; color: hsl(var(--muted-foreground));
+  background: hsl(var(--muted) / 0.5); border-radius: 0.75rem;
+  padding: 0.6rem 1rem; margin-bottom: 1rem;
+}
+
+.va-liste { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.25rem; }
+@media (max-width: 700px) { .va-liste { grid-template-columns: 1fr; } }
+.va-carte {
+  display: flex; flex-direction: column; overflow: hidden;
+  border-radius: 1.1rem; border: 1px solid hsl(var(--border) / 0.8);
+  background: hsl(var(--card));
+  box-shadow: 0 2px 10px -6px rgb(0 0 0 / 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.va-carte:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -14px rgb(0 0 0 / 0.25); }
+.va-carte-visuel { position: relative; aspect-ratio: 640 / 420; overflow: hidden; background: linear-gradient(130deg, hsl(var(--primary) / 0.15), hsl(var(--secondary) / 0.15)); }
+.va-carte-visuel img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.va-carte-visuel.va-sans-photo img { display: none; }
+.va-carte-nuits {
+  position: absolute; right: 0.6rem; top: 0.6rem;
+  padding: 0.25rem 0.6rem; border-radius: 9999px;
+  font-size: 0.7rem; font-weight: 700; color: #fff;
+  background: rgb(0 0 0 / 0.55); backdrop-filter: blur(4px);
+}
+.va-carte-corps { display: flex; flex-direction: column; gap: 0.3rem; padding: 0.9rem 1rem 1.1rem; }
+.va-carte-nom { font-size: 1.05rem; font-weight: 800; }
+.va-carte-meta { font-size: 0.78rem; font-weight: 600; color: hsl(var(--muted-foreground)); letter-spacing: 0.03em; }
+.va-carte-budget { color: hsl(var(--primary)); }
+.va-carte-accroche { font-size: 0.875rem; line-height: 1.45; color: hsl(var(--foreground) / 0.85); }
+.va-carte-etapes { font-size: 0.78rem; color: hsl(var(--muted-foreground)); margin-top: 0.2rem; }
+
+/* Carte insolite AbracadaRoom : même gabarit, liseré qui la distingue. */
+.va-carte--insolite { position: relative; text-decoration: none; border: 1.5px solid hsl(var(--primary) / 0.45); }
+.va-carte--insolite:hover { border-color: hsl(var(--primary) / 0.7); }
+.va-carte-libelle {
+  font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;
+  color: hsl(var(--primary));
+}
+.va-carte-cta {
+  display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.5rem;
+  font-size: 0.875rem; font-weight: 700; color: hsl(var(--primary));
+}
+.va-carte-cta svg { width: 0.9rem; height: 0.9rem; transition: transform 0.2s ease; }
+.va-carte--insolite:hover .va-carte-cta svg { transform: translateX(3px); }
+
+/* Sélection des partenaires : trois cartes qui donnent envie de cliquer. */
+.va-selection { margin-top: 2.5rem; text-align: center; }
+.va-selection-pastille {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.35rem 0.9rem; border-radius: 9999px;
+  font-size: 0.75rem; font-weight: 800; letter-spacing: 0.04em;
+  background: hsl(var(--primary) / 0.1); color: hsl(var(--primary));
+  margin-bottom: 0.7rem;
+}
+.va-selection-titre { font-size: 1.55rem; font-weight: 800; line-height: 1.25; }
+.va-selection-accent {
+  background: linear-gradient(120deg, hsl(var(--primary)), hsl(265 60% 58%));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.va-selection-trait {
+  display: block; width: 5.5rem; height: 0.3rem; margin: 0.7rem auto 0.6rem;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(265 60% 58%));
+}
+.va-selection-sous { font-size: 0.92rem; color: hsl(var(--muted-foreground)); margin-bottom: 1.4rem; }
+.va-selection-liste { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; text-align: left; }
+@media (max-width: 860px) { .va-selection-liste { grid-template-columns: 1fr; max-width: 26rem; margin: 0 auto; } }
+.va-partenaire {
+  display: flex; flex-direction: column; overflow: hidden; text-decoration: none;
+  border-radius: 1.1rem; border: 1px solid hsl(var(--border) / 0.8);
+  background: hsl(var(--card));
+  box-shadow: 0 2px 10px -6px rgb(0 0 0 / 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.va-partenaire:hover {
+  transform: translateY(-4px);
+  border-color: hsl(var(--primary) / 0.45);
+  box-shadow: 0 18px 36px -16px hsl(var(--primary) / 0.35);
+}
+.va-partenaire-visuel { position: relative; aspect-ratio: 16 / 9; overflow: hidden; }
+.va-partenaire-visuel img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+.va-partenaire:hover .va-partenaire-visuel img { transform: scale(1.05); }
+.va-partenaire-badge {
+  position: absolute; left: 0.6rem; top: 0.6rem;
+  padding: 0.28rem 0.7rem; border-radius: 9999px;
+  font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(265 60% 58%));
+  color: hsl(var(--primary-foreground));
+  box-shadow: 0 2px 8px -2px rgb(0 0 0 / 0.35);
+}
+.va-partenaire-corps { display: flex; flex-direction: column; flex: 1 1 auto; gap: 0.45rem; padding: 1rem 1.1rem 1.15rem; }
+.va-partenaire-titre { font-size: 1.02rem; font-weight: 800; line-height: 1.3; color: hsl(var(--foreground)); }
+.va-partenaire-texte { font-size: 0.85rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+.va-partenaire-puces { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.1rem; }
+.va-partenaire-puce {
+  padding: 0.22rem 0.55rem; border-radius: 9999px;
+  font-size: 0.7rem; font-weight: 700;
+  background: hsl(var(--muted) / 0.7); color: hsl(var(--foreground) / 0.8);
+}
+.va-partenaire-cta {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
+  margin-top: auto; padding: 0.65rem 1rem; border-radius: 9999px;
+  font-size: 0.875rem; font-weight: 800;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.85));
+  color: hsl(var(--primary-foreground));
+  box-shadow: 0 3px 12px -3px hsl(var(--primary) / 0.5), inset 0 1px 0 hsl(0 0% 100% / 0.18);
+  transition: box-shadow 0.2s ease;
+}
+.va-partenaire:hover .va-partenaire-cta { box-shadow: 0 8px 22px -6px hsl(var(--primary) / 0.6), inset 0 1px 0 hsl(0 0% 100% / 0.25); }
+.va-partenaire-cta svg { width: 0.95rem; height: 0.95rem; transition: transform 0.2s ease; }
+.va-partenaire:hover .va-partenaire-cta svg { transform: translateX(3px); }
+
+.va-refaire { display: block; margin: 2rem auto 0; }
+
+.va-credits { margin-top: 2rem; font-size: 0.72rem; color: hsl(var(--muted-foreground)); }
+.va-credits summary { cursor: pointer; font-weight: 600; }
+.va-credits ul { columns: 2; gap: 1.5rem; margin-top: 0.6rem; padding-left: 1rem; }
+@media (max-width: 640px) { .va-credits ul { columns: 1; } }
+
+.va-mention-affiliation {
+  margin: 2.5rem auto 1.5rem; text-align: center;
+  font-size: 0.72rem; line-height: 1.5; color: hsl(var(--muted-foreground) / 0.8);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .va-analyse-globe { animation: none; }
+  .va-option, .va-carte, .va-partenaire { transition: none; }
+}
+
+/* Rangée vedette en tête du sous-menu Tests : le test des vacances. */
+.nav-megamenu-avant {
+  position: relative; display: flex; align-items: center; gap: 0.6rem;
+  margin: 0.7rem 0.7rem 0; padding: 0.65rem 0.8rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(120deg, hsl(var(--primary) / 0.12), hsl(27 90% 52% / 0.12));
+  border: 1px solid hsl(var(--primary) / 0.25);
+  font-size: 0.875rem; font-weight: 700; color: hsl(var(--foreground));
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+.nav-megamenu-avant:hover { border-color: hsl(var(--primary) / 0.5); transform: translateY(-1px); }
+.nav-megamenu-avant-emoji { font-size: 1.15rem; line-height: 1; }
+.nav-megamenu-avant-texte { flex: 1 1 auto; min-width: 0; }
+.nav-megamenu-avant-badge {
+  flex-shrink: 0; padding: 0.2rem 0.55rem; border-radius: 9999px;
+  font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(27 90% 52%));
+  color: hsl(var(--primary-foreground));
+}
+.nav-megamenu-avant--mobile { margin: 0.6rem 0.5rem 0.1rem; }

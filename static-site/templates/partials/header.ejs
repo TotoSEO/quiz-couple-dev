@@ -212,6 +212,13 @@
               </button>
               <div class="nav-megamenu nav-megamenu--tests nav-dropdown-content hidden">
                 <div class="nav-megamenu-inner">
+                  <% if (getLocalizedUrl('testVacances', lang)) { %>
+                  <a href="<%= getLocalizedUrl('testVacances', lang) %>" class="nav-megamenu-avant">
+                    <span class="nav-megamenu-avant-emoji" aria-hidden="true">🌴</span>
+                    <span class="nav-megamenu-avant-texte">Test où partir en vacances en couple ?</span>
+                    <span class="nav-megamenu-avant-badge">Nouveau</span>
+                  </a>
+                  <% } %>
                   <div class="nav-megamenu-grid">
                     <% for (const link of testLinksFiltered) { %>
                     <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item">
@@ -314,6 +321,13 @@
               <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             </button>
             <div class="mobile-accordion-content hidden">
+              <% if (getLocalizedUrl('testVacances', lang)) { %>
+              <a href="<%= getLocalizedUrl('testVacances', lang) %>" class="nav-megamenu-avant nav-megamenu-avant--mobile">
+                <span class="nav-megamenu-avant-emoji" aria-hidden="true">🌴</span>
+                <span class="nav-megamenu-avant-texte">Test où partir en vacances en couple ?</span>
+                <span class="nav-megamenu-avant-badge">Nouveau</span>
+              </a>
+              <% } %>
               <div class="mobile-nav-grid">
                 <% for (const link of testLinksFiltered) { %>
                 <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item">
