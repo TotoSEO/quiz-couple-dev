@@ -153,6 +153,35 @@
             </div>
           </div>
 
+          <!-- Tops et flops : pages en hausse et en baisse, replie par defaut -->
+          <details class="stats-details">
+            <summary>
+              <span class="stats-details-emoji" aria-hidden="true">🚀</span>
+              <span>
+                <span class="stats-details-titre">Tops et flops</span>
+                <span class="stats-details-sub">Les 5 pages qui montent et les 5 qui baissent</span>
+              </span>
+              <svg class="stats-details-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="stats-details-corps">
+              <div class="stats-comp" role="group" aria-label="Comparaison">
+                <button class="stats-comp-btn" data-comp="1">Aujourd'hui vs hier</button>
+                <button class="stats-comp-btn active" data-comp="7">7 j vs 7 j précédents</button>
+                <button class="stats-comp-btn" data-comp="30">30 j vs 30 j précédents</button>
+              </div>
+              <div class="stats-movers">
+                <div>
+                  <h3 class="stats-movers-titre">📈 En hausse</h3>
+                  <div id="admin-movers-hausse"><p class="stats-movers-vide">Chargement...</p></div>
+                </div>
+                <div>
+                  <h3 class="stats-movers-titre">📉 En baisse</h3>
+                  <div id="admin-movers-baisse"><p class="stats-movers-vide">Chargement...</p></div>
+                </div>
+              </div>
+            </div>
+          </details>
+
           <!-- Total daily evolution curve -->
           <div class="stats-panel">
             <div class="stats-panel-head">
@@ -169,18 +198,25 @@
             <canvas id="admin-stats-total-chart" class="stats-canvas" style="height:220px;"></canvas>
           </div>
 
-          <!-- Per-quiz breakdown -->
-          <div class="stats-panel">
-            <h2 class="stats-panel-title">Par quiz</h2>
-            <p class="stats-panel-sub">Cliquez sur un quiz pour voir sa courbe sur 30 jours.</p>
-            <div id="admin-stats-list" class="stats-list"></div>
-          </div>
-
-          <!-- Selected quiz curve -->
-          <div class="stats-panel">
-            <h2 class="stats-panel-title" id="admin-stats-chart-title" style="font-size:0.95rem;">Sélectionnez un quiz ci-dessus</h2>
-            <canvas id="admin-stats-chart" class="stats-canvas" style="height:180px;"></canvas>
-          </div>
+          <!-- Per-quiz breakdown + selected curve, replies par defaut -->
+          <details class="stats-details">
+            <summary>
+              <span class="stats-details-emoji" aria-hidden="true">📋</span>
+              <span>
+                <span class="stats-details-titre">Toutes les pages, test par test</span>
+                <span class="stats-details-sub">Total, parties du jour en vert, courbe au clic</span>
+              </span>
+              <svg class="stats-details-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="stats-details-corps">
+              <p class="stats-panel-sub" style="margin-bottom:0.6rem;">Cliquez sur un quiz pour voir sa courbe sur 30 jours.</p>
+              <div id="admin-stats-list" class="stats-list"></div>
+              <div class="stats-souscourbe">
+                <h3 class="stats-panel-title" id="admin-stats-chart-title" style="font-size:0.95rem;">Sélectionnez un quiz ci-dessus</h3>
+                <canvas id="admin-stats-chart" class="stats-canvas" style="height:180px;"></canvas>
+              </div>
+            </div>
+          </details>
         </div>
 
         <!-- Leads Tab -->
@@ -390,7 +426,47 @@
   .stats-row-bar{flex:1;height:0.55rem;border-radius:9999px;background:hsl(var(--muted));overflow:hidden;}
   .stats-row-bar>span{display:block;height:100%;border-radius:9999px;background:linear-gradient(90deg,hsl(var(--primary)),hsl(var(--secondary)));}
   .stats-row-val{flex:0 0 3rem;text-align:right;font-weight:700;font-variant-numeric:tabular-nums;font-size:0.9rem;}
-  @media (max-width:520px){.stats-row-name{flex-basis:7rem;}}
+  .stats-row-jour{flex:0 0 2.7rem;text-align:right;font-size:0.78rem;font-weight:700;font-variant-numeric:tabular-nums;color:hsl(150 62% 38%);}
+  .dark .stats-row-jour{color:hsl(150 55% 55%);}
+  .stats-row-jour.est-zero{color:hsl(var(--muted-foreground)/0.45);font-weight:500;}
+  @media (max-width:520px){.stats-row-name{flex-basis:6.5rem;}.stats-row-jour{flex-basis:2.2rem;}}
+
+  /* ── Sections repliables (sommaire) ── */
+  .stats-details{background:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem;margin-bottom:1.5rem;box-shadow:0 4px 16px -10px hsl(var(--primary)/0.15);}
+  .stats-details summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:0.85rem;padding:1.05rem 1.4rem;border-radius:1rem;transition:background .15s;}
+  .stats-details summary::-webkit-details-marker{display:none;}
+  .stats-details summary:hover{background:hsl(var(--muted)/0.5);}
+  .stats-details-emoji{font-size:1.25rem;flex-shrink:0;}
+  .stats-details-titre{display:block;font-family:'Poppins','Inter',sans-serif;font-size:1.05rem;font-weight:700;}
+  .stats-details-sub{display:block;font-size:0.78rem;color:hsl(var(--muted-foreground));margin-top:0.1rem;}
+  .stats-details-chevron{width:1.15rem;height:1.15rem;margin-left:auto;flex-shrink:0;color:hsl(var(--muted-foreground));transition:transform .2s;}
+  .stats-details[open] .stats-details-chevron{transform:rotate(180deg);}
+  .stats-details-corps{padding:0.25rem 1.4rem 1.35rem;}
+  @media (max-width:520px){.stats-details summary{padding:0.95rem 1rem;}.stats-details-corps{padding:0.25rem 1rem 1.1rem;}}
+
+  /* ── Tops et flops ── */
+  .stats-comp{display:inline-flex;border:1px solid hsl(var(--border));border-radius:999px;overflow:hidden;max-width:100%;}
+  .stats-comp-btn{padding:0.35rem 0.8rem;font-size:0.78rem;font-weight:600;background:transparent;border:none;cursor:pointer;color:hsl(var(--muted-foreground));transition:background .15s,color .15s;white-space:nowrap;}
+  .stats-comp-btn.active{background:hsl(var(--primary));color:#fff;}
+  @media (max-width:560px){
+    div:has(> .stats-comp){max-width:100%;overflow-x:auto;scrollbar-width:none;}
+    .stats-comp{flex-shrink:0;}
+  }
+  .stats-movers{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.1rem;}
+  @media (max-width:700px){.stats-movers{grid-template-columns:1fr;}}
+  .stats-movers-titre{font-size:0.85rem;font-weight:700;margin-bottom:0.5rem;}
+  .stats-movers-vide{font-size:0.82rem;color:hsl(var(--muted-foreground));padding:0.4rem 0;}
+  .stats-mover{display:flex;align-items:center;gap:0.6rem;padding:0.42rem 0.4rem;border-radius:0.5rem;}
+  .stats-mover:nth-child(odd){background:hsl(var(--muted)/0.35);}
+  .stats-mover-nom{flex:1;font-size:0.82rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;}
+  .stats-mover-vals{font-size:0.76rem;color:hsl(var(--muted-foreground));font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .stats-mover-delta{font-size:0.76rem;font-weight:700;padding:0.14rem 0.5rem;border-radius:999px;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .stats-mover-delta.est-plus{background:hsl(150 62% 40%/0.13);color:hsl(150 62% 32%);}
+  .dark .stats-mover-delta.est-plus{color:hsl(150 55% 60%);}
+  .stats-mover-delta.est-moins{background:hsl(0 72% 52%/0.12);color:hsl(0 72% 42%);}
+  .dark .stats-mover-delta.est-moins{color:hsl(0 80% 68%);}
+
+  .stats-souscourbe{margin-top:1.1rem;padding-top:1rem;border-top:1px solid hsl(var(--border));}
 
   /* Les groupes de boutons segmentés (onglets, filtres avis, filtres messages)
      sont des .flex qui ne rétrécissent pas : sur téléphone ils dépassaient de
