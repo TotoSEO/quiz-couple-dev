@@ -8195,3 +8195,47 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   color: hsl(var(--primary-foreground));
 }
 .nav-megamenu-avant--mobile { margin: 0.6rem 0.5rem 0.1rem; }
+
+/* ── Test des 5 langages de l'amour : définition et statistiques ────────
+   La définition courte répond au H2 en quarante mots, dans un encadré qui
+   se distingue du corps de texte : c'est le format que les moteurs
+   reprennent en encadré de réponse, et le lecteur pressé s'arrête dessus. */
+.la-definition {
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid hsl(var(--primary) / 0.28);
+  background: linear-gradient(120deg, hsl(var(--primary) / 0.08), hsl(var(--secondary) / 0.06));
+}
+.la-definition-titre {
+  margin: 0 0 0.4rem;
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  color: hsl(var(--primary));
+}
+.la-definition-texte { margin: 0; font-size: 1.05rem; line-height: 1.7; color: hsl(var(--foreground)); }
+
+/* Répartition réelle des cinq langages : une barre par langage, celle qui
+   arrive en tête légèrement mise en avant. */
+.la-stats[hidden] { display: none; }
+.la-stats-intro { margin: 0 0 1.1rem; line-height: 1.7; }
+.la-stats-liste { display: flex; flex-direction: column; gap: 0.85rem; }
+.la-stat-tete {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+.la-stat-nom { font-size: 0.92rem; font-weight: 600; }
+.la-stat-pct { font-size: 0.95rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.la-stat-piste {
+  height: 0.7rem; border-radius: 9999px;
+  background: hsl(var(--muted)); overflow: hidden;
+}
+.la-stat-piste > span {
+  display: block; height: 100%; border-radius: 9999px;
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.la-stat.est-premier .la-stat-nom,
+.la-stat.est-premier .la-stat-pct { color: hsl(var(--primary)); }
+.la-stats-note {
+  margin: 1.1rem 0 0; font-size: 0.85rem; line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+}

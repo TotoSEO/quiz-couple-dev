@@ -106,5 +106,58 @@
     "faq3A": "C'est très fréquent et parfaitement normal. La clé est d'apprendre à « parler » le langage de l'autre, même s'il ne vient pas naturellement. Communiquez ouvertement sur vos besoins respectifs et faites de petits efforts quotidiens pour exprimer votre amour dans le langage que votre partenaire comprend le mieux.",
     "faq4Q": "Les langages de l'amour peuvent-ils changer avec le temps ?",
     "faq4A": "Oui, les langages peuvent évoluer au fil des années, notamment en fonction des étapes de la vie (parentalité, déménagement, changement professionnel) et de la maturité émotionnelle. C'est pourquoi il est recommandé de refaire ce test régulièrement pour ajuster votre compréhension mutuelle."
+  },
+  "definition": {
+    "titre": "La réponse en bref",
+    "texte": "Les 5 langages de l'amour sont les cinq façons dont on exprime et reçoit l'affection : les paroles valorisantes, les services rendus, les cadeaux, les moments de qualité et le toucher physique. Chacun a un langage dominant, et deux partenaires ont rarement le même, ce qui explique beaucoup de malentendus."
+  },
+  "tableau": {
+    "titre": "Les 5 langages en un coup d'œil",
+    "entete": [
+      "Langage",
+      "Ce qui remplit le réservoir",
+      "Ce qui le vide"
+    ],
+    "lignes": [
+      [
+        "💬 Paroles valorisantes",
+        "Un compliment sincère, un merci, un mot laissé sur la table",
+        "Les critiques, même dites en passant"
+      ],
+      [
+        "🤝 Services rendus",
+        "Une tâche prise en charge sans qu'on ait à la demander",
+        "Les promesses non tenues, la charge mentale à sens unique"
+      ],
+      [
+        "🎁 Cadeaux",
+        "Une attention choisie qui prouve qu'on a pensé à l'autre",
+        "Les dates oubliées, les cadeaux achetés à la va-vite"
+      ],
+      [
+        "⏳ Moments de qualité",
+        "Du temps ensemble sans écran, avec une vraie attention",
+        "Les rendez-vous annulés, le téléphone au milieu du repas"
+      ],
+      [
+        "🤗 Toucher physique",
+        "Une main dans le dos, un câlin, la proximité au quotidien",
+        "Les longues périodes sans contact, l'affection réservée au lit"
+      ]
+    ],
+    "note": "Aucun langage ne vaut mieux qu'un autre : ce qui compte, c'est de parler celui de l'autre plutôt que le sien."
+  },
+  "stats": {
+    "titre": "La répartition réelle, chez les gens qui passent ce test",
+    "intro": "Sur {n} résultats enregistrés ici, le langage qui arrive en tête est {premier}, avec {pct} des profils. Voici la répartition complète, recalculée à chaque test passé.",
+    "note": "Chiffres issus des résultats de cette page, un par personne. Ils ne prétendent pas décrire la population française : ils décrivent celles et ceux qui font ce test.",
+    "attente": "La répartition s'affichera ici dès que le test aura été passé assez de fois pour que les pourcentages veuillent dire quelque chose.",
+    "labels": {
+      "words": "Paroles valorisantes",
+      "acts": "Services rendus",
+      "gifts": "Cadeaux",
+      "time": "Moments de qualité",
+      "touch": "Toucher physique"
+    }
   }
 }

@@ -106,5 +106,58 @@
     "faq3A": "È molto comune e perfettamente normale. La chiave sta nell'imparare a 'parlare' il linguaggio dell'altro, anche se non viene naturale. Comunicate apertamente sui vostri rispettivi bisogni e fate piccoli sforzi quotidiani per esprimere il vostro amore nel linguaggio che il partner comprende meglio.",
     "faq4Q": "I linguaggi dell'amore possono cambiare nel tempo?",
     "faq4A": "Sì, i linguaggi dell'amore possono evolversi nel corso degli anni, in particolare con i grandi cambiamenti di vita (genitorialità, trasloco, cambiamenti di carriera) e la crescita emotiva. Per questo è consigliabile rifare questo test di tanto in tanto, per mantenere aggiornata la comprensione reciproca."
+  },
+  "definition": {
+    "titre": "La risposta in breve",
+    "texte": "I 5 linguaggi dell'amore sono i cinque modi di esprimere e ricevere affetto: le parole di conferma, i gesti di servizio, i regali, il tempo di qualità e il contatto fisico. Ognuno ha un linguaggio dominante, e due partner raramente hanno lo stesso, il che spiega molti malintesi."
+  },
+  "tableau": {
+    "titre": "I 5 linguaggi in un colpo d'occhio",
+    "entete": [
+      "Linguaggio",
+      "Cosa riempie il serbatoio",
+      "Cosa lo svuota"
+    ],
+    "lignes": [
+      [
+        "💬 Parole di conferma",
+        "Un complimento sincero, un grazie, un biglietto sul tavolo",
+        "Le critiche, anche dette di sfuggita"
+      ],
+      [
+        "🤝 Gesti di servizio",
+        "Una faccenda risolta senza doverla chiedere",
+        "Le promesse non mantenute, il carico mentale a senso unico"
+      ],
+      [
+        "🎁 Regali",
+        "Un pensiero scelto che dimostra che hai pensato all'altro",
+        "Le date dimenticate, i regali presi di corsa"
+      ],
+      [
+        "⏳ Tempo di qualità",
+        "Tempo insieme senza schermi, con attenzione vera",
+        "Gli appuntamenti annullati, il telefono a metà cena"
+      ],
+      [
+        "🤗 Contatto fisico",
+        "Una mano sulla schiena, un abbraccio, la vicinanza quotidiana",
+        "Lunghi periodi senza contatto, l'affetto riservato al letto"
+      ]
+    ],
+    "note": "Nessun linguaggio vale più di un altro: quello che conta è parlare quello dell'altro invece del proprio."
+  },
+  "stats": {
+    "titre": "La ripartizione reale tra chi fa questo test",
+    "intro": "Su {n} risultati registrati qui, il linguaggio in testa è {premier}, con {pct} dei profili. Ecco la ripartizione completa, ricalcolata a ogni test svolto.",
+    "note": "Cifre raccolte su questa pagina, una per persona. Non pretendono di descrivere la popolazione generale: descrivono chi fa questo test.",
+    "attente": "La ripartizione comparirà qui non appena il test sarà stato svolto abbastanza volte perché le percentuali abbiano un senso.",
+    "labels": {
+      "words": "Parole di conferma",
+      "acts": "Gesti di servizio",
+      "gifts": "Regali",
+      "time": "Tempo di qualità",
+      "touch": "Contatto fisico"
+    }
   }
 }
