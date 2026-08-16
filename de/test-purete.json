@@ -234,7 +234,8 @@
     "jauge_sans_couple": "Je weiter rechts der Zeiger, desto weniger rein seid ihr.",
     "jauge_compare_solo": "Von <strong>{n}</strong> Tests bist du weniger rein als <strong>{devant}%</strong> der Leute.",
     "jauge_compare_couple": "Von <strong>{n}</strong> Tests seid ihr weniger rein als <strong>{devant}%</strong> der Leute.",
-    "partage_copie_msg": "Nachricht kopiert, fügt sie ein wo ihr wollt"
+    "partage_copie_msg": "Nachricht kopiert, fügt sie ein wo ihr wollt",
+    "hero_jauge_moyenne": "Durchschnitt"
   },
   "meta": {
     "titre": "Reinheitstest für Paare | Online & kostenlos",

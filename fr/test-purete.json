@@ -238,6 +238,7 @@
     "jauge_sans_couple": "Plus le curseur est à droite, moins vous êtes purs.",
     "jauge_compare_solo": "Sur <strong>{n}</strong> tests, tu fais moins pur que <strong>{devant}%</strong> des gens.",
     "jauge_compare_couple": "Sur <strong>{n}</strong> tests, vous faites moins purs que <strong>{devant}%</strong> des gens.",
-    "partage_copie_msg": "Message copié, collez-le où vous voulez"
+    "partage_copie_msg": "Message copié, collez-le où vous voulez",
+    "hero_jauge_moyenne": "Score moyen"
   }
 }

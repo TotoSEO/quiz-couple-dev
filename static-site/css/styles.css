@@ -988,15 +988,20 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
    dans le gabarit : tout ce qui suit (onglet, panneau, puce, accordéon) se
    teinte tout seul, sans dupliquer une règle par catégorie.
    Au défilement (classe est-collee posée par mobile-menu.js) :
-     - bureau : le niveau 1 se replie, un petit logo apparaît dans le niveau 2 ;
-     - mobile : la rangée de puces se replie, le logo centré glisse à gauche.
+     - bureau : l'en-tête glisse vers le haut de la hauteur du niveau 1, qui
+       sort de l'écran ; un petit logo apparaît dans le niveau 2 ;
+     - mobile : le logo, toujours à gauche, rétrécit légèrement.
+   Le glissement se fait par transform et jamais par la hauteur : un sticky
+   dont la hauteur s'anime déplace toute la page pendant la transition, et
+   l'ancrage de défilement du navigateur se bat alors avec l'utilisateur,
+   d'où des saccades autour du seuil.
    L'en-tête doit rester sticky : un « position: relative » posé ici par le
    passé annulait le sticky du gabarit par spécificité d'identifiant. */
 #site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 #site-header::after {
   content: '';
@@ -1150,12 +1155,11 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 @media (min-width: 1024px) {
 
-  /* Mode collé : le niveau 1 se replie, le petit logo prend le relais. */
-  .entete-n1 {
-    max-height: 3.25rem;
-    transition: max-height 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
-  }
-  .est-collee .entete-n1 { max-height: 0; opacity: 0; overflow: hidden; pointer-events: none; }
+  /* Mode collé : tout l'en-tête glisse d'un niveau vers le haut, le niveau 1
+     sort de l'écran sans qu'aucune hauteur ne change dans la page, et le
+     petit logo prend le relais dans le niveau 2. */
+  #site-header.est-collee { transform: translateY(-3.25rem); }
+  .est-collee .entete-n1 { opacity: 0; pointer-events: none; transition: opacity 0.25s ease; }
 
   .entete-logo-mini {
     display: inline-flex; align-items: center; flex-shrink: 0;
@@ -1167,19 +1171,14 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .est-collee .entete-logo-mini { width: 2.1rem; margin-right: 0.45rem; opacity: 1; transform: none; }
 }
 
-/* ── Niveau 1 mobile : logo centré, puis à gauche une fois collé ───────── */
+/* ── Niveau 1 mobile : le logo vit à gauche, collé ou pas ──────────────── */
 
 @media (max-width: 1023.98px) {
   .entete-n1-inner { position: relative; height: 3.75rem; }
-  .est-collee .entete-n1-inner { height: 3.25rem; }
   .entete-logo {
-    position: absolute; left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
     /* Une petite marge interne agrandit la zone de toucher sans bouger le dessin. */
     padding: 0.25rem;
-    transition: left 0.35s cubic-bezier(0.22, 1, 0.36, 1), transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   }
-  .est-collee .entete-logo { left: 0; transform: translate(0, -50%); }
   .entete-logo img { height: 2.75rem; transition: height 0.3s ease; }
   .est-collee .entete-logo img { height: 2.4rem; }
   .entete-actions { margin-left: auto; }

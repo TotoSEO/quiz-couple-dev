@@ -5,16 +5,17 @@
   var entete = document.getElementById('site-header');
 
   // ── État collé ──────────────────────────────────────────
-  // La classe est-collee replie le niveau qui sert le moins : le niveau 1 sur
-  // bureau, la rangée de puces sur mobile. L'hystérésis (48 px pour coller,
-  // 12 px pour décoller) évite que la barre batte des ailes autour du seuil
-  // pendant que sa propre hauteur change.
+  // Sur bureau, est-collee fait glisser l'en-tête d'un niveau vers le haut
+  // (par transform, jamais par la hauteur : voir styles.css). L'hystérésis
+  // évite le battement autour du seuil, et le décollage se fait avant 56 px :
+  // en dessous, la bande translatée (52 px) laisserait entrevoir un vide
+  // entre l'en-tête et le début de la page en remontant.
   if (entete) {
     var collee = false;
     var poserEtat = function() {
       var y = window.scrollY || document.documentElement.scrollTop || 0;
-      if (!collee && y > 48) { collee = true; entete.classList.add('est-collee'); }
-      else if (collee && y < 12) { collee = false; entete.classList.remove('est-collee'); }
+      if (!collee && y > 96) { collee = true; entete.classList.add('est-collee'); }
+      else if (collee && y < 56) { collee = false; entete.classList.remove('est-collee'); }
     };
     window.addEventListener('scroll', poserEtat, { passive: true });
     poserEtat();
