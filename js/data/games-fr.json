@@ -553,7 +553,9 @@
     "voix1": "voix",
     "bravoTitre": "Bravo, et merci !",
     "bravoTexte": "Vous avez répondu à tous les dilemmes. Vos votes comptent maintenant dans les pourcentages que verront les prochains couples.",
-    "bravoSuite": "Essayez le tu préfères"
+    "bravoSuite": "Essayez le tu préfères",
+    "inviteAvisTitre": "Déjà 15 dilemmes tranchés à deux 👏",
+    "inviteAvisTexte": "Vous vous amusez ? Dites-le en une seconde, ça nous aide énormément."
   },
   "couche": {
     "introQuestion": "Vous vous posez la question :",

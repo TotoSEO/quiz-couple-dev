@@ -551,7 +551,9 @@
     "palier4Texte": "Finché c'è qualcosa da guadagnare, firmate. È una bella energia in due, ma ogni tanto leggete anche le righe piccole.",
     "bravoTitre": "Bravi, e grazie!",
     "bravoTexte": "Avete risposto a tutti i dilemmi. I vostri voti contano ora nelle percentuali che vedranno le prossime coppie.",
-    "bravoSuite": "Provate il preferiresti"
+    "bravoSuite": "Provate il preferiresti",
+    "inviteAvisTitre": "Già 15 dilemmi risolti insieme 👏",
+    "inviteAvisTexte": "Vi state divertendo? Ditelo in un secondo, ci aiuta tantissimo."
   },
   "couche": {
     "introQuestion": "Ti stai chiedendo:",
