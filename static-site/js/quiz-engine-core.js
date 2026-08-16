@@ -451,29 +451,27 @@ var QuizEngine = (function() {
     return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   }
 
+  // On ne déplace la page que si la cible est entièrement hors de l'écran.
+  //
+  // Avant, chaque réponse, chaque vote, chaque changement d'écran recollait le
+  // haut du moteur en haut de la fenêtre. Le moteur était pourtant déjà sous
+  // les yeux : la page sautait sans raison, à chaque clic, pendant toute la
+  // partie. C'est désagréable au point de faire quitter la page, et sur les
+  // jeux au moteur haut placé le bandeau venait mordre sur le texte au-dessus.
+  //
+  // La règle est donc simple : si on voit déjà ne serait-ce qu'un bout de la
+  // cible, on ne touche à rien, l'écran reste strictement immobile. Le
+  // défilement ne subsiste que comme filet de sécurité, quand ce qui vient
+  // d'apparaître se trouve complètement en dehors du champ de vision.
   function smoothScroll(node, block) {
     if (!node) return;
-    try { node.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: block || 'center' }); }
-    catch (e) { try { node.scrollIntoView(); } catch (_) {} }
-  }
-
-  // Stabilise la position d'une question a l'autre : on ramene le haut du quiz
-  // juste sous l'en-tete fixe UNIQUEMENT s'il est passe trop haut (l'utilisateur
-  // a scrolle pour cliquer une reponse basse). On ne "grab" jamais vers le bas :
-  // une question plus longue ou plus courte ne fait donc pas sauter l'ecran.
-  function anchorQuizTop() {
-    if (typeof window === 'undefined' || typeof requestAnimationFrame === 'undefined') return;
-    requestAnimationFrame(function () {
-      var host = document.getElementById('quiz-engine');
-      if (!host) return;
-      var header = document.getElementById('site-header');
-      var offset = (header ? header.offsetHeight : 0) + 16;
-      var top = host.getBoundingClientRect().top;
-      if (top < offset - 2) {
-        var y = window.pageYOffset + top - offset;
-        window.scrollTo(0, y < 0 ? 0 : y);
-      }
-    });
+    try {
+      var r = node.getBoundingClientRect();
+      var h = window.innerHeight || document.documentElement.clientHeight;
+      var visible = r.bottom > 0 && r.top < h;
+      if (visible) return;
+      node.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: block || 'center' });
+    } catch (e) { try { node.scrollIntoView(); } catch (_) {} }
   }
 
   // Tween a percentage value 0→target inside an element (count-up effect)
@@ -720,7 +718,6 @@ var QuizEngine = (function() {
     progressWrap.appendChild(header);
     progressWrap.appendChild(barOuter);
     wrap.appendChild(progressWrap);
-    anchorQuizTop();
     return progressWrap;
   }
 
@@ -6378,6 +6375,8 @@ var QuizEngine = (function() {
   // ═══════════════════════════════════════════════════════════
   var DIL_OK = 'ok', DIL_NON = 'pasok';
   var DIL_CLE_VOTES = 'dilemmes-votes';     // ce que ce navigateur a deja vote
+  var DIL_CLE_AVIS = 'dilemmes-avis-propose'; // l'invitation a laisser un avis
+  var DIL_VOTES_AVANT_AVIS = 15;            // votes d'affilee avant de la poser
 
   function DilemmeGame(config) {
     this.container = config.container;
@@ -6679,7 +6678,33 @@ var QuizEngine = (function() {
     }
     wrap.appendChild(suite);
 
+    var invite = this.inviteAvis();
+    if (invite) wrap.appendChild(invite);
+
     this.container.appendChild(wrap);
+  };
+
+  // Cent dilemmes, c'est long, et presque personne ne va au bout : l'ecran de
+  // fin etait donc la seule occasion de demander un avis, et il n'arrivait
+  // jamais. On la propose une fois arrive au quinzieme vote de la partie, quand
+  // le couple a joue assez pour avoir un avis, et une seule fois par
+  // navigateur : reposer la question tous les quinze dilemmes serait du
+  // harcelement, pas une invitation.
+  DilemmeGame.prototype.inviteAvis = function () {
+    if (this.historique.length !== DIL_VOTES_AVANT_AVIS) return null;
+    try {
+      if (localStorage.getItem(DIL_CLE_AVIS)) return null;
+      localStorage.setItem(DIL_CLE_AVIS, '1');
+    } catch (e) { /* navigation privee : on montre l'invitation quand meme */ }
+    // Le bloc n'affiche que son titre et son texte : la rangee d'etoiles y est
+    // greffee par quiz-extras, qui sait deja pre-remplir le formulaire d'avis
+    // de la page et y faire descendre.
+    var boite = el('div', 'qr-invite dil-invite');
+    boite.appendChild(el('p', 'dil-invite-titre',
+      esc(this.tg('inviteAvisTitre', 'Déjà 15 dilemmes tranchés à deux 👏'))));
+    boite.appendChild(el('p', 'dil-invite-texte',
+      esc(this.tg('inviteAvisTexte', 'Vous vous amusez ? Dites-le en une seconde, ça nous aide énormément.'))));
+    return boite;
   };
 
   DilemmeGame.prototype.suivant = function () {

@@ -365,12 +365,19 @@
       box.appendChild(row);
       card.appendChild(box);
     }
-    var existing = document.querySelector('.quiz-result-card');
-    if (existing) inject(existing);
-    var obs = new MutationObserver(function () {
-      var card = document.querySelector('.quiz-result-card');
-      if (card && !card.querySelector('.qr-rate')) inject(card);
-    });
+    // Deux cibles : l'ecran de resultat de fin de partie, et les invitations
+    // qu'un moteur peut poser en cours de route (.qr-invite). Les jeux tres
+    // longs n'ont sinon qu'une seule occasion de demander un avis, celle que
+    // presque personne n'atteint : la toute derniere carte.
+    var SELECTEUR = '.quiz-result-card, .qr-invite';
+    function injecteTout() {
+      var cibles = document.querySelectorAll(SELECTEUR);
+      for (var i = 0; i < cibles.length; i++) {
+        if (!cibles[i].querySelector('.qr-rate')) inject(cibles[i]);
+      }
+    }
+    injecteTout();
+    var obs = new MutationObserver(injecteTout);
     obs.observe(document.body, { childList: true, subtree: true });
   }
 
