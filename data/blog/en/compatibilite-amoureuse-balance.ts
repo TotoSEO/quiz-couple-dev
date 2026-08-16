@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'libra-love-compatibility',
   title: `Libra love compatibility: the signs that help them find their anchor`,
   metaTitle: `Libra love compatibility: who helps them choose?`,
-  metaDescription: `Libra craves harmony in love, sometimes to the point of never deciding. Discover which signs finally make them want to commit, and which ones complicate everything.`,
+  metaDescription: `Libra craves harmony in love, sometimes to the point of never deciding. Discover which signs finally make them want to commit, and which ones complicate…`,
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Libra astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',

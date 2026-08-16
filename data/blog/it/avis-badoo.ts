@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'recensione-badoo',
   title: `La nostra opinione sull'app di incontri Badoo`,
   metaTitle: `Recensione Badoo 2026: cosa ne pensiamo davvero dopo mesi di test`,
-  metaDescription: `Il team QuizCouple ha testato Badoo per diversi mesi. Risultati, esperienza lato uomo e lato donna, prezzi, profili falsi: la nostra recensione completa e senza filtri.`,
+  metaDescription: `Il team QuizCouple ha testato Badoo per diversi mesi. Risultati, esperienza lato uomo e lato donna, prezzi, profili falsi: la nostra recensione completa…`,
   featuredImage: '/blog/avis-badoo.webp',
   featuredImageAlt: `La nostra opinione sull'app di incontri Badoo nel 2026`,
   publishedAt: '2026-02-28',

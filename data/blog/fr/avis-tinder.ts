@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'avis-tinder',
   title: `Que vaut Tinder en 2026 ? Notre avis et test complet`,
   metaTitle: `Avis Tinder 2026 : notre verdict honnête après des années de swipe`,
-  metaDescription: `Tinder vaut-il encore le coup en 2026 ? Notre avis honnête sur les fonctionnalités, les prix, les faux profils et les alternatives. On ne mâche pas nos mots.`,
+  metaDescription: `Tinder vaut-il encore le coup en 2026 ? Notre avis honnête sur les fonctionnalités, les prix, les faux profils et les alternatives.`,
   featuredImage: '/blog/avis-tinder.webp',
   featuredImageAlt: `L'avis de QuizCouple sur tinder en 2026`,
   publishedAt: '2026-02-24',
@@ -270,9 +270,9 @@ const article: BlogArticleData = {
       title: `Tinder vs la concurrence en 2026`,
       content: `<p>Difficile de parler de Tinder sans évoquer ce qui existe à côté. <strong>Le marché a beaucoup évolué</strong> et la concurrence n'est plus anecdotique.</p>
 
-<p><strong>Hinge</strong> se positionne comme l'alternative sérieuse, avec des profils plus détaillés, des "prompts" pour amorcer les conversations, et un algorithme qui prend en compte tes retours post-date. C'est mieux conçu pour ceux qui cherchent une relation. Et c'est (encore) gratuit dans sa version de base avec des fonctionnalités honnêtes.</p>
+<p><strong><a href="/blog/avis-hinge-rencontre/">Hinge</a></strong> se positionne comme l'alternative sérieuse, avec des profils plus détaillés, des "prompts" pour amorcer les conversations, et un algorithme qui prend en compte tes retours post-date. C'est mieux conçu pour ceux qui cherchent une relation. Et c'est (encore) gratuit dans sa version de base avec des fonctionnalités honnêtes.</p>
 
-<p><strong>Bumble</strong> impose aux femmes d'envoyer le premier message, concept original qui a réduit le harcèlement côté féminin. Moins de volume que Tinder, mais une ambiance souvent plus respectueuse.</p>
+<p><strong><a href="/blog/avis-bumble/">Bumble</a></strong> impose aux femmes d'envoyer le premier message, concept original qui a réduit le harcèlement côté féminin. Moins de volume que Tinder, mais une ambiance souvent plus respectueuse.</p>
 
 <p><strong>Happn</strong> mise sur la géolocalisation et les "croisements" dans la vraie vie. Utile en ville, gadget en dehors.</p>
 

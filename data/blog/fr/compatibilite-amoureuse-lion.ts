@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-lion',
   title: `Compatibilité amoureuse du Lion : les signes à la hauteur de son feu`,
   metaTitle: `Compatibilité amoureuse Lion : qui mérite sa loyauté royale ?`,
-  metaDescription: `Le Lion aime avec panache et attend qu'on lui rende. Mais tous les signes ne jouent pas ce jeu-là. Découvrez quelles unions l'épanouissent vraiment, et lesquelles l'éteignent.`,
+  metaDescription: `Le Lion aime avec panache et attend qu'on le lui rende. Quelles unions l'épanouissent vraiment, et lesquelles finissent par l'éteindre ?`,
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Symbole astrologique du Lion, compatibilité amoureuse`,
   publishedAt: '2026-03-03',

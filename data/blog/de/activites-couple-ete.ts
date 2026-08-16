@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'paar-aktivitaeten-im-sommer',
   title: "10 Aktivitäten für Paare in diesem Sommer",
   metaTitle: "Paar Aktivitäten im Sommer: 10 einfache und günstige Ideen",
-  metaDescription: "Zehn Sommer-Aktivitäten für Paare, die mit den üblichen Ausflügen brechen: Markt ohne Liste, Baden im Fluss, Nacht draußen, analoge Fotos... einfach und günstig.",
+  metaDescription: "Zehn Sommer-Aktivitäten für Paare, die mit den üblichen Ausflügen brechen: Markt ohne Liste, Baden im Fluss, Nacht draußen, analoge Fotos...",
   featuredImage: '/blog/activites-couple-ete.webp',
   featuredImageAlt: "Sommerpicknick bei Sonnenuntergang mit zwei Limonaden, einem Weidenkorb und einem Fahrrad an einem Baum",
   publishedAt: '2026-07-29',

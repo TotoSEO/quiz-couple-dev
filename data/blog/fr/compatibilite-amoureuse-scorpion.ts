@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-scorpion',
   title: `Compatibilité amoureuse du Scorpion : l'amour sans demi-mesures`,
   metaTitle: `Compatibilité amoureuse Scorpion : qui survit à son intensité ?`,
-  metaDescription: `Le Scorpion aime sans demi-mesure, et il attend la même chose. Quels signes peuvent soutenir cette intensité ? Notre analyse complète, signe par signe, sans esquiver.`,
+  metaDescription: `Le Scorpion aime sans demi-mesure, et il attend la même chose. Quels signes peuvent soutenir cette intensité ? Analyse complète, signe par signe.`,
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Symbole astrologique du Scorpion, compatibilité amoureuse`,
   publishedAt: '2026-03-03',

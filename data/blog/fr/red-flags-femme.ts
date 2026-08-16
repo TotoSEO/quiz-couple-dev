@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'red-flags-femme',
   title: "Red flags chez une femme : ce que tu ressens a probablement un nom",
   metaTitle: "Les Red flags chez une Femme : la liste complète",
-  metaDescription: "Quelque chose cloche dans ta relation mais tu n'arrives pas à mettre le doigt dessus ? Red flags émotionnels, comportementaux, relationnels chez une femme, la liste complète.",
+  metaDescription: "Quelque chose cloche mais tu n'arrives pas à le nommer ? Red flags émotionnels, comportementaux et relationnels chez une femme : la liste complète.",
   featuredImage: '',
   featuredImageAlt: "Red flags chez une femme, liste complète des signaux d'alarme en couple",
   publishedAt: '2026-03-07',

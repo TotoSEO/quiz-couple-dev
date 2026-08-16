@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'red-flags-bei-einem-mann',
   title: "Red Flags bei einem Mann: Was dein Instinkt dir sagen will",
   metaTitle: "Red Flags bei einem Mann: Die vollständige Liste",
-  metaDescription: "Irgendetwas stimmt nicht, aber du kannst es nicht benennen? Emotionale, verhaltensbezogene und beziehungstechnische Red Flags, die vollständige Liste für mehr Klarheit.",
+  metaDescription: "Irgendetwas stimmt nicht, aber du kannst es nicht benennen? Emotionale, verhaltensbezogene und beziehungstechnische Red Flags, die vollständige Liste…",
   featuredImage: '',
   featuredImageAlt: "Red Flags bei einem Mann, vollständige Liste der Warnsignale in einer Beziehung",
   publishedAt: '2026-03-05',

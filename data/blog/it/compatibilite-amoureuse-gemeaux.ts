@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-gemelli',
   title: `Compatibilità amorosa dei Gemelli: l'amore come conversazione infinita`,
   metaTitle: `Compatibilità amorosa Gemelli: chi riesce a non annoiarli?`,
-  metaDescription: `I Gemelli hanno bisogno di un partner che li stimoli mentalmente prima ancora che emotivamente. Scopri quali segni riescono a tenere vivo il dialogo, e quali li fanno fuggire.`,
+  metaDescription: `I Gemelli hanno bisogno di un partner che li stimoli mentalmente prima ancora che emotivamente. Scopri quali segni riescono a tenere vivo il dialogo…`,
   featuredImage: '/blog/compatibilite-amoureuse-gemeaux.svg',
   featuredImageAlt: `Simbolo astrologico dei Gemelli, compatibilità amorosa`,
   publishedAt: '2026-03-03',

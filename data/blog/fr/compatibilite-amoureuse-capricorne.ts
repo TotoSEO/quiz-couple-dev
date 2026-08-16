@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-capricorne',
   title: `Compatibilité amoureuse du Capricorne : l'amour comme un engagement`,
   metaTitle: `Compatibilité amoureuse Capricorne : qui mérite sa loyauté ?`,
-  metaDescription: `Le Capricorne ne s'engage pas à la légère, et quand il le fait, c'est pour construire. Quels signes partagent cette vision ? Notre analyse complète, signe par signe.`,
+  metaDescription: `Le Capricorne ne s'engage pas à la légère, et quand il le fait, c'est pour construire. Quels signes partagent cette vision ? Analyse signe par signe.`,
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Symbole astrologique du Capricorne, compatibilité amoureuse`,
   publishedAt: '2026-03-03',

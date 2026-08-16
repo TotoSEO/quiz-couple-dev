@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-leone',
   title: `Compatibilità amorosa del Leone: amare sotto i riflettori`,
   metaTitle: `Compatibilità amorosa Leone: chi brilla al suo fianco?`,
-  metaDescription: `Il Leone ama in grande, con gesti, con passione, con orgoglio. Ma ha bisogno di un partner che non si lasci eclissare. Ecco chi riesce a stargli accanto senza perdersi.`,
+  metaDescription: `Il Leone ama in grande, con gesti, con passione, con orgoglio. Ma ha bisogno di un partner che non si lasci eclissare.`,
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Simbolo astrologico del Leone, compatibilità amorosa`,
   publishedAt: '2026-03-03',

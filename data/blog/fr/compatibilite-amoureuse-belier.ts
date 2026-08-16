@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-belier',
   title: `Compatibilité amoureuse du Bélier : les signes qui l'enflamment (et ceux qui l'éteignent)`,
   metaTitle: `Compatibilité amoureuse Bélier : qui lui résiste vraiment ?`,
-  metaDescription: `Le Bélier tombe vite amoureux, s'emballe encore plus vite, et déchante parfois. Découvrez quels signes peuvent vraiment tenir le rythme avec lui, et lesquels feront long feu.`,
+  metaDescription: `Le Bélier tombe vite amoureux et s'emballe encore plus vite. Quels signes tiennent vraiment le rythme avec lui, et lesquels feront long feu ?`,
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Symbole astrologique du Bélier, compatibilité amoureuse`,
   publishedAt: '2026-03-03',

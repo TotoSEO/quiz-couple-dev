@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'couples-arguing-on-holiday',
   title: `One couple in three argues on the drive to their holiday, and it started before they left`,
   metaTitle: `Couples arguing on holiday: the numbers and the real causes`,
-  metaDescription: `28% of couples find the journey to their holiday tense and 47% of women have already argued about organising it. The figures, the real triggers, and what defuses them.`,
+  metaDescription: `28% of couples find the journey to their holiday tense and 47% of women have already argued about organising it.`,
   featuredImage: '/blog/disputes-couple-vacances.webp',
   featuredImageAlt: `An open car boot by a country road, suitcases half loaded, two shadows turned away from each other`,
   publishedAt: '2026-08-12',

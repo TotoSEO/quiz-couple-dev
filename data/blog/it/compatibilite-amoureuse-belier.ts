@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-ariete',
   title: `Compatibilità amorosa dell'Ariete: i segni che lo accendono (e quelli che lo spengono)`,
   metaTitle: `Compatibilità amorosa Ariete: chi riesce davvero a stargli dietro?`,
-  metaDescription: `L'Ariete si innamora in fretta, si entusiasma ancora più in fretta, e a volte resta deluso. Scopri quali segni possono davvero tenere il suo ritmo e quali si esauriranno presto.`,
+  metaDescription: `L'Ariete si innamora in fretta, si entusiasma ancora più in fretta, e a volte resta deluso. Scopri quali segni possono davvero tenere il suo ritmo…`,
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Simbolo astrologico dell'Ariete, compatibilità amorosa`,
   publishedAt: '2026-03-03',

@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'red-flags-bei-einer-frau',
   title: "Red Flags bei einer Frau: Was du fühlst, hat wahrscheinlich einen Namen",
   metaTitle: "Red Flags bei einer Frau: Die vollständige Liste",
-  metaDescription: "Irgendetwas stimmt in deiner Beziehung nicht, aber du kannst es nicht benennen? Emotionale, verhaltensbezogene, relationale Red Flags bei einer Frau, die vollständige Liste.",
+  metaDescription: "Irgendetwas stimmt in deiner Beziehung nicht, aber du kannst es nicht benennen? Emotionale, verhaltensbezogene, relationale Red Flags bei einer Frau…",
   featuredImage: '',
   featuredImageAlt: "Red Flags bei einer Frau, vollständige Liste der Warnsignale in einer Beziehung",
   publishedAt: '2026-03-07',

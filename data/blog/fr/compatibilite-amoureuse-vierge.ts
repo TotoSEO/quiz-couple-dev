@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-vierge',
   title: `Compatibilité amoureuse de la Vierge : qui sait lire entre ses lignes ?`,
   metaTitle: `Compatibilité amoureuse Vierge : l'amour sous toutes ses facettes`,
-  metaDescription: `La Vierge aime en silence, en actes, en détails que personne d'autre ne remarque. Quels signes savent lire cet amour discret ? Notre analyse complète de ses compatibilités.`,
+  metaDescription: `La Vierge aime en silence, en actes, en détails que personne ne remarque. Quels signes savent lire cet amour discret ? Analyse de ses compatibilités.`,
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Symbole astrologique de la Vierge, compatibilité amoureuse`,
   publishedAt: '2026-03-03',

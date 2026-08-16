@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-escorpio',
   title: `Compatibilidad amorosa de Escorpio: los signos que resisten su intensidad`,
   metaTitle: `Compatibilidad amorosa de Escorpio: quién aguanta su profundidad`,
-  metaDescription: `Escorpio ama con una intensidad que pocos signos pueden igualar. ¿Quién está a la altura de esa pasión sin salir quemado? Análisis completo de sus compatibilidades.`,
+  metaDescription: `Escorpio ama con una intensidad que pocos signos pueden igualar. ¿Quién está a la altura de esa pasión sin salir quemado?`,
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Símbolo astrológico de Escorpio, compatibilidad amorosa`,
   publishedAt: '2026-03-03',

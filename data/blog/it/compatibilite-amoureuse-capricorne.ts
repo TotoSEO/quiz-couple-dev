@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-capricorno',
   title: `Compatibilità amorosa del Capricorno: l'amore come progetto a lungo termine`,
   metaTitle: `Compatibilità amorosa Capricorno: chi è all'altezza della sua serietà?`,
-  metaDescription: `Il Capricorno non perde tempo con storie senza futuro. Cerca un partner che costruisca con lui, non che lo distragga. Scopri quali segni sono pronti per questo impegno.`,
+  metaDescription: `Il Capricorno non perde tempo con storie senza futuro. Cerca un partner che costruisca con lui, non che lo distragga.`,
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Simbolo astrologico del Capricorno, compatibilità amorosa`,
   publishedAt: '2026-03-03',

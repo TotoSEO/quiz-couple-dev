@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-virgo',
   title: `Compatibilidad amorosa de Virgo: quién sabe leer entre sus líneas`,
   metaTitle: `Compatibilidad amorosa de Virgo: el amor en todas sus facetas`,
-  metaDescription: `Virgo ama en silencio, con hechos, con detalles que nadie más percibe. ¿Qué signos saben interpretar ese amor discreto? Nuestro análisis completo de sus compatibilidades.`,
+  metaDescription: `Virgo ama en silencio, con hechos, con detalles que nadie más percibe. ¿Qué signos saben interpretar ese amor discreto?`,
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Símbolo astrológico de Virgo, compatibilidad amorosa`,
   publishedAt: '2026-03-03',

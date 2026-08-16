@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'discusiones-pareja-vacaciones',
   title: `Vacaciones: una pareja de cada tres discute en la carretera, y empezó antes de salir`,
   metaTitle: `Discusiones de pareja en vacaciones: cifras y causas reales`,
-  metaDescription: `El 28 % de las parejas vive el viaje de vacaciones con tensión y el 47 % de las mujeres ya ha discutido por la organización. Las cifras, los detonantes reales y lo que los desactiva.`,
+  metaDescription: `El 28 % de las parejas vive el viaje de vacaciones con tensión y el 47 % de las mujeres ya ha discutido por la organización.`,
   featuredImage: '/blog/disputes-couple-vacances.webp',
   featuredImageAlt: `Maletero abierto al borde de una carretera de campo, maletas a medio cargar, dos sombras que se dan la espalda`,
   publishedAt: '2026-08-12',

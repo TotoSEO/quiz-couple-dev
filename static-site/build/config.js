@@ -788,4 +788,39 @@ export const QUIZ_RELATED_ARTICLES = {
   quizMarrant:      ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
   quizKnowledge:    ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
   quizTentation:    ['red-flags-homme', 'red-flags-femme', 'choses-pas-accepter-couple', 'les-phases-de-la-rupture-chez-l-homme', 'copain-ne-fait-pas-effort'],
+  // Vingt pages jouables n'avaient aucun article rattaché, et onze articles
+  // n'étaient donc remontés nulle part : ils ne recevaient de lien que du
+  // listing du blog et de leurs voisins. Or ces pages de test sont les plus
+  // fortes du site (menu, accueil, carrousels). Les rattachements ci-dessous
+  // sont thématiques, jamais de remplissage : un test sans article vraiment
+  // proche garde une liste vide.
+  testPurete:       ['choses-pas-accepter-couple', 'lexique-relations-2026'],
+  testSuisJeAmoureux: ['sentiments-chez-un-homme', 'comment-savoir-si-cest-le-bon', 'dependance-affective'],
+  testSecret:       ['sentiments-chez-un-homme', 'comment-savoir-si-cest-le-bon'],
+  testCouche:       ['red-flags-homme', 'red-flags-femme', 'choses-pas-accepter-couple'],
+  testDistanceAime: ['manque-communication-couple', 'sentiments-chez-un-homme', 'arreter-ou-continuer-relation'],
+  testFinCouple:    ['arreter-ou-continuer-relation', 'les-phases-de-la-rupture-chez-l-homme', 'sauver-son-couple'],
+  testAmourAmitie:  ['sentiments-chez-un-homme', 'comment-savoir-si-cest-le-bon'],
+  testKarmique:     ['dependance-affective', 'love-bombing', 'arreter-ou-continuer-relation'],
+  testDateNaissance: ['compatibilite-amoureuse-lion', 'compatibilite-amoureuse-scorpion', 'compatibilite-amoureuse-taureau'],
+  testVacances:     ['activites-couple-ete', 'disputes-couple-vacances', 'sauver-son-couple'],
+  quizTuPreferes:   ['comment-savoir-si-cest-le-bon', 'activites-couple-ete'],
+  quizVraiFaux:     ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
+  quizMost:         ['activites-couple-ete', 'disputes-couple'],
+  jeuxCouple:       ['activites-couple-ete', 'disputes-couple', 'sauver-son-couple'],
+  jeuPlateau:       ['activites-couple-ete', 'manque-communication-couple'],
+  jeuQuiDeNous:     ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
+  jeuDilemmes:      ['choses-pas-accepter-couple', 'disputes-couple'],
+  jeuGages:         ['activites-couple-ete', 'comment-savoir-si-cest-le-bon'],
 };
+// Ajouts sur des entrées déjà existantes : on complète sans réécrire la table,
+// pour que la liste d'origine reste lisible telle qu'elle a été pensée. Le
+// love bombing décrit exactement le mécanisme que traquent ces trois tests,
+// et n'était pourtant rattaché à aucun.
+QUIZ_RELATED_ARTICLES.testPervers.push('love-bombing');
+QUIZ_RELATED_ARTICLES.testToxic.push('love-bombing');
+QUIZ_RELATED_ARTICLES.testJalousie.push('love-bombing');
+QUIZ_RELATED_ARTICLES.quizAdo.push('lexique-relations-2026');
+QUIZ_RELATED_ARTICLES.testCoupleSain.push('femme-malheureuse-en-couple');
+QUIZ_RELATED_ARTICLES.testCouple.push('femme-malheureuse-en-couple');
+QUIZ_RELATED_ARTICLES.testDivorce.push('arreter-ou-continuer-relation');

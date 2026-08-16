@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-waage',
   title: `Liebeskompatibilität der Waage: Harmonie um jeden Preis, oder echte Partnerschaft?`,
   metaTitle: `Liebeskompatibilität Waage: Wer bringt sie ins Gleichgewicht?`,
-  metaDescription: `Die Waage sucht Harmonie, Schönheit und einen Partner auf Augenhöhe. Erfahren Sie, welche Sternzeichen ihr das bieten können, und welche sie aus dem Gleichgewicht bringen.`,
+  metaDescription: `Die Waage sucht Harmonie, Schönheit und einen Partner auf Augenhöhe. Erfahren Sie, welche Sternzeichen ihr das bieten können, und welche…`,
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Astrologisches Symbol der Waage, Liebeskompatibilität`,
   publishedAt: '2026-03-03',

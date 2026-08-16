@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'litigi-di-coppia-in-vacanza',
   title: `Vacanze: una coppia su tre litiga in viaggio, e tutto era cominciato prima di partire`,
   metaTitle: `Litigi di coppia in vacanza: i numeri e le vere cause`,
-  metaDescription: `Il 28 % delle coppie vive il viaggio delle vacanze come teso e il 47 % delle donne ha già litigato sull'organizzazione. I numeri, i veri inneschi e cosa li disinnesca.`,
+  metaDescription: `Il 28 % delle coppie vive il viaggio delle vacanze come teso e il 47 % delle donne ha già litigato sull'organizzazione.`,
   featuredImage: '/blog/disputes-couple-vacances.webp',
   featuredImageAlt: `Bagagliaio aperto sul bordo di una strada di campagna, valigie caricate a metà, due ombre che si voltano le spalle`,
   publishedAt: '2026-08-12',

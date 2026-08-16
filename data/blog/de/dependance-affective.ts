@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'emotionale-abhaengigkeit-in-beziehungen',
   title: "Emotionale Abhängigkeit: Wenn Liebe zum Überlebensbedürfnis wird",
   metaTitle: "Emotionale Abhängigkeit: Anzeichen, Ursachen & Wege heraus",
-  metaDescription: "Hast du das Gefühl, ohne den anderen nicht leben zu können? Verlustangst, ständiges Rückversicherungsbedürfnis, Identitätsverlust. Ein umfassender Ratgeber zur emotionalen Abhängigkeit.",
+  metaDescription: "Hast du das Gefühl, ohne den anderen nicht leben zu können? Verlustangst, ständiges Rückversicherungsbedürfnis, Identitätsverlust.",
   featuredImage: '/blog/dependance-affective.svg',
   featuredImageAlt: "Paar umarmt auf einem Sofa, das emotionale Abhängigkeit in der Beziehung illustriert",
   publishedAt: '2026-03-24',

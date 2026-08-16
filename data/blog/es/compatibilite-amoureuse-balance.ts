@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-libra',
   title: `Compatibilidad amorosa de Libra: el signo que busca el equilibrio perfecto en pareja`,
   metaTitle: `Compatibilidad amorosa de Libra: con quién encuentra la armonía`,
-  metaDescription: `Libra necesita armonía en el amor como otros necesitan aire para respirar. ¿Qué signos saben dársela sin anularle? Análisis completo de sus compatibilidades.`,
+  metaDescription: `Libra necesita armonía en el amor como otros necesitan aire para respirar. ¿Qué signos saben dársela sin anularle?`,
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Símbolo astrológico de Libra, compatibilidad amorosa`,
   publishedAt: '2026-03-03',

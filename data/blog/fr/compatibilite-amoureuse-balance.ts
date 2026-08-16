@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-balance',
   title: `Compatibilité amoureuse de la Balance : les signes qui l'aident à s'ancrer`,
   metaTitle: `Compatibilité amoureuse Balance : qui l'aide à choisir ?`,
-  metaDescription: `La Balance cherche l'harmonie en amour, parfois au point de ne jamais trancher. Découvrez quels signes lui donnent enfin envie de se décider, et lesquels compliquent tout.`,
+  metaDescription: `La Balance cherche l'harmonie, parfois au point de ne jamais trancher. Quels signes lui donnent envie de se décider, et lesquels compliquent tout.`,
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Symbole astrologique de la Balance, compatibilité amoureuse`,
   publishedAt: '2026-03-03',

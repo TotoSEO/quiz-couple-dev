@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-bilancia',
   title: `Compatibilità amorosa della Bilancia: l'eterna ricerca dell'equilibrio a due`,
   metaTitle: `Compatibilità amorosa Bilancia: chi completa la sua armonia?`,
-  metaDescription: `La Bilancia cerca l'armonia in tutto, specialmente in amore. Ma trovare un partner che non la squilibri è più difficile di quanto sembri. La nostra analisi segno per segno.`,
+  metaDescription: `La Bilancia cerca l'armonia in tutto, specialmente in amore. Ma trovare un partner che non la squilibri è più difficile di quanto sembri.`,
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Simbolo astrologico della Bilancia, compatibilità amorosa`,
   publishedAt: '2026-03-03',

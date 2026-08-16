@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'dependencia-emocional-en-la-pareja',
   title: "Dependencia emocional: cuando amar se convierte en una necesidad vital",
   metaTitle: "Dependencia emocional: señales, causas y cómo liberarse",
-  metaDescription: "¿Sientes que no puedes vivir sin tu pareja? Miedo al abandono, necesidad constante de seguridad, pérdida de identidad. Guía completa sobre la dependencia emocional.",
+  metaDescription: "¿Sientes que no puedes vivir sin tu pareja? Miedo al abandono, necesidad constante de seguridad, pérdida de identidad.",
   featuredImage: '/blog/dependance-affective.svg',
   featuredImageAlt: "Pareja abrazada en un sofá ilustrando la dependencia emocional en la relación",
   publishedAt: '2026-03-24',

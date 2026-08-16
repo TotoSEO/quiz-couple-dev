@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'activites-couple-ete',
   title: "10 activités à faire en couple cet été",
   metaTitle: "Activités en couple cet été : 10 idées simples et pas chères",
-  metaDescription: "Dix activités en couple l'été qui changent des sorties classiques : marché sans liste, baignade en rivière, nuit dehors, photos argentiques... simples et pas chères.",
+  metaDescription: "Dix activités en couple l'été qui changent des sorties classiques : marché sans liste, baignade en rivière, nuit dehors. Simples et pas chères.",
   featuredImage: '/blog/activites-couple-ete.webp',
   featuredImageAlt: "Pique-nique d'été au coucher du soleil avec deux limonades, un panier en osier et un vélo appuyé contre un arbre",
   publishedAt: '2026-07-29',

@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'copain-ne-fait-pas-effort',
   title: "Mon copain ne fait pas d'effort : ce que ça veut dire et quoi faire",
   metaTitle: "Mon copain ne fait pas d'effort : que faire vraiment ?",
-  metaDescription: "Tu fais tout, lui rien. Ou presque. Pourquoi certains hommes arrêtent de faire des efforts, comment le reconnaître, quoi en penser et quoi faire concrètement.",
+  metaDescription: "Tu fais tout, lui rien ou presque. Pourquoi certains hommes arrêtent de faire des efforts, comment le reconnaître et quoi faire concrètement.",
   featuredImage: '',
   featuredImageAlt: "Mon copain ne fait pas d'effort, comprendre et agir",
   publishedAt: '2026-03-08',

@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'red-flags-homme',
   title: "Red flags chez un homme : ce que ton instinct essaie de te dire",
   metaTitle: "Les Red flags chez un Homme : la liste complète",
-  metaDescription: "Quelque chose cloche, mais tu n'arrives pas à mettre le doigt dessus ? Red flags comportementaux, émotionnels, relationnels, la liste complète pour y voir clair.",
+  metaDescription: "Quelque chose cloche, mais tu n'arrives pas à mettre le doigt dessus ? Red flags comportementaux, émotionnels et relationnels : la liste complète.",
   featuredImage: '',
   featuredImageAlt: "Red flags chez un homme, liste complète des signaux d'alarme en couple",
   publishedAt: '2026-03-05',

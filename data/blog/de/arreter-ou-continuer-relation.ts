@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'beziehung-beenden-oder-weitermachen',
   title: `Die Anzeichen, die sagen, ob man eine Beziehung beenden oder weitermachen sollte`,
   metaTitle: `Beziehung: Woran erkenne ich, ob wir aufhören oder weitermachen?`,
-  metaDescription: `Elf Anzeichen, die für ein Ende sprechen, sieben, die für ein Weitermachen sprechen, und die Frage, die beides trennt. Ohne dass jemand für dich entscheidet.`,
+  metaDescription: `Elf Anzeichen, die für ein Ende sprechen, sieben, die für ein Weitermachen sprechen, und die Frage, die beides trennt.`,
   featuredImage: '/blog/arreter-ou-continuer-relation.webp',
   featuredImageAlt: `Zwei Tassen auf einem Küchentisch im Morgengrauen, eine voll, eine leer, zwei leicht auseinandergerückte Stühle`,
   publishedAt: '2026-08-11',

@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'streit-im-paar-im-urlaub',
   title: `Urlaub: Jedes dritte Paar streitet auf der Fahrt, und angefangen hat es vor der Abreise`,
   metaTitle: `Streit im Urlaub: die Zahlen und die wahren Ursachen`,
-  metaDescription: `28 % der Paare empfinden die Urlaubsfahrt als angespannt, 47 % der Frauen haben schon über die Organisation gestritten. Die Zahlen, die echten Auslöser und was sie entschärft.`,
+  metaDescription: `28 % der Paare empfinden die Urlaubsfahrt als angespannt, 47 % der Frauen haben schon über die Organisation gestritten.`,
   featuredImage: '/blog/disputes-couple-vacances.webp',
   featuredImageAlt: `Offener Kofferraum am Rand einer Landstraße, halb eingeladene Koffer, zwei Schatten, die sich voneinander abwenden`,
   publishedAt: '2026-08-12',

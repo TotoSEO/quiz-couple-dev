@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'scorpio-love-compatibility',
   title: `Scorpio love compatibility: love without half measures`,
   metaTitle: `Scorpio love compatibility: who can survive their intensity?`,
-  metaDescription: `Scorpio loves without compromise, and expects the same in return. Which signs can handle that depth? Our complete, sign-by-sign analysis, no punches pulled.`,
+  metaDescription: `Scorpio loves without compromise, and expects the same in return. Which signs can handle that depth? Our complete, sign-by-sign analysis, no punches…`,
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Scorpio astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
