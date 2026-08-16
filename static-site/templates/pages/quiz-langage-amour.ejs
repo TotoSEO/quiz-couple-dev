@@ -66,7 +66,10 @@
         <ol>
           <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
           <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
-          <li class="breadcrumb-current" aria-current="page"><%= quizTitle %></li>
+          <%# Le fil d'Ariane prend le nom court : le title complet porte des
+              arguments de recherche (gratuit, sans inscription) qui n'ont
+              rien à faire dans un chemin de navigation. %>
+          <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:testLangageAmour.shortTitle', quizTitle) %></li>
         </ol>
       </nav>
       <% const heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>
@@ -117,14 +120,63 @@
   <div class="container mx-auto px-4 max-w-3xl">
 
     <!-- Section 1: What are the 5 love languages -->
+    <%# La définition courte ouvre la section : quarante mots qui répondent
+        à la question posée par le H2, avant tout développement. C'est ce
+        format que les moteurs reprennent en encadré. %>
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
+      <% const defTexte = t(ns + ':definition.texte', ''); if (defTexte) { %>
+      <div class="la-definition">
+        <p class="la-definition-titre"><%= t(ns + ':definition.titre', '') %></p>
+        <p class="la-definition-texte"><%- defTexte %></p>
+      </div>
+      <% } %>
       <div class="space-y-4 text-muted-foreground leading-relaxed">
         <p><%- t(ns + ':section1.p1', '') %></p>
         <p><%- t(ns + ':section1.p2', '') %></p>
         <p><%- t(ns + ':section1.p3', '') %></p>
       </div>
+
+      <%# Tableau comparatif : ce que chaque langage attend et ce qui le
+          blesse, côte à côte. Format directement repris en position zéro,
+          et de loin le bloc le plus consulté d'une page comme celle-ci. %>
+      <% const tabEntete = t(ns + ':tableau.entete', null); if (Array.isArray(tabEntete)) { %>
+      <figure class="mt-10">
+        <figcaption class="text-lg font-semibold mb-3"><%= t(ns + ':tableau.titre', '') %></figcaption>
+        <div class="quiz-table-wrap">
+          <table class="quiz-table">
+            <thead><tr><% tabEntete.forEach(function (h) { %><th><%= h %></th><% }); %></tr></thead>
+            <tbody>
+              <% (t(ns + ':tableau.lignes', []) || []).forEach(function (l) { %>
+              <tr><% l.forEach(function (c, ci) { %><td<%= ci === 0 ? ' class="font-semibold"' : '' %>><%= c %></td><% }); %></tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-muted-foreground mt-3"><%- t(ns + ':tableau.note', '') %></p>
+      </figure>
+      <% } %>
     </section>
+
+    <%# Statistiques réelles : la seule chose que cette page peut dire et
+        qu'aucun concurrent ne publie. Le bloc reste masqué tant que
+        l'échantillon est trop mince pour qu'un pourcentage ait un sens. %>
+    <% const statsTitre = t(ns + ':stats.titre', ''); if (statsTitre) { %>
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= statsTitre %></h2>
+      <div id="la-stats"
+           class="la-stats"
+           hidden
+           data-quiz-slug="<%= quizKey %>"
+           data-supabase-url="<%= supabaseUrl %>"
+           data-supabase-key="<%= supabaseKey %>"
+           data-libelles="<%- escapeHtml(JSON.stringify(t(ns + ':stats.labels', {}) || {})) %>"
+           data-textes="<%- escapeHtml(JSON.stringify({ intro: t(ns + ':stats.intro', ''), note: t(ns + ':stats.note', '') })) %>"></div>
+      <%# Visible tant que l'échantillon est trop mince ; le script la retire
+          dès qu'il a de vrais chiffres à mettre à la place. %>
+      <p class="text-muted-foreground leading-relaxed" id="la-stats-attente"><%= t(ns + ':stats.attente', '') %></p>
+    </section>
+    <% } %>
 
     <!-- Section 2: The 5 languages explained -->
     <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: (typeof quizTitle !== 'undefined' ? quizTitle : (typeof rawTitle !== 'undefined' ? rawTitle : '')) }) %>
@@ -245,3 +297,4 @@
 <div id="route-slugs-data" data-route-slugs="<%- escapeHtml(JSON.stringify(routeSlugs)) %>" hidden></div>
 <script src="/js/quiz-engine-core.js" defer></script>
 <script src="/js/quiz-loader.js" defer></script>
+<script src="/js/langage-amour-stats.js" defer></script>

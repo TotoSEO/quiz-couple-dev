@@ -4176,11 +4176,34 @@ var QuizEngine = (function() {
     return anx >= av ? 'anxious' : 'avoidant';
   };
 
+  // Le profil obtenu part en base, sans rien de nominatif ni aucune réponse :
+  // c'est ce qui permet aux pages d'annoncer une répartition réelle plutôt
+  // qu'un chiffre repris d'une étude américaine. Silencieux par nature : si la
+  // table n'existe pas encore, la page se contente de masquer ses statistiques.
+  ProfileQuiz.prototype.enregistreProfil = function(profil) {
+    var bloc = document.getElementById('pq-reviews');
+    var slug = bloc ? bloc.dataset.quizSlug : null;
+    if (!slug || !profil) return;
+    // Une seule fois par test et par navigateur : sinon, refaire le test pour
+    // comparer deux réponses gonflerait la répartition d'un même profil.
+    var cle = 'qc-profil-' + slug;
+    try { if (localStorage.getItem(cle)) return; localStorage.setItem(cle, profil); } catch (e) {}
+    fetch(SUPABASE_URL + '/rest/v1/profil_resultats', {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json', 'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ quiz_slug: slug, profil: profil, lang: this.lang })
+    }).catch(function () {});
+  };
+
   ProfileQuiz.prototype.renderResults = function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
     var key = this.classify();
     var profile = this.profiles[key] || {};
+    this.enregistreProfil(key);
     var n = this.questions.length || 1;
     var pcts = {};
     for (var a = 0; a < this.axes.length; a++) {

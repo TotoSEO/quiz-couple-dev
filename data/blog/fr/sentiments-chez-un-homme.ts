@@ -59,7 +59,7 @@ const article: BlogArticleData = {
     {
       id: 'ce-qui-accelere',
       title: `Ce qui accélère, ce qui bloque`,
-      content: `<p><strong>Ce qui accélère :</strong> la vulnérabilité partagée, d'abord : un homme qui vous confie quelque chose qu'il ne raconte pas ailleurs franchit trois étapes d'un coup. Les moments répétés ensuite, parce que l'habitude se construit par la fréquence, pas par l'intensité. Et le fait de se sentir utile, ce qui reste, chez beaucoup d'hommes, une façon d'aimer avant de savoir le dire.</p>
+      content: `<p><strong>Ce qui accélère :</strong> la vulnérabilité partagée, d'abord : un homme qui vous confie quelque chose qu'il ne raconte pas ailleurs franchit trois étapes d'un coup. Les moments répétés ensuite, parce que l'habitude se construit par la fréquence, pas par l'intensité. Et le fait de se sentir utile, ce qui reste, chez beaucoup d'hommes, <a href="/test-langage-amour-couple/">une façon d'aimer avant de savoir le dire</a>.</p>
 
 <p><strong>Ce qui bloque :</strong> la pression, évidemment : demander où en sont les sentiments à l'étape 3 les fait souvent reculer à l'étape 2. Le flou aussi, quand personne ne sait ce qu'est cette relation, parce que le flou empêche l'habitude de s'installer.</p>
 

@@ -52,7 +52,7 @@ const article: BlogArticleData = {
         {
           id: 'il-ne-sait-pas',
           title: "Il ne sait pas ce que \"faire des efforts\" veut dire pour toi",
-          content: `<p>Les langages de l'amour ne sont pas universels. Lui pense peut-être qu'il fait des efforts : il est fidèle, il est là, il ne se plaint pas, il apporte sa stabilité. Toi, tu as besoin d'attentions concrètes, de moments planifiés, de gestes qui montrent qu'il pense à toi en dehors de quand vous êtes ensemble. Ces deux visions sont compatibles, mais seulement si elles sont exprimées clairement. Un couple peut fonctionner longtemps avec ce malentendu sans que l'un ou l'autre comprenne vraiment ce qui manque à l'autre.</p>`,
+          content: `<p>Les <a href="/test-langage-amour-couple/">langages de l'amour</a> ne sont pas universels. Lui pense peut-être qu'il fait des efforts : il est fidèle, il est là, il ne se plaint pas, il apporte sa stabilité. Toi, tu as besoin d'attentions concrètes, de moments planifiés, de gestes qui montrent qu'il pense à toi en dehors de quand vous êtes ensemble. Ces deux visions sont compatibles, mais seulement si elles sont exprimées clairement. Un couple peut fonctionner longtemps avec ce malentendu sans que l'un ou l'autre comprenne vraiment ce qui manque à l'autre.</p>`,
         },
         {
           id: 'il-a-perdu-l-envie',

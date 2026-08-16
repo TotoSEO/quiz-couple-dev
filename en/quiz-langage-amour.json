@@ -106,5 +106,58 @@
     "faq3A": "This is very common and perfectly normal. The key is learning to 'speak' the other person's language, even if it doesn't come naturally. Communicate openly about your respective needs and make small daily efforts to express your love in the language your partner understands best.",
     "faq4Q": "Can love languages change over time?",
     "faq4A": "Yes, love languages can shift over the years, particularly with major life changes (parenthood, moving, career shifts) and emotional growth. That's why it's a good idea to retake this test from time to time, to keep your mutual understanding up to date."
+  },
+  "definition": {
+    "titre": "The short answer",
+    "texte": "The 5 love languages are the five ways we express and receive affection: words of affirmation, acts of service, receiving gifts, quality time and physical touch. Everyone has a dominant one, and two partners rarely share the same, which explains a lot of misunderstandings."
+  },
+  "tableau": {
+    "titre": "The 5 languages at a glance",
+    "entete": [
+      "Language",
+      "What fills the tank",
+      "What empties it"
+    ],
+    "lignes": [
+      [
+        "💬 Words of affirmation",
+        "A genuine compliment, a thank you, a note left on the table",
+        "Criticism, even thrown in casually"
+      ],
+      [
+        "🤝 Acts of service",
+        "A chore taken care of without being asked",
+        "Broken promises, one-sided mental load"
+      ],
+      [
+        "🎁 Receiving gifts",
+        "A chosen token that proves you were on their mind",
+        "Forgotten dates, gifts grabbed at the last minute"
+      ],
+      [
+        "⏳ Quality time",
+        "Time together with no screens and real attention",
+        "Cancelled plans, a phone in the middle of dinner"
+      ],
+      [
+        "🤗 Physical touch",
+        "A hand on the back, a hug, everyday closeness",
+        "Long stretches without contact, affection saved for the bedroom"
+      ]
+    ],
+    "note": "No language is better than another: what matters is speaking your partner's rather than your own."
+  },
+  "stats": {
+    "titre": "The real breakdown, among the people who take this test",
+    "intro": "Out of {n} results recorded here, the language that comes first is {premier}, with {pct} of profiles. Here is the full breakdown, recalculated with every test taken.",
+    "note": "Figures come from this page, one per person. They do not claim to describe the general population: they describe the people who take this test.",
+    "attente": "The breakdown will appear here as soon as the test has been taken often enough for percentages to mean something.",
+    "labels": {
+      "words": "Words of affirmation",
+      "acts": "Acts of service",
+      "gifts": "Receiving gifts",
+      "time": "Quality time",
+      "touch": "Physical touch"
+    }
   }
 }

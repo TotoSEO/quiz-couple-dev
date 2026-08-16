@@ -106,5 +106,58 @@
     "faq3A": "Das ist sehr häufig und völlig normal. Der Schlüssel liegt darin, die Sprache des anderen zu „sprechen“ zu lernen, auch wenn es nicht natürlich kommt. Kommuniziert offen über eure jeweiligen Bedürfnisse und bemüht euch täglich, eure Liebe in der Sprache auszudrücken, die euer Partner am besten versteht.",
     "faq4Q": "Können sich die Sprachen der Liebe im Laufe der Zeit verändern?",
     "faq4A": "Ja, die Sprachen der Liebe können sich über die Jahre verändern, insbesondere bei großen Lebensveränderungen (Elternschaft, Umzug, berufliche Veränderungen) und emotionaler Reifung. Deshalb ist es sinnvoll, diesen Test von Zeit zu Zeit erneut zu machen, um euer gegenseitiges Verständnis aktuell zu halten."
+  },
+  "definition": {
+    "titre": "Die kurze Antwort",
+    "texte": "Die 5 Sprachen der Liebe sind die fünf Arten, Zuneigung auszudrücken und zu empfangen: anerkennende Worte, Hilfsbereitschaft, Geschenke, Zweisamkeit und Zärtlichkeit. Jeder Mensch hat eine dominante Sprache, und zwei Partner teilen sie nur selten, was viele Missverständnisse erklärt."
+  },
+  "tableau": {
+    "titre": "Die 5 Sprachen auf einen Blick",
+    "entete": [
+      "Sprache",
+      "Was den Tank füllt",
+      "Was ihn leert"
+    ],
+    "lignes": [
+      [
+        "💬 Anerkennende Worte",
+        "Ein ehrliches Kompliment, ein Danke, ein Zettel auf dem Tisch",
+        "Kritik, auch nebenbei gesagt"
+      ],
+      [
+        "🤝 Hilfsbereitschaft",
+        "Eine Aufgabe, die ohne Nachfragen erledigt wird",
+        "Gebrochene Versprechen, einseitige mentale Last"
+      ],
+      [
+        "🎁 Geschenke",
+        "Eine ausgesuchte Aufmerksamkeit, die zeigt: ich habe an dich gedacht",
+        "Vergessene Daten, hastig gekaufte Geschenke"
+      ],
+      [
+        "⏳ Zweisamkeit",
+        "Gemeinsame Zeit ohne Bildschirme, mit echter Aufmerksamkeit",
+        "Abgesagte Verabredungen, das Handy mitten beim Essen"
+      ],
+      [
+        "🤗 Zärtlichkeit",
+        "Eine Hand am Rücken, eine Umarmung, tägliche Nähe",
+        "Lange Phasen ohne Berührung, Zärtlichkeit nur im Bett"
+      ]
+    ],
+    "note": "Keine Sprache ist besser als eine andere: Entscheidend ist, die des Partners zu sprechen statt die eigene."
+  },
+  "stats": {
+    "titre": "Die echte Verteilung unter denen, die diesen Test machen",
+    "intro": "Von {n} hier erfassten Ergebnissen steht {premier} an erster Stelle, mit {pct} der Profile. Hier ist die vollständige Verteilung, bei jedem Test neu berechnet.",
+    "note": "Die Zahlen stammen von dieser Seite, eine pro Person. Sie beschreiben nicht die Gesamtbevölkerung, sondern die Menschen, die diesen Test machen.",
+    "attente": "Die Verteilung erscheint hier, sobald der Test oft genug gemacht wurde, damit Prozentwerte etwas aussagen.",
+    "labels": {
+      "words": "Anerkennende Worte",
+      "acts": "Hilfsbereitschaft",
+      "gifts": "Geschenke",
+      "time": "Zweisamkeit",
+      "touch": "Zärtlichkeit"
+    }
   }
 }
