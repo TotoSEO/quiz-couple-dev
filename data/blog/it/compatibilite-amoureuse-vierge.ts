@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-vergine',
   title: `Compatibilità amorosa della Vergine: l'amore nei dettagli`,
   metaTitle: `Compatibilità amorosa Vergine: chi sa apprezzare la sua cura?`,
-  metaDescription: `La Vergine ama con attenzione, precisione e dedizione silenziosa. Ma non tutti i segni capiscono questo linguaggio. Scopri chi riesce a valorizzare la sua profondità.`,
+  metaDescription: `La Vergine ama con attenzione, precisione e dedizione silenziosa. Ma non tutti i segni capiscono questo linguaggio.`,
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Simbolo astrologico della Vergine, compatibilità amorosa`,
   publishedAt: '2026-03-03',

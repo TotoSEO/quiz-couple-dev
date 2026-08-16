@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'disputes-couple-vacances',
   title: `Vacances : un couple sur trois se dispute sur la route, et ça commence avant le départ`,
   metaTitle: `Disputes de couple en vacances : les chiffres et les vraies causes`,
-  metaDescription: `28 % des couples jugent le trajet des vacances tendu et 47 % des femmes se sont déjà disputées sur l'organisation. Les chiffres, les vrais déclencheurs, et ce qui les désamorce.`,
+  metaDescription: `28 % des couples jugent le trajet des vacances tendu. Les chiffres, les vrais déclencheurs des disputes en vacances, et ce qui les désamorce.`,
   featuredImage: '/blog/disputes-couple-vacances.webp',
   featuredImageAlt: `Coffre de voiture ouvert au bord d'une route de campagne, valises à moitié chargées, deux ombres qui se tournent le dos`,
   publishedAt: '2026-08-12',

@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-cancer',
   title: `Compatibilidad amorosa de Cáncer: a quién puede abrirle realmente el corazón`,
   metaTitle: `Compatibilidad amorosa de Cáncer: las uniones que le colman`,
-  metaDescription: `Cáncer lo da todo en el amor, quizá incluso demasiado. ¿Qué signos saben recibir ese amor sin abusar de él? Nuestro análisis completo de sus compatibilidades.`,
+  metaDescription: `Cáncer lo da todo en el amor, quizá incluso demasiado. ¿Qué signos saben recibir ese amor sin abusar de él?`,
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Símbolo astrológico de Cáncer, compatibilidad amorosa`,
   publishedAt: '2026-03-03',

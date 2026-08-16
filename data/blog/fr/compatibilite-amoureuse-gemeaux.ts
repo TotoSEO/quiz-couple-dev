@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-gemeaux',
   title: `Compatibilité amoureuse des Gémeaux : les signes qui comprennent leur double nature`,
   metaTitle: `Compatibilité amoureuse Gémeaux : qui peut le suivre ?`,
-  metaDescription: `Le Gémeaux change d'avis comme de chemise, et il aime ça. Mais en amour, qui arrive vraiment à le comprendre ? Nos analyses signe par signe, sans langue de bois.`,
+  metaDescription: `Le Gémeaux change d'avis comme de chemise, et il aime ça. Mais en amour, qui arrive vraiment à le suivre ? Nos analyses signe par signe.`,
   featuredImage: '/blog/compatibilite-amoureuse-gemeaux.svg',
   featuredImageAlt: `Symbole astrologique des Gémeaux, compatibilité amoureuse`,
   publishedAt: '2026-03-03',

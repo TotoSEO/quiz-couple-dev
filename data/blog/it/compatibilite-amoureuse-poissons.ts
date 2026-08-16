@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-pesci',
   title: `Compatibilità amorosa dei Pesci: l'amore come immersione totale`,
   metaTitle: `Compatibilità amorosa Pesci: chi sa nuotare nelle loro acque profonde?`,
-  metaDescription: `I Pesci amano con un'intensità emotiva che pochi altri segni raggiungono. Ma non tutti sanno nuotare in acque così profonde. Scopri chi li completa davvero.`,
+  metaDescription: `I Pesci amano con un'intensità emotiva che pochi altri segni raggiungono. Ma non tutti sanno nuotare in acque così profonde.`,
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Simbolo astrologico dei Pesci, compatibilità amorosa`,
   publishedAt: '2026-03-03',

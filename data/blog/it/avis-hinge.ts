@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'recensione-hinge-app',
   title: `Test dell'app Hinge nel 2026: recensione e spiegazioni`,
   metaTitle: `La nostra recensione di Hinge nel 2026: test e risultati`,
-  metaDescription: `Abbiamo testato Hinge in Italia per diversi mesi. Spunti di conversazione, algoritmo, prezzi reali, ban e risultati: la nostra recensione completa, onesta e senza peli sulla lingua.`,
+  metaDescription: `Abbiamo testato Hinge in Italia per diversi mesi. Spunti di conversazione, algoritmo, prezzi reali, ban e risultati: la nostra recensione completa, onesta…`,
   featuredImage: '/blog/avis-hinge.webp',
   featuredImageAlt: `immagine hinge recensione app incontri`,
   publishedAt: '2026-02-27',

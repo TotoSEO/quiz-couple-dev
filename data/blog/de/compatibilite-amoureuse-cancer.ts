@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-krebs',
   title: `Liebeskompatibilität des Krebses: Wer darf hinter seine schützende Schale?`,
   metaTitle: `Liebeskompatibilität Krebs: Wer erreicht sein verwundbares Herz?`,
-  metaDescription: `Der Krebs liebt intensiv und schützend, doch nicht jedes Zeichen versteht seine emotionale Tiefe. Finden Sie heraus, welche Verbindungen blühen und welche scheitern.`,
+  metaDescription: `Der Krebs liebt intensiv und schützend, doch nicht jedes Zeichen versteht seine emotionale Tiefe. Finden Sie heraus, welche Verbindungen blühen…`,
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Astrologisches Symbol des Krebses, Liebeskompatibilität`,
   publishedAt: '2026-03-03',

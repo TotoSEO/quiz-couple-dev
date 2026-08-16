@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-cancro',
   title: `Compatibilità amorosa del Cancro: l'amore come rifugio (o come campo minato)`,
   metaTitle: `Compatibilità amorosa Cancro: chi merita davvero la sua fiducia?`,
-  metaDescription: `Il Cancro ama con tutto sé stesso e costruisce nidi emotivi per chi gli sta accanto. Ma non tutti i segni sanno abitare quello spazio. Ecco con chi funziona, e perché.`,
+  metaDescription: `Il Cancro ama con tutto sé stesso e costruisce nidi emotivi per chi gli sta accanto. Ma non tutti i segni sanno abitare quello spazio.`,
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Simbolo astrologico del Cancro, compatibilità amorosa`,
   publishedAt: '2026-03-03',

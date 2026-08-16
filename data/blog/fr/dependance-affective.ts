@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'dependance-affective',
   title: "Dépendance affective : quand aimer devient un besoin vital",
   metaTitle: "Dépendance affective : signes, causes et comment s'en libérer",
-  metaDescription: "Tu as l'impression de ne pas pouvoir vivre sans l'autre ? Peur de l'abandon, besoin constant de réassurance, perte d'identité. Décryptage complet de la dépendance affective.",
+  metaDescription: "Peur de l'abandon, besoin constant de réassurance, perte d'identité : les signes de la dépendance affective et comment en sortir. Décryptage complet.",
   featuredImage: '/blog/dependance-affective.svg',
   featuredImageAlt: "Couple enlacé sur un canapé illustrant la dépendance affective dans la relation",
   publishedAt: '2026-03-24',

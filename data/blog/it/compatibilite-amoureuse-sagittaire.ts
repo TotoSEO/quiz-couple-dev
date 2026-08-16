@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-sagittario',
   title: `Compatibilità amorosa del Sagittario: l'amore come avventura senza mappa`,
   metaTitle: `Compatibilità amorosa Sagittario: chi riesce a viaggiare al suo passo?`,
-  metaDescription: `Il Sagittario vive l'amore come un'avventura, e non tutti sono pronti a partire senza sapere la destinazione. Scopri quali segni sanno stare al suo fianco senza frenarlo.`,
+  metaDescription: `Il Sagittario vive l'amore come un'avventura, e non tutti sono pronti a partire senza sapere la destinazione.`,
   featuredImage: '/blog/compatibilite-amoureuse-sagittaire.svg',
   featuredImageAlt: `Simbolo astrologico del Sagittario, compatibilità amorosa`,
   publishedAt: '2026-03-03',

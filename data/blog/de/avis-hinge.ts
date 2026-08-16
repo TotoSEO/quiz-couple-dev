@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'hinge-erfahrungen-test',
   title: `Hinge im Test 2026: Erfahrungen und ehrliche Bewertung`,
   metaTitle: `Unsere Hinge-Erfahrungen 2026: Test und Ergebnisse`,
-  metaDescription: `Wir haben Hinge in Deutschland mehrere Monate lang getestet. Prompts, Algorithmus, echte Preise, Kontosperren und Ergebnisse: unser vollständiger, ehrlicher Erfahrungsbericht ohne Beschönigung.`,
+  metaDescription: `Wir haben Hinge in Deutschland mehrere Monate lang getestet. Prompts, Algorithmus, echte Preise, Kontosperren und Ergebnisse: unser vollständiger…`,
   featuredImage: '/blog/avis-hinge.webp',
   featuredImageAlt: `bild hinge erfahrungen dating-app`,
   publishedAt: '2026-02-27',

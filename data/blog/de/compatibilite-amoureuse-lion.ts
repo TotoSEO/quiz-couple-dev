@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-loewe',
   title: `Liebeskompatibilität des Löwen: Welche Zeichen seinem Feuer gewachsen sind`,
   metaTitle: `Liebeskompatibilität Löwe: Wer verdient seine königliche Treue?`,
-  metaDescription: `Der Löwe liebt mit Leidenschaft und erwartet Gleiches zurück. Doch nicht jedes Zeichen spielt dieses Spiel mit. Erfahren Sie, welche Verbindungen ihn zum Strahlen bringen.`,
+  metaDescription: `Der Löwe liebt mit Leidenschaft und erwartet Gleiches zurück. Doch nicht jedes Zeichen spielt dieses Spiel mit.`,
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Astrologisches Symbol des Löwen, Liebeskompatibilität`,
   publishedAt: '2026-03-03',

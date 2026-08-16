@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-piscis',
   title: `Compatibilidad amorosa de Piscis: los signos que navegan sus aguas profundas`,
   metaTitle: `Compatibilidad amorosa de Piscis: quién se sumerge con él`,
-  metaDescription: `Piscis ama con todo su ser, a veces hasta perderse. ¿Qué signos saben nadar en sus aguas profundas sin ahogarse ni ahogarle? Análisis completo de sus compatibilidades.`,
+  metaDescription: `Piscis ama con todo su ser, a veces hasta perderse. ¿Qué signos saben nadar en sus aguas profundas sin ahogarse ni ahogarle?`,
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Símbolo astrológico de Piscis, compatibilidad amorosa`,
   publishedAt: '2026-03-03',

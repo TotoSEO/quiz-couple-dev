@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'choses-pas-accepter-couple',
   title: "Ce qu'on ne devrait jamais accepter dans une relation amoureuse",
   metaTitle: "Choses à ne pas accepter en couple | Limites essentielles",
-  metaDescription: "Découvrez les choses à ne pas accepter en couple : manque de respect, manipulation, jalousie toxique. Apprenez à poser vos limites. Guide complet et gratuit.",
+  metaDescription: "Les choses à ne pas accepter en couple : manque de respect, manipulation, jalousie toxique. Comment poser vos limites, guide complet et gratuit.",
   featuredImage: '/blog/limites-couple-accepter.webp',
   featuredImageAlt: "Couple posant des limites dans leur relation amoureuse",
   publishedAt: '2026-02-21',

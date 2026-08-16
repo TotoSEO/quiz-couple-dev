@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-widder',
   title: `Liebeskompatibilität des Widders: Welche Sternzeichen entfachen sein Feuer, und welche es löschen`,
   metaTitle: `Liebeskompatibilität Widder: Wer hält wirklich mit ihm Schritt?`,
-  metaDescription: `Der Widder verliebt sich schnell, brennt noch schneller, und wird manchmal enttäuscht. Erfahren Sie, welche Sternzeichen sein Tempo mitgehen können und welche auf der Strecke bleiben.`,
+  metaDescription: `Der Widder verliebt sich schnell, brennt noch schneller, und wird manchmal enttäuscht. Erfahren Sie, welche Sternzeichen sein Tempo mitgehen können…`,
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Astrologisches Symbol des Widders, Liebeskompatibilität`,
   publishedAt: '2026-03-03',

@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-taureau',
   title: `Compatibilité amoureuse du Taureau : ce que les astres disent de ses histoires d'amour`,
   metaTitle: `Compatibilité amoureuse Taureau : amour solide ou impasse ?`,
-  metaDescription: `Le Taureau aime profondément, loyalement, et souvent longuement. Mais tous les signes ne sont pas faits pour ce rythme-là. On vous dit avec qui ça marche vraiment.`,
+  metaDescription: `Le Taureau aime profondément, loyalement, et souvent longuement. Tous les signes ne sont pas faits pour ce rythme : on vous dit avec qui ça marche.`,
   featuredImage: '/blog/compatibilite-amoureuse-taureau.svg',
   featuredImageAlt: `Symbole astrologique du Taureau, compatibilité amoureuse`,
   publishedAt: '2026-03-03',

@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'badoo-erfahrungen',
   title: `Unsere Meinung zur Dating-App Badoo`,
   metaTitle: `Badoo Erfahrungen 2026: Unser ehrlicher Testbericht`,
-  metaDescription: `Das QuizCouple-Team hat Badoo mehrere Monate lang getestet. Ergebnisse, Erfahrungen aus männlicher und weiblicher Sicht, Preise, Fake-Profile: unser vollständiger und ehrlicher Erfahrungsbericht.`,
+  metaDescription: `Das QuizCouple-Team hat Badoo mehrere Monate lang getestet. Ergebnisse, Erfahrungen aus männlicher und weiblicher Sicht, Preise, Fake-Profile: unser…`,
   featuredImage: '/blog/avis-badoo.webp',
   featuredImageAlt: `Unsere Meinung zur Dating-App Badoo im Jahr 2026`,
   publishedAt: '2026-02-28',

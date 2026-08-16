@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'arreter-ou-continuer-relation',
   title: `Les signaux qui disent s'il faut arrêter ou continuer une relation`,
   metaTitle: `Couple : comment savoir si on arrête ou si on continue ?`,
-  metaDescription: `Onze signaux qui disent qu'il faut arrêter, sept qui disent qu'il faut continuer, et la question qui départage les deux. Sans vous dire quoi faire à votre place.`,
+  metaDescription: `Onze signaux qui disent d'arrêter, sept qui disent de continuer, et la question qui départage. Sans vous dire quoi faire à votre place.`,
   featuredImage: '/blog/arreter-ou-continuer-relation.webp',
   featuredImageAlt: `Deux tasses sur une table de cuisine à l'aube, l'une pleine et l'autre vide, deux chaises légèrement écartées`,
   publishedAt: '2026-08-11',

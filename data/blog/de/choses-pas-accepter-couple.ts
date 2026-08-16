@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'grenzen-beziehung-nicht-akzeptieren',
   title: "Was man in einer Beziehung niemals akzeptieren sollte",
   metaTitle: "Grenzen in der Beziehung | Was nicht akzeptabel ist",
-  metaDescription: "Erfahren Sie, was in einer Beziehung nicht akzeptabel ist: Respektlosigkeit, Manipulation, toxische Eifersucht. Lernen Sie Grenzen zu setzen. Kostenloser Leitfaden.",
+  metaDescription: "Erfahren Sie, was in einer Beziehung nicht akzeptabel ist: Respektlosigkeit, Manipulation, toxische Eifersucht. Lernen Sie Grenzen zu setzen.",
   featuredImage: '/blog/limites-couple-accepter.webp',
   featuredImageAlt: "Paar setzt Grenzen in ihrer Liebesbeziehung",
   publishedAt: '2026-02-21',

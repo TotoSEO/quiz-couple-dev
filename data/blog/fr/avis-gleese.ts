@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'avis-gleese',
   title: `Notre avis sur Gleese pour faire des rencontres Libertines`,
   metaTitle: `Avis Gleese en 2026 : Que vaut cette plateforme ?`,
-  metaDescription: `Notre avis complet sur Gleese en 2026 : fonctionnalités, modération, prix, points faibles et note finale. Le test d'un site libertin français lancé fin 2024.`,
+  metaDescription: `Notre avis complet sur Gleese en 2026 : fonctionnalités, modération, prix, points faibles et note finale. Le test d'un site libertin français.`,
   featuredImage: '/blog/avis-gleese.webp',
   featuredImageAlt: `Notre avis sur Gleese, le site de rencontres libertines, noté 9,5 sur 10 par Quiz Couple`,
   publishedAt: '2026-08-09',
@@ -227,7 +227,7 @@ const article: BlogArticleData = {
     {
       id: 'gleese-face-aux-autres-plateformes',
       title: `Gleese face aux autres plateformes`,
-      content: `<p><strong>Face aux applis de rencontre classiques</strong> (Tinder, Bumble, Hinge), la comparaison n'a pas vraiment de sens sur le papier, ce n'est pas le même usage. Mais dans les faits, beaucoup de couples essaient d'abord de trouver leur bonheur sur Tinder, et se cassent les dents : les profils ne cherchent pas ça, le format ne s'y prête pas, et vous passez votre temps à expliquer votre démarche. Gleese vous fait gagner ce temps-là, tout le monde est là pour la même raison.</p>
+      content: `<p><strong>Face aux applis de rencontre classiques</strong> (<a href="/blog/avis-tinder/">Tinder</a>, <a href="/blog/avis-bumble/">Bumble</a>, <a href="/blog/avis-hinge-rencontre/">Hinge</a>), la comparaison n'a pas vraiment de sens sur le papier, ce n'est pas le même usage. Mais dans les faits, beaucoup de couples essaient d'abord de trouver leur bonheur sur Tinder, et se cassent les dents : les profils ne cherchent pas ça, le format ne s'y prête pas, et vous passez votre temps à expliquer votre démarche. Gleese vous fait gagner ce temps-là, tout le monde est là pour la même raison.</p>
 
 <p><strong>Face aux gros sites libertins historiques</strong>, Gleese perd sur le volume et gagne sur à peu près tout le reste : l'interface, la modération, la protection des photos, l'ambiance. C'est l'arbitrage à faire. Beaucoup de monde et une expérience datée, ou moins de monde et une expérience nettement plus saine.</p>
 

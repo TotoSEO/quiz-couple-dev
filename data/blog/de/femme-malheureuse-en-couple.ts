@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'unglueckliche-frau-in-beziehung-anzeichen',
   title: "Unglückliche Frau in der Beziehung: Die wahren Anzeichen",
   metaTitle: "Unglückliche Frau in der Beziehung: Die Anzeichen",
-  metaDescription: "Sie lächelt noch, aber etwas hat sich verändert. Die Anzeichen, dass eine Frau in der Beziehung unglücklich ist, sind oft schon lange da. Wir erklären, worauf du achten solltest.",
+  metaDescription: "Sie lächelt noch, aber etwas hat sich verändert. Die Anzeichen, dass eine Frau in der Beziehung unglücklich ist, sind oft schon lange da.",
   featuredImage: '',
   featuredImageAlt: "Nachdenkliche Frau allein sitzend, Anzeichen von Unzufriedenheit in der Beziehung",
   publishedAt: '2026-03-01',

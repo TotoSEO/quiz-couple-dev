@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'unhappy-woman-in-relationship-signs',
   title: "How to Recognize an Unhappy Woman in a Relationship: The Real Signs",
   metaTitle: "Unhappy Woman in a Relationship: The Real Signs to Spot",
-  metaDescription: "She still smiles, but something has changed. The signs a woman is unhappy in a relationship are often there, you just don't know what to look for. Here's what to watch.",
+  metaDescription: "She still smiles, but something has changed. The signs a woman is unhappy in a relationship are often there, you just don't know what to look for.",
   featuredImage: '',
   featuredImageAlt: "Pensive woman sitting alone, signs of unhappiness in a relationship",
   publishedAt: '2026-03-01',

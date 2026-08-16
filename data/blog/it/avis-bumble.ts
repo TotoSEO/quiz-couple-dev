@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'recensione-bumble',
   title: `Bumble nel 2026: un'applicazione fuori budget e trascurata?`,
   metaTitle: `La nostra recensione di Bumble nel 2026: test e risultati dell'app`,
-  metaDescription: `La nostra recensione completa su Bumble dopo diversi mesi di test: funzionalità, prezzo, risultati reali e verdetto onesto. Ti diciamo se ne vale davvero la pena nel 2026.`,
+  metaDescription: `La nostra recensione completa su Bumble dopo diversi mesi di test: funzionalità, prezzo, risultati reali e verdetto onesto.`,
   featuredImage: '/blog/avis-bumble.webp',
   featuredImageAlt: `immagine recensione bumble`,
   publishedAt: '2026-02-25',

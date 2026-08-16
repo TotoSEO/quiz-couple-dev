@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-poissons',
   title: `Compatibilité amoureuse des Poissons : l'amour comme un océan`,
   metaTitle: `Compatibilité amoureuse Poissons : qui peut plonger avec eux ?`,
-  metaDescription: `Les Poissons aiment avec une profondeur que peu de signes comprennent. Quels partenaires savent naviguer dans leurs eaux ? Notre analyse complète, signe par signe.`,
+  metaDescription: `Les Poissons aiment avec une profondeur que peu de signes comprennent. Quels partenaires savent naviguer dans leurs eaux ? Analyse signe par signe.`,
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Symbole astrologique des Poissons, compatibilité amoureuse`,
   publishedAt: '2026-03-03',

@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-jungfrau',
   title: `Liebeskompatibilität der Jungfrau: Perfektion gesucht, Menschlichkeit gefunden`,
   metaTitle: `Liebeskompatibilität Jungfrau: Wer erfüllt ihre hohen Ansprüche?`,
-  metaDescription: `Die Jungfrau analysiert alles, auch die Liebe. Erfahren Sie, welche Sternzeichen ihre Tiefe zu schätzen wissen und welche an ihrem Perfektionismus scheitern.`,
+  metaDescription: `Die Jungfrau analysiert alles, auch die Liebe. Erfahren Sie, welche Sternzeichen ihre Tiefe zu schätzen wissen und welche an ihrem Perfektionismus…`,
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Astrologisches Symbol der Jungfrau, Liebeskompatibilität`,
   publishedAt: '2026-03-03',

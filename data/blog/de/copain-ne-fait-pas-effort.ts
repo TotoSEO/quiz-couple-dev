@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'freund-gibt-sich-keine-muehe',
   title: "Mein Freund gibt sich keine Mühe: Was das bedeutet und was man tun kann",
   metaTitle: "Mein Freund gibt sich keine Mühe: Was tun?",
-  metaDescription: "Du machst alles, er nichts. Oder fast nichts. Warum manche Männer aufhören, sich zu bemühen, wie man es erkennt, was es bedeutet und was man konkret tun kann.",
+  metaDescription: "Du machst alles, er nichts. Oder fast nichts. Warum manche Männer aufhören, sich zu bemühen, wie man es erkennt, was es bedeutet und was man konkret tun…",
   featuredImage: '',
   featuredImageAlt: "Mein Freund gibt sich keine Mühe, verstehen und handeln",
   publishedAt: '2026-03-08',

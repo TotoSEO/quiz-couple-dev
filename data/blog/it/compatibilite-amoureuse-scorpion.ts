@@ -5,7 +5,7 @@ const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-scorpione',
   title: `Compatibilità amorosa dello Scorpione: l'amore senza mezze misure`,
   metaTitle: `Compatibilità amorosa Scorpione: chi sopravvive alla sua intensità?`,
-  metaDescription: `Lo Scorpione ama senza mezze misure, e pretende lo stesso dall'altro. Quali segni possono reggere questa intensità? Analisi completa, segno per segno, senza giri di parole.`,
+  metaDescription: `Lo Scorpione ama senza mezze misure, e pretende lo stesso dall'altro. Quali segni possono reggere questa intensità?`,
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Simbolo astrologico dello Scorpione, compatibilità amorosa`,
   publishedAt: '2026-03-03',
