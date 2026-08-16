@@ -8239,3 +8239,24 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   margin: 1.1rem 0 0; font-size: 0.85rem; line-height: 1.6;
   color: hsl(var(--muted-foreground));
 }
+
+/* Invitation à laisser un avis en cours de partie (dilemmes) : une carte
+   douce posée sous les boutons, qui ne coupe pas l'élan du jeu. La rangée
+   d'étoiles y est greffée par quiz-extras, comme sur les écrans de fin. */
+.dil-invite {
+  width: 100%; max-width: 34rem; margin: 1.6rem auto 0;
+  padding: 1.1rem 1.25rem; border-radius: 1rem; text-align: center;
+  border: 1px dashed hsl(var(--primary) / 0.4);
+  background: linear-gradient(140deg, hsl(var(--primary) / 0.07), hsl(var(--secondary) / 0.05));
+}
+.dil-invite-titre { margin: 0; font-weight: 800; font-size: 1rem; }
+.dil-invite-texte {
+  margin: 0.35rem 0 0; font-size: 0.88rem; line-height: 1.55;
+  color: hsl(var(--muted-foreground));
+}
+/* La rangée d'étoiles greffée ici n'a pas besoin de son propre cadre :
+   l'encart en porte déjà un, et deux pointillés imbriqués font brouillon. */
+.dil-invite .qr-rate {
+  margin: 0.7rem auto 0; padding: 0; max-width: none;
+  border: 0; background: none;
+}
