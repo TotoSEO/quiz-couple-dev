@@ -382,6 +382,11 @@
   var statsRange = 30;
   var statsSelectedSlug = null;
   var _lastTotalSeries = null, _lastQuizSeries = null;
+  // Series quotidienne de chaque quiz : { slug: { 'AAAA-MM-JJ': n } }.
+  // Alimente le compteur vert du jour et le comparatif tops / flops.
+  var statsParJour = null;
+  var statsParJourUTC = false;
+  var statsComp = 7;
   function statsRpc(fn, body) {
     return fetch(SUPABASE_URL + '/rest/v1/rpc/' + fn, {
       method: 'POST',
@@ -440,8 +445,118 @@
       if (!Array.isArray(rows)) { if (listEl) listEl.innerHTML = '<p class="text-center text-destructive py-6">Erreur de chargement.</p>'; return; }
       statsCounts = rows.slice().sort(function (a, b) { return b.total - a.total; });
       renderStatsList();
+      // Les slugs sont connus : on peut charger les series quotidiennes
+      // (le repli sans RPC groupee en a besoin pour boucler sur les quiz).
+      chargeParJour();
     }).catch(function () { if (listEl) listEl.innerHTML = '<p class="text-center text-destructive py-6">Erreur reseau.</p>'; });
     loadTotalDaily(statsRange);
+  }
+
+  // ── Series quotidiennes par quiz : compteur du jour + tops / flops ──
+  // 62 jours couvrent la comparaison la plus large (30 jours contre les 30
+  // precedents) avec une marge pour le decalage de fuseau.
+  function chargeParJour() {
+    var tz = fuseau();
+    statsRpc('get_quiz_daily_par_quiz', { p_days: 62, p_tz: tz }).then(function (rows) {
+      if (Array.isArray(rows) && !rows.error) { indexeParJour(rows, false); return; }
+      throw new Error('pas de rpc');
+    }).catch(function () {
+      // La fonction groupee n'est peut-etre pas encore deployee : on retombe
+      // sur un appel par quiz, comme le fait deja la courbe totale.
+      var slugs = statsCounts.map(function (r) { return r.quiz_slug; });
+      if (slugs.length === 0) { indexeParJour([], false); return; }
+      Promise.all(slugs.map(function (s) {
+        return statsRpc('get_quiz_daily', { p_slug: s, p_days: 62, p_tz: tz })
+          .then(function (r) { return Array.isArray(r) && !r.error ? r : null; })
+          .catch(function () { return null; })
+          .then(function (r) {
+            if (r) return { slug: s, rows: r, utc: false };
+            return statsRpc('get_quiz_daily', { p_slug: s, p_days: 62 })
+              .then(function (r2) { return { slug: s, rows: Array.isArray(r2) ? r2 : [], utc: true }; })
+              .catch(function () { return { slug: s, rows: [], utc: false }; });
+          });
+      })).then(function (tous) {
+        var plates = [], enUTC = false;
+        tous.forEach(function (t) {
+          if (t.utc) enUTC = true;
+          t.rows.forEach(function (r) {
+            plates.push({ quiz_slug: t.slug, day: rowDateKey(r), total: rowTotal(r) });
+          });
+        });
+        indexeParJour(plates, enUTC);
+      });
+    });
+  }
+  function indexeParJour(rows, enUTC) {
+    statsParJour = {};
+    statsParJourUTC = enUTC;
+    (rows || []).forEach(function (r) {
+      var slug = r.quiz_slug, k = rowDateKey(r);
+      if (!slug || !k) return;
+      if (!statsParJour[slug]) statsParJour[slug] = {};
+      statsParJour[slug][k] = (statsParJour[slug][k] || 0) + rowTotal(r);
+    });
+    renderStatsList();
+    renderMovers();
+  }
+  // Cle AAAA-MM-JJ du jour situe n jours avant aujourd'hui, dans le meme
+  // decoupage (local ou UTC) que les series recues.
+  function isoNJoursAvant(n) {
+    var d = new Date();
+    if (statsParJourUTC) d.setUTCHours(0, 0, 0, 0); else d.setHours(0, 0, 0, 0);
+    d = new Date(d.getTime() - n * 86400000);
+    var an = statsParJourUTC ? d.getUTCFullYear() : d.getFullYear();
+    var mo = (statsParJourUTC ? d.getUTCMonth() : d.getMonth()) + 1;
+    var jo = statsParJourUTC ? d.getUTCDate() : d.getDate();
+    return an + '-' + String(mo).padStart(2, '0') + '-' + String(jo).padStart(2, '0');
+  }
+  function parJourDuQuiz(slug) { return (statsParJour && statsParJour[slug]) || {}; }
+  function sommeFenetre(slug, de, a) {
+    var m = parJourDuQuiz(slug), t = 0;
+    for (var i = de; i <= a; i++) t += m[isoNJoursAvant(i)] || 0;
+    return t;
+  }
+  function comptagesDuJour(slug) { return parJourDuQuiz(slug)[isoNJoursAvant(0)] || 0; }
+
+  function renderMovers() {
+    var hausseEl = document.getElementById('admin-movers-hausse');
+    var baisseEl = document.getElementById('admin-movers-baisse');
+    if (!hausseEl || !baisseEl) return;
+    if (!statsParJour) {
+      hausseEl.innerHTML = baisseEl.innerHTML = '<p class="stats-movers-vide">Chargement...</p>';
+      return;
+    }
+    // Fenetres selon le filtre : aujourd'hui vs hier, 7 derniers jours vs
+    // les 7 precedents, 30 derniers vs les 30 precedents.
+    var n = statsComp;
+    var lignes = statsCounts.map(function (r) {
+      var slug = r.quiz_slug;
+      var actuel = sommeFenetre(slug, 0, n - 1);
+      var avant = sommeFenetre(slug, n, 2 * n - 1);
+      return { slug: slug, actuel: actuel, avant: avant, delta: actuel - avant };
+    });
+    function ligne(x) {
+      var cls = x.delta > 0 ? 'est-plus' : 'est-moins';
+      var badge;
+      if (x.avant === 0 && x.actuel > 0) badge = 'nouveau';
+      else {
+        var pct = Math.round((x.delta / x.avant) * 100);
+        badge = (x.delta > 0 ? '+' : '') + x.delta + ' (' + (pct > 0 ? '+' : '') + pct + ' %)';
+      }
+      return '<div class="stats-mover" title="' + esc(x.slug) + '">'
+        + '<span class="stats-mover-nom">' + esc(nomQuiz(x.slug)) + '</span>'
+        + '<span class="stats-mover-vals">' + x.avant.toLocaleString('fr-FR') + ' → ' + x.actuel.toLocaleString('fr-FR') + '</span>'
+        + '<span class="stats-mover-delta ' + cls + '">' + badge + '</span>'
+        + '</div>';
+    }
+    var hausses = lignes.filter(function (x) { return x.delta > 0; })
+      .sort(function (a, b) { return b.delta - a.delta || b.actuel - a.actuel; }).slice(0, 5);
+    var baisses = lignes.filter(function (x) { return x.delta < 0; })
+      .sort(function (a, b) { return a.delta - b.delta || b.avant - a.avant; }).slice(0, 5);
+    hausseEl.innerHTML = hausses.length ? hausses.map(ligne).join('')
+      : '<p class="stats-movers-vide">Rien en hausse sur la période.</p>';
+    baisseEl.innerHTML = baisses.length ? baisses.map(ligne).join('')
+      : '<p class="stats-movers-vide">Rien en baisse sur la période. 🎉</p>';
   }
 
   // Total completions per day. Prefer the dedicated RPC; if it is missing
@@ -509,9 +624,21 @@
     var max = statsCounts[0].total || 1;
     listEl.innerHTML = statsCounts.map(function (r) {
       var pct = Math.round((r.total / max) * 100);
+      // Le compteur vert : parties de la journee en cours. Tant que les
+      // series quotidiennes ne sont pas chargees, la colonne reste vide
+      // puis se remplit au second rendu.
+      var jour = '';
+      if (statsParJour) {
+        var nJour = comptagesDuJour(r.quiz_slug);
+        jour = nJour > 0 ? '+' + nJour.toLocaleString('fr-FR') : '0';
+        jour = '<span class="stats-row-jour' + (nJour > 0 ? '' : ' est-zero') + '" title="Aujourd\'hui">' + jour + '</span>';
+      } else {
+        jour = '<span class="stats-row-jour"></span>';
+      }
       return '<button class="stats-row" data-slug="' + esc(r.quiz_slug) + '" title="' + esc(r.quiz_slug) + '">'
         + '<span class="stats-row-name">' + esc(nomQuiz(r.quiz_slug)) + '</span>'
         + '<span class="stats-row-bar"><span style="width:' + pct + '%"></span></span>'
+        + jour
         + '<span class="stats-row-val">' + Number(r.total).toLocaleString('fr-FR') + '</span>'
         + '</button>';
     }).join('');
@@ -1703,6 +1830,16 @@
         this.classList.add('active');
         statsRange = parseInt(this.dataset.range, 10) || 30;
         loadTotalDaily(statsRange);
+      });
+    });
+    // Filtre du comparatif tops / flops : aujourd'hui vs hier, 7 jours vs
+    // les 7 precedents, 30 jours vs les 30 precedents.
+    document.querySelectorAll('.stats-comp-btn').forEach(function (b) {
+      b.addEventListener('click', function () {
+        document.querySelectorAll('.stats-comp-btn').forEach(function (x) { x.classList.remove('active'); });
+        this.classList.add('active');
+        statsComp = parseInt(this.dataset.comp, 10) || 7;
+        renderMovers();
       });
     });
     // Redraw charts on resize (canvas is width-dependent)
