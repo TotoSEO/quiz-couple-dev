@@ -234,7 +234,8 @@
     "jauge_sans_couple": "The further right the marker, the less pure you are.",
     "jauge_compare_solo": "Out of <strong>{n}</strong> tests, you are less pure than <strong>{devant}%</strong> of people.",
     "jauge_compare_couple": "Out of <strong>{n}</strong> tests, you are less pure than <strong>{devant}%</strong> of people.",
-    "partage_copie_msg": "Message copied, paste it wherever you like"
+    "partage_copie_msg": "Message copied, paste it wherever you like",
+    "hero_jauge_moyenne": "Average score"
   },
   "meta": {
     "titre": "Purity test for couples | Online & free",

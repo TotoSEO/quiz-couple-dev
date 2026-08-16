@@ -234,7 +234,8 @@
     "jauge_sans_couple": "Più il cursore è a destra, meno siete puri.",
     "jauge_compare_solo": "Su <strong>{n}</strong> test, sei meno puro del <strong>{devant}%</strong> delle persone.",
     "jauge_compare_couple": "Su <strong>{n}</strong> test, siete meno puri del <strong>{devant}%</strong> delle persone.",
-    "partage_copie_msg": "Messaggio copiato, incollalo dove vuoi"
+    "partage_copie_msg": "Messaggio copiato, incollalo dove vuoi",
+    "hero_jauge_moyenne": "Punteggio medio"
   },
   "meta": {
     "titre": "Test di purezza per coppie | Online e gratis",

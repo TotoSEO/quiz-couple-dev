@@ -205,7 +205,9 @@
       <span class="pu-cta-fleche" aria-hidden="true">→</span>
     </a>
 
-    <p class="pu-hero-moyenne" id="purete-moyenne" hidden></p>
+    <%# La jauge du score moyen : le même graphique que sur l'écran de
+        résultat, curseur posé sur la moyenne des parties enregistrées. %>
+    <div class="pu-hero-jauge" id="purete-moyenne" hidden></div>
   </div>
 </section>
 
@@ -401,20 +403,42 @@
    PC les deux se retrouvaient côte à côte. `flex` est de niveau bloc, donc
    la pastille occupe sa propre ligne, et `width: fit-content` avec des
    marges automatiques la garde centrée sans s'étirer sur toute la largeur. */
-.pu-hero-compteur, .pu-hero-moyenne {
-  display: flex; width: fit-content; align-items: center; gap: .45rem;
-  padding: .45rem 1rem; border-radius: 999px;
-  border: 1px solid hsl(0 0% 100% / .22);
-  background: hsl(0 0% 100% / .07);
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
-  font-size: .82rem; font-weight: 700; letter-spacing: .01em;
-  color: hsl(0 0% 100% / .92);
+/* Le compteur de parties : une pastille vivante collée au bouton, avec un
+   point vert qui pulse comme un indicateur en direct. */
+.pu-hero-compteur {
+  display: flex; width: fit-content; align-items: center; gap: .55rem;
+  margin: 0 auto 1.15rem; padding: .5rem 1.15rem; border-radius: 999px;
+  border: 1px solid hsl(0 0% 100% / .28);
+  background: linear-gradient(120deg, hsl(0 0% 100% / .16), hsl(0 0% 100% / .05));
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  font-size: .84rem; font-weight: 700; letter-spacing: .01em;
+  color: hsl(0 0% 100% / .95);
+  box-shadow: 0 4px 18px -8px rgb(0 0 0 / .4), inset 0 1px 0 hsl(0 0% 100% / .22);
 }
-/* Le compteur est collé au bouton, la moyenne le suit juste en dessous :
-   les deux chiffres encadrent l'appel à l'action au lieu de flotter en haut. */
-.pu-hero-compteur { margin: 0 auto 1.15rem; }
-.pu-hero-moyenne { margin: 1.5rem auto 0; }
-.pu-hero-compteur[hidden], .pu-hero-moyenne[hidden] { display: none; }
+.pu-compteur-point {
+  width: .5rem; height: .5rem; border-radius: 999px; flex-shrink: 0;
+  background: hsl(150 70% 55%);
+  animation: puCompteurPouls 2.2s ease-out infinite;
+}
+@keyframes puCompteurPouls {
+  0% { box-shadow: 0 0 0 0 hsl(150 70% 55% / .55); }
+  70% { box-shadow: 0 0 0 7px hsl(150 70% 55% / 0); }
+  100% { box-shadow: 0 0 0 0 hsl(150 70% 55% / 0); }
+}
+.pu-hero-compteur[hidden] { display: none; }
+
+/* La jauge du score moyen sous le bouton : une carte claire qui porte le
+   même graphique que l'écran de résultat, rien d'autre. */
+.pu-hero-jauge {
+  max-width: 30rem; margin: 1.6rem auto 0; padding: 1rem 1.15rem 1.15rem;
+  border-radius: 1.1rem;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border) / .7);
+  box-shadow: 0 18px 40px -18px rgb(0 0 0 / .5);
+  text-align: left;
+}
+.pu-hero-jauge .pu-jauge { margin: 0; max-width: none; }
+.pu-hero-jauge[hidden] { display: none; }
 
 .pu-h1 {
   font-family: 'Poppins', 'Inter', sans-serif;

@@ -419,9 +419,10 @@
   // test, de zéro au maximum, avec les paliers en fond et un curseur sur le
   // score. La courbe des scores réellement enregistrés vient se poser
   // par-dessus quand il y a de quoi la dessiner, sans rien déplacer.
-  function blocJauge(score, pct) {
-    var boite = el('div', 'pu-jauge');
-    var s = statsGlobales;
+  // Le dessin lui-même est partagé : la jauge du résultat et celle du hero
+  // (score moyen sous le bouton) tracent le même graphique, seuls le curseur,
+  // l'étiquette et l'habillage autour changent.
+  function svgJauge(pct, paliers, s, aria) {
     var avecCourbe = !!(s && s.assez);
 
     // Deux hauteurs. Sans courbe, la jauge reste une réglette fine. Avec la
@@ -439,8 +440,7 @@
     // Fond : les paliers du test, du plus sage au plus chargé. La teinte
     // glisse du rose clair au rose profond, donc la position se lit même
     // sans regarder les chiffres.
-    var paliers = (D && D[mode] && D[mode].paliers) || [];
-    paliers.forEach(function (pal) {
+    (paliers || []).forEach(function (pal) {
       var x1 = gauche + ((droite - gauche) * pal.min) / 100;
       var x2 = gauche + ((droite - gauche) * Math.min(pal.max, 100)) / 100;
       var t = pal.min / 100;
@@ -528,16 +528,26 @@
       : '<circle cx="' + x.toFixed(1) + '" cy="' + ySurCourbe.toFixed(1) +
         '" r="6.5" fill="hsl(var(--foreground))" stroke="hsl(var(--card))" stroke-width="3.5"/>';
 
+    return {
+      svg: '<svg class="pu-jauge-svg" viewBox="0 0 ' + L + ' ' + H +
+        '" role="img" aria-label="' + esc(aria) + '">' + svg + '</svg>',
+      x: x, L: L
+    };
+  }
+
+  function blocJauge(score, pct) {
+    var boite = el('div', 'pu-jauge');
+    var s = statsGlobales;
     var aria = fmt(T('jauge_aria', 'Votre score de {score} points sur {max}'), { score: nb(score), max: nb(scoreMax) });
+    var res = svgJauge(pct, (D && D[mode] && D[mode].paliers) || [], s, aria);
     // Les repères d'axe sont en HTML et non dans le SVG : le viewBox met le
     // texte à l'échelle, et sur un téléphone onze unités tombaient à six
     // pixels réels. En HTML ils gardent leur taille quelle que soit la largeur.
-    boite.innerHTML = '<div class="pu-jauge-boite"><svg class="pu-jauge-svg" viewBox="0 0 ' + L + ' ' + H +
-      '" role="img" aria-label="' + esc(aria) + '">' + svg + '</svg></div>' +
+    boite.innerHTML = '<div class="pu-jauge-boite">' + res.svg + '</div>' +
       '<div class="pu-jauge-axes"><span>0</span><span>' + esc(nb(scoreMax)) + '</span></div>';
 
     var etiq = el('span', 'pu-jauge-ici', T('jauge_ici', 'Vous êtes ici'));
-    etiq.style.left = ((x / L) * 100).toFixed(2) + '%';
+    etiq.style.left = ((res.x / res.L) * 100).toFixed(2) + '%';
     boite.firstChild.appendChild(etiq);
 
     // Sous la jauge : la comparaison si elle existe, sinon le rappel du sens
@@ -557,6 +567,21 @@
         'Plus le curseur est à droite, moins vous êtes purs.');
     }
     boite.appendChild(el('p', 'pu-jauge-sous', sous));
+    return boite;
+  }
+
+  // La jauge du hero : le même graphique que sur le résultat, mais le
+  // curseur marque le score moyen des parties enregistrées. Rien d'autre :
+  // ni axes, ni phrase, juste le dessin et son étiquette.
+  function jaugeMoyenneHero(s) {
+    var paliers = (D && D.solo && D.solo.paliers) || (D && D.couple && D.couple.paliers) || [];
+    var aria = fmt(T('hero_moyenne', 'Score moyen : {n} points'), { n: nb(s.moyenne) });
+    var res = svgJauge(s.moyennePct, paliers, s, aria);
+    var boite = el('div', 'pu-jauge pu-jauge--hero');
+    boite.innerHTML = '<div class="pu-jauge-boite">' + res.svg + '</div>';
+    var etiq = el('span', 'pu-jauge-ici', T('hero_jauge_moyenne', 'Score moyen'));
+    etiq.style.left = ((res.x / res.L) * 100).toFixed(2) + '%';
+    boite.firstChild.appendChild(etiq);
     return boite;
   }
 
@@ -674,19 +699,24 @@
         versLeHaut(RACINE);
       });
     }
-    // Le compteur de parties et la moyenne annoncés dans le hero viennent des
-    // mêmes agrégats que la courbe. S'ils manquent, les emplacements restent
-    // masqués : mieux vaut un hero plus court qu'un chiffre inventé.
-    chargeStats(null).then(function (s) {
+    // Le compteur de parties et la jauge du score moyen viennent des mêmes
+    // agrégats que la courbe. S'ils manquent, les emplacements restent
+    // masqués : mieux vaut un hero plus court qu'un chiffre inventé. Les
+    // données du test sont chargées en parallèle pour dessiner les paliers
+    // en fond de jauge (et le moteur en aura besoin de toute façon).
+    Promise.all([chargeStats(null), charge().catch(function () { return null; })]).then(function (deux) {
+      var s = deux[0];
       if (!s) return;
       var cpt = document.getElementById('purete-compteur');
       if (cpt && s.total > 0) {
-        cpt.textContent = fmt(T('hero_compteur', 'Ce test a déjà été fait {n} fois'), { n: nb(s.total) });
+        cpt.innerHTML = '<span class="pu-compteur-point" aria-hidden="true"></span>' +
+          esc(fmt(T('hero_compteur', 'Ce test a déjà été fait {n} fois'), { n: nb(s.total) }));
         cpt.hidden = false;
       }
       var moy = document.getElementById('purete-moyenne');
       if (moy && s.assez) {
-        moy.textContent = fmt(T('hero_moyenne', 'Score moyen : {n} points'), { n: nb(s.moyenne) });
+        moy.innerHTML = '';
+        moy.appendChild(jaugeMoyenneHero(s));
         moy.hidden = false;
       }
     });

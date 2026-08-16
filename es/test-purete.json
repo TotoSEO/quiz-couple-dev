@@ -234,7 +234,8 @@
     "jauge_sans_couple": "Cuanto más a la derecha está el cursor, menos puros sois.",
     "jauge_compare_solo": "De <strong>{n}</strong> tests, eres menos puro que el <strong>{devant}%</strong> de la gente.",
     "jauge_compare_couple": "De <strong>{n}</strong> tests, sois menos puros que el <strong>{devant}%</strong> de la gente.",
-    "partage_copie_msg": "Mensaje copiado, pégalo donde quieras"
+    "partage_copie_msg": "Mensaje copiado, pégalo donde quieras",
+    "hero_jauge_moyenne": "Puntuación media"
   },
   "meta": {
     "titre": "Test de pureza para parejas | Online y gratis",
