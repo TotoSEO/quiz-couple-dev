@@ -18,6 +18,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Historique complet : sans lui, git ne connaît qu'un commit et le
+          # sitemap redaterait toutes les pages à chaque reconstruction, sept
+          # fois par jour, alors que le contenu n'a pas bougé.
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

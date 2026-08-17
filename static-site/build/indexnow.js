@@ -1,11 +1,18 @@
 #!/usr/bin/env node
 /**
  * IndexNow URL submission script for quiz-couple.com
- * Reads all URLs from generated sitemaps and submits them to IndexNow API.
+ * Reads URLs from the generated sitemaps and submits them to the IndexNow API.
+ *
+ * IndexNow sert à signaler ce qui vient de changer. On soumettait les 431 URLs
+ * du site à chaque déploiement, y compris des pages intouchées depuis des mois :
+ * le signal ne voulait plus rien dire. On ne soumet donc que les pages dont le
+ * `lastmod` du sitemap est récent, en se reposant sur le fait que ce lastmod
+ * reflète désormais une vraie date de modification (voir build/git-dates.js).
  *
  * Usage:
- *   node build/indexnow.js           # Submit all URLs from all sitemaps
- *   node build/indexnow.js --dry-run # Print URLs without submitting
+ *   node build/indexnow.js           # Soumet les URLs modifiées récemment
+ *   node build/indexnow.js --all     # Soumet tout (remise à plat d'un index)
+ *   node build/indexnow.js --dry-run # Affiche sans soumettre
  */
 import fs from 'fs';
 import path from 'path';
@@ -20,16 +27,35 @@ const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/IndexNow';
 const BATCH_SIZE = 100; // IndexNow max 10,000 per request, use 100 per batch
 
 const dryRun = process.argv.includes('--dry-run');
+const soumettreTout = process.argv.includes('--all');
+
+// Fenêtre de fraîcheur. Large assez pour couvrir un déploiement qui traîne ou
+// une série de commits étalée sur quelques jours, courte assez pour que la
+// soumission reste un signal et pas un inventaire.
+const JOURS_RECENTS = 7;
 
 function extractUrlsFromSitemap(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');
   const urls = [];
-  const locRegex = /<loc>(https?:\/\/[^<]+)<\/loc>/g;
+  // Une entrée <url> peut porter un <lastmod>, ou aucun quand git n'a pas su
+  // dater la page. Sans date, on s'abstient : rien ne prouve qu'elle a changé.
+  const urlRegex = /<url>([\s\S]*?)<\/url>/g;
   let match;
-  while ((match = locRegex.exec(content)) !== null) {
-    urls.push(match[1]);
+  while ((match = urlRegex.exec(content)) !== null) {
+    const bloc = match[1];
+    const loc = /<loc>(https?:\/\/[^<]+)<\/loc>/.exec(bloc);
+    if (!loc) continue;
+    const lastmod = /<lastmod>([^<]+)<\/lastmod>/.exec(bloc);
+    urls.push({ url: loc[1], lastmod: lastmod ? lastmod[1].trim() : null });
   }
   return urls;
+}
+
+function estRecent(lastmod) {
+  if (!lastmod) return false;
+  const limite = new Date();
+  limite.setUTCDate(limite.getUTCDate() - JOURS_RECENTS);
+  return lastmod >= limite.toISOString().split('T')[0];
 }
 
 async function submitBatch(urls, host) {
@@ -54,14 +80,27 @@ async function main() {
   const allUrls = new Set();
   const sitemapFiles = ['sitemap-fr.xml', 'sitemap-en.xml', 'sitemap-es.xml', 'sitemap-de.xml', 'sitemap-it.xml'];
 
+  let total = 0;
   for (const file of sitemapFiles) {
     const filePath = path.join(DIST_DIR, file);
-    if (fs.existsSync(filePath)) {
-      const urls = extractUrlsFromSitemap(filePath);
-      urls.forEach(u => allUrls.add(u));
-      console.log(`[indexnow] ${file}: ${urls.length} URLs`);
-    }
+    if (!fs.existsSync(filePath)) continue;
+    const entrees = extractUrlsFromSitemap(filePath);
+    const retenues = soumettreTout ? entrees : entrees.filter(e => estRecent(e.lastmod));
+    retenues.forEach(e => allUrls.add(e.url));
+    total += entrees.length;
+    console.log(`[indexnow] ${file}: ${retenues.length} URLs retenues sur ${entrees.length}`);
   }
+
+  if (allUrls.size === 0) {
+    console.log(
+      `[indexnow] Aucune page modifiée depuis ${JOURS_RECENTS} jours sur ${total} URLs, rien à soumettre.`
+    );
+    return;
+  }
+  console.log(
+    `[indexnow] ${allUrls.size} URLs à soumettre sur ${total}` +
+    (soumettreTout ? ' (--all)' : ` (modifiées depuis ${JOURS_RECENTS} jours)`)
+  );
 
   // Group URLs by host (IndexNow requires host to match URL domain)
   const urlsByHost = {};

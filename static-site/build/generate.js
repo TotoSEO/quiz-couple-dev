@@ -20,10 +20,12 @@ import {
   estPageJouable, genrePageJouable,
 } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
+import { buildGitDateIndex, dateLaPlusRecente } from './git-dates.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TEMPLATES_DIR = path.resolve(__dirname, '../templates');
 const DIST_DIR = path.resolve(__dirname, '../dist');
+const REPO_ROOT = path.resolve(__dirname, '../..');
 
 // ── Empreinte des ressources ────────────────────────────────────────────────
 // Les scripts, la feuille de style et les fichiers de questions étaient servis
@@ -867,7 +869,39 @@ function generateSitemaps() {
 
   // Collect all page entries (routes + blog articles)
   const entries = [];
-  const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+
+  // ── Dates de dernière modification ────────────────────────────────────────
+  // Le `lastmod` valait la date du build. Le site se reconstruisant sept fois
+  // par jour, toutes les pages de route se déclaraient modifiées chaque jour
+  // sans avoir bougé, ce qui apprend à Google à ne plus croire le sitemap.
+  // On lit désormais la vraie date dans l'historique git, et à défaut on
+  // n'annonce aucune date : un sitemap muet vaut mieux qu'un sitemap qui ment.
+  const gitIndex = buildGitDateIndex(REPO_ROOT);
+  if (!gitIndex.ok) {
+    console.warn(`[sitemaps] Aucune date git (${gitIndex.raison}) : les pages de route sortiront sans lastmod.`);
+  }
+
+  // Un espace de noms partagé par plusieurs routes (common, quizzes, gd…) décrit
+  // l'habillage du site, pas le contenu d'une page donnée. Le faire compter
+  // ramènerait toutes les pages à la même date au moindre changement de menu.
+  const compteNamespaces = new Map();
+  for (const cfg of Object.values(ROUTE_CONFIG)) {
+    for (const ns of cfg.namespaces || []) {
+      compteNamespaces.set(ns, (compteNamespaces.get(ns) || 0) + 1);
+    }
+  }
+
+  function fichiersSourceRoute(key) {
+    const cfg = ROUTE_CONFIG[key];
+    if (!cfg) return [];
+    const fichiers = [];
+    if (cfg.template) fichiers.push(`static-site/templates/pages/${cfg.template}.ejs`);
+    for (const ns of cfg.namespaces || []) {
+      if ((compteNamespaces.get(ns) || 0) > 1) continue;
+      for (const lang of LANGUAGES) fichiers.push(`${lang}/${ns}.json`);
+    }
+    return fichiers;
+  }
 
   // Static routes
   for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
@@ -894,7 +928,8 @@ function generateSitemaps() {
     else if (key === 'contact' || key === 'about') { priority = '0.4'; changefreq = 'monthly'; }
     else if (key === 'activities') { priority = '0.6'; changefreq = 'weekly'; }
 
-    entries.push({ urlsByLang, lastmod: today, priority, changefreq, frOnly: isFrOnly || false });
+    const lastmod = dateLaPlusRecente(gitIndex.dates, fichiersSourceRoute(key));
+    entries.push({ urlsByLang, lastmod, priority, changefreq, frOnly: isFrOnly || false });
   }
 
   // Blog articles
@@ -912,6 +947,7 @@ function generateSitemaps() {
   }
 
   // Generate one sitemap per language
+  const maxLastmodParLangue = new Map();
   for (const lang of LANGUAGES) {
     let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
     xml += `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n`;
@@ -933,6 +969,8 @@ function generateSitemaps() {
       }
       if (entry.lastmod) {
         xml += `    <lastmod>${entry.lastmod}</lastmod>\n`;
+        const courant = maxLastmodParLangue.get(lang);
+        if (!courant || entry.lastmod > courant) maxLastmodParLangue.set(lang, entry.lastmod);
       }
       if (entry.changefreq) {
         xml += `    <changefreq>${entry.changefreq}</changefreq>\n`;
@@ -947,17 +985,25 @@ function generateSitemaps() {
     fs.writeFileSync(path.join(DIST_DIR, `sitemap-${lang}.xml`), xml);
   }
 
-  // Sitemap index
+  // Sitemap index : la date d'un sitemap est celle de sa page la plus
+  // récemment modifiée, pas celle du build.
   let index = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   index += `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n`;
   index += `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
   for (const lang of LANGUAGES) {
-    index += `  <sitemap>\n    <loc>${B}/sitemap-${lang}.xml</loc>\n    <lastmod>${today}</lastmod>\n  </sitemap>\n`;
+    const derniere = maxLastmodParLangue.get(lang);
+    index += `  <sitemap>\n    <loc>${B}/sitemap-${lang}.xml</loc>\n`;
+    if (derniere) index += `    <lastmod>${derniere}</lastmod>\n`;
+    index += `  </sitemap>\n`;
   }
   index += `</sitemapindex>`;
   fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), index);
 
-  console.log(`[sitemaps] Generated sitemap index + ${LANGUAGES.length} language sitemaps (${entries.length} URLs each)`);
+  const sansDate = entries.filter(e => !e.lastmod).length;
+  console.log(
+    `[sitemaps] Generated sitemap index + ${LANGUAGES.length} language sitemaps (${entries.length} URLs each)` +
+    (sansDate ? ` — ${sansDate} sans lastmod` : '')
+  );
 }
 
 // ── Static assets ───────────────────────────────────────────────────────
