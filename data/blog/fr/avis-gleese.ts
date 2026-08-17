@@ -73,7 +73,26 @@ const article: BlogArticleData = {
 </table>
 </div>
 
-<p>Pour situer tout de suite : <strong>on met 9,5/10</strong>, et ce n'est pas une note de complaisance. C'est la note d'une plateforme qui fait presque tout bien sur le plan de l'expérience, et à qui il manque surtout du monde. Le détail du raisonnement est plus bas.</p>`,
+<p>Pour situer tout de suite : <strong>on met 9,5/10</strong>, et ce n'est pas une note de complaisance. C'est la note d'une plateforme qui fait presque tout bien sur le plan de l'expérience, et à qui il manque surtout du monde. Le détail du raisonnement est plus bas.</p>
+
+<div class="blog-offre">
+  <a class="blog-offre-visuel" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored nofollow noopener" aria-label="Découvrir Gleese">
+    <img src="/blog/gleese-banniere.webp" alt="L'application Gleese : le fil, les stories et l'essai gratuit sans carte bancaire" width="1080" height="1080" loading="lazy">
+  </a>
+  <div class="blog-offre-corps">
+    <p class="blog-offre-kicker">Notre plateforme libertine préférée</p>
+    <p class="blog-offre-nom">Gleese</p>
+    <p class="blog-offre-note"><strong>9,5<small>/10</small></strong> <span aria-hidden="true">★★★★★</span></p>
+    <ul class="blog-offre-points">
+      <li>Essai gratuit, <strong>sans carte bancaire</strong></li>
+      <li>Modération avant publication, photos protégées</li>
+      <li>Français, pensé pour les couples</li>
+      <li>À partir d'environ <strong>7,50 €/mois</strong></li>
+    </ul>
+    <a class="blog-offre-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored nofollow noopener">Créer mon profil gratuitement</a>
+    <p class="blog-offre-note-bas">Inscription en 2 minutes &middot; Réservé aux majeurs</p>
+  </div>
+</div>`,
     },
     {
       id: 'qu-est-ce-que-gleese',
@@ -82,9 +101,7 @@ const article: BlogArticleData = {
 
 <p>La différence avec un Tinder ou un Bumble, ce n'est pas juste le thème. C'est la <strong>structure même du produit</strong>. Là où les applis de rencontre classiques sont construites autour du swipe (une photo, un jugement d'une demi-seconde, on passe), Gleese ressemble beaucoup plus à un réseau social : il y a un fil, des stories, des publications, des discussions de groupe. On n'est pas dans le catalogue, on est dans la communauté.</p>
 
-<p>Et honnêtement, pour ce type de rencontres, ça a beaucoup plus de sens. <strong>Le libertinage, ça ne se décide pas en swipant.</strong> Ça passe par de la conversation, de la mise en confiance, du temps. Une interface qui laisse ce temps-là exister, c'est déjà la moitié du travail.</p>
-
-<div class="blog-img-wrap"><img src="/blog/gleese-banniere.webp" alt="Bannière Gleese montrant l'application avec les stories, le fil de publications et l'essai gratuit sans carte bancaire" width="1080" height="1080" loading="lazy"></div>`,
+<p>Et honnêtement, pour ce type de rencontres, ça a beaucoup plus de sens. <strong>Le libertinage, ça ne se décide pas en swipant.</strong> Ça passe par de la conversation, de la mise en confiance, du temps. Une interface qui laisse ce temps-là exister, c'est déjà la moitié du travail.</p>`,
     },
     {
       id: 'l-inscription-et-les-premieres-heures',
@@ -103,7 +120,7 @@ const article: BlogArticleData = {
 <div class="blog-cta">
 <p class="blog-cta-titre">Envie de vous faire votre propre idée ?</p>
 <p class="blog-cta-texte">L'inscription prend deux minutes, sans carte bancaire. Vous pouvez déjà voir s'il y a du monde autour de chez vous avant de décider quoi que ce soit.</p>
-<a class="blog-cta-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored noopener">Créer mon profil gratuitement</a>
+<a class="blog-cta-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored nofollow noopener">Créer mon profil gratuitement</a>
 <p class="blog-cta-note">Inscription gratuite &middot; Sans carte bancaire &middot; Réservé aux majeurs</p>
 </div>`,
     },
@@ -182,11 +199,15 @@ const article: BlogArticleData = {
 
 <p>Mon avis sur le prix : <strong>c'est honnête.</strong> À 7,50 € par mois sur l'année, on est très loin des 35 € mensuels que peut coûter un Tinder au maximum de ses options. Et surtout, ici, vous savez ce que vous achetez. Il n'y a pas de boost à l'unité, pas de super-piment vendu 3 €, pas de mécanique de frustration conçue pour vous faire sortir la carte tous les trois jours. Vous payez, vous avez tout. C'est reposant.</p>
 
-<div class="blog-cta">
-<p class="blog-cta-titre">Testez avant de payer quoi que ce soit</p>
-<p class="blog-cta-texte">La version gratuite suffit pour juger de l'ambiance et du nombre de profils dans votre région. Aucune carte bancaire n'est demandée à l'inscription.</p>
-<a class="blog-cta-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored noopener">Essayer Gleese gratuitement</a>
-<p class="blog-cta-note">Inscription gratuite &middot; Sans carte bancaire &middot; Réservé aux majeurs</p>
+<div class="blog-banniere">
+<a class="blog-banniere-visuel" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored nofollow noopener" aria-label="Créer un profil gratuit sur Gleese">
+<img src="/blog/gleese-banniere.webp" alt="Bannière Gleese : essai 100 % gratuit, sans carte bancaire, avec vérification du numéro de téléphone" width="1080" height="1080" loading="lazy">
+</a>
+<div class="blog-banniere-pied">
+<p class="blog-banniere-texte">La version gratuite suffit pour juger de l'ambiance et du nombre de profils dans votre région.</p>
+<a class="blog-cta-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored nofollow noopener">Essayer Gleese gratuitement</a>
+<p class="blog-cta-note">Sans carte bancaire &middot; Réservé aux majeurs</p>
+</div>
 </div>`,
     },
     {
@@ -282,7 +303,7 @@ const article: BlogArticleData = {
 <div class="blog-cta">
 <p class="blog-cta-titre">Notre recommandation, en un clic</p>
 <p class="blog-cta-texte">Si le libertinage vous intrigue à deux et que vous cherchez un endroit où avancer sans pression, c'est par là que je commencerais.</p>
-<a class="blog-cta-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored noopener">Découvrir Gleese</a>
+<a class="blog-cta-btn" href="https://gleese.com/?ae=103" target="_blank" rel="sponsored nofollow noopener">Rejoindre Gleese gratuitement</a>
 <p class="blog-cta-note">Inscription gratuite &middot; Sans carte bancaire &middot; Réservé aux majeurs</p>
 </div>
 

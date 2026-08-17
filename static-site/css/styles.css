@@ -2005,15 +2005,21 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
     hsl(var(--card));
   box-shadow: 0 24px 50px -34px hsl(var(--primary) / .85);
 }
+/* Les sélecteurs sont qualifiés : .blog-article p impose 1,08rem à tous les
+   paragraphes et gagnerait sur une classe seule, ce qui écrasait la hiérarchie
+   du bloc (titre, texte et mention se retrouvaient à la même taille). */
+.blog-article p.blog-cta-titre,
 .blog-cta-titre {
   font-family: var(--font-display); font-size: 1.2rem; font-weight: 800;
   line-height: 1.25; margin: 0; color: hsl(var(--foreground)); text-wrap: balance;
 }
+.blog-article p.blog-cta-texte,
 .blog-cta-texte {
   margin: 0; max-width: 30rem; font-size: .93rem; line-height: 1.55;
   color: hsl(var(--muted-foreground));
 }
-.blog-cta a.blog-cta-btn {
+.blog-cta a.blog-cta-btn,
+.blog-banniere a.blog-cta-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
   margin-top: .5rem; padding: 1rem 2.25rem; border-radius: 9999px;
   background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--secondary)));
@@ -2022,9 +2028,10 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   box-shadow: 0 16px 34px -14px hsl(var(--primary) / .9);
   transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
 }
-.blog-cta a.blog-cta-btn::after { content: '→'; font-weight: 400; transition: transform .18s ease; }
-.blog-cta a.blog-cta-btn:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 22px 42px -14px hsl(var(--primary) / 1); }
-.blog-cta a.blog-cta-btn:hover::after { transform: translateX(4px); }
+a.blog-cta-btn::after { content: '→'; font-weight: 400; transition: transform .18s ease; }
+a.blog-cta-btn:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 22px 42px -14px hsl(var(--primary) / 1); }
+a.blog-cta-btn:hover::after { transform: translateX(4px); }
+.blog-article p.blog-cta-note,
 .blog-cta-note {
   margin: .35rem 0 0; font-size: .74rem; letter-spacing: .02em;
   color: hsl(var(--muted-foreground) / .85);
@@ -2034,8 +2041,133 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .blog-cta a.blog-cta-btn { width: 100%; padding-inline: 1rem; font-size: .95rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .blog-cta a.blog-cta-btn:hover { transform: none; }
-  .blog-cta a.blog-cta-btn:hover::after { transform: none; }
+  a.blog-cta-btn:hover { transform: none; }
+  a.blog-cta-btn:hover::after { transform: none; }
+}
+
+/* ── Fiche partenaire ──────────────────────────────────────
+   Le verdict d'un test d'application, c'est une note et quatre
+   arguments. Autant les montrer ensemble, au moment où le lecteur
+   vient de lire la note, plutôt que de le renvoyer trois écrans plus
+   bas. Réutilisable pour les autres avis (Bumble, Tinder, Hinge…). */
+.blog-offre {
+  margin: 2.25rem 0; padding: 1.1rem; border-radius: 1.5rem;
+  display: grid; gap: 1.1rem; align-items: center;
+  border: 2px solid hsl(var(--primary) / .3);
+  background:
+    radial-gradient(120% 100% at 0% 0%, hsl(var(--primary) / .13), transparent 60%),
+    hsl(var(--card));
+  box-shadow: 0 24px 50px -34px hsl(var(--primary) / .85);
+}
+@media (min-width: 700px) {
+  .blog-offre { grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 1.5rem; padding: 1.35rem; }
+}
+/* En colonne, le visuel carré à pleine largeur repousse le bouton hors de
+   l'écran. On le plafonne : la création reprend sa taille réelle plus bas
+   dans l'article, ici c'est le bouton qui doit rester visible. */
+@media (max-width: 699px) {
+  .blog-offre-visuel { max-width: 14rem; margin-inline: auto; }
+}
+.blog-article a.blog-offre-visuel,
+a.blog-offre-visuel {
+  display: block; overflow: hidden; border-radius: 1.15rem;
+  border: 1px solid hsl(var(--border));
+  text-decoration: none !important;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.blog-offre-visuel img {
+  width: 100%; height: auto; display: block; margin: 0 !important; border-radius: 0;
+}
+.blog-offre-visuel:hover { transform: scale(1.015); box-shadow: 0 18px 34px -20px hsl(var(--primary) / .9); }
+.blog-offre-corps { display: grid; gap: .45rem; justify-items: start; min-width: 0; }
+.blog-article .blog-offre-kicker {
+  margin: 0; font-size: .72rem; font-weight: 800; letter-spacing: .09em;
+  text-transform: uppercase; color: hsl(var(--primary));
+}
+.blog-article .blog-offre-nom {
+  margin: 0; font-family: var(--font-display); font-size: 1.65rem; font-weight: 800;
+  line-height: 1.1; color: hsl(var(--foreground));
+}
+.blog-article .blog-offre-note {
+  margin: 0; display: flex; align-items: baseline; gap: .5rem;
+  font-size: 1rem; color: hsl(var(--muted-foreground));
+}
+.blog-offre-note strong {
+  font-family: var(--font-display); font-size: 1.5rem; font-weight: 800;
+  line-height: 1; color: hsl(var(--foreground));
+}
+.blog-offre-note small { font-size: .85rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.blog-offre-note span { color: #f5a524; letter-spacing: .06em; }
+.blog-article ul.blog-offre-points {
+  margin: .35rem 0 .2rem; padding: 0; list-style: none; display: grid; gap: .3rem;
+}
+.blog-article ul.blog-offre-points li {
+  position: relative; padding-left: 1.5rem; font-size: .95rem; line-height: 1.45;
+  color: hsl(var(--foreground) / .9);
+}
+.blog-article ul.blog-offre-points li::before {
+  content: '✓'; position: absolute; left: 0; top: 0;
+  font-weight: 800; color: hsl(var(--primary));
+}
+.blog-article a.blog-offre-btn,
+a.blog-offre-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+  margin-top: .35rem; padding: .9rem 1.9rem; border-radius: 9999px;
+  background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: #fff !important; font-weight: 800; font-size: 1rem;
+  text-decoration: none !important; border: 0;
+  box-shadow: 0 16px 34px -14px hsl(var(--primary) / .9);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+a.blog-offre-btn::after { content: '→'; font-weight: 400; transition: transform .18s ease; }
+a.blog-offre-btn:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 22px 42px -14px hsl(var(--primary) / 1); }
+a.blog-offre-btn:hover::after { transform: translateX(4px); }
+.blog-article .blog-offre-note-bas {
+  margin: .1rem 0 0; font-size: .74rem; letter-spacing: .02em;
+  color: hsl(var(--muted-foreground) / .85);
+}
+@media (max-width: 460px) {
+  /* Le libellé doit tenir sur une ligne : dès qu'il passe à deux, la flèche
+     se retrouve seule sur le côté et le bouton perd son allure de bouton. */
+  .blog-article a.blog-offre-btn { width: 100%; padding-inline: .9rem; font-size: .92rem; gap: .45rem; }
+  .blog-offre-corps { justify-items: stretch; }
+  .blog-article .blog-offre-kicker,
+  .blog-article .blog-offre-nom,
+  .blog-article .blog-offre-note-bas { text-align: left; }
+}
+
+/* Visuel partenaire pleine largeur : la création du partenaire fait
+   déjà le travail d'accroche, elle a juste besoin d'être cliquable et
+   d'avoir un bouton dessous pour ceux qui ne cliquent pas les images. */
+.blog-banniere {
+  margin: 2.25rem auto; max-width: 30rem;
+  display: grid; gap: 0; border-radius: 1.5rem; overflow: hidden;
+  border: 2px solid hsl(var(--primary) / .3);
+  background: hsl(var(--card));
+  box-shadow: 0 24px 50px -34px hsl(var(--primary) / .85);
+}
+.blog-article a.blog-banniere-visuel,
+a.blog-banniere-visuel { display: block; text-decoration: none !important; }
+.blog-banniere-visuel img {
+  width: 100%; height: auto; display: block; margin: 0 !important; border-radius: 0;
+}
+.blog-banniere-pied {
+  padding: 1.25rem 1.25rem 1.4rem; display: grid; gap: .5rem; justify-items: center;
+  text-align: center;
+  background: radial-gradient(120% 100% at 50% 0%, hsl(var(--primary) / .12), transparent 70%);
+}
+.blog-article .blog-banniere-texte {
+  margin: 0; font-size: .93rem; line-height: 1.5; color: hsl(var(--muted-foreground));
+}
+.blog-banniere a.blog-cta-btn { margin-top: .25rem; }
+@media (max-width: 460px) {
+  .blog-banniere-pied { padding-inline: 1rem; }
+  .blog-banniere a.blog-cta-btn { width: 100%; padding-inline: .9rem; font-size: .92rem; gap: .45rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .blog-offre-visuel:hover { transform: none; }
+  a.blog-offre-btn:hover { transform: none; }
+  a.blog-offre-btn:hover::after { transform: none; }
 }
 
 /* Mention de partenariat, en pied d'article. Discrète mais lisible : elle
