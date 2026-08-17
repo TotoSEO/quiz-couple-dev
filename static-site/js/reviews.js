@@ -151,6 +151,9 @@
   function esc(s) { return s ? String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;') : ''; }
 
   function updateJsonLdRating(avg, total) {
+    // Une note absente ou nulle n'a rien à faire dans le balisage : mieux vaut
+    // laisser celle du build que d'y écrire un tiret ou un zéro.
+    if (!total || isNaN(parseFloat(avg))) return;
     var scripts = document.querySelectorAll('script[type="application/ld+json"]');
     for (var i = 0; i < scripts.length; i++) {
       try {
@@ -217,8 +220,13 @@
     .then(function (res) { return res.json(); })
     .then(function (reviews) {
       if (!reviews || !Array.isArray(reviews) || reviews.length === 0) {
-        reviewsGrid.innerHTML = '<p class="text-center text-muted-foreground py-8">' + t('noReviews') + '</p>';
-        updateStats([], 0);
+        // Les avis sont maintenant rendus au build dans le HTML servi. On ne
+        // les efface que s'il n'y en avait vraiment aucun : une réponse vide
+        // ne doit pas vider une page qui affichait déjà quelque chose.
+        if (!reviewsGrid.querySelector('.review-card')) {
+          reviewsGrid.innerHTML = '<p class="text-center text-muted-foreground py-8">' + t('noReviews') + '</p>';
+          updateStats('-', 0);
+        }
         return;
       }
 
@@ -248,7 +256,8 @@
       reviewsGrid.innerHTML = html;
     })
     .catch(function () {
-      reviewsGrid.innerHTML = '';
+      // Réseau coupé, Supabase indisponible : on garde ce que le build a rendu
+      // plutôt que de laisser la section vide.
     });
   }
 

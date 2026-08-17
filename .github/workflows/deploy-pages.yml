@@ -15,6 +15,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Historique complet : le sitemap tire le lastmod de chaque page du
+          # dernier commit qui a touché ses fichiers source. Avec le clone
+          # superficiel par défaut, git ne connaît qu'un commit et toutes les
+          # pages hériteraient de la date du déploiement.
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
