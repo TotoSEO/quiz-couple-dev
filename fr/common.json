@@ -101,13 +101,14 @@
     "subtitle": "Découvrez les avis de ceux qui ont testé nos quiz",
     "leaveReview": "Laisser un avis",
     "averageRating": "Note moyenne",
-    "basedOn": "basée sur",
+    "basedOn": "Basé sur",
     "reviews": "avis",
     "yourName": "Votre prénom",
     "yourReview": "Votre avis (optionnel)",
     "submit": "Soumettre",
     "thankYou": "Merci pour votre avis !",
-    "pending": "Votre avis est en attente de modération"
+    "pending": "Votre avis est en attente de modération",
+    "anonymous": "Anonyme"
   },
   "blog": {
     "pageTitle": "Blog - Conseils et astuces pour couples | Quiz Couple",

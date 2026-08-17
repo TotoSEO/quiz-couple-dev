@@ -100,13 +100,14 @@
     "subtitle": "Descubre las opiniones de quienes probaron nuestros quiz",
     "leaveReview": "Dejar una opinión",
     "averageRating": "Puntuación media",
-    "basedOn": "basada en",
+    "basedOn": "Basado en",
     "reviews": "opiniones",
     "yourName": "Tu nombre",
     "yourReview": "Tu opinión (opcional)",
     "submit": "Enviar",
     "thankYou": "¡Gracias por tu opinión!",
-    "pending": "Tu opinión está pendiente de moderación"
+    "pending": "Tu opinión está pendiente de moderación",
+    "anonymous": "Anónimo"
   },
   "blog": {
     "pageTitle": "Blog - Consejos para parejas | Quiz Couple",

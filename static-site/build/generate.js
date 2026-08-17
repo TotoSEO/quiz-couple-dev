@@ -146,6 +146,11 @@ function ogImageSize(ogImageUrl) {
 // Review stats fetched from Supabase at build time
 let reviewStats = { avg: '0', count: '0' };
 let reviewStatsByQuiz = {};
+// Les derniers avis, rendus dans le HTML servi. La note déclarée en JSON-LD
+// doit correspondre à quelque chose de visible dans la page : jusqu'ici elle
+// n'existait que dans le balisage, le corps de page ne montrant qu'un tiret et
+// deux conteneurs vides remplis après coup par reviews.js.
+let reviewsRecents = [];
 
 // Article SEO overrides fetched from Supabase at build time
 // Map: "internalSlug-lang" → { title, metaTitle, metaDescription, featuredImageAlt, excerpt }
@@ -381,6 +386,18 @@ async function fetchReviewStats() {
       reviewStatsByQuiz[slug] = { avg: (s / arr.length).toFixed(1), count: String(arr.length) };
     }
     console.log(`[reviews] ${reviews.length} approved reviews (global avg ${avg}); per-quiz ratings: ${Object.keys(reviewStatsByQuiz).length}`);
+
+    // Les vingt derniers avis, pour les rendre dans la page. Même tri et même
+    // limite que reviews.js, afin que la reprise côté client ne change rien de
+    // visible quand la requête aboutit.
+    const resDerniers = await fetch(
+      `${SUPABASE_URL}/rest/v1/reviews?select=author_name,comment,rating,created_at&is_approved=eq.true&order=created_at.desc&limit=20`,
+      { headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` } }
+    );
+    if (resDerniers.ok) {
+      reviewsRecents = await resDerniers.json();
+      console.log(`[reviews] ${reviewsRecents.length} avis rendus dans le HTML`);
+    }
   } catch (e) {
     console.warn(`[reviews] Could not fetch review stats: ${e.message}, using defaults`);
   }
@@ -665,12 +682,18 @@ async function generatePage(routeKey, lang) {
       image: `${BASE_URL}/og-image.webp`,
       description: description,
     });
-    // AggregateRating, only include if we have real review data
+    // AggregateRating, only include if we have real review data.
+    // `url` vaut l'adresse de la page décrite, pas la racine du site : les cinq
+    // accueils annonçaient tous https://quiz-couple.com, si bien que les
+    // versions traduites désignaient l'accueil français comme adresse de
+    // l'entité au lieu de la leur.
     const webApp = {
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
+      '@id': `${canonical}#application`,
       name: 'Quiz Couple',
-      url: BASE_URL,
+      url: canonical,
+      inLanguage: lang,
       applicationCategory: 'LifestyleApplication',
       operatingSystem: 'Web',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
@@ -743,6 +766,10 @@ async function generatePage(routeKey, lang) {
     adsenseClient: ADSENSE_CLIENT,
     supabaseUrl: SUPABASE_URL,
     supabaseKey: SUPABASE_ANON_KEY,
+    // Avis rendus dans le HTML servi : la note annoncée en JSON-LD doit exister
+    // dans le corps de la page, sinon Google se réserve d'ignorer le balisage.
+    reviewStats,
+    reviewsRecents,
     // SEO
     title: escapeHtml(title),
     rawTitle: title,

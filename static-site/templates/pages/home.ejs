@@ -506,14 +506,25 @@
         <%= t('common:reviews.badge', 'Avis vérifiés') %>
       </div>
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4"><%= t('common:reviews.title', 'Ce que les couples') %> <span class="text-gradient"><%= t('common:reviews.titleHighlight', 'en pensent') %></span></h2>
+      <%
+        // La note et les avis sont rendus ici, dans le HTML servi. Ils ne
+        // vivaient que dans le JSON-LD : le corps de page n'affichait qu'un
+        // tiret et deux conteneurs vides, remplis après coup par reviews.js.
+        // Une note balisée sans contrepartie visible, Google se réserve de
+        // l'ignorer, ce qui explique des étoiles présentes dans certaines
+        // langues et absentes dans d'autres avec un balisage identique.
+        var noteMoyenne = parseFloat(reviewStats.avg) || 0;
+        var nbAvis = parseInt(reviewStats.count, 10) || 0;
+        var etoilesPleines = Math.round(noteMoyenne);
+      %>
       <div class="flex items-center gap-3 justify-center mt-4">
         <div id="reviews-stars-display" class="flex items-center gap-0.5">
-          <% for (var si = 0; si < 5; si++) { %>
-          <svg viewBox="0 0 24 24" class="w-5 h-5 star-filled"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <% for (var si = 1; si <= 5; si++) { %>
+          <svg viewBox="0 0 24 24" class="w-5 h-5 <%= si <= etoilesPleines ? 'star-filled' : 'star-empty' %>"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <% } %>
         </div>
-        <span class="text-2xl font-bold text-foreground" id="reviews-avg">-</span>
-        <span class="text-sm text-muted-foreground" id="reviews-count"></span>
+        <span class="text-2xl font-bold text-foreground" id="reviews-avg"><%= nbAvis > 0 ? reviewStats.avg : '-' %></span>
+        <span class="text-sm text-muted-foreground" id="reviews-count"><% if (nbAvis > 0) { %><%= t('common:reviews.basedOn', 'Basé sur') %> <%= nbAvis %> <%= t('common:reviews.reviews', 'avis') %><% } %></span>
       </div>
     </div>
 
@@ -556,7 +567,26 @@
       <!-- Reviews List (3 cols - RIGHT on desktop) -->
       <div class="lg:col-span-3 order-2">
         <div class="space-y-4 max-h-[500px] overflow-y-auto pr-2 scrollbar-thin" id="reviews-grid">
-          <!-- Reviews loaded by JS -->
+          <%
+            // Même tri et même limite que reviews.js, qui remplacera ce bloc
+            // dès que la requête aboutit. L'horodatage relatif est laissé au
+            // client : il périmerait entre deux constructions.
+          %>
+          <% reviewsRecents.forEach(function (avis) { %>
+          <div class="review-card glass-card rounded-2xl p-5 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-foreground text-sm"><%= avis.author_name || t('common:reviews.anonymous', 'Anonyme') %></span>
+            </div>
+            <div class="flex items-center gap-0.5">
+              <% for (var ai = 1; ai <= 5; ai++) { %>
+              <svg viewBox="0 0 24 24" class="w-4 h-4 <%= ai <= (avis.rating || 0) ? 'star-filled' : 'star-empty' %>"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <% } %>
+            </div>
+            <% if (avis.comment) { %>
+            <p class="text-sm text-muted-foreground leading-relaxed">&laquo; <%= avis.comment %> &raquo;</p>
+            <% } %>
+          </div>
+          <% }); %>
         </div>
       </div>
     </div>

@@ -100,13 +100,14 @@
     "subtitle": "See reviews from those who tested our quizzes",
     "leaveReview": "Leave a review",
     "averageRating": "Average rating",
-    "basedOn": "based on",
+    "basedOn": "Based on",
     "reviews": "reviews",
     "yourName": "Your name",
     "yourReview": "Your review (optional)",
     "submit": "Submit",
     "thankYou": "Thank you for your review!",
-    "pending": "Your review is pending moderation"
+    "pending": "Your review is pending moderation",
+    "anonymous": "Anonymous"
   },
   "blog": {
     "pageTitle": "Blog - Tips & Advice for Couples | Quiz Couple",
