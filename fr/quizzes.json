@@ -297,5 +297,11 @@
     "shortTitle": "Amour ou amitié ?",
     "metaDescription": "20 questions pondérées pour savoir si ce que vous ressentez pour cette personne est de l'amour ou de l'amitié. Verdict sur 6 paliers. Gratuit, sans inscription.",
     "description": "Vingt questions pondérées et un verdict sur six paliers, pour mettre enfin un mot sur ce que vous ressentez."
+  },
+  "testDependance": {
+    "title": "Test dépendance affective | Résultats immédiats gratuits",
+    "shortTitle": "Test Dépendance affective",
+    "description": "20 questions franches pour savoir si vous aimez votre partenaire ou si vous vous accrochez à lui. Résultat immédiat et pistes concrètes.",
+    "metaDescription": "Attachement sain ou dépendance affective ? 20 questions franches, un résultat immédiat et des pistes concrètes pour retrouver votre équilibre. Gratuit."
   }
 }

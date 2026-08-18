@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Test Gratuit",
+    "title": "Êtes-vous dépendant de votre partenaire en couple ?",
+    "titleHighlight": "Le test en ligne",
+    "description": "20 questions franches pour savoir si vous <strong>aimez votre partenaire ou si vous vous accrochez à lui</strong>. Résultat immédiat, analyse détaillée et pistes concrètes.",
+    "subtitle": "Gratuit, confidentiel, résultat immédiat"
+  },
+  "section1": {
+    "title": "La dépendance affective, ce n'est pas « aimer trop »",
+    "intro": "On confond souvent les deux, et cette confusion arrange tout le monde. « Je suis comme ça parce que je t'aime trop » sonne mieux que la vérité.",
+    "p1": "Aimer, c'est vouloir la présence de l'autre. Dépendre, c'est <strong>ne pas supporter son absence</strong>. La nuance a l'air mince sur le papier, elle change tout dans la vie réelle : dans le premier cas, votre partenaire ajoute quelque chose à une vie qui tient déjà debout. Dans le second, il ou elle est devenu la poutre porteuse, et vous passez vos journées à surveiller qu'elle ne bouge pas.",
+    "p2": "La dépendance affective n'est pas un diagnostic médical, et ce n'est pas non plus une preuve d'amour. C'est un <strong>mode de fonctionnement</strong> : le besoin de l'autre pour se sentir exister, la peur de l'abandon comme boussole de toutes les décisions, l'effacement progressif de ce que vous étiez avant.",
+    "p3": "Ce qui la rend difficile à repérer soi-même, c'est qu'elle ressemble à s'y méprendre aux premiers mois d'une passion. Sauf que la passion se calme et laisse une relation derrière elle. La dépendance, elle, s'installe, et elle grandit précisément là où votre vie personnelle recule.",
+    "quote": "« On ne peut pas être heureux à deux si on ne sait pas exister seul. »"
+  },
+  "section2": {
+    "title": "Aimer fort ou dépendre : le tableau qui aide à trancher",
+    "intro": "Le même comportement peut être tendre ou inquiétant selon ce qui le motive. Ce tableau compare les deux versions, situation par situation.",
+    "headerScore": "Situation",
+    "headerLevel": "Attachement sain",
+    "headerAnalysis": "Dépendance affective",
+    "row1Score": "Il/elle ne répond pas",
+    "row1Level": "Vous le remarquez, votre journée continue",
+    "row1Analysis": "L'angoisse monte, vous multipliez les messages",
+    "row2Score": "Un week-end séparés",
+    "row2Level": "Ça manque un peu, ça fait du bien aussi",
+    "row2Analysis": "C'est une épreuve, vous comptez les heures",
+    "row3Score": "Un désaccord sérieux",
+    "row3Level": "Vous défendez votre position",
+    "row3Analysis": "Vous cédez : le conflit ressemble à un risque de rupture",
+    "row4Score": "Ses amis, ses soirées",
+    "row4Level": "Sa vie sociale ne vous menace pas",
+    "row4Analysis": "Chaque sortie sans vous réveille la peur d'être remplacé·e",
+    "row5Score": "Votre valeur personnelle",
+    "row5Level": "Elle existe aussi en dehors du couple",
+    "row5Analysis": "Elle dépend entièrement de son regard sur vous"
+  },
+  "section3": {
+    "title": "Les signes qui doivent vous alerter",
+    "p1": "Aucun signe isolé ne suffit à parler de dépendance affective. Tout le monde a déjà relu un message trois fois ou mal vécu un silence. Ce qui compte, c'est <strong>l'accumulation et la répétition</strong>, quand ces réactions deviennent votre mode par défaut.",
+    "p2": "Trois familles de signes reviennent chez la plupart des personnes concernées :",
+    "sub1Title": "Le corps parle",
+    "sub1P1": "Ventre noué quand il/elle ne répond pas, insomnie quand il/elle s'éloigne, soulagement physique quand le téléphone vibre enfin. La dépendance affective se vit d'abord dans le corps, avant même les pensées. Si l'absence de votre partenaire déclenche des symptômes proches du manque, ce n'est plus de la tendresse, c'est un signal.",
+    "sub2Title": "Votre monde rétrécit",
+    "sub2P1": "Les amis qu'on ne voit plus, la passion abandonnée « par manque de temps », les projets personnels remis à plus tard. Le rétrécissement se fait en douceur, choix après choix, et on ne le mesure qu'en se retournant : que reste-t-il dans votre vie qui n'implique pas votre partenaire ?",
+    "sub3Title": "La peur décide à votre place",
+    "sub3P1": "Vous ne dites pas ce qui vous dérange, vous acceptez ce qui vous heurte, vous testez son amour en provoquant des crises. Derrière ces trois comportements, le même moteur : la conviction qu'exprimer un besoin ou poser une limite pourrait faire fuir l'autre. Quand la peur de perdre quelqu'un dirige vos choix, la relation est déjà déséquilibrée."
+  },
+  "section4": {
+    "title": "D'où vient la dépendance affective ?",
+    "p1": "Personne ne choisit de devenir dépendant affectif. Les travaux du psychiatre <strong>John Bowlby</strong> sur l'attachement, prolongés par les expériences de Mary Ainsworth, ont montré que notre façon d'aimer adulte se construit très tôt : un enfant dont les figures d'attachement étaient imprévisibles, tantôt présentes, tantôt absentes, apprend que l'amour peut disparaître à tout moment, et qu'il faut le surveiller.",
+    "p2": "Devenu adulte, ce même réflexe se rejoue en couple : hypervigilance au moindre signe de distance, besoin constant de réassurance, panique à l'idée de l'abandon. C'est ce qu'on appelle un attachement anxieux, et connaître <a href=\"/test-style-attachement-couple/\">votre style d'attachement</a> éclaire souvent d'un coup des années de réactions incomprises.",
+    "p3": "L'enfance n'explique pas tout. Une <strong>estime de soi fragile</strong>, une rupture brutale mal cicatrisée ou une relation précédente toxique peuvent installer les mêmes réflexes chez quelqu'un qui n'en avait pas. La dépendance affective est un mécanisme appris, et c'est une excellente nouvelle : ce qui s'apprend peut se désapprendre.",
+    "tip": "Se reconnaître dans ces lignes n'est pas un verdict. Le style d'attachement n'est pas une case définitive : les chercheurs parlent de « sécurité acquise » pour désigner les personnes anxieuses devenues sereines, par l'expérience ou par le travail sur soi."
+  },
+  "section5": {
+    "title": "Ce que la dépendance fait à votre couple",
+    "intro": "Le paradoxe cruel de la dépendance affective : elle abîme précisément la relation qu'elle cherche à protéger.",
+    "pillar1Title": "L'autre s'épuise",
+    "pillar1Text": "Rassurer sans fin quelqu'un que rien ne rassure est un travail à plein temps. Même le partenaire le plus aimant finit par s'user, puis par s'éloigner, exactement ce que la dépendance redoutait.",
+    "pillar2Title": "La jalousie s'invite",
+    "pillar2Text": "Quand toute votre vie repose sur une personne, chaque collègue, chaque ami, chaque notification devient une menace potentielle. Si <a href=\"/test-jalousie-couple/\">la jalousie prend toute la place</a> dans votre quotidien, elle est rarement seule en cause.",
+    "pillar3Title": "Le désir s'éteint",
+    "pillar3Text": "Le désir a besoin d'un espace entre deux personnes distinctes. Dans la fusion permanente, il n'y a plus d'autre à désirer, plus de manque, plus de surprise. Beaucoup de couples fusionnels le découvrent amèrement.",
+    "pillar4Title": "Le déséquilibre s'installe",
+    "pillar4Text": "Celui qui a le plus peur de perdre l'autre accepte tout, et celui qui se sait indispensable obtient tout. Aucun des deux ne l'a voulu, mais le rapport de force est là, et il ouvre la porte aux relations d'emprise."
+  },
+  "section6": {
+    "title": "S'en sortir : par où on commence",
+    "p1": "La dépendance affective n'est pas une fatalité, mais on n'en sort pas par la volonté seule, et surtout pas en se répétant « il faut que je sois moins accro ». Voici les étapes qui reviennent dans la plupart des parcours réussis.",
+    "sub1Title": "1. Nommer ce qui se passe",
+    "sub1P1": "C'est l'étape que vous êtes peut-être en train de franchir. Mettre le bon mot sur le mécanisme change la question : ce n'est plus « pourquoi je l'aime trop ? » mais « pourquoi j'ai si peur de le perdre ? ». La seconde a des réponses.",
+    "sub2Title": "2. Réinvestir votre territoire",
+    "sub2P1": "Une activité à vous, des amis à vous, un projet à vous. Pas pour rendre l'autre jaloux ni pour « prendre de la distance », mais pour reconstruire ce qui existait avant : une vie qui tient debout sans béquille. Commencez petit, une soirée par semaine suffit à réamorcer la machine.",
+    "sub3Title": "3. Traverser l'inconfort sans le fuir",
+    "sub3P1": "Ne pas envoyer le troisième message. Laisser le silence exister sans le combler. Dire « ça ne me convient pas » et supporter les minutes qui suivent. Chaque fois que vous traversez l'angoisse sans céder au réflexe, vous apprenez à votre système d'alarme qu'il sonne pour rien.",
+    "sub4Title": "4. Vous faire accompagner si ça résiste",
+    "sub4P1": "Quand l'angoisse d'abandon est ancienne et profonde, un psychologue ou un thérapeute est le raccourci le plus efficace, notamment via les thérapies cognitives et comportementales, bien documentées sur ce sujet. Comprendre les mécanismes de la dépendance affective aide aussi à avancer entre les séances."
+  },
+  "section7": {
+    "title": "Dépendance affective ou personnalité dépendante : ne pas tout mélanger",
+    "p1": "Un point d'honnêteté, parce que tout se mélange sur ce sujet en ligne. La dépendance affective dont parle cette page est un <strong>fonctionnement relationnel répandu</strong>, pas une maladie. Elle fait souffrir, elle se travaille, mais elle ne se diagnostique pas.",
+    "p2": "Il existe par ailleurs, dans les classifications psychiatriques comme le DSM-5, un <strong>trouble de la personnalité dépendante</strong> : un besoin envahissant d'être pris en charge qui touche toutes les sphères de la vie, pas seulement le couple, et qui relève d'un professionnel de santé mentale.",
+    "p3": "Si votre dépendance dépasse largement votre relation amoureuse, si elle s'accompagne d'une détresse intense, d'idées noires ou d'une incapacité à fonctionner au quotidien, ce n'est plus un test en ligne qu'il vous faut : parlez-en à votre médecin ou à un psychologue. Il n'y a aucune honte à ça, c'est même la décision la plus solide de la liste.",
+    "quote": "« Le but n'est pas d'avoir besoin de personne. C'est de choisir quelqu'un librement, plutôt que de s'y accrocher par peur. »"
+  },
+  "section8": {
+    "title": "Comment fonctionne ce test",
+    "p1": "Vingt situations concrètes, quatre réactions possibles à chaque fois, de la plus autonome à la plus dépendante. Pas de question piège ni de bonne réponse : le test mesure la <strong>fréquence et l'intensité</strong> de vos réflexes anxieux en couple, sur les registres où la dépendance se manifeste vraiment : le corps, les décisions, les limites, la peur du vide.",
+    "p2": "Votre score vous situe sur quatre paliers, de l'autonomie affective solide à la dépendance qui fait souffrir, avec à chaque fois une analyse et des pistes adaptées. Répondez avec ce que vous faites vraiment, pas avec ce que vous aimeriez faire : le test ne vaut que ce que vaut votre honnêteté.",
+    "tip": "Ce test est un outil d'auto-observation, pas un diagnostic. Aucun questionnaire en ligne ne remplace l'avis d'un professionnel de santé mentale. Si vos réponses vous inquiètent, c'est vers lui qu'il faut aller."
+  },
+  "seo": {
+    "faq1Q": "La dépendance affective, est-ce que c'est de l'amour ?",
+    "faq1A": "Non, et c'est même le contresens le plus répandu. L'amour choisit la présence de l'autre, la dépendance ne supporte pas son absence. On peut aimer très fort en restant autonome, et on peut être totalement dépendant d'une personne qu'on n'aime plus vraiment : c'est le manque qui retient, pas le sentiment.",
+    "faq2Q": "Peut-on sortir de la dépendance affective seul ?",
+    "faq2A": "Pour les formes légères, oui : réinvestir sa vie personnelle, apprendre à tolérer l'inconfort du silence et reconstruire son estime de soi suffisent souvent. Quand la peur de l'abandon est ancienne et intense, un accompagnement psychologique accélère énormément les choses, notamment les thérapies cognitives et comportementales.",
+    "faq3Q": "Ce test vaut-il un diagnostic ?",
+    "faq3A": "Non. La dépendance affective n'est d'ailleurs pas un diagnostic médical : c'est un mode de fonctionnement relationnel. Ce test vous aide à l'objectiver et à mettre des mots dessus, mais seul un professionnel de santé mentale peut évaluer une situation individuelle, notamment si la souffrance est intense.",
+    "faq4Q": "Pourquoi est-ce que je m'attache aussi vite ?",
+    "faq4A": "L'attachement rapide et intense est souvent la signature d'un style d'attachement anxieux, construit tôt dans la vie : quand on a appris que l'amour pouvait disparaître, on s'y agrippe dès qu'il apparaît. Une estime de soi fragile amplifie le phénomène, car l'autre devient la preuve qu'on vaut quelque chose.",
+    "faq5Q": "Mon ou ma partenaire est dépendant·e affectif : que faire ?",
+    "faq5A": "Ni le rejeter, ni tout porter. Rassurez sur le fond (l'attachement), pas sur chaque crise, encouragez concrètement sa vie personnelle, amis, activités, projets, et posez vos limites avec constance et douceur. Si rien ne bouge, proposez un accompagnement : ce n'est pas à vous de soigner, c'est à vous de soutenir.",
+    "faq6Q": "La dépendance affective peut-elle toucher les hommes ?",
+    "faq6A": "Évidemment, et bien plus qu'on ne le dit. Les hommes la vivent souvent de façon moins visible, moins de demandes de réassurance verbale, plus de contrôle ou de jalousie, et consultent plus tard. Le mécanisme sous-jacent, peur de l'abandon et estime de soi conditionnée au regard de l'autre, est exactement le même."
+  }
+}

@@ -168,6 +168,9 @@
       })() },
 
     // ── Confiance quiz (solo scoring, trust assessment) ──
+    // ── Dependance affective (solo, ascendant : plus de points = plus dependant) ──
+    'dependance':     { prefix: 'dependance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'dependance', ascending: true },
+
     'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
 
     // ── Infidelite quiz (solo scoring, ascending: more signs = higher score) ──

@@ -796,6 +796,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'emmenager', icon: '🏠', route: 'testEmmenager' },
     { type: 'test', key: 'karmique', icon: '🔮', route: 'testKarmique' },
     { type: 'test', key: 'date-naissance', icon: '📅', route: 'testDateNaissance' },
+    { type: 'test', key: 'dependance', icon: '⚓', route: 'testDependance' },
     { type: 'test', key: 'jalousie1', icon: '🫣', route: 'testJalousie' },
     { type: 'test', key: 'jalousie2', icon: '🫣', route: 'testJalousie' },
     { type: 'test', key: 'infidelite', icon: '💔', route: 'testInfidelite' },

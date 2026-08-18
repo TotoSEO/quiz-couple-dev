@@ -286,6 +286,7 @@
     'common-points': 'Points communs',
     'compatibilite': 'Compatibilité',
     'confiance': 'Confiance',
+    'dependance': 'Dépendance affective',
     'coquin': 'Quiz coquin',
     'couche': "A-t-il/elle couché ailleurs",
     'dilemmes': 'Dilemmes',

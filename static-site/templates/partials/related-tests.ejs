@@ -32,7 +32,8 @@
     testInfidelite:   ['testCouche', 'testConfiance', 'testJalousie', 'quizTentation'],
     testCouche:       ['testInfidelite', 'testFinCouple', 'testConfiance', 'testToxic'],
     testJalousie:     ['testConfiance', 'testInfidelite', 'testToxic', 'testCouche'],
-    testConfiance:    ['testJalousie', 'testCoupleSain', 'testInfidelite', 'testAttachement'],
+    testConfiance:    ['testJalousie', 'testDependance', 'testInfidelite', 'testAttachement'],
+    testDependance:   ['testAttachement', 'testConfiance', 'testJalousie', 'testToxic'],
 
     // Introspection
     testSuisJeAmoureux: ['testAmourAmitie', 'testSecret', 'testAttachement', 'testLangageAmour'],
@@ -40,7 +41,7 @@
     testSecret:       ['testSuisJeAmoureux', 'testAmourAmitie', 'testLangageAmour', 'testAttachement'],
     testDistanceAime: ['testDistance', 'testFinCouple', 'testSecret', 'testAttachement'],
     testLangageAmour: ['testAttachement', 'testCouple', 'quizKnowledge', 'testCoupleSain'],
-    testAttachement:  ['testLangageAmour', 'testConfiance', 'testSuisJeAmoureux', 'testKarmique'],
+    testAttachement:  ['testDependance', 'testLangageAmour', 'testConfiance', 'testSuisJeAmoureux'],
 
     // Lecture symbolique
     testKarmique:     ['testDateNaissance', 'testAstroPrenoms', 'testAttachement', 'testSuisJeAmoureux'],
