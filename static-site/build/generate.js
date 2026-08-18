@@ -782,7 +782,10 @@ async function generatePage(routeKey, lang) {
     ogImage: featured ? `${BASE_URL}/quiz/featured/${featured.file}.webp` : `${BASE_URL}/og-image.webp`,
     featuredImage: featured ? `/quiz/featured/${featured.file}.webp` : null,
     featuredImageAlt: featured ? (featured.alt[lang] || featured.alt.fr) : '',
-    contentImage: featured && featured.old ? `/quiz/${featured.old}.webp` : null,
+    // L'illustration heritee n'est declaree que si son fichier existe : un
+    // `old` pointant dans le vide afficherait un cadre d'image cassee.
+    contentImage: featured && featured.old && fs.existsSync(path.join(PUBLIC_DIR, 'quiz', `${featured.old}.webp`))
+      ? `/quiz/${featured.old}.webp` : null,
     // Full featured-image map (used by the home page cards)
     quizFeatured: QUIZ_FEATURED,
     // Navigation/routing
