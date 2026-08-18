@@ -459,6 +459,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/en/emotional-dependency-test/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-dependance-affective/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/emotional-dependency-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-dependencia-emocional/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/emotionale-abhaengigkeit-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-dipendenza-affettiva/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-dependance-affective/"/>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/en/trust-test-couple/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-confiance-couple/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/trust-test-couple/"/>

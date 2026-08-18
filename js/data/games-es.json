@@ -346,7 +346,8 @@
     "pourContre": "A favor o en contra",
     "jeuDilemmes": "Dilemas de pareja",
     "testFinCouple": "¿Es el final de mi relación?",
-    "testAmourAmitie": "¿Amor o amistad?"
+    "testAmourAmitie": "¿Amor o amistad?",
+    "testDependance": "Test de dependencia emocional"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
