@@ -346,7 +346,8 @@
     "pourContre": "For or against",
     "jeuDilemmes": "Couple dilemmas",
     "testFinCouple": "Is my relationship over?",
-    "testAmourAmitie": "Love or friendship?"
+    "testAmourAmitie": "Love or friendship?",
+    "testDependance": "Emotional dependency test"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

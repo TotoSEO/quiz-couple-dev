@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Kostenloser Test",
+    "title": "Bist du emotional abhängig von deinem Partner?",
+    "titleHighlight": "Der Online-Test",
+    "description": "20 ehrliche Fragen, um herauszufinden, ob du deinen Partner <strong>liebst oder dich an ihn klammerst</strong>. Sofortiges Ergebnis, ausführliche Auswertung und konkrete nächste Schritte.",
+    "subtitle": "Kostenlos, vertraulich, sofortiges Ergebnis"
+  },
+  "section1": {
+    "title": "Emotionale Abhängigkeit ist nicht „zu sehr lieben“",
+    "intro": "Beides wird ständig verwechselt, und diese Verwechslung kommt allen gelegen. „Ich bin so, weil ich dich zu sehr liebe“ klingt besser als die Wahrheit.",
+    "p1": "Lieben heißt, die Gegenwart des anderen zu wollen. Abhängig sein heißt, <strong>seine Abwesenheit nicht zu ertragen</strong>. Auf dem Papier wirkt der Unterschied klein, im echten Leben ändert er alles: Im ersten Fall fügt dein Partner einem Leben, das bereits selbst steht, etwas hinzu. Im zweiten ist er zur tragenden Wand geworden, und du verbringst deine Tage damit zu überwachen, dass sie sich nicht bewegt.",
+    "p2": "Emotionale Abhängigkeit ist keine medizinische Diagnose, und sie ist auch kein Liebesbeweis. Sie ist eine <strong>Funktionsweise</strong>: den anderen zu brauchen, um sich existent zu fühlen, die Verlustangst als Kompass jeder Entscheidung, das allmähliche Auslöschen dessen, wer man vorher war.",
+    "p3": "Schwer zu erkennen ist sie an sich selbst, weil sie den ersten Monaten einer Leidenschaft zum Verwechseln ähnlich sieht. Nur: Die Leidenschaft beruhigt sich und lässt eine Beziehung zurück. Die Abhängigkeit richtet sich ein, und sie wächst genau dort, wo dein eigenes Leben sich zurückzieht.",
+    "quote": "„Man kann zu zweit nicht glücklich sein, wenn man nicht allein existieren kann.“"
+  },
+  "section2": {
+    "title": "Stark lieben oder abhängen: die Tabelle, die Klarheit schafft",
+    "intro": "Dasselbe Verhalten kann zärtlich oder besorgniserregend sein, je nachdem, was es antreibt. Diese Tabelle vergleicht beide Versionen, Situation für Situation.",
+    "headerScore": "Situation",
+    "headerLevel": "Gesunde Bindung",
+    "headerAnalysis": "Emotionale Abhängigkeit",
+    "row1Score": "Keine Antwort",
+    "row1Level": "Du bemerkst es, dein Tag geht weiter",
+    "row1Analysis": "Die Angst steigt, du schickst Nachricht um Nachricht",
+    "row2Score": "Ein Wochenende getrennt",
+    "row2Level": "Fehlt ein bisschen, tut auch gut",
+    "row2Analysis": "Eine Prüfung, du zählst die Stunden",
+    "row3Score": "Ein ernster Streit",
+    "row3Level": "Du vertrittst deine Position",
+    "row3Analysis": "Du gibst nach: Konflikt fühlt sich nach Trennungsrisiko an",
+    "row4Score": "Seine Freunde, seine Abende",
+    "row4Level": "Sein Sozialleben bedroht dich nicht",
+    "row4Analysis": "Jeder Abend ohne dich weckt die Angst, ersetzt zu werden",
+    "row5Score": "Dein Selbstwert",
+    "row5Level": "Existiert auch außerhalb der Beziehung",
+    "row5Analysis": "Hängt vollständig von seinem Blick ab"
+  },
+  "section3": {
+    "title": "Die Zeichen, die dich aufhorchen lassen sollten",
+    "p1": "Kein einzelnes Zeichen reicht aus, um von emotionaler Abhängigkeit zu sprechen. Jeder hat schon eine Nachricht dreimal gelesen oder ein Schweigen schlecht verkraftet. Was zählt, ist <strong>Häufung und Wiederholung</strong>, wenn diese Reaktionen zu deinem Normalmodus werden.",
+    "p2": "Drei Familien von Zeichen tauchen bei den meisten Betroffenen auf:",
+    "sub1Title": "Der Körper spricht",
+    "sub1P1": "Verkrampfter Magen, wenn keine Antwort kommt, Schlaflosigkeit, wenn er oder sie auf Distanz geht, körperliche Erleichterung, wenn das Handy endlich vibriert. Emotionale Abhängigkeit spielt sich zuerst im Körper ab, noch vor den Gedanken. Wenn die Abwesenheit deines Partners Symptome auslöst, die an Entzug erinnern, ist das keine Zärtlichkeit mehr, sondern ein Signal.",
+    "sub2Title": "Deine Welt schrumpft",
+    "sub2P1": "Die Freunde, die man nicht mehr sieht, das Hobby, das „aus Zeitmangel“ aufgegeben wurde, die verschobenen eigenen Projekte. Das Schrumpfen geschieht sanft, Entscheidung für Entscheidung, und man misst es erst im Rückblick: Was bleibt in deinem Leben, das deinen Partner nicht einschließt?",
+    "sub3Title": "Die Angst entscheidet an deiner Stelle",
+    "sub3P1": "Du sagst nicht, was dich stört, du akzeptierst, was dich verletzt, du testest seine Liebe mit provozierten Krisen. Hinter diesen drei Verhaltensweisen steckt derselbe Motor: die Überzeugung, dass ein geäußertes Bedürfnis oder eine gesetzte Grenze den anderen vertreiben könnte. Wenn die Angst, jemanden zu verlieren, deine Entscheidungen lenkt, ist die Beziehung bereits aus dem Gleichgewicht."
+  },
+  "section4": {
+    "title": "Woher kommt emotionale Abhängigkeit?",
+    "p1": "Niemand entscheidet sich, emotional abhängig zu werden. Die Arbeiten des Psychiaters <strong>John Bowlby</strong> zur Bindung, fortgeführt durch die Experimente von Mary Ainsworth, haben gezeigt, dass unsere erwachsene Art zu lieben sehr früh entsteht: Ein Kind, dessen Bezugspersonen unberechenbar waren, heute da, morgen fort, lernt, dass Liebe jederzeit verschwinden kann und dass man sie überwachen muss.",
+    "p2": "Als Erwachsener wiederholt sich derselbe Reflex in der Beziehung: Hypervigilanz beim kleinsten Anzeichen von Distanz, ständiges Bedürfnis nach Bestätigung, Panik bei der Vorstellung, verlassen zu werden. Das nennt man ängstliche Bindung, und <a href=\"/de/bindungsstil-test/\">den eigenen Bindungsstil</a> zu kennen erklärt oft schlagartig Jahre unverstandener Reaktionen.",
+    "p3": "Die Kindheit erklärt nicht alles. Ein <strong>fragiles Selbstwertgefühl</strong>, eine schlecht verheilte brutale Trennung oder eine frühere toxische Beziehung können dieselben Reflexe bei jemandem installieren, der sie nicht hatte. Emotionale Abhängigkeit ist ein erlernter Mechanismus, und das ist eine ausgezeichnete Nachricht: Was erlernt wurde, kann verlernt werden.",
+    "tip": "Sich in diesen Zeilen wiederzuerkennen ist kein Urteil. Der Bindungsstil ist keine endgültige Schublade: Forscher sprechen von „erarbeiteter Sicherheit“ für ängstliche Menschen, die gelassen geworden sind, durch Erfahrung oder Arbeit an sich selbst."
+  },
+  "section5": {
+    "title": "Was die Abhängigkeit mit eurer Beziehung macht",
+    "intro": "Das grausame Paradox der emotionalen Abhängigkeit: Sie beschädigt genau die Beziehung, die sie schützen will.",
+    "pillar1Title": "Der andere brennt aus",
+    "pillar1Text": "Jemanden endlos zu beruhigen, den nichts beruhigt, ist ein Vollzeitjob. Selbst der liebevollste Partner nutzt sich ab und zieht sich dann zurück, genau das, was die Abhängigkeit befürchtet hat.",
+    "pillar2Title": "Die Eifersucht zieht ein",
+    "pillar2Text": "Wenn dein ganzes Leben auf einer Person ruht, wird jeder Kollege, jeder Freund, jede Benachrichtigung zur potenziellen Bedrohung. Wenn <a href=\"/de/eifersucht-test-paar/\">die Eifersucht den ganzen Platz einnimmt</a>, handelt sie selten allein.",
+    "pillar3Title": "Das Begehren erlischt",
+    "pillar3Text": "Begehren braucht einen Raum zwischen zwei verschiedenen Menschen. In der Dauerfusion gibt es keinen anderen mehr zu begehren, kein Vermissen, keine Überraschung. Viele fusionierte Paare stellen das bitter fest.",
+    "pillar4Title": "Das Ungleichgewicht setzt sich fest",
+    "pillar4Text": "Wer mehr Angst hat, den anderen zu verlieren, akzeptiert alles, und wer sich unentbehrlich weiß, bekommt alles. Keiner wollte es, aber das Machtgefälle ist da, und es öffnet kontrollierenden Beziehungen die Tür."
+  },
+  "section6": {
+    "title": "Rauskommen: womit man anfängt",
+    "p1": "Emotionale Abhängigkeit ist kein Schicksal, aber mit Willenskraft allein kommt man nicht heraus, und schon gar nicht, indem man sich „ich muss weniger klammern“ vorsagt. Diese Schritte tauchen in den meisten gelungenen Wegen auf.",
+    "sub1Title": "1. Benennen, was passiert",
+    "sub1P1": "Vielleicht machst du diesen Schritt gerade jetzt. Das richtige Wort auf den Mechanismus zu setzen verändert die Frage: nicht mehr „warum liebe ich zu sehr?“, sondern „warum habe ich solche Angst, ihn oder sie zu verlieren?“. Die zweite hat Antworten.",
+    "sub2Title": "2. Eigenes Terrain zurückerobern",
+    "sub2P1": "Eine eigene Aktivität, eigene Freunde, ein eigenes Projekt. Nicht um eifersüchtig zu machen, nicht um „Abstand zu nehmen“, sondern um wiederaufzubauen, was vorher existierte: ein Leben, das ohne Krücke steht. Fang klein an, ein Abend pro Woche genügt, um die Maschine wieder anzuwerfen.",
+    "sub3Title": "3. Das Unbehagen aushalten, statt zu fliehen",
+    "sub3P1": "Die dritte Nachricht nicht abschicken. Das Schweigen existieren lassen, ohne es zu füllen. „Das passt mir nicht“ sagen und die Minuten danach aushalten. Jedes Mal, wenn du die Angst durchquerst, ohne dem Reflex nachzugeben, bringst du deinem Alarmsystem bei, dass es umsonst läutet.",
+    "sub4Title": "4. Dir Begleitung holen, wenn es sich sträubt",
+    "sub4P1": "Wenn die Verlustangst alt und tief sitzt, ist ein Psychologe oder Therapeut die wirksamste Abkürzung, insbesondere die kognitiven Verhaltenstherapien sind zu diesem Thema gut belegt. Die Mechanismen der emotionalen Abhängigkeit zu verstehen hilft auch, zwischen den Sitzungen voranzukommen."
+  },
+  "section7": {
+    "title": "Emotionale Abhängigkeit oder dependente Persönlichkeit: nicht alles vermischen",
+    "p1": "Ein Punkt der Ehrlichkeit, denn online wird bei diesem Thema alles durcheinandergeworfen. Die emotionale Abhängigkeit, um die es auf dieser Seite geht, ist ein <strong>weit verbreitetes Beziehungsmuster</strong>, keine Krankheit. Sie verursacht Leid, sie lässt sich bearbeiten, aber sie wird nicht diagnostiziert.",
+    "p2": "Daneben existiert in den psychiatrischen Klassifikationen wie dem DSM-5 die <strong>dependente Persönlichkeitsstörung</strong>: ein übergreifendes Bedürfnis, umsorgt zu werden, das alle Lebensbereiche betrifft, nicht nur die Partnerschaft, und das in die Hände von Fachleuten für psychische Gesundheit gehört.",
+    "p3": "Wenn deine Abhängigkeit weit über die Liebesbeziehung hinausgeht, wenn sie mit intensivem Leid, dunklen Gedanken oder Funktionsunfähigkeit im Alltag einhergeht, brauchst du keinen Online-Test mehr: Sprich mit deinem Arzt oder einem Psychologen. Das ist keine Schande, es ist sogar die stärkste Entscheidung auf dieser Liste.",
+    "quote": "„Das Ziel ist nicht, niemanden zu brauchen. Es ist, jemanden frei zu wählen, statt sich aus Angst festzuklammern.“"
+  },
+  "section8": {
+    "title": "Wie dieser Test funktioniert",
+    "p1": "Zwanzig konkrete Situationen, jeweils vier mögliche Reaktionen, von der autonomsten bis zur abhängigsten. Keine Fangfragen, keine richtigen Antworten: Der Test misst <strong>Häufigkeit und Intensität</strong> deiner ängstlichen Reflexe in der Beziehung, auf den Feldern, wo Abhängigkeit sich wirklich zeigt: Körper, Entscheidungen, Grenzen, Angst vor der Leere.",
+    "p2": "Dein Ergebnis ordnet dich auf vier Stufen ein, von solider emotionaler Autonomie bis zur Abhängigkeit, die wehtut, jeweils mit Auswertung und passenden nächsten Schritten. Antworte mit dem, was du wirklich tust, nicht mit dem, was du gern tun würdest: Der Test ist nur so viel wert wie deine Ehrlichkeit.",
+    "tip": "Dieser Test ist ein Werkzeug zur Selbstbeobachtung, keine Diagnose. Kein Online-Fragebogen ersetzt die Einschätzung einer Fachperson für psychische Gesundheit. Wenn deine Antworten dich beunruhigen, ist sie die richtige Adresse."
+  },
+  "seo": {
+    "faq1Q": "Ist emotionale Abhängigkeit Liebe?",
+    "faq1A": "Nein, und das ist das häufigste Missverständnis. Liebe wählt die Gegenwart des anderen; Abhängigkeit erträgt seine Abwesenheit nicht. Man kann sehr stark lieben und autonom bleiben, und man kann völlig abhängig von jemandem sein, den man nicht mehr wirklich liebt: Es ist der Entzug, der festhält, nicht das Gefühl.",
+    "faq2Q": "Kommt man allein aus der emotionalen Abhängigkeit heraus?",
+    "faq2A": "Bei leichteren Formen ja: das eigene Leben wieder aufbauen, das Unbehagen der Stille aushalten lernen und das Selbstwertgefühl stärken reichen oft. Wenn die Verlustangst alt und intensiv ist, beschleunigt psychologische Begleitung enorm, besonders kognitive Verhaltenstherapien.",
+    "faq3Q": "Ist dieser Test eine Diagnose?",
+    "faq3A": "Nein. Emotionale Abhängigkeit ist ohnehin keine medizinische Diagnose: Sie ist ein Beziehungsmuster. Dieser Test hilft dir, es zu objektivieren und in Worte zu fassen, aber nur eine Fachperson für psychische Gesundheit kann eine individuelle Situation beurteilen, besonders bei intensivem Leid.",
+    "faq4Q": "Warum binde ich mich so schnell?",
+    "faq4A": "Schnelle, intensive Bindung ist oft die Handschrift eines ängstlichen Bindungsstils, der früh im Leben entstand: Wer gelernt hat, dass Liebe verschwinden kann, greift zu, sobald sie auftaucht. Ein fragiles Selbstwertgefühl verstärkt das Phänomen, weil der andere zum Beweis wird, dass man etwas wert ist.",
+    "faq5Q": "Mein Partner ist emotional abhängig: Was tun?",
+    "faq5A": "Weder zurückstoßen noch alles tragen. Beruhige beim Grundsätzlichen (der Bindung), nicht bei jeder Krise, ermutige konkret sein eigenes Leben, Freunde, Aktivitäten, Projekte, und halte deine Grenzen beständig und freundlich. Bewegt sich nichts, schlage professionelle Begleitung vor: Deine Rolle ist nicht zu heilen, sondern zu unterstützen.",
+    "faq6Q": "Betrifft emotionale Abhängigkeit auch Männer?",
+    "faq6A": "Selbstverständlich, und weit mehr, als man sagt. Männer leben sie oft weniger sichtbar, weniger verbale Bitten um Bestätigung, mehr Kontrolle oder Eifersucht, und suchen später Hilfe. Der zugrunde liegende Mechanismus, Verlustangst und ein vom Blick des anderen abhängiger Selbstwert, ist exakt derselbe."
+  }
+}

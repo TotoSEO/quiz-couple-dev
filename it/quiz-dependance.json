@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Test Gratuito",
+    "title": "Sei dipendente affettivamente dal tuo partner?",
+    "titleHighlight": "Il test online",
+    "description": "20 domande sincere per capire se <strong>ami il tuo partner o ti aggrappi a lui</strong>. Risultato immediato, analisi dettagliata e passi concreti.",
+    "subtitle": "Gratuito, riservato, risultato immediato"
+  },
+  "section1": {
+    "title": "La dipendenza affettiva non è «amare troppo»",
+    "intro": "Le due cose si confondono di continuo, e la confusione fa comodo a tutti. «Sono così perché ti amo troppo» suona meglio della verità.",
+    "p1": "Amare è volere la presenza dell'altro. Dipendere è <strong>non sopportarne l'assenza</strong>. La sfumatura sembra sottile sulla carta e cambia tutto nella vita reale: nel primo caso, il tuo partner aggiunge qualcosa a una vita che sta già in piedi da sola. Nel secondo, è diventato il muro portante, e passi le giornate a controllare che non si muova.",
+    "p2": "La dipendenza affettiva non è una diagnosi medica, e non è nemmeno una prova d'amore. È un <strong>modo di funzionare</strong>: avere bisogno dell'altro per sentirsi esistere, la paura dell'abbandono come bussola di ogni decisione, la cancellazione progressiva di ciò che eri prima.",
+    "p3": "Ciò che la rende difficile da riconoscere in se stessi è che assomiglia in modo impressionante ai primi mesi di una passione. Solo che la passione si calma e lascia dietro di sé una relazione. La dipendenza si installa, e cresce esattamente dove la tua vita personale arretra.",
+    "quote": "«Non si può essere felici in due se non si sa esistere da soli.»"
+  },
+  "section2": {
+    "title": "Amare intensamente o dipendere: la tabella che aiuta a decidere",
+    "intro": "Lo stesso comportamento può essere tenero o preoccupante a seconda di cosa lo muove. Questa tabella confronta le due versioni, situazione per situazione.",
+    "headerScore": "Situazione",
+    "headerLevel": "Attaccamento sano",
+    "headerAnalysis": "Dipendenza affettiva",
+    "row1Score": "Non risponde",
+    "row1Level": "Lo noti, la tua giornata continua",
+    "row1Analysis": "L'ansia sale, mandi un messaggio dopo l'altro",
+    "row2Score": "Un weekend separati",
+    "row2Level": "Manca un po', fa anche bene",
+    "row2Analysis": "È una prova, conti le ore",
+    "row3Score": "Un disaccordo serio",
+    "row3Level": "Difendi la tua posizione",
+    "row3Analysis": "Cedi: il conflitto sembra un rischio di rottura",
+    "row4Score": "I suoi amici, le sue serate",
+    "row4Level": "La sua vita sociale non ti minaccia",
+    "row4Analysis": "Ogni uscita senza di te risveglia la paura di essere sostituito·a",
+    "row5Score": "Il tuo valore personale",
+    "row5Level": "Esiste anche fuori dalla coppia",
+    "row5Analysis": "Dipende interamente dal suo sguardo"
+  },
+  "section3": {
+    "title": "I segnali che devono metterti in allerta",
+    "p1": "Nessun segnale isolato basta per parlare di dipendenza affettiva. Tutti hanno riletto un messaggio tre volte o vissuto male un silenzio. Ciò che conta è <strong>l'accumulo e la ripetizione</strong>, quando queste reazioni diventano la tua modalità predefinita.",
+    "p2": "Tre famiglie di segnali tornano nella maggior parte delle persone coinvolte:",
+    "sub1Title": "Il corpo parla",
+    "sub1P1": "Stomaco chiuso quando non risponde, insonnia quando si allontana, sollievo fisico quando il telefono finalmente vibra. La dipendenza affettiva si vive prima nel corpo, ancora prima dei pensieri. Se l'assenza del tuo partner scatena sintomi simili all'astinenza, non è più tenerezza: è un segnale.",
+    "sub2Title": "Il tuo mondo si restringe",
+    "sub2P1": "Gli amici che non vedi più, la passione abbandonata «per mancanza di tempo», i progetti personali rimandati. Il restringimento avviene con dolcezza, scelta dopo scelta, e lo si misura solo voltandosi indietro: cosa resta nella tua vita che non coinvolga il tuo partner?",
+    "sub3Title": "La paura decide al posto tuo",
+    "sub3P1": "Non dici ciò che ti disturba, accetti ciò che ti ferisce, metti alla prova il suo amore provocando crisi. Dietro questi tre comportamenti, lo stesso motore: la convinzione che esprimere un bisogno o porre un limite potrebbe far scappare l'altro. Quando la paura di perdere qualcuno guida le tue scelte, la relazione è già sbilanciata."
+  },
+  "section4": {
+    "title": "Da dove viene la dipendenza affettiva?",
+    "p1": "Nessuno sceglie di diventare dipendente affettivo. I lavori dello psichiatra <strong>John Bowlby</strong> sull'attaccamento, proseguiti dagli esperimenti di Mary Ainsworth, hanno mostrato che il nostro modo di amare da adulti si costruisce molto presto: un bambino con figure di attaccamento imprevedibili, presenti un giorno, assenti il successivo, impara che l'amore può sparire in qualsiasi momento, e che va sorvegliato.",
+    "p2": "Da adulto, lo stesso riflesso si ripete nella coppia: ipervigilanza al minimo segnale di distanza, bisogno costante di rassicurazione, panico all'idea dell'abbandono. È quello che chiamiamo attaccamento ansioso, e conoscere <a href=\"/it/test-stile-attaccamento/\">il tuo stile di attaccamento</a> illumina spesso di colpo anni di reazioni incomprese.",
+    "p3": "L'infanzia non spiega tutto. Un'<strong>autostima fragile</strong>, una rottura brutale mai davvero cicatrizzata o una relazione precedente tossica possono installare gli stessi riflessi in chi non li aveva. La dipendenza affettiva è un meccanismo appreso, ed è un'ottima notizia: ciò che si apprende si può disimparare.",
+    "tip": "Riconoscersi in queste righe non è un verdetto. Lo stile di attaccamento non è una casella definitiva: i ricercatori parlano di «sicurezza guadagnata» per le persone ansiose diventate serene, con l'esperienza o con il lavoro su di sé."
+  },
+  "section5": {
+    "title": "Cosa fa la dipendenza alla tua coppia",
+    "intro": "Il paradosso crudele della dipendenza affettiva: danneggia proprio la relazione che cerca di proteggere.",
+    "pillar1Title": "L'altro si esaurisce",
+    "pillar1Text": "Rassicurare senza fine qualcuno che niente rassicura è un lavoro a tempo pieno. Anche il partner più amorevole finisce per logorarsi, e poi per allontanarsi: esattamente ciò che la dipendenza temeva.",
+    "pillar2Title": "La gelosia si insedia",
+    "pillar2Text": "Quando tutta la tua vita poggia su una persona, ogni collega, amico o notifica diventa una minaccia potenziale. Se <a href=\"/it/test-gelosia-coppia/\">la gelosia occupa tutto lo spazio</a> nella tua quotidianità, raramente agisce da sola.",
+    "pillar3Title": "Il desiderio si spegne",
+    "pillar3Text": "Il desiderio ha bisogno di uno spazio tra due persone distinte. Nella fusione permanente non c'è più un altro da desiderare, niente mancanza, niente sorpresa. Molte coppie fusionali lo scoprono amaramente.",
+    "pillar4Title": "Lo squilibrio si stabilizza",
+    "pillar4Text": "Chi ha più paura di perdere l'altro accetta tutto, e chi si sa indispensabile ottiene tutto. Nessuno dei due l'ha voluto, ma il rapporto di forza è lì, e apre la porta alle relazioni di controllo."
+  },
+  "section6": {
+    "title": "Uscirne: da dove si comincia",
+    "p1": "La dipendenza affettiva non è una condanna, ma non se ne esce con la sola forza di volontà, e di certo non ripetendosi «devo essere meno appiccicoso·a». Ecco i passi che tornano nella maggior parte dei percorsi riusciti.",
+    "sub1Title": "1. Dare un nome a ciò che accade",
+    "sub1P1": "Forse è il passo che stai facendo proprio ora. Mettere la parola giusta sul meccanismo cambia la domanda: non più «perché lo amo troppo?» ma «perché ho così paura di perderlo?». La seconda ha delle risposte.",
+    "sub2Title": "2. Riprenderti il tuo territorio",
+    "sub2P1": "Un'attività tua, amici tuoi, un progetto tuo. Non per far ingelosire né per «prendere le distanze», ma per ricostruire ciò che esisteva prima: una vita che sta in piedi senza stampelle. Comincia in piccolo: una serata a settimana basta a riavviare la macchina.",
+    "sub3Title": "3. Attraversare il disagio senza fuggirlo",
+    "sub3P1": "Non mandare il terzo messaggio. Lasciare che il silenzio esista senza riempirlo. Dire «questo non mi va bene» e reggere i minuti che seguono. Ogni volta che attraversi l'ansia senza cedere al riflesso, insegni al tuo sistema d'allarme che suona per niente.",
+    "sub4Title": "4. Farti accompagnare se resiste",
+    "sub4P1": "Quando l'angoscia da abbandono è antica e profonda, uno psicologo o un terapeuta è la scorciatoia più efficace, in particolare le terapie cognitivo-comportamentali, ben documentate su questo tema. Capire i meccanismi della dipendenza affettiva aiuta anche ad avanzare tra una seduta e l'altra."
+  },
+  "section7": {
+    "title": "Dipendenza affettiva o personalità dipendente: non mescolare tutto",
+    "p1": "Un punto di onestà, perché online su questo tema si mescola tutto. La dipendenza affettiva di cui parla questa pagina è uno <strong>schema relazionale diffusissimo</strong>, non una malattia. Fa soffrire, si lavora, ma non si diagnostica.",
+    "p2": "Esiste inoltre, nelle classificazioni psichiatriche come il DSM-5, un <strong>disturbo dipendente di personalità</strong>: un bisogno pervasivo di essere accuditi che tocca ogni sfera della vita, non solo la coppia, e che spetta ai professionisti della salute mentale.",
+    "p3": "Se la tua dipendenza va ben oltre la relazione amorosa, se si accompagna a un disagio intenso, pensieri cupi o incapacità di funzionare nel quotidiano, non è più un test online ciò che ti serve: parlane con il tuo medico o con uno psicologo. Non c'è nessuna vergogna, è anzi la decisione più solida di questa lista.",
+    "quote": "«L'obiettivo non è non aver bisogno di nessuno. È scegliere qualcuno liberamente, invece di aggrapparsi per paura.»"
+  },
+  "section8": {
+    "title": "Come funziona questo test",
+    "p1": "Venti situazioni concrete, quattro reazioni possibili ogni volta, dalla più autonoma alla più dipendente. Nessuna domanda trabocchetto, nessuna risposta giusta: il test misura la <strong>frequenza e l'intensità</strong> dei tuoi riflessi ansiosi in coppia, sui registri dove la dipendenza si manifesta davvero: il corpo, le decisioni, i limiti, la paura del vuoto.",
+    "p2": "Il tuo punteggio ti colloca su quattro livelli, dall'autonomia affettiva solida alla dipendenza che fa male, ognuno con un'analisi e piste su misura. Rispondi con ciò che fai davvero, non con ciò che vorresti fare: il test vale quanto la tua onestà.",
+    "tip": "Questo test è uno strumento di auto-osservazione, non una diagnosi. Nessun questionario online sostituisce il parere di un professionista della salute mentale. Se le tue risposte ti preoccupano, è da lui che devi andare."
+  },
+  "seo": {
+    "faq1Q": "La dipendenza affettiva è amore?",
+    "faq1A": "No, ed è il fraintendimento più diffuso. L'amore sceglie la presenza dell'altro; la dipendenza non ne sopporta l'assenza. Si può amare intensamente restando autonomi, e si può dipendere totalmente da qualcuno che non si ama più davvero: è l'astinenza che trattiene, non il sentimento.",
+    "faq2Q": "Si può uscire dalla dipendenza affettiva da soli?",
+    "faq2A": "Per le forme leggere, sì: reinvestire nella propria vita personale, imparare a tollerare il disagio del silenzio e ricostruire l'autostima spesso bastano. Quando la paura dell'abbandono è antica e intensa, un percorso psicologico accelera enormemente le cose, in particolare le terapie cognitivo-comportamentali.",
+    "faq3Q": "Questo test vale come diagnosi?",
+    "faq3A": "No. La dipendenza affettiva non è nemmeno una diagnosi medica: è uno schema relazionale. Questo test ti aiuta a oggettivarla e a metterci le parole, ma solo un professionista della salute mentale può valutare una situazione individuale, soprattutto se la sofferenza è intensa.",
+    "faq4Q": "Perché mi affeziono così in fretta?",
+    "faq4A": "L'attaccamento rapido e intenso è spesso la firma di uno stile di attaccamento ansioso, costruito presto nella vita: quando hai imparato che l'amore può sparire, ti ci aggrappi appena compare. Un'autostima fragile amplifica il fenomeno, perché l'altro diventa la prova che vali qualcosa.",
+    "faq5Q": "Il mio partner è dipendente affettivo: cosa faccio?",
+    "faq5A": "Né respingerlo né farti carico di tutto. Rassicura sul fondo (il legame), non su ogni crisi, incoraggia concretamente la sua vita personale, amici, attività, progetti, e mantieni i tuoi limiti con costanza e dolcezza. Se nulla si muove, proponi un percorso: il tuo ruolo non è curare, è sostenere.",
+    "faq6Q": "La dipendenza affettiva riguarda anche gli uomini?",
+    "faq6A": "Certamente, e molto più di quanto si dica. Gli uomini la vivono spesso in modo meno visibile, meno richieste verbali di rassicurazione, più controllo o gelosia, e chiedono aiuto più tardi. Il meccanismo di fondo, paura dell'abbandono e autostima condizionata allo sguardo dell'altro, è esattamente lo stesso."
+  }
+}

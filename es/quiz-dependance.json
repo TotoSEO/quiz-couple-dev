@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Test Gratis",
+    "title": "¿Dependes emocionalmente de tu pareja?",
+    "titleHighlight": "El test online",
+    "description": "20 preguntas sinceras para saber si <strong>amas a tu pareja o te aferras a ella</strong>. Resultado inmediato, análisis detallado y pasos concretos.",
+    "subtitle": "Gratis, confidencial, resultado inmediato"
+  },
+  "section1": {
+    "title": "La dependencia emocional no es «querer demasiado»",
+    "intro": "Se confunden constantemente, y esa confusión le conviene a todo el mundo. «Soy así porque te quiero demasiado» suena mejor que la verdad.",
+    "p1": "Amar es querer la presencia del otro. Depender es <strong>no soportar su ausencia</strong>. El matiz parece fino sobre el papel y lo cambia todo en la vida real: en el primer caso, tu pareja añade algo a una vida que ya se sostiene sola. En el segundo, se ha convertido en el muro de carga, y te pasas los días vigilando que no se mueva.",
+    "p2": "La dependencia emocional no es un diagnóstico médico, y tampoco es una prueba de amor. Es una <strong>forma de funcionar</strong>: necesitar al otro para sentir que existes, el miedo al abandono como brújula de cada decisión, el borrado progresivo de quien eras antes.",
+    "p3": "Lo que la hace difícil de detectar en uno mismo es que se parece muchísimo a los primeros meses de una pasión. Solo que la pasión se calma y deja una relación detrás. La dependencia se instala, y crece exactamente donde tu vida personal retrocede.",
+    "quote": "«No se puede ser feliz en pareja sin saber existir a solas.»"
+  },
+  "section2": {
+    "title": "Amar con fuerza o depender: la tabla que ayuda a decidir",
+    "intro": "El mismo comportamiento puede ser tierno o preocupante según lo que lo mueve. Esta tabla compara las dos versiones, situación por situación.",
+    "headerScore": "Situación",
+    "headerLevel": "Apego sano",
+    "headerAnalysis": "Dependencia emocional",
+    "row1Score": "No responde",
+    "row1Level": "Lo notas, tu día continúa",
+    "row1Analysis": "La ansiedad sube, encadenas mensajes",
+    "row2Score": "Un fin de semana separados",
+    "row2Level": "Se echa un poco de menos, también sienta bien",
+    "row2Analysis": "Es una prueba, cuentas las horas",
+    "row3Score": "Un desacuerdo serio",
+    "row3Level": "Defiendes tu posición",
+    "row3Analysis": "Cedes: el conflicto parece un riesgo de ruptura",
+    "row4Score": "Sus amigos, sus salidas",
+    "row4Level": "Su vida social no te amenaza",
+    "row4Analysis": "Cada salida sin ti despierta el miedo a ser reemplazado·a",
+    "row5Score": "Tu valor personal",
+    "row5Level": "Existe también fuera de la pareja",
+    "row5Analysis": "Depende por completo de su mirada"
+  },
+  "section3": {
+    "title": "Las señales que deben alertarte",
+    "p1": "Ninguna señal aislada basta para hablar de dependencia emocional. Todo el mundo ha releído un mensaje tres veces o ha llevado mal un silencio. Lo que cuenta es <strong>la acumulación y la repetición</strong>, cuando estas reacciones se convierten en tu modo por defecto.",
+    "p2": "Tres familias de señales aparecen en la mayoría de las personas afectadas:",
+    "sub1Title": "El cuerpo habla",
+    "sub1P1": "Nudo en el estómago cuando no responde, insomnio cuando se aleja, alivio físico cuando el teléfono por fin vibra. La dependencia emocional se vive primero en el cuerpo, antes incluso que en los pensamientos. Si la ausencia de tu pareja desencadena síntomas parecidos a la abstinencia, ya no es ternura: es una señal.",
+    "sub2Title": "Tu mundo se encoge",
+    "sub2P1": "Los amigos que ya no ves, la pasión abandonada «por falta de tiempo», los proyectos personales aplazados. El encogimiento ocurre con suavidad, decisión tras decisión, y solo se mide mirando atrás: ¿qué queda en tu vida que no implique a tu pareja?",
+    "sub3Title": "El miedo decide por ti",
+    "sub3P1": "No dices lo que te molesta, aceptas lo que te hiere, pones a prueba su amor provocando crisis. Detrás de estos tres comportamientos, el mismo motor: la convicción de que expresar una necesidad o poner un límite podría hacer huir al otro. Cuando el miedo a perder a alguien dirige tus decisiones, la relación ya está desequilibrada."
+  },
+  "section4": {
+    "title": "¿De dónde viene la dependencia emocional?",
+    "p1": "Nadie elige volverse dependiente emocional. Los trabajos del psiquiatra <strong>John Bowlby</strong> sobre el apego, prolongados por los experimentos de Mary Ainsworth, demostraron que nuestra forma de amar de adultos se construye muy pronto: un niño cuyas figuras de apego eran imprevisibles, presentes un día, ausentes al siguiente, aprende que el amor puede desaparecer en cualquier momento, y que hay que vigilarlo.",
+    "p2": "De adulto, ese mismo reflejo se repite en la pareja: hipervigilancia ante la menor señal de distancia, necesidad constante de que te tranquilicen, pánico ante la idea del abandono. Es lo que llamamos apego ansioso, y conocer <a href=\"/es/test-estilo-apego/\">tu estilo de apego</a> ilumina a menudo, de golpe, años de reacciones incomprendidas.",
+    "p3": "La infancia no lo explica todo. Una <strong>autoestima frágil</strong>, una ruptura brutal mal cicatrizada o una relación anterior tóxica pueden instalar los mismos reflejos en alguien que no los tenía. La dependencia emocional es un mecanismo aprendido, y eso es una excelente noticia: lo que se aprende puede desaprenderse.",
+    "tip": "Reconocerte en estas líneas no es un veredicto. El estilo de apego no es una casilla definitiva: los investigadores hablan de «seguridad ganada» para las personas ansiosas que llegaron a la serenidad, por la experiencia o por el trabajo personal."
+  },
+  "section5": {
+    "title": "Lo que la dependencia le hace a tu pareja",
+    "intro": "La paradoja cruel de la dependencia emocional: daña precisamente la relación que intenta proteger.",
+    "pillar1Title": "El otro se agota",
+    "pillar1Text": "Tranquilizar sin fin a alguien a quien nada tranquiliza es un trabajo a tiempo completo. Hasta la pareja más cariñosa acaba desgastándose, y luego alejándose: exactamente lo que la dependencia temía.",
+    "pillar2Title": "Los celos se instalan",
+    "pillar2Text": "Cuando toda tu vida descansa sobre una persona, cada colega, amigo o notificación se vuelve una amenaza potencial. Si <a href=\"/es/test-celos-pareja/\">los celos ocupan todo el espacio</a> en tu día a día, rara vez actúan solos.",
+    "pillar3Title": "El deseo se apaga",
+    "pillar3Text": "El deseo necesita un espacio entre dos personas distintas. En la fusión permanente ya no hay otro a quien desear, no hay falta, no hay sorpresa. Muchas parejas fusionales lo descubren con amargura.",
+    "pillar4Title": "El desequilibrio se asienta",
+    "pillar4Text": "Quien más teme perder al otro lo acepta todo, y quien se sabe indispensable lo obtiene todo. Ninguno lo quiso, pero la relación de fuerza está ahí, y abre la puerta a las relaciones de control."
+  },
+  "section6": {
+    "title": "Salir de ahí: por dónde se empieza",
+    "p1": "La dependencia emocional no es una condena, pero no se sale solo con fuerza de voluntad, y menos aún repitiéndose «tengo que engancharme menos». Estos son los pasos que se repiten en la mayoría de los caminos que funcionan.",
+    "sub1Title": "1. Ponerle nombre",
+    "sub1P1": "Quizá sea el paso que estás dando ahora mismo. Poner la palabra correcta sobre el mecanismo cambia la pregunta: ya no es «¿por qué le quiero demasiado?» sino «¿por qué tengo tanto miedo de perderle?». La segunda tiene respuestas.",
+    "sub2Title": "2. Recuperar tu territorio",
+    "sub2P1": "Una actividad tuya, amigos tuyos, un proyecto tuyo. No para dar celos ni para «tomar distancia», sino para reconstruir lo que existía antes: una vida que se sostiene sin muleta. Empieza pequeño: una noche a la semana basta para volver a arrancar la máquina.",
+    "sub3Title": "3. Atravesar la incomodidad sin huir de ella",
+    "sub3P1": "No enviar el tercer mensaje. Dejar que el silencio exista sin rellenarlo. Decir «esto no me sirve» y aguantar los minutos siguientes. Cada vez que atraviesas la ansiedad sin ceder al reflejo, le enseñas a tu sistema de alarma que suena en vano.",
+    "sub4Title": "4. Buscar acompañamiento si se resiste",
+    "sub4P1": "Cuando la angustia de abandono es antigua y profunda, un psicólogo o terapeuta es el atajo más eficaz, en particular las terapias cognitivo-conductuales, bien documentadas en este tema. Entender los mecanismos de la dependencia emocional también ayuda a avanzar entre sesiones."
+  },
+  "section7": {
+    "title": "Dependencia emocional o personalidad dependiente: no lo mezcles todo",
+    "p1": "Un punto de honestidad, porque en internet se mezcla todo sobre este tema. La dependencia emocional de la que habla esta página es un <strong>patrón relacional muy extendido</strong>, no una enfermedad. Hace sufrir, se trabaja, pero no se diagnostica.",
+    "p2": "Existe además, en las clasificaciones psiquiátricas como el DSM-5, un <strong>trastorno de la personalidad dependiente</strong>: una necesidad invasiva de que se ocupen de ti que afecta a todas las esferas de la vida, no solo a la pareja, y que corresponde a profesionales de la salud mental.",
+    "p3": "Si tu dependencia va mucho más allá de tu relación amorosa, si viene con un malestar intenso, ideas oscuras o una incapacidad para funcionar en el día a día, ya no necesitas un test online: habla con tu médico o con un psicólogo. No hay ninguna vergüenza en ello; de hecho, es la decisión más sólida de esta lista.",
+    "quote": "«El objetivo no es no necesitar a nadie. Es elegir a alguien libremente, en lugar de aferrarse por miedo.»"
+  },
+  "section8": {
+    "title": "Cómo funciona este test",
+    "p1": "Veinte situaciones concretas, cuatro reacciones posibles cada vez, de la más autónoma a la más dependiente. Sin preguntas trampa ni respuestas correctas: el test mide la <strong>frecuencia y la intensidad</strong> de tus reflejos ansiosos en pareja, en los registros donde la dependencia se manifiesta de verdad: el cuerpo, las decisiones, los límites, el miedo al vacío.",
+    "p2": "Tu puntuación te sitúa en cuatro niveles, de la autonomía afectiva sólida a la dependencia que hace daño, cada uno con un análisis y pistas adaptadas. Responde con lo que haces de verdad, no con lo que te gustaría hacer: el test vale lo que valga tu honestidad.",
+    "tip": "Este test es una herramienta de autoobservación, no un diagnóstico. Ningún cuestionario online sustituye la opinión de un profesional de la salud mental. Si tus respuestas te preocupan, es a él a quien debes acudir."
+  },
+  "seo": {
+    "faq1Q": "La dependencia emocional, ¿es amor?",
+    "faq1A": "No, y es el malentendido más extendido. El amor elige la presencia del otro; la dependencia no soporta su ausencia. Se puede amar muchísimo siendo autónomo, y se puede depender totalmente de alguien a quien ya no se quiere de verdad: lo que retiene es la abstinencia, no el sentimiento.",
+    "faq2Q": "¿Se puede salir de la dependencia emocional sin ayuda?",
+    "faq2A": "En las formas leves, sí: reinvertir en tu vida personal, aprender a tolerar la incomodidad del silencio y reconstruir la autoestima suelen bastar. Cuando el miedo al abandono es antiguo e intenso, un acompañamiento psicológico acelera enormemente las cosas, sobre todo las terapias cognitivo-conductuales.",
+    "faq3Q": "¿Este test equivale a un diagnóstico?",
+    "faq3A": "No. La dependencia emocional ni siquiera es un diagnóstico médico: es un patrón relacional. Este test te ayuda a objetivarlo y a ponerle palabras, pero solo un profesional de la salud mental puede evaluar una situación individual, sobre todo si el sufrimiento es intenso.",
+    "faq4Q": "¿Por qué me apego tan rápido?",
+    "faq4A": "El apego rápido e intenso suele ser la firma de un estilo de apego ansioso, construido temprano en la vida: cuando has aprendido que el amor puede desaparecer, te agarras a él en cuanto aparece. Una autoestima frágil amplifica el fenómeno, porque el otro se convierte en la prueba de que vales algo.",
+    "faq5Q": "Mi pareja es dependiente emocional: ¿qué hago?",
+    "faq5A": "Ni rechazarla ni cargar con todo. Tranquiliza sobre el fondo (el vínculo), no sobre cada crisis, anima concretamente su vida personal, amigos, actividades, proyectos, y mantén tus límites con constancia y cariño. Si nada se mueve, propón un acompañamiento: tu papel no es curar, es apoyar.",
+    "faq6Q": "¿La dependencia emocional afecta a los hombres?",
+    "faq6A": "Por supuesto, y mucho más de lo que se dice. Los hombres la viven a menudo de forma menos visible, menos peticiones verbales de cariño, más control o celos, y consultan más tarde. El mecanismo de fondo, miedo al abandono y autoestima condicionada a la mirada del otro, es exactamente el mismo."
+  }
+}
