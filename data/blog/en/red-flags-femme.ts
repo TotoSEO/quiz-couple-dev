@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-in-a-woman',
-  title: "Red flags in a woman: what you're feeling probably has a name",
-  metaTitle: "Red Flags in a Woman: The Complete List",
+  title: "12 Red Flags in a woman: what you're feeling probably has a name",
+  metaTitle: "12 Red Flags in a Woman: The Complete List",
   metaDescription: "Something feels off in your relationship but you can't quite name it? Emotional, behavioural, relational red flags in a woman, the complete list.",
   featuredImage: '',
   featuredImageAlt: "Red flags in a woman, complete list of warning signs in a relationship",
@@ -24,7 +24,24 @@ const article: BlogArticleData = {
     {
       id: 'red-flags-at-a-glance',
       title: "Red flags at a glance",
-      content: `<div><table><thead><tr><th>The signal</th><th>What it often means</th><th>Alert level</th></tr></thead><tbody>
+      content: `<p>Here they all are, in the order we cover them. Tap the one that speaks to you to jump straight to it.</p>
+
+<ol class="blog-liste-reperes">
+<li><a href="#hot-and-cold">She runs hot and cold</a></li>
+<li><a href="#her-moods-your-responsibility">Her moods become your responsibility</a></li>
+<li><a href="#uses-your-vulnerabilities">She uses your vulnerabilities against you</a></li>
+<li><a href="#disproportionate-crises">Emotional crises are disproportionate and unpredictable</a></li>
+<li><a href="#arguments-same-place">Arguments always end in the same place</a></li>
+<li><a href="#jealousy-beyond-reasonable">Jealousy goes beyond what's reasonable</a></li>
+<li><a href="#all-exes-were-monsters">She talks about all her exes like they were monsters</a></li>
+<li><a href="#rules-shift">The rules shift depending on her mood</a></li>
+<li><a href="#your-needs-no-room">Your needs have no room</a></li>
+<li><a href="#pulls-you-away">She gradually pulls you away from your people</a></li>
+<li><a href="#guilty-for-existing">You feel guilty for existing outside of her</a></li>
+<li><a href="#feel-worse">You feel worse about yourself since being with her</a></li>
+</ol>
+
+<div><table><thead><tr><th>The signal</th><th>What it often means</th><th>Alert level</th></tr></thead><tbody>
 <tr><td>Every conflict is somehow your fault</td><td>She never questions herself. Ever.</td><td>Serious</td></tr>
 <tr><td>She runs hot and cold</td><td>Emotional instability or a test of your attachment.</td><td>Watch closely</td></tr>
 <tr><td>She isolates you from your people</td><td>Gradual isolation, usually framed as love.</td><td>Very serious</td></tr>

@@ -3,9 +3,9 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-homme',
-  title: "Red flags chez un homme : ce que ton instinct essaie de te dire",
-  metaTitle: "Les Red flags chez un Homme : la liste complète",
-  metaDescription: "Quelque chose cloche, mais tu n'arrives pas à mettre le doigt dessus ? Red flags comportementaux, émotionnels et relationnels : la liste complète.",
+  title: "Les 13 red flags chez un homme : ce que ton instinct essaie de te dire",
+  metaTitle: "Les 13 red flags chez un homme : la liste complète",
+  metaDescription: "La liste des 13 red flags chez un homme, classés par niveau d'alerte. Ce que chaque signal veut dire, et à partir de quand il faut s'en inquiéter.",
   featuredImage: '',
   featuredImageAlt: "Red flags chez un homme, liste complète des signaux d'alarme en couple",
   publishedAt: '2026-03-05',
@@ -23,8 +23,26 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'red-flags-en-un-coup-d-oeil',
-      title: "Les red flags en un coup d'œil",
-      content: `<div><table><thead><tr><th>Le signal</th><th>Ce que ça veut souvent dire</th><th>Niveau d'alerte</th></tr></thead><tbody>
+      title: "La liste des 13 red flags chez un homme",
+      content: `<p>Les voici tous, dans l'ordre où on les traite. Clique sur celui qui te parle pour aller directement à l'explication.</p>
+
+<ol class="blog-liste-reperes">
+<li><a href="#minimise-ce-que-tu-ressens">Il minimise ce que tu ressens</a></li>
+<li><a href="#ses-humeurs-ta-responsabilite">Ses humeurs deviennent ta responsabilité</a></li>
+<li><a href="#chaud-et-froid">Le chaud et le froid, en boucle</a></li>
+<li><a href="#ne-s-excuse-jamais">Il ne s'excuse jamais vraiment</a></li>
+<li><a href="#actes-vs-mots">Ses actes ne correspondent pas à ses mots</a></li>
+<li><a href="#ne-respecte-pas-limites">Il ne respecte pas ce que tu lui as dit clairement</a></li>
+<li><a href="#ex-toutes-folles">Il parle de ses ex comme si elles étaient toutes folles</a></li>
+<li><a href="#teste-limites-progressivement">Il teste tes limites progressivement</a></li>
+<li><a href="#deux-personnalites">Deux personnalités : une en public, une avec toi</a></li>
+<li><a href="#prend-place-sans-laisser">Il prend de la place sans en laisser</a></li>
+<li><a href="#impossible-de-lui-parler">Tu ne peux pas lui parler de ce qui te pose problème</a></li>
+<li><a href="#eloigne-de-tes-proches">Il t'éloigne progressivement de tes proches</a></li>
+<li><a href="#doutes-de-toi">Tu doutes de toi depuis que tu es avec lui</a></li>
+</ol>
+
+<div><table><thead><tr><th>Le signal</th><th>Ce que ça veut souvent dire</th><th>Niveau d'alerte</th></tr></thead><tbody>
 <tr><td>Il minimise ce que tu ressens</td><td>Tes émotions le dérangent. Il préfère que tu te taises.</td><td>Sérieux</td></tr>
 <tr><td>Tout est toujours ta faute</td><td>Il ne se remet jamais en question. Jamais.</td><td>Sérieux</td></tr>
 <tr><td>Il te coupe de tes proches</td><td>Isolement progressif, souvent déguisé en jalousie affectueuse.</td><td>Très sérieux</td></tr>

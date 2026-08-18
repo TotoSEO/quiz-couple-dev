@@ -133,6 +133,17 @@ export const QUIZ_FEATURED = {
 };
 
 // Map route keys to their page template and translation namespaces
+// Applications passées en revue sur le blog. Sert au balisage Review, qui
+// rend ces pages éligibles aux étoiles en résultat de recherche. La clé est le
+// slug interne de l'article ; la note, elle, est lue dans le contenu.
+export const APPLICATIONS_EVALUEES = {
+  'avis-tinder': { nom: 'Tinder' },
+  'avis-bumble': { nom: 'Bumble' },
+  'avis-badoo': { nom: 'Badoo' },
+  'avis-hinge': { nom: 'Hinge' },
+  'avis-gleese': { nom: 'Gleese', plateformes: 'Web, iOS, Android' },
+};
+
 export const ROUTE_CONFIG = {
   home: { template: 'home', namespaces: ['home', 'common', 'quizzes'] },
   testCouple: { template: 'quiz-tester-couple', namespaces: ['quiz-tester-couple', 'quizzes', 'quizGames', 'gd', 'common'] },

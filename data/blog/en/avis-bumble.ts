@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'bumble-app-review',
   title: `Bumble in 2026: an over-budget and neglected app?`,
-  metaTitle: `Our Bumble review in 2026: app test and results`,
+  metaTitle: `Bumble review 2026: our verdict after testing, 6/10`,
   metaDescription: `Our complete Bumble review after several months of testing: features, price, real results, and honest verdict. We tell you if it's really worth it in 2026.`,
   featuredImage: '/blog/avis-bumble.webp',
   featuredImageAlt: `bumble review image`,

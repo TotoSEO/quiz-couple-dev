@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-bei-einem-mann',
-  title: "Red Flags bei einem Mann: Was dein Instinkt dir sagen will",
-  metaTitle: "Red Flags bei einem Mann: Die vollständige Liste",
+  title: "13 Red Flags bei einem Mann: Was dein Instinkt dir sagen will",
+  metaTitle: "13 Red Flags bei einem Mann: Die vollständige Liste",
   metaDescription: "Irgendetwas stimmt nicht, aber du kannst es nicht benennen? Emotionale, verhaltensbezogene und beziehungstechnische Red Flags, die vollständige Liste…",
   featuredImage: '',
   featuredImageAlt: "Red Flags bei einem Mann, vollständige Liste der Warnsignale in einer Beziehung",
@@ -24,7 +24,25 @@ const article: BlogArticleData = {
     {
       id: 'red-flags-auf-einen-blick',
       title: "Red Flags auf einen Blick",
-      content: `<div><table><thead><tr><th>Das Signal</th><th>Was es oft bedeutet</th><th>Warnstufe</th></tr></thead><tbody>
+      content: `<p>Hier sind sie alle, in der Reihenfolge, in der wir sie behandeln. Tippe auf den, der dir bekannt vorkommt, um direkt dorthin zu springen.</p>
+
+<ol class="blog-liste-reperes">
+<li><a href="#tut-gefuehle-ab">Er tut deine Gefühle ab</a></li>
+<li><a href="#seine-stimmungen">Seine Stimmungen werden zu deiner Verantwortung</a></li>
+<li><a href="#heiss-und-kalt">Mal heiß, mal kalt, im Dauerzyklus</a></li>
+<li><a href="#entschuldigt-nie">Er entschuldigt sich nie wirklich</a></li>
+<li><a href="#taten-vs-worte">Seine Taten stimmen nicht mit seinen Worten überein</a></li>
+<li><a href="#respektiert-grenzen-nicht">Er respektiert nicht, was du ihm klar gesagt hast</a></li>
+<li><a href="#ex-alle-verrueckt">Er spricht über alle Ex-Freundinnen, als wären sie verrückt gewesen</a></li>
+<li><a href="#testet-grenzen">Er testet deine Grenzen schrittweise aus</a></li>
+<li><a href="#zwei-persoenlichkeiten">Zwei Persönlichkeiten: eine öffentlich, eine mit dir</a></li>
+<li><a href="#nimmt-raum-ein">Er nimmt Raum ein, ohne welchen zu lassen</a></li>
+<li><a href="#kannst-nicht-reden">Du kannst nicht mit ihm über das sprechen, was dich stört</a></li>
+<li><a href="#entfernt-von-leuten">Er entfernt dich schrittweise von deinen Leuten</a></li>
+<li><a href="#zweifelst-an-dir">Du zweifelst an dir selbst, seit du mit ihm zusammen bist</a></li>
+</ol>
+
+<div><table><thead><tr><th>Das Signal</th><th>Was es oft bedeutet</th><th>Warnstufe</th></tr></thead><tbody>
 <tr><td>Er tut deine Gefühle ab</td><td>Deine Emotionen stören ihn. Er würde es vorziehen, wenn du schweigst.</td><td>Ernst</td></tr>
 <tr><td>Alles ist immer deine Schuld</td><td>Er hinterfragt sich selbst nie. Niemals.</td><td>Ernst</td></tr>
 <tr><td>Er isoliert dich von deinen Leuten</td><td>Schrittweise Isolation, oft als liebevolle Eifersucht verkleidet.</td><td>Sehr ernst</td></tr>

@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-en-una-mujer',
-  title: "Red flags en una mujer: lo que sientes probablemente tiene nombre",
-  metaTitle: "Red flags en una mujer: la lista completa",
+  title: "12 red flags en una mujer: lo que sientes probablemente tiene nombre",
+  metaTitle: "12 red flags en una mujer: la lista completa",
   metaDescription: "Algo no cuadra en tu relación pero no logras definir qué. Red flags emocionales, de comportamiento, relacionales en una mujer, la lista completa.",
   featuredImage: '',
   featuredImageAlt: "Red flags en una mujer, lista completa de señales de alerta en pareja",
@@ -24,7 +24,24 @@ const article: BlogArticleData = {
     {
       id: 'red-flags-de-un-vistazo',
       title: "Las red flags de un vistazo",
-      content: `<div><table><thead><tr><th>La señal</th><th>Lo que suele significar</th><th>Nivel de alerta</th></tr></thead><tbody>
+      content: `<p>Aquí están todos, en el orden en que los tratamos. Toca el que te suene para ir directamente a la explicación.</p>
+
+<ol class="blog-liste-reperes">
+<li><a href="#frio-y-calor">Da frío y calor alternados</a></li>
+<li><a href="#su-humor-tu-responsabilidad">Su humor se convierte en tu responsabilidad</a></li>
+<li><a href="#usa-tus-vulnerabilidades">Usa tus vulnerabilidades en tu contra</a></li>
+<li><a href="#crisis-desproporcionadas">Las crisis emocionales son desproporcionadas e impredecibles</a></li>
+<li><a href="#conflictos-mismo-sitio">Los conflictos siempre acaban en el mismo sitio</a></li>
+<li><a href="#celos-mas-alla">Los celos van más allá de lo razonable</a></li>
+<li><a href="#ex-monstruos">Habla de todos sus ex como si fueran monstruos</a></li>
+<li><a href="#reglas-cambian">Las reglas cambian según el humor del día</a></li>
+<li><a href="#necesidades-sin-cabida">Tus necesidades no tienen cabida</a></li>
+<li><a href="#aleja-de-cercanos">Te aleja progresivamente de tus personas cercanas</a></li>
+<li><a href="#culpable-por-existir">Te sientes culpable por existir fuera de ella</a></li>
+<li><a href="#peor-contigo-mismo">Te sientes peor contigo mismo desde que estáis juntos</a></li>
+</ol>
+
+<div><table><thead><tr><th>La señal</th><th>Lo que suele significar</th><th>Nivel de alerta</th></tr></thead><tbody>
 <tr><td>Los conflictos siempre son culpa tuya</td><td>Nunca se cuestiona a sí misma. Nunca.</td><td>Serio</td></tr>
 <tr><td>Da frío y calor alternados</td><td>Inestabilidad emocional o prueba de tu apego.</td><td>Vigilar</td></tr>
 <tr><td>Te aleja de tus personas cercanas</td><td>Aislamiento progresivo, presentado como amor.</td><td>Muy serio</td></tr>

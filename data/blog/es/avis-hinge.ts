@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'opinion-hinge-app-citas',
   title: `Test de la aplicación Hinge en 2026: opinión y explicaciones`,
-  metaTitle: `Nuestra opinión sobre Hinge en 2026: prueba y resultados`,
+  metaTitle: `Opiniones Hinge 2026: nuestro veredicto, 7/10`,
   metaDescription: `Hemos probado Hinge en España durante varios meses. Frases para romper el hielo, algoritmo, precios reales, baneos y resultados: nuestra opinión completa…`,
   featuredImage: '/blog/avis-hinge.webp',
   featuredImageAlt: `imagen hinge opinión aplicación citas`,

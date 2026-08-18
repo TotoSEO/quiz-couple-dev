@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'bumble-erfahrungen',
   title: `Bumble im Jahr 2026: Eine überteuerte und vernachlässigte App?`,
-  metaTitle: `Unsere Bumble-Erfahrungen 2026: App-Test und Ergebnisse`,
+  metaTitle: `Bumble Erfahrungen 2026: unser Urteil im Test, 6/10`,
   metaDescription: `Unser ausführlicher Bumble-Test nach mehreren Monaten: Funktionen, Preis, echte Ergebnisse und ehrliches Fazit.`,
   featuredImage: '/blog/avis-bumble.webp',
   featuredImageAlt: `bild bumble erfahrungen`,

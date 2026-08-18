@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-bei-einer-frau',
-  title: "Red Flags bei einer Frau: Was du fühlst, hat wahrscheinlich einen Namen",
-  metaTitle: "Red Flags bei einer Frau: Die vollständige Liste",
+  title: "12 Red Flags bei einer Frau: Was du fühlst, hat wahrscheinlich einen Namen",
+  metaTitle: "12 Red Flags bei einer Frau: Die vollständige Liste",
   metaDescription: "Irgendetwas stimmt in deiner Beziehung nicht, aber du kannst es nicht benennen? Emotionale, verhaltensbezogene, relationale Red Flags bei einer Frau…",
   featuredImage: '',
   featuredImageAlt: "Red Flags bei einer Frau, vollständige Liste der Warnsignale in einer Beziehung",
@@ -24,7 +24,24 @@ const article: BlogArticleData = {
     {
       id: 'red-flags-auf-einen-blick',
       title: "Red Flags auf einen Blick",
-      content: `<div><table><thead><tr><th>Das Signal</th><th>Was es oft bedeutet</th><th>Warnstufe</th></tr></thead><tbody>
+      content: `<p>Hier sind sie alle, in der Reihenfolge, in der wir sie behandeln. Tippe auf den, der dir bekannt vorkommt, um direkt dorthin zu springen.</p>
+
+<ol class="blog-liste-reperes">
+<li><a href="#heiss-und-kalt">Mal heiß, mal kalt</a></li>
+<li><a href="#ihre-stimmung-deine-verantwortung">Ihre Stimmungen werden zu deiner Verantwortung</a></li>
+<li><a href="#schwachstellen-gegen-dich">Sie nutzt deine Schwachstellen gegen dich</a></li>
+<li><a href="#unverhaeltnismaessige-krisen">Emotionale Krisen sind unverhältnismäßig und unvorhersehbar</a></li>
+<li><a href="#streit-gleicher-punkt">Streitigkeiten enden immer am gleichen Punkt</a></li>
+<li><a href="#eifersucht-ueber-vernuenftig">Eifersucht geht über das Vernünftige hinaus</a></li>
+<li><a href="#ex-alle-monster">Sie spricht über alle ihre Ex-Partner, als wären sie Monster gewesen</a></li>
+<li><a href="#regeln-aendern-sich">Die Regeln ändern sich je nach Tagesstimmung</a></li>
+<li><a href="#beduerfnisse-kein-platz">Deine Bedürfnisse haben keinen Platz</a></li>
+<li><a href="#entfernt-von-leuten">Sie entfernt dich schrittweise von deinen Leuten</a></li>
+<li><a href="#schuldig-fuer-existieren">Du fühlst dich schuldig dafür, außerhalb von ihr zu existieren</a></li>
+<li><a href="#schlechter-in-der-haut">Du fühlst dich schlechter in deiner Haut, seit ihr zusammen seid</a></li>
+</ol>
+
+<div><table><thead><tr><th>Das Signal</th><th>Was es oft bedeutet</th><th>Warnstufe</th></tr></thead><tbody>
 <tr><td>Jeder Konflikt ist irgendwie deine Schuld</td><td>Sie hinterfragt sich selbst nie. Niemals.</td><td>Ernst</td></tr>
 <tr><td>Mal heiß, mal kalt</td><td>Emotionale Instabilität oder ein Test deiner Bindung.</td><td>Beobachten</td></tr>
 <tr><td>Sie isoliert dich von deinen Leuten</td><td>Schrittweise Isolation, als Liebe verkleidet.</td><td>Sehr ernst</td></tr>

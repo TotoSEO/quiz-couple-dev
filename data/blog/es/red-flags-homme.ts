@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-en-un-hombre',
-  title: "Red flags en un hombre: lo que tu instinto intenta decirte",
-  metaTitle: "Red flags en un hombre: la lista completa",
+  title: "13 red flags en un hombre: lo que tu instinto intenta decirte",
+  metaTitle: "13 red flags en un hombre: la lista completa",
   metaDescription: "Algo no cuadra pero no logras definir qué. Red flags emocionales, de comportamiento, relacionales, la lista completa para verlo con claridad.",
   featuredImage: '',
   featuredImageAlt: "Red flags en un hombre, lista completa de señales de alerta en pareja",
@@ -24,7 +24,25 @@ const article: BlogArticleData = {
     {
       id: 'red-flags-de-un-vistazo',
       title: "Las red flags de un vistazo",
-      content: `<div><table><thead><tr><th>La señal</th><th>Lo que suele significar</th><th>Nivel de alerta</th></tr></thead><tbody>
+      content: `<p>Aquí están todos, en el orden en que los tratamos. Toca el que te suene para ir directamente a la explicación.</p>
+
+<ol class="blog-liste-reperes">
+<li><a href="#minimiza-lo-que-sientes">Minimiza lo que sientes</a></li>
+<li><a href="#sus-estados-tu-responsabilidad">Sus estados de ánimo se convierten en tu responsabilidad</a></li>
+<li><a href="#frio-y-calor">Frío y calor, en bucle</a></li>
+<li><a href="#nunca-se-disculpa">Nunca se disculpa de verdad</a></li>
+<li><a href="#actos-vs-palabras">Sus actos no coinciden con sus palabras</a></li>
+<li><a href="#no-respeta-limites">No respeta lo que le has dicho claramente</a></li>
+<li><a href="#ex-todas-locas">Habla de sus ex como si todas estuvieran locas</a></li>
+<li><a href="#pone-a-prueba-limites">Pone a prueba tus límites progresivamente</a></li>
+<li><a href="#dos-personalidades">Dos personalidades: una en público, otra contigo</a></li>
+<li><a href="#ocupa-todo-el-espacio">Ocupa todo el espacio sin dejar ninguno</a></li>
+<li><a href="#no-puedes-hablar">No puedes hablar con él de lo que te molesta</a></li>
+<li><a href="#te-aleja-de-los-tuyos">Te aleja progresivamente de tus personas cercanas</a></li>
+<li><a href="#dudas-de-ti-misma">Dudas de ti misma desde que estás con él</a></li>
+</ol>
+
+<div><table><thead><tr><th>La señal</th><th>Lo que suele significar</th><th>Nivel de alerta</th></tr></thead><tbody>
 <tr><td>Minimiza lo que sientes</td><td>Tus emociones le molestan. Prefiere que te calles.</td><td>Serio</td></tr>
 <tr><td>Todo es siempre culpa tuya</td><td>Nunca se cuestiona a sí mismo. Nunca.</td><td>Serio</td></tr>
 <tr><td>Te aleja de tus personas cercanas</td><td>Aislamiento progresivo, a menudo disfrazado de celos afectuosos.</td><td>Muy serio</td></tr>

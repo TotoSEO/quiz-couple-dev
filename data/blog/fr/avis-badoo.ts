@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'avis-badoo',
   title: `Notre avis sur l'application de rencontre Badoo`,
-  metaTitle: `Avis Badoo 2026 : ce qu'on en pense vraiment après des mois de test`,
+  metaTitle: `Avis Badoo 2026 : notre verdict après test, 5,5/10`,
   metaDescription: `On a testé Badoo pendant plusieurs mois : résultats côté homme et côté femme, tarifs, faux profils. Notre avis complet et sans filtre.`,
   featuredImage: '/blog/avis-badoo.webp',
   featuredImageAlt: `Notre avis sur l'application de rencontre Badoo en 2026`,
