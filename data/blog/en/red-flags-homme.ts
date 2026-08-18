@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-in-a-man',
-  title: "Red flags in a man: what your gut is trying to tell you",
-  metaTitle: "Red Flags in a Man: The Complete List",
+  title: "13 Red Flags in a man: what your gut is trying to tell you",
+  metaTitle: "13 Red Flags in a Man: The Complete List",
   metaDescription: "Something feels off but you can't quite name it? Emotional, behavioural, relationship red flags, the complete list to help you see things clearly.",
   featuredImage: '',
   featuredImageAlt: "Red flags in a man, complete list of warning signs in a relationship",
@@ -24,7 +24,25 @@ const article: BlogArticleData = {
     {
       id: 'red-flags-at-a-glance',
       title: "Red flags at a glance",
-      content: `<div><table><thead><tr><th>The signal</th><th>What it often means</th><th>Alert level</th></tr></thead><tbody>
+      content: `<p>Here they all are, in the order we cover them. Tap the one that speaks to you to jump straight to it.</p>
+
+<ol class="blog-liste-reperes">
+<li><a href="#dismisses-your-feelings">He dismisses what you feel</a></li>
+<li><a href="#his-moods-your-responsibility">His moods become your responsibility</a></li>
+<li><a href="#hot-and-cold">Hot and cold, on repeat</a></li>
+<li><a href="#never-apologises">He never actually apologises</a></li>
+<li><a href="#actions-vs-words">His actions don't match his words</a></li>
+<li><a href="#doesnt-respect-boundaries">He doesn't respect what you've clearly told him</a></li>
+<li><a href="#exes-all-crazy">He talks about all his exes like they were crazy</a></li>
+<li><a href="#gradually-tests-limits">He gradually tests your limits</a></li>
+<li><a href="#two-personalities">Two personalities: one in public, one with you</a></li>
+<li><a href="#takes-up-space">He takes up space without leaving any</a></li>
+<li><a href="#cant-talk-to-him">You can't talk to him about what bothers you</a></li>
+<li><a href="#pulls-you-away">He gradually pulls you away from your people</a></li>
+<li><a href="#doubting-yourself">You've doubted yourself since being with him</a></li>
+</ol>
+
+<div><table><thead><tr><th>The signal</th><th>What it often means</th><th>Alert level</th></tr></thead><tbody>
 <tr><td>He dismisses your feelings</td><td>Your emotions inconvenience him. He'd rather you stay quiet.</td><td>Serious</td></tr>
 <tr><td>Everything is always your fault</td><td>He never questions himself. Ever.</td><td>Serious</td></tr>
 <tr><td>He isolates you from your people</td><td>Gradual isolation, often disguised as affectionate jealousy.</td><td>Very serious</td></tr>

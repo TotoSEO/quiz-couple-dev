@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'opinion-badoo',
   title: `Nuestra opinión sobre la aplicación de citas Badoo`,
-  metaTitle: `Opiniones Badoo 2026: lo que pensamos de verdad tras meses de prueba`,
+  metaTitle: `Opiniones Badoo 2026: nuestro veredicto, 5,5/10`,
   metaDescription: `El equipo QuizCouple ha probado Badoo durante varios meses. Resultados, experiencia como hombre y como mujer, precios, perfiles falsos: nuestra opinión…`,
   featuredImage: '/blog/avis-badoo.webp',
   featuredImageAlt: `Nuestra opinión sobre la aplicación de citas Badoo en 2026`,

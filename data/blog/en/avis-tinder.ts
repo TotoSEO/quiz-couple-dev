@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'tinder-review',
   title: `Is Tinder worth it in 2026? Our full review and test`,
-  metaTitle: `Tinder review 2026: Our honest verdict after years of swiping`,
+  metaTitle: `Tinder review 2026: our verdict after testing, 5.5/10`,
   metaDescription: `Is Tinder still worth it in 2026? Our honest opinion on features, prices, fake profiles, and alternatives. We don't pull any punches.`,
   featuredImage: '/blog/avis-tinder.webp',
   featuredImageAlt: `QuizCouple's opinion on Tinder in 2026`,
@@ -291,7 +291,7 @@ const article: BlogArticleData = {
     {
       id: 'our-final-rating',
       title: `Our final rating`,
-      content: `<p class="blog-note-score"><br class="Apple-interchange-newline"><strong>5.5/10</strong></p>
+      content: `<p class="blog-note-score"><strong>5.5/10</strong></p>
 
 <p>Tinder remains a must-have dating app due to its size and fame. But&nbsp;the app has been resting on its laurels&nbsp;for a few years. Monetization is increasingly aggressive, fake profiles are a real problem, and the competition now offers higher quality experiences. Tinder is still useful, but it's no longer the no-brainer it used to be. If you use it, go in with calibrated expectations.</p>`,
     },

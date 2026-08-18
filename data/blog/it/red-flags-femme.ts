@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flag-in-una-donna',
-  title: "Red flag in una donna: quello che senti ha probabilmente un nome",
-  metaTitle: "Red flag in una donna: la lista completa",
+  title: "12 red flag in una donna: quello che senti ha probabilmente un nome",
+  metaTitle: "12 red flag in una donna: la lista completa",
   metaDescription: "Qualcosa non va nella tua relazione ma non riesci a capire cosa. Red flag emotive, comportamentali, relazionali in una donna, la lista completa.",
   featuredImage: '',
   featuredImageAlt: "Red flag in una donna, lista completa dei segnali d'allarme in coppia",
@@ -24,7 +24,24 @@ const article: BlogArticleData = {
     {
       id: 'red-flag-in-sintesi',
       title: "Le red flag in sintesi",
-      content: `<div><table><thead><tr><th>Il segnale</th><th>Cosa significa spesso</th><th>Livello di allerta</th></tr></thead><tbody>
+      content: `<p>Eccoli tutti, nell'ordine in cui li trattiamo. Tocca quello che ti suona familiare per andare direttamente alla spiegazione.</p>
+
+<ol class="blog-liste-reperes">
+<li><a href="#caldo-e-freddo">Soffia caldo e freddo</a></li>
+<li><a href="#suo-umore-tua-responsabilita">Il suo umore diventa una tua responsabilità</a></li>
+<li><a href="#vulnerabilita-contro-di-te">Usa le tue vulnerabilità contro di te</a></li>
+<li><a href="#crisi-sproporzionate">Le crisi emotive sono sproporzionate e imprevedibili</a></li>
+<li><a href="#conflitti-stesso-posto">I conflitti finiscono sempre nello stesso posto</a></li>
+<li><a href="#gelosia-oltre-ragionevole">La gelosia va oltre il ragionevole</a></li>
+<li><a href="#ex-tutti-mostri">Parla di tutti i suoi ex come se fossero mostri</a></li>
+<li><a href="#regole-cambiano">Le regole cambiano secondo l'umore del giorno</a></li>
+<li><a href="#bisogni-senza-spazio">I tuoi bisogni non hanno spazio</a></li>
+<li><a href="#allontana-dalle-persone">Ti allontana progressivamente dalle persone care</a></li>
+<li><a href="#colpevole-per-esistere">Ti senti in colpa per esistere al di fuori di lei</a></li>
+<li><a href="#peggio-con-te-stesso">Ti senti peggio con te stesso da quando siete insieme</a></li>
+</ol>
+
+<div><table><thead><tr><th>Il segnale</th><th>Cosa significa spesso</th><th>Livello di allerta</th></tr></thead><tbody>
 <tr><td>I conflitti sono sempre colpa tua</td><td>Non si mette mai in discussione. Mai.</td><td>Serio</td></tr>
 <tr><td>Soffia caldo e freddo</td><td>Instabilità emotiva o test del tuo attaccamento.</td><td>Da tenere d'occhio</td></tr>
 <tr><td>Ti allontana dalle persone care</td><td>Isolamento progressivo, presentato come amore.</td><td>Molto serio</td></tr>

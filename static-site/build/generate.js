@@ -14,7 +14,7 @@ import CleanCSS from 'clean-css';
 import {
   BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID, ADSENSE_CLIENT,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
-  QUIZ_RELATED_ARTICLES, QUIZ_FEATURED,
+  QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, APPLICATIONS_EVALUEES,
   getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable,
@@ -1464,6 +1464,50 @@ async function generateBlogArticle(articleMeta, lang) {
       };
     })(),
   ];
+
+  // ── Avis d'application : balisage Review ────────────────────────────────
+  // Les articles d'avis portent un verdict chiffré, visible dans la page
+  // (bloc .blog-note-score). Ils n'émettaient qu'un schéma Article, donc
+  // aucune étoile en résultat de recherche. Ces pages plafonnent en position
+  // 10 à 13 avec un taux de clic autour de 0,5 % : l'étoile est précisément
+  // ce qui se gagne à cet endroit-là. La note est lue dans le contenu, jamais
+  // saisie à la main, pour qu'un balisage sans contrepartie visible reste
+  // impossible.
+  const produitEvalue = APPLICATIONS_EVALUEES[articleMeta.internalSlug];
+  if (produitEvalue) {
+    const corps = (article.sections || []).map(sec =>
+      (sec.content || '') + (sec.subsections || []).map(sub => sub.content || '').join('')
+    ).join('');
+    const bloc = /class="blog-note-score"[^>]*>([\s\S]*?)<\/(?:p|div)>/.exec(corps);
+    const note = bloc && /(\d+(?:[.,]\d+)?)\s*\/\s*(\d+)/.exec(bloc[1].replace(/<[^>]+>/g, ' '));
+    if (note) {
+      jsonLdItems.push({
+        '@context': 'https://schema.org',
+        '@type': 'Review',
+        '@id': `${canonical}#review`,
+        itemReviewed: {
+          '@type': 'SoftwareApplication',
+          name: produitEvalue.nom,
+          applicationCategory: 'SocialNetworkingApplication',
+          operatingSystem: produitEvalue.plateformes || 'iOS, Android, Web',
+        },
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: note[1].replace(',', '.'),
+          bestRating: note[2],
+          worstRating: '0',
+        },
+        name: article.metaTitle || article.title,
+        reviewBody: article.excerpt || article.metaDescription || '',
+        datePublished: article.publishedAt,
+        inLanguage: lang,
+        author: { '@type': 'Person', name: authorData.name || 'Quiz Couple' },
+        publisher: { '@type': 'Organization', name: 'Quiz Couple', url: BASE_URL },
+      });
+    } else {
+      console.warn(`[schema] ${articleMeta.internalSlug} (${lang}) : aucune note lisible, Review non émis`);
+    }
+  }
 
   const jsonLdHtml = jsonLdItems.map(item =>
     `<script type="application/ld+json">${JSON.stringify(item)}</script>`

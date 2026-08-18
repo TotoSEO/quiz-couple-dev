@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'badoo-review',
   title: `Our review of the Badoo dating app`,
-  metaTitle: `Badoo review 2026: what we really think after months of testing`,
+  metaTitle: `Badoo review 2026: our verdict after testing, 5.5/10`,
   metaDescription: `The QuizCouple team tested Badoo for several months. Results, experience as a man and as a woman, pricing, fake profiles: our complete, unfiltered review.`,
   featuredImage: '/blog/avis-badoo.webp',
   featuredImageAlt: `Our review of the Badoo dating app in 2026`,

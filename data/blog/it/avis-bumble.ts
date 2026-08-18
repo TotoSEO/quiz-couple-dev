@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'recensione-bumble',
   title: `Bumble nel 2026: un'applicazione fuori budget e trascurata?`,
-  metaTitle: `La nostra recensione di Bumble nel 2026: test e risultati dell'app`,
+  metaTitle: `Recensioni Bumble 2026: il nostro voto, 6/10`,
   metaDescription: `La nostra recensione completa su Bumble dopo diversi mesi di test: funzionalità, prezzo, risultati reali e verdetto onesto.`,
   featuredImage: '/blog/avis-bumble.webp',
   featuredImageAlt: `immagine recensione bumble`,

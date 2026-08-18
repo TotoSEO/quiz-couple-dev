@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flag-in-un-uomo',
-  title: "Red flag in un uomo: quello che il tuo istinto sta cercando di dirti",
-  metaTitle: "Red flag in un uomo: la lista completa",
+  title: "13 red flag in un uomo: quello che il tuo istinto sta cercando di dirti",
+  metaTitle: "13 red flag in un uomo: la lista completa",
   metaDescription: "Qualcosa non va, ma non riesci a capire cosa. Red flag emotive, comportamentali, relazionali, la lista completa per vederci chiaro.",
   featuredImage: '',
   featuredImageAlt: "Red flag in un uomo, lista completa dei segnali d'allarme in coppia",
@@ -24,7 +24,25 @@ const article: BlogArticleData = {
     {
       id: 'red-flag-in-sintesi',
       title: "Le red flag in sintesi",
-      content: `<div><table><thead><tr><th>Il segnale</th><th>Cosa significa spesso</th><th>Livello di allerta</th></tr></thead><tbody>
+      content: `<p>Eccoli tutti, nell'ordine in cui li trattiamo. Tocca quello che ti suona familiare per andare direttamente alla spiegazione.</p>
+
+<ol class="blog-liste-reperes">
+<li><a href="#sminuisce-quello-che-provi">Sminuisce quello che provi</a></li>
+<li><a href="#suoi-umori-tua-responsabilita">I suoi umori diventano una tua responsabilità</a></li>
+<li><a href="#caldo-e-freddo">Caldo e freddo, in loop</a></li>
+<li><a href="#non-si-scusa-mai">Non si scusa mai davvero</a></li>
+<li><a href="#azioni-vs-parole">Le sue azioni non corrispondono alle parole</a></li>
+<li><a href="#non-rispetta-limiti">Non rispetta quello che gli hai detto chiaramente</a></li>
+<li><a href="#ex-tutte-pazze">Parla delle sue ex come se fossero tutte pazze</a></li>
+<li><a href="#testa-limiti">Testa i tuoi limiti progressivamente</a></li>
+<li><a href="#due-personalita">Due personalità: una in pubblico, una con te</a></li>
+<li><a href="#occupa-spazio">Occupa spazio senza lasciarne</a></li>
+<li><a href="#non-puoi-parlargli">Non puoi parlargli di quello che ti disturba</a></li>
+<li><a href="#ti-allontana">Ti allontana progressivamente dalle persone care</a></li>
+<li><a href="#dubiti-di-te">Dubiti di te stessa da quando sei con lui</a></li>
+</ol>
+
+<div><table><thead><tr><th>Il segnale</th><th>Cosa significa spesso</th><th>Livello di allerta</th></tr></thead><tbody>
 <tr><td>Sminuisce quello che provi</td><td>Le tue emozioni lo disturbano. Preferirebbe che tu stessi zitta.</td><td>Serio</td></tr>
 <tr><td>È sempre colpa tua</td><td>Non si mette mai in discussione. Mai.</td><td>Serio</td></tr>
 <tr><td>Ti allontana dalle persone care</td><td>Isolamento progressivo, spesso mascherato da gelosia affettuosa.</td><td>Molto serio</td></tr>

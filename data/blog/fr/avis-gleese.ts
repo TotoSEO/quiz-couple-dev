@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'avis-gleese',
   title: `Notre avis sur Gleese pour faire des rencontres Libertines`,
-  metaTitle: `Avis Gleese en 2026 : Que vaut cette plateforme ?`,
+  metaTitle: `Avis Gleese 2026 : notre verdict après test, 9,5/10`,
   metaDescription: `Notre avis complet sur Gleese en 2026 : fonctionnalités, modération, prix, points faibles et note finale. Le test d'un site libertin français.`,
   featuredImage: '/blog/avis-gleese.webp',
   featuredImageAlt: `Notre avis sur Gleese, le site de rencontres libertines, noté 9,5 sur 10 par Quiz Couple`,

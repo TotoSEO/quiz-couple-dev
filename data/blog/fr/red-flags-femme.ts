@@ -3,9 +3,9 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'red-flags-femme',
-  title: "Red flags chez une femme : ce que tu ressens a probablement un nom",
-  metaTitle: "Les Red flags chez une Femme : la liste complète",
-  metaDescription: "Quelque chose cloche mais tu n'arrives pas à le nommer ? Red flags émotionnels, comportementaux et relationnels chez une femme : la liste complète.",
+  title: "Les 12 red flags chez une femme : ce que tu ressens a probablement un nom",
+  metaTitle: "Les 12 red flags chez une femme : la liste complète",
+  metaDescription: "La liste des 12 red flags chez une femme, classés par niveau d'alerte. Ce que chaque signal veut dire, et à partir de quand il faut s'en inquiéter.",
   featuredImage: '',
   featuredImageAlt: "Red flags chez une femme, liste complète des signaux d'alarme en couple",
   publishedAt: '2026-03-07',
@@ -23,8 +23,25 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'red-flags-en-un-coup-d-oeil',
-      title: "Les red flags en un coup d'œil",
-      content: `<div><table><thead><tr><th>Le signal</th><th>Ce que ça veut souvent dire</th><th>Niveau d'alerte</th></tr></thead><tbody>
+      title: "La liste des 12 red flags chez une femme",
+      content: `<p>Les voici tous, dans l'ordre où on les traite. Clique sur celui qui te parle pour aller directement à l'explication.</p>
+
+<ol class="blog-liste-reperes">
+<li><a href="#chaud-et-froid">Elle souffle le chaud et le froid</a></li>
+<li><a href="#son-humeur-ta-responsabilite">Son humeur devient ta responsabilité</a></li>
+<li><a href="#utilise-tes-failles">Elle utilise tes failles contre toi</a></li>
+<li><a href="#crises-disproportionnees">Les crises sont disproportionnées et imprévisibles</a></li>
+<li><a href="#conflits-toujours-ta-faute">Les conflits finissent toujours au même endroit</a></li>
+<li><a href="#jalousie-deraisonnable">La jalousie dépasse ce qui est raisonnable</a></li>
+<li><a href="#tous-ses-ex-sont-des-monstres">Elle parle de tous ses ex comme s'ils étaient tous des monstres</a></li>
+<li><a href="#regles-changent">Les règles changent selon l'humeur du jour</a></li>
+<li><a href="#tes-besoins-pas-de-place">Tes besoins n'ont pas de place</a></li>
+<li><a href="#coupe-de-tes-proches">Elle te coupe progressivement de tes proches</a></li>
+<li><a href="#coupable-d-exister">Tu te sens coupable d'exister en dehors d'elle</a></li>
+<li><a href="#moins-bien-dans-ta-peau">Tu te sens moins bien dans ta peau depuis que vous êtes ensemble</a></li>
+</ol>
+
+<div><table><thead><tr><th>Le signal</th><th>Ce que ça veut souvent dire</th><th>Niveau d'alerte</th></tr></thead><tbody>
 <tr><td>Les conflits sont toujours de ta faute</td><td>Elle ne se remet jamais en question. Jamais.</td><td>Sérieux</td></tr>
 <tr><td>Elle souffle le chaud et le froid</td><td>Instabilité émotionnelle ou test de ton attachement.</td><td>À surveiller</td></tr>
 <tr><td>Elle te coupe de tes proches</td><td>Isolement progressif, souvent présenté comme de l'amour.</td><td>Très sérieux</td></tr>

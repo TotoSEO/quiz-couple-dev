@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'hinge-dating-app-review',
   title: `Hinge dating app review in 2026: our honest test and verdict`,
-  metaTitle: `Our Hinge review in 2026: app test and results`,
+  metaTitle: `Hinge review 2026: our verdict after testing, 7/10`,
   metaDescription: `We tested Hinge for several months. Prompts, algorithm, real pricing, bans, and results: our complete, honest, no-nonsense review.`,
   featuredImage: '/blog/avis-hinge.webp',
   featuredImageAlt: `hinge review dating app image`,

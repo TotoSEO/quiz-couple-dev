@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'avis-tinder',
   title: `Que vaut Tinder en 2026 ? Notre avis et test complet`,
-  metaTitle: `Avis Tinder 2026 : notre verdict honnête après des années de swipe`,
+  metaTitle: `Avis Tinder 2026 : notre verdict après test, 5,5/10`,
   metaDescription: `Tinder vaut-il encore le coup en 2026 ? Notre avis honnête sur les fonctionnalités, les prix, les faux profils et les alternatives.`,
   featuredImage: '/blog/avis-tinder.webp',
   featuredImageAlt: `L'avis de QuizCouple sur tinder en 2026`,
@@ -290,7 +290,7 @@ const article: BlogArticleData = {
     {
       id: 'notre-note-finale',
       title: `Notre note finale`,
-      content: `<p class="blog-note-score"><!--StartFragment--><br class="Apple-interchange-newline"><!--EndFragment--><strong>5,5/10</strong></p>
+      content: `<p class="blog-note-score"><!--StartFragment--><!--EndFragment--><strong>5,5/10</strong></p>
 
 <p>Tinder reste une application de rencontre incontournable par sa taille et sa notoriété. Mais&nbsp;l'application vit sur ses acquis&nbsp;depuis quelques années. La monétisation est de plus en plus agressive, les faux profils sont un vrai problème, et la concurrence propose aujourd'hui des expériences plus qualitatives. Tinder est encore utile, mais ce n'est plus l'évidence qu'il était. Si tu l'utilises, vas-y avec des attentes calibrées.</p>`,
     },

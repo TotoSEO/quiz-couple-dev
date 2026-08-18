@@ -1599,6 +1599,49 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .blog-toc a:hover { text-decoration: underline; }
 
 /* Blog quick summary */
+/* ── Liste de repères en tête d'article ────────────────────
+   Une part des recherches qui mènent ici demande explicitement une
+   « liste » : liste red flag, red flag liste, liste de red flag chez un
+   homme. L'article les traitait en sous-titres, sans jamais présenter
+   l'inventaire. Ce bloc le donne d'emblée, numéroté et cliquable, et il
+   est visible : le sommaire du gabarit, lui, est replié par défaut. */
+.blog-article ol.blog-liste-reperes {
+  margin: 1.25rem 0 2rem; padding: 1.25rem 1.4rem 1.25rem 1.1rem;
+  list-style: none; counter-reset: repere;
+  display: grid; gap: .55rem;
+  border-radius: 1.25rem;
+  border: 1px solid hsl(var(--primary) / .22);
+  background:
+    radial-gradient(120% 100% at 0% 0%, hsl(var(--primary) / .09), transparent 60%),
+    hsl(var(--card));
+}
+.blog-article ol.blog-liste-reperes li {
+  counter-increment: repere;
+  position: relative; padding-left: 2.4rem;
+  font-size: 1rem; line-height: 1.45;
+}
+.blog-article ol.blog-liste-reperes li::before {
+  content: counter(repere);
+  position: absolute; left: 0; top: .05rem;
+  width: 1.7rem; height: 1.7rem; border-radius: 9999px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: .8rem; font-weight: 800; font-variant-numeric: tabular-nums;
+  color: hsl(var(--primary));
+  background: hsl(var(--primary) / .12);
+}
+.blog-article ol.blog-liste-reperes a {
+  color: hsl(var(--foreground)); text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+.blog-article ol.blog-liste-reperes a:hover {
+  color: hsl(var(--primary)); border-bottom-color: hsl(var(--primary) / .45);
+}
+@media (max-width: 460px) {
+  .blog-article ol.blog-liste-reperes { padding: 1.1rem 1rem 1.1rem .9rem; }
+  .blog-article ol.blog-liste-reperes li { padding-left: 2.2rem; font-size: .96rem; }
+}
+
 .blog-quick-summary { border-radius: calc(var(--radius) + 8px); border-left: 4px solid hsl(var(--primary)); background-color: hsl(var(--primary) / 0.05); padding: 1.5rem; margin: 2rem 0; }
 .blog-quick-summary-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
 .blog-quick-summary ul { list-style: disc; list-style-position: inside; font-size: 0.875rem; }
