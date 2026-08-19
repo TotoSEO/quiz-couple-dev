@@ -782,6 +782,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-09-11',
   },
+  {
+    internalSlug: 'dependance-affective-symptomes',
+    category: 'psychologie',
+    featuredImage: '/blog/dependance-affective-symptomes.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'dependance-affective-symptomes',
+    },
+    publishedAt: '2026-09-15',
+  },
+  {
+    internalSlug: 'manipulateur-narcissique',
+    category: 'psychologie',
+    featuredImage: '/blog/manipulateur-narcissique.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'manipulateur-narcissique',
+    },
+    publishedAt: '2026-09-18',
+  },
 ];
 
 // Author data
