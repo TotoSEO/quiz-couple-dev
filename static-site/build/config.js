@@ -762,6 +762,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-09-04',
   },
+  {
+    internalSlug: 'phrases-preferees-des-manipulateurs',
+    category: 'psychologie',
+    featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'phrases-preferees-des-manipulateurs',
+    },
+    publishedAt: '2026-09-08',
+  },
+  {
+    internalSlug: 'questions-a-poser-a-une-fille',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-a-poser-a-une-fille',
+    },
+    publishedAt: '2026-09-11',
+  },
 ];
 
 // Author data
