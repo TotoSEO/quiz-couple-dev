@@ -373,31 +373,59 @@
     "bands": [
       {
         "min": 0,
-        "max": 39,
+        "max": 19,
+        "tag": "Allarme",
+        "title": "Una coppia che soffre",
+        "desc": "Le vostre risposte descrivono una relazione che in questo momento fa più male che bene. È una lettura dura, ma ha una virtù: dà un nome a ciò che probabilmente sentite già. Parlatene con qualcuno di fiducia e, se il dialogo si è rotto, un terapeuta di coppia serve esattamente a questo."
+      },
+      {
+        "min": 20,
+        "max": 34,
         "tag": "Fragile",
-        "title": "Una coppia da proteggere",
-        "desc": "Diverse fondamenta (comunicazione, fiducia, progetti comuni) hanno bisogno di attenzione. Niente è perduto: sono proprio i temi da aprire insieme, senza giudicarvi."
+        "title": "Fondamenta da ricostruire",
+        "desc": "Diversi pilastri, comunicazione, fiducia, riparazione dopo il conflitto, sono danneggiati insieme. Nulla di irreversibile, ma non aspettate che si sistemi da solo: scegliete IL tema che fa più male e apritelo con calma, fuori da un litigio."
       },
       {
-        "min": 40,
-        "max": 59,
+        "min": 35,
+        "max": 49,
+        "tag": "In cantiere",
+        "title": "Una coppia in cerca del suo equilibrio",
+        "desc": "C'è legame, e ci sono falle. Le vostre risposte divergenti mostrano esattamente dove: quelli sono i vostri cantieri prioritari. Il riflesso giusto non è sistemare tutto, è sceglierne due e mettercisi davvero."
+      },
+      {
+        "min": 50,
+        "max": 62,
         "tag": "Da consolidare",
-        "title": "Una buona base da rafforzare",
-        "desc": "La vostra coppia poggia su fondamenta reali, con alcune zone da rafforzare. Individuate le domande in cui le vostre risposte divergono, sono i vostri prossimi cantieri di coppia."
+        "title": "Una base vera, cantieri noti",
+        "desc": "La vostra coppia poggia su fondamenta reali, con zone di attrito che probabilmente conoscete già. La differenza tra le coppie che progrediscono e le altre: le prime ne parlano prima che si inceppi, non dopo."
       },
       {
-        "min": 60,
-        "max": 79,
+        "min": 63,
+        "max": 74,
         "tag": "Solida",
         "title": "Una coppia solida",
-        "desc": "Avete costruito una relazione stabile ed equilibrata. Continuate a curare ciò che funziona e a parlare di ciò che non va prima che si radichi."
+        "desc": "Comunicazione e fiducia rispondono presente, gli attriti restano gestibili. Il vostro margine sta nei temi che ancora evitate: è lì che spesso dormono i 10 punti mancanti."
       },
       {
-        "min": 80,
-        "max": 100,
+        "min": 75,
+        "max": 84,
         "tag": "Molto solida",
         "title": "Una coppia molto solida",
-        "desc": "Comunicazione, fiducia e complicità ci sono tutte. Una base rara e preziosa: coltivatela, vi porterà lontano."
+        "desc": "Avete costruito qualcosa di stabile ed equilibrato, che attraversa le tempeste senza imbarcare acqua. Curate ciò che funziona e tenete d'occhio la routine: è l'unica vera minaccia a questo livello."
+      },
+      {
+        "min": 85,
+        "max": 94,
+        "tag": "Affiatata",
+        "title": "Una coppia rara",
+        "desc": "Fiducia, complicità, progetti, riparazione: c'è quasi tutto, e le vostre risposte si incontrano dove conta. Questo equilibrio non deve nulla al caso; racconta il lavoro che fate l'uno per l'altro ogni giorno."
+      },
+      {
+        "min": 95,
+        "max": 100,
+        "tag": "Eccezionale",
+        "title": "Un'intesa quasi perfetta",
+        "desc": "Un punteggio così è eccezionale a una condizione: che ognuno abbia risposto con la propria verità, non con la risposta che fa piacere. Se è così, congratulazioni sincere. Se resta un dubbio, rifatelo giocando a carte scoperte: il risultato sarà solo più bello."
       }
     ]
   },

@@ -33,15 +33,35 @@
   "section3": {
     "title": "Comment interpréter le résultat de votre test de couple",
     "p1": "Chaque partenaire répond de son côté aux mêmes questions. Chaque réponse rapporte des points selon ce qu'elle révèle de la santé de votre relation (communication, confiance, projets communs...). On obtient ainsi un <strong>score individuel pour chacun</strong> et un <strong>score global de couple</strong> en pourcentage. Attention : un score élevé ne garantit pas une relation parfaite, et un score bas ne veut pas dire que votre couple est en danger, c'est avant tout une base de discussion.",
-    "sub1Title": "80-100% : Grande compatibilité",
-    "sub1P1": "Vous êtes très alignés dans vos réponses. Cela témoigne d'une <strong>bonne compréhension mutuelle</strong> et de valeurs proches. Continuez à entretenir cette connexion !",
-    "sub2Title": "60-79% : Bonne entente",
-    "sub2P1": "Vous partagez beaucoup de choses tout en gardant vos individualités. C'est un <strong>équilibre sain</strong>, les petites différences peuvent même être enrichissantes.",
-    "sub3Title": "40-59% : Des ajustements possibles",
-    "sub3P1": "Des écarts apparaissent sur certains sujets. C'est l'occasion d'en discuter ouvertement. Sur ces sujets-là, partir d'une <a href=\"/questions-couple/\">question ouverte</a> évite que la discussion démarre sur un reproche.",
-    "sub4Title": "Moins de 40% : Dialogue nécessaire",
-    "sub4P1": "Des désaccords importants ressortent. Cela ne signifie pas la fin, mais un <strong>effort de communication</strong> est recommandé.",
-    "quote": "Le score n'est qu'un point de départ. L'essentiel est ce que vous en faites ensemble."
+    "quote": "Le score n'est qu'un point de départ. L'essentiel est ce que vous en faites ensemble.",
+    "p2": "Le verdict se joue sur huit paliers, du couple en souffrance à l'accord presque parfait : assez fin pour que deux couples différents ne reçoivent pas la même étiquette. Vous recevez aussi chacun votre score individuel, et l'écart entre les deux est souvent la donnée la plus intéressante du test.",
+    "headerScore": "Votre score",
+    "headerLevel": "Verdict",
+    "headerAnalysis": "Ce que ça raconte",
+    "row1Score": "95-100 %",
+    "row1Level": "Exceptionnel",
+    "row1Analysis": "Un accord presque parfait, si vous avez joué franc-jeu l'un et l'autre",
+    "row2Score": "85-94 %",
+    "row2Level": "Complice",
+    "row2Analysis": "Presque tout y est, et vos réponses se rejoignent là où ça compte",
+    "row3Score": "75-84 %",
+    "row3Level": "Très solide",
+    "row3Analysis": "Stable et équilibré : la routine est votre seule vraie menace",
+    "row4Score": "63-74 %",
+    "row4Level": "Solide",
+    "row4Analysis": "Les fondations tiennent, la marge est dans les sujets encore évités",
+    "row5Score": "50-62 %",
+    "row5Level": "À consolider",
+    "row5Analysis": "Une vraie base, des frictions connues : parlez-en avant que ça coince",
+    "row6Score": "35-49 %",
+    "row6Level": "En chantier",
+    "row6Analysis": "Du lien et des fuites : choisissez deux chantiers et tenez-les",
+    "row7Score": "20-34 %",
+    "row7Level": "Fragile",
+    "row7Analysis": "Plusieurs piliers abîmés en même temps : ouvrez le sujet le plus douloureux, au calme",
+    "row8Score": "0-19 %",
+    "row8Level": "Alerte",
+    "row8Analysis": "La relation fait plus mal que du bien en ce moment : ne restez pas seuls avec ça"
   },
   "section4": {
     "title": "Les erreurs à éviter quand on fait un test de couple",
@@ -135,6 +155,6 @@
     "faq4Q": "Mon score est bas, dois-je m'inquiéter ?",
     "faq4A": "Pas forcément ! Un score bas signifie simplement que vous avez des perspectives différentes sur certains sujets. C'est une invitation au dialogue, pas un verdict. Les couples les plus solides sont ceux qui savent discuter de leurs différences.",
     "faq5Q": "Peut-on refaire le test de couple plusieurs fois ?",
-    "faq5A": "Absolument ! Nous vous encourageons même à refaire le test régulièrement (tous les 3-6 mois) pour voir comment votre relation évolue."
+    "faq5A": "Absolument ! Nous vous encourageons même à refaire le test régulièrement (tous les 3-6 mois) pour voir comment votre relation évolue. Les 20 questions sont d'ailleurs tirées d'une réserve de 30 : en le refaisant, vous ne retomberez pas sur la même série."
   }
 }
