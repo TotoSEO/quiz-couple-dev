@@ -902,6 +902,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-10-23',
   },
+  {
+    internalSlug: 'homme-toxique-en-amour',
+    category: 'psychologie',
+    featuredImage: '/blog/homme-toxique-en-amour.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'homme-toxique-en-amour',
+    },
+    publishedAt: '2026-10-27',
+  },
+  {
+    internalSlug: 'questions-avenir-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-avenir-couple.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-avenir-couple',
+    },
+    publishedAt: '2026-10-30',
+  },
 ];
 
 // Author data
