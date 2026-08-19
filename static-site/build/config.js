@@ -290,6 +290,13 @@ export const BLOG_CATEGORIES = {
     de: 'Dating-Apps',
     it: 'App di incontri',
   },
+  psychologie: {
+    fr: 'Psychologie',
+    en: 'Psychology',
+    es: 'Psicología',
+    de: 'Psychologie',
+    it: 'Psicologia',
+  },
 };
 
 // Blog article metadata
@@ -714,6 +721,16 @@ export const BLOG_ARTICLES = [
       it: 'attivita-di-coppia-in-estate',
     },
     publishedAt: '2026-07-29',
+  },
+  {
+    internalSlug: 'pervers-narcissique-amour',
+    category: 'psychologie',
+    featuredImage: '/blog/pervers-narcissique-amour.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'pervers-narcissique-amour',
+    },
+    publishedAt: '2026-08-25',
   },
 ];
 
