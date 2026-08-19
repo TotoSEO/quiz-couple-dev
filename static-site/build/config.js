@@ -962,6 +962,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-11-13',
   },
+  {
+    internalSlug: 'dependance-affective-amitie',
+    category: 'psychologie',
+    featuredImage: '/blog/dependance-affective-amitie.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'dependance-affective-amitie',
+    },
+    publishedAt: '2026-11-17',
+  },
+  {
+    internalSlug: 'dependance-affective-rupture',
+    category: 'psychologie',
+    featuredImage: '/blog/dependance-affective-rupture.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'dependance-affective-rupture',
+    },
+    publishedAt: '2026-11-20',
+  },
 ];
 
 // Author data
