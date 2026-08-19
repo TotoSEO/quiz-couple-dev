@@ -1002,6 +1002,46 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-11-27',
   },
+  {
+    internalSlug: 'styles-attachement-couple',
+    category: 'psychologie',
+    featuredImage: '/blog/styles-attachement-couple.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'styles-attachement-couple',
+    },
+    publishedAt: '2026-12-01',
+  },
+  {
+    internalSlug: 'attachement-anxieux',
+    category: 'psychologie',
+    featuredImage: '/blog/attachement-anxieux.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'attachement-anxieux',
+    },
+    publishedAt: '2026-12-04',
+  },
+  {
+    internalSlug: 'attachement-evitant',
+    category: 'psychologie',
+    featuredImage: '/blog/attachement-evitant.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'attachement-evitant',
+    },
+    publishedAt: '2026-12-08',
+  },
+  {
+    internalSlug: 'peur-de-l-engagement',
+    category: 'psychologie',
+    featuredImage: '/blog/peur-de-l-engagement.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'peur-de-l-engagement',
+    },
+    publishedAt: '2026-12-11',
+  },
 ];
 
 // Author data
