@@ -28,7 +28,7 @@ const article: BlogArticleData = {
       content: `<p><strong>Une poignée à la fois.</strong> Deux ou trois questions dans une soirée, c'est une conversation. Trente d'affilée, c'est une garde à vue. La liste est longue exprès : elle se consomme sur des semaines, pas en une fois.</p>
 <p><strong>Réponds aussi.</strong> La règle du jeu, c'est l'échange. Si tu lui demandes sa plus grande peur, prépare-toi à raconter la tienne. C'est d'ailleurs souvent là que la conversation décolle.</p>
 <p><strong>Accueille la réponse, quelle qu'elle soit.</strong> Si une réponse te surprend ou te pique, tu as le droit de creuser, pas de plaider. Une question posée pour piéger n'apprend jamais rien de vrai.</p>
-<p>Et si vous préférez le format jeu, avec des points et un verdict à la fin, notre <a href="/quiz-qui-connait-mieux-partenaire/">quiz « qui connaît le mieux l'autre »</a> transforme exactement ce genre de questions en petit défi à deux.</p>`,
+<p>Dernier détail : au fil des réponses, une question finira forcément par surgir, lequel de vous deux <a href="/quiz-qui-connait-mieux-partenaire/">connaît le mieux l'autre</a> ? Gardez-la pour la fin, elle se tranche mieux points en main.</p>`,
     },
     {
       id: 'pour-mieux-le-connaitre',
@@ -73,7 +73,7 @@ const article: BlogArticleData = {
 <li>Qu'est-ce qui t'a le plus étonné en apprenant à me connaître ?</li>
 <li>Si on rejouait notre premier rendez-vous, tu changerais quoi ?</li>
 </ol>
-<p>Si cette série vous met en veine de souvenirs, la page des <a href="/questions-couple/">questions pour couple classées par thème</a> en propose une version pensée pour y passer une soirée entière.</p>`,
+<p>Cette série a un effet secondaire connu : une question en appelle dix. Les soirs où la boîte à souvenirs s'ouvre en grand, une réserve de 120 <a href="/questions-couple/">questions pour couple</a> n'est pas du luxe.</p>`,
     },
     {
       id: 'droles-et-legeres',
@@ -96,7 +96,7 @@ const article: BlogArticleData = {
 <li>Quelle mode as-tu suivie à fond avant d'avoir honte ?</li>
 <li>Tu préfères savoir chanter ou savoir danser ?</li>
 </ol>
-<p>Pour une soirée entière sur ce ton-là, avec des dilemmes impossibles à départager, le jeu du <a href="/tu-preferes-couple-quiz/">tu préfères spécial couple</a> prend le relais très bien.</p>`,
+<p>Tu remarqueras qu'il défend ses théories absurdes avec un sérieux déconcertant ; c'est exactement ce qui rend les dilemmes du <a href="/tu-preferes-couple-quiz/">tu préfères en couple</a> impossibles à départager.</p>`,
     },
     {
       id: 'amour-et-sentiments',
@@ -124,7 +124,7 @@ const article: BlogArticleData = {
           id: 'savoir-s-il-t-aime',
           title: "Et pour savoir s'il t'aime, on demande quoi ?",
           content: `<p>Aucune question magique ne fera dire « je t'aime » à quelqu'un qui ne le pense pas. En revanche, les réponses aux questions 46 à 60 dessinent un tableau très net : quelqu'un qui investit la conversation, qui se souvient, qui se projette, te répond bien au-delà des mots.</p>
-<p>Si le doute est vraiment installé et que tu guettes les signes, prends dix minutes pour le <a href="/test-m-aime-t-il-elle-en-secret/">test « m'aime-t-il en secret »</a> : il passe en revue les comportements qui trahissent les sentiments, ceux qu'on ne pense pas à observer.</p>`,
+<p>Et si le doute persiste malgré ses réponses, ce n'est plus une question supplémentaire qu'il te faut, c'est une grille de lecture : savoir <a href="/test-m-aime-t-il-elle-en-secret/">s'il t'aime en secret</a> se lit dans les comportements, pas dans les déclarations.</p>`,
         },
       ],
     },
@@ -176,7 +176,7 @@ const article: BlogArticleData = {
 <li>Qu'est-ce qui te ferait dire oui à une grande décision : l'envie ou le bon moment ?</li>
 <li>Si on ne devait garder qu'un rêve commun, tu garderais lequel ?</li>
 </ol>
-<p>Et si ces questions ouvrent une vraie discussion d'engagement, le <a href="/test-habiter-vivre-ensemble/">test « prêts à vivre ensemble »</a> permet de la pousser jusqu'au bout, réponses croisées à l'appui.</p>`,
+<p>La 84 est piégeuse : on croit répondre « rien », et on découvre qu'on n'a jamais vraiment vérifié si on était <a href="/test-habiter-vivre-ensemble/">prêts à vivre ensemble</a>. Mieux vaut le découvrir avant les cartons qu'après.</p>`,
     },
     {
       id: 'au-telephone-ou-a-distance',
@@ -194,7 +194,7 @@ const article: BlogArticleData = {
 <li>Qu'est-ce que tu écoutes en ce moment que je devrais écouter aussi ?</li>
 <li>Si je débarquais chez toi dans une heure, tu changerais quoi à ta soirée ?</li>
 </ol>
-<p>Les couples à distance ont d'ailleurs leur format dédié : le <a href="/quiz-couple-distance/">quiz spécial couple à distance</a> se joue à deux, chacun sur son écran, et finit rarement sans fou rire.</p>`,
+<p>À distance, le vrai risque n'est pas de manquer de sujets, c'est que tous les échanges finissent par se ressembler ; un <a href="/quiz-couple-distance/">quiz pensé pour les couples à distance</a>, chacun sur son écran, casse cette routine mieux qu'un troisième appel vidéo de suite.</p>`,
     },
     {
       id: 'et-apres',

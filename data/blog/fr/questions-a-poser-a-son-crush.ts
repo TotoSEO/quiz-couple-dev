@@ -173,7 +173,7 @@ const article: BlogArticleData = {
     {
       id: 'pour-voir-si-ca-pourrait-coller',
       title: "Pour voir si ça pourrait coller entre vous (106-120)",
-      content: `<p>Sous leurs airs de conversation légère, ces quinze questions vérifient l'essentiel : vos rythmes, vos attentes, vos visions. De quoi savoir si le crush a un avenir, sans jamais poser LA question frontale.</p>
+      content: `<p>Sous leurs airs de conversation légère, ces quinze questions vérifient l'essentiel : vos rythmes, vos attentes, vos visions. C'est exactement le travail que font les <a href="/questions-couple/">questions de couple</a> une fois l'histoire lancée ; en version crush, on vérifie la même chose sans jamais poser LA question frontale.</p>
 <ol start="106">
 <li>C'est quoi ton week-end idéal : programme carré ou improvisation totale ?</li>
 <li>Tu as besoin de beaucoup de temps pour toi, ou tu aimes la présence en continu ?</li>
@@ -208,12 +208,12 @@ const article: BlogArticleData = {
 <li>Si tu devais me faire découvrir un endroit que tu adores, ce serait où ?</li>
 <li>Bon. Sur dix, cette soirée ?</li>
 </ol>
-<p>Et si le rendez-vous se passe bien au point de devenir une histoire, tu changeras simplement de registre : les <a href="/blog/questions-a-poser-a-son-copain/">questions à poser à son copain</a> prennent le relais exactement là où cette liste s'arrête, et la grande collection de <a href="/questions-couple/">questions pour couple</a> vous attend pour la suite.</p>`,
+<p>Et si ce rendez-vous devient une histoire, tu verras le registre changer tout seul : les <a href="/blog/questions-a-poser-a-son-copain/">questions qu'on pose à son copain</a> n'ont plus grand-chose à voir avec celles qu'on posait à son crush, et c'est très bon signe.</p>`,
     },
     {
       id: 'et-s-il-ne-se-passe-rien',
       title: "Et si tu n'oses pas lui envoyer quoi que ce soit ?",
-      content: `<p>Petit mot pour celle ou celui qui a lu jusqu'ici sans avoir envoyé le moindre message : c'est normal. Un crush, par définition, fait perdre les moyens. Commence par les questions 1 à 20, une seule, la plus simple, celle qui te ressemble. Le but n'est pas d'être brillante, c'est d'ouvrir une porte. Et si ton crush est une fille et que tu veux des idées plus ciblées, les <a href="/blog/questions-a-poser-a-une-fille/">questions à poser à une fille</a> complètent bien cette liste.</p>
+      content: `<p>Petit mot pour celle ou celui qui a lu jusqu'ici sans avoir envoyé le moindre message : c'est normal. Un crush, par définition, fait perdre les moyens. Commence par les questions 1 à 20, une seule, la plus simple, celle qui te ressemble. Le but n'est pas d'être brillante, c'est d'ouvrir une porte.</p>
 <p>Et si vous parlez déjà tous les jours mais que tu n'arrives pas à savoir si c'est réciproque, arrête de relire vos conversations pour la dixième fois : il y a des signaux plus fiables que ton interprétation de ses emojis.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Il pense à toi, ou il répond juste poliment ?</p>

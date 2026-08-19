@@ -32,7 +32,7 @@ const article: BlogArticleData = {
 <li><a href="#dans-l-intimite">Dans l'intimité : le contrôle installé (signes 7 à 9)</a></li>
 <li><a href="#quand-tu-resistes">Quand tu résistes : le masque qui tombe (signes 10 à 12)</a></li>
 </ol>
-<p>Un rappel avant de commencer : la moitié de ces comportements, pris isolément et une seule fois, peut arriver dans n'importe quel couple. Ce qui fait signe, c'est la répétition, l'accumulation, et surtout le sens général : tout converge vers son contrôle et ton rétrécissement. Le portrait de fond du mécanisme, lui, est posé dans notre guide du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a>.</p>`,
+<p>Un rappel avant de commencer : la moitié de ces comportements, pris isolément et une seule fois, peut arriver dans n'importe quel couple. Ce qui fait signe, c'est la répétition, l'accumulation, et surtout le sens général : tout converge vers son contrôle et ton rétrécissement. Le fonctionnement de fond, lui, celui qui explique pourquoi tout converge, est décrypté dans le guide du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a>.</p>`,
       subsections: [
         {
           id: 'en-societe-le-personnage',
