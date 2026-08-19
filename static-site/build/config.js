@@ -842,6 +842,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-10-02',
   },
+  {
+    internalSlug: 'relation-toxique-signes',
+    category: 'psychologie',
+    featuredImage: '/blog/relation-toxique-signes.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'relation-toxique-signes',
+    },
+    publishedAt: '2026-10-06',
+  },
+  {
+    internalSlug: 'amour-ou-dependance-affective',
+    category: 'psychologie',
+    featuredImage: '/blog/amour-ou-dependance-affective.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'amour-ou-dependance-affective',
+    },
+    publishedAt: '2026-10-09',
+  },
 ];
 
 // Author data
