@@ -27,16 +27,21 @@ const article: BlogArticleData = {
       title: "Pervers narcissique : de quoi on parle vraiment",
       content: `<p>L'expression est partout, au point d'être devenue une insulte de dispute. Ça dessert surtout les personnes qui en vivent un vrai, alors remettons les choses à leur place.</p>
 <p>Un pervers narcissique, c'est quelqu'un qui a besoin de se sentir supérieur pour tenir debout, et qui utilise l'autre comme carburant. Pas par accès de colère, pas par maladresse : par fonctionnement. La relation n'est pas un lien entre deux personnes, c'est un miroir qui doit le renvoyer en grand. Tant que tu l'admires, tu es idéale. Dès que tu redeviens une personne réelle, avec des besoins et des limites, tu deviens un problème à corriger.</p>
-<p>Le terme vient de la psychanalyse française, il a été forgé par Paul-Claude Racamier dans les années 1980. Tu ne le trouveras pas tel quel dans les classifications psychiatriques internationales, qui parlent plutôt de trouble de la personnalité narcissique. Certains chercheurs contestent même l'expression, devenue un phénomène de société.</p>
-<p><strong>Et honnêtement : ça ne change rien pour toi.</strong> Que la bonne étiquette soit « pervers narcissique », « manipulateur » ou « trouble narcissique », le mécanisme que tu subis est le même, et c'est lui qu'il faut savoir reconnaître. C'est le comportement qui compte, pas le certificat.</p>`,
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">📌 Le mot n'est pas un diagnostic</p>
+<p>« Pervers narcissique » vient de la psychanalyse française (Paul-Claude Racamier, années 1980). Les classifications psychiatriques internationales parlent plutôt de trouble de la personnalité narcissique, et certains chercheurs contestent l'expression, devenue un phénomène de société. Pour toi, ça ne change rien : c'est le comportement qui compte, pas l'étiquette.</p>
+</aside>`,
       subsections: [
         {
           id: 'difference-avec-un-egoiste',
           title: "Ce qui le distingue d'un homme simplement égoïste",
           content: `<p>Un égoïste te déçoit ; un pervers narcissique te démolit. La différence tient en trois points.</p>
-<p>D'abord la constance : l'égoïste est pénible de façon prévisible, tu sais à quoi t'attendre. Le pervers narcissique alterne, et c'est l'alternance qui rend accro, comme on l'a décortiqué dans la mécanique du <a href="/blog/love-bombing/">love bombing</a>.</p>
-<p>Ensuite la cible : l'égoïste néglige tes besoins, le pervers narcissique attaque ta perception. Il ne se contente pas de ne pas t'écouter, il te convainc que tu n'as rien dit, ou que tu l'as dit autrement, ou que tu exagères de le relever.</p>
-<p>Enfin le public : l'égoïste est égoïste devant tout le monde. Le pervers narcissique, lui, réserve le pire à l'intimité et garde le meilleur pour la galerie. Ce contraste n'est pas un détail, c'est un outil : il fabrique ton isolement.</p>`,
+<div><table><thead><tr><th></th><th>Homme égoïste</th><th>Pervers narcissique</th></tr></thead><tbody>
+<tr><td>La constance</td><td>Pénible de façon prévisible, tu sais à quoi t'attendre</td><td>Il alterne le meilleur et le pire, et c'est l'alternance qui rend accro</td></tr>
+<tr><td>La cible</td><td>Il néglige tes besoins</td><td>Il attaque ta perception : tu n'as « rien dit », tu « exagères », tu « inventes »</td></tr>
+<tr><td>Le public</td><td>Égoïste devant tout le monde</td><td>Charmant en société, destructeur en privé</td></tr>
+</tbody></table></div>
+<p>Le troisième point est celui qui fait le plus de dégâts : ce contraste n'est pas un détail, c'est un outil. Personne d'autre ne voit ce que tu vois, et ça fabrique ton isolement mieux qu'aucune interdiction.</p>`,
         },
       ],
     },
@@ -45,8 +50,15 @@ const article: BlogArticleData = {
       title: "À quoi ça ressemble dans un couple, au quotidien",
       content: `<p>Oublie le monstre de cinéma. Au quotidien, ça ressemble à des petites choses, tellement petites que tu as honte de t'en plaindre.</p>
 <p>Ça ressemble à des versions. Tu racontes une soirée, il en raconte une autre, avec un aplomb tel que tu finis par relire tes messages pour vérifier que tu n'inventes pas. Ce brouillage a un nom, le gaslighting, et il est au cœur du fonctionnement : <strong>quelqu'un qui contrôle ta réalité n'a plus besoin de te contrôler toi.</strong></p>
-<p>Ça ressemble à une comptabilité invisible. Tout ce qu'il fait pour toi est monumental et te sera rappelé. Tout ce que tu fais pour lui est normal, ou oublié. Tu es en permanence en dette, sans avoir signé nulle part.</p>
 <p>Ça ressemble à des scènes en différé. Jamais un éclat devant tes amis : les remarques tombent dans la voiture du retour. « Tu parlais fort. » « Tu t'es ridiculisée. » « Heureusement que j'étais là. » Petit à petit, tu appréhendes les soirées, puis tu les évites, et il n'a même pas eu besoin de te les interdire.</p>
+<p>Concrètement, sur une semaine ordinaire, ça peut donner :</p>
+<ul>
+<li>un dîner où il te coupe la parole, puis « tu es parano, tout le monde a passé une super soirée » ;</li>
+<li>un service qu'il t'a rendu rappelé trois fois, et tes attentions à toi jamais comptées ;</li>
+<li>une remarque assassine dans la voiture, au calme, sans témoin ;</li>
+<li>deux jours de silence glacial parce que tu as vu tes amies ;</li>
+<li>et un dimanche soir parfait, tendre, drôle, qui te fait douter de tout le reste.</li>
+</ul>
 <p>Et ça ressemble, surtout, à ta propre transformation. Tu te surprends à préparer tes phrases avant de lui parler, à t'excuser par réflexe, à te trouver nulle alors que tes collègues te trouvent solide. <strong>Quand une relation te fait rétrécir, le problème n'est pas ta taille.</strong></p>`,
     },
     {
@@ -60,14 +72,37 @@ const article: BlogArticleData = {
     {
       id: 'les-signes-en-amour',
       title: "Les signes qui comptent vraiment en amour",
-      content: `<p>Les listes de vingt signes, tu en trouveras partout, et elles ont un défaut : prises une par une, elles décrivent la moitié des couples qui traversent une mauvaise passe. Voici plutôt les signaux qui, ensemble et dans la durée, dessinent une emprise. Remarque leur point commun : <strong>les plus fiables ne se voient pas chez lui, ils se voient chez toi.</strong></p>
-<p><strong>Tu n'arrives plus à raconter ta relation.</strong> Quand une amie te demande comment ça va, tu ne sais pas répondre. Trop compliqué, trop de contexte, « il faut le connaître ». Une relation saine se raconte facilement.</p>
-<p><strong>Tu doutes de ta mémoire.</strong> Tu relis des conversations, tu notes des choses en cachette, tu demandes confirmation à des témoins. Personne ne fait ça dans une relation où la parole est fiable.</p>
-<p><strong>Il n'a jamais tort, structurellement.</strong> Pas au sens où il est de mauvaise foi dans les disputes : au sens où, en plusieurs années, tu ne l'as jamais vu porter la responsabilité de quoi que ce soit. Ses ex sont folles, ses collègues jaloux, ses échecs sabotés par d'autres. Devine ce que tu deviendras dans le récit.</p>
-<p><strong>Ta valeur dépend de son humeur.</strong> Un jour tu es exceptionnelle, trois jours plus tard tu es « le problème ». Rien n'a changé chez toi entre les deux ; c'est le thermostat qui décide.</p>
-<p><strong>Tes limites déclenchent des représailles.</strong> Un refus, un désaccord, une soirée sans lui, et voilà le silence glacial, la punition, ou la crise. Pas toujours bruyamment : le froid est sa colère préférée, parce qu'elle ne laisse pas de preuve.</p>
-<p><strong>Son vocabulaire revient en boucle.</strong> « Tu es trop sensible. » « Tu dramatises. » « Personne ne te supporterait à part moi. » Ces formules ne sont pas des phrases de dispute ordinaires, ce sont des outils, toujours les mêmes, qu'on a rassemblés dans les <a href="/blog/phrases-preferees-des-manipulateurs/">phrases préférées des manipulateurs</a>.</p>
-<p>Tu coches plusieurs cases et le mot « pervers narcissique » te paraît encore trop gros ? Peu importe le mot. Une relation qui produit ces effets-là est au minimum une <a href="/blog/relation-toxique-signes/">relation toxique</a>, et ça suffit largement à justifier la suite de cet article.</p>`,
+      content: `<p>Les listes de vingt signes, tu en trouveras partout, et elles ont un défaut : prises une par une, elles décrivent la moitié des couples qui traversent une mauvaise passe. Voici les six signaux qui, ensemble et dans la durée, dessinent une emprise. Remarque leur point commun : <strong>les plus fiables ne se voient pas chez lui, ils se voient chez toi.</strong></p>
+<ol>
+<li><strong>Tu n'arrives plus à raconter ta relation.</strong> Quand une amie te demande comment ça va, tu ne sais pas répondre. Trop compliqué, trop de contexte, « il faut le connaître ». Une relation saine se raconte facilement.</li>
+<li><strong>Tu doutes de ta mémoire.</strong> Tu relis des conversations, tu notes des choses en cachette, tu demandes confirmation à des témoins. Personne ne fait ça dans une relation où la parole est fiable.</li>
+<li><strong>Il n'a jamais tort, structurellement.</strong> En plusieurs années, tu ne l'as jamais vu porter la responsabilité de quoi que ce soit. Ses ex sont folles, ses collègues jaloux, ses échecs sabotés par d'autres. Devine ce que tu deviendras dans le récit.</li>
+<li><strong>Ta valeur dépend de son humeur.</strong> Un jour tu es exceptionnelle, trois jours plus tard tu es « le problème ». Rien n'a changé chez toi entre les deux ; c'est le thermostat qui décide.</li>
+<li><strong>Tes limites déclenchent des représailles.</strong> Un refus, un désaccord, une soirée sans lui, et voilà le silence glacial, la punition, ou la crise. Pas toujours bruyamment : le froid est sa colère préférée, parce qu'elle ne laisse pas de preuve.</li>
+<li><strong>Son vocabulaire revient en boucle.</strong> « Tu es trop sensible. » « Tu dramatises. » « Personne ne te supporterait à part moi. » Ces formules ne sont pas des phrases de dispute ordinaires, ce sont des outils, toujours les mêmes, qu'on a rassemblés dans les <a href="/blog/phrases-preferees-des-manipulateurs/">phrases préférées des manipulateurs</a>.</li>
+</ol>
+<p>Reste la question que tout le monde se pose : et si c'était juste une histoire intense ? Voilà comment les distinguer.</p>
+<div class="blog-verdict">
+<div class="blog-verdict-col blog-verdict-col--oui">
+<p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Intense, mais sain</p>
+<ul>
+<li>L'intensité suit ton rythme, un « non » ne coûte rien</li>
+<li>Les disputes ont une fin, et quelqu'un revient vers toi</li>
+<li>Tes proches gardent leur place dans ta vie</li>
+<li>Tu te sens plus grande dans cette relation</li>
+</ul>
+</div>
+<div class="blog-verdict-col blog-verdict-col--non">
+<p class="blog-verdict-titre"><span aria-hidden="true">🚩</span> Intense, et sous emprise</p>
+<ul>
+<li>L'intensité impose son rythme, un « non » se paie</li>
+<li>Les conflits finissent toujours au même endroit : ta faute</li>
+<li>Ta vie sociale a rétréci sans interdiction formelle</li>
+<li>Tu prépares tes phrases avant de lui parler</li>
+</ul>
+</div>
+</div>
+<p>Tu coches la colonne de droite et le mot « pervers narcissique » te paraît encore trop gros ? Peu importe le mot. Une relation qui produit ces effets-là est au minimum une <a href="/blog/relation-toxique-signes/">relation toxique</a>, et ça suffit largement à justifier la suite de cet article.</p>`,
     },
     {
       id: 'homme-femme-differences',
@@ -87,10 +122,15 @@ const article: BlogArticleData = {
       id: 'en-avoir-le-coeur-net',
       title: "Comment en avoir le cœur net",
       content: `<p>Tu ne trancheras pas en soupesant des souvenirs à 2 heures du matin : le brouillard fait partie du dispositif. Ce qui fonctionne, c'est de créer des situations simples et d'observer des faits.</p>
-<p><strong>Pose une limite banale, une seule, et regarde.</strong> Pas un ultimatum : un « non » ordinaire, du genre que n'importe quel couple encaisse sans y penser. Sa réaction sur les jours qui suivent vaut tous les questionnaires du monde. Accueil tranquille, ou représailles ?</p>
+<p><strong>Pose une limite banale, une seule, et regarde.</strong> Pas un ultimatum : un « non » ordinaire, du genre que n'importe quel couple encaisse sans y penser. Sa réaction sur les jours qui suivent vaut tous les discours. Accueil tranquille, ou représailles ?</p>
 <p><strong>Compare les paroles et les actes sur trente jours.</strong> Note ses promesses, avec la date. Un mois plus tard, compte ce qui a été tenu. L'emprise vit du discours ; elle meurt des faits.</p>
 <p><strong>Réactive un regard extérieur.</strong> Reprends contact avec une personne de confiance que tu vois moins depuis cette relation, et raconte-lui une scène précise, factuellement. Tu verras à sa tête si ce que tu décris est « un couple qui traverse une passe ».</p>
-<p>Et pour mettre de l'ordre dans tout ça, appuie-toi sur un cadre : notre <a href="/test-pervers-narcissique/">test « suis-je en couple avec un pervers narcissique »</a> reprend une par une les situations types de ce genre de relation. Il ne remplace pas un professionnel, il fait quelque chose d'aussi utile : il transforme ton brouillard en réponses posées, que tu peux regarder en face.</p>`,
+<div class="blog-cta">
+<p class="blog-cta-titre">Besoin de sortir du brouillard ?</p>
+<p class="blog-cta-texte">Vingt questions reprennent une par une les situations types d'une relation d'emprise, et le résultat met des mots posés sur ce que tu vis. Ce n'est pas un diagnostic : c'est un point de départ que tu peux regarder en face.</p>
+<a class="blog-cta-btn" href="/test-pervers-narcissique/">Faire le point maintenant</a>
+<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
+</div>`,
     },
     {
       id: 'et-maintenant',
@@ -98,9 +138,39 @@ const article: BlogArticleData = {
       content: `<p>D'abord, arrête de chercher à le confondre. Lui annoncer « tu es un pervers narcissique » ne produira ni aveu ni prise de conscience, seulement un retournement de plus, et tu passeras pour la folle du diagnostic. Ta lucidité est un outil de protection, pas un argument de dispute.</p>
 <p>Ensuite, reconstruis en silence ce que l'emprise a démonté : des liens, de l'autonomie, du réel. Revois tes proches, même brièvement. Garde des traces écrites datées. Reprends une activité qui n'appartient qu'à toi. Chaque point d'appui extérieur affaiblit le mécanisme.</p>
 <p>Si tu constates que tu n'arrives pas à partir alors que tu sais, ce n'est ni de la faiblesse ni de l'amour mal placé : c'est le fonctionnement normal de l'attachement piégé, souvent amplifié par une <a href="/blog/dependance-affective/">dépendance affective</a> que ce genre de partenaire détecte et entretient. Ça se travaille, et on a détaillé un plan de sortie concret dans <a href="/blog/sortir-emprise-pervers-narcissique/">sortir de l'emprise</a>.</p>
-<p>Enfin, ne reste pas seule avec ça. Un psychologue qui connaît les violences psychologiques changera ta trajectoire. Et si tu subis des menaces, un contrôle de tes déplacements ou de ton argent, ou la moindre violence physique, appelle le 3919 : c'est gratuit, anonyme, et fait exactement pour ces situations.</p>
-<p>Tu n'es pas trop sensible. Tu n'exagères pas. Tu as juste passé trop de temps dans le brouillard de quelqu'un d'autre, et tu viens de faire le premier pas pour en sortir.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ Si tu es en danger, ne reste pas seule avec un article</p>
+<p>Menaces, contrôle de tes déplacements ou de ton argent, violence physique même « une seule fois » : en France, appelle le 3919, gratuit, anonyme et ouvert 24h/24. Et un psychologue formé aux violences psychologiques changera ta trajectoire bien mieux que n'importe quelle lecture, celle-ci comprise.</p>
+</aside>
+<p>Tu n'es pas trop sensible. Tu n'exagères pas. Tu as juste passé trop de temps dans le brouillard de quelqu'un d'autre, et tu viens de faire le premier pas pour en sortir.</p>`,
+    },
+    {
+      id: 'questions-frequentes',
+      title: "Questions fréquentes sur le pervers narcissique en amour",
+      content: `<p>Pour finir, les questions qui reviennent le plus souvent, en version courte.</p>`,
+      subsections: [
+        {
+          id: 'faq-reaction-quand-on-le-quitte',
+          title: "Comment réagit un pervers narcissique quand on le quitte ?",
+          content: `<p>Rarement par de l'indifférence. D'abord la colère et la dévalorisation, parfois une campagne pour retourner votre entourage commun. Puis, souvent, le retour en charme : messages nostalgiques, promesses de changement, réapparitions calibrées au moment où tu vas mieux. Ce n'est pas de l'amour qui revient, c'est le contrôle qui se renégocie. S'y préparer à l'avance change tout.</p>`,
+        },
+        {
+          id: 'faq-est-il-conscient',
+          title: "Est-ce qu'il est conscient de ce qu'il fait ?",
+          content: `<p>En partie. Il sait viser : les attaques tombent toujours sur tes points sensibles, jamais devant témoins, ce qui suppose une forme de calcul. Mais il ne se vit presque jamais comme un bourreau : dans son récit intérieur, c'est lui la victime. C'est pour ça qu'attendre une prise de conscience mène nulle part, et que la seule vraie question reste ce que toi tu vis. Si tu en es là, notre <a href="/test-pervers-narcissique/">test « suis-je en couple avec un pervers narcissique »</a> t'aidera à y répondre posément.</p>`,
+        },
+        {
+          id: 'faq-combien-de-temps-pour-s-en-remettre',
+          title: "Combien de temps faut-il pour s'en remettre ?",
+          content: `<p>Plus longtemps qu'une rupture ordinaire, et ce n'est pas un défaut de ta part : il ne s'agit pas seulement de faire le deuil d'une relation, mais de réapprendre à faire confiance à ton propre jugement. Compte en mois, pas en semaines, avec des rechutes de doute qui font partie du processus. Un accompagnement psy raccourcit nettement le trajet.</p>`,
+        },
+        {
+          id: 'faq-porter-plainte',
+          title: "Peut-on porter plainte pour violence psychologique ?",
+          content: `<p>Oui. En France, le harcèlement moral au sein du couple est un délit inscrit dans le code pénal, y compris entre partenaires non mariés ou séparés. La difficulté est la preuve : garde les écrits, les certificats médicaux, les attestations de proches. Une association d'aide aux victimes ou un avocat t'orientera sur la marche à suivre, et le 3919 peut t'y préparer.</p>
 <a href="/blog/love-bombing/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Love bombing : comment savoir si c'est de l'amour ou de la manipulation</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+        },
+      ],
     },
   ],
 };

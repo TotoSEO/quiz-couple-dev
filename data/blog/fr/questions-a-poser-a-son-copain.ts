@@ -132,6 +132,10 @@ const article: BlogArticleData = {
       id: 'un-peu-profondes',
       title: "Un peu profondes : valeurs, peurs et convictions (61-80)",
       content: `<p>À garder pour un moment calme. C'est la série qui transforme une soirée ordinaire en conversation dont vous vous souviendrez.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">📌 Le bon moment compte autant que la question</p>
+<p>Cette série ne se pose pas entre deux portes. Un trajet en voiture, une marche, une soirée sans écran : les conversations profondes détestent les face-à-face et adorent les regards tournés dans la même direction.</p>
+</aside>
 <ol start="61">
 <li>De quoi as-tu le plus peur, pas comme danger, comme vie ratée ?</li>
 <li>Qu'est-ce que tu ne pardonnerais jamais ?</li>
