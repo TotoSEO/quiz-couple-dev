@@ -822,6 +822,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-09-25',
   },
+  {
+    internalSlug: 'femme-perverse-narcissique-signes',
+    category: 'psychologie',
+    featuredImage: '/blog/femme-perverse-narcissique-signes.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'femme-perverse-narcissique-signes',
+    },
+    publishedAt: '2026-09-29',
+  },
+  {
+    internalSlug: 'questions-a-poser-a-sa-copine',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-a-poser-a-sa-copine',
+    },
+    publishedAt: '2026-10-02',
+  },
 ];
 
 // Author data
