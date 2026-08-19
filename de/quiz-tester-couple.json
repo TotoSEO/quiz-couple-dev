@@ -33,15 +33,35 @@
   "section3": {
     "title": "Wie ihr euer Paartest-Ergebnis interpretiert",
     "p1": "Jeder Partner beantwortet dieselben Fragen für sich. Jede Antwort bringt Punkte, je nachdem, was sie über die Gesundheit eurer Beziehung aussagt (Kommunikation, Vertrauen, gemeinsame Pläne ...). So entsteht ein <strong>individuelles Ergebnis für jeden von euch</strong> und ein <strong>Gesamtergebnis als Paar</strong> in Prozent. Denkt daran: Ein hohes Ergebnis garantiert keine perfekte Beziehung, und ein niedriges bedeutet nicht, dass eure Beziehung in Gefahr ist, es ist vor allem ein Ausgangspunkt für ein Gespräch.",
-    "sub1Title": "80-100%: Hohe Kompatibilität",
-    "sub1P1": "Ihr seid sehr übereinstimmend in euren Antworten. Das zeugt von einem <strong>starken gegenseitigen Verständnis</strong> und eng geteilten Werten. Pflegt diese Verbindung weiter!",
-    "sub2Title": "60-79%: Gutes Einvernehmen",
-    "sub2P1": "Ihr teilt vieles und bewahrt dabei eure Individualität. Das ist ein <strong>gesundes Gleichgewicht</strong>, kleine Unterschiede können sogar bereichernd sein.",
-    "sub3Title": "40-59%: Anpassungsmöglichkeiten",
-    "sub3P1": "Bei manchen Themen zeigen sich Unterschiede. Die perfekte Gelegenheit, offen darüber zu sprechen. Bei genau diesen Themen verhindert eine <a href=\"/de/fragen-fuer-paare/\">offene Frage</a> als Einstieg, dass das Gespräch mit einem Vorwurf beginnt.",
-    "sub4Title": "Unter 40%: Dialog erforderlich",
-    "sub4P1": "Wichtige Meinungsverschiedenheiten treten auf. Das bedeutet nicht das Ende, aber eine <strong>Kommunikationsanstrengung</strong> wird empfohlen.",
-    "quote": "Das Ergebnis ist nur ein Ausgangspunkt. Das Wesentliche ist, was ihr gemeinsam daraus macht."
+    "quote": "Das Ergebnis ist nur ein Ausgangspunkt. Das Wesentliche ist, was ihr gemeinsam daraus macht.",
+    "p2": "Das Urteil bewegt sich auf acht Stufen, von der leidenden Beziehung bis zur fast perfekten Übereinstimmung: fein genug, dass zwei verschiedene Paare nicht dasselbe Etikett bekommen. Ihr erhaltet außerdem jeder euer individuelles Ergebnis, und der Abstand zwischen beiden ist oft der interessanteste Wert des Tests.",
+    "headerScore": "Euer Ergebnis",
+    "headerLevel": "Urteil",
+    "headerAnalysis": "Was es erzählt",
+    "row1Score": "95-100 %",
+    "row1Level": "Außergewöhnlich",
+    "row1Analysis": "Eine fast perfekte Übereinstimmung, wenn ihr beide mit offenen Karten gespielt habt",
+    "row2Score": "85-94 %",
+    "row2Level": "Eingespielt",
+    "row2Analysis": "Fast alles ist da, und eure Antworten treffen sich, wo es zählt",
+    "row3Score": "75-84 %",
+    "row3Level": "Sehr solide",
+    "row3Analysis": "Stabil und ausgewogen: Die Routine ist eure einzige echte Bedrohung",
+    "row4Score": "63-74 %",
+    "row4Level": "Solide",
+    "row4Analysis": "Die Fundamente halten; der Spielraum liegt in den noch gemiedenen Themen",
+    "row5Score": "50-62 %",
+    "row5Level": "Zu festigen",
+    "row5Analysis": "Eine echte Basis, bekannte Reibungen: Sprecht darüber, bevor es klemmt",
+    "row6Score": "35-49 %",
+    "row6Level": "Im Umbau",
+    "row6Analysis": "Bindung mit Lecks: Wählt zwei Baustellen und bleibt dran",
+    "row7Score": "20-34 %",
+    "row7Level": "Fragil",
+    "row7Analysis": "Mehrere Säulen zugleich beschädigt: Öffnet das schmerzhafteste Thema, in Ruhe",
+    "row8Score": "0-19 %",
+    "row8Level": "Alarm",
+    "row8Analysis": "Die Beziehung tut gerade mehr weh, als sie guttut: Bleibt damit nicht allein"
   },
   "section4": {
     "title": "Fehler, die ihr beim Paartest vermeiden solltet",
@@ -135,6 +155,6 @@
     "faq4Q": "Mein Ergebnis ist niedrig, sollte ich mir Sorgen machen?",
     "faq4A": "Nicht unbedingt! Ein niedriges Ergebnis bedeutet einfach, dass ihr bei bestimmten Themen unterschiedliche Perspektiven habt. Es ist eine Einladung zum Dialog, kein Urteil. Die stärksten Paare sind die, die über ihre Unterschiede sprechen können.",
     "faq5Q": "Kann man den Paartest mehrmals machen?",
-    "faq5A": "Auf jeden Fall! Wir empfehlen euch sogar, den Test regelmäßig (alle 3-6 Monate) zu wiederholen, um zu sehen, wie sich eure Beziehung entwickelt."
+    "faq5A": "Auf jeden Fall! Wir empfehlen euch sogar, den Test regelmäßig (alle 3-6 Monate) zu wiederholen, um zu sehen, wie sich eure Beziehung entwickelt. Die 20 Fragen werden übrigens aus einem Pool von 30 gezogen: Beim Wiederholen bekommt ihr nicht dieselbe Serie."
   }
 }

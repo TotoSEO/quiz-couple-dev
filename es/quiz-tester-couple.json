@@ -33,15 +33,35 @@
   "section3": {
     "title": "Cómo interpretar el resultado de vuestro test de pareja",
     "p1": "Cada miembro de la pareja responde por su cuenta a las mismas preguntas. Cada respuesta otorga puntos según lo que revela sobre la salud de vuestra relación (comunicación, confianza, proyectos comunes...). Así se obtiene una <strong>puntuación individual para cada uno</strong> y una <strong>puntuación global de pareja</strong> en porcentaje. Atención: una puntuación alta no garantiza una relación perfecta, y una baja no significa que vuestra pareja esté en peligro, es sobre todo un punto de partida para hablar.",
-    "sub1Title": "80-100%: Gran compatibilidad",
-    "sub1P1": "Estáis muy alineados en vuestras respuestas. Esto refleja una <strong>buena comprensión mutua</strong> y valores cercanos. ¡Seguid alimentando esa conexión!",
-    "sub2Title": "60-79%: Buena sintonía",
-    "sub2P1": "Compartís mucho manteniendo vuestras individualidades. Es un <strong>equilibrio sano</strong>, las pequeñas diferencias pueden incluso ser enriquecedoras.",
-    "sub3Title": "40-59%: Ajustes posibles",
-    "sub3P1": "Aparecen diferencias en ciertos temas. Es la ocasión perfecta para hablarlo abiertamente. En esos temas, partir de una <a href=\"/es/preguntas-pareja/\">pregunta abierta</a> evita que la conversación empiece con un reproche.",
-    "sub4Title": "Menos del 40%: Diálogo necesario",
-    "sub4P1": "Surgen desacuerdos importantes. Esto no significa el final, pero se recomienda un <strong>esfuerzo de comunicación</strong>.",
-    "quote": "La puntuación es solo un punto de partida. Lo esencial es lo que hacéis con ella juntos."
+    "quote": "La puntuación es solo un punto de partida. Lo esencial es lo que hacéis con ella juntos.",
+    "p2": "El veredicto se juega en ocho niveles, de la pareja que sufre a la sintonía casi perfecta: lo bastante fino para que dos parejas distintas no reciban la misma etiqueta. Además, cada uno recibe su puntuación individual, y la distancia entre ambas suele ser el dato más interesante del test.",
+    "headerScore": "Vuestra puntuación",
+    "headerLevel": "Veredicto",
+    "headerAnalysis": "Qué cuenta",
+    "row1Score": "95-100 %",
+    "row1Level": "Excepcional",
+    "row1Analysis": "Una sintonía casi perfecta, si ambos habéis jugado limpio",
+    "row2Score": "85-94 %",
+    "row2Level": "Compenetrada",
+    "row2Analysis": "Casi todo está, y vuestras respuestas coinciden donde importa",
+    "row3Score": "75-84 %",
+    "row3Level": "Muy sólida",
+    "row3Analysis": "Estable y equilibrada: la rutina es vuestra única amenaza real",
+    "row4Score": "63-74 %",
+    "row4Level": "Sólida",
+    "row4Analysis": "Los cimientos aguantan; el margen está en los temas aún evitados",
+    "row5Score": "50-62 %",
+    "row5Level": "Por consolidar",
+    "row5Analysis": "Una base real, fricciones conocidas: habladlo antes de que se atasque",
+    "row6Score": "35-49 %",
+    "row6Level": "En obras",
+    "row6Analysis": "Vínculo con fugas: elegid dos frentes y mantenedlos",
+    "row7Score": "20-34 %",
+    "row7Level": "Frágil",
+    "row7Analysis": "Varios pilares dañados a la vez: abrid el tema más doloroso, con calma",
+    "row8Score": "0-19 %",
+    "row8Level": "Alerta",
+    "row8Analysis": "La relación ahora hace más daño que bien: no os quedéis solos con esto"
   },
   "section4": {
     "title": "Errores a evitar al hacer un test de pareja",
@@ -135,6 +155,6 @@
     "faq4Q": "Mi puntuación es baja, ¿debo preocuparme?",
     "faq4A": "¡No necesariamente! Una puntuación baja simplemente significa que tenéis perspectivas diferentes en ciertos temas. Es una invitación al diálogo, no un veredicto. Las parejas más sólidas son las que saben hablar de sus diferencias.",
     "faq5Q": "¿Se puede repetir el test de pareja varias veces?",
-    "faq5A": "¡Por supuesto! Os animamos a repetir el test regularmente (cada 3-6 meses) para ver cómo evoluciona vuestra relación."
+    "faq5A": "¡Por supuesto! Os animamos a repetir el test regularmente (cada 3-6 meses) para ver cómo evoluciona vuestra relación. Además, las 20 preguntas se extraen de una reserva de 30: al repetirlo no os caerá la misma serie."
   }
 }

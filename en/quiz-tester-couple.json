@@ -33,15 +33,35 @@
   "section3": {
     "title": "How to interpret your couple test results",
     "p1": "Each partner answers the same questions on their own. Every answer earns points based on what it reveals about the health of your relationship (communication, trust, shared plans, and so on). This gives an <strong>individual score for each of you</strong> and an overall <strong>couple score</strong> as a percentage. Keep in mind: a high score doesn't guarantee a perfect relationship, and a low score doesn't mean your relationship is in danger, it's above all a starting point for discussion.",
-    "sub1Title": "80-100%: High compatibility",
-    "sub1P1": "You're very aligned in your answers. This reflects a <strong>strong mutual understanding</strong> and closely shared values. Keep nurturing that connection!",
-    "sub2Title": "60-79%: Good understanding",
-    "sub2P1": "You share a lot while still maintaining your own individuality. That's a <strong>healthy balance</strong>, small differences can even be enriching.",
-    "sub3Title": "40-59%: Room for adjustment",
-    "sub3P1": "Some gaps are showing on certain topics. This is the perfect opportunity to talk things through openly. On those subjects, starting from an <a href=\"/en/couple-questions/\">open question</a> keeps the conversation from opening on a reproach.",
-    "sub4Title": "Below 40%: Time to talk",
-    "sub4P1": "Significant disagreements have surfaced. This doesn't mean the end, but a <strong>real effort in communication</strong> is recommended.",
-    "quote": "The score is just a starting point. What truly matters is what you do with it together."
+    "quote": "The score is just a starting point. What truly matters is what you do with it together.",
+    "p2": "The verdict runs on eight levels, from a relationship in pain to an almost perfect match: fine enough that two different couples don't get the same label. You each also get your individual score, and the gap between the two is often the most interesting data point of the test.",
+    "headerScore": "Your score",
+    "headerLevel": "Verdict",
+    "headerAnalysis": "What it says",
+    "row1Score": "95-100%",
+    "row1Level": "Exceptional",
+    "row1Analysis": "An almost perfect match, if you both played it straight",
+    "row2Score": "85-94%",
+    "row2Level": "In sync",
+    "row2Analysis": "Almost everything is there, and your answers meet where it matters",
+    "row3Score": "75-84%",
+    "row3Level": "Very solid",
+    "row3Analysis": "Stable and balanced: routine is your only real threat",
+    "row4Score": "63-74%",
+    "row4Level": "Solid",
+    "row4Analysis": "The foundations hold; the margin lies in the subjects still avoided",
+    "row5Score": "50-62%",
+    "row5Level": "To consolidate",
+    "row5Analysis": "A real base, known frictions: talk before it jams",
+    "row6Score": "35-49%",
+    "row6Level": "Under construction",
+    "row6Analysis": "A bond with leaks: pick two worksites and hold them",
+    "row7Score": "20-34%",
+    "row7Level": "Fragile",
+    "row7Analysis": "Several pillars damaged at once: open the most painful subject, calmly",
+    "row8Score": "0-19%",
+    "row8Level": "Red flag",
+    "row8Analysis": "The relationship currently hurts more than it helps: don't stay alone with this"
   },
   "section4": {
     "title": "Mistakes to avoid when taking a couple test",
@@ -135,6 +155,6 @@
     "faq4Q": "My score is low, should I be worried?",
     "faq4A": "Not necessarily! A low score simply means you have different perspectives on certain topics. It's an invitation to talk, not a verdict. The strongest couples are those who know how to discuss their differences.",
     "faq5Q": "Can we retake the couple test multiple times?",
-    "faq5A": "Absolutely! We actually encourage you to retake the test regularly (every 3 to 6 months) to see how your relationship evolves."
+    "faq5A": "Absolutely! We actually encourage you to retake the test regularly (every 3 to 6 months) to see how your relationship evolves. The 20 questions are drawn from a pool of 30, so a retake won't give you the same series."
   }
 }

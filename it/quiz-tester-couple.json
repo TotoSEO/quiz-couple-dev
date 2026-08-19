@@ -33,15 +33,35 @@
   "section3": {
     "title": "Come interpretare il risultato del vostro test di coppia",
     "p1": "Ogni partner risponde per conto proprio alle stesse domande. Ogni risposta assegna dei punti in base a ciò che rivela sulla salute della vostra relazione (comunicazione, fiducia, progetti comuni...). Si ottiene così un <strong>punteggio individuale per ciascuno</strong> e un <strong>punteggio globale di coppia</strong> in percentuale. Attenzione: un punteggio alto non garantisce una relazione perfetta, e uno basso non significa che la vostra coppia sia in pericolo, è soprattutto un punto di partenza per parlarne.",
-    "sub1Title": "80-100%: Grande compatibilità",
-    "sub1P1": "Siete molto allineati nelle vostre risposte. Questo riflette una <strong>forte comprensione reciproca</strong> e valori condivisi. Continuate a coltivare questa connessione!",
-    "sub2Title": "60-79%: Buona intesa",
-    "sub2P1": "Condividete molto mantenendo la vostra individualità. È un <strong>equilibrio sano</strong>, le piccole differenze possono persino essere arricchenti.",
-    "sub3Title": "40-59%: Spazio per aggiustamenti",
-    "sub3P1": "Emergono differenze su certi temi. È l'occasione perfetta per parlarne apertamente. Su quei temi, partire da una <a href=\"/it/domande-coppia/\">domanda aperta</a> evita che la conversazione si apra con un rimprovero.",
-    "sub4Title": "Sotto il 40%: Dialogo necessario",
-    "sub4P1": "Emergono disaccordi importanti. Questo non significa la fine, ma è consigliato uno <strong>sforzo di comunicazione</strong>.",
-    "quote": "Il punteggio è solo un punto di partenza. L'essenziale è ciò che ne fate insieme."
+    "quote": "Il punteggio è solo un punto di partenza. L'essenziale è ciò che ne fate insieme.",
+    "p2": "Il verdetto si gioca su otto livelli, dalla coppia che soffre all'intesa quasi perfetta: abbastanza fine perché due coppie diverse non ricevano la stessa etichetta. Ricevete inoltre ciascuno il proprio punteggio individuale, e la distanza tra i due è spesso il dato più interessante del test.",
+    "headerScore": "Il vostro punteggio",
+    "headerLevel": "Verdetto",
+    "headerAnalysis": "Cosa racconta",
+    "row1Score": "95-100 %",
+    "row1Level": "Eccezionale",
+    "row1Analysis": "Un'intesa quasi perfetta, se avete giocato entrambi a carte scoperte",
+    "row2Score": "85-94 %",
+    "row2Level": "Affiatata",
+    "row2Analysis": "C'è quasi tutto, e le vostre risposte si incontrano dove conta",
+    "row3Score": "75-84 %",
+    "row3Level": "Molto solida",
+    "row3Analysis": "Stabile ed equilibrata: la routine è la vostra unica vera minaccia",
+    "row4Score": "63-74 %",
+    "row4Level": "Solida",
+    "row4Analysis": "Le fondamenta reggono; il margine sta nei temi ancora evitati",
+    "row5Score": "50-62 %",
+    "row5Level": "Da consolidare",
+    "row5Analysis": "Una base vera, attriti noti: parlatene prima che si inceppi",
+    "row6Score": "35-49 %",
+    "row6Level": "In cantiere",
+    "row6Analysis": "Legame con falle: scegliete due cantieri e teneteli",
+    "row7Score": "20-34 %",
+    "row7Level": "Fragile",
+    "row7Analysis": "Più pilastri danneggiati insieme: aprite il tema più doloroso, con calma",
+    "row8Score": "0-19 %",
+    "row8Level": "Allarme",
+    "row8Analysis": "La relazione ora fa più male che bene: non restate soli con questo"
   },
   "section4": {
     "title": "Errori da evitare durante un test di coppia",
@@ -135,6 +155,6 @@
     "faq4Q": "Il mio punteggio è basso, devo preoccuparmi?",
     "faq4A": "Non necessariamente! Un punteggio basso significa semplicemente che avete prospettive diverse su certi argomenti. È un invito al dialogo, non un verdetto. Le coppie più solide sono quelle che sanno parlare delle loro differenze.",
     "faq5Q": "Si può rifare il test di coppia più volte?",
-    "faq5A": "Assolutamente! Vi incoraggiamo anche a rifare il test regolarmente (ogni 3-6 mesi) per vedere come evolve la vostra relazione."
+    "faq5A": "Assolutamente! Vi incoraggiamo anche a rifare il test regolarmente (ogni 3-6 mesi) per vedere come evolve la vostra relazione. Le 20 domande sono peraltro estratte da una riserva di 30: rifacendolo non vi capiterà la stessa serie."
   }
 }
