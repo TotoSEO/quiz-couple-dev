@@ -1042,6 +1042,56 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-12-11',
   },
+  {
+    internalSlug: '5-langages-de-l-amour',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/5-langages-de-l-amour.webp',
+    frOnly: true,
+    slugs: {
+      fr: '5-langages-de-l-amour',
+    },
+    publishedAt: '2026-12-15',
+  },
+  {
+    internalSlug: 'jalousie-maladive',
+    category: 'psychologie',
+    featuredImage: '/blog/jalousie-maladive.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'jalousie-maladive',
+    },
+    publishedAt: '2026-12-18',
+  },
+  {
+    internalSlug: 'signes-infidelite',
+    category: 'psychologie',
+    featuredImage: '/blog/signes-infidelite.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'signes-infidelite',
+    },
+    publishedAt: '2026-12-22',
+  },
+  {
+    internalSlug: 'micro-tromperie',
+    category: 'psychologie',
+    featuredImage: '/blog/micro-tromperie.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'micro-tromperie',
+    },
+    publishedAt: '2026-12-25',
+  },
+  {
+    internalSlug: 'pardonner-une-infidelite',
+    category: 'psychologie',
+    featuredImage: '/blog/pardonner-une-infidelite.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'pardonner-une-infidelite',
+    },
+    publishedAt: '2026-12-29',
+  },
 ];
 
 // Author data
