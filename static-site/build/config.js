@@ -982,6 +982,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-11-20',
   },
+  {
+    internalSlug: 'gaslighting',
+    category: 'psychologie',
+    featuredImage: '/blog/gaslighting.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'gaslighting',
+    },
+    publishedAt: '2026-11-24',
+  },
+  {
+    internalSlug: 'questions-couple-telephone-message',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-couple-telephone-message.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-couple-telephone-message',
+    },
+    publishedAt: '2026-11-27',
+  },
 ];
 
 // Author data
