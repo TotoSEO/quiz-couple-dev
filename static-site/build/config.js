@@ -862,6 +862,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-10-09',
   },
+  {
+    internalSlug: 'questions-pour-mieux-se-connaitre-en-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-pour-mieux-se-connaitre-en-couple.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-pour-mieux-se-connaitre-en-couple',
+    },
+    publishedAt: '2026-10-13',
+  },
+  {
+    internalSlug: 'dependance-affective-chez-l-homme',
+    category: 'psychologie',
+    featuredImage: '/blog/dependance-affective-chez-l-homme.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'dependance-affective-chez-l-homme',
+    },
+    publishedAt: '2026-10-16',
+  },
 ];
 
 // Author data
