@@ -27,6 +27,39 @@ const TEMPLATES_DIR = path.resolve(__dirname, '../templates');
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const REPO_ROOT = path.resolve(__dirname, '../..');
 
+// ── Publication différée ─────────────────────────────────────────────────────
+// Un article dont publishedAt est dans le futur n'existe nulle part dans le
+// site généré : ni page, ni sitemap, ni listing, ni admin. Le rebuild planifié
+// (scheduled-rebuild.yml, 7×/jour) le fait apparaître automatiquement le jour
+// venu. Les liens internes qui pointent vers un article encore futur sont
+// neutralisés au rendu (texte conservé, bloc « Lire aussi » retiré), puis
+// réapparaissent d'eux-mêmes aux builds suivants : aucune 404 possible.
+const BUILD_DATE = process.env.BUILD_DATE_OVERRIDE || new Date().toISOString().slice(0, 10);
+const FUTURE_BLOG_URLS = new Set();
+{
+  const futurs = BLOG_ARTICLES.filter(a => (a.publishedAt || '') > BUILD_DATE);
+  for (const a of futurs) {
+    for (const [l, slug] of Object.entries(a.slugs || {})) {
+      FUTURE_BLOG_URLS.add(l === 'fr' ? `/blog/${slug}/` : `/${l}/blog/${slug}/`);
+    }
+  }
+  if (futurs.length) {
+    const publies = BLOG_ARTICLES.filter(a => !futurs.includes(a));
+    BLOG_ARTICLES.length = 0;
+    BLOG_ARTICLES.push(...publies);
+    console.log(`[blog] ${futurs.length} article(s) programmé(s) en attente (publishedAt > ${BUILD_DATE})`);
+  }
+}
+
+function stripFutureLinks(html) {
+  if (!FUTURE_BLOG_URLS.size) return html;
+  return html.replace(/<a\b([^>]*)>([\s\S]*?)<\/a>/g, (m, attrs, inner) => {
+    const href = (attrs.match(/href="([^"]+)"/) || [])[1];
+    if (!href || !FUTURE_BLOG_URLS.has(href)) return m;
+    return attrs.includes('blog-read-also') ? '' : inner;
+  });
+}
+
 // ── Empreinte des ressources ────────────────────────────────────────────────
 // Les scripts, la feuille de style et les fichiers de questions étaient servis
 // sous une adresse fixe. Un cache qui garde une de ces adresses garde donc une
@@ -1592,7 +1625,7 @@ async function generateBlogArticle(articleMeta, lang) {
 
   try {
     const pageHtml = await renderTemplate('pages/blog-article', data);
-    const fullHtml = await renderTemplate('base', { ...data, content: pageHtml });
+    const fullHtml = stripFutureLinks(await renderTemplate('base', { ...data, content: pageHtml }));
     const minified = await minifyHtml(fullHtml);
     const outputPath = path.join(DIST_DIR, pagePath, 'index.html');
     ensureDir(path.dirname(outputPath));
