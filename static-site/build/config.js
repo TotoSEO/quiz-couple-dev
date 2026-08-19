@@ -802,6 +802,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-09-18',
   },
+  {
+    internalSlug: 'questions-intimes-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-intimes-couple.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-intimes-couple',
+    },
+    publishedAt: '2026-09-22',
+  },
+  {
+    internalSlug: 'sortir-de-la-dependance-affective',
+    category: 'psychologie',
+    featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'sortir-de-la-dependance-affective',
+    },
+    publishedAt: '2026-09-25',
+  },
 ];
 
 // Author data
