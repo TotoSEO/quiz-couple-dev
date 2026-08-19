@@ -373,31 +373,59 @@
     "bands": [
       {
         "min": 0,
-        "max": 39,
+        "max": 19,
+        "tag": "Red flag",
+        "title": "A relationship in pain",
+        "desc": "Your answers describe a relationship that currently hurts more than it helps. It's a hard reading, but it has one virtue: it names what you probably already feel. Talk to someone you trust, and if dialogue has broken down, a couples therapist is exactly what that is for."
+      },
+      {
+        "min": 20,
+        "max": 34,
         "tag": "Fragile",
-        "title": "A relationship to protect",
-        "desc": "Several foundations (communication, trust, shared plans) need attention. Nothing is lost: these are exactly the topics to open up about together, without judging each other."
+        "title": "Foundations to rebuild",
+        "desc": "Several pillars, communication, trust, repair after conflict, are damaged at the same time. Nothing irreversible, but don't wait for it to fix itself: pick THE subject that hurts most and open it calmly, outside of a fight."
       },
       {
-        "min": 40,
-        "max": 59,
-        "tag": "To strengthen",
-        "title": "A good base to build on",
-        "desc": "Your relationship rests on real foundations, with a few areas to work on. Spot the questions where your answers differ, those are your next projects as a couple."
+        "min": 35,
+        "max": 49,
+        "tag": "Under construction",
+        "title": "A couple looking for its balance",
+        "desc": "There is a bond, and there are leaks. Your diverging answers show exactly where: those are your priority worksites. The right reflex isn't to fix everything, it's to pick two and truly commit."
       },
       {
-        "min": 60,
-        "max": 79,
+        "min": 50,
+        "max": 62,
+        "tag": "To consolidate",
+        "title": "A real base, known worksites",
+        "desc": "Your relationship stands on real foundations, with friction zones you probably already know. The difference between couples who progress and the others: the first talk about it before it jams, not after."
+      },
+      {
+        "min": 63,
+        "max": 74,
         "tag": "Solid",
-        "title": "A solid relationship",
-        "desc": "You've built a stable, balanced relationship. Keep nurturing what works and talking about what stalls before it settles in."
+        "title": "A solid couple",
+        "desc": "Communication and trust show up, frictions stay manageable. Your room to grow lies in the subjects you still avoid: that's often where the missing 10 points sleep."
       },
       {
-        "min": 80,
-        "max": 100,
+        "min": 75,
+        "max": 84,
         "tag": "Very solid",
-        "title": "A very solid relationship",
-        "desc": "Communication, trust and closeness are all there. A rare and precious base: nurture it, it will carry you far."
+        "title": "A very solid couple",
+        "desc": "You've built something stable and balanced that rides out storms without taking on water. Maintain what works, and keep an eye on routine: it's the only real threat at this level."
+      },
+      {
+        "min": 85,
+        "max": 94,
+        "tag": "In sync",
+        "title": "A rare couple",
+        "desc": "Trust, complicity, plans, repair: almost everything is there, and your answers meet where it matters. This kind of balance owes nothing to luck; it shows the work you do for each other daily."
+      },
+      {
+        "min": 95,
+        "max": 100,
+        "tag": "Exceptional",
+        "title": "An almost perfect match",
+        "desc": "A score like this is exceptional on one condition: that you each answered with your truth, not the answer that pleases. If so, sincere congratulations. If a doubt remains, take it again playing it straight: the result will only be more beautiful."
       }
     ]
   },

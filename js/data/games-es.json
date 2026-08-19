@@ -373,31 +373,59 @@
     "bands": [
       {
         "min": 0,
-        "max": 39,
+        "max": 19,
+        "tag": "Alerta",
+        "title": "Una pareja que sufre",
+        "desc": "Vuestras respuestas describen una relación que ahora mismo hace más daño que bien. Es una lectura dura, pero tiene una virtud: pone nombre a lo que probablemente ya sentís. Habladlo con alguien de confianza y, si el diálogo está roto, un terapeuta de pareja está exactamente para eso."
+      },
+      {
+        "min": 20,
+        "max": 34,
         "tag": "Frágil",
-        "title": "Una pareja que proteger",
-        "desc": "Varios cimientos (comunicación, confianza, proyectos comunes) necesitan atención. Nada está perdido: son justo los temas que conviene abrir juntos, sin juzgaros."
+        "title": "Cimientos por reconstruir",
+        "desc": "Varios pilares, comunicación, confianza, reparación tras el conflicto, están dañados a la vez. Nada irreversible, pero no esperéis a que se arregle solo: elegid EL tema que más duele y abridlo con calma, fuera de una pelea."
       },
       {
-        "min": 40,
-        "max": 59,
+        "min": 35,
+        "max": 49,
+        "tag": "En obras",
+        "title": "Una pareja buscando su equilibrio",
+        "desc": "Hay vínculo, y hay fugas. Vuestras respuestas divergentes muestran exactamente dónde: esos son vuestros frentes prioritarios. El buen reflejo no es arreglarlo todo, es elegir dos y ponerse de verdad."
+      },
+      {
+        "min": 50,
+        "max": 62,
         "tag": "Por consolidar",
-        "title": "Una buena base por reforzar",
-        "desc": "Vuestra pareja se apoya en cimientos reales, con algunas zonas por fortalecer. Detectad las preguntas en las que vuestras respuestas difieren, son vuestros próximos retos en pareja."
+        "title": "Una base real, frentes conocidos",
+        "desc": "Vuestra pareja se sostiene sobre cimientos reales, con zonas de fricción que probablemente ya conocéis. La diferencia entre las parejas que progresan y las demás: las primeras lo hablan antes de que se atasque, no después."
       },
       {
-        "min": 60,
-        "max": 79,
+        "min": 63,
+        "max": 74,
         "tag": "Sólida",
         "title": "Una pareja sólida",
-        "desc": "Habéis construido una relación estable y equilibrada. Seguid cuidando lo que funciona y hablando de lo que cuesta antes de que se instale."
+        "desc": "Comunicación y confianza responden, las fricciones siguen siendo manejables. Vuestro margen está en los temas que aún evitáis: ahí suelen dormir los 10 puntos que faltan."
       },
       {
-        "min": 80,
-        "max": 100,
+        "min": 75,
+        "max": 84,
         "tag": "Muy sólida",
         "title": "Una pareja muy sólida",
-        "desc": "Comunicación, confianza y complicidad están presentes. Una base rara y valiosa: cuidadla, os llevará lejos."
+        "desc": "Habéis construido algo estable y equilibrado que atraviesa tormentas sin hacer agua. Cuidad lo que funciona y vigilad la rutina: es la única amenaza real a este nivel."
+      },
+      {
+        "min": 85,
+        "max": 94,
+        "tag": "Compenetrada",
+        "title": "Una pareja poco común",
+        "desc": "Confianza, complicidad, proyectos, reparación: casi todo está, y vuestras respuestas coinciden donde importa. Este equilibrio no es suerte; refleja el trabajo que hacéis el uno por el otro a diario."
+      },
+      {
+        "min": 95,
+        "max": 100,
+        "tag": "Excepcional",
+        "title": "Una sintonía casi perfecta",
+        "desc": "Una puntuación así es excepcional con una condición: que cada uno haya respondido con su verdad, no con la respuesta que agrada. Si es así, enhorabuena sincera. Si queda una duda, repetidlo jugando limpio: el resultado será aún más bonito."
       }
     ]
   },
