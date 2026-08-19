@@ -11,9 +11,9 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-04',
   author: AUTHORS['lucie-courtin'],
   excerpt: "Le plus dur avec un crush, ce n'est pas de trouver quoi dire. C'est de poser les questions qui transforment une conversation polie en vraie connexion.",
-  introduction: `<p>Tu connais ce moment : la conversation tourne, les « ça va et toi » s'enchaînent, et tu sens que si personne ne relance avec autre chose, ça va gentiment mourir en « bonne soirée alors ». Avec un crush, chaque échange compte double, et c'est exactement pour ça qu'on se retrouve à fixer son téléphone sans savoir quoi envoyer.</p>
-<p><strong>Une bonne question fait deux choses à la fois : elle montre que tu t'intéresses vraiment, et elle donne envie de répondre.</strong> C'est tout ce qu'on demande à une conversation naissante, et c'est précisément ce que les 130 questions qui suivent savent faire.</p>
-<p>Elles sont classées par situation : pour lancer par message, pour apprendre à le connaître, pour rire, pour aller un peu plus loin, pour flirter sans trop en faire, et pour vérifier, mine de rien, si ça pourrait coller entre vous. On écrit « il » pour simplifier : tout fonctionne évidemment dans tous les sens.</p>`,
+  introduction: `<p>Tu connais ce moment... La conversation tourne, les « ça va et toi » s'enchaînent, et tu sens que si personne ne relance avec autre chose, ça va gentiment mourir en « bonne soirée alors ». Avec un crush, chaque échange compte double ! Du coup, on se retrouve tous, un jour ou l'autre, à fixer son téléphone sans savoir quoi envoyer.</p>
+<p><strong>Une bonne question fait deux choses à la fois : elle montre que tu t'intéresses vraiment, et elle donne envie de répondre.</strong> C'est tout ce qu'on demande à une conversation naissante, en fait. Et c'est exactement ce que les 130 questions qui suivent savent faire.</p>
+<p>Elles sont classées par situation : pour lancer par message, pour apprendre à le connaître, pour rire, pour aller un peu plus loin, pour flirter sans trop en faire... et pour vérifier, mine de rien, si ça pourrait coller entre vous. On écrit « il » pour simplifier, mais tout fonctionne évidemment dans tous les sens.</p>`,
   quickSummary: [
     "130 questions classées par situation, du premier message au premier rendez-vous.",
     "La règle d'or : une question à la fois, et tu réponds aussi à celles que tu poses.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'par-message-pour-lancer',
       title: "Par message, pour lancer ou relancer (1-20)",
-      content: `<p>Le format court, parfait pour un début de conversation ou pour réveiller un fil qui s'endort. Facile à envoyer, facile à répondre : c'est tout ce qu'on demande à un premier échange.</p>
+      content: `<p>Le format court, parfait pour un début de conversation ou pour réveiller un fil qui s'endort. Facile à envoyer, facile à répondre... c'est tout ce qu'on demande à un premier échange !</p>
 <ol>
 <li>Ta journée en trois emojis, sans tricher ?</li>
 <li>Tu es plutôt vocal de 4 minutes ou pavé de texte ?</li>
@@ -50,13 +50,13 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Une question à la fois</p>
-<p>Trois questions dans le même message, ça ressemble à un formulaire. Envoie-en une, rebondis vraiment sur la réponse, et garde les autres pour plus tard. Une conversation de crush, c'est un ping-pong, pas un questionnaire d'embauche.</p>
+<p>Trois questions dans le même message, ça ressemble à un formulaire ! Envoie-en une, rebondis vraiment sur la réponse, et garde les autres pour plus tard. Une conversation de crush, c'est un ping-pong... pas un entretien d'embauche.</p>
 </aside>`,
     },
     {
       id: 'pour-apprendre-a-le-connaitre',
       title: "Pour apprendre à le connaître (21-45)",
-      content: `<p>Les fondamentaux. C'est là que tu découvres qui il est vraiment, au-delà du personnage des premiers échanges.</p>
+      content: `<p>Les fondamentaux. C'est là que tu découvres qui il est vraiment, au-delà du personnage des premiers échanges... et crois-moi, il y a souvent des surprises.</p>
 <ol start="21">
 <li>Qu'est-ce qui te passionne au point d'en perdre la notion du temps ?</li>
 <li>Tu te décris comment en trois mots, et tes amis diraient lesquels ?</li>
@@ -88,7 +88,7 @@ const article: BlogArticleData = {
     {
       id: 'droles-pour-le-faire-rire',
       title: "Drôles, pour le faire rire (46-65)",
-      content: `<p>L'humour est le raccourci le plus court entre deux personnes qui se plaisent. Ces questions n'ont aucun enjeu, et c'est exactement pour ça qu'elles marchent.</p>
+      content: `<p>L'humour, c'est le raccourci le plus court entre deux personnes qui se plaisent. Ces questions n'ont aucun enjeu... et c'est exactement pour ça qu'elles marchent aussi bien !</p>
 <ol start="46">
 <li>C'est quoi ta théorie du complot préférée, celle que tu défends à moitié ?</li>
 <li>Quel animal serait ton porte-parole officiel ?</li>
@@ -115,7 +115,7 @@ const article: BlogArticleData = {
     {
       id: 'un-peu-plus-perso',
       title: "Un peu plus perso (66-85)",
-      content: `<p>À sortir quand la conversation est déjà lancée et que tu sens que ça peut aller plus loin que les blagues. C'est souvent là qu'un crush devient autre chose.</p>
+      content: `<p>À sortir quand la conversation est déjà bien lancée, et que tu sens que ça peut aller plus loin que les blagues. C'est souvent là, d'ailleurs, qu'un crush devient autre chose...</p>
 <ol start="66">
 <li>Qu'est-ce qui te rend vraiment heureux, pas sur le papier, en vrai ?</li>
 <li>Tu parles facilement de ce que tu ressens, ou tu gardes tout ?</li>
@@ -142,7 +142,7 @@ const article: BlogArticleData = {
     {
       id: 'pour-flirter-sans-trop-en-faire',
       title: "Pour flirter, sans trop en faire (86-105)",
-      content: `<p>Le flirt qui fonctionne tient en une règle : suggérer plutôt qu'annoncer. Ces questions envoient le signal, tout en laissant l'autre libre de le saisir, ou pas. C'est ce qui les rend efficaces et jamais lourdes.</p>
+      content: `<p>Le flirt qui fonctionne tient en une règle toute simple : suggérer plutôt qu'annoncer. Ces questions envoient le signal, tout en laissant l'autre libre de le saisir... ou pas. C'est exactement ce qui les rend efficaces sans jamais être lourdes.</p>
 <ol start="86">
 <li>Tu as remarqué quoi en premier chez moi, honnêtement ?</li>
 <li>C'est quoi ton idée du rendez-vous parfait, sans budget illimité ?</li>
@@ -167,7 +167,7 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Comment savoir si ça lui plaît</p>
-<p>Regarde moins ses réponses que ses relances. Quelqu'un d'intéressé répond, puis te renvoie une question, rebondit, relance le lendemain. Quelqu'un de poli répond bien, et s'arrête là. La longueur des messages compte moins que qui relance la machine.</p>
+<p>Regarde moins ses réponses que ses relances. Quelqu'un d'intéressé répond, puis te renvoie une question, rebondit, relance le lendemain... Quelqu'un de poli répond bien, et s'arrête là. La longueur des messages compte moins que tu ne crois : ce qui compte, c'est qui relance la machine.</p>
 </aside>`,
     },
     {
@@ -195,7 +195,7 @@ const article: BlogArticleData = {
     {
       id: 'au-premier-rendez-vous',
       title: "En vrai, au premier rendez-vous (121-130)",
-      content: `<p>Dix questions à garder pour le face-à-face. Assez ouvertes pour faire parler, assez légères pour ne jamais plomber l'ambiance.</p>
+      content: `<p>Dix questions à garder pour le face-à-face. Assez ouvertes pour faire parler, assez légères pour ne jamais plomber l'ambiance... bref, exactement ce qu'il faut un soir de premier rendez-vous.</p>
 <ol start="121">
 <li>Alors, c'est comment de me rencontrer en vrai par rapport aux messages ?</li>
 <li>Tu avais imaginé ce rendez-vous comment ?</li>
@@ -213,15 +213,15 @@ const article: BlogArticleData = {
     {
       id: 'et-s-il-ne-se-passe-rien',
       title: "Et si tu n'oses pas lui envoyer quoi que ce soit ?",
-      content: `<p>Petit mot pour celle ou celui qui a lu jusqu'ici sans avoir envoyé le moindre message : c'est normal. Un crush, par définition, fait perdre les moyens. Commence par les questions 1 à 20, une seule, la plus simple, celle qui te ressemble. Le but n'est pas d'être brillante, c'est d'ouvrir une porte.</p>
-<p>Et si vous parlez déjà tous les jours mais que tu n'arrives pas à savoir si c'est réciproque, arrête de relire vos conversations pour la dixième fois : il y a des signaux plus fiables que ton interprétation de ses emojis.</p>
+      content: `<p>Petit mot pour celle ou celui qui a lu jusqu'ici sans avoir envoyé le moindre message : c'est normal ! Un crush, par définition, fait perdre les moyens. Commence par les questions 1 à 20. Une seule. La plus simple, celle qui te ressemble. Le but n'est pas d'être brillant, c'est juste d'ouvrir une porte.</p>
+<p>Et si vous parlez déjà tous les jours mais que tu n'arrives toujours pas à savoir si c'est réciproque... arrête de relire vos conversations pour la dixième fois. Franchement. Il y a des signaux bien plus fiables que ton interprétation de ses emojis à 1 heure du matin.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Il pense à toi, ou il répond juste poliment ?</p>
 <p class="blog-cta-texte">Une série de questions passe en revue les vrais signaux, ceux qu'on ne remarque pas quand on a le nez dedans : ses relances, ses attentions, sa manière d'être quand tu es là. Résultat immédiat, et personne n'en saura rien.</p>
 <a class="blog-cta-btn" href="/test-m-aime-t-il-elle-en-secret/">Découvrir ce qu'il ressent</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; 3 minutes</p>
 </div>
-<p>Dernier conseil, le plus important : les 130 questions de cette page sont des ouvertures, pas un script. Le jour où vous n'aurez plus besoin de liste pour vous parler pendant des heures, tu sauras que tu as bien joué.</p>
+<p>Dernier conseil, le plus important de tous : ces 130 questions sont des ouvertures, pas un script. Le jour où vous n'aurez plus besoin de liste pour vous parler pendant des heures... tu sauras que tu as bien joué !</p>
 <a href="/blog/questions-a-poser-a-son-copain/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">100 questions à poser à son copain, des plus légères aux grandes conversations</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

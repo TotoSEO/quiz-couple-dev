@@ -11,9 +11,9 @@ const article: BlogArticleData = {
   publishedAt: '2026-08-28',
   author: AUTHORS['lucie-courtin'],
   excerpt: "Tu connais son plat préféré et son humeur du dimanche soir. Mais est-ce que tu sais ce qui lui fait vraiment peur, ou ce qu'il n'a jamais osé te demander ?",
-  introduction: `<p>Vous pouvez passer une soirée entière ensemble et n'échanger que trois phrases utiles : « on mange quoi », « tu as pris les clés », « ça va, toi ? ». Ce n'est pas un signe que votre couple va mal. C'est juste ce qui arrive à tous les couples : la logistique finit par manger la conversation.</p>
-<p><strong>Les bonnes questions sont un raccourci vers les discussions que vous n'avez plus le réflexe d'avoir.</strong> Pas pour jouer les journalistes, pas pour lui faire passer un entretien : pour retrouver ce moment du début où vous pouviez parler des heures sans regarder l'heure.</p>
-<p>Voici 100 questions à poser à ton copain, classées de la plus légère à la plus profonde. Pioche selon le moment : certaines se posent entre deux stations de métro, d'autres méritent un canapé, une soirée entière et zéro téléphone à portée de main.</p>`,
+  introduction: `<p>Vous pouvez passer une soirée entière ensemble et n'échanger que trois phrases utiles : « on mange quoi », « tu as pris les clés », « ça va, toi ? ». Rassure-toi, ce n'est pas un signe que votre couple va mal ! C'est juste ce qui arrive à tous les couples, en fait. Au bout d'un moment, la logistique finit par manger la conversation.</p>
+<p><strong>Les bonnes questions, c'est un raccourci vers les discussions que vous n'avez plus le réflexe d'avoir.</strong> Pas pour jouer les journalistes, hein. Juste pour retrouver ce moment du début où vous pouviez parler des heures sans voir le temps passer...</p>
+<p>Voici donc 100 questions à poser à ton copain, classées de la plus légère à la plus profonde. Pioche selon le moment : certaines se posent entre deux stations de métro, d'autres méritent un canapé, une vraie soirée et zéro téléphone à portée de main. Et il y a des chances que deux ou trois réponses te surprennent, même après des années.</p>`,
   quickSummary: [
     "100 questions classées en 7 thèmes, des plus faciles aux plus profondes.",
     "Le bon usage : deux ou trois questions par moment, pas un interrogatoire.",
@@ -25,15 +25,15 @@ const article: BlogArticleData = {
     {
       id: 'comment-les-utiliser',
       title: "Avant de commencer : trois règles pour que ça marche",
-      content: `<p><strong>Une poignée à la fois.</strong> Deux ou trois questions dans une soirée, c'est une conversation. Trente d'affilée, c'est une garde à vue. La liste est longue exprès : elle se consomme sur des semaines, pas en une fois.</p>
-<p><strong>Réponds aussi.</strong> La règle du jeu, c'est l'échange. Si tu lui demandes sa plus grande peur, prépare-toi à raconter la tienne. C'est d'ailleurs souvent là que la conversation décolle.</p>
-<p><strong>Accueille la réponse, quelle qu'elle soit.</strong> Si une réponse te surprend ou te pique, tu as le droit de creuser, pas de plaider. Une question posée pour piéger n'apprend jamais rien de vrai.</p>
+      content: `<p><strong>Une poignée à la fois.</strong> Deux ou trois questions dans une soirée, c'est une conversation. Trente d'affilée, c'est une garde à vue ! La liste est longue exprès : elle se consomme sur des semaines, pas en une fois.</p>
+<p><strong>Réponds aussi.</strong> La règle du jeu, c'est l'échange. Si tu lui demandes sa plus grande peur, par exemple, prépare-toi à raconter la tienne... C'est d'ailleurs souvent là que la conversation décolle vraiment.</p>
+<p><strong>Et accueille la réponse, quelle qu'elle soit.</strong> Si une réponse te surprend ou te pique un peu, tu as le droit de creuser. Pas de plaider. Une question posée pour piéger n'apprend jamais rien de vrai, tu le sais déjà.</p>
 <p>Dernier détail : au fil des réponses, une question finira forcément par surgir, lequel de vous deux <a href="/quiz-qui-connait-mieux-partenaire/">connaît le mieux l'autre</a> ? Gardez-la pour la fin, elle se tranche mieux points en main.</p>`,
     },
     {
       id: 'pour-mieux-le-connaitre',
       title: "Pour mieux le connaître (1-15)",
-      content: `<p>Les fondations. Même après des années, certaines de ces réponses vont te surprendre.</p>
+      content: `<p>Les fondations ! Même après des années ensemble, tu vas voir, certaines réponses vont te surprendre.</p>
 <ol>
 <li>Qu'est-ce que tu aimerais qu'on te demande plus souvent ?</li>
 <li>De quoi es-tu le plus fier, sans jamais oser le dire ?</li>
@@ -55,7 +55,7 @@ const article: BlogArticleData = {
     {
       id: 'sur-vous-deux',
       title: "Sur vous deux et votre histoire (16-30)",
-      content: `<p>Celles qui font remonter les souvenirs et parler du « nous » sans en faire un bilan de couple.</p>
+      content: `<p>Celles qui font remonter les souvenirs, et parler du « nous » sans en faire un bilan de couple...</p>
 <ol start="16">
 <li>À quel moment exact tu t'es dit que ça allait devenir sérieux entre nous ?</li>
 <li>Qu'est-ce que tu as pensé de moi la toute première fois ?</li>
@@ -78,7 +78,7 @@ const article: BlogArticleData = {
     {
       id: 'droles-et-legeres',
       title: "Drôles et légères (31-45)",
-      content: `<p>Zéro enjeu, juste de quoi rire un peu et découvrir ses théories absurdes.</p>
+      content: `<p>Zéro enjeu ici. Juste de quoi rire un peu, et découvrir au passage ses théories les plus absurdes !</p>
 <ol start="31">
 <li>Quelle est ta théorie la plus bizarre, celle que tu défends vraiment ?</li>
 <li>Quel truc as-tu cherché sur ton téléphone que tu n'assumerais jamais à voix haute ?</li>
@@ -101,7 +101,7 @@ const article: BlogArticleData = {
     {
       id: 'amour-et-sentiments',
       title: "Amour et sentiments (46-60)",
-      content: `<p>Celles qui font parler de ce qu'il ressent, lui qui ne le formule pas toujours spontanément.</p>
+      content: `<p>Celles qui font parler de ce qu'il ressent... lui qui, on va pas se mentir, ne le formule pas toujours spontanément.</p>
 <ol start="46">
 <li>Comment tu sais que tu aimes quelqu'un ?</li>
 <li>Qu'est-ce qui te fait te sentir aimé, concrètement ?</li>
@@ -163,7 +163,7 @@ const article: BlogArticleData = {
     {
       id: 'avenir-et-projets',
       title: "Avenir et projets (81-90)",
-      content: `<p>Pas besoin d'attendre une demande en mariage pour savoir si vos trajectoires s'accordent. Mieux vaut ces questions-là trop tôt que trop tard.</p>
+      content: `<p>Pas besoin d'attendre une demande en mariage pour savoir si vos trajectoires s'accordent. Franchement, mieux vaut ces questions-là trop tôt que trop tard.</p>
 <ol start="81">
 <li>Tu t'imagines où dans cinq ans, et j'y suis comment ?</li>
 <li>Qu'est-ce qui est non négociable dans ta vie future ?</li>
@@ -199,9 +199,9 @@ const article: BlogArticleData = {
     {
       id: 'et-apres',
       title: "Et après la question 100 ?",
-      content: `<p>Si tu es arrivée jusqu'ici, tu as compris le principe : ce ne sont pas les questions qui comptent, c'est l'habitude de se les poser. Les couples qui durent ne sont pas ceux qui savent tout l'un de l'autre, ce sont ceux qui continuent de se découvrir.</p>
-<p>Garde cette liste quelque part, ressors-la dans un mois, et compare les réponses dans un an : certaines auront changé, et ces changements-là sont exactement les conversations qu'il ne faut pas rater. Tu verras aussi que lui poser des questions donne envie qu'il t'en pose, et c'est souvent comme ça que l'équilibre revient.</p>
-<p>Et le jour où tu veux vérifier tout ce que vous venez d'apprendre l'un sur l'autre, vous savez où le prouver.</p>
+      content: `<p>Si tu es arrivée jusqu'ici, tu as compris le principe : ce ne sont pas les questions qui comptent, c'est l'habitude de se les poser. Les couples qui durent ne sont pas ceux qui savent tout l'un de l'autre... ce sont ceux qui continuent de se découvrir.</p>
+<p>Alors garde cette liste quelque part, et ressors-la dans un mois. Compare les réponses dans un an, aussi : certaines auront changé, et ces changements-là, ce sont exactement les conversations qu'il ne faut pas rater. Tu verras autre chose, d'ailleurs. Lui poser des questions donne envie qu'il t'en pose ! Et c'est souvent comme ça que l'équilibre revient.</p>
+<p>Et le jour où tu veux vérifier tout ce que vous venez d'apprendre l'un sur l'autre... vous savez où le prouver.</p>
 <a href="/questions-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">120 questions pour couple à se poser, classées par thème</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
