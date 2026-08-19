@@ -942,6 +942,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-11-06',
   },
+  {
+    internalSlug: 'dependant-affectif-et-manipulateur',
+    category: 'psychologie',
+    featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'dependant-affectif-et-manipulateur',
+    },
+    publishedAt: '2026-11-10',
+  },
+  {
+    internalSlug: 'sortir-emprise-pervers-narcissique',
+    category: 'psychologie',
+    featuredImage: '/blog/sortir-emprise-pervers-narcissique.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'sortir-emprise-pervers-narcissique',
+    },
+    publishedAt: '2026-11-13',
+  },
 ];
 
 // Author data
