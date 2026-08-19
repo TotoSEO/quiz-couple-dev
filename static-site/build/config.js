@@ -742,6 +742,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-08-28',
   },
+  {
+    internalSlug: 'homme-pervers-narcissique-signes',
+    category: 'psychologie',
+    featuredImage: '/blog/homme-pervers-narcissique-signes.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'homme-pervers-narcissique-signes',
+    },
+    publishedAt: '2026-09-01',
+  },
+  {
+    internalSlug: 'questions-a-poser-a-son-crush',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-a-poser-a-son-crush',
+    },
+    publishedAt: '2026-09-04',
+  },
 ];
 
 // Author data
