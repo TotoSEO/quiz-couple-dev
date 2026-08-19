@@ -882,6 +882,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-10-16',
   },
+  {
+    internalSlug: 'rupture-pervers-narcissique',
+    category: 'psychologie',
+    featuredImage: '/blog/rupture-pervers-narcissique.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'rupture-pervers-narcissique',
+    },
+    publishedAt: '2026-10-20',
+  },
+  {
+    internalSlug: 'questions-debut-de-relation',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-debut-de-relation.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-debut-de-relation',
+    },
+    publishedAt: '2026-10-23',
+  },
 ];
 
 // Author data
