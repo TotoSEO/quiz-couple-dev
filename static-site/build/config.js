@@ -922,6 +922,26 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-10-30',
   },
+  {
+    internalSlug: 'femme-toxique-en-amour',
+    category: 'psychologie',
+    featuredImage: '/blog/femme-toxique-en-amour.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'femme-toxique-en-amour',
+    },
+    publishedAt: '2026-11-03',
+  },
+  {
+    internalSlug: '36-questions-pour-tomber-amoureux',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
+    frOnly: true,
+    slugs: {
+      fr: '36-questions-pour-tomber-amoureux',
+    },
+    publishedAt: '2026-11-06',
+  },
 ];
 
 // Author data
