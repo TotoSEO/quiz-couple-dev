@@ -732,6 +732,16 @@ export const BLOG_ARTICLES = [
     },
     publishedAt: '2026-08-25',
   },
+  {
+    internalSlug: 'questions-a-poser-a-son-copain',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-a-poser-a-son-copain',
+    },
+    publishedAt: '2026-08-28',
+  },
 ];
 
 // Author data
