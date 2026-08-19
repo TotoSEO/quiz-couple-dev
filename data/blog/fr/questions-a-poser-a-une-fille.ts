@@ -179,7 +179,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/test-m-aime-t-il-elle-en-secret/">Vérifier si je lui plais</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; 3 minutes</p>
 </div>
-<p>Puis le jour où elle devient ta copine, tu verras, le registre change : ce sont les <a href="/questions-couple/">questions de couple</a> qui prennent le relais, et l'enjeu n'est plus de briller mais de construire. Ce jour-là, tu auras une longueur d'avance... puisque tu sauras déjà écouter.</p>
+<p>Puis le jour où elle devient ta copine, tu verras, le registre change : ce sont les <a href="/questions-couple/">questions qu'on se pose en couple</a> qui prennent le relais, et l'enjeu n'est plus de briller mais de construire. Ce jour-là, tu auras une longueur d'avance... puisque tu sauras déjà écouter.</p>
 <a href="/blog/questions-a-poser-a-son-crush/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">100 questions à poser à son crush, du premier message au premier rendez-vous</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

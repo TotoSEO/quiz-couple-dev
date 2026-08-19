@@ -32,7 +32,7 @@ const article: BlogArticleData = {
 <li><a href="#dans-l-intimite">Dans l'intimité : le contrôle installé (signes 7 à 9)</a></li>
 <li><a href="#quand-tu-resistes">Quand tu résistes : le masque qui tombe (signes 10 à 12)</a></li>
 </ol>
-<p>Un rappel avant de commencer, et il est important. La moitié de ces comportements, pris isolément et une seule fois, peuvent arriver dans n'importe quel couple ! Ce qui fait signe, c'est la répétition, l'accumulation, et surtout le sens général : tout converge vers son contrôle et ton rétrécissement. Le fonctionnement de fond, lui, celui qui explique pourquoi tout converge, est décrypté dans le guide du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a>.</p>`,
+<p>Un rappel avant de commencer, et il est important. La moitié de ces comportements, pris isolément et une seule fois, peuvent arriver dans n'importe quel couple ! Ce qui fait signe, c'est la répétition, l'accumulation, et surtout le sens général : tout converge vers son contrôle et ton rétrécissement. Le fonctionnement de fond, lui, celui qui explique pourquoi tout converge, est décrypté dans le <a href="/blog/pervers-narcissique-amour/">guide du pervers narcissique en amour</a>.</p>`,
       subsections: [
         {
           id: 'en-societe-le-personnage',
@@ -67,7 +67,7 @@ const article: BlogArticleData = {
           content: `<ol start="10">
 <li><strong>La colère froide remplace le débat.</strong> Un désaccord ne se discute pas, il se paie : silence de plusieurs jours, affection coupée, ambiance de plomb. La punition n'est jamais nommée, d'ailleurs, ce qui t'oblige à deviner ta faute. Et donc à t'autosurveiller en continu.</li>
 <li><strong>Il devient la victime, publiquement si besoin.</strong> Le jour où tu hausses enfin le ton, après des mois d'usure, tu découvres l'inversion : c'est lui qui souffre, lui qui subit, lui qui raconte autour de vous qu'il « s'inquiète pour toi »... Cette campagne préventive vise un objectif précis : détruire ta crédibilité avant que tu parles.</li>
-<li><strong>Ton départ déclenche la reconquête, pas la remise en question.</strong> Promesses, larmes, thérapie annoncée, retour de l'homme des débuts ! Puis, une fois que tu es revenue, retour du système. En pire. Ce cycle de reprise a ses codes, et on les détaille dans la <a href="/blog/rupture-pervers-narcissique/">rupture avec un pervers narcissique</a>.</li>
+<li><strong>Ton départ déclenche la reconquête, pas la remise en question.</strong> Promesses, larmes, thérapie annoncée, retour de l'homme des débuts ! Puis, une fois que tu es revenue, retour du système. En pire. Ce cycle de reprise a ses codes, et on les détaille au moment de <a href="/blog/rupture-pervers-narcissique/">rompre avec un pervers narcissique</a>.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Le vrai révélateur, c'est ta résistance</p>

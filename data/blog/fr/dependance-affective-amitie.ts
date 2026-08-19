@@ -34,7 +34,7 @@ const article: BlogArticleData = {
 <li><strong>Le vide des périodes creuses.</strong> Quand elle est moins disponible, une nouvelle relation, un travail prenant, un bébé, tu ne ressens pas un manque normal : tu ressens un abandon. Avec ce mélange de tristesse et de colère qu'on réserve d'habitude aux ruptures...</li>
 <li><strong>Le lien qui a mangé les autres.</strong> À force d'être « la » personne l'une de l'autre, vos mondes se sont rétrécis autour du duo. Moins de nouvelles rencontres, moins de liens investis... et une fragilité énorme : tout ton équilibre repose sur un seul fil.</li>
 </ol>
-<p>Tu remarqueras que le mécanisme de fond est exactement celui des <a href="/blog/dependance-affective-symptomes/">symptômes de la dépendance affective</a> en couple : l'autre est devenu ton régulateur émotionnel. Seul le décor a changé.</p>`,
+<p>Tu remarqueras que le mécanisme de fond est exactement celui qu'on observe <a href="/blog/dependance-affective-symptomes/">symptôme par symptôme dans le couple</a> : l'autre est devenu ton régulateur émotionnel. Seul le décor a changé.</p>`,
     },
     {
       id: 'd-ou-ca-vient-et-les-types',

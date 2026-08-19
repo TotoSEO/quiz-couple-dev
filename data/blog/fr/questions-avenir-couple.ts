@@ -123,7 +123,7 @@ const article: BlogArticleData = {
 <p class="blog-tip-box-title">📌 Le rituel qui change tout</p>
 <p>Les réponses à ces 60 questions ne sont pas gravées : elles bougent, avec les années et les événements. Les couples qui durent refont le tour des grandes questions régulièrement, une fois par an, un soir d'anniversaire de rencontre par exemple... Ce rendez-vous-là vaut tous les contrats du monde.</p>
 </aside>
-<p>Et si ces conversations d'avenir t'ont donné le goût des grandes discussions, la collection complète de <a href="/questions-couple/">questions pour couple</a> couvre tous les autres registres... des plus légères aux plus profondes, il y a de quoi tenir des années de soirées.</p>
+<p>Et si ces conversations d'avenir t'ont donné le goût des grandes discussions, la <a href="/questions-couple/">collection complète de questions à se poser à deux</a> couvre tous les autres registres... des plus légères aux plus profondes, il y a de quoi tenir des années de soirées.</p>
 <a href="/blog/questions-pour-mieux-se-connaitre-en-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">60 questions pour mieux vous connaître, même si vous croyez tout savoir</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

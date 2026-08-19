@@ -62,7 +62,7 @@ const article: BlogArticleData = {
 <ul>
 <li><strong>« Après tout ce que j'ai fait pour toi... »</strong> La dette. Jamais détaillée, jamais soldée, toujours disponible. Tu es en déficit permanent, sans avoir jamais vu le relevé de compte.</li>
 <li><strong>« Personne ne me comprend. Même pas toi. »</strong> Le « même pas toi » est la partie qui travaille : te voilà sommée de prouver que tu n'es pas comme les autres. Et pour prouver, tu cèdes.</li>
-<li><strong>« Je n'ai vraiment pas de chance avec les gens. »</strong> Écoute bien celle-là en début de relation : ses ex « folles », ses amis « traîtres », ses collègues « jaloux »... Un jour, tu rejoindras la liste. On en parle dans les <a href="/blog/homme-pervers-narcissique-signes/">signes de l'homme pervers narcissique</a>, c'est le signe n°3.</li>
+<li><strong>« Je n'ai vraiment pas de chance avec les gens. »</strong> Écoute bien celle-là en début de relation : ses ex « folles », ses amis « traîtres », ses collègues « jaloux »... Un jour, tu rejoindras la liste. On en parle dans le <a href="/blog/homme-pervers-narcissique-signes/">portrait de l'homme pervers narcissique</a>, c'est le signe n°3.</li>
 <li><strong>« Vas-y, dis que je suis un monstre pendant que tu y es. »</strong> L'exagération défensive : il pousse ton reproche jusqu'à l'absurde pour que tu passes ton tour. Tu voulais parler d'un retard, te voilà en train de jurer qu'il n'est pas un monstre.</li>
 </ul>`,
     },

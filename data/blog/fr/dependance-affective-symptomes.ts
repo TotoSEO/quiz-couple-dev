@@ -78,7 +78,7 @@ const article: BlogArticleData = {
       title: "À partir de quand faut-il s'en occuper ?",
       content: `<p>Personne ne coche zéro case, soyons clairs. Tout le monde a connu la relecture de messages ou le besoin d'être rassuré dans une période fragile. Alors, où est la ligne ?</p>
 <p>Trois critères font la différence. <strong>La fréquence</strong> : un épisode par mois n'est pas un fonctionnement, un épisode par jour, si. <strong>La souffrance</strong> : est-ce que ça te coûte, à toi, de la sérénité, du sommeil, des amitiés ? <strong>Et l'emprise sur tes choix</strong> : est-ce que la peur décide à ta place, de ce que tu dis, de ce que tu acceptes, de ce que tu tais ?</p>
-<p>Si tu réponds oui aux trois, ce n'est pas un trait de caractère à assumer, c'est un fonctionnement à travailler. Et bonne nouvelle : ça se travaille vraiment, on a détaillé le chemin dans <a href="/blog/sortir-de-la-dependance-affective/">sortir de la dépendance affective</a>. La première étape, souvent, c'est simplement d'objectiver ce qui t'arrive...</p>
+<p>Si tu réponds oui aux trois, ce n'est pas un trait de caractère à assumer, c'est un fonctionnement à travailler. Et bonne nouvelle : ça se travaille vraiment, on a détaillé <a href="/blog/sortir-de-la-dependance-affective/">le plan de sortie en 3 phases</a>, exercices compris. La première étape, souvent, c'est simplement d'objectiver ce qui t'arrive...</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Tu te reconnais dans plusieurs de ces symptômes ?</p>
 <p class="blog-cta-texte">Une série de questions reprend chaque situation de cet article, version vécu quotidien, et t'indique où tu te situes : attachement sain, fragilité passagère ou vraie dépendance affective. Sans jugement, et rien que pour toi.</p>

@@ -27,7 +27,7 @@ const article: BlogArticleData = {
       title: "Pourquoi on ne la voit jamais chez les hommes",
       content: `<p>Deux raisons, une sociale et une mécanique.</p>
 <p>La sociale d'abord : on apprend aux garçons à ne pas être « en demande ». Pleurer pour une fille, avouer qu'on a peur de perdre quelqu'un, dire « j'ai besoin de toi »... tout ça coûte cher en virilité perçue. Résultat, le besoin affectif masculin apprend très tôt à se déguiser en autre chose. Il ne disparaît pas, hein. Il se maquille.</p>
-<p>La mécanique ensuite : la <a href="/blog/dependance-affective/">dépendance affective</a> reste la même sous le déguisement, un système où l'autre régule ton état émotionnel. Chez beaucoup de femmes, l'angoisse s'exprime en demande de réassurance, visible. Chez beaucoup d'hommes, elle s'exprime en <em>contrôle</em> : si je ne peux pas supplier, je vais sécuriser. Surveiller. Verrouiller. C'est le même moteur... avec une carrosserie différente. Et cette carrosserie-là fait beaucoup plus de dégâts autour.</p>`,
+<p>La mécanique ensuite : la dépendance affective reste la même sous le déguisement : <a href="/blog/dependance-affective/">un système où l'autre régule ton état émotionnel</a>. Chez beaucoup de femmes, l'angoisse s'exprime en demande de réassurance, visible. Chez beaucoup d'hommes, elle s'exprime en <em>contrôle</em> : si je ne peux pas supplier, je vais sécuriser. Surveiller. Verrouiller. C'est le même moteur... avec une carrosserie différente. Et cette carrosserie-là fait beaucoup plus de dégâts autour.</p>`,
     },
     {
       id: 'les-masques-masculins',
@@ -52,7 +52,7 @@ const article: BlogArticleData = {
       title: "Ce que ça fait au couple (le cercle vicieux)",
       content: `<p>Le drame de la dépendance affective masculine, c'est qu'elle fabrique exactement ce qu'elle redoute. Le mécanisme tient en trois temps, et il est d'une régularité implacable.</p>
 <p>Il serre trop fort, par peur de perdre. Elle étouffe, alors elle prend de la distance, pour respirer, simplement. Il sent la distance, panique... et serre encore plus fort. Jalousie en hausse, contrôle en hausse, reproches en hausse. Elle s'éloigne davantage. Et un jour elle part, non pas parce qu'elle ne l'aimait pas... mais parce qu'on ne peut pas aimer en apnée.</p>
-<p>Le pire ? Ce départ « confirme » sa croyance de départ : on finit toujours par m'abandonner. Et le voilà reparti pour un tour, avec la suivante, en pire. C'est exactement ce cercle que les <a href="/blog/dependance-affective-symptomes/">symptômes de la dépendance affective</a> alimentent en silence... tant que personne ne le nomme.</p>`,
+<p>Le pire ? Ce départ « confirme » sa croyance de départ : on finit toujours par m'abandonner. Et le voilà reparti pour un tour, avec la suivante, en pire. C'est exactement ce cercle que les <a href="/blog/dependance-affective-symptomes/">symptômes classiques du manque affectif</a> alimentent en silence... tant que personne ne le nomme.</p>`,
     },
     {
       id: 's-en-sortir-version-homme',

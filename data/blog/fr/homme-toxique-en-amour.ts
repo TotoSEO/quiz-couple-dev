@@ -65,7 +65,7 @@ const article: BlogArticleData = {
 <p><strong>Est-ce qu'il peut changer ?</strong> Sois lucide : le contrôle « protecteur » installé et systématique est la porte d'entrée du contrôle coercitif, et il partage sa mécanique avec les <a href="/blog/homme-pervers-narcissique-signes/">signes de l'homme pervers narcissique</a>. À ce stade, la question n'est plus « peut-il changer ? » mais « qu'est-ce que je perds, semaine après semaine, à attendre qu'il change ? »...</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Plusieurs profils à la fois ? Change de grille de lecture</p>
-<p>Un homme qui cumule la victimisation, la dévalorisation ET le contrôle ne « cumule pas des défauts » : il déroule un système. À ce niveau, tu n'es plus face à un homme toxique mais face à une emprise, et la marche à suivre n'est plus la même. Le portrait complet est dans le guide du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a>.</p>
+<p>Un homme qui cumule la victimisation, la dévalorisation ET le contrôle ne « cumule pas des défauts » : il déroule un système. À ce niveau, tu n'es plus face à un homme toxique mais face à une emprise, et la marche à suivre n'est plus la même. Le portrait complet est dans le guide de l'<a href="/blog/pervers-narcissique-amour/">emprise du pervers narcissique</a>.</p>
 </aside>`,
     },
     {

@@ -27,7 +27,7 @@ const article: BlogArticleData = {
       title: "Pourquoi ça fait si mal (la mécanique du sevrage)",
       content: `<p>Remettons la mécanique à plat, parce qu'elle change tout au regard qu'on porte sur sa propre souffrance.</p>
 <p>Quand ton équilibre émotionnel reposait sur les signaux de l'autre, ses messages, sa présence, ses preuves, ta vie quotidienne fonctionnait comme sous perfusion. La rupture ne t'enlève pas « quelqu'un que tu aimes » : elle débranche la perfusion. D'où des symptômes qui dépassent le chagrin classique : l'angoisse en vagues physiques, l'obsession (il occupe 90 % de tes pensées), les insomnies, la perte d'appétit, l'impression de ne plus savoir qui tu es sans lui...</p>
-<p>Ce dernier point est le plus important. La <a href="/blog/dependance-affective/">dépendance affective</a> fait fusionner l'identité avec la relation : « nous » avait remplacé « je ». La rupture ne laisse donc pas un vide DANS ta vie... elle laisse un vide À LA PLACE de ta vie. Si tu ressens ça, mets un mot dessus et garde-le : ce n'est pas la preuve qu'il était irremplaçable. C'est la preuve que le travail à faire est chez toi... et qu'il est enfin à portée de main.</p>`,
+<p>Ce dernier point est le plus important. La <a href="/blog/dependance-affective/">dépendance amoureuse</a> fait fusionner l'identité avec la relation : « nous » avait remplacé « je ». La rupture ne laisse donc pas un vide DANS ta vie... elle laisse un vide À LA PLACE de ta vie. Si tu ressens ça, mets un mot dessus et garde-le : ce n'est pas la preuve qu'il était irremplaçable. C'est la preuve que le travail à faire est chez toi... et qu'il est enfin à portée de main.</p>`,
     },
     {
       id: 'les-pieges-des-premieres-semaines',
@@ -42,7 +42,7 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Si l'ex était un manipulateur, ajoute un piège : son retour</p>
-<p>Les profils manipulateurs reviennent tester la porte, pile quand tu vas mieux, c'est réglé comme du papier à musique. Message nostalgique, « on peut rester amis ? », réapparition fortuite... Pour un dépendant affectif en sevrage, c'est l'offre de dose ultime. Prépare ta réponse À L'AVANCE, à froid : le mode d'emploi complet est dans la <a href="/blog/rupture-pervers-narcissique/">rupture avec un pervers narcissique</a>.</p>
+<p>Les profils manipulateurs reviennent tester la porte, pile quand tu vas mieux, c'est réglé comme du papier à musique. Message nostalgique, « on peut rester amis ? », réapparition fortuite... Pour un dépendant affectif en sevrage, c'est l'offre de dose ultime. Prépare ta réponse À L'AVANCE, à froid : tout le mode d'emploi pour <a href="/blog/rupture-pervers-narcissique/">rompre avec un pervers narcissique</a> est écrit, phase par phase.</p>
 </aside>`,
     },
     {

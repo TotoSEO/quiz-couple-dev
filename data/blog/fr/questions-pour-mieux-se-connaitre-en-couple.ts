@@ -132,7 +132,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/quiz-qui-connait-mieux-partenaire/">Lancer le défi</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; À jouer à deux</p>
 </div>
-<p>Et si ces soirées de questions deviennent votre rituel préféré, il y a de quoi tenir des mois : les <a href="/blog/questions-a-poser-a-son-copain/">questions à poser à son copain</a> côté elle, les <a href="/blog/questions-a-poser-a-sa-copine/">questions à poser à sa copine</a> côté lui... et le niveau au-dessus quand vous serez prêts, mais ça, vous le découvrirez tout seuls.</p>
+<p>Et si ces soirées de questions deviennent votre rituel préféré, il y a de quoi tenir des mois : les <a href="/blog/questions-a-poser-a-son-copain/">100 questions côté copain</a> côté elle, les <a href="/blog/questions-a-poser-a-sa-copine/">questions à poser à sa copine</a> côté lui... et le niveau au-dessus quand vous serez prêts, mais ça, vous le découvrirez tout seuls.</p>
 <a href="/blog/questions-intimes-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">65 questions intimes à poser à son copain, des plus douces aux plus osées</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

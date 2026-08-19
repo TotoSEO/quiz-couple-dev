@@ -26,7 +26,7 @@ const article: BlogArticleData = {
       id: 'deux-noms-un-profil',
       title: "Manipulateur narcissique, pervers narcissique : deux noms, un même profil",
       content: `<p>Réglons d'abord la question du vocabulaire, parce qu'elle embrouille tout le monde. « Manipulateur narcissique », « pervers narcissique », « PN »... En pratique, ces étiquettes décrivent le même fonctionnement : un besoin de domination alimenté par l'image, et un usage de l'autre comme ressource. La nuance, quand on veut la faire, c'est que tous les manipulateurs ne sont pas narcissiques : certains manipulent par intérêt ponctuel, sans ce besoin structurel d'écraser pour exister.</p>
-<p>Celui dont on parle ici, c'est le manipulateur au sens fort : celui dont la manipulation n'est pas un outil occasionnel mais un mode de relation permanent. Ce que ça produit dans un couple, le cycle d'emprise, le brouillard, on l'a décortiqué dans le guide du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a>. Ici, on se concentre sur la mécanique de l'individu : ses gestes techniques, si on peut dire.</p>`,
+<p>Celui dont on parle ici, c'est le manipulateur au sens fort : celui dont la manipulation n'est pas un outil occasionnel mais un mode de relation permanent. Ce que ça produit dans un couple, le cycle d'emprise, le brouillard, on l'a décortiqué dans le guide du <a href="/blog/pervers-narcissique-amour/">pervers narcissique dans le couple</a>. Ici, on se concentre sur la mécanique de l'individu : ses gestes techniques, si on peut dire.</p>`,
     },
     {
       id: 'ses-techniques',
@@ -76,7 +76,7 @@ const article: BlogArticleData = {
 <tr><td>Tu le quittes</td><td>Reconquête intensive, puis dénigrement public, puis réapparitions cycliques</td><td>Ce n'est pas toi qu'il veut récupérer, c'est le contrôle et l'image</td></tr>
 <tr><td>Tu vas visiblement mieux sans lui</td><td>Retour « par hasard », message nostalgique, gentillesse soudaine</td><td>Ton mieux-être est une perte de contrôle : il vient vérifier si la porte rouvre</td></tr>
 </tbody></table></div>
-<p>La dernière ligne du tableau est celle qui piège le plus de monde, des mois après la rupture... Les mécanismes de cette phase, hoovering compris, sont détaillés dans la <a href="/blog/rupture-pervers-narcissique/">rupture avec un pervers narcissique</a>, et si tu es encore dans la relation au moment où tu lis ça, le plan de sortie complet se trouve dans <a href="/blog/sortir-emprise-pervers-narcissique/">sortir de l'emprise</a>.</p>
+<p>La dernière ligne du tableau est celle qui piège le plus de monde, des mois après la rupture... Les mécanismes de cette phase, hoovering compris, sont détaillés dans la <a href="/blog/rupture-pervers-narcissique/">rupture face à un pervers narcissique</a>, et si tu es encore dans la relation au moment où tu lis ça, le plan de sortie complet se trouve dans <a href="/blog/sortir-emprise-pervers-narcissique/">se libérer de l'emprise</a>.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Besoin de savoir à quoi tu as affaire, exactement ?</p>
 <p class="blog-cta-texte">Vingt questions reprennent les comportements décrits dans cet article, situation par situation, et le résultat te dit où ta relation se situe. Discret, immédiat, et souvent très éclairant.</p>
