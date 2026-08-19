@@ -44,7 +44,7 @@ const article: BlogArticleData = {
 <p>Ajoute l'effet sur l'autre, et la boucle est bouclée : la surveillance et les protestations fatiguent même les partenaires aimants. Il répond un peu moins vite, un peu plus court... ce que ton radar détecte immédiatement comme un éloignement. Et si ton partenaire est de style évitant, c'est le duo poursuite-fuite dans toute sa splendeur : ta recherche de proximité déclenche son besoin de distance, qui déclenche ta panique... Chacun devient la preuve vivante de la peur de l'autre.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Le cas qui change tout : le partenaire qui joue avec l'alarme</p>
-<p>Tout ce qui précède suppose un partenaire de bonne foi. Mais un attachement anxieux est aussi une cible parfaite pour les profils manipulateurs : ta peur de l'abandon leur donne un levier de contrôle clé en main. Si les silences sont des punitions, si le chaud-froid est stratégique, si ta peur est entretenue... ce n'est plus ton attachement le problème. Va lire le <a href="/blog/dependant-affectif-et-manipulateur/">duo piégé du dépendant et du manipulateur</a>, et regarde ta situation en face.</p>
+<p>Tout ce qui précède suppose un partenaire de bonne foi. Mais un attachement anxieux est aussi une cible parfaite pour les profils manipulateurs : ta peur de l'abandon leur donne un levier de contrôle clé en main. Si les silences sont des punitions, si le chaud-froid est stratégique, si ta peur est entretenue... ce n'est plus ton attachement le problème : tu es peut-être dans le <a href="/blog/dependant-affectif-et-manipulateur/">duo piégé du dépendant et du manipulateur</a>, celui où ta peur devient son outil de contrôle. Et ça, ça se regarde en face.</p>
 </aside>`,
     },
     {

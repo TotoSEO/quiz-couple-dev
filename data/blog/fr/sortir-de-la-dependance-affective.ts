@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'comprendre-avant-de-commencer',
       title: "Deux minutes pour comprendre contre quoi tu te bats",
-      content: `<p>La <a href="/blog/dependance-affective/">dépendance affective</a>, on l'a vu en détail ailleurs, c'est un système de régulation : ton anxiété se calme par l'autre, ses messages, sa présence, ses preuves d'amour. Le problème n'est donc pas que tu aimes trop... c'est que tu as externalisé ton thermostat émotionnel.</p>
+      content: `<p>La <a href="/blog/dependance-affective/">dépendance affective</a> est un système de régulation : ton anxiété se calme par l'autre, ses messages, sa présence, ses preuves d'amour. Le problème n'est donc pas que tu aimes trop... c'est que tu as externalisé ton thermostat émotionnel.</p>
 <p>Pourquoi c'est important de le savoir ? Parce que ça explique un truc que tout le monde vit et que personne ne comprend : <strong>quand tu arrêtes les comportements de dépendance, l'angoisse monte AVANT de descendre.</strong> Ne plus vérifier ton téléphone ne te fait pas du bien tout de suite, ça te fait mal d'abord ! C'est normal, c'est le sevrage de n'importe quel mécanisme d'apaisement. Si tu sais que cette vague est prévue au programme, tu peux la traverser au lieu de conclure que « ça ne marche pas ».</p>
 <p>Un dernier mot avant les exercices : si tu ne sais pas encore si tu es concernée, les <a href="/blog/dependance-affective-symptomes/">symptômes de la dépendance affective</a> sont détaillés sphère par sphère, et c'est une bonne lecture préalable. Maintenant, au travail.</p>`,
     },

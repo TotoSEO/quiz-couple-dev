@@ -28,7 +28,7 @@ const article: BlogArticleData = {
       content: `<p>Avant la liste, deux minutes sur la mécanique, parce qu'elle explique tout.</p>
 <p>Quand tu exprimes un désaccord ou une blessure, il y a deux façons de te répondre. Sur le fond : « ok, parlons de ce qui s'est passé ». Ou sur le cadre : « tu n'es pas en état d'en parler, tu exagères, ce n'est pas le moment »... La quasi-totalité des phrases de manipulateur jouent sur le cadre. <strong>Elles ne discutent jamais ce que tu dis. Elles contestent ton droit de le dire.</strong></p>
 <p>Et c'est redoutable, parce que ça te déplace : au lieu de défendre ton sujet, te voilà en train de défendre ta légitimité, ta santé mentale, ton ton de voix. Le sujet initial, lui, a disparu. Par exemple, tu voulais parler d'un rendez-vous oublié... et vingt minutes plus tard, tu t'excuses pour la manière dont tu l'as dit. Le tour est joué.</p>
-<p>Une précision importante, quand même : tout le monde sort une de ces phrases un jour de fatigue. Ce qui signe un manipulateur, ce n'est pas la phrase, c'est le répertoire. La variété des formules, leur retour systématique, et le fait qu'au bout du compte, ce soit toujours toi qui t'excuses. Ce fonctionnement d'ensemble, on l'a décortiqué dans le portrait du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a>.</p>`,
+<p>Une précision importante, quand même : tout le monde sort une de ces phrases un jour de fatigue. Ce qui signe un manipulateur, ce n'est pas la phrase, c'est le répertoire. La variété des formules, leur retour systématique, et le fait qu'au bout du compte, ce soit toujours toi qui t'excuses. Ce fonctionnement d'ensemble, c'est exactement celui du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a> : la phrase n'est qu'un rouage du système.</p>`,
     },
     {
       id: 'inverser-la-faute',
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
 <ul>
 <li><strong>« Après tout ce que j'ai fait pour toi... »</strong> La dette. Jamais détaillée, jamais soldée, toujours disponible. Tu es en déficit permanent, sans avoir jamais vu le relevé de compte.</li>
 <li><strong>« Personne ne me comprend. Même pas toi. »</strong> Le « même pas toi » est la partie qui travaille : te voilà sommée de prouver que tu n'es pas comme les autres. Et pour prouver, tu cèdes.</li>
-<li><strong>« Je n'ai vraiment pas de chance avec les gens. »</strong> Écoute bien celle-là en début de relation : ses ex « folles », ses amis « traîtres », ses collègues « jaloux »... Un jour, tu rejoindras la liste. On en parle dans le <a href="/blog/homme-pervers-narcissique-signes/">portrait de l'homme pervers narcissique</a>, c'est le signe n°3.</li>
+<li><strong>« Je n'ai vraiment pas de chance avec les gens. »</strong> Écoute bien celle-là en début de relation : ses ex « folles », ses amis « traîtres », ses collègues « jaloux »... Un jour, tu rejoindras la liste. Ce récit des ex « folles » est même le signe n°3 de l'<a href="/blog/homme-pervers-narcissique-signes/">homme pervers narcissique</a>... et le portrait qu'il fait d'elles est celui qu'il fera de toi.</li>
 <li><strong>« Vas-y, dis que je suis un monstre pendant que tu y es. »</strong> L'exagération défensive : il pousse ton reproche jusqu'à l'absurde pour que tu passes ton tour. Tu voulais parler d'un retard, te voilà en train de jurer qu'il n'est pas un monstre.</li>
 </ul>`,
     },

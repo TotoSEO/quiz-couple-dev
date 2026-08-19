@@ -44,7 +44,7 @@ const article: BlogArticleData = {
 <p><strong>La blessure jamais refermée.</strong> Une trahison passée, la tienne ou celle vue chez tes parents, et le système conclut : ça peut arriver n'importe quand, à n'importe qui... La jalousie devient alors une vigilance de vétéran : tu ne surveilles pas ton partenaire actuel, tu surveilles le fantôme du précédent. Lui paie une dette qu'il n'a jamais contractée.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Le cas où la jalousie n'est pas maladive : elle est alimentée</p>
-<p>Avant de te déclarer jalouse maladive, vérifie une chose : certains partenaires ENTRETIENNENT la jalousie... ambiguïtés cultivées, comparaisons, triangulation (« ma collègue, elle, me comprend »), chaud-froid stratégique. Si ta jalousie a des braises qu'on attise, le problème n'est pas ton alarme : c'est le pyromane. Va relire <a href="/blog/manipulateur-narcissique/">comment opère un manipulateur narcissique</a>, la triangulation y figure en bonne place.</p>
+<p>Avant de te déclarer jalouse maladive, vérifie une chose : certains partenaires ENTRETIENNENT la jalousie... ambiguïtés cultivées, comparaisons, triangulation (« ma collègue, elle, me comprend »), chaud-froid stratégique. Si ta jalousie a des braises qu'on attise, le problème n'est pas ton alarme : c'est le pyromane. La triangulation est d'ailleurs une pièce maîtresse dans la façon dont <a href="/blog/manipulateur-narcissique/">opère un manipulateur narcissique</a>... et elle fabrique de la jalousie sur mesure.</p>
 </aside>`,
     },
     {

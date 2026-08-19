@@ -27,7 +27,7 @@ const article: BlogArticleData = {
       title: "Pourquoi c'est si dur : le lien traumatique",
       content: `<p>Commençons par te réhabiliter à tes propres yeux, parce que tout part de là.</p>
 <p>Ce qui t'attache à lui porte un nom : le lien traumatique, et c'est de la mécanique pure. Quand une même personne est la source de ta souffrance ET de ton réconfort, ton cerveau fabrique un attachement d'une puissance anormale. L'alternance fait tout : la punition crée le manque, la récompense crée le soulagement... et le soulagement, répété dans la peur, s'imprime plus fort que n'importe quel bonheur tranquille. C'est le même circuit que les addictions, littéralement.</p>
-<p>Voilà pourquoi « il te fait du mal, pars » ne fonctionne pas : le mal fait PARTIE du système d'attachement. Voilà pourquoi tu ressens un manque physique loin de lui, alors même que tu vas mieux... Et voilà pourquoi ta difficulté à partir ne dit rien de ta valeur : elle mesure la puissance du dispositif, c'est tout. Le portrait complet de ce dispositif, tu l'as dans le <a href="/blog/pervers-narcissique-amour/">guide complet du pervers narcissique</a>... ici, on s'occupe d'en sortir.</p>`,
+<p>Voilà pourquoi « il te fait du mal, pars » ne fonctionne pas : le mal fait PARTIE du système d'attachement. Voilà pourquoi tu ressens un manque physique loin de lui, alors même que tu vas mieux... Et voilà pourquoi ta difficulté à partir ne dit rien de ta valeur : elle mesure la puissance du dispositif, c'est tout. Ce dispositif, c'est tout le fonctionnement du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en couple</a>... ici, on s'occupe d'en sortir.</p>`,
     },
     {
       id: 'etape-1-la-lucidite',
@@ -46,7 +46,7 @@ const article: BlogArticleData = {
     {
       id: 'etape-3-le-detachement',
       title: "Étape 3 : le détachement (partir, et rester partie)",
-      content: `<p>C'est l'étape visible, celle qu'on croit être toute l'histoire : la rupture, le départ, le no contact... On l'a traitée en détail, préparation comprise, dans la <a href="/blog/rupture-pervers-narcissique/">rupture avec un pervers narcissique</a>, alors ici, juste l'essentiel du point de vue de l'emprise.</p>
+      content: `<p>C'est l'étape visible, celle qu'on croit être toute l'histoire : la rupture, le départ, le no contact... La <a href="/blog/rupture-pervers-narcissique/">rupture avec un pervers narcissique</a> a ses propres règles, préparation comprise, alors ici, juste l'essentiel du point de vue de l'emprise.</p>
 <p>Retiens deux choses. La première : <strong>le détachement émotionnel ne précède pas le départ, il le suit.</strong> Beaucoup attendent de « ne plus rien ressentir » pour partir... c'est l'inverse qui se passe. On part encore attachée, et le détachement se fait dans la distance, comme un sevrage. Si tu attends de ne plus l'aimer pour bouger, tu attendras longtemps : c'est la distance qui désintoxique, pas le temps passé à côté de lui.</p>
 <p>La seconde : le manque qui suit le départ n'est pas un message. Ton corps réclamera sa dose, les souvenirs remonteront triés (les bons d'abord, c'est mécanique), et une voix te dira que « c'était peut-être pas si grave »... C'est le sevrage qui parle. Les vagues durent vingt minutes ; relis tes notes de l'étape 1, appelle ton ancrage humain, et laisse passer. Elles s'espacent, je te le promets.</p>
 <aside class="blog-tip-box">

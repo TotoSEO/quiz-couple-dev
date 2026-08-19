@@ -54,7 +54,7 @@ const article: BlogArticleData = {
     {
       id: 'les-phrases-et-les-effets',
       title: "Les phrases types, et ce qu'elles produisent à la longue",
-      content: `<p>Le répertoire verbal du gaslighting, tu en connais déjà des morceaux : « je n'ai jamais dit ça », « tu inventes », « tu te fais des films », « tout le monde trouve que tu exagères », « tu devrais consulter »... La collection complète, avec les traductions et les ripostes, est dans le <a href="/blog/phrases-preferees-des-manipulateurs/">répertoire des phrases de manipulateur</a>, famille n°2. Ici, arrêtons-nous plutôt sur ce que ces phrases FONT, parce que c'est là que le gaslighting se distingue de tout le reste.</p>
+      content: `<p>Le répertoire verbal du gaslighting, tu en connais déjà des morceaux : « je n'ai jamais dit ça », « tu inventes », « tu te fais des films », « tout le monde trouve que tu exagères », « tu devrais consulter »... Ces formules composent la famille n°2 du <a href="/blog/phrases-preferees-des-manipulateurs/">répertoire des phrases de manipulateur</a> : celles qui visent ta perception. Ici, arrêtons-nous plutôt sur ce que ces phrases FONT, parce que c'est là que le gaslighting se distingue de tout le reste.</p>
 <p>À force, la victime développe des comportements très spécifiques... et si tu te reconnais dans cette liste, considère-la comme un diagnostic en creux :</p>
 <ul>
 <li><strong>Tu enregistres, tu notes, tu captures.</strong> Des conversations relues dix fois, des notes datées en cachette, parfois des enregistrements... Personne ne documente sa propre vie de couple sans raison : tu cherches des preuves CONTRE le doute qu'on a installé en toi.</li>

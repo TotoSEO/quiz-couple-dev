@@ -42,7 +42,7 @@ const article: BlogArticleData = {
 <p>La différence tient en deux mots qu'on a déjà croisés : le secret et la constance. Un comportement social ouvert et occasionnel, c'est la vie... Le même comportement, dissimulé et répété avec la même personne, c'est un investissement. Et si le tri te semble flou dans ton cas précis, reviens au test du début : qu'est-ce qui changerait si tu étais dans la pièce ? La réponse fait le tri toute seule.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Et surveiller son partenaire pour « vérifier », alors ?</p>
-<p>Piège symétrique : traquer les likes de l'autre, éplucher ses abonnements, faire des captures « au cas où »... c'est répondre à une éventuelle micro-tromperie par une micro-surveillance, et les deux abîment le couple. Si tu en es là, le vrai sujet est le doute, pas les likes : les <a href="/blog/signes-infidelite/">signes d'infidélité</a> qui comptent vraiment et la façon d'en sortir sont traités en face, posément.</p>
+<p>Piège symétrique : traquer les likes de l'autre, éplucher ses abonnements, faire des captures « au cas où »... c'est répondre à une éventuelle micro-tromperie par une micro-surveillance, et les deux abîment le couple. Si tu en es là, le vrai sujet est le doute, pas les likes : apprendre à trier les <a href="/blog/signes-infidelite/">signes d'infidélité</a> qui pèsent vraiment des faux indices te rendra ta tranquillité bien mieux que la surveillance.</p>
 </aside>`,
     },
     {

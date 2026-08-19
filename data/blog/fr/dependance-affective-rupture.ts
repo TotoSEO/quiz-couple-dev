@@ -42,7 +42,7 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Si l'ex était un manipulateur, ajoute un piège : son retour</p>
-<p>Les profils manipulateurs reviennent tester la porte, pile quand tu vas mieux, c'est réglé comme du papier à musique. Message nostalgique, « on peut rester amis ? », réapparition fortuite... Pour un dépendant affectif en sevrage, c'est l'offre de dose ultime. Prépare ta réponse À L'AVANCE, à froid : tout le mode d'emploi pour <a href="/blog/rupture-pervers-narcissique/">rompre avec un pervers narcissique</a> est écrit, phase par phase.</p>
+<p>Les profils manipulateurs reviennent tester la porte, pile quand tu vas mieux, c'est réglé comme du papier à musique. Message nostalgique, « on peut rester amis ? », réapparition fortuite... Pour un dépendant affectif en sevrage, c'est l'offre de dose ultime. Prépare ta réponse À L'AVANCE, à froid : <a href="/blog/rupture-pervers-narcissique/">rompre avec un pervers narcissique</a> obéit à des règles précises, hoovering compris, et les connaître d'avance change tout.</p>
 </aside>`,
     },
     {

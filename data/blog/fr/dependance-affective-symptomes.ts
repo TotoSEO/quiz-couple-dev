@@ -70,7 +70,7 @@ const article: BlogArticleData = {
       content: `<ol start="14">
 <li><strong>Tes amitiés sont en jachère.</strong> Pas par désamour : par réaffectation de toutes tes ressources vers la relation. Les copines « d'avant » reçoivent des réponses polies et des reports de soirée... jusqu'à ce qu'elles arrêtent de proposer.</li>
 <li><strong>Tu demandes à tout le monde de te rassurer.</strong> L'analyse de ses messages avec ta meilleure amie, les « tu crois qu'il m'aime ? » en boucle... Ton entourage devient le service de secours de ton couple. Généreux au début, épuisé à la longue.</li>
-<li><strong>Tu choisis toujours le même profil.</strong> Distant, insaisissable, tiède... et te voilà à nouveau en train de courir. Ce n'est pas de la malchance : l'insécurité cherche ce qu'elle connaît. Et quand le partenaire distant est aussi un manipulateur, le cocktail devient franchement dangereux : ce couple <a href="/blog/dependant-affectif-et-manipulateur/">dépendant affectif et manipulateur</a>, on lui a consacré un décryptage entier, parce que ta peur de l'abandon devient alors son outil de contrôle préféré.</li>
+<li><strong>Tu choisis toujours le même profil.</strong> Distant, insaisissable, tiède... et te voilà à nouveau en train de courir. Ce n'est pas de la malchance : l'insécurité cherche ce qu'elle connaît. Et quand le partenaire distant est aussi un manipulateur, le cocktail devient franchement dangereux : le duo <a href="/blog/dependant-affectif-et-manipulateur/">dépendant affectif et manipulateur</a> transforme ta peur de l'abandon en outil de contrôle sur mesure.</li>
 </ol>`,
     },
     {
@@ -78,7 +78,7 @@ const article: BlogArticleData = {
       title: "À partir de quand faut-il s'en occuper ?",
       content: `<p>Personne ne coche zéro case, soyons clairs. Tout le monde a connu la relecture de messages ou le besoin d'être rassuré dans une période fragile. Alors, où est la ligne ?</p>
 <p>Trois critères font la différence. <strong>La fréquence</strong> : un épisode par mois n'est pas un fonctionnement, un épisode par jour, si. <strong>La souffrance</strong> : est-ce que ça te coûte, à toi, de la sérénité, du sommeil, des amitiés ? <strong>Et l'emprise sur tes choix</strong> : est-ce que la peur décide à ta place, de ce que tu dis, de ce que tu acceptes, de ce que tu tais ?</p>
-<p>Si tu réponds oui aux trois, ce n'est pas un trait de caractère à assumer, c'est un fonctionnement à travailler. Et bonne nouvelle : ça se travaille vraiment, on a détaillé <a href="/blog/sortir-de-la-dependance-affective/">le plan de sortie en 3 phases</a>, exercices compris. La première étape, souvent, c'est simplement d'objectiver ce qui t'arrive...</p>
+<p>Si tu réponds oui aux trois, ce n'est pas un trait de caractère à assumer, c'est un fonctionnement à travailler. Et bonne nouvelle : ça se travaille vraiment, le <a href="/blog/sortir-de-la-dependance-affective/">plan de sortie en 3 phases</a> transforme ce fonctionnement en quelques mois, exercices à l'appui. La première étape, souvent, c'est simplement d'objectiver ce qui t'arrive...</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Tu te reconnais dans plusieurs de ces symptômes ?</p>
 <p class="blog-cta-texte">Une série de questions reprend chaque situation de cet article, version vécu quotidien, et t'indique où tu te situes : attachement sain, fragilité passagère ou vraie dépendance affective. Sans jugement, et rien que pour toi.</p>
