@@ -290,6 +290,13 @@ export const BLOG_CATEGORIES = {
     de: 'Dating-Apps',
     it: 'App di incontri',
   },
+  psychologie: {
+    fr: 'Psychologie',
+    en: 'Psychology',
+    es: 'Psicología',
+    de: 'Psychologie',
+    it: 'Psicologia',
+  },
 };
 
 // Blog article metadata
@@ -714,6 +721,376 @@ export const BLOG_ARTICLES = [
       it: 'attivita-di-coppia-in-estate',
     },
     publishedAt: '2026-07-29',
+  },
+  {
+    internalSlug: 'pervers-narcissique-amour',
+    category: 'psychologie',
+    featuredImage: '/blog/pervers-narcissique-amour.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'pervers-narcissique-amour',
+    },
+    publishedAt: '2026-08-25',
+  },
+  {
+    internalSlug: 'questions-a-poser-a-son-copain',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-a-poser-a-son-copain',
+    },
+    publishedAt: '2026-08-28',
+  },
+  {
+    internalSlug: 'homme-pervers-narcissique-signes',
+    category: 'psychologie',
+    featuredImage: '/blog/homme-pervers-narcissique-signes.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'homme-pervers-narcissique-signes',
+    },
+    publishedAt: '2026-09-01',
+  },
+  {
+    internalSlug: 'questions-a-poser-a-son-crush',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-a-poser-a-son-crush',
+    },
+    publishedAt: '2026-09-04',
+  },
+  {
+    internalSlug: 'phrases-preferees-des-manipulateurs',
+    category: 'psychologie',
+    featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'phrases-preferees-des-manipulateurs',
+    },
+    publishedAt: '2026-09-08',
+  },
+  {
+    internalSlug: 'questions-a-poser-a-une-fille',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-a-poser-a-une-fille',
+    },
+    publishedAt: '2026-09-11',
+  },
+  {
+    internalSlug: 'dependance-affective-symptomes',
+    category: 'psychologie',
+    featuredImage: '/blog/dependance-affective-symptomes.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'dependance-affective-symptomes',
+    },
+    publishedAt: '2026-09-15',
+  },
+  {
+    internalSlug: 'manipulateur-narcissique',
+    category: 'psychologie',
+    featuredImage: '/blog/manipulateur-narcissique.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'manipulateur-narcissique',
+    },
+    publishedAt: '2026-09-18',
+  },
+  {
+    internalSlug: 'questions-intimes-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-intimes-couple.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-intimes-couple',
+    },
+    publishedAt: '2026-09-22',
+  },
+  {
+    internalSlug: 'sortir-de-la-dependance-affective',
+    category: 'psychologie',
+    featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'sortir-de-la-dependance-affective',
+    },
+    publishedAt: '2026-09-25',
+  },
+  {
+    internalSlug: 'femme-perverse-narcissique-signes',
+    category: 'psychologie',
+    featuredImage: '/blog/femme-perverse-narcissique-signes.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'femme-perverse-narcissique-signes',
+    },
+    publishedAt: '2026-09-29',
+  },
+  {
+    internalSlug: 'questions-a-poser-a-sa-copine',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-a-poser-a-sa-copine',
+    },
+    publishedAt: '2026-10-02',
+  },
+  {
+    internalSlug: 'relation-toxique-signes',
+    category: 'psychologie',
+    featuredImage: '/blog/relation-toxique-signes.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'relation-toxique-signes',
+    },
+    publishedAt: '2026-10-06',
+  },
+  {
+    internalSlug: 'amour-ou-dependance-affective',
+    category: 'psychologie',
+    featuredImage: '/blog/amour-ou-dependance-affective.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'amour-ou-dependance-affective',
+    },
+    publishedAt: '2026-10-09',
+  },
+  {
+    internalSlug: 'questions-pour-mieux-se-connaitre-en-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-pour-mieux-se-connaitre-en-couple.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-pour-mieux-se-connaitre-en-couple',
+    },
+    publishedAt: '2026-10-13',
+  },
+  {
+    internalSlug: 'dependance-affective-chez-l-homme',
+    category: 'psychologie',
+    featuredImage: '/blog/dependance-affective-chez-l-homme.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'dependance-affective-chez-l-homme',
+    },
+    publishedAt: '2026-10-16',
+  },
+  {
+    internalSlug: 'rupture-pervers-narcissique',
+    category: 'psychologie',
+    featuredImage: '/blog/rupture-pervers-narcissique.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'rupture-pervers-narcissique',
+    },
+    publishedAt: '2026-10-20',
+  },
+  {
+    internalSlug: 'questions-debut-de-relation',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-debut-de-relation.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-debut-de-relation',
+    },
+    publishedAt: '2026-10-23',
+  },
+  {
+    internalSlug: 'homme-toxique-en-amour',
+    category: 'psychologie',
+    featuredImage: '/blog/homme-toxique-en-amour.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'homme-toxique-en-amour',
+    },
+    publishedAt: '2026-10-27',
+  },
+  {
+    internalSlug: 'questions-avenir-couple',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-avenir-couple.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-avenir-couple',
+    },
+    publishedAt: '2026-10-30',
+  },
+  {
+    internalSlug: 'femme-toxique-en-amour',
+    category: 'psychologie',
+    featuredImage: '/blog/femme-toxique-en-amour.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'femme-toxique-en-amour',
+    },
+    publishedAt: '2026-11-03',
+  },
+  {
+    internalSlug: '36-questions-pour-tomber-amoureux',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
+    frOnly: true,
+    slugs: {
+      fr: '36-questions-pour-tomber-amoureux',
+    },
+    publishedAt: '2026-11-06',
+  },
+  {
+    internalSlug: 'dependant-affectif-et-manipulateur',
+    category: 'psychologie',
+    featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'dependant-affectif-et-manipulateur',
+    },
+    publishedAt: '2026-11-10',
+  },
+  {
+    internalSlug: 'sortir-emprise-pervers-narcissique',
+    category: 'psychologie',
+    featuredImage: '/blog/sortir-emprise-pervers-narcissique.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'sortir-emprise-pervers-narcissique',
+    },
+    publishedAt: '2026-11-13',
+  },
+  {
+    internalSlug: 'dependance-affective-amitie',
+    category: 'psychologie',
+    featuredImage: '/blog/dependance-affective-amitie.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'dependance-affective-amitie',
+    },
+    publishedAt: '2026-11-17',
+  },
+  {
+    internalSlug: 'dependance-affective-rupture',
+    category: 'psychologie',
+    featuredImage: '/blog/dependance-affective-rupture.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'dependance-affective-rupture',
+    },
+    publishedAt: '2026-11-20',
+  },
+  {
+    internalSlug: 'gaslighting',
+    category: 'psychologie',
+    featuredImage: '/blog/gaslighting.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'gaslighting',
+    },
+    publishedAt: '2026-11-24',
+  },
+  {
+    internalSlug: 'questions-couple-telephone-message',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/questions-couple-telephone-message.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'questions-couple-telephone-message',
+    },
+    publishedAt: '2026-11-27',
+  },
+  {
+    internalSlug: 'styles-attachement-couple',
+    category: 'psychologie',
+    featuredImage: '/blog/styles-attachement-couple.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'styles-attachement-couple',
+    },
+    publishedAt: '2026-12-01',
+  },
+  {
+    internalSlug: 'attachement-anxieux',
+    category: 'psychologie',
+    featuredImage: '/blog/attachement-anxieux.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'attachement-anxieux',
+    },
+    publishedAt: '2026-12-04',
+  },
+  {
+    internalSlug: 'attachement-evitant',
+    category: 'psychologie',
+    featuredImage: '/blog/attachement-evitant.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'attachement-evitant',
+    },
+    publishedAt: '2026-12-08',
+  },
+  {
+    internalSlug: 'peur-de-l-engagement',
+    category: 'psychologie',
+    featuredImage: '/blog/peur-de-l-engagement.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'peur-de-l-engagement',
+    },
+    publishedAt: '2026-12-11',
+  },
+  {
+    internalSlug: '5-langages-de-l-amour',
+    category: 'vie-de-couple',
+    featuredImage: '/blog/5-langages-de-l-amour.webp',
+    frOnly: true,
+    slugs: {
+      fr: '5-langages-de-l-amour',
+    },
+    publishedAt: '2026-12-15',
+  },
+  {
+    internalSlug: 'jalousie-maladive',
+    category: 'psychologie',
+    featuredImage: '/blog/jalousie-maladive.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'jalousie-maladive',
+    },
+    publishedAt: '2026-12-18',
+  },
+  {
+    internalSlug: 'signes-infidelite',
+    category: 'psychologie',
+    featuredImage: '/blog/signes-infidelite.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'signes-infidelite',
+    },
+    publishedAt: '2026-12-22',
+  },
+  {
+    internalSlug: 'micro-tromperie',
+    category: 'psychologie',
+    featuredImage: '/blog/micro-tromperie.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'micro-tromperie',
+    },
+    publishedAt: '2026-12-25',
+  },
+  {
+    internalSlug: 'pardonner-une-infidelite',
+    category: 'psychologie',
+    featuredImage: '/blog/pardonner-une-infidelite.webp',
+    frOnly: true,
+    slugs: {
+      fr: 'pardonner-une-infidelite',
+    },
+    publishedAt: '2026-12-29',
   },
 ];
 
