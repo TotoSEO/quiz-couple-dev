@@ -1116,9 +1116,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'attachement-evitant',
     category: 'psychologie',
     featuredImage: '/blog/attachement-evitant.webp',
-    frOnly: true,
     slugs: {
       fr: 'attachement-evitant',
+      en: 'avoidant-attachment-in-love',
+      es: 'apego-evitativo-en-el-amor',
+      de: 'vermeidende-bindung-in-der-liebe',
+      it: 'attaccamento-evitante-in-amore',
     },
     publishedAt: '2026-12-08',
   },
