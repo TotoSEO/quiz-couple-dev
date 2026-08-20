@@ -148,7 +148,8 @@ const article: BlogArticleData = {
       title: "Hai riconosciuto diversi di questi comportamenti. E adesso?",
       content: `<p>Prima di tutto: il fatto che tu stia leggendo questo articolo conta. Qualcosa in te cercava una conferma, un vocabolario, un punto di riferimento. Questo è già un movimento.</p>
 <p>Uno o due punti in una lista non fanno automaticamente di qualcuno un cattivo compagno. Tutti hanno punti ciechi, comportamenti su cui lavorare, momenti difficili. <strong>Quello che distingue una red flag da un problema ordinario è la ripetizione e l'assenza di autocritica.</strong> Riconosce il problema quando glielo fai notare? Fa sforzi reali, o sforzi visibili giusto il tempo necessario perché tu ti calmi? Le cose cambiano davvero, o vivi nell'attesa permanente di un cambiamento che non arriva?</p>
-<p>Se stai spuntando diverse caselle e la risposta onesta a queste domande è "no", fidati di quello che senti. Il tuo istinto ti ha portata qui. Merita di essere ascoltato.</p>`,
+<p>Se stai spuntando diverse caselle e la risposta onesta a queste domande è "no", fidati di quello che senti. Il tuo istinto ti ha portata qui. Merita di essere ascoltato.</p>
+<a href="/it/blog/donna-infelice-in-coppia-segnali/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leggi anche</span><span class="blog-read-also-title">Come riconoscere una donna infelice in coppia: i veri segnali</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };

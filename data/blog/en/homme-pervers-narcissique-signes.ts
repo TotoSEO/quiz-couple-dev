@@ -43,30 +43,38 @@ const article: BlogArticleData = {
         {
           id: 'in-company',
           title: "In company: the public character (signs 1 to 3)",
-          content: `<p><strong>Calibrated charm, never free:</strong> He's brilliant, funny, attentive... but watch who he's like that with. Useful people, newcomers to win over, witnesses to charm. The clumsy waiter or the slow cashier see a very different man. That variable politeness is one of the earliest indicators there is.</p>
-<p><strong>Generosity with an audience:</strong> The grand gestures arrive when there's a public: the gift in front of your friends, the anecdote where he rescued you, the compliment in company... Without spectators, oddly, the generosity drops away. You end up noticing something strange: you're treated better outside than at home.</p>
-<p><strong>All his exes are crazy:</strong> Not one story that ended normally. Only "hysterical" women, "toxic" ones, women who "destroyed him"... Listen carefully to that account, because it does two things: it flatters you (you're different) and it prepares the ground. That portrait of the mad exes, for instance, is precisely the one he'll paint of you one day.</p>`,
+          content: `<ol>
+<li><strong>Calibrated charm, never free:</strong> He's brilliant, funny, attentive... but watch who he's like that with. Useful people, newcomers to win over, witnesses to charm. The clumsy waiter or the slow cashier see a very different man. That variable politeness is one of the earliest indicators there is.</li>
+<li><strong>Generosity with an audience:</strong> The grand gestures arrive when there's a public: the gift in front of your friends, the anecdote where he rescued you, the compliment in company... Without spectators, oddly, the generosity drops away. You end up noticing something strange: you're treated better outside than at home.</li>
+<li><strong>All his exes are crazy:</strong> Not one story that ended normally. Only "hysterical" women, "toxic" ones, women who "destroyed him"... Listen carefully to that account, because it does two things: it flatters you (you're different) and it prepares the ground. That portrait of the mad exes, for instance, is precisely the one he'll paint of you one day.</li>
+</ol>`,
         },
         {
           id: 'early-on-with-you',
           title: "Early on with you: strategic seduction (signs 4 to 6)",
-          content: `<p><strong>Everything moves too fast, and he sets the tempo:</strong> Early declarations, immediate plans, constant presence... the exact pattern of <a href="/en/blog/love-bombing-signs/">love bombing</a>. The detail that changes everything: try slowing down a little, and see whether your pace is respected, or negotiated.</p>
-<p><strong>You're "different from all the others":</strong> Careful, that isn't a compliment about what you do. It's a status he grants you. It's intoxicating, let's not pretend otherwise... and it's a trap. A granted status can be withdrawn. And it will be, at exactly the moment it hurts most.</p>
-<p><strong>He tests your boundaries, casually:</strong> A borderline remark "as a joke", a lateness with no apology, something you confided in him repeated to others... These are probes. He's measuring what you let go, quite simply. And each small thing swallowed widens the perimeter of the next.</p>`,
+          content: `<ol start="4">
+<li><strong>Everything moves too fast, and he sets the tempo:</strong> Early declarations, immediate plans, constant presence... the exact pattern of <a href="/en/blog/love-bombing-signs/">love bombing</a>. The detail that changes everything: try slowing down a little, and see whether your pace is respected, or negotiated.</li>
+<li><strong>You're "different from all the others":</strong> Careful, that isn't a compliment about what you do. It's a status he grants you. It's intoxicating, let's not pretend otherwise... and it's a trap. A granted status can be withdrawn. And it will be, at exactly the moment it hurts most.</li>
+<li><strong>He tests your boundaries, casually:</strong> A borderline remark "as a joke", a lateness with no apology, something you confided in him repeated to others... These are probes. He's measuring what you let go, quite simply. And each small thing swallowed widens the perimeter of the next.</li>
+</ol>`,
         },
         {
           id: 'in-private',
           title: "In private: control installed (signs 7 to 9)",
-          content: `<p><strong>He aims at your strengths, not your weaknesses:</strong> It's counter-intuitive, and it's his signature. Your job, your humour, your family, whatever makes you proud: that's precisely where the remarks land. A criticised weakness can be clumsy advice. A strength systematically undermined, no. That's a demolition strategy.</p>
-<p><strong>Your reality is renegotiated constantly:</strong> What you saw, he didn't do. What he said, you misunderstood. What you feel, you're exaggerating... In time you doubt your memory enough to check in secret. This daily <a href="/en/blog/gaslighting-signs/">gaslighting</a> is the heart of the system.</p>
-<p><strong>Your world shrinks, with no formal ban:</strong> He never forbade you from seeing your friends. He simply made every outing expensive: a mood before, reproaches after, a scene the next day. In that kind of situation, there's a good chance that within a few months, without quite knowing how, you find yourself doing the calculation on your own... And that's exactly what was planned.</p>`,
+          content: `<ol start="7">
+<li><strong>He aims at your strengths, not your weaknesses:</strong> It's counter-intuitive, and it's his signature. Your job, your humour, your family, whatever makes you proud: that's precisely where the remarks land. A criticised weakness can be clumsy advice. A strength systematically undermined, no. That's a demolition strategy.</li>
+<li><strong>Your reality is renegotiated constantly:</strong> What you saw, he didn't do. What he said, you misunderstood. What you feel, you're exaggerating... In time you doubt your memory enough to check in secret. This daily <a href="/en/blog/gaslighting-signs/">gaslighting</a> is the heart of the system.</li>
+<li><strong>Your world shrinks, with no formal ban:</strong> He never forbade you from seeing your friends. He simply made every outing expensive: a mood before, reproaches after, a scene the next day. In that kind of situation, there's a good chance that within a few months, without quite knowing how, you find yourself doing the calculation on your own... And that's exactly what was planned.</li>
+</ol>`,
         },
         {
           id: 'when-you-resist',
           title: "When you resist: the mask slips (signs 10 to 12)",
-          content: `<p><strong>Cold anger replaces debate:</strong> A disagreement doesn't get discussed, it gets paid for: silence for days, affection cut off, a leaden atmosphere. The punishment is never named, which forces you to guess your offence. And so to monitor yourself continuously.</p>
-<p><strong>He becomes the victim, publicly if needed:</strong> The day you finally raise your voice, after months of erosion, you discover the reversal: he's the one suffering, he's the one enduring, he's the one telling people around you that he "worries about you"... That pre-emptive campaign has a precise aim: destroy your credibility before you speak.</p>
-<p><strong>Your leaving triggers reconquest, not reflection:</strong> Promises, tears, therapy announced, the return of the man from the early days. Then, once you're back, the system returns. Worse. That reconquest cycle has its own codes... the same ones that make <a href="/en/blog/breaking-up-with-a-narcissist/">breaking up with a narcissist</a> an exercise apart, one you prepare for.</p>
+          content: `<ol start="10">
+<li><strong>Cold anger replaces debate:</strong> A disagreement doesn't get discussed, it gets paid for: silence for days, affection cut off, a leaden atmosphere. The punishment is never named, which forces you to guess your offence. And so to monitor yourself continuously.</li>
+<li><strong>He becomes the victim, publicly if needed:</strong> The day you finally raise your voice, after months of erosion, you discover the reversal: he's the one suffering, he's the one enduring, he's the one telling people around you that he "worries about you"... That pre-emptive campaign has a precise aim: destroy your credibility before you speak.</li>
+<li><strong>Your leaving triggers reconquest, not reflection:</strong> Promises, tears, therapy announced, the return of the man from the early days. Then, once you're back, the system returns. Worse. That reconquest cycle has its own codes... the same ones that make <a href="/en/blog/breaking-up-with-a-narcissist/">breaking up with a narcissist</a> an exercise apart, one you prepare for.</li>
+</ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ The real giveaway is your resistance</p>
 <p>A man who is simply clumsy or selfish improves, at least a little, when you set clear boundaries. A narcissist escalates: the more you resist, the more signs 10 to 12 intensify. If setting a boundary in your home systematically triggers a storm... you have your answer.</p>

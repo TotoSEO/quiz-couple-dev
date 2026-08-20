@@ -43,30 +43,38 @@ const article: BlogArticleData = {
         {
           id: 'in-gesellschaft',
           title: "In Gesellschaft: die öffentliche Figur (Anzeichen 1 bis 3)",
-          content: `<p><strong>Ein kalibrierter Charme, nie umsonst:</strong> Er ist brillant, witzig, aufmerksam... aber beobachte, bei wem. Nützliche Leute, Neuankömmlinge zum Erobern, Zeugen zum Bezaubern. Der ungeschickte Kellner oder die langsame Kassiererin sehen einen ganz anderen Mann. Diese Höflichkeit mit variabler Geometrie ist eines der frühesten Anzeichen überhaupt.</p>
-<p><strong>Großzügigkeit mit Publikum:</strong> Die großen Gesten kommen, wenn Zuschauer da sind: das Geschenk vor deinen Freundinnen, die Anekdote, in der er dich gerettet hat, das Kompliment in Gesellschaft... Ohne Publikum lässt die Großzügigkeit seltsamerweise nach. Irgendwann fällt dir etwas Merkwürdiges auf: draußen wirst du besser behandelt als zu Hause.</p>
-<p><strong>Alle seine Ex-Partnerinnen sind verrückt:</strong> Keine einzige Geschichte, die normal endet. Nur «Hysterische», «Toxische», Frauen, die ihn «zerstört haben»... Hör dieser Erzählung genau zu, denn sie hat zwei Funktionen: dir zu schmeicheln (du bist anders) und den Boden zu bereiten. Dieses Porträt der Verrückten ist nämlich genau das, das er eines Tages von dir zeichnen wird.</p>`,
+          content: `<ol>
+<li><strong>Ein kalibrierter Charme, nie umsonst:</strong> Er ist brillant, witzig, aufmerksam... aber beobachte, bei wem. Nützliche Leute, Neuankömmlinge zum Erobern, Zeugen zum Bezaubern. Der ungeschickte Kellner oder die langsame Kassiererin sehen einen ganz anderen Mann. Diese Höflichkeit mit variabler Geometrie ist eines der frühesten Anzeichen überhaupt.</li>
+<li><strong>Großzügigkeit mit Publikum:</strong> Die großen Gesten kommen, wenn Zuschauer da sind: das Geschenk vor deinen Freundinnen, die Anekdote, in der er dich gerettet hat, das Kompliment in Gesellschaft... Ohne Publikum lässt die Großzügigkeit seltsamerweise nach. Irgendwann fällt dir etwas Merkwürdiges auf: draußen wirst du besser behandelt als zu Hause.</li>
+<li><strong>Alle seine Ex-Partnerinnen sind verrückt:</strong> Keine einzige Geschichte, die normal endet. Nur «Hysterische», «Toxische», Frauen, die ihn «zerstört haben»... Hör dieser Erzählung genau zu, denn sie hat zwei Funktionen: dir zu schmeicheln (du bist anders) und den Boden zu bereiten. Dieses Porträt der Verrückten ist nämlich genau das, das er eines Tages von dir zeichnen wird.</li>
+</ol>`,
         },
         {
           id: 'am-anfang-mit-dir',
           title: "Am Anfang mit dir: die strategische Verführung (Anzeichen 4 bis 6)",
-          content: `<p><strong>Alles geht zu schnell, und er gibt das Tempo vor:</strong> Sehr frühe Liebeserklärungen, sofortige Pläne, permanente Präsenz... genau das Schema des <a href="/de/blog/love-bombing-anzeichen/">Love Bombings</a>. Das Detail, das alles ändert: versuch ein wenig zu bremsen und schau, ob dein Tempo respektiert oder verhandelt wird.</p>
-<p><strong>Du bist «anders als alle anderen»:</strong> Achtung, das ist kein Kompliment für das, was du tust. Es ist ein Status, den er dir gewährt. Es ist berauschend, das muss man zugeben... und es ist eine Falle. Ein gewährter Status kann entzogen werden. Und er wird es, genau dann, wenn es am meisten wehtut.</p>
-<p><strong>Er testet deine Grenzen, ganz beiläufig:</strong> Eine grenzwertige Bemerkung «aus Spaß», eine Verspätung ohne Entschuldigung, eine Vertraulichkeit von dir, die du bei anderen wiederfindest... Das sind Sonden. Er misst schlicht, was du durchgehen lässt. Und jede geschluckte Kleinigkeit erweitert den Spielraum für die nächste.</p>`,
+          content: `<ol start="4">
+<li><strong>Alles geht zu schnell, und er gibt das Tempo vor:</strong> Sehr frühe Liebeserklärungen, sofortige Pläne, permanente Präsenz... genau das Schema des <a href="/de/blog/love-bombing-anzeichen/">Love Bombings</a>. Das Detail, das alles ändert: versuch ein wenig zu bremsen und schau, ob dein Tempo respektiert oder verhandelt wird.</li>
+<li><strong>Du bist «anders als alle anderen»:</strong> Achtung, das ist kein Kompliment für das, was du tust. Es ist ein Status, den er dir gewährt. Es ist berauschend, das muss man zugeben... und es ist eine Falle. Ein gewährter Status kann entzogen werden. Und er wird es, genau dann, wenn es am meisten wehtut.</li>
+<li><strong>Er testet deine Grenzen, ganz beiläufig:</strong> Eine grenzwertige Bemerkung «aus Spaß», eine Verspätung ohne Entschuldigung, eine Vertraulichkeit von dir, die du bei anderen wiederfindest... Das sind Sonden. Er misst schlicht, was du durchgehen lässt. Und jede geschluckte Kleinigkeit erweitert den Spielraum für die nächste.</li>
+</ol>`,
         },
         {
           id: 'im-privaten',
           title: "Im Privaten: die installierte Kontrolle (Anzeichen 7 bis 9)",
-          content: `<p><strong>Er zielt auf deine Stärken, nicht auf deine Schwächen:</strong> Das ist kontraintuitiv und doch seine Signatur. Dein Beruf, dein Humor, deine Familie, das, worauf du stolz bist: genau dort landen die Bemerkungen. Eine kritisierte Schwäche kann ein ungeschickter Rat sein. Eine systematisch heruntergeredete Stärke nicht. Das ist eine Abrissstrategie.</p>
-<p><strong>Deine Realität wird ständig neu verhandelt:</strong> Was du gesehen hast, hat er nicht getan. Was er gesagt hat, hast du falsch verstanden. Was du fühlst, übertreibst du... Mit der Zeit zweifelst du so sehr an deinem Gedächtnis, dass du heimlich nachprüfst. Dieses tägliche <a href="/de/blog/gaslighting-anzeichen/">Gaslighting</a> ist das Herz des Systems.</p>
-<p><strong>Deine Welt schrumpft, ganz ohne Verbot:</strong> Er hat dir nie verboten, deine Freundinnen zu sehen. Er hat jede Verabredung nur teuer gemacht: eine Laune vorher, Vorwürfe danach, eine Szene am nächsten Tag. In so einer Lage stehen die Chancen gut, dass du nach ein paar Monaten, ohne genau zu wissen wie, die Rechnung von allein aufmachst... Und genau das war vorgesehen.</p>`,
+          content: `<ol start="7">
+<li><strong>Er zielt auf deine Stärken, nicht auf deine Schwächen:</strong> Das ist kontraintuitiv und doch seine Signatur. Dein Beruf, dein Humor, deine Familie, das, worauf du stolz bist: genau dort landen die Bemerkungen. Eine kritisierte Schwäche kann ein ungeschickter Rat sein. Eine systematisch heruntergeredete Stärke nicht. Das ist eine Abrissstrategie.</li>
+<li><strong>Deine Realität wird ständig neu verhandelt:</strong> Was du gesehen hast, hat er nicht getan. Was er gesagt hat, hast du falsch verstanden. Was du fühlst, übertreibst du... Mit der Zeit zweifelst du so sehr an deinem Gedächtnis, dass du heimlich nachprüfst. Dieses tägliche <a href="/de/blog/gaslighting-anzeichen/">Gaslighting</a> ist das Herz des Systems.</li>
+<li><strong>Deine Welt schrumpft, ganz ohne Verbot:</strong> Er hat dir nie verboten, deine Freundinnen zu sehen. Er hat jede Verabredung nur teuer gemacht: eine Laune vorher, Vorwürfe danach, eine Szene am nächsten Tag. In so einer Lage stehen die Chancen gut, dass du nach ein paar Monaten, ohne genau zu wissen wie, die Rechnung von allein aufmachst... Und genau das war vorgesehen.</li>
+</ol>`,
         },
         {
           id: 'wenn-du-dich-wehrst',
           title: "Wenn du dich wehrst: die Maske fällt (Anzeichen 10 bis 12)",
-          content: `<p><strong>Kalte Wut ersetzt die Diskussion:</strong> Ein Widerspruch wird nicht besprochen, er wird bezahlt: Schweigen über Tage, entzogene Zuwendung, bleierne Stimmung. Die Strafe wird nie benannt, was dich zwingt, deine Schuld zu erraten. Und dich damit dauerhaft selbst zu überwachen.</p>
-<p><strong>Er wird zum Opfer, notfalls öffentlich:</strong> An dem Tag, an dem du nach Monaten der Zermürbung endlich laut wirst, entdeckst du die Umkehrung: er leidet, er erträgt, er erzählt im Umfeld, dass er sich «Sorgen um dich macht»... Diese vorbeugende Kampagne hat ein klares Ziel: deine Glaubwürdigkeit zerstören, bevor du sprichst.</p>
-<p><strong>Dein Weggang löst Rückeroberung aus, keine Selbstprüfung:</strong> Versprechen, Tränen, angekündigte Therapie, die Rückkehr des Mannes vom Anfang. Und sobald du zurück bist, kehrt das System zurück. Schlimmer. Dieser Rückeroberungszyklus hat seine Regeln... dieselben, die eine <a href="/de/blog/trennung-von-einem-narzissten/">Trennung von einem Narzissten</a> zu einer eigenen Übung machen, auf die man sich vorbereitet.</p>
+          content: `<ol start="10">
+<li><strong>Kalte Wut ersetzt die Diskussion:</strong> Ein Widerspruch wird nicht besprochen, er wird bezahlt: Schweigen über Tage, entzogene Zuwendung, bleierne Stimmung. Die Strafe wird nie benannt, was dich zwingt, deine Schuld zu erraten. Und dich damit dauerhaft selbst zu überwachen.</li>
+<li><strong>Er wird zum Opfer, notfalls öffentlich:</strong> An dem Tag, an dem du nach Monaten der Zermürbung endlich laut wirst, entdeckst du die Umkehrung: er leidet, er erträgt, er erzählt im Umfeld, dass er sich «Sorgen um dich macht»... Diese vorbeugende Kampagne hat ein klares Ziel: deine Glaubwürdigkeit zerstören, bevor du sprichst.</li>
+<li><strong>Dein Weggang löst Rückeroberung aus, keine Selbstprüfung:</strong> Versprechen, Tränen, angekündigte Therapie, die Rückkehr des Mannes vom Anfang. Und sobald du zurück bist, kehrt das System zurück. Schlimmer. Dieser Rückeroberungszyklus hat seine Regeln... dieselben, die eine <a href="/de/blog/trennung-von-einem-narzissten/">Trennung von einem Narzissten</a> zu einer eigenen Übung machen, auf die man sich vorbereitet.</li>
+</ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Der eigentliche Test ist dein Widerstand</p>
 <p>Ein schlicht ungeschickter oder egoistischer Mann bessert sich, wenigstens ein wenig, wenn du klare Grenzen setzt. Ein Narzisst eskaliert: je mehr du dich wehrst, desto stärker werden die Anzeichen 10 bis 12. Wenn eine Grenze bei dir zu Hause immer einen Sturm auslöst... hast du deine Antwort.</p>

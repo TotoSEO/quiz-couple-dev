@@ -148,7 +148,8 @@ const article: BlogArticleData = {
       title: "Has reconocido varios de estos comportamientos. ¿Y ahora?",
       content: `<p>Primero: el hecho de que estés en este artículo cuenta. Algo en ti buscaba una confirmación, un vocabulario, una referencia. Eso ya es un movimiento.</p>
 <p>Uno o dos puntos en una lista no convierten automáticamente a alguien en mal compañero. Todo el mundo tiene puntos ciegos, comportamientos que trabajar, malas épocas. <strong>Lo que distingue una red flag de un problema ordinario es la repetición y la ausencia de autocuestionamiento.</strong> ¿Reconoce el problema cuando lo señalas? ¿Hace esfuerzos reales, o esfuerzos visibles el tiempo justo para que te calmes? ¿Las cosas cambian de verdad, o vives en la espera permanente de un cambio que no llega?</p>
-<p>Si estás marcando varias casillas y la respuesta honesta a esas preguntas es "no", confía en lo que sientes. Tu instinto te ha traído hasta aquí. Merece ser escuchado.</p>`,
+<p>Si estás marcando varias casillas y la respuesta honesta a esas preguntas es "no", confía en lo que sientes. Tu instinto te ha traído hasta aquí. Merece ser escuchado.</p>
+<a href="/es/blog/mujer-infeliz-en-pareja-senales/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lee también</span><span class="blog-read-also-title">Cómo reconocer a una mujer infeliz en pareja: las verdaderas señales</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };

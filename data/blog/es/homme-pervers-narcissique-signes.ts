@@ -43,30 +43,38 @@ const article: BlogArticleData = {
         {
           id: 'en-sociedad',
           title: "En sociedad: el personaje público (señales 1 a 3)",
-          content: `<p><strong>Un encanto calibrado, nunca gratuito:</strong> Es brillante, divertido, atento... pero fíjate con quién lo es. Las personas útiles, los recién llegados a conquistar, los testigos a los que encandilar. El camarero torpe o la cajera lenta ven a otro hombre muy distinto. Esa cortesía de geometría variable es uno de los indicios más tempranos que existen.</p>
-<p><strong>Una generosidad con testigos:</strong> Los grandes gestos llegan cuando hay público: el regalo delante de tus amigas, la anécdota en la que te salvó, el cumplido en sociedad... Sin espectadores, curiosamente, la generosidad baja. Acabas notando algo raro: te tratan mejor fuera que en casa.</p>
-<p><strong>Todas sus ex están locas:</strong> Ni una sola historia que acabe con normalidad. Solo «histéricas», «tóxicas», mujeres que «lo destrozaron»... Escucha bien ese relato, porque tiene dos funciones: halagarte (tú eres diferente) y preparar el terreno. Ese retrato de las locas, por ejemplo, es exactamente el que hará de ti algún día.</p>`,
+          content: `<ol>
+<li><strong>Un encanto calibrado, nunca gratuito:</strong> Es brillante, divertido, atento... pero fíjate con quién lo es. Las personas útiles, los recién llegados a conquistar, los testigos a los que encandilar. El camarero torpe o la cajera lenta ven a otro hombre muy distinto. Esa cortesía de geometría variable es uno de los indicios más tempranos que existen.</li>
+<li><strong>Una generosidad con testigos:</strong> Los grandes gestos llegan cuando hay público: el regalo delante de tus amigas, la anécdota en la que te salvó, el cumplido en sociedad... Sin espectadores, curiosamente, la generosidad baja. Acabas notando algo raro: te tratan mejor fuera que en casa.</li>
+<li><strong>Todas sus ex están locas:</strong> Ni una sola historia que acabe con normalidad. Solo «histéricas», «tóxicas», mujeres que «lo destrozaron»... Escucha bien ese relato, porque tiene dos funciones: halagarte (tú eres diferente) y preparar el terreno. Ese retrato de las locas, por ejemplo, es exactamente el que hará de ti algún día.</li>
+</ol>`,
         },
         {
           id: 'al-principio-contigo',
           title: "Al principio contigo: la seducción estratégica (señales 4 a 6)",
-          content: `<p><strong>Todo va demasiado rápido, y el ritmo lo marca él:</strong> Declaraciones tempranísimas, planes inmediatos, presencia permanente... el esquema exacto del <a href="/es/blog/love-bombing-senales/">love bombing</a>. El detalle que lo cambia todo: intenta frenar un poco y observa si tu ritmo se respeta o se negocia.</p>
-<p><strong>Eres «diferente a todas las demás»:</strong> Cuidado, eso no es un cumplido sobre lo que haces. Es un estatus que te concede. Es embriagador, no nos vamos a engañar... y es una trampa. Un estatus concedido se puede retirar. Y se retirará, justo cuando más duela.</p>
-<p><strong>Pone a prueba tus límites, como quien no quiere la cosa:</strong> Un comentario al límite «en broma», un retraso sin disculpa, una confidencia tuya que aparece repetida a otros... Son sondas. Mide lo que dejas pasar, sencillamente. Y cada cosita tragada agranda el perímetro de la siguiente.</p>`,
+          content: `<ol start="4">
+<li><strong>Todo va demasiado rápido, y el ritmo lo marca él:</strong> Declaraciones tempranísimas, planes inmediatos, presencia permanente... el esquema exacto del <a href="/es/blog/love-bombing-senales/">love bombing</a>. El detalle que lo cambia todo: intenta frenar un poco y observa si tu ritmo se respeta o se negocia.</li>
+<li><strong>Eres «diferente a todas las demás»:</strong> Cuidado, eso no es un cumplido sobre lo que haces. Es un estatus que te concede. Es embriagador, no nos vamos a engañar... y es una trampa. Un estatus concedido se puede retirar. Y se retirará, justo cuando más duela.</li>
+<li><strong>Pone a prueba tus límites, como quien no quiere la cosa:</strong> Un comentario al límite «en broma», un retraso sin disculpa, una confidencia tuya que aparece repetida a otros... Son sondas. Mide lo que dejas pasar, sencillamente. Y cada cosita tragada agranda el perímetro de la siguiente.</li>
+</ol>`,
         },
         {
           id: 'en-la-intimidad',
           title: "En la intimidad: el control instalado (señales 7 a 9)",
-          content: `<p><strong>Apunta a tus puntos fuertes, no a tus debilidades:</strong> Es contraintuitivo, y sin embargo es su firma. Tu trabajo, tu humor, tu familia, lo que te enorgullece: ahí es exactamente donde caen los comentarios. Una debilidad criticada puede ser un consejo torpe. Un punto fuerte rebajado sistemáticamente, no. Eso es una estrategia de demolición.</p>
-<p><strong>Tu realidad se renegocia constantemente:</strong> Lo que viste, él no lo hizo. Lo que dijo, tú lo entendiste mal. Lo que sientes, lo exageras... A fuerza, dudas de tu memoria hasta el punto de comprobar a escondidas. Ese <a href="/es/blog/gaslighting-senales/">gaslighting</a> cotidiano es el corazón del sistema.</p>
-<p><strong>Tu mundo se encoge, sin prohibición formal:</strong> Nunca te ha prohibido ver a tus amigas. Simplemente ha hecho que cada salida salga cara: un humor antes, reproches después, una crisis al día siguiente. En ese tipo de situación, es muy probable que al cabo de unos meses, sin saber muy bien cómo, te encuentres haciendo el cálculo tú sola... Y es exactamente lo previsto.</p>`,
+          content: `<ol start="7">
+<li><strong>Apunta a tus puntos fuertes, no a tus debilidades:</strong> Es contraintuitivo, y sin embargo es su firma. Tu trabajo, tu humor, tu familia, lo que te enorgullece: ahí es exactamente donde caen los comentarios. Una debilidad criticada puede ser un consejo torpe. Un punto fuerte rebajado sistemáticamente, no. Eso es una estrategia de demolición.</li>
+<li><strong>Tu realidad se renegocia constantemente:</strong> Lo que viste, él no lo hizo. Lo que dijo, tú lo entendiste mal. Lo que sientes, lo exageras... A fuerza, dudas de tu memoria hasta el punto de comprobar a escondidas. Ese <a href="/es/blog/gaslighting-senales/">gaslighting</a> cotidiano es el corazón del sistema.</li>
+<li><strong>Tu mundo se encoge, sin prohibición formal:</strong> Nunca te ha prohibido ver a tus amigas. Simplemente ha hecho que cada salida salga cara: un humor antes, reproches después, una crisis al día siguiente. En ese tipo de situación, es muy probable que al cabo de unos meses, sin saber muy bien cómo, te encuentres haciendo el cálculo tú sola... Y es exactamente lo previsto.</li>
+</ol>`,
         },
         {
           id: 'cuando-resistes',
           title: "Cuando resistes: la máscara cae (señales 10 a 12)",
-          content: `<p><strong>La rabia fría sustituye al debate:</strong> Un desacuerdo no se discute, se paga: silencio de varios días, afecto cortado, ambiente plomizo. El castigo nunca se nombra, lo que te obliga a adivinar tu falta. Y por tanto a autovigilarte sin parar.</p>
-<p><strong>Se convierte en víctima, en público si hace falta:</strong> El día en que por fin levantas la voz, después de meses de desgaste, descubres la inversión: es él quien sufre, él quien aguanta, él quien va contando alrededor que «está preocupado por ti»... Esa campaña preventiva tiene un objetivo preciso: destruir tu credibilidad antes de que hables.</p>
-<p><strong>Tu marcha desencadena la reconquista, no la reflexión:</strong> Promesas, lágrimas, terapia anunciada, el regreso del hombre de los inicios. Y luego, una vez has vuelto, vuelve el sistema. En peor. Ese ciclo de reconquista tiene sus códigos... los mismos que hacen de <a href="/es/blog/ruptura-con-un-narcisista/">romper con un narcisista</a> un ejercicio aparte, que se prepara.</p>
+          content: `<ol start="10">
+<li><strong>La rabia fría sustituye al debate:</strong> Un desacuerdo no se discute, se paga: silencio de varios días, afecto cortado, ambiente plomizo. El castigo nunca se nombra, lo que te obliga a adivinar tu falta. Y por tanto a autovigilarte sin parar.</li>
+<li><strong>Se convierte en víctima, en público si hace falta:</strong> El día en que por fin levantas la voz, después de meses de desgaste, descubres la inversión: es él quien sufre, él quien aguanta, él quien va contando alrededor que «está preocupado por ti»... Esa campaña preventiva tiene un objetivo preciso: destruir tu credibilidad antes de que hables.</li>
+<li><strong>Tu marcha desencadena la reconquista, no la reflexión:</strong> Promesas, lágrimas, terapia anunciada, el regreso del hombre de los inicios. Y luego, una vez has vuelto, vuelve el sistema. En peor. Ese ciclo de reconquista tiene sus códigos... los mismos que hacen de <a href="/es/blog/ruptura-con-un-narcisista/">romper con un narcisista</a> un ejercicio aparte, que se prepara.</li>
+</ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ El verdadero revelador es tu resistencia</p>
 <p>Un hombre simplemente torpe o egoísta mejora, aunque sea un poco, cuando pones límites claros. Un narcisista escala: cuanto más resistes, más se intensifican las señales 10 a 12. Si poner un límite en tu casa desencadena siempre una tormenta... ya tienes tu respuesta.</p>
