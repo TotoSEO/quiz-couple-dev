@@ -752,9 +752,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'homme-pervers-narcissique-signes',
     category: 'psychologie',
     featuredImage: '/blog/homme-pervers-narcissique-signes.webp',
-    frOnly: true,
     slugs: {
       fr: 'homme-pervers-narcissique-signes',
+      en: 'narcissistic-man-signs',
+      es: 'hombre-narcisista-senales',
+      de: 'narzisstischer-mann-anzeichen',
+      it: 'uomo-narcisista-segnali',
     },
     publishedAt: '2026-09-01',
   },
