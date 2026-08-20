@@ -778,9 +778,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'phrases-preferees-des-manipulateurs',
     category: 'psychologie',
     featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
-    frOnly: true,
     slugs: {
       fr: 'phrases-preferees-des-manipulateurs',
+      en: 'manipulator-phrases',
+      es: 'frases-de-manipuladores',
+      de: 'saetze-von-manipulatoren',
+      it: 'frasi-dei-manipolatori',
     },
     publishedAt: '2026-09-08',
   },
