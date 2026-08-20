@@ -91,23 +91,23 @@
       "p1": "Las preguntas se reparten en categorías, y el resultado detalla tu puntuación en cada una. Ahí suele llegar la sorpresa: te crees formal porque el total es normal, y descubres que rozas el 90 % en una sola familia.",
       "sub1Titre": "Las siete categorías del modo solo",
       "liste1": [
-        "🔥 <strong>Sexo</strong> — body count, primeras veces, experiencias, lugares",
-        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Infidelidad</a></strong> — del beso en una fiesta a la doble vida",
-        "🎭 <strong>Mentiras</strong> — lo que arreglaste, omitiste, borraste",
-        "🍸 <strong>Alcohol y demás</strong> — fiestas, excesos y lo que viene con ellos",
-        "👪 <strong>Familia</strong> — suegros, padres, fiestas soportadas",
-        "📱 <strong>Vida digital</strong> — nudes, cuentas secretas, mensajes al despertar",
-        "🚨 <strong>Prohibido</strong> — robos, tonterías, pillajes"
+        "🔥 <strong>Sexo</strong>: body count, primeras veces, experiencias, lugares",
+        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Infidelidad</a></strong>: del beso en una fiesta a la doble vida",
+        "🎭 <strong>Mentiras</strong>: lo que arreglaste, omitiste, borraste",
+        "🍸 <strong>Alcohol y demás</strong>: fiestas, excesos y lo que viene con ellos",
+        "👪 <strong>Familia</strong>: suegros, padres, fiestas soportadas",
+        "📱 <strong>Vida digital</strong>: nudes, cuentas secretas, mensajes al despertar",
+        "🚨 <strong>Prohibido</strong>: robos, tonterías, pillajes"
       ],
       "sub1P1": "La categoría que más duele casi nunca es la que se espera. Son las mentiras las que más suben la puntuación, no el sexo.",
       "sub2Titre": "Las seis categorías del modo en pareja",
       "liste2": [
-        "🔥 <strong>Sexo</strong> — lo que habéis probado, y dónde",
-        "👀 <strong>Exhibición</strong> — el riesgo de que os vean, asumido o no",
-        "💫 <strong>Liberalidad</strong> — tríos, intercambio, relación abierta",
-        "🍸 <strong>Sustancias</strong> — fiestas, ir colocados, resacas",
-        "🚨 <strong>Transgresión</strong> — casino, sitios prohibidos, mentiras a dúo",
-        "🤐 <strong>Secretos</strong> — lo que el otro sigue sin saber"
+        "🔥 <strong>Sexo</strong>: lo que habéis probado, y dónde",
+        "👀 <strong>Exhibición</strong>: el riesgo de que os vean, asumido o no",
+        "💫 <strong>Liberalidad</strong>: tríos, intercambio, relación abierta",
+        "🍸 <strong>Sustancias</strong>: fiestas, ir colocados, resacas",
+        "🚨 <strong>Transgresión</strong>: casino, sitios prohibidos, mentiras a dúo",
+        "🤐 <strong>Secretos</strong>: lo que el otro sigue sin saber"
       ],
       "sub2P1": "Es la categoría de los secretos la que separa a las parejas. Dos parejas con exactamente el mismo pasado pueden acabar a cien puntos de distancia, solo por lo que se han contado."
     },

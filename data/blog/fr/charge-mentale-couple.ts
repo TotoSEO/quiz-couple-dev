@@ -99,7 +99,7 @@ const article: BlogArticleData = {
           title: "Le piège de l'habitude installée",
           content: `<p>Au début de la vie commune, le déséquilibre est souvent minime. Puis les premières routines se mettent en place. Puis les enfants arrivent. Et chaque nouvelle responsabilité tombe « naturellement » du même côté. Pas parce qu'il y a eu une discussion. Parce qu'il n'y en a pas eu.</p>
 <p><strong>Le piège, c'est que plus la charge mentale dure, plus elle est difficile à redistribuer.</strong> Parce que « c'est toi qui sais comment on fait ». Parce que « tu y penses de toute façon ». Parce que si tu délègues, tu dois quand même vérifier. Et vérifier, c'est encore de la charge mentale.</p>
-<p>Pour faire le point sur l'équilibre réel de ton couple, <a href="/test-couple-sain/">notre test couple sain</a> peut t'aider à objectiver ce que tu ressens.</p>`,
+<p>Pour faire le point sur l'équilibre réel de ton couple, <a href="/test-couple-sain/">le test couple sain</a> peut t'aider à objectiver ce que tu ressens.</p>`,
         },
       ],
     },
@@ -113,7 +113,7 @@ const article: BlogArticleData = {
           title: "Le ressentiment qui s'installe",
           content: `<p>Tu ne le détestes pas. Mais tu commences à le regarder différemment. Quand il s'affale sur le canapé le dimanche pendant que tu ranges la cuisine, tu ressens quelque chose qui n'est pas de la colère franche. C'est plus sourd que ça. <strong>C'est du ressentiment.</strong> Le sentiment d'injustice quotidien qui s'accumule sans trouver de sortie.</p>
 <p>Le ressentiment est un poison lent pour les relations. Il ne provoque pas une explosion. Il érode. Jour après jour, tu perds un peu de tendresse, un peu de patience, un peu d'envie d'être là. Et quand tu te surprends à penser « je fais tout ici et il ne s'en rend même pas compte », ce n'est pas de l'exagération. C'est un constat.</p>
-<p>Si tu veux creuser ce que ce ressentiment produit, notre article sur <a href="/blog/femme-malheureuse-en-couple/">la femme malheureuse en couple</a> décrit précisément ce processus.</p>`,
+<p>Si tu veux creuser ce que ce ressentiment produit, ce processus est décrit précisément ici : <a href="/blog/femme-malheureuse-en-couple/">la femme malheureuse en couple</a>.</p>`,
         },
         {
           id: 'libido-distance',
@@ -187,7 +187,7 @@ const article: BlogArticleData = {
           content: `<p>Il y a un moment où il faut arrêter de traiter la charge mentale comme un problème logistique. Si ton partenaire <strong>voit</strong> que tu es épuisée, <strong>comprend</strong> pourquoi, et <strong>choisit</strong> de ne rien changer, ce n'est plus un problème d'organisation. C'est un problème de respect.</p>
 <p>Un partenaire qui te regarde couler sans bouger, ce n'est pas un partenaire qui « ne comprend pas ». C'est un partenaire qui a décidé que ton confort importait moins que le sien. Et ça, aucune appli de calendrier partagé ne le résoudra.</p>
 <p>Si tu as des enfants et que ce déséquilibre touche aussi la parentalité, <a href="/test-parentalite-couple/">le test parentalité couple</a> peut vous aider à objectiver la situation.</p>
-<p>À ce stade, la question n'est plus « comment rééquilibrer la charge mentale ». La question est : est-ce que cette relation te rend heureuse, ou est-ce qu'elle te vide ? Et si la réponse te fait peur, c'est peut-être le moment de lire notre article sur <a href="/blog/sauver-son-couple/">comment sauver son couple</a>, pour savoir si c'est encore possible, et si tu le veux vraiment.</p>`,
+<p>À ce stade, la question n'est plus « comment rééquilibrer la charge mentale ». La question est : est-ce que cette relation te rend heureuse, ou est-ce qu'elle te vide ? Et si la réponse te fait peur, c'est peut-être le moment de lire ceci : <a href="/blog/sauver-son-couple/">comment sauver son couple</a>, pour savoir si c'est encore possible, et si tu le veux vraiment.</p>`,
         },
       ],
     },

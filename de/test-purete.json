@@ -91,23 +91,23 @@
       "p1": "Die Fragen sind in Kategorien aufgeteilt, und das Ergebnis schlüsselt eure Punktzahl für jede einzelne auf. Genau dort kommt meist die Überraschung: man hält sich für brav, weil die Gesamtzahl mittelmäßig ist, und entdeckt, dass man in einer einzigen Kategorie bei 90 % liegt.",
       "sub1Titre": "Die sieben Kategorien im Solomodus",
       "liste1": [
-        "🔥 <strong>Sex</strong> — Body Count, erste Male, Erfahrungen, Orte",
-        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Untreue</a></strong> — vom Kuss auf einer Party bis zum Doppelleben",
-        "🎭 <strong>Lügen</strong> — was ihr zurechtgelegt, weggelassen, gelöscht habt",
-        "🍸 <strong>Alkohol & Co</strong> — Partys, Exzesse und was dazugehört",
-        "👪 <strong>Familie</strong> — Schwiegerfamilie, Eltern, durchgestandene Feiertage",
-        "📱 <strong>Digitales Leben</strong> — Nacktfotos, geheime Accounts, Nachrichten beim Aufwachen",
-        "🚨 <strong>Verbotenes</strong> — Diebstahl, Dummheiten, Erwischtwerden"
+        "🔥 <strong>Sex</strong>: Body Count, erste Male, Erfahrungen, Orte",
+        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Untreue</a></strong>: vom Kuss auf einer Party bis zum Doppelleben",
+        "🎭 <strong>Lügen</strong>: was ihr zurechtgelegt, weggelassen, gelöscht habt",
+        "🍸 <strong>Alkohol & Co</strong>: Partys, Exzesse und was dazugehört",
+        "👪 <strong>Familie</strong>: Schwiegerfamilie, Eltern, durchgestandene Feiertage",
+        "📱 <strong>Digitales Leben</strong>: Nacktfotos, geheime Accounts, Nachrichten beim Aufwachen",
+        "🚨 <strong>Verbotenes</strong>: Diebstahl, Dummheiten, Erwischtwerden"
       ],
       "sub1P1": "Die Kategorie, die am meisten wehtut, ist fast nie die erwartete. Es sind die Lügen, die die meisten Punktzahlen hochtreiben, nicht der Sex.",
       "sub2Titre": "Die sechs Kategorien im Paarmodus",
       "liste2": [
-        "🔥 <strong>Sex</strong> — was ihr versucht habt, und wo",
-        "👀 <strong>Erwischtwerden</strong> — das Risiko, gesehen zu werden, bewusst oder nicht",
-        "💫 <strong>Offene Spiele</strong> — Dreier, Partnertausch, offene Beziehung",
-        "🍸 <strong>Substanzen</strong> — Partys, Rausch, der Morgen danach",
-        "🚨 <strong>Grenzüberschreitung</strong> — Casino, verbotene Orte, gemeinsame Lügen",
-        "🤐 <strong>Geheimnisse</strong> — was die andere Person immer noch nicht weiß"
+        "🔥 <strong>Sex</strong>: was ihr versucht habt, und wo",
+        "👀 <strong>Erwischtwerden</strong>: das Risiko, gesehen zu werden, bewusst oder nicht",
+        "💫 <strong>Offene Spiele</strong>: Dreier, Partnertausch, offene Beziehung",
+        "🍸 <strong>Substanzen</strong>: Partys, Rausch, der Morgen danach",
+        "🚨 <strong>Grenzüberschreitung</strong>: Casino, verbotene Orte, gemeinsame Lügen",
+        "🤐 <strong>Geheimnisse</strong>: was die andere Person immer noch nicht weiß"
       ],
       "sub2P1": "Es ist die Kategorie der Geheimnisse, die Paare unterscheidet. Zwei Paare mit exakt derselben Vergangenheit können hundert Punkte auseinanderliegen, allein danach, was sie sich gesagt haben."
     },
