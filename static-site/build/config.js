@@ -1090,9 +1090,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'styles-attachement-couple',
     category: 'psychologie',
     featuredImage: '/blog/styles-attachement-couple.webp',
-    frOnly: true,
     slugs: {
       fr: 'styles-attachement-couple',
+      en: 'attachment-styles-in-love',
+      es: 'estilos-de-apego-en-la-pareja',
+      de: 'bindungsstile-in-der-liebe',
+      it: 'stili-di-attaccamento-in-amore',
     },
     publishedAt: '2026-12-01',
   },
