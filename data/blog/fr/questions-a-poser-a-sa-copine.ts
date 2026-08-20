@@ -144,6 +144,14 @@ const article: BlogArticleData = {
 <li>Qu'est-ce qu'on devrait commencer ensemble cette année ?</li>
 </ol>
 <p>Et après la 75 ? Après, tu connais le principe : ce ne sont pas les questions qui comptent, c'est l'habitude de se les poser. Les couples qui durent ne sont pas ceux qui savent tout l'un de l'autre... ce sont ceux qui continuent de se poser des <a href="/questions-couple/">questions de couple</a>, régulièrement, comme on entretient un feu.</p>
+<div><table><thead><tr><th>La série</th><th>Ce qu'elle ouvre</th></tr></thead><tbody>
+<tr><td>Pour la redécouvrir</td><td>Ce que tu croyais savoir, et qui a changé depuis</td></tr>
+<tr><td>Sur vous deux</td><td>Votre histoire vue de son côté à elle</td></tr>
+<tr><td>Drôles et légères</td><td>De la légèreté, et souvent une porte vers le reste</td></tr>
+<tr><td>Un peu profondes</td><td>Ce dont vous ne parlez jamais faute d'occasion</td></tr>
+<tr><td>Amour et complicité</td><td>Ce qui la fait se sentir aimée, précisément</td></tr>
+<tr><td>Quotidien et avenir</td><td>Les sujets qu'on repousse jusqu'à ce qu'ils fâchent</td></tr>
+</tbody></table></div>
 <div class="blog-cta">
 <p class="blog-cta-titre">Envie de pimenter la prochaine soirée ?</p>
 <p class="blog-cta-texte">Prenez ces questions... et transformez-les en duel. « Qui de vous deux » pose les questions, vous votez chacun de votre côté, et on compare. Fous rires garantis, mauvaise foi autorisée.</p>

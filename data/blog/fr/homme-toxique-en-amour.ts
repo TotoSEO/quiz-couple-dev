@@ -74,12 +74,24 @@ const article: BlogArticleData = {
       content: `<p>Pour les trois premiers profils, l'immature, l'inconstant qui en souffre, le jaloux conscient, la voie existe : nommer le problème précisément, poser une limite claire, proposer un cadre de travail (thérapie, engagements concrets, délais)... et juger sur les ACTES à trois mois. Pas sur les promesses du soir même, elles ne coûtent rien.</p>
 <p>Pour les trois derniers, la victime professionnelle, le dévalorisateur confirmé, le contrôlant... l'expérience dit une chose constante : ta patience ne les changera pas, elle les nourrira. Ta priorité passe de « réparer la relation » à « te protéger, toi ». Et si tu hésites encore entre les deux familles, souviens-toi du critère universel : <strong>regarde ce qu'il fait de ta parole quand tu nommes le problème.</strong> Celui qui l'entend, même mal, peut évoluer. Celui qui la retourne contre toi t'a déjà donné sa réponse.</p>
 <p>Beaucoup de ces comportements figuraient d'ailleurs dès le début, en pointillés, dans les <a href="/blog/red-flags-homme/">red flags chez un homme</a>... c'est souvent en relisant cette liste après coup qu'on comprend ce qu'on avait sous les yeux.</p>
+<div><table><thead><tr><th>Le profil</th><th>La bonne question</th><th>Ce qui décide</th></tr></thead><tbody>
+<tr><td>L'immature affectif</td><td>Est-ce qu'il grandit, vraiment ?</td><td>Les actes à trois mois</td></tr>
+<tr><td>L'inconstant chaud-froid</td><td>Est-ce qu'il en souffre aussi ?</td><td>Les actes à trois mois</td></tr>
+<tr><td>Le jaloux qui surveille</td><td>Est-ce qu'il reconnaît le problème ?</td><td>Les actes à trois mois</td></tr>
+<tr><td>L'éternelle victime</td><td>Combien de fois as-tu déjà essayé ?</td><td>Te protéger, toi</td></tr>
+<tr><td>Le dévalorisateur</td><td>Qu'est-ce qu'il reste de ton estime ?</td><td>Te protéger, toi</td></tr>
+<tr><td>Le contrôlant « protecteur »</td><td>Que se passe-t-il quand tu dis non ?</td><td>Te protéger, toi</td></tr>
+</tbody></table></div>
 <div class="blog-cta">
 <p class="blog-cta-titre">Ta relation est-elle en train de t'abîmer ?</p>
 <p class="blog-cta-texte">Une série de questions évalue ce que ta relation te fait vivre, profil par profil, comportement par comportement. Résultat immédiat, et une réponse enfin posée à la question que tu retournes depuis des semaines.</p>
 <a class="blog-cta-btn" href="/test-couple-toxique/">Évaluer ma relation</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ Si tu es en danger, ne reste pas seule avec un article</p>
+<p>Menaces, contrôle de ton argent ou de tes déplacements, violence physique même « une seule fois » : en France, le 3919 est gratuit, anonyme et ouvert 24h/24. En cas d'urgence immédiate, le 17, ou le 114 par SMS quand tu ne peux pas parler. Un psychologue formé aux violences psychologiques change une trajectoire bien plus qu'une lecture, celle-ci comprise.</p>
+</aside>
 <a href="/blog/relation-toxique-signes/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Relation toxique : reconnaître les signes, et savoir si ça se répare</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

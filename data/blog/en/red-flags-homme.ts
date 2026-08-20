@@ -148,7 +148,8 @@ const article: BlogArticleData = {
       title: "You recognised several of these. Now what?",
       content: `<p>First: the fact that you're reading this matters. Something in you was looking for confirmation, a vocabulary, a framework. That's already movement.</p>
 <p>One or two points on a list don't automatically make someone a bad partner. Everyone has blind spots, behaviours to work on, rough patches. <strong>What separates a red flag from an ordinary problem is repetition and the absence of self-reflection.</strong> Does he acknowledge the problem when you point it out? Does he make real efforts, or visible ones just long enough for you to calm down? Do things actually change, or do you live in permanent anticipation of a change that never comes?</p>
-<p>If you're ticking several boxes and the honest answer to those questions is "no", trust what you feel. Your instinct brought you here. It deserves to be heard.</p>`,
+<p>If you're ticking several boxes and the honest answer to those questions is "no", trust what you feel. Your instinct brought you here. It deserves to be heard.</p>
+<a href="/en/blog/unhappy-woman-in-relationship-signs/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">How to Recognize an Unhappy Woman in a Relationship: The Real Signs</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
 };

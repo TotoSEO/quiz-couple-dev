@@ -25,9 +25,9 @@ const article: BlogArticleData = {
     {
       id: 'comment-les-utiliser',
       title: "Avant de commencer : trois règles pour que ça marche",
-      content: `<p><strong>Une poignée à la fois.</strong> Deux ou trois questions dans une soirée, c'est une conversation. Trente d'affilée, c'est une garde à vue ! La liste est longue exprès : elle se consomme sur des semaines, pas en une fois.</p>
-<p><strong>Réponds aussi.</strong> La règle du jeu, c'est l'échange. Si tu lui demandes sa plus grande peur, par exemple, prépare-toi à raconter la tienne... C'est d'ailleurs souvent là que la conversation décolle vraiment.</p>
-<p><strong>Et accueille la réponse, quelle qu'elle soit.</strong> Si une réponse te surprend ou te pique un peu, tu as le droit de creuser. Pas de plaider. Une question posée pour piéger n'apprend jamais rien de vrai, tu le sais déjà.</p>
+      content: `<p><strong>Une poignée à la fois :</strong> Deux ou trois questions dans une soirée, c'est une conversation. Trente d'affilée, c'est une garde à vue ! La liste est longue exprès : elle se consomme sur des semaines, pas en une fois.</p>
+<p><strong>Réponds aussi :</strong> La règle du jeu, c'est l'échange. Si tu lui demandes sa plus grande peur, par exemple, prépare-toi à raconter la tienne... C'est d'ailleurs souvent là que la conversation décolle vraiment.</p>
+<p><strong>Et accueille la réponse, quelle qu'elle soit :</strong> Si une réponse te surprend ou te pique un peu, tu as le droit de creuser. Pas de plaider. Une question posée pour piéger n'apprend jamais rien de vrai, tu le sais déjà.</p>
 <p>Dernier détail : au fil des réponses, une question finira forcément par surgir, lequel de vous deux <a href="/quiz-qui-connait-mieux-partenaire/">connaît le mieux l'autre</a> ? Gardez-la pour la fin, elle se tranche mieux points en main.</p>`,
     },
     {
@@ -202,7 +202,15 @@ const article: BlogArticleData = {
       content: `<p>Si tu es arrivée jusqu'ici, tu as compris le principe : ce ne sont pas les questions qui comptent, c'est l'habitude de se les poser. Les couples qui durent ne sont pas ceux qui savent tout l'un de l'autre... ce sont ceux qui continuent de se découvrir.</p>
 <p>Alors garde cette liste quelque part, et ressors-la dans un mois. Compare les réponses dans un an, aussi : certaines auront changé, et ces changements-là, ce sont exactement les conversations qu'il ne faut pas rater. Tu verras autre chose, d'ailleurs. Lui poser des questions donne envie qu'il t'en pose ! Et c'est souvent comme ça que l'équilibre revient.</p>
 <p>Et le jour où tu veux vérifier tout ce que vous venez d'apprendre l'un sur l'autre... vous savez où le prouver.</p>
-<a href="/questions-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">120 questions pour couple à se poser, classées par thème</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+<a href="/questions-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">120 questions pour couple à se poser, classées par thème</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+<div><table><thead><tr><th>La série</th><th>Le bon moment pour la sortir</th></tr></thead><tbody>
+<tr><td>Pour mieux le connaître</td><td>Un trajet, une file d'attente, un dimanche sans programme</td></tr>
+<tr><td>Sur vous deux</td><td>Un dîner à deux, sans écran posé sur la table</td></tr>
+<tr><td>Drôles et légères</td><td>Quand l'ambiance est bonne et qu'on n'attend rien</td></tr>
+<tr><td>Amour et sentiments</td><td>Le soir, dans le noir, quand les mots sortent plus facilement</td></tr>
+<tr><td>Avenir et projets</td><td>À froid, jamais au milieu d'une dispute</td></tr>
+<tr><td>Au téléphone ou à distance</td><td>Quand l'appel s'essouffle et qu'il reste vingt minutes</td></tr>
+</tbody></table></div>`,
     },
   ],
 };

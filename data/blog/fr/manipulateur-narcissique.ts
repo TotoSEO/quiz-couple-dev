@@ -33,12 +33,12 @@ const article: BlogArticleData = {
       title: "Ses techniques, dans l'ordre où il les sort",
       content: `<p>Chaque manipulateur a son style, mais la boîte à outils est standard. Et elle s'ouvre presque toujours dans le même ordre.</p>
 <ol>
-<li><strong>Le charme ciblé.</strong> Pas un charme généreux : un charme d'investisseur. Il identifie ce qui te manque, de la reconnaissance, de la sécurité, de l'intensité, et il le fournit massivement. C'est la phase d'accroche, et elle est d'autant plus efficace qu'elle vise juste.</li>
-<li><strong>La dette affective.</strong> Cadeaux, services, disponibilité spectaculaire... qui se transforment vite en créance. Tout ce qu'il a « fait pour toi » devient un argument, une facture émotionnelle qu'on te présente à chaque désaccord.</li>
-<li><strong>La triangulation.</strong> Technique redoutable et souvent invisible : il introduit un tiers dans l'équation. Une ex « qui le comprenait mieux », une collègue « tellement drôle », un rival flou... L'objectif : créer une concurrence permanente, te maintenir en compétition pour une place que tu croyais acquise.</li>
-<li><strong>Le gaslighting.</strong> La réécriture du réel : ce que tu as vu n'a pas eu lieu, ce qu'il a dit n'a jamais été dit. À la longue, tu doutes de ta mémoire, et il devient l'unique source fiable de la réalité du couple. Ses formules exactes, on les a listées dans les <a href="/blog/phrases-preferees-des-manipulateurs/">phrases préférées des manipulateurs</a>.</li>
-<li><strong>La punition froide.</strong> Quand tu résistes : silence, retrait d'affection, ambiance glaciale. Jamais nommée, jamais assumée (« mais non, tout va bien »), ce qui t'oblige à deviner ta faute et à la réparer préventivement.</li>
-<li><strong>La victimisation en dernier recours.</strong> Quand tout le reste échoue, il souffre. Bruyamment, publiquement si nécessaire. C'est sa sortie de secours favorite : impossible d'en vouloir à quelqu'un qui va si mal...</li>
+<li><strong>Le charme ciblé :</strong> Pas un charme généreux : un charme d'investisseur. Il identifie ce qui te manque, de la reconnaissance, de la sécurité, de l'intensité, et il le fournit massivement. C'est la phase d'accroche, et elle est d'autant plus efficace qu'elle vise juste.</li>
+<li><strong>La dette affective :</strong> Cadeaux, services, disponibilité spectaculaire... qui se transforment vite en créance. Tout ce qu'il a « fait pour toi » devient un argument, une facture émotionnelle qu'on te présente à chaque désaccord.</li>
+<li><strong>La triangulation :</strong> Technique redoutable et souvent invisible : il introduit un tiers dans l'équation. Une ex « qui le comprenait mieux », une collègue « tellement drôle », un rival flou... L'objectif : créer une concurrence permanente, te maintenir en compétition pour une place que tu croyais acquise.</li>
+<li><strong>Le gaslighting :</strong> La réécriture du réel : ce que tu as vu n'a pas eu lieu, ce qu'il a dit n'a jamais été dit. À la longue, tu doutes de ta mémoire, et il devient l'unique source fiable de la réalité du couple. Ses formules exactes, on les a listées dans les <a href="/blog/phrases-preferees-des-manipulateurs/">phrases préférées des manipulateurs</a>.</li>
+<li><strong>La punition froide :</strong> Quand tu résistes : silence, retrait d'affection, ambiance glaciale. Jamais nommée, jamais assumée (« mais non, tout va bien »), ce qui t'oblige à deviner ta faute et à la réparer préventivement.</li>
+<li><strong>La victimisation en dernier recours :</strong> Quand tout le reste échoue, il souffre. Bruyamment, publiquement si nécessaire. C'est sa sortie de secours favorite : impossible d'en vouloir à quelqu'un qui va si mal...</li>
 </ol>`,
     },
     {
@@ -46,11 +46,11 @@ const article: BlogArticleData = {
       title: "Les points faibles du manipulateur (oui, il en a)",
       content: `<p>On le présente toujours comme une machine implacable. En réalité, son système repose sur des conditions précises... et chacune est une faille.</p>
 <ol>
-<li><strong>L'indifférence sincère.</strong> Pas l'indifférence jouée, il la détecte : la vraie, celle qui vient quand tu as compris et que tu n'attends plus rien. Son système carbure à ta réaction, admiration ou souffrance, peu importe. Une personne qui ne réagit plus, c'est une pompe à essence fermée.</li>
-<li><strong>Les témoins.</strong> Toute sa mécanique exige le huis clos. Un tiers présent, une conversation à trois, une famille au courant... et le personnage public doit rester en scène, ce qui neutralise le personnage privé. C'est pour ça qu'il travaille si dur à t'isoler.</li>
-<li><strong>L'écrit.</strong> Le « je n'ai jamais dit ça » meurt face à une capture d'écran. Il le sait, d'ailleurs : remarque comme les pires choses se disent à l'oral, et comme les messages écrits, eux, sont soignés.</li>
-<li><strong>Le temps et la constance.</strong> Son jeu demande des résultats rapides : te déstabiliser, te faire céder, te récupérer. Face à quelqu'un de calmement constant, qui répète la même limite sans s'énerver, semaine après semaine... le système s'épuise. Il n'est pas équipé pour le marathon.</li>
-<li><strong>Le non sans justification.</strong> Un refus argumenté, c'est une prise : chaque argument peut être contesté, retourné, épuisé. Un « non » simple, répété tel quel, ne lui offre aucune surface d'attaque. C'est frustrant pour lui à un point que tu n'imagines pas.</li>
+<li><strong>L'indifférence sincère :</strong> Pas l'indifférence jouée, il la détecte : la vraie, celle qui vient quand tu as compris et que tu n'attends plus rien. Son système carbure à ta réaction, admiration ou souffrance, peu importe. Une personne qui ne réagit plus, c'est une pompe à essence fermée.</li>
+<li><strong>Les témoins :</strong> Toute sa mécanique exige le huis clos. Un tiers présent, une conversation à trois, une famille au courant... et le personnage public doit rester en scène, ce qui neutralise le personnage privé. C'est pour ça qu'il travaille si dur à t'isoler.</li>
+<li><strong>L'écrit :</strong> Le « je n'ai jamais dit ça » meurt face à une capture d'écran. Il le sait, d'ailleurs : remarque comme les pires choses se disent à l'oral, et comme les messages écrits, eux, sont soignés.</li>
+<li><strong>Le temps et la constance :</strong> Son jeu demande des résultats rapides : te déstabiliser, te faire céder, te récupérer. Face à quelqu'un de calmement constant, qui répète la même limite sans s'énerver, semaine après semaine... le système s'épuise. Il n'est pas équipé pour le marathon.</li>
+<li><strong>Le non sans justification :</strong> Un refus argumenté, c'est une prise : chaque argument peut être contesté, retourné, épuisé. Un « non » simple, répété tel quel, ne lui offre aucune surface d'attaque. C'est frustrant pour lui à un point que tu n'imagines pas.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Connaître ses failles n'est pas une invitation à jouer</p>
@@ -83,6 +83,10 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/test-pervers-narcissique/">Évaluer ma relation</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ Si tu es en danger, ne reste pas seul(e) avec un article</p>
+<p>Menaces, contrôle de ton argent ou de tes déplacements, violence physique même « une seule fois » : en France, le 3919 est gratuit, anonyme, ouvert 24h/24, et il écoute les femmes comme les hommes. En cas d'urgence immédiate, le 17, ou le 114 par SMS quand tu ne peux pas parler.</p>
+</aside>
 <a href="/blog/phrases-preferees-des-manipulateurs/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Les phrases préférées des manipulateurs, et ce qu'elles veulent vraiment dire</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

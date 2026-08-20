@@ -33,19 +33,35 @@ const article: BlogArticleData = {
       id: 'pourquoi-ca-s-emboite',
       title: "Pourquoi ces deux-là s'emboîtent si parfaitement",
       content: `<p>Regarde la mécanique, elle est presque chimique. Le dépendant affectif a un besoin vital d'être rassuré ; le manipulateur distribue et retire la réassurance à volonté. Le dépendant a peur de l'abandon ; le manipulateur menace d'abandonner, précisément dosé. Le dépendant s'oublie pour mériter l'amour ; le manipulateur encaisse les sacrifices... et en demande d'autres.</p>
-<p><strong>Chaque besoin de l'un est un levier pour l'autre.</strong> C'est pour ça que ce couple tient si longtemps : de l'extérieur on se demande « mais pourquoi elle reste ? », alors que de l'intérieur, le système s'auto-alimente. Le cycle punition-récompense du manipulateur, le chaud-froid, les <a href="/blog/phrases-preferees-des-manipulateurs/">phrases qui culpabilisent</a>, produit exactement le manque que la dépendance affective cherche à combler... en redoublant d'attachement. Plus il fait mal, plus elle s'accroche. Plus elle s'accroche, plus il serre.</p>
-<p>Et il y a une cruauté supplémentaire : la phase d'idéalisation du début, le love bombing, est une drogue parfaite pour un dépendant affectif. Quelqu'un qui te dit enfin « tu es tout pour moi »... quand ton système entier attend ça depuis l'enfance ? Le piège n'a même pas besoin de se refermer. On y court.</p>`,
+<p><strong>Chaque besoin de l'un est un levier pour l'autre :</strong> C'est pour ça que ce couple tient si longtemps : de l'extérieur on se demande « mais pourquoi elle reste ? », alors que de l'intérieur, le système s'auto-alimente. Le cycle punition-récompense du manipulateur, le chaud-froid, les <a href="/blog/phrases-preferees-des-manipulateurs/">phrases qui culpabilisent</a>, produit exactement le manque que la dépendance affective cherche à combler... en redoublant d'attachement. Plus il fait mal, plus elle s'accroche. Plus elle s'accroche, plus il serre.</p>
+<p>Et il y a une cruauté supplémentaire : la phase d'idéalisation du début, le love bombing, est une drogue parfaite pour un dépendant affectif. Quelqu'un qui te dit enfin « tu es tout pour moi »... quand ton système entier attend ça depuis l'enfance ? Le piège n'a même pas besoin de se refermer. On y court.</p>
+<div><table><thead><tr><th>Ce que cherche le dépendant affectif</th><th>Ce que le manipulateur fournit</th><th>Le piège</th></tr></thead><tbody>
+<tr><td>Être choisi, intensément, tout de suite</td><td>Une séduction massive et accélérée</td><td>L'intensité passe pour de l'amour</td></tr>
+<tr><td>Être indispensable</td><td>Des besoins sans fin à combler</td><td>Plus il donne, plus il se sent utile</td></tr>
+<tr><td>Éviter le conflit à tout prix</td><td>Un terrain où il n'y a jamais de contradiction</td><td>Les limites ne se posent jamais</td></tr>
+<tr><td>Une explication à son malaise</td><td>« C'est toi le problème »</td><td>Le doute remplace la colère</td></tr>
+</tbody></table></div>`,
     },
     {
       id: 'un-dependant-attire-un-dependant',
       title: "« Un dépendant affectif attire un dépendant affectif » : vrai ou faux ?",
-      content: `<p>La formule circule beaucoup, alors clarifions, parce qu'elle est à moitié vraie... et la moitié fausse est dangereuse.</p>
-<p><strong>La part vraie :</strong> les insécurités s'attirent, c'est bien documenté. Deux dépendants affectifs peuvent former un couple fusionnel, étouffant, jaloux des deux côtés... douloureux, mais symétrique. Et il existe un autre appariement classique : l'anxieux avec l'évitant, celui qui poursuit avec celui qui fuit, chacun confirmant les peurs de l'autre.</p>
-<p><strong>La part fausse :</strong> croire que le partenaire d'un dépendant affectif est forcément dépendant lui aussi. Le duo le plus destructeur n'est pas symétrique du tout : c'est dépendant + manipulateur, et il ne faut surtout pas les confondre. Dans le couple de deux dépendants, les deux souffrent et les deux peuvent travailler. Dans le duo avec un manipulateur, un seul souffre... et l'autre gère son capital.</p>
+      content: `<p>La formule circule beaucoup, alors clarifions, parce qu'elle est à moitié vraie... et la moitié fausse est dangereuse.</p>`,
+      subsections: [
+        {
+          id: 'la-part-vraie',
+          title: "La part vraie",
+          content: `<p>Les insécurités s'attirent, c'est bien documenté. Deux dépendants affectifs peuvent former un couple fusionnel, étouffant, jaloux des deux côtés... douloureux, mais symétrique. Et il existe un autre appariement classique : l'anxieux avec l'évitant, celui qui poursuit avec celui qui fuit, chacun confirmant les peurs de l'autre.</p>`,
+        },
+        {
+          id: 'la-part-fausse',
+          title: "La part fausse",
+          content: `<p>Croire que le partenaire d'un dépendant affectif est forcément dépendant lui aussi. Le duo le plus destructeur n'est pas symétrique du tout : c'est dépendant + manipulateur, et il ne faut surtout pas les confondre. Dans le couple de deux dépendants, les deux souffrent et les deux peuvent travailler. Dans le duo avec un manipulateur, un seul souffre... et l'autre gère son capital.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Comment savoir dans quel duo tu es ?</p>
 <p>Un test simple : commence à aller mieux. Travaille ta dépendance, reprends des activités, retrouve tes amies... Un partenaire simplement insécure sera déstabilisé, peut-être maladroit, mais il finira par respirer avec toi. Un manipulateur, lui, SABOTERA tes progrès : reproches sur tes sorties, crises pile les soirs d'exercice, tendresse soudaine quand tu prends le large... Ta guérison est son problème. Cette réaction-là signe tout.</p>
 </aside>`,
+        },
+      ],
     },
     {
       id: 'casser-le-duo',

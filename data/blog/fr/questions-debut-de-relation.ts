@@ -120,7 +120,13 @@ const article: BlogArticleData = {
 <li><strong>« Tes parents vont m'adorer, tu crois ? »</strong> Rencontrer la famille est une étape, pas un sujet de deuxième semaine.</li>
 <li><strong>« T'as eu combien de partenaires ? »</strong> Aucune bonne réponse, aucun bon moment, aucune bonne raison. Franchement, aucune.</li>
 <li><strong>« On sera encore ensemble dans cinq ans ? »</strong> Celle-là, vous y répondrez ensemble... en y étant. C'est la seule bonne méthode connue.</li>
-</ol>`,
+</ol>
+<div><table><thead><tr><th>La question</th><th>Pourquoi pas maintenant</th><th>Quand elle a du sens</th></tr></thead><tbody>
+<tr><td>« On est quoi, tous les deux ? »</td><td>Trop tôt, elle force une réponse que personne n'a</td><td>Quand les semaines ont donné des éléments</td></tr>
+<tr><td>« Pourquoi ça s'est fini avec ton ex ? »</td><td>Elle appelle une version défensive</td><td>Quand la confiance permet une vraie réponse</td></tr>
+<tr><td>« Tu veux des enfants ? »</td><td>Elle transforme un début en projet de vie</td><td>Avant que l'attachement rende la réponse coûteuse</td></tr>
+<tr><td>« Tu vois quelqu'un d'autre ? »</td><td>Posée en test, elle ne rassure jamais</td><td>Posée en clair, quand tu veux vraiment savoir</td></tr>
+</tbody></table></div>`,
     },
     {
       id: 'et-si-c-est-le-bon-moment',

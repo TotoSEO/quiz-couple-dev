@@ -185,6 +185,13 @@ const article: BlogArticleData = {
       title: "Et si tu n'oses pas lui envoyer quoi que ce soit ?",
       content: `<p>Petit mot pour celle ou celui qui a lu jusqu'ici sans avoir envoyé le moindre message : c'est normal ! Un crush, par définition, fait perdre les moyens. Commence par les questions 1 à 15. Une seule. La plus simple, celle qui te ressemble. Le but n'est pas d'être brillant, c'est juste d'ouvrir une porte.</p>
 <p>Et si vous parlez déjà tous les jours mais que tu n'arrives toujours pas à savoir si c'est réciproque... arrête de relire vos conversations pour la dixième fois. Franchement. Il y a des signaux bien plus fiables que ton interprétation de ses emojis à 1 heure du matin.</p>
+<div><table><thead><tr><th>L'étape</th><th>Le bon registre</th><th>L'erreur classique</th></tr></thead><tbody>
+<tr><td>Les premiers messages</td><td>Léger, court, une seule question à la fois</td><td>Le pavé qui attend une dissertation</td></tr>
+<tr><td>Faire connaissance</td><td>Curieux, sur du concret</td><td>L'interrogatoire déguisé</td></tr>
+<tr><td>Faire rire</td><td>Absurde, jamais aux dépens de l'autre</td><td>La blague qui teste les limites</td></tr>
+<tr><td>Flirter</td><td>Suggéré, avec une porte de sortie</td><td>Le compliment qui met mal à l'aise</td></tr>
+<tr><td>Le premier rendez-vous</td><td>Ouvert, et vraiment écouté</td><td>Réciter ses questions préparées</td></tr>
+</tbody></table></div>
 <div class="blog-cta">
 <p class="blog-cta-titre">Il pense à toi, ou il répond juste poliment ?</p>
 <p class="blog-cta-texte">Une série de questions passe en revue les vrais signaux, ceux qu'on ne remarque pas quand on a le nez dedans : ses relances, ses attentions, sa manière d'être quand tu es là. Résultat immédiat, et personne n'en saura rien.</p>

@@ -356,11 +356,11 @@
       </div>
     </div>
     <div id="home-popular-quizzes" class="home-popular" data-quiz-base="<%= getLocalizedUrl('customQuiz', lang) %>"
-         data-label-points="<%= t('customQuiz:pat_points_t', 'Quiz à points') %>"
-         data-label-truefalse="<%= t('customQuiz:pat_tf_t', 'Vrai ou Faux') %>"
-         data-label-fun="<%= t('customQuiz:pat_fun_t', 'Fun') %>"
-         data-label-wyr="<%= t('customQuiz:pat_wyr_t', 'Tu préfères…') %>"
-         data-label-questions="<%= t('customQuiz:questions_short', 'questions') %>"
+         data-label-points="<%= t('common:communityQuiz.points', 'Quiz à points') %>"
+         data-label-truefalse="<%= t('common:communityQuiz.trueFalse', 'Vrai ou Faux') %>"
+         data-label-fun="<%= t('common:communityQuiz.fun', 'Fun') %>"
+         data-label-wyr="<%= t('common:communityQuiz.wouldYouRather', 'Tu préfères…') %>"
+         data-label-questions="<%= t('common:communityQuiz.questionsShort', 'questions') %>"
          data-label-play="<%= t('home:customQuizPromo.popularCta', 'Jouer') %>"
          hidden>
       <div class="home-popular-head">
@@ -544,7 +544,7 @@
               <label class="block text-sm font-medium mb-1.5"><%= t('common:reviews.ratingLabel', 'Votre note') %></label>
               <div class="flex gap-1" id="review-stars">
                 <% for (var s = 1; s <= 5; s++) { %>
-                <button type="button" data-star="<%= s %>" class="star-btn p-0.5 transition-transform hover:scale-110" aria-label="<%= s %> étoiles">
+                <button type="button" data-star="<%= s %>" class="star-btn p-0.5 transition-transform hover:scale-110" aria-label="<%= s %> <%= t('common:reviews.stars', 'étoiles') %>">
                   <svg viewBox="0 0 24 24" class="w-7 h-7 star-empty"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 </button>
                 <% } %>

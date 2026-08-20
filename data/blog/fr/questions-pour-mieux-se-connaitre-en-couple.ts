@@ -126,6 +126,13 @@ const article: BlogArticleData = {
       title: "Et maintenant, transformez l'essai",
       content: `<p>Si vous avez joué le jeu jusqu'ici, vous avez récolté des surprises, c'est garanti. Gardez le réflexe : dix questions par soirée, une fois par mois, et votre couple ne retombera jamais dans le pilote automatique. C'est exactement le même principe que les grandes soirées de <a href="/questions-couple/">questions pour couple</a>... l'habitude en plus.</p>
 <p>Il reste un truc amusant à faire avec tout ce que vous venez d'apprendre. Vous croyez avoir bien écouté l'autre ? Vraiment bien ?</p>
+<div><table><thead><tr><th>Le territoire</th><th>Ce qu'on y trouve</th></tr></thead><tbody>
+<tr><td>Vos racines</td><td>Ce qui a fabriqué ses réflexes, bien avant toi</td></tr>
+<tr><td>Votre quotidien</td><td>Les petites choses qui pèsent et qu'on ne dit pas</td></tr>
+<tr><td>Vos profondeurs</td><td>Les peurs et les fiertés qui ne sortent jamais seules</td></tr>
+<tr><td>Votre couple</td><td>Votre histoire, racontée par l'autre</td></tr>
+<tr><td>Vos envies</td><td>Ce que chacun espère encore, et n'a jamais formulé</td></tr>
+</tbody></table></div>
 <div class="blog-cta">
 <p class="blog-cta-titre">Prouvez que vous avez écouté</p>
 <p class="blog-cta-texte">Le quiz « qui connaît le mieux l'autre » transforme vos découvertes en défi : chacun répond, on compare, et on voit qui a vraiment fait attention pendant toutes ces conversations. Revanche autorisée le mois prochain.</p>

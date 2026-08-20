@@ -27,14 +27,23 @@ const article: BlogArticleData = {
       title: "Les 7 signes d'une relation toxique",
       content: `<p>Aucun de ces signes ne se juge sur un épisode isolé, on l'a dit. Regarde la tendance sur plusieurs mois... et sois honnête avec toi-même, c'est le seul prérequis.</p>
 <ol>
-<li><strong>Tu vas moins bien depuis cette relation.</strong> Le signe le plus simple, et le plus ignoré. Sommeil, humeur, énergie, confiance : fais le comparatif avant/maintenant. Une relation peut traverser des orages ; elle ne devrait pas dégrader ta santé de fond.</li>
-<li><strong>Les conflits tournent en boucle, sans jamais rien régler.</strong> La même dispute revient, avec les mêmes phrases, les mêmes positions... et aucune n'aboutit à un changement. Se disputer n'est pas un signe de toxicité. Se disputer pour rien changer, si.</li>
-<li><strong>Tu marches sur des œufs.</strong> Tu calcules tes mots, tu choisis « le bon moment », tu renonces à des sujets entiers pour éviter la réaction d'en face. Quand la prudence devient ton mode de communication par défaut, quelque chose ne va vraiment pas.</li>
-<li><strong>Le compteur des torts ne tourne que dans un sens.</strong> À la fin de chaque conflit, c'est toi qui t'excuses. Toi qui répares, toi qui fais l'effort. Un couple sain se partage les torts de façon à peu près équitable sur la durée... pas à 90/10.</li>
-<li><strong>Ta vie extérieure a rétréci.</strong> Amis moins vus, famille mise à distance, activités abandonnées. Peu importe le mécanisme, reproches, crises, ou simple épuisement : si la relation a asséché le reste de ta vie, c'est un signal majeur.</li>
-<li><strong>Le chantage affectif fait partie du fonctionnement.</strong> L'amour, l'humeur ou la présence de l'autre sont conditionnés à ton obéissance. « Si tu m'aimais, tu... », les silences punitifs, les menaces de partir dégainées à chaque désaccord... L'affection est devenue une monnaie.</li>
-<li><strong>Tu ne te reconnais plus.</strong> Plus méfiante, plus éteinte, plus dure, ou simplement plus petite... Quand plusieurs proches te disent « tu as changé » et que ce n'est pas un compliment, écoute-les. Ils voient ce que l'intérieur de la relation t'empêche de voir.</li>
-</ol>`,
+<li><strong>Tu vas moins bien depuis cette relation :</strong> Le signe le plus simple, et le plus ignoré. Sommeil, humeur, énergie, confiance : fais le comparatif avant/maintenant. Une relation peut traverser des orages ; elle ne devrait pas dégrader ta santé de fond.</li>
+<li><strong>Les conflits tournent en boucle, sans jamais rien régler :</strong> La même dispute revient, avec les mêmes phrases, les mêmes positions... et aucune n'aboutit à un changement. Se disputer n'est pas un signe de toxicité. Se disputer pour rien changer, si.</li>
+<li><strong>Tu marches sur des œufs :</strong> Tu calcules tes mots, tu choisis « le bon moment », tu renonces à des sujets entiers pour éviter la réaction d'en face. Quand la prudence devient ton mode de communication par défaut, quelque chose ne va vraiment pas.</li>
+<li><strong>Le compteur des torts ne tourne que dans un sens :</strong> À la fin de chaque conflit, c'est toi qui t'excuses. Toi qui répares, toi qui fais l'effort. Un couple sain se partage les torts de façon à peu près équitable sur la durée... pas à 90/10.</li>
+<li><strong>Ta vie extérieure a rétréci :</strong> Amis moins vus, famille mise à distance, activités abandonnées. Peu importe le mécanisme, reproches, crises, ou simple épuisement : si la relation a asséché le reste de ta vie, c'est un signal majeur.</li>
+<li><strong>Le chantage affectif fait partie du fonctionnement :</strong> L'amour, l'humeur ou la présence de l'autre sont conditionnés à ton obéissance. « Si tu m'aimais, tu... », les silences punitifs, les menaces de partir dégainées à chaque désaccord... L'affection est devenue une monnaie.</li>
+<li><strong>Tu ne te reconnais plus :</strong> Plus méfiante, plus éteinte, plus dure, ou simplement plus petite... Quand plusieurs proches te disent « tu as changé » et que ce n'est pas un compliment, écoute-les. Ils voient ce que l'intérieur de la relation t'empêche de voir.</li>
+</ol>
+<div><table><thead><tr><th>Le signe</th><th>Où ça se voit en premier</th></tr></thead><tbody>
+<tr><td>Tu vas moins bien depuis cette relation</td><td>Ton sommeil, ton énergie, ton humeur de fond</td></tr>
+<tr><td>Les conflits tournent en boucle</td><td>La même dispute, mot pour mot, depuis des mois</td></tr>
+<tr><td>Tu marches sur des œufs</td><td>Le temps que tu passes à choisir tes mots</td></tr>
+<tr><td>Le compteur des torts ne tourne que dans un sens</td><td>Qui s'excuse, à la fin, à chaque fois</td></tr>
+<tr><td>Ta vie extérieure a rétréci</td><td>Ton agenda, tes amis, tes projets à toi</td></tr>
+<tr><td>Le chantage affectif fait partie du fonctionnement</td><td>Ce qui arrive quand tu dis non</td></tr>
+<tr><td>Tu ne te reconnais plus</td><td>L'écart entre qui tu étais avant et maintenant</td></tr>
+</tbody></table></div>`,
     },
     {
       id: 'toxique-ou-passe-difficile',
@@ -67,13 +76,23 @@ const article: BlogArticleData = {
     {
       id: 'toxique-ne-veut-pas-dire-manipulateur',
       title: "Nuance importante : toxique ne veut pas toujours dire manipulateur",
-      content: `<p>C'est le point que presque tous les articles ratent, et il change pourtant toute la suite. Il existe deux grandes familles de relations toxiques, et elles n'ont pas le même pronostic.</p>
-<p><strong>La dynamique toxique à deux.</strong> Deux personnes pas méchantes du tout peuvent fabriquer, ensemble, un système qui les abîme : l'une poursuit, l'autre fuit ; l'une explose, l'autre se ferme ; les blessures de l'une activent les blessures de l'autre... Personne ne manipule personne, et pourtant tout le monde souffre. La bonne nouvelle : ces dynamiques-là, quand les deux en prennent conscience, se travaillent réellement.</p>
-<p><strong>L'emprise d'un seul.</strong> Là, la toxicité n'est pas un accident du système : elle est le système. Contrôle, culpabilisation, dévalorisation, isolement... organisés au bénéfice d'un seul. Si les signes que tu coches ressemblent à ceux du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a>, ou aux <a href="/blog/manipulateur-narcissique/">techniques du manipulateur narcissique</a>, tu n'es plus dans la dynamique malheureuse : tu es dans la relation d'emprise. Et ça, ça ne se « répare » pas à deux, puisque l'un des deux n'a aucun intérêt à ce que ça change.</p>
+      content: `<p>C'est le point que presque tous les articles ratent, et il change pourtant toute la suite. Il existe deux grandes familles de relations toxiques, et elles n'ont pas le même pronostic.</p>`,
+      subsections: [
+        {
+          id: 'la-dynamique-toxique-a-deux',
+          title: "La dynamique toxique à deux",
+          content: `<p>Deux personnes pas méchantes du tout peuvent fabriquer, ensemble, un système qui les abîme : l'une poursuit, l'autre fuit ; l'une explose, l'autre se ferme ; les blessures de l'une activent les blessures de l'autre... Personne ne manipule personne, et pourtant tout le monde souffre. La bonne nouvelle : ces dynamiques-là, quand les deux en prennent conscience, se travaillent réellement.</p>`,
+        },
+        {
+          id: 'l-emprise-d-un-seul',
+          title: "L'emprise d'un seul",
+          content: `<p>Là, la toxicité n'est pas un accident du système : elle est le système. Contrôle, culpabilisation, dévalorisation, isolement... organisés au bénéfice d'un seul. Si les signes que tu coches ressemblent à ceux du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a>, ou aux <a href="/blog/manipulateur-narcissique/">techniques du manipulateur narcissique</a>, tu n'es plus dans la dynamique malheureuse : tu es dans la relation d'emprise. Et ça, ça ne se « répare » pas à deux, puisque l'un des deux n'a aucun intérêt à ce que ça change.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Comment savoir dans quelle famille tu es ?</p>
 <p>Un indice fiable : propose un vrai changement, thérapie de couple, nouvelles règles, efforts précis et datés. Dans une dynamique à deux, l'autre est soulagé qu'on en parle, même maladroitement. Dans une emprise, la proposition elle-même devient une agression... et te voilà encore une fois en train de t'excuser.</p>
 </aside>`,
+        },
+      ],
     },
     {
       id: 'est-ce-que-ca-se-repare',
@@ -88,6 +107,10 @@ const article: BlogArticleData = {
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
 <p>Et si en lisant tout ça, une petite voix te dit « je sais déjà, en fait »... écoute-la. On sait souvent bien avant d'oser savoir. La liste des <a href="/blog/choses-pas-accepter-couple/">choses à ne jamais accepter dans un couple</a> peut t'aider à remettre tes limites au clair, noir sur blanc. C'est souvent le premier pas qui compte.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ Si tu es en danger, ne reste pas seul(e) avec un article</p>
+<p>Menaces, contrôle de ton argent ou de tes déplacements, violence physique même « une seule fois » : en France, le 3919 est gratuit, anonyme, ouvert 24h/24, et il écoute les femmes comme les hommes. En cas d'urgence immédiate, le 17, ou le 114 par SMS quand tu ne peux pas parler.</p>
+</aside>
 <a href="/blog/pervers-narcissique-amour/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Pervers narcissique en amour : reconnaître l'emprise quand on est en plein dedans</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

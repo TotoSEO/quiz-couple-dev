@@ -27,24 +27,48 @@ const article: BlogArticleData = {
       title: "Les 4 conditions d'un pardon possible",
       content: `<p>Les couples qui survivent réellement à une infidélité, pas ceux qui font semblant, cochent presque toujours ces quatre cases. Regarde-les comme une grille de lecture de TA situation.</p>
 <ol>
-<li><strong>La responsabilité pleine, en face.</strong> La condition zéro. Celui qui a trompé porte l'acte, entièrement : pas de « oui mais tu étais distante », pas de « c'est arrivé, c'est tout », pas de vérité au compte-gouttes qui suinte pendant des semaines... Quelqu'un qui minimise, marchande ou retourne la faute ne te demande pas un pardon : il te demande un classement sans suite. Ce n'est pas la même chose, et ça ne se pardonne pas, ça s'enterre.</li>
-<li><strong>La transparence acceptée, pour un temps.</strong> Après la trahison, la confiance ne se décrète pas : elle se reconstruit par les actes, et ça passe par une période de transparence volontaire... proposée plutôt qu'arrachée. Le partenaire qui s'offusque de devoir « rendre des comptes » trois semaines après avoir menti pendant six mois te dit quelque chose d'important sur la suite.</li>
-<li><strong>La compréhension du pourquoi.</strong> Pas l'excuse : la compréhension. Une infidélité a toujours un contexte, une faille personnelle chez celui qui trompe, parfois une fissure du couple, souvent les deux... S'il est incapable d'expliquer ce qui s'est joué (« je ne sais pas, c'est arrivé »), rien ne protège de la répétition. Le pourquoi n'excuse rien ; il est juste la seule assurance qui existe.</li>
-<li><strong>Un couple qui valait le prix, avant.</strong> La question qu'on n'ose pas poser : la relation d'avant méritait-elle d'être sauvée ? Si l'infidélité est le pire accident d'une belle histoire, le pardon investit dans quelque chose... Si elle n'est que la dernière avanie d'une relation qui te coûtait déjà, le pardon prolonge quelque chose. Les <a href="/blog/relation-toxique-signes/">critères d'une relation toxique</a> aident à répondre honnêtement... et si les infidélités sont répétées, assorties de mensonges en cascade et de retournements, tu n'es plus face à un accident mais face à un fonctionnement.</li>
-</ol>`,
+<li><strong>La responsabilité pleine, en face :</strong> La condition zéro. Celui qui a trompé porte l'acte, entièrement : pas de « oui mais tu étais distante », pas de « c'est arrivé, c'est tout », pas de vérité au compte-gouttes qui suinte pendant des semaines... Quelqu'un qui minimise, marchande ou retourne la faute ne te demande pas un pardon : il te demande un classement sans suite. Ce n'est pas la même chose, et ça ne se pardonne pas, ça s'enterre.</li>
+<li><strong>La transparence acceptée, pour un temps :</strong> Après la trahison, la confiance ne se décrète pas : elle se reconstruit par les actes, et ça passe par une période de transparence volontaire... proposée plutôt qu'arrachée. Le partenaire qui s'offusque de devoir « rendre des comptes » trois semaines après avoir menti pendant six mois te dit quelque chose d'important sur la suite.</li>
+<li><strong>La compréhension du pourquoi :</strong> Pas l'excuse : la compréhension. Une infidélité a toujours un contexte, une faille personnelle chez celui qui trompe, parfois une fissure du couple, souvent les deux... S'il est incapable d'expliquer ce qui s'est joué (« je ne sais pas, c'est arrivé »), rien ne protège de la répétition. Le pourquoi n'excuse rien ; il est juste la seule assurance qui existe.</li>
+<li><strong>Un couple qui valait le prix, avant :</strong> La question qu'on n'ose pas poser : la relation d'avant méritait-elle d'être sauvée ? Si l'infidélité est le pire accident d'une belle histoire, le pardon investit dans quelque chose... Si elle n'est que la dernière avanie d'une relation qui te coûtait déjà, le pardon prolonge quelque chose. Les <a href="/blog/relation-toxique-signes/">critères d'une relation toxique</a> aident à répondre honnêtement... et si les infidélités sont répétées, assorties de mensonges en cascade et de retournements, tu n'es plus face à un accident mais face à un fonctionnement.</li>
+</ol>
+<div><table><thead><tr><th>La condition</th><th>Ce que ça donne concrètement</th><th>Le signe qu'elle n'est pas remplie</th></tr></thead><tbody>
+<tr><td><strong>La responsabilité pleine</strong></td><td>Il porte son acte sans le partager avec toi</td><td>« Si tu avais été plus... »</td></tr>
+<tr><td><strong>La transparence acceptée</strong></td><td>Il ouvre, sans que tu aies à fouiller</td><td>« Tu ne me fais toujours pas confiance ? »</td></tr>
+<tr><td><strong>La compréhension du pourquoi</strong></td><td>Vous savez tous les deux ce qui a rendu ça possible</td><td>« Je ne sais pas, c'est arrivé »</td></tr>
+<tr><td><strong>Un couple qui valait le prix</strong></td><td>Il y avait quelque chose de bon avant, pas seulement de l'habitude</td><td>Vous ne retrouvez rien à sauver en cherchant</td></tr>
+</tbody></table></div>`,
     },
     {
       id: 'le-chemin-du-pardon',
       title: "Le chemin du pardon réel (si les conditions sont là)",
-      content: `<p>Si les quatre conditions sont réunies et que tu choisis de rester, voici à quoi ressemble le vrai chemin... parce que personne ne te le décrit jamais honnêtement.</p>
-<p><strong>Ça prend des mois, et ce n'est pas linéaire.</strong> Le pardon d'une infidélité n'est pas une décision d'un soir : c'est un processus, avec des rechutes prévues au programme... Des semaines correctes, puis une image qui remonte, une date anniversaire, un détail... et une vague de colère comme au premier jour. Ces vagues ne signifient pas que tu n'y arrives pas : elles font partie du trajet, et elles s'espacent.</p>
-<p><strong>Tu as droit à toutes tes questions... une période.</strong> Le besoin de savoir (quand, où, combien de temps) est légitime et fait partie de la reconstruction : les réponses, même douloureuses, remplacent les scénarios imaginaires qui sont pires... Mais l'interrogatoire sans fin devient un poison à retardement. La règle des couples qui s'en sortent : une période de questions ouvertes, puis, ensemble, une clôture. On sait, on a dit, on avance.</p>
-<p><strong>Le couple d'avant ne revient pas... et c'est le but.</strong> La donnée que confirment tous les thérapeutes : les couples qui survivent ne « redeviennent » pas ce qu'ils étaient. Ils construisent une deuxième relation, avec les mêmes personnes... souvent plus honnête que la première, parce que tout a été mis sur la table. Si ton objectif est de retrouver l'innocence d'avant, tu seras déçue ; si c'est de construire quelque chose de plus vrai, c'est possible.</p>
-<p><strong>Et l'aide extérieure change les statistiques.</strong> Une thérapie de couple après infidélité n'est pas un aveu d'échec : c'est l'endroit où les conversations impossibles deviennent possibles, avec un arbitre... Les couples accompagnés s'en sortent nettement mieux, tout simplement.</p>
+      content: `<p>Si les quatre conditions sont réunies et que tu choisis de rester, voici à quoi ressemble le vrai chemin... parce que personne ne te le décrit jamais honnêtement.</p>`,
+      subsections: [
+        {
+          id: 'ca-prend-des-mois-et-ce',
+          title: "Ça prend des mois, et ce n'est pas linéaire",
+          content: `<p>Le pardon d'une infidélité n'est pas une décision d'un soir : c'est un processus, avec des rechutes prévues au programme... Des semaines correctes, puis une image qui remonte, une date anniversaire, un détail... et une vague de colère comme au premier jour. Ces vagues ne signifient pas que tu n'y arrives pas : elles font partie du trajet, et elles s'espacent.</p>`,
+        },
+        {
+          id: 'tu-as-droit-a-toutes-tes',
+          title: "Tu as droit à toutes tes questions, mais pas indéfiniment",
+          content: `<p>Le besoin de savoir (quand, où, combien de temps) est légitime et fait partie de la reconstruction : les réponses, même douloureuses, remplacent les scénarios imaginaires qui sont pires... Mais l'interrogatoire sans fin devient un poison à retardement. La règle des couples qui s'en sortent : une période de questions ouvertes, puis, ensemble, une clôture. On sait, on a dit, on avance.</p>`,
+        },
+        {
+          id: 'le-couple-d-avant-ne-revient',
+          title: "Le couple d'avant ne revient pas... et c'est le but",
+          content: `<p>La donnée que confirment tous les thérapeutes : les couples qui survivent ne « redeviennent » pas ce qu'ils étaient. Ils construisent une deuxième relation, avec les mêmes personnes... souvent plus honnête que la première, parce que tout a été mis sur la table. Si ton objectif est de retrouver l'innocence d'avant, tu seras déçue ; si c'est de construire quelque chose de plus vrai, c'est possible.</p>`,
+        },
+        {
+          id: 'et-l-aide-exterieure-change-les',
+          title: "L'aide extérieure change les statistiques",
+          content: `<p>Une thérapie de couple après infidélité n'est pas un aveu d'échec : c'est l'endroit où les conversations impossibles deviennent possibles, avec un arbitre... Les couples accompagnés s'en sortent nettement mieux, tout simplement.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Le faux pardon : le pire des trois scénarios</p>
 <p>Il y a pire que partir, et pire que pardonner : rester sans pardonner. Le « pardon » de façade qui ressort l'infidélité à chaque dispute, la surveillance à vie, la dette éternelle... Ce scénario détruit les deux : l'un vit en liberté surveillée permanente, l'autre en procureur à plein temps. Si, après un an et de vrais efforts en face, la colère est intacte et la confiance à zéro... ce n'est pas un échec moral. C'est une information : pour toi, avec lui, ce n'était pas pardonnable. Et il vaut mieux en tirer les conséquences que de purger une peine à deux.</p>
 </aside>`,
+        },
+      ],
     },
     {
       id: 'quand-partir-est-la-bonne-reponse',

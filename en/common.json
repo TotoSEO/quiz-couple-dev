@@ -109,7 +109,14 @@
     "submit": "Submit",
     "thankYou": "Thank you for your review!",
     "pending": "Your review is pending moderation",
-    "anonymous": "Anonymous"
+    "anonymous": "Anonymous",
+    "badge": "Verified reviews",
+    "namePlaceholder": "Name or nickname",
+    "ratingLabel": "Your rating",
+    "commentLabel": "Your comment",
+    "optional": "optional",
+    "commentPlaceholder": "Share your experience...",
+    "stars": "stars"
   },
   "blog": {
     "pageTitle": "Blog - Tips & Advice for Couples | Quiz Couple",
@@ -120,7 +127,8 @@
     "tableOfContents": "Table of contents",
     "quickSummary": "Quick summary",
     "tip": "💡 Good to know",
-    "noArticles": "No articles yet. Check back soon!"
+    "noArticles": "No articles yet. Check back soon!",
+    "seeAll": "See all articles"
   },
   "notFound": {
     "title": "Page not found",
@@ -128,5 +136,12 @@
     "message": "Oops! The page you are looking for does not exist or has been moved. Don't worry, go back to the homepage to discover our couple quizzes.",
     "backHome": "Back to homepage",
     "seeQuestions": "See questions"
+  },
+  "communityQuiz": {
+    "points": "Points quiz",
+    "trueFalse": "True or False",
+    "fun": "Fun",
+    "wouldYouRather": "Would you rather…",
+    "questionsShort": "questions"
   }
 }

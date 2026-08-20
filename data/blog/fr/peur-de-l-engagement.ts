@@ -25,11 +25,35 @@ const article: BlogArticleData = {
     {
       id: 'les-vraies-causes',
       title: "Ce qui se cache vraiment derrière la peur de l'engagement",
-      content: `<p>« Phobie de l'engagement », l'expression fait sourire... mais le mécanisme est sérieux, et il a presque toujours l'une de ces quatre racines.</p>
-<p><strong>Le naufrage vu de près.</strong> Grandir dans les décombres d'un couple parental, divorce guerrier, mariage mort-vivant, laisse une équation gravée : engagement = piège. Celui qui bloque ne fuit pas l'amour... il fuit la reproduction d'un désastre dont il connaît chaque détail. Souvent, il le dit d'ailleurs avec ces mots : « je ne veux pas qu'on finisse comme mes parents ».</p>
-<p><strong>Les cicatrices d'ex.</strong> Une trahison, une rupture brutale, une relation d'emprise... et le système conclut : plus jamais démuni. L'engagement devient une exposition au tir, et la distance une armure. C'est une peur qui se respecte... et qui se soigne, parce qu'une armure permanente est une prison à retardement.</p>
-<p><strong>L'attachement évitant.</strong> La racine la plus fréquente : ce style d'attachement pour qui la proximité elle-même déclenche l'alarme. Si le refroidissement arrive à CHAQUE étape franchie, avec un besoin d'espace non négociable et un malaise face aux émotions, le sujet dépasse l'engagement : c'est le portrait type de l'<a href="/blog/attachement-evitant/">attachement évitant en amour</a>, et il éclaire tout le reste.</p>
-<p><strong>Le mythe du choix parfait.</strong> Version moderne, nourrie par la culture du match illimité : s'engager, c'est renoncer à toutes les autres options... et si LA bonne personne était la prochaine ? Ce vertige-là n'est pas une peur de l'engagement au sens strict, c'est une incapacité à choisir, entretenue par l'illusion qu'un choix parfait existe. Indice : les gens heureux en couple n'ont pas trouvé le choix parfait. Ils ont arrêté d'en chercher un.</p>`,
+      content: `<p>« Phobie de l'engagement », l'expression fait sourire... mais le mécanisme est sérieux, et il a presque toujours l'une de ces quatre racines.</p>`,
+      subsections: [
+        {
+          id: 'le-naufrage-vu-de-pres',
+          title: "Le naufrage vu de près",
+          content: `<p>Grandir dans les décombres d'un couple parental, divorce guerrier, mariage mort-vivant, laisse une équation gravée : engagement = piège. Celui qui bloque ne fuit pas l'amour... il fuit la reproduction d'un désastre dont il connaît chaque détail. Souvent, il le dit d'ailleurs avec ces mots : « je ne veux pas qu'on finisse comme mes parents ».</p>`,
+        },
+        {
+          id: 'les-cicatrices-d-ex',
+          title: "Les cicatrices laissées par un ex",
+          content: `<p> Une trahison, une rupture brutale, une relation d'emprise... et le système conclut : plus jamais démuni. L'engagement devient une exposition au tir, et la distance une armure. C'est une peur qui se respecte... et qui se soigne, parce qu'une armure permanente est une prison à retardement.</p>`,
+        },
+        {
+          id: 'l-attachement-evitant',
+          title: "L'attachement évitant",
+          content: `<p>La racine la plus fréquente : ce style d'attachement pour qui la proximité elle-même déclenche l'alarme. Si le refroidissement arrive à CHAQUE étape franchie, avec un besoin d'espace non négociable et un malaise face aux émotions, le sujet dépasse l'engagement : c'est le portrait type de l'<a href="/blog/attachement-evitant/">attachement évitant en amour</a>, et il éclaire tout le reste.</p>`,
+        },
+        {
+          id: 'le-mythe-du-choix-parfait',
+          title: "Le mythe du choix parfait",
+          content: `<p>Version moderne, nourrie par la culture du match illimité : s'engager, c'est renoncer à toutes les autres options... et si LA bonne personne était la prochaine ? Ce vertige-là n'est pas une peur de l'engagement au sens strict, c'est une incapacité à choisir, entretenue par l'illusion qu'un choix parfait existe. Indice : les gens heureux en couple n'ont pas trouvé le choix parfait. Ils ont arrêté d'en chercher un.</p>
+<div><table><thead><tr><th>La cause</th><th>Ce qu'elle fait croire</th><th>Ce qui la desserre</th></tr></thead><tbody>
+<tr><td><strong>Le naufrage vu de près</strong></td><td>S'engager finit toujours mal</td><td>Séparer leur histoire de la vôtre</td></tr>
+<tr><td><strong>Les cicatrices d'ex</strong></td><td>Ça va recommencer pareil</td><td>Nommer ce qui n'a rien à voir cette fois</td></tr>
+<tr><td><strong>L'attachement évitant</strong></td><td>Se lier, c'est se perdre</td><td>Rester cinq minutes de plus, à chaque fois</td></tr>
+<tr><td><strong>Le mythe du choix parfait</strong></td><td>Il y a mieux ailleurs, forcément</td><td>Découper l'engagement en petits pas réels</td></tr>
+</tbody></table></div>`,
+        },
+      ],
     },
     {
       id: 'peur-ou-desinteret',
@@ -62,10 +86,24 @@ const article: BlogArticleData = {
     {
       id: 'avancer-quand-on-a-peur',
       title: "Avancer quand la peur est la tienne",
-      content: `<p>Si c'est toi qui bloques, voici le programme qui marche... et il ne commence pas par « saute dans le vide ».</p>
-<p><strong>Découpe l'engagement.</strong> La peur de l'engagement est presque toujours une peur du paquet complet : le mariage-la-maison-les-enfants-pour-toujours, avalé d'un coup... Personne n'avale ça d'un coup ! Découpe : le prochain pas, seulement le prochain. Un week-end prévu à deux mois. Un tiroir chez l'autre. Puis un mois de vacances. Chaque pas franchi sans catastrophe recalibre le système... exactement comme pour toutes les peurs.</p>
-<p><strong>Sépare l'histoire ancienne du présent.</strong> Écris noir sur blanc de quoi tu as VRAIMENT peur : finir comme tes parents ? Revivre ton ex ? Perdre quoi, précisément ?... Puis regarde ta relation actuelle et cherche les preuves que ce scénario s'y prépare. Dans la grande majorité des cas, tu découvriras que ta peur a vingt ans de plus que ton couple : tu n'as pas peur de cette histoire-ci, tu as peur d'une histoire déjà finie. Ce constat, à lui seul, débloque beaucoup.</p>
-<p><strong>Et dis où tu en es.</strong> Le pire pour l'autre n'est pas ta lenteur, c'est ton silence. « J'ai peur, je sais d'où ça vient, et voilà le pas que je me sens capable de faire ce trimestre »... cette phrase-là sauve des couples. Elle transforme une attente sans fin en chemin avec des étapes. Si tu ne peux pas la dire, c'est peut-être que la réponse du tableau ci-dessus n'est pas celle que tu crois... et l'honnêteté, là aussi, vaut mieux que l'entre-deux.</p>`,
+      content: `<p>Si c'est toi qui bloques, voici le programme qui marche... et il ne commence pas par « saute dans le vide ».</p>`,
+      subsections: [
+        {
+          id: 'decoupe-l-engagement',
+          title: "Découpe l'engagement",
+          content: `<p>La peur de l'engagement est presque toujours une peur du paquet complet : le mariage-la-maison-les-enfants-pour-toujours, avalé d'un coup... Personne n'avale ça d'un coup ! Découpe : le prochain pas, seulement le prochain. Un week-end prévu à deux mois. Un tiroir chez l'autre. Puis un mois de vacances. Chaque pas franchi sans catastrophe recalibre le système... exactement comme pour toutes les peurs.</p>`,
+        },
+        {
+          id: 'separe-l-histoire-ancienne-du-present',
+          title: "Sépare l'histoire ancienne du présent",
+          content: `<p>Écris noir sur blanc de quoi tu as VRAIMENT peur : finir comme tes parents ? Revivre ton ex ? Perdre quoi, précisément ?... Puis regarde ta relation actuelle et cherche les preuves que ce scénario s'y prépare. Dans la grande majorité des cas, tu découvriras que ta peur a vingt ans de plus que ton couple : tu n'as pas peur de cette histoire-ci, tu as peur d'une histoire déjà finie. Ce constat, à lui seul, débloque beaucoup.</p>`,
+        },
+        {
+          id: 'et-dis-ou-tu-en-es',
+          title: "Dire où tu en es",
+          content: `<p>Le pire pour l'autre n'est pas ta lenteur, c'est ton silence. « J'ai peur, je sais d'où ça vient, et voilà le pas que je me sens capable de faire ce trimestre »... cette phrase-là sauve des couples. Elle transforme une attente sans fin en chemin avec des étapes. Si tu ne peux pas la dire, c'est peut-être que la réponse du tableau ci-dessus n'est pas celle que tu crois... et l'honnêteté, là aussi, vaut mieux que l'entre-deux.</p>`,
+        },
+      ],
     },
     {
       id: 'attendre-ou-partir',

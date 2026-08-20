@@ -64,22 +64,36 @@ const article: BlogArticleData = {
     {
       id: 'le-cycle',
       title: "Le cycle : idéalisation, dévaluation, rejet, et rebelote",
-      content: `<p>Une relation d'emprise ne s'installe pas d'un coup. Elle suit un cycle bien documenté, en trois temps, et le connaître aide énormément à s'y retrouver dans ce qu'on vit.</p>
-<p><strong>L'idéalisation, d'abord.</strong> Un début d'histoire irréel : messages permanents, déclarations très tôt, projets immédiats, ce sentiment d'avoir enfin rencontré quelqu'un qui te comprend entièrement... Cette phase mérite un décryptage à elle toute seule, c'est exactement le <a href="/blog/love-bombing/">love bombing et ses trois phases</a>. Son rôle : créer l'attachement avant que ton esprit critique ait eu le temps de faire son travail.</p>
-<p><strong>La dévaluation, ensuite.</strong> Le regard qui s'éteint, les critiques qui commencent par « c'est pour ton bien », les comparaisons, les silences punitifs. Rarement un basculement net, d'ailleurs. C'est plutôt comme un thermostat qu'on baisse degré par degré, si lentement que tu t'adaptes au froid sans même le remarquer.</p>
-<p><strong>Le rejet, enfin. Ou la menace du rejet.</strong> Il te laisse, ou il te laisse croire qu'il va le faire, et te voilà en train de te battre pour reconquérir quelqu'un qui te maltraite... Le pire ? Quand tu commences vraiment à te détacher, l'idéalisation revient comme par miracle. Promesses, larmes, le retour de l'homme des débuts. Et le cycle repart pour un tour, un peu plus court et un peu plus violent que le précédent. C'est exactement pour ça que la <a href="/blog/rupture-pervers-narcissique/">rupture avec un pervers narcissique</a> est chaque fois plus difficile à tenir.</p>`,
+      content: `<p>Une relation d'emprise ne s'installe pas d'un coup. Elle suit un cycle bien documenté, en trois temps, et le connaître aide énormément à s'y retrouver dans ce qu'on vit.</p>`,
+      subsections: [
+        {
+          id: 'cycle-idealisation',
+          title: "L'idéalisation : le début trop parfait",
+          content: `<p>Un début d'histoire irréel : messages permanents, déclarations très tôt, projets immédiats, ce sentiment d'avoir enfin rencontré quelqu'un qui te comprend entièrement... Cette phase mérite un décryptage à elle toute seule, c'est exactement le <a href="/blog/love-bombing/">love bombing et ses trois phases</a>. Son rôle : créer l'attachement avant que ton esprit critique ait eu le temps de faire son travail.</p>`,
+        },
+        {
+          id: 'cycle-devaluation',
+          title: "La dévaluation : le thermostat qu'on baisse",
+          content: `<p>Le regard qui s'éteint, les critiques qui commencent par « c'est pour ton bien », les comparaisons, les silences punitifs. Rarement un basculement net, d'ailleurs. C'est plutôt comme un thermostat qu'on baisse degré par degré, si lentement que tu t'adaptes au froid sans même le remarquer.</p>`,
+        },
+        {
+          id: 'cycle-rejet',
+          title: "Le rejet, ou la menace du rejet",
+          content: `<p>Il te laisse, ou il te laisse croire qu'il va le faire, et te voilà en train de te battre pour reconquérir quelqu'un qui te maltraite... Le pire ? Quand tu commences vraiment à te détacher, l'idéalisation revient comme par miracle. Promesses, larmes, le retour de l'homme des débuts. Et le cycle repart pour un tour, un peu plus court et un peu plus violent que le précédent. C'est exactement pour ça que la <a href="/blog/rupture-pervers-narcissique/">rupture avec un pervers narcissique</a> est chaque fois plus difficile à tenir.</p>`,
+        },
+      ],
     },
     {
       id: 'les-signes-en-amour',
       title: "Les signes qui comptent vraiment en amour",
       content: `<p>Des listes de vingt signes, tu en trouveras partout. Le problème, c'est que prises une par une, elles décrivent la moitié des couples qui traversent une mauvaise passe ! Voici plutôt les six signaux qui, ensemble et dans la durée, dessinent une emprise. Et remarque leur point commun : <strong>les plus fiables ne se voient pas chez lui, ils se voient chez toi.</strong></p>
 <ol>
-<li><strong>Tu n'arrives plus à raconter ta relation.</strong> Quand une amie te demande comment ça va, tu ne sais pas quoi répondre. Trop compliqué, trop de contexte, « il faut le connaître »... Une relation saine, ça se raconte facilement.</li>
-<li><strong>Tu doutes de ta mémoire.</strong> Tu relis des conversations, tu notes des choses en cachette, tu demandes confirmation à des témoins. Réfléchis-y deux secondes : personne ne fait ça dans une relation où la parole est fiable.</li>
+<li><strong>Tu n'arrives plus à raconter ta relation :</strong> Quand une amie te demande comment ça va, tu ne sais pas quoi répondre. Trop compliqué, trop de contexte, « il faut le connaître »... Une relation saine, ça se raconte facilement.</li>
+<li><strong>Tu doutes de ta mémoire :</strong> Tu relis des conversations, tu notes des choses en cachette, tu demandes confirmation à des témoins. Réfléchis-y deux secondes : personne ne fait ça dans une relation où la parole est fiable.</li>
 <li><strong>Il n'a jamais tort. Jamais.</strong> En plusieurs années, tu ne l'as pas vu porter la responsabilité de quoi que ce soit. Ses ex sont folles, ses collègues jaloux, ses échecs sabotés par d'autres... Devine ce que tu deviendras dans le récit.</li>
-<li><strong>Ta valeur dépend de son humeur.</strong> Un jour tu es exceptionnelle, trois jours plus tard tu es « le problème ». Rien n'a changé chez toi entre les deux. C'est le thermostat qui décide, pas toi.</li>
-<li><strong>Tes limites déclenchent des représailles.</strong> Un refus, un désaccord, une soirée sans lui... et voilà le silence glacial, la punition, ou la crise. Pas toujours bruyamment, d'ailleurs : le froid est sa colère préférée, parce qu'elle ne laisse pas de preuve.</li>
-<li><strong>Son vocabulaire tourne en boucle.</strong> « Tu es trop sensible. » « Tu dramatises. » « Personne ne te supporterait à part moi. » Ce ne sont pas des phrases de dispute ordinaires : ce sont les <a href="/blog/phrases-preferees-des-manipulateurs/">phrases préférées des manipulateurs</a>, toujours les mêmes, d'un homme à l'autre.</li>
+<li><strong>Ta valeur dépend de son humeur :</strong> Un jour tu es exceptionnelle, trois jours plus tard tu es « le problème ». Rien n'a changé chez toi entre les deux. C'est le thermostat qui décide, pas toi.</li>
+<li><strong>Tes limites déclenchent des représailles :</strong> Un refus, un désaccord, une soirée sans lui... et voilà le silence glacial, la punition, ou la crise. Pas toujours bruyamment, d'ailleurs : le froid est sa colère préférée, parce qu'elle ne laisse pas de preuve.</li>
+<li><strong>Son vocabulaire tourne en boucle :</strong> « Tu es trop sensible. » « Tu dramatises. » « Personne ne te supporterait à part moi. » Ce ne sont pas des phrases de dispute ordinaires : ce sont les <a href="/blog/phrases-preferees-des-manipulateurs/">phrases préférées des manipulateurs</a>, toujours les mêmes, d'un homme à l'autre.</li>
 </ol>
 <p>Reste la question que tout le monde se pose : et si c'était juste une histoire intense ? Bonne nouvelle, ça se distingue.</p>
 <div class="blog-verdict">
@@ -114,23 +128,47 @@ const article: BlogArticleData = {
     {
       id: 'est-ce-qu-il-aime',
       title: "Est-ce qu'il t'aime ? Est-ce qu'il peut changer ?",
-      content: `<p>Ce sont les deux questions qui retiennent le plus longtemps dans ce genre de relation. Elles méritent des réponses honnêtes, même si elles ne font pas plaisir.</p>
-<p><strong>Est-ce qu'il t'aime ?</strong> Il a besoin de toi, ça oui. Et vu de l'intérieur, ce besoin ressemble beaucoup à de l'amour... Sauf qu'il a besoin de toi comme fonction : régulateur d'image, fournisseur d'admiration, coupable de service. En fait, la question la plus utile n'est pas de savoir ce qu'il ressent, tu n'auras jamais vraiment accès à cette réponse. C'est plutôt : est-ce que la manière dont il t'aime te fait du bien ? Celle-là, tu peux y répondre toute seule.</p>
-<p><strong>Est-ce qu'il peut changer ?</strong> Un trouble narcissique profond évolue rarement, et jamais sous la contrainte d'un ultimatum amoureux. Le piège n'est pas d'espérer un changement, remarque. Le piège, c'est de payer pendant des années le prix d'un espoir que rien n'alimente, à part les redémarrages du cycle. Son éventuel travail sur lui-même, c'est son chantier à lui. Ta protection, c'est le tien.</p>`,
+      content: `<p>Ce sont les deux questions qui retiennent le plus longtemps dans ce genre de relation. Elles méritent des réponses honnêtes, même si elles ne font pas plaisir.</p>`,
+      subsections: [
+        {
+          id: 'est-ce-qu-il-t-aime',
+          title: "Est-ce qu'il t'aime vraiment ?",
+          content: `<p>Il a besoin de toi, ça oui. Et vu de l'intérieur, ce besoin ressemble beaucoup à de l'amour... Sauf qu'il a besoin de toi comme fonction : régulateur d'image, fournisseur d'admiration, coupable de service. En fait, la question la plus utile n'est pas de savoir ce qu'il ressent, tu n'auras jamais vraiment accès à cette réponse. C'est plutôt : est-ce que la manière dont il t'aime te fait du bien ? Celle-là, tu peux y répondre toute seule.</p>`,
+        },
+        {
+          id: 'peut-il-changer',
+          title: "Est-ce qu'un pervers narcissique peut changer ?",
+          content: `<p>Un trouble narcissique profond évolue rarement, et jamais sous la contrainte d'un ultimatum amoureux. Le piège n'est pas d'espérer un changement, remarque. Le piège, c'est de payer pendant des années le prix d'un espoir que rien n'alimente, à part les redémarrages du cycle. Son éventuel travail sur lui-même, c'est son chantier à lui. Ta protection, c'est le tien.</p>`,
+        },
+      ],
     },
     {
       id: 'en-avoir-le-coeur-net',
       title: "Comment en avoir le cœur net",
-      content: `<p>Tu ne trancheras pas en ressassant des souvenirs à 2 heures du matin, le brouillard fait justement partie du dispositif. Ce qui fonctionne, c'est de créer des situations simples, et d'observer des faits.</p>
-<p><strong>Pose une limite banale, une seule, et regarde.</strong> Pas un ultimatum, hein. Juste un « non » ordinaire, du genre que n'importe quel couple encaisse sans y penser. Par exemple : « ce soir je vois Julie, on se retrouve demain ». Sa réaction sur les jours qui suivent vaut tous les discours du monde. Accueil tranquille... ou représailles ?</p>
-<p><strong>Compare les paroles et les actes sur trente jours.</strong> Note ses promesses quelque part, avec la date. Un mois plus tard, compte ce qui a été tenu. L'emprise vit du discours, elle meurt des faits.</p>
-<p><strong>Réactive un regard extérieur.</strong> Reprends contact avec une personne de confiance que tu vois moins depuis cette relation, et raconte-lui une scène précise, factuellement. Tu verras à sa tête si ce que tu décris ressemble à « un couple qui traverse une passe »...</p>
+      content: `<p>Tu ne trancheras pas en ressassant des souvenirs à 2 heures du matin, le brouillard fait justement partie du dispositif. Ce qui fonctionne, c'est de créer des situations simples, et d'observer des faits.</p>`,
+      subsections: [
+        {
+          id: 'test-de-la-limite',
+          title: "Le test de la limite ordinaire",
+          content: `<p>Pas un ultimatum, hein. Juste un « non » ordinaire, du genre que n'importe quel couple encaisse sans y penser. Par exemple : « ce soir je vois Julie, on se retrouve demain ». Sa réaction sur les jours qui suivent vaut tous les discours du monde. Accueil tranquille... ou représailles ?</p>`,
+        },
+        {
+          id: 'paroles-contre-actes',
+          title: "Les paroles contre les actes, sur trente jours",
+          content: `<p>Note ses promesses quelque part, avec la date. Un mois plus tard, compte ce qui a été tenu. L'emprise vit du discours, elle meurt des faits.</p>`,
+        },
+        {
+          id: 'regard-exterieur',
+          title: "Le regard extérieur que tu as mis de côté",
+          content: `<p>Reprends contact avec une personne de confiance que tu vois moins depuis cette relation, et raconte-lui une scène précise, factuellement. Tu verras à sa tête si ce que tu décris ressemble à « un couple qui traverse une passe »...</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Besoin de sortir du brouillard ?</p>
 <p class="blog-cta-texte">Vingt questions reprennent une par une les situations types d'une relation d'emprise, et le résultat met des mots posés sur ce que tu vis. Ce n'est pas un diagnostic : c'est un point de départ que tu peux regarder en face.</p>
 <a class="blog-cta-btn" href="/test-pervers-narcissique/">Faire le point maintenant</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>`,
+        },
+      ],
     },
     {
       id: 'et-maintenant',
@@ -163,6 +201,11 @@ const article: BlogArticleData = {
           id: 'faq-combien-de-temps-pour-s-en-remettre',
           title: "Combien de temps faut-il pour s'en remettre ?",
           content: `<p>Plus longtemps qu'après une rupture ordinaire, et ce n'est pas un défaut de ta part. Il ne s'agit pas seulement de faire le deuil d'une relation : il s'agit de réapprendre à faire confiance à ton propre jugement, ce qui prend du temps. Compte en mois plutôt qu'en semaines, avec des rechutes de doute qui font partie du processus. Un accompagnement psy raccourcit nettement le trajet, par exemple une thérapie spécialisée dans les violences psychologiques.</p>`,
+        },
+        {
+          id: 'faq-et-les-enfants',
+          title: "Et les enfants, comment les protéger ?",
+          content: `<p>Ils en voient bien plus qu'on ne le croit, même très jeunes, et même quand rien n'est dit devant eux : ce sont les tensions, les silences et ton état à toi qu'ils captent. Trois choses aident vraiment. D'abord, ne jamais les mettre en position d'arbitre ni de confident du conflit, c'est un poids qu'un enfant ne sait pas porter. Ensuite, leur offrir un adulte extérieur de confiance, un grand-parent, un professeur, un psychologue pour enfants, parce qu'un regard neuf les protège du récit unique de la maison. Enfin, si une séparation se profile, garde des traces datées : en France, les violences psychologiques au sein du couple sont prises en compte par le juge aux affaires familiales dans les décisions de garde, mais elles se démontrent, elles ne se racontent pas.</p>`,
         },
         {
           id: 'faq-porter-plainte',

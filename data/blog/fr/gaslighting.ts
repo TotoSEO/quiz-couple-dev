@@ -32,11 +32,25 @@ const article: BlogArticleData = {
     {
       id: 'le-mecanisme-en-3-temps',
       title: "Le mécanisme, en trois temps",
-      content: `<p>Le gaslighting ne débarque jamais d'un coup, il monte en puissance par paliers. Les voici dans l'ordre, et tu vas voir que la progression est logique... c'est une escalade de la cible.</p>
-<p><strong>Temps 1 : nier les faits.</strong> « Je n'ai jamais dit ça. » « Tu confonds. » « Ce n'est pas ce qui s'est passé. » À ce stade, on conteste la scène, pas encore toi. C'est déstabilisant, mais tu peux encore répondre sur le terrain des faits... c'est d'ailleurs pour ça que ça ne s'arrête pas là.</p>
-<p><strong>Temps 2 : disqualifier ton ressenti.</strong> « Tu exagères. » « Tu es trop sensible. » « Tu en fais toute une histoire. » Le déplacement est subtil et décisif : on ne discute plus ce qui s'est passé, on discute ta réaction. Même si les faits sont avérés, ton ressenti, lui, est déclaré défectueux... et te voilà en train de te justifier d'avoir mal.</p>
-<p><strong>Temps 3 : pathologiser ta personne.</strong> « Tu es folle. » « Tu devrais consulter. » « Tout le monde voit bien que tu ne vas pas bien. » Dernier palier : ce n'est plus la scène ni la réaction qui sont en cause, c'est ton équipement mental complet. Arrivé là, chaque protestation devient une preuve supplémentaire de ton « état »... Le piège est bouclé : plus tu te défends, plus tu confirmes.</p>
+      content: `<p>Le gaslighting ne débarque jamais d'un coup, il monte en puissance par paliers. Les voici dans l'ordre, et tu vas voir que la progression est logique... c'est une escalade de la cible.</p>`,
+      subsections: [
+        {
+          id: 'temps-1-nier-les-faits',
+          title: "Temps 1 : nier les faits",
+          content: `<p>« Je n'ai jamais dit ça. » « Tu confonds. » « Ce n'est pas ce qui s'est passé. » À ce stade, on conteste la scène, pas encore toi. C'est déstabilisant, mais tu peux encore répondre sur le terrain des faits... c'est d'ailleurs pour ça que ça ne s'arrête pas là.</p>`,
+        },
+        {
+          id: 'temps-2-disqualifier-ton-ressenti',
+          title: "Temps 2 : disqualifier ton ressenti",
+          content: `<p>« Tu exagères. » « Tu es trop sensible. » « Tu en fais toute une histoire. » Le déplacement est subtil et décisif : on ne discute plus ce qui s'est passé, on discute ta réaction. Même si les faits sont avérés, ton ressenti, lui, est déclaré défectueux... et te voilà en train de te justifier d'avoir mal.</p>`,
+        },
+        {
+          id: 'temps-3-pathologiser-ta-personne',
+          title: "Temps 3 : pathologiser ta personne",
+          content: `<p>« Tu es folle. » « Tu devrais consulter. » « Tout le monde voit bien que tu ne vas pas bien. » Dernier palier : ce n'est plus la scène ni la réaction qui sont en cause, c'est ton équipement mental complet. Arrivé là, chaque protestation devient une preuve supplémentaire de ton « état »... Le piège est bouclé : plus tu te défends, plus tu confirmes.</p>
 <p>Ajoute à ça le recrutement de témoins, « même ta sœur trouve que tu débloques en ce moment », et le brouillage est total : ta réalité est devenue minoritaire dans ta propre vie.</p>`,
+        },
+      ],
     },
     {
       id: 'gaslighting-ou-pas',
@@ -57,10 +71,10 @@ const article: BlogArticleData = {
       content: `<p>Le répertoire verbal du gaslighting, tu en connais déjà des morceaux : « je n'ai jamais dit ça », « tu inventes », « tu te fais des films », « tout le monde trouve que tu exagères », « tu devrais consulter »... Ces formules composent la famille n°2 du <a href="/blog/phrases-preferees-des-manipulateurs/">répertoire des phrases de manipulateur</a> : celles qui visent ta perception. Ici, arrêtons-nous plutôt sur ce que ces phrases FONT, parce que c'est là que le gaslighting se distingue de tout le reste.</p>
 <p>À force, la victime développe des comportements très spécifiques... et si tu te reconnais dans cette liste, considère-la comme un diagnostic en creux :</p>
 <ul>
-<li><strong>Tu enregistres, tu notes, tu captures.</strong> Des conversations relues dix fois, des notes datées en cachette, parfois des enregistrements... Personne ne documente sa propre vie de couple sans raison : tu cherches des preuves CONTRE le doute qu'on a installé en toi.</li>
-<li><strong>Tu demandes des contre-vérifications.</strong> « Tu étais là, c'est bien ce qu'il a dit, hein ? »... Ton entourage devient ton tribunal de la réalité.</li>
-<li><strong>Tu commences tes phrases par des excuses de perception.</strong> « Je me trompe peut-être, mais... », « c'est sûrement moi qui exagère... » : le doute est devenu ta ponctuation.</li>
-<li><strong>Tu as adopté SA version de toi.</strong> « Je suis trop sensible », dit avec tes propres lèvres... Le gaslighting a gagné le jour où tu fais son travail toi-même.</li>
+<li><strong>Tu enregistres, tu notes, tu captures :</strong> Des conversations relues dix fois, des notes datées en cachette, parfois des enregistrements... Personne ne documente sa propre vie de couple sans raison : tu cherches des preuves CONTRE le doute qu'on a installé en toi.</li>
+<li><strong>Tu demandes des contre-vérifications :</strong> « Tu étais là, c'est bien ce qu'il a dit, hein ? »... Ton entourage devient ton tribunal de la réalité.</li>
+<li><strong>Tu commences tes phrases par des excuses de perception :</strong> « Je me trompe peut-être, mais... », « c'est sûrement moi qui exagère... » : le doute est devenu ta ponctuation.</li>
+<li><strong>Tu as adopté SA version de toi :</strong> « Je suis trop sensible », dit avec tes propres lèvres... Le gaslighting a gagné le jour où tu fais son travail toi-même.</li>
 </ul>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Est-ce que c'est toujours volontaire ?</p>
@@ -70,19 +84,41 @@ const article: BlogArticleData = {
     {
       id: 'reprendre-pied',
       title: "Reprendre pied : le plan anti-brouillard",
-      content: `<p>Sortir du gaslighting, c'est reconstruire un accès direct à ta propre réalité, sans passer par lui. Quatre gestes, dans l'ordre.</p>
-<p><strong>Un : l'écrit, l'écrit, l'écrit.</strong> Un journal daté, factuel, tenu à chaud : ce qui a été dit, fait, quand. L'écrit est ton arme absolue parce qu'il a une propriété magique : il ne doute jamais de lui-même. Le jour où on te sort « je n'ai jamais dit ça », tu n'as même plus besoin de le brandir... savoir que la note existe suffit à tenir ta certitude debout.</p>
-<p><strong>Deux : casse le huis clos.</strong> Le gaslighting a besoin d'un monde fermé où sa voix est la seule source. Rouvre les fenêtres : raconte des scènes précises à une personne de confiance, régulièrement. Pas pour qu'elle tranche... pour réentendre le son que fait la réalité quand quelqu'un ne la conteste pas.</p>
-<p><strong>Trois : arrête de plaider.</strong> Tu ne convaincras jamais quelqu'un dont le pouvoir dépend précisément de ne pas être convaincu ! Remplace les plaidoiries par des constats courts : « on n'a pas le même souvenir, je garde le mien ». C'est tout. Ta réalité n'a pas besoin de son visa.</p>
-<p><strong>Quatre : fais le bilan de la relation.</strong> Le gaslighting isolé n'existe presque jamais : il est en général la pièce maîtresse d'un ensemble, contrôle, dévalorisation, cycles chaud-froid... Prends le temps de regarder l'ensemble en face, avec les <a href="/blog/relation-toxique-signes/">signes qui font une relation toxique</a> comme grille. Et sache une chose : en France, les violences psychologiques répétées au sein du couple sont un délit, reconnu et jugé. Ce que tu vis a un nom partout... y compris dans le code pénal.</p>
+      content: `<p>Sortir du gaslighting, c'est reconstruire un accès direct à ta propre réalité, sans passer par lui. Quatre gestes, dans l'ordre.</p>`,
+      subsections: [
+        {
+          id: 'un-l-ecrit-l-ecrit-l',
+          title: "L'écrit, l'écrit, l'écrit",
+          content: `<p>Un journal daté, factuel, tenu à chaud : ce qui a été dit, fait, quand. L'écrit est ton arme absolue parce qu'il a une propriété magique : il ne doute jamais de lui-même. Le jour où on te sort « je n'ai jamais dit ça », tu n'as même plus besoin de le brandir... savoir que la note existe suffit à tenir ta certitude debout.</p>`,
+        },
+        {
+          id: 'deux-casse-le-huis-clos',
+          title: "Casse le huis clos",
+          content: `<p>Le gaslighting a besoin d'un monde fermé où sa voix est la seule source. Rouvre les fenêtres : raconte des scènes précises à une personne de confiance, régulièrement. Pas pour qu'elle tranche... pour réentendre le son que fait la réalité quand quelqu'un ne la conteste pas.</p>`,
+        },
+        {
+          id: 'trois-arrete-de-plaider',
+          title: "Arrête de plaider",
+          content: `<p>Tu ne convaincras jamais quelqu'un dont le pouvoir dépend précisément de ne pas être convaincu ! Remplace les plaidoiries par des constats courts : « on n'a pas le même souvenir, je garde le mien ». C'est tout. Ta réalité n'a pas besoin de son visa.</p>`,
+        },
+        {
+          id: 'quatre-fais-le-bilan-de-la',
+          title: "Fais le bilan de la relation",
+          content: `<p>Le gaslighting isolé n'existe presque jamais : il est en général la pièce maîtresse d'un ensemble, contrôle, dévalorisation, cycles chaud-froid... Prends le temps de regarder l'ensemble en face, avec les <a href="/blog/relation-toxique-signes/">signes qui font une relation toxique</a> comme grille. Et sache une chose : en France, les violences psychologiques répétées au sein du couple sont un délit, reconnu et jugé. Ce que tu vis a un nom partout... y compris dans le code pénal.</p>
+<p>Et pour finir, la bonne nouvelle promise en introduction : les personnes sorties du gaslighting développent presque toutes le même super-pouvoir... un détecteur ultra-sensible aux contestations de réalité. La première fois qu'on te ressortira un « tu exagères » stratégique, tu sentiras le mécanisme AVANT la fissure. Ce jour-là, tu sauras que ta boussole est réparée... et qu'elle est devenue incassable.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ Si tu es en danger, ne reste pas seul(e) avec un article</p>
+<p>Menaces, contrôle de ton argent ou de tes déplacements, violence physique même « une seule fois » : en France, le 3919 est gratuit, anonyme, ouvert 24h/24, et il écoute les femmes comme les hommes. En cas d'urgence immédiate, le 17, ou le 114 par SMS quand tu ne peux pas parler.</p>
+</aside>
 <div class="blog-cta">
 <p class="blog-cta-titre">Ta réalité mérite un état des lieux</p>
 <p class="blog-cta-texte">Vingt questions passent ta relation au crible des situations concrètes du gaslighting et de l'emprise : le doute, les versions, les silences, le contrôle. Un résultat posé, à toi, que personne ne pourra te « renégocier ».</p>
 <a class="blog-cta-btn" href="/test-pervers-narcissique/">Vérifier ce que je vis</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
-<p>Et pour finir, la bonne nouvelle promise en introduction : les personnes sorties du gaslighting développent presque toutes le même super-pouvoir... un détecteur ultra-sensible aux contestations de réalité. La première fois qu'on te ressortira un « tu exagères » stratégique, tu sentiras le mécanisme AVANT la fissure. Ce jour-là, tu sauras que ta boussole est réparée... et qu'elle est devenue incassable.</p>
 <a href="/blog/phrases-preferees-des-manipulateurs/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Les phrases préférées des manipulateurs, et ce qu'elles veulent vraiment dire</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+        },
+      ],
     },
   ],
 };
