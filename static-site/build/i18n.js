@@ -130,7 +130,11 @@ export function createTgd(lang) {
 
   // Same aliases as runtime quiz-engine-core.js PREFIX_ALIASES
   const PREFIX_ALIASES = {
-    'couple': 'testerC',
+    // 'couple' -> 'testerC' a ete retire : l'alias datait de l'epoque ou le
+    // test de couple s'appelait 'couple' en francais et 'testerC' ailleurs.
+    // 'testerC' est desormais le pool propre du test de couple dans les cinq
+    // langues, et 'couple' celui du test sain en francais. Garder l'alias
+    // faisait deborder l'un sur l'autre.
     'commonPoints': 'cp',
     'coquin': 'coquinQ',
     'marrant': 'funny'

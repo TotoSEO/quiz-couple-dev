@@ -8,13 +8,13 @@
   const hasPart = [];
   const optLetters = ['a', 'b', 'c', 'd', 'e'];
   for (let qi = 1; qi <= 30; qi++) {
-    const qText = tgd('divorce.q' + qi, '');
-    if (!qText || qText === 'divorce.q' + qi) break;
+    const qText = tgd('toxic.q' + qi, '');
+    if (!qText || qText === 'toxic.q' + qi) break;
     const qObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
     const ans = [];
     for (let oi = 0; oi < optLetters.length; oi++) {
-      const oText = tgd.local('divorce.q' + qi + optLetters[oi], '');
-      if (!oText || oText === 'divorce.q' + qi + optLetters[oi]) break;
+      const oText = tgd.local('toxic.q' + qi + optLetters[oi], '');
+      if (!oText || oText === 'toxic.q' + qi + optLetters[oi]) break;
       ans.push({ "@type": "Answer", "position": oi + 1, "text": oText });
     }
     if (ans.length > 0) qObj.suggestedAnswer = ans;
