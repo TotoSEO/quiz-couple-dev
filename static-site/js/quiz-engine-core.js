@@ -3330,9 +3330,211 @@ var QuizEngine = (function() {
   };
 
   // ═══════════════════════════════════════════════════════════
-  // HEALTHY QUIZ - couple-sain (weighted scoring, 2 players + gender)
-  // Each answer has weighted points: a=3, b=2, c=1, d=0
-  // Both players answer each question, scores summed
+  // BAREME PONDERE DU TEST COUPLE SAIN
+  // Chaque question porte un poids d'importance et une dimension.
+  //   w: 3 = fondamental (confiance, securite, avenir, bien-etre ressenti)
+  //      2 = structurant (communication, conflits, intimite, autonomie)
+  //      1 = confort (repartition des taches, belle-famille, telephone)
+  // s: true = question de securite. Une reponse au pire niveau empeche
+  //           le verdict le plus haut, quel que soit le total.
+  // La contribution d'une reponse vaut poids x valeur de la reponse,
+  // ce qui evite qu'un desaccord sur les taches pese autant qu'une
+  // absence totale de projets communs.
+  // ═══════════════════════════════════════════════════════════
+  var REPONSE_VALEURS = { a: 1, b: 0.75, c: 0.4, d: 0 };
+  // Pool international : les reponses vont de la moins saine a la plus
+  // saine, on lit donc la valeur de la lettre symetrique.
+  var REPONSE_MIROIR = { a: 'd', b: 'c', c: 'b', d: 'a' };
+
+  var HEALTHY_BAREME = {
+    // Pool francais (prefixe 'couple', 30 questions, a = plus sain)
+    couple: {
+      1:  { d: 'communication', w: 2 },
+      2:  { d: 'confiance',     w: 3 },
+      3:  { d: 'complicite',    w: 2 },
+      4:  { d: 'conflits',      w: 2 },
+      5:  { d: 'soutien',       w: 2 },
+      6:  { d: 'intimite',      w: 2 },
+      7:  { d: 'complicite',    w: 1 },
+      8:  { d: 'avenir',        w: 3 },
+      9:  { d: 'autonomie',     w: 2 },
+      10: { d: 'communication', w: 2 },
+      11: { d: 'equite',        w: 1 },
+      12: { d: 'bienetre',      w: 1 },
+      13: { d: 'bienetre',      w: 3 },
+      14: { d: 'conflits',      w: 2 },
+      15: { d: 'communication', w: 2 },
+      16: { d: 'avenir',        w: 3 },
+      17: { d: 'bienetre',      w: 3 },
+      18: { d: 'complicite',    w: 1 },
+      19: { d: 'avenir',        w: 3 },
+      20: { d: 'bienetre',      w: 2 },
+      21: { d: 'equite',        w: 1 },
+      22: { d: 'conflits',      w: 2 },
+      23: { d: 'complicite',    w: 1 },
+      24: { d: 'equite',        w: 1 },
+      25: { d: 'equite',        w: 1 },
+      26: { d: 'intimite',      w: 2 },
+      27: { d: 'autonomie',     w: 1 },
+      28: { d: 'complicite',    w: 1 },
+      29: { d: 'soutien',       w: 3 },
+      30: { d: 'conflits',      w: 2 }
+    },
+    // Pool international (prefixe 'healthy', 78 questions, d = plus sain)
+    healthy: {
+      1:  { d: 'communication', w: 2 },
+      2:  { d: 'conflits',      w: 2 },
+      3:  { d: 'communication', w: 2 },
+      4:  { d: 'communication', w: 2 },
+      5:  { d: 'conflits',      w: 2 },
+      6:  { d: 'avenir',        w: 3 },
+      7:  { d: 'complicite',    w: 1 },
+      8:  { d: 'respect',       w: 3 },
+      9:  { d: 'confiance',     w: 3 },
+      10: { d: 'respect',       w: 3 },
+      11: { d: 'securite',      w: 3, s: true },
+      12: { d: 'respect',       w: 3 },
+      13: { d: 'respect',       w: 3 },
+      14: { d: 'confiance',     w: 3 },
+      15: { d: 'confiance',     w: 2 },
+      16: { d: 'communication', w: 2 },
+      17: { d: 'autonomie',     w: 2 },
+      18: { d: 'autonomie',     w: 2 },
+      19: { d: 'autonomie',     w: 1 },
+      20: { d: 'autonomie',     w: 3 },
+      21: { d: 'autonomie',     w: 2 },
+      22: { d: 'autonomie',     w: 3 },
+      23: { d: 'autonomie',     w: 1 },
+      24: { d: 'bienetre',      w: 3 },
+      25: { d: 'intimite',      w: 2 },
+      26: { d: 'intimite',      w: 2 },
+      27: { d: 'intimite',      w: 2 },
+      28: { d: 'intimite',      w: 2 },
+      29: { d: 'intimite',      w: 2 },
+      30: { d: 'complicite',    w: 1 },
+      31: { d: 'soutien',       w: 3 },
+      32: { d: 'complicite',    w: 1 },
+      33: { d: 'conflits',      w: 2 },
+      34: { d: 'conflits',      w: 2 },
+      35: { d: 'securite',      w: 3, s: true },
+      36: { d: 'conflits',      w: 2 },
+      37: { d: 'equite',        w: 2 },
+      38: { d: 'conflits',      w: 1 },
+      39: { d: 'conflits',      w: 2 },
+      40: { d: 'conflits',      w: 2 },
+      41: { d: 'avenir',        w: 3 },
+      42: { d: 'avenir',        w: 3 },
+      43: { d: 'soutien',       w: 2 },
+      44: { d: 'avenir',        w: 3 },
+      45: { d: 'avenir',        w: 2 },
+      46: { d: 'avenir',        w: 3 },
+      47: { d: 'avenir',        w: 2 },
+      48: { d: 'avenir',        w: 2 },
+      49: { d: 'bienetre',      w: 3 },
+      50: { d: 'bienetre',      w: 3 },
+      51: { d: 'bienetre',      w: 3 },
+      52: { d: 'bienetre',      w: 2 },
+      53: { d: 'securite',      w: 3, s: true },
+      54: { d: 'bienetre',      w: 3 },
+      55: { d: 'securite',      w: 3, s: true },
+      56: { d: 'bienetre',      w: 3 },
+      57: { d: 'equite',        w: 1 },
+      58: { d: 'equite',        w: 2 },
+      59: { d: 'equite',        w: 1 },
+      60: { d: 'equite',        w: 1 },
+      61: { d: 'equite',        w: 1 },
+      62: { d: 'equite',        w: 2 },
+      63: { d: 'equite',        w: 2 },
+      64: { d: 'equite',        w: 2 },
+      65: { d: 'evolution',     w: 2 },
+      66: { d: 'bienetre',      w: 2 },
+      67: { d: 'evolution',     w: 2 },
+      68: { d: 'evolution',     w: 1 },
+      69: { d: 'evolution',     w: 1 },
+      70: { d: 'evolution',     w: 1 },
+      71: { d: 'evolution',     w: 1 },
+      72: { d: 'evolution',     w: 1 },
+      73: { d: 'securite',      w: 3, s: true },
+      74: { d: 'securite',      w: 3, s: true },
+      75: { d: 'confiance',     w: 2 },
+      76: { d: 'complicite',    w: 1 },
+      77: { d: 'soutien',       w: 2 },
+      78: { d: 'bienetre',      w: 3 }
+    }
+  };
+
+  // Paliers exprimes en pourcentage, contigus et couvrant 0 a 100.
+  var HEALTHY_PALIERS = [
+    { max: 34 },   // r1 fondations a reconstruire
+    { max: 54 },   // r2 merite plus d'attention
+    { max: 74 },   // r3 solide avec points d'amelioration
+    { max: 100 }   // r4 epanouissante
+  ];
+  // Une question de securite au pire niveau plafonne le verdict a r3.
+  var HEALTHY_PALIER_MAX_ALERTE = 2;
+
+  // Tirage stratifie : couvre toutes les dimensions au lieu de piocher au
+  // hasard, pour que deux parties du meme couple mesurent la meme chose.
+  function tirageStratifieSain(questions, prefixe, combien) {
+    var table = HEALTHY_BAREME[prefixe] || {};
+    if (questions.length <= combien) return shuffleArray(questions);
+
+    var securite = [], parDimension = {}, ordre = [];
+    for (var i = 0; i < questions.length; i++) {
+      var fiche = table[questions[i].id];
+      if (fiche && fiche.s) { securite.push(questions[i]); continue; }
+      var dim = (fiche && fiche.d) || 'autre';
+      if (!parDimension[dim]) { parDimension[dim] = []; ordre.push(dim); }
+      parDimension[dim].push(questions[i]);
+    }
+
+    var retenues = [];
+    // Les questions de securite sont toujours representees, sans dominer.
+    if (securite.length) {
+      retenues = retenues.concat(shuffleArray(securite).slice(0, Math.min(3, securite.length)));
+    }
+
+    var budget = combien - retenues.length;
+    if (budget <= 0) return shuffleArray(retenues).slice(0, combien);
+
+    // Un creneau garanti par dimension, puis repartition au prorata du pool.
+    var quotas = {}, restant = budget, dispo = 0, d;
+    for (var a = 0; a < ordre.length; a++) {
+      d = ordre[a];
+      quotas[d] = 0;
+      dispo += parDimension[d].length;
+    }
+    for (var b = 0; b < ordre.length && restant > 0; b++) {
+      quotas[ordre[b]] = 1; restant--;
+    }
+    // Le reliquat va aux dimensions les mieux fournies, pour que le tirage
+    // reflete le poids reel de chaque theme dans le questionnaire.
+    var reste = ordre.slice().sort(function(x, y) {
+      return parDimension[y].length - parDimension[x].length;
+    });
+    while (restant > 0) {
+      var avance = false;
+      for (var c = 0; c < reste.length && restant > 0; c++) {
+        d = reste[c];
+        if (quotas[d] < parDimension[d].length) { quotas[d]++; restant--; avance = true; }
+      }
+      if (!avance) break;
+    }
+
+    for (var e = 0; e < ordre.length; e++) {
+      d = ordre[e];
+      retenues = retenues.concat(shuffleArray(parDimension[d]).slice(0, quotas[d]));
+    }
+    return shuffleArray(retenues).slice(0, combien);
+  }
+
+  // ═══════════════════════════════════════════════════════════
+  // HEALTHY QUIZ - couple-sain
+  // Deux modes : SOLO (le couple repond ensemble, score unique) et
+  // DUO (chacun repond aux memes questions a tour de role, scores
+  // individuels + moyenne).
+  // Score pondere : chaque reponse vaut poids de la question x valeur
+  // de la reponse, rapporte au total des poids reellement poses.
   // ═══════════════════════════════════════════════════════════
   function HealthyQuiz(config) {
     this.container = config.container;
@@ -3340,27 +3542,135 @@ var QuizEngine = (function() {
     this.results = config.results;
     this.prefix = config.prefix;
     this.lang = config.lang || 'fr';
-    // 'couple' questions (FR) are authored a=healthiest→d=least, matching the
-    // a=3..d=0 weights. Native 'healthy' questions (non-FR) are authored the
-    // other way (a=least→d=healthiest), so their weights must be reversed.
+    // Les questions 'couple' (FR) sont ecrites a = le plus sain. Les questions
+    // natives 'healthy' (non-FR) sont ecrites dans l'autre sens : leurs valeurs
+    // de reponse doivent donc etre inversees.
     this.reverseScore = config.reverseScore || false;
-    this.phase = 'setup';
+    this.bareme = HEALTHY_BAREME[this.prefix] || {};
+    this.mode = null;           // 'solo' ou 'duo'
+    this.phase = 'mode';
     this.players = [null, null];
     this.currentQ = 0;
     this.currentPlayer = 0;
-    this.scores = [[], []];
-    this.maxScorePerPlayer = this.questions.length * 3;
+    this.reponses = [[], []];   // en solo, seul l'indice 0 sert
     this.render();
   }
 
+  // Valeur d'une reponse, dans le bon sens selon le pool de questions.
+  // On permute les lettres et non la valeur : faire 1 - v renverserait bien
+  // l'ordre mais deformerait la courbe, et noterait les langues non
+  // francaises plus severement que le francais a reponses equivalentes.
+  HealthyQuiz.prototype.valeurReponse = function(lettre) {
+    var cle = this.reverseScore ? (REPONSE_MIROIR[lettre] || lettre) : lettre;
+    var v = REPONSE_VALEURS[cle];
+    return (typeof v === 'number') ? v : 0;
+  };
+
+  HealthyQuiz.prototype.poidsDe = function(question) {
+    var fiche = this.bareme[question.id];
+    return (fiche && fiche.w) || 1;
+  };
+
+  HealthyQuiz.prototype.estSecurite = function(question) {
+    var fiche = this.bareme[question.id];
+    return !!(fiche && fiche.s);
+  };
+
+  // Pourcentage pondere d'un jeu de reponses, plus le drapeau d'alerte.
+  HealthyQuiz.prototype.calculer = function(reponses) {
+    var poidsTotal = 0, obtenu = 0, alerte = false;
+    for (var i = 0; i < reponses.length; i++) {
+      var r = reponses[i];
+      poidsTotal += r.poids;
+      obtenu += r.poids * r.valeur;
+      if (r.securite && r.valeur === 0) alerte = true;
+    }
+    return {
+      pct: poidsTotal > 0 ? Math.round((obtenu / poidsTotal) * 100) : 0,
+      alerte: alerte
+    };
+  };
+
+  // Palier correspondant a un pourcentage, plafonne si alerte securite.
+  HealthyQuiz.prototype.palierPour = function(pct, alerte) {
+    if (!this.results || !this.results.length) return null;
+    var idx = HEALTHY_PALIERS.length - 1;
+    for (var i = 0; i < HEALTHY_PALIERS.length; i++) {
+      if (pct <= HEALTHY_PALIERS[i].max) { idx = i; break; }
+    }
+    if (alerte && idx > HEALTHY_PALIER_MAX_ALERTE) idx = HEALTHY_PALIER_MAX_ALERTE;
+    if (idx >= this.results.length) idx = this.results.length - 1;
+    return this.results[idx];
+  };
+
   HealthyQuiz.prototype.render = function() {
     this.container.innerHTML = '';
-    if (this.phase === 'setup') this.renderSetup();
+    if (this.phase === 'mode') this.renderMode();
+    else if (this.phase === 'setup') this.renderSetup();
     else if (this.phase === 'handoff') this.renderHandoff();
     else if (this.phase === 'playing') this.renderQuestion();
     else if (this.phase === 'results') this.renderResults();
   };
 
+  // ── Choix du mode ─────────────────────────────────────────
+  HealthyQuiz.prototype.renderMode = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
+
+    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-6');
+    iconWrap.innerHTML = ICONS.users;
+    wrap.appendChild(iconWrap);
+
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center',
+      tg('sainMode.titre', 'Comment voulez-vous passer le test ?')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-8 text-center',
+      tg('sainMode.sousTitre', 'Choisissez votre formule, le questionnaire est le même dans les deux cas.')));
+
+    var modes = [
+      {
+        id: 'solo',
+        nom: tg('sainMode.soloNom', 'SOLO'),
+        desc: tg('sainMode.soloDesc', 'Vous répondez à deux aux questions'),
+        score: tg('sainMode.soloScore', 'Score unique')
+      },
+      {
+        id: 'duo',
+        nom: tg('sainMode.duoNom', 'DUO'),
+        desc: tg('sainMode.duoDesc', 'Vous répondez aux mêmes questions à tour de rôle'),
+        score: tg('sainMode.duoScore', 'Scores individuels + moyenne')
+      }
+    ];
+
+    var liste = el('div', 'sain-modes');
+    modes.forEach(function(m) {
+      var carte = el('button', 'sain-mode sain-mode--' + m.id);
+      carte.type = 'button';
+      carte.setAttribute('aria-label', m.nom + ' : ' + m.desc + '. ' + m.score);
+      carte.innerHTML =
+        '<span class="sain-mode-nom">' + esc(m.nom) + '</span>' +
+        '<span class="sain-mode-desc">' + esc(m.desc) + '</span>' +
+        '<span class="sain-mode-score">' + esc(m.score) + '</span>';
+      carte.addEventListener('click', function() {
+        self.mode = m.id;
+        self.currentQ = 0;
+        self.currentPlayer = 0;
+        self.reponses = [[], []];
+        if (m.id === 'solo') {
+          self.players = [null, null];
+          self.phase = 'playing';
+        } else {
+          self.phase = 'setup';
+        }
+        self.render();
+      });
+      liste.appendChild(carte);
+    });
+    wrap.appendChild(liste);
+    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
+    this.container.appendChild(wrap);
+  };
+
+  // ── Prénoms et genres (mode DUO uniquement) ───────────────
   HealthyQuiz.prototype.renderSetup = function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
@@ -3388,7 +3698,6 @@ var QuizEngine = (function() {
         card.appendChild(label);
         card.appendChild(input);
 
-        // Gender buttons
         var gLabel = el('label', 'block text-sm font-semibold mt-4 mb-2 text-center', tg('playerSetup.gender', 'Genre'));
         card.appendChild(gLabel);
         var gWrap = el('div', 'flex gap-3 justify-center');
@@ -3423,13 +3732,19 @@ var QuizEngine = (function() {
         { name: n1, gender: genders[0] || 'homme' },
         { name: n2, gender: genders[1] || 'femme' }
       ];
-      self.currentQ = 0; self.currentPlayer = 0; self.scores = [[], []];
+      self.currentQ = 0; self.currentPlayer = 0; self.reponses = [[], []];
       self.phase = 'handoff'; self.render();
     });
 
     wrap.appendChild(form);
     wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
     wrap.appendChild(startBtn);
+
+    var retour = el('button', 'quiz-modes-retour', '← ' + tg('sainMode.retour', 'Changer de mode'));
+    retour.type = 'button';
+    retour.addEventListener('click', function() { self.phase = 'mode'; self.render(); });
+    wrap.appendChild(retour);
+
     this.container.appendChild(wrap);
   };
 
@@ -3448,24 +3763,30 @@ var QuizEngine = (function() {
 
   HealthyQuiz.prototype.renderQuestion = function() {
     var self = this;
+    var solo = this.mode === 'solo';
     var q = this.questions[this.currentQ];
     var total = this.questions.length;
-    var totalAnswers = total * 2;
-    var answeredCount = this.scores[0].length + this.scores[1].length;
-    var player = this.players[this.currentPlayer];
-    var color = getPlayerColor(player, this.players[this.currentPlayer === 0 ? 1 : 0], this.currentPlayer);
+    var totalAnswers = solo ? total : total * 2;
+    var answeredCount = solo ? this.reponses[0].length : (this.reponses[0].length + this.reponses[1].length);
 
     var wrap = el('div', 'quiz-engine quiz-question-enter');
     renderProgressBar(wrap, answeredCount, totalAnswers, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total);
 
-    var badge = el('div', 'text-center mb-4');
-    badge.innerHTML = '<span class="badge" style="background:' + color.bg + ';color:' + color.text + '">' + esc(player.name) + '</span>';
-    wrap.appendChild(badge);
+    if (solo) {
+      var badgeSolo = el('div', 'text-center mb-4');
+      badgeSolo.innerHTML = '<span class="badge sain-badge-solo">' + esc(tg('sainMode.soloBadge', 'Votre réponse commune')) + '</span>';
+      wrap.appendChild(badgeSolo);
+    } else {
+      var player = this.players[this.currentPlayer];
+      var color = getPlayerColor(player, this.players[this.currentPlayer === 0 ? 1 : 0], this.currentPlayer);
+      var badge = el('div', 'text-center mb-4');
+      badge.innerHTML = '<span class="badge" style="background:' + color.bg + ';color:' + color.text + '">' + esc(player.name) + '</span>';
+      wrap.appendChild(badge);
+    }
 
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
 
-    var OPTION_SCORES = this.reverseScore ? { a: 0, b: 1, c: 2, d: 3 } : { a: 3, b: 2, c: 1, d: 0 };
     var optionsWrap = el('div', 'space-y-2');
     q.options.forEach(function(opt, idx) {
       var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
@@ -3486,11 +3807,17 @@ var QuizEngine = (function() {
           if (siblings[s] !== optBtn) siblings[s].style.opacity = '0.5';
           siblings[s].style.pointerEvents = 'none';
         }
-        var score = OPTION_SCORES[opt.id] || 0;
-        self.scores[self.currentPlayer].push(score);
+        self.reponses[solo ? 0 : self.currentPlayer].push({
+          poids: self.poidsDe(q),
+          valeur: self.valeurReponse(opt.id),
+          securite: self.estSecurite(q)
+        });
 
         setTimeout(function() {
-          if (self.currentPlayer === 0) {
+          if (solo) {
+            if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
+            else { self.phase = 'results'; }
+          } else if (self.currentPlayer === 0) {
             self.currentPlayer = 1;
             self.phase = 'handoff';
           } else if (self.currentQ < total - 1) {
@@ -3511,47 +3838,42 @@ var QuizEngine = (function() {
 
   HealthyQuiz.prototype.renderResults = function() {
     var self = this;
+    var solo = this.mode === 'solo';
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
 
-    var s1 = this.scores[0].reduce(function(s, v) { return s + v; }, 0);
-    var s2 = this.scores[1].reduce(function(s, v) { return s + v; }, 0);
-    var totalScore = s1 + s2;
-    var maxTotal = this.maxScorePerPlayer * 2;
-    var pct = Math.round((totalScore / maxTotal) * 100);
+    var bilan1 = this.calculer(this.reponses[0]);
+    var bilan2 = solo ? null : this.calculer(this.reponses[1]);
+    var pct = solo ? bilan1.pct : Math.round((bilan1.pct + bilan2.pct) / 2);
+    var alerte = solo ? bilan1.alerte : (bilan1.alerte || bilan2.alerte);
 
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('result.totalCoupleScore', 'Score total du couple')));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2',
+      solo ? tg('result.coupleScore', 'Score de votre couple')
+           : tg('result.coupleAverage', 'Moyenne de votre couple')));
     var mainRingDiv = el('div', '');
     mainRingDiv.innerHTML = renderScoreRing(pct);
     wrap.appendChild(mainRingDiv);
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6 quiz-reveal-enter', Math.round(totalScore) + '/' + maxTotal + ' ' + esc(tg('meta.pointsWord', 'points'))));
 
-    // Individual scores
-    var scoresGrid = el('div', 'grid grid-cols-2 gap-4 mb-6');
-    for (var i = 0; i < 2; i++) {
-      var score = i === 0 ? s1 : s2;
-      var color = getPlayerColor(this.players[i], this.players[i === 0 ? 1 : 0], i);
-      var iPct = Math.round((score / this.maxScorePerPlayer) * 100);
-      var card = el('div', 'glass-card rounded-xl p-4 text-center');
-      card.innerHTML = '<p class="font-semibold mb-2" style="color:' + color.bg + '">' + esc(this.players[i].name) + '</p>' +
-        renderScoreRing(iPct, 'sm') +
-        '<p class="text-xs text-muted-foreground">' + Math.round(score) + '/' + this.maxScorePerPlayer + '</p>';
-      scoresGrid.appendChild(card);
-    }
-    wrap.appendChild(scoresGrid);
+    if (!solo) {
+      var scoresGrid = el('div', 'grid grid-cols-2 gap-4 mb-6');
+      for (var i = 0; i < 2; i++) {
+        var bilan = i === 0 ? bilan1 : bilan2;
+        var color = getPlayerColor(this.players[i], this.players[i === 0 ? 1 : 0], i);
+        var card = el('div', 'glass-card rounded-xl p-4 text-center');
+        card.innerHTML = '<p class="font-semibold mb-2" style="color:' + color.bg + '">' + esc(this.players[i].name) + '</p>' +
+          renderScoreRing(bilan.pct, 'sm');
+        scoresGrid.appendChild(card);
+      }
+      wrap.appendChild(scoresGrid);
 
-    // Alert if big gap
-    if (Math.abs(s1 - s2) > 10) {
-      var gapAlert = el('div', 'glass-card rounded-xl p-4 mb-4 border-l-4 border-orange-400');
-      gapAlert.innerHTML = '<p class="text-sm">' + esc(tg('healthy.gapWarning', '⚠️ L\'écart entre vos scores est significatif. Prenez le temps de discuter de vos perceptions respectives.')) + '</p>';
-      wrap.appendChild(gapAlert);
+      // Ecart significatif entre les deux perceptions
+      if (Math.abs(bilan1.pct - bilan2.pct) > 15) {
+        var gapAlert = el('div', 'glass-card rounded-xl p-4 mb-4 border-l-4 border-orange-400');
+        gapAlert.innerHTML = '<p class="text-sm">' + esc(tg('healthy.gapWarning', '⚠️ L\'écart entre vos scores est significatif. Prenez le temps de discuter de vos perceptions respectives.')) + '</p>';
+        wrap.appendChild(gapAlert);
+      }
     }
 
-    // Find matching result
-    var result = null;
-    for (var j = 0; j < this.results.length; j++) {
-      var r = this.results[j];
-      if (totalScore >= (r.min || r.minScore || 0) && totalScore <= (r.max || r.maxScore || 999)) { result = r; break; }
-    }
+    var result = this.palierPour(pct, alerte);
     if (result) {
       wrap.appendChild(el('h3', 'text-xl font-bold mb-3', esc(result.title)));
       wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed max-w-lg mx-auto mb-4', result.description));
@@ -3562,9 +3884,20 @@ var QuizEngine = (function() {
       }
     }
 
+    if (alerte) {
+      var noteSecu = el('div', 'glass-card rounded-xl p-4 mt-4 border-l-4 border-rose-400 text-left max-w-lg mx-auto');
+      noteSecu.innerHTML = '<p class="text-sm">' + esc(tg('healthy.securiteNote', 'Une de vos réponses porte sur la peur, la manipulation ou l\'humiliation. Ce point compte davantage que le reste du score : il mérite d\'être regardé de près, seul·e ou accompagné·e.')) + '</p>';
+      wrap.appendChild(noteSecu);
+    }
+
     renderActionButtons(wrap, {
       share: { type: 'duo', pct: pct, verdict: result ? result.title : '' },
-      restart: function() { self.phase = 'setup'; self.render(); }
+      restart: function() {
+        self.phase = 'mode'; self.mode = null;
+        self.currentQ = 0; self.currentPlayer = 0;
+        self.reponses = [[], []];
+        self.render();
+      }
     });
     this.container.appendChild(wrap);
     smoothScroll(wrap, 'center');
@@ -7136,6 +7469,7 @@ var QuizEngine = (function() {
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,
+    tirageStratifieSain: tirageStratifieSain,
     // Exposé pour les moteurs écrits directement dans un gabarit de page,
     // qui doivent partager le même bouton et le même message que les autres.
     renderShareButton: renderShareButton,

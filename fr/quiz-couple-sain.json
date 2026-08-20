@@ -3,7 +3,7 @@
     "badge": "Gratuit • Sans inscription • 5 min",
     "title": "Testez si votre relation de couple est saine - Quiz en ligne",
     "intro1": "Vous êtes bien ensemble… mais l'êtes-vous vraiment ? C'est une question qu'on ne se pose pas toujours ouvertement, parfois par peur de la réponse, parfois parce qu'on manque d'outils pour y réfléchir. Ce test de couple sain est là pour vous aider à y voir plus clair, tous les deux, en jouant le jeu honnêtement.",
-    "intro2": "Ce quiz interactif est conçu pour être fait à deux. Chaque partenaire répond aux mêmes questions de son côté. Vos scores sont ensuite additionnés pour donner un résultat global sur 80 points. Pas de bonne ou de mauvaise réponse en soi, juste votre réalité, vue de près.",
+    "intro2": "Ce test se passe de deux façons, au choix. En solo, vous répondez ensemble et vous obtenez un score unique. En duo, chacun répond aux mêmes questions à tour de rôle, avec un score par personne et la moyenne du couple. Toutes les questions ne pèsent pas pareil : la confiance, l'avenir commun et le respect comptent plus que la répartition des tâches. Pas de bonne ou de mauvaise réponse en soi, juste votre réalité, vue de près.",
     "titleHighlight": "saine"
   },
   "quiz": {
@@ -94,7 +94,7 @@
     "faq1Q": "Ce test de couple sain est-il vraiment gratuit ?",
     "faq1A": "Oui, notre test est 100% gratuit, sans inscription et sans limite d'utilisation. Les 20 questions sont tirées au sort parmi 78 pour un test différent à chaque fois.",
     "faq2Q": "Comment fonctionne le scoring du test ?",
-    "faq2A": "Chaque partenaire répond aux mêmes 20 questions. Chaque réponse attribue entre 0,5 et 2 points. Le score individuel est sur 40, et le score total du couple sur 80.",
+    "faq2A": "Vous choisissez le mode au départ. En solo, vous répondez ensemble aux 20 questions et vous obtenez un score unique. En duo, chacun répond aux mêmes 20 questions à tour de rôle : un score par personne, plus la moyenne du couple. Le résultat est un pourcentage et non un total de points, parce que chaque question compte selon son importance. Ne pas avoir de projets d'avenir pèse trois fois plus qu'un déséquilibre dans les tâches ménagères, et les 20 questions couvrent toujours les mêmes grands thèmes : communication, confiance, conflits, intimité, autonomie, avenir et bien-être.",
     "faq3Q": "Que faire si nos scores individuels sont très différents ?",
     "faq3A": "Un écart important entre vos scores indique que vous ne percevez pas votre relation de la même façon. C'est une information précieuse qui mérite d'être discutée ensemble, sans jugement."
   }

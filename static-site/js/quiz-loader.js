@@ -735,11 +735,14 @@
       healthyQuestions = parseGdQuestions('couple', 30);
     }
 
-    if (healthyQuestions.length > cfg.totalQ) {
-      healthyQuestions = QuizEngine.shuffleArray(healthyQuestions).slice(0, cfg.totalQ);
-    } else {
-      healthyQuestions = QuizEngine.shuffleArray(healthyQuestions);
-    }
+    // Tirage stratifie : les 20 questions couvrent toutes les dimensions du
+    // barème au lieu d'être tirées au hasard, pour que deux parties du même
+    // couple mesurent la même chose.
+    healthyQuestions = QuizEngine.tirageStratifieSain(
+      healthyQuestions,
+      usedHealthyNative ? 'healthy' : 'couple',
+      cfg.totalQ
+    );
 
     if (healthyQuestions.length === 0) {
       showUnavailable(cfg);
@@ -757,15 +760,9 @@
         advice: QuizEngine.tgd('healthy.r' + i + '_a', '')
       });
     }
-    // Score ranges for healthy: max total = 20 questions * 3 points * 2 players = 120
-    var maxTotal = healthyQuestions.length * 3 * 2;
-    if (results.length > 0) {
-      var rangeSize = Math.ceil(maxTotal / results.length);
-      for (var r = 0; r < results.length; r++) {
-        results[r].min = r * rangeSize;
-        results[r].max = r === results.length - 1 ? maxTotal : (r + 1) * rangeSize - 1;
-      }
-    }
+    // Les bornes de palier ne sont plus calculées ici : le moteur classe le
+    // résultat sur le pourcentage pondéré (HEALTHY_PALIERS), ce qui reste juste
+    // quel que soit le nombre de questions tirées et leur poids.
 
     // Determine the prefix used for question text lookup at render time.
     // Native 'healthy' questions (non-FR) are authored a=least→d=healthiest, so

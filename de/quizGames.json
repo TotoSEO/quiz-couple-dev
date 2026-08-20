@@ -220,6 +220,8 @@
     "shareYourResult": "Teile dein Ergebnis!",
     "loveScore": "Liebespunktzahl",
     "shareWithFriends": "Teile dein Ergebnis mit Freunden",
+    "coupleScore": "Punktzahl eurer Beziehung",
+    "coupleAverage": "Durchschnitt eurer Beziehung",
     "totalCoupleScore": "Gesamtpunktzahl des Paares",
     "low": "Zwei Welten zum Entdecken",
     "lowDesc": "Eure Antworten gehen oft auseinander, und das ist kein Problem: Dieser Test vergleicht euren Geschmack, nicht die Stabilität eurer Beziehung. Vor allem habt ihr noch viel voneinander zu entdecken.",
@@ -433,7 +435,20 @@
     "yourName": "Der Vorname deines Partners",
     "namePlaceholder": "z. B. Lucas"
   },
+  "sainMode": {
+    "titre": "Wie wollt ihr den Test machen?",
+    "sousTitre": "Wählt euer Format, der Fragebogen ist in beiden Fällen derselbe.",
+    "soloNom": "SOLO",
+    "soloDesc": "Ihr beantwortet die Fragen gemeinsam",
+    "soloScore": "Eine Punktzahl",
+    "duoNom": "DUO",
+    "duoDesc": "Ihr beantwortet dieselben Fragen abwechselnd",
+    "duoScore": "Einzelwerte + Durchschnitt",
+    "soloBadge": "Eure gemeinsame Antwort",
+    "retour": "Modus wechseln"
+  },
   "healthy": {
+    "securiteNote": "Eine eurer Antworten betrifft Angst, Manipulation oder Demütigung. Dieser Punkt wiegt schwerer als der Rest der Punktzahl: Er verdient einen genauen Blick, allein oder mit Unterstützung.",
     "gapWarning": "⚠️ Der Abstand zwischen euren Werten ist deutlich. Nehmt euch die Zeit, in Ruhe darüber zu reden, ohne einen Wettbewerb daraus zu machen."
   },
   "attachment": {

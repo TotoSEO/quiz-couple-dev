@@ -220,6 +220,8 @@
     "shareYourResult": "Condividi il tuo risultato!",
     "loveScore": "Punteggio d'amore",
     "shareWithFriends": "Condividi il tuo risultato con gli amici",
+    "coupleScore": "Punteggio della vostra coppia",
+    "coupleAverage": "Media della vostra coppia",
     "totalCoupleScore": "Punteggio totale della coppia",
     "low": "Due mondi da scoprire",
     "lowDesc": "Le vostre risposte divergono spesso, e non è un problema: questo test confronta i vostri gusti, non la solidità della vostra coppia. Soprattutto, avete ancora molto da scoprire l'uno dell'altro.",
@@ -433,7 +435,20 @@
     "yourName": "Il nome del tuo partner",
     "namePlaceholder": "Es.: Lucas"
   },
+  "sainMode": {
+    "titre": "Come volete fare il test?",
+    "sousTitre": "Scegliete il vostro formato, il questionario è lo stesso in entrambi i casi.",
+    "soloNom": "SOLO",
+    "soloDesc": "Rispondete alle domande insieme",
+    "soloScore": "Punteggio unico",
+    "duoNom": "DUO",
+    "duoDesc": "Rispondete alle stesse domande a turno",
+    "duoScore": "Punteggi individuali + media",
+    "soloBadge": "La vostra risposta comune",
+    "retour": "Cambiare modalità"
+  },
   "healthy": {
+    "securiteNote": "Una delle vostre risposte riguarda la paura, la manipolazione o l'umiliazione. Questo punto pesa più del resto del punteggio: merita di essere guardato da vicino, da soli o accompagnati.",
     "gapWarning": "⚠️ Il divario tra i vostri punteggi è significativo. Prendetevi il tempo di parlarne con calma, senza farne una gara."
   },
   "attachment": {

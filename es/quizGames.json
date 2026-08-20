@@ -220,6 +220,8 @@
     "shareYourResult": "¡Comparte tu resultado!",
     "loveScore": "Puntuación de amor",
     "shareWithFriends": "Comparte tu resultado con amigos",
+    "coupleScore": "Puntuación de vuestra pareja",
+    "coupleAverage": "Media de vuestra pareja",
     "totalCoupleScore": "Puntuación total de la pareja",
     "low": "Dos mundos por descubrir",
     "lowDesc": "Vuestras respuestas difieren a menudo, y no es ningún problema: este test compara vuestros gustos, no la solidez de vuestra relación. Sobre todo, os queda mucho por descubrir.",
@@ -433,7 +435,20 @@
     "yourName": "El nombre de tu pareja",
     "namePlaceholder": "Ej.: Lucas"
   },
+  "sainMode": {
+    "titre": "¿Cómo queréis hacer el test?",
+    "sousTitre": "Elegid vuestro formato, el cuestionario es el mismo en ambos casos.",
+    "soloNom": "SOLO",
+    "soloDesc": "Respondéis a las preguntas juntos",
+    "soloScore": "Puntuación única",
+    "duoNom": "DÚO",
+    "duoDesc": "Respondéis a las mismas preguntas por turnos",
+    "duoScore": "Puntuaciones individuales + media",
+    "soloBadge": "Vuestra respuesta común",
+    "retour": "Cambiar de modo"
+  },
   "healthy": {
+    "securiteNote": "Una de vuestras respuestas habla de miedo, manipulación o humillación. Ese punto pesa más que el resto de la puntuación: merece mirarse de cerca, a solas o acompañado.",
     "gapWarning": "⚠️ La diferencia entre vuestras puntuaciones es significativa. Tomaos el tiempo de hablarlo con calma, sin convertirlo en una competición."
   },
   "attachment": {

@@ -3,7 +3,7 @@
     "badge": "Kostenlos • Ohne Anmeldung • 5 Min",
     "title": "Ist eure Beziehung gesund? - Kostenloser Online-Test",
     "intro1": "Ihr seid glücklich zusammen… aber seid ihr es wirklich? Das ist eine Frage, die man sich nicht immer offen stellt. Dieser Test für gesunde Beziehungen hilft euch, klarer zu sehen.",
-    "intro2": "Dieses interaktive Quiz ist für Paare konzipiert. Jeder Partner beantwortet die gleichen Fragen separat. Eure Punkte werden addiert, um ein Gesamtergebnis von 80 Punkten zu ergeben.",
+    "intro2": "Diesen Test gibt es in zwei Varianten, ganz nach Wahl. Im Solo-Modus antwortet ihr gemeinsam und bekommt eine einzige Punktzahl. Im Duo-Modus beantwortet ihr dieselben Fragen abwechselnd, mit einem Wert pro Person und dem Durchschnitt des Paares. Nicht jede Frage wiegt gleich schwer: Vertrauen, eine gemeinsame Zukunft und Respekt zählen mehr als die Verteilung der Hausarbeit. Es gibt keine richtigen oder falschen Antworten, nur eure Wirklichkeit, aus der Nähe betrachtet.",
     "titleHighlight": "gesund"
   },
   "quiz": {
@@ -94,7 +94,7 @@
     "faq1Q": "Ist dieser Test für gesunde Beziehungen wirklich kostenlos?",
     "faq1A": "Ja, unser Test ist 100% kostenlos, ohne Anmeldung und unbegrenzt nutzbar.",
     "faq2Q": "Wie funktioniert die Bewertung des Tests?",
-    "faq2A": "Jeder Partner beantwortet die gleichen 20 Fragen. Jede Antwort gibt zwischen 0,5 und 2 Punkte.",
+    "faq2A": "Ihr wählt den Modus am Anfang. Im Solo-Modus beantwortet ihr die 20 Fragen gemeinsam und bekommt eine einzige Punktzahl. Im Duo-Modus beantwortet ihr dieselben 20 Fragen abwechselnd: ein Wert pro Person, dazu der Durchschnitt des Paares. Das Ergebnis ist ein Prozentwert und keine Punktsumme, denn jede Frage zählt nach ihrer Bedeutung. Keine Zukunftspläne zu haben wiegt dreimal so schwer wie ein Ungleichgewicht bei der Hausarbeit, und die 20 Fragen decken immer dieselben großen Themen ab: Kommunikation, Vertrauen, Konflikte, Intimität, Eigenständigkeit, Zukunft und Wohlbefinden.",
     "faq3Q": "Was tun, wenn unsere individuellen Ergebnisse sehr unterschiedlich sind?",
     "faq3A": "Ein großer Unterschied zeigt, dass ihr eure Beziehung nicht gleich wahrnehmt. Das ist eine wertvolle Information, die es gemeinsam zu besprechen gilt."
   }
