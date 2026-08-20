@@ -1181,9 +1181,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'micro-tromperie',
     category: 'psychologie',
     featuredImage: '/blog/micro-tromperie.webp',
-    frOnly: true,
     slugs: {
       fr: 'micro-tromperie',
+      en: 'micro-cheating',
+      es: 'micro-infidelidad',
+      de: 'micro-cheating',
+      it: 'micro-tradimento',
     },
     publishedAt: '2026-12-25',
   },
