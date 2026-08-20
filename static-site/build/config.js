@@ -1051,9 +1051,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'dependance-affective-rupture',
     category: 'psychologie',
     featuredImage: '/blog/dependance-affective-rupture.webp',
-    frOnly: true,
     slugs: {
       fr: 'dependance-affective-rupture',
+      en: 'emotional-dependency-after-a-breakup',
+      es: 'dependencia-emocional-tras-una-ruptura',
+      de: 'emotionale-abhaengigkeit-nach-der-trennung',
+      it: 'dipendenza-affettiva-dopo-una-rottura',
     },
     publishedAt: '2026-11-20',
   },
