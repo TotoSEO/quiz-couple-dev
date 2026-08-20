@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['mathieu-courtin'],
   excerpt: "Le piège des couples qui durent, ce n'est pas de ne plus s'aimer. C'est de croire qu'on a fini de se découvrir.",
   introduction: `<p>Petit test avant de commencer : tu sais quel est son plat préféré, son film culte, son parfum. Facile. Maintenant... tu sais de quoi elle est le plus fière cette année ? Ce qui lui manque en ce moment ? Ce qu'elle n'ose pas te demander ? Moins facile, hein.</p>
-<p><strong>C'est le piège des couples installés : on confond bien la connaître et avoir fini de la découvrir.</strong> Sauf qu'elle change, comme toi, comme tout le monde. Et les réponses d'il y a deux ans ne sont plus forcément celles d'aujourd'hui...</p>
+<p><strong>C'est le piège des couples installés : <strong>on confond bien la connaître et avoir fini de la découvrir</strong>.</strong> Sauf qu'elle change, comme toi, comme tout le monde. Et les réponses d'il y a deux ans ne sont plus forcément celles d'aujourd'hui...</p>
 <p>Voici 75 questions à poser à ta copine, du plus léger au plus profond. Pas pour organiser un interrogatoire du samedi soir ! Pour retrouver ces conversations qui durent, celles du début, celles où tu découvrais quelqu'un. Pioche deux ou trois questions quand le moment s'y prête, et laisse faire.</p>`,
   quickSummary: [
     "75 questions du léger au profond, à picorer selon le moment.",
@@ -144,6 +144,14 @@ const article: BlogArticleData = {
 <li>Qu'est-ce qu'on devrait commencer ensemble cette année ?</li>
 </ol>
 <p>Et après la 75 ? Après, tu connais le principe : ce ne sont pas les questions qui comptent, c'est l'habitude de se les poser. Les couples qui durent ne sont pas ceux qui savent tout l'un de l'autre... ce sont ceux qui continuent de se poser des <a href="/questions-couple/">questions de couple</a>, régulièrement, comme on entretient un feu.</p>
+<div><table><thead><tr><th>La série</th><th>Ce qu'elle ouvre</th></tr></thead><tbody>
+<tr><td>Pour la redécouvrir</td><td>Ce que tu croyais savoir, et qui a changé depuis</td></tr>
+<tr><td>Sur vous deux</td><td>Votre histoire vue de son côté à elle</td></tr>
+<tr><td>Drôles et légères</td><td>De la légèreté, et souvent une porte vers le reste</td></tr>
+<tr><td>Un peu profondes</td><td>Ce dont vous ne parlez jamais faute d'occasion</td></tr>
+<tr><td>Amour et complicité</td><td>Ce qui la fait se sentir aimée, précisément</td></tr>
+<tr><td>Quotidien et avenir</td><td>Les sujets qu'on repousse jusqu'à ce qu'ils fâchent</td></tr>
+</tbody></table></div>
 <div class="blog-cta">
 <p class="blog-cta-titre">Envie de pimenter la prochaine soirée ?</p>
 <p class="blog-cta-texte">Prenez ces questions... et transformez-les en duel. « Qui de vous deux » pose les questions, vous votez chacun de votre côté, et on compare. Fous rires garantis, mauvaise foi autorisée.</p>

@@ -30,7 +30,14 @@ const article: BlogArticleData = {
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Si une réponse te pique</p>
 <p>En posant des questions intimes, tu vas parfois entendre des choses inattendues. Un fantasme qui te surprend, un souvenir que tu ne connaissais pas, un besoin jamais formulé... Respire. Tu as le droit d'être surprise, pas de faire payer la sincérité. Une réponse punie, c'est la dernière réponse sincère que tu obtiendras.</p>
-</aside>`,
+</aside>
+<div><table><thead><tr><th>Le registre</th><th>Ce qu'il demande</th></tr></thead><tbody>
+<tr><td>Tendre et émotionnel</td><td>Du calme, et personne qui regarde l'heure</td></tr>
+<tr><td>Complicité et attirance</td><td>De la bonne humeur, et zéro enjeu</td></tr>
+<tr><td>Désirs et imaginaire</td><td>La certitude que rien ne sera moqué</td></tr>
+<tr><td>Un cran au-dessus</td><td>Un accord clair des deux côtés, à froid</td></tr>
+<tr><td>À distance, par message</td><td>Un moment choisi, pas une notification en réunion</td></tr>
+</tbody></table></div>`,
     },
     {
       id: 'tendres-et-emotionnelles',

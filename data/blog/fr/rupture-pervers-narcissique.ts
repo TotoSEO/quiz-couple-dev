@@ -36,7 +36,13 @@ const article: BlogArticleData = {
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Si tu crains sa réaction, ce n'est plus une rupture ordinaire</p>
 <p>Peur physique, menaces déjà proférées, contrôle de ton argent ou de tes déplacements, enfants dans l'équation... Dans ces cas, ne gère pas seule : le 3919 (gratuit, anonyme, 24h/24) sait exactement préparer ce type de départ, et une association ou un avocat sécurisera les angles juridiques. Partir se fait alors AVEC un filet, jamais sur un coup de tête.</p>
-</aside>`,
+</aside>
+<div><table><thead><tr><th>La phase</th><th>Ce qui t'attend</th></tr></thead><tbody>
+<tr><td><strong>Avant</strong></td><td>Préparer sans l'annoncer : les appuis, les traces, la logistique</td></tr>
+<tr><td><strong>L'annonce</strong></td><td>Court, factuel, sans débat ouvert</td></tr>
+<tr><td><strong>La tempête</strong></td><td>Promesses, menaces, apitoiement, souvent dans cet ordre</td></tr>
+<tr><td><strong>Le no contact</strong></td><td>La seule règle qui tienne, et la plus difficile à tenir</td></tr>
+</tbody></table></div>`,
     },
     {
       id: 'pendant-l-annonce',

@@ -34,7 +34,16 @@ const article: BlogArticleData = {
 <li><strong>Ta vie extérieure a rétréci :</strong> Amis moins vus, famille mise à distance, activités abandonnées. Peu importe le mécanisme, reproches, crises, ou simple épuisement : si la relation a asséché le reste de ta vie, c'est un signal majeur.</li>
 <li><strong>Le chantage affectif fait partie du fonctionnement :</strong> L'amour, l'humeur ou la présence de l'autre sont conditionnés à ton obéissance. « Si tu m'aimais, tu... », les silences punitifs, les menaces de partir dégainées à chaque désaccord... L'affection est devenue une monnaie.</li>
 <li><strong>Tu ne te reconnais plus :</strong> Plus méfiante, plus éteinte, plus dure, ou simplement plus petite... Quand plusieurs proches te disent « tu as changé » et que ce n'est pas un compliment, écoute-les. Ils voient ce que l'intérieur de la relation t'empêche de voir.</li>
-</ol>`,
+</ol>
+<div><table><thead><tr><th>Le signe</th><th>Où ça se voit en premier</th></tr></thead><tbody>
+<tr><td>Tu vas moins bien depuis cette relation</td><td>Ton sommeil, ton énergie, ton humeur de fond</td></tr>
+<tr><td>Les conflits tournent en boucle</td><td>La même dispute, mot pour mot, depuis des mois</td></tr>
+<tr><td>Tu marches sur des œufs</td><td>Le temps que tu passes à choisir tes mots</td></tr>
+<tr><td>Le compteur des torts ne tourne que dans un sens</td><td>Qui s'excuse, à la fin, à chaque fois</td></tr>
+<tr><td>Ta vie extérieure a rétréci</td><td>Ton agenda, tes amis, tes projets à toi</td></tr>
+<tr><td>Le chantage affectif fait partie du fonctionnement</td><td>Ce qui arrive quand tu dis non</td></tr>
+<tr><td>Tu ne te reconnais plus</td><td>L'écart entre qui tu étais avant et maintenant</td></tr>
+</tbody></table></div>`,
     },
     {
       id: 'toxique-ou-passe-difficile',

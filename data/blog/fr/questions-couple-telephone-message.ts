@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['lucie-courtin'],
   excerpt: "Au téléphone, pas de regard, pas de gestes... juste les mots. C'est exactement pour ça que les bonnes questions y font des merveilles.",
   introduction: `<p>Il y a un moment que tous les couples connaissent, qu'ils vivent à 800 kilomètres ou à deux arrondissements : celui où l'appel du soir tourne au bulletin météo. « Ta journée ? » « Ça va. » « Tu manges quoi ? » « Des pâtes. »... Le lien est là, l'envie aussi, mais la conversation, elle, tourne à vide.</p>
-<p>C'est normal, en fait : à distance, on perd tout ce qui nourrit d'habitude les échanges, les regards, le contexte partagé, les gestes... Il ne reste que les mots. <strong>Et c'est précisément pour ça que les bonnes questions font des merveilles au téléphone : elles redonnent aux mots quelque chose à faire.</strong></p>
+<p>C'est normal, en fait : à distance, on perd tout ce qui nourrit d'habitude les échanges, les regards, le contexte partagé, les gestes... <strong>Il ne reste que les mots.</strong> <strong>Et c'est précisément pour ça que les bonnes questions font des merveilles au téléphone : elles redonnent aux mots quelque chose à faire.</strong></p>
 <p>Voici 60 questions pensées pour les échanges à distance : les soirées chacun chez soi, les vrais couples à distance, les messages de la journée... et les grands appels qui durent. Certaines tiennent en un SMS, d'autres méritent une heure au téléphone. À toi de doser !</p>`,
   quickSummary: [
     "60 questions calibrées pour le téléphone et les messages, du SMS d'une ligne au grand appel du soir.",
@@ -120,6 +120,12 @@ const article: BlogArticleData = {
       content: `<p>Même avec les meilleures questions du monde, il y a des soirs où les appels tournent en rond... pas par manque d'amour, par manque de MATIÈRE. Ces soirs-là, ce qu'il faut au couple, ce n'est pas une conversation de plus, c'est une activité commune.</p>
 <p>C'est exactement le créneau du <a href="/quiz-couple-distance/">quiz spécial couple à distance</a> : chacun sur son écran, des questions à deviner l'un sur l'autre, des points, de la mauvaise foi... bref une vraie soirée à deux, à 800 kilomètres d'écart. Les couples à distance en ont fait leur rituel du dimanche, et franchement, on les comprend.</p>
 <p>Et si vous êtes plutôt du genre à faire monter la température par écrit... les dernières questions des <a href="/blog/questions-intimes-couple/">questions intimes</a> ont une section spéciale messages, pensée exactement pour ça. On ne dira rien de plus ici !</p>
+<div><table><thead><tr><th>Le format</th><th>Ce qui marche</th><th>Ce qui tombe à plat</th></tr></thead><tbody>
+<tr><td>L'appel du soir</td><td>Une question ouverte, et du silence pour la réponse</td><td>Le récapitulatif de la journée, minute par minute</td></tr>
+<tr><td>Le message dans la journée</td><td>Court, une seule question, sans urgence</td><td>Le sujet lourd envoyé à 14h</td></tr>
+<tr><td>L'appel qui dure</td><td>Se laisser dériver, sans programme</td><td>Vouloir remplir chaque blanc</td></tr>
+<tr><td>Le vocal</td><td>La voix, qui dit ce que le texte aplatit</td><td>Le vocal de huit minutes qui attend une réponse</td></tr>
+</tbody></table></div>
 <div class="blog-cta">
 <p class="blog-cta-titre">Transformez l'appel de ce soir en jeu</p>
 <p class="blog-cta-texte">Le quiz à distance se joue à deux, chacun chez soi : mêmes questions, réponses croisées, score à la fin. Le format qui sauve tous les dimanches soirs des couples loin l'un de l'autre.</p>

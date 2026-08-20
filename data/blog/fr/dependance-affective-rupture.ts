@@ -27,7 +27,13 @@ const article: BlogArticleData = {
       title: "Pourquoi ça fait si mal (la mécanique du sevrage)",
       content: `<p>Remettons la mécanique à plat, parce qu'elle change tout au regard qu'on porte sur sa propre souffrance.</p>
 <p>Quand ton équilibre émotionnel reposait sur les signaux de l'autre, ses messages, sa présence, ses preuves, ta vie quotidienne fonctionnait comme sous perfusion. La rupture ne t'enlève pas « quelqu'un que tu aimes » : elle débranche la perfusion. D'où des symptômes qui dépassent le chagrin classique : l'angoisse en vagues physiques, l'obsession (il occupe 90 % de tes pensées), les insomnies, la perte d'appétit, l'impression de ne plus savoir qui tu es sans lui...</p>
-<p>Ce dernier point est le plus important. La <a href="/blog/dependance-affective/">dépendance amoureuse</a> fait fusionner l'identité avec la relation : « nous » avait remplacé « je ». La rupture ne laisse donc pas un vide DANS ta vie... elle laisse un vide À LA PLACE de ta vie. Si tu ressens ça, mets un mot dessus et garde-le : ce n'est pas la preuve qu'il était irremplaçable. C'est la preuve que le travail à faire est chez toi... et qu'il est enfin à portée de main.</p>`,
+<p>Ce dernier point est le plus important. La <a href="/blog/dependance-affective/">dépendance amoureuse</a> fait fusionner l'identité avec la relation : « nous » avait remplacé « je ». La rupture ne laisse donc pas un vide DANS ta vie... elle laisse un vide À LA PLACE de ta vie. Si tu ressens ça, mets un mot dessus et garde-le : ce n'est pas la preuve qu'il était irremplaçable. C'est la preuve que le travail à faire est chez toi... et qu'il est enfin à portée de main.</p>
+<div><table><thead><tr><th></th><th>Une rupture ordinaire</th><th>Une rupture quand on est dépendant</th></tr></thead><tbody>
+<tr><td>Ce qu'on perd</td><td>Une personne, une histoire</td><td>Une personne, et la façon de se sentir exister</td></tr>
+<tr><td>La sensation</td><td>Du chagrin, par vagues</td><td>Du chagrin, plus un état de manque physique</td></tr>
+<tr><td>Le réflexe</td><td>Parler, pleurer, se changer les idées</td><td>Recontacter, guetter, vérifier</td></tr>
+<tr><td>La durée</td><td>Décroissante, plutôt régulière</td><td>En dents de scie, plus longue, et c'est normal</td></tr>
+</tbody></table></div>`,
     },
     {
       id: 'les-pieges-des-premieres-semaines',

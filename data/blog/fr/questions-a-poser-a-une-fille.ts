@@ -30,7 +30,14 @@ const article: BlogArticleData = {
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Les questions à éviter, tant qu'on y est</p>
 <p>« Pourquoi t'es célibataire ? » (elle l'a entendue cent fois, et c'est un piège sans bonne réponse). « C'était quoi ton ex ? » (trop tôt, toujours). Le salaire, le poids, « t'es plutôt relation sérieuse ou pas ? » dès le deuxième message... Garde en tête un principe simple : si la question ressemble à un tri de candidature, elle tue la magie.</p>
-</aside>`,
+</aside>
+<div><table><thead><tr><th>La règle</th><th>Pourquoi elle change tout</th></tr></thead><tbody>
+<tr><td>Une question à la fois</td><td>Deux questions d'affilée, et ça devient un formulaire</td></tr>
+<tr><td>Rebondir avant d'enchaîner</td><td>C'est l'écoute qui séduit, pas le stock de questions</td></tr>
+<tr><td>Répondre soi-même</td><td>Une question sans réciprocité met l'autre à nu tout seul</td></tr>
+<tr><td>Doser la profondeur</td><td>Trop intime trop tôt, et la conversation se referme</td></tr>
+<tr><td>Accepter un non</td><td>Insister sur un sujet évité coûte tout le reste</td></tr>
+</tbody></table></div>`,
     },
     {
       id: 'par-message-pour-lancer',

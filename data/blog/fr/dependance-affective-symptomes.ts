@@ -26,7 +26,13 @@ const article: BlogArticleData = {
       id: 'symptome-central',
       title: "Le symptôme central, celui qui résume tous les autres",
       content: `<p>Avant la liste, il faut comprendre le mécanisme de base, parce que tous les symptômes en découlent. La <a href="/blog/dependance-affective/">dépendance affective</a>, au fond, c'est utiliser l'autre comme régulateur émotionnel : ton calme, ta valeur, ta sécurité intérieure passent par ses signaux à lui. Un message tendre, et ta journée est belle. Un silence, et tout s'effondre.</p>
-<p>Le problème n'est pas d'être touchée par les signaux de ton partenaire, tout le monde l'est ! Le problème, c'est l'amplitude. Quand une personne extérieure tient le thermostat de ton état interne, tu n'es plus dans le lien... tu es dans la survie. Et c'est exactement ce que les symptômes suivants décrivent, chacun à leur façon.</p>`,
+<p>Le problème n'est pas d'être touchée par les signaux de ton partenaire, tout le monde l'est ! Le problème, c'est l'amplitude. Quand une personne extérieure tient le thermostat de ton état interne, tu n'es plus dans le lien... tu es dans la survie. Et c'est exactement ce que les symptômes suivants décrivent, chacun à leur façon.</p>
+<div><table><thead><tr><th>Où ça se manifeste</th><th>Ce que ça donne concrètement</th></tr></thead><tbody>
+<tr><td><strong>Dans ta tête</strong></td><td>L'interprétation permanente, la peur de l'abandon en tâche de fond</td></tr>
+<tr><td><strong>Dans ton couple</strong></td><td>La réassurance qui ne tient jamais, les limites qui ne se posent pas</td></tr>
+<tr><td><strong>Dans ton corps</strong></td><td>Le ventre noué, le sommeil qui part, le soulagement quand ça vibre</td></tr>
+<tr><td><strong>Avec les autres</strong></td><td>Les amis qu'on voit moins, la vie qui se range derrière une personne</td></tr>
+</tbody></table></div>`,
     },
     {
       id: 'dans-ta-tete',

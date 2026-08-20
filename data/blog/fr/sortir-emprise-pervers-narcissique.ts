@@ -27,7 +27,13 @@ const article: BlogArticleData = {
       title: "Pourquoi c'est si dur : le lien traumatique",
       content: `<p>Commençons par te réhabiliter à tes propres yeux, parce que tout part de là.</p>
 <p>Ce qui t'attache à lui porte un nom : le lien traumatique, et c'est de la mécanique pure. Quand une même personne est la source de ta souffrance ET de ton réconfort, ton cerveau fabrique un attachement d'une puissance anormale. L'alternance fait tout : la punition crée le manque, la récompense crée le soulagement... et le soulagement, répété dans la peur, s'imprime plus fort que n'importe quel bonheur tranquille. C'est le même circuit que les addictions, littéralement.</p>
-<p>Voilà pourquoi « il te fait du mal, pars » ne fonctionne pas : le mal fait PARTIE du système d'attachement. Voilà pourquoi tu ressens un manque physique loin de lui, alors même que tu vas mieux... Et voilà pourquoi ta difficulté à partir ne dit rien de ta valeur : elle mesure la puissance du dispositif, c'est tout. Ce dispositif, c'est tout le fonctionnement du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en couple</a>... ici, on s'occupe d'en sortir.</p>`,
+<p>Voilà pourquoi « il te fait du mal, pars » ne fonctionne pas : le mal fait PARTIE du système d'attachement. Voilà pourquoi tu ressens un manque physique loin de lui, alors même que tu vas mieux... Et voilà pourquoi ta difficulté à partir ne dit rien de ta valeur : elle mesure la puissance du dispositif, c'est tout. Ce dispositif, c'est tout le fonctionnement du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en couple</a>... ici, on s'occupe d'en sortir.</p>
+<div><table><thead><tr><th>L'étape</th><th>Ce qui s'y joue</th></tr></thead><tbody>
+<tr><td><strong>1. La lucidité</strong></td><td>Mettre le bon mot sur ce que tu vis, sans le retirer le lendemain</td></tr>
+<tr><td><strong>2. La déculpabilisation</strong></td><td>Arrêter de chercher ta part de responsabilité dans un système conçu pour ça</td></tr>
+<tr><td><strong>3. Le détachement</strong></td><td>Partir, et surtout tenir la distance dans les semaines qui suivent</td></tr>
+<tr><td><strong>4. La reconstruction</strong></td><td>Réapprendre à te fier à toi, la plus longue des quatre</td></tr>
+</tbody></table></div>`,
     },
     {
       id: 'etape-1-la-lucidite',

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['lucie-courtin'],
   excerpt: "Le plus dur avec un crush, ce n'est pas de trouver quoi dire. C'est de poser les questions qui transforment une conversation polie en vraie connexion.",
   introduction: `<p>Tu connais ce moment... La conversation tourne, les « ça va et toi » s'enchaînent, et tu sens que si personne ne relance avec autre chose, ça va gentiment mourir en « bonne soirée alors ». Avec un crush, chaque échange compte double ! Du coup, on se retrouve tous, un jour ou l'autre, à fixer son téléphone sans savoir quoi envoyer.</p>
-<p><strong>Une bonne question fait deux choses à la fois : elle montre que tu t'intéresses vraiment, et elle donne envie de répondre.</strong> C'est tout ce qu'on demande à une conversation naissante, en fait. Et c'est exactement ce que les 100 questions qui suivent savent faire.</p>
+<p><strong>Une bonne question fait deux choses à la fois : <strong>elle montre que tu t'intéresses vraiment, et elle donne envie de répondre</strong>.</strong> C'est tout ce qu'on demande à une conversation naissante, en fait. Et c'est exactement ce que les 100 questions qui suivent savent faire.</p>
 <p>Elles sont classées par situation : pour lancer par message, pour apprendre à le connaître, pour rire, pour aller un peu plus loin, pour flirter sans trop en faire... et pour vérifier, mine de rien, si ça pourrait coller entre vous. On écrit « il » pour simplifier, mais tout fonctionne évidemment dans tous les sens.</p>`,
   quickSummary: [
     "100 questions classées par situation, du premier message au premier rendez-vous.",
@@ -185,6 +185,13 @@ const article: BlogArticleData = {
       title: "Et si tu n'oses pas lui envoyer quoi que ce soit ?",
       content: `<p>Petit mot pour celle ou celui qui a lu jusqu'ici sans avoir envoyé le moindre message : c'est normal ! Un crush, par définition, fait perdre les moyens. Commence par les questions 1 à 15. Une seule. La plus simple, celle qui te ressemble. Le but n'est pas d'être brillant, c'est juste d'ouvrir une porte.</p>
 <p>Et si vous parlez déjà tous les jours mais que tu n'arrives toujours pas à savoir si c'est réciproque... arrête de relire vos conversations pour la dixième fois. Franchement. Il y a des signaux bien plus fiables que ton interprétation de ses emojis à 1 heure du matin.</p>
+<div><table><thead><tr><th>L'étape</th><th>Le bon registre</th><th>L'erreur classique</th></tr></thead><tbody>
+<tr><td>Les premiers messages</td><td>Léger, court, une seule question à la fois</td><td>Le pavé qui attend une dissertation</td></tr>
+<tr><td>Faire connaissance</td><td>Curieux, sur du concret</td><td>L'interrogatoire déguisé</td></tr>
+<tr><td>Faire rire</td><td>Absurde, jamais aux dépens de l'autre</td><td>La blague qui teste les limites</td></tr>
+<tr><td>Flirter</td><td>Suggéré, avec une porte de sortie</td><td>Le compliment qui met mal à l'aise</td></tr>
+<tr><td>Le premier rendez-vous</td><td>Ouvert, et vraiment écouté</td><td>Réciter ses questions préparées</td></tr>
+</tbody></table></div>
 <div class="blog-cta">
 <p class="blog-cta-titre">Il pense à toi, ou il répond juste poliment ?</p>
 <p class="blog-cta-texte">Une série de questions passe en revue les vrais signaux, ceux qu'on ne remarque pas quand on a le nez dedans : ses relances, ses attentions, sa manière d'être quand tu es là. Résultat immédiat, et personne n'en saura rien.</p>

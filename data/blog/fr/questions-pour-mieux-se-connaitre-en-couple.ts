@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['lucie-courtin'],
   excerpt: "Le jour où on arrête de se poser des questions, on n'a pas fini de se découvrir... on a juste arrêté de chercher.",
   introduction: `<p>Fais l'expérience un jour : demande à un couple installé depuis dix ans s'ils se connaissent par cœur. Ils diront oui, évidemment. Puis pose-leur trois questions un peu précises, le rêve qu'il a abandonné, la peur qu'elle ne dit jamais, ce que chacun croit que l'autre pense de lui... et regarde les visages. Il y a toujours une surprise. Toujours !</p>
-<p><strong>Parce qu'on ne finit jamais de connaître quelqu'un. On arrête juste de chercher, et c'est très différent.</strong> La bonne nouvelle, c'est que la curiosité, ça se rallume : il suffit de reposer des vraies questions, et d'écouter les réponses comme au premier jour.</p>
+<p><strong>Parce qu'<strong>on ne finit jamais de connaître quelqu'un. On arrête juste de chercher, et c'est très différent.</strong></strong> La bonne nouvelle, c'est que la curiosité, ça se rallume : il suffit de reposer des vraies questions, et d'écouter les réponses comme au premier jour.</p>
 <p>Ces 60 questions se posent À DEUX : chacun répond à chaque question, à tour de rôle. C'est la règle du jeu, et c'est elle qui change tout... parce qu'on découvre autant en répondant qu'en écoutant. Cinq thèmes, du passé à l'avenir. Installez-vous bien.</p>`,
   quickSummary: [
     "60 questions à se poser À DEUX : chacun répond, à tour de rôle.",
@@ -126,6 +126,13 @@ const article: BlogArticleData = {
       title: "Et maintenant, transformez l'essai",
       content: `<p>Si vous avez joué le jeu jusqu'ici, vous avez récolté des surprises, c'est garanti. Gardez le réflexe : dix questions par soirée, une fois par mois, et votre couple ne retombera jamais dans le pilote automatique. C'est exactement le même principe que les grandes soirées de <a href="/questions-couple/">questions pour couple</a>... l'habitude en plus.</p>
 <p>Il reste un truc amusant à faire avec tout ce que vous venez d'apprendre. Vous croyez avoir bien écouté l'autre ? Vraiment bien ?</p>
+<div><table><thead><tr><th>Le territoire</th><th>Ce qu'on y trouve</th></tr></thead><tbody>
+<tr><td>Vos racines</td><td>Ce qui a fabriqué ses réflexes, bien avant toi</td></tr>
+<tr><td>Votre quotidien</td><td>Les petites choses qui pèsent et qu'on ne dit pas</td></tr>
+<tr><td>Vos profondeurs</td><td>Les peurs et les fiertés qui ne sortent jamais seules</td></tr>
+<tr><td>Votre couple</td><td>Votre histoire, racontée par l'autre</td></tr>
+<tr><td>Vos envies</td><td>Ce que chacun espère encore, et n'a jamais formulé</td></tr>
+</tbody></table></div>
 <div class="blog-cta">
 <p class="blog-cta-titre">Prouvez que vous avez écouté</p>
 <p class="blog-cta-texte">Le quiz « qui connaît le mieux l'autre » transforme vos découvertes en défi : chacun répond, on compare, et on voit qui a vraiment fait attention pendant toutes ces conversations. Revanche autorisée le mois prochain.</p>

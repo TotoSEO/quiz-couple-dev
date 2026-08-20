@@ -32,7 +32,13 @@ const article: BlogArticleData = {
 <li><a href="#dans-l-intimite">Dans l'intimité : le contrôle installé (signes 7 à 9)</a></li>
 <li><a href="#quand-tu-resistes">Quand tu résistes : le masque qui tombe (signes 10 à 12)</a></li>
 </ol>
-<p>Un rappel avant de commencer, et il est important. La moitié de ces comportements, pris isolément et une seule fois, peuvent arriver dans n'importe quel couple ! Ce qui fait signe, c'est la répétition, l'accumulation, et surtout le sens général : tout converge vers son contrôle et ton rétrécissement. Le fonctionnement de fond, lui, celui qui explique pourquoi tout converge, c'est celui de l'<a href="/blog/pervers-narcissique-amour/">emprise narcissique en amour</a> : un miroir à alimenter, coûte que coûte.</p>`,
+<p>Un rappel avant de commencer, et il est important. La moitié de ces comportements, pris isolément et une seule fois, peuvent arriver dans n'importe quel couple ! Ce qui fait signe, c'est la répétition, l'accumulation, et surtout le sens général : tout converge vers son contrôle et ton rétrécissement. Le fonctionnement de fond, lui, celui qui explique pourquoi tout converge, c'est celui de l'<a href="/blog/pervers-narcissique-amour/">emprise narcissique en amour</a> : un miroir à alimenter, coûte que coûte.</p>
+<div><table><thead><tr><th>La scène</th><th>Ce que les autres voient</th><th>Ce que toi tu vis</th></tr></thead><tbody>
+<tr><td>En société</td><td>Un homme brillant, drôle, généreux</td><td>Le décalage que tu es la seule à percevoir</td></tr>
+<tr><td>Au début, avec toi</td><td>Un coup de foudre magnifique</td><td>Une intensité qui va te servir d'ancre plus tard</td></tr>
+<tr><td>Dans l'intimité</td><td>Rien, personne n'y assiste</td><td>Les piques, les comparaisons, le seuil qui recule</td></tr>
+<tr><td>Quand tu résistes</td><td>Une femme qui « devient difficile »</td><td>L'escalade, le retournement, la culpabilité</td></tr>
+</tbody></table></div>`,
       subsections: [
         {
           id: 'en-societe-le-personnage',

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['mathieu-courtin'],
   excerpt: "Les couples ne se plantent presque jamais par manque d'amour. Ils se plantent sur des sujets qu'ils n'avaient jamais mis sur la table.",
   introduction: `<p>Il y a une statistique que personne ne calcule mais que tout le monde connaît : la plupart des grandes crises de couple portent sur des sujets... dont les deux savaient qu'il faudrait parler un jour. L'argent. Les enfants. La belle-famille. La répartition des tâches. Le « un jour » est juste arrivé trop tard, en pleine crise, au pire moment pour en discuter calmement.</p>
-<p><strong>Parler d'avenir n'a jamais tué une histoire solide. Ne pas en parler en a tué beaucoup.</strong> Et contrairement à ce qu'on croit, ces conversations ne sont pas solennelles ni pesantes... bien menées, ce sont même parmi les plus excitantes qu'un couple puisse avoir !</p>
+<p><strong><strong>Parler d'avenir n'a jamais tué une histoire solide. Ne pas en parler en a tué beaucoup.</strong></strong> Et contrairement à ce qu'on croit, ces conversations ne sont pas solennelles ni pesantes... bien menées, ce sont même parmi les plus excitantes qu'un couple puisse avoir !</p>
 <p>Voici 60 questions d'avenir, classées par grande étape : avant d'emménager, avant de s'engager pour de bon, avant un enfant, autour de l'argent, et sur vos rêves communs. À picorer AVANT que les sujets deviennent urgents... c'est tout leur intérêt.</p>`,
   quickSummary: [
     "60 questions classées par étape : emménager, s'engager, un enfant, l'argent, les rêves.",
@@ -124,7 +124,14 @@ const article: BlogArticleData = {
 <p>Les réponses à ces 60 questions ne sont pas gravées : elles bougent, avec les années et les événements. Les couples qui durent refont le tour des grandes questions régulièrement, une fois par an, un soir d'anniversaire de rencontre par exemple... Ce rendez-vous-là vaut tous les contrats du monde.</p>
 </aside>
 <p>Et si ces conversations d'avenir t'ont donné le goût des grandes discussions, la <a href="/questions-couple/">collection complète de questions à se poser à deux</a> couvre tous les autres registres... des plus légères aux plus profondes, il y a de quoi tenir des années de soirées.</p>
-<a href="/blog/questions-pour-mieux-se-connaitre-en-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">60 questions pour mieux vous connaître, même si vous croyez tout savoir</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+<a href="/blog/questions-pour-mieux-se-connaitre-en-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">60 questions pour mieux vous connaître, même si vous croyez tout savoir</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+<div><table><thead><tr><th>Le cap</th><th>Le sujet qu'on découvre trop tard</th></tr></thead><tbody>
+<tr><td>Avant d'emménager</td><td>Qui paie quoi, et ce qui se passe si l'un perd son travail</td></tr>
+<tr><td>Avant de s'engager</td><td>Ce que chacun met derrière le mot « engagement »</td></tr>
+<tr><td>Avant un enfant</td><td>Qui ralentit sa carrière, et pour combien de temps</td></tr>
+<tr><td>L'argent</td><td>Le rapport à la dépense, hérité de chaque famille</td></tr>
+<tr><td>Les rêves communs</td><td>Ceux qu'on a arrêté de dire à voix haute</td></tr>
+</tbody></table></div>`,
     },
   ],
 };
