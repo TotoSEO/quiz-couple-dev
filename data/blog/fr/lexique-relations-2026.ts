@@ -47,7 +47,7 @@ const article: BlogArticleData = {
       id: 'crush',
       title: "Crush",
       content: `<p>Techniquement, "crush" veut dire béguin en anglais. Mais en français, "béguin" sonne comme quelque chose que votre grand-mère dirait. "Crush", lui, s'est installé dans toutes les conversations, chez les ados et chez les trentenaires qui racontent leur week-end.</p>
-<p>Un crush, c'est une attirance forte, souvent pas encore déclarée, parfois un peu obsessionnelle. La personne à qui vous pensez quand vous ne pensez à rien de particulier. Celle dont vous vérifiez le profil Instagram un peu trop souvent. Celle pour qui vous avez répété mentalement dix fois ce que vous alliez dire avant de finalement envoyer un message banal.</p>
+<p>Un crush, c'est une attirance forte, souvent pas encore déclarée, parfois un peu obsessionnelle. La personne à qui vous pensez quand vous ne pensez à rien de particulier. Celle dont vous vérifiez le profil Instagram un peu trop souvent. Celle pour qui vous avez répété mentalement dix fois <a href="/blog/questions-a-poser-a-son-crush/">ce que vous alliez dire</a> avant de finalement envoyer un message banal.</p>
 <p>La particularité du crush, c'est qu'il n'est pas réciproque par définition, dès que ça devient partagé, ça devient autre chose. C'est peut-être pour ça que le mot reste populaire : il décrit cette période suspendue où tout est encore possible, avant que la réalité s'en mêle.</p>
 <p>Ce que ça dit de nous : qu'on aime bien cette zone floue où l'on projette tout ce qu'on veut sans risquer grand-chose.</p>`,
     },

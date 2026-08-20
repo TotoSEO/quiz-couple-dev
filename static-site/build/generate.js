@@ -884,6 +884,9 @@ async function generatePage(routeKey, lang) {
     // SEO: render the quiz questions as static HTML so JS-less crawlers see them
     fullHtml = injectStaticQuestions(fullHtml, data.tgd, lang);
 
+    // Neutralise les liens vers les articles programmés tant qu'ils ne sont pas publiés
+    fullHtml = stripFutureLinks(fullHtml);
+
     // Minify
     const minified = await minifyHtml(fullHtml);
 

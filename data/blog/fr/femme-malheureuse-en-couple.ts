@@ -50,7 +50,7 @@ const article: BlogArticleData = {
         {
           id: 'conversations-changees',
           title: "Les conversations ont changé de nature",
-          content: `<p>Ce n'est pas qu'elle ne parle plus. C'est qu'elle ne parle plus de la même façon. Les échanges qui restent tournent autour de la logistique : qui fait les courses, à quelle heure rentre-t-on, est-ce que le chat a mangé. <strong>Les vraies conversations, ce qu'elle ressent, ce qu'elle pense, ce qui la préoccupe, ont disparu.</strong> Elle ne les initie plus. Et si tu les lances, elle répond brièvement, poliment, et passe à autre chose.</p>
+          content: `<p>Ce n'est pas qu'elle ne parle plus. C'est qu'elle ne parle plus de la même façon. Les échanges qui restent tournent autour de la logistique : qui fait les courses, à quelle heure rentre-t-on, est-ce que le chat a mangé. <strong>Les vraies conversations, <a href="/blog/questions-a-poser-a-sa-copine/">ce qu'elle ressent, ce qu'elle pense, ce qui la préoccupe</a>, ont disparu.</strong> Elle ne les initie plus. Et si tu les lances, elle répond brièvement, poliment, et passe à autre chose.</p>
 <p>Ce retrait-là, c'est rarement de la mauvaise humeur passagère. C'est une femme qui a appris à ne plus attendre grand chose de ces échanges.</p>`,
         },
         {

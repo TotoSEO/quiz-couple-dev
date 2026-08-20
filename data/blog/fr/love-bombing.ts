@@ -52,8 +52,8 @@ const article: BlogArticleData = {
         {
           id: 'qui-fait-ca',
           title: "Est-ce que c'est toujours calculé ?",
-          content: `<p>Non, et c'est une nuance qui compte. Certaines personnes love bombent sans stratégie consciente : elles vivent des débuts de relation dans une intensité extrême parce qu'elles ont un rapport anxieux à l'attachement, et l'intensité retombe d'elle-même. Ce n'est pas agréable à vivre, mais ce n'est pas de la manipulation.</p>
-<p>Chez d'autres, en revanche, le love bombing est la première pièce d'un fonctionnement bien plus large, où la séduction sert à prendre le contrôle. C'est un marqueur classique des profils manipulateurs, au point qu'il figure presque systématiquement dans les récits de relations avec un pervers narcissique. Si c'est le fond de ta question, notre <a href="/test-pervers-narcissique/">test « suis-je en couple avec un pervers narcissique »</a> reprend ces situations une par une.</p>
+          content: `<p>Non, et c'est une nuance qui compte. Certaines personnes love bombent sans stratégie consciente : elles vivent des débuts de relation dans une intensité extrême parce qu'elles ont un <a href="/blog/attachement-anxieux/">rapport anxieux à l'attachement</a>, et l'intensité retombe d'elle-même. Ce n'est pas agréable à vivre, mais ce n'est pas de la manipulation.</p>
+<p>Chez d'autres, en revanche, le love bombing est la première pièce d'un fonctionnement bien plus large, où la séduction sert à prendre le contrôle. C'est un marqueur classique des <a href="/blog/manipulateur-narcissique/">profils manipulateurs</a>, au point qu'il figure presque systématiquement dans les récits de relations avec un pervers narcissique. Si c'est le fond de ta question, notre <a href="/test-pervers-narcissique/">test « suis-je en couple avec un pervers narcissique »</a> reprend ces situations une par une.</p>
 <p>Dans les deux cas, l'effet sur toi est réel. Mais l'issue n'est pas la même, et c'est la suite du cycle qui permet de faire la différence.</p>`,
         },
       ],

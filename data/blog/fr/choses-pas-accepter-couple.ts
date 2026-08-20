@@ -40,7 +40,7 @@ const article: BlogArticleData = {
     {
       id: 'jalousie-toxique-controle',
       title: 'La jalousie toxique et le contrôle',
-      content: `<p>La <strong>jalousie en couple</strong>, dans sa forme légère, peut être le signe qu'on tient à l'autre. Mais quand elle devient systématique, envahissante, contraignante, elle change de nature. La <strong>jalousie excessive</strong> et le contrôle ne sont pas des preuves d'amour. Ce sont des <strong>formes de domination</strong>.</p>
+      content: `<p>La <strong>jalousie en couple</strong>, dans sa forme légère, peut être le signe qu'on tient à l'autre. Mais quand elle devient systématique, envahissante, contraignante, elle change de nature. La <strong><a href="/blog/jalousie-maladive/">jalousie excessive</a></strong> et le contrôle ne sont pas des preuves d'amour. Ce sont des <strong>formes de domination</strong>.</p>
 <p>Vérifier le téléphone, interroger sur chaque sortie, exiger de savoir avec qui vous êtes à tout moment, mal vivre vos <strong>relations amicales ou professionnelles</strong>, vous reprocher votre façon de vous habiller, ces comportements n'ont rien à voir avec l'amour. Ils ont à voir avec le <strong>besoin de contrôle</strong> et l'insécurité, qui se transforment en prison pour l'autre.</p>
 <p>Ce qui rend cette situation particulièrement difficile à gérer, c'est que le partenaire jaloux présente souvent ce comportement comme une <strong>preuve d'attachement</strong>. "Je fais ça parce que je t'aime trop." Non. L'amour ne prive pas de liberté. L'amour n'emprisonne pas. Notre <a href="https://quiz-couple.com/test-couple-toxique/">test de couple toxique</a> peut vous aider à évaluer si cette jalousie dépasse les limites du sain.</p>`,
       tip: "Si vous sentez que vous devez \"rendre des comptes\" en permanence, que vous modifiez vos comportements par peur de la réaction de votre partenaire plutôt que par choix, c'est un <strong>signal sérieux</strong>. La liberté individuelle est non négociable dans une <strong>relation saine</strong>.",
@@ -51,13 +51,13 @@ const article: BlogArticleData = {
       content: `<p>La <strong>manipulation émotionnelle en couple</strong> est l'une des formes de maltraitance les plus difficiles à identifier, précisément parce qu'elle ne laisse aucune trace visible. <strong>Reconnaître la manipulation</strong> demande souvent du recul, et c'est exactement ce que le manipulateur cherche à vous retirer.</p>
 <p>Voici quelques comportements qui relèvent de la <strong>manipulation dans le couple</strong> :</p>
 <ul>
-<li><strong>Le gaslighting</strong> : vous faire douter de votre propre perception de la réalité ("c'est pas ce qui s'est passé", "t'inventes des trucs")</li>
+<li><strong><a href="/blog/gaslighting/">Le gaslighting</a></strong> : vous faire douter de votre propre perception de la réalité ("c'est pas ce qui s'est passé", "t'inventes des trucs")</li>
 <li><strong>Le chantage affectif</strong> : menacer de partir, de se faire du mal, de couper les ponts si vous ne faites pas ce qu'on attend de vous</li>
 <li><strong>La culpabilisation chronique</strong> : vous faire porter la responsabilité de tous les problèmes du couple</li>
 <li><strong>Le silence punitif</strong> : vous ignorer délibérément pour vous faire souffrir et vous faire plier</li>
 <li><strong>Le soufflage chaud/froid</strong> : alterner tendresse et distance pour créer une dépendance émotionnelle</li>
 </ul>
-<p>Ces comportements ont un point commun : ils vous mettent dans une <strong>position de faiblesse permanente</strong>, où vous marchez sur des œufs, où vous cherchez constamment l'approbation de l'autre. Ce n'est pas de l'amour. C'est de l'<strong>emprise psychologique</strong>.</p>`,
+<p>Ces comportements ont un point commun : ils vous mettent dans une <strong>position de faiblesse permanente</strong>, où vous marchez sur des œufs, où vous cherchez constamment l'approbation de l'autre. Ce n'est pas de l'amour. C'est de l'<strong><a href="/blog/sortir-emprise-pervers-narcissique/">emprise psychologique</a></strong>.</p>`,
     },
     {
       id: 'indifference-chronique',
