@@ -960,9 +960,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'homme-toxique-en-amour',
     category: 'psychologie',
     featuredImage: '/blog/homme-toxique-en-amour.webp',
-    frOnly: true,
     slugs: {
       fr: 'homme-toxique-en-amour',
+      en: 'toxic-man-in-love',
+      es: 'hombre-toxico-en-el-amor',
+      de: 'toxischer-mann-in-der-liebe',
+      it: 'uomo-tossico-in-amore',
     },
     publishedAt: '2026-10-27',
   },
