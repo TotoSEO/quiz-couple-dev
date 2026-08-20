@@ -804,9 +804,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'dependance-affective-symptomes',
     category: 'psychologie',
     featuredImage: '/blog/dependance-affective-symptomes.webp',
-    frOnly: true,
     slugs: {
       fr: 'dependance-affective-symptomes',
+      en: 'emotional-dependency-symptoms',
+      es: 'sintomas-dependencia-emocional',
+      de: 'emotionale-abhaengigkeit-symptome',
+      it: 'sintomi-dipendenza-affettiva',
     },
     publishedAt: '2026-09-15',
   },
