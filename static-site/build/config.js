@@ -830,9 +830,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'questions-intimes-couple',
     category: 'vie-de-couple',
     featuredImage: '/blog/questions-intimes-couple.webp',
-    frOnly: true,
     slugs: {
       fr: 'questions-intimes-couple',
+      en: 'intimate-questions-for-couples',
+      es: 'preguntas-intimas-pareja',
+      de: 'intime-fragen-fuer-paare',
+      it: 'domande-intime-di-coppia',
     },
     publishedAt: '2026-09-22',
   },
