@@ -999,9 +999,12 @@ export const BLOG_ARTICLES = [
     internalSlug: '36-questions-pour-tomber-amoureux',
     category: 'vie-de-couple',
     featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
-    frOnly: true,
     slugs: {
       fr: '36-questions-pour-tomber-amoureux',
+      en: '36-questions-to-fall-in-love',
+      es: '36-preguntas-para-enamorarse',
+      de: '36-fragen-um-sich-zu-verlieben',
+      it: '36-domande-per-innamorarsi',
     },
     publishedAt: '2026-11-06',
   },
