@@ -38,36 +38,36 @@ const article: BlogArticleData = {
           id: 'en-societe-le-personnage',
           title: "En société : le personnage public (signes 1 à 3)",
           content: `<ol>
-<li><strong>Un charme calibré, jamais gratuit.</strong> Il est brillant, drôle, attentif... mais observe à qui il l'est. Les personnes utiles, les nouveaux venus à conquérir, les témoins à charmer. Le serveur maladroit ou la caissière un peu lente, eux, voient un tout autre homme. Cette politesse à géométrie variable est un des indices les plus précoces qui existent.</li>
-<li><strong>Une générosité à témoins.</strong> Les grands gestes arrivent quand il y a un public : le cadeau offert devant tes amies, l'anecdote où il t'a sauvée, le compliment en société... Sans spectateurs, bizarrement, la générosité retombe. Tu finis par remarquer un truc étrange : tu es mieux traitée dehors que chez toi.</li>
-<li><strong>Toutes ses ex sont folles.</strong> Pas une seule histoire qui se termine normalement. Que des « hystériques », des « toxiques », des femmes qui « l'ont détruit »... Écoute bien ce récit, parce qu'il a deux fonctions : te flatter (toi, tu es différente) et préparer le terrain. Ce portrait des folles, par exemple, c'est très exactement celui qu'il fera de toi un jour.</li>
+<li><strong>Un charme calibré, jamais gratuit :</strong> Il est brillant, drôle, attentif... mais observe à qui il l'est. Les personnes utiles, les nouveaux venus à conquérir, les témoins à charmer. Le serveur maladroit ou la caissière un peu lente, eux, voient un tout autre homme. Cette politesse à géométrie variable est un des indices les plus précoces qui existent.</li>
+<li><strong>Une générosité à témoins :</strong> Les grands gestes arrivent quand il y a un public : le cadeau offert devant tes amies, l'anecdote où il t'a sauvée, le compliment en société... Sans spectateurs, bizarrement, la générosité retombe. Tu finis par remarquer un truc étrange : tu es mieux traitée dehors que chez toi.</li>
+<li><strong>Toutes ses ex sont folles :</strong> Pas une seule histoire qui se termine normalement. Que des « hystériques », des « toxiques », des femmes qui « l'ont détruit »... Écoute bien ce récit, parce qu'il a deux fonctions : te flatter (toi, tu es différente) et préparer le terrain. Ce portrait des folles, par exemple, c'est très exactement celui qu'il fera de toi un jour.</li>
 </ol>`,
         },
         {
           id: 'au-debut-avec-toi',
           title: "Au début avec toi : la séduction stratégique (signes 4 à 6)",
           content: `<ol start="4">
-<li><strong>Tout va trop vite, et c'est lui qui tient le tempo.</strong> Déclarations précoces, projets immédiats, présence permanente... le schéma exact du <a href="/blog/love-bombing/">love bombing</a>. Le détail qui change tout : essaie de ralentir un peu, et regarde si ton rythme est respecté, ou négocié.</li>
-<li><strong>Tu es « différente de toutes les autres ».</strong> Attention, ce n'est pas un compliment sur ce que tu fais. C'est un statut d'exception qu'il t'accorde. C'est enivrant, on ne va pas se mentir... et c'est un piège. Un statut accordé peut être retiré. Et il le sera, pile au moment où ça fera le plus mal.</li>
-<li><strong>Il teste tes limites, l'air de rien.</strong> Une remarque limite « pour rire », un retard sans excuse, une confidence à lui que tu retrouves répétée à d'autres... Ce sont des sondes. Il mesure ce que tu laisses passer, tout simplement. Et chaque petite chose avalée agrandit le périmètre de la suivante.</li>
+<li><strong>Tout va trop vite, et c'est lui qui tient le tempo :</strong> Déclarations précoces, projets immédiats, présence permanente... le schéma exact du <a href="/blog/love-bombing/">love bombing</a>. Le détail qui change tout : essaie de ralentir un peu, et regarde si ton rythme est respecté, ou négocié.</li>
+<li><strong>Tu es « différente de toutes les autres » :</strong> Attention, ce n'est pas un compliment sur ce que tu fais. C'est un statut d'exception qu'il t'accorde. C'est enivrant, on ne va pas se mentir... et c'est un piège. Un statut accordé peut être retiré. Et il le sera, pile au moment où ça fera le plus mal.</li>
+<li><strong>Il teste tes limites, l'air de rien :</strong> Une remarque limite « pour rire », un retard sans excuse, une confidence à lui que tu retrouves répétée à d'autres... Ce sont des sondes. Il mesure ce que tu laisses passer, tout simplement. Et chaque petite chose avalée agrandit le périmètre de la suivante.</li>
 </ol>`,
         },
         {
           id: 'dans-l-intimite',
           title: "Dans l'intimité : le contrôle installé (signes 7 à 9)",
           content: `<ol start="7">
-<li><strong>Il vise tes points forts, pas tes faiblesses.</strong> C'est contre-intuitif, et c'est pourtant sa signature. Ton métier, ton humour, ta famille, ce qui te rend fière : c'est précisément là que tombent les remarques. Une faiblesse critiquée, ça peut être un conseil maladroit. Une force systématiquement rabaissée, non. Ça, c'est une stratégie de démolition.</li>
-<li><strong>Ta réalité est renégociée en permanence.</strong> Ce que tu as vu, il ne l'a pas fait. Ce qu'il a dit, tu l'as mal compris. Ce que tu ressens, tu l'exagères... À force, tu doutes de ta mémoire au point de vérifier en cachette. Ce gaslighting quotidien, c'est le cœur du système.</li>
-<li><strong>Ton monde rétrécit, sans interdiction formelle.</strong> Il ne t'a jamais interdit de voir tes amies, non. Il a juste rendu chaque sortie coûteuse : une humeur avant, des reproches après, une crise le lendemain. Dans ce genre de situation, il y a des chances qu'au bout de quelques mois, sans trop savoir comment, tu te retrouves à faire le calcul toute seule... Et c'est exactement ce qui était prévu.</li>
+<li><strong>Il vise tes points forts, pas tes faiblesses :</strong> C'est contre-intuitif, et c'est pourtant sa signature. Ton métier, ton humour, ta famille, ce qui te rend fière : c'est précisément là que tombent les remarques. Une faiblesse critiquée, ça peut être un conseil maladroit. Une force systématiquement rabaissée, non. Ça, c'est une stratégie de démolition.</li>
+<li><strong>Ta réalité est renégociée en permanence :</strong> Ce que tu as vu, il ne l'a pas fait. Ce qu'il a dit, tu l'as mal compris. Ce que tu ressens, tu l'exagères... À force, tu doutes de ta mémoire au point de vérifier en cachette. Ce gaslighting quotidien, c'est le cœur du système.</li>
+<li><strong>Ton monde rétrécit, sans interdiction formelle :</strong> Il ne t'a jamais interdit de voir tes amies, non. Il a juste rendu chaque sortie coûteuse : une humeur avant, des reproches après, une crise le lendemain. Dans ce genre de situation, il y a des chances qu'au bout de quelques mois, sans trop savoir comment, tu te retrouves à faire le calcul toute seule... Et c'est exactement ce qui était prévu.</li>
 </ol>`,
         },
         {
           id: 'quand-tu-resistes',
           title: "Quand tu résistes : le masque qui tombe (signes 10 à 12)",
           content: `<ol start="10">
-<li><strong>La colère froide remplace le débat.</strong> Un désaccord ne se discute pas, il se paie : silence de plusieurs jours, affection coupée, ambiance de plomb. La punition n'est jamais nommée, d'ailleurs, ce qui t'oblige à deviner ta faute. Et donc à t'autosurveiller en continu.</li>
-<li><strong>Il devient la victime, publiquement si besoin.</strong> Le jour où tu hausses enfin le ton, après des mois d'usure, tu découvres l'inversion : c'est lui qui souffre, lui qui subit, lui qui raconte autour de vous qu'il « s'inquiète pour toi »... Cette campagne préventive vise un objectif précis : détruire ta crédibilité avant que tu parles.</li>
-<li><strong>Ton départ déclenche la reconquête, pas la remise en question.</strong> Promesses, larmes, thérapie annoncée, retour de l'homme des débuts ! Puis, une fois que tu es revenue, retour du système. En pire. Ce cycle de reprise a ses codes... les mêmes qui font de <a href="/blog/rupture-pervers-narcissique/">rompre avec un pervers narcissique</a> un exercice à part, qui se prépare.</li>
+<li><strong>La colère froide remplace le débat :</strong> Un désaccord ne se discute pas, il se paie : silence de plusieurs jours, affection coupée, ambiance de plomb. La punition n'est jamais nommée, d'ailleurs, ce qui t'oblige à deviner ta faute. Et donc à t'autosurveiller en continu.</li>
+<li><strong>Il devient la victime, publiquement si besoin :</strong> Le jour où tu hausses enfin le ton, après des mois d'usure, tu découvres l'inversion : c'est lui qui souffre, lui qui subit, lui qui raconte autour de vous qu'il « s'inquiète pour toi »... Cette campagne préventive vise un objectif précis : détruire ta crédibilité avant que tu parles.</li>
+<li><strong>Ton départ déclenche la reconquête, pas la remise en question :</strong> Promesses, larmes, thérapie annoncée, retour de l'homme des débuts ! Puis, une fois que tu es revenue, retour du système. En pire. Ce cycle de reprise a ses codes... les mêmes qui font de <a href="/blog/rupture-pervers-narcissique/">rompre avec un pervers narcissique</a> un exercice à part, qui se prépare.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Le vrai révélateur, c'est ta résistance</p>

@@ -27,11 +27,11 @@ const article: BlogArticleData = {
       title: "La micro-tromperie, concrètement",
       content: `<p>Le test le plus simple pour reconnaître une micro-tromperie tient en une question : <strong>est-ce que ce comportement survivrait à ta présence ?</strong> Ce qu'on fait pareil que tu sois là ou pas relève de la vie sociale... Ce qui change quand tu entres dans la pièce relève d'autre chose. Sur cette base, le répertoire classique :</p>
 <ul>
-<li><strong>L'attention numérique ciblée.</strong> Liker systématiquement les photos de la même personne, visionner toutes ses stories en premier, commenter avec une régularité de métronome... Un like est un rien ; une constance est un signal, et tout le monde le sait très bien.</li>
-<li><strong>Les conversations à géométrie cachée.</strong> Des échanges anodins... qu'on efface quand même. Un écran qu'on incline, une appli qu'on ferme un peu vite, des notifications masquées pour UN contact précis. Le contenu est peut-être innocent : la dissimulation, elle, ne l'est jamais.</li>
-<li><strong>L'ex en veilleuse.</strong> Garder de bons contacts avec un ex, ça existe et c'est sain... Lui écrire aux heures des confidences, se voir sans le mentionner, comparer (« elle, elle comprenait ») : c'est autre chose. La différence entre une amitié et une braise, c'est ce qu'on en dit à la maison.</li>
-<li><strong>Le marché entretenu.</strong> L'appli de rencontre « pas supprimée, juste oubliée », le profil discrètement actif, les matchs « pour l'ego »... En couple, garder une ligne ouverte sur le marché n'est pas un oubli : c'est une sortie de secours entretenue.</li>
-<li><strong>La confidence déplacée.</strong> Le plus subtil, et le plus sérieux : raconter à quelqu'un d'autre ce qu'on ne raconte plus à son partenaire. Ses doutes, ses problèmes de couple, ses victoires... Le jour où le confident principal n'est plus le partenaire, l'infidélité émotionnelle a commencé, quel que soit le reste.</li>
+<li><strong>L'attention numérique ciblée :</strong> Liker systématiquement les photos de la même personne, visionner toutes ses stories en premier, commenter avec une régularité de métronome... Un like est un rien ; une constance est un signal, et tout le monde le sait très bien.</li>
+<li><strong>Les conversations à géométrie cachée :</strong> Des échanges anodins... qu'on efface quand même. Un écran qu'on incline, une appli qu'on ferme un peu vite, des notifications masquées pour UN contact précis. Le contenu est peut-être innocent : la dissimulation, elle, ne l'est jamais.</li>
+<li><strong>L'ex en veilleuse :</strong> Garder de bons contacts avec un ex, ça existe et c'est sain... Lui écrire aux heures des confidences, se voir sans le mentionner, comparer (« elle, elle comprenait ») : c'est autre chose. La différence entre une amitié et une braise, c'est ce qu'on en dit à la maison.</li>
+<li><strong>Le marché entretenu :</strong> L'appli de rencontre « pas supprimée, juste oubliée », le profil discrètement actif, les matchs « pour l'ego »... En couple, garder une ligne ouverte sur le marché n'est pas un oubli : c'est une sortie de secours entretenue.</li>
+<li><strong>La confidence déplacée :</strong> Le plus subtil, et le plus sérieux : raconter à quelqu'un d'autre ce qu'on ne raconte plus à son partenaire. Ses doutes, ses problèmes de couple, ses victoires... Le jour où le confident principal n'est plus le partenaire, l'infidélité émotionnelle a commencé, quel que soit le reste.</li>
 </ul>`,
     },
     {
@@ -43,7 +43,29 @@ const article: BlogArticleData = {
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Et surveiller son partenaire pour « vérifier », alors ?</p>
 <p>Piège symétrique : traquer les likes de l'autre, éplucher ses abonnements, faire des captures « au cas où »... c'est répondre à une éventuelle micro-tromperie par une micro-surveillance, et les deux abîment le couple. Si tu en es là, le vrai sujet est le doute, pas les likes : apprendre à trier les <a href="/blog/signes-infidelite/">signes d'infidélité</a> qui pèsent vraiment des faux indices te rendra ta tranquillité bien mieux que la surveillance.</p>
-</aside>`,
+</aside>
+<div class="blog-verdict">
+<div class="blog-verdict-col blog-verdict-col--oui">
+<p class="blog-verdict-titre"><span aria-hidden="true">🙂</span> La vie sociale ordinaire</p>
+<ul>
+<li>Avoir des amis proches en dehors du couple</li>
+<li>Trouver quelqu'un attirant sans rien en faire</li>
+<li>Liker au fil du scroll, sans cible</li>
+<li>Une conversation que tu pourrais montrer sans gêne</li>
+<li>Un échange ponctuel, qui ne recommence pas</li>
+</ul>
+</div>
+<div class="blog-verdict-col blog-verdict-col--non">
+<p class="blog-verdict-titre"><span aria-hidden="true">🚩</span> Le secret plus la constance</p>
+<ul>
+<li>Toujours la même personne, encore et encore</li>
+<li>Des messages effacés après coup</li>
+<li>Un prénom que ton partenaire n'a jamais entendu</li>
+<li>Une version édulcorée quand on te pose la question</li>
+<li>Une énergie que le couple, lui, ne reçoit plus</li>
+</ul>
+</div>
+</div>`,
     },
     {
       id: 'pourquoi-ca-fait-si-mal',
@@ -56,9 +78,9 @@ const article: BlogArticleData = {
       id: 'comment-en-parler',
       title: "Comment en parler (sans procès, et sans se taire)",
       content: `<p>Le sujet est piégé des deux côtés : en parler expose au « tu es parano »... se taire laisse la braise couver. Voici la voie du milieu, en trois mouvements.</p>
-<p><strong>Nommer le comportement, pas l'intention.</strong> Tu n'as pas accès à ses intentions, et les procès d'intention font dérailler toutes les conversations... Reste aux faits observables : « j'ai vu que tu échanges très régulièrement avec elle, et que ça se ferme quand j'arrive. Ça me met mal, et je préfère t'en parler que de ruminer. » Factuel, direct, sans verdict. La qualité de sa réponse t'apprendra l'essentiel : quelqu'un de clair contextualise et AJUSTE... quelqu'un d'ambigu contre-attaque.</p>
-<p><strong>Définir VOS lignes, à deux.</strong> Voilà le vrai travail, et presque aucun couple ne le fait : la fidélité a une zone grise, et chaque couple place ses frontières différemment ! Les ex, les DM, les confidences, les applis, les soirées... Parlez-en À FROID, pas en pleine crise : « c'est quoi, pour toi, être fidèle, concrètement ? » Tu seras surpris des écarts de définition... et chaque écart découvert à froid est une crise évitée à chaud. C'est typiquement une conversation à glisser dans vos <a href="/blog/questions-avenir-couple/">questions d'avenir de couple</a>.</p>
-<p><strong>Et regarder ce que la braise dit du foyer.</strong> Sans excuser quoi que ce soit : la micro-tromperie prospère souvent là où le couple s'est mis en veille... attention en berne, conversations réduites à la logistique, séduction interne à zéro. La meilleure protection n'est ni la surveillance ni les règles : c'est un couple où l'attention circule encore. Si la vôtre s'est endormie, réveillez-la en premier... le reste suit étonnamment souvent.</p>
+<p><strong>Nommer le comportement, pas l'intention :</strong> Tu n'as pas accès à ses intentions, et les procès d'intention font dérailler toutes les conversations... Reste aux faits observables : « j'ai vu que tu échanges très régulièrement avec elle, et que ça se ferme quand j'arrive. Ça me met mal, et je préfère t'en parler que de ruminer. » Factuel, direct, sans verdict. La qualité de sa réponse t'apprendra l'essentiel : quelqu'un de clair contextualise et AJUSTE... quelqu'un d'ambigu contre-attaque.</p>
+<p><strong>Définir VOS lignes, à deux :</strong> Voilà le vrai travail, et presque aucun couple ne le fait : la fidélité a une zone grise, et chaque couple place ses frontières différemment ! Les ex, les DM, les confidences, les applis, les soirées... Parlez-en À FROID, pas en pleine crise : « c'est quoi, pour toi, être fidèle, concrètement ? » Tu seras surpris des écarts de définition... et chaque écart découvert à froid est une crise évitée à chaud. C'est typiquement une conversation à glisser dans vos <a href="/blog/questions-avenir-couple/">questions d'avenir de couple</a>.</p>
+<p><strong>Et regarder ce que la braise dit du foyer :</strong> Sans excuser quoi que ce soit : la micro-tromperie prospère souvent là où le couple s'est mis en veille... attention en berne, conversations réduites à la logistique, séduction interne à zéro. La meilleure protection n'est ni la surveillance ni les règles : c'est un couple où l'attention circule encore. Si la vôtre s'est endormie, réveillez-la en premier... le reste suit étonnamment souvent.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Votre couple est-il en zone grise ?</p>
 <p class="blog-cta-texte">Une série de questions fait le point sur la confiance, la transparence et les frontières dans votre couple... et vous dit où vous en êtes, avant que la zone grise ne fonce.</p>

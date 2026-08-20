@@ -32,22 +32,22 @@ const article: BlogArticleData = {
       id: 'dans-ta-tete',
       title: "Dans ta tête (symptômes 1 à 5)",
       content: `<ol>
-<li><strong>La peur de l'abandon, en tâche de fond.</strong> Pas une inquiétude ponctuelle : un programme qui tourne en permanence. Un ton un peu sec, un « on verra », un regard distrait... et ton cerveau conclut au pire. Le plus épuisant, c'est que même les bons moments sont contaminés : tu profites à moitié, parce qu'une partie de toi anticipe déjà la fin.</li>
-<li><strong>L'interprétation permanente.</strong> Tu relis les messages, tu analyses les emojis, tu compares le temps de réponse d'aujourd'hui à celui de la semaine dernière... Ton couple est devenu une enquête, et toi une détective à plein temps. Épuisant, et surtout : sans fin, parce qu'aucune preuve ne rassure plus de quelques heures.</li>
-<li><strong>Le besoin de réassurance à répétition.</strong> « Tu m'aimes ? », « Tout va bien entre nous ? », posées non pas pour ouvrir une conversation, mais pour calmer une angoisse. La réponse fonctionne comme un médicament... à effet court. Il faut vite une nouvelle dose.</li>
-<li><strong>La valeur personnelle indexée sur lui.</strong> S'il te valorise, tu vaux quelque chose. S'il est distant, tu ne vaux plus rien. Ton estime de toi ne t'appartient plus : elle est cotée en bourse, et c'est lui le marché.</li>
-<li><strong>L'incapacité à être seule sans souffrir.</strong> La solitude ne te repose pas, elle te met en alerte. Un week-end sans lui n'est pas un moment à toi : c'est une épreuve à traverser, montre en main.</li>
+<li><strong>La peur de l'abandon, en tâche de fond :</strong> Pas une inquiétude ponctuelle : un programme qui tourne en permanence. Un ton un peu sec, un « on verra », un regard distrait... et ton cerveau conclut au pire. Le plus épuisant, c'est que même les bons moments sont contaminés : tu profites à moitié, parce qu'une partie de toi anticipe déjà la fin.</li>
+<li><strong>L'interprétation permanente :</strong> Tu relis les messages, tu analyses les emojis, tu compares le temps de réponse d'aujourd'hui à celui de la semaine dernière... Ton couple est devenu une enquête, et toi une détective à plein temps. Épuisant, et surtout : sans fin, parce qu'aucune preuve ne rassure plus de quelques heures.</li>
+<li><strong>Le besoin de réassurance à répétition :</strong> « Tu m'aimes ? », « Tout va bien entre nous ? », posées non pas pour ouvrir une conversation, mais pour calmer une angoisse. La réponse fonctionne comme un médicament... à effet court. Il faut vite une nouvelle dose.</li>
+<li><strong>La valeur personnelle indexée sur lui :</strong> S'il te valorise, tu vaux quelque chose. S'il est distant, tu ne vaux plus rien. Ton estime de toi ne t'appartient plus : elle est cotée en bourse, et c'est lui le marché.</li>
+<li><strong>L'incapacité à être seule sans souffrir :</strong> La solitude ne te repose pas, elle te met en alerte. Un week-end sans lui n'est pas un moment à toi : c'est une épreuve à traverser, montre en main.</li>
 </ol>`,
     },
     {
       id: 'dans-ton-couple',
       title: "Dans ton couple (symptômes 6 à 10)",
       content: `<ol start="6">
-<li><strong>Tu ne dis plus non.</strong> Par peur de décevoir, de créer un froid, de donner une raison de partir. Tes préférences passent systématiquement après les siennes, au point que tu ne sais parfois plus ce que tu préfères, toi.</li>
-<li><strong>Tu t'effaces par anticipation.</strong> Tu devines ses envies avant qu'il les formule, tu désamorces les conflits avant qu'ils existent, tu ravales les reproches avant de les dire. Vu de loin, tu es « facile à vivre ». Vu de près, tu as disparu.</li>
-<li><strong>La jalousie devient envahissante.</strong> Pas forcément des scènes : parfois juste une surveillance discrète, les réseaux vérifiés, les « c'est qui elle ? » qu'on regrette aussitôt. Derrière, toujours la même logique : chaque personne autour de lui est une menace pour ta survie émotionnelle.</li>
-<li><strong>Tu restes, même quand ça fait mal.</strong> C'est le symptôme le plus lourd de conséquences. Une relation moyenne, décevante, parfois franchement toxique... et pourtant l'idée de partir est plus effrayante que l'idée de souffrir. Attention d'ailleurs : ce profil attire précisément les partenaires qui exploitent, on y revient plus bas.</li>
-<li><strong>Le couple a mangé tout le reste.</strong> Tes projets, tes passions, tes soirées à toi : tout est passé au second plan, sans décision consciente. Un jour tu réalises que ça fait des mois que tu n'as rien fait qui n'implique pas lui...</li>
+<li><strong>Tu ne dis plus non :</strong> Par peur de décevoir, de créer un froid, de donner une raison de partir. Tes préférences passent systématiquement après les siennes, au point que tu ne sais parfois plus ce que tu préfères, toi.</li>
+<li><strong>Tu t'effaces par anticipation :</strong> Tu devines ses envies avant qu'il les formule, tu désamorces les conflits avant qu'ils existent, tu ravales les reproches avant de les dire. Vu de loin, tu es « facile à vivre ». Vu de près, tu as disparu.</li>
+<li><strong>La jalousie devient envahissante :</strong> Pas forcément des scènes : parfois juste une surveillance discrète, les réseaux vérifiés, les « c'est qui elle ? » qu'on regrette aussitôt. Derrière, toujours la même logique : chaque personne autour de lui est une menace pour ta survie émotionnelle.</li>
+<li><strong>Tu restes, même quand ça fait mal :</strong> C'est le symptôme le plus lourd de conséquences. Une relation moyenne, décevante, parfois franchement toxique... et pourtant l'idée de partir est plus effrayante que l'idée de souffrir. Attention d'ailleurs : ce profil attire précisément les partenaires qui exploitent, on y revient plus bas.</li>
+<li><strong>Le couple a mangé tout le reste :</strong> Tes projets, tes passions, tes soirées à toi : tout est passé au second plan, sans décision consciente. Un jour tu réalises que ça fait des mois que tu n'as rien fait qui n'implique pas lui...</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Aimer fort n'est pas une maladie</p>
@@ -59,18 +59,18 @@ const article: BlogArticleData = {
       title: "Dans ton corps (symptômes 11 à 13)",
       content: `<p>On en parle rarement, et pourtant... La dépendance affective est aussi une affaire physique, parce que l'insécurité permanente, c'est du stress chronique. Concrètement :</p>
 <ol start="11">
-<li><strong>La boule au ventre du silence.</strong> Une vraie réaction physique quand il ne répond pas : gorge serrée, estomac noué, difficulté à te concentrer sur autre chose. Ton corps traite un retard de message comme un danger.</li>
-<li><strong>Le sommeil en vrac les soirs de doute.</strong> Les ruminations de 2 heures du matin, les réveils pour vérifier le téléphone, la fatigue qui s'accumule... et qui rend l'anxiété encore moins gérable le lendemain. Cercle vicieux classique.</li>
-<li><strong>L'épuisement de vigilance.</strong> Être en alerte en continu, ça brûle une énergie folle. Si tu te sens vidée sans raison apparente, alors que ta vie est « normale », demande-toi combien d'heures par jour ton cerveau passe à surveiller ta relation.</li>
+<li><strong>La boule au ventre du silence :</strong> Une vraie réaction physique quand il ne répond pas : gorge serrée, estomac noué, difficulté à te concentrer sur autre chose. Ton corps traite un retard de message comme un danger.</li>
+<li><strong>Le sommeil en vrac les soirs de doute :</strong> Les ruminations de 2 heures du matin, les réveils pour vérifier le téléphone, la fatigue qui s'accumule... et qui rend l'anxiété encore moins gérable le lendemain. Cercle vicieux classique.</li>
+<li><strong>L'épuisement de vigilance :</strong> Être en alerte en continu, ça brûle une énergie folle. Si tu te sens vidée sans raison apparente, alors que ta vie est « normale », demande-toi combien d'heures par jour ton cerveau passe à surveiller ta relation.</li>
 </ol>`,
     },
     {
       id: 'avec-les-autres',
       title: "Avec les autres (symptômes 14 à 16)",
       content: `<ol start="14">
-<li><strong>Tes amitiés sont en jachère.</strong> Pas par désamour : par réaffectation de toutes tes ressources vers la relation. Les copines « d'avant » reçoivent des réponses polies et des reports de soirée... jusqu'à ce qu'elles arrêtent de proposer.</li>
-<li><strong>Tu demandes à tout le monde de te rassurer.</strong> L'analyse de ses messages avec ta meilleure amie, les « tu crois qu'il m'aime ? » en boucle... Ton entourage devient le service de secours de ton couple. Généreux au début, épuisé à la longue.</li>
-<li><strong>Tu choisis toujours le même profil.</strong> Distant, insaisissable, tiède... et te voilà à nouveau en train de courir. Ce n'est pas de la malchance : l'insécurité cherche ce qu'elle connaît. Et quand le partenaire distant est aussi un manipulateur, le cocktail devient franchement dangereux : le duo <a href="/blog/dependant-affectif-et-manipulateur/">dépendant affectif et manipulateur</a> transforme ta peur de l'abandon en outil de contrôle sur mesure.</li>
+<li><strong>Tes amitiés sont en jachère :</strong> Pas par désamour : par réaffectation de toutes tes ressources vers la relation. Les copines « d'avant » reçoivent des réponses polies et des reports de soirée... jusqu'à ce qu'elles arrêtent de proposer.</li>
+<li><strong>Tu demandes à tout le monde de te rassurer :</strong> L'analyse de ses messages avec ta meilleure amie, les « tu crois qu'il m'aime ? » en boucle... Ton entourage devient le service de secours de ton couple. Généreux au début, épuisé à la longue.</li>
+<li><strong>Tu choisis toujours le même profil :</strong> Distant, insaisissable, tiède... et te voilà à nouveau en train de courir. Ce n'est pas de la malchance : l'insécurité cherche ce qu'elle connaît. Et quand le partenaire distant est aussi un manipulateur, le cocktail devient franchement dangereux : le duo <a href="/blog/dependant-affectif-et-manipulateur/">dépendant affectif et manipulateur</a> transforme ta peur de l'abandon en outil de contrôle sur mesure.</li>
 </ol>`,
     },
     {

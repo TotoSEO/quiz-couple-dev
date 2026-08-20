@@ -27,12 +27,12 @@ const article: BlogArticleData = {
       title: "Les signes de l'attachement anxieux en amour",
       content: `<p>Si les <a href="/blog/styles-attachement-couple/">4 styles d'attachement</a> sont une carte, voici la région anxieuse en détail. Tu n'as pas besoin de tout cocher... mais si la majorité te parle, tu sais d'où tu pars.</p>
 <ol>
-<li><strong>L'hypervigilance aux micro-signaux.</strong> Tu détectes un changement d'humeur avant même l'autre. Un emoji en moins, une bise plus rapide, un « ok » au lieu d'un « ok ! »... Ton radar est excellent, c'est d'ailleurs le problème : il capte tout, y compris ce qui ne veut rien dire.</li>
-<li><strong>L'interprétation catastrophe par défaut.</strong> Entre dix explications possibles d'un silence, ton cerveau choisit spontanément la pire : il se lasse, il rencontre quelqu'un, c'est le début de la fin... L'hypothèse « il est juste occupé » existe, mais elle n'a jamais le micro.</li>
-<li><strong>Le besoin de réassurance à courte durée de vie.</strong> Un « je t'aime » te calme... deux heures. Une soirée parfaite te rassure... jusqu'au lendemain matin. La réassurance externe fonctionne comme un médicament à effet court, et il en faut toujours une nouvelle dose.</li>
-<li><strong>La difficulté à être sans nouvelles.</strong> L'absence n'est pas un creux, c'est une épreuve. Tu sais exactement depuis combien de temps il n'a pas répondu... sans avoir décidé de le savoir.</li>
-<li><strong>Les comportements de protestation.</strong> C'est le terme des chercheurs, et il est parlant : quand l'alarme sonne trop fort, tu fais du bruit pour obtenir une réaction. Relances multiples, froid calculé pour « voir s'il remarque », jalousie mise en scène, menaces de rupture qu'on ne pense pas... Tout sauf dire simplement « j'ai besoin d'être rassurée, là ».</li>
-<li><strong>Le meilleur de toi réservé aux crises.</strong> Paradoxe typique : tu es la partenaire la plus attentionnée, généreuse, investie... surtout quand ça va mal. La peur mobilise tout. Quand ça va bien, tu ne sais pas trop quoi faire de ce calme... alors parfois, sans le vouloir, tu testes.</li>
+<li><strong>L'hypervigilance aux micro-signaux :</strong> Tu détectes un changement d'humeur avant même l'autre. Un emoji en moins, une bise plus rapide, un « ok » au lieu d'un « ok ! »... Ton radar est excellent, c'est d'ailleurs le problème : il capte tout, y compris ce qui ne veut rien dire.</li>
+<li><strong>L'interprétation catastrophe par défaut :</strong> Entre dix explications possibles d'un silence, ton cerveau choisit spontanément la pire : il se lasse, il rencontre quelqu'un, c'est le début de la fin... L'hypothèse « il est juste occupé » existe, mais elle n'a jamais le micro.</li>
+<li><strong>Le besoin de réassurance à courte durée de vie :</strong> Un « je t'aime » te calme... deux heures. Une soirée parfaite te rassure... jusqu'au lendemain matin. La réassurance externe fonctionne comme un médicament à effet court, et il en faut toujours une nouvelle dose.</li>
+<li><strong>La difficulté à être sans nouvelles :</strong> L'absence n'est pas un creux, c'est une épreuve. Tu sais exactement depuis combien de temps il n'a pas répondu... sans avoir décidé de le savoir.</li>
+<li><strong>Les comportements de protestation :</strong> C'est le terme des chercheurs, et il est parlant : quand l'alarme sonne trop fort, tu fais du bruit pour obtenir une réaction. Relances multiples, froid calculé pour « voir s'il remarque », jalousie mise en scène, menaces de rupture qu'on ne pense pas... Tout sauf dire simplement « j'ai besoin d'être rassurée, là ».</li>
+<li><strong>Le meilleur de toi réservé aux crises :</strong> Paradoxe typique : tu es la partenaire la plus attentionnée, généreuse, investie... surtout quand ça va mal. La peur mobilise tout. Quand ça va bien, tu ne sais pas trop quoi faire de ce calme... alors parfois, sans le vouloir, tu testes.</li>
 </ol>
 <p>Tu auras remarqué le cousinage avec <a href="/blog/dependance-affective-symptomes/">ce que vit un dépendant affectif au quotidien</a> : l'attachement anxieux en est le socle le plus fréquent. La différence est de degré... et le passage de l'un à l'autre se joue sur la spirale qui suit.</p>`,
     },
@@ -52,9 +52,31 @@ const article: BlogArticleData = {
       title: "Ce qui apaise vraiment (et ce qui ne marche jamais)",
       content: `<p>Commençons par vider ce qui ne marche pas, parce que tu l'as déjà essayé : demander toujours plus de preuves (l'effet s'épuise), surveiller (ça nourrit l'alarme), choisir des partenaires « intenses » qui te font vibrer (l'intensité est souvent de l'inconstance déguisée, et l'inconstance est de l'essence sur ton feu)... Et la pire stratégie de toutes : attendre que l'autre devine. Personne ne désamorce une alarme qu'il ne sait pas entendre.</p>
 <p>Ce qui marche, maintenant, en trois mouvements.</p>
-<p><strong>Réguler la vague de l'intérieur.</strong> La compétence numéro un : quand l'alarme sonne, ne pas obéir tout de suite. Le délai de 30 minutes avant toute relance, la respiration d'ancrage, le journal des vagues... Ce sont exactement les outils de la phase 1 des <a href="/blog/sortir-de-la-dependance-affective/">exercices de sortie de la dépendance affective</a>, et ils ont été conçus pour ce système-là. Chaque vague traversée sans vérification recalibre l'alarme d'un cran.</p>
-<p><strong>Demander en clair, plutôt que protester.</strong> Le grand saut : remplacer les tests et les relances par la phrase la plus difficile et la plus efficace du répertoire : « je me raconte des histoires depuis ce matin, tu peux me rassurer ? »... Ça semble être une faiblesse ; c'est l'inverse. Une demande claire donne à un partenaire aimant l'occasion de répondre, et elle t'apprend que le besoin peut être nommé sans catastrophe. C'est une expérience corrective à chaque fois.</p>
-<p><strong>Choisir (et laisser agir) la stabilité.</strong> Si tu es en recherche : méfie-toi de ton attirance pour les montagnes russes, et donne leur chance aux partenaires constants, même si le début te semble « moins fort ». La recherche est formelle : la relation stable est le meilleur thérapeute de l'attachement anxieux, la fameuse sécurité acquise... L'ennui des débuts sécures, c'est souvent juste le silence de l'alarme. On s'y fait remarquablement bien !</p>
+<p><strong>Réguler la vague de l'intérieur :</strong> La compétence numéro un : quand l'alarme sonne, ne pas obéir tout de suite. Le délai de 30 minutes avant toute relance, la respiration d'ancrage, le journal des vagues... Ce sont exactement les outils de la phase 1 des <a href="/blog/sortir-de-la-dependance-affective/">exercices de sortie de la dépendance affective</a>, et ils ont été conçus pour ce système-là. Chaque vague traversée sans vérification recalibre l'alarme d'un cran.</p>
+<p><strong>Demander en clair, plutôt que protester :</strong> Le grand saut : remplacer les tests et les relances par la phrase la plus difficile et la plus efficace du répertoire : « je me raconte des histoires depuis ce matin, tu peux me rassurer ? »... Ça semble être une faiblesse ; c'est l'inverse. Une demande claire donne à un partenaire aimant l'occasion de répondre, et elle t'apprend que le besoin peut être nommé sans catastrophe. C'est une expérience corrective à chaque fois.</p>
+<p><strong>Choisir (et laisser agir) la stabilité :</strong> Si tu es en recherche : méfie-toi de ton attirance pour les montagnes russes, et donne leur chance aux partenaires constants, même si le début te semble « moins fort ». La recherche est formelle : la relation stable est le meilleur thérapeute de l'attachement anxieux, la fameuse sécurité acquise... L'ennui des débuts sécures, c'est souvent juste le silence de l'alarme. On s'y fait remarquablement bien !</p>
+<div class="blog-verdict">
+<div class="blog-verdict-col blog-verdict-col--oui">
+<p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Ce qui apaise l'alarme</p>
+<ul>
+<li>Laisser passer trente minutes avant toute relance</li>
+<li>Demander en clair : « je me raconte des histoires, tu peux me rassurer ? »</li>
+<li>Une vie à soi qui continue de tourner en dehors du couple</li>
+<li>Un partenaire constant, même si le début semble moins intense</li>
+<li>Nommer la vague au lieu de la jouer</li>
+</ul>
+</div>
+<div class="blog-verdict-col blog-verdict-col--non">
+<p class="blog-verdict-titre"><span aria-hidden="true">🚩</span> Ce qui n'a jamais marché</p>
+<ul>
+<li>Réclamer une preuve de plus, puis encore une</li>
+<li>Surveiller les vues, les heures de connexion, les réseaux</li>
+<li>Tester l'autre en provoquant une crise pour voir s'il reste</li>
+<li>Confondre l'intensité du début avec de la solidité</li>
+<li>Protester au lieu de demander</li>
+</ul>
+</div>
+</div>
 <div class="blog-cta">
 <p class="blog-cta-titre">Vérifie ton style, noir sur blanc</p>
 <p class="blog-cta-texte">Une série de questions évalue ta façon de vivre le lien, l'absence, les conflits et la réassurance... et te dit si ton attachement est anxieux, évitant, sécure ou mixte. Le point de départ de tout le travail.</p>

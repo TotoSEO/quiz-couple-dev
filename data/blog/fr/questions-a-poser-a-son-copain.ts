@@ -25,9 +25,9 @@ const article: BlogArticleData = {
     {
       id: 'comment-les-utiliser',
       title: "Avant de commencer : trois règles pour que ça marche",
-      content: `<p><strong>Une poignée à la fois.</strong> Deux ou trois questions dans une soirée, c'est une conversation. Trente d'affilée, c'est une garde à vue ! La liste est longue exprès : elle se consomme sur des semaines, pas en une fois.</p>
-<p><strong>Réponds aussi.</strong> La règle du jeu, c'est l'échange. Si tu lui demandes sa plus grande peur, par exemple, prépare-toi à raconter la tienne... C'est d'ailleurs souvent là que la conversation décolle vraiment.</p>
-<p><strong>Et accueille la réponse, quelle qu'elle soit.</strong> Si une réponse te surprend ou te pique un peu, tu as le droit de creuser. Pas de plaider. Une question posée pour piéger n'apprend jamais rien de vrai, tu le sais déjà.</p>
+      content: `<p><strong>Une poignée à la fois :</strong> Deux ou trois questions dans une soirée, c'est une conversation. Trente d'affilée, c'est une garde à vue ! La liste est longue exprès : elle se consomme sur des semaines, pas en une fois.</p>
+<p><strong>Réponds aussi :</strong> La règle du jeu, c'est l'échange. Si tu lui demandes sa plus grande peur, par exemple, prépare-toi à raconter la tienne... C'est d'ailleurs souvent là que la conversation décolle vraiment.</p>
+<p><strong>Et accueille la réponse, quelle qu'elle soit :</strong> Si une réponse te surprend ou te pique un peu, tu as le droit de creuser. Pas de plaider. Une question posée pour piéger n'apprend jamais rien de vrai, tu le sais déjà.</p>
 <p>Dernier détail : au fil des réponses, une question finira forcément par surgir, lequel de vous deux <a href="/quiz-qui-connait-mieux-partenaire/">connaît le mieux l'autre</a> ? Gardez-la pour la fin, elle se tranche mieux points en main.</p>`,
     },
     {

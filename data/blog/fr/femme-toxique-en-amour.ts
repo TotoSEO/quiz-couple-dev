@@ -27,17 +27,25 @@ const article: BlogArticleData = {
       title: "Les 6 profils de femme toxique en amour",
       content: `<p>Comme pour les hommes, ces profils se jugent sur des mois, pas sur une mauvaise passe. Et le critère final ne change jamais : ce que ça TE fait, dans la durée.</p>
 <ol>
-<li><strong>La reine du drame.</strong> Chez elle, le conflit n'est pas un accident, c'est un mode de lien. Tout devient scène : un retard, un mot de travers, un regard... L'intensité remplace l'intimité, et tu confonds l'épuisement avec de la passion. Le signe qui trahit : après chaque tempête, c'est toujours toi qui répares, jamais elle.</li>
-<li><strong>La culpabilisatrice.</strong> Rarement des reproches frontaux : des soupirs, des « c'est bon, vas-y », des silences chargés, des comptes tenus à ta place... Tu vis avec une dette permanente dont tu ne connais ni le montant ni l'origine. À la longue, tu demandes la permission sans qu'on te l'ait jamais exigée.</li>
-<li><strong>La contrôleuse sociale.</strong> Elle ne t'interdit rien, voyons ! Elle a juste un avis définitif sur chacun de tes amis, une migraine les soirs de foot, une urgence les week-ends entre potes... Ton monde rétrécit par découragement, pas par interdiction. Relis tes six derniers mois : qui as-tu vu, sans elle ?</li>
-<li><strong>La jalouse intrusive.</strong> Ton téléphone n'a plus de vie privée, tes collègues féminines ont toutes un prénom suspect, et chaque sortie donne lieu à un débriefing... L'excuse est toujours la même, « c'est parce que je tiens à toi ». Mais la confiance n'est pas une option du couple : c'en est le socle.</li>
-<li><strong>L'éternelle insatisfaite.</strong> Quoi que tu fasses, ce n'est pas ça. Pas assez, pas comme il faut, pas au bon moment... Le mécanisme est usant parce qu'il te met en échec permanent : tu cours après une ligne d'arrivée qui recule à chaque fois que tu t'approches. Un couple sain te donne parfois raison. Celui-là, jamais.</li>
-<li><strong>La girouette passionnelle.</strong> Adorable le lundi, glaciale le mercredi, amoureuse folle le samedi... sans que rien, de ton côté, n'explique les variations. Tu vis accroché à sa météo, expert malgré toi en micro-signaux. Cette alternance-là rend accro, on l'a vu partout ailleurs... et elle épuise plus sûrement que n'importe quelle dispute.</li>
+<li><strong>La reine du drame :</strong> Chez elle, le conflit n'est pas un accident, c'est un mode de lien. Tout devient scène : un retard, un mot de travers, un regard... L'intensité remplace l'intimité, et tu confonds l'épuisement avec de la passion. Le signe qui trahit : après chaque tempête, c'est toujours toi qui répares, jamais elle.</li>
+<li><strong>La culpabilisatrice :</strong> Rarement des reproches frontaux : des soupirs, des « c'est bon, vas-y », des silences chargés, des comptes tenus à ta place... Tu vis avec une dette permanente dont tu ne connais ni le montant ni l'origine. À la longue, tu demandes la permission sans qu'on te l'ait jamais exigée.</li>
+<li><strong>La contrôleuse sociale :</strong> Elle ne t'interdit rien, voyons ! Elle a juste un avis définitif sur chacun de tes amis, une migraine les soirs de foot, une urgence les week-ends entre potes... Ton monde rétrécit par découragement, pas par interdiction. Relis tes six derniers mois : qui as-tu vu, sans elle ?</li>
+<li><strong>La jalouse intrusive :</strong> Ton téléphone n'a plus de vie privée, tes collègues féminines ont toutes un prénom suspect, et chaque sortie donne lieu à un débriefing... L'excuse est toujours la même, « c'est parce que je tiens à toi ». Mais la confiance n'est pas une option du couple : c'en est le socle.</li>
+<li><strong>L'éternelle insatisfaite :</strong> Quoi que tu fasses, ce n'est pas ça. Pas assez, pas comme il faut, pas au bon moment... Le mécanisme est usant parce qu'il te met en échec permanent : tu cours après une ligne d'arrivée qui recule à chaque fois que tu t'approches. Un couple sain te donne parfois raison. Celui-là, jamais.</li>
+<li><strong>La girouette passionnelle :</strong> Adorable le lundi, glaciale le mercredi, amoureuse folle le samedi... sans que rien, de ton côté, n'explique les variations. Tu vis accroché à sa météo, expert malgré toi en micro-signaux. Cette alternance-là rend accro, on l'a vu partout ailleurs... et elle épuise plus sûrement que n'importe quelle dispute.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Où s'arrête le « caractère », où commence le toxique ?</p>
 <p>Une femme exigeante, entière, avec du tempérament, peut être un excellent partenaire : le caractère se discute, s'ajuste, s'assume. Le toxique, lui, se reconnaît à trois choses : ça se répète, ça ne se remet jamais en question... et c'est toujours toi qui t'adaptes. Si tes limites déclenchent l'escalade au lieu du dialogue, tu as changé de catégorie.</p>
-</aside>`,
+</aside>
+<div><table><thead><tr><th>Le profil</th><th>Le mécanisme central</th></tr></thead><tbody>
+<tr><td><strong>La reine du drame</strong></td><td>Le conflit n'est pas un accident, c'est son mode de lien</td></tr>
+<tr><td><strong>La culpabilisatrice</strong></td><td>Jamais de reproche frontal : des soupirs et des silences chargés</td></tr>
+<tr><td><strong>La contrôleuse sociale</strong></td><td>Elle n'interdit rien, elle a juste un avis définitif sur tout le monde</td></tr>
+<tr><td><strong>La jalouse intrusive</strong></td><td>Ta vie privée devient un territoire à inspecter</td></tr>
+<tr><td><strong>L'éternelle insatisfaite</strong></td><td>Quoi que tu fasses, ce n'est jamais tout à fait ça</td></tr>
+<tr><td><strong>La girouette passionnelle</strong></td><td>Le climat change sans que rien, de ton côté, ne l'explique</td></tr>
+</tbody></table></div>`,
     },
     {
       id: 'ce-que-ca-fait-vivre',
