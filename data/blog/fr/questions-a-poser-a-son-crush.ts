@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['lucie-courtin'],
   excerpt: "Le plus dur avec un crush, ce n'est pas de trouver quoi dire. C'est de poser les questions qui transforment une conversation polie en vraie connexion.",
   introduction: `<p>Tu connais ce moment... La conversation tourne, les « ça va et toi » s'enchaînent, et tu sens que si personne ne relance avec autre chose, ça va gentiment mourir en « bonne soirée alors ». Avec un crush, chaque échange compte double ! Du coup, on se retrouve tous, un jour ou l'autre, à fixer son téléphone sans savoir quoi envoyer.</p>
-<p><strong>Une bonne question fait deux choses à la fois : <strong>elle montre que tu t'intéresses vraiment, et elle donne envie de répondre</strong>.</strong> C'est tout ce qu'on demande à une conversation naissante, en fait. Et c'est exactement ce que les 100 questions qui suivent savent faire.</p>
+<p><strong>Une bonne question fait deux choses à la fois : elle montre que tu t'intéresses vraiment, et elle donne envie de répondre.</strong> C'est tout ce qu'on demande à une conversation naissante, en fait. Et c'est exactement ce que les 100 questions qui suivent savent faire.</p>
 <p>Elles sont classées par situation : pour lancer par message, pour apprendre à le connaître, pour rire, pour aller un peu plus loin, pour flirter sans trop en faire... et pour vérifier, mine de rien, si ça pourrait coller entre vous. On écrit « il » pour simplifier, mais tout fonctionne évidemment dans tous les sens.</p>`,
   quickSummary: [
     "100 questions classées par situation, du premier message au premier rendez-vous.",

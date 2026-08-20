@@ -26,12 +26,12 @@ const article: BlogArticleData = {
       id: 'las-12-senales-de-un-vistazo',
       title: "Las 12 señales de un vistazo",
       content: `<p>Este es el mapa del artículo. Si un grupo te habla más que los otros, ve directamente allí.</p>
-<ul>
-<li>En sociedad: el personaje público (señales 1 a 3)</li>
-<li>Al principio contigo: la seducción estratégica (señales 4 a 6)</li>
-<li>En la intimidad: el control instalado (señales 7 a 9)</li>
-<li>Cuando resistes: la máscara cae (señales 10 a 12)</li>
-</ul>
+<ol class="blog-liste-reperes">
+<li><a href="#en-sociedad">En sociedad: el personaje público (señales 1 a 3)</a></li>
+<li><a href="#al-principio-contigo">Al principio contigo: la seducción estratégica (señales 4 a 6)</a></li>
+<li><a href="#en-la-intimidad">En la intimidad: el control instalado (señales 7 a 9)</a></li>
+<li><a href="#cuando-resistes">Cuando resistes: la máscara que cae (señales 10 a 12)</a></li>
+</ol>
 <p>Un recordatorio antes de empezar, y es importante. La mitad de estas conductas, tomadas por separado y una sola vez, pueden darse en cualquier pareja. Lo que hace señal es la repetición, la acumulación y sobre todo la dirección general: todo converge hacia su control y hacia tu encogimiento. El funcionamiento de fondo, el que explica por qué todo converge, es el <a href="/es/blog/narcisista-en-el-amor/">dominio narcisista en la pareja</a>: un espejo que hay que alimentar, cueste lo que cueste.</p>
 <div><table><thead><tr><th>La escena</th><th>Lo que ven los demás</th><th>Lo que vives tú</th></tr></thead><tbody>
 <tr><td>En sociedad</td><td>Un hombre brillante, divertido, generoso</td><td>El desfase que solo tú percibes</td></tr>

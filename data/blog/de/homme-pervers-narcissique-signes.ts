@@ -26,12 +26,12 @@ const article: BlogArticleData = {
       id: 'die-12-anzeichen-im-ueberblick',
       title: "Die 12 Anzeichen auf einen Blick",
       content: `<p>Hier ist die Karte des Artikels. Wenn dich eine Gruppe mehr anspricht als die anderen, geh direkt dorthin.</p>
-<ul>
-<li>In Gesellschaft: die öffentliche Figur (Anzeichen 1 bis 3)</li>
-<li>Am Anfang mit dir: die strategische Verführung (Anzeichen 4 bis 6)</li>
-<li>Im Privaten: die installierte Kontrolle (Anzeichen 7 bis 9)</li>
-<li>Wenn du dich wehrst: die Maske fällt (Anzeichen 10 bis 12)</li>
-</ul>
+<ol class="blog-liste-reperes">
+<li><a href="#in-gesellschaft">In Gesellschaft: die öffentliche Figur (Anzeichen 1 bis 3)</a></li>
+<li><a href="#am-anfang-mit-dir">Am Anfang mit dir: die strategische Verführung (Anzeichen 4 bis 6)</a></li>
+<li><a href="#im-privaten">Im Privaten: die installierte Kontrolle (Anzeichen 7 bis 9)</a></li>
+<li><a href="#wenn-du-dich-wehrst">Wenn du dich wehrst: die Maske fällt (Anzeichen 10 bis 12)</a></li>
+</ol>
 <p>Ein Hinweis vorweg, und er ist wichtig. Die Hälfte dieser Verhaltensweisen kann einzeln und einmalig in jeder Beziehung vorkommen. Zum Anzeichen wird es durch Wiederholung, Häufung und vor allem durch die Gesamtrichtung: alles läuft auf seine Kontrolle und dein Kleinerwerden hinaus. Das zugrunde liegende Muster, das erklärt, warum alles darauf zuläuft, ist die <a href="/de/blog/narzisst-in-der-liebe/">narzisstische Kontrolle in der Beziehung</a>: ein Spiegel, der um jeden Preis gefüttert werden muss.</p>
 <div><table><thead><tr><th>Die Szene</th><th>Was die anderen sehen</th><th>Was du erlebst</th></tr></thead><tbody>
 <tr><td>In Gesellschaft</td><td>Ein brillanter, witziger, großzügiger Mann</td><td>Den Widerspruch, den nur du wahrnimmst</td></tr>

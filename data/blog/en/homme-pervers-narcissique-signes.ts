@@ -26,12 +26,12 @@ const article: BlogArticleData = {
       id: 'the-12-signs-at-a-glance',
       title: "The 12 signs at a glance",
       content: `<p>Here's the map of the article. If one group speaks to you more than the others, go straight to it.</p>
-<ul>
-<li>In company: the public character (signs 1 to 3)</li>
-<li>Early on with you: strategic seduction (signs 4 to 6)</li>
-<li>In private: control installed (signs 7 to 9)</li>
-<li>When you resist: the mask slips (signs 10 to 12)</li>
-</ul>
+<ol class="blog-liste-reperes">
+<li><a href="#in-company">In company: the public character (signs 1 to 3)</a></li>
+<li><a href="#early-on-with-you">Early on with you: strategic seduction (signs 4 to 6)</a></li>
+<li><a href="#in-private">In private: control installed (signs 7 to 9)</a></li>
+<li><a href="#when-you-resist">When you resist: the mask slips (signs 10 to 12)</a></li>
+</ol>
 <p>One reminder before we start, and it matters. Half of these behaviours, taken alone and once, can happen in any relationship. What makes a sign is repetition, accumulation, and above all the overall direction: everything converges towards his control and your shrinking. The underlying pattern, the one that explains why everything converges, is <a href="/en/blog/narcissist-in-love-signs/">narcissistic control in a relationship</a>: a mirror that has to be fed, whatever the cost.</p>
 <div><table><thead><tr><th>The scene</th><th>What others see</th><th>What you live through</th></tr></thead><tbody>
 <tr><td>In company</td><td>A brilliant, funny, generous man</td><td>The mismatch only you perceive</td></tr>

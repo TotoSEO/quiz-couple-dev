@@ -26,12 +26,12 @@ const article: BlogArticleData = {
       id: 'i-12-segnali-in-sintesi',
       title: "I 12 segnali in sintesi",
       content: `<p>Ecco la mappa dell'articolo. Se un gruppo ti parla più degli altri, vai direttamente lì.</p>
-<ul>
-<li>In società: il personaggio pubblico (segnali da 1 a 3)</li>
-<li>All'inizio con te: la seduzione strategica (segnali da 4 a 6)</li>
-<li>Nell'intimità: il controllo installato (segnali da 7 a 9)</li>
-<li>Quando resisti: la maschera cade (segnali da 10 a 12)</li>
-</ul>
+<ol class="blog-liste-reperes">
+<li><a href="#in-societa">In società: il personaggio pubblico (segnali da 1 a 3)</a></li>
+<li><a href="#all-inizio-con-te">All'inizio con te: la seduzione strategica (segnali da 4 a 6)</a></li>
+<li><a href="#nell-intimita">Nell'intimità: il controllo installato (segnali da 7 a 9)</a></li>
+<li><a href="#quando-resisti">Quando resisti: la maschera che cade (segnali da 10 a 12)</a></li>
+</ol>
 <p>Un promemoria prima di cominciare, ed è importante. Metà di questi comportamenti, presi isolatamente e una sola volta, possono capitare in qualunque coppia. Ciò che fa segnale è la ripetizione, l'accumulo e soprattutto la direzione generale: tutto converge verso il suo controllo e il tuo rimpicciolimento. Il funzionamento di fondo, quello che spiega perché tutto converge, è il <a href="/it/blog/narcisista-in-amore/">controllo narcisistico nella coppia</a>: uno specchio da alimentare, a qualunque costo.</p>
 <div><table><thead><tr><th>La scena</th><th>Quello che vedono gli altri</th><th>Quello che vivi tu</th></tr></thead><tbody>
 <tr><td>In società</td><td>Un uomo brillante, divertente, generoso</td><td>Lo scarto che percepisci solo tu</td></tr>

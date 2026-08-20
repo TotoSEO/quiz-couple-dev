@@ -145,13 +145,7 @@ const article: BlogArticleData = {
     {
       id: 'en-avoir-le-coeur-net',
       title: "Comment en avoir le cœur net",
-      content: `<p>Tu ne trancheras pas en ressassant des souvenirs à 2 heures du matin, le brouillard fait justement partie du dispositif. Ce qui fonctionne, c'est de créer des situations simples, et d'observer des faits.</p>
-<div class="blog-cta">
-<p class="blog-cta-titre">Besoin de sortir du brouillard ?</p>
-<p class="blog-cta-texte">Vingt questions reprennent une par une les situations types d'une relation d'emprise, et le résultat met des mots posés sur ce que tu vis. Ce n'est pas un diagnostic : c'est un point de départ que tu peux regarder en face.</p>
-<a class="blog-cta-btn" href="/test-pervers-narcissique/">Faire le point maintenant</a>
-<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
-</div>`,
+      content: `<p>Tu ne trancheras pas en ressassant des souvenirs à 2 heures du matin, le brouillard fait justement partie du dispositif. Ce qui fonctionne, c'est de créer des situations simples, et d'observer des faits.</p>`,
       subsections: [
         {
           id: 'test-de-la-limite',
@@ -166,7 +160,13 @@ const article: BlogArticleData = {
         {
           id: 'regard-exterieur',
           title: "Le regard extérieur que tu as mis de côté",
-          content: `<p>Reprends contact avec une personne de confiance que tu vois moins depuis cette relation, et raconte-lui une scène précise, factuellement. Tu verras à sa tête si ce que tu décris ressemble à « un couple qui traverse une passe »...</p>`,
+          content: `<p>Reprends contact avec une personne de confiance que tu vois moins depuis cette relation, et raconte-lui une scène précise, factuellement. Tu verras à sa tête si ce que tu décris ressemble à « un couple qui traverse une passe »...</p>
+<div class="blog-cta">
+<p class="blog-cta-titre">Besoin de sortir du brouillard ?</p>
+<p class="blog-cta-texte">Vingt questions reprennent une par une les situations types d'une relation d'emprise, et le résultat met des mots posés sur ce que tu vis. Ce n'est pas un diagnostic : c'est un point de départ que tu peux regarder en face.</p>
+<a class="blog-cta-btn" href="/test-pervers-narcissique/">Faire le point maintenant</a>
+<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
+</div>`,
         },
       ],
     },
