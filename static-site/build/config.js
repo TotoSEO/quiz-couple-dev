@@ -817,9 +817,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'manipulateur-narcissique',
     category: 'psychologie',
     featuredImage: '/blog/manipulateur-narcissique.webp',
-    frOnly: true,
     slugs: {
       fr: 'manipulateur-narcissique',
+      en: 'narcissistic-manipulator',
+      es: 'manipulador-narcisista',
+      de: 'narzisstischer-manipulator',
+      it: 'manipolatore-narcisista',
     },
     publishedAt: '2026-09-18',
   },
