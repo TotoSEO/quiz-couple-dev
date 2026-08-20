@@ -19,7 +19,10 @@
   // textOnly: true means no per-question options (knowledge, most, funny, debate)
   var QUIZ_CONFIG = {
     // ── Solo scoring (single player, points-based) ──
-    'toxic':          { prefix: 'divorce', engine: 'solo', totalQ: 25, pool: 25, quizType: 'toxic', ascending: true, resultPrefix: 'toxic' },
+    // Le test toxique a son propre pool depuis toujours en EN, ES, DE et IT ;
+    // il n'etait branche nulle part et les cinq langues retombaient sur la
+    // serie 'divorce', ce qui publiait deux pages aux memes 25 questions.
+    'toxic':          { prefix: 'toxic', engine: 'solo', totalQ: 25, pool: 25, quizType: 'toxic', ascending: true, resultPrefix: 'toxic' },
     'pervers':        { prefix: 'pervers', engine: 'solo', totalQ: 20, pool: 20, quizType: 'pervers', ascending: true, resultPrefix: 'pervers' },
     // Fin de couple : 24 questions dont la première ne sert qu'à situer la
     // relation. Les 23 autres n'ont pas le même poids, le barème est donc
@@ -35,7 +38,20 @@
     'ado':            { prefix: 'ado', engine: 'solo', totalQ: 20, pool: 80, ascending: true, needsName: true },
 
     // ── Duo with gender (2 players + gender selection, answer matching) ──
-    'tester-couple':  { prefix: 'couple', engine: 'duo-match', totalQ: 20, pool: 30, needsGender: true, useScoring: true },
+    // Test de couple : pool 'testerC' qui lui est propre dans les 5 langues,
+    // distinct du pool 'couple' que le quiz sain utilise en repli francais.
+    // Les 33 questions mesurent la solidite (jalons franchis, epreuves
+    // traversees, projection, ancrage) et portent chacune un poids.
+    'tester-couple':  { modesGrand: true, modes: [
+      // SOLO : le couple repond ensemble, une seule serie de reponses, donc
+      // ni prenoms ni genre a saisir et une note unique a l'arrivee.
+      { id: 'solo', emoji: '💑', prefix: 'testerC', engine: 'duo-match', totalQ: 20, pool: 33,
+        useScoring: true, stratifie: true, modeSolo: true },
+      // DUO : chacun repond aux memes questions a tour de role, deux notes
+      // individuelles et leur moyenne.
+      { id: 'duo',  emoji: '👥', prefix: 'testerC', engine: 'duo-match', totalQ: 20, pool: 33,
+        useScoring: true, stratifie: true, needsGender: true }
+    ] },
     'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 153, needsGender: true },
 
     // ── Love compatibility (2 players, matching = alignment % on core dimensions) ──
@@ -257,6 +273,7 @@
       icone: lu('modesIcone', '😳'),
       titre: lu('modesTitre', ''),
       desc: lu('modesDesc', ''),
+      grand: !!racine.modesGrand,
       modes: racine.modes.map(function(m) {
         return {
           id: m.id, emoji: m.emoji,
@@ -475,7 +492,11 @@
 
     // Randomly select totalQ questions from pool if pool > totalQ
     var hasRandomPool = questions.length > config.totalQ;
-    if (hasRandomPool) {
+    if (config.stratifie) {
+      // Tirage stratifie : les questions posees couvrent toutes les dimensions
+      // du bareme, pour que deux parties du meme couple mesurent la meme chose.
+      questions = QuizEngine.tirageStratifieTester(questions, config.totalQ);
+    } else if (hasRandomPool) {
       questions = QuizEngine.shuffleArray(questions).slice(0, config.totalQ);
     } else {
       questions = QuizEngine.shuffleArray(questions);
@@ -721,7 +742,8 @@
       prefix: cfg.prefix,
       lang: lang,
       needsGender: cfg.needsGender || false,
-      useScoring: cfg.useScoring || false
+      useScoring: cfg.useScoring || false,
+      modeSolo: cfg.modeSolo || false
     });
   }
 

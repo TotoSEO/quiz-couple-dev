@@ -25,7 +25,11 @@ var QuizEngine = (function() {
 
   // Prefix aliases: non-FR languages use different prefix names for some quizzes
   var PREFIX_ALIASES = {
-    'couple': 'testerC',
+    // 'couple' -> 'testerC' a ete retire : l'alias datait de l'epoque ou le
+    // test de couple s'appelait 'couple' en francais et 'testerC' ailleurs.
+    // 'testerC' est desormais le pool propre du test de couple dans les cinq
+    // langues, et 'couple' celui du test sain en francais. Garder l'alias
+    // faisait deborder l'un sur l'autre.
     'commonPoints': 'cp',
     'coquin': 'coquinQ',
     'marrant': 'funny'
@@ -288,18 +292,33 @@ var QuizEngine = (function() {
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center', esc(o.titre || '')));
     if (o.desc) wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(o.desc)));
 
-    var liste = el('div', 'quiz-modes-liste');
+    // Deux presentations : la liste horizontale, quand les formats ont des noms
+    // longs a expliquer, et les grandes cartes, quand le nom du mode tient en un
+    // mot et merite d'etre lu en premier.
+    var grand = !!o.grand;
+    var liste = el('div', grand ? 'choix-modes' : 'quiz-modes-liste');
     (o.modes || []).forEach(function(m) {
-      var carte = el('button', 'quiz-mode-carte quiz-mode-carte--' + m.id);
+      var carte = el('button', grand
+        ? 'choix-mode choix-mode--' + m.id
+        : 'quiz-mode-carte quiz-mode-carte--' + m.id);
       carte.type = 'button';
-      carte.innerHTML =
-        '<span class="quiz-mode-emoji" aria-hidden="true">' + esc(m.emoji || '▶') + '</span>' +
-        '<span class="quiz-mode-corps">' +
-          '<span class="quiz-mode-titre">' + esc(m.titre || '') + '</span>' +
-          '<span class="quiz-mode-desc">' + esc(m.desc || '') + '</span>' +
-          (m.meta ? '<span class="quiz-mode-meta">' + esc(m.meta) + '</span>' : '') +
-        '</span>' +
-        '<span class="quiz-mode-fleche" aria-hidden="true">→</span>';
+      if (grand) {
+        carte.setAttribute('aria-label',
+          (m.titre || '') + ' : ' + (m.desc || '') + (m.meta ? '. ' + m.meta : ''));
+        carte.innerHTML =
+          '<span class="choix-mode-nom">' + esc(m.titre || '') + '</span>' +
+          '<span class="choix-mode-desc">' + esc(m.desc || '') + '</span>' +
+          (m.meta ? '<span class="choix-mode-score">' + esc(m.meta) + '</span>' : '');
+      } else {
+        carte.innerHTML =
+          '<span class="quiz-mode-emoji" aria-hidden="true">' + esc(m.emoji || '▶') + '</span>' +
+          '<span class="quiz-mode-corps">' +
+            '<span class="quiz-mode-titre">' + esc(m.titre || '') + '</span>' +
+            '<span class="quiz-mode-desc">' + esc(m.desc || '') + '</span>' +
+            (m.meta ? '<span class="quiz-mode-meta">' + esc(m.meta) + '</span>' : '') +
+          '</span>' +
+          '<span class="quiz-mode-fleche" aria-hidden="true">→</span>';
+      }
       carte.addEventListener('click', function() { if (o.onChoix) o.onChoix(m.id); });
       liste.appendChild(carte);
     });
@@ -1572,6 +1591,59 @@ var QuizEngine = (function() {
   // DUO MATCH QUIZ - tester-couple, common-points
   // 2 players (optionally with gender), answer matching
   // ═══════════════════════════════════════════════════════════
+  // ═══════════════════════════════════════════════════════════
+  // TEST DE COUPLE - bareme pondere de la solidite
+  // ═══════════════════════════════════════════════════════════
+  // Toutes les questions ne disent pas la meme chose de la solidite d'un
+  // couple : ne pas se projeter a cinq ans pese plus lourd qu'un week-end
+  // solo mal vecu. Chaque question porte donc une dimension et un poids.
+  //   3 = fondamental (vie commune, epreuves traversees, projection, securite)
+  //   2 = structurant (jalons sociaux, ancrage materiel, reparation)
+  //   1 = confort     (vacances, autonomie, anciennete du dernier doute)
+  var TESTER_BAREME = {
+    testerC: {
+      1:  { d: 'anciennete', w: 2 },
+      2:  { d: 'jalons',     w: 2 },
+      3:  { d: 'social',     w: 2 },
+      4:  { d: 'ancrage',    w: 3 },
+      5:  { d: 'jalons',     w: 1 },
+      6:  { d: 'epreuves',   w: 3 },
+      7:  { d: 'projection', w: 3 },
+      8:  { d: 'ancrage',    w: 2 },
+      9:  { d: 'epreuves',   w: 3 },
+      10: { d: 'fiabilite',  w: 3 },
+      11: { d: 'securite',   w: 3 },
+      12: { d: 'reparation', w: 2 },
+      13: { d: 'projection', w: 3 },
+      14: { d: 'social',     w: 2 },
+      15: { d: 'social',     w: 2 },
+      16: { d: 'social',     w: 2 },
+      17: { d: 'fiabilite',  w: 2 },
+      18: { d: 'epreuves',   w: 2 },
+      19: { d: 'reparation', w: 3 },
+      20: { d: 'ancrage',    w: 2 },
+      21: { d: 'projection', w: 2 },
+      22: { d: 'autonomie',  w: 1 },
+      23: { d: 'fiabilite',  w: 2 },
+      24: { d: 'securite',   w: 3 },
+      25: { d: 'jalons',     w: 1 },
+      26: { d: 'epreuves',   w: 3 },
+      27: { d: 'projection', w: 2 },
+      28: { d: 'anciennete', w: 1 },
+      29: { d: 'ancrage',    w: 2 },
+      30: { d: 'securite',   w: 2 },
+      31: { d: 'epreuves',   w: 2 },
+      32: { d: 'anciennete', w: 2 },
+      33: { d: 'autonomie',  w: 1 }
+    }
+  };
+
+  // Valeur de chaque reponse selon son rang, de la plus solide a la moins
+  // solide. La marche entre la 2e et la 3e reponse est volontairement plus
+  // large que celle entre la 1re et la 2e : repondre « oui avec une nuance »
+  // reste un bon signe, « plutot non » en est un mauvais.
+  var TESTER_VALEURS = [1, 0.75, 0.4, 0];
+
   function DuoMatchQuiz(config) {
     this.container = config.container;
     this.questions = config.questions;
@@ -1580,6 +1652,9 @@ var QuizEngine = (function() {
     this.lang = config.lang || 'fr';
     this.needsGender = config.needsGender || false;
     this.useScoring = config.useScoring || false;
+    // En solo le couple repond ensemble : une seule serie de reponses, pas de
+    // prenoms, pas de relais, et une note unique a l'arrivee.
+    this.modeSolo = config.modeSolo || false;
     this.setupTitle = config.setupTitle || '';
     this.setupDesc = config.setupDesc || '';
     this.phase = 'setup';
@@ -1598,8 +1673,36 @@ var QuizEngine = (function() {
     else if (this.phase === 'results') this.renderResults();
   };
 
+  // Ecran de depart du mode solo : rien a saisir, le couple est devant l'ecran.
+  DuoMatchQuiz.prototype.renderSetupSolo = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
+
+    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-6');
+    iconWrap.innerHTML = ICONS.users;
+    wrap.appendChild(iconWrap);
+
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center',
+      esc(tg('playerSetup.soloReady', 'Prêts, tous les deux ?'))));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-8 text-center',
+      esc(tg('playerSetup.soloIntro', 'Répondez ensemble, à voix haute, et tranchez à deux quand vous hésitez.'))));
+    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
+
+    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn',
+      tg('playerSetup.startTest', 'Commencer le test'));
+    startBtn.addEventListener('click', function() {
+      self.players = [{ name: '', gender: '' }, { name: '', gender: '' }];
+      self.currentQ = 0; self.currentPlayer = 0;
+      self.answers = { p1: [], p2: [] };
+      self.phase = 'playing'; self.render();
+    });
+    wrap.appendChild(startBtn);
+    this.container.appendChild(wrap);
+  };
+
   DuoMatchQuiz.prototype.renderSetup = function() {
     var self = this;
+    if (this.modeSolo) return this.renderSetupSolo();
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
     // Icon in gradient circle
@@ -1702,23 +1805,28 @@ var QuizEngine = (function() {
     var self = this;
     var q = this.questions[this.currentQ];
     var total = this.questions.length;
-    var totalNeeded = total * 2;
-    var answered = this.answers.p1.filter(function(a) { return a !== null; }).length + this.answers.p2.filter(function(a) { return a !== null; }).length;
+    // En solo il n'y a qu'une serie de reponses : la barre compte 20 pas, pas 40.
+    var totalNeeded = this.modeSolo ? total : total * 2;
+    var answered = this.modeSolo
+      ? this.answers.p1.filter(function(a) { return a !== null; }).length
+      : this.answers.p1.filter(function(a) { return a !== null; }).length + this.answers.p2.filter(function(a) { return a !== null; }).length;
     var player = this.players[this.currentPlayer];
-    var color = this.needsGender ? getPlayerColor(player, this.players[this.currentPlayer === 0 ? 1 : 0], this.currentPlayer) : null;
+    var color = (this.needsGender && !this.modeSolo) ? getPlayerColor(player, this.players[this.currentPlayer === 0 ? 1 : 0], this.currentPlayer) : null;
 
     var wrap = el('div', 'quiz-engine quiz-question-enter');
 
     renderProgressBar(wrap, answered, totalNeeded, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total);
 
-    // Player indicator with color
-    var badge = el('div', 'text-center mb-4');
-    if (color) {
-      badge.innerHTML = '<span class="badge" style="background:' + color.bg + ';color:' + color.text + '">' + esc(player.name) + '</span>';
-    } else {
-      badge.innerHTML = '<span class="badge badge-primary">' + esc(player.name) + '</span>';
+    // Player indicator with color. En solo personne n'a de tour : pas de badge.
+    if (!this.modeSolo) {
+      var badge = el('div', 'text-center mb-4');
+      if (color) {
+        badge.innerHTML = '<span class="badge" style="background:' + color.bg + ';color:' + color.text + '">' + esc(player.name) + '</span>';
+      } else {
+        badge.innerHTML = '<span class="badge badge-primary">' + esc(player.name) + '</span>';
+      }
+      wrap.appendChild(badge);
     }
-    wrap.appendChild(badge);
 
     // Question
     var qText = tgd(this.prefix + '.q' + q.id, q.text);
@@ -1746,7 +1854,11 @@ var QuizEngine = (function() {
           siblings[s].style.pointerEvents = 'none';
         }
         setTimeout(function() {
-          if (self.currentPlayer === 0) {
+          if (self.modeSolo) {
+            self.answers.p1[self.currentQ] = opt.id;
+            if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
+            else { self.phase = 'results'; }
+          } else if (self.currentPlayer === 0) {
             self.answers.p1[self.currentQ] = opt.id;
             self.currentPlayer = 1;
             self.phase = 'handoff';
@@ -1843,6 +1955,20 @@ var QuizEngine = (function() {
     var self = this;
     var total = this.questions.length;
 
+    // Bareme pondere : la contribution d'une reponse vaut poids x valeur, et la
+    // note est le rapport au total des poids reellement poses. Elle reste donc
+    // juste quel que soit le tirage. Sans table de bareme, on retombe sur les
+    // points portes par les options.
+    var bareme = TESTER_BAREME[this.prefix] || null;
+    function rangDe(qi, optId) {
+      var opts = self.questions[qi].options || [];
+      for (var k = 0; k < opts.length; k++) { if (opts[k].id === optId) return k; }
+      return -1;
+    }
+    function valeurDe(rang) {
+      if (rang < 0) return 0;
+      return TESTER_VALEURS[rang] !== undefined ? TESTER_VALEURS[rang] : 0;
+    }
     function ptsFor(qi, optId) {
       var opts = self.questions[qi].options || [];
       for (var k = 0; k < opts.length; k++) { if (opts[k].id === optId) return (opts[k].points || 0); }
@@ -1850,17 +1976,27 @@ var QuizEngine = (function() {
     }
     var scoreA = 0, scoreB = 0, maxTotal = 0;
     for (var i = 0; i < total; i++) {
-      var opts = this.questions[i].options || [];
-      var qMax = 0;
-      for (var k = 0; k < opts.length; k++) { if ((opts[k].points || 0) > qMax) qMax = opts[k].points || 0; }
-      maxTotal += qMax;
-      scoreA += ptsFor(i, this.answers.p1[i]);
-      scoreB += ptsFor(i, this.answers.p2[i]);
+      if (bareme) {
+        var fiche = bareme[this.questions[i].id];
+        var poids = fiche && fiche.w ? fiche.w : 1;
+        maxTotal += poids;
+        scoreA += poids * valeurDe(rangDe(i, this.answers.p1[i]));
+        scoreB += poids * valeurDe(rangDe(i, this.answers.p2[i]));
+      } else {
+        var opts = this.questions[i].options || [];
+        var qMax = 0;
+        for (var k = 0; k < opts.length; k++) { if ((opts[k].points || 0) > qMax) qMax = opts[k].points || 0; }
+        maxTotal += qMax;
+        scoreA += ptsFor(i, this.answers.p1[i]);
+        scoreB += ptsFor(i, this.answers.p2[i]);
+      }
     }
     if (maxTotal <= 0) maxTotal = 1;
+    // En solo, une seule serie de reponses : la note du couple est celle-la,
+    // sans moyenne avec une seconde grille qui n'existe pas.
     var pctA = Math.round(scoreA / maxTotal * 100);
     var pctB = Math.round(scoreB / maxTotal * 100);
-    var pctG = Math.round((scoreA + scoreB) / (2 * maxTotal) * 100);
+    var pctG = this.modeSolo ? pctA : Math.round((scoreA + scoreB) / (2 * maxTotal) * 100);
 
     var cl = tg('coupleLevel', null);
     if (!cl || !cl.bands || !cl.bands.length) cl = COUPLE_LEVEL_FALLBACK;
@@ -1888,7 +2024,9 @@ var QuizEngine = (function() {
     verdict.appendChild(el('p', 'duo-verdict-desc', bG.desc || ''));
     box.appendChild(verdict);
 
-    // Bloc scores individuels
+    // Bloc scores individuels. En solo il n'y a qu'une grille de reponses :
+    // afficher deux cartes identiques sans prenom n'apprendrait rien.
+    if (!this.modeSolo) {
     var indivHead = el('p', 'duo-indiv-head', esc(tg('result.discoverScores', 'Découvrez vos scores individuels')));
     box.appendChild(indivHead);
     var row = el('div', 'duo-players-scores');
@@ -1906,6 +2044,7 @@ var QuizEngine = (function() {
     row.appendChild(playerCard(nameA, pctA, bA, colorA));
     row.appendChild(playerCard(nameB, pctB, bB, colorB));
     box.appendChild(row);
+    }
 
     wrap.appendChild(box);
 
@@ -3476,7 +3615,17 @@ var QuizEngine = (function() {
   // Tirage stratifie : couvre toutes les dimensions au lieu de piocher au
   // hasard, pour que deux parties du meme couple mesurent la meme chose.
   function tirageStratifieSain(questions, prefixe, combien) {
-    var table = HEALTHY_BAREME[prefixe] || {};
+    return tirageStratifie(questions, HEALTHY_BAREME[prefixe] || {}, combien);
+  }
+
+  // Meme principe pour le test de couple : les 20 questions posees couvrent
+  // toutes les dimensions du bareme, pour que deux parties du meme couple
+  // mesurent la meme chose.
+  function tirageStratifieTester(questions, combien) {
+    return tirageStratifie(questions, TESTER_BAREME.testerC || {}, combien);
+  }
+
+  function tirageStratifie(questions, table, combien) {
     if (questions.length <= combien) return shuffleArray(questions);
 
     var securite = [], parDimension = {}, ordre = [];
@@ -3641,15 +3790,15 @@ var QuizEngine = (function() {
       }
     ];
 
-    var liste = el('div', 'sain-modes');
+    var liste = el('div', 'choix-modes');
     modes.forEach(function(m) {
-      var carte = el('button', 'sain-mode sain-mode--' + m.id);
+      var carte = el('button', 'choix-mode choix-mode--' + m.id);
       carte.type = 'button';
       carte.setAttribute('aria-label', m.nom + ' : ' + m.desc + '. ' + m.score);
       carte.innerHTML =
-        '<span class="sain-mode-nom">' + esc(m.nom) + '</span>' +
-        '<span class="sain-mode-desc">' + esc(m.desc) + '</span>' +
-        '<span class="sain-mode-score">' + esc(m.score) + '</span>';
+        '<span class="choix-mode-nom">' + esc(m.nom) + '</span>' +
+        '<span class="choix-mode-desc">' + esc(m.desc) + '</span>' +
+        '<span class="choix-mode-score">' + esc(m.score) + '</span>';
       carte.addEventListener('click', function() {
         self.mode = m.id;
         self.currentQ = 0;
@@ -7470,6 +7619,7 @@ var QuizEngine = (function() {
     esc: esc,
     shuffleArray: shuffleArray,
     tirageStratifieSain: tirageStratifieSain,
+    tirageStratifieTester: tirageStratifieTester,
     // Exposé pour les moteurs écrits directement dans un gabarit de page,
     // qui doivent partager le même bouton et le même message que les autres.
     renderShareButton: renderShareButton,

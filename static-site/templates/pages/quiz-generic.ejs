@@ -171,8 +171,8 @@
   // ── JSON-LD ────────────────────────────────────────────────────
   // Map quizType to gd.json prefix for structured data questions
   const gdPrefixMap = {
-    'toxic': 'divorce', 'divorce': 'divorce', 'mariage': 'marriage',
-    'tester-couple': 'couple', 'common-points': 'commonPoints',
+    'toxic': 'toxic', 'divorce': 'divorce', 'mariage': 'marriage',
+    'tester-couple': 'testerC', 'common-points': 'commonPoints',
     'sain': 'healthy', 'distance': 'distance', 'coquin': 'coquin',
     'knowledge': 'knowledge', 'amoureux': 'amoureux',
     'marrant': 'marrant', 'most': 'most', 'ado': 'ado',
@@ -199,9 +199,14 @@
     if (!qText || qText === gdPrefix + '.q' + qi) break;
     const questionObj = { "@type": "Question", "position": hasPart.length + 1, "name": qText };
     const answers = [];
+    // Deux nommages d'options cohabitent dans gd.json : q1a..q1d pour les
+    // series historiques, q1o0..q1o3 pour les series ecrites ensuite.
     for (let oi = 0; oi < optionLetters.length; oi++) {
-      const optText = tgd.local(gdPrefix + '.q' + qi + optionLetters[oi], '');
-      if (!optText || optText === gdPrefix + '.q' + qi + optionLetters[oi]) break;
+      const cleLettre = gdPrefix + '.q' + qi + optionLetters[oi];
+      const cleRang = gdPrefix + '.q' + qi + 'o' + oi;
+      let optText = tgd.local(cleLettre, '');
+      if (!optText || optText === cleLettre) optText = tgd.local(cleRang, '');
+      if (!optText || optText === cleRang) break;
       answers.push({ "@type": "Answer", "position": oi + 1, "text": optText });
     }
     if (answers.length > 0) questionObj.suggestedAnswer = answers;

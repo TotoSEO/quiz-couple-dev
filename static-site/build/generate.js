@@ -206,8 +206,8 @@ function stripEmDashes(text) {
 // prefixes. First candidate that actually has questions wins (handles FR vs
 // non-FR authoring, e.g. healthy questions live under 'couple' in FR).
 const GD_QUESTION_PREFIXES = {
-  toxic: ['divorce'], divorce: ['divorce'], mariage: ['marriage'], ado: ['ado'],
-  'tester-couple': ['couple'], 'common-points': ['commonPoints'],
+  toxic: ['toxic'], divorce: ['divorce'], mariage: ['marriage'], ado: ['ado'],
+  'tester-couple': ['testerC'], 'common-points': ['commonPoints'],
   sain: ['healthy', 'couple'], distance: ['distance'], coquin: ['coquin'],
   knowledge: ['knowledge'], amoureux: ['amoureux'], marrant: ['marrant'],
   most: ['most'], parentalite: ['parentalite'], emmenager: ['emmenager'],
@@ -330,8 +330,11 @@ function buildStaticQuestionsSection(quizType, tgd, lang) {
       if (items.length >= CAP) { tronque = true; break; }
       const opts = [];
       if (showOptions) {
-        for (const L of optLetters) {
-          const o = has(prefix + '.q' + i + L) || has(prefix + '_q' + i + L);
+        // q1a..q1d pour les series historiques, q1o0..q1o3 pour les suivantes.
+        for (let k = 0; k < optLetters.length; k++) {
+          const o = has(prefix + '.q' + i + optLetters[k])
+                 || has(prefix + '_q' + i + optLetters[k])
+                 || has(prefix + '.q' + i + 'o' + k);
           if (o) opts.push(o);
         }
       }
@@ -1193,7 +1196,7 @@ function copyTranslationData() {
     // savoir lequel existe dans la langue courante : on émet donc aussi le
     // fragment sous le nom de son alias, contenu inchangé, pour lui éviter une
     // requête en 404. Doit rester aligné sur PREFIX_ALIASES du moteur.
-    const ALIAS = { couple: 'testerC', commonPoints: 'cp', coquin: 'coquinQ', marrant: 'funny' };
+    const ALIAS = { commonPoints: 'cp', coquin: 'coquinQ', marrant: 'funny' };
     for (const [a, b] of Object.entries(ALIAS)) {
       for (const [de, vers] of [[a, b], [b, a]]) {
         if (gdData[de] && !gdData[vers]) {
