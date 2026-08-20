@@ -1155,9 +1155,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'jalousie-maladive',
     category: 'psychologie',
     featuredImage: '/blog/jalousie-maladive.webp',
-    frOnly: true,
     slugs: {
       fr: 'jalousie-maladive',
+      en: 'pathological-jealousy',
+      es: 'celos-patologicos',
+      de: 'krankhafte-eifersucht',
+      it: 'gelosia-patologica',
     },
     publishedAt: '2026-12-18',
   },
