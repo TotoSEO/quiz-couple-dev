@@ -908,9 +908,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'questions-pour-mieux-se-connaitre-en-couple',
     category: 'vie-de-couple',
     featuredImage: '/blog/questions-pour-mieux-se-connaitre-en-couple.webp',
-    frOnly: true,
     slugs: {
       fr: 'questions-pour-mieux-se-connaitre-en-couple',
+      en: 'questions-to-get-to-know-each-other',
+      es: 'preguntas-para-conoceros-mejor',
+      de: 'fragen-um-sich-besser-kennenzulernen',
+      it: 'domande-per-conoscersi-meglio',
     },
     publishedAt: '2026-10-13',
   },
