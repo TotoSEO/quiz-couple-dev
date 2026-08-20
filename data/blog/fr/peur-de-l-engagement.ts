@@ -30,8 +30,12 @@ const article: BlogArticleData = {
         {
           id: 'le-naufrage-vu-de-pres',
           title: "Le naufrage vu de près",
-          content: `<p>Grandir dans les décombres d'un couple parental, divorce guerrier, mariage mort-vivant, laisse une équation gravée : engagement = piège. Celui qui bloque ne fuit pas l'amour... il fuit la reproduction d'un désastre dont il connaît chaque détail. Souvent, il le dit d'ailleurs avec ces mots : « je ne veux pas qu'on finisse comme mes parents ».</p>
-<p><strong>Les cicatrices d'ex.</strong> Une trahison, une rupture brutale, une relation d'emprise... et le système conclut : plus jamais démuni. L'engagement devient une exposition au tir, et la distance une armure. C'est une peur qui se respecte... et qui se soigne, parce qu'une armure permanente est une prison à retardement.</p>`,
+          content: `<p>Grandir dans les décombres d'un couple parental, divorce guerrier, mariage mort-vivant, laisse une équation gravée : engagement = piège. Celui qui bloque ne fuit pas l'amour... il fuit la reproduction d'un désastre dont il connaît chaque détail. Souvent, il le dit d'ailleurs avec ces mots : « je ne veux pas qu'on finisse comme mes parents ».</p>`,
+        },
+        {
+          id: 'les-cicatrices-d-ex',
+          title: "Les cicatrices laissées par un ex",
+          content: `<p> Une trahison, une rupture brutale, une relation d'emprise... et le système conclut : plus jamais démuni. L'engagement devient une exposition au tir, et la distance une armure. C'est une peur qui se respecte... et qui se soigne, parce qu'une armure permanente est une prison à retardement.</p>`,
         },
         {
           id: 'l-attachement-evitant',

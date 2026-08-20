@@ -75,7 +75,7 @@ const article: BlogArticleData = {
     {
       id: 'les-pieges-du-parcours',
       title: "Les pièges du parcours (tout le monde tombe dedans)",
-      content: ``,
+      content: `<p>Trois pièges reviennent chez presque tout le monde, et les connaître à l'avance suffit souvent à ne pas s'y arrêter. Les voici.</p>`,
       subsections: [
         {
           id: 'piege-n1-croire-que-la-rechute',

@@ -53,6 +53,8 @@ const article: BlogArticleData = {
 <tr><td>Jamais célibataire</td><td>Quelqu'un qui a de la chance en amour</td><td>Le vide qu'il ne veut jamais traverser</td></tr>
 <tr><td>Les potes en jachère</td><td>Un homme casé, c'est normal</td><td>Une vie entière rangée derrière une seule personne</td></tr>
 <tr><td>Le sacrifice comptabilisé</td><td>Un partenaire dévoué</td><td>Une dette qu'il espère se voir rembourser</td></tr>
+<tr><td>L'humeur télécommandée</td><td>Quelqu'un de lunatique</td><td>Un état intérieur piloté depuis l'extérieur</td></tr>
+<tr><td>La peur déguisée en exigence</td><td>Un homme autoritaire</td><td>De la panique qui a mis un costume</td></tr>
 </tbody></table></div>`,
     },
     {
