@@ -1194,9 +1194,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'pardonner-une-infidelite',
     category: 'psychologie',
     featuredImage: '/blog/pardonner-une-infidelite.webp',
-    frOnly: true,
     slugs: {
       fr: 'pardonner-une-infidelite',
+      en: 'forgiving-infidelity',
+      es: 'perdonar-una-infidelidad',
+      de: 'untreue-verzeihen',
+      it: 'perdonare-un-infedelta',
     },
     publishedAt: '2026-12-29',
   },
