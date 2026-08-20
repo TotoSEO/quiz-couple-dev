@@ -52,9 +52,6 @@ const article: BlogArticleData = {
       title: "Ce qui apaise vraiment (et ce qui ne marche jamais)",
       content: `<p>Commençons par vider ce qui ne marche pas, parce que tu l'as déjà essayé : demander toujours plus de preuves (l'effet s'épuise), surveiller (ça nourrit l'alarme), choisir des partenaires « intenses » qui te font vibrer (l'intensité est souvent de l'inconstance déguisée, et l'inconstance est de l'essence sur ton feu)... Et la pire stratégie de toutes : attendre que l'autre devine. Personne ne désamorce une alarme qu'il ne sait pas entendre.</p>
 <p>Ce qui marche, maintenant, en trois mouvements.</p>
-<p><strong>Réguler la vague de l'intérieur :</strong> La compétence numéro un : quand l'alarme sonne, ne pas obéir tout de suite. Le délai de 30 minutes avant toute relance, la respiration d'ancrage, le journal des vagues... Ce sont exactement les outils de la phase 1 des <a href="/blog/sortir-de-la-dependance-affective/">exercices de sortie de la dépendance affective</a>, et ils ont été conçus pour ce système-là. Chaque vague traversée sans vérification recalibre l'alarme d'un cran.</p>
-<p><strong>Demander en clair, plutôt que protester :</strong> Le grand saut : remplacer les tests et les relances par la phrase la plus difficile et la plus efficace du répertoire : « je me raconte des histoires depuis ce matin, tu peux me rassurer ? »... Ça semble être une faiblesse ; c'est l'inverse. Une demande claire donne à un partenaire aimant l'occasion de répondre, et elle t'apprend que le besoin peut être nommé sans catastrophe. C'est une expérience corrective à chaque fois.</p>
-<p><strong>Choisir (et laisser agir) la stabilité :</strong> Si tu es en recherche : méfie-toi de ton attirance pour les montagnes russes, et donne leur chance aux partenaires constants, même si le début te semble « moins fort ». La recherche est formelle : la relation stable est le meilleur thérapeute de l'attachement anxieux, la fameuse sécurité acquise... L'ennui des débuts sécures, c'est souvent juste le silence de l'alarme. On s'y fait remarquablement bien !</p>
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Ce qui apaise l'alarme</p>
@@ -85,6 +82,23 @@ const article: BlogArticleData = {
 </div>
 <p>Et un mot pour finir, parce qu'il est mérité : les anxieux de l'attachement sont aussi, très souvent, les partenaires les plus attentifs, les plus loyaux et les plus généreux qui soient... La sensibilité qui te fait souffrir est la même qui te fait aimer si bien. Le travail ne consiste pas à l'éteindre. Il consiste à la débrancher de la peur... pour la laisser toute entière à l'amour.</p>
 <a href="/blog/styles-attachement-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Les 4 styles d'attachement en amour : lequel pilote ta façon d'aimer ?</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      subsections: [
+        {
+          id: 'reguler-la-vague-de-l-interieur',
+          title: "Réguler la vague de l'intérieur",
+          content: `<p>La compétence numéro un : quand l'alarme sonne, ne pas obéir tout de suite. Le délai de 30 minutes avant toute relance, la respiration d'ancrage, le journal des vagues... Ce sont exactement les outils de la phase 1 des <a href="/blog/sortir-de-la-dependance-affective/">exercices de sortie de la dépendance affective</a>, et ils ont été conçus pour ce système-là. Chaque vague traversée sans vérification recalibre l'alarme d'un cran.</p>`,
+        },
+        {
+          id: 'demander-en-clair-plutot-que-protester',
+          title: "Demander en clair, plutôt que protester",
+          content: `<p>Le grand saut : remplacer les tests et les relances par la phrase la plus difficile et la plus efficace du répertoire : « je me raconte des histoires depuis ce matin, tu peux me rassurer ? »... Ça semble être une faiblesse ; c'est l'inverse. Une demande claire donne à un partenaire aimant l'occasion de répondre, et elle t'apprend que le besoin peut être nommé sans catastrophe. C'est une expérience corrective à chaque fois.</p>`,
+        },
+        {
+          id: 'choisir-et-laisser-agir-la-stabilite',
+          title: "Choisir (et laisser agir) la stabilité",
+          content: `<p>Si tu es en recherche : méfie-toi de ton attirance pour les montagnes russes, et donne leur chance aux partenaires constants, même si le début te semble « moins fort ». La recherche est formelle : la relation stable est le meilleur thérapeute de l'attachement anxieux, la fameuse sécurité acquise... L'ennui des débuts sécures, c'est souvent juste le silence de l'alarme. On s'y fait remarquablement bien !</p>`,
+        },
+      ],
     },
   ],
 };

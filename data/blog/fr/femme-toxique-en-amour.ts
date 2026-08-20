@@ -67,6 +67,10 @@ const article: BlogArticleData = {
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
 <p>Dernier mot pour celui qui a reconnu sa compagne dans cet article : la marche à suivre est la même que dans l'autre sens. Nommer le comportement précisément, une fois, calmement. Poser une limite. Observer ce qu'elle en fait sur trois mois, des actes, pas des promesses... Et si la limite déclenche systématiquement l'escalade, ta relation coche déjà les <a href="/blog/relation-toxique-signes/">signes d'une relation toxique</a> qui ne se répare pas à deux. Tu mérites une relation où poser une limite ne coûte rien. Oui, toi aussi.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ Si tu es en danger, ne reste pas seul avec un article</p>
+<p>On l'ignore souvent : le 3919 écoute aussi les hommes victimes, et les violences psychologiques en font partie. Gratuit et anonyme. En cas d'urgence immédiate, le 17, ou le 114 par SMS quand tu ne peux pas parler. Et un psychologue formé aux violences dans le couple vaut mieux que n'importe quel article, celui-ci compris.</p>
+</aside>
 <a href="/blog/femme-perverse-narcissique-signes/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">La femme perverse narcissique : 10 signes que les hommes n'osent pas nommer</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

@@ -78,9 +78,6 @@ const article: BlogArticleData = {
       id: 'comment-en-parler',
       title: "Comment en parler (sans procès, et sans se taire)",
       content: `<p>Le sujet est piégé des deux côtés : en parler expose au « tu es parano »... se taire laisse la braise couver. Voici la voie du milieu, en trois mouvements.</p>
-<p><strong>Nommer le comportement, pas l'intention :</strong> Tu n'as pas accès à ses intentions, et les procès d'intention font dérailler toutes les conversations... Reste aux faits observables : « j'ai vu que tu échanges très régulièrement avec elle, et que ça se ferme quand j'arrive. Ça me met mal, et je préfère t'en parler que de ruminer. » Factuel, direct, sans verdict. La qualité de sa réponse t'apprendra l'essentiel : quelqu'un de clair contextualise et AJUSTE... quelqu'un d'ambigu contre-attaque.</p>
-<p><strong>Définir VOS lignes, à deux :</strong> Voilà le vrai travail, et presque aucun couple ne le fait : la fidélité a une zone grise, et chaque couple place ses frontières différemment ! Les ex, les DM, les confidences, les applis, les soirées... Parlez-en À FROID, pas en pleine crise : « c'est quoi, pour toi, être fidèle, concrètement ? » Tu seras surpris des écarts de définition... et chaque écart découvert à froid est une crise évitée à chaud. C'est typiquement une conversation à glisser dans vos <a href="/blog/questions-avenir-couple/">questions d'avenir de couple</a>.</p>
-<p><strong>Et regarder ce que la braise dit du foyer :</strong> Sans excuser quoi que ce soit : la micro-tromperie prospère souvent là où le couple s'est mis en veille... attention en berne, conversations réduites à la logistique, séduction interne à zéro. La meilleure protection n'est ni la surveillance ni les règles : c'est un couple où l'attention circule encore. Si la vôtre s'est endormie, réveillez-la en premier... le reste suit étonnamment souvent.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Votre couple est-il en zone grise ?</p>
 <p class="blog-cta-texte">Une série de questions fait le point sur la confiance, la transparence et les frontières dans votre couple... et vous dit où vous en êtes, avant que la zone grise ne fonce.</p>
@@ -88,6 +85,23 @@ const article: BlogArticleData = {
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
 <a href="/blog/signes-infidelite/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Les signes d'infidélité : ce qui doit alerter, ce qui ne prouve rien</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      subsections: [
+        {
+          id: 'nommer-le-comportement-pas-l-intention',
+          title: "Nommer le comportement, pas l'intention",
+          content: `<p>Tu n'as pas accès à ses intentions, et les procès d'intention font dérailler toutes les conversations... Reste aux faits observables : « j'ai vu que tu échanges très régulièrement avec elle, et que ça se ferme quand j'arrive. Ça me met mal, et je préfère t'en parler que de ruminer. » Factuel, direct, sans verdict. La qualité de sa réponse t'apprendra l'essentiel : quelqu'un de clair contextualise et AJUSTE... quelqu'un d'ambigu contre-attaque.</p>`,
+        },
+        {
+          id: 'definir-vos-lignes-a-deux',
+          title: "Définir VOS lignes, à deux",
+          content: `<p>Voilà le vrai travail, et presque aucun couple ne le fait : la fidélité a une zone grise, et chaque couple place ses frontières différemment ! Les ex, les DM, les confidences, les applis, les soirées... Parlez-en À FROID, pas en pleine crise : « c'est quoi, pour toi, être fidèle, concrètement ? » Tu seras surpris des écarts de définition... et chaque écart découvert à froid est une crise évitée à chaud. C'est typiquement une conversation à glisser dans vos <a href="/blog/questions-avenir-couple/">questions d'avenir de couple</a>.</p>`,
+        },
+        {
+          id: 'et-regarder-ce-que-la-braise',
+          title: "Ce que la braise dit du foyer",
+          content: `<p>Sans excuser quoi que ce soit : la micro-tromperie prospère souvent là où le couple s'est mis en veille... attention en berne, conversations réduites à la logistique, séduction interne à zéro. La meilleure protection n'est ni la surveillance ni les règles : c'est un couple où l'attention circule encore. Si la vôtre s'est endormie, réveillez-la en premier... le reste suit étonnamment souvent.</p>`,
+        },
+      ],
     },
   ],
 };

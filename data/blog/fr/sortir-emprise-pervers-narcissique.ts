@@ -73,6 +73,10 @@ const article: BlogArticleData = {
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
 <p>Et si tu lis cet article pour quelqu'un d'autre, une sœur, une amie coincée dedans, voilà le mode d'emploi en trois lignes : ne critique pas l'homme (elle le défendra), ne pose pas d'ultimatum (elle choisira lui), reste juste là, constante, sans jugement... et sème des mots justes, un par un. Les victimes sortent le jour où elles sont prêtes, mais elles sortent VERS les gens qui sont restés. Sois cet endroit-là.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ Si tu es en danger, ne reste pas seul(e) avec un article</p>
+<p>Menaces, contrôle de ton argent ou de tes déplacements, violence physique même « une seule fois » : en France, le 3919 est gratuit, anonyme, ouvert 24h/24, et il écoute les femmes comme les hommes. En cas d'urgence immédiate, le 17, ou le 114 par SMS quand tu ne peux pas parler.</p>
+</aside>
 <a href="/blog/rupture-pervers-narcissique/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Rompre avec un pervers narcissique : ce qui t'attend, phase par phase</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

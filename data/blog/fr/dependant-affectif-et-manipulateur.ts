@@ -46,12 +46,22 @@ const article: BlogArticleData = {
       id: 'un-dependant-attire-un-dependant',
       title: "« Un dépendant affectif attire un dépendant affectif » : vrai ou faux ?",
       content: `<p>La formule circule beaucoup, alors clarifions, parce qu'elle est à moitié vraie... et la moitié fausse est dangereuse.</p>
-<p><strong>La part vraie :</strong> les insécurités s'attirent, c'est bien documenté. Deux dépendants affectifs peuvent former un couple fusionnel, étouffant, jaloux des deux côtés... douloureux, mais symétrique. Et il existe un autre appariement classique : l'anxieux avec l'évitant, celui qui poursuit avec celui qui fuit, chacun confirmant les peurs de l'autre.</p>
-<p><strong>La part fausse :</strong> croire que le partenaire d'un dépendant affectif est forcément dépendant lui aussi. Le duo le plus destructeur n'est pas symétrique du tout : c'est dépendant + manipulateur, et il ne faut surtout pas les confondre. Dans le couple de deux dépendants, les deux souffrent et les deux peuvent travailler. Dans le duo avec un manipulateur, un seul souffre... et l'autre gère son capital.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Comment savoir dans quel duo tu es ?</p>
 <p>Un test simple : commence à aller mieux. Travaille ta dépendance, reprends des activités, retrouve tes amies... Un partenaire simplement insécure sera déstabilisé, peut-être maladroit, mais il finira par respirer avec toi. Un manipulateur, lui, SABOTERA tes progrès : reproches sur tes sorties, crises pile les soirs d'exercice, tendresse soudaine quand tu prends le large... Ta guérison est son problème. Cette réaction-là signe tout.</p>
 </aside>`,
+      subsections: [
+        {
+          id: 'la-part-vraie',
+          title: "La part vraie",
+          content: `<p>les insécurités s'attirent, c'est bien documenté. Deux dépendants affectifs peuvent former un couple fusionnel, étouffant, jaloux des deux côtés... douloureux, mais symétrique. Et il existe un autre appariement classique : l'anxieux avec l'évitant, celui qui poursuit avec celui qui fuit, chacun confirmant les peurs de l'autre.</p>`,
+        },
+        {
+          id: 'la-part-fausse',
+          title: "La part fausse",
+          content: `<p>croire que le partenaire d'un dépendant affectif est forcément dépendant lui aussi. Le duo le plus destructeur n'est pas symétrique du tout : c'est dépendant + manipulateur, et il ne faut surtout pas les confondre. Dans le couple de deux dépendants, les deux souffrent et les deux peuvent travailler. Dans le duo avec un manipulateur, un seul souffre... et l'autre gère son capital.</p>`,
+        },
+      ],
     },
     {
       id: 'casser-le-duo',

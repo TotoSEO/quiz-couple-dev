@@ -75,17 +75,31 @@ const article: BlogArticleData = {
     {
       id: 'les-pieges-du-parcours',
       title: "Les pièges du parcours (tout le monde tombe dedans)",
-      content: `<p><strong>Piège n°1 : croire que la rechute annule tout :</strong> Tu tiendras dix jours, puis une soirée d'angoisse balaiera tes bonnes résolutions... et alors ? La rechute fait partie de l'apprentissage, exactement comme on retombe en apprenant le vélo. Ce qui compte, c'est la tendance sur trois mois, pas la soirée d'hier.</p>
-<p><strong>Piège n°2 : changer de partenaire au lieu de changer de fonctionnement :</strong> La dépendance affective suit son propriétaire ! Une nouvelle histoire avec le même système intérieur donnera la même relation, avec un autre prénom. Le travail, c'est maintenant, pas « quand j'aurai trouvé quelqu'un de mieux »...</p>
-<p><strong>Piège n°3 : faire tout ça en secret contre quelqu'un :</strong> Ces exercices sont un travail pour toi, pas une stratégie pour le faire réagir. Si tu comptes tes jours de silence en guettant sa réaction, tu n'es pas en train de sortir de la dépendance, tu es en train de la jouer à un autre jeu.</p>
-<p>Et le vrai dernier conseil : tu n'es pas obligée de faire ce chemin seule. Un psy qui connaît les thérapies cognitives et comportementales ou les blessures d'attachement accélère énormément le travail. Côté lecture, le classique du genre, « 50 exercices pour sortir de la dépendance affective » de Géraldyne Prévot-Gigant, complète très bien ce plan si tu veux aller plus loin sur papier.</p>
-<div class="blog-cta">
+      content: `<div class="blog-cta">
 <p class="blog-cta-titre">Avant de commencer : mesure ton point de départ</p>
 <p class="blog-cta-texte">Une série de questions évalue où tu en es aujourd'hui, attachement sain, fragilité ou vraie dépendance, et te donne une photo de départ. Refais-le dans trois mois... et mesure le chemin parcouru.</p>
 <a class="blog-cta-btn" href="/test-dependance-affective/">Faire mon point de départ</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
 <a href="/blog/dependance-affective-symptomes/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Symptômes de la dépendance affective : ce que ça fait vivre, concrètement</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      subsections: [
+        {
+          id: 'piege-n1-croire-que-la-rechute',
+          title: "Piège n°1 : croire que la rechute annule tout",
+          content: `<p>Tu tiendras dix jours, puis une soirée d'angoisse balaiera tes bonnes résolutions... et alors ? La rechute fait partie de l'apprentissage, exactement comme on retombe en apprenant le vélo. Ce qui compte, c'est la tendance sur trois mois, pas la soirée d'hier.</p>`,
+        },
+        {
+          id: 'piege-n2-changer-de-partenaire-au',
+          title: "Piège n°2 : changer de partenaire au lieu de changer de fonctionnement",
+          content: `<p>La dépendance affective suit son propriétaire ! Une nouvelle histoire avec le même système intérieur donnera la même relation, avec un autre prénom. Le travail, c'est maintenant, pas « quand j'aurai trouvé quelqu'un de mieux »...</p>`,
+        },
+        {
+          id: 'piege-n3-faire-tout-ca-en',
+          title: "Piège n°3 : faire tout ça en secret contre quelqu'un",
+          content: `<p>Ces exercices sont un travail pour toi, pas une stratégie pour le faire réagir. Si tu comptes tes jours de silence en guettant sa réaction, tu n'es pas en train de sortir de la dépendance, tu es en train de la jouer à un autre jeu.</p>
+<p>Et le vrai dernier conseil : tu n'es pas obligée de faire ce chemin seule. Un psy qui connaît les thérapies cognitives et comportementales ou les blessures d'attachement accélère énormément le travail. Côté lecture, le classique du genre, « 50 exercices pour sortir de la dépendance affective » de Géraldyne Prévot-Gigant, complète très bien ce plan si tu veux aller plus loin sur papier.</p>`,
+        },
+      ],
     },
   ],
 };

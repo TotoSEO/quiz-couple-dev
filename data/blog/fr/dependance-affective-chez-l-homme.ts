@@ -66,9 +66,6 @@ const article: BlogArticleData = {
       id: 's-en-sortir-version-homme',
       title: "S'en sortir, version homme",
       content: `<p>La méthode de fond est la même pour tout le monde : les <a href="/blog/sortir-de-la-dependance-affective/">12 exercices pour sortir de la dépendance affective</a> marchent exactement pareil au masculin, stabiliser, se réapproprier sa vie, consolider. Mais il y a trois spécificités masculines qui changent la donne, et autant les dire cash.</p>
-<p><strong>Un : nommer, d'abord :</strong> Tu ne peux pas travailler un problème que tu appelles « elle m'énerve ». La première victoire, c'est de traduire : derrière ma jalousie, il y a de la peur. Derrière ma colère, il y a du manque. Ça coûte, la première fois... et ça change tout, parce qu'on peut travailler sur la peur, pas sur « elle m'énerve ».</p>
-<p><strong>Deux : en parler à UN pote :</strong> Pas à dix, pas sur les réseaux : un seul, le plus fiable. Les hommes sous-estiment massivement ce que ça débloque, parce qu'ils s'attendent à être jugés... et découvrent en face un « mec, moi aussi » une fois sur deux. Le tabou meurt dès qu'on le sort de sa tête.</p>
-<p><strong>Trois : le psy n'est pas une défaite :</strong> C'est un entraîneur, littéralement. Tu fais bien appel à un coach pour le sport ou un mécano pour la voiture ? Les blessures d'attachement, c'est pareil : il existe des gens dont c'est le métier, et les résultats sont spectaculaires précisément chez les hommes... parce qu'ils arrivent avec vingt ans de retard de parole à rattraper.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Fais le point, là, en cinq minutes</p>
 <p class="blog-cta-texte">Une série de questions évalue ton mode d'attachement sur des situations concrètes, la jalousie, le contrôle, le vide, l'humeur. Personne ne le saura, et tu sauras enfin, toi.</p>
@@ -77,6 +74,23 @@ const article: BlogArticleData = {
 </div>
 <p>Et un dernier mot si tu es la compagne qui a reconnu son homme dans cet article : tu ne peux pas faire le travail à sa place, et le rassurer toujours plus ne guérit rien, ça nourrit le système. Ce que tu peux faire ? Nommer ce que tu vois, sans mépris, une fois, clairement... et l'encourager vers de l'aide. Le reste lui appartient.</p>
 <a href="/blog/sortir-de-la-dependance-affective/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Comment sortir de la dépendance affective : 12 exercices concrets, phase par phase</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      subsections: [
+        {
+          id: 'un-nommer-d-abord',
+          title: "Nommer, d'abord",
+          content: `<p>Tu ne peux pas travailler un problème que tu appelles « elle m'énerve ». La première victoire, c'est de traduire : derrière ma jalousie, il y a de la peur. Derrière ma colère, il y a du manque. Ça coûte, la première fois... et ça change tout, parce qu'on peut travailler sur la peur, pas sur « elle m'énerve ».</p>`,
+        },
+        {
+          id: 'deux-en-parler-a-un-pote',
+          title: "En parler à UN pote",
+          content: `<p>Pas à dix, pas sur les réseaux : un seul, le plus fiable. Les hommes sous-estiment massivement ce que ça débloque, parce qu'ils s'attendent à être jugés... et découvrent en face un « mec, moi aussi » une fois sur deux. Le tabou meurt dès qu'on le sort de sa tête.</p>`,
+        },
+        {
+          id: 'trois-le-psy-n-est-pas',
+          title: "Le psy n'est pas une défaite",
+          content: `<p>C'est un entraîneur, littéralement. Tu fais bien appel à un coach pour le sport ou un mécano pour la voiture ? Les blessures d'attachement, c'est pareil : il existe des gens dont c'est le métier, et les résultats sont spectaculaires précisément chez les hommes... parce qu'ils arrivent avec vingt ans de retard de parole à rattraper.</p>`,
+        },
+      ],
     },
   ],
 };

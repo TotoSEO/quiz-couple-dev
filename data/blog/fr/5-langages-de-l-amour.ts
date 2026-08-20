@@ -42,22 +42,46 @@ const article: BlogArticleData = {
       id: 'trouver-son-langage',
       title: "Comment identifier ton langage (et le sien)",
       content: `<p>Le réflexe classique, c'est de se dire « moi je suis un peu tout »... et c'est vrai, tout le monde apprécie les cinq ! Mais il y a une hiérarchie, et deux détecteurs la révèlent à coup sûr.</p>
-<p><strong>Détecteur n°1 : ce qui te blesse le plus :</strong> Le langage dominant se repère moins à ce qui fait plaisir qu'à ce qui fait MAL quand il manque. Fouille tes rancunes récurrentes : « il ne me dit jamais que... » (paroles), « on ne passe plus de temps... » (temps), « je fais tout ici... » (services), « il a encore oublié... » (cadeaux), « on ne se touche plus... » (contact). Ton reproche préféré est ton langage qui crie famine.</p>
-<p><strong>Détecteur n°2 : ce que tu donnes spontanément :</strong> On offre par défaut ce qu'on aimerait recevoir... Celui qui complimente sans arrêt parle « paroles ». Celle qui organise des week-ends parle « temps ». Celui qui répare, prépare, gère... parle « services ». Regarde ce que ton partenaire te donne le plus : ce n'est pas ce qu'il croit que tu veux. C'est SA langue maternelle qu'il te parle... et c'est déjà une déclaration.</p>
-<p>Fais l'exercice pour vous deux, là, mentalement : ton top 2, son top 2... Si vous n'avez aucun langage en commun, tu viens probablement de comprendre dix ans de malentendus ! Et si tu veux une mesure plus posée que l'intuition, le <a href="/test-langage-amour-couple/">test des langages de l'amour</a> établit ton profil complet, langage par langage... à faire chacun de son côté, évidemment.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Le malentendu le plus fréquent des couples</p>
 <p>Deux personnes qui s'aiment fort, donnent beaucoup... et se sentent chacune mal aimées. Lui multiplie les services (sa langue), elle attend des mots (la sienne) : il s'épuise, elle se dessèche, et chacun pense donner plus qu'il ne reçoit ! Ce n'est pas un problème d'amour, c'est un problème de change : vous payez chacun dans une devise que l'autre ne convertit pas.</p>
 </aside>`,
+      subsections: [
+        {
+          id: 'detecteur-n1-ce-qui-te-blesse',
+          title: "Détecteur n°1 : ce qui te blesse le plus",
+          content: `<p>Le langage dominant se repère moins à ce qui fait plaisir qu'à ce qui fait MAL quand il manque. Fouille tes rancunes récurrentes : « il ne me dit jamais que... » (paroles), « on ne passe plus de temps... » (temps), « je fais tout ici... » (services), « il a encore oublié... » (cadeaux), « on ne se touche plus... » (contact). Ton reproche préféré est ton langage qui crie famine.</p>`,
+        },
+        {
+          id: 'detecteur-n2-ce-que-tu-donnes',
+          title: "Détecteur n°2 : ce que tu donnes spontanément",
+          content: `<p>On offre par défaut ce qu'on aimerait recevoir... Celui qui complimente sans arrêt parle « paroles ». Celle qui organise des week-ends parle « temps ». Celui qui répare, prépare, gère... parle « services ». Regarde ce que ton partenaire te donne le plus : ce n'est pas ce qu'il croit que tu veux. C'est SA langue maternelle qu'il te parle... et c'est déjà une déclaration.</p>
+<p>Fais l'exercice pour vous deux, là, mentalement : ton top 2, son top 2... Si vous n'avez aucun langage en commun, tu viens probablement de comprendre dix ans de malentendus ! Et si tu veux une mesure plus posée que l'intuition, le <a href="/test-langage-amour-couple/">test des langages de l'amour</a> établit ton profil complet, langage par langage... à faire chacun de son côté, évidemment.</p>`,
+        },
+      ],
     },
     {
       id: 'le-mode-d-emploi',
       title: "Le mode d'emploi : parler une langue qui n'est pas la tienne",
-      content: `<p>C'est ici que le concept passe de « quiz sympa » à « outil qui change un couple ». Trois règles font tout le travail.</p>
-<p><strong>Règle 1 : on donne dans la langue de l'AUTRE :</strong> Ça paraît évident, et c'est contre-nature ! Si ton langage est « services », offrir des mots te semblera artificiel, presque gênant... Normal : tu parles une langue étrangère. Fais-le quand même, maladroitement s'il le faut. Un « je suis fier de toi » bancal dans la langue de l'autre vaut dix gestes parfaits dans la tienne.</p>
-<p><strong>Règle 2 : on traduit ce qu'on reçoit :</strong> Dans l'autre sens, apprends à convertir : quand il passe le week-end à réparer ta voiture, TRADUIS. Ce n'est pas « il préfère bricoler que passer du temps avec moi »... c'est « je t'aime » en langage services. La traduction ne remplace pas tes besoins, mais elle change tout au climat : tu te découvres plus aimée que tu croyais, juste dans une langue que tu ne lisais pas.</p>
-<p><strong>Règle 3 : on demande sans honte :</strong> « Si tu veux me faire plaisir, dis-moi des choses, c'est bête mais c'est mon truc »... Cette phrase n'enlève AUCUNE valeur aux mots qui suivront, contrairement à la légende ! Le mythe du « s'il m'aimait, il saurait » a tué plus de couples que les vraies incompatibilités. Personne ne devine une langue étrangère : on l'enseigne.</p>
+      content: `<p>C'est ici que le concept passe de « quiz sympa » à « outil qui change un couple ». Trois règles font tout le travail.</p>`,
+      subsections: [
+        {
+          id: 'regle-1-on-donne-dans-la',
+          title: "Règle 1 : on donne dans la langue de l'AUTRE",
+          content: `<p>Ça paraît évident, et c'est contre-nature ! Si ton langage est « services », offrir des mots te semblera artificiel, presque gênant... Normal : tu parles une langue étrangère. Fais-le quand même, maladroitement s'il le faut. Un « je suis fier de toi » bancal dans la langue de l'autre vaut dix gestes parfaits dans la tienne.</p>`,
+        },
+        {
+          id: 'regle-2-on-traduit-ce-qu',
+          title: "Règle 2 : on traduit ce qu'on reçoit",
+          content: `<p>Dans l'autre sens, apprends à convertir : quand il passe le week-end à réparer ta voiture, TRADUIS. Ce n'est pas « il préfère bricoler que passer du temps avec moi »... c'est « je t'aime » en langage services. La traduction ne remplace pas tes besoins, mais elle change tout au climat : tu te découvres plus aimée que tu croyais, juste dans une langue que tu ne lisais pas.</p>`,
+        },
+        {
+          id: 'regle-3-on-demande-sans-honte',
+          title: "Règle 3 : on demande sans honte",
+          content: `<p>« Si tu veux me faire plaisir, dis-moi des choses, c'est bête mais c'est mon truc »... Cette phrase n'enlève AUCUNE valeur aux mots qui suivront, contrairement à la légende ! Le mythe du « s'il m'aimait, il saurait » a tué plus de couples que les vraies incompatibilités. Personne ne devine une langue étrangère : on l'enseigne.</p>
 <p>Et une astuce de rythme pour finir : choisissez chacun UN geste par semaine dans la langue de l'autre, un seul, mais délibéré... Au bout d'un mois, l'effet est déjà là. C'est le même principe que les <a href="/blog/questions-pour-mieux-se-connaitre-en-couple/">questions pour mieux se connaître</a> : la régularité modeste bat le grand soir.</p>`,
+        },
+      ],
     },
     {
       id: 'les-limites-du-concept',

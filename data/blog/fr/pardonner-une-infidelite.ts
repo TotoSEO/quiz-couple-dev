@@ -43,14 +43,32 @@ const article: BlogArticleData = {
       id: 'le-chemin-du-pardon',
       title: "Le chemin du pardon réel (si les conditions sont là)",
       content: `<p>Si les quatre conditions sont réunies et que tu choisis de rester, voici à quoi ressemble le vrai chemin... parce que personne ne te le décrit jamais honnêtement.</p>
-<p><strong>Ça prend des mois, et ce n'est pas linéaire :</strong> Le pardon d'une infidélité n'est pas une décision d'un soir : c'est un processus, avec des rechutes prévues au programme... Des semaines correctes, puis une image qui remonte, une date anniversaire, un détail... et une vague de colère comme au premier jour. Ces vagues ne signifient pas que tu n'y arrives pas : elles font partie du trajet, et elles s'espacent.</p>
-<p><strong>Tu as droit à toutes tes questions... une période :</strong> Le besoin de savoir (quand, où, combien de temps) est légitime et fait partie de la reconstruction : les réponses, même douloureuses, remplacent les scénarios imaginaires qui sont pires... Mais l'interrogatoire sans fin devient un poison à retardement. La règle des couples qui s'en sortent : une période de questions ouvertes, puis, ensemble, une clôture. On sait, on a dit, on avance.</p>
-<p><strong>Le couple d'avant ne revient pas... et c'est le but :</strong> La donnée que confirment tous les thérapeutes : les couples qui survivent ne « redeviennent » pas ce qu'ils étaient. Ils construisent une deuxième relation, avec les mêmes personnes... souvent plus honnête que la première, parce que tout a été mis sur la table. Si ton objectif est de retrouver l'innocence d'avant, tu seras déçue ; si c'est de construire quelque chose de plus vrai, c'est possible.</p>
-<p><strong>Et l'aide extérieure change les statistiques :</strong> Une thérapie de couple après infidélité n'est pas un aveu d'échec : c'est l'endroit où les conversations impossibles deviennent possibles, avec un arbitre... Les couples accompagnés s'en sortent nettement mieux, tout simplement.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Le faux pardon : le pire des trois scénarios</p>
 <p>Il y a pire que partir, et pire que pardonner : rester sans pardonner. Le « pardon » de façade qui ressort l'infidélité à chaque dispute, la surveillance à vie, la dette éternelle... Ce scénario détruit les deux : l'un vit en liberté surveillée permanente, l'autre en procureur à plein temps. Si, après un an et de vrais efforts en face, la colère est intacte et la confiance à zéro... ce n'est pas un échec moral. C'est une information : pour toi, avec lui, ce n'était pas pardonnable. Et il vaut mieux en tirer les conséquences que de purger une peine à deux.</p>
 </aside>`,
+      subsections: [
+        {
+          id: 'ca-prend-des-mois-et-ce',
+          title: "Ça prend des mois, et ce n'est pas linéaire",
+          content: `<p>Le pardon d'une infidélité n'est pas une décision d'un soir : c'est un processus, avec des rechutes prévues au programme... Des semaines correctes, puis une image qui remonte, une date anniversaire, un détail... et une vague de colère comme au premier jour. Ces vagues ne signifient pas que tu n'y arrives pas : elles font partie du trajet, et elles s'espacent.</p>`,
+        },
+        {
+          id: 'tu-as-droit-a-toutes-tes',
+          title: "Tu as droit à toutes tes questions, mais pas indéfiniment",
+          content: `<p>Le besoin de savoir (quand, où, combien de temps) est légitime et fait partie de la reconstruction : les réponses, même douloureuses, remplacent les scénarios imaginaires qui sont pires... Mais l'interrogatoire sans fin devient un poison à retardement. La règle des couples qui s'en sortent : une période de questions ouvertes, puis, ensemble, une clôture. On sait, on a dit, on avance.</p>`,
+        },
+        {
+          id: 'le-couple-d-avant-ne-revient',
+          title: "Le couple d'avant ne revient pas... et c'est le but",
+          content: `<p>La donnée que confirment tous les thérapeutes : les couples qui survivent ne « redeviennent » pas ce qu'ils étaient. Ils construisent une deuxième relation, avec les mêmes personnes... souvent plus honnête que la première, parce que tout a été mis sur la table. Si ton objectif est de retrouver l'innocence d'avant, tu seras déçue ; si c'est de construire quelque chose de plus vrai, c'est possible.</p>`,
+        },
+        {
+          id: 'et-l-aide-exterieure-change-les',
+          title: "L'aide extérieure change les statistiques",
+          content: `<p>Une thérapie de couple après infidélité n'est pas un aveu d'échec : c'est l'endroit où les conversations impossibles deviennent possibles, avec un arbitre... Les couples accompagnés s'en sortent nettement mieux, tout simplement.</p>`,
+        },
+      ],
     },
     {
       id: 'quand-partir-est-la-bonne-reponse',

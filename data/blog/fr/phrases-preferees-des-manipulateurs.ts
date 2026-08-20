@@ -39,6 +39,8 @@ const article: BlogArticleData = {
 <li><strong>« Tu m'as poussé à bout. »</strong> Variante plus fine, parce qu'elle contient un aveu (« je suis allé trop loin ») aussitôt annulé par la cause (toi). C'est la phrase qui permet de tout faire sans jamais rien assumer.</li>
 <li><strong>« Regarde dans quel état tu me mets ! »</strong> Ici, ton émotion devient une agression, et la sienne une conséquence. Astucieux, non ? Toi tu « mets dans des états », lui il « subit ».</li>
 <li><strong>« Si tu ne m'avais pas parlé sur ce ton... »</strong> Le grand détournement : on ne parlera jamais du fond, on parlera de ta forme. Ton ton, ton moment, ta formulation. Il y aura toujours quelque chose à redire sur la forme.</li>
+<li><strong>« Si tu m'aimais vraiment, tu ne dirais pas ça. »</strong> L'amour transformé en clause de silence. Traduction réelle : « ton reproche est la preuve que tu m'aimes mal », et te voilà à prouver ton amour au lieu de parler du sujet.</li>
+<li><strong>« Tu cherches toujours la petite bête. »</strong> Ta capacité à remarquer devient un défaut de caractère. Pratique : une fois le défaut installé, plus rien de ce que tu remarques ne compte.</li>
 <li><strong>« Tu vois, c'est exactement ça le problème avec toi. »</strong> Prononcée au milieu d'une dispute, elle transforme UN désaccord en preuve d'un défaut permanent. Tu n'as plus un tort ponctuel, tu as une nature défaillante.</li>
 </ul>`,
     },
@@ -51,6 +53,8 @@ const article: BlogArticleData = {
 <li><strong>« Tu es trop sensible. » / « Tu dramatises. »</strong> Le couteau suisse. Remarque bien ce qu'elle fait : elle ne dit pas que le problème n'existe pas, elle dit que c'est TOI l'instrument de mesure défaillant.</li>
 <li><strong>« Tu te fais des films. »</strong> Utilisée pile quand ton intuition chauffe. Plus ton radar est bon, plus tu l'entendras.</li>
 <li><strong>« Tout le monde trouve que tu exagères. »</strong> Le renfort invisible : un tribunal fantôme, invérifiable, convoqué contre toi. Qui, « tout le monde » ? Tu ne le sauras jamais.</li>
+<li><strong>« Ça, c'est ton interprétation. »</strong> Elle a l'air raisonnable, presque nuancée. Sauf qu'elle range systématiquement ce que tu vis du côté du subjectif, et ce qu'il affirme du côté des faits.</li>
+<li><strong>« Tu as encore mal compris. »</strong> Le « encore » fait tout le travail : il installe un historique d'incompétence qui n'a jamais existé, et que tu ne penseras pas à contester.</li>
 <li><strong>« Tu devrais consulter, sérieusement. »</strong> La plus violente de la famille. Ta lucidité devient une pathologie. Et le jour où tu consultes vraiment, un bon psy voit clair très vite... c'est d'ailleurs pour ça qu'il déteste cette idée en pratique.</li>
 </ul>
 <p>Si ce brouillage te parle, la question de savoir si tu vis du gaslighting mérite un vrai détour par le <a href="/blog/gaslighting/">gaslighting et ses mécanismes</a>, parce qu'il ne se limite pas à des phrases.</p>`,
@@ -63,6 +67,8 @@ const article: BlogArticleData = {
 <li><strong>« Après tout ce que j'ai fait pour toi... »</strong> La dette. Jamais détaillée, jamais soldée, toujours disponible. Tu es en déficit permanent, sans avoir jamais vu le relevé de compte.</li>
 <li><strong>« Personne ne me comprend. Même pas toi. »</strong> Le « même pas toi » est la partie qui travaille : te voilà sommée de prouver que tu n'es pas comme les autres. Et pour prouver, tu cèdes.</li>
 <li><strong>« Je n'ai vraiment pas de chance avec les gens. »</strong> Écoute bien celle-là en début de relation : ses ex « folles », ses amis « traîtres », ses collègues « jaloux »... Un jour, tu rejoindras la liste. Ce récit des ex « folles » est même le signe n°3 de l'<a href="/blog/homme-pervers-narcissique-signes/">homme pervers narcissique</a>... et le portrait qu'il fait d'elles est celui qu'il fera de toi.</li>
+<li><strong>« Je fais tout ça pour nous, et voilà comment tu me remercies. »</strong> Ses choix à lui deviennent des sacrifices pour toi, et ton reproche devient de l'ingratitude. Personne n'a jamais demandé le relevé de ces sacrifices.</li>
+<li><strong>« De toute façon, quoi que je fasse, ce n'est jamais assez. »</strong> La phrase qui clôt le sujet en te désignant comme insatiable. Après elle, demander quoi que ce soit devient une agression.</li>
 <li><strong>« Vas-y, dis que je suis un monstre pendant que tu y es. »</strong> L'exagération défensive : il pousse ton reproche jusqu'à l'absurde pour que tu passes ton tour. Tu voulais parler d'un retard, te voilà en train de jurer qu'il n'est pas un monstre.</li>
 </ul>`,
     },
@@ -75,6 +81,8 @@ const article: BlogArticleData = {
 <li><strong>« C'est mignon que tu essaies. »</strong> Un compliment et une gifle dans la même phrase. Impossible à reprocher (« mais je t'ai fait un compliment ! »), imparable à encaisser.</li>
 <li><strong>« Sans moi, tu ne t'en sortirais pas. »</strong> Celle-là prépare le terrain de la dépendance. Répétée assez longtemps, tu finis par la croire... et par avoir peur de partir.</li>
 <li><strong>« Personne d'autre ne te supporterait. »</strong> La jumelle sombre de la précédente. Elle transforme ta relation en faveur qu'on te fait.</li>
+<li><strong>« Heureusement que je suis là pour te le dire. »</strong> La critique emballée en service rendu. Tu ne peux ni la refuser, ni la discuter, il faudrait en plus dire merci.</li>
+<li><strong>« Tu prends tout au premier degré. »</strong> La version humoristique du « tu es trop sensible » : la remarque blessante devient une blague, et ton problème devient ton absence d'humour.</li>
 <li><strong>« Tu es sûre de toi, là ? »</strong> Posée systématiquement, sur tes choix de boulot, de tenue, d'amies... Une seule phrase, et ta confiance repart en révision.</li>
 </ul>
 <aside class="blog-tip-box">
@@ -96,6 +104,8 @@ const article: BlogArticleData = {
 <ul>
 <li><strong>« Tes amies ont une mauvaise influence sur toi. »</strong> Surtout celles qui posent des questions...</li>
 <li><strong>« Ta mère se mêle de tout. »</strong> Chaque proche devient un problème, un par un. Jamais frontalement : juste un commentaire après chaque visite, une humeur après chaque appel.</li>
+<li><strong>« Tu vas encore en parler à tes copines ? »</strong> L'isolement par la honte : parler de vous devient une trahison. Résultat, tu te tais, et il reste la seule personne à qui tu racontes ta vie.</li>
+<li><strong>« On règle ça entre nous, pas besoin d'en faire une affaire d'État. »</strong> Séduisant sur le papier, sauf qu'ici « entre nous » veut dire « sans témoin », c'est-à-dire sur son terrain.</li>
 <li><strong>« Ils sont jaloux de nous. »</strong> L'isolement romantique : vous deux contre le monde. C'est très beau dans les films. Dans la vraie vie, c'est la coupure de tes soutiens, emballée en histoire d'amour.</li>
 </ul>`,
     },
@@ -129,6 +139,10 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/test-pervers-narcissique/">Faire le point maintenant</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ Si tu es en danger, ne reste pas seul(e) avec un article</p>
+<p>Menaces, contrôle de ton argent ou de tes déplacements, violence physique même « une seule fois » : en France, le 3919 est gratuit, anonyme, ouvert 24h/24, et il écoute les femmes comme les hommes. En cas d'urgence immédiate, le 17, ou le 114 par SMS quand tu ne peux pas parler.</p>
+</aside>
 <a href="/blog/pervers-narcissique-amour/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Pervers narcissique en amour : reconnaître l'emprise quand on est en plein dedans</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

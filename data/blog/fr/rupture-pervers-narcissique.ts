@@ -54,18 +54,42 @@ const article: BlogArticleData = {
     {
       id: 'apres-la-tempete',
       title: "Après : la tempête en trois actes",
-      content: `<p>C'est ici que la plupart des ruptures échouent, alors regardons la tempête en face. Elle a trois actes, presque toujours dans cet ordre.</p>
-<p><strong>Acte 1 : la reconquête :</strong> Messages nostalgiques, souvenirs des débuts, promesses de thérapie, larmes... L'homme de la phase d'idéalisation ressuscite intégralement. C'est l'acte le plus dangereux, parce qu'il vise ta partie qui espère encore. Rappelle-toi une chose : tu as déjà vu cet homme-là revenir. Combien de temps était-il resté, la dernière fois ?</p>
-<p><strong>Acte 2 : le dénigrement :</strong> Quand la porte reste fermée, l'image passe avant tout : il faut un récit où c'est TOI le problème. Amis communs briefés, versions réécrites, parfois des « inquiétudes » publiques sur ta santé mentale... Ça fait mal, et c'est le signe que tu tiens bon. Ne plaide pas ta cause auprès de tout le monde : les gens qui te connaissent vraiment n'achèteront pas le récit, et les autres n'étaient pas tes gens.</p>
-<p><strong>Acte 3 : les retours cycliques :</strong> Silence... puis réapparition. Un anniversaire, un « je passais par là », un message anodin à 23 h. Le hoovering, littéralement « l'aspirateur » : il revient vérifier si la porte rouvre. Et remarque le timing : presque toujours quand tu commences à aller mieux. Ce n'est pas un hasard, c'est un radar.</p>`,
+      content: `<p>C'est ici que la plupart des ruptures échouent, alors regardons la tempête en face. Elle a trois actes, presque toujours dans cet ordre.</p>`,
+      subsections: [
+        {
+          id: 'acte-1-la-reconquete',
+          title: "Acte 1 : la reconquête",
+          content: `<p>Messages nostalgiques, souvenirs des débuts, promesses de thérapie, larmes... L'homme de la phase d'idéalisation ressuscite intégralement. C'est l'acte le plus dangereux, parce qu'il vise ta partie qui espère encore. Rappelle-toi une chose : tu as déjà vu cet homme-là revenir. Combien de temps était-il resté, la dernière fois ?</p>`,
+        },
+        {
+          id: 'acte-2-le-denigrement',
+          title: "Acte 2 : le dénigrement",
+          content: `<p>Quand la porte reste fermée, l'image passe avant tout : il faut un récit où c'est TOI le problème. Amis communs briefés, versions réécrites, parfois des « inquiétudes » publiques sur ta santé mentale... Ça fait mal, et c'est le signe que tu tiens bon. Ne plaide pas ta cause auprès de tout le monde : les gens qui te connaissent vraiment n'achèteront pas le récit, et les autres n'étaient pas tes gens.</p>`,
+        },
+        {
+          id: 'acte-3-les-retours-cycliques',
+          title: "Acte 3 : les retours cycliques",
+          content: `<p>Silence... puis réapparition. Un anniversaire, un « je passais par là », un message anodin à 23 h. Le hoovering, littéralement « l'aspirateur » : il revient vérifier si la porte rouvre. Et remarque le timing : presque toujours quand tu commences à aller mieux. Ce n'est pas un hasard, c'est un radar.</p>`,
+        },
+      ],
     },
     {
       id: 'les-anciennes-proies',
       title: "Pourquoi il revient toujours vers ses ex (et pourquoi il te remplacera vite)",
-      content: `<p>Deux phénomènes déroutent toutes les victimes après la rupture, alors autant les démonter tout de suite.</p>
-<p><strong>Le retour vers les anciennes :</strong> Un pervers narcissique ne solde jamais vraiment ses histoires : il maintient un vivier. Des ex « restées en bons termes », des « amies » ambiguës, des réapparitions périodiques... Chaque ancienne relation est une source de carburant potentielle, à réactiver en cas de pénurie. Si tu apprends qu'il est retourné voir une ex : ce n'est pas qu'elle était mieux. C'est qu'elle a répondu.</p>
-<p><strong>Le remplacement éclair :</strong> Trois semaines après votre rupture, le voilà en couple, affiché, rayonnant, « enfin heureux »... Douloureux à voir, et pourtant c'est une signature, pas une preuve d'amour : il lui faut un miroir en permanence, n'importe lequel. La nouvelle n'a pas gagné un prince. Elle vient d'entrer dans la phase d'idéalisation du même cycle que toi... et tu sais exactement ce qui l'attend.</p>
+      content: `<p>Deux phénomènes déroutent toutes les victimes après la rupture, alors autant les démonter tout de suite.</p>`,
+      subsections: [
+        {
+          id: 'le-retour-vers-les-anciennes',
+          title: "Le retour vers les anciennes",
+          content: `<p>Un pervers narcissique ne solde jamais vraiment ses histoires : il maintient un vivier. Des ex « restées en bons termes », des « amies » ambiguës, des réapparitions périodiques... Chaque ancienne relation est une source de carburant potentielle, à réactiver en cas de pénurie. Si tu apprends qu'il est retourné voir une ex : ce n'est pas qu'elle était mieux. C'est qu'elle a répondu.</p>`,
+        },
+        {
+          id: 'le-remplacement-eclair',
+          title: "Le remplacement éclair",
+          content: `<p>Trois semaines après votre rupture, le voilà en couple, affiché, rayonnant, « enfin heureux »... Douloureux à voir, et pourtant c'est une signature, pas une preuve d'amour : il lui faut un miroir en permanence, n'importe lequel. La nouvelle n'a pas gagné un prince. Elle vient d'entrer dans la phase d'idéalisation du même cycle que toi... et tu sais exactement ce qui l'attend.</p>
 <p>Dans les deux cas, la leçon est la même : <strong>rien de tout ça ne parle de ta valeur.</strong> Le casting change, le système reste.</p>`,
+        },
+      ],
     },
     {
       id: 'le-no-contact',
@@ -75,7 +99,7 @@ const article: BlogArticleData = {
 <li><strong>Total, sinon rien :</strong> Blocage partout : téléphone, réseaux, mail. Un canal « au cas où » n'est pas une prudence, c'est une porte entrouverte... et il ne lui en faut qu'une.</li>
 <li><strong>Préviens ton entourage :</strong> Les intermédiaires sont son plan B favori : « dis-lui juste que... ». Tes proches doivent savoir qu'ils ne transmettent rien, dans aucun sens.</li>
 <li><strong>Prépare la rechute d'envie :</strong> Il y aura des soirs où tu voudras juste « savoir comment il va ». C'est le manque qui parle, pas ton jugement. Relis ta liste factuelle, appelle ton appui... et laisse passer la vague, elle passe.</li>
-<li><strong>Cas particulier : enfants ou obligations communes :</strong> Le no contact devient un « contact minimal » : écrit, factuel, limité au strict nécessaire, idéalement sur un seul canal traçable. Tout le reste des règles s'applique.</li>
+<li><strong>Cas particulier : enfants ou obligations communes.</strong> Le no contact devient un « contact minimal » : écrit, factuel, limité au strict nécessaire, idéalement sur un seul canal traçable. Tout le reste des règles s'applique.</li>
 </ul>
 <p>Et n'oublie pas de traiter l'autre moitié du problème : le manque. Si couper te semble insurmontable, ce n'est pas parce qu'il est irremplaçable... c'est parce que le cycle a créé un attachement de type addictif, souvent doublé d'une <a href="/blog/dependance-affective/">dépendance affective bien installée</a>. Et <a href="/blog/sortir-emprise-pervers-narcissique/">sortir de l'emprise</a> ne se résume pas au départ : c'est un travail en quatre étapes, sécurité comprise... qui se mène très bien accompagnée.</p>
 <div class="blog-cta">

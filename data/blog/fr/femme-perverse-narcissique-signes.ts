@@ -55,7 +55,7 @@ const article: BlogArticleData = {
 <li><strong>L'argent et le quotidien comme terrain de contrôle :</strong> Tes dépenses surveillées, les siennes sacrées ; ta charge de travail invisible, la sienne héroïque. Le déséquilibre n'est jamais discutable : le contester, c'est l'« agresser ».</li>
 <li><strong>L'intimité au compte-gouttes stratégique :</strong> Le désir devient une récompense, son retrait une sanction. Jamais formulé ainsi, évidemment... mais le calendrier parle de lui-même, et tu as fini par le remarquer.</li>
 <li><strong>Tes failles archivées, ressorties en arme :</strong> Ce que tu lui as confié de plus fragile ressort, précisément, au moment où ça fait le plus mal. Une dispute avec elle, ce n'est pas un désaccord : c'est une frappe chirurgicale sur tes points faibles.</li>
-<li><strong>Quand tu parles enfin : l'inversion totale :</strong> Le jour où tu oses dire « ça suffit », tu découvres son chef-d'œuvre : c'est toi le colérique, toi l'instable, toi le manipulateur. Et elle a des témoins, souviens-toi... elle les prépare depuis le début.</li>
+<li><strong>Quand tu parles enfin : l'inversion totale.</strong> Le jour où tu oses dire « ça suffit », tu découvres son chef-d'œuvre : c'est toi le colérique, toi l'instable, toi le manipulateur. Et elle a des témoins, souviens-toi... elle les prépare depuis le début.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Beaucoup de ces signes te rappellent quelque chose ?</p>
