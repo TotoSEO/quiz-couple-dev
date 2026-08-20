@@ -1129,9 +1129,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'peur-de-l-engagement',
     category: 'psychologie',
     featuredImage: '/blog/peur-de-l-engagement.webp',
-    frOnly: true,
     slugs: {
       fr: 'peur-de-l-engagement',
+      en: 'fear-of-commitment',
+      es: 'miedo-al-compromiso',
+      de: 'bindungsangst',
+      it: 'paura-dell-impegno',
     },
     publishedAt: '2026-12-11',
   },
