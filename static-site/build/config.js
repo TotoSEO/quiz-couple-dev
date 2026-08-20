@@ -739,9 +739,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'questions-a-poser-a-son-copain',
     category: 'vie-de-couple',
     featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
-    frOnly: true,
     slugs: {
       fr: 'questions-a-poser-a-son-copain',
+      en: 'questions-to-ask-your-boyfriend',
+      es: 'preguntas-para-tu-novio',
+      de: 'fragen-an-deinen-freund',
+      it: 'domande-da-fare-al-tuo-ragazzo',
     },
     publishedAt: '2026-08-28',
   },
