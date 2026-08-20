@@ -986,9 +986,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'femme-toxique-en-amour',
     category: 'psychologie',
     featuredImage: '/blog/femme-toxique-en-amour.webp',
-    frOnly: true,
     slugs: {
       fr: 'femme-toxique-en-amour',
+      en: 'toxic-woman-in-love',
+      es: 'mujer-toxica-en-el-amor',
+      de: 'toxische-frau-in-der-liebe',
+      it: 'donna-tossica-in-amore',
     },
     publishedAt: '2026-11-03',
   },
