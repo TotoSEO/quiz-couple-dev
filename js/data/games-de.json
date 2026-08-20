@@ -1,5 +1,7 @@
 {
   "playerSetup": {
+    "soloReady": "Seid ihr beide bereit?",
+    "soloIntro": "Antwortet gemeinsam, laut, und entscheidet zu zweit, wenn ihr zögert.",
     "readyToPlay": "Bereit, zusammen zu spielen?",
     "enterNames": "Gebt eure Namen ein und startet das Quiz zu zweit!",
     "player1": "Spieler 1",

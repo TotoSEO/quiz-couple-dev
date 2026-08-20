@@ -1,5 +1,7 @@
 {
   "playerSetup": {
+    "soloReady": "Prêts, tous les deux ?",
+    "soloIntro": "Répondez ensemble, à voix haute, et tranchez à deux quand vous hésitez.",
     "readyToPlay": "Prêts à jouer ensemble ?",
     "enterNames": "Entrez vos prénoms et commencez le quiz à deux !",
     "player1": "Joueur 1",
