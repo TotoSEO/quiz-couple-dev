@@ -921,9 +921,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'dependance-affective-chez-l-homme',
     category: 'psychologie',
     featuredImage: '/blog/dependance-affective-chez-l-homme.webp',
-    frOnly: true,
     slugs: {
       fr: 'dependance-affective-chez-l-homme',
+      en: 'emotional-dependency-in-men',
+      es: 'dependencia-emocional-en-el-hombre',
+      de: 'emotionale-abhaengigkeit-bei-maennern',
+      it: 'dipendenza-affettiva-negli-uomini',
     },
     publishedAt: '2026-10-16',
   },
