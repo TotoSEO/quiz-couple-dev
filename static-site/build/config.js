@@ -869,9 +869,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'questions-a-poser-a-sa-copine',
     category: 'vie-de-couple',
     featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
-    frOnly: true,
     slugs: {
       fr: 'questions-a-poser-a-sa-copine',
+      en: 'questions-to-ask-your-girlfriend',
+      es: 'preguntas-para-tu-novia',
+      de: 'fragen-an-deine-freundin',
+      it: 'domande-da-fare-alla-tua-ragazza',
     },
     publishedAt: '2026-10-02',
   },
