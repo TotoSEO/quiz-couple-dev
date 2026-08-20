@@ -41,11 +41,7 @@ const article: BlogArticleData = {
     {
       id: 'trouver-son-langage',
       title: "Comment identifier ton langage (et le sien)",
-      content: `<p>Le réflexe classique, c'est de se dire « moi je suis un peu tout »... et c'est vrai, tout le monde apprécie les cinq ! Mais il y a une hiérarchie, et deux détecteurs la révèlent à coup sûr.</p>
-<aside class="blog-tip-box">
-<p class="blog-tip-box-title">📌 Le malentendu le plus fréquent des couples</p>
-<p>Deux personnes qui s'aiment fort, donnent beaucoup... et se sentent chacune mal aimées. Lui multiplie les services (sa langue), elle attend des mots (la sienne) : il s'épuise, elle se dessèche, et chacun pense donner plus qu'il ne reçoit ! Ce n'est pas un problème d'amour, c'est un problème de change : vous payez chacun dans une devise que l'autre ne convertit pas.</p>
-</aside>`,
+      content: `<p>Le réflexe classique, c'est de se dire « moi je suis un peu tout »... et c'est vrai, tout le monde apprécie les cinq ! Mais il y a une hiérarchie, et deux détecteurs la révèlent à coup sûr.</p>`,
       subsections: [
         {
           id: 'detecteur-n1-ce-qui-te-blesse',
@@ -56,7 +52,11 @@ const article: BlogArticleData = {
           id: 'detecteur-n2-ce-que-tu-donnes',
           title: "Détecteur n°2 : ce que tu donnes spontanément",
           content: `<p>On offre par défaut ce qu'on aimerait recevoir... Celui qui complimente sans arrêt parle « paroles ». Celle qui organise des week-ends parle « temps ». Celui qui répare, prépare, gère... parle « services ». Regarde ce que ton partenaire te donne le plus : ce n'est pas ce qu'il croit que tu veux. C'est SA langue maternelle qu'il te parle... et c'est déjà une déclaration.</p>
-<p>Fais l'exercice pour vous deux, là, mentalement : ton top 2, son top 2... Si vous n'avez aucun langage en commun, tu viens probablement de comprendre dix ans de malentendus ! Et si tu veux une mesure plus posée que l'intuition, le <a href="/test-langage-amour-couple/">test des langages de l'amour</a> établit ton profil complet, langage par langage... à faire chacun de son côté, évidemment.</p>`,
+<p>Fais l'exercice pour vous deux, là, mentalement : ton top 2, son top 2... Si vous n'avez aucun langage en commun, tu viens probablement de comprendre dix ans de malentendus ! Et si tu veux une mesure plus posée que l'intuition, le <a href="/test-langage-amour-couple/">test des langages de l'amour</a> établit ton profil complet, langage par langage... à faire chacun de son côté, évidemment.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">📌 Le malentendu le plus fréquent des couples</p>
+<p>Deux personnes qui s'aiment fort, donnent beaucoup... et se sentent chacune mal aimées. Lui multiplie les services (sa langue), elle attend des mots (la sienne) : il s'épuise, elle se dessèche, et chacun pense donner plus qu'il ne reçoit ! Ce n'est pas un problème d'amour, c'est un problème de change : vous payez chacun dans une devise que l'autre ne convertit pas.</p>
+</aside>`,
         },
       ],
     },

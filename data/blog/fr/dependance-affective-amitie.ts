@@ -72,15 +72,7 @@ const article: BlogArticleData = {
     {
       id: 'reequilibrer-sans-casser',
       title: "Rééquilibrer sans casser l'amitié",
-      content: `<p>Bonne nouvelle par rapport au couple : en amitié, le rééquilibrage est plus simple, parce qu'il n'y a ni quotidien commun ni enjeu d'exclusivité légitime. Voici le plan, en quatre gestes.</p>
-<div class="blog-cta">
-<p class="blog-cta-titre">Ton attachement, il en est où ?</p>
-<p class="blog-cta-texte">Le test évalue ton mode d'attachement de fond, celui qui colore tous tes liens, amitiés comprises. Une photo posée de ta façon d'aimer... et de t'accrocher.</p>
-<a class="blog-cta-btn" href="/test-dependance-affective/">Évaluer mon attachement</a>
-<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
-</div>
-<p>Un dernier mot, parce qu'il console : les amitiés qui traversent un rééquilibrage en ressortent presque toujours plus solides. Moins de dépendance, c'est moins de rancunes cachées, moins de déceptions démesurées... et plus de place pour ce qui rend l'amitié irremplaçable : être choisies, librement, encore et encore. C'est quand même mieux qu'être nécessaires, non ?</p>
-<a href="/blog/dependance-affective-symptomes/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Symptômes de la dépendance affective : ce que ça fait vivre, concrètement</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      content: `<p>Bonne nouvelle par rapport au couple : en amitié, le rééquilibrage est plus simple, parce qu'il n'y a ni quotidien commun ni enjeu d'exclusivité légitime. Voici le plan, en quatre gestes.</p>`,
       subsections: [
         {
           id: 'elargis-chacune-de-ton-cote',
@@ -100,7 +92,15 @@ const article: BlogArticleData = {
         {
           id: 'et-surveille-un-cas-particulier',
           title: "Un cas particulier à surveiller",
-          content: `<p>si en lisant tout ça tu réalises que ton amie ENTRETIENT ta dépendance, culpabilisation quand tu vois d'autres gens, froid punitif, exclusivité exigée... le problème a changé de nom. L'emprise existe aussi en amitié, et elle se gère comme les autres emprises, pas comme un déséquilibre affectif.</p>`,
+          content: `<p>Si, en lisant tout ça, tu réalises que ton amie ENTRETIENT ta dépendance, culpabilisation quand tu vois d'autres gens, froid punitif, exclusivité exigée... le problème a changé de nom. L'emprise existe aussi en amitié, et elle se gère comme les autres emprises, pas comme un déséquilibre affectif.</p>
+<p>Un dernier mot, parce qu'il console : les amitiés qui traversent un rééquilibrage en ressortent presque toujours plus solides. Moins de dépendance, c'est moins de rancunes cachées, moins de déceptions démesurées... et plus de place pour ce qui rend l'amitié irremplaçable : être choisies, librement, encore et encore. C'est quand même mieux qu'être nécessaires, non ?</p>
+<div class="blog-cta">
+<p class="blog-cta-titre">Ton attachement, il en est où ?</p>
+<p class="blog-cta-texte">Le test évalue ton mode d'attachement de fond, celui qui colore tous tes liens, amitiés comprises. Une photo posée de ta façon d'aimer... et de t'accrocher.</p>
+<a class="blog-cta-btn" href="/test-dependance-affective/">Évaluer mon attachement</a>
+<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
+</div>
+<a href="/blog/dependance-affective-symptomes/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Symptômes de la dépendance affective : ce que ça fait vivre, concrètement</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
         },
       ],
     },

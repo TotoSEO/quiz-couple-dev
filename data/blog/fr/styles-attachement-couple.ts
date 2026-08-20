@@ -46,11 +46,7 @@ const article: BlogArticleData = {
     {
       id: 'les-combinaisons',
       title: "Ce que ça donne en couple : les combinaisons classiques",
-      content: `<p>Un couple, c'est deux styles qui dansent ensemble... et certaines danses sont célèbres.</p>
-<aside class="blog-tip-box">
-<p class="blog-tip-box-title">📌 Attention au diagnostic sauvage</p>
-<p>Depuis que la théorie de l'attachement est à la mode, on colle « évitant » à tout homme distant et « anxieuse » à toute femme inquiète... C'est plus subtil que ça : tout le monde a des réactions anxieuses ou évitantes selon le contexte et le partenaire. Le style, c'est la TENDANCE de fond, à travers les relations et les années. D'où l'intérêt de l'évaluer posément plutôt qu'au doigt mouillé.</p>
-</aside>`,
+      content: `<p>Un couple, c'est deux styles qui dansent ensemble... et certaines danses sont célèbres.</p>`,
       subsections: [
         {
           id: 'anxieux-evitant-le-duo-poursuite-fuite',
@@ -65,22 +61,18 @@ const article: BlogArticleData = {
         {
           id: 'anxieux-anxieux-ou-evitant-evitant',
           title: "Anxieux + anxieux ou évitant + évitant",
-          content: `<p>plus rares. Deux anxieux font des couples fusionnels et orageux, très intenses... Deux évitants font des couples paisibles et distants, parfois si distants qu'ils s'éteignent sans dispute. Dans les deux cas, le confort du même réglage se paie d'un angle mort partagé.</p>`,
+          content: `<p>Ces deux combinaisons sont plus rares. Deux anxieux font des couples fusionnels et orageux, très intenses... Deux évitants font des couples paisibles et distants, parfois si distants qu'ils s'éteignent sans dispute. Dans les deux cas, le confort du même réglage se paie d'un angle mort partagé.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">📌 Attention au diagnostic sauvage</p>
+<p>Depuis que la théorie de l'attachement est à la mode, on colle « évitant » à tout homme distant et « anxieuse » à toute femme inquiète... C'est plus subtil que ça : tout le monde a des réactions anxieuses ou évitantes selon le contexte et le partenaire. Le style, c'est la TENDANCE de fond, à travers les relations et les années. D'où l'intérêt de l'évaluer posément plutôt qu'au doigt mouillé.</p>
+</aside>`,
         },
       ],
     },
     {
       id: 'peut-on-changer',
       title: "Est-ce qu'on peut changer de style ? (oui, et voilà comment)",
-      content: `<p>La réponse de la recherche est claire : le style d'attachement est stable... mais pas figé. Environ un quart des gens changent de catégorie au cours de leur vie adulte, dans les deux sens d'ailleurs : une relation très sécurisante répare, une relation d'emprise abîme. Trois leviers font bouger les lignes.</p>
-<div class="blog-cta">
-<p class="blog-cta-titre">Quel est ton style d'attachement ?</p>
-<p class="blog-cta-texte">Une série de questions évalue ta façon de vivre le lien, la distance, les conflits et la réassurance... et t'indique ton profil dominant, avec ce que ça implique pour ton couple.</p>
-<a class="blog-cta-btn" href="/test-style-attachement-couple/">Découvrir mon style</a>
-<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
-</div>
-<p>Et si vous êtes en couple, faites-le chacun de votre côté puis comparez : comprendre la danse à deux, c'est déjà commencer à en changer les pas. Beaucoup de disputes qui semblaient être des problèmes de caractère se révèlent être... deux systèmes d'alarme qui se répondent. Et ça, ça se règle.</p>
-<a href="/blog/dependance-affective/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Dépendance affective : quand aimer devient un besoin vital</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      content: `<p>La réponse de la recherche est claire : le style d'attachement est stable... mais pas figé. Environ un quart des gens changent de catégorie au cours de leur vie adulte, dans les deux sens d'ailleurs : une relation très sécurisante répare, une relation d'emprise abîme. Trois leviers font bouger les lignes.</p>`,
       subsections: [
         {
           id: 'la-conscience-du-reglage',
@@ -96,7 +88,15 @@ const article: BlogArticleData = {
           id: 'le-travail-cible',
           title: "Le travail ciblé",
           content: `<p>Pour l'attachement anxieux, le programme recoupe très largement les <a href="/blog/sortir-de-la-dependance-affective/">exercices de sortie de la dépendance affective</a> : réguler ses vagues, se réapproprier sa vie, construire une sécurité interne... Pour l'évitant, c'est le chemin inverse : s'entraîner à nommer, demander, rester. Et pour le désorganisé, un thérapeute formé à l'attachement ou au trauma est le bon compagnon de route.</p>
-<p>Mais tout commence par la même étape : savoir d'où tu pars...</p>`,
+<p>Mais tout commence par la même étape : savoir d'où tu pars...</p>
+<p>Et si vous êtes en couple, faites-le chacun de votre côté puis comparez : comprendre la danse à deux, c'est déjà commencer à en changer les pas. Beaucoup de disputes qui semblaient être des problèmes de caractère se révèlent être... deux systèmes d'alarme qui se répondent. Et ça, ça se règle.</p>
+<div class="blog-cta">
+<p class="blog-cta-titre">Quel est ton style d'attachement ?</p>
+<p class="blog-cta-texte">Une série de questions évalue ta façon de vivre le lien, la distance, les conflits et la réassurance... et t'indique ton profil dominant, avec ce que ça implique pour ton couple.</p>
+<a class="blog-cta-btn" href="/test-style-attachement-couple/">Découvrir mon style</a>
+<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
+</div>
+<a href="/blog/dependance-affective/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Dépendance affective : quand aimer devient un besoin vital</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
         },
       ],
     },

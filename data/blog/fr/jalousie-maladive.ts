@@ -38,11 +38,7 @@ const article: BlogArticleData = {
     {
       id: 'les-racines',
       title: "D'où vient la jalousie maladive (spoiler : rarement de l'autre)",
-      content: `<p>Le grand malentendu de la jalousie maladive, c'est qu'elle se vit comme une réaction à l'autre... alors qu'elle est presque toujours une production personnelle, avec trois racines classiques.</p>
-<aside class="blog-tip-box">
-<p class="blog-tip-box-title">⚠️ Le cas où la jalousie n'est pas maladive : elle est alimentée</p>
-<p>Avant de te déclarer jalouse maladive, vérifie une chose : certains partenaires ENTRETIENNENT la jalousie... ambiguïtés cultivées, comparaisons, triangulation (« ma collègue, elle, me comprend »), chaud-froid stratégique. Si ta jalousie a des braises qu'on attise, le problème n'est pas ton alarme : c'est le pyromane. La triangulation est d'ailleurs une pièce maîtresse dans la façon dont <a href="/blog/manipulateur-narcissique/">opère un manipulateur narcissique</a>... et elle fabrique de la jalousie sur mesure.</p>
-</aside>`,
+      content: `<p>Le grand malentendu de la jalousie maladive, c'est qu'elle se vit comme une réaction à l'autre... alors qu'elle est presque toujours une production personnelle, avec trois racines classiques.</p>`,
       subsections: [
         {
           id: 'l-insecurite-de-fond',
@@ -57,7 +53,11 @@ const article: BlogArticleData = {
         {
           id: 'la-blessure-jamais-refermee',
           title: "La blessure jamais refermée",
-          content: `<p>Une trahison passée, la tienne ou celle vue chez tes parents, et le système conclut : ça peut arriver n'importe quand, à n'importe qui... La jalousie devient alors une vigilance de vétéran : tu ne surveilles pas ton partenaire actuel, tu surveilles le fantôme du précédent. Lui paie une dette qu'il n'a jamais contractée.</p>`,
+          content: `<p>Une trahison passée, la tienne ou celle vue chez tes parents, et le système conclut : ça peut arriver n'importe quand, à n'importe qui... La jalousie devient alors une vigilance de vétéran : tu ne surveilles pas ton partenaire actuel, tu surveilles le fantôme du précédent. Lui paie une dette qu'il n'a jamais contractée.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ Le cas où la jalousie n'est pas maladive : elle est alimentée</p>
+<p>Avant de te déclarer jalouse maladive, vérifie une chose : certains partenaires ENTRETIENNENT la jalousie... ambiguïtés cultivées, comparaisons, triangulation (« ma collègue, elle, me comprend »), chaud-froid stratégique. Si ta jalousie a des braises qu'on attise, le problème n'est pas ton alarme : c'est le pyromane. La triangulation est d'ailleurs une pièce maîtresse dans la façon dont <a href="/blog/manipulateur-narcissique/">opère un manipulateur narcissique</a>... et elle fabrique de la jalousie sur mesure.</p>
+</aside>`,
         },
       ],
     },
@@ -72,15 +72,7 @@ const article: BlogArticleData = {
     {
       id: 's-en-liberer',
       title: "S'en libérer : le travail qui marche",
-      content: `<p>La bonne nouvelle : la jalousie maladive répond très bien au travail... à condition de viser le bon endroit. On ne guérit pas une jalousie en surveillant mieux, ni en trouvant un partenaire « au-dessus de tout soupçon » : on la guérit en réparant la sécurité intérieure qui lui manque. Concrètement, quatre chantiers.</p>
-<div class="blog-cta">
-<p class="blog-cta-titre">Ta jalousie, elle en est où, exactement ?</p>
-<p class="blog-cta-texte">Une série de questions évalue ta jalousie sur les situations concrètes de cet article : les scénarios, les vérifications, l'effet sur ton couple... et te situe entre la jalousie normale et celle qui se travaille.</p>
-<a class="blog-cta-btn" href="/test-jalousie-couple/">Mesurer ma jalousie</a>
-<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
-</div>
-<p>Un dernier mot, pour finir sur le vrai enjeu. La jalousie maladive se présente comme une preuve d'amour... c'est son plus beau mensonge. L'amour veut le bonheur de l'autre ; la jalousie maladive veut sa surveillance. Le jour où tu fais la différence de l'intérieur, le travail est déjà à moitié fait... et l'autre moitié, tu sais maintenant par où elle commence.</p>
-<a href="/blog/attachement-anxieux/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">L'attachement anxieux en amour : quand aimer rime avec surveiller</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      content: `<p>La bonne nouvelle : la jalousie maladive répond très bien au travail... à condition de viser le bon endroit. On ne guérit pas une jalousie en surveillant mieux, ni en trouvant un partenaire « au-dessus de tout soupçon » : on la guérit en réparant la sécurité intérieure qui lui manque. Concrètement, quatre chantiers.</p>`,
       subsections: [
         {
           id: 'couper-les-comportements-de-verification',
@@ -100,7 +92,15 @@ const article: BlogArticleData = {
         {
           id: 'et-en-parler-dans-le-bon',
           title: "En parler, dans le bon sens",
-          content: `<p>Pas « avoue ! »... mais « je me fais des films, c'est mon chantier, et j'y travaille ». Cette phrase change tout : elle transforme ton partenaire de suspect en allié. La jalousie assumée comme un travail personnel rapproche ; la jalousie déguisée en enquête détruit. Et si le fond est trop chargé, une trahison ancienne, une angoisse qui déborde, un psy accélère énormément... c'est un chantier classique et gratifiant des thérapies.</p>`,
+          content: `<p>Pas « avoue ! »... mais « je me fais des films, c'est mon chantier, et j'y travaille ». Cette phrase change tout : elle transforme ton partenaire de suspect en allié. La jalousie assumée comme un travail personnel rapproche ; la jalousie déguisée en enquête détruit. Et si le fond est trop chargé, une trahison ancienne, une angoisse qui déborde, un psy accélère énormément... c'est un chantier classique et gratifiant des thérapies.</p>
+<p>Un dernier mot, pour finir sur le vrai enjeu. La jalousie maladive se présente comme une preuve d'amour... c'est son plus beau mensonge. L'amour veut le bonheur de l'autre ; la jalousie maladive veut sa surveillance. Le jour où tu fais la différence de l'intérieur, le travail est déjà à moitié fait... et l'autre moitié, tu sais maintenant par où elle commence.</p>
+<div class="blog-cta">
+<p class="blog-cta-titre">Ta jalousie, elle en est où, exactement ?</p>
+<p class="blog-cta-texte">Une série de questions évalue ta jalousie sur les situations concrètes de cet article : les scénarios, les vérifications, l'effet sur ton couple... et te situe entre la jalousie normale et celle qui se travaille.</p>
+<a class="blog-cta-btn" href="/test-jalousie-couple/">Mesurer ma jalousie</a>
+<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
+</div>
+<a href="/blog/attachement-anxieux/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">L'attachement anxieux en amour : quand aimer rime avec surveiller</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
         },
       ],
     },

@@ -42,11 +42,7 @@ const article: BlogArticleData = {
     {
       id: 'le-chemin-du-pardon',
       title: "Le chemin du pardon réel (si les conditions sont là)",
-      content: `<p>Si les quatre conditions sont réunies et que tu choisis de rester, voici à quoi ressemble le vrai chemin... parce que personne ne te le décrit jamais honnêtement.</p>
-<aside class="blog-tip-box">
-<p class="blog-tip-box-title">⚠️ Le faux pardon : le pire des trois scénarios</p>
-<p>Il y a pire que partir, et pire que pardonner : rester sans pardonner. Le « pardon » de façade qui ressort l'infidélité à chaque dispute, la surveillance à vie, la dette éternelle... Ce scénario détruit les deux : l'un vit en liberté surveillée permanente, l'autre en procureur à plein temps. Si, après un an et de vrais efforts en face, la colère est intacte et la confiance à zéro... ce n'est pas un échec moral. C'est une information : pour toi, avec lui, ce n'était pas pardonnable. Et il vaut mieux en tirer les conséquences que de purger une peine à deux.</p>
-</aside>`,
+      content: `<p>Si les quatre conditions sont réunies et que tu choisis de rester, voici à quoi ressemble le vrai chemin... parce que personne ne te le décrit jamais honnêtement.</p>`,
       subsections: [
         {
           id: 'ca-prend-des-mois-et-ce',
@@ -66,7 +62,11 @@ const article: BlogArticleData = {
         {
           id: 'et-l-aide-exterieure-change-les',
           title: "L'aide extérieure change les statistiques",
-          content: `<p>Une thérapie de couple après infidélité n'est pas un aveu d'échec : c'est l'endroit où les conversations impossibles deviennent possibles, avec un arbitre... Les couples accompagnés s'en sortent nettement mieux, tout simplement.</p>`,
+          content: `<p>Une thérapie de couple après infidélité n'est pas un aveu d'échec : c'est l'endroit où les conversations impossibles deviennent possibles, avec un arbitre... Les couples accompagnés s'en sortent nettement mieux, tout simplement.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ Le faux pardon : le pire des trois scénarios</p>
+<p>Il y a pire que partir, et pire que pardonner : rester sans pardonner. Le « pardon » de façade qui ressort l'infidélité à chaque dispute, la surveillance à vie, la dette éternelle... Ce scénario détruit les deux : l'un vit en liberté surveillée permanente, l'autre en procureur à plein temps. Si, après un an et de vrais efforts en face, la colère est intacte et la confiance à zéro... ce n'est pas un échec moral. C'est une information : pour toi, avec lui, ce n'était pas pardonnable. Et il vaut mieux en tirer les conséquences que de purger une peine à deux.</p>
+</aside>`,
         },
       ],
     },

@@ -77,14 +77,7 @@ const article: BlogArticleData = {
     {
       id: 'comment-en-parler',
       title: "Comment en parler (sans procès, et sans se taire)",
-      content: `<p>Le sujet est piégé des deux côtés : en parler expose au « tu es parano »... se taire laisse la braise couver. Voici la voie du milieu, en trois mouvements.</p>
-<div class="blog-cta">
-<p class="blog-cta-titre">Votre couple est-il en zone grise ?</p>
-<p class="blog-cta-texte">Une série de questions fait le point sur la confiance, la transparence et les frontières dans votre couple... et vous dit où vous en êtes, avant que la zone grise ne fonce.</p>
-<a class="blog-cta-btn" href="/test-infidelite-couple/">Faire le point sur la confiance</a>
-<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
-</div>
-<a href="/blog/signes-infidelite/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Les signes d'infidélité : ce qui doit alerter, ce qui ne prouve rien</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      content: `<p>Le sujet est piégé des deux côtés : en parler expose au « tu es parano »... se taire laisse la braise couver. Voici la voie du milieu, en trois mouvements.</p>`,
       subsections: [
         {
           id: 'nommer-le-comportement-pas-l-intention',
@@ -99,7 +92,14 @@ const article: BlogArticleData = {
         {
           id: 'et-regarder-ce-que-la-braise',
           title: "Ce que la braise dit du foyer",
-          content: `<p>Sans excuser quoi que ce soit : la micro-tromperie prospère souvent là où le couple s'est mis en veille... attention en berne, conversations réduites à la logistique, séduction interne à zéro. La meilleure protection n'est ni la surveillance ni les règles : c'est un couple où l'attention circule encore. Si la vôtre s'est endormie, réveillez-la en premier... le reste suit étonnamment souvent.</p>`,
+          content: `<p>Sans excuser quoi que ce soit : la micro-tromperie prospère souvent là où le couple s'est mis en veille... attention en berne, conversations réduites à la logistique, séduction interne à zéro. La meilleure protection n'est ni la surveillance ni les règles : c'est un couple où l'attention circule encore. Si la vôtre s'est endormie, réveillez-la en premier... le reste suit étonnamment souvent.</p>
+<div class="blog-cta">
+<p class="blog-cta-titre">Votre couple est-il en zone grise ?</p>
+<p class="blog-cta-texte">Une série de questions fait le point sur la confiance, la transparence et les frontières dans votre couple... et vous dit où vous en êtes, avant que la zone grise ne fonce.</p>
+<a class="blog-cta-btn" href="/test-infidelite-couple/">Faire le point sur la confiance</a>
+<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
+</div>
+<a href="/blog/signes-infidelite/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Les signes d'infidélité : ce qui doit alerter, ce qui ne prouve rien</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
         },
       ],
     },

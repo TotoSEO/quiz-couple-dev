@@ -76,11 +76,7 @@ const article: BlogArticleData = {
     {
       id: 'toxique-ne-veut-pas-dire-manipulateur',
       title: "Nuance importante : toxique ne veut pas toujours dire manipulateur",
-      content: `<p>C'est le point que presque tous les articles ratent, et il change pourtant toute la suite. Il existe deux grandes familles de relations toxiques, et elles n'ont pas le même pronostic.</p>
-<aside class="blog-tip-box">
-<p class="blog-tip-box-title">📌 Comment savoir dans quelle famille tu es ?</p>
-<p>Un indice fiable : propose un vrai changement, thérapie de couple, nouvelles règles, efforts précis et datés. Dans une dynamique à deux, l'autre est soulagé qu'on en parle, même maladroitement. Dans une emprise, la proposition elle-même devient une agression... et te voilà encore une fois en train de t'excuser.</p>
-</aside>`,
+      content: `<p>C'est le point que presque tous les articles ratent, et il change pourtant toute la suite. Il existe deux grandes familles de relations toxiques, et elles n'ont pas le même pronostic.</p>`,
       subsections: [
         {
           id: 'la-dynamique-toxique-a-deux',
@@ -90,7 +86,11 @@ const article: BlogArticleData = {
         {
           id: 'l-emprise-d-un-seul',
           title: "L'emprise d'un seul",
-          content: `<p>Là, la toxicité n'est pas un accident du système : elle est le système. Contrôle, culpabilisation, dévalorisation, isolement... organisés au bénéfice d'un seul. Si les signes que tu coches ressemblent à ceux du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a>, ou aux <a href="/blog/manipulateur-narcissique/">techniques du manipulateur narcissique</a>, tu n'es plus dans la dynamique malheureuse : tu es dans la relation d'emprise. Et ça, ça ne se « répare » pas à deux, puisque l'un des deux n'a aucun intérêt à ce que ça change.</p>`,
+          content: `<p>Là, la toxicité n'est pas un accident du système : elle est le système. Contrôle, culpabilisation, dévalorisation, isolement... organisés au bénéfice d'un seul. Si les signes que tu coches ressemblent à ceux du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a>, ou aux <a href="/blog/manipulateur-narcissique/">techniques du manipulateur narcissique</a>, tu n'es plus dans la dynamique malheureuse : tu es dans la relation d'emprise. Et ça, ça ne se « répare » pas à deux, puisque l'un des deux n'a aucun intérêt à ce que ça change.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">📌 Comment savoir dans quelle famille tu es ?</p>
+<p>Un indice fiable : propose un vrai changement, thérapie de couple, nouvelles règles, efforts précis et datés. Dans une dynamique à deux, l'autre est soulagé qu'on en parle, même maladroitement. Dans une emprise, la proposition elle-même devient une agression... et te voilà encore une fois en train de t'excuser.</p>
+</aside>`,
         },
       ],
     },

@@ -84,19 +84,7 @@ const article: BlogArticleData = {
     {
       id: 'reprendre-pied',
       title: "Reprendre pied : le plan anti-brouillard",
-      content: `<p>Sortir du gaslighting, c'est reconstruire un accès direct à ta propre réalité, sans passer par lui. Quatre gestes, dans l'ordre.</p>
-<div class="blog-cta">
-<p class="blog-cta-titre">Ta réalité mérite un état des lieux</p>
-<p class="blog-cta-texte">Vingt questions passent ta relation au crible des situations concrètes du gaslighting et de l'emprise : le doute, les versions, les silences, le contrôle. Un résultat posé, à toi, que personne ne pourra te « renégocier ».</p>
-<a class="blog-cta-btn" href="/test-pervers-narcissique/">Vérifier ce que je vis</a>
-<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
-</div>
-<p>Et pour finir, la bonne nouvelle promise en introduction : les personnes sorties du gaslighting développent presque toutes le même super-pouvoir... un détecteur ultra-sensible aux contestations de réalité. La première fois qu'on te ressortira un « tu exagères » stratégique, tu sentiras le mécanisme AVANT la fissure. Ce jour-là, tu sauras que ta boussole est réparée... et qu'elle est devenue incassable.</p>
-<aside class="blog-tip-box">
-<p class="blog-tip-box-title">⚠️ Si tu es en danger, ne reste pas seul(e) avec un article</p>
-<p>Menaces, contrôle de ton argent ou de tes déplacements, violence physique même « une seule fois » : en France, le 3919 est gratuit, anonyme, ouvert 24h/24, et il écoute les femmes comme les hommes. En cas d'urgence immédiate, le 17, ou le 114 par SMS quand tu ne peux pas parler.</p>
-</aside>
-<a href="/blog/phrases-preferees-des-manipulateurs/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Les phrases préférées des manipulateurs, et ce qu'elles veulent vraiment dire</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      content: `<p>Sortir du gaslighting, c'est reconstruire un accès direct à ta propre réalité, sans passer par lui. Quatre gestes, dans l'ordre.</p>`,
       subsections: [
         {
           id: 'un-l-ecrit-l-ecrit-l',
@@ -116,7 +104,19 @@ const article: BlogArticleData = {
         {
           id: 'quatre-fais-le-bilan-de-la',
           title: "Fais le bilan de la relation",
-          content: `<p>Le gaslighting isolé n'existe presque jamais : il est en général la pièce maîtresse d'un ensemble, contrôle, dévalorisation, cycles chaud-froid... Prends le temps de regarder l'ensemble en face, avec les <a href="/blog/relation-toxique-signes/">signes qui font une relation toxique</a> comme grille. Et sache une chose : en France, les violences psychologiques répétées au sein du couple sont un délit, reconnu et jugé. Ce que tu vis a un nom partout... y compris dans le code pénal.</p>`,
+          content: `<p>Le gaslighting isolé n'existe presque jamais : il est en général la pièce maîtresse d'un ensemble, contrôle, dévalorisation, cycles chaud-froid... Prends le temps de regarder l'ensemble en face, avec les <a href="/blog/relation-toxique-signes/">signes qui font une relation toxique</a> comme grille. Et sache une chose : en France, les violences psychologiques répétées au sein du couple sont un délit, reconnu et jugé. Ce que tu vis a un nom partout... y compris dans le code pénal.</p>
+<p>Et pour finir, la bonne nouvelle promise en introduction : les personnes sorties du gaslighting développent presque toutes le même super-pouvoir... un détecteur ultra-sensible aux contestations de réalité. La première fois qu'on te ressortira un « tu exagères » stratégique, tu sentiras le mécanisme AVANT la fissure. Ce jour-là, tu sauras que ta boussole est réparée... et qu'elle est devenue incassable.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ Si tu es en danger, ne reste pas seul(e) avec un article</p>
+<p>Menaces, contrôle de ton argent ou de tes déplacements, violence physique même « une seule fois » : en France, le 3919 est gratuit, anonyme, ouvert 24h/24, et il écoute les femmes comme les hommes. En cas d'urgence immédiate, le 17, ou le 114 par SMS quand tu ne peux pas parler.</p>
+</aside>
+<div class="blog-cta">
+<p class="blog-cta-titre">Ta réalité mérite un état des lieux</p>
+<p class="blog-cta-texte">Vingt questions passent ta relation au crible des situations concrètes du gaslighting et de l'emprise : le doute, les versions, les silences, le contrôle. Un résultat posé, à toi, que personne ne pourra te « renégocier ».</p>
+<a class="blog-cta-btn" href="/test-pervers-narcissique/">Vérifier ce que je vis</a>
+<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
+</div>
+<a href="/blog/phrases-preferees-des-manipulateurs/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Les phrases préférées des manipulateurs, et ce qu'elles veulent vraiment dire</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
         },
       ],
     },

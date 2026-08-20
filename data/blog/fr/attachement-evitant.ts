@@ -61,24 +61,25 @@ const article: BlogArticleData = {
     {
       id: 'ce-qui-aide',
       title: "Ce qui aide vraiment (des deux côtés)",
-      content: `<div class="blog-cta">
+      content: ``,
+      subsections: [
+        {
+          id: 'si-tu-aimes-un-evitant',
+          title: "Si tu aimes un évitant",
+          content: `<p>Le paradoxe à intégrer, c'est que la pression éloigne et que l'espace rapproche. Poursuivre un évitant, c'est confirmer son alarme... Ce qui marche : la constance sans harcèlement, les demandes claires et limitées (« un message dans la journée, c'est important pour moi » plutôt que « tu ne communiques jamais ! »), la reconnaissance de ses gestes à lui, et l'espace donné SANS punition. Attention quand même à l'autre versant : donner de l'espace n'est pas s'effacer. Si tes besoins fondamentaux, affection, engagement, présence, restent durablement sans réponse, tu as le droit de conclure... L'attachement évitant explique, il n'excuse pas tout.</p>`,
+        },
+        {
+          id: 'si-l-evitant-c-est-toi',
+          title: "Si l'évitant, c'est toi",
+          content: `<p>D'abord, respect d'être arrivé jusqu'ici, ce n'est pas le réflexe de ton profil ! Ton levier numéro un : rester cinq minutes de plus. Dans la conversation difficile, dans l'émotion inconfortable, dans le projet qui engage... pas une heure, cinq minutes. Chaque fois que tu restes et que rien de terrible n'arrive, ton système réapprend. Deuxième levier : nommer, même a minima. « J'ai besoin d'air, mais je reviens » change TOUT pour l'autre... c'est la différence entre une soupape et un abandon. Et troisième levier : choisis de faire ce travail pour toi, pas sous ultimatum. Un évitant qui bouge sous la contrainte confirme sa peur ; un évitant qui bouge par choix la désarme.</p>
+<p>La dernière chose à savoir : les évitants évoluent, la recherche est claire là-dessus... mais à leur rythme, et de l'intérieur. Les plus beaux retournements viennent souvent d'un déclic tout simple : réaliser que l'autonomie totale qu'ils protègent depuis toujours est aussi la chose qui les prive de ce qu'ils désirent vraiment. Ce jour-là, la sécurité change de définition... et l'amour cesse d'être un danger à gérer.</p>
+<div class="blog-cta">
 <p class="blog-cta-titre">Évitant, anxieux, sécure... vérifiez à deux</p>
 <p class="blog-cta-texte">Le test évalue votre façon de vivre le lien, la distance et les conflits. Faites-le chacun de votre côté, comparez les profils... et mettez enfin des mots sur votre danse à deux.</p>
 <a class="blog-cta-btn" href="/test-style-attachement-couple/">Découvrir nos styles</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
-<p>La dernière chose à savoir : les évitants évoluent, la recherche est claire là-dessus... mais à leur rythme, et de l'intérieur. Les plus beaux retournements viennent souvent d'un déclic tout simple : réaliser que l'autonomie totale qu'ils protègent depuis toujours est aussi la chose qui les prive de ce qu'ils désirent vraiment. Ce jour-là, la sécurité change de définition... et l'amour cesse d'être un danger à gérer.</p>
 <a href="/blog/attachement-anxieux/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">L'attachement anxieux en amour : quand aimer rime avec surveiller</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
-      subsections: [
-        {
-          id: 'si-tu-aimes-un-evitant',
-          title: "Si tu aimes un évitant",
-          content: `<p>le paradoxe à intégrer, c'est que la pression éloigne et que l'espace rapproche. Poursuivre un évitant, c'est confirmer son alarme... Ce qui marche : la constance sans harcèlement, les demandes claires et limitées (« un message dans la journée, c'est important pour moi » plutôt que « tu ne communiques jamais ! »), la reconnaissance de ses gestes à lui, et l'espace donné SANS punition. Attention quand même à l'autre versant : donner de l'espace n'est pas s'effacer. Si tes besoins fondamentaux, affection, engagement, présence, restent durablement sans réponse, tu as le droit de conclure... L'attachement évitant explique, il n'excuse pas tout.</p>`,
-        },
-        {
-          id: 'si-l-evitant-c-est-toi',
-          title: "Si l'évitant, c'est toi",
-          content: `<p>d'abord, respect d'être arrivé jusqu'ici, ce n'est pas le réflexe de ton profil ! Ton levier numéro un : rester cinq minutes de plus. Dans la conversation difficile, dans l'émotion inconfortable, dans le projet qui engage... pas une heure, cinq minutes. Chaque fois que tu restes et que rien de terrible n'arrive, ton système réapprend. Deuxième levier : nommer, même a minima. « J'ai besoin d'air, mais je reviens » change TOUT pour l'autre... c'est la différence entre une soupape et un abandon. Et troisième levier : choisis de faire ce travail pour toi, pas sous ultimatum. Un évitant qui bouge sous la contrainte confirme sa peur ; un évitant qui bouge par choix la désarme.</p>`,
         },
       ],
     },

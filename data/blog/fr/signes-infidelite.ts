@@ -39,17 +39,7 @@ const article: BlogArticleData = {
     {
       id: 'les-faux-signes',
       title: "Les faux signes que toutes les listes recopient",
-      content: `<p>Maintenant, le tri inverse, parce que ces « signes » cités partout font des dégâts dans des couples parfaitement fidèles...</p>
-<aside class="blog-tip-box">
-<p class="blog-tip-box-title">⚠️ Le piège de l'enquête sans fin</p>
-<p>Fouiller le téléphone, suivre, vérifier, recouper... L'enquête permanente a un problème : elle ne s'arrête jamais d'elle-même. Rien trouvé ? « C'est qu'il efface. » Un détail ambigu ? Trois nuits blanches... Pendant ce temps, tu vis dans un état de vigilance qui te détruit, quel que soit le verdict final. Si tu en es à l'enquête quotidienne, le problème à traiter en premier n'est plus l'éventuelle infidélité : c'est le doute lui-même. Et lui, il a une solution.</p>
-</aside>
-<div><table><thead><tr><th>Le « signe » qu'on lit partout</th><th>Ce que ça veut dire la plupart du temps</th><th>Valeur de preuve</th></tr></thead><tbody>
-<tr><td>Le changement de look</td><td>Quelqu'un qui se réapproprie son image, souvent à un cap d'âge</td><td>Nulle, seul</td></tr>
-<tr><td>Les heures sup et la fatigue</td><td>Un agenda chargé, tout simplement</td><td>Nulle sans signe lourd à côté</td></tr>
-<tr><td>L'humeur en dents de scie</td><td>Stress, charge mentale, santé, période grise</td><td>Nulle, des dizaines d'explications passent avant</td></tr>
-<tr><td>« Mon intuition ne se trompe jamais »</td><td>Parfois de vrais micro-signaux, parfois une anxiété qui sonne à vide</td><td>À vérifier, jamais à conclure</td></tr>
-</tbody></table></div>`,
+      content: `<p>Maintenant, le tri inverse, parce que ces « signes » cités partout font des dégâts dans des couples parfaitement fidèles...</p>`,
       subsections: [
         {
           id: 'le-changement-de-look',
@@ -69,22 +59,24 @@ const article: BlogArticleData = {
         {
           id: 'et-le-fameux-mon-intuition-ne',
           title: "Le fameux « mon intuition ne se trompe jamais »",
-          content: `<p>Là, il faut être honnête à double sens : oui, l'intuition capte parfois des micro-signaux réels avant la conscience... ET l'intuition d'une personne anxieuse ou déjà trahie par le passé sonne aussi en l'absence de tout danger. Si ta <a href="/blog/jalousie-maladive/">jalousie a un historique</a> de scénarios sans preuve, ton intuition est un témoin à écouter... pas un juge à croire sur parole.</p>`,
+          content: `<p>Là, il faut être honnête à double sens : oui, l'intuition capte parfois des micro-signaux réels avant la conscience... ET l'intuition d'une personne anxieuse ou déjà trahie par le passé sonne aussi en l'absence de tout danger. Si ta <a href="/blog/jalousie-maladive/">jalousie a un historique</a> de scénarios sans preuve, ton intuition est un témoin à écouter... pas un juge à croire sur parole.</p>
+<aside class="blog-tip-box">
+<p class="blog-tip-box-title">⚠️ Le piège de l'enquête sans fin</p>
+<p>Fouiller le téléphone, suivre, vérifier, recouper... L'enquête permanente a un problème : elle ne s'arrête jamais d'elle-même. Rien trouvé ? « C'est qu'il efface. » Un détail ambigu ? Trois nuits blanches... Pendant ce temps, tu vis dans un état de vigilance qui te détruit, quel que soit le verdict final. Si tu en es à l'enquête quotidienne, le problème à traiter en premier n'est plus l'éventuelle infidélité : c'est le doute lui-même. Et lui, il a une solution.</p>
+</aside>
+<div><table><thead><tr><th>Le « signe » qu'on lit partout</th><th>Ce que ça veut dire la plupart du temps</th><th>Valeur de preuve</th></tr></thead><tbody>
+<tr><td>Le changement de look</td><td>Quelqu'un qui se réapproprie son image, souvent à un cap d'âge</td><td>Nulle, seul</td></tr>
+<tr><td>Les heures sup et la fatigue</td><td>Un agenda chargé, tout simplement</td><td>Nulle sans signe lourd à côté</td></tr>
+<tr><td>L'humeur en dents de scie</td><td>Stress, charge mentale, santé, période grise</td><td>Nulle, des dizaines d'explications passent avant</td></tr>
+<tr><td>« Mon intuition ne se trompe jamais »</td><td>Parfois de vrais micro-signaux, parfois une anxiété qui sonne à vide</td><td>À vérifier, jamais à conclure</td></tr>
+</tbody></table></div>`,
         },
       ],
     },
     {
       id: 'quoi-faire-du-doute',
       title: "Quoi faire du doute (la seule stratégie qui marche)",
-      content: `<p>Le doute d'infidélité n'a que trois issues possibles : il se dissout face à des explications cohérentes, il se confirme... ou il te ronge indéfiniment. Les deux premières sont des libérations, chacune à sa façon. La troisième est la pire des trois. Voici comment forcer une issue, proprement.</p>
-<div class="blog-cta">
-<p class="blog-cta-titre">Objectiver le doute, avant la conversation</p>
-<p class="blog-cta-texte">Une série de questions passe en revue les changements concrets de ta relation, le faisceau réel versus les impressions, et te dit si ton alerte relève de l'inquiétude fondée ou du doute qui s'auto-alimente.</p>
-<a class="blog-cta-btn" href="/test-infidelite-couple/">Évaluer mon doute</a>
-<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
-</div>
-<p>Un dernier mot, le plus important peut-être. Quelle que soit l'issue, rappelle-toi ceci : le doute prolongé n'est pas un état de vie acceptable. Tu as le droit à une relation où tu n'as pas besoin d'être détective... Ce droit-là ne dépend pas de ce que ton partenaire a fait ou non. Il fait partie du contrat de base. Et si la réponse que tu obtiens finit par poser la question de la suite, la question de savoir si c'est <a href="/blog/arreter-ou-continuer-relation/">le moment d'arrêter ou de continuer</a> mérite alors d'être regardée en face... avec la même honnêteté.</p>
-<a href="/blog/jalousie-maladive/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Jalousie maladive : quand l'amour devient une surveillance</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
+      content: `<p>Le doute d'infidélité n'a que trois issues possibles : il se dissout face à des explications cohérentes, il se confirme... ou il te ronge indéfiniment. Les deux premières sont des libérations, chacune à sa façon. La troisième est la pire des trois. Voici comment forcer une issue, proprement.</p>`,
       subsections: [
         {
           id: 'etape-1-pose-tes-faits-par',
@@ -99,7 +91,15 @@ const article: BlogArticleData = {
         {
           id: 'etape-3-tire-les-consequences-de',
           title: "Étape 3 : tire les conséquences de la réponse",
-          content: `<p>Si les explications tiennent : le chantier devient le doute lui-même, ton insécurité, votre communication... et c'est un beau chantier de couple. Si la réponse fuit ou retourne : tu n'as pas encore de preuve, mais tu as une information majeure sur la transparence de ton partenaire... et tu as le droit d'en faire un sujet central. Et si la vérité tombe : douloureux, mais tu récupères enfin le pouvoir de décider, qui t'appartenait de droit.</p>`,
+          content: `<p>Si les explications tiennent : le chantier devient le doute lui-même, ton insécurité, votre communication... et c'est un beau chantier de couple. Si la réponse fuit ou retourne : tu n'as pas encore de preuve, mais tu as une information majeure sur la transparence de ton partenaire... et tu as le droit d'en faire un sujet central. Et si la vérité tombe : douloureux, mais tu récupères enfin le pouvoir de décider, qui t'appartenait de droit.</p>
+<p>Un dernier mot, le plus important peut-être. Quelle que soit l'issue, rappelle-toi ceci : le doute prolongé n'est pas un état de vie acceptable. Tu as le droit à une relation où tu n'as pas besoin d'être détective... Ce droit-là ne dépend pas de ce que ton partenaire a fait ou non. Il fait partie du contrat de base. Et si la réponse que tu obtiens finit par poser la question de la suite, la question de savoir si c'est <a href="/blog/arreter-ou-continuer-relation/">le moment d'arrêter ou de continuer</a> mérite alors d'être regardée en face... avec la même honnêteté.</p>
+<div class="blog-cta">
+<p class="blog-cta-titre">Objectiver le doute, avant la conversation</p>
+<p class="blog-cta-texte">Une série de questions passe en revue les changements concrets de ta relation, le faisceau réel versus les impressions, et te dit si ton alerte relève de l'inquiétude fondée ou du doute qui s'auto-alimente.</p>
+<a class="blog-cta-btn" href="/test-infidelite-couple/">Évaluer mon doute</a>
+<p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
+</div>
+<a href="/blog/jalousie-maladive/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Jalousie maladive : quand l'amour devient une surveillance</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
         },
       ],
     },

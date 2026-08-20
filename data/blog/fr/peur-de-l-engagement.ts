@@ -25,13 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'les-vraies-causes',
       title: "Ce qui se cache vraiment derrière la peur de l'engagement",
-      content: `<p>« Phobie de l'engagement », l'expression fait sourire... mais le mécanisme est sérieux, et il a presque toujours l'une de ces quatre racines.</p>
-<div><table><thead><tr><th>La cause</th><th>Ce qu'elle fait croire</th><th>Ce qui la desserre</th></tr></thead><tbody>
-<tr><td><strong>Le naufrage vu de près</strong></td><td>S'engager finit toujours mal</td><td>Séparer leur histoire de la vôtre</td></tr>
-<tr><td><strong>Les cicatrices d'ex</strong></td><td>Ça va recommencer pareil</td><td>Nommer ce qui n'a rien à voir cette fois</td></tr>
-<tr><td><strong>L'attachement évitant</strong></td><td>Se lier, c'est se perdre</td><td>Rester cinq minutes de plus, à chaque fois</td></tr>
-<tr><td><strong>Le mythe du choix parfait</strong></td><td>Il y a mieux ailleurs, forcément</td><td>Découper l'engagement en petits pas réels</td></tr>
-</tbody></table></div>`,
+      content: `<p>« Phobie de l'engagement », l'expression fait sourire... mais le mécanisme est sérieux, et il a presque toujours l'une de ces quatre racines.</p>`,
       subsections: [
         {
           id: 'le-naufrage-vu-de-pres',
@@ -47,7 +41,13 @@ const article: BlogArticleData = {
         {
           id: 'le-mythe-du-choix-parfait',
           title: "Le mythe du choix parfait",
-          content: `<p>Version moderne, nourrie par la culture du match illimité : s'engager, c'est renoncer à toutes les autres options... et si LA bonne personne était la prochaine ? Ce vertige-là n'est pas une peur de l'engagement au sens strict, c'est une incapacité à choisir, entretenue par l'illusion qu'un choix parfait existe. Indice : les gens heureux en couple n'ont pas trouvé le choix parfait. Ils ont arrêté d'en chercher un.</p>`,
+          content: `<p>Version moderne, nourrie par la culture du match illimité : s'engager, c'est renoncer à toutes les autres options... et si LA bonne personne était la prochaine ? Ce vertige-là n'est pas une peur de l'engagement au sens strict, c'est une incapacité à choisir, entretenue par l'illusion qu'un choix parfait existe. Indice : les gens heureux en couple n'ont pas trouvé le choix parfait. Ils ont arrêté d'en chercher un.</p>
+<div><table><thead><tr><th>La cause</th><th>Ce qu'elle fait croire</th><th>Ce qui la desserre</th></tr></thead><tbody>
+<tr><td><strong>Le naufrage vu de près</strong></td><td>S'engager finit toujours mal</td><td>Séparer leur histoire de la vôtre</td></tr>
+<tr><td><strong>Les cicatrices d'ex</strong></td><td>Ça va recommencer pareil</td><td>Nommer ce qui n'a rien à voir cette fois</td></tr>
+<tr><td><strong>L'attachement évitant</strong></td><td>Se lier, c'est se perdre</td><td>Rester cinq minutes de plus, à chaque fois</td></tr>
+<tr><td><strong>Le mythe du choix parfait</strong></td><td>Il y a mieux ailleurs, forcément</td><td>Découper l'engagement en petits pas réels</td></tr>
+</tbody></table></div>`,
         },
       ],
     },
