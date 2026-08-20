@@ -895,9 +895,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'amour-ou-dependance-affective',
     category: 'psychologie',
     featuredImage: '/blog/amour-ou-dependance-affective.webp',
-    frOnly: true,
     slugs: {
       fr: 'amour-ou-dependance-affective',
+      en: 'love-or-emotional-dependency',
+      es: 'amor-o-dependencia-emocional',
+      de: 'liebe-oder-emotionale-abhaengigkeit',
+      it: 'amore-o-dipendenza-affettiva',
     },
     publishedAt: '2026-10-09',
   },
