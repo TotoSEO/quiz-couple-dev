@@ -1064,9 +1064,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'gaslighting',
     category: 'psychologie',
     featuredImage: '/blog/gaslighting.webp',
-    frOnly: true,
     slugs: {
       fr: 'gaslighting',
+      en: 'gaslighting-signs',
+      es: 'gaslighting-senales',
+      de: 'gaslighting-anzeichen',
+      it: 'gaslighting-segnali',
     },
     publishedAt: '2026-11-24',
   },
