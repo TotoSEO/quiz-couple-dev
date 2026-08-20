@@ -1103,9 +1103,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'attachement-anxieux',
     category: 'psychologie',
     featuredImage: '/blog/attachement-anxieux.webp',
-    frOnly: true,
     slugs: {
       fr: 'attachement-anxieux',
+      en: 'anxious-attachment-in-love',
+      es: 'apego-ansioso-en-el-amor',
+      de: 'aengstliche-bindung-in-der-liebe',
+      it: 'attaccamento-ansioso-in-amore',
     },
     publishedAt: '2026-12-04',
   },
