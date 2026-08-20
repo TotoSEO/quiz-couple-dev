@@ -1012,9 +1012,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'dependant-affectif-et-manipulateur',
     category: 'psychologie',
     featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
-    frOnly: true,
     slugs: {
       fr: 'dependant-affectif-et-manipulateur',
+      en: 'codependent-and-manipulator',
+      es: 'dependiente-emocional-y-manipulador',
+      de: 'emotional-abhaengig-und-manipulator',
+      it: 'dipendente-affettivo-e-manipolatore',
     },
     publishedAt: '2026-11-10',
   },
