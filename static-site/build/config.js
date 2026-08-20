@@ -1077,9 +1077,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'questions-couple-telephone-message',
     category: 'vie-de-couple',
     featuredImage: '/blog/questions-couple-telephone-message.webp',
-    frOnly: true,
     slugs: {
       fr: 'questions-couple-telephone-message',
+      en: 'questions-for-couples-over-text',
+      es: 'preguntas-de-pareja-por-mensaje',
+      de: 'fragen-fuer-paare-per-nachricht',
+      it: 'domande-di-coppia-per-messaggio',
     },
     publishedAt: '2026-11-27',
   },
