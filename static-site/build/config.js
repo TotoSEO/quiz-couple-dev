@@ -1025,9 +1025,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'sortir-emprise-pervers-narcissique',
     category: 'psychologie',
     featuredImage: '/blog/sortir-emprise-pervers-narcissique.webp',
-    frOnly: true,
     slugs: {
       fr: 'sortir-emprise-pervers-narcissique',
+      en: 'escape-narcissistic-abuse',
+      es: 'salir-del-control-de-un-narcisista',
+      de: 'aus-narzisstischem-missbrauch-ausbrechen',
+      it: 'uscire-dal-controllo-di-un-narcisista',
     },
     publishedAt: '2026-11-13',
   },
