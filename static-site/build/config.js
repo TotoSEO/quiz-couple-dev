@@ -973,9 +973,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'questions-avenir-couple',
     category: 'vie-de-couple',
     featuredImage: '/blog/questions-avenir-couple.webp',
-    frOnly: true,
     slugs: {
       fr: 'questions-avenir-couple',
+      en: 'future-questions-for-couples',
+      es: 'preguntas-sobre-el-futuro-pareja',
+      de: 'zukunftsfragen-fuer-paare',
+      it: 'domande-sul-futuro-di-coppia',
     },
     publishedAt: '2026-10-30',
   },
