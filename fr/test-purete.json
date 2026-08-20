@@ -91,23 +91,23 @@
       "p1": "Les questions sont réparties en catégories, et le résultat détaille votre score dans chacune. C'est souvent là que la surprise arrive : on se croit sage parce que le total est moyen, et on découvre qu'on plafonne à 90 % sur une seule famille.",
       "sub1Titre": "Les sept catégories du mode solo",
       "liste1": [
-        "🔥 <strong>Sexe</strong> — bodycount, premières fois, expériences, lieux",
-        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Infidélité</a></strong> — du baiser en soirée à la double vie",
-        "🎭 <strong>Mensonges</strong> — ce que vous avez arrangé, omis, supprimé",
-        "🍸 <strong>Alcool & co</strong> — soirées, excès, et ce qui va avec",
-        "👪 <strong>Famille</strong> — belle-famille, parents, fêtes subies",
-        "📱 <strong>Vie numérique</strong> — nudes, comptes secrets, messages du réveil",
-        "🚨 <strong>Interdits</strong> — vols, bêtises, flagrants délits"
+        "🔥 <strong>Sexe</strong> : bodycount, premières fois, expériences, lieux",
+        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Infidélité</a></strong> : du baiser en soirée à la double vie",
+        "🎭 <strong>Mensonges</strong> : ce que vous avez arrangé, omis, supprimé",
+        "🍸 <strong>Alcool & co</strong> : soirées, excès, et ce qui va avec",
+        "👪 <strong>Famille</strong> : belle-famille, parents, fêtes subies",
+        "📱 <strong>Vie numérique</strong> : nudes, comptes secrets, messages du réveil",
+        "🚨 <strong>Interdits</strong> : vols, bêtises, flagrants délits"
       ],
       "sub1P1": "La catégorie qui fait le plus mal n'est presque jamais celle qu'on attend. Ce sont les mensonges qui font grimper le plus de scores, pas le sexe.",
       "sub2Titre": "Les six catégories du mode couple",
       "liste2": [
-        "🔥 <strong>Sexe</strong> — ce que vous avez tenté, et où",
-        "👀 <strong>Exhibition</strong> — le risque d'être vus, assumé ou pas",
-        "💫 <strong>Libertinage</strong> — plan à trois, échangisme, relation ouverte",
-        "🍸 <strong>Substances</strong> — soirées, emprise, lendemains",
-        "🚨 <strong>Transgression</strong> — casino, lieux interdits, mensonges à deux",
-        "🤐 <strong>Secrets</strong> — ce que l'autre ne sait toujours pas"
+        "🔥 <strong>Sexe</strong> : ce que vous avez tenté, et où",
+        "👀 <strong>Exhibition</strong> : le risque d'être vus, assumé ou pas",
+        "💫 <strong>Libertinage</strong> : plan à trois, échangisme, relation ouverte",
+        "🍸 <strong>Substances</strong> : soirées, emprise, lendemains",
+        "🚨 <strong>Transgression</strong> : casino, lieux interdits, mensonges à deux",
+        "🤐 <strong>Secrets</strong> : ce que l'autre ne sait toujours pas"
       ],
       "sub2P1": "C'est la catégorie secrets qui départage les couples. Deux couples avec exactement le même passé peuvent finir à cent points d'écart, uniquement selon ce qu'ils se sont dit."
     },

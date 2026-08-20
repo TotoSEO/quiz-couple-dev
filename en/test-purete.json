@@ -91,23 +91,23 @@
       "p1": "Questions are split into categories, and the result breaks your score down for each one. That's usually where the surprise turns up: you think you're well behaved because the total is average, and you discover you're at 90% in a single family.",
       "sub1Titre": "The seven solo categories",
       "liste1": [
-        "🔥 <strong>Sex</strong> — body count, firsts, experiences, places",
-        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Cheating</a></strong> — from a kiss at a party to a double life",
-        "🎭 <strong>Lies</strong> — what you tidied up, left out, deleted",
-        "🍸 <strong>Booze & co</strong> — nights out, excess, and what comes with it",
-        "👪 <strong>Family</strong> — in-laws, parents, holidays endured",
-        "📱 <strong>Online life</strong> — nudes, secret accounts, morning-after messages",
-        "🚨 <strong>Off limits</strong> — theft, stupidity, getting caught"
+        "🔥 <strong>Sex</strong>: body count, firsts, experiences, places",
+        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Cheating</a></strong>: from a kiss at a party to a double life",
+        "🎭 <strong>Lies</strong>: what you tidied up, left out, deleted",
+        "🍸 <strong>Booze & co</strong>: nights out, excess, and what comes with it",
+        "👪 <strong>Family</strong>: in-laws, parents, holidays endured",
+        "📱 <strong>Online life</strong>: nudes, secret accounts, morning-after messages",
+        "🚨 <strong>Off limits</strong>: theft, stupidity, getting caught"
       ],
       "sub1P1": "The category that hurts most is almost never the expected one. It's lies that push the most scores up, not sex.",
       "sub2Titre": "The six couple categories",
       "liste2": [
-        "🔥 <strong>Sex</strong> — what you've tried, and where",
-        "👀 <strong>Getting caught</strong> — the risk of being seen, owned or not",
-        "💫 <strong>Open stuff</strong> — threesomes, swapping, open relationships",
-        "🍸 <strong>Substances</strong> — nights out, being under the influence, the morning after",
-        "🚨 <strong>Crossing lines</strong> — casinos, off-limits places, lies told together",
-        "🤐 <strong>Secrets</strong> — what the other one still doesn't know"
+        "🔥 <strong>Sex</strong>: what you've tried, and where",
+        "👀 <strong>Getting caught</strong>: the risk of being seen, owned or not",
+        "💫 <strong>Open stuff</strong>: threesomes, swapping, open relationships",
+        "🍸 <strong>Substances</strong>: nights out, being under the influence, the morning after",
+        "🚨 <strong>Crossing lines</strong>: casinos, off-limits places, lies told together",
+        "🤐 <strong>Secrets</strong>: what the other one still doesn't know"
       ],
       "sub2P1": "It's the secrets category that separates couples. Two couples with exactly the same past can end up a hundred points apart, purely on what they told each other."
     },

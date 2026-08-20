@@ -91,23 +91,23 @@
       "p1": "Le domande sono divise in categorie, e il risultato dettaglia il punteggio in ognuna. È spesso lì che arriva la sorpresa: uno si crede a posto perché il totale è nella media, e scopre di sfiorare il 90 % in una sola famiglia.",
       "sub1Titre": "Le sette categorie della modalità in solitaria",
       "liste1": [
-        "🔥 <strong>Sesso</strong> — body count, prime volte, esperienze, luoghi",
-        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Infedeltà</a></strong> — dal bacio a una festa alla doppia vita",
-        "🎭 <strong>Bugie</strong> — quello che avete aggiustato, omesso, cancellato",
-        "🍸 <strong>Alcol e affini</strong> — serate, eccessi e quello che ne consegue",
-        "👪 <strong>Famiglia</strong> — suoceri, genitori, feste subite",
-        "📱 <strong>Vita digitale</strong> — foto intime, profili segreti, messaggi al risveglio",
-        "🚨 <strong>Vietato</strong> — furti, sciocchezze, colti sul fatto"
+        "🔥 <strong>Sesso</strong>: body count, prime volte, esperienze, luoghi",
+        "💔 <strong><a class=\"pu-lien-int\" href=\"{{testInfidelite}}\">Infedeltà</a></strong>: dal bacio a una festa alla doppia vita",
+        "🎭 <strong>Bugie</strong>: quello che avete aggiustato, omesso, cancellato",
+        "🍸 <strong>Alcol e affini</strong>: serate, eccessi e quello che ne consegue",
+        "👪 <strong>Famiglia</strong>: suoceri, genitori, feste subite",
+        "📱 <strong>Vita digitale</strong>: foto intime, profili segreti, messaggi al risveglio",
+        "🚨 <strong>Vietato</strong>: furti, sciocchezze, colti sul fatto"
       ],
       "sub1P1": "La categoria che fa più male non è quasi mai quella che ci si aspetta. Sono le bugie a far salire più punteggi, non il sesso.",
       "sub2Titre": "Le sei categorie della modalità in coppia",
       "liste2": [
-        "🔥 <strong>Sesso</strong> — quello che avete provato, e dove",
-        "👀 <strong>Esibizione</strong> — il rischio di essere visti, assunto o meno",
-        "💫 <strong>Libertinaggio</strong> — triangoli, scambio, relazione aperta",
-        "🍸 <strong>Sostanze</strong> — serate, effetti, il giorno dopo",
-        "🚨 <strong>Trasgressione</strong> — casinò, luoghi vietati, bugie a due",
-        "🤐 <strong>Segreti</strong> — quello che l'altro ancora non sa"
+        "🔥 <strong>Sesso</strong>: quello che avete provato, e dove",
+        "👀 <strong>Esibizione</strong>: il rischio di essere visti, assunto o meno",
+        "💫 <strong>Libertinaggio</strong>: triangoli, scambio, relazione aperta",
+        "🍸 <strong>Sostanze</strong>: serate, effetti, il giorno dopo",
+        "🚨 <strong>Trasgressione</strong>: casinò, luoghi vietati, bugie a due",
+        "🤐 <strong>Segreti</strong>: quello che l'altro ancora non sa"
       ],
       "sub2P1": "È la categoria dei segreti a separare le coppie. Due coppie con esattamente lo stesso passato possono finire a cento punti di distanza, solo per quello che si sono dette."
     },

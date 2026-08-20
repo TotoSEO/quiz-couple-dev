@@ -134,7 +134,7 @@ const article: BlogArticleData = {
       title: "Pourquoi c'est si difficile de partir, même quand on a compris",
       content: `<p>C'est la question qui fait le plus de dégâts, parce qu'on se la pose contre soi-même : « je sais ce qui se passe, alors pourquoi je reste ? »</p>
 <p>Parce que tu ne restes pas pour la relation telle qu'elle est. Tu restes pour celle que tu as connue les trois premières semaines, et que tu espères récupérer. Le love bombing t'a donné un souvenir de ce que ça pouvait être, et ce souvenir devient une promesse. Chaque miette d'attention retrouvée ravive l'espoir que la version idéale revienne pour de bon.</p>
-<p>S'ajoute à ça une érosion progressive de la confiance en ton propre jugement. Quand quelqu'un t'a répété que tu exagérais, que tu étais trop sensible, que tu inventais, tu finis par ne plus oser trancher seule. Ce mécanisme d'accroche, et la manière d'en sortir, on l'a détaillé dans notre article sur la <a href="/blog/dependance-affective/">dépendance affective</a>.</p>
+<p>S'ajoute à ça une érosion progressive de la confiance en ton propre jugement. Quand quelqu'un t'a répété que tu exagérais, que tu étais trop sensible, que tu inventais, tu finis par ne plus oser trancher seule. Ce mécanisme d'accroche, et la manière d'en sortir, sont détaillés ici : <a href="/blog/dependance-affective/">la dépendance affective</a>.</p>
 <p>Le plus important à retenir : la difficulté à partir n'est pas une faiblesse de caractère. C'est le résultat attendu du mécanisme. Il est conçu pour ça.</p>`,
     },
     {
