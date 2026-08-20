@@ -726,9 +726,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'pervers-narcissique-amour',
     category: 'psychologie',
     featuredImage: '/blog/pervers-narcissique-amour.webp',
-    frOnly: true,
     slugs: {
       fr: 'pervers-narcissique-amour',
+      en: 'narcissist-in-love-signs',
+      es: 'narcisista-en-el-amor',
+      de: 'narzisst-in-der-liebe',
+      it: 'narcisista-in-amore',
     },
     publishedAt: '2026-08-25',
   },
