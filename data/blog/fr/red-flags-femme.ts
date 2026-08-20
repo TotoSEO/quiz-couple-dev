@@ -72,7 +72,7 @@ const article: BlogArticleData = {
         {
           id: 'utilise-tes-failles',
           title: "Elle utilise tes failles contre toi",
-          content: `<p>Tu lui as parlé de quelque chose qui t'avait blessé dans l'enfance, d'une insécurité que tu portes, d'une peur que tu n'as pas l'habitude d'avouer. Et maintenant, dans les disputes, ça revient. Pas pour t'aider à avancer, mais pour toucher là où ça fait mal. C'est une des formes les plus claires de manque de respect dans une relation, parce que ça transforme la confiance en vulnérabilité exploitable. Si tu ne sais plus si tu peux lui parler de toi sans que ça soit retourné contre toi, c'est un problème réel.</p>`,
+          content: `<p>Tu lui as parlé de quelque chose qui t'avait blessé dans l'enfance, d'une insécurité que tu portes, d'une peur que tu n'as pas l'habitude d'avouer. Et maintenant, dans les disputes, ça revient. Pas pour t'aider à avancer, mais pour toucher là où ça fait mal. C'est une des formes les plus claires de manque de respect dans une relation, parce que <a href="/blog/femme-perverse-narcissique-signes/">ça transforme la confiance en vulnérabilité exploitable</a>. Si tu ne sais plus si tu peux lui parler de toi sans que ça soit retourné contre toi, c'est un problème réel.</p>`,
         },
         {
           id: 'crises-disproportionnees',
@@ -94,7 +94,7 @@ const article: BlogArticleData = {
         {
           id: 'jalousie-deraisonnable',
           title: "La jalousie dépasse ce qui est raisonnable",
-          content: `<p>Un peu de jalousie, tout le monde connaît, c'est normal. Ce dont on parle ici c'est autre chose : contrôler qui tu vois, lire tes messages, faire une scène parce que tu as répondu à un commentaire en ligne, t'interroger sur chaque sortie comme si tu étais suspect par défaut. La jalousie à ce niveau ne vient pas de l'amour, elle vient d'un besoin de contrôle. Et le besoin de contrôle, sur la durée, s'étend. Il ne se limite jamais au domaine où il a commencé.</p>`,
+          content: `<p>Un peu de jalousie, tout le monde connaît, c'est normal. Ce dont on parle ici c'est autre chose : contrôler qui tu vois, lire tes messages, faire une scène parce que tu as répondu à un commentaire en ligne, t'interroger sur chaque sortie comme si tu étais suspect par défaut. <a href="/blog/jalousie-maladive/">La jalousie à ce niveau ne vient pas de l'amour</a>, elle vient d'un besoin de contrôle. Et le besoin de contrôle, sur la durée, s'étend. Il ne se limite jamais au domaine où il a commencé.</p>`,
         },
         {
           id: 'tous-ses-ex-sont-des-monstres',
@@ -138,7 +138,7 @@ const article: BlogArticleData = {
     {
       id: 'et-maintenant',
       title: "Quelques points sur cette liste, et après",
-      content: `<p>Reconnaître plusieurs de ces comportements chez quelqu'un ne fait pas automatiquement d'elle une mauvaise personne. Certains de ces patterns viennent de blessures anciennes, de mécanismes de défense construits avant toi, de choses qui se travaillent avec du temps et de la volonté. <strong>Ce qui distingue un red flag d'une difficulté passagère, c'est la répétition et l'absence de remise en question.</strong></p>
+      content: `<p>Reconnaître plusieurs de ces comportements chez quelqu'un ne fait pas automatiquement d'elle une mauvaise personne. Certains de ces patterns viennent de blessures anciennes, de mécanismes de défense construits avant toi, de choses qui se travaillent avec du temps et de la volonté. <strong><a href="/blog/femme-toxique-en-amour/">Ce qui distingue un red flag d'une difficulté passagère, c'est la répétition et l'absence de remise en question.</a></strong></p>
 <p>Est-ce qu'elle reconnaît le problème quand tu le soulèves calmement ? Est-ce que les choses changent, même un peu, ou tu vis dans l'attente d'un changement qui ne vient jamais ? Est-ce que tu te sens mieux ou moins bien dans cette relation qu'avant qu'elle commence ?</p>
 <p>Si plusieurs cases sont cochées et que les réponses honnêtes à ces questions te pèsent, fais confiance à ce que tu ressens. L'inconfort que tu portes mérite d'être pris au sérieux.</p>
 <a href="/blog/red-flags-homme/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Les Red flags chez un homme : la liste complète</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,

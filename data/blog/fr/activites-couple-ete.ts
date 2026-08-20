@@ -143,7 +143,7 @@ const article: BlogArticleData = {
           id: 'soiree-questions',
           title: "10. La soirée questions, dehors, quand il fait encore doux",
           content: `<div class="blog-img-wrap"><img src="/blog/activites-couple-ete-10-soiree-questions.webp" alt="Deux chaises face à face sur un petit balcon au crépuscule avec deux verres, des guirlandes lumineuses et les toits de la ville en arrière-plan" width="1536" height="1024" loading="lazy"></div>
-<p>Il est 21h30, il fait encore 24 °C, vous êtes sur le balcon ou dans le jardin. <strong>C'est le meilleur créneau de l'été pour parler de choses dont vous ne parlez jamais.</strong></p>
+<p>Il est 21h30, il fait encore 24 °C, vous êtes sur le balcon ou dans le jardin. <strong>C'est le meilleur créneau de l'été pour <a href="/blog/questions-pour-mieux-se-connaitre-en-couple/">parler de choses dont vous ne parlez jamais</a>.</strong></p>
 <p>Le format qui marche : une boisson, deux chaises face à face, et une série de <a href="/questions-couple/">questions un peu plus profondes que celles du quotidien</a>. On alterne, chacun répond honnêtement, et surtout <strong>personne ne commente la réponse de l'autre avant qu'elle soit finie.</strong> Cette dernière règle change tout.</p>
 <p>Si l'ambiance est plutôt légère, partez sur des <a href="/tu-preferes-couple-quiz/">« tu préfères » complètement absurdes</a> et laissez la conversation dériver toute seule. On a remarqué qu'en une heure, ça bascule presque toujours vers du sérieux sans qu'on l'ait décidé.</p>
 <p>Une heure de ça vaut trois soirées devant une série. Et ça ne coûte rien.</p>`,

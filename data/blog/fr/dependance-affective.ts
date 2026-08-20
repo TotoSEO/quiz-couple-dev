@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['lucie-courtin'],
   excerpt: "La dépendance affective, ce n'est pas « trop aimer ». C'est ne plus savoir exister sans l'autre et construire toute sa valeur autour de son regard.",
   introduction: `<p>Tu vérifies ton téléphone toutes les cinq minutes. Tu analyses le moindre changement de ton dans ses messages. Quand il est distant, tu paniques. Quand il est présent, tu es soulagée, mais jamais vraiment en paix, parce que tu sais que ça peut basculer à tout moment.</p>
-<p>Ce n'est pas de l'amour intense. Ce n'est pas de la passion. <strong>C'est de la dépendance affective.</strong> Et ça touche bien plus de personnes qu'on ne le croit, hommes et femmes, dans tous types de relations. Cet article est là pour mettre des mots sur ce que tu vis, comprendre d'où ça vient, et surtout te montrer que c'est possible d'en sortir.</p>`,
+<p>Ce n'est pas de l'amour intense. Ce n'est pas de la passion. <strong>C'est de la dépendance affective.</strong> Et ça touche bien plus de personnes qu'on ne le croit, hommes et femmes, dans tous types de relations. Cet article est là pour <a href="/blog/dependance-affective-symptomes/">mettre des mots sur ce que tu vis</a>, comprendre d'où ça vient, et surtout te montrer que c'est possible d'en sortir.</p>`,
   quickSummary: [
     "La dépendance affective n'est pas de l'amour : c'est un besoin compulsif de l'autre pour se sentir exister.",
     "Les signes : peur panique de l'abandon, besoin constant de réassurance, perte d'identité dans la relation.",
@@ -44,7 +44,7 @@ const article: BlogArticleData = {
         {
           id: 'besoin-vs-amour',
           title: "Ce n'est pas de l'amour, c'est un besoin",
-          content: `<p>La distinction est fondamentale. L'amour, c'est choisir quelqu'un librement. La dépendance affective, c'est <strong>avoir besoin</strong> de quelqu'un pour combler un vide intérieur. Tu n'aimes pas la personne pour ce qu'elle est : tu t'accroches à ce qu'elle te fait ressentir quand elle est là. Et surtout, tu paniques à l'idée de perdre cette sensation.</p>
+          content: `<p>La distinction est fondamentale. <a href="/blog/amour-ou-dependance-affective/">L'amour, c'est choisir quelqu'un librement</a>. La dépendance affective, c'est <strong>avoir besoin</strong> de quelqu'un pour combler un vide intérieur. Tu n'aimes pas la personne pour ce qu'elle est : tu t'accroches à ce qu'elle te fait ressentir quand elle est là. Et surtout, tu paniques à l'idée de perdre cette sensation.</p>
 <p>C'est pour ça que les personnes dépendantes affectives peuvent rester dans des <a href="/blog/choses-pas-accepter-couple/">relations où elles acceptent l'inacceptable</a> pendant des années. Ce n'est pas de la faiblesse. C'est que le vide qui attend derrière fait plus peur que la souffrance qu'elles vivent dedans.</p>`,
         },
         {
@@ -57,7 +57,7 @@ const article: BlogArticleData = {
           id: 'perte-identite',
           title: "La perte d'identité progressive",
           content: `<p>C'est un des aspects les plus insidieux. Ça ne se fait pas d'un coup. Tu commences par adapter tes goûts. Puis tes horaires. Puis tes amitiés. Puis tes opinions. Au bout de quelques mois, tu ne sais plus très bien ce que tu aimes, ce que tu veux, ce que tu penses indépendamment de l'autre.</p>
-<p>Ce n'est pas un compromis de couple. C'est un effacement. Et le pire, c'est que tu ne t'en rends souvent compte qu'après la rupture, quand tu te retrouves face à toi-même et que tu réalises que tu ne sais plus qui tu es. Si tu te sens dans cette situation, <a href="/tester-son-couple/">faire le point sur ta relation</a> peut t'aider à y voir plus clair.</p>`,
+<p>Ce n'est pas un compromis de couple. C'est un effacement. Et le pire, c'est que <a href="/blog/dependance-affective-rupture/">tu ne t'en rends souvent compte qu'après la rupture</a>, quand tu te retrouves face à toi-même et que tu réalises que tu ne sais plus qui tu es. Si tu te sens dans cette situation, <a href="/tester-son-couple/">faire le point sur ta relation</a> peut t'aider à y voir plus clair.</p>`,
         },
       ],
     },
@@ -75,8 +75,8 @@ const article: BlogArticleData = {
         {
           id: 'attachement-insecure',
           title: "Le style d'attachement anxieux",
-          content: `<p>La théorie de l'attachement est claire là-dessus : les personnes qui ont développé un <strong><a href="/test-style-attachement-couple/">attachement anxieux</a></strong> dans l'enfance sont les plus susceptibles de vivre de la dépendance affective. Le pattern est reconnaissable : hypervigilance aux signaux de l'autre, besoin constant de proximité, interprétation catastrophiste du moindre signe de distance.</p>
-<p>Ce n'est pas de la paranoïa. C'est un système nerveux qui a été câblé pour détecter la menace d'abandon, parce qu'à un moment, cette menace était réelle.</p>`,
+          content: `<p>La <a href="/blog/styles-attachement-couple/">théorie de l'attachement</a> est claire là-dessus : les personnes qui ont développé un <strong><a href="/test-style-attachement-couple/">attachement anxieux</a></strong> dans l'enfance sont les plus susceptibles de vivre de la dépendance affective. Le pattern est reconnaissable : hypervigilance aux signaux de l'autre, besoin constant de proximité, interprétation catastrophiste du moindre signe de distance.</p>
+<p>Ce n'est pas de la paranoïa. C'est <a href="/blog/attachement-anxieux/">un système nerveux qui a été câblé pour détecter la menace d'abandon</a>, parce qu'à un moment, cette menace était réelle.</p>`,
         },
         {
           id: 'premieres-relations',
@@ -118,7 +118,7 @@ const article: BlogArticleData = {
     {
       id: 'comment-s-en-sortir',
       title: "Comment sortir de la dépendance affective",
-      content: `<p>Spoiler : ça ne se fait pas en changeant de partenaire. Le travail est intérieur, et il demande du temps, de l'honnêteté et souvent un accompagnement.</p>`,
+      content: `<p>Spoiler : ça ne se fait pas en changeant de partenaire. <a href="/blog/sortir-de-la-dependance-affective/">Le travail est intérieur</a>, et il demande du temps, de l'honnêteté et souvent un accompagnement.</p>`,
       subsections: [
         {
           id: 'prendre-conscience',

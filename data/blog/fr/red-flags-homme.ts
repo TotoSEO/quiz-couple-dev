@@ -63,7 +63,7 @@ const article: BlogArticleData = {
         {
           id: 'minimise-ce-que-tu-ressens',
           title: "Il minimise ce que tu ressens",
-          content: `<p>Tu lui expliques quelque chose qui t'a blessée. Sa réponse : "tu es trop sensible", "tu dramatises", "c'était une blague". Ce pattern s'appelle le <strong>gaslighting</strong> quand il est répété, et il fonctionne exactement comme ça, en te faisant douter de ta propre perception de la réalité. Le problème n'est jamais le comportement qui t'a posé problème. Le problème, c'est que tu as osé avoir un problème.</p>
+          content: `<p>Tu lui expliques quelque chose qui t'a blessée. Sa réponse : "tu es trop sensible", "tu dramatises", "c'était une blague". Ce pattern s'appelle le <strong><a href="/blog/gaslighting/">gaslighting</a></strong> quand il est répété, et il fonctionne exactement comme ça, en te faisant douter de ta propre perception de la réalité. Le problème n'est jamais le comportement qui t'a posé problème. Le problème, c'est que tu as osé avoir un problème.</p>
 <p>Un homme sain peut ne pas comprendre immédiatement pourquoi quelque chose t'a affectée. Mais il écoute. Il ne te demande pas de te taire.</p>`,
         },
         {
@@ -129,12 +129,12 @@ const article: BlogArticleData = {
         {
           id: 'impossible-de-lui-parler',
           title: "Tu ne peux pas lui parler de ce qui te pose problème",
-          content: `<p>Chaque tentative de discussion tourne soit en dispute où il prend le dessus, soit en silence qui dure des jours, soit en retournement où tu finis par t'excuser de quelque chose que tu n'as pas fait. Résultat : tu évites les conversations importantes. Tu avales. Tu accumules. Et lui, il ne sait jamais rien, parce que tu as appris que ça ne sert à rien de lui dire.</p>`,
+          content: `<p>Chaque tentative de discussion tourne soit en dispute où il prend le dessus, soit en silence qui dure des jours, soit en <a href="/blog/homme-pervers-narcissique-signes/">retournement où tu finis par t'excuser de quelque chose que tu n'as pas fait</a>. Résultat : tu évites les conversations importantes. Tu avales. Tu accumules. Et lui, il ne sait jamais rien, parce que tu as appris que ça ne sert à rien de lui dire.</p>`,
         },
         {
           id: 'eloigne-de-tes-proches',
           title: "Il t'éloigne progressivement de tes proches",
-          content: `<p>Ça peut ressembler à de la jalousie affectueuse au début. "J'aime qu'on soit ensemble, j'aurais préféré que tu restes." Mais ça se transforme en remarques sur tes amies, en tensions chaque fois que tu passes du temps sans lui, en culpabilisation subtile. Le résultat, quelques mois plus tard : tu sors moins, tu vois moins les gens que tu aimais voir, tu t'isoles. Et lui est devenu ta principale source de lien social. C'est exactement là où il voulait en arriver.</p>`,
+          content: `<p>Ça peut ressembler à de la <a href="/blog/jalousie-maladive/">jalousie affectueuse</a> au début. "J'aime qu'on soit ensemble, j'aurais préféré que tu restes." Mais ça se transforme en remarques sur tes amies, en tensions chaque fois que tu passes du temps sans lui, en culpabilisation subtile. Le résultat, quelques mois plus tard : tu sors moins, tu vois moins les gens que tu aimais voir, tu t'isoles. Et lui est devenu ta principale source de lien social. C'est exactement là où il voulait en arriver.</p>`,
         },
         {
           id: 'doutes-de-toi',
@@ -147,7 +147,7 @@ const article: BlogArticleData = {
       id: 'et-maintenant',
       title: "Tu as reconnu plusieurs de ces comportements. Et maintenant ?",
       content: `<p>D'abord : le fait que tu sois sur cet article compte. Quelque chose en toi cherchait une confirmation, un vocabulaire, une grille de lecture. C'est déjà un mouvement.</p>
-<p>Un ou deux points sur une liste ne font pas automatiquement de quelqu'un un mauvais partenaire. Tout le monde a des angles morts, des comportements à travailler, des mauvaises périodes. <strong>Ce qui distingue un red flag d'un problème ordinaire, c'est la répétition et l'absence de remise en question.</strong> Est-ce qu'il reconnaît le problème quand tu le pointes ? Est-ce qu'il fait des efforts réels, ou des efforts visibles le temps que tu te calmes ? Est-ce que les choses changent vraiment, ou tu vis dans l'attente perpétuelle d'un changement qui ne vient pas ?</p>
+<p>Un ou deux points sur une liste ne font pas automatiquement de quelqu'un un mauvais partenaire. Tout le monde a des angles morts, des comportements à travailler, des mauvaises périodes. <strong><a href="/blog/homme-toxique-en-amour/">Ce qui distingue un red flag d'un problème ordinaire, c'est la répétition et l'absence de remise en question.</a></strong> Est-ce qu'il reconnaît le problème quand tu le pointes ? Est-ce qu'il fait des efforts réels, ou des efforts visibles le temps que tu te calmes ? Est-ce que les choses changent vraiment, ou tu vis dans l'attente perpétuelle d'un changement qui ne vient pas ?</p>
 <p>Si tu coches plusieurs cases et que la réponse à ces questions est honnêtement "non", fais confiance à ce que tu ressens. Ton instinct t'a amenée jusqu'ici. Il mérite d'être écouté.</p>
 <a href="/blog/femme-malheureuse-en-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Comment reconnaître une femme malheureuse en couple</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },

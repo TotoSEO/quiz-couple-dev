@@ -153,7 +153,7 @@ const article: BlogArticleData = {
     {
       id: 'questions-honnetes',
       title: "Les questions à se poser honnêtement",
-      content: `<p>Parfois, ce dont tu as besoin, ce n'est pas d'un article qui te dit quoi penser. C'est d'un espace pour <strong>penser par toi-même</strong>, avec les bonnes questions. En voici quelques-unes. Pas des questions faciles. Des questions qui comptent.</p>`,
+      content: `<p>Parfois, ce dont tu as besoin, ce n'est pas d'un article qui te dit quoi penser. C'est d'un espace pour <strong>penser par toi-même</strong>, <a href="/blog/questions-avenir-couple/">avec les bonnes questions</a>. En voici quelques-unes. Pas des questions faciles. Des questions qui comptent.</p>`,
       subsections: [
         {
           id: 'questions-sur-toi',

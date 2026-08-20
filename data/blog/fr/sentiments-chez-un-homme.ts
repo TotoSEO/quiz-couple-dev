@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: `Chez beaucoup d'hommes, les sentiments ne commencent pas par une déclaration intérieure mais par une habitude. Voici les étapes, dans l'ordre où elles arrivent vraiment.`,
   introduction: `<p>La réponse tient en une phrase : <strong>chez la plupart des hommes, les sentiments ne naissent pas d'un coup de foudre mais d'une accumulation de moments partagés qui finissent par créer un manque.</strong> Ce n'est pas moins romantique, c'est juste plus lent, et surtout ça ne se voit pas de l'extérieur pendant longtemps.</p>
 
-<p>Je précise tout de suite une chose, parce que sinon cet article ne sert à rien : <strong>il n'existe pas de fonctionnement masculin universel</strong>. Les études sur l'attachement montrent des différences bien plus grandes entre deux hommes qu'entre les hommes et les femmes en moyenne. Ce que je décris ici, ce sont des schémas fréquents, pas une loi.</p>
+<p>Je précise tout de suite une chose, parce que sinon cet article ne sert à rien : <strong>il n'existe pas de fonctionnement masculin universel</strong>. <a href="/blog/styles-attachement-couple/">Les études sur l'attachement</a> montrent des différences bien plus grandes entre deux hommes qu'entre les hommes et les femmes en moyenne. Ce que je décris ici, ce sont des schémas fréquents, pas une loi.</p>
 
 <p>Cela dit, ces schémas reviennent assez souvent pour être utiles. Surtout si vous êtes en train de vous demander si l'autre ressent quelque chose… ou s'il est simplement là parce que c'est agréable.</p>`,
   quickSummary: [

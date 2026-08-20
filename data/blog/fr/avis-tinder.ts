@@ -252,7 +252,7 @@ const article: BlogArticleData = {
         {
           id: 'le-ghosting-erige-en-norme-culturelle',
           title: `Le ghosting érigé en norme culturelle`,
-          content: `<p><strong>Tinder a normalisé le ghosting.</strong> La quantité de matchs incite à traiter les conversations comme interchangeables. Tu matches avec quelqu'un, vous échangez deux messages, et puis plus rien. Pas d'explication, pas de refus poli. Juste le silence.</p>
+          content: `<p><strong>Tinder a normalisé le ghosting.</strong> La quantité de matchs incite à traiter les conversations comme interchangeables. Tu matches avec quelqu'un, <a href="/blog/questions-a-poser-a-une-fille/">vous échangez deux messages, et puis plus rien</a>. Pas d'explication, pas de refus poli. Juste le silence.</p>
 
 <p>Ce n'est pas entièrement la faute de l'application, c'est aussi un comportement humain. Mais <strong>le design encourage la consommation</strong>, accumuler des matchs comme des points. Et pour beaucoup d'utilisateurs, c'est épuisant.</p>`,
         },

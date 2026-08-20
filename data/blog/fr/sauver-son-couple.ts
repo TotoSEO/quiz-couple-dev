@@ -155,7 +155,7 @@ const article: BlogArticleData = {
         {
           id: 'quand-consulter',
           title: "Les signaux qu'il est temps de consulter",
-          content: `<p>Tu te demandes si c'est "assez grave" pour consulter ? Voici quelques repères. Si les mêmes problèmes reviennent depuis plus de six mois sans amélioration. Si les disputes deviennent destructrices : cris, insultes, murs de silence de plusieurs jours. Si l'un de vous a complètement décroché émotionnellement. Si un événement majeur a secoué le couple (infidélité, deuil, crise professionnelle) et que vous n'arrivez pas à le traverser ensemble.</p>
+          content: `<p>Tu te demandes si c'est "assez grave" pour consulter ? Voici quelques repères. Si les mêmes problèmes reviennent depuis plus de six mois sans amélioration. Si les disputes deviennent destructrices : cris, insultes, murs de silence de plusieurs jours. Si l'un de vous a complètement décroché émotionnellement. Si un événement majeur a secoué le couple (<a href="/blog/pardonner-une-infidelite/">infidélité</a>, deuil, crise professionnelle) et que vous n'arrivez pas à le traverser ensemble.</p>
 <p><strong>La règle simple : si tu te poses la question, c'est probablement que c'est le bon moment.</strong> Personne n'a jamais regretté d'avoir consulté trop tôt. Beaucoup regrettent d'avoir consulté trop tard.</p>`,
         },
         {
