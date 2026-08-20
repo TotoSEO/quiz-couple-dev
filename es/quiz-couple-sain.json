@@ -3,7 +3,7 @@
     "badge": "Gratis • Sin registro • 5 min",
     "title": "¿Tu relación es sana? - Test online gratuito",
     "intro1": "Están bien juntos… ¿pero realmente lo están? Esta es una pregunta que no siempre nos hacemos abiertamente. Este test de pareja sana está aquí para ayudarles a ver más claro, jugando el juego con honestidad.",
-    "intro2": "Este quiz interactivo está diseñado para hacerse en pareja. Cada uno responde las mismas preguntas por separado. Sus puntuaciones se suman para dar un resultado global sobre 80 puntos.",
+    "intro2": "Este test se hace de dos maneras, a vuestra elección. En solo, respondéis juntos y obtenéis una puntuación única. En dúo, cada uno responde las mismas preguntas por turnos, con una puntuación por persona y la media de la pareja. No todas las preguntas pesan igual: la confianza, el futuro común y el respeto cuentan más que el reparto de las tareas. No hay respuestas buenas ni malas, solo vuestra realidad vista de cerca.",
     "titleHighlight": "sana"
   },
   "quiz": {
@@ -94,7 +94,7 @@
     "faq1Q": "¿Este test de pareja sana es realmente gratis?",
     "faq1A": "Sí, nuestro test es 100% gratuito, sin registro y sin límite de uso.",
     "faq2Q": "¿Cómo funciona la puntuación del test?",
-    "faq2A": "Cada miembro de la pareja responde las mismas 20 preguntas. Cada respuesta otorga entre 0,5 y 2 puntos.",
+    "faq2A": "Elegís el modo al principio. En solo, respondéis juntos a las 20 preguntas y obtenéis una puntuación única. En dúo, cada uno responde las mismas 20 preguntas por turnos: una puntuación por persona, más la media de la pareja. El resultado es un porcentaje y no un total de puntos, porque cada pregunta cuenta según su importancia. No tener proyectos de futuro pesa tres veces más que un desequilibrio en las tareas del hogar, y las 20 preguntas cubren siempre los mismos grandes temas: comunicación, confianza, conflictos, intimidad, autonomía, futuro y bienestar.",
     "faq3Q": "¿Qué hacer si nuestras puntuaciones individuales son muy diferentes?",
     "faq3A": "Una diferencia importante indica que no perciben su relación de la misma manera. Es una información valiosa para discutir juntos."
   }

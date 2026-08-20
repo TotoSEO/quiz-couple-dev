@@ -8435,3 +8435,65 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   margin: 0.7rem auto 0; padding: 0; max-width: none;
   border: 0; background: none;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   TEST COUPLE SAIN : choix du mode SOLO / DUO
+   Deux cartes côte à côte, le nom du mode en très gros, la
+   description et le type de score en dessous.
+   ═══════════════════════════════════════════════════════════ */
+.sain-modes {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+  width: 100%; max-width: 34rem; margin: 0 auto 1.5rem;
+}
+.sain-mode {
+  --sm-h: 340; --sm-s: 65%; --sm-l: 65%;
+  position: relative; display: flex; flex-direction: column; align-items: center;
+  gap: .35rem; padding: 1.6rem 1rem 1.35rem; cursor: pointer; text-align: center;
+  border: 2px solid hsl(var(--border)); border-radius: 1.25rem;
+  background: hsl(var(--card));
+  transition: transform .2s cubic-bezier(.34, 1.56, .64, 1), border-color .2s ease, box-shadow .2s ease;
+}
+.sain-mode::before {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(160deg, hsl(var(--sm-h) var(--sm-s) var(--sm-l) / .14), transparent 62%);
+  opacity: .9;
+}
+.sain-mode > * { position: relative; }
+.sain-mode--duo { --sm-h: 270; --sm-s: 40%; --sm-l: 55%; }
+.sain-mode:hover, .sain-mode:focus-visible {
+  transform: translateY(-4px);
+  border-color: hsl(var(--sm-h) var(--sm-s) var(--sm-l));
+  box-shadow: 0 16px 32px -18px hsl(var(--sm-h) var(--sm-s) var(--sm-l) / .85);
+}
+.sain-mode:focus-visible { outline: 2px solid hsl(var(--sm-h) var(--sm-s) var(--sm-l)); outline-offset: 3px; }
+/* Les deux teintes du dégradé doivent rester lisibles sur les deux fonds :
+   on assombrit la plage en clair, on l'éclaircit en sombre. */
+.sain-mode { --sm-l1: calc(var(--sm-l) - 17%); --sm-l2: calc(var(--sm-l) - 5%); }
+.dark .sain-mode { --sm-l1: calc(var(--sm-l) + 5%); --sm-l2: calc(var(--sm-l) + 17%); }
+.sain-mode-nom {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800;
+  font-size: clamp(1.9rem, 7vw, 2.6rem); line-height: 1; letter-spacing: .06em;
+  background: linear-gradient(135deg,
+    hsl(var(--sm-h) var(--sm-s) var(--sm-l1)),
+    hsl(var(--sm-h) var(--sm-s) var(--sm-l2)));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.sain-mode-desc {
+  margin-top: .45rem; font-size: .85rem; line-height: 1.4;
+  color: hsl(var(--foreground));
+}
+.sain-mode-score {
+  margin-top: .2rem; font-size: .72rem; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase;
+  color: hsl(var(--sm-h) var(--sm-s) calc(var(--sm-l) - 18%));
+}
+.dark .sain-mode-score { color: hsl(var(--sm-h) var(--sm-s) calc(var(--sm-l) + 16%)); }
+.sain-badge-solo {
+  background: hsl(340 65% 65% / .16); color: hsl(340 65% 42%);
+}
+.dark .sain-badge-solo { color: hsl(340 65% 78%); }
+@media (prefers-reduced-motion: reduce) { .sain-mode { transition: none; } }
+@media (max-width: 430px) {
+  .sain-modes { grid-template-columns: 1fr; gap: .8rem; max-width: 22rem; }
+  .sain-mode { padding: 1.25rem 1rem 1.1rem; }
+}

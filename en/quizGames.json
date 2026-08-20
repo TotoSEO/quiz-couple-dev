@@ -220,6 +220,8 @@
     "shareYourResult": "Share your result!",
     "loveScore": "Love score",
     "shareWithFriends": "Share your result with friends",
+    "coupleScore": "Your relationship score",
+    "coupleAverage": "Your relationship average",
     "totalCoupleScore": "Total couple score",
     "low": "Two worlds to explore",
     "lowDesc": "Your answers often differ, and that is not a problem: this test compares your tastes, not how solid your relationship is. Above all, you have plenty left to discover about each other.",
@@ -433,7 +435,20 @@
     "yourName": "Your partner's first name",
     "namePlaceholder": "e.g. Lucas"
   },
+  "sainMode": {
+    "titre": "How do you want to take the test?",
+    "sousTitre": "Pick your format, the questionnaire is the same either way.",
+    "soloNom": "SOLO",
+    "soloDesc": "You answer the questions together",
+    "soloScore": "Single score",
+    "duoNom": "DUO",
+    "duoDesc": "You answer the same questions in turn",
+    "duoScore": "Individual scores + average",
+    "soloBadge": "Your shared answer",
+    "retour": "Change mode"
+  },
   "healthy": {
+    "securiteNote": "One of your answers touches on fear, manipulation or humiliation. That point matters more than the rest of the score: it deserves a closer look, on your own or with support.",
     "gapWarning": "⚠️ The gap between your scores is significant. Take the time to talk about it calmly, without turning it into a competition."
   },
   "attachment": {

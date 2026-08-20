@@ -220,6 +220,8 @@
     "shareYourResult": "Partagez votre résultat !",
     "loveScore": "Score d'amour",
     "shareWithFriends": "Partagez votre résultat avec vos amis",
+    "coupleScore": "Score de votre couple",
+    "coupleAverage": "Moyenne de votre couple",
     "totalCoupleScore": "Score total du couple",
     "low": "Des univers à découvrir",
     "lowDesc": "Vos réponses divergent souvent, et ce n'est pas un problème : ce test compare vos goûts, pas la solidité de votre couple. Vous avez surtout beaucoup à vous découvrir.",
@@ -439,7 +441,20 @@
     "introTitle": "Quel est votre style d'attachement ?",
     "yourStyle": "Votre style d'attachement"
   },
+  "sainMode": {
+    "titre": "Comment voulez-vous passer le test ?",
+    "sousTitre": "Choisissez votre formule, le questionnaire est le même dans les deux cas.",
+    "soloNom": "SOLO",
+    "soloDesc": "Vous répondez à deux aux questions",
+    "soloScore": "Score unique",
+    "duoNom": "DUO",
+    "duoDesc": "Vous répondez aux mêmes questions à tour de rôle",
+    "duoScore": "Scores individuels + moyenne",
+    "soloBadge": "Votre réponse commune",
+    "retour": "Changer de mode"
+  },
   "healthy": {
+    "securiteNote": "Une de vos réponses porte sur la peur, la manipulation ou l'humiliation. Ce point compte davantage que le reste du score : il mérite d'être regardé de près, seul·e ou accompagné·e.",
     "gapWarning": "⚠️ L'écart entre vos scores est significatif. Prenez le temps de discuter de vos perceptions respectives."
   },
   "jeu": {

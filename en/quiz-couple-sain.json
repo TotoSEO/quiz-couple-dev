@@ -3,7 +3,7 @@
     "badge": "Free • No registration • 5 min",
     "title": "Is Your Relationship Healthy? - Free Online Quiz",
     "intro1": "You're happy together… but are you really? This is a question we don't always ask openly, sometimes out of fear of the answer, sometimes because we lack the tools to think about it. This healthy couple test is here to help you both see more clearly, by playing the game honestly.",
-    "intro2": "This interactive quiz is designed to be taken as a couple. Each partner answers the same questions separately. Your scores are then added together to give an overall result out of 80 points. No right or wrong answers, just your reality, seen up close.",
+    "intro2": "This test comes in two formats, your choice. In solo, you answer together and get a single score. In duo, you each answer the same questions in turn, with a score per person plus the couple's average. Not every question carries the same weight: trust, a shared future and respect count for more than who does the dishes. No right or wrong answers, just your reality, seen up close.",
     "titleHighlight": "Healthy"
   },
   "quiz": {
@@ -94,7 +94,7 @@
     "faq1Q": "Is this healthy couple test really free?",
     "faq1A": "Yes, our test is 100% free, no registration and unlimited use. 20 questions are randomly selected from 78 for a different test every time.",
     "faq2Q": "How does the test scoring work?",
-    "faq2A": "Each partner answers the same 20 questions. Each answer gives between 0.5 and 2 points. Individual score is out of 40, and the couple's total score is out of 80.",
+    "faq2A": "You pick the mode at the start. In solo, you answer the 20 questions together and get a single score. In duo, you each answer the same 20 questions in turn: one score per person, plus the couple's average. The result is a percentage rather than a points total, because each question counts according to its importance. Having no plans for the future weighs three times more than an imbalance in household chores, and the 20 questions always cover the same core themes: communication, trust, conflict, intimacy, independence, the future and wellbeing.",
     "faq3Q": "What if our individual scores are very different?",
     "faq3A": "A significant gap between your scores indicates that you don't perceive your relationship the same way. This is valuable information worth discussing together, without judgment."
   }
