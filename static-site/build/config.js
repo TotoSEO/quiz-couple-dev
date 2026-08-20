@@ -934,9 +934,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'rupture-pervers-narcissique',
     category: 'psychologie',
     featuredImage: '/blog/rupture-pervers-narcissique.webp',
-    frOnly: true,
     slugs: {
       fr: 'rupture-pervers-narcissique',
+      en: 'breaking-up-with-a-narcissist',
+      es: 'ruptura-con-un-narcisista',
+      de: 'trennung-von-einem-narzissten',
+      it: 'rottura-con-un-narcisista',
     },
     publishedAt: '2026-10-20',
   },
