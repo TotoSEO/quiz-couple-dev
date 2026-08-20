@@ -843,9 +843,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'sortir-de-la-dependance-affective',
     category: 'psychologie',
     featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
-    frOnly: true,
     slugs: {
       fr: 'sortir-de-la-dependance-affective',
+      en: 'overcome-emotional-dependency',
+      es: 'superar-la-dependencia-emocional',
+      de: 'emotionale-abhaengigkeit-ueberwinden',
+      it: 'superare-la-dipendenza-affettiva',
     },
     publishedAt: '2026-09-25',
   },
