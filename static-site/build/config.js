@@ -765,9 +765,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'questions-a-poser-a-son-crush',
     category: 'vie-de-couple',
     featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
-    frOnly: true,
     slugs: {
       fr: 'questions-a-poser-a-son-crush',
+      en: 'questions-to-ask-your-crush',
+      es: 'preguntas-para-tu-crush',
+      de: 'fragen-an-deinen-crush',
+      it: 'domande-da-fare-al-tuo-crush',
     },
     publishedAt: '2026-09-04',
   },
