@@ -947,9 +947,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'questions-debut-de-relation',
     category: 'vie-de-couple',
     featuredImage: '/blog/questions-debut-de-relation.webp',
-    frOnly: true,
     slugs: {
       fr: 'questions-debut-de-relation',
+      en: 'questions-early-relationship',
+      es: 'preguntas-inicio-relacion',
+      de: 'fragen-beziehungsanfang',
+      it: 'domande-inizio-relazione',
     },
     publishedAt: '2026-10-23',
   },
