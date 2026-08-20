@@ -1038,9 +1038,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'dependance-affective-amitie',
     category: 'psychologie',
     featuredImage: '/blog/dependance-affective-amitie.webp',
-    frOnly: true,
     slugs: {
       fr: 'dependance-affective-amitie',
+      en: 'emotional-dependency-in-friendship',
+      es: 'dependencia-emocional-en-la-amistad',
+      de: 'emotionale-abhaengigkeit-in-freundschaften',
+      it: 'dipendenza-affettiva-in-amicizia',
     },
     publishedAt: '2026-11-17',
   },
