@@ -882,9 +882,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'relation-toxique-signes',
     category: 'psychologie',
     featuredImage: '/blog/relation-toxique-signes.webp',
-    frOnly: true,
     slugs: {
       fr: 'relation-toxique-signes',
+      en: 'toxic-relationship-signs',
+      es: 'senales-relacion-toxica',
+      de: 'toxische-beziehung-anzeichen',
+      it: 'segnali-relazione-tossica',
     },
     publishedAt: '2026-10-06',
   },
