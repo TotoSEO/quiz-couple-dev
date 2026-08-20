@@ -856,9 +856,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'femme-perverse-narcissique-signes',
     category: 'psychologie',
     featuredImage: '/blog/femme-perverse-narcissique-signes.webp',
-    frOnly: true,
     slugs: {
       fr: 'femme-perverse-narcissique-signes',
+      en: 'narcissistic-woman-signs',
+      es: 'mujer-narcisista-senales',
+      de: 'narzisstische-frau-anzeichen',
+      it: 'donna-narcisista-segnali',
     },
     publishedAt: '2026-09-29',
   },
