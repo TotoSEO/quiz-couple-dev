@@ -791,9 +791,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'questions-a-poser-a-une-fille',
     category: 'vie-de-couple',
     featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
-    frOnly: true,
     slugs: {
       fr: 'questions-a-poser-a-une-fille',
+      en: 'questions-to-ask-a-girl',
+      es: 'preguntas-para-una-chica',
+      de: 'fragen-an-ein-maedchen',
+      it: 'domande-da-fare-a-una-ragazza',
     },
     publishedAt: '2026-09-11',
   },
