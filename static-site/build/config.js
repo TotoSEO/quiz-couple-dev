@@ -1168,9 +1168,12 @@ export const BLOG_ARTICLES = [
     internalSlug: 'signes-infidelite',
     category: 'psychologie',
     featuredImage: '/blog/signes-infidelite.webp',
-    frOnly: true,
     slugs: {
       fr: 'signes-infidelite',
+      en: 'signs-of-infidelity',
+      es: 'senales-de-infidelidad',
+      de: 'anzeichen-fuer-untreue',
+      it: 'segnali-di-infedelta',
     },
     publishedAt: '2026-12-22',
   },
