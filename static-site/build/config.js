@@ -1142,9 +1142,12 @@ export const BLOG_ARTICLES = [
     internalSlug: '5-langages-de-l-amour',
     category: 'vie-de-couple',
     featuredImage: '/blog/5-langages-de-l-amour.webp',
-    frOnly: true,
     slugs: {
       fr: '5-langages-de-l-amour',
+      en: '5-love-languages',
+      es: '5-lenguajes-del-amor',
+      de: '5-sprachen-der-liebe',
+      it: '5-linguaggi-dell-amore',
     },
     publishedAt: '2026-12-15',
   },
