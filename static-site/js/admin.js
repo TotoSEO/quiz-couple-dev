@@ -625,8 +625,11 @@
   // milliers de parties finies a quelques dizaines de parties lancees, et
   // sort un pourcentage a quatre chiffres. Le taux n'a de sens que sur la
   // periode ou les deux comptent : depuis le premier lancement enregistre.
-  var MINI_PAGE = 10;    // sous ce nombre de lancements, un taux par page est du bruit
-  var MINI_GLOBAL = 25;  // idem pour le taux global
+  // Seuil pour la COURBE de taux d'une page seulement : un point calcule sur
+  // deux ou trois lancements saute dans tous les sens et rend le trace
+  // illisible. Le tableau, lui, n'a plus de seuil : les deux nombres y sont
+  // affiches a cote du rapport, chacun juge de l'echantillon.
+  var MINI_PAGE = 5;
 
   // Debut de la fenetre : le lendemain du premier lancement enregistre, pas
   // le jour meme. Ce premier jour est forcement partiel, la mesure ayant ete
@@ -1035,7 +1038,17 @@
     // quelques heures de lancements : on borne a la fenetre commune. Sur une
     // periode choisie, les deux series couvrent deja les memes jours.
     var d = statsPeriode === 0 ? comptesFenetre(slug) : c;
-    if (!d || d.lances < MINI_PAGE) { res.motif = 'trop peu de lancés'; return res; }
+    // Plus de seuil minimum : les deux nombres sont affiches juste a cote,
+    // donc masquer le rapport n'apprend rien de plus a personne. 2 finis sur
+    // 2 lances, ca fait 100 %, et la colonne « Lancés » dit assez que
+    // l'echantillon est mince.
+    if (!d || !d.lances) {
+      // Sur « Tout », une page qui a bien des lancements mais aucun dans la
+      // fenetre commune n'est pas une page sans lancement : c'est la mesure
+      // qui est trop jeune pour que le rapport ait un sens.
+      res.motif = (statsPeriode === 0 && c.lances > 0) ? 'mesure des lancés trop récente' : 'aucun lancé';
+      return res;
+    }
     res.ratio = tauxDepuis(d.lances, d.finis);
     res.ratioFinis = d.finis;
     res.ratioLances = d.lances;
@@ -1066,7 +1079,16 @@
 
     var lignes = statsCounts.map(function (r) {
       return { slug: r.quiz_slug, famille: familleQuiz(r.quiz_slug), v: troisValeurs(r.quiz_slug, Number(r.total) || 0) };
+    }).filter(function (l) {
+      // Une page sans la moindre partie sur la periode choisie n'est pas de
+      // cette periode : elle sortait une ligne a zero partout et faussait le
+      // « N pages » de sa famille.
+      return l.v.lances > 0 || l.v.finis > 0;
     });
+    if (lignes.length === 0) {
+      listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Aucune partie sur cette période.</p>';
+      return;
+    }
 
     // Le fond des lignes suit la colonne de tri : classer par ratio dessine
     // les ratios, classer par volume dessine les volumes. L'echelle est
@@ -1076,7 +1098,18 @@
       lignes.forEach(function (l) { if (l.v[statsTri.col] > maxGlobal) maxGlobal = l.v[statsTri.col]; });
     }
 
-    var html = '<div class="stats-entetes">'
+    // Sur « Tout », les finis portent des mois d'historique que les lances
+    // n'ont pas encore. Les deux colonnes ne parlent alors pas de la meme
+    // periode, et le ratio ne peut pas se calculer : on le dit une fois, au
+    // lieu de laisser quarante tirets sans explication.
+    var html = '';
+    if (statsPeriode === 0 && lignes.some(function (l) { return l.v.motif === 'mesure des lancés trop récente'; })) {
+      var depuis = debutFenetre();
+      html += '<p class="stats-avis">Sur « Tout », les finis remontent à des mois que les lancés n\'ont pas encore : les deux colonnes ne couvrent pas la même période, et le ratio ne peut pas se calculer. '
+        + (depuis ? 'Il apparaîtra à partir du ' + jourCourt(depuis) + '. ' : '')
+        + 'Choisissez une période pour comparer ce qui est comparable.</p>';
+    }
+    html += '<div class="stats-entetes">'
       + '<span class="stats-entete-nom">Page</span>'
       + COLONNES.map(function (c) {
           var actif = statsTri.col === c.cle;
@@ -1147,7 +1180,7 @@
         var aide = document.getElementById('admin-stats-mesure-aide');
         if (aide) {
           aide.textContent = statsTri.col === 'ratio'
-            ? 'Trié par taux de finition. Rouge sous 40 %, vert à partir de 70 %. Un tiret : page à résultat immédiat, ou moins de ' + MINI_PAGE + ' lancés.'
+            ? 'Trié par taux de finition. Rouge sous 40 %, vert à partir de 70 %. Un tiret : page à résultat immédiat, ou aucun lancé enregistré.'
             : 'Trié par ' + (statsTri.col === 'lances' ? 'parties lancées' : 'parties finies') + '. Cliquez une ligne pour voir sa courbe.';
         }
         renderStatsList();
