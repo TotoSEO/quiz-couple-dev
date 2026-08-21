@@ -238,6 +238,12 @@
     "description": "20 questions pour distinguer l'amour du béguin et savoir ce que vous ressentez.",
     "metaDescription": "Suis-je amoureux ou juste attiré ? 20 questions pour distinguer l'amour du béguin. Test gratuit, résultat immédiat et sans inscription."
   },
+  "testAmeSoeur": {
+    "title": "Test âme sœur : est-ce vraiment la bonne personne ?",
+    "shortTitle": "Test âme sœur",
+    "description": "20 questions sur quatre piliers pour savoir si cette personne est votre âme sœur.",
+    "metaDescription": "Âme sœur ou belle histoire ? 20 questions, un indice et un verdict qui ne se contente pas de flatter. Test gratuit, seul ou à deux, sans inscription."
+  },
   "jeuxCouple": {
     "title": "Jeux de couple en ligne : 8 jeux gratuits à jouer à deux",
     "shortTitle": "Jeux de couple",

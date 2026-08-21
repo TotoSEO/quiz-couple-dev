@@ -295,7 +295,10 @@ var QuizEngine = (function() {
     // longs a expliquer, et les grandes cartes, quand le nom du mode tient en un
     // mot et merite d'etre lu en premier.
     var grand = !!o.grand;
-    var liste = el('div', grand ? 'choix-modes' : 'quiz-modes-liste');
+    // Trois formats tiennent sur une ligne au-dessus de la coupure mobile ;
+    // en dessous, la grille repasse a une colonne comme pour deux.
+    var trois = (o.modes || []).length > 2;
+    var liste = el('div', grand ? ('choix-modes' + (trois ? ' choix-modes--trois' : '')) : 'quiz-modes-liste');
     (o.modes || []).forEach(function(m) {
       var carte = el('button', grand
         ? 'choix-mode choix-mode--' + m.id
@@ -800,6 +803,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'tester-couple', icon: '💕', route: 'testCouple' },
     { type: 'test', key: 'common-points', icon: '🎯', route: 'testCommonPoints' },
     { type: 'test', key: 'compatibilite', icon: '💘', route: 'testCompatibilite' },
+    { type: 'test', key: 'ame-soeur', icon: '💫', route: 'testAmeSoeur' },
     { type: 'test', key: 'suis-je-amoureux', icon: '💗', route: 'testSuisJeAmoureux' },
     { type: 'test', key: 'distance', icon: '🌍', route: 'testDistance' },
     { type: 'test', key: 'toxic', icon: '⚠️', route: 'testToxic' },
@@ -4562,6 +4566,300 @@ var QuizEngine = (function() {
   };
 
   // ═══════════════════════════════════════════════════════════
+  // PILIERS QUIZ - ame soeur
+  // Un test a points, mais dont le verdict ne sort pas d'une tranche de
+  // score : il sort de la FORME du profil. Un lien peut marquer tres haut
+  // sur l'evidence et l'accord, et ne pas etre une ame soeur pour autant
+  // si l'un des deux a disparu en chemin. C'est ce que la classification
+  // regarde, et c'est ce qui distingue ce moteur des tests solo.
+  //
+  // L'indice affiche est la moyenne des piliers, le plus faible compte
+  // double : une ame soeur ne se juge pas a son meilleur cote. Sans cette
+  // regle, un profil fusionnel affichait 85 % au-dessus d'un verdict qui
+  // disait le contraire.
+  //
+  // Deux modes : seul, sur un prenom saisi, ou a deux, chacun repondant
+  // aux memes questions sur l'autre.
+  // ═══════════════════════════════════════════════════════════
+  function PiliersQuiz(config) {
+    this.container = config.container;
+    this.questions = config.questions;
+    this.prefix = config.prefix;
+    this.lang = config.lang || 'fr';
+    this.piliers = config.piliers || [];
+    this.fiches = config.fiches || {};
+    this.classe = config.classify;
+    this.verdicts = config.verdicts || {};
+    this.verdictsCouple = config.verdictsCouple || {};
+    this.duo = !!config.duo;
+    this.labels = config.labels || {};
+    this.phase = 'setup';
+    this.joueurs = ['', ''];
+    this.courant = 0;
+    this.currentQ = 0;
+    this.reponses = [[], []];
+    this.render();
+  }
+
+  // Le prenom de l'autre, cote joueur qui repond. En solo il n'y a qu'un
+  // prenom saisi ; en duo, chacun repond sur son partenaire.
+  PiliersQuiz.prototype.autre = function(i) {
+    var j = (i === undefined) ? this.courant : i;
+    return this.duo ? this.joueurs[1 - j] : this.joueurs[0];
+  };
+
+  // Les enonces, les reponses ET les verdicts portent le prenom. Le moteur
+  // solo ne le remplacait que dans l'enonce, ce qui laissait « {{name}} »
+  // a l'ecran des que la reponse en contenait un.
+  PiliersQuiz.prototype.prenom = function(t, i) {
+    var nom = this.autre(i);
+    return nom ? String(t || '').replace(/\{\{name\}\}/g, nom) : String(t || '');
+  };
+
+  PiliersQuiz.prototype.render = function() {
+    this.container.innerHTML = '';
+    if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'relais') this.renderRelais();
+    else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'results') this.renderResults();
+  };
+
+  PiliersQuiz.prototype.renderSetup = function() {
+    var self = this;
+    var corps = [], champs = [];
+    var etiquettes = this.duo
+      ? [tg('playerSetup.player1', 'Joueur 1'), tg('playerSetup.player2', 'Joueur 2')]
+      : [tg('ui.yourName', 'Prénom de votre partenaire')];
+
+    for (var i = 0; i < etiquettes.length; i++) {
+      (function(idx) {
+        var bloc = el('div', 'quiz-setup-nom');
+        var lab = el('label', 'quiz-setup-nom-label', etiquettes[idx]);
+        var champ = el('input', 'input');
+        champ.type = 'text';
+        champ.placeholder = tg('playerSetup.firstName', 'Prénom');
+        champ.maxLength = 30;
+        champ.id = 'piliers-nom-' + idx;
+        lab.setAttribute('for', champ.id);
+        bloc.appendChild(lab);
+        bloc.appendChild(champ);
+        corps.push(bloc);
+        champs.push(champ);
+      })(i);
+    }
+
+    var ecran = ecranDepart({
+      icone: this.labels.icon || '💫',
+      titre: this.labels.introTitle || tg('playerSetup.readyForTest', 'Prêt pour le test ?'),
+      corps: corps,
+      meta: pastilleMeta(this.questions.length),
+      bouton: tg('playerSetup.startTest', 'Commencer le test'),
+      onStart: function() {
+        for (var k = 0; k < champs.length; k++) {
+          var v = champs[k].value.trim();
+          if (!v) { champs[k].classList.add('input--erreur'); champs[k].focus(); return; }
+          self.joueurs[k] = v;
+        }
+        self.currentQ = 0;
+        self.courant = 0;
+        self.reponses = [[], []];
+        self.phase = self.duo ? 'relais' : 'playing';
+        self.render();
+      }
+    });
+    this.container.appendChild(ecran.wrap);
+  };
+
+  PiliersQuiz.prototype.renderRelais = function() {
+    var self = this;
+    this.container.appendChild(relaisJoueur(this, {
+      nom: this.joueurs[this.courant],
+      emoji: '💫',
+      note: tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard'),
+      suite: function() { self.phase = 'playing'; self.render(); }
+    }));
+  };
+
+  PiliersQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+
+    renderProgressBar(wrap, this.currentQ, total);
+    if (this.duo) renderPlayerBadge(wrap, this.joueurs[this.courant], this.courant === 0 ? 'badge-pink' : 'badge-blue');
+
+    var texte = this.prenom(tgd(this.prefix + '.q' + q.id, q.text));
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(texte)));
+
+    var liste = el('div', 'space-y-2');
+    var lettres = ['A', 'B', 'C', 'D', 'E'];
+    q.options.forEach(function(opt, idx) {
+      var libelle = self.prenom(tgd(self.prefix + '.q' + q.id + opt.id, opt.text));
+      var bouton = el('button', 'quiz-option');
+      bouton.innerHTML = '<span class="quiz-option-letter">' + (lettres[idx] || '') + '</span><span>' + esc(libelle) + '</span>';
+      bouton.style.animationDelay = (idx * 60) + 'ms';
+      bouton.addEventListener('click', function() {
+        if (!answerLock(self)) return;
+        bouton.classList.add('selected');
+        var voisins = liste.querySelectorAll('.quiz-option');
+        for (var s = 0; s < voisins.length; s++) {
+          if (voisins[s] !== bouton) voisins[s].style.opacity = '0.5';
+          voisins[s].style.pointerEvents = 'none';
+        }
+        self.reponses[self.courant].push({ id: q.id, points: opt.points || 0 });
+        setTimeout(function() { self.avance(); }, 300);
+      });
+      liste.appendChild(bouton);
+    });
+    wrap.appendChild(liste);
+    this.container.appendChild(wrap);
+  };
+
+  PiliersQuiz.prototype.avance = function() {
+    if (this.currentQ < this.questions.length - 1) {
+      this.currentQ++;
+      this.render();
+      return;
+    }
+    if (this.duo && this.courant === 0) {
+      this.courant = 1;
+      this.currentQ = 0;
+      this.phase = 'relais';
+      this.render();
+      return;
+    }
+    this.phase = 'results';
+    this.render();
+  };
+
+  // Pourcentage par pilier, puis indice global. Le maximum se recalcule a
+  // partir des points reellement poses, donc le bareme peut changer sans
+  // qu'aucun seuil ne soit a reecrire.
+  PiliersQuiz.prototype.profil = function(joueur) {
+    var obtenu = {}, maxi = {}, i, p;
+    for (i = 0; i < this.piliers.length; i++) { obtenu[this.piliers[i].id] = 0; maxi[this.piliers[i].id] = 0; }
+    var parId = {};
+    for (i = 0; i < this.questions.length; i++) parId[this.questions[i].id] = this.questions[i];
+    var reponses = this.reponses[joueur] || [];
+    for (i = 0; i < reponses.length; i++) {
+      var q = parId[reponses[i].id];
+      if (!q) continue;
+      var fiche = this.fiches[q.id];
+      var pilier = fiche && fiche.d;
+      if (!pilier || obtenu[pilier] === undefined) continue;
+      var meilleur = 0;
+      for (var o = 0; o < q.options.length; o++) if ((q.options[o].points || 0) > meilleur) meilleur = q.options[o].points;
+      obtenu[pilier] += reponses[i].points;
+      maxi[pilier] += meilleur;
+    }
+    var pct = {}, mini = null, somme = 0, nb = 0;
+    for (i = 0; i < this.piliers.length; i++) {
+      p = this.piliers[i].id;
+      pct[p] = maxi[p] ? Math.round(obtenu[p] / maxi[p] * 100) : 0;
+      somme += pct[p]; nb++;
+      if (mini === null || pct[p] < mini) mini = pct[p];
+    }
+    var indice = nb ? Math.round((somme + (mini || 0)) / (nb + 1)) : 0;
+    return { pct: pct, indice: Math.max(0, Math.min(100, indice)) };
+  };
+
+  PiliersQuiz.prototype.barres = function(pct, compact) {
+    var self = this;
+    var bloc = el('div', 'profile-breakdown' + (compact ? ' profile-breakdown--compact' : ' max-w-md mx-auto mb-6'));
+    this.piliers.forEach(function(pi) {
+      var v = pct[pi.id] || 0;
+      var ligne = el('div', 'profile-axis-row');
+      ligne.innerHTML =
+        '<div class="profile-axis-head"><span>' + esc(pi.label || pi.id) + '</span>' +
+        '<span class="profile-axis-pct">' + v + '%</span></div>' +
+        '<div class="profile-axis-bar"><div class="profile-axis-fill" data-w="' + v + '" style="width:0%;background:' + pi.color + '"></div></div>';
+      bloc.appendChild(ligne);
+    });
+    setTimeout(function() {
+      var f = self.container.querySelectorAll('.profile-axis-fill');
+      for (var i = 0; i < f.length; i++) f[i].style.width = f[i].getAttribute('data-w') + '%';
+    }, 120);
+    return bloc;
+  };
+
+  PiliersQuiz.prototype.verdictDe = function(joueur) {
+    var r = this.profil(joueur);
+    var cle = this.classe ? this.classe(r.pct, r.indice) : '';
+    var v = this.verdicts[cle] || {};
+    return {
+      cle: cle, indice: r.indice, pct: r.pct,
+      titre: this.prenom(v.title, joueur),
+      texte: this.prenom(v.description, joueur),
+      conseil: this.prenom(v.advice, joueur)
+    };
+  };
+
+  PiliersQuiz.prototype.renderResults = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine quiz-result-card');
+
+    if (!this.duo) {
+      var r = this.verdictDe(0);
+      var haut = el('div', 'text-center');
+      haut.appendChild(el('p', 'text-sm text-muted-foreground mb-1', this.labels.resultLabel || ''));
+      var anneau = el('div', '');
+      anneau.innerHTML = renderScoreRing(r.indice);
+      haut.appendChild(anneau);
+      haut.appendChild(el('h2', 'text-2xl font-bold mt-3 mb-5 quiz-reveal-enter', esc(r.titre)));
+      wrap.appendChild(haut);
+      wrap.appendChild(this.barres(r.pct));
+      if (r.texte) wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto text-center quiz-reveal-enter', r.texte));
+      if (r.conseil) {
+        var enc = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto quiz-reveal-enter');
+        enc.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(r.conseil);
+        wrap.appendChild(enc);
+      }
+      renderActionButtons(wrap, {
+        share: { type: 'profil', verdict: r.titre },
+        restart: function() { self.phase = 'setup'; self.render(); }
+      });
+      this.container.appendChild(wrap);
+      smoothScroll(wrap, 'center');
+      return;
+    }
+
+    wrap.appendChild(el('h2', 'text-2xl font-bold text-center mb-6', tg('result.quizResults', 'Résultats du quiz')));
+    var grille = el('div', 'grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6');
+    var res = [this.verdictDe(0), this.verdictDe(1)];
+    for (var i = 0; i < 2; i++) {
+      var carte = el('div', 'glass-card rounded-xl p-4 text-center');
+      carte.appendChild(el('p', 'font-semibold mb-2', esc(this.joueurs[i])));
+      var bague = el('div', '');
+      bague.innerHTML = renderScoreRing(res[i].indice, 'sm');
+      carte.appendChild(bague);
+      carte.appendChild(el('p', 'font-bold mt-2 mb-3', esc(res[i].titre)));
+      carte.appendChild(this.barres(res[i].pct, true));
+      if (res[i].texte) carte.appendChild(el('p', 'text-sm text-muted-foreground text-left mt-3', res[i].texte));
+      grille.appendChild(carte);
+    }
+    wrap.appendChild(grille);
+
+    var ecart = Math.abs(res[0].indice - res[1].indice);
+    var moyenne = Math.round((res[0].indice + res[1].indice) / 2);
+    var cleCouple = ecart >= 20 ? 'ecart' : (moyenne >= 70 ? 'h' : (moyenne >= 45 ? 'm' : 'l'));
+    var texteCouple = this.verdictsCouple[cleCouple];
+    if (texteCouple) {
+      var boite = el('div', 'glass-card rounded-xl p-5 text-center mb-4');
+      boite.appendChild(el('h3', 'font-bold mb-2', tg('result.coupleVerdict', 'Verdict du couple')));
+      boite.appendChild(el('p', 'text-muted-foreground', texteCouple));
+      wrap.appendChild(boite);
+    }
+
+    renderActionButtons(wrap, {
+      share: { type: 'duo', pct: moyenne },
+      restart: function() { self.phase = 'setup'; self.render(); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  // ═══════════════════════════════════════════════════════════
   // LES Z'AMOURS - TV game-show engine
   // Faithful to the France 2 show: one partner secretly answers, the
   // other guesses; dramatic reveal, animated TV scoreboard, alternating
@@ -7435,6 +7733,7 @@ var QuizEngine = (function() {
     ParentaliteQuiz: ParentaliteQuiz,
     TruefalseQuiz: TruefalseQuiz,
     ProfileQuiz: ProfileQuiz,
+    PiliersQuiz: PiliersQuiz,
     ZamoursQuiz: ZamoursQuiz,
     TentationQuiz: TentationQuiz,
     PartyGame: PartyGame,

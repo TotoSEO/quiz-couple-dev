@@ -45,6 +45,9 @@ export const ROUTE_SLUGS = {
   testJalousie: { fr: 'test-jalousie-couple', en: 'jealousy-test-couple', es: 'test-celos-pareja', de: 'eifersucht-test-paar', it: 'test-gelosia-coppia' },
   testKarmique: { fr: 'test-relation-karmique', en: 'karmic-relationship-test', es: 'test-relacion-karmica', de: 'karmische-beziehung-test', it: 'test-relazione-karmica' },
   testSuisJeAmoureux: { fr: 'test-suis-je-amoureux', en: 'am-i-in-love-test', es: 'test-estoy-enamorado', de: 'bin-ich-verliebt-test', it: 'test-sono-innamorato' },
+  // Le test ame soeur ouvre en francais seulement, le temps que ses deux
+  // series de questions soient traduites.
+  testAmeSoeur: { fr: 'test-ame-soeur' },
   jeuActionVerite: { fr: 'jeu-action-ou-verite-couple', en: 'truth-or-dare-couple-game', es: 'juego-verdad-o-reto-pareja', de: 'wahrheit-oder-pflicht-paar', it: 'gioco-obbligo-o-verita-coppia' },
   jeuActionVeriteHot: { fr: 'action-ou-verite-coquin', en: 'dirty-truth-or-dare-couples', es: 'verdad-o-reto-picante-pareja', de: 'wahrheit-oder-pflicht-versaut', it: 'obbligo-o-verita-piccante-coppia' },
   jeuxCouple: { fr: 'jeux-de-couple', en: 'couple-games', es: 'juegos-para-parejas', de: 'paarspiele', it: 'giochi-di-coppia' },
@@ -174,6 +177,7 @@ export const ROUTE_CONFIG = {
   testDateNaissance: { template: 'quiz-date-naissance', namespaces: ['quiz-date-naissance', 'quizzes', 'common'] },
   testJalousie: { template: 'quiz-jalousie', namespaces: ['quiz-jalousie', 'quizzes', 'quizGames', 'gd', 'common'] },
   testKarmique: { template: 'quiz-karmique', namespaces: ['quiz-karmique', 'quizzes', 'quizGames', 'gd', 'common'] },
+  testAmeSoeur: { template: 'quiz-ame-soeur', namespaces: ['quiz-ame-soeur', 'quizzes', 'quizGames', 'gd', 'common'] },
   testSuisJeAmoureux: { template: 'quiz-suis-je-amoureux', namespaces: ['quiz-suis-je-amoureux', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuxCouple: { template: 'jeux-couple', namespaces: ['jeux-couple', 'quizzes', 'common'] },
   jeuGages: { template: 'jeu-gages', namespaces: ['jeu-gages', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -1305,6 +1309,7 @@ export const QUIZ_RELATED_ARTICLES = {
   testFinCouple:    ['arreter-ou-continuer-relation', 'les-phases-de-la-rupture-chez-l-homme', 'sauver-son-couple'],
   testAmourAmitie:  ['sentiments-chez-un-homme', 'comment-savoir-si-cest-le-bon'],
   testKarmique:     ['dependance-affective', 'love-bombing', 'arreter-ou-continuer-relation'],
+  testAmeSoeur:     ['dependance-affective', 'love-bombing', 'arreter-ou-continuer-relation'],
   testDateNaissance: ['compatibilite-amoureuse-lion', 'compatibilite-amoureuse-scorpion', 'compatibilite-amoureuse-taureau'],
   testVacances:     ['activites-couple-ete', 'disputes-couple-vacances', 'sauver-son-couple'],
   quizTuPreferes:   ['comment-savoir-si-cest-le-bon', 'activites-couple-ete'],
