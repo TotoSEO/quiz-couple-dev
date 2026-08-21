@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective.svg',
   featuredImageAlt: "Couple embracing on a couch illustrating emotional dependency in a relationship",
   publishedAt: '2026-03-24',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Emotional dependency isn't 'loving too much.' It's no longer knowing how to exist without the other person, and building your entire self-worth around their gaze.",
   introduction: `<p>You check your phone every five minutes. You analyze the slightest change in tone in their messages. When they're distant, you panic. When they're present, you feel relieved, but never truly at peace, because you know it could shift at any moment.</p>
 <p>This isn't intense love. This isn't passion. <strong>This is emotional dependency.</strong> And it affects far more people than we think, men and women, in all types of relationships. This article is here to put words to what you're experiencing, understand where it comes from, and most importantly show you that it's possible to break free.</p>`,

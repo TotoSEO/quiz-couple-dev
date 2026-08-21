@@ -34,58 +34,6 @@ export const blogArticles: BlogArticleMeta[] = [
     locales: { fr: true, en: true, es: true, de: true, it: true },
   },
   {
-    slug: 'avis-tinder',
-    category: 'apps-rencontre',
-    slugs: {
-      fr: 'avis-tinder',
-      en: 'tinder-review',
-      es: 'tinder-opiniones-vale-la-pena',
-      de: 'tinder-bewertung',
-      it: 'recensione-tinder',
-    },
-    publishedAt: '2026-02-24',
-    locales: { fr: true, en: true, es: true, de: true, it: true },
-  },
-  {
-    slug: 'avis-bumble',
-    category: 'apps-rencontre',
-    slugs: {
-      fr: 'avis-bumble',
-      en: 'bumble-app-review',
-      es: 'opiniones-bumble',
-      de: 'bumble-erfahrungen',
-      it: 'recensione-bumble',
-    },
-    publishedAt: '2026-02-25',
-    locales: { fr: true, en: true, es: true, de: true, it: true },
-  },
-  {
-    slug: 'avis-hinge',
-    category: 'apps-rencontre',
-    slugs: {
-      fr: 'avis-hinge-rencontre',
-      en: 'hinge-dating-app-review',
-      es: 'opinion-hinge-app-citas',
-      de: 'hinge-erfahrungen-test',
-      it: 'recensione-hinge-app',
-    },
-    publishedAt: '2026-02-27',
-    locales: { fr: true, en: true, es: true, de: true, it: true },
-  },
-  {
-    slug: 'avis-badoo',
-    category: 'apps-rencontre',
-    slugs: {
-      fr: 'avis-badoo',
-      en: 'badoo-review',
-      es: 'opinion-badoo',
-      de: 'badoo-erfahrungen',
-      it: 'recensione-badoo',
-    },
-    publishedAt: '2026-02-28',
-    locales: { fr: true, en: true, es: true, de: true, it: true },
-  },
-  {
     slug: 'femme-malheureuse-en-couple',
     category: 'vie-de-couple',
     slugs: {

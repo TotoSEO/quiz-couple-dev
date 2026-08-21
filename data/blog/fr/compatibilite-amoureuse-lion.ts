@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Symbole astrologique du Lion, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Le Lion aime avec panache et attend qu'on lui rende. Mais tous les signes ne jouent pas ce jeu-là.`,
   introduction: `<p>On dit souvent que le Lion est égotiste. C'est réducteur. Ce qu'il cherche vraiment en amour, c'est de la réciprocité, juste une réciprocité très visible. Il a besoin de savoir que sa présence compte, que l'autre le voit, que ce qu'il apporte à la relation est reconnu. <strong>Ce n'est pas de la vanité. C'est son langage de l'amour.</strong> Curieux de savoir si votre signe est à la hauteur du Lion ? <a href="/signes-astrologiques-prenoms-compatibilite/">Découvrez votre compatibilité astrologique complète</a>.</p>
 <p>Gouverné par le Soleil, le Lion rayonne, et il a besoin d'un partenaire qui ne tente pas de couvrir cette lumière, mais qui peut briller à ses côtés sans entrer en compétition. La différence est subtile mais capitale. Quelqu'un qui s'efface devant lui l'ennuie. Quelqu'un qui veut prendre sa place l'épuise. L'idéal, c'est quelqu'un qui a sa propre lumière, et qui admire la sienne en retour.</p>

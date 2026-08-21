@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/peur-de-l-engagement.webp',
   featuredImageAlt: "Persona esitante davanti a una porta aperta a forma di cuore, con una valigia in mano",
   publishedAt: '2026-12-11',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La paura dell'impegno non è quasi mai paura dell'altro. È la paura di ciò che si crede di dover perdere impegnandosi... e questo cambia tutto il problema.",
   introduction: `<p>«Non sono pronto.» Tre parole che possono tenere una relazione sospesa per anni. Non pronto a ufficializzare, non pronto ad andare a convivere, non pronto a proiettarsi. E dall'altra parte qualcuno aspetta, tra pazienza e logoramento, ponendosi la vera domanda: sono io il problema, o è lui?</p>
 <p>Risposta breve: né l'uno né l'altro, il più delle volte. <strong>La paura dell'impegno non è quasi mai paura dell'altro: è la paura di ciò che si crede di dover perdere impegnandosi.</strong> La propria libertà, la propria identità, le proprie opzioni... o una paura ancora più antica, quella di riprodurre un naufragio visto troppo da vicino.</p>

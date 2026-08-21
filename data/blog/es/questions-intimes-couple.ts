@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Pareja abrazada en un sofá con luz tenue, en plena conversación cómplice",
   publishedAt: '2026-09-22',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Están las conversaciones de todos los días... y las que no te atreves a empezar. Adivina cuáles acercan más.",
   introduction: `<p>Os lo contáis todo, bueno, casi. El trabajo, los amigos, los planes, qué cenáis hoy. Pero hay un terreno del que se habla mucho menos fácilmente, incluso después de años: lo que el otro siente de verdad, lo que no se atreve a pedir, lo que echa de menos, lo que le apetece. Lo íntimo, lo de verdad.</p>
 <p><strong>Y es una pena, porque ahí es exactamente donde se juega la complicidad de una pareja.</strong> ¡No en las grandes declaraciones! En esas conversaciones un poco más desnudas que las demás, las que se lanzan en voz baja, una noche en la que uno se siente bien.</p>

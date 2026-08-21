@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
   featuredImageAlt: "Dos personas hablando en una mesa, una escucha atentamente a la otra",
   publishedAt: '2026-09-11',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La diferencia entre una conversación que se apaga y una chica con ganas de volver a verte no es tu labia. Es la calidad de tus preguntas, y lo que haces con las respuestas.",
   introduction: `<p>Seamos honestos dos minutos. El problema casi nunca es encontrar UNA pregunta que hacer. El problema es que «¿qué tal?», «¿a qué te dedicas?» y «¿buen finde?» son exactamente como empiezan todas las demás conversaciones que ella tiene ahora mismo...</p>
 <p><strong>Una buena pregunta marca la diferencia porque demuestra algo poco común: que te interesas por ella, no solo por dar conversación.</strong> Y eso, créeme, se nota al instante.</p>

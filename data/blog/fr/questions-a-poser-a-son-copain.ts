@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Jeune couple assis face à face en pleine conversation, elle pose une question en souriant",
   publishedAt: '2026-08-28',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Tu connais son plat préféré et son humeur du dimanche soir. Mais est-ce que tu sais ce qui lui fait vraiment peur, ou ce qu'il n'a jamais osé te demander ?",
   introduction: `<p>Vous pouvez passer une soirée entière ensemble et n'échanger que trois phrases utiles : « on mange quoi », « tu as pris les clés », « ça va, toi ? ». Rassure-toi, ce n'est pas un signe que votre couple va mal ! C'est juste ce qui arrive à tous les couples, en fait. Au bout d'un moment, la logistique finit par manger la conversation.</p>
 <p><strong>Les bonnes questions, c'est un raccourci vers les discussions que vous n'avez plus le réflexe d'avoir.</strong> Pas pour jouer les journalistes, hein. Juste pour retrouver ce moment du début où vous pouviez parler des heures sans voir le temps passer...</p>

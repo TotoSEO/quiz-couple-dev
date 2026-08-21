@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Simbolo astrologico dei Pesci, compatibilità amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `I Pesci amano con un'intensità emotiva che pochi altri segni raggiungono. Ma non tutti sanno nuotare in acque così profonde.`,
   introduction: `<p>I Pesci non amano, si immergono. Quando un Pesci si innamora, non lo fa con la testa. Lo fa con l'anima, con l'immaginazione, con ogni fibra della sua sensibilità. <strong>L'amore per i Pesci non è un capitolo della vita, è il libro intero.</strong> E questa dedizione totale è sia la loro forza più grande che la loro vulnerabilità più scoperta. Per capire se il vostro legame ha la profondità che i Pesci cercano, <a href="/it/segni-zodiacali-nomi-compatibilita/">scoprite la vostra compatibilità tra segni zodiacali e nomi</a>.</p>
 <p>Governati da Nettuno, il pianeta dei sogni e dell'intuizione, i Pesci vivono l'amore come un'esperienza quasi mistica. Non si accontentano di una relazione funzionale, vogliono un legame che trascenda il quotidiano, che abbia una dimensione poetica. Questo non vuol dire che vivano fuori dalla realtà, anche se a volte ci vanno vicini. Vuol dire che hanno bisogno che l'amore li faccia sentire qualcosa di speciale, non ordinario, non meccanico, non scontato.</p>

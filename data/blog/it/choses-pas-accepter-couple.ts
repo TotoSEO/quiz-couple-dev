@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/limites-couple-accepter.webp',
   featuredImageAlt: "Coppia che stabilisce limiti nella propria relazione sentimentale",
   publishedAt: '2026-02-21',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "I comportamenti da non tollerare mai in coppia e come porre i propri limiti.",
   introduction: `<p>Ci sono cose che accettiamo in coppia senza rendercene conto. Non tutto d'un colpo, progressivamente. Un <strong>commento che ferisce</strong>, una volta. Poi due. Poi diventa la norma. Un <strong>comportamento irrispettoso</strong> che all'inizio sciocca, e che finiamo per trovare "normale" perché ci siamo abituati. Si chiama <strong>normalizzazione dei comportamenti tossici</strong>, ed è uno dei meccanismi più insidiosi in una relazione che deraglia.</p>
 <p>Parlare delle <strong>cose da non accettare in coppia</strong> non è fare un atto d'accusa contro le relazioni imperfette. Ogni relazione ha le sue frizioni, le sue goffaggini, i suoi momenti difficili. Ma c'è una vera differenza tra una <strong>relazione imperfetta</strong> e una <strong>relazione che ti fa del male</strong>. Tra un partner che commette errori e un partner che non ti rispetta.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/disputes-couple-vacances.webp',
   featuredImageAlt: `Coffre de voiture ouvert au bord d'une route de campagne, valises à moitié chargées, deux ombres qui se tournent le dos`,
   publishedAt: '2026-08-12',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Les vacances sont censées réparer le couple. Dans les sondages, elles font surtout remonter ce qui n'allait pas déjà. Voici les chiffres réels, et le moment exact où ça dérape.`,
   introduction: `<p>Commençons par le chiffre, puisque c'est lui qui vous a fait cliquer : <strong>28 % des personnes en couple déclarent que le trajet des vacances est un moment tendu</strong>, d'après une enquête OpinionWay réalisée pour Direct Assurance auprès de 1 016 personnes en mai 2025. La presse a arrondi à « un couple sur trois », et ce n'est pas abusif.</p>
 

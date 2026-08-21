@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/phases-rupture-homme.webp',
   featuredImageAlt: 'Hombre atravesando las fases de una ruptura amorosa',
   publishedAt: '2026-02-21',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: 'Las 6 fases de la ruptura en el hombre: de la negación a la reconstrucción.',
   introduction: `<p>Se dice a menudo que los hombres sufren menos por una ruptura. Que se recuperan más rápido, que pasan página sin demasiados daños. Es falso. Lo que sí es cierto es que lo viven de manera diferente, y a menudo más tarde.</p>
 <p>Donde una mujer generalmente siente el <strong>dolor de la separación</strong> casi de inmediato, el hombre tarda en dejarla entrar. Puede salir, reír, encadenar noches de fiesta, dar la impresión de que todo va bien… y derrumbarse tres meses después, cuando se encuentra solo un domingo por la noche y la realidad le golpea de repente.</p>

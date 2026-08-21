@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Red Flags bei einer Frau, vollständige Liste der Warnsignale in einer Beziehung",
   publishedAt: '2026-03-07',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Ein Red Flag ist kein Charakterfehler. Es ist ein wiederholtes relationales Muster, das eine Beziehung über die Zeit erschöpfend, unausgewogen oder toxisch macht.",
   introduction: `<p>Über Red Flags bei Männern wird viel gesprochen. Über Frauen weit weniger, entweder weil das Thema mit Samthandschuhen angefasst wird, oder weil die wenigen Artikel, die es gibt, so vorsichtig formuliert sind, dass sie am Ende nichts sagen. Dieser Artikel ist nicht dazu da, Frauen schlecht zu machen. Er ist für Männer (und Frauen), die etwas in ihrer Beziehung spüren, ohne es klar benennen zu können.</p>
 <p><strong>Ein Red Flag ist kein Charakterfehler.</strong> Es ist nicht "sie ist nervig" oder "sie ist zu emotional". Es ist ein wiederholtes relationales Muster, das eine Beziehung über die Zeit erschöpfend, unausgewogen oder toxisch macht. Diese Unterscheidung ist wichtig. Wir brauchen sie, um weder alles zu entschuldigen noch alles zu pathologisieren.</p>`,

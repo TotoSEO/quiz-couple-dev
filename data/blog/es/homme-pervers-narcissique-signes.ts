@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/homme-pervers-narcissique-signes.webp',
   featuredImageAlt: "Un hombre sonriendo en sociedad mientras su pareja mira hacia otro lado, incómoda",
   publishedAt: '2026-09-01',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "El problema con un hombre narcisista es que eres la única que ve lo que ves. Aquí están las 12 conductas que acaban delatándolo.",
   introduction: `<p>Si escribes «hombre narcisista» en un buscador, no es por curiosidad intelectual... Es porque un hombre concreto, tu pareja, tu ex, quizá el padre de tus hijos, te ha puesto en alerta. Y algo no encaja: ese hombre que todo el mundo adora te hace vivir, a puerta cerrada, algo que nadie imagina.</p>
 <p>Esa es la trampa número uno con este perfil. La distancia entre el hombre público y el privado es tan violenta que pareces loca en cuanto intentas describirla. Así que, claro, dejas de describirla. Y te quedas sola con tus preguntas.</p>

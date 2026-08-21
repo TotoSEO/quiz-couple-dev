@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/disputes-couple-vacances.webp',
   featuredImageAlt: `Offener Kofferraum am Rand einer Landstraße, halb eingeladene Koffer, zwei Schatten, die sich voneinander abwenden`,
   publishedAt: '2026-08-12',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Urlaub soll die Beziehung reparieren. In den Umfragen holt er vor allem das an die Oberfläche, was ohnehin schon nicht stimmte. Hier sind die echten Zahlen und der genaue Moment, in dem es kippt.`,
   introduction: `<p>Fangen wir mit der Zahl an, denn sie hat dich hergebracht: <strong>28 % der Menschen in einer Beziehung sagen, die Fahrt in den Urlaub sei ein angespannter Moment</strong>, laut einer Umfrage von OpinionWay für Direct Assurance unter 1 016 Personen im Mai 2025. Die Presse hat auf «jedes dritte Paar» aufgerundet, und das ist nicht unfair.</p>
 

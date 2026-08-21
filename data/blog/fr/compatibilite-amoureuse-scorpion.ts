@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Symbole astrologique du Scorpion, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Le Scorpion aime sans demi-mesure, et il attend la même chose. Quels signes peuvent soutenir cette intensité ?`,
   introduction: `<p>Si vous avez déjà aimé un Scorpion, ou si vous en êtes un, vous savez que l'amour, pour ce signe, n'est pas une légèreté. <strong>Ce n'est pas une case à cocher, ni une expérience parmi d'autres.</strong> C'est quelque chose qui engage tout : les émotions, le corps, la loyauté, les failles les plus profondes. Le Scorpion ne fait pas les choses à moitié, et il attend la même profondeur de l'autre. Envie de savoir si vous êtes à la hauteur de cette intensité ? <a href="/signes-astrologiques-prenoms-compatibilite/">Calculez votre compatibilité amoureuse par signe et prénom</a>.</p>
 <p>Gouverné par Mars et Pluton, le Scorpion est un signe de transformation. Il entre dans une relation avec l'intention, consciente ou non, de la changer, lui, l'autre, ou les deux. Ses histoires d'amour sont rarement anodines. Elles laissent des traces, même quand elles finissent. <strong>Parfois surtout quand elles finissent.</strong></p>

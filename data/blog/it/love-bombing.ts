@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/love-bombing.svg',
   featuredImageAlt: "Pioggia di cuori e un cuore appeso a un amo, a illustrare il love bombing",
   publishedAt: '2026-08-02',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Il love bombing non sembra manipolazione. Sembra l'inizio di storia più bello della tua vita. Ed è esattamente questo a renderlo efficace.",
   introduction: `<p>Hai appena conosciuto qualcuno e va tutto molto in fretta. Messaggi dalla mattina alla sera. Complimenti che ti fanno girare la testa. Un "credo che tu sia la persona della mia vita" dopo tre settimane. Le tue amiche ti dicono che è meraviglioso. E tu, da qualche parte, senti un piccolo scarto che non riesci a definire.</p>
 <p><strong>Il love bombing non sembra manipolazione. Sembra l'inizio di storia più bello della tua vita.</strong> Ed è proprio questo a renderlo così efficace, ed è il motivo per cui la domanda "mi ama davvero o mi sta manipolando?" è così difficile da sciogliere dall'interno.</p>

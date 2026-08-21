@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/pardonner-une-infidelite.webp',
   featuredImageAlt: "Cuore spezzato ricucito con un filo dorato, alla maniera del kintsugi",
   publishedAt: '2026-12-29',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Dopo un'infedeltà tutti hanno un'opinione: «lascialo», «perdonalo», «io non potrei mai»... L'unica domanda che conta: a quali condizioni un perdono è REALE?",
   introduction: `<p>Da quando lo sai, tutti sanno cosa fare al posto tuo. La tua migliore amica dice «lascialo, varrai sempre più di così». Tua madre dice «tutte le coppie attraversano delle cose»... E tu, nel mezzo, oscilli di ora in ora tra la voglia di rompere tutto e la voglia che niente sia mai esistito.</p>
 <p>Cominciamo allora sgombrando il campo dalle due bugie simmetriche che circolano sull'argomento. No, «chi tradisce una volta tradirà sempre» non è una legge di natura: ci sono coppie reali che sopravvivono a un'infedeltà, e alcune ne escono persino più solide... E no, «il perdono è sempre possibile se ci si ama» non è vero nemmeno: certi tradimenti, certi contesti e certi partner rendono il perdono impossibile, o tossico. <strong>La vera domanda non è «bisogna perdonare?», è: nel vostro caso ci sono le condizioni di un perdono reale?</strong></p>

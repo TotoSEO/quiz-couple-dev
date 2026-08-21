@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/attachement-anxieux.webp',
   featuredImageAlt: "Persona abrazando un corazón mientras mira un móvil mudo",
   publishedAt: '2026-12-04',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "El apego ansioso no duda del amor que da... duda del que recibe. En permanencia. Y eso agota a los dos lados de la pareja.",
   introduction: `<p>Puede que conozcas esta sensación: todo va bien en tu relación, objetivamente... y sin embargo una parte de ti sigue en alerta. Un tono algo frío, una respuesta más corta de lo habitual, una noche sin mensaje: salta la alarma. Y ahí estás buscando pruebas de que todo va bien, otra vez, como ayer, como mañana.</p>
 <p><strong>Eso tiene nombre: el apego ansioso. No es locura, ni debilidad, ni «demasiado amor»... es un sistema de alarma ajustado con demasiada sensibilidad, y se ajustó mucho antes que tú.</strong> Alrededor de una persona de cada cinco funciona así en el amor. O sea que si te reconoces, ¡estás en muy numerosa compañía!</p>

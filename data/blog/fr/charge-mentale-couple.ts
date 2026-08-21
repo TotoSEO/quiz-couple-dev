@@ -9,14 +9,14 @@ const article: BlogArticleData = {
   featuredImage: '/blog/charge-mentale-couple.svg',
   featuredImageAlt: "Femme épuisée qui gère la charge mentale du couple au quotidien",
   publishedAt: '2026-05-26',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La charge mentale, ce n'est pas « faire plus de tâches ». C'est être la seule personne qui pense à tout, tout le temps, sans que personne ne le voie.",
   introduction: `<p>Tu gères les rendez-vous médicaux des enfants. Tu sais qu'il faut racheter du papier toilette. Tu penses au cadeau d'anniversaire de sa mère. Tu te souviens que le contrôle technique de la voiture expire dans trois semaines. Tu as noté mentalement qu'il faut rappeler la nounou, relancer l'assurance, acheter un cadeau pour la crémaillère de samedi, et prévoir le repas de dimanche parce que tes beaux-parents viennent manger.</p>
 <p>Lui ? Il demande « qu'est-ce qu'on mange ce soir ? » à 19h. Sincèrement.</p>
 <p><strong>Ce n'est pas une question de tâches ménagères.</strong> C'est une question de qui porte le poids invisible de tout ce qui fait tourner un foyer. Et ce poids-là, il a un nom : la charge mentale. Elle est épuisante, elle est invisible, et dans la grande majorité des couples hétérosexuels, c'est la femme qui la porte. Pas parce qu'elle le veut. Parce que personne d'autre ne s'en empare.</p>`,
   quickSummary: [
     "La charge mentale, ce n'est pas faire les tâches : c'est devoir penser à tout, planifier, anticiper et coordonner en permanence.",
-    "Les femmes portent 71 % de la charge mentale dans les couples hétérosexuels, pas par choix, par défaut.",
+    "71 % des femmes déclarent une charge mentale élevée, au travail comme à la maison. Pas par choix, par défaut.",
     "L'impact est concret : épuisement, ressentiment, baisse de libido, distance émotionnelle, disputes récurrentes.",
     "Rééquilibrer demande un vrai transfert de responsabilité, pas juste « aider » quand on te le demande.",
     "Si ton partenaire refuse de voir le problème après en avoir parlé clairement, c'est un problème de respect, plus de charge mentale.",
@@ -91,7 +91,7 @@ const article: BlogArticleData = {
           id: 'les-chiffres',
           title: "Les chiffres parlent d'eux-mêmes",
           content: `<p>Selon l'INSEE (2023), les femmes consacrent en moyenne 3h26 par jour aux tâches domestiques et parentales, contre 2h pour les hommes. Mais ces chiffres ne captent que le temps visible. La charge mentale (planifier, anticiper, coordonner) n'est pas mesurée.</p>
-<p>Une étude UCLouvain (2023) montre que <strong>71 % de la charge mentale domestique est portée par les femmes</strong>, même dans les couples qui se considèrent « égalitaires ». Autrement dit : même quand les deux travaillent à temps plein, même quand l'homme « participe » aux tâches, c'est elle qui pense à tout.</p>
+<p>Le <a href="https://www.ifop.com/article/barometre-de-la-charge-mentale-des-femmes-salariees-vague-1/" target="_blank" rel="noopener">baromètre Ifop sur la charge mentale des femmes salariées</a> mesure que <strong>71 % des femmes déclarent une charge mentale élevée</strong>, dans la sphère professionnelle comme dans la sphère privée. Et côté répartition concrète, l'Insee observe que les femmes assurent environ 71 % des tâches parentales et 64 % des tâches domestiques. Autrement dit : même quand les deux travaillent à temps plein, même quand l'homme « participe » aux tâches, c'est souvent elle qui pense à tout.</p>
 <p>Et non, ce n'est pas parce qu'elle est « plus organisée ». C'est parce que si elle ne le faisait pas, personne ne le ferait.</p>`,
         },
         {

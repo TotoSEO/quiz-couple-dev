@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sentiments-chez-un-homme.webp',
   featuredImageAlt: `Die Hand eines Mannes neben einer Tasse auf einem Holztisch, weiches Licht am späten Nachmittag`,
   publishedAt: '2026-08-12',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Bei vielen Männern beginnen Gefühle nicht mit einer inneren Erklärung, sondern mit einer Gewohnheit. Hier sind die Phasen, in der Reihenfolge, in der sie wirklich auftreten.`,
   introduction: `<p>Die Antwort passt in einen Satz: <strong>Bei den meisten Männern entstehen Gefühle nicht durch Liebe auf den ersten Blick, sondern durch eine Anhäufung gemeinsamer Momente, die irgendwann ein Vermissen erzeugt.</strong> Das ist nicht weniger romantisch, es ist nur langsamer, und vor allem bleibt es von außen lange unsichtbar.</p>
 

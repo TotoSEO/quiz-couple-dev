@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Il mio ragazzo non si impegna, capire e agire",
   publishedAt: '2026-03-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Lo squilibrio di impegno in una coppia è una delle cause più frequenti di rottura, proprio perché si installa progressivamente e tendiamo ad adattarci prima di renderci conto di quanto pesi.",
   introduction: `<p>Organizzi tu, anticipi tu, pensi a tutto tu. Le uscite, i regali, i momenti insieme, le conversazioni importanti. E lui è lì, risponde quando proponi, partecipa quando insisti, ma niente viene davvero da lui. Hai la sensazione di <a href="/it/test-relazione-sana/">portare la relazione sulle spalle</a> da un po', e inizi a chiederti se è normale, se chiedi troppo, o se qualcosa non va davvero.</p>
 <p>Non sei tu che esageri. <strong>Lo squilibrio di impegno in una coppia è una delle cause più frequenti di rottura, proprio perché si installa progressivamente e tendiamo ad adattarci prima di renderci conto di quanto pesi.</strong> Questo articolo è qui per mettere parole su quello che senti, capire cosa sta succedendo davvero, e decidere cosa fare.</p>`,

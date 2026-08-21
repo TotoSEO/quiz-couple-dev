@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/phases-rupture-homme.webp',
   featuredImageAlt: "Uomo che attraversa le fasi di una rottura sentimentale",
   publishedAt: '2026-02-21',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Le 6 fasi della rottura nell'uomo: dalla negazione alla ricostruzione.",
   introduction: `<p>Si dice spesso che gli uomini soffrono meno per una rottura. Che si riprendono più in fretta, che voltano pagina senza troppi danni. È falso. Quello che è vero, però, è che lo vivono in modo diverso, e spesso più tardi.</p>
 <p>Dove una donna generalmente percepisce il <strong>dolore della separazione</strong> quasi immediatamente, l'uomo si prende tempo per lasciarlo entrare. Può uscire, ridere, inanellare serate, dare l'impressione che vada tutto bene… e crollare tre mesi dopo, quando si ritrova solo una domenica sera e la realtà lo raggiunge tutto d'un colpo.</p>

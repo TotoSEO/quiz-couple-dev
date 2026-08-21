@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/manipulateur-narcissique.webp',
   featuredImageAlt: "Chess player whose pieces are human silhouettes",
   publishedAt: '2026-09-18',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "The narcissistic manipulator is always presented as all-powerful. That's false. His system has flaws, known and predictable, provided you know where to look.",
   introduction: `<p>When you search «narcissistic manipulator», you always land on the same article: the list of signs, the portrait of the monster, and good luck with that. Fine for understanding, but then what? Once you KNOW you're dealing with a manipulator, the real question becomes: how does he work, and how do you protect yourself in practice?</p>
 <p>So this article takes the problem from the other end. <strong>The narcissistic manipulator is not all-powerful. He's a system, and a system has rules, patterns and flaws.</strong> His techniques are predictable. So are his reactions. And his weak points are remarkably consistent from one manipulator to the next.</p>

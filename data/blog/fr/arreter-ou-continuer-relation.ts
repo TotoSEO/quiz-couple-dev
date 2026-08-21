@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/arreter-ou-continuer-relation.webp',
   featuredImageAlt: `Deux tasses sur une table de cuisine à l'aube, l'une pleine et l'autre vide, deux chaises légèrement écartées`,
   publishedAt: '2026-08-11',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `La plupart des gens qui se posent la question tournent en rond depuis des mois. Voici ce qui distingue une mauvaise passe d'une impasse, et comment trancher sans se mentir.`,
   introduction: `<p>Si vous cherchez la réponse courte, la voici : <strong>on arrête quand la relation vous demande de renoncer à qui vous êtes, on continue quand elle vous demande seulement d'y travailler.</strong> Tout le reste, dans cet article, sert à savoir dans lequel des deux cas vous êtes.</p>
 

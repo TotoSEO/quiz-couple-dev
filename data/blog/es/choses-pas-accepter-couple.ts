@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/limites-couple-accepter.webp',
   featuredImageAlt: "Pareja estableciendo límites en su relación sentimental",
   publishedAt: '2026-02-21',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Los comportamientos que nunca debes tolerar en pareja y cómo poner límites.",
   introduction: `<p>Hay cosas que aceptamos en pareja sin darnos cuenta. No de golpe, poco a poco. Un <strong>comentario que duele</strong>, una vez. Luego dos. Luego se convierte en la norma. Un <strong>comportamiento irrespetuoso</strong> que al principio impacta, y que acabamos encontrando "normal" porque nos hemos acostumbrado. Es lo que se llama la <strong>normalización de comportamientos tóxicos</strong>, y es uno de los mecanismos más insidiosos en una relación que se deteriora.</p>
 <p>Hablar de las <strong>cosas que no hay que aceptar en pareja</strong> no es hacer un alegato contra las relaciones imperfectas. Toda relación tiene sus roces, sus torpezas, sus momentos difíciles. Sería mentir decir lo contrario. Pero hay una verdadera diferencia entre una <strong>relación imperfecta</strong> y una <strong>relación que te hace daño</strong>. Entre una pareja que comete errores y una pareja que no te respeta.</p>

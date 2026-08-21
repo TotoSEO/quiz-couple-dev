@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/attachement-anxieux.webp',
   featuredImageAlt: "Personne serrant un cœur contre elle en regardant un téléphone muet",
   publishedAt: '2026-12-04',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "L'attachement anxieux ne doute pas de l'amour qu'il donne... il doute de celui qu'il reçoit. En permanence. Et c'est épuisant des deux côtés du couple.",
   introduction: `<p>Tu connais peut-être cette sensation : tout va bien dans ton couple, objectivement... et pourtant une partie de toi reste sur le qui-vive. Un ton un peu froid, une réponse plus courte que d'habitude, une soirée sans message : l'alarme se déclenche. Et te voilà à chercher des preuves que tout va bien, encore, comme hier, comme demain...</p>
 <p><strong>Ça porte un nom : l'attachement anxieux. Ce n'est ni de la folie, ni de la faiblesse, ni « trop d'amour »... c'est un système d'alarme réglé trop sensible, et il s'est réglé bien avant toi.</strong> Environ une personne sur cinq fonctionne comme ça en amour. Autant dire que si tu te reconnais, tu es en très nombreuse compagnie !</p>

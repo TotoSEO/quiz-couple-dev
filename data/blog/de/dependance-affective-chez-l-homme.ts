@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-chez-l-homme.webp',
   featuredImageAlt: "Mann von hinten, der auf sein Handy schaut, sein Schatten ein angekettetes Herz",
   publishedAt: '2026-10-16',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Man stellt sich den emotional Abhängigen anhänglich und flehend vor. Bei Männern sieht das öfter nach Eifersucht aus, nach Wut... oder nach einem Typen, der nie Single ist.",
   introduction: `<p>Wenn man «emotionale Abhängigkeit» sagt, sieht jeder dieselbe Szene vor sich: jemand, der fleht, sich festklammert, fünfzehn Nachrichten schickt. Und weil sich die meisten Männer in diesem Bild nicht wiedererkennen, schließen sie, dass es sie nicht betrifft. Großer Irrtum.</p>
 <p><strong>Männliche emotionale Abhängigkeit gibt es, sie ist weit verbreitet... und sie trägt Masken, die niemand als emotionalen Mangel erkennt.</strong> Die Eifersucht, die kontrolliert. Die Wut, die wegen nichts explodiert. Die Überinvestition des perfekten Typen, der zu Hause alles macht. Oder dieses Phänomen, das jeder kennt, ohne es zu benennen: der Mann, der NIE länger als drei Wochen Single ist.</p>

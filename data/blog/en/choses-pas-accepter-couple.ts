@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/limites-couple-accepter.webp',
   featuredImageAlt: "Couple setting boundaries in their romantic relationship",
   publishedAt: '2026-02-21',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Behaviors you should never tolerate in a relationship and how to set limits.",
   introduction: `<p>There are things we accept in a relationship without really noticing. Not all at once, gradually. A <strong>hurtful remark</strong>, once. Then twice. Then it becomes the norm. A <strong>disrespectful behavior</strong> that shocks at first, and that we end up finding "normal" because we've gotten used to it. This is called the <strong>normalization of toxic behaviors</strong>, and it's one of the most insidious mechanisms in a relationship that's going off the rails.</p>
 <p>Talking about <strong>things not to accept in a relationship</strong> isn't about building a case against imperfect relationships. Every relationship has its friction, its clumsiness, its tough moments. It would be dishonest to say otherwise. But there's a real difference between an <strong>imperfect relationship</strong> and a <strong>relationship that hurts you</strong>. Between a partner who makes mistakes and a partner who doesn't respect you.</p>

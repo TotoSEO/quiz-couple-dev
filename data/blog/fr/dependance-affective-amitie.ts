@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-amitie.webp',
   featuredImageAlt: "Deux amies liées par un fil rouge trop tendu entre leurs poignets",
   publishedAt: '2026-11-17',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "On surveille la dépendance affective dans nos couples... et on la laisse s'installer tranquillement dans nos amitiés, là où personne ne pense à la chercher.",
   introduction: `<p>Il y a une jalousie dont personne ne parle jamais : celle qu'on ressent quand notre meilleure amie se rapproche de quelqu'un d'autre. Ce pincement quand elle raconte une soirée où on n'était pas... Ce besoin de savoir qu'on reste « la » personne, la première au courant, la préférée. On n'ose pas le dire, parce que ça paraît absurde : de la jalousie, entre copines ?</p>
 <p>Et pourtant. <strong>La dépendance affective est un mode d'attachement, pas une exclusivité du couple : elle s'installe partout où il y a du lien.</strong> Et l'amitié est même son terrain le plus discret, parce que personne ne surveille... On répète « les amies, c'est sacré », et sous cette bannière-là, des liens entiers virent doucement du précieux au fusionnel, du fusionnel à l'étouffant.</p>

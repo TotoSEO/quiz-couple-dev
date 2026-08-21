@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/phases-rupture-homme.webp',
   featuredImageAlt: "Homme traversant les phases de la rupture amoureuse",
   publishedAt: '2026-02-21',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Les 6 phases de la rupture chez l'homme : du déni à la reconstruction.",
   introduction: `<p>On dit souvent que les hommes souffrent moins d'une rupture. Qu'ils rebondissent plus vite, qu'ils passent à autre chose sans trop de dégâts. C'est faux. Ce qui est vrai, en revanche, c'est qu'ils le vivent différemment, et souvent plus tard.</p>
 <p>Là où une femme va généralement ressentir la <strong>douleur de la séparation</strong> presque immédiatement, l'homme met du temps à la laisser entrer. Il peut sortir, rire, enchaîner les soirées, donner l'impression que tout va bien… et s'effondrer trois mois plus tard, quand il se retrouve seul un dimanche soir et que la réalité le rattrape d'un seul coup.</p>

@@ -109,7 +109,7 @@ serve(async (req) => {
         .insert({
           internal_slug: body.internal_slug,
           featured_image_url: body.featured_image_url || null,
-          author_id: body.author_id || 'mathieu-courtin',
+          author_id: body.author_id || 'thomas',
           status: body.status || 'draft',
           published_at: body.status === 'published' ? new Date().toISOString() : null,
         })
@@ -387,7 +387,7 @@ serve(async (req) => {
           // Only overwrite featured_image_url if the seed provides a non-empty value,
           // otherwise keep the existing image (may have been set via admin upload)
           const updateData: Record<string, unknown> = {
-            author_id: art.author_id || 'mathieu-courtin',
+            author_id: art.author_id || 'thomas',
             status: art.status || 'published',
             published_at: art.published_at || new Date().toISOString(),
           };
@@ -440,7 +440,7 @@ serve(async (req) => {
           .insert({
             internal_slug: art.internal_slug,
             featured_image_url: art.featured_image_url || null,
-            author_id: art.author_id || 'mathieu-courtin',
+            author_id: art.author_id || 'thomas',
             status: art.status || 'published',
             published_at: art.published_at || new Date().toISOString(),
           })

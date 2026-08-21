@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/pardonner-une-infidelite.webp',
   featuredImageAlt: "Corazón roto recosido con hilo dorado, al estilo del kintsugi",
   publishedAt: '2026-12-29',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Después de una infidelidad todo el mundo tiene una opinión: «déjalo», «perdónale», «yo no podría nunca»... La única pregunta que cuenta: ¿en qué condiciones un perdón es REAL?",
   introduction: `<p>Desde que lo sabes, todo el mundo sabe qué hacer en tu lugar. Tu mejor amiga dice «déjalo, siempre valdrás más que eso». Tu madre dice «todas las parejas pasan por cosas»... Y tú, en medio, oscilas de hora en hora entre las ganas de romperlo todo y las ganas de que nada hubiera existido.</p>
 <p>Así que empecemos por descartar las dos mentiras simétricas que circulan sobre el tema. No, «quien engaña una vez engañará siempre» no es una ley de la naturaleza: hay parejas reales que sobreviven a una infidelidad, y algunas salen incluso más sólidas... Y no, «el perdón siempre es posible si os queréis» tampoco es cierto: ciertas traiciones, ciertos contextos y ciertas parejas hacen que el perdón sea imposible o tóxico. <strong>La verdadera pregunta no es «¿hay que perdonar?», es: ¿se dan en vuestro caso las condiciones de un perdón real?</strong></p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/limites-couple-accepter.webp',
   featuredImageAlt: "Couple posant des limites dans leur relation amoureuse",
   publishedAt: '2026-02-21',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Les comportements à ne jamais tolérer en couple et comment poser ses limites.",
   introduction: `<p>Il y a des choses qu'on accepte en couple sans vraiment s'en rendre compte. Pas d'un coup, progressivement. Une <strong>remarque qui blesse</strong>, une fois. Puis deux. Puis ça devient la norme. Un <strong>comportement irrespectueux</strong> qui choque au début, et qu'on finit par trouver "normal" parce qu'on s'y est habitué. C'est ce qu'on appelle la <strong>normalisation des comportements toxiques</strong>, et c'est l'un des mécanismes les plus insidieux dans une relation qui déraille.</p>
 <p>Parler des <strong>choses à ne pas accepter en couple</strong>, ce n'est pas dresser un réquisitoire contre les relations imparfaites. Toute relation a ses frictions, ses maladresses, ses moments difficiles. Ce serait mentir que de dire le contraire. Mais il y a une vraie différence entre une <strong>relation imparfaite</strong> et une <strong>relation qui vous fait du mal</strong>. Entre un partenaire qui fait des erreurs et un partenaire qui ne vous respecte pas.</p>

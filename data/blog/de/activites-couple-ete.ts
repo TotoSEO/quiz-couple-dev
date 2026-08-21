@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/activites-couple-ete.webp',
   featuredImageAlt: "Sommerpicknick bei Sonnenuntergang mit zwei Limonaden, einem Weidenkorb und einem Fahrrad an einem Baum",
   publishedAt: '2026-07-29',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Sommer, Zeit und null Ideen? Hier sind zehn einfache, günstige und zu zweit erprobte Aktivitäten, die mit den üblichen Ausflügen brechen und echte Erinnerungen schaffen.",
   introduction: `<p>Im Sommer haben wir Zeit, Licht bis 22 Uhr und... oft null Ideen. Also wiederholen wir dieselbe Terrasse, denselben Film, denselben Spaziergang um denselben Park. Dabei sind <strong>die besten Paar-Aktivitäten im Sommer fast nie die teuren oder die, die drei Wochen Vorbereitung brauchen.</strong> Es sind einfache Dinge, manchmal ein bisschen albern, die wir einfach nie machen. Hier sind zehn, zu Hause getestet und für gut befunden.</p>`,
   quickSummary: [

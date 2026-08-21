@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Nachdenkliche Frau allein sitzend, Anzeichen von Unzufriedenheit in der Beziehung",
   publishedAt: '2026-03-01',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Die Anzeichen sind oft schon lange da. Man weiß nur nicht, worauf man achten soll.",
   introduction: `<p>Die meisten Männer sehen es nicht kommen. Nicht weil es ihnen egal wäre, sondern weil die Anzeichen, die eine Frau sendet, wenn es ihr in einer Beziehung schlecht geht, nicht so aussehen, wie man es sich vorstellt. <strong>Es sind nicht unbedingt Tränen oder Streitereien.</strong> Es ist oft leiser. Diffuser. Etwas, das sich schleichend zurückzieht, ohne dass man den Finger darauf legen kann.</p>
 <p>Wenn du diesen Artikel liest, hast du wahrscheinlich gespürt, dass etwas nicht stimmt. Dieses Bauchgefühl verdient es, ernst genommen zu werden.</p>`,

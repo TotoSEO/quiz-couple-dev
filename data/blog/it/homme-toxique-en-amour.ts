@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/homme-toxique-en-amour.webp',
   featuredImageAlt: "Sei sagome maschili, alcune proiettano un'ombra spinosa",
   publishedAt: '2026-10-27',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Tra il maldestro che può cambiare e il manipolatore che non cambierà c'è tutta una gamma... e non ci si protegge allo stesso modo.",
   introduction: `<p>Da quando «tossico» è diventata la parola dell'epoca, ci si mette dentro di tutto: il geloso, il distante, il collerico, il bugiardo. Ed è un vero problema, perché quegli uomini non si somigliano. Alcuni fanno male per immaturità, senza volerlo, e possono cambiare. Altri fanno male per funzionamento, e non cambieranno. <strong>Confondere i due significa o fuggire da un uomo che sarebbe potuto crescere... o restare anni con un uomo che non crescerà mai.</strong></p>
 <p>Questo articolo quindi fa ordine. Sei profili di uomo tossico in amore, dal meno grave al più grave: cosa ti fa vivere concretamente ciascuno, come lo riconosci... e soprattutto, per ognuno, la risposta a LA domanda: questo può cambiare?</p>

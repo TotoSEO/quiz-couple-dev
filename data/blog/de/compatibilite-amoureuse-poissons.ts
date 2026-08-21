@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Astrologisches Symbol der Fische, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Die Fische lieben ohne Grenzen, und genau das kann zum Problem werden. Welche Zeichen tragen sie wirklich?`,
   introduction: `<p>Die Fische sind das letzte Zeichen des Tierkreises, und in gewisser Weise das weiseste. Sie tragen die Erfahrungen aller elf Zeichen vor ihnen in sich und haben ein Einfühlungsvermögen, das manchmal übermenschlich wirkt. <strong>In der Liebe bedeutet das: Die Fische geben alles. Bedingungslos. Grenzenlos. Und genau da liegt das Problem.</strong> Denn nicht jeder Partner ist es wert, dass man sich so restlos hingibt. Möchten Sie wissen, ob Ihre Kombination die Fische trägt oder ertränkt? <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
 <p>Neptun regiert die Fische, der Planet der Träume, der Intuition, der Illusion. Das macht sie zu den romantischsten, kreativsten, einfühlsamsten Partnern im ganzen Tierkreis. Aber es macht sie auch anfällig für Selbsttäuschung: Sie sehen im Partner oft nicht das, was er ist, sondern das, was er sein könnte. <strong>Diese Fähigkeit zur Verklärung ist ihre größte Gabe und ihre größte Gefahr zugleich.</strong></p>

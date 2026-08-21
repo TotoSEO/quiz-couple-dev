@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective.svg',
   featuredImageAlt: "Coppia abbracciata su un divano che illustra la dipendenza affettiva nella relazione",
   publishedAt: '2026-03-24',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La dipendenza affettiva non è 'amare troppo'. È non saper più esistere senza l'altro e costruire tutto il proprio valore attorno al suo sguardo.",
   introduction: `<p>Controlli il telefono ogni cinque minuti. Analizzi il minimo cambiamento di tono nei suoi messaggi. Quando è distante, vai nel panico. Quando è presente, ti senti sollevata, ma mai veramente in pace, perché sai che tutto può cambiare da un momento all'altro.</p>
 <p>Non è amore intenso. Non è passione. <strong>È dipendenza affettiva.</strong> E colpisce molte più persone di quanto si pensi, uomini e donne, in ogni tipo di relazione. Questo articolo è qui per dare un nome a quello che vivi, capire da dove viene e soprattutto mostrarti che è possibile uscirne.</p>`,

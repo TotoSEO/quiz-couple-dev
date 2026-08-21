@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Red flags en un hombre, lista completa de señales de alerta en pareja",
   publishedAt: '2026-03-05',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Las red flags rara vez son señales de alarma estridentes. Son patrones que minimizas hasta que un día te das cuenta de que llevas meses normalizándolos.",
   introduction: `<p>Sientes algo. Una incomodidad difusa, una tensión que no logras nombrar, una vocecita que vuelve una y otra vez y que haces callar porque "quizás estás exagerando". <strong>Probablemente no estás exagerando.</strong></p>
 <p>Las red flags en un hombre rara vez son señales de alarma estridentes. Son patrones. Cosas que se repiten. Comportamientos que minimizas una vez, dos veces, diez veces, hasta que un día te das cuenta de que llevas meses normalizándolos. Este artículo está aquí para nombrarlos.</p>`,

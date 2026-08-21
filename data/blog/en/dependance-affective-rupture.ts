@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-rupture.webp',
   featuredImageAlt: "Heart in two halves, one of which turns into a staircase going up",
   publishedAt: '2026-11-20',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Everyone suffers from a break-up. The emotionally dependent person is in withdrawal... and that isn't the same thing to get through.",
   introduction: `<p>The people around you seem to find it long. «You have to move on»... Easy to say. They don't know what it's like to check your phone on waking for a message that won't come. To dial a number and hang up. To feel, physically, a craving that resembles a substance withdrawal to the point of confusion.</p>
 <p>And let's talk about precisely that: <strong>for an emotionally dependent person, a break-up isn't ordinary heartbreak. It's withdrawal, in the literal sense.</strong> The other person was your emotional regulator, your source of worth, your anti-anxiety... and it all stopped at once. Of course it's harder. Of course it takes longer. That isn't weakness: it's mechanics.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/activites-couple-ete.webp',
   featuredImageAlt: "Pícnic de verano al atardecer con dos limonadas, una cesta de mimbre y una bicicleta apoyada en un árbol",
   publishedAt: '2026-07-29',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "¿Verano, tiempo libre y cero ideas? Aquí tienes diez actividades sencillas, baratas y probadas en pareja que rompen con las salidas de siempre y crean recuerdos de verdad.",
   introduction: `<p>En verano tenemos tiempo, luz hasta las 22h y... a menudo cero ideas. Así que repetimos la misma terraza, la misma película, el mismo paseo alrededor del mismo parque. Y sin embargo, <strong>las mejores actividades en pareja en verano casi nunca son las que cuestan caro ni las que requieren tres semanas de preparación.</strong> Son cosas sencillas, a veces hasta un poco tontas, que simplemente nunca hacemos. Aquí van diez, probadas y aprobadas en casa.</p>`,
   quickSummary: [

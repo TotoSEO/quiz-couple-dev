@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/pardonner-une-infidelite.webp',
   featuredImageAlt: "Cœur brisé recousu avec un fil doré, à la manière du kintsugi",
   publishedAt: '2026-12-29',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Après une infidélité, tout le monde a un avis : « pars », « pardonne », « moi je ne pourrais jamais »... La seule question qui compte : à quelles conditions un pardon est-il RÉEL ?",
   introduction: `<p>Depuis que tu sais, tout le monde sait quoi faire à ta place. Ta meilleure amie dit « pars, tu vaudras toujours mieux que ça ». Ta mère dit « tous les couples traversent des choses »... Et toi, au milieu, tu oscilles d'heure en heure entre l'envie de tout casser et l'envie que rien n'ait existé.</p>
 <p>Alors commençons par évacuer les deux mensonges symétriques qui circulent sur le sujet. Non, « qui trompe une fois trompera toujours » n'est pas une loi de la nature : des couples réels survivent à une infidélité, et certains en ressortent même plus solides... Et non, « le pardon est toujours possible si on s'aime » n'est pas vrai non plus : certaines trahisons, certains contextes et certains partenaires rendent le pardon impossible, ou toxique. <strong>La vraie question n'est pas « faut-il pardonner ? », c'est : les conditions d'un pardon réel sont-elles réunies chez vous ?</strong></p>

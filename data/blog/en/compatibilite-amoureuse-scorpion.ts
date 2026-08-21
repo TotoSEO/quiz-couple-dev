@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Scorpio astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Scorpio loves without compromise, and expects the same in return. Which signs can handle that depth?`,
   introduction: `<p>If you've ever loved a Scorpio, or if you are one, you know that love, for this sign, is not something casual. <strong>It's not a box to tick, not just another experience among many.</strong> It's something that engages everything: emotions, body, loyalty, the deepest vulnerabilities. Scorpio doesn't do things by halves, and they expect the same depth from the other person. Want to know if you're up to the challenge? <a href="/en/zodiac-signs-names-compatibility/">Calculate your love compatibility by sign and name</a>.</p>
 <p>Ruled by Mars and Pluto, Scorpio is a sign of transformation. They enter a relationship with the intention, conscious or not, of changing it, themselves, the other person, or both. Their love stories are rarely forgettable. They leave marks, even when they end. <strong>Especially when they end.</strong></p>

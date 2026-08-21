@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Virgo astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Virgo loves in silence, through actions, through details no one else notices. Which signs can read that quiet devotion?`,
   introduction: `<p>Virgo doesn't send grand signals. They don't make sweeping declarations. What they do is remember how you take your coffee, prepare exactly what you need on the day you're struggling, and quietly organize things in the background so your life runs a little smoother than it did before. <strong>Their love shows up in the details, and you have to know where to look.</strong> To find out whether your sign and name speak the same language as Virgo, try <a href="/en/zodiac-signs-names-compatibility/">the zodiac and name compatibility test</a>.</p>
 <p>Ruled by Mercury like Gemini, but in a fundamentally different way, Virgo is analytical, precise, attentive. They think before they act. They weigh their words before speaking. That rigour some mistake for coldness is actually a form of respect: they don't say what they don't mean, and they don't promise what they can't deliver.</p>

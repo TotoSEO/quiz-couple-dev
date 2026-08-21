@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Astrologisches Symbol des Steinbocks, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Der Steinbock liebt leise, aber dafür auf Dauer. Welche Sternzeichen erkennen seine reservierte Art als Stärke?`,
   introduction: `<p>Der Steinbock gilt als das nüchternste Zeichen des Tierkreises. Und ja, er wird selten beim ersten Date sein Herz auf den Tisch legen. Aber wer das für Gefühlskälte hält, irrt sich gewaltig. <strong>Der Steinbock liebt mit einer Tiefe und Beständigkeit, die die meisten anderen Zeichen nicht aufbringen können</strong>, er zeigt es nur anders. Nicht durch große Gesten und leidenschaftliche Erklärungen. Sondern durch Verlässlichkeit, Loyalität und die stille Entscheidung, jeden Tag aufs Neue da zu sein. Passt Ihr Zeichen zu diesem Liebesstil? <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
 <p>Saturn regiert den Steinbock, der Planet der Disziplin, der Struktur, der Verantwortung. In der Liebe bedeutet das: Der Steinbock baut Beziehungen wie Häuser. Fundament zuerst, dann die Mauern, dann das Dach. Wer versucht, die Reihenfolge umzudrehen, wird ihn verlieren. Er braucht Zeit. Und wer ihm diese Zeit gibt, wird mit einer Partnerschaft belohnt, die Jahrzehnte überdauern kann.</p>

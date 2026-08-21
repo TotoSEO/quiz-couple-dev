@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Red flag in un uomo, lista completa dei segnali d'allarme in coppia",
   publishedAt: '2026-03-05',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Le red flag sono raramente segnali d'allarme fragorosi. Sono schemi che minimizzi fino al giorno in cui ti rendi conto di averli normalizzati da mesi.",
   introduction: `<p>Senti qualcosa. Un disagio vago, una tensione che non riesci a nominare, una vocina che continua a tornare e che metti a tacere perché "forse stai esagerando". <strong>Probabilmente non stai esagerando.</strong></p>
 <p>Le red flag in un uomo sono raramente segnali d'allarme fragorosi. Sono schemi. Cose che si ripetono. Comportamenti che minimizzi una volta, due volte, dieci volte, fino al giorno in cui ti rendi conto di averli normalizzati da mesi. Questo articolo è qui per nominarli.</p>`,

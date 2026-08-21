@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/femme-toxique-en-amour.webp',
   featuredImageAlt: "Sagoma femminile che tiene dei fili annodati a forma di cuore",
   publishedAt: '2026-11-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Gli uomini impiegano in media molto più tempo a nominare una relazione tossica... perché non gli è mai stato insegnato che aspetto ha quando viene da una donna.",
   introduction: `<p>Fai la prova attorno a te: chiedi a dei ragazzi cos'è una donna tossica. Otterrai battute, citazioni di film... e pochissime risposte serie. Perché siamo cresciuti tutti con l'idea che la tossicità in coppia sia una faccenda da uomini. Risultato: quando un uomo vive una relazione che lo rovina, non la nomina. Dice che lei «ha carattere». Dice che è «complicato». Incassa... e ci mette anni a capire.</p>
 <p><strong>Diciamolo semplicemente: la tossicità non ha sesso, e le sue versioni femminili fanno danni quanto le altre.</strong> Sono solo meglio mimetizzate socialmente: una donna che controlla «ci tiene a te», una donna che fa scenate è «passionale», una donna che ti sminuisce «ha carattere».</p>

@@ -3911,7 +3911,9 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   max-width: 72rem; margin: 0 auto;
 }
 @media (min-width: 900px) {
-  .apr-hero-grille { grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; }
+  /* Le hero n'a plus qu'une colonne de texte depuis le retrait des portraits :
+     on la centre au lieu de laisser une moitie vide a droite. */
+  .apr-hero-grille { grid-template-columns: minmax(0, 46rem); justify-content: center; gap: 3.5rem; }
 }
 .apr-hero-titre {
   font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 800;

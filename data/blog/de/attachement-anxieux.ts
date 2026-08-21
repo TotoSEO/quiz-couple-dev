@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/attachement-anxieux.webp',
   featuredImageAlt: "Person, die ein Herz umarmt und dabei auf ein stummes Handy schaut",
   publishedAt: '2026-12-04',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Die ängstliche Bindung zweifelt nicht an der Liebe, die sie gibt, sondern an der, die sie bekommt. Ununterbrochen. Und das erschöpft beide Seiten der Beziehung.",
   introduction: `<p>Vielleicht kennst du dieses Gefühl: In deiner Beziehung läuft objektiv alles gut, und trotzdem bleibt ein Teil von dir in Alarmbereitschaft. Ein etwas kühler Tonfall, eine kürzere Antwort als sonst, ein Abend ohne Nachricht, und der Alarm geht los. Und schon suchst du nach Beweisen, dass alles in Ordnung ist, wieder einmal, wie gestern, wie morgen.</p>
 <p><strong>Dafür gibt es einen Namen: die ängstliche Bindung. Das ist keine Verrücktheit, keine Schwäche und kein Zuviel an Liebe, sondern ein Alarmsystem, das zu empfindlich eingestellt wurde, und zwar lange vor dir.</strong> Etwa jede fünfte Person funktioniert in der Liebe so. Wenn du dich also wiedererkennst, bist du in sehr zahlreicher Gesellschaft!</p>

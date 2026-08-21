@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/manque-communication-couple.svg',
   featuredImageAlt: "Couple assis côte à côte en silence illustrant le manque de communication",
   publishedAt: '2026-05-26',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Le manque de communication dans un couple, ce n'est pas juste « on ne se parle plus ». C'est quand les mots sont là mais que plus rien ne passe vraiment.",
   introduction: `<p>Tu vis sous le même toit. Tu dors dans le même lit. Tu partages les repas, les courses, les factures. Mais tu ne te souviens plus de la dernière vraie conversation que vous avez eue. Pas un échange logistique sur qui récupère les enfants ou ce qu'on mange ce soir. <strong>Une vraie conversation.</strong> Celle où tu dis ce que tu penses vraiment, et où l'autre écoute vraiment.</p>
 <p>Le manque de communication dans un couple, c'est rarement un effondrement brutal. C'est une érosion lente. Un jour tu réalises que tu ne racontes plus ta journée, que tu ne partages plus tes doutes, que tu filtres ce que tu dis pour éviter les tensions. Et le silence s'installe comme une troisième personne dans la relation, confortable en apparence, mais destructrice en profondeur.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
   featuredImageAlt: "Pareja sentada a la mesa riéndose, ella responde a una pregunta gesticulando",
   publishedAt: '2026-10-02',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La trampa de las parejas que duran no es dejar de quererse. Es creer que ya se ha terminado de descubrirse.",
   introduction: `<p>Pequeña prueba antes de empezar: sabes cuál es su plato favorito, su película de culto, su perfume. Fácil. Ahora, ¿sabes de qué está más orgullosa este año? ¿Qué echa de menos ahora mismo? ¿Qué no se atreve a pedirte? Menos fácil, ¿eh?</p>
 <p><strong>Esa es la trampa de las parejas asentadas: confundimos conocerla bien con haber terminado de descubrirla.</strong> Salvo que ella cambia, como tú, como todo el mundo. Y las respuestas de hace dos años ya no son necesariamente las de hoy.</p>

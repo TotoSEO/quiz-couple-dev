@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/relation-toxique-signes.webp',
   featuredImageAlt: "Two hands bound by a plant whose leaves have been replaced by thorns",
   publishedAt: '2026-10-06',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "«Toxic», the word is everywhere, to the point of meaning nothing. And yet a genuinely toxic relationship has precise signs, and one central question: can it be fixed?",
   introduction: `<p>«Toxic relationship»... The word is so everywhere that it covers everything: a slightly heated argument, a bitter ex, a disagreement about holidays, boom, toxic! The result is that when you ACTUALLY ask the question about your own relationship, you no longer know what to think. Is it serious? Is it normal? Is it me?</p>
 <p>So let's set out the real criterion, the one that puts everything back in order: <strong>a relationship isn't toxic because of what it contains, it's toxic because of what it does to you.</strong> Every couple has arguments. Differences, grey periods, words that go too far: same. That isn't the question. The question is: what state does this relationship put you in, week after week?</p>

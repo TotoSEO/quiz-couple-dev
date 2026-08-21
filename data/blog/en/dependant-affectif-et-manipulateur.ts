@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
   featuredImageAlt: "Heart-shaped magnet attracting a chained silhouette",
   publishedAt: '2026-11-10',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "It's no accident that emotionally dependent people meet so many manipulators. One is looking to be indispensable... the other is looking for someone afraid of losing.",
   introduction: `<p>It's a question that comes up constantly among people leaving a coercive relationship: «why me?» Why him, again? Why this feeling of always landing on the same profile, as if a magnet were involved?</p>
 <p>The answer hurts a little, but it frees you: <strong>it isn't bad luck, it's a matching. The manipulator is looking for exactly what the emotionally dependent person carries: the fear of losing.</strong> One needs to be loved in order to exist, the other needs to control in order to exist... and those two needs fit together with terrifying precision.</p>

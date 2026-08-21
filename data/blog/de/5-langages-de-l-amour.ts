@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/5-langages-de-l-amour.webp',
   featuredImageAlt: "Fünf farbige Blasen, die die fünf Sprachen der Liebe rund um ein Paar symbolisieren",
   publishedAt: '2026-12-15',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Das Drama vieler Paare ist kein Mangel an Liebe, sondern ein Übersetzungsproblem. Jeder spricht seine Sprache, und niemand hat das Wörterbuch.",
   introduction: `<p>Hier eine Szene, die du vielleicht schon erlebt hast. Er kommt mit einem Geschenk nach Hause, ganz stolz, und dir wäre insgeheim lieber gewesen, er wäre einfach früher gekommen. Oder umgekehrt: Du sagst ihm immer wieder, dass du ihn liebst, du machst ihm Komplimente, und er scheint es kaum zu hören, obwohl eine einfache Umarmung ihn erfüllt hätte. Jeder gibt, aufrichtig. Und jeder hat den Eindruck, knapp daneben beschenkt zu werden.</p>
 <p><strong>Genau dieses Problem hat das Konzept der 5 Sprachen der Liebe sichtbar gemacht: Wir drücken Liebe nicht alle gleich aus, und wir geben spontan in UNSERER Sprache, nicht in der des anderen.</strong> Die Idee stammt vom amerikanischen Eheberater Gary Chapman aus den Neunzigern, und wenn sie um die Welt gegangen ist, dann weil sie etwas beschreibt, das alle Paare sofort wiedererkennen.</p>

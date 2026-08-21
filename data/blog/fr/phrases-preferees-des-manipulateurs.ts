@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
   featuredImageAlt: "Bulles de conversation dont certaines cachent des hameçons",
   publishedAt: '2026-09-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Un manipulateur ne ment pas au hasard. Il pioche dans un répertoire, toujours le même. Et une fois que tu connais le répertoire, quelque chose se casse dans le tour de magie.",
   introduction: `<p>« Tu es trop sensible. » Combien de fois tu l'as entendue, celle-là ? Et combien de fois tu es repartie en te demandant si, effectivement, tu n'exagérais pas un peu ?</p>
 <p>Voilà exactement pourquoi cet article existe. <strong>Les manipulateurs n'inventent rien : ils piochent dans un répertoire, et c'est toujours à peu près le même.</strong> Des phrases courtes, qui paraissent anodines, parfois même bienveillantes... et qui font un travail très précis dans ta tête. Inverser la faute, te faire douter, te faire taire.</p>

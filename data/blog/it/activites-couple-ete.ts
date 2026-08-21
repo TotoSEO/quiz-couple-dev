@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/activites-couple-ete.webp',
   featuredImageAlt: "Picnic estivo al tramonto con due limonate, un cestino di vimini e una bicicletta appoggiata a un albero",
   publishedAt: '2026-07-29',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Estate, tempo libero e zero idee? Ecco dieci attività semplici, economiche e testate in coppia che cambiano dalle uscite di sempre e creano ricordi veri.",
   introduction: `<p>D'estate abbiamo tempo, luce fino alle 22 e... spesso zero idee. Così rifacciamo la solita terrazza, lo stesso film, la stessa passeggiata intorno allo stesso parco. Eppure <strong>le migliori attività di coppia in estate non sono quasi mai quelle che costano care o che richiedono tre settimane di preparazione.</strong> Sono cose semplici, a volte un po' sciocche, che semplicemente non facciamo mai. Eccone dieci, testate e approvate a casa.</p>`,
   quickSummary: [

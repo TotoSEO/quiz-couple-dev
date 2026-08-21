@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-pour-mieux-se-connaitre-en-couple.webp',
   featuredImageAlt: "Couple assis dos à dos avec des points d'interrogation et des cœurs au-dessus d'eux",
   publishedAt: '2026-10-13',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Le jour où on arrête de se poser des questions, on n'a pas fini de se découvrir... on a juste arrêté de chercher.",
   introduction: `<p>Fais l'expérience un jour : demande à un couple installé depuis dix ans s'ils se connaissent par cœur. Ils diront oui, évidemment. Puis pose-leur trois questions un peu précises, le rêve qu'il a abandonné, la peur qu'elle ne dit jamais, ce que chacun croit que l'autre pense de lui... et regarde les visages. Il y a toujours une surprise. Toujours !</p>
 <p><strong>Parce qu'on ne finit jamais de connaître quelqu'un. On arrête juste de chercher, et c'est très différent.</strong> La bonne nouvelle, c'est que la curiosité, ça se rallume : il suffit de reposer des vraies questions, et d'écouter les réponses comme au premier jour.</p>

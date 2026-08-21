@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-taureau.svg',
   featuredImageAlt: `Astrologisches Symbol des Stiers, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Der Stier liebt tief, treu, und oft sehr lange. Doch nicht jedes Sternzeichen ist für dieses Tempo gemacht.`,
   introduction: `<p>Fragen Sie einen Stier, was er in der Liebe sucht. Er wird Ihnen, vielleicht nicht mit genau diesen Worten, etwas sagen, das nach <em>Beständigkeit</em> klingt. Nicht langweilige Routine, nicht mechanische Wiederholung. Sondern die Gewissheit, dass der andere morgen noch da sein wird. Dass das, was gemeinsam aufgebaut wurde, nicht beim ersten Sturm verschwindet. Wenn Sie herausfinden möchten, ob Ihre Sternzeichen-Vornamen-Kombination hält, was sie verspricht, probieren Sie <a href="/de/sternzeichen-vornamen-kompatibilitaet/">unser Tool zur Kompatibilität zwischen Sternzeichen und Vornamen</a>.</p>
 <p>Es ist Venus, die dieses Zeichen regiert. Und anders als man vielleicht denkt, spricht Venus beim Stier nicht zuerst von Romantik und großen Erklärungen, <strong>sie spricht von konkretem Genuss, von körperlicher Nähe, von greifbarer Schönheit</strong>. Ein gutes gemeinsames Essen. Ein bequemes Sofa. Die Wärme eines Menschen, den man wirklich kennt. Das nennt der Stier Liebe.</p>

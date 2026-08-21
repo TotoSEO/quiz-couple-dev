@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Couple entwined on a sofa in soft light, deep in a knowing conversation",
   publishedAt: '2026-09-22',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "There are the conversations you have every day... and the ones you never dare start. Guess which ones bring you closest.",
   introduction: `<p>You tell each other everything, well, almost. Work, friends, plans, what you're eating tonight. But there's one territory people talk about far less easily, even after years: what the other person actually feels, what they don't dare ask for, what they miss, what they want. The intimate, the real thing.</p>
 <p><strong>And that's a shame, because that is exactly where a couple's closeness is decided.</strong> Not in grand declarations! In those conversations that are a little barer than the rest, the ones you start in a low voice, on an evening when you feel good.</p>

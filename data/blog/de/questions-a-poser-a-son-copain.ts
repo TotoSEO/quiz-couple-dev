@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Junges Paar sitzt sich gegenüber im Gespräch, sie stellt lächelnd eine Frage",
   publishedAt: '2026-08-28',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Du kennst sein Lieblingsessen und seine Sonntagabendlaune. Aber weißt du, wovor er wirklich Angst hat, oder was er dich nie zu fragen gewagt hat?",
   introduction: `<p>Ihr könnt einen ganzen Abend zusammen verbringen und drei nützliche Sätze wechseln: «was essen wir», «hast du die Schlüssel», «und dir, alles gut?». Keine Sorge, das ist kein Zeichen, dass es eurer Beziehung schlecht geht. Das passiert schlicht jedem Paar. Irgendwann frisst die Logistik das Gespräch auf.</p>
 <p><strong>Gute Fragen sind eine Abkürzung zu den Gesprächen, für die euch der Reflex abhandengekommen ist.</strong> Nicht um Journalistin zu spielen. Nur um den Anfang wiederzufinden, als ihr stundenlang reden konntet, ohne die Zeit zu bemerken...</p>

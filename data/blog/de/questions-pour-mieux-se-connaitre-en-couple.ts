@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-pour-mieux-se-connaitre-en-couple.webp',
   featuredImageAlt: "Paar sitzt Rücken an Rücken, darüber Fragezeichen und Herzen",
   publishedAt: '2026-10-13',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "An dem Tag, an dem man aufhört, sich Fragen zu stellen, ist man nicht fertig mit dem Entdecken... man hat nur aufgehört zu suchen.",
   introduction: `<p>Mach das Experiment eines Tages: Frag ein Paar, das seit zehn Jahren zusammen ist, ob es sich auswendig kennt. Sie werden Ja sagen, natürlich. Dann stell ihnen drei etwas präzisere Fragen, den Traum, den er aufgegeben hat, die Angst, die sie nie ausspricht, was jeder glaubt, das der andere über ihn denkt... und schau in die Gesichter. Es gibt immer eine Überraschung. Immer!</p>
 <p><strong>Denn man ist nie fertig damit, jemanden zu kennen. Man hört nur auf zu suchen, und das ist sehr verschieden.</strong> Die gute Nachricht: Neugier lässt sich wieder anzünden, man muss nur echte Fragen neu stellen und die Antworten hören wie am ersten Tag.</p>

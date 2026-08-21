@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/styles-attachement-couple.webp',
   featuredImageAlt: "Quattro cuori stilizzati che rappresentano i quattro stili di attaccamento, collegati da fili diversi",
   publishedAt: '2026-12-01',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Perché alcuni amano con serenità, altri aggrappandosi, altri fuggendo? La risposta sta in una parola: l'attaccamento. E si gioca molto prima della prima storia d'amore.",
   introduction: `<p>Avrai sicuramente notato questo strano fenomeno: in una coppia, ciascuno sembra suonare uno spartito scritto in anticipo. Uno ha bisogno di vicinanza, si sente presto trascurato, rilancia... L'altro ha bisogno d'aria, si sente presto invaso, si allontana. E più uno si aggrappa, più l'altro indietreggia! Come se il copione fosse già scritto ancora prima dell'incontro.</p>
 <p>In parte lo era. <strong>Quel copione si chiama stile di attaccamento: il modo in cui il tuo sistema emotivo ha imparato, da piccolissimo, a gestire il legame, la vicinanza e la separazione.</strong> È la teoria dell'attaccamento, uno dei campi più solidi della psicologia moderna, avviata da John Bowlby negli anni Cinquanta... e getta sulle coppie adulte una luce piuttosto spettacolare.</p>

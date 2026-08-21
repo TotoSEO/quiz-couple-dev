@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Simbolo astrologico dello Scorpione, compatibilità amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Lo Scorpione ama senza mezze misure, e pretende lo stesso dall'altro. Quali segni possono reggere questa intensità?`,
   introduction: `<p>Se avete mai amato uno Scorpione, o se lo siete, sapete che l'amore, per questo segno, non è una leggerezza. <strong>Non è una casella da spuntare, né un'esperienza tra le altre.</strong> È qualcosa che coinvolge tutto: le emozioni, il corpo, la lealtà, le fragilità più profonde. Lo Scorpione non fa le cose a metà, e pretende la stessa profondità dall'altro. Volete sapere se siete all'altezza di questa intensità? <a href="/it/segni-zodiacali-nomi-compatibilita/">Calcolate la vostra compatibilità amorosa tra segni e nomi</a>.</p>
 <p>Governato da Marte e Plutone, lo Scorpione è un segno di trasformazione. Entra in una relazione con l'intenzione, consapevole o meno, di cambiarla, sé stesso, l'altro, o entrambi. Le sue storie d'amore non sono mai banali. Lasciano un segno, anche quando finiscono. <strong>Soprattutto quando finiscono.</strong></p>

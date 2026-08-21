@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/micro-tromperie.webp',
   featuredImageAlt: "Telefono che mostra una notifica a forma di cuore, ombra di un terzo tra due sagome",
   publishedAt: '2026-12-25',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Nessuno è andato a letto con nessuno. Eppure qualcosa è successo... Benvenuta nella zona grigia della fedeltà moderna.",
   introduction: `<p>Non ha fatto niente, tecnicamente. Non è andato a letto con nessuno, niente appuntamenti segreti, niente bugie frontali... Solo like regolari alle foto di una ragazza, conversazioni su Instagram che chiude quando ti avvicini, un'ex che «tiene come amica» con messaggi alle 23. Tecnicamente niente. Eppure qualcosa ti dà fastidio... e non sai nemmeno se hai il diritto di essere infastidita.</p>
 <p>Questo territorio sfumato ha un nome: il microtradimento, micro-cheating per gli intimi. <strong>Tutte quelle piccole trasgressioni che non superano LA linea rossa ufficiale... ma che installano ambiguità con qualcuno esterno alla coppia.</strong> Il concetto è esploso con i social, e a ragione: non è mai stato così facile tenere vive delle braci senza accendere ufficialmente un fuoco.</p>

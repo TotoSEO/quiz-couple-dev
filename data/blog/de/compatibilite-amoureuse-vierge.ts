@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Astrologisches Symbol der Jungfrau, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Die Jungfrau analysiert alles, auch die Liebe. Welche Sternzeichen wissen ihre Tiefe wirklich zu schätzen?`,
   introduction: `<p>Die Jungfrau wird oft missverstanden. Man hält sie für kühl, zu kritisch, zu anspruchsvoll. Dabei ist das Gegenteil der Fall: <strong>Die Jungfrau liebt so sorgfältig, weil sie es so ernst meint</strong>. Wenn sie an einer Beziehung etwas auszusetzen hat, ist das keine Nörgelei, es ist der Versuch, etwas Gutes noch besser zu machen. Nicht jeder versteht das. Aber die Zeichen, die es verstehen, erleben eine Partnerin von seltener Hingabe. Möchten Sie wissen, ob Ihre Kombination zu diesen gehört? <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
 <p>Merkur regiert auch die Jungfrau, aber anders als bei den Zwillingen äußert sich das hier nicht in sprudelnder Gesprächigkeit, sondern in Präzision. Die Jungfrau beobachtet, bevor sie spricht. Sie analysiert, bevor sie fühlt. Und wenn sie sich dann einlässt, tut sie es mit einer Gründlichkeit, die beeindruckend ist, und manchmal einschüchternd.</p>

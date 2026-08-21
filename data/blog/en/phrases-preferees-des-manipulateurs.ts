@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
   featuredImageAlt: "Speech bubbles overlapping, one of them slowly crushing a smaller one",
   publishedAt: '2026-09-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "A manipulator doesn't lie at random. He picks from a repertoire, always the same one. And once you know the repertoire, something breaks in the magic trick.",
   introduction: `<p>"You're too sensitive." How many times have you heard that one? And how many times did you walk away wondering whether, actually, you were overreacting a bit?</p>
 <p>That's exactly why this article exists. Manipulators invent nothing: they draw from a repertoire, and it's roughly always the same one. Short phrases that sound harmless, sometimes even kind... and that do a very precise job in your head. Reverse the blame, make you doubt, shut you up.</p>

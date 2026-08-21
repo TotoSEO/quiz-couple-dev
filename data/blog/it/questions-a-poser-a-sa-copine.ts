@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
   featuredImageAlt: "Coppia a tavola che ride, lei risponde a una domanda gesticolando",
   publishedAt: '2026-10-02',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La trappola delle coppie che durano non è smettere di amarsi. È credere di aver finito di scoprirsi.",
   introduction: `<p>Piccolo test prima di cominciare: sai qual è il suo piatto preferito, il suo film di culto, il suo profumo. Facile. E adesso: sai di cosa è più orgogliosa quest'anno? Cosa le manca in questo periodo? Cosa non osa chiederti? Meno facile, eh.</p>
 <p><strong>È la trappola delle coppie assestate: confondiamo il conoscerla bene con l'aver finito di scoprirla.</strong> Solo che lei cambia, come te, come tutti. E le risposte di due anni fa non sono necessariamente quelle di oggi.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/5-langages-de-l-amour.webp',
   featuredImageAlt: "Cinco burbujas de colores que simbolizan los cinco lenguajes del amor alrededor de una pareja",
   publishedAt: '2026-12-15',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "El drama de muchas parejas no es la falta de amor... es un problema de traducción. Cada uno habla su idioma y nadie tiene el diccionario.",
   introduction: `<p>Aquí va una escena que quizá hayas vivido. Él llega con un regalo, orgullosísimo... y tú, en el fondo, habrías preferido que llegara antes, sin más. O al revés: tú le repites que le quieres, le haces cumplidos... y él apenas parece oírlo, cuando un simple abrazo le habría llenado. Cada uno da, sinceramente. Y cada uno tiene la impresión de recibir... al lado.</p>
 <p><strong>Es exactamente el problema que el concepto de los 5 lenguajes del amor sacó a la luz: no todos expresamos el amor de la misma manera, y damos espontáneamente en NUESTRO idioma... no en el del otro.</strong> La idea viene del consejero conyugal estadounidense Gary Chapman, en los años noventa, y si dio la vuelta al mundo es porque describe algo que todas las parejas reconocen al instante.</p>

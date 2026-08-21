@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/homme-toxique-en-amour.webp',
   featuredImageAlt: "Six silhouettes masculines dont certaines projettent une ombre épineuse",
   publishedAt: '2026-10-27',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Entre le maladroit qui peut changer et le manipulateur qui ne changera pas, il y a toute une gamme... et on ne s'en protège pas de la même façon.",
   introduction: `<p>Depuis que « toxique » est devenu le mot de l'époque, on range tout dedans : le jaloux, le distant, le colérique, le menteur... Et c'est un vrai problème, parce que ces hommes-là ne se ressemblent pas. Certains abîment par immaturité, sans le vouloir, et peuvent changer. D'autres abîment par fonctionnement, et ne changeront pas. <strong>Confondre les deux, c'est soit fuir un homme qui aurait pu grandir... soit rester des années avec un homme qui ne grandira jamais.</strong></p>
 <p>Cet article fait donc le tri. Six profils d'homme toxique en amour, du moins grave au plus grave : ce que chacun fait vivre concrètement, à quoi tu le reconnais... et surtout, pour chacun, la réponse à LA question : est-ce que celui-là peut changer ?</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Libra astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Libra craves harmony in love, sometimes to the point of never deciding. Which signs make them want to commit?`,
   introduction: `<p>Libra has a reputation for being indecisive. That's not entirely wrong, but it's not the whole truth either. <strong>They're not trying to avoid choices. They're searching for the right choice.</strong> The one that doesn't hurt anyone, that preserves harmony, that respects both sides of the equation. Sometimes that choice doesn't exist, and that's when Libra stays suspended, weighing an invisible scale. If you're wondering whether your sign is the one that can help Libra find their footing, <a href="/en/zodiac-signs-names-compatibility/">our zodiac and name compatibility tool</a> has the answer.</p>
 <p>Ruled by Venus like Taurus, but with a very different flavour, Libra is oriented toward the other person. They think in terms of partnership almost instinctively, which makes them an attentive, generous partner, but also someone who can lose sight of their own needs in the pursuit of balance.</p>

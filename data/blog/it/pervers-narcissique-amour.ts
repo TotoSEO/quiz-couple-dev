@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/pervers-narcissique-amour.webp',
   featuredImageAlt: "Silhouette di una coppia in cui uno tira i fili dell'altro come a una marionetta",
   publishedAt: '2026-08-25',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Tutti lo trovano affascinante. Tu non sai più cosa stai vivendo. È esattamente così che funziona il controllo di un narcisista.",
   introduction: `<p>C'è l'uomo che vedono gli altri: divertente, attento, brillante in società. E poi c'è quello che ritrovi appena la porta si chiude. Quello che soffia il caldo e il freddo, che ribalta ogni discussione contro di te, che ti fa dubitare della tua stessa memoria... La distanza tra i due è così enorme che hai smesso perfino di raccontarlo. Sinceramente, chi ti crederebbe?</p>
 <p><strong>Vivere con un narcisista è esattamente questo: un dubbio permanente, installato da qualcun altro, che hai finito per prendere per tuo.</strong> E se stai cercando questo alle undici di sera invece di dormire, non è per trovare una definizione. È per sapere se è questo che stai vivendo.</p>

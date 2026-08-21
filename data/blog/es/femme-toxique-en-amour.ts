@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/femme-toxique-en-amour.webp',
   featuredImageAlt: "Silueta femenina sosteniendo cuerdas anudadas en forma de corazón",
   publishedAt: '2026-11-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Los hombres tardan de media mucho más en nombrar una relación tóxica... porque nunca les enseñaron cómo se ve cuando viene de una mujer.",
   introduction: `<p>Haz la prueba a tu alrededor: pregúntales a unos tíos qué es una mujer tóxica. Obtendrás bromas, referencias de películas... y muy pocas respuestas serias. Porque todos hemos crecido con la idea de que la toxicidad en pareja es cosa de hombres. Resultado: cuando un hombre vive una relación que lo daña, no la nombra. Dice que ella «tiene carácter». Dice que es «complicado». Aguanta... y tarda años en entenderlo.</p>
 <p><strong>Así que digámoslo simple: la toxicidad no tiene sexo, y sus versiones femeninas hacen tanto daño como las demás.</strong> Solo están mejor camufladas socialmente: una mujer que controla «te quiere mucho», una mujer que monta escenas es «apasionada», una mujer que te rebaja «tiene réplica».</p>

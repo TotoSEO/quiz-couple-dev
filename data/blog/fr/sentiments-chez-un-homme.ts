@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sentiments-chez-un-homme.webp',
   featuredImageAlt: `Une main d'homme posée près d'une tasse sur une table en bois, lumière douce de fin d'après-midi`,
   publishedAt: '2026-08-12',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Chez beaucoup d'hommes, les sentiments ne commencent pas par une déclaration intérieure mais par une habitude. Voici les étapes, dans l'ordre où elles arrivent vraiment.`,
   introduction: `<p>La réponse tient en une phrase : <strong>chez la plupart des hommes, les sentiments ne naissent pas d'un coup de foudre mais d'une accumulation de moments partagés qui finissent par créer un manque.</strong> Ce n'est pas moins romantique, c'est juste plus lent, et surtout ça ne se voit pas de l'extérieur pendant longtemps.</p>
 

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sentiments-chez-un-homme.webp',
   featuredImageAlt: `La mano di un uomo appoggiata accanto a una tazza su un tavolo di legno, luce morbida di fine pomeriggio`,
   publishedAt: '2026-08-12',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `In molti uomini i sentimenti non cominciano con una dichiarazione interiore ma con un'abitudine. Ecco le fasi, nell'ordine in cui accadono davvero.`,
   introduction: `<p>La risposta sta in una frase: <strong>nella maggior parte degli uomini i sentimenti non nascono da un colpo di fulmine ma da un accumulo di momenti condivisi che finisce per creare una mancanza.</strong> Non è meno romantico, è solo più lento, e soprattutto resta invisibile dall'esterno per molto tempo.</p>
 

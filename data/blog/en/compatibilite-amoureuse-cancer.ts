@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Cancer astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Cancer gives everything in love, sometimes too much. Which signs know how to receive that love without taking advantage?`,
   introduction: `<p>Behind the shell, because there always is one, Cancer is one of the most deeply affectionate signs in the zodiac. What they give in love, when they feel safe, goes beyond what most other signs are capable of offering. <strong>A total presence. An extraordinary emotional memory.</strong> The ability to sense what the other person needs before they've even said it. To discover how your sign and name align with Cancer, try <a href="/en/zodiac-signs-names-compatibility/">our astrological compatibility tool</a>.</p>
 <p>Ruled by the Moon, Cancer is cyclical by nature. There are days when they overflow with affection, and days when they retreat inward without explanation. Their ideal partner is one who understands this rhythm, who doesn't interpret it as rejection, who doesn't force the door when it's closed, but who is there when it opens again.</p>

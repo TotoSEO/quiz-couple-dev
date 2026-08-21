@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sauver-son-couple.svg',
   featuredImageAlt: "Couple assis côte à côte en train de discuter pour sauver leur relation",
   publishedAt: '2026-05-26',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Sauver son couple ne veut pas dire s'accrocher à tout prix. C'est comprendre ce qui s'est cassé, décider si ça vaut le coup d'être réparé, et faire le travail à deux, vraiment à deux.",
   introduction: `<p>Tu sens que ça se délite. Les silences sont plus longs que les conversations. Quand vous parlez, ça tourne à la dispute ou au reproche déguisé. Tu ne sais plus si tu l'aimes ou si tu as juste peur de partir. Et le pire, c'est que tu ne sais même plus depuis quand c'est comme ça.</p>
 <p>Si tu es sur cet article, c'est probablement que tu as tapé quelque chose comme "comment sauver son couple" dans un moment de lucidité douloureuse. <strong>Ce réflexe-là dit quelque chose d'important : tu n'as pas encore lâché.</strong> Et c'est déjà un point de départ.</p>

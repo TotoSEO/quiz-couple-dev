@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/pervers-narcissique-amour.webp',
   featuredImageAlt: "Silueta de una pareja donde uno maneja los hilos del otro como a una marioneta",
   publishedAt: '2026-08-25',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Todo el mundo lo encuentra encantador. Tú ya no sabes qué estás viviendo. Así funciona exactamente el dominio de un narcisista.",
   introduction: `<p>Está el hombre que ven los demás: divertido, atento, brillante en sociedad. Y está el que te encuentras cuando se cierra la puerta. El que da calor y frío, el que le da la vuelta a cada discusión, el que te hace dudar de tu propia memoria... La distancia entre los dos es tan enorme que ya ni te atreves a contarlo. Sinceramente, ¿quién te iba a creer?</p>
 <p><strong>Eso es exactamente vivir con un narcisista: una duda permanente, instalada por otra persona, que has acabado tomando por tuya.</strong> Y si estás buscando esto a las once de la noche en vez de dormir, no es para encontrar una definición. Es para saber si es esto lo que estás viviendo.</p>

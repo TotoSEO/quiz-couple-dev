@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Pareja mirando un camino que se despliega hacia el horizonte, maletas en la mano",
   publishedAt: '2026-10-30',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Las parejas casi nunca fracasan por falta de amor. Fracasan por temas que nunca habían puesto sobre la mesa.",
   introduction: `<p>Hay una estadística que nadie calcula pero que todo el mundo conoce: la mayoría de las grandes crisis de pareja giran sobre temas... que los dos sabían que habría que hablar algún día. El dinero. Los hijos. La familia política. El reparto de las tareas. El «algún día» simplemente llegó tarde, en plena crisis, en el peor momento para hablarlo con calma.</p>
 <p><strong>Hablar del futuro nunca ha matado una historia sólida. No hablarlo ha matado muchas.</strong> Y al contrario de lo que se cree, estas conversaciones no son solemnes ni pesadas... bien llevadas, ¡son incluso de las más emocionantes que puede tener una pareja!</p>

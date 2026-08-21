@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/amour-ou-dependance-affective.webp',
   featuredImageAlt: "Zwei ineinander verschlungene Herzen, eines frei, das andere von einem Seil umwickelt",
   publishedAt: '2026-10-09',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Liebe und emotionale Abhängigkeit ähneln sich von innen enorm. Dieselbe Intensität, dieselben Dauergedanken... und trotzdem trennt sie alles.",
   introduction: `<p>Es ist eine Frage, die man sich kaum zu stellen wagt, weil sie ein bisschen Angst macht: Liebe ich ihn... oder liebe ich vor allem die Tatsache, dass er da ist? Ist das Liebe, dieses Ding, das mir den Bauch zusammenzieht, wenn er nicht antwortet? Oder etwas anderes?</p>
 <p>Die Verwirrung ist normal, und man muss damit anfangen: <strong>Von innen betrachtet ähneln sich intensive Liebe und emotionale Abhängigkeit sehr.</strong> In beiden Fällen denkst du ununterbrochen an ihn, hasst seine Abwesenheit, fühlst stark. Die Intensität macht den Unterschied nicht. Was den Unterschied macht, ist die Richtung: Liebe trägt dich zu ihm hin, Abhängigkeit lässt dich vor einer Leere fliehen.</p>

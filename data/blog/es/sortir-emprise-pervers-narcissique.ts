@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sortir-emprise-pervers-narcissique.webp',
   featuredImageAlt: "Pájaro escapando de una jaula cuya puerta se abre hacia un cielo claro",
   publishedAt: '2026-11-13',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Se cree que salir del dominio es irse. En realidad irse es solo la tercera etapa de cuatro... y no es la más difícil.",
   introduction: `<p>Si ya has intentado irte, conoces esa paradoja que vuelve loca: lo SABES. Has entendido el mecanismo, has leído los artículos, puedes describir su funcionamiento mejor que un manual... y sin embargo sigues ahí. O te fuiste y volviste. Quizá varias veces.</p>
 <p>Acabemos ya con la peor interpretación, la que te corroe: no, no es falta de voluntad, y no, no eres «demasiado débil». <strong>El dominio no es una opinión que se abandona. Es un estado, fabricado química y psicológicamente, y se desmonta en un cierto orden.</strong> No de un golpe de voluntad... etapa por etapa.</p>

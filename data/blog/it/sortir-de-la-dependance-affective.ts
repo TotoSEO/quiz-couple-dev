@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Persona che spezza una catena a forma di cuore, gradini di una scala sullo sfondo",
   publishedAt: '2026-09-25',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "«Lavora su te stessa», «impara ad amarti»... Grazie, ma concretamente, cosa si fa lunedì mattina? Ecco il piano, esercizio per esercizio.",
   introduction: `<p>Se hai già cercato come uscire dalla dipendenza affettiva, conosci la canzone: «riprendi fiducia in te», «rimetti al centro i tuoi bisogni», «impara ad amarti». Consigli veri, senza dubbio. Ma perfettamente inutilizzabili un martedì sera alle undici, quando fissi il telefono aspettando la sua risposta.</p>
 <p><strong>Dalla dipendenza affettiva non si esce con i buoni propositi. Si esce con dei gesti, piccoli, precisi, ripetuti.</strong> Esattamente come si riabilita un ginocchio dopo un infortunio: nessuno ti dice «ricomincia a camminare», ti danno degli esercizi, in un ordine, con una progressione.</p>

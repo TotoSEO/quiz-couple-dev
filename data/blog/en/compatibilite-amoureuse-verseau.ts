@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Aquarius astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Aquarius loves differently, with distance, intelligence, and freedom. Which signs understand that approach?`,
   introduction: `<p>Aquarius is probably the most misunderstood sign in love. People call them distant, detached, incapable of real commitment. <strong>The reality is more nuanced: Aquarius loves, but they refuse to love the way they're told to love.</strong> They don't want the classic model, the merging, the codependency, the "you're everything to me." They want a love that respects their individuality. To check whether your sign can understand that approach, <a href="/en/zodiac-signs-names-compatibility/">try our zodiac and name compatibility tool</a>.</p>
 <p>Ruled by Uranus, the planet of disruption and innovation, Aquarius sees love as shared freedom, not a comfortable cage. They want a partner who is first and foremost a friend, an intellectual accomplice, someone they can reimagine the world with at 3 a.m. without ever getting bored.</p>

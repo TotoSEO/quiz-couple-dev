@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/phases-rupture-homme.webp',
   featuredImageAlt: 'Man going through the stages of a romantic breakup',
   publishedAt: '2026-02-21',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: 'The 6 stages of a breakup for men: from denial to rebuilding.',
   introduction: `<p>It's often said that men suffer less from a breakup. That they bounce back faster, that they move on without too much damage. That's wrong. What is true, however, is that they experience it differently, and often later.</p>
 <p>Where a woman will generally feel the <strong>pain of separation</strong> almost immediately, a man takes time to let it in. He can go out, laugh, string together nights out, give the impression that everything's fine… and break down three months later, when he finds himself alone on a Sunday evening and reality catches up all at once.</p>

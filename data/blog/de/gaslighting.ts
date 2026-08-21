@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/gaslighting.webp',
   featuredImageAlt: "Gaslampe mit sinkender Flamme, zweifelnde Silhouette im Halbdunkel",
   publishedAt: '2026-11-24',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Gaslighting belügt dich nicht über die Fakten. Es belügt dich über dich: dein Gedächtnis, deine Wahrnehmung, deinen Verstand. Das macht es zur ätzendsten Manipulation überhaupt.",
   introduction: `<p>Du hast die Szene gesehen. Du warst da, du hast die Worte gehört, du könntest sie wiederholen... Und trotzdem, gegenüber, vollkommene Sicherheit: «das habe ich nie gesagt». Kein Zögern. Also prüfst du in deinem Kopf, einmal, zweimal... und ein kleiner Riss öffnet sich: Und wenn ich es war?</p>
 <p>Dieser Riss hat einen Namen: Gaslighting. <strong>Das ist keine Lüge über die Fakten, das ist ein Angriff auf das Messinstrument: dich.</strong> Dein Gedächtnis, deine Wahrnehmung, deine Stabilität... Lange genug wiederholt, erzeugt diese Manipulation ein einzigartiges Ergebnis: ein Opfer, das sich selbst nicht mehr trauen kann und deshalb von seinem Manipulator abhängt, um zu wissen, was real ist.</p>

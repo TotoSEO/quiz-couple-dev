@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/manipulateur-narcissique.webp',
   featuredImageAlt: "Schachspieler, dessen Figuren menschliche Silhouetten sind",
   publishedAt: '2026-09-18',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Der narzisstische Manipulator wird immer als allmächtig dargestellt. Das stimmt nicht. Sein System hat Schwachstellen, bekannte und vorhersehbare, wenn man weiß, wo man hinsehen muss.",
   introduction: `<p>Wenn man «narzisstischer Manipulator» sucht, landet man immer beim selben Artikel: die Liste der Anzeichen, das Porträt des Monsters, und dann sieh zu. Gut zum Verstehen, aber danach? Sobald du WEISST, dass du es mit einem Manipulator zu tun hast, lautet die eigentliche Frage: Wie funktioniert er, und wie schützt man sich konkret?</p>
 <p>Dieser Artikel packt das Problem also von der anderen Seite an. <strong>Der narzisstische Manipulator ist nicht allmächtig. Er ist ein System, und ein System hat Regeln, Muster und Schwachstellen.</strong> Seine Techniken sind vorhersehbar. Seine Reaktionen auch. Und seine Schwachstellen sind von einem Manipulator zum nächsten erstaunlich konstant.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Symbole astrologique du Bélier, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Le Bélier tombe vite amoureux, s'emballe encore plus vite, et déchante parfois. Quels signes tiennent le rythme ?`,
   introduction: `<p>Le Bélier n'est pas du genre à attendre. Il veut, il fonce, il aime, et si l'autre ne suit pas le rythme, il passe à autre chose. Ce n'est pas de la superficialité. C'est juste que <strong>le Bélier vit à une vitesse que tout le monde ne peut pas soutenir</strong>. Et en amour, cette énergie est à double tranchant : elle embrase les débuts de relation comme peu d'autres signes, mais elle peut aussi consumer une histoire avant qu'elle n'ait eu le temps de s'installer. Pour savoir si votre duo résiste à cette intensité, <a href="/signes-astrologiques-prenoms-compatibilite/">testez votre compatibilité astrologique et prénom</a> en quelques clics.</p>
 <p>Régi par Mars, la planète de l'action et du désir, le Bélier cherche un partenaire qui lui donne de la résistance, pas quelqu'un qui capitule à la première tension, mais quelqu'un qui lui répond, qui le challenge, qui ne s'efface pas. La complicité, pour lui, ça se construit dans le mouvement. Pas dans la tranquillité.</p>

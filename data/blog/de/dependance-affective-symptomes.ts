@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-symptomes.webp',
   featuredImageAlt: "Person, an ein Handy mit einem Herz gekettet, wartet auf eine Antwort",
   publishedAt: '2026-09-15',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Emotionale Abhängigkeit sieht man nicht im Spiegel. Man sieht sie in den Details: was du fühlst, wenn er nicht antwortet, was du für ihn absagst, was du dich nicht mehr zu sagen traust.",
   introduction: `<p>Er hat seit zwei Stunden nicht geantwortet. Objektiv ist nichts passiert: Er arbeitet, lebt sein Leben, alles ist in Ordnung. Aber du hast dein Handy schon fünfzehnmal geprüft, deine letzte Nachricht noch einmal gelesen, um zu sehen, ob sie ungeschickt war, und drei Szenarien gebaut, in einem verlässt er dich.</p>
 <p>Wenn dir diese Szene bekannt vorkommt, hast du dich vielleicht schon gefragt, ob du «zu viel» bist. Zu anhänglich, zu ängstlich, zu abhängig. <strong>Die eigentliche Frage ist nicht, ob du zu sehr liebst. Sie ist, ob dein emotionales Gleichgewicht vollständig von jemand anderem abhängt.</strong> Das ist emotionale Abhängigkeit, und sie hat klare Symptome.</p>

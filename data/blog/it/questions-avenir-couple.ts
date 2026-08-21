@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Coppia che guarda un sentiero che si srotola verso l'orizzonte, valigie in mano",
   publishedAt: '2026-10-30',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Le coppie non falliscono quasi mai per mancanza d'amore. Falliscono su argomenti che non avevano mai messo sul tavolo.",
   introduction: `<p>C'è una statistica che nessuno calcola ma che tutti conoscono: la maggior parte delle grandi crisi di coppia riguarda argomenti... che entrambi sapevano di dover affrontare un giorno. I soldi. I figli. I suoceri. La divisione delle faccende. Il «un giorno» è semplicemente arrivato troppo tardi, in piena crisi, nel peggior momento per parlarne con calma.</p>
 <p><strong>Parlare di futuro non ha mai ucciso una storia solida. Non parlarne ne ha uccise molte.</strong> E al contrario di quello che si crede, queste conversazioni non sono solenni né pesanti... condotte bene, sono anzi tra le più entusiasmanti che una coppia possa avere!</p>

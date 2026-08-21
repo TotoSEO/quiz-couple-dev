@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Lexique des relations amoureuses en 2026, ghosting, crush, red flag, love bombing",
   publishedAt: '2026-03-11',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Ces mots ne décrivent pas des nouveaux comportements, ils donnent enfin des noms à des choses qui existaient depuis toujours.",
   introduction: `<p>Votre mère ne sait pas ce que veut dire "ghoster quelqu'un". Votre ado, si. Et vous, quelque part entre les deux, vous utilisez probablement la moitié de ces mots sans même vous en rendre compte.</p>
 <p>Le vocabulaire des relations a changé vite. Pas parce que les relations ont changé, elles fonctionnent à peu près pareil depuis des siècles, mais parce que les réseaux sociaux ont accéléré la façon dont les mots se propagent. Un terme qui circule sur TikTok en anglais en janvier se retrouve dans les conversations françaises en mars. Certains s'installent. D'autres disparaissent.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-sagittaire.svg',
   featuredImageAlt: `Sagittarius astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Sagittarius needs freedom, movement, and meaning. Which signs can journey alongside them without holding them back?`,
   introduction: `<p>Sagittarius is the sign of people who can't sit still, not out of restlessness, but out of a hunger to live fully. <strong>They don't flee commitment. They flee boredom.</strong> And for them, boredom starts wherever routine settles in unchallenged. If you're wondering whether your sign can match that pace, <a href="/en/zodiac-signs-names-compatibility/">test your love compatibility by sign and name</a>.</p>
 <p>Ruled by Jupiter, the planet of expansion and optimism, Sagittarius sees love as an adventure for two, not a contract. They want to grow with the other person, explore together, laugh together, and above all never stop learning together. <strong>A partner who tells them "we've always done it this way" is a partner they'll eventually leave.</strong></p>

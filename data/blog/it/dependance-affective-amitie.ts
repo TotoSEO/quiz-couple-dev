@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-amitie.webp',
   featuredImageAlt: "Due amiche legate da un filo rosso troppo teso tra i polsi",
   publishedAt: '2026-11-17',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Sorvegliamo la dipendenza affettiva nelle nostre coppie... e la lasciamo installarsi tranquillamente nelle nostre amicizie, dove nessuno pensa di cercarla.",
   introduction: `<p>C'è una gelosia di cui non parla mai nessuno: quella che si prova quando la migliore amica si avvicina a qualcun altro. Quella fitta quando racconta una serata in cui non c'eri... Quel bisogno di sapere di essere ancora «la» persona, la prima a saperlo, la preferita. Non si osa dirlo, perché sembra assurdo: gelosia, tra amiche?</p>
 <p>Eppure. <strong>La dipendenza affettiva è un modo di attaccamento, non un'esclusiva della coppia: si installa ovunque ci sia un legame.</strong> E l'amicizia è anzi il suo terreno più discreto, perché nessuno sorveglia... Ripetiamo che «le amiche sono sacre» e, sotto quella bandiera, interi legami scivolano dolcemente dal prezioso al fusionale, e dal fusionale al soffocante.</p>

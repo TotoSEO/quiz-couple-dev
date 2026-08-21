@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective.svg',
   featuredImageAlt: "Paar umarmt auf einem Sofa, das emotionale Abhängigkeit in der Beziehung illustriert",
   publishedAt: '2026-03-24',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Emotionale Abhängigkeit ist nicht 'zu viel lieben'. Es bedeutet, ohne den anderen nicht mehr existieren zu können und den gesamten Selbstwert an seinem Blick aufzuhängen.",
   introduction: `<p>Du schaust alle fünf Minuten auf dein Handy. Du analysierst die kleinste Veränderung im Tonfall seiner Nachrichten. Wenn er auf Distanz geht, gerätst du in Panik. Wenn er präsent ist, bist du erleichtert, aber nie wirklich in Frieden, weil du weißt, dass es jederzeit kippen kann.</p>
 <p>Das ist keine intensive Liebe. Das ist keine Leidenschaft. <strong>Das ist emotionale Abhängigkeit.</strong> Und sie betrifft weit mehr Menschen als man denkt, Männer und Frauen, in allen Arten von Beziehungen. Dieser Artikel ist dafür da, dem, was du erlebst, Worte zu geben, zu verstehen woher es kommt und dir vor allem zu zeigen, dass es möglich ist, da herauszukommen.</p>`,

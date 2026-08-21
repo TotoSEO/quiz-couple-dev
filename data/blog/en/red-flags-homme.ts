@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Red flags in a man, complete list of warning signs in a relationship",
   publishedAt: '2026-03-05',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Red flags are rarely loud alarm bells. They're patterns you brush off until the day you realise you've been normalising them for months.",
   introduction: `<p>You feel something. A vague discomfort, a tension you can't name, a quiet voice that keeps coming back, and that you keep silencing because "maybe you're overreacting". <strong>You're probably not.</strong></p>
 <p>Red flags in a man are rarely loud alarm bells. They're patterns. Things that keep coming up. Behaviours you brush off once, twice, ten times, until the day you realise you've been normalising them for months. This article is here to name them.</p>`,

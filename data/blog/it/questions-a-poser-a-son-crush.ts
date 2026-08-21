@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Ragazza sorride al telefono mentre scrive un messaggio al suo crush",
   publishedAt: '2026-09-04',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La parte difficile con un crush non è trovare cosa dire. Sono le domande che trasformano uno scambio educato in una connessione vera.",
   introduction: `<p>Conosci quel momento... La conversazione gira a vuoto, i «bene, e tu?» si accumulano, e senti che se nessuno tira fuori altro finirà educatamente in un «buona serata allora». Con un crush ogni scambio conta doppio. Così, prima o poi, ci ritroviamo tutti a fissare il telefono senza sapere cosa scrivere.</p>
 <p><strong>Una buona domanda fa due cose insieme: mostra che ti interessi davvero e fa venire voglia di rispondere.</strong> È tutto quello che si chiede a una conversazione che comincia. Ed è esattamente quello che fanno le 100 domande che seguono.</p>

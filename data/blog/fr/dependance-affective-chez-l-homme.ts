@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-chez-l-homme.webp',
   featuredImageAlt: "Homme de dos regardant son téléphone, ombre en forme de cœur enchaîné",
   publishedAt: '2026-10-16',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "On imagine le dépendant affectif collant et suppliant. Chez les hommes, ça ressemble plus souvent à de la jalousie, de la colère... ou à un mec qui n'est jamais célibataire.",
   introduction: `<p>Quand on dit « dépendance affective », tout le monde visualise la même scène : quelqu'un qui supplie, qui s'accroche, qui envoie quinze messages... Et comme la plupart des hommes ne se reconnaissent pas dans cette image, ils concluent que ça ne les concerne pas. Grosse erreur.</p>
 <p><strong>La dépendance affective masculine existe, elle est massive... et elle porte des masques que personne n'identifie comme du manque affectif.</strong> La jalousie qui contrôle. La colère qui explose pour rien. L'hyper-investissement du mec parfait qui fait tout à la maison. Ou ce phénomène que tout le monde connaît sans le nommer : l'homme qui n'est JAMAIS célibataire plus de trois semaines...</p>

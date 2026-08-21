@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Pareja joven sentada frente a frente conversando, ella hace una pregunta y sonríe",
   publishedAt: '2026-08-28',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Conoces su plato favorito y su humor del domingo por la noche. ¿Pero sabes qué le da miedo de verdad, o qué nunca se ha atrevido a pedirte?",
   introduction: `<p>Podéis pasar una noche entera juntos e intercambiar tres frases útiles: «¿qué cenamos?», «¿has cogido las llaves?», «¿qué tal tú?». Tranquila, no es señal de que vuestra relación vaya mal. Es lo que le pasa a todas las parejas, sencillamente. Con el tiempo, la logística acaba comiéndose la conversación.</p>
 <p><strong>Las buenas preguntas son un atajo hacia las conversaciones que ya no os salen solas.</strong> No para jugar a periodista, ojo. Solo para recuperar aquel momento del principio en el que podíais hablar horas sin ver pasar el tiempo...</p>

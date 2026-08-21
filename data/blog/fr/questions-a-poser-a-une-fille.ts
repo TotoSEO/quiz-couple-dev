@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
   featuredImageAlt: "Homme et femme en terrasse, conversation animée autour d'un café",
   publishedAt: '2026-09-11',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La différence entre une conversation qui patine et une fille qui a envie de te revoir, ce n'est pas ton niveau de tchatche. C'est la qualité de tes questions... et ce que tu fais des réponses.",
   introduction: `<p>Soyons honnêtes deux minutes. Le problème n'est presque jamais de trouver UNE question à poser. Le problème, c'est que « ça va ? », « tu fais quoi dans la vie ? » et « t'as passé un bon week-end ? », toutes les autres conversations qu'elle a en ce moment commencent exactement pareil...</p>
 <p><strong>Une bonne question fait la différence parce qu'elle montre un truc rare : que tu t'intéresses à elle, pas juste à faire la conversation.</strong> Et ça, crois-moi, ça se remarque tout de suite.</p>

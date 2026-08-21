@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/manipulateur-narcissique.webp',
   featuredImageAlt: "Jugador de ajedrez cuyas piezas son siluetas humanas",
   publishedAt: '2026-09-18',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Siempre se presenta al manipulador narcisista como todopoderoso. Es falso. Su sistema tiene fallos, conocidos y previsibles, siempre que sepas dónde mirar.",
   introduction: `<p>Cuando buscas «manipulador narcisista» siempre caes en el mismo artículo: la lista de señales, el retrato del monstruo, y apáñate. Muy bien para entender, ¿pero después? Una vez que SABES que tienes delante a un manipulador, la pregunta de verdad pasa a ser: cómo funciona y cómo te proteges en concreto.</p>
 <p>Así que este artículo coge el problema por el otro lado. <strong>El manipulador narcisista no es todopoderoso. Es un sistema, y un sistema tiene reglas, patrones y fallos.</strong> Sus técnicas son previsibles. Sus reacciones también. Y sus puntos débiles son sorprendentemente constantes de un manipulador a otro.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Simbolo astrologico del Cancro, compatibilità amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Il Cancro ama con tutto sé stesso e costruisce nidi emotivi per chi gli sta accanto. Ma non tutti i segni sanno abitare quello spazio.`,
   introduction: `<p>Il Cancro non ama a metà. Quando si apre a qualcuno, e ci mette tempo, perché la sua corazza esiste per un motivo, lo fa con una generosità emotiva che pochi altri segni possono eguagliare. <strong>Cucinare per voi, ricordare ogni dettaglio di una conversazione di tre mesi fa, preoccuparsi del vostro stato d'animo prima ancora che voi ne siate consapevoli</strong>: ecco come ama un Cancro. Per verificare se il vostro legame ha questa profondità, <a href="/it/segni-zodiacali-nomi-compatibilita/">scoprite la vostra compatibilità tra segni zodiacali e nomi</a>.</p>
 <p>Governato dalla Luna, il Cancro vive l'amore attraverso le emozioni, non come concetto, ma come esperienza quotidiana e concreta. Il suo bisogno fondamentale è sentirsi al sicuro. Non protetto nel senso fisico, ma emotivamente. Sapere che l'altro non sparirà, non lo ridicolizzerà, non userà le sue vulnerabilità contro di lui.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/pervers-narcissique-amour.webp',
   featuredImageAlt: "Silhouette of a couple where one pulls the other's strings like a puppet",
   publishedAt: '2026-08-25',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Everyone finds him charming. You no longer know what you're living through. That is exactly how a narcissist's control works.",
   introduction: `<p>There's the man everyone else sees: funny, attentive, brilliant in company. And then there's the one you find once the door closes. The one who blows hot and cold, who turns every argument back on you, who makes you doubt your own memory... The gap between the two is so wide that you've stopped mentioning it to anyone. Honestly, who would believe you?</p>
 <p><strong>That is exactly what living with a narcissist feels like: permanent doubt, installed by someone else, that you've ended up mistaking for your own.</strong> And if you're searching this at 11pm instead of sleeping, it isn't for a definition. It's to find out whether this is what you're living.</p>

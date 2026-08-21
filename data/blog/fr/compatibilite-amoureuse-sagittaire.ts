@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-sagittaire.svg',
   featuredImageAlt: `Symbole astrologique du Sagittaire, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Le Sagittaire a besoin de liberté, de mouvement et de sens. Quels signes peuvent l'accompagner sans le freiner ?`,
   introduction: `<p>Le Sagittaire est le signe de ceux qui ne tiennent pas en place, pas par instabilité, mais par soif de vivre. <strong>Il ne fuit pas l'engagement. Il fuit l'ennui.</strong> Et pour lui, l'ennui commence là où la routine s'installe sans que personne ne la remette en question. Si vous vous demandez si votre signe peut suivre ce rythme, <a href="/signes-astrologiques-prenoms-compatibilite/">testez votre compatibilité amoureuse par signe et prénom</a>.</p>
 <p>Gouverné par Jupiter, planète de l'expansion et de l'optimisme, le Sagittaire voit l'amour comme une aventure à deux, pas comme un contrat. Il veut grandir avec l'autre, découvrir ensemble, rire ensemble, et surtout ne jamais cesser d'apprendre ensemble. <strong>Un partenaire qui lui dit « on a toujours fait comme ça » est un partenaire qu'il finira par quitter.</strong></p>

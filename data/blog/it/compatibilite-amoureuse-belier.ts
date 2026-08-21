@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Simbolo astrologico dell'Ariete, compatibilità amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `L'Ariete si innamora in fretta, si entusiasma ancora più in fretta, e a volte resta deluso. Quali segni riescono a tenere il passo?`,
   introduction: `<p>L'Ariete non è il tipo che aspetta. Vuole, si lancia, ama, e se l'altro non sta al passo, va avanti. Non è superficialità. È che <strong>l'Ariete vive a una velocità che non tutti riescono a sostenere</strong>. E in amore, questa energia è un'arma a doppio taglio: incendia gli inizi di una storia come pochi altri segni, ma può anche consumare un rapporto prima ancora che abbia avuto il tempo di radicarsi. Per capire se la vostra coppia regge a questa intensità, <a href="/it/segni-zodiacali-nomi-compatibilita/">provate il test di compatibilità tra segni zodiacali e nomi</a> in pochi clic.</p>
 <p>Governato da Marte, il pianeta dell'azione e del desiderio, l'Ariete cerca un partner che gli opponga resistenza, non qualcuno che cede alla prima tensione, ma qualcuno che gli risponde, che lo sfida, che non si fa da parte. La complicità, per lui, si costruisce nel movimento. Non nella tranquillità.</p>

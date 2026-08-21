@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/comment-savoir-si-cest-le-bon.svg',
   featuredImageAlt: "Couple complice qui se regarde, les signes que c'est la bonne personne",
   publishedAt: '2026-05-26',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Le bon partenaire ne te fait pas douter de ta valeur. Il te donne envie de construire, pas de survivre. Voici comment faire la différence.",
   introduction: `<p>Tu l'aimes, ça c'est sûr. Mais est-ce que c'est <strong>la bonne personne</strong> pour toi, pour la vie ? C'est la question qui te tourne dans la tête, probablement depuis un moment. Peut-être que tout va bien en surface, mais quelque chose en toi a besoin d'être rassuré. Ou peut-être que tu sens des frictions et tu te demandes si c'est normal ou si c'est un signe.</p>
 <p>Spoiler : il n'existe pas de check-list magique. Pas de moment "eurêka" où tout devient limpide. Mais il y a <strong>des signaux concrets</strong>, des indicateurs fiables, des questions que tu peux te poser honnêtement pour y voir plus clair. Pas des clichés de comédies romantiques. Des vrais repères, ancrés dans ce que la psychologie et l'expérience nous apprennent sur les relations qui durent.</p>

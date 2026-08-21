@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
   featuredImageAlt: "Imán en forma de corazón atrayendo a una silueta encadenada",
   publishedAt: '2026-11-10',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "No es casualidad que los dependientes emocionales se crucen con tantos manipuladores. Uno busca ser indispensable... el otro busca a alguien que tenga miedo de perder.",
   introduction: `<p>Es una pregunta que vuelve sin parar en las personas que salen de una relación de dominio: «¿por qué yo?» ¿Por qué él, otra vez? ¿Por qué esta sensación de caer siempre en el mismo perfil, como si hubiera un imán de por medio?</p>
 <p>La respuesta duele un poco, pero libera: <strong>no es mala suerte, es un emparejamiento. El manipulador busca exactamente lo que el dependiente emocional lleva encima: el miedo a perder.</strong> Uno necesita ser querido para existir, el otro necesita controlar para existir... y esas dos necesidades encajan con una precisión aterradora.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/homme-pervers-narcissique-signes.webp',
   featuredImageAlt: "A man smiling in company while his partner looks away, unsettled",
   publishedAt: '2026-09-01',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "The problem with a narcissistic man is that you're the only one who sees what you see. Here are the 12 behaviours that eventually give him away.",
   introduction: `<p>If you're typing "narcissistic man" into a search engine, it isn't out of intellectual curiosity... It's because one specific man, your partner, your ex, maybe the father of your children, has put you on alert. And something doesn't add up: this man everyone adores makes you live, behind closed doors, something nobody imagines.</p>
 <p>That's trap number one with this profile. The gap between the public man and the private one is so violent that you come across as unhinged the moment you try to describe it. So, naturally, you stop describing it. And you end up alone with your questions.</p>

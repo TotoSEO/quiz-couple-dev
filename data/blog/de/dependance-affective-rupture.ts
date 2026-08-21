@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-rupture.webp',
   featuredImageAlt: "Herz in zwei Hälften, von denen eine zu einer aufsteigenden Treppe wird",
   publishedAt: '2026-11-20',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Alle leiden unter einer Trennung. Der emotional Abhängige ist im Entzug... und das ist etwas anderes zu durchqueren.",
   introduction: `<p>Die Leute um dich herum scheinen es lang zu finden. «Du musst weitermachen»... Leicht gesagt. Sie wissen nicht, wie es ist, beim Aufwachen aufs Handy zu schauen wegen einer Nachricht, die nicht mehr kommt. Eine Nummer zu wählen und aufzulegen. Körperlich einen Mangel zu spüren, der dem einer Substanz zum Verwechseln ähnelt.</p>
 <p>Und genau davon reden wir: <strong>Für einen emotional abhängigen Menschen ist eine Trennung kein gewöhnlicher Liebeskummer. Sie ist ein Entzug, im wörtlichen Sinn.</strong> Der andere war dein Gefühlsregler, deine Wertquelle, dein Anti-Angstmittel... und alles hörte auf einen Schlag auf. Natürlich ist es härter. Natürlich dauert es länger. Das ist keine Schwäche: Das ist Mechanik.</p>

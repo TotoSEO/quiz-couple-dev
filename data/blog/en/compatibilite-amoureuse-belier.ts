@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Aries astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Aries falls fast, loves hard, and moves on quickly when the spark dies. Which signs can truly keep up?`,
   introduction: `<p>Aries doesn't wait around. They want, they chase, they love, and if the other person can't match their pace, they're already looking ahead. That's not shallowness. It's just that <strong>Aries operates at a speed most people simply can't sustain</strong>. In love, this energy cuts both ways: it makes the early days of a relationship electrifying like few other signs can, but it can also consume a story before it ever has time to settle. To see whether your pairing can handle this intensity, <a href="/en/zodiac-signs-names-compatibility/">check your astrological and name compatibility</a> in just a few clicks.</p>
 <p>Ruled by Mars, the planet of action and desire, Aries needs a partner who pushes back, not someone who gives in at the first sign of tension, but someone who answers, who challenges, who doesn't fade into the background. For Aries, real connection is built through movement. Not through quiet comfort.</p>

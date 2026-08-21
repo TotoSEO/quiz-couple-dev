@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Símbolo astrológico de Libra, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Libra necesita armonía en el amor como otros necesitan aire para respirar. ¿Qué signos saben dársela sin anularle?`,
   introduction: `<p>Libra no soporta los conflictos, o, más exactamente, no soporta los conflictos que no llevan a nada. Discutir por discutir le resulta agotador. Lo que busca en el amor es un espacio donde las cosas fluyan, donde las diferencias se resuelvan con inteligencia y no con gritos. <strong>Eso no le convierte en superficial. Le convierte en alguien que sabe lo que quiere: paz con profundidad.</strong> ¿Quieres saber si tu signo y tu nombre armonizan con Libra? <a href="/es/signos-astrologicos-nombres-compatibilidad/">Prueba nuestra herramienta de compatibilidad astrológica</a>.</p>
 <p>Gobernado por Venus, al igual que Tauro, pero de una forma mucho más aérea, Libra se enamora de la belleza en todas sus formas: un rostro, una idea, una conversación bien construida. Para Libra, la estética no es un capricho, es una necesidad. Y eso se refleja en cómo elige pareja: busca a alguien que le resulte bello no solo por fuera, sino por dentro.</p>

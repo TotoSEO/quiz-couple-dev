@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-taureau.svg',
   featuredImageAlt: `Symbole astrologique du Taureau, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Le Taureau aime profondément, loyalement, et souvent longuement. Mais tous les signes ne sont pas faits pour ce rythme-là.`,
   introduction: `<p>Demandez à un Taureau ce qu'il cherche en amour. Il vous dira, peut-être pas avec ces mots exacts, quelque chose qui ressemble à <em>de la constance</em>. Pas de la routine ennuyeuse, pas de la répétition mécanique. Mais la certitude que demain, l'autre sera encore là. Que ce qui a été construit ensemble ne disparaîtra pas à la première turbulence. Si vous voulez vérifier si votre combinaison signe-prénom tient ses promesses, essayez <a href="/signes-astrologiques-prenoms-compatibilite/">notre outil de compatibilité entre signes astrologiques et prénoms</a>.</p>
 <p>C'est Vénus qui gouverne ce signe. Et contrairement à ce qu'on pourrait croire, Vénus chez le Taureau ne parle pas d'abord de romance et de grandes déclarations, <strong>elle parle de plaisir concret, de présence physique, de beauté accessible</strong>. Un bon repas partagé. Un canapé confortable. La chaleur de quelqu'un qu'on connaît vraiment. Voilà ce que le Taureau appelle l'amour.</p>

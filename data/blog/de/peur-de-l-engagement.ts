@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/peur-de-l-engagement.webp',
   featuredImageAlt: "Person, die vor einer offenen herzförmigen Tür zögert, einen Koffer in der Hand",
   publishedAt: '2026-12-11',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Bindungsangst ist fast nie Angst vor der anderen Person. Sie ist die Angst vor dem, was man durch Bindung zu verlieren glaubt, und das verändert das ganze Problem.",
   introduction: `<p>«Ich bin nicht bereit.» Drei Worte, die eine Beziehung jahrelang in der Schwebe halten können. Nicht bereit, es offiziell zu machen, nicht bereit zusammenzuziehen, nicht bereit, sich eine Zukunft vorzustellen. Und gegenüber wartet jemand, zwischen Geduld und Erschöpfung, und stellt sich die eigentliche Frage: Liegt es an mir oder an ihm?</p>
 <p>Kurze Antwort: meistens an keinem von beiden. <strong>Bindungsangst ist fast nie Angst vor der anderen Person: Sie ist die Angst vor dem, was man durch Bindung zu verlieren glaubt.</strong> Die eigene Freiheit, die eigene Identität, die eigenen Möglichkeiten, oder eine noch ältere Angst, die Angst, einen Schiffbruch zu wiederholen, den man aus zu großer Nähe gesehen hat.</p>

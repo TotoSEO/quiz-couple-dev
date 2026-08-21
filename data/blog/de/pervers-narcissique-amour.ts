@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/pervers-narcissique-amour.webp',
   featuredImageAlt: "Silhouette eines Paares, bei dem einer den anderen wie eine Marionette an Fäden führt",
   publishedAt: '2026-08-25',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Alle finden ihn charmant. Du weißt nicht mehr, was du eigentlich erlebst. Genau so funktioniert die Kontrolle eines Narzissten.",
   introduction: `<p>Da ist der Mann, den die anderen sehen: witzig, aufmerksam, brillant in Gesellschaft. Und da ist der, den du antriffst, sobald die Tür zu ist. Der heiß und kalt bläst, der jeden Streit gegen dich dreht, der dich an deinem eigenen Gedächtnis zweifeln lässt... Der Abstand zwischen beiden ist so groß, dass du längst aufgehört hast, davon zu erzählen. Wer würde dir schon glauben?</p>
 <p><strong>Genau das ist das Leben mit einem Narzissten: ein Dauerzweifel, von jemand anderem installiert, den du irgendwann für deinen eigenen gehalten hast.</strong> Und wenn du das um 23 Uhr suchst statt zu schlafen, dann nicht wegen einer Definition. Sondern um herauszufinden, ob es das ist, was du erlebst.</p>

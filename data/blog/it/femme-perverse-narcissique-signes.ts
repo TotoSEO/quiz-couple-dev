@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/femme-perverse-narcissique-signes.webp',
   featuredImageAlt: "Donna che tiene una maschera sorridente davanti al viso, ombra dura proiettata sul muro",
   publishedAt: '2026-09-29',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Immaginiamo sempre il narcisista al maschile. Risultato: gli uomini che vivono il controllo al femminile dubitano due volte, della loro relazione e del loro diritto a soffrirne.",
   introduction: `<p>Cerca «narcisista» su qualunque sito: gli esempi sono al maschile, le vittime al femminile. Così, quando è LA TUA compagna a soffiare il caldo e il freddo, a demolirti a porte chiuse e ad affascinare tutti fuori, tu cosa fai? Dubiti. Due volte anziché una. Di quello che vivi, prima. E del tuo diritto a soffrirne, poi.</p>
 <p><strong>Diciamolo chiaramente: la perversione narcisistica esiste al femminile, fa gli stessi danni, e gli uomini che la subiscono sono le vittime più silenziose che esistano.</strong> Non perché sia meno grave. Perché nessuno ha dato loro il vocabolario, e «lamentarsi della propria donna», socialmente, passa per debolezza o malafede.</p>

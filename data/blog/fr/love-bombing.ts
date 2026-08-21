@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/love-bombing.svg',
   featuredImageAlt: "Pluie de cœurs et cœur accroché à un hameçon, illustrant le love bombing",
   publishedAt: '2026-08-02',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Le love bombing ne ressemble pas à de la manipulation. Il ressemble au plus beau début d'histoire de ta vie. C'est exactement ce qui le rend efficace.",
   introduction: `<p>Tu viens de rencontrer quelqu'un et tout va très vite. Des messages du matin au soir. Des compliments qui te donnent le vertige. Un "je crois que tu es la personne de ma vie" au bout de trois semaines. Tes amies te disent que c'est magnifique. Toi, quelque part, tu ressens un petit décalage que tu n'arrives pas à nommer.</p>
 <p><strong>Le love bombing ne ressemble pas à de la manipulation. Il ressemble au plus beau début d'histoire de ta vie.</strong> C'est précisément ce qui le rend si efficace, et c'est pour ça que la question "est-ce qu'il m'aime vraiment ou est-ce qu'il me manipule ?" est si difficile à trancher de l'intérieur.</p>

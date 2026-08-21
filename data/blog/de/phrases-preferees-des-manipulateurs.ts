@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
   featuredImageAlt: "Übereinanderliegende Sprechblasen, eine davon zerdrückt langsam eine kleinere",
   publishedAt: '2026-09-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Ein Manipulator lügt nicht zufällig. Er greift in ein Repertoire, immer dasselbe. Und sobald du das Repertoire kennst, bricht etwas im Zaubertrick.",
   introduction: `<p>«Du bist zu empfindlich.» Wie oft hast du diesen Satz schon gehört? Und wie oft bist du danach gegangen und hast dich gefragt, ob du nicht tatsächlich ein bisschen übertreibst?</p>
 <p>Genau deshalb gibt es diesen Artikel. Manipulatoren erfinden nichts: sie greifen in ein Repertoire, und es ist ungefähr immer dasselbe. Kurze Sätze, die harmlos klingen, manchmal sogar wohlwollend... und die in deinem Kopf sehr präzise Arbeit leisten. Die Schuld umdrehen, dich zweifeln lassen, dich zum Schweigen bringen.</p>

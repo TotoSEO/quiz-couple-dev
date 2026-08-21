@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Femme pensive assise seule, signes de mal-être dans le couple",
   publishedAt: '2026-03-01',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Les signes sont souvent là depuis longtemps. On ne sait juste pas quoi regarder.",
   introduction: `<p>La plupart des hommes ne voient rien venir. Pas parce qu'ils s'en fichent, mais parce que les signes qu'une femme envoie quand elle va mal dans une relation ne ressemblent pas à ce qu'on imagine. <strong>Ce n'est pas forcément les larmes ou les disputes.</strong> C'est souvent plus silencieux. Plus diffus. Quelque chose qui s'efface progressivement, sans qu'on puisse mettre le doigt dessus.</p>
 <p>Si tu es sur cet article, c'est probablement que tu as senti que quelque chose ne tourne pas rond. Ce pressentiment-là, il mérite d'être pris au sérieux.</p>`,

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/arreter-ou-continuer-relation.webp',
   featuredImageAlt: `Two mugs on a kitchen table at dawn, one full and one empty, two chairs pushed slightly apart`,
   publishedAt: '2026-08-11',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Most people asking this question have been circling it for months. Here is what separates a rough patch from a dead end, and how to decide without lying to yourself.`,
   introduction: `<p>If you want the short answer, here it is: <strong>you end it when the relationship asks you to give up who you are, and you stay when it only asks you to work at it.</strong> Everything else in this article exists to help you work out which of the two you are in.</p>
 

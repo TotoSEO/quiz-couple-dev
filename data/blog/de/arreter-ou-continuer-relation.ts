@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/arreter-ou-continuer-relation.webp',
   featuredImageAlt: `Zwei Tassen auf einem Küchentisch im Morgengrauen, eine voll, eine leer, zwei leicht auseinandergerückte Stühle`,
   publishedAt: '2026-08-11',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Die meisten, die sich diese Frage stellen, drehen sich seit Monaten im Kreis. Hier steht, was eine schwierige Phase von einer Sackgasse unterscheidet, und wie man entscheidet, ohne sich etwas vorzumachen.`,
   introduction: `<p>Wenn du die kurze Antwort suchst, hier ist sie: <strong>Man hört auf, wenn die Beziehung verlangt, dass du aufgibst, wer du bist, und man macht weiter, wenn sie nur verlangt, dass du an ihr arbeitest.</strong> Alles Weitere in diesem Artikel hilft dir herauszufinden, in welchem der beiden Fälle du steckst.</p>
 

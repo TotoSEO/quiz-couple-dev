@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/activites-couple-ete.webp',
   featuredImageAlt: "Summer picnic at sunset with two lemonades, a wicker basket and a bicycle leaning against a tree",
   publishedAt: '2026-07-29',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Summer, free time and zero ideas? Here are ten simple, cheap activities tested as a couple that break from the usual outings and create real memories.",
   introduction: `<p>In summer, we have time, daylight until 10pm and... often zero ideas. So we redo the same terrace, the same film, the same walk around the same park. Yet <strong>the best summer couple activities are almost never the expensive ones or the ones that take three weeks to plan.</strong> They're simple things, a bit silly sometimes, that we just never do. Here are ten, tested and approved at home.</p>`,
   quickSummary: [

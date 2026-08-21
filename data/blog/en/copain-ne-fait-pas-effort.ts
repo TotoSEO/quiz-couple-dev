@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "My boyfriend doesn't make an effort, understanding and taking action",
   publishedAt: '2026-03-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "An imbalance of effort in a couple is one of the most common causes of breakup, precisely because it sets in gradually and we tend to adapt to it before realising how much it weighs on us.",
   introduction: `<p>You organise, you anticipate, you think of everything. The outings, the gifts, the time you spend together, the important conversations. And he's there, he responds when you suggest something, he participates when you push, but nothing ever really comes from him. You've had the feeling of <a href="/en/healthy-relationship-test/">carrying the relationship on your own</a> for a while now, and you're starting to wonder whether that's normal, whether you're asking too much, or whether something is genuinely wrong.</p>
 <p>You're not overreacting. <strong>An imbalance of effort in a couple is one of the most common causes of breakup, precisely because it sets in gradually and we tend to adapt to it before realising how much it weighs on us.</strong> This article is here to put words to what you're feeling, understand what's really going on, and help you decide what to do.</p>`,

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/relation-toxique-signes.webp',
   featuredImageAlt: "Deux mains liées par une plante dont les épines remplacent les feuilles",
   publishedAt: '2026-10-06',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "« Toxique », le mot est partout, au point de ne plus rien dire. Pourtant, la vraie relation toxique a des signes précis... et une question centrale : est-ce que ça se répare ?",
   introduction: `<p>« Relation toxique »... Le mot est tellement partout qu'il sert à tout : une dispute un peu forte, un ex rancunier, un désaccord sur les vacances, hop, toxique ! Résultat, quand on se pose VRAIMENT la question pour son propre couple, on ne sait plus quoi penser. Est-ce que c'est grave ? Est-ce que c'est normal ? Est-ce que c'est moi ?</p>
 <p>Alors posons le vrai critère, celui qui remet tout en ordre : <strong>une relation n'est pas toxique par ce qu'elle contient, elle est toxique par ce qu'elle te fait.</strong> Des disputes, tous les couples en ont. Des différences, des périodes grises, des mots qui dépassent : pareil. La question n'est pas là. La question, c'est : dans quel état cette relation te met-elle, semaine après semaine ?</p>

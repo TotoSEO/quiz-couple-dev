@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
   featuredImageAlt: "Due persone che parlano a un tavolo, una ascolta l'altra con attenzione",
   publishedAt: '2026-09-11',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La differenza tra una conversazione che si spegne e una ragazza che ha voglia di rivederti non è la tua parlantina. È la qualità delle tue domande, e quello che fai delle risposte.",
   introduction: `<p>Siamo onesti due minuti. Il problema non è quasi mai trovare UNA domanda da fare. Il problema è che «come va?», «che lavoro fai?» e «bel weekend?» sono esattamente il modo in cui iniziano tutte le altre conversazioni che lei sta avendo in questo momento.</p>
 <p><strong>Una buona domanda fa la differenza perché mostra una cosa rara: che ti interessi a lei, non solo al fatto di parlare.</strong> E quello, credimi, si sente subito.</p>

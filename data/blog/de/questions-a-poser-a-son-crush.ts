@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Junge Person lächelt aufs Handy und tippt eine Nachricht an ihren Crush",
   publishedAt: '2026-09-04',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Das Schwierige an einem Crush ist nicht, etwas zu sagen. Es sind die Fragen, die aus einem höflichen Austausch eine echte Verbindung machen.",
   introduction: `<p>Du kennst diesen Moment... Das Gespräch dreht sich im Kreis, die «gut, und dir?» reihen sich aneinander, und du spürst: wenn jetzt niemand etwas anderes bringt, stirbt das höflich in einem «dann noch einen schönen Abend». Bei einem Crush zählt jeder Austausch doppelt. Und so starren wir alle irgendwann aufs Handy, ohne zu wissen, was wir schreiben sollen.</p>
 <p><strong>Eine gute Frage tut zwei Dinge gleichzeitig: sie zeigt echtes Interesse, und sie macht Lust zu antworten.</strong> Mehr verlangt man von einem beginnenden Gespräch nicht. Und genau das können die folgenden 100 Fragen.</p>

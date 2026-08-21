@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-couple-telephone-message.webp',
   featuredImageAlt: "Due telefoni collegati da un filo rosso teso tra due finestre illuminate",
   publishedAt: '2026-11-27',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Al telefono non ci sono sguardi né gesti... solo parole. È esattamente per questo che le buone domande lì fanno miracoli.",
   introduction: `<p>C'è un momento che conoscono tutte le coppie, che vivano a 800 chilometri o a due quartieri di distanza: quello in cui la telefonata della sera diventa un bollettino meteo. «Com'è andata?» «Bene.» «Cosa mangi?» «Pasta.»... Il legame c'è, la voglia anche, ma la conversazione gira a vuoto.</p>
 <p>È normale, in realtà: a distanza si perde tutto quello che di solito nutre gli scambi, gli sguardi, il contesto condiviso, i gesti... <strong>Restano solo le parole. Ed è proprio per questo che le buone domande fanno miracoli al telefono: ridanno alle parole qualcosa da fare.</strong></p>

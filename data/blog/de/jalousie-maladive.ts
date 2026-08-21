@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/jalousie-maladive.webp',
   featuredImageAlt: "Stilisiertes grünes Auge, das ein Paar in seiner Iris einschließt",
   publishedAt: '2026-12-18',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Normale Eifersucht schützt die Beziehung. Krankhafte Eifersucht verschlingt sie, und sie verschlingt zuerst den, der sie empfindet.",
   introduction: `<p>Es beginnt immer mit einer Kleinigkeit. Ein Vorname, der zu oft fällt, ein Lächeln auf einer Party, ein Handy, das mit dem Display nach unten auf dem Tisch liegt, und ein Szenario beginnt sich in deinem Kopf zu drehen. Du weißt, dass dieses Szenario auf nichts beruht. Du weißt es! Aber es dreht sich trotzdem, immer schneller, und schon kontrollierst du, fragst nach, malst dir Dinge aus und bist wütend auf dich, weil du es tust.</p>
 <p>Das Erste, was gesagt werden muss, weil es entlastet: <strong>Eifersüchtig zu sein ist normal. Eifersucht ist ein universelles Gefühl, das es in allen Beziehungen gibt, in denen die beiden einander wichtig sind.</strong> Das Problem ist nicht, sie zu empfinden. Das Problem beginnt, wenn sie die Steuerung übernimmt: wenn sie über deine Abende entscheidet, über deine Fragen, über deine Durchsuchungen, und wenn sie alle leiden lässt, allen voran dich.</p>

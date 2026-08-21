@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-symptomes.webp',
   featuredImageAlt: "Personne enchaînée à un téléphone affichant un cœur, dans l'attente d'une réponse",
   publishedAt: '2026-09-15',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La dépendance affective ne se voit pas dans le miroir. Elle se voit dans les détails : ce que tu ressens quand il ne répond pas, ce que tu annules pour lui, ce que tu n'oses plus dire.",
   introduction: `<p>Il ne t'a pas répondu depuis deux heures. Objectivement, il ne s'est rien passé : il travaille, il vit sa vie, tout va bien. Mais toi, tu as déjà vérifié ton téléphone quinze fois, relu ton dernier message pour voir s'il était maladroit, et échafaudé trois scénarios dont un où il te quitte...</p>
 <p>Si cette scène te parle, tu t'es peut-être déjà demandé si tu n'étais pas « trop ». Trop attachée, trop anxieuse, trop dépendante. <strong>La vraie question n'est pas de savoir si tu aimes trop fort. C'est de savoir si ton équilibre émotionnel dépend entièrement de quelqu'un d'autre.</strong> Ça, c'est la dépendance affective, et elle a des symptômes précis.</p>

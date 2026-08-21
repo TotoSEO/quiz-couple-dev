@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Astrologisches Symbol des Krebses, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Der Krebs liebt intensiv und schützend, doch nicht jedes Zeichen versteht seine emotionale Tiefe.`,
   introduction: `<p>Wer den Krebs oberflächlich kennt, hält ihn vielleicht für überempfindlich. Wer ihn wirklich kennt, weiß: <strong>Der Krebs empfindet nicht zu viel, er empfindet nur ehrlicher als die meisten</strong>. In der Liebe bedeutet das eine Hingabe, die selten ist. Eine Fürsorge, die fast bedingungslos wirkt. Aber auch eine Verletzlichkeit, die das falsche Gegenüber gnadenlos ausnutzen kann. Um herauszufinden, ob Ihr Sternzeichen diese Tiefe versteht, <a href="/de/sternzeichen-vornamen-kompatibilitaet/">prüfen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
 <p>Der Mond regiert den Krebs, und damit auch seine Gefühlswelt, die wie Ebbe und Flut schwankt. In einer Beziehung braucht er vor allem eines: emotionale Sicherheit. Nicht Luxus, nicht Abenteuer, nicht ständige Bestätigung. Einfach die Gewissheit, dass der andere bleibt. Dass die Liebe ein sicherer Hafen ist und kein offenes Meer ohne Kompass.</p>

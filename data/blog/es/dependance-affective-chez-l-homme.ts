@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-chez-l-homme.webp',
   featuredImageAlt: "Hombre de espaldas mirando el móvil, con una sombra en forma de corazón encadenado",
   publishedAt: '2026-10-16',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Imaginamos al dependiente emocional pegajoso y suplicante. En los hombres se parece más a menudo a celos, a rabia... o a un tío que nunca está soltero.",
   introduction: `<p>Cuando se dice «dependencia emocional», todo el mundo visualiza la misma escena: alguien que suplica, que se agarra, que manda quince mensajes. Y como la mayoría de los hombres no se reconocen en esa imagen, concluyen que no va con ellos. Gran error.</p>
 <p><strong>La dependencia emocional masculina existe, es masiva... y lleva máscaras que nadie identifica como carencia afectiva.</strong> Los celos que controlan. La rabia que explota por nada. La hiperimplicación del tío perfecto que lo hace todo en casa. O ese fenómeno que todo el mundo conoce sin nombrarlo: el hombre que NUNCA está soltero más de tres semanas.</p>

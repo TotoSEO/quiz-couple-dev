@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
   featuredImageAlt: "Herzförmiger Magnet, der eine angekettete Silhouette anzieht",
   publishedAt: '2026-11-10',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Es ist kein Zufall, dass emotional abhängige Menschen so vielen Manipulatoren begegnen. Der eine will unentbehrlich sein... der andere sucht jemanden, der Angst hat zu verlieren.",
   introduction: `<p>Es ist eine Frage, die bei Menschen, die aus einer Beziehung mit Machtgefälle herauskommen, ständig auftaucht: «Warum ich?» Warum wieder er? Warum dieses Gefühl, immer an dasselbe Profil zu geraten, als wäre ein Magnet im Spiel?</p>
 <p>Die Antwort tut ein bisschen weh, aber sie befreit: <strong>Das ist kein Pech, das ist eine Passung. Der Manipulator sucht genau das, was der emotional Abhängige mit sich trägt: die Angst zu verlieren.</strong> Der eine muss geliebt werden, um zu existieren, der andere muss kontrollieren, um zu existieren... und diese beiden Bedürfnisse greifen mit erschreckender Präzision ineinander.</p>

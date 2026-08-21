@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-pour-mieux-se-connaitre-en-couple.webp',
   featuredImageAlt: "Coppia seduta schiena contro schiena con punti interrogativi e cuori sopra di loro",
   publishedAt: '2026-10-13',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Il giorno in cui si smette di farsi domande, non si è finito di scoprirsi... si è solo smesso di cercare.",
   introduction: `<p>Fai l'esperimento un giorno: chiedi a una coppia insieme da dieci anni se si conoscono a memoria. Diranno di sì, ovviamente. Poi fai loro tre domande un po' precise, il sogno che lui ha abbandonato, la paura che lei non dice mai, cosa ciascuno crede che l'altro pensi di lui... e guarda le facce. C'è sempre una sorpresa. Sempre!</p>
 <p><strong>Perché non si finisce mai di conoscere qualcuno. Si smette solo di cercare, ed è molto diverso.</strong> La buona notizia è che la curiosità si riaccende: basta rifare domande vere e ascoltare le risposte come il primo giorno.</p>

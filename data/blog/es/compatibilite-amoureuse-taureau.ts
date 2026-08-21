@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-taureau.svg',
   featuredImageAlt: `Símbolo astrológico de Tauro, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Tauro ama profundamente, con lealtad, y a menudo durante largo tiempo. Pero no todos los signos están hechos para ese ritmo.`,
   introduction: `<p>Pregúntale a un Tauro qué busca en el amor. Te dirá, quizá no con estas palabras exactas, algo parecido a <em>constancia</em>. No rutina aburrida, no repetición mecánica. Sino la certeza de que mañana la otra persona seguirá ahí. De que lo construido juntos no se desvanecerá ante la primera turbulencia. Si quieres verificar si tu combinación signo-nombre cumple sus promesas, prueba <a href="/es/signos-astrologicos-nombres-compatibilidad/">nuestra herramienta de compatibilidad entre signos astrológicos y nombres</a>.</p>
 <p>Es Venus quien gobierna este signo. Y, contrariamente a lo que podría pensarse, Venus en Tauro no habla primero de romance y grandes declaraciones, <strong>habla de placer concreto, de presencia física, de belleza accesible</strong>. Una buena cena compartida. Un sofá cómodo. El calor de alguien a quien conoces de verdad. Eso es lo que Tauro llama amor.</p>

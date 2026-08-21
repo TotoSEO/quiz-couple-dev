@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/micro-tromperie.webp',
   featuredImageAlt: "Téléphone affichant un cœur de notification, ombre d'un tiers entre deux silhouettes",
   publishedAt: '2026-12-25',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Personne n'a couché avec personne. Et pourtant quelque chose s'est passé... Bienvenue dans la zone grise de la fidélité moderne.",
   introduction: `<p>Il n'a rien fait, techniquement. Il n'a couché avec personne, pas de rendez-vous secret, pas de mensonge frontal... Juste des likes réguliers sur les photos d'une fille, des conversations Insta qu'il ferme quand tu approches, une ex qu'il « garde en amitié » avec des messages à 23 h. Techniquement rien. Et pourtant, quelque chose te dérange... et tu ne sais même pas si tu as le droit d'être dérangée.</p>
 <p>Ce territoire flou a un nom : la micro-tromperie, micro-cheating pour les intimes. <strong>Toutes ces petites transgressions qui ne franchissent pas LA ligne rouge officielle... mais qui installent de l'ambiguïté avec quelqu'un d'extérieur au couple.</strong> Le concept a explosé avec les réseaux sociaux, et pour cause : jamais il n'a été aussi facile d'entretenir des braises sans allumer officiellement de feu.</p>

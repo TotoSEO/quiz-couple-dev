@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-gemeaux.svg',
   featuredImageAlt: `Simbolo astrologico dei Gemelli, compatibilità amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `I Gemelli hanno bisogno di un partner che li stimoli mentalmente prima ancora che emotivamente. Quali segni ci riescono?`,
   introduction: `<p>Innamorarsi di un Gemelli è facile. Tenerlo è un altro paio di maniche. Non perché sia infedele per natura, questo è un cliché che andrebbe pensionato, ma perché <strong>i Gemelli hanno un bisogno quasi fisico di novità mentale</strong>. Se la conversazione si spegne, se la routine prende il sopravvento senza niente a ravvivarla, il Gemelli non litigherà. Semplicemente, comincerà a guardare altrove. Per scoprire se il vostro legame ha le carte in regola, <a href="/it/segni-zodiacali-nomi-compatibilita/">calcolate la vostra compatibilità tra segni zodiacali e nomi</a>.</p>
 <p>Governati da Mercurio, il pianeta della comunicazione, i Gemelli vivono l'amore come un dialogo. Il partner ideale per loro è qualcuno con cui parlare per ore senza che la conversazione diventi prevedibile. Qualcuno che porti idee nuove, prospettive diverse, una leggerezza intelligente. Non vogliono un'ancora, vogliono un compagno di viaggio.</p>

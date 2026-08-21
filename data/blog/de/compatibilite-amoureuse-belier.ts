@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Astrologisches Symbol des Widders, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Der Widder verliebt sich schnell, brennt noch schneller, und wird manchmal enttäuscht. Welche Sternzeichen können sein Tempo mitgehen?`,
   introduction: `<p>Der Widder ist nicht der Typ, der wartet. Er will, er stürmt los, er liebt, und wenn der andere nicht mithält, zieht er weiter. Das ist keine Oberflächlichkeit. Es ist einfach so, dass <strong>der Widder in einem Tempo lebt, das nicht jeder durchhält</strong>. Und in der Liebe ist diese Energie ein zweischneidiges Schwert: Sie entfacht den Anfang einer Beziehung wie kaum ein anderes Zeichen, kann aber eine Geschichte auch verzehren, bevor sie sich überhaupt entfalten konnte. Um herauszufinden, ob Ihre Kombination dieser Intensität standhält, <a href="/de/sternzeichen-vornamen-kompatibilitaet/">testen Sie Ihre astrologische Kompatibilität mit Vornamen</a> in wenigen Klicks.</p>
 <p>Regiert von Mars, dem Planeten der Tat und des Verlangens, sucht der Widder einen Partner, der ihm Widerstand bietet, nicht jemanden, der bei der ersten Spannung aufgibt, sondern jemanden, der ihm antwortet, ihn herausfordert, sich nicht zurückzieht. Nähe entsteht für ihn in Bewegung. Nicht in der Ruhe.</p>

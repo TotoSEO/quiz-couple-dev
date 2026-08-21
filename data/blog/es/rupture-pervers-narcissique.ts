@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/rupture-pervers-narcissique.webp',
   featuredImageAlt: "Puerta entreabierta hacia la luz, una mano que suelta un hilo anudado en forma de corazón",
   publishedAt: '2026-10-20',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Con un narcisista, la ruptura no es el final de la historia. Es un capítulo en sí mismo... y el que más preparación exige.",
   introduction: `<p>Dejar a alguien ya es difícil. Dejar a un narcisista es un ejercicio aparte: una ruptura en la que el otro no te deja irte, en la que las lágrimas suceden a las amenazas, en la que el hombre de los inicios reaparece justo en el momento adecuado... y en la que puedes encontrarte, tres semanas después, de vuelta sin saber muy bien cómo.</p>
 <p>Hay que decirlo sin rodeos: <strong>la mayoría de las víctimas no se van una vez. Se van varias veces, porque nadie las había avisado de lo que pasa DESPUÉS del anuncio.</strong> No es una cuestión de voluntad. Es una cuestión de preparación.</p>

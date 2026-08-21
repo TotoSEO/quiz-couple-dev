@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Simbolo astrologico del Capricorno, compatibilità amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Il Capricorno non perde tempo con storie senza futuro. Cerca un partner che costruisca con lui, non che lo distragga.`,
   introduction: `<p>Il Capricorno non si innamora per caso. Si innamora per scelta, una scelta ponderata, ragionata, presa dopo aver valutato se l'altro è davvero compatibile con la vita che sta costruendo. Non è romantico? Forse no, nel senso classico. Ma <strong>il Capricorno offre qualcosa di più raro del romanticismo: l'affidabilità assoluta</strong>. Se vi dice che ci sarà, ci sarà. Punto. Per verificare se il vostro legame ha questa solidità, <a href="/it/segni-zodiacali-nomi-compatibilita/">calcolate la compatibilità tra i vostri segni zodiacali e nomi</a>.</p>
 <p>Governato da Saturno, il pianeta della disciplina e del tempo, il Capricorno vive l'amore con la stessa pazienza che mette in tutto il resto. Non ha fretta. Non ha bisogno di colpi di fulmine o di emozioni vertiginose. Ha bisogno di sapere che quello che sta costruendo durerà. Che l'altro non si stancherà alla prima difficoltà. Che il progetto comune, perché per il Capricorno l'amore è un progetto, ha delle fondamenta solide.</p>

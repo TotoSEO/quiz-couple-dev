@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/disputes-couple-vacances.webp',
   featuredImageAlt: `An open car boot by a country road, suitcases half loaded, two shadows turned away from each other`,
   publishedAt: '2026-08-12',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Holidays are supposed to repair a relationship. In the surveys, they mostly bring to the surface what was already wrong. Here are the real figures, and the exact moment it goes off the rails.`,
   introduction: `<p>Let us start with the number, since that is what made you click: <strong>28% of people in a relationship say the drive to their holiday is a tense moment</strong>, according to an OpinionWay survey run for Direct Assurance among 1,016 people in May 2025. The press rounded it up to "one couple in three", and that is not unfair.</p>
 

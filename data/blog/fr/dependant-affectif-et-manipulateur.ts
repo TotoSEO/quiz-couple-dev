@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
   featuredImageAlt: "Aimant en forme de cœur attirant une silhouette enchaînée",
   publishedAt: '2026-11-10',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Ce n'est pas un hasard si les dépendants affectifs croisent tant de manipulateurs. L'un cherche à être indispensable... l'autre cherche quelqu'un qui a peur de perdre.",
   introduction: `<p>C'est une question qui revient sans arrêt chez les personnes qui sortent d'une relation d'emprise : « pourquoi moi ? » Pourquoi lui, encore ? Pourquoi cette impression de tomber toujours sur le même profil, comme si un aimant s'en mêlait ?...</p>
 <p>La réponse fait un peu mal, mais elle libère : <strong>ce n'est pas de la malchance, c'est un appariement. Le manipulateur cherche exactement ce que le dépendant affectif porte sur lui : la peur de perdre.</strong> L'un a besoin d'être aimé pour exister, l'autre a besoin de contrôler pour exister... et ces deux besoins-là s'emboîtent avec une précision terrifiante.</p>

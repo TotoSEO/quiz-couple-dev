@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/attachement-evitant.webp',
   featuredImageAlt: "Silhouette reculant d'un pas devant un cœur tendu vers elle",
   publishedAt: '2026-12-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "L'évitant n'aime pas moins que les autres. Il a juste appris, très tôt, que le besoin est un danger... et il gère l'amour comme on gère un risque.",
   introduction: `<p>C'est l'une des expériences amoureuses les plus déroutantes qui soient : tout se passe bien, il est présent, drôle, investi... et pile au moment où la relation devient sérieuse, quelque chose se referme. Moins de messages, moins de projets, ce besoin d'air soudain... Tu n'as rien fait de mal. Il n'est pas moins attaché. C'est autre chose : plus tu t'approches, plus son système recule.</p>
 <p><strong>Bienvenue dans l'attachement évitant : le style de ceux qui ont appris, très tôt, que compter sur quelqu'un finit mal... et que l'autonomie est la seule sécurité fiable.</strong> Environ une personne sur quatre fonctionne comme ça en amour. Et contrairement au cliché, l'évitant n'est ni froid ni incapable d'aimer : il aime avec un système d'alarme inversé, qui sonne quand on s'approche au lieu de sonner quand on s'éloigne...</p>

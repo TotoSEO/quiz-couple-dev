@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/signes-infidelite.webp',
   featuredImageAlt: "Telefono appoggiato a faccia in giù sul tavolo tra due persone che si voltano le spalle",
   publishedAt: '2026-12-22',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Il dubbio su un'infedeltà è una delle cose peggiori da vivere in coppia... e paradossalmente, la maggior parte delle liste di «segnali» lo aggrava invece di chiarirlo.",
   introduction: `<p>Se stai leggendo questo articolo, qualcosa ti ha messo in allerta. Un cambio di abitudini, un telefono diventato intoccabile, una distanza nuova... o solo un'intuizione, quella cosa sorda che si rifiuta di tacere. E da allora oscilli tra due vergogne: quella di sospettare senza prove e quella di non voler vedere.</p>
 <p>Mettiamo allora prima una cornice onesta, perché l'argomento la merita: <strong>nessun segnale isolato prova un'infedeltà. Nessuno.</strong> Le liste dei «15 segnali che ti tradisce» fabbricano soprattutto angoscia: ogni segnale preso da solo ha dieci spiegazioni innocenti. Quello che conta è l'INSIEME: più cambiamenti, simultanei, duraturi, senza spiegazione coerente.</p>

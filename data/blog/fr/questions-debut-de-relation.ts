@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-debut-de-relation.webp',
   featuredImageAlt: "Deux tasses de café fumantes côte à côte, début d'une conversation",
   publishedAt: '2026-10-23',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Le début d'une relation, c'est le seul moment où on peut tout se demander... et où on n'ose rien demander. Réparons ça.",
   introduction: `<p>Le paradoxe des débuts de relation, le voilà : c'est LE moment où les bonnes questions changeraient tout, et c'est le moment où on les évite soigneusement... de peur de passer pour un intense, de griller une étape, de casser la magie. Alors on avance à l'aveugle, tout sourire, en découvrant les infos importantes par accident, trois mois trop tard.</p>
 <p><strong>Poser des questions en début de relation, ce n'est pas manquer de légèreté. C'est éviter de construire les yeux fermés.</strong> Tout est dans le dosage : il y a les questions du premier mois, celles du troisième... et celles qui attendront, parce que chaque chose a son moment.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-rupture.webp',
   featuredImageAlt: "Cuore in due metà, una delle quali si trasforma in una scala che sale",
   publishedAt: '2026-11-20',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Tutti soffrono per una rottura. Il dipendente affettivo è in astinenza... e non è la stessa cosa da attraversare.",
   introduction: `<p>Le persone attorno a te sembrano trovarlo lungo. «Devi voltare pagina»... Facile a dirsi. Loro non sanno cosa significhi controllare il telefono appena sveglia per un messaggio che non arriverà più. Comporre un numero e riagganciare. Sentire, fisicamente, una mancanza che somiglia in modo impressionante a quella di una sostanza.</p>
 <p>E parliamone proprio: <strong>per una persona dipendente affettiva, una rottura non è un dispiacere d'amore ordinario. È un'astinenza, in senso letterale.</strong> L'altro era il tuo regolatore emotivo, la tua fonte di valore, il tuo antiansia... e tutto si è fermato di colpo. Certo che è più duro. Certo che è più lungo. Non è debolezza: è meccanica.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
   featuredImageAlt: "Paar am Tisch, beide lachen, sie beantwortet eine Frage mit den Händen",
   publishedAt: '2026-10-02',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Die Falle langer Beziehungen ist nicht, sich nicht mehr zu lieben. Sie ist, zu glauben, man sei mit dem Entdecken fertig.",
   introduction: `<p>Kleiner Test, bevor wir anfangen: Du kennst ihr Lieblingsessen, ihren Kultfilm, ihr Parfum. Einfach. Und jetzt: Weißt du, worauf sie dieses Jahr am stolzesten ist? Was ihr gerade fehlt? Was sie sich nicht zu fragen traut? Schon weniger einfach, oder?</p>
 <p><strong>Das ist die Falle eingespielter Paare: Wir verwechseln, sie gut zu kennen, damit, mit dem Entdecken fertig zu sein.</strong> Nur ändert sie sich, wie du, wie alle. Und die Antworten von vor zwei Jahren sind nicht unbedingt die von heute.</p>

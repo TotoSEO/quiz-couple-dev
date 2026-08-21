@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-gemeaux.svg',
   featuredImageAlt: `Símbolo astrológico de Géminis, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Géminis cambia de opinión como de camisa, y le encanta. Pero en el amor, ¿quién logra entenderle de verdad?`,
   introduction: `<p>Hay algo que Géminis detesta más que nada: sentirse encerrado. En una etiqueta, en una rutina, en una definición de sí mismo que el otro haya decidido por él. <strong>Los Géminis no son inestables, son múltiples.</strong> Y ese matiz no todo el mundo consigue captarlo. Por cierto, si quieres <a href="/es/signos-astrologicos-nombres-compatibilidad/">comprobar tu compatibilidad astrológica con tu pareja</a>, es la mejor forma de saber si vuestro dúo puede funcionar.</p>
 <p>Regido por Mercurio, el planeta de la comunicación y el intelecto, Géminis se enamora de la mente antes que del cuerpo. ¿Qué le atrae? Una conversación que toma un rumbo inesperado. Un punto de vista que le sorprende. Alguien que puede hablar de tres temas distintos en diez minutos sin perder el hilo, y que disfruta tanto como él haciéndolo.</p>

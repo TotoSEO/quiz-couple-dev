@@ -121,7 +121,7 @@ CREATE TABLE public.blog_articles (
   id UUID NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY,
   internal_slug TEXT NOT NULL UNIQUE,
   featured_image_url TEXT,
-  author_id TEXT NOT NULL DEFAULT 'mathieu-courtin',
+  author_id TEXT NOT NULL DEFAULT 'thomas',
   published_at TIMESTAMP WITH TIME ZONE,
   updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
   created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),

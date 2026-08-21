@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
   featuredImageAlt: "Calamita a forma di cuore che attira una sagoma incatenata",
   publishedAt: '2026-11-10',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Non è un caso se i dipendenti affettivi incrociano tanti manipolatori. Uno cerca di essere indispensabile... l'altro cerca qualcuno che abbia paura di perdere.",
   introduction: `<p>È una domanda che torna di continuo in chi esce da una relazione di controllo: «perché io?» Perché ancora lui? Perché questa impressione di cadere sempre sullo stesso profilo, come se ci fosse di mezzo una calamita?</p>
 <p>La risposta fa un po' male, ma libera: <strong>non è sfortuna, è un accoppiamento. Il manipolatore cerca esattamente quello che il dipendente affettivo si porta addosso: la paura di perdere.</strong> Uno ha bisogno di essere amato per esistere, l'altro ha bisogno di controllare per esistere... e questi due bisogni si incastrano con una precisione terrificante.</p>

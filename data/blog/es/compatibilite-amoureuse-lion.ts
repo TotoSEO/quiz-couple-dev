@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Símbolo astrológico de Leo, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Leo ama con intensidad y espera que se lo devuelvan. Pero no todos los signos juegan a ese juego.`,
   introduction: `<p>Se dice a menudo que Leo es egocéntrico. Es simplista. Lo que realmente busca en el amor es reciprocidad, solo que una reciprocidad muy visible. Necesita saber que su presencia cuenta, que el otro le ve, que lo que aporta a la relación se reconoce. <strong>No es vanidad. Es su lenguaje del amor.</strong> ¿Quieres saber si tu signo está a la altura de Leo? <a href="/es/signos-astrologicos-nombres-compatibilidad/">Descubre tu compatibilidad astrológica completa</a>.</p>
 <p>Gobernado por el Sol, Leo irradia, y necesita una pareja que no intente tapar esa luz, sino que pueda brillar a su lado sin entrar en competencia. La diferencia es sutil pero capital. Alguien que se desdibuja ante él le aburre. Alguien que quiere ocupar su lugar le agota. Lo ideal es alguien que tenga su propia luz, y que admire la suya a cambio.</p>

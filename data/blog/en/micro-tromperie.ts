@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/micro-tromperie.webp',
   featuredImageAlt: "Phone showing a heart notification, the shadow of a third person between two silhouettes",
   publishedAt: '2026-12-25',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Nobody slept with anybody. And yet something happened... Welcome to the grey zone of modern fidelity.",
   introduction: `<p>He did nothing, technically. He slept with nobody, no secret meeting, no outright lie... Just regular likes on one girl's photos, Instagram conversations he closes when you come near, an ex he «keeps as a friend» with messages at 11pm. Technically nothing. And yet something bothers you... and you don't even know whether you have the right to be bothered.</p>
 <p>This blurry territory has a name: micro-cheating. <strong>All those small transgressions that don't cross THE official red line... but that install ambiguity with someone outside the relationship.</strong> The concept exploded with social media, and for good reason: it has never been so easy to keep embers glowing without officially lighting a fire.</p>

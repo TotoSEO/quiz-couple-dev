@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/attachement-anxieux.webp',
   featuredImageAlt: "Person holding a heart close while looking at a silent phone",
   publishedAt: '2026-12-04',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Anxious attachment doesn't doubt the love it gives... it doubts the love it receives. Permanently. And that's exhausting on both sides of the relationship.",
   introduction: `<p>You may know this sensation: everything is fine in your relationship, objectively... and yet part of you stays on alert. A slightly cool tone, a shorter reply than usual, an evening without a message: the alarm goes off. And there you are looking for proof that everything's fine, again, like yesterday, like tomorrow.</p>
 <p><strong>It has a name: anxious attachment. It's neither madness, nor weakness, nor «too much love»... it's an alarm system set too sensitively, and it was set long before you.</strong> About one person in five works like that in love. Which means if you recognise yourself, you're in very numerous company!</p>
