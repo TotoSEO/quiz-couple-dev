@@ -246,7 +246,10 @@
       ajoute(m.prefix);
       ajoute(m.resultPrefix);
       (m.prefixesExtra || []).forEach(ajoute);
-      if (m.prefix === 'healthy') ajoute('couple');   // repli du quiz sain en FR
+      // Repli du quiz sain : ses questions n'existent sous « couple » qu'en
+      // francais. Le demander dans les autres langues declenchait un 404 a
+      // chaque chargement de la page, pour un fragment qui n'existe pas.
+      if (m.prefix === 'healthy' && lang === 'fr') ajoute('couple');
     });
     return l;
   }
