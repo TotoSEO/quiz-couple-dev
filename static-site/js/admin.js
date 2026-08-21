@@ -490,7 +490,9 @@
   // Rapporter les unes aux autres sur toute leur histoire donne des taux a
   // quatre chiffres, qui ne veulent rien dire.
   var statsLancesParJour = null;
-  var statsMesure = 'termines';
+  // Colonne de tri et sens. -1 = decroissant, le classement le plus utile
+  // par defaut : ce qui est le plus joue en haut.
+  var statsTri = { col: 'finis', sens: -1 };
   // 0 = depuis toujours, sinon un nombre de jours. Les totaux « depuis
   // toujours » viennent des RPC de comptage ; les periodes se somment sur les
   // series quotidiennes, qu'il faut donc avoir chargees assez loin.
@@ -988,11 +990,6 @@
   // bout, et le rapport des deux. Le ratio est le seul qui reponde a « quelle
   // page decroche » ; les deux autres servent a le lire sans se tromper de
   // volume, d'ou le second nombre garde en gris a cote.
-  // La colonne grise porte l'autre nombre du couple. Elle disait « 3 711
-  // finis » a cote d'un « 4 065 » sans etiquette : le seul nombre nomme etant
-  // celui qu'on n'a PAS demande, l'oeil s'y accroche et lit la ligne a
-  // l'envers. « dont » et « sur » rattachent explicitement le nombre gris a
-  // la valeur en gras, qui reste le sujet de la ligne.
   // Somme d'une serie quotidienne sur les n derniers jours, aujourd'hui
   // compris. n = 1 donne la seule journee en cours.
   function sommePeriode(parJour, slug, n) {
@@ -1017,54 +1014,90 @@
     };
   }
 
-  function valeurMesure(slug, terminesTotal) {
-    var c = comptesPeriode(slug, terminesTotal);
-    var lances = c.lances, termines = c.finis;
-    if (statsMesure === 'lances') return { n: lances, libelle: lances.toLocaleString('fr-FR'), sur: 'dont ' + termines.toLocaleString('fr-FR') + ' finis', classe: '' };
-    if (statsMesure === 'ratio') {
-      if (sansRatio(slug)) return { n: -2, libelle: '—', sur: 'résultat immédiat', classe: '' };
-      // Sur toute l'histoire, le rapport melangerait des mois de completions
-      // et quelques heures de lancements : on borne a la fenetre commune. Sur
-      // une periode choisie, les deux series couvrent deja les memes jours.
-      var d = statsPeriode === 0 ? comptesFenetre(slug) : c;
-      if (!d || d.lances < MINI_PAGE) {
-        return { n: -1, libelle: '—', sur: d ? 'sur ' + d.lances + ' lancés' : '', classe: '' };
-      }
-      var pct = tauxDepuis(d.lances, d.finis);
-      return { n: pct, libelle: pct + ' %',
-               sur: d.finis.toLocaleString('fr-FR') + ' finis sur ' + d.lances.toLocaleString('fr-FR'),
-               classe: pct < 40 ? ' est-faible' : (pct >= 70 ? ' est-fort' : '') };
-    }
-    return { n: termines, libelle: termines.toLocaleString('fr-FR'), sur: lances ? 'sur ' + lances.toLocaleString('fr-FR') + ' lancés' : '', classe: '' };
+  // Ce qui s'est ajoute aujourd'hui, page par page. Affiche en petit a cote
+  // de chaque chiffre : le cumul dit ou en est la page, le delta dit si elle
+  // vit encore.
+  function duJour(slug) {
+    var j = isoNJoursAvant(0);
+    var finis = statsParJour && statsParJour[slug] ? (statsParJour[slug][j] || 0) : 0;
+    var lances = statsLancesParJour && statsLancesParJour[slug] ? (statsLancesParJour[slug][j] || 0) : 0;
+    return { finis: finis, lances: lances, ratio: lances ? Math.min(100, Math.round((finis / lances) * 100)) : null };
   }
+
+  // Les trois chiffres d'une page sur la periode choisie, prets a afficher.
+  // Le ratio vaut null quand il ne veut rien dire : page a resultat immediat,
+  // ou trop peu de lancements pour conclure.
+  function troisValeurs(slug, terminesTotal) {
+    var c = comptesPeriode(slug, terminesTotal);
+    var res = { lances: c.lances, finis: c.finis, ratio: null, motif: '' };
+    if (sansRatio(slug)) { res.motif = 'résultat immédiat'; return res; }
+    // Sur toute l'histoire, le rapport melangerait des mois de completions et
+    // quelques heures de lancements : on borne a la fenetre commune. Sur une
+    // periode choisie, les deux series couvrent deja les memes jours.
+    var d = statsPeriode === 0 ? comptesFenetre(slug) : c;
+    if (!d || d.lances < MINI_PAGE) { res.motif = 'trop peu de lancés'; return res; }
+    res.ratio = tauxDepuis(d.lances, d.finis);
+    res.ratioFinis = d.finis;
+    res.ratioLances = d.lances;
+    return res;
+  }
+
+  function classeRatio(pct) {
+    return pct < 40 ? ' est-faible' : (pct >= 70 ? ' est-fort' : '');
+  }
+
+  // Une valeur absente se range toujours en fin de liste, quel que soit le
+  // sens : un tiret n'est ni grand ni petit.
+  function cleTri(v) {
+    var x = v[statsTri.col];
+    return (x === null || x === undefined) ? null : x;
+  }
+
+  var COLONNES = [
+    { cle: 'lances', nom: 'Lancés', couleur: 'hsl(217 91% 52%)' },
+    { cle: 'finis',  nom: 'Finis',  couleur: 'hsl(338 72% 52%)' },
+    { cle: 'ratio',  nom: 'Ratio',  couleur: 'hsl(38 92% 45%)' }
+  ];
 
   function renderStatsList() {
     var listEl = document.getElementById('admin-stats-list');
     if (!listEl) return;
     if (statsCounts.length === 0) { listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Aucune complétion pour le moment.</p>'; return; }
 
-    // Sans lancements, la bascule n'a rien a montrer : on reste sur les
-    // completions plutot que d'afficher une colonne de tirets.
-    if (!statsLances && statsMesure !== 'termines') statsMesure = 'termines';
-
     var lignes = statsCounts.map(function (r) {
-      var termines = Number(r.total) || 0;
-      var v = valeurMesure(r.quiz_slug, termines);
-      return { slug: r.quiz_slug, famille: familleQuiz(r.quiz_slug), termines: termines, v: v };
+      return { slug: r.quiz_slug, famille: familleQuiz(r.quiz_slug), v: troisValeurs(r.quiz_slug, Number(r.total) || 0) };
     });
 
-    // L'echelle des barres est propre a la mesure : en ratio elle va de 0 a
-    // 100, sinon elle se cale sur la page la plus jouee, toutes familles
-    // confondues, pour que les familles restent comparables entre elles.
+    // Le fond des lignes suit la colonne de tri : classer par ratio dessine
+    // les ratios, classer par volume dessine les volumes. L'echelle est
+    // commune a toutes les familles pour qu'elles restent comparables.
     var maxGlobal = 1;
-    if (statsMesure !== 'ratio') lignes.forEach(function (l) { if (l.v.n > maxGlobal) maxGlobal = l.v.n; });
+    if (statsTri.col !== 'ratio') {
+      lignes.forEach(function (l) { if (l.v[statsTri.col] > maxGlobal) maxGlobal = l.v[statsTri.col]; });
+    }
 
-    var html = '';
+    var html = '<div class="stats-entetes">'
+      + '<span class="stats-entete-nom">Page</span>'
+      + COLONNES.map(function (c) {
+          var actif = statsTri.col === c.cle;
+          var fleche = !actif ? '⇅' : (statsTri.sens === -1 ? '▼' : '▲');
+          return '<button type="button" class="stats-tri' + (actif ? ' est-actif' : '') + '"'
+            + ' style="--col:' + c.couleur + '" data-tri="' + c.cle + '"'
+            + ' aria-label="Trier par ' + c.nom + (actif && statsTri.sens === -1 ? ', décroissant' : ', croissant') + '">'
+            + c.nom + '<span class="stats-tri-fleche" aria-hidden="true">' + fleche + '</span></button>';
+        }).join('')
+      + '</div>';
+
     ['test', 'quiz', 'jeu'].forEach(function (fam) {
-      var groupe = lignes.filter(function (l) { return l.famille === fam; })
-        .sort(function (a, b) { return b.v.n - a.v.n; });
+      var groupe = lignes.filter(function (l) { return l.famille === fam; }).sort(function (a, b) {
+        var x = cleTri(a.v), y = cleTri(b.v);
+        if (x === null && y === null) return 0;
+        if (x === null) return 1;   // les valeurs absentes finissent en bas
+        if (y === null) return -1;
+        return (x - y) * statsTri.sens;
+      });
       if (groupe.length === 0) return;
-      var totalFam = groupe.reduce(function (acc, l) { return acc + comptesPeriode(l.slug, l.termines).finis; }, 0);
+      var totalFam = groupe.reduce(function (acc, l) { return acc + l.v.finis; }, 0);
       html += '<div class="stats-groupe stats-fam-' + fam + '">'
         + '<div class="stats-groupe-tete">'
         + '<span class="stats-groupe-pastille" aria-hidden="true"></span>'
@@ -1073,33 +1106,54 @@
         + ' · ' + totalFam.toLocaleString('fr-FR') + ' finis</span>'
         + '</div>';
       html += groupe.map(function (l) {
-        var pct = statsMesure === 'ratio'
-          ? Math.max(0, Math.min(100, l.v.n))
-          : Math.round((Math.max(0, l.v.n) / maxGlobal) * 100);
-        // Le compteur du jour ne s'affiche que s'il s'est passe quelque chose.
-        var jour = '';
-        if (statsParJour) {
-          var nJour = comptagesDuJour(l.slug);
-          if (nJour > 0) jour = '<span class="stats-row-jour" title="Aujourd\'hui">+' + nJour.toLocaleString('fr-FR') + '</span>';
-        }
-        // La couleur de la valeur suit la mesure, et donc la courbe du
-        // graphique au-dessus : bleu pour les lances, rose pour les termines.
-        // En mode taux, ce sont les seuils qui parlent, la classe s'en charge.
-        var teinte = statsMesure === 'lances' ? '#3B82F6' : statsMesure === 'termines' ? '#EF4E88' : '';
-        var classeVal = l.v.classe || (l.v.n < 0 ? ' est-vide' : '');
+        var base = statsTri.col === 'ratio' ? (l.v.ratio || 0) : l.v[statsTri.col];
+        var pct = statsTri.col === 'ratio'
+          ? Math.max(0, Math.min(100, base))
+          : Math.round((Math.max(0, base) / maxGlobal) * 100);
+        // Le delta du jour, en tout petit sous chaque chiffre. Rien ne
+        // s'affiche quand il ne s'est rien passe : un « +0 » repete trois
+        // fois sur quarante lignes, ca fait cent vingt fois rien a lire.
+        var j = duJour(l.slug);
+        var delta = function (n, suffixe) {
+          return n ? '<span class="stats-cell-jour" title="Aujourd\'hui">+' + n.toLocaleString('fr-FR') + (suffixe || '') + '</span>' : '';
+        };
+        var ratioCell = l.v.ratio === null
+          ? '<span class="stats-cell stats-cell--ratio est-vide">—</span>'
+          : '<span class="stats-cell stats-cell--ratio' + classeRatio(l.v.ratio) + '">' + l.v.ratio + ' %'
+            + (j.ratio !== null && !sansRatio(l.slug) ? '<span class="stats-cell-jour" title="Taux du jour">' + j.ratio + ' %</span>' : '')
+            + '</span>';
+        var bulle = nomQuiz(l.slug) + ' · ' + l.slug
+          + (l.v.ratio === null ? ' · ' + l.v.motif
+             : ' · ' + l.v.ratioFinis.toLocaleString('fr-FR') + ' finis sur ' + l.v.ratioLances.toLocaleString('fr-FR') + ' lancés');
         return '<button class="stats-row' + (l.slug === statsSelectedSlug ? ' active' : '') + '"'
-          + ' style="--part:' + pct + '%' + (teinte ? ';--valeur:' + teinte : '') + '"'
-          + ' data-slug="' + esc(l.slug) + '" title="' + esc(nomQuiz(l.slug) + ' · ' + l.slug + (l.v.sur ? ' · ' + l.v.sur : '')) + '">'
+          + ' style="--part:' + pct + '%" data-slug="' + esc(l.slug) + '" title="' + esc(bulle) + '">'
           + '<span class="stats-row-name">' + esc(nomQuiz(l.slug)) + '</span>'
-          + (l.v.sur ? '<span class="stats-row-sur">' + esc(l.v.sur) + '</span>' : '')
-          + jour
-          + '<span class="stats-row-val' + classeVal + '">' + l.v.libelle + '</span>'
+          + '<span class="stats-cell stats-cell--lances">' + l.v.lances.toLocaleString('fr-FR') + delta(j.lances) + '</span>'
+          + '<span class="stats-cell stats-cell--finis">' + l.v.finis.toLocaleString('fr-FR') + delta(j.finis) + '</span>'
+          + ratioCell
           + '</button>';
       }).join('');
       html += '</div>';
     });
     listEl.innerHTML = html;
 
+    listEl.querySelectorAll('.stats-tri').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var col = this.dataset.tri;
+        // Re-cliquer la colonne active inverse le sens ; en changer repart du
+        // decroissant, qui est ce qu'on veut voir neuf fois sur dix.
+        if (statsTri.col === col) statsTri.sens = -statsTri.sens;
+        else { statsTri.col = col; statsTri.sens = -1; }
+        var aide = document.getElementById('admin-stats-mesure-aide');
+        if (aide) {
+          aide.textContent = statsTri.col === 'ratio'
+            ? 'Trié par taux de finition. Rouge sous 40 %, vert à partir de 70 %. Un tiret : page à résultat immédiat, ou moins de ' + MINI_PAGE + ' lancés.'
+            : 'Trié par ' + (statsTri.col === 'lances' ? 'parties lancées' : 'parties finies') + '. Cliquez une ligne pour voir sa courbe.';
+        }
+        renderStatsList();
+        if (statsSelectedSlug) loadDaily(statsSelectedSlug);
+      });
+    });
     listEl.querySelectorAll('.stats-row').forEach(function (b) {
       b.addEventListener('click', function () {
         listEl.querySelectorAll('.stats-row').forEach(function (x) { x.classList.remove('active'); });
@@ -1157,7 +1211,7 @@
     var titleEl = document.getElementById('admin-stats-chart-title');
     var cv = document.getElementById('admin-stats-chart');
 
-    if (statsMesure === 'ratio') {
+    if (statsTri.col === 'ratio') {
       var pts = serieTaux(slug);
       if (titleEl) {
         titleEl.textContent = nomQuiz(slug) + ' · taux de finition, moyenne glissante 7 jours';
@@ -1175,7 +1229,7 @@
     }
 
     _lastQuizOpts = {};
-    if (titleEl) titleEl.textContent = nomQuiz(slug) + ' · 30 derniers jours';
+    if (titleEl) titleEl.textContent = nomQuiz(slug) + ' · ' + (statsTri.col === 'lances' ? 'lancés' : 'parties finies') + ', 30 derniers jours';
     drawLineChart(cv, null, { loading: true });
     // Meme decoupage que la courbe totale : sans fuseau, la base groupe en UTC
     // et la colonne du jour reste vide jusqu'a deux heures du matin.
@@ -1183,10 +1237,10 @@
       _lastQuizSeries = buildSeries(Array.isArray(rows) ? rows : [], 30, enUTC);
       drawLineChart(document.getElementById('admin-stats-chart'), _lastQuizSeries, {});
     }
-    var source = statsMesure === 'lances' ? 'get_quiz_starts_daily' : 'get_quiz_daily';
+    var source = statsTri.col === 'lances' ? 'get_quiz_starts_daily' : 'get_quiz_daily';
     // Les lancements n'ont pas de RPC par quiz : on decoupe la serie deja
     // chargee plutot que d'ajouter un aller-retour.
-    if (statsMesure === 'lances') {
+    if (statsTri.col === 'lances') {
       if (!statsLancesParJour) { trace([]); return; }
       var m = statsLancesParJour[slug] || {};
       trace(Object.keys(m).map(function (j) { return { day: j, total: m[j] }; }));
@@ -2451,25 +2505,6 @@
         } else {
           renderStatsList();
         }
-      });
-    });
-    // Bascule de la liste par page : lances, termines, taux de finition.
-    document.querySelectorAll('.stats-comp-btn[data-mesure]').forEach(function (b) {
-      b.addEventListener('click', function () {
-        if (!statsLances && this.dataset.mesure !== 'termines') return;
-        document.querySelectorAll('.stats-comp-btn[data-mesure]').forEach(function (x) { x.classList.remove('active'); });
-        this.classList.add('active');
-        statsMesure = this.dataset.mesure;
-        var aide = document.getElementById('admin-stats-mesure-aide');
-        if (aide) {
-          aide.textContent = statsMesure === 'ratio'
-            ? 'Part des parties lancées qui vont jusqu\'au résultat, mesurée depuis la mise en service des lancés. Un tiret veut dire moins de ' + MINI_PAGE + ' lancés, trop peu pour conclure. Rouge sous 40 %, vert à partir de 70 %.'
-            : statsMesure === 'lances'
-              ? 'Parties commencées, abandons compris. Cliquez sur une page pour voir sa courbe.'
-              : 'Parties allées jusqu\'au résultat. Cliquez sur une page pour voir sa courbe.';
-        }
-        renderStatsList();
-        if (statsSelectedSlug) loadDaily(statsSelectedSlug);
       });
     });
     // Redraw charts on resize (canvas is width-dependent)

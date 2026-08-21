@@ -201,7 +201,7 @@
               <span class="stats-details-emoji" aria-hidden="true">📋</span>
               <span>
                 <span class="stats-details-titre">Toutes les pages, test par test</span>
-                <span class="stats-details-sub">Rangé par tests, quiz et jeux. Lancés, terminés ou taux de finition</span>
+                <span class="stats-details-sub">Rangé par tests, quiz et jeux. Lancés, finis et taux de finition</span>
               </span>
               <svg class="stats-details-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
             </summary>
@@ -216,12 +216,7 @@
                 <button class="stats-comp-btn" data-periode="182">6 mois</button>
                 <button class="stats-comp-btn" data-periode="365">1 an</button>
               </div>
-              <div class="stats-comp" role="group" aria-label="Mesure affichée">
-                <button class="stats-comp-btn" data-mesure="lances">Lancés</button>
-                <button class="stats-comp-btn active" data-mesure="termines">Terminés</button>
-                <button class="stats-comp-btn" data-mesure="ratio">Taux de finition</button>
-              </div>
-              <p class="stats-panel-sub" id="admin-stats-mesure-aide" style="margin-bottom:0.6rem;">Cliquez sur un quiz pour voir sa courbe sur 30 jours.</p>
+              <p class="stats-panel-sub" id="admin-stats-mesure-aide" style="margin-bottom:0.6rem;">Cliquez sur l'en-tête d'une colonne pour trier, sur une ligne pour voir sa courbe.</p>
               <div id="admin-stats-list" class="stats-list"></div>
               <div class="stats-souscourbe">
                 <h3 class="stats-panel-title" id="admin-stats-chart-title" style="font-size:0.95rem;">Sélectionnez un quiz ci-dessus</h3>
@@ -430,34 +425,47 @@
   .stats-range-btn{padding:0.35rem 0.85rem;font-size:0.8rem;font-weight:600;background:transparent;border:none;cursor:pointer;color:hsl(var(--muted-foreground));transition:background .15s,color .15s;}
   .stats-range-btn.active{background:hsl(var(--primary));color:#fff;}
   .stats-canvas{width:100%;display:block;}
-  /* Une ligne = une page. La barre de progression n'est plus une colonne :
-     c'est le fond de la ligne qui se remplit, proportionnellement a la
-     valeur. Ca rend le classement lisible d'un coup d'oeil tout en liberant
-     de la place, et la valeur peut passer en gros et en couleur a droite. */
-  .stats-list{display:flex;flex-direction:column;gap:0.2rem;}
-  .stats-row{position:relative;display:flex;align-items:center;gap:0.75rem;width:100%;text-align:left;background:none;border:none;padding:0.55rem 0.7rem;cursor:pointer;color:inherit;border-radius:0.5rem;overflow:hidden;transition:box-shadow .15s;}
-  .stats-row::before{content:'';position:absolute;inset:0 auto 0 0;width:var(--part,0%);background:color-mix(in srgb, var(--fam) 13%, transparent);border-radius:0.5rem;pointer-events:none;transition:width .25s ease;}
-  .stats-row:hover{box-shadow:inset 0 0 0 1px hsl(var(--border));}
-  .stats-row.active{box-shadow:inset 0 0 0 2px var(--fam);}
+  /* Une ligne = une page, trois chiffres par ligne. Le fond se remplit
+     selon la colonne de tri : classer par ratio dessine les ratios, classer
+     par lances dessine les volumes. Un filet separe chaque ligne, sinon
+     quarante lignes collees ne se lisent pas. */
+  .stats-list{display:flex;flex-direction:column;}
+  .stats-entetes{display:flex;align-items:center;gap:0.5rem;padding:0.3rem 0.7rem 0.45rem;border-bottom:2px solid hsl(var(--border));margin-bottom:0.1rem;}
+  .stats-entete-nom{flex:1;min-width:0;font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:hsl(var(--muted-foreground));}
+  .stats-tri{flex:0 0 5.2rem;display:flex;align-items:center;justify-content:flex-end;gap:0.2rem;background:none;border:none;padding:0.15rem 0.2rem;cursor:pointer;border-radius:0.35rem;font-size:0.7rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:hsl(var(--muted-foreground));white-space:nowrap;transition:color .15s,background .15s;}
+  .stats-tri:hover{background:hsl(var(--muted)/0.6);color:hsl(var(--foreground));}
+  .stats-tri.est-actif{color:var(--col);}
+  .stats-tri-fleche{font-size:0.65rem;opacity:0.35;}
+  .stats-tri.est-actif .stats-tri-fleche{opacity:1;}
+  .stats-row{position:relative;display:flex;align-items:center;gap:0.5rem;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid hsl(var(--border)/0.6);padding:0.55rem 0.7rem;cursor:pointer;color:inherit;overflow:hidden;transition:background .15s;}
+  .stats-row:last-child{border-bottom:none;}
+  .stats-row::before{content:'';position:absolute;inset:0 auto 0 0;width:var(--part,0%);background:color-mix(in srgb, var(--fam) 11%, transparent);pointer-events:none;transition:width .25s ease;}
+  .stats-row:hover{background:hsl(var(--muted)/0.45);}
+  .stats-row.active{box-shadow:inset 2px 0 0 var(--fam);background:hsl(var(--muted)/0.5);}
   .stats-row>*{position:relative;}
   .stats-row-name{flex:1;min-width:0;font-size:0.88rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-  /* Le contexte reste, mais discret : sans lui un taux ne veut rien dire. */
-  .stats-row-sur{flex:0 0 auto;font-size:0.72rem;font-variant-numeric:tabular-nums;color:hsl(var(--muted-foreground));white-space:nowrap;}
-  /* Le compteur du jour n'apparait que s'il y a eu quelque chose : afficher
-     « 0 » sur quarante lignes, c'est quarante fois rien a lire. */
-  .stats-row-jour{flex:0 0 auto;font-size:0.75rem;font-weight:700;font-variant-numeric:tabular-nums;color:hsl(150 62% 38%);white-space:nowrap;}
-  .dark .stats-row-jour{color:hsl(150 55% 55%);}
-  .stats-row-val{flex:0 0 auto;min-width:4.5rem;text-align:right;font-weight:800;font-variant-numeric:tabular-nums;font-size:1.15rem;letter-spacing:-0.01em;color:var(--valeur,var(--fam));}
-  .stats-row-val.est-faible{color:hsl(0 72% 50%);}
-  .dark .stats-row-val.est-faible{color:hsl(0 78% 68%);}
-  .stats-row-val.est-fort{color:hsl(150 62% 36%);}
-  .dark .stats-row-val.est-fort{color:hsl(150 55% 55%);}
-  .stats-row-val.est-vide{color:hsl(var(--muted-foreground)/0.55);font-size:1rem;font-weight:600;}
+  .stats-cell{flex:0 0 5.2rem;text-align:right;font-variant-numeric:tabular-nums;font-size:0.95rem;font-weight:700;}
+  .stats-cell--lances{color:hsl(217 91% 52%);}
+  .stats-cell--finis{color:hsl(338 72% 52%);}
+  .dark .stats-cell--lances{color:hsl(217 90% 70%);}
+  .dark .stats-cell--finis{color:hsl(338 80% 68%);}
+  .stats-cell--ratio{font-size:1.05rem;font-weight:800;}
+  /* Le delta du jour, sous le chiffre : assez petit pour ne pas concurrencer
+     le cumul, assez present pour se voir. Vert, comme un gain. */
+  .stats-cell{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;}
+  .stats-cell-jour{font-size:0.66rem;font-weight:700;color:hsl(150 62% 38%);letter-spacing:0;}
+  .dark .stats-cell-jour{color:hsl(150 55% 55%);}
+  .stats-cell--ratio .stats-cell-jour{color:hsl(var(--muted-foreground));}
+  .stats-cell.est-faible{color:hsl(0 72% 50%);}
+  .dark .stats-cell.est-faible{color:hsl(0 78% 68%);}
+  .stats-cell.est-fort{color:hsl(150 62% 36%);}
+  .dark .stats-cell.est-fort{color:hsl(150 55% 55%);}
+  .stats-cell.est-vide{color:hsl(var(--muted-foreground)/0.5);font-weight:600;font-size:0.85rem;}
   @media (max-width:640px){
-    .stats-row-sur{display:none;}
-    .stats-row-val{font-size:1.05rem;min-width:3.8rem;}
+    .stats-cell,.stats-tri{flex-basis:3.9rem;font-size:0.85rem;}
+    .stats-cell--ratio{font-size:0.95rem;}
+    .stats-row-name{font-size:0.82rem;}
   }
-
   /* Regroupement tests / quiz / jeux. Une couleur par famille, reprise sur
      l'en-tete, sur le liseré de chaque ligne et sur sa barre : la liste fait
      une quarantaine de pages, sans repere visuel on la lit mal. */
