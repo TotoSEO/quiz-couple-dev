@@ -211,6 +211,7 @@ const GD_QUESTION_PREFIXES = {
   sain: ['healthy', 'couple'], distance: ['distance'], coquin: ['coquin'],
   knowledge: ['knowledge'], amoureux: ['amoureux'], marrant: ['marrant'],
   most: ['most'], parentalite: ['parentalite'], emmenager: ['emmenager'],
+  'ame-soeur': ['ameSoeur'],
   jalousie1: ['jalousie1'], jalousie2: ['jalousie2'],
   genant: ['genant'], 'vrai-faux': ['vraifaux'],
   attachement: ['attachement'], confiance: ['confiance'],
@@ -1601,7 +1602,7 @@ async function generateBlogArticle(articleMeta, lang) {
     // La barre laterale du blog liste tous les tests et tous les quiz : les
     // pages absentes de cette liste ne recevaient aucun lien depuis le blog.
     sidebarTests: [
-      'testCouple', 'testCommonPoints', 'testCompatibilite', 'testSuisJeAmoureux', 'testDistance',
+      'testCouple', 'testAmeSoeur', 'testCommonPoints', 'testCompatibilite', 'testSuisJeAmoureux', 'testDistance',
       'testToxic', 'testPervers', 'testAmourHabitude', 'testCoupleSain', 'testMariage', 'testDivorce',
       'testParentalite', 'testEmmenager', 'testAstroPrenoms', 'testDateNaissance', 'testKarmique',
       'testJalousie', 'testInfidelite', 'testCouche', 'testSecret', 'testDistanceAime', 'testLangageAmour', 'testAttachement', 'testConfiance', 'testFinCouple', 'testAmourAmitie',

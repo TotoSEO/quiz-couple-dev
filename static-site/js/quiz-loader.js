@@ -53,6 +53,19 @@
     ] },
     'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 153, needsGender: true },
 
+    // ── Test âme sœur : un indice, un verdict tiré de la forme du profil ──
+    // Trois portes d'entrée sur la même page : seul sur un prénom saisi, à deux
+    // en répondant chacun, ou célibataire pour le portrait de qui vous irait.
+    'ame-soeur':      { modesGrand: true, modes: [
+      { id: 'solo', emoji: '💫', prefix: 'ameSoeur', engine: 'piliers',
+        totalQ: 20, pool: 24, ascending: true },
+      { id: 'duo',  emoji: '👥', prefix: 'ameSoeur', engine: 'piliers',
+        totalQ: 20, pool: 24, ascending: true, duo: true },
+      { id: 'celib', emoji: '🧭', prefix: 'ameSoeurPortrait', engine: 'profile',
+        typologie: 'ameSoeurPortrait', totalQ: 20, pool: 20,
+        categoryMap: { a: 'ancrage', b: 'elan', c: 'parole', d: 'presence' } }
+    ] },
+
     // ── Love compatibility (2 players, matching = alignment % on core dimensions) ──
     'compatibilite':  { prefix: 'compatibilite', engine: 'duo-match', totalQ: 20, pool: 20, needsGender: true, resultSet: 'compat' },
 
@@ -534,6 +547,9 @@
         break;
       case 'profile':
         initProfileQuiz(config, questions);
+        break;
+      case 'piliers':
+        initPiliersQuiz(config, questions);
         break;
       case 'zamours':
         initZamoursQuiz(config, questions);
@@ -1121,8 +1137,50 @@
       95: { d: 'quotidien',     w: 1 },  96: { d: 'bilan',         w: 2 },
       97: { d: 'bilan',         w: 2 },  98: { d: 'bilan',         w: 1 },
       99: { d: 'bilan',         w: 1 },  100:{ d: 'bilan',         w: 3 }
+    },
+    // Âme sœur : quatre piliers, six questions chacun, vingt posées. Le poids
+    // dit ce qui compte le plus à l'intérieur d'un pilier ; c'est la forme du
+    // profil, pas le total, qui décide du verdict (voir classifieAmeSoeur).
+    // L'autonomie est le contrepoids du test : « ne faire qu'un » se paie
+    // parfois de soi-même, et ce n'est alors plus une âme sœur.
+    ameSoeur: {
+      1:  { d: 'evidence',  w: 2 },  2:  { d: 'evidence',  w: 1 },
+      3:  { d: 'evidence',  w: 3 },  4:  { d: 'evidence',  w: 3 },
+      5:  { d: 'evidence',  w: 2 },  6:  { d: 'evidence',  w: 2 },
+      7:  { d: 'accord',    w: 3 },  8:  { d: 'accord',    w: 2 },
+      9:  { d: 'accord',    w: 3 },  10: { d: 'accord',    w: 3 },
+      11: { d: 'accord',    w: 2 },  12: { d: 'accord',    w: 1 },
+      13: { d: 'epreuve',   w: 2 },  14: { d: 'epreuve',   w: 3 },
+      15: { d: 'epreuve',   w: 3 },  16: { d: 'epreuve',   w: 2 },
+      17: { d: 'epreuve',   w: 3 },  18: { d: 'epreuve',   w: 3 },
+      19: { d: 'autonomie', w: 2 },  20: { d: 'autonomie', w: 2 },
+      21: { d: 'autonomie', w: 3 },  22: { d: 'autonomie', w: 3 },
+      23: { d: 'autonomie', w: 2 },  24: { d: 'autonomie', w: 2 }
     }
   };
+
+  // ── Test âme sœur : les piliers, et le verdict tiré de leur forme ────────
+  var PILIERS_AME_SOEUR = [
+    { id: 'evidence',  color: '#ec4899', cle: 'pil_evidence',  defaut: 'Évidence' },
+    { id: 'accord',    color: '#8b5cf6', cle: 'pil_accord',    defaut: 'Accord de fond' },
+    { id: 'epreuve',   color: '#f59e0b', cle: 'pil_epreuve',   defaut: 'Épreuve' },
+    { id: 'autonomie', color: '#22c55e', cle: 'pil_autonomie', defaut: 'Autonomie' }
+  ];
+
+  // L'ordre des tests compte. La fusion passe avant tout : un lien où l'un des
+  // deux a disparu n'est pas une âme sœur, même quand tout le reste est au
+  // plafond. Vient ensuite le lien encore jeune, que rien n'a éprouvé : ce
+  // n'est pas un défaut, c'est un manque de recul, et le dire vaut mieux que
+  // de décerner un titre que la première épreuve démentira.
+  function classifieAmeSoeur(p, indice) {
+    if (p.autonomie < 45 && p.evidence >= 60) return 'fusion';
+    if (p.epreuve < 45 && p.evidence >= 60 && p.accord >= 55) return 'devenir';
+    if (indice >= 68 && p.autonomie >= 60 && p.epreuve >= 55 && p.evidence >= 68) return 'ames';
+    // « Compagnons de route » décrit un lien qui tient sur le fond ou sur les
+    // épreuves traversées. Quand plus rien ne tient, c'est l'autre verdict.
+    if (p.accord >= 55 || p.epreuve >= 55 || p.evidence >= 55) return 'route';
+    return 'croisent';
+  }
 
   // Pose les points de chaque réponse à partir du poids de sa question.
   // Renvoie false si le test n'a pas de table : le barème par rang reste alors
@@ -1477,6 +1535,29 @@
         return 'apaise';
       }
     },
+    // Portrait de l'ame soeur, pour les celibataires : le test ne juge pas un
+    // lien qui existe, il decrit la personne qui vous irait. Les quatre axes
+    // sont des besoins, pas des qualites : aucun n'est meilleur qu'un autre.
+    ameSoeurPortrait: {
+      icone: '🧭',
+      axes: [
+        { id: 'ancrage',  color: '#22c55e', defaut: 'Ancrage' },
+        { id: 'elan',     color: '#f59e0b', defaut: 'Élan' },
+        { id: 'parole',   color: '#6366f1', defaut: 'Parole' },
+        { id: 'presence', color: '#ec4899', defaut: 'Présence' }
+      ],
+      profils: ['ancrage', 'elan', 'parole', 'presence', 'equilibre'],
+      // Quand aucun besoin ne se detache, le dire vaut mieux que de designer
+      // un vainqueur a une voix pres.
+      classify: function(t, n) {
+        var ordre = ['ancrage', 'elan', 'parole', 'presence'];
+        var tries = ordre.slice().sort(function(a, b) { return (t[b] || 0) - (t[a] || 0); });
+        var tete = t[tries[0]] || 0, second = t[tries[1]] || 0;
+        if (tete < Math.ceil(n * 0.35) || tete - second <= 1) return 'equilibre';
+        return tries[0];
+      }
+    },
+
     // Les cinq langages de Gary Chapman. Pas de profil composite ici : le
     // langage le plus choisi est le résultat, les cinq barres montrent le
     // reste du profil.
@@ -1503,6 +1584,53 @@
       }
     }
   };
+
+  // Test âme sœur : un indice, un verdict tiré de la forme du profil, et une
+  // barre par pilier. Les questions passent par le barème pondéré et le tirage
+  // stratifié communs, comme les autres tests à points.
+  function initPiliersQuiz(cfg, questions) {
+    questions = questionsPonderees(cfg, questions);
+
+    var piliers = PILIERS_AME_SOEUR.map(function(p) {
+      return {
+        id: p.id, color: p.color,
+        label: QuizEngine.tgd(cfg.prefix + '.' + p.cle, p.defaut)
+      };
+    });
+
+    var verdicts = {};
+    ['ames', 'devenir', 'fusion', 'route', 'croisent'].forEach(function(cle) {
+      verdicts[cle] = {
+        title: QuizEngine.tgd(cfg.prefix + '.v_' + cle + '_t', ''),
+        description: QuizEngine.tgd(cfg.prefix + '.v_' + cle + '_d', ''),
+        advice: QuizEngine.tgd(cfg.prefix + '.v_' + cle + '_a', '')
+      };
+    });
+
+    var verdictsCouple = {};
+    ['h', 'm', 'l', 'ecart'].forEach(function(cle) {
+      var v = QuizEngine.tgd(cfg.prefix + '.cv_' + cle, '');
+      if (v && v !== cfg.prefix + '.cv_' + cle) verdictsCouple[cle] = v;
+    });
+
+    new QuizEngine.PiliersQuiz({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang,
+      piliers: piliers,
+      fiches: SOLO_BAREME[cfg.prefix] || {},
+      classify: classifieAmeSoeur,
+      verdicts: verdicts,
+      verdictsCouple: verdictsCouple,
+      duo: !!cfg.duo,
+      labels: {
+        icon: '💫',
+        introTitle: QuizEngine.tgd(cfg.prefix + '.introTitle', ''),
+        resultLabel: QuizEngine.tgd(cfg.prefix + '.linkLabel', '')
+      }
+    });
+  }
 
   function initProfileQuiz(cfg, questions) {
     var typo = TYPOLOGIES[cfg.typologie] || TYPOLOGIES.attachement;

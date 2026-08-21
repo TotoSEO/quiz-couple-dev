@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "badge": "Alone or together 💫",
+    "title": "Soulmate test: is this really the one?",
+    "titleHighlight": "Soulmate test",
+    "description": "Twenty questions across four pillars, one score, and a verdict that does not simply try to please you. Answer alone about someone, or answer together."
+  },
+  "section1": {
+    "title": "What is a soulmate?",
+    "p1": "Look up the definition and you will find everything and its opposite. One site will explain that your soulmate depends on your star sign. Another that they are \"joyful and kind\", which describes roughly half the population. Neither answers the question you are actually asking, which is far more precise: that person, the one you are thinking of as you read this, is it them?",
+    "p2": "Here is the definition this test uses. A soulmate is not the perfect person, and neither are they the one who completes you because a piece of you is missing. It is the person with whom being yourself takes no effort, with whom you agree on the things that matter rather than on tastes, with whom hardship brings you closer instead of breaking things, and beside whom you remain whole.",
+    "p3": "That last point is the one most often forgotten, and it is the most important. \"Being one\" is a lovely phrase as long as both people still exist. When one of the two has disappeared along the way, when friends have drifted off and personal plans have quietly been dropped, this is no longer a soulmate: it is fusion, and the test tells them apart.",
+    "notTitle": "What a soulmate is not",
+    "not1Title": "Love at first sight",
+    "not1Text": "The intensity of the beginning predicts nothing. Mostly it tells you how quickly you became attached, which is not the same thing as how solid the bond is.",
+    "not2Title": "The perfect person",
+    "not2Text": "A soulmate has flaws, and some of them irritate you deeply. The question is not whether they exist, it is whether you can talk about them.",
+    "not3Title": "The one who completes you",
+    "not3Text": "The missing-half idea makes beautiful films and poor relationships. Two whole people hold together better than two halves clinging on."
+  },
+  "section2": {
+    "title": "The different kinds of soulmate",
+    "intro": "The word is used for very different bonds, and that is where the confusion comes from. Here are five of them, from the most peaceful to the most costly.",
+    "type1Title": "The romantic soulmate",
+    "type1Text": "The other half of the pair. The one with whom you no longer play a part, with whom the fundamentals line up, and who makes you more yourself rather than less. That is what the test above measures.",
+    "type2Title": "The soulmate friend",
+    "type2Text": "It exists, and it is talked about far too little. A friendship can tick exactly the same boxes, the ease, the deep agreement, the hardship come through, with no romantic dimension at all. It is not a consolation prize.",
+    "type3Title": "The travelling companion",
+    "type3Text": "A solid, loyal, often long bond, but one where you still have to choose your words. Plenty of happy couples rest on exactly that. It is not a soulmate, and it is not a failure.",
+    "type4Title": "The twin flame",
+    "type4Text": "A mirror rather than a shelter. The relationship puts you face to face with what you were avoiding, with break-ups and returns. Whether it lasts or not, you do not come out of it the same person.",
+    "type5Title": "The karmic relationship",
+    "type5Text": "The same scene replaying endlessly: the intensity stays, the exhaustion settles in, and leaving becomes impossible. If your story looks more like this description than the four before it, the <a href=\"/en/karmic-relationship-test/\">karmic relationship test</a> is the one you need."
+  },
+  "section3": {
+    "title": "Does it really exist, or is it an invention?",
+    "p1": "The idea comes from Plato, in <em>The Symposium</em>. Aristophanes tells there that humans were originally double beings, cut in two by Zeus, and condemned ever since to search for their other half. It is a myth, told by a comic character in a philosophical dialogue, and it has travelled twenty-four centuries to end up in dating profile descriptions.",
+    "p2": "So the interesting question is not \"do soulmates exist\", but \"what difference does believing in them make\". And there, social psychology research has something to say, in particular the work of C. R. Knee on what are called implicit theories of relationships.",
+    "p3": "Two beliefs stand opposed. That of <strong>destiny</strong>: people either suit each other or they do not, and a good relationship is recognised straight away. That of <strong>growth</strong>: a relationship is built, and difficulties are part of the work. People who believe in destiny react badly to the first real conflict, because the conflict becomes proof that they picked the wrong person. Those who believe in growth see a problem to solve.",
+    "p4": "In other words: searching for your soulmate can damage the relationships you already have. That is why this test does not measure a destiny. It looks at what your relationship makes of you, today, across four observable dimensions."
+  },
+  "section4": {
+    "title": "The four pillars of the test",
+    "intro": "Every question is attached to one of these four pillars, and the test asks five per pillar. It is their balance, not your total, that decides the verdict.",
+    "sign1Title": "Ease",
+    "sign1Text": "Can you be yourself, with no mask and no calculation? Silences that do not weigh, words you do not need to weigh, the tired and unreasonable version of you that the other person has already seen. This is not love at first sight, it is ease.",
+    "sign2Title": "Deep agreement",
+    "sign2Text": "Not the same tastes: the same values. How you treat a waiter, your relationship with money, what counts as loyal, what you call a good life. Two people can love the same films and not agree on a single thing that matters.",
+    "sign3Title": "Hardship",
+    "sign3Text": "What difficulty has done to the bond. A loss, a hard blow, an argument you do not recover from easily: did it bring you closer or crack you apart? A relationship that has never been tested is not solid, it is new.",
+    "sign4Title": "Autonomy",
+    "sign4Text": "Your friends, your plans, your ability to spend a weekend apart. This is the counterweight of the test, and the pillar that does the most damage when it is missing: without it, ease is no longer ease, it is dependence."
+  },
+  "section5": {
+    "title": "How to read your result",
+    "intro": "Your score is the average of your four pillars, with the weakest counted twice: a soulmate is not judged on their best side. The verdict, however, does not come from a score band but from the shape of your profile, which is why a high score can produce something other than a flattering title.",
+    "headerProfile": "Your verdict",
+    "headerMeaning": "What it indicates",
+    "headerAction": "What you can do with it",
+    "row1Profile": "Soulmates",
+    "row1Meaning": "All four pillars hold at once, autonomy included. That is rare, and it is not luck.",
+    "row1Action": "Keep doing what got you there: see your friends, say things early, repair quickly.",
+    "row2Profile": "Soulmates in the making",
+    "row2Meaning": "The ease and the agreement are there, but nothing has tested this bond yet. What you lack is hindsight, not quality.",
+    "row2Action": "Watch how you repair small irritations: it is a good indicator of what will happen at the first real shock.",
+    "row3Profile": "Fusion, not a soulmate",
+    "row3Meaning": "The understanding is real, but you have shrunk. Friends, plans and the ability to be apart have all eroded.",
+    "row3Action": "Take back one single thing you had let go, and watch the reaction. It will teach you a great deal.",
+    "row4Profile": "Travelling companions",
+    "row4Meaning": "The fundamentals line up and you have supported each other, but the ease is missing: you still have to watch what you say.",
+    "row4Action": "Look for where the restraint comes from. The fear of being judged sometimes falls away in a single conversation.",
+    "row5Profile": "Two paths crossing",
+    "row5Meaning": "Neither the ease, nor the deep agreement, nor the effect of hardship. Two good people can simply not suit each other.",
+    "row5Action": "The useful question is no longer \"is this my soulmate\" but \"am I doing well in this relationship\".",
+    "note": "This test is not a diagnosis and has no clinical value. It is a reading grid, to be set against what you already know."
+  },
+  "section6": {
+    "title": "Soulmate or fusion: the difference that counts",
+    "p1": "This is the most frequent confusion, and the most costly. Seen from the inside, both look like the same obvious thing: you understand each other without speaking, you want to be together all the time, the rest of the world drifts away. The difference does not show in the intensity, it shows in what you have left on the side.",
+    "p2": "Three questions settle it fairly quickly, and they are in the test.",
+    "dontTitle": "The signs of fusion",
+    "dont1Title": "Your friends have disappeared",
+    "dont1Text": "Not through a ban, most of the time: through drift. You declined, and then people stopped asking.",
+    "dont2Title": "A day without news puts you in difficulty",
+    "dont2Text": "That is no longer attachment, it is an alarm going off. A solid bond can take silence.",
+    "doTitle": "The signs of a soulmate",
+    "do1Title": "You have kept your own life",
+    "do1Text": "Your friends, your plans, your wishes that do not include the other person still exist, and the other person takes them seriously.",
+    "do2Title": "You feel more like yourself",
+    "do2Text": "Not wiser, not smoother: more you. It is the most reliable sign, and the hardest to fake.",
+    "do3Title": "Absence does not cause panic",
+    "do3Text": "You miss them, which is very different. You get on with your day, and you have things to tell in the evening.",
+    "do4Title": "You have nothing about yourself to hide",
+    "do4Text": "The tired version, the unreasonable version, the frightened version: it has been seen, and nothing collapsed."
+  },
+  "section7": {
+    "title": "And if you are single?",
+    "p1": "The question changes in nature. It is no longer about judging a bond that exists, but about knowing what would suit you. And here the classic mistake is to draw up a list of general qualities, which is of no use at all: \"kind, funny, ambitious\" describes everyone and no one.",
+    "p2": "What is useful is knowing how you work. At what rhythm you need to be together. What makes you feel loved, words or gestures. What you do with a conflict, face it or avoid it. What you are really after, adventure or stability. That is what the third format of the test maps out, and the portrait that comes out of it says above all what to avoid, which is often more valuable than what to look for."
+  },
+  "faq": {
+    "title": "Frequently asked questions about soulmates",
+    "q1": "How do I know if this is really my soulmate?",
+    "a1": "Look at four things rather than one. Are you yourself without effort? Do you agree on the fundamentals, and not only on tastes? Has difficulty brought you closer? And above all: have you kept your own life? The first three are found everywhere, the fourth is the one that really settles it.",
+    "q2": "Can you have several soulmates?",
+    "a2": "Yes, and it is even the more reasonable assumption. Nothing obliges you to believe in a single person among eight billion. A friendship can be a soulmate, and it is entirely possible to live this kind of bond twice in a lifetime.",
+    "q3": "What is the difference between a soulmate and a twin flame?",
+    "a3": "A soulmate settles you, a twin flame transforms you. Beside a soulmate you feel rested and more available for the rest of your life. A twin flame puts you face to face with what you were avoiding, often with break-ups and returns. Both can be precious, but they do not cost the same.",
+    "q4": "Does the test work if we have only been together a short while?",
+    "a4": "Yes, and it will tell you so. A recent bond has not been tested yet, and the test spots that: it gives the verdict \"soulmates in the making\" rather than awarding a title that the first real difficulty would contradict.",
+    "q5": "Is this test reliable?",
+    "a5": "It is coherent, which is not the same thing. The questions are about observable facts rather than impressions, the verdict depends on the balance of your answers and not on a total, and no result claims to predict the future of your relationship. It is an honest reading grid, not a science."
+  },
+  "section8": {
+    "title": "The takeaway",
+    "p1": "A soulmate is not recognised by the intensity of the beginning, but by what you have left afterwards. After an argument, after a hardship, after three years.",
+    "p2": "The one sign that does not deceive is the one people look at least: does this relationship make you more yourself, or has it shrunk you? Everything else can be imitated by a beautiful story that will not last.",
+    "p3": "And if your relationship involves fear, control, humiliation or violence, no test has any say. Talk to a professional, or call the <strong>National Domestic Violence Hotline</strong> at <strong>1-800-799-7233</strong> (USA) or <strong>0808 2000 247</strong> (UK), free and confidential."
+  }
+}

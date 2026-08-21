@@ -3796,6 +3796,11 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 /* ── Attachment profile breakdown (categorical result) ────── */
 
 .profile-breakdown { display: flex; flex-direction: column; gap: 0.875rem; }
+/* Variante serree : les deux cartes du mode duo du test ame soeur montrent
+   chacune leurs quatre piliers, cote a cote sur un ecran de telephone. */
+.profile-breakdown--compact { gap: 0.5rem; margin-top: 0.75rem; }
+.profile-breakdown--compact .profile-axis-head { font-size: 0.75rem; margin-bottom: 0.25rem; }
+.profile-breakdown--compact .profile-axis-bar { height: 7px; }
 .profile-axis-row { text-align: left; }
 .profile-axis-head {
   display: flex; justify-content: space-between; align-items: baseline;
@@ -8445,6 +8450,9 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
   width: 100%; max-width: 34rem; margin: 0 auto 1.5rem;
 }
+/* Trois formats sur une meme page, comme le test ame soeur : seul, a deux,
+   ou celibataire. Deux colonnes auraient laisse une carte orpheline. */
+.choix-modes--trois { grid-template-columns: repeat(3, 1fr); max-width: 44rem; }
 .choix-mode {
   --sm-h: 340; --sm-s: 65%; --sm-l: 65%;
   position: relative; display: flex; flex-direction: column; align-items: center;
@@ -8496,5 +8504,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 @media (prefers-reduced-motion: reduce) { .choix-mode { transition: none; } }
 @media (max-width: 430px) {
   .choix-modes { grid-template-columns: 1fr; gap: .8rem; max-width: 22rem; }
+  .choix-modes--trois { grid-template-columns: 1fr; max-width: 22rem; }
   .choix-mode { padding: 1.25rem 1rem 1.1rem; }
 }
