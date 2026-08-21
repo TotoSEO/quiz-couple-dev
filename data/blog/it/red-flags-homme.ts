@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "13 red flag in un uomo: la lista completa",
   metaDescription: "Qualcosa non va, ma non riesci a capire cosa. Red flag emotive, comportamentali, relazionali, la lista completa per vederci chiaro.",
   featuredImage: '',
-  featuredImageAlt: "Red flag in un uomo, lista completa dei segnali d'allarme in coppia",
+  featuredImageAlt: "Bandiera rossa di pericolo tesa dal vento, ripresa dal basso su un cielo chiaro",
   publishedAt: '2026-03-05',
   author: AUTHORS['thomas'],
   excerpt: "Le red flag sono raramente segnali d'allarme fragorosi. Sono schemi che minimizzi fino al giorno in cui ti rendi conto di averli normalizzati da mesi.",

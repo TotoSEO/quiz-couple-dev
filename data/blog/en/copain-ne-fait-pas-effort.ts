@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "My Boyfriend Doesn't Make an Effort: What to Do",
   metaDescription: "You do everything, he does nothing. Or close to it. Why some men stop making an effort, how to recognise it, what it means and what to do about it.",
   featuredImage: '',
-  featuredImageAlt: "My boyfriend doesn't make an effort, understanding and taking action",
+  featuredImageAlt: "A table laid for two, one place set with care with a candle and flowers, the other left empty",
   publishedAt: '2026-03-08',
   author: AUTHORS['thomas'],
   excerpt: "An imbalance of effort in a couple is one of the most common causes of breakup, precisely because it sets in gradually and we tend to adapt to it before realising how much it weighs on us.",

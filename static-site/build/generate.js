@@ -491,6 +491,16 @@ async function fetchArticleOverrides() {
 
 // ── Helpers ──────────────────────────────────────────────────────────────
 
+// Une image a la une venant de Supabase peut pointer vers un fichier qui n'existe
+// plus dans public/ (image remplacee dans le depot, ligne restee en base). Un
+// chemin interne introuvable est inutilisable : on repart de la valeur du depot.
+// Les URL absolues (televersements admin) passent sans controle.
+function imageDispo(chemin) {
+  if (!chemin) return false;
+  if (!chemin.startsWith('/')) return true;
+  return fs.existsSync(path.join(PUBLIC_DIR, chemin.replace(/^\//, '')));
+}
+
 function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
 }
@@ -788,8 +798,9 @@ async function generatePage(routeKey, lang) {
           slug: localizedSlug,
           title: (oData && oData.title) || article.title,
           excerpt: (oData && oData.excerpt) || article.excerpt || '',
-          featuredImage: (oData && oData.featuredImage) || article.featuredImage || articleMeta.featuredImage || '/placeholder.svg',
-          featuredImageAlt: (oData && oData.featuredImageAlt) || article.featuredImageAlt || article.title,
+          featuredImage: (oData && imageDispo(oData.featuredImage) && oData.featuredImage) || article.featuredImage || articleMeta.featuredImage || '/placeholder.svg',
+          // le texte alternatif decrit l'image : il ne suit la base que si l'image la suit aussi
+          featuredImageAlt: (oData && imageDispo(oData.featuredImage) && oData.featuredImageAlt) || article.featuredImageAlt || article.title,
           publishedAt: article.publishedAt || articleMeta.publishedAt,
           url: getArticlePath(localizedSlug, lang),
           category: articleMeta.category || null,
@@ -1446,9 +1457,11 @@ async function generateBlogArticle(articleMeta, lang) {
     if (override.title) article.title = override.title;
     if (override.metaTitle) article.metaTitle = override.metaTitle;
     if (override.metaDescription) article.metaDescription = override.metaDescription;
-    if (override.featuredImageAlt) article.featuredImageAlt = override.featuredImageAlt;
     if (override.excerpt) article.excerpt = override.excerpt;
-    if (override.featuredImage) article.featuredImage = override.featuredImage;
+    if (override.featuredImage && imageDispo(override.featuredImage)) {
+      article.featuredImage = override.featuredImage;
+      if (override.featuredImageAlt) article.featuredImageAlt = override.featuredImageAlt;
+    }
   }
 
   const localizedSlug = articleMeta.slugs[lang] || articleMeta.internalSlug;

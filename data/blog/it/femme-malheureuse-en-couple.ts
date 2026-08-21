@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Donna infelice in coppia: i veri segnali da riconoscere",
   metaDescription: "Sorride ancora, ma qualcosa è cambiato. I segnali che una donna è infelice in coppia spesso ci sono da tempo. Ti spieghiamo cosa osservare.",
   featuredImage: '',
-  featuredImageAlt: "Donna pensierosa seduta da sola, segnali di malessere nella coppia",
+  featuredImageAlt: "Donna seduta di spalle sul bordo di un letto disfatto, una tazza tra le mani, in una camera piena di luce",
   publishedAt: '2026-03-01',
   author: AUTHORS['thomas'],
   excerpt: "I segnali ci sono spesso da tempo. Semplicemente non sapevi cosa cercare.",

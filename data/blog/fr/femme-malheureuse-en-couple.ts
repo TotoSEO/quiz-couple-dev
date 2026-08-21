@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Femme malheureuse en couple : les vrais signes à repérer",
   metaDescription: "Elle sourit encore, mais quelque chose a changé. Les signes qu'une femme est malheureuse en couple, et ce qu'il faut regarder pour les repérer.",
   featuredImage: '',
-  featuredImageAlt: "Femme pensive assise seule, signes de mal-être dans le couple",
+  featuredImageAlt: "Femme assise de dos au bord d'un lit défait, une tasse entre les mains, dans une chambre baignée de lumière",
   publishedAt: '2026-03-01',
   author: AUTHORS['thomas'],
   excerpt: "Les signes sont souvent là depuis longtemps. On ne sait juste pas quoi regarder.",

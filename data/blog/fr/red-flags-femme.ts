@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Les 12 red flags chez une femme : la liste complète",
   metaDescription: "La liste des 12 red flags chez une femme, classés par niveau d'alerte. Ce que chaque signal veut dire, et à partir de quand il faut s'en inquiéter.",
   featuredImage: '',
-  featuredImageAlt: "Red flags chez une femme, liste complète des signaux d'alarme en couple",
+  featuredImageAlt: "Rangée de petits fanions rouges plantés dans l'herbe, le premier net et les suivants flous",
   publishedAt: '2026-03-07',
   author: AUTHORS['thomas'],
   excerpt: "Un red flag, ce n'est pas un défaut de caractère. C'est un pattern relationnel répété qui, sur la durée, rend une relation épuisante, déséquilibrée ou toxique.",

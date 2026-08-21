@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Unglückliche Frau in der Beziehung: Die Anzeichen",
   metaDescription: "Sie lächelt noch, aber etwas hat sich verändert. Die Anzeichen, dass eine Frau in der Beziehung unglücklich ist, sind oft schon lange da.",
   featuredImage: '',
-  featuredImageAlt: "Nachdenkliche Frau allein sitzend, Anzeichen von Unzufriedenheit in der Beziehung",
+  featuredImageAlt: "Frau mit dem Rücken zur Kamera auf der Kante eines zerwühlten Betts, eine Tasse in den Händen, in einem lichtdurchfluteten Schlafzimmer",
   publishedAt: '2026-03-01',
   author: AUTHORS['thomas'],
   excerpt: "Die Anzeichen sind oft schon lange da. Man weiß nur nicht, worauf man achten soll.",

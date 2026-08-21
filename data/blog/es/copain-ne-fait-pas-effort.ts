@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Mi novio no hace ningún esfuerzo: qué hacer de verdad",
   metaDescription: "Haces todo tú, él nada. O casi. Por qué algunos hombres dejan de esforzarse, cómo reconocerlo, qué significa y qué hacer concretamente.",
   featuredImage: '',
-  featuredImageAlt: "Mi novio no hace ningún esfuerzo, entender y actuar",
+  featuredImageAlt: "Mesa puesta para dos, un cubierto preparado con esmero con vela y flores, el otro sitio vacío",
   publishedAt: '2026-03-08',
   author: AUTHORS['thomas'],
   excerpt: "El desequilibrio de esfuerzo en una pareja es una de las causas más frecuentes de ruptura, precisamente porque se instala progresivamente y tendemos a adaptarnos antes de darnos cuenta de cuánto pesa.",

@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "13 red flags en un hombre: la lista completa",
   metaDescription: "Algo no cuadra pero no logras definir qué. Red flags emocionales, de comportamiento, relacionales, la lista completa para verlo con claridad.",
   featuredImage: '',
-  featuredImageAlt: "Red flags en un hombre, lista completa de señales de alerta en pareja",
+  featuredImageAlt: "Bandera roja de aviso tensada por el viento, a contrapicado sobre un cielo claro",
   publishedAt: '2026-03-05',
   author: AUTHORS['thomas'],
   excerpt: "Las red flags rara vez son señales de alarma estridentes. Son patrones que minimizas hasta que un día te das cuenta de que llevas meses normalizándolos.",

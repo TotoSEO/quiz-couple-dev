@@ -364,7 +364,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'femme-malheureuse-en-couple',
-    featuredImage: '/blog/femme-malheureuse-en-couple.svg',
+    featuredImage: '/blog/femme-malheureuse-en-couple.webp',
     category: 'vie-de-couple',
     slugs: {
       fr: 'femme-malheureuse-en-couple',
@@ -521,7 +521,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'red-flags-homme',
-    featuredImage: '/blog/red-flags-homme.svg',
+    featuredImage: '/blog/red-flags-homme.webp',
     category: 'vie-de-couple',
     slugs: {
       fr: 'red-flags-homme',
@@ -534,7 +534,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'red-flags-femme',
-    featuredImage: '/blog/red-flags-femme.svg',
+    featuredImage: '/blog/red-flags-femme.webp',
     category: 'vie-de-couple',
     slugs: {
       fr: 'red-flags-femme',
@@ -547,7 +547,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'love-bombing',
-    featuredImage: '/blog/love-bombing.svg',
+    featuredImage: '/blog/love-bombing.webp',
     category: 'vie-de-couple',
     slugs: {
       fr: 'love-bombing',
@@ -560,7 +560,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'copain-ne-fait-pas-effort',
-    featuredImage: '/blog/copain-ne-fait-pas-effort.svg',
+    featuredImage: '/blog/copain-ne-fait-pas-effort.webp',
     category: 'vie-de-couple',
     slugs: {
       fr: 'copain-ne-fait-pas-effort',
@@ -573,7 +573,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'lexique-relations-2026',
-    featuredImage: '/blog/lexique-relations-2026.svg',
+    featuredImage: '/blog/lexique-relations-2026.webp',
     category: 'vie-de-couple',
     frOnly: true,
     slugs: {
@@ -583,7 +583,7 @@ export const BLOG_ARTICLES = [
   },
   {
     internalSlug: 'dependance-affective',
-    featuredImage: '/blog/dependance-affective.svg',
+    featuredImage: '/blog/dependance-affective.webp',
     category: 'vie-de-couple',
     slugs: {
       fr: 'dependance-affective',

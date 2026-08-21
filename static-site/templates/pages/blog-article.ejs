@@ -122,14 +122,14 @@
 
         <!-- Quick summary box -->
         <% if (article.quickSummary && article.quickSummary.length > 0) { %>
-        <aside class="blog-quick-summary" aria-label="<%= t('common:blog.quickSummary', 'Résumé rapide') %>">
+        <section class="blog-quick-summary" aria-label="<%= t('common:blog.quickSummary', 'Résumé rapide') %>">
           <p class="blog-quick-summary-title"><%= t('common:blog.quickSummary', 'Résumé rapide') %></p>
           <ul>
             <% for (const point of article.quickSummary) { %>
             <li><%= point %></li>
             <% } %>
           </ul>
-        </aside>
+        </section>
         <% } %>
 
         <!-- Introduction -->

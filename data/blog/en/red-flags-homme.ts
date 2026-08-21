@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "13 Red Flags in a Man: The Complete List",
   metaDescription: "Something feels off but you can't quite name it? Emotional, behavioural, relationship red flags, the complete list to help you see things clearly.",
   featuredImage: '',
-  featuredImageAlt: "Red flags in a man, complete list of warning signs in a relationship",
+  featuredImageAlt: "A red warning flag stretched by the wind, shot from below against a bright sky",
   publishedAt: '2026-03-05',
   author: AUTHORS['thomas'],
   excerpt: "Red flags are rarely loud alarm bells. They're patterns you brush off until the day you realise you've been normalising them for months.",
