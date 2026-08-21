@@ -8447,12 +8447,17 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
    description et le type de score en dessous.
    ═══════════════════════════════════════════════════════════ */
 .choix-modes {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem;
   width: 100%; max-width: 34rem; margin: 0 auto 1.5rem;
 }
 /* Trois formats sur une meme page, comme le test ame soeur : seul, a deux,
-   ou celibataire. Deux colonnes auraient laisse une carte orpheline. */
-.choix-modes--trois { grid-template-columns: repeat(3, 1fr); max-width: 44rem; }
+   ou celibataire. minmax(0, 1fr) est indispensable : avec 1fr la piste ne peut
+   pas devenir plus etroite que son contenu, et un nom long et insecable
+   (CELIBATAIRE, SOLTERO(A)) impose alors sa largeur a toute la grille jusqu'a
+   pousser la page hors champ. Le nom est aussi reduit, la taille geante ayant
+   ete calibree pour SOLO et DUO. */
+.choix-modes--trois { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 44rem; }
+.choix-modes--trois .choix-mode-nom { font-size: clamp(1.15rem, 2.2vw, 1.5rem); letter-spacing: .04em; }
 .choix-mode {
   --sm-h: 340; --sm-s: 65%; --sm-l: 65%;
   position: relative; display: flex; flex-direction: column; align-items: center;
@@ -8486,6 +8491,7 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
     hsl(var(--sm-h) var(--sm-s) var(--sm-l1)),
     hsl(var(--sm-h) var(--sm-s) var(--sm-l2)));
   -webkit-background-clip: text; background-clip: text; color: transparent;
+  min-width: 0; max-width: 100%; overflow-wrap: anywhere;
 }
 .choix-mode-desc {
   margin-top: .45rem; font-size: .85rem; line-height: 1.4;
@@ -8502,8 +8508,19 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 .dark .sain-badge-solo { color: hsl(340 65% 78%); }
 @media (prefers-reduced-motion: reduce) { .choix-mode { transition: none; } }
+/* Trois cartes cote a cote demandent bien plus de place que deux. Sous la
+   tablette on garde solo et duo sur une ligne et on passe celibataire dessous,
+   sur toute la largeur : la carte au nom le plus long est aussi celle qui a le
+   plus de place. */
+@media (max-width: 767px) {
+  .choix-modes--trois { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 26rem; gap: .8rem; }
+  .choix-modes--trois .choix-mode--celib { grid-column: 1 / -1; }
+  .choix-modes--trois .choix-mode-nom { font-size: clamp(1.35rem, 5vw, 1.8rem); }
+}
 @media (max-width: 430px) {
   .choix-modes { grid-template-columns: 1fr; gap: .8rem; max-width: 22rem; }
-  .choix-modes--trois { grid-template-columns: 1fr; max-width: 22rem; }
+  /* la regle a deux cartes ci-dessus a la meme specificite et vient apres :
+     on redit le format a trois pour qu il garde ses deux colonnes. */
+  .choix-modes--trois { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 24rem; }
   .choix-mode { padding: 1.25rem 1rem 1.1rem; }
 }
