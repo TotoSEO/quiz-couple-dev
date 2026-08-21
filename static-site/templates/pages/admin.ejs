@@ -158,13 +158,6 @@
                 <p class="stats-kpi-label">Lancés (total)</p>
               </div>
             </div>
-            <div class="stats-kpi">
-              <div class="stats-kpi-icon" style="background:linear-gradient(135deg,hsl(265 60% 58%),hsl(320 65% 58%));">🏁</div>
-              <div>
-                <p class="stats-kpi-value" id="admin-stats-taux">-</p>
-                <p class="stats-kpi-label">Taux de finition</p>
-              </div>
-            </div>
           </div>
 
           <!-- Tops et flops : pages en hausse et en baisse, replie par defaut -->
@@ -201,7 +194,7 @@
             <div class="stats-panel-head">
               <div>
                 <h2 class="stats-panel-title">Évolution quotidienne</h2>
-                <p class="stats-panel-sub">Nombre total de tests &amp; quiz réalisés chaque jour.</p>
+                <p class="stats-panel-sub">Lancés, terminés et taux de finition, jour par jour. Cliquez une vignette pour masquer ou réafficher sa courbe.</p>
               </div>
               <div class="stats-range" role="group" aria-label="Période">
                 <button class="stats-range-btn active" data-range="30">30 j</button>
@@ -209,7 +202,8 @@
                 <button class="stats-range-btn" data-range="365">1 an</button>
               </div>
             </div>
-            <canvas id="admin-stats-total-chart" class="stats-canvas" style="height:220px;"></canvas>
+            <div class="stats-legende" id="admin-stats-legende" role="group" aria-label="Courbes affichées"></div>
+            <canvas id="admin-stats-total-chart" class="stats-canvas" style="height:240px;"></canvas>
           </div>
 
           <!-- Per-quiz breakdown + selected curve, replies par defaut -->
@@ -478,6 +472,21 @@
   .stats-row-val{flex-basis:3.6rem;}
   /* Colonne secondaire : l'autre nombre du couple, en gris, pour garder le
      contexte quand on regarde un ratio (128 sur 340). */
+  /* Vignettes de selection des courbes, facon Search Console : on clique
+     pour masquer ou reafficher une courbe, la vignette eteinte se grise. */
+  .stats-legende{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.5rem;margin:0.25rem 0 0.9rem;}
+  .stats-leg{display:flex;flex-direction:column;gap:0.15rem;align-items:flex-start;padding:0.55rem 0.75rem;border:1px solid hsl(var(--border));border-radius:0.7rem;background:transparent;cursor:pointer;text-align:left;color:inherit;transition:background .15s,border-color .15s,opacity .15s;border-top:3px solid var(--leg);}
+  .stats-leg:hover{background:hsl(var(--muted)/0.5);}
+  .stats-leg-nom{display:flex;align-items:center;gap:0.4rem;font-size:0.75rem;font-weight:600;color:hsl(var(--muted-foreground));}
+  .stats-leg-puce{width:0.5rem;height:0.5rem;border-radius:9999px;background:var(--leg);flex:0 0 auto;}
+  .stats-leg-val{font-size:1.15rem;font-weight:700;font-variant-numeric:tabular-nums;color:var(--leg);}
+  .stats-leg.est-eteinte{opacity:0.45;border-top-color:hsl(var(--border));}
+  .stats-leg.est-eteinte .stats-leg-val{color:hsl(var(--muted-foreground));}
+  .stats-leg.est-eteinte .stats-leg-puce{background:hsl(var(--muted-foreground));}
+  .stats-infobulle-ligne{display:flex;align-items:center;gap:0.4rem;white-space:nowrap;}
+  .stats-infobulle-puce{width:0.45rem;height:0.45rem;border-radius:9999px;flex:0 0 auto;}
+  .stats-infobulle-nom{color:hsl(var(--muted-foreground));font-size:0.72rem;}
+  .stats-infobulle-ligne .stats-infobulle-val{margin-left:auto;font-weight:700;font-variant-numeric:tabular-nums;}
   .stats-row-sur{flex:0 0 4.2rem;text-align:right;font-size:0.75rem;font-variant-numeric:tabular-nums;color:hsl(var(--muted-foreground));}
   @media (max-width:520px){.stats-row-sur{display:none;}}
 
