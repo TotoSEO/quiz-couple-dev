@@ -4,7 +4,7 @@
     "title": "Quiz vrai ou faux",
     "titleHighlight": "pour les couples",
     "description": "Vous pensez tout savoir sur la vie à deux ? Sur ce qui fait tenir un couple, sur les mythes qu'on répète depuis des années, sur les chiffres qui surprennent ? Ce quiz vrai ou faux va mettre ça à l'épreuve.",
-    "subtitle": "100 questions. Chacune a une réponse simple, vraie ou fausse, et une explication courte pour comprendre pourquoi."
+    "subtitle": "Une base de 100 questions, dont 30 tirées au sort à chaque partie. Chacune a une réponse simple, vraie ou fausse, et une explication courte pour comprendre pourquoi."
   },
   "seo": {
     "s1Title": "Le vrai ou faux, un format de quiz qui change tout",
@@ -27,7 +27,7 @@
     "s4p2": "Ces questions n'ont pas de réponse universelle. Mais elles méritent d'être posées. Et un quiz de 100 questions, c'est une bonne façon de les poser sans avoir l'air d'ouvrir une thérapie de couple.",
     "faqTitle": "Questions fréquentes",
     "faq": [
-      {"q": "Combien de temps dure le quiz vrai ou faux ?", "a": "Comptez entre 15 et 25 minutes pour répondre aux 100 questions, selon votre vitesse de lecture. Vous pouvez aussi choisir de jouer par catégorie pour des sessions plus courtes."},
+      {"q": "Combien de temps dure le quiz vrai ou faux ?", "a": "Comptez entre 5 et 10 minutes : chaque partie tire 30 questions au hasard parmi les 100 de la base, selon votre vitesse de lecture. Rejouez et vous tomberez sur d'autres affirmations."},
       {"q": "Peut-on jouer à deux ?", "a": "Absolument. Le quiz est conçu pour être joué seul ou en couple. À deux, comparez vos réponses et discutez des explications, c'est là que ça devient vraiment intéressant."},
       {"q": "Les réponses sont-elles basées sur des études ?", "a": "Oui. Chaque explication s'appuie sur des recherches en psychologie, en sociologie ou en neurosciences. Les sources principales incluent les travaux de John Gottman, Helen Fisher et des études de l'INSEE et de l'Ifop."},
       {"q": "Mon score est-il enregistré ?", "a": "Non. Aucune donnée personnelle n'est collectée. Votre score s'affiche à la fin du quiz et reste uniquement sur votre appareil."}
