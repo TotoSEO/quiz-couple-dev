@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Mujer infeliz en pareja: las señales reales que hay que ver",
   metaDescription: "Sigue sonriendo, pero algo ha cambiado. Las señales de que una mujer es infeliz en pareja llevan tiempo ahí. Te explicamos qué mirar.",
   featuredImage: '',
-  featuredImageAlt: "Mujer pensativa sentada sola, señales de malestar en la pareja",
+  featuredImageAlt: "Mujer sentada de espaldas al borde de una cama deshecha, con una taza entre las manos, en un dormitorio lleno de luz",
   publishedAt: '2026-03-01',
   author: AUTHORS['thomas'],
   excerpt: "Las señales llevan tiempo ahí. Simplemente no sabías qué mirar.",

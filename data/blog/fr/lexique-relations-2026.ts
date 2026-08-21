@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Ghosting, crush, red flag : le lexique des relations 2026",
   metaDescription: "Ghosting, crush, love bombing, red flag, date… Les mots qu'on utilise vraiment pour parler d'amour en 2026, décryptés sans jargon de psy.",
   featuredImage: '',
-  featuredImageAlt: "Lexique des relations amoureuses en 2026, ghosting, crush, red flag, love bombing",
+  featuredImageAlt: "Tiroir de fichier en bois ouvert, rempli de fiches cartonnées vierges",
   publishedAt: '2026-03-11',
   author: AUTHORS['thomas'],
   excerpt: "Ces mots ne décrivent pas des nouveaux comportements, ils donnent enfin des noms à des choses qui existaient depuis toujours.",

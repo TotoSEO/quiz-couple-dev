@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Mein Freund gibt sich keine Mühe: Was tun?",
   metaDescription: "Du machst alles, er nichts. Oder fast nichts. Warum manche Männer aufhören, sich zu bemühen, wie man es erkennt, was es bedeutet und was man konkret tun…",
   featuredImage: '',
-  featuredImageAlt: "Mein Freund gibt sich keine Mühe, verstehen und handeln",
+  featuredImageAlt: "Für zwei gedeckter Tisch, ein Gedeck sorgfältig arrangiert mit Kerze und Blumen, der andere Platz leer",
   publishedAt: '2026-03-08',
   author: AUTHORS['thomas'],
   excerpt: "Ein Ungleichgewicht beim Einsatz in einer Beziehung ist einer der häufigsten Trennungsgründe, genau weil es sich allmählich einschleicht und wir uns oft daran gewöhnen, bevor wir merken, wie sehr es uns belastet.",

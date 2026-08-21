@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Les 13 red flags chez un homme : la liste complète",
   metaDescription: "La liste des 13 red flags chez un homme, classés par niveau d'alerte. Ce que chaque signal veut dire, et à partir de quand il faut s'en inquiéter.",
   featuredImage: '',
-  featuredImageAlt: "Red flags chez un homme, liste complète des signaux d'alarme en couple",
+  featuredImageAlt: "Drapeau rouge de baignade interdite tendu par le vent, en contre-plongée sur un ciel clair",
   publishedAt: '2026-03-05',
   author: AUTHORS['thomas'],
   excerpt: "Les red flags sont rarement des signaux fracassants. Ce sont des patterns qu'on minimise jusqu'au jour où on réalise qu'on les a normalisés.",

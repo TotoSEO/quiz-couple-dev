@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "12 Red Flags in a Woman: The Complete List",
   metaDescription: "Something feels off in your relationship but you can't quite name it? Emotional, behavioural, relational red flags in a woman, the complete list.",
   featuredImage: '',
-  featuredImageAlt: "Red flags in a woman, complete list of warning signs in a relationship",
+  featuredImageAlt: "A row of small red marker flags planted in grass, the nearest one sharp and the rest blurred",
   publishedAt: '2026-03-07',
   author: AUTHORS['thomas'],
   excerpt: "A red flag isn't a character flaw. It's a repeated relational pattern that, over time, makes a relationship exhausting, unbalanced, or toxic.",

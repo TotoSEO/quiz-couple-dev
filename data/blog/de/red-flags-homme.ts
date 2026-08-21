@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "13 Red Flags bei einem Mann: Die vollständige Liste",
   metaDescription: "Irgendetwas stimmt nicht, aber du kannst es nicht benennen? Emotionale, verhaltensbezogene und beziehungstechnische Red Flags, die vollständige Liste…",
   featuredImage: '',
-  featuredImageAlt: "Red Flags bei einem Mann, vollständige Liste der Warnsignale in einer Beziehung",
+  featuredImageAlt: "Rote Warnflagge im Wind, aus der Untersicht vor hellem Himmel",
   publishedAt: '2026-03-05',
   author: AUTHORS['thomas'],
   excerpt: "Red Flags sind selten laute Alarmsignale. Es sind Muster, die du herunterspielst, bis du eines Tages merkst, dass du sie seit Monaten als normal akzeptierst.",

@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "Il mio ragazzo non si impegna: cosa fare davvero",
   metaDescription: "Fai tutto tu, lui niente. O quasi. Perché certi uomini smettono di impegnarsi, come riconoscerlo, cosa significa e cosa fare concretamente.",
   featuredImage: '',
-  featuredImageAlt: "Il mio ragazzo non si impegna, capire e agire",
+  featuredImageAlt: "Tavola apparecchiata per due, un coperto curato con candela e fiori, l'altro posto lasciato vuoto",
   publishedAt: '2026-03-08',
   author: AUTHORS['thomas'],
   excerpt: "Lo squilibrio di impegno in una coppia è una delle cause più frequenti di rottura, proprio perché si installa progressivamente e tendiamo ad adattarci prima di renderci conto di quanto pesi.",

@@ -7,7 +7,7 @@ const article: BlogArticleData = {
   metaTitle: "12 Red Flags bei einer Frau: Die vollständige Liste",
   metaDescription: "Irgendetwas stimmt in deiner Beziehung nicht, aber du kannst es nicht benennen? Emotionale, verhaltensbezogene, relationale Red Flags bei einer Frau…",
   featuredImage: '',
-  featuredImageAlt: "Red Flags bei einer Frau, vollständige Liste der Warnsignale in einer Beziehung",
+  featuredImageAlt: "Reihe kleiner roter Markierungsfähnchen im Gras, das vorderste scharf, die übrigen unscharf",
   publishedAt: '2026-03-07',
   author: AUTHORS['thomas'],
   excerpt: "Ein Red Flag ist kein Charakterfehler. Es ist ein wiederholtes relationales Muster, das eine Beziehung über die Zeit erschöpfend, unausgewogen oder toxisch macht.",
