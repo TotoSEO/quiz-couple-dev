@@ -699,6 +699,107 @@
 
   // ─── Initializers ─────────────────────────────────────────
 
+  // ── Barème pondéré des tests solo ───────────────────────────────────────
+  // Par défaut un test solo donne 0, 1, 2, 3 points selon le rang de la
+  // réponse, ce qui met toutes ses questions sur le même pied. Sur un test de
+  // gravité c'est faux : « il n'a pas répondu depuis trois heures » ne dit pas
+  // la même chose de la dépendance que « depuis cette relation, vos projets
+  // personnels ont disparu », et une tension diffuse qu'on n'explique pas ne
+  // vaut pas la preuve d'un message à trois heures du matin.
+  //
+  // Chaque question porte donc un poids, et chaque réponse une valeur selon son
+  // rang, du plus sain au pire. La valeur monte lentement puis fort : répondre
+  // « parfois » partout ne doit pas suffire à déclencher un verdict alarmant.
+  //   3 = fondamental   2 = structurant   1 = signal faible
+  // Le maximum réel se recalcule plus bas à partir des points posés, donc les
+  // paliers suivent le barème sans être écrits à la main.
+  var SOLO_VALEURS = [0, 1, 3, 5];
+
+  var SOLO_BAREME = {
+    // Dépendance affective : le cœur du test est la place que la relation prend
+    // dans l'identité et la vie de la personne, pas ses réactions ponctuelles.
+    dependance: {
+      1:  { d: 'absence',    w: 2 },  2:  { d: 'autonomie',  w: 2 },
+      3:  { d: 'identite',   w: 3 },  4:  { d: 'affirmation',w: 2 },
+      5:  { d: 'reassurance',w: 2 },  6:  { d: 'isolement',  w: 3 },
+      7:  { d: 'controle',   w: 1 },  8:  { d: 'affirmation',w: 2 },
+      9:  { d: 'identite',   w: 3 },  10: { d: 'abandon',    w: 3 },
+      11: { d: 'autonomie',  w: 1 },  12: { d: 'emotions',   w: 2 },
+      13: { d: 'absence',    w: 2 },  14: { d: 'isolement',  w: 3 },
+      15: { d: 'identite',   w: 2 },  16: { d: 'estime',     w: 3 },
+      17: { d: 'abandon',    w: 2 },  18: { d: 'protestation',w: 3 },
+      19: { d: 'affirmation',w: 3 },  20: { d: 'absence',    w: 2 }
+    },
+    // Pervers narcissique : les signaux qui distinguent vraiment ce profil sont
+    // le retournement, la double façade et le déni face à la preuve.
+    pervers: {
+      1:  { d: 'cycle',      w: 2 },  2:  { d: 'humiliation',w: 3 },
+      3:  { d: 'retournement',w: 3 }, 4:  { d: 'isolement',  w: 3 },
+      5:  { d: 'empathie',   w: 3 },  6:  { d: 'asymetrie',  w: 2 },
+      7:  { d: 'controle',   w: 3 },  8:  { d: 'facade',     w: 3 },
+      9:  { d: 'punition',   w: 2 },  10: { d: 'climat',     w: 3 },
+      11: { d: 'retournement',w: 3 }, 12: { d: 'sabotage',   w: 2 },
+      13: { d: 'emprise',    w: 3 },  14: { d: 'triangulation',w: 2 },
+      15: { d: 'cycle',      w: 2 },  16: { d: 'cycle',      w: 2 },
+      17: { d: 'estime',     w: 3 },  18: { d: 'asymetrie',  w: 2 },
+      19: { d: 'entourage',  w: 2 },  20: { d: 'emprise',    w: 3 }
+    },
+    // Couple toxique : ce qui pèse, c'est la peur, l'invalidation et l'atteinte
+    // à l'estime, pas les frictions ordinaires d'une vie à deux.
+    toxic: {
+      1:  { d: 'asymetrie',  w: 2 },  2:  { d: 'peur',       w: 3 },
+      3:  { d: 'autocensure',w: 2 },  4:  { d: 'equilibre',  w: 2 },
+      5:  { d: 'cruaute',    w: 3 },  6:  { d: 'asymetrie',  w: 2 },
+      7:  { d: 'charge',     w: 2 },  8:  { d: 'invalidation',w: 3 },
+      9:  { d: 'asymetrie',  w: 2 },  10: { d: 'culpabilite',w: 3 },
+      11: { d: 'conflit',    w: 2 },  12: { d: 'invalidation',w: 3 },
+      13: { d: 'punition',   w: 3 },  14: { d: 'besoins',    w: 2 },
+      15: { d: 'reparation', w: 2 },  16: { d: 'estime',     w: 3 },
+      17: { d: 'estime',     w: 2 },  18: { d: 'peur',       w: 3 },
+      19: { d: 'isolement',  w: 3 },  20: { d: 'projection', w: 2 },
+      21: { d: 'peur',       w: 3 },  22: { d: 'cycle',      w: 2 },
+      23: { d: 'emprise',    w: 3 },  24: { d: 'emprise',    w: 3 },
+      25: { d: 'miroir',     w: 2 }
+    },
+    // Infidélité : un test qui annonce une tromperie doit s'appuyer sur des
+    // faits observables. Les ressentis sans preuve gardent le poids le plus
+    // faible, sinon l'angoisse seule suffit à faire monter le score.
+    infidelite: {
+      1:  { d: 'secret',     w: 2 },  2:  { d: 'habitudes',  w: 2 },
+      3:  { d: 'intimite',   w: 2 },  4:  { d: 'entourage',  w: 1 },
+      5:  { d: 'apparence',  w: 1 },  6:  { d: 'evitement',  w: 2 },
+      7:  { d: 'ressenti',   w: 1 },  8:  { d: 'preuve',     w: 3 },
+      9:  { d: 'evitement',  w: 2 },  10: { d: 'comparaison',w: 1 },
+      11: { d: 'preuve',     w: 3 },  12: { d: 'evitement',  w: 2 },
+      13: { d: 'entourage',  w: 2 },  14: { d: 'secret',     w: 1 },
+      15: { d: 'intimite',   w: 2 },  16: { d: 'preuve',     w: 3 },
+      17: { d: 'evitement',  w: 2 },  18: { d: 'habitudes',  w: 2 },
+      19: { d: 'ressenti',   w: 1 },  20: { d: 'transparence',w: 3 }
+    }
+  };
+
+  // Pose les points de chaque réponse à partir du poids de sa question.
+  // Renvoie false si le test n'a pas de table : le barème par rang reste alors
+  // en place, exactement comme avant.
+  function appliqueBaremePondere(prefix, questions, ascendant) {
+    var table = SOLO_BAREME[prefix];
+    if (!table) return false;
+    for (var i = 0; i < questions.length; i++) {
+      var q = questions[i];
+      var fiche = table[q.id];
+      var poids = fiche && fiche.w ? fiche.w : 1;
+      var n = q.options.length;
+      for (var j = 0; j < n; j++) {
+        // Les options sont rangées de la plus saine à la pire dans un test
+        // ascendant, l'inverse sinon.
+        var rang = ascendant ? j : (n - 1 - j);
+        var v = SOLO_VALEURS[rang] !== undefined ? SOLO_VALEURS[rang] : 0;
+        q.options[j].points = poids * v;
+      }
+    }
+    return true;
+  }
+
   function initSoloQuiz(cfg, questions) {
     // Barème explicite : par défaut un test solo donne 0, 1, 2, 3 points selon
     // le rang de la réponse, ce qui met toutes les questions sur le même pied.
@@ -707,6 +808,7 @@
     // prefix.q{N}{lettre}_pts. Le maximum réel se recalcule tout seul en
     // dessous, donc les paliers suivent le barème sans être écrits à la main.
     if (cfg.ptsExplicites) appliquePointsExplicites(cfg.prefix, questions);
+    else appliqueBaremePondere(cfg.prefix, questions, !!cfg.ascending);
 
     // Calculate real achievable max score (sum of max points per question)
     var realMaxScore = 0;
