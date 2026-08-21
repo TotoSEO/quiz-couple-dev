@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "I «che fai?» girano a vuoto? 60 domande di coppia pensate per il telefono e i messaggi: serate a distanza, messaggi della giornata, telefonate lunghe.",
   featuredImage: '/blog/questions-couple-telephone-message.webp',
   featuredImageAlt: "Due telefoni collegati da un filo rosso teso tra due finestre illuminate",
-  publishedAt: '2026-11-27',
+  publishedAt: '2026-11-24T10:38:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Al telefono non ci sono sguardi né gesti... solo parole. È esattamente per questo che le buone domande lì fanno miracoli.",
   introduction: `<p>C'è un momento che conoscono tutte le coppie, che vivano a 800 chilometri o a due quartieri di distanza: quello in cui la telefonata della sera diventa un bollettino meteo. «Com'è andata?» «Bene.» «Cosa mangi?» «Pasta.»... Il legame c'è, la voglia anche, ma la conversazione gira a vuoto.</p>

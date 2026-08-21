@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Peut-on vraiment pardonner une tromperie ? Oui, à des conditions précises... et non, pas toujours. Le chemin du pardon réel, étape par étape, sans injonction.",
   featuredImage: '/blog/pardonner-une-infidelite.webp',
   featuredImageAlt: "Cœur brisé recousu avec un fil doré, à la manière du kintsugi",
-  publishedAt: '2026-12-29',
+  publishedAt: '2026-12-26T08:35:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Après une infidélité, tout le monde a un avis : « pars », « pardonne », « moi je ne pourrais jamais »... La seule question qui compte : à quelles conditions un pardon est-il RÉEL ?",
   introduction: `<p>Depuis que tu sais, tout le monde sait quoi faire à ta place. Ta meilleure amie dit « pars, tu vaudras toujours mieux que ça ». Ta mère dit « tous les couples traversent des choses »... Et toi, au milieu, tu oscilles d'heure en heure entre l'envie de tout casser et l'envie que rien n'ait existé.</p>

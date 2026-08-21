@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Liking an ex's photos, keeping a Tinder match «for fun», ambiguous DMs... Micro-cheating decoded: what is serious, what isn't, and how to talk about it.",
   featuredImage: '/blog/micro-tromperie.webp',
   featuredImageAlt: "Phone showing a heart notification, the shadow of a third person between two silhouettes",
-  publishedAt: '2026-12-25',
+  publishedAt: '2026-12-22T10:24:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Nobody slept with anybody. And yet something happened... Welcome to the grey zone of modern fidelity.",
   introduction: `<p>He did nothing, technically. He slept with nobody, no secret meeting, no outright lie... Just regular likes on one girl's photos, Instagram conversations he closes when you come near, an ex he «keeps as a friend» with messages at 11pm. Technically nothing. And yet something bothers you... and you don't even know whether you have the right to be bothered.</p>

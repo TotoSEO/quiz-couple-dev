@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "¿Se puede perdonar de verdad una infidelidad? Sí, en condiciones precisas... y no, no siempre. El camino del perdón real, paso a paso, sin imposiciones.",
   featuredImage: '/blog/pardonner-une-infidelite.webp',
   featuredImageAlt: "Corazón roto recosido con hilo dorado, al estilo del kintsugi",
-  publishedAt: '2026-12-29',
+  publishedAt: '2026-12-26T08:35:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Después de una infidelidad todo el mundo tiene una opinión: «déjalo», «perdónale», «yo no podría nunca»... La única pregunta que cuenta: ¿en qué condiciones un perdón es REAL?",
   introduction: `<p>Desde que lo sabes, todo el mundo sabe qué hacer en tu lugar. Tu mejor amiga dice «déjalo, siempre valdrás más que eso». Tu madre dice «todas las parejas pasan por cosas»... Y tú, en medio, oscilas de hora en hora entre las ganas de romperlo todo y las ganas de que nada hubiera existido.</p>

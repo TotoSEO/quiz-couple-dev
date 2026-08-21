@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Er wird kühl, genau wenn es ernst wird? Die vermeidende Bindung von beiden Seiten erklärt: was sie innerlich erlebt, was sie auslöst und was wirklich hilft.",
   featuredImage: '/blog/attachement-evitant.webp',
   featuredImageAlt: "Silhouette, die einen Schritt vor einem entgegengestreckten Herzen zurückweicht",
-  publishedAt: '2026-12-08',
+  publishedAt: '2026-12-05T16:21:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Vermeidende Menschen lieben nicht weniger als andere. Sie haben nur sehr früh gelernt, dass Bedürftigkeit gefährlich ist, und behandeln Liebe wie ein Risiko.",
   introduction: `<p>Es ist eine der verwirrendsten Liebeserfahrungen überhaupt: Alles läuft gut, er ist präsent, witzig, engagiert, und genau in dem Moment, in dem die Beziehung ernst wird, schließt sich etwas. Weniger Nachrichten, weniger Pläne, dieses plötzliche Bedürfnis nach Luft. Du hast nichts falsch gemacht. Er ist nicht weniger gebunden. Es ist etwas anderes: Je näher du kommst, desto weiter weicht sein System zurück.</p>

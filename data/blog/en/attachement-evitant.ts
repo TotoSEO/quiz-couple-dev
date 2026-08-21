@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Does he cool off exactly when things get serious? Avoidant attachment explained from both sides: what it feels like inside, what it puts you through, and what actually helps.",
   featuredImage: '/blog/attachement-evitant.webp',
   featuredImageAlt: "Silhouette stepping back from a heart held out towards it",
-  publishedAt: '2026-12-08',
+  publishedAt: '2026-12-05T16:21:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Avoidant people don't love less than anyone else. They simply learned, very early, that needing is dangerous... and they handle love the way you handle a risk.",
   introduction: `<p>It is one of the most baffling romantic experiences there is: everything is going well, he is present, funny, involved... and exactly when the relationship turns serious, something closes up. Fewer messages, fewer plans, that sudden need for air. You did nothing wrong. He is not less attached. It is something else: the closer you come, the further his system retreats.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Après des années ensemble, on croit avoir fait le tour. Erreur ! 60 questions à vous poser à deux pour vérifier... et vous redécouvrir au passage.",
   featuredImage: '/blog/questions-pour-mieux-se-connaitre-en-couple.webp',
   featuredImageAlt: "Couple assis dos à dos avec des points d'interrogation et des cœurs au-dessus d'eux",
-  publishedAt: '2026-10-13',
+  publishedAt: '2026-10-10T13:37:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Le jour où on arrête de se poser des questions, on n'a pas fini de se découvrir... on a juste arrêté de chercher.",
   introduction: `<p>Fais l'expérience un jour : demande à un couple installé depuis dix ans s'ils se connaissent par cœur. Ils diront oui, évidemment. Puis pose-leur trois questions un peu précises, le rêve qu'il a abandonné, la peur qu'elle ne dit jamais, ce que chacun croit que l'autre pense de lui... et regarde les visages. Il y a toujours une surprise. Toujours !</p>

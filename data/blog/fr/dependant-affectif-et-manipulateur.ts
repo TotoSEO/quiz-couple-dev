@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Le manipulateur détecte le dépendant affectif comme un radar. Pourquoi ces deux profils s'attirent, ce que ce couple fait vivre, et comment casser le duo.",
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
   featuredImageAlt: "Aimant en forme de cœur attirant une silhouette enchaînée",
-  publishedAt: '2026-11-10',
+  publishedAt: '2026-11-07T12:21:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Ce n'est pas un hasard si les dépendants affectifs croisent tant de manipulateurs. L'un cherche à être indispensable... l'autre cherche quelqu'un qui a peur de perdre.",
   introduction: `<p>C'est une question qui revient sans arrêt chez les personnes qui sortent d'une relation d'emprise : « pourquoi moi ? » Pourquoi lui, encore ? Pourquoi cette impression de tomber toujours sur le même profil, comme si un aimant s'en mêlait ?...</p>

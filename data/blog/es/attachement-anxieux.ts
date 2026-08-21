@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Miedo al abandono, mensajes releídos, necesidad de que te tranquilicen en bucle... El apego ansioso explicado: sus señales en el amor, su espiral y cómo calmarlo de verdad.",
   featuredImage: '/blog/attachement-anxieux.webp',
   featuredImageAlt: "Persona abrazando un corazón mientras mira un móvil mudo",
-  publishedAt: '2026-12-04',
+  publishedAt: '2026-12-01T12:20:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "El apego ansioso no duda del amor que da... duda del que recibe. En permanencia. Y eso agota a los dos lados de la pareja.",
   introduction: `<p>Puede que conozcas esta sensación: todo va bien en tu relación, objetivamente... y sin embargo una parte de ti sigue en alerta. Un tono algo frío, una respuesta más corta de lo habitual, una noche sin mensaje: salta la alarma. Y ahí estás buscando pruebas de que todo va bien, otra vez, como ayer, como mañana.</p>

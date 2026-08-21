@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Gelosia, rabbia, bisogno di controllo, relazioni in serie... La dipendenza affettiva maschile non somiglia al cliché, ed è per questo che ci sfugge.",
   featuredImage: '/blog/dependance-affective-chez-l-homme.webp',
   featuredImageAlt: "Uomo di spalle che guarda il telefono, ombra a forma di cuore incatenato",
-  publishedAt: '2026-10-16',
+  publishedAt: '2026-10-13T17:47:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Immaginiamo il dipendente affettivo appiccicoso e supplichevole. Negli uomini somiglia più spesso alla gelosia, alla rabbia... o a un tipo che non è mai single.",
   introduction: `<p>Quando si dice «dipendenza affettiva», tutti visualizzano la stessa scena: qualcuno che supplica, che si aggrappa, che manda quindici messaggi. E siccome la maggior parte degli uomini non si riconosce in quell'immagine, conclude che non li riguarda. Grosso errore.</p>

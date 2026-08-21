@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Pour un dépendant affectif, une rupture n'est pas un chagrin : c'est un sevrage. Pourquoi ça fait si mal, les pièges des premières semaines, et comment en sortir grandi.",
   featuredImage: '/blog/dependance-affective-rupture.webp',
   featuredImageAlt: "Cœur en deux moitiés dont l'une se transforme en escalier qui monte",
-  publishedAt: '2026-11-20',
+  publishedAt: '2026-11-17T14:15:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Tout le monde souffre d'une rupture. Le dépendant affectif, lui, est en manque... et ce n'est pas la même chose à traverser.",
   introduction: `<p>Les gens autour de toi ont l'air de trouver ça long. « Il faut passer à autre chose »... Facile à dire. Eux ne savent pas ce que c'est de vérifier son téléphone au réveil pour un message qui ne viendra plus. De composer un numéro et de raccrocher. De sentir, physiquement, un manque qui ressemble à s'y méprendre à celui d'une substance...</p>

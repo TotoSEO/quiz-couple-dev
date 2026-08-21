@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Quitter un pervers narcissique ne ressemble à aucune autre rupture. Ce qu'il faut préparer avant, ce qu'il va faire après, et comment tenir le no contact.",
   featuredImage: '/blog/rupture-pervers-narcissique.webp',
   featuredImageAlt: "Porte entrouverte vers la lumière, une main lâchant un fil noué en forme de cœur",
-  publishedAt: '2026-10-20',
+  publishedAt: '2026-10-17T09:54:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Avec un pervers narcissique, la rupture n'est pas la fin de l'histoire. C'est un chapitre à part entière... et celui qui se prépare le plus.",
   introduction: `<p>Quitter quelqu'un, c'est déjà difficile. Quitter un pervers narcissique, c'est un exercice à part : une rupture où l'autre ne te laisse pas partir, où les larmes succèdent aux menaces, où l'homme des débuts réapparaît pile au bon moment... et où tu peux te retrouver, trois semaines plus tard, revenue sans trop savoir comment.</p>

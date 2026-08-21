@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Du glaubst, du kennst sie auswendig? Wetten: Von diesen 75 Fragen an deine Freundin gibt es mindestens zehn, deren Antwort du nicht kennst.",
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
   featuredImageAlt: "Paar am Tisch, beide lachen, sie beantwortet eine Frage mit den Händen",
-  publishedAt: '2026-10-02',
+  publishedAt: '2026-09-29T17:24:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Die Falle langer Beziehungen ist nicht, sich nicht mehr zu lieben. Sie ist, zu glauben, man sei mit dem Entdecken fertig.",
   introduction: `<p>Kleiner Test, bevor wir anfangen: Du kennst ihr Lieblingsessen, ihren Kultfilm, ihr Parfum. Einfach. Und jetzt: Weißt du, worauf sie dieses Jahr am stolzesten ist? Was ihr gerade fehlt? Was sie sich nicht zu fragen traut? Schon weniger einfach, oder?</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Para un dependiente emocional, una ruptura no es un desamor: es una abstinencia. Por qué duele tanto, las trampas de las primeras semanas y cómo salir fortalecida.",
   featuredImage: '/blog/dependance-affective-rupture.webp',
   featuredImageAlt: "Corazón partido en dos mitades, una de las cuales se convierte en una escalera que sube",
-  publishedAt: '2026-11-20',
+  publishedAt: '2026-11-17T14:15:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Todo el mundo sufre con una ruptura. El dependiente emocional está en abstinencia... y no es lo mismo de atravesar.",
   introduction: `<p>La gente a tu alrededor parece encontrarlo largo. «Hay que pasar página»... Fácil decirlo. Ellos no saben lo que es mirar el móvil al despertarte buscando un mensaje que ya no llegará. Marcar un número y colgar. Sentir, físicamente, una carencia que se parece hasta confundirse a la de una sustancia.</p>

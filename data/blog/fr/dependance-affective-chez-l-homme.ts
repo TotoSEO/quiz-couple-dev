@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Jalousie, colère, besoin de contrôle, relations en chaîne... La dépendance affective masculine ne ressemble pas au cliché, et c'est pour ça qu'on la rate.",
   featuredImage: '/blog/dependance-affective-chez-l-homme.webp',
   featuredImageAlt: "Homme de dos regardant son téléphone, ombre en forme de cœur enchaîné",
-  publishedAt: '2026-10-16',
+  publishedAt: '2026-10-13T17:47:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "On imagine le dépendant affectif collant et suppliant. Chez les hommes, ça ressemble plus souvent à de la jalousie, de la colère... ou à un mec qui n'est jamais célibataire.",
   introduction: `<p>Quand on dit « dépendance affective », tout le monde visualise la même scène : quelqu'un qui supplie, qui s'accroche, qui envoie quinze messages... Et comme la plupart des hommes ne se reconnaissent pas dans cette image, ils concluent que ça ne les concerne pas. Grosse erreur.</p>

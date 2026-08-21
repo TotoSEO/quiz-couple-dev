@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Charmant dehors, destructeur dedans. Le cycle du pervers narcissique en couple, les signaux concrets et comment en avoir le cœur net.",
   featuredImage: '/blog/pervers-narcissique-amour.webp',
   featuredImageAlt: "Silhouette d'un couple dont l'un tire les fils de l'autre comme une marionnette",
-  publishedAt: '2026-08-25',
+  publishedAt: '2026-08-22T15:20:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Tout le monde le trouve charmant. Toi, tu ne sais plus ce que tu vis. C'est précisément comme ça que fonctionne l'emprise d'un pervers narcissique.",
   introduction: `<p>Il y a l'homme que les autres voient : drôle, attentionné, brillant en société. Et puis il y a celui que tu retrouves une fois la porte fermée. Celui qui souffle le chaud et le froid, qui retourne chaque dispute contre toi, qui te fait douter de ta propre mémoire... Le décalage entre les deux est tellement énorme que tu n'oses même plus en parler autour de toi. Franchement, qui te croirait ?</p>

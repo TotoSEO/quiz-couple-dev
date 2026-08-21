@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Genug von «Hey, wie geht's?», das nirgendwohin führt? 90 Fragen an ein Mädchen, von der ersten Nachricht bis zum Treffen, ganz ohne Verhör.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
   featuredImageAlt: "Zwei Menschen im Gespräch an einem Tisch, eine Person hört aufmerksam zu",
-  publishedAt: '2026-09-11',
+  publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Der Unterschied zwischen einem Gespräch, das einschläft, und einem Mädchen, das dich wiedersehen will, ist nicht dein Redetalent. Es ist die Qualität deiner Fragen und was du mit den Antworten machst.",
   introduction: `<p>Seien wir zwei Minuten ehrlich. Das Problem ist fast nie, EINE Frage zu finden. Das Problem ist, dass «wie geht's?», «was machst du beruflich?» und «schönes Wochenende gehabt?» exakt so klingen wie alle anderen Gespräche, die sie gerade führt.</p>

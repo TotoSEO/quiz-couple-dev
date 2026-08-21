@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Le téléphone vérifié 40 fois, la peur du silence, le couple qui prend toute la place... Les 16 symptômes de la dépendance affective, sphère par sphère.",
   featuredImage: '/blog/dependance-affective-symptomes.webp',
   featuredImageAlt: "Personne enchaînée à un téléphone affichant un cœur, dans l'attente d'une réponse",
-  publishedAt: '2026-09-15',
+  publishedAt: '2026-09-12T11:33:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "La dépendance affective ne se voit pas dans le miroir. Elle se voit dans les détails : ce que tu ressens quand il ne répond pas, ce que tu annules pour lui, ce que tu n'oses plus dire.",
   introduction: `<p>Il ne t'a pas répondu depuis deux heures. Objectivement, il ne s'est rien passé : il travaille, il vit sa vie, tout va bien. Mais toi, tu as déjà vérifié ton téléphone quinze fois, relu ton dernier message pour voir s'il était maladroit, et échafaudé trois scénarios dont un où il te quitte...</p>

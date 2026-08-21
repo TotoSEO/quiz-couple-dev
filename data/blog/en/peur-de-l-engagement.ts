@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Has he been saying he is «not ready» for two years? Or are you the one who freezes? Fear of commitment decoded: its real causes, its signs... and how to get out of it.",
   featuredImage: '/blog/peur-de-l-engagement.webp',
   featuredImageAlt: "Person hesitating in front of an open heart-shaped door, suitcase in hand",
-  publishedAt: '2026-12-11',
+  publishedAt: '2026-12-08T08:31:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Fear of commitment is almost never a fear of the other person. It is a fear of what you believe you have to lose by committing... and that changes the whole problem.",
   introduction: `<p>«I'm not ready.» Three words that can hold a relationship in suspense for years. Not ready to go public, not ready to move in, not ready to picture a future. And on the other side, someone waits, somewhere between patience and exhaustion, asking the real question: am I the problem, or is he?</p>

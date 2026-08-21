@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "The phone checked 40 times, the fear of silence, the relationship taking up all the space... The 16 symptoms of emotional dependency, area by area.",
   featuredImage: '/blog/dependance-affective-symptomes.webp',
   featuredImageAlt: "Person chained to a phone displaying a heart, waiting for a reply",
-  publishedAt: '2026-09-15',
+  publishedAt: '2026-09-12T11:33:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Emotional dependency doesn't show up in the mirror. It shows up in the details: what you feel when he doesn't reply, what you cancel for him, what you no longer dare to say.",
   introduction: `<p>He hasn't replied in two hours. Objectively, nothing has happened: he's working, living his life, everything is fine. But you have already checked your phone fifteen times, reread your last message to see whether it was clumsy, and built three scenarios, one of which ends with him leaving.</p>

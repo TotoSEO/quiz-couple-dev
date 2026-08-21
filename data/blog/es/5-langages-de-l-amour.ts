@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Él te trae regalos, tú querías tiempo. Tú le haces cumplidos, él quería gestos... Los 5 lenguajes del amor explicados, con el manual de uso que cambia una pareja.",
   featuredImage: '/blog/5-langages-de-l-amour.webp',
   featuredImageAlt: "Cinco burbujas de colores que simbolizan los cinco lenguajes del amor alrededor de una pareja",
-  publishedAt: '2026-12-15',
+  publishedAt: '2026-12-12T16:37:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "El drama de muchas parejas no es la falta de amor... es un problema de traducción. Cada uno habla su idioma y nadie tiene el diccionario.",
   introduction: `<p>Aquí va una escena que quizá hayas vivido. Él llega con un regalo, orgullosísimo... y tú, en el fondo, habrías preferido que llegara antes, sin más. O al revés: tú le repites que le quieres, le haces cumplidos... y él apenas parece oírlo, cuando un simple abrazo le habría llenado. Cada uno da, sinceramente. Y cada uno tiene la impresión de recibir... al lado.</p>

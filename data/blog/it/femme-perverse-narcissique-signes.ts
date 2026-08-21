@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Adorabile in pubblico, demolitrice in privato. I 10 segnali della donna narcisista, le sue maschere e perché gli uomini che la subiscono non ne parlano mai.",
   featuredImage: '/blog/femme-perverse-narcissique-signes.webp',
   featuredImageAlt: "Donna che tiene una maschera sorridente davanti al viso, ombra dura proiettata sul muro",
-  publishedAt: '2026-09-29',
+  publishedAt: '2026-09-26T09:25:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Immaginiamo sempre il narcisista al maschile. Risultato: gli uomini che vivono il controllo al femminile dubitano due volte, della loro relazione e del loro diritto a soffrirne.",
   introduction: `<p>Cerca «narcisista» su qualunque sito: gli esempi sono al maschile, le vittime al femminile. Così, quando è LA TUA compagna a soffiare il caldo e il freddo, a demolirti a porte chiuse e ad affascinare tutti fuori, tu cosa fai? Dubiti. Due volte anziché una. Di quello che vivi, prima. E del tuo diritto a soffrirne, poi.</p>

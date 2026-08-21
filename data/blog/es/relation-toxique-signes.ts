@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Una relación no es tóxica por sus discusiones, sino por aquello en lo que te convierte. Las 7 señales fiables, la diferencia con un mal momento y lo que sí se arregla.",
   featuredImage: '/blog/relation-toxique-signes.webp',
   featuredImageAlt: "Dos manos unidas por una planta cuyas espinas sustituyen a las hojas",
-  publishedAt: '2026-10-06',
+  publishedAt: '2026-10-03T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Tóxica», la palabra está en todas partes hasta el punto de no decir nada. Y sin embargo la relación tóxica de verdad tiene señales precisas... y una pregunta central: ¿tiene arreglo?",
   introduction: `<p>«Relación tóxica»... La palabra está tan presente que sirve para todo: una discusión un poco fuerte, un ex rencoroso, un desacuerdo sobre las vacaciones, ¡hala, tóxica! Resultado: cuando te haces DE VERDAD la pregunta sobre tu propia relación, ya no sabes qué pensar. ¿Es grave? ¿Es normal? ¿Soy yo?</p>

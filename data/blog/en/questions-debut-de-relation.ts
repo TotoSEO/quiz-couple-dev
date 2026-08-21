@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "In the first weeks you don't dare ask anything for fear of breaking it all. Wrong: here are the 60 early-relationship questions, paced so no stage gets skipped.",
   featuredImage: '/blog/questions-debut-de-relation.webp',
   featuredImageAlt: "Two steaming cups of coffee side by side, the start of a conversation",
-  publishedAt: '2026-10-23',
+  publishedAt: '2026-10-20T11:16:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "The start of a relationship is the only moment when you could ask anything... and the moment when you dare ask nothing. Let's fix that.",
   introduction: `<p>Here's the paradox of early relationships: it's THE moment when the right questions would change everything, and it's the moment when we carefully avoid them, for fear of looking intense, of skipping a stage, of breaking the magic. So we move forward blind, all smiles, discovering the important information by accident, three months too late.</p>

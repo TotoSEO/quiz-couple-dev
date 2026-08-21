@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Envie de creuser au-delà du « ça va ? » quotidien ? 100 questions à poser à ton copain, classées par moment et par profondeur, pour des vraies conversations.",
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Jeune couple assis face à face en pleine conversation, elle pose une question en souriant",
-  publishedAt: '2026-08-28',
+  publishedAt: '2026-08-25T13:18:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Tu connais son plat préféré et son humeur du dimanche soir. Mais est-ce que tu sais ce qui lui fait vraiment peur, ou ce qu'il n'a jamais osé te demander ?",
   introduction: `<p>Vous pouvez passer une soirée entière ensemble et n'échanger que trois phrases utiles : « on mange quoi », « tu as pris les clés », « ça va, toi ? ». Rassure-toi, ce n'est pas un signe que votre couple va mal ! C'est juste ce qui arrive à tous les couples, en fait. Au bout d'un moment, la logistique finit par manger la conversation.</p>

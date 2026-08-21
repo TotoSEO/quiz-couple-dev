@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "His techniques in the order he uses them, his real weak points, the effect of silence on him and his reactions when unmasked. The complete manual.",
   featuredImage: '/blog/manipulateur-narcissique.webp',
   featuredImageAlt: "Chess player whose pieces are human silhouettes",
-  publishedAt: '2026-09-18',
+  publishedAt: '2026-09-15T13:53:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "The narcissistic manipulator is always presented as all-powerful. That's false. His system has flaws, known and predictable, provided you know where to look.",
   introduction: `<p>When you search «narcissistic manipulator», you always land on the same article: the list of signs, the portrait of the monster, and good luck with that. Fine for understanding, but then what? Once you KNOW you're dealing with a manipulator, the real question becomes: how does he work, and how do you protect yourself in practice?</p>

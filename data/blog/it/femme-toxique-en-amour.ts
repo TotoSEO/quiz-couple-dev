@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Drammi a ripetizione, colpevolizzazione, controllo travestito da amore... I segnali della donna tossica in coppia, i 6 profili tipo, e la domanda che nessuno osa: e se fossi io?",
   featuredImage: '/blog/femme-toxique-en-amour.webp',
   featuredImageAlt: "Sagoma femminile che tiene dei fili annodati a forma di cuore",
-  publishedAt: '2026-11-03',
+  publishedAt: '2026-10-31T08:38:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Gli uomini impiegano in media molto più tempo a nominare una relazione tossica... perché non gli è mai stato insegnato che aspetto ha quando viene da una donna.",
   introduction: `<p>Fai la prova attorno a te: chiedi a dei ragazzi cos'è una donna tossica. Otterrai battute, citazioni di film... e pochissime risposte serie. Perché siamo cresciuti tutti con l'idea che la tossicità in coppia sia una faccenda da uomini. Risultato: quando un uomo vive una relazione che lo rovina, non la nomina. Dice che lei «ha carattere». Dice che è «complicato». Incassa... e ci mette anni a capire.</p>

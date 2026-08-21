@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Der Manipulator erkennt emotionale Abhängigkeit wie ein Radar. Warum sich diese beiden Profile anziehen, was dieses Paar auslöst, und wie man das Duo sprengt.",
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
   featuredImageAlt: "Herzförmiger Magnet, der eine angekettete Silhouette anzieht",
-  publishedAt: '2026-11-10',
+  publishedAt: '2026-11-07T12:21:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Es ist kein Zufall, dass emotional abhängige Menschen so vielen Manipulatoren begegnen. Der eine will unentbehrlich sein... der andere sucht jemanden, der Angst hat zu verlieren.",
   introduction: `<p>Es ist eine Frage, die bei Menschen, die aus einer Beziehung mit Machtgefälle herauskommen, ständig auftaucht: «Warum ich?» Warum wieder er? Warum dieses Gefühl, immer an dasselbe Profil zu geraten, als wäre ein Magnet im Spiel?</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Móvil boca abajo, horarios difusos, distancia repentina... Las señales de infidelidad que cuentan de verdad, las que no prueban nada y qué hacer con la duda sin dejarte la salud.",
   featuredImage: '/blog/signes-infidelite.webp',
   featuredImageAlt: "Móvil boca abajo sobre una mesa entre dos personas que se dan la espalda",
-  publishedAt: '2026-12-22',
+  publishedAt: '2026-12-19T12:18:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "La duda sobre una infidelidad es una de las peores cosas que se pueden vivir en pareja... y paradójicamente, la mayoría de las listas de «señales» la agravan en vez de aclararla.",
   introduction: `<p>Si estás leyendo este artículo, algo te ha puesto en alerta. Un cambio de costumbres, un móvil vuelto intocable, una distancia nueva... o solo una intuición, esa cosa sorda que se niega a callarse. Y desde entonces oscilas entre dos vergüenzas: la de sospechar sin pruebas y la de no querer ver.</p>

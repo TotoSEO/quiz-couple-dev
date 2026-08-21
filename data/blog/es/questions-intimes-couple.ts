@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "La intimidad no está solo debajo de las sábanas: está también en las preguntas que uno se atreve a hacer. 65 preguntas íntimas, de lo tierno a lo ardiente.",
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Pareja abrazada en un sofá con luz tenue, en plena conversación cómplice",
-  publishedAt: '2026-09-22',
+  publishedAt: '2026-09-19T09:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Están las conversaciones de todos los días... y las que no te atreves a empezar. Adivina cuáles acercan más.",
   introduction: `<p>Os lo contáis todo, bueno, casi. El trabajo, los amigos, los planes, qué cenáis hoy. Pero hay un terreno del que se habla mucho menos fácilmente, incluso después de años: lo que el otro siente de verdad, lo que no se atreve a pedir, lo que echa de menos, lo que le apetece. Lo íntimo, lo de verdad.</p>

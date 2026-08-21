@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Stanco del «ciao, come va?» che non porta da nessuna parte? 90 domande da fare a una ragazza, dal primo messaggio all'incontro, senza interrogatori.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
   featuredImageAlt: "Due persone che parlano a un tavolo, una ascolta l'altra con attenzione",
-  publishedAt: '2026-09-11',
+  publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "La differenza tra una conversazione che si spegne e una ragazza che ha voglia di rivederti non è la tua parlantina. È la qualità delle tue domande, e quello che fai delle risposte.",
   introduction: `<p>Siamo onesti due minuti. Il problema non è quasi mai trovare UNA domanda da fare. Il problema è che «come va?», «che lavoro fai?» e «bel weekend?» sono esattamente il modo in cui iniziano tutte le altre conversazioni che lei sta avendo in questo momento.</p>

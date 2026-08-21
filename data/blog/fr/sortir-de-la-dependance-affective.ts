@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Pas des conseils vagues : un vrai plan. 12 exercices concrets répartis sur 3 phases pour sortir de la dépendance affective, semaine après semaine.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Personne brisant une chaîne en forme de cœur, marches d'escalier en arrière-plan",
-  publishedAt: '2026-09-25',
+  publishedAt: '2026-09-22T11:32:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "« Travaille sur toi », « apprends à t'aimer »... Merci, mais concrètement, on fait quoi lundi matin ? Voici le plan, exercice par exercice.",
   introduction: `<p>Si tu as déjà cherché comment sortir de la dépendance affective, tu connais la chanson : « reprends confiance en toi », « recentre-toi sur tes besoins », « apprends à t'aimer »... Des conseils vrais, sans doute. Mais parfaitement inutilisables un mardi soir à 23 heures, quand tu fixes ton téléphone en attendant sa réponse.</p>

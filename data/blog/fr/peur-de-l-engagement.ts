@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Il dit qu'il n'est « pas prêt » depuis deux ans ? Ou c'est toi qui bloques ? La peur de l'engagement décodée : ses vraies causes, ses signes... et comment en sortir.",
   featuredImage: '/blog/peur-de-l-engagement.webp',
   featuredImageAlt: "Personne hésitant devant une porte ouverte en forme de cœur, une valise à la main",
-  publishedAt: '2026-12-11',
+  publishedAt: '2026-12-08T08:31:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "La peur de l'engagement n'est presque jamais une peur de l'autre. C'est une peur de ce qu'on croit devoir perdre en s'engageant... et ça change tout au problème.",
   introduction: `<p>« Je ne suis pas prêt. » Trois mots qui peuvent tenir une relation en suspens pendant des années... Pas prêt à officialiser, pas prêt à emménager, pas prêt à se projeter. Et en face, l'autre attend, entre patience et usure, en se demandant la vraie question : c'est moi le problème, ou c'est lui ?</p>

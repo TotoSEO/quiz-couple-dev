@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Eine Beziehung ist nicht wegen ihrer Streits toxisch, sondern wegen dem, wozu sie dich macht. Die 7 verlässlichen Anzeichen, der Unterschied zur schweren Phase, und was sich reparieren lässt.",
   featuredImage: '/blog/relation-toxique-signes.webp',
   featuredImageAlt: "Zwei Hände, verbunden durch eine Pflanze, deren Blätter durch Dornen ersetzt sind",
-  publishedAt: '2026-10-06',
+  publishedAt: '2026-10-03T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Toxisch», das Wort ist überall, bis es nichts mehr sagt. Und doch hat die echte toxische Beziehung präzise Anzeichen... und eine zentrale Frage: Lässt sie sich reparieren?",
   introduction: `<p>«Toxische Beziehung»... Das Wort ist so allgegenwärtig, dass es für alles herhält: ein etwas heftiger Streit, ein nachtragender Ex, eine Uneinigkeit über den Urlaub, zack, toxisch! Ergebnis: Wenn man sich die Frage WIRKLICH für die eigene Beziehung stellt, weiß man nicht mehr, was man denken soll. Ist es schlimm? Ist es normal? Liegt es an mir?</p>

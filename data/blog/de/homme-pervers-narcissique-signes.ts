@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Nach außen makellos, zu Hause zermürbend. Die 12 Verhaltensweisen des narzisstischen Mannes, in der Reihenfolge ihres Auftretens, und was danach zu tun ist.",
   featuredImage: '/blog/homme-pervers-narcissique-signes.webp',
   featuredImageAlt: "Ein Mann lächelt in Gesellschaft, während seine Partnerin verunsichert wegschaut",
-  publishedAt: '2026-09-01',
+  publishedAt: '2026-08-29T15:25:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Das Problem mit einem narzisstischen Mann ist, dass du die Einzige bist, die sieht, was du siehst. Hier sind die 12 Verhaltensweisen, die ihn am Ende verraten.",
   introduction: `<p>Wenn du «narzisstischer Mann» in eine Suchmaschine tippst, dann nicht aus intellektueller Neugier... Sondern weil ein ganz bestimmter Mann, dein Partner, dein Ex, vielleicht der Vater deiner Kinder, dich alarmiert hat. Und weil etwas nicht zusammenpasst: dieser Mann, den alle verehren, lässt dich hinter verschlossenen Türen etwas erleben, das sich niemand vorstellt.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Une relation n'est pas toxique par ses disputes, mais par ce qu'elle te fait devenir. Les 7 signes fiables, la différence avec une passe difficile, et ce qui se répare.",
   featuredImage: '/blog/relation-toxique-signes.webp',
   featuredImageAlt: "Deux mains liées par une plante dont les épines remplacent les feuilles",
-  publishedAt: '2026-10-06',
+  publishedAt: '2026-10-03T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "« Toxique », le mot est partout, au point de ne plus rien dire. Pourtant, la vraie relation toxique a des signes précis... et une question centrale : est-ce que ça se répare ?",
   introduction: `<p>« Relation toxique »... Le mot est tellement partout qu'il sert à tout : une dispute un peu forte, un ex rancunier, un désaccord sur les vacances, hop, toxique ! Résultat, quand on se pose VRAIMENT la question pour son propre couple, on ne sait plus quoi penser. Est-ce que c'est grave ? Est-ce que c'est normal ? Est-ce que c'est moi ?</p>

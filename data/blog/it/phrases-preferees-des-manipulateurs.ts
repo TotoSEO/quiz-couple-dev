@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "«Sei troppo sensibile», «è colpa tua», «te lo dico per il tuo bene»... 35 frasi da manipolatore decifrate, con la traduzione reale e come replicare.",
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
   featuredImageAlt: "Fumetti sovrapposti, uno dei quali schiaccia lentamente un altro più piccolo",
-  publishedAt: '2026-09-08',
+  publishedAt: '2026-09-05T09:15:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Un manipolatore non mente a caso. Pesca da un repertorio, sempre lo stesso. E una volta che conosci il repertorio, qualcosa si rompe nel gioco di prestigio.",
   introduction: `<p>«Sei troppo sensibile.» Quante volte l'hai sentita? E quante volte te ne sei andata chiedendoti se, effettivamente, non stessi esagerando un po'?</p>

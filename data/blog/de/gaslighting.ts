@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "«Das habe ich nie gesagt», «du bist verrückt», «du erfindest das»... Gaslighting erklärt: der Mechanismus in 3 Stufen, die typischen Sätze, und wie man wieder Boden findet.",
   featuredImage: '/blog/gaslighting.webp',
   featuredImageAlt: "Gaslampe mit sinkender Flamme, zweifelnde Silhouette im Halbdunkel",
-  publishedAt: '2026-11-24',
+  publishedAt: '2026-11-21T12:28:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Gaslighting belügt dich nicht über die Fakten. Es belügt dich über dich: dein Gedächtnis, deine Wahrnehmung, deinen Verstand. Das macht es zur ätzendsten Manipulation überhaupt.",
   introduction: `<p>Du hast die Szene gesehen. Du warst da, du hast die Worte gehört, du könntest sie wiederholen... Und trotzdem, gegenüber, vollkommene Sicherheit: «das habe ich nie gesagt». Kein Zögern. Also prüfst du in deinem Kopf, einmal, zweimal... und ein kleiner Riss öffnet sich: Und wenn ich es war?</p>

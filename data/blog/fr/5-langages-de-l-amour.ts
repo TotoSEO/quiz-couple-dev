@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Il t'offre des cadeaux, tu voulais du temps. Tu le complimentes, il voulait des gestes... Les 5 langages de l'amour expliqués, avec le mode d'emploi qui change un couple.",
   featuredImage: '/blog/5-langages-de-l-amour.webp',
   featuredImageAlt: "Cinq bulles colorées symbolisant les cinq langages de l'amour autour d'un couple",
-  publishedAt: '2026-12-15',
+  publishedAt: '2026-12-12T16:37:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Le drame de beaucoup de couples n'est pas un manque d'amour... c'est un problème de traduction. Chacun parle sa langue, et personne n'a le dictionnaire.",
   introduction: `<p>Voici une scène que tu as peut-être déjà vécue. Il rentre avec un cadeau, tout fier... et toi, au fond, tu aurais préféré qu'il rentre plus tôt, tout court. Ou l'inverse : tu lui répètes que tu l'aimes, tu le complimentes... et lui semble à peine l'entendre, alors qu'un simple câlin l'aurait comblé. Chacun donne, sincèrement. Et chacun a l'impression de recevoir... à côté.</p>

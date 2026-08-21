@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Er schenkt dir etwas, du wolltest Zeit. Du machst ihm Komplimente, er wollte Taten. Die 5 Sprachen der Liebe erklärt, mit der Anleitung, die eine Beziehung verändert.",
   featuredImage: '/blog/5-langages-de-l-amour.webp',
   featuredImageAlt: "Fünf farbige Blasen, die die fünf Sprachen der Liebe rund um ein Paar symbolisieren",
-  publishedAt: '2026-12-15',
+  publishedAt: '2026-12-12T16:37:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Das Drama vieler Paare ist kein Mangel an Liebe, sondern ein Übersetzungsproblem. Jeder spricht seine Sprache, und niemand hat das Wörterbuch.",
   introduction: `<p>Hier eine Szene, die du vielleicht schon erlebt hast. Er kommt mit einem Geschenk nach Hause, ganz stolz, und dir wäre insgeheim lieber gewesen, er wäre einfach früher gekommen. Oder umgekehrt: Du sagst ihm immer wieder, dass du ihn liebst, du machst ihm Komplimente, und er scheint es kaum zu hören, obwohl eine einfache Umarmung ihn erfüllt hätte. Jeder gibt, aufrichtig. Und jeder hat den Eindruck, knapp daneben beschenkt zu werden.</p>

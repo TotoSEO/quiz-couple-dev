@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Keine vagen Ratschläge: ein echter Plan. 12 konkrete Übungen in 3 Phasen, um emotionale Abhängigkeit zu überwinden, Woche für Woche.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Person zerbricht eine herzförmige Kette, Treppenstufen im Hintergrund",
-  publishedAt: '2026-09-25',
+  publishedAt: '2026-09-22T11:32:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Arbeite an dir», «lerne dich zu lieben»... Danke, aber konkret, was macht man Montagmorgen? Hier ist der Plan, Übung für Übung.",
   introduction: `<p>Wenn du schon einmal gesucht hast, wie man aus emotionaler Abhängigkeit herauskommt, kennst du das Lied: «gewinne dein Selbstvertrauen zurück», «konzentriere dich auf deine Bedürfnisse», «lerne dich zu lieben». Wahre Ratschläge, sicher. Aber vollkommen unbrauchbar an einem Dienstagabend um 23 Uhr, wenn du auf dein Handy starrst und auf seine Antwort wartest.</p>

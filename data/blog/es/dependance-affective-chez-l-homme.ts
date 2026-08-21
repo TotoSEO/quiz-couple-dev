@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Celos, rabia, necesidad de control, relaciones encadenadas... La dependencia emocional masculina no se parece al cliché, y por eso se nos escapa.",
   featuredImage: '/blog/dependance-affective-chez-l-homme.webp',
   featuredImageAlt: "Hombre de espaldas mirando el móvil, con una sombra en forma de corazón encadenado",
-  publishedAt: '2026-10-16',
+  publishedAt: '2026-10-13T17:47:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Imaginamos al dependiente emocional pegajoso y suplicante. En los hombres se parece más a menudo a celos, a rabia... o a un tío que nunca está soltero.",
   introduction: `<p>Cuando se dice «dependencia emocional», todo el mundo visualiza la misma escena: alguien que suplica, que se agarra, que manda quince mensajes. Y como la mayoría de los hombres no se reconocen en esa imagen, concluyen que no va con ellos. Gran error.</p>

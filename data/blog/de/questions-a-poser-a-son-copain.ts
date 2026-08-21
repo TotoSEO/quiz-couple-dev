@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Lust auf mehr als das tägliche «alles gut?» 100 Fragen an deinen Freund, sortiert nach Moment und Tiefe, für Gespräche, die wirklich irgendwohin führen.",
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Junges Paar sitzt sich gegenüber im Gespräch, sie stellt lächelnd eine Frage",
-  publishedAt: '2026-08-28',
+  publishedAt: '2026-08-25T13:18:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Du kennst sein Lieblingsessen und seine Sonntagabendlaune. Aber weißt du, wovor er wirklich Angst hat, oder was er dich nie zu fragen gewagt hat?",
   introduction: `<p>Ihr könnt einen ganzen Abend zusammen verbringen und drei nützliche Sätze wechseln: «was essen wir», «hast du die Schlüssel», «und dir, alles gut?». Keine Sorge, das ist kein Zeichen, dass es eurer Beziehung schlecht geht. Das passiert schlicht jedem Paar. Irgendwann frisst die Logistik das Gespräch auf.</p>

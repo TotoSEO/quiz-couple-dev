@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Draußen charmant, zu Hause zerstörerisch. Der narzisstische Kreislauf in der Beziehung, die konkreten Anzeichen und wie du Gewissheit bekommst.",
   featuredImage: '/blog/pervers-narcissique-amour.webp',
   featuredImageAlt: "Silhouette eines Paares, bei dem einer den anderen wie eine Marionette an Fäden führt",
-  publishedAt: '2026-08-25',
+  publishedAt: '2026-08-22T15:20:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Alle finden ihn charmant. Du weißt nicht mehr, was du eigentlich erlebst. Genau so funktioniert die Kontrolle eines Narzissten.",
   introduction: `<p>Da ist der Mann, den die anderen sehen: witzig, aufmerksam, brillant in Gesellschaft. Und da ist der, den du antriffst, sobald die Tür zu ist. Der heiß und kalt bläst, der jeden Streit gegen dich dreht, der dich an deinem eigenen Gedächtnis zweifeln lässt... Der Abstand zwischen beiden ist so groß, dass du längst aufgehört hast, davon zu erzählen. Wer würde dir schon glauben?</p>

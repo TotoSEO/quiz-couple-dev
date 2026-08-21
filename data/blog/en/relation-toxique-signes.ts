@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "A relationship isn't toxic because of its arguments, but because of what it turns you into. The 7 reliable signs, the difference with a rough patch, and what can be fixed.",
   featuredImage: '/blog/relation-toxique-signes.webp',
   featuredImageAlt: "Two hands bound by a plant whose leaves have been replaced by thorns",
-  publishedAt: '2026-10-06',
+  publishedAt: '2026-10-03T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Toxic», the word is everywhere, to the point of meaning nothing. And yet a genuinely toxic relationship has precise signs, and one central question: can it be fixed?",
   introduction: `<p>«Toxic relationship»... The word is so everywhere that it covers everything: a slightly heated argument, a bitter ex, a disagreement about holidays, boom, toxic! The result is that when you ACTUALLY ask the question about your own relationship, you no longer know what to think. Is it serious? Is it normal? Is it me?</p>

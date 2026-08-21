@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Encantador fuera, destructivo en casa. El ciclo del narcisista en la pareja, las señales concretas y cómo salir de dudas.",
   featuredImage: '/blog/pervers-narcissique-amour.webp',
   featuredImageAlt: "Silueta de una pareja donde uno maneja los hilos del otro como a una marioneta",
-  publishedAt: '2026-08-25',
+  publishedAt: '2026-08-22T15:20:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Todo el mundo lo encuentra encantador. Tú ya no sabes qué estás viviendo. Así funciona exactamente el dominio de un narcisista.",
   introduction: `<p>Está el hombre que ven los demás: divertido, atento, brillante en sociedad. Y está el que te encuentras cuando se cierra la puerta. El que da calor y frío, el que le da la vuelta a cada discusión, el que te hace dudar de tu propia memoria... La distancia entre los dos es tan enorme que ya ni te atreves a contarlo. Sinceramente, ¿quién te iba a creer?</p>

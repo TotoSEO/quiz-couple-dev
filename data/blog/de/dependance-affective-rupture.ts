@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Für einen emotional abhängigen Menschen ist eine Trennung kein Liebeskummer: Sie ist ein Entzug. Warum es so wehtut, die Fallen der ersten Wochen, und wie man gestärkt herauskommt.",
   featuredImage: '/blog/dependance-affective-rupture.webp',
   featuredImageAlt: "Herz in zwei Hälften, von denen eine zu einer aufsteigenden Treppe wird",
-  publishedAt: '2026-11-20',
+  publishedAt: '2026-11-17T14:15:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Alle leiden unter einer Trennung. Der emotional Abhängige ist im Entzug... und das ist etwas anderes zu durchqueren.",
   introduction: `<p>Die Leute um dich herum scheinen es lang zu finden. «Du musst weitermachen»... Leicht gesagt. Sie wissen nicht, wie es ist, beim Aufwachen aufs Handy zu schauen wegen einer Nachricht, die nicht mehr kommt. Eine Nummer zu wählen und aufzulegen. Körperlich einen Mangel zu spüren, der dem einer Substanz zum Verwechseln ähnelt.</p>

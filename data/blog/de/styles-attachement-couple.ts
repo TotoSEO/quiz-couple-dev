@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Sicher, ängstlich, vermeidend, desorganisiert: Dein Bindungsstil entscheidet über deine Art zu lieben, lange bevor du es tust. Die 4 Profile erklärt, und wie du deines erkennst.",
   featuredImage: '/blog/styles-attachement-couple.webp',
   featuredImageAlt: "Vier stilisierte Herzen für die vier Bindungsstile, mit unterschiedlichen Fäden verbunden",
-  publishedAt: '2026-12-01',
+  publishedAt: '2026-11-28T08:25:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Warum lieben manche gelassen, andere klammernd, andere fliehend? Die Antwort steckt in einem Wort: Bindung. Und sie entscheidet sich lange vor der ersten Liebesgeschichte.",
   introduction: `<p>Sicher ist dir dieses seltsame Phänomen aufgefallen: In einer Beziehung scheint jeder eine im Voraus geschriebene Partitur zu spielen. Der eine braucht Nähe, fühlt sich schnell vernachlässigt, hakt nach... Der andere braucht Luft, fühlt sich schnell überrannt, entfernt sich. Und je mehr der eine klammert, desto weiter weicht der andere zurück! Als wäre das Drehbuch schon vor der Begegnung geschrieben gewesen.</p>

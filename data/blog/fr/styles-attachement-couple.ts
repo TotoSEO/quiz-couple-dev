@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Sécure, anxieux, évitant, désorganisé : ton style d'attachement décide de ta façon d'aimer bien avant toi. Les 4 profils expliqués, et comment identifier le tien.",
   featuredImage: '/blog/styles-attachement-couple.webp',
   featuredImageAlt: "Quatre cœurs stylisés représentant les quatre styles d'attachement, reliés par des fils différents",
-  publishedAt: '2026-12-01',
+  publishedAt: '2026-11-28T08:25:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Pourquoi certains aiment sereinement, d'autres en s'accrochant, d'autres en fuyant ? La réponse tient en un mot : l'attachement. Et il se joue bien avant la première histoire d'amour.",
   introduction: `<p>Tu as sûrement remarqué ce phénomène étrange : dans un couple, chacun semble jouer une partition écrite d'avance. L'un a besoin de proximité, se sent vite délaissé, relance... L'autre a besoin d'air, se sent vite envahi, s'éloigne. Et plus l'un s'accroche, plus l'autre recule ! Comme si le scénario était déjà écrit avant même la rencontre...</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Il manipolatore rileva il dipendente affettivo come un radar. Perché questi due profili si attraggono, cosa fa vivere questa coppia, e come spezzare il duo.",
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
   featuredImageAlt: "Calamita a forma di cuore che attira una sagoma incatenata",
-  publishedAt: '2026-11-10',
+  publishedAt: '2026-11-07T12:21:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Non è un caso se i dipendenti affettivi incrociano tanti manipolatori. Uno cerca di essere indispensabile... l'altro cerca qualcuno che abbia paura di perdere.",
   introduction: `<p>È una domanda che torna di continuo in chi esce da una relazione di controllo: «perché io?» Perché ancora lui? Perché questa impressione di cadere sempre sullo stesso profilo, come se ci fosse di mezzo una calamita?</p>

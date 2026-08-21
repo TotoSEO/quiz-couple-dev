@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Einen Griff verlässt man nicht, man zerlegt ihn. Die Traumabindung erklärt, die 4 Etappen der geistigen Befreiung, und warum Zurückkehren kein Scheitern ist.",
   featuredImage: '/blog/sortir-emprise-pervers-narcissique.webp',
   featuredImageAlt: "Vogel, der aus einem Käfig entkommt, dessen Tür sich zu einem klaren Himmel öffnet",
-  publishedAt: '2026-11-13',
+  publishedAt: '2026-11-10T10:20:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Man glaubt, aus dem Griff auszubrechen heiße gehen. In Wirklichkeit ist Gehen nur die dritte von vier Etappen... und nicht die schwerste.",
   introduction: `<p>Wenn du schon einmal versucht hast zu gehen, kennst du dieses Paradox, das verrückt macht: Du WEISST es. Du hast den Mechanismus verstanden, du hast die Artikel gelesen, du kannst sein Funktionieren besser beschreiben als ein Handbuch... und trotzdem bist du noch da. Oder du bist gegangen und zurückgekommen. Vielleicht mehrmals.</p>

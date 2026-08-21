@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Want to get past the daily \"you alright?\" 100 questions to ask your boyfriend, sorted by moment and by depth, for conversations that actually go somewhere.",
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Young couple sitting face to face deep in conversation, she asks a question and smiles",
-  publishedAt: '2026-08-28',
+  publishedAt: '2026-08-25T13:18:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "You know his favourite meal and his Sunday evening mood. But do you know what genuinely scares him, or what he's never dared ask you?",
   introduction: `<p>You can spend an entire evening together and exchange three useful sentences: "what are we eating", "did you take the keys", "you alright?". Relax, it isn't a sign your relationship is in trouble. It's just what happens to every couple. After a while, logistics end up eating the conversation.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "No consejos vagos: un plan de verdad. 12 ejercicios concretos repartidos en 3 fases para superar la dependencia emocional, semana a semana.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Persona rompiendo una cadena en forma de corazón, escalones de fondo",
-  publishedAt: '2026-09-25',
+  publishedAt: '2026-09-22T11:32:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Trabaja en ti», «aprende a quererte»... Gracias, pero en concreto, ¿qué hago el lunes por la mañana? Aquí está el plan, ejercicio a ejercicio.",
   introduction: `<p>Si alguna vez has buscado cómo salir de la dependencia emocional, ya te sabes la canción: «recupera la confianza en ti», «céntrate en tus necesidades», «aprende a quererte». Consejos ciertos, sin duda. Pero perfectamente inservibles un martes a las once de la noche, mientras miras fijamente el móvil esperando su respuesta.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Loving hard and fearing loss are easily confused. The 7 differences between love and emotional dependency, and the mental test that settles it.",
   featuredImage: '/blog/amour-ou-dependance-affective.webp',
   featuredImageAlt: "Two intertwined hearts, one free and the other wrapped in a rope",
-  publishedAt: '2026-10-09',
+  publishedAt: '2026-10-06T09:45:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Love and emotional dependency look enormously alike from the inside. Same intensity, same constant thoughts... and yet everything separates them.",
   introduction: `<p>It's a question we don't quite dare ask ourselves, because it's a bit frightening: do I love him... or do I mainly love the fact that he's there? Is it love, this thing that grips my stomach when he doesn't reply? Or something else?</p>

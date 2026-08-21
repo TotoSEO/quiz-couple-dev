@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Paura dell'abbandono, messaggi riletti cento volte, bisogno continuo di rassicurazione: l'attaccamento ansioso spiegato. I suoi segnali in amore, la sua spirale e cosa lo calma davvero.",
   featuredImage: '/blog/attachement-anxieux.webp',
   featuredImageAlt: "Persona che abbraccia un cuore guardando un telefono muto",
-  publishedAt: '2026-12-04',
+  publishedAt: '2026-12-01T12:20:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "L'attaccamento ansioso non dubita dell'amore che dà, dubita di quello che riceve. In permanenza. E questo sfinisce entrambi i lati della coppia.",
   introduction: `<p>Forse conosci questa sensazione: nella tua relazione va tutto bene, oggettivamente, eppure una parte di te resta in allerta. Un tono un po' freddo, una risposta più corta del solito, una serata senza messaggi: scatta l'allarme. Ed eccoti a cercare prove che va tutto bene, ancora una volta, come ieri, come domani.</p>

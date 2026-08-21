@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Credi di conoscerla a memoria? Scommessa: tra queste 75 domande da fare alla tua ragazza ce ne sono almeno dieci di cui non conosci la risposta.",
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
   featuredImageAlt: "Coppia a tavola che ride, lei risponde a una domanda gesticolando",
-  publishedAt: '2026-10-02',
+  publishedAt: '2026-09-29T17:24:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "La trappola delle coppie che durano non è smettere di amarsi. È credere di aver finito di scoprirsi.",
   introduction: `<p>Piccolo test prima di cominciare: sai qual è il suo piatto preferito, il suo film di culto, il suo profumo. Facile. E adesso: sai di cosa è più orgogliosa quest'anno? Cosa le manca in questo periodo? Cosa non osa chiederti? Meno facile, eh.</p>

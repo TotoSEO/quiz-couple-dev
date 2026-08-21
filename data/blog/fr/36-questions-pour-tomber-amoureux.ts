@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Deux inconnus, 36 questions, 4 minutes de regard... et un mariage six mois plus tard. L'expérience d'Arthur Aron, les questions traduites, et comment la faire ce soir.",
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Deux chaises face à face sous une ampoule chaleureuse, un carnet de questions posé entre elles",
-  publishedAt: '2026-11-06',
+  publishedAt: '2026-11-03T10:33:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "En 1997, un psychologue a fait tomber amoureux deux inconnus dans son laboratoire, avec une simple liste de questions. La liste existe toujours... la voici.",
   introduction: `<p>L'histoire est vraie, et elle est irrésistible. En 1997, le psychologue américain Arthur Aron fait entrer des paires d'inconnus dans son laboratoire. Consigne : se poser 36 questions, dans l'ordre, de plus en plus personnelles, puis se regarder dans les yeux quatre minutes, sans parler. Résultat : une proximité record entre parfaits étrangers... et, la légende retient surtout ça, deux participants qui finiront par se marier.</p>

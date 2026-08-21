@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Eifersucht, Wut, Kontrollbedürfnis, Beziehungen am Fließband... Männliche emotionale Abhängigkeit sieht nicht aus wie das Klischee, deshalb übersieht man sie.",
   featuredImage: '/blog/dependance-affective-chez-l-homme.webp',
   featuredImageAlt: "Mann von hinten, der auf sein Handy schaut, sein Schatten ein angekettetes Herz",
-  publishedAt: '2026-10-16',
+  publishedAt: '2026-10-13T17:47:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Man stellt sich den emotional Abhängigen anhänglich und flehend vor. Bei Männern sieht das öfter nach Eifersucht aus, nach Wut... oder nach einem Typen, der nie Single ist.",
   introduction: `<p>Wenn man «emotionale Abhängigkeit» sagt, sieht jeder dieselbe Szene vor sich: jemand, der fleht, sich festklammert, fünfzehn Nachrichten schickt. Und weil sich die meisten Männer in diesem Bild nicht wiedererkennen, schließen sie, dass es sie nicht betrifft. Großer Irrtum.</p>

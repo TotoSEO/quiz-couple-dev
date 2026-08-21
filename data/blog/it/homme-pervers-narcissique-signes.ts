@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Irreprensibile in pubblico, demolitore in privato. I 12 comportamenti dell'uomo narcisista, nell'ordine in cui compaiono, e cosa fare dopo.",
   featuredImage: '/blog/homme-pervers-narcissique-signes.webp',
   featuredImageAlt: "Un uomo sorride in società mentre la sua compagna guarda altrove, a disagio",
-  publishedAt: '2026-09-01',
+  publishedAt: '2026-08-29T15:25:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Il problema con un uomo narcisista è che sei l'unica a vedere quello che vedi. Ecco i 12 comportamenti che finiscono per tradirlo.",
   introduction: `<p>Se scrivi «uomo narcisista» in un motore di ricerca non è per curiosità intellettuale... È perché un uomo preciso, il tuo compagno, il tuo ex, forse il padre dei tuoi figli, ti ha messo in allarme. E perché qualcosa non torna: quest'uomo che tutti adorano ti fa vivere, a porte chiuse, qualcosa che nessuno immagina.</p>

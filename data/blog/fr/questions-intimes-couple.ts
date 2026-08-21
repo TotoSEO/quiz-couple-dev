@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "L'intimité, ce n'est pas que sous la couette : c'est aussi dans les questions qu'on ose se poser. 65 questions intimes, graduées du tendre au brûlant.",
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Couple enlacé sur un canapé à la lumière tamisée, en pleine conversation complice",
-  publishedAt: '2026-09-22',
+  publishedAt: '2026-09-19T09:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Il y a les conversations qu'on a tous les jours... et celles qu'on n'ose pas lancer. Devine lesquelles rapprochent le plus.",
   introduction: `<p>Vous vous dites tout, enfin presque. Le boulot, les amis, les projets, ce que vous mangez ce soir... Mais il y a un territoire dont on parle beaucoup moins facilement, même après des années : ce que l'autre ressent vraiment, ce qu'il n'ose pas demander, ce qui lui manque, ce dont il a envie. L'intime, le vrai.</p>

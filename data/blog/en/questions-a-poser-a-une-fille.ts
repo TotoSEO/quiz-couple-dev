@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Tired of \"hey, how are you?\" going nowhere? 90 questions to ask a girl, from the first message to a real one to one, never an interrogation.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
   featuredImageAlt: "Two people talking at a table, one listening attentively to the other",
-  publishedAt: '2026-09-11',
+  publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "The difference between a conversation that stalls and a girl who wants to see you again isn't your patter. It's the quality of your questions, and what you do with the answers.",
   introduction: `<p>Let's be honest for two minutes. The problem is almost never finding ONE question to ask. The problem is that "how are you?", "what do you do?" and "good weekend?" are exactly how every other conversation she's having right now begins...</p>

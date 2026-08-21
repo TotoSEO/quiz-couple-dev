@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "The manipulator detects emotional dependency like a radar. Why these two profiles attract each other, what this couple puts you through, and how to break the duo.",
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
   featuredImageAlt: "Heart-shaped magnet attracting a chained silhouette",
-  publishedAt: '2026-11-10',
+  publishedAt: '2026-11-07T12:21:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "It's no accident that emotionally dependent people meet so many manipulators. One is looking to be indispensable... the other is looking for someone afraid of losing.",
   introduction: `<p>It's a question that comes up constantly among people leaving a coercive relationship: «why me?» Why him, again? Why this feeling of always landing on the same profile, as if a magnet were involved?</p>

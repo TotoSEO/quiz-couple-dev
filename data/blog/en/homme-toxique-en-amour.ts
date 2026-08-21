@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Not every toxic man is a narcissistic abuser. The 6 profiles of the toxic man in love, what they put you through, and which ones can change.",
   featuredImage: '/blog/homme-toxique-en-amour.webp',
   featuredImageAlt: "Six male silhouettes, some casting a thorny shadow",
-  publishedAt: '2026-10-27',
+  publishedAt: '2026-10-24T13:37:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Between the clumsy one who can change and the manipulator who won't, there's a whole range... and you don't protect yourself from them the same way.",
   introduction: `<p>Ever since «toxic» became the word of the era, everything gets filed under it: the jealous one, the distant one, the angry one, the liar. And that's a real problem, because those men are nothing alike. Some damage through immaturity, without meaning to, and can change. Others damage through their very functioning, and won't change. <strong>Confusing the two means either running from a man who could have grown up... or staying for years with a man who never will.</strong></p>

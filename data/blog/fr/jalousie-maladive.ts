@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Vérifier son téléphone, imaginer des scénarios, souffrir sans preuve... La jalousie maladive expliquée : la frontière avec la jalousie normale, ses racines, et le chemin de sortie.",
   featuredImage: '/blog/jalousie-maladive.webp',
   featuredImageAlt: "Œil vert stylisé enfermant un couple dans son iris",
-  publishedAt: '2026-12-18',
+  publishedAt: '2026-12-15T14:15:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "La jalousie normale protège le couple. La jalousie maladive le dévore... et elle dévore d'abord celui qui la ressent.",
   introduction: `<p>Ça commence toujours par une petite chose. Un prénom qui revient trop souvent, un sourire à une soirée, un téléphone posé face contre table... et un scénario qui se met à tourner dans ta tête. Tu sais qu'il ne repose sur rien, ce scénario. Tu le sais ! Mais il tourne quand même, de plus en plus vite, et te voilà à vérifier, questionner, imaginer... et à t'en vouloir de le faire.</p>

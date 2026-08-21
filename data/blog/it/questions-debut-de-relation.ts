@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Nelle prime settimane non si osa chiedere niente per paura di rompere tutto. Errore: ecco le 60 domande di inizio relazione, dosate senza bruciare tappe.",
   featuredImage: '/blog/questions-debut-de-relation.webp',
   featuredImageAlt: "Due tazze di caffè fumanti una accanto all'altra, l'inizio di una conversazione",
-  publishedAt: '2026-10-23',
+  publishedAt: '2026-10-20T11:16:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "L'inizio di una relazione è l'unico momento in cui si potrebbe chiedere tutto... e quello in cui non si osa chiedere niente. Rimediamo.",
   introduction: `<p>Ecco il paradosso degli inizi di relazione: è IL momento in cui le domande giuste cambierebbero tutto, ed è il momento in cui le si evita con cura... per paura di sembrare intensi, di bruciare una tappa, di rompere la magia. Così si avanza alla cieca, tutti sorrisi, scoprendo le informazioni importanti per caso, tre mesi troppo tardi.</p>

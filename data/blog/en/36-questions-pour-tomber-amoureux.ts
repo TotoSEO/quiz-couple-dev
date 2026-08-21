@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Two strangers, 36 questions, 4 minutes of eye contact... and a wedding six months later. Arthur Aron's experiment, the questions, and how to do it tonight.",
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Two chairs facing each other under a warm bulb, a notebook of questions between them",
-  publishedAt: '2026-11-06',
+  publishedAt: '2026-11-03T10:33:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "In 1997, a psychologist made two strangers fall in love in his laboratory, with a simple list of questions. The list still exists... here it is.",
   introduction: `<p>The story is true, and it's irresistible. In 1997, the American psychologist Arthur Aron brought pairs of strangers into his laboratory. The instruction: ask each other 36 questions, in order, increasingly personal, then look into each other's eyes for four minutes, without speaking. The result: record closeness between complete strangers... and, this is what the legend mostly remembers, two participants who ended up marrying.</p>

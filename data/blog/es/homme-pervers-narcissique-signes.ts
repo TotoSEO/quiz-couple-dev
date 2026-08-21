@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Impecable en público, demoledor en privado. Las 12 conductas del hombre narcisista, en el orden en que aparecen, y qué hacer después.",
   featuredImage: '/blog/homme-pervers-narcissique-signes.webp',
   featuredImageAlt: "Un hombre sonriendo en sociedad mientras su pareja mira hacia otro lado, incómoda",
-  publishedAt: '2026-09-01',
+  publishedAt: '2026-08-29T15:25:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "El problema con un hombre narcisista es que eres la única que ve lo que ves. Aquí están las 12 conductas que acaban delatándolo.",
   introduction: `<p>Si escribes «hombre narcisista» en un buscador, no es por curiosidad intelectual... Es porque un hombre concreto, tu pareja, tu ex, quizá el padre de tus hijos, te ha puesto en alerta. Y algo no encaja: ese hombre que todo el mundo adora te hace vivir, a puerta cerrada, algo que nadie imagina.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "L'emprise ne se quitte pas, elle se démonte. Le lien traumatique expliqué, les 4 étapes de la libération mentale, et pourquoi retourner ne veut pas dire échouer.",
   featuredImage: '/blog/sortir-emprise-pervers-narcissique.webp',
   featuredImageAlt: "Oiseau s'échappant d'une cage dont la porte s'ouvre vers un ciel clair",
-  publishedAt: '2026-11-13',
+  publishedAt: '2026-11-10T10:20:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "On croit que sortir de l'emprise, c'est partir. En réalité, partir n'est que la troisième étape sur quatre... et ce n'est pas la plus dure.",
   introduction: `<p>Si tu as déjà essayé de partir, tu connais ce paradoxe qui rend fou : tu SAIS. Tu as compris le mécanisme, tu as lu les articles, tu peux décrire son fonctionnement mieux qu'un manuel... et pourtant, tu es encore là. Ou tu es partie, puis revenue. Peut-être plusieurs fois.</p>

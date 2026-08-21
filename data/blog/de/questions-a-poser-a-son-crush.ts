@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Genug von Gesprächen, die einschlafen? 100 Fragen an deinen Crush, nach Situation sortiert: per Nachricht, zum Lachen, zum Flirten, um zu sehen, ob es passt.",
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Junge Person lächelt aufs Handy und tippt eine Nachricht an ihren Crush",
-  publishedAt: '2026-09-04',
+  publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Das Schwierige an einem Crush ist nicht, etwas zu sagen. Es sind die Fragen, die aus einem höflichen Austausch eine echte Verbindung machen.",
   introduction: `<p>Du kennst diesen Moment... Das Gespräch dreht sich im Kreis, die «gut, und dir?» reihen sich aneinander, und du spürst: wenn jetzt niemand etwas anderes bringt, stirbt das höflich in einem «dann noch einen schönen Abend». Bei einem Crush zählt jeder Austausch doppelt. Und so starren wir alle irgendwann aufs Handy, ohne zu wissen, was wir schreiben sollen.</p>

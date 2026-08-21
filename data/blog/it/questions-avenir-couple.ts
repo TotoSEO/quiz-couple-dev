@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Andare a vivere insieme, sposarsi, un figlio... Raramente si fallisce per mancanza d'amore, spesso per non averne parlato. Le 60 domande sul futuro da farsi prima.",
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Coppia che guarda un sentiero che si srotola verso l'orizzonte, valigie in mano",
-  publishedAt: '2026-10-30',
+  publishedAt: '2026-10-27T14:30:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Le coppie non falliscono quasi mai per mancanza d'amore. Falliscono su argomenti che non avevano mai messo sul tavolo.",
   introduction: `<p>C'è una statistica che nessuno calcola ma che tutti conoscono: la maggior parte delle grandi crisi di coppia riguarda argomenti... che entrambi sapevano di dover affrontare un giorno. I soldi. I figli. I suoceri. La divisione delle faccende. Il «un giorno» è semplicemente arrivato troppo tardi, in piena crisi, nel peggior momento per parlarne con calma.</p>

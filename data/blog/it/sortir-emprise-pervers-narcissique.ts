@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Dal controllo non si esce, si smonta. Il legame traumatico spiegato, le 4 tappe della liberazione mentale e perché tornare non significa fallire.",
   featuredImage: '/blog/sortir-emprise-pervers-narcissique.webp',
   featuredImageAlt: "Uccello che scappa da una gabbia la cui porta si apre su un cielo limpido",
-  publishedAt: '2026-11-13',
+  publishedAt: '2026-11-10T10:20:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Si crede che uscire dal controllo significhi andarsene. In realtà andarsene è solo la terza tappa su quattro... e non è la più dura.",
   introduction: `<p>Se hai già provato ad andartene, conosci quel paradosso che fa impazzire: tu LO SAI. Hai capito il meccanismo, hai letto gli articoli, sai descrivere il suo funzionamento meglio di un manuale... eppure sei ancora lì. O sei andata via e sei tornata. Forse più volte.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "«Du bist zu empfindlich», «du bist schuld», «ich sage das nur zu deinem Besten»... 35 Sätze von Manipulatoren entschlüsselt, mit echter Übersetzung und Antwort.",
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
   featuredImageAlt: "Übereinanderliegende Sprechblasen, eine davon zerdrückt langsam eine kleinere",
-  publishedAt: '2026-09-08',
+  publishedAt: '2026-09-05T09:15:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Ein Manipulator lügt nicht zufällig. Er greift in ein Repertoire, immer dasselbe. Und sobald du das Repertoire kennst, bricht etwas im Zaubertrick.",
   introduction: `<p>«Du bist zu empfindlich.» Wie oft hast du diesen Satz schon gehört? Und wie oft bist du danach gegangen und hast dich gefragt, ob du nicht tatsächlich ein bisschen übertreibst?</p>

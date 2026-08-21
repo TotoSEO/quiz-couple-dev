@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Sicuro, ansioso, evitante, disorganizzato: il tuo stile di attaccamento decide il tuo modo di amare molto prima di te. I 4 profili spiegati e come identificare il tuo.",
   featuredImage: '/blog/styles-attachement-couple.webp',
   featuredImageAlt: "Quattro cuori stilizzati che rappresentano i quattro stili di attaccamento, collegati da fili diversi",
-  publishedAt: '2026-12-01',
+  publishedAt: '2026-11-28T08:25:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Perché alcuni amano con serenità, altri aggrappandosi, altri fuggendo? La risposta sta in una parola: l'attaccamento. E si gioca molto prima della prima storia d'amore.",
   introduction: `<p>Avrai sicuramente notato questo strano fenomeno: in una coppia, ciascuno sembra suonare uno spartito scritto in anticipo. Uno ha bisogno di vicinanza, si sente presto trascurato, rilancia... L'altro ha bisogno d'aria, si sente presto invaso, si allontana. E più uno si aggrappa, più l'altro indietreggia! Come se il copione fosse già scritto ancora prima dell'incontro.</p>
