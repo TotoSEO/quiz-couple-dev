@@ -29,13 +29,13 @@ npm run build          # Main site → dist/
 
 ## Quiz Engine Types
 
-- `SoloTest` — Single player, points-based (toxic, divorce, mariage, ado, genant, jalousie, attachement, confiance)
+- `SoloTest` — Single player, points-based (toxic, divorce, mariage, genant, jalousie, attachement, confiance)
 - `DuoMatchQuiz` — 2 players, answer matching (tester-couple, common-points)
 - `HealthyQuiz` — 2 players, weighted scoring (couple-sain)
 - `DistanceQuiz` — 2 players, alternating turns (distance)
+- `quiz-ado-multiplayer.js` — Dedicated engine for the teen quiz: 2 players, same phone or game code, score = identical answers (not part of quiz-loader)
 - `CoquinQuiz` — Guess & reveal (coquin)
 - `KnowledgeQuiz` — Oral validation with check/cross (knowledge)
-- `DebateQuiz` — 1-5 scale debate (amoureux)
 - `FunnyQuiz` — Discussion only, no scoring (marrant)
 - `MostQuiz` — 2-8 players, vote (most)
 - `ParentaliteQuiz` — 2 players, explicit point values (parentalite, emmenager)
