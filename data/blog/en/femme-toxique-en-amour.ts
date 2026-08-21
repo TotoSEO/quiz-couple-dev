@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Repeated drama, guilt-tripping, control disguised as love... The signs of the toxic woman in a relationship, the 6 typical profiles, and the question nobody dares: what if it's me?",
   featuredImage: '/blog/femme-toxique-en-amour.webp',
   featuredImageAlt: "Female silhouette holding strings knotted into a heart shape",
-  publishedAt: '2026-11-03',
+  publishedAt: '2026-10-31T08:38:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Men take on average far longer to name a toxic relationship... because nobody ever taught them what it looks like when it comes from a woman.",
   introduction: `<p>Try it around you: ask some guys what a toxic woman is. You'll get jokes, film references... and very few serious answers. Because we all grew up with the idea that toxicity in a relationship is a men's affair. The result: when a man lives through a relationship that damages him, he doesn't name it. He says she's «got character». He says it's «complicated». He absorbs it... and takes years to understand.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "¿Los «¿qué haces?» dan vueltas sin llegar a nada? 60 preguntas de pareja pensadas para el teléfono y los mensajes: noches a distancia, mensajes del día, llamadas largas.",
   featuredImage: '/blog/questions-couple-telephone-message.webp',
   featuredImageAlt: "Dos teléfonos unidos por un hilo rojo tenso entre dos ventanas iluminadas",
-  publishedAt: '2026-11-27',
+  publishedAt: '2026-11-24T10:38:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Por teléfono no hay miradas ni gestos... solo palabras. Justo por eso las buenas preguntas hacen maravillas ahí.",
   introduction: `<p>Hay un momento que conocen todas las parejas, vivan a 800 kilómetros o a dos barrios: aquel en que la llamada de la noche se vuelve un parte meteorológico. «¿Qué tal el día?» «Bien.» «¿Qué cenas?» «Pasta.»... El vínculo está, las ganas también, pero la conversación gira en vacío.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Wiederkehrende Dramen, Schuldgefühle, als Liebe getarnte Kontrolle... Die Anzeichen der toxischen Frau, die 6 typischen Profile, und die Frage, die niemand wagt: Und wenn ich es bin?",
   featuredImage: '/blog/femme-toxique-en-amour.webp',
   featuredImageAlt: "Weibliche Silhouette, die zu einem Herz geknotete Fäden hält",
-  publishedAt: '2026-11-03',
+  publishedAt: '2026-10-31T08:38:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Männer brauchen im Schnitt viel länger, um eine toxische Beziehung zu benennen... weil ihnen nie beigebracht wurde, wie sie aussieht, wenn sie von einer Frau kommt.",
   introduction: `<p>Mach den Test in deinem Umfeld: Frag ein paar Typen, was eine toxische Frau ist. Du bekommst Witze, Filmzitate... und sehr wenige ernsthafte Antworten. Weil wir alle mit der Vorstellung aufgewachsen sind, dass Toxizität in der Beziehung Männersache ist. Ergebnis: Wenn ein Mann eine Beziehung erlebt, die ihn beschädigt, benennt er sie nicht. Er sagt, sie habe «Charakter». Er sagt, es sei «kompliziert». Er steckt es weg... und braucht Jahre, um es zu verstehen.</p>

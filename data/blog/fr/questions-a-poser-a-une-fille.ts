@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Marre du « salut, ça va ? » qui ne mène nulle part ? 90 questions à poser à une fille, du premier message au vrai tête-à-tête, sans jamais tomber dans l'interrogatoire.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
   featuredImageAlt: "Homme et femme en terrasse, conversation animée autour d'un café",
-  publishedAt: '2026-09-11',
+  publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "La différence entre une conversation qui patine et une fille qui a envie de te revoir, ce n'est pas ton niveau de tchatche. C'est la qualité de tes questions... et ce que tu fais des réponses.",
   introduction: `<p>Soyons honnêtes deux minutes. Le problème n'est presque jamais de trouver UNE question à poser. Le problème, c'est que « ça va ? », « tu fais quoi dans la vie ? » et « t'as passé un bon week-end ? », toutes les autres conversations qu'elle a en ce moment commencent exactement pareil...</p>

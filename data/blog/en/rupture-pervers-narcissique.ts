@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Leaving a narcissist is like no other break-up. What to prepare beforehand, what he'll do afterwards, and how to hold the no contact.",
   featuredImage: '/blog/rupture-pervers-narcissique.webp',
   featuredImageAlt: "Door ajar onto the light, a hand letting go of a thread knotted into a heart",
-  publishedAt: '2026-10-20',
+  publishedAt: '2026-10-17T09:54:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "With a narcissist, the break-up isn't the end of the story. It's a chapter in its own right... and the one that takes the most preparation.",
   introduction: `<p>Leaving someone is already hard. Leaving a narcissist is a separate exercise: a break-up where the other person doesn't let you go, where tears follow threats, where the man from the early days reappears at exactly the right moment... and where you can find yourself, three weeks later, back without quite knowing how.</p>

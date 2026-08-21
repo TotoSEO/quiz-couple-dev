@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Adorable en público, demoledora en privado. Las 10 señales de la mujer narcisista, sus máscaras y por qué los hombres que la sufren nunca hablan de ello.",
   featuredImage: '/blog/femme-perverse-narcissique-signes.webp',
   featuredImageAlt: "Mujer sosteniendo una máscara sonriente ante su rostro, sombra dura proyectada en la pared",
-  publishedAt: '2026-09-29',
+  publishedAt: '2026-09-26T09:25:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Siempre imaginamos al narcisista en masculino. Resultado: los hombres que viven el dominio en femenino dudan dos veces, de su relación y de su derecho a sufrirla.",
   introduction: `<p>Busca «narcisista» en cualquier web: los ejemplos son masculinos, las víctimas femeninas. Así que cuando es TU pareja la que sopla frío y calor, la que te destruye a puerta cerrada y encandila a todo el mundo fuera, ¿qué haces? Dudas. Dos veces mejor que una. De lo que vives, primero. Y de tu derecho a sufrirlo, después.</p>

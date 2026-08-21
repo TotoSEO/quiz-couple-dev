@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Controllare il telefono, immaginare scenari, soffrire senza prove... La gelosia patologica spiegata: il confine con la gelosia normale, le sue radici e la via d'uscita.",
   featuredImage: '/blog/jalousie-maladive.webp',
   featuredImageAlt: "Occhio verde stilizzato che racchiude una coppia nella sua iride",
-  publishedAt: '2026-12-18',
+  publishedAt: '2026-12-15T14:15:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "La gelosia normale protegge la coppia. La gelosia patologica la divora... e divora per prima la persona che la prova.",
   introduction: `<p>Comincia sempre da una piccola cosa. Un nome che torna troppo spesso, un sorriso a una festa, un telefono appoggiato a faccia in giù sul tavolo... e uno scenario che comincia a girare nella tua testa. Sai che non si regge su niente, quello scenario. Lo sai! Ma gira lo stesso, sempre più veloce, ed eccoti a controllare, interrogare, immaginare... e ad avercela con te stessa per averlo fatto.</p>

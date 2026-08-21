@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Seine Techniken in der Reihenfolge, in der er sie auspackt, seine echten Schwachstellen, die Wirkung von Schweigen auf ihn und seine Reaktionen, wenn man ihn entlarvt.",
   featuredImage: '/blog/manipulateur-narcissique.webp',
   featuredImageAlt: "Schachspieler, dessen Figuren menschliche Silhouetten sind",
-  publishedAt: '2026-09-18',
+  publishedAt: '2026-09-15T13:53:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Der narzisstische Manipulator wird immer als allmächtig dargestellt. Das stimmt nicht. Sein System hat Schwachstellen, bekannte und vorhersehbare, wenn man weiß, wo man hinsehen muss.",
   introduction: `<p>Wenn man «narzisstischer Manipulator» sucht, landet man immer beim selben Artikel: die Liste der Anzeichen, das Porträt des Monsters, und dann sieh zu. Gut zum Verstehen, aber danach? Sobald du WEISST, dass du es mit einem Manipulator zu tun hast, lautet die eigentliche Frage: Wie funktioniert er, und wie schützt man sich konkret?</p>

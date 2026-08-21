@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Secure, anxious, avoidant, disorganised: your attachment style decides how you love long before you do. The 4 profiles explained, and how to identify yours.",
   featuredImage: '/blog/styles-attachement-couple.webp',
   featuredImageAlt: "Four stylised hearts representing the four attachment styles, linked by different threads",
-  publishedAt: '2026-12-01',
+  publishedAt: '2026-11-28T08:25:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Why do some people love serenely, others by clinging, others by fleeing? The answer holds in one word: attachment. And it's decided long before the first love story.",
   introduction: `<p>You've surely noticed this strange phenomenon: in a couple, each person seems to be playing a score written in advance. One needs closeness, quickly feels neglected, reaches out again... The other needs air, quickly feels invaded, moves away. And the more one clings, the more the other retreats! As if the script had been written before they even met.</p>

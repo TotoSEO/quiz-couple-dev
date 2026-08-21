@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "On confond facilement aimer fort et avoir peur de perdre. Les 7 différences entre amour et dépendance affective, et le test mental qui départage les deux.",
   featuredImage: '/blog/amour-ou-dependance-affective.webp',
   featuredImageAlt: "Deux cœurs entrelacés, l'un libre et l'autre entouré d'une corde",
-  publishedAt: '2026-10-09',
+  publishedAt: '2026-10-06T09:45:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "L'amour et la dépendance affective se ressemblent énormément vus de l'intérieur. Même intensité, mêmes pensées permanentes... et pourtant, tout les oppose.",
   introduction: `<p>C'est une question qu'on n'ose pas trop se poser, parce qu'elle fait un peu peur : est-ce que je l'aime, lui... ou est-ce que j'aime surtout le fait qu'il soit là ? Est-ce que c'est de l'amour, ce truc qui me serre le ventre quand il ne répond pas ? Ou autre chose ?</p>

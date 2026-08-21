@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Adorable en public, démolisseuse en privé. Les 10 signes de la femme perverse narcissique, ses masques, et pourquoi les hommes qui la subissent n'en parlent jamais.",
   featuredImage: '/blog/femme-perverse-narcissique-signes.webp',
   featuredImageAlt: "Femme tenant un masque souriant devant son visage, ombre dure projetée au mur",
-  publishedAt: '2026-09-29',
+  publishedAt: '2026-09-26T09:25:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "On imagine toujours le pervers narcissique au masculin. Résultat : les hommes qui vivent l'emprise au féminin doutent deux fois, de leur couple, et de leur droit d'en souffrir.",
   introduction: `<p>Cherche « pervers narcissique » sur n'importe quel site : les exemples sont au masculin, les victimes au féminin. Alors quand c'est TA compagne qui souffle le chaud et le froid, qui te démolit à huis clos et qui charme tout le monde dehors... tu fais quoi, toi ? Tu doutes. Deux fois plutôt qu'une. De ce que tu vis, d'abord. Et de ton droit d'en souffrir, ensuite.</p>

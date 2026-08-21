@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Téléphone retourné, horaires flous, distance soudaine... Les signes d'infidélité qui comptent vraiment, ceux qui ne prouvent rien, et quoi faire du doute sans y laisser ta santé.",
   featuredImage: '/blog/signes-infidelite.webp',
   featuredImageAlt: "Téléphone posé face contre table entre deux personnes qui se tournent le dos",
-  publishedAt: '2026-12-22',
+  publishedAt: '2026-12-19T12:18:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Le doute sur une infidélité est une des pires choses à vivre en couple... et paradoxalement, la plupart des listes de « signes » l'aggravent au lieu de l'éclairer.",
   introduction: `<p>Si tu lis cet article, quelque chose t'a mise en alerte. Un changement d'habitudes, un téléphone devenu intouchable, une distance nouvelle... ou juste une intuition, ce truc sourd qui refuse de se taire. Et depuis, tu oscilles entre deux hontes : celle de soupçonner sans preuve, et celle de ne pas vouloir voir...</p>

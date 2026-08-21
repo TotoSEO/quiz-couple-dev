@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Una relazione non è tossica per i suoi litigi, ma per quello che ti fa diventare. I 7 segnali affidabili, la differenza con un periodo difficile, e cosa si può riparare.",
   featuredImage: '/blog/relation-toxique-signes.webp',
   featuredImageAlt: "Due mani legate da una pianta le cui spine sostituiscono le foglie",
-  publishedAt: '2026-10-06',
+  publishedAt: '2026-10-03T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Tossica», la parola è ovunque, al punto da non dire più niente. Eppure la vera relazione tossica ha segnali precisi... e una domanda centrale: si può riparare?",
   introduction: `<p>«Relazione tossica»... La parola è talmente ovunque che serve per tutto: un litigio un po' forte, un ex rancoroso, un disaccordo sulle vacanze, ecco, tossica! Risultato: quando ti poni DAVVERO la domanda sulla tua relazione, non sai più cosa pensare. È grave? È normale? Sono io?</p>

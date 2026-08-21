@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Tu crois la connaître par cœur ? Pari : sur ces 75 questions à poser à ta copine, il y en a au moins dix dont tu ne connais pas la réponse.",
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
   featuredImageAlt: "Couple attablé en train de rire, elle répond à une question en gesticulant",
-  publishedAt: '2026-10-02',
+  publishedAt: '2026-09-29T17:24:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Le piège des couples qui durent, ce n'est pas de ne plus s'aimer. C'est de croire qu'on a fini de se découvrir.",
   introduction: `<p>Petit test avant de commencer : tu sais quel est son plat préféré, son film culte, son parfum. Facile. Maintenant... tu sais de quoi elle est le plus fière cette année ? Ce qui lui manque en ce moment ? Ce qu'elle n'ose pas te demander ? Moins facile, hein.</p>

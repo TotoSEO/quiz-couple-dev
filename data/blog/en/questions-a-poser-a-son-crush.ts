@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Tired of conversations that fizzle out? 100 questions to ask your crush, sorted by situation: by message, to make them laugh, to flirt, to see if it fits.",
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Young person smiling at their phone while typing a message to their crush",
-  publishedAt: '2026-09-04',
+  publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "The hard part with a crush isn't finding something to say. It's asking the questions that turn a polite exchange into a real connection.",
   introduction: `<p>You know the moment... The conversation is going round in circles, the "good, you?" pile up, and you can feel that if nobody brings something else, it's going to die politely in a "have a good evening then". With a crush, every exchange counts double. So sooner or later we all end up staring at our phone with no idea what to send.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Revisar su móvil, imaginar escenarios, sufrir sin pruebas... Los celos patológicos explicados: la frontera con los celos normales, sus raíces y el camino de salida.",
   featuredImage: '/blog/jalousie-maladive.webp',
   featuredImageAlt: "Ojo verde estilizado que encierra a una pareja en su iris",
-  publishedAt: '2026-12-18',
+  publishedAt: '2026-12-15T14:15:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Los celos normales protegen a la pareja. Los celos patológicos la devoran... y devoran primero a quien los siente.",
   introduction: `<p>Siempre empieza por una cosa pequeña. Un nombre que vuelve demasiado a menudo, una sonrisa en una fiesta, un móvil dejado boca abajo sobre la mesa... y un escenario que empieza a girar en tu cabeza. Sabes que no se apoya en nada, ese escenario. ¡Lo sabes! Pero gira igualmente, cada vez más rápido, y ahí estás revisando, preguntando, imaginando... y odiándote por hacerlo.</p>

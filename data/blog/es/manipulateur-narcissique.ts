@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Sus técnicas en el orden en que las saca, sus puntos débiles reales, el efecto del silencio sobre él y sus reacciones cuando lo desenmascaran. El manual completo.",
   featuredImage: '/blog/manipulateur-narcissique.webp',
   featuredImageAlt: "Jugador de ajedrez cuyas piezas son siluetas humanas",
-  publishedAt: '2026-09-18',
+  publishedAt: '2026-09-15T13:53:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Siempre se presenta al manipulador narcisista como todopoderoso. Es falso. Su sistema tiene fallos, conocidos y previsibles, siempre que sepas dónde mirar.",
   introduction: `<p>Cuando buscas «manipulador narcisista» siempre caes en el mismo artículo: la lista de señales, el retrato del monstruo, y apáñate. Muy bien para entender, ¿pero después? Una vez que SABES que tienes delante a un manipulador, la pregunta de verdad pasa a ser: cómo funciona y cómo te proteges en concreto.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Il se refroidit pile quand ça devient sérieux ? L'attachement évitant expliqué des deux côtés : ce qu'il vit de l'intérieur, ce qu'il fait vivre... et ce qui aide vraiment.",
   featuredImage: '/blog/attachement-evitant.webp',
   featuredImageAlt: "Silhouette reculant d'un pas devant un cœur tendu vers elle",
-  publishedAt: '2026-12-08',
+  publishedAt: '2026-12-05T16:21:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "L'évitant n'aime pas moins que les autres. Il a juste appris, très tôt, que le besoin est un danger... et il gère l'amour comme on gère un risque.",
   introduction: `<p>C'est l'une des expériences amoureuses les plus déroutantes qui soient : tout se passe bien, il est présent, drôle, investi... et pile au moment où la relation devient sérieuse, quelque chose se referme. Moins de messages, moins de projets, ce besoin d'air soudain... Tu n'as rien fait de mal. Il n'est pas moins attaché. C'est autre chose : plus tu t'approches, plus son système recule.</p>

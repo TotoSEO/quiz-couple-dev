@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Not vague advice: a real plan. 12 concrete exercises across 3 phases to overcome emotional dependency, week after week.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Person breaking a heart-shaped chain, staircase steps in the background",
-  publishedAt: '2026-09-25',
+  publishedAt: '2026-09-22T11:32:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Work on yourself», «learn to love yourself»... Thanks, but concretely, what do you do on Monday morning? Here's the plan, exercise by exercise.",
   introduction: `<p>If you've ever searched for how to get out of emotional dependency, you know the song: «rebuild your confidence», «refocus on your needs», «learn to love yourself». True advice, no doubt. But perfectly unusable on a Tuesday night at 11pm, when you're staring at your phone waiting for his reply.</p>

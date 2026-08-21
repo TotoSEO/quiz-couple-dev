@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Zwei Fremde, 36 Fragen, 4 Minuten Blickkontakt... und sechs Monate später eine Hochzeit. Arthur Arons Experiment, die Fragen, und wie ihr es heute Abend macht.",
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Zwei Stühle einander gegenüber unter einer warmen Glühbirne, dazwischen ein Fragenheft",
-  publishedAt: '2026-11-06',
+  publishedAt: '2026-11-03T10:33:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "1997 ließ ein Psychologe zwei Fremde sich in seinem Labor verlieben, mit einer schlichten Liste von Fragen. Die Liste gibt es noch... hier ist sie.",
   introduction: `<p>Die Geschichte ist wahr und unwiderstehlich. 1997 holte der amerikanische Psychologe Arthur Aron Paare von Fremden in sein Labor. Die Anweisung: sich 36 Fragen stellen, der Reihe nach, immer persönlicher, und sich danach vier Minuten lang schweigend in die Augen sehen. Ergebnis: eine Rekordnähe zwischen völlig Fremden... und, das behält die Legende vor allem, zwei Teilnehmende, die am Ende heirateten.</p>

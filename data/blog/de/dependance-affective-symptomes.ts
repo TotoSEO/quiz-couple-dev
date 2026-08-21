@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Das Handy 40-mal geprüft, die Angst vor Stille, die Beziehung nimmt allen Platz ein... Die 16 Symptome emotionaler Abhängigkeit, Bereich für Bereich.",
   featuredImage: '/blog/dependance-affective-symptomes.webp',
   featuredImageAlt: "Person, an ein Handy mit einem Herz gekettet, wartet auf eine Antwort",
-  publishedAt: '2026-09-15',
+  publishedAt: '2026-09-12T11:33:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Emotionale Abhängigkeit sieht man nicht im Spiegel. Man sieht sie in den Details: was du fühlst, wenn er nicht antwortet, was du für ihn absagst, was du dich nicht mehr zu sagen traust.",
   introduction: `<p>Er hat seit zwei Stunden nicht geantwortet. Objektiv ist nichts passiert: Er arbeitet, lebt sein Leben, alles ist in Ordnung. Aber du hast dein Handy schon fünfzehnmal geprüft, deine letzte Nachricht noch einmal gelesen, um zu sehen, ob sie ungeschickt war, und drei Szenarien gebaut, in einem verlässt er dich.</p>

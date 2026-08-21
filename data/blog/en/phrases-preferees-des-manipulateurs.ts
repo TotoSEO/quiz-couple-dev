@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "\"You're too sensitive\", \"it's your fault\", \"I'm saying this for your own good\"... 35 manipulator phrases decoded, with their real translation and how to respond.",
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
   featuredImageAlt: "Speech bubbles overlapping, one of them slowly crushing a smaller one",
-  publishedAt: '2026-09-08',
+  publishedAt: '2026-09-05T09:15:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "A manipulator doesn't lie at random. He picks from a repertoire, always the same one. And once you know the repertoire, something breaks in the magic trick.",
   introduction: `<p>"You're too sensitive." How many times have you heard that one? And how many times did you walk away wondering whether, actually, you were overreacting a bit?</p>

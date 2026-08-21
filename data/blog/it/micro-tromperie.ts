@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Mettere like alle foto di un'ex, tenere un match di Tinder «per ridere», messaggi ambigui... Il microtradimento decifrato: cosa è grave, cosa no e come parlarne.",
   featuredImage: '/blog/micro-tromperie.webp',
   featuredImageAlt: "Telefono che mostra una notifica a forma di cuore, ombra di un terzo tra due sagome",
-  publishedAt: '2026-12-25',
+  publishedAt: '2026-12-22T10:24:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Nessuno è andato a letto con nessuno. Eppure qualcosa è successo... Benvenuta nella zona grigia della fedeltà moderna.",
   introduction: `<p>Non ha fatto niente, tecnicamente. Non è andato a letto con nessuno, niente appuntamenti segreti, niente bugie frontali... Solo like regolari alle foto di una ragazza, conversazioni su Instagram che chiude quando ti avvicini, un'ex che «tiene come amica» con messaggi alle 23. Tecnicamente niente. Eppure qualcosa ti dà fastidio... e non sai nemmeno se hai il diritto di essere infastidita.</p>

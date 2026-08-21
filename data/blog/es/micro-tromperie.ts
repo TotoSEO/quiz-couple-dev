@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Dar like a las fotos de una ex, guardar un match de Tinder «por reírse», mensajes ambiguos... La microinfidelidad descifrada: qué es grave, qué no y cómo hablarlo.",
   featuredImage: '/blog/micro-tromperie.webp',
   featuredImageAlt: "Móvil que muestra una notificación de corazón, sombra de un tercero entre dos siluetas",
-  publishedAt: '2026-12-25',
+  publishedAt: '2026-12-22T10:24:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Nadie se ha acostado con nadie. Y sin embargo algo ha pasado... Bienvenida a la zona gris de la fidelidad moderna.",
   introduction: `<p>No ha hecho nada, técnicamente. No se ha acostado con nadie, sin citas secretas, sin mentiras frontales... Solo likes regulares en las fotos de una chica, conversaciones de Instagram que cierra cuando te acercas, una ex que «mantiene como amiga» con mensajes a las 23 h. Técnicamente nada. Y sin embargo algo te molesta... y ni siquiera sabes si tienes derecho a estar molesta.</p>

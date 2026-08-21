@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Liker les photos d'une ex, garder un match Tinder « pour rire », des DM ambigus... La micro-tromperie décodée : ce qui est grave, ce qui ne l'est pas, et comment en parler.",
   featuredImage: '/blog/micro-tromperie.webp',
   featuredImageAlt: "Téléphone affichant un cœur de notification, ombre d'un tiers entre deux silhouettes",
-  publishedAt: '2026-12-25',
+  publishedAt: '2026-12-22T10:24:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Personne n'a couché avec personne. Et pourtant quelque chose s'est passé... Bienvenue dans la zone grise de la fidélité moderne.",
   introduction: `<p>Il n'a rien fait, techniquement. Il n'a couché avec personne, pas de rendez-vous secret, pas de mensonge frontal... Juste des likes réguliers sur les photos d'une fille, des conversations Insta qu'il ferme quand tu approches, une ex qu'il « garde en amitié » avec des messages à 23 h. Techniquement rien. Et pourtant, quelque chose te dérange... et tu ne sais même pas si tu as le droit d'être dérangée.</p>

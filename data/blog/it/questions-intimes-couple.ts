@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "L'intimità non è solo sotto le coperte: è anche nelle domande che si osa farsi. 65 domande intime, graduate dal tenero al bollente.",
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Coppia abbracciata su un divano con luce soffusa, in piena conversazione complice",
-  publishedAt: '2026-09-22',
+  publishedAt: '2026-09-19T09:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Ci sono le conversazioni di tutti i giorni... e quelle che non si osa iniziare. Indovina quali avvicinano di più.",
   introduction: `<p>Vi dite tutto, be', quasi. Il lavoro, gli amici, i progetti, cosa mangiate stasera. Ma c'è un territorio di cui si parla molto meno facilmente, anche dopo anni: cosa prova davvero l'altro, cosa non osa chiedere, cosa gli manca, cosa desidera. L'intimo, quello vero.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Seguro, ansioso, evitativo, desorganizado: tu estilo de apego decide tu forma de querer mucho antes que tú. Los 4 perfiles explicados y cómo identificar el tuyo.",
   featuredImage: '/blog/styles-attachement-couple.webp',
   featuredImageAlt: "Cuatro corazones estilizados que representan los cuatro estilos de apego, unidos por hilos distintos",
-  publishedAt: '2026-12-01',
+  publishedAt: '2026-11-28T08:25:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "¿Por qué algunos quieren con serenidad, otros agarrándose, otros huyendo? La respuesta cabe en una palabra: el apego. Y se juega mucho antes de la primera historia de amor.",
   introduction: `<p>Seguro que has notado este fenómeno extraño: en una pareja, cada uno parece tocar una partitura escrita de antemano. Uno necesita cercanía, se siente pronto abandonado, insiste... El otro necesita aire, se siente pronto invadido, se aleja. ¡Y cuanto más se agarra uno, más retrocede el otro! Como si el guion estuviera escrito antes incluso del encuentro.</p>

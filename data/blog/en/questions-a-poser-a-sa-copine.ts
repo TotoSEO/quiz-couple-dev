@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Think you know her by heart? Bet: out of these 75 questions to ask your girlfriend, there are at least ten whose answer you don't know.",
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
   featuredImageAlt: "Couple at a table laughing, she answers a question with her hands",
-  publishedAt: '2026-10-02',
+  publishedAt: '2026-09-29T17:24:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "The trap of long relationships isn't falling out of love. It's believing you've finished discovering each other.",
   introduction: `<p>Quick test before we start: you know her favourite dish, her cult film, her perfume. Easy. Now, do you know what she's most proud of this year? What she's missing right now? What she doesn't dare ask you for? Less easy, right.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Non tutti gli uomini tossici sono narcisisti patologici. I 6 profili di uomo tossico in amore, cosa ti fanno vivere, e quali possono cambiare.",
   featuredImage: '/blog/homme-toxique-en-amour.webp',
   featuredImageAlt: "Sei sagome maschili, alcune proiettano un'ombra spinosa",
-  publishedAt: '2026-10-27',
+  publishedAt: '2026-10-24T13:37:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Tra il maldestro che può cambiare e il manipolatore che non cambierà c'è tutta una gamma... e non ci si protegge allo stesso modo.",
   introduction: `<p>Da quando «tossico» è diventata la parola dell'epoca, ci si mette dentro di tutto: il geloso, il distante, il collerico, il bugiardo. Ed è un vero problema, perché quegli uomini non si somigliano. Alcuni fanno male per immaturità, senza volerlo, e possono cambiare. Altri fanno male per funzionamento, e non cambieranno. <strong>Confondere i due significa o fuggire da un uomo che sarebbe potuto crescere... o restare anni con un uomo che non crescerà mai.</strong></p>

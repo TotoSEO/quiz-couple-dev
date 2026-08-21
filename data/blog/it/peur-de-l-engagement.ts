@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Dice che «non è pronto» da due anni? O sei tu che ti blocchi? La paura dell'impegno decifrata: le sue cause reali, i suoi segnali... e come uscirne.",
   featuredImage: '/blog/peur-de-l-engagement.webp',
   featuredImageAlt: "Persona esitante davanti a una porta aperta a forma di cuore, con una valigia in mano",
-  publishedAt: '2026-12-11',
+  publishedAt: '2026-12-08T08:31:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "La paura dell'impegno non è quasi mai paura dell'altro. È la paura di ciò che si crede di dover perdere impegnandosi... e questo cambia tutto il problema.",
   introduction: `<p>«Non sono pronto.» Tre parole che possono tenere una relazione sospesa per anni. Non pronto a ufficializzare, non pronto ad andare a convivere, non pronto a proiettarsi. E dall'altra parte qualcuno aspetta, tra pazienza e logoramento, ponendosi la vera domanda: sono io il problema, o è lui?</p>

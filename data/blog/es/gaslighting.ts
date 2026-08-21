@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "«Yo nunca dije eso», «estás loca», «te lo inventas»... El gaslighting explicado: el mecanismo en 3 tiempos, las frases tipo y cómo recuperar el pie.",
   featuredImage: '/blog/gaslighting.webp',
   featuredImageAlt: "Lámpara de gas cuya llama baja, silueta que duda en la penumbra",
-  publishedAt: '2026-11-24',
+  publishedAt: '2026-11-21T12:28:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "El gaslighting no te miente sobre los hechos. Te miente sobre ti: tu memoria, tu percepción, tu salud mental. Eso lo convierte en la manipulación más corrosiva que existe.",
   introduction: `<p>Viste la escena. Estabas allí, oíste las palabras, podrías repetirlas... Y sin embargo, enfrente, un aplomo perfecto: «yo nunca dije eso». Ni una vacilación. Entonces lo compruebas mentalmente, una vez, dos... y se abre una grietecita: ¿y si fui yo?</p>

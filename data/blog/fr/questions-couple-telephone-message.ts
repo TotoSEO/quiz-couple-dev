@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Les « tu fais quoi ? » tournent en rond ? 60 questions de couple pensées pour le téléphone et les messages : soirées à distance, SMS de journée, appels qui durent.",
   featuredImage: '/blog/questions-couple-telephone-message.webp',
   featuredImageAlt: "Deux téléphones reliés par un fil rouge tendu entre deux fenêtres éclairées",
-  publishedAt: '2026-11-27',
+  publishedAt: '2026-11-24T10:38:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Au téléphone, pas de regard, pas de gestes... juste les mots. C'est exactement pour ça que les bonnes questions y font des merveilles.",
   introduction: `<p>Il y a un moment que tous les couples connaissent, qu'ils vivent à 800 kilomètres ou à deux arrondissements : celui où l'appel du soir tourne au bulletin météo. « Ta journée ? » « Ça va. » « Tu manges quoi ? » « Des pâtes. »... Le lien est là, l'envie aussi, mais la conversation, elle, tourne à vide.</p>

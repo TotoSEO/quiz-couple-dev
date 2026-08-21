@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "A coercive hold isn't left, it's dismantled. Trauma bonding explained, the 4 stages of mental liberation, and why going back doesn't mean failing.",
   featuredImage: '/blog/sortir-emprise-pervers-narcissique.webp',
   featuredImageAlt: "Bird escaping a cage whose door opens onto a clear sky",
-  publishedAt: '2026-11-13',
+  publishedAt: '2026-11-10T10:20:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "People think escaping the hold means leaving. In reality, leaving is only the third stage out of four... and it isn't the hardest.",
   introduction: `<p>If you've already tried to leave, you know that maddening paradox: you KNOW. You've understood the mechanism, you've read the articles, you can describe how he works better than a manual... and yet, you're still here. Or you left, then came back. Perhaps several times.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Drames à répétition, culpabilisation, contrôle déguisé en amour... Les signes de la femme toxique en couple, les 6 profils types, et la question que personne n'ose : et si c'était moi ?",
   featuredImage: '/blog/femme-toxique-en-amour.webp',
   featuredImageAlt: "Silhouette féminine tenant des ficelles nouées en forme de cœur",
-  publishedAt: '2026-11-03',
+  publishedAt: '2026-10-31T08:38:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Les hommes mettent en moyenne bien plus longtemps à nommer une relation toxique... parce qu'on ne leur a jamais appris à quoi ça ressemble quand ça vient d'une femme.",
   introduction: `<p>Fais le test autour de toi : demande à des mecs ce qu'est une femme toxique. Tu obtiendras des blagues, des références de films... et très peu de réponses sérieuses. Parce qu'on a tous grandi avec l'idée que la toxicité en couple, c'est une affaire d'hommes. Résultat : quand un homme vit une relation qui l'abîme, il ne la nomme pas. Il dit qu'elle a « du caractère ». Il dit que c'est « compliqué ». Il encaisse... et il met des années à comprendre.</p>

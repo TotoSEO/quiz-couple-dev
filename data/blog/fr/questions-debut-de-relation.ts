@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Les premières semaines, on n'ose rien demander de peur de tout casser. Erreur : voici les 60 questions de début de relation, dosées pour ne griller aucune étape.",
   featuredImage: '/blog/questions-debut-de-relation.webp',
   featuredImageAlt: "Deux tasses de café fumantes côte à côte, début d'une conversation",
-  publishedAt: '2026-10-23',
+  publishedAt: '2026-10-20T11:16:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Le début d'une relation, c'est le seul moment où on peut tout se demander... et où on n'ose rien demander. Réparons ça.",
   introduction: `<p>Le paradoxe des débuts de relation, le voilà : c'est LE moment où les bonnes questions changeraient tout, et c'est le moment où on les évite soigneusement... de peur de passer pour un intense, de griller une étape, de casser la magie. Alors on avance à l'aveugle, tout sourire, en découvrant les infos importantes par accident, trois mois trop tard.</p>

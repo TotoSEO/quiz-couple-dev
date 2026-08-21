@@ -151,6 +151,20 @@
                 <p class="stats-kpi-label">30 derniers jours</p>
               </div>
             </div>
+            <div class="stats-kpi">
+              <div class="stats-kpi-icon" style="background:linear-gradient(135deg,hsl(38 92% 55%),hsl(20 85% 55%));">🚦</div>
+              <div>
+                <p class="stats-kpi-value" id="admin-stats-lances">-</p>
+                <p class="stats-kpi-label">Lancés (total)</p>
+              </div>
+            </div>
+            <div class="stats-kpi">
+              <div class="stats-kpi-icon" style="background:linear-gradient(135deg,hsl(265 60% 58%),hsl(320 65% 58%));">🏁</div>
+              <div>
+                <p class="stats-kpi-value" id="admin-stats-taux">-</p>
+                <p class="stats-kpi-label">Taux de finition</p>
+              </div>
+            </div>
           </div>
 
           <!-- Tops et flops : pages en hausse et en baisse, replie par defaut -->
@@ -204,12 +218,17 @@
               <span class="stats-details-emoji" aria-hidden="true">📋</span>
               <span>
                 <span class="stats-details-titre">Toutes les pages, test par test</span>
-                <span class="stats-details-sub">Total, parties du jour en vert, courbe au clic</span>
+                <span class="stats-details-sub">Rangé par tests, quiz et jeux. Lancés, terminés ou taux de finition</span>
               </span>
               <svg class="stats-details-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
             </summary>
             <div class="stats-details-corps">
-              <p class="stats-panel-sub" style="margin-bottom:0.6rem;">Cliquez sur un quiz pour voir sa courbe sur 30 jours.</p>
+              <div class="stats-comp" role="group" aria-label="Mesure affichée">
+                <button class="stats-comp-btn" data-mesure="lances">Lancés</button>
+                <button class="stats-comp-btn active" data-mesure="termines">Terminés</button>
+                <button class="stats-comp-btn" data-mesure="ratio">Taux de finition</button>
+              </div>
+              <p class="stats-panel-sub" id="admin-stats-mesure-aide" style="margin-bottom:0.6rem;">Cliquez sur un quiz pour voir sa courbe sur 30 jours.</p>
               <div id="admin-stats-list" class="stats-list"></div>
               <div class="stats-souscourbe">
                 <h3 class="stats-panel-title" id="admin-stats-chart-title" style="font-size:0.95rem;">Sélectionnez un quiz ci-dessus</h3>
@@ -430,6 +449,37 @@
   .dark .stats-row-jour{color:hsl(150 55% 55%);}
   .stats-row-jour.est-zero{color:hsl(var(--muted-foreground)/0.45);font-weight:500;}
   @media (max-width:520px){.stats-row-name{flex-basis:6.5rem;}.stats-row-jour{flex-basis:2.2rem;}}
+
+  /* Regroupement tests / quiz / jeux. Une couleur par famille, reprise sur
+     l'en-tete, sur le liseré de chaque ligne et sur sa barre : la liste fait
+     une quarantaine de pages, sans repere visuel on la lit mal. */
+  .stats-groupe{margin-top:1rem;}
+  .stats-groupe:first-child{margin-top:0.2rem;}
+  .stats-groupe-tete{display:flex;align-items:center;gap:0.5rem;padding:0.35rem 0.4rem;margin-bottom:0.25rem;border-bottom:1px solid hsl(var(--border));}
+  .stats-groupe-pastille{width:0.55rem;height:0.55rem;border-radius:9999px;background:var(--fam);flex:0 0 auto;}
+  .stats-groupe-nom{font-size:0.78rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--fam);}
+  .stats-groupe-compte{margin-left:auto;font-size:0.75rem;font-weight:600;color:hsl(var(--muted-foreground));font-variant-numeric:tabular-nums;}
+  .stats-row{border-left:2px solid transparent;}
+  .stats-groupe .stats-row{border-left-color:color-mix(in srgb, var(--fam) 45%, transparent);}
+  .stats-groupe .stats-row-bar>span{background:var(--fam);}
+  .stats-fam-test{--fam:hsl(265 62% 58%);}
+  .stats-fam-quiz{--fam:hsl(338 72% 58%);}
+  .stats-fam-jeu{--fam:hsl(172 60% 40%);}
+  .dark .stats-fam-test{--fam:hsl(265 70% 70%);}
+  .dark .stats-fam-quiz{--fam:hsl(338 80% 68%);}
+  .dark .stats-fam-jeu{--fam:hsl(172 55% 55%);}
+  /* Taux de finition : la valeur remplace le total, la barre represente le
+     pourcentage lui-meme. En dessous de 40 % la valeur passe en rouge, c'est
+     la lecture utile de tout ce tableau. */
+  .stats-row-val.est-faible{color:hsl(0 70% 52%);}
+  .dark .stats-row-val.est-faible{color:hsl(0 75% 68%);}
+  .stats-row-val.est-fort{color:hsl(150 62% 38%);}
+  .dark .stats-row-val.est-fort{color:hsl(150 55% 55%);}
+  .stats-row-val{flex-basis:3.6rem;}
+  /* Colonne secondaire : l'autre nombre du couple, en gris, pour garder le
+     contexte quand on regarde un ratio (128 sur 340). */
+  .stats-row-sur{flex:0 0 4.2rem;text-align:right;font-size:0.75rem;font-variant-numeric:tabular-nums;color:hsl(var(--muted-foreground));}
+  @media (max-width:520px){.stats-row-sur{display:none;}}
 
   /* ── Sections repliables (sommaire) ── */
   .stats-details{background:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem;margin-bottom:1.5rem;box-shadow:0 4px 16px -10px hsl(var(--primary)/0.15);}

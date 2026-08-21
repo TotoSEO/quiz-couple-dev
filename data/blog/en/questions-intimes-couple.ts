@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Intimacy isn't only under the covers: it's also in the questions you dare to ask. 65 intimate questions, graded from tender to scorching.",
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Couple entwined on a sofa in soft light, deep in a knowing conversation",
-  publishedAt: '2026-09-22',
+  publishedAt: '2026-09-19T09:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "There are the conversations you have every day... and the ones you never dare start. Guess which ones bring you closest.",
   introduction: `<p>You tell each other everything, well, almost. Work, friends, plans, what you're eating tonight. But there's one territory people talk about far less easily, even after years: what the other person actually feels, what they don't dare ask for, what they miss, what they want. The intimate, the real thing.</p>

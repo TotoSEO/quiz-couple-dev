@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Ses techniques dans l'ordre où il les sort, ses vrais points faibles, l'effet du silence sur lui et ses réactions quand on le démasque. Le mode d'emploi complet.",
   featuredImage: '/blog/manipulateur-narcissique.webp',
   featuredImageAlt: "Joueur d'échecs dont les pièces sont des silhouettes humaines",
-  publishedAt: '2026-09-18',
+  publishedAt: '2026-09-15T13:53:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "On présente toujours le manipulateur narcissique comme tout-puissant. C'est faux. Son système a des failles, connues, prévisibles... à condition de savoir où regarder.",
   introduction: `<p>Quand on cherche « manipulateur narcissique », on tombe toujours sur le même article : la liste des signes, le portrait du monstre, et débrouille-toi avec ça. Très bien pour comprendre... mais après ? Une fois que tu SAIS que tu as affaire à un manipulateur, la vraie question devient : comment il fonctionne, et comment on s'en protège concrètement.</p>

@@ -34,10 +34,26 @@ const REPO_ROOT = path.resolve(__dirname, '../..');
 // venu. Les liens internes qui pointent vers un article encore futur sont
 // neutralisés au rendu (texte conservé, bloc « Lire aussi » retiré), puis
 // réapparaissent d'eux-mêmes aux builds suivants : aucune 404 possible.
-const BUILD_DATE = process.env.BUILD_DATE_OVERRIDE || new Date().toISOString().slice(0, 10);
+// publishedAt accepte soit une date nue (AAAA-MM-JJ, minuit UTC, comme avant),
+// soit un horodatage complet avec fuseau (2026-08-22T15:20:00+02:00). La forme
+// longue permet de choisir l'heure de mise en ligne : les rebuilds tournent
+// toutes les deux heures, l'article sort au premier rebuild qui suit l'heure
+// indiquee. Une comparaison de chaines ne suffit plus, on compare des instants.
+const BUILD_INSTANT = process.env.BUILD_DATE_OVERRIDE ? new Date(process.env.BUILD_DATE_OVERRIDE) : new Date();
+const BUILD_DATE = BUILD_INSTANT.toISOString().slice(0, 10);
+function estProgramme(publishedAt) {
+  if (!publishedAt) return false;
+  const brut = /^\d{4}-\d{2}-\d{2}$/.test(publishedAt) ? `${publishedAt}T00:00:00Z` : publishedAt;
+  const t = Date.parse(brut);
+  if (!Number.isFinite(t)) {
+    console.warn(`[blog] publishedAt illisible : ${publishedAt}`);
+    return false;
+  }
+  return t > BUILD_INSTANT.getTime();
+}
 const FUTURE_BLOG_URLS = new Set();
 {
-  const futurs = BLOG_ARTICLES.filter(a => (a.publishedAt || '') > BUILD_DATE);
+  const futurs = BLOG_ARTICLES.filter(a => estProgramme(a.publishedAt));
   for (const a of futurs) {
     for (const [l, slug] of Object.entries(a.slugs || {})) {
       FUTURE_BLOG_URLS.add(l === 'fr' ? `/blog/${slug}/` : `/${l}/blog/${slug}/`);
@@ -47,7 +63,8 @@ const FUTURE_BLOG_URLS = new Set();
     const publies = BLOG_ARTICLES.filter(a => !futurs.includes(a));
     BLOG_ARTICLES.length = 0;
     BLOG_ARTICLES.push(...publies);
-    console.log(`[blog] ${futurs.length} article(s) programmé(s) en attente (publishedAt > ${BUILD_DATE})`);
+    console.log(`[blog] ${futurs.length} article(s) programmé(s) en attente (publishedAt > ${BUILD_INSTANT.toISOString()})`);
+    console.log(`[blog] prochain : ${futurs.map(f => f.publishedAt).sort()[0]}`);
   }
 }
 

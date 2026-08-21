@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "El manipulador detecta al dependiente emocional como un radar. Por qué estos dos perfiles se atraen, qué hace vivir esta pareja y cómo romper el dúo.",
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',
   featuredImageAlt: "Imán en forma de corazón atrayendo a una silueta encadenada",
-  publishedAt: '2026-11-10',
+  publishedAt: '2026-11-07T12:21:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "No es casualidad que los dependientes emocionales se crucen con tantos manipuladores. Uno busca ser indispensable... el otro busca a alguien que tenga miedo de perder.",
   introduction: `<p>Es una pregunta que vuelve sin parar en las personas que salen de una relación de dominio: «¿por qué yo?» ¿Por qué él, otra vez? ¿Por qué esta sensación de caer siempre en el mismo perfil, como si hubiera un imán de por medio?</p>

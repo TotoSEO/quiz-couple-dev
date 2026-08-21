@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Charming outside, destructive at home. The narcissistic cycle in a relationship, the concrete warning signs, and how to know for sure.",
   featuredImage: '/blog/pervers-narcissique-amour.webp',
   featuredImageAlt: "Silhouette of a couple where one pulls the other's strings like a puppet",
-  publishedAt: '2026-08-25',
+  publishedAt: '2026-08-22T15:20:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Everyone finds him charming. You no longer know what you're living through. That is exactly how a narcissist's control works.",
   introduction: `<p>There's the man everyone else sees: funny, attentive, brilliant in company. And then there's the one you find once the door closes. The one who blows hot and cold, who turns every argument back on you, who makes you doubt your own memory... The gap between the two is so wide that you've stopped mentioning it to anyone. Honestly, who would believe you?</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Irréprochable en société, écrasant en privé. Les 12 comportements de l'homme pervers narcissique, dans l'ordre où ils apparaissent, et quoi faire ensuite.",
   featuredImage: '/blog/homme-pervers-narcissique-signes.webp',
   featuredImageAlt: "Homme au double visage, souriant d'un côté et menaçant dans l'ombre de l'autre",
-  publishedAt: '2026-09-01',
+  publishedAt: '2026-08-29T15:25:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Le problème avec un homme pervers narcissique, c'est que tu es la seule à voir ce que tu vois. Voici les 12 comportements qui finissent par le trahir.",
   introduction: `<p>Si tu tapes « pervers narcissique homme » dans un moteur de recherche, ce n'est pas par curiosité intellectuelle... C'est qu'un homme précis, ton compagnon, ton ex, peut-être le père de tes enfants, t'a mise en alerte. Et que quelque chose ne colle pas : cet homme que tout le monde adore te fait vivre, à huis clos, quelque chose que personne n'imagine.</p>

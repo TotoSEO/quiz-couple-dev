@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Emménager, se marier, un enfant... On saute rarement le pas faute d'amour, mais souvent faute d'en avoir parlé. Les 60 questions d'avenir à se poser avant.",
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Couple regardant un chemin qui se déroule vers l'horizon, valises à la main",
-  publishedAt: '2026-10-30',
+  publishedAt: '2026-10-27T14:30:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Les couples ne se plantent presque jamais par manque d'amour. Ils se plantent sur des sujets qu'ils n'avaient jamais mis sur la table.",
   introduction: `<p>Il y a une statistique que personne ne calcule mais que tout le monde connaît : la plupart des grandes crises de couple portent sur des sujets... dont les deux savaient qu'il faudrait parler un jour. L'argent. Les enfants. La belle-famille. La répartition des tâches. Le « un jour » est juste arrivé trop tard, en pleine crise, au pire moment pour en discuter calmement.</p>

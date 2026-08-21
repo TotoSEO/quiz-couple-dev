@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Affascinante fuori, distruttivo in casa. Il ciclo del narcisista nella coppia, i segnali concreti e come toglierti il dubbio.",
   featuredImage: '/blog/pervers-narcissique-amour.webp',
   featuredImageAlt: "Silhouette di una coppia in cui uno tira i fili dell'altro come a una marionetta",
-  publishedAt: '2026-08-25',
+  publishedAt: '2026-08-22T15:20:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Tutti lo trovano affascinante. Tu non sai più cosa stai vivendo. È esattamente così che funziona il controllo di un narcisista.",
   introduction: `<p>C'è l'uomo che vedono gli altri: divertente, attento, brillante in società. E poi c'è quello che ritrovi appena la porta si chiude. Quello che soffia il caldo e il freddo, che ribalta ogni discussione contro di te, che ti fa dubitare della tua stessa memoria... La distanza tra i due è così enorme che hai smesso perfino di raccontarlo. Sinceramente, chi ti crederebbe?</p>

@@ -247,6 +247,43 @@
     new MutationObserver(check).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class', 'style', 'data-quiz-done'] });
   }
 
+  // ── Suivi des lancements (une fois par session/quiz) ──
+  // Une visite n'est pas un lancement. Quelqu'un qui lit la page et repart
+  // sans rien toucher n'a pas commence le test, et le compter fausserait le
+  // taux de finition dans l'autre sens. Le signal retenu est donc la
+  // premiere interaction reelle a l'interieur du moteur : un clic, un appui,
+  // une frappe au clavier pour saisir un prenom.
+  //
+  // Il n'existe pas d'ecran de depart commun aux trente moteurs du site, et
+  // pas non plus de conteneur unique : la plupart montent dans #quiz-engine,
+  // mais quatre moteurs autonomes ont leur propre racine. On les nomme ici
+  // plutot que d'ecouter le document entier, sinon un clic sur le bandeau
+  // cookies ou sur la FAQ passerait pour un lancement.
+  var RACINES_MOTEUR = '#quiz-engine, [data-quiz], #astro-form, #dn-outil, #vacances-racine';
+
+  function watchStart(slug) {
+    var cle = 'qc-start-' + slug;
+    try { if (sessionStorage.getItem(cle)) return; } catch (e) {}
+
+    var envoye = false;
+    function lance(e) {
+      if (envoye) return;
+      // closest remonte depuis la cible : un clic sur le libelle d'un bouton
+      // compte autant qu'un clic sur le bouton lui-meme.
+      var dans = e.target && e.target.closest && e.target.closest(RACINES_MOTEUR);
+      if (!dans) return;
+      envoye = true;
+      document.removeEventListener('pointerdown', lance, true);
+      document.removeEventListener('keydown', lance, true);
+      try { sessionStorage.setItem(cle, '1'); } catch (err) {}
+      fetch(URL + '/rest/v1/quiz_starts', { method: 'POST', headers: Object.assign({ 'Prefer': 'return=minimal' }, HJ), body: JSON.stringify({ quiz_slug: slug, lang: lang }) }).catch(function () {});
+    }
+    // En capture : un moteur qui arrete la propagation sur ses propres
+    // boutons ne doit pas rendre le lancement invisible.
+    document.addEventListener('pointerdown', lance, true);
+    document.addEventListener('keydown', lance, true);
+  }
+
   // ── Bloc avis par quiz (liste + formulaire progressif) ──
   function initReviews(slug) {
     var root = document.getElementById('pq-reviews');
@@ -388,6 +425,7 @@
     if (!slug) return;
     countBubble(slug, pq.dataset.quizKind || 'test');
     watch(slug);
+    watchStart(slug);
     initReviews(slug);
     resultRating();
   }

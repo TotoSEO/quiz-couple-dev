@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "El móvil mirado 40 veces, el miedo al silencio, la pareja que lo ocupa todo... Los 16 síntomas de la dependencia emocional, esfera por esfera.",
   featuredImage: '/blog/dependance-affective-symptomes.webp',
   featuredImageAlt: "Persona encadenada a un móvil que muestra un corazón, esperando una respuesta",
-  publishedAt: '2026-09-15',
+  publishedAt: '2026-09-12T11:33:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "La dependencia emocional no se ve en el espejo. Se ve en los detalles: lo que sientes cuando no responde, lo que anulas por él, lo que ya no te atreves a decir.",
   introduction: `<p>No te ha contestado en dos horas. Objetivamente no ha pasado nada: está trabajando, vive su vida, todo va bien. Pero tú ya has mirado el móvil quince veces, has releído tu último mensaje para ver si fue torpe y has montado tres escenarios, uno de ellos con él dejándote.</p>

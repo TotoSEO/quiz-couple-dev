@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "« Je n'ai jamais dit ça », « tu es folle », « tu inventes »... Le gaslighting expliqué : le mécanisme en 3 temps, les phrases types, et comment reprendre pied.",
   featuredImage: '/blog/gaslighting.webp',
   featuredImageAlt: "Lampe à gaz dont la flamme baisse, silhouette qui doute dans la pénombre",
-  publishedAt: '2026-11-24',
+  publishedAt: '2026-11-21T12:28:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Le gaslighting ne te ment pas sur les faits. Il te ment sur toi : ta mémoire, ta perception, ta santé mentale. C'est ce qui en fait la manipulation la plus corrosive qui existe.",
   introduction: `<p>Tu as vu la scène. Tu étais là, tu as entendu les mots, tu pourrais les répéter... Et pourtant, en face, un aplomb parfait : « je n'ai jamais dit ça ». Pas une hésitation. Alors tu vérifies dans ta tête, une fois, deux fois... et une petite fissure s'ouvre : et si c'était moi ?</p>

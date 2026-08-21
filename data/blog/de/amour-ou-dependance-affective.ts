@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Stark zu lieben und Angst vor Verlust zu haben verwechselt man leicht. Die 7 Unterschiede zwischen Liebe und emotionaler Abhängigkeit, und der Gedankentest, der es klärt.",
   featuredImage: '/blog/amour-ou-dependance-affective.webp',
   featuredImageAlt: "Zwei ineinander verschlungene Herzen, eines frei, das andere von einem Seil umwickelt",
-  publishedAt: '2026-10-09',
+  publishedAt: '2026-10-06T09:45:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Liebe und emotionale Abhängigkeit ähneln sich von innen enorm. Dieselbe Intensität, dieselben Dauergedanken... und trotzdem trennt sie alles.",
   introduction: `<p>Es ist eine Frage, die man sich kaum zu stellen wagt, weil sie ein bisschen Angst macht: Liebe ich ihn... oder liebe ich vor allem die Tatsache, dass er da ist? Ist das Liebe, dieses Ding, das mir den Bauch zusammenzieht, wenn er nicht antwortet? Oder etwas anderes?</p>

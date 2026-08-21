@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Si raffredda proprio quando le cose si fanno serie? L'attaccamento evitante spiegato dai due lati: cosa vive dentro, cosa fa vivere e cosa aiuta davvero.",
   featuredImage: '/blog/attachement-evitant.webp',
   featuredImageAlt: "Sagoma che indietreggia di un passo davanti a un cuore teso verso di lei",
-  publishedAt: '2026-12-08',
+  publishedAt: '2026-12-05T16:21:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "L'evitante non ama meno degli altri. Ha solo imparato, prestissimo, che il bisogno è un pericolo... e gestisce l'amore come si gestisce un rischio.",
   introduction: `<p>È una delle esperienze amorose più spiazzanti che esistano: va tutto bene, è presente, divertente, coinvolto... e proprio nel momento in cui la relazione diventa seria, qualcosa si chiude. Meno messaggi, meno progetti, quel bisogno improvviso d'aria. Non hai fatto niente di male. Non è meno attaccato. È un'altra cosa: più ti avvicini, più il suo sistema indietreggia.</p>

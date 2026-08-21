@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "He brings you gifts, you wanted time. You compliment him, he wanted gestures... The 5 love languages explained, with the instruction manual that changes a relationship.",
   featuredImage: '/blog/5-langages-de-l-amour.webp',
   featuredImageAlt: "Five coloured bubbles symbolising the five love languages around a couple",
-  publishedAt: '2026-12-15',
+  publishedAt: '2026-12-12T16:37:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "For many couples the drama isn't a lack of love... it is a translation problem. Each speaks their own language, and nobody has the dictionary.",
   introduction: `<p>Here is a scene you may have lived. He comes home with a present, proud as anything... and deep down, you would have preferred he simply came home earlier. Or the reverse: you keep telling him you love him, you compliment him... and he barely seems to hear it, when a simple hug would have filled him up. Each of you gives, sincerely. And each of you feels like what you receive lands slightly off target.</p>

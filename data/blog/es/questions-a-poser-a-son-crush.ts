@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "¿Harta de conversaciones que se apagan? 100 preguntas para hacerle a tu crush, ordenadas por situación: por mensaje, para reír, para flirtear, para ver si encajáis.",
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Persona joven sonriendo al móvil mientras escribe un mensaje a su crush",
-  publishedAt: '2026-09-04',
+  publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Lo difícil con un crush no es encontrar qué decir. Es hacer las preguntas que convierten una charla educada en una conexión real.",
   introduction: `<p>Conoces ese momento... La conversación da vueltas, se encadenan los «bien, ¿y tú?», y notas que si nadie saca otra cosa, esto va a morir educadamente en un «buenas noches, entonces». Con un crush, cada intercambio cuenta doble. Así que, tarde o temprano, todos acabamos mirando el móvil sin saber qué enviar.</p>

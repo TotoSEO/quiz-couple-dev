@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Bezaubernd in der Öffentlichkeit, zerstörerisch im Privaten. Die 10 Anzeichen der narzisstischen Frau, ihre Masken und warum betroffene Männer nie darüber sprechen.",
   featuredImage: '/blog/femme-perverse-narcissique-signes.webp',
   featuredImageAlt: "Frau hält eine lächelnde Maske vor ihr Gesicht, harter Schatten an der Wand",
-  publishedAt: '2026-09-29',
+  publishedAt: '2026-09-26T09:25:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Man stellt sich den Narzissten immer männlich vor. Ergebnis: Männer, die den Griff in weiblicher Form erleben, zweifeln doppelt, an ihrer Beziehung und an ihrem Recht, darunter zu leiden.",
   introduction: `<p>Such «Narzisst» auf irgendeiner Seite: Die Beispiele sind männlich, die Opfer weiblich. Wenn also DEINE Partnerin heiß und kalt bläst, dich hinter verschlossenen Türen zerlegt und draußen alle bezaubert, was machst du dann? Du zweifelst. Lieber zweimal als einmal. An dem, was du erlebst, zuerst. Und an deinem Recht, darunter zu leiden, danach.</p>

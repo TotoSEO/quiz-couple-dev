@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "« Tu es trop sensible », « c'est de ta faute », « je dis ça pour ton bien »... 35 phrases de manipulateur décodées, avec leur vraie traduction et comment riposter.",
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
   featuredImageAlt: "Bulles de conversation dont certaines cachent des hameçons",
-  publishedAt: '2026-09-08',
+  publishedAt: '2026-09-05T09:15:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Un manipulateur ne ment pas au hasard. Il pioche dans un répertoire, toujours le même. Et une fois que tu connais le répertoire, quelque chose se casse dans le tour de magie.",
   introduction: `<p>« Tu es trop sensible. » Combien de fois tu l'as entendue, celle-là ? Et combien de fois tu es repartie en te demandant si, effectivement, tu n'exagérais pas un peu ?</p>

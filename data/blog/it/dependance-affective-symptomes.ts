@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Il telefono controllato 40 volte, la paura del silenzio, la coppia che occupa tutto lo spazio... I 16 sintomi della dipendenza affettiva, sfera per sfera.",
   featuredImage: '/blog/dependance-affective-symptomes.webp',
   featuredImageAlt: "Persona incatenata a un telefono che mostra un cuore, in attesa di una risposta",
-  publishedAt: '2026-09-15',
+  publishedAt: '2026-09-12T11:33:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "La dipendenza affettiva non si vede allo specchio. Si vede nei dettagli: cosa provi quando non risponde, cosa annulli per lui, cosa non osi più dire.",
   introduction: `<p>Non ti risponde da due ore. Oggettivamente non è successo niente: lavora, vive la sua vita, va tutto bene. Ma tu hai già controllato il telefono quindici volte, riletto il tuo ultimo messaggio per capire se era goffo e costruito tre scenari, in uno dei quali ti lascia.</p>

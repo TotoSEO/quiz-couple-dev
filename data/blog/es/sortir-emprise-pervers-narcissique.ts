@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Del dominio no se sale, se desmonta. El vínculo traumático explicado, las 4 etapas de la liberación mental y por qué volver no significa fracasar.",
   featuredImage: '/blog/sortir-emprise-pervers-narcissique.webp',
   featuredImageAlt: "Pájaro escapando de una jaula cuya puerta se abre hacia un cielo claro",
-  publishedAt: '2026-11-13',
+  publishedAt: '2026-11-10T10:20:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Se cree que salir del dominio es irse. En realidad irse es solo la tercera etapa de cuatro... y no es la más difícil.",
   introduction: `<p>Si ya has intentado irte, conoces esa paradoja que vuelve loca: lo SABES. Has entendido el mecanismo, has leído los artículos, puedes describir su funcionamiento mejor que un manual... y sin embargo sigues ahí. O te fuiste y volviste. Quizá varias veces.</p>

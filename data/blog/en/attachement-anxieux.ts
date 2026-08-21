@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Fear of abandonment, messages reread, needing reassurance on a loop... Anxious attachment explained: its signs in love, its spiral, and how to genuinely soothe it.",
   featuredImage: '/blog/attachement-anxieux.webp',
   featuredImageAlt: "Person holding a heart close while looking at a silent phone",
-  publishedAt: '2026-12-04',
+  publishedAt: '2026-12-01T12:20:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Anxious attachment doesn't doubt the love it gives... it doubts the love it receives. Permanently. And that's exhausting on both sides of the relationship.",
   introduction: `<p>You may know this sensation: everything is fine in your relationship, objectively... and yet part of you stays on alert. A slightly cool tone, a shorter reply than usual, an evening without a message: the alarm goes off. And there you are looking for proof that everything's fine, again, like yesterday, like tomorrow.</p>

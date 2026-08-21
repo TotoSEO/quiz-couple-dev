@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "¿Harto del «hola, ¿qué tal?» que no lleva a ninguna parte? 90 preguntas para hacerle a una chica, del primer mensaje al cara a cara, sin interrogatorios.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
   featuredImageAlt: "Dos personas hablando en una mesa, una escucha atentamente a la otra",
-  publishedAt: '2026-09-11',
+  publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "La diferencia entre una conversación que se apaga y una chica con ganas de volver a verte no es tu labia. Es la calidad de tus preguntas, y lo que haces con las respuestas.",
   introduction: `<p>Seamos honestos dos minutos. El problema casi nunca es encontrar UNA pregunta que hacer. El problema es que «¿qué tal?», «¿a qué te dedicas?» y «¿buen finde?» son exactamente como empiezan todas las demás conversaciones que ella tiene ahora mismo...</p>

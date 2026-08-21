@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Es fácil confundir querer con intensidad y tener miedo a perder. Las 7 diferencias entre amor y dependencia emocional, y el test mental que las separa.",
   featuredImage: '/blog/amour-ou-dependance-affective.webp',
   featuredImageAlt: "Dos corazones entrelazados, uno libre y el otro rodeado por una cuerda",
-  publishedAt: '2026-10-09',
+  publishedAt: '2026-10-06T09:45:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "El amor y la dependencia emocional se parecen muchísimo vistos desde dentro. Misma intensidad, mismos pensamientos permanentes... y sin embargo todo los opone.",
   introduction: `<p>Es una pregunta que no nos atrevemos mucho a hacernos, porque da un poco de miedo: ¿lo quiero a él... o quiero sobre todo el hecho de que esté? ¿Es amor eso que me aprieta el estómago cuando no responde? ¿O es otra cosa?</p>

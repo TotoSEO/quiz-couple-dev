@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Kann man einen Seitensprung wirklich verzeihen? Ja, unter genauen Bedingungen, und nein, nicht immer. Der Weg zum echten Verzeihen, Schritt für Schritt, ohne Vorschriften.",
   featuredImage: '/blog/pardonner-une-infidelite.webp',
   featuredImageAlt: "Gebrochenes Herz, mit goldenem Faden zusammengenäht, im Stil des Kintsugi",
-  publishedAt: '2026-12-29',
+  publishedAt: '2026-12-26T08:35:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Nach einer Untreue hat jeder eine Meinung: «geh», «verzeih», «ich könnte das nie». Die einzige Frage, die zählt: Unter welchen Bedingungen ist ein Verzeihen ECHT?",
   introduction: `<p>Seit du es weißt, wissen alle, was an deiner Stelle zu tun wäre. Deine beste Freundin sagt «geh, du bist immer mehr wert als das». Deine Mutter sagt «jedes Paar macht Dinge durch». Und du, mittendrin, schwankst von Stunde zu Stunde zwischen dem Wunsch, alles zu zertrümmern, und dem Wunsch, dass nichts davon je existiert hätte.</p>

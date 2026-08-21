@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Emotional dependency doesn't only live in relationships. The fusional friendship that turns into a need, friendly jealousy, exclusivity... the signs, and how to rebalance.",
   featuredImage: '/blog/dependance-affective-amitie.webp',
   featuredImageAlt: "Two friends linked by a red thread pulled too tight between their wrists",
-  publishedAt: '2026-11-17',
+  publishedAt: '2026-11-14T16:55:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "We watch out for emotional dependency in our relationships... and let it settle quietly into our friendships, where nobody thinks to look for it.",
   introduction: `<p>There's a jealousy nobody ever talks about: the one you feel when your best friend gets closer to someone else. That pinch when she talks about an evening you weren't part of... That need to know you're still «the» person, the first to be told, the favourite. You don't dare say it, because it sounds absurd: jealousy, between friends?</p>

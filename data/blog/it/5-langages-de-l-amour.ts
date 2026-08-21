@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Lui ti fa regali, tu volevi tempo. Tu gli fai complimenti, lui voleva gesti... I 5 linguaggi dell'amore spiegati, con le istruzioni che cambiano una coppia.",
   featuredImage: '/blog/5-langages-de-l-amour.webp',
   featuredImageAlt: "Cinque bolle colorate che simboleggiano i cinque linguaggi dell'amore attorno a una coppia",
-  publishedAt: '2026-12-15',
+  publishedAt: '2026-12-12T16:37:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Il dramma di molte coppie non è la mancanza d'amore... è un problema di traduzione. Ognuno parla la sua lingua e nessuno ha il dizionario.",
   introduction: `<p>Ecco una scena che forse hai già vissuto. Lui torna a casa con un regalo, tutto fiero... e tu, in fondo, avresti preferito che tornasse prima, punto. O il contrario: tu gli ripeti che lo ami, gli fai complimenti... e lui sembra a malapena sentirlo, quando un semplice abbraccio lo avrebbe riempito. Ognuno dà, sinceramente. E ognuno ha l'impressione di ricevere... di fianco.</p>

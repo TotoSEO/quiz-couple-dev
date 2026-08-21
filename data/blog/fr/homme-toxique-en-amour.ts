@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Tous les hommes toxiques ne sont pas des pervers narcissiques. Les 6 profils d'homme toxique en amour, ce qu'ils font vivre, et lesquels peuvent changer.",
   featuredImage: '/blog/homme-toxique-en-amour.webp',
   featuredImageAlt: "Six silhouettes masculines dont certaines projettent une ombre épineuse",
-  publishedAt: '2026-10-27',
+  publishedAt: '2026-10-24T13:37:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Entre le maladroit qui peut changer et le manipulateur qui ne changera pas, il y a toute une gamme... et on ne s'en protège pas de la même façon.",
   introduction: `<p>Depuis que « toxique » est devenu le mot de l'époque, on range tout dedans : le jaloux, le distant, le colérique, le menteur... Et c'est un vrai problème, parce que ces hommes-là ne se ressemblent pas. Certains abîment par immaturité, sans le vouloir, et peuvent changer. D'autres abîment par fonctionnement, et ne changeront pas. <strong>Confondre les deux, c'est soit fuir un homme qui aurait pu grandir... soit rester des années avec un homme qui ne grandira jamais.</strong></p>

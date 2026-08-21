@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Non consigli vaghi: un piano vero. 12 esercizi concreti distribuiti su 3 fasi per superare la dipendenza affettiva, settimana dopo settimana.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Persona che spezza una catena a forma di cuore, gradini di una scala sullo sfondo",
-  publishedAt: '2026-09-25',
+  publishedAt: '2026-09-22T11:32:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Lavora su te stessa», «impara ad amarti»... Grazie, ma concretamente, cosa si fa lunedì mattina? Ecco il piano, esercizio per esercizio.",
   introduction: `<p>Se hai già cercato come uscire dalla dipendenza affettiva, conosci la canzone: «riprendi fiducia in te», «rimetti al centro i tuoi bisogni», «impara ad amarti». Consigli veri, senza dubbio. Ma perfettamente inutilizzabili un martedì sera alle undici, quando fissi il telefono aspettando la sua risposta.</p>

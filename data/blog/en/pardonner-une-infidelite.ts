@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Can you really forgive cheating? Yes, on precise conditions... and no, not always. The path to real forgiveness, step by step, without being told what to do.",
   featuredImage: '/blog/pardonner-une-infidelite.webp',
   featuredImageAlt: "Broken heart stitched back together with golden thread, in the kintsugi style",
-  publishedAt: '2026-12-29',
+  publishedAt: '2026-12-26T08:35:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "After an infidelity, everybody has an opinion: «leave», «forgive», «I could never»... The only question that counts: on what conditions is forgiveness REAL?",
   introduction: `<p>Ever since you found out, everyone knows what to do in your place. Your best friend says «leave, you will always be worth more than that». Your mother says «every couple goes through things». And you, in the middle, swing hour by hour between the urge to smash everything and the wish that none of it had ever existed.</p>

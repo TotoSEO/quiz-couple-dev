@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "After years together, you think you've covered it all. Wrong! 60 questions to ask each other to check... and rediscover yourselves along the way.",
   featuredImage: '/blog/questions-pour-mieux-se-connaitre-en-couple.webp',
   featuredImageAlt: "Couple sitting back to back with question marks and hearts above them",
-  publishedAt: '2026-10-13',
+  publishedAt: '2026-10-10T13:37:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "The day you stop asking each other questions, you haven't finished discovering each other... you've just stopped looking.",
   introduction: `<p>Try the experiment one day: ask a couple who've been together ten years whether they know each other by heart. They'll say yes, obviously. Then ask them three fairly precise questions, the dream he gave up, the fear she never mentions, what each of them thinks the other thinks of them, and watch their faces. There's always a surprise. Always!</p>

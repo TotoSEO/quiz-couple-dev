@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "¿Se enfría justo cuando la cosa se pone seria? El apego evitativo explicado por los dos lados: lo que vive por dentro, lo que hace vivir... y lo que ayuda de verdad.",
   featuredImage: '/blog/attachement-evitant.webp',
   featuredImageAlt: "Silueta retrocediendo un paso ante un corazón tendido hacia ella",
-  publishedAt: '2026-12-08',
+  publishedAt: '2026-12-05T16:21:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "El evitativo no quiere menos que los demás. Simplemente aprendió, muy pronto, que necesitar es un peligro... y gestiona el amor como se gestiona un riesgo.",
   introduction: `<p>Es una de las experiencias amorosas más desconcertantes que existen: todo va bien, está presente, divertido, implicado... y justo cuando la relación se pone seria, algo se cierra. Menos mensajes, menos planes, esa necesidad repentina de aire. No has hecho nada mal. No está menos apegado. Es otra cosa: cuanto más te acercas, más retrocede su sistema.</p>

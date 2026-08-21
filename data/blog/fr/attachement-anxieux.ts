@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Peur de l'abandon, messages relus, besoin d'être rassuré en boucle... L'attachement anxieux expliqué : ses signes en amour, sa spirale, et comment l'apaiser vraiment.",
   featuredImage: '/blog/attachement-anxieux.webp',
   featuredImageAlt: "Personne serrant un cœur contre elle en regardant un téléphone muet",
-  publishedAt: '2026-12-04',
+  publishedAt: '2026-12-01T12:20:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "L'attachement anxieux ne doute pas de l'amour qu'il donne... il doute de celui qu'il reçoit. En permanence. Et c'est épuisant des deux côtés du couple.",
   introduction: `<p>Tu connais peut-être cette sensation : tout va bien dans ton couple, objectivement... et pourtant une partie de toi reste sur le qui-vive. Un ton un peu froid, une réponse plus courte que d'habitude, une soirée sans message : l'alarme se déclenche. Et te voilà à chercher des preuves que tout va bien, encore, comme hier, comme demain...</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Checking their phone, imagining scenarios, suffering without proof... Pathological jealousy explained: the line with normal jealousy, its roots, and the way out.",
   featuredImage: '/blog/jalousie-maladive.webp',
   featuredImageAlt: "Stylised green eye enclosing a couple within its iris",
-  publishedAt: '2026-12-18',
+  publishedAt: '2026-12-15T14:15:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Normal jealousy protects a relationship. Pathological jealousy devours it... and it devours first the person feeling it.",
   introduction: `<p>It always starts with a small thing. A first name that comes up too often, a smile at a party, a phone left face down on the table... and a scenario starts spinning in your head. You know it rests on nothing, that scenario. You know it! But it spins anyway, faster and faster, and there you are checking, questioning, imagining... and hating yourself for doing it.</p>

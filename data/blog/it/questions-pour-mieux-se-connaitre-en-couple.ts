@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Dopo anni insieme si crede di aver visto tutto. Errore! 60 domande da farvi in due per verificarlo... e riscoprirvi lungo la strada.",
   featuredImage: '/blog/questions-pour-mieux-se-connaitre-en-couple.webp',
   featuredImageAlt: "Coppia seduta schiena contro schiena con punti interrogativi e cuori sopra di loro",
-  publishedAt: '2026-10-13',
+  publishedAt: '2026-10-10T13:37:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Il giorno in cui si smette di farsi domande, non si è finito di scoprirsi... si è solo smesso di cercare.",
   introduction: `<p>Fai l'esperimento un giorno: chiedi a una coppia insieme da dieci anni se si conoscono a memoria. Diranno di sì, ovviamente. Poi fai loro tre domande un po' precise, il sogno che lui ha abbandonato, la paura che lei non dice mai, cosa ciascuno crede che l'altro pensi di lui... e guarda le facce. C'è sempre una sorpresa. Sempre!</p>

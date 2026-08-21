@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Dos desconocidos, 36 preguntas, 4 minutos de mirada... y una boda seis meses después. El experimento de Arthur Aron, las preguntas y cómo hacerlo esta noche.",
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Dos sillas frente a frente bajo una bombilla cálida, un cuaderno de preguntas entre ellas",
-  publishedAt: '2026-11-06',
+  publishedAt: '2026-11-03T10:33:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "En 1997 un psicólogo hizo que dos desconocidos se enamoraran en su laboratorio, con una simple lista de preguntas. La lista sigue existiendo... aquí está.",
   introduction: `<p>La historia es cierta y es irresistible. En 1997, el psicólogo estadounidense Arthur Aron hizo entrar a parejas de desconocidos en su laboratorio. La consigna: hacerse 36 preguntas, en orden, cada vez más personales, y luego mirarse a los ojos cuatro minutos, sin hablar. Resultado: una cercanía récord entre perfectos extraños... y, la leyenda retiene sobre todo esto, dos participantes que acabaron casándose.</p>

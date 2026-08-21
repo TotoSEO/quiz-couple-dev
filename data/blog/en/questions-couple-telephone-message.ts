@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Are the «what are you up to?» going round in circles? 60 couple questions designed for the phone and for messages: evenings apart, daytime texts, calls that last.",
   featuredImage: '/blog/questions-couple-telephone-message.webp',
   featuredImageAlt: "Two phones linked by a red thread stretched between two lit windows",
-  publishedAt: '2026-11-27',
+  publishedAt: '2026-11-24T10:38:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "On the phone there are no looks, no gestures... just words. That's exactly why good questions work wonders there.",
   introduction: `<p>There's a moment every couple knows, whether they live 800 kilometres or two neighbourhoods apart: the one where the evening call turns into a weather report. «How was your day?» «Fine.» «What are you eating?» «Pasta.»... The bond is there, the desire too, but the conversation is running on empty.</p>

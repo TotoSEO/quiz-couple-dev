@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Fotos einer Ex liken, ein Tinder-Match «aus Spaß» behalten, zweideutige Nachrichten: Micro-Cheating entschlüsselt. Was ernst ist, was nicht, und wie man darüber spricht.",
   featuredImage: '/blog/micro-tromperie.webp',
   featuredImageAlt: "Handy mit Herz-Benachrichtigung, Schatten einer dritten Person zwischen zwei Silhouetten",
-  publishedAt: '2026-12-25',
+  publishedAt: '2026-12-22T10:24:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Niemand hat mit jemandem geschlafen. Und trotzdem ist etwas passiert. Willkommen in der Grauzone der modernen Treue.",
   introduction: `<p>Er hat nichts getan, technisch gesehen. Er hat mit niemandem geschlafen, kein heimliches Treffen, keine offene Lüge. Nur regelmäßige Likes auf den Fotos einer bestimmten Frau, Instagram-Gespräche, die er schließt, wenn du näher kommst, eine Ex, die er «freundschaftlich behält», mit Nachrichten um 23 Uhr. Technisch gesehen nichts. Und trotzdem stört dich etwas, und du weißt nicht einmal, ob du das Recht hast, gestört zu sein.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Verlustangst, hundertmal gelesene Nachrichten, ständiges Bedürfnis nach Rückversicherung: die ängstliche Bindung erklärt. Ihre Anzeichen in der Liebe, ihre Spirale und was sie wirklich beruhigt.",
   featuredImage: '/blog/attachement-anxieux.webp',
   featuredImageAlt: "Person, die ein Herz umarmt und dabei auf ein stummes Handy schaut",
-  publishedAt: '2026-12-04',
+  publishedAt: '2026-12-01T12:20:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Die ängstliche Bindung zweifelt nicht an der Liebe, die sie gibt, sondern an der, die sie bekommt. Ununterbrochen. Und das erschöpft beide Seiten der Beziehung.",
   introduction: `<p>Vielleicht kennst du dieses Gefühl: In deiner Beziehung läuft objektiv alles gut, und trotzdem bleibt ein Teil von dir in Alarmbereitschaft. Ein etwas kühler Tonfall, eine kürzere Antwort als sonst, ein Abend ohne Nachricht, und der Alarm geht los. Und schon suchst du nach Beweisen, dass alles in Ordnung ist, wieder einmal, wie gestern, wie morgen.</p>

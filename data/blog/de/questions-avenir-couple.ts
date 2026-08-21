@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Zusammenziehen, heiraten, ein Kind... Paare scheitern selten an fehlender Liebe, aber oft daran, nie darüber gesprochen zu haben. Die 60 Zukunftsfragen vorher.",
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Paar blickt auf einen Weg, der sich zum Horizont entrollt, Koffer in der Hand",
-  publishedAt: '2026-10-30',
+  publishedAt: '2026-10-27T14:30:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Paare scheitern fast nie an fehlender Liebe. Sie scheitern an Themen, die sie nie auf den Tisch gelegt haben.",
   introduction: `<p>Es gibt eine Statistik, die niemand berechnet und die jeder kennt: Die meisten großen Beziehungskrisen drehen sich um Themen... von denen beide wussten, dass man eines Tages darüber reden müsste. Geld. Kinder. Schwiegereltern. Die Aufteilung der Aufgaben. Das «eines Tages» kam schlicht zu spät, mitten in der Krise, im denkbar schlechtesten Moment, um in Ruhe zu reden.</p>

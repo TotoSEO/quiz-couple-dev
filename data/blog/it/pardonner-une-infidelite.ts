@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Si può davvero perdonare un tradimento? Sì, a condizioni precise... e no, non sempre. Il cammino del perdono reale, tappa dopo tappa, senza imposizioni.",
   featuredImage: '/blog/pardonner-une-infidelite.webp',
   featuredImageAlt: "Cuore spezzato ricucito con un filo dorato, alla maniera del kintsugi",
-  publishedAt: '2026-12-29',
+  publishedAt: '2026-12-26T08:35:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Dopo un'infedeltà tutti hanno un'opinione: «lascialo», «perdonalo», «io non potrei mai»... L'unica domanda che conta: a quali condizioni un perdono è REALE?",
   introduction: `<p>Da quando lo sai, tutti sanno cosa fare al posto tuo. La tua migliore amica dice «lascialo, varrai sempre più di così». Tua madre dice «tutte le coppie attraversano delle cose»... E tu, nel mezzo, oscilli di ora in ora tra la voglia di rompere tutto e la voglia che niente sia mai esistito.</p>

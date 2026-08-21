@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "La dependencia emocional no vive solo en la pareja. La amistad fusional que se vuelve necesidad, los celos entre amigas, la exclusividad... las señales y cómo reequilibrar.",
   featuredImage: '/blog/dependance-affective-amitie.webp',
   featuredImageAlt: "Dos amigas unidas por un hilo rojo demasiado tenso entre sus muñecas",
-  publishedAt: '2026-11-17',
+  publishedAt: '2026-11-14T16:55:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Vigilamos la dependencia emocional en nuestras parejas... y la dejamos instalarse tranquilamente en nuestras amistades, donde nadie piensa en buscarla.",
   introduction: `<p>Hay unos celos de los que nadie habla nunca: los que sientes cuando tu mejor amiga se acerca a otra persona. Ese pinchazo cuando cuenta una noche en la que tú no estabas... Esa necesidad de saber que sigues siendo «la» persona, la primera en enterarte, la preferida. No te atreves a decirlo porque suena absurdo: ¿celos, entre amigas?</p>

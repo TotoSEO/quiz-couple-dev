@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Emotionale Abhängigkeit lebt nicht nur in Beziehungen. Die verschmolzene Freundschaft, die zum Bedürfnis wird, Eifersucht unter Freundinnen, Exklusivität... die Anzeichen und wie man neu ausbalanciert.",
   featuredImage: '/blog/dependance-affective-amitie.webp',
   featuredImageAlt: "Zwei Freundinnen, verbunden durch einen zu straff gespannten roten Faden zwischen ihren Handgelenken",
-  publishedAt: '2026-11-17',
+  publishedAt: '2026-11-14T16:55:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Wir achten auf emotionale Abhängigkeit in unseren Beziehungen... und lassen sie sich in unseren Freundschaften ganz ruhig einnisten, wo niemand nach ihr sucht.",
   introduction: `<p>Es gibt eine Eifersucht, von der nie jemand spricht: die, die man fühlt, wenn die beste Freundin jemand anderem näherkommt. Dieser Stich, wenn sie von einem Abend erzählt, an dem man nicht dabei war... Dieses Bedürfnis zu wissen, dass man «die» Person bleibt, die Erste, die es erfährt, die Liebste. Man traut sich nicht, es zu sagen, weil es absurd klingt: Eifersucht, unter Freundinnen?</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Per un dipendente affettivo una rottura non è un dispiacere d'amore: è un'astinenza. Perché fa così male, le trappole delle prime settimane, e come uscirne più forti.",
   featuredImage: '/blog/dependance-affective-rupture.webp',
   featuredImageAlt: "Cuore in due metà, una delle quali si trasforma in una scala che sale",
-  publishedAt: '2026-11-20',
+  publishedAt: '2026-11-17T14:15:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Tutti soffrono per una rottura. Il dipendente affettivo è in astinenza... e non è la stessa cosa da attraversare.",
   introduction: `<p>Le persone attorno a te sembrano trovarlo lungo. «Devi voltare pagina»... Facile a dirsi. Loro non sanno cosa significhi controllare il telefono appena sveglia per un messaggio che non arriverà più. Comporre un numero e riagganciare. Sentire, fisicamente, una mancanza che somiglia in modo impressionante a quella di una sostanza.</p>

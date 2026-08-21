@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "In den ersten Wochen traut man sich nichts zu fragen, aus Angst, alles kaputtzumachen. Irrtum: Hier sind die 60 Fragen für den Beziehungsanfang, dosiert ohne Etappen zu überspringen.",
   featuredImage: '/blog/questions-debut-de-relation.webp',
   featuredImageAlt: "Zwei dampfende Kaffeetassen nebeneinander, der Anfang eines Gesprächs",
-  publishedAt: '2026-10-23',
+  publishedAt: '2026-10-20T11:16:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Der Beginn einer Beziehung ist der einzige Moment, in dem man alles fragen könnte... und der, in dem man sich nichts zu fragen traut. Reparieren wir das.",
   introduction: `<p>Hier ist das Paradox des Beziehungsanfangs: Es ist DER Moment, in dem die richtigen Fragen alles verändern würden, und es ist der Moment, in dem man sie sorgfältig vermeidet... aus Angst, intensiv zu wirken, eine Etappe zu überspringen, den Zauber zu zerstören. Also geht man blind voran, mit einem Lächeln, und entdeckt die wichtigen Informationen zufällig, drei Monate zu spät.</p>

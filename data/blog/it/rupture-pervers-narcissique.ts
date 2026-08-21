@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Lasciare un narcisista non somiglia a nessun'altra rottura. Cosa preparare prima, cosa farà dopo, e come tenere il contatto zero.",
   featuredImage: '/blog/rupture-pervers-narcissique.webp',
   featuredImageAlt: "Porta socchiusa verso la luce, una mano che lascia andare un filo annodato a forma di cuore",
-  publishedAt: '2026-10-20',
+  publishedAt: '2026-10-17T09:54:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Con un narcisista, la rottura non è la fine della storia. È un capitolo a sé... e quello che richiede più preparazione.",
   introduction: `<p>Lasciare qualcuno è già difficile. Lasciare un narcisista è un esercizio a parte: una rottura in cui l'altro non ti lascia andare, in cui le lacrime seguono le minacce, in cui l'uomo degli inizi riappare proprio al momento giusto... e in cui puoi ritrovarti, tre settimane dopo, tornata senza sapere bene come.</p>

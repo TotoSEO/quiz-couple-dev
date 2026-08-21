@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Das Handy kontrollieren, Szenarien ausmalen, ohne Beweis leiden: krankhafte Eifersucht erklärt. Die Grenze zur normalen Eifersucht, ihre Wurzeln und der Weg hinaus.",
   featuredImage: '/blog/jalousie-maladive.webp',
   featuredImageAlt: "Stilisiertes grünes Auge, das ein Paar in seiner Iris einschließt",
-  publishedAt: '2026-12-18',
+  publishedAt: '2026-12-15T14:15:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Normale Eifersucht schützt die Beziehung. Krankhafte Eifersucht verschlingt sie, und sie verschlingt zuerst den, der sie empfindet.",
   introduction: `<p>Es beginnt immer mit einer Kleinigkeit. Ein Vorname, der zu oft fällt, ein Lächeln auf einer Party, ein Handy, das mit dem Display nach unten auf dem Tisch liegt, und ein Szenario beginnt sich in deinem Kopf zu drehen. Du weißt, dass dieses Szenario auf nichts beruht. Du weißt es! Aber es dreht sich trotzdem, immer schneller, und schon kontrollierst du, fragst nach, malst dir Dinge aus und bist wütend auf dich, weil du es tust.</p>

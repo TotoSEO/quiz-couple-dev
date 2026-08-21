@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Le sue tecniche nell'ordine in cui le tira fuori, i suoi veri punti deboli, l'effetto del silenzio su di lui e le sue reazioni quando viene smascherato.",
   featuredImage: '/blog/manipulateur-narcissique.webp',
   featuredImageAlt: "Giocatore di scacchi i cui pezzi sono sagome umane",
-  publishedAt: '2026-09-18',
+  publishedAt: '2026-09-15T13:53:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Il manipolatore narcisista viene sempre presentato come onnipotente. È falso. Il suo sistema ha delle falle, note e prevedibili, a patto di sapere dove guardare.",
   introduction: `<p>Quando cerchi «manipolatore narcisista» finisci sempre sullo stesso articolo: l'elenco dei segnali, il ritratto del mostro, e arrangiati. Ottimo per capire, ma dopo? Una volta che SAI di avere a che fare con un manipolatore, la vera domanda diventa: come funziona e come ci si protegge concretamente.</p>

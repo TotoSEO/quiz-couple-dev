@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "«I never said that», «you're crazy», «you're making it up»... Gaslighting explained: the three-stage mechanism, the typical phrases, and how to find your footing again.",
   featuredImage: '/blog/gaslighting.webp',
   featuredImageAlt: "Gas lamp with a dimming flame, a doubting silhouette in the half-light",
-  publishedAt: '2026-11-24',
+  publishedAt: '2026-11-21T12:28:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Gaslighting doesn't lie to you about the facts. It lies to you about you: your memory, your perception, your sanity. That's what makes it the most corrosive manipulation there is.",
   introduction: `<p>You saw the scene. You were there, you heard the words, you could repeat them... And yet, opposite you, perfect composure: «I never said that». Not a hesitation. So you check in your head, once, twice... and a small crack opens: what if it was me?</p>

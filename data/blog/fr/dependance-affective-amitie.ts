@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "La dépendance affective ne vit pas que dans le couple. L'amitié fusionnelle qui vire au besoin, la jalousie amicale, l'exclusivité... les signes, et comment rééquilibrer.",
   featuredImage: '/blog/dependance-affective-amitie.webp',
   featuredImageAlt: "Deux amies liées par un fil rouge trop tendu entre leurs poignets",
-  publishedAt: '2026-11-17',
+  publishedAt: '2026-11-14T16:55:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "On surveille la dépendance affective dans nos couples... et on la laisse s'installer tranquillement dans nos amitiés, là où personne ne pense à la chercher.",
   introduction: `<p>Il y a une jalousie dont personne ne parle jamais : celle qu'on ressent quand notre meilleure amie se rapproche de quelqu'un d'autre. Ce pincement quand elle raconte une soirée où on n'était pas... Ce besoin de savoir qu'on reste « la » personne, la première au courant, la préférée. On n'ose pas le dire, parce que ça paraît absurde : de la jalousie, entre copines ?</p>

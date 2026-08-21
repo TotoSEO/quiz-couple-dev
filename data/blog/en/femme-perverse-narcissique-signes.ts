@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Adorable in public, demolishing in private. The 10 signs of the narcissistic woman, her masks, and why the men who endure her never talk about it.",
   featuredImage: '/blog/femme-perverse-narcissique-signes.webp',
   featuredImageAlt: "Woman holding a smiling mask in front of her face, a hard shadow cast on the wall",
-  publishedAt: '2026-09-29',
+  publishedAt: '2026-09-26T09:25:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "We always picture the narcissistic abuser as male. The result: men living under a woman's control doubt twice over, about their relationship, and about their right to suffer from it.",
   introduction: `<p>Search «narcissistic abuser» on any site: the examples are male, the victims female. So when it's YOUR partner who blows hot and cold, who tears you down behind closed doors and charms everyone outside, what do you do? You doubt. Twice rather than once. About what you're living through, first. And about your right to suffer from it, second.</p>

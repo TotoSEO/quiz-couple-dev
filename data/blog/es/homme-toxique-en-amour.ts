@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "No todos los hombres tóxicos son narcisistas. Los 6 perfiles de hombre tóxico en el amor, lo que te hacen vivir y cuáles pueden cambiar.",
   featuredImage: '/blog/homme-toxique-en-amour.webp',
   featuredImageAlt: "Seis siluetas masculinas, algunas proyectando una sombra con espinas",
-  publishedAt: '2026-10-27',
+  publishedAt: '2026-10-24T13:37:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Entre el torpe que puede cambiar y el manipulador que no cambiará hay toda una gama... y no te proteges de ellos de la misma manera.",
   introduction: `<p>Desde que «tóxico» se convirtió en la palabra de moda, ahí dentro cabe todo: el celoso, el distante, el que se enfada, el mentiroso. Y es un problema de verdad, porque esos hombres no se parecen. Algunos dañan por inmadurez, sin querer, y pueden cambiar. Otros dañan por funcionamiento, y no cambiarán. <strong>Confundir a los dos es o huir de un hombre que podría haber crecido... o quedarse años con un hombre que no crecerá nunca.</strong></p>

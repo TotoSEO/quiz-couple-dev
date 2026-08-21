@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Einen Narzissten zu verlassen gleicht keiner anderen Trennung. Was du vorher vorbereiten musst, was er danach tun wird, und wie du den Kontaktabbruch durchhältst.",
   featuredImage: '/blog/rupture-pervers-narcissique.webp',
   featuredImageAlt: "Angelehnte Tür zum Licht, eine Hand lässt einen zu einem Herz geknoteten Faden los",
-  publishedAt: '2026-10-20',
+  publishedAt: '2026-10-17T09:54:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Bei einem Narzissten ist die Trennung nicht das Ende der Geschichte. Sie ist ein eigenes Kapitel... und dasjenige, das die meiste Vorbereitung braucht.",
   introduction: `<p>Jemanden zu verlassen ist schon schwer. Einen Narzissten zu verlassen ist eine eigene Übung: eine Trennung, bei der der andere dich nicht gehen lässt, bei der auf Drohungen Tränen folgen, bei der der Mann vom Anfang genau im richtigen Moment wieder auftaucht... und bei der du dich drei Wochen später zurück wiederfinden kannst, ohne recht zu wissen wie.</p>

@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "«Eres demasiado sensible», «es culpa tuya», «te lo digo por tu bien»... 35 frases de manipulador descifradas, con su traducción real y cómo replicar.",
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
   featuredImageAlt: "Bocadillos de diálogo superpuestos, uno de ellos aplastando lentamente a otro más pequeño",
-  publishedAt: '2026-09-08',
+  publishedAt: '2026-09-05T09:15:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Un manipulador no miente al azar. Elige de un repertorio, siempre el mismo. Y en cuanto conoces el repertorio, algo se rompe en el truco de magia.",
   introduction: `<p>«Eres demasiado sensible.» ¿Cuántas veces has oído esa? ¿Y cuántas te has ido preguntándote si, efectivamente, no estarías exagerando un poco?</p>

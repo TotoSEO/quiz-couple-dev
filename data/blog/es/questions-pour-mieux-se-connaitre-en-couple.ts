@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "Después de años juntos se cree haberlo visto todo. ¡Error! 60 preguntas para haceros en pareja y comprobarlo... y redescubriros de paso.",
   featuredImage: '/blog/questions-pour-mieux-se-connaitre-en-couple.webp',
   featuredImageAlt: "Pareja sentada espalda con espalda con interrogantes y corazones encima",
-  publishedAt: '2026-10-13',
+  publishedAt: '2026-10-10T13:37:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "El día en que se dejan de hacer preguntas, no es que se haya terminado de descubrir al otro... es que se ha dejado de buscar.",
   introduction: `<p>Haz la prueba un día: pregúntale a una pareja de diez años si se conocen de memoria. Dirán que sí, evidentemente. Luego hazles tres preguntas algo precisas, el sueño que él abandonó, el miedo que ella nunca dice, lo que cada uno cree que el otro piensa de él... y mira las caras. Siempre hay una sorpresa. ¡Siempre!</p>

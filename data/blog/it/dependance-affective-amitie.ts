@@ -8,7 +8,7 @@ const article: BlogArticleData = {
   metaDescription: "La dipendenza affettiva non vive solo nella coppia. L'amicizia fusionale che diventa bisogno, la gelosia tra amiche, l'esclusività... i segnali e come riequilibrare.",
   featuredImage: '/blog/dependance-affective-amitie.webp',
   featuredImageAlt: "Due amiche legate da un filo rosso troppo teso tra i polsi",
-  publishedAt: '2026-11-17',
+  publishedAt: '2026-11-14T16:55:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Sorvegliamo la dipendenza affettiva nelle nostre coppie... e la lasciamo installarsi tranquillamente nelle nostre amicizie, dove nessuno pensa di cercarla.",
   introduction: `<p>C'è una gelosia di cui non parla mai nessuno: quella che si prova quando la migliore amica si avvicina a qualcun altro. Quella fitta quando racconta una serata in cui non c'eri... Quel bisogno di sapere di essere ancora «la» persona, la prima a saperlo, la preferita. Non si osa dirlo, perché sembra assurdo: gelosia, tra amiche?</p>
