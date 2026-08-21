@@ -1,0 +1,5 @@
+Portraits des auteurs du site.
+
+Deposer ici thomas.webp (carre, environ 400x400, moins de 40 Ko).
+Le build verifie que le fichier existe avant de l'utiliser : tant qu'il est
+absent, le portrait est simplement ignore, sans image cassee sur les articles.
