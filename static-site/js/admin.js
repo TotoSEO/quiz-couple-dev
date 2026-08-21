@@ -410,6 +410,12 @@
   // n'existe pas ou n'a rien enregistre, auquel cas la bascule reste sur
   // « terminés » et le dit franchement plutot que d'afficher des zeros.
   var statsLances = null;
+  // Serie quotidienne des lancements, meme forme que statsParJour. Elle sert
+  // a borner le taux de finition : les completions sont enregistrees depuis
+  // des mois, les lancements depuis la mise en service de quiz_starts.
+  // Rapporter les unes aux autres sur toute leur histoire donne des taux a
+  // quatre chiffres, qui ne veulent rien dire.
+  var statsLancesParJour = null;
   var statsMesure = 'termines';
   var statsRange = 30;
   var statsSelectedSlug = null;
@@ -504,6 +510,21 @@
       statsLances = map;
       majTauxGlobal(elTaux);
       renderStatsList();
+      // La serie quotidienne arrive apres : elle borne la fenetre commune.
+      statsRpc('get_quiz_starts_daily_par_quiz', { p_days: 62, p_tz: fuseau() })
+        .then(function (jours) {
+          if (!Array.isArray(jours) || jours.error) return;
+          var idx = {};
+          jours.forEach(function (r) {
+            var slug = r.quiz_slug, k = rowDateKey(r);
+            if (!slug || !k) return;
+            if (!idx[slug]) idx[slug] = {};
+            idx[slug][k] = (idx[slug][k] || 0) + rowTotal(r);
+          });
+          statsLancesParJour = idx;
+          majTauxGlobal(document.getElementById('admin-stats-taux'));
+          renderStatsList();
+        }).catch(function () {});
     }).catch(function () {
       // Migration pas encore appliquee : on le dit, on ne montre pas un zero
       // qui ressemblerait a une absence de trafic.
@@ -516,20 +537,82 @@
     });
   }
 
-  // Le taux global se calcule sur les pages presentes des deux cotes : une
-  // page qui n'a que des completions (donnees anterieures a la mesure des
-  // lancements) fausserait le rapport vers le haut.
+  // ── Fenetre commune aux deux mesures ────────────────────────────────
+  // quiz_completions tourne depuis des mois, quiz_starts depuis sa mise en
+  // service. Un rapport pris sur toute l'histoire de chacune compare des
+  // milliers de parties finies a quelques dizaines de parties lancees, et
+  // sort un pourcentage a quatre chiffres. Le taux n'a de sens que sur la
+  // periode ou les deux comptent : depuis le premier lancement enregistre.
+  var MINI_PAGE = 10;    // sous ce nombre de lancements, un taux par page est du bruit
+  var MINI_GLOBAL = 25;  // idem pour le taux global
+
+  // Debut de la fenetre : le lendemain du premier lancement enregistre, pas
+  // le jour meme. Ce premier jour est forcement partiel, la mesure ayant ete
+  // mise en service en cours de journee, alors que les completions y comptent
+  // depuis minuit. L'y inclure gonflerait le taux d'un facteur arbitraire.
+  // Tant que ce lendemain n'est pas passe, il n'y a pas de fenetre du tout.
+  function debutFenetre() {
+    if (!statsLancesParJour) return null;
+    var min = null;
+    Object.keys(statsLancesParJour).forEach(function (slug) {
+      Object.keys(statsLancesParJour[slug]).forEach(function (j) {
+        if (statsLancesParJour[slug][j] > 0 && (min === null || j < min)) min = j;
+      });
+    });
+    if (!min) return null;
+    var d = new Date(min + 'T12:00:00Z');
+    d.setUTCDate(d.getUTCDate() + 1);
+    return d.toISOString().slice(0, 10);
+  }
+
+  // Somme des deux compteurs d'une page sur la fenetre commune. Retourne null
+  // tant que l'une des deux series manque : mieux vaut un tiret qu'un chiffre
+  // faux.
+  function comptesFenetre(slug) {
+    var depuis = debutFenetre();
+    if (!depuis || !statsParJour) return null;
+    var l = statsLancesParJour[slug] || {}, f = statsParJour[slug] || {};
+    var lances = 0, finis = 0;
+    Object.keys(l).forEach(function (j) { if (j >= depuis) lances += l[j]; });
+    Object.keys(f).forEach(function (j) { if (j >= depuis) finis += f[j]; });
+    return { lances: lances, finis: finis, depuis: depuis };
+  }
+
+  // Une partie commencee avant la mise en service et finie apres compte comme
+  // finie sans lancement : sur une fenetre courte, ca peut depasser 100 %. On
+  // plafonne, un taux de finition ne peut pas etre superieur a un.
+  function tauxDepuis(lances, finis) {
+    if (!lances) return null;
+    return Math.min(100, Math.round((finis / lances) * 100));
+  }
+
   function majTauxGlobal(elTaux) {
     if (!elTaux) return;
-    if (!statsLances) { elTaux.textContent = '—'; return; }
+    var libelle = elTaux.parentNode && elTaux.parentNode.querySelector('.stats-kpi-label');
+    function pasEncore(raison) {
+      elTaux.textContent = '—';
+      if (libelle) libelle.textContent = 'Taux de finition · ' + raison;
+    }
+    if (!statsLances) { pasEncore('lancés indisponibles'); return; }
+    var depuis = debutFenetre();
+    if (!depuis || !statsParJour) { pasEncore('mesure trop récente'); return; }
     var lances = 0, finis = 0;
     statsCounts.forEach(function (r) {
-      var l = statsLances[r.quiz_slug];
-      if (!l) return;
-      lances += l;
-      finis += Number(r.total) || 0;
+      var c = comptesFenetre(r.quiz_slug);
+      if (!c) return;
+      lances += c.lances;
+      finis += c.finis;
     });
-    elTaux.textContent = lances > 0 ? Math.round((finis / lances) * 100) + ' %' : '—';
+    if (lances < MINI_GLOBAL) { pasEncore(lances + ' lancés depuis le ' + jourCourt(depuis) + ', trop tôt'); return; }
+    var t = tauxDepuis(lances, finis);
+    elTaux.textContent = t + ' %';
+    if (libelle) libelle.textContent = 'Taux de finition depuis le ' + jourCourt(depuis);
+  }
+
+  // « 2026-08-21 » devient « 21 août ».
+  function jourCourt(iso) {
+    var d = new Date(iso + 'T12:00:00Z');
+    return isNaN(d.getTime()) ? iso : d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' });
   }
 
   // ── Series quotidiennes par quiz : compteur du jour + tops / flops ──
@@ -576,6 +659,7 @@
       if (!statsParJour[slug]) statsParJour[slug] = {};
       statsParJour[slug][k] = (statsParJour[slug][k] || 0) + rowTotal(r);
     });
+    majTauxGlobal(document.getElementById('admin-stats-taux'));
     renderStatsList();
     renderMovers();
   }
@@ -706,9 +790,15 @@
     var lances = statsLances ? (statsLances[slug] || 0) : 0;
     if (statsMesure === 'lances') return { n: lances, libelle: lances.toLocaleString('fr-FR'), sur: termines.toLocaleString('fr-FR') + ' finis', classe: '' };
     if (statsMesure === 'ratio') {
-      if (!lances) return { n: -1, libelle: '—', sur: '', classe: '' };
-      var pct = Math.round((termines / lances) * 100);
-      return { n: pct, libelle: pct + ' %', sur: termines.toLocaleString('fr-FR') + ' / ' + lances.toLocaleString('fr-FR'),
+      // Sur la fenetre commune uniquement, sinon on divise des mois de
+      // completions par quelques heures de lancements.
+      var c = comptesFenetre(slug);
+      if (!c || c.lances < MINI_PAGE) {
+        return { n: -1, libelle: '—', sur: c ? c.lances + ' lancés' : '', classe: '' };
+      }
+      var pct = tauxDepuis(c.lances, c.finis);
+      return { n: pct, libelle: pct + ' %',
+               sur: c.finis.toLocaleString('fr-FR') + ' / ' + c.lances.toLocaleString('fr-FR'),
                classe: pct < 40 ? ' est-faible' : (pct >= 70 ? ' est-fort' : '') };
     }
     return { n: termines, libelle: termines.toLocaleString('fr-FR'), sur: lances ? lances.toLocaleString('fr-FR') + ' lancés' : '', classe: '' };
@@ -1988,7 +2078,7 @@
         var aide = document.getElementById('admin-stats-mesure-aide');
         if (aide) {
           aide.textContent = statsMesure === 'ratio'
-            ? 'Part des parties lancées qui vont jusqu\'au résultat. En rouge sous 40 %, en vert à partir de 70 %.'
+            ? 'Part des parties lancées qui vont jusqu\'au résultat, mesurée depuis la mise en service des lancés. Un tiret veut dire moins de ' + MINI_PAGE + ' lancés, trop peu pour conclure. Rouge sous 40 %, vert à partir de 70 %.'
             : statsMesure === 'lances'
               ? 'Parties commencées, abandons compris. Cliquez sur une page pour voir sa courbe.'
               : 'Parties allées jusqu\'au résultat. Cliquez sur une page pour voir sa courbe.';
