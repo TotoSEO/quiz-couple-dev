@@ -7620,6 +7620,10 @@ var QuizEngine = (function() {
     shuffleArray: shuffleArray,
     tirageStratifieSain: tirageStratifieSain,
     tirageStratifieTester: tirageStratifieTester,
+    // Expose pour les tests solo qui piochent dans un pool plus grand que ce
+    // qu'ils posent : sans stratification, deux personnes ne repondent pas aux
+    // memes dimensions et ne mesurent donc pas la meme chose.
+    tirageStratifie: tirageStratifie,
     // Exposé pour les moteurs écrits directement dans un gabarit de page,
     // qui doivent partager le même bouton et le même message que les autres.
     renderShareButton: renderShareButton,

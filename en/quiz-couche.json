@@ -10,7 +10,7 @@
     "title": "How does this test work?",
     "step1": "You say whether your partner is a man or a woman. The fifteen questions adapt, and two of them change completely.",
     "step2": "Answer with the <strong>last few weeks</strong> in mind, not your whole history. A sign counts because it changed, not because it exists.",
-    "step3": "Each answer is worth 0 to 3 points. The total places you in one of four levels of reading.",
+    "step3": "Each question carries a weight matching how serious it is: an unexplained expense counts for more than a new haircut. The total, from 0 to 155 points, places you in one of four reading levels.",
     "step4": "The result tells you what your observations weigh together, and what it is reasonable to do with them.",
     "outro": "Answer honestly, including when the honest answer is \"I don't know\". A reassuring result obtained by rounding off the corners is worth nothing."
   },
@@ -44,7 +44,7 @@
   },
   "section3": {
     "title": "What your score says, and what it doesn't",
-    "p1": "The test is scored out of 45. The four levels below are not verdicts, they are ways of reading what you answered. A high score describes a behaviour, never a fact.",
+    "p1": "Each question carries a weight matching how serious it is, and each answer a value matching its rank. The total runs from 0 to 155 points. The four levels below are not verdicts, they are ways of reading what you answered. A high score describes a behaviour, never a fact.",
     "headerScore": "Score",
     "headerLevel": "Level",
     "headerAnalysis": "What it means",

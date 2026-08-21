@@ -10,7 +10,7 @@
     "title": "Comment fonctionne ce test ?",
     "step1": "Vous répondez de votre côté, sur votre relation actuelle. Rien n'est envoyé, personne ne verra vos réponses.",
     "step2": "Pensez aux <strong>dernières semaines</strong> et non au début de votre histoire. Une relation à distance change de rythme plusieurs fois, ce qui compte est la période en cours.",
-    "step3": "Les réponses vont du signe le plus inquiétant au plus rassurant, de 0 à 3 points.",
+    "step3": "Les réponses vont du signe le plus inquiétant au plus rassurant, et chaque question porte un poids selon son importance. Le total va de 0 à 160 points : ici, un score élevé est une bonne nouvelle.",
     "step4": "Le résultat vous dit si ce que vous vivez ressemble à une usure de la distance ou à autre chose.",
     "outro": "Répondez à froid, pas juste après une dispute ou un silence de deux jours. Les relations à distance ont des creux qui ne veulent rien dire pris isolément."
   },
@@ -42,7 +42,7 @@
   },
   "section3": {
     "title": "Ce que dit votre score",
-    "p1": "Le test est noté sur 45 points. Ici, un score élevé est une bonne nouvelle : les réponses vont du signe le plus inquiétant au plus rassurant.",
+    "p1": "Chaque question porte un poids selon sa gravité, et chaque réponse une valeur selon son rang. Le total va de 0 à 160 points. Ici, un score élevé est une bonne nouvelle : les réponses vont du signe le plus inquiétant au plus rassurant.",
     "headerScore": "Score",
     "headerLevel": "Niveau",
     "headerAnalysis": "Ce que ça veut dire",

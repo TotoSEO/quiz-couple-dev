@@ -713,9 +713,295 @@
   //   3 = fondamental   2 = structurant   1 = signal faible
   // Le maximum réel se recalcule plus bas à partir des points posés, donc les
   // paliers suivent le barème sans être écrits à la main.
+  // Courbe de reference, pour une question a quatre reponses. Elle monte
+  // lentement puis fort : repondre « parfois » partout ne doit pas suffire a
+  // declencher un verdict alarmant.
   var SOLO_VALEURS = [0, 1, 3, 5];
 
+  // Toutes les questions n'ont pas quatre reponses : le mariage en a trois sur
+  // vingt-cinq, le divorce en a de deux a cinq. Lire la courbe par l'indice
+  // ecrasait ces questions, une question a trois reponses plafonnant a trois
+  // cinquiemes de son poids, et la cinquieme reponse d'une question a cinq
+  // choix ne valant rien du tout. On interpole donc la courbe sur le nombre
+  // reel de reponses : la premiere vaut toujours zero, la derniere toujours le
+  // poids plein, et la forme reste la meme.
+  function valeurAuRang(rang, nb) {
+    if (nb <= 1) return SOLO_VALEURS[SOLO_VALEURS.length - 1];
+    var t = (rang / (nb - 1)) * (SOLO_VALEURS.length - 1);
+    var bas = Math.floor(t);
+    if (bas >= SOLO_VALEURS.length - 1) return SOLO_VALEURS[SOLO_VALEURS.length - 1];
+    return SOLO_VALEURS[bas] + (SOLO_VALEURS[bas + 1] - SOLO_VALEURS[bas]) * (t - bas);
+  }
+
   var SOLO_BAREME = {
+    // Confiance : consulter le telephone en cachette est un acte, imaginer
+    // un voyage entre amis n'en est pas un.
+    confiance: {
+      1:  { d: 'reaction',     w: 2 },
+      2:  { d: 'reaction',     w: 2 },
+      3:  { d: 'verification', w: 3 },
+      4:  { d: 'reaction',     w: 1 },
+      5:  { d: 'fiabilite',    w: 2 },
+      6:  { d: 'limites',      w: 2 },
+      7:  { d: 'reaction',     w: 2 },
+      8:  { d: 'reparation',   w: 3 },
+      9:  { d: 'reassurance',  w: 3 },
+      10: { d: 'reaction',     w: 1 },
+      11: { d: 'intimite',     w: 3 },
+      12: { d: 'reaction',     w: 2 },
+      13: { d: 'hypothese',    w: 1 },
+      14: { d: 'tolerance',    w: 2 },
+      15: { d: 'transparence', w: 2 },
+      16: { d: 'reparation',   w: 2 },
+      17: { d: 'honnetete',    w: 3 },
+      18: { d: 'conflit',      w: 2 },
+      19: { d: 'hypothese',    w: 2 },
+      20: { d: 'synthese',     w: 3 }
+    },
+    // Jalousie ressentie : ce qu'on imagine pese moins que ce qu'on va
+    // verifier, telephone ou abonnements.
+    jalousie1: {
+      1:  { d: 'attente',      w: 2 },
+      2:  { d: 'imagination',  w: 2 },
+      3:  { d: 'imagination',  w: 1 },
+      4:  { d: 'autonomie',    w: 2 },
+      5:  { d: 'passe',        w: 1 },
+      6:  { d: 'imagination',  w: 1 },
+      7:  { d: 'attente',      w: 2 },
+      8:  { d: 'imagination',  w: 2 },
+      9:  { d: 'verification', w: 3 },
+      10: { d: 'attente',      w: 2 },
+      11: { d: 'soupcon',      w: 2 },
+      12: { d: 'soupcon',      w: 2 },
+      13: { d: 'imagination',  w: 1 },
+      14: { d: 'passe',        w: 2 },
+      15: { d: 'verification', w: 3 },
+      16: { d: 'imagination',  w: 1 },
+      17: { d: 'imagination',  w: 1 },
+      18: { d: 'situation',    w: 2 },
+      19: { d: 'imagination',  w: 2 },
+      20: { d: 'synthese',     w: 3 }
+    },
+    // Jalousie subie : suivre la localisation, dicter la tenue ou interdire
+    // des frequentations sont du controle, pas de l'inquietude.
+    jalousie2: {
+      1:  { d: 'reaction',     w: 2 },
+      2:  { d: 'reaction',     w: 2 },
+      3:  { d: 'autonomie',    w: 2 },
+      4:  { d: 'controle',     w: 2 },
+      5:  { d: 'reaction',     w: 2 },
+      6:  { d: 'autonomie',    w: 2 },
+      7:  { d: 'soupcon',      w: 1 },
+      8:  { d: 'passe',        w: 2 },
+      9:  { d: 'reaction',     w: 2 },
+      10: { d: 'controle',     w: 2 },
+      11: { d: 'reaction',     w: 2 },
+      12: { d: 'surveillance', w: 3 },
+      13: { d: 'controle',     w: 3 },
+      14: { d: 'reaction',     w: 2 },
+      15: { d: 'passe',        w: 1 },
+      16: { d: 'situation',    w: 2 },
+      17: { d: 'isolement',    w: 3 },
+      18: { d: 'conflit',      w: 2 },
+      19: { d: 'confiance',    w: 2 },
+      20: { d: 'synthese',     w: 3 }
+    },
+    // Amour ou habitude : la raison de rester et ce qu'on ressent en imaginant
+    // partir disent plus que les papillons du debut.
+    habitude: {
+      1:  { d: 'elan',       w: 2 },
+      2:  { d: 'desir',      w: 2 },
+      3:  { d: 'motif',      w: 3 },
+      4:  { d: 'projection', w: 3 },
+      5:  { d: 'projets',    w: 2 },
+      6:  { d: 'effort',     w: 1 },
+      7:  { d: 'echanges',   w: 2 },
+      8:  { d: 'manque',     w: 2 },
+      9:  { d: 'admiration', w: 2 },
+      10: { d: 'tendresse',  w: 2 },
+      11: { d: 'jalousie',   w: 2 },
+      12: { d: 'motif',      w: 3 },
+      13: { d: 'complicite', w: 2 },
+      14: { d: 'projection', w: 2 },
+      15: { d: 'confidence', w: 2 },
+      16: { d: 'effort',     w: 1 },
+      17: { d: 'elan',       w: 1 },
+      18: { d: 'curiosite',  w: 2 },
+      19: { d: 'ancrage',    w: 2 },
+      20: { d: 'synthese',   w: 3 }
+    },
+    // Suis-je amoureux : voir ses defauts, se projeter et accepter que ce reste
+    // amical sont les questions qui tranchent.
+    suisjeamoureux: {
+      1:  { d: 'pensee',       w: 2 },
+      2:  { d: 'corps',        w: 2 },
+      3:  { d: 'pensee',       w: 1 },
+      4:  { d: 'absence',      w: 2 },
+      5:  { d: 'partage',      w: 2 },
+      6:  { d: 'lucidite',     w: 3 },
+      7:  { d: 'exclusivite',  w: 3 },
+      8:  { d: 'place',        w: 1 },
+      9:  { d: 'partage',      w: 2 },
+      10: { d: 'projection',   w: 3 },
+      11: { d: 'entourage',    w: 1 },
+      12: { d: 'apres',        w: 2 },
+      13: { d: 'absence',      w: 2 },
+      14: { d: 'attention',    w: 2 },
+      15: { d: 'don',          w: 2 },
+      16: { d: 'authenticite', w: 3 },
+      17: { d: 'comparaison',  w: 1 },
+      18: { d: 'memoire',      w: 1 },
+      19: { d: 'exclusivite',  w: 3 },
+      20: { d: 'aveu',         w: 3 }
+    },
+    // Divorce : la peur et les violences sont des questions de securite. Avoir
+    // des enfants communs ou etre suivi par un professionnel decrit une
+    // situation, pas une gravite, et pesait pourtant autant jusqu'ici.
+    divorce: {
+      1:  { d: 'doute',         w: 2 },
+      2:  { d: 'projection',    w: 3 },
+      3:  { d: 'tentatives',    w: 2 },
+      4:  { d: 'climat',        w: 2 },
+      5:  { d: 'securite',      w: 3 },
+      6:  { d: 'securite',      w: 3 },
+      7:  { d: 'complicite',    w: 2 },
+      8:  { d: 'intimite',      w: 1 },
+      9:  { d: 'respect',       w: 3 },
+      10: { d: 'contexte',      w: 1 },
+      11: { d: 'contexte',      w: 1 },
+      12: { d: 'passe',         w: 1 },
+      13: { d: 'projection',    w: 2 },
+      14: { d: 'communication', w: 2 },
+      15: { d: 'charge',        w: 2 },
+      16: { d: 'ailleurs',      w: 2 },
+      17: { d: 'etat',          w: 3 },
+      18: { d: 'contexte',      w: 1 },
+      19: { d: 'entourage',     w: 2 },
+      20: { d: 'projets',       w: 2 },
+      21: { d: 'liberte',       w: 3 },
+      22: { d: 'depart',        w: 3 },
+      23: { d: 'reciprocite',   w: 2 },
+      24: { d: 'projection',    w: 2 },
+      25: { d: 'decision',      w: 3 }
+    },
+    // Relation a distance : la place occupee la-bas et la fin annoncee de la
+    // distance comptent plus que la qualite d'un appel.
+    distanceAime: {
+      1:  { d: 'echanges',      w: 2 },
+      2:  { d: 'initiative',    w: 2 },
+      3:  { d: 'echanges',      w: 2 },
+      4:  { d: 'retrouvailles', w: 2 },
+      5:  { d: 'place',         w: 3 },
+      6:  { d: 'transparence',  w: 2 },
+      7:  { d: 'attentions',    w: 2 },
+      8:  { d: 'projet',        w: 3 },
+      9:  { d: 'intimite',      w: 1 },
+      10: { d: 'fiabilite',     w: 2 },
+      11: { d: 'place',         w: 3 },
+      12: { d: 'retrouvailles', w: 2 },
+      13: { d: 'silences',      w: 2 },
+      14: { d: 'projet',        w: 3 },
+      15: { d: 'accroche',      w: 1 }
+    },
+    // A-t-il couche avec une autre : les depenses inexpliquees, les explications
+    // qui ne tiennent pas et le retour du preservatif sont des faits.
+    // L'intuition et un changement d'apparence n'en sont pas.
+    coucheH: {
+      1:  { d: 'habitudes',    w: 2 },
+      2:  { d: 'secret',       w: 2 },
+      3:  { d: 'intimite',     w: 2 },
+      4:  { d: 'apparence',    w: 1 },
+      5:  { d: 'entourage',    w: 2 },
+      6:  { d: 'secret',       w: 1 },
+      7:  { d: 'retournement', w: 3 },
+      8:  { d: 'preuve',       w: 3 },
+      9:  { d: 'preuve',       w: 3 },
+      10: { d: 'entourage',    w: 2 },
+      11: { d: 'compensation', w: 1 },
+      12: { d: 'evitement',    w: 2 },
+      13: { d: 'habitudes',    w: 3 },
+      14: { d: 'preuve',       w: 3 },
+      15: { d: 'ressenti',     w: 1 }
+    },
+    // Meme serie declinee au feminin : memes poids.
+    coucheF: {
+      1:  { d: 'habitudes',    w: 2 },
+      2:  { d: 'secret',       w: 2 },
+      3:  { d: 'intimite',     w: 2 },
+      4:  { d: 'apparence',    w: 1 },
+      5:  { d: 'entourage',    w: 2 },
+      6:  { d: 'secret',       w: 1 },
+      7:  { d: 'retournement', w: 3 },
+      8:  { d: 'preuve',       w: 3 },
+      9:  { d: 'preuve',       w: 3 },
+      10: { d: 'entourage',    w: 2 },
+      11: { d: 'compensation', w: 1 },
+      12: { d: 'evitement',    w: 2 },
+      13: { d: 'habitudes',    w: 3 },
+      14: { d: 'preuve',       w: 3 },
+      15: { d: 'ressenti',     w: 1 }
+    },
+    // M'aime-t-il en secret : la reaction quand on parle de quelqu'un d'autre et
+    // la memoire des details valent mieux qu'un regard interprete.
+    secretH: {
+      1:  { d: 'regard',      w: 2 },
+      2:  { d: 'attention',   w: 3 },
+      3:  { d: 'initiative',  w: 2 },
+      4:  { d: 'constance',   w: 2 },
+      5:  { d: 'proximite',   w: 2 },
+      6:  { d: 'echanges',    w: 2 },
+      7:  { d: 'exclusivite', w: 3 },
+      8:  { d: 'entourage',   w: 2 },
+      9:  { d: 'confidence',  w: 2 },
+      10: { d: 'accroche',    w: 1 }
+    },
+    // Meme serie declinee au feminin : memes poids.
+    secretF: {
+      1:  { d: 'regard',      w: 2 },
+      2:  { d: 'attention',   w: 3 },
+      3:  { d: 'initiative',  w: 2 },
+      4:  { d: 'constance',   w: 2 },
+      5:  { d: 'proximite',   w: 2 },
+      6:  { d: 'echanges',    w: 2 },
+      7:  { d: 'exclusivite', w: 3 },
+      8:  { d: 'entourage',   w: 2 },
+      9:  { d: 'confidence',  w: 2 },
+      10: { d: 'accroche',    w: 1 }
+    },
+    // Mariage : vouloir des enfants, la fidelite et le lieu de vie sont des
+    // sujets de rupture. Les standards de proprete n'en sont pas.
+    marriage: {
+      1:  { d: 'argent',     w: 2 },
+      2:  { d: 'argent',     w: 2 },
+      3:  { d: 'argent',     w: 1 },
+      4:  { d: 'argent',     w: 2 },
+      5:  { d: 'enfants',    w: 3 },
+      6:  { d: 'enfants',    w: 2 },
+      7:  { d: 'enfants',    w: 3 },
+      8:  { d: 'famille',    w: 1 },
+      9:  { d: 'quotidien',  w: 1 },
+      10: { d: 'quotidien',  w: 1 },
+      11: { d: 'quotidien',  w: 2 },
+      12: { d: 'valeurs',    w: 2 },
+      13: { d: 'valeurs',    w: 3 },
+      14: { d: 'valeurs',    w: 1 },
+      15: { d: 'social',     w: 1 },
+      16: { d: 'social',     w: 2 },
+      17: { d: 'autonomie',  w: 2 },
+      18: { d: 'intimite',   w: 2 },
+      19: { d: 'fidelite',   w: 3 },
+      20: { d: 'intimite',   w: 2 },
+      21: { d: 'lieu',       w: 3 },
+      22: { d: 'carriere',   w: 2 },
+      23: { d: 'lieu',       w: 2 },
+      24: { d: 'projets',    w: 2 },
+      25: { d: 'conflit',    w: 3 },
+      26: { d: 'conflit',    w: 2 },
+      27: { d: 'reparation', w: 2 },
+      28: { d: 'besoins',    w: 2 },
+      29: { d: 'aide',       w: 1 },
+      30: { d: 'synthese',   w: 3 }
+    },
     // Dépendance affective : le cœur du test est la place que la relation prend
     // dans l'identité et la vie de la personne, pas ses réactions ponctuelles.
     dependance: {
@@ -793,8 +1079,7 @@
         // Les options sont rangées de la plus saine à la pire dans un test
         // ascendant, l'inverse sinon.
         var rang = ascendant ? j : (n - 1 - j);
-        var v = SOLO_VALEURS[rang] !== undefined ? SOLO_VALEURS[rang] : 0;
-        q.options[j].points = poids * v;
+        q.options[j].points = Math.round(poids * valeurAuRang(rang, n));
       }
     }
     return true;
@@ -809,6 +1094,18 @@
     // dessous, donc les paliers suivent le barème sans être écrits à la main.
     if (cfg.ptsExplicites) appliquePointsExplicites(cfg.prefix, questions);
     else appliqueBaremePondere(cfg.prefix, questions, !!cfg.ascending);
+
+    // Un test qui pioche dans un pool plus grand que ce qu'il pose doit couvrir
+    // toutes ses dimensions, sinon deux personnes ne mesurent pas la meme chose
+    // d'une partie a l'autre. Le tirage aleatoire pur a deja eu lieu plus haut :
+    // on repart du pool complet pour le refaire proprement.
+    if (SOLO_BAREME[cfg.prefix] && cfg.pool > cfg.totalQ && QuizEngine.tirageStratifie) {
+      var complet = parseGdQuestions(cfg.prefix, cfg.pool + 10, cfg.ascending);
+      if (complet.length > cfg.totalQ) {
+        appliqueBaremePondere(cfg.prefix, complet, !!cfg.ascending);
+        questions = QuizEngine.tirageStratifie(complet, SOLO_BAREME[cfg.prefix], cfg.totalQ);
+      }
+    }
 
     // Calculate real achievable max score (sum of max points per question)
     var realMaxScore = 0;

@@ -10,7 +10,7 @@
     "title": "Wie funktioniert dieser Test?",
     "step1": "Du antwortest allein, über deine aktuelle Beziehung. Nichts wird gesendet, niemand sieht deine Antworten.",
     "step2": "Denk an die <strong>letzten Wochen</strong>, nicht an den Anfang eurer Geschichte. Eine Fernbeziehung wechselt mehrfach den Rhythmus, es zählt der laufende Abschnitt.",
-    "step3": "Die Antworten reichen vom beunruhigendsten bis zum beruhigendsten Zeichen, von 0 bis 3 Punkten.",
+    "step3": "Die Antworten reichen vom beunruhigendsten bis zum beruhigendsten Zeichen, und jede Frage trägt ein Gewicht entsprechend ihrer Bedeutung. Die Summe reicht von 0 bis 160 Punkten: Hier ist ein hohes Ergebnis eine gute Nachricht.",
     "step4": "Das Ergebnis sagt dir, ob das, was du erlebst, nach Erschöpfung durch Entfernung aussieht oder nach etwas anderem.",
     "outro": "Antworte mit kühlem Kopf, nicht direkt nach einem Streit oder zwei Tagen Funkstille. Fernbeziehungen haben Täler, die für sich genommen nichts bedeuten."
   },
@@ -42,7 +42,7 @@
   },
   "section3": {
     "title": "Was deine Punktzahl sagt",
-    "p1": "Der Test wird auf 45 Punkte gerechnet. Hier ist eine hohe Punktzahl eine gute Nachricht: die Antworten reichen vom beunruhigendsten zum beruhigendsten Zeichen.",
+    "p1": "Jede Frage trägt ein Gewicht entsprechend ihrer Schwere, und jede Antwort einen Wert entsprechend ihrem Rang. Die Summe reicht von 0 bis 160 Punkten. Hier ist eine hohe Punktzahl eine gute Nachricht: die Antworten reichen vom beunruhigendsten zum beruhigendsten Zeichen.",
     "headerScore": "Punkte",
     "headerLevel": "Stufe",
     "headerAnalysis": "Was das heißt",

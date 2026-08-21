@@ -10,7 +10,7 @@
     "title": "Wie funktioniert dieser Test?",
     "step1": "Du gibst an, ob dein Partner ein Mann oder eine Frau ist. Die fünfzehn Fragen passen sich an, zwei davon ändern sich komplett.",
     "step2": "Antworte mit Blick auf die <strong>letzten Wochen</strong>, nicht auf eure ganze Geschichte. Ein Zeichen zählt durch die Veränderung, nicht dadurch, dass es existiert.",
-    "step3": "Jede Antwort ist 0 bis 3 Punkte wert. Die Summe ordnet dich einer von vier Lesarten zu.",
+    "step3": "Jede Frage trägt ein Gewicht entsprechend ihrer Schwere: eine unerklärte Ausgabe zählt mehr als eine neue Frisur. Die Summe von 0 bis 155 Punkten ordnet dich einer von vier Lesestufen zu.",
     "step4": "Das Ergebnis sagt dir, was deine Beobachtungen zusammen wiegen und was vernünftigerweise daraus folgt.",
     "outro": "Antworte ehrlich, auch wenn die ehrliche Antwort « ich weiß es nicht » lautet. Ein beruhigendes Ergebnis, das man sich zurechtbiegt, bringt nichts."
   },
@@ -44,7 +44,7 @@
   },
   "section3": {
     "title": "Was deine Punktzahl sagt und was nicht",
-    "p1": "Der Test wird auf 45 Punkte gerechnet. Die vier Stufen unten sind keine Urteile, sondern Lesarten dessen, was du geantwortet hast. Eine hohe Punktzahl beschreibt ein Verhalten, nie eine Tatsache.",
+    "p1": "Jede Frage trägt ein Gewicht entsprechend ihrer Schwere, und jede Antwort einen Wert entsprechend ihrem Rang. Die Summe reicht von 0 bis 155 Punkten. Die vier Stufen unten sind keine Urteile, sondern Lesarten dessen, was du geantwortet hast. Eine hohe Punktzahl beschreibt ein Verhalten, nie eine Tatsache.",
     "headerScore": "Punkte",
     "headerLevel": "Stufe",
     "headerAnalysis": "Was das heißt",
