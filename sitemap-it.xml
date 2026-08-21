@@ -634,7 +634,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/ueber-uns/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/chi-siamo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/qui-sommes-nous/"/>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -707,54 +707,6 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/cose-non-accettare-coppia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/choses-pas-accepter-couple/"/>
     <lastmod>2026-02-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://quiz-couple.com/it/blog/recensione-tinder/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/avis-tinder/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/tinder-review/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/tinder-opiniones-vale-la-pena/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/tinder-bewertung/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/recensione-tinder/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/avis-tinder/"/>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://quiz-couple.com/it/blog/recensione-bumble/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/avis-bumble/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/bumble-app-review/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/opiniones-bumble/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/bumble-erfahrungen/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/recensione-bumble/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/avis-bumble/"/>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://quiz-couple.com/it/blog/recensione-hinge-app/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/avis-hinge-rencontre/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/hinge-dating-app-review/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/opinion-hinge-app-citas/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/hinge-erfahrungen-test/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/recensione-hinge-app/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/avis-hinge-rencontre/"/>
-    <lastmod>2026-02-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://quiz-couple.com/it/blog/recensione-badoo/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/avis-badoo/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/badoo-review/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/opinion-badoo/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/badoo-erfahrungen/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/recensione-badoo/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/avis-badoo/"/>
-    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
