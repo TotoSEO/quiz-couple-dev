@@ -10,7 +10,7 @@
     "title": "Come funziona questo test?",
     "step1": "Indichi se il tuo partner è un uomo o una donna. Le quindici domande si adattano, e due cambiano completamente.",
     "step2": "Rispondi pensando alle <strong>ultime settimane</strong>, non a tutta la vostra storia. Un segnale conta per il cambiamento che rappresenta, non perché esiste.",
-    "step3": "Ogni risposta vale da 0 a 3 punti. Il totale ti colloca in uno dei quattro livelli di lettura.",
+    "step3": "Ogni domanda porta un peso in base alla sua gravità: una spesa inspiegabile conta più di un nuovo taglio di capelli. Il totale, da 0 a 155 punti, ti colloca in uno dei quattro livelli di lettura.",
     "step4": "Il risultato ti dice quanto pesano insieme le tue osservazioni, e cosa è ragionevole farne.",
     "outro": "Rispondi con sincerità, anche quando la risposta sincera è «non lo so». Un risultato rassicurante ottenuto smussando gli angoli non serve a niente."
   },
@@ -44,7 +44,7 @@
   },
   "section3": {
     "title": "Cosa dice il tuo punteggio e cosa non dice",
-    "p1": "Il test si valuta su 45 punti. I quattro livelli qui sotto non sono verdetti, sono modi di leggere quello che hai risposto. Un punteggio alto descrive un comportamento, mai un fatto.",
+    "p1": "Ogni domanda porta un peso in base alla sua gravità, e ogni risposta un valore in base al suo rango. Il totale va da 0 a 155 punti. I quattro livelli qui sotto non sono verdetti, sono modi di leggere quello che hai risposto. Un punteggio alto descrive un comportamento, mai un fatto.",
     "headerScore": "Punteggio",
     "headerLevel": "Livello",
     "headerAnalysis": "Cosa significa",

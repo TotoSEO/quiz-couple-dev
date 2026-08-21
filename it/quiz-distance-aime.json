@@ -10,7 +10,7 @@
     "title": "Come funziona questo test?",
     "step1": "Rispondi per conto tuo, sulla tua relazione attuale. Non viene inviato nulla, nessuno vedrà le tue risposte.",
     "step2": "Pensa alle <strong>ultime settimane</strong> e non all'inizio della vostra storia. Una relazione a distanza cambia ritmo più volte, conta il periodo in corso.",
-    "step3": "Le risposte vanno dal segnale più preoccupante al più rassicurante, da 0 a 3 punti.",
+    "step3": "Le risposte vanno dal segnale più inquietante al più rassicurante, e ogni domanda porta un peso in base alla sua importanza. Il totale va da 0 a 160 punti: qui, un punteggio alto è una buona notizia.",
     "step4": "Il risultato ti dice se quello che vivi somiglia a un'usura della distanza o a qualcos'altro.",
     "outro": "Rispondi a mente fredda, non subito dopo un litigio o due giorni di silenzio. Le relazioni a distanza hanno cali che, presi da soli, non significano nulla."
   },
@@ -42,7 +42,7 @@
   },
   "section3": {
     "title": "Cosa dice il tuo punteggio",
-    "p1": "Il test si valuta su 45 punti. Qui un punteggio alto è una buona notizia: le risposte vanno dal segnale più preoccupante al più rassicurante.",
+    "p1": "Ogni domanda porta un peso in base alla sua gravità, e ogni risposta un valore in base al suo rango. Il totale va da 0 a 160 punti. Qui un punteggio alto è una buona notizia: le risposte vanno dal segnale più preoccupante al più rassicurante.",
     "headerScore": "Punteggio",
     "headerLevel": "Livello",
     "headerAnalysis": "Cosa significa",

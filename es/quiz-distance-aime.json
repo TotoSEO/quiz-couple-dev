@@ -10,7 +10,7 @@
     "title": "¿Cómo funciona este test?",
     "step1": "Respondes por tu cuenta, sobre tu relación actual. No se envía nada, nadie verá tus respuestas.",
     "step2": "Piensa en las <strong>últimas semanas</strong> y no en el principio de vuestra historia. Una relación a distancia cambia de ritmo varias veces, lo que cuenta es el periodo actual.",
-    "step3": "Las respuestas van de la señal más preocupante a la más tranquilizadora, de 0 a 3 puntos.",
+    "step3": "Las respuestas van de la señal más inquietante a la más tranquilizadora, y cada pregunta lleva un peso según su importancia. El total va de 0 a 160 puntos: aquí, una puntuación alta es una buena noticia.",
     "step4": "El resultado te dice si lo que vives se parece a un desgaste de la distancia o a otra cosa.",
     "outro": "Responde en frío, no justo después de una discusión o de dos días de silencio. Las relaciones a distancia tienen bajones que, aislados, no significan nada."
   },
@@ -42,7 +42,7 @@
   },
   "section3": {
     "title": "Lo que dice tu puntuación",
-    "p1": "El test se puntúa sobre 45. Aquí una puntuación alta es una buena noticia: las respuestas van de la señal más preocupante a la más tranquilizadora.",
+    "p1": "Cada pregunta lleva un peso según su gravedad, y cada respuesta un valor según su rango. El total va de 0 a 160 puntos. Aquí una puntuación alta es una buena noticia: las respuestas van de la señal más preocupante a la más tranquilizadora.",
     "headerScore": "Puntuación",
     "headerLevel": "Nivel",
     "headerAnalysis": "Lo que significa",

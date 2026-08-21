@@ -10,7 +10,7 @@
     "title": "How does this test work?",
     "step1": "You answer alone, about your current relationship. Nothing is sent, nobody will see your answers.",
     "step2": "Think about the <strong>last few weeks</strong>, not the start of your story. A long-distance relationship changes rhythm several times; what counts is the current stretch.",
-    "step3": "Answers run from the most worrying sign to the most reassuring one, from 0 to 3 points.",
+    "step3": "Answers run from the most worrying sign to the most reassuring, and each question carries a weight matching how much it matters. The total runs from 0 to 160 points: here, a high score is good news.",
     "step4": "The result tells you whether what you're living through looks like distance fatigue or something else.",
     "outro": "Answer with a clear head, not right after an argument or two days of silence. Long-distance relationships have dips that mean nothing on their own."
   },
@@ -42,7 +42,7 @@
   },
   "section3": {
     "title": "What your score says",
-    "p1": "The test is scored out of 45. Here a high score is good news: the answers run from the most worrying sign to the most reassuring one.",
+    "p1": "Each question carries a weight matching how serious it is, and each answer a value matching its rank. The total runs from 0 to 160 points. Here a high score is good news: the answers run from the most worrying sign to the most reassuring one.",
     "headerScore": "Score",
     "headerLevel": "Level",
     "headerAnalysis": "What it means",
