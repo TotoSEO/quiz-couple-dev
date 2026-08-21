@@ -1583,6 +1583,13 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .blog-article h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
 .blog-article p { margin-bottom: 1rem; line-height: 1.625; color: hsl(var(--foreground) / 0.9); }
 .blog-article ul { list-style: disc; list-style-position: inside; margin-bottom: 1rem; }
+/* Item de liste dont le texte est enveloppe dans un <p> : avec
+   list-style-position: inside, la puce se retrouve seule sur sa ligne
+   et le texte demarre en dessous. On remet le paragraphe dans le flux inline. */
+.blog-article li > p { margin-bottom: 0; }
+.blog-article li > p:first-child { display: inline; }
+.blog-article li > p + p { display: block; margin-top: 0.5rem; }
+.blog-article li + li:has(> p) { margin-top: 0.5rem; }
 .blog-article img { max-width: 100%; height: auto; display: block; border-radius: var(--radius); margin: 1rem 0; }
 .blog-article table { width: 100%; border-collapse: collapse; border-radius: var(--radius); overflow: hidden; font-size: 0.875rem; }
 .blog-article thead { background-color: hsl(var(--muted)); }
