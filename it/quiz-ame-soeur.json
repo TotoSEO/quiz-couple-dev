@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "badge": "Da solo(a) o in due 💫",
+    "title": "Test anima gemella: è davvero la persona giusta?",
+    "titleHighlight": "anima gemella",
+    "description": "Venti domande su quattro pilastri, un indice e un verdetto che non si limita a farti piacere. Rispondi da solo(a) su qualcuno, oppure rispondete in due."
+  },
+  "section1": {
+    "title": "Che cos'è un'anima gemella?",
+    "p1": "Cerca la definizione e troverai tutto e il suo contrario. Un sito ti spiegherà che la tua anima gemella dipende dal tuo segno zodiacale. Un altro che è «gioiosa e gentile», il che descrive più o meno metà della popolazione. Nessuno dei due risponde alla domanda che ti stai facendo, che è molto più precisa: quella persona lì, quella a cui stai pensando mentre leggi queste righe, è lei?",
+    "p2": "Ecco la definizione che questo test adotta. Un'anima gemella non è la persona perfetta, e non è nemmeno quella che ti completa perché ti mancherebbe un pezzo. È la persona con cui essere te stesso(a) non richiede alcuno sforzo, con cui l'intesa riguarda il fondo e non i gusti, con cui le prove avvicinano invece di rompere, e accanto alla quale resti intero(a).",
+    "p3": "Quest'ultimo punto è quello che si dimentica più spesso, ed è il più importante. «Essere uno» è una bella formula finché entrambi esistono ancora. Quando uno dei due è sparito lungo la strada, quando gli amici si sono allontanati e i progetti personali sono finiti nel dimenticatoio, non è più un'anima gemella: è fusione, e il test distingue le due cose.",
+    "notTitle": "Quello che un'anima gemella non è",
+    "not1Title": "Il colpo di fulmine",
+    "not1Text": "L'intensità dell'inizio non predice niente. Dice soprattutto a che velocità ti sei affezionato(a), che non è la stessa cosa della solidità del legame.",
+    "not2Title": "La persona perfetta",
+    "not2Text": "Un'anima gemella ha dei difetti, e alcuni ti infastidiscono profondamente. La domanda non è se esistono, è se potete parlarne.",
+    "not3Title": "Quella che ti completa",
+    "not3Text": "L'idea della metà mancante fa dei bei film e delle brutte relazioni. Due persone intere reggono meglio insieme di due metà aggrappate l'una all'altra."
+  },
+  "section2": {
+    "title": "I diversi tipi di anima gemella",
+    "intro": "La parola serve a indicare legami molto diversi, ed è da lì che nasce la confusione. Eccone cinque, dal più pacifico al più costoso.",
+    "type1Title": "L'anima gemella in amore",
+    "type1Text": "La persona con cui fai coppia. Quella con cui non reciti più un ruolo, con cui il fondo è allineato, e che ti rende più te stesso(a) invece che meno. È quello che misura il test qui sopra.",
+    "type2Title": "L'anima gemella nell'amicizia",
+    "type2Text": "Esiste, e se ne parla troppo poco. Un'amicizia può spuntare esattamente le stesse caselle, la naturalezza, l'intesa di fondo, le prove attraversate, senza la minima dimensione amorosa. Non è un premio di consolazione.",
+    "type3Title": "Il compagno di strada",
+    "type3Text": "Un legame solido, leale, spesso lungo, ma in cui bisogna ancora scegliere le parole. Molte coppie felici reggono esattamente su questo. Non è un'anima gemella, e non è un fallimento.",
+    "type4Title": "La fiamma gemella",
+    "type4Text": "Uno specchio più che un rifugio. La relazione ti mette di fronte a quello che evitavi di guardare, con separazioni e ritorni. Che duri o no, non ne esci come la stessa persona.",
+    "type5Title": "La relazione karmica",
+    "type5Text": "La stessa scena che si ripete all'infinito: l'intensità resta, la stanchezza si installa, e andarsene diventa impossibile. Se la tua storia assomiglia più a questa descrizione che alle quattro precedenti, il <a href=\"/it/test-relazione-karmica/\">test di relazione karmica</a> è quello che fa per te."
+  },
+  "section3": {
+    "title": "Esiste davvero, o è un'invenzione?",
+    "p1": "L'idea viene da Platone, nel <em>Simposio</em>. Aristofane racconta lì che gli esseri umani erano in origine esseri doppi, tagliati in due da Zeus, e condannati da allora a cercare la propria metà. È un mito, raccontato da un personaggio comico in un dialogo filosofico, e ha attraversato ventiquattro secoli per finire nelle descrizioni dei profili delle app di incontri.",
+    "p2": "La domanda interessante non è quindi «le anime gemelle esistono», ma «che cosa cambia crederci». E lì la ricerca in psicologia sociale ha qualcosa da dire, in particolare i lavori di C. R. Knee su quelle che si chiamano le teorie implicite della relazione.",
+    "p3": "Due convinzioni si oppongono. Quella del <strong>destino</strong>: le persone si convengono o non si convengono, e una buona relazione si riconosce subito. Quella della <strong>costruzione</strong>: una relazione si fabbrica, e le difficoltà fanno parte del lavoro. Le persone che credono nel destino reagiscono male al primo vero conflitto, perché il conflitto diventa la prova di aver sbagliato persona. Quelle che credono nella costruzione ci vedono un problema da risolvere.",
+    "p4": "In altre parole: cercare la propria anima gemella può rovinare le relazioni che si hanno. È per questo che questo test non misura un destino. Guarda che cosa la tua relazione fa di te, oggi, su quattro dimensioni osservabili."
+  },
+  "section4": {
+    "title": "I quattro pilastri del test",
+    "intro": "Ogni domanda è legata a uno di questi quattro pilastri, e il test ne pone cinque per pilastro. È il loro equilibrio, e non il tuo totale, a decidere il verdetto.",
+    "sign1Title": "Naturalezza",
+    "sign1Text": "Puoi essere te stesso(a), senza maschera e senza calcolo? I silenzi che non pesano, le parole che non serve misurare, la versione stanca e in malafede di te che l'altro ha già visto. Non è il colpo di fulmine, è la scioltezza.",
+    "sign2Title": "Intesa di fondo",
+    "sign2Text": "Non gli stessi gusti: gli stessi valori. Il modo di trattare un cameriere, il rapporto con i soldi, quello che si considera leale, quello che si chiama una vita riuscita. Due persone possono amare gli stessi film e non essere d'accordo su una sola cosa importante.",
+    "sign3Title": "Prova",
+    "sign3Text": "Quello che la difficoltà ha fatto al legame. Un lutto, un colpo duro, un litigio da cui non ci si rialza facilmente: vi ha avvicinati o incrinati? Una relazione che non è mai stata messa alla prova non è solida, è nuova.",
+    "sign4Title": "Autonomia",
+    "sign4Text": "I tuoi amici, i tuoi progetti, la tua capacità di passare un fine settimana ciascuno per conto proprio. È il contrappeso del test, e il pilastro che fa più danni quando manca: senza di lui, la naturalezza non è più naturalezza, è dipendenza."
+  },
+  "section5": {
+    "title": "Come leggere il tuo risultato",
+    "intro": "Il tuo indice è la media dei tuoi quattro pilastri, con il più debole che conta doppio: un'anima gemella non si giudica dal suo lato migliore. Il verdetto, invece, non esce da una fascia di indice ma dalla forma del tuo profilo, il che spiega perché un punteggio alto possa dare qualcosa di diverso da un titolo lusinghiero.",
+    "headerProfile": "Il tuo verdetto",
+    "headerMeaning": "Che cosa indica",
+    "headerAction": "Che cosa puoi farne",
+    "row1Profile": "Anime gemelle",
+    "row1Meaning": "Tutti e quattro i pilastri reggono nello stesso momento, autonomia compresa. È raro, e non è fortuna.",
+    "row1Action": "Continuate quello che vi ha portati lì: vedere i vostri amici, dire le cose presto, riparare in fretta.",
+    "row2Profile": "Anime gemelle in divenire",
+    "row2Meaning": "La naturalezza e l'intesa ci sono, ma niente ha ancora messo alla prova questo legame. Vi manca distanza, non qualità.",
+    "row2Action": "Guardate come riparate le piccole contrarietà: è un buon indicatore di quello che succederà al primo vero colpo.",
+    "row3Profile": "Fusione, non anima gemella",
+    "row3Meaning": "L'intesa è reale, ma ti sei rimpicciolito(a). Gli amici, i progetti e la capacità di stare separati si sono erosi.",
+    "row3Action": "Riprenditi una sola cosa che avevi lasciato andare, e osserva la reazione. Ti insegnerà molto.",
+    "row4Profile": "Compagni di strada",
+    "row4Meaning": "Il fondo è allineato e vi siete sostenuti, ma manca la naturalezza: bisogna ancora fare attenzione a quello che si dice.",
+    "row4Action": "Cerca da dove viene il riserbo. La paura di essere giudicato(a) a volte cade in una sola conversazione.",
+    "row5Profile": "Due strade che si incrociano",
+    "row5Meaning": "Né la scioltezza, né l'intesa di fondo, né l'effetto delle prove. Due brave persone possono semplicemente non convenirsi.",
+    "row5Action": "La domanda utile non è più «è la mia anima gemella» ma «sto bene in questa relazione».",
+    "note": "Questo test non è una diagnosi e non ha alcun valore clinico. È una chiave di lettura, da confrontare con quello che già sai."
+  },
+  "section6": {
+    "title": "Anima gemella o fusione: la differenza che conta",
+    "p1": "È la confusione più frequente, e la più costosa. Viste da dentro, le due cose sembrano la stessa evidenza: ci si capisce senza parlare, si vuole stare insieme tutto il tempo, il resto del mondo si allontana. La differenza non appare nell'intensità, appare in quello che ti resta a fianco.",
+    "p2": "Tre domande permettono di decidere abbastanza in fretta, e sono nel test.",
+    "dontTitle": "I segnali della fusione",
+    "dont1Title": "I tuoi amici sono spariti",
+    "dont1Text": "Quasi mai per divieto: per scivolamento. Hai declinato, e poi hanno smesso di proporre.",
+    "dont2Title": "Una giornata senza notizie ti mette in difficoltà",
+    "dont2Text": "Non è più attaccamento, è un allarme che scatta. Un legame solido regge il silenzio.",
+    "doTitle": "I segnali dell'anima gemella",
+    "do1Title": "Hai tenuto la tua vita",
+    "do1Text": "I tuoi amici, i tuoi progetti, le tue voglie che non includono l'altro esistono ancora, e l'altro li prende sul serio.",
+    "do2Title": "Ti senti più te stesso(a)",
+    "do2Text": "Non più saggio, non più levigato: più te. È il segnale più affidabile, e il più difficile da simulare.",
+    "do3Title": "L'assenza non fa andare nel panico",
+    "do3Text": "Manca, il che è molto diverso. Vivi la tua giornata, e la sera hai cose da raccontare.",
+    "do4Title": "Non hai niente di te da nascondere",
+    "do4Text": "La versione stanca, la versione in malafede, la versione che ha paura: è stata vista, e non è crollato niente."
+  },
+  "section7": {
+    "title": "E se sei single?",
+    "p1": "La domanda cambia natura. Non si tratta più di giudicare un legame che esiste, ma di sapere che cosa ti converrebbe. E lì l'errore classico consiste nello stilare una lista di qualità generali, il che non serve a niente: «gentile, divertente, ambizioso» descrive tutti e nessuno.",
+    "p2": "Quello che è utile è conoscere il tuo funzionamento. A che ritmo hai bisogno di stare insieme. Che cosa ti fa sentire amato(a), le parole o i gesti. Che cosa fai di un conflitto, affrontarlo o evitarlo. Che cosa cerchi in fondo, avventura o stabilità. È quello che disegna il terzo formato del test, e il ritratto che ne esce dice soprattutto che cosa evitare, il che è spesso più prezioso di che cosa cercare."
+  },
+  "faq": {
+    "title": "Domande frequenti sulle anime gemelle",
+    "q1": "Come faccio a sapere se è davvero la mia anima gemella?",
+    "a1": "Guarda quattro cose invece di una sola. Sei te stesso(a) senza sforzo? Siete d'accordo sul fondo, e non solo sui gusti? Le difficoltà vi hanno avvicinati? E soprattutto: hai tenuto la tua vita? Le prime tre si trovano ovunque, la quarta è quella che fa davvero la differenza.",
+    "q2": "Si possono avere più anime gemelle?",
+    "a2": "Sì, ed è anzi l'ipotesi più ragionevole. Niente obbliga a credere a una persona unica tra otto miliardi. Un'amicizia può essere un'anima gemella, ed è del tutto possibile vivere questo tipo di legame due volte in una vita.",
+    "q3": "Che differenza c'è tra un'anima gemella e una fiamma gemella?",
+    "a3": "L'anima gemella rasserena, la fiamma gemella trasforma. Accanto a un'anima gemella ti senti riposato(a) e più disponibile per il resto della tua vita. Una fiamma gemella ti mette di fronte a quello che evitavi di guardare, spesso con separazioni e ritorni. Entrambe possono essere preziose, ma non costano lo stesso prezzo.",
+    "q4": "Il test funziona se stiamo insieme da poco?",
+    "a4": "Sì, e te lo dirà. Un legame recente non è ancora stato messo alla prova, e il test se ne accorge: dà il verdetto «anime gemelle in divenire» invece di assegnare un titolo che la prima vera difficoltà smentirebbe.",
+    "q5": "Questo test è affidabile?",
+    "a5": "È coerente, che non è la stessa cosa. Le domande riguardano fatti osservabili più che impressioni, il verdetto dipende dall'equilibrio delle tue risposte e non da un totale, e nessun risultato pretende di predire il futuro della vostra coppia. È una chiave di lettura onesta, non una scienza."
+  },
+  "section8": {
+    "title": "Da tenere a mente",
+    "p1": "Un'anima gemella non si riconosce dall'intensità dell'inizio, ma da quello che ti resta dopo. Dopo un litigio, dopo una prova, dopo tre anni.",
+    "p2": "L'unico segnale che non inganna è quello che si guarda di meno: questa relazione ti rende più te stesso(a), oppure ti ha rimpicciolito(a)? Tutto il resto può essere imitato da una bella storia che non durerà.",
+    "p3": "E se la tua relazione comporta paura, controllo, umiliazioni o violenze, nessun test ha voce in capitolo. Parlane con un professionista, oppure chiama il <strong>1522</strong> (antiviolenza, Italia), attivo 24 ore su 24 e gratuito."
+  }
+}
