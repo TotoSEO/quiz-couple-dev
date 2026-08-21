@@ -327,6 +327,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/de/seelenverwandtschaft-test/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-ame-soeur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/soulmate-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-alma-gemela/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/seelenverwandtschaft-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-anima-gemella/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-ame-soeur/"/>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/de/wahrheit-oder-pflicht-paar/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/jeu-action-ou-verite-couple/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/truth-or-dare-couple-game/"/>
