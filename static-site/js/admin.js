@@ -458,6 +458,15 @@
            'vrai-faux', 'ado', 'tentation']
   };
   var LIBELLE_FAMILLE = { test: 'Tests', quiz: 'Quiz', jeu: 'Jeux' };
+
+  // ── Pages sans parcours : pas de taux de finition ──
+  // Ces deux-la rendent leur resultat immediatement, a partir de deux
+  // prenoms ou de deux dates. Il n'y a pas de questionnaire a abandonner en
+  // route, donc pas d'ecart possible entre lance et fini : leur taux ne
+  // mesure rien et, mele aux autres, il tire la moyenne d'ensemble.
+  // Elles restent comptees dans les lances et dans les termines.
+  var SANS_RATIO = ['testAstroPrenoms', 'testDateNaissance'];
+  function sansRatio(slug) { return SANS_RATIO.indexOf(canon(slug)) !== -1; }
   function familleQuiz(slug) {
     if (!slug) return 'test';
     if (FAMILLES.jeu.indexOf(slug) !== -1) return 'jeu';
@@ -832,7 +841,7 @@
 
   // Total des lancements du jour, toutes pages confondues. null avant la mise
   // en service : la courbe s'interrompt au lieu de descendre a zero.
-  function lancesDuJour(iso) {
+  function lancesDuJour(iso, horsImmediat) {
     if (!statsLancesParJour) return null;
     var depuis = null, total = 0, vu = false;
     Object.keys(statsLancesParJour).forEach(function (slug) {
@@ -842,10 +851,24 @@
     });
     if (depuis === null || iso < depuis) return null;
     Object.keys(statsLancesParJour).forEach(function (slug) {
+      if (horsImmediat && sansRatio(slug)) return;
       var v = statsLancesParJour[slug][iso];
       if (v != null) { total += v; vu = true; }
     });
     return vu || iso >= depuis ? total : null;
+  }
+
+  // Somme des parties finies d'un jour, en excluant les pages sans parcours.
+  // Elle se prend sur les series par page et non sur la courbe totale, qui
+  // est un agregat deja fondu et donc indecomposable.
+  function finisDuJourHorsImmediat(iso) {
+    if (!statsParJour) return null;
+    var total = 0;
+    Object.keys(statsParJour).forEach(function (slug) {
+      if (sansRatio(slug)) return;
+      total += statsParJour[slug][iso] || 0;
+    });
+    return total;
   }
 
   function construitCourbes(series) {
@@ -853,10 +876,14 @@
       var iso = p.date.getFullYear() + '-' + String(p.date.getMonth() + 1).padStart(2, '0') + '-' + String(p.date.getDate()).padStart(2, '0');
       return { date: p.date, label: p.label, total: lancesDuJour(iso) };
     });
-    var ratio = series.map(function (p, i) {
-      var l = lances[i].total;
-      if (l === null || l === 0) return { date: p.date, label: p.label, total: null };
-      return { date: p.date, label: p.label, total: Math.min(100, Math.round((p.total / l) * 100)) };
+    // Le taux ecarte les pages a resultat immediat des deux cotes. La courbe
+    // bleue et la rose, elles, gardent tout : ce sont des volumes.
+    var ratio = series.map(function (p) {
+      var iso = p.date.getFullYear() + '-' + String(p.date.getMonth() + 1).padStart(2, '0') + '-' + String(p.date.getDate()).padStart(2, '0');
+      var l = statsLancesParJour ? lancesDuJour(iso, true) : null;
+      var f = finisDuJourHorsImmediat(iso);
+      if (l === null || l === 0 || f === null) return { date: p.date, label: p.label, total: null };
+      return { date: p.date, label: p.label, total: Math.min(100, Math.round((f / l) * 100)) };
     });
     var par = { lances: lances, finis: series, ratio: ratio };
     return COURBES.map(function (c) {
@@ -878,11 +905,17 @@
         if (c.cle === 'ratio') {
           var lc = couches.filter(function (x) { return x.cle === 'lances'; })[0];
           var fc = couches.filter(function (x) { return x.cle === 'finis'; })[0];
+          // Somme des deux compteurs hors pages a resultat immediat, sur les
+          // jours ou le taux existe. Une moyenne des taux journaliers
+          // donnerait autant de poids a un jour creux qu'a un jour charge.
           var sl = 0, sf = 0;
-          lc.points.forEach(function (p, i) {
+          c.points.forEach(function (p, i) {
             if (p.total === null || p.total === undefined) return;
-            sl += p.total; sf += fc.points[i].total || 0;
+            var iso = p.date.getFullYear() + '-' + String(p.date.getMonth() + 1).padStart(2, '0') + '-' + String(p.date.getDate()).padStart(2, '0');
+            sl += lancesDuJour(iso, true) || 0;
+            sf += finisDuJourHorsImmediat(iso) || 0;
           });
+          void lc; void fc;
           valeur = sl ? Math.min(100, Math.round((sf / sl) * 100)) + ' %' : '—';
         } else {
           valeur = connus.reduce(function (a, p) { return a + p.total; }, 0).toLocaleString('fr-FR');
@@ -917,20 +950,26 @@
     var elFJ = document.getElementById('admin-finis-jour');
     if (elFJ) elFJ.textContent = finisJour.toLocaleString('fr-FR');
 
-    var lancesJour = statsLancesParJour ? lancesDuJour(isoNJoursAvant(0)) : null;
+    var jour = isoNJoursAvant(0);
+    var lancesJour = statsLancesParJour ? lancesDuJour(jour) : null;
     var elLJ = document.getElementById('admin-lances-jour');
     if (elLJ) elLJ.textContent = lancesJour === null ? '—' : lancesJour.toLocaleString('fr-FR');
 
+    // Le ratio ecarte les pages a resultat immediat, des deux cotes du
+    // rapport. Les deux compteurs au-dessus, eux, comptent tout : ce sont des
+    // volumes, pas une mesure d'engagement.
+    var lancesRatio = statsLancesParJour ? lancesDuJour(jour, true) : null;
+    var finisRatio = finisDuJourHorsImmediat(jour);
     var elR = document.getElementById('admin-ratio-jour');
     var elRD = document.getElementById('admin-ratio-detail');
     if (elR) {
-      if (lancesJour === null || lancesJour === 0) {
+      if (lancesRatio === null || finisRatio === null || lancesRatio === 0) {
         elR.textContent = '—';
-        if (elRD) elRD.textContent = lancesJour === 0 ? 'aucune partie lancée aujourd\'hui' : 'lancés pas encore mesurés';
+        if (elRD) elRD.textContent = lancesRatio === 0 ? 'aucune partie lancée aujourd\'hui' : 'lancés pas encore mesurés';
       } else {
-        var pct = Math.min(100, Math.round((finisJour / lancesJour) * 100));
+        var pct = Math.min(100, Math.round((finisRatio / lancesRatio) * 100));
         elR.textContent = pct + ' %';
-        if (elRD) elRD.textContent = finisJour.toLocaleString('fr-FR') + ' finis sur ' + lancesJour.toLocaleString('fr-FR') + ' lancés';
+        if (elRD) elRD.textContent = finisRatio.toLocaleString('fr-FR') + ' finis sur ' + lancesRatio.toLocaleString('fr-FR') + ' lancés, hors résultats immédiats';
       }
     }
   }
@@ -983,6 +1022,7 @@
     var lances = c.lances, termines = c.finis;
     if (statsMesure === 'lances') return { n: lances, libelle: lances.toLocaleString('fr-FR'), sur: 'dont ' + termines.toLocaleString('fr-FR') + ' finis', classe: '' };
     if (statsMesure === 'ratio') {
+      if (sansRatio(slug)) return { n: -2, libelle: '—', sur: 'résultat immédiat', classe: '' };
       // Sur toute l'histoire, le rapport melangerait des mois de completions
       // et quelques heures de lancements : on borne a la fenetre commune. Sur
       // une periode choisie, les deux series couvrent deja les memes jours.
@@ -1035,24 +1075,25 @@
       html += groupe.map(function (l) {
         var pct = statsMesure === 'ratio'
           ? Math.max(0, Math.min(100, l.v.n))
-          : Math.round((l.v.n / maxGlobal) * 100);
-        // Le compteur vert : parties de la journee en cours. Tant que les
-        // series quotidiennes ne sont pas chargees, la colonne reste vide
-        // puis se remplit au second rendu.
-        var jour;
+          : Math.round((Math.max(0, l.v.n) / maxGlobal) * 100);
+        // Le compteur du jour ne s'affiche que s'il s'est passe quelque chose.
+        var jour = '';
         if (statsParJour) {
           var nJour = comptagesDuJour(l.slug);
-          jour = '<span class="stats-row-jour' + (nJour > 0 ? '' : ' est-zero') + '" title="Aujourd\'hui">'
-            + (nJour > 0 ? '+' + nJour.toLocaleString('fr-FR') : '0') + '</span>';
-        } else {
-          jour = '<span class="stats-row-jour"></span>';
+          if (nJour > 0) jour = '<span class="stats-row-jour" title="Aujourd\'hui">+' + nJour.toLocaleString('fr-FR') + '</span>';
         }
-        return '<button class="stats-row' + (l.slug === statsSelectedSlug ? ' active' : '') + '" data-slug="' + esc(l.slug) + '" title="' + esc(l.slug) + '">'
+        // La couleur de la valeur suit la mesure, et donc la courbe du
+        // graphique au-dessus : bleu pour les lances, rose pour les termines.
+        // En mode taux, ce sont les seuils qui parlent, la classe s'en charge.
+        var teinte = statsMesure === 'lances' ? '#3B82F6' : statsMesure === 'termines' ? '#EF4E88' : '';
+        var classeVal = l.v.classe || (l.v.n < 0 ? ' est-vide' : '');
+        return '<button class="stats-row' + (l.slug === statsSelectedSlug ? ' active' : '') + '"'
+          + ' style="--part:' + pct + '%' + (teinte ? ';--valeur:' + teinte : '') + '"'
+          + ' data-slug="' + esc(l.slug) + '" title="' + esc(nomQuiz(l.slug) + ' · ' + l.slug + (l.v.sur ? ' · ' + l.v.sur : '')) + '">'
           + '<span class="stats-row-name">' + esc(nomQuiz(l.slug)) + '</span>'
-          + '<span class="stats-row-bar"><span style="width:' + pct + '%"></span></span>'
-          + '<span class="stats-row-sur">' + esc(l.v.sur) + '</span>'
+          + (l.v.sur ? '<span class="stats-row-sur">' + esc(l.v.sur) + '</span>' : '')
           + jour
-          + '<span class="stats-row-val' + l.v.classe + '">' + l.v.libelle + '</span>'
+          + '<span class="stats-row-val' + classeVal + '">' + l.v.libelle + '</span>'
           + '</button>';
       }).join('');
       html += '</div>';
@@ -1083,6 +1124,7 @@
   var FENETRE_GLISSANTE = 7;
 
   function serieTaux(slug) {
+    if (sansRatio(slug)) return null;
     if (!statsLancesParJour || !statsParJour) return null;
     var depuis = debutFenetre();
     if (!depuis) return null;
