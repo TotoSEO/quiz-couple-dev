@@ -1140,6 +1140,7 @@ export const AUTHORS = {
   thomas: {
     id: 'thomas',
     name: 'Thomas',
+    avatar: '/authors/thomas.webp',
     bios: {
       fr: "Créateur de Quiz Couple, Thomas, en couple depuis 4 ans, imagine des quiz, tests et jeux pour aider les couples à mieux se connaître, rire ensemble et partager de nouveaux moments.",
       en: "Creator of Quiz Couple, Thomas has been in a relationship for 4 years. He designs quizzes, tests and games to help couples get to know each other better, laugh together and share new moments.",
@@ -1245,3 +1246,22 @@ QUIZ_RELATED_ARTICLES.quizAdo.push('lexique-relations-2026');
 QUIZ_RELATED_ARTICLES.testCoupleSain.push('femme-malheureuse-en-couple');
 QUIZ_RELATED_ARTICLES.testCouple.push('femme-malheureuse-en-couple');
 QUIZ_RELATED_ARTICLES.testDivorce.push('arreter-ou-continuer-relation');
+
+// Encart partenaire affilie, limite aux pages au contenu adulte et a la langue
+// du partenaire (Gleese est un service francais). Passer « actif » a false le
+// retire de tout le site : utile pendant un examen AdSense, dont le reglement
+// restreint le contenu a caractere sexuel et porte sur l'ensemble du domaine.
+export const PARTENAIRE_ADULTE = {
+  actif: true,
+  url: 'https://gleese.com/?ae=103',
+  routes: ['quizCoquin', 'jeuActionVeriteHot'],
+  langues: ['fr'],
+  textes: {
+    fr: {
+      mention: 'Lien affilié',
+      titre: 'Envie de tester quelque chose de nouveau ?',
+      texte: "Si ce quiz vous a donné des idées et que vous voulez aller plus loin à deux, Gleese est une plateforme française dédiée aux couples curieux.",
+      bouton: 'Découvrir le libertinage avec Gleese',
+    },
+  },
+};
