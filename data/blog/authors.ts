@@ -8,7 +8,7 @@ export const AUTHORS: Record<string, BlogAuthor> = {
   thomas: {
     id: 'thomas',
     name: 'Thomas',
-    avatar: '/authors/thomas.webp',
+    avatar: '/authors/thomas-carre.webp',
     bios: {
       fr: "Créateur de Quiz Couple, Thomas, en couple depuis 4 ans, imagine des quiz, tests et jeux pour aider les couples à mieux se connaître, rire ensemble et partager de nouveaux moments.",
       en: "Creator of Quiz Couple, Thomas has been in a relationship for 4 years. He designs quizzes, tests and games to help couples get to know each other better, laugh together and share new moments.",

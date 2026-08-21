@@ -3911,9 +3911,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   max-width: 72rem; margin: 0 auto;
 }
 @media (min-width: 900px) {
-  /* Le hero n'a plus qu'une colonne de texte depuis le retrait des portraits :
-     on la centre au lieu de laisser une moitie vide a droite. */
-  .apr-hero-grille { grid-template-columns: minmax(0, 46rem); justify-content: center; gap: 3.5rem; }
+  .apr-hero-grille { grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; }
 }
 .apr-hero-titre {
   font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 800;
@@ -3934,6 +3932,15 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   width: clamp(8rem, 22vw, 12.5rem); height: clamp(8rem, 22vw, 12.5rem);
   box-shadow: 0 18px 40px -12px rgb(0 0 0 / 0.28), 0 0 0 6px hsl(var(--background));
 }
+/* Portrait unique de l'auteur : photo verticale montree en entier, la ou les
+   deux anciens portraits etaient des vignettes rondes. */
+.apr-portrait--seul img {
+  width: min(100%, 21rem); height: auto; aspect-ratio: 3 / 4;
+  border-radius: 1.5rem;
+  box-shadow: 0 22px 48px -18px hsl(var(--primary) / .38), 0 0 0 6px hsl(var(--background));
+}
+.apr-portrait--seul { transform: rotate(-2deg); }
+@media (prefers-reduced-motion: reduce) { .apr-portrait--seul { transform: none; } }
 .apr-portrait--un { z-index: 2; transform: translateY(-8%) rotate(-3deg); }
 .apr-portrait--deux { z-index: 1; margin-left: -2.25rem; transform: translateY(10%) rotate(3deg); }
 .apr-portrait--un img { box-shadow: 0 18px 40px -12px hsl(var(--primary) / 0.35), 0 0 0 6px hsl(var(--background)); }

@@ -1,6 +1,7 @@
 <%
 const c = {
   fr: {
+    photoAlt: 'Thomas et sa compagne, de dos, face à l\'océan',
     badge: 'Créateur',
     h1: 'Qui suis-je',
     heroIntro: 'Quand on cherche quelque chose sur la vie amoureuse en ligne, on tombe en général sur deux types de contenus. Des articles écrits comme des manuels scolaires. Ou des listes de conseils passe-partout qui pourraient s\'appliquer à n\'importe qui, et donc à personne.',
@@ -37,6 +38,7 @@ const c = {
     conclusion: 'Si vous êtes sur Quiz Couple, c\'est que les relations amoureuses vous intéressent, les vôtres ou la mécanique générale de tout ça. Content que vous soyez là. Et si un test ou un article vous a aidé à mettre des mots sur quelque chose, <strong>c\'est exactement pour ça que je fais ce travail.</strong>',
   },
   en: {
+    photoAlt: 'Thomas and his partner, seen from behind, facing the ocean',
     badge: 'Creator',
     h1: 'About me',
     heroIntro: 'When you look for something about relationships online, you usually land on one of two things. Articles written like school textbooks. Or lists of generic advice that could apply to anyone, and therefore to no one.',
@@ -73,6 +75,7 @@ const c = {
     conclusion: 'If you are on Quiz Couple, relationships interest you, yours or the general mechanics of it all. Glad you are here. And if a test or an article helped you put words on something, <strong>that is exactly why I do this.</strong>',
   },
   es: {
+    photoAlt: 'Thomas y su pareja, de espaldas, frente al océano',
     badge: 'Creador',
     h1: 'Quién soy',
     heroIntro: 'Cuando buscas algo sobre la vida amorosa en internet, sueles encontrar dos tipos de contenido. Artículos escritos como manuales escolares. O listas de consejos genéricos que podrían aplicarse a cualquiera, y por tanto a nadie.',
@@ -109,6 +112,7 @@ const c = {
     conclusion: 'Si estás en Quiz Couple es que te interesan las relaciones, las tuyas o la mecánica general de todo esto. Me alegra que estés aquí. Y si un test o un artículo te ayudó a poner palabras a algo, <strong>es exactamente para eso que hago este trabajo.</strong>',
   },
   de: {
+    photoAlt: 'Thomas und seine Partnerin, von hinten, mit Blick auf den Ozean',
     badge: 'Gründer',
     h1: 'Wer ich bin',
     heroIntro: 'Wer online etwas über Beziehungen sucht, landet meist bei zwei Sorten von Inhalten. Artikel, die sich wie Schulbücher lesen. Oder Listen mit Allerweltstipps, die auf jeden passen und damit auf niemanden.',
@@ -145,6 +149,7 @@ const c = {
     conclusion: 'Wenn du auf Quiz Couple bist, interessieren dich Beziehungen, deine eigenen oder die Mechanik dahinter. Schön, dass du da bist. Und wenn ein Test oder ein Artikel dir geholfen hat, Worte für etwas zu finden, <strong>genau dafür mache ich das.</strong>',
   },
   it: {
+    photoAlt: 'Thomas e la sua compagna, di spalle, davanti all\'oceano',
     badge: 'Creatore',
     h1: 'Chi sono',
     heroIntro: 'Quando si cerca qualcosa sulla vita amorosa online, si finisce di solito su due tipi di contenuti. Articoli scritti come manuali scolastici. Oppure elenchi di consigli generici che potrebbero valere per chiunque, e quindi per nessuno.',
@@ -194,6 +199,13 @@ const p = c[lang] || c.fr;
           <%= p.h1 %><span class="text-primary"><% if (lang === 'fr') { %>&#8239;?<% } %></span>
         </h1>
         <p class="apr-hero-intro"><%= p.heroIntro %></p>
+      </div>
+
+      <div class="apr-hero-duo">
+        <figure class="apr-portrait apr-portrait--seul">
+          <img src="/authors/thomas.webp" alt="<%= p.photoAlt %>"
+               width="960" height="1280" loading="eager" fetchpriority="high" decoding="async">
+        </figure>
       </div>
 
     </div>
