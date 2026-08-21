@@ -369,6 +369,8 @@
     pourContre: 'Pour ou contre',
     quizTentation: 'Tentation',
     testPurete: 'Test de pureté',
+    testAmeSoeur: 'Test âme sœur',
+    testDependance: 'Dépendance affective',
     testVacances: 'Test où partir en vacances'
   };
   // Un slug inconnu (nouveau quiz pas encore reference ici) reste affiche tel
@@ -378,8 +380,37 @@
     return NOMS_QUIZ[slug] || slug;
   }
 
+  // ── Famille d'une page : test, quiz ou jeu ──
+  // Meme regle que genrePageJouable() cote build, pour que le tableau de bord
+  // range les pages comme le site les presente. Deux nommages coexistent en
+  // base (cle de route et data-quiz du moteur), les deux sont couverts.
+  var FAMILLES = {
+    jeu: ['jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages', 'jeuPlateau', 'jeuQuiDeNous',
+          'jeuDilemmes', 'pourContre', 'quizTuPreferes',
+          'action-ou-verite', 'action-ou-verite-coquin', 'gage-couple', 'plateau-couple',
+          'qui-de-nous-deux', 'dilemmes', 'pour-contre', 'tu-preferes'],
+    quiz: ['zamours', 'amoureux', 'coquin', 'genant', 'knowledge', 'marrant', 'most',
+           'vrai-faux', 'ado', 'tentation']
+  };
+  var LIBELLE_FAMILLE = { test: 'Tests', quiz: 'Quiz', jeu: 'Jeux' };
+  function familleQuiz(slug) {
+    if (!slug) return 'test';
+    if (FAMILLES.jeu.indexOf(slug) !== -1) return 'jeu';
+    if (FAMILLES.quiz.indexOf(slug) !== -1) return 'quiz';
+    // Les cles de route non listees suivent le prefixe : quizXxx est un quiz,
+    // tout le reste est un test.
+    if (/^quiz/.test(slug)) return 'quiz';
+    if (/^jeu/.test(slug)) return 'jeu';
+    return 'test';
+  }
+
   // ── Stats : completions de quiz (RPC publiques, cle anon) ──
   var statsCounts = [];
+  // Lancements par page : { slug: n }. Vide tant que la table quiz_starts
+  // n'existe pas ou n'a rien enregistre, auquel cas la bascule reste sur
+  // « terminés » et le dit franchement plutot que d'afficher des zeros.
+  var statsLances = null;
+  var statsMesure = 'termines';
   var statsRange = 30;
   var statsSelectedSlug = null;
   var _lastTotalSeries = null, _lastQuizSeries = null;
@@ -442,6 +473,7 @@
       var n = Array.isArray(v) ? (v[0] && (v[0].get_quiz_total != null ? v[0].get_quiz_total : v[0])) : v;
       if (totalEl) totalEl.textContent = (n != null ? Number(n).toLocaleString('fr-FR') : 0);
     }).catch(function () { if (totalEl) totalEl.textContent = '?'; });
+    chargeLancements();
     statsRpc('get_quiz_counts').then(function (rows) {
       if (!Array.isArray(rows)) { if (listEl) listEl.innerHTML = '<p class="text-center text-destructive py-6">Erreur de chargement.</p>'; return; }
       statsCounts = rows.slice().sort(function (a, b) { return b.total - a.total; });
@@ -451,6 +483,53 @@
       chargeParJour();
     }).catch(function () { if (listEl) listEl.innerHTML = '<p class="text-center text-destructive py-6">Erreur reseau.</p>'; });
     loadTotalDaily(statsRange);
+  }
+
+  // ── Lancements : total, detail par page, taux de finition ──
+  // Une partie lancee n'est pas une partie finie. Le rapport des deux est la
+  // seule facon de voir qu'une page interesse mais decroche : trop longue,
+  // mal cadree, ou decevante des les premieres questions.
+  function chargeLancements() {
+    var elTotal = document.getElementById('admin-stats-lances');
+    var elTaux = document.getElementById('admin-stats-taux');
+    statsRpc('get_quiz_starts_total').then(function (v) {
+      var n = Array.isArray(v) ? (v[0] && (v[0].get_quiz_starts_total != null ? v[0].get_quiz_starts_total : v[0])) : v;
+      if (n == null || isNaN(Number(n))) throw new Error('pas de rpc');
+      if (elTotal) elTotal.textContent = Number(n).toLocaleString('fr-FR');
+      return statsRpc('get_quiz_starts_counts');
+    }).then(function (rows) {
+      if (!Array.isArray(rows) || rows.error) throw new Error('pas de rpc');
+      var map = {};
+      rows.forEach(function (r) { map[r.quiz_slug] = Number(r.total) || 0; });
+      statsLances = map;
+      majTauxGlobal(elTaux);
+      renderStatsList();
+    }).catch(function () {
+      // Migration pas encore appliquee : on le dit, on ne montre pas un zero
+      // qui ressemblerait a une absence de trafic.
+      statsLances = null;
+      if (elTotal) elTotal.textContent = '—';
+      if (elTaux) elTaux.textContent = '—';
+      var aide = document.getElementById('admin-stats-mesure-aide');
+      if (aide) aide.textContent = 'Les lancés ne sont pas encore disponibles : la migration quiz_starts n\'est pas appliquée.';
+      renderStatsList();
+    });
+  }
+
+  // Le taux global se calcule sur les pages presentes des deux cotes : une
+  // page qui n'a que des completions (donnees anterieures a la mesure des
+  // lancements) fausserait le rapport vers le haut.
+  function majTauxGlobal(elTaux) {
+    if (!elTaux) return;
+    if (!statsLances) { elTaux.textContent = '—'; return; }
+    var lances = 0, finis = 0;
+    statsCounts.forEach(function (r) {
+      var l = statsLances[r.quiz_slug];
+      if (!l) return;
+      lances += l;
+      finis += Number(r.total) || 0;
+    });
+    elTaux.textContent = lances > 0 ? Math.round((finis / lances) * 100) + ' %' : '—';
   }
 
   // ── Series quotidiennes par quiz : compteur du jour + tops / flops ──
@@ -618,31 +697,84 @@
     drawLineChart(document.getElementById('admin-stats-total-chart'), series, {});
   }
 
+  // ── Liste par page, rangee par famille ──
+  // Trois mesures possibles : les parties lancees, celles qui sont allees au
+  // bout, et le rapport des deux. Le ratio est le seul qui reponde a « quelle
+  // page decroche » ; les deux autres servent a le lire sans se tromper de
+  // volume, d'ou le second nombre garde en gris a cote.
+  function valeurMesure(slug, termines) {
+    var lances = statsLances ? (statsLances[slug] || 0) : 0;
+    if (statsMesure === 'lances') return { n: lances, libelle: lances.toLocaleString('fr-FR'), sur: termines.toLocaleString('fr-FR') + ' finis', classe: '' };
+    if (statsMesure === 'ratio') {
+      if (!lances) return { n: -1, libelle: '—', sur: '', classe: '' };
+      var pct = Math.round((termines / lances) * 100);
+      return { n: pct, libelle: pct + ' %', sur: termines.toLocaleString('fr-FR') + ' / ' + lances.toLocaleString('fr-FR'),
+               classe: pct < 40 ? ' est-faible' : (pct >= 70 ? ' est-fort' : '') };
+    }
+    return { n: termines, libelle: termines.toLocaleString('fr-FR'), sur: lances ? lances.toLocaleString('fr-FR') + ' lancés' : '', classe: '' };
+  }
+
   function renderStatsList() {
     var listEl = document.getElementById('admin-stats-list');
     if (!listEl) return;
     if (statsCounts.length === 0) { listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Aucune complétion pour le moment.</p>'; return; }
-    var max = statsCounts[0].total || 1;
-    listEl.innerHTML = statsCounts.map(function (r) {
-      var pct = Math.round((r.total / max) * 100);
-      // Le compteur vert : parties de la journee en cours. Tant que les
-      // series quotidiennes ne sont pas chargees, la colonne reste vide
-      // puis se remplit au second rendu.
-      var jour = '';
-      if (statsParJour) {
-        var nJour = comptagesDuJour(r.quiz_slug);
-        jour = nJour > 0 ? '+' + nJour.toLocaleString('fr-FR') : '0';
-        jour = '<span class="stats-row-jour' + (nJour > 0 ? '' : ' est-zero') + '" title="Aujourd\'hui">' + jour + '</span>';
-      } else {
-        jour = '<span class="stats-row-jour"></span>';
-      }
-      return '<button class="stats-row" data-slug="' + esc(r.quiz_slug) + '" title="' + esc(r.quiz_slug) + '">'
-        + '<span class="stats-row-name">' + esc(nomQuiz(r.quiz_slug)) + '</span>'
-        + '<span class="stats-row-bar"><span style="width:' + pct + '%"></span></span>'
-        + jour
-        + '<span class="stats-row-val">' + Number(r.total).toLocaleString('fr-FR') + '</span>'
-        + '</button>';
-    }).join('');
+
+    // Sans lancements, la bascule n'a rien a montrer : on reste sur les
+    // completions plutot que d'afficher une colonne de tirets.
+    if (!statsLances && statsMesure !== 'termines') statsMesure = 'termines';
+
+    var lignes = statsCounts.map(function (r) {
+      var termines = Number(r.total) || 0;
+      var v = valeurMesure(r.quiz_slug, termines);
+      return { slug: r.quiz_slug, famille: familleQuiz(r.quiz_slug), termines: termines, v: v };
+    });
+
+    // L'echelle des barres est propre a la mesure : en ratio elle va de 0 a
+    // 100, sinon elle se cale sur la page la plus jouee, toutes familles
+    // confondues, pour que les familles restent comparables entre elles.
+    var maxGlobal = 1;
+    if (statsMesure !== 'ratio') lignes.forEach(function (l) { if (l.v.n > maxGlobal) maxGlobal = l.v.n; });
+
+    var html = '';
+    ['test', 'quiz', 'jeu'].forEach(function (fam) {
+      var groupe = lignes.filter(function (l) { return l.famille === fam; })
+        .sort(function (a, b) { return b.v.n - a.v.n; });
+      if (groupe.length === 0) return;
+      var totalFam = groupe.reduce(function (acc, l) { return acc + l.termines; }, 0);
+      html += '<div class="stats-groupe stats-fam-' + fam + '">'
+        + '<div class="stats-groupe-tete">'
+        + '<span class="stats-groupe-pastille" aria-hidden="true"></span>'
+        + '<span class="stats-groupe-nom">' + LIBELLE_FAMILLE[fam] + '</span>'
+        + '<span class="stats-groupe-compte">' + groupe.length + ' page' + (groupe.length > 1 ? 's' : '')
+        + ' · ' + totalFam.toLocaleString('fr-FR') + ' finis</span>'
+        + '</div>';
+      html += groupe.map(function (l) {
+        var pct = statsMesure === 'ratio'
+          ? Math.max(0, Math.min(100, l.v.n))
+          : Math.round((l.v.n / maxGlobal) * 100);
+        // Le compteur vert : parties de la journee en cours. Tant que les
+        // series quotidiennes ne sont pas chargees, la colonne reste vide
+        // puis se remplit au second rendu.
+        var jour;
+        if (statsParJour) {
+          var nJour = comptagesDuJour(l.slug);
+          jour = '<span class="stats-row-jour' + (nJour > 0 ? '' : ' est-zero') + '" title="Aujourd\'hui">'
+            + (nJour > 0 ? '+' + nJour.toLocaleString('fr-FR') : '0') + '</span>';
+        } else {
+          jour = '<span class="stats-row-jour"></span>';
+        }
+        return '<button class="stats-row' + (l.slug === statsSelectedSlug ? ' active' : '') + '" data-slug="' + esc(l.slug) + '" title="' + esc(l.slug) + '">'
+          + '<span class="stats-row-name">' + esc(nomQuiz(l.slug)) + '</span>'
+          + '<span class="stats-row-bar"><span style="width:' + pct + '%"></span></span>'
+          + '<span class="stats-row-sur">' + esc(l.v.sur) + '</span>'
+          + jour
+          + '<span class="stats-row-val' + l.v.classe + '">' + l.v.libelle + '</span>'
+          + '</button>';
+      }).join('');
+      html += '</div>';
+    });
+    listEl.innerHTML = html;
+
     listEl.querySelectorAll('.stats-row').forEach(function (b) {
       b.addEventListener('click', function () {
         listEl.querySelectorAll('.stats-row').forEach(function (x) { x.classList.remove('active'); });
@@ -651,6 +783,7 @@
       });
     });
   }
+
   function loadDaily(slug) {
     statsSelectedSlug = slug;
     var titleEl = document.getElementById('admin-stats-chart-title');
@@ -1834,13 +1967,33 @@
       });
     });
     // Filtre du comparatif tops / flops : aujourd'hui vs hier, 7 jours vs
-    // les 7 precedents, 30 jours vs les 30 precedents.
-    document.querySelectorAll('.stats-comp-btn').forEach(function (b) {
+    // les 7 precedents, 30 jours vs les 30 precedents. Les deux groupes de
+    // boutons partagent la meme classe : chacun ne desactive que ses freres,
+    // sinon changer de mesure eteindrait le filtre des tops et flops.
+    document.querySelectorAll('.stats-comp-btn[data-comp]').forEach(function (b) {
       b.addEventListener('click', function () {
-        document.querySelectorAll('.stats-comp-btn').forEach(function (x) { x.classList.remove('active'); });
+        document.querySelectorAll('.stats-comp-btn[data-comp]').forEach(function (x) { x.classList.remove('active'); });
         this.classList.add('active');
         statsComp = parseInt(this.dataset.comp, 10) || 7;
         renderMovers();
+      });
+    });
+    // Bascule de la liste par page : lances, termines, taux de finition.
+    document.querySelectorAll('.stats-comp-btn[data-mesure]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        if (!statsLances && this.dataset.mesure !== 'termines') return;
+        document.querySelectorAll('.stats-comp-btn[data-mesure]').forEach(function (x) { x.classList.remove('active'); });
+        this.classList.add('active');
+        statsMesure = this.dataset.mesure;
+        var aide = document.getElementById('admin-stats-mesure-aide');
+        if (aide) {
+          aide.textContent = statsMesure === 'ratio'
+            ? 'Part des parties lancées qui vont jusqu\'au résultat. En rouge sous 40 %, en vert à partir de 70 %.'
+            : statsMesure === 'lances'
+              ? 'Parties commencées, abandons compris. Cliquez sur une page pour voir sa courbe.'
+              : 'Parties allées jusqu\'au résultat. Cliquez sur une page pour voir sa courbe.';
+        }
+        renderStatsList();
       });
     });
     // Redraw charts on resize (canvas is width-dependent)
