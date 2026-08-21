@@ -482,6 +482,11 @@
   // quatre chiffres, qui ne veulent rien dire.
   var statsLancesParJour = null;
   var statsMesure = 'termines';
+  // 0 = depuis toujours, sinon un nombre de jours. Les totaux « depuis
+  // toujours » viennent des RPC de comptage ; les periodes se somment sur les
+  // series quotidiennes, qu'il faut donc avoir chargees assez loin.
+  var statsPeriode = 0;
+  var joursCharges = 62;
   var statsRange = 30;
   var statsSelectedSlug = null;
   var _lastTotalSeries = null, _lastQuizSeries = null, _lastQuizOpts = {}, _lastTotalCouches = null;
@@ -537,7 +542,7 @@
   }
 
   function loadStats() {
-    var totalEl = document.getElementById('admin-stats-total');
+    var totalEl = document.getElementById('admin-finis-total');
     var listEl = document.getElementById('admin-stats-list');
     if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
     statsRpc('get_quiz_total').then(function (v) {
@@ -564,7 +569,7 @@
   // d'historique que les lancements n'ont pas, un chiffre unique melangerait
   // les pages mesurees et celles qui ne le sont pas encore.
   function chargeLancements() {
-    var elTotal = document.getElementById('admin-stats-lances');
+    var elTotal = document.getElementById('admin-lances-total');
     statsRpc('get_quiz_starts_total').then(function (v) {
       var n = Array.isArray(v) ? (v[0] && (v[0].get_quiz_starts_total != null ? v[0].get_quiz_starts_total : v[0])) : v;
       if (n == null || isNaN(Number(n))) throw new Error('pas de rpc');
@@ -577,7 +582,7 @@
       statsLances = map;
       renderStatsList();
       // La serie quotidienne arrive apres : elle borne la fenetre commune.
-      statsRpc('get_quiz_starts_daily_par_quiz', { p_days: 62, p_tz: fuseau() })
+      statsRpc('get_quiz_starts_daily_par_quiz', { p_days: joursCharges, p_tz: fuseau() })
         .then(function (jours) {
           if (!Array.isArray(jours) || jours.error) return;
           var idx = {};
@@ -661,9 +666,11 @@
   // ── Series quotidiennes par quiz : compteur du jour + tops / flops ──
   // 62 jours couvrent la comparaison la plus large (30 jours contre les 30
   // precedents) avec une marge pour le decalage de fuseau.
-  function chargeParJour() {
+  function chargeParJour(jours) {
+    jours = jours || joursCharges;
+    joursCharges = jours;
     var tz = fuseau();
-    statsRpc('get_quiz_daily_par_quiz', { p_days: 62, p_tz: tz }).then(function (rows) {
+    statsRpc('get_quiz_daily_par_quiz', { p_days: jours, p_tz: tz }).then(function (rows) {
       if (Array.isArray(rows) && !rows.error) { indexeParJour(rows, false); return; }
       throw new Error('pas de rpc');
     }).catch(function () {
@@ -672,12 +679,12 @@
       var slugs = statsCounts.map(function (r) { return r.quiz_slug; });
       if (slugs.length === 0) { indexeParJour([], false); return; }
       Promise.all(slugs.map(function (s) {
-        return statsRpc('get_quiz_daily', { p_slug: s, p_days: 62, p_tz: tz })
+        return statsRpc('get_quiz_daily', { p_slug: s, p_days: jours, p_tz: tz })
           .then(function (r) { return Array.isArray(r) && !r.error ? r : null; })
           .catch(function () { return null; })
           .then(function (r) {
             if (r) return { slug: s, rows: r, utc: false };
-            return statsRpc('get_quiz_daily', { p_slug: s, p_days: 62 })
+            return statsRpc('get_quiz_daily', { p_slug: s, p_days: jours })
               .then(function (r2) { return { slug: s, rows: Array.isArray(r2) ? r2 : [], utc: true }; })
               .catch(function () { return { slug: s, rows: [], utc: false }; });
           });
@@ -900,14 +907,36 @@
     });
   }
 
-  function renderTotalDaily(series) {
-    var todayEl = document.getElementById('admin-stats-today');
-    var d30El = document.getElementById('admin-stats-30d');
-    if (todayEl) todayEl.textContent = (series.length ? series[series.length - 1].total : 0).toLocaleString('fr-FR');
-    if (d30El) {
-      var last30 = series.slice(-30).reduce(function (a, b) { return a + b.total; }, 0);
-      d30El.textContent = last30.toLocaleString('fr-FR');
+  // Les trois blocs de tete : lances du jour, ratio du jour, finis du jour.
+  // Le ratio du jour se lit sur la journee en cours uniquement, donc sans la
+  // fenetre commune des taux par page : les deux compteurs portent bien sur
+  // les memes heures. Il reste plafonne a 100, une partie commencee hier et
+  // finie aujourd'hui comptant comme finie sans lancement du jour.
+  function majTetes(series) {
+    var finisJour = series.length ? series[series.length - 1].total : 0;
+    var elFJ = document.getElementById('admin-finis-jour');
+    if (elFJ) elFJ.textContent = finisJour.toLocaleString('fr-FR');
+
+    var lancesJour = statsLancesParJour ? lancesDuJour(isoNJoursAvant(0)) : null;
+    var elLJ = document.getElementById('admin-lances-jour');
+    if (elLJ) elLJ.textContent = lancesJour === null ? '—' : lancesJour.toLocaleString('fr-FR');
+
+    var elR = document.getElementById('admin-ratio-jour');
+    var elRD = document.getElementById('admin-ratio-detail');
+    if (elR) {
+      if (lancesJour === null || lancesJour === 0) {
+        elR.textContent = '—';
+        if (elRD) elRD.textContent = lancesJour === 0 ? 'aucune partie lancée aujourd\'hui' : 'lancés pas encore mesurés';
+      } else {
+        var pct = Math.min(100, Math.round((finisJour / lancesJour) * 100));
+        elR.textContent = pct + ' %';
+        if (elRD) elRD.textContent = finisJour.toLocaleString('fr-FR') + ' finis sur ' + lancesJour.toLocaleString('fr-FR') + ' lancés';
+      }
     }
+  }
+
+  function renderTotalDaily(series) {
+    majTetes(series);
     _lastTotalSeries = series;
     var couches = construitCourbes(series);
     renderLegende(couches);
@@ -925,19 +954,45 @@
   // celui qu'on n'a PAS demande, l'oeil s'y accroche et lit la ligne a
   // l'envers. « dont » et « sur » rattachent explicitement le nombre gris a
   // la valeur en gras, qui reste le sujet de la ligne.
-  function valeurMesure(slug, termines) {
-    var lances = statsLances ? (statsLances[slug] || 0) : 0;
+  // Somme d'une serie quotidienne sur les n derniers jours, aujourd'hui
+  // compris. n = 1 donne la seule journee en cours.
+  function sommePeriode(parJour, slug, n) {
+    var m = parJour && parJour[slug];
+    if (!m) return 0;
+    var total = 0;
+    for (var i = 0; i < n; i++) total += m[isoNJoursAvant(i)] || 0;
+    return total;
+  }
+
+  // Les deux compteurs d'une page sur la periode selectionnee. Periode 0 :
+  // les totaux de toute l'histoire, qui viennent des RPC de comptage et non
+  // des series, faute de quoi on perdrait ce qui precede la fenetre chargee.
+  function comptesPeriode(slug, terminesTotal) {
+    if (statsPeriode === 0) {
+      return { finis: terminesTotal, lances: statsLances ? (statsLances[slug] || 0) : 0, complet: true };
+    }
+    return {
+      finis: sommePeriode(statsParJour, slug, statsPeriode),
+      lances: statsLancesParJour ? sommePeriode(statsLancesParJour, slug, statsPeriode) : 0,
+      complet: !!statsParJour
+    };
+  }
+
+  function valeurMesure(slug, terminesTotal) {
+    var c = comptesPeriode(slug, terminesTotal);
+    var lances = c.lances, termines = c.finis;
     if (statsMesure === 'lances') return { n: lances, libelle: lances.toLocaleString('fr-FR'), sur: 'dont ' + termines.toLocaleString('fr-FR') + ' finis', classe: '' };
     if (statsMesure === 'ratio') {
-      // Sur la fenetre commune uniquement, sinon on divise des mois de
-      // completions par quelques heures de lancements.
-      var c = comptesFenetre(slug);
-      if (!c || c.lances < MINI_PAGE) {
-        return { n: -1, libelle: '—', sur: c ? 'sur ' + c.lances + ' lancés' : '', classe: '' };
+      // Sur toute l'histoire, le rapport melangerait des mois de completions
+      // et quelques heures de lancements : on borne a la fenetre commune. Sur
+      // une periode choisie, les deux series couvrent deja les memes jours.
+      var d = statsPeriode === 0 ? comptesFenetre(slug) : c;
+      if (!d || d.lances < MINI_PAGE) {
+        return { n: -1, libelle: '—', sur: d ? 'sur ' + d.lances + ' lancés' : '', classe: '' };
       }
-      var pct = tauxDepuis(c.lances, c.finis);
+      var pct = tauxDepuis(d.lances, d.finis);
       return { n: pct, libelle: pct + ' %',
-               sur: c.finis.toLocaleString('fr-FR') + ' finis sur ' + c.lances.toLocaleString('fr-FR'),
+               sur: d.finis.toLocaleString('fr-FR') + ' finis sur ' + d.lances.toLocaleString('fr-FR'),
                classe: pct < 40 ? ' est-faible' : (pct >= 70 ? ' est-fort' : '') };
     }
     return { n: termines, libelle: termines.toLocaleString('fr-FR'), sur: lances ? 'sur ' + lances.toLocaleString('fr-FR') + ' lancés' : '', classe: '' };
@@ -969,7 +1024,7 @@
       var groupe = lignes.filter(function (l) { return l.famille === fam; })
         .sort(function (a, b) { return b.v.n - a.v.n; });
       if (groupe.length === 0) return;
-      var totalFam = groupe.reduce(function (acc, l) { return acc + l.termines; }, 0);
+      var totalFam = groupe.reduce(function (acc, l) { return acc + comptesPeriode(l.slug, l.termines).finis; }, 0);
       html += '<div class="stats-groupe stats-fam-' + fam + '">'
         + '<div class="stats-groupe-tete">'
         + '<span class="stats-groupe-pastille" aria-hidden="true"></span>'
@@ -2335,6 +2390,25 @@
         this.classList.add('active');
         statsComp = parseInt(this.dataset.comp, 10) || 7;
         renderMovers();
+      });
+    });
+    // Periode de la liste par page. Les series quotidiennes ne sont chargees
+    // que sur 62 jours au depart : choisir 90 jours ou plus les recharge plus
+    // loin, une seule fois, puis la valeur reste en memoire.
+    document.querySelectorAll('.stats-comp-btn[data-periode]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        document.querySelectorAll('.stats-comp-btn[data-periode]').forEach(function (x) { x.classList.remove('active'); });
+        this.classList.add('active');
+        statsPeriode = parseInt(this.dataset.periode, 10) || 0;
+        var besoin = statsPeriode === 0 ? 62 : statsPeriode + 2;
+        if (besoin > joursCharges) {
+          var listEl = document.getElementById('admin-stats-list');
+          if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement de la période...</p>';
+          chargeParJour(besoin);
+          chargeLancements();
+        } else {
+          renderStatsList();
+        }
       });
     });
     // Bascule de la liste par page : lances, termines, taux de finition.
