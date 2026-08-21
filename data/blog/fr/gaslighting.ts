@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/gaslighting.webp',
   featuredImageAlt: "Lampe à gaz dont la flamme baisse, silhouette qui doute dans la pénombre",
   publishedAt: '2026-11-24',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Le gaslighting ne te ment pas sur les faits. Il te ment sur toi : ta mémoire, ta perception, ta santé mentale. C'est ce qui en fait la manipulation la plus corrosive qui existe.",
   introduction: `<p>Tu as vu la scène. Tu étais là, tu as entendu les mots, tu pourrais les répéter... Et pourtant, en face, un aplomb parfait : « je n'ai jamais dit ça ». Pas une hésitation. Alors tu vérifies dans ta tête, une fois, deux fois... et une petite fissure s'ouvre : et si c'était moi ?</p>
 <p>Cette fissure a un nom : le gaslighting. <strong>Ce n'est pas un mensonge sur les faits, c'est une attaque sur l'instrument de mesure : toi.</strong> Ta mémoire, ta perception, ta stabilité... Répétée assez longtemps, cette manipulation produit un résultat unique en son genre : une victime qui ne peut plus se fier à elle-même, et qui dépend donc de son manipulateur pour savoir ce qui est réel.</p>

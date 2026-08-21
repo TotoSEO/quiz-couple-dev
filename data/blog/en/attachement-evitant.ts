@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/attachement-evitant.webp',
   featuredImageAlt: "Silhouette stepping back from a heart held out towards it",
   publishedAt: '2026-12-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Avoidant people don't love less than anyone else. They simply learned, very early, that needing is dangerous... and they handle love the way you handle a risk.",
   introduction: `<p>It is one of the most baffling romantic experiences there is: everything is going well, he is present, funny, involved... and exactly when the relationship turns serious, something closes up. Fewer messages, fewer plans, that sudden need for air. You did nothing wrong. He is not less attached. It is something else: the closer you come, the further his system retreats.</p>
 <p><strong>Welcome to avoidant attachment: the style of those who learned, very early, that relying on someone ends badly... and that self-sufficiency is the only reliable safety.</strong> Roughly one person in four works this way in love. And contrary to the cliché, an avoidant person is neither cold nor incapable of loving: they love with a reversed alarm system, one that goes off when someone comes closer instead of when someone moves away.</p>

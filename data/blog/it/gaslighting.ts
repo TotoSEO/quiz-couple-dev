@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/gaslighting.webp',
   featuredImageAlt: "Lampada a gas con la fiamma che cala, sagoma che dubita nella penombra",
   publishedAt: '2026-11-24',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Il gaslighting non ti mente sui fatti. Ti mente su di te: la tua memoria, la tua percezione, la tua salute mentale. È ciò che ne fa la manipolazione più corrosiva che esista.",
   introduction: `<p>Hai visto la scena. Eri lì, hai sentito le parole, potresti ripeterle... Eppure, di fronte, un aplomb perfetto: «non l'ho mai detto». Nemmeno un'esitazione. Allora verifichi nella tua testa, una volta, due... e si apre una piccola crepa: e se fossi stata io?</p>
 <p>Quella crepa ha un nome: il gaslighting. <strong>Non è una menzogna sui fatti, è un attacco allo strumento di misura: te.</strong> La tua memoria, la tua percezione, la tua stabilità... Ripetuta abbastanza a lungo, questa manipolazione produce un risultato unico nel suo genere: una vittima che non può più fidarsi di sé, e che quindi dipende dal suo manipolatore per sapere cosa è reale.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-sagittaire.svg',
   featuredImageAlt: `Astrologisches Symbol des Schützen, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Der Schütze liebt die Freiheit, und trotzdem die Liebe. Welche Sternzeichen können ihn begleiten, ohne ihn einzuengen?`,
   introduction: `<p>Der Schütze hat einen Ruf, der ihm vorauseilt: unverbindlich, rastlos, immer auf dem Sprung. Doch wer nur das sieht, verpasst das Wesentliche. <strong>Der Schütze sucht nicht Unverbindlichkeit, er sucht Bedeutung</strong>. Er will eine Liebe, die größer ist als der Alltag. Eine, die ihn inspiriert, die ihn wachsen lässt, die ihm das Gefühl gibt, dass das Leben ein Abenteuer ist, das man zu zweit noch besser besteht. Passt Ihr Zeichen zu diesem Anspruch? <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
 <p>Jupiter regiert den Schützen, der Planet der Expansion, der Großzügigkeit, des Optimismus. In der Liebe äußert sich das als Begeisterungsfähigkeit, die ansteckend ist, und als Ehrlichkeit, die manchmal wehtut. Der Schütze lügt ungern. Und wenn er die Wahrheit sagt, nimmt er selten ein Blatt vor den Mund. Das ist erfrischend, bis es nicht mehr ist.</p>

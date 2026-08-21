@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/amour-ou-dependance-affective.webp',
   featuredImageAlt: "Deux cœurs entrelacés, l'un libre et l'autre entouré d'une corde",
   publishedAt: '2026-10-09',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "L'amour et la dépendance affective se ressemblent énormément vus de l'intérieur. Même intensité, mêmes pensées permanentes... et pourtant, tout les oppose.",
   introduction: `<p>C'est une question qu'on n'ose pas trop se poser, parce qu'elle fait un peu peur : est-ce que je l'aime, lui... ou est-ce que j'aime surtout le fait qu'il soit là ? Est-ce que c'est de l'amour, ce truc qui me serre le ventre quand il ne répond pas ? Ou autre chose ?</p>
 <p>La confusion est normale, et il faut commencer par le dire : <strong>vus de l'intérieur, l'amour intense et la dépendance affective se ressemblent beaucoup.</strong> Dans les deux cas, tu penses à lui sans arrêt, tu détestes son absence, tu ressens fort... L'intensité ne fait pas la différence. Ce qui fait la différence, c'est la direction : l'amour te porte vers lui, la dépendance te fait fuir un vide.</p>

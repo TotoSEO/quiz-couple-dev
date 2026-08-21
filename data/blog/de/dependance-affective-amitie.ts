@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-amitie.webp',
   featuredImageAlt: "Zwei Freundinnen, verbunden durch einen zu straff gespannten roten Faden zwischen ihren Handgelenken",
   publishedAt: '2026-11-17',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Wir achten auf emotionale Abhängigkeit in unseren Beziehungen... und lassen sie sich in unseren Freundschaften ganz ruhig einnisten, wo niemand nach ihr sucht.",
   introduction: `<p>Es gibt eine Eifersucht, von der nie jemand spricht: die, die man fühlt, wenn die beste Freundin jemand anderem näherkommt. Dieser Stich, wenn sie von einem Abend erzählt, an dem man nicht dabei war... Dieses Bedürfnis zu wissen, dass man «die» Person bleibt, die Erste, die es erfährt, die Liebste. Man traut sich nicht, es zu sagen, weil es absurd klingt: Eifersucht, unter Freundinnen?</p>
 <p>Und doch. <strong>Emotionale Abhängigkeit ist eine Bindungsform, keine Exklusivität der Paarbeziehung: Sie nistet sich überall dort ein, wo Bindung ist.</strong> Und Freundschaft ist sogar ihr diskretestes Terrain, weil niemand hinschaut... Wir wiederholen «Freundinnen sind heilig», und unter dieser Fahne kippen ganze Bindungen sanft vom Kostbaren ins Verschmolzene, vom Verschmolzenen ins Erstickende.</p>

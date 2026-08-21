@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/love-bombing.svg',
   featuredImageAlt: "Raining hearts and one heart on a fishing hook, illustrating love bombing",
   publishedAt: '2026-08-02',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Love bombing doesn't look like manipulation. It looks like the most beautiful beginning of your life. That is exactly what makes it work.",
   introduction: `<p>You've just met someone and everything is moving fast. Messages from morning to night. Compliments that make your head spin. An "I think you're the one" after three weeks. Your friends tell you it's wonderful. And somewhere inside, you feel a small mismatch you can't quite name.</p>
 <p><strong>Love bombing doesn't look like manipulation. It looks like the most beautiful beginning of your life.</strong> That is precisely what makes it so effective, and it's why the question "does he really love me, or is he manipulating me?" is so hard to settle from the inside.</p>

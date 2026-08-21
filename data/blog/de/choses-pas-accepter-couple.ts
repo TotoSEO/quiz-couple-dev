@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/limites-couple-accepter.webp',
   featuredImageAlt: "Paar setzt Grenzen in ihrer Liebesbeziehung",
   publishedAt: '2026-02-21',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Verhaltensweisen, die in einer Beziehung nicht toleriert werden sollten.",
   introduction: `<p>Es gibt Dinge, die wir in einer Beziehung akzeptieren, ohne es wirklich zu bemerken. Nicht auf einmal, schrittweise. Eine <strong>verletzende Bemerkung</strong>, einmal. Dann zweimal. Dann wird es zur Norm. Ein <strong>respektloses Verhalten</strong>, das anfangs schockiert und das wir irgendwann "normal" finden, weil wir uns daran gewöhnt haben. Das nennt man die <strong>Normalisierung toxischer Verhaltensweisen</strong>, einer der heimtückischsten Mechanismen in einer Beziehung, die aus dem Ruder läuft.</p>
 <p>Über <strong>Dinge zu sprechen, die man in einer Beziehung nicht akzeptieren sollte</strong>, bedeutet nicht, unvollkommene Beziehungen anzuklagen. Jede Beziehung hat ihre Reibungen, ihre Ungeschicklichkeiten, ihre schwierigen Momente. Aber es gibt einen echten Unterschied zwischen einer <strong>unvollkommenen Beziehung</strong> und einer <strong>Beziehung, die Ihnen schadet</strong>.</p>

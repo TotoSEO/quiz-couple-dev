@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Astrologisches Symbol des Skorpions, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Der Skorpion liebt absolut, oder gar nicht. Welche Sternzeichen halten seine Intensität aus?`,
   introduction: `<p>Über den Skorpion kursieren mehr Klischees als über jedes andere Zeichen. Manipulativ, eifersüchtig, rachsüchtig, die Liste ist lang und meistens unfair. Was näher an der Wahrheit liegt: <strong>Der Skorpion erlebt Gefühle mit einer Intensität, die die meisten anderen Zeichen nicht einmal ansatzweise kennen</strong>. In der Liebe bedeutet das eine Hingabe, die transformativ sein kann. Aber auch eine Eifersucht, die ersticken kann, wenn sie nicht in gesunde Bahnen gelenkt wird. Neugierig, ob Ihr Zeichen dieser Kraft standhält? <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
 <p>Pluto und Mars regieren den Skorpion, Transformation und Aktion, Tiefe und Trieb. In einer Beziehung will der Skorpion nicht an der Oberfläche bleiben. Er will alles wissen, alles spüren, alles teilen. Halbe Sachen sind für ihn schlimmer als gar nichts. <strong>Wer sich auf einen Skorpion einlässt, bekommt nicht nur einen Partner, sondern eine Erfahrung, die einen verändert.</strong></p>

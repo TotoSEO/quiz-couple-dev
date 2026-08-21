@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sortir-emprise-pervers-narcissique.webp',
   featuredImageAlt: "Uccello che scappa da una gabbia la cui porta si apre su un cielo limpido",
   publishedAt: '2026-11-13',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Si crede che uscire dal controllo significhi andarsene. In realtà andarsene è solo la terza tappa su quattro... e non è la più dura.",
   introduction: `<p>Se hai già provato ad andartene, conosci quel paradosso che fa impazzire: tu LO SAI. Hai capito il meccanismo, hai letto gli articoli, sai descrivere il suo funzionamento meglio di un manuale... eppure sei ancora lì. O sei andata via e sei tornata. Forse più volte.</p>
 <p>Mettiamo subito fine alla peggiore interpretazione, quella che ti rode: no, non è mancanza di volontà, e no, non sei «troppo debole». <strong>Il controllo non è un'opinione che si abbandona. È uno stato, fabbricato chimicamente e psicologicamente, e si smonta in un certo ordine.</strong> Non con un colpo di volontà... tappa dopo tappa.</p>

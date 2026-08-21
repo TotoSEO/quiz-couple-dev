@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-chez-l-homme.webp',
   featuredImageAlt: "Man seen from behind looking at his phone, his shadow a chained heart",
   publishedAt: '2026-10-16',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "We picture the emotionally dependent person as clingy and pleading. In men it more often looks like jealousy, anger... or a guy who's never single.",
   introduction: `<p>When you say «emotional dependency», everyone pictures the same scene: someone pleading, clinging, sending fifteen messages. And since most men don't recognise themselves in that image, they conclude it doesn't apply to them. Big mistake.</p>
 <p><strong>Male emotional dependency exists, it's widespread, and it wears masks nobody identifies as emotional need.</strong> The jealousy that controls. The anger that explodes over nothing. The over-investment of the perfect guy who does everything at home. Or that phenomenon everyone knows without naming it: the man who is NEVER single for more than three weeks.</p>

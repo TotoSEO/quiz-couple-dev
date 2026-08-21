@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-scorpion.svg',
   featuredImageAlt: `Símbolo astrológico de Escorpio, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Escorpio ama con una intensidad que pocos signos pueden igualar. ¿Quién está a la altura de esa pasión sin salir quemado?`,
   introduction: `<p>Con Escorpio no hay medias tintas. O estás dentro o estás fuera. No hay zona gris, no hay "veamos a dónde va esto", no hay ambigüedad cómoda. Cuando Escorpio se entrega, lo hace con todo, y espera exactamente lo mismo a cambio. <strong>Su amor no es ligero. Es una inmersión completa.</strong> Si quieres saber si tu signo puede con esa profundidad, <a href="/es/signos-astrologicos-nombres-compatibilidad/">comprueba tu compatibilidad astrológica y de nombre</a>.</p>
 <p>Regido por Plutón, el planeta de la transformación y lo oculto, Escorpio tiene una capacidad única para ver más allá de las apariencias. Detecta las mentiras antes de que se digan. Percibe las intenciones que otros esconden. Y eso, en una relación, es un superpoder y una carga al mismo tiempo: le permite construir una intimidad extraordinaria, pero también le hace desconfiar más de lo que le gustaría.</p>

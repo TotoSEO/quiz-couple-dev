@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/arreter-ou-continuer-relation.webp',
   featuredImageAlt: `Due tazze su un tavolo da cucina all'alba, una piena e una vuota, due sedie leggermente scostate`,
   publishedAt: '2026-08-11',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `La maggior parte di chi si pone questa domanda ci gira intorno da mesi. Ecco cosa distingue un brutto periodo da un vicolo cieco, e come decidere senza mentirsi.`,
   introduction: `<p>Se cerchi la risposta breve, eccola: <strong>si smette quando la relazione ti chiede di rinunciare a chi sei, e si continua quando ti chiede soltanto di lavorarci.</strong> Tutto il resto di questo articolo serve a capire in quale dei due casi ti trovi.</p>
 

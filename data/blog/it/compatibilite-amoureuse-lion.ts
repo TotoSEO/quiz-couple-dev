@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Simbolo astrologico del Leone, compatibilità amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Il Leone ama in grande, con gesti, con passione, con orgoglio. Ma ha bisogno di un partner che non si lasci eclissare.`,
   introduction: `<p>Il Leone non fa niente in piccolo, tantomeno amare. Quando si innamora, lo fa con tutto, i gesti, le parole, i grandi piani per il futuro. È il segno che vi porterà fiori un martedì qualunque, che vi presenterà a tutti i suoi amici dopo due settimane, che trasformerà ogni anniversario in un evento. <strong>Il Leone non ama in silenzio. Ama sotto i riflettori, e vuole che il mondo lo sappia.</strong> Per scoprire se questa energia trova il suo equilibrio nel vostro legame, <a href="/it/segni-zodiacali-nomi-compatibilita/">calcolate la vostra compatibilità tra segni zodiacali e nomi</a>.</p>
 <p>Governato dal Sole, il Leone ha bisogno di essere al centro. Non per egoismo, o almeno, non solo per quello, ma perché la sua identità si costruisce nella relazione con gli altri. Essere ammirato, riconosciuto, apprezzato: per il Leone non è vanità, è ossigeno. E il partner giusto è quello che sa dargli questa luce senza perdere la propria.</p>

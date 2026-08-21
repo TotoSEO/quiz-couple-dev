@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/love-bombing.svg',
   featuredImageAlt: "Herzregen und ein Herz an einem Angelhaken, als Sinnbild für Love Bombing",
   publishedAt: '2026-08-02',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Love Bombing sieht nicht nach Manipulation aus. Es sieht nach dem schönsten Anfang deines Lebens aus. Genau das macht es so wirksam.",
   introduction: `<p>Du hast gerade jemanden kennengelernt und alles geht sehr schnell. Nachrichten von morgens bis abends. Komplimente, die dir den Kopf verdrehen. Ein „ich glaube, du bist die Richtige" nach drei Wochen. Deine Freundinnen sagen, das sei wunderschön. Und irgendwo in dir spürst du eine kleine Unstimmigkeit, die du nicht benennen kannst.</p>
 <p><strong>Love Bombing sieht nicht nach Manipulation aus. Es sieht nach dem schönsten Anfang deines Lebens aus.</strong> Genau das macht es so wirksam, und deshalb ist die Frage „liebt er mich wirklich oder manipuliert er mich?" von innen heraus so schwer zu beantworten.</p>

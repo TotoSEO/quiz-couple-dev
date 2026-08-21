@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Dos sillas frente a frente bajo una bombilla cálida, un cuaderno de preguntas entre ellas",
   publishedAt: '2026-11-06',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "En 1997 un psicólogo hizo que dos desconocidos se enamoraran en su laboratorio, con una simple lista de preguntas. La lista sigue existiendo... aquí está.",
   introduction: `<p>La historia es cierta y es irresistible. En 1997, el psicólogo estadounidense Arthur Aron hizo entrar a parejas de desconocidos en su laboratorio. La consigna: hacerse 36 preguntas, en orden, cada vez más personales, y luego mirarse a los ojos cuatro minutos, sin hablar. Resultado: una cercanía récord entre perfectos extraños... y, la leyenda retiene sobre todo esto, dos participantes que acabaron casándose.</p>
 <p>El experimento dormía en las revistas científicas hasta 2015, cuando una ensayista contó en el New York Times haberlo probado en una cita... y haberse enamorado. Desde entonces, las «36 preguntas» han dado la vuelta al mundo. <strong>Y al contrario de lo que se cree, no es un truco: el mecanismo que hay detrás es sólido, documentado... y funciona también en parejas asentadas.</strong></p>

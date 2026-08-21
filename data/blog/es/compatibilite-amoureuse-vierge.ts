@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Símbolo astrológico de Virgo, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Virgo ama en silencio, con hechos, con detalles que nadie más percibe. ¿Qué signos saben interpretar ese amor discreto?`,
   introduction: `<p>Virgo no lanza grandes señales. No hace declaraciones rimbombantes. Lo que hace es recordar cómo te gusta el café, preparar exactamente lo que necesitas el día en que estás mal, organizar las cosas entre bambalinas para que tu vida sea un poco más fluida de lo que era. <strong>Su amor se lee en los detalles, y hay que saber mirar.</strong> Para saber si tu signo y tu nombre hablan el mismo idioma que Virgo, prueba <a href="/es/signos-astrologicos-nombres-compatibilidad/">el test de compatibilidad amorosa por signo y nombre</a>.</p>
 <p>Gobernado por Mercurio al igual que Géminis, pero de una forma radicalmente distinta, Virgo es analítico, preciso, atento. Piensa antes de actuar. Sopesa las palabras antes de pronunciarlas. Ese rigor que algunos confunden con frialdad es en realidad una forma de respeto: no dice lo que no piensa y no promete lo que no puede cumplir.</p>

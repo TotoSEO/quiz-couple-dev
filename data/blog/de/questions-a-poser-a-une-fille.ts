@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
   featuredImageAlt: "Zwei Menschen im Gespräch an einem Tisch, eine Person hört aufmerksam zu",
   publishedAt: '2026-09-11',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Der Unterschied zwischen einem Gespräch, das einschläft, und einem Mädchen, das dich wiedersehen will, ist nicht dein Redetalent. Es ist die Qualität deiner Fragen und was du mit den Antworten machst.",
   introduction: `<p>Seien wir zwei Minuten ehrlich. Das Problem ist fast nie, EINE Frage zu finden. Das Problem ist, dass «wie geht's?», «was machst du beruflich?» und «schönes Wochenende gehabt?» exakt so klingen wie alle anderen Gespräche, die sie gerade führt.</p>
 <p><strong>Eine gute Frage macht den Unterschied, weil sie etwas Seltenes zeigt: dass du dich für sie interessierst und nicht nur fürs Reden.</strong> Und das spürt man, glaub mir, sofort.</p>

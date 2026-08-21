@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Couple regardant un chemin qui se déroule vers l'horizon, valises à la main",
   publishedAt: '2026-10-30',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Les couples ne se plantent presque jamais par manque d'amour. Ils se plantent sur des sujets qu'ils n'avaient jamais mis sur la table.",
   introduction: `<p>Il y a une statistique que personne ne calcule mais que tout le monde connaît : la plupart des grandes crises de couple portent sur des sujets... dont les deux savaient qu'il faudrait parler un jour. L'argent. Les enfants. La belle-famille. La répartition des tâches. Le « un jour » est juste arrivé trop tard, en pleine crise, au pire moment pour en discuter calmement.</p>
 <p><strong>Parler d'avenir n'a jamais tué une histoire solide. Ne pas en parler en a tué beaucoup.</strong> Et contrairement à ce qu'on croit, ces conversations ne sont pas solennelles ni pesantes... bien menées, ce sont même parmi les plus excitantes qu'un couple puisse avoir !</p>

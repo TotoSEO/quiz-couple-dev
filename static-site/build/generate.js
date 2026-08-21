@@ -14,8 +14,7 @@ import CleanCSS from 'clean-css';
 import {
   BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID, ADSENSE_CLIENT,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
-  QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, APPLICATIONS_EVALUEES,
-  getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
+  QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable,
 } from './config.js';
@@ -575,11 +574,11 @@ async function generatePage(routeKey, lang) {
     description = blogMeta[lang]?.description || blogMeta.fr.description;
   } else if (routeKey === 'about') {
     const aboutMeta = {
-      fr: { title: 'Qui sommes-nous ? L\'équipe derrière Quiz Couple | notre histoire', description: 'Lucie et Mathieu Courtin, co-fondateurs de Quiz Couple. Pourquoi on a créé ce site, notre mission, et comment on travaille, en toute transparence.' },
-      en: { title: 'About Us, The People Behind Quiz Couple', description: 'Meet Lucie and Mathieu Courtin, co-founders of Quiz Couple. Our mission, our story, and how we work, no sugarcoating.' },
-      es: { title: 'Quiénes Somos, El Equipo de Quiz Couple', description: 'Lucie y Mathieu Courtin, cofundadores de Quiz Couple. Nuestra misión y cómo trabajamos, sin rodeos.' },
-      de: { title: 'Über Uns, Das Team von Quiz Couple', description: 'Lucie und Mathieu Courtin, Gründer von Quiz Couple. Unsere Mission und wie wir arbeiten, ehrlich und direkt.' },
-      it: { title: 'Chi Siamo, Il Team di Quiz Couple', description: 'Lucie e Mathieu Courtin, co-fondatori di Quiz Couple. La nostra missione e come lavoriamo, in trasparenza.' },
+      fr: { title: 'Qui suis-je ? L\'histoire derrière Quiz Couple', description: 'Thomas, créateur de Quiz Couple. Pourquoi j\'ai créé ce site, comment je construis les tests, et ce qu\'ils valent, en toute transparence.' },
+      en: { title: 'About, The Person Behind Quiz Couple', description: 'Thomas, creator of Quiz Couple. Why I built this site, how the tests are made, and what they are worth, no sugarcoating.' },
+      es: { title: 'Quién Soy, La Persona Detrás de Quiz Couple', description: 'Thomas, creador de Quiz Couple. Por qué creé este sitio y cómo construyo los tests, sin rodeos.' },
+      de: { title: 'Über Mich, Die Person Hinter Quiz Couple', description: 'Thomas, der Gründer von Quiz Couple. Warum ich diese Seite gebaut habe und wie die Tests entstehen, ehrlich und direkt.' },
+      it: { title: 'Chi Sono, La Persona Dietro Quiz Couple', description: 'Thomas, creatore di Quiz Couple. Perché ho creato questo sito e come nascono i test, in trasparenza.' },
     };
     title = aboutMeta[lang]?.title || aboutMeta.fr.title;
     description = aboutMeta[lang]?.description || aboutMeta.fr.description;
@@ -1282,7 +1281,7 @@ function buildSeedArticles() {
     const entry = {
       internal_slug: meta.internalSlug,
       featured_image_url: '',
-      author_id: 'mathieu-courtin',
+      author_id: 'thomas',
       status: 'published',
       published_at: meta.publishedAt,
       translations: [],
@@ -1389,8 +1388,9 @@ function parseArticleTs(filePath) {
 
     let objStr = match[1];
     // Replace AUTHORS references with inline objects
-    objStr = objStr.replace(/AUTHORS\['mathieu-courtin'\]/g, JSON.stringify(AUTHORS['mathieu-courtin']));
-    objStr = objStr.replace(/AUTHORS\['lucie-courtin'\]/g, JSON.stringify(AUTHORS['lucie-courtin']));
+    // Un seul auteur sur le site : toute reference d'auteur, y compris un
+    // identifiant herite de Supabase, resout vers lui.
+    objStr = objStr.replace(/AUTHORS\['[a-z-]+'\]/g, JSON.stringify(AUTHORS['thomas']));
     // Remove TypeScript type annotations
     objStr = objStr.replace(/as const/g, '');
 
@@ -1508,49 +1508,6 @@ async function generateBlogArticle(articleMeta, lang) {
     })(),
   ];
 
-  // ── Avis d'application : balisage Review ────────────────────────────────
-  // Les articles d'avis portent un verdict chiffré, visible dans la page
-  // (bloc .blog-note-score). Ils n'émettaient qu'un schéma Article, donc
-  // aucune étoile en résultat de recherche. Ces pages plafonnent en position
-  // 10 à 13 avec un taux de clic autour de 0,5 % : l'étoile est précisément
-  // ce qui se gagne à cet endroit-là. La note est lue dans le contenu, jamais
-  // saisie à la main, pour qu'un balisage sans contrepartie visible reste
-  // impossible.
-  const produitEvalue = APPLICATIONS_EVALUEES[articleMeta.internalSlug];
-  if (produitEvalue) {
-    const corps = (article.sections || []).map(sec =>
-      (sec.content || '') + (sec.subsections || []).map(sub => sub.content || '').join('')
-    ).join('');
-    const bloc = /class="blog-note-score"[^>]*>([\s\S]*?)<\/(?:p|div)>/.exec(corps);
-    const note = bloc && /(\d+(?:[.,]\d+)?)\s*\/\s*(\d+)/.exec(bloc[1].replace(/<[^>]+>/g, ' '));
-    if (note) {
-      jsonLdItems.push({
-        '@context': 'https://schema.org',
-        '@type': 'Review',
-        '@id': `${canonical}#review`,
-        itemReviewed: {
-          '@type': 'SoftwareApplication',
-          name: produitEvalue.nom,
-          applicationCategory: 'SocialNetworkingApplication',
-          operatingSystem: produitEvalue.plateformes || 'iOS, Android, Web',
-        },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: note[1].replace(',', '.'),
-          bestRating: note[2],
-          worstRating: '0',
-        },
-        name: article.metaTitle || article.title,
-        reviewBody: article.excerpt || article.metaDescription || '',
-        datePublished: article.publishedAt,
-        inLanguage: lang,
-        author: { '@type': 'Person', name: authorData.name || 'Quiz Couple' },
-        publisher: { '@type': 'Organization', name: 'Quiz Couple', url: BASE_URL },
-      });
-    } else {
-      console.warn(`[schema] ${articleMeta.internalSlug} (${lang}) : aucune note lisible, Review non émis`);
-    }
-  }
 
   const jsonLdHtml = jsonLdItems.map(item =>
     `<script type="application/ld+json">${JSON.stringify(item)}</script>`
@@ -1790,6 +1747,29 @@ async function main() {
 
   // Generate redirect pages for old URLs
   const REDIRECTS = [
+    // Avis d'applications de rencontre retires : ils affirmaient des tests
+    // qui n'ont pas eu lieu. Les URL pointent desormais vers le blog.
+    { from: 'blog/avis-gleese', to: '/blog/' },
+    { from: 'blog/avis-tinder', to: '/blog/' },
+    { from: 'en/blog/tinder-review', to: '/en/blog/' },
+    { from: 'es/blog/tinder-opiniones-vale-la-pena', to: '/es/blog/' },
+    { from: 'de/blog/tinder-bewertung', to: '/de/blog/' },
+    { from: 'it/blog/recensione-tinder', to: '/it/blog/' },
+    { from: 'blog/avis-bumble', to: '/blog/' },
+    { from: 'en/blog/bumble-app-review', to: '/en/blog/' },
+    { from: 'es/blog/opiniones-bumble', to: '/es/blog/' },
+    { from: 'de/blog/bumble-erfahrungen', to: '/de/blog/' },
+    { from: 'it/blog/recensione-bumble', to: '/it/blog/' },
+    { from: 'blog/avis-hinge-rencontre', to: '/blog/' },
+    { from: 'en/blog/hinge-dating-app-review', to: '/en/blog/' },
+    { from: 'es/blog/opinion-hinge-app-citas', to: '/es/blog/' },
+    { from: 'de/blog/hinge-erfahrungen-test', to: '/de/blog/' },
+    { from: 'it/blog/recensione-hinge-app', to: '/it/blog/' },
+    { from: 'blog/avis-badoo', to: '/blog/' },
+    { from: 'en/blog/badoo-review', to: '/en/blog/' },
+    { from: 'es/blog/opinion-badoo', to: '/es/blog/' },
+    { from: 'de/blog/badoo-erfahrungen', to: '/de/blog/' },
+    { from: 'it/blog/recensione-badoo', to: '/it/blog/' },
     { from: 'de/test-gesunde-beziehung', to: '/de/gesunde-beziehung-test/' },
     { from: 'de/quiz-paar-pikant', to: '/de/pikantes-paar-quiz/' },
     { from: 'de/liebes-quiz-paare', to: '/de/liebes-quiz/' },

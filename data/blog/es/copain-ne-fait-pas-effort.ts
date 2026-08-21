@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Mi novio no hace ningún esfuerzo, entender y actuar",
   publishedAt: '2026-03-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "El desequilibrio de esfuerzo en una pareja es una de las causas más frecuentes de ruptura, precisamente porque se instala progresivamente y tendemos a adaptarnos antes de darnos cuenta de cuánto pesa.",
   introduction: `<p>Tú organizas, tú anticipas, tú piensas en todo. Las salidas, los regalos, los momentos juntos, las conversaciones importantes. Y él está ahí, responde cuando propones, participa cuando insistes, pero nada viene realmente de su parte. Tienes la sensación de <a href="/es/test-relacion-sana/">llevar la relación a cuestas</a> desde hace un tiempo, y empiezas a preguntarte si es normal, si pides demasiado, o si algo no va bien de verdad.</p>
 <p>No eres tú quien exagera. <strong>El desequilibrio de esfuerzo en una pareja es una de las causas más frecuentes de ruptura, precisamente porque se instala progresivamente y tendemos a adaptarnos antes de darnos cuenta de cuánto pesa.</strong> Este artículo está aquí para poner palabras a lo que sientes, entender qué está pasando realmente, y decidir qué hacer.</p>`,

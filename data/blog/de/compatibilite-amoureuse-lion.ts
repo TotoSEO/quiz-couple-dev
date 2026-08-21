@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Astrologisches Symbol des Löwen, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Der Löwe liebt mit Leidenschaft und erwartet Gleiches zurück. Doch nicht jedes Zeichen spielt dieses Spiel mit.`,
   introduction: `<p>Man sagt oft, der Löwe sei eitel. Das greift zu kurz. Was er in der Liebe wirklich sucht, ist Gegenseitigkeit, nur eben eine sehr sichtbare Gegenseitigkeit. Er muss spüren, dass seine Anwesenheit zählt, dass der andere ihn sieht, dass das, was er in die Beziehung einbringt, anerkannt wird. <strong>Das ist keine Eitelkeit. Es ist seine Sprache der Liebe.</strong> Neugierig, ob Ihr Zeichen dem Löwen gewachsen ist? <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Entdecken Sie Ihre astrologische Kompatibilität</a>.</p>
 <p>Regiert von der Sonne, strahlt der Löwe, und er braucht einen Partner, der dieses Licht nicht zu überdecken versucht, sondern der an seiner Seite leuchten kann, ohne in einen Wettbewerb zu geraten. Der Unterschied ist subtil, aber entscheidend. Jemand, der vor ihm zurückweicht, langweilt ihn. Jemand, der seinen Platz einnehmen will, erschöpft ihn. Das Ideal ist jemand mit eigenem Glanz, der seinen bewundert und seinen eigenen zurückstrahlt.</p>

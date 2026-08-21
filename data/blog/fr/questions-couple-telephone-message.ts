@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-couple-telephone-message.webp',
   featuredImageAlt: "Deux téléphones reliés par un fil rouge tendu entre deux fenêtres éclairées",
   publishedAt: '2026-11-27',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Au téléphone, pas de regard, pas de gestes... juste les mots. C'est exactement pour ça que les bonnes questions y font des merveilles.",
   introduction: `<p>Il y a un moment que tous les couples connaissent, qu'ils vivent à 800 kilomètres ou à deux arrondissements : celui où l'appel du soir tourne au bulletin météo. « Ta journée ? » « Ça va. » « Tu manges quoi ? » « Des pâtes. »... Le lien est là, l'envie aussi, mais la conversation, elle, tourne à vide.</p>
 <p>C'est normal, en fait : à distance, on perd tout ce qui nourrit d'habitude les échanges, les regards, le contexte partagé, les gestes... <strong>Il ne reste que les mots.</strong> <strong>Et c'est précisément pour ça que les bonnes questions font des merveilles au téléphone : elles redonnent aux mots quelque chose à faire.</strong></p>

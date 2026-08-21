@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Persona rompiendo una cadena en forma de corazón, escalones de fondo",
   publishedAt: '2026-09-25',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "«Trabaja en ti», «aprende a quererte»... Gracias, pero en concreto, ¿qué hago el lunes por la mañana? Aquí está el plan, ejercicio a ejercicio.",
   introduction: `<p>Si alguna vez has buscado cómo salir de la dependencia emocional, ya te sabes la canción: «recupera la confianza en ti», «céntrate en tus necesidades», «aprende a quererte». Consejos ciertos, sin duda. Pero perfectamente inservibles un martes a las once de la noche, mientras miras fijamente el móvil esperando su respuesta.</p>
 <p><strong>De la dependencia emocional no se sale con propósitos. Se sale con gestos, pequeños, precisos, repetidos.</strong> Igual que se rehabilita una rodilla tras una lesión: nadie te dice «vuelve a andar», te dan ejercicios, en un orden, con una progresión.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/styles-attachement-couple.webp',
   featuredImageAlt: "Vier stilisierte Herzen für die vier Bindungsstile, mit unterschiedlichen Fäden verbunden",
   publishedAt: '2026-12-01',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Warum lieben manche gelassen, andere klammernd, andere fliehend? Die Antwort steckt in einem Wort: Bindung. Und sie entscheidet sich lange vor der ersten Liebesgeschichte.",
   introduction: `<p>Sicher ist dir dieses seltsame Phänomen aufgefallen: In einer Beziehung scheint jeder eine im Voraus geschriebene Partitur zu spielen. Der eine braucht Nähe, fühlt sich schnell vernachlässigt, hakt nach... Der andere braucht Luft, fühlt sich schnell überrannt, entfernt sich. Und je mehr der eine klammert, desto weiter weicht der andere zurück! Als wäre das Drehbuch schon vor der Begegnung geschrieben gewesen.</p>
 <p>Zum Teil war es das. <strong>Dieses Drehbuch heißt Bindungsstil: die Art, wie dein Gefühlssystem ganz früh gelernt hat, mit Bindung, Nähe und Trennung umzugehen.</strong> Das ist die Bindungstheorie, eines der solidesten Felder der modernen Psychologie, von John Bowlby in den 1950ern begründet... und sie wirft auf erwachsene Paare ein ziemlich spektakuläres Licht.</p>

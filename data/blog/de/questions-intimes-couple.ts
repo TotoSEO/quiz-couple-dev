@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Paar eng umschlungen auf einem Sofa bei gedämpftem Licht, mitten im vertrauten Gespräch",
   publishedAt: '2026-09-22',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Es gibt die Gespräche, die man jeden Tag führt... und die, die man sich nie zu beginnen traut. Rate, welche am meisten näher bringen.",
   introduction: `<p>Ihr erzählt euch alles, na ja, fast. Die Arbeit, die Freunde, die Pläne, was es heute Abend gibt. Aber es gibt ein Gebiet, über das man deutlich schwerer spricht, selbst nach Jahren: was der andere wirklich fühlt, was er sich nicht zu fragen traut, was ihm fehlt, worauf er Lust hat. Das Intime, das echte.</p>
 <p><strong>Und das ist schade, denn genau dort entscheidet sich die Vertrautheit eines Paares.</strong> Nicht in den großen Erklärungen! In diesen Gesprächen, die etwas nackter sind als die anderen, die man leise beginnt, an einem Abend, an dem man sich wohlfühlt.</p>

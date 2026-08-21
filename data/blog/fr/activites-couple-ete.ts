@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/activites-couple-ete.webp',
   featuredImageAlt: "Pique-nique d'été au coucher du soleil avec deux limonades, un panier en osier et un vélo appuyé contre un arbre",
   publishedAt: '2026-07-29',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "L'été, du temps et zéro idée ? Voici dix activités simples, pas chères et testées à deux, qui changent des sorties classiques et créent de vrais souvenirs.",
   introduction: `<p>L'été, on a du temps, de la lumière jusqu'à 22h et... souvent zéro idée. Alors on refait la même terrasse, le même film, la même balade autour du même parc. Pourtant, <strong>les meilleures activités en couple l'été ne sont presque jamais celles qui coûtent cher ou qui demandent trois semaines de préparation.</strong> Ce sont des trucs simples, un peu bêtes parfois, qu'on ne fait juste jamais. En voici dix, testées et validées à la maison.</p>`,
   quickSummary: [

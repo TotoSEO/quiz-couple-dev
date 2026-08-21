@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Símbolo astrológico de Capricornio, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Capricornio no dice "te quiero" a la ligera. Cuando lo dice, es para siempre. ¿Qué signos entienden esa forma de amar?`,
   introduction: `<p>Capricornio tiene fama de frío. Es injusto. Lo que ocurre es que <strong>Capricornio no muestra lo que siente hasta que está seguro de que es real</strong>. No se lanza al vacío emocional, primero comprueba que hay suelo firme debajo. Eso puede parecer contención, pero en realidad es una forma de respeto: hacia sí mismo y hacia la otra persona. Si quieres saber cómo encaja tu signo con esta forma de amar, <a href="/es/signos-astrologicos-nombres-compatibilidad/">prueba nuestra herramienta de compatibilidad astrológica y de nombre</a>.</p>
 <p>Regido por Saturno, el planeta de la disciplina y el tiempo, Capricornio entiende el amor como una construcción. No como un rayo que te cae encima, sino como algo que se edifica día a día, decisión a decisión, acto a acto. Para algunos signos, eso es exactamente lo que necesitan. Para otros, es demasiado lento.</p>

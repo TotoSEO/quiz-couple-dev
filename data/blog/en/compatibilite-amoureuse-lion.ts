@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-lion.svg',
   featuredImageAlt: `Leo astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Leo loves with flair and expects it in return. But not every sign plays that game.`,
   introduction: `<p>People often say Leo is egotistical. That's reductive. What they actually want in love is reciprocity, just a very visible kind of reciprocity. They need to know their presence matters, that the other person truly sees them, that what they bring to the relationship is acknowledged. <strong>That's not vanity. That's their love language.</strong> Curious whether your sign is up to the task? <a href="/en/zodiac-signs-names-compatibility/">Discover your full astrological compatibility</a>.</p>
 <p>Ruled by the Sun, Leo radiates, and they need a partner who doesn't try to cover that light, but who can shine alongside them without turning it into a competition. The distinction is subtle but critical. Someone who fades into the background bores them. Someone who tries to take their place exhausts them. The ideal is someone who has their own light, and who admires Leo's in return.</p>

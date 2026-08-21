@@ -23,7 +23,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/<image-name>.webp',  // Image dans public/blog/
   featuredImageAlt: `description alt de l'image`,
   publishedAt: 'YYYY-MM-DD',
-  author: AUTHORS['mathieu-courtin'],        // ou AUTHORS['lucie-courtin']
+  author: AUTHORS['thomas'],        // ou AUTHORS['thomas']
   excerpt: `Chapeau court (1-2 phrases)`,
   introduction: `<p>Paragraphes HTML d'introduction...</p>`,
   quickSummary: [

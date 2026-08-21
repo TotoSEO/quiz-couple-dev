@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Two chairs facing each other under a warm bulb, a notebook of questions between them",
   publishedAt: '2026-11-06',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "In 1997, a psychologist made two strangers fall in love in his laboratory, with a simple list of questions. The list still exists... here it is.",
   introduction: `<p>The story is true, and it's irresistible. In 1997, the American psychologist Arthur Aron brought pairs of strangers into his laboratory. The instruction: ask each other 36 questions, in order, increasingly personal, then look into each other's eyes for four minutes, without speaking. The result: record closeness between complete strangers... and, this is what the legend mostly remembers, two participants who ended up marrying.</p>
 <p>The experiment slept in the scientific journals until 2015, when an essayist wrote in the New York Times that she had tried it on a date... and fallen in love. Since then, the «36 questions» have gone around the world. <strong>And contrary to what people think, it isn't a gimmick: the mechanism behind it is solid, documented... and it also works on established couples.</strong></p>

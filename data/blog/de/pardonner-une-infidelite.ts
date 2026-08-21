@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/pardonner-une-infidelite.webp',
   featuredImageAlt: "Gebrochenes Herz, mit goldenem Faden zusammengenäht, im Stil des Kintsugi",
   publishedAt: '2026-12-29',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Nach einer Untreue hat jeder eine Meinung: «geh», «verzeih», «ich könnte das nie». Die einzige Frage, die zählt: Unter welchen Bedingungen ist ein Verzeihen ECHT?",
   introduction: `<p>Seit du es weißt, wissen alle, was an deiner Stelle zu tun wäre. Deine beste Freundin sagt «geh, du bist immer mehr wert als das». Deine Mutter sagt «jedes Paar macht Dinge durch». Und du, mittendrin, schwankst von Stunde zu Stunde zwischen dem Wunsch, alles zu zertrümmern, und dem Wunsch, dass nichts davon je existiert hätte.</p>
 <p>Räumen wir also zuerst die zwei symmetrischen Lügen weg, die zu diesem Thema kursieren. Nein, «wer einmal betrügt, betrügt immer» ist kein Naturgesetz: Es gibt echte Paare, die eine Untreue überstehen, und manche gehen sogar gefestigter daraus hervor. Und nein, «Verzeihen ist immer möglich, wenn man sich liebt» stimmt ebenso wenig: Bestimmte Verratsformen, bestimmte Kontexte und bestimmte Partner machen Verzeihen unmöglich oder toxisch. <strong>Die eigentliche Frage lautet nicht «soll ich verzeihen?», sondern: Sind bei euch die Bedingungen für ein echtes Verzeihen erfüllt?</strong></p>

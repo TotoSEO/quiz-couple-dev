@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Pisces astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Pisces loves with a depth few signs understand. Which partners can navigate their waters?`,
   introduction: `<p>Pisces is the last sign of the zodiac, and in a way, they carry a piece of every other sign within them. <strong>Their sensitivity isn't a weakness. It's an emotional radar that nothing can fool.</strong> They perceive what others hide, feel what others refuse to name, and love with an intensity that can be as beautiful as it is destabilizing. To find out whether your sign can navigate those depths, <a href="/en/zodiac-signs-names-compatibility/">test your love compatibility by sign and name</a>.</p>
 <p>Ruled by Neptune, the planet of imagination and dissolved boundaries, Pisces lives love as a total immersion. They don't draw a line between loving someone and merging with that person, which makes them extraordinarily devoted partners, but also vulnerable to unbalanced relationships.</p>

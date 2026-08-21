@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/signes-infidelite.webp',
   featuredImageAlt: "Phone lying face down on a table between two people turning their backs on each other",
   publishedAt: '2026-12-22',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Doubt about infidelity is one of the worst things to live through in a relationship... and paradoxically, most lists of «signs» make it worse instead of clearer.",
   introduction: `<p>If you are reading this article, something has put you on alert. A change in habits, a phone that has become untouchable, a new distance... or just an intuition, that dull thing that refuses to shut up. And ever since, you have been swinging between two kinds of shame: suspecting without proof, and not wanting to see.</p>
 <p>So let's set an honest frame first, because the subject deserves it: <strong>no isolated sign proves an infidelity. None.</strong> Lists of «15 signs he is cheating on you» mostly manufacture anxiety: every sign taken alone has ten innocent explanations. What counts is the CLUSTER: several changes, simultaneous, lasting, with no coherent explanation.</p>

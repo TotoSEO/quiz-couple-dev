@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-taureau.svg',
   featuredImageAlt: `Taurus astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Taurus loves deeply, loyally, and for the long haul. But not every sign is built for that rhythm.`,
   introduction: `<p>Ask a Taurus what they want in love. They'll tell you, maybe not in these exact words, something that sounds like <em>consistency</em>. Not boring routine, not mechanical repetition. But the certainty that tomorrow, the other person will still be there. That what was built together won't vanish at the first storm. If you want to see whether your sign-and-name combination lives up to that promise, try <a href="/en/zodiac-signs-names-compatibility/">our zodiac and name compatibility tool</a>.</p>
 <p>Venus rules this sign. And contrary to what you might expect, Venus in Taurus isn't primarily about romance and grand declarations, <strong>it's about tangible pleasure, physical presence, accessible beauty</strong>. A good meal shared. A comfortable sofa. The warmth of someone you truly know. That's what Taurus calls love.</p>

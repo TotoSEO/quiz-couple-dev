@@ -26,7 +26,7 @@
     {
       internal_slug: 'les-phases-de-la-rupture-chez-l-homme',
       featured_image_url: '/blog/phases-rupture-homme.webp',
-      author_id: 'mathieu-courtin',
+      author_id: 'thomas',
       status: 'published',
       published_at: '2026-02-21',
       translations: [
@@ -40,7 +40,7 @@
     {
       internal_slug: 'choses-pas-accepter-couple',
       featured_image_url: '/blog/limites-couple-accepter.webp',
-      author_id: 'lucie-courtin',
+      author_id: 'thomas',
       status: 'published',
       published_at: '2026-02-21',
       translations: [
@@ -54,7 +54,7 @@
     {
       internal_slug: 'avis-tinder',
       featured_image_url: '/blog/avis-tinder.webp',
-      author_id: 'mathieu-courtin',
+      author_id: 'thomas',
       status: 'published',
       published_at: '2026-02-24',
       translations: [
@@ -68,7 +68,7 @@
     {
       internal_slug: 'avis-bumble',
       featured_image_url: '/blog/avis-bumble.webp',
-      author_id: 'mathieu-courtin',
+      author_id: 'thomas',
       status: 'published',
       published_at: '2026-02-25',
       translations: [
@@ -82,7 +82,7 @@
     {
       internal_slug: 'avis-hinge',
       featured_image_url: '/blog/avis-hinge.webp',
-      author_id: 'mathieu-courtin',
+      author_id: 'thomas',
       status: 'published',
       published_at: '2026-02-27',
       translations: [
@@ -96,7 +96,7 @@
     {
       internal_slug: 'avis-badoo',
       featured_image_url: '/blog/avis-badoo.webp',
-      author_id: 'mathieu-courtin',
+      author_id: 'thomas',
       status: 'published',
       published_at: '2026-02-28',
       translations: [
@@ -110,7 +110,7 @@
     {
       internal_slug: 'femme-malheureuse-en-couple',
       featured_image_url: '',
-      author_id: 'mathieu-courtin',
+      author_id: 'thomas',
       status: 'published',
       published_at: '2026-03-01',
       translations: [

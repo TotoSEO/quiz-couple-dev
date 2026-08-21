@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/signes-infidelite.webp',
   featuredImageAlt: "Handy mit dem Display nach unten auf dem Tisch zwischen zwei Menschen, die sich den Rücken zukehren",
   publishedAt: '2026-12-22',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Der Zweifel an der Treue gehört zum Schlimmsten, was man in einer Beziehung erlebt, und paradoxerweise verschlimmern ihn die meisten Listen von «Anzeichen», statt ihn zu klären.",
   introduction: `<p>Wenn du diesen Artikel liest, hat dich etwas alarmiert. Eine veränderte Gewohnheit, ein Handy, das unantastbar geworden ist, eine neue Distanz, oder einfach eine Ahnung, dieses dumpfe Etwas, das nicht schweigen will. Und seitdem schwankst du zwischen zwei Formen von Scham: der, ohne Beweis zu verdächtigen, und der, nicht hinsehen zu wollen.</p>
 <p>Setzen wir also zuerst einen ehrlichen Rahmen, denn das Thema verdient ihn: <strong>Kein einzelnes Anzeichen beweist eine Untreue. Keines.</strong> Listen mit «15 Anzeichen, dass er dich betrügt» produzieren vor allem Angst: Jedes Anzeichen für sich hat zehn harmlose Erklärungen. Was zählt, ist das BÜNDEL: mehrere Veränderungen, gleichzeitig, dauerhaft, ohne stimmige Erklärung.</p>

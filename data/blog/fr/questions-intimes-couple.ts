@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Couple enlacé sur un canapé à la lumière tamisée, en pleine conversation complice",
   publishedAt: '2026-09-22',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Il y a les conversations qu'on a tous les jours... et celles qu'on n'ose pas lancer. Devine lesquelles rapprochent le plus.",
   introduction: `<p>Vous vous dites tout, enfin presque. Le boulot, les amis, les projets, ce que vous mangez ce soir... Mais il y a un territoire dont on parle beaucoup moins facilement, même après des années : ce que l'autre ressent vraiment, ce qu'il n'ose pas demander, ce qui lui manque, ce dont il a envie. L'intime, le vrai.</p>
 <p><strong>Et c'est dommage, parce que c'est exactement là que se joue la complicité d'un couple.</strong> Pas dans les grandes déclarations ! Dans ces conversations un peu plus nues que les autres, celles qu'on lance à voix basse, un soir où on se sent bien...</p>

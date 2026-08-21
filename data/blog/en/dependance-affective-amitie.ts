@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-amitie.webp',
   featuredImageAlt: "Two friends linked by a red thread pulled too tight between their wrists",
   publishedAt: '2026-11-17',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "We watch out for emotional dependency in our relationships... and let it settle quietly into our friendships, where nobody thinks to look for it.",
   introduction: `<p>There's a jealousy nobody ever talks about: the one you feel when your best friend gets closer to someone else. That pinch when she talks about an evening you weren't part of... That need to know you're still «the» person, the first to be told, the favourite. You don't dare say it, because it sounds absurd: jealousy, between friends?</p>
 <p>And yet. <strong>Emotional dependency is a mode of attachment, not an exclusive feature of romantic relationships: it settles wherever there's a bond.</strong> And friendship is even its most discreet ground, because nobody is watching... We repeat that «friends are sacred», and under that banner, entire bonds slide gently from precious to fusional, from fusional to suffocating.</p>

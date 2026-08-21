@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Couple looking at a path unrolling towards the horizon, suitcases in hand",
   publishedAt: '2026-10-30',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Couples almost never fail for lack of love. They fail on subjects they had never put on the table.",
   introduction: `<p>There's a statistic nobody calculates but everybody knows: most major relationship crises are about subjects... both people knew they'd have to discuss one day. Money. Children. In-laws. Sharing the chores. «One day» simply arrived too late, in the middle of a crisis, at the worst possible moment for discussing it calmly.</p>
 <p><strong>Talking about the future has never killed a solid relationship. Not talking about it has killed plenty.</strong> And contrary to what people think, these conversations aren't solemn or heavy... handled well, they're among the most exciting a couple can have!</p>

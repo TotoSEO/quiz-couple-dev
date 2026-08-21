@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Mujer pensativa sentada sola, señales de malestar en la pareja",
   publishedAt: '2026-03-01',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Las señales llevan tiempo ahí. Simplemente no sabías qué mirar.",
   introduction: `<p>La mayoría de los hombres no ven venir nada. No porque les dé igual, sino porque las señales que una mujer envía cuando está mal en una relación no se parecen a lo que uno imagina. <strong>No son necesariamente lágrimas ni discusiones.</strong> Suele ser algo más silencioso. Más difuso. Algo que se va apagando poco a poco, sin que puedas ponerle el dedo encima.</p>
 <p>Si estás leyendo este artículo, es probable que hayas sentido que algo no va bien. Esa intuición merece ser tomada en serio.</p>`,

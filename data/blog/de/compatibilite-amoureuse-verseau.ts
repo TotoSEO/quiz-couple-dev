@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Astrologisches Symbol des Wassermanns, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Der Wassermann liebt anders als alle anderen, unkonventionell, frei und auf seine eigene Art tief.`,
   introduction: `<p>Der Wassermann ist das Zeichen, das am häufigsten als „beziehungsunfähig" abgestempelt wird. Und am häufigsten zu Unrecht. <strong>Der Wassermann kann lieben, er weigert sich nur, es auf die herkömmliche Art zu tun</strong>. Er braucht keinen Partner, der sein halbes Ich ist. Er braucht jemanden, der sein ganzes eigenes Ich hat, und neben ihm wächst, statt an ihm zu kleben. Um herauszufinden, ob Ihre Konstellation diese Freiheit zulässt, <a href="/de/sternzeichen-vornamen-kompatibilitaet/">testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
 <p>Uranus und Saturn regieren den Wassermann, Revolution und Struktur, Zukunft und Tradition. Dieses Spannungsfeld erklärt vieles: Der Wassermann will das System brechen, aber er braucht ein Fundament, von dem aus er bricht. In der Liebe bedeutet das: Er will eine Beziehung, die ihm Sicherheit gibt, ohne ihm Ketten anzulegen. <strong>Eine hohe Anforderung, aber nicht unmöglich für die richtigen Zeichen.</strong></p>

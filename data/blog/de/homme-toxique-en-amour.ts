@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/homme-toxique-en-amour.webp',
   featuredImageAlt: "Sechs männliche Silhouetten, einige werfen einen dornigen Schatten",
   publishedAt: '2026-10-27',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Zwischen dem Ungeschickten, der sich ändern kann, und dem Manipulator, der es nicht wird, liegt eine ganze Bandbreite... und man schützt sich nicht bei allen gleich.",
   introduction: `<p>Seit «toxisch» das Wort der Stunde ist, wird alles darunter einsortiert: der Eifersüchtige, der Distanzierte, der Cholerische, der Lügner. Und das ist ein echtes Problem, denn diese Männer ähneln sich nicht. Manche schaden aus Unreife, ohne es zu wollen, und können sich ändern. Andere schaden aus ihrem Funktionieren heraus und werden sich nicht ändern. <strong>Beide zu verwechseln heißt, entweder vor einem Mann zu fliehen, der hätte erwachsen werden können... oder jahrelang bei einem zu bleiben, der es nie wird.</strong></p>
 <p>Dieser Artikel sortiert also. Sechs Profile des toxischen Manns in der Liebe, vom am wenigsten schweren zum schwersten: was jeder konkret anrichtet, woran du ihn erkennst... und vor allem, für jeden, die Antwort auf DIE Frage: Kann dieser sich ändern?</p>

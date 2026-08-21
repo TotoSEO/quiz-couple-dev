@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/femme-perverse-narcissique-signes.webp',
   featuredImageAlt: "Femme tenant un masque souriant devant son visage, ombre dure projetée au mur",
   publishedAt: '2026-09-29',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "On imagine toujours le pervers narcissique au masculin. Résultat : les hommes qui vivent l'emprise au féminin doutent deux fois, de leur couple, et de leur droit d'en souffrir.",
   introduction: `<p>Cherche « pervers narcissique » sur n'importe quel site : les exemples sont au masculin, les victimes au féminin. Alors quand c'est TA compagne qui souffle le chaud et le froid, qui te démolit à huis clos et qui charme tout le monde dehors... tu fais quoi, toi ? Tu doutes. Deux fois plutôt qu'une. De ce que tu vis, d'abord. Et de ton droit d'en souffrir, ensuite.</p>
 <p><strong>Disons-le clairement : la perversion narcissique existe au féminin, elle fait les mêmes dégâts, et les hommes qui la subissent sont les victimes les plus silencieuses qui soient.</strong> Pas parce que c'est moins grave. Parce que personne ne leur a donné le vocabulaire, et que « se plaindre de sa femme », socialement, ça passe pour de la faiblesse ou de la mauvaise foi.</p>

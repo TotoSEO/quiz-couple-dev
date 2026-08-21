@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-gemeaux.svg',
   featuredImageAlt: `Astrologisches Symbol der Zwillinge, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Zwillinge lieben die Abwechslung, auch in der Liebe. Welche Sternzeichen fesseln sie wirklich langfristig?`,
   introduction: `<p>Über Zwillinge heißt es gern, sie seien sprunghaft. Das ist nicht ganz fair. Was näher an der Wahrheit liegt: <strong>Zwillinge brauchen geistige Anregung wie andere Luft zum Atmen</strong>. Sobald die Gespräche flach werden und die Neugier nachlässt, wird es für sie schwer. Nicht weil sie nicht lieben können, sondern weil ihr Verstand ständig in Bewegung ist und einen Partner braucht, der da mitgeht. Finden Sie heraus, ob Ihre Konstellation diesen Anspruch erfüllt: <a href="/de/sternzeichen-vornamen-kompatibilitaet/">Testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
 <p>Merkur, ihr Herrscherplanet, steht für Kommunikation, Neugier und Vielseitigkeit. In der Liebe bedeutet das: Ein Zwilling will reden, diskutieren, lachen, provozieren, und das am besten alles in einer einzigen Unterhaltung. Wer das als oberflächlich abtut, hat nicht verstanden, dass für Zwillinge der Austausch selbst die intimste Form der Verbindung ist.</p>

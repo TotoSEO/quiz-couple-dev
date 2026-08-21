@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Red flags chez un homme, liste complète des signaux d'alarme en couple",
   publishedAt: '2026-03-05',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Les red flags sont rarement des signaux fracassants. Ce sont des patterns qu'on minimise jusqu'au jour où on réalise qu'on les a normalisés.",
   introduction: `<p>Tu ressens quelque chose. Un inconfort vague, une tension que tu n'arrives pas à nommer, une petite voix qui revient régulièrement et que tu fais taire parce que "c'est peut-être toi qui exagères". <strong>Ce n'est probablement pas toi.</strong></p>
 <p>Les red flags chez un homme sont rarement des signaux d'alarme fracassants. Ce sont des patterns. Des choses qui reviennent. Des comportements qu'on minimise une fois, deux fois, dix fois, jusqu'au jour où on réalise qu'on les a normalisés depuis des mois. Cet article est là pour les nommer.</p>`,

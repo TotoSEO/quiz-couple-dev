@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/micro-tromperie.webp',
   featuredImageAlt: "Handy mit Herz-Benachrichtigung, Schatten einer dritten Person zwischen zwei Silhouetten",
   publishedAt: '2026-12-25',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Niemand hat mit jemandem geschlafen. Und trotzdem ist etwas passiert. Willkommen in der Grauzone der modernen Treue.",
   introduction: `<p>Er hat nichts getan, technisch gesehen. Er hat mit niemandem geschlafen, kein heimliches Treffen, keine offene Lüge. Nur regelmäßige Likes auf den Fotos einer bestimmten Frau, Instagram-Gespräche, die er schließt, wenn du näher kommst, eine Ex, die er «freundschaftlich behält», mit Nachrichten um 23 Uhr. Technisch gesehen nichts. Und trotzdem stört dich etwas, und du weißt nicht einmal, ob du das Recht hast, gestört zu sein.</p>
 <p>Dieses unklare Gebiet hat einen Namen: Micro-Cheating. <strong>All die kleinen Grenzüberschreitungen, die DIE offizielle rote Linie nicht überschreiten, aber Zweideutigkeit mit jemandem außerhalb der Beziehung einrichten.</strong> Der Begriff ist mit den sozialen Netzwerken explodiert, und das aus gutem Grund: Nie war es so leicht, Glut zu hüten, ohne offiziell ein Feuer zu entzünden.</p>

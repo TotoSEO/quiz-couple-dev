@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/disputes-couple.svg',
   featuredImageAlt: "Couple en pleine discussion animée mais constructive dans leur salon",
   publishedAt: '2026-05-26',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Les disputes de couple ne sont pas le signe que ça va mal. C'est la façon dont tu gères le conflit qui fait la différence entre une relation qui grandit et une relation qui s'effrite.",
   introduction: `<p>Une bonne dispute, ça fait du bien. Le problème, c'est que personne ne nous apprend à se disputer correctement. Résultat : on crie, on accuse, on ressort le passé, on claque des portes, et le lendemain, rien n'est résolu. On s'excuse vaguement, on fait comme si de rien n'était, et on attend la prochaine explosion.</p>
 <p>Si tu es ici, c'est probablement que <strong>les disputes dans ton couple te préoccupent</strong>. Trop fréquentes, trop violentes, trop stériles, ou peut-être que tu ne te disputes jamais et que ça t'inquiète aussi. Les deux extrêmes posent question.</p>

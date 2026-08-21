@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sentiments-chez-un-homme.webp',
   featuredImageAlt: `A man's hand resting near a mug on a wooden table, soft late afternoon light`,
   publishedAt: '2026-08-12',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `For many men, feelings do not start with an inner declaration but with a habit. Here are the stages, in the order they actually happen.`,
   introduction: `<p>The answer fits in one sentence: <strong>for most men, feelings do not arrive as love at first sight but as an accumulation of shared moments that eventually create an absence.</strong> That is not less romantic, it is just slower, and above all it stays invisible from the outside for a long time.</p>
 

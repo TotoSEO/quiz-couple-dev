@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Symbole astrologique des Poissons, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Les Poissons aiment avec une profondeur que peu de signes comprennent. Quels partenaires savent naviguer dans leurs eaux ?`,
   introduction: `<p>Les Poissons sont le dernier signe du zodiaque, et d'une certaine manière, ils portent en eux un peu de tous les autres. <strong>Leur sensibilité n'est pas une faiblesse. C'est un radar émotionnel que rien ne trompe.</strong> Ils perçoivent ce que les autres cachent, ressentent ce que les autres refusent de nommer, et aiment avec une intensité qui peut être aussi belle que déstabilisante. Pour savoir si votre signe peut naviguer dans ces profondeurs, <a href="/signes-astrologiques-prenoms-compatibilite/">testez votre compatibilité amoureuse par signe et prénom</a>.</p>
 <p>Gouvernés par Neptune, planète de l'imaginaire et de la dissolution des frontières, les Poissons vivent l'amour comme une immersion totale. Ils ne font pas la différence entre aimer quelqu'un et se fondre dans cette personne, ce qui fait d'eux des partenaires extraordinairement dévoués, mais aussi vulnérables aux relations déséquilibrées.</p>

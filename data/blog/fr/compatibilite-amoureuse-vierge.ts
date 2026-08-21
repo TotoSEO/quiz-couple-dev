@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Symbole astrologique de la Vierge, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `La Vierge aime en silence, en actes, en détails que personne d'autre ne remarque. Quels signes savent lire cet amour discret ?`,
   introduction: `<p>La Vierge n'envoie pas de grands signes. Elle ne fait pas de déclarations fracassantes. Ce qu'elle fait, c'est se souvenir de ce que vous aimez dans votre café, préparer exactement ce dont vous avez besoin le jour où vous allez mal, organiser les choses en coulisses pour que votre vie soit un peu plus fluide qu'elle ne l'était. <strong>Son amour se lit dans les détails, et il faut savoir regarder.</strong> Pour savoir si votre signe et votre prénom parlent le même langage que la Vierge, essayez <a href="/signes-astrologiques-prenoms-compatibilite/">le test de compatibilité amoureuse par signe et prénom</a>.</p>
 <p>Gouvernée par Mercure comme les Gémeaux, mais d'une façon radicalement différente, la Vierge est analytique, précise, attentive. Elle réfléchit avant d'agir. Elle pèse les mots avant de les dire. Cette rigueur que certains prennent pour de la froideur est en réalité une forme de respect : elle ne dit pas ce qu'elle ne pense pas, et elle ne promet pas ce qu'elle ne peut pas tenir.</p>

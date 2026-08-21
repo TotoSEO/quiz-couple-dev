@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-gemeaux.svg',
   featuredImageAlt: `Gemini astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Gemini changes their mind like the wind, and they love it. But in love, who actually gets them?`,
   introduction: `<p>There is one thing Gemini hates more than anything: feeling boxed in. In a label, in a routine, in a version of themselves that someone else decided for them. <strong>Gemini aren't unstable, they're multifaceted.</strong> And not everyone can tell the difference. If you want to <a href="/en/zodiac-signs-names-compatibility/">test your astrological compatibility with your partner</a>, it's the best way to know whether your pairing can work.</p>
 <p>Ruled by Mercury, the planet of communication and intellect, Gemini falls in love with the mind before falling in love with the body. What attracts them? A conversation that takes an unexpected turn. A perspective that catches them off guard. Someone who can jump between three different topics in ten minutes without losing the thread, and who enjoys it just as much as they do.</p>

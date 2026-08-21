@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Donna pensierosa seduta da sola, segnali di malessere nella coppia",
   publishedAt: '2026-03-01',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "I segnali ci sono spesso da tempo. Semplicemente non sapevi cosa cercare.",
   introduction: `<p>La maggior parte degli uomini non vede nulla arrivare. Non perché non gliene importi, ma perché i segnali che una donna manda quando sta male in una relazione non assomigliano a quello che ci si immagina. <strong>Non sono per forza lacrime o litigi.</strong> Spesso è qualcosa di più silenzioso. Più sfumato. Qualcosa che si spegne progressivamente, senza che si riesca a metterci il dito sopra.</p>
 <p>Se stai leggendo questo articolo, probabilmente è perché hai avvertito che qualcosa non va. Quella sensazione merita di essere presa sul serio.</p>`,

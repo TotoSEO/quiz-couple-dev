@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/disputes-couple-vacances.webp',
   featuredImageAlt: `Maletero abierto al borde de una carretera de campo, maletas a medio cargar, dos sombras que se dan la espalda`,
   publishedAt: '2026-08-12',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Se supone que las vacaciones reparan la pareja. En las encuestas, sobre todo sacan a la superficie lo que ya iba mal. Estas son las cifras reales y el momento exacto en que se tuerce.`,
   introduction: `<p>Empecemos por la cifra, que es lo que te ha hecho hacer clic: <strong>el 28 % de las personas en pareja declara que el viaje de vacaciones es un momento tenso</strong>, según una encuesta de OpinionWay realizada para Direct Assurance entre 1 016 personas en mayo de 2025. La prensa lo redondeó a «una pareja de cada tres», y no es abusivo.</p>
 

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/femme-toxique-en-amour.webp',
   featuredImageAlt: "Weibliche Silhouette, die zu einem Herz geknotete Fäden hält",
   publishedAt: '2026-11-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Männer brauchen im Schnitt viel länger, um eine toxische Beziehung zu benennen... weil ihnen nie beigebracht wurde, wie sie aussieht, wenn sie von einer Frau kommt.",
   introduction: `<p>Mach den Test in deinem Umfeld: Frag ein paar Typen, was eine toxische Frau ist. Du bekommst Witze, Filmzitate... und sehr wenige ernsthafte Antworten. Weil wir alle mit der Vorstellung aufgewachsen sind, dass Toxizität in der Beziehung Männersache ist. Ergebnis: Wenn ein Mann eine Beziehung erlebt, die ihn beschädigt, benennt er sie nicht. Er sagt, sie habe «Charakter». Er sagt, es sei «kompliziert». Er steckt es weg... und braucht Jahre, um es zu verstehen.</p>
 <p><strong>Sagen wir es also schlicht: Toxizität hat kein Geschlecht, und ihre weiblichen Versionen richten genauso viel Schaden an wie die anderen.</strong> Sie sind nur gesellschaftlich besser getarnt: Eine Frau, die kontrolliert, «hängt an dir», eine Frau, die Szenen macht, ist «leidenschaftlich», eine Frau, die dich kleinmacht, «hat Schlagfertigkeit».</p>

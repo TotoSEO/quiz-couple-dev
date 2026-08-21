@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/attachement-evitant.webp',
   featuredImageAlt: "Silhouette, die einen Schritt vor einem entgegengestreckten Herzen zurückweicht",
   publishedAt: '2026-12-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Vermeidende Menschen lieben nicht weniger als andere. Sie haben nur sehr früh gelernt, dass Bedürftigkeit gefährlich ist, und behandeln Liebe wie ein Risiko.",
   introduction: `<p>Es ist eine der verwirrendsten Liebeserfahrungen überhaupt: Alles läuft gut, er ist präsent, witzig, engagiert, und genau in dem Moment, in dem die Beziehung ernst wird, schließt sich etwas. Weniger Nachrichten, weniger Pläne, dieses plötzliche Bedürfnis nach Luft. Du hast nichts falsch gemacht. Er ist nicht weniger gebunden. Es ist etwas anderes: Je näher du kommst, desto weiter weicht sein System zurück.</p>
 <p><strong>Willkommen bei der vermeidenden Bindung: dem Stil derer, die sehr früh gelernt haben, dass es schlecht ausgeht, sich auf jemanden zu verlassen, und dass Autonomie die einzig verlässliche Sicherheit ist.</strong> Etwa jede vierte Person funktioniert in der Liebe so. Und entgegen dem Klischee ist ein vermeidender Mensch weder kalt noch unfähig zu lieben: Er liebt mit einem umgekehrten Alarmsystem, das bei Nähe anschlägt statt bei Distanz.</p>

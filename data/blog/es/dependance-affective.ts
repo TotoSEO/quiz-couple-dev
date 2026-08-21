@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective.svg',
   featuredImageAlt: "Pareja abrazada en un sofá ilustrando la dependencia emocional en la relación",
   publishedAt: '2026-03-24',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La dependencia emocional no es 'amar demasiado'. Es no saber existir sin la otra persona y construir todo tu valor alrededor de su mirada.",
   introduction: `<p>Miras el móvil cada cinco minutos. Analizas el mínimo cambio de tono en sus mensajes. Cuando está distante, entras en pánico. Cuando está presente, te sientes aliviada, pero nunca en paz de verdad, porque sabes que todo puede cambiar en cualquier momento.</p>
 <p>Esto no es amor intenso. No es pasión. <strong>Es dependencia emocional.</strong> Y afecta a muchas más personas de lo que se cree, hombres y mujeres, en todo tipo de relaciones. Este artículo está aquí para poner palabras a lo que vives, entender de dónde viene y, sobre todo, mostrarte que es posible salir de ahí.</p>`,

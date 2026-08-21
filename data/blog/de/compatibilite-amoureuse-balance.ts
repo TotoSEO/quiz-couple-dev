@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Astrologisches Symbol der Waage, Liebeskompatibilität`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Die Waage sucht Harmonie, Schönheit und einen Partner auf Augenhöhe. Welche Zeichen bringen sie ins Gleichgewicht?`,
   introduction: `<p>Die Waage ist das Zeichen der Partnerschaft schlechthin. Nicht weil sie ohne Beziehung nicht existieren kann, sondern weil <strong>sie sich selbst am besten im Spiegel eines anderen erkennt</strong>. Die Waage denkt in Wir, nicht in Ich. Das macht sie zur einfühlsamsten Partnerin, die man sich wünschen kann. Es macht sie aber auch anfällig dafür, sich selbst zu verlieren, wenn die Beziehung aus dem Gleichgewicht gerät. Um herauszufinden, ob Ihre Kombination zu einer echten Balance findet, <a href="/de/sternzeichen-vornamen-kompatibilitaet/">testen Sie Ihre Sternzeichen- und Vornamen-Kompatibilität</a>.</p>
 <p>Venus regiert die Waage, und hier zeigt sich die romantischste Seite dieses Planeten. Schönheit, Ästhetik, Eleganz in der Kommunikation: Die Waage will nicht nur geliebt werden, sie will, dass die Liebe selbst schön ist. Streit empfindet sie nicht als reinigendes Gewitter, sondern als Bedrohung. Und das ist ihre Achillesferse: <strong>Die Angst vor Konflikten kann dazu führen, dass wichtige Dinge ungesagt bleiben.</strong></p>

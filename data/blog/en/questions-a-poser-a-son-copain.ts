@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Young couple sitting face to face deep in conversation, she asks a question and smiles",
   publishedAt: '2026-08-28',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "You know his favourite meal and his Sunday evening mood. But do you know what genuinely scares him, or what he's never dared ask you?",
   introduction: `<p>You can spend an entire evening together and exchange three useful sentences: "what are we eating", "did you take the keys", "you alright?". Relax, it isn't a sign your relationship is in trouble. It's just what happens to every couple. After a while, logistics end up eating the conversation.</p>
 <p><strong>Good questions are a shortcut back to the conversations you've lost the reflex for.</strong> Not to play journalist, mind you. Just to find again that early stage where you could talk for hours without noticing the time...</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Young person smiling at their phone while typing a message to their crush",
   publishedAt: '2026-09-04',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "The hard part with a crush isn't finding something to say. It's asking the questions that turn a polite exchange into a real connection.",
   introduction: `<p>You know the moment... The conversation is going round in circles, the "good, you?" pile up, and you can feel that if nobody brings something else, it's going to die politely in a "have a good evening then". With a crush, every exchange counts double. So sooner or later we all end up staring at our phone with no idea what to send.</p>
 <p><strong>A good question does two things at once: it shows you're genuinely interested, and it makes them want to answer.</strong> That's all you ask of a conversation that's just starting. And it's exactly what the 100 questions below do.</p>

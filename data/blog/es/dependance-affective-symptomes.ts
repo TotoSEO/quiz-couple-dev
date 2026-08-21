@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-symptomes.webp',
   featuredImageAlt: "Persona encadenada a un móvil que muestra un corazón, esperando una respuesta",
   publishedAt: '2026-09-15',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La dependencia emocional no se ve en el espejo. Se ve en los detalles: lo que sientes cuando no responde, lo que anulas por él, lo que ya no te atreves a decir.",
   introduction: `<p>No te ha contestado en dos horas. Objetivamente no ha pasado nada: está trabajando, vive su vida, todo va bien. Pero tú ya has mirado el móvil quince veces, has releído tu último mensaje para ver si fue torpe y has montado tres escenarios, uno de ellos con él dejándote.</p>
 <p>Si esa escena te suena, quizá ya te hayas preguntado si no serás «demasiado». Demasiado apegada, demasiado ansiosa, demasiado dependiente. <strong>La pregunta de verdad no es si quieres demasiado. Es si tu equilibrio emocional depende por completo de otra persona.</strong> Eso es la dependencia emocional, y tiene síntomas precisos.</p>

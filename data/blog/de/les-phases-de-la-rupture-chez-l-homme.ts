@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/phases-rupture-homme.webp',
   featuredImageAlt: 'Mann, der die Phasen einer Trennung durchlebt',
   publishedAt: '2026-02-21',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: 'Die 6 Phasen der Trennung beim Mann: von der Verleugnung bis zum Neuaufbau.',
   introduction: `<p>Man sagt oft, dass Männer weniger unter einer Trennung leiden. Dass sie schneller wieder auf die Beine kommen, dass sie ohne große Schäden weitermachen. Das stimmt nicht. Was aber stimmt, ist, dass sie es anders erleben, und oft erst später.</p>
 <p>Während eine Frau den <strong>Trennungsschmerz</strong> in der Regel fast sofort spürt, lässt sich der Mann Zeit, ihn zuzulassen. Er kann ausgehen, lachen, Party um Party machen, den Anschein erwecken, dass alles gut ist… und drei Monate später zusammenbrechen, wenn er sich an einem Sonntagabend allein wiederfindet und die Realität ihn mit voller Wucht einholt.</p>

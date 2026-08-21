@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/signes-infidelite.webp',
   featuredImageAlt: "Téléphone posé face contre table entre deux personnes qui se tournent le dos",
   publishedAt: '2026-12-22',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Le doute sur une infidélité est une des pires choses à vivre en couple... et paradoxalement, la plupart des listes de « signes » l'aggravent au lieu de l'éclairer.",
   introduction: `<p>Si tu lis cet article, quelque chose t'a mise en alerte. Un changement d'habitudes, un téléphone devenu intouchable, une distance nouvelle... ou juste une intuition, ce truc sourd qui refuse de se taire. Et depuis, tu oscilles entre deux hontes : celle de soupçonner sans preuve, et celle de ne pas vouloir voir...</p>
 <p>Alors posons d'abord un cadre honnête, parce que le sujet le mérite : <strong>aucun signe isolé ne prouve une infidélité. Aucun.</strong> Les listes de « 15 signes qui montrent qu'il te trompe » fabriquent surtout de l'angoisse : chaque signe pris seul a dix explications innocentes... Ce qui compte, c'est le FAISCEAU : plusieurs changements, simultanés, durables, sans explication cohérente.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/styles-attachement-couple.webp',
   featuredImageAlt: "Cuatro corazones estilizados que representan los cuatro estilos de apego, unidos por hilos distintos",
   publishedAt: '2026-12-01',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "¿Por qué algunos quieren con serenidad, otros agarrándose, otros huyendo? La respuesta cabe en una palabra: el apego. Y se juega mucho antes de la primera historia de amor.",
   introduction: `<p>Seguro que has notado este fenómeno extraño: en una pareja, cada uno parece tocar una partitura escrita de antemano. Uno necesita cercanía, se siente pronto abandonado, insiste... El otro necesita aire, se siente pronto invadido, se aleja. ¡Y cuanto más se agarra uno, más retrocede el otro! Como si el guion estuviera escrito antes incluso del encuentro.</p>
 <p>En parte lo estaba. <strong>Ese guion se llama estilo de apego: la manera en que tu sistema emocional aprendió, de muy pequeño, a gestionar el vínculo, la cercanía y la separación.</strong> Es la teoría del apego, uno de los campos más sólidos de la psicología moderna, iniciada por John Bowlby en los años 50... y arroja sobre las parejas adultas una luz bastante espectacular.</p>

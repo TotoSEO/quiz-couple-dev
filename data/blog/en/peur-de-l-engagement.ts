@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/peur-de-l-engagement.webp',
   featuredImageAlt: "Person hesitating in front of an open heart-shaped door, suitcase in hand",
   publishedAt: '2026-12-11',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Fear of commitment is almost never a fear of the other person. It is a fear of what you believe you have to lose by committing... and that changes the whole problem.",
   introduction: `<p>«I'm not ready.» Three words that can hold a relationship in suspense for years. Not ready to go public, not ready to move in, not ready to picture a future. And on the other side, someone waits, somewhere between patience and exhaustion, asking the real question: am I the problem, or is he?</p>
 <p>Short answer: neither, most of the time. <strong>Fear of commitment is almost never a fear of the other person: it is a fear of what you believe you have to lose by committing.</strong> Your freedom, your identity, your options... or a fear that is older still, the fear of repeating a shipwreck you watched from far too close.</p>

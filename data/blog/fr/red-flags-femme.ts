@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Red flags chez une femme, liste complète des signaux d'alarme en couple",
   publishedAt: '2026-03-07',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Un red flag, ce n'est pas un défaut de caractère. C'est un pattern relationnel répété qui, sur la durée, rend une relation épuisante, déséquilibrée ou toxique.",
   introduction: `<p>On parle beaucoup des red flags masculins. Moins souvent de ceux côté féminin, soit parce que le sujet est traité avec des pincettes, soit parce que les articles existants sont écrits avec tant de précautions qu'ils finissent par ne rien dire. Cet article n'est pas là pour charger les femmes. Il est là pour les hommes (et les femmes) qui ressentent quelque chose dans leur relation sans arriver à le nommer clairement.</p>
 <p><strong>Un red flag, ce n'est pas un défaut de caractère.</strong> Ce n'est pas "elle est chiante" ou "elle est trop émotive". C'est un pattern relationnel répété qui, sur la durée, rend une relation épuisante, déséquilibrée ou toxique. La nuance compte. On en a besoin pour éviter à la fois de tout excuser et de tout pathologiser.</p>`,

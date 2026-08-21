@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/manipulateur-narcissique.webp',
   featuredImageAlt: "Joueur d'échecs dont les pièces sont des silhouettes humaines",
   publishedAt: '2026-09-18',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "On présente toujours le manipulateur narcissique comme tout-puissant. C'est faux. Son système a des failles, connues, prévisibles... à condition de savoir où regarder.",
   introduction: `<p>Quand on cherche « manipulateur narcissique », on tombe toujours sur le même article : la liste des signes, le portrait du monstre, et débrouille-toi avec ça. Très bien pour comprendre... mais après ? Une fois que tu SAIS que tu as affaire à un manipulateur, la vraie question devient : comment il fonctionne, et comment on s'en protège concrètement.</p>
 <p>Alors cet article prend le problème dans l'autre sens. <strong>Le manipulateur narcissique n'est pas tout-puissant. C'est un système, et un système, ça a des règles, des schémas... et des failles.</strong> Ses techniques sont prévisibles. Ses réactions aussi. Et ses points faibles sont étonnamment constants d'un manipulateur à l'autre.</p>

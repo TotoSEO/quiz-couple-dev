@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-sagittaire.svg',
   featuredImageAlt: `Simbolo astrologico del Sagittario, compatibilità amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Il Sagittario vive l'amore come un'avventura, e non tutti sono pronti a partire senza sapere la destinazione.`,
   introduction: `<p>Il Sagittario è il segno che vi proporrà un viaggio improvvisato il venerdì sera, che cambierà programma tre volte prima di pranzo e che, nonostante tutto, vi farà sentire che ogni momento con lui è un regalo. <strong>Non è disorganizzazione, è che il Sagittario vive con l'urgenza di chi sa che il mondo è troppo grande per restare fermi.</strong> E in amore, questa filosofia si traduce in un bisogno profondo di un partner che condivida la sua sete di libertà. Per vedere se il vostro legame regge a questo ritmo, <a href="/it/segni-zodiacali-nomi-compatibilita/">provate il test di compatibilità tra segni zodiacali e nomi</a>.</p>
 <p>Governato da Giove, il pianeta dell'espansione, il Sagittario porta in amore la stessa energia che mette in tutto il resto: entusiasmo contagioso, ottimismo quasi irrazionale, e una sincerità che a volte taglia più di quanto vorrebbe. Il Sagittario non mente, e se qualcosa non va, ve lo dirà. Senza filtri, senza diplomazia. È un pregio e un difetto nello stesso gesto.</p>

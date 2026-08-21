@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Paar blickt auf einen Weg, der sich zum Horizont entrollt, Koffer in der Hand",
   publishedAt: '2026-10-30',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Paare scheitern fast nie an fehlender Liebe. Sie scheitern an Themen, die sie nie auf den Tisch gelegt haben.",
   introduction: `<p>Es gibt eine Statistik, die niemand berechnet und die jeder kennt: Die meisten großen Beziehungskrisen drehen sich um Themen... von denen beide wussten, dass man eines Tages darüber reden müsste. Geld. Kinder. Schwiegereltern. Die Aufteilung der Aufgaben. Das «eines Tages» kam schlicht zu spät, mitten in der Krise, im denkbar schlechtesten Moment, um in Ruhe zu reden.</p>
 <p><strong>Über die Zukunft zu reden hat noch nie eine solide Geschichte getötet. Nicht darüber zu reden hat viele getötet.</strong> Und anders als man denkt, sind diese Gespräche weder feierlich noch schwer... gut geführt gehören sie sogar zu den aufregendsten, die ein Paar haben kann!</p>

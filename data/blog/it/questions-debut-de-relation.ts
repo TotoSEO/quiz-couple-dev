@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-debut-de-relation.webp',
   featuredImageAlt: "Due tazze di caffè fumanti una accanto all'altra, l'inizio di una conversazione",
   publishedAt: '2026-10-23',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "L'inizio di una relazione è l'unico momento in cui si potrebbe chiedere tutto... e quello in cui non si osa chiedere niente. Rimediamo.",
   introduction: `<p>Ecco il paradosso degli inizi di relazione: è IL momento in cui le domande giuste cambierebbero tutto, ed è il momento in cui le si evita con cura... per paura di sembrare intensi, di bruciare una tappa, di rompere la magia. Così si avanza alla cieca, tutti sorrisi, scoprendo le informazioni importanti per caso, tre mesi troppo tardi.</p>
 <p><strong>Fare domande all'inizio di una relazione non è mancanza di leggerezza. È evitare di costruire a occhi chiusi.</strong> Tutto sta nel dosaggio: ci sono le domande del primo mese, quelle del terzo... e quelle che aspetteranno, perché ogni cosa ha il suo momento.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/gaslighting.webp',
   featuredImageAlt: "Gas lamp with a dimming flame, a doubting silhouette in the half-light",
   publishedAt: '2026-11-24',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Gaslighting doesn't lie to you about the facts. It lies to you about you: your memory, your perception, your sanity. That's what makes it the most corrosive manipulation there is.",
   introduction: `<p>You saw the scene. You were there, you heard the words, you could repeat them... And yet, opposite you, perfect composure: «I never said that». Not a hesitation. So you check in your head, once, twice... and a small crack opens: what if it was me?</p>
 <p>That crack has a name: gaslighting. <strong>It isn't a lie about the facts, it's an attack on the measuring instrument: you.</strong> Your memory, your perception, your stability... Repeated long enough, this manipulation produces a result of its own kind: a victim who can no longer trust herself, and who therefore depends on her manipulator to know what is real.</p>

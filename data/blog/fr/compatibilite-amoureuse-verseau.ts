@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Symbole astrologique du Verseau, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Le Verseau aime autrement, avec distance, intelligence et liberté. Quels signes comprennent cette façon d'aimer ?`,
   introduction: `<p>Le Verseau est probablement le signe le plus incompris en amour. On le dit distant, détaché, incapable de s'engager vraiment. <strong>La réalité est plus nuancée : le Verseau aime, mais il refuse d'aimer comme on lui dit d'aimer.</strong> Il ne veut pas du modèle classique, la fusion, la dépendance, les « tu es tout pour moi ». Il veut un amour qui respecte son individualité. Pour vérifier si votre signe peut comprendre cette approche, <a href="/signes-astrologiques-prenoms-compatibilite/">essayez notre outil de compatibilité par signe et prénom</a>.</p>
 <p>Gouverné par Uranus, planète de la rupture et de l'innovation, le Verseau voit l'amour comme un espace de liberté partagée, pas comme une cage confortable. Il veut un partenaire qui soit d'abord un ami, un complice intellectuel, quelqu'un avec qui il peut refaire le monde à 3h du matin sans jamais s'ennuyer.</p>

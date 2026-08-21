@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/peur-de-l-engagement.webp',
   featuredImageAlt: "Persona dudando ante una puerta abierta en forma de corazón, con una maleta en la mano",
   publishedAt: '2026-12-11',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "El miedo al compromiso casi nunca es miedo a la otra persona. Es miedo a lo que uno cree que va a perder comprometiéndose... y eso cambia todo el problema.",
   introduction: `<p>«No estoy preparado.» Tres palabras que pueden mantener una relación en suspenso durante años. No preparado para oficializar, no preparado para irse a vivir juntos, no preparado para proyectarse. Y enfrente alguien espera, entre la paciencia y el desgaste, haciéndose la pregunta de verdad: ¿el problema soy yo, o es él?</p>
 <p>Respuesta corta: ninguno de los dos, la mayoría de las veces. <strong>El miedo al compromiso casi nunca es miedo a la otra persona: es miedo a lo que uno cree que va a perder comprometiéndose.</strong> Su libertad, su identidad, sus opciones... o un miedo aún más antiguo, el de repetir un naufragio que se vio demasiado de cerca.</p>

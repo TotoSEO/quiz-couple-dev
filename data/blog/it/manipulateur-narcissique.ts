@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/manipulateur-narcissique.webp',
   featuredImageAlt: "Giocatore di scacchi i cui pezzi sono sagome umane",
   publishedAt: '2026-09-18',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Il manipolatore narcisista viene sempre presentato come onnipotente. È falso. Il suo sistema ha delle falle, note e prevedibili, a patto di sapere dove guardare.",
   introduction: `<p>Quando cerchi «manipolatore narcisista» finisci sempre sullo stesso articolo: l'elenco dei segnali, il ritratto del mostro, e arrangiati. Ottimo per capire, ma dopo? Una volta che SAI di avere a che fare con un manipolatore, la vera domanda diventa: come funziona e come ci si protegge concretamente.</p>
 <p>Questo articolo prende quindi il problema dall'altro lato. <strong>Il manipolatore narcisista non è onnipotente. È un sistema, e un sistema ha regole, schemi e falle.</strong> Le sue tecniche sono prevedibili. Anche le sue reazioni. E i suoi punti deboli sono sorprendentemente costanti da un manipolatore all'altro.</p>

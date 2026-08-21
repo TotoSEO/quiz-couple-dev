@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-rupture.webp',
   featuredImageAlt: "Corazón partido en dos mitades, una de las cuales se convierte en una escalera que sube",
   publishedAt: '2026-11-20',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Todo el mundo sufre con una ruptura. El dependiente emocional está en abstinencia... y no es lo mismo de atravesar.",
   introduction: `<p>La gente a tu alrededor parece encontrarlo largo. «Hay que pasar página»... Fácil decirlo. Ellos no saben lo que es mirar el móvil al despertarte buscando un mensaje que ya no llegará. Marcar un número y colgar. Sentir, físicamente, una carencia que se parece hasta confundirse a la de una sustancia.</p>
 <p>Y hablemos justamente de eso: <strong>para una persona dependiente emocional, una ruptura no es un desamor corriente. Es una abstinencia, en sentido literal.</strong> El otro era tu regulador emocional, tu fuente de valor, tu antiansiedad... y todo se paró de golpe. Claro que es más duro. Claro que es más largo. No es debilidad: es mecánica.</p>

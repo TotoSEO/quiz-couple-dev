@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/arreter-ou-continuer-relation.webp',
   featuredImageAlt: `Dos tazas sobre una mesa de cocina al amanecer, una llena y otra vacía, dos sillas ligeramente separadas`,
   publishedAt: '2026-08-11',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `La mayoría de quienes se hacen esta pregunta llevan meses dando vueltas. Esto es lo que distingue un mal momento de un callejón sin salida, y cómo decidir sin mentirse.`,
   introduction: `<p>Si buscas la respuesta corta, aquí está: <strong>se deja cuando la relación te pide renunciar a quien eres, y se sigue cuando solo te pide trabajar en ella.</strong> Todo lo demás en este artículo sirve para saber en cuál de los dos casos estás.</p>
 

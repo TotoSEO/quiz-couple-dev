@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Pensive woman sitting alone, signs of unhappiness in a relationship",
   publishedAt: '2026-03-01',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "The signs have often been there for a while. You just didn't know what to look for.",
   introduction: `<p>Most men don't see it coming. Not because they don't care, but because the signs a woman sends when she's unhappy in a relationship don't look like what you'd expect. <strong>It's not necessarily tears or arguments.</strong> It's often quieter than that. More diffuse. Something that gradually fades away, without you being able to put your finger on it.</p>
 <p>If you're reading this, it's probably because you've sensed that something is off. That gut feeling deserves to be taken seriously.</p>`,

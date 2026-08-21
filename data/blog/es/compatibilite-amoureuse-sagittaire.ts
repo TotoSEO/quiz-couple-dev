@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-sagittaire.svg',
   featuredImageAlt: `Símbolo astrológico de Sagitario, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Sagitario necesita libertad como necesita respirar. Pero eso no significa que no quiera amar. ¿Qué signos le acompañan sin ponerle cadenas?`,
   introduction: `<p>Hay un malentendido enorme con Sagitario: se cree que no quiere comprometerse. No es eso. Lo que ocurre es que <strong>Sagitario necesita que el compromiso no se sienta como una jaula</strong>. Quiere explorar, crecer, descubrir, y quiere hacerlo con alguien al lado, no solo. Pero si siente que la relación le obliga a quedarse quieto, a renunciar a lo que le hace vibrar, se irá. No por falta de amor, por exceso de necesidad de vivir. Descubre si vuestros signos y nombres están alineados con <a href="/es/signos-astrologicos-nombres-compatibilidad/">nuestra herramienta de compatibilidad astrológica</a>.</p>
 <p>Regido por Júpiter, el planeta de la expansión y la abundancia, Sagitario piensa en grande. En el amor y en todo lo demás. No se conforma con relaciones que solo funcionan, quiere relaciones que signifiquen algo, que le enseñen algo, que le lleven a algún sitio. Si la historia es plana, aunque sea cómoda, se le queda pequeña.</p>

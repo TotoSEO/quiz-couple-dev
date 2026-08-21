@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
   featuredImageAlt: "Fumetti sovrapposti, uno dei quali schiaccia lentamente un altro più piccolo",
   publishedAt: '2026-09-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Un manipolatore non mente a caso. Pesca da un repertorio, sempre lo stesso. E una volta che conosci il repertorio, qualcosa si rompe nel gioco di prestigio.",
   introduction: `<p>«Sei troppo sensibile.» Quante volte l'hai sentita? E quante volte te ne sei andata chiedendoti se, effettivamente, non stessi esagerando un po'?</p>
 <p>È esattamente per questo che esiste questo articolo. I manipolatori non inventano nulla: pescano da un repertorio, ed è più o meno sempre lo stesso. Frasi brevi, che sembrano innocue, a volte perfino gentili... e che fanno un lavoro molto preciso nella tua testa. Ribaltare la colpa, farti dubitare, farti tacere.</p>

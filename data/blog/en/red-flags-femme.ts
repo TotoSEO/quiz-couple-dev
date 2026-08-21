@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Red flags in a woman, complete list of warning signs in a relationship",
   publishedAt: '2026-03-07',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "A red flag isn't a character flaw. It's a repeated relational pattern that, over time, makes a relationship exhausting, unbalanced, or toxic.",
   introduction: `<p>There's a lot of talk about red flags in men. Far less about women, either because the subject gets handled with kid gloves, or because the articles that do exist are so carefully worded that they end up saying nothing. This article isn't here to put women down. It's here for the men (and women) who feel something in their relationship without being able to name it clearly.</p>
 <p><strong>A red flag isn't a character flaw.</strong> It isn't "she's annoying" or "she's too emotional". It's a repeated relational pattern that, over time, makes a relationship exhausting, unbalanced, or toxic. That distinction matters. We need it to avoid both excusing everything and pathologising everything.</p>`,

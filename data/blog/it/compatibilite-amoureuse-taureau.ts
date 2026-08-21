@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-taureau.svg',
   featuredImageAlt: `Simbolo astrologico del Toro, compatibilità amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Il Toro ama profondamente, con lealtà, e spesso a lungo. Ma non tutti i segni sono fatti per questo ritmo.`,
   introduction: `<p>Chiedete a un Toro cosa cerca in amore. Vi risponderà, forse non con queste parole esatte, qualcosa che somiglia a <em>la costanza</em>. Non la routine noiosa, non la ripetizione meccanica. Ma la certezza che domani l'altro sarà ancora lì. Che quello che è stato costruito insieme non sparirà alla prima turbolenza. Se volete verificare se la vostra combinazione segno-nome mantiene le sue promesse, provate <a href="/it/segni-zodiacali-nomi-compatibilita/">il nostro strumento di compatibilità tra segni zodiacali e nomi</a>.</p>
 <p>È Venere a governare questo segno. E contrariamente a quello che si potrebbe pensare, Venere nel Toro non parla prima di tutto di romanticismo e grandi dichiarazioni, <strong>parla di piacere concreto, di presenza fisica, di bellezza accessibile</strong>. Una buona cena condivisa. Un divano comodo. Il calore di qualcuno che si conosce davvero. Ecco cosa il Toro chiama amore.</p>

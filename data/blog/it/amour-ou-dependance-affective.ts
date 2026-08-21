@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/amour-ou-dependance-affective.webp',
   featuredImageAlt: "Due cuori intrecciati, uno libero e l'altro circondato da una corda",
   publishedAt: '2026-10-09',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "L'amore e la dipendenza affettiva si somigliano enormemente visti dall'interno. Stessa intensità, stessi pensieri permanenti... eppure tutto li oppone.",
   introduction: `<p>È una domanda che non si osa troppo farsi, perché fa un po' paura: lo amo lui... o amo soprattutto il fatto che ci sia? È amore, questa cosa che mi stringe lo stomaco quando non risponde? O è altro?</p>
 <p>La confusione è normale, e bisogna cominciare col dirlo: <strong>visti dall'interno, l'amore intenso e la dipendenza affettiva si somigliano molto.</strong> In entrambi i casi pensi a lui di continuo, detesti la sua assenza, senti forte. L'intensità non fa la differenza. A farla è la direzione: l'amore ti porta verso di lui, la dipendenza ti fa fuggire un vuoto.</p>

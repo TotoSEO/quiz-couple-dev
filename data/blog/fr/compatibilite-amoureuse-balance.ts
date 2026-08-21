@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Symbole astrologique de la Balance, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `La Balance cherche l'harmonie en amour, parfois au point de ne jamais trancher. Quels signes lui donnent envie de se décider ?`,
   introduction: `<p>La Balance a une réputation d'indécise. Ce n'est pas tout à fait faux, mais ce n'est pas toute la vérité non plus. <strong>Elle ne cherche pas à éviter les choix. Elle cherche le choix juste.</strong> Celui qui ne blesse personne, qui préserve l'harmonie, qui respecte les deux côtés de l'équation. Parfois, ce choix n'existe pas, et c'est là que la Balance reste suspendue, à peser une balance imaginaire. Si vous vous demandez si votre signe est celui qui peut l'aider à s'ancrer, <a href="/signes-astrologiques-prenoms-compatibilite/">notre outil de compatibilité signes et prénoms</a> vous donne la réponse.</p>
 <p>Gouvernée par Vénus comme le Taureau, mais avec une tonalité très différente, la Balance est tournée vers l'autre. Elle pense en duo presque naturellement, ce qui fait d'elle un partenaire attentionné et généreux, mais aussi quelqu'un qui peut perdre de vue ses propres besoins dans sa quête d'équilibre.</p>

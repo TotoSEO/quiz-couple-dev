@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/pardonner-une-infidelite.webp',
   featuredImageAlt: "Broken heart stitched back together with golden thread, in the kintsugi style",
   publishedAt: '2026-12-29',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "After an infidelity, everybody has an opinion: «leave», «forgive», «I could never»... The only question that counts: on what conditions is forgiveness REAL?",
   introduction: `<p>Ever since you found out, everyone knows what to do in your place. Your best friend says «leave, you will always be worth more than that». Your mother says «every couple goes through things». And you, in the middle, swing hour by hour between the urge to smash everything and the wish that none of it had ever existed.</p>
 <p>So let's start by clearing away the two symmetrical lies that circulate on this subject. No, «cheat once, cheat always» is not a law of nature: real couples do survive an infidelity, and some even come out of it stronger. And no, «forgiveness is always possible if you love each other» isn't true either: certain betrayals, certain contexts and certain partners make forgiveness impossible, or toxic. <strong>The real question isn't «should I forgive?», it is: are the conditions for real forgiveness present in your case?</strong></p>

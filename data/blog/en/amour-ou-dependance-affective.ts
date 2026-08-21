@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/amour-ou-dependance-affective.webp',
   featuredImageAlt: "Two intertwined hearts, one free and the other wrapped in a rope",
   publishedAt: '2026-10-09',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Love and emotional dependency look enormously alike from the inside. Same intensity, same constant thoughts... and yet everything separates them.",
   introduction: `<p>It's a question we don't quite dare ask ourselves, because it's a bit frightening: do I love him... or do I mainly love the fact that he's there? Is it love, this thing that grips my stomach when he doesn't reply? Or something else?</p>
 <p>The confusion is normal, and we have to start by saying so: <strong>from the inside, intense love and emotional dependency look very similar.</strong> In both cases you think about him constantly, you hate his absence, you feel strongly. Intensity doesn't make the difference. What makes the difference is the direction: love carries you towards him, dependency makes you flee an emptiness.</p>

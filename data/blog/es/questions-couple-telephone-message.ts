@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-couple-telephone-message.webp',
   featuredImageAlt: "Dos teléfonos unidos por un hilo rojo tenso entre dos ventanas iluminadas",
   publishedAt: '2026-11-27',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Por teléfono no hay miradas ni gestos... solo palabras. Justo por eso las buenas preguntas hacen maravillas ahí.",
   introduction: `<p>Hay un momento que conocen todas las parejas, vivan a 800 kilómetros o a dos barrios: aquel en que la llamada de la noche se vuelve un parte meteorológico. «¿Qué tal el día?» «Bien.» «¿Qué cenas?» «Pasta.»... El vínculo está, las ganas también, pero la conversación gira en vacío.</p>
 <p>Es normal, en realidad: a distancia se pierde todo lo que suele alimentar los intercambios, las miradas, el contexto compartido, los gestos... <strong>Solo quedan las palabras. Y precisamente por eso las buenas preguntas hacen maravillas por teléfono: le devuelven a las palabras algo que hacer.</strong></p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-debut-de-relation.webp',
   featuredImageAlt: "Two steaming cups of coffee side by side, the start of a conversation",
   publishedAt: '2026-10-23',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "The start of a relationship is the only moment when you could ask anything... and the moment when you dare ask nothing. Let's fix that.",
   introduction: `<p>Here's the paradox of early relationships: it's THE moment when the right questions would change everything, and it's the moment when we carefully avoid them, for fear of looking intense, of skipping a stage, of breaking the magic. So we move forward blind, all smiles, discovering the important information by accident, three months too late.</p>
 <p><strong>Asking questions early in a relationship isn't a lack of lightness. It's avoiding building with your eyes shut.</strong> It's all in the pacing: there are the first-month questions, the third-month ones... and the ones that can wait, because everything has its moment.</p>

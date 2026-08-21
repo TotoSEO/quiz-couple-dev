@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sentiments-chez-un-homme.webp',
   featuredImageAlt: `La mano de un hombre apoyada junto a una taza sobre una mesa de madera, luz suave de última hora de la tarde`,
   publishedAt: '2026-08-12',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `En muchos hombres los sentimientos no empiezan con una declaración interior, sino con una costumbre. Estas son las etapas, en el orden en que ocurren de verdad.`,
   introduction: `<p>La respuesta cabe en una frase: <strong>en la mayoría de los hombres los sentimientos no nacen de un flechazo, sino de una acumulación de momentos compartidos que acaba creando una falta.</strong> No es menos romántico, solo es más lento, y sobre todo no se ve desde fuera durante mucho tiempo.</p>
 

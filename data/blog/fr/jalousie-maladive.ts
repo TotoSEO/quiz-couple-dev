@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/jalousie-maladive.webp',
   featuredImageAlt: "Œil vert stylisé enfermant un couple dans son iris",
   publishedAt: '2026-12-18',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La jalousie normale protège le couple. La jalousie maladive le dévore... et elle dévore d'abord celui qui la ressent.",
   introduction: `<p>Ça commence toujours par une petite chose. Un prénom qui revient trop souvent, un sourire à une soirée, un téléphone posé face contre table... et un scénario qui se met à tourner dans ta tête. Tu sais qu'il ne repose sur rien, ce scénario. Tu le sais ! Mais il tourne quand même, de plus en plus vite, et te voilà à vérifier, questionner, imaginer... et à t'en vouloir de le faire.</p>
 <p>Première chose à poser, parce qu'elle soulage : <strong>être jaloux est normal. La jalousie est une émotion universelle, présente dans tous les couples qui comptent l'un pour l'autre...</strong> Le problème n'est pas de la ressentir. Le problème, c'est quand elle prend les commandes : quand elle décide de tes soirées, de tes questions, de tes fouilles... et qu'elle fait souffrir tout le monde, à commencer par toi.</p>

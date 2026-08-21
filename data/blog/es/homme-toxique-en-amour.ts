@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/homme-toxique-en-amour.webp',
   featuredImageAlt: "Seis siluetas masculinas, algunas proyectando una sombra con espinas",
   publishedAt: '2026-10-27',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Entre el torpe que puede cambiar y el manipulador que no cambiará hay toda una gama... y no te proteges de ellos de la misma manera.",
   introduction: `<p>Desde que «tóxico» se convirtió en la palabra de moda, ahí dentro cabe todo: el celoso, el distante, el que se enfada, el mentiroso. Y es un problema de verdad, porque esos hombres no se parecen. Algunos dañan por inmadurez, sin querer, y pueden cambiar. Otros dañan por funcionamiento, y no cambiarán. <strong>Confundir a los dos es o huir de un hombre que podría haber crecido... o quedarse años con un hombre que no crecerá nunca.</strong></p>
 <p>Este artículo, por tanto, ordena. Seis perfiles de hombre tóxico en el amor, del menos grave al más grave: lo que cada uno te hace vivir en concreto, cómo lo reconoces... y sobre todo, para cada uno, la respuesta a LA pregunta: ¿este puede cambiar?</p>

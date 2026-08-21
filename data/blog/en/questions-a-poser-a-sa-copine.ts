@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
   featuredImageAlt: "Couple at a table laughing, she answers a question with her hands",
   publishedAt: '2026-10-02',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "The trap of long relationships isn't falling out of love. It's believing you've finished discovering each other.",
   introduction: `<p>Quick test before we start: you know her favourite dish, her cult film, her perfume. Easy. Now, do you know what she's most proud of this year? What she's missing right now? What she doesn't dare ask you for? Less easy, right.</p>
 <p><strong>That's the trap of settled couples: we confuse knowing her well with having finished discovering her.</strong> Except she changes, like you, like everyone. And the answers from two years ago aren't necessarily today's.</p>

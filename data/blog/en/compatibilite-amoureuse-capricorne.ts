@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Capricorn astrological symbol, love compatibility`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Capricorn doesn't commit lightly, and when they do, it's to build something real. Which signs share that vision?`,
   introduction: `<p>Capricorn has a reputation for being cold in love. That's a misunderstanding. <strong>They're not cold, they're serious.</strong> And in a world where love is often treated as entertainment, their seriousness can read as distance. But those who have been loved by a Capricorn know: once they choose someone, they don't turn back. Want to find out if your sign is compatible with that kind of solidity? <a href="/en/zodiac-signs-names-compatibility/">Calculate your love compatibility by sign and name</a>.</p>
 <p>Ruled by Saturn, the planet of discipline and time, Capricorn builds relationships the way they build everything else: with patience, rigour, and a long-term vision. They don't fall in love easily, but when they do, it's with a depth few signs can match.</p>

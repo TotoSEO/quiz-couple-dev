@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sortir-emprise-pervers-narcissique.webp',
   featuredImageAlt: "Vogel, der aus einem Käfig entkommt, dessen Tür sich zu einem klaren Himmel öffnet",
   publishedAt: '2026-11-13',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Man glaubt, aus dem Griff auszubrechen heiße gehen. In Wirklichkeit ist Gehen nur die dritte von vier Etappen... und nicht die schwerste.",
   introduction: `<p>Wenn du schon einmal versucht hast zu gehen, kennst du dieses Paradox, das verrückt macht: Du WEISST es. Du hast den Mechanismus verstanden, du hast die Artikel gelesen, du kannst sein Funktionieren besser beschreiben als ein Handbuch... und trotzdem bist du noch da. Oder du bist gegangen und zurückgekommen. Vielleicht mehrmals.</p>
 <p>Beenden wir also sofort die schlimmste Deutung, die, die an dir nagt: Nein, das ist kein Mangel an Willen, und nein, du bist nicht «zu schwach». <strong>Ein Griff ist keine Meinung, die man aufgibt. Er ist ein Zustand, chemisch und psychologisch hergestellt, und er wird in einer bestimmten Reihenfolge zerlegt.</strong> Nicht mit einem Willensruck... Etappe für Etappe.</p>

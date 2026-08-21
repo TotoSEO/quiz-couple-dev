@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Zwei Stühle einander gegenüber unter einer warmen Glühbirne, dazwischen ein Fragenheft",
   publishedAt: '2026-11-06',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "1997 ließ ein Psychologe zwei Fremde sich in seinem Labor verlieben, mit einer schlichten Liste von Fragen. Die Liste gibt es noch... hier ist sie.",
   introduction: `<p>Die Geschichte ist wahr und unwiderstehlich. 1997 holte der amerikanische Psychologe Arthur Aron Paare von Fremden in sein Labor. Die Anweisung: sich 36 Fragen stellen, der Reihe nach, immer persönlicher, und sich danach vier Minuten lang schweigend in die Augen sehen. Ergebnis: eine Rekordnähe zwischen völlig Fremden... und, das behält die Legende vor allem, zwei Teilnehmende, die am Ende heirateten.</p>
 <p>Das Experiment schlief in den Fachzeitschriften bis 2015, als eine Essayistin in der New York Times erzählte, sie habe es bei einem Date ausprobiert... und sich verliebt. Seitdem sind die «36 Fragen» um die Welt gegangen. <strong>Und anders als man denkt, ist das kein Gag: Der Mechanismus dahinter ist solide, belegt... und er funktioniert auch bei eingespielten Paaren.</strong></p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Símbolo astrológico de Acuario, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Acuario ama a su manera, con espacio, independencia y una mente que no para. ¿Qué signos entienden esa forma de querer?`,
   introduction: `<p>Acuario es el signo más difícil de descifrar en el amor. No porque no sienta, sino porque <strong>lo que siente no se parece a lo que la mayoría espera del amor</strong>. No es posesivo, no es dependiente, no necesita hablar por teléfono cada noche ni saber dónde estás a cada momento. Y eso, para muchos signos, resulta desconcertante. Para saber si tu forma de amar es compatible con la suya, <a href="/es/signos-astrologicos-nombres-compatibilidad/">prueba nuestra herramienta de compatibilidad astrológica y de nombre</a>.</p>
 <p>Regido por Urano, el planeta de la innovación y la ruptura, Acuario funciona fuera de las normas, incluidas las normas del amor. No le interesa la relación convencional si no tiene sentido para él. Lo que le importa es la conexión intelectual, la libertad de ser quien es, y la certeza de que el otro no intenta cambiarlo.</p>

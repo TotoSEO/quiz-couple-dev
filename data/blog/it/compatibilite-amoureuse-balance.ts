@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-balance.svg',
   featuredImageAlt: `Simbolo astrologico della Bilancia, compatibilità amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `La Bilancia cerca l'armonia in tutto, specialmente in amore. Ma trovare chi non la squilibri è più difficile di quanto sembri.`,
   introduction: `<p>La Bilancia è il segno che vive l'amore come un'arte. Non nel senso poetico e sdolcinato, nel senso che <strong>per la Bilancia, una relazione è qualcosa che va curato, bilanciato, reso bello</strong>. Una cena a lume di candela non è un cliché: è un modo di onorare il rapporto. Una conversazione profonda a fine giornata non è un optional: è il collante che tiene tutto insieme. Per capire se il vostro partner condivide questa visione, <a href="/it/segni-zodiacali-nomi-compatibilita/">calcolate la vostra compatibilità tra segni zodiacali e nomi</a>.</p>
 <p>Governata da Venere, come il Toro, ma in modo completamente diverso. Dove il Toro cerca il piacere concreto, la Bilancia cerca l'armonia delle forme, la bellezza di un gesto, l'eleganza di una parola detta al momento giusto. In amore, questo si traduce in un bisogno profondo di reciprocità. La Bilancia dà, ma ha bisogno di ricevere. Ascolta, ma ha bisogno di essere ascoltata.</p>

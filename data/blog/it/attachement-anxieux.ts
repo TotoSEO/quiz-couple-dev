@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/attachement-anxieux.webp',
   featuredImageAlt: "Persona che abbraccia un cuore guardando un telefono muto",
   publishedAt: '2026-12-04',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "L'attaccamento ansioso non dubita dell'amore che dà, dubita di quello che riceve. In permanenza. E questo sfinisce entrambi i lati della coppia.",
   introduction: `<p>Forse conosci questa sensazione: nella tua relazione va tutto bene, oggettivamente, eppure una parte di te resta in allerta. Un tono un po' freddo, una risposta più corta del solito, una serata senza messaggi: scatta l'allarme. Ed eccoti a cercare prove che va tutto bene, ancora una volta, come ieri, come domani.</p>
 <p><strong>Questa cosa ha un nome: l'attaccamento ansioso. Non è follia, non è debolezza, non è «troppo amore»: è un sistema d'allarme regolato con troppa sensibilità, ed è stato regolato molto prima di te.</strong> Circa una persona su cinque funziona così in amore. Quindi se ti riconosci, sei in compagnia numerosissima!</p>

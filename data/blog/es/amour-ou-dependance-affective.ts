@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/amour-ou-dependance-affective.webp',
   featuredImageAlt: "Dos corazones entrelazados, uno libre y el otro rodeado por una cuerda",
   publishedAt: '2026-10-09',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "El amor y la dependencia emocional se parecen muchísimo vistos desde dentro. Misma intensidad, mismos pensamientos permanentes... y sin embargo todo los opone.",
   introduction: `<p>Es una pregunta que no nos atrevemos mucho a hacernos, porque da un poco de miedo: ¿lo quiero a él... o quiero sobre todo el hecho de que esté? ¿Es amor eso que me aprieta el estómago cuando no responde? ¿O es otra cosa?</p>
 <p>La confusión es normal, y hay que empezar por decirlo: <strong>vistos desde dentro, el amor intenso y la dependencia emocional se parecen mucho.</strong> En ambos casos piensas en él sin parar, odias su ausencia, sientes con fuerza. La intensidad no marca la diferencia. Lo que la marca es la dirección: el amor te lleva hacia él, la dependencia te hace huir de un vacío.</p>

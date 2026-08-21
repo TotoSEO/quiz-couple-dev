@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Símbolo astrológico de Cáncer, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Cáncer lo da todo en el amor, quizá incluso demasiado. ¿Qué signos saben recibir ese amor sin abusar de él?`,
   introduction: `<p>Detrás del caparazón, porque siempre hay uno, Cáncer es uno de los signos más profundamente afectivos del zodiaco. Lo que entrega en el amor, cuando se siente seguro, supera lo que muchos otros signos son capaces de ofrecer. <strong>Una presencia total. Una memoria afectiva extraordinaria.</strong> El arte de percibir lo que el otro necesita antes incluso de que lo haya formulado. Para descubrir cómo tu signo y tu nombre se combinan con Cáncer, prueba <a href="/es/signos-astrologicos-nombres-compatibilidad/">nuestro análisis de compatibilidad astrológica</a>.</p>
 <p>Gobernado por la Luna, Cáncer es cíclico por naturaleza. Hay días en que desborda afecto, y días en que se repliega sobre sí mismo sin explicación. Su pareja ideal es aquella que entiende ese ritmo, que no lo interpreta como rechazo, que no fuerza las puertas cuando están cerradas, pero que está ahí cuando vuelven a abrirse.</p>

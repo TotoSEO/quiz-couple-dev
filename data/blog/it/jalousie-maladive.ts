@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/jalousie-maladive.webp',
   featuredImageAlt: "Occhio verde stilizzato che racchiude una coppia nella sua iride",
   publishedAt: '2026-12-18',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La gelosia normale protegge la coppia. La gelosia patologica la divora... e divora per prima la persona che la prova.",
   introduction: `<p>Comincia sempre da una piccola cosa. Un nome che torna troppo spesso, un sorriso a una festa, un telefono appoggiato a faccia in giù sul tavolo... e uno scenario che comincia a girare nella tua testa. Sai che non si regge su niente, quello scenario. Lo sai! Ma gira lo stesso, sempre più veloce, ed eccoti a controllare, interrogare, immaginare... e ad avercela con te stessa per averlo fatto.</p>
 <p>La prima cosa da dire, perché consola: <strong>essere gelosi è normale. La gelosia è un'emozione universale, presente in tutte le coppie in cui i due contano l'uno per l'altra.</strong> Il problema non è provarla. Il problema è quando prende i comandi: quando decide le tue serate, le tue domande, le tue perquisizioni... e fa soffrire tutti, a cominciare da te.</p>

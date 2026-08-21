@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-vierge.svg',
   featuredImageAlt: `Simbolo astrologico della Vergine, compatibilità amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `La Vergine ama con attenzione, precisione e dedizione silenziosa. Ma non tutti i segni capiscono questo linguaggio.`,
   introduction: `<p>La Vergine non vi dirà "ti amo" con un mazzo di rose rosse. Ve lo dirà riordinando il vostro armadio, ricordandosi quella cosa che vi serviva, preparando il caffè esattamente come piace a voi. <strong>L'amore della Vergine è nei dettagli, ed è proprio lì che molti non lo vedono.</strong> Se volete capire se il vostro partner sa riconoscere questo linguaggio, <a href="/it/segni-zodiacali-nomi-compatibilita/">provate il test di compatibilità tra segni zodiacali e nomi</a>.</p>
 <p>Governata da Mercurio, la Vergine è un segno che analizza tutto, compreso l'amore. Non per rovinarlo, ma per capirlo. Prima di lasciarsi andare, ha bisogno di sapere che il terreno è solido. Che l'altro è affidabile. Che i conti tornano, non solo quelli del cuore ma anche quelli della quotidianità. Per questo la Vergine può sembrare fredda all'inizio. In realtà, sta solo raccogliendo dati prima di investire tutto.</p>

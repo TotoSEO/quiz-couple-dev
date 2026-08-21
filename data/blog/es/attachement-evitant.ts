@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/attachement-evitant.webp',
   featuredImageAlt: "Silueta retrocediendo un paso ante un corazón tendido hacia ella",
   publishedAt: '2026-12-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "El evitativo no quiere menos que los demás. Simplemente aprendió, muy pronto, que necesitar es un peligro... y gestiona el amor como se gestiona un riesgo.",
   introduction: `<p>Es una de las experiencias amorosas más desconcertantes que existen: todo va bien, está presente, divertido, implicado... y justo cuando la relación se pone seria, algo se cierra. Menos mensajes, menos planes, esa necesidad repentina de aire. No has hecho nada mal. No está menos apegado. Es otra cosa: cuanto más te acercas, más retrocede su sistema.</p>
 <p><strong>Bienvenida al apego evitativo: el estilo de quienes aprendieron, muy pronto, que contar con alguien acaba mal... y que la autonomía es la única seguridad fiable.</strong> Alrededor de una persona de cada cuatro funciona así en el amor. Y al contrario del tópico, el evitativo no es frío ni incapaz de querer: quiere con un sistema de alarma invertido, que suena cuando alguien se acerca en lugar de sonar cuando alguien se aleja.</p>

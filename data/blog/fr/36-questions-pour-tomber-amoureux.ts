@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Deux chaises face à face sous une ampoule chaleureuse, un carnet de questions posé entre elles",
   publishedAt: '2026-11-06',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "En 1997, un psychologue a fait tomber amoureux deux inconnus dans son laboratoire, avec une simple liste de questions. La liste existe toujours... la voici.",
   introduction: `<p>L'histoire est vraie, et elle est irrésistible. En 1997, le psychologue américain Arthur Aron fait entrer des paires d'inconnus dans son laboratoire. Consigne : se poser 36 questions, dans l'ordre, de plus en plus personnelles, puis se regarder dans les yeux quatre minutes, sans parler. Résultat : une proximité record entre parfaits étrangers... et, la légende retient surtout ça, deux participants qui finiront par se marier.</p>
 <p>L'expérience dormait dans les revues scientifiques jusqu'en 2015, quand une essayiste raconte dans le New York Times l'avoir testée sur un rendez-vous... et être tombée amoureuse. Depuis, les « 36 questions » ont fait le tour du monde. <strong>Et contrairement à ce qu'on croit, ce n'est pas un gadget : le mécanisme derrière est solide, documenté... et il marche aussi sur les couples installés.</strong></p>

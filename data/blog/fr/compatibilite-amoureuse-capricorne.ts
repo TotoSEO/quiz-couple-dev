@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Symbole astrologique du Capricorne, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Le Capricorne ne s'engage pas à la légère, et quand il le fait, c'est pour construire. Quels signes partagent cette vision ?`,
   introduction: `<p>Le Capricorne a la réputation d'être froid en amour. C'est un malentendu. <strong>Il n'est pas froid, il est sérieux.</strong> Et dans un monde où l'amour est souvent traité comme un divertissement, son sérieux peut passer pour de la distance. Mais ceux qui ont été aimés par un Capricorne savent : quand il choisit quelqu'un, il ne revient pas en arrière. Vous voulez savoir si votre signe est compatible avec cette solidité ? <a href="/signes-astrologiques-prenoms-compatibilite/">Calculez votre compatibilité amoureuse par signe et prénom</a>.</p>
 <p>Gouverné par Saturne, planète de la discipline et du temps, le Capricorne construit ses relations comme il construit tout le reste : avec patience, rigueur et une vision à long terme. Il ne tombe pas amoureux facilement, mais quand il tombe, c'est avec une profondeur que peu de signes peuvent égaler.</p>

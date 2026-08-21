@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-pour-mieux-se-connaitre-en-couple.webp',
   featuredImageAlt: "Pareja sentada espalda con espalda con interrogantes y corazones encima",
   publishedAt: '2026-10-13',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "El día en que se dejan de hacer preguntas, no es que se haya terminado de descubrir al otro... es que se ha dejado de buscar.",
   introduction: `<p>Haz la prueba un día: pregúntale a una pareja de diez años si se conocen de memoria. Dirán que sí, evidentemente. Luego hazles tres preguntas algo precisas, el sueño que él abandonó, el miedo que ella nunca dice, lo que cada uno cree que el otro piensa de él... y mira las caras. Siempre hay una sorpresa. ¡Siempre!</p>
 <p><strong>Porque nunca se termina de conocer a alguien. Solo se deja de buscar, y es muy distinto.</strong> La buena noticia es que la curiosidad se vuelve a encender: basta con volver a hacer preguntas de verdad y escuchar las respuestas como el primer día.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',
   featuredImageAlt: "Bocadillos de diálogo superpuestos, uno de ellos aplastando lentamente a otro más pequeño",
   publishedAt: '2026-09-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Un manipulador no miente al azar. Elige de un repertorio, siempre el mismo. Y en cuanto conoces el repertorio, algo se rompe en el truco de magia.",
   introduction: `<p>«Eres demasiado sensible.» ¿Cuántas veces has oído esa? ¿Y cuántas te has ido preguntándote si, efectivamente, no estarías exagerando un poco?</p>
 <p>Por eso existe este artículo. Los manipuladores no inventan nada: tiran de un repertorio, y es más o menos siempre el mismo. Frases cortas, que parecen inofensivas, a veces incluso amables... y que hacen un trabajo muy preciso en tu cabeza. Invertir la culpa, hacerte dudar, hacerte callar.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/femme-toxique-en-amour.webp',
   featuredImageAlt: "Female silhouette holding strings knotted into a heart shape",
   publishedAt: '2026-11-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Men take on average far longer to name a toxic relationship... because nobody ever taught them what it looks like when it comes from a woman.",
   introduction: `<p>Try it around you: ask some guys what a toxic woman is. You'll get jokes, film references... and very few serious answers. Because we all grew up with the idea that toxicity in a relationship is a men's affair. The result: when a man lives through a relationship that damages him, he doesn't name it. He says she's «got character». He says it's «complicated». He absorbs it... and takes years to understand.</p>
 <p><strong>So let's say it simply: toxicity has no gender, and its female versions do as much damage as any other.</strong> They're just better camouflaged socially: a woman who controls «cares about you», a woman who makes scenes is «passionate», a woman who belittles you «gives as good as she gets».</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/relation-toxique-signes.webp',
   featuredImageAlt: "Due mani legate da una pianta le cui spine sostituiscono le foglie",
   publishedAt: '2026-10-06',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "«Tossica», la parola è ovunque, al punto da non dire più niente. Eppure la vera relazione tossica ha segnali precisi... e una domanda centrale: si può riparare?",
   introduction: `<p>«Relazione tossica»... La parola è talmente ovunque che serve per tutto: un litigio un po' forte, un ex rancoroso, un disaccordo sulle vacanze, ecco, tossica! Risultato: quando ti poni DAVVERO la domanda sulla tua relazione, non sai più cosa pensare. È grave? È normale? Sono io?</p>
 <p>Allora poniamo il criterio vero, quello che rimette ordine: <strong>una relazione non è tossica per quello che contiene, è tossica per quello che ti fa.</strong> Litigi ne hanno tutte le coppie. Differenze, periodi grigi, parole che scappano: uguale. La domanda non è lì. La domanda è: in che stato ti mette questa relazione, settimana dopo settimana?</p>

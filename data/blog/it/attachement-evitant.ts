@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/attachement-evitant.webp',
   featuredImageAlt: "Sagoma che indietreggia di un passo davanti a un cuore teso verso di lei",
   publishedAt: '2026-12-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "L'evitante non ama meno degli altri. Ha solo imparato, prestissimo, che il bisogno è un pericolo... e gestisce l'amore come si gestisce un rischio.",
   introduction: `<p>È una delle esperienze amorose più spiazzanti che esistano: va tutto bene, è presente, divertente, coinvolto... e proprio nel momento in cui la relazione diventa seria, qualcosa si chiude. Meno messaggi, meno progetti, quel bisogno improvviso d'aria. Non hai fatto niente di male. Non è meno attaccato. È un'altra cosa: più ti avvicini, più il suo sistema indietreggia.</p>
 <p><strong>Benvenuta nell'attaccamento evitante: lo stile di chi ha imparato, prestissimo, che contare su qualcuno finisce male... e che l'autonomia è l'unica sicurezza affidabile.</strong> Circa una persona su quattro funziona così in amore. E al contrario del luogo comune, l'evitante non è né freddo né incapace di amare: ama con un sistema d'allarme invertito, che suona quando ci si avvicina invece di suonare quando ci si allontana.</p>

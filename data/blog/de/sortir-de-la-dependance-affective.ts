@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Person zerbricht eine herzförmige Kette, Treppenstufen im Hintergrund",
   publishedAt: '2026-09-25',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "«Arbeite an dir», «lerne dich zu lieben»... Danke, aber konkret, was macht man Montagmorgen? Hier ist der Plan, Übung für Übung.",
   introduction: `<p>Wenn du schon einmal gesucht hast, wie man aus emotionaler Abhängigkeit herauskommt, kennst du das Lied: «gewinne dein Selbstvertrauen zurück», «konzentriere dich auf deine Bedürfnisse», «lerne dich zu lieben». Wahre Ratschläge, sicher. Aber vollkommen unbrauchbar an einem Dienstagabend um 23 Uhr, wenn du auf dein Handy starrst und auf seine Antwort wartest.</p>
 <p><strong>Emotionale Abhängigkeit verlässt man nicht mit Vorsätzen. Man verlässt sie mit Handlungen, kleinen, präzisen, wiederholten.</strong> Genau wie man ein Knie nach einer Verletzung rehabilitiert: Niemand sagt dir «geh wieder», man gibt dir Übungen, in einer Reihenfolge, mit einer Steigerung.</p>

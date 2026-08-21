@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Simbolo astrologico dell'Acquario, compatibilità amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `L'Acquario ama a modo suo, e quel modo non somiglia a nessun altro. Quali segni capiscono la sua libertà?`,
   introduction: `<p>Se cercate un partner convenzionale, l'Acquario non fa per voi. E non per provocazione, è che <strong>l'Acquario vive l'amore come un'estensione della propria libertà, non come una rinuncia ad essa</strong>. Il giorno in cui sentirà che una relazione lo limita, non litigherà. Si allontanerà. Silenziosamente, ma inesorabilmente. Per scoprire se il vostro legame sa rispettare questo bisogno, <a href="/it/segni-zodiacali-nomi-compatibilita/">fate il test di compatibilità tra segni zodiacali e nomi</a>.</p>
 <p>Governato da Urano, il pianeta dell'innovazione e della rottura degli schemi, l'Acquario porta in amore un approccio che disorienta molti. Non è il tipo da dichiarazioni romantiche classiche. Non è il tipo da gelosie possessive. Il suo modo di dire "ti amo" è condividere un'idea alle tre di notte, portarvi a una mostra che non avreste mai scelto, discutere di filosofia fino all'alba. Il suo amore è cerebrale prima che emotivo, e chi non lo capisce lo scambia per freddezza.</p>

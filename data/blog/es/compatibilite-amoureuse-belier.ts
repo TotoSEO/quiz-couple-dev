@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Símbolo astrológico de Aries, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Aries se enamora rápido, se entusiasma aún más rápido y a veces se decepciona. ¿Qué signos aguantan su ritmo?`,
   introduction: `<p>Aries no es de los que esperan. Quiere, actúa, ama, y si el otro no sigue el ritmo, pasa página. No es superficialidad. Es que <strong>Aries vive a una velocidad que no todo el mundo puede sostener</strong>. Y en el amor, esa energía es un arma de doble filo: enciende los comienzos de una relación como pocos signos, pero también puede consumir una historia antes de que haya tenido tiempo de asentarse. Para saber si tu pareja resiste esa intensidad, <a href="/es/signos-astrologicos-nombres-compatibilidad/">comprueba tu compatibilidad astrológica y de nombre</a> en unos clics.</p>
 <p>Regido por Marte, el planeta de la acción y el deseo, Aries busca un compañero que le plante cara, no alguien que capitule a la primera tensión, sino alguien que le responda, que le desafíe, que no se borre. La complicidad, para Aries, se construye en movimiento. No en la tranquilidad.</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/jalousie-maladive.webp',
   featuredImageAlt: "Ojo verde estilizado que encierra a una pareja en su iris",
   publishedAt: '2026-12-18',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Los celos normales protegen a la pareja. Los celos patológicos la devoran... y devoran primero a quien los siente.",
   introduction: `<p>Siempre empieza por una cosa pequeña. Un nombre que vuelve demasiado a menudo, una sonrisa en una fiesta, un móvil dejado boca abajo sobre la mesa... y un escenario que empieza a girar en tu cabeza. Sabes que no se apoya en nada, ese escenario. ¡Lo sabes! Pero gira igualmente, cada vez más rápido, y ahí estás revisando, preguntando, imaginando... y odiándote por hacerlo.</p>
 <p>Lo primero que hay que decir, porque alivia: <strong>tener celos es normal. Los celos son una emoción universal, presente en todas las parejas en las que ambos importan al otro.</strong> El problema no es sentirlos. El problema es cuando toman los mandos: cuando deciden tus noches, tus preguntas, tus registros... y hacen sufrir a todo el mundo, empezando por ti.</p>

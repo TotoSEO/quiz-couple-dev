@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/5-langages-de-l-amour.webp',
   featuredImageAlt: "Cinque bolle colorate che simboleggiano i cinque linguaggi dell'amore attorno a una coppia",
   publishedAt: '2026-12-15',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Il dramma di molte coppie non è la mancanza d'amore... è un problema di traduzione. Ognuno parla la sua lingua e nessuno ha il dizionario.",
   introduction: `<p>Ecco una scena che forse hai già vissuto. Lui torna a casa con un regalo, tutto fiero... e tu, in fondo, avresti preferito che tornasse prima, punto. O il contrario: tu gli ripeti che lo ami, gli fai complimenti... e lui sembra a malapena sentirlo, quando un semplice abbraccio lo avrebbe riempito. Ognuno dà, sinceramente. E ognuno ha l'impressione di ricevere... di fianco.</p>
 <p><strong>È esattamente il problema che il concetto dei 5 linguaggi dell'amore ha messo in luce: non esprimiamo tutti l'amore allo stesso modo, e diamo spontaneamente nella NOSTRA lingua... non in quella dell'altro.</strong> L'idea viene dal consulente coniugale americano Gary Chapman, negli anni novanta, e se ha fatto il giro del mondo è perché descrive qualcosa che tutte le coppie riconoscono all'istante.</p>

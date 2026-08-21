@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/micro-tromperie.webp',
   featuredImageAlt: "Móvil que muestra una notificación de corazón, sombra de un tercero entre dos siluetas",
   publishedAt: '2026-12-25',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Nadie se ha acostado con nadie. Y sin embargo algo ha pasado... Bienvenida a la zona gris de la fidelidad moderna.",
   introduction: `<p>No ha hecho nada, técnicamente. No se ha acostado con nadie, sin citas secretas, sin mentiras frontales... Solo likes regulares en las fotos de una chica, conversaciones de Instagram que cierra cuando te acercas, una ex que «mantiene como amiga» con mensajes a las 23 h. Técnicamente nada. Y sin embargo algo te molesta... y ni siquiera sabes si tienes derecho a estar molesta.</p>
 <p>Ese territorio difuso tiene nombre: la microinfidelidad, micro-cheating para los amigos. <strong>Todas esas pequeñas transgresiones que no cruzan LA línea roja oficial... pero que instalan ambigüedad con alguien exterior a la pareja.</strong> El concepto explotó con las redes sociales, y con razón: nunca ha sido tan fácil mantener brasas sin encender oficialmente ningún fuego.</p>

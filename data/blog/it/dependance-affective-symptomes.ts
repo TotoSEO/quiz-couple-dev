@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-symptomes.webp',
   featuredImageAlt: "Persona incatenata a un telefono che mostra un cuore, in attesa di una risposta",
   publishedAt: '2026-09-15',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La dipendenza affettiva non si vede allo specchio. Si vede nei dettagli: cosa provi quando non risponde, cosa annulli per lui, cosa non osi più dire.",
   introduction: `<p>Non ti risponde da due ore. Oggettivamente non è successo niente: lavora, vive la sua vita, va tutto bene. Ma tu hai già controllato il telefono quindici volte, riletto il tuo ultimo messaggio per capire se era goffo e costruito tre scenari, in uno dei quali ti lascia.</p>
 <p>Se questa scena ti dice qualcosa, forse ti sei già chiesta se non sei «troppo». Troppo attaccata, troppo ansiosa, troppo dipendente. <strong>La vera domanda non è se ami troppo. È se il tuo equilibrio emotivo dipende interamente da qualcun altro.</strong> Quella è la dipendenza affettiva, e ha sintomi precisi.</p>

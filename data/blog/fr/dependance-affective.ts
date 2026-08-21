@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective.svg',
   featuredImageAlt: "Couple enlacé sur un canapé illustrant la dépendance affective dans la relation",
   publishedAt: '2026-03-24',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La dépendance affective, ce n'est pas « trop aimer ». C'est ne plus savoir exister sans l'autre et construire toute sa valeur autour de son regard.",
   introduction: `<p>Tu vérifies ton téléphone toutes les cinq minutes. Tu analyses le moindre changement de ton dans ses messages. Quand il est distant, tu paniques. Quand il est présent, tu es soulagée, mais jamais vraiment en paix, parce que tu sais que ça peut basculer à tout moment.</p>
 <p>Ce n'est pas de l'amour intense. Ce n'est pas de la passion. <strong>C'est de la dépendance affective.</strong> Et ça touche bien plus de personnes qu'on ne le croit, hommes et femmes, dans tous types de relations. Cet article est là pour <a href="/blog/dependance-affective-symptomes/">mettre des mots sur ce que tu vis</a>, comprendre d'où ça vient, et surtout te montrer que c'est possible d'en sortir.</p>`,

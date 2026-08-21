@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/disputes-couple-vacances.webp',
   featuredImageAlt: `Bagagliaio aperto sul bordo di una strada di campagna, valigie caricate a metà, due ombre che si voltano le spalle`,
   publishedAt: '2026-08-12',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Le vacanze dovrebbero riparare la coppia. Nei sondaggi fanno soprattutto riemergere quello che già non andava. Ecco i numeri reali e il momento esatto in cui si rompe.`,
   introduction: `<p>Partiamo dal numero, visto che è lui ad averti fatto cliccare: <strong>il 28 % delle persone in coppia dichiara che il viaggio delle vacanze è un momento teso</strong>, secondo un sondaggio OpinionWay realizzato per Direct Assurance su 1 016 persone a maggio 2025. La stampa ha arrotondato a «una coppia su tre», e non è un abuso.</p>
 

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/5-langages-de-l-amour.webp',
   featuredImageAlt: "Five coloured bubbles symbolising the five love languages around a couple",
   publishedAt: '2026-12-15',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "For many couples the drama isn't a lack of love... it is a translation problem. Each speaks their own language, and nobody has the dictionary.",
   introduction: `<p>Here is a scene you may have lived. He comes home with a present, proud as anything... and deep down, you would have preferred he simply came home earlier. Or the reverse: you keep telling him you love him, you compliment him... and he barely seems to hear it, when a simple hug would have filled him up. Each of you gives, sincerely. And each of you feels like what you receive lands slightly off target.</p>
 <p><strong>That is exactly the problem the concept of the 5 love languages brought to light: we don't all express love the same way, and we spontaneously give in OUR language... not in the other person's.</strong> The idea comes from the American marriage counsellor Gary Chapman, in the nineties, and if it travelled around the world, it is because it describes something every couple recognises instantly.</p>

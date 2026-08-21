@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/pervers-narcissique-amour.webp',
   featuredImageAlt: "Silhouette d'un couple dont l'un tire les fils de l'autre comme une marionnette",
   publishedAt: '2026-08-25',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Tout le monde le trouve charmant. Toi, tu ne sais plus ce que tu vis. C'est précisément comme ça que fonctionne l'emprise d'un pervers narcissique.",
   introduction: `<p>Il y a l'homme que les autres voient : drôle, attentionné, brillant en société. Et puis il y a celui que tu retrouves une fois la porte fermée. Celui qui souffle le chaud et le froid, qui retourne chaque dispute contre toi, qui te fait douter de ta propre mémoire... Le décalage entre les deux est tellement énorme que tu n'oses même plus en parler autour de toi. Franchement, qui te croirait ?</p>
 <p><strong>C'est exactement ça, vivre avec un pervers narcissique : un doute permanent, installé par quelqu'un d'autre, que tu as fini par prendre pour le tien.</strong> Et si tu tapes cette recherche à 23 heures au lieu de dormir, ce n'est pas pour avoir une définition. C'est pour savoir si c'est ça que tu vis.</p>

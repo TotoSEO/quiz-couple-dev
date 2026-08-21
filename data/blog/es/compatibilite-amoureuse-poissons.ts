@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Símbolo astrológico de Piscis, compatibilidad amorosa`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Piscis ama con todo su ser, a veces hasta perderse. ¿Qué signos saben nadar en sus aguas profundas sin ahogarse?`,
   introduction: `<p>Piscis es el último signo del zodiaco, y lleva consigo algo de todos los demás. Esa acumulación le convierte en uno de los signos más empáticos, intuitivos y emocionalmente complejos que existen. <strong>En el amor, Piscis no se entrega: se disuelve.</strong> Se funde con el otro hasta que no queda claro dónde termina uno y empieza el otro. Para algunos, eso es abrumador. Para los signos adecuados, es el amor más profundo que jamás experimentarán. Descubre cómo encajáis con <a href="/es/signos-astrologicos-nombres-compatibilidad/">nuestra herramienta de compatibilidad astrológica y de nombre</a>.</p>
 <p>Regido por Neptuno, el planeta de los sueños y la ilusión, Piscis vive a medio camino entre la realidad y un mundo interior que solo él habita completamente. Su pareja ideal es alguien que respete ese mundo interior, que no intente sacarlo a la fuerza de ahí, pero que le ofrezca una mano firme cuando necesite volver a pisar tierra.</p>

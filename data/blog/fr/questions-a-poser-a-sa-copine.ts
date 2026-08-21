@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',
   featuredImageAlt: "Couple attablé en train de rire, elle répond à une question en gesticulant",
   publishedAt: '2026-10-02',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Le piège des couples qui durent, ce n'est pas de ne plus s'aimer. C'est de croire qu'on a fini de se découvrir.",
   introduction: `<p>Petit test avant de commencer : tu sais quel est son plat préféré, son film culte, son parfum. Facile. Maintenant... tu sais de quoi elle est le plus fière cette année ? Ce qui lui manque en ce moment ? Ce qu'elle n'ose pas te demander ? Moins facile, hein.</p>
 <p><strong>C'est le piège des couples installés : on confond bien la connaître et avoir fini de la découvrir.</strong> Sauf qu'elle change, comme toi, comme tout le monde. Et les réponses d'il y a deux ans ne sont plus forcément celles d'aujourd'hui...</p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/rupture-pervers-narcissique.webp',
   featuredImageAlt: "Porte entrouverte vers la lumière, une main lâchant un fil noué en forme de cœur",
   publishedAt: '2026-10-20',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Avec un pervers narcissique, la rupture n'est pas la fin de l'histoire. C'est un chapitre à part entière... et celui qui se prépare le plus.",
   introduction: `<p>Quitter quelqu'un, c'est déjà difficile. Quitter un pervers narcissique, c'est un exercice à part : une rupture où l'autre ne te laisse pas partir, où les larmes succèdent aux menaces, où l'homme des débuts réapparaît pile au bon moment... et où tu peux te retrouver, trois semaines plus tard, revenue sans trop savoir comment.</p>
 <p>Il faut le dire sans détour : <strong>la plupart des victimes ne partent pas une fois. Elles partent plusieurs fois, parce que personne ne les avait prévenues de ce qui se passe APRÈS l'annonce.</strong> Ce n'est pas une question de volonté. C'est une question de préparation.</p>

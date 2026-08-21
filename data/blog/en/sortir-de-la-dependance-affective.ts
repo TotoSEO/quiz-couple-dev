@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Person breaking a heart-shaped chain, staircase steps in the background",
   publishedAt: '2026-09-25',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "«Work on yourself», «learn to love yourself»... Thanks, but concretely, what do you do on Monday morning? Here's the plan, exercise by exercise.",
   introduction: `<p>If you've ever searched for how to get out of emotional dependency, you know the song: «rebuild your confidence», «refocus on your needs», «learn to love yourself». True advice, no doubt. But perfectly unusable on a Tuesday night at 11pm, when you're staring at your phone waiting for his reply.</p>
 <p><strong>You don't leave emotional dependency behind with resolutions. You leave it with actions, small, precise, repeated.</strong> Exactly like rehabbing a knee after an injury, in fact: nobody tells you «walk again», they give you exercises, in an order, with a progression.</p>

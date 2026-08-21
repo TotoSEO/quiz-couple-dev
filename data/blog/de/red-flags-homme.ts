@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Red Flags bei einem Mann, vollständige Liste der Warnsignale in einer Beziehung",
   publishedAt: '2026-03-05',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Red Flags sind selten laute Alarmsignale. Es sind Muster, die du herunterspielst, bis du eines Tages merkst, dass du sie seit Monaten als normal akzeptierst.",
   introduction: `<p>Du spürst etwas. Ein vages Unbehagen, eine Spannung, die du nicht benennen kannst, eine leise Stimme, die immer wieder auftaucht, und die du immer wieder zum Schweigen bringst, weil du denkst: "Vielleicht übertreibe ich." <strong>Wahrscheinlich nicht.</strong></p>
 <p>Red Flags bei einem Mann sind selten laute Alarmsignale. Es sind Muster. Dinge, die immer wiederkehren. Verhaltensweisen, die du einmal, zweimal, zehnmal herunterspielst, bis du eines Tages merkst, dass du sie seit Monaten als normal akzeptierst. Dieser Artikel ist dazu da, sie beim Namen zu nennen.</p>`,

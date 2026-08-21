@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-gemeaux.svg',
   featuredImageAlt: `Symbole astrologique des Gémeaux, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Le Gémeaux change d'avis comme de chemise, et il aime ça. Mais en amour, qui arrive vraiment à le comprendre ?`,
   introduction: `<p>Il y a une chose que le Gémeaux déteste plus que tout : se sentir enfermé. Dans une case, dans une routine, dans une définition de lui-même que l'autre aurait décidée à sa place. <strong>Les Gémeaux ne sont pas instables, ils sont multiples.</strong> Et cette nuance, tout le monde n'arrive pas à la faire. D'ailleurs, si vous voulez <a href="/signes-astrologiques-prenoms-compatibilite/">tester votre compatibilité astrologique avec votre partenaire</a>, c'est le meilleur moyen de savoir si votre duo peut fonctionner.</p>
 <p>Régi par Mercure, la planète de la communication et de l'intellect, le Gémeaux tombe amoureux de l'esprit avant de tomber amoureux du corps. Ce qui l'attire ? Une conversation qui part dans une direction inattendue. Un point de vue qui le surprend. Quelqu'un qui peut parler de trois sujets différents en dix minutes sans perdre le fil, et qui s'en réjouit autant que lui.</p>

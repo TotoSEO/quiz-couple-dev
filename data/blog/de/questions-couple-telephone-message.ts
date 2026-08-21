@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/questions-couple-telephone-message.webp',
   featuredImageAlt: "Zwei Telefone, verbunden durch einen gespannten roten Faden zwischen zwei erleuchteten Fenstern",
   publishedAt: '2026-11-27',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Am Telefon gibt es keine Blicke, keine Gesten... nur Worte. Genau deshalb wirken gute Fragen dort Wunder.",
   introduction: `<p>Es gibt einen Moment, den alle Paare kennen, ob sie 800 Kilometer oder zwei Stadtteile auseinander wohnen: der, in dem der Abendanruf zum Wetterbericht wird. «Wie war dein Tag?» «Ganz gut.» «Was isst du?» «Nudeln.»... Die Bindung ist da, die Lust auch, aber das Gespräch läuft leer.</p>
 <p>Das ist eigentlich normal: Auf Distanz verliert man alles, was den Austausch sonst nährt, die Blicke, den gemeinsamen Kontext, die Gesten... <strong>Es bleiben nur die Worte. Und genau deshalb wirken gute Fragen am Telefon Wunder: Sie geben den Worten wieder etwas zu tun.</strong></p>

@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',
   featuredImageAlt: `Symbole astrologique du Cancer, compatibilité amoureuse`,
   publishedAt: '2026-03-03',
-  author: AUTHORS['mathieu-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Le Cancer donne tout en amour, peut-être même trop. Quels signes savent recevoir cet amour sans en abuser ?`,
   introduction: `<p>Derrière la carapace, parce qu'il y en a toujours une, le Cancer est l'un des signes les plus profondément affectifs du zodiaque. Ce qu'il donne en amour, quand il se sent en sécurité, dépasse ce que beaucoup d'autres signes sont capables d'offrir. <strong>Une présence totale. Une mémoire affective extraordinaire.</strong> L'art de sentir ce dont l'autre a besoin avant même qu'il l'ait formulé. Pour découvrir comment votre signe et votre prénom s'accordent avec le Cancer, essayez <a href="/signes-astrologiques-prenoms-compatibilite/">notre analyse de compatibilité astrologique</a>.</p>
 <p>Gouverné par la Lune, le Cancer est cyclique par nature. Il y a des jours où il déborde d'affection, et des jours où il rentre en lui-même sans explication. Son partenaire idéal est celui qui comprend ce rythme, qui ne l'interprète pas comme du rejet, qui ne force pas les portes quand elles sont fermées, mais qui est là quand elles se rouvrent.</p>

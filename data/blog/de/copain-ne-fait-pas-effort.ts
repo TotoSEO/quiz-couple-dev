@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '',
   featuredImageAlt: "Mein Freund gibt sich keine Mühe, verstehen und handeln",
   publishedAt: '2026-03-08',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Ein Ungleichgewicht beim Einsatz in einer Beziehung ist einer der häufigsten Trennungsgründe, genau weil es sich allmählich einschleicht und wir uns oft daran gewöhnen, bevor wir merken, wie sehr es uns belastet.",
   introduction: `<p>Du organisierst, du planst voraus, du denkst an alles. Die Ausflüge, die Geschenke, die gemeinsamen Momente, die wichtigen Gespräche. Und er ist da, antwortet wenn du etwas vorschlägst, macht mit wenn du darauf besteht, aber nichts kommt wirklich von ihm. Du hast seit einer Weile das Gefühl, <a href="/de/gesunde-beziehung-test/">die Beziehung alleine zu tragen</a>, und fragst dich langsam, ob das normal ist, ob du zu viel verlangst, oder ob wirklich etwas nicht stimmt.</p>
 <p>Du übertreibst nicht. <strong>Ein Ungleichgewicht beim Einsatz in einer Beziehung ist einer der häufigsten Trennungsgründe, genau weil es sich allmählich einschleicht und wir uns oft daran gewöhnen, bevor wir merken, wie sehr es uns belastet.</strong> Dieser Artikel soll dem, was du fühlst, einen Namen geben, verstehen was wirklich vorgeht, und dir helfen zu entscheiden, was du tun möchtest.</p>`,

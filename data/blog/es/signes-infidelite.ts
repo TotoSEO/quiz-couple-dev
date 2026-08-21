@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/signes-infidelite.webp',
   featuredImageAlt: "Móvil boca abajo sobre una mesa entre dos personas que se dan la espalda",
   publishedAt: '2026-12-22',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "La duda sobre una infidelidad es una de las peores cosas que se pueden vivir en pareja... y paradójicamente, la mayoría de las listas de «señales» la agravan en vez de aclararla.",
   introduction: `<p>Si estás leyendo este artículo, algo te ha puesto en alerta. Un cambio de costumbres, un móvil vuelto intocable, una distancia nueva... o solo una intuición, esa cosa sorda que se niega a callarse. Y desde entonces oscilas entre dos vergüenzas: la de sospechar sin pruebas y la de no querer ver.</p>
 <p>Así que pongamos primero un marco honesto, porque el tema lo merece: <strong>ninguna señal aislada prueba una infidelidad. Ninguna.</strong> Las listas de «15 señales de que te engaña» fabrican sobre todo angustia: cada señal tomada por separado tiene diez explicaciones inocentes. Lo que cuenta es el CONJUNTO: varios cambios, simultáneos, duraderos, sin explicación coherente.</p>

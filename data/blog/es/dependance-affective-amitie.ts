@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/dependance-affective-amitie.webp',
   featuredImageAlt: "Dos amigas unidas por un hilo rojo demasiado tenso entre sus muñecas",
   publishedAt: '2026-11-17',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: "Vigilamos la dependencia emocional en nuestras parejas... y la dejamos instalarse tranquilamente en nuestras amistades, donde nadie piensa en buscarla.",
   introduction: `<p>Hay unos celos de los que nadie habla nunca: los que sientes cuando tu mejor amiga se acerca a otra persona. Ese pinchazo cuando cuenta una noche en la que tú no estabas... Esa necesidad de saber que sigues siendo «la» persona, la primera en enterarte, la preferida. No te atreves a decirlo porque suena absurdo: ¿celos, entre amigas?</p>
 <p>Y sin embargo. <strong>La dependencia emocional es un modo de apego, no una exclusiva de la pareja: se instala allí donde hay vínculo.</strong> Y la amistad es incluso su terreno más discreto, porque nadie vigila... Repetimos que «las amigas son sagradas» y, bajo esa bandera, vínculos enteros pasan suavemente de lo precioso a lo fusional, y de lo fusional a lo asfixiante.</p>

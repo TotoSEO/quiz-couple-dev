@@ -9,7 +9,7 @@ const article: BlogArticleData = {
   featuredImage: '/blog/cadeau-mariage.webp',
   featuredImageAlt: `Enveloppe de cadeau de mariage posée sur une table de réception avec des roses et deux coupes de champagne`,
   publishedAt: '2026-08-09',
-  author: AUTHORS['lucie-courtin'],
+  author: AUTHORS['thomas'],
   excerpt: `Le barème selon votre lien avec les mariés, les situations qui changent la donne, et la façon la plus simple de participer.`,
   introduction: `<p>Vous avez le carton d'invitation sur la table depuis trois semaines. La date approche, la tenue est réglée, et il reste cette question idiote que personne n'ose poser à voix haute : <strong>on met combien ?</strong></p>
 
