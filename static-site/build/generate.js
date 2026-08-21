@@ -15,6 +15,7 @@ import {
   BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID, ADSENSE_CLIENT,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
+  PARTENAIRE_ADULTE,
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable,
 } from './config.js';
@@ -128,6 +129,21 @@ function pureteQuestions(lang) {
 }
 
 const PUBLIC_DIR = path.resolve(__dirname, '../../public');
+
+// L'auteur unique du site. Son portrait n'est utilise que si le fichier existe
+// vraiment : declarer un avatar absent afficherait une image cassee en pied de
+// chaque article, et le gabarit se contente de tester la presence de la cle.
+let _auteurCache = null;
+function auteurDuSite() {
+  if (_auteurCache) return _auteurCache;
+  const a = { ...AUTHORS['thomas'] };
+  if (a.avatar && !fs.existsSync(path.join(PUBLIC_DIR, a.avatar.replace(/^\//, '')))) {
+    console.warn(`[auteur] ${a.avatar} absent : portrait ignore`);
+    delete a.avatar;
+  }
+  _auteurCache = a;
+  return a;
+}
 const OG_FALLBACK = { width: 1200, height: 630 };
 const ogSizeCache = new Map();
 
@@ -511,6 +527,9 @@ function renderTemplate(templateName, data) {
     data.ogImageWidth = size.width;
     data.ogImageHeight = size.height;
   }
+  // Disponible pour tous les gabarits ; l'encart decide lui-meme s'il
+  // s'affiche, selon la route et la langue.
+  if (data && data.partenaireAdulte === undefined) data.partenaireAdulte = PARTENAIRE_ADULTE;
   return ejs.renderFile(templatePath, data, {
     views: [TEMPLATES_DIR],
     async: false,
@@ -1390,7 +1409,7 @@ function parseArticleTs(filePath) {
     // Replace AUTHORS references with inline objects
     // Un seul auteur sur le site : toute reference d'auteur, y compris un
     // identifiant herite de Supabase, resout vers lui.
-    objStr = objStr.replace(/AUTHORS\['[a-z-]+'\]/g, JSON.stringify(AUTHORS['thomas']));
+    objStr = objStr.replace(/AUTHORS\['[a-z-]+'\]/g, JSON.stringify(auteurDuSite()));
     // Remove TypeScript type annotations
     objStr = objStr.replace(/as const/g, '');
 

@@ -8526,3 +8526,32 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .choix-modes--trois { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 24rem; }
   .choix-mode { padding: 1.25rem 1rem 1.1rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   ENCART PARTENAIRE AFFILIÉ (pages au contenu adulte)
+   Volontairement sobre et distinct du contenu éditorial : la
+   mention « lien affilié » doit rester lisible avant le bouton.
+   ═══════════════════════════════════════════════════════════ */
+.partenaire-adulte {
+  max-width: 44rem; margin: 0 auto; padding: 2rem 1.5rem;
+  text-align: center; border-radius: var(--radius);
+  border: 1px dashed hsl(var(--border));
+  background: hsl(var(--muted) / .45);
+}
+.partenaire-adulte-mention {
+  display: inline-block; margin-bottom: .75rem;
+  font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+.partenaire-adulte-titre {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 700;
+  font-size: clamp(1.25rem, 3.5vw, 1.6rem); line-height: 1.25;
+  color: hsl(var(--foreground)); margin-bottom: .6rem;
+}
+.partenaire-adulte-texte {
+  max-width: 34rem; margin: 0 auto 1.4rem;
+  font-size: .95rem; line-height: 1.6; color: hsl(var(--muted-foreground));
+}
+@media (max-width: 430px) {
+  .partenaire-adulte { padding: 1.5rem 1.1rem; }
+}
