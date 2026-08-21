@@ -380,6 +380,71 @@
     return NOMS_QUIZ[slug] || slug;
   }
 
+  // ── Un test, un identifiant ──
+  // La base connait la plupart des pages sous DEUX identifiants : le data-quiz
+  // du moteur, utilise a l'origine (« toxic », « sain », « purete »), et la
+  // cle de route posee depuis (« testToxic », « testCoupleSain »...). Les
+  // deux cohabitent dans quiz_completions, si bien que le meme test occupait
+  // deux lignes du tableau de bord, sous le meme nom, avec ses parties
+  // coupees en deux. Un test paraissait donc moins joue qu'il ne l'est, et
+  // son taux de finition se calculait sur la moitie de son histoire.
+  //
+  // On replie l'ancien identifiant sur le nouveau a la lecture, jamais en
+  // base : reecrire les lignes existantes ferait perdre la trace de ce qui a
+  // ete enregistre, pour un affichage qu'un repli suffit a corriger.
+  var SLUG_CANON = {
+    'action-ou-verite': 'jeuActionVerite',
+    'action-ou-verite-coquin': 'jeuActionVeriteHot',
+    'ado': 'quizAdo',
+    'amour-habitude': 'testAmourHabitude',
+    'amoureux': 'quizAmoureux',
+    'attachement': 'testAttachement',
+    'common-points': 'testCommonPoints',
+    'compatibilite': 'testCompatibilite',
+    'confiance': 'testConfiance',
+    'coquin': 'quizCoquin',
+    'couche': 'testCouche',
+    'dependance': 'testDependance',
+    'dilemmes': 'jeuDilemmes',
+    'distance': 'testDistance',
+    'distance-aime': 'testDistanceAime',
+    'divorce': 'testDivorce',
+    'emmenager': 'testEmmenager',
+    'gage-couple': 'jeuGages',
+    'genant': 'quizGenant',
+    'infidelite': 'testInfidelite',
+    'karmique': 'testKarmique',
+    'knowledge': 'quizKnowledge',
+    'langage-amour': 'testLangageAmour',
+    'mariage': 'testMariage',
+    'marrant': 'quizMarrant',
+    'most': 'quizMost',
+    'parentalite': 'testParentalite',
+    'pervers': 'testPervers',
+    'plateau-couple': 'jeuPlateau',
+    'purete': 'testPurete',
+    'qui-de-nous-deux': 'jeuQuiDeNous',
+    'sain': 'testCoupleSain',
+    'secret': 'testSecret',
+    'suis-je-amoureux': 'testSuisJeAmoureux',
+    'tentation': 'quizTentation',
+    'tester-couple': 'testCouple',
+    'toxic': 'testToxic',
+    'tu-preferes': 'quizTuPreferes',
+    'vrai-faux': 'quizVraiFaux',
+  };
+  function canon(slug) { return SLUG_CANON[slug] || slug; }
+
+  // Somme les lignes qui pointent vers le meme test apres repli.
+  function fusionneComptes(rows) {
+    var par = {};
+    (rows || []).forEach(function (r) {
+      var c = canon(r.quiz_slug);
+      par[c] = (par[c] || 0) + (Number(r.total) || 0);
+    });
+    return Object.keys(par).map(function (k) { return { quiz_slug: k, total: par[k] }; });
+  }
+
   // ── Famille d'une page : test, quiz ou jeu ──
   // Meme regle que genrePageJouable() cote build, pour que le tableau de bord
   // range les pages comme le site les presente. Deux nommages coexistent en
@@ -482,7 +547,7 @@
     chargeLancements();
     statsRpc('get_quiz_counts').then(function (rows) {
       if (!Array.isArray(rows)) { if (listEl) listEl.innerHTML = '<p class="text-center text-destructive py-6">Erreur de chargement.</p>'; return; }
-      statsCounts = rows.slice().sort(function (a, b) { return b.total - a.total; });
+      statsCounts = fusionneComptes(rows).sort(function (a, b) { return b.total - a.total; });
       renderStatsList();
       // Les slugs sont connus : on peut charger les series quotidiennes
       // (le repli sans RPC groupee en a besoin pour boucler sur les quiz).
@@ -508,7 +573,7 @@
     }).then(function (rows) {
       if (!Array.isArray(rows) || rows.error) throw new Error('pas de rpc');
       var map = {};
-      rows.forEach(function (r) { map[r.quiz_slug] = Number(r.total) || 0; });
+      fusionneComptes(rows).forEach(function (r) { map[r.quiz_slug] = r.total; });
       statsLances = map;
       renderStatsList();
       // La serie quotidienne arrive apres : elle borne la fenetre commune.
@@ -517,7 +582,7 @@
           if (!Array.isArray(jours) || jours.error) return;
           var idx = {};
           jours.forEach(function (r) {
-            var slug = r.quiz_slug, k = rowDateKey(r);
+            var slug = canon(r.quiz_slug), k = rowDateKey(r);
             if (!slug || !k) return;
             if (!idx[slug]) idx[slug] = {};
             idx[slug][k] = (idx[slug][k] || 0) + rowTotal(r);
@@ -632,7 +697,7 @@
     statsParJour = {};
     statsParJourUTC = enUTC;
     (rows || []).forEach(function (r) {
-      var slug = r.quiz_slug, k = rowDateKey(r);
+      var slug = canon(r.quiz_slug), k = rowDateKey(r);
       if (!slug || !k) return;
       if (!statsParJour[slug]) statsParJour[slug] = {};
       statsParJour[slug][k] = (statsParJour[slug][k] || 0) + rowTotal(r);
@@ -855,22 +920,27 @@
   // bout, et le rapport des deux. Le ratio est le seul qui reponde a « quelle
   // page decroche » ; les deux autres servent a le lire sans se tromper de
   // volume, d'ou le second nombre garde en gris a cote.
+  // La colonne grise porte l'autre nombre du couple. Elle disait « 3 711
+  // finis » a cote d'un « 4 065 » sans etiquette : le seul nombre nomme etant
+  // celui qu'on n'a PAS demande, l'oeil s'y accroche et lit la ligne a
+  // l'envers. « dont » et « sur » rattachent explicitement le nombre gris a
+  // la valeur en gras, qui reste le sujet de la ligne.
   function valeurMesure(slug, termines) {
     var lances = statsLances ? (statsLances[slug] || 0) : 0;
-    if (statsMesure === 'lances') return { n: lances, libelle: lances.toLocaleString('fr-FR'), sur: termines.toLocaleString('fr-FR') + ' finis', classe: '' };
+    if (statsMesure === 'lances') return { n: lances, libelle: lances.toLocaleString('fr-FR'), sur: 'dont ' + termines.toLocaleString('fr-FR') + ' finis', classe: '' };
     if (statsMesure === 'ratio') {
       // Sur la fenetre commune uniquement, sinon on divise des mois de
       // completions par quelques heures de lancements.
       var c = comptesFenetre(slug);
       if (!c || c.lances < MINI_PAGE) {
-        return { n: -1, libelle: '—', sur: c ? c.lances + ' lancés' : '', classe: '' };
+        return { n: -1, libelle: '—', sur: c ? 'sur ' + c.lances + ' lancés' : '', classe: '' };
       }
       var pct = tauxDepuis(c.lances, c.finis);
       return { n: pct, libelle: pct + ' %',
-               sur: c.finis.toLocaleString('fr-FR') + ' / ' + c.lances.toLocaleString('fr-FR'),
+               sur: c.finis.toLocaleString('fr-FR') + ' finis sur ' + c.lances.toLocaleString('fr-FR'),
                classe: pct < 40 ? ' est-faible' : (pct >= 70 ? ' est-fort' : '') };
     }
-    return { n: termines, libelle: termines.toLocaleString('fr-FR'), sur: lances ? lances.toLocaleString('fr-FR') + ' lancés' : '', classe: '' };
+    return { n: termines, libelle: termines.toLocaleString('fr-FR'), sur: lances ? 'sur ' + lances.toLocaleString('fr-FR') + ' lancés' : '', classe: '' };
   }
 
   function renderStatsList() {
