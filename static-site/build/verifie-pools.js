@@ -17,6 +17,7 @@
  *   - une page à plusieurs modes porte plusieurs préfixes (couche homme/femme) ;
  *   - un jeu range ses cartes par famille (pourContre.vacances) ;
  *   - une page servie par un gabarit dédié n'apparaît pas dans le chargeur ;
+ *   - une page qui a son propre script non plus (le quiz ado) ;
  *   - le quiz sain n'a pas de questions propres en français et retombe sur la
  *     série « couple », seul repli admis, déclaré ici plutôt que toléré.
  */
@@ -62,7 +63,24 @@ for (const [page, v] of Object.entries(CFG)) {
   if (s.size) poolsDe[page] = s;
 }
 
-// ── 2. les gabarits dédiés servent aussi des pools, hors du chargeur ────────
+// ── 2. les moteurs dédiés servent aussi des pools, hors du chargeur ────────
+// Une page peut avoir son propre script plutôt que le chargeur générique : le
+// quiz ado se joue à deux, avec un code de partie, et compare les réponses au
+// lieu de compter des points. Sa page n'apparaît donc pas dans QUIZ_CONFIG, et
+// son pool passait pour orphelin. On lit le garde d'entrée du script, qui
+// nomme la page, et le fragment de données qu'il charge, qui nomme le pool.
+for (const f of fs.readdirSync(path.join(RACINE, 'js'))) {
+  if (!f.endsWith('.js') || f === 'quiz-loader.js' || f === 'quiz-engine-core.js') continue;
+  const src = lire(path.join(RACINE, 'js', f));
+  const pages = [...new Set([...src.matchAll(/dataset\.quiz\s*!==\s*'(\w+)'/g)].map((m) => m[1]))];
+  if (pages.length !== 1) continue;
+  const pools = [...new Set([...src.matchAll(/\bd\.(\w+)\s*\|\|\s*\{\}/g)].map((m) => racineDe(m[1])))];
+  if (!pools.length) continue;
+  if (!poolsDe[pages[0]]) poolsDe[pages[0]] = new Set();
+  for (const pool of pools) poolsDe[pages[0]].add(pool);
+}
+
+// ── 3. les gabarits dédiés servent aussi des pools, hors du chargeur ────────
 const dossierPages = path.join(RACINE, 'templates', 'pages');
 for (const f of fs.readdirSync(dossierPages)) {
   if (!f.endsWith('.ejs')) continue;
@@ -73,7 +91,7 @@ for (const f of fs.readdirSync(dossierPages)) {
   if (!connu) poolsDe['gabarit:' + f.replace('.ejs', '')] = new Set(durs);
 }
 
-// ── 3. l'invariante : un pool n'appartient qu'à une page ────────────────────
+// ── 4. l'invariante : un pool n'appartient qu'à une page ────────────────────
 // Les pools propres d'abord : ils fixent le propriétaire. Les pools de repli
 // ensuite, qui ne réclament que ce qui n'appartient encore à personne. Sans cet
 // ordre, un repli pourrait voler la propriété d'un pool à sa vraie page, et le
@@ -95,7 +113,7 @@ for (const [page, pools] of Object.entries(poolsDe)) {
   }
 }
 
-// ── 4. les tables secondaires ne doivent pas désigner le pool d'une autre ───
+// ── 5. les tables secondaires ne doivent pas désigner le pool d'une autre ───
 const STAT = objetApres(genSrc, 'const GD_QUESTION_PREFIXES = {') || {};
 const JSONLD = objetApres(ejsSrc, 'const gdPrefixMap = {') || {};
 
@@ -114,7 +132,7 @@ function verifieTable(nom, page, pools) {
 for (const [page, v] of Object.entries(STAT)) verifieTable('questions statiques', page, v || []);
 for (const [page, v] of Object.entries(JSONLD)) verifieTable('balisage JSON-LD', page, [v]);
 
-// ── 5. pools à questions que plus aucune page ne sert ───────────────────────
+// ── 6. pools à questions que plus aucune page ne sert ───────────────────────
 const aQuestions = (d) => new Set(Object.entries(d)
   .filter(([, b]) => b && typeof b === 'object'
     && Object.keys(b).filter((k) => /^q\d+$/.test(k)).length >= 5)

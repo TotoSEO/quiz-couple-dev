@@ -16,7 +16,7 @@
 
   // ─── Quiz Configuration ───────────────────────────────────
   // Each quiz has: prefix (gd.json key), engine type, totalQ, pool size
-  // textOnly: true means no per-question options (knowledge, most, funny, debate)
+  // textOnly: true means no per-question options (knowledge, most, funny)
   var QUIZ_CONFIG = {
     // ── Solo scoring (single player, points-based) ──
     // Le test toxique a son propre pool depuis toujours en EN, ES, DE et IT ;
@@ -35,7 +35,6 @@
     'amour-habitude': { prefix: 'habitude', engine: 'solo', totalQ: 20, pool: 20, quizType: 'amour-habitude', ascending: true, resultPrefix: 'habitude' },
     'divorce':        { prefix: 'divorce', engine: 'solo', totalQ: 15, pool: 25, quizType: 'divorce', hasSkip: true, ascending: true },
     'mariage':        { prefix: 'marriage', engine: 'solo', totalQ: 30, pool: 30, hasSkip: true, hasLocalStorage: true },
-    'ado':            { prefix: 'ado', engine: 'solo', totalQ: 20, pool: 80, ascending: true, needsName: true },
 
     // ── Duo with gender (2 players + gender selection, answer matching) ──
     // Test de couple : pool 'testerC' qui lui est propre dans les 5 langues,
@@ -69,9 +68,9 @@
     // ── Knowledge quiz (oral validation with ✅/❌) - text only ──
     'knowledge':      { prefix: 'knowledge', engine: 'knowledge', totalQ: 20, pool: 100, textOnly: true },
 
-    // ── Debate quiz (amoureux - 1-5 scale, together) - text only for debate ──
+    // ── Quiz amoureux : on compare les réponses, à deux ──
     // Les trente entrées « amoureux » sont des questions ouvertes sur votre
-    // histoire, chacune avec quatre réponses écrites. Le moteur « debate »
+    // histoire, chacune avec quatre réponses écrites. L'ancien moteur « débat »
     // ignorait ces réponses et affichait à la place une échelle « pas du tout
     // d'accord → tout à fait d'accord » : on demandait donc son niveau
     // d'accord avec « Quel est mon plat préféré ? ». Ces cent vingt réponses
@@ -521,9 +520,6 @@
       case 'knowledge':
         initKnowledgeQuiz(config, questions);
         break;
-      case 'debate':
-        initDebateQuiz(config, questions);
-        break;
       case 'most':
         initMostQuiz(config, questions);
         break;
@@ -573,7 +569,7 @@
       }
       consecutiveMisses = 0;
 
-      // Text-only quizzes (most, knowledge, funny, debate) don't need per-question options
+      // Text-only quizzes (most, knowledge, funny) don't need per-question options
       if (textOnly) {
         questions.push({ id: i, text: qText, options: [] });
         continue;
@@ -672,7 +668,7 @@
         });
       }
     }
-    // Try r{N}t pattern without underscore (debate results in non-FR: r0t, r1t...)
+    // Try r{N}t pattern without underscore (non-FR results: r0t, r1t...)
     if (results.length === 0) {
       for (var k = 0; k <= 10; k++) {
         var rTitle = QuizEngine.tgd(prefix + '.r' + k + 't', null);
@@ -699,7 +695,7 @@
 
   // ─── Initializers ─────────────────────────────────────────
 
-  // ── Barème pondéré des tests solo ───────────────────────────────────────
+  // ── Barème pondéré des tests à points ───────────────────────────────────
   // Par défaut un test solo donne 0, 1, 2, 3 points selon le rang de la
   // réponse, ce qui met toutes ses questions sur le même pied. Sur un test de
   // gravité c'est faux : « il n'a pas répondu depuis trois heures » ne dit pas
@@ -712,7 +708,9 @@
   // « parfois » partout ne doit pas suffire à déclencher un verdict alarmant.
   //   3 = fondamental   2 = structurant   1 = signal faible
   // Le maximum réel se recalcule plus bas à partir des points posés, donc les
-  // paliers suivent le barème sans être écrits à la main.
+  // paliers suivent le barème sans être écrits à la main. La table sert aussi
+  // au test à distance, qui se joue à deux mais note chaque joueur de la même
+  // façon.
   // Courbe de reference, pour une question a quatre reponses. Elle monte
   // lentement puis fort : repondre « parfois » partout ne doit pas suffire a
   // declencher un verdict alarmant.
@@ -1061,6 +1059,65 @@
       15: { d: 'intimite',   w: 2 },  16: { d: 'preuve',     w: 3 },
       17: { d: 'evitement',  w: 2 },  18: { d: 'habitudes',  w: 2 },
       19: { d: 'ressenti',   w: 1 },  20: { d: 'transparence',w: 3 }
+    },
+    // Distance : cent questions pour vingt posées, et elles ne pèsent pas
+    // pareil. Savoir quand la distance s'arrête, se faire confiance quand
+    // l'autre sort, avoir un rythme de communication qui convient aux deux :
+    // c'est là-dessus qu'une relation à distance tient ou lâche. Partager une
+    // playlist ou manger en visio fait du bien, mais ne dit rien de sa
+    // solidité. Les neuf dimensions servent aussi au tirage, pour qu'une
+    // partie ne se résume pas aux questions sur les visites.
+    distance: {
+      1:  { d: 'communication', w: 3 },  2:  { d: 'visites',       w: 2 },
+      3:  { d: 'confiance',     w: 3 },  4:  { d: 'projet',        w: 3 },
+      5:  { d: 'visites',       w: 2 },  6:  { d: 'communication', w: 2 },
+      7:  { d: 'complicite',    w: 1 },  8:  { d: 'moral',         w: 2 },
+      9:  { d: 'entourage',     w: 1 },  10: { d: 'projet',        w: 3 },
+      11: { d: 'communication', w: 3 },  12: { d: 'communication', w: 2 },
+      13: { d: 'confiance',     w: 2 },  14: { d: 'complicite',    w: 1 },
+      15: { d: 'moral',         w: 3 },  16: { d: 'quotidien',     w: 2 },
+      17: { d: 'projet',        w: 3 },  18: { d: 'bilan',         w: 1 },
+      19: { d: 'bilan',         w: 1 },  20: { d: 'bilan',         w: 3 },
+      21: { d: 'communication', w: 2 },  22: { d: 'complicite',    w: 1 },
+      23: { d: 'confiance',     w: 2 },  24: { d: 'entourage',     w: 1 },
+      25: { d: 'complicite',    w: 2 },  26: { d: 'communication', w: 1 },
+      27: { d: 'communication', w: 1 },  28: { d: 'communication', w: 1 },
+      29: { d: 'communication', w: 3 },  30: { d: 'communication', w: 3 },
+      31: { d: 'visites',       w: 3 },  32: { d: 'visites',       w: 2 },
+      33: { d: 'visites',       w: 2 },  34: { d: 'visites',       w: 1 },
+      35: { d: 'visites',       w: 1 },  36: { d: 'visites',       w: 1 },
+      37: { d: 'visites',       w: 1 },  38: { d: 'visites',       w: 1 },
+      39: { d: 'visites',       w: 2 },  40: { d: 'visites',       w: 2 },
+      41: { d: 'confiance',     w: 3 },  42: { d: 'confiance',     w: 3 },
+      43: { d: 'confiance',     w: 2 },  44: { d: 'confiance',     w: 2 },
+      45: { d: 'confiance',     w: 3 },  46: { d: 'confiance',     w: 3 },
+      47: { d: 'confiance',     w: 2 },  48: { d: 'moral',         w: 3 },
+      49: { d: 'confiance',     w: 2 },  50: { d: 'communication', w: 3 },
+      51: { d: 'projet',        w: 3 },  52: { d: 'projet',        w: 3 },
+      53: { d: 'projet',        w: 3 },  54: { d: 'projet',        w: 2 },
+      55: { d: 'projet',        w: 2 },  56: { d: 'entourage',     w: 1 },
+      57: { d: 'projet',        w: 3 },  58: { d: 'projet',        w: 2 },
+      59: { d: 'projet',        w: 2 },  60: { d: 'projet',        w: 3 },
+      61: { d: 'quotidien',     w: 2 },  62: { d: 'quotidien',     w: 2 },
+      63: { d: 'quotidien',     w: 1 },  64: { d: 'complicite',    w: 1 },
+      65: { d: 'complicite',    w: 2 },  66: { d: 'complicite',    w: 2 },
+      67: { d: 'complicite',    w: 1 },  68: { d: 'complicite',    w: 1 },
+      69: { d: 'complicite',    w: 1 },  70: { d: 'complicite',    w: 1 },
+      71: { d: 'moral',         w: 1 },  72: { d: 'communication', w: 2 },
+      73: { d: 'moral',         w: 3 },  74: { d: 'moral',         w: 1 },
+      75: { d: 'moral',         w: 2 },  76: { d: 'moral',         w: 2 },
+      77: { d: 'entourage',     w: 1 },  78: { d: 'complicite',    w: 2 },
+      79: { d: 'moral',         w: 3 },  80: { d: 'moral',         w: 2 },
+      81: { d: 'complicite',    w: 2 },  82: { d: 'complicite',    w: 2 },
+      83: { d: 'visites',       w: 1 },  84: { d: 'moral',         w: 2 },
+      85: { d: 'moral',         w: 2 },  86: { d: 'entourage',     w: 2 },
+      87: { d: 'entourage',     w: 2 },  88: { d: 'entourage',     w: 1 },
+      89: { d: 'entourage',     w: 2 },  90: { d: 'moral',         w: 3 },
+      91: { d: 'quotidien',     w: 2 },  92: { d: 'quotidien',     w: 2 },
+      93: { d: 'quotidien',     w: 3 },  94: { d: 'quotidien',     w: 2 },
+      95: { d: 'quotidien',     w: 1 },  96: { d: 'bilan',         w: 2 },
+      97: { d: 'bilan',         w: 2 },  98: { d: 'bilan',         w: 1 },
+      99: { d: 'bilan',         w: 1 },  100:{ d: 'bilan',         w: 3 }
     }
   };
 
@@ -1085,6 +1142,25 @@
     return true;
   }
 
+  // Pose le barème pondéré sur les questions, puis, si le test pioche dans un
+  // pool plus grand que ce qu'il pose, refait le tirage en couvrant toutes les
+  // dimensions du barème. Sans ça deux parties du même test ne mesurent pas la
+  // même chose : l'une peut tomber sur dix questions de visites, l'autre sur
+  // dix questions de projet. Le tirage aléatoire pur a déjà eu lieu plus haut,
+  // on repart donc du pool complet pour le refaire proprement.
+  // Partagé par le moteur solo et le test à distance : même table, même courbe.
+  function questionsPonderees(cfg, questions) {
+    appliqueBaremePondere(cfg.prefix, questions, !!cfg.ascending);
+    if (SOLO_BAREME[cfg.prefix] && cfg.pool > cfg.totalQ && QuizEngine.tirageStratifie) {
+      var complet = parseGdQuestions(cfg.prefix, cfg.pool + 10, cfg.ascending);
+      if (complet.length > cfg.totalQ) {
+        appliqueBaremePondere(cfg.prefix, complet, !!cfg.ascending);
+        return QuizEngine.tirageStratifie(complet, SOLO_BAREME[cfg.prefix], cfg.totalQ);
+      }
+    }
+    return questions;
+  }
+
   function initSoloQuiz(cfg, questions) {
     // Barème explicite : par défaut un test solo donne 0, 1, 2, 3 points selon
     // le rang de la réponse, ce qui met toutes les questions sur le même pied.
@@ -1093,19 +1169,7 @@
     // prefix.q{N}{lettre}_pts. Le maximum réel se recalcule tout seul en
     // dessous, donc les paliers suivent le barème sans être écrits à la main.
     if (cfg.ptsExplicites) appliquePointsExplicites(cfg.prefix, questions);
-    else appliqueBaremePondere(cfg.prefix, questions, !!cfg.ascending);
-
-    // Un test qui pioche dans un pool plus grand que ce qu'il pose doit couvrir
-    // toutes ses dimensions, sinon deux personnes ne mesurent pas la meme chose
-    // d'une partie a l'autre. Le tirage aleatoire pur a deja eu lieu plus haut :
-    // on repart du pool complet pour le refaire proprement.
-    if (SOLO_BAREME[cfg.prefix] && cfg.pool > cfg.totalQ && QuizEngine.tirageStratifie) {
-      var complet = parseGdQuestions(cfg.prefix, cfg.pool + 10, cfg.ascending);
-      if (complet.length > cfg.totalQ) {
-        appliqueBaremePondere(cfg.prefix, complet, !!cfg.ascending);
-        questions = QuizEngine.tirageStratifie(complet, SOLO_BAREME[cfg.prefix], cfg.totalQ);
-      }
-    }
+    else questions = questionsPonderees(cfg, questions);
 
     // Calculate real achievable max score (sum of max points per question)
     var realMaxScore = 0;
@@ -1201,9 +1265,11 @@
   }
 
   function initDistanceQuiz(cfg, questions) {
+    // Le maximum du test se recalcule dans le moteur à partir des points posés
+    // ici, donc les paliers du verdict suivent le barème sans être réécrits.
     new QuizEngine.DistanceQuiz({
       container: container,
-      questions: questions,
+      questions: questionsPonderees(cfg, questions),
       prefix: cfg.prefix,
       lang: lang
     });
@@ -1263,67 +1329,6 @@
     new QuizEngine.KnowledgeQuiz({
       container: container,
       questions: questions,
-      prefix: cfg.prefix,
-      lang: lang
-    });
-  }
-
-  function initDebateQuiz(cfg, questions) {
-    // Debate: try to parse with options first (FR has q1a/b/c/d)
-    // If options exist, use them. Otherwise, text-only questions work fine
-    // since debate engine uses 1-5 scale.
-    var debateQuestions = parseGdQuestions(cfg.prefix, cfg.pool + 10);
-    if (debateQuestions.length === 0) {
-      // Retry as text-only
-      debateQuestions = parseGdQuestions(cfg.prefix, cfg.pool + 10, false, true);
-    }
-    if (debateQuestions.length > cfg.totalQ) {
-      debateQuestions = QuizEngine.shuffleArray(debateQuestions).slice(0, cfg.totalQ);
-    } else if (debateQuestions.length > 0) {
-      debateQuestions = QuizEngine.shuffleArray(debateQuestions);
-    }
-    if (debateQuestions.length === 0) debateQuestions = questions;
-
-    // Debate results: try from gd.json first (non-FR debate prefix has r0t/r1t pattern)
-    // Debate uses 1-5 scale, so max score = questions * 5
-    var results = parseGdResults(cfg.prefix, debateQuestions.length * 5);
-
-    // Convert absolute score brackets to percentage for debate engine (matches on pct)
-    if (results.length > 0) {
-      var maxAbs = debateQuestions.length * 5;
-      for (var ri = 0; ri < results.length; ri++) {
-        results[ri].min = Math.round((results[ri].min / maxAbs) * 100);
-        results[ri].max = ri === results.length - 1 ? 100 : Math.round((results[ri].max / maxAbs) * 100);
-        results[ri].minScore = results[ri].min;
-        results[ri].maxScore = results[ri].max;
-      }
-    }
-
-    if (results.length === 0) {
-      // Fallback to percentage-based defaults
-      results = [
-        { min: 0, max: 30, minScore: 0, maxScore: 30,
-          title: QuizEngine.tg('result.low', 'De belles discussions à venir'),
-          description: QuizEngine.tg('result.lowDesc', 'Vous avez des points de vue différents. C\'est une opportunité de mieux vous comprendre !'),
-          advice: QuizEngine.tg('result.lowAdvice', 'Prenez le temps de discuter de chaque sujet qui vous a surpris.')
-        },
-        { min: 31, max: 60, minScore: 31, maxScore: 60,
-          title: QuizEngine.tg('result.medium', 'Bonne connexion !'),
-          description: QuizEngine.tg('result.mediumDesc', 'Vous êtes souvent d\'accord, avec quelques sujets à explorer.'),
-          advice: ''
-        },
-        { min: 61, max: 100, minScore: 61, maxScore: 100,
-          title: QuizEngine.tg('result.high', 'Connexion exceptionnelle !'),
-          description: QuizEngine.tg('result.highDesc', 'Vous êtes sur la même longueur d\'onde !'),
-          advice: ''
-        }
-      ];
-    }
-
-    new QuizEngine.DebateQuiz({
-      container: container,
-      questions: debateQuestions,
-      results: results,
       prefix: cfg.prefix,
       lang: lang
     });

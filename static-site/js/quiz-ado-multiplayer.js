@@ -296,14 +296,60 @@
       });
   }
 
-  function selectRandomQuestions() {
-    var ids = [];
-    for (var i = 1; i <= 80; i++) ids.push(i);
-    for (var j = ids.length - 1; j > 0; j--) {
+  // Les quatre-vingts questions ne parlent pas de la même chose : certaines
+  // portent sur l'avenir, d'autres sur la confiance, d'autres sur les goûts
+  // partagés. Tirées au hasard, vingt d'entre elles pouvaient être presque
+  // toutes des questions de goûts, et la partie ne mesurait alors plus la même
+  // chose que la précédente. On garde donc un quota par thème : chaque partie
+  // couvre les sept, et le hasard ne joue plus qu'à l'intérieur d'un thème.
+  var THEMES = {
+    projection:    [1, 2, 3, 6, 7, 9, 11, 12, 13, 14, 79],
+    engagement:    [4, 5, 15, 42, 43, 45, 46, 55, 56, 58],
+    communication: [17, 21, 23, 24, 28, 30, 34, 35, 36],
+    confiance:     [22, 29, 32, 37, 39, 40, 59, 65],
+    complicite:    [18, 25, 33, 38, 41, 44, 47, 48, 49, 50, 51, 53, 54, 57, 69, 70, 73, 76],
+    soutien:       [8, 16, 26, 31, 60, 75],
+    ressenti:      [10, 19, 20, 27, 52, 61, 62, 63, 64, 66, 67, 68, 71, 72, 74, 77, 78, 80]
+  };
+
+  function melange(t) {
+    var c = t.slice();
+    for (var j = c.length - 1; j > 0; j--) {
       var k = Math.floor(Math.random() * (j + 1));
-      var tmp = ids[j]; ids[j] = ids[k]; ids[k] = tmp;
+      var tmp = c[j]; c[j] = c[k]; c[k] = tmp;
     }
-    return ids.slice(0, totalQ);
+    return c;
+  }
+
+  function selectRandomQuestions() {
+    // Un créneau de base par thème, puis le reliquat aux thèmes les mieux
+    // fournis : le tirage reflète le poids réel de chaque thème sans jamais
+    // laisser un thème de côté.
+    var noms = Object.keys(THEMES);
+    var quotas = {}, restant = totalQ, i, n;
+    var base = Math.floor(totalQ / noms.length);
+    for (i = 0; i < noms.length; i++) {
+      n = Math.min(base, THEMES[noms[i]].length);
+      quotas[noms[i]] = n;
+      restant -= n;
+    }
+    var ordre = noms.slice().sort(function (a, b) {
+      return THEMES[b].length - THEMES[a].length;
+    });
+    while (restant > 0) {
+      var avance = false;
+      for (i = 0; i < ordre.length && restant > 0; i++) {
+        if (quotas[ordre[i]] < THEMES[ordre[i]].length) {
+          quotas[ordre[i]]++; restant--; avance = true;
+        }
+      }
+      if (!avance) break;
+    }
+    var ids = [];
+    for (i = 0; i < noms.length; i++) {
+      ids = ids.concat(melange(THEMES[noms[i]]).slice(0, quotas[noms[i]]));
+    }
+    return melange(ids).slice(0, totalQ);
   }
 
   function loadQuestionsFromIds(ids) {
@@ -725,12 +771,25 @@
     }
     var pct = Math.round(matches / totalQ * 100);
 
-    var resultKey = pct >= 80 ? 'r5' : pct >= 60 ? 'r4' : pct >= 40 ? 'r3' : pct >= 20 ? 'r2' : 'r1';
-    var resultTitle = allQData[resultKey + '_t'] || '';
-    var resultDesc = allQData[resultKey + '_d'] || '';
-    var resultAdvice = allQData[resultKey + '_a'] || '';
-
+    // Quatre verdicts sont écrits, dans les cinq langues : r1 à r4. Le moteur
+    // en réclamait cinq, si bien qu'au-delà de 80 % de réponses identiques le
+    // couple le mieux assorti repartait sans titre, sans texte et sans conseil.
+    var resultKey = pct >= 75 ? 'r4' : pct >= 50 ? 'r3' : pct >= 25 ? 'r2' : 'r1';
     var n1 = state.name1, n2 = state.name2;
+
+    // Les verdicts s'adressent aux deux joueurs par leur prénom. Le moteur les
+    // affichait tels quels : « Les réponses de {{name1}} et {{name2}} dessinent
+    // un couple qui… » s'affichait avec les jetons à l'écran, dans les cinq
+    // langues. On les remplace ici, comme le tableau de comparaison le fait.
+    function prenoms(t) {
+      return String(t || '')
+        .replace(/\{\{name1\}\}/g, n1)
+        .replace(/\{\{name2\}\}/g, n2);
+    }
+
+    var resultTitle = prenoms(allQData[resultKey + '_t']);
+    var resultDesc = prenoms(allQData[resultKey + '_d']);
+    var resultAdvice = prenoms(allQData[resultKey + '_a']);
     var compRows = '';
     for (var j = 0; j < totalQ; j++) {
       var q = questions[j];

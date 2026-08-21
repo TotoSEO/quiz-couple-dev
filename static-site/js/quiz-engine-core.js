@@ -1,15 +1,14 @@
 /**
  * Quiz Couple - Core Quiz Engine (vanilla JS)
  * Complete engine with specialized quiz types:
- * - SoloTest: toxic, divorce, mariage, ado (single player, points-based)
+ * - SoloTest: toxic, divorce, mariage (single player, weighted points)
  * - DuoMatchQuiz: tester-couple, common-points (2 players + gender, match answers)
- * - DistanceQuiz: distance (2 players, alternating turns, 0/1/2 points per option)
+ * - DistanceQuiz: distance (2 players, alternating turns, weighted points)
  * - CoquinQuiz: coquin (guess & reveal mechanic, 30 rounds)
  * - KnowledgeQuiz: knowledge (oral validation with check/cross buttons)
- * - DebateQuiz: amoureux (1-5 scale debate mode, played together)
  * - FunnyQuiz: marrant (discussion-only, "Question suivante" button)
  * - MostQuiz: most (2-8 players, vote for one player per question)
- * - HealthyQuiz: couple-sain (weighted scoring a=3 b=2 c=1 d=0, 2 players + gender)
+ * - HealthyQuiz: couple-sain (weighted scoring, 2 players + gender)
  */
 
 var QuizEngine = (function() {
@@ -2880,176 +2879,6 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { type: 'duo', pct: Math.round(((this.scores[0] + this.scores[1]) / this.questions.length) * 100) },
-      restart: function() { self.phase = 'setup'; self.render(); }
-    });
-    this.container.appendChild(wrap);
-    smoothScroll(wrap, 'center');
-  };
-
-  // ═══════════════════════════════════════════════════════════
-  // DEBATE QUIZ - amoureux (1-5 scale, played together)
-  // Both players discuss and rate agreement together
-  // ═══════════════════════════════════════════════════════════
-  function DebateQuiz(config) {
-    this.container = config.container;
-    this.questions = config.questions;
-    this.results = config.results;
-    this.prefix = config.prefix;
-    this.lang = config.lang || 'fr';
-    this.phase = 'setup';
-    this.players = [null, null];
-    this.currentQ = 0;
-    this.scores = [];
-    this.render();
-  }
-
-  DebateQuiz.prototype.render = function() {
-    this.container.innerHTML = '';
-    if (this.phase === 'setup') this.renderSetup();
-    else if (this.phase === 'playing') this.renderQuestion();
-    else if (this.phase === 'results') this.renderResults();
-  };
-
-  DebateQuiz.prototype.renderSetup = function() {
-    var self = this;
-    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
-    var iconWrap = el('div', 'quiz-setup-icon quiz-setup-icon--emoji mx-auto mb-4', '💬');
-    wrap.appendChild(iconWrap);
-
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.quizForTwo', 'Quiz à Faire en Couple')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-4 text-center', tg('playerSetup.quizTogetherDesc', 'Ce quiz se joue ensemble. Discutez et notez de 1 à 5.')));
-
-    // How it works
-    var howBox = el('div', 'glass-card rounded-xl p-5 mb-6 max-w-md mx-auto text-left');
-    howBox.innerHTML = '<p class="font-semibold mb-3">' + esc(tg('playerSetup.howItWorks', 'Comment ça marche ?')) + '</p>' +
-      '<ol class="space-y-2 text-sm text-muted-foreground">' +
-      '<li>' + esc(tg('playerSetup.step1', 'Lisez chaque affirmation ensemble')) + '</li>' +
-      '<li>' + esc(tg('playerSetup.step2', 'Discutez et débattez si nécessaire')) + '</li>' +
-      '<li>' + esc(tg('playerSetup.step3', 'Choisissez un score de 1 à 5')) + '</li>' +
-      '<li>' + esc(tg('playerSetup.step4', 'Découvrez votre score d\'amour !')) + '</li></ol>';
-    wrap.appendChild(howBox);
-
-    var form = el('div', 'space-y-4 max-w-md mx-auto');
-    for (var i = 0; i < 2; i++) {
-      (function(idx) {
-        var card = el('div', 'glass-card rounded-xl p-4');
-        var labelWrap = el('div', 'flex items-center gap-2 mb-2');
-        var heartSpan = el('span', idx === 0 ? 'text-pink-500' : 'text-blue-500');
-        heartSpan.innerHTML = ICONS.heart;
-        labelWrap.appendChild(heartSpan);
-        labelWrap.appendChild(el('span', 'text-sm font-medium', idx === 0 ? tg('playerSetup.firstFirstName', 'Premier prénom') : tg('playerSetup.secondFirstName', 'Deuxième prénom')));
-        card.appendChild(labelWrap);
-        var input = el('input', 'input w-full');
-        input.type = 'text'; input.placeholder = tg('playerSetup.firstName', 'Prénom'); input.maxLength = 20;
-        input.id = 'debate-player-' + idx;
-        card.appendChild(input);
-        form.appendChild(card);
-      })(i);
-    }
-
-    var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', tg('playerSetup.startQuiz', 'Commencer le quiz'));
-    startBtn.addEventListener('click', function() {
-      var n1 = document.getElementById('debate-player-0').value.trim() || tg('playerSetup.player1', 'Joueur 1');
-      var n2 = document.getElementById('debate-player-1').value.trim() || tg('playerSetup.player2', 'Joueur 2');
-      self.players = [{ name: n1 }, { name: n2 }];
-      self.currentQ = 0; self.scores = [];
-      self.phase = 'playing'; self.render();
-    });
-    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
-    form.appendChild(startBtn);
-    wrap.appendChild(form);
-    this.container.appendChild(wrap);
-  };
-
-  DebateQuiz.prototype.renderQuestion = function() {
-    var self = this;
-    var q = this.questions[this.currentQ];
-    var total = this.questions.length;
-
-    var wrap = el('div', 'quiz-engine quiz-question-enter');
-    renderProgressBar(wrap, this.currentQ, total);
-
-    var qText = tgd(this.prefix + '.q' + q.id, q.text);
-    wrap.appendChild(el('h3', 'text-xl font-semibold mb-2 text-center', esc(qText)));
-    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6 text-center', tg('question.discussAndChoose', 'Discutez ensemble et choisissez votre niveau d\'accord')));
-
-    // 1-5 Scale buttons
-    var scaleLabels = [
-      tg('question.stronglyDisagree', 'Pas du tout d\'accord'),
-      tg('question.disagree', 'Plutôt pas d\'accord'),
-      tg('question.neutral', 'Neutre'),
-      tg('question.agree', 'Plutôt d\'accord'),
-      tg('question.stronglyAgree', 'Tout à fait d\'accord')
-    ];
-
-    var scaleWrap = el('div', 'space-y-2');
-    for (var s = 1; s <= 5; s++) {
-      (function(score) {
-        var scaleEmojis = ['😕', '😐', '🙂', '😊', '😍'];
-        var scaleBtn = el('button', 'quiz-option quiz-scale-option');
-        scaleBtn.innerHTML = '<span class="quiz-scale-number">' + score + '</span> <span class="quiz-scale-emoji">' + scaleEmojis[score - 1] + '</span> <span>' + esc(scaleLabels[score - 1]) + '</span>';
-        scaleBtn.style.animationDelay = ((score - 1) * 60) + 'ms';
-        scaleBtn.addEventListener('click', function() {
-          if (!answerLock(self)) return;
-          scaleBtn.classList.add('selected');
-          var siblings = scaleWrap.querySelectorAll('.quiz-option');
-          for (var s = 0; s < siblings.length; s++) {
-            if (siblings[s] !== scaleBtn) siblings[s].style.opacity = '0.5';
-            siblings[s].style.pointerEvents = 'none';
-          }
-          self.scores[self.currentQ] = score;
-          setTimeout(function() {
-            if (self.currentQ < total - 1) { self.currentQ++; self.render(); }
-            else { self.phase = 'results'; self.render(); }
-          }, 350);
-        });
-        scaleWrap.appendChild(scaleBtn);
-      })(s);
-    }
-    wrap.appendChild(scaleWrap);
-
-    // Back button
-    if (this.currentQ > 0) {
-      var navWrap = el('div', 'mt-4');
-      var backBtn = el('button', 'btn btn-ghost text-sm', '&larr; ' + tg('question.previousQuestion', 'Précédent'));
-      backBtn.addEventListener('click', function() { self.currentQ--; self.render(); });
-      navWrap.appendChild(backBtn);
-      wrap.appendChild(navWrap);
-    }
-
-    this.container.appendChild(wrap);
-  };
-
-  DebateQuiz.prototype.renderResults = function() {
-    var self = this;
-    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
-    var total = this.questions.length;
-    var totalScore = this.scores.reduce(function(s, v) { return s + (v || 0); }, 0);
-    var pct = Math.round((totalScore / (total * 5)) * 100);
-
-    wrap.appendChild(el('div', 'text-5xl mb-4', '💕'));
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('result.loveScore', 'Score d\'amour')));
-    wrap.appendChild(el('div', 'quiz-score-circle mx-auto mb-4', pct + '%'));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6', totalScore + '/' + (total * 5) + ' ' + esc(tg('meta.pointsWord', 'points'))));
-
-    // Find matching result
-    var result = null;
-    for (var i = 0; i < this.results.length; i++) {
-      var r = this.results[i];
-      if (pct >= (r.minScore || r.min || 0) && pct <= (r.maxScore || r.max || 100)) { result = r; break; }
-    }
-    if (result) {
-      wrap.appendChild(el('h3', 'text-xl font-bold mb-3', esc(result.title)));
-      wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed max-w-lg mx-auto mb-4', result.description));
-      if (result.advice) {
-        var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto');
-        advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
-        wrap.appendChild(advice);
-      }
-    }
-
-    renderActionButtons(wrap, {
-      share: { type: 'duo', pct: pct, verdict: result ? result.title : '' },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -7600,7 +7429,6 @@ var QuizEngine = (function() {
     DistanceQuiz: DistanceQuiz,
     CoquinQuiz: CoquinQuiz,
     KnowledgeQuiz: KnowledgeQuiz,
-    DebateQuiz: DebateQuiz,
     FunnyQuiz: FunnyQuiz,
     MostQuiz: MostQuiz,
     HealthyQuiz: HealthyQuiz,
