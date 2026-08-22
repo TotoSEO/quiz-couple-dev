@@ -826,6 +826,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'distance-aime', icon: '📞', route: 'testDistanceAime' },
     { type: 'test', key: 'ex', icon: '🕰️', route: 'testEx' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
+    { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
     { type: 'test', key: 'attachement', icon: '🔗', route: 'testAttachement' },
     { type: 'test', key: 'confiance', icon: '🤝', route: 'testConfiance' },
@@ -2718,6 +2719,12 @@ var QuizEngine = (function() {
     this.lang = config.lang || 'fr';
     this.familles = (config.familles && config.familles.length) ? config.familles : FUNNY_FAMILLES;
     this.total = config.total || FUNNY_TOTAL;
+    // Certaines series ne se melangent pas. Le quiz de premier rendez-vous
+    // monte en intimite palier par palier : jouer ses trois niveaux dans le
+    // desordre reviendrait a poser la question la plus intime en deuxieme,
+    // ce qui est exactement ce que le format cherche a eviter. En mode
+    // ordonne les familles se suivent, et un ecran annonce chaque palier.
+    this.ordonne = !!config.ordonne;
     this.phase = 'setup';
     this.currentQ = 0;
     this.questions = [];
@@ -2745,7 +2752,18 @@ var QuizEngine = (function() {
     this.familles.forEach(function(f) {
       lot = lot.concat(shuffleArray(this.lireFamille(f.id)).slice(0, parFamille));
     }, this);
-    this.questions = shuffleArray(lot).slice(0, this.total);
+    // En mode ordonne on garde l'ordre des familles et on ne melange qu'a
+    // l'interieur de chacune : deux parties posent des questions differentes,
+    // mais toujours dans le meme sens de progression.
+    this.questions = this.ordonne ? lot.slice(0, this.total) : shuffleArray(lot).slice(0, this.total);
+  };
+
+  // Rang du palier (1, 2, 3...) de la question en cours.
+  FunnyQuiz.prototype.rangFamille = function(id) {
+    for (var i = 0; i < this.familles.length; i++) {
+      if (this.familles[i].id === id) return i + 1;
+    }
+    return 1;
   };
 
   FunnyQuiz.prototype.emojiFamille = function(id) {
@@ -2758,8 +2776,32 @@ var QuizEngine = (function() {
   FunnyQuiz.prototype.render = function() {
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'palier') this.renderPalier();
     else if (this.phase === 'playing') this.renderQuestion();
     else if (this.phase === 'results') this.renderResults();
+  };
+
+  // Annonce du palier. Elle sert autant a rythmer la partie qu'a prevenir :
+  // le troisieme niveau se refuse, et il vaut mieux le dire avant.
+  FunnyQuiz.prototype.renderPalier = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var rang = this.rangFamille(q.famille);
+    var wrap = el('div', 'quiz-engine funny-palier animate-fade-in');
+    wrap.appendChild(el('div', 'funny-palier-emoji', this.emojiFamille(q.famille)));
+    wrap.appendChild(el('div', 'funny-palier-rang',
+      String(tgd(this.prefix + '.paliersTitre', 'Niveau {{n}}')).replace('{{n}}', rang)));
+    wrap.appendChild(el('h2', 'funny-palier-titre',
+      esc(tgd(this.prefix + '.theme_' + q.famille, ''))));
+    var desc = tgd(this.prefix + '.desc_' + q.famille, '');
+    if (desc) wrap.appendChild(el('p', 'funny-palier-desc', esc(desc)));
+    var btn = el('button', 'btn btn-cta btn-gradient funny-palier-btn',
+      tgd(this.prefix + '.paliersBouton', 'Continuer'));
+    btn.type = 'button';
+    btn.addEventListener('click', function() { self.phase = 'playing'; self.render(); });
+    wrap.appendChild(btn);
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
   };
 
   FunnyQuiz.prototype.renderSetup = function() {
@@ -2784,7 +2826,7 @@ var QuizEngine = (function() {
         tgd(this.prefix + '.questionsMot', tg('meta.questionsWord', 'questions')),
         tgd(this.prefix + '.duree', null)),
       bouton: tgd(this.prefix + '.setupBouton', tg('playerSetup.startQuiz', 'Commencer')),
-      onStart: function() { self.currentQ = 0; self.phase = 'playing'; self.render(); }
+      onStart: function() { self.currentQ = 0; self.phase = self.ordonne ? 'palier' : 'playing'; self.render(); }
     });
     this.container.appendChild(ecran.wrap);
   };
@@ -2825,8 +2867,12 @@ var QuizEngine = (function() {
       ? tgd(this.prefix + '.derniere', tg('result.seeResults', 'Voir le résultat'))
       : tgd(this.prefix + '.suivante', tg('question.nextQuestionBtn', 'Question suivante'))) + ' &rarr;';
     nextBtn.addEventListener('click', function() {
-      if (!dernier) { self.currentQ++; self.render(); }
-      else { self.phase = 'results'; self.render(); }
+      if (dernier) { self.phase = 'results'; self.render(); return; }
+      var avant = self.questions[self.currentQ].famille;
+      self.currentQ++;
+      // Changement de famille en mode ordonne : on annonce le palier suivant.
+      if (self.ordonne && self.questions[self.currentQ].famille !== avant) self.phase = 'palier';
+      self.render();
     });
     navWrap.appendChild(nextBtn);
     wrap.appendChild(navWrap);

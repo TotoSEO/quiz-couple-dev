@@ -113,6 +113,16 @@
     // Six familles de vingt-cinq questions. Le moteur pioche lui-même, à parts
     // égales dans chaque famille : les prénoms qu'on demandait avant ne
     // servaient à rien, ils ont disparu.
+    // Premier rendez-vous : trois paliers joues dans l'ordre, cinq questions
+    // chacun. L'escalade graduee est le format lui-meme, pas de la cosmetique.
+    'rencontre':      { prefix: 'rencontre', engine: 'funny', totalQ: 15, pool: 0, textOnly: true,
+                        ordonne: true,
+                        familles: [
+                          { id: 'glace', emoji: '🙂' },
+                          { id: 'connaitre', emoji: '💬' },
+                          { id: 'loin', emoji: '🔥' }
+                        ] },
+
     'marrant':        { prefix: 'marrant', engine: 'funny', totalQ: 20, pool: 0, textOnly: true,
                         familles: [
                           { id: 'debuts', emoji: '💘' }, { id: 'genant', emoji: '😬' },
@@ -473,7 +483,7 @@
       // le réservoir est bien plus grand qu'une partie : « autres questions »
       // a un sens sur l'écran de fin
       new QuizEngine.FunnyQuiz({ container: container, prefix: config.prefix, lang: lang,
-        familles: familles, total: config.totalQ });
+        familles: familles, total: config.totalQ, ordonne: !!config.ordonne });
       return;
     }
 

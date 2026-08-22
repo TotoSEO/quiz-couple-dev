@@ -8605,3 +8605,35 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .cm-repartition-legende { font-size: 0.8rem; }
   .cm-desaccords { padding: 0.875rem 1rem; }
 }
+
+/* ── Écrans de palier (quiz premier rendez-vous) ────────────────────────
+   Le format monte en intimité par niveaux : entre chacun, un écran annonce
+   le palier suivant et prévient de ce qui arrive. Il reprend la teinte de
+   la famille correspondante. */
+.funny-palier {
+  max-width: 36rem; margin: 0 auto; padding: 3rem 1.75rem;
+  text-align: center; border-radius: 1.6rem;
+  border: 2px dashed hsl(var(--primary) / .35);
+  background: linear-gradient(160deg, hsl(var(--primary) / .07), hsl(var(--secondary) / .05));
+}
+.funny-palier-emoji { font-size: 3rem; line-height: 1; margin-bottom: .75rem; }
+.funny-palier-rang {
+  font-size: .8rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: hsl(var(--primary)); margin-bottom: .4rem;
+}
+.funny-palier-titre { font-size: 1.6rem; font-weight: 800; margin-bottom: .75rem; }
+.funny-palier-desc {
+  color: hsl(var(--muted-foreground)); max-width: 28rem;
+  margin: 0 auto 1.75rem; line-height: 1.6;
+}
+.funny-palier-btn { min-width: 12rem; }
+
+/* Les trois familles du premier rendez-vous : la teinte suit la montée. */
+.funny-carte--glace     { --fc-h: 200; --fc-s: 62%; --fc-l: 58%; }
+.funny-carte--connaitre { --fc-h: 270; --fc-s: 45%; --fc-l: 58%; }
+.funny-carte--loin      { --fc-h: 340; --fc-s: 68%; --fc-l: 60%; }
+
+@media (max-width: 480px) {
+  .funny-palier { padding: 2.25rem 1.25rem; }
+  .funny-palier-titre { font-size: 1.35rem; }
+}
