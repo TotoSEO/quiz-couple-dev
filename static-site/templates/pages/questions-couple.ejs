@@ -87,7 +87,7 @@
       <% themes.forEach(function (cle) { %>
       <div class="qc-theme" id="theme-<%= cle %>">
         <h3 class="qc-theme-titre"><%= liste[cle].titre %></h3>
-        <p class="qc-theme-intro"><%= liste[cle].intro %></p>
+        <p class="qc-theme-intro"><%- liste[cle].intro %></p>
         <ol class="qc-questions">
           <% liste[cle].questions.forEach(function (q) { numero++; %>
           <li class="qc-question"><span class="qc-numero"><%= numero %>.</span><span><%= q %></span></li>
@@ -181,7 +181,7 @@
       <section>
         <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s6.title', '') %></h2>
         <div class="space-y-4 text-muted-foreground leading-relaxed">
-          <p><%= t(ns + ':seo.s6.p1', '') %></p>
+          <p><%- t(ns + ':seo.s6.p1', '') %></p>
           <p><%= t(ns + ':seo.s6.p2', '') %></p>
           <p><%= t(ns + ':seo.s6.p3', '') %></p>
         </div>
