@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: 'The 6 stages of a breakup for men: from denial to rebuilding.',
   introduction: `<p>It's often said that men suffer less from a breakup. That they bounce back faster, that they move on without too much damage. That's wrong. What is true, however, is that they experience it differently, and often later.</p>
 <p>Where a woman will generally feel the <strong>pain of separation</strong> almost immediately, a man takes time to let it in. He can go out, laugh, string together nights out, give the impression that everything's fine… and break down three months later, when he finds himself alone on a Sunday evening and reality catches up all at once.</p>
-<p>Understanding the <strong>stages of a breakup for men</strong> is useful in many ways. Whether you're a man going through a separation looking to put words to what you're feeling, or a woman trying to understand how her ex is experiencing things, this article is for you.</p>`,
+<p>Understanding the <strong>stages of a breakup for men</strong> is useful in many ways. Whether you're a man going through a separation looking to put words to what you're feeling, or a woman trying to <a href="https://quiz-couple.com/en/does-my-ex-still-think-about-me/">understand how her ex is experiencing things</a>, this article is for you.</p>`,
   quickSummary: [
     'A breakup for men goes through 6 stages: denial, emotional numbing, anger, realization, real grief, and rebuilding.',
     'These stages are not linear and vary from person to person.',

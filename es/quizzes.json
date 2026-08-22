@@ -297,5 +297,11 @@
     "shortTitle": "Test Dependencia emocional",
     "description": "20 preguntas sinceras para saber si amas a tu pareja o te aferras a ella. Resultado inmediato y pasos concretos.",
     "metaDescription": "¿Apego sano o dependencia emocional? 20 preguntas sinceras, resultado inmediato y pasos concretos para recuperar tu equilibrio. Gratis, sin registro."
+  },
+  "testEx": {
+    "title": "¿Mi ex todavía piensa en mí? Test gratuito de 15 preguntas",
+    "shortTitle": "¿Mi ex todavía piensa en mí?",
+    "description": "15 preguntas sobre lo que hace, no sobre lo que tú deduces. Test individual, resultado inmediato.",
+    "metaDescription": "¿Tu ex todavía piensa en ti? 15 preguntas que pesan sus actos en lugar de tus interpretaciones. Gratuito, anónimo, sin registro ni correo."
   }
 }

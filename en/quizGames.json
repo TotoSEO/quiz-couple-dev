@@ -352,7 +352,8 @@
     "jeuDilemmes": "Couple dilemmas",
     "testFinCouple": "Is my relationship over?",
     "testAmourAmitie": "Love or friendship?",
-    "testDependance": "Emotional dependency test"
+    "testDependance": "Emotional dependency test",
+    "testEx": "Does my ex still think about me test"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

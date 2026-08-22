@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Le 6 fasi della rottura nell'uomo: dalla negazione alla ricostruzione.",
   introduction: `<p>Si dice spesso che gli uomini soffrono meno per una rottura. Che si riprendono più in fretta, che voltano pagina senza troppi danni. È falso. Quello che è vero, però, è che lo vivono in modo diverso, e spesso più tardi.</p>
 <p>Dove una donna generalmente percepisce il <strong>dolore della separazione</strong> quasi immediatamente, l'uomo si prende tempo per lasciarlo entrare. Può uscire, ridere, inanellare serate, dare l'impressione che vada tutto bene… e crollare tre mesi dopo, quando si ritrova solo una domenica sera e la realtà lo raggiunge tutto d'un colpo.</p>
-<p>Capire le <strong>fasi della rottura nell'uomo</strong> è utile sotto molti aspetti. Che tu sia un uomo che sta attraversando una separazione e cerca di dare un nome a ciò che prova, o una donna che cerca di capire come il suo ex sta vivendo le cose, questo articolo è per te.</p>`,
+<p>Capire le <strong>fasi della rottura nell'uomo</strong> è utile sotto molti aspetti. Che tu sia un uomo che sta attraversando una separazione e cerca di dare un nome a ciò che prova, o una donna che cerca di <a href="https://quiz-couple.com/it/il-mio-ex-pensa-ancora-a-me/">capire come il suo ex sta vivendo le cose</a>, questo articolo è per te.</p>`,
   quickSummary: [
     "La rottura nell'uomo passa attraverso 6 fasi: negazione, anestesia emotiva, rabbia, presa di coscienza, lutto reale e ricostruzione.",
     'Queste fasi non sono lineari e variano da individuo a individuo.',

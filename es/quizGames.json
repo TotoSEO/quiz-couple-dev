@@ -352,7 +352,8 @@
     "jeuDilemmes": "Dilemas de pareja",
     "testFinCouple": "¿Es el final de mi relación?",
     "testAmourAmitie": "¿Amor o amistad?",
-    "testDependance": "Test de dependencia emocional"
+    "testDependance": "Test de dependencia emocional",
+    "testEx": "Test mi ex todavía piensa en mí"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",

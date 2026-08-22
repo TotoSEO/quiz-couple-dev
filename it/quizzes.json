@@ -297,5 +297,11 @@
     "shortTitle": "Test Dipendenza affettiva",
     "description": "20 domande sincere per capire se ami il tuo partner o ti aggrappi a lui. Risultato immediato e passi concreti.",
     "metaDescription": "Attaccamento sano o dipendenza affettiva? 20 domande sincere, risultato immediato e passi concreti per ritrovare il tuo equilibrio. Gratis, senza registrazione."
+  },
+  "testEx": {
+    "title": "Il mio ex pensa ancora a me? Test gratuito in 15 domande",
+    "shortTitle": "Il mio ex pensa ancora a me?",
+    "description": "15 domande su quello che fa, non su quello che ci leggi tu. Test individuale, risultato immediato.",
+    "metaDescription": "Il tuo ex pensa ancora a te? 15 domande che pesano i suoi atti invece delle tue interpretazioni. Gratuito, anonimo, senza registrazione né e-mail."
   }
 }

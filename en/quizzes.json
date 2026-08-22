@@ -297,5 +297,11 @@
     "shortTitle": "Emotional Dependency Test",
     "description": "20 honest questions to find out whether you love your partner or cling to them. Instant result and concrete next steps.",
     "metaDescription": "Healthy attachment or emotional dependency? 20 honest questions, an instant result and concrete steps to regain your balance. Free, no sign-up."
+  },
+  "testEx": {
+    "title": "Does My Ex Still Think About Me? Free 15-Question Test",
+    "shortTitle": "Does my ex still think about me?",
+    "description": "15 questions about what they do, not about what you read into it. Solo test, instant result.",
+    "metaDescription": "Does your ex still think about you? 15 questions that weigh their actions rather than your interpretations. Free, anonymous, no signup and no email."
   }
 }

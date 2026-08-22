@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "badge": "Test gratuito, 15 preguntas",
+    "title": "¿Mi ex todavía piensa en mí?",
+    "titleHighlight": "todavía piensa en mí",
+    "description": "15 preguntas sobre lo que hace, no sobre lo que tú deduces. Porque una story vista a medianoche y una propuesta de volver a veros no pesan lo mismo.",
+    "subtitle": "Test individual, gratuito y anónimo"
+  },
+  "howTo": {
+    "title": "¿Cómo funciona este test?",
+    "step1": "Primero indicas si tu ex es un hombre o una mujer, y luego respondes en solitario. No se envía nada, nadie verá tus respuestas.",
+    "step2": "Responde sobre las <strong>últimas semanas</strong>, no sobre el mes que siguió a la ruptura. Esas primeras semanas no significan nada: todo el mundo es excesivo en ese momento, en un sentido o en el otro.",
+    "step3": "Cada pregunta lleva un peso según lo que el comportamiento le cuesta a quien lo tiene. El total va de 0 a 150 puntos, y una puntuación alta significa que tu ex no ha cerrado la puerta.",
+    "step4": "El resultado te sitúa en una de las cuatro situaciones posibles, incluida esa de la que nadie habla: pensar en ti sin querer volver.",
+    "outro": "No hagas este test la noche de un mensaje inesperado. Responde sobre lo que se repite, no sobre lo que acaba de pasar."
+  },
+  "crossLink": {
+    "title": "¿Ya no consigues pensar en otra cosa?",
+    "text": "Este test trata de tu ex. Si la verdadera dificultad está en otra parte, en lo que esa ausencia te provoca, el test de dependencia emocional plantea la pregunta desde ese ángulo.",
+    "button": "Hacer el test de dependencia emocional"
+  },
+  "section1": {
+    "title": "Por qué no consigues decidirlo tú solo",
+    "p1": "Ya lo has releído todo. Los últimos mensajes, la hora a la que vio tu story, la frase de más en la última llamada. Le has dedicado tardes enteras y no estás más cerca que al principio.",
+    "p2": "No es falta de lucidez. Es que <strong>los mismos indicios cambian de sentido según tu humor del día</strong>. Un lunes, ese mensaje de cumpleaños demuestra que no ha pasado página. Un jueves, es solo una cortesía enviada a treinta personas. Las dos lecturas se sostienen, ninguna se puede verificar, y por eso precisamente das vueltas en círculo.",
+    "p3": "Este test no lee la mente de tu ex, y desconfía de quien diga que puede hacerlo. Lo que hace es ordenar tus observaciones según un criterio simple y verificable: <strong>cuánto le ha costado ese comportamiento</strong>. Un gesto que no cuesta nada no demuestra casi nada, aunque haga muchísima ilusión. Un gesto que compromete algo no se explica fácilmente de otra manera."
+  },
+  "section2": {
+    "title": "Las señales que cuestan algo, y las que no cuestan nada",
+    "intro": "Esta es toda la lógica del test. Aquí están los cinco comportamientos que pesan de verdad, ordenados por lo que exigen a quien los tiene.",
+    "pillar1Title": "Retomar el contacto sin pretexto",
+    "pillar1Text": "La señal más fiable de todas. Escribir a alguien a quien has dejado exige superar una incomodidad, aceptar parecer el que no ha soltado, y arriesgarse a una respuesta fría. Nadie hace eso por distracción. Lo que cuenta no es la frecuencia de los mensajes sino su dirección: si llevas tres meses escribiendo siempre primero, ya tienes tu respuesta.",
+    "pillar2Title": "Proponer veros en persona",
+    "pillar2Text": "Un escalón por encima del mensaje, porque una cita no se puede retirar y no se sale de ella con una broma. Ojo con el matiz, eso sí: proponer veros para recoger una caja de cosas no es lo mismo que proponer veros sin ningún motivo. La primera no exige ningún valor, la segunda exige mucho.",
+    "pillar3Title": "Decir algo claro",
+    "pillar3Text": "Una frase clara sobre los remordimientos o los sentimientos vale más que seis meses de señales. Compromete a quien la pronuncia, no se retira, y puede sacarse a relucir más adelante. También por eso es tan rara: mucha gente prefiere las insinuaciones, que permiten quedarse en la ambigüedad sin arriesgar nunca nada.",
+    "pillar4Title": "Hablar de vosotros dos en futuro",
+    "pillar4Text": "El tiempo verbal dice mucho. Quien ha pasado página habla de ti en pasado, a veces con mucha ternura: los recuerdos no son peligrosos. Quien no ha cerrado la puerta desliza algún «podríamos», algún «quizá algún día», planes que ya no tienen razón de ser. Es involuntario, y es muy revelador.",
+    "pillar5Title": "Lo que dice su entorno",
+    "pillar5Text": "Una señal indirecta pero difícil de falsear. Si sus allegados te dan noticias suyas sin que las pidas, o te dejan entender que todavía habla de ti, es que el tema sigue existiendo en sus conversaciones privadas. Nadie actúa delante de sus propios amigos durante meses solo para mantener una ilusión.",
+    "tip": "Un criterio simple, aplicable a cualquier señal: ¿ese gesto le exigió superar algo? Si la respuesta es no, no construyas nada encima."
+  },
+  "section3": {
+    "title": "Lo que dice tu puntuación",
+    "p1": "Las quince preguntas se hacen siempre, y cada una lleva un peso según lo que el comportamiento descrito compromete de verdad. El total va de 0 a 150 puntos. Una puntuación alta no significa que tu ex vaya a volver, significa que no ha cerrado nada.",
+    "headerScore": "Puntuación",
+    "headerLevel": "Situación",
+    "headerAnalysis": "Lo que significa",
+    "row1Score": "0 a 37",
+    "row1Level": "Ha pasado página",
+    "row1Analysis": "Ninguna señal costosa, y a menudo ninguna señal en absoluto. Su vida ha seguido en otra parte.",
+    "row2Score": "38 a 75",
+    "row2Level": "Rastros, no un regreso",
+    "row2Analysis": "El caso más frecuente. Queda apego, pero detrás no viene ningún acto.",
+    "row3Score": "76 a 113",
+    "row3Level": "La puerta no está cerrada",
+    "row3Analysis": "Esfuerzos reales y repetidos, pero nada dicho con claridad. Esa niebla es lo que te agota.",
+    "row4Score": "114 a 150",
+    "row4Level": "Está todo, menos las palabras",
+    "row4Analysis": "Las señales más comprometedoras están todas ahí. Solo falta que alguien lo formule.",
+    "tip": "Una puntuación baja no es un veredicto sobre tu valor, y una alta no es una promesa. Este test describe un estado actual, no una trayectoria."
+  },
+  "section4": {
+    "title": "Las cuatro señales que todo el mundo sobreinterpreta",
+    "p1": "Son los cuatro indicios en los que más tiempo se invierte, y son justamente los menos fiables. No porque sean falsos, sino porque no cuestan nada y se explican de diez maneras distintas.",
+    "sub1Title": "La story vista a las tres de la mañana",
+    "sub1Text": "Se ha convertido en la señal número uno, y es la más débil de todas. Ver una story exige un gesto del pulgar y cero valor. Puede significar nostalgia, curiosidad, aburrimiento, o simplemente que la aplicación encadena los contenidos sola. Un ex que te mira todos los días sin escribirte nunca te está diciendo sobre todo que prefiere observar antes que comprometerse.",
+    "sub2Title": "Las fotos que no se han borrado",
+    "sub2Text": "Mucha gente ve en eso la prueba de que nada ha terminado. Suele ser bastante más banal: borrar fotos obliga a volver a sumergirse en ellas, y muchísima gente pospone ese momento durante años por pura evitación. A la inversa, un borrado inmediato y completo no siempre es indiferencia, a veces es exactamente lo contrario.",
+    "sub3Title": "El mensaje de cumpleaños",
+    "sub3Text": "Todo depende de su forma. Un «feliz cumpleaños» seco es el que se le manda a un compañero de trabajo, y no dice nada. Un mensaje que recuerda un detalle preciso, una broma que solo os pertenece a vosotros dos, o que llega en una fecha que nadie más conoce, es otra cosa: ese exige haber guardado algo en la cabeza todo el año.",
+    "sub4Title": "El «seguimos siendo amigos»",
+    "sub4Text": "La frase es ambigua por construcción, y a menudo es justo por eso por lo que se pronuncia. Sirve tanto para suavizar una ruptura como para dejar una puerta entreabierta. No la leas sola: mira lo que viene después. Una amistad real se ve en gestos de amigo, no en un contacto que se despierta cada vez que te alejas.",
+    "tip": "La regla vale también al revés: un ex que te ha bloqueado en todas partes no es necesariamente indiferente. Bloquear es un gesto violento, y la indiferencia no hace absolutamente nada."
+  },
+  "section5": {
+    "title": "Pensar en ti y querer volver son dos cosas distintas",
+    "p1": "Es el matiz que falta en todas partes, y sin embargo es la situación más frecuente: alguien puede pensar en ti sinceramente, a menudo, durante mucho tiempo, y no tener nunca la intención de volver. Las dos cosas no se contradicen.",
+    "p2": "Una historia que ha importado deja rastros mecánicos. Canciones, trayectos, olores, fechas del año. Esos rastros no se borran porque alguien haya decidido marcharse, y pueden durar años sin anunciar nada. Un ex que te escribe una noche de bajón no te está diciendo que quiera volver a empezar, te está diciendo que tiene una noche de bajón.",
+    "p3": "Existe además una situación más incómoda de nombrar: aquella en la que tu ex mantiene el contacto a propósito sin querer nada más. Seguir presente cuesta poco y renta mucho, permite no sentirse reemplazado conservando la libertad. No siempre es calculado, rara vez es siquiera consciente, pero el efecto sobre ti es el mismo: tú te quedas esperando mientras la otra persona avanza.",
+    "tip": "Si te reconoces aquí, la pregunta útil ya no es qué siente. Es cuánto tiempo más aceptas poner tu vida entre paréntesis para averiguarlo."
+  },
+  "section6": {
+    "title": "Cómo obtener una respuesta en lugar de esperarla",
+    "p1": "Ninguna señal adicional te sacará de la duda, porque la interpretarás igual que las anteriores. Lo que te sacará es provocar una situación en la que tu ex tenga que posicionarse. Así se hace sin perder la dignidad.",
+    "sub1Title": "Propón un acto, no una conversación",
+    "sub1Text": "«¿Todavía piensas en nosotros?» invita a una respuesta vaga, y la obtendrás. «¿Quieres que nos veamos el sábado?» invita a un sí o a un no. La segunda pregunta da miedo de hacer, pero es la única que produce información utilizable.",
+    "sub2Title": "Pregunta una vez, no tres",
+    "sub2Text": "Una petición clara a la que se responde con evasivas ya es una respuesta. Volver a plantearla de otra forma la semana siguiente no cambiará el fondo y desplazará la relación de fuerzas. Tienes derecho a ser directo una vez; no tienes nada que ganar insistiendo.",
+    "sub3Title": "Elige el momento, no el impulso",
+    "sub3Text": "Los mensajes escritos a las dos de la mañana, después de una copa o después de ver una foto, son los que se lamentan. No porque sean falsos, sino porque llegan en el peor momento y dan una imagen tuya que no eres tú. Escribe el mensaje, guárdalo en borradores, reléelo al mediodía siguiente.",
+    "sub4Title": "Decide de antemano qué harás con un no",
+    "sub4Text": "Es la precaución que nadie toma. Si no lo has decidido antes de preguntar, un rechazo te dejará ahí plantado negociando. Ten claro de antemano qué haces con un no, y la conversación irá muchísimo mejor, también para ti."
+  },
+  "section7": {
+    "title": "Cuando la pregunta se convierte en otra pregunta",
+    "p1": "Llega un momento en el que el tema ya no es tu ex. Si llevas meses vigilando sus redes, rechazando citas por si acaso, contando la misma historia a tus allegados hasta agotarlos, entonces la pregunta ha cambiado sin que te dieras cuenta.",
+    "p2": "Echar de menos a una persona y ser incapaz de salir de una espera no son lo mismo. Lo primero se atenúa, despacio pero de verdad. Lo segundo se instala, y se alimenta precisamente de las pequeñas señales gratuitas de las que habla esta página: cada story vista reinicia el contador y aplaza el duelo unos días más.",
+    "p3": "Hay un test sencillo para saber en qué punto estás. Imagina que hoy te garantizan, con total certeza, que tu ex no volverá jamás. Si tu primera reacción es alivio, no es tu ex quien te falta, es la espera lo que te pesa.",
+    "tip": "Nada obliga a esperar una certeza para retomar tu vida. En los hechos, casi siempre ocurre lo contrario: las cosas se desatascan cuando dejas de estar al acecho."
+  },
+  "faq": {
+    "q1": "¿Cómo saber si mi ex todavía piensa en mí?",
+    "a1": "Mirando lo que hace en lugar de lo que tú deduces, y pesando cada comportamiento por lo que cuesta. Retomar el contacto sin pretexto, proponer veros, decir algo claro sobre sus sentimientos, hablar de vosotros dos en futuro: son actos que comprometen. Ver una story, dejar una foto colgada o mandar un mensaje de cumpleaños no le exige nada a nadie. Son esos cinco puntos los que mide el test.",
+    "q2": "Mi ex ve todas mis stories, ¿qué significa eso?",
+    "a2": "La mayoría de las veces, no gran cosa. Es la señal menos costosa que existe: un gesto del pulgar, ningún riesgo, ninguna consecuencia. Puede traducir nostalgia igual que simple curiosidad. Alguien que te mira todos los días sin escribirte nunca te está mostrando sobre todo que prefiere observar antes que comprometerse, lo cual ya es una información.",
+    "q3": "Mi puntuación es baja, ¿significa que se ha acabado?",
+    "a3": "Una puntuación baja describe la situación de hoy, no la de los meses que vienen. Te dice que en este momento tu ex no tiene ningún comportamiento que apunte a un regreso. Es una información dura, pero te devuelve algo importante: el tiempo que pasabas descifrando. Ya no tienes que interpretar, puedes decidir.",
+    "q4": "¿Cuánto hay que esperar antes de escribir a un ex?",
+    "a4": "Ninguna duración mágica funciona, y las reglas prefabricadas del tipo «treinta días sin contacto» no se apoyan en nada sólido. Lo que cuenta es tu estado en el momento en que escribes. Si el mensaje sale para provocar una reacción, es demasiado pronto. Si sale porque tienes algo que decir y sobrevivirías a un silencio, el momento es el bueno.",
+    "q5": "¿Un ex que vuelve, vuelve para siempre?",
+    "a5": "Depende enteramente de lo que haya cambiado desde entonces. Un ex que vuelve a una relación idéntica, con los mismos desacuerdos sin resolver y las mismas costumbres, se marcha de nuevo por lo general por los mismos motivos y en el mismo plazo. Lo que marca la diferencia no es la intensidad del reencuentro, es de qué sois capaces de hablar de otra forma que antes.",
+    "q6": "¿Se guardan mis respuestas?",
+    "a6": "No. Todo ocurre en tu navegador, ninguna respuesta se envía ni se conserva, y no hay ni cuenta ni dirección de correo que dar. Puedes repetir el test dentro de dos meses para comparar, pero no se guardará nada mientras tanto."
+  }
+}

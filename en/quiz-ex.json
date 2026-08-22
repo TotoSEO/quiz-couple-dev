@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "badge": "Free test, 15 questions",
+    "title": "Does my ex still think about me?",
+    "titleHighlight": "still think about me",
+    "description": "15 questions about what they actually do, not about what you read into it. Because a story viewed at midnight and an offer to meet up do not carry the same weight.",
+    "subtitle": "Individual test, free and anonymous"
+  },
+  "howTo": {
+    "title": "How does this test work?",
+    "step1": "You start by saying whether your ex is a man or a woman, then you answer on your own. Nothing is sent, nobody will see your answers.",
+    "step2": "Answer about the <strong>last few weeks</strong>, not about the month that followed the breakup. Those first weeks mean nothing: everyone is excessive at that point, in one direction or the other.",
+    "step3": "Each question carries a weight based on what the behaviour costs the person doing it. The total runs from 0 to 150 points, and a high score means your ex has not closed the door.",
+    "step4": "The result places you in one of four possible situations, including the one nobody talks about: thinking about you without wanting to come back.",
+    "outro": "Do not take this test on the evening of an unexpected message. Answer on what repeats, not on what just happened."
+  },
+  "crossLink": {
+    "title": "Can't think about anything else any more?",
+    "text": "This test is about your ex. If the real difficulty lies elsewhere, in what that absence is doing to you, the emotional dependency test asks the question from that angle.",
+    "button": "Take the emotional dependency test"
+  },
+  "section1": {
+    "title": "Why you can't settle this on your own",
+    "p1": "You have already reread everything. The last messages, the time they viewed your story, the one sentence too many on that last call. You have spent whole evenings on it, and you are no further along than when you started.",
+    "p2": "That is not a lack of clear-headedness. It is that <strong>the same clues change meaning depending on your mood that day</strong>. On a Monday, that birthday message proves they haven't moved on. On a Thursday, it's a courtesy sent to thirty people. Both readings hold up, neither can be verified, and that is exactly why you keep going in circles.",
+    "p3": "This test does not read your ex's mind, and be wary of anyone claiming to. What it does is sort your observations by one simple, verifiable criterion: <strong>how much that behaviour cost them</strong>. A gesture that costs nothing proves almost nothing, even when it feels wonderful. A gesture that commits something is hard to explain any other way."
+  },
+  "section2": {
+    "title": "The signals that cost something, and the ones that cost nothing",
+    "intro": "This is the whole logic of the test. Here are the five behaviours that genuinely count, ranked by what they demand of the person doing them.",
+    "pillar1Title": "Getting back in touch with no pretext",
+    "pillar1Text": "The most reliable signal of all. Writing to someone you left means overcoming awkwardness, accepting that you look like the one who didn't let go, and risking a cold reply. Nobody does that absent-mindedly. What matters is not how often the messages come but which way they go: if you have been writing first for three months, you already have your answer.",
+    "pillar2Title": "Offering to meet in person",
+    "pillar2Text": "A step above a message, because you cannot take a meeting back and you cannot laugh your way out of it. One nuance matters, though: offering to meet to collect a box of belongings is not the same as offering to meet for no reason at all. The first takes zero courage, the second takes a great deal.",
+    "pillar3Title": "Saying something clear",
+    "pillar3Text": "One clear sentence about regret or feelings is worth more than six months of signals. It commits whoever says it, it cannot be taken back, and it can be quoted later. That is also why it is so rare: many people prefer hints, which let them stay vague without ever risking anything.",
+    "pillar4Title": "Talking about the two of you in the future tense",
+    "pillar4Text": "The grammar gives a lot away. Someone who has moved on talks about you in the past, sometimes with real tenderness: memories are safe. Someone who has not closed the door slips in a “we could”, a “maybe one day”, plans that no longer have any reason to exist. It is involuntary, and it says a great deal.",
+    "pillar5Title": "What the people around them say",
+    "pillar5Text": "An indirect signal, but a hard one to fake. If their family and friends give you news of them unprompted, or let slip that they still talk about you, then the subject is still alive in their private conversations. Nobody performs for their own friends for months on end just to keep up an illusion.",
+    "tip": "One simple test to apply to any signal: did this gesture require them to overcome something? If the answer is no, do not build anything on it."
+  },
+  "section3": {
+    "title": "What your score means",
+    "p1": "All fifteen questions are asked every time, and each carries a weight based on what the behaviour actually commits. The total runs from 0 to 150 points. A high score does not mean your ex is coming back, it means they have closed nothing off.",
+    "headerScore": "Score",
+    "headerLevel": "Situation",
+    "headerAnalysis": "What it means",
+    "row1Score": "0 to 37",
+    "row1Level": "They have moved on",
+    "row1Analysis": "No costly signals, and often no signals at all. Your ex's life has picked up elsewhere.",
+    "row2Score": "38 to 75",
+    "row2Level": "Traces, not a return",
+    "row2Analysis": "The most common case. Attachment is still there, but no act comes after it.",
+    "row3Score": "76 to 113",
+    "row3Level": "The door is not shut",
+    "row3Analysis": "Real, repeated effort, but nothing said clearly. That fog is what wears you down.",
+    "row4Score": "114 to 150",
+    "row4Level": "It's all there, except the words",
+    "row4Analysis": "The most committing signals are all present. All that's missing is someone to say it.",
+    "tip": "A low score is not a verdict on your worth, and a high score is not a promise. This test describes a current state, not a trajectory."
+  },
+  "section4": {
+    "title": "The four signals everyone over-reads",
+    "p1": "These are the four clues people spend the most time on, and they are precisely the least reliable. Not because they are false, but because they cost nothing and can be explained ten different ways.",
+    "sub1Title": "The story viewed at three in the morning",
+    "sub1Text": "This has become the number one signal, and it is the weakest of the lot. Watching a story takes a thumb movement and zero courage. It can mean nostalgia, curiosity, boredom, or simply that the app is auto-playing on its own. An ex who watches you every single day without ever writing is mostly telling you they would rather observe than commit.",
+    "sub2Title": "The photos that were never deleted",
+    "sub2Text": "Many people read this as proof that nothing is over. It is usually far more mundane: deleting photos means going back through them, and an enormous number of people put that off for years out of plain avoidance. Conversely, an immediate and total wipe is not always indifference, sometimes it is precisely the opposite.",
+    "sub3Title": "The birthday message",
+    "sub3Text": "It all depends on the form. A flat “happy birthday” is the one you send a colleague, and it says nothing. A message that recalls a specific detail, a joke that belongs to the two of you alone, or one that arrives on a date nobody else knows about, is a different matter: that one requires having kept something in mind all year.",
+    "sub4Title": "The “let's stay friends”",
+    "sub4Text": "The phrase is ambiguous by design, and that is often exactly why it gets said. It softens a breakup as much as it keeps a door ajar. Do not read it on its own: look at what follows. Real friendship shows up as friendly behaviour, not as contact that wakes up every time you start drifting away.",
+    "tip": "The rule works the other way too: an ex who has blocked you everywhere is not necessarily indifferent. Blocking is a violent gesture, and indifference does nothing at all."
+  },
+  "section5": {
+    "title": "Thinking about you and wanting to come back are two different things",
+    "p1": "This is the nuance missing everywhere, and it is nonetheless the most common situation: someone can think about you sincerely, often, for a long time, and never intend to come back. The two are not contradictory.",
+    "p2": "A relationship that mattered leaves mechanical traces. Songs, routes across town, smells, dates in the calendar. Those traces do not vanish because someone decided to leave, and they can last for years without announcing anything. An ex who writes to you on a low evening is not telling you they want to start again, they are telling you they are having a low evening.",
+    "p3": "There is also a more uncomfortable situation to name: the one where your ex deliberately keeps the contact going without wanting anything more from it. Staying present costs little and pays a lot, it means never feeling replaced while keeping your freedom. It is not always calculated, it is rarely even conscious, but the effect on you is the same: you stay on hold while the other person moves forward.",
+    "tip": "If you recognise yourself here, the useful question is no longer what they feel. It is how long you are still willing to put your life on hold to find out."
+  },
+  "section6": {
+    "title": "How to get an answer instead of waiting for one",
+    "p1": "No additional signal will get you out of the doubt, because you will read it exactly the way you read the last ones. What will get you out is creating a situation where your ex has to take a position. Here is how to do that without losing your dignity.",
+    "sub1Title": "Propose an act, not a conversation",
+    "sub1Text": "“Do you still think about us?” invites a vague answer, and you will get one. “Do you want to meet on Saturday?” invites a yes or a no. The second question is frightening to ask, but it is the only one that produces usable information.",
+    "sub2Title": "Ask once, not three times",
+    "sub2Text": "A clear request answered evasively is already an answer. Asking it again in another form the following week will change nothing about the substance and will shift the balance of power. You are entitled to be direct once; you have nothing to gain by insisting.",
+    "sub3Title": "Choose the moment, not the impulse",
+    "sub3Text": "Messages written at two in the morning, after a drink or after seeing a photo, are the ones people regret. Not because they are untrue, but because they land at the worst possible moment and give a picture of you that isn't you. Write the message, keep it in drafts, reread it at noon the next day.",
+    "sub4Title": "Decide in advance what you will do with a no",
+    "sub4Text": "This is the precaution nobody takes. If you haven't decided before you ask, a refusal will leave you standing there negotiating. Know in advance what a no means for you, and the conversation will go much better, including for you."
+  },
+  "section7": {
+    "title": "When the question becomes a different question",
+    "p1": "There comes a point where the subject is no longer your ex. If you have spent months monitoring their social media, turning down dates just in case, telling your friends the same story until they are worn out, then the question has changed without you noticing.",
+    "p2": "Missing a person and being unable to step out of a waiting pattern are not the same thing. The first fades, slowly but genuinely. The second settles in, and it feeds on precisely the free little signals this page is about: every story viewed resets the counter and pushes the grief back a few more days.",
+    "p3": "There is a simple test for where you stand. Imagine you were told today, with total certainty, that your ex is never coming back. If your first reaction is relief, then it is not your ex you miss, it is the waiting that is weighing on you.",
+    "tip": "Nothing requires you to wait for certainty before getting on with your life. In practice it is almost always the other way round: things resolve once you stop watching for them."
+  },
+  "faq": {
+    "q1": "How do I know if my ex still thinks about me?",
+    "a1": "By looking at what they do rather than what you read into it, and by weighing each behaviour by what it costs. Getting back in touch with no pretext, offering to meet up, saying something clear about their feelings, talking about the two of you in the future tense: those are acts that commit something. Watching a story, leaving a photo online or sending a birthday message asks nothing of anyone. Those five points are what the test measures.",
+    "q2": "My ex watches all my stories, what does that mean?",
+    "a2": "Most of the time, not much. It is the cheapest signal there is: one thumb movement, no risk, no consequence. It can reflect nostalgia just as easily as plain curiosity. Someone who watches you every day without ever writing is mainly showing you they would rather observe than commit, which is information in itself.",
+    "q3": "My score is low, does that mean it's over?",
+    "a3": "A low score describes today's situation, not the months to come. It tells you that right now, your ex is doing nothing that points towards a return. That is hard information, but it gives you back something important: the time you were spending on decoding. You no longer have to interpret, you can decide.",
+    "q4": "How long should I wait before contacting my ex?",
+    "a4": "No magic duration works, and off-the-shelf rules like “thirty days of no contact” rest on nothing solid. What matters is the state you are in when you write. If the message is going out to provoke a reaction, it is too early. If it is going out because you have something to say and you would survive silence, the timing is right.",
+    "q5": "If an ex comes back, do they come back for good?",
+    "a5": "That depends entirely on what has changed in the meantime. An ex who comes back to an identical relationship, with the same unresolved disagreements and the same habits, generally leaves again for the same reasons and on the same timescale. What makes the difference is not the intensity of the reunion, it is what the two of you are now able to talk about differently.",
+    "q6": "Are my answers saved?",
+    "a6": "No. Everything happens in your browser, no answer is sent or stored, and there is no account and no email address to give. You can retake the test in two months to compare, but nothing will be kept in between."
+  }
+}
