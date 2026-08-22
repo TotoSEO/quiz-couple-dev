@@ -125,6 +125,27 @@ Exemples réels, tous validés :
   l'URL préfixée par la langue hors FR (`/en/…`, `/es/…`, `/de/…`, `/it/…`).
 - Aucun lien mort : passer le contrôle sur `dist/` après construction.
 
+## Typographie des listes à puces
+
+Une puce qui commence par un intitulé en gras se termine par **deux points**,
+jamais par un point. La puce porte déjà la marque de la liste : mettre un point
+après l'intitulé donne une phrase coupée en deux, et le lecteur bute dessus.
+
+```
+✗  • <strong>Répondre « pareil ».</strong> C'est le seul vrai interdit du jeu.
+✓  • <strong>Répondre « pareil » :</strong> C'est le seul vrai interdit du jeu.
+```
+
+L'espace avant les deux points suit la langue : `« titre : »` en français,
+`"title:"` en anglais, en espagnol, en allemand et en italien.
+
+La règle vaut pour tout intitulé en gras qui annonce ce qui suit, y compris
+quand il porte un lien : les deux points se posent **après** la balise de lien,
+à l'intérieur du gras.
+
+Elle ne vaut pas pour une phrase entière mise en gras au milieu d'un texte,
+qui garde sa ponctuation normale.
+
 ## Avant de dire qu'un quiz est vérifié
 
 Simuler le moteur en Node ne suffit pas : le chargeur (`quiz-loader.js`) fait
