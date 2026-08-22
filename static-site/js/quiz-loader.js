@@ -72,8 +72,19 @@
     // ── Healthy quiz (2 players + gender, weighted scoring) ──
     'sain':           { prefix: 'healthy', engine: 'healthy', totalQ: 20, pool: 78, needsGender: true },
 
-    // ── Distance quiz (2 players, alternating turns, points per option) ──
-    'distance':       { prefix: 'distance', engine: 'distance', totalQ: 20, pool: 100 },
+    // ── Test a distance : en solo, et c'est le fond du sujet ────────────
+    // Il se jouait a deux sur le meme telephone, avec un relais « passez le
+    // telephone » entre chaque reponse : quarante ecrans de question et une
+    // minute d'attente forcee, pour un test dont le sujet garantit que les
+    // deux personnes ne sont pas dans la meme piece. Dix-huit parties
+    // lancees, aucune terminee.
+    // Rien a reecrire pour autant : les cent questions sont deja formulees au
+    // « vous » du couple et une seule personne peut y repondre, le bareme
+    // pondere existe (neuf dimensions, tirage stratifie) et les quatre
+    // paliers dormaient dans gd.json sans que personne ne les lise.
+    // Pas de ascending : les reponses vont de la plus saine a la pire, le
+    // score monte donc vers le bon palier (r1 le plus dur, r4 le meilleur).
+    'distance':       { prefix: 'distance', engine: 'solo', totalQ: 20, pool: 100, quizType: 'distance' },
 
     // ── Coquin quiz (guess & reveal mechanic) ──
     'coquin':         { prefix: 'coquin', engine: 'coquin', totalQ: 30, pool: 60 },
@@ -526,9 +537,6 @@
         break;
       case 'healthy':
         initHealthyQuiz(config, questions);
-        break;
-      case 'distance':
-        initDistanceQuiz(config, questions);
         break;
       case 'coquin':
         initCoquinQuiz(config, questions);
@@ -1322,17 +1330,6 @@
       prefix: usedPrefix,
       lang: lang,
       reverseScore: usedHealthyNative
-    });
-  }
-
-  function initDistanceQuiz(cfg, questions) {
-    // Le maximum du test se recalcule dans le moteur à partir des points posés
-    // ici, donc les paliers du verdict suivent le barème sans être réécrits.
-    new QuizEngine.DistanceQuiz({
-      container: container,
-      questions: questionsPonderees(cfg, questions),
-      prefix: cfg.prefix,
-      lang: lang
     });
   }
 

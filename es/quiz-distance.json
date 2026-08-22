@@ -2,9 +2,9 @@
   "hero": {
     "badge": "Test de compatibilidad a distancia",
     "title": "Pareja a distancia: las preguntas que haceros y el test que responde",
-    "description": "Descubre si tú y tu pareja estáis preparados para la aventura del amor a distancia. Un quiz interactivo con resultados personalizados.",
+    "description": "20 preguntas extraídas de 100 para situar tu relación a distancia: comunicación, visitas, confianza, proyecto común. Respondes tú solo/a y el resultado es inmediato.",
     "questions": "100 preguntas",
-    "players": "Quiz para dos",
+    "players": "Test individual",
     "duration": "~10 minutos",
     "titleHighlight": "preguntas que haceros"
   },
