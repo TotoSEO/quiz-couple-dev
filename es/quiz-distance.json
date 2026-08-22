@@ -9,14 +9,14 @@
     "titleHighlight": "preguntas que haceros"
   },
   "intro": {
-    "p1": "¿Puede el amor realmente sobrevivir a los kilómetros? En 2026, esta pregunta nunca ha sido tan pertinente.",
-    "p2": "Sin embargo, cuando te encuentras solo/a por la noche frente a una pantalla, la preocupación está ahí. No estás solo/a en hacerte estas preguntas."
+    "p1": "¿Puede el amor realmente sobrevivir a los kilómetros? En 2026, esta pregunta nunca ha sido tan pertinente. Entre la generalización del teletrabajo, la movilidad estudiantil internacional y las aplicaciones de citas que nos conectan de un extremo a otro del planeta, las fronteras del amor han saltado por los aires.",
+    "p2": "Sin embargo, cuando te encuentras solo/a por la noche frente a una pantalla, la preocupación está ahí. «¿Estamos perdiendo el tiempo?», «¿me es fiel?», «¿nuestra historia es sólida?». No estás solo/a en hacerte estas preguntas."
   },
   "section1": {
     "title": "¿Qué es una relación a distancia?",
     "sub1Title": "Definición moderna",
-    "sub1P1": "En 2026, una relación a distancia (o LDR) se define por dos personas comprometidas emocionalmente, pero separadas geográficamente.",
-    "sub1P2": "Ya no es solo cuestión de kilómetros, sino de frecuencia de conexión.",
+    "sub1P1": "Olvida la estampa del marinero que se va seis meses al mar sin dar señales. En 2026, una relación a distancia (o LDR, por Long Distance Relationship) se define por dos personas comprometidas emocionalmente, pero separadas geográficamente por una circunstancia que impide una intimidad física regular.",
+    "sub1P2": "Ya no es solo cuestión de kilómetros, sino de frecuencia de conexión. Con la tecnología actual (videollamadas en alta definición, mensajería instantánea, realidad aumentada), podéis «estar» juntos sin «estar» allí.",
     "sub2Title": "Por qué este fenómeno está en crecimiento",
     "sub2Items": [
       "<strong>Carreras globales:</strong> Ya no se duda en aceptar ese puesto soñado en Berlín o Singapur.",
@@ -26,7 +26,7 @@
   },
   "section2": {
     "title": "Estadísticas y tendencias 2026",
-    "p1": "Los datos recientes estiman que alrededor de <strong>14 a 15 millones de personas en EE.UU.</strong> se consideran en una relación a distancia.",
+    "p1": "Los datos recientes estiman que alrededor de <strong>14 a 15 millones de personas en EE.UU.</strong> se consideran en una relación a distancia. En Europa la cifra también sube, impulsada por la facilidad de los transportes.",
     "tableHeaders": [
       "Aspecto",
       "Relación Local",
@@ -55,14 +55,14 @@
       ]
     ],
     "sub1Title": "La realidad francesa",
-    "sub1Text": "En Francia, la media antes de reunirse geográficamente ronda los <strong>18 a 24 meses</strong>."
+    "sub1Text": "En Francia, la cultura de la independencia juega un papel clave. Las parejas a distancia suelen presentar la preservación de su «jardín secreto» como una ventaja. La media antes de reunirse geográficamente ronda los <strong>18 a 24 meses</strong>."
   },
   "section3": {
     "title": "Ventajas de una relación a distancia",
     "items": [
       {
         "title": "Fortalecimiento de los vínculos emocionales",
-        "text": "Cuando no puedes tocar, debes hablar. De verdad hablar."
+        "text": "Cuando no puedes tocar, debes hablar. De verdad hablar. Las parejas a distancia llegan a conocer los miedos, los sueños y los pensamientos profundos del otro mucho más rápido."
       },
       {
         "title": "Crecimiento personal y autonomía",
@@ -70,11 +70,11 @@
       },
       {
         "title": "Mejor comunicación",
-        "text": "Para sobrevivir, debes comunicar tus intenciones."
+        "text": "Es matemático: para sobrevivir, debes comunicar tus intenciones. Ese esfuerzo constante crea comunicadores excepcionales."
       },
       {
         "title": "Rituales y creatividad relacional",
-        "text": "La restricción crea creatividad. Ver una película \"juntos\", enviarse paquetes sorpresa..."
+        "text": "La restricción crea creatividad. Ver una película «juntos», enviarse paquetes sorpresa, cocinar la misma receta por videollamada… Esos rituales se convierten en el cemento de vuestra pareja."
       }
     ]
   },
@@ -83,7 +83,7 @@
     "items": [
       {
         "title": "La soledad y la falta de contacto físico",
-        "text": "Es el desafío n°1."
+        "text": "Es el desafío n°1. Ni un abrazo después de un día duro, ni una mano que sostener en el cine. Esa «hambre de piel» puede crear una soledad intensa, aunque estéis conectados virtualmente."
       },
       {
         "title": "Los celos y la inseguridad",
@@ -95,15 +95,15 @@
       },
       {
         "title": "Presión financiera y logística",
-        "text": "El amor no tiene precio, pero los billetes de tren y avión sí."
+        "text": "El amor no tiene precio, pero los billetes de tren y avión sí. Gestionar los viajes, las diferencias horarias y los presupuestos puede generar un cansancio considerable."
       }
     ]
   },
   "section5": {
     "title": "Lo que realmente viven las parejas",
-    "testimonial1": "\"Pasamos dos años a distancia entre París y Montreal. ¿Nuestro secreto? Veíamos la distancia como un 'enemigo común' a derrotar juntos.\"",
+    "testimonial1": "\"Pasamos dos años a distancia entre París y Montreal. ¿Nuestro secreto? Veíamos la distancia como un 'enemigo común' a derrotar juntos, y no como un problema entre nosotros dos.\"",
     "testimonial1Author": "Sarah & Tom, hoy reunidos",
-    "testimonial2": "\"Para nosotros, la distancia reveló grietas. La falta de proyectos comunes transformó la relación en una amistad educada.\"",
+    "testimonial2": "\"Para nosotros, la distancia reveló grietas. La falta de proyectos comunes transformó la relación en una amistad educada antes de apagarse. El amor no basta, hace falta una dirección común.\"",
     "testimonial2Author": "Julien & Marc"
   },
   "section6": {
@@ -120,7 +120,7 @@
     "tips": [
       {
         "title": "Fijar una hoja de ruta",
-        "text": "Tener siempre la fecha de la próxima visita fijada antes de separarse."
+        "text": "Tener siempre la fecha de la próxima visita fijada antes de separarse. Es el faro en la noche."
       },
       {
         "title": "Usar la tecnología intencionalmente",
@@ -132,7 +132,7 @@
       },
       {
         "title": "Mantener la intimidad",
-        "text": "En 2026, ya no es tabú."
+        "text": "En 2026, ya no es tabú. Mantener una tensión y una intimidad a distancia es vital para muchas parejas."
       }
     ]
   },
@@ -141,52 +141,52 @@
     "errors": [
       {
         "title": "Comparar sin cesar",
-        "text": "No envidies a la pareja que discute en IKEA."
+        "text": "No envidies a la pareja que discute en IKEA el sábado. Vuestra relación es distinta, con sus propios superpoderes. La comparación es la ladrona de la alegría."
       },
       {
         "title": "Expectativas irrealistas sobre las visitas",
-        "text": "Sé realista con tu presupuesto."
+        "text": "Si exigís veros cada quince días cuando el presupuesto no lo permite, creáis una presión financiera que matará a la pareja. Sé realista con tu presupuesto."
       },
       {
         "title": "Descuidar tu vida personal",
-        "text": "¡Vive para ti!"
+        "text": "No pongas tu vida en pausa. Si te pasas las noches esperando una llamada, te volverás dependiente y poco interesante. ¡Vive para ti!"
       }
     ]
   },
   "section9": {
     "title": "¿Hacia dónde va el futuro de las relaciones a distancia?",
     "sub1Title": "Impacto de las nuevas tecnologías e IA",
-    "sub1Text": "La IA empieza a jugar un papel mediador.",
+    "sub1Text": "La IA empieza a jugar un papel mediador. Algunas apps analizan ya los sentimientos en los mensajes para evitar malentendidos escritos. Los cascos de realidad mixta permiten «citas» en mundos virtuales ultrarrealistas.",
     "sub2Title": "Cambios sociales",
-    "sub2Text": "La sociedad de 2026 valora al individuo."
+    "sub2Text": "La sociedad de 2026 valora al individuo. Se acepta mejor que cada uno persiga sus sueños sin sacrificar la pareja. El modelo «vivir juntos a toda costa» deja paso al modelo «ser felices juntos, esté donde esté cada uno»."
   },
   "conclusion": {
     "title": "Conclusión",
     "p1": "Una relación a distancia es un desafío colosal, pero también un acelerador increíble de madurez emocional. La distancia agota, pero no lo explica todo: cuando la duda es sobre la relación misma, conviene saber reconocer lo que hace que una <a href=\"/es/test-relacion-toxica/\">relación sea tóxica</a>.",
-    "p2": "Si la confianza está ahí, la comunicación fluye y tenéis un proyecto de reunión, entonces sí, <strong>puede funcionar</strong>."
+    "p2": "No existe un test de relación a distancia mágico que os dé una nota sobre 100, pero existe lo que sentís. Si la confianza está ahí, la comunicación fluye y tenéis un proyecto de reunión, entonces sí, <strong>puede funcionar</strong>. Y a menudo, los reencuentros saben aún mejor."
   },
   "faq": {
     "title": "FAQ - Relaciones a distancia",
     "items": [
       {
         "q": "¿Qué es una relación a distancia exitosa?",
-        "a": "Es una relación donde ambos se sienten seguros, amados y libres."
+        "a": "Es una relación donde ambos se sienten seguros, amados y libres, pese a los kilómetros. Se caracteriza por una fecha de fin de la distancia conocida y aceptada por los dos."
       },
       {
         "q": "¿Cuánto dura en promedio?",
-        "a": "Entre 14 y 24 meses antes de tomar una decisión."
+        "a": "Estadísticamente, la fase de «distancia» dura de media entre 14 y 24 meses antes de que se tome una decisión: o la reunión geográfica (una mudanza), o la ruptura."
       },
       {
         "q": "¿Cómo saber si vale la pena?",
-        "a": "Si esa persona te aporta más alegría que tristeza."
+        "a": "Haz balance: ¿esa persona te aporta más alegría que tristeza? ¿Vuestros valores de vida se alinean? Si la respuesta es sí, la distancia no es más que un detalle logístico temporal."
       },
       {
         "q": "¿Cuáles son las señales de solidez?",
-        "a": "Si ríen juntos, planifican el futuro y tienen confianza."
+        "a": "Si reís juntos, si planificáis el futuro, si hay confianza, y si cada uno tiene su propia vida social plena fuera de la pareja, vais por buen camino."
       },
       {
         "q": "¿Por qué fracasan?",
-        "a": "Por falta de visión común o agotamiento."
+        "a": "Suelen fracasar por falta de visión común (sin fecha de fin) o por agotamiento (demasiados viajes, presupuesto insuficiente). Para evitarlo: hablad de vuestros límites y haced un plan financiero y temporal realista."
       }
     ]
   },
