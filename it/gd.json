@@ -8049,7 +8049,15 @@
     "q15a": "Lui, spiegando chiaramente perché, e ci è rimasto fedele.",
     "q15b": "Lui, ma senza spiegarlo mai davvero.",
     "q15c": "Io, o di comune accordo.",
-    "q15d": "Nessuno davvero: è finita senza che venisse detto."
+    "q15d": "Nessuno davvero: è finita senza che venisse detto.",
+    "modesIcone": "💭",
+    "modesTitre": "Il tuo ex è un uomo o una donna?",
+    "modesDesc": "Le quindici domande sono le stesse in entrambi i casi, cambia solo la formulazione. Scegli la serie che parla della persona giusta.",
+    "modesRetour": "Cambiare serie",
+    "modeHommeTitre": "Il mio ex è un uomo",
+    "modeHommeDesc": "Quindici domande su quello che fa, non su quello che ci leggi tu.",
+    "modeFemmeTitre": "La mia ex è una donna",
+    "modeFemmeDesc": "Le stesse quindici domande, formulate al femminile."
   },
   "exF": {
     "q1": "Chi si rifà vivo, oggi?",
@@ -8199,7 +8207,16 @@
     "v_soloEquilibre_a": "Fai rifare il test al tuo partner, per conto suo, e confrontate. Se i vostri due risultati si somigliano, l'equilibrio è reale. Se si allontanano nettamente, non è la ripartizione da rivedere per prima, è la conversazione che non avete ancora avuto.",
     "v_soloDesequilibre_t": "Descrivi un carico che pesa soprattutto su una persona",
     "v_soloDesequilibre_d": "Le tue risposte mostrano uno squilibrio netto: l'essenziale di quello che va anticipato, ricordato e organizzato pesa sulle stesse spalle. Questo tipo di squilibrio si installa raramente per decisione, si mette in piedi da solo, compito dopo compito, perché chi se ne accorge per primo finisce per occuparsene, e perché una volta diventato il suo ambito nessun altro ci pensa più.",
-    "v_soloDesequilibre_a": "Il riflesso naturale è chiedere aiuto. È precisamente quello che non funziona: chiedere aiuto significa tenersi il carico di sapere cosa c'è da fare e quando. L'unico trasferimento che alleggerisce davvero è quello di un ambito intero, con il fatto di pensarci incluso. E per convincere, fai fare il test al tuo partner: lo scarto tra i vostri due risultati lo dirà meglio di te."
+    "v_soloDesequilibre_a": "Il riflesso naturale è chiedere aiuto. È precisamente quello che non funziona: chiedere aiuto significa tenersi il carico di sapere cosa c'è da fare e quando. L'unico trasferimento che alleggerisce davvero è quello di un ambito intero, con il fatto di pensarci incluso. E per convincere, fai fare il test al tuo partner: lo scarto tra i vostri due risultati lo dirà meglio di te.",
+    "modesIcone": "🧠",
+    "modesTitre": "Da solo o in due?",
+    "modesDesc": "Le stesse venti attività in entrambi i casi. Quello che cambia è ciò che il test può misurare alla fine.",
+    "modesRetour": "Cambiare modalità",
+    "modeSoloTitre": "SOLO",
+    "modeSoloDesc": "Rispondi da solo, sulla tua coppia",
+    "modeDuoTitre": "IN DUE",
+    "modeDuoDesc": "Rispondete a turno, sullo stesso telefono",
+    "portePartVous": "Porti il {{n}} % del carico"
   },
   "rencontre": {
     "glace1": "Qual è l'ultima cosa che ti ha fatto ridere da solo per strada?",

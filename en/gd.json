@@ -8049,7 +8049,15 @@
     "q15a": "He did, explaining clearly why, and he stuck to it.",
     "q15b": "He did, but without ever really explaining.",
     "q15c": "I did, or we agreed on it together.",
-    "q15d": "Nobody really: it just stopped without anyone saying so."
+    "q15d": "Nobody really: it just stopped without anyone saying so.",
+    "modesIcone": "💭",
+    "modesTitre": "Is your ex a man or a woman?",
+    "modesDesc": "The fifteen questions are the same either way, only the wording changes. Pick the set that talks about the right person.",
+    "modesRetour": "Switch set",
+    "modeHommeTitre": "My ex is a man",
+    "modeHommeDesc": "Fifteen questions about what he does, not about what you read into it.",
+    "modeFemmeTitre": "My ex is a woman",
+    "modeFemmeDesc": "The same fifteen questions, worded for her."
   },
   "exF": {
     "q1": "Who gets back in touch these days?",
@@ -8199,7 +8207,16 @@
     "v_soloEquilibre_a": "Have your partner take the test separately, then compare. If your two results look alike, the balance is real. If they diverge sharply, it is not the split that needs revisiting first, it is the conversation you have not had yet.",
     "v_soloDesequilibre_t": "You are describing a load resting mainly on one person",
     "v_soloDesequilibre_d": "Your answers show a clear imbalance: most of what has to be anticipated, remembered and organised rests on the same shoulders. This kind of imbalance rarely arrives by decision, it settles in on its own, one task at a time, because whoever notices first ends up handling it, and because once it has become their area nobody else thinks about it any more.",
-    "v_soloDesequilibre_a": "The natural reflex is to ask for help. That is exactly what does not work: asking for help means keeping the job of knowing what needs doing and when. The only transfer that genuinely lightens the load is a whole area, including the remembering. And to make the case, have your partner take the test: the gap between your two results will say it better than you can."
+    "v_soloDesequilibre_a": "The natural reflex is to ask for help. That is exactly what does not work: asking for help means keeping the job of knowing what needs doing and when. The only transfer that genuinely lightens the load is a whole area, including the remembering. And to make the case, have your partner take the test: the gap between your two results will say it better than you can.",
+    "modesIcone": "🧠",
+    "modesTitre": "On your own or together?",
+    "modesDesc": "The same twenty tasks either way. What changes is what the test can measure at the end.",
+    "modesRetour": "Switch mode",
+    "modeSoloTitre": "SOLO",
+    "modeSoloDesc": "You answer on your own, about your relationship",
+    "modeDuoTitre": "TOGETHER",
+    "modeDuoDesc": "You each take a turn, on the same phone",
+    "portePartVous": "You carry {{n}}% of the load"
   },
   "rencontre": {
     "glace1": "What's the last thing that made you laugh out loud on your own in the street?",

@@ -8081,7 +8081,15 @@
     "q15a": "Lui, en expliquant clairement pourquoi, et il s'y est tenu.",
     "q15b": "Lui, mais sans jamais vraiment expliquer.",
     "q15c": "Moi, ou d'un commun accord.",
-    "q15d": "Personne vraiment : ça s'est arrêté sans que ce soit dit."
+    "q15d": "Personne vraiment : ça s'est arrêté sans que ce soit dit.",
+    "modesIcone": "💭",
+    "modesTitre": "Votre ex, c'est un homme ou une femme ?",
+    "modesDesc": "Les quinze questions sont les mêmes des deux côtés, seule la formulation change. Choisissez la série qui parle de la bonne personne.",
+    "modesRetour": "Changer de série",
+    "modeHommeTitre": "Mon ex est un homme",
+    "modeHommeDesc": "Quinze questions sur ce qu'il fait, pas sur ce que vous en déduisez.",
+    "modeFemmeTitre": "Mon ex est une femme",
+    "modeFemmeDesc": "Les mêmes quinze questions, formulées au féminin."
   },
   "exF": {
     "q1": "Qui reprend contact, aujourd'hui ?",
@@ -8231,7 +8239,16 @@
     "v_soloEquilibre_a": "Faites refaire le test à votre partenaire, de son côté, et comparez. Si vos deux résultats se ressemblent, l'équilibre est réel. S'ils s'écartent nettement, ce n'est pas la répartition qu'il faut revoir en premier, c'est la conversation que vous n'avez pas encore eue.",
     "v_soloDesequilibre_t": "Vous décrivez une charge qui repose surtout sur une personne",
     "v_soloDesequilibre_d": "Vos réponses montrent un déséquilibre net : l'essentiel de ce qu'il faut anticiper, retenir et organiser repose sur les mêmes épaules. Ce type de déséquilibre s'installe rarement par décision, il se met en place tout seul, tâche après tâche, parce que celui qui remarque le premier finit par s'en charger, et parce qu'une fois que c'est devenu son domaine plus personne d'autre n'y pense.",
-    "v_soloDesequilibre_a": "Le réflexe naturel est de demander de l'aide. C'est précisément ce qui ne fonctionne pas : demander de l'aide, c'est garder la charge de savoir ce qu'il y a à faire et quand. Le seul transfert qui allège vraiment est celui d'un domaine entier, avec le fait d'y penser. Et pour convaincre, faites faire le test à votre partenaire : l'écart entre vos deux résultats dira les choses mieux que vous."
+    "v_soloDesequilibre_a": "Le réflexe naturel est de demander de l'aide. C'est précisément ce qui ne fonctionne pas : demander de l'aide, c'est garder la charge de savoir ce qu'il y a à faire et quand. Le seul transfert qui allège vraiment est celui d'un domaine entier, avec le fait d'y penser. Et pour convaincre, faites faire le test à votre partenaire : l'écart entre vos deux résultats dira les choses mieux que vous.",
+    "modesIcone": "🧠",
+    "modesTitre": "Seul(e) ou à deux ?",
+    "modesDesc": "Les mêmes vingt tâches dans les deux cas. Ce qui change, c'est ce que le test peut mesurer à la fin.",
+    "modesRetour": "Changer de mode",
+    "modeSoloTitre": "SOLO",
+    "modeSoloDesc": "Vous répondez seul(e), sur votre couple",
+    "modeDuoTitre": "À DEUX",
+    "modeDuoDesc": "Vous répondez chacun votre tour, sur le même téléphone",
+    "portePartVous": "Vous portez {{n}} % de la charge"
   },
   "rencontre": {
     "glace1": "Quel est le dernier truc qui t'a fait rire tout seul dans la rue ?",

@@ -8049,7 +8049,15 @@
     "q15a": "Él, explicando claramente por qué, y se mantuvo firme.",
     "q15b": "Él, pero sin explicarlo nunca de verdad.",
     "q15c": "Yo, o de mutuo acuerdo.",
-    "q15d": "Nadie realmente: se acabó sin que nadie lo dijera."
+    "q15d": "Nadie realmente: se acabó sin que nadie lo dijera.",
+    "modesIcone": "💭",
+    "modesTitre": "¿Tu ex es un hombre o una mujer?",
+    "modesDesc": "Las quince preguntas son las mismas en ambos casos, solo cambia la formulación. Elige la serie que habla de la persona correcta.",
+    "modesRetour": "Cambiar de serie",
+    "modeHommeTitre": "Mi ex es un hombre",
+    "modeHommeDesc": "Quince preguntas sobre lo que hace, no sobre lo que tú interpretas.",
+    "modeFemmeTitre": "Mi ex es una mujer",
+    "modeFemmeDesc": "Las mismas quince preguntas, formuladas en femenino."
   },
   "exF": {
     "q1": "¿Quién retoma el contacto hoy en día?",
@@ -8199,7 +8207,16 @@
     "v_soloEquilibre_a": "Haz que tu pareja repita el test por su cuenta y comparad. Si vuestros dos resultados se parecen, el equilibrio es real. Si se separan claramente, no es el reparto lo primero que hay que revisar, es la conversación que aún no habéis tenido.",
     "v_soloDesequilibre_t": "Describes una carga que recae sobre todo en una persona",
     "v_soloDesequilibre_d": "Tus respuestas muestran un desequilibrio claro: lo esencial de lo que hay que anticipar, recordar y organizar recae sobre los mismos hombros. Este tipo de desequilibrio rara vez se instala por decisión, se monta solo, tarea a tarea, porque quien se da cuenta primero acaba ocupándose y porque, una vez que se ha convertido en su terreno, nadie más piensa en ello.",
-    "v_soloDesequilibre_a": "El reflejo natural es pedir ayuda. Es precisamente lo que no funciona: pedir ayuda es quedarse con la carga de saber qué hay que hacer y cuándo. La única transferencia que alivia de verdad es la de un ámbito entero, con el hecho de pensar en él incluido. Y para convencer, haz que tu pareja haga el test: la diferencia entre vuestros dos resultados lo dirá mejor que tú."
+    "v_soloDesequilibre_a": "El reflejo natural es pedir ayuda. Es precisamente lo que no funciona: pedir ayuda es quedarse con la carga de saber qué hay que hacer y cuándo. La única transferencia que alivia de verdad es la de un ámbito entero, con el hecho de pensar en él incluido. Y para convencer, haz que tu pareja haga el test: la diferencia entre vuestros dos resultados lo dirá mejor que tú.",
+    "modesIcone": "🧠",
+    "modesTitre": "¿Solo o en pareja?",
+    "modesDesc": "Las mismas veinte tareas en ambos casos. Lo que cambia es lo que el test puede medir al final.",
+    "modesRetour": "Cambiar de modo",
+    "modeSoloTitre": "SOLO",
+    "modeSoloDesc": "Respondes tú solo, sobre tu pareja",
+    "modeDuoTitre": "EN PAREJA",
+    "modeDuoDesc": "Respondéis por turnos, en el mismo móvil",
+    "portePartVous": "Llevas el {{n}} % de la carga"
   },
   "rencontre": {
     "glace1": "¿Qué es lo último que te ha hecho reír solo por la calle?",

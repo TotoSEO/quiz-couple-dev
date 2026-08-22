@@ -59,9 +59,16 @@
     // Charge mentale : deux modes. En solo une personne decrit la repartition
     // telle qu'elle la voit ; en duo les deux repondent et l'ecart entre leurs
     // reponses devient la moitie du resultat.
+    // textOnly : les vingt taches n'ont pas d'options ecrites dans gd.json, le
+    // moteur pose lui-meme les cinq crans de l'axe avec les prenoms saisis.
+    // Sans ce drapeau le chargeur cherchait des options inexistantes, ne
+    // trouvait aucune question et affichait « le contenu met du temps a
+    // charger » sur une page dont les donnees etaient pourtant la.
     'charge-mentale': { modesGrand: true, modes: [
-      { id: 'solo', emoji: '🧠', prefix: 'chargeMentale', engine: 'chargeMentale', totalQ: 20, pool: 20 },
-      { id: 'duo',  emoji: '👥', prefix: 'chargeMentale', engine: 'chargeMentale', totalQ: 20, pool: 20, duo: true }
+      { id: 'solo', emoji: '🧠', prefix: 'chargeMentale', engine: 'chargeMentale',
+        totalQ: 20, pool: 20, textOnly: true },
+      { id: 'duo',  emoji: '👥', prefix: 'chargeMentale', engine: 'chargeMentale',
+        totalQ: 20, pool: 20, textOnly: true, duo: true }
     ] },
 
     'ame-soeur':      { modesGrand: true, modes: [
