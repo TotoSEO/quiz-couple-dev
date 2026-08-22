@@ -28,9 +28,9 @@
     "type3Title": "Le compagnon de route",
     "type3Text": "Solide, loyal, souvent long. Mais il faut encore choisir ses mots. Beaucoup de couples heureux tiennent exactement là-dessus, et ce n'est pas un échec.",
     "type4Title": "La flamme jumelle",
-    "type4Text": "Un miroir, pas un refuge. La relation vous met face à ce que vous évitiez de regarder, avec des séparations et des retours. Vous n'en ressortez pas la même personne.",
+    "type4Text": "Un miroir, pas un refuge. La <a href=\"/test-relation-karmique/\">flamme jumelle</a> vous met face à ce que vous évitiez de regarder, avec des séparations et des retours. Vous n'en ressortez pas la même personne.",
     "type5Title": "La relation karmique",
-    "type5Text": "La même scène qui se rejoue en boucle : l'intensité reste, l'épuisement s'installe, et partir devient impossible. Si ça vous parle plus que les quatre du dessus, allez plutôt voir le <a href=\"/test-relation-karmique/\">test de relation karmique</a>."
+    "type5Text": "La même scène qui se rejoue en boucle : l'intensité reste, l'épuisement s'installe, et partir devient impossible. Ce n'est pas une âme sœur : c'est une relation karmique, et elle se reconnaît à d'autres signes que les quatre du dessus."
   },
   "section3": {
     "title": "Est-ce que ça existe vraiment, ou est-ce une invention ?",
@@ -49,7 +49,7 @@
     "sign3Title": "Épreuve",
     "sign3Text": "Ce que la difficulté a fait au lien. Un deuil, un coup dur, une dispute dont on ne se relève pas facilement : ça vous a rapprochés ou fissurés ? Une relation jamais éprouvée n'est pas solide, elle est neuve.",
     "sign4Title": "Autonomie",
-    "sign4Text": "Vos amis, vos projets, votre capacité à passer un week-end chacun de votre côté. C'est le pilier qui fait le plus de dégâts quand il manque : sans lui, l'évidence n'est plus de l'évidence, c'est de la dépendance."
+    "sign4Text": "Vos amis, vos projets, votre capacité à passer un week-end chacun de votre côté. C'est le pilier qui fait le plus de dégâts quand il manque : sans lui, l'évidence n'est plus de l'évidence, c'est de la <a href=\"/test-dependance-affective/\">dépendance affective</a>."
   },
   "section5": {
     "title": "Comment lire votre résultat",
@@ -71,7 +71,7 @@
     "row4Action": "Cherchez d'où vient la retenue. La peur d'être jugé tombe parfois en une conversation.",
     "row5Profile": "Deux chemins qui se croisent",
     "row5Meaning": "Ni l'aisance, ni l'accord de fond, ni l'effet des épreuves. Deux personnes bien peuvent ne pas se convenir.",
-    "row5Action": "La question utile n'est plus « est-ce mon âme sœur » mais « est-ce que je vais bien dans cette relation ».",
+    "row5Action": "La question utile n'est plus « est-ce mon âme sœur » mais « <a href=\"/test-couple-sain/\">est-ce que je vais bien dans cette relation</a> ».",
     "note": "Ce test n'est pas un diagnostic et n'a aucune valeur clinique. C'est une grille de lecture, à confronter à ce que vous savez déjà."
   },
   "section6": {
@@ -82,7 +82,7 @@
     "dont1Title": "Vos amis ont disparu",
     "dont1Text": "Rarement par interdiction. Vous avez décliné, puis on a cessé de proposer.",
     "dont2Title": "Une journée sans nouvelles vous met en difficulté",
-    "dont2Text": "Ce n'est plus de l'attachement, c'est une alarme. Un lien solide supporte le silence.",
+    "dont2Text": "Ce n'est plus de l'attachement, c'est une alarme, et elle en dit long sur votre <a href=\"/test-style-attachement-couple/\">style d'attachement</a>. Un lien solide supporte le silence.",
     "doTitle": "Les signes de l'âme sœur",
     "do1Title": "Vous avez gardé votre vie",
     "do1Text": "Vos amis, vos projets, vos envies qui n'incluent pas l'autre existent toujours. Et l'autre les prend au sérieux.",
@@ -96,7 +96,7 @@
   "section7": {
     "title": "Et si vous êtes célibataire ?",
     "p1": "Si vous êtes célibataire, on ne cherche plus à savoir si un lien existe avec quelqu'un, mais plutôt quel type de personne pourrait vous convenir.",
-    "p2": "Et on ne parle pas de « quelqu'un de gentil, généreux ou drôle », parce que ça décrit tout le monde et personne... À la place, on va chercher à comprendre votre fonctionnement : qu'est-ce qui vous fait vous sentir aimé, êtes-vous plutôt gestes ou mots, comment réagissez-vous face à un conflit. De cette manière, vous pourrez plus facilement vous rapprocher du type de personne qui vous conviendrait !"
+    "p2": "Et on ne parle pas de « quelqu'un de gentil, généreux ou drôle », parce que ça décrit tout le monde et personne... À la place, on va chercher à comprendre votre fonctionnement : qu'est-ce qui vous fait vous sentir aimé, êtes-vous plutôt <a href=\"/test-langage-amour-couple/\">gestes ou mots</a>, comment réagissez-vous face à un conflit. De cette manière, vous pourrez plus facilement vous rapprocher du type de personne qui vous conviendrait !"
   },
   "faq": {
     "title": "Questions fréquentes sur les âmes sœurs",

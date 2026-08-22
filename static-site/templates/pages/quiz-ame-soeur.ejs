@@ -180,7 +180,10 @@
             <tr>
               <td class="font-medium <%= i === 1 ? 'text-primary' : i === 2 ? 'text-sky-600' : i === 3 ? 'text-amber-600' : i === 4 ? 'text-slate-500' : 'text-rose-600' %>"><%= t(ns + ':section5.row' + i + 'Profile', '') %></td>
               <td class="text-sm text-muted-foreground"><%= t(ns + ':section5.row' + i + 'Meaning', '') %></td>
-              <td class="text-sm"><%= t(ns + ':section5.row' + i + 'Action', '') %></td>
+              <%# Rendu brut : la colonne « ce que vous pouvez en faire » porte
+                  parfois un lien vers le test qui traite la suite. Echappee,
+                  la balise s'affichait en clair dans le tableau. %>
+              <td class="text-sm"><%- t(ns + ':section5.row' + i + 'Action', '') %></td>
             </tr>
             <% } %>
           </tbody>
