@@ -354,7 +354,8 @@
     "testAmourAmitie": "Love or friendship?",
     "testDependance": "Emotional dependency test",
     "testEx": "Does my ex still think about me test",
-    "testChargeMentale": "Mental load test for couples"
+    "testChargeMentale": "Mental load test for couples",
+    "quizRencontre": "First date questions"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

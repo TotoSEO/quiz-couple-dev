@@ -309,5 +309,11 @@
     "shortTitle": "Chi porta il carico mentale?",
     "description": "20 attività, due serie di risposte e lo scarto tra le due. Da soli o in due, risultato immediato.",
     "metaDescription": "Chi porta davvero il carico mentale nella vostra coppia? 20 attività sul pensarci, non sul farlo. In due, lo scarto tra le vostre risposte diventa il risultato."
+  },
+  "quizRencontre": {
+    "title": "Domande per un primo appuntamento: il gioco a 3 livelli",
+    "shortTitle": "Domande da primo appuntamento",
+    "description": "15 domande da farvi, in tre livelli sempre più personali. Niente da installare, niente da contare.",
+    "metaDescription": "Il gioco di domande per un primo appuntamento, in tre livelli di intimità crescente. 60 domande, 15 a partita, su un solo telefono."
   }
 }

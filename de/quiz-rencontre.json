@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "badge": "Kostenlos • 15 Fragen • 3 Level",
+    "title": "Die Fragen fürs erste Date",
+    "titleHighlight": "erste Date",
+    "description": "Ein Fragenspiel in drei Leveln, vom Leichten bis zum Persönlichen. Ihr antwortet beide, abwechselnd, auf demselben Handy. Keine Punkte, kein Gewinner.",
+    "subtitle": "Zu zweit, ohne Anmeldung"
+  },
+  "howTo": {
+    "title": "Wie wird gespielt?",
+    "step1": "Legt das Handy zwischen euch. Es gibt nichts zu installieren und kein Konto anzulegen.",
+    "step2": "Eine Frage erscheint mit ihrem Level. <strong>Ihr beide</strong> beantwortet sie, abwechselnd, laut.",
+    "step3": "Fünf Fragen pro Level, und ein Bildschirm kündigt den Wechsel an. Das Spiel steigert sich schrittweise: das ist das Prinzip des Formats.",
+    "step4": "Fünfzehn Fragen insgesamt, zufällig aus einem Vorrat von sechzig gezogen. Startet neu, und ihr bekommt andere.",
+    "outro": "Eine einzige Regel: wer als Zweiter antwortet, darf nicht „genauso“ sagen. Genau dort entscheidet sich das Gespräch."
+  },
+  "crossLink": {
+    "title": "Ihr kennt euch schon, wisst aber nicht, woran ihr seid?",
+    "text": "Dieses Spiel ist für Anfänge gemacht. Wenn die Frage eher lautet, ob das Gefühl Freundschaft ist oder etwas anderes, klärt der Test Liebe oder Freundschaft das in zwanzig Fragen.",
+    "button": "Test Liebe oder Freundschaft machen"
+  },
+  "section1": {
+    "title": "Warum ein erstes Date festfährt, fast immer auf dieselbe Weise",
+    "p1": "Ihr setzt euch, ihr bestellt, und das Gespräch stellt sich von selbst ein: Arbeit, Studium, Heimatstadt, Geschwister, Urlaub. Zwanzig Minuten später könntest du ein Formular über die Person gegenüber ausfüllen und weißt immer noch nicht, ob du sie wiedersehen willst.",
+    "p2": "Das Problem ist kein Mangel an Themen, sondern dass <strong>niemand sich als Erster öffnen will</strong>. Jeder stellt sachliche Fragen, weil sie risikolos sind und weil ihre Beantwortung zu nichts verpflichtet. Das nennt man ein Vorstellungsgespräch, und es bringt genau das hervor, was ein Vorstellungsgespräch hervorbringt: zwei höfliche Menschen, die sich nicht begegnet sind.",
+    "p3": "Was die Sache löst, ist keine originellere Frage. Es ist, <strong>dass jemand bereit ist, etwas von sich zu geben, und der andere auf derselben Höhe antwortet</strong>. Genau dieser Mechanismus, und nicht der Zufall gemeinsamer Vorlieben, erzeugt das Gefühl, jemanden zu kennen.",
+    "p4": "Dieses Spiel macht nichts anderes, als diesen Austausch möglich zu machen, ohne dass jemand allein vorpreschen muss. Die Frage stellt das Handy, sie ist also niemandem zuzurechnen, und beide antworten. Das Risiko wird geteilt und damit tragbar."
+  },
+  "section2": {
+    "title": "Die drei Level, und warum die Reihenfolge zählt",
+    "intro": "Das Spiel zieht nicht fünfzehn Fragen wahllos. Es spielt sie in Stufen, von der leichtesten zur persönlichsten, und kündigt jeden Wechsel an. Direkt ins dritte Level zu springen funktioniert nicht: es ist sogar die sicherste Art, jemanden zu vertreiben.",
+    "pillar1Title": "Level 1: zum Eis brechen",
+    "pillar1Text": "Leicht, manchmal witzig, nie indiskret. Der Sinn dieser Stufe ist nicht, etwas über den anderen zu erfahren, sondern <strong>die Gewohnheit einzuüben, wirklich zu antworten</strong> statt höflich zu antworten. Fragen, die man beantworten kann, ohne sich zu entblößen, die aber trotzdem drei Sekunden Nachdenken verlangen.",
+    "pillar2Title": "Level 2: um sich wirklich kennenzulernen",
+    "pillar2Text": "Jetzt geht es um das, was die Person geprägt hat: ihre Entscheidungen, was sie aufgegeben hat, was sie erwartet. Ihr gebt etwas von euch preis, aber noch nichts, was kostet. Das ist die längste Stufe im Gespräch, und oft die, in der klar wird, ob man weitermachen will.",
+    "pillar3Title": "Level 3: um weiterzugehen",
+    "pillar3Text": "Ängste, Bedauern, das Unausgesprochene, und vor allem das, was ihr schon voneinander seht. Diese Stufe verändert die Natur des Abends. Man darf sie ablehnen: passt eine Frage nicht, geht zur nächsten, niemand zählt Punkte."
+  },
+  "section3": {
+    "title": "Die fünf Reflexe, die ein Date-Gespräch töten",
+    "p1": "Das Spiel nützt nichts, wenn die Art zu antworten zunichtemacht, was es aufbaut. Diese fünf Reflexe sind die häufigsten, und alle haben sie.",
+    "signals": [
+      "<strong>„Genauso“ antworten.</strong> Das ist das einzige echte Verbot des Spiels. Selbst wenn es stimmt, gibt es die Frage zurück, ohne etwas dafür zu geben, und zerstört die Gegenseitigkeit, die alles trägt.",
+      "<strong>Fragen aneinanderreihen, ohne je zu antworten.</strong> Viele Fragen zu stellen wirkt interessiert, ist aber auch der beste Weg, nichts von sich preiszugeben. Nach einer Stunde geht der andere, hat alles gesagt und nichts erfahren.",
+      "<strong>Die Antwort des anderen korrigieren oder kommentieren.</strong> Eine persönliche Antwort verlangt keine Meinung, sie verlangt eine Antwort derselben Art. Der sicherste Weg, jemanden zu verschließen, ist ihm zu erklären, was er hätte fühlen sollen.",
+      "<strong>Einen Witz machen, sobald es ernst wird.</strong> Der Reflex ist verständlich und nimmt echte Peinlichkeit heraus, macht aber zugleich zunichte, was der andere gerade gewagt hat. Einmal geht das. Bei jeder Frage hebt das Gespräch nie ab.",
+      "<strong>Über den Ex reden.</strong> Nicht weil das Thema tabu wäre, sondern weil es allen Platz einnimmt und das Gespräch zu jemandem verschiebt, der nicht am Tisch sitzt."
+    ],
+    "outro": "Keiner dieser Reflexe ist für sich genommen schlimm. Schlimm werden sie, wenn sie systematisch sind, denn sie senden alle dieselbe Botschaft: <strong>ich bleibe lieber in Deckung</strong>. Und der andere versteht das viel schneller, als man denkt."
+  },
+  "section4": {
+    "title": "Was die Forschung hinter diesem Format wirklich sagt",
+    "p1": "Dieses Spiel stützt sich auf ein bestimmtes Verfahren, das oft zitiert und selten richtig gelesen wird. Die vier folgenden Punkte sind die entscheidenden, und der letzte ist der, den niemand erwähnt.",
+    "sub1Title": "Die Studie",
+    "sub1Text": "1997 veröffentlichen Arthur Aron und sein Team <em>The Experimental Generation of Interpersonal Closeness</em> im <em>Personality and Social Psychology Bulletin</em>. Fremde werden zu zweit zusammengesetzt und sprechen etwa dreiviertel Stunden, die einen über Belanglosigkeiten, die anderen entlang einer eigens gebauten Fragenliste. Die zweite Gruppe fühlt sich danach deutlich näher.",
+    "sub2Title": "Der Mechanismus",
+    "sub2Text": "Die Autoren fassen ihn in vier Worten: eine persönliche Selbstöffnung, die <strong>anhaltend, ansteigend und gegenseitig</strong> ist. Jedes dieser Worte zählt. Anhaltend, also kein einzelnes Geständnis. Ansteigend, also in Stufen. Gegenseitig, also beide, nie nur einer. Genau das ist die Architektur dieses Spiels.",
+    "sub3Title": "Die drei Serien",
+    "sub3Text": "Das ursprüngliche Verfahren umfasst sechsunddreißig Fragen in drei Serien zu zwölf, immer persönlicher, mit einer Pause dazwischen. Unsere Fassung übernimmt diese Dreiteilung mit eigenen Fragen und kürzt auf fünfzehn pro Runde: eine dreiviertel Stunde im Labor ist kein erstes Date.",
+    "sub4Title": "Was die Studie nicht sagt",
+    "sub4Text": "Sie sagt nicht, dass man sich verliebt. Gemessen wurde ein <strong>Gefühl von Nähe</strong>, kein Gefühl von Liebe, und das Etikett „die Fragen, mit denen man sich verliebt“ kam viel später, aus einem persönlichen Text in der Presse von 2015. Nähe ist eine ausgezeichnete Grundlage und garantiert nichts. Für ein erstes Date ist das schon viel."
+  },
+  "section5": {
+    "title": "Welches Level für welchen Rahmen",
+    "p1": "Nicht alles funktioniert überall. Diese Tabelle sagt euch, wie weit ihr je nach Kontext gehen könnt, denn dieselbe Frage kann je nach Umgebung sehr gut oder sehr schlecht ankommen.",
+    "headerScore": "Der Rahmen",
+    "headerLevel": "Wie weit gehen",
+    "headerAnalysis": "Warum",
+    "row1Score": "Ein Kaffee tagsüber, eine Stunde Zeit",
+    "row1Level": "Level 1 und der Anfang von 2",
+    "row1Analysis": "Der Rahmen ist kurz und öffentlich: die dritte Stufe verpufft dort, und niemand kann sich Zeit zum Antworten nehmen.",
+    "row2Score": "Ein Abendessen, ein ganzer Abend",
+    "row2Level": "Alle drei Level",
+    "row2Analysis": "Dafür ist das Spiel geschrieben. Die Zeit ist da, und der Ort erlaubt es, leiser zu sprechen.",
+    "row3Score": "Ein zweites oder drittes Treffen",
+    "row3Level": "Direkt zu Level 2",
+    "row3Analysis": "Die erste Stufe hat längst stattgefunden, ohne Spiel und unbemerkt. Sie zu wiederholen wirkte wie ein Rückschritt.",
+    "row4Score": "Per Video, auf Distanz",
+    "row4Level": "Alle drei, auf zwei Mal",
+    "row4Analysis": "Der Bildschirm ermüdet schneller als das Gegenüber. Hört nach dem zweiten Level auf und hebt das dritte für das nächste Mal auf.",
+    "tip": "Ein einfaches Signal dafür, ob ihr eine Stufe höher gehen könnt: führt der andere seine Antworten aus, ohne dass man nachfragt? Dann weiter. Bleiben die Antworten kurz und höflich, bleibt wo ihr seid, da ist nichts zu erzwingen."
+  },
+  "section6": {
+    "title": "Antworten zählt so viel wie Fragen",
+    "p1": "Das ist der am häufigsten verfehlte Punkt, auch bei Leuten, die das Spiel ernst nehmen. Eine gute Frage nützt nichts, wenn die Antwort schlecht ist, und eine gute Antwort heißt nicht eine brillante Antwort.",
+    "sub1Title": "Gib ein Beispiel, keine Kategorie",
+    "sub1Text": "„Ich bin eher ein ängstlicher Mensch“ sagt nichts und bleibt nicht hängen. „Ich habe viermal nachgesehen, ob ich meine Schlüssel dabeihabe, bevor ich losging“ sagt genau dasselbe und gibt ein Bild, das der andere behält. Antworten, die bleiben, sind immer Szenen, nie Adjektive.",
+    "sub2Title": "Lass die drei Sekunden Stille zu",
+    "sub2Text": "Bei den Fragen der Level 2 und 3 ist die erste Antwort selten die wahre. Die kleine Pause davor ist keine Peinlichkeit, die man füllen muss, sie ist das Zeichen, dass die Frage ernst genommen wurde. Lass sie stehen.",
+    "sub3Title": "Du darfst eine Frage ablehnen",
+    "sub3Text": "Und das ist eine Antwort für sich, sofern du es schlicht sagst statt so zu tun als ob. „Die behalte ich lieber für mich“ ist völlig in Ordnung und zerstört nichts. Was zerstört, ist danebenzuantworten und zu hoffen, dass es nicht auffällt."
+  },
+  "section7": {
+    "title": "Nach dem Date",
+    "p1": "Das Spiel erzeugt oft einen etwas verwirrenden Effekt: man hat das Gefühl, jemanden sehr gut zu kennen, den man vor drei Stunden getroffen hat. Das ist echt, es ist genau das, was das ursprüngliche Verfahren gemessen hat, und man sollte wissen, was es wert ist.",
+    "p2": "Dieses Gefühl ist <strong>Nähe, keine Geschichte</strong>. Es sagt, dass ihr miteinander reden konntet, was schon selten und keineswegs selbstverständlich ist. Über das Weitere sagt es nichts, denn das Weitere entscheidet sich an Dingen, die ein Abend nicht zeigt: wie mit Uneinigkeit umgegangen wird, Verlässlichkeit, ob jemand hält, was er ankündigt.",
+    "p3": "Der beste Gebrauch dieses Abends ist also nicht, Schlüsse zu ziehen, sondern <strong>drei Tage später eine der Antworten wieder aufzugreifen</strong>, die man euch gegeben hat. Sich an ein genaues Detail zu erinnern und darauf zurückzukommen schlägt jede Nachricht nach dem Date, weil es das Einzige ist, was beweist, dass man wirklich zugehört hat.",
+    "tip": "Und wenn es trotz des Spiels nicht gefunkt hat, ist das kein Scheitern des Formats. Zwei Menschen können sehr gut miteinander reden und sich trotzdem nicht wiedersehen wollen. Ihr werdet es nur an einem Abend statt an dreien gewusst haben."
+  },
+  "seo": {
+    "whyTitle": "Wann man dieses Spiel sonst noch herausholt",
+    "whySubtitle": "Es ist für Anfänge geschrieben, aber keine seiner Fragen setzt eine gemeinsame Geschichte voraus. Es funktioniert also überall dort, wo zwei Menschen sich kaum kennen und das ändern wollen.",
+    "card1Title": "Ein Blind Date",
+    "card1Text": "Hier hilft es am meisten. Wenn niemand den anderen ausgesucht hat, gibt es keine Geschichte zu erzählen, und ein Anstoß von außen nimmt dem Anfang das ganze Gewicht.",
+    "card2Title": "Eine beginnende Fernbeziehung",
+    "card2Text": "Per Video wiegen Pausen schwerer und das Gespräch bricht schneller ein. Eine Frage parat zu haben erspart die zwanzig Minuten Organisatorisches, mit denen diese Anrufe immer anfangen.",
+    "card3Title": "Ein junges Paar, ein paar Wochen",
+    "card3Text": "Nach den ersten Malen glaubt man oft, alles zu wissen. Das zweite Level zeigt meist das Gegenteil, besonders bei dem, was jeder von den kommenden Monaten erwartet.",
+    "card4Title": "Eine lange Fahrt oder eine Zugreise",
+    "card4Text": "Zwei Stunden einander gegenüber ohne Bildschirm sind der bestmögliche Rahmen für dieses Format. Und niemand kann vor dem Ende des dritten Levels gehen."
+  },
+  "faq": {
+    "q1": "Welche Fragen stellt man beim ersten Date?",
+    "a1": "Die besten sind nicht die originellsten, sondern die, die man selbst zu beantworten bereit ist. Eine sachliche Frage nach Beruf oder Heimatstadt verlangt niemandem etwas ab und schafft keine Nähe. Eine Frage, die verlangt zu wählen, sich zu erinnern oder etwas zuzugeben, bindet beide, sofern der Fragende sie auch beantwortet. Das ist das Prinzip dieses Spiels und seiner drei Level.",
+    "q2": "Stammt das Spiel von Arthur Arons 36 Fragen?",
+    "a2": "Es lehnt sich daran an, es übernimmt sie nicht. Das 1997 veröffentlichte Verfahren hatte sechsunddreißig Fragen in drei zunehmend persönlichen Serien, und diese gestufte Architektur haben wir behalten. Die sechzig Fragen des Spiels wurden für diese Seite geschrieben, und das Format wurde auf fünfzehn pro Runde gekürzt, weil ein erstes Date keine fünfundvierzigminütige Laborsitzung ist.",
+    "q3": "Kann man sich dadurch wirklich verlieben?",
+    "a3": "Nein, und dieses Versprechen verdient Misstrauen. Die ursprüngliche Studie maß ein Gefühl von Nähe, kein Gefühl von Liebe, und das Etikett „die Fragen, mit denen man sich verliebt“ stammt aus einem persönlichen Pressetext von 2015, nicht von den Forschenden. Was dieses Format verlässlich erzeugt, ist ein Gespräch, in dem echte Dinge gesagt werden. Das ist eine gute Grundlage, keine Garantie.",
+    "q4": "Und wenn mein Date das Prinzip seltsam findet?",
+    "a4": "Stell es als Spiel vor und nicht als Übung, das ändert alles. Das erste Level ist leicht genug, dass sich niemand geprüft fühlt, und ein oder zwei Fragen genügen meist, damit die Befangenheit fällt. Bleibt die Person nach der ersten Stufe zurückhaltend, hört dort auf: die Ablehnung ist selbst eine Information darüber, wie sie an Dinge herangeht.",
+    "q5": "Kann man spielen, ohne am Tisch oder einander gegenüber zu sitzen?",
+    "a5": "Ja, und manche Rahmen funktionieren sogar besser. Eine lange Autofahrt, ein Zug, ein Spaziergang: sich nicht anzusehen erleichtert die Fragen des dritten Levels enorm, weil man antworten kann, ohne einen Blick auszuhalten. Per Video hört lieber nach dem zweiten Level auf und hebt das dritte für ein anderes Mal auf.",
+    "q6": "Wie lange dauert eine Runde?",
+    "a6": "Das Spiel zieht fünfzehn Fragen, was zwischen zwanzig Minuten und sehr viel länger dauert. Nichts läuft gegen die Uhr, und eine einzige Frage kann ohne Weiteres eine Viertelstunde einnehmen. Wenn das passiert, startet nicht neu, um aufzuholen: genau dann hat das Spiel seine Arbeit getan."
+  }
+}

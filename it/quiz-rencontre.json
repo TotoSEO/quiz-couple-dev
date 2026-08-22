@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "badge": "Gratis • 15 domande • 3 livelli",
+    "title": "Le domande da farsi a un primo appuntamento",
+    "titleHighlight": "primo appuntamento",
+    "description": "Un gioco di domande in tre livelli, dal leggero all'intimo. Rispondete entrambi, a turno, sullo stesso telefono. Nessun punteggio, nessun vincitore.",
+    "subtitle": "In due, senza registrazione"
+  },
+  "howTo": {
+    "title": "Come si gioca?",
+    "step1": "Appoggiate il telefono tra voi due. Non c'è niente da installare né alcun account da creare.",
+    "step2": "Appare una domanda con il suo livello. Rispondete <strong>entrambi</strong>, a turno, ad alta voce.",
+    "step3": "Cinque domande per livello, e una schermata vi annuncia il passaggio al successivo. Il gioco sale gradualmente: è il principio stesso del formato.",
+    "step4": "Quindici domande in tutto, pescate a caso da un serbatoio di sessanta. Ricominciate e ne usciranno altre.",
+    "outro": "Una regola e una sola: chi risponde per secondo non ha il diritto di dire « uguale ». È lì che si gioca la conversazione."
+  },
+  "crossLink": {
+    "title": "Vi conoscete già, ma non sapete a che punto siete?",
+    "text": "Questo gioco è fatto per gli inizi. Se la domanda è piuttosto capire se quello che provi è amicizia o altro, il test amore o amicizia lo risolve in venti domande.",
+    "button": "Fare il test amore o amicizia"
+  },
+  "section1": {
+    "title": "Perché un primo appuntamento si arena, quasi sempre allo stesso modo",
+    "p1": "Vi sedete, ordinate, e la conversazione si monta da sola: il lavoro, gli studi, la città d'origine, i fratelli, le vacanze. Venti minuti dopo sapresti compilare un modulo anagrafico sulla persona che hai davanti, e non sai ancora se hai voglia di rivederla.",
+    "p2": "Il problema non è la mancanza di argomenti, è che <strong>nessuno vuole scoprirsi per primo</strong>. Ciascuno fa domande fattuali perché non comportano rischi e perché rispondervi non impegna a niente. Si chiama colloquio di lavoro, e produce esattamente quello che produce un colloquio di lavoro: due persone educate che non si sono incontrate.",
+    "p3": "Quello che sblocca la situazione non è una domanda più originale. È <strong>che qualcuno accetti di dare qualcosa di sé e che l'altro risponda alla stessa altezza</strong>. È questo meccanismo preciso, e non il caso delle affinità, a creare l'impressione di conoscere qualcuno.",
+    "p4": "Questo gioco non fa altro che rendere possibile quello scambio senza che nessuno debba lanciarsi da solo. La domanda la pone il telefono, quindi non è imputabile a nessuno, e rispondono entrambi. Il rischio è condiviso, e per questo diventa sopportabile."
+  },
+  "section2": {
+    "title": "I tre livelli, e perché l'ordine conta",
+    "intro": "Il gioco non pesca quindici domande a caso. Le gioca per livelli, dal più leggero al più personale, e vi avvisa a ogni cambio. Saltare direttamente al terzo livello non funziona: è anzi il modo migliore per far scappare qualcuno.",
+    "pillar1Title": "Livello 1: per rompere il ghiaccio",
+    "pillar1Text": "Leggero, a volte divertente, mai indiscreto. Lo scopo di questo livello non è imparare cose sull'altro, è <strong>prendere l'abitudine di rispondere davvero</strong> invece di rispondere per educazione. Domande a cui si può rispondere senza scoprirsi, ma che chiedono comunque tre secondi di riflessione.",
+    "pillar2Title": "Livello 2: per conoscersi davvero",
+    "pillar2Text": "Si passa a quello che ha costruito la persona: le sue decisioni, quello che ha smesso di fare, quello che si aspetta. Date qualcosa di voi, ma niente che costi ancora. È il livello più lungo in conversazione, e spesso quello in cui si capisce se si ha voglia di continuare.",
+    "pillar3Title": "Livello 3: per andare più a fondo",
+    "pillar3Text": "Le paure, i rimpianti, quello che non si dice e soprattutto quello che già vedete l'uno dell'altro. È il livello che cambia la natura della serata. Si può rifiutare: se la domanda non ti va, passa alla successiva, nessuno conta i punti."
+  },
+  "section3": {
+    "title": "I cinque riflessi che uccidono una conversazione da primo appuntamento",
+    "p1": "Il gioco non serve a nulla se il modo di rispondere annulla quello che mette in piedi. Questi cinque riflessi sono i più frequenti, e li hanno tutti.",
+    "signals": [
+      "<strong>Rispondere « uguale ».</strong> È l'unico vero divieto del gioco. Anche quando è vero, rimanda la domanda senza dare niente in cambio e rompe la reciprocità che fa funzionare tutto.",
+      "<strong>Incatenare domande senza mai rispondere.</strong> Fare molte domande passa per interesse, ma è anche il modo migliore per non consegnare nulla di sé. Dopo un'ora, l'altro se ne va avendo detto tutto e imparato niente.",
+      "<strong>Correggere o commentare la risposta dell'altro.</strong> Una risposta personale non chiede un parere, chiede una risposta dello stesso ordine. Il modo più sicuro per chiudere qualcuno è spiegargli cosa avrebbe dovuto provare.",
+      "<strong>Fare una battuta appena la cosa si fa seria.</strong> Il riflesso è comprensibile e disinnesca davvero l'imbarazzo, solo che annulla anche quello che l'altro aveva appena osato. Una volta passa. A ogni domanda, la conversazione non decollerà mai.",
+      "<strong>Parlare del proprio ex.</strong> Non perché l'argomento sia tabù, ma perché occupa tutto lo spazio e sposta la conversazione verso qualcuno che non è a tavola."
+    ],
+    "outro": "Nessuno di questi riflessi è grave preso da solo. Lo diventa quando è sistematico, perché mandano tutti lo stesso messaggio: <strong>preferisco restare al riparo</strong>. E l'altro lo capisce molto più in fretta di quanto si creda."
+  },
+  "section4": {
+    "title": "Cosa dice davvero la ricerca dietro questo formato",
+    "p1": "Questo gioco si ispira a un protocollo preciso, molto citato e raramente letto per bene. I quattro punti qui sotto sono quelli che contano, e l'ultimo è quello che nessuno menziona.",
+    "sub1Title": "Lo studio",
+    "sub1Text": "Nel 1997 Arthur Aron e la sua équipe pubblicano <em>The Experimental Generation of Interpersonal Closeness</em> sul <em>Personality and Social Psychology Bulletin</em>. Degli sconosciuti vengono messi a coppie e parlano per circa tre quarti d'ora, alcuni di argomenti banali, altri seguendo una lista di domande costruita apposta. I secondi si dichiarano nettamente più vicini alla fine.",
+    "sub2Title": "Il meccanismo",
+    "sub2Text": "Gli autori lo riassumono in quattro parole: uno svelamento personale <strong>sostenuto, crescente e reciproco</strong>. Ognuna di queste parole conta. Sostenuto, quindi non una confidenza isolata. Crescente, quindi per livelli. Reciproco, quindi entrambi, mai uno solo. È esattamente l'architettura di questo gioco.",
+    "sub3Title": "Le tre serie",
+    "sub3Text": "Il protocollo originale ha trentasei domande ripartite in tre serie da dodici, sempre più personali, con una pausa tra ciascuna. La nostra versione riprende questa divisione in tre livelli con le proprie domande e accorcia a quindici per partita: tre quarti d'ora di laboratorio non sono un primo appuntamento.",
+    "sub4Title": "Quello che lo studio non dice",
+    "sub4Text": "Non dice che ci si innamora. Quello che è stato misurato è un <strong>sentimento di vicinanza</strong>, non un sentimento amoroso, e l'etichetta « le domande per innamorarsi » è arrivata molto dopo, da un racconto personale pubblicato sulla stampa nel 2015. La vicinanza è un'ottima base e non garantisce niente. È già molto per un primo appuntamento."
+  },
+  "section5": {
+    "title": "Quale livello per quale momento",
+    "p1": "Non tutto funziona nello stesso posto. Questa tabella vi dice fino a dove spingervi a seconda del contesto, perché la stessa domanda può andare benissimo o malissimo secondo la cornice.",
+    "headerScore": "Il momento",
+    "headerLevel": "Fino a dove andare",
+    "headerAnalysis": "Perché",
+    "row1Score": "Un caffè di giorno, un'ora davanti",
+    "row1Level": "Livello 1, e l'inizio del 2",
+    "row1Analysis": "La cornice è breve e pubblica: il terzo livello cade nel vuoto e nessuno ha il tempo di rispondere.",
+    "row2Score": "Una cena, una vera serata",
+    "row2Level": "Tutti e tre i livelli",
+    "row2Analysis": "È il formato per cui il gioco è scritto. Il tempo c'è, e il posto permette di abbassare la voce.",
+    "row3Score": "Una seconda o terza volta",
+    "row3Level": "Direttamente al livello 2",
+    "row3Analysis": "Il primo livello è già stato fatto, senza il gioco e senza saperlo. Rifarlo darebbe un'impressione di passo indietro.",
+    "row4Score": "In videochiamata, a distanza",
+    "row4Level": "Tutti e tre, in due volte",
+    "row4Analysis": "Lo schermo stanca più in fretta del faccia a faccia. Fermatevi dopo il secondo livello e tenete il terzo per la volta dopo.",
+    "tip": "Un segnale semplice per sapere se potete salire di livello: l'altro sviluppa le sue risposte senza che glielo si chieda? Se sì, continuate. Se restano corte ed educate, restate dove siete, non c'è niente da forzare."
+  },
+  "section6": {
+    "title": "Rispondere conta quanto chiedere",
+    "p1": "È il punto più spesso mancato, anche da chi gioca in buona fede. Fare una buona domanda non serve a niente se la risposta è cattiva, e una buona risposta non vuol dire una risposta brillante.",
+    "sub1Title": "Dai un esempio, non una categoria",
+    "sub1Text": "« Sono una persona piuttosto ansiosa » non dice niente e non resta. « Ho controllato quattro volte di avere le chiavi prima di uscire » dice esattamente la stessa cosa dando un'immagine che l'altro si terrà. Le risposte che restano sono sempre scene, mai aggettivi.",
+    "sub2Title": "Accetta il silenzio di tre secondi",
+    "sub2Text": "Sulle domande dei livelli 2 e 3, la prima risposta che arriva raramente è quella vera. Il piccolo vuoto prima di rispondere non è un imbarazzo da riempire, è il segno che la domanda è stata presa sul serio. Lascialo durare.",
+    "sub3Title": "Hai il diritto di rifiutare una domanda",
+    "sub3Text": "Ed è una risposta di per sé, a patto di dirlo con semplicità invece di far finta. « Quella preferisco tenermela » è perfettamente accettabile e non rompe niente. Quello che rompe è rispondere di lato sperando che non si veda."
+  },
+  "section7": {
+    "title": "Dopo l'appuntamento",
+    "p1": "Il gioco produce spesso un effetto un po' spiazzante: si ha la sensazione di conoscere molto bene qualcuno incontrato tre ore prima. È reale, è esattamente quello che misurava il protocollo originale, e conviene sapere quanto vale.",
+    "p2": "Quella sensazione è <strong>vicinanza, non una storia</strong>. Dice che avete saputo parlarvi, il che è già raro e tutt'altro che garantito. Non dice nulla del seguito, perché il seguito si gioca su cose che una serata non mostra: come si gestisce un disaccordo, l'affidabilità, il fatto di mantenere quello che si annuncia.",
+    "p3": "Il miglior uso di quella serata non è quindi trarne conclusioni, è <strong>riprendere tre giorni dopo una delle risposte che vi hanno dato</strong>. Ricordare un dettaglio preciso e tornarci sopra vale più di qualsiasi messaggio del dopo appuntamento, perché è l'unica cosa che dimostra che stavate davvero ascoltando.",
+    "tip": "E se la scintilla non è scattata nonostante il gioco, non è un fallimento del formato. Due persone possono parlarsi benissimo e non avere voglia di rivedersi. L'avrete semplicemente saputo in una serata invece che in tre."
+  },
+  "seo": {
+    "whyTitle": "Quando tirare fuori questo gioco, oltre a un primo appuntamento",
+    "whySubtitle": "È scritto per gli inizi, ma nessuna delle sue domande presuppone una storia comune. Funziona quindi ovunque due persone si conoscano poco e vogliano rimediare.",
+    "card1Title": "Un appuntamento al buio",
+    "card1Text": "È il caso in cui serve di più. Quando nessuno ha scelto l'altro non c'è nessuna storia da raccontare, e un appoggio esterno toglie tutto il peso della partenza.",
+    "card2Title": "Una relazione a distanza che comincia",
+    "card2Text": "In videochiamata i silenzi pesano di più e la conversazione crolla prima. Avere una domanda a portata di mano evita i venti minuti di logistica con cui queste chiamate cominciano sempre.",
+    "card3Title": "Una coppia recente, di qualche settimana",
+    "card3Text": "Passate le prime volte, si crede spesso di aver visto tutto. Il secondo livello dimostra in genere il contrario, soprattutto su quello che ciascuno si aspetta dai mesi che arrivano.",
+    "card4Title": "Un viaggio lungo in auto o in treno",
+    "card4Text": "Due ore faccia a faccia senza schermo sono la cornice migliore possibile per questo formato. E nessuno può andarsene prima della fine del terzo livello."
+  },
+  "faq": {
+    "q1": "Quali domande fare a un primo appuntamento?",
+    "a1": "Le migliori non sono le più originali, sono quelle a cui sei disposto a rispondere tu stesso. Una domanda fattuale sul lavoro o sulla città d'origine non chiede niente a nessuno e non crea nessuna vicinanza. Una domanda che chiede di scegliere, di ricordare o di ammettere qualcosa impegna entrambe le persone, a patto che chi la pone risponda anche lui. È il principio di questo gioco e dei suoi tre livelli.",
+    "q2": "Il gioco viene dalle 36 domande di Arthur Aron?",
+    "a2": "Si ispira a quelle, non le riprende. Il protocollo pubblicato nel 1997 aveva trentasei domande in tre serie sempre più personali, ed è questa architettura a livelli che abbiamo conservato. Le sessanta domande del gioco sono state scritte per questo sito, e il formato è stato accorciato a quindici per partita perché un primo appuntamento non è una seduta di laboratorio di quarantacinque minuti.",
+    "q3": "Può davvero far innamorare qualcuno?",
+    "a3": "No, e di quella promessa bisogna diffidare. Lo studio originale misurava un sentimento di vicinanza, non un sentimento amoroso, e l'etichetta « le domande per innamorarsi » viene da un racconto personale uscito sulla stampa nel 2015, non dai ricercatori. Quello che questo formato produce in modo affidabile è una conversazione in cui ci si dicono cose vere. È una buona base, non una garanzia.",
+    "q4": "E se al mio appuntamento il principio sembra strano?",
+    "a4": "Presentalo come un gioco e non come un esercizio, cambia tutto. Il primo livello è abbastanza leggero perché nessuno si senta esaminato, e bastano una o due domande perché l'imbarazzo cada. Se la persona resta reticente dopo il primo livello, fermatevi lì: il rifiuto è di per sé un'informazione su come affronta le cose.",
+    "q5": "Si può giocare senza essere a tavola né faccia a faccia?",
+    "a5": "Sì, e certe cornici funzionano anche meglio. Un viaggio lungo in auto, un treno, una passeggiata: non guardarsi facilita moltissimo le domande del terzo livello, perché si può rispondere senza sostenere uno sguardo. In videochiamata, fermatevi piuttosto dopo il secondo livello e tenete il terzo per un'altra volta.",
+    "q6": "Quanto dura una partita?",
+    "a6": "Il gioco pesca quindici domande, il che richiede dai venti minuti a molto di più. Niente è cronometrato, e una sola domanda può benissimo occupare un quarto d'ora. Se succede, non riavviate il gioco per recuperare: è precisamente il momento in cui ha fatto il suo lavoro."
+  }
+}

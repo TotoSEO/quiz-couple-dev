@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "badge": "Free • 15 questions • 3 levels",
+    "title": "The questions to ask on a first date",
+    "titleHighlight": "first date",
+    "description": "A question game in three tiers, from light to intimate. You both answer, in turn, on the same phone. No score, no winner.",
+    "subtitle": "For two, no signup"
+  },
+  "howTo": {
+    "title": "How do you play?",
+    "step1": "Put the phone down between the two of you. There is nothing to install and no account to create.",
+    "step2": "A question appears with its level. <strong>Both of you</strong> answer it, in turn, out loud.",
+    "step3": "Five questions per level, and a screen announces each move up. The game escalates gradually: that is the whole principle of the format.",
+    "step4": "Fifteen questions in all, drawn at random from a bank of sixty. Start again and you will land on different ones.",
+    "outro": "One rule and one only: whoever answers second is not allowed to say « same ». That is where the conversation actually happens."
+  },
+  "crossLink": {
+    "title": "You already know each other, but you don't know where you stand?",
+    "text": "This game is built for beginnings. If the real question is whether what you feel is friendship or something else, the love or friendship test settles it in twenty questions.",
+    "button": "Take the love or friendship test"
+  },
+  "section1": {
+    "title": "Why a first date stalls, almost always the same way",
+    "p1": "You sit down, you order, and the conversation sets itself up: work, studies, hometown, siblings, holidays. Twenty minutes later you could fill in an administrative form about the person opposite you, and you still have no idea whether you want to see them again.",
+    "p2": "The problem is not a shortage of topics, it is that <strong>nobody wants to be the first to open up</strong>. Each of you asks factual questions because they carry no risk, and because answering them commits to nothing. That is called a job interview, and it produces exactly what a job interview produces: two polite people who have not met.",
+    "p3": "What unblocks it is not a more original question. It is <strong>someone agreeing to give something of themselves, and the other answering at the same level</strong>. That precise mechanism, and not the luck of having things in common, is what creates the feeling of knowing someone.",
+    "p4": "This game does nothing but make that exchange possible without anyone having to go first alone. The question is asked by the phone, so it cannot be pinned on either of you, and you both answer it. The risk is shared, which is what makes it bearable."
+  },
+  "section2": {
+    "title": "The three levels, and why the order matters",
+    "intro": "The game does not draw fifteen questions at random. It plays them in tiers, from the lightest to the most personal, and it warns you at every change. Jumping straight to the third level does not work: it is the surest way to make someone leave.",
+    "pillar1Title": "Level 1: to break the ice",
+    "pillar1Text": "Light, sometimes funny, never intrusive. The point of this tier is not to learn things about the other person, it is <strong>to get into the habit of answering for real</strong> rather than answering politely. Questions you can answer without exposing yourself, but which still take three seconds of thought.",
+    "pillar2Title": "Level 2: to actually get to know each other",
+    "pillar2Text": "Now to what built the person: their decisions, what they stopped doing, what they expect. You give something of yourself, but nothing that costs anything yet. This is the longest tier in conversation, and often the one where you work out whether you want to continue.",
+    "pillar3Title": "Level 3: to go further",
+    "pillar3Text": "Fears, regrets, what goes unsaid, and above all what you already see in each other. This is the tier that changes the nature of the evening. It can be declined: if a question does not suit you, move on, nobody is keeping score."
+  },
+  "section3": {
+    "title": "The five reflexes that kill a first-date conversation",
+    "p1": "The game is useless if the way you answer cancels out what it sets up. These five reflexes are the most common, and everyone has them.",
+    "signals": [
+      "<strong>Answering « same ».</strong> This is the only real prohibition in the game. Even when it is true, it hands the question back without giving anything in return, and it breaks the reciprocity that makes the whole thing work.",
+      "<strong>Firing off questions without ever answering.</strong> Asking a lot of questions passes for interest, but it is also the best way to give nothing away. An hour in, the other person leaves having said everything and learned nothing.",
+      "<strong>Correcting or commenting on the other's answer.</strong> A personal answer does not call for an opinion, it calls for an answer of the same kind. The surest way to close someone down is to explain what they should have felt.",
+      "<strong>Cracking a joke the moment it gets serious.</strong> The reflex is understandable and it genuinely defuses awkwardness, except that it also cancels what the other person had just dared. Once is fine. On every question, the conversation will never take off.",
+      "<strong>Talking about your ex.</strong> Not because the subject is taboo, but because it takes up all the space and moves the conversation towards somebody who is not at the table."
+    ],
+    "outro": "None of these reflexes is serious on its own. They become serious when they are systematic, because they all send the same message: <strong>I would rather stay safe</strong>. And the other person picks that up much faster than you would think."
+  },
+  "section4": {
+    "title": "What the research behind this format actually says",
+    "p1": "This game draws on a specific protocol, widely quoted and rarely read properly. The four points below are the ones that matter, and the last is the one nobody mentions.",
+    "sub1Title": "The study",
+    "sub1Text": "In 1997, Arthur Aron and his team published <em>The Experimental Generation of Interpersonal Closeness</em> in the <em>Personality and Social Psychology Bulletin</em>. Strangers were paired up and talked for around forty-five minutes, some about small talk, others through a purpose-built list of questions. The second group reported feeling markedly closer afterwards.",
+    "sub2Title": "The mechanism",
+    "sub2Text": "The authors sum it up in four words: personal self-disclosure that is <strong>sustained, escalating and reciprocal</strong>. Every one of those words counts. Sustained, so not a single confession. Escalating, so in tiers. Reciprocal, so both people, never one. That is exactly the architecture of this game.",
+    "sub3Title": "The three sets",
+    "sub3Text": "The original protocol has thirty-six questions in three sets of twelve, increasingly personal, with a pause between each. Our version keeps that three-tier split with its own questions, and shortens it to fifteen per round: forty-five minutes in a lab is not a first date.",
+    "sub4Title": "What the study does not say",
+    "sub4Text": "It does not say you fall in love. What was measured is a <strong>feeling of closeness</strong>, not a feeling of love, and the « questions that make you fall in love » label came much later, from a personal essay published in the press in 2015. Closeness is an excellent starting point and it guarantees nothing. That is already a lot for a first date."
+  },
+  "section5": {
+    "title": "Which level for which setting",
+    "p1": "Not everything works in the same place. This table tells you how far to go depending on the context, because the same question can land beautifully or terribly depending on the surroundings.",
+    "headerScore": "The setting",
+    "headerLevel": "How far to go",
+    "headerAnalysis": "Why",
+    "row1Score": "A daytime coffee, an hour ahead of you",
+    "row1Level": "Level 1, and the start of 2",
+    "row1Analysis": "The setting is short and public: the third tier falls flat there, and nobody has time to answer properly.",
+    "row2Score": "Dinner, a whole evening",
+    "row2Level": "All three levels",
+    "row2Analysis": "This is the format the game is written for. The time is there, and the room lets you lower your voice.",
+    "row3Score": "A second or third meeting",
+    "row3Level": "Straight to level 2",
+    "row3Analysis": "The first tier has already happened, without the game and without you noticing. Redoing it would feel like a step backwards.",
+    "row4Score": "On video, long distance",
+    "row4Level": "All three, across two calls",
+    "row4Analysis": "Screens tire people faster than being face to face. Stop after the second level and keep the third for next time.",
+    "tip": "A simple signal for knowing whether you can move up a tier: does the other person expand on their answers without being asked? If so, keep going. If the answers stay short and polite, stay where you are, there is nothing to force."
+  },
+  "section6": {
+    "title": "Answering counts as much as asking",
+    "p1": "This is the point most often missed, including by people playing in good faith. Asking a good question is worthless if the answer is bad, and a good answer does not mean a clever one.",
+    "sub1Title": "Give an example, not a category",
+    "sub1Text": "« I'm quite an anxious person » says nothing and does not stick. « I checked four times that I had my keys before coming » says exactly the same thing while giving the other person an image they will keep. Answers that land are always scenes, never adjectives.",
+    "sub2Title": "Allow the three-second silence",
+    "sub2Text": "On level 2 and 3 questions, the first answer that comes is rarely the true one. The small pause before answering is not an awkwardness to fill, it is the sign that the question was taken seriously. Let it run.",
+    "sub3Title": "You are allowed to decline a question",
+    "sub3Text": "And that is an answer in itself, provided you say so plainly rather than pretending. « I'd rather keep that one » is perfectly acceptable and breaks nothing. What does break things is answering beside the point and hoping it goes unnoticed."
+  },
+  "section7": {
+    "title": "After the date",
+    "p1": "The game often produces a slightly unsettling effect: you feel you know someone very well whom you met three hours ago. It is real, it is exactly what the original protocol measured, and it is worth knowing what it is worth.",
+    "p2": "That feeling is <strong>closeness, not a relationship</strong>. It says you were able to talk to each other, which is already rare and far from guaranteed. It says nothing about what follows, because what follows plays out on things one evening does not show: how disagreement gets handled, reliability, whether people do what they say.",
+    "p3": "So the best use of that evening is not to draw conclusions from it, it is to <strong>pick up one of the answers you were given three days later</strong>. Remembering a specific detail and coming back to it beats any post-date message, because it is the only thing that proves you were genuinely listening.",
+    "tip": "And if it did not click despite the game, that is not a failure of the format. Two people can talk very well and not want to see each other again. You will simply have found out in one evening instead of three."
+  },
+  "seo": {
+    "whyTitle": "When to bring this game out, other than a first date",
+    "whySubtitle": "It was written for beginnings, but none of its questions assumes a shared history. So it works anywhere two people barely know each other and want to fix that.",
+    "card1Title": "A blind date",
+    "card1Text": "This is where it helps most. When neither person chose the other, there is no story to tell, and an outside prompt removes all the weight of getting started.",
+    "card2Title": "A long-distance relationship starting up",
+    "card2Text": "On video, silences weigh more and the conversation dies faster. Having a question to hand avoids the twenty minutes of logistics these calls always begin with.",
+    "card3Title": "A new couple, a few weeks in",
+    "card3Text": "After the first few times, people often think they have covered everything. The second level usually shows otherwise, particularly on what each of you expects from the months ahead.",
+    "card4Title": "A long drive or a train journey",
+    "card4Text": "Two hours facing each other with no screen is the best possible setting for this format. And nobody can leave before the end of the third level."
+  },
+  "faq": {
+    "q1": "What questions should you ask on a first date?",
+    "a1": "The best ones are not the most original, they are the ones you are prepared to answer yourself. A factual question about work or hometown asks nothing of anyone and creates no closeness. A question that requires choosing, remembering or admitting something commits both people, provided the person asking answers it too. That is the principle of this game and of its three levels.",
+    "q2": "Does the game come from Arthur Aron's 36 questions?",
+    "a2": "It draws on them, it does not reuse them. The protocol published in 1997 had thirty-six questions in three increasingly personal sets, and it is that tiered architecture we kept. The game's sixty questions were written for this site, and the format was shortened to fifteen per round because a first date is not a forty-five-minute lab session.",
+    "q3": "Can it really make someone fall in love?",
+    "a3": "No, and that promise deserves suspicion. The original study measured a feeling of closeness, not a feeling of love, and the « questions that make you fall in love » label comes from a personal essay published in the press in 2015, not from the researchers. What this format reliably produces is a conversation where real things get said. That is a good basis, not a guarantee.",
+    "q4": "What if my date finds the idea strange?",
+    "a4": "Present it as a game rather than an exercise, that changes everything. The first level is light enough that nobody feels examined, and one or two questions are usually enough for the awkwardness to drop. If the person is still reluctant after the first tier, stop there: the refusal is itself information about how they approach things.",
+    "q5": "Can you play without being at a table or face to face?",
+    "a5": "Yes, and some settings work even better. A long drive, a train, a walk: not looking at each other makes the third level far easier, because you can answer without holding someone's gaze. On video, stop after the second level and keep the third for another time.",
+    "q6": "How long does a round take?",
+    "a6": "The game draws fifteen questions, which takes anywhere from twenty minutes to a great deal longer. Nothing is timed, and a single question can easily take a quarter of an hour. If that happens, do not restart the game to catch up: that is precisely the moment it has done its job."
+  }
+}

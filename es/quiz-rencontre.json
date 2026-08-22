@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "badge": "Gratis • 15 preguntas • 3 niveles",
+    "title": "Las preguntas que hacerse en una primera cita",
+    "titleHighlight": "primera cita",
+    "description": "Un juego de preguntas en tres niveles, de lo ligero a lo íntimo. Respondéis los dos, por turnos, en el mismo móvil. Sin puntuación y sin ganador.",
+    "subtitle": "En pareja, sin registro"
+  },
+  "howTo": {
+    "title": "¿Cómo se juega?",
+    "step1": "Dejad el móvil entre los dos. No hay nada que instalar ni ninguna cuenta que crear.",
+    "step2": "Aparece una pregunta con su nivel. Respondéis <strong>los dos</strong>, por turnos, en voz alta.",
+    "step3": "Cinco preguntas por nivel, y una pantalla os anuncia el paso al siguiente. El juego sube poco a poco: es el principio mismo del formato.",
+    "step4": "Quince preguntas en total, sacadas al azar de un banco de sesenta. Volved a empezar y saldrán otras.",
+    "outro": "Una regla y solo una: quien responde en segundo lugar no tiene derecho a decir « lo mismo ». Ahí es donde se juega la conversación."
+  },
+  "crossLink": {
+    "title": "¿Ya os conocéis, pero no sabéis en qué punto estáis?",
+    "text": "Este juego está hecho para los comienzos. Si la pregunta es más bien saber si lo que sientes es amistad u otra cosa, el test amor o amistad lo resuelve en veinte preguntas.",
+    "button": "Hacer el test amor o amistad"
+  },
+  "section1": {
+    "title": "Por qué una primera cita se atasca, casi siempre de la misma manera",
+    "p1": "Os sentáis, pedís, y la conversación se monta sola: el trabajo, los estudios, la ciudad de origen, los hermanos, las vacaciones. Veinte minutos después sabrías rellenar un formulario administrativo sobre la persona que tienes enfrente, y sigues sin saber si quieres volver a verla.",
+    "p2": "El problema no es la falta de temas, es que <strong>nadie quiere abrirse primero</strong>. Cada uno hace preguntas factuales porque no tienen riesgo, y porque responderlas no compromete a nada. A eso se le llama una entrevista de trabajo, y produce exactamente lo que produce una entrevista de trabajo: dos personas educadas que no se han encontrado.",
+    "p3": "Lo que desbloquea la situación no es una pregunta más original. Es <strong>que alguien acepte dar algo de sí mismo y que el otro responda a la misma altura</strong>. Es ese mecanismo preciso, y no la casualidad de las afinidades, lo que crea la impresión de conocer a alguien.",
+    "p4": "Este juego no hace otra cosa que hacer posible ese intercambio sin que nadie tenga que lanzarse solo. La pregunta la hace el móvil, así que no es imputable a nadie, y los dos responden. El riesgo se comparte, y por eso se vuelve soportable."
+  },
+  "section2": {
+    "title": "Los tres niveles, y por qué el orden importa",
+    "intro": "El juego no saca quince preguntas al azar. Las juega por niveles, del más ligero al más personal, y os avisa en cada cambio. Saltar directamente al tercer nivel no funciona: es incluso la mejor manera de hacer huir a alguien.",
+    "pillar1Title": "Nivel 1: para romper el hielo",
+    "pillar1Text": "Ligero, a veces divertido, nunca indiscreto. El objetivo de este nivel no es aprender cosas del otro, es <strong>coger la costumbre de responder de verdad</strong> en lugar de responder por educación. Preguntas que se pueden responder sin descubrirse, pero que exigen pensar tres segundos.",
+    "pillar2Title": "Nivel 2: para conoceros de verdad",
+    "pillar2Text": "Se pasa a lo que ha construido a la persona: sus decisiones, lo que ha dejado de hacer, lo que espera. Das algo de ti, pero nada que cueste todavía. Es el nivel más largo en conversación, y a menudo aquel en el que se entiende si hay ganas de continuar.",
+    "pillar3Title": "Nivel 3: para ir más lejos",
+    "pillar3Text": "Los miedos, los arrepentimientos, lo que no se dice y, sobre todo, lo que ya veis el uno del otro. Es el nivel que cambia la naturaleza de la velada. Se puede rechazar: si la pregunta no te encaja, pasa a la siguiente, nadie cuenta los puntos."
+  },
+  "section3": {
+    "title": "Los cinco reflejos que matan una conversación de primera cita",
+    "p1": "El juego no sirve de nada si la forma de responder anula lo que pone en marcha. Estos cinco reflejos son los más frecuentes, y los tiene todo el mundo.",
+    "signals": [
+      "<strong>Responder « lo mismo ».</strong> Es la única prohibición real del juego. Aunque sea verdad, devuelve la pregunta sin dar nada a cambio y rompe la reciprocidad que lo hace funcionar todo.",
+      "<strong>Encadenar preguntas sin responder nunca.</strong> Hacer muchas preguntas pasa por interés, pero también es la mejor manera de no entregar nada de uno mismo. Al cabo de una hora, el otro se va habiéndolo dicho todo y sin haber aprendido nada.",
+      "<strong>Corregir o comentar la respuesta del otro.</strong> Una respuesta personal no pide una opinión, pide una respuesta del mismo orden. La forma más segura de cerrar a alguien es explicarle lo que debería haber sentido.",
+      "<strong>Hacer un chiste en cuanto la cosa se pone seria.</strong> El reflejo es comprensible y desactiva de verdad la incomodidad, salvo que también anula lo que el otro acababa de atreverse a decir. Una vez, pasa. En cada pregunta, la conversación no despegará nunca.",
+      "<strong>Hablar de tu ex.</strong> No porque el tema sea tabú, sino porque ocupa todo el espacio y desplaza la conversación hacia alguien que no está en la mesa."
+    ],
+    "outro": "Ninguno de estos reflejos es grave por sí solo. Lo son cuando son sistemáticos, porque todos mandan el mismo mensaje: <strong>prefiero quedarme a resguardo</strong>. Y el otro lo entiende mucho más rápido de lo que se cree."
+  },
+  "section4": {
+    "title": "Lo que dice de verdad la investigación detrás de este formato",
+    "p1": "Este juego se inspira en un protocolo preciso, muy citado y poco leído correctamente. Los cuatro puntos siguientes son los que cuentan, y el último es el que nadie menciona.",
+    "sub1Title": "El estudio",
+    "sub1Text": "En 1997, Arthur Aron y su equipo publican <em>The Experimental Generation of Interpersonal Closeness</em> en el <em>Personality and Social Psychology Bulletin</em>. Se emparejan desconocidos que hablan durante unos tres cuartos de hora, unos sobre temas anodinos, otros siguiendo una lista de preguntas hecha a propósito. Los segundos se declaran claramente más cercanos al terminar.",
+    "sub2Title": "El mecanismo",
+    "sub2Text": "Los autores lo resumen en cuatro palabras: un desvelamiento personal <strong>sostenido, creciente y recíproco</strong>. Cada una de esas palabras cuenta. Sostenido, o sea no una confidencia aislada. Creciente, o sea por niveles. Recíproco, o sea los dos, nunca uno solo. Es exactamente la arquitectura de este juego.",
+    "sub3Title": "Las tres series",
+    "sub3Text": "El protocolo original tiene treinta y seis preguntas repartidas en tres series de doce, cada vez más personales, con una pausa entre cada una. Nuestra versión mantiene ese reparto en tres niveles con sus propias preguntas y lo acorta a quince por partida: tres cuartos de hora de laboratorio no son una primera cita.",
+    "sub4Title": "Lo que el estudio no dice",
+    "sub4Text": "No dice que uno se enamore. Lo que se midió es un <strong>sentimiento de cercanía</strong>, no un sentimiento amoroso, y la etiqueta « las preguntas para enamorarse » llegó mucho después, de un relato personal publicado en la prensa en 2015. La cercanía es una base excelente y no garantiza nada. Ya es mucho para una primera cita."
+  },
+  "section5": {
+    "title": "Qué nivel para qué momento",
+    "p1": "No todo se juega en el mismo sitio. Esta tabla te dice hasta dónde llegar según el contexto, porque la misma pregunta puede encajar muy bien o muy mal según el decorado.",
+    "headerScore": "El momento",
+    "headerLevel": "Hasta dónde llegar",
+    "headerAnalysis": "Por qué",
+    "row1Score": "Un café de día, una hora por delante",
+    "row1Level": "Nivel 1, y el principio del 2",
+    "row1Analysis": "El marco es corto y público: el tercer nivel cae en el vacío y nadie tiene tiempo de responder.",
+    "row2Score": "Una cena, una velada de verdad",
+    "row2Level": "Los tres niveles",
+    "row2Analysis": "Es el formato para el que está escrito el juego. El tiempo está ahí y el sitio permite bajar la voz.",
+    "row3Score": "Una segunda o tercera vez",
+    "row3Level": "Directos al nivel 2",
+    "row3Analysis": "El primer nivel ya se ha hecho, sin el juego y sin saberlo. Repetirlo daría sensación de retroceso.",
+    "row4Score": "Por videollamada, a distancia",
+    "row4Level": "Los tres, en dos veces",
+    "row4Analysis": "La pantalla cansa más rápido que el cara a cara. Cortad tras el segundo nivel y guardad el tercero para la próxima.",
+    "tip": "Una señal simple para saber si podéis subir de nivel: ¿el otro desarrolla sus respuestas sin que se lo pidan? Si es así, seguid. Si las respuestas siguen siendo cortas y educadas, quedaos donde estáis, no hay nada que forzar."
+  },
+  "section6": {
+    "title": "Responder cuenta tanto como preguntar",
+    "p1": "Es el punto que más se falla, incluso entre quienes juegan de buena fe. Hacer una buena pregunta no sirve de nada si la respuesta es mala, y una buena respuesta no significa una respuesta brillante.",
+    "sub1Title": "Da un ejemplo, no una categoría",
+    "sub1Text": "« Soy una persona más bien ansiosa » no dice nada y no se retiene. « Comprobé cuatro veces que llevaba las llaves antes de venir » dice exactamente lo mismo dando una imagen que el otro se guardará. Las respuestas que marcan son siempre escenas, nunca adjetivos.",
+    "sub2Title": "Acepta el silencio de tres segundos",
+    "sub2Text": "En las preguntas de los niveles 2 y 3, la primera respuesta que sale rara vez es la verdadera. El pequeño blanco antes de responder no es un malestar que haya que llenar, es la señal de que la pregunta se ha tomado en serio. Déjalo durar.",
+    "sub3Title": "Tienes derecho a rechazar una pregunta",
+    "sub3Text": "Y es una respuesta en sí misma, siempre que lo digas con sencillez en lugar de disimular. « Esa prefiero guardármela » es perfectamente admisible y no rompe nada. Lo que rompe es responder de lado esperando que no se note."
+  },
+  "section7": {
+    "title": "Después de la cita",
+    "p1": "El juego produce a menudo un efecto un poco desconcertante: tienes la sensación de conocer muy bien a alguien que has conocido hace tres horas. Es real, es exactamente lo que medía el protocolo original, y conviene saber cuánto vale.",
+    "p2": "Esa sensación es una <strong>cercanía, no una historia</strong>. Dice que habéis sabido hablaros, lo cual ya es raro y no está garantizado. No dice nada del futuro, porque el futuro se juega en cosas que una velada no muestra: cómo se gestiona un desacuerdo, la fiabilidad, el hecho de cumplir lo que se anuncia.",
+    "p3": "Así que el mejor uso de esa velada no es sacar conclusiones, es <strong>retomar tres días después una de las respuestas que te dieron</strong>. Acordarse de un detalle preciso y volver a él vale más que cualquier mensaje de después de la cita, porque es lo único que demuestra que estabas escuchando de verdad.",
+    "tip": "Y si no ha saltado la chispa a pesar del juego, no es un fracaso del formato. Dos personas pueden hablarse muy bien y no tener ganas de volver a verse. Simplemente lo habrás sabido en una velada en lugar de tres."
+  },
+  "seo": {
+    "whyTitle": "Cuándo sacar este juego, aparte de una primera cita",
+    "whySubtitle": "Está escrito para los comienzos, pero ninguna de sus preguntas supone una historia común. Así que funciona en cualquier sitio donde dos personas se conozcan poco y quieran remediarlo.",
+    "card1Title": "Una cita a ciegas",
+    "card1Text": "Es el caso en el que más sirve. Cuando nadie ha elegido al otro no hay ninguna historia que contar, y un apoyo externo quita todo el peso del arranque.",
+    "card2Title": "Una relación a distancia que empieza",
+    "card2Text": "Por videollamada los silencios pesan más y la conversación decae antes. Tener una pregunta a mano evita los veinte minutos de logística con los que siempre empiezan esas llamadas.",
+    "card3Title": "Una pareja reciente, de unas semanas",
+    "card3Text": "Pasadas las primeras veces, se suele creer que ya se ha visto todo. El segundo nivel demuestra en general lo contrario, sobre todo en lo que cada uno espera de los meses que vienen.",
+    "card4Title": "Un viaje largo en coche o en tren",
+    "card4Text": "Dos horas cara a cara sin pantalla es el mejor decorado posible para este formato. Y nadie puede irse antes del final del tercer nivel."
+  },
+  "faq": {
+    "q1": "¿Qué preguntas hacer en una primera cita?",
+    "a1": "Las mejores no son las más originales, son aquellas que estás dispuesto a responder tú mismo. Una pregunta factual sobre el trabajo o la ciudad de origen no le pide nada a nadie y no crea ninguna cercanía. Una pregunta que exige elegir, recordar o admitir algo compromete a las dos personas, siempre que quien la hace también la responda. Es el principio de este juego y de sus tres niveles.",
+    "q2": "¿El juego viene de las 36 preguntas de Arthur Aron?",
+    "a2": "Se inspira en ellas, no las reproduce. El protocolo publicado en 1997 tenía treinta y seis preguntas en tres series cada vez más personales, y es esa arquitectura por niveles la que hemos conservado. Las sesenta preguntas del juego se han escrito para esta web, y el formato se ha acortado a quince por partida porque una primera cita no es una sesión de laboratorio de cuarenta y cinco minutos.",
+    "q3": "¿Puede de verdad hacer que alguien se enamore?",
+    "a3": "No, y hay que desconfiar de esa promesa. El estudio original medía un sentimiento de cercanía, no un sentimiento amoroso, y la etiqueta « las preguntas para enamorarse » viene de un relato personal publicado en la prensa en 2015, no de los investigadores. Lo que este formato produce de forma fiable es una conversación en la que se dicen cosas verdaderas. Es una buena base, no una garantía.",
+    "q4": "¿Y si a mi cita le parece raro el principio?",
+    "a4": "Preséntalo como un juego y no como un ejercicio, eso lo cambia todo. El primer nivel es lo bastante ligero para que nadie se sienta examinado, y basta con una o dos preguntas para que caiga la incomodidad. Si la persona sigue reticente después del primer nivel, parad ahí: el rechazo es en sí mismo una información sobre cómo aborda las cosas.",
+    "q5": "¿Se puede jugar sin estar en una mesa ni cara a cara?",
+    "a5": "Sí, y algunos escenarios funcionan incluso mejor. Un viaje largo en coche, un tren, un paseo: no mirarse facilita mucho las preguntas del tercer nivel, porque se puede responder sin sostener una mirada. Por videollamada, cortad mejor tras el segundo nivel y guardad el tercero para otra vez.",
+    "q6": "¿Cuánto dura una partida?",
+    "a6": "El juego saca quince preguntas, lo que lleva entre veinte minutos y bastante más. Nada está cronometrado, y una sola pregunta puede ocupar perfectamente un cuarto de hora. Si eso ocurre, no reinicies el juego para recuperar el tiempo: es justamente el momento en que ha hecho su trabajo."
+  }
+}

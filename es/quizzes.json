@@ -309,5 +309,11 @@
     "shortTitle": "¿Quién lleva la carga mental?",
     "description": "20 tareas, dos respuestas y la diferencia entre ambas. Se hace solo o en pareja, resultado inmediato.",
     "metaDescription": "¿Quién lleva de verdad la carga mental en tu pareja? 20 tareas sobre pensar en ello, no sobre hacerlo. En pareja, la diferencia entre vuestras respuestas es el resultado."
+  },
+  "quizRencontre": {
+    "title": "Preguntas para una primera cita: el juego en 3 niveles",
+    "shortTitle": "Preguntas de primera cita",
+    "description": "15 preguntas para haceros, en tres niveles cada vez más personales. Nada que instalar, nada que puntuar.",
+    "metaDescription": "El juego de preguntas para una primera cita, en tres niveles de intimidad creciente. 60 preguntas, 15 por partida, en un solo móvil."
   }
 }
