@@ -149,6 +149,13 @@
   <%- include('partials/cookie-consent', { lang }) %>
 
   <!-- JS -->
+  <%# La mesure d'audience passe en premier : elle expose window.QCAudience,
+      que quiz-extras.js lit pour rattacher un lancement de test a la visite
+      qui l'a produit. Les scripts differes s'executent dans l'ordre du
+      document, donc celui-ci est pret avant les suivants. Il part des la fin
+      de l'analyse du HTML, sans attendre les images, pour attraper aussi les
+      visites qui repartent en deux secondes. %>
+  <script src="/js/audience.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/mobile-menu.js" defer></script>
   <script src="/js/cookie-consent.js" defer></script>

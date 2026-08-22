@@ -264,6 +264,10 @@
   function showDashboard() {
     document.getElementById('admin-login').classList.add('hidden');
     document.getElementById('admin-dashboard').classList.remove('hidden');
+    // Quiconque arrive ici est le proprietaire du site : ses propres passages
+    // n'ont rien a faire dans la mesure d'audience. Le drapeau vit dans le
+    // navigateur, il se pose donc une fois par appareil, a la connexion.
+    try { localStorage.setItem('qc-no-track', '1'); } catch (e) {}
     // Les pastilles doivent etre justes des l'arrivee : on interroge les trois
     // sources tout de suite, meme si l'affichage de chaque onglet reste
     // paresseux.
@@ -1496,6 +1500,313 @@
     return nice * pow;
   }
 
+  // ═══════════════════════════════════════════════════════════════════════
+  // ONGLET TRAFIC
+  //
+  // Mesure d'audience premiere partie, servie par le domaine du site. Elle
+  // existe parce qu'Analytics ne voyait qu'un peu plus de la moitie du
+  // trafic reel : bloque au niveau reseau par les bloqueurs de pistage, muet
+  // tant que le bandeau cookies n'a pas ete accepte, et charge trop tard
+  // pour attraper les visites courtes.
+  //
+  // L'unite est la VISITE, pas la personne : l'identifiant meurt apres
+  // trente minutes d'inactivite et n'est jamais reconduit. C'est ce qui
+  // permet de se passer de consentement, et c'est de toute facon la bonne
+  // unite pour lire du trafic.
+  // ═══════════════════════════════════════════════════════════════════════
+  var traficPeriode = 7;
+  var traficDonnees = null;          // { resume, daily, pages, sources, profondeur, entonnoir }
+  var traficCouchesVues = { visites: true, vues: true };
+  var traficTriEnt = { col: 'visites', sens: -1 };
+  var traficTriPages = { col: 'pages_vues', sens: -1 };
+  var _traficCouches = null;
+
+  var TRAFIC_COURBES = [
+    { cle: 'visites', nom: 'Visites',    couleur: '#8B5CF6' },
+    { cle: 'vues',    nom: 'Pages vues', couleur: '#0EA5E9' }
+  ];
+
+  function nb(n) { return Number(n || 0).toLocaleString('fr-FR'); }
+  function pct(a, b) { return b ? Math.round((a / b) * 100) : 0; }
+
+  // Les noms d'hote bruts ne parlent pas tous. On traduit les plus frequents
+  // et on laisse le reste tel quel : inventer une categorie « autre » ferait
+  // disparaitre justement ce qu'on cherche a decouvrir.
+  var TRAFIC_SOURCES = {
+    'direct': 'Direct / favori', 'interne': 'Reprise de visite',
+    'google.com': 'Google', 'google.fr': 'Google', 'bing.com': 'Bing',
+    'duckduckgo.com': 'DuckDuckGo', 'ecosia.org': 'Ecosia', 'qwant.com': 'Qwant',
+    'search.brave.com': 'Brave', 'yahoo.com': 'Yahoo', 'yandex.com': 'Yandex',
+    'search.marginalia.nu': 'Marginalia', 'lite.duckduckgo.com': 'DuckDuckGo',
+    'facebook.com': 'Facebook', 'm.facebook.com': 'Facebook', 'l.facebook.com': 'Facebook',
+    'instagram.com': 'Instagram', 'l.instagram.com': 'Instagram',
+    'tiktok.com': 'TikTok', 'pinterest.com': 'Pinterest', 'fr.pinterest.com': 'Pinterest',
+    'reddit.com': 'Reddit', 'out.reddit.com': 'Reddit',
+    't.co': 'X / Twitter', 'x.com': 'X / Twitter',
+    'chatgpt.com': 'ChatGPT', 'chat.openai.com': 'ChatGPT',
+    'perplexity.ai': 'Perplexity', 'claude.ai': 'Claude',
+    'gemini.google.com': 'Gemini', 'copilot.microsoft.com': 'Copilot'
+  };
+  function nomSource(s) {
+    if (!s) return 'Direct / favori';
+    if (TRAFIC_SOURCES[s]) return TRAFIC_SOURCES[s];
+    if (s.indexOf('google.') === 0) return 'Google';
+    return s;
+  }
+
+  // ── Exclusion du proprietaire ──────────────────────────────────────────
+  // Il se promene beaucoup sur son propre site : sans ca il en est le premier
+  // visiteur. Le drapeau vit dans le navigateur, il faut donc le poser sur
+  // chaque appareil. Il bloque les trois mesures d'un coup : page vue,
+  // lancement, partie terminee.
+  function traficExclu() {
+    try { return localStorage.getItem('qc-no-track') === '1'; } catch (e) { return false; }
+  }
+  function majExclu() {
+    var boite = document.querySelector('.trafic-exclu');
+    var etat = document.getElementById('trafic-exclu-etat');
+    var btn = document.getElementById('trafic-exclu-btn');
+    if (!boite || !etat || !btn) return;
+    var off = traficExclu();
+    boite.classList.toggle('est-exclu', off);
+    etat.innerHTML = off
+      ? 'Vos visites : <strong>exclues</strong> sur ce navigateur'
+      : 'Vos visites : <strong>comptées</strong>';
+    btn.textContent = off ? 'Me compter à nouveau' : 'Ne plus me compter';
+  }
+
+  // ── Chargement ─────────────────────────────────────────────────────────
+  function loadTrafic() {
+    var tz = fuseau();
+    var n = traficPeriode;
+    var vide = { resume: null, daily: [], pages: [], sources: [], profondeur: [], entonnoir: [] };
+    drawChart(document.getElementById('trafic-chart'), [], { loading: true });
+    Promise.all([
+      statsRpc('get_trafic_resume', { p_days: n, p_tz: tz }),
+      statsRpc('get_trafic_daily', { p_days: n, p_tz: tz }),
+      statsRpc('get_trafic_pages', { p_days: n, p_tz: tz }),
+      statsRpc('get_trafic_sources', { p_days: n, p_tz: tz }),
+      statsRpc('get_trafic_profondeur', { p_days: n, p_tz: tz }),
+      statsRpc('get_trafic_entonnoir', { p_days: n, p_tz: tz })
+    ]).then(function (r) {
+      // La RPC de resume rend une seule ligne ; les autres rendent des
+      // tableaux. Une erreur PostgREST arrive sous forme d'objet, jamais de
+      // tableau : c'est ainsi qu'on distingue « pas encore de donnees » de
+      // « la migration n'est pas passee ».
+      var estTab = function (x) { return Array.isArray(x) ? x : []; };
+      traficDonnees = {
+        resume: Array.isArray(r[0]) ? (r[0][0] || null) : null,
+        daily: estTab(r[1]),
+        pages: estTab(r[2]),
+        sources: estTab(r[3]),
+        profondeur: estTab(r[4]),
+        entonnoir: estTab(r[5])
+      };
+      if (!Array.isArray(r[0])) traficDonnees.erreur = true;
+      renderTrafic();
+    }).catch(function () {
+      traficDonnees = vide;
+      traficDonnees.erreur = true;
+      renderTrafic();
+    });
+  }
+
+  function renderTrafic() {
+    majExclu();
+    renderTraficKpis();
+    renderTraficCourbe();
+    renderTraficSources();
+    renderTraficProfondeur();
+    renderTraficEntonnoir();
+    renderTraficPages();
+  }
+
+  function traficAucune() {
+    return !traficDonnees || !traficDonnees.resume || !Number(traficDonnees.resume.visites);
+  }
+
+  function messageVide(cible, texte) {
+    var el = document.getElementById(cible);
+    if (el) el.innerHTML = '<p class="trafic-vide">' + esc(texte) + '</p>';
+  }
+
+  var TXT_ATTENTE = 'Aucune visite enregistrée sur la période. La mesure démarre au premier déploiement : les journées antérieures resteront vides.';
+  var TXT_ERREUR = 'La table de mesure n\'a pas encore été créée dans Supabase. Appliquez la migration page_views, puis rechargez.';
+
+  function renderTraficKpis() {
+    var r = (traficDonnees && traficDonnees.resume) || null;
+    var visites = r ? Number(r.visites) : 0;
+    var vues = r ? Number(r.pages_vues) : 0;
+    var ppv = r ? Number(r.pages_par_visite) : 0;
+    var une = r ? Number(r.visites_une_page) : 0;
+    var set = function (id, v) { var e = document.getElementById(id); if (e) e.textContent = v; };
+    set('trafic-visites', nb(visites));
+    set('trafic-vues', nb(vues));
+    set('trafic-ppv', visites ? ppv.toFixed(2).replace('.', ',') : '-');
+    set('trafic-rebond', visites ? pct(une, visites) + ' %' : '-');
+    var sub = document.getElementById('trafic-visites-sub');
+    if (sub) sub.textContent = traficPeriode === 1 ? "aujourd'hui" : 'sur ' + traficPeriode + ' jours';
+    var rsub = document.getElementById('trafic-rebond-sub');
+    if (rsub) rsub.textContent = visites ? nb(une) + ' visites d\'une seule page' : 'des visites repartent sans cliquer';
+  }
+
+  // ── Courbe ─────────────────────────────────────────────────────────────
+  // Les journees sans ligne en base valent zero et non « inconnu » : la
+  // mesure tourne tous les jours, une journee absente est une journee sans
+  // visite, pas une journee non mesuree.
+  function renderTraficCourbe() {
+    var cv = document.getElementById('trafic-chart');
+    var par = {};
+    (traficDonnees ? traficDonnees.daily : []).forEach(function (l) {
+      var k = String(l.day).slice(0, 10);
+      par[k] = { visites: Number(l.visites) || 0, vues: Number(l.pages_vues) || 0 };
+    });
+    var points = { visites: [], vues: [] };
+    for (var i = traficPeriode - 1; i >= 0; i--) {
+      var iso = isoNJoursAvant(i);
+      var d = new Date(iso + 'T12:00:00');
+      var label = d.getDate() + '/' + (d.getMonth() + 1);
+      var v = par[iso] || { visites: 0, vues: 0 };
+      points.visites.push({ date: d, label: label, total: v.visites });
+      points.vues.push({ date: d, label: label, total: v.vues });
+    }
+    var couches = TRAFIC_COURBES.map(function (c) {
+      return { cle: c.cle, nom: c.nom, couleur: c.couleur, axe: 'gauche', unite: '',
+               visible: traficCouchesVues[c.cle], points: points[c.cle] };
+    });
+    _traficCouches = couches;
+    renderTraficLegende(couches);
+    drawChart(cv, couches, {});
+  }
+
+  function renderTraficLegende(couches) {
+    var el = document.getElementById('trafic-legende');
+    if (!el) return;
+    el.innerHTML = couches.map(function (c) {
+      var somme = c.points.reduce(function (a, p) { return a + (p.total || 0); }, 0);
+      return '<button type="button" class="stats-leg' + (c.visible ? '' : ' est-eteinte') + '"'
+        + ' style="--leg:' + c.couleur + '" data-trafic-courbe="' + c.cle + '"'
+        + ' aria-pressed="' + (c.visible ? 'true' : 'false') + '">'
+        + '<span class="stats-leg-nom"><span class="stats-leg-puce"></span>' + esc(c.nom) + '</span>'
+        + '<span class="stats-leg-val">' + nb(somme) + '</span>'
+        + '</button>';
+    }).join('');
+  }
+
+  // ── Barres de repartition ──────────────────────────────────────────────
+  function barres(cible, lignes, couleur) {
+    var el = document.getElementById(cible);
+    if (!el) return;
+    if (!lignes.length) { messageVide(cible, traficDonnees && traficDonnees.erreur ? TXT_ERREUR : TXT_ATTENTE); return; }
+    var total = lignes.reduce(function (a, l) { return a + l.valeur; }, 0);
+    var max = Math.max.apply(null, lignes.map(function (l) { return l.valeur; }));
+    el.innerHTML = lignes.map(function (l) {
+      return '<div class="trafic-barre">'
+        + '<span class="trafic-barre-nom" title="' + esc(l.nom) + '">' + esc(l.nom) + '</span>'
+        + '<span class="trafic-barre-piste"><span class="trafic-barre-jauge" style="--bar:' + couleur + ';width:' + (max ? (l.valeur / max) * 100 : 0) + '%"></span></span>'
+        + '<span class="trafic-barre-val">' + nb(l.valeur)
+        + '<span class="trafic-barre-pct">' + pct(l.valeur, total) + ' %</span></span>'
+        + '</div>';
+    }).join('');
+  }
+
+  function renderTraficSources() {
+    var l = (traficDonnees ? traficDonnees.sources : []).map(function (x) {
+      return { nom: nomSource(x.source), valeur: Number(x.visites) || 0 };
+    });
+    // Deux hotes peuvent porter le meme nom lisible (google.fr et google.com) :
+    // on les additionne plutot que d'afficher deux lignes « Google ».
+    var par = {};
+    l.forEach(function (x) { par[x.nom] = (par[x.nom] || 0) + x.valeur; });
+    var fusion = Object.keys(par).map(function (k) { return { nom: k, valeur: par[k] }; })
+      .sort(function (a, b) { return b.valeur - a.valeur; }).slice(0, 12);
+    barres('trafic-sources', fusion, 'hsl(258 70% 55%)');
+  }
+
+  function renderTraficProfondeur() {
+    var l = (traficDonnees ? traficDonnees.profondeur : []).map(function (x) {
+      var n = Number(x.pages);
+      return { nom: n >= 6 ? '6 pages ou plus' : (n + (n > 1 ? ' pages' : ' page')), valeur: Number(x.visites) || 0, ordre: n };
+    }).sort(function (a, b) { return a.ordre - b.ordre; });
+    barres('trafic-profondeur', l, 'hsl(150 55% 42%)');
+  }
+
+  // ── Entonnoir ──────────────────────────────────────────────────────────
+  // Les trois nombres viennent de la meme requete et portent sur les memes
+  // visites : le taux ne peut donc pas depasser 100 % par accident, ce qui
+  // arrivait fatalement quand on rapprochait deux totaux calcules chacun de
+  // son cote.
+  function renderTraficEntonnoir() {
+    var el = document.getElementById('trafic-entonnoir');
+    if (!el) return;
+    var lignes = (traficDonnees ? traficDonnees.entonnoir : []).map(function (x) {
+      var slug = canon(x.route_key);
+      return {
+        slug: slug, nom: nomQuiz(slug),
+        visites: Number(x.visites) || 0,
+        lances: Number(x.lances) || 0,
+        finis: Number(x.finis) || 0
+      };
+    });
+    if (!lignes.length) { messageVide('trafic-entonnoir', traficDonnees && traficDonnees.erreur ? TXT_ERREUR : TXT_ATTENTE); return; }
+    var t = traficTriEnt;
+    lignes.sort(function (a, b) { return (a[t.col] - b[t.col]) * t.sens; });
+    var max = Math.max.apply(null, lignes.map(function (l) { return l[t.col]; })) || 1;
+    el.innerHTML = lignes.map(function (l) {
+      return '<div class="stats-row trafic-ligne" style="--fam:hsl(258 70% 55%);--part:' + (l[t.col] / max) * 100 + '%">'
+        + '<span class="stats-row-name" title="' + esc(l.nom) + '">' + esc(l.nom) + '</span>'
+        + '<span class="stats-cell stats-cell--visites">' + nb(l.visites) + '</span>'
+        + '<span class="stats-cell stats-cell--lances">' + nb(l.lances)
+        + '<span class="stats-cell-jour trafic-sous">' + pct(l.lances, l.visites) + ' %</span></span>'
+        + '<span class="stats-cell stats-cell--finis">' + nb(l.finis)
+        + '<span class="stats-cell-jour trafic-sous">' + pct(l.finis, l.lances) + ' %</span></span>'
+        + '</div>';
+    }).join('');
+    majFleches('[data-tri-ent]', 'triEnt', traficTriEnt);
+  }
+
+  // ── Toutes les pages ───────────────────────────────────────────────────
+  function renderTraficPages() {
+    var el = document.getElementById('trafic-pages');
+    if (!el) return;
+    var lignes = (traficDonnees ? traficDonnees.pages : []).map(function (x) {
+      var visites = Number(x.visites) || 0;
+      var entrees = Number(x.entrees) || 0;
+      return {
+        path: x.path, pages_vues: Number(x.pages_vues) || 0,
+        visites: visites, entrees: entrees,
+        navigation: Math.max(0, visites - entrees),
+        rebond: entrees ? Math.round((Number(x.rebonds) / entrees) * 100) : 0
+      };
+    });
+    if (!lignes.length) { messageVide('trafic-pages', traficDonnees && traficDonnees.erreur ? TXT_ERREUR : TXT_ATTENTE); return; }
+    var t = traficTriPages;
+    lignes.sort(function (a, b) { return (a[t.col] - b[t.col]) * t.sens; });
+    var max = Math.max.apply(null, lignes.map(function (l) { return l[t.col]; })) || 1;
+    el.innerHTML = lignes.map(function (l) {
+      return '<div class="stats-row trafic-ligne" style="--fam:hsl(199 85% 45%);--part:' + (l[t.col] / max) * 100 + '%">'
+        + '<span class="stats-row-name" title="' + esc(l.path) + '">' + esc(l.path) + '</span>'
+        + '<span class="stats-cell stats-cell--vues">' + nb(l.pages_vues) + '</span>'
+        + '<span class="stats-cell stats-cell--visites">' + nb(l.visites) + '</span>'
+        + '<span class="stats-cell stats-cell--lances">' + nb(l.entrees)
+        + '<span class="stats-cell-jour trafic-sous">' + nb(l.navigation) + ' par nav.</span></span>'
+        + '<span class="stats-cell stats-cell--ratio">' + (l.entrees ? l.rebond + ' %' : '—') + '</span>'
+        + '</div>';
+    }).join('');
+    majFleches('[data-tri-pages]', 'triPages', traficTriPages);
+  }
+
+  // Fleche montante ou descendante sur l'en-tete actif, comme dans l'onglet
+  // Stats : sans repere, on ne sait plus dans quel sens la liste est rangee.
+  function majFleches(selecteur, attr, etat) {
+    document.querySelectorAll(selecteur).forEach(function (b) {
+      var actif = b.dataset[attr] === etat.col;
+      b.classList.toggle('est-actif', actif);
+      var f = b.querySelector('.stats-tri-fleche');
+      if (f) f.textContent = actif ? (etat.sens === -1 ? '▾' : '▴') : '▾';
+    });
+  }
+
   // ── Tab switching ──
   function switchTab(tab) {
     currentTab = tab;
@@ -1509,9 +1820,16 @@
     if (statsTab) statsTab.classList.toggle('hidden', tab !== 'stats');
     var afTab = document.getElementById('admin-affiliation-tab');
     if (afTab) afTab.classList.toggle('hidden', tab !== 'affiliation');
+    var trTab = document.getElementById('admin-trafic-tab');
+    if (trTab) trTab.classList.toggle('hidden', tab !== 'trafic');
 
     if (tab === 'stats') {
       loadStats();
+    }
+    // Rechargement a chaque ouverture : le trafic bouge en continu, et les
+    // six agregats sont assez legers pour ne pas justifier un cache.
+    if (tab === 'trafic') {
+      loadTrafic();
     }
     // L'onglet affiliation vit dans son propre module : il gere son jeton et
     // ne parle qu'a Affilae, sans rien partager avec le reste de l'admin.
@@ -2540,11 +2858,60 @@
         }
       });
     });
+    // ── Commandes de l'onglet Trafic ──────────────────────────────────
+    document.querySelectorAll('.stats-comp-btn[data-trafic-periode]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        document.querySelectorAll('.stats-comp-btn[data-trafic-periode]').forEach(function (x) { x.classList.remove('active'); });
+        this.classList.add('active');
+        traficPeriode = parseInt(this.dataset.traficPeriode, 10) || 7;
+        loadTrafic();
+      });
+    });
+    // Les vignettes de legende allument et eteignent leur courbe, comme dans
+    // la Search Console. On refuse d'eteindre la derniere allumee : un
+    // graphique vide n'apprend rien et donne l'impression d'un bug.
+    var legTr = document.getElementById('trafic-legende');
+    if (legTr) legTr.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-trafic-courbe]');
+      if (!b) return;
+      var cle = b.dataset.traficCourbe;
+      var allumees = Object.keys(traficCouchesVues).filter(function (k) { return traficCouchesVues[k]; });
+      if (traficCouchesVues[cle] && allumees.length === 1) return;
+      traficCouchesVues[cle] = !traficCouchesVues[cle];
+      renderTraficCourbe();
+    });
+    // Tri des deux listes. Recliquer la meme colonne inverse le sens.
+    function brancheTri(selecteur, attr, etat, redessine) {
+      document.querySelectorAll(selecteur).forEach(function (b) {
+        b.addEventListener('click', function () {
+          var col = this.dataset[attr];
+          if (etat.col === col) etat.sens = -etat.sens;
+          else { etat.col = col; etat.sens = -1; }
+          redessine();
+        });
+      });
+    }
+    brancheTri('[data-tri-ent]', 'triEnt', traficTriEnt, renderTraficEntonnoir);
+    brancheTri('[data-tri-pages]', 'triPages', traficTriPages, renderTraficPages);
+
+    var exBtn = document.getElementById('trafic-exclu-btn');
+    if (exBtn) exBtn.addEventListener('click', function () {
+      try {
+        if (traficExclu()) localStorage.removeItem('qc-no-track');
+        else localStorage.setItem('qc-no-track', '1');
+      } catch (e) {}
+      majExclu();
+    });
+
     // Redraw charts on resize (canvas is width-dependent)
     var rT;
     window.addEventListener('resize', function () {
       clearTimeout(rT);
       rT = setTimeout(function () {
+        if (currentTab === 'trafic') {
+          if (_traficCouches) drawChart(document.getElementById('trafic-chart'), _traficCouches, {});
+          return;
+        }
         if (currentTab !== 'stats') return;
         if (_lastTotalCouches) drawChart(document.getElementById('admin-stats-total-chart'), _lastTotalCouches, {});
         if (_lastQuizSeries) drawLineChart(document.getElementById('admin-stats-chart'), _lastQuizSeries, _lastQuizOpts);

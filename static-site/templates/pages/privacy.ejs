@@ -47,6 +47,20 @@
       <div class="bg-accent/30 rounded-lg p-4 border border-border">
         <p class="text-foreground text-sm"><strong><%= t('legal:privacy.s2_3Important', '') %></strong> <%= t('legal:privacy.s2_3ImportantText', '') %></p>
       </div>
+
+      <%# Mesure d'audience premiere partie. Elle se passe de consentement au
+          titre de l'exemption prevue pour la mesure d'audience, ce qui suppose
+          d'en informer les visiteurs : c'est l'objet de cette sous-section. %>
+      <h3 class="text-xl font-medium text-foreground mb-3 mt-6"><%= t('legal:privacy.s2_4Title', '') %></h3>
+      <p class="text-foreground mb-4"><%= t('legal:privacy.s2_4Intro', '') %></p>
+      <ul class="list-disc pl-6 space-y-2 text-foreground mb-4">
+        <li><strong><%= t('legal:privacy.s2_4Item1Label', '') %></strong> <%= t('legal:privacy.s2_4Item1Text', '') %></li>
+        <li><strong><%= t('legal:privacy.s2_4Item2Label', '') %></strong> <%= t('legal:privacy.s2_4Item2Text', '') %></li>
+        <li><strong><%= t('legal:privacy.s2_4Item3Label', '') %></strong> <%= t('legal:privacy.s2_4Item3Text', '') %></li>
+      </ul>
+      <div class="bg-accent/30 rounded-lg p-4 border border-border">
+        <p class="text-foreground text-sm"><strong><%= t('legal:privacy.s2_4Important', '') %></strong> <%= t('legal:privacy.s2_4ImportantText', '') %></p>
+      </div>
     </section>
 
     <section class="mb-10">

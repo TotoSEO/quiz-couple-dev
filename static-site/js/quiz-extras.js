@@ -216,6 +216,36 @@
       .catch(function () {});
   }
 
+  // ── Envoi d'un evenement de partie ──────────────────────────────────
+  // Le numero de visite vient de audience.js : sans lui, l'entonnoir du
+  // tableau de bord rapproche des totaux calcules separement et peut annoncer
+  // plus de lancements que de vues. Avec lui, les trois nombres portent sur
+  // les memes visites.
+  //
+  // Le repli sans visite_id n'est pas de la coquetterie : si le site est
+  // deploye avant que la migration qui cree la colonne soit passee, PostgREST
+  // rejette la ligne entiere et on perd la mesure au lieu de perdre un champ.
+  // On renvoie alors la ligne telle qu'elle etait avant.
+  function envoiePartie(table, corps) {
+    var visite = null;
+    try { visite = window.QCAudience && window.QCAudience.visite(); } catch (e) {}
+    // Exclusion demandee par le proprietaire du site : rien ne part, ni la
+    // page vue, ni le lancement, ni la partie terminee.
+    try { if (window.QCAudience && window.QCAudience.exclu()) return; } catch (e) {}
+    var avec = visite ? Object.assign({}, corps, { visite_id: visite }) : corps;
+    function poste(donnees) {
+      return fetch(URL + '/rest/v1/' + table, {
+        method: 'POST',
+        keepalive: true,
+        headers: Object.assign({ 'Prefer': 'return=minimal' }, HJ),
+        body: JSON.stringify(donnees)
+      });
+    }
+    poste(avec).then(function (r) {
+      if (!r.ok && visite) return poste(corps);
+    }).catch(function () {});
+  }
+
   // ── Suivi des completions (une fois par session/quiz) ──
   // On observait #quiz-engine, que trois pages n'ont pas : leur moteur est
   // ecrit dans leur propre gabarit, avec un conteneur a elles. Elles ne
@@ -241,7 +271,7 @@
     function check() {
       if (sessionStorage.getItem(key) || !fini()) return;
       try { sessionStorage.setItem(key, '1'); } catch (e) {}
-      fetch(URL + '/rest/v1/quiz_completions', { method: 'POST', headers: Object.assign({ 'Prefer': 'return=minimal' }, HJ), body: JSON.stringify({ quiz_slug: slug, lang: lang }) }).catch(function () {});
+      envoiePartie('quiz_completions', { quiz_slug: slug, lang: lang });
     }
     check();
     new MutationObserver(check).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class', 'style', 'data-quiz-done'] });
@@ -276,7 +306,7 @@
       document.removeEventListener('pointerdown', lance, true);
       document.removeEventListener('keydown', lance, true);
       try { sessionStorage.setItem(cle, '1'); } catch (err) {}
-      fetch(URL + '/rest/v1/quiz_starts', { method: 'POST', headers: Object.assign({ 'Prefer': 'return=minimal' }, HJ), body: JSON.stringify({ quiz_slug: slug, lang: lang }) }).catch(function () {});
+      envoiePartie('quiz_starts', { quiz_slug: slug, lang: lang });
     }
     // En capture : un moteur qui arrete la propagation sur ses propres
     // boutons ne doit pas rendre le lancement invisible.
