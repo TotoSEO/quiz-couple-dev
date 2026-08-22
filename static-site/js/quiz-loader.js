@@ -56,6 +56,14 @@
     // ── Test âme sœur : un indice, un verdict tiré de la forme du profil ──
     // Trois portes d'entrée sur la même page : seul sur un prénom saisi, à deux
     // en répondant chacun, ou célibataire pour le portrait de qui vous irait.
+    // Charge mentale : deux modes. En solo une personne decrit la repartition
+    // telle qu'elle la voit ; en duo les deux repondent et l'ecart entre leurs
+    // reponses devient la moitie du resultat.
+    'charge-mentale': { modesGrand: true, modes: [
+      { id: 'solo', emoji: '🧠', prefix: 'chargeMentale', engine: 'chargeMentale', totalQ: 20, pool: 20 },
+      { id: 'duo',  emoji: '👥', prefix: 'chargeMentale', engine: 'chargeMentale', totalQ: 20, pool: 20, duo: true }
+    ] },
+
     'ame-soeur':      { modesGrand: true, modes: [
       { id: 'solo', emoji: '💫', prefix: 'ameSoeur', engine: 'piliers',
         totalQ: 20, pool: 24, ascending: true },
@@ -569,6 +577,9 @@
         break;
       case 'piliers':
         initPiliersQuiz(config, questions);
+        break;
+      case 'chargeMentale':
+        initChargeMentaleQuiz(config, questions);
         break;
       case 'zamours':
         initZamoursQuiz(config, questions);
@@ -1222,6 +1233,16 @@
   };
 
   // ── Test âme sœur : les piliers, et le verdict tiré de leur forme ────────
+  // Les quatre domaines de la charge mentale. Elle n'est presque jamais
+  // desequilibree partout de la meme facon : voir ou elle penche vaut mieux
+  // qu'un chiffre global.
+  var DOMAINES_CHARGE = [
+    { id: 1, color: '#ec4899', cle: 'dom1' },
+    { id: 2, color: '#8b5cf6', cle: 'dom2' },
+    { id: 3, color: '#f59e0b', cle: 'dom3' },
+    { id: 4, color: '#22c55e', cle: 'dom4' }
+  ];
+
   var PILIERS_AME_SOEUR = [
     { id: 'evidence',  color: '#ec4899', cle: 'pil_evidence',  defaut: 'Évidence' },
     { id: 'accord',    color: '#8b5cf6', cle: 'pil_accord',    defaut: 'Accord de fond' },
@@ -1680,6 +1701,34 @@
         introTitle: QuizEngine.tgd(cfg.prefix + '.introTitle', ''),
         resultLabel: QuizEngine.tgd(cfg.prefix + '.linkLabel', '')
       }
+    });
+  }
+
+  function initChargeMentaleQuiz(cfg, questions) {
+    // Les vingt taches sont toujours posees, dans l'ordre, et reparties cinq
+    // par cinq dans les quatre domaines. Pas de tirage : le test perdrait son
+    // sens si deux parties ne portaient pas sur les memes taches.
+    var taches = [];
+    for (var i = 1; i <= 20; i++) taches.push({ id: i, dom: Math.ceil(i / 5) });
+
+    var verdicts = {};
+    ['equipe', 'flou', 'assume', 'invisible', 'soloEquilibre', 'soloDesequilibre'].forEach(function(cle) {
+      verdicts[cle] = {
+        title: QuizEngine.tgd(cfg.prefix + '.v_' + cle + '_t', ''),
+        description: QuizEngine.tgd(cfg.prefix + '.v_' + cle + '_d', ''),
+        advice: QuizEngine.tgd(cfg.prefix + '.v_' + cle + '_a', '')
+      };
+    });
+
+    new QuizEngine.ChargeMentaleQuiz({
+      container: container,
+      questions: taches,
+      prefix: cfg.prefix,
+      lang: lang,
+      duo: !!cfg.duo,
+      domaines: DOMAINES_CHARGE,
+      verdicts: verdicts,
+      labels: { introTitle: QuizEngine.tgd(cfg.prefix + '.introTitle', '') }
     });
   }
 

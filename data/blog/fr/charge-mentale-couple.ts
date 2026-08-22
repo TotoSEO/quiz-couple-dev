@@ -38,7 +38,7 @@ const article: BlogArticleData = {
           id: 'le-concept-sociologique',
           title: "Un concept sociologique, pas un caprice",
           content: `<p>Le terme a été popularisé en France par la dessinatrice Emma en 2017, mais le concept existe dans la recherche sociologique depuis les années 1980 sous le nom de « travail domestique invisible » ou « second shift ». La sociologue Arlie Hochschild l'avait déjà documenté : après leur journée de travail rémunéré, les femmes enchaînent avec une deuxième journée, non rémunérée, de gestion du foyer.</p>
-<p>Ce qui a changé depuis, c'est que les hommes participent davantage aux tâches concrètes. <strong>Ce qui n'a pas changé, c'est qui porte la responsabilité de savoir ce qu'il faut faire et quand.</strong> Et cette responsabilité-là, elle est aussi fatigante que les tâches elles-mêmes. Parfois plus.</p>`,
+<p>Ce qui a changé depuis, c'est que les hommes participent davantage aux tâches concrètes. <strong>Ce qui n'a pas changé, c'est <a href="https://quiz-couple.com/test-charge-mentale-couple/">qui porte la responsabilité de savoir ce qu'il faut faire et quand</a>.</strong> Et cette responsabilité-là, elle est aussi fatigante que les tâches elles-mêmes. Parfois plus.</p>`,
         },
         {
           id: 'la-metaphore-du-manager',

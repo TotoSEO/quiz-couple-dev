@@ -315,5 +315,11 @@
     "shortTitle": "Mon ex pense-t-il encore à moi ?",
     "description": "15 questions sur ce qu'il ou elle fait, pas sur ce que vous interprétez. Test solo, résultat immédiat.",
     "metaDescription": "Votre ex pense-t-il encore à vous ? 15 questions qui pèsent ses actes plutôt que vos interprétations. Gratuit, anonyme, sans inscription ni e-mail."
+  },
+  "testChargeMentale": {
+    "title": "Test charge mentale du couple : qui porte quoi ?",
+    "shortTitle": "Qui porte la charge mentale ?",
+    "description": "20 tâches, deux réponses, et l'écart entre les deux. Se joue seul(e) ou à deux, résultat immédiat.",
+    "metaDescription": "Qui porte vraiment la charge mentale dans votre couple ? 20 tâches sur le fait d'y penser, pas de le faire. À deux, l'écart entre vos réponses devient le résultat."
   }
 }

@@ -825,6 +825,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'secret', icon: '💌', route: 'testSecret' },
     { type: 'test', key: 'distance-aime', icon: '📞', route: 'testDistanceAime' },
     { type: 'test', key: 'ex', icon: '🕰️', route: 'testEx' },
+    { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
     { type: 'test', key: 'attachement', icon: '🔗', route: 'testAttachement' },
     { type: 'test', key: 'confiance', icon: '🤝', route: 'testConfiance' },
@@ -4659,6 +4660,327 @@ var QuizEngine = (function() {
   };
 
   // ═══════════════════════════════════════════════════════════
+  // CHARGE MENTALE
+  // Les autres moteurs a deux joueurs mesurent l'accord : DuoMatchQuiz
+  // compte les reponses identiques. Ici l'accord n'est que la moitie du
+  // sujet. Une repartition peut etre tres desequilibree et parfaitement
+  // vue des deux cotes, ou tres desequilibree et vue par une seule
+  // personne. Ce sont deux situations differentes, et c'est la seconde
+  // qui fait le sujet de la page.
+  //
+  // On mesure donc deux choses :
+  //   - la repartition, sur un axe a cinq crans de -2 (toujours le
+  //     joueur 1) a +2 (toujours le joueur 2) ;
+  //   - l'ecart de perception, la distance entre les deux reponses
+  //     donnees a la meme tache.
+  // En solo il n'y a qu'une serie : on ne rend que la repartition, et on
+  // le dit, plutot que d'inventer un ecart qui n'existe pas.
+  // ═══════════════════════════════════════════════════════════
+  function ChargeMentaleQuiz(config) {
+    this.container = config.container;
+    this.questions = config.questions;      // [{ id, dom }]
+    this.prefix = config.prefix || 'chargeMentale';
+    this.lang = config.lang || 'fr';
+    this.duo = !!config.duo;
+    this.domaines = config.domaines || [];  // [{ id, cle, color }]
+    this.verdicts = config.verdicts || {};
+    this.labels = config.labels || {};
+    this.phase = 'setup';
+    this.joueurs = ['', ''];
+    this.courant = 0;
+    this.currentQ = 0;
+    this.reponses = [[], []];
+    this.render();
+  }
+
+  ChargeMentaleQuiz.CRANS = [-2, -1, 0, 1, 2];
+
+  ChargeMentaleQuiz.prototype.txt = function(cle, repli) {
+    return tgd(this.prefix + '.' + cle, repli);
+  };
+
+  // Les cinq reponses portent les prenoms saisis, elles ne peuvent donc pas
+  // etre ecrites en dur dans gd.json. En solo la personne parle d'elle et de
+  // son partenaire, en duo on nomme les deux joueurs.
+  ChargeMentaleQuiz.prototype.options = function() {
+    var a = this.joueurs[0], b = this.joueurs[1];
+    var self = this;
+    function rendre(cle, repli, nomA, nomB) {
+      return String(self.txt(cle, repli))
+        .replace(/\{\{a\}\}/g, nomA || '')
+        .replace(/\{\{b\}\}/g, nomB || '');
+    }
+    if (!this.duo) {
+      return [
+        rendre('optToujoursMoi', 'Toujours moi'),
+        rendre('optPlutotMoi', 'Plutôt moi'),
+        rendre('optDeux', 'À deux, équitablement'),
+        rendre('optPlutotAutre', 'Plutôt {{a}}', a),
+        rendre('optToujoursAutre', 'Toujours {{a}}', a)
+      ];
+    }
+    return [
+      rendre('optToujoursA', 'Toujours {{a}}', a),
+      rendre('optPlutotA', 'Plutôt {{a}}', a),
+      rendre('optDeux', 'À deux, équitablement'),
+      rendre('optPlutotB', 'Plutôt {{b}}', a, b),
+      rendre('optToujoursB', 'Toujours {{b}}', a, b)
+    ];
+  };
+
+  ChargeMentaleQuiz.prototype.render = function() {
+    this.container.innerHTML = '';
+    if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'relais') this.renderRelais();
+    else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'results') this.renderResults();
+  };
+
+  ChargeMentaleQuiz.prototype.renderSetup = function() {
+    var self = this;
+    var corps = [], champs = [];
+    var etiquettes = this.duo
+      ? [tg('playerSetup.player1', 'Joueur 1'), tg('playerSetup.player2', 'Joueur 2')]
+      : [this.txt('nomPartenaire', 'Prénom de votre partenaire')];
+
+    for (var i = 0; i < etiquettes.length; i++) {
+      (function(idx) {
+        var bloc = el('div', 'quiz-setup-nom');
+        var champ = el('input', 'input');
+        champ.type = 'text';
+        champ.placeholder = tg('playerSetup.firstName', 'Prénom');
+        champ.maxLength = 30;
+        champ.id = 'cm-nom-' + idx;
+        var lab = el('label', 'quiz-setup-nom-label', etiquettes[idx]);
+        lab.setAttribute('for', champ.id);
+        bloc.appendChild(lab);
+        bloc.appendChild(champ);
+        corps.push(bloc);
+        champs.push(champ);
+      })(i);
+    }
+
+    var ecran = ecranDepart({
+      icone: '🧠',
+      titre: this.labels.introTitle || tg('playerSetup.readyForTest', 'Prêt pour le test ?'),
+      corps: corps,
+      meta: pastilleMeta(this.questions.length),
+      bouton: tg('playerSetup.startTest', 'Commencer le test'),
+      onStart: function() {
+        for (var k = 0; k < champs.length; k++) {
+          var v = champs[k].value.trim();
+          if (!v) { champs[k].classList.add('input--erreur'); champs[k].focus(); return; }
+          self.joueurs[k] = v;
+        }
+        // En solo le second prenom sert d'etiquette a l'autre bout de l'axe.
+        if (!self.duo) { self.joueurs[1] = self.joueurs[0]; self.joueurs[0] = ''; }
+        self.currentQ = 0;
+        self.courant = 0;
+        self.reponses = [[], []];
+        self.phase = self.duo ? 'relais' : 'playing';
+        self.render();
+      }
+    });
+    this.container.appendChild(ecran.wrap);
+  };
+
+  ChargeMentaleQuiz.prototype.renderRelais = function() {
+    var self = this;
+    this.container.appendChild(relaisJoueur(this, {
+      nom: this.joueurs[this.courant],
+      emoji: '🧠',
+      note: tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard'),
+      suite: function() { self.phase = 'playing'; self.render(); }
+    }));
+  };
+
+  ChargeMentaleQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+
+    // En duo chacun repond aux vingt taches : la barre compte quarante pas.
+    var faits = this.duo ? (this.courant * total + this.currentQ) : this.currentQ;
+    renderProgressBar(wrap, faits, this.duo ? total * 2 : total,
+      tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total);
+    if (this.duo) renderPlayerBadge(wrap, this.joueurs[this.courant], this.courant === 0 ? 'badge-pink' : 'badge-blue');
+
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center',
+      esc(this.txt('q' + q.id, ''))));
+
+    var liste = el('div', 'space-y-2');
+    var lettres = ['A', 'B', 'C', 'D', 'E'];
+    this.options().forEach(function(libelle, idx) {
+      var bouton = el('button', 'quiz-option');
+      bouton.innerHTML = '<span class="quiz-option-letter">' + lettres[idx] + '</span><span>' + esc(libelle) + '</span>';
+      bouton.style.animationDelay = (idx * 60) + 'ms';
+      bouton.addEventListener('click', function() {
+        self.reponses[self.courant][self.currentQ] = ChargeMentaleQuiz.CRANS[idx];
+        self.avance();
+      });
+      liste.appendChild(bouton);
+    });
+    wrap.appendChild(liste);
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'start');
+  };
+
+  ChargeMentaleQuiz.prototype.avance = function() {
+    if (this.currentQ < this.questions.length - 1) { this.currentQ++; this.render(); return; }
+    if (this.duo && this.courant === 0) {
+      this.courant = 1; this.currentQ = 0; this.phase = 'relais'; this.render(); return;
+    }
+    this.phase = 'results';
+    this.render();
+  };
+
+  // ── Le calcul ────────────────────────────────────────────────────────
+  // moyenne : position sur l'axe -2..+2, negative si le joueur 1 porte.
+  // partA   : part de la charge portee par le joueur 1, en pourcentage.
+  // ecart   : nombre de taches sur lesquelles les deux ne sont pas d'accord,
+  //           et distance moyenne entre leurs reponses.
+  ChargeMentaleQuiz.prototype.calcul = function() {
+    var n = this.questions.length, self = this;
+    var series = this.duo ? [this.reponses[0], this.reponses[1]] : [this.reponses[0]];
+    var somme = 0, compte = 0;
+    series.forEach(function(s) {
+      for (var i = 0; i < n; i++) { somme += (s[i] || 0); compte++; }
+    });
+    var moyenne = compte ? somme / compte : 0;
+    // -2 => le joueur 1 porte tout (100 %), +2 => il n'en porte rien (0 %).
+    var partA = Math.round((1 - (moyenne + 2) / 4) * 100);
+
+    var desaccords = 0, distance = 0, parTache = [];
+    if (this.duo) {
+      for (var i = 0; i < n; i++) {
+        var d = Math.abs((this.reponses[0][i] || 0) - (this.reponses[1][i] || 0));
+        if (d > 0) desaccords++;
+        distance += d;
+        parTache.push({ id: this.questions[i].id, d: d });
+      }
+      parTache.sort(function(x, y) { return y.d - x.d; });
+    }
+
+    // Repartition par domaine, pour les barres de l'ecran de resultat.
+    var domaines = this.domaines.map(function(dom) {
+      var s = 0, c = 0;
+      self.questions.forEach(function(q, i) {
+        if (q.dom !== dom.id) return;
+        series.forEach(function(serie) { s += (serie[i] || 0); c++; });
+      });
+      var m = c ? s / c : 0;
+      return { id: dom.id, cle: dom.cle, color: dom.color,
+               pct: Math.round((1 - (m + 2) / 4) * 100) };
+    });
+
+    return {
+      partA: partA, partB: 100 - partA,
+      desaccords: desaccords,
+      // 0 = ils voient exactement la meme chose, 100 = ils sont a l'oppose.
+      indiceEcart: this.duo ? Math.round((distance / (n * 4)) * 100) : null,
+      top: parTache.slice(0, 3).filter(function(t) { return t.d > 0; }),
+      domaines: domaines
+    };
+  };
+
+  // Le verdict croise les deux mesures : une repartition desequilibree ne
+  // dit pas la meme chose selon qu'elle est vue par les deux ou par une
+  // seule personne.
+  ChargeMentaleQuiz.prototype.cleVerdict = function(r) {
+    var desequilibre = Math.abs(r.partA - 50) >= 15;
+    if (!this.duo) return desequilibre ? 'soloDesequilibre' : 'soloEquilibre';
+    var divergent = r.indiceEcart >= 20;
+    if (!desequilibre && !divergent) return 'equipe';
+    if (!desequilibre && divergent) return 'flou';
+    if (desequilibre && !divergent) return 'assume';
+    return 'invisible';
+  };
+
+  ChargeMentaleQuiz.prototype.renderResults = function() {
+    var self = this;
+    var r = this.calcul();
+    var cle = this.cleVerdict(r);
+    var v = this.verdicts[cle] || {};
+    var nomA = this.duo ? this.joueurs[0] : this.txt('vous', 'Vous');
+    var nomB = this.joueurs[1];
+    function prenoms(t) {
+      return String(t || '').replace(/\{\{a\}\}/g, nomA).replace(/\{\{b\}\}/g, nomB);
+    }
+
+    var wrap = el('div', 'quiz-engine quiz-result-card');
+    var porteur = r.partA >= r.partB ? nomA : nomB;
+    var partPorteur = Math.max(r.partA, r.partB);
+
+    var hero = el('div', 'duo-result-hero duo-result-hero--' + (Math.abs(r.partA - 50) >= 15 ? 'low' : 'high'));
+    hero.appendChild(el('div', 'duo-result-emoji', Math.abs(r.partA - 50) >= 15 ? '⚖️' : '🤝'));
+    var ring = el('div', 'duo-result-ring');
+    ring.innerHTML = renderScoreRing(partPorteur, null, false);
+    hero.appendChild(ring);
+    hero.appendChild(el('div', 'duo-result-match',
+      prenoms(this.txt('portePart', '{{p}} porte {{n}} % de la charge'))
+        .replace('{{p}}', porteur).replace('{{n}}', partPorteur)));
+    if (v.title) hero.appendChild(el('h3', 'duo-result-title', esc(prenoms(v.title))));
+    if (v.description) hero.appendChild(el('p', 'duo-result-desc', prenoms(v.description)));
+    wrap.appendChild(hero);
+
+    // La repartition, en une barre a deux couleurs.
+    var barre = el('div', 'cm-repartition');
+    barre.innerHTML =
+      '<div class="cm-repartition-legende"><span>' + esc(nomA) + ' ' + r.partA + '%</span>' +
+      '<span>' + esc(nomB) + ' ' + r.partB + '%</span></div>' +
+      '<div class="cm-repartition-barre"><div class="cm-repartition-a" style="width:' + r.partA + '%"></div>' +
+      '<div class="cm-repartition-b" style="width:' + r.partB + '%"></div></div>';
+    wrap.appendChild(barre);
+
+    // Une barre par domaine : la charge n'est presque jamais desequilibree
+    // partout de la meme facon, et c'est utile de voir ou elle penche.
+    var bloc = el('div', 'profile-breakdown max-w-md mx-auto mb-6');
+    r.domaines.forEach(function(dom) {
+      var ligne = el('div', 'profile-axis-row');
+      ligne.innerHTML =
+        '<div class="profile-axis-head"><span>' + esc(self.txt(dom.cle, dom.cle)) + '</span>' +
+        '<span class="profile-axis-pct">' + dom.pct + '%</span></div>' +
+        '<div class="profile-axis-bar"><div class="profile-axis-fill" data-w="' + dom.pct + '" style="width:0%;background:' + dom.color + '"></div></div>';
+      bloc.appendChild(ligne);
+    });
+    wrap.appendChild(bloc);
+    setTimeout(function() {
+      var f = self.container.querySelectorAll('.profile-axis-fill');
+      for (var i = 0; i < f.length; i++) f[i].style.width = f[i].getAttribute('data-w') + '%';
+    }, 120);
+
+    // Le coeur utile du test : les trois taches sur lesquelles les deux ne
+    // sont pas d'accord. C'est ce dont il faut parler, et rien d'autre.
+    if (this.duo && r.top.length) {
+      var dis = el('div', 'cm-desaccords');
+      dis.appendChild(el('h4', 'cm-desaccords-titre',
+        this.txt('desaccordsTitre', 'Vos trois plus gros désaccords')));
+      dis.appendChild(el('p', 'cm-desaccords-intro',
+        this.txt('desaccordsIntro', '') .replace('{{n}}', r.desaccords)));
+      var ul = el('ul', 'cm-desaccords-liste');
+      r.top.forEach(function(t) {
+        ul.appendChild(el('li', '', self.txt('q' + t.id, '')));
+      });
+      dis.appendChild(ul);
+      wrap.appendChild(dis);
+    }
+
+    if (v.advice) {
+      var conseil = el('div', 'duo-result-advice');
+      conseil.innerHTML = '<strong>' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + prenoms(v.advice);
+      wrap.appendChild(conseil);
+    }
+
+    renderActionButtons(wrap, {
+      share: { type: 'duo', pct: partPorteur, verdict: v.title ? prenoms(v.title) : '' },
+      restart: function() { self.phase = 'setup'; self.render(); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  // ═══════════════════════════════════════════════════════════
   // LES Z'AMOURS - TV game-show engine
   // Faithful to the France 2 show: one partner secretly answers, the
   // other guesses; dramatic reveal, animated TV scoreboard, alternating
@@ -7532,6 +7854,7 @@ var QuizEngine = (function() {
     TruefalseQuiz: TruefalseQuiz,
     ProfileQuiz: ProfileQuiz,
     PiliersQuiz: PiliersQuiz,
+    ChargeMentaleQuiz: ChargeMentaleQuiz,
     ZamoursQuiz: ZamoursQuiz,
     TentationQuiz: TentationQuiz,
     PartyGame: PartyGame,
