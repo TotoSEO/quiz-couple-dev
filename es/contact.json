@@ -21,7 +21,7 @@
     "message": "Mensaje",
     "messagePlaceholder": "Tu mensaje...",
     "optional": "opcional",
-    "rgpd": "Acepto que mis datos sean tratados conforme a la <a href=\"/es/privacidad/\" class=\"text-primary hover:underline\">política de privacidad</a> de Quiz Couple.",
+    "rgpd": "Acepto que mis datos sean tratados conforme a la <a href=\"/es/politica-privacidad/\" class=\"text-primary hover:underline\">política de privacidad</a> de Quiz Couple.",
     "submit": "Enviar",
     "successTitle": "¡Mensaje enviado!",
     "successText": "Hemos recibido tu mensaje y te responderemos lo antes posible.",

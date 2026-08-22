@@ -89,7 +89,8 @@
     "back": "Volver",
     "modify": "Modificar",
     "emptyState": "Rellena tus criterios a la izquierda para descubrir las actividades cerca de ti.",
-    "moreFilters": "Filtros avanzados (opcional)"
+    "moreFilters": "Filtros avanzados (opcional)",
+    "businessPromo": "Empresa: <a href=\"/es/contacto/\" class=\"text-primary hover:underline\">¡Contacta con Quiz Couple para promocionar tu negocio aquí!</a>"
   },
   "results": {
     "title": "Actividades encontradas",

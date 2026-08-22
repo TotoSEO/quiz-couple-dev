@@ -1,6 +1,6 @@
 {
   "hero": {
-    "badge": "Gratis \u2022 Senza registrazione \u2022 10 min",
+    "badge": "Gratis • Senza registrazione • 10 min",
     "title": "Test convivenza | Siete pronti ad andare a vivere insieme?",
     "titleHighlight": "convivenza",
     "intro1": "Dormite già a casa dell'uno o dell'altra 5 sere a settimana. Avete uno spazzolino da lui, lui ha un cassetto da voi. A questo punto, la domanda non è più \"ci amiamo abbastanza per vivere insieme\" ma piuttosto: <strong>siamo capaci di condividere 60m² senza ammazzarci?</strong>",
@@ -14,7 +14,6 @@
     "s1p1": "Tutti vi dicono che è \"il passo successivo\". Dopo qualche mese di relazione, la domanda arriva. \"E se prendessimo un appartamento?\" Sembra semplice. Non lo è.",
     "s1p2": "Vivere insieme significa passare dalla versione \"il meglio di sé\" (quella che si mostra agli appuntamenti) alla versione \"completa\" (quella che russa, che lascia la luce accesa e che mangia cereali alle 23). È un <strong>crash test a grandezza naturale</strong> per la vostra coppia. E contrariamente a quello che si pensa, le rotture post-convivenza non vengono quasi mai dai grandi problemi. Vengono dalle micro-frizioni quotidiane che si accumulano senza che si osi parlarne.",
     "s1p3": "Il tubetto del dentifricio. La temperatura della camera. Il volume della musica al mattino. Ridicolo? Sì. Ma dopo 6 mesi, un tubetto di dentifricio mal richiuso può diventare il simbolo di tutto ciò che non vi siete detti.",
-
     "s2Title": "I 6 argomenti che nessuno affronta (e che rovinano tutto)",
     "s2r1Title": "I soldi, concretamente",
     "s2r1Text": "Non \"divideremo\". Concretamente. Chi paga cosa? Conto comune o no? 50/50 o in proporzione ai redditi? Che succede se uno dei due perde il lavoro? In Italia, l'affitto medio per un bilocale in città si aggira tra i 600 e i 900 €. Aggiungete le spese condominiali, l'elettricità, Internet, la spesa. Sale in fretta. Le coppie che mettono i numeri nero su bianco prima di firmare il contratto disinnescano la maggior parte delle discussioni sui soldi prima ancora che esistano: raramente è la cifra a ferire, è la sorpresa.",
@@ -28,33 +27,28 @@
     "s2r5Text": "Il vostro appartamento è anche quello dell'altro. Il suo migliore amico che piomba la domenica senza avvisare, vostra sorella che resta \"solo una notte\" e riparte 4 giorni dopo... Casa propria è un rifugio. Quando questo rifugio viene invaso senza il vostro consenso, crea risentimento. Stabilite le regole insieme.",
     "s2r6Title": "La domanda \"e se non funziona?\"",
     "s2r6Text": "Nessuno ci vuole pensare. Ma è un po' come l'assicurazione: è sciocco non averla col pretesto che \"sicuramente non ne avremo bisogno\". Chi resta nell'appartamento se ci si separa? Il contratto è a nome di chi? Che succede con i mobili comprati insieme? Parlare di questo non porta sfortuna. Vi protegge entrambi.",
-
     "s3Title": "Convivenza dopo quanto tempo di relazione?",
     "s3p1": "6 mesi. 1 anno. 2 anni. Tutti hanno un'opinione. La realtà è che non esiste un numero magico.",
     "s3p2": "Quello che conta è ciò che avete vissuto insieme, non il numero di mesi sul contatore. Una coppia che si è vista 3 volte a settimana per 2 anni ha passato meno tempo insieme di una coppia che viveva praticamente sotto lo stesso tetto dopo 6 mesi. Il vero criterio è: avete già attraversato un conflitto serio? Avete visto l'altro in modalità \"non al top\" (malato, stressato, stanco, di cattivo umore per 3 giorni di fila)? Se la risposta è no, conoscete solo la versione vetrina. E andare a vivere con una versione vetrina significa prepararsi a delle sorprese.",
     "s3p3": "Una coppia <a href=\"/it/quiz-innamorati/\">innamorata</a> è bello. Una coppia innamorata che sa cosa l'aspetta nel quotidiano è meglio.",
-
     "s4Title": "Andare a vivere insieme per le ragioni giuste (e non per quelle sbagliate)",
     "s4p1": "Le buone ragioni: volete costruire un quotidiano insieme, avete testato e funziona, siete sulla stessa lunghezza d'onda sugli aspetti pratici, e la voglia è sincera da entrambe le parti.",
     "s4p2": "Le cattive ragioni (e sono più comuni di quanto si pensi):",
     "s4p3": "<strong>\"Costerà meno in due.\"</strong> È vero. Ma andare a vivere insieme per dividere l'affitto è un progetto da coinquilini, non un progetto di coppia. Se è la motivazione principale, è un campanello d'allarme.",
-    "s4p4": "<strong>\"Sono 2 anni, è ora.\"</strong> Il calendario sociale non ha nulla a che fare con il vostro calendario emotivo. Alcune coppie vanno a convivere dopo 8 mesi e funziona. Altre aspettano 4 anni ed è la scelta giusta. La pressione del \"bisogna andare avanti\" ha distrutto più coppie di quante ne abbia aiutate.",
+    "s4p4": "<strong>\"Sono 2 anni, è ora.\"</strong> Il calendario sociale non ha nulla a che fare con il vostro calendario emotivo. Alcune coppie vanno a convivere dopo 8 mesi e funziona. Altre aspettano 4 anni ed è la scelta giusta. <a href=\"/it/blog/paura-dell-impegno/\">La pressione del \"bisogna andare avanti\"</a> ha distrutto più coppie di quante ne abbia aiutate.",
     "s4p5": "<strong>\"Vediamo come va.\"</strong> L'ottimismo è carino. La preparazione è meglio. Le coppie che <a href=\"/it/domande-coppia/\">sanno risolvere i propri problemi</a> prima che diventino bombe a orologeria sono quelle che durano sotto lo stesso tetto.",
-
     "s5Title": "I primi 3 mesi: quello che nessuno vi dice",
     "s5p1": "I primi 3 mesi di convivenza sono il periodo di adattamento. Non la luna di miele che vi vendono. Concretamente, ecco cosa aspettarvi.",
     "s5p2": "<strong>Il mese 1</strong>, è l'eccitazione. Tutto è nuovo. Arredate, fate la spesa insieme, cucinate da innamorati. È carino.",
     "s5p3": "<strong>Il mese 2</strong>, le abitudini si consolidano. E le prime frizioni con esse. Perché ci sono sempre piatti nel lavello? Perché sta 45 minuti in bagno la mattina? È normale. È l'adattamento.",
     "s5p4": "<strong>Il mese 3</strong>, è il momento della verità. L'eccitazione è passata, la realtà è qui. Se riuscite a superare questo momento comunicando (anche in modo maldestro), siete sulla buona strada. Se i non-detti si accumulano, è il momento di parlarne. Non tra 6 mesi. Adesso.",
     "s5p5": "Un consiglio che le coppie rodate danno sempre: mantenete dei momenti \"ognuno per conto suo\" anche quando vivete insieme. Vedere i vostri amici da soli, mantenere un hobby personale, uscire senza l'altro. Non è mancanza d'amore. È ciò che vi permette di <a href=\"/it/quiz-coppia-divertente/\">mantenere la leggerezza nella coppia</a> invece di trasformare la vostra relazione in una convivenza funzionale.",
-
     "s6Title": "Checklist pratica prima di andare a vivere insieme",
     "s6p1": "Al di là del test, ecco i punti concreti da affrontare prima di posare gli scatoloni nello stesso posto:",
     "s6p2": "<strong>Il budget.</strong> Fate un foglio di calcolo (sì, uno vero). Affitto, spese, spesa alimentare, uscite, risparmi. Mettete le cifre nero su bianco. Se è già tirato prima ancora di andare a convivere, non si risolverà da solo una volta firmato il contratto.",
     "s6p3": "<strong>Il contratto.</strong> A nome di chi? Entrambi i nomi sul contratto = entrambi responsabili dell'affitto. Un solo nome = l'altro non ha alcun diritto sull'alloggio in caso di separazione. È da valutare.",
     "s6p4": "<strong>I mobili.</strong> Chi porta cosa? Cosa si compra insieme? Tenete a mente che un divano comprato in due è un potenziale oggetto di negoziazione in caso di rottura.",
     "s6p5": "<strong>Le regole di base.</strong> Non un contratto firmato dal notaio. Solo un accordo verbale sulle cose che contano: pulizia, ospiti, rumore, spazio personale. Si può fare davanti a una pizza. L'importante è che venga detto.",
-
     "faqTitle": "Domande frequenti sulla vita a due",
     "faq": [
       {

@@ -89,7 +89,8 @@
     "back": "Zurück",
     "modify": "Ändern",
     "emptyState": "Geben Sie Ihre Kriterien links ein, um Aktivitäten in Ihrer Nähe zu entdecken.",
-    "moreFilters": "Erweiterte Filter (optional)"
+    "moreFilters": "Erweiterte Filter (optional)",
+    "businessPromo": "Unternehmen: <a href=\"/de/kontakt/\" class=\"text-primary hover:underline\">Kontaktiert Quiz Couple, um euer Unternehmen hier zu bewerben!</a>"
   },
   "results": {
     "title": "Gefundene Aktivitäten",

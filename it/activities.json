@@ -89,7 +89,8 @@
     "back": "Indietro",
     "modify": "Modifica",
     "emptyState": "Inserisci i tuoi criteri a sinistra per scoprire le attività vicino a te.",
-    "moreFilters": "Filtri avanzati (opzionale)"
+    "moreFilters": "Filtri avanzati (opzionale)",
+    "businessPromo": "Azienda: <a href=\"/it/contatto/\" class=\"text-primary hover:underline\">Contatta Quiz Couple per promuovere la tua attività qui!</a>"
   },
   "results": {
     "title": "Attività trovate",
