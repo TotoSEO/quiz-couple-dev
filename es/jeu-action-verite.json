@@ -37,14 +37,14 @@
     "q3": "¿Cuántos pueden jugar?",
     "a3": "Está pensado para dos, con el turno anunciado en cada carta. Nada impide ir pasando el móvil en un grupo, pero las cartas están escritas para una pareja.",
     "q4": "¿Hay una versión más atrevida?",
-    "a4": "Sí, en una página aparte y con su propio mazo, bastante más directo. Es la versión picante, hecha para las noches en que estáis realmente solos.",
+    "a4": "Sí, en una página aparte y con su propio mazo, bastante más directo. Es la <a href=\"/es/verdad-o-reto-picante-pareja/\">versión picante</a>, hecha para las noches en que estáis realmente solos.",
     "q5": "¿Se puede jugar a distancia?",
     "a5": "Sí, y funciona mejor de lo que parece. Uno abre el juego, lee la carta en voz alta por videollamada y valida por los dos. Las verdades salen perfectas, los retos piden algo de imaginación…"
   },
   "section4": {
     "title": "Por qué este juego sigue funcionando después de tantos años",
     "p1": "Verdad o reto sobrevive generación tras generación por una razón muy simple: te da permiso para hacer una pregunta que nunca habrías hecho por tu cuenta. No preguntas tú, pregunta la carta. Y esa distancia mínima lo cambia absolutamente todo.",
-    "p2": "En pareja suele ser la única forma de abrir ciertos temas sin convertirlos en una conversación solemne. Nadie quiere oír «tenemos que hablar»… pero todo el mundo acepta sacar una carta."
+    "p2": "En pareja suele ser la única forma de abrir ciertos temas sin convertirlos en una conversación solemne. Nadie quiere oír «tenemos que hablar»… pero todo el mundo acepta sacar una carta. Es el mismo principio que nuestras <a href=\"/es/preguntas-pareja/\">preguntas para hacerse en pareja</a>, en versión más ligera."
   },
   "jsonLd": {
     "name": "Juego verdad o reto en pareja"

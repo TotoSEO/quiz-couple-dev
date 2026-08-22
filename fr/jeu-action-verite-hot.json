@@ -31,7 +31,7 @@
   "faq": {
     "title": "Questions fréquentes",
     "q1": "Quelle différence avec la version classique ?",
-    "a1": "Les cartes, tout simplement. La version classique s'adresse à tous les couples et se joue devant n'importe qui. Celle-ci a son propre paquet, nettement plus direct, écrit pour un moment où vous êtes seuls tous les deux.",
+    "a1": "Les cartes, tout simplement. La <a href=\"/jeu-action-ou-verite-couple/\">version classique</a> s'adresse à tous les couples et se joue devant n'importe qui. Celle-ci a son propre paquet, nettement plus direct, écrit pour un moment où vous êtes seuls tous les deux.",
     "q2": "C'est très explicite ?",
     "a2": "Ça va du suggestif au très direct. Les plus douces demandent un compliment ou un baiser, les plus osées supposent une intimité déjà installée. Il n'y a pas de niveau à choisir : c'est le droit de passer qui fixe la limite, carte après carte.",
     "q3": "Combien y a-t-il de cartes ?",
@@ -43,7 +43,7 @@
   },
   "section4": {
     "title": "Ce qu'un jeu comme celui-ci peut vraiment faire",
-    "p1": "Il ne va pas transformer votre vie intime, et personne ne devrait le lui demander. Ce qu'il fait bien, en revanche, c'est donner un cadre à une conversation que beaucoup de couples n'ont jamais vraiment eue. Parce que c'est la carte qui pose la question à votre place.",
+    "p1": "Il ne va pas transformer votre vie intime, et personne ne devrait le lui demander. Ce qu'il fait bien, en revanche, c'est donner un cadre à une conversation que beaucoup de couples n'ont jamais vraiment eue, celle que le <a href=\"/quiz-couple-coquin/\">quiz coquin</a> aborde de son côté par les questions plutôt que par les défis. Parce que c'est la carte qui pose la question à votre place.",
     "p2": "Le reste, c'est vous qui le décidez. Et c'est très bien ainsi !"
   },
   "jsonLd": {
