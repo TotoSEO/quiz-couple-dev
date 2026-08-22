@@ -861,6 +861,10 @@ async function generatePage(routeKey, lang) {
     canonical,
     alternates,
     noindex: isNoindex ? (routeKey === 'admin' ? 'noindex, nofollow' : 'noindex, follow') : false,
+    // Le tableau de bord ne doit jamais etre servi depuis le cache : ses
+    // chiffres changent en continu, et une page gardee dix minutes pointe
+    // vers une version perimee des scripts.
+    sansCache: routeKey === 'admin',
     // Per-page featured image (hero + OG share + home card). Falls back to the generic OG image.
     ogImage: featured ? `${BASE_URL}/quiz/featured/${featured.file}.webp` : `${BASE_URL}/og-image.webp`,
     featuredImage: featured ? `/quiz/featured/${featured.file}.webp` : null,
