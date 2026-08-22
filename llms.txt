@@ -1,6 +1,6 @@
 # Quiz Couple
 
-> Quiz Couple is a free online platform offering 44 relationship quizzes, tests and games for couples. Available in 5 languages (French, English, Spanish, German, Italian).
+> Quiz Couple is a free online platform offering 47 relationship quizzes, tests and games for couples. Available in 5 languages (French, English, Spanish, German, Italian).
 
 ## Main Features
 
@@ -40,6 +40,8 @@
 - [Parenthood Readiness Test](https://quiz-couple.com/en/parenthood-readiness-test/): Are you ready for a baby?
 - [Ready for a Baby Test](https://quiz-couple.com/en/ready-for-a-baby-test/): 20 questions on emotional maturity, finances and lifestyle before starting a family
 - [Moving In Together Test](https://quiz-couple.com/en/moving-in-together-test/): Should you move in together?
+- [Does My Ex Still Think About Me](https://quiz-couple.com/en/does-my-ex-still-think-about-me/): 15 weighted questions on what an ex actually does rather than what you read into it, with two question sets depending on their gender and four result tiers
+- [Mental Load Test for Couples](https://quiz-couple.com/en/mental-load-test-couples/): 20 household tasks rated on who thinks of them, not who does them, playable alone or by both partners, returning a split, a per-area breakdown and the gap between the two accounts
 
 ### Fun Quizzes
 - [Love Quiz](https://quiz-couple.com/en/love-quiz/): Romantic debate questions
@@ -52,6 +54,7 @@
 - [True or False Quiz](https://quiz-couple.com/en/true-or-false-couple-quiz/): Relationship myths
 - [Quiz Les Z'Amours](https://quiz-couple.com/quiz-couple-les-zamours/): Online version of the French TV show "Les Z'Amours", guess your partner's answers (FR)
 - [Temptation Island Quiz](https://quiz-couple.com/en/temptation-island-quiz/): Unofficial quiz inspired by the Temptation Island format, with 12 days on the island, 30 tempting situations and a final bonfire verdict
+- [First Date Questions Game](https://quiz-couple.com/en/first-date-questions-game/): 60 questions in three tiers of rising intimacy, 15 drawn per round and always played in order, for two people on one phone, with no score and no winner
 
 ### Couple Games
 - [Couple Games Hub](https://quiz-couple.com/en/couple-games/): the eight games to play together on a single phone, free and without an account

@@ -354,7 +354,10 @@
     "jeuDilemmes": "Dilemmes de couple",
     "testFinCouple": "Est-ce la fin de mon couple ?",
     "testAmourAmitie": "Amour ou amitié ?",
-    "testDependance": "Test dépendance affective"
+    "testDependance": "Test dépendance affective",
+    "testEx": "Test mon ex pense-t-il encore à moi",
+    "testChargeMentale": "Test charge mentale du couple",
+    "quizRencontre": "Questions de premier rendez-vous"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
