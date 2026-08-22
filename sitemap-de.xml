@@ -938,4 +938,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://quiz-couple.com/de/blog/narzisst-in-der-liebe/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/pervers-narcissique-amour/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/narcissist-in-love-signs/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/narcisista-en-el-amor/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/narzisst-in-der-liebe/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/narcisista-in-amore/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/pervers-narcissique-amour/"/>
+    <lastmod>2026-08-22T15:20:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
