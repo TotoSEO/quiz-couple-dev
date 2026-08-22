@@ -41,7 +41,7 @@
   },
   "section3": {
     "title": "Was euer Ergebnis bedeutet",
-    "p1": "Der Test liefert zuerst eine Verteilung in Prozent, dann die Aufschlüsselung nach Bereich. Im Modus zu zweit kommt die Messung dazu, die diese Seite überhaupt lohnend macht: der Abstand zwischen euren beiden Antwortreihen. Ein Ungleichgewicht, das beide sehen, und eines, das nur einer sieht, behandelt man nicht gleich.",
+    "p1": "Der Test liefert zuerst eine Verteilung in Prozent, dann die Aufschlüsselung nach Bereich. Im Modus zu zweit kommt die Messung dazu, die diese Seite überhaupt lohnend macht: der Abstand zwischen euren beiden Antwortreihen. Ein Ungleichgewicht, das beide sehen, und eines, das nur einer sieht, behandelt man nicht gleich. Die vier Situationen unten sind die des Modus zu zweit, die einzigen, in denen sich dieser Abstand messen lässt.",
     "headerScore": "Lage",
     "headerLevel": "Was sie beschreibt",
     "headerAnalysis": "Was zu tun ist",
@@ -57,7 +57,7 @@
     "row4Score": "Einer trägt, der andere sieht es nicht",
     "row4Level": "Der häufigste Fall, und auf Dauer der teuerste.",
     "row4Analysis": "Geht von den drei Abweichungen aus, nicht von einer Liste von Vorwürfen.",
-    "tip": "Diesen Test allein zu machen liefert eine nützliche, aber unvollständige Information. Gerade bei der Verteilung gehen die Einschätzungen in einer Beziehung am weitesten auseinander, ein Alleinergebnis beschreibt also vor allem deine Sicht."
+    "tip": "Allein lässt sich dieser Abstand nicht messen: der Test liefert dann eines von zwei Ergebnissen, „Du beschreibst eine geteilte Last“ oder „Du beschreibst eine Last, die vor allem auf einer Person liegt“. Das entscheidende Wort ist <strong>beschreibst</strong>. Gerade bei der Verteilung gehen die Einschätzungen in einer Beziehung am weitesten auseinander, ein Alleinergebnis sagt also vor allem, wo du stehst, nicht wo ihr beide steht."
   },
   "section4": {
     "title": "Warum es fast immer dieselbe Person trifft",

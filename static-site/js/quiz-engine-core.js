@@ -4757,12 +4757,15 @@ var QuizEngine = (function() {
         .replace(/\{\{b\}\}/g, nomB || '');
     }
     if (!this.duo) {
+      // En solo le prenom saisi est celui du partenaire, et il est range en
+      // joueurs[1] : c'est l'autre bout de l'axe. Le lire dans joueurs[0],
+      // vide a ce stade, affichait « Plutot » et « Toujours » sans nom.
       return [
         rendre('optToujoursMoi', 'Toujours moi'),
         rendre('optPlutotMoi', 'Plutôt moi'),
         rendre('optDeux', 'À deux, équitablement'),
-        rendre('optPlutotAutre', 'Plutôt {{a}}', a),
-        rendre('optToujoursAutre', 'Toujours {{a}}', a)
+        rendre('optPlutotAutre', 'Plutôt {{a}}', b),
+        rendre('optToujoursAutre', 'Toujours {{a}}', b)
       ];
     }
     return [

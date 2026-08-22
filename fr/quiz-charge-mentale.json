@@ -41,7 +41,7 @@
   },
   "section3": {
     "title": "Ce que dit votre résultat",
-    "p1": "Le test rend d'abord une répartition en pourcentage, puis le détail par domaine. En mode à deux, il ajoute la mesure qui fait tout l'intérêt de la page : l'écart entre vos deux réponses. Un déséquilibre vu par les deux et un déséquilibre vu par un seul ne se traitent pas pareil.",
+    "p1": "Le test rend d'abord une répartition en pourcentage, puis le détail par domaine. En mode à deux, il ajoute la mesure qui fait tout l'intérêt de la page : l'écart entre vos deux réponses. Un déséquilibre vu par les deux et un déséquilibre vu par un seul ne se traitent pas pareil. Les quatre situations ci-dessous sont celles du mode à deux, les seules où cet écart peut se mesurer.",
     "headerScore": "Situation",
     "headerLevel": "Ce que ça décrit",
     "headerAnalysis": "Ce qu'il y a à faire",
@@ -57,7 +57,7 @@
     "row4Score": "L'un porte, l'autre ne voit pas",
     "row4Level": "Le cas le plus fréquent, et le plus coûteux à terme.",
     "row4Analysis": "Partez des trois désaccords du test, pas d'une liste de reproches.",
-    "tip": "Faire ce test seul(e) donne une information utile mais partielle. C'est justement sur la répartition que les deux membres d'un couple divergent le plus, donc un résultat solo décrit surtout votre point de vue."
+    "tip": "Seul(e), l'écart ne peut pas être mesuré : le test rend alors l'un des deux résultats, « Vous décrivez une charge partagée » ou « Vous décrivez une charge qui repose surtout sur une personne ». Le mot qui compte est <strong>décrivez</strong>. C'est justement sur la répartition que les deux membres d'un couple divergent le plus, donc un résultat solo dit surtout où vous vous situez, pas où vous en êtes tous les deux."
   },
   "section4": {
     "title": "Pourquoi ça tombe presque toujours sur la même personne",

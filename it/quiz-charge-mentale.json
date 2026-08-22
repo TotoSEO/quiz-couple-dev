@@ -41,7 +41,7 @@
   },
   "section3": {
     "title": "Cosa dice il vostro risultato",
-    "p1": "Il test dà prima una ripartizione in percentuale, poi il dettaglio per ambito. In modalità in due aggiunge la misura che dà tutto il senso a questa pagina: lo scarto tra le vostre due risposte. Uno squilibrio visto da entrambi e uno visto da uno solo non si trattano allo stesso modo.",
+    "p1": "Il test dà prima una ripartizione in percentuale, poi il dettaglio per ambito. In modalità in due aggiunge la misura che dà tutto il senso a questa pagina: lo scarto tra le vostre due risposte. Uno squilibrio visto da entrambi e uno visto da uno solo non si trattano allo stesso modo. Le quattro situazioni qui sotto sono quelle della modalità in due, le uniche in cui questo scarto si può misurare.",
     "headerScore": "Situazione",
     "headerLevel": "Cosa descrive",
     "headerAnalysis": "Cosa c'è da fare",
@@ -57,7 +57,7 @@
     "row4Score": "Uno porta, l'altro non vede",
     "row4Level": "Il caso più frequente, e il più costoso a lungo andare.",
     "row4Analysis": "Partite dai tre disaccordi del test, non da una lista di rimproveri.",
-    "tip": "Fare questo test da soli dà un'informazione utile ma parziale. È proprio sulla ripartizione che i due membri di una coppia divergono di più, quindi un risultato in solitaria descrive soprattutto il tuo punto di vista."
+    "tip": "Da soli lo scarto non si può misurare: il test restituisce allora uno dei due risultati, « Descrivi un carico condiviso » oppure « Descrivi un carico che pesa soprattutto su una persona ». La parola che conta è <strong>descrivi</strong>. È proprio sulla ripartizione che i due membri di una coppia divergono di più, quindi un risultato in solitaria dice soprattutto dove ti collochi tu, non dove siete voi due."
   },
   "section4": {
     "title": "Perché ricade quasi sempre sulla stessa persona",

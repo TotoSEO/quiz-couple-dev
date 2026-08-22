@@ -41,7 +41,7 @@
   },
   "section3": {
     "title": "Lo que dice tu resultado",
-    "p1": "El test da primero un reparto en porcentaje y luego el detalle por ámbito. En modo pareja añade la medida que da todo el interés a esta página: la diferencia entre vuestras dos respuestas. Un desequilibrio que ven los dos y uno que ve uno solo no se tratan igual.",
+    "p1": "El test da primero un reparto en porcentaje y luego el detalle por ámbito. En modo pareja añade la medida que da todo el interés a esta página: la diferencia entre vuestras dos respuestas. Un desequilibrio que ven los dos y uno que ve uno solo no se tratan igual. Las cuatro situaciones de abajo son las del modo en pareja, las únicas en las que esa diferencia puede medirse.",
     "headerScore": "Situación",
     "headerLevel": "Lo que describe",
     "headerAnalysis": "Lo que hay que hacer",
@@ -57,7 +57,7 @@
     "row4Score": "Uno lleva, el otro no lo ve",
     "row4Level": "El caso más frecuente, y el más caro a la larga.",
     "row4Analysis": "Partid de los tres desacuerdos del test, no de una lista de reproches.",
-    "tip": "Hacer este test solo da una información útil pero parcial. Es justamente sobre el reparto donde los dos miembros de una pareja más divergen, así que un resultado en solitario describe sobre todo tu punto de vista."
+    "tip": "En solitario la diferencia no puede medirse: el test devuelve entonces uno de los dos resultados, « Describes una carga compartida » o « Describes una carga que recae sobre todo en una persona ». La palabra que cuenta es <strong>describes</strong>. Es justamente sobre el reparto donde los dos miembros de una pareja más divergen, así que un resultado en solitario dice sobre todo dónde estás tú, no dónde estáis los dos."
   },
   "section4": {
     "title": "Por qué recae casi siempre en la misma persona",

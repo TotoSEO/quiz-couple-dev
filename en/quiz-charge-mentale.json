@@ -41,7 +41,7 @@
   },
   "section3": {
     "title": "What your result means",
-    "p1": "The test first gives a split as a percentage, then the breakdown by area. In two-player mode it adds the measure that makes this page worth reading: the gap between your two sets of answers. An imbalance both of you see and an imbalance only one of you sees are not handled the same way.",
+    "p1": "The test first gives a split as a percentage, then the breakdown by area. In two-player mode it adds the measure that makes this page worth reading: the gap between your two sets of answers. An imbalance both of you see and an imbalance only one of you sees are not handled the same way. The four situations below are the two-player ones, the only ones where that gap can be measured.",
     "headerScore": "Situation",
     "headerLevel": "What it describes",
     "headerAnalysis": "What to do about it",
@@ -57,7 +57,7 @@
     "row4Score": "One carries, the other cannot see",
     "row4Level": "The most common case, and the costliest over time.",
     "row4Analysis": "Start from the three disagreements the test gives you, not from a list of grievances.",
-    "tip": "Taking this test on your own gives useful but partial information. The split is precisely the point on which the two members of a couple diverge most, so a solo result mainly describes your point of view."
+    "tip": "On your own the gap cannot be measured, so the test returns one of two results instead: « You are describing a shared load » or « You are describing a load resting mainly on one person ». The word that matters is <strong>describing</strong>. The split is precisely the point on which the two members of a couple diverge most, so a solo result mainly says where you stand, not where the two of you stand."
   },
   "section4": {
     "title": "Why it almost always lands on the same person",
