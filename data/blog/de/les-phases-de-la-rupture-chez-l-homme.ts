@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: 'Die 6 Phasen der Trennung beim Mann: von der Verleugnung bis zum Neuaufbau.',
   introduction: `<p>Man sagt oft, dass Männer weniger unter einer Trennung leiden. Dass sie schneller wieder auf die Beine kommen, dass sie ohne große Schäden weitermachen. Das stimmt nicht. Was aber stimmt, ist, dass sie es anders erleben, und oft erst später.</p>
 <p>Während eine Frau den <strong>Trennungsschmerz</strong> in der Regel fast sofort spürt, lässt sich der Mann Zeit, ihn zuzulassen. Er kann ausgehen, lachen, Party um Party machen, den Anschein erwecken, dass alles gut ist… und drei Monate später zusammenbrechen, wenn er sich an einem Sonntagabend allein wiederfindet und die Realität ihn mit voller Wucht einholt.</p>
-<p>Die <strong>Phasen der Trennung beim Mann</strong> zu verstehen, ist in vielerlei Hinsicht nützlich. Ob Sie ein Mann sind, der eine Trennung durchmacht und versucht, das Erlebte in Worte zu fassen, oder eine Frau, die verstehen möchte, wie ihr Ex die Dinge erlebt, dieser Artikel ist für Sie.</p>`,
+<p>Die <strong>Phasen der Trennung beim Mann</strong> zu verstehen, ist in vielerlei Hinsicht nützlich. Ob Sie ein Mann sind, der eine Trennung durchmacht und versucht, das Erlebte in Worte zu fassen, oder eine Frau, die <a href="https://quiz-couple.com/de/denkt-mein-ex-noch-an-mich/">verstehen möchte, wie ihr Ex die Dinge erlebt</a>, dieser Artikel ist für Sie.</p>`,
   quickSummary: [
     'Die Trennung beim Mann durchläuft 6 Phasen: Verleugnung, emotionale Betäubung, Wut, Bewusstwerdung, echte Trauer und Neuaufbau.',
     'Diese Phasen verlaufen nicht linear und variieren je nach Person.',

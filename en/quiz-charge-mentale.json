@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "badge": "Free test, 20 tasks",
+    "title": "Who carries the mental load in your relationship?",
+    "titleHighlight": "the mental load",
+    "description": "20 tasks, and the same question every time: who thinks about it? Answer separately, and the gap between your two sets of answers becomes the result.",
+    "subtitle": "Alone or together, free and anonymous"
+  },
+  "howTo": {
+    "title": "How does this test work?",
+    "step1": "Pick your mode. <strong>On your own</strong>, you get the split as you see it. <strong>Together</strong>, you each answer in turn without seeing the other's answers, and the test compares them.",
+    "step2": "For each of the 20 tasks, one question only: <strong>who thinks about it?</strong> Not who does it, who thinks about it. Five answers, from « always one of you » to « always the other », with an even split in the middle.",
+    "step3": "Answer on what actually happens, not on what ought to happen. Nobody reads your answers, and a flattering test is of no use to anyone.",
+    "step4": "The result gives the split as a percentage, the breakdown by area, and in two-player mode, the three tasks you disagree on most.",
+    "outro": "The two-player mode is the one that matters. An imbalance both of you can see and an imbalance only one of you can see are not the same situation, and they do not call for the same conversation."
+  },
+  "crossLink": {
+    "title": "And if a child comes along?",
+    "text": "The mental load is what rises most when a child arrives, and it is almost always the same person who absorbs the increase. The parenthood readiness test looks at whether you are ready on that particular front.",
+    "button": "Take the parenthood readiness test"
+  },
+  "section1": {
+    "title": "The mental load is not doing the dishes",
+    "p1": "This is the misunderstanding that blocks every conversation on the subject. When a couple argues about the division of labour, one of them is talking about execution and the other about anticipation. They are not discussing the same thing, and neither of them realises it.",
+    "p2": "The mental load is not taking the bins out. It is <strong>knowing that it is bin day</strong>. It is not buying toothpaste, it is noticing that it is about to run out. It is not driving someone to the doctor, it is remembering to book the appointment three weeks earlier. Visible work is seen by everyone. Invisible work is seen by nobody, except the person doing it.",
+    "p3": "That is why « you only have to ask » is the heart of the problem rather than its solution. Asking requires knowing what needs doing, knowing when, and remembering to say so at the right moment. Whoever has to ask keeps the entire load and delegates only the execution, which is the lighter half.",
+    "p4": "So this test measures anticipation and nothing else. On each of the twenty tasks, the question asked is never « who does it », it is « who thinks about it »."
+  },
+  "section2": {
+    "title": "The four areas where the load settles",
+    "intro": "It is almost never imbalanced everywhere in the same way. The test splits it into four areas, because seeing where it tips is more useful than a single overall figure.",
+    "pillar1Title": "Everyday running",
+    "pillar1Text": "Supplies, meals, laundry, whatever is about to run out before it does. This is the most continuous area: it never stops, it is never finished, and it only becomes visible on the day there is no coffee left. It is also where the imbalance sets in earliest, often within the first months of living together.",
+    "pillar2Title": "Looking ahead",
+    "pillar2Text": "Appointments to book, things that are broken and will need fixing, deadlines on the car or the flat, next season's clothes. None of it is urgent, and that is precisely what makes it heavy: it has to be held in mind long in advance, with nothing to prompt you.",
+    "pillar3Title": "Admin",
+    "pillar3Text": "The post, the direct debits, the contracts, the tedious paperwork. This is the area most often handed over wholesale to one person, because it looks the most technical. That is the trap: once it has become somebody's area, nobody else thinks about it any more, including to check that it is going fine.",
+    "pillar4Title": "Family and friends",
+    "pillar4Text": "Birthdays, presents, invitations, keeping in touch. This is the most unevenly divided area of all, and the one least often recognised as work. Yet maintaining a social connection takes memory, organisation and time, including for the other person's family.",
+    "tip": "A simple way to tell the two loads apart: imagine you left for ten days without warning. Whatever would stop working is your mental load. Whatever someone else would do in your place without thinking about it is execution."
+  },
+  "section3": {
+    "title": "What your result means",
+    "p1": "The test first gives a split as a percentage, then the breakdown by area. In two-player mode it adds the measure that makes this page worth reading: the gap between your two sets of answers. An imbalance both of you see and an imbalance only one of you sees are not handled the same way. The four situations below are the two-player ones, the only ones where that gap can be measured.",
+    "headerScore": "Situation",
+    "headerLevel": "What it describes",
+    "headerAnalysis": "What to do about it",
+    "row1Score": "You are a team",
+    "row1Level": "Evenly split, and you describe the same thing.",
+    "row1Analysis": "Nothing to fix. Retake the test after the next big change.",
+    "row2Score": "Split, but blurry",
+    "row2Level": "The total is balanced, your two versions diverge.",
+    "row2Analysis": "Describe to each other what you actually do. Resentment comes from the misunderstanding.",
+    "row3Score": "Acknowledged imbalance",
+    "row3Level": "One carries more, and you agree on that.",
+    "row3Analysis": "The question is not whether it is fair, but whether it holds. Set a date.",
+    "row4Score": "One carries, the other cannot see",
+    "row4Level": "The most common case, and the costliest over time.",
+    "row4Analysis": "Start from the three disagreements the test gives you, not from a list of grievances.",
+    "tip": "On your own the gap cannot be measured, so the test returns one of two results instead: « You are describing a shared load » or « You are describing a load resting mainly on one person ». The word that matters is <strong>describing</strong>. The split is precisely the point on which the two members of a couple diverge most, so a solo result mainly says where you stand, not where the two of you stand."
+  },
+  "section4": {
+    "title": "Why it almost always lands on the same person",
+    "p1": "No couple decides one day that one of them will handle everything invisible. The imbalance is not decided, it settles, and it does so through mechanisms that are fairly simple to name.",
+    "sub1Title": "Whoever notices first ends up handling it",
+    "sub1Text": "This is the main mechanism, and it has nothing to do with goodwill. Two people have different tolerance thresholds for mess, empty cupboards or overdue appointments. The one with the lower threshold sees the problem first, deals with it, and becomes by default the one who always deals with it. Within a few months, the other has stopped looking.",
+    "sub2Title": "Expertise becomes a trap",
+    "sub2Text": "As soon as one person does something twice as well or twice as fast, it becomes rational to leave it to them. Except that efficiency has a price: every task assigned on competence becomes a task nobody else will know how to pick up, and the area closes over.",
+    "sub3Title": "Helping gets mistaken for sharing",
+    "sub3Text": "« I help you » and « I handle it » are two very different positions, and many couples do not measure the distance between them. Helping means executing on request, which leaves the other person the job of knowing, planning and reminding. A couple where one helps a great deal can have an almost equal split of execution and a completely lopsided mental load.",
+    "sub4Title": "Nobody is counting the same things",
+    "sub4Text": "Each person has a precise view of what they carry and an approximate view of what the other carries. That is not bad faith, it is how attention normally works: you see what you do, and you do not see what got done without you. That gap is exactly what the two-player mode measures.",
+    "tip": "None of these four mechanisms requires any ill will. That is what makes them hard to correct: there is nobody to blame, and the situation is nonetheless entirely real."
+  },
+  "section5": {
+    "title": "What it costs when it lasts",
+    "p1": "An unbalanced mental load does not cause a crisis. It produces wear, and wear is only noticed once it has already done its work.",
+    "p2": "The first effect is a tiredness that sleep does not repair, because it comes from continuous mental activity rather than physical effort. The second is resentment, which accumulates slowly and generally comes out over something tiny, which makes it incomprehensible to the other person: the argument is about a sock, never about the substance.",
+    "p3": "The third effect is the hardest to undo. By managing everything, a person ends up occupying the position of organiser within their own relationship, and that position comes with a role that is not remotely romantic. Many couples describe this shift without being able to name it: you have stopped being two adults living together, one directs and the other executes.",
+    "tip": "If you recognise yourself in those three paragraphs, the good news is that the mental load is one of the few imbalances that gets corrected with organisation rather than with a change of personality."
+  },
+  "section6": {
+    "title": "What actually rebalances things, and what does nothing",
+    "p1": "Many of the solutions offered on this subject move nothing at all, because they leave the invisible half exactly where it was. Here is what works, and what merely creates the impression of acting.",
+    "sub1Title": "Transfer a whole area, not tasks",
+    "sub1Text": "This is the only transfer that genuinely lightens the load. « You handle the medical appointments » means knowing when they are due, booking the slots, noting them and sticking to them, with no reminders. As long as somebody has to remind, the load has not moved an inch.",
+    "sub2Title": "Accept that it will be done differently",
+    "sub2Text": "This is where most rebalancing attempts fail. A transferred area will be run differently, often worse at first, sometimes worse for good. Taking it back at the first mistake returns everything to square one and permanently installs the idea that the other one cannot manage it.",
+    "sub3Title": "Write the list once, together",
+    "sub3Text": "Many invisible tasks only exist for one of the two at the moment they see them written down. Taking the inventory together, once, changes more than a conversation about fairness, because it replaces a debate about impressions with an object both of you can look at.",
+    "sub4Title": "What does not work",
+    "sub4Text": "Rotas pinned to the fridge last about three weeks. Shared task apps shift the load onto whoever fills in the app. And « just tell me what to do » is, quite literally, a request to keep hold of the mental load."
+  },
+  "section7": {
+    "title": "How to raise it without it going badly",
+    "p1": "This conversation derails often, because it is nearly always opened at the wrong moment: on a tired evening, after a final straw, in the form of a reproach. The person on the receiving end hears an accusation, defends themselves, and the substance never gets discussed.",
+    "p2": "That is precisely what the test is for. It replaces « you never do anything » with a neutral object you both look at, and it points to three specific tasks rather than a general trial. Three tasks can be discussed. A trial cannot.",
+    "p3": "If you are the one discovering the imbalance while reading the result, there is only one useful thing to do, and it is not to justify yourself. Ask the other person to walk you through a typical day of what they are holding in their head. It is the fastest way to understand, because it makes visible what by definition cannot be seen.",
+    "tip": "Come back to it once the subject has cooled, with a date set in advance to take stock. A rebalancing rarely holds if it is only checked at the next crisis."
+  },
+  "faq": {
+    "q1": "What is the difference between the mental load and household chores?",
+    "a1": "Household chores are the visible work: vacuuming, shopping, cooking. The mental load is the invisible work that comes before: knowing it needs doing, deciding when, remembering what is missing, booking appointments before it is too late. You can have a perfectly equal division of chores and a mental load carried entirely by one person, and that is in fact a very common situation.",
+    "q2": "Should I take this test alone or with my partner?",
+    "a2": "Both are possible, but they do not give the same thing. Alone, you get the split as you see it, which is useful but partial. Together, you additionally get the gap between your two perceptions, and that is often the most telling piece of information in the test. If you are only going to do one, do it together.",
+    "q3": "Does the mental load only concern women?",
+    "a3": "No, but the figures show a clear imbalance. The Ifop barometer on the subject reports that 71% of women describe a high mental load, and France's national statistics institute observes that they handle roughly 71% of parenting tasks and 64% of domestic ones. None of that says anything about your relationship in particular: that is exactly what the test looks at, with no assumption about who carries what.",
+    "q4": "My partner does not understand what I am talking about, what should I do?",
+    "a4": "That is the most common situation, and it is almost never ill will: the mental load only becomes visible the moment it stops being carried. The most effective move is to have them take the test separately, then compare the two results. The gap between your answers is a far more solid argument than a conversation, because nobody has to take anybody's word for it.",
+    "q5": "Not all twenty tasks apply to us, is that a problem?",
+    "a5": "No. The twenty tasks were chosen to hold in the large majority of households, with or without children, renting or owning. If one of them does not apply to you, answer « both, evenly »: it will become neutral and will not skew the split.",
+    "q6": "Are my answers saved?",
+    "a6": "No. Everything happens in your browser, no answer is sent or stored, and there is no account and no email address to give. Even in two-player mode, the first player's answers are only used for the final calculation and disappear when you close the page."
+  }
+}

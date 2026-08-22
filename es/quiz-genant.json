@@ -16,7 +16,7 @@
     "title": "¿Es grave ser una pareja vergonzosa?",
     "p1": "No. No realmente. Obviamente hay límites: comportamientos que realmente incomodan a la gente en espacios donde no pueden irse, situaciones donde la exhibición se convierte en una forma de falta de respeto hacia el contexto. Un funeral no es una fiesta entre amigos. Una oficina diáfana no es un piso.",
     "p2": "Pero en la gran mayoría de los casos, una pareja \"vergonzosa\" es simplemente una pareja a la que le gusta estar junta, que no se come demasiado la cabeza con lo que piensa la gente, y que tiene una forma de interactuar que se sale ligeramente de las convenciones. La mayoría de las veces, la gente de alrededor lo encuentra entrañable mucho más a menudo de lo que admiten.",
-    "p3": "Lo que realmente causa problema es cuando uno de los dos está mucho más cómodo que el otro con esta exhibición pública. Cuando uno lo encuentra natural y el otro lo gestiona sonriendo sin vivirlo realmente bien. Esa asimetría merece una conversación de verdad, no para cortar los impulsos, sino para asegurarse de que los dos están en el mismo sitio."
+    "p3": "Lo que realmente causa problema es cuando uno de los dos está mucho más cómodo que el otro con esta exhibición pública. Cuando uno lo encuentra natural y el otro lo gestiona sonriendo sin vivirlo realmente bien. Esa asimetría merece una <a href=\"/es/preguntas-pareja/\">conversación de verdad</a>, no para cortar los impulsos, sino para asegurarse de que los dos están en el mismo sitio."
   },
   "section3": {
     "title": "¿Por qué algunas parejas son más demostrativas que otras?",
@@ -35,7 +35,7 @@
   "section5": {
     "title": "¿Y si preferís haceros las preguntas incómodas?",
     "p1": "Buscar «quiz vergonzoso» significa dos cosas muy distintas según quién pregunte. Unos quieren saber si son la pareja que se morrea delante de los padres. Otros buscan <strong class=\"text-foreground\">preguntas incómodas para hacerse en pareja</strong>, esas que nadie lanza un martes por la noche delante de una serie.",
-    "p2": "Para eso está el segundo formato: veinte preguntas sacadas de cuatro familias. Sin filtros, para todo lo que tiene que ver con el cuerpo y con el día a día que no se enseña a nadie. Antes de nosotros, para los ex y la primera vez. Tu familia, mis amigos, para todo lo que se piensa del entorno del otro sin decirlo nunca. Y la verdad que escuece, donde por fin se pregunta lo que nunca se preguntó.",
+    "p2": "Para eso está el segundo formato: veinte preguntas sacadas de cuatro familias. Sin filtros, para todo lo que tiene que ver con el cuerpo y con el día a día que no se enseña a nadie. Antes de nosotros, para los ex y la primera vez, terreno que el <a href=\"/es/test-de-pureza-pareja/\">test de pureza</a> cuantifica por su lado. Tu familia, mis amigos, para todo lo que se piensa del entorno del otro sin decirlo nunca. Y la verdad que escuece, donde por fin se pregunta lo que nunca se preguntó.",
     "p3": "No hay puntuación ni ganador. Se lee la pregunta en voz alta, se responde por turnos, y se puede pasar una vez por partida. Es un juego en pareja con un solo móvil, mejor de noche, mejor cuando estáis listos para oír la respuesta."
   },
   "jsonLd": {

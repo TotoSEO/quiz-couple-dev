@@ -37,14 +37,14 @@
     "q3": "À combien peut-on jouer ?",
     "a3": "Il est fait pour deux, avec un tour de rôle annoncé à chaque carte. Rien ne vous empêche de faire tourner le téléphone à plusieurs, mais les cartes sont écrites pour un couple.",
     "q4": "Y a-t-il une version plus osée ?",
-    "a4": "Oui, sur une page à part, avec son propre paquet nettement plus direct. C'est la version coquine, faite pour les soirs où vous êtes vraiment seuls tous les deux.",
+    "a4": "Oui, sur une page à part, avec son propre paquet nettement plus direct. C'est la <a href=\"/action-ou-verite-coquin/\">version coquine</a>, faite pour les soirs où vous êtes vraiment seuls tous les deux.",
     "q5": "Peut-on y jouer à distance ?",
     "a5": "Oui, et ça marche mieux qu'on ne le croit. L'un ouvre le jeu, lit la carte à voix haute en visio et valide pour les deux. Les vérités passent nickel, les actions demandent un peu d'imagination…"
   },
   "section4": {
     "title": "Pourquoi ce jeu marche encore, après tant d'années",
     "p1": "L'action ou vérité traverse les générations pour une raison toute bête : il donne la permission de poser une question qu'on n'aurait jamais posée soi-même. Ce n'est pas vous qui demandez, c'est la carte. Et cette toute petite distance change absolument tout.",
-    "p2": "En couple, c'est souvent le seul moyen d'aborder certains sujets sans en faire une conversation solennelle. Personne n'a envie d'entendre « il faut qu'on parle »… mais tout le monde accepte de tirer une carte."
+    "p2": "En couple, c'est souvent le seul moyen d'aborder certains sujets sans en faire une conversation solennelle. Personne n'a envie d'entendre « il faut qu'on parle »… mais tout le monde accepte de tirer une carte. C'est le même principe que nos <a href=\"/questions-couple/\">questions à se poser en couple</a>, en plus léger."
   },
   "jsonLd": {
     "name": "Jeu action ou vérité en couple"

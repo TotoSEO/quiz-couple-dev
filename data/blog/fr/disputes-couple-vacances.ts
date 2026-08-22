@@ -66,7 +66,7 @@ const article: BlogArticleData = {
         {
           id: 'la-destination-arrive-loin-derriere',
           title: `La destination n'arrive qu'en quatrième position`,
-          content: `<p>On croit se disputer parce que l'un voulait la mer et l'autre la montagne… mais dans l'enquête IFOP, le désaccord sur la destination ne concerne que <strong>26 % des personnes interrogées</strong>, hommes et femmes confondus. C'est réel, mais ça arrive loin derrière.</p>
+          content: `<p>On croit se disputer parce que l'un voulait la mer et l'autre la montagne… mais dans l'enquête IFOP, le désaccord sur la destination ne concerne que <strong>26 % des personnes interrogées</strong>, hommes et femmes confondus. C'est réel, mais ça arrive loin derrière, et ça se règle en amont : notre test <a href="/test-ou-partir-en-vacances/">où partir en vacances</a> croise vos deux réponses sur les dates, le budget et le rythme.</p>
 
 <p>Le motif numéro un, cité par <strong>40 % des femmes</strong>, c'est le manque d'implication du conjoint. Pas « tu as choisi le mauvais endroit », mais « j'ai tout fait toute seule ».</p>`,
         },

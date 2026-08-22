@@ -259,6 +259,8 @@ const GD_QUESTION_PREFIXES = {
   // Ces deux-là déclinent leurs questions au masculin et au féminin ; le
   // premier candidat qui répond gagne, les deux jeux se valent pour un robot.
   couche: ['coucheH', 'coucheF'], secret: ['secretH', 'secretF'],
+  ex: ['exH', 'exF'],
+  'charge-mentale': ['chargeMentale'],
   // Les jeux rangent leurs cartes par ambiance ou par thème : on prend la
   // première famille, elle suffit à montrer de quoi le jeu est fait.
   'action-ou-verite': ['actionVerite.classique'],
@@ -273,6 +275,12 @@ const GD_QUESTION_PREFIXES = {
 // et non dans les données ; il faut la remettre devant chaque titre pour que
 // le H3 se lise comme la carte que le joueur verra.
 const GD_QUESTION_FAMILLES = {
+  // Les trois paliers du premier rendez-vous ne sont pas trois variantes de la
+  // meme serie : ce sont trois contenus differents, et la page doit les
+  // montrer tous les trois, dans l'ordre ou le jeu les pose.
+  rencontre: {
+    prefixes: ['rencontre.glace', 'rencontre.connaitre', 'rencontre.loin'],
+  },
   'pour-contre': {
     prefixes: ['pourContre.projets', 'pourContre.vacances', 'pourContre.couple',
                'pourContre.quotidien', 'pourContre.moments', 'pourContre.discuter'],
@@ -285,7 +293,7 @@ const GD_QUESTION_FAMILLES = {
   },
 };
 // Quiz types whose answers aren't meaningful multiple-choice options to list.
-const NO_OPTION_TYPES = new Set(['most', 'knowledge', 'marrant', 'vrai-faux', 'pour-contre']);
+const NO_OPTION_TYPES = new Set(['most', 'knowledge', 'marrant', 'vrai-faux', 'pour-contre', 'rencontre']);
 // Le bloc s'intitulait « Aperçu des questions », ce qui le faisait lire comme
 // une annexe alors qu'il porte les questions elles-mêmes. Il reprend
 // désormais le titre que le moteur affiche sur son écran de départ : le
@@ -1615,11 +1623,11 @@ async function generateBlogArticle(articleMeta, lang) {
       'testCouple', 'testAmeSoeur', 'testCommonPoints', 'testCompatibilite', 'testSuisJeAmoureux', 'testDistance',
       'testToxic', 'testPervers', 'testAmourHabitude', 'testCoupleSain', 'testMariage', 'testDivorce',
       'testParentalite', 'testEmmenager', 'testAstroPrenoms', 'testDateNaissance', 'testKarmique',
-      'testJalousie', 'testInfidelite', 'testCouche', 'testSecret', 'testDistanceAime', 'testLangageAmour', 'testAttachement', 'testConfiance', 'testFinCouple', 'testAmourAmitie',
+      'testJalousie', 'testInfidelite', 'testCouche', 'testSecret', 'testDistanceAime', 'testEx', 'testChargeMentale', 'testLangageAmour', 'testAttachement', 'testConfiance', 'testFinCouple', 'testAmourAmitie',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarQuizzes: [
       'quizAmoureux', 'quizCoquin', 'quizMarrant', 'quizGenant', 'quizKnowledge',
-      'quizMost', 'quizAdo', 'quizVraiFaux', 'zamours', 'quizTentation',
+      'quizMost', 'quizAdo', 'quizVraiFaux', 'zamours', 'quizTentation', 'quizRencontre',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarJeux: [
       'jeuxCouple', 'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages', 'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre',

@@ -62,7 +62,10 @@
     "testFinCouple": "¿Es el final?",
     "testFinCoupleDesc": "En qué punto está de verdad tu relación",
     "testAmourAmitie": "¿Amor o amistad?",
-    "testAmourAmitieDesc": "Ponle nombre a lo que sientes"
+    "testAmourAmitieDesc": "Ponle nombre a lo que sientes",
+    "testEx": "¿Mi ex todavía piensa en mí?",
+    "testChargeMentale": "¿Quién lleva la carga mental?",
+    "quizRencontre": "Preguntas de primera cita"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

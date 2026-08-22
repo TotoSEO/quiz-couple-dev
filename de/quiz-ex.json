@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "badge": "Kostenloser Test, 15 Fragen",
+    "title": "Denkt mein Ex noch an mich?",
+    "titleHighlight": "noch an mich",
+    "description": "15 Fragen zu dem, was er oder sie tatsächlich tut, nicht zu dem, was du hineinliest. Denn eine um Mitternacht angesehene Story und ein Vorschlag, sich wiederzusehen, wiegen nicht gleich schwer.",
+    "subtitle": "Einzeltest, kostenlos und anonym"
+  },
+  "howTo": {
+    "title": "Wie funktioniert dieser Test?",
+    "step1": "Du gibst zuerst an, ob dein Ex ein Mann oder eine Frau ist, und antwortest dann für dich allein. Nichts wird gesendet, niemand sieht deine Antworten.",
+    "step2": "Antworte auf die <strong>letzten Wochen</strong> bezogen, nicht auf den Monat direkt nach der Trennung. Diese ersten Wochen bedeuten nichts: alle sind zu diesem Zeitpunkt maßlos, in die eine oder die andere Richtung.",
+    "step3": "Jede Frage trägt ein Gewicht danach, was das Verhalten denjenigen kostet, der es zeigt. Die Summe reicht von 0 bis 150 Punkten, und ein hoher Wert bedeutet, dass dein Ex die Tür nicht geschlossen hat.",
+    "step4": "Das Ergebnis ordnet dich einer von vier möglichen Situationen zu, auch derjenigen, über die niemand spricht: an dich denken, ohne zurückkommen zu wollen.",
+    "outro": "Mach diesen Test nicht am Abend einer unerwarteten Nachricht. Antworte auf das, was sich wiederholt, nicht auf das, was gerade eben passiert ist."
+  },
+  "crossLink": {
+    "title": "Du kannst an nichts anderes mehr denken?",
+    "text": "Dieser Test hier dreht sich um deinen Ex. Wenn die eigentliche Schwierigkeit woanders liegt, bei dem, was diese Abwesenheit mit dir macht, stellt der Test zur emotionalen Abhängigkeit die Frage aus diesem Blickwinkel.",
+    "button": "Test zur emotionalen Abhängigkeit machen"
+  },
+  "section1": {
+    "title": "Warum du das allein nicht entscheiden kannst",
+    "p1": "Du hast längst alles noch einmal gelesen. Die letzten Nachrichten, die Uhrzeit, zu der er oder sie deine Story angesehen hat, den einen Satz zu viel beim letzten Telefonat. Du hast ganze Abende damit verbracht und bist keinen Schritt weiter als am Anfang.",
+    "p2": "Das liegt nicht an fehlender Klarsicht. Es liegt daran, dass <strong>dieselben Hinweise je nach Tagesstimmung ihre Bedeutung wechseln</strong>. An einem Montag beweist diese Geburtstagsnachricht, dass er oder sie nicht abgeschlossen hat. An einem Donnerstag ist sie nur eine Höflichkeit, die an dreißig Leute ging. Beide Lesarten sind vertretbar, keine ist überprüfbar, und genau deshalb drehst du dich im Kreis.",
+    "p3": "Dieser Test liest keine Gedanken, und sei misstrauisch gegenüber allen, die das behaupten. Was er tut, ist deine Beobachtungen nach einem einfachen und überprüfbaren Kriterium zu sortieren: <strong>wie viel dieses Verhalten gekostet hat</strong>. Eine Geste, die nichts kostet, beweist fast nichts, auch wenn sie sehr guttut. Eine Geste, die etwas einfordert, lässt sich nur schwer anders erklären."
+  },
+  "section2": {
+    "title": "Die Signale, die etwas kosten, und die, die nichts kosten",
+    "intro": "Das ist die ganze Logik dieses Tests. Hier sind die fünf Verhaltensweisen, die wirklich zählen, geordnet danach, was sie demjenigen abverlangen, der sie zeigt.",
+    "pillar1Title": "Sich ohne Vorwand melden",
+    "pillar1Text": "Das zuverlässigste Signal überhaupt. Jemandem zu schreiben, den man verlassen hat, verlangt, eine Peinlichkeit zu überwinden, in Kauf zu nehmen, als der dazustehen, der nicht losgelassen hat, und eine kühle Antwort zu riskieren. Das tut niemand aus Zerstreutheit. Entscheidend ist nicht, wie oft Nachrichten kommen, sondern in welche Richtung: wenn du seit drei Monaten immer zuerst schreibst, hast du deine Antwort bereits.",
+    "pillar2Title": "Vorschlagen, sich wirklich zu sehen",
+    "pillar2Text": "Eine Stufe über der Nachricht, weil ein Treffen sich nicht zurücknehmen lässt und man sich nicht mit einem Scherz herausreden kann. Ein Unterschied zählt allerdings: vorschlagen, sich zu treffen, um einen Karton mit Sachen abzuholen, ist nicht dasselbe wie vorschlagen, sich ohne jeden Grund zu sehen. Das erste kostet null Mut, das zweite sehr viel.",
+    "pillar3Title": "Etwas Eindeutiges sagen",
+    "pillar3Text": "Ein klarer Satz über Reue oder Gefühle wiegt mehr als sechs Monate Signale. Er verpflichtet den, der ihn ausspricht, er lässt sich nicht zurücknehmen, und man kann ihn später zitieren. Auch deshalb ist er so selten: viele bevorzugen Andeutungen, die es erlauben, im Vagen zu bleiben, ohne je etwas zu riskieren.",
+    "pillar4Title": "Von euch beiden in der Zukunft sprechen",
+    "pillar4Text": "Die verwendete Zeitform verrät viel. Wer abgeschlossen hat, spricht von dir in der Vergangenheit, manchmal mit großer Zärtlichkeit: Erinnerungen sind ungefährlich. Wer die Tür nicht geschlossen hat, lässt ein „wir könnten“ fallen, ein „vielleicht irgendwann“, Pläne, die keinen Anlass mehr haben. Das passiert unabsichtlich, und es sagt sehr viel.",
+    "pillar5Title": "Was das Umfeld sagt",
+    "pillar5Text": "Ein indirektes Signal, aber schwer zu fälschen. Wenn die Menschen um ihn oder sie herum dir von sich aus Neuigkeiten erzählen oder durchblicken lassen, dass dort noch von dir gesprochen wird, dann existiert das Thema noch in privaten Gesprächen. Niemand führt seinen eigenen Freunden monatelang etwas vor, nur um eine Illusion aufrechtzuerhalten.",
+    "tip": "Ein einfaches Kriterium für jedes beliebige Signal: musste er oder sie für diese Geste etwas überwinden? Wenn nein, bau nichts darauf."
+  },
+  "section3": {
+    "title": "Was dein Ergebnis bedeutet",
+    "p1": "Alle fünfzehn Fragen werden jedes Mal gestellt, und jede trägt ein Gewicht danach, was das beschriebene Verhalten tatsächlich einfordert. Die Summe reicht von 0 bis 150 Punkten. Ein hoher Wert bedeutet nicht, dass dein Ex zurückkommt, er bedeutet, dass nichts abgeschlossen wurde.",
+    "headerScore": "Punkte",
+    "headerLevel": "Situation",
+    "headerAnalysis": "Was das heißt",
+    "row1Score": "0 bis 37",
+    "row1Level": "Die Seite ist umgeblättert",
+    "row1Analysis": "Kein teures Signal, oft überhaupt keines. Das Leben deines Ex ist anderswo weitergegangen.",
+    "row2Score": "38 bis 75",
+    "row2Level": "Spuren, keine Rückkehr",
+    "row2Analysis": "Der häufigste Fall. Bindung ist noch da, aber es folgt keine Tat darauf.",
+    "row3Score": "76 bis 113",
+    "row3Level": "Die Tür ist nicht zu",
+    "row3Analysis": "Echter, wiederholter Aufwand, aber nichts klar Gesagtes. Dieser Nebel zermürbt dich.",
+    "row4Score": "114 bis 150",
+    "row4Level": "Alles da, nur die Worte fehlen",
+    "row4Analysis": "Die verbindlichsten Signale sind alle beisammen. Es fehlt nur jemand, der es ausspricht.",
+    "tip": "Ein niedriger Wert ist kein Urteil über deinen Wert, und ein hoher ist kein Versprechen. Dieser Test beschreibt einen aktuellen Zustand, keine Entwicklung."
+  },
+  "section4": {
+    "title": "Die vier Signale, die alle überinterpretieren",
+    "p1": "Das sind die vier Hinweise, mit denen man die meiste Zeit verbringt, und ausgerechnet sie sind die unzuverlässigsten. Nicht weil sie falsch wären, sondern weil sie nichts kosten und sich auf zehn Arten erklären lassen.",
+    "sub1Title": "Die Story, angesehen um drei Uhr nachts",
+    "sub1Text": "Das ist zum Signal Nummer eins geworden, und es ist das schwächste von allen. Eine Story anzusehen erfordert eine Daumenbewegung und null Mut. Es kann Nostalgie bedeuten, Neugier, Langeweile, oder schlicht, dass die App die Inhalte von selbst weiterlaufen lässt. Ein Ex, der dich täglich ansieht, ohne dir je zu schreiben, sagt dir vor allem, dass er lieber beobachtet als sich festlegt.",
+    "sub2Title": "Die Fotos, die nicht gelöscht wurden",
+    "sub2Text": "Viele sehen darin den Beweis, dass nichts vorbei ist. Meistens ist es viel banaler: Fotos zu löschen bedeutet, noch einmal hindurchzugehen, und sehr viele Menschen schieben diesen Moment aus reiner Vermeidung jahrelang vor sich her. Umgekehrt ist ein sofortiges und vollständiges Löschen nicht immer Gleichgültigkeit, manchmal ist es genau das Gegenteil.",
+    "sub3Title": "Die Geburtstagsnachricht",
+    "sub3Text": "Es kommt ganz auf die Form an. Ein trockenes „alles Gute“ ist das, was man einem Kollegen schickt, und es sagt nichts. Eine Nachricht, die ein bestimmtes Detail aufgreift, einen Witz, der nur euch beiden gehört, oder die an einem Datum kommt, das sonst niemand kennt, ist etwas anderes: die verlangt, das ganze Jahr über etwas im Kopf behalten zu haben.",
+    "sub4Title": "Das „wir bleiben Freunde“",
+    "sub4Text": "Der Satz ist von Natur aus mehrdeutig, und oft wird er genau deshalb gesagt. Er mildert eine Trennung ebenso, wie er eine Tür angelehnt lässt. Lies ihn nicht für sich allein: schau, was danach kommt. Echte Freundschaft zeigt sich an freundschaftlichem Verhalten, nicht an einem Kontakt, der jedes Mal aufwacht, wenn du dich entfernst.",
+    "tip": "Die Regel gilt auch andersherum: ein Ex, der dich überall blockiert hat, ist nicht zwangsläufig gleichgültig. Blockieren ist eine heftige Geste, und Gleichgültigkeit tut überhaupt nichts."
+  },
+  "section5": {
+    "title": "An dich denken und zurückkommen wollen sind zwei verschiedene Dinge",
+    "p1": "Das ist die Nuance, die überall fehlt, und dabei ist es die häufigste Situation: jemand kann aufrichtig an dich denken, oft, lange, und nie die Absicht haben zurückzukommen. Beides widerspricht sich nicht.",
+    "p2": "Eine Geschichte, die zählte, hinterlässt mechanische Spuren. Lieder, Wege, Gerüche, Daten im Jahr. Diese Spuren verschwinden nicht, weil jemand beschlossen hat zu gehen, und sie können Jahre halten, ohne irgendetwas anzukündigen. Ein Ex, der dir an einem trüben Abend schreibt, sagt dir nicht, dass er neu anfangen will, er sagt dir, dass er einen trüben Abend hat.",
+    "p3": "Es gibt auch eine unangenehmere Situation, die man beim Namen nennen sollte: die, in der dein Ex den Kontakt bewusst aufrechterhält, ohne mehr zu wollen. Präsent zu bleiben kostet wenig und bringt viel, man fühlt sich nicht ersetzt und behält doch seine Freiheit. Das ist nicht immer berechnend, es ist selten überhaupt bewusst, aber die Wirkung auf dich ist dieselbe: du wartest, während die andere Person weitergeht.",
+    "tip": "Wenn du dich hier wiedererkennst, ist die nützliche Frage nicht mehr, was er oder sie fühlt. Sie lautet, wie lange du dein Leben noch anhalten willst, um es herauszufinden."
+  },
+  "section6": {
+    "title": "Wie du eine Antwort bekommst, statt auf sie zu warten",
+    "p1": "Kein weiteres Signal holt dich aus dem Zweifel, weil du es genauso deuten wirst wie die vorherigen. Was dich herausholt, ist eine Situation zu schaffen, in der dein Ex Position beziehen muss. So geht das, ohne dabei deine Würde zu verlieren.",
+    "sub1Title": "Schlag eine Handlung vor, kein Gespräch",
+    "sub1Text": "„Denkst du noch an uns?“ lädt zu einer vagen Antwort ein, und die wirst du bekommen. „Wollen wir uns Samstag sehen?“ lädt zu einem Ja oder einem Nein ein. Die zweite Frage macht Angst, aber sie ist die einzige, die verwertbare Information liefert.",
+    "sub2Title": "Frag einmal, nicht dreimal",
+    "sub2Text": "Eine klare Bitte, die ausweichend beantwortet wird, ist bereits eine Antwort. Sie in der Woche darauf in anderer Form zu wiederholen ändert nichts am Kern und verschiebt das Kräfteverhältnis. Du darfst einmal direkt sein; durch Insistieren gewinnst du nichts.",
+    "sub3Title": "Wähl den Moment, nicht den Impuls",
+    "sub3Text": "Nachrichten, die um zwei Uhr nachts geschrieben werden, nach einem Glas oder nachdem man ein Foto gesehen hat, sind die, die man bereut. Nicht weil sie unwahr wären, sondern weil sie im schlechtestmöglichen Moment ankommen und ein Bild von dir zeichnen, das nicht du bist. Schreib die Nachricht, lass sie im Entwurf, lies sie am nächsten Mittag noch einmal.",
+    "sub4Title": "Entscheide vorher, was du mit einem Nein machst",
+    "sub4Text": "Das ist die Vorsichtsmaßnahme, die niemand trifft. Wenn du es nicht vor der Frage entschieden hast, lässt dich eine Absage dort stehen und verhandeln. Wisse vorher, was ein Nein für dich bedeutet, und das Gespräch verläuft sehr viel besser, auch für dich."
+  },
+  "section7": {
+    "title": "Wenn aus der Frage eine andere Frage wird",
+    "p1": "Es kommt ein Moment, in dem es nicht mehr um deinen Ex geht. Wenn du seit Monaten seine Profile überwachst, Verabredungen für alle Fälle ausschlägst, deinen Leuten dieselbe Geschichte erzählst, bis sie erschöpft sind, dann hat sich die Frage geändert, ohne dass du es gemerkt hast.",
+    "p2": "Einen Menschen zu vermissen und aus einem Wartezustand nicht herauszukommen sind nicht dasselbe. Das Erste lässt nach, langsam, aber wirklich. Das Zweite setzt sich fest, und es nährt sich genau von den kleinen kostenlosen Signalen, um die es auf dieser Seite geht: jede angesehene Story stellt die Uhr zurück und schiebt die Trauer um ein paar Tage nach hinten.",
+    "p3": "Es gibt einen einfachen Test dafür, wo du stehst. Stell dir vor, man würde dir heute mit Sicherheit garantieren, dass dein Ex nie zurückkommt. Wenn deine erste Reaktion Erleichterung ist, dann fehlt dir nicht dein Ex, dann lastet das Warten auf dir.",
+    "tip": "Nichts zwingt dich, auf Gewissheit zu warten, bevor du dein Leben wieder aufnimmst. In der Praxis ist es fast immer umgekehrt: die Dinge lösen sich, sobald man aufhört, auf sie zu lauern."
+  },
+  "faq": {
+    "q1": "Woran erkenne ich, ob mein Ex noch an mich denkt?",
+    "a1": "Indem du darauf schaust, was er oder sie tut, statt darauf, was du hineinliest, und indem du jedes Verhalten danach gewichtest, was es kostet. Sich ohne Vorwand melden, ein Treffen vorschlagen, etwas Eindeutiges über die eigenen Gefühle sagen, von euch beiden in der Zukunft sprechen: das sind Taten, die etwas einfordern. Eine Story ansehen, ein Foto online lassen oder eine Geburtstagsnachricht schicken verlangt niemandem etwas ab. Genau diese fünf Punkte misst der Test.",
+    "q2": "Mein Ex schaut sich alle meine Storys an, was bedeutet das?",
+    "a2": "Meistens nicht viel. Es ist das billigste Signal, das es gibt: eine Daumenbewegung, kein Risiko, keine Folgen. Es kann Nostalgie ebenso ausdrücken wie schlichte Neugier. Wer dich täglich ansieht, ohne dir je zu schreiben, zeigt dir vor allem, dass er lieber beobachtet als sich festlegt, und das ist für sich genommen schon eine Information.",
+    "q3": "Mein Ergebnis ist niedrig, heißt das, es ist vorbei?",
+    "a3": "Ein niedriger Wert beschreibt die heutige Lage, nicht die der kommenden Monate. Er sagt dir, dass dein Ex im Moment kein Verhalten zeigt, das in Richtung Rückkehr geht. Das ist eine harte Information, aber sie gibt dir etwas Wichtiges zurück: die Zeit, die du mit Entschlüsseln verbracht hast. Du musst nicht mehr deuten, du kannst entscheiden.",
+    "q4": "Wie lange sollte man warten, bevor man sich beim Ex meldet?",
+    "a4": "Keine magische Frist funktioniert, und fertige Regeln vom Typ „dreißig Tage Funkstille“ stützen sich auf nichts Belastbares. Entscheidend ist dein Zustand in dem Moment, in dem du schreibst. Wenn die Nachricht rausgeht, um eine Reaktion zu erzwingen, ist es zu früh. Wenn sie rausgeht, weil du etwas zu sagen hast und ein Schweigen aushalten würdest, ist der Zeitpunkt richtig.",
+    "q5": "Bleibt ein Ex, der zurückkommt, auch wirklich?",
+    "a5": "Das hängt ganz davon ab, was sich seitdem geändert hat. Wer in eine unveränderte Beziehung zurückkehrt, mit denselben ungeklärten Streitpunkten und denselben Gewohnheiten, geht in der Regel aus denselben Gründen und in derselben Frist wieder. Den Unterschied macht nicht die Intensität des Wiedersehens, sondern das, worüber ihr jetzt anders sprechen könnt als vorher.",
+    "q6": "Werden meine Antworten gespeichert?",
+    "a6": "Nein. Alles läuft in deinem Browser ab, keine Antwort wird gesendet oder aufbewahrt, und es gibt weder ein Konto noch eine E-Mail-Adresse anzugeben. Du kannst den Test in zwei Monaten wiederholen, um zu vergleichen, aber dazwischen wird nichts aufbewahrt."
+  }
+}

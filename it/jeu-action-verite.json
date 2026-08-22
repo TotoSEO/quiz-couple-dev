@@ -37,14 +37,14 @@
     "q3": "In quanti si può giocare?",
     "a3": "È pensato per due, con il turno annunciato a ogni carta. Nulla vi vieta di passare il telefono in un gruppo, ma le carte sono scritte per una coppia.",
     "q4": "Esiste una versione più spinta?",
-    "a4": "Sì, su una pagina a parte e con un mazzo tutto suo, nettamente più diretto. È la versione piccante, fatta per le sere in cui siete davvero soli.",
+    "a4": "Sì, su una pagina a parte e con un mazzo tutto suo, nettamente più diretto. È la <a href=\"/it/obbligo-o-verita-piccante-coppia/\">versione piccante</a>, fatta per le sere in cui siete davvero soli.",
     "q5": "Si può giocare a distanza?",
     "a5": "Sì, e funziona meglio di quanto sembri. Uno apre il gioco, legge la carta ad alta voce in videochiamata e conferma per entrambi. Le verità funzionano benissimo, gli obblighi chiedono un po' di fantasia…"
   },
   "section4": {
     "title": "Perché questo gioco funziona ancora, dopo tanti anni",
     "p1": "Obbligo o verità sopravvive di generazione in generazione per un motivo semplicissimo: dà il permesso di fare una domanda che da soli non avreste mai fatto. Non siete voi a chiedere, è la carta. E quella minima distanza cambia assolutamente tutto.",
-    "p2": "In coppia è spesso l'unico modo di aprire certi argomenti senza farne una conversazione solenne. Nessuno vuole sentirsi dire «dobbiamo parlare»… ma tutti accettano di pescare una carta."
+    "p2": "In coppia è spesso l'unico modo di aprire certi argomenti senza farne una conversazione solenne. Nessuno vuole sentirsi dire «dobbiamo parlare»… ma tutti accettano di pescare una carta. È lo stesso principio delle nostre <a href=\"/it/domande-coppia/\">domande da farsi in coppia</a>, in versione più leggera."
   },
   "jsonLd": {
     "name": "Gioco obbligo o verità di coppia"

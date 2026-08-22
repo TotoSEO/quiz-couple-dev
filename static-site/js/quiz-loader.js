@@ -56,6 +56,14 @@
     // ── Test âme sœur : un indice, un verdict tiré de la forme du profil ──
     // Trois portes d'entrée sur la même page : seul sur un prénom saisi, à deux
     // en répondant chacun, ou célibataire pour le portrait de qui vous irait.
+    // Charge mentale : deux modes. En solo une personne decrit la repartition
+    // telle qu'elle la voit ; en duo les deux repondent et l'ecart entre leurs
+    // reponses devient la moitie du resultat.
+    'charge-mentale': { modesGrand: true, modes: [
+      { id: 'solo', emoji: '🧠', prefix: 'chargeMentale', engine: 'chargeMentale', totalQ: 20, pool: 20 },
+      { id: 'duo',  emoji: '👥', prefix: 'chargeMentale', engine: 'chargeMentale', totalQ: 20, pool: 20, duo: true }
+    ] },
+
     'ame-soeur':      { modesGrand: true, modes: [
       { id: 'solo', emoji: '💫', prefix: 'ameSoeur', engine: 'piliers',
         totalQ: 20, pool: 24, ascending: true },
@@ -105,6 +113,16 @@
     // Six familles de vingt-cinq questions. Le moteur pioche lui-même, à parts
     // égales dans chaque famille : les prénoms qu'on demandait avant ne
     // servaient à rien, ils ont disparu.
+    // Premier rendez-vous : trois paliers joues dans l'ordre, cinq questions
+    // chacun. L'escalade graduee est le format lui-meme, pas de la cosmetique.
+    'rencontre':      { prefix: 'rencontre', engine: 'funny', totalQ: 15, pool: 0, textOnly: true,
+                        ordonne: true,
+                        familles: [
+                          { id: 'glace', emoji: '🙂' },
+                          { id: 'connaitre', emoji: '💬' },
+                          { id: 'loin', emoji: '🔥' }
+                        ] },
+
     'marrant':        { prefix: 'marrant', engine: 'funny', totalQ: 20, pool: 0, textOnly: true,
                         familles: [
                           { id: 'debuts', emoji: '💘' }, { id: 'genant', emoji: '😬' },
@@ -240,6 +258,17 @@
     'couche':         { modes: [
       { id: 'homme', emoji: '👨', prefix: 'coucheH', engine: 'solo', totalQ: 15, pool: 15, quizType: 'couche', ascending: true, resultPrefix: 'couche' },
       { id: 'femme', emoji: '👩', prefix: 'coucheF', engine: 'solo', totalQ: 15, pool: 15, quizType: 'couche', ascending: true, resultPrefix: 'couche' }
+    ] },
+
+    // ── « Mon ex pense-t-il / pense-t-elle encore a moi » ──
+    // Deux series pour la meme raison que les deux tests ci-dessus : les
+    // reponses parlent de l'ex a la troisieme personne, les accords francais
+    // ne se devinent pas. Les quinze questions sont posees a chaque fois, le
+    // maximum est donc toujours 150 et les quatre paliers tombent sur des
+    // bornes fixes. Les deux series partagent leurs paliers, sous « ex ».
+    'ex':             { modes: [
+      { id: 'homme', emoji: '👨', prefix: 'exH', engine: 'solo', totalQ: 15, pool: 15, quizType: 'ex', ascending: true, resultPrefix: 'ex' },
+      { id: 'femme', emoji: '👩', prefix: 'exF', engine: 'solo', totalQ: 15, pool: 15, quizType: 'ex', ascending: true, resultPrefix: 'ex' }
     ] },
 
     // ── Bebe quiz (solo scoring, descending: more ready = higher score) ──
@@ -454,7 +483,7 @@
       // le réservoir est bien plus grand qu'une partie : « autres questions »
       // a un sens sur l'écran de fin
       new QuizEngine.FunnyQuiz({ container: container, prefix: config.prefix, lang: lang,
-        familles: familles, total: config.totalQ });
+        familles: familles, total: config.totalQ, ordonne: !!config.ordonne });
       return;
     }
 
@@ -558,6 +587,9 @@
         break;
       case 'piliers':
         initPiliersQuiz(config, questions);
+        break;
+      case 'chargeMentale':
+        initChargeMentaleQuiz(config, questions);
         break;
       case 'zamours':
         initZamoursQuiz(config, questions);
@@ -993,6 +1025,49 @@
       9:  { d: 'confidence',  w: 2 },
       10: { d: 'accroche',    w: 1 }
     },
+    // Mon ex pense-t-il encore a moi : le bareme porte toute la these de la
+    // page. Un signal se pese a ce qu'il coute a celui qui l'emet. Reprendre
+    // contact, proposer de se voir, dire quelque chose de net, parler de vous
+    // deux au futur : ce sont des actes, ils coutent, et ils ne s'expliquent
+    // pas autrement. Regarder une story, garder une photo en ligne, envoyer un
+    // message d'anniversaire : c'est gratuit, souvent machinal, et c'est
+    // precisement ce que les gens surinterpretent. D'ou 3 d'un cote, 1 de
+    // l'autre. Somme des poids = 30, donc un maximum de 150 points.
+    exH: {
+      1:  { d: 'initiative',   w: 3 },
+      2:  { d: 'rencontre',    w: 3 },
+      3:  { d: 'aveu',         w: 3 },
+      4:  { d: 'avenir',       w: 3 },
+      5:  { d: 'contenu',      w: 2 },
+      6:  { d: 'entourage',    w: 2 },
+      7:  { d: 'disponibilite',w: 2 },
+      8:  { d: 'jalousie',     w: 2 },
+      9:  { d: 'affaires',     w: 2 },
+      10: { d: 'refaireSaVie', w: 2 },
+      11: { d: 'constance',    w: 2 },
+      12: { d: 'reseaux',      w: 1 },
+      13: { d: 'traces',       w: 1 },
+      14: { d: 'dates',        w: 1 },
+      15: { d: 'rupture',      w: 1 }
+    },
+    // Meme serie declinee au feminin : memes poids.
+    exF: {
+      1:  { d: 'initiative',   w: 3 },
+      2:  { d: 'rencontre',    w: 3 },
+      3:  { d: 'aveu',         w: 3 },
+      4:  { d: 'avenir',       w: 3 },
+      5:  { d: 'contenu',      w: 2 },
+      6:  { d: 'entourage',    w: 2 },
+      7:  { d: 'disponibilite',w: 2 },
+      8:  { d: 'jalousie',     w: 2 },
+      9:  { d: 'affaires',     w: 2 },
+      10: { d: 'refaireSaVie', w: 2 },
+      11: { d: 'constance',    w: 2 },
+      12: { d: 'reseaux',      w: 1 },
+      13: { d: 'traces',       w: 1 },
+      14: { d: 'dates',        w: 1 },
+      15: { d: 'rupture',      w: 1 }
+    },
     // Mariage : vouloir des enfants, la fidelite et le lieu de vie sont des
     // sujets de rupture. Les standards de proprete n'en sont pas.
     marriage: {
@@ -1168,6 +1243,16 @@
   };
 
   // ── Test âme sœur : les piliers, et le verdict tiré de leur forme ────────
+  // Les quatre domaines de la charge mentale. Elle n'est presque jamais
+  // desequilibree partout de la meme facon : voir ou elle penche vaut mieux
+  // qu'un chiffre global.
+  var DOMAINES_CHARGE = [
+    { id: 1, color: '#ec4899', cle: 'dom1' },
+    { id: 2, color: '#8b5cf6', cle: 'dom2' },
+    { id: 3, color: '#f59e0b', cle: 'dom3' },
+    { id: 4, color: '#22c55e', cle: 'dom4' }
+  ];
+
   var PILIERS_AME_SOEUR = [
     { id: 'evidence',  color: '#ec4899', cle: 'pil_evidence',  defaut: 'Évidence' },
     { id: 'accord',    color: '#8b5cf6', cle: 'pil_accord',    defaut: 'Accord de fond' },
@@ -1626,6 +1711,34 @@
         introTitle: QuizEngine.tgd(cfg.prefix + '.introTitle', ''),
         resultLabel: QuizEngine.tgd(cfg.prefix + '.linkLabel', '')
       }
+    });
+  }
+
+  function initChargeMentaleQuiz(cfg, questions) {
+    // Les vingt taches sont toujours posees, dans l'ordre, et reparties cinq
+    // par cinq dans les quatre domaines. Pas de tirage : le test perdrait son
+    // sens si deux parties ne portaient pas sur les memes taches.
+    var taches = [];
+    for (var i = 1; i <= 20; i++) taches.push({ id: i, dom: Math.ceil(i / 5) });
+
+    var verdicts = {};
+    ['equipe', 'flou', 'assume', 'invisible', 'soloEquilibre', 'soloDesequilibre'].forEach(function(cle) {
+      verdicts[cle] = {
+        title: QuizEngine.tgd(cfg.prefix + '.v_' + cle + '_t', ''),
+        description: QuizEngine.tgd(cfg.prefix + '.v_' + cle + '_d', ''),
+        advice: QuizEngine.tgd(cfg.prefix + '.v_' + cle + '_a', '')
+      };
+    });
+
+    new QuizEngine.ChargeMentaleQuiz({
+      container: container,
+      questions: taches,
+      prefix: cfg.prefix,
+      lang: lang,
+      duo: !!cfg.duo,
+      domaines: DOMAINES_CHARGE,
+      verdicts: verdicts,
+      labels: { introTitle: QuizEngine.tgd(cfg.prefix + '.introTitle', '') }
     });
   }
 

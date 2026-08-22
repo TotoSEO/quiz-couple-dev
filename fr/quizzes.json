@@ -309,5 +309,23 @@
     "shortTitle": "Test Dépendance affective",
     "description": "20 questions franches pour savoir si vous aimez votre partenaire ou si vous vous accrochez à lui. Résultat immédiat et pistes concrètes.",
     "metaDescription": "Attachement sain ou dépendance affective ? 20 questions franches, un résultat immédiat et des pistes concrètes pour retrouver votre équilibre. Gratuit."
+  },
+  "testEx": {
+    "title": "Mon ex pense-t-il encore à moi ? Test gratuit en 15 questions",
+    "shortTitle": "Mon ex pense-t-il encore à moi ?",
+    "description": "15 questions sur ce qu'il ou elle fait, pas sur ce que vous interprétez. Test solo, résultat immédiat.",
+    "metaDescription": "Votre ex pense-t-il encore à vous ? 15 questions qui pèsent ses actes plutôt que vos interprétations. Gratuit, anonyme, sans inscription ni e-mail."
+  },
+  "testChargeMentale": {
+    "title": "Test charge mentale du couple : qui porte quoi ?",
+    "shortTitle": "Qui porte la charge mentale ?",
+    "description": "20 tâches, deux réponses, et l'écart entre les deux. Se joue seul(e) ou à deux, résultat immédiat.",
+    "metaDescription": "Qui porte vraiment la charge mentale dans votre couple ? 20 tâches sur le fait d'y penser, pas de le faire. À deux, l'écart entre vos réponses devient le résultat."
+  },
+  "quizRencontre": {
+    "title": "Questions pour un premier rendez-vous : le jeu en 3 niveaux",
+    "shortTitle": "Questions de premier rendez-vous",
+    "description": "15 questions à se poser à deux, en trois paliers de plus en plus personnels. Rien à installer, rien à noter.",
+    "metaDescription": "Le jeu de questions pour un premier rendez-vous, en trois niveaux d'intimité croissante. 60 questions, 15 par partie, à jouer à deux sur un téléphone."
   }
 }

@@ -62,7 +62,10 @@
     "testFinCouple": "Is it over?",
     "testFinCoupleDesc": "Where your relationship really stands",
     "testAmourAmitie": "Love or friendship?",
-    "testAmourAmitieDesc": "Put a name on what you feel"
+    "testAmourAmitieDesc": "Put a name on what you feel",
+    "testEx": "Does my ex still think about me?",
+    "testChargeMentale": "Who carries the mental load?",
+    "quizRencontre": "First date questions"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",

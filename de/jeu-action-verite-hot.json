@@ -31,7 +31,7 @@
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Was ist der Unterschied zur klassischen Version?",
-    "a1": "Die Karten, ganz einfach. Die klassische Variante richtet sich an alle Paare und lässt sich vor jedem spielen. Diese hier hat ihren eigenen, deutlich direkteren Stapel, geschrieben für einen Moment, in dem ihr allein seid.",
+    "a1": "Die Karten, ganz einfach. Die <a href=\"/de/wahrheit-oder-pflicht-paar/\">klassische Variante</a> richtet sich an alle Paare und lässt sich vor jedem spielen. Diese hier hat ihren eigenen, deutlich direkteren Stapel, geschrieben für einen Moment, in dem ihr allein seid.",
     "q2": "Ist es sehr explizit?",
     "a2": "Von andeutend bis sehr direkt. Die sanftesten verlangen ein Kompliment oder einen Kuss, die kühnsten setzen eine bereits gewachsene Vertrautheit voraus. Es gibt keine Stufe zu wählen: das Recht auszusetzen zieht die Grenze, Karte für Karte.",
     "q3": "Wie viele Karten gibt es?",
@@ -43,7 +43,7 @@
   },
   "section4": {
     "title": "Was ein Spiel wie dieses wirklich leisten kann",
-    "p1": "Es wird euer Intimleben nicht umkrempeln, und das sollte auch niemand von ihm verlangen. Was es gut kann, ist einem Gespräch einen Rahmen geben, das viele Paare nie wirklich geführt haben. Weil die Karte die Frage stellt und nicht ihr.",
+    "p1": "Es wird euer Intimleben nicht umkrempeln, und das sollte auch niemand von ihm verlangen. Was es gut kann, ist einem Gespräch einen Rahmen geben, das viele Paare nie wirklich geführt haben, demselben, das das <a href=\"/de/pikantes-paar-quiz/\">pikante Quiz</a> über Fragen statt über Aufgaben angeht. Weil die Karte die Frage stellt und nicht ihr.",
     "p2": "Den Rest entscheidet ihr. Und so soll es auch sein!"
   },
   "jsonLd": {

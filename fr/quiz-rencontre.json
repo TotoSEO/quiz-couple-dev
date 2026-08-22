@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "badge": "Gratuit • 15 questions • 3 niveaux",
+    "title": "Les questions à se poser à un premier rendez-vous",
+    "titleHighlight": "premier rendez-vous",
+    "description": "Un jeu de questions en trois paliers, du léger à l'intime. Vous répondez tous les deux, chacun votre tour, sur le même téléphone. Aucun score, aucun gagnant.",
+    "subtitle": "À deux, sans inscription"
+  },
+  "howTo": {
+    "title": "Comment on y joue ?",
+    "step1": "Posez le téléphone entre vous deux. Il n'y a rien à installer et rien à créer.",
+    "step2": "Une question s'affiche avec son niveau. Vous y répondez <strong>tous les deux</strong>, chacun votre tour, à voix haute.",
+    "step3": "Cinq questions par niveau, et un écran vous annonce le passage au suivant. Le jeu monte progressivement : c'est le principe même du format.",
+    "step4": "Quinze questions en tout, tirées au sort dans une banque de soixante. Relancez et vous tomberez sur d'autres.",
+    "outro": "Une règle et une seule : celui qui répond en second n'a pas le droit de dire « pareil ». C'est là que la conversation se joue."
+  },
+  "crossLink": {
+    "title": "Vous vous connaissez déjà, mais vous ne savez pas où vous en êtes ?",
+    "text": "Ce jeu-ci est fait pour les débuts. Si la question est plutôt de savoir si ce que vous ressentez relève de l'amitié ou d'autre chose, le test amour ou amitié tranche en vingt questions.",
+    "button": "Faire le test amour ou amitié"
+  },
+  "section1": {
+    "title": "Pourquoi un premier rendez-vous s'enlise, presque toujours de la même façon",
+    "p1": "Vous vous asseyez, vous commandez, et la conversation se met en place toute seule : le travail, les études, la ville d'origine, les frères et sœurs, les vacances. Vingt minutes plus tard, vous savez remplir un formulaire administratif sur la personne en face, et vous ne savez toujours pas si vous avez envie de la revoir.",
+    "p2": "Le problème n'est pas le manque de sujets, c'est que <strong>personne ne veut se dévoiler en premier</strong>. Chacun pose des questions factuelles parce qu'elles sont sans risque, et parce qu'y répondre n'engage à rien. On appelle ça un entretien d'embauche, et ça produit exactement ce que produit un entretien d'embauche : deux personnes polies qui ne se sont pas rencontrées.",
+    "p3": "Ce qui débloque la situation n'est pas une question plus originale. C'est <strong>que quelqu'un accepte de donner quelque chose de lui, et que l'autre réponde à la même hauteur</strong>. C'est ce mécanisme précis, et pas le hasard des affinités, qui crée l'impression de connaître quelqu'un.",
+    "p4": "Ce jeu ne fait rien d'autre que rendre cet échange possible sans que personne n'ait à se lancer tout seul. La question est posée par le téléphone, donc elle n'est imputable à personne, et les deux y répondent. Le risque est partagé, il devient donc supportable."
+  },
+  "section2": {
+    "title": "Les trois niveaux, et pourquoi l'ordre compte",
+    "intro": "Le jeu ne tire pas quinze questions au hasard. Il les joue par paliers, du plus léger au plus personnel, et il vous prévient à chaque changement. Sauter directement au troisième niveau ne marche pas : c'est même le meilleur moyen de faire fuir quelqu'un.",
+    "pillar1Title": "Niveau 1 : pour briser la glace",
+    "pillar1Text": "Léger, parfois drôle, jamais indiscret. Le but de ce palier n'est pas d'apprendre des choses sur l'autre, c'est <strong>d'installer l'habitude de répondre vraiment</strong> plutôt que de répondre poliment. Des questions auxquelles on peut répondre sans se découvrir, mais qui demandent quand même de réfléchir trois secondes.",
+    "pillar2Title": "Niveau 2 : pour vraiment se connaître",
+    "pillar2Text": "On passe à ce qui a construit la personne : ses décisions, ce qu'elle a arrêté de faire, ce qu'elle attend. Vous donnez quelque chose de vous, mais rien qui coûte encore. C'est le palier le plus long en conversation, et souvent celui où l'on comprend si l'on a envie de continuer.",
+    "pillar3Title": "Niveau 3 : pour aller plus loin",
+    "pillar3Text": "Les peurs, les regrets, ce qu'on ne dit pas, et surtout ce que vous voyez déjà l'un de l'autre. C'est le palier qui change la nature de la soirée. Il se refuse : si la question ne vous va pas, passez à la suivante, personne ne compte les points."
+  },
+  "section3": {
+    "title": "Les cinq réflexes qui tuent une conversation de premier rendez-vous",
+    "p1": "Le jeu ne sert à rien si la façon de répondre annule ce qu'il met en place. Ces cinq réflexes sont les plus fréquents, et ils reviennent chez tout le monde.",
+    "signals": [
+      "<strong>Répondre « pareil ».</strong> C'est le seul vrai interdit du jeu. Même quand c'est vrai, ça renvoie la question sans rien donner en échange, et ça casse la réciprocité qui fait tout fonctionner.",
+      "<strong>Enchaîner les questions sans jamais répondre.</strong> Poser beaucoup de questions passe pour de l'intérêt, mais c'est aussi la meilleure façon de ne rien livrer de soi. Au bout d'une heure, l'autre repart en ayant tout dit et rien appris.",
+      "<strong>Corriger ou commenter la réponse de l'autre.</strong> Une réponse personnelle n'appelle pas un avis, elle appelle une réponse du même ordre. Le plus sûr moyen de refermer quelqu'un est de lui expliquer ce qu'il aurait dû ressentir.",
+      "<strong>Faire de l'humour dès que ça devient sérieux.</strong> Le réflexe est compréhensible et il désamorce vraiment la gêne, sauf qu'il annule aussi ce que l'autre venait d'oser. Une fois, ça passe. À chaque question, la conversation ne décollera jamais.",
+      "<strong>Parler de son ex.</strong> Pas parce que le sujet serait tabou, mais parce qu'il occupe toute la place et qu'il déplace la conversation vers quelqu'un qui n'est pas à table."
+    ],
+    "outro": "Aucun de ces réflexes n'est grave pris isolément. Ils le deviennent quand ils sont systématiques, parce qu'ils envoient tous le même message : <strong>je préfère rester à l'abri</strong>. Et l'autre le comprend beaucoup plus vite qu'on ne le croit."
+  },
+  "section4": {
+    "title": "Ce que dit vraiment la recherche derrière ce format",
+    "p1": "Ce jeu s'inspire d'un protocole précis, souvent cité et rarement lu correctement. Les quatre points ci-dessous sont ceux qui comptent, et le dernier est celui que personne ne mentionne.",
+    "sub1Title": "L'étude",
+    "sub1Text": "En 1997, Arthur Aron et son équipe publient <em>The Experimental Generation of Interpersonal Closeness</em> dans le <em>Personality and Social Psychology Bulletin</em>. Des inconnus sont mis par deux et échangent pendant environ trois quarts d'heure, les uns sur des sujets anodins, les autres sur une liste de questions construite exprès. Les seconds se déclarent nettement plus proches à l'arrivée.",
+    "sub2Title": "Le mécanisme",
+    "sub2Text": "Les auteurs le résument en quatre mots : un dévoilement personnel <strong>soutenu, croissant et réciproque</strong>. Chacun de ces mots compte. Soutenu, donc pas une confidence isolée. Croissant, donc par paliers. Réciproque, donc les deux, jamais un seul. C'est exactement l'architecture de ce jeu.",
+    "sub3Title": "Les trois séries",
+    "sub3Text": "<a href=\"/blog/36-questions-pour-tomber-amoureux/\">Le protocole d'origine</a> comporte trente-six questions réparties en trois séries de douze, de plus en plus personnelles, avec une pause entre chacune. Notre version reprend ce découpage en trois paliers avec ses propres questions, et raccourcit à quinze par partie : trois quarts d'heure de laboratoire ne sont pas un premier rendez-vous.",
+    "sub4Title": "Ce que l'étude ne dit pas",
+    "sub4Text": "Elle ne dit pas qu'on tombe amoureux. Ce qui a été mesuré est un <strong>sentiment de proximité</strong>, pas un sentiment amoureux, et l'étiquette « les questions pour tomber amoureux » est venue bien plus tard, d'un récit personnel publié dans la presse en 2015. La proximité est une excellente base et elle ne garantit rien. C'est déjà beaucoup pour un premier rendez-vous."
+  },
+  "section5": {
+    "title": "Quel niveau pour quel moment",
+    "p1": "Tout ne se joue pas au même endroit. Ce tableau vous dit jusqu'où aller selon le contexte, parce que la même question peut très bien passer et très mal passer selon le décor.",
+    "headerScore": "Le moment",
+    "headerLevel": "Jusqu'où aller",
+    "headerAnalysis": "Pourquoi",
+    "row1Score": "Un café en journée, une heure devant vous",
+    "row1Level": "Niveau 1, et le début du 2",
+    "row1Analysis": "Le cadre est court et public : le troisième palier y tombe à plat, et personne ne peut prendre le temps de répondre.",
+    "row2Score": "Un dîner, une vraie soirée",
+    "row2Level": "Les trois niveaux",
+    "row2Analysis": "C'est le format pour lequel le jeu est écrit. Le temps est là, l'endroit permet de baisser la voix.",
+    "row3Score": "Une deuxième ou troisième fois",
+    "row3Level": "Direct au niveau 2",
+    "row3Analysis": "Le premier palier a déjà été fait, sans le jeu et sans le savoir. Le refaire donnerait une impression de recul.",
+    "row4Score": "En visio, à distance",
+    "row4Level": "Les trois, en deux fois",
+    "row4Analysis": "L'écran fatigue plus vite que le face à face. Coupez après le deuxième niveau et gardez le troisième pour la fois suivante.",
+    "tip": "Un signal simple pour savoir si vous pouvez monter d'un palier : est-ce que l'autre développe ses réponses sans qu'on le lui demande ? Si oui, continuez. Si les réponses restent courtes et polies, restez où vous êtes, il n'y a rien à forcer."
+  },
+  "section6": {
+    "title": "Répondre compte autant que demander",
+    "p1": "C'est le point le plus souvent raté, y compris par des gens qui jouent le jeu de bonne foi. Poser une bonne question ne sert à rien si la réponse est mauvaise, et une bonne réponse ne veut pas dire une réponse brillante.",
+    "sub1Title": "Donnez un exemple, pas une catégorie",
+    "sub1Text": "« Je suis quelqu'un de plutôt anxieux » ne dit rien et ne se retient pas. « J'ai vérifié quatre fois que j'avais bien mes clés avant de venir » dit exactement la même chose, en donnant une image que l'autre gardera. Les réponses qui marquent sont toujours des scènes, jamais des adjectifs.",
+    "sub2Title": "Acceptez le silence de trois secondes",
+    "sub2Text": "Sur les questions des niveaux 2 et 3, la première réponse qui vient est rarement la vraie. Le petit blanc avant de répondre n'est pas un malaise à combler, c'est le signe que la question a été prise au sérieux. Laissez-le durer.",
+    "sub3Title": "Vous avez le droit de refuser une question",
+    "sub3Text": "Et c'est une réponse en soi, à condition de le dire simplement plutôt que de faire semblant. « Celle-là je préfère la garder » est parfaitement recevable et ne casse rien. Ce qui casse, c'est de répondre à côté en espérant que ça ne se voie pas."
+  },
+  "section7": {
+    "title": "Après le rendez-vous",
+    "p1": "Le jeu produit souvent un effet un peu troublant : on a le sentiment de très bien connaître quelqu'un qu'on a rencontré il y a trois heures. C'est réel, c'est exactement ce que le protocole d'origine mesurait, et il vaut mieux savoir ce que ça vaut.",
+    "p2": "Ce sentiment est une <strong>proximité, pas une histoire</strong>. Il dit que vous avez su vous parler, ce qui est déjà rare et loin d'être garanti. Il ne dit rien de la suite, parce que la suite se joue sur des choses qu'une soirée ne montre pas : la façon de gérer un désaccord, la fiabilité, le fait de tenir ce qu'on annonce.",
+    "p3": "Le meilleur usage de cette soirée n'est donc pas d'en tirer des conclusions, c'est de <strong>reprendre trois jours plus tard une des réponses qu'on vous a données</strong>. Se souvenir d'un détail précis et y revenir vaut mieux que n'importe quel message d'après rendez-vous, parce que c'est la seule chose qui prouve qu'on écoutait vraiment.",
+    "tip": "Et si le courant n'est pas passé malgré le jeu, ce n'est pas un échec du format. Deux personnes peuvent se parler très bien et ne pas avoir envie de se revoir. Vous l'aurez simplement su en une soirée au lieu de trois."
+  },
+  "seo": {
+    "whyTitle": "Quand sortir ce jeu, à part un premier rendez-vous",
+    "whySubtitle": "Il a été écrit pour les débuts, mais aucune de ses questions ne suppose une histoire commune. Il fonctionne donc partout où deux personnes se connaissent mal et veulent y remédier.",
+    "card1Title": "Un rendez-vous arrangé",
+    "card1Text": "C'est le cas où il sert le plus. Quand personne n'a choisi l'autre, il n'y a aucune histoire à raconter, et un support extérieur enlève tout le poids du démarrage.",
+    "card2Title": "Une relation à distance qui commence",
+    "card2Text": "En visio, les silences sont plus lourds et la conversation retombe plus vite. Avoir une question sous la main évite les vingt minutes de logistique par lesquelles ces appels commencent toujours.",
+    "card3Title": "Un couple récent, quelques semaines",
+    "card3Text": "Passé les premières fois, on croit souvent avoir fait le tour. Le deuxième niveau montre en général le contraire, notamment sur ce que chacun attend des mois qui viennent.",
+    "card4Title": "Une longue route ou un train",
+    "card4Text": "Deux heures face à face sans écran, c'est le meilleur décor possible pour ce format. Et personne ne peut partir avant la fin du troisième niveau."
+  },
+  "faq": {
+    "q1": "Quelles questions poser à un premier rendez-vous ?",
+    "a1": "Les meilleures ne sont pas les plus originales, ce sont celles auxquelles vous êtes prêt à répondre vous-même. Une question factuelle sur le travail ou la ville d'origine ne demande rien à personne et ne crée aucune proximité. Une question qui demande de choisir, de se souvenir ou d'admettre quelque chose engage les deux personnes, à condition que celui qui la pose y réponde aussi. C'est le principe de ce jeu et de ses trois niveaux.",
+    "q2": "Le jeu vient-il des 36 questions d'Arthur Aron ?",
+    "a2": "Il s'en inspire, il ne les reprend pas. Le protocole publié en 1997 comportait trente-six questions en trois séries de plus en plus personnelles, et c'est cette architecture en paliers que nous avons reprise. Les soixante questions du jeu ont été écrites pour ce site, et le format a été raccourci à quinze par partie parce qu'un premier rendez-vous n'est pas une séance de laboratoire de quarante-cinq minutes.",
+    "q3": "Est-ce que ça peut vraiment rendre quelqu'un amoureux ?",
+    "a3": "Non, et il faut se méfier de cette promesse. L'étude d'origine mesurait un sentiment de proximité, pas un sentiment amoureux, et l'étiquette « les questions pour tomber amoureux » vient d'un récit personnel paru dans la presse en 2015, pas des chercheurs. Ce que ce format produit de façon fiable, c'est une conversation où l'on se dit de vraies choses. C'est une bonne base, ce n'est pas une garantie.",
+    "q4": "Et si mon rendez-vous trouve le principe bizarre ?",
+    "a4": "Présentez-le comme un jeu et pas comme un exercice, ça change tout. Le premier niveau est assez léger pour que personne ne se sente examiné, et il suffit d'une ou deux questions pour que la gêne tombe. Si la personne reste réticente après le premier palier, arrêtez-vous là : le refus est en lui-même une information sur la façon dont elle aborde les choses.",
+    "q5": "Peut-on jouer sans être à table ni face à face ?",
+    "a5": "Oui, et certains décors marchent même mieux. Une longue route en voiture, un train, une promenade : ne pas se regarder facilite beaucoup les questions du troisième niveau, parce qu'on peut répondre sans soutenir un regard. En visio, coupez plutôt après le deuxième niveau et gardez le troisième pour une autre fois.",
+    "q6": "Combien de temps dure une partie ?",
+    "a6": "Le jeu tire quinze questions, ce qui prend entre vingt minutes et beaucoup plus. Rien n'est chronométré, et une seule question peut très bien occuper un quart d'heure. Si cela arrive, ne relancez pas le jeu pour rattraper le retard : c'est précisément le moment où il a fait son travail."
+  }
+}

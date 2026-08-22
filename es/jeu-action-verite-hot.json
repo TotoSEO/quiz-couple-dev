@@ -31,7 +31,7 @@
   "faq": {
     "title": "Preguntas frecuentes",
     "q1": "¿Qué diferencia hay con la versión clásica?",
-    "a1": "Las cartas, sencillamente. La versión clásica va para todas las parejas y se juega delante de quien sea. Esta tiene su propio mazo, bastante más directo, escrito para un momento en que estáis solos los dos.",
+    "a1": "Las cartas, sencillamente. La <a href=\"/es/juego-verdad-o-reto-pareja/\">versión clásica</a> va para todas las parejas y se juega delante de quien sea. Esta tiene su propio mazo, bastante más directo, escrito para un momento en que estáis solos los dos.",
     "q2": "¿Es muy explícito?",
     "a2": "Va de lo sugerente a lo muy directo. Las más suaves piden un piropo o un beso, las más atrevidas dan por hecha una intimidad ya asentada. No hay nivel que elegir: el derecho a pasar es lo que marca el límite, carta a carta.",
     "q3": "¿Cuántas cartas hay?",
@@ -43,7 +43,7 @@
   },
   "section4": {
     "title": "Lo que un juego así puede hacer de verdad",
-    "p1": "No va a transformar vuestra vida íntima, y nadie debería pedírselo. Lo que sí hace bien es dar un marco a una conversación que muchas parejas no han tenido nunca del todo. Porque es la carta la que hace la pregunta en vuestro lugar.",
+    "p1": "No va a transformar vuestra vida íntima, y nadie debería pedírselo. Lo que sí hace bien es dar un marco a una conversación que muchas parejas no han tenido nunca del todo, la misma que el <a href=\"/es/quiz-pareja-picante/\">quiz picante</a> aborda por las preguntas en lugar de los retos. Porque es la carta la que hace la pregunta en vuestro lugar.",
     "p2": "El resto lo decidís vosotros. ¡Y así está muy bien!"
   },
   "jsonLd": {

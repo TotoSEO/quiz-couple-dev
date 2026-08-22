@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "badge": "Kostenloser Test, 20 Aufgaben",
+    "title": "Wer trägt die Mental Load in eurer Beziehung?",
+    "titleHighlight": "die Mental Load",
+    "description": "20 Aufgaben, und jedes Mal dieselbe Frage: wer denkt daran? Beantwortet sie getrennt, und der Abstand zwischen euren beiden Antwortreihen wird zum Ergebnis.",
+    "subtitle": "Allein oder zu zweit, kostenlos und anonym"
+  },
+  "howTo": {
+    "title": "Wie funktioniert dieser Test?",
+    "step1": "Wählt euren Modus. <strong>Allein</strong> bekommst du die Verteilung so, wie du sie siehst. <strong>Zu zweit</strong> antwortet ihr abwechselnd, ohne die Antworten des anderen zu sehen, und der Test vergleicht sie.",
+    "step2": "Zu jeder der 20 Aufgaben nur eine Frage: <strong>wer denkt daran?</strong> Nicht wer es tut, wer daran denkt. Fünf Antworten, von „immer der eine“ bis „immer der andere“, mit der gleichmäßigen Teilung in der Mitte.",
+    "step3": "Antwortet auf das, was wirklich passiert, nicht auf das, was passieren sollte. Niemand liest eure Antworten, und ein schmeichelnder Test nützt keinem.",
+    "step4": "Das Ergebnis zeigt die Verteilung in Prozent, die Aufschlüsselung nach Bereich, und im Modus zu zweit die drei Aufgaben, bei denen ihr am weitesten auseinanderliegt.",
+    "outro": "Der Modus zu zweit ist der interessante. Ein Ungleichgewicht, das beide sehen, und eines, das nur einer sieht, sind nicht dieselbe Lage und verlangen nicht dasselbe Gespräch."
+  },
+  "crossLink": {
+    "title": "Und wenn ein Kind kommt?",
+    "text": "Die Mental Load ist der Posten, der bei der Ankunft eines Kindes am stärksten wächst, und fast immer fängt dieselbe Person den Anstieg auf. Der Elternschafts-Bereitschaftstest schaut, ob ihr auf diesem Feld bereit seid.",
+    "button": "Elternschafts-Bereitschaftstest machen"
+  },
+  "section1": {
+    "title": "Mental Load ist nicht der Abwasch",
+    "p1": "Das ist das Missverständnis, das jedes Gespräch über dieses Thema blockiert. Wenn ein Paar über die Aufgabenverteilung streitet, spricht der eine über Ausführung und der andere über Vorausdenken. Sie reden nicht über dieselbe Sache, und keinem von beiden fällt es auf.",
+    "p2": "Mental Load heißt nicht, den Müll rauszubringen. Es heißt <strong>zu wissen, dass heute Mülltag ist</strong>. Es heißt nicht, Zahnpasta zu kaufen, sondern zu bemerken, dass sie ausgeht. Es heißt nicht, jemanden zum Arzt zu fahren, sondern drei Wochen vorher an den Termin zu denken. Sichtbare Arbeit sehen alle. Unsichtbare Arbeit sieht niemand, außer der Person, die sie leistet.",
+    "p3": "Deshalb ist der Satz „du musst es doch nur sagen“ der Kern des Problems und nicht seine Lösung. Sagen setzt voraus, zu wissen, was ansteht, zu wissen, wann, und im richtigen Moment daran zu denken, es auszusprechen. Wer bitten muss, behält die gesamte Last und gibt nur die Ausführung ab, den leichteren Teil.",
+    "p4": "Dieser Test misst also ausschließlich das Vorausdenken. Bei jeder der zwanzig Aufgaben lautet die Frage nie „wer macht es“, sondern „wer denkt daran“."
+  },
+  "section2": {
+    "title": "Die vier Bereiche, in denen sich die Last festsetzt",
+    "intro": "Sie ist fast nie überall auf dieselbe Weise schief verteilt. Der Test teilt sie in vier Bereiche, weil es nützlicher ist zu sehen, wohin sie kippt, als eine Gesamtzahl zu bekommen.",
+    "pillar1Title": "Der Alltag",
+    "pillar1Text": "Vorräte, Essen, Wäsche, das, was ausgeht, bevor es leer ist. Das ist der durchgehendste Bereich: er hört nie auf, wird nie fertig, und wird erst an dem Tag sichtbar, an dem kein Kaffee mehr da ist. Es ist auch der Bereich, in dem sich das Ungleichgewicht am frühesten einrichtet, oft schon in den ersten Monaten des Zusammenlebens.",
+    "pillar2Title": "Das Vorausdenken",
+    "pillar2Text": "Termine, die gemacht werden müssen, Kaputtes, um das man sich kümmern muss, Fristen für Auto oder Wohnung, die Kleidung der nächsten Saison. Nichts davon ist dringend, und genau das macht es schwer: man muss lange im Voraus daran denken, ohne dass irgendetwas daran erinnert.",
+    "pillar3Title": "Der Papierkram",
+    "pillar3Text": "Die Post, die Lastschriften, die Verträge, die lästigen Formalitäten. Das ist der Bereich, der am häufigsten komplett an eine Person abgegeben wird, weil er am technischsten aussieht. Da liegt die Falle: sobald er zu jemandes Bereich geworden ist, denkt niemand sonst mehr daran, auch nicht, um nachzusehen, ob alles läuft.",
+    "pillar4Title": "Familie und Umfeld",
+    "pillar4Text": "Geburtstage, Geschenke, Einladungen, sich melden. Das ist der am ungleichsten verteilte Bereich überhaupt, und der, der am seltensten als Arbeit anerkannt wird. Eine soziale Bindung zu pflegen verlangt aber Gedächtnis, Organisation und Zeit, auch für die Familie des anderen.",
+    "tip": "Ein einfacher Weg, die beiden Lasten zu unterscheiden: stell dir vor, du wärst zehn Tage weg, ohne Bescheid zu sagen. Was aufhören würde zu funktionieren, ist deine Mental Load. Was jemand an deiner Stelle täte, ohne daran denken zu müssen, ist Ausführung."
+  },
+  "section3": {
+    "title": "Was euer Ergebnis bedeutet",
+    "p1": "Der Test liefert zuerst eine Verteilung in Prozent, dann die Aufschlüsselung nach Bereich. Im Modus zu zweit kommt die Messung dazu, die diese Seite überhaupt lohnend macht: der Abstand zwischen euren beiden Antwortreihen. Ein Ungleichgewicht, das beide sehen, und eines, das nur einer sieht, behandelt man nicht gleich. Die vier Situationen unten sind die des Modus zu zweit, die einzigen, in denen sich dieser Abstand messen lässt.",
+    "headerScore": "Lage",
+    "headerLevel": "Was sie beschreibt",
+    "headerAnalysis": "Was zu tun ist",
+    "row1Score": "Ihr seid ein Team",
+    "row1Level": "Verteilt, und ihr beschreibt dasselbe.",
+    "row1Analysis": "Nichts zu reparieren. Macht den Test nach der nächsten großen Veränderung erneut.",
+    "row2Score": "Verteilt, aber unscharf",
+    "row2Level": "Die Summe stimmt, eure Versionen gehen auseinander.",
+    "row2Analysis": "Erzählt euch konkret, was ihr tut. Der Groll kommt aus dem Missverständnis.",
+    "row3Score": "Bewusstes Ungleichgewicht",
+    "row3Level": "Einer trägt mehr, und ihr seid euch einig.",
+    "row3Analysis": "Die Frage ist nicht, ob es gerecht ist, sondern ob es hält. Setzt eine Frist.",
+    "row4Score": "Einer trägt, der andere sieht es nicht",
+    "row4Level": "Der häufigste Fall, und auf Dauer der teuerste.",
+    "row4Analysis": "Geht von den drei Abweichungen aus, nicht von einer Liste von Vorwürfen.",
+    "tip": "Allein lässt sich dieser Abstand nicht messen: der Test liefert dann eines von zwei Ergebnissen, „Du beschreibst eine geteilte Last“ oder „Du beschreibst eine Last, die vor allem auf einer Person liegt“. Das entscheidende Wort ist <strong>beschreibst</strong>. Gerade bei der Verteilung gehen die Einschätzungen in einer Beziehung am weitesten auseinander, ein Alleinergebnis sagt also vor allem, wo du stehst, nicht wo ihr beide steht."
+  },
+  "section4": {
+    "title": "Warum es fast immer dieselbe Person trifft",
+    "p1": "Kein Paar beschließt eines Tages, dass einer sich um alles Unsichtbare kümmert. Das Ungleichgewicht wird nicht entschieden, es setzt sich ab, und zwar über Mechanismen, die sich recht einfach benennen lassen.",
+    "sub1Title": "Wer es zuerst bemerkt, übernimmt es am Ende",
+    "sub1Text": "Das ist der Hauptmechanismus, und er hat nichts mit gutem Willen zu tun. Zwei Menschen haben unterschiedliche Toleranzschwellen für Unordnung, leere Vorräte oder überfällige Termine. Wer die niedrigere Schwelle hat, sieht das Problem zuerst, kümmert sich, und wird damit automatisch zu dem, der sich immer kümmert. Nach ein paar Monaten hat der andere aufgehört hinzusehen.",
+    "sub2Title": "Kompetenz wird zur Falle",
+    "sub2Text": "Sobald eine Person etwas doppelt so gut oder doppelt so schnell erledigt, ist es rational, es ihr zu überlassen. Nur wird diese Effizienz bezahlt: jede nach Können zugeteilte Aufgabe wird zu einer Aufgabe, die niemand sonst übernehmen kann, und der Bereich schließt sich.",
+    "sub3Title": "Helfen wird mit Teilen verwechselt",
+    "sub3Text": "„Ich helfe dir“ und „ich kümmere mich“ sind zwei sehr verschiedene Positionen, und viele Paare messen den Abstand nicht. Helfen heißt auf Anfrage ausführen, also dem anderen die Last des Wissens, Planens und Erinnerns zu lassen. Eine Beziehung, in der einer viel hilft, kann eine fast gleiche Ausführungsverteilung und eine völlig schiefe Mental Load haben.",
+    "sub4Title": "Niemand zählt dasselbe",
+    "sub4Text": "Jeder hat ein genaues Bild von dem, was er trägt, und ein ungefähres von dem, was der andere trägt. Das ist kein böser Wille, das ist normale Aufmerksamkeit: man sieht, was man tut, und nicht, was ohne einen erledigt wurde. Genau diesen Abstand misst der Modus zu zweit.",
+    "tip": "Keiner dieser vier Mechanismen setzt bösen Willen voraus. Das macht sie so schwer zu korrigieren: es gibt niemanden zu beschuldigen, und die Lage ist trotzdem völlig real."
+  },
+  "section5": {
+    "title": "Was es kostet, wenn es andauert",
+    "p1": "Eine schiefe Mental Load löst keine Krise aus. Sie erzeugt Verschleiß, und Verschleiß bemerkt man erst, wenn er seine Arbeit schon getan hat.",
+    "p2": "Die erste Folge ist eine Müdigkeit, die sich nicht mit Schlaf reparieren lässt, weil sie aus fortlaufender geistiger Tätigkeit kommt und nicht aus körperlicher Anstrengung. Die zweite ist Groll, der sich langsam ansammelt und meistens an einer winzigen Kleinigkeit hochkommt, was ihn für den anderen unverständlich macht: der Streit geht um eine Socke, nie um die Sache.",
+    "p3": "Die dritte Folge ist am schwersten wieder einzufangen. Wer alles managt, nimmt am Ende in der eigenen Beziehung die Position der organisierenden Instanz ein, und mit dieser Position kommt eine Rolle, die nichts Romantisches hat. Viele Paare beschreiben diesen Umschlag, ohne ihn benennen zu können: man ist nicht mehr zwei Erwachsene, die zusammenleben, einer leitet und der andere führt aus.",
+    "tip": "Wenn du dich in diesen drei Absätzen wiedererkennst: die gute Nachricht ist, dass die Mental Load eines der wenigen Ungleichgewichte ist, die sich mit Organisation beheben lassen und nicht mit einer Persönlichkeitsänderung."
+  },
+  "section6": {
+    "title": "Was wirklich ausgleicht, und was nichts bringt",
+    "p1": "Viele der zu diesem Thema vorgeschlagenen Lösungen bewegen gar nichts, weil sie den unsichtbaren Teil genau dort lassen, wo er war. Hier ist, was funktioniert, und was nur den Eindruck erweckt zu handeln.",
+    "sub1Title": "Einen ganzen Bereich übergeben, keine Aufgaben",
+    "sub1Text": "Das ist die einzige Übergabe, die wirklich entlastet. „Du kümmerst dich um die Arzttermine“ heißt zu wissen, wann sie anstehen, die Termine zu machen, sie zu notieren und einzuhalten, ohne Erinnerung. Solange jemand erinnern muss, hat sich die Last keinen Millimeter bewegt.",
+    "sub2Title": "Akzeptieren, dass es anders gemacht wird",
+    "sub2Text": "Daran scheitern die meisten Ausgleichsversuche. Ein übergebener Bereich wird anders geführt, am Anfang oft schlechter, manchmal dauerhaft schlechter. Beim ersten Fehler wieder zu übernehmen setzt alles auf Anfang zurück und verankert dauerhaft die Vorstellung, dass der andere es nicht hinbekommt.",
+    "sub3Title": "Die Liste einmal gemeinsam aufschreiben",
+    "sub3Text": "Viele unsichtbare Aufgaben existieren für einen der beiden erst in dem Moment, in dem er sie aufgeschrieben sieht. Die Inventur gemeinsam zu machen, ein einziges Mal, verändert mehr als ein Gespräch über Gerechtigkeit, weil sie eine Debatte über Eindrücke durch ein Objekt ersetzt, das beide ansehen können.",
+    "sub4Title": "Was nicht funktioniert",
+    "sub4Text": "Verteilungspläne am Kühlschrank halten drei Wochen. Apps für geteilte Aufgaben verschieben die Last auf den, der die App pflegt. Und „sag mir einfach, was ich tun soll“ ist wörtlich die Bitte, die Mental Load behalten zu dürfen."
+  },
+  "section7": {
+    "title": "Wie man das Thema anspricht, ohne dass es schiefgeht",
+    "p1": "Dieses Gespräch entgleist oft, weil es fast immer im falschen Moment eröffnet wird: an einem müden Abend, nach dem Tropfen, der das Fass zum Überlaufen bringt, in Form eines Vorwurfs. Das Gegenüber hört eine Anklage, verteidigt sich, und die Sache selbst kommt nie zur Sprache.",
+    "p2": "Genau dafür ist der Test da. Er ersetzt „du machst nie etwas“ durch ein neutrales Objekt, das ihr beide anschaut, und er benennt drei konkrete Aufgaben statt eines Generalprozesses. Über drei Aufgaben lässt sich reden. Über einen Prozess nicht.",
+    "p3": "Wenn du derjenige bist, der das Ungleichgewicht beim Lesen des Ergebnisses entdeckt, gibt es nur eine sinnvolle Reaktion, und das ist nicht, sich zu rechtfertigen. Bitte den anderen, einen typischen Tag dessen zu schildern, was er im Kopf hat. Das ist der schnellste Weg zum Verständnis, weil es sichtbar macht, was per Definition nicht zu sehen ist.",
+    "tip": "Kommt darauf zurück, wenn das Thema abgekühlt ist, mit einem vorher festgelegten Termin für eine Bilanz. Ein Ausgleich hält selten, wenn er erst bei der nächsten Krise überprüft wird."
+  },
+  "faq": {
+    "q1": "Was ist der Unterschied zwischen Mental Load und Hausarbeit?",
+    "a1": "Hausarbeit ist die sichtbare Arbeit: saugen, einkaufen, kochen. Die Mental Load ist die unsichtbare Arbeit davor: zu wissen, dass es ansteht, zu entscheiden wann, zu behalten was fehlt, Termine zu machen, bevor es zu spät ist. Man kann eine völlig gleiche Aufgabenverteilung und eine komplett von einer Person getragene Mental Load haben, und das ist sogar sehr häufig.",
+    "q2": "Sollte man diesen Test allein oder zu zweit machen?",
+    "a2": "Beides geht, aber es ergibt nicht dasselbe. Allein bekommst du die Verteilung so, wie du sie siehst, was nützlich, aber unvollständig ist. Zu zweit bekommt ihr zusätzlich den Abstand zwischen euren beiden Wahrnehmungen, und das ist oft die aussagekräftigste Information des Tests. Wenn ihr nur einen macht, macht ihn zu zweit.",
+    "q3": "Betrifft die Mental Load nur Frauen?",
+    "a3": "Nein, aber die Zahlen zeigen ein deutliches Ungleichgewicht. Das Ifop-Barometer zum Thema hält fest, dass 71 % der Frauen eine hohe Mental Load angeben, und das französische Statistikamt beobachtet, dass sie rund 71 % der elterlichen und 64 % der häuslichen Aufgaben übernehmen. Über eure Beziehung im Besonderen sagt das nichts: genau das schaut sich der Test an, ohne Vorannahme darüber, wer was trägt.",
+    "q4": "Mein Partner versteht nicht, wovon ich rede, was tun?",
+    "a4": "Das ist die häufigste Lage, und fast nie böser Wille: die Mental Load wird erst in dem Moment sichtbar, in dem sie nicht mehr getragen wird. Am wirksamsten ist es, ihn den Test getrennt machen zu lassen und dann die beiden Ergebnisse zu vergleichen. Der Abstand zwischen euren Antworten ist ein weit stärkeres Argument als ein Gespräch, weil niemand es jemandem glauben muss.",
+    "q5": "Nicht alle zwanzig Aufgaben passen zu unserer Lage, ist das schlimm?",
+    "a5": "Nein. Die zwanzig Aufgaben wurden so gewählt, dass sie in der großen Mehrheit der Haushalte gelten, mit oder ohne Kinder, zur Miete wie im Eigentum. Wenn eine bei euch nicht zutrifft, antwortet „beide, zu gleichen Teilen“: sie wird dann neutral und verfälscht die Verteilung nicht.",
+    "q6": "Werden meine Antworten gespeichert?",
+    "a6": "Nein. Alles läuft in eurem Browser ab, keine Antwort wird gesendet oder aufbewahrt, und es gibt weder ein Konto noch eine E-Mail-Adresse anzugeben. Auch im Modus zu zweit dienen die Antworten des ersten Spielers nur der Endberechnung und verschwinden, sobald ihr die Seite schließt."
+  }
+}

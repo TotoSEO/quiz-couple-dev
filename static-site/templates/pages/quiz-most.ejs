@@ -182,7 +182,7 @@
         <% for (const faq of faqEntries) { %>
         <details class="border border-border rounded-lg">
           <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= faq.q %></summary>
-          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= faq.a %></div>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%- faq.a %></div>
         </details>
         <% } %>
       </div>

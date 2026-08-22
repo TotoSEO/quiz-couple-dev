@@ -1,6 +1,6 @@
 {
   "hero": {
-    "badge": "Kostenlos \u2022 Ohne Anmeldung \u2022 10 Min",
+    "badge": "Kostenlos • Ohne Anmeldung • 10 Min",
     "title": "Zusammenziehen-Test | Seid ihr bereit zusammenzuziehen?",
     "titleHighlight": "zusammenziehen",
     "intro1": "Ihr schlaft schon 5 Abende pro Woche beieinander. Du hast eine Zahnbürste bei ihm, er hat eine Schublade bei dir. Die Frage ist nicht mehr \"lieben wir uns genug, um zusammenzuziehen\", sondern eher: <strong>Können wir uns 60m² teilen, ohne uns gegenseitig in den Wahnsinn zu treiben?</strong>",
@@ -14,47 +14,41 @@
     "s1p1": "Alle sagen euch, es sei \"der nächste Schritt\". Nach ein paar Monaten Beziehung kommt die Frage. \"Und wenn wir eine gemeinsame Wohnung nehmen?\" Klingt einfach. Ist es aber nicht.",
     "s1p2": "Zusammenleben bedeutet, von der Version \"bestes Ich\" (die man beim Date zeigt) zur \"vollständigen Version\" überzugehen (die schnarcht, das Licht anlässt und um 23 Uhr Müsli isst). Es ist ein <strong>Crashtest in Originalgröße</strong> für eure Beziehung. Und anders als man denkt, kommen Trennungen nach dem Zusammenziehen fast nie von den großen Themen. Sie kommen von den täglichen Mikro-Reibereien, die sich ansammeln, ohne dass man es wagt, darüber zu sprechen.",
     "s1p3": "Die Zahnpastatube. Die Temperatur im Schlafzimmer. Die Lautstärke der Musik am Morgen. Lächerlich? Ja. Aber nach 6 Monaten kann eine schlecht verschlossene Zahnpastatube zum Symbol für alles werden, was ihr nicht gesagt habt.",
-
     "s2Title": "Die 6 Themen, die niemand anspricht (und die alles ruinieren)",
     "s2r1Title": "Geld, konkret",
     "s2r1Text": "Nicht \"wir teilen uns das schon\". Konkret. Wer zahlt was? Gemeinsames Konto oder nicht? 50/50 oder nach Einkommen? Was passiert, wenn einer den Job verliert? In Deutschland liegt die durchschnittliche Miete für eine Zweizimmerwohnung in der Stadt bei 700-900 €. Plus Nebenkosten, Strom, Internet, Einkäufe. Das summiert sich schnell. Paare, die die Zahlen offen auf den Tisch legen, bevor sie den Mietvertrag unterschreiben, entschärfen die meisten Geldstreitigkeiten, bevor sie überhaupt entstehen: Selten tut der Betrag weh, sondern die Überraschung.",
     "s2r2Title": "Putzen (das wahre Tabuthema)",
-    "s2r2Text": "Mehr als Geld, mehr als Eifersucht: Es ist die Aufteilung der Hausarbeit, die in zusammenlebenden Paaren den meisten Groll erzeugt. Und die Falle ist, dass es sich lautlos einschleicht. Am Anfang macht einer mehr, weil \"es ihn nicht stört\". Dann wird es zur Selbstverständlichkeit. Dann zur Frustration. Dann zum Vorwurf. Sprecht vorher darüber. Wer macht was, wie oft, mit welchem Standard.",
+    "s2r2Text": "Mehr als Geld, mehr als Eifersucht: Es ist die Aufteilung der Hausarbeit, die in zusammenlebenden Paaren den meisten Groll erzeugt. Und die Falle ist, dass es sich lautlos einschleicht. Am Anfang macht einer mehr, weil \"es ihn nicht stört\". Dann wird es zur Selbstverständlichkeit. Dann zur Frustration. Dann zum Vorwurf. Sprecht vorher darüber. Wer macht was, wie oft, mit welchem Standard. Und vergesst die Hälfte nicht, die niemand sieht: <a href=\"/de/mental-load-test-paare/\">daran zu denken, bevor es getan ist</a>, ist eine eigene Arbeit, und fast immer die, die niemand aufteilt.",
     "s2r3Title": "Das Bedürfnis nach Alleinsein",
-    "s2r3Text": "Jemanden zu lieben und allein sein zu wollen, ist kein Widerspruch. Aber wenn ihr euch 50m² teilt, kann das \"ich brauche meine Ruhe\" wie eine Zurückweisung klingen. Man muss vorher darüber sprechen. Einen Rückzugsort einplanen (auch wenn er klein ist), wo jeder sich zurückziehen kann. Akzeptieren, dass der andere eine Tür schließt, ohne dass es ein Problem bedeutet. Paare, die <a href=\"/de/beziehungstest/\">sich gut kennen</a>, können damit natürlich umgehen.",
+    "s2r3Text": "Jemanden zu lieben und allein sein zu wollen, ist kein Widerspruch. Aber wenn ihr euch 50m² teilt, kann das \"ich brauche meine Ruhe\" wie eine Zurückweisung klingen. Man muss vorher darüber sprechen. Einen Rückzugsort einplanen (auch wenn er klein ist), wo jeder sich zurückziehen kann. Akzeptieren, dass der andere eine Tür schließt, ohne dass es ein Problem bedeutet. Paare, die <a href=\"/de/paar-kompatibilitaetstest/\">sich gut kennen</a>, können damit natürlich umgehen.",
     "s2r4Title": "Lebensrhythmen",
     "s2r4Text": "Der eine steht um 6 Uhr auf, um joggen zu gehen. Der andere arbeitet bis Mitternacht. Der eine braucht absolute Stille zum Schlafen. Der andere schläft mit einem Podcast ein. Diese Unterschiede sind handhabbar, wenn man 2 Mal pro Woche beim anderen übernachtet. Wenn man 7 Tage die Woche zusammenlebt, wird es zum echten Thema.",
     "s2r5Title": "Gäste und soziales Leben",
     "s2r5Text": "Eure Wohnung gehört auch dem anderen. Sein bester Freund, der sonntags unangemeldet auftaucht, deine Schwester, die \"nur eine Nacht\" bleibt und 4 Tage später wieder geht... Zuhause ist ein Rückzugsort. Wenn dieser Rückzugsort ohne eure Zustimmung \"besetzt\" wird, erzeugt das Groll. Legt die Regeln gemeinsam fest.",
     "s2r6Title": "Die Frage \"Was wenn es nicht klappt?\"",
     "s2r6Text": "Niemand will daran denken. Aber es ist ein bisschen wie mit einer Versicherung: Es ist dumm, keine zu haben, nur weil man sie \"bestimmt nicht brauchen wird\". Wer bleibt in der Wohnung, wenn man sich trennt? Auf wessen Namen steht der Mietvertrag? Was passiert mit den gemeinsam gekauften Möbeln? Darüber zu reden bringt kein Unglück. Es schützt euch beide.",
-
     "s3Title": "Zusammenziehen nach wie viel Beziehungszeit?",
     "s3p1": "6 Monate. 1 Jahr. 2 Jahre. Jeder hat eine Meinung. Die Realität ist: Es gibt keine magische Zahl.",
     "s3p2": "Was zählt, ist das, was ihr zusammen erlebt habt, nicht die Anzahl der Monate. Ein Paar, das sich 3 Mal pro Woche über 2 Jahre gesehen hat, hat weniger Zeit miteinander verbracht als ein Paar, das nach 6 Monaten praktisch unter einem Dach lebte. Das wahre Kriterium ist: Habt ihr bereits einen ernsthaften Konflikt durchgestanden? Habt ihr den anderen in seiner \"nicht besten\" Version erlebt (krank, gestresst, müde, 3 Tage am Stück schlecht gelaunt)? Wenn die Antwort Nein ist, kennt ihr nur die Schaufenster-Version. Und mit einer Schaufenster-Version zusammenzuziehen, bedeutet, sich auf Überraschungen gefasst zu machen.",
-    "s3p3": "Ein <a href=\"/de/liebes-quiz-paare/\">verliebtes</a> Paar zu sein, ist gut. Ein verliebtes Paar zu sein, das weiß, was es im Alltag erwartet, ist besser.",
-
+    "s3p3": "Ein <a href=\"/de/liebes-quiz/\">verliebtes</a> Paar zu sein, ist gut. Ein verliebtes Paar zu sein, das weiß, was es im Alltag erwartet, ist besser.",
     "s4Title": "Zusammenziehen aus den richtigen Gründen (und nicht den falschen)",
     "s4p1": "Die guten Gründe: Ihr wollt einen gemeinsamen Alltag aufbauen, ihr habt es getestet und es funktioniert, ihr seid bei den praktischen Themen auf einer Wellenlänge, und der Wunsch ist auf beiden Seiten aufrichtig.",
     "s4p2": "Die schlechten Gründe (und sie sind häufiger, als man denkt):",
     "s4p3": "<strong>\"Zu zweit ist es billiger.\"</strong> Stimmt. Aber zusammenzuziehen, um die Miete zu teilen, ist ein WG-Projekt, kein Beziehungsprojekt. Wenn das die Hauptmotivation ist, ist das ein Warnsignal.",
-    "s4p4": "<strong>\"Es sind schon 2 Jahre, es wird Zeit.\"</strong> Der gesellschaftliche Kalender hat nichts mit eurem emotionalen Kalender zu tun. Manche Paare ziehen nach 8 Monaten zusammen und es läuft. Andere warten 4 Jahre und es ist die richtige Entscheidung. Der Druck des \"man muss vorankommen\" hat mehr Beziehungen zerstört als gerettet.",
-    "s4p5": "<strong>\"Wir werden schon sehen, wie es läuft.\"</strong> Optimismus ist nett. Vorbereitung ist besser. Die Paare, die <a href=\"/de/beziehungsproblem-loesen/\">ihre Probleme lösen können</a>, bevor sie zu Zeitbomben werden, sind diejenigen, die unter einem Dach bestehen.",
-
+    "s4p4": "<strong>\"Es sind schon 2 Jahre, es wird Zeit.\"</strong> Der gesellschaftliche Kalender hat nichts mit eurem emotionalen Kalender zu tun. Manche Paare ziehen nach 8 Monaten zusammen und es läuft. Andere warten 4 Jahre und es ist die richtige Entscheidung. <a href=\"/de/blog/bindungsangst/\">Der Druck des \"man muss vorankommen\"</a> hat mehr Beziehungen zerstört als gerettet.",
+    "s4p5": "<strong>\"Wir werden schon sehen, wie es läuft.\"</strong> Optimismus ist nett. Vorbereitung ist besser. Die Paare, die <a href=\"/de/fragen-fuer-paare/\">ihre Probleme lösen können</a>, bevor sie zu Zeitbomben werden, sind diejenigen, die unter einem Dach bestehen.",
     "s5Title": "Die ersten 3 Monate: Was euch niemand sagt",
     "s5p1": "Die ersten 3 Monate des Zusammenlebens sind die Anpassungsphase. Nicht die Flitterwochen, die man euch verkauft. Konkret erwartet euch Folgendes.",
     "s5p2": "<strong>Monat 1</strong> ist die Aufregung. Alles ist neu. Ihr richtet ein, geht zusammen einkaufen, kocht verliebt. Ist ja süß.",
     "s5p3": "<strong>Monat 2</strong>, die Gewohnheiten setzen sich fest. Und die ersten Reibereien damit. Warum steht immer Geschirr im Spülbecken? Warum braucht sie 45 Minuten im Bad am Morgen? Das ist normal. Das ist Anpassung.",
     "s5p4": "<strong>Monat 3</strong> ist der Moment der Wahrheit. Die Aufregung hat sich gelegt, die Realität ist da. Wenn ihr es schafft, diese Phase kommunizierend zu überstehen (auch wenn es holprig ist), seid ihr auf dem richtigen Weg. Wenn sich Ungesagtes anhäuft, ist jetzt der Moment, darüber zu reden. Nicht in 6 Monaten. Jetzt.",
     "s5p5": "Ein Rat, den eingespielte Paare immer geben: Bewahrt euch Momente \"jeder für sich\", auch wenn ihr zusammenlebt. Freunde alleine treffen, ein eigenes Hobby behalten, ohne den anderen ausgehen. Das ist kein Mangel an Liebe. Es ist das, was euch erlaubt, <a href=\"/de/lustiges-paar-quiz/\">Leichtigkeit in eurer Beziehung zu bewahren</a>, anstatt eure Beziehung in eine funktionale Wohngemeinschaft zu verwandeln.",
-
     "s6Title": "Praktische Checkliste vor dem Zusammenziehen",
     "s6p1": "Über den Test hinaus: Hier sind die konkreten Punkte, die ihr klären solltet, bevor ihr eure Umzugskartons am selben Ort abstellt:",
     "s6p2": "<strong>Das Budget.</strong> Erstellt eine Tabelle (ja, eine echte). Miete, Nebenkosten, Einkäufe, Ausgehen, Sparen. Setzt die Zahlen daneben. Wenn es schon vor dem Einzug eng wird, löst sich das nicht von allein, sobald der Mietvertrag unterschrieben ist.",
     "s6p3": "<strong>Der Mietvertrag.</strong> Auf wessen Namen? Beide Namen auf dem Mietvertrag = beide verantwortlich für die Miete. Nur ein Name = der andere hat im Trennungsfall keine Rechte an der Wohnung. Das muss man bedenken.",
     "s6p4": "<strong>Die Möbel.</strong> Wer bringt was mit? Was kauft ihr gemeinsam? Behaltet im Hinterkopf, dass ein zusammen gekauftes Sofa im Trennungsfall ein Verhandlungsthema werden kann.",
     "s6p5": "<strong>Die Grundregeln.</strong> Kein notariell beglaubigter Vertrag. Nur eine mündliche Vereinbarung über die Dinge, die zählen: Sauberkeit, Gäste, Lautstärke, persönlicher Freiraum. Das kann man bei einer Pizza besprechen. Wichtig ist, dass es gesagt wird.",
-
     "faqTitle": "Häufige Fragen zum Zusammenleben",
     "faq": [
       {

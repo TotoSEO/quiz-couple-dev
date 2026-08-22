@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: 'Las 6 fases de la ruptura en el hombre: de la negación a la reconstrucción.',
   introduction: `<p>Se dice a menudo que los hombres sufren menos por una ruptura. Que se recuperan más rápido, que pasan página sin demasiados daños. Es falso. Lo que sí es cierto es que lo viven de manera diferente, y a menudo más tarde.</p>
 <p>Donde una mujer generalmente siente el <strong>dolor de la separación</strong> casi de inmediato, el hombre tarda en dejarla entrar. Puede salir, reír, encadenar noches de fiesta, dar la impresión de que todo va bien… y derrumbarse tres meses después, cuando se encuentra solo un domingo por la noche y la realidad le golpea de repente.</p>
-<p>Comprender las <strong>fases de la ruptura en el hombre</strong> es útil en varios aspectos. Ya seas un hombre que atraviesa una separación y busca ponerle palabras a lo que siente, o una mujer que intenta comprender cómo lo vive su ex, este artículo es para ti.</p>`,
+<p>Comprender las <strong>fases de la ruptura en el hombre</strong> es útil en varios aspectos. Ya seas un hombre que atraviesa una separación y busca ponerle palabras a lo que siente, o una mujer que intenta <a href="https://quiz-couple.com/es/mi-ex-todavia-piensa-en-mi/">comprender cómo lo vive su ex</a>, este artículo es para ti.</p>`,
   quickSummary: [
     'La ruptura en el hombre pasa por 6 fases: negación, anestesia emocional, ira, toma de conciencia, duelo real y reconstrucción.',
     'Estas etapas no son lineales y varían según cada individuo.',

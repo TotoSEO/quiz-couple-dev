@@ -297,5 +297,23 @@
     "shortTitle": "Test Emotionale Abhängigkeit",
     "description": "20 ehrliche Fragen, um herauszufinden, ob du deinen Partner liebst oder dich an ihn klammerst. Sofortiges Ergebnis und konkrete Schritte.",
     "metaDescription": "Gesunde Bindung oder emotionale Abhängigkeit? 20 ehrliche Fragen, sofortiges Ergebnis und konkrete Schritte zurück ins Gleichgewicht. Kostenlos."
+  },
+  "testEx": {
+    "title": "Denkt mein Ex noch an mich? Kostenloser Test mit 15 Fragen",
+    "shortTitle": "Denkt mein Ex noch an mich?",
+    "description": "15 Fragen zu dem, was er oder sie tut, nicht zu dem, was du hineinliest. Einzeltest, sofortiges Ergebnis.",
+    "metaDescription": "Denkt dein Ex noch an dich? 15 Fragen, die Taten wiegen statt Deutungen. Kostenlos, anonym, ohne Anmeldung und ohne E-Mail."
+  },
+  "testChargeMentale": {
+    "title": "Mental-Load-Test für Paare: Wer trägt was?",
+    "shortTitle": "Wer trägt die Mental Load?",
+    "description": "20 Aufgaben, zwei Antwortreihen und der Abstand dazwischen. Allein oder zu zweit, sofortiges Ergebnis.",
+    "metaDescription": "Wer trägt in eurer Beziehung wirklich die Mental Load? 20 Aufgaben zum Daran-Denken, nicht zum Tun. Zu zweit wird der Abstand zwischen euren Antworten zum Ergebnis."
+  },
+  "quizRencontre": {
+    "title": "Fragen fürs erste Date: das Spiel in 3 Leveln",
+    "shortTitle": "Fragen fürs erste Date",
+    "description": "15 Fragen füreinander, in drei zunehmend persönlichen Leveln. Nichts zu installieren, nichts zu zählen.",
+    "metaDescription": "Das Fragenspiel fürs erste Date, in drei Leveln wachsender Nähe. 60 Fragen, 15 pro Runde, zu zweit auf einem Handy, ohne Anmeldung und ohne Punkte."
   }
 }

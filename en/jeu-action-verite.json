@@ -37,14 +37,14 @@
     "q3": "How many people can play?",
     "a3": "It's built for two, with turns announced on every card. Nothing stops you passing the phone round a bigger group, but the cards are written for a couple.",
     "q4": "Is there a bolder version?",
-    "a4": "Yes, on a separate page with its own noticeably more direct deck. That's the naughty version, made for the nights when it's really just the two of you.",
+    "a4": "Yes, on a separate page with its own noticeably more direct deck. That's the <a href=\"/en/dirty-truth-or-dare-couples/\">naughty version</a>, made for the nights when it's really just the two of you.",
     "q5": "Can we play remotely?",
     "a5": "Yes, and it works better than you'd think. One of you opens the game, reads the card out loud on video and confirms for both. Truths land perfectly, dares take a bit of imagination…"
   },
   "section4": {
     "title": "Why this game still works, after all these years",
     "p1": "Truth or dare survives generation after generation for a very simple reason: it gives you permission to ask a question you'd never have asked on your own. It isn't you asking, it's the card. And that tiny bit of distance changes absolutely everything.",
-    "p2": "As a couple, it's often the only way to open certain subjects without turning them into a solemn conversation. Nobody wants to hear “we need to talk”… but everyone will draw a card."
+    "p2": "As a couple, it's often the only way to open certain subjects without turning them into a solemn conversation. Nobody wants to hear “we need to talk”… but everyone will draw a card. It is the same principle as our <a href=\"/en/couple-questions/\">questions to ask each other</a>, in a lighter form."
   },
   "jsonLd": {
     "name": "Truth or dare game for couples"

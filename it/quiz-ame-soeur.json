@@ -28,9 +28,9 @@
     "type3Title": "Il compagno di strada",
     "type3Text": "Solido, leale, spesso lungo. Ma bisogna ancora scegliere le parole. Molte coppie felici reggono esattamente su questo, e non è un fallimento.",
     "type4Title": "La fiamma gemella",
-    "type4Text": "Uno specchio, non un rifugio. La relazione ti mette di fronte a quello che evitavi di guardare, con separazioni e ritorni. Non ne esci come la stessa persona.",
+    "type4Text": "Uno specchio, non un rifugio. La <a href=\"/it/test-relazione-karmica/\">fiamma gemella</a> ti mette di fronte a quello che evitavi di guardare, con separazioni e ritorni. Non ne esci come la stessa persona.",
     "type5Title": "La relazione karmica",
-    "type5Text": "La stessa scena in loop: l'intensità resta, la stanchezza si installa, e andarsene diventa impossibile. Se ti parla più delle quattro qui sopra, vai piuttosto a vedere il <a href=\"/it/test-relazione-karmica/\">test di relazione karmica</a>."
+    "type5Text": "La stessa scena in loop: l'intensità resta, la stanchezza si installa, e andarsene diventa impossibile. Non è un'anima gemella: è una relazione karmica, e si riconosce da segnali diversi dalle quattro qui sopra."
   },
   "section3": {
     "title": "Esiste davvero, o è un'invenzione?",
@@ -49,7 +49,7 @@
     "sign3Title": "Prova",
     "sign3Text": "Quello che la difficoltà ha fatto al legame. Un lutto, un colpo duro, un litigio da cui non ci si rialza facilmente: vi ha avvicinati o incrinati? Una relazione mai messa alla prova non è solida, è nuova.",
     "sign4Title": "Autonomia",
-    "sign4Text": "I tuoi amici, i tuoi progetti, la tua capacità di passare un fine settimana ciascuno per conto proprio. È il pilastro che fa più danni quando manca: senza di lui, la naturalezza non è più naturalezza, è dipendenza."
+    "sign4Text": "I tuoi amici, i tuoi progetti, la tua capacità di passare un fine settimana ciascuno per conto proprio. È il pilastro che fa più danni quando manca: senza di lui, la naturalezza non è più naturalezza, è <a href=\"/it/test-dipendenza-affettiva/\">dipendenza affettiva</a>."
   },
   "section5": {
     "title": "Come leggere il tuo risultato",
@@ -71,7 +71,7 @@
     "row4Action": "Cerca da dove viene il riserbo. La paura di essere giudicato(a) a volte cade in una sola conversazione.",
     "row5Profile": "Due strade che si incrociano",
     "row5Meaning": "Né la scioltezza, né l'intesa di fondo, né l'effetto delle prove. Due brave persone possono semplicemente non convenirsi.",
-    "row5Action": "La domanda utile non è più «è la mia anima gemella» ma «sto bene in questa relazione».",
+    "row5Action": "La domanda utile non è più «è la mia anima gemella» ma «<a href=\"/it/test-relazione-sana/\">sto bene in questa relazione</a>».",
     "note": "Questo test non è una diagnosi e non ha alcun valore clinico. È una chiave di lettura, da confrontare con quello che già sai."
   },
   "section6": {
@@ -82,7 +82,7 @@
     "dont1Title": "I tuoi amici sono spariti",
     "dont1Text": "Raramente per divieto. Hai declinato, e poi hanno smesso di proporre.",
     "dont2Title": "Una giornata senza notizie ti mette in difficoltà",
-    "dont2Text": "Non è più attaccamento, è un allarme. Un legame solido regge il silenzio.",
+    "dont2Text": "Non è più attaccamento, è un allarme, e dice molto sul tuo <a href=\"/it/test-stile-attaccamento/\">stile di attaccamento</a>. Un legame solido regge il silenzio.",
     "doTitle": "I segnali dell'anima gemella",
     "do1Title": "Hai tenuto la tua vita",
     "do1Text": "I tuoi amici, i tuoi progetti, le tue voglie che non includono l'altro esistono ancora. E l'altro li prende sul serio.",
@@ -96,7 +96,7 @@
   "section7": {
     "title": "E se sei single?",
     "p1": "Se sei single, non cerchiamo più di sapere se esiste un legame con qualcuno, ma piuttosto che tipo di persona potrebbe fare al caso tuo.",
-    "p2": "E non parliamo di «qualcuno di gentile, generoso o divertente», perché descrive tutti e nessuno... Al suo posto, cercheremo di capire il tuo funzionamento: che cosa ti fa sentire amato(a), sei più gesti o parole, come reagisci di fronte a un conflitto. In questo modo potrai avvicinarti molto più facilmente al tipo di persona che ti converrebbe!"
+    "p2": "E non parliamo di «qualcuno di gentile, generoso o divertente», perché descrive tutti e nessuno... Al suo posto, cercheremo di capire il tuo funzionamento: che cosa ti fa sentire amato(a), sei più <a href=\"/it/test-linguaggio-amore-coppia/\">gesti o parole</a>, come reagisci di fronte a un conflitto. In questo modo potrai avvicinarti molto più facilmente al tipo di persona che ti converrebbe!"
   },
   "faq": {
     "title": "Domande frequenti sulle anime gemelle",

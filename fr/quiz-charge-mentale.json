@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "badge": "Test gratuit, 20 tâches",
+    "title": "Qui porte la charge mentale dans votre couple ?",
+    "titleHighlight": "la charge mentale",
+    "description": "20 tâches, et une seule question à chaque fois : qui y pense ? Faites-le chacun de votre côté, et c'est l'écart entre vos deux réponses qui devient le résultat.",
+    "subtitle": "Seul(e) ou à deux, gratuit et anonyme"
+  },
+  "howTo": {
+    "title": "Comment fonctionne ce test ?",
+    "step1": "Choisissez votre mode. <strong>Seul(e)</strong>, vous obtenez la répartition telle que vous la voyez. <strong>À deux</strong>, vous répondez chacun votre tour sans voir les réponses de l'autre, et le test compare.",
+    "step2": "Pour chacune des 20 tâches, une seule question : <strong>qui y pense ?</strong> Pas qui le fait, qui y pense. Cinq réponses, de « toujours l'un » à « toujours l'autre », avec le partage équitable au milieu.",
+    "step3": "Répondez sur ce qui se passe vraiment, pas sur ce qui devrait se passer. Personne ne lit vos réponses, et un test flatteur ne sert à rien.",
+    "step4": "Le résultat donne la répartition en pourcentage, le détail par domaine, et en mode à deux, les trois tâches sur lesquelles vous êtes le plus en désaccord.",
+    "outro": "Le mode à deux est celui qui a de l'intérêt. Un déséquilibre que les deux voient et un déséquilibre qu'un seul voit ne sont pas la même situation, et n'appellent pas la même conversation."
+  },
+  "crossLink": {
+    "title": "Et si un enfant arrive ?",
+    "text": "La charge mentale est le poste qui augmente le plus à l'arrivée d'un enfant, et c'est presque toujours la même personne qui absorbe la hausse. Le test de parentalité regarde si vous êtes prêts sur ce terrain-là.",
+    "button": "Faire le test de parentalité"
+  },
+  "section1": {
+    "title": "La charge mentale, ce n'est pas faire la vaisselle",
+    "p1": "C'est le malentendu qui bloque toutes les conversations sur le sujet. Quand un couple se dispute sur la répartition des tâches, l'un parle d'exécution et l'autre parle d'anticipation. Ils ne parlent pas de la même chose, et aucun des deux ne s'en rend compte.",
+    "p2": "La charge mentale n'est pas le fait de sortir les poubelles. C'est <strong>le fait de savoir que c'est le jour des poubelles</strong>. Ce n'est pas racheter du dentifrice, c'est remarquer qu'il va manquer. Ce n'est pas emmener quelqu'un chez le médecin, c'est penser à prendre le rendez-vous trois semaines avant. Le travail visible, tout le monde le voit. Le travail invisible, personne ne le voit, sauf celui qui le fait.",
+    "p3": "C'est pour ça que la phrase « tu n'as qu'à demander » est le cœur du problème plutôt que sa solution. Demander suppose de savoir ce qu'il y a à faire, de savoir quand, et de penser à le dire au bon moment. Celui qui demande garde la totalité de la charge et n'en délègue que l'exécution, qui est la partie la moins lourde.",
+    "p4": "Ce test ne mesure donc que l'anticipation. Sur chacune des vingt tâches, la question posée n'est jamais « qui le fait », c'est « qui y pense »."
+  },
+  "section2": {
+    "title": "Les quatre domaines où la charge se loge",
+    "intro": "Elle n'est presque jamais déséquilibrée partout de la même façon. Le test la découpe en quatre domaines, parce que voir où elle penche est plus utile qu'un chiffre global.",
+    "pillar1Title": "Le quotidien",
+    "pillar1Text": "Les stocks, les repas, le linge, ce qui manque avant qu'il manque. C'est le domaine le plus continu : il ne s'arrête jamais, ne se termine jamais, et ne se voit que le jour où il n'y a plus de café. C'est aussi celui où le déséquilibre s'installe le plus tôt, souvent dès les premiers mois de vie commune.",
+    "pillar2Title": "L'anticipation",
+    "pillar2Text": "Les rendez-vous à prendre, ce qui est cassé et qu'il faudra réparer, les échéances de la voiture ou du logement, les vêtements de la saison prochaine. Rien de tout cela n'est urgent, et c'est précisément ce qui le rend lourd : il faut y penser longtemps à l'avance, sans que rien ne le rappelle.",
+    "pillar3Title": "L'administratif",
+    "pillar3Text": "Le courrier, les prélèvements, les contrats, les démarches ennuyeuses. C'est le domaine le plus souvent délégué en entier à une seule personne, parce qu'il est le plus technique en apparence. Le piège est là : une fois qu'il est devenu le domaine de quelqu'un, plus personne d'autre n'y pense, y compris pour vérifier que ça va.",
+    "pillar4Title": "La famille et les proches",
+    "pillar4Text": "Les anniversaires, les cadeaux, les invitations, les nouvelles à donner. C'est le domaine le plus inégalement réparti de tous, et souvent le moins reconnu comme du travail. Entretenir un lien social demande pourtant de la mémoire, de l'organisation et du temps, y compris pour la famille de l'autre.",
+    "tip": "Un test simple pour distinguer les deux charges : imaginez que vous partiez dix jours sans prévenir. Ce qui s'arrêterait de fonctionner, c'est votre charge mentale. Ce que quelqu'un ferait à votre place sans y penser, c'est de l'exécution."
+  },
+  "section3": {
+    "title": "Ce que dit votre résultat",
+    "p1": "Le test rend d'abord une répartition en pourcentage, puis le détail par domaine. En mode à deux, il ajoute la mesure qui fait tout l'intérêt de la page : l'écart entre vos deux réponses. Un déséquilibre vu par les deux et un déséquilibre vu par un seul ne se traitent pas pareil. Les quatre situations ci-dessous sont celles du mode à deux, les seules où cet écart peut se mesurer.",
+    "headerScore": "Situation",
+    "headerLevel": "Ce que ça décrit",
+    "headerAnalysis": "Ce qu'il y a à faire",
+    "row1Score": "Vous êtes une équipe",
+    "row1Level": "Réparti, et vous décrivez la même chose.",
+    "row1Analysis": "Rien à réparer. Refaites le test après le prochain grand changement.",
+    "row2Score": "Réparti, mais flou",
+    "row2Level": "Le total est équilibré, vos deux versions divergent.",
+    "row2Analysis": "Racontez-vous concrètement ce que vous faites. Le ressentiment vient du malentendu.",
+    "row3Score": "Déséquilibre assumé",
+    "row3Level": "L'un porte plus, et vous êtes d'accord là-dessus.",
+    "row3Analysis": "La question n'est pas si c'est juste, mais si ça tient. Fixez une échéance.",
+    "row4Score": "L'un porte, l'autre ne voit pas",
+    "row4Level": "Le cas le plus fréquent, et le plus coûteux à terme.",
+    "row4Analysis": "Partez des trois désaccords du test, pas d'une liste de reproches.",
+    "tip": "Seul(e), l'écart ne peut pas être mesuré : le test rend alors l'un des deux résultats, « Vous décrivez une charge partagée » ou « Vous décrivez une charge qui repose surtout sur une personne ». Le mot qui compte est <strong>décrivez</strong>. C'est justement sur la répartition que les deux membres d'un couple divergent le plus, donc un résultat solo dit surtout où vous vous situez, pas où vous en êtes tous les deux."
+  },
+  "section4": {
+    "title": "Pourquoi ça tombe presque toujours sur la même personne",
+    "p1": "Aucun couple ne décide un jour que l'un s'occupera de tout ce qui est invisible. Le déséquilibre ne se décide pas, il se dépose, et il le fait par des mécanismes assez simples à nommer.",
+    "sub1Title": "Celui qui remarque le premier finit par s'en charger",
+    "sub1Text": "C'est le mécanisme principal, et il n'a rien à voir avec la bonne volonté. Deux personnes ont des seuils de tolérance différents pour le désordre, les stocks vides ou les rendez-vous en retard. Celle qui a le seuil le plus bas voit le problème en premier, s'en occupe, et devient par défaut celle qui s'en occupe toujours. Au bout de quelques mois, l'autre a cessé de regarder.",
+    "sub2Title": "L'expertise devient un piège",
+    "sub2Text": "Dès qu'une personne fait une chose deux fois mieux ou deux fois plus vite, il devient rationnel de la lui laisser. Sauf que cette efficacité se paie : chaque tâche attribuée par compétence devient une tâche que personne d'autre ne saura reprendre, et le domaine se referme.",
+    "sub3Title": "L'aide se confond avec le partage",
+    "sub3Text": "« Je t'aide » et « je m'en occupe » sont deux positions très différentes, et beaucoup de couples ne mesurent pas l'écart. Aider, c'est exécuter sur demande, donc laisser à l'autre la charge de savoir, de planifier et de rappeler. Un couple où l'un aide beaucoup peut avoir une répartition d'exécution presque égale et une charge mentale totalement déséquilibrée.",
+    "sub4Title": "Personne ne compte les mêmes choses",
+    "sub4Text": "Chacun a une vision précise de ce qu'il porte et une vision approximative de ce que porte l'autre. Ce n'est pas de la mauvaise foi, c'est le fonctionnement normal de l'attention : on voit ce qu'on fait, et on ne voit pas ce qui a été fait sans nous. C'est exactement cet écart que le mode à deux mesure.",
+    "tip": "Aucun de ces quatre mécanismes ne suppose de la mauvaise volonté. C'est ce qui les rend difficiles à corriger : il n'y a personne à blâmer, et pourtant la situation est bien réelle."
+  },
+  "section5": {
+    "title": "Ce que ça coûte quand ça dure",
+    "p1": "Une charge mentale déséquilibrée ne provoque pas de crise. Elle produit une usure, et l'usure ne se remarque qu'au moment où elle a déjà fait son travail.",
+    "p2": "Le premier effet est une fatigue qui ne se répare pas avec du sommeil, parce qu'elle vient d'une activité mentale continue plutôt que d'un effort physique. Le deuxième est le ressentiment, qui s'accumule lentement et sort en général sur un prétexte minuscule, ce qui le rend incompréhensible pour l'autre : la dispute porte sur une chaussette, jamais sur le fond.",
+    "p3": "Le troisième effet est le plus difficile à rattraper. À force de tout gérer, une personne finit par occuper une position d'organisatrice dans son propre couple, et cette position s'accompagne d'un rôle qui n'a rien de romantique. Beaucoup de couples décrivent ce basculement sans savoir le nommer : on a cessé d'être deux adultes qui vivent ensemble, l'un dirige et l'autre exécute.",
+    "tip": "Si vous vous reconnaissez dans ces trois paragraphes, la bonne nouvelle est que la charge mentale est un des rares déséquilibres qui se corrigent avec de l'organisation plutôt qu'avec un changement de personnalité."
+  },
+  "section6": {
+    "title": "Ce qui rééquilibre vraiment, et ce qui ne sert à rien",
+    "p1": "Beaucoup de solutions proposées sur le sujet ne déplacent rien, parce qu'elles laissent la partie invisible exactement là où elle était. Voici ce qui fonctionne, et ce qui donne seulement l'impression d'agir.",
+    "sub1Title": "Transférer un domaine entier, pas des tâches",
+    "sub1Text": "C'est le seul transfert qui allège réellement. « Tu t'occupes des rendez-vous médicaux » veut dire savoir quand ils sont dus, prendre les créneaux, les noter et s'y tenir, sans rappel. Tant que quelqu'un doit rappeler, la charge n'a pas bougé d'un millimètre.",
+    "sub2Title": "Accepter que ce soit fait autrement",
+    "sub2Text": "C'est le point sur lequel la plupart des rééquilibrages échouent. Un domaine transféré sera géré différemment, souvent moins bien au début, parfois moins bien tout court. Reprendre la main à la première erreur ramène tout à la case départ et installe durablement l'idée que l'autre n'y arrive pas.",
+    "sub3Title": "Écrire la liste une fois, à deux",
+    "sub3Text": "Beaucoup de tâches invisibles n'existent pour l'un des deux qu'au moment où il les découvre écrites. Faire l'inventaire ensemble, une seule fois, change plus de choses qu'une conversation sur l'équité, parce que ça remplace un débat sur des impressions par un objet que les deux peuvent regarder.",
+    "sub4Title": "Ce qui ne marche pas",
+    "sub4Text": "Les tableaux de répartition affichés sur le frigo tiennent trois semaines. Les applications de tâches partagées déplacent la charge vers celui qui remplit l'application. Et « tu n'as qu'à me dire quoi faire » est, littéralement, une demande de garder la charge mentale."
+  },
+  "section7": {
+    "title": "Comment aborder le sujet sans que ça tourne mal",
+    "p1": "C'est une conversation qui dérape souvent, parce qu'elle est presque toujours ouverte au mauvais moment : un soir de fatigue, après une goutte d'eau, sous forme de reproche. La personne en face entend une accusation, se défend, et le fond n'est jamais abordé.",
+    "p2": "Le test sert précisément à ça. Il remplace « tu ne fais jamais rien » par un objet neutre que vous regardez tous les deux, et il désigne trois tâches précises plutôt qu'un procès général. Trois tâches, c'est discutable. Un procès, non.",
+    "p3": "Si vous êtes celui ou celle qui découvre le déséquilibre en lisant le résultat, il y a une seule chose utile à faire, et ce n'est pas de vous justifier. Demandez à l'autre de raconter une journée type de ce qu'il a en tête. C'est la façon la plus rapide de comprendre, parce que ça rend visible ce qui, par définition, ne se voit pas.",
+    "tip": "Reparlez-en une fois que le sujet est froid, avec une date fixée à l'avance pour faire le point. Un rééquilibrage tient rarement s'il n'est vérifié qu'au moment de la prochaine crise."
+  },
+  "faq": {
+    "q1": "Quelle est la différence entre charge mentale et tâches ménagères ?",
+    "a1": "Les tâches ménagères sont le travail visible : passer l'aspirateur, faire les courses, cuisiner. La charge mentale est le travail invisible qui les précède : savoir que c'est à faire, décider quand, retenir ce qui manque, prendre les rendez-vous avant qu'il soit trop tard. On peut avoir une répartition des tâches parfaitement égale et une charge mentale entièrement portée par une seule personne, et c'est même une situation très courante.",
+    "q2": "Faut-il faire ce test seul ou à deux ?",
+    "a2": "Les deux sont possibles, mais ils ne donnent pas la même chose. En solo, vous obtenez la répartition telle que vous la voyez, ce qui est utile mais partiel. En duo, vous obtenez en plus l'écart entre vos deux perceptions, et c'est souvent l'information la plus parlante du test. Si vous devez n'en faire qu'un, faites-le à deux.",
+    "q3": "Est-ce que la charge mentale concerne seulement les femmes ?",
+    "a3": "Non, mais les chiffres montrent un déséquilibre net. <a href=\"https://www.ifop.com/article/barometre-de-la-charge-mentale-des-femmes-salariees-vague-1/\" target=\"_blank\" rel=\"noopener\">Le baromètre Ifop sur le sujet</a> relève que 71 % des femmes déclarent une charge mentale élevée, et l'Insee observe qu'elles assurent environ 71 % des tâches parentales et 64 % des tâches domestiques. Cela ne dit rien de votre couple en particulier : c'est justement ce que le test regarde, sans présupposé sur qui porte quoi.",
+    "q4": "Mon partenaire ne comprend pas de quoi je parle, que faire ?",
+    "a4": "C'est la situation la plus fréquente, et elle n'est presque jamais de la mauvaise volonté : la charge mentale ne se voit qu'au moment où elle n'est plus assurée. Le plus efficace est de lui faire passer le test de son côté, puis de comparer les deux résultats. L'écart entre vos deux réponses est un argument beaucoup plus solide qu'une conversation, parce que personne n'a besoin d'y croire sur parole.",
+    "q5": "Les vingt tâches ne correspondent pas toutes à notre situation, est-ce grave ?",
+    "a5": "Non. Les vingt tâches ont été choisies pour valoir dans la grande majorité des foyers, avec ou sans enfants, en location comme en propriété. Si l'une d'elles ne s'applique pas chez vous, répondez « à deux, équitablement » : elle deviendra neutre et ne faussera pas la répartition.",
+    "q6": "Mes réponses sont-elles enregistrées ?",
+    "a6": "Non. Tout se passe dans votre navigateur, aucune réponse n'est envoyée ni conservée, et il n'y a ni compte ni adresse e-mail à donner. Même en mode à deux, les réponses du premier joueur ne servent qu'au calcul final et disparaissent en fermant la page."
+  }
+}
