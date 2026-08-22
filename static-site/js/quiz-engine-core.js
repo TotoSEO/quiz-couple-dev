@@ -224,12 +224,23 @@ var QuizEngine = (function() {
   //   meta      : contenu de la pastille, en HTML deja construit
   //   bouton    : libelle du bouton de depart
   //   onStart   : ce que fait ce bouton
+  // Le bandeau rose du titre etait un pseudo-element cale sur le bas du bloc :
+  // des que le titre passait sur deux lignes il barrait la deuxieme au lieu de
+  // souligner les deux. Le texte est donc porte par un span en display:inline,
+  // ou le fond se decoupe ligne par ligne (box-decoration-break: clone).
+  function titreSurligne(texte) {
+    var h = el('h2', 'text-2xl font-bold mb-3 text-center');
+    var t = el('span', 'quiz-setup-h2-txt', esc(texte || ''));
+    h.appendChild(t);
+    return h;
+  }
+
   function ecranDepart(o) {
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
     var badge = el('div', 'quiz-setup-icon' + (o.iconeSvg ? '' : ' quiz-setup-icon--emoji') + ' mx-auto mb-6');
     badge.innerHTML = o.iconeSvg || esc(o.icone || '📝');
     wrap.appendChild(badge);
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center', esc(o.titre || '')));
+    wrap.appendChild(titreSurligne(o.titre));
     if (o.desc) wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(o.desc)));
     (o.corps || []).forEach(function(n) { if (n) wrap.appendChild(n); });
     if (o.meta) wrap.appendChild(el('div', 'quiz-setup-meta', o.meta));
@@ -287,7 +298,7 @@ var QuizEngine = (function() {
     var badge = el('div', 'quiz-setup-icon quiz-setup-icon--emoji mx-auto mb-6');
     badge.innerHTML = esc(o.icone || '🎲');
     wrap.appendChild(badge);
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center', esc(o.titre || '')));
+    wrap.appendChild(titreSurligne(o.titre));
     if (o.desc) wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(o.desc)));
 
     // Deux presentations : la liste horizontale, quand les formats ont des noms
@@ -4966,9 +4977,14 @@ var QuizEngine = (function() {
     var ring = el('div', 'duo-result-ring');
     ring.innerHTML = renderScoreRing(partPorteur, null, false);
     hero.appendChild(ring);
+    // « Vous porte 60 % de la charge » : en solo le porteur peut etre le
+    // joueur lui-meme, et la phrase a la troisieme personne devient fausse
+    // dans les cinq langues. Une formulation propre lui est reservee.
+    var phrasePart = (!this.duo && porteur === nomA)
+      ? this.txt('portePartVous', 'Vous portez {{n}} % de la charge')
+      : String(this.txt('portePart', '{{p}} porte {{n}} % de la charge')).replace('{{p}}', porteur);
     hero.appendChild(el('div', 'duo-result-match',
-      prenoms(this.txt('portePart', '{{p}} porte {{n}} % de la charge'))
-        .replace('{{p}}', porteur).replace('{{n}}', partPorteur)));
+      prenoms(phrasePart).replace('{{n}}', partPorteur)));
     if (v.title) hero.appendChild(el('h3', 'duo-result-title', esc(prenoms(v.title))));
     if (v.description) hero.appendChild(el('p', 'duo-result-desc', prenoms(v.description)));
     wrap.appendChild(hero);

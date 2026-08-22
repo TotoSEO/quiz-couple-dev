@@ -44,7 +44,7 @@
       "<strong>Encadenar preguntas sin responder nunca.</strong> Hacer muchas preguntas pasa por interés, pero también es la mejor manera de no entregar nada de uno mismo. Al cabo de una hora, el otro se va habiéndolo dicho todo y sin haber aprendido nada.",
       "<strong>Corregir o comentar la respuesta del otro.</strong> Una respuesta personal no pide una opinión, pide una respuesta del mismo orden. La forma más segura de cerrar a alguien es explicarle lo que debería haber sentido.",
       "<strong>Hacer un chiste en cuanto la cosa se pone seria.</strong> El reflejo es comprensible y desactiva de verdad la incomodidad, salvo que también anula lo que el otro acababa de atreverse a decir. Una vez, pasa. En cada pregunta, la conversación no despegará nunca.",
-      "<strong>Hablar de tu ex.</strong> No porque el tema sea tabú, sino porque ocupa todo el espacio y desplaza la conversación hacia alguien que no está en la mesa."
+      "<strong><a href=\"/es/mi-ex-todavia-piensa-en-mi/\">Hablar de tu ex</a>.</strong> No porque el tema sea tabú, sino porque ocupa todo el espacio y desplaza la conversación hacia alguien que no está en la mesa."
     ],
     "outro": "Ninguno de estos reflejos es grave por sí solo. Lo son cuando son sistemáticos, porque todos mandan el mismo mensaje: <strong>prefiero quedarme a resguardo</strong>. Y el otro lo entiende mucho más rápido de lo que se cree."
   },
@@ -93,7 +93,7 @@
   "section7": {
     "title": "Después de la cita",
     "p1": "El juego produce a menudo un efecto un poco desconcertante: tienes la sensación de conocer muy bien a alguien que has conocido hace tres horas. Es real, es exactamente lo que medía el protocolo original, y conviene saber cuánto vale.",
-    "p2": "Esa sensación es una <strong>cercanía, no una historia</strong>. Dice que habéis sabido hablaros, lo cual ya es raro y no está garantizado. No dice nada del futuro, porque el futuro se juega en cosas que una velada no muestra: cómo se gestiona un desacuerdo, la fiabilidad, el hecho de cumplir lo que se anuncia.",
+    "p2": "Esa sensación es una <strong>cercanía, no una historia</strong>. Dice que habéis sabido hablaros, lo cual ya es raro y no está garantizado. No dice nada del futuro, porque el futuro se juega en cosas que una velada no muestra: <a href=\"/es/test-relacion-sana/\">cómo se gestiona un desacuerdo, la fiabilidad, el hecho de cumplir lo que se anuncia</a>.",
     "p3": "Así que el mejor uso de esa velada no es sacar conclusiones, es <strong>retomar tres días después una de las respuestas que te dieron</strong>. Acordarse de un detalle preciso y volver a él vale más que cualquier mensaje de después de la cita, porque es lo único que demuestra que estabas escuchando de verdad.",
     "tip": "Y si no ha saltado la chispa a pesar del juego, no es un fracaso del formato. Dos personas pueden hablarse muy bien y no tener ganas de volver a verse. Simplemente lo habrás sabido en una velada en lugar de tres."
   },
@@ -103,7 +103,7 @@
     "card1Title": "Una cita a ciegas",
     "card1Text": "Es el caso en el que más sirve. Cuando nadie ha elegido al otro no hay ninguna historia que contar, y un apoyo externo quita todo el peso del arranque.",
     "card2Title": "Una relación a distancia que empieza",
-    "card2Text": "Por videollamada los silencios pesan más y la conversación decae antes. Tener una pregunta a mano evita los veinte minutos de logística con los que siempre empiezan esas llamadas.",
+    "card2Text": "Por videollamada <a href=\"/es/quiz-pareja-distancia/\">los silencios pesan más y la conversación decae antes</a>. Tener una pregunta a mano evita los veinte minutos de logística con los que siempre empiezan esas llamadas.",
     "card3Title": "Una pareja reciente, de unas semanas",
     "card3Text": "Pasadas las primeras veces, se suele creer que ya se ha visto todo. El segundo nivel demuestra en general lo contrario, sobre todo en lo que cada uno espera de los meses que vienen.",
     "card4Title": "Un viaje largo en coche o en tren",

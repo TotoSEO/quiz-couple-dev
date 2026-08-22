@@ -8049,7 +8049,15 @@
     "q15a": "Er, mit einer klaren Begründung, und er ist dabei geblieben.",
     "q15b": "Er, aber ohne es je wirklich zu erklären.",
     "q15c": "Ich, oder wir gemeinsam.",
-    "q15d": "Eigentlich niemand: es hat einfach aufgehört, ohne dass es gesagt wurde."
+    "q15d": "Eigentlich niemand: es hat einfach aufgehört, ohne dass es gesagt wurde.",
+    "modesIcone": "💭",
+    "modesTitre": "Ist dein Ex ein Mann oder eine Frau?",
+    "modesDesc": "Die fünfzehn Fragen sind in beiden Fällen dieselben, nur die Formulierung ändert sich. Wähle die Reihe, die von der richtigen Person spricht.",
+    "modesRetour": "Reihe wechseln",
+    "modeHommeTitre": "Mein Ex ist ein Mann",
+    "modeHommeDesc": "Fünfzehn Fragen dazu, was er tut, nicht dazu, was du hineinliest.",
+    "modeFemmeTitre": "Meine Ex ist eine Frau",
+    "modeFemmeDesc": "Dieselben fünfzehn Fragen, weiblich formuliert."
   },
   "exF": {
     "q1": "Wer meldet sich heute noch?",
@@ -8199,7 +8207,16 @@
     "v_soloEquilibre_a": "Lass deinen Partner den Test getrennt machen und vergleicht. Ähneln sich eure Ergebnisse, ist das Gleichgewicht echt. Gehen sie deutlich auseinander, muss nicht zuerst die Verteilung überarbeitet werden, sondern das Gespräch, das ihr noch nicht geführt habt.",
     "v_soloDesequilibre_t": "Du beschreibst eine Last, die vor allem auf einer Person liegt",
     "v_soloDesequilibre_d": "Deine Antworten zeigen ein klares Ungleichgewicht: das meiste von dem, was vorausgedacht, behalten und organisiert werden muss, liegt auf denselben Schultern. Diese Art von Ungleichgewicht entsteht selten durch eine Entscheidung, sie stellt sich von allein ein, Aufgabe für Aufgabe, weil derjenige, der es zuerst bemerkt, es am Ende übernimmt, und weil danach niemand sonst mehr daran denkt.",
-    "v_soloDesequilibre_a": "Der naheliegende Reflex ist, um Hilfe zu bitten. Genau das funktioniert nicht: um Hilfe zu bitten heißt, die Last zu behalten, zu wissen was ansteht und wann. Die einzige Übergabe, die wirklich entlastet, ist die eines ganzen Bereichs, samt dem Daran-Denken. Und um zu überzeugen: lass deinen Partner den Test machen. Der Abstand zwischen euren Ergebnissen sagt es besser als du."
+    "v_soloDesequilibre_a": "Der naheliegende Reflex ist, um Hilfe zu bitten. Genau das funktioniert nicht: um Hilfe zu bitten heißt, die Last zu behalten, zu wissen was ansteht und wann. Die einzige Übergabe, die wirklich entlastet, ist die eines ganzen Bereichs, samt dem Daran-Denken. Und um zu überzeugen: lass deinen Partner den Test machen. Der Abstand zwischen euren Ergebnissen sagt es besser als du.",
+    "modesIcone": "🧠",
+    "modesTitre": "Allein oder zu zweit?",
+    "modesDesc": "In beiden Fällen dieselben zwanzig Aufgaben. Was sich ändert, ist das, was der Test am Ende messen kann.",
+    "modesRetour": "Modus wechseln",
+    "modeSoloTitre": "SOLO",
+    "modeSoloDesc": "Du antwortest allein, über eure Beziehung",
+    "modeDuoTitre": "ZU ZWEIT",
+    "modeDuoDesc": "Ihr antwortet abwechselnd, auf demselben Handy",
+    "portePartVous": "Du trägst {{n}} % der Last"
   },
   "rencontre": {
     "glace1": "Was hat dich zuletzt allein auf der Straße zum Lachen gebracht?",

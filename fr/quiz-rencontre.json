@@ -44,7 +44,7 @@
       "<strong>Enchaîner les questions sans jamais répondre.</strong> Poser beaucoup de questions passe pour de l'intérêt, mais c'est aussi la meilleure façon de ne rien livrer de soi. Au bout d'une heure, l'autre repart en ayant tout dit et rien appris.",
       "<strong>Corriger ou commenter la réponse de l'autre.</strong> Une réponse personnelle n'appelle pas un avis, elle appelle une réponse du même ordre. Le plus sûr moyen de refermer quelqu'un est de lui expliquer ce qu'il aurait dû ressentir.",
       "<strong>Faire de l'humour dès que ça devient sérieux.</strong> Le réflexe est compréhensible et il désamorce vraiment la gêne, sauf qu'il annule aussi ce que l'autre venait d'oser. Une fois, ça passe. À chaque question, la conversation ne décollera jamais.",
-      "<strong>Parler de son ex.</strong> Pas parce que le sujet serait tabou, mais parce qu'il occupe toute la place et qu'il déplace la conversation vers quelqu'un qui n'est pas à table."
+      "<strong><a href=\"/mon-ex-pense-t-il-elle-encore-a-moi/\">Parler de son ex</a>.</strong> Pas parce que le sujet serait tabou, mais parce qu'il occupe toute la place et qu'il déplace la conversation vers quelqu'un qui n'est pas à table."
     ],
     "outro": "Aucun de ces réflexes n'est grave pris isolément. Ils le deviennent quand ils sont systématiques, parce qu'ils envoient tous le même message : <strong>je préfère rester à l'abri</strong>. Et l'autre le comprend beaucoup plus vite qu'on ne le croit."
   },
@@ -93,7 +93,7 @@
   "section7": {
     "title": "Après le rendez-vous",
     "p1": "Le jeu produit souvent un effet un peu troublant : on a le sentiment de très bien connaître quelqu'un qu'on a rencontré il y a trois heures. C'est réel, c'est exactement ce que le protocole d'origine mesurait, et il vaut mieux savoir ce que ça vaut.",
-    "p2": "Ce sentiment est une <strong>proximité, pas une histoire</strong>. Il dit que vous avez su vous parler, ce qui est déjà rare et loin d'être garanti. Il ne dit rien de la suite, parce que la suite se joue sur des choses qu'une soirée ne montre pas : la façon de gérer un désaccord, la fiabilité, le fait de tenir ce qu'on annonce.",
+    "p2": "Ce sentiment est une <strong>proximité, pas une histoire</strong>. Il dit que vous avez su vous parler, ce qui est déjà rare et loin d'être garanti. Il ne dit rien de la suite, parce que la suite se joue sur des choses qu'une soirée ne montre pas : <a href=\"/test-couple-sain/\">la façon de gérer un désaccord, la fiabilité, le fait de tenir ce qu'on annonce</a>.",
     "p3": "Le meilleur usage de cette soirée n'est donc pas d'en tirer des conclusions, c'est de <strong>reprendre trois jours plus tard une des réponses qu'on vous a données</strong>. Se souvenir d'un détail précis et y revenir vaut mieux que n'importe quel message d'après rendez-vous, parce que c'est la seule chose qui prouve qu'on écoutait vraiment.",
     "tip": "Et si le courant n'est pas passé malgré le jeu, ce n'est pas un échec du format. Deux personnes peuvent se parler très bien et ne pas avoir envie de se revoir. Vous l'aurez simplement su en une soirée au lieu de trois."
   },
@@ -103,7 +103,7 @@
     "card1Title": "Un rendez-vous arrangé",
     "card1Text": "C'est le cas où il sert le plus. Quand personne n'a choisi l'autre, il n'y a aucune histoire à raconter, et un support extérieur enlève tout le poids du démarrage.",
     "card2Title": "Une relation à distance qui commence",
-    "card2Text": "En visio, les silences sont plus lourds et la conversation retombe plus vite. Avoir une question sous la main évite les vingt minutes de logistique par lesquelles ces appels commencent toujours.",
+    "card2Text": "En visio, <a href=\"/quiz-couple-distance/\">les silences sont plus lourds et la conversation retombe plus vite</a>. Avoir une question sous la main évite les vingt minutes de logistique par lesquelles ces appels commencent toujours.",
     "card3Title": "Un couple récent, quelques semaines",
     "card3Text": "Passé les premières fois, on croit souvent avoir fait le tour. Le deuxième niveau montre en général le contraire, notamment sur ce que chacun attend des mois qui viennent.",
     "card4Title": "Une longue route ou un train",
