@@ -242,6 +242,17 @@
       { id: 'femme', emoji: '👩', prefix: 'coucheF', engine: 'solo', totalQ: 15, pool: 15, quizType: 'couche', ascending: true, resultPrefix: 'couche' }
     ] },
 
+    // ── « Mon ex pense-t-il / pense-t-elle encore a moi » ──
+    // Deux series pour la meme raison que les deux tests ci-dessus : les
+    // reponses parlent de l'ex a la troisieme personne, les accords francais
+    // ne se devinent pas. Les quinze questions sont posees a chaque fois, le
+    // maximum est donc toujours 150 et les quatre paliers tombent sur des
+    // bornes fixes. Les deux series partagent leurs paliers, sous « ex ».
+    'ex':             { modes: [
+      { id: 'homme', emoji: '👨', prefix: 'exH', engine: 'solo', totalQ: 15, pool: 15, quizType: 'ex', ascending: true, resultPrefix: 'ex' },
+      { id: 'femme', emoji: '👩', prefix: 'exF', engine: 'solo', totalQ: 15, pool: 15, quizType: 'ex', ascending: true, resultPrefix: 'ex' }
+    ] },
+
     // ── Bebe quiz (solo scoring, descending: more ready = higher score) ──
 
     // ── Les Z'Amours (TV game-show: guess & reveal + 45s final) ──
@@ -992,6 +1003,49 @@
       8:  { d: 'entourage',   w: 2 },
       9:  { d: 'confidence',  w: 2 },
       10: { d: 'accroche',    w: 1 }
+    },
+    // Mon ex pense-t-il encore a moi : le bareme porte toute la these de la
+    // page. Un signal se pese a ce qu'il coute a celui qui l'emet. Reprendre
+    // contact, proposer de se voir, dire quelque chose de net, parler de vous
+    // deux au futur : ce sont des actes, ils coutent, et ils ne s'expliquent
+    // pas autrement. Regarder une story, garder une photo en ligne, envoyer un
+    // message d'anniversaire : c'est gratuit, souvent machinal, et c'est
+    // precisement ce que les gens surinterpretent. D'ou 3 d'un cote, 1 de
+    // l'autre. Somme des poids = 30, donc un maximum de 150 points.
+    exH: {
+      1:  { d: 'initiative',   w: 3 },
+      2:  { d: 'rencontre',    w: 3 },
+      3:  { d: 'aveu',         w: 3 },
+      4:  { d: 'avenir',       w: 3 },
+      5:  { d: 'contenu',      w: 2 },
+      6:  { d: 'entourage',    w: 2 },
+      7:  { d: 'disponibilite',w: 2 },
+      8:  { d: 'jalousie',     w: 2 },
+      9:  { d: 'affaires',     w: 2 },
+      10: { d: 'refaireSaVie', w: 2 },
+      11: { d: 'constance',    w: 2 },
+      12: { d: 'reseaux',      w: 1 },
+      13: { d: 'traces',       w: 1 },
+      14: { d: 'dates',        w: 1 },
+      15: { d: 'rupture',      w: 1 }
+    },
+    // Meme serie declinee au feminin : memes poids.
+    exF: {
+      1:  { d: 'initiative',   w: 3 },
+      2:  { d: 'rencontre',    w: 3 },
+      3:  { d: 'aveu',         w: 3 },
+      4:  { d: 'avenir',       w: 3 },
+      5:  { d: 'contenu',      w: 2 },
+      6:  { d: 'entourage',    w: 2 },
+      7:  { d: 'disponibilite',w: 2 },
+      8:  { d: 'jalousie',     w: 2 },
+      9:  { d: 'affaires',     w: 2 },
+      10: { d: 'refaireSaVie', w: 2 },
+      11: { d: 'constance',    w: 2 },
+      12: { d: 'reseaux',      w: 1 },
+      13: { d: 'traces',       w: 1 },
+      14: { d: 'dates',        w: 1 },
+      15: { d: 'rupture',      w: 1 }
     },
     // Mariage : vouloir des enfants, la fidelite et le lieu de vie sont des
     // sujets de rupture. Les standards de proprete n'en sont pas.

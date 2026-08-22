@@ -259,6 +259,7 @@ const GD_QUESTION_PREFIXES = {
   // Ces deux-là déclinent leurs questions au masculin et au féminin ; le
   // premier candidat qui répond gagne, les deux jeux se valent pour un robot.
   couche: ['coucheH', 'coucheF'], secret: ['secretH', 'secretF'],
+  ex: ['exH', 'exF'],
   // Les jeux rangent leurs cartes par ambiance ou par thème : on prend la
   // première famille, elle suffit à montrer de quoi le jeu est fait.
   'action-ou-verite': ['actionVerite.classique'],
@@ -1615,7 +1616,7 @@ async function generateBlogArticle(articleMeta, lang) {
       'testCouple', 'testAmeSoeur', 'testCommonPoints', 'testCompatibilite', 'testSuisJeAmoureux', 'testDistance',
       'testToxic', 'testPervers', 'testAmourHabitude', 'testCoupleSain', 'testMariage', 'testDivorce',
       'testParentalite', 'testEmmenager', 'testAstroPrenoms', 'testDateNaissance', 'testKarmique',
-      'testJalousie', 'testInfidelite', 'testCouche', 'testSecret', 'testDistanceAime', 'testLangageAmour', 'testAttachement', 'testConfiance', 'testFinCouple', 'testAmourAmitie',
+      'testJalousie', 'testInfidelite', 'testCouche', 'testSecret', 'testDistanceAime', 'testEx', 'testLangageAmour', 'testAttachement', 'testConfiance', 'testFinCouple', 'testAmourAmitie',
     ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
     sidebarQuizzes: [
       'quizAmoureux', 'quizCoquin', 'quizMarrant', 'quizGenant', 'quizKnowledge',

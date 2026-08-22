@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Les 6 phases de la rupture chez l'homme : du déni à la reconstruction.",
   introduction: `<p>On dit souvent que les hommes souffrent moins d'une rupture. Qu'ils rebondissent plus vite, qu'ils passent à autre chose sans trop de dégâts. C'est faux. Ce qui est vrai, en revanche, c'est qu'ils le vivent différemment, et souvent plus tard.</p>
 <p>Là où une femme va généralement ressentir la <strong>douleur de la séparation</strong> presque immédiatement, l'homme met du temps à la laisser entrer. Il peut sortir, rire, enchaîner les soirées, donner l'impression que tout va bien… et s'effondrer trois mois plus tard, quand il se retrouve seul un dimanche soir et que la réalité le rattrape d'un seul coup.</p>
-<p>Comprendre les <strong>phases de la rupture chez l'homme</strong>, c'est utile à plusieurs égards. Que vous soyez un homme qui traverse une séparation et qui cherche à mettre des mots sur ce qu'il ressent, ou une femme qui essaie de comprendre comment son ex vit les choses, cet article est fait pour vous.</p>`,
+<p>Comprendre les <strong>phases de la rupture chez l'homme</strong>, c'est utile à plusieurs égards. Que vous soyez un homme qui traverse une séparation et qui cherche à mettre des mots sur ce qu'il ressent, ou une femme qui essaie de <a href="https://quiz-couple.com/mon-ex-pense-t-il-elle-encore-a-moi/">comprendre comment son ex vit les choses</a>, cet article est fait pour vous.</p>`,
   quickSummary: [
     "La rupture chez l'homme passe par 6 phases : déni, anesthésie, colère, prise de conscience, deuil réel, reconstruction.",
     "Ces étapes ne sont pas linéaires et varient selon chaque individu.",

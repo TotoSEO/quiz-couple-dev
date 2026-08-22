@@ -309,5 +309,11 @@
     "shortTitle": "Test Dépendance affective",
     "description": "20 questions franches pour savoir si vous aimez votre partenaire ou si vous vous accrochez à lui. Résultat immédiat et pistes concrètes.",
     "metaDescription": "Attachement sain ou dépendance affective ? 20 questions franches, un résultat immédiat et des pistes concrètes pour retrouver votre équilibre. Gratuit."
+  },
+  "testEx": {
+    "title": "Mon ex pense-t-il encore à moi ? Test gratuit en 15 questions",
+    "shortTitle": "Mon ex pense-t-il encore à moi ?",
+    "description": "15 questions sur ce qu'il ou elle fait, pas sur ce que vous interprétez. Test solo, résultat immédiat.",
+    "metaDescription": "Votre ex pense-t-il encore à vous ? 15 questions qui pèsent ses actes plutôt que vos interprétations. Gratuit, anonyme, sans inscription ni e-mail."
   }
 }

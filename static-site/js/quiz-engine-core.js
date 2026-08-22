@@ -824,6 +824,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'couche', icon: '🛏️', route: 'testCouche' },
     { type: 'test', key: 'secret', icon: '💌', route: 'testSecret' },
     { type: 'test', key: 'distance-aime', icon: '📞', route: 'testDistanceAime' },
+    { type: 'test', key: 'ex', icon: '🕰️', route: 'testEx' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
     { type: 'test', key: 'attachement', icon: '🔗', route: 'testAttachement' },
     { type: 'test', key: 'confiance', icon: '🤝', route: 'testConfiance' },
