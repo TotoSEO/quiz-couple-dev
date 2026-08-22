@@ -2,9 +2,9 @@
   "hero": {
     "badge": "Fernbeziehungs-Kompatibilitätstest",
     "title": "Fernbeziehung: die Fragen, die ihr euch stellen solltet, und der Test dazu",
-    "description": "Finden Sie heraus, ob Sie und Ihr Partner bereit für das Abenteuer der Fernliebe sind. Ein interaktives Quiz mit personalisierten Ergebnissen.",
+    "description": "20 Fragen aus 100, um Ihre Fernbeziehung einzuordnen: Kommunikation, Besuche, Vertrauen, gemeinsame Pläne. Sie antworten allein, das Ergebnis kommt sofort.",
     "questions": "100 Fragen",
-    "players": "Quiz zu zweit",
+    "players": "Einzeltest",
     "duration": "~10 Minuten",
     "titleHighlight": "Fragen, die ihr euch stellen solltet"
   },

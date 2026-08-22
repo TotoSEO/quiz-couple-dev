@@ -12,6 +12,17 @@
       full-width image card instead of a thumbnail. Without it the featured
       image is capped at 100px and the page is effectively invisible in Discover. %>
   <meta name="robots" content="<%= typeof noindex !== 'undefined' && noindex ? noindex : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' %>">
+<% if (typeof sansCache !== 'undefined' && sansCache) { %>
+  <%# GitHub Pages sert le HTML avec max-age=600 et ne laisse pas changer les
+      en-tetes. Pendant dix minutes apres un deploiement, le navigateur rejoue
+      donc l'ancienne page, qui pointe vers l'ancien ?v= des scripts : le
+      tableau de bord semble ne pas se mettre a jour tant qu'on ne vide pas le
+      cache. Sur une page d'administration, rien ne justifie de garder une
+      copie, on l'interdit. %>
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+<% } %>
   <link rel="canonical" href="<%= canonical %>">
   <% for (const alt of alternates) { %>
   <link rel="alternate" hreflang="<%= alt.hreflang %>" href="<%= alt.href %>">

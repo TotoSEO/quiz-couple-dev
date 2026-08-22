@@ -2,9 +2,9 @@
   "hero": {
     "badge": "Test di compatibilità a distanza",
     "title": "Coppia a distanza: le domande da farsi e il test che risponde",
-    "description": "Scopri se tu e il tuo partner siete pronti per l'avventura dell'amore a distanza. Un quiz interattivo con risultati personalizzati.",
+    "description": "20 domande estratte da 100 per capire a che punto è la tua relazione a distanza: comunicazione, visite, fiducia, progetto comune. Rispondi da solo/a e il risultato è immediato.",
     "questions": "100 domande",
-    "players": "Quiz per due",
+    "players": "Test individuale",
     "duration": "~10 minuti",
     "titleHighlight": "domande da farsi"
   },
