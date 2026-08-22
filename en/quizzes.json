@@ -303,5 +303,11 @@
     "shortTitle": "Does my ex still think about me?",
     "description": "15 questions about what they do, not about what you read into it. Solo test, instant result.",
     "metaDescription": "Does your ex still think about you? 15 questions that weigh their actions rather than your interpretations. Free, anonymous, no signup and no email."
+  },
+  "testChargeMentale": {
+    "title": "Mental Load Test for Couples: Who Carries What?",
+    "shortTitle": "Who carries the mental load?",
+    "description": "20 tasks, two sets of answers, and the gap between them. Play alone or together, instant result.",
+    "metaDescription": "Who really carries the mental load in your relationship? 20 tasks about thinking of it, not doing it. Together, the gap between your answers becomes the result."
   }
 }

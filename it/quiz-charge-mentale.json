@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "badge": "Test gratuito, 20 attività",
+    "title": "Chi porta il carico mentale nella vostra coppia?",
+    "titleHighlight": "il carico mentale",
+    "description": "20 attività, e ogni volta una sola domanda: chi ci pensa? Fatelo ciascuno per conto proprio, e lo scarto tra le vostre due risposte diventa il risultato.",
+    "subtitle": "Da soli o in due, gratuito e anonimo"
+  },
+  "howTo": {
+    "title": "Come funziona questo test?",
+    "step1": "Scegliete la modalità. <strong>Da solo</strong>, ottieni la ripartizione così come la vedi tu. <strong>In due</strong>, rispondete a turno senza vedere le risposte dell'altro, e il test le confronta.",
+    "step2": "Per ognuna delle 20 attività, una sola domanda: <strong>chi ci pensa?</strong> Non chi lo fa, chi ci pensa. Cinque risposte, da « sempre uno » a « sempre l'altro », con la divisione equa nel mezzo.",
+    "step3": "Rispondete su quello che succede davvero, non su quello che dovrebbe succedere. Nessuno legge le vostre risposte, e un test che lusinga non serve a niente.",
+    "step4": "Il risultato dà la ripartizione in percentuale, il dettaglio per ambito e, in modalità in due, le tre attività su cui siete più in disaccordo.",
+    "outro": "La modalità in due è quella che ha interesse. Uno squilibrio che vedono entrambi e uno squilibrio che vede uno solo non sono la stessa situazione, e non chiedono la stessa conversazione."
+  },
+  "crossLink": {
+    "title": "E se arriva un figlio?",
+    "text": "Il carico mentale è la voce che aumenta di più all'arrivo di un figlio, ed è quasi sempre la stessa persona ad assorbire l'aumento. Il test di genitorialità guarda se siete pronti su quel terreno.",
+    "button": "Fare il test di genitorialità"
+  },
+  "section1": {
+    "title": "Il carico mentale non è lavare i piatti",
+    "p1": "È il malinteso che blocca tutte le conversazioni sull'argomento. Quando una coppia litiga sulla ripartizione delle faccende, uno parla di esecuzione e l'altro di anticipazione. Non stanno parlando della stessa cosa, e nessuno dei due se ne rende conto.",
+    "p2": "Il carico mentale non è portare fuori la spazzatura. È <strong>sapere che oggi tocca la spazzatura</strong>. Non è comprare il dentifricio, è accorgersi che sta per finire. Non è accompagnare qualcuno dal medico, è pensare a prendere l'appuntamento tre settimane prima. Il lavoro visibile lo vedono tutti. Il lavoro invisibile non lo vede nessuno, tranne chi lo fa.",
+    "p3": "Ecco perché la frase « basta che me lo chiedi » è il cuore del problema e non la sua soluzione. Chiedere presuppone sapere cosa c'è da fare, sapere quando, e ricordarsi di dirlo al momento giusto. Chi chiede si tiene tutto il carico e ne delega solo l'esecuzione, che è la parte meno pesante.",
+    "p4": "Questo test misura quindi soltanto l'anticipazione. Su ognuna delle venti attività, la domanda posta non è mai « chi lo fa », è « chi ci pensa »."
+  },
+  "section2": {
+    "title": "I quattro ambiti in cui si annida il carico",
+    "intro": "Non è quasi mai squilibrato ovunque allo stesso modo. Il test lo divide in quattro ambiti, perché vedere da che parte pende è più utile di una cifra complessiva.",
+    "pillar1Title": "La quotidianità",
+    "pillar1Text": "Le scorte, i pasti, il bucato, quello che manca prima che manchi. È l'ambito più continuo: non si ferma mai, non finisce mai, e si vede solo il giorno in cui non c'è più caffè. È anche quello in cui lo squilibrio si installa prima, spesso già nei primi mesi di convivenza.",
+    "pillar2Title": "L'anticipazione",
+    "pillar2Text": "Gli appuntamenti da prendere, quello che è rotto e andrà riparato, le scadenze dell'auto o della casa, i vestiti della stagione prossima. Niente di tutto questo è urgente, ed è proprio ciò che lo rende pesante: bisogna pensarci con molto anticipo, senza che nulla lo ricordi.",
+    "pillar3Title": "La burocrazia",
+    "pillar3Text": "La posta, le domiciliazioni, i contratti, le pratiche noiose. È l'ambito più spesso delegato per intero a una sola persona, perché sembra il più tecnico. La trappola è lì: una volta diventato l'ambito di qualcuno, nessun altro ci pensa più, nemmeno per verificare che vada bene.",
+    "pillar4Title": "La famiglia e gli affetti",
+    "pillar4Text": "I compleanni, i regali, gli inviti, le notizie da dare. È l'ambito più ineguale di tutti, e quello meno riconosciuto come lavoro. Eppure mantenere un legame sociale richiede memoria, organizzazione e tempo, anche per la famiglia dell'altro.",
+    "tip": "Un modo semplice per distinguere i due carichi: immagina di partire dieci giorni senza avvisare. Quello che smetterebbe di funzionare è il tuo carico mentale. Quello che qualcun altro farebbe al posto tuo senza pensarci è esecuzione."
+  },
+  "section3": {
+    "title": "Cosa dice il vostro risultato",
+    "p1": "Il test dà prima una ripartizione in percentuale, poi il dettaglio per ambito. In modalità in due aggiunge la misura che dà tutto il senso a questa pagina: lo scarto tra le vostre due risposte. Uno squilibrio visto da entrambi e uno visto da uno solo non si trattano allo stesso modo.",
+    "headerScore": "Situazione",
+    "headerLevel": "Cosa descrive",
+    "headerAnalysis": "Cosa c'è da fare",
+    "row1Score": "Siete una squadra",
+    "row1Level": "Ripartito, e descrivete la stessa cosa.",
+    "row1Analysis": "Niente da riparare. Rifate il test dopo il prossimo grande cambiamento.",
+    "row2Score": "Ripartito, ma confuso",
+    "row2Level": "Il totale è equilibrato, le vostre versioni divergono.",
+    "row2Analysis": "Raccontatevi concretamente cosa fate. Il risentimento nasce dal malinteso.",
+    "row3Score": "Squilibrio assunto",
+    "row3Level": "Uno porta di più, e siete d'accordo su questo.",
+    "row3Analysis": "La domanda non è se è giusto, ma se regge. Fissate una scadenza.",
+    "row4Score": "Uno porta, l'altro non vede",
+    "row4Level": "Il caso più frequente, e il più costoso a lungo andare.",
+    "row4Analysis": "Partite dai tre disaccordi del test, non da una lista di rimproveri.",
+    "tip": "Fare questo test da soli dà un'informazione utile ma parziale. È proprio sulla ripartizione che i due membri di una coppia divergono di più, quindi un risultato in solitaria descrive soprattutto il tuo punto di vista."
+  },
+  "section4": {
+    "title": "Perché ricade quasi sempre sulla stessa persona",
+    "p1": "Nessuna coppia decide un giorno che uno si occuperà di tutto ciò che è invisibile. Lo squilibrio non si decide, si deposita, e lo fa attraverso meccanismi abbastanza semplici da nominare.",
+    "sub1Title": "Chi se ne accorge per primo finisce per occuparsene",
+    "sub1Text": "È il meccanismo principale, e non ha nulla a che vedere con la buona volontà. Due persone hanno soglie di tolleranza diverse per il disordine, le scorte finite o gli appuntamenti in ritardo. Quella con la soglia più bassa vede il problema per prima, se ne occupa, e diventa per default quella che se ne occupa sempre. Dopo qualche mese, l'altro ha smesso di guardare.",
+    "sub2Title": "La competenza diventa una trappola",
+    "sub2Text": "Appena una persona fa una cosa il doppio meglio o il doppio più in fretta, diventa razionale lasciargliela. Solo che quell'efficienza si paga: ogni compito attribuito per competenza diventa un compito che nessun altro saprà riprendere, e l'ambito si chiude.",
+    "sub3Title": "Aiutare si confonde con condividere",
+    "sub3Text": "« Ti aiuto » e « me ne occupo » sono due posizioni molto diverse, e molte coppie non ne misurano la distanza. Aiutare significa eseguire su richiesta, cioè lasciare all'altro il carico di sapere, pianificare e ricordare. Una coppia in cui uno aiuta molto può avere una ripartizione dell'esecuzione quasi uguale e un carico mentale totalmente squilibrato.",
+    "sub4Title": "Nessuno conta le stesse cose",
+    "sub4Text": "Ciascuno ha una visione precisa di quello che porta e una visione approssimativa di quello che porta l'altro. Non è malafede, è il funzionamento normale dell'attenzione: si vede quello che si fa, e non si vede quello che è stato fatto senza di noi. È esattamente questo scarto che misura la modalità in due.",
+    "tip": "Nessuno di questi quattro meccanismi presuppone cattiva volontà. È ciò che li rende difficili da correggere: non c'è nessuno da incolpare, eppure la situazione è del tutto reale."
+  },
+  "section5": {
+    "title": "Cosa costa quando dura",
+    "p1": "Un carico mentale squilibrato non provoca una crisi. Produce un'usura, e l'usura si nota solo quando ha già fatto il suo lavoro.",
+    "p2": "Il primo effetto è una stanchezza che il sonno non ripara, perché viene da un'attività mentale continua e non da uno sforzo fisico. Il secondo è il risentimento, che si accumula lentamente ed esce di solito per un pretesto minuscolo, il che lo rende incomprensibile per l'altro: la lite è su un calzino, mai sul fondo.",
+    "p3": "Il terzo effetto è il più difficile da recuperare. A forza di gestire tutto, una persona finisce per occupare una posizione di organizzatrice dentro la propria coppia, e quella posizione porta con sé un ruolo che non ha niente di romantico. Molte coppie descrivono questo ribaltamento senza saperlo nominare: si è smesso di essere due adulti che vivono insieme, uno dirige e l'altro esegue.",
+    "tip": "Se ti riconosci in questi tre paragrafi, la buona notizia è che il carico mentale è uno dei pochi squilibri che si correggono con l'organizzazione e non con un cambio di personalità."
+  },
+  "section6": {
+    "title": "Cosa riequilibra davvero, e cosa non serve a niente",
+    "p1": "Molte soluzioni proposte sull'argomento non spostano nulla, perché lasciano la parte invisibile esattamente dov'era. Ecco cosa funziona, e cosa dà solo l'impressione di agire.",
+    "sub1Title": "Trasferire un ambito intero, non delle attività",
+    "sub1Text": "È l'unico trasferimento che alleggerisce davvero. « Ti occupi tu degli appuntamenti medici » vuol dire sapere quando scadono, prendere gli orari, annotarli e rispettarli, senza promemoria. Finché qualcuno deve ricordare, il carico non si è spostato di un millimetro.",
+    "sub2Title": "Accettare che venga fatto diversamente",
+    "sub2Text": "È il punto su cui fallisce la maggior parte dei riequilibri. Un ambito trasferito verrà gestito in un altro modo, spesso peggio all'inizio, a volte peggio e basta. Riprendere in mano al primo errore riporta tutto al punto di partenza e installa stabilmente l'idea che l'altro non ce la faccia.",
+    "sub3Title": "Scrivere la lista una volta, in due",
+    "sub3Text": "Molte attività invisibili esistono per uno dei due solo nel momento in cui le scopre scritte. Fare l'inventario insieme, una sola volta, cambia più cose di una conversazione sull'equità, perché sostituisce un dibattito su delle impressioni con un oggetto che entrambi possono guardare.",
+    "sub4Title": "Quello che non funziona",
+    "sub4Text": "Le tabelle di ripartizione appese al frigorifero durano tre settimane. Le applicazioni di attività condivise spostano il carico su chi compila l'applicazione. E « dimmi tu cosa devo fare » è, letteralmente, una richiesta di tenersi il carico mentale."
+  },
+  "section7": {
+    "title": "Come affrontare il tema senza che finisca male",
+    "p1": "È una conversazione che deraglia spesso, perché viene quasi sempre aperta nel momento peggiore: una sera di stanchezza, dopo la goccia che fa traboccare il vaso, sotto forma di rimprovero. La persona di fronte sente un'accusa, si difende, e il fondo non viene mai affrontato.",
+    "p2": "Il test serve esattamente a questo. Sostituisce « tu non fai mai niente » con un oggetto neutro che guardate in due, e indica tre attività precise invece di un processo generale. Su tre attività si può discutere. Su un processo no.",
+    "p3": "Se sei tu a scoprire lo squilibrio leggendo il risultato, c'è una sola cosa utile da fare, e non è giustificarti. Chiedi all'altro di raccontarti una giornata tipo di quello che ha in testa. È il modo più rapido per capire, perché rende visibile ciò che per definizione non si vede.",
+    "tip": "Riparlatene quando l'argomento si è raffreddato, con una data fissata in anticipo per fare il punto. Un riequilibrio regge raramente se viene verificato solo alla crisi successiva."
+  },
+  "faq": {
+    "q1": "Qual è la differenza tra carico mentale e faccende domestiche?",
+    "a1": "Le faccende domestiche sono il lavoro visibile: passare l'aspirapolvere, fare la spesa, cucinare. Il carico mentale è il lavoro invisibile che le precede: sapere che vanno fatte, decidere quando, ricordare cosa manca, prendere gli appuntamenti prima che sia tardi. Si può avere una ripartizione delle faccende perfettamente uguale e un carico mentale interamente portato da una sola persona, ed è anzi una situazione molto comune.",
+    "q2": "Bisogna fare questo test da soli o in due?",
+    "a2": "Entrambe le cose sono possibili, ma non danno lo stesso risultato. Da soli si ottiene la ripartizione così come la si vede, il che è utile ma parziale. In due si ottiene in più lo scarto tra le due percezioni, ed è spesso l'informazione più eloquente del test. Se ne dovete fare uno solo, fatelo in due.",
+    "q3": "Il carico mentale riguarda solo le donne?",
+    "a3": "No, ma i numeri mostrano uno squilibrio netto. Il barometro Ifop sul tema rileva che il 71 % delle donne dichiara un carico mentale elevato, e l'istituto di statistica francese osserva che si occupano di circa il 71 % dei compiti genitoriali e del 64 % di quelli domestici. Questo non dice nulla sulla vostra coppia in particolare: è proprio ciò che il test guarda, senza presupporre chi porti cosa.",
+    "q4": "Il mio partner non capisce di cosa parlo, cosa faccio?",
+    "a4": "È la situazione più frequente, e non è quasi mai cattiva volontà: il carico mentale si vede solo nel momento in cui smette di essere assicurato. La cosa più efficace è fargli fare il test per conto suo, poi confrontare i due risultati. Lo scarto tra le vostre risposte è un argomento molto più solido di una conversazione, perché nessuno deve crederci sulla parola.",
+    "q5": "Non tutte le venti attività corrispondono alla nostra situazione, è grave?",
+    "a5": "No. Le venti attività sono state scelte per valere nella grande maggioranza delle case, con o senza figli, in affitto come di proprietà. Se una non si applica da voi, rispondete « in due, equamente »: diventerà neutra e non falserà la ripartizione.",
+    "q6": "Le mie risposte vengono salvate?",
+    "a6": "No. Tutto avviene nel vostro browser, nessuna risposta viene inviata né conservata, e non c'è né un account né un indirizzo e-mail da dare. Anche in modalità in due, le risposte del primo giocatore servono solo al calcolo finale e spariscono chiudendo la pagina."
+  }
+}

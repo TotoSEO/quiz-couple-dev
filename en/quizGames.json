@@ -353,7 +353,8 @@
     "testFinCouple": "Is my relationship over?",
     "testAmourAmitie": "Love or friendship?",
     "testDependance": "Emotional dependency test",
-    "testEx": "Does my ex still think about me test"
+    "testEx": "Does my ex still think about me test",
+    "testChargeMentale": "Mental load test for couples"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

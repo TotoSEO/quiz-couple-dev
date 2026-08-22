@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "badge": "Test gratuito, 20 tareas",
+    "title": "¿Quién lleva la carga mental en vuestra pareja?",
+    "titleHighlight": "la carga mental",
+    "description": "20 tareas y una sola pregunta cada vez: ¿quién piensa en ello? Hacedlo cada uno por su lado, y la diferencia entre vuestras dos respuestas se convierte en el resultado.",
+    "subtitle": "Solo o en pareja, gratuito y anónimo"
+  },
+  "howTo": {
+    "title": "¿Cómo funciona este test?",
+    "step1": "Elige tu modo. <strong>Solo</strong>, obtienes el reparto tal como tú lo ves. <strong>En pareja</strong>, respondéis por turnos sin ver las respuestas del otro, y el test las compara.",
+    "step2": "Para cada una de las 20 tareas, una sola pregunta: <strong>¿quién piensa en ello?</strong> No quién lo hace, quién piensa en ello. Cinco respuestas, de « siempre uno » a « siempre el otro », con el reparto equitativo en medio.",
+    "step3": "Responde sobre lo que pasa de verdad, no sobre lo que debería pasar. Nadie lee tus respuestas, y un test que halaga no sirve de nada.",
+    "step4": "El resultado da el reparto en porcentaje, el detalle por ámbito y, en modo pareja, las tres tareas en las que más discrepáis.",
+    "outro": "El modo en pareja es el que tiene interés. Un desequilibrio que ven los dos y un desequilibrio que ve uno solo no son la misma situación, y no piden la misma conversación."
+  },
+  "crossLink": {
+    "title": "¿Y si llega un hijo?",
+    "text": "La carga mental es lo que más aumenta con la llegada de un hijo, y casi siempre es la misma persona quien absorbe la subida. El test de parentalidad mira si estáis preparados en ese terreno.",
+    "button": "Hacer el test de parentalidad"
+  },
+  "section1": {
+    "title": "La carga mental no es fregar los platos",
+    "p1": "Es el malentendido que bloquea todas las conversaciones sobre el tema. Cuando una pareja discute sobre el reparto de tareas, uno habla de ejecución y el otro de anticipación. No están hablando de lo mismo, y ninguno de los dos se da cuenta.",
+    "p2": "La carga mental no es sacar la basura. Es <strong>saber que hoy toca sacar la basura</strong>. No es comprar pasta de dientes, es darse cuenta de que se va a acabar. No es llevar a alguien al médico, es acordarse de pedir la cita tres semanas antes. El trabajo visible lo ve todo el mundo. El trabajo invisible no lo ve nadie, salvo quien lo hace.",
+    "p3": "Por eso la frase « no tienes más que pedírmelo » es el centro del problema y no su solución. Pedir supone saber qué hay que hacer, saber cuándo y acordarse de decirlo en el momento adecuado. Quien pide conserva la totalidad de la carga y solo delega la ejecución, que es la parte menos pesada.",
+    "p4": "Así que este test solo mide la anticipación. En cada una de las veinte tareas, la pregunta nunca es « quién lo hace », es « quién piensa en ello »."
+  },
+  "section2": {
+    "title": "Los cuatro ámbitos donde se aloja la carga",
+    "intro": "Casi nunca está desequilibrada en todas partes de la misma forma. El test la divide en cuatro ámbitos, porque ver hacia dónde se inclina es más útil que una cifra global.",
+    "pillar1Title": "El día a día",
+    "pillar1Text": "Las existencias, las comidas, la ropa, lo que falta antes de que falte. Es el ámbito más continuo: no se detiene nunca, no termina nunca, y solo se ve el día en que no queda café. Es también donde el desequilibrio se instala más pronto, a menudo desde los primeros meses de convivencia.",
+    "pillar2Title": "La anticipación",
+    "pillar2Text": "Las citas que hay que pedir, lo que está roto y habrá que reparar, los plazos del coche o de la vivienda, la ropa de la próxima temporada. Nada de esto es urgente, y es precisamente lo que lo hace pesado: hay que pensarlo con mucha antelación, sin que nada lo recuerde.",
+    "pillar3Title": "Los trámites",
+    "pillar3Text": "El correo, las domiciliaciones, los contratos, las gestiones pesadas. Es el ámbito que más a menudo se delega entero a una sola persona, porque parece el más técnico. Ahí está la trampa: una vez que se ha convertido en el terreno de alguien, nadie más piensa en ello, ni siquiera para comprobar que va bien.",
+    "pillar4Title": "La familia y los allegados",
+    "pillar4Text": "Los cumpleaños, los regalos, las invitaciones, las noticias que hay que dar. Es el ámbito peor repartido de todos, y el que menos se reconoce como trabajo. Y sin embargo, mantener un vínculo social exige memoria, organización y tiempo, incluso con la familia del otro.",
+    "tip": "Una forma simple de distinguir las dos cargas: imagina que te vas diez días sin avisar. Lo que dejaría de funcionar es tu carga mental. Lo que otra persona haría en tu lugar sin pensarlo es ejecución."
+  },
+  "section3": {
+    "title": "Lo que dice tu resultado",
+    "p1": "El test da primero un reparto en porcentaje y luego el detalle por ámbito. En modo pareja añade la medida que da todo el interés a esta página: la diferencia entre vuestras dos respuestas. Un desequilibrio que ven los dos y uno que ve uno solo no se tratan igual.",
+    "headerScore": "Situación",
+    "headerLevel": "Lo que describe",
+    "headerAnalysis": "Lo que hay que hacer",
+    "row1Score": "Sois un equipo",
+    "row1Level": "Repartido, y describís lo mismo.",
+    "row1Analysis": "Nada que arreglar. Repetid el test tras el próximo gran cambio.",
+    "row2Score": "Repartido, pero difuso",
+    "row2Level": "El total está equilibrado, vuestras versiones divergen.",
+    "row2Analysis": "Contaos concretamente lo que hacéis. El resentimiento viene del malentendido.",
+    "row3Score": "Desequilibrio asumido",
+    "row3Level": "Uno lleva más, y estáis de acuerdo en ello.",
+    "row3Analysis": "La pregunta no es si es justo, sino si aguanta. Fijad un plazo.",
+    "row4Score": "Uno lleva, el otro no lo ve",
+    "row4Level": "El caso más frecuente, y el más caro a la larga.",
+    "row4Analysis": "Partid de los tres desacuerdos del test, no de una lista de reproches.",
+    "tip": "Hacer este test solo da una información útil pero parcial. Es justamente sobre el reparto donde los dos miembros de una pareja más divergen, así que un resultado en solitario describe sobre todo tu punto de vista."
+  },
+  "section4": {
+    "title": "Por qué recae casi siempre en la misma persona",
+    "p1": "Ninguna pareja decide un día que uno se ocupará de todo lo invisible. El desequilibrio no se decide, se deposita, y lo hace mediante mecanismos bastante fáciles de nombrar.",
+    "sub1Title": "Quien se da cuenta primero acaba ocupándose",
+    "sub1Text": "Es el mecanismo principal, y no tiene nada que ver con la buena voluntad. Dos personas tienen umbrales de tolerancia distintos para el desorden, los armarios vacíos o las citas atrasadas. Quien tiene el umbral más bajo ve el problema primero, se ocupa y se convierte por defecto en quien siempre se ocupa. Al cabo de unos meses, el otro ha dejado de mirar.",
+    "sub2Title": "La destreza se vuelve una trampa",
+    "sub2Text": "En cuanto una persona hace algo el doble de bien o el doble de rápido, resulta racional dejárselo. Salvo que esa eficacia se paga: cada tarea atribuida por competencia se convierte en una tarea que nadie más sabrá retomar, y el ámbito se cierra.",
+    "sub3Title": "Ayudar se confunde con compartir",
+    "sub3Text": "« Te ayudo » y « me encargo » son dos posiciones muy distintas, y muchas parejas no miden la distancia. Ayudar es ejecutar a petición, o sea dejar al otro la carga de saber, planificar y recordar. Una pareja en la que uno ayuda mucho puede tener un reparto de ejecución casi igual y una carga mental totalmente desequilibrada.",
+    "sub4Title": "Nadie cuenta las mismas cosas",
+    "sub4Text": "Cada uno tiene una visión precisa de lo que lleva y una visión aproximada de lo que lleva el otro. No es mala fe, es el funcionamiento normal de la atención: se ve lo que uno hace y no se ve lo que se ha hecho sin uno. Es exactamente esa diferencia la que mide el modo en pareja.",
+    "tip": "Ninguno de estos cuatro mecanismos supone mala voluntad. Es lo que los hace difíciles de corregir: no hay a quién culpar, y sin embargo la situación es del todo real."
+  },
+  "section5": {
+    "title": "Lo que cuesta cuando dura",
+    "p1": "Una carga mental desequilibrada no provoca una crisis. Produce un desgaste, y el desgaste solo se nota cuando ya ha hecho su trabajo.",
+    "p2": "El primer efecto es un cansancio que no se repara durmiendo, porque viene de una actividad mental continua y no de un esfuerzo físico. El segundo es el resentimiento, que se acumula despacio y sale por lo general por un pretexto minúsculo, lo que lo hace incomprensible para el otro: la discusión es por un calcetín, nunca por el fondo.",
+    "p3": "El tercer efecto es el más difícil de recuperar. A fuerza de gestionarlo todo, una persona acaba ocupando una posición de organizadora dentro de su propia pareja, y esa posición viene con un papel que no tiene nada de romántico. Muchas parejas describen ese vuelco sin saber nombrarlo: se ha dejado de ser dos adultos que viven juntos, uno dirige y el otro ejecuta.",
+    "tip": "Si te reconoces en estos tres párrafos, la buena noticia es que la carga mental es uno de los pocos desequilibrios que se corrigen con organización y no con un cambio de personalidad."
+  },
+  "section6": {
+    "title": "Lo que reequilibra de verdad, y lo que no sirve de nada",
+    "p1": "Muchas soluciones que se proponen sobre el tema no mueven nada, porque dejan la parte invisible exactamente donde estaba. Esto es lo que funciona, y lo que solo da la impresión de actuar.",
+    "sub1Title": "Transferir un ámbito entero, no tareas",
+    "sub1Text": "Es la única transferencia que alivia de verdad. « Te encargas de las citas médicas » significa saber cuándo tocan, pedir los huecos, apuntarlos y cumplirlos, sin recordatorios. Mientras alguien tenga que recordar, la carga no se ha movido ni un milímetro.",
+    "sub2Title": "Aceptar que se haga de otra manera",
+    "sub2Text": "Es el punto en el que fracasan la mayoría de los reequilibrios. Un ámbito transferido se gestionará de otra forma, a menudo peor al principio, a veces peor siempre. Retomar el control al primer error lo devuelve todo a la casilla de salida e instala de forma duradera la idea de que el otro no es capaz.",
+    "sub3Title": "Escribir la lista una vez, entre los dos",
+    "sub3Text": "Muchas tareas invisibles solo existen para uno de los dos en el momento en que las descubre escritas. Hacer el inventario juntos, una sola vez, cambia más cosas que una conversación sobre equidad, porque sustituye un debate sobre impresiones por un objeto que ambos pueden mirar.",
+    "sub4Title": "Lo que no funciona",
+    "sub4Text": "Los cuadros de reparto colgados en la nevera duran tres semanas. Las aplicaciones de tareas compartidas desplazan la carga hacia quien rellena la aplicación. Y « tú dime qué hay que hacer » es, literalmente, una petición de conservar la carga mental."
+  },
+  "section7": {
+    "title": "Cómo sacar el tema sin que acabe mal",
+    "p1": "Es una conversación que descarrila a menudo, porque casi siempre se abre en el peor momento: una noche de cansancio, después de una gota que colma el vaso, en forma de reproche. La persona que la recibe oye una acusación, se defiende, y el fondo no se aborda nunca.",
+    "p2": "El test sirve justo para eso. Sustituye « tú nunca haces nada » por un objeto neutro que miráis los dos, y señala tres tareas concretas en lugar de un juicio general. Tres tareas son discutibles. Un juicio, no.",
+    "p3": "Si eres quien descubre el desequilibrio leyendo el resultado, solo hay una cosa útil que hacer, y no es justificarte. Pídele al otro que te cuente un día tipo de lo que lleva en la cabeza. Es la forma más rápida de entenderlo, porque hace visible lo que por definición no se ve.",
+    "tip": "Volved a hablarlo cuando el tema esté frío, con una fecha fijada de antemano para hacer balance. Un reequilibrio rara vez aguanta si solo se comprueba en la siguiente crisis."
+  },
+  "faq": {
+    "q1": "¿Cuál es la diferencia entre carga mental y tareas domésticas?",
+    "a1": "Las tareas domésticas son el trabajo visible: pasar el aspirador, hacer la compra, cocinar. La carga mental es el trabajo invisible que las precede: saber que hay que hacerlo, decidir cuándo, recordar lo que falta, pedir las citas antes de que sea tarde. Se puede tener un reparto de tareas perfectamente igual y una carga mental llevada íntegramente por una sola persona, y es incluso una situación muy común.",
+    "q2": "¿Hay que hacer este test solo o en pareja?",
+    "a2": "Ambas cosas son posibles, pero no dan lo mismo. En solitario obtienes el reparto tal como tú lo ves, lo cual es útil pero parcial. En pareja obtienes además la diferencia entre vuestras dos percepciones, y suele ser la información más reveladora del test. Si solo vas a hacer uno, hazlo en pareja.",
+    "q3": "¿La carga mental afecta solo a las mujeres?",
+    "a3": "No, pero las cifras muestran un desequilibrio claro. El barómetro Ifop sobre el tema señala que el 71 % de las mujeres declara una carga mental elevada, y el instituto francés de estadística observa que asumen alrededor del 71 % de las tareas parentales y el 64 % de las domésticas. Eso no dice nada de tu pareja en particular: es justamente lo que mira el test, sin presuponer quién lleva qué.",
+    "q4": "Mi pareja no entiende de qué le hablo, ¿qué hago?",
+    "a4": "Es la situación más frecuente, y casi nunca es mala voluntad: la carga mental solo se ve en el momento en que deja de asumirse. Lo más eficaz es que haga el test por su cuenta y luego comparéis los dos resultados. La diferencia entre vuestras respuestas es un argumento mucho más sólido que una conversación, porque nadie tiene que creerse nada de palabra.",
+    "q5": "No todas las tareas se corresponden con nuestra situación, ¿es grave?",
+    "a5": "No. Las veinte tareas se han elegido para valer en la gran mayoría de los hogares, con hijos o sin ellos, de alquiler o en propiedad. Si alguna no se aplica en tu caso, responde « los dos, por igual »: quedará neutra y no falseará el reparto.",
+    "q6": "¿Se guardan mis respuestas?",
+    "a6": "No. Todo ocurre en tu navegador, ninguna respuesta se envía ni se conserva, y no hay ni cuenta ni dirección de correo que dar. Incluso en modo pareja, las respuestas del primer jugador solo sirven para el cálculo final y desaparecen al cerrar la página."
+  }
+}

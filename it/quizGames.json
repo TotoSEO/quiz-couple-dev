@@ -353,7 +353,8 @@
     "testFinCouple": "È la fine della mia relazione?",
     "testAmourAmitie": "Amore o amicizia?",
     "testDependance": "Test dipendenza affettiva",
-    "testEx": "Test il mio ex pensa ancora a me"
+    "testEx": "Test il mio ex pensa ancora a me",
+    "testChargeMentale": "Test del carico mentale di coppia"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",

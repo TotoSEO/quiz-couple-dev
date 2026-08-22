@@ -303,5 +303,11 @@
     "shortTitle": "Denkt mein Ex noch an mich?",
     "description": "15 Fragen zu dem, was er oder sie tut, nicht zu dem, was du hineinliest. Einzeltest, sofortiges Ergebnis.",
     "metaDescription": "Denkt dein Ex noch an dich? 15 Fragen, die Taten wiegen statt Deutungen. Kostenlos, anonym, ohne Anmeldung und ohne E-Mail."
+  },
+  "testChargeMentale": {
+    "title": "Mental-Load-Test für Paare: Wer trägt was?",
+    "shortTitle": "Wer trägt die Mental Load?",
+    "description": "20 Aufgaben, zwei Antwortreihen und der Abstand dazwischen. Allein oder zu zweit, sofortiges Ergebnis.",
+    "metaDescription": "Wer trägt in eurer Beziehung wirklich die Mental Load? 20 Aufgaben zum Daran-Denken, nicht zum Tun. Zu zweit wird der Abstand zwischen euren Antworten zum Ergebnis."
   }
 }
