@@ -168,6 +168,53 @@
   function stars(r) { var h = ''; for (var i = 1; i <= 5; i++) h += '<svg viewBox="0 0 24 24" class="pqx-star ' + (i <= r ? 'on' : '') + '"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'; return h; }
 
   // ── Bulle "realise X fois" juste sous le fil d'Ariane ──
+  // Les dilemmes ne comptent pas des parties mais des votes : une partie
+  // peut en valoir trois comme cent, et c'est le total des votes qui a un
+  // sens sur cette page. Ils ont donc leur propre compteur.
+  // Idem pour le pour ou contre : une partie peut valoir trois votes comme
+  // soixante, et il faut aller jusqu'au bilan pour qu'elle soit comptée.
+  // Le compteur générique restait donc à zéro alors que les votes, eux,
+  // partaient bien en base.
+  var COMPTEURS_DE_VOTES = {
+    jeuDilemmes: { rpc: 'get_dilemme_total', libelle: 'votesTotal' },
+    pourContre:  { rpc: 'get_pour_contre_total', libelle: 'votesTotalPC' }
+  };
+
+  // Le chiffre n'était lu qu'au chargement de la page. Sur un test qui vient
+  // d'ouvrir, la bulle est donc restée cachée pendant toute la partie, et
+  // finir le test ne la faisait pas apparaître : il fallait recharger pour
+  // voir « réalisé 1 fois ». La lecture est isolée ici pour être rejouée à la
+  // fin de la partie, une fois la ligne enregistrée.
+  function litCompteur(slug, genre) {
+    var bubble = document.getElementById('quiz-count-bubble');
+    if (!bubble) return;
+    function pose(texte) {
+      bubble.querySelector('.qcb-text').textContent = texte;
+      bubble.style.display = '';
+    }
+    var cv = COMPTEURS_DE_VOTES[slug];
+    if (cv) {
+      fetch(URL + '/rest/v1/rpc/' + cv.rpc, { method: 'POST', headers: HJ, body: '{}' })
+        .then(function (r) { return r.json(); })
+        .then(function (n) {
+          n = +n || 0;
+          if (n > 0) pose(t[cv.libelle].replace('{n}', fmt(n)));
+        })
+        .catch(function () {});
+      return;
+    }
+    fetch(URL + '/rest/v1/rpc/get_quiz_counts', { method: 'POST', headers: HJ, body: '{}' })
+      .then(function (r) { return r.json(); })
+      .then(function (rows) {
+        if (!Array.isArray(rows)) return;
+        var row = rows.filter(function (x) { return x.quiz_slug === slug; })[0];
+        var n = row ? +row.total : 0;
+        var phrase = genre === 'jeu' ? t.doneGame : genre === 'quiz' ? t.doneQuiz : t.doneTest;
+        if (n > 0) pose(phrase.replace('{n}', fmt(n)));
+      })
+      .catch(function () {});
+  }
+
   function countBubble(slug, genre) {
     var bc = document.querySelector('.breadcrumb');
     if (!bc || document.getElementById('quiz-count-bubble')) return;
@@ -182,38 +229,7 @@
     var paras = heroBlock ? heroBlock.querySelectorAll('p') : null;
     var anchor = (paras && paras.length) ? paras[paras.length - 1] : bc;
     anchor.parentNode.insertBefore(bubble, anchor.nextSibling);
-    // Les dilemmes ne comptent pas des parties mais des votes : une partie
-    // peut en valoir trois comme cent, et c'est le total des votes qui a un
-    // sens sur cette page. Ils ont donc leur propre compteur.
-    // Idem pour le pour ou contre : une partie peut valoir trois votes comme
-    // soixante, et il faut aller jusqu'au bilan pour qu'elle soit comptée.
-    // Le compteur générique restait donc à zéro alors que les votes, eux,
-    // partaient bien en base.
-    var COMPTEURS_DE_VOTES = {
-      jeuDilemmes: { rpc: 'get_dilemme_total', libelle: 'votesTotal' },
-      pourContre:  { rpc: 'get_pour_contre_total', libelle: 'votesTotalPC' }
-    };
-    var cv = COMPTEURS_DE_VOTES[slug];
-    if (cv) {
-      fetch(URL + '/rest/v1/rpc/' + cv.rpc, { method: 'POST', headers: HJ, body: '{}' })
-        .then(function (r) { return r.json(); })
-        .then(function (n) {
-          n = +n || 0;
-          if (n > 0) { bubble.querySelector('.qcb-text').textContent = t[cv.libelle].replace('{n}', fmt(n)); bubble.style.display = ''; }
-        })
-        .catch(function () {});
-      return;
-    }
-    fetch(URL + '/rest/v1/rpc/get_quiz_counts', { method: 'POST', headers: HJ, body: '{}' })
-      .then(function (r) { return r.json(); })
-      .then(function (rows) {
-        if (!Array.isArray(rows)) return;
-        var row = rows.filter(function (x) { return x.quiz_slug === slug; })[0];
-        var n = row ? +row.total : 0;
-        var phrase = genre === 'jeu' ? t.doneGame : genre === 'quiz' ? t.doneQuiz : t.doneTest;
-        if (n > 0) { bubble.querySelector('.qcb-text').textContent = phrase.replace('{n}', fmt(n)); bubble.style.display = ''; }
-      })
-      .catch(function () {});
+    litCompteur(slug, genre);
   }
 
   // ── Envoi d'un evenement de partie ──────────────────────────────────
@@ -257,7 +273,7 @@
   // data-quiz-done, pour les fins de partie qui n'ont pas de carte de
   // resultat (la roue, l'ado, tu preferes, les langages de l'amour) : leur
   // ecran final est trop different pour porter le style de .quiz-result-card.
-  function watch(slug) {
+  function watch(slug, genre) {
     var key = 'qc-done-' + slug;
     function visible(n) { return !!(n && (n.offsetWidth || n.offsetHeight || n.getClientRects().length)); }
     function fini() {
@@ -272,6 +288,9 @@
       if (sessionStorage.getItem(key) || !fini()) return;
       try { sessionStorage.setItem(key, '1'); } catch (e) {}
       envoiePartie('quiz_completions', { quiz_slug: slug, lang: lang });
+      // La ligne vient de partir : on relit le total pour que la bulle se
+      // mette a jour sans rechargement. Le delai laisse la base la valider.
+      setTimeout(function () { litCompteur(slug, genre); }, 1200);
     }
     check();
     new MutationObserver(check).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class', 'style', 'data-quiz-done'] });
@@ -453,8 +472,9 @@
     var pq = document.getElementById('pq-reviews');
     var slug = pq ? pq.dataset.quizSlug : null;
     if (!slug) return;
-    countBubble(slug, pq.dataset.quizKind || 'test');
-    watch(slug);
+    var genre = pq.dataset.quizKind || 'test';
+    countBubble(slug, genre);
+    watch(slug, genre);
     watchStart(slug);
     initReviews(slug);
     resultRating();
