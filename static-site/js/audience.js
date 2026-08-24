@@ -153,14 +153,27 @@
   // personnel. « interne » désigne une page du site, ce qui n'arrive en
   // première page que lorsqu'une visite reprend après trente minutes de
   // pause.
+  // Un lien envoye par WhatsApp, par SMS ou par Messenger arrive sans referent,
+  // exactement comme une adresse tapee a la main : les deux se retrouvaient
+  // melangees sous « direct ». Le bouton de partage marque desormais le lien
+  // qu'il met dans le message, et ce marqueur les separe.
+  //
+  // Il ne l'emporte que faute de referent : un lien partage puis colle dans
+  // un message Facebook arrive avec facebook.com en referent, et c'est cette
+  // provenance-la qui est la plus utile a lire.
+  function marquePartage() {
+    try { return new URLSearchParams(location.search).has('part'); }
+    catch (e) { return (location.search || '').indexOf('part') !== -1; }
+  }
+
   function source() {
     var r = document.referrer;
-    if (!r) return 'direct';
+    if (!r) return marquePartage() ? 'partage' : 'direct';
     try {
       var h = new URL(r).hostname.replace(/^www\./, '');
       if (h === (location.hostname || '').replace(/^www\./, '')) return 'interne';
       return h.slice(0, 100);
-    } catch (e) { return 'direct'; }
+    } catch (e) { return marquePartage() ? 'partage' : 'direct'; }
   }
 
   // ── Envoi ───────────────────────────────────────────────────────────────

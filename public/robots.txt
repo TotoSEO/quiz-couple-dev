@@ -6,6 +6,9 @@ Disallow: /admin/
 Disallow: /confirmation-ebook/
 Disallow: /js/data/
 Disallow: /js/admin.js
+# Marqueur des liens partages : meme page que sans le parametre, le canonical
+# pointe deja vers l'adresse propre. On evite quand meme de la faire explorer.
+Disallow: /*?part
 
 # AI Crawlers - allowed to index content
 User-agent: GPTBot

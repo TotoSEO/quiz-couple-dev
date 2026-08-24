@@ -1550,7 +1550,7 @@
   // et on laisse le reste tel quel : inventer une categorie « autre » ferait
   // disparaitre justement ce qu'on cherche a decouvrir.
   var TRAFIC_SOURCES = {
-    'direct': 'Direct / favori',
+    'direct': 'Direct / favori', 'partage': 'Lien partagé',
     'google.com': 'Google', 'google.fr': 'Google', 'bing.com': 'Bing',
     'duckduckgo.com': 'DuckDuckGo', 'ecosia.org': 'Ecosia', 'qwant.com': 'Qwant',
     'search.brave.com': 'Brave', 'yahoo.com': 'Yahoo', 'yandex.com': 'Yandex',
