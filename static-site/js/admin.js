@@ -1550,7 +1550,7 @@
   // et on laisse le reste tel quel : inventer une categorie « autre » ferait
   // disparaitre justement ce qu'on cherche a decouvrir.
   var TRAFIC_SOURCES = {
-    'direct': 'Direct / favori', 'interne': 'Reprise de visite',
+    'direct': 'Direct / favori', 'partage': 'Lien partagé',
     'google.com': 'Google', 'google.fr': 'Google', 'bing.com': 'Bing',
     'duckduckgo.com': 'DuckDuckGo', 'ecosia.org': 'Ecosia', 'qwant.com': 'Qwant',
     'search.brave.com': 'Brave', 'yahoo.com': 'Yahoo', 'yandex.com': 'Yandex',
@@ -1727,8 +1727,19 @@
     }).join('');
   }
 
+  // Les visites dont la premiere page a pour referent le site lui-meme ne
+  // viennent de nulle part : c'est la meme personne qui reprend son onglet
+  // apres une pause de plus de trente minutes. Le compteur de visites les
+  // traite comme une visite neuve, ce qui coupe une session en deux, et le
+  // panneau des sources les affichait comme une origine a part entiere, a
+  // cote de Google et de Facebook. Elles sont ecartees ici : les pourcentages
+  // se recalculent alors sur les seules vraies provenances.
+  function estReprise(source) { return source === 'interne'; }
+
   function renderTraficSources() {
-    var l = (traficDonnees ? traficDonnees.sources : []).map(function (x) {
+    var l = (traficDonnees ? traficDonnees.sources : [])
+      .filter(function (x) { return !estReprise(x.source); })
+      .map(function (x) {
       return { nom: nomSource(x.source), valeur: Number(x.visites) || 0 };
     });
     // Deux hotes peuvent porter le meme nom lisible (google.fr et google.com) :

@@ -403,8 +403,33 @@ var QuizEngine = (function() {
     if (!c || !pq || !c.dataset.url || !c.dataset.key) return null;
     return { url: c.dataset.url, key: c.dataset.key, slug: pq.dataset.quizSlug };
   }
+  // ── L'URL qu'on met dans un message de partage ───────────────────────────
+  // Les applications de messagerie ne transmettent aucun referent : un lien
+  // envoye par WhatsApp, par SMS ou par Messenger arrive donc exactement
+  // comme une adresse tapee a la main, et les deux se retrouvaient melangees
+  // sous « direct » dans les statistiques. Le lien partage porte desormais un
+  // marqueur, seul element qu'on maitrise dans la chaine.
+  //
+  // Le marqueur existant est retire avant d'etre repose : quelqu'un qui
+  // arrive par un partage et repartage a son tour ne doit pas produire
+  // « ?part&part ». Les autres parametres de l'adresse sont conserves.
+  function urlDePartage() {
+    try {
+      var restants = [];
+      var p = new URLSearchParams(location.search);
+      p.forEach(function (v, k) {
+        if (k === 'part') return;
+        restants.push(encodeURIComponent(k) + (v ? '=' + encodeURIComponent(v) : ''));
+      });
+      restants.push('part');
+      return location.origin + location.pathname + '?' + restants.join('&');
+    } catch (e) {
+      return location.href;
+    }
+  }
+
   function pcShare(title) {
-    var url = location.href;
+    var url = urlDePartage();
     if (navigator.share) { navigator.share({ title: title, url: url }).catch(function () {}); }
     else if (navigator.clipboard) { navigator.clipboard.writeText(url); }
   }
@@ -592,7 +617,7 @@ var QuizEngine = (function() {
       : type === 'profil' ? tg('share.ctaProfil', 'Et vous, quel est le vôtre ? 👉')
       : tg('share.ctaFun', 'À votre tour 👉');
 
-    return q.emoji + ' ' + phrase + '\n' + appel + ' ' + location.href;
+    return q.emoji + ' ' + phrase + '\n' + appel + ' ' + urlDePartage();
   }
 
   // ── Share result (Web Share API with copy fallback) ──
@@ -627,7 +652,7 @@ var QuizEngine = (function() {
       // Le message contient deja l'URL. On ne passe donc pas `url` a
       // navigator.share : plusieurs applications ne retiennent que ce champ et
       // laissent tomber le texte, ce qui ne partageait qu'un lien nu.
-      var texte = typeof partage === 'string' ? partage + '\n' + location.href : messagePartage(partage);
+      var texte = typeof partage === 'string' ? partage + '\n' + urlDePartage() : messagePartage(partage);
       if (navigator.share) {
         navigator.share({ title: tg('share.titre', 'Quiz Couple'), text: texte }).catch(function() {});
       } else if (navigator.clipboard && navigator.clipboard.writeText) {
