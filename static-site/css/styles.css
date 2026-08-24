@@ -1883,6 +1883,50 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 /* ── Pistes proposées en fin de test ───────────────────────
    Le score dit où en est la relation, il ne dit pas pourquoi. Chaque piste
    répond à une question que le test lui-même ne pose pas. */
+/* ── Encart partenaire affilie sur l'ecran de resultat ────────────────────
+   Banniere en haut, texte en dessous, tout l'encart est cliquable. Il se
+   distingue du reste de la carte de resultat par sa bordure et son fond,
+   pour qu'on voie tout de suite que c'est une suggestion et pas le verdict. */
+.qr-partenaire {
+  display: block; margin: 1.75rem auto 0; max-width: 34rem; overflow: hidden;
+  text-align: left; text-decoration: none; color: inherit;
+  border: 1px solid hsl(var(--border)); border-radius: var(--radius);
+  background: hsl(var(--card));
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.qr-partenaire:hover, .qr-partenaire:focus-visible {
+  transform: translateY(-2px); border-color: hsl(var(--primary) / .45);
+  box-shadow: 0 14px 34px -18px hsl(var(--primary) / .45);
+}
+.qr-partenaire-image {
+  display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover;
+}
+.qr-partenaire-corps { display: block; padding: 1.1rem 1.25rem 1.25rem; }
+.qr-partenaire-mention {
+  display: block; margin-bottom: .45rem;
+  font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+.qr-partenaire-titre {
+  display: block; margin-bottom: .5rem; font-family: var(--font-display);
+  font-size: 1.05rem; font-weight: 800; line-height: 1.3; color: hsl(var(--foreground));
+}
+.qr-partenaire-texte {
+  display: block; margin-bottom: .9rem; font-size: .92rem; line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+}
+/* En inline plutot qu'en inline-flex : sur un libelle qui passe sur deux
+   lignes, la fleche d'un conteneur flex partait se coller a droite au lieu
+   de suivre le dernier mot. */
+.qr-partenaire-cta {
+  display: inline; font-weight: 800; font-size: .92rem; color: hsl(var(--primary));
+}
+.qr-partenaire-cta svg {
+  display: inline-block; width: 1rem; height: 1rem;
+  margin-left: .35rem; vertical-align: -2px; transition: transform .2s ease;
+}
+.qr-partenaire:hover .qr-partenaire-cta svg { transform: translateX(3px); }
+
 .qr-orientation {
   display: grid; gap: .55rem; margin: 1.5rem auto 0; max-width: 34rem; text-align: left;
 }
