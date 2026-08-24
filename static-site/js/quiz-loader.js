@@ -1322,6 +1322,38 @@
     return questions;
   }
 
+  // ── Encart partenaire affilie sur l'ecran de resultat ────────────────────
+  // Un seul partenaire par test, limite a sa langue : Wecandoo ne vend qu'en
+  // France, l'encart n'a rien a faire sur les quatre autres versions du site.
+  // Le lien porte rel="sponsored nofollow noopener" comme tous les liens
+  // affilies du site, et l'encart s'annonce comme tel au-dessus du titre.
+  // Retirer une entree d'ici suffit a retirer l'encart du site.
+  var PARTENAIRES_RESULTAT = {
+    'amour-habitude': {
+      langues: ['fr'],
+      url: 'https://c3po.link/Q9Y6Z2a84u',
+      image: '/partenaires/wecandoo-atelier.webp',
+      alt: "Deux mains qui façonnent un bol sur un tour de potier pendant un atelier",
+      textes: {
+        fr: {
+          mention: 'Lien affilié',
+          titre: 'Et si vous faisiez quelque chose que vous ne savez pas faire ?',
+          texte: "L'habitude s'installe quand les soirées se ressemblent. Wecandoo réunit des ateliers d'artisans à Paris, Lyon, Bordeaux, Lille et ailleurs : tour de potier, couteau, parfum, brasserie. Deux ou trois heures à fabriquer quelque chose ensemble, sans écran et sans savoir d'avance comment ça va tourner.",
+          bouton: 'Voir les ateliers près de chez vous'
+        }
+      }
+    }
+  };
+
+  function partenaireResultat(quizType) {
+    var p = PARTENAIRES_RESULTAT[quizType];
+    if (!p || p.langues.indexOf(lang) === -1) return null;
+    var t = p.textes[lang];
+    if (!t) return null;
+    return { url: p.url, image: p.image, alt: p.alt, mention: t.mention,
+             titre: t.titre, texte: t.texte, bouton: t.bouton };
+  }
+
   function initSoloQuiz(cfg, questions) {
     // Barème explicite : par défaut un test solo donne 0, 1, 2, 3 points selon
     // le rang de la réponse, ce qui met toutes les questions sur le même pied.
@@ -1352,7 +1384,8 @@
       quizType: cfg.quizType || 'solo',
       hasSkip: cfg.hasSkip || false,
       hasLocalStorage: cfg.hasLocalStorage || false,
-      needsName: cfg.needsName || false
+      needsName: cfg.needsName || false,
+      partenaire: partenaireResultat(cfg.quizType || 'solo')
     });
   }
 

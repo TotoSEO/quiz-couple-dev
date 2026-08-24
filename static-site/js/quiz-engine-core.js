@@ -1266,6 +1266,29 @@ var QuizEngine = (function() {
   // SOLO TEST - toxic, divorce, mariage, ado
   // Single player, points-based scoring
   // ═══════════════════════════════════════════════════════════
+  // ── Encart partenaire affilie ────────────────────────────────────────────
+  // Banniere, mention, texte et bouton. Le survol et le focus sont geres en
+  // CSS : tout l'encart est cliquable, le bouton n'est qu'un reperage visuel.
+  function encartPartenaire(p) {
+    var a = document.createElement('a');
+    a.className = 'qr-partenaire';
+    a.href = p.url;
+    a.target = '_blank';
+    a.rel = 'sponsored nofollow noopener';
+    a.innerHTML =
+      '<img class="qr-partenaire-image" src="' + esc(p.image) + '" alt="' + esc(p.alt || '') + '"' +
+        ' width="1200" height="675" loading="lazy" decoding="async">' +
+      '<span class="qr-partenaire-corps">' +
+        '<span class="qr-partenaire-mention">' + esc(p.mention) + '</span>' +
+        '<span class="qr-partenaire-titre">' + esc(p.titre) + '</span>' +
+        '<span class="qr-partenaire-texte">' + esc(p.texte) + '</span>' +
+        '<span class="qr-partenaire-cta">' + esc(p.bouton) +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">' +
+          '<path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>' +
+      '</span>';
+    return a;
+  }
+
   function SoloTest(config) {
     this.container = config.container;
     this.questions = config.questions;
@@ -1277,6 +1300,7 @@ var QuizEngine = (function() {
     this.hasSkip = config.hasSkip || false;
     this.hasLocalStorage = config.hasLocalStorage || false;
     this.needsName = config.needsName || false;
+    this.partenaire = config.partenaire || null;
     this.phase = 'intro';
     this.currentQ = 0;
     this.answers = [];
@@ -1546,6 +1570,12 @@ var QuizEngine = (function() {
         resultat.appendChild(advice);
       }
     }
+
+    // Encart partenaire affilie, quand le test en declare un. Il vient apres
+    // le verdict et le conseil : on lit d'abord son resultat, la suggestion
+    // ne passe jamais devant. Le lien s'annonce comme affilie et porte
+    // rel="sponsored nofollow noopener".
+    if (this.partenaire) resultat.appendChild(encartPartenaire(this.partenaire));
 
     // Fin de couple : le score dit ou en est la relation, il ne dit pas
     // pourquoi. Les trois pistes ci-dessous repondent chacune a une question
