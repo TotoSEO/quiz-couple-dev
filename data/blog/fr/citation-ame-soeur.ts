@@ -5,18 +5,17 @@ const article: BlogArticleData = {
   slug: 'citation-ame-soeur',
   title: "Citation âme sœur : 60 phrases à garder, à envoyer ou à offrir",
   metaTitle: "Citation âme sœur : les 60 plus belles | Quiz Couple",
-  metaDescription: "60 citations sur l'âme sœur classées par usage : un message, une carte, une story. Les auteurs sont sourcés, et trois attributions célèbres sont fausses.",
+  metaDescription: "60 citations sur l'âme sœur à envoyer, à offrir ou à écrire sur une carte. Avec les auteurs et leurs livres, et trois attributions célèbres qui sont fausses.",
   featuredImage: '/blog/citation-ame-soeur.webp',
   featuredImageAlt: "Carnet ouvert et plume posés sur une table en bois, pétales de rose et bougie allumée autour",
   publishedAt: '2026-08-25T17:34:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Une phrase pour une carte, un message ou une story. Et trois citations très partagées que tout le monde attribue au mauvais auteur.",
+  excerpt: "De quoi remplir une carte d'anniversaire, un message du soir ou une légende de photo. Et trois citations très partagées que tout le monde attribue au mauvais auteur.",
   introduction: `<p>Une citation sur l'âme sœur, on ne la cherche presque jamais pour le plaisir de lire. La plupart du temps, c'est pour l'écrire quelque part : au dos d'une carte d'anniversaire, sous une photo, dans un message envoyé un soir où on ne trouve pas les mots tout seul.</p>
-<p><strong>Le souci des listes qu'on trouve un peu partout, c'est qu'elles alignent quatre-vingts phrases sans jamais dire à quoi elles servent</strong>, et qu'elles collent un nom d'auteur célèbre sous à peu près n'importe quoi. Du coup on recopie, et on se retrouve à citer Paul Éluard pour une phrase qu'il n'a jamais écrite.</p>
-<p>On a fait autrement. Il y a ici 60 citations : 13 signées, avec l'auteur et l'ouvrage, et 47 qu'on a écrites nous-mêmes, sans fausse signature. Elles sont rangées selon ce que vous allez en faire, du message court à la carte de mariage. Et il y a une dernière partie sur les trois citations les plus partagées du web, qui ne sont pas de qui on croit.</p>`,
+<p>Voici 60 des plus belles citations sur l'âme sœur, celles qu'on a trouvées et celles qu'on a écrites.</p>`,
   quickSummary: [
-    "60 citations classées par usage : message, carte, longue distance, amitié, célibat.",
-    "13 citations signées et sourcées, 47 phrases écrites pour le site, sans fausse attribution.",
+    "60 citations à envoyer, à écrire sur une carte ou à poster sous une photo.",
+    "Des citations d'auteurs, d'Aristote à Elizabeth Gilbert, avec le livre d'où elles viennent.",
     "« Il n'y a pas de hasard, il n'y a que des rendez-vous » n'est pas de Paul Éluard.",
     "Le mythe de la moitié n'est pas de Platon lui-même, mais d'un personnage du Banquet.",
     "Une âme sœur, ce n'est pas votre moitié : c'est quelqu'un d'entier, en face de quelqu'un d'entier.",
@@ -24,20 +23,20 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'ce-qu-est-une-ame-soeur',
-      title: "C'est quoi une âme sœur, au fait ?",
+      title: "C'est quoi une âme sœur ?",
       content: `<p>Une âme sœur, c'est la personne avec qui être soi-même ne demande aucun effort. Ce n'est pas la personne parfaite, et ce n'est pas non plus celle qui vous complète parce qu'il vous manquerait un morceau. C'est celle avec qui vous êtes d'accord sur le fond et pas seulement sur les goûts, et avec qui les coups durs rapprochent au lieu de casser.</p>
-<p><strong>Il y a un critère que presque toutes les définitions oublient, et c'est le plus important : vous devez rester entier.</strong> Ne faire qu'un, d'accord, à condition que les deux existent encore. Quand l'un des deux a disparu en route, que les amis se sont éloignés et que les projets perso sont passés à la trappe, ce n'est plus une âme sœur. C'est de la fusion, et ça se termine rarement bien.</p>
-<p>On la confond aussi souvent avec la flamme jumelle, qui est autre chose : <a href="/test-relation-karmique/">un lien qui secoue beaucoup plus qu'il n'apaise</a>. L'âme sœur, elle, construit. Et si la question vous trotte pour quelqu'un en particulier, une vingtaine de questions suffisent la plupart du temps à <a href="/test-ame-soeur/">savoir de quel côté penche votre histoire</a>.</p>`,
+<p><strong>Il y a un critère que presque toutes les définitions oublient, et c'est le plus important : vous devez rester entier.</strong> Ne faire qu'un, d'accord, à condition que les deux existent encore. Quand l'un des deux a disparu en route, que les amis se sont éloignés et que les projets perso sont passés à la trappe, <a href="/test-ame-soeur/">ce n'est plus une âme sœur</a>. C'est de la fusion, et ça se termine rarement bien.</p>
+<p>On la confond aussi souvent avec la flamme jumelle, qui n'est pas la même chose du tout : une flamme jumelle, c'est <a href="/test-relation-karmique/">un lien qui secoue beaucoup plus qu'il n'apaise</a>. Une âme sœur, au contraire, rend la vie plus simple.</p>`,
     },
     {
       id: 'les-60-citations',
-      title: "Les 60 citations, rangées par ce que vous allez en faire",
-      content: `<p>Voici comment lire ce qui suit. La première série est signée : ce sont des phrases d'auteurs, avec le livre d'où elles viennent, et elles font très bien l'affaire quand vous voulez quelque chose qui a du poids. Les cinq séries suivantes sont des phrases qu'on a écrites, pensées pour être envoyées telles quelles. Elles ne portent pas de nom d'auteur, et c'est volontaire : on préfère ne rien signer plutôt que d'inventer une signature.</p>`,
+      title: "60 citations pour son âme sœur",
+      content: `<p>Il y en a pour tous les usages : une phrase courte à envoyer un mardi soir, une plus longue à écrire dans une carte de mariage, ou une pour l'amie qui compte autant qu'un amoureux.</p>`,
       subsections: [
         {
           id: 'citations-auteurs',
-          title: "Les 13 citations signées, avec leur source",
-          content: `<p>Celles-là traversent les siècles. On a vérifié d'où elles viennent, parce que la moitié du web les attribue à côté.</p>
+          title: "Les citations d'auteurs (1 à 13)",
+          content: `<p>Les treize premières sont d'auteurs, avec le livre d'où elles viennent. Ce sont celles qui font le plus d'effet dans un discours de mariage ou sur un faire-part.</p>
 <ol>
 <li>« Une seule âme habitant deux corps. » Aristote, quand on lui demandait ce qu'est un ami, rapporté par Diogène Laërce.</li>
 <li>« Chacun de nous cherche sans cesse celui qui lui est assorti. » Platon, <em>Le Banquet</em>, dans le discours d'Aristophane.</li>
@@ -96,7 +95,7 @@ const article: BlogArticleData = {
         {
           id: 'citations-distance',
           title: "Quand vous êtes loin l'un de l'autre (39 à 46)",
-          content: `<p>Huit phrases pour les soirs de décalage horaire, de train du dimanche et de « je te rappelle demain ».</p>
+          content: `<p>Huit phrases pour les soirs où vous n'êtes pas dans la même ville, et où le message du soir remplace tout le reste.</p>
 <ol start="39">
 <li>« La distance mesure des kilomètres. Elle ne sait pas mesurer le reste. »</li>
 <li>« Je compte les jours, et c'est la meilleure raison de compter que j'aie jamais eue. »</li>
@@ -141,7 +140,7 @@ const article: BlogArticleData = {
     {
       id: 'attribuees-a-tort',
       title: "Trois citations très partagées, et mal attribuées",
-      content: `<p>Celles-ci tournent partout sur le sujet, avec un nom d'auteur qui rassure. Sauf que les trois sont fausses, à des degrés différents. Autant le savoir avant de les graver sur un faire-part.</p>
+      content: `<p>Ces trois-là reviennent partout dès qu'on parle d'âme sœur, avec un nom d'auteur célèbre en dessous. Le souci, c'est que l'auteur n'est pas le bon. Autant le savoir avant de faire graver la phrase sur un faire-part.</p>
 <p><strong>« Il n'y a pas de hasard, il n'y a que des rendez-vous », de Paul Éluard :</strong> elle n'apparaît nulle part dans l'œuvre d'Éluard. Les premières traces datent de 1971, chez d'autres auteurs, et l'attribution à Éluard n'apparaît qu'en 1991 dans une publication québécoise, avant de se répandre avec internet dans les années 2000.</p>
 <p><strong>« Platon a dit qu'on cherche notre moitié » :</strong> le mythe existe bien, dans <em>Le Banquet</em>, mais il n'est pas de Platon. C'est Aristophane, un personnage du dialogue, qui le raconte, et Socrate lui répond juste après avec une tout autre idée de l'amour. En prime, le mythe parle de moitiés coupées en deux, pas d'âmes sœurs : le vocabulaire moderne a été greffé dessus bien plus tard.</p>
 <p><strong>« Une seule âme habitant deux corps », d'Aristote :</strong> la citation est authentique, elle est juste sortie de son contexte. Aristote répondait à la question « qu'est-ce qu'un ami ? », pas « qu'est-ce que l'amour ? ». Elle marche donc très bien pour votre meilleur ami, ce qui est plutôt une bonne nouvelle.</p>
@@ -153,11 +152,11 @@ const article: BlogArticleData = {
     {
       id: 'choisir-la-bonne',
       title: "Comment choisir celle qui tombera juste",
-      content: `<p>La plus belle citation du monde tombe à plat si elle ne ressemble pas à la personne qui l'envoie. Trois repères simples avant de recopier.</p>
+      content: `<p>La plus belle citation du monde tombe à plat si elle ne ressemble pas à la personne qui l'envoie. Il y a trois repères à garder en tête avant de recopier.</p>
 <p><strong>Le support décide de la longueur :</strong> un message se lit en deux secondes, une carte se relit pendant des années. Les phrases courtes marchent partout, les longues seulement sur papier.</p>
 <p><strong>Une citation ne remplace pas une phrase à vous :</strong> le mieux, c'est souvent de citer, puis d'ajouter une ligne personnelle en dessous. Deux lignes de vous valent mieux qu'un paragraphe de Victor Hugo.</p>
 <p><strong>Évitez celles qui parlent de moitié si votre couple n'y ressemble pas :</strong> beaucoup de gens n'aiment pas du tout l'idée d'être la moitié de quelqu'un, et vous ne le saurez qu'après avoir envoyé le message.</p>
-<p>Et si l'envie vous prend d'aller plus loin que la jolie phrase, il y a bien plus révélateur qu'une citation : les <a href="/questions-couple/">questions qu'on ne se pose jamais alors qu'on vit ensemble</a> en disent souvent long en une soirée. Quant à la question de fond, celle de savoir si c'est la bonne personne, on lui a consacré <a href="/blog/comment-savoir-si-cest-le-bon/">un article entier sur les signes qui comptent au quotidien</a>.</p>
+<p>Une citation fait plaisir cinq minutes. Si vous voulez y passer une soirée entière, les <a href="/questions-couple/">questions qu'on ne se pose jamais alors qu'on vit ensemble</a> font beaucoup plus d'effet. Et sur la question de fond, celle de savoir si c'est la bonne personne, on a écrit <a href="/blog/comment-savoir-si-cest-le-bon/">un article entier sur les signes qui comptent au quotidien</a>.</p>
 <a href="/test-ame-soeur/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Test âme sœur : est-ce elle, est-ce lui ?</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

@@ -128,11 +128,56 @@ Version humaine (à imiter) :
 ### Les mots interdits dans les titres
 
 JAMAIS, dans un title, un H1, un H2 ou un H3 : « vraiment », « concrètement »,
-« en bref », ni leurs équivalents dans les autres langues (really, actually,
+« en bref », « au fait », ni leurs équivalents dans les autres langues (really, actually,
 in short ; realmente, de verdad, concretamente, en resumen ; wirklich,
 konkret gesagt, kurz gesagt ; davvero, veramente, concretamente, in breve).
 Ce sont des chevilles : un titre qui en a besoin est un titre mal posé.
 On reformule ou on retire le mot, dans la langue du titre.
+
+### Ce qu'une introduction ne fait jamais
+
+Une introduction entre dans le sujet. Elle ne fait ni l'un ni l'autre de ces
+deux détours, qui sont des marqueurs IA immédiats :
+
+- **Taper sur ce qui existe ailleurs :** « le problème des listes qu'on trouve
+  partout », « la plupart des articles se contentent de… », « contrairement à
+  ce qu'on lit souvent ». Le lecteur n'est pas venu lire une critique de la
+  concurrence. On montre qu'on fait mieux en le faisant, pas en le disant.
+- **Expliquer comment l'article est construit :** « il y a ici 60 citations :
+  13 signées et 47 écrites par nous, rangées selon… », « voici comment lire ce
+  qui suit », « la première partie traite de… ». Le plan se voit dans les
+  titres. Personne ne lit le mode d'emploi d'un article.
+
+Une bonne introduction dit de quoi on parle, donne le contexte d'usage, puis
+annonce le contenu en une phrase simple : « Voici 60 des meilleures citations
+sur l'âme sœur, celles qu'on a trouvées et celles qu'on a écrites. » Et on
+attaque.
+
+### La fausse modestie et la vertu affichée
+
+Se mettre en scène en train de bien faire est un marqueur IA aussi net que les
+autres. Interdit :
+
+> « Elles ne portent pas de nom d'auteur, et c'est volontaire : on préfère ne
+> rien signer plutôt que d'inventer une signature. »
+
+> « On a vérifié d'où elles viennent, parce que la moitié du web les attribue
+> à côté. »
+
+Le travail bien fait se constate, il ne se commente pas. Si une information
+mérite d'être donnée (une source, une nuance), on la donne platement, sans
+souligner le mérite qu'on a eu à la chercher.
+
+### Les phrases elliptiques qui ne veulent rien dire
+
+Une phrase courte et rythmée n'est pas une phrase claire. Interdit :
+
+> « L'âme sœur, elle, construit. »
+
+Construit quoi ? Personne ne parle comme ça. Chaque phrase doit pouvoir être
+lue à voix haute par quelqu'un qui ne connaît pas le sujet et être comprise du
+premier coup. Le verbe a un complément, le pronom a un référent, et l'incise
+de style (« elle, », « lui, ») disparaît.
 
 ### Les marqueurs IA interdits
 
@@ -166,6 +211,20 @@ la page cible collé dans une phrase.
    qu'un lien y ait sa place. Une page créée doit porter **au minimum 2 liens
    internes sortants en plein texte**, en plus du bloc de renvoi et de la
    colonne latérale, qui ne comptent pas.
+
+### L'ancre se trouve dans le texte, elle ne s'invente pas
+
+On relit le paragraphe et on cherche la formulation qui est **déjà écrite** et
+qui mène vers la cible. On ne fabrique pas une formule vague à la fin de la
+phrase pour y accrocher le lien.
+
+Exemple réel, sur un paragraphe qui se termine par « …ce n'est plus une âme
+sœur, c'est de la fusion » :
+
+```
+✗  …suffisent à <a>savoir de quel côté penche votre histoire</a>.   (inventé, vague)
+✓  …<a>ce n'est plus une âme sœur</a>, c'est de la fusion.          (déjà là, précis)
+```
 
 ### Ce qui fait une bonne ancre
 
