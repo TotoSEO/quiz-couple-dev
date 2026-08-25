@@ -398,7 +398,22 @@
     // Une page à deux formats commence par demander lequel. Le mode retenu
     // remplace la configuration : tout ce qui suit se déroule ensuite comme
     // pour un quiz ordinaire.
+    // Mais d'abord, la sonde : le chargeur rappelle ce callback même quand
+    // aucune donnée n'a pu être téléchargée, et l'écran de choix se dessinait
+    // alors avec ses replis, icône générique, « homme »/« femme » sans texte.
+    // C'est l'écran qu'a vu le rendu de la Search Console, dont le budget
+    // réseau coupe volontiers les fetch. Même mécanique que le plateau :
+    // repli sur le fichier complet, trois retentatives espacées, et l'écran
+    // d'indisponibilité plutôt qu'un squelette à moitié vide.
     if (config.modes) {
+      var sondeM = config.modes[0].prefix + '.q1';
+      var vM = QuizEngine.tgd(sondeM, null);
+      if (!vM || vM === sondeM) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
       afficherChoixDeMode(config);
       return;
     }
