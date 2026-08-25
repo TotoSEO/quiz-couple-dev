@@ -80,6 +80,8 @@ const article: BlogArticleData = {
 <li><p><strong>Il se souvient :</strong> d'un prénom, d'un rendez-vous médical, d'une histoire que vous avez racontée une fois.</p></li>
 </ul>
 
+<p>Ces signes-là arrivent une fois qu'il est installé. Tout au début, ça se voit ailleurs, sur son corps : <a href="/blog/homme-nerveux-devant-une-femme/">les mains, la bouche et le regard le trahissent</a> bien avant qu'il ne se le dise à lui-même.</p>
+
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Ce qui compte vraiment</p>

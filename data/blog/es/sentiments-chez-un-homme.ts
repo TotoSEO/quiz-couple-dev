@@ -80,6 +80,8 @@ const article: BlogArticleData = {
 <li><p><strong>Se acuerda:</strong> de un nombre, de una cita médica, de una historia que contaste una vez.</p></li>
 </ul>
 
+<p>Esas señales llegan cuando ya está instalado. Al principio del todo se ve en otro sitio, en su cuerpo: <a href="/es/blog/hombre-nervioso-delante-de-una-mujer/">las manos, la boca y la mirada lo delatan</a> mucho antes de que él se lo diga a sí mismo.</p>
+
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Lo que cuenta de verdad</p>

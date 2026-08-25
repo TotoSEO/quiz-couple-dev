@@ -80,6 +80,8 @@ const article: BlogArticleData = {
 <li><p><strong>Si ricorda:</strong> di un nome, di una visita medica, di una storia che hai raccontato una volta.</p></li>
 </ul>
 
+<p>Questi segni arrivano quando ormai si è sistemato. All'inizio si vede altrove, sul suo corpo: <a href="/it/blog/uomo-nervoso-davanti-a-una-donna/">le mani, la bocca e lo sguardo lo tradiscono</a> molto prima che se lo dica lui stesso.</p>
+
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Quello che conta davvero</p>
