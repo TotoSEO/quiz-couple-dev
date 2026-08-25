@@ -1238,6 +1238,44 @@ var QuizEngine = (function() {
     wrap.appendChild(zone);
   }
 
+  // ── Second encart partenaire ───────────────────────────────────────
+  // Gleese, plateforme française pour les couples curieux. Il vivait avant
+  // dans le corps de la page, sous le contenu éditorial : un lien affilié n'a
+  // rien à y faire, et personne ne descendait jusque-là. Sa place est ici,
+  // dans l'écran de résultat, juste après la bannière de la boutique : le
+  // lecteur vient de finir la partie, c'est le seul moment où la proposition
+  // tombe juste.
+  //
+  // Volontairement sobre à côté de la bannière qui le précède : deux blocs
+  // aussi voyants l'un que l'autre se neutraliseraient. Mêmes précautions que
+  // plus haut, rel="sponsored nofollow noopener" et mention visible.
+  var PARTENAIRES_SECOND = {
+    coquin: {
+      fr: {
+        url: 'https://gleese.com/?ae=103',
+        mention: 'Lien affilié',
+        titre: 'Envie de tester quelque chose de nouveau ?',
+        texte: "Si ce quiz vous a donné des idées et que vous voulez aller plus loin à deux, Gleese est une plateforme française dédiée aux couples curieux.",
+        bouton: 'Découvrir le libertinage avec Gleese'
+      }
+    }
+  };
+
+  function blocPartenaireSecond(wrap, cle, lang) {
+    var jeu = PARTENAIRES_SECOND[cle];
+    var p = jeu && jeu[lang || 'fr'];
+    if (!p) return;
+
+    var bloc = el('div', 'partenaire-adulte partenaire-adulte-resultat');
+    bloc.innerHTML =
+      '<span class="partenaire-adulte-mention">' + esc(p.mention) + '</span>' +
+      '<p class="partenaire-adulte-titre">' + esc(p.titre) + '</p>' +
+      '<p class="partenaire-adulte-texte">' + esc(p.texte) + '</p>' +
+      '<a class="btn btn-cta btn-gradient" href="' + p.url + '" target="_blank" ' +
+        'rel="sponsored nofollow noopener">' + esc(p.bouton) + '</a>';
+    wrap.appendChild(bloc);
+  }
+
   function renderActionButtons(wrap, opts) {
     var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
     var currentKey = quizEl ? quizEl.dataset.quiz : '';
@@ -2514,6 +2552,7 @@ var QuizEngine = (function() {
     wrap.appendChild(el('p', 'text-muted-foreground mb-6', score + '/' + jouees + ' ' + tg('coquin.goodGuesses', 'bonnes devinettes')));
 
     blocPartenaire(wrap, 'coquin', this.lang);
+    blocPartenaireSecond(wrap, 'coquin', this.lang);
 
     renderActionButtons(wrap, {
       share: { type: 'duo', pct: pct },
@@ -5966,7 +6005,10 @@ var QuizEngine = (function() {
 
     // Ce moteur sert aussi la version tout public d'action ou vérité, qui ne
     // doit surtout pas porter cet encart. Seul le préfixe hot le déclenche.
-    if (this.prefix === 'actionVeriteHot') blocPartenaire(wrap, 'coquin', this.lang);
+    if (this.prefix === 'actionVeriteHot') {
+      blocPartenaire(wrap, 'coquin', this.lang);
+      blocPartenaireSecond(wrap, 'coquin', this.lang);
+    }
 
     renderActionButtons(wrap, {
       share: { type: 'cartes', score: this.releves, total: total },

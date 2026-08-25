@@ -15,7 +15,6 @@ import {
   BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID, ADSENSE_CLIENT,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
-  PARTENAIRE_ADULTE,
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable,
 } from './config.js';
@@ -562,9 +561,6 @@ function renderTemplate(templateName, data) {
     data.ogImageWidth = size.width;
     data.ogImageHeight = size.height;
   }
-  // Disponible pour tous les gabarits ; l'encart decide lui-meme s'il
-  // s'affiche, selon la route et la langue.
-  if (data && data.partenaireAdulte === undefined) data.partenaireAdulte = PARTENAIRE_ADULTE;
   return ejs.renderFile(templatePath, data, {
     views: [TEMPLATES_DIR],
     async: false,
