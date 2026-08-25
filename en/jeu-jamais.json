@@ -1,0 +1,48 @@
+{
+  "jsonLd": {
+    "name": "Never Have I Ever, couples game"
+  },
+  "hero": {
+    "badge": "Couples game",
+    "title": "Never Have I Ever | 100 questions to play as a couple",
+    "titleHighlight": "Never Have I Ever",
+    "description": "The great party classic, rewritten for two. You each answer in turn, completely honestly, and the result shows which of you has the most to confess."
+  },
+  "section1": {
+    "title": "How the game “Never Have I Ever” works",
+    "intro": "The rule fits in one sentence: a statement starts with <strong>“Never have I ever”</strong>, and each of you admits whether, in real life, you have actually done it. No right answer, no points to score. What makes the game is what the answer sets off: the look on the other one's face, the “wait, when?”, and the story that follows.",
+    "etape1Titre": "Enter your names and pick a length",
+    "etape1Texte": "15 questions for a quick game, 30 for the classic version, 100 for the full ride. You can always extend along the way.",
+    "etape2Titre": "Read the statement out loud",
+    "etape2Texte": "Every card starts with “Never have I ever”. Reading it out loud is part of the game: that is when your eyes meet.",
+    "etape3Titre": "Answer one after the other",
+    "etape3Texte": "The game announces who answers first, then asks the other one “And you?”. The question does not change until you have both answered, and who goes first alternates with every card.",
+    "etape4Titre": "Compare your results",
+    "etape4Texte": "At the end, one pie chart per person counts the “I have” and the “I never have”. The gap between the two is the conversation of the evening.",
+    "apres": "You will notice there are <strong>no forfeits and no penalties</strong>: answering honestly is hard enough. If your duo prefers evenings where a confession has a price, the <a href=\"/en/couple-forfeits-wheel/\">wheel that hands out forfeits for two</a> picks up exactly where this game stops."
+  },
+  "section2": {
+    "title": "The difference between the classic version and the couples version",
+    "p1": "What changes is not the rules: it is the questions. The classic version is played among friends, often five or six of you, and casts a wide net: the parties that went sideways, the high-school lies, the holiday embarrassments. Everyone raises a finger, someone shouts “story time!”, and on to the next one.",
+    "p2": "The couples version tightens everything around your own story: your beginnings, your little secrets, each other's families, what happens under the duvet and what you imagine for later. And above all, <strong>you are playing opposite the only person in the world who can fact-check your answers</strong>. Lying to “never have I ever secretly looked through your phone” in front of the person concerned is a very different sport than lying to your friends.",
+    "p3": "It is also a gentler game than it looks. Among friends, you hunt for the spectacular anecdote; as a couple, the strongest questions are the simplest ones, the ones that make you both say “me neither” with a smile. If you would rather decide than confess, the <a href=\"/en/would-you-rather-couple-quiz/\">impossible choices to settle as a pair</a> are the other great classic of the genre."
+  },
+  "section3": {
+    "title": "Example Never Have I Ever questions",
+    "intro": "Here are about twenty of the 100 questions asked in the game. The mix is deliberate: tender ones, guilty ones, naughty ones, and a few classics to catch your breath between two confessions.",
+    "apres": "The other 80 are waiting in the game, and every round draws its own set: the “play again with different questions” button picks first from the ones you have not seen yet."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "How long does a game last?",
+    "a1": "About 10 minutes for 15 questions, double that for 30. Every question is asked to both players, so a 15-question game is actually 30 answers.",
+    "q2": "Do we have to drink or do forfeits?",
+    "a2": "No. Here you answer, and that is it. That is what makes it playable any time, including a Tuesday night on the couch.",
+    "q3": "Are the questions risqué?",
+    "a3": "Some are, but none go beyond what two people in a relationship can say to each other. To really turn up the heat, the <a href=\"/en/dirty-truth-or-dare-couples/\">hottest of our games for two</a> is built for exactly that.",
+    "q4": "Can we play long-distance?",
+    "a4": "Yes, and it works great: one of you opens the game, reads the statement out loud on a video call and clicks for both. Nothing in the game requires being in the same room.",
+    "q5": "Can we replay without getting the same questions?",
+    "a5": "Yes. The game remembers what it has already asked and draws first from the rest of the 100 questions. In three 30-question games you will have seen just about everything."
+  }
+}

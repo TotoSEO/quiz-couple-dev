@@ -885,6 +885,7 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'qui-de-nous-deux', icon: '👀', route: 'jeuQuiDeNous' },
     { type: 'jeu', key: 'dilemmes', icon: '⚖️', route: 'jeuDilemmes' },
     { type: 'jeu', key: 'pour-contre', icon: '👍', route: 'pourContre' },
+    { type: 'jeu', key: 'jamais', icon: '🙊', route: 'jeuJamais' },
   ];
 
   // Suggestions de fin de partie, choisies une par une pour chaque page.
@@ -7999,6 +8000,286 @@ var QuizEngine = (function() {
     catch (e) { return String(n); }
   }
 
+
+  // ── Je n'ai jamais, version couple ─────────────────────────
+  // Deux joueurs, la même affirmation posée aux deux, chacun son tour : le
+  // premier répond, la carte ne bouge pas, et le bandeau demande « Et toi ? »
+  // à l'autre. Rien à gagner : le résultat est le portrait de la partie, un
+  // camembert par joueur avec ses « j'ai déjà » et ses « je n'ai jamais ».
+  //
+  // Celui qui ouvre la carte alterne à chaque question : répondre en premier
+  // engage plus que confirmer derrière l'autre, la pression doit tourner.
+  //
+  // Le réservoir fait cent affirmations et une partie en pose quinze ou
+  // trente : « recommencer avec d'autres questions » a un sens, le moteur
+  // retient ce qui a déjà été posé depuis l'arrivée sur la page et pioche
+  // d'abord dans le reste.
+  function JamaisGame(config) {
+    this.container = config.container;
+    this.prefix = config.prefix || 'jamais';
+    this.lang = config.lang || 'fr';
+    this.pool = config.questions || [];
+    this.phase = 'setup';
+    this.noms = ['', ''];
+    this.limite = 15;
+    this.questions = [];
+    this.idx = 0;
+    this.premier = 0;
+    this.tour = 0;
+    this.compte = [{ jai: 0, jamais: 0 }, { jai: 0, jamais: 0 }];
+    this.dejaVues = {};
+    this.render();
+  }
+
+  // Les libellés du jeu vivent dans gd.json, à côté des cent affirmations :
+  // c'est tgd qui les lit. tg chercherait dans les chaînes communes, ne
+  // trouverait rien, et servirait le repli français dans les cinq langues.
+  JamaisGame.prototype.jtg = function(cle, repli) {
+    return tgd(this.prefix + '.' + cle, repli);
+  };
+
+  JamaisGame.prototype.joueur = function(i) {
+    return this.noms[i] || tg('playerSetup.player' + (i + 1), 'Joueur ' + (i + 1));
+  };
+
+  // Une séquence complète est tirée au départ : les cartes jamais posées
+  // d'abord, puis les autres si la session a déjà épuisé le réservoir.
+  JamaisGame.prototype.tirer = function() {
+    var self = this;
+    var fraiches = this.pool.filter(function(q) { return !self.dejaVues[q.id]; });
+    var revues = this.pool.filter(function(q) { return self.dejaVues[q.id]; });
+    this.questions = shuffleArray(fraiches).concat(shuffleArray(revues));
+  };
+
+  JamaisGame.prototype.render = function() {
+    this.container.innerHTML = '';
+    if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'palier') this.renderPalier();
+    else if (this.phase === 'resultats') this.renderResultats();
+    else this.renderJeu();
+  };
+
+  JamaisGame.prototype.renderSetup = function() {
+    var self = this;
+    var grille = cartesDeuxJoueurs('jnj-nom');
+
+    // Le choix de la longueur, avant de commencer : la page promet cent
+    // questions, mais personne n'est obligé de s'engager sur les cent.
+    var longueurs = [15, 30, 100];
+    var choixWrap = el('div', 'jnj-longueur');
+    choixWrap.appendChild(el('p', 'jnj-longueur-titre', this.jtg('longueurTitre', 'Vous jouez en combien de questions ?')));
+    var boutonsWrap = el('div', 'jnj-longueur-choix');
+    longueurs.forEach(function(n) {
+      var b = el('button', 'jnj-longueur-btn' + (n === self.limite ? ' active' : ''));
+      b.type = 'button';
+      b.setAttribute('aria-pressed', n === self.limite ? 'true' : 'false');
+      b.innerHTML = '<span class="jnj-longueur-nb">' + n + '</span>' +
+        '<span class="jnj-longueur-unite">' + esc(self.jtg('longueurMot', 'questions')) + '</span>' +
+        '<span class="jnj-longueur-libelle">' + esc(self.jtg('longueur' + n, '')) + '</span>';
+      b.addEventListener('click', function() {
+        self.limite = n;
+        boutonsWrap.querySelectorAll('.jnj-longueur-btn').forEach(function(x) {
+          x.classList.remove('active'); x.setAttribute('aria-pressed', 'false');
+        });
+        b.classList.add('active'); b.setAttribute('aria-pressed', 'true');
+      });
+      boutonsWrap.appendChild(b);
+    });
+    choixWrap.appendChild(boutonsWrap);
+
+    var ecran = ecranDepart({
+      icone: '🙊',
+      titre: this.jtg('setupTitre', 'Je n\'ai jamais, version couple'),
+      desc: this.jtg('setupDesc', ''),
+      corps: [grille, choixWrap],
+      bouton: this.jtg('commencer', 'On commence !'),
+      onStart: function() {
+        self.noms = [
+          grille.querySelector('#jnj-nom1').value.trim() || tg('playerSetup.player1', 'Joueur 1'),
+          grille.querySelector('#jnj-nom2').value.trim() || tg('playerSetup.player2', 'Joueur 2')
+        ];
+        self.tirer();
+        self.idx = 0; self.premier = 0; self.tour = 0;
+        self.compte = [{ jai: 0, jamais: 0 }, { jai: 0, jamais: 0 }];
+        self.phase = 'jeu';
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(ecran.wrap);
+  };
+
+  JamaisGame.prototype.renderJeu = function() {
+    var self = this;
+    var q = this.questions[this.idx];
+    var repondant = this.tour === 0 ? this.premier : 1 - this.premier;
+
+    var wrap = el('div', 'quiz-engine jnj-jeu quiz-question-enter');
+    renderProgressBar(wrap, this.idx, this.limite,
+      this.jtg('questionSur', 'Question {{n}} / {{total}}')
+        .replace('{{n}}', this.idx + 1).replace('{{total}}', this.limite));
+
+    var carte = el('div', 'jnj-carte');
+    carte.innerHTML = '<p class="jnj-enonce">' + esc(q.texte) + '</p>';
+    wrap.appendChild(carte);
+
+    // Le second tour garde la carte : seul le bandeau change, et il porte
+    // l'initiale de celui qui doit répondre pour qu'on sache où en est le
+    // téléphone posé entre les deux.
+    var phrase = this.tour === 0
+      ? this.jtg('tourDe', '{{nom}}, à toi de répondre !').replace('{{nom}}', this.joueur(repondant))
+      : this.jtg('etToi', 'Et toi, {{nom}} ?').replace('{{nom}}', this.joueur(repondant));
+    var bandeau = el('div', 'jnj-bandeau' + (this.tour === 1 ? ' jnj-bandeau--second' : ''));
+    bandeau.innerHTML = badgeDeTour(this.joueur(repondant), phrase, repondant);
+    wrap.appendChild(bandeau);
+
+    var choix = el('div', 'jnj-choix');
+    [['jai', this.jtg('btnJai', 'J\'ai déjà'), '🙋'],
+     ['jamais', this.jtg('btnJamais', 'Je n\'ai jamais'), '😇']].forEach(function(o) {
+      var b = el('button', 'jnj-btn jnj-btn--' + o[0]);
+      b.type = 'button';
+      b.innerHTML = '<span class="jnj-btn-emoji" aria-hidden="true">' + o[2] + '</span>' +
+        '<span class="jnj-btn-texte">' + esc(o[1]) + '</span>';
+      b.addEventListener('click', function() {
+        if (!answerLock(self, 450)) return;
+        self.compte[repondant][o[0]]++;
+        b.classList.add('jnj-btn--pris');
+        choix.classList.add('jnj-choix--verrouille');
+        setTimeout(function() {
+          if (self.tour === 0) {
+            self.tour = 1;
+            self.render();
+          } else {
+            self.idx++;
+            self.premier = 1 - self.premier;
+            self.tour = 0;
+            if (self.idx >= self.limite) {
+              // Palier atteint. La rallonge n'a de sens que s'il reste
+              // vraiment des cartes derrière.
+              self.phase = (self.limite < self.questions.length) ? 'palier' : 'resultats';
+            }
+            self.render();
+          }
+        }, 380);
+      });
+      choix.appendChild(b);
+    });
+    wrap.appendChild(choix);
+    this.container.appendChild(wrap);
+  };
+
+  // Palier : la longueur choisie est jouée, on continue ou on s'arrête.
+  // « Voir les résultats » porte la couleur : c'est la sortie naturelle,
+  // la rallonge est l'option de ceux qui ne veulent pas lâcher.
+  JamaisGame.prototype.renderPalier = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine jnj-palier animate-fade-in text-center');
+    wrap.appendChild(el('div', 'jnj-palier-icone', '🙊'));
+    wrap.appendChild(el('h2', 'jnj-palier-titre',
+      this.jtg('palierTitre', 'Déjà {{n}} questions !').replace('{{n}}', this.limite)));
+    wrap.appendChild(el('p', 'jnj-palier-texte', this.jtg('palierTexte', '')));
+
+    var choix = el('div', 'jnj-palier-choix');
+    var voir = el('button', 'btn btn-cta btn-lg', this.jtg('palierResultats', 'Voir les résultats'));
+    voir.type = 'button';
+    voir.addEventListener('click', function() { self.phase = 'resultats'; self.render(); });
+    var continuer = el('button', 'btn btn-outline',
+      this.jtg('palierContinuer', 'Continuer avec 15 questions de plus'));
+    continuer.type = 'button';
+    continuer.addEventListener('click', function() {
+      self.limite = Math.min(self.limite + 15, self.questions.length);
+      self.phase = 'jeu';
+      self.render();
+      smoothScroll(self.container, 'start');
+    });
+    choix.appendChild(voir);
+    choix.appendChild(continuer);
+    wrap.appendChild(choix);
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  // Un camembert par joueur. Tout est dessiné en SVG : l'anneau de fond porte
+  // la couleur « je n'ai jamais », l'arc par-dessus la part des « j'ai déjà »,
+  // et le centre le compte exact. Les libellés vivent sous le disque, jamais
+  // dedans : rien ne peut déborder ni passer à la ligne au mauvais endroit.
+  JamaisGame.prototype.camembert = function(j, total) {
+    var c = this.compte[j];
+    var frac = total ? c.jai / total : 0;
+    var circ = 2 * Math.PI * 46;
+    var carte = el('div', 'jnj-resultat');
+    carte.innerHTML =
+      '<span class="jnj-resultat-nom">' + esc(this.joueur(j)) + '</span>' +
+      '<div class="jnj-camembert">' +
+        '<svg viewBox="0 0 120 120" role="img" aria-label="' + esc(this.joueur(j) + ' : ' + c.jai + ' / ' + total) + '">' +
+          '<circle class="jnj-camembert-fond" cx="60" cy="60" r="46"></circle>' +
+          '<circle class="jnj-camembert-part" cx="60" cy="60" r="46" ' +
+            'stroke-dasharray="' + (frac * circ).toFixed(2) + ' ' + circ.toFixed(2) + '"></circle>' +
+        '</svg>' +
+        '<span class="jnj-camembert-valeur">' + c.jai + '<small>/' + total + '</small></span>' +
+      '</div>' +
+      '<ul class="jnj-legende">' +
+        '<li><i class="jnj-puce jnj-puce--jai" aria-hidden="true"></i>' +
+          '<span class="jnj-legende-mot">' + esc(this.jtg('legJai', 'J\'ai déjà')) + '</span>' +
+          '<b>' + c.jai + '</b></li>' +
+        '<li><i class="jnj-puce jnj-puce--jamais" aria-hidden="true"></i>' +
+          '<span class="jnj-legende-mot">' + esc(this.jtg('legJamais', 'Je n\'ai jamais')) + '</span>' +
+          '<b>' + c.jamais + '</b></li>' +
+      '</ul>';
+    return carte;
+  };
+
+  JamaisGame.prototype.renderResultats = function() {
+    var self = this;
+    // Le total réellement joué : celui qui s'arrête au palier ne doit pas
+    // voir un camembert calculé sur une partie qu'il n'a pas faite.
+    var total = this.compte[0].jai + this.compte[0].jamais;
+
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-3', '🙊'));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', this.jtg('resultatsTitre', 'Qui a le plus de choses à avouer ?')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6',
+      this.jtg('resultatsSous', 'Sur les {{total}} questions posées à chacun.').replace('{{total}}', total)));
+
+    var duo = el('div', 'jnj-resultats');
+    duo.appendChild(this.camembert(0, total));
+    duo.appendChild(this.camembert(1, total));
+    wrap.appendChild(duo);
+
+    var verdict = el('div', 'jnj-verdict');
+    if (this.compte[0].jai === this.compte[1].jai) {
+      verdict.innerHTML = '<p>' + esc(this.jtg('phraseEgalite', '')) + '</p>';
+    } else {
+      var devant = this.compte[0].jai > this.compte[1].jai ? 0 : 1;
+      verdict.innerHTML =
+        '<p>' + esc(this.jtg('phrasePlus', '').replace('{{nom}}', this.joueur(devant))) + '</p>' +
+        '<p>' + esc(this.jtg('phraseAnge', '').replace('{{nom}}', this.joueur(1 - devant))) + '</p>';
+    }
+    wrap.appendChild(verdict);
+
+    var rejouer = el('button', 'btn btn-cta btn-lg mt-6 mb-2', this.jtg('recommencer', 'Recommencer avec d\'autres questions'));
+    rejouer.type = 'button';
+    rejouer.addEventListener('click', function() {
+      // Les cartes qui viennent d'être posées sortent du chapeau : la
+      // partie suivante pioche dans ce qui n'a pas encore servi.
+      for (var i = 0; i < self.idx; i++) self.dejaVues[self.questions[i].id] = true;
+      self.tirer();
+      self.idx = 0; self.premier = 0; self.tour = 0;
+      self.compte = [{ jai: 0, jamais: 0 }, { jai: 0, jamais: 0 }];
+      self.phase = 'jeu';
+      self.render();
+      smoothScroll(self.container, 'start');
+    });
+    wrap.appendChild(rejouer);
+
+    renderActionButtons(wrap, {
+      share: { type: 'fun' },
+      restart: function() { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -8025,6 +8306,7 @@ var QuizEngine = (function() {
     DuoVoteGame: DuoVoteGame,
     DilemmeGame: DilemmeGame,
     PourContreGame: PourContreGame,
+    JamaisGame: JamaisGame,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,

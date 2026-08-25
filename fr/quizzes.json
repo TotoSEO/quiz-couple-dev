@@ -327,5 +327,11 @@
     "shortTitle": "Questions de premier rendez-vous",
     "description": "15 questions à se poser à deux, en trois paliers de plus en plus personnels. Rien à installer, rien à noter.",
     "metaDescription": "Le jeu de questions pour un premier rendez-vous, en trois niveaux d'intimité croissante. 60 questions, 15 par partie, à jouer à deux sur un téléphone."
+  },
+  "jeuJamais": {
+    "title": "Je n'ai jamais : Jeu pour couples interactif gratuit",
+    "shortTitle": "Je n'ai jamais",
+    "metaDescription": "100 questions « je n'ai jamais » pensées pour les couples. Chacun répond à son tour, le jeu compte les aveux et révèle qui de vous deux a le plus vécu. Gratuit, sans inscription.",
+    "description": "Le grand classique des soirées, réécrit pour deux : chacun répond à tour de rôle, et le résultat montre qui a le plus de choses à avouer."
   }
 }

@@ -355,7 +355,8 @@
     "testDependance": "Test emotionale Abhängigkeit",
     "testEx": "Test denkt mein Ex noch an mich",
     "testChargeMentale": "Mental-Load-Test für Paare",
-    "quizRencontre": "Fragen fürs erste Date"
+    "quizRencontre": "Fragen fürs erste Date",
+    "jeuJamais": "Ich hab noch nie"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",

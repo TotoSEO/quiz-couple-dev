@@ -1,0 +1,48 @@
+{
+  "jsonLd": {
+    "name": "Je n'ai jamais, jeu pour couple"
+  },
+  "hero": {
+    "badge": "Jeu pour couple",
+    "title": "Je n'ai jamais | 100 questions à jouer en couple",
+    "titleHighlight": "Je n'ai jamais",
+    "description": "Le grand classique des soirées, réécrit pour deux. Chacun répond à tour de rôle, en toute honnêteté, et le résultat montre qui de vous deux a le plus de choses à avouer."
+  },
+  "section1": {
+    "title": "Explications du jeu « Je n'ai jamais »",
+    "intro": "La règle tient en une phrase : une affirmation commence par <strong>« Je n'ai jamais »</strong>, et chacun avoue si, en vrai, il l'a déjà fait. Pas de bonne réponse, pas de points à marquer. Ce qui fait le jeu, c'est ce que la réponse déclenche : la tête de l'autre, la question « attends, quand ça ? », et l'histoire qui arrive derrière.",
+    "etape1Titre": "Entrez vos prénoms et choisissez la longueur",
+    "etape1Texte": "15 questions pour une partie rapide, 30 pour la version classique, 100 pour l'intégrale. Vous pourrez toujours prolonger en cours de route.",
+    "etape2Titre": "Lisez l'affirmation à voix haute",
+    "etape2Texte": "Chaque carte commence par « Je n'ai jamais ». La lire à voix haute fait partie du jeu : c'est là que les regards se croisent.",
+    "etape3Titre": "Répondez chacun votre tour",
+    "etape3Texte": "Le jeu annonce qui répond en premier, puis demande « Et toi ? » à l'autre. La question ne change pas tant que vous n'avez pas répondu tous les deux, et le premier à répondre alterne à chaque carte.",
+    "etape4Titre": "Comparez vos résultats",
+    "etape4Texte": "À la fin, un camembert par personne compte les « j'ai déjà » et les « je n'ai jamais ». L'écart entre les deux, c'est le sujet de conversation de la soirée.",
+    "apres": "Vous remarquerez qu'il n'y a <strong>ni gage ni pénalité</strong> : répondre franchement est déjà toute la difficulté. Si votre duo préfère les soirées où un aveu se paie, la <a href=\"/gage-couple/\">roue qui distribue les gages à deux</a> reprend exactement là où ce jeu s'arrête."
+  },
+  "section2": {
+    "title": "La différence entre la version classique et la version pour couples",
+    "p1": "Ce qui change, ce ne sont pas les règles : ce sont les questions. La version classique se joue entre amis, souvent à cinq ou six, et ratisse large : les soirées qui ont dérapé, les mensonges de lycée, les hontes de vacances. Chacun lève un doigt, quelqu'un crie « raconte ! », et on passe à la suivante.",
+    "p2": "La version pour couples resserre tout sur votre histoire : vos débuts, vos petites cachotteries, la famille de l'autre, ce qui se passe sous la couette et ce que vous imaginez pour la suite. Et surtout, <strong>vous jouez face à la seule personne au monde capable de vérifier vos réponses</strong>. Mentir à « je n'ai jamais regardé ton téléphone en cachette » devant la personne concernée, c'est une autre paire de manches qu'entre amis.",
+    "p3": "C'est aussi un jeu plus doux qu'il n'y paraît. Entre amis, on cherche l'anecdote spectaculaire ; à deux, les questions les plus fortes sont les plus simples, celles qui font dire « moi non plus » en souriant. Si vous préférez trancher plutôt qu'avouer, les <a href=\"/tu-preferes-couple-quiz/\">choix impossibles à départager à deux</a> sont l'autre grand classique du genre."
+  },
+  "section3": {
+    "title": "Exemple de questions Je n'ai jamais",
+    "intro": "Voici une vingtaine des 100 questions posées dans le jeu. Le mélange est volontaire : des tendres, des coupables, des coquines et quelques classiques pour respirer entre deux aveux.",
+    "apres": "Les 80 autres vous attendent dans le jeu, et chaque partie fait son propre tirage : le bouton « recommencer avec d'autres questions » pioche d'abord dans celles que vous n'avez pas encore vues."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Combien de temps dure une partie ?",
+    "a1": "Environ 10 minutes en 15 questions, le double en 30. Chaque question est posée aux deux joueurs, donc une partie de 15 fait en réalité 30 réponses.",
+    "q2": "Faut-il boire ou donner des gages ?",
+    "a2": "Non. Ici on répond, c'est tout. C'est ce qui permet d'y jouer n'importe quand, y compris un mardi soir dans le canapé.",
+    "q3": "Les questions sont-elles osées ?",
+    "a3": "Certaines, oui, mais aucune ne dépasse ce que deux personnes en couple peuvent se dire. Pour faire vraiment monter la température, la <a href=\"/action-ou-verite-coquin/\">version la plus chaude de nos jeux à deux</a> est faite pour ça.",
+    "q4": "Peut-on y jouer à distance ?",
+    "a4": "Oui, très bien même : l'un ouvre le jeu, lit l'affirmation à voix haute en appel vidéo et clique pour les deux. Rien dans le jeu ne demande d'être dans la même pièce.",
+    "q5": "Peut-on rejouer sans retomber sur les mêmes questions ?",
+    "a5": "Oui. Le jeu retient ce qu'il a déjà posé et pioche d'abord dans le reste des 100 questions. En trois parties de 30, vous aurez à peu près tout vu."
+  }
+}

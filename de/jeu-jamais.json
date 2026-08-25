@@ -1,0 +1,48 @@
+{
+  "jsonLd": {
+    "name": "Ich hab noch nie, Spiel für Paare"
+  },
+  "hero": {
+    "badge": "Spiel für Paare",
+    "title": "Ich hab noch nie | 100 Fragen für Paare",
+    "titleHighlight": "Ich hab noch nie",
+    "description": "Der große Partyklassiker, neu geschrieben für zwei. Ihr antwortet abwechselnd, ganz ehrlich, und das Ergebnis zeigt, wer von euch am meisten zu gestehen hat."
+  },
+  "section1": {
+    "title": "So funktioniert das Spiel „Ich hab noch nie“",
+    "intro": "Die Regel passt in einen Satz: eine Aussage beginnt mit <strong>„ich hab noch nie“</strong>, und jeder gesteht, ob er es in Wirklichkeit doch schon getan hat. Keine richtige Antwort, keine Punkte. Was das Spiel ausmacht, ist das, was die Antwort auslöst: der Blick des anderen, das „Moment, wann?“, und die Geschichte, die danach kommt.",
+    "etape1Titre": "Namen eingeben und Länge wählen",
+    "etape1Texte": "15 Fragen für eine schnelle Runde, 30 für die klassische Version, 100 für die volle Ladung. Verlängern könnt ihr unterwegs immer.",
+    "etape2Titre": "Die Aussage laut vorlesen",
+    "etape2Texte": "Jede Karte beginnt mit „ich hab noch nie“. Sie laut vorzulesen gehört zum Spiel: genau da treffen sich die Blicke.",
+    "etape3Titre": "Abwechselnd antworten",
+    "etape3Texte": "Das Spiel sagt an, wer zuerst antwortet, und fragt dann den anderen „und du?“. Die Frage wechselt erst, wenn ihr beide geantwortet habt, und wer anfängt, wechselt mit jeder Karte.",
+    "etape4Titre": "Ergebnisse vergleichen",
+    "etape4Texte": "Am Ende zählt ein Kreisdiagramm pro Person die „hab ich schon“ und die „hab ich noch nie“. Der Abstand zwischen beiden ist das Gesprächsthema des Abends.",
+    "apres": "Ihr werdet merken: es gibt <strong>weder Pfänder noch Strafen</strong>, ehrlich zu antworten ist schon schwer genug. Wenn euer Duo Abende mag, an denen ein Geständnis etwas kostet, macht das <a href=\"/de/pfaender-fuer-paare/\">Glücksrad, das Pfänder für zwei verteilt</a>, genau da weiter, wo dieses Spiel aufhört."
+  },
+  "section2": {
+    "title": "Der Unterschied zwischen der klassischen Version und der Paar-Version",
+    "p1": "Was sich ändert, sind nicht die Regeln: es sind die Fragen. Die klassische Version wird unter Freunden gespielt, oft zu fünft oder sechst, und fischt überall: die Partys, die aus dem Ruder liefen, die Lügen aus der Schulzeit, die Peinlichkeiten aus dem Urlaub. Jeder hebt einen Finger, jemand ruft „erzähl!“, und weiter geht's.",
+    "p2": "Die Paar-Version zieht alles auf eure Geschichte zusammen: eure Anfänge, eure kleinen Heimlichkeiten, die Familie des anderen, was unter der Decke passiert und was ihr euch für später ausmalt. Und vor allem: <strong>ihr spielt gegenüber dem einzigen Menschen auf der Welt, der eure Antworten überprüfen kann</strong>. Bei „ich hab noch nie heimlich auf dein Handy geschaut“ zu lügen, während die betroffene Person zusieht, ist ein ganz anderer Sport als unter Freunden.",
+    "p3": "Es ist auch ein sanfteres Spiel, als es aussieht. Unter Freunden jagt man der spektakulären Anekdote hinterher; zu zweit sind die stärksten Fragen die einfachsten, die, bei denen beide lächelnd „ich auch nicht“ sagen. Wenn ihr lieber entscheidet als gesteht, sind die <a href=\"/de/was-wuerdest-du-lieber-paar-quiz/\">unmöglichen Entscheidungen, die man zu zweit ausfechten muss</a>, der andere große Klassiker des Genres."
+  },
+  "section3": {
+    "title": "Beispiele für Ich-hab-noch-nie-Fragen",
+    "intro": "Hier sind rund zwanzig der 100 Fragen aus dem Spiel. Die Mischung ist Absicht: zärtliche, schuldbewusste, freche, und ein paar Klassiker zum Durchatmen zwischen zwei Geständnissen.",
+    "apres": "Die anderen 80 warten im Spiel, und jede Runde zieht neu: der Knopf „nochmal spielen, mit anderen Fragen“ greift zuerst zu denen, die ihr noch nicht gesehen habt."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Wie lange dauert eine Runde?",
+    "a1": "Etwa 10 Minuten bei 15 Fragen, das Doppelte bei 30. Jede Frage geht an beide Spieler, eine 15er-Runde sind also in Wahrheit 30 Antworten.",
+    "q2": "Muss man trinken oder Pfänder einlösen?",
+    "a2": "Nein. Hier wird geantwortet, sonst nichts. Genau deshalb kann man es jederzeit spielen, auch an einem Dienstagabend auf dem Sofa.",
+    "q3": "Sind die Fragen gewagt?",
+    "a3": "Manche ja, aber keine geht über das hinaus, was sich zwei Menschen in einer Beziehung sagen können. Um die Temperatur richtig hochzudrehen, ist die <a href=\"/de/wahrheit-oder-pflicht-versaut/\">heißeste unserer Spielvarianten für zwei</a> genau dafür gebaut.",
+    "q4": "Kann man auf Distanz spielen?",
+    "a4": "Ja, und es funktioniert erstaunlich gut: einer öffnet das Spiel, liest die Aussage im Videoanruf laut vor und klickt für beide. Nichts im Spiel verlangt, im selben Raum zu sein.",
+    "q5": "Können wir nochmal spielen, ohne dieselben Fragen zu bekommen?",
+    "a5": "Ja. Das Spiel merkt sich, was es schon gefragt hat, und zieht zuerst aus dem Rest der 100 Fragen. Nach drei 30er-Runden habt ihr so gut wie alles gesehen."
+  }
+}

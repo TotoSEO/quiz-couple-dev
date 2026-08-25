@@ -315,5 +315,11 @@
     "shortTitle": "Fragen fürs erste Date",
     "description": "15 Fragen füreinander, in drei zunehmend persönlichen Leveln. Nichts zu installieren, nichts zu zählen.",
     "metaDescription": "Das Fragenspiel fürs erste Date, in drei Leveln wachsender Nähe. 60 Fragen, 15 pro Runde, zu zweit auf einem Handy, ohne Anmeldung und ohne Punkte."
+  },
+  "jeuJamais": {
+    "title": "Ich hab noch nie: Interaktives Paar-Spiel, kostenlos",
+    "shortTitle": "Ich hab noch nie",
+    "metaDescription": "100 Ich-hab-noch-nie-Fragen, geschrieben für Paare. Ihr antwortet abwechselnd, das Spiel zählt die Geständnisse und zeigt, wer von euch mehr erlebt hat. Kostenlos, ohne Anmeldung.",
+    "description": "Der große Partyklassiker, neu geschrieben für zwei: ihr antwortet abwechselnd, und das Ergebnis zeigt, wer am meisten zu gestehen hat."
   }
 }

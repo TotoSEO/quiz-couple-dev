@@ -59,7 +59,12 @@
     "pourContreTagline": "Une proposition, vous tranchez, vous voyez le vote des autres",
     "pourContreJoueurs": "2 joueurs",
     "pourContreDuree": "10 min",
-    "pourContreContenu": "60 propositions et le vote de tous les autres couples"
+    "pourContreContenu": "60 propositions et le vote de tous les autres couples",
+    "jamaisNom": "Je n'ai jamais",
+    "jamaisTagline": "Une affirmation, deux réponses, et on compte les aveux",
+    "jamaisContenu": "100 affirmations écrites pour les couples, à jouer en 15, 30 ou 100",
+    "jamaisDuree": "10 à 30 min",
+    "jamaisJoueurs": "2 joueurs"
   },
   "section1": {
     "title": "Ce qu'un jeu à deux change à une soirée",

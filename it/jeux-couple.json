@@ -59,7 +59,12 @@
     "pourContreTagline": "Una proposta, decidete, vedete il voto degli altri",
     "pourContreJoueurs": "2 giocatori",
     "pourContreDuree": "10 min",
-    "pourContreContenu": "60 proposte e il voto di tutte le altre coppie"
+    "pourContreContenu": "60 proposte e il voto di tutte le altre coppie",
+    "jamaisNom": "Non ho mai",
+    "jamaisTagline": "Una frase, due risposte, e le confessioni si sommano",
+    "jamaisContenu": "100 frasi scritte per le coppie, da giocare in 15, 30 o 100",
+    "jamaisDuree": "10-30 min",
+    "jamaisJoueurs": "2 giocatori"
   },
   "section1": {
     "title": "Che cosa cambia un gioco in due in una serata",

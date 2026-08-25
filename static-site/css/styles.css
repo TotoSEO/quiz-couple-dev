@@ -8698,3 +8698,126 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .funny-palier { padding: 2.25rem 1.25rem; }
   .funny-palier-titre { font-size: 1.35rem; }
 }
+
+/* ── Je n'ai jamais ─────────────────────────────────────────────────────
+   Le jeu vit sur une seule carte par question : l'affirmation, le bandeau
+   de tour, deux grands boutons. Puis un écran de palier, et deux camemberts
+   sur l'écran de fin. */
+.jnj-longueur { margin-top: 0.25rem; }
+.jnj-longueur-titre {
+  font-size: 0.875rem; font-weight: 600; text-align: center;
+  color: hsl(var(--foreground)); margin: 0 0 0.75rem;
+}
+.jnj-longueur-choix { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+.jnj-longueur-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 0.125rem;
+  padding: 0.875rem 0.5rem; cursor: pointer;
+  border-radius: var(--radius); border: 2px solid hsl(var(--border));
+  background: hsl(var(--card) / 0.6); color: hsl(var(--foreground));
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+.jnj-longueur-btn:hover { border-color: hsl(var(--primary) / 0.55); transform: translateY(-1px); }
+.jnj-longueur-btn.active {
+  border-color: hsl(var(--primary));
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.12), hsl(var(--secondary) / 0.12));
+}
+.jnj-longueur-nb { font-size: 1.5rem; font-weight: 800; line-height: 1; color: hsl(var(--primary)); }
+.jnj-longueur-unite { font-size: 0.75rem; color: hsl(var(--muted-foreground)); }
+.jnj-longueur-libelle { font-size: 0.8125rem; font-weight: 600; margin-top: 0.25rem; }
+@media (max-width: 400px) {
+  .jnj-longueur-choix { gap: 0.5rem; }
+  .jnj-longueur-btn { padding: 0.75rem 0.25rem; }
+  .jnj-longueur-libelle { font-size: 0.72rem; }
+}
+
+.jnj-carte {
+  max-width: 34rem; margin: 0 auto 1.25rem; padding: 2rem 1.5rem;
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid hsl(var(--primary) / 0.25);
+  background: linear-gradient(160deg, hsl(var(--primary) / 0.07), hsl(var(--secondary) / 0.07));
+  text-align: center;
+}
+.jnj-enonce {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: clamp(1.2rem, 3.6vw, 1.5rem); font-weight: 700; line-height: 1.35;
+  color: hsl(var(--foreground)); margin: 0;
+}
+.jnj-bandeau { display: flex; justify-content: center; margin-bottom: 1.25rem; }
+/* Le second répondant arrive sur la même carte : seul le bandeau bouge, et
+   ce petit glissement suffit à montrer que la main a changé. */
+.jnj-bandeau--second { animation: fadeIn 260ms ease both; }
+.jnj-choix { display: grid; grid-template-columns: 1fr 1fr; gap: 0.875rem; max-width: 34rem; margin: 0 auto; }
+.jnj-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 0.375rem;
+  padding: 1.25rem 0.75rem; cursor: pointer;
+  border-radius: var(--radius); border: 2px solid hsl(var(--border));
+  background: hsl(var(--card)); color: hsl(var(--foreground));
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+.jnj-btn:hover { transform: translateY(-2px); }
+.jnj-btn--jai:hover, .jnj-btn--jai.jnj-btn--pris { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.10); }
+.jnj-btn--jamais:hover, .jnj-btn--jamais.jnj-btn--pris { border-color: hsl(var(--secondary)); background: hsl(var(--secondary) / 0.10); }
+.jnj-btn-emoji { font-size: 1.75rem; line-height: 1; }
+.jnj-btn-texte { font-weight: 700; font-size: 1rem; }
+.jnj-choix--verrouille .jnj-btn { pointer-events: none; }
+.jnj-choix--verrouille .jnj-btn:not(.jnj-btn--pris) { opacity: 0.45; }
+@media (max-width: 400px) {
+  .jnj-choix { gap: 0.5rem; }
+  .jnj-btn { padding: 1rem 0.5rem; }
+}
+
+.jnj-palier { padding: 2.5rem 1.5rem; }
+.jnj-palier-icone { font-size: 3rem; margin-bottom: 0.75rem; }
+.jnj-palier-titre {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800;
+  font-size: clamp(1.4rem, 4vw, 1.8rem); margin-bottom: 0.5rem;
+}
+.jnj-palier-texte { color: hsl(var(--muted-foreground)); max-width: 26rem; margin: 0 auto 1.5rem; }
+.jnj-palier-choix { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+
+/* Deux camemberts côte à côte, un par joueur. Tout ce qui peut s'allonger
+   (prénom, libellés) vit hors du disque et se tronque proprement : rien ne
+   passe à la ligne dans le dessin. */
+.jnj-resultats {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem; max-width: 30rem; margin: 0 auto;
+}
+.jnj-resultat {
+  display: flex; flex-direction: column; align-items: center; gap: 0.625rem;
+  padding: 1.25rem 0.75rem; border-radius: var(--radius);
+  border: 1px solid hsl(var(--border)); background: hsl(var(--card) / 0.6);
+  min-width: 0;
+}
+.jnj-resultat-nom {
+  font-weight: 700; font-size: 1.05rem; max-width: 100%;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.jnj-camembert { position: relative; width: 7.5rem; height: 7.5rem; }
+.jnj-camembert svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.jnj-camembert-fond { fill: none; stroke: hsl(var(--secondary) / 0.30); stroke-width: 18; }
+.jnj-camembert-part { fill: none; stroke: hsl(var(--primary)); stroke-width: 18; }
+.jnj-camembert-valeur {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: 1.5rem;
+  white-space: nowrap; color: hsl(var(--foreground));
+}
+.jnj-camembert-valeur small { font-size: 0.85rem; font-weight: 600; color: hsl(var(--muted-foreground)); margin-left: 1px; }
+.jnj-legende { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.25rem; width: 100%; }
+.jnj-legende li {
+  display: flex; align-items: center; gap: 0.375rem;
+  font-size: 0.8125rem; color: hsl(var(--muted-foreground)); white-space: nowrap;
+}
+.jnj-legende b { margin-left: auto; color: hsl(var(--foreground)); font-size: 0.875rem; }
+.jnj-legende-mot { overflow: hidden; text-overflow: ellipsis; }
+.jnj-puce { width: 0.625rem; height: 0.625rem; border-radius: 50%; flex-shrink: 0; }
+.jnj-puce--jai { background: hsl(var(--primary)); }
+.jnj-puce--jamais { background: hsl(var(--secondary) / 0.45); }
+.jnj-verdict { max-width: 30rem; margin: 1.25rem auto 0; }
+.jnj-verdict p { color: hsl(var(--muted-foreground)); line-height: 1.55; margin: 0 0 0.375rem; }
+.jnj-verdict p:first-child { color: hsl(var(--foreground)); font-weight: 600; }
+@media (max-width: 420px) {
+  .jnj-resultats { gap: 0.625rem; }
+  .jnj-camembert { width: 6.25rem; height: 6.25rem; }
+  .jnj-camembert-valeur { font-size: 1.25rem; }
+  .jnj-legende li { font-size: 0.75rem; }
+}

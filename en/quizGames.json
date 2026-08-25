@@ -355,7 +355,8 @@
     "testDependance": "Emotional dependency test",
     "testEx": "Does my ex still think about me test",
     "testChargeMentale": "Mental load test for couples",
-    "quizRencontre": "First date questions"
+    "quizRencontre": "First date questions",
+    "jeuJamais": "Never Have I Ever"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

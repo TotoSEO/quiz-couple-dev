@@ -318,6 +318,7 @@
     'pervers': 'Pervers narcissique',
     'plateau-couple': 'Jeu de plateau',
     'pour-contre': 'Pour ou contre',
+    'jamais': "Je n'ai jamais",
     'purete': 'Test de pureté',
     'qui-de-nous-deux': 'Qui de nous deux',
     'rencontre': 'Questions de premier rendez-vous',
@@ -378,6 +379,7 @@
     // les deux nommages, une seule entree suffit.
     jeuDilemmes: 'Dilemmes',
     pourContre: 'Pour ou contre',
+    jeuJamais: "Je n'ai jamais",
     quizTentation: 'Tentation',
     testPurete: 'Test de pureté',
     testAmeSoeur: 'Test âme sœur',
@@ -442,6 +444,7 @@
     'pervers': 'testPervers',
     'plateau-couple': 'jeuPlateau',
     'pour-contre': 'pourContre',
+    'jamais': 'jeuJamais',
     'purete': 'testPurete',
     'qui-de-nous-deux': 'jeuQuiDeNous',
     'rencontre': 'quizRencontre',
@@ -472,9 +475,9 @@
   // base (cle de route et data-quiz du moteur), les deux sont couverts.
   var FAMILLES = {
     jeu: ['jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages', 'jeuPlateau', 'jeuQuiDeNous',
-          'jeuDilemmes', 'pourContre', 'quizTuPreferes',
+          'jeuDilemmes', 'pourContre', 'quizTuPreferes', 'jeuJamais',
           'action-ou-verite', 'action-ou-verite-coquin', 'gage-couple', 'plateau-couple',
-          'qui-de-nous-deux', 'dilemmes', 'pour-contre', 'tu-preferes'],
+          'qui-de-nous-deux', 'dilemmes', 'pour-contre', 'tu-preferes', 'jamais'],
     quiz: ['zamours', 'amoureux', 'coquin', 'genant', 'knowledge', 'marrant', 'most',
            'vrai-faux', 'ado', 'tentation', 'rencontre']
   };

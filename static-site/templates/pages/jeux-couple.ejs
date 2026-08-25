@@ -4,7 +4,7 @@
   const ns = 'jeux-couple';
   const pageTitle = t('quizzes:jeuxCouple.title', 'Jeux de couple');
 
-  // Les cinq jeux, dans l'ordre : le plus accessible d'abord, le plus ose en dernier.
+  // Les jeux, dans l'ordre : le plus accessible d'abord, le plus ose en dernier.
   const jeux = [
     { routeKey: 'quizTuPreferes',     cle: 'tuPreferes',        emoji: '🤔', accent: '270 45% 58%', img: 'would-you-rather-doors' },
     { routeKey: 'jeuActionVerite',    cle: 'actionVerite',      emoji: '🎲', accent: '340 65% 62%', img: 'conversation-cards' },
@@ -13,7 +13,8 @@
     { routeKey: 'jeuPlateau',         cle: 'plateau',          emoji: '🎲', accent: '160 50% 42%', img: 'matching-puzzle' },
     { routeKey: 'jeuQuiDeNous',       cle: 'quiDeNous',        emoji: '👀', accent: '210 60% 52%', img: 'two-mugs-heart' },
     { routeKey: 'jeuDilemmes',        cle: 'dilemmes',         emoji: '⚖️', accent: '38 85% 52%',  img: 'dilemma-scales-choice' },
-    { routeKey: 'pourContre',         cle: 'pourContre',       emoji: '👍', accent: '338 72% 58%', img: 'pour-contre-pouces' }
+    { routeKey: 'pourContre',         cle: 'pourContre',       emoji: '👍', accent: '338 72% 58%', img: 'pour-contre-pouces' },
+    { routeKey: 'jeuJamais',          cle: 'jamais',           emoji: '🙊', accent: '288 55% 52%', img: 'jamais-doigts-leves' }
   ].map(function(j) {
     j.url = getLocalizedUrl(j.routeKey, lang);
     const f = quizFeatured && quizFeatured[j.routeKey];
