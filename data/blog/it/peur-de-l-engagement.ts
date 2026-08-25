@@ -81,6 +81,7 @@ const article: BlogArticleData = {
 </ul>
 </div>
 </div>
+<p>Il modo più semplice per capirlo è guardare gli appuntamenti. Con chi ha paura, si fanno, anche se poi tira per le lunghe sul resto. Con chi non ne ha voglia, saltano, e <a href="/it/blog/annulla-all-ultimo-momento/">alla disdetta non segue mai una nuova data</a>.</p>
 <p>E un terzo caso merita di essere nominato: il «non sono pronto» strategico, che tiene qualcuno a portata di mano senza dare nulla. Se il rifiuto di impegnarsi si accompagna a un caldo e freddo calcolato, a test, a un controllo della tua disponibilità, non hai davanti una paura, hai davanti una gestione di magazzino. I <a href="/it/blog/segnali-relazione-tossica/">marcatori di una relazione tossica</a> ti aiuteranno a fare chiarezza.</p>`,
     },
     {

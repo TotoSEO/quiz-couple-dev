@@ -81,6 +81,7 @@ const article: BlogArticleData = {
 </ul>
 </div>
 </div>
+<p>Le plus simple, pour trancher, c'est de regarder les rendez-vous. Chez quelqu'un qui a peur, ils ont lieu, même s'il traîne des pieds pour la suite. Chez quelqu'un qui n'a pas envie, ils sautent, et <a href="/blog/il-annule-au-dernier-moment/">l'annulation n'est jamais suivie d'une nouvelle date</a>.</p>
 <p>Et un troisième cas mérite d'être nommé : le « pas prêt » stratégique, qui garde quelqu'un sous la main sans rien donner... Si le refus d'engagement s'accompagne de chaud-froid calculé, de tests, d'un contrôle de ta disponibilité, tu n'es pas face à une peur, tu es face à une gestion de stock. Les <a href="/blog/relation-toxique-signes/">marqueurs d'une relation toxique</a> t'aideront à faire la part des choses.</p>`,
     },
     {

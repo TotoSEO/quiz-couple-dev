@@ -29,10 +29,11 @@ const article: BlogArticleData = {
 <tr><td>Il oublie les dates importantes</td><td>Tu n'es pas une priorité dans son organisation mentale.</td></tr>
 <tr><td>Les efforts s'arrêtent après la phase de séduction</td><td>Il faisait des efforts pour te conquérir, pas pour la relation.</td></tr>
 <tr><td>Il ne cherche pas à te faire plaisir spontanément</td><td>L'attention consciente a disparu. Ce n'est pas de la malveillance, mais c'est réel.</td></tr>
-<tr><td>Quand tu en parles, il promet, mais rien ne change</td><td>Il entend le message mais ne ressentit pas l'urgence d'agir.</td></tr>
+<tr><td>Quand tu en parles, il promet, mais rien ne change</td><td>Il entend le message mais ne ressent pas l'urgence d'agir.</td></tr>
 <tr><td>Tu te sens seule dans la relation</td><td>La présence physique ne remplace pas l'investissement émotionnel.</td></tr>
 <tr><td>Il fait des efforts pour ses amis, son travail, mais pas pour toi</td><td>La capacité est là. La motivation, non.</td></tr>
-</tbody></table></div>`,
+</tbody></table></div>
+<p>Une variante revient souvent dans cette première ligne : tu proposes, il dit oui, et il annule une heure avant. Une fois, ça ne veut rien dire. Quand ça devient une habitude, <a href="/blog/il-annule-au-dernier-moment/">ce qui se passe juste après l'annulation</a> te renseigne mieux que l'annulation elle-même.</p>`,
     },
     {
       id: 'pourquoi-les-hommes-arretent',

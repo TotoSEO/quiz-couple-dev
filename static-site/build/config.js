@@ -302,6 +302,19 @@ export const BLOG_CATEGORIES = {
 // Blog article metadata
 export const BLOG_ARTICLES = [
   {
+    internalSlug: 'il-annule-au-dernier-moment',
+    category: 'psychologie',
+    featuredImage: '/blog/il-annule-au-dernier-moment.webp',
+    slugs: {
+      fr: 'il-annule-au-dernier-moment',
+      en: 'he-cancelled-last-minute',
+      es: 'cancela-en-el-ultimo-momento',
+      de: 'er-sagt-in-letzter-minute-ab',
+      it: 'annulla-all-ultimo-momento',
+    },
+    publishedAt: '2026-08-28T14:41:00+02:00',
+  },
+  {
     internalSlug: 'homme-qu-on-ignore',
     category: 'psychologie',
     featuredImage: '/blog/homme-qu-on-ignore.webp',
@@ -1256,12 +1269,12 @@ export const QUIZ_RELATED_ARTICLES = {
   // proche garde une liste vide.
   testPurete:       ['choses-pas-accepter-couple', 'lexique-relations-2026'],
   testSuisJeAmoureux: ['sentiments-chez-un-homme', 'comment-savoir-si-cest-le-bon', 'dependance-affective'],
-  testSecret:       ['sentiments-chez-un-homme', 'comment-savoir-si-cest-le-bon', 'homme-qu-on-ignore'],
+  testSecret:       ['sentiments-chez-un-homme', 'comment-savoir-si-cest-le-bon', 'homme-qu-on-ignore', 'il-annule-au-dernier-moment'],
   testCouche:       ['red-flags-homme', 'red-flags-femme', 'choses-pas-accepter-couple'],
   testDistanceAime: ['manque-communication-couple', 'sentiments-chez-un-homme', 'arreter-ou-continuer-relation'],
   testEx:           ['les-phases-de-la-rupture-chez-l-homme', 'dependance-affective-rupture', 'arreter-ou-continuer-relation', 'homme-qu-on-ignore'],
   testChargeMentale:['charge-mentale-couple', 'disputes-couple', 'manque-communication-couple'],
-  quizRencontre:    ['36-questions-pour-tomber-amoureux', 'questions-debut-de-relation', 'questions-a-poser-a-son-crush'],
+  quizRencontre:    ['36-questions-pour-tomber-amoureux', 'questions-debut-de-relation', 'questions-a-poser-a-son-crush', 'il-annule-au-dernier-moment'],
   testFinCouple:    ['arreter-ou-continuer-relation', 'les-phases-de-la-rupture-chez-l-homme', 'sauver-son-couple'],
   testAmourAmitie:  ['sentiments-chez-un-homme', 'comment-savoir-si-cest-le-bon'],
   testKarmique:     ['dependance-affective', 'love-bombing', 'arreter-ou-continuer-relation'],

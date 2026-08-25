@@ -32,7 +32,8 @@ const article: BlogArticleData = {
 <tr><td>Wenn du es ansprichst, verspricht er, aber nichts ändert sich</td><td>Er hört die Botschaft, spürt aber keinen Handlungsdruck.</td></tr>
 <tr><td>Du fühlst dich in der Beziehung allein</td><td>Physische Anwesenheit ersetzt keine emotionale Investition.</td></tr>
 <tr><td>Er bemüht sich für Freunde und Arbeit, aber nicht für dich</td><td>Die Fähigkeit ist vorhanden. Die Motivation nicht.</td></tr>
-</tbody></table></div>`,
+</tbody></table></div>
+<p>Zur ersten Zeile gibt es eine häufige Variante: du schlägst etwas vor, er sagt zu, und eine Stunde vorher sagt er ab. Einmal heißt das gar nichts. Wenn es zur Gewohnheit wird, sagt dir <a href="/de/blog/er-sagt-in-letzter-minute-ab/">das, was direkt nach der Absage passiert</a>, mehr als die Absage selbst.</p>`,
     },
     {
       id: 'warum-maenner-aufhoeren',

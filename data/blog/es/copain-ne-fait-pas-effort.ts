@@ -32,7 +32,8 @@ const article: BlogArticleData = {
 <tr><td>Cuando se lo dices, promete, pero nada cambia</td><td>Escucha el mensaje pero no siente urgencia de actuar.</td></tr>
 <tr><td>Te sientes sola en la relación</td><td>La presencia física no reemplaza la inversión emocional.</td></tr>
 <tr><td>Se esfuerza por sus amigos y su trabajo, pero no por ti</td><td>La capacidad existe. La motivación, no.</td></tr>
-</tbody></table></div>`,
+</tbody></table></div>
+<p>Hay una variante muy común de esa primera línea: propones algo, él dice que sí, y lo cancela una hora antes. Una vez, no significa nada. Cuando se vuelve costumbre, <a href="/es/blog/cancela-en-el-ultimo-momento/">lo que pasa justo después de la cancelación</a> te dice más que la cancelación en sí.</p>`,
     },
     {
       id: 'por-que-dejan-de-esforzarse',

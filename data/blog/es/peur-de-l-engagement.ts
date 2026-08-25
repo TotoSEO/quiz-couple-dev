@@ -81,6 +81,7 @@ const article: BlogArticleData = {
 </ul>
 </div>
 </div>
+<p>Lo más simple, para decidirlo, es mirar las citas. Con alguien que tiene miedo, ocurren, aunque arrastre los pies con lo que viene después. Con alguien que no tiene ganas, se caen, y <a href="/es/blog/cancela-en-el-ultimo-momento/">la cancelación nunca va seguida de una nueva fecha</a>.</p>
 <p>Y un tercer caso merece nombrarse: el «no estoy preparado» estratégico, que mantiene a alguien a mano sin dar nada. Si la negativa a comprometerse viene con frío y calor calculado, con pruebas, con un control de tu disponibilidad, no estás ante un miedo, estás ante una gestión de existencias. Los <a href="/es/blog/senales-relacion-toxica/">marcadores de una relación tóxica</a> te ayudarán a distinguir.</p>`,
     },
     {
