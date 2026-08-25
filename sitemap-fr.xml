@@ -619,6 +619,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/test-amour-ou-crush/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-amour-ou-crush/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/love-or-crush-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-amor-o-crush/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/liebe-oder-crush-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-amore-o-cotta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-amour-ou-crush/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/test-est-ce-la-fin-de-mon-couple/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-est-ce-la-fin-de-mon-couple/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/is-my-relationship-over-test/"/>

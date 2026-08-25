@@ -356,7 +356,8 @@
     "testEx": "Test il mio ex pensa ancora a me",
     "testChargeMentale": "Test del carico mentale di coppia",
     "quizRencontre": "Domande da primo appuntamento",
-    "jeuJamais": "Non ho mai"
+    "jeuJamais": "Non ho mai",
+    "testCrush": "Test amore o cotta"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
