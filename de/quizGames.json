@@ -356,7 +356,8 @@
     "testEx": "Test denkt mein Ex noch an mich",
     "testChargeMentale": "Mental-Load-Test für Paare",
     "quizRencontre": "Fragen fürs erste Date",
-    "jeuJamais": "Ich hab noch nie"
+    "jeuJamais": "Ich hab noch nie",
+    "testCrush": "Liebe-oder-Crush-Test"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",

@@ -321,5 +321,12 @@
     "shortTitle": "Yo nunca",
     "metaDescription": "100 preguntas de «yo nunca» pensadas para parejas. Respondéis por turnos, el juego cuenta las confesiones y revela quién de los dos ha vivido más. Gratis y sin registro.",
     "description": "El gran clásico de las noches con amigos, reescrito para dos: respondéis por turnos y el resultado muestra quién tiene más que confesar."
+  },
+  "testCrush": {
+    "title": "¿Amor o Crush? Test online de 35 preguntas",
+    "shortTitle": "Test crush",
+    "metaTitle": "¿Amor o Crush? Test online de 35 preguntas",
+    "metaDescription": "35 preguntas para saber si estás en crush o si son sentimientos de amor. Las preguntas se adaptan según tu crush sea un chico o una chica.",
+    "description": "Responde sobre lo que sientes, la puntuación separa atracción, crush y sentimientos de verdad."
   }
 }

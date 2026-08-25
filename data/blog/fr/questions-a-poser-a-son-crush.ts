@@ -192,6 +192,7 @@ const article: BlogArticleData = {
 <tr><td>Flirter</td><td>Suggéré, avec une porte de sortie</td><td>Le compliment qui met mal à l'aise</td></tr>
 <tr><td>Le premier rendez-vous</td><td>Ouvert, et vraiment écouté</td><td>Réciter ses questions préparées</td></tr>
 </tbody></table></div>
+<p>Et si la question qui te bloque est plutôt de savoir ce que toi tu ressens, on a fait <a href="/test-amour-ou-crush/">un test qui fait le tri entre le crush et les sentiments amoureux</a>, en 35 questions.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Il pense à toi, ou il répond juste poliment ?</p>
 <p class="blog-cta-texte">Une série de questions passe en revue les vrais signaux, ceux qu'on ne remarque pas quand on a le nez dedans : ses relances, ses attentions, sa manière d'être quand tu es là. Résultat immédiat, et personne n'en saura rien.</p>

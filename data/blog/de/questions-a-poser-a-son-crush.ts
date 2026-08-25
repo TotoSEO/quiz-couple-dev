@@ -192,6 +192,7 @@ const article: BlogArticleData = {
 <tr><td>Flirten</td><td>Angedeutet, mit Ausweg</td><td>Das Kompliment, das unangenehm wird</td></tr>
 <tr><td>Das erste Date</td><td>Offen, und wirklich zugehört</td><td>Die vorbereiteten Fragen abspulen</td></tr>
 </tbody></table></div>
+<p>Und wenn dich eher die Frage blockiert, was <em>du</em> eigentlich fühlst: wir haben <a href="/de/liebe-oder-crush-test/">einen Test, der Schwärmerei von echten Gefühlen trennt</a>, in 35 Fragen.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Denkt er an dich, oder antwortet er nur höflich?</p>
 <p class="blog-cta-texte">Eine Reihe von Fragen geht die echten Signale durch, die man mittendrin nicht bemerkt: seine Rückfragen, seine Aufmerksamkeiten, wie er ist, wenn du dabei bist. Sofortiges Ergebnis, und niemand erfährt davon.</p>

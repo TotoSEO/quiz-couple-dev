@@ -321,5 +321,12 @@
     "shortTitle": "Never Have I Ever",
     "metaDescription": "100 never have I ever questions written for couples. You each answer in turn, the game counts the confessions and reveals which of you has lived the most. Free, no sign-up.",
     "description": "The great party classic, rewritten for two: you each answer in turn, and the result shows who has the most to confess."
+  },
+  "testCrush": {
+    "title": "Love or just a Crush? 35-question online test",
+    "shortTitle": "Crush test",
+    "metaTitle": "Love or just a Crush? 35-question online test",
+    "metaDescription": "35 questions to find out whether it's a crush or real feelings of love. The questions adapt to whether your crush is a guy or a girl.",
+    "description": "Answer about what you feel, the score sorts attraction, crush and real feelings."
   }
 }

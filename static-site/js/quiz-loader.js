@@ -266,6 +266,19 @@
       { id: 'femme', emoji: '👩', prefix: 'secretF', engine: 'solo', totalQ: 10, pool: 10, quizType: 'secret', ascending: true, resultPrefix: 'secret' }
     ] },
 
+    // ── Test crush : amour ou simple crush ──
+    // Deux séries entières plutôt que des jetons il/elle : les pronoms
+    // changent la phrase dans les cinq langues (le/la, lui/elle, ihn/sie…)
+    // et un remplacement mécanique finit toujours par casser un accord.
+    // Le mode dit le sexe du crush, pas celui de la personne qui joue :
+    // les réponses côté joueur sont écrites sans accord pour cette raison.
+    // Barème explicite : « j'y pense tous les jours » pèse plus lourd que
+    // « j'ai eu des frissons une fois », les points vivent dans gd.json.
+    'crush':          { modes: [
+      { id: 'homme', emoji: '👦', prefix: 'crushH', engine: 'solo', totalQ: 35, pool: 35, quizType: 'crush', ascending: true, ptsExplicites: true, resultPrefix: 'crush' },
+      { id: 'femme', emoji: '👧', prefix: 'crushF', engine: 'solo', totalQ: 35, pool: 35, quizType: 'crush', ascending: true, ptsExplicites: true, resultPrefix: 'crush' }
+    ] },
+
     'couche':         { modes: [
       { id: 'homme', emoji: '👨', prefix: 'coucheH', engine: 'solo', totalQ: 15, pool: 15, quizType: 'couche', ascending: true, resultPrefix: 'couche' },
       { id: 'femme', emoji: '👩', prefix: 'coucheF', engine: 'solo', totalQ: 15, pool: 15, quizType: 'couche', ascending: true, resultPrefix: 'couche' }

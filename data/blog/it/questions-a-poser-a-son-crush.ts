@@ -192,6 +192,7 @@ const article: BlogArticleData = {
 <tr><td>Flirtare</td><td>Suggerito, con una via d'uscita</td><td>Il complimento che mette a disagio</td></tr>
 <tr><td>Il primo appuntamento</td><td>Aperto, e ascoltato davvero</td><td>Recitare le domande preparate</td></tr>
 </tbody></table></div>
+<p>E se quello che ti blocca è piuttosto capire cosa provi <em>tu</em>, abbiamo fatto <a href="/it/test-amore-o-cotta/">un test che distingue la cotta dai sentimenti veri</a>, in 35 domande.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Pensa a te, o risponde solo per educazione?</p>
 <p class="blog-cta-texte">Una serie di domande passa in rassegna i segnali veri, quelli che non si notano quando ci sei dentro: i suoi rilanci, le sue attenzioni, com'è quando ci sei tu. Risultato immediato, e nessuno lo saprà.</p>

@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "badge": "35 Fragen, sofortiges Ergebnis",
+    "title": "Crush-Test: Hast du echte Gefühle für diese Person?",
+    "titleHighlight": "echte Gefühle",
+    "description": "Antworte auf das, was du erlebst, nicht auf das, was du hoffst. Der Score trennt flüchtige Anziehung, Crush und echte Gefühle."
+  },
+  "jsonLd": {
+    "name": "Liebe oder Crush Test",
+    "about": "Einen Crush von echten Liebesgefühlen unterscheiden"
+  },
+  "section1": {
+    "title": "Was ist ein Crush?",
+    "p1": "Ein Crush ist eine starke Anziehung zu jemandem, oft bevor man die Person richtig kennt. Das Wort kommt aus dem Englischen und heißt wörtlich «zerdrücken»: die Idee von etwas, das über dich hereinbricht. Zum Beispiel: du begegnest jemandem in der Schule oder auf Insta, und ohne genau zu wissen warum, denkst du plötzlich ständig an diese Person.",
+    "p2": "Was einen Crush ausmacht: deine Fantasie erledigt einen großen Teil der Arbeit. Du kennst die Person kaum, also füllst du die Lücken mit dem, was du dir erhoffst. Genau deshalb fühlt sich ein Crush so intensiv an: dich zieht nicht die echte Person an, sondern ihre bestmögliche Version.",
+    "p3": "Und das ist normal, jeder kennt das. Ein Crush ist weder lächerlich noch kindisch, Erwachsene haben übrigens auch welche. Die eigentliche Frage, die dich vermutlich hierher gebracht hat, ist, ob deiner gerade zu etwas anderem wird."
+  },
+  "section2": {
+    "title": "Was unterscheidet Liebe von einem einfachen Crush?",
+    "p1": "Der Hauptunterschied liegt darin, was du über die andere Person weißt. Der Crush stützt sich auf das, was du dir vorstellst, die Liebe auf das, was du weißt. Konkret: wenn ihr nie länger als fünf Minuten geredet habt, ist das Gefühl stark, aber es steht auf sehr wenig Echtem.",
+    "p2": "Der andere Unterschied ist, was es mit dir macht. Ein Crush ist Aufregung: das schnelle Herz, der enge Bauch, der Drang, die Person zu sehen. Liebe ist Bindung: das Vermissen, wenn sie nicht da ist, das Gefühl, bei ihr am richtigen Platz zu sein, ihre Schwächen, die du kennst und die nichts ändern. So sieht das in Situationen aus, die du sicher kennst:",
+    "headerSituation": "Die Situation",
+    "headerCrush": "Wenn es ein Crush ist",
+    "headerAmour": "Wenn es Liebe ist",
+    "row1Situation": "Keine Antwort",
+    "row1Crush": "Du stresst dich, malst dir tausend Dinge aus",
+    "row1Amour": "Es fehlt dir, aber du gerätst nicht in Panik",
+    "row2Situation": "Du entdeckst eine Schwäche",
+    "row2Crush": "Du siehst sie nicht mal, oder redest sie schön",
+    "row2Amour": "Du siehst sie genau, und es ändert nichts",
+    "row3Situation": "Ihr redet lange",
+    "row3Crush": "Du wägst jeden Satz ab, den du schickst",
+    "row3Amour": "Es läuft von selbst, du rechnest nicht mehr",
+    "row4Situation": "Die Person ist eine Woche weg",
+    "row4Crush": "Du denkst dran, aber dein Leben läuft weiter",
+    "row4Amour": "Deinen Tagen fehlt etwas",
+    "row5Situation": "Jemand anderes gefällt dir ein bisschen",
+    "row5Crush": "Kann passieren, ein Crush ist nicht exklusiv",
+    "row5Amour": "Passiert dir nicht mehr, und das überrascht dich selbst",
+    "row6Situation": "Du stellst dir die Fortsetzung vor",
+    "row6Crush": "Filmszenen: der erste Kuss, die Blicke",
+    "row6Amour": "Konkretes: Ferien, Alltag, später",
+    "apres": "Eine Warnung trotzdem: niemand wechselt über Nacht vom einen zum anderen. Liebe beginnt fast immer als Crush, und ein Crush, der bleibt, der Schwächen und Abwesenheit übersteht, ist oft <a href=\"/de/bin-ich-verliebt-test/\">der Anfang echter Gefühle</a>. Genau das misst der Test: wo auf diesem Weg du stehst."
+  },
+  "section3": {
+    "title": "Woran man merkt, dass man einen Crush auf jemanden hat",
+    "p1": "Meistens weiß man es, bevor man es sich eingesteht. Der Körper spricht zuerst, und er kann nicht lügen. Wenn du dich in drei oder vier der Zeichen unten wiedererkennst, ist die Frage schon beantwortet:",
+    "resumeTitre": "Die Zeichen, die nicht lügen",
+    "resume1": "<strong>Du denkst an die Person, ohne es zu entscheiden:</strong> im Unterricht, im Bus, abends. Sie taucht von allein in deinem Kopf auf, mehrmals am Tag.",
+    "resume2": "<strong>Dein Handy wird zur Verlängerung deines Crushs:</strong> du öffnest ihre Storys zuerst, liest eure Chats nochmal, tippst Nachrichten, die du nie abschickst.",
+    "resume3": "<strong>Dein Körper reagiert auf ihre Nähe:</strong> der verknotete Bauch vor dem Treffen, die heißen Wangen beim Namen, das schnelle Herz, wenn er auf dem Bildschirm erscheint.",
+    "resume4": "<strong>Du änderst deine Gewohnheiten, um ihr zu begegnen:</strong> ein Umweg im Flur, eine Party, zu der du wegen ihr gehst, ein Outfit, das du mit ihr im Kopf wählst.",
+    "resume5": "<strong>Deine Augen finden sie von allein:</strong> in einem vollen Raum weißt du immer, wo sie ist, ohne je beschlossen zu haben zu suchen.",
+    "resume6": "<strong>Deine Freunde wissen es, ob du willst oder nicht:</strong> entweder weil du zu viel davon redest, oder weil man es dir ansieht.",
+    "apres": "Wenn du fast alles abhakst, ist die Frage nicht mehr, ob du einen Crush hast. Sondern ob es noch ein Crush ist, oder schon mehr. Genau da sortieren die 35 Fragen des Tests, indem sie jedes Zeichen gewichten: jeden Tag an jemanden zu denken wiegt mehr, als einmal Gänsehaut gehabt zu haben."
+  },
+  "section4": {
+    "title": "Woher weiß ich, ob ich ihr oder ihm auch gefalle?",
+    "p1": "Schau zuerst, wer die Gespräche beginnt. Wenn immer du zuerst schreibst und die Antworten höflich, aber kurz sind, hast du einen Teil der Antwort. Wenn die Person nachhakt, dich nach dir fragt, Dinge aufgreift, die du vor einer Woche gesagt hast, dann bewahrt sie irgendwo auf, was du erzählst.",
+    "p2": "Dann schau, was sie mit ihrer Nervosität und ihrer Aufmerksamkeit macht, wenn ihr zusammen seid. Jemand, dem du gefällst, sucht dich mit dem Blick, findet Ausreden, um mit dir zu reden, bleibt in der Nähe, wenn die Gruppe sich verläuft. Bei einem Jungen verraten <a href=\"/de/blog/mann-nervoes-vor-einer-frau/\">Hände, Mund und Blick die Nervosität</a> lange vor den Worten. Und wenn du eine ruhigere Antwort willst als ein Bauchgefühl: wir haben einen eigenen Test, der <a href=\"/de/liebt-er-sie-mich-heimlich-test/\">das Verhalten liest, wenn die Person sich unbeobachtet glaubt</a>.",
+    "p3": "Ein letzter Tipp: zieh keine Schlüsse aus einer einzelnen Geste. Eine angesehene Story, ein Like, ein Lächeln bedeuten für sich nichts. Was zählt, ist die Wiederholung: wer dich einmal sucht, ist vielleicht höflich, wer dich jede Woche sucht, hat einen Grund."
+  },
+  "section5": {
+    "title": "Mein Crush wirkt unerreichbar und das macht mich traurig: was tun?",
+    "p1": "Zuerst: das ist der häufigste Fall überhaupt. Der unerreichbare Crush, älter, schon vergeben, sehr beliebt oder ohne zu wissen, dass es dich gibt, fast jeder hatte so einen. Die Traurigkeit dabei ist echt, kein Theater, und du darfst sie fühlen.",
+    "p2": "Dann sei bei einem Punkt ehrlich: ist die Person wirklich unerreichbar, oder nur in deinem Kopf? Es ist ein großer Unterschied, ob jemand vergeben ist, wo es nichts zu versuchen gibt, oder ob du dich nur nie getraut hast, sie anzusprechen. Der zweite Fall ist nicht unerreichbar, das ist Angst, und an Angst kann man arbeiten.",
+    "resumeTitre": "Was hilft, der Reihe nach",
+    "resume1": "<strong>Gib der Situation ein ehrliches Wort:</strong> «vergeben» ist nicht «schüchtern», und «kennt mich nicht» ist nicht «hat mich abgewiesen». Die halbe Traurigkeit kommt daher, dass alles vermischt wird.",
+    "resume2": "<strong>Wenn es Angst ist, fang klein an:</strong> keine Erklärung, nur ein Gespräch. Eine Frage zum Unterricht, eine Reaktion auf eine Story. Wir haben sogar <a href=\"/de/blog/fragen-an-deinen-crush/\">Fragen für deinen Crush</a> vorbereitet, um ins Reden zu kommen, ohne dass es komisch wird.",
+    "resume3": "<strong>Wenn es eine echte Mauer ist, kappe, was den Crush füttert:</strong> hör auf, jeden Tag die Storys anzusehen. Ein Crush lebt von Bildern, und den Löffel hältst du.",
+    "resume4": "<strong>Setz dir eine Frist:</strong> nicht für deine Gefühle, die bestellst du nicht, sondern für deine Entscheidung. «In einem Monat habe ich entweder mit ihr geredet, oder ich ziehe weiter.» So schleppst du eine Traurigkeit nicht ein Jahr mit dir herum.",
+    "apres": "Und behalte eines: ein Crush, der nirgendwohin führt, ist keine verlorene Zeit. Er zeigt dir, was dich anzieht, was dich bewegt, was du bei jemandem Erreichbarem suchen wirst. Die nächste Person profitiert davon."
+  },
+  "faq": {
+    "title": "Die Fragen, die sich alle stellen",
+    "q1": "Wie lange dauert ein Crush?",
+    "a1": "Ein paar Wochen bis ein paar Monate, meistens. Ein Crush lebt von Neuheit und Geheimnis: sobald du die Person besser kennst, erlischt er entweder oder wird zu etwas Festerem. Über sechs Monate ohne nachzulassen ist es vermutlich kein einfacher Crush mehr.",
+    "q2": "Kann man einen Crush haben, wenn man vergeben ist?",
+    "a2": "Ja, und das macht dich nicht untreu. Ein Crush ist eine Reaktion, keine Entscheidung. Was zählt, ist, was du daraus machst: vorbeiziehen lassen, oder ihn heimlich füttern.",
+    "q3": "Crush oder Liebe: kann der Test danebenliegen?",
+    "a3": "Der Test misst, was du erlebst, anhand deiner Antworten. Wenn du antwortest, was du wirklich fühlst, ist der Score in der Tendenz verlässlich. Aber kein Test liest deine Gedanken: er hilft dir, klar zu sehen, er entscheidet nicht für dich.",
+    "q4": "Warum beschäftigt mich mein Crush so sehr?",
+    "a4": "Weil ein Crush von Ungewissheit lebt. Dein Gehirn liebt offene Fragen, und «gefalle ich ihr oder ihm?» ist eine riesige. Deshalb nimmt ein Crush mehr Platz ein als eine feste Beziehung: nicht die Person besetzt deinen Kopf, sondern die Spannung.",
+    "q5": "Wie wird man einen Crush los?",
+    "a5": "Kappe, was ihn füttert: die Storys, das Profil, das du checkst, die Umwege. Ohne neue Bilder erlischt ein Crush in wenigen Wochen. Es funktioniert, sofern du es wirklich durchziehst.",
+    "q6": "Ist es schlimm, einen Crush auf jemanden zu haben, den ich nicht kenne?",
+    "a6": "Nein, das ist sogar die klassischste Form. Aber denk daran: du schwärmst für das Bild, nicht für die Person. Der einzige Weg herauszufinden, was dahintersteckt, ist, mit ihr zu reden.",
+    "q7": "Funktioniert der Test, wenn mein Crush ein Mädchen ist und ich auch?",
+    "a7": "Ja. Der Test fragt nur, ob dein Crush ein Junge oder ein Mädchen ist, um die Fragen richtig zu schreiben. Wer du bist, ändert weder die Fragen noch den Score."
+  },
+  "section6": {
+    "title": "Mach den Test, in fünf Minuten weißt du es",
+    "p1": "35 Fragen, keine Anmeldung, und niemand außer dir sieht das Ergebnis. Antworte, was stimmt, nicht, was dir passt: der Test bringt nichts, wenn du ihm erzählst, was du hören willst.",
+    "p2": "Und wenn der Score «echte Gefühle» sagt, atme einmal durch. Es verpflichtet dich zu nichts, es sagt dir nur, wo du stehst."
+  }
+}
