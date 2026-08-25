@@ -9,99 +9,99 @@
     "titleHighlight": "Compatible"
   },
   "seo": {
-    "intro": "This common points test is designed for couples who want to know each other better, discover their affinities, and measure their compatibility in a fun and interactive way.",
+    "intro": "This test is played by two people, on one phone. You each answer the same 20 questions separately, and at the end the game counts the identical answers. It's very simple, and that's exactly what makes it work: you can't cheat, you only discover what the other answered once you've answered yourself.",
     "s1": {
-      "title": "Why common points matter in a couple",
-      "p1": "Common points form the foundation of a fulfilling relationship. Sharing tastes, values, or a vision of life creates a solid basis for complicity and mutual understanding. When two people agree on important subjects, communication becomes smoother and conflicts less frequent.",
-      "p2": "However, common points aren't everything. Differences bring richness and complementarity. The key is finding the balance between what unites you and what makes you unique."
+      "title": "What common ground does for a couple",
+      "p1": "Let's be honest: nobody stays with someone because they also like the mountains. What identical answers really tell you is something else. When you both answer the same to \"what matters most, family or freedom?\", you've just learned that your two lives pull in the same direction. And day to day, that shows up everywhere: in decisions, in weekends, in what you argue about and what you never argue about.",
+      "p2": "Differences have their role too, by the way. A couple that answers everything the same doesn't exist, and it would be bored. What counts is knowing where you're alike and where you're not. Most couples only half know, and that's exactly what the game puts on the table."
     },
     "s2": {
-      "title": "What is a couple's common points test for?",
-      "p1": "This test allows you to <strong>know each other better</strong> by exploring varied themes: your tastes, habits, values, and plans. Each question is an opportunity to exchange and discover sometimes unsuspected facets of your partner.",
-      "p2": "Beyond the final score, it's a tool to <strong><a href=\"/en/love-quiz/\">open dialogue</a></strong>. Why did you answer that? What made you choose this option? These discussions enrich your relationship and strengthen your connection."
+      "title": "What the score tells you, and what it doesn't",
+      "p1": "The score counts your identical answers over 20 questions. It tells you where you meet, it doesn't tell you whether your relationship is doing well. Those are two different things: very different people can form a very solid couple, and two taste-twins can make each other miserable. If it's the state of your relationship you want to measure, we have a test built for that, which <a href=\"/en/couple-compatibility-test/\">rates how solid the couple is</a> rather than how similar you are.",
+      "p2": "The real point of the score is what happens right after. \"Wait, what did you answer? Why?\": that's the conversation the game creates, question after question. Most of the time, the best moment of a round isn't an identical answer, it's a disagreement you never suspected."
     },
     "s3": {
-      "title": "How the compatibility test works",
+      "title": "How a round goes",
       "steps": [
         {
-          "title": "Enter your names",
-          "desc": "Enter both players' first names"
+          "title": "Enter your two first names",
+          "desc": "The game addresses each of you by name for the whole round."
         },
         {
-          "title": "Answer in turns",
-          "desc": "For each question, each person gives their answer separately"
+          "title": "Answer one after the other",
+          "desc": "One of you answers the 20 questions, hands the phone over, and the other answers the same ones, without seeing the first set of answers."
         },
         {
-          "title": "Discover your common points",
-          "desc": "The more identical answers you have, the higher your score!"
+          "title": "Compare",
+          "desc": "The game counts the identical answers and shows you where you meet. The fun part starts there."
         }
       ]
     },
     "s4": {
-      "title": "Couple common points test: 153 questions",
-      "p1": "Our database contains 153 carefully selected questions covering all aspects of life together. Each session, 20 questions are randomly drawn for a constantly renewed experience.",
+      "title": "What's inside the 153 questions",
+      "p1": "The game draws 20 questions at random out of 153, so no two rounds look alike, and you can restart straight from the end screen. The questions go from very light, \"Coffee or tea?\", \"Sea or mountains?\", to topics with a bit more at stake. Here are the six families:",
       "categories": [
         {
           "title": "Personality and character",
-          "desc": "Are you introverted or extroverted? Patient or impulsive? Discover your temperament similarities."
+          "desc": "Morning or evening person, patient or impulsive, the one who plans or the one who improvises."
         },
         {
           "title": "Tastes and interests",
-          "desc": "Movies, music, cooking, hobbies... Do you share the same passions and preferences?"
+          "desc": "Films, music, food, escape rooms. The lightest ground, and often the most surprising."
         },
         {
-          "title": "Values and life vision",
-          "desc": "Family, work, money, freedom... Are your priorities aligned?"
+          "title": "Values and outlook on life",
+          "desc": "Family, work, money, freedom. This is where identical answers weigh the most."
         },
         {
           "title": "Daily life and habits",
-          "desc": "Lifestyle, organization, little quirks... Are you compatible on a daily basis?"
+          "desc": "Pace of life, organisation, little quirks. Where you discover very concrete differences."
         },
         {
           "title": "Relationship and intimacy",
-          "desc": "Communication, affection, needs... How do you experience your relationship daily?"
+          "desc": "How you show affection, what each of you needs, what you expect from the other."
         },
         {
           "title": "Plans and future",
-          "desc": "Travel, family, career... Is your vision of the future shared?"
+          "desc": "Travel, kids, a home. The questions couples keep putting off, asked simply."
         }
       ]
     },
     "s5": {
-      "title": "How to interpret the test results",
-      "p1": "The final score gives you an indication of your common points, but it doesn't define the quality of your relationship. A high score shows beautiful harmony, while a lower score reveals differences that can be sources of richness.",
-      "p2": "The key is to step back and use this test as a starting point for constructive discussions. Each difference is an opportunity to better understand the other."
+      "title": "How to read your result",
+      "p1": "A high score means you know each other well and your tastes overlap. That's nice to see, but don't stop there: look at which answers matched. Twenty identical answers about food and films don't tell the same story as five identical answers about family and money.",
+      "p2": "A low score doesn't mean things are off to a bad start. It means you're different, and sometimes that you know each other less than you thought. So pick two or three questions where your answers split and talk about them: it's often the best part of the evening."
     },
     "s6": {
-      "title": "Do you need many common points to be compatible?",
-      "p1": "Not necessarily! Compatibility relies on much more than the number of common points. The strongest couples are often those who know how to <strong>balance similarities and differences</strong>.",
-      "p2": "The important thing is to share fundamental values (family, fidelity, life projects) while accepting that each person has their own tastes and personality. Differences can bring complementarity and surprise to the relationship."
+      "title": "Do you need a lot in common to be compatible?",
+      "p1": "No, and research on couples says it as clearly as common sense does. What brings two people together for the long run isn't shared tastes, it's shared values: the same idea of loyalty, of family, of what you do with your money and your time. Two people can hate each other's films and grow old together just fine.",
+      "p2": "If the question on your mind is broader than similarities, if you want to know whether your two ways of working fit together deep down, we built <a href=\"/en/love-compatibility-test/\">a test that measures that fit</a>, values and characters included. The two work well together: this one for what you share, the other for how you adjust to each other."
     },
     "s7": {
-      "title": "When to take a couple's common points test",
-      "p1": "This test is perfect for several key moments in your relationship:",
+      "title": "The right moments to play it",
+      "p1": "There's no bad moment for this game, but some are better than others:",
       "items": [
-        "<strong>Early in a relationship</strong>: to better know your new partner",
-        "<strong>During a moment of doubt</strong>: to rediscover what unites you",
-        "<strong>For a romantic evening</strong>: as a fun and bonding activity",
-        "<strong>Before a big decision</strong>: to check you're aligned"
+        "<strong>Early in a relationship:</strong> It's the simplest way to ask each other <a href=\"/en/couple-questions/\">20 real questions</a> without it feeling like an interview.",
+        "<strong>After years together:</strong> That's when the surprises are the funniest. You think you know everything, and you're wrong about a quarter of the answers.",
+        "<strong>An evening going nowhere:</strong> Ten minutes, one phone, and the evening is back on track.",
+        "<strong>Long distance:</strong> Each of you plays on your own phone, and you compare on a video call. It works really well."
       ]
     },
-    "ctaTitle": "Ready to discover your common points?",
-    "ctaDesc": "Scroll back to the top, enter your names, and dive into this compatibility test! Don't forget to discuss your answers after the quiz.",
-    "faqTitle": "Frequently Asked Questions",
+    "ctaTitle": "Your turn",
+    "ctaDesc": "Scroll back to the top, enter your names and start the round. And keep five minutes for the end: the answers that don't match are the best ones to talk about.",
+    "faqTitle": "Frequently asked questions",
     "faq": [
       {
         "q": "How does the common points test work?",
-        "a": "Enter both your names, then take turns answering 20 random questions from 153. Each identical answer counts as a common point. At the end, discover your compatibility score!"
+        "a": "You enter your two names, then each of you answers the same 20 questions, one after the other, without seeing the other's answers. The game counts identical answers and gives you your score. The 20 questions are drawn at random from 153, so every round changes."
       },
       {
-        "q": "Do you need many common points to be compatible?",
-        "a": "Not necessarily! Differences can be complementary. The important thing is sharing fundamental values while accepting that each person has their own personality."
+        "q": "Do you need a lot in common to be compatible?",
+        "a": "No. What matters is sharing the essentials: values, outlook on life, what you expect from a relationship. Different tastes are no problem at all, and they even make life more interesting."
       },
       {
-        "q": "Can you retake the test with different questions?",
-        "a": "Yes! At the end of the test, you can restart with a new draw of 20 questions from the 153 available. Each session is unique."
+        "q": "Can we replay with different questions?",
+        "a": "Yes, straight from the end screen. The game redraws 20 questions at random from the 153, so you can play several rounds without hitting the same ones."
       }
     ]
   },
