@@ -304,10 +304,13 @@ export const BLOG_ARTICLES = [
   {
     internalSlug: 'homme-qu-on-ignore',
     category: 'psychologie',
-    frOnly: true,
     featuredImage: '/blog/homme-qu-on-ignore.webp',
     slugs: {
       fr: 'homme-qu-on-ignore',
+      en: 'how-men-feel-when-ignored',
+      es: 'que-siente-un-hombre-cuando-lo-ignoras',
+      de: 'was-fuehlt-ein-mann-wenn-man-ihn-ignoriert',
+      it: 'cosa-prova-un-uomo-quando-lo-ignori',
     },
     publishedAt: '2026-08-26T09:30:00+02:00',
   },
