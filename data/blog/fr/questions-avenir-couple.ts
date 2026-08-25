@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'questions-avenir-couple',
   title: "60 questions d'avenir à se poser en couple avant les grandes décisions",
-  metaTitle: "Questions d'avenir en couple : les 60 qui engagent vraiment",
+  metaTitle: "Questions d'avenir en couple : les 60 qui engagent",
   metaDescription: "Emménager, se marier, un enfant... On saute rarement le pas faute d'amour, mais souvent faute d'en avoir parlé. Les 60 questions d'avenir à se poser avant.",
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Couple regardant un chemin qui se déroule vers l'horizon, valises à la main",

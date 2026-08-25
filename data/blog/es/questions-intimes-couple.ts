@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'preguntas-intimas-pareja',
   title: "65 preguntas íntimas para tu pareja, de las más dulces a las más atrevidas",
-  metaTitle: "Preguntas íntimas en pareja: 65 ideas que acercan de verdad",
+  metaTitle: "Preguntas íntimas en pareja: 65 ideas que acercan",
   metaDescription: "La intimidad no está solo debajo de las sábanas: está también en las preguntas que uno se atreve a hacer. 65 preguntas íntimas, de lo tierno a lo ardiente.",
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Pareja abrazada en un sofá con luz tenue, en plena conversación cómplice",

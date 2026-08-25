@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'avec-qui-les-gemeaux-trouvent-leur-place',
-      title: `Avec qui les Gémeaux trouvent vraiment leur place`,
+      title: `Avec qui les Gémeaux trouvent leur place`,
       content: `<p>La Balance et le Verseau (9/10 chacun) sont leurs partenaires les plus naturels. Même élément Air, même besoin de stimulation mentale, même rapport détendu à la liberté dans la relation. Avec eux, le Gémeaux n'a pas à justifier son besoin d'espace, il est compris d'emblée.</p>
 <p>Le Sagittaire (9/10) est un cas à part. C'est l'opposé zodiacal des Gémeaux, et comme souvent avec les opposés, l'attraction est réelle et complexe. Là où le Gémeaux papillonne entre les idées, le Sagittaire cherche le sens profond. Ils peuvent se compléter magnifiquement, ou s'irriter profondément selon les jours. <strong>Cette relation ne laisse jamais indifférent.</strong></p>
 <p>À l'autre bout du spectre, le Taureau (3/10) et le Capricorne (4/10) représentent des associations difficiles pour les Gémeaux. Pas parce que ces signes sont moins bien, mais parce que ce qu'ils cherchent en amour (stabilité, ancrage, prévisibilité) est exactement ce que le Gémeaux fuit. La frustration est souvent réciproque et rapide à s'installer.</p>

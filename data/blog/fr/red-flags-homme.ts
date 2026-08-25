@@ -30,7 +30,7 @@ const article: BlogArticleData = {
 <li><a href="#minimise-ce-que-tu-ressens">Il minimise ce que tu ressens</a></li>
 <li><a href="#ses-humeurs-ta-responsabilite">Ses humeurs deviennent ta responsabilité</a></li>
 <li><a href="#chaud-et-froid">Le chaud et le froid, en boucle</a></li>
-<li><a href="#ne-s-excuse-jamais">Il ne s'excuse jamais vraiment</a></li>
+<li><a href="#ne-s-excuse-jamais">Il ne présente jamais de vraies excuses</a></li>
 <li><a href="#actes-vs-mots">Ses actes ne correspondent pas à ses mots</a></li>
 <li><a href="#ne-respecte-pas-limites">Il ne respecte pas ce que tu lui as dit clairement</a></li>
 <li><a href="#ex-toutes-folles">Il parle de ses ex comme si elles étaient toutes folles</a></li>
@@ -79,7 +79,7 @@ const article: BlogArticleData = {
         },
         {
           id: 'ne-s-excuse-jamais',
-          title: "Il ne s'excuse jamais vraiment",
+          title: "Il ne présente jamais de vraies excuses",
           content: `<p>Ou alors, il le fait d'une façon qui remet la faute sur toi : "je suis désolé que tu l'aies mal pris", "je suis désolé mais tu aurais dû...". Ce n'est pas une excuse. C'est une contre-attaque polie. Une vraie excuse ne contient pas de "mais".</p>`,
         },
       ],

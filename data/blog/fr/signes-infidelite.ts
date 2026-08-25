@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'les-signes-qui-pesent',
-      title: "Les signes qui pèsent vraiment (le faisceau)",
+      title: "Les signes qui pèsent (le faisceau)",
       content: `<p>Voici les changements qui, ENSEMBLE et dans la durée, constituent un faisceau sérieux. Retiens le mot-clé : changement. Un comportement constant depuis toujours ne signale rien... c'est la rupture d'habitude qui parle.</p>
 <ol>
 <li><strong>Le téléphone sanctuarisé... récemment :</strong> Pas le téléphone privé de toujours : celui qui CHANGE de statut. Écran désormais face cachée, code modifié, notifications coupées, la douche avec le téléphone... Un téléphone qui devient un coffre-fort du jour au lendemain raconte que quelque chose y est entré.</li>

@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'questions-a-poser-a-sa-copine',
-  title: "75 questions à poser à sa copine, pour la (re)découvrir vraiment",
+  title: "75 questions à poser à sa copine, pour la (re)découvrir",
   metaTitle: "Questions à poser à sa copine : 75 idées pour tous les moments",
   metaDescription: "Tu crois la connaître par cœur ? Pari : sur ces 75 questions à poser à ta copine, il y en a au moins dix dont tu ne connais pas la réponse.",
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',

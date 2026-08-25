@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'sintomas-dependencia-emocional',
-  title: "Síntomas de la dependencia emocional: lo que se vive, concretamente",
+  title: "Síntomas de la dependencia emocional: ejemplos y consecuencias",
   metaTitle: "Dependencia emocional: los síntomas que deben alertarte",
   metaDescription: "El móvil mirado 40 veces, el miedo al silencio, la pareja que lo ocupa todo... Los 16 síntomas de la dependencia emocional, esfera por esfera.",
   featuredImage: '/blog/dependance-affective-symptomes.webp',

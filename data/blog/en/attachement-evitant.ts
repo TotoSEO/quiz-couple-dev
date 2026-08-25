@@ -60,7 +60,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'what-helps',
-      title: "What really helps (on both sides)",
+      title: "What helps most (on both sides)",
       content: `<p>The work isn't the same depending on which side of the couple you are standing. Here are both, separately, because the levers are opposite.</p>`,
       subsections: [
         {

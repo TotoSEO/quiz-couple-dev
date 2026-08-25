@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'questions-a-poser-a-son-crush',
-  title: "100 questions à poser à son crush, du premier message au premier rendez-vous",
-  metaTitle: "Questions à poser à son crush : 100 idées qui font mouche",
+  title: "100 questions à poser à son crush",
+  metaTitle: "100 questions à poser à son crush | Quiz Couple",
   metaDescription: "Marre des conversations qui retombent ? 100 questions à poser à ton crush, classées par situation : par message, pour rire, pour flirter, pour savoir si ça matche.",
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Deux téléphones face à face reliés par des bulles de conversation et un cœur",

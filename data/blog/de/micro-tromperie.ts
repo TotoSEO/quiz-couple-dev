@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'was-es-konkret-ist',
-      title: "Micro-Cheating, konkret",
+      title: "Micro-Cheating, mit Beispielen",
       content: `<p>Der einfachste Test, um Micro-Cheating zu erkennen, passt in eine Frage: <strong>Würde dieses Verhalten deine Anwesenheit überleben?</strong> Was jemand gleich tut, ob du dabei bist oder nicht, gehört zum sozialen Leben. Was sich ändert, sobald du den Raum betrittst, gehört zu etwas anderem. Auf dieser Grundlage das klassische Repertoire:</p>
 <ul>
 <li><strong>Die gezielte digitale Aufmerksamkeit:</strong> Systematisch die Fotos derselben Person liken, alle ihre Storys zuerst ansehen, mit der Regelmäßigkeit eines Metronoms kommentieren. Ein Like ist nichts; Beständigkeit ist ein Signal, und das weiß jeder ganz genau.</li>

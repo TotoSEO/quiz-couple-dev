@@ -31,7 +31,7 @@
     "intro": "El juego no saca quince preguntas al azar. Las juega por niveles, del más ligero al más personal, y os avisa en cada cambio. Saltar directamente al tercer nivel no funciona: es incluso la mejor manera de hacer huir a alguien.",
     "pillar1Title": "Nivel 1: para romper el hielo",
     "pillar1Text": "Ligero, a veces divertido, nunca indiscreto. El objetivo de este nivel no es aprender cosas del otro, es <strong>coger la costumbre de responder de verdad</strong> en lugar de responder por educación. Preguntas que se pueden responder sin descubrirse, pero que exigen pensar tres segundos.",
-    "pillar2Title": "Nivel 2: para conoceros de verdad",
+    "pillar2Title": "Nivel 2: para conoceros mejor",
     "pillar2Text": "Se pasa a lo que ha construido a la persona: sus decisiones, lo que ha dejado de hacer, lo que espera. Das algo de ti, pero nada que cueste todavía. Es el nivel más largo en conversación, y a menudo aquel en el que se entiende si hay ganas de continuar.",
     "pillar3Title": "Nivel 3: para ir más lejos",
     "pillar3Text": "Los miedos, los arrepentimientos, lo que no se dice y, sobre todo, lo que ya veis el uno del otro. Es el nivel que cambia la naturaleza de la velada. Se puede rechazar: si la pregunta no te encaja, pasa a la siguiente, nadie cuenta los puntos."
@@ -49,7 +49,7 @@
     "outro": "Ninguno de estos reflejos es grave por sí solo. Lo son cuando son sistemáticos, porque todos mandan el mismo mensaje: <strong>prefiero quedarme a resguardo</strong>. Y el otro lo entiende mucho más rápido de lo que se cree."
   },
   "section4": {
-    "title": "Lo que dice de verdad la investigación detrás de este formato",
+    "title": "Lo que dice la investigación detrás de este formato",
     "p1": "Este juego se inspira en un protocolo preciso, muy citado y poco leído correctamente. Los cuatro puntos siguientes son los que cuentan, y el último es el que nadie menciona.",
     "sub1Title": "El estudio",
     "sub1Text": "En 1997, Arthur Aron y su equipo publican <em>The Experimental Generation of Interpersonal Closeness</em> en el <em>Personality and Social Psychology Bulletin</em>. Se emparejan desconocidos que hablan durante unos tres cuartos de hora, unos sobre temas anodinos, otros siguiendo una lista de preguntas hecha a propósito. Los segundos se declaran claramente más cercanos al terminar.",

@@ -138,7 +138,7 @@ const article: BlogArticleData = {
         },
         {
           id: 'comment-les-distinguer',
-          title: "Comment les distinguer concrètement",
+          title: "Comment les distinguer, avec des exemples",
           content: `<p>Pose-toi ces questions :</p>
 <ul>
 <li>Est-ce que ton doute est lié à une <strong>situation</strong> (un événement, un choix, une transition) ou à la <strong>personne elle-même</strong> ?</li>

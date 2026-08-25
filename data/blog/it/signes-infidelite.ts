@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'i-segnali-che-pesano',
-      title: "I segnali che pesano davvero (l'insieme)",
+      title: "I segnali che pesano (l'insieme)",
       content: `<p>Ecco i cambiamenti che, INSIEME e nel tempo, costituiscono un insieme serio. Tieni a mente la parola chiave: cambiamento. Un comportamento costante da sempre non segnala nulla... è la rottura dell'abitudine che parla.</p>
 <ol>
 <li><strong>Il telefono diventato santuario... di recente:</strong> Non il telefono privato di sempre: quello che CAMBIA statuto. Schermo ora a faccia in giù, codice modificato, notifiche spente, la doccia con il telefono... Un telefono che diventa una cassaforte dall'oggi al domani racconta che qualcosa ci è entrato.</li>

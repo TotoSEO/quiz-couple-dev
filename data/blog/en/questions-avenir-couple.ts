@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'future-questions-for-couples',
   title: "60 questions about the future to ask before the big decisions",
-  metaTitle: "Future questions for couples: the 60 that really commit you",
+  metaTitle: "Future questions for couples: the 60 that commit you",
   metaDescription: "Moving in, marriage, a child... Couples rarely stall for lack of love, but often for lack of having talked about it. The 60 future questions to ask beforehand.",
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Couple looking at a path unrolling towards the horizon, suitcases in hand",

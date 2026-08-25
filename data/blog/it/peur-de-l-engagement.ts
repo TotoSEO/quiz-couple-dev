@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'paura-dell-impegno',
-  title: "La paura dell'impegno: cosa si nasconde davvero dietro (e come andare avanti)",
+  title: "La paura dell'impegno: cosa si nasconde dietro (e come andare avanti)",
   metaTitle: "Paura dell'impegno: cause, segnali e come sbloccarsi",
   metaDescription: "Dice che «non è pronto» da due anni? O sei tu che ti blocchi? La paura dell'impegno decifrata: le sue cause reali, i suoi segnali... e come uscirne.",
   featuredImage: '/blog/peur-de-l-engagement.webp',
@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'le-cause-reali',
-      title: "Cosa si nasconde davvero dietro la paura dell'impegno",
+      title: "Cosa si nasconde dietro la paura dell'impegno",
       content: `<p>«Fobia dell'impegno», l'espressione fa sorridere... ma il meccanismo è serio, e ha quasi sempre una di queste quattro radici.</p>`,
       subsections: [
         {

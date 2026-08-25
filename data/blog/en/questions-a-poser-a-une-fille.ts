@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'questions-to-ask-a-girl',
-  title: "90 questions to ask a girl, to actually meet her",
+  title: "The 90 best questions to ask a girl to get to know her",
   metaTitle: "90 Questions to Ask a Girl (Without the Interrogation)",
   metaDescription: "Tired of \"hey, how are you?\" going nowhere? 90 questions to ask a girl, from the first message to a real one to one, never an interrogation.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',

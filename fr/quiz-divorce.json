@@ -1,13 +1,13 @@
 {
   "seo": {
     "s1": {
-      "title": "Dois-je vraiment divorcer ? Ce que votre hésitation vous dit déjà",
+      "title": "Dois-je divorcer ? Ce que votre hésitation vous dit déjà",
       "p1": "Vous n'avez pas ouvert cette page par hasard. Quand quelqu'un tape « dois-je divorcer » dans Google, ce n'est pas par curiosité abstraite. C'est parce que quelque chose, quelque part, ne va plus, et que la question commence à occuper une place que vous n'arrivez plus à ignorer.",
       "p2": "L'hésitation, en elle-même, est déjà une information. Elle dit que vous ne voulez pas décider dans la précipitation. Que vous prenez votre couple, et votre vie, au sérieux. Ça compte.",
       "p3": "Mais elle peut aussi vous garder dans une situation inconfortable indéfiniment, si elle n'est jamais adressée franchement."
     },
     "s2": {
-      "title": "Quand faut-il vraiment envisager le divorce ?",
+      "title": "Quand faut-il envisager le divorce ?",
       "intro": "Il n'existe pas de liste de cases à cocher qui déclenche automatiquement une séparation. Mais certains signaux, quand ils s'accumulent et durent, méritent d'être pris au sérieux.",
       "h3_1": "Quand la communication est rompue depuis longtemps",
       "h3_1_p1": "Pas juste « on se dispute », ça, tous les couples le font. Mais quand vous ne vous parlez plus vraiment, quand les sujets importants sont devenus des zones interdites, quand vous vous sentez plus seul(e) à deux que seul tout court.",
@@ -48,7 +48,7 @@
       "tip": "Prendre la « bonne » décision ne veut pas dire prendre la décision la plus facile, ni celle qui fera le moins de mal à court terme. Ça veut dire prendre la décision qui vous permet, à vous et à vos proches, de construire quelque chose de meilleur sur le long terme."
     },
     "s5": {
-      "title": "Divorce : ce que ça implique concrètement",
+      "title": "Divorce : ce que ça implique au quotidien",
       "p1": "Avant de s'y engager, il est utile de savoir à quoi on a affaire. Le divorce en France peut prendre plusieurs formes, et les démarches varient selon votre situation.",
       "p2": "<strong>Le divorce par consentement mutuel</strong> est le plus simple et le plus rapide quand les deux parties sont d'accord sur tout (garde des enfants, partage des biens, pension alimentaire). Depuis 2017, il ne passe plus forcément par le tribunal, un acte d'avocat suffit dans la plupart des cas.",
       "p3": "<strong>Le divorce pour faute</strong> existe encore, mais il est moins fréquent et plus long. Il implique de prouver des manquements graves aux obligations du mariage.",
@@ -59,7 +59,7 @@
       "tip": "Vous pouvez consulter un avocat spécialisé en droit de la famille pour une première estimation gratuite ou à tarif réduit. Certains barreaux proposent des consultations d'aide juridictionnelle. Renseignez-vous auprès de votre mairie ou du tribunal judiciaire de votre secteur."
     },
     "s6": {
-      "title": "Divorcer avec des enfants : ce qu'il faut vraiment savoir",
+      "title": "Divorcer avec des enfants : ce qu'il faut savoir",
       "p1": "C'est souvent la partie la plus redoutée. Et la plus mal comprise.",
       "p2": "Les enfants ne sortent pas indemnes d'un divorce, c'est vrai. Mais ils ne sortent pas indemnes non plus d'une enfance passée dans un foyer en tension permanente. Les études sur le sujet sont claires : ce qui abîme les enfants, ce n'est pas tant la séparation de leurs parents que la manière dont elle se passe, et la qualité de la coparentalité qui suit.",
       "p3": "Un divorce géré avec respect mutuel, une communication claire avec les enfants adaptée à leur âge, et deux parents qui continuent à s'engager dans leur rôle, ça peut très bien se passer. Pas parfaitement, mais bien.",
@@ -80,7 +80,7 @@
     },
     "faq": [
       {
-        "q": "Quand faut-il vraiment envisager le divorce ?",
+        "q": "Quand faut-il envisager le divorce ?",
         "a": "Quand la communication est rompue depuis longtemps, que les tentatives de réparation n'ont rien changé, que votre santé en prend un coup, ou qu'il y a de la violence sous quelque forme que ce soit."
       },
       {

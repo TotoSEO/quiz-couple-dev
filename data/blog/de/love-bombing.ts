@@ -37,7 +37,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'was-ist-love-bombing',
-      title: "Was Love Bombing konkret ist",
+      title: "Was Love Bombing ist",
       content: `<p>Love Bombing ist eine Phase ungewöhnlich intensiver Umwerbung, zusammengedrängt auf eine sehr kurze Zeit, die eine starke Bindung erzeugen soll, <em>bevor</em> du Zeit hattest, die Person vor dir einzuschätzen.</p>
 <p>Der Ausdruck stammt ursprünglich aus dem Vokabular von Sekten, wo neue Mitglieder mit Aufmerksamkeit und Wärme überschüttet wurden, um ihr kritisches Denken auszuhebeln. Der Mechanismus ist derselbe geblieben, nur übertragen auf das Liebesleben.</p>
 <p>Der entscheidende Punkt: <strong>Love Bombing wird nicht durch die Gesten definiert, sondern durch ihre Funktion.</strong> Blumen schenken, Nachrichten schreiben, große Worte sagen, all das kann vollkommen aufrichtig sein. Zum Love Bombing wird es dadurch, dass diese Gesten eine emotionale Schuld aufbauen und dein Engagement beschleunigen sollen, statt dich kennenzulernen.</p>`,

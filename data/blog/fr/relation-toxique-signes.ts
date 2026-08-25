@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'relation-toxique-signes',
-  title: "Relation toxique : reconnaître les signes, et savoir si ça se répare",
+  title: "Relation toxique : ce que c'est et reconnaître les signes",
   metaTitle: "Relation toxique : les 7 signes qui ne pardonnent pas",
   metaDescription: "Une relation n'est pas toxique par ses disputes, mais par ce qu'elle te fait devenir. Les 7 signes fiables, la différence avec une passe difficile, et ce qui se répare.",
   featuredImage: '/blog/relation-toxique-signes.webp',

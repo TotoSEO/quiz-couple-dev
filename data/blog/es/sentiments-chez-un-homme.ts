@@ -129,7 +129,7 @@ Las conversaciones que hacen avanzar casi nunca son «¿qué somos?». Partir de
     },
     {
       id: 'para-terminar',
-      title: `Dónde se ven de verdad los sentimientos`,
+      title: `Dónde se ven los sentimientos`,
       content: `<p>Los sentimientos en un hombre rara vez nacen donde se los busca… No en las palabras, no en los grandes gestos, sino en convertirse en costumbre y luego en falta.</p>
 
 <p><strong>Si has llegado a contar las señales</strong>, la verdadera pregunta quizá no sea dónde está él, sino si el ritmo que impone te conviene. Son dos preguntas distintas, y la segunda te pertenece por completo.</p>`,

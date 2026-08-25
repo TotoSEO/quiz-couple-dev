@@ -30,7 +30,7 @@ const article: BlogArticleData = {
 <li><a href="#dismisses-your-feelings">He dismisses what you feel</a></li>
 <li><a href="#his-moods-your-responsibility">His moods become your responsibility</a></li>
 <li><a href="#hot-and-cold">Hot and cold, on repeat</a></li>
-<li><a href="#never-apologises">He never actually apologises</a></li>
+<li><a href="#never-apologises">He never offers a genuine apology</a></li>
 <li><a href="#actions-vs-words">His actions don't match his words</a></li>
 <li><a href="#doesnt-respect-boundaries">He doesn't respect what you've clearly told him</a></li>
 <li><a href="#exes-all-crazy">He talks about all his exes like they were crazy</a></li>
@@ -79,7 +79,7 @@ const article: BlogArticleData = {
         },
         {
           id: 'never-apologises',
-          title: "He never actually apologises",
+          title: "He never offers a genuine apology",
           content: `<p>Or he does it in a way that turns the blame back on you: "I'm sorry you took it that way", "I'm sorry but you should have...". That's not an apology. It's a polite counter-attack. A real apology doesn't contain a "but".</p>`,
         },
       ],

@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'chi-puo-davvero-reggere-con-uno-scorpione',
-      title: `Chi può davvero reggere con uno Scorpione`,
+      title: `Chi può reggere con uno Scorpione`,
       content: `<p>Il Cancro (9/10) è probabilmente la compatibilità più istintiva dello Scorpione. Entrambi segni d'Acqua, non hanno bisogno di spiegare tutto, si capiscono a un livello che le parole non sempre raggiungono. Il Cancro offre allo Scorpione una dolcezza protettiva, e lo Scorpione dà al Cancro la profondità emotiva di cui ha sete.</p>
 <p>La Vergine (9/10) è una compatibilità meno ovvia ma altrettanto solida. Quello che unisce questi due segni è la loro serietà comune di fronte all'impegno. Né l'uno né l'altra si impegna alla leggera, e quando lo fanno, è per costruire qualcosa che duri.</p>
 <p>Con l'Acquario (3/10), lo Scorpione si scontra con un'incompatibilità di fondo. <strong>L'Acquario razionalizza dove lo Scorpione sente.</strong> Prende distanza dove lo Scorpione cerca la fusione. Questi due modi di essere non si incontrano quasi mai a metà strada, e la frustrazione che ne nasce è spesso più forte dell'attrazione iniziale.</p>

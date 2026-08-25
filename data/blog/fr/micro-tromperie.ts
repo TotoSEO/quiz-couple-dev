@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'c-est-quoi-concretement',
-      title: "La micro-tromperie, concrètement",
+      title: "La micro-tromperie, avec des exemples",
       content: `<p>Le test le plus simple pour reconnaître une micro-tromperie tient en une question : <strong>est-ce que ce comportement survivrait à ta présence ?</strong> Ce qu'on fait pareil que tu sois là ou pas relève de la vie sociale... Ce qui change quand tu entres dans la pièce relève d'autre chose. Sur cette base, le répertoire classique :</p>
 <ul>
 <li><strong>L'attention numérique ciblée :</strong> Liker systématiquement les photos de la même personne, visionner toutes ses stories en premier, commenter avec une régularité de métronome... Un like est un rien ; une constance est un signal, et tout le monde le sait très bien.</li>

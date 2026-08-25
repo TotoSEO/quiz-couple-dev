@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'toxic-woman-in-love',
-  title: "Toxic woman in love: the signs men take too long to see",
+  title: "Toxic woman in love: the subtle behaviours to know about",
   metaTitle: "Toxic woman: signs and behaviours in a relationship",
   metaDescription: "Repeated drama, guilt-tripping, control disguised as love... The signs of the toxic woman in a relationship, the 6 typical profiles, and the question nobody dares: what if it's me?",
   featuredImage: '/blog/femme-toxique-en-amour.webp',

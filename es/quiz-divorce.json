@@ -1,13 +1,13 @@
 {
   "seo": {
     "s1": {
-      "title": "¿Debería divorciarme realmente? Lo que tu vacilación ya te dice",
+      "title": "¿Debería divorciarme? Lo que tu vacilación ya te dice",
       "p1": "No abriste esta página por casualidad. Cuando alguien busca \"¿debería divorciarme?\" en Google, no es por curiosidad abstracta. Es porque algo, en algún lugar, ya no funciona, y la pregunta empieza a ocupar un espacio que ya no puedes ignorar.",
       "p2": "La vacilación, en sí misma, ya es información. Dice que no quieres decidir de forma precipitada. Que te tomas tu relación, y tu vida, en serio. Eso cuenta.",
       "p3": "Pero también puede mantenerte en una situación incómoda indefinidamente, si nunca se aborda con honestidad."
     },
     "s2": {
-      "title": "¿Cuándo hay que plantearse realmente el divorcio?",
+      "title": "¿Cuándo hay que plantearse el divorcio?",
       "intro": "No existe una lista de casillas que active automáticamente una separación. Pero ciertas señales, cuando se acumulan y persisten, merecen ser tomadas en serio.",
       "h3_1": "Cuando la comunicación lleva rota mucho tiempo",
       "h3_1_p1": "No solo \"discutimos\", eso lo hacen todas las parejas. Sino cuando ya no se hablan de verdad, cuando los temas importantes se han convertido en zonas prohibidas, cuando te sientes más solo/a en pareja que estando solo/a.",
@@ -48,7 +48,7 @@
       "tip": "Tomar la decisión \"correcta\" no significa tomar la decisión más fácil, ni la que cause menos dolor a corto plazo. Significa tomar la decisión que te permita, a ti y a tus seres queridos, construir algo mejor a largo plazo."
     },
     "s5": {
-      "title": "Divorcio: lo que implica concretamente",
+      "title": "Divorcio: lo que implica en el día a día",
       "p1": "Antes de comprometerse, es útil saber a qué se enfrenta uno. El divorcio puede tomar varias formas, y los trámites varían según tu situación y país.",
       "p2": "<strong>El divorcio de mutuo acuerdo</strong> es el más sencillo y rápido cuando ambas partes están de acuerdo en todo (custodia, reparto de bienes, pensión). En muchas jurisdicciones, puede resolverse sin pasar por el tribunal.",
       "p3": "<strong>El divorcio contencioso</strong> sigue existiendo, pero es menos frecuente y más largo. Implica demostrar incumplimientos graves de las obligaciones matrimoniales.",
@@ -59,7 +59,7 @@
       "tip": "Puedes consultar a un abogado especializado en derecho familiar para una primera consulta gratuita o a precio reducido. Muchos colegios de abogados ofrecen consultas de asistencia jurídica."
     },
     "s6": {
-      "title": "Divorciarse con hijos: lo que realmente hay que saber",
+      "title": "Divorciarse con hijos: lo que hay que saber",
       "p1": "Es a menudo la parte más temida. Y la más mal entendida.",
       "p2": "Los hijos no salen ilesos de un divorcio, es verdad. Pero tampoco salen ilesos de una infancia pasada en un hogar con tensión permanente. Los estudios son claros: lo que daña a los hijos no es tanto la separación de sus padres como la forma en que se produce, y la calidad de la coparentalidad posterior.",
       "p3": "Un divorcio gestionado con respeto mutuo, comunicación clara con los hijos adaptada a su edad, y dos padres que siguen comprometidos con su rol, puede salir muy bien. No perfecto, pero bien.",
@@ -80,7 +80,7 @@
     },
     "faq": [
       {
-        "q": "¿Cuándo hay que plantearse realmente el divorcio?",
+        "q": "¿Cuándo hay que plantearse el divorcio?",
         "a": "Cuando la comunicación lleva rota mucho tiempo, los intentos de reparación no han cambiado nada, tu salud se resiente, o hay violencia de cualquier tipo."
       },
       {

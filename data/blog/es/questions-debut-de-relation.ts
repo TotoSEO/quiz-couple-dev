@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'preguntas-inicio-relacion',
-  title: "60 preguntas para hacerse al inicio de una relación (antes de lanzarse)",
-  metaTitle: "Preguntas al inicio de una relación: las 60 que cuentan de verdad",
+  title: "60 preguntas perfectas para hacerse al inicio de una relación",
+  metaTitle: "Preguntas al inicio de una relación: las 60 que cuentan",
   metaDescription: "Las primeras semanas no te atreves a preguntar nada por miedo a romperlo todo. Error: aquí están las 60 preguntas de inicio de relación, dosificadas sin saltarse etapas.",
   featuredImage: '/blog/questions-debut-de-relation.webp',
   featuredImageAlt: "Dos tazas de café humeantes una al lado de la otra, el inicio de una conversación",

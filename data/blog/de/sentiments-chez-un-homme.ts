@@ -129,7 +129,7 @@ Die Gespräche, die etwas bewegen, sind fast nie «Was sind wir eigentlich?». V
     },
     {
       id: 'zum-schluss',
-      title: `Wo sich Gefühle wirklich zeigen`,
+      title: `Wo sich Gefühle zeigen`,
       content: `<p>Gefühle entstehen bei einem Mann selten dort, wo man sie sucht… Nicht in den Worten, nicht in den großen Gesten, sondern darin, zur Gewohnheit zu werden und danach zum Vermissten.</p>
 
 <p><strong>Wenn du so weit bist, Anzeichen zu zählen</strong>, ist die eigentliche Frage vielleicht nicht, wo er steht, sondern ob dir das Tempo passt, das er vorgibt. Das sind zwei verschiedene Fragen, und die zweite gehört ganz dir.</p>`,

@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'compatibilita-amorosa-ariete',
   title: `Compatibilità amorosa dell'Ariete: i segni che lo accendono (e quelli che lo spengono)`,
-  metaTitle: `Compatibilità amorosa Ariete: chi riesce davvero a stargli dietro?`,
+  metaTitle: `Compatibilità amorosa Ariete: chi riesce a stargli dietro?`,
   metaDescription: `L'Ariete si innamora in fretta, si entusiasma ancora più in fretta, e a volte resta deluso. Scopri quali segni possono davvero tenere il suo ritmo…`,
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Simbolo astrologico dell'Ariete, compatibilità amorosa`,
@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'cosa-cerca-ariete-in-amore',
-      title: `Cosa cerca davvero l'Ariete in amore`,
+      title: `Cosa cerca l'Ariete in amore`,
       content: `<p>Prima di guardare i punteggi segno per segno, c'è qualcosa da capire sull'Ariete: <strong>ha bisogno di essere sorpreso</strong>. Un partner prevedibile, che dice sempre sì, che non lo mette mai alla prova, lo annoia. In fretta. Quella che l'Ariete chiama "passione" è spesso quella tensione produttiva tra due volontà che non si somigliano del tutto.</p>
 <p>Le sue migliori compatibilità, quindi, raramente sono con segni che gli assomigliano al cento per cento. Il Leone (9/10) lo stimola perché gli tiene testa con lo stesso orgoglio. La Bilancia (9/10), il suo opposto zodiacale, lo affascina proprio perché funziona al contrario di lui, dove lui si lancia, lei soppesa i pro e i contro. Dove lui dice quello che pensa, lei cerca la parola giusta. Per l'Ariete, questa differenza è pura attrazione.</p>
 <p>All'opposto, le combinazioni più complicate sono quelle che gli chiedono di rallentare senza offrirgli niente in cambio di quello sforzo. Il Cancro (4/10) gli chiede di gestire emozioni che non sempre sa leggere. La Vergine (4/10) gli chiede di riflettere prima di agire, il che va contro tutto ciò che è. Queste relazioni possono funzionare, ma non nascono mai in modo naturale.</p>

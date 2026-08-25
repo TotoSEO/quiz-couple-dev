@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'fear-of-commitment',
-  title: "Fear of commitment: what is really hiding behind it (and how to move forward)",
+  title: "Fear of commitment: what is hiding behind it (and how to move forward)",
   metaTitle: "Fear of commitment: causes, signs and how to unblock it",
   metaDescription: "Has he been saying he is «not ready» for two years? Or are you the one who freezes? Fear of commitment decoded: its real causes, its signs... and how to get out of it.",
   featuredImage: '/blog/peur-de-l-engagement.webp',
@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'the-real-causes',
-      title: "What is really hiding behind fear of commitment",
+      title: "What is hiding behind fear of commitment",
       content: `<p>«Commitment phobia», the phrase makes people smile... but the mechanism is serious, and it almost always has one of these four roots.</p>`,
       subsections: [
         {

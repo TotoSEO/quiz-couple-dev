@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'questions-intimes-couple',
   title: "65 questions intimes à poser à son copain, des plus douces aux plus osées",
-  metaTitle: "Questions intimes en couple : 65 idées qui rapprochent vraiment",
+  metaTitle: "Questions intimes en couple : 65 idées qui rapprochent",
   metaDescription: "L'intimité, ce n'est pas que sous la couette : c'est aussi dans les questions qu'on ose se poser. 65 questions intimes, graduées du tendre au brûlant.",
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Couple enlacé sur un canapé à la lumière tamisée, en pleine conversation complice",

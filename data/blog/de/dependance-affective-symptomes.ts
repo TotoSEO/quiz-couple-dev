@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'emotionale-abhaengigkeit-symptome',
-  title: "Symptome emotionaler Abhängigkeit: wie sich das konkret anfühlt",
+  title: "Symptome emotionaler Abhängigkeit: Beispiele und Folgen",
   metaTitle: "Emotionale Abhängigkeit: die Symptome, die alarmieren sollten",
   metaDescription: "Das Handy 40-mal geprüft, die Angst vor Stille, die Beziehung nimmt allen Platz ein... Die 16 Symptome emotionaler Abhängigkeit, Bereich für Bereich.",
   featuredImage: '/blog/dependance-affective-symptomes.webp',

@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'narcissistic-manipulator',
-  title: "The narcissistic manipulator: how he operates, and where he is vulnerable",
+  title: "The narcissistic manipulator: how to spot him easily",
   metaTitle: "Narcissistic manipulator: techniques, weak points, reactions",
   metaDescription: "His techniques in the order he uses them, his real weak points, the effect of silence on him and his reactions when unmasked. The complete manual.",
   featuredImage: '/blog/manipulateur-narcissique.webp',

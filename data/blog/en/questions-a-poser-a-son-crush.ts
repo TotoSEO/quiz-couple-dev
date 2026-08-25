@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'questions-to-ask-your-crush',
-  title: "100 questions to ask your crush, from the first message to the first date",
-  metaTitle: "100 Questions to Ask Your Crush (That Actually Get Answers)",
+  title: "100 questions to ask your crush",
+  metaTitle: "100 Questions to Ask Your Crush | Quiz Couple",
   metaDescription: "Tired of conversations that fizzle out? 100 questions to ask your crush, sorted by situation: by message, to make them laugh, to flirt, to see if it fits.",
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Young person smiling at their phone while typing a message to their crush",

@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'mujer-toxica-en-el-amor',
-  title: "Mujer tóxica en el amor: las señales que los hombres tardan demasiado en ver",
+  title: "Mujer tóxica en el amor: los comportamientos sutiles que hay que conocer",
   metaTitle: "Mujer tóxica: señales y comportamientos en pareja",
   metaDescription: "Dramas repetidos, culpabilización, control disfrazado de amor... Las señales de la mujer tóxica en pareja, los 6 perfiles tipo y la pregunta que nadie se atreve: ¿y si soy yo?",
   featuredImage: '/blog/femme-toxique-en-amour.webp',

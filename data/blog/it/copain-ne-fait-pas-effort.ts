@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'ragazzo-non-si-impegna',
   title: "Il mio ragazzo non si impegna: cosa significa e cosa fare",
-  metaTitle: "Il mio ragazzo non si impegna: cosa fare davvero",
+  metaTitle: "Il mio ragazzo non si impegna: cosa fare",
   metaDescription: "Fai tutto tu, lui niente. O quasi. Perché certi uomini smettono di impegnarsi, come riconoscerlo, cosa significa e cosa fare concretamente.",
   featuredImage: '',
   featuredImageAlt: "Tavola apparecchiata per due, un coperto curato con candela e fiori, l'altro posto lasciato vuoto",

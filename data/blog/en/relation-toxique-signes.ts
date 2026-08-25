@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'toxic-relationship-signs',
-  title: "Toxic relationship: recognising the signs, and knowing whether it can be fixed",
+  title: "Toxic relationship: what it is and how to recognise the signs",
   metaTitle: "Toxic relationship: the 7 signs that don't lie",
   metaDescription: "A relationship isn't toxic because of its arguments, but because of what it turns you into. The 7 reliable signs, the difference with a rough patch, and what can be fixed.",
   featuredImage: '/blog/relation-toxique-signes.webp',

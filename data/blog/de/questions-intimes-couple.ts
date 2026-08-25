@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'intime-fragen-fuer-paare',
   title: "65 intime Fragen an deinen Partner, von den zärtlichsten bis zu den gewagtesten",
-  metaTitle: "Intime Fragen für Paare: 65 Ideen, die wirklich näher bringen",
+  metaTitle: "Intime Fragen für Paare: 65 Ideen, die näher bringen",
   metaDescription: "Intimität passiert nicht nur unter der Decke: Sie steckt auch in den Fragen, die man sich zu stellen traut. 65 intime Fragen, von zärtlich bis heiß.",
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Paar eng umschlungen auf einem Sofa bei gedämpftem Licht, mitten im vertrauten Gespräch",

@@ -9,7 +9,7 @@
   "cta": "Commencer le test",
   "sections": {
     "s1": {
-      "titre": "C'est quoi un test de pureté, concrètement ?",
+      "titre": "C'est quoi un test de pureté ?",
       "lead": "Une longue liste de choses que les gens font. Vous cochez celles que vous avez déjà faites. Plus vous cochez, plus le score monte, moins vous êtes « pur ».",
       "p1": "Le format traîne sur les campus américains depuis des décennies et il a explosé sur les réseaux, parce qu'il produit exactement ce que tout le monde cherche dans un <a class=\"pu-lien-int\" href=\"{{jeuxCouple}}\">jeu de soirée</a> : un chiffre à comparer. Pas d'interprétation, pas de profil psychologique, juste un nombre que vous pouvez balancer dans une conversation.",
       "p2": "La version que vous avez sous les yeux est écrite pour les couples. Pas de questions sur les fraternités ni sur les amphis séchés : on parle d'ex, de mensonges, de soirées qui ont dérapé, de choses cachées au partenaire et de trucs faits à deux.",
@@ -87,7 +87,7 @@
       }
     },
     "s4": {
-      "titre": "Ce que le test regarde vraiment",
+      "titre": "Ce que le test regarde",
       "p1": "Les questions sont réparties en catégories, et le résultat détaille votre score dans chacune. C'est souvent là que la surprise arrive : on se croit sage parce que le total est moyen, et on découvre qu'on plafonne à 90 % sur une seule famille.",
       "sub1Titre": "Les sept catégories du mode solo",
       "liste1": [

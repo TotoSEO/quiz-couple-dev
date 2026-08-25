@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-belier',
   title: `Compatibilité amoureuse du Bélier : les signes qui l'enflamment (et ceux qui l'éteignent)`,
-  metaTitle: `Compatibilité amoureuse Bélier : qui lui résiste vraiment ?`,
+  metaTitle: `Compatibilité amoureuse Bélier : qui lui résiste ?`,
   metaDescription: `Le Bélier tombe vite amoureux et s'emballe encore plus vite. Quels signes tiennent vraiment le rythme avec lui, et lesquels feront long feu ?`,
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Symbole astrologique du Bélier, compatibilité amoureuse`,
@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'ce-que-le-belier-attend-en-amour',
-      title: `Ce que le Bélier attend vraiment en amour`,
+      title: `Ce que le Bélier attend en amour`,
       content: `<p>Avant de regarder les chiffres signe par signe, il y a quelque chose à comprendre sur le Bélier : <strong>il a besoin d'être surpris</strong>. Un partenaire prévisible, qui dit toujours oui, qui ne pousse jamais dans ses retranchements, ça l'ennuie. Rapidement. Ce que le Bélier appelle "la passion", c'est souvent cette tension productive entre deux volontés qui ne se ressemblent pas tout à fait.</p>
 <p>Ses meilleures compatibilités sont donc rarement avec des signes qui lui ressemblent à 100%. Le Lion (9/10) le stimule parce qu'il lui tient tête avec le même orgueil. La Balance (9/10), son opposé zodiacal, le fascine précisément parce qu'elle fonctionne à l'envers de lui, là où il fonce, elle pèse le pour et le contre. Là où il dit ce qu'il pense, elle cherche le mot juste. Cette différence, pour le Bélier, c'est de l'attraction.</p>
 <p>À l'inverse, les associations les plus compliquées pour lui sont celles qui demandent qu'il ralentisse sans lui offrir quelque chose en échange de cet effort. Le Cancer (4/10) lui demande de gérer des émotions qu'il ne sait pas toujours lire. La Vierge (4/10) lui demande de réfléchir avant d'agir, ce qui va à l'encontre de tout ce qu'il est. Ces relations peuvent fonctionner, mais elles ne viennent jamais naturellement.</p>

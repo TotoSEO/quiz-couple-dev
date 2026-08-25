@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'intimate-questions-for-couples',
   title: "65 intimate questions to ask your partner, from the gentlest to the boldest",
-  metaTitle: "Intimate questions for couples: 65 ideas that really bring you closer",
+  metaTitle: "Intimate questions for couples: 65 ideas that bring you closer",
   metaDescription: "Intimacy isn't only under the covers: it's also in the questions you dare to ask. 65 intimate questions, graded from tender to scorching.",
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Couple entwined on a sofa in soft light, deep in a knowing conversation",

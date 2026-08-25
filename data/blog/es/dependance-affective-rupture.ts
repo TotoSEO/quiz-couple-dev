@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'dependencia-emocional-tras-una-ruptura',
-  title: "Dependencia emocional y ruptura: sobrevivir a la abstinencia y hacer de ello una fuerza",
+  title: "Dependencia emocional y ruptura: sobrevivir a la abstinencia y salir adelante",
   metaTitle: "Ruptura y dependencia emocional: atravesar la carencia",
   metaDescription: "Para un dependiente emocional, una ruptura no es un desamor: es una abstinencia. Por qué duele tanto, las trampas de las primeras semanas y cómo salir fortalecida.",
   featuredImage: '/blog/dependance-affective-rupture.webp',

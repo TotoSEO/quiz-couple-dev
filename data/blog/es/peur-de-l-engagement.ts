@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'miedo-al-compromiso',
-  title: "El miedo al compromiso: lo que se esconde de verdad detrás (y cómo avanzar)",
+  title: "El miedo al compromiso: lo que se esconde detrás (y cómo avanzar)",
   metaTitle: "Miedo al compromiso: causas, señales y cómo desbloquearlo",
   metaDescription: "¿Lleva dos años diciendo que «no está preparado»? ¿O eres tú quien se bloquea? El miedo al compromiso descifrado: sus causas reales, sus señales... y cómo salir de ahí.",
   featuredImage: '/blog/peur-de-l-engagement.webp',
@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'las-causas-reales',
-      title: "Lo que se esconde de verdad detrás del miedo al compromiso",
+      title: "Lo que se esconde detrás del miedo al compromiso",
       content: `<p>«Fobia al compromiso», la expresión hace sonreír... pero el mecanismo es serio, y casi siempre tiene una de estas cuatro raíces.</p>`,
       subsections: [
         {
@@ -57,7 +57,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'miedo-o-desinteres',
-      title: "La prueba de verdad: ¿miedo al compromiso... o desinterés educado?",
+      title: "La prueba definitiva: ¿miedo al compromiso... o desinterés educado?",
       content: `<p>Esta es LA pregunta para quien espera, así que resolvámosla con franqueza. «No estoy preparado» puede significar dos cosas muy distintas: «tengo miedo» o «contigo no, pero no quiero decirlo». Así se distinguen.</p>
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">

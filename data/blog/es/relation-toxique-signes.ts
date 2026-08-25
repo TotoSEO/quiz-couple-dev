@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'senales-relacion-toxica',
-  title: "Relación tóxica: reconocer las señales y saber si tiene arreglo",
+  title: "Relación tóxica: qué es y cómo reconocer las señales",
   metaTitle: "Relación tóxica: las 7 señales que no perdonan",
   metaDescription: "Una relación no es tóxica por sus discusiones, sino por aquello en lo que te convierte. Las 7 señales fiables, la diferencia con un mal momento y lo que sí se arregla.",
   featuredImage: '/blog/relation-toxique-signes.webp',
@@ -47,7 +47,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'toxica-o-mal-momento',
-      title: "¿Relación tóxica o mal momento? La diferencia de verdad",
+      title: "¿Relación tóxica o mal momento? La diferencia que importa",
       content: `<p>Es LA pregunta que hace dudar a todo el mundo, porque las malas rachas existen en todas las parejas: un duelo, un burn-out, un nacimiento, una mudanza. Meses enteros pueden ser grises sin que la relación sea tóxica. Así se distinguen.</p>
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">

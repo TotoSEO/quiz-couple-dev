@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'de-que-hablamos-realmente',
-      title: "Narcisista: de qué hablamos realmente",
+      title: "Narcisista: de qué hablamos",
       content: `<p>La palabra está en todas partes. Tanto, de hecho, que se ha convertido en un insulto de discusión, y eso perjudica sobre todo a quienes conviven con uno de verdad. Así que pongamos las cosas en su sitio.</p>
 <p>Un narcisista es alguien que necesita sentirse superior para sostenerse, y que usa al otro como combustible. No por arrebatos de rabia ni por torpeza, no: por funcionamiento. Para él, la relación no es un vínculo entre dos personas. Es más bien un espejo, que debe devolverle una imagen grande. Mientras lo admiras, todo va bien, eres perfecta. Pero en cuanto vuelves a ser una persona real, con necesidades, límites y días malos... te conviertes en un problema que corregir.</p>
 <aside class="blog-tip-box">
@@ -85,7 +85,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'las-senales-que-cuentan',
-      title: "Las señales que de verdad cuentan en la pareja",
+      title: "Las señales que cuentan en la pareja",
       content: `<p>Listas de veinte señales las encuentras en todas partes. El problema es que, una por una, describen a la mitad de las parejas que atraviesan un mal momento. Aquí van más bien las seis señales que, juntas y en el tiempo, dibujan el dominio. Y fíjate en lo que tienen en común: <strong>las más fiables no se ven en él, se ven en ti.</strong></p>
 <ol>
 <li><strong>Ya no consigues contar tu relación:</strong> Cuando una amiga te pregunta qué tal, no sabes qué responder. Demasiado complicado, demasiado contexto, «hay que conocerlo»... Una relación sana se cuenta fácil.</li>
@@ -132,7 +132,7 @@ const article: BlogArticleData = {
       subsections: [
         {
           id: 'te-quiere-de-verdad',
-          title: "¿Te quiere de verdad?",
+          title: "¿Te quiere?",
           content: `<p>Te necesita, eso sí. Y visto desde dentro, esa necesidad se parece mucho al amor... Salvo que te necesita como función: reguladora de imagen, proveedora de admiración, culpable de servicio. En realidad, la pregunta más útil no es qué siente él, nunca vas a tener acceso a esa respuesta. Es más bien esta: ¿la manera en que te quiere te hace bien? Esa sí puedes responderla sola.</p>`,
         },
         {

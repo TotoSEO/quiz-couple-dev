@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'saetze-von-manipulatoren',
-  title: "Die Lieblingssätze von Manipulatoren, und was sie wirklich bedeuten",
+  title: "Die 35 Lieblingssätze von Manipulatoren",
   metaTitle: "35 Manipulator-Sätze entschlüsselt (und wie du antwortest)",
   metaDescription: "«Du bist zu empfindlich», «du bist schuld», «ich sage das nur zu deinem Besten»... 35 Sätze von Manipulatoren entschlüsselt, mit echter Übersetzung und Antwort.",
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',

@@ -60,7 +60,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'lo-que-ayuda',
-      title: "Lo que ayuda de verdad (en los dos lados)",
+      title: "Lo que más ayuda (en los dos lados)",
       content: `<p>El trabajo no es el mismo según el lado de la pareja en el que estés. Aquí están los dos, por separado, porque las palancas son opuestas.</p>`,
       subsections: [
         {

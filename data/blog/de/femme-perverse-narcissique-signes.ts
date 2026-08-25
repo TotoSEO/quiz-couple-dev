@@ -43,7 +43,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'die-10-anzeichen',
-      title: "Die 10 Anzeichen, konkret",
+      title: "Die 10 Anzeichen im Einzelnen",
       content: `<p>Wie immer bei diesem Profil beweist kein einzelnes Anzeichen etwas. Es zählen die Häufung, die Wiederholung und die Gesamtrichtung. In den typisch weiblichen Formen sieht das so aus.</p>
 <ol>
 <li><strong>Schuldgefühle als Muttersprache:</strong> Keine Befehle: Seufzer, ein «geh nur, viel Spaß», das das Gegenteil meint, ein «schon gut, ich bin es gewohnt, allein zu sein». Am Ende verzichtest du von selbst, und genau das ist das Prinzip: Sie verbietet nichts, sie macht alles teuer.</li>

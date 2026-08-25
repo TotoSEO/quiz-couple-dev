@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-widder',
   title: `Liebeskompatibilität des Widders: Welche Sternzeichen entfachen sein Feuer, und welche es löschen`,
-  metaTitle: `Liebeskompatibilität Widder: Wer hält wirklich mit ihm Schritt?`,
+  metaTitle: `Liebeskompatibilität Widder: Wer hält mit ihm Schritt?`,
   metaDescription: `Der Widder verliebt sich schnell, brennt noch schneller, und wird manchmal enttäuscht. Erfahren Sie, welche Sternzeichen sein Tempo mitgehen können…`,
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Astrologisches Symbol des Widders, Liebeskompatibilität`,
@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'was-der-widder-in-der-liebe-wirklich-braucht',
-      title: `Was der Widder in der Liebe wirklich braucht`,
+      title: `Was der Widder in der Liebe braucht`,
       content: `<p>Bevor wir die Kompatibilität Zeichen für Zeichen betrachten, gibt es etwas Grundlegendes über den Widder zu verstehen: <strong>Er braucht Überraschungen</strong>. Ein vorhersehbarer Partner, der immer Ja sagt, der ihn nie an seine Grenzen bringt, das langweilt ihn. Und zwar schnell. Was der Widder „Leidenschaft" nennt, ist oft genau diese produktive Spannung zwischen zwei Willenskräften, die nicht ganz deckungsgleich sind.</p>
 <p>Seine besten Kompatibilitäten bestehen deshalb selten mit Zeichen, die ihm zu hundert Prozent ähneln. Der Löwe (9/10) stimuliert ihn, weil er ihm mit dem gleichen Stolz die Stirn bietet. Die Waage (9/10), sein zodiakalisches Gegenüber, fasziniert ihn gerade, weil sie genau umgekehrt funktioniert, wo er losstürmt, wägt sie ab. Wo er sagt, was er denkt, sucht sie das richtige Wort. Dieser Unterschied ist für den Widder pure Anziehungskraft.</p>
 <p>Umgekehrt sind die kompliziertesten Verbindungen jene, die von ihm verlangen, langsamer zu werden, ohne ihm im Gegenzug etwas dafür zu bieten. Der Krebs (4/10) erwartet von ihm, Gefühle zu handhaben, die er nicht immer lesen kann. Die Jungfrau (4/10) verlangt, dass er nachdenkt, bevor er handelt, was gegen alles geht, was ihn ausmacht. Diese Beziehungen können funktionieren, aber sie kommen nie von selbst.</p>

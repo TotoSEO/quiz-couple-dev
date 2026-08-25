@@ -49,7 +49,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'cosa-calma-davvero',
-      title: "Cosa calma davvero (e cosa non funziona mai)",
+      title: "Cosa calma (e cosa non funziona mai)",
       content: `<p>Cominciamo sgombrando il campo da ciò che non funziona, perché l'hai già provato: chiedere sempre più prove (l'effetto si esaurisce), sorvegliare (alimenta l'allarme), scegliere partner «intensi» che ti fanno vibrare (l'intensità è spesso incostanza travestita, e l'incostanza è benzina sul tuo fuoco). E la peggiore strategia di tutte: aspettare che l'altro indovini. Nessuno disattiva un allarme che non sa sentire.</p>
 <p>Quello che funziona, adesso, in tre movimenti.</p>`,
       subsections: [

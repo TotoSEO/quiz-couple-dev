@@ -43,7 +43,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'euer-alltag',
-      title: "Eure Gegenwart: was ihr wirklich erlebt (13-24)",
+      title: "Eure Gegenwart: euer Alltag, wie er ist (13-24)",
       content: `<p>Den Alltag glaubt man zu teilen, aber jeder erlebt ihn auf seiner Seite. Überprüfung.</p>
 <ol start="13">
 <li>Was ist dein Lieblingsmoment unserer gewöhnlichen Tage?</li>

@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'dipendenza-affettiva-dopo-una-rottura',
-  title: "Dipendenza affettiva e rottura: sopravvivere all'astinenza e farne una forza",
+  title: "Dipendenza affettiva e rottura: sopravvivere all'astinenza e ripartire",
   metaTitle: "Rottura e dipendenza affettiva: attraversare la mancanza",
   metaDescription: "Per un dipendente affettivo una rottura non è un dispiacere d'amore: è un'astinenza. Perché fa così male, le trappole delle prime settimane, e come uscirne più forti.",
   featuredImage: '/blog/dependance-affective-rupture.webp',

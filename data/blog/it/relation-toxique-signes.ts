@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'segnali-relazione-tossica',
-  title: "Relazione tossica: riconoscere i segnali e capire se si può riparare",
+  title: "Relazione tossica: cos'è e come riconoscere i segnali",
   metaTitle: "Relazione tossica: i 7 segnali che non perdonano",
   metaDescription: "Una relazione non è tossica per i suoi litigi, ma per quello che ti fa diventare. I 7 segnali affidabili, la differenza con un periodo difficile, e cosa si può riparare.",
   featuredImage: '/blog/relation-toxique-signes.webp',

@@ -46,7 +46,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'parejas-a-distancia',
-      title: "Para las parejas realmente a distancia (16-30)",
+      title: "Para las parejas que viven a distancia (16-30)",
       content: `<p>Cuando los kilómetros duran meses, la conversación se convierte en el salón de la pareja... Estas quince preguntas mantienen lo que cuenta: la complicidad, los proyectos y lo concreto del reencuentro.</p>
 <ol start="16">
 <li>¿Qué es lo que más echas de menos de mí ahora mismo, exactamente?</li>

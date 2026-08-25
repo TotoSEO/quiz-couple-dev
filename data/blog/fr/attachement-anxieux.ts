@@ -49,7 +49,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'ce-qui-apaise-vraiment',
-      title: "Ce qui apaise vraiment (et ce qui ne marche jamais)",
+      title: "Ce qui apaise (et ce qui ne marche jamais)",
       content: `<p>Commençons par vider ce qui ne marche pas, parce que tu l'as déjà essayé : demander toujours plus de preuves (l'effet s'épuise), surveiller (ça nourrit l'alarme), choisir des partenaires « intenses » qui te font vibrer (l'intensité est souvent de l'inconstance déguisée, et l'inconstance est de l'essence sur ton feu)... Et la pire stratégie de toutes : attendre que l'autre devine. Personne ne désamorce une alarme qu'il ne sait pas entendre.</p>
 <p>Ce qui marche, maintenant, en trois mouvements.</p>`,
       subsections: [

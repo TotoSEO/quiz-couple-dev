@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'emotional-dependency-after-a-breakup',
-  title: "Emotional dependency and break-ups: surviving the withdrawal, then turning it into a strength",
+  title: "Emotional dependency and break-ups: surviving the withdrawal and bouncing back",
   metaTitle: "Break-up and emotional dependency: getting through the craving",
   metaDescription: "For an emotionally dependent person, a break-up isn't heartbreak: it's withdrawal. Why it hurts so much, the traps of the first weeks, and how to come out of it stronger.",
   featuredImage: '/blog/dependance-affective-rupture.webp',

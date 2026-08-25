@@ -37,7 +37,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'what-is-love-bombing',
-      title: "What love bombing actually is",
+      title: "What love bombing is",
       content: `<p>Love bombing is a phase of unusually intense courtship, packed into a very short window, designed to create strong attachment <em>before</em> you've had time to assess the person in front of you.</p>
 <p>The phrase originally comes from the vocabulary of cult movements, where new recruits were flooded with attention and warmth to short-circuit their critical thinking. The mechanism hasn't changed, it has simply moved into romantic life.</p>
 <p>Here's the key point: <strong>love bombing isn't defined by the gestures, it's defined by what they're for.</strong> Giving flowers, sending messages, saying powerful things, all of that can be entirely sincere. What makes it love bombing is that these gestures work to install an emotional debt and accelerate your commitment, rather than to get to know you.</p>`,

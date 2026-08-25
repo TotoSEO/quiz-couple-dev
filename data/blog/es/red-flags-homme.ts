@@ -30,7 +30,7 @@ const article: BlogArticleData = {
 <li><a href="#minimiza-lo-que-sientes">Minimiza lo que sientes</a></li>
 <li><a href="#sus-estados-tu-responsabilidad">Sus estados de ánimo se convierten en tu responsabilidad</a></li>
 <li><a href="#frio-y-calor">Frío y calor, en bucle</a></li>
-<li><a href="#nunca-se-disculpa">Nunca se disculpa de verdad</a></li>
+<li><a href="#nunca-se-disculpa">Nunca pide perdón con sinceridad</a></li>
 <li><a href="#actos-vs-palabras">Sus actos no coinciden con sus palabras</a></li>
 <li><a href="#no-respeta-limites">No respeta lo que le has dicho claramente</a></li>
 <li><a href="#ex-todas-locas">Habla de sus ex como si todas estuvieran locas</a></li>
@@ -79,7 +79,7 @@ const article: BlogArticleData = {
         },
         {
           id: 'nunca-se-disculpa',
-          title: "Nunca se disculpa de verdad",
+          title: "Nunca pide perdón con sinceridad",
           content: `<p>O lo hace de una forma que te devuelve la culpa: "lo siento si lo tomaste mal", "lo siento pero tú deberías haber...". Eso no es una disculpa. Es un contraataque educado. Una disculpa real no contiene ningún "pero".</p>`,
         },
       ],

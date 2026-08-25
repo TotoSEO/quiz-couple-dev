@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'donna-tossica-in-amore',
-  title: "Donna tossica in amore: i segnali che gli uomini impiegano troppo tempo a vedere",
+  title: "Donna tossica in amore: i comportamenti sottili da conoscere",
   metaTitle: "Donna tossica: segnali e comportamenti in coppia",
   metaDescription: "Drammi a ripetizione, colpevolizzazione, controllo travestito da amore... I segnali della donna tossica in coppia, i 6 profili tipo, e la domanda che nessuno osa: e se fossi io?",
   featuredImage: '/blog/femme-toxique-en-amour.webp',

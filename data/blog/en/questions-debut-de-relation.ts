@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'questions-early-relationship',
-  title: "60 questions to ask early in a relationship (before you get carried away)",
-  metaTitle: "Questions early in a relationship: the 60 that really count",
+  title: "60 perfect questions to ask early in a relationship",
+  metaTitle: "Questions early in a relationship: the 60 that count",
   metaDescription: "In the first weeks you don't dare ask anything for fear of breaking it all. Wrong: here are the 60 early-relationship questions, paced so no stage gets skipped.",
   featuredImage: '/blog/questions-debut-de-relation.webp',
   featuredImageAlt: "Two steaming cups of coffee side by side, the start of a conversation",

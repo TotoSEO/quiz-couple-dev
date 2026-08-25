@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'overcome-emotional-dependency',
-  title: "How to overcome emotional dependency: 12 concrete exercises, phase by phase",
+  title: "How to overcome emotional dependency: 12 concrete exercises",
   metaTitle: "Overcome emotional dependency: the three-phase plan",
   metaDescription: "Not vague advice: a real plan. 12 concrete exercises across 3 phases to overcome emotional dependency, week after week.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',

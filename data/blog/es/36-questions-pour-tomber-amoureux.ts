@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: '36-preguntas-para-enamorarse',
-  title: "Las 36 preguntas para enamorarse: el protocolo completo y lo que hace de verdad",
-  metaTitle: "36 preguntas para enamorarse: la lista y el método",
+  title: "36 preguntas para enamorarse",
+  metaTitle: "36 preguntas para enamorarse - Quiz Couple",
   metaDescription: "Dos desconocidos, 36 preguntas, 4 minutos de mirada... y una boda seis meses después. El experimento de Arthur Aron, las preguntas y cómo hacerlo esta noche.",
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Dos sillas frente a frente bajo una bombilla cálida, un cuaderno de preguntas entre ellas",
@@ -36,7 +36,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'serie-1',
-      title: "Serie 1: conoceros, de verdad (preguntas 1 a 12)",
+      title: "Serie 1: conoceros (preguntas 1 a 12)",
       content: `<p>El primer escalón parece inofensivo... no lo es. Cada pregunta contiene ya una pequeña puerta hacia lo íntimo. ¡Responde con honestidad, no con brillantez!</p>
 <ol>
 <li>Si pudieras cenar con cualquier persona del mundo, ¿a quién invitarías?</li>

@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'domande-intime-di-coppia',
   title: "65 domande intime da fare al tuo partner, dalle più dolci alle più osate",
-  metaTitle: "Domande intime di coppia: 65 idee che avvicinano davvero",
+  metaTitle: "Domande intime di coppia: 65 idee che avvicinano",
   metaDescription: "L'intimità non è solo sotto le coperte: è anche nelle domande che si osa farsi. 65 domande intime, graduate dal tenero al bollente.",
   featuredImage: '/blog/questions-intimes-couple.webp',
   featuredImageAlt: "Coppia abbracciata su un divano con luce soffusa, in piena conversazione complice",

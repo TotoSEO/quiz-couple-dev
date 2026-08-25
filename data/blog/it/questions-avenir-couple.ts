@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'domande-sul-futuro-di-coppia',
   title: "60 domande sul futuro da farsi in coppia prima delle grandi decisioni",
-  metaTitle: "Domande sul futuro in coppia: le 60 che impegnano davvero",
+  metaTitle: "Domande sul futuro in coppia: le 60 che impegnano",
   metaDescription: "Andare a vivere insieme, sposarsi, un figlio... Raramente si fallisce per mancanza d'amore, spesso per non averne parlato. Le 60 domande sul futuro da farsi prima.",
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Coppia che guarda un sentiero che si srotola verso l'orizzonte, valigie in mano",

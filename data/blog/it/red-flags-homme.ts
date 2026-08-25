@@ -30,7 +30,7 @@ const article: BlogArticleData = {
 <li><a href="#sminuisce-quello-che-provi">Sminuisce quello che provi</a></li>
 <li><a href="#suoi-umori-tua-responsabilita">I suoi umori diventano una tua responsabilità</a></li>
 <li><a href="#caldo-e-freddo">Caldo e freddo, in loop</a></li>
-<li><a href="#non-si-scusa-mai">Non si scusa mai davvero</a></li>
+<li><a href="#non-si-scusa-mai">Le sue scuse non sono mai sincere</a></li>
 <li><a href="#azioni-vs-parole">Le sue azioni non corrispondono alle parole</a></li>
 <li><a href="#non-rispetta-limiti">Non rispetta quello che gli hai detto chiaramente</a></li>
 <li><a href="#ex-tutte-pazze">Parla delle sue ex come se fossero tutte pazze</a></li>
@@ -79,7 +79,7 @@ const article: BlogArticleData = {
         },
         {
           id: 'non-si-scusa-mai',
-          title: "Non si scusa mai davvero",
+          title: "Le sue scuse non sono mai sincere",
           content: `<p>Oppure lo fa in un modo che rimanda la colpa su di te: "mi dispiace se l'hai presa così", "mi dispiace ma tu avresti dovuto...". Non è una scusa. È un contrattacco educato. Una vera scusa non contiene nessun "ma".</p>`,
         },
       ],

@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'frases-de-manipuladores',
-  title: "Las frases preferidas de los manipuladores, y lo que significan de verdad",
+  title: "Las 35 frases preferidas de los manipuladores",
   metaTitle: "35 frases de manipulador descifradas (y cómo responder)",
   metaDescription: "«Eres demasiado sensible», «es culpa tuya», «te lo digo por tu bien»... 35 frases de manipulador descifradas, con su traducción real y cómo replicar.",
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',

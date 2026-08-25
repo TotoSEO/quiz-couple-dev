@@ -30,7 +30,7 @@ const article: BlogArticleData = {
 <li><a href="#tut-gefuehle-ab">Er tut deine Gefühle ab</a></li>
 <li><a href="#seine-stimmungen">Seine Stimmungen werden zu deiner Verantwortung</a></li>
 <li><a href="#heiss-und-kalt">Mal heiß, mal kalt, im Dauerzyklus</a></li>
-<li><a href="#entschuldigt-nie">Er entschuldigt sich nie wirklich</a></li>
+<li><a href="#entschuldigt-nie">Seine Entschuldigungen sind nie ehrlich gemeint</a></li>
 <li><a href="#taten-vs-worte">Seine Taten stimmen nicht mit seinen Worten überein</a></li>
 <li><a href="#respektiert-grenzen-nicht">Er respektiert nicht, was du ihm klar gesagt hast</a></li>
 <li><a href="#ex-alle-verrueckt">Er spricht über alle Ex-Freundinnen, als wären sie verrückt gewesen</a></li>
@@ -79,7 +79,7 @@ const article: BlogArticleData = {
         },
         {
           id: 'entschuldigt-nie',
-          title: "Er entschuldigt sich nie wirklich",
+          title: "Seine Entschuldigungen sind nie ehrlich gemeint",
           content: `<p>Oder er tut es auf eine Art, die die Schuld wieder auf dich lenkt: "Es tut mir leid, dass du es so aufgenommen hast", "Tut mir leid, aber du hättest...". Das ist keine Entschuldigung. Das ist ein höflicher Gegenangriff. Eine echte Entschuldigung enthält kein "aber".</p>`,
         },
       ],
