@@ -32,7 +32,8 @@ const article: BlogArticleData = {
 <tr><td>Quando gliene parli, promette, ma niente cambia</td><td>Sente il messaggio ma non sente l'urgenza di agire.</td></tr>
 <tr><td>Ti senti sola nella relazione</td><td>La presenza fisica non sostituisce l'investimento emotivo.</td></tr>
 <tr><td>Si impegna per gli amici e il lavoro, ma non per te</td><td>La capacità c'è. La motivazione no.</td></tr>
-</tbody></table></div>`,
+</tbody></table></div>
+<p>C'è una variante che torna spesso in quella prima riga: proponi qualcosa, lui dice di sì, e disdice un'ora prima. Una volta non vuol dire niente. Quando diventa un'abitudine, <a href="/it/blog/annulla-all-ultimo-momento/">quello che succede subito dopo la disdetta</a> ti dice più della disdetta stessa.</p>`,
     },
     {
       id: 'perche-gli-uomini-smettono',

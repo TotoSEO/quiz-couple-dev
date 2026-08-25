@@ -32,7 +32,8 @@ const article: BlogArticleData = {
 <tr><td>When you bring it up, he promises, but nothing changes</td><td>He hears the message but doesn't feel any urgency to act.</td></tr>
 <tr><td>You feel alone in the relationship</td><td>Physical presence doesn't replace emotional investment.</td></tr>
 <tr><td>He makes an effort for friends and work, but not for you</td><td>The ability is there. The motivation isn't.</td></tr>
-</tbody></table></div>`,
+</tbody></table></div>
+<p>There is a common variant of that first row: you suggest something, he says yes, and he calls it off an hour before. Once, that means nothing. When it becomes a habit, <a href="/en/blog/he-cancelled-last-minute/">what happens in the minutes right after</a> tells you more than the cancellation itself.</p>`,
     },
     {
       id: 'why-men-stop',

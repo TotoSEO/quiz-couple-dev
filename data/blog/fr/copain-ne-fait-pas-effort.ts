@@ -29,10 +29,11 @@ const article: BlogArticleData = {
 <tr><td>Il oublie les dates importantes</td><td>Tu n'es pas une priorité dans son organisation mentale.</td></tr>
 <tr><td>Les efforts s'arrêtent après la phase de séduction</td><td>Il faisait des efforts pour te conquérir, pas pour la relation.</td></tr>
 <tr><td>Il ne cherche pas à te faire plaisir spontanément</td><td>L'attention consciente a disparu. Ce n'est pas de la malveillance, mais c'est réel.</td></tr>
-<tr><td>Quand tu en parles, il promet, mais rien ne change</td><td>Il entend le message mais ne ressentit pas l'urgence d'agir.</td></tr>
+<tr><td>Quand tu en parles, il promet, mais rien ne change</td><td>Il entend le message mais ne ressent pas l'urgence d'agir.</td></tr>
 <tr><td>Tu te sens seule dans la relation</td><td>La présence physique ne remplace pas l'investissement émotionnel.</td></tr>
 <tr><td>Il fait des efforts pour ses amis, son travail, mais pas pour toi</td><td>La capacité est là. La motivation, non.</td></tr>
-</tbody></table></div>`,
+</tbody></table></div>
+<p>Une variante revient souvent dans cette première ligne : tu proposes, il dit oui, et il annule une heure avant. Une fois, ça ne veut rien dire. Quand ça devient une habitude, <a href="/blog/il-annule-au-dernier-moment/">ce qui se passe juste après l'annulation</a> te renseigne mieux que l'annulation elle-même.</p>`,
     },
     {
       id: 'pourquoi-les-hommes-arretent',
@@ -76,7 +77,8 @@ const article: BlogArticleData = {
     {
       id: 'comment-en-parler',
       title: "Comment lui en parler sans que ça parte en dispute",
-      content: `<p>La plupart des conversations sur ce sujet finissent mal parce qu'elles commencent mal. "Tu ne fais jamais rien" déclenche une défense immédiate. "Tu ne t'investis pas dans cette relation" sonne comme une accusation à laquelle il va répondre par une contre-attaque ou un silence. Ce n'est pas qu'il a tort de se sentir attaqué, c'est que le format ne crée pas les conditions pour qu'il entende vraiment ce que tu dis.</p>
+      content: `<p>Beaucoup de femmes essaient d'abord de se taire, en espérant que l'absence de nouvelles fasse réagir. Ça se comprend, sauf que <a href="/blog/homme-qu-on-ignore/">ce qu'un homme ressent quand on l'ignore</a> ressemble plus souvent à de la confusion qu'à une prise de conscience. La conversation reste le chemin le plus court.</p>
+<p>La plupart des conversations sur ce sujet finissent mal parce qu'elles commencent mal. "Tu ne fais jamais rien" déclenche une défense immédiate. "Tu ne t'investis pas dans cette relation" sonne comme une accusation à laquelle il va répondre par une contre-attaque ou un silence. Ce n'est pas qu'il a tort de se sentir attaqué, c'est que le format ne crée pas les conditions pour qu'il entende vraiment ce que tu dis.</p>
 <p>Ce qui marche mieux : parler de ce que tu ressens toi, pas de ce qu'il fait ou ne fait pas. "Je me sens seule dans notre organisation commune depuis quelque temps" atterrit différemment que "Tu ne fais jamais d'efforts". Ce n'est pas une technique de manipulation, c'est juste que la première phrase ouvre une conversation et la seconde ouvre un procès.</p>
 <p>Quelques points concrets pour que ça se passe mieux :</p>
 <p>Choisis un moment calme, pas après une frustration fraîche. Une conversation entamée au moment où tu viens de tout organiser seule pour la troisième fois de suite a peu de chances de se passer sereinement. Attends un moment où vous êtes bien tous les deux.</p>

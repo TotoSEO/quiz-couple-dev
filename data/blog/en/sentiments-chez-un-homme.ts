@@ -80,6 +80,8 @@ const article: BlogArticleData = {
 <li><p><strong>He remembers:</strong> a first name, a medical appointment, a story you told once.</p></li>
 </ul>
 
+<p>Those signs show up once he has settled in. Right at the start, it shows somewhere else, on his body: <a href="/en/blog/signs-a-man-is-nervous-around-you/">his hands, his mouth and his eyes give him away</a> long before he admits it to himself.</p>
+
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> What actually counts</p>

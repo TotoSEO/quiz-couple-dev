@@ -81,6 +81,7 @@ const article: BlogArticleData = {
 </ul>
 </div>
 </div>
+<p>The simplest way to settle it is to look at the plans themselves. With someone who is afraid, they happen, even if he drags his feet about what comes next. With someone who isn't interested, they fall through, and <a href="/en/blog/he-cancelled-last-minute/">the cancellation is never followed by a new date</a>.</p>
 <p>And a third case deserves naming: the strategic «not ready», which keeps someone within reach while giving nothing. If the refusal to commit comes with calculated hot and cold, with tests, with control over your availability, you aren't facing a fear, you are facing inventory management. The <a href="/en/blog/toxic-relationship-signs/">markers of a toxic relationship</a> will help you sort it out.</p>`,
     },
     {

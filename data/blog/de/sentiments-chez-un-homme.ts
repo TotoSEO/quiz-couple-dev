@@ -80,6 +80,8 @@ const article: BlogArticleData = {
 <li><p><strong>Er erinnert sich:</strong> An einen Vornamen, an einen Arzttermin, an eine Geschichte, die du einmal erzählt hast.</p></li>
 </ul>
 
+<p>Diese Zeichen kommen, wenn er schon angekommen ist. Ganz am Anfang zeigt es sich woanders, an seinem Körper: <a href="/de/blog/mann-nervoes-vor-einer-frau/">Hände, Mund und Blick verraten ihn</a> lange bevor er es sich selbst eingesteht.</p>
+
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Was wirklich zählt</p>

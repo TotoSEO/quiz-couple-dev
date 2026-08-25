@@ -81,6 +81,7 @@ const article: BlogArticleData = {
 </ul>
 </div>
 </div>
+<p>Am einfachsten klärst du das über die Verabredungen selbst. Bei jemandem, der Angst hat, finden sie statt, auch wenn er beim Rest zögert. Bei jemandem, der keine Lust hat, platzen sie, und <a href="/de/blog/er-sagt-in-letzter-minute-ab/">auf die Absage folgt nie ein neuer Termin</a>.</p>
 <p>Und ein dritter Fall verdient einen Namen: das strategische «nicht bereit», das jemanden in Reichweite hält, ohne etwas zu geben. Wenn die Bindungsverweigerung mit berechnetem Wechselbad einhergeht, mit Tests, mit Kontrolle über deine Verfügbarkeit, hast du es nicht mit einer Angst zu tun, sondern mit Bestandsverwaltung. Die <a href="/de/blog/toxische-beziehung-anzeichen/">Marker einer toxischen Beziehung</a> helfen dir beim Sortieren.</p>`,
     },
     {

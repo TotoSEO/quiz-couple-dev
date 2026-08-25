@@ -1665,6 +1665,124 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .blog-article ol.blog-liste-reperes li { padding-left: 2.2rem; font-size: .96rem; }
 }
 
+/* ── Fil de messages façon iPhone ───────────────────────────
+   Un message de relance ne se juge pas hors contexte : c'est sa longueur,
+   son ton et ce qui le précède qui font qu'il tombe juste ou pas. Affiché
+   dans un vrai fil, avec le message reçu au-dessus, le lecteur voit tout
+   de suite si ça ressemble à ce qu'il enverrait.
+   La queue de bulle est masquée par un carré de la couleur du fil : la
+   variable --imsg-fond doit donc toujours valoir le fond réel du fil. */
+.imsg {
+  --imsg-fond: hsl(var(--card));
+  --imsg-gris: hsl(280 14% 91%);
+  --imsg-gris-texte: hsl(var(--foreground));
+  max-width: 25rem;
+  margin: 1.75rem auto;
+  border: 1px solid hsl(var(--border));
+  border-radius: 1.6rem;
+  background: var(--imsg-fond);
+  box-shadow: 0 14px 34px -22px hsl(330 45% 25% / .45);
+  overflow: hidden;
+}
+.imsg-tete {
+  display: flex; flex-direction: column; align-items: center; gap: .3rem;
+  padding: .85rem 1rem .7rem;
+  background: hsl(var(--muted) / .55);
+  border-bottom: 1px solid hsl(var(--border));
+}
+.imsg-avatar {
+  width: 2.15rem; height: 2.15rem; border-radius: 50%;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: #fff; font-family: var(--font-display); font-weight: 600; font-size: .85rem;
+  line-height: 1;
+}
+.imsg-nom {
+  font-family: var(--font-display); font-size: .82rem; font-weight: 600;
+  color: hsl(var(--foreground));
+}
+.imsg-fil {
+  display: flex; flex-direction: column; gap: .28rem;
+  padding: 1.05rem .9rem 1rem;
+}
+.imsg-jour {
+  align-self: center; margin: 0 0 .35rem;
+  font-size: .68rem; letter-spacing: .06em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+.imsg-bulle {
+  position: relative;
+  max-width: 80%;
+  margin: 0;
+  padding: .5rem .82rem .55rem;
+  border-radius: 1.15rem;
+  font-size: .94rem; line-height: 1.42;
+  overflow-wrap: break-word;
+}
+.imsg-recue {
+  align-self: flex-start;
+  background: var(--imsg-gris);
+  color: var(--imsg-gris-texte);
+}
+.imsg-envoyee {
+  align-self: flex-end;
+  background: linear-gradient(180deg, hsl(207 100% 60%), hsl(211 100% 47%));
+  color: #fff;
+}
+.imsg-envoyee a { color: #fff; text-decoration: underline; }
+/* Queue de bulle : un quart de disque collé à la bulle, puis un carré de
+   la couleur du fil qui vient en manger l'extérieur. */
+.imsg-bulle:not(.imsg-collee)::before,
+.imsg-bulle:not(.imsg-collee)::after {
+  content: ''; position: absolute; bottom: 0; width: .62rem; height: .62rem;
+}
+.imsg-recue:not(.imsg-collee)::before {
+  left: -.34rem; background: var(--imsg-gris); border-bottom-right-radius: .7rem;
+}
+.imsg-recue:not(.imsg-collee)::after {
+  left: -.62rem; background: var(--imsg-fond); border-bottom-right-radius: .62rem;
+}
+.imsg-envoyee:not(.imsg-collee)::before {
+  right: -.34rem; background: hsl(211 100% 47%); border-bottom-left-radius: .7rem;
+}
+.imsg-envoyee:not(.imsg-collee)::after {
+  right: -.62rem; background: var(--imsg-fond); border-bottom-left-radius: .62rem;
+}
+.imsg-collee { margin-bottom: .04rem; }
+.imsg-etat {
+  align-self: flex-end; margin: .18rem .18rem 0;
+  font-size: .66rem; color: hsl(var(--muted-foreground));
+}
+.imsg-note {
+  margin: 0;
+  padding: .75rem .95rem .8rem;
+  border-top: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / .45);
+  font-size: .84rem; line-height: 1.5;
+  color: hsl(var(--muted-foreground));
+}
+.imsg-note strong { color: hsl(var(--foreground)); }
+.imsg-etiquette {
+  font-size: .64rem; letter-spacing: .09em; text-transform: uppercase;
+  font-weight: 700; padding: .16rem .5rem; border-radius: 999px;
+  color: hsl(var(--muted-foreground)); background: hsl(var(--border) / .7);
+}
+.imsg-bon { border-color: hsl(152 45% 42% / .45); }
+.imsg-bon .imsg-etiquette { color: hsl(152 60% 27%); background: hsl(152 55% 45% / .18); }
+.imsg-bon .imsg-note { background: hsl(152 55% 45% / .09); }
+.imsg-mauvais { border-color: hsl(var(--destructive) / .4); }
+.imsg-mauvais .imsg-etiquette { color: hsl(var(--destructive)); background: hsl(var(--destructive) / .13); }
+.imsg-mauvais .imsg-note { background: hsl(var(--destructive) / .07); }
+.dark .imsg-bon .imsg-etiquette { color: hsl(152 55% 66%); }
+.dark .imsg {
+  --imsg-gris: hsl(280 10% 22%);
+  box-shadow: 0 14px 34px -22px hsl(0 0% 0% / .7);
+}
+@media (max-width: 460px) {
+  .imsg { max-width: 100%; margin: 1.5rem 0; border-radius: 1.35rem; }
+  .imsg-bulle { max-width: 84%; font-size: .92rem; }
+}
+
 .blog-quick-summary { border-radius: calc(var(--radius) + 8px); border-left: 4px solid hsl(var(--primary)); background-color: hsl(var(--primary) / 0.05); padding: 1.5rem; margin: 2rem 0; }
 .blog-quick-summary-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
 .blog-quick-summary ul { list-style: disc; list-style-position: inside; font-size: 0.875rem; }
