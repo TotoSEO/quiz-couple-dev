@@ -302,6 +302,20 @@ export const BLOG_CATEGORIES = {
 // Blog article metadata
 export const BLOG_ARTICLES = [
   {
+    // Article français uniquement : les citations signées sont des textes
+    // français (Hugo, Sand, Prévert, Lamartine) et la requête n'a pas
+    // d'équivalent dans les autres langues. Les traduire donnerait quatre
+    // pages faibles au lieu d'une bonne.
+    internalSlug: 'citation-ame-soeur',
+    category: 'vie-de-couple',
+    frOnly: true,
+    featuredImage: '/blog/citation-ame-soeur.webp',
+    slugs: {
+      fr: 'citation-ame-soeur',
+    },
+    publishedAt: '2026-08-25T17:34:00+02:00',
+  },
+  {
     internalSlug: 'disputes-couple-vacances',
     category: 'vie-de-couple',
     featuredImage: '/blog/disputes-couple-vacances.webp',
@@ -1238,7 +1252,7 @@ export const QUIZ_RELATED_ARTICLES = {
   testFinCouple:    ['arreter-ou-continuer-relation', 'les-phases-de-la-rupture-chez-l-homme', 'sauver-son-couple'],
   testAmourAmitie:  ['sentiments-chez-un-homme', 'comment-savoir-si-cest-le-bon'],
   testKarmique:     ['dependance-affective', 'love-bombing', 'arreter-ou-continuer-relation'],
-  testAmeSoeur:     ['dependance-affective', 'love-bombing', 'arreter-ou-continuer-relation'],
+  testAmeSoeur:     ['dependance-affective', 'love-bombing', 'arreter-ou-continuer-relation', 'citation-ame-soeur'],
   testDateNaissance: ['compatibilite-amoureuse-lion', 'compatibilite-amoureuse-scorpion', 'compatibilite-amoureuse-taureau'],
   testVacances:     ['activites-couple-ete', 'disputes-couple-vacances', 'sauver-son-couple'],
   quizTuPreferes:   ['comment-savoir-si-cest-le-bon', 'activites-couple-ete'],
