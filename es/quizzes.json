@@ -315,5 +315,11 @@
     "shortTitle": "Preguntas de primera cita",
     "description": "15 preguntas para haceros, en tres niveles cada vez más personales. Nada que instalar, nada que puntuar.",
     "metaDescription": "El juego de preguntas para una primera cita, en tres niveles de intimidad creciente. 60 preguntas, 15 por partida, en un solo móvil."
+  },
+  "jeuJamais": {
+    "title": "Yo nunca: Juego interactivo y gratuito para parejas",
+    "shortTitle": "Yo nunca",
+    "metaDescription": "100 preguntas de «yo nunca» pensadas para parejas. Respondéis por turnos, el juego cuenta las confesiones y revela quién de los dos ha vivido más. Gratis y sin registro.",
+    "description": "El gran clásico de las noches con amigos, reescrito para dos: respondéis por turnos y el resultado muestra quién tiene más que confesar."
   }
 }

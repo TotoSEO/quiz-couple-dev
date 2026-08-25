@@ -315,5 +315,11 @@
     "shortTitle": "First date questions",
     "description": "15 questions to ask each other, in three increasingly personal tiers. Nothing to install, nothing to score.",
     "metaDescription": "The first-date question game, in three tiers of rising intimacy. 60 questions, 15 per round, played together on one phone."
+  },
+  "jeuJamais": {
+    "title": "Never Have I Ever: Free Interactive Couples Game",
+    "shortTitle": "Never Have I Ever",
+    "metaDescription": "100 never have I ever questions written for couples. You each answer in turn, the game counts the confessions and reveals which of you has lived the most. Free, no sign-up.",
+    "description": "The great party classic, rewritten for two: you each answer in turn, and the result shows who has the most to confess."
   }
 }

@@ -191,6 +191,10 @@
     // entre deux options : ici il n'y a qu'une proposition sur la table. ──
     'dilemmes':                { prefix: 'dilemmes', engine: 'dilemme', totalQ: 0, pool: 0, textOnly: true },
 
+    // ── Je n'ai jamais : la même affirmation posée aux deux, chacun son
+    // tour. Cent affirmations en réserve, la partie en pose 15, 30 ou 100. ──
+    'jamais':                  { prefix: 'jamais', engine: 'jamais', totalQ: 0, pool: 0, textOnly: true },
+
     // ── Pour ou contre : une proposition, deux camps, et les pourcentages
     // des couples qui sont passés avant. Les familles sont déclarées ici avec
     // leur effectif parce que l'identifiant envoyé en base est la position
@@ -439,6 +443,26 @@
         return;
       }
       new QuizEngine.DilemmeGame({ container: container, prefix: config.prefix, lang: lang, dilemmes: dilemmes });
+      return;
+    }
+
+    // Je n'ai jamais : cent affirmations numérotées, sans options. On lit
+    // tout le réservoir d'un coup, le moteur fait ses tirages dedans.
+    if (config.engine === 'jamais') {
+      var affirmations = [];
+      for (var ji = 1; ji <= 100; ji++) {
+        var cleJ = config.prefix + '.q' + ji;
+        var texteJ = QuizEngine.tgd(cleJ, null);
+        if (!texteJ || texteJ === cleJ) continue;
+        affirmations.push({ id: ji, texte: texteJ });
+      }
+      if (affirmations.length === 0) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      new QuizEngine.JamaisGame({ container: container, prefix: config.prefix, lang: lang, questions: affirmations });
       return;
     }
 

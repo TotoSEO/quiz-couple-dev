@@ -74,6 +74,7 @@ export const ROUTE_SLUGS = {
   testAmourAmitie: { fr: 'test-amour-ou-amitie', en: 'love-or-friendship-test', es: 'test-amor-o-amistad', de: 'liebe-oder-freundschaft-test', it: 'test-amore-o-amicizia' },
   testFinCouple: { fr: 'test-est-ce-la-fin-de-mon-couple', en: 'is-my-relationship-over-test', es: 'test-es-el-final-de-mi-relacion', de: 'ist-meine-beziehung-am-ende-test', it: 'test-e-la-fine-della-mia-relazione' },
   pourContre: { fr: 'quiz-pour-contre-couple', en: 'for-or-against-couple-game', es: 'juego-a-favor-o-en-contra-pareja', de: 'dafuer-oder-dagegen-paarspiel', it: 'gioco-pro-o-contro-coppia' },
+  jeuJamais: { fr: 'je-nai-jamais-jeu-couple', en: 'never-have-i-ever-couples-game', es: 'yo-nunca-juego-pareja', de: 'ich-hab-noch-nie-paar-spiel', it: 'non-ho-mai-gioco-coppia' },
   quizTentation: { fr: 'quiz-ile-de-la-tentation', en: 'temptation-island-quiz', es: 'quiz-la-isla-de-las-tentaciones', de: 'temptation-island-quiz', it: 'quiz-temptation-island' },
   admin: { fr: 'admin', en: 'admin', es: 'admin', de: 'admin', it: 'admin' },
   activities: { fr: 'activites-autours-de-moi', en: 'couple-activities-near-me', es: 'actividades-en-pareja-cerca', de: 'paar-aktivitaeten-in-der-naehe', it: 'attivita-di-coppia-vicino' },
@@ -141,6 +142,7 @@ export const QUIZ_FEATURED = {
   testAmourAmitie:   { file: 'panneau-amour-amitie',      old: null,                  alt: { fr: 'Un panneau de bois à deux flèches opposées : AMOUR en rose d\'un côté, AMITIÉ en violet de l\'autre', en: 'A wooden signpost with two opposite arrows: AMOUR in pink one way, AMITIÉ in purple the other', es: 'Un poste de madera con dos flechas opuestas: AMOUR en rosa hacia un lado, AMITIÉ en violeta hacia el otro', de: 'Ein Holzwegweiser mit zwei entgegengesetzten Pfeilen: AMOUR in Rosa, AMITIÉ in Violett', it: 'Un cartello di legno con due frecce opposte: AMOUR in rosa da una parte, AMITIÉ in viola dall\'altra' } },
   testFinCouple:     { file: 'corde-effilochee',           old: null,                  alt: { fr: 'Une corde tendue, effilochée en son centre, dont il ne reste que quelques fils', en: 'A taut rope, frayed at its centre, with only a few threads still holding', es: 'Una cuerda tensa, deshilachada en el centro, de la que solo quedan unos hilos', de: 'Ein gespanntes Seil, in der Mitte ausgefranst, nur noch wenige Fäden halten', it: 'Una corda tesa, sfilacciata al centro, di cui restano solo pochi fili' } },
   pourContre:        { file: 'pour-contre-pouces',       old: null,                  alt: { fr: 'Un pouce levé rose et un pouce baissé violet séparés par un cœur, pour le jeu pour ou contre en couple', en: 'A pink thumbs-up and a purple thumbs-down separated by a heart, for the for or against couple game', es: 'Un pulgar hacia arriba rosa y uno hacia abajo morado separados por un corazón, para el juego a favor o en contra en pareja', de: 'Ein rosa Daumen hoch und ein violetter Daumen runter, getrennt durch ein Herz, für das Paarspiel dafür oder dagegen', it: 'Un pollice in su rosa e un pollice in giù viola separati da un cuore, per il gioco pro o contro in coppia' } },
+  jeuJamais:         { file: 'jamais-doigts-leves',     old: null,                  alt: { fr: "Deux mains qui comptent sur leurs doigts levés lors d'une partie de je n'ai jamais en couple", en: 'Two hands counting on raised fingers during a couples never have I ever game', es: 'Dos manos contando con los dedos levantados durante una partida de yo nunca en pareja', de: 'Zwei Hände, die beim Ich hab noch nie für Paare mit erhobenen Fingern zählen', it: 'Due mani che contano sulle dita alzate durante una partita di non ho mai in coppia' } },
   quizTentation:     { file: 'island-bonfire',            old: null,                  alt: { fr: 'Feu de camp sur une plage tropicale la nuit, avec palmiers et pleine lune', en: 'Bonfire on a tropical beach at night, with palm trees and a full moon', es: 'Hoguera en una playa tropical de noche, con palmeras y luna llena', de: 'Lagerfeuer an einem tropischen Strand bei Nacht, mit Palmen und Vollmond', it: 'Falò su una spiaggia tropicale di notte, con palme e luna piena' } },
 };
 
@@ -202,6 +204,7 @@ export const ROUTE_CONFIG = {
   testAmourAmitie: { template: 'quiz-amour-amitie', namespaces: ['quiz-amour-amitie', 'quizzes', 'quizGames', 'gd', 'common'] },
   testFinCouple: { template: 'quiz-fin-couple', namespaces: ['quiz-fin-couple', 'quizzes', 'quizGames', 'gd', 'common'] },
   pourContre: { template: 'jeu-pour-contre', namespaces: ['jeu-pour-contre', 'quizzes', 'quizGames', 'gd', 'common'] },
+  jeuJamais: { template: 'jeu-jamais', namespaces: ['jeu-jamais', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizTentation: { template: 'quiz-tentation', namespaces: ['quiz-tentation', 'quizzes', 'quizGames', 'gd', 'common'] },
   testPurete: { template: 'test-purete', namespaces: ['test-purete', 'quizzes', 'common'] },
   admin: { template: 'admin', namespaces: ['common'] },
@@ -232,7 +235,7 @@ export const ADSENSE_CLIENT = 'ca-pub-3699606544344200';
 // Sans cette liste, les six jeux ne remontaient aucune partie a l'admin.
 const ROUTES_JEUX = [
   'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
-  'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre',
+  'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais',
 ];
 
 export function estPageJouable(routeKey) {
@@ -1245,6 +1248,7 @@ export const QUIZ_RELATED_ARTICLES = {
   jeuPlateau:       ['activites-couple-ete', 'manque-communication-couple'],
   jeuQuiDeNous:     ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
   jeuDilemmes:      ['choses-pas-accepter-couple', 'disputes-couple'],
+  jeuJamais:        ['questions-intimes-couple', 'questions-pour-mieux-se-connaitre-en-couple'],
   jeuGages:         ['activites-couple-ete', 'comment-savoir-si-cest-le-bon'],
 };
 // Ajouts sur des entrées déjà existantes : on complète sans réécrire la table,

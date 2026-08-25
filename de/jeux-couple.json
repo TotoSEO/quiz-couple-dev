@@ -59,7 +59,12 @@
     "pourContreTagline": "Eine Aussage, ihr entscheidet, ihr seht die Stimmen der anderen",
     "pourContreJoueurs": "2 Spieler",
     "pourContreDuree": "10 Min.",
-    "pourContreContenu": "60 Aussagen und die Stimmen aller anderen Paare"
+    "pourContreContenu": "60 Aussagen und die Stimmen aller anderen Paare",
+    "jamaisNom": "Ich hab noch nie",
+    "jamaisTagline": "Ein Satz, zwei Antworten, und die Geständnisse summieren sich",
+    "jamaisContenu": "100 Sätze, geschrieben für Paare, gespielt in 15, 30 oder 100",
+    "jamaisDuree": "10 bis 30 Min",
+    "jamaisJoueurs": "2 Spieler"
   },
   "section1": {
     "title": "Was ein Spiel zu zweit an einem Abend verändert",

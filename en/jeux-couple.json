@@ -59,7 +59,12 @@
     "pourContreTagline": "One statement, you settle it, you see how the others voted",
     "pourContreJoueurs": "2 players",
     "pourContreDuree": "10 min",
-    "pourContreContenu": "60 statements and the vote of every other couple"
+    "pourContreContenu": "60 statements and the vote of every other couple",
+    "jamaisNom": "Never Have I Ever",
+    "jamaisTagline": "One statement, two answers, and the confessions add up",
+    "jamaisContenu": "100 statements written for couples, played in 15, 30 or 100",
+    "jamaisDuree": "10 to 30 min",
+    "jamaisJoueurs": "2 players"
   },
   "section1": {
     "title": "What a game for two changes about an evening",

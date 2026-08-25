@@ -1,0 +1,48 @@
+{
+  "jsonLd": {
+    "name": "Yo nunca, juego para parejas"
+  },
+  "hero": {
+    "badge": "Juego para parejas",
+    "title": "Yo nunca | 100 preguntas para jugar en pareja",
+    "titleHighlight": "Yo nunca",
+    "description": "El gran clásico de las noches con amigos, reescrito para dos. Respondéis por turnos, con total honestidad, y el resultado muestra quién de los dos tiene más cosas que confesar."
+  },
+  "section1": {
+    "title": "Explicación del juego «Yo nunca»",
+    "intro": "La regla cabe en una frase: una afirmación empieza por <strong>«yo nunca»</strong>, y cada uno confiesa si, en la vida real, ya lo ha hecho. No hay respuesta correcta ni puntos que ganar. Lo que hace el juego es lo que desencadena la respuesta: la cara del otro, el «espera, ¿cuándo?», y la historia que viene detrás.",
+    "etape1Titre": "Poned vuestros nombres y elegid la duración",
+    "etape1Texte": "15 preguntas para una partida rápida, 30 para la versión clásica, 100 para la integral. Siempre podréis alargar sobre la marcha.",
+    "etape2Titre": "Leed la afirmación en voz alta",
+    "etape2Texte": "Cada carta empieza por «yo nunca». Leerla en voz alta es parte del juego: es ahí donde se cruzan las miradas.",
+    "etape3Titre": "Responded cada uno por turno",
+    "etape3Texte": "El juego anuncia quién responde primero y luego pregunta «¿y tú?» al otro. La pregunta no cambia hasta que los dos habéis respondido, y el primero en responder alterna en cada carta.",
+    "etape4Titre": "Comparad vuestros resultados",
+    "etape4Texte": "Al final, un gráfico por persona cuenta los «yo sí» y los «yo nunca». La diferencia entre los dos es el tema de conversación de la noche.",
+    "apres": "Os daréis cuenta de que no hay <strong>ni prendas ni penalizaciones</strong>: responder con franqueza ya es toda la dificultad. Si vuestro dúo prefiere las noches en las que una confesión se paga, la <a href=\"/es/prendas-para-parejas/\">ruleta que reparte prendas para dos</a> empieza exactamente donde este juego termina."
+  },
+  "section2": {
+    "title": "La diferencia entre la versión clásica y la versión para parejas",
+    "p1": "Lo que cambia no son las reglas: son las preguntas. La versión clásica se juega entre amigos, a menudo cinco o seis, y barre muy ancho: las fiestas que se torcieron, las mentiras del instituto, las vergüenzas de vacaciones. Cada uno levanta un dedo, alguien grita «¡cuenta, cuenta!», y a la siguiente.",
+    "p2": "La versión para parejas lo concentra todo en vuestra historia: vuestros comienzos, vuestros pequeños secretos, la familia del otro, lo que pasa bajo el edredón y lo que imagináis para el futuro. Y sobre todo, <strong>juegas frente a la única persona del mundo capaz de verificar tus respuestas</strong>. Mentir a «yo nunca he mirado tu móvil a escondidas» delante de la persona afectada es otro deporte muy distinto que hacerlo entre amigos.",
+    "p3": "También es un juego más tierno de lo que parece. Entre amigos se busca la anécdota espectacular; en pareja, las preguntas más fuertes son las más simples, las que hacen decir «yo tampoco» con una sonrisa. Si preferís decidir antes que confesar, las <a href=\"/es/quiz-preferirias-pareja/\">elecciones imposibles para zanjar entre dos</a> son el otro gran clásico del género."
+  },
+  "section3": {
+    "title": "Ejemplos de preguntas de Yo nunca",
+    "intro": "Aquí tenéis una veintena de las 100 preguntas que plantea el juego. La mezcla es voluntaria: tiernas, culpables, picantes y algunos clásicos para respirar entre dos confesiones.",
+    "apres": "Las otras 80 os esperan dentro del juego, y cada partida hace su propio sorteo: el botón «volver a jugar con otras preguntas» saca primero las que aún no habéis visto."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Cuánto dura una partida?",
+    "a1": "Unos 10 minutos con 15 preguntas, el doble con 30. Cada pregunta se plantea a los dos jugadores, así que una partida de 15 son en realidad 30 respuestas.",
+    "q2": "¿Hay que beber o pagar prendas?",
+    "a2": "No. Aquí se responde, y ya está. Eso permite jugar en cualquier momento, incluido un martes por la noche en el sofá.",
+    "q3": "¿Las preguntas son atrevidas?",
+    "a3": "Algunas sí, pero ninguna va más allá de lo que dos personas en pareja pueden decirse. Para subir la temperatura de verdad, la <a href=\"/es/verdad-o-reto-picante-pareja/\">versión más caliente de nuestros juegos para dos</a> está hecha exactamente para eso.",
+    "q4": "¿Se puede jugar a distancia?",
+    "a4": "Sí, y funciona muy bien: uno abre el juego, lee la afirmación en voz alta en videollamada y hace clic por los dos. Nada en el juego exige estar en la misma habitación.",
+    "q5": "¿Podemos rejugar sin repetir preguntas?",
+    "a5": "Sí. El juego recuerda lo que ya ha preguntado y saca primero del resto de las 100 preguntas. En tres partidas de 30 lo habréis visto casi todo."
+  }
+}

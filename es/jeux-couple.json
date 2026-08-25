@@ -59,7 +59,12 @@
     "pourContreTagline": "Una propuesta, lo decidís, veis el voto de los demás",
     "pourContreJoueurs": "2 jugadores",
     "pourContreDuree": "10 min",
-    "pourContreContenu": "60 propuestas y el voto de todas las demás parejas"
+    "pourContreContenu": "60 propuestas y el voto de todas las demás parejas",
+    "jamaisNom": "Yo nunca",
+    "jamaisTagline": "Una frase, dos respuestas, y las confesiones se van sumando",
+    "jamaisContenu": "100 frases escritas para parejas, en partidas de 15, 30 o 100",
+    "jamaisDuree": "10 a 30 min",
+    "jamaisJoueurs": "2 jugadores"
   },
   "section1": {
     "title": "Lo que un juego en pareja cambia en una noche",

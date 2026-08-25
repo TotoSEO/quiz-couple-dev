@@ -357,7 +357,8 @@
     "testDependance": "Test dépendance affective",
     "testEx": "Test mon ex pense-t-il encore à moi",
     "testChargeMentale": "Test charge mentale du couple",
-    "quizRencontre": "Questions de premier rendez-vous"
+    "quizRencontre": "Questions de premier rendez-vous",
+    "jeuJamais": "Je n'ai jamais"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",

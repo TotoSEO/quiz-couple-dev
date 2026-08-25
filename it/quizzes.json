@@ -315,5 +315,11 @@
     "shortTitle": "Domande da primo appuntamento",
     "description": "15 domande da farvi, in tre livelli sempre più personali. Niente da installare, niente da contare.",
     "metaDescription": "Il gioco di domande per un primo appuntamento, in tre livelli di intimità crescente. 60 domande, 15 a partita, su un solo telefono."
+  },
+  "jeuJamais": {
+    "title": "Non ho mai: Gioco interattivo e gratuito per coppie",
+    "shortTitle": "Non ho mai",
+    "metaDescription": "100 domande di «non ho mai» pensate per le coppie. Rispondete a turno, il gioco conta le confessioni e rivela chi di voi due ha vissuto di più. Gratis, senza registrazione.",
+    "description": "Il grande classico delle serate, riscritto per due: rispondete a turno e il risultato mostra chi ha più cose da confessare."
   }
 }
