@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'questions-a-poser-a-son-copain',
   title: "100 questions à poser à son copain, des plus légères aux grandes conversations",
-  metaTitle: "100 questions à poser à son copain (ou à son mec) en 2026",
+  metaTitle: "100 questions à poser à son copain | Quiz Couple",
   metaDescription: "Envie de creuser au-delà du « ça va ? » quotidien ? 100 questions à poser à ton copain, classées par moment et par profondeur, pour des vraies conversations.",
   featuredImage: '/blog/questions-a-poser-a-son-copain.webp',
   featuredImageAlt: "Jeune couple assis face à face en pleine conversation, elle pose une question en souriant",
