@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "badge": "35 domande, risultato immediato",
+    "title": "Test Crush: provi sentimenti veri per questa persona?",
+    "titleHighlight": "sentimenti veri",
+    "description": "Rispondi su quello che vivi, non su quello che speri. Il punteggio separa l'attrazione passeggera, la cotta e i sentimenti veri."
+  },
+  "jsonLd": {
+    "name": "Test amore o cotta",
+    "about": "Distinguere una cotta dai sentimenti d'amore"
+  },
+  "section1": {
+    "title": "Che cos'è un crush?",
+    "p1": "Un crush, o una cotta, è un'attrazione forte per qualcuno, spesso prima ancora di conoscerlo bene. La parola viene dall'inglese, dove significa «schiacciare»: l'idea di qualcosa che ti cade addosso. Per esempio: incroci qualcuno a scuola o su Insta e, senza sapere bene perché, inizi a pensarci in continuazione.",
+    "p2": "Quello che caratterizza una cotta è che la tua immaginazione fa gran parte del lavoro. Conosci poco la persona, quindi riempi i vuoti con quello che speri che sia. È per questo che una cotta è così intensa: non ti attira la persona reale, ma la sua migliore versione possibile.",
+    "p3": "Ed è normale, ci passano tutti. Una cotta non è né ridicola né infantile, e ce l'hanno anche gli adulti. La vera domanda, quella che probabilmente ti ha portato qui, è capire se la tua sta diventando qualcos'altro."
+  },
+  "section2": {
+    "title": "Cosa distingue l'amore da una semplice cotta?",
+    "p1": "La differenza principale sta in quello che conosci dell'altro. La cotta si appoggia su quello che immagini, l'amore su quello che sai. In pratica: se non ci hai mai parlato più di cinque minuti, quello che provi è forte, ma poggia su pochissimo di reale.",
+    "p2": "L'altra differenza è quello che ti provoca. Una cotta è eccitazione: il cuore che accelera, lo stomaco chiuso, la voglia di vederlo. L'amore è attaccamento: la mancanza quando non c'è, sentirti al tuo posto insieme, i suoi difetti che conosci e che non cambiano niente. Ecco come si traduce in situazioni che sicuramente vivi:",
+    "headerSituation": "La situazione",
+    "headerCrush": "Se è una cotta",
+    "headerAmour": "Se è amore",
+    "row1Situation": "Non risponde",
+    "row1Crush": "Vai in ansia, immagini mille cose",
+    "row1Amour": "Ti manca, ma non vai nel panico",
+    "row2Situation": "Scopri un difetto",
+    "row2Crush": "Non lo vedi nemmeno, o lo giustifichi",
+    "row2Amour": "Lo vedi benissimo, e non cambia niente",
+    "row3Situation": "Parlate a lungo",
+    "row3Crush": "Pesi ogni frase che mandi",
+    "row3Amour": "Esce da sola, smetti di calcolare",
+    "row4Situation": "È via una settimana",
+    "row4Crush": "Ci pensi, ma la tua vita continua",
+    "row4Amour": "Alle tue giornate manca qualcosa",
+    "row5Situation": "Qualcun altro ti piace un po'",
+    "row5Crush": "Può succedere, una cotta non è esclusiva",
+    "row5Amour": "Non ti capita più, e stupisce anche te",
+    "row6Situation": "Immagini il seguito",
+    "row6Crush": "Scene da film: il primo bacio, gli sguardi",
+    "row6Amour": "Cose concrete: le vacanze, il quotidiano, il dopo",
+    "apres": "Un avvertimento però: nessuno passa dall'una all'altro da un giorno all'altro. L'amore comincia quasi sempre con una cotta, e una cotta che dura, che resiste ai difetti e all'assenza, è spesso <a href=\"/it/test-sono-innamorato/\">l'inizio di sentimenti veri</a>. È esattamente quello che misura il test: a che punto sei di quel percorso."
+  },
+  "section3": {
+    "title": "Come si capisce di avere una cotta per qualcuno",
+    "p1": "La maggior parte delle volte lo sai prima di ammetterlo. Il corpo parla per primo, e non sa mentire. Se ti ritrovi in tre o quattro dei segnali qui sotto, la domanda è già risolta:",
+    "resumeTitre": "I segnali che non mentono",
+    "resume1": "<strong>Pensi a quella persona senza deciderlo:</strong> in classe, sul bus, la sera. Arriva in testa da sola, e più volte al giorno.",
+    "resume2": "<strong>Il tuo telefono diventa un'estensione della tua cotta:</strong> apri le sue storie per prime, rileggi le vostre conversazioni, scrivi messaggi che non invii.",
+    "resume3": "<strong>Il tuo corpo reagisce alla sua presenza:</strong> lo stomaco annodato prima di vederlo, le guance calde quando dicono il suo nome, il cuore che accelera quando appare sullo schermo.",
+    "resume4": "<strong>Cambi le tue abitudini per incrociarlo:</strong> un giro largo in corridoio, una festa a cui vai perché ci sarà, un vestito scelto pensandoci.",
+    "resume5": "<strong>I tuoi occhi lo trovano da soli:</strong> in una stanza piena, sai sempre dov'è, senza aver deciso di cercarlo.",
+    "resume6": "<strong>I tuoi amici lo sanno tuo malgrado:</strong> o perché ne parli troppo, o perché ti si legge in faccia.",
+    "apres": "Se spunti quasi tutto, la domanda non è più se hai una cotta. È capire se è ancora una cotta, o già di più. È lì che le 35 domande del test fanno la cernita, pesando ogni segnale: pensare a qualcuno tutti i giorni pesa più di aver avuto i brividi una volta."
+  },
+  "section4": {
+    "title": "Come capire se piaci anche tu?",
+    "p1": "Comincia guardando chi avvia le conversazioni. Se scrivi sempre tu per primo e le sue risposte sono gentili ma corte, hai già una parte della risposta. Se ti rilancia, ti fa domande su di te, riprende cose che hai detto una settimana fa, vuol dire che conserva da qualche parte quello che racconti.",
+    "p2": "Poi guarda cosa fa con il suo nervosismo e la sua attenzione quando siete insieme. Qualcuno a cui piaci ti cerca con lo sguardo, trova scuse per parlarti, resta nei paraggi quando il gruppo si disperde. In un ragazzo, <a href=\"/it/blog/uomo-nervoso-davanti-a-una-donna/\">le mani, la bocca e lo sguardo tradiscono il nervosismo</a> molto prima delle parole. E se vuoi una risposta più solida di una sensazione, abbiamo un test dedicato che legge <a href=\"/it/mi-ama-in-segreto-test/\">come si comporta quando non si sa osservato</a>.",
+    "p3": "Un ultimo consiglio: non trarre conclusioni da un solo gesto. Una storia vista, un like, un sorriso non significano niente da soli. Quello che conta è la ripetizione: chi ti cerca una volta magari è educato, chi ti cerca tutte le settimane ha un motivo."
+  },
+  "section5": {
+    "title": "La mia cotta mi sembra irraggiungibile e mi rende triste: che fare?",
+    "p1": "Prima di tutto, sappi che è il caso più comune che esista. La cotta irraggiungibile, quella più grande, già impegnata, popolarissima o che nemmeno sa che esisti, ce l'hanno avuta quasi tutti. La tristezza che ne deriva è reale, non è teatro, e hai il diritto di sentirla.",
+    "p2": "Poi sii onesto su un punto: è irraggiungibile davvero, o nella tua testa? C'è una bella differenza tra qualcuno impegnato, dove non c'è niente da tentare, e qualcuno a cui semplicemente non hai mai osato avvicinarti. Il secondo caso non è irraggiungibile, è paura, e la paura si lavora.",
+    "resumeTitre": "Cosa aiuta, in ordine",
+    "resume1": "<strong>Metti una parola vera sulla situazione:</strong> «impegnato» non è «timido», e «non mi conosce» non è «mi ha respinto». Metà della tristezza viene dal mescolare tutto.",
+    "resume2": "<strong>Se è paura, comincia in piccolo:</strong> niente dichiarazioni, solo una conversazione. Una domanda su una lezione, una reazione a una storia. Abbiamo persino preparato <a href=\"/it/blog/domande-da-fare-al-tuo-crush/\">delle domande da fare alla tua cotta</a> per partire senza che sia strano.",
+    "resume3": "<strong>Se è un muro vero, taglia quello che alimenta la cotta:</strong> smetti di guardare le sue storie ogni giorno. Una cotta si nutre di immagini, e il cucchiaio lo tieni tu.",
+    "resume4": "<strong>Datti una scadenza:</strong> non per i tuoi sentimenti, quelli non si comandano, ma per la tua decisione. «Tra un mese, o ci ho parlato, o volto pagina.» Evita di trascinarti una tristezza per un anno.",
+    "apres": "E tieni a mente una cosa: una cotta che non porta da nessuna parte non è tempo perso. Ti insegna cosa ti attira, cosa ti fa effetto, cosa vorrai trovare in qualcuno di raggiungibile. La prossima persona ne beneficerà."
+  },
+  "faq": {
+    "title": "Le domande che si fanno tutti",
+    "q1": "Quanto dura una cotta?",
+    "a1": "Da qualche settimana a qualche mese, la maggior parte delle volte. Una cotta si nutre di novità e di mistero: appena conosci meglio la persona, o si spegne o diventa qualcosa di più solido. Oltre sei mesi senza calare, probabilmente non è più una semplice cotta.",
+    "q2": "Si può avere una cotta stando in coppia?",
+    "a2": "Sì, e non ti rende infedele. Una cotta è una reazione, non una decisione. Quello che conta è cosa ne fai: lasciarla passare, o alimentarla di nascosto.",
+    "q3": "Cotta o amore: il test può sbagliare?",
+    "a3": "Il test misura quello che vivi, a partire da quello che rispondi. Se rispondi quello che provi davvero, il punteggio è affidabile sulla tendenza. Ma nessun test ti legge nella mente: ti aiuta a vederci chiaro, non decide al posto tuo.",
+    "q4": "Perché la mia cotta mi ossessiona così tanto?",
+    "a4": "Perché una cotta si appoggia sull'incertezza. Il tuo cervello adora le domande senza risposta, e «gli piaccio?» è enorme. Per questo una cotta occupa più spazio di una relazione stabile: non ti ossessiona la persona, ti ossessiona la suspense.",
+    "q5": "Come si fa passare una cotta?",
+    "a5": "Taglia quello che la alimenta: le storie, il profilo che controlli, i giri larghi per incrociarla. Senza immagini nuove, una cotta si spegne in qualche settimana. Funziona, a patto di farlo davvero.",
+    "q6": "È grave avere una cotta per qualcuno che non conosco?",
+    "a6": "No, è anzi la forma più classica. Ma ricorda che ti piace l'immagine, non la persona. L'unico modo di sapere cosa c'è dietro è parlarci.",
+    "q7": "Il test funziona se la mia cotta è una ragazza e anch'io?",
+    "a7": "Sì. Il test chiede solo se la tua cotta è un ragazzo o una ragazza, per scrivere bene le domande. Chi sei tu non cambia né le domande né il punteggio."
+  },
+  "section6": {
+    "title": "Fai il test, in cinque minuti lo saprai",
+    "p1": "35 domande, nessuna iscrizione, e nessuno oltre a te vede il risultato. Rispondi quello che è vero, non quello che ti fa comodo: il test non serve a niente se gli racconti quello che vuoi sentirti dire.",
+    "p2": "E se il punteggio dice «sentimenti veri», respira. Non ti obbliga a niente, ti dice solo a che punto sei."
+  }
+}

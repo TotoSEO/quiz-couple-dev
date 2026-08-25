@@ -321,5 +321,12 @@
     "shortTitle": "Ich hab noch nie",
     "metaDescription": "100 Ich-hab-noch-nie-Fragen, geschrieben für Paare. Ihr antwortet abwechselnd, das Spiel zählt die Geständnisse und zeigt, wer von euch mehr erlebt hat. Kostenlos, ohne Anmeldung.",
     "description": "Der große Partyklassiker, neu geschrieben für zwei: ihr antwortet abwechselnd, und das Ergebnis zeigt, wer am meisten zu gestehen hat."
+  },
+  "testCrush": {
+    "title": "Liebe oder nur ein Crush? Online-Test mit 35 Fragen",
+    "shortTitle": "Crush-Test",
+    "metaTitle": "Liebe oder nur ein Crush? Online-Test mit 35 Fragen",
+    "metaDescription": "35 Fragen, um herauszufinden, ob es ein Crush ist oder echte Gefühle. Die Fragen passen sich an, je nachdem ob dein Crush ein Junge oder ein Mädchen ist.",
+    "description": "Antworte auf das, was du fühlst, der Score trennt Anziehung, Crush und echte Gefühle."
   }
 }

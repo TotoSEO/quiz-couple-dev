@@ -192,6 +192,7 @@ const article: BlogArticleData = {
 <tr><td>Flirtear</td><td>Sugerido, con salida posible</td><td>El cumplido que incomoda</td></tr>
 <tr><td>La primera cita</td><td>Abierto, y escuchado de verdad</td><td>Recitar las preguntas preparadas</td></tr>
 </tbody></table></div>
+<p>Y si lo que te bloquea es más bien saber qué sientes <em>tú</em>, hemos hecho <a href="/es/test-amor-o-crush/">un test que distingue el crush de los sentimientos de verdad</a>, en 35 preguntas.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">¿Piensa en ti o solo responde por educación?</p>
 <p class="blog-cta-texte">Una serie de preguntas repasa las señales reales, las que no se ven cuando estás metida dentro: sus retomas, sus detalles, cómo es cuando estás delante. Resultado inmediato y nadie se enterará.</p>

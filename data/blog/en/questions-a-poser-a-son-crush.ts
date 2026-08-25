@@ -192,6 +192,7 @@ const article: BlogArticleData = {
 <tr><td>Flirting</td><td>Suggested, with a way out</td><td>The compliment that makes him uncomfortable</td></tr>
 <tr><td>The first date</td><td>Open, and genuinely listened to</td><td>Reciting your prepared questions</td></tr>
 </tbody></table></div>
+<p>And if what is really blocking you is knowing what <em>you</em> feel, we built <a href="/en/love-or-crush-test/">a test that sorts a crush from real feelings</a>, in 35 questions.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Is he thinking about you, or just being polite?</p>
 <p class="blog-cta-texte">A series of questions goes through the real signals, the ones you don't notice when you're in the middle of it: his follow-ups, his attentions, the way he is when you're there. Instant result, and nobody will know.</p>

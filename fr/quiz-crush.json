@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "badge": "35 questions, résultat immédiat",
+    "title": "Test Crush : as-tu des sentiments amoureux pour cette personne ?",
+    "titleHighlight": "sentiments amoureux",
+    "description": "Réponds sur ce que tu vis, pas sur ce que tu espères. Le score fait le tri entre l'attirance qui passe, le crush et les vrais sentiments."
+  },
+  "jsonLd": {
+    "name": "Test amour ou crush",
+    "about": "Faire la différence entre un crush et des sentiments amoureux"
+  },
+  "section1": {
+    "title": "Qu'est-ce qu'un crush ?",
+    "p1": "Un crush, c'est une attirance forte pour quelqu'un, souvent avant même de bien le connaître. Le mot vient de l'anglais, où il veut dire « écraser » : c'est l'idée d'un truc qui te tombe dessus. Par exemple : tu croises quelqu'un en cours ou sur Insta, et sans trop savoir pourquoi, tu te mets à penser à cette personne tout le temps.",
+    "p2": "Ce qui caractérise un crush, c'est que ton imagination fait une grosse partie du travail. Tu connais peu la personne, du coup tu remplis les trous avec ce que tu espères qu'elle est. C'est pour ça qu'un crush est aussi intense : tu n'es pas attiré par la personne réelle, mais par la meilleure version possible d'elle.",
+    "p3": "Et c'est normal, tout le monde passe par là. Un crush n'est ni ridicule ni enfantin, d'ailleurs les adultes en ont aussi. La vraie question, celle qui t'a probablement amené ici, c'est de savoir si le tien est en train de devenir autre chose."
+  },
+  "section2": {
+    "title": "Qu'est-ce qui différencie l'amour d'un simple crush ?",
+    "p1": "La principale différence se trouve dans ce que tu connais de l'autre. Le crush s'appuie sur ce que tu imagines, l'amour s'appuie sur ce que tu sais. Concrètement : si tu ne lui as jamais parlé plus de cinq minutes, ce que tu ressens est fort, mais ça repose sur très peu de réel.",
+    "p2": "L'autre différence, c'est ce que ça te fait. Un crush, c'est de l'excitation : le cœur qui accélère, le ventre qui se serre, l'envie de le voir. L'amour, c'est de l'attachement : le manque quand la personne n'est pas là, le fait de te sentir à ta place avec elle, ses défauts que tu connais et qui ne changent rien. Voilà comment ça se traduit dans des situations que tu vis sûrement :",
+    "headerSituation": "La situation",
+    "headerCrush": "Si c'est un crush",
+    "headerAmour": "Si c'est de l'amour",
+    "row1Situation": "Il ou elle ne répond pas",
+    "row1Crush": "Tu stresses, tu imagines mille trucs",
+    "row1Amour": "Ça te manque, mais tu ne paniques pas",
+    "row2Situation": "Tu découvres un défaut",
+    "row2Crush": "Tu ne le vois même pas, ou tu l'excuses",
+    "row2Amour": "Tu le vois très bien, et ça ne change rien",
+    "row3Situation": "Vous discutez longtemps",
+    "row3Crush": "Tu réfléchis à chaque phrase que tu envoies",
+    "row3Amour": "Ça sort tout seul, tu ne calcules plus",
+    "row4Situation": "La personne est absente une semaine",
+    "row4Crush": "Tu y penses, mais ta vie continue",
+    "row4Amour": "Quelque chose manque à tes journées",
+    "row5Situation": "Quelqu'un d'autre te plaît un peu",
+    "row5Crush": "C'est possible, un crush n'est pas exclusif",
+    "row5Amour": "Ça ne t'arrive plus, et ça te surprend toi-même",
+    "row6Situation": "Tu imagines la suite",
+    "row6Crush": "Des scènes de film : le premier baiser, les regards",
+    "row6Amour": "Des trucs concrets : les vacances, le quotidien, plus tard",
+    "apres": "Attention quand même : personne ne passe de l'un à l'autre du jour au lendemain. L'amour commence presque toujours par un crush, et un crush qui dure, qui résiste aux défauts et à l'absence, c'est souvent <a href=\"/test-suis-je-amoureux/\">le début de sentiments amoureux</a>. C'est exactement ce que le test mesure : où tu en es sur ce chemin."
+  },
+  "section3": {
+    "title": "Comment on sait si on est en crush sur quelqu'un",
+    "p1": "La plupart du temps, on le sait avant de se l'avouer. Le corps parle en premier, et il ne sait pas mentir. Si tu retrouves trois ou quatre des signes ci-dessous, la question est déjà réglée :",
+    "resumeTitre": "Les signes qui ne trompent pas",
+    "resume1": "<strong>Tu penses à cette personne sans le décider :</strong> en cours, dans le bus, le soir. Elle arrive dans ta tête toute seule, et plusieurs fois par jour.",
+    "resume2": "<strong>Ton téléphone devient une extension de ton crush :</strong> tu regardes ses stories en premier, tu relis vos conversations, tu écris des messages que tu n'envoies pas.",
+    "resume3": "<strong>Ton corps réagit à sa présence :</strong> le ventre qui se noue avant de le voir, les joues qui chauffent quand on prononce son prénom, le cœur qui accélère quand son nom s'affiche.",
+    "resume4": "<strong>Tu changes tes habitudes pour le croiser :</strong> un détour dans le couloir, une soirée où tu vas parce qu'il y sera, une tenue choisie en y pensant.",
+    "resume5": "<strong>Tes yeux le retrouvent tout seuls :</strong> dans une salle pleine, tu sais toujours où il est, sans avoir décidé de le chercher.",
+    "resume6": "<strong>Tes amis sont au courant malgré toi :</strong> soit parce que tu en parles trop, soit parce que ça se voit sur ta tête.",
+    "apres": "Si tu coches presque tout, la question n'est plus de savoir si tu es en crush. Elle est de savoir si c'est encore un crush, ou déjà plus. C'est là que les 35 questions du test font le tri, en pesant chaque signe : penser à quelqu'un tous les jours pèse plus lourd qu'avoir eu des frissons une fois."
+  },
+  "section4": {
+    "title": "Comment savoir si on lui plaît aussi ?",
+    "p1": "Commence par regarder qui lance les conversations. Si c'est toujours toi qui écris en premier et que ses réponses sont polies mais courtes, tu as une partie de la réponse. Si la personne te relance, te pose des questions sur toi, rebondit sur des trucs que tu as dits il y a une semaine, c'est qu'elle garde ce que tu racontes quelque part.",
+    "p2": "Ensuite, regarde ce qu'elle fait de sa nervosité et de son attention quand vous êtes ensemble. Quelqu'un à qui tu plais te cherche du regard, trouve des excuses pour te parler, reste dans les parages quand le groupe se disperse. Chez un garçon, <a href=\"/blog/homme-nerveux-devant-une-femme/\">les mains, la bouche et le regard trahissent la nervosité</a> bien avant les mots. Et si tu veux une réponse plus posée qu'une impression, on a un test dédié qui analyse <a href=\"/test-m-aime-t-il-elle-en-secret/\">sa façon de se comporter quand il ne se sait pas regardé</a>.",
+    "p3": "Un dernier conseil : ne tire pas de conclusion d'un seul geste. Une story regardée, un like, un sourire, ça ne veut rien dire tout seul. Ce qui compte, c'est la répétition : quelqu'un qui te cherche une fois est peut-être poli, quelqu'un qui te cherche toutes les semaines a une raison."
+  },
+  "section5": {
+    "title": "Mon crush me paraît inatteignable et ça me rend triste : que faire ?",
+    "p1": "D'abord, sache que c'est le cas de figure le plus courant qui soit. Le crush inatteignable, celui qui est plus âgé, déjà en couple, très populaire ou qui ne sait même pas que tu existes, presque tout le monde en a eu un. La tristesse qui va avec est réelle, ce n'est pas du cinéma, et tu as le droit de la ressentir.",
+    "p2": "Ensuite, sois honnête sur un point : est-ce qu'il est inatteignable en vrai, ou dans ta tête ? Il y a une grosse différence entre quelqu'un d'en couple, où là il n'y a rien à tenter, et quelqu'un que tu n'as juste jamais osé aborder. Le deuxième cas n'est pas de l'inatteignable, c'est de la peur, et ça se travaille.",
+    "resumeTitre": "Ce qui aide, dans l'ordre",
+    "resume1": "<strong>Mets un vrai mot sur la situation :</strong> « en couple » n'est pas « timide », et « il ne me connaît pas » n'est pas « il m'a rejeté ». La moitié de la tristesse vient d'un mélange de tout ça.",
+    "resume2": "<strong>Si c'est de la peur, commence petit :</strong> pas de déclaration, juste une conversation. Une question sur un cours, une réaction à une story. On a même préparé <a href=\"/blog/questions-a-poser-a-son-crush/\">des questions à poser à son crush</a> pour lancer les échanges sans que ce soit bizarre.",
+    "resume3": "<strong>Si c'est un vrai mur, coupe ce qui nourrit le crush :</strong> arrête de regarder ses stories tous les jours. Un crush se nourrit d'images, et c'est toi qui tiens la cuillère.",
+    "resume4": "<strong>Donne-toi une échéance :</strong> pas pour tes sentiments, tu ne les commandes pas, mais pour ta décision. « Dans un mois, soit je lui ai parlé, soit je passe à autre chose. » Ça évite de laisser traîner une tristesse pendant un an.",
+    "apres": "Et garde un truc en tête : un crush qui ne mène nulle part n'est pas du temps perdu. Il t'apprend ce qui t'attire, ce qui te fait de l'effet, ce que tu voudras trouver chez quelqu'un d'atteignable. La personne d'après en profitera."
+  },
+  "faq": {
+    "title": "Les questions qu'on se pose",
+    "q1": "Combien de temps dure un crush ?",
+    "a1": "Quelques semaines à quelques mois, la plupart du temps. Un crush se nourrit de nouveauté et de mystère : dès que tu connais mieux la personne, soit il s'éteint, soit il se transforme en quelque chose de plus solide. Au-delà de six mois sans faiblir, ce n'est probablement plus un simple crush.",
+    "q2": "Est-ce qu'on peut avoir un crush en étant en couple ?",
+    "a2": "Oui, et ça ne fait pas de toi quelqu'un d'infidèle. Un crush est une réaction, pas une décision. Ce qui compte, c'est ce que tu en fais : le laisser passer, ou le nourrir en cachette.",
+    "q3": "Crush ou amour : le test peut se tromper ?",
+    "a3": "Le test mesure ce que tu vis, à partir de ce que tu réponds. Si tu réponds ce que tu ressens pour de vrai, le score est fiable sur la tendance. Mais aucun test ne lit dans ta tête : il t'aide à y voir clair, il ne décide pas à ta place.",
+    "q4": "Pourquoi mon crush m'obsède autant ?",
+    "a4": "Parce qu'un crush s'appuie sur l'incertitude. Ton cerveau adore les questions sans réponse, et « est-ce que je lui plais ? » en est une énorme. C'est pour ça qu'un crush occupe plus de place qu'une relation installée : ce n'est pas la personne qui obsède, c'est le suspense.",
+    "q5": "Comment faire passer un crush ?",
+    "a5": "Coupe ce qui l'alimente : les stories, le compte que tu vérifies, les détours pour croiser la personne. Sans nouvelles images, un crush s'éteint en quelques semaines. Ça marche, à condition de le faire pour de vrai.",
+    "q6": "C'est grave d'avoir un crush sur quelqu'un que je ne connais pas ?",
+    "a6": "Non, c'est même la forme la plus classique. Mais garde en tête que tu craques pour l'image, pas pour la personne. La seule façon de savoir ce qu'il y a derrière, c'est de lui parler.",
+    "q7": "Le test marche si mon crush est une fille et moi aussi ?",
+    "a7": "Oui. Le test demande juste si ton crush est un garçon ou une fille, pour écrire les questions correctement. Qui tu es, lui, ne change rien aux questions ni au score."
+  },
+  "section6": {
+    "title": "Fais le test, tu seras fixé dans cinq minutes",
+    "p1": "35 questions, aucune inscription, et personne d'autre que toi ne voit le résultat. Réponds ce qui est vrai, pas ce qui t'arrange : le test ne sert à rien si tu lui racontes ce que tu as envie d'entendre.",
+    "p2": "Et si le score dit « sentiments amoureux », respire un coup. Ça ne t'oblige à rien, ça te dit juste où tu en es."
+  }
+}

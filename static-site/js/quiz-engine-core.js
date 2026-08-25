@@ -844,6 +844,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'toxic', icon: '⚠️', route: 'testToxic' },
     { type: 'test', key: 'fin-couple', icon: '🪢', route: 'testFinCouple' },
     { type: 'test', key: 'amour-amitie', icon: '🧭', route: 'testAmourAmitie' },
+    { type: 'test', key: 'crush', icon: '💘', route: 'testCrush' },
     { type: 'test', key: 'pervers', icon: '🎭', route: 'testPervers' },
     { type: 'test', key: 'amour-habitude', icon: '☕', route: 'testAmourHabitude' },
     { type: 'test', key: 'sain', icon: '💚', route: 'testCoupleSain' },
@@ -943,6 +944,7 @@ var QuizEngine = (function() {
     // « Ce que je ressens » appelle « ce qu'il ou elle ressent ».
     'suis-je-amoureux': ['testAmourAmitie', 'testSecret', 'testAttachement'],
     'amour-amitie':    ['testSecret', 'testSuisJeAmoureux', 'testAmourHabitude'],
+    'crush':           ['testSecret', 'testSuisJeAmoureux', 'testAmourAmitie'],
     'secret':          ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement'],
     'distance-aime':   ['testDistance', 'testSecret', 'testAttachement'],
     'langage-amour':   ['testAttachement', 'testCouple', 'quizKnowledge'],
