@@ -9,99 +9,99 @@
     "titleHighlight": "compatibles"
   },
   "seo": {
-    "intro": "Este test de puntos comunes está diseñado para parejas que quieren conocerse mejor, descubrir sus afinidades y medir su compatibilidad de forma lúdica e interactiva.",
+    "intro": "Este test se juega entre dos, con un solo móvil. Cada uno responde a las mismas 20 preguntas por separado, y al final el juego cuenta las respuestas idénticas. Es muy simple, y justo eso es lo que lo hace funcionar: no se puede hacer trampa, solo descubres lo que respondió el otro cuando ya has respondido tú.",
     "s1": {
-      "title": "Por qué importan los puntos comunes en una pareja",
-      "p1": "Los puntos comunes constituyen la base de una relación plena. Compartir gustos, valores o una visión de la vida crea una base sólida para la complicidad y la comprensión mutua.",
-      "p2": "Sin embargo, los puntos comunes no lo son todo. Las diferencias aportan riqueza y complementariedad. Lo importante es encontrar el equilibrio entre lo que os une y lo que os hace únicos."
+      "title": "Lo que las cosas en común hacen por una pareja",
+      "p1": "Seamos honestos: nadie se queda con alguien porque también le guste la montaña. Lo que las respuestas idénticas cuentan es otra cosa. Cuando los dos respondéis lo mismo a «¿qué importa más, la familia o la libertad?», acabáis de aprender que vuestras dos vidas tiran en la misma dirección. Y eso, en el día a día, se nota en todo: en las decisiones, en los fines de semana, en lo que discutís y en lo que no discutís nunca.",
+      "p2": "Las diferencias también tienen su papel, por cierto. Una pareja que responde igual a todo no existe, y se aburriría. Lo que cuenta es saber en qué os parecéis y en qué no. La mayoría de las parejas solo lo sabe a medias, y eso es exactamente lo que el juego pone sobre la mesa."
     },
     "s2": {
-      "title": "¿Para qué sirve un test de puntos comunes en pareja?",
-      "p1": "Este test te permite <strong>conoceros mejor</strong> explorando temas variados: vuestros gustos, hábitos, valores y proyectos.",
-      "p2": "Más allá de la puntuación final, es una herramienta para <strong><a href=\"/es/quiz-enamorados/\">abrir el diálogo</a></strong>. ¿Por qué respondiste eso? ¿Qué te hizo elegir esa opción?"
+      "title": "Lo que la puntuación cuenta, y lo que no",
+      "p1": "La puntuación cuenta vuestras respuestas idénticas en 20 preguntas. Dice dónde coincidís, no dice si vuestra relación va bien. Son dos cosas distintas: dos personas muy diferentes pueden formar una pareja muy sólida, y dos gemelos de gustos pueden hacerse infelices. Si lo que queréis medir es el estado de vuestra relación, tenemos un test hecho para eso, que <a href=\"/es/test-compatibilidad-pareja/\">puntúa la solidez de la pareja</a> en vez del parecido.",
+      "p2": "El verdadero interés de la puntuación es lo que pasa justo después. «Espera, ¿tú qué has respondido? ¿Por qué?»: esa es la conversación que el juego fabrica, pregunta tras pregunta. La mayoría de las veces, el mejor momento de la partida no es una respuesta idéntica, es un desacuerdo que no sospechabais."
     },
     "s3": {
-      "title": "Cómo funciona el test de compatibilidad",
+      "title": "Cómo va una partida",
       "steps": [
         {
-          "title": "Ingresad vuestros nombres",
-          "desc": "Introduce los nombres de los dos jugadores"
+          "title": "Escribid vuestros nombres",
+          "desc": "El juego se dirige a cada uno por su nombre durante toda la partida."
         },
         {
           "title": "Responded por turnos",
-          "desc": "Para cada pregunta, cada uno da su respuesta por separado"
+          "desc": "Uno responde a las 20 preguntas, pasa el móvil, y el otro responde a las mismas, sin ver las primeras respuestas."
         },
         {
-          "title": "Descubrid vuestros puntos comunes",
-          "desc": "¡Cuantas más respuestas idénticas, más alta la puntuación!"
+          "title": "Comparad",
+          "desc": "El juego cuenta las respuestas idénticas y os enseña dónde coincidís. Lo divertido empieza ahí."
         }
       ]
     },
     "s4": {
-      "title": "Test de puntos comunes en pareja: 153 preguntas",
-      "p1": "Nuestra base de datos contiene 153 preguntas cuidadosamente seleccionadas, cubriendo todos los aspectos de la vida en pareja.",
+      "title": "Qué hay dentro de las 153 preguntas",
+      "p1": "El juego saca 20 preguntas al azar de un total de 153, así que no hay dos partidas iguales, y podéis relanzar directamente desde la pantalla final. Las preguntas van de lo muy ligero, «¿Café o té?», «¿Mar o montaña?», hasta temas con algo más de peso. Estas son las seis familias:",
       "categories": [
         {
           "title": "Personalidad y carácter",
-          "desc": "¿Sois introvertidos o extrovertidos? ¿Pacientes o impulsivos? Descubrid vuestras similitudes de temperamento."
+          "desc": "De mañanas o de noches, paciente o impulsivo, el que planifica o el que improvisa."
         },
         {
           "title": "Gustos e intereses",
-          "desc": "Películas, música, cocina, hobbies... ¿Compartís las mismas pasiones y preferencias?"
+          "desc": "Las películas, la música, la cocina, los escape rooms. El terreno más ligero, y muchas veces el más sorprendente."
         },
         {
           "title": "Valores y visión de la vida",
-          "desc": "Familia, trabajo, dinero, libertad... ¿Están alineadas vuestras prioridades?"
+          "desc": "La familia, el trabajo, el dinero, la libertad. Aquí es donde las respuestas idénticas pesan más."
         },
         {
-          "title": "Cotidianidad y hábitos",
-          "desc": "Ritmo de vida, organización, pequeñas manías... ¿Sois compatibles en el día a día?"
+          "title": "Día a día y costumbres",
+          "desc": "El ritmo de vida, la organización, las pequeñas manías. Donde se descubren diferencias muy concretas."
         },
         {
           "title": "Relación e intimidad",
-          "desc": "Comunicación, afecto, necesidades... ¿Cómo vivís vuestra relación en el día a día?"
+          "desc": "La forma de mostrar el cariño, las necesidades de cada uno, lo que se espera del otro."
         },
         {
-          "title": "Proyectos y futuro",
-          "desc": "Viajes, familia, carrera... ¿Compartís la misma visión del futuro?"
+          "title": "Planes y futuro",
+          "desc": "Los viajes, los hijos, la casa. Las preguntas que siempre se dejan para luego, planteadas de forma simple."
         }
       ]
     },
     "s5": {
-      "title": "Cómo interpretar los resultados del test",
-      "p1": "La puntuación final os da una indicación de vuestros puntos comunes, pero no define la calidad de vuestra relación.",
-      "p2": "Lo esencial es dar un paso atrás y usar este test como punto de partida para discusiones constructivas."
+      "title": "Cómo leer vuestro resultado",
+      "p1": "Una puntuación alta significa que os conocéis bien y que vuestros gustos se solapan. Da gusto verlo, pero no os quedéis ahí: mirad cuáles de vuestras respuestas coinciden. Veinte respuestas iguales sobre cocina y películas no cuentan la misma historia que cinco respuestas iguales sobre la familia y el dinero.",
+      "p2": "Una puntuación baja no significa que la cosa empiece mal. Significa que sois diferentes, y a veces que os conocéis menos de lo que pensabais. Así que recuperad dos o tres preguntas donde vuestras respuestas se separan y habladlo: suele ser la mejor parte de la noche."
     },
     "s6": {
-      "title": "¿Se necesitan muchos puntos comunes para ser compatibles?",
-      "p1": "¡No necesariamente! La compatibilidad se basa en mucho más que el número de puntos comunes. Las parejas más sólidas son a menudo las que saben <strong>equilibrar similitudes y diferencias</strong>.",
-      "p2": "Lo importante es compartir los valores fundamentales mientras se acepta que cada uno tenga sus propios gustos y personalidad."
+      "title": "¿Hacen falta muchas cosas en común para ser compatibles?",
+      "p1": "No, y la investigación sobre parejas lo dice igual que el sentido común. Lo que une a dos personas a largo plazo no son los mismos gustos, son los mismos valores: la misma idea de la lealtad, de la familia, de qué se hace con el dinero y con el tiempo. Dos personas pueden odiar las películas del otro y envejecer juntas sin problema.",
+      "p2": "Si vuestra pregunta va más allá de los parecidos, si queréis saber si vuestras dos formas de funcionar encajan en el fondo, hemos construido <a href=\"/es/test-compatibilidad-amorosa/\">un test que mide ese encaje</a>, valores y caracteres incluidos. Los dos se complementan bien: este para lo que compartís, el otro para cómo os ajustáis."
     },
     "s7": {
-      "title": "Cuándo hacer un test de puntos comunes en pareja",
-      "p1": "Este test es perfecto para varios momentos clave de vuestra relación:",
+      "title": "Los buenos momentos para jugarlo",
+      "p1": "No hay mal momento para este juego, pero los hay mejores que otros:",
       "items": [
-        "<strong>Al inicio de la relación</strong>: para conocer mejor a tu nueva pareja",
-        "<strong>En un momento de duda</strong>: para redescubrir lo que os une",
-        "<strong>Para una noche romántica</strong>: como actividad lúdica y cómplice",
-        "<strong>Antes de una gran decisión</strong>: para verificar que estáis alineados"
+        "<strong>Al principio de una relación:</strong> Es la forma más simple de haceros <a href=\"/es/preguntas-pareja/\">20 preguntas de verdad</a> sin que parezca un interrogatorio.",
+        "<strong>Después de años juntos:</strong> Ahí es donde las sorpresas hacen más gracia. Creéis saberlo todo, y os equivocáis en un cuarto de las respuestas.",
+        "<strong>Una noche sin plan:</strong> Diez minutos, un móvil, y la noche arranca de nuevo.",
+        "<strong>A distancia:</strong> Cada uno juega en su móvil, y comparáis por videollamada. Funciona muy bien."
       ]
     },
-    "ctaTitle": "¿Listos para descubrir vuestros puntos comunes?",
-    "ctaDesc": "Volved arriba, ingresad vuestros nombres y ¡lanzaos a este test de compatibilidad! No olvidéis discutir vuestras respuestas después del quiz.",
+    "ctaTitle": "Os toca",
+    "ctaDesc": "Subid arriba de la página, escribid vuestros nombres y empezad la partida. Y guardad cinco minutos para el final: las respuestas que no coinciden son las mejores para conversar.",
     "faqTitle": "Preguntas frecuentes",
     "faq": [
       {
-        "q": "¿Cómo funciona el test de puntos comunes?",
-        "a": "Ingresad vuestros nombres, luego responded por turnos a las 20 preguntas aleatorias. Cada respuesta idéntica cuenta como un punto común. ¡Al final, descubrid vuestra puntuación de compatibilidad!"
+        "q": "¿Cómo funciona el test de puntos en común?",
+        "a": "Escribís vuestros dos nombres y cada uno responde a las mismas 20 preguntas, uno después del otro, sin ver las respuestas del otro. El juego cuenta las respuestas idénticas y os da vuestra puntuación. Las 20 preguntas salen al azar de 153, así que cada partida cambia."
       },
       {
-        "q": "¿Se necesitan muchos puntos comunes para ser compatibles?",
-        "a": "¡No necesariamente! Las diferencias pueden ser complementarias. Lo importante es compartir los valores fundamentales."
+        "q": "¿Hacen falta muchas cosas en común para ser compatibles?",
+        "a": "No. Lo que importa es compartir lo esencial: los valores, la visión de la vida, lo que se espera de una relación. Los gustos diferentes no son ningún problema, y hasta hacen la vida más interesante."
       },
       {
-        "q": "¿Se puede repetir el test con otras preguntas?",
-        "a": "¡Sí! Al final del test, podéis empezar de nuevo con una nueva selección de 20 preguntas entre las 153 disponibles."
+        "q": "¿Se puede repetir con otras preguntas?",
+        "a": "Sí, directamente desde la pantalla final. El juego vuelve a sacar 20 preguntas al azar de las 153, así que podéis encadenar varias partidas sin repetir."
       }
     ]
   },
