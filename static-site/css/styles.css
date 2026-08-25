@@ -8622,6 +8622,14 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 @media (max-width: 430px) {
   .partenaire-adulte { padding: 1.5rem 1.1rem; }
 }
+/* Variante posee dans l'ecran de resultat, sous la banniere de la boutique :
+   elle doit s'y inserer sans repousser les boutons d'action, d'ou la largeur
+   ramenee a celle de la carte et l'espace au-dessus. */
+.partenaire-adulte-resultat {
+  max-width: 40rem; margin: 0.5rem auto 1.5rem; padding: 1.5rem 1.25rem;
+}
+.partenaire-adulte-resultat .partenaire-adulte-titre { font-size: clamp(1.1rem, 3vw, 1.35rem); }
+.partenaire-adulte-resultat .partenaire-adulte-texte { margin-bottom: 1.2rem; }
 
 /* ── Test charge mentale ────────────────────────────────────────────────
    Deux blocs propres a ce test : la barre de repartition entre les deux
