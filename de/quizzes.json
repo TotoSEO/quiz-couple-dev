@@ -233,10 +233,10 @@
     "metaDescription": "Seelenverwandtschaft oder nur eine schöne Geschichte? 20 Fragen, ein Wert und ein Ergebnis, das nicht nur schmeichelt. Kostenloser Test, allein oder zu zweit, ohne Anmeldung."
   },
   "jeuxCouple": {
-    "title": "Paarspiele online: 8 kostenlose Spiele für zu zweit",
+    "title": "Paarspiele online: 10 kostenlose Spiele für zu zweit",
     "shortTitle": "Paarspiele",
-    "description": "Acht Spiele für zu zweit: Dafür oder dagegen, Wer von uns beiden, Was würdest du lieber, die Dilemmas, Wahrheit oder Pflicht, die pikante Version, das Strafenrad und das Brettspiel.",
-    "metaDescription": "8 kostenlose Paarspiele auf einem Handy: Dafür oder dagegen, Wer von uns beiden, Was würdest du lieber, die Dilemmas und Wahrheit oder Pflicht. Ohne Anmeldung."
+    "description": "Zehn Spiele für zu zweit: Dafür oder dagegen, Wer könnte, Ich hab noch nie, Wer von uns beiden, Was würdest du lieber, die Dilemmas, Wahrheit oder Pflicht, die pikante Version, das Strafenrad und das Brettspiel.",
+    "metaDescription": "10 kostenlose Paarspiele auf einem Handy: Dafür oder dagegen, Wer von uns beiden, Was würdest du lieber, die Dilemmas und Wahrheit oder Pflicht. Ohne Anmeldung."
   },
   "jeuGages": {
     "title": "Strafen für Paare: das Glücksrad-Spiel mit 140 Strafen",
@@ -328,5 +328,12 @@
     "metaTitle": "Liebe oder nur ein Crush? Online-Test mit 35 Fragen",
     "metaDescription": "35 Fragen, um herauszufinden, ob es ein Crush ist oder echte Gefühle. Die Fragen passen sich an, je nachdem ob dein Crush ein Junge oder ein Mädchen ist.",
     "description": "Antworte auf das, was du fühlst, der Score trennt Anziehung, Crush und echte Gefühle."
+  },
+  "jeuQuiPourrait": {
+    "title": "Wer könnte? Online-Paarspiel mit 100+ Fragen",
+    "shortTitle": "Wer könnte?",
+    "metaTitle": "Wer könnte? Online-Paarspiel mit 100+ Fragen",
+    "metaDescription": "Eine Frage, eure zwei Vornamen, und ihr zeigt, wer dazu fähig wäre. 108 Fragen, Runden mit 20, 40 oder 60, kostenlos und ohne Anmeldung.",
+    "description": "Eine Frage erscheint, ihr zeigt, wer dazu fähig wäre: einer von euch beiden, oder niemand."
   }
 }

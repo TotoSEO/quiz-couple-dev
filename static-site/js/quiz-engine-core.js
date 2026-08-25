@@ -887,6 +887,7 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'dilemmes', icon: '⚖️', route: 'jeuDilemmes' },
     { type: 'jeu', key: 'pour-contre', icon: '👍', route: 'pourContre' },
     { type: 'jeu', key: 'jamais', icon: '🙊', route: 'jeuJamais' },
+    { type: 'jeu', key: 'qui-pourrait', icon: '🏆', route: 'jeuQuiPourrait' },
   ];
 
   // Suggestions de fin de partie, choisies une par une pour chaque page.
@@ -8282,6 +8283,299 @@ var QuizEngine = (function() {
     smoothScroll(wrap, 'center');
   };
 
+  // ── Qui pourrait, version couple ───────────────────────────
+  // Deux joueurs, une question « qui pourrait… » et trois réponses : lui,
+  // elle, ou personne. Pas de tours : les deux regardent le même écran et
+  // se mettent d'accord (ou pas) avant de taper. Le résultat compte qui a
+  // été désigné le plus souvent.
+  //
+  // Ce moteur inaugure le rendu sans reconstruction : l'écran de jeu est
+  // bâti une seule fois, et passer à la question suivante ne remplace que
+  // le texte de la question, avec un petit fondu. Les autres moteurs
+  // reconstruisent tout leur écran à chaque réponse, et ça se voit : la
+  // page saute un dixième de seconde à chaque clic. Ici les cartes des
+  // prénoms ne bougent jamais, seule la question circule.
+  function QuiPourraitGame(config) {
+    this.container = config.container;
+    this.prefix = config.prefix || 'quiPourrait';
+    this.lang = config.lang || 'fr';
+    this.pool = config.questions || [];
+    this.phase = 'setup';
+    this.noms = ['', ''];
+    this.limite = 20;
+    this.questions = [];
+    this.idx = 0;
+    this.compte = [0, 0, 0];      // joueur 1, joueur 2, personne
+    this.dejaVues = {};
+    this.ui = null;               // références de l'écran de jeu monté
+    this.render();
+  }
+
+  // Comme le je n'ai jamais : les libellés vivent dans gd.json avec les
+  // questions, c'est tgd qui les lit, pas tg.
+  QuiPourraitGame.prototype.qtg = function(cle, repli) {
+    return tgd(this.prefix + '.' + cle, repli);
+  };
+
+  QuiPourraitGame.prototype.joueur = function(i) {
+    return this.noms[i] || tg('playerSetup.player' + (i + 1), 'Joueur ' + (i + 1));
+  };
+
+  QuiPourraitGame.prototype.tirer = function() {
+    var self = this;
+    var fraiches = this.pool.filter(function(q) { return !self.dejaVues[q.id]; });
+    var revues = this.pool.filter(function(q) { return self.dejaVues[q.id]; });
+    this.questions = shuffleArray(fraiches).concat(shuffleArray(revues));
+  };
+
+  QuiPourraitGame.prototype.render = function() {
+    this.container.innerHTML = '';
+    this.ui = null;
+    if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'palier') this.renderPalier();
+    else if (this.phase === 'resultats') this.renderResultats();
+    else this.renderJeu();
+  };
+
+  QuiPourraitGame.prototype.renderSetup = function() {
+    var self = this;
+    var grille = cartesDeuxJoueurs('qp-nom');
+
+    // Le choix de la longueur reprend le composant du je n'ai jamais tel
+    // quel : même bloc, mêmes classes, rien à redessiner.
+    var longueurs = [20, 40, 60];
+    var choixWrap = el('div', 'jnj-longueur');
+    choixWrap.appendChild(el('p', 'jnj-longueur-titre', this.qtg('longueurTitre', 'Vous jouez en combien de questions ?')));
+    var boutonsWrap = el('div', 'jnj-longueur-choix');
+    longueurs.forEach(function(n) {
+      var b = el('button', 'jnj-longueur-btn' + (n === self.limite ? ' active' : ''));
+      b.type = 'button';
+      b.setAttribute('aria-pressed', n === self.limite ? 'true' : 'false');
+      b.innerHTML = '<span class="jnj-longueur-nb">' + n + '</span>' +
+        '<span class="jnj-longueur-unite">' + esc(self.qtg('longueurMot', 'questions')) + '</span>' +
+        '<span class="jnj-longueur-libelle">' + esc(self.qtg('longueur' + n, '')) + '</span>';
+      b.addEventListener('click', function() {
+        self.limite = n;
+        boutonsWrap.querySelectorAll('.jnj-longueur-btn').forEach(function(x) {
+          x.classList.remove('active'); x.setAttribute('aria-pressed', 'false');
+        });
+        b.classList.add('active'); b.setAttribute('aria-pressed', 'true');
+      });
+      boutonsWrap.appendChild(b);
+    });
+    choixWrap.appendChild(boutonsWrap);
+
+    var ecran = ecranDepart({
+      icone: '🏆',
+      titre: this.qtg('setupTitre', 'Qui pourrait ?'),
+      desc: this.qtg('setupDesc', ''),
+      corps: [grille, choixWrap],
+      bouton: this.qtg('commencer', 'On commence !'),
+      onStart: function() {
+        self.noms = [
+          grille.querySelector('#qp-nom1').value.trim() || tg('playerSetup.player1', 'Joueur 1'),
+          grille.querySelector('#qp-nom2').value.trim() || tg('playerSetup.player2', 'Joueur 2')
+        ];
+        self.tirer();
+        self.idx = 0;
+        self.compte = [0, 0, 0];
+        self.phase = 'jeu';
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(ecran.wrap);
+  };
+
+  // L'écran de jeu, monté une seule fois. Tout ce qui change d'une question
+  // à l'autre est gardé sous this.ui et mis à jour sur place.
+  QuiPourraitGame.prototype.renderJeu = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine qp-jeu quiz-question-enter');
+
+    var barre = el('div', 'quiz-progress-wrapper');
+    barre.innerHTML =
+      '<div class="quiz-progress-header">' +
+        '<span class="quiz-progress-label"></span>' +
+        '<span class="quiz-progress-pct"></span>' +
+      '</div>' +
+      '<div class="quiz-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">' +
+        '<div class="quiz-progress-fill"></div>' +
+      '</div>';
+    wrap.appendChild(barre);
+
+    var carte = el('div', 'qp-carte');
+    carte.innerHTML =
+      '<p class="qp-titre" aria-hidden="true">' + esc(this.qtg('grandTitre', 'Qui pourrait')) + '</p>' +
+      '<p class="qp-question" aria-live="polite"></p>';
+    wrap.appendChild(carte);
+
+    var choix = el('div', 'qp-choix');
+    var b1 = el('button', 'qp-btn qp-btn--vert');
+    b1.type = 'button';
+    b1.innerHTML = '<span class="qp-btn-nom">' + esc(this.joueur(0)) + '</span>';
+    var b2 = el('button', 'qp-btn qp-btn--jaune');
+    b2.type = 'button';
+    b2.innerHTML = '<span class="qp-btn-nom">' + esc(this.joueur(1)) + '</span>';
+    choix.appendChild(b1);
+    choix.appendChild(b2);
+    wrap.appendChild(choix);
+
+    var personne = el('button', 'qp-personne', esc(this.qtg('personne', 'Personne')));
+    personne.type = 'button';
+    wrap.appendChild(personne);
+
+    this.ui = {
+      label: barre.querySelector('.quiz-progress-label'),
+      pct: barre.querySelector('.quiz-progress-pct'),
+      barreRole: barre.querySelector('.quiz-progress-bar'),
+      fill: barre.querySelector('.quiz-progress-fill'),
+      question: carte.querySelector('.qp-question'),
+      boutons: [b1, b2, personne]
+    };
+
+    [[b1, 0], [b2, 1], [personne, 2]].forEach(function(paire) {
+      paire[0].addEventListener('click', function() {
+        self.repondre(paire[1], paire[0]);
+      });
+    });
+
+    this.majQuestion(false);
+    this.container.appendChild(wrap);
+  };
+
+  // Le passage à la question suivante : le texte sort en fondu, change,
+  // revient. C'est le seul morceau de l'écran qui bouge.
+  QuiPourraitGame.prototype.majQuestion = function(anime) {
+    var self = this;
+    var q = this.questions[this.idx];
+    var pct = Math.round((this.idx / this.limite) * 100);
+    this.ui.label.textContent = this.qtg('questionSur', 'Question {{n}} / {{total}}')
+      .replace('{{n}}', this.idx + 1).replace('{{total}}', this.limite);
+    this.ui.pct.textContent = pct + '%';
+    this.ui.fill.style.width = pct + '%';
+    this.ui.barreRole.setAttribute('aria-valuenow', String(pct));
+
+    if (!anime) {
+      this.ui.question.textContent = q.texte;
+      return;
+    }
+    this.ui.question.classList.add('qp-question--sortie');
+    setTimeout(function() {
+      self.ui.question.textContent = q.texte;
+      self.ui.question.classList.remove('qp-question--sortie');
+      self.ui.question.classList.add('qp-question--entree');
+      setTimeout(function() {
+        self.ui.question.classList.remove('qp-question--entree');
+      }, 220);
+    }, 160);
+  };
+
+  QuiPourraitGame.prototype.repondre = function(cible, bouton) {
+    var self = this;
+    if (!answerLock(this, 480)) return;
+    this.compte[cible]++;
+    bouton.classList.add('qp-btn--pris');
+    setTimeout(function() {
+      bouton.classList.remove('qp-btn--pris');
+      self.idx++;
+      if (self.idx >= self.limite) {
+        // La rallonge n'a de sens que s'il reste des questions derrière.
+        self.phase = (self.limite < self.questions.length) ? 'palier' : 'resultats';
+        self.render();
+        return;
+      }
+      self.majQuestion(true);
+    }, 260);
+  };
+
+  // « Voir les résultats » porte la couleur : la sortie naturelle reste la
+  // sortie, la rallonge est là pour ceux qui ne veulent pas lâcher.
+  QuiPourraitGame.prototype.renderPalier = function() {
+    var self = this;
+    var wrap = el('div', 'quiz-engine jnj-palier animate-fade-in text-center');
+    wrap.appendChild(el('div', 'jnj-palier-icone', '🏆'));
+    wrap.appendChild(el('h2', 'jnj-palier-titre',
+      this.qtg('palierTitre', 'Déjà {{n}} questions !').replace('{{n}}', this.limite)));
+    wrap.appendChild(el('p', 'jnj-palier-texte', this.qtg('palierTexte', '')));
+
+    var choix = el('div', 'jnj-palier-choix');
+    var voir = el('button', 'btn btn-cta btn-lg', this.qtg('palierResultats', 'Voir les résultats'));
+    voir.type = 'button';
+    voir.addEventListener('click', function() { self.phase = 'resultats'; self.render(); });
+    var continuer = el('button', 'btn btn-outline',
+      this.qtg('palierContinuer', 'Continuer avec 20 questions de plus'));
+    continuer.type = 'button';
+    continuer.addEventListener('click', function() {
+      self.limite = Math.min(self.limite + 20, self.questions.length);
+      self.phase = 'jeu';
+      self.render();
+      smoothScroll(self.container, 'start');
+    });
+    choix.appendChild(voir);
+    choix.appendChild(continuer);
+    wrap.appendChild(choix);
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  QuiPourraitGame.prototype.renderResultats = function() {
+    var self = this;
+    var total = this.compte[0] + this.compte[1] + this.compte[2];
+
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-3', '🏆'));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', this.qtg('resultatsTitre', 'Le verdict')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6',
+      this.qtg('resultatsSous', 'Sur {{total}} questions.').replace('{{total}}', total)));
+
+    var duo = el('div', 'qp-resultats');
+    [0, 1].forEach(function(j) {
+      var carte = el('div', 'qp-resultat qp-resultat--' + (j === 0 ? 'vert' : 'jaune'));
+      carte.innerHTML =
+        '<span class="qp-resultat-nom">' + esc(self.joueur(j)) + '</span>' +
+        '<span class="qp-resultat-nb">' + self.compte[j] + '</span>' +
+        '<span class="qp-resultat-mot">' + esc(self.qtg('resultatFois', 'fois')) + '</span>';
+      duo.appendChild(carte);
+    });
+    wrap.appendChild(duo);
+    if (this.compte[2] > 0) {
+      wrap.appendChild(el('p', 'qp-resultat-personne',
+        this.qtg('resultatPersonne', 'Et {{n}} fois, personne.').replace('{{n}}', this.compte[2])));
+    }
+
+    var verdict = el('div', 'jnj-verdict');
+    if (this.compte[0] === this.compte[1]) {
+      verdict.innerHTML = '<p>' + esc(this.qtg('phraseEgalite', '')) + '</p>';
+    } else {
+      var devant = this.compte[0] > this.compte[1] ? 0 : 1;
+      verdict.innerHTML =
+        '<p>' + esc(this.qtg('phrasePlus', '').replace('{{nom}}', this.joueur(devant))) + '</p>' +
+        '<p>' + esc(this.qtg('phraseAutre', '').replace('{{nom}}', this.joueur(1 - devant))) + '</p>';
+    }
+    wrap.appendChild(verdict);
+
+    var rejouer = el('button', 'btn btn-cta btn-lg mt-6 mb-2', this.qtg('recommencer', 'Recommencer avec d\'autres questions'));
+    rejouer.type = 'button';
+    rejouer.addEventListener('click', function() {
+      for (var i = 0; i < self.idx; i++) self.dejaVues[self.questions[i].id] = true;
+      self.tirer();
+      self.idx = 0;
+      self.compte = [0, 0, 0];
+      self.phase = 'jeu';
+      self.render();
+      smoothScroll(self.container, 'start');
+    });
+    wrap.appendChild(rejouer);
+
+    renderActionButtons(wrap, {
+      share: { type: 'fun' },
+      restart: function() { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -8309,6 +8603,7 @@ var QuizEngine = (function() {
     DilemmeGame: DilemmeGame,
     PourContreGame: PourContreGame,
     JamaisGame: JamaisGame,
+    QuiPourraitGame: QuiPourraitGame,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,

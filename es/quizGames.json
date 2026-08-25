@@ -357,7 +357,8 @@
     "testChargeMentale": "Test de carga mental en pareja",
     "quizRencontre": "Preguntas de primera cita",
     "jeuJamais": "Yo nunca",
-    "testCrush": "Test amor o crush"
+    "testCrush": "Test amor o crush",
+    "jeuQuiPourrait": "¿Quién podría?"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",

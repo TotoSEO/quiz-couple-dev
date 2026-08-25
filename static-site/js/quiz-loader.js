@@ -274,6 +274,9 @@
     // les réponses côté joueur sont écrites sans accord pour cette raison.
     // Barème explicite : « j'y pense tous les jours » pèse plus lourd que
     // « j'ai eu des frissons une fois », les points vivent dans gd.json.
+    // ── Qui pourrait : deux prénoms, une question, on désigne ──
+    'qui-pourrait':   { prefix: 'quiPourrait', engine: 'qui-pourrait', totalQ: 0, pool: 0, textOnly: true },
+
     'crush':          { modes: [
       { id: 'homme', emoji: '👦', prefix: 'crushH', engine: 'solo', totalQ: 35, pool: 35, quizType: 'crush', ascending: true, ptsExplicites: true, resultPrefix: 'crush' },
       { id: 'femme', emoji: '👧', prefix: 'crushF', engine: 'solo', totalQ: 35, pool: 35, quizType: 'crush', ascending: true, ptsExplicites: true, resultPrefix: 'crush' }
@@ -491,6 +494,25 @@
         return;
       }
       new QuizEngine.JamaisGame({ container: container, prefix: config.prefix, lang: lang, questions: affirmations });
+      return;
+    }
+    // Qui pourrait : même chargement que le je n'ai jamais, un réservoir
+    // de questions numérotées lu en entier, le moteur fait le tirage.
+    if (config.engine === 'qui-pourrait') {
+      var qpQuestions = [];
+      for (var qpi = 1; qpi <= 108; qpi++) {
+        var cleQp = config.prefix + '.q' + qpi;
+        var texteQp = QuizEngine.tgd(cleQp, null);
+        if (!texteQp || texteQp === cleQp) continue;
+        qpQuestions.push({ id: qpi, texte: texteQp });
+      }
+      if (qpQuestions.length === 0) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      new QuizEngine.QuiPourraitGame({ container: container, prefix: config.prefix, lang: lang, questions: qpQuestions });
       return;
     }
 

@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "badge": "108 questions • 2 players • Free",
+    "title": "The who could game for couples | 100+ questions",
+    "titleHighlight": "who could",
+    "description": "A question appears, your two names underneath, and you point. Simple, fast, and surprisingly revealing."
+  },
+  "jsonLd": {
+    "name": "Who could, couples edition"
+  },
+  "exemples": {
+    "amorce": "Who could",
+    "avant": "",
+    "apres": "?"
+  },
+  "section1": {
+    "title": "The rules, in thirty seconds",
+    "intro": "Who could is a game you play as a couple, on a single phone. A question appears, something like \"Who could buy a luxury watch on a whim?\", and you point at the culprit: one of you two, by tapping their name. If neither of you would be capable of it, there is a third, more discreet button: \"Nobody\".",
+    "intro2": "There is no right answer and no points for you to count: the game simply remembers who got pointed at, and shows you at the end. Here is how it goes:",
+    "etape1Titre": "Enter your names and pick the length",
+    "etape1Texte": "20, 40 or 60 questions, drawn at random from the 108 in the game. A 20-question round takes five minutes.",
+    "etape2Titre": "Point, question after question",
+    "etape2Texte": "Ideally, agree before you tap. In practice, the negotiation is the game: \"what? me? never in a million years\".",
+    "etape3Titre": "Discover the verdict",
+    "etape3Texte": "At the end, the game tells you who got pointed at the most. The title of \"capable of anything\" is earned, and it gets contested.",
+    "apres": "One small detail that changes everything: the screen does not move between questions. Your two names stay in place, only the question rotates above them. So you move fast, and a 40-question round flies by."
+  },
+  "section2": {
+    "title": "How it differs from \"which one of us\"",
+    "p1": "We also have <a href=\"/en/which-one-of-us-couple-game/\">a which one of us game</a> on the site, and from a distance the two look alike, so let's be clear about it. Which one of us is about what you already are: who is the most stubborn, who talks the most, who cooks best. You answer based on what you see every day.",
+    "p2": "Who could is about what you would be capable of doing. Who could skydive, drop everything for a countryside B&amp;B, blow the holiday budget in one evening. You are not observing any more, you are betting. And that is where it gets interesting: you are going to discover the image the other person has of you, and it does not always match the one you have of yourself.",
+    "p3": "Getting pointed at on \"who could cry at an animal video\" when you thought you were beyond suspicion gets a reaction. Half the rounds end with \"wait, is that how you see me??\", and honestly, that is the best moment of the game."
+  },
+  "section3": {
+    "title": "Examples of questions from the game",
+    "intro": "Here are twenty of the hundred and eight questions, exactly as the game asks them. There are light ones, less light ones, and a few traps where the more sensible of you two does not always win:",
+    "apres": "The other 88 are in the game, drawn at random each round. If you finish your 20 questions and want to keep going, the game offers 20 more, and \"Play again with different questions\" draws first from what has not been asked yet."
+  },
+  "section4": {
+    "title": "How to make the round a good one",
+    "intro": "There is not much you need to know, but these four habits make the difference between a decent round and a memorable one:",
+    "resumeTitre": "The good habits",
+    "resume1": "<strong>Justify your choices:</strong> \"You, because last time at the restaurant…\". The story that comes with the pointing is worth more than the pointing itself. This is exactly the kind of exchange that opens up <a href=\"/en/couple-questions/\">the real couple conversations</a>, the ones you never start head-on.",
+    "resume2": "<strong>The \"Nobody\" button is a real choice:</strong> Do not use it to dodge the decision on every question, it would lose all its flavour. Save it for the questions where, honestly, neither of you would dare.",
+    "resume3": "<strong>Accept the verdict with style:</strong> Being named \"capable of anything\" is a title, not an accusation. Loudly contesting it is part of the game too.",
+    "resume4": "<strong>Play again another time:</strong> With 108 questions, two game nights never look the same. And the answers sometimes change between rounds, which says a lot too.",
+    "apres": "And if the evening is going well and you want to <a href=\"/en/couple-games/\">move on to something else</a>, the format pairs very well with <a href=\"/en/never-have-i-ever-couples-game/\">a round of never have I ever</a> right after: you go from bets to confessions."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "How do you play who could as a couple?",
+    "a1": "You enter your two names, pick 20, 40 or 60 questions, and on each question you tap the name of the one who could do it, or \"Nobody\". At the end, the game tells you who got pointed at the most.",
+    "q2": "Do you both need to agree to answer?",
+    "a2": "That is the idea, and it is exactly what gets you talking. If you cannot agree, let the one who argues their case best win. The game checks nothing: your negotiation makes the rule.",
+    "q3": "Can you play long distance?",
+    "a3": "Yes. Each of you opens the game on your side with the same names and the same length, answer over video call, and compare your verdicts at the end. Pointing disagreements are even funnier at a distance.",
+    "q4": "Do the questions change every round?",
+    "a4": "Yes. Each round draws its questions at random from the 108, and \"Play again with different questions\" draws first from those that have not been asked since you arrived on the page.",
+    "q5": "Does it work between friends too?",
+    "a5": "Very well, as long as there are two of you: the game shows two names. Between friends, family, flatmates, the questions work the same. Only a few questions in the batch are couple questions, and they land fine between friends too."
+  }
+}

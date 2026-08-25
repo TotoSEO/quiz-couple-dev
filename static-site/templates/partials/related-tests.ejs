@@ -78,6 +78,7 @@
     jeuDilemmes:      ['pourContre', 'quizTuPreferes', 'jeuQuiDeNous', 'quizMost'],
     pourContre:       ['jeuDilemmes', 'quizTuPreferes', 'jeuQuiDeNous', 'testCommonPoints'],
     jeuJamais:        ['jeuActionVerite', 'quizGenant', 'quizCoquin', 'quizTuPreferes'],
+    jeuQuiPourrait:   ['jeuQuiDeNous', 'jeuJamais', 'quizTuPreferes', 'quizMost'],
   };
 
   const _relatedIcons = {
@@ -90,7 +91,7 @@
     quizMost: '🏆', quizAdo: '🌟', quizGenant: '😳', quizTuPreferes: '🤔', quizVraiFaux: '✅',
     zamours: '📺', quizTentation: '🏝️',
     jeuActionVerite: '🎲', jeuActionVeriteHot: '🌶️', jeuGages: '🎡',
-    jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍', jeuJamais: '🙊',
+    jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍', jeuJamais: '🙊', jeuQuiPourrait: '🏆',
   };
 
   const _relatedKeys = (_relatedMap[routeKey] || []).filter(function(k) {

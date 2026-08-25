@@ -1774,6 +1774,124 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .imsg-mauvais .imsg-etiquette { color: hsl(var(--destructive)); background: hsl(var(--destructive) / .13); }
 .imsg-mauvais .imsg-note { background: hsl(var(--destructive) / .07); }
 .dark .imsg-bon .imsg-etiquette { color: hsl(152 55% 66%); }
+
+/* ── Qui pourrait : l'écran de jeu ──────────────────────────
+   L'écran est monté une seule fois : les cartes des prénoms ne bougent
+   jamais, seule la question circule au-dessus. Les transitions ci-dessous
+   ne portent donc que sur le texte de la question, jamais sur l'écran. */
+.qp-jeu { max-width: 36rem; margin: 0 auto; }
+.qp-carte {
+  text-align: center;
+  padding: 2rem 1.25rem 1.75rem;
+  border-radius: calc(var(--radius) + 8px);
+  border: 1px solid hsl(var(--border));
+  background:
+    radial-gradient(120% 90% at 50% 0%, hsl(var(--primary) / 0.10), transparent 60%),
+    hsl(var(--card));
+  margin-bottom: 1.25rem;
+}
+.qp-titre {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 5vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  background: linear-gradient(92deg, hsl(var(--primary)), hsl(var(--secondary)));
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+  margin-bottom: 0.65rem;
+}
+.qp-question {
+  font-size: clamp(1.15rem, 3.4vw, 1.5rem);
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  line-height: 1.35;
+  min-height: 2.7em;             /* deux lignes réservées : la carte ne change pas de hauteur */
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+.qp-question--sortie { opacity: 0; transform: translateY(-6px); }
+.qp-question--entree { animation: qpEntree 220ms ease; }
+@keyframes qpEntree {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.qp-choix {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem;
+}
+.qp-btn {
+  border-radius: calc(var(--radius) + 6px);
+  padding: 2rem 0.75rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 150ms ease, box-shadow 150ms ease, filter 150ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.qp-btn-nom {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 4.5vw, 1.9rem);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  line-height: 1.15;
+}
+.qp-btn--vert {
+  background: linear-gradient(160deg, hsl(152 62% 42%), hsl(160 65% 33%));
+  border-color: hsl(152 62% 30%);
+  color: #fff;
+  box-shadow: 0 10px 24px -12px hsl(155 60% 30% / 0.65);
+}
+.qp-btn--jaune {
+  background: linear-gradient(160deg, hsl(44 96% 56%), hsl(38 92% 48%));
+  border-color: hsl(38 80% 40%);
+  color: hsl(30 55% 16%);
+  box-shadow: 0 10px 24px -12px hsl(40 80% 40% / 0.6);
+}
+.qp-btn:hover { transform: translateY(-2px); }
+.qp-btn:active { transform: scale(0.98); }
+.qp-btn--pris { filter: brightness(1.12); transform: scale(1.03); }
+
+.qp-personne {
+  display: block;
+  margin: 0.9rem auto 0;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.5);
+  color: hsl(var(--muted-foreground));
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease, transform 150ms ease;
+}
+.qp-personne:hover { background: hsl(var(--muted)); color: hsl(var(--foreground)); }
+.qp-personne:active { transform: scale(0.97); }
+.qp-personne.qp-btn--pris { background: hsl(var(--muted)); color: hsl(var(--foreground)); transform: scale(1.03); }
+
+/* Résultats : les deux cartes reprennent les couleurs des joueurs. */
+.qp-resultats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem;
+  max-width: 26rem; margin: 0 auto;
+}
+.qp-resultat {
+  border-radius: calc(var(--radius) + 6px);
+  padding: 1.25rem 0.75rem 1.1rem;
+  display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
+}
+.qp-resultat--vert { background: linear-gradient(160deg, hsl(152 62% 42%), hsl(160 65% 33%)); color: #fff; }
+.qp-resultat--jaune { background: linear-gradient(160deg, hsl(44 96% 56%), hsl(38 92% 48%)); color: hsl(30 55% 16%); }
+.qp-resultat-nom { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; overflow-wrap: anywhere; }
+.qp-resultat-nb { font-family: var(--font-display); font-weight: 800; font-size: 2.4rem; line-height: 1; }
+.qp-resultat-mot { font-size: 0.78rem; opacity: 0.85; }
+.qp-resultat-personne { margin-top: 0.9rem; font-size: 0.9rem; color: hsl(var(--muted-foreground)); }
+
+.dark .qp-btn--vert { box-shadow: 0 10px 24px -12px hsl(0 0% 0% / 0.6); }
+.dark .qp-btn--jaune { box-shadow: 0 10px 24px -12px hsl(0 0% 0% / 0.6); }
+
+@media (max-width: 420px) {
+  .qp-carte { padding: 1.5rem 0.9rem 1.35rem; }
+  .qp-btn { padding: 1.5rem 0.5rem; }
+}
 .dark .imsg {
   --imsg-gris: hsl(280 10% 22%);
   box-shadow: 0 14px 34px -22px hsl(0 0% 0% / .7);

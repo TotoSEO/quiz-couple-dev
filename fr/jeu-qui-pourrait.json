@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "badge": "108 questions • 2 joueurs • Gratuit",
+    "title": "Jeu qui pourrait spécial couple | 100+ questions",
+    "titleHighlight": "qui pourrait",
+    "description": "Une question s'affiche, vos deux prénoms en dessous, et vous désignez. Simple, rapide, et étonnamment révélateur."
+  },
+  "jsonLd": {
+    "name": "Qui pourrait, version couple"
+  },
+  "exemples": {
+    "amorce": "Qui pourrait",
+    "avant": "",
+    "apres": " ?"
+  },
+  "section1": {
+    "title": "Les règles, en trente secondes",
+    "intro": "Le qui pourrait est un jeu qu'on fait à deux, sur un seul téléphone. Une question s'affiche, du genre « Qui pourrait acheter une montre de luxe sur un coup de tête ? », et vous désignez le coupable : l'un de vous deux, en touchant son prénom. Si aucun des deux n'en serait capable, il y a un troisième bouton, plus discret : « Personne ».",
+    "intro2": "Il n'y a pas de bonne réponse et pas de points à compter pour vous : le jeu retient simplement qui a été désigné, et vous le montre à la fin. Voici comment ça se passe :",
+    "etape1Titre": "Entrez vos prénoms et choisissez la longueur",
+    "etape1Texte": "20, 40 ou 60 questions, tirées au hasard parmi les 108 du jeu. Une partie de 20 se joue en cinq minutes.",
+    "etape2Titre": "Désignez, question après question",
+    "etape2Texte": "Idéalement, mettez-vous d'accord avant de taper. Dans les faits, c'est la négociation qui fait le jeu : « quoi ? moi ? jamais de la vie ».",
+    "etape3Titre": "Découvrez le verdict",
+    "etape3Texte": "À la fin, le jeu vous dit qui a été désigné le plus souvent. Le titre de « capable de tout » se gagne, et il se conteste.",
+    "apres": "Petit détail qui change tout : l'écran ne bouge pas entre les questions. Vos deux prénoms restent en place, seule la question circule au-dessus. Du coup, on enchaîne vite, et une partie de 40 passe sans qu'on la voie passer."
+  },
+  "section2": {
+    "title": "La différence avec le « qui de nous deux »",
+    "p1": "On a aussi <a href=\"/qui-de-nous-deux/\">un jeu qui de nous deux</a> sur le site, et les deux se ressemblent de loin, alors autant le dire clairement. Le qui de nous deux parle de ce que vous êtes déjà : qui est le plus têtu, qui est le plus bavard, qui cuisine le mieux. On y répond en se basant sur ce qu'on constate tous les jours.",
+    "p2": "Le qui pourrait, lui, parle de ce que vous seriez capables de faire. Qui pourrait sauter en parachute, tout plaquer pour un gîte à la campagne, dépenser le budget vacances en une soirée. On ne constate plus, on parie. Et c'est là que ça devient intéressant : vous allez découvrir l'image que l'autre a de vous, et elle ne colle pas toujours à celle que vous avez de vous-même.",
+    "p3": "Se faire désigner sur « qui pourrait pleurer devant une vidéo d'animaux » quand on se croyait insoupçonnable, ça fait réagir. La moitié des parties se termine en « attends, tu me vois comme ça ?? », et franchement, c'est le meilleur moment du jeu."
+  },
+  "section3": {
+    "title": "Des exemples de questions du jeu",
+    "intro": "Voici vingt des cent-huit questions, telles que le jeu les pose. Il y a du léger, du moins léger, et quelques pièges où le plus sage des deux ne gagne pas toujours :",
+    "apres": "Les 88 autres sont dans le jeu, tirées au hasard à chaque partie. Si vous finissez vos 20 questions et que vous voulez continuer, le jeu propose d'enchaîner 20 de plus, et « recommencer avec d'autres questions » repioche dans ce qui n'a pas encore été posé."
+  },
+  "section4": {
+    "title": "Pour que la partie soit réussie",
+    "intro": "Il n'y a pas grand-chose à savoir, mais ces quatre habitudes font la différence entre une partie correcte et une partie mémorable :",
+    "resumeTitre": "Les bonnes habitudes",
+    "resume1": "<strong>Justifiez vos choix :</strong> « Toi, parce que la dernière fois au restaurant… ». L'anecdote qui accompagne la désignation vaut plus que la désignation. C'est de ce genre d'échange que sortent <a href=\"/questions-couple/\">les vraies conversations de couple</a>, celles qu'on ne lance jamais de front.",
+    "resume2": "<strong>Le bouton « Personne » est un vrai choix :</strong> Ne l'utilisez pas pour éviter de trancher à chaque question, il perdrait tout son sel. Gardez-le pour les questions où, honnêtement, aucun de vous deux n'oserait.",
+    "resume3": "<strong>Acceptez le verdict avec panache :</strong> Être désigné « capable de tout », c'est un titre, pas une accusation. Le contester bruyamment fait aussi partie du jeu.",
+    "resume4": "<strong>Rejouez une autre fois :</strong> Avec 108 questions, deux soirées de jeu ne se ressemblent pas. Et les réponses changent parfois entre deux parties, ce qui en dit long aussi.",
+    "apres": "Et si la soirée est lancée et que vous voulez <a href=\"/jeux-de-couple/\">continuer sur autre chose</a>, le format se marie très bien avec <a href=\"/je-nai-jamais-jeu-couple/\">une partie de je n'ai jamais</a> juste derrière : on passe des paris aux aveux."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment on joue au qui pourrait en couple ?",
+    "a1": "Vous entrez vos deux prénoms, vous choisissez 20, 40 ou 60 questions, et à chaque question vous touchez le prénom de celui qui en serait capable, ou « Personne ». À la fin, le jeu vous dit qui a été désigné le plus souvent.",
+    "q2": "Il faut être d'accord tous les deux pour répondre ?",
+    "a2": "C'est l'idée, et c'est justement ce qui fait discuter. Si vous n'arrivez pas à vous mettre d'accord, tranchez à celui qui défend le mieux son cas. Le jeu ne vérifie rien : c'est votre négociation qui fait la règle.",
+    "q3": "On peut y jouer à distance ?",
+    "a3": "Oui. Ouvrez chacun le jeu de votre côté avec les mêmes prénoms et la même longueur, répondez en visio, et comparez vos verdicts à la fin. Les désaccords de désignation sont encore plus drôles à distance.",
+    "q4": "Les questions changent à chaque partie ?",
+    "a4": "Oui. Chaque partie tire ses questions au hasard parmi les 108, et « recommencer avec d'autres questions » pioche d'abord dans celles qui n'ont pas encore été posées depuis votre arrivée sur la page.",
+    "q5": "Ça marche aussi entre amis ?",
+    "a5": "Très bien, tant que vous êtes deux : le jeu affiche deux prénoms. Entre amis, en famille, en colocation, les questions fonctionnent pareil. Il n'y a que quelques questions de couple dans le lot, et elles passent très bien entre amis aussi."
+  }
+}
