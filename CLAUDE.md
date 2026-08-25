@@ -76,6 +76,71 @@ npm run build          # Main site → dist/
 6. Keep animations subtle (150-300ms transitions)
 7. Don't break existing quiz engine functionality
 
+## Tonalité de rédaction : écrire comme un humain
+
+Le contenu éditorial doit sonner comme une personne qui explique le jeu à un
+ami, pas comme un rédacteur qui cisèle ses phrases. Le style « bien écrit »
+(formules, rythme, chutes) est précisément ce que Google repère comme un
+marqueur IA. Le naturel bat le brillant, dans les cinq langues.
+
+### L'exemple de référence, validé par Thomas
+
+Version bannie (marqueurs IA partout) :
+
+> La règle tient en une phrase : une affirmation commence par « Je n'ai
+> jamais », et chacun avoue si, en vrai, il l'a déjà fait. Pas de bonne
+> réponse, pas de points à marquer. Ce qui fait le jeu, c'est ce que la
+> réponse déclenche : la tête de l'autre, la question « attends, quand ça ? »,
+> et l'histoire qui arrive derrière.
+
+Version humaine (à imiter) :
+
+> Le « Je n'ai jamais » est un jeu qu'on peut faire entre amis ou en couple.
+> C'est un jeu très simple qui consiste à être confronté à des situations, et
+> à simplement dire si « j'ai déjà » ou si « je n'ai jamais », justement.
+> Par exemple : « Je n'ai jamais été à un mariage ».
+>
+> Si vous répondez « j'ai », c'est que vous avez déjà été à un mariage, si
+> vous répondez « je n'ai jamais », c'est que vous n'y avez jamais été. C'est
+> tout simple, mais la plupart du temps ça ouvre au débat, rappelle des
+> souvenirs et permet de passer un très bon moment à deux !
+
+### Ce qui fait la différence
+
+- **Commencer par dire ce que c'est, platement :** « X est un jeu qu'on peut
+  faire entre amis ou en couple. » Sujet, verbe, complément.
+- **Un exemple concret tout de suite :** « Par exemple : ... », puis dérouler
+  l'évidence sans peur de la redondance : « Si vous répondez X, c'est que...
+  Si vous répondez Y, c'est que... ». On ne laisse rien à déduire au lecteur.
+- **Répondre d'abord :** une section « différence » commence par « La
+  principale différence réside dans les questions. », pas par un effet de
+  style.
+- **Les mots de l'oral :** « justement », « d'ailleurs », « du coup », « la
+  plupart du temps », « ou encore », « etc. », « ça ». Écrire « ça » plutôt
+  que « cela », « on » plutôt que des tournures impersonnelles.
+- **Annoncer ce qui vient :** « Voici comment fonctionne notre moteur de jeu
+  ci-dessus : ».
+- **Des exemples en série, entre guillemets,** reliés par « ou encore » et
+  fermés par « etc. » quand la liste pourrait continuer.
+- **Une pointe d'enthousiasme simple** est bienvenue : « ...et permet de
+  passer un très bon moment à deux ! »
+
+### Les marqueurs IA interdits
+
+- « tient en une phrase », « tient en un mot », « tiennent en quelques
+  lignes » et toute la famille, dans toutes les langues.
+- Les fragments sans verbe enchaînés : « Pas de bonne réponse, pas de points
+  à marquer. »
+- Les triades rythmées : « la tête de l'autre, la question..., et l'histoire
+  qui arrive derrière ».
+- Les renversements d'aphorisme : « Ce qui change, ce ne sont pas les
+  règles : ce sont les questions. »
+- Les deux-points rhétoriques en cascade et les chutes de paragraphe
+  travaillées.
+
+La règle vaut pour tout nouveau contenu et pour toute réécriture, dans les
+cinq langues : on transpose le ton, pas seulement les mots.
+
 ## Maillage interne : les règles
 
 Les ancres contextuelles et descriptives sont les liens les plus puissants du

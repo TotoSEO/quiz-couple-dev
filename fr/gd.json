@@ -5765,7 +5765,7 @@
     "pf_karmique_d": "Vos réponses cochent la plupart des marqueurs attribués aux relations karmiques : une attraction qui a court-circuité votre jugement, des ruptures suivies de retours, la même dispute qui tourne en boucle, et le sentiment très net de rejouer une histoire déjà vécue. Vous restez moins par bonheur que par impossibilité de partir. C'est exactement ce que la tradition spirituelle décrit comme une dette à solder, et ce que la psychologie appelle, plus prosaïquement, un attachement entretenu par l'alternance du chaud et du froid.",
     "pf_karmique_a": "Retenez une chose : l'intensité n'est pas une preuve d'amour, et une leçon qui vous coûte votre santé n'est pas une leçon. Vous n'avez aucune dette à payer à qui que ce soit. Commencez par le plus concret : notez pendant trois semaines ce que vous ressentez après chaque moment passé ensemble, puis relisez le tout à froid. Et si votre relation comporte de la peur, du contrôle ou des humiliations, ce n'est plus une question de karma : nos tests sur la relation toxique et sur le pervers narcissique sont faits pour cela.",
     "pf_miroir_t": "Un lien miroir",
-    "pf_miroir_d": "Votre relation bouscule sans détruire, et c'est ce qui la distingue d'un lien karmique. Elle vous a mis face à des choses que vous évitiez de regarder, elle vous a fait traverser des séparations, mais chacune d'elles a servi à quelque chose et vous en êtes sorti·e différent·e. C'est le profil que le vocabulaire spirituel associe à la flamme jumelle : un lien qui agit comme un miroir grossissant sur ce que vous avez à travailler. La différence avec le karmique tient en un mot : ici, ça avance.",
+    "pf_miroir_d": "Votre relation bouscule sans détruire, et c'est ce qui la distingue d'un lien karmique. Elle vous a mis face à des choses que vous évitiez de regarder, elle vous a fait traverser des séparations, mais chacune d'elles a servi à quelque chose et vous en êtes sorti·e différent·e. C'est le profil que le vocabulaire spirituel associe à la flamme jumelle : un lien qui agit comme un miroir grossissant sur ce que vous avez à travailler. La différence avec le karmique, c'est qu'ici, ça avance.",
     "pf_miroir_a": "Profitez de ce que ce miroir vous montre, mais ne confondez pas croissance et endurance. Une relation qui vous fait grandir vous laisse plus solide après chaque épreuve, pas plus fatigué·e. Posez-vous la question tous les six mois : est-ce que je vais mieux qu'avant ? Si la réponse reste oui, le lien fait son travail. Si elle devient non, c'est le signe que la relation est passée du miroir à la boucle."
   },
   "ameSoeur": {
@@ -8331,7 +8331,7 @@
   },
   "jamais": {
     "setupTitre": "Je n'ai jamais, version couple",
-    "setupDesc": "Chacun répond à tour de rôle, à voix haute et sans tricher. Pas de gages : juste la vérité, et ce qu'elle déclenche.",
+    "setupDesc": "Chacun répond à son tour, honnêtement. Il n'y a ni gage ni point : le but, c'est de discuter et d'en apprendre un peu plus l'un sur l'autre.",
     "longueurTitre": "Vous jouez en combien de questions ?",
     "longueurMot": "questions",
     "longueur15": "Partie rapide",

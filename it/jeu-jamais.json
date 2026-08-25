@@ -6,43 +6,45 @@
     "badge": "Gioco per coppie",
     "title": "Non ho mai | 100 domande da giocare in coppia",
     "titleHighlight": "Non ho mai",
-    "description": "Il grande classico delle serate, riscritto per due. Rispondete a turno, in tutta onestà, e il risultato mostra chi di voi due ha più cose da confessare."
+    "description": "Il grande classico delle serate, adattato per le coppie: 100 domande, rispondete a turno, e alla fine scoprite chi di voi due ha più cose da confessare!"
   },
   "section1": {
     "title": "Come funziona il gioco «Non ho mai»",
-    "intro": "La regola sta in una frase: un'affermazione comincia con <strong>«non ho mai»</strong>, e ognuno confessa se, nella vita vera, l'ha già fatto. Nessuna risposta giusta, nessun punto da segnare. Quello che fa il gioco è ciò che la risposta scatena: la faccia dell'altro, il «aspetta, quando?», e la storia che arriva dopo.",
-    "etape1Titre": "Inserite i nomi e scegliete la lunghezza",
-    "etape1Texte": "15 domande per una partita rapida, 30 per la versione classica, 100 per l'integrale. Potrete sempre allungare strada facendo.",
-    "etape2Titre": "Leggete l'affermazione ad alta voce",
-    "etape2Texte": "Ogni carta comincia con «non ho mai». Leggerla ad alta voce fa parte del gioco: è lì che gli sguardi si incrociano.",
+    "intro": "Il «Non ho mai» è un gioco che si può fare tra amici o in coppia. È un gioco molto semplice: ti trovi davanti a delle situazioni e devi solo dire se «<strong>l'ho fatto</strong>» o se «<strong>non l'ho mai fatto</strong>», appunto. Per esempio: «Non ho mai partecipato a un matrimonio».",
+    "intro2": "Se rispondi «l'ho fatto», vuol dire che a un matrimonio hai già partecipato. Se rispondi «non l'ho mai fatto», vuol dire che non ti è mai capitato. È semplicissimo, ma il più delle volte apre un dibattito, fa tornare in mente dei ricordi e fa passare un bellissimo momento in due!",
+    "intro3": "Ecco come funziona il nostro motore di gioco qui sopra:",
+    "etape1Titre": "Inserite i nomi e scegliete la lunghezza della partita",
+    "etape1Texte": "Potete giocare in 15, 30 o 100 domande. Se siete indecisi, partite da 15: il gioco vi proporrà comunque di continuare una volta arrivati in fondo.",
+    "etape2Titre": "Leggete la domanda ad alta voce",
+    "etape2Texte": "Ogni domanda comincia con «non ho mai». La cosa migliore è leggerla ad alta voce, come se giocaste con delle carte vere.",
     "etape3Titre": "Rispondete uno alla volta",
-    "etape3Texte": "Il gioco annuncia chi risponde per primo, poi chiede «e tu?» all'altro. La domanda non cambia finché non avete risposto entrambi, e chi comincia si alterna a ogni carta.",
-    "etape4Titre": "Confrontate i vostri risultati",
-    "etape4Texte": "Alla fine, un grafico a torta per persona conta i «l'ho fatto» e i «non l'ho mai fatto». Lo scarto tra i due è l'argomento di conversazione della serata.",
-    "apres": "Noterete che non ci sono <strong>né penitenze né penalità</strong>: rispondere con franchezza è già tutta la difficoltà. Se il vostro duo preferisce le serate in cui una confessione si paga, la <a href=\"/it/penitenze-di-coppia/\">ruota che distribuisce penitenze per due</a> riprende esattamente dove questo gioco si ferma."
+    "etape3Texte": "Il gioco indica a chi tocca rispondere, poi chiede «e tu?» all'altro. Quando avete risposto entrambi, si passa alla domanda successiva, e comincia l'altro.",
+    "etape4Titre": "Guardate chi ha confessato di più",
+    "etape4Texte": "Alla fine della partita, ognuno riceve un grafico con il suo numero di «l'ho fatto» e di «non l'ho mai fatto». Così scoprirete una volta per tutte chi di voi due ha vissuto di più!",
+    "apres": "Come avrete capito, nella nostra versione non ci sono <strong>né alcol né penitenze</strong>: si risponde, se ne parla, e si passa alla successiva. Se preferite le partite in cui chi confessa deve pagare, potete continuare andando a <a href=\"/it/penitenze-di-coppia/\">girare la ruota e pescare una penitenza</a>, è il seguito perfetto."
   },
   "section2": {
     "title": "La differenza tra la versione classica e la versione per coppie",
-    "p1": "Quello che cambia non sono le regole: sono le domande. La versione classica si gioca tra amici, spesso in cinque o sei, e pesca ovunque: le serate finite male, le bugie del liceo, le figuracce delle vacanze. Ognuno alza un dito, qualcuno grida «racconta!», e si passa alla prossima.",
-    "p2": "La versione per coppie stringe tutto sulla vostra storia: i vostri inizi, i vostri piccoli segreti, la famiglia dell'altro, quello che succede sotto il piumone e quello che immaginate per il futuro. E soprattutto, <strong>giochi davanti all'unica persona al mondo in grado di verificare le tue risposte</strong>. Mentire a «non ho mai guardato il tuo telefono di nascosto» davanti alla persona interessata è tutt'altro sport che farlo tra amici.",
-    "p3": "È anche un gioco più dolce di quanto sembri. Tra amici si cerca l'aneddoto spettacolare; in due, le domande più forti sono le più semplici, quelle che fanno dire «nemmeno io» sorridendo. Se preferite decidere piuttosto che confessare, le <a href=\"/it/preferiresti-quiz-coppia/\">scelte impossibili da dirimere in due</a> sono l'altro grande classico del genere."
+    "p1": "La differenza principale sta nelle domande. Nella versione classica troviamo domande <strong>molto generali</strong>, prese da situazioni di vita quotidiana, come «Non ho mai bevuto alcol» oppure «Non ho mai fatto un incidente in macchina».",
+    "p2": "Per le coppie, tutto è molto più <strong>centrato sulla relazione e sulle esperienze della vita di coppia</strong>: «Non ho mai tradito», «Non ho mai mentito al mio partner», «Non ho mai tenuto il broncio per avere attenzioni», «Non ho mai pensato di avere figli», eccetera.",
+    "p3": "L'altra differenza è il modo di giocare. Tra amici si alza un dito o si beve un sorso, spesso in cinque o sei. In coppia vi prendete il tempo di parlare di ogni risposta, ed è lì tutto il bello del gioco. Tra l'altro, se vi piace questo tipo di giochi in due, molto probabilmente vi piacerà anche <a href=\"/it/preferiresti-quiz-coppia/\">scegliere tra due opzioni impossibili</a>, è lo stesso spirito."
   },
   "section3": {
     "title": "Esempi di domande di Non ho mai",
-    "intro": "Ecco una ventina delle 100 domande poste nel gioco. Il mix è voluto: tenere, colpevoli, piccanti e qualche classico per respirare tra due confessioni.",
-    "apres": "Le altre 80 vi aspettano nel gioco, e ogni partita fa il suo sorteggio: il pulsante «ricomincia con altre domande» pesca prima tra quelle che non avete ancora visto."
+    "intro": "Ecco una ventina di esempi tra le 100 domande poste nel gioco, per farvi un'idea di cosa vi aspetta. Ci sono domande tenere, colpevoli, piccanti e qualche classico per riprendere fiato tra due confessioni.",
+    "apres": "Le altre 80 le trovate direttamente nel gioco. E se rifate una partita, il pulsante «ricomincia con altre domande» vi darà prima le domande che non avete ancora visto."
   },
   "faq": {
     "title": "Domande frequenti",
     "q1": "Quanto dura una partita?",
-    "a1": "Circa 10 minuti in 15 domande, il doppio in 30. Ogni domanda è posta a entrambi i giocatori, quindi una partita da 15 fa in realtà 30 risposte.",
+    "a1": "Contate circa 10 minuti per 15 domande, il doppio per 30. Dato che ogni domanda viene posta a entrambi i giocatori, una partita da 15 domande fa in realtà 30 risposte.",
     "q2": "Bisogna bere o fare penitenze?",
-    "a2": "No. Qui si risponde, e basta. È quello che permette di giocarci in qualsiasi momento, anche un martedì sera sul divano.",
+    "a2": "No, nella nostra versione non ci sono né alcol né penitenze: si risponde, se ne parla, e si va avanti. Quindi potete giocarci in qualsiasi momento, anche un martedì sera sul divano.",
     "q3": "Le domande sono spinte?",
-    "a3": "Alcune sì, ma nessuna va oltre quello che due persone in coppia possono dirsi. Per far salire davvero la temperatura, la <a href=\"/it/obbligo-o-verita-piccante-coppia/\">versione più calda dei nostri giochi per due</a> è fatta apposta.",
+    "a3": "Qualcuna sì, ma niente di imbarazzante tra due persone che stanno insieme. E se cercate un gioco decisamente più spinto, abbiamo quello che serve per <a href=\"/it/obbligo-o-verita-piccante-coppia/\">far salire la temperatura sul serio in due</a>.",
     "q4": "Si può giocare a distanza?",
-    "a4": "Sì, e funziona benissimo: uno apre il gioco, legge l'affermazione ad alta voce in videochiamata e clicca per entrambi. Niente nel gioco richiede di essere nella stessa stanza.",
+    "a4": "Sì, e funziona benissimo. Basta che uno di voi apra il gioco, legga la domanda ad alta voce in videochiamata e clicchi per entrambi.",
     "q5": "Possiamo rigiocare senza ritrovare le stesse domande?",
-    "a5": "Sì. Il gioco ricorda cosa ha già chiesto e pesca prima dal resto delle 100 domande. In tre partite da 30 avrete visto quasi tutto."
+    "a5": "Sì. Il gioco si ricorda le domande già uscite e pesca prima quelle che non avete ancora visto. In tre partite da 30 le avrete viste più o meno tutte."
   }
 }

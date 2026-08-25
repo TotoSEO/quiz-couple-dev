@@ -87,7 +87,13 @@
 
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
-      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section1.intro', '') %></p>
+      <p class="text-muted-foreground leading-relaxed mb-4"><%- t(ns + ':section1.intro', '') %></p>
+      <% if (t(ns + ':section1.intro2', '')) { %>
+      <p class="text-muted-foreground leading-relaxed mb-4"><%- t(ns + ':section1.intro2', '') %></p>
+      <% } %>
+      <% if (t(ns + ':section1.intro3', '')) { %>
+      <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section1.intro3', '') %></p>
+      <% } %>
       <div class="space-y-4">
         <% for (let i = 1; i <= 4; i++) { %>
         <div class="flex items-start gap-4 p-5 bg-card border border-border rounded-lg">
