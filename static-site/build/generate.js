@@ -1137,7 +1137,10 @@ function copyStaticAssets() {
   const assetsDir = path.resolve(__dirname, '../../assets');
 
   // Copy public/ files
-  const publicFiles = ['favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'og-image.webp', 'robots.txt', 'site.webmanifest', 'placeholder.svg', 'sitemap.xsl', 'f4b78b7e6bfeaefe7290b5ce249449a8.txt', 'llms.txt', 'ads.txt'];
+  // Les fichiers de verification de propriete des plateformes de netlinking
+  // sont copies tels quels a la racine : leur nom et leur contenu sont
+  // imposes par la plateforme, qui va les lire a l'adresse exacte.
+  const publicFiles = ['favicon.ico', 'favicon.png', 'apple-touch-icon.png', 'og-image.webp', 'robots.txt', 'site.webmanifest', 'placeholder.svg', 'sitemap.xsl', 'f4b78b7e6bfeaefe7290b5ce249449a8.txt', '389f91dd4161e549.html', 'soumettre-aLDZNbLFYuQUSvDMbhdyr5GyF4KNdZ4a.txt', 'llms.txt', 'ads.txt'];
   for (const file of publicFiles) {
     const src = path.join(publicDir, file);
     if (fs.existsSync(src)) {
